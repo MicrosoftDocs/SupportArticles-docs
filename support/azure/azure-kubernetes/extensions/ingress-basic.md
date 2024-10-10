@@ -15,28 +15,28 @@ ROBOTS: NOINDEX
 
 An ingress controller is a piece of software that provides reverse proxy, configurable traffic routing, and TLS termination for Kubernetes services. Kubernetes ingress resources are used to configure the ingress rules and routes for individual Kubernetes services. When you use an ingress controller and ingress rules, a single IP address can be used to route traffic to multiple services in a Kubernetes cluster.
 
-This article shows you how to deploy the [NGINX ingress controller][nginx-ingress] in an Azure Kubernetes Service (AKS) cluster. Two applications are then run in the AKS cluster, each of which is accessible over the single IP address.
+This article shows you how to deploy the [NGINX ingress controller](https://github.com/kubernetes/ingress-nginx) in an Azure Kubernetes Service (AKS) cluster. Two applications are then run in the AKS cluster, each of which is accessible over the single IP address.
 
 > [!IMPORTANT]
-> The Application routing add-on is recommended for ingress in AKS. For more information, see [Managed nginx Ingress with the application routing add-on][aks-app-add-on].
+> The Application routing add-on is recommended for ingress in AKS. For more information, see [Managed nginx Ingress with the application routing add-on](/azure/aks/app-routing).
 
 > [!NOTE]
-> There are two open source ingress controllers for Kubernetes based on Nginx: one is maintained by the Kubernetes community ([kubernetes/ingress-nginx][nginx-ingress]), and one is maintained by NGINX, Inc. ([nginxinc/kubernetes-ingress]). This article will be using the Kubernetes community ingress controller.
+> There are two open source ingress controllers for Kubernetes based on Nginx: one is maintained by the Kubernetes community ([kubernetes/ingress-nginx](https://github.com/kubernetes/ingress-nginx)), and one is maintained by NGINX, Inc. ([nginxinc/kubernetes-ingress](https://github.com/nginxinc/kubernetes-ingress)). This article will be using the Kubernetes community ingress controller.
 
 ## Before you begin
 
-* This article uses [Helm 3][helm] to install the NGINX ingress controller on a [supported version of Kubernetes][aks-supported versions]. Make sure that you're using the latest release of Helm and have access to the *ingress-nginx* Helm repository. The steps outlined in this article may not be compatible with previous versions of the Helm chart, NGINX ingress controller, or Kubernetes.
-* This article assumes you have an existing AKS cluster with an integrated Azure Container Registry (ACR). For more information on creating an AKS cluster with an integrated ACR, see [Authenticate with Azure Container Registry from Azure Kubernetes Service][aks-integrated-acr].
+* This article uses Helm 3 to install the NGINX ingress controller on a [supported version of Kubernetes](/azure/aks/supported-kubernetes-versions). Make sure that you're using the latest release of Helm and have access to the *ingress-nginx* Helm repository. The steps outlined in this article may not be compatible with previous versions of the Helm chart, NGINX ingress controller, or Kubernetes.
+* This article assumes you have an existing AKS cluster with an integrated Azure Container Registry (ACR). For more information on creating an AKS cluster with an integrated ACR, see [Authenticate with Azure Container Registry from Azure Kubernetes Service](/azure/aks/cluster-container-registry-integration#create-a-new-acr).
 * The Kubernetes API health endpoint, `healthz` was deprecated in Kubernetes v1.16. You can replace this endpoint with the `livez` and `readyz` endpoints instead. See [Kubernetes API endpoints for health](https://kubernetes.io/docs/reference/using-api/health-checks/#api-endpoints-for-health) to determine which endpoint to use for your scenario.
 * If you're using Azure CLI, this article requires that you're running the Azure CLI version 2.0.64 or later. Run `az --version` to find the version. If you need to install or upgrade, see [Install Azure CLI][azure-cli-install].
-* If you're using Azure PowerShell, this article requires that you're running Azure PowerShell version 5.9.0 or later. Run `Get-InstalledModule -Name Az` to find the version. If you need to install or upgrade, see [Install Azure PowerShell][azure-powershell-install].
+* If you're using Azure PowerShell, this article requires that you're running Azure PowerShell version 5.9.0 or later. Run `Get-InstalledModule -Name Az` to find the version. If you need to install or upgrade, see [Install Azure PowerShell](/powershell/azure/install-azure-powershell).
 
 ## Basic configuration
 
 To create a basic NGINX ingress controller without customizing the defaults, you'll use Helm. The following configuration uses the default configuration for simplicity. You can add parameters for customizing the deployment, like `--set controller.replicaCount=3`.
 
 > [!NOTE]
-> If you would like to enable [client source IP preservation][client-source-ip] for requests to containers in your cluster, add `--set controller.service.externalTrafficPolicy=Local` to the Helm install command. The client source IP is stored in the request header under *X-Forwarded-For*. When you're using an ingress controller with client source IP preservation enabled, TLS pass-through won't work.
+> If you would like to enable [client source IP preservation](/azure/aks/concepts-network-ingress#ingress-controllers) for requests to containers in your cluster, add `--set controller.service.externalTrafficPolicy=Local` to the Helm install command. The client source IP is stored in the request header under *X-Forwarded-For*. When you're using an ingress controller with client source IP preservation enabled, TLS pass-through won't work.
 
 ### [Azure CLI](#tab/azure-cli)
 
@@ -82,7 +82,7 @@ As an alternative to the basic configuration presented in the above section, the
 
 ### [Azure CLI](#tab/azure-cli)
 
-To control image versions, you'll want to import them into your own Azure Container Registry. The [NGINX ingress controller Helm chart][ingress-nginx-helm-chart] relies on three container images. Use `az acr import` to import those images into your ACR.
+To control image versions, you'll want to import them into your own Azure Container Registry. The [NGINX ingress controller Helm chart](https://github.com/kubernetes/ingress-nginx/tree/main/charts/ingress-nginx) relies on three container images. Use `az acr import` to import those images into your ACR.
 
 ```azurecli
 REGISTRY_NAME=<REGISTRY_NAME>
@@ -101,7 +101,7 @@ az acr import --name $REGISTRY_NAME --source $SOURCE_REGISTRY/$DEFAULTBACKEND_IM
 
 ### [Azure PowerShell](#tab/azure-powershell)
 
-To control image versions, you'll want to import them into your own Azure Container Registry. The [NGINX ingress controller Helm chart][ingress-nginx-helm-chart] relies on three container images. Use `Import-AzContainerRegistryImage` to import those images into your ACR.
+To control image versions, you'll want to import them into your own Azure Container Registry. The [NGINX ingress controller Helm chart](https://github.com/kubernetes/ingress-nginx/tree/main/charts/ingress-nginx) relies on three container images. Use `Import-AzContainerRegistryImage` to import those images into your ACR.
 
 ```azurepowershell-interactive
 $RegistryName = "<REGISTRY_NAME>"
@@ -121,7 +121,7 @@ Import-AzContainerRegistryImage -ResourceGroupName $ResourceGroup -RegistryName 
 ---
 
 > [!NOTE]
-> In addition to importing container images into your ACR, you can also import Helm charts into your ACR. For more information, see [Push and pull Helm charts to an Azure Container Registry][acr-helm].
+> In addition to importing container images into your ACR, you can also import Helm charts into your ACR. For more information, see [Push and pull Helm charts to an Azure Container Registry](/azure/container-registry/container-registry-helm-repos).
 
 ### Create an ingress controller
 
@@ -132,7 +132,7 @@ For added redundancy, two replicas of the NGINX ingress controllers are deployed
 The following example creates a Kubernetes namespace for the ingress resources named *ingress-basic* and is intended to work within that namespace. Specify a namespace for your own environment as needed. If your AKS cluster isn't Kubernetes role-based access control enabled, add `--set rbac.create=false` to the Helm commands.
 
 > [!NOTE]
-> If you would like to enable [client source IP preservation][client-source-ip] for requests to containers in your cluster, add `--set controller.service.externalTrafficPolicy=Local` to the Helm install command. The client source IP is stored in the request header under *X-Forwarded-For*. When you're using an ingress controller with client source IP preservation enabled, TLS pass-through won't work.
+> If you would like to enable [client source IP preservation](/azure/aks/concepts-network-ingress#ingress-controllers) for requests to containers in your cluster, add `--set controller.service.externalTrafficPolicy=Local` to the Helm install command. The client source IP is stored in the request header under *X-Forwarded-For*. When you're using an ingress controller with client source IP preservation enabled, TLS pass-through won't work.
 
 ### [Azure CLI](#tab/azure-cli)
 
@@ -209,7 +209,7 @@ helm install ingress-nginx ingress-nginx/ingress-nginx `
 
 By default, an NGINX ingress controller is created with a dynamic public IP address assignment. A common configuration requirement is to use an internal, private network and IP address. This approach allows you to restrict access to your services to internal users, with no external access.
 
-Use the `--set controller.service.loadBalancerIP` and `--set controller.service.annotations."service\.beta\.kubernetes\.io/azure-load-balancer-internal"=true` parameters to assign an internal IP address to your ingress controller. Provide your own internal IP address for use with the ingress controller. Make sure that this IP address isn't already in use within your virtual network. If you're using an existing virtual network and subnet, you must configure your AKS cluster with the correct permissions to manage the virtual network and subnet. For more information, see [Use kubenet networking with your own IP address ranges in Azure Kubernetes Service (AKS)][aks-configure-kubenet-networking] or [Configure Azure CNI networking in Azure Kubernetes Service (AKS)][aks-configure-advanced-networking].
+Use the `--set controller.service.loadBalancerIP` and `--set controller.service.annotations."service\.beta\.kubernetes\.io/azure-load-balancer-internal"=true` parameters to assign an internal IP address to your ingress controller. Provide your own internal IP address for use with the ingress controller. Make sure that this IP address isn't already in use within your virtual network. If you're using an existing virtual network and subnet, you must configure your AKS cluster with the correct permissions to manage the virtual network and subnet. For more information, see [Use kubenet networking with your own IP address ranges in Azure Kubernetes Service (AKS)](/azure/aks/configure-kubenet) or [Configure Azure CNI networking in Azure Kubernetes Service (AKS)](/azure/aks/configure-azure-cni?tabs=configure-networking-portal).
 
 ### [Azure CLI](#tab/azure-cli)
 
@@ -575,32 +575,12 @@ Alternatively, a more granular approach is to delete the individual resources cr
 
 ## Next steps
 
-To configure TLS with your existing ingress components, see [Use TLS with an ingress controller][aks-ingress-tls].
+To configure TLS with your existing ingress components, see [Use TLS with an ingress controller](/previous-versions/azure/aks/ingress-tls).
 
-To configure your AKS cluster to use HTTP application routing, see [Enable the HTTP application routing add-on][aks-http-app-routing].
+To configure your AKS cluster to use HTTP application routing, see [Enable the HTTP application routing add-on](/previous-versions/azure/aks/http-application-routing).
 
 This article included some external components to AKS. To learn more about these components, see the following project pages:
 
-- [Helm CLI][helm-cli]
-- [NGINX ingress controller][nginx-ingress]
+- [Helm CLI](/azure/aks/kubernetes-helm)
+- [NGINX ingress controller](https://github.com/kubernetes/ingress-nginx))
 
-<!-- LINKS - external -->
-[helm]: https://helm.sh/
-[helm-cli]: ./kubernetes-helm.md
-[nginx-ingress]: https://github.com/kubernetes/ingress-nginx
-[ingress-nginx-helm-chart]: https://github.com/kubernetes/ingress-nginx/tree/main/charts/ingress-nginx
-[nginxinc/kubernetes-ingress]: https://github.com/nginxinc/kubernetes-ingress
-
-<!-- LINKS - internal -->
-[use-helm]: kubernetes-helm.md
-[azure-cli-install]: /cli/azure/install-azure-cli
-[aks-configure-advanced-networking]: configure-azure-cni.md
-[aks-configure-kubenet-networking]: configure-kubenet.md
-[aks-ingress-tls]: ingress-tls.md
-[aks-http-app-routing]: http-application-routing.md
-[client-source-ip]: concepts-network-ingress.md#ingress-controllers
-[aks-supported versions]: supported-kubernetes-versions.md
-[aks-integrated-acr]: cluster-container-registry-integration.md#create-a-new-acr
-[acr-helm]: /azure/container-registry/container-registry-helm-repos
-[azure-powershell-install]: /powershell/azure/install-az-ps
-[aks-app-add-on]: app-routing.md
