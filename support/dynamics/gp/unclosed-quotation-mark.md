@@ -3,7 +3,7 @@ title: Unclosed quotation mark
 description: Provides a solution to an error that occurs when you run the Historical Aged Trial Balance report for Payables Management.
 ms.reviewer: theley, kenhub, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 10/9/2024
 ms.custom: sap:Financial - Payables Management
 ---
 # "Unclosed quotation mark after the character string" Error message when running the Historical Aged Trial Balance for Payables Management in Microsoft Dynamics GP
@@ -31,13 +31,13 @@ It's followed by the following message:
 
 ## Cause
 
-These errors are caused by a known issue in Microsoft Dynamics GP where a credit memo or manual payment document is entered with an apostrophe in the **Voucher Number** field.
+This can happen when a credit memo or manual payment document is entered with an apostrophe in the **Voucher Number** field.
 
 ## Resolution
 
-Use one of the following methods to resolve this issue:
+With the release of [Microsoft Dynamics GP 18.7](https://community.dynamics.com/blogs/post/?postid=da2b849a-e349-ef11-a317-6045bda6fe6a), you will now be able to print the HATB when the voucher number or payment number is posted with special characters.  If you are encountering this error message, you should upgrade.
 
-### Resolution 1
+If you are on an older version of Microsoft Dynamics GP you can review the below.
 
 1. Run this script in SQL against the company database to look for any voucher number, document numbers or vendor ID's with a single apostrophe in it, which is read as an unclosed quotation by the process. Any results for the voucher number (CONTRLNUM) are likely the clause, but the document number and vendor ID are also added to the script, and may or may not be an issue:
 
@@ -51,12 +51,8 @@ Use one of the following methods to resolve this issue:
 
 2. For any results returned by the script above, run the 'ALL Payables' script for each result returned above. (As the problem is more than likely a voucher number as that is an editable field to the user. Check your payables setup to make sure you don't have an apostrophe in the default next voucher number.)
 
-    > [!NOTE]
-    > If you do not have this script, you may want to open a support case for assistance to get this script and identify all the tables that this document may be in.
-
 3. Manually fix the Voucher number with a direct 'update' statement in SQL for all the tables returned by the 'ALL Payables' script to remove the single apostrophe from a voucher number and Document number Be sure to write the field to be the exact same in all fields/tables where you change it. (If the issue is with the vendor ID, then don't use these steps. You can use the vendor modifier tool in PSTL to change a vendor ID.)
 
-If you need assistance, you can open a support case for further assistance. To reach Customer Service by telephone, call 888-477-7877.
 
 ## More information
 
