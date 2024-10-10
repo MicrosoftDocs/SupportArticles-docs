@@ -1,7 +1,7 @@
 ---
 title: Description of Windows TCP features
 description: Describes the TCP features in Windows.
-ms.date: 12/26/2023
+ms.date: 10/10/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
