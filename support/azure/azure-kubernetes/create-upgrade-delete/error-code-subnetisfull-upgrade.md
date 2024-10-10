@@ -46,6 +46,6 @@ If scaling down isn't an option, and your virtual network CIDR has enough IP add
 
 ## More information
 
-- [InsufficientSubnetSize error code](../../connectivity/insufficientsubnetsize-error-advanced-networking.md)
+- [InsufficientSubnetSize error code](../../../connectivity/insufficientsubnetsize-error-advanced-networking.md)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
