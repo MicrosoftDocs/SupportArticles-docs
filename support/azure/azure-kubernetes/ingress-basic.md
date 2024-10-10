@@ -5,7 +5,7 @@ description: Learn how to create and configure an ingress controller in an Azure
 author: asudbring
 ms.author: allensu
 ms.service: azure-kubernetes-service
-ms.custom: sap:Extensions, Policies and Add-Ons
+ms.custom: 
 ms.topic: how-to
 ms.date: 12/13/2023
 ROBOTS: NOINDEX
