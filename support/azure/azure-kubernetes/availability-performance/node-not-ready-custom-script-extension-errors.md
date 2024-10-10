@@ -49,9 +49,9 @@ Set up your custom Domain Name System (DNS) server so that it can do name resolu
 
 - Don't use the Azure DNS IP address with the IP addresses of your custom DNS server. Doing this isn't recommended.
 
-- Avoid using IP addresses instead of the DNS server in DNS settings. You can use Azure CLI commands to check for this situation on a Virtual Machine Scale Set (VMSS) or availability set.
+- Avoid using IP addresses instead of the DNS server in DNS settings. You can use Azure CLI commands to check for this situation on a Virtual Machine Scale Set or availability set.
 
-  - For Virtual Machine Scale Set (VMSS) nodes, use the [az vmss run-command invoke](/cli/azure/vmss/run-command#az-vmss-run-command-invoke) command:
+  - For Virtual Machine Scale Set nodes, use the [az vmss run-command invoke](/cli/azure/vmss/run-command#az-vmss-run-command-invoke) command:
 
     ```azurecli
     az vmss run-command invoke \
@@ -108,7 +108,7 @@ Make sure that the API server can be reached and isn't subject to delays. To do 
   | Set type | Action |
   | -------- | ------ |
   | VM availability set | Delete the node from the Azure portal and the AKS API by using the [kubectl delete](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#delete) node command, and then scale up the cluster again. |
-  | Virtual Machine Scale Set (VMSS) | Either reimage the node from the Azure Portal, or delete the node, and then scale up the cluster again. To delete the specific node, use [az aks nodepool delete-machines](/azure/aks/nodepool#az-aks-nodepool-delete-machines) command. It will cordon & drain first and then delete the node. |
+  | Virtual Machine Scale Set | Either reimage the node from the Azure Portal, or delete the node, and then scale up the cluster again. To delete the specific node, use [az aks nodepool delete-machines](/azure/aks/nodepool#az-aks-nodepool-delete-machines) command. It will cordon & drain first and then delete the node. |
 
 - If the requests are being throttled by the AKS API server, upgrade to a higher service tier. For more information, see [Pricing tiers for AKS](/azure/aks/free-standard-pricing-tiers).
 
