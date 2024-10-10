@@ -11,11 +11,13 @@ audience: itpro
 ---
 # Remote Procedure Call (RPC) errors troubleshooting guidance
 
-_Applies to:_ &nbsp; Windows Client
+_Applies to:_ &nbsp; Windows 7, Windows 8, Windows 8.1, Windows 10 , Windows 11, Windows Server 2012, Windows Server 2012R2, Windows Server 2012, Windows Server 2012 R2, Windows Vista
 
 You might encounter an "RPC server unavailable" error when you connect to Windows Management Instrumentation (WMI) or Microsoft SQL Server, during a Remote Procedure Call (RPC) session, or when you use various Microsoft Management Console (MMC) snap-ins. The following image shows an example of an RPC error.
 
-:::image type="content" source="media/rpc-errors-troubleshooting/rpc-error.png" alt-text="Screenshot of an error message stating that the following error occurred: the RPC server is unavailable." border="false":::
+![User's image](media/rpc-errors-troubleshooting/image.png)
+
+
 
 This is a common networking error that requires some basic familiarity with the process to successfully troubleshoot. To begin, there are several important terms to understand:
 
@@ -117,14 +119,14 @@ Portqry.exe -n <ServerIP> -e 135
 For example, consider the following command:
 
 ```console
-Portqry.exe -n 169.254.0.2 -e 135
+Portqry.exe -n 10.10.10.10 -e 135
 ```
 
 This command produces output that resembles the following excerpt:  
 
 ```output
 Querying target system called:
-169.254.0.2
+10.10.10.10
 Attempting to resolve IP address to a name...
 IP address resolved to RPCServer.contoso.com
 querying...
