@@ -582,5 +582,5 @@ To configure your AKS cluster to use HTTP application routing, see [Enable the H
 This article included some external components to AKS. To learn more about these components, see the following project pages:
 
 - [Helm CLI](/azure/aks/kubernetes-helm)
-- [NGINX ingress controller](https://github.com/kubernetes/ingress-nginx))
+- [NGINX ingress controller](https://github.com/kubernetes/ingress-nginx)
 
