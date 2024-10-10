@@ -1,15 +1,15 @@
 ---
-title: Error 3456 when backing up a SQL Server database using a VDI application with multi-striping
-description: This article provides a resolution for an issue that occurs when you back up a SQL Server database using VDI applications with multi-striping.
+title: Error 3456 when restoring a SQL Server database using a VDI application with multi-striping
+description: This article provides a resolution for an issue that occurs when you restore a SQL Server database using VDI applications with multi-striping.
 ms.date: 09/18/2023
 ms.custom: sap:Database Backup and Restore
 ms.author: jopilov
 author: PiJoCoder
 ms.reviewer: hesha, amamun, v-sidong
 ---
-# Backing up a SQL Server database using a VDI application with multi-striping may fail with error 3456
+# Restoring a SQL Server database using a VDI application with multi-striping may fail with error 3456
 
-This article helps you resolve an issue that occurs when you use Volume Shadow Copy Services (VSS) based applications to back up your SQL Server databases.
+This article helps you resolve an issue that occurs when you use Virtual Device Interface (VDI) based applications to back up your SQL Server databases.
 
 ## Symptoms
 
@@ -29,8 +29,32 @@ When you stripe a backup to VDI, multiple backup devices together make up the co
 
 ## Resolution
 
-1. Enable trace flag 3471 or 3475 as a startup parameter. Trace flag 3471 disables the feature delayed log pinning for a full backup. Trace flag 3475 disables the feature delayed log pinning for a differential backup.
-1. Restart SQL Server.
+
+1.	Depending on your configuration you need to enable one or several trace flags as startup parameters for your SQL Server instance
+    -	If you’re taking full backups when the instance is acting as primary replica or an instance without availability groups,  enable trace flag 3471 to disables the feature delayed log pinning for full backups.
+    -	If you’re taking differential backups when the instance is acting as primary replica or an instance without availability groups, enable trace flag  3475 to disable the feature delayed log pinning for differential backups.
+    -	If you’re taking full backups with copy_only when the instance is acting as secondary replica, enable trace flag  3472 to disable the feature delayed log pinning for differential backups.
+2.	Restart SQL Server.
+3.	Take your full/differential backups again.
+
+
+## Note: 
+
+It is also possible to temporarily enable these trace flags using DBCC TRACEON command. 
+
+    DBCC TRACEON(3471,3472,3475,-1)
+
+It can be used to mitigate the issue if you can’t restart your SQL Server instance immediately.
+
+## Important: 
+
+Due to this issue existing backups may not be restorable if the following conditions were true :
+
+-	Backup taken with delay log pining feature enable 
+-	Backup tool is using VDI
+-	Backup was done using multi-striping (backup to several files) 
+
+We engourage you to restore your existing backups on a test server to check if they can be restored successfully
 
 ## More information
 
