@@ -1,7 +1,7 @@
 ---
 title: How to securely transfer files to Microsoft Support
 description: Provides information to help you fast and secure transfer files with Microsoft Support.
-ms.date: 05/17/2022
+ms.date: 10/10/2024
 author: genlin
 ms.author: genli
 ms.service: azure-common-issues-support
@@ -10,7 +10,6 @@ ms.reviewer:
 # How to securely transfer files to Microsoft Support
 
 This article provides information on using Secure File Exchange.
-
 
 _Original product version:_ &nbsp; Azure  
 _Original KB number:_ &nbsp; 4012140
@@ -32,9 +31,15 @@ The main features of Secure File Exchange are as follows:
 
 ### How can I access Secure File Exchange?
 
-- Check Your Email: Look for an email from a Microsoft Support Professional. The subject line will typically indicate that it pertains to your support case and the need for a file transfer.
-- Locate the Secure Link: Within the email, you will find a link to your Secure File Exchange workspace. This link is unique to your support case and should not be shared with others.
-- Access the Workspace: Click on the link provided in the email. This will direct you to the Secure File Exchange portal.
+1. Check your email.
+
+    Look for an email from a Microsoft Support Professional. The subject line will indicate the relevance to your support case and the requirement for a file transfer.
+2. Locate the secure link.
+
+   In the email, there is a link to your Secure File Exchange workspace. This link is specific to your support case and should not be shared with others.
+3. Access the workspace.
+   
+   Select the link provided in the email. This will direct you to the Secure File Exchange portal.
 
 ### Secure File Exchange "Sign in" and capabilities
 
