@@ -1511,8 +1511,6 @@ items:
     items:
     - name: An incorrect IP address is returned
       href: ./networking/incorrect-ip-address-returned-ping-netbios.md
-    - name: Install and configure IP version 6
-      href: ./networking/install-configure-ip-version-6.md
   - name: Network Connection Status Indicator (NCSI)
     items:
     - name: 'Troubleshooting guidance: Network Connection Status Indicator (NCSI)'
@@ -1647,6 +1645,8 @@ items:
       href: ./networking/use-portqry-verify-active-directory-tcp-ip-connectivity.md
     - name: Information about Network Monitor 3
       href: ./networking/network-monitor-3.md
+    - name: Install and configure IP version 6
+      href: ./networking/install-configure-ip-version-6.md
     - name: IP and default gateway settings are assigned incorrectly
       href: ./networking/ip-default-gateway-settings-assigned-incorrectly.md
     - name: Multiple default gateways cause connectivity problems
