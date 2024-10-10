@@ -1,6 +1,7 @@
 - name: Welcome
   href: welcome-azure-kubernetes.yml
-
+- name: Create an unmanaged ingress controller
+  href: ingress-basic.md
 - name: Create, Upgrade, Scale and Delete operations (cluster or nodepool)
   items:
   - name: Create operations
@@ -328,8 +329,6 @@
       href: extensions/istio-add-on-general-troubleshooting.md
     - name: Feature-specific troubleshooting
       items:
-      - name: Create an unmanaged ingress controller
-        href: extensions/ingress-basic.md
       - name: Istio add-on ingress gateway troubleshooting
         href: extensions/istio-add-on-ingress-gateway.md
       - name: Istio add-on MeshConfig troubleshooting
