@@ -328,7 +328,7 @@
       href: extensions/istio-add-on-general-troubleshooting.md
     - name: Feature-specific troubleshooting
       items:
-      - name: 
+      - name: Create an unmanaged ingress controller
         href: extensions/ingress-basic.md
       - name: Istio add-on ingress gateway troubleshooting
         href: extensions/istio-add-on-ingress-gateway.md
