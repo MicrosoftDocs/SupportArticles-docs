@@ -31,6 +31,50 @@ akswin000002                        Ready    agent   3m32s   v1.20.9   10.240.0.
 
 The next step is to establish a connection to the AKS cluster node. You authenticate either using a Secure Shell (SSH) key, or using the Windows admin password in a Remote Desktop Protocol (RDP) connection. Both methods require creating an intermediate connection, because you can't currently connect directly to the AKS Windows node. Whether you connect to a node through SSH or RDP, you need to specify the user name for the AKS nodes. By default, this user name is *azureuser*.
 
+### [HostProcess](#tab/hostprocess)
+1. Create `hostprocess.yaml` with the following content and replacing `AKSWINDOWSNODENAME` with the AKS Windows node name.
+    ```yaml
+    apiVersion: v1
+    kind: Pod
+    metadata:
+      labels:
+        pod: hpc
+      name: hpc
+    spec:
+      securityContext:
+        windowsOptions:
+          hostProcess: true
+          runAsUserName: "NT AUTHORITY\\SYSTEM"
+      hostNetwork: true
+      containers:
+        - name: hpc
+          image: mcr.microsoft.com/windows/servercore:ltsc2022 # Use servercore:1809 for WS2019
+          command:
+            - powershell.exe
+            - -Command
+            - "Start-Sleep 2147483"
+          imagePullPolicy: IfNotPresent
+      nodeSelector:
+        kubernetes.io/os: windows
+        kubernetes.io/hostname: AKSWINDOWSNODENAME
+      tolerations:
+        - effect: NoSchedule
+          key: node.kubernetes.io/unschedulable
+          operator: Exists
+        - effect: NoSchedule
+          key: node.kubernetes.io/network-unavailable
+          operator: Exists
+        - effect: NoExecute
+          key: node.kubernetes.io/unreachable
+          operator: Exists
+    ```
+2. Run `kubectl apply -f hostprocess.yaml` to deploy the Windows host process container (HPC) in the specified Windows node.
+3. Use `kubectl exec -it [HPC-POD-NAME] -- powershell`.
+4. You can run any PowerShell commands inside the HPC container to access the Windows node.
+> [!Note]
+>
+> You need to switch the root folder to `C:\` inside the HPC container to access the files in the Windows node.
+
 ### [SSH](#tab/ssh)
 
 If you have an SSH key, [create an SSH connection to the Windows node](/azure/aks/ssh#create-the-ssh-connection-to-a-windows-node). The SSH key doesn't persist on your AKS nodes. The SSH key reverts to what was initially installed on the cluster during any:
@@ -83,7 +127,7 @@ azureuser@akswin000000 C:\Users\azureuser>
 Now open a command prompt and enter the [Network Shell](/windows-server/networking/technologies/netsh/netsh) (netsh) command below for capturing traces ([netsh trace start](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj129382(v=ws.11)#start)). This command starts the packet capture process.
 
 ```cmd
-netsh trace start capture=yes tracefile=C:\Users\azureuser\AKS_node_name.etl 
+netsh trace start capture=yes tracefile=C:\temp\AKS_node_name.etl 
 ```
 
 Output appears that's similar to the following text:
@@ -105,12 +149,39 @@ While the trace is running, replicate your issue many times. This action ensures
 azureuser@akswin000000 C:\Users\azureuser>netsh trace stop
 Merging traces ... done
 Generating data collection ... done
-The trace file and additional troubleshooting information have been compiled as "C:\Users\azureuser\AKS_node_name.cab".
-File location = C:\Users\azureuser\AKS_node_name.etl
+The trace file and additional troubleshooting information have been compiled as "C:\temp\AKS_node_name.cab".
+File location = C:\temp\AKS_node_name.etl
 Tracing session was successfully stopped.
 ```
 
 ## Step 4: Transfer the capture locally
+
+### [HostProcess](#tab/hostprocess)
+
+After you complete the packet capture, identify the HostProcess pod so you can copy the dump locally. 
+On your local machine open a second console, and then get a list of pods by running `kubectl get pods`, as shown below.
+
+```output
+kubectl get pods
+NAME                                                    READY   STATUS    RESTARTS   AGE
+azure-vote-back-6c4dd64bdf-m4nk7                        1/1     Running   2          3d21h
+azure-vote-front-85b4df594d-jhpzw                       1/1     Running   2          3d21h
+hpc                                                     1/1     Running   0          3m58s
+```
+The HostProcess pod default name is hpc, as shown in the third line. Replace the pod name, and then run the following command to copy the TCP Dump files loccaly.
+```cmd
+kubectl cp -n default hpc:/temp/AKS_node_name.etl ./AKS_node_name.etl .
+kubectl cp -n default hpc:/temp/AKS_node_name.etl ./AKS_node_name.cab .
+```
+
+```output
+kubectl cp -n default hpc:/temp/AKS_node_name.etl ./AKS_node_name.etl
+tar: Removing leading '/' from member names
+kubectl cp -n default hpc:/temp/AKS_node_name.etl ./AKS_node_name.cab
+tar: Removing leading '/' from member names
+```
+The .etl and .cab files will now be present on your local directory.
+
 
 ### [SSH](#tab/ssh)
 
@@ -160,7 +231,7 @@ First, follow these steps to transfer the TCP dump files from the AKS Windows no
 1. Then run the following copy command to copy the TCP dump files to your jump VM:
 
     ```output
-    C:\Users\azureuser>copy AKS_node_name.* z:\
+    C:\Users\azureuser>copy c:\temp\AKS_node_name.* z:\
     AKS_node_name.cab
     AKS_node_name.etl
             2 file(s) copied.
