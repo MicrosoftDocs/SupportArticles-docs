@@ -4,7 +4,7 @@ description: The grid column filter for the lookup type field doesn't show any r
 author: akshay-viz
 ms.author: akmaloo
 ms.reviewer: akmaloo
-ms.date: 10/08/2024
+ms.date: 10/10/2024
 ms.custom: sap:Using grids and lists in model-driven apps
 ---
 # Grid filter for a lookup column shows no suggestions in a model-driven app
