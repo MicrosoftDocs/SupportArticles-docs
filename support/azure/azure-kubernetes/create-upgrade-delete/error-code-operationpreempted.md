@@ -8,9 +8,9 @@ ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the OperationPreempted error code so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
-# Troubleshoot the OperationPreempted or AKSOperationPreemptedByDelete error code
+# AKSOperationPreempted or AKSOperationPreemptedByDelete error when you try to perform a new operation
 
-This article discusses how to identify and resolve the `OperationPreempted` or `AKSOperationPreemptedByDelete` error that might occur when you try to perform a new operation but it has been preempted by a previous operation on a Microsoft Azure Kubernetes Service (AKS) cluster.
+This article discusses how to identify and resolve the `AKSOperationPreempted` or `AKSOperationPreemptedByDelete` error that might occur when you try to perform a new operation but it has been preempted by a previous operation on a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Symptoms
 
@@ -27,11 +27,11 @@ When you try to perform a new operation on an AKS cluster, you receive one of th
 
 ## Cause
 
-This error usually occurs when an in-progress operation is interrupted by a subsequent operation that was issued before the in-progress operation is finished. The error will indicate the subsequent operation, which can be a delete or any other operation.
+This error usually occurs when an in-progress operation is interrupted by a previous operation that was issued before the in-progress operation is finished. The error will indicate the previous operation, which can be a delete or any other operation.
 
 ## Solution
 
-Retry the operation after the subsequent operation finishes or abort the long-running operation.
+Retry the operation after the previous operation finishes or abort the long-running operation.
 
 ## More information
 
