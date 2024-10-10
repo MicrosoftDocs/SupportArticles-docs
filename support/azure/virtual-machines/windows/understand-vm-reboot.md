@@ -101,7 +101,7 @@ Because some host server faults can be specific to that server, a repeated VM re
 
 ### Auto-recovery
 
-The Azure platform is designed to try the least impactful method for recovering host nodes. Depending on the original issue, one method is to simply reboot the host and other one is to migrate all the virtual machines to a healthy host node. Migration may be more impactful depending on the volume of VM's that need to be migrated, deployment constraints of individual VM's, and local resource availability compared to VM infrastructure constraints such as network. For a hardware failure, migration is the only option.
+The Azure platform is designed to try the least impactful method for recovering host nodes. Depending on the original issue, one method is to simply reboot the host and other one is to migrate all the virtual machines to a healthy host node. Service healing may be more impactful depending on the volume of VM's that need to be migrated, deployment constraints of individual VM's, and local resource availability compared to VM infrastructure constraints such as network. For a hardware failure, migration is the only option.
 
 If the host server cannot reboot for any reason, the Azure platform initiates an auto-recovery action to take the faulty host server out of rotation for further investigation.
 
