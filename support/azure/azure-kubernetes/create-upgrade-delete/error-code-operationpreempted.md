@@ -27,11 +27,11 @@ When you try to perform a new operation on an AKS cluster, you receive one of th
 
 ## Cause
 
-This error usually occurs when an in-progress operation is interrupted by a previous operation that was issued before the in-progress operation is finished. The error will indicate the previous operation, which can be a delete or any other operation.
+This error usually occurs when an in-progress operation is interrupted by a subsequent operation that was issued before the in-progress operation is finished. The error will indicate the subsequent operation, which can be a delete or any other operation.
 
 ## Solution
 
-Retry the operation after the previous operation finishes or abort the long-running operation.
+Retry the operation after the in-progress operation finishes or abort the long-running operation.
 
 ## More information
 
