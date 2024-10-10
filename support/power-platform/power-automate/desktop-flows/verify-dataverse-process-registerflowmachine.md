@@ -1,8 +1,8 @@
 ---
 title: Verify and activate the RegisterFlowMachine process
-description: Resolves an error that occurs when you register a machine with Microsoft Power Automate for desktop.
+description: Resolves the Dataverse solution has the process RegisterFlowMachine deactivated error that occurs when you register a machine with Microsoft Power Automate for desktop.
 ms.custom: sap:Desktop flows\Verify dataverse process RegisterFlowMachine 
-ms.date: 10/09/2024
+ms.date: 10/10/2024
 ms.reviewer: alarnaud, johndund, guco
 ms.author: fredg
 author: fredg
@@ -21,21 +21,23 @@ When you register your machine with Power Automate for desktop, the registration
 
 This issue occurs because the **RegisterFlowMachine** process is deactivated in Dataverse.
 
-For more information, see [the processes](#processes-which-should-be-activated-for-power-automate) that need to be activated for Power Automate for desktop.
+For more information, see [the processes](#processes-that-should-be-activated-for-power-automate) that need to be activated for Power Automate for desktop.
 
 ## Resolution
 
+To solve this issue, you should activate the **RegisterFlowMachine** process.
+
 ### Prerequites
 
-You should have access to your organization endpoint like https://[org].crm.dynamics.com.
+You should have access to your organization endpoint like `https://[org].crm.dynamics.com`.
 
 The organization endpoint could be found in [Environments](https://admin.powerplatform.microsoft.com/environments) by selecting your environment name where you want to register the machine.
 
-### Steps
+### Steps to activate the RegisterFlowMachine process
 
 1. Open the following url in a web browser (replace [org] with your orgnization identifier) and sign in.
 
-   https://[org].crm.dynamics.com
+   `https://[org].crm.dynamics.com`
 
 2. Select the gear icon in the upper-right corner and select **Advanced Settings**.
 
@@ -47,19 +49,19 @@ The organization endpoint could be found in [Environments](https://admin.powerpl
 
 4. Select **Customize the System**.
 
-    :::image type="content" source="media/verify-dataverse-process-registerflowmachine/customize-the-system.png" alt-text="Screenshot of the Customize the System option that you can open the feature by selecting it.":::
+    :::image type="content" source="media/verify-dataverse-process-registerflowmachine/customize-the-system.png" alt-text="Screenshot of the Customize the System option that you can select it to open the feature.":::
 
-5. Go to **Components** > **Processes**, set the **View**  to **All**. Check the status of "RegisterFlowMachine" process. If the status is **Deactivated**, go to step 6.
+5. Go to **Components** > **Processes**, set the **View**  to **All**. Check the status of the **RegisterFlowMachine** process. If the status is **Deactivated**, go to step 6.
 
     :::image type="content" source="media/verify-dataverse-process-registerflowmachine/registerflowmachine-process.png" alt-text="Screenshot that shows how to find the status of the RegisterFlowMachine process in Components.":::
 
-6. Select the checkbox before the "RegisterFlowMachine" process name and then select **Activate**.
+6. Select the checkbox before the **RegisterFlowMachine** process name and then select **Activate**.
 
     :::image type="content" source="media/verify-dataverse-process-registerflowmachine/activate-process.png" alt-text="Screenshot that shows how to activate the RegisterFlowMachine process.":::
 
-7. Open Machine runtime app and try to register again in the same environment.
+7. Open the Power Automate machine runtime application and try to register again in the same environment.
 
-## Processes which should be activated for Power Automate
+## Processes that should be activated for Power Automate
 
 - BatchGetFlowMachineStatus
 - GetPublicKey
