@@ -26,7 +26,7 @@ The table below contains the most common node auto-repair errors.
 | Error code | Causes & Solution |
 |---|---|
 | ARM ErrorCode: VMExtensionProvisioningError | One or more VM extensions failed to be provisioned on the VM. Read more on possible error types and troubleshooting steps at [Troubleshoot the ERR_VHD_FILE_NOT_FOUND error code (124)](../create-upgrade-delete/error-code-vhdfilenotfound.md). This may also occur as a result of custom script extension (CSE) errors on the node. Learn more at [Troubleshoot node not ready failures caused by CSE errors](./node-not-ready-custom-script-extension-errors.md). |
-| ARM ErrorCode: InvalidParameter | This occurs due to a parameter causes errors when new nodes are created for an AKS cluster. Read more on causes and solution at [Troubleshoot the InvalidParameter error code](../create-upgrade-delete/error-code-invalidparameter.md). |
+| ARM ErrorCode: InvalidParameter | This occurs when the node auto-repair process requests a VM that no longer exists. [more guidance] |
 | scaleSetNameAndInstanceIDFromProviderID failed |  |
 | ManagedIdentityCredential authentication failed |  |
 | ARM ErrorCode: VMRedeploymentFailed | There was an error with redeploying your node. This may cause your nodepool to enter a Failed state. Read more on potential causes and next steps at [Troubleshoot Azure Kubernetes Service clusters or nodes in a failed state](./cluster-node-virtual-machine-failed-state.md). |
