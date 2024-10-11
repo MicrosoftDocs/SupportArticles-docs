@@ -28,7 +28,7 @@ For security or compliance, your subscription administrators might assign polici
 
 To fix this issue, follow these steps:
 
-1. Find the policy that blocks the action. These policies are listed in the error message, The name of a policyAssignment or policyDefinition is the last segment of the `id` string.
+1. Find the policy that blocks the action. These policies are listed in the error message. The name of a policy assignment or definition is the last segment of the `id` string.
 
 1. If possible, change your deployment to meet the limitations of the policy, and then retry the deploy operation.
 
