@@ -52,7 +52,7 @@ For non-VDI environments, follow these steps to reinstall the Teams meeting add-
            1. Wait until Windows Installer pops up a window indicating the installation package `MicrosoftTeamsMeetingAddinInstaller.msi` isn't available. The following screenshot shows an example of this pop-up window:
 
               :::image type="content" source="media/teams-meeting-add-in-missing/windows-installer-message.png" alt-text="Screenshot of a Windows Installer pop-up window that says uninstallation fails.":::
-           1. In the pop-up windows, review the path under **Use source**, and identify the section that shows the Teams version. For example, if the path is *C:\Program Files\WindowsApps\MSTeams_**23231.512.3106.6573**_x64__8wekyb3d8bbwe\MicrosoftTeamsMeetingAddinInstaller.msi*, the corresponding Teams version for the meeting add-in is *23231.512.3106.6573*.  
+           1. In the pop-up windows, review the path under **Use source**, copy the section that represents the Teams version, and then select **Cancel** to close the window. For example, if the path is *C:\Program Files\WindowsApps\MSTeams_**23231.512.3106.6573**_x64__8wekyb3d8bbwe\MicrosoftTeamsMeetingAddinInstaller.msi*, the corresponding Teams version for the meeting add-in is *23231.512.3106.6573*.  
            1. Add the following entry to the `$msixDictionary` variable, and then save the script.
 
               "\<the version of Teams meeting add-in\>" = "\<the version of Teams\>"
