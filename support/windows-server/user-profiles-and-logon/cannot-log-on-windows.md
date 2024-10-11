@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 555648
 
 ## Symptoms
 
-Windows logs on and logs off immediately when you try logging on to Windows. When you type the username and password, you're again presented with **Username** and **Password** dialogue box. You try hard to get in but to no avail.
+Windows logs on and logs off immediately when you try logging on to Windows. When you type the username and password, you're again presented with **User name** and **Password** dialogue box. You try hard to get in but to no avail.
 
 ## Cause
 
@@ -30,7 +30,7 @@ You can't log on to system using either Normal Mode or Safe Mode. This occurs on
 Edit these values and type the correct path of shell:
 
 Shell = explorer.exe  
-Userinit=C:\windows\system32\userinit.exe
+Userinit = C:\windows\system32\userinit.exe
 
 > [!NOTE]
 > These files may also be deleted by spywares. You may need to extract them using Windows CD.
@@ -52,7 +52,7 @@ Userinit=C:\windows\system32\userinit.exe
 
 - Change these two values to
 
-    Shell=explorer.exe  
+    Shell = explorer.exe  
     Userinit = C:\windows\system32\userinit.exe
   
 - Exit from Registry.
