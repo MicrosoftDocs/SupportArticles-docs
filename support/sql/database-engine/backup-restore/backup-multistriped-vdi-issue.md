@@ -54,7 +54,7 @@ Due to this issue existing backups may not be restorable if the following condit
 -	Backup tool is using VDI
 -	Backup was done using multi-striping (backup to several files)
 
-We engourage you to restore your existing backups on a test server to check if they can be restored successfully
+We encourage you to restore your existing backups on a test server to check if they can be restored successfully
 
 ## More information
 
