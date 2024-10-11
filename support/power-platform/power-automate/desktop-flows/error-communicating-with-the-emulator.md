@@ -17,14 +17,15 @@ _Applies to:_ &nbsp; Power Automate
 
 The message “Error communicating with the emulator” occurs when running the "Open terminal session" action with Reflection Desktop in Power Automate for desktop.
 
-Here are the parameters are configured in the "Open terminal session" action.
+Here are the parameters are configured in the "Open terminal session" action:
 
-
-## Cause
-
-This issue occurs because the new update of Chromium-based web browsers (Google Chrome, Microsoft Edge) to version 113.x breaks the communication between Power Automate for desktop and the respective browsers.
+:::image type="content" source="media/error-communicating-with-the-emulator/open-terminal-session-action.png" alt-text="Screenshot shows the configured terminal session action.":::
 
 ## Resolution
 
-To solve this issue, you need to update Power Automate for desktop to the latest version.
+The Reflection Desktop “Application Programmer Interface” in the Feature Selection must be installed for Power Automate for desktop to function properly.
 
+:::image type="content" source="media/error-communicating-with-the-emulator/micro-focus-reflection-desktop-configuration.png" alt-text="Screenshot shows the Reflection Desktop installation":::
+
+> [!NOTE]
+> Power Automate for desktop will only communicate through the .NET interface of Reflection Desktop when using a 3270, 5250, or a UNIX and OpenVMS session.
