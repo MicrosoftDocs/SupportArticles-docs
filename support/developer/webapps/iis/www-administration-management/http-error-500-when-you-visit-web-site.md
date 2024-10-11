@@ -35,7 +35,7 @@ Description of HRESULT ISAPI filter *:::no-loc text="drive:\\FilePath\\ISAPI_FLT
 
 Cause
 
-This problem occurs because IIS 7.0 does not support the Internet Server API (ISAPI) filter that registers for the `SF_NOTIFY_READ_RAW_DATA` notification.
+This problem occurs because IIS does not support the Internet Server API (ISAPI) filter that registers for the `SF_NOTIFY_READ_RAW_DATA` notification.
 
 Resolution
 
@@ -52,11 +52,11 @@ Description of HRESULT The page cannot be displayed because an internal server e
 
 Cause
 
-This problem occurs because the server that is running IIS 7.0 cannot access the configured root directory of the requested location.
+This problem occurs because the server that is running IIS cannot access the configured root directory of the requested location.
 
 Resolution
 
-Make sure that the server that is running IIS 7.0 can access the configured root directory of the requested location.
+Make sure that the server that is running IIS can access the configured root directory of the requested location.
 
 ## HResult code 0x8007000d
 
