@@ -3,7 +3,7 @@ title: Troubleshoot Azure Container Registry authentication issues
 description: Helps resolve the most common authentication errors that occur when you pull images from an Azure container registry.
 ms.date: 08/19/2024
 ms.reviewer: chiragpa, v-rekhanain, v-weizhu
-ms.service: azure-container-instances
+ms.service: azure-container-registry
 ms.custom: sap:Authenticate to registry
 ---
 # Troubleshoot Azure Container Registry authentication issues
