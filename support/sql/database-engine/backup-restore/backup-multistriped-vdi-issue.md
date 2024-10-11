@@ -40,7 +40,9 @@ When you stripe a backup to VDI, multiple backup devices together make up the co
 
 It is also possible to temporarily enable these trace flags using DBCC TRACEON command. 
 
-    DBCC TRACEON(3471,3472,3475,-1)
+```SQL
+DBCC TRACEON(3471,3472,3475,-1)
+```
 
 It can be used to mitigate the issue if you can’t restart your SQL Server instance immediately.
 
