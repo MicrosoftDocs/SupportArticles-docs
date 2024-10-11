@@ -8,7 +8,7 @@ ms.custom: sap:Software Update Management (SUM)\WSUS Database Maintenance
 ---
 # Maintain the Windows Server Update Services (WSUS) database manually or automatically
 
-Routine maintenance of the WSUS database (SUSDB) is important to ensure the application's health and optimal performance. This article describes concise steps and scripts to maintain the WSUS database manually or automatically.
+Routine maintenance of the WSUS database (SUSDB) is important to ensure the application's health and optimal performance. This article describes concise steps and scripts to maintain SUSDB manually or automatically.
 
 For more information, see [The complete guide to WSUS and Configuration Manager SUP maintenance](wsus-maintenance-guide.md).
 
@@ -16,11 +16,11 @@ For more information, see [The complete guide to WSUS and Configuration Manager 
 
 The maintenance duration might vary depending on the machine's resources, including CPU, memory, and disk capacity. Factors affecting the maintenance duration include the time since the last maintenance, the number of selected products and classifications, and the volume of updates that need to be cleaned up.
 
-In a small environment with minimal products and classifications, and with recent maintenance on the WSUS database, the automatic scripts with the `RA` option might take less than one minute to run. However, in some cases, it might take several days to complete. If it takes longer than expected and you're unable to complete the maintenance successfully, you need to create a new WSUS database.
+In a small environment with minimal products and classifications, and with recent maintenance on SUSDB, the automatic scripts with the `RA` option might take less than one minute to run. However, in some cases, it might take several days to complete. If it takes longer than expected and you're unable to complete the maintenance successfully, you need to create a new SUSDB.
 
 ## Query to obtain the update count
 
-An excessive number of superseded, declined, and obsolete updates often causes the poor health of the WSUS database. To obtain the update count, run the following SQL query. If the counts in the last three columns of the query result exceed a few hundred, maintenance should be performed.
+An excessive number of superseded, declined, and obsolete updates often causes the poor health of SUSDB. To obtain the update count, run the following SQL query. If the counts in the last three columns of the query result exceed a few hundred, maintenance should be performed.
 
 ```sql
 use SUSDB;
@@ -52,11 +52,11 @@ select
 The following steps can resolve many issues with scanning and synchronization. You might need to repeat steps 9 through 12 multiple times if there's a large number of declined updates. After each run, execute the [SQL query](#query-to-obtain-the-update-count) to confirm that the update count is decreasing. Steps 8 and 9 might result in errors each time, which is expected. Therefore, you need to repeat steps 9 through 12 multiple times. Some steps especially step 9 might take several hours to complete.
 
 1. Run the SQL script that is described in [Slow performance of the spDeleteUpdate procedure](spdeleteupdate-slow-performance.md).
-2. Shrink the WSUS database files.
-3. Shrink the WSUS database.
-4. Reindex and update statistics on the WSUS database.
+2. Shrink the SUSDB files.
+3. Shrink the SUSDB database.
+4. Reindex and update statistics on SUSDB.
 
-    1. To reindex the WSUS database, run the following SQL script:
+    1. To reindex SUSDB, run the following SQL script:
 
         ```sql
         EXEC sp_MSforeachtable @command1="SET QUOTED_IDENTIFIER ON;ALTER INDEX ALL ON ? REBUILD;"
@@ -165,11 +165,11 @@ The following steps can resolve many issues with scanning and synchronization. Y
     $wsus.GetUpdates() | Where {$_.IsDeclined -eq $true} | ForEach-Object {$wsus.DeleteUpdate($_.Id.UpdateId.ToString()); Write-Host $_.Title removed } 
     ```
 
-10. Shrink the WSUS database files.
-11. Shrink the WSUS database.
-12. Reindex and update statistics on the WSUS database.
+10. Shrink the SUSDB files.
+11. Shrink the SUSDB database.
+12. Reindex and update statistics on SUSDB.
 
-    1. To reindex the WSUS database, run the following SQL script:
+    1. To reindex SUSDB, run the following SQL script:
 
         ```sql
         EXEC sp_MSforeachtable @command1="SET QUOTED_IDENTIFIER ON;ALTER INDEX ALL ON ? REBUILD;"
