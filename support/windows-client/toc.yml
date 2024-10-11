@@ -859,6 +859,8 @@ items:
       href: ./shell-experience/x-app-titles-lower-right-corner.md
     - name: Black screen when unlocking a computer
       href: ./shell-experience/windows-7-black-screen-unlock-computer.md
+    - name: Blank icons on desktop, Start menu, and taskbar
+      href: ./shell-experience/application-shortcuts-show-blank-icons.md
     - name: Blank screen with no Start Menu
       href: ./shell-experience/windows-logon-process-failed-spawn-user-app.md
     - name: Fail to execute commands with RunOnce and RunOnceEx
