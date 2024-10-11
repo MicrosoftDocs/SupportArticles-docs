@@ -1,9 +1,9 @@
 ---
 title: HTTP Error 500.0 error
 description: This article provides resolutions for the HTTP 500.0 error that occurs when you visit a Web site that is hosted on IIS.
-ms.date: 12/29/2020
+ms.date: 10/11/2024
 ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
-ms.reviewer: nitgupta
+ms.reviewer: zixie
 ---
 # HTTP Error 500.0 - Internal Server Error error when you open an IIS Webpage
 
@@ -14,7 +14,9 @@ _Original KB number:_ &nbsp; 942031
 
 ## Summary
 
-This article describes HResult codes when you encounter 500.0 error on an Internet Information Services (IIS) Web application. This article is intended for Web site administrators. These errors have many causes and can affect many different system configurations. The procedures that are described in this article must be performed by a member of the administrator group on the server.
+This article mainly describes HResult codes when you encounter 500.0 error on an Internet Information Services (IIS) Web application. For the 500.0 errors caused by the web application code, please check the [More information](#more-information) section below. 
+
+This article is intended for Web site administrators. These errors have many causes and can affect many different system configurations. The procedures that are described in this article must be performed by a member of the administrator group on the server.
 
 End users that experience these errors should notify the Web site administrator of the problem.
 
@@ -174,4 +176,6 @@ There are two possibilities for HResult 0x8007007f:
 
 ## More information
 
-For any exception thrown from the web application code, check Application event log or your own Application log,  for Exception Type, Exception Message, and Exception Call Stack. If further debugging is needed, use DebugDiag latest version to capture [first chance exception dumps](https://techcommunity.microsoft.com/t5/iis-support-blog/using-debugdiag-to-capture-memory-dumps-on-first-chance/ba-p/377131).  
+If the web application code throws an exception and gets caught by the application's runtime (e.g. ASP.Net runtime), you may also see the HTTP 500.0 error in the web response. For any exception thrown from the web application code, check Application event log or your own custom Application log, for Exception Type, Exception Message, and Exception Call Stack. 
+
+If further debugging is needed, use DebugDiag latest version to capture [first chance exception dumps](https://techcommunity.microsoft.com/t5/iis-support-blog/using-debugdiag-to-capture-memory-dumps-on-first-chance/ba-p/377131).  
