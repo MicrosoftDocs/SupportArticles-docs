@@ -1,6 +1,6 @@
 ---
-title: Get support for Viva Glint
-description: Provides steps to submit an online support request for Microsoft Viva Glint issues.
+title: Resolve issues when accessing Viva Glint survey results as a manager
+description: Lists some common issues and the steps to resolve them.
 manager: dcscontentpm
 ms.reviewer: aweixelman
 ms.date: 09/23/2024
