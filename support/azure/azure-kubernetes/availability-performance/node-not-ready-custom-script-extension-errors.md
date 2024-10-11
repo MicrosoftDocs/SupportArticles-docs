@@ -108,7 +108,7 @@ Make sure that the API server can be reached and isn't subject to delays. To do 
   | Set type | Action |
   | -------- | ------ |
   | VM availability set | Delete the node from the Azure portal and the AKS API by using the [kubectl delete](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#delete) node command, and then scale up the cluster again. |
-  | Virtual Machine Scale Set | Either reimage the node from the Azure Portal, or delete the node, and then scale up the cluster again. To delete the specific node, use [az aks nodepool delete-machines](/azure/aks/nodepool#az-aks-nodepool-delete-machines) command. It will cordon & drain first and then delete the node. |
+  | Virtual Machine Scale Set | Either reimage the node from the Azure Portal, or delete the node, and then scale up the cluster again. To delete the specific node, use [az aks nodepool delete-machines](/cli/azure/aks/nodepool#az-aks-nodepool-delete-machines) command. It will cordon & drain first and then delete the node. |
 
 - If the requests are being throttled by the AKS API server, upgrade to a higher service tier. For more information, see [Pricing tiers for AKS](/azure/aks/free-standard-pricing-tiers).
 
