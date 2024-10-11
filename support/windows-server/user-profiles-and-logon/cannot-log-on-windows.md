@@ -1,23 +1,23 @@
 ---
 title: Can't log on to Windows
 description: Describes an issue where you're prompted for user name and password repeatedly when logging on Windows.
-ms.date: 12/26/2023
+ms.date: 10/11/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika
+ms.reviewer: kaushika, raonwubu
 ms.custom: sap:User Logon and Profiles\Service Account and Interactive User Logon Issues and Credential Providers, csstroubleshoot
 ---
 # Windows logs on and logs off immediately
 
 This article describes an issue where you can't sign in to the system and you're prompted for username and password repeatedly.
 
-_Applies to:_ &nbsp; Windows Server 2012 and newer  
+_Applies to:_ &nbsp; Supported versions of Windows Server  
 _Original KB number:_ &nbsp; 555648
 
 ## Symptoms
 
-Windows logs on and logs off immediately when you try logging on to Windows. When you type the username and password, you're again presented with Username and Password dialogue box. You try hard to get in but to no avail.
+Windows logs on and logs off immediately when you try logging on to Windows. When you type the username and password, you're again presented with **Username** and **Password** dialogue box. You try hard to get in but to no avail.
 
 ## Cause
 
@@ -53,7 +53,7 @@ Userinit=C:\windows\system32\userinit.exe
 - Change these two values to
 
     Shell=explorer.exe  
-  Userinit = C:\windows\system32\userinit.exe
+    Userinit = C:\windows\system32\userinit.exe
   
 - Exit from Registry.
 - Restart the infected computer.
