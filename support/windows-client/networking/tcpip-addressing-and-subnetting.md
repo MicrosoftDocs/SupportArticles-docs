@@ -13,7 +13,7 @@ adobe-target: true
 
 This article is intended as a general introduction to the concepts of Internet Protocol (IP) networks and subnetting. A glossary is included at the end of article.
 
-_Applies to:_ &nbsp; Windows Client and Server OS - all editions  
+_Applies to:_ &nbsp; Windows client and server OS - all editions  
 _Original KB number:_ &nbsp; 164015
 
 ## Summary
