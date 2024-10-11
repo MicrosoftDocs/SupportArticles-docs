@@ -33,9 +33,9 @@ The node extension deployment fails and returns more than one error code when yo
 
 1. Check the debugging output and the error messages that you received from the `az resource update` command against the error list in the [CSE helper](https://github.com/Azure/AgentBaker/blob/1bf9892afd715a34e0c6b7312e712047f10319ce/parts/linux/cloud-init/artifacts/cse_helpers.sh) executable file on GitHub.
 
-If any of the errors involve the CSE deployment of the kubelet, then you've verified that the scenario that's described here is the cause of the Node Not Ready failure.
+If any of the errors involve the CSE deployment of the kubelet, then you've verified that the scenario that's described here's the cause of the Node Not Ready failure.
 
-In general, exit codes identify the specific issue that's causing the failure. For example, you'll see messages such as "Unable to communicate with API server" or "Unable to connect to internet." Or the exit codes might alert you to API network time-outs, or a node fault that needs a replacement.
+In general, exit codes identify the specific issue that's causing the failure. For example, you see messages such as "Unable to communicate with API server" or "Unable to connect to internet." Or the exit codes might alert you to API network time-outs, or a node fault that needs a replacement.
 
 ## Solution 1: Make sure your custom DNS server is configured correctly
 
@@ -108,7 +108,7 @@ Make sure that the API server can be reached and isn't subject to delays. To do 
   | Set type | Action |
   | -------- | ------ |
   | VM availability set | Delete the node from the Azure portal and the AKS API by using the [kubectl delete](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#delete) node command, and then scale up the cluster again. |
-  | Virtual Machine Scale Set | Either reimage the node from the Azure Portal, or delete the node, and then scale up the cluster again. To delete the specific node, use [az aks nodepool delete-machines](/cli/azure/aks/nodepool#az-aks-nodepool-delete-machines) command. It will cordon & drain first and then delete the node. |
+  | Virtual Machine Scale Set | Either reimage the node from the Azure portal, or delete the node, and then scale up the cluster again. To delete the specific node, use [az aks nodepool delete-machines](/cli/azure/aks/nodepool#az-aks-nodepool-delete-machines) command. It will cordon & drain first and then delete the node. |
 
 - If the requests are being throttled by the AKS API server, upgrade to a higher service tier. For more information, see [Pricing tiers for AKS](/azure/aks/free-standard-pricing-tiers).
 
