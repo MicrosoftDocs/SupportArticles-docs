@@ -1,7 +1,8 @@
 ---
 title: Troubleshoot VMM service issues using ProcDump
 description: Describes how to use ProcDump to troubleshoot Virtual Machine Manager service (Vmmservice.exe) issues.
-ms.date: 07/15/2020
+ms.date: 04/09/2024
+ms.reviewer: jarrettr
 ---
 # How to use ProcDump to troubleshoot Virtual Machine Manager service (Vmmservice.exe) issues
 

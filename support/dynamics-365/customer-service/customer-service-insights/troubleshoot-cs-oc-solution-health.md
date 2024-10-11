@@ -4,6 +4,7 @@ description: Provides more information about how to troubleshoot issues using So
 ms.reviewer: sdas
 ms.author: shchaur
 ms.date: 12/04/2023
+ms.custom: sap:Customer Service Insights
 ---
 # Troubleshoot issues in Customer Service and Omnichannel for Customer Service using Solution Health Hub
 

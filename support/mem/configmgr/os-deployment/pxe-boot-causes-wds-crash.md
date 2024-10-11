@@ -1,8 +1,9 @@
 ---
 title: PXE boot causes WDS to crash
 description: Describes an issue that Windows Deployment Services (WDS) crashes during PXE boot and provides a workaround.
-ms.date: 06/01/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika
+ms.custom: sap:Operating Systems Deployment (OSD)\PXE
 ---
 # Configuration Manager PXE boot causes Windows Deployment Services to crash
 

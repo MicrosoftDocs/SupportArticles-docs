@@ -1,9 +1,10 @@
 ---
 title: How to use negative deductions to adjust employee records
 description: Describes the method to use negative deductions to adjust employee records in Payroll in Microsoft Dynamics GP.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.topic: how-to
-ms.date: 04/22/2021
+ms.date: 03/20/2024
+ms.custom: sap:Payroll
 ---
 # How to use negative deductions to adjust employee records in Payroll in Microsoft Dynamics GP
 

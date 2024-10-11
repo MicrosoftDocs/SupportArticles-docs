@@ -2,7 +2,7 @@
 title: Query performance degradation on secondary replicas
 description: This article helps you resolve the problem where you experience query performance issues on read-only secondary replicas.
 ms.date: 09/25/2020
-ms.custom: sap:Availability Groups
+ms.custom: sap:Always On Availability Groups (AG)
 ---
 # Query execution takes longer on SQL Server Always On secondary replicas
 

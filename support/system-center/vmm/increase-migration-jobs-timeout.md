@@ -1,19 +1,19 @@
 ---
 title: A migration job fails with error 23007 
-description: Fixes an issue that a migration job fails because of the timeout when there are multiple concurrent migration jobs in System Center 2012 Virtual Machine Manager.
-ms.date: 07/17/2020
-ms.reviewer: alvinm
+description: Fixes an issue that a migration job fails because of the timeout when there are multiple concurrent migration jobs in System Center Virtual Machine Manager.
+ms.date: 04/09/2024
+ms.reviewer: wenca, alvinm
 ---
-# Increase the timeout for migration jobs in System Center 2012 Virtual Machine Manager
+# Increase the timeout for migration jobs in System Center Virtual Machine Manager
 
-This article provides a workaround for an issue that a migration job fails because of the timeout when there are multiple concurrent migration jobs in System Center 2012 Virtual Machine Manager.
+This article provides a workaround for an issue that a migration job fails because of the timeout when there are multiple concurrent migration jobs in System Center Virtual Machine Manager.
 
-_Original product version:_ &nbsp; System Center 2012 Virtual Machine Manager  
+_Original product version:_ &nbsp; System Center Virtual Machine Manager  
 _Original KB number:_ &nbsp; 2790310
 
 ## Symptoms
 
-With System Center 2012 Virtual Machine Manager service pack 1 (SP1), we now allow multiple migrations to occur and we can specify the maximum number of concurrent migration jobs in the properties of the host. What this means is that if we set the migration value to **2**, the third migration job will be queued until one of the earlier jobs is complete, and by default this job will wait 15 minutes before it times out and fails the job.
+With System Center Virtual Machine Manager service pack 1 (SP1), we now allow multiple migrations to occur and we can specify the maximum number of concurrent migration jobs in the properties of the host. What this means is that if we set the migration value to **2**, the third migration job will be queued until one of the earlier jobs is complete, and by default this job will wait 15 minutes before it times out and fails the job.
 
 When this happens, you will see errors similar to the following in the VMM admin console:
 

@@ -1,8 +1,9 @@
 ---
 title: Management points fail with HTTP 500 errors
 description: Describes an issue in which management points associated with System Center 2012 Configuration Manager return HTTP 500 errors to calling clients. This issue occurs after the Client Health Evaluation task runs and triggers a reinstall of the client.
-ms.date: 06/04/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika, keiththo, erinwi
+ms.custom: sap:Site Server and Roles\Management Point Operations
 ---
 # Configuration Manager management points fail after the Client Health Evaluation task runs
 

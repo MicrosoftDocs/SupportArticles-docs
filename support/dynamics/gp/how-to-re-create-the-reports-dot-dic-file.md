@@ -1,9 +1,10 @@
 ---
 title: Re-create the Reports.dic file
 description: Describes how to re-create the Reports.dic file in Microsoft Dynamics GP and in Microsoft Business Solutions - Great Plains.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # How to re-create the Reports.dic file in Microsoft Dynamics GP
 

@@ -1,8 +1,8 @@
 ---
 title: Cumulative update 11 for SQL Server 2017 (KB4462262)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2017 cumulative update 11 (KB4462262).
-ms.date: 08/04/2023
-ms.custom: KB4462262
+ms.date: 07/26/2024
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB4462262, linux-related-content
 appliesto:
 - SQL Server 2017 on Windows
 - SQL Server 2017 on Linux

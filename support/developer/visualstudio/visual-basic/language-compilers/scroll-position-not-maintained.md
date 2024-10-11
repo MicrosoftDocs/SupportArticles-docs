@@ -2,7 +2,7 @@
 title: The scroll position is not maintained
 description: This article provides a workaround for the problem that occurs when you clear and then redraw an auto-scrollable Panel control that contains child controls.
 ms.date: 10/10/2020
-ms.custom: sap:Language or Compilers
+ms.custom: sap:Language or Compilers\Visual Basic .NET (VB.NET)
 ---
 # The scroll position is not maintained in an auto-scrollable Panel control in a Windows Forms application
 

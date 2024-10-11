@@ -2,7 +2,9 @@
 title: Add SOP information to the POP Purchase Order Blank Form in Microsoft Dynamics GP
 description: Describes how to add Sales Order Processing information to the POP Purchase Order Blank Form in Microsoft Dynamics GP.
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.reviewer: theley
+ms.custom: sap:Distribution - Sales Order Processing
 ---
 # How to add Sales Order Processing information to the POP Purchase Order Blank Form in Microsoft Dynamics GP
 

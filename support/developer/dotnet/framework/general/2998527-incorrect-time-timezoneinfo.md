@@ -3,7 +3,7 @@ title: KB2998527 causes wrong code lookups on past dates
 description: This article explains the problem where update 2998527 causes incorrect code lookups on past dates when the application use TimeZoneInfo.
 ms.date: 05/08/2020
 ms.reviewer: leecow
-ms.technology: dotnet-general
+ms.custom: sap:Class Library Namespaces
 ---
 # Update 2998527 causes incorrect code lookups on past dates
 

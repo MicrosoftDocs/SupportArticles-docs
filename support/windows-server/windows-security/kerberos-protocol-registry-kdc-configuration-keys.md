@@ -1,23 +1,17 @@
 ---
 title: Registry entries about Kerberos protocol and Key Distribution Center (KDC)
 description: Lists the registry entries in Windows Server that can be used for Kerberos protocol testing and troubleshooting Kerberos authentication issues.
-ms.date: 08/29/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 09/20/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
-ms.reviewer: kaushika
-ms.custom: sap:kerberos-authentication, csstroubleshoot
-ms.technology: windows-server-security
+ms.reviewer: kaushika, herbertm
+ms.custom: sap:Windows Security Technologies\Kerberos authentication, csstroubleshoot
 ---
 # Kerberos protocol registry entries and KDC configuration keys in Windows
 
 This article describes registry entries about Kerberos version 5 authentication protocol and Key Distribution Center (KDC) configuration.
 
-_Applies to:_ &nbsp; Windows 11, Windows 10, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 _Original KB number:_ &nbsp; 837361
 
 ## Summary
@@ -103,12 +97,12 @@ The registry entries that are listed in this section must be added to the follow
   - Type: REG_DWORD
 
     This value indicates the default encryption type for pre-authentication.
-    Default value for RC4 is 23 (decimal) or 0x17 (hexadecimal)
+    Default value is 18 decimal for AES256
 
-    When you want to use AES, set the value to one of the following values:
+    Possible other values:
 
-    - aes256-cts-hmac-sha1-96: 18 or 0x12
-    - aes128-cts-hmac-sha1-96: 17 or 0x11
+    - 17 decimal for AES128
+    - 23 decimal for RC4 HMAC
 
     This value indicates the default encryption type for pre-authentication.
 
@@ -190,6 +184,17 @@ The registry entries that are listed in this section must be added to the follow
   - Possible values: 0 (false) or any non-zero value (true)
 
     This value indicates whether a client IP address will be added in AS_REQ to force the **`Caddr`** field to contain IP addresses in all tickets.
+
+    For third-party realms that require client addresses, you can selectively enable the addresses:
+
+    1. Open an elevated command prompt window.
+    2. Run the following command:
+
+        ```console
+        ksetup /setrealmflags <your Kerberos realm name> sendaddress
+        ```
+
+    3. You can use the `/server` switch to let [ksetup](/windows-server/administration/windows-commands/ksetup) make the changes on a remote computer.
 
 - Entry: TgtRenewalTime
 

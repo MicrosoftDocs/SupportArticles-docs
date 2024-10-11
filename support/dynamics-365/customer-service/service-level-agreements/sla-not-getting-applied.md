@@ -4,6 +4,7 @@ description: Provides a resolution for an issue where an SLA isn't applied to a 
 ms.date: 08/18/2023
 ms.reviewer: sdas, ankugupta
 ms.author: sdas
+ms.custom: sap:Service Level Agreements\Issue with importing or exporting or upgrading SLA
 ---
 # SLA isn't getting applied to a case
 

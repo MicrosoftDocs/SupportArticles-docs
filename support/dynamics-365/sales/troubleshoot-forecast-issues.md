@@ -4,7 +4,7 @@ description: Provides resolutions for the known issues that are related to forec
 author: sbmjais
 ms.author: shjais
 ms.reviewer: ladirohit, lavanyakr
-ms.date: 11/22/2023
+ms.date: 03/15/2024
 ms.subservice: d365-sales-sales
 ---
 # Troubleshoot issues with forecasting
@@ -243,13 +243,16 @@ The columns associated with the **Selector**, **Amount field**, and **Date field
 
 ### Resolution
 
-To solve the issue, you need to provide the read permission to the Dynamics 365 Sales Forecasting user in the field security profiles. Otherwise, the column will show **0** to all users except system administrators. Follow these steps to configure the field security profiles:
+To solve the issue, you need to grant the **Read** permission to the **# Dynamics 365 Sales Forecasting** user in the field security profiles. Otherwise, the column will show **0** to all users. Follow these steps to configure the field security profiles:
 
-1. Go to **Settings**> **Security** > **Field Security Profiles**.
-1. Select an existing profile or create a new one.
-1. Select **Users** or **Teams** to add the users or teams that you want to grant access to the secure fields.
-1. Select **Field Permissions** to set the permissions for each field. You can select **Read**, **Create**, or **Update**, or a combination of them.
+1. Go to **Settings**> **Advanced Settings** > **Security** > **Field Security Profiles**.
+1. Select the field security profile associated with the field that shows **0**.
+1. Select **Users** > **Add**.
+1. Search for the **# Dynamics 365 Sales Forecasting** user, select the checkbox against the user name, and then select **Select** > **Add**.
+1. Select **Field Permissions** and grant **Read** permission to the field.
 1. Save and close the profile.
+
+Recalculate the forecast and verify that the column shows appropriate values.
 
 ## Issue 12 - Can't manually recalculate the prediction column on the Forecasts page
 

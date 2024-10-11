@@ -1,7 +1,8 @@
 ---
 title: DPM protection agent service can't start
 description: Describes a problem that occurs when event ID 7024 is logged in the System log on protected servers. You also receive The DPMRA service terminated with service-specific error 10048 (0x2740) error.
-ms.date: 07/24/2020
+ms.date: 04/08/2024
+ms.reviewer: Mjacquet
 ---
 # The DPM protection agent service can't start
 
@@ -52,6 +53,11 @@ To resolve this problem, find the process that is using the required TCP ports. 
 > If another application is using the port or ports (5718 and 5719), the ports cannot be changed. In this case, you can, instead, use the SetAgentcfg.exe tool. This tool provides the ability to change the default ports that the DPM agent uses.
 
 To change the ports that are used by the DPM agent, follow these steps on the protected computer that is experiencing the problem. Make sure that the ports that you reassign will not be used by any other applications.
+
+> [!NOTE]
+> To list the DPM installation path, run the following command:
+> 
+> `Reg query "HKLM\SOFTWARE\Microsoft\Microsoft Data Protection Manager\Setup" /v installpath`
 
 1. Locate the SetAgentcfg.exe file from the DPM server. By default, the file is located at `%PROGRAMFILES%\Microsoft DPM\DPM\Setup\SetAgentCfg.exe`.
 

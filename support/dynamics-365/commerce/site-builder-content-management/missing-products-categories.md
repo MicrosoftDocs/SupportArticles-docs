@@ -5,6 +5,7 @@ author: josaw1
 ms.author: josaw
 ms.reviewer: rassadi, brstor
 ms.date: 09/01/2023
+ms.custom: sap:Product management, search, and recommendations\Issues with products, attributes, and categories in e-commerce storefront
 ---
 # Products and categories are missing after you copy an e-commerce site
 

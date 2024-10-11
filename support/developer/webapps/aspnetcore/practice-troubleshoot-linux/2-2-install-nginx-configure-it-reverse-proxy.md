@@ -1,10 +1,9 @@
 ---
 title: Install Nginx and configure it as a reverse proxy server
 description: This article describes how to install Nginx and configure it as a reverse proxy server.
-ms.date: 10/10/2023
-ms.prod: aspnet-core
+ms.date: 08/23/2024
+ms.custom: sap:General Development Questions, linux-related-content
 ms.reviewer: ahmetmb
-ms.technology: aspnetcore-practice-troubleshoot-linux
 author: ahmetmithat
 ---
 # Part 2.2 - Install Nginx and configure it as a reverse proxy server
@@ -242,7 +241,7 @@ To start troubleshooting, run the same `netstat` command as before. This time, u
 
 :::image type="content" source="./media/2-2-install-nginx-configure-it-reverse-proxy/netstat-command.png" alt-text="Screenshot of netstat command." border="true":::
 
-This sample output indicates that nothing is listening on port 5000. Therefore, this is the cause of the **HTTP 502** response that's coming from Nginx because it can find a process that's listening on port 5000.
+This sample output indicates that nothing is listening on port 5000. Therefore, this is the cause of the **HTTP 502** response that's coming from Nginx because it can't find a process that's listening on port 5000.
 
 The solution is to start your ASP.NET Core application. However, before going further, you can review another approach for troubleshooting this problem. Not every problem is as easy to fix as simply looking at a few lines of log content and finding the root cause. Sometimes, you have to deep-dive into other system and application logs.
 

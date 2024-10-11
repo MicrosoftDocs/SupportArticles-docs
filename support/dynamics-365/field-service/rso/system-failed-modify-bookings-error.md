@@ -1,10 +1,11 @@
 ---
 title: Optimization request fails to modify some bookings
 description: Resolves issues with optimization requests in the Resource Scheduling Optimization add-in for Dynamics 365 Field Service.
-ms.author: feiqiu
-author: feifeiqiu
+ms.author: AnilMur
+author: anilmur
 ms.reviewer: mhart
 ms.date: 10/19/2023
+ms.custom: sap:Resource Scheduling Optimization
 ---
 # An optimization request fails to modify some bookings
 

@@ -5,7 +5,6 @@ summary: Welcome to Visual Studio troubleshooting. These articles explain how to
 metadata:
   title: Visual Studio troubleshooting document
   description: Knowledge Base (KB) and other Support articles for Visual Studio. # Required; article description that is displayed in search results. < 160 chars.
-  ms.prod: visual-studio-family
   ms.topic: landing-page # Required
   author: HaiyingYu  #Required; your GitHub user alias, with correct capitalization.
   ms.author: haiyingyu #Required; microsoft alias of author; optional team alias.

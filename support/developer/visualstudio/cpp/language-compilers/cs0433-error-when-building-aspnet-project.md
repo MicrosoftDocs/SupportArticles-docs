@@ -2,7 +2,7 @@
 title: ASP.NET project suffers CS0433 compiler error
 description: This article describes scenarios when you build an ASP.NET project in Visual Studio.
 ms.date: 01/23/2020
-ms.custom: sap:Language or Compilers
+ms.custom: sap:Language or Compilers\C++
 ---
 # Building an ASP.NET project in Visual Studio results in Compiler Error Message CS0433
 

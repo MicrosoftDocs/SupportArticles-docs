@@ -5,6 +5,7 @@ ms.date: 12/18/2012
 ms.author: haiyingyu
 author: HaiyingYu
 ms.reviewer: johnhart, riande, benperk
+ms.custom: sap:Health, Diagnostic, and Performance Features\HTTP error logging
 ---
 # Troubleshoot IIS performance issues or application errors using LogParser
 

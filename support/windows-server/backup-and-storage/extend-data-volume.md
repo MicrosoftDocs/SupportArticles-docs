@@ -1,17 +1,12 @@
 ---
 title: Extend a data volume
 description: Describes how to use the Diskpart.exe command prompt utility to extend a data volume in unallocated space. Also describes how to extend the boot partition.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:partition-and-volume-management, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Partition and volume management , csstroubleshoot
 ---
 # Extend a data volume in Windows
 
@@ -20,7 +15,6 @@ This article describes the following topics:
 - How to use the Diskpart.exe command prompt utility to extend a data volume into unallocated space in Windows Server 2003, Windows XP, and Windows 2000.
 - How to extend the boot partition in Windows Server 2008.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 325590
 
 ## Use Diskpart.exe to extend a data volume in Windows Server 2003, in Windows XP, and in Windows 2000

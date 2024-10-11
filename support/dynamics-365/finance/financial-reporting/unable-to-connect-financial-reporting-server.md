@@ -5,8 +5,6 @@ title: Troubleshoot issues connecting to Financial reporting
 description: Provides a resolution for an issue where you can't connect to Financial reporting in Microsoft Dynamics 365 Finance.
 author: aprilolson
 ms.date: 12/07/2023
-ms.prod: 
-ms.technology: 
 
 # optional metadata
 
@@ -23,6 +21,7 @@ ms.search.region: Global
 ms.author: aolson
 ms.search.validFrom: 2016-02-28
 ms.dyn365.ops.version: AX 7.0.0
+ms.custom: sap:Financial reporting and management reporter
 ---
 # "Unable to Connect to the Financial reporting server" error when connecting to Financial reporting
 

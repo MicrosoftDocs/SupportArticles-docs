@@ -1,11 +1,11 @@
 ---
 title: Troubleshoot Dynamics 365 Remote Assist model-driven app installation failures
 description: Resolves an issue where the installation of the Microsoft Dynamics 365 Remote Assist model-driven app fails.
-ms.author: davepinch
-author: davepinch
+author: prashantyvr
+ms.author: prashan
 ms.date: 10/27/2023
 ms.reviewer: v-wendysmith, mhart
-ms.custom: bap-template
+ms.custom: sap:Dynamics 365 Remote Assist\Setup and configuration, bap-template
 ---
 # Troubleshoot failures with the installation of the Dynamics 365 Remote Assist model-driven app
 

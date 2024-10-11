@@ -1,7 +1,8 @@
 ---
 title: Cannot access the UNIX/Linux computers view
 description: Fixes an issue in which you can't access the Unix/Linux Computers view in System Center 2012 R2 Operations Manager when the resource pool is deleted.
-ms.date: 06/30/2020
+ms.date: 04/15/2024
+ms.custom: linux-related-content
 ---
 # You can't access the UNIX/Linux computers view in System Center 2012 R2 Operations Manager
 

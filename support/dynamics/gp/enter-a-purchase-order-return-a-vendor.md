@@ -1,9 +1,10 @@
 ---
 title: Enter a purchase order return to a vendor
 description: How to enter a purchase order return to a vendor for an item that was sold in Microsoft Dynamics GP.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # How to enter a purchase order return to a vendor for an item that was sold in Microsoft Dynamics GP
 

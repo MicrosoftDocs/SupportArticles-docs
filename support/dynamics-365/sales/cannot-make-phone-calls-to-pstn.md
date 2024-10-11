@@ -4,7 +4,7 @@ description: Provides resolutions for an issue where a seller can't make a phone
 ms.date: 08/22/2023
 ms.reviewer: asaftzuk, ilanak
 author: t-ronioded
-ms.author: t-ronioded
+ms.author: ronihemed
 ---
 # Sellers can't make a phone call to a PSTN number
 

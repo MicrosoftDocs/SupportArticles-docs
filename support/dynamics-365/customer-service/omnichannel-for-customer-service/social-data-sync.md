@@ -4,6 +4,7 @@ description: Provides a resolution for the issue where the Social Profile entity
 ms.reviewer: nenellim
 ms.author: yangao
 ms.date: 05/23/2023
+ms.custom: sap:Social channels\Cannot send or receive messages
 ---
 # Sync issue with social data in Omnichannel for Customer Service
 

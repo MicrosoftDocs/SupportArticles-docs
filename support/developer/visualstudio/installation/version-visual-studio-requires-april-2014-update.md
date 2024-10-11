@@ -5,6 +5,7 @@ ms.date: 05/05/2022
 author: jasonchlus
 ms.author: jasonchlus
 ms.reviewer: terry.g.lee
+ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ---
 
 # Error "This version of Visual Studio requires the April 2014 update to Windows 8.1 and Windows Server 2012 R2 known as KB 2919355"

@@ -1,13 +1,14 @@
 ---
 title: Create a Linux virtual machine in Azure
 description: This article introduces how to create a Linux virtual machine in Azure and connect to it.
-ms.date: 03/08/2021
-ms.prod: aspnet-core
+ms.date: 04/15/2024
+ms.custom: sap:General Development Questions, linux-related-content
 ms.reviewer: ramakoni, ahmetmb
-ms.technology: aspnetcore-practice-troubleshoot-linux
 author: ahmetmithat
 ---
 # Part 1.1 - Create a Linux virtual machine in Azure and connecting to it
+
+[!INCLUDE [CentOS End Of Life](../../../../includes/centos-end-of-life-note.md)]
 
 _Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1, .NET 5  
 

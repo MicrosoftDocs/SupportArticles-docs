@@ -2,7 +2,8 @@
 title: Fields in the ACH Fields Setup window in Microsoft Dynamics GP
 description: You can use the ACH Fields Setup window to enter basic information about the files that banks use to make fund transfers to employees.
 ms.reviewer: theley
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Payroll
 ---
 # Description of the fields in the ACH Fields Setup window in Microsoft Dynamics GP
 

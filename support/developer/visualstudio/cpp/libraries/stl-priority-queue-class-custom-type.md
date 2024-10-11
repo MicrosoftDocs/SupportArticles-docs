@@ -2,7 +2,7 @@
 title: Use the PRIORITY_QUEUE class with a custom type
 description: This article provides a code sample that describes how to use the priority_queue template container of STL with custom types like classes and structures.
 ms.date: 04/22/2020
-ms.custom: sap:C and C++ Libraries
+ms.custom: sap:C and C++ Libraries\C and C++ runtime libraries and Standard Template Library (STL)
 ms.topic: how-to
 ---
 # Use the STL PRIORITY_QUEUE class with a custom type

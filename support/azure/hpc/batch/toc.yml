@@ -1,0 +1,27 @@
+- name: Welcome
+  href: welcome-hpc-batch.yml
+- name: Access to storage account is denied
+  href: access-denied-execute-azure-batch-job.md
+- name: AccountEncryptionKeyUnavailable error message
+  href: error-accountencryptionkeyunavailable.md
+- name: Batch node creation delays when restarting or reimaging
+  href: batch-node-creation-delay-restart-reimage.md
+- name: Batch node is stuck in Unusable state
+  href: azure-batch-node-unusable-state.md
+- name: Batch pool creation failure
+  href: azure-batch-pool-creation-failure.md
+- name: Batch pool deletion failure
+  href: azure-batch-pool-deletion-failure.md
+- name: Batch task is stuck in Running state
+  href: azure-batch-task-stuck-in-running-state.md
+- name: Batch pool resizing failure
+  href: azure-batch-pool-resizing-failure.md
+- name: Batch tasks fail due to permission issues 
+  href: azure-batch-task-permission-issue.md
+- name: Batch task fails without stdout or stderr
+  href: azure-batch-task-failure-no-stdout-stderr-log.md
+- name: Identify resources created by Azure Batch
+  href: azure-batch-creates-network-resources.md
+- name: Use managed identities in a Batch account or a Batch pool
+  href: use-managed-identities-azure-batch-account-pool.md
+

@@ -2,7 +2,7 @@
 title: Use map STL functions in Visual C++
 description: This article provides a sample code to show how to use the map::end, map::find, map::insert, map::iterator, and map::value_type STL functions in Visual C++.
 ms.date: 04/24/2020
-ms.custom: sap:C and C++ Libraries
+ms.custom: sap:C and C++ Libraries\C and C++ runtime libraries and Standard Template Library (STL)
 ms.topic: how-to
 ---
 # Use the map::end, map::find, map::insert, map::iterator, and map::value_type STL functions in Visual C++

@@ -1,8 +1,9 @@
 ---
 title: Client piloting package fails after a site expansion
 description: After you perform site expansion, the Configuration Manager client piloting package fails. Provides a resolution.
-ms.date: 06/16/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika
+ms.custom: sap:Client Installation, Registration and Assignment\Client Upgrade
 ---
 # Client piloting package fails after a site expansion in Configuration Manager
 

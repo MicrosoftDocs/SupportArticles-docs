@@ -1,10 +1,11 @@
 ---
 title: Object reference not set to an instance of an object error
 description: Resolves issues related to an error message in the Resource Scheduling Optimization add-in for Dynamics 365 Field Service.
-ms.author: feiqiu
-author: feifeiqiu
+ms.author: AnilMur
+author: anilmur
 ms.reviewer: mhart
 ms.date: 10/19/2023
+ms.custom: sap:Resource Scheduling Optimization
 ---
 # "Object reference not set to an instance of an object" error in Resource Scheduling Optimization
 

@@ -3,7 +3,7 @@ title: StackOverflowException in DataGridView
 description: This article discusses that you receive a StackOverflowException error in the DataGridView control on a Tablet PC. Provides a resolution.
 ms.date: 05/12/2020
 ms.reviewer: tanyaso, davean, amymcel, danru, valerieg, daleche
-ms.technology: dotnet-general
+ms.custom: sap:Common Language Runtime (CLR)
 ---
 # StackOverflowException in DataGridView control on Tablet PC
 

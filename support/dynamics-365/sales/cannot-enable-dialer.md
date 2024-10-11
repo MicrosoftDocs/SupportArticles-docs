@@ -4,7 +4,7 @@ description: Provides a resolution for an issue where you can't enable Microsoft
 ms.date: 08/22/2023
 ms.reviewer: asaftzuk, ilanak
 author: t-ronioded
-ms.author: t-ronioded
+ms.author: ronihemed
 ---
 # Can't enable Microsoft Teams dialer for Dynamics 365 Sales
 

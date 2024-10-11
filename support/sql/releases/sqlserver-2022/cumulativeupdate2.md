@@ -1,8 +1,8 @@
 ---
 title: Cumulative update 2 for SQL Server 2022 (KB5023127)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 2 (KB5023127).
-ms.date: 03/15/2023
-ms.custom: KB5023127
+ms.date: 07/26/2024
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5023127
 ms.reviewer: v-qianli2
 appliesto:
 - SQL Server 2022 on Windows
@@ -65,7 +65,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 
 The following update is available from the Microsoft Download Center:
 
-:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2022 now](https://www.microsoft.com/download/details.aspx?familyid=4fa9aa71-05f4-40ef-bc55-606ac00479b1)
+:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2022 now](https://www.microsoft.com/download/details.aspx?id=105013)
 
 > [!NOTE]
 >

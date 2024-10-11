@@ -1,9 +1,10 @@
 ---
 title: Convert self-signed SCX certificates to CA certificates
 description: Introduces how to convert a self-signed certificate on an SCX agent to a Certificate Authority (CA) signed certificate.
-ms.date: 08/23/2023
+ms.date: 04/15/2024
 ms.reviewer: alexkre, blakedrumm, edpaca, stparker, udmudiar, v-weizhu
 ms.topic: how-to
+ms.custom: linux-related-content
 ---
 
 # How to use a CA certificate on an SCX agent
@@ -169,5 +170,3 @@ On a CA server in your SCOM environment, follow these steps to create a certific
 1. In the *Certificate, Server Hello Done* packet, you should see the CA-signed certificate rather than the self-signed certificate used.
 
     :::image type="content" source="media/use-ca-certificate-on-scom-linux-agent/validate-ca-signed-certificate-used.png" alt-text="Screenshot that shows the CA signed certificate." lightbox="media/use-ca-certificate-on-scom-linux-agent/validate-ca-signed-certificate-used.png":::
-
-

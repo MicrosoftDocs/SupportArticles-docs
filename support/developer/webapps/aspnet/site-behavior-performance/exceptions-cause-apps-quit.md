@@ -2,7 +2,7 @@
 title: Exceptions cause ASP.NET apps to quit
 description: This article describes a problem that occurs when an unhandled exception is thrown in an ASP.NET-based application on a computer that is running the .NET Framework 2.0 or a later version.
 ms.date: 04/09/2020
-ms.custom: sap:Site behavior and performance
+ms.custom: sap:Performance
 ms.reviewer: tmarq
 ---
 # Unhandled exceptions cause ASP.NET-based applications to quit unexpectedly in the .NET Framework

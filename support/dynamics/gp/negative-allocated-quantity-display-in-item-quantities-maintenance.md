@@ -1,9 +1,10 @@
 ---
 title: A negative allocated quantity in Inventory Control is displayed in the Item Quantities Maintenance window in Microsoft Dynamics GP
 description: Describes how to resolve an issue in which the Item Quantities Maintenance window displays a negative allocated quantity.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Distribution - Inventory
 ---
 # A negative allocated quantity in Inventory Control is displayed in the Item Quantities Maintenance window in Microsoft Dynamics GP
 

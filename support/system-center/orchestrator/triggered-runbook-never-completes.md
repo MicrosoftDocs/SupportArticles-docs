@@ -1,13 +1,13 @@
 ---
 title: Triggered runbook never completes
-description: Fixes an issue where a triggered runbook never completes in System Center 2012 Orchestrator.
-ms.date: 08/04/2020
+description: Fixes an issue where a triggered runbook never completes in System Center Orchestrator.
+ms.date: 06/26/2024
 ---
-# Triggered runbook never completes in System Center 2012 Orchestrator
+# Triggered runbook never completes in System Center Orchestrator
 
-This article helps you fix an issue where a triggered runbook never completes in System Center 2012 Orchestrator.
+This article helps you fix an issue where a triggered runbook never completes in System Center Orchestrator.
 
-_Original product version:_ &nbsp; Microsoft System Center 2012 Orchestrator  
+_Applies to:_ &nbsp; All versions of Orchestrator  
 _Original KB number:_ &nbsp; 2805832
 
 ## Symptoms
@@ -51,6 +51,6 @@ RECONFIGURE
 
 ## More information
 
-This issue has been corrected in System Center 2012 Orchestrator Service Pack 1 (SP1).
+This issue has been corrected.
 
 This feature will be removed in the later version of SQL Server and the recommended setting for this value is **1**. For more information, see [disallow results from triggers Server Configuration Option](/sql/database-engine/configure-windows/disallow-results-from-triggers-server-configuration-option).

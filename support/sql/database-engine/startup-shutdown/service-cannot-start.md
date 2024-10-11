@@ -2,7 +2,7 @@
 title: Service can't start after you use an SSL certificate
 description: This article helps you resolve a problem that occurs after you configure an SSL certificate that uses Microsoft Enhanced Cryptographic Provider 1.0.
 ms.date: 01/24/2023
-ms.custom: sap:Security Issues
+ms.custom: sap:Startup, shutdown, restart issues (instance or database)
 ms.reviewer: Milu, jopilov, v-jayaramanp
 ---
 

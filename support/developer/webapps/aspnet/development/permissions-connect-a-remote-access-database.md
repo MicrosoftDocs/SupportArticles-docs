@@ -2,7 +2,7 @@
 title: Permissions of connect to a remote Access database
 description: This article describes the permissions to connect to a remote Access database.
 ms.date: 12/11/2020
-ms.custom: sap:Development
+ms.custom: sap:General Development
 ---
 # Permissions to connect to a remote Access database from ASP.NET
 

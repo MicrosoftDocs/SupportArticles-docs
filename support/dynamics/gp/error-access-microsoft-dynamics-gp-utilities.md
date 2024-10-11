@@ -1,13 +1,14 @@
 ---
 title: Error message when you access Microsoft Dynamics GP Utilities
-description: This article provides a resolution for a problem that occurs when you access Microsoft Dynamics GP 10.0 Utilities.
-ms.reviewer: Kyouells
+description: This article provides a resolution for a problem that occurs when you access Microsoft Dynamics GP Utilities.
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Error message when you access Microsoft Dynamics GP Utilities (There was a problem ascertaining product version information. Microsoft Dynamics GP Utilities will now exit. Check DUinstall.log for more information)
 
-This article helps you resolve the problem that occurs when you access Microsoft Dynamics GP 10.0 Utilities.
+This article helps you resolve the problem that occurs when you access Microsoft Dynamics GP Utilities.
 
 _Applies to:_ &nbsp; Microsoft Dynamics GP  
 _Original KB number:_ &nbsp; 952054
@@ -20,7 +21,7 @@ When you access Microsoft Dynamics GP Utilities, you receive the following error
 
 ## Cause
 
-This problem occurs because a sub-feature version cannot update to Microsoft Dynamics GP 10.0.
+This problem occurs because a sub-feature version cannot update to Microsoft Dynamics GP.
 
 ## Resolution
 
@@ -39,7 +40,7 @@ To resolve this problem, follow these steps:
 
     In the Duinstall.log file, you may find a message that resembles the following:
 
-    > Failure encountered ON 12/10/2007 at 3:30:42 PM. Error: Product 949 does not support upgrading from version 3.99.0.
+    > Failure encountered ON 12/10/2024. Error: Product 949 does not support upgrading from version 9.XX.X.
 
     In this example, product 949 is at a version that cannot be updated. Product 949 is the field service.
 

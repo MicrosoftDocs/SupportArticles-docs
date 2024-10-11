@@ -3,7 +3,7 @@ title: Actions are unavailable or invisible
 description: Provides a resolution for the issue that some actions aren't visible in Power Automate for desktop.
 ms.reviewer: dipapa
 ms.date: 09/21/2022
-ms.subservice: power-automate-desktop-flows
+ms.custom: sap:Desktop flows\Working with Power Automate for desktop
 ---
 # Actions aren't available in Power Automate for desktop
 

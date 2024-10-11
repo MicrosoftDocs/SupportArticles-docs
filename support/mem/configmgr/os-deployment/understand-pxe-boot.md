@@ -1,8 +1,8 @@
 ---
 title: PXE boot in Configuration Manager
 description: Introduces basic processes of PXE boot in Configuration Manager, how they work, and how they interoperate with each other.
-ms.date: 03/27/2020
-ms.custom: sap:PXE
+ms.date: 12/05/2023
+ms.custom: sap:Operating Systems Deployment (OSD)\PXE
 ms.reviewer: kaushika
 ---
 # Understand PXE boot in Configuration Manager
@@ -339,7 +339,7 @@ In the PXE boot process, the client must first acquire TCP/IP parameters and the
 
 ## WinPE boot
 
-Once WinPE has booted, the TS boot shell is initiated from the SMS folder that's included in the WinPE image (this folder is injected into the boot WIM when it's imported into Configuration Manager). You can see this process logged in **SMSTS.log** that's located under `X:\Windows\Temp\SMSTS\`.
+Once WinPE has booted, the TS boot shell is initiated from the SMS folder that's included in the WinPE image (this folder is injected into the boot WIM when it's imported into Configuration Manager). You can see this process logged in **SMSTS.log** that's located under `X:\Windows\Temp\SMSTSLog\`.
 
 > [!TIP]
 > To access this login WinPE, enable the command prompt on the boot image. To do this, right-click **Boot Image** > **Properties** > **Customization**, and then check **Enable command support (testing only)**. You can then access the command prompt by pressing F8 in WinPE.

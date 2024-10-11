@@ -1,8 +1,8 @@
 ---
 title: Cumulative update 16 for SQL Server 2019 (KB5011644)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 16 (KB5011644).
-ms.date: 06/30/2023
-ms.custom: KB5011644
+ms.date: 07/26/2024
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5011644
 ms.reviewer: v-cuichen
 appliesto:
 - SQL Server 2019 on Windows
@@ -22,6 +22,8 @@ This article describes Cumulative Update package 16 (CU16) for Microsoft SQL Ser
 - Analysis Services - Product version: **15.0.35.23**, file version: **2018.150.35.23**
 
 ## Known issues in this update
+
+### Access violation when session is reset
 
 SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plans returned by the built-in SESSION_CONTEXT](https://support.microsoft.com/help/5008114). However, this fix might create access violation dump files when the `SESSION` is reset for reuse. To mitigate this issue and avoid incorrect results, you can disable the original fix, and also disable the parallelism for the built-in `SESSION_CONTEXT`. To do this, use the following trace flags:
 

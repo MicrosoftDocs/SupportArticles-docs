@@ -9,5 +9,7 @@ items:
   href: pass-variable-linked-server-query.md
 - name: Set up and troubleshoot a linked server to an Oracle database
   href: set-up-troubleshoot-linked-server.md
+- name: SQL Server becomes unresponsive during SQL Server dump generation
+  href: sql-server-unresponsive-during-dump-generation.md
 - name: Unable to begin a distributed transaction
   href: error-message-ole-db-provider.md

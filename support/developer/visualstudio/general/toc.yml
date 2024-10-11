@@ -8,13 +8,7 @@
   href: ./cannot-sign-in-javascript-disabled.md
 - name: Error when you build applications
   href: ./not-transform-license-file-to-binary-resource.md
-- name: Error when you use HTTPS protocol
-  href: ./release-management-not-have-https-protocol.md
 - name: Files can't be saved when you use Resource Editor
   href: ./resource-editor-cannot-save-file.md
-- name: Subscriptions administrator migration
-  href: ./subscription-administrator-migration.md
-- name: VBScript runtime error when you do a numeric comparison
-  href: ./vbs-type-mismatch-error.md
 - name: Workarounds for Visual Studio 2022 on unsupported operating systems
   href: ./visual-studio-2022-unsupported-operating-systems.md

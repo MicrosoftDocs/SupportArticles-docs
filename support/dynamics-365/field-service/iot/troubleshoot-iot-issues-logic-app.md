@@ -5,6 +5,7 @@ ms.author: vhorvath
 author: vhorvathms
 ms.reviewer: mhart
 ms.date: 10/19/2023
+ms.custom: sap:IoT - Connected Field Service
 ---
 # Troubleshoot issues with IoT capabilities in Dynamics 365 Field Service
 

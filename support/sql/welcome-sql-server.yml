@@ -76,7 +76,7 @@ landingContent:
 
   - title: High Availability and Disaster Recovery (Always On Availability Groups)
     linkLists:
-      - linkListType: whats-new
+      - linkListType: how-to-guide
         links:
         - text: Troubleshoot issues with automatic failover Always On environments
           url: database-engine/availability-groups/troubleshooting-automatic-failover-problems.md
@@ -101,7 +101,7 @@ landingContent:
           
   - title: Slow Performance and Resource Usage
     linkLists:
-      - linkListType: whats-new
+      - linkListType: how-to-guide
         links:
         - text: Troubleshoot high-CPU-usage issues
           url: database-engine/performance/troubleshoot-high-cpu-usage-issues.md
@@ -118,7 +118,7 @@ landingContent:
 
   - title: Connection and Authentication
     linkLists:
-      - linkListType: whats-new
+      - linkListType: how-to-guide
         links:
         - text: Network-related or instance-specific error
           url: database-engine/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md

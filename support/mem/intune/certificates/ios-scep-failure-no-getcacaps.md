@@ -1,9 +1,9 @@
 ---
 title: Intune iOS SCEP failure - no GetCACaps request generated in IIS logs
 description: Troubleshoot SCEP/NDES failures on iOS devices when the IIS logs show that no GetCACaps request is generated.
-ms.date: 11/23/2021
+ms.date: 12/05/2023
 search.appverid: MET150
-ms.custom: sap:Configure certificates
+ms.custom: sap:Configure Devices - Windows\SCEP Certificates
 ms.reviewer: kaushika
 ---
 # iOS SCEP failure and no GetCACaps request is generated

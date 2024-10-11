@@ -2,10 +2,8 @@
 title: Can't save file setting in a C++ project
 description: This article describes a problem that prevents you from saving a file setting in a Visual C++ project. Workarounds are provided. This problem is fixed on Visual Studio 2015.
 ms.date: 04/27/2020
-ms.custom: sap:Project/Build System
+ms.custom: sap:Project - Build System\Project Settings
 ms.reviewer: eddo, yaarai
-ms.technology: visual-cpp-project-build
-ms.prod: visual-cpp
 ---
 # Can't save a file setting in a Visual C++ 2013 project
 

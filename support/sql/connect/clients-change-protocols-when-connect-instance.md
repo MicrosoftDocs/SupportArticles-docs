@@ -2,7 +2,7 @@
 title: SQL Server clients may change protocols
 description: This article describes that client computers that have MDAC version 2.6, or later, can try multiple protocols or IPC mechanisms to establish connections to SQL Server.
 ms.date: 09/25/2020
-ms.custom: sap:MDAC and ADO
+ms.custom: sap:Database Connectivity and Authentication
 ---
 # SQL Server clients may change protocols when the client computers try to connect to an instance of SQL Server
 

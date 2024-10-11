@@ -1,8 +1,9 @@
 ---
 title: Configuration Manager diagnostics
 description: This diagnostic package is designed to collect information used to troubleshoot most System Center 2012 Configuration Manager and Configuration Manager current branch issues.
-ms.date: 08/12/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika
+ms.custom: sap:Site Server and Roles\Site and Component Status Monitoring
 ---
 # [SDP 3][5ee487a8-b2ed-4bc8-80ea-457f9b683c77] System Center Configuration Manager diagnostic
 

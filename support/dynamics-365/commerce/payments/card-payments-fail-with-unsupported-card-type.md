@@ -4,6 +4,7 @@ description: Provides a resolution for the card type is not an accepted form of 
 author: bstorie
 ms.author: brstor
 ms.date: 08/30/2023 
+ms.custom: sap:Payments\Issues with payment transactions
 ---
 # A card payment fails due to an unsupported card type
 

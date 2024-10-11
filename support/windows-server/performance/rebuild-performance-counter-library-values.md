@@ -1,23 +1,17 @@
 ---
 title: Rebuild performance counter library values
 description: This article describes how to manually rebuild performance counter library values.
-ms.date: 01/04/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:performance-monitoring-tools, csstroubleshoot
-ms.technology: windows-server-performance
+ms.custom: sap:System Performance\Performance tools (Task Manager, Perfmon, WSRM, and WPA), csstroubleshoot
 ---
 # Manually rebuild performance counter library values
 
 This article describes how to manually rebuild the performance counter library values.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 300956
 
 > [!IMPORTANT]

@@ -2,8 +2,8 @@
 title: Determine version information of SQL Server components and client tools
 description: This article describe the procedures to determine the version information of SQL Server components and client tools.
 ms.date: 10/15/2022
-ms.custom: sap:Installation, Patching and Upgrade
 ms.topic: how-to
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ms.reviewer: v-six
 ---
 
@@ -173,7 +173,7 @@ To determine the version of SQL Server Writer, check the following registry subk
 
 ## Microsoft .NET Framework
 
-To determine the version of .NET Framework on your system, see [Determine which versions and service pack levels of .NET Framework are installed](/troubleshoot/dotnet/framework/determine-dotnet-versions-service-pack-levels).
+To determine the version of .NET Framework on your system, see [Determine which versions and service pack levels of .NET Framework are installed](../../developer/dotnet/framework/general/determine-dotnet-versions-service-pack-levels.md).
 
 For more information, see [Understanding the .NET Framework requirements for various versions of SQL Server](https://support.microsoft.com/help/2027770).
 

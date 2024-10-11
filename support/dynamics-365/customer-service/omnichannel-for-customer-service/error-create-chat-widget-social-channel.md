@@ -4,6 +4,7 @@ description: Provides a resolution for an error that occurs when trying to creat
 ms.reviewer: nenellim
 ms.author: yangao
 ms.date: 12/04/2023
+ms.custom: sap:Live chat channel\How to configure chat widget
 ---
 # "An error occurred in the plug-in" when creating a chat widget or social channel
 

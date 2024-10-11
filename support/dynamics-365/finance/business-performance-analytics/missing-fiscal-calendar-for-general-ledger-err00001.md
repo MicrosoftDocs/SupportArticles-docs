@@ -1,20 +1,18 @@
 ---
 title: Missing fiscal calendar for general ledger error
-description: Provides information about the Missing fiscal calendar for general ledger error (error code ERR00001) in business performance analytics in Microsoft Dynamics 365 Finance.
+description: Provides information about the Missing fiscal calendar for general ledger error (error code ERR00001) in Business performance analytics in Microsoft Dynamics 365 Finance.
 author: jinniew
 ms.author: jiwo
 ms.reviewer: twheeloc 
-ms.date: 12/07/2023
-ms.prod: 
-ms.technology:
-ms.custom:
+ms.date: 04/30/2024
+ms.custom: sap:Business intelligence, reporting, analytics
 ms.search.form: business-performance-analytics
 audience: Application User
 ---
 # Missing fiscal calendar for GL: Error code: ERR00001 [Type: Error]
 
 > [!NOTE]
-> The functionality that's described in this article is available as part of a preview release. The functionality and the content of this article are subject to change. For more information about how to participate in the public preview for [business performance analytics](/dynamics365/finance/business-performance-analytics/business-performance-analytics-home-page), contact <bpaquestions@service.microsoft.com>.
+> The functionality that's described in this article is available as part of a preview release. The functionality and the content of this article are subject to change. For more information about how to participate in the public preview for [Business performance analytics](/dynamics365/finance/business-performance-analytics/business-performance-analytics-home-page), contact <bpaquestions@service.microsoft.com>.
 
 ## Symptoms
 

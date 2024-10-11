@@ -4,7 +4,7 @@ description: This article provides a resolution for the problem where you receiv
 ms.date: 01/07/2021
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.technology: dotnet-general
+ms.custom: sap:Common Language Runtime (CLR)
 ---
 # Error message or high CPU utilization when running a WPF-based application
 

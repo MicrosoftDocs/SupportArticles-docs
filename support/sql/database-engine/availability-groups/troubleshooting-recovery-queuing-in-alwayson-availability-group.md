@@ -2,7 +2,7 @@
 title: Troubleshooting recovery queueing in an Always On availability group
 description: This article helps you to troubleshoot problems that are related to recovery queueing in an Always On availability group. 
 ms.date: 02/10/2023
-ms.custom: sap:Availability Groups
+ms.custom: sap:Always On Availability Groups (AG)
 ms.reviewer: ramakoni, v-jayaramanp
 ---
 

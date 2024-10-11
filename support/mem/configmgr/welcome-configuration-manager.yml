@@ -5,11 +5,11 @@ summary: Welcome to Configuration Manager troubleshooting. These articles explai
 metadata:
   title: Configuration Manager troubleshooting
   description: Landing page for Configuration Manager troubleshooting articles.
-  ms.prod: configuration-manager
+  ms.service: configuration-manager
   ms.topic: landing-page
   author: helenclu
   ms.author: luche
-  ms.date: 02/01/2021
+  ms.date: 12/05/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 

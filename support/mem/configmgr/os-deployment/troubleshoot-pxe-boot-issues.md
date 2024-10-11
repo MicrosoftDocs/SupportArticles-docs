@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot PXE boot issues
 description: Helps administrators diagnose and resolve PXE boot failures in Configuration Manager.
-ms.date: 03/27/2020
-ms.custom: sap:PXE
+ms.date: 12/05/2023
+ms.custom: sap:Operating Systems Deployment (OSD)\PXE
 ms.reviewer: kaushika
 ---
 # Troubleshooting PXE boot issues in Configuration Manager

@@ -1,8 +1,9 @@
 ---
 title: Description of Manufacturing setup tables
 description: Provides information about which Manufacturing setup tables you can copy from one company to another company in Microsoft Dynamics GP.
-ms.reviewer: aeckman, lmuelle
-ms.date: 03/31/2021
+ms.reviewer: theley, aeckman, lmuelle
+ms.date: 03/20/2024
+ms.custom: sap:Manufacturing Series
 ---
 # Description of the Manufacturing setup tables that you can copy from an existing company to a new company in Microsoft Dynamics GP
 

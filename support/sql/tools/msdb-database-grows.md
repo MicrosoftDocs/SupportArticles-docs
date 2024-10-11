@@ -5,6 +5,7 @@ ms.date: 12/28/2020
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: oliviera, sqlblt
+ms.custom: sap:SQL Server Management, Query and Data Tools
 ---
 # MSDB database grows on SQL Server with supplementary character collations
 

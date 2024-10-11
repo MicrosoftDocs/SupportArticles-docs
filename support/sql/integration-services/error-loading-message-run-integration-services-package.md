@@ -7,7 +7,7 @@ ms.reviewer: craigg
 ---
 # You receive an 'Error loading' error message when you try to run a SQL Server Integration Services package
 
-This article helps you resolve package load failures that occure when SSIS cannot decrypt the password stored in the package.
+This article helps you resolve package load failures that occur when SSIS cannot decrypt the password stored in the package.
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 904800

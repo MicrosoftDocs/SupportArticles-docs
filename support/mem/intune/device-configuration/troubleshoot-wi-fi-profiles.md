@@ -1,9 +1,10 @@
 ---
 title: Troubleshoot and review Wi-Fi device configuration profiles in Intune
 description: Understand and troubleshoot Wi-Fi device configuration profile issues on Android, iOS/iPadOS, and Windows devices in Microsoft Intune. Review logs, and see some common issues and possible resolutions.
-ms.date: 10/08/2021
+ms.date: 12/05/2023
 ms.reviewer: kaushika, tycast
 search.appverid: MET150
+ms.custom: sap:Configure Devices - iOS\Wi-Fi settings
 ---
 # Troubleshooting Wi-Fi device configuration profiles in Microsoft Intune
 
@@ -170,8 +171,6 @@ This section provides troubleshooting guidance for the following scenarios:
   3. At the bottom of the **Settings** page, select **Create report**.
   4. A window opens that shows the path to the log files. Select **Export**.
   5. Go to the `\Users\Public\Documents\MDMDiagnostics` path, and view the report:
-
-      :::image type="content" source="media/troubleshoot-wi-fi-profiles/windows-mdm-diagnostic-info.png" alt-text="Screenshot of a sample MDM Diagnostic Information that shows WiFi profile configuration on Windows 10 devices." lightbox="media/troubleshoot-wi-fi-profiles/windows-mdm-diagnostic-info.png":::
 
   > [!TIP]
   > For more information, see [Diagnose MDM failures in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10).

@@ -2,7 +2,7 @@
 title: Debug mode in ASP.NET applications
 description: This article describes the Debug mode in ASP.NET applications.
 ms.date: 12/29/2020
-ms.custom: sap:Site Behavior and Performance
+ms.custom: sap:Performance
 ms.reviewer: radomirz, jamesche, mlaing, bretb
 ---
 # Debug mode in ASP.NET applications

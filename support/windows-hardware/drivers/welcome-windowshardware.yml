@@ -5,7 +5,7 @@ summary: Welcome to Windows hardware troubleshooting. These articles explain how
 metadata:
   title: Windows hardware developer troubleshooting documentation
   description: This article lists Knowledge Base (KB) and other Support articles for Windows hardware developer. # Required; article description that is displayed in search results. < 160 chars.
-  ms.prod: windows-hardware
+  ms.service: windows-hardware-driver-quality
   ms.topic: landing-page # Required
   author: HaiyingYu  #Required; your GitHub user alias, with correct capitalization.
   ms.author: HaiyingYu #Required; microsoft alias of author; optional team alias.

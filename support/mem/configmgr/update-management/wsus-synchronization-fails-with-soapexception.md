@@ -1,8 +1,9 @@
 ---
 title: WSUS synchronization fails with SoapException
 description: Fixes an issue in which WSUS synchronization fails because of a decommissioned endpoint.
-ms.date: 08/12/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika
+ms.custom: sap:Software Update Management (SUM)\Software Update Synchronization
 ---
 # WSUS synchronization fails with SoapException
 

@@ -4,6 +4,7 @@ description: Provides a resolution for the issue where the conversation widget b
 ms.reviewer: nenellim
 ms.author: yangao
 ms.date: 05/23/2023
+ms.custom: sap:Conversation control\Unable to send or receive messages on Omnichannel
 ---
 # The conversation widget becomes blank when changing browser tabs
 

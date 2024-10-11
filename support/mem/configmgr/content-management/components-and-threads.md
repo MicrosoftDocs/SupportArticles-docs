@@ -1,8 +1,9 @@
 ---
 title: Understand components and threads
 description: Helps administrators understand components and threads for content distribution.
-ms.date: 03/30/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika
+ms.custom: sap:Content Management\Content Distribution to Distribution Points
 ---
 # Components and threads for content distribution
 

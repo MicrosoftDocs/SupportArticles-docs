@@ -2,7 +2,7 @@
 title: Exception when selecting row in WPF DataGrid
 description: ArgumentException occurs when you select rows in WPF DataGrid. This article provides a resolution.
 ms.date: 05/07/2020
-ms.technology: dotnet-general
+ms.custom: sap:Class Library Namespaces
 ---
 # System.ArgumentException when selecting rows in WPF DataGrid
 

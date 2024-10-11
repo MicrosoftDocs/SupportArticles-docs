@@ -2,7 +2,7 @@
 title: OLE DB driver installation check
 description: Provides insights into the installation, validation, and resolution of issues related to OLE DB drivers.
 ms.date: 01/09/2024
-ms.custom: sap:Installation, Patching and Upgrade
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ms.reviewer: mastewa, jopilov, prmadhes, v-sidong
 ---
 # OLE DB driver installation check

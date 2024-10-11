@@ -1,18 +1,13 @@
 ---
 title: 802.1X authentication issues troubleshooting
 description: Troubleshoot authentication flow by learning how 802.1X Authentication works for wired and wireless clients.
-ms.date: 03/10/2023
-ms.prod: windows-client
-author: aczechowski
-ms.author: aaroncz
+ms.date: 05/10/2024
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.collection: highpri
-ms.technology: windows-client-networking
-ms.custom: sap:wireless-networking-and-802.1x-authentication, csstroubleshoot
-ms.reviewer: dougeby
+ms.custom: sap:Network Connectivity and File Sharing\Wireless (802.1x, Bluetooth, Miracast, Mobile Broadband), csstroubleshoot
+ms.reviewer: dougeby,aaroncz
 audience: itpro
-localization_priority: medium
 ---
 # Advanced troubleshooting 802.1X authentication
 
@@ -113,7 +108,7 @@ System audit policy
 Category/Subcategory                      Setting
 Logon/Logoff
   Network Policy Server                   Success and Failure
-
+```
 
 If it says, "No auditing," you can run this command to enable it:
 

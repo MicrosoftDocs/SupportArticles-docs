@@ -1,8 +1,9 @@
 ---
 title: GUID of an Unknown Computer object used by a client computer being imaged
 description: Describes an issue in which a client computer that's being imaged uses the GUID of an Unknown Computer object.
-ms.date: 05/25/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika, frankroj
+ms.custom: sap:Operating Systems Deployment (OSD)\PXE
 ---
 # A client computer can steal the Configuration Manager GUID of an Unknown Computer object during imaging
 

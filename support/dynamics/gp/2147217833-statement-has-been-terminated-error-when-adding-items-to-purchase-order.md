@@ -1,9 +1,10 @@
 ---
 title: 2147217833 The statement has been terminated error when adding items to Purchase Order, Transfer In, or Transfer Out 
 description: When adding items to a Purchase Order, Transfer In, or Transfer Out, RMS will generate the 2147217833 statement has been terminated error. Provides a resolution.
-ms.reviewer: randyh
+ms.reviewer: theley, randyh
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # "2147217833 The statement has been terminated" error when you add items to a Purchase Order, Transfer In, or Transfer Out
 

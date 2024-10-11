@@ -2,7 +2,7 @@
 title: Snapshot or Logreader agents fail
 description: This article provides a workaround for the problem that Snapshot or Logreader agents fail when a destination table is empty.
 ms.date: 07/22/2020
-ms.custom: sap:Replication, change tracking, change data capture
+ms.custom: sap:Replication, Change Tracking, Change Data Capture, Synapse Link
 ms.reviewer: rvrosa
 ---
 # Snapshot or Logreader agents fail when destination table is empty in SQL Server

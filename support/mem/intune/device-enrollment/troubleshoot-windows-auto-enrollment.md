@@ -1,9 +1,10 @@
 ---
 title: Troubleshoot Windows 10 Group Policy auto-enrollment in Microsoft Intune
 description: Learn how to troubleshoot auto-enrollment.
-ms.date: 10/06/2021
+ms.date: 12/05/2023
 ms.reviewer: kaushika, jchombe
 search.appverid: MET150
+ms.custom: sap:Enroll Device - Windows\AutoEnrollment
 ---
 
 # Troubleshooting Windows 10 Group Policy-based auto-enrollment in Intune
@@ -62,8 +63,6 @@ Before you start troubleshooting, it's best to verify that everything is configu
 
   **In Microsoft Entra Device settings:**
 
-   :::image type="content" source="media/troubleshoot-windows-auto-enrollment/device-setting.png" alt-text="Screenshot shows the Microsoft Entra Device settings.":::
-
   - The **Users may join devices to Microsoft Entra ID** setting is set to **All**.
   - The number of devices that a user has in Microsoft Entra ID doesn't exceed the **Maximum number of devices per user** quota.
   
@@ -96,8 +95,6 @@ Event ID 75 isn't logged in the following situations:
 The auto-enrollment process is triggered by the following task: **Schedule created by enrollment client for automatically enrolling in MDM from Microsoft Entra ID**
 
 This task is located under **Microsoft** > **Windows** > **EnterpriseMgmt** in Task Scheduler.
-
-  :::image type="content" source="media/troubleshoot-windows-auto-enrollment/trigger.png" alt-text="Screenshot shows the enrollment wasn't triggered." lightbox="media/troubleshoot-windows-auto-enrollment/trigger.png":::
 
 This task is created when the **Enable automatic MDM enrollment using default Microsoft Entra credentials** Group Policy policy setting is successfully deployed to the target device. The task is scheduled to run every 5 minutes during one day.
 

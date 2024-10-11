@@ -1,9 +1,10 @@
 ---
 title: Set up Fixed Asset Management in Microsoft Dynamics GP
 description: Provides steps that you should follow when you use Fixed Asset Management in Microsoft Dynamics GP.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Fixed Assets
 ---
 # How to set up Fixed Asset Management in Microsoft Dynamics GP
 

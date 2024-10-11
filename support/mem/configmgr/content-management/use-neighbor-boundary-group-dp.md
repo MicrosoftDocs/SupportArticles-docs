@@ -1,8 +1,9 @@
 ---
 title: DP in a neighbor boundary group is used
 description: Describes an issue in which a distribution point (DP) in a neighbor boundary group is used before the DPs in the current boundary group. Provides a resolution.
-ms.date: 06/09/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika, weiwan, junhe, cmkbreview, delhan
+ms.custom: sap:Content Management\Distribution Point Installation, Upgrade or Configuration
 ---
 # A distribution point in a neighbor boundary group is used before those in the current boundary group
 

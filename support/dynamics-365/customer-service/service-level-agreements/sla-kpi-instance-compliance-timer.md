@@ -4,6 +4,7 @@ description: Provides a resolution for an issue related to the permissions and l
 ms.reviewer: sdas, ankugupta
 ms.author: sdas
 ms.date: 10/30/2023
+ms.custom: sap:Service Level Agreements\SLA timer is running  even if the case is resolved
 ---
 # The SLA KPI instance doesn't reach Nearing Non-compliance or Non-compliant and the SLA KPI instance timer continues to run
 
