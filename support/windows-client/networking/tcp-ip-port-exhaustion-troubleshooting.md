@@ -1,12 +1,12 @@
 ---
 title: TCP/IP port exhaustion troubleshooting
 description: Learn how to troubleshoot port exhaustion issues. Port exhaustion occurs when all the ports on a machine are used.
-ms.date: 05/10/2024
+ms.date: 10/11/2024
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.collection: highpri
 ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
-ms.reviewer: dansimp
+ms.reviewer: dansimp, shpune
 audience: itpro
 ---
 # Troubleshoot port exhaustion issues
@@ -124,6 +124,7 @@ If you suspect that the machine is in a state of port exhaustion:
    > Netstat has been updated in Windows 10 with the addition of the `-Q` switch to show ports that have transitioned out of time wait as in the BOUND state.  An update for Windows 8.1 and Windows Server 2012 R2 has been released that contains this functionality. The PowerShell cmdlet `Get-NetTCPConnection` in Windows 10 also shows these BOUND ports.
    > 
    > Until 10/2016, netstat was inaccurate. Fixes for netstat, back-ported to 2012 R2, allowed *Netstat.exe* and `Get-NetTcpConnection` to correctly report TCP or UDP port usage in Windows Server 2012 R2. See [Windows Server 2012 R2: Ephemeral ports hotfixes](https://support.microsoft.com/help/3123245/update-improves-port-exhaustion-identification-in-windows-server-2012) to learn more.
+
 4. Open a command prompt in admin mode and run the below command.
 
    ```console
