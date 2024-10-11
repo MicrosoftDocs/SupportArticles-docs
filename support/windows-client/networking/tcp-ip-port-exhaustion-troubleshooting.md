@@ -110,15 +110,14 @@ If you suspect that the machine is in a state of port exhaustion:
 
         :::image type="content" source="media/tcp-ip-port-exhaustion-troubleshooting/event-id-4231.png" alt-text="Screenshot of event ID 4231 in Event Viewer." border="false":::
 
-1. Collect a `netstat -anob` output from the server. The netstat output will show you a huge number of entries for TIME_WAIT state for a single PID.
+3. Collect a `netstat -anob` output from the server. The netstat output will show you a huge number of entries for TIME_WAIT state for a single PID.
 
-   ![User's image](media/tcp-ip-port-exhaustion-troubleshooting/image.png)
-    
-   
+   :::image type="content" source="media/tcp-ip-port-exhaustion-troubleshooting/time-wait-state-entries.png" alt-text="Screenshot of netstate command output." border="false":::
+
     After a graceful closure or an abrupt closure of a session, after a period of 4 minutes (default), the port used by the process or application would be released back to the available pool. During this 4 minutes, the TCP connection state will be TIME_WAIT state. In a situation where you suspect port exhaustion, an application or process won't be able to release all the ports that it has consumed and will remain in the TIME_WAIT state.
-   
+
     You might also see CLOSE_WAIT state connections in the same output; however, CLOSE_WAIT state is a state when one side of the TCP peer has no more data to send (FIN sent) but is able to receive data from the other end. This state doesn't necessarily indicate port exhaustion.
-   
+
    > [!NOTE]
    > Having huge connections in TIME_WAIT state doesn't always indicate that the server is currently out of ports unless the first two points are verified. Having lot of TIME_WAIT connections does indicate that the process is creating lot of TCP connections and may eventually lead to port exhaustion.
    > 
