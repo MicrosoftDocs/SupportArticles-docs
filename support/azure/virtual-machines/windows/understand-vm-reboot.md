@@ -10,9 +10,9 @@ ms.service: azure-virtual-machines
 ms.topic: troubleshooting
 ms.tgt_pltfrm: na
 ms.workload: infrastructure-services
-ms.date: 02/18/2024
+ms.date: 10/11/2024
 ms.author: genli
-ms.reviewer: yutorigo, v-weizhu
+ms.reviewer: yutorigo, sinhamanisha, v-weizhu
 ms.custom: sap:VM restarted or stopped unexpectedly
 ---
 # Understand a system reboot for Azure VM
@@ -101,11 +101,9 @@ Because some host server faults can be specific to that server, a repeated VM re
 
 ### Auto-recovery
 
-The Azure platform is designed to try the least impactful method for recovering host nodes. Depending on the original issue, one method is to simply reboot the host and other one is to migrate all the virtual machines to a healthy host node. Service healing may be more impactful depending on the volume of VM's that need to be migrated, deployment constraints of individual VM's, and local resource availability compared to VM infrastructure constraints such as network. For a hardware failure, migration is the only option.
+The Azure platform is designed to handle host node issues with minimal impact on VM performance. When a host node encounters a problem, Azure first attempts the least disruptive recovery method, which is to reboot the host. If rebooting the host isn't possible or if the original issue is hardware-related, the platform migrates all VMs on the affected host to a healthy node. While rebooting a host generally has a lower impact, migrating VMs can be more complex and time-consuming, depending on the number of VMs, their deployment constraints, and local resource availability. Migration is typically used as a last resort for hardware failures because it ensures that VMs continue to operate without significant downtime.
 
-If the host server cannot reboot for any reason, the Azure platform initiates an auto-recovery action to take the faulty host server out of rotation for further investigation.
-
-All VMs on that host are automatically relocated to a different, healthy host server. Although this process typically completes within 15 minutes, the time needed for recovery may vary depending on several factors, including the size of the host memory and the recovery methods employed. To learn more about the auto-recovery process, see [Auto-recovery of VMs](https://azure.microsoft.com/blog/service-healing-auto-recovery-of-virtual-machines).
+If a host server can't reboot, Azure initiates an automatic recovery action to take the faulty host out of rotation for further investigation. During this auto-recovery process, all VMs on the host are automatically relocated to another healthy host server. While this process usually completes within 15 minutes, the recovery time can vary based on factors such as the host's memory size and the recovery methods used. For more details about how Azure handles these scenarios, see [Auto-recovery of Virtual Machines](https://azure.microsoft.com/blog/service-healing-auto-recovery-of-virtual-machines/).
 
 ### Unplanned maintenance
 
