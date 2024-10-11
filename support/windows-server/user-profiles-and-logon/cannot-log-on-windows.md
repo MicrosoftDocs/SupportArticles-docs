@@ -45,18 +45,21 @@ Userinit = C:\windows\system32\userinit.exe
 - Navigate to the following location in registry of destination or infected computer:
 
     `HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon`
+  
 - Edit these two values in right pane:
 
      Shell  
-     Userinit
-
+  Userinit
+  
 - Change these two values to
 
     Shell = explorer.exe  
-    Userinit = C:\windows\system32\userinit.exe
+  Userinit = C:\windows\system32\userinit.exe
   
 - Exit from Registry.
 - Restart the infected computer.
 - You should be able to log on to the computer.
+
+**DISCLAIMER: If the above steps do not resolve the issue, the machine should be considered compromised.** 
 
 [!INCLUDE [Community Solutions Content Disclaimer](../../includes/community-solutions-content-disclaimer.md)]
