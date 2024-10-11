@@ -1,6 +1,6 @@
 ---
 title: HTTP status code overview
-description: This article provides a list of the HTTP status codes in IIS on Windows 2016 and later versions.
+description: This article provides a list of the HTTP status codes in IIS on Windows Server 2016 and later versions.
 ms.date: 07/19/2024
 ms.custom: sap:Health, Diagnostic, and Performance Features\HTTP error logging
 ms.reviewer: robmcm, paulboc
@@ -8,9 +8,9 @@ ms.reviewer: robmcm, paulboc
 
 # HTTP status codes in IIS
 
-This article provides a list of the Hypertext Transfer Protocol (HTTP) status codes in Microsoft Internet Information Services (IIS) on Windows 2016 and later versions.
+This article provides a list of the Hypertext Transfer Protocol (HTTP) status codes in Microsoft Internet Information Services (IIS) on Windows Server 2016 and later versions.
 
-_Original product version:_ &nbsp; Internet Information Services on Windows 2016 and later versions 
+_Original product version:_ &nbsp; Internet Information Services on Windows Server 2016 and later versions 
 _Original KB number:_ &nbsp; 943891
 
 ## Introduction
@@ -42,7 +42,7 @@ This section describes some of the common HTTP status codes.
 
 These HTTP status codes indicate an interim response for communicating request progress or status before sending a final response to the client computer.
 
-IIS on Windows 2016 and later versions use the following informational HTTP status codes:
+IIS on Windows Server 2016 and later versions use the following informational HTTP status codes:
 
 | Code | Description | Notes |
 |--|--|--|
@@ -53,7 +53,7 @@ IIS on Windows 2016 and later versions use the following informational HTTP stat
 
 These HTTP status codes indicate that the server successfully received and accepted the client's request.
 
-IIS on Windows 2016 and later versions use the following success HTTP status codes:
+IIS on Windows Server 2016 and later versions use the following success HTTP status codes:
 
 | Code | Description | Notes |
 |--|--|--|
@@ -82,7 +82,7 @@ IIS uses the following redirection HTTP status codes:
 
 These HTTP status codes indicate that an error has occurred and the client browser appears to be at fault. For example, the client browser may have requested a page that doesn't exist. Or, the client browser may not have provided valid authentication information.
 
-IIS on Windows 2016 and later versions use the following client error HTTP status codes:
+IIS on Windows Server 2016 and later versions use the following client error HTTP status codes:
 
 | Code | Description | Notes |
 |---|---|---|
@@ -98,9 +98,9 @@ IIS on Windows 2016 and later versions use the following client error HTTP statu
 
 #### 400 - Bad request
 
-The Hypertext Transfer Protocol Stack (_Http.sys_) file blocks IIS on Windows 2016 and later versions from processing the request because of a problem in the request. Typically, this HTTP status code means that the request contains invalid characters or sequences, or that the request goes against the security settings in the _Http.sys_ file.
+The Hypertext Transfer Protocol Stack (_Http.sys_) file blocks IIS on Windows Server 2016 and later versions from processing the request because of a problem in the request. Typically, this HTTP status code means that the request contains invalid characters or sequences, or that the request goes against the security settings in the _Http.sys_ file.
 
-IIS on Windows 2016 and later versions define the following HTTP status codes that indicate a more specific cause of an error 400:
+IIS on Windows Server 2016 and later versions define the following HTTP status codes that indicate a more specific cause of an error 400:
 
 | Code | Description |
 |---|---|
@@ -169,7 +169,7 @@ IIS on Windows Server 2016 and later versions define the following HTTP status c
 | 403.13 | Client certificate revoked | The client browser tries to use a client certificate that was revoked by the issuing certification authority. |
 | 403.14 | Directory listing denied | The server isn't configured to display a content directory listing, and a default document isn't set. For more information, see [HTTP Error 403.14](../health-diagnostic-performance/http-403-14-forbidden-webpage.md). |
 | 403.15 | Client access licenses exceeded | The number of client access licenses has exceeded the limits on the web server. |
-| 403.16 | Client certificate is untrusted or invalid | The client browser tries to use an invalid client certificate. Or the server that is running IIS on Windows 2016 and later versions doesn't trust the client certificate. For more information, see [HTTP Error 403.16](../health-diagnostic-performance/http-403-forbidden-access-website.md). |
+| 403.16 | Client certificate is untrusted or invalid | The client browser tries to use an invalid client certificate. Or the server that is running IIS on Windows Server 2016 and later versions doesn't trust the client certificate. For more information, see [HTTP Error 403.16](../health-diagnostic-performance/http-403-forbidden-access-website.md). |
 | 403.17 | Client certificate has expired or is not yet valid | The client browser tries to use a client certificate that is expired or that isn't yet valid. |
 | 403.18 | Cannot execute requested URL in the current application pool | A custom error page is configured. And the application pool of the customer error page is different with the application pool of the requested URL. |
 | 403.19 | Cannot execute CGI applications for the client browser in this application pool | The identity of the application pool doesn't have the Replace a process level token user right. |
