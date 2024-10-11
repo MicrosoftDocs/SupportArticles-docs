@@ -13,7 +13,7 @@ adobe-target: true
 
 This article is intended as a general introduction to the concepts of Internet Protocol (IP) networks and subnetting. A glossary is included at the end of article.
 
-_Applies to:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Client and Server OS - all editions  
 _Original KB number:_ &nbsp; 164015
 
 ## Summary
@@ -64,10 +64,10 @@ Almost all decimal subnet masks convert to binary numbers that are all ones on t
 
 | Decimal          | Binary                             |
 | ---------------- | ---------------------------------- |
-| 255.255.255.192  | 1111111.11111111.1111111.11000000  |
-| 255.255.255.224  | 1111111.11111111.1111111.11100000  |
+| 255.255.255.192 	| 1111111.11111111.1111111.11000000  |
+| 255.255.255.224 	| 1111111.11111111.1111111.11100000  |
 
-Internet RFC 1878 (available from [InterNIC-Public Information Regarding Internet Domain Name Registration Services](https://www.internic.net)) describes the valid subnets and subnet masks that can be used on TCP/IP networks.
+Internet [RFC 1878](https://www.rfc-editor.org/rfc/rfc1878) describes the valid subnets and subnet masks that can be used on TCP/IP networks.
 
 ## Network classes
 
@@ -118,11 +118,23 @@ If the result of this process determines the destination to be a local host, the
 
 TCP/IP network problems are often caused by incorrect configuration of the three main entries in a computer's TCP/IP properties. By understanding how errors in TCP/IP configuration affect network operations, you can solve many common TCP/IP problems.
 
-Incorrect Subnet Mask: If a network uses a subnet mask other than the default mask for its address class, and a client is still configured with the default subnet mask for the address class, communication will fail to some nearby networks but not to distant ones. As an example, if you create four subnets (such as in the subnetting example) but use the incorrect subnet mask of 255.255.255.0 in your TCP/IP configuration, hosts won't be able to determine that some computers are on different subnets than their own. In this situation, packets destined for hosts on different physical networks that are part of the same Class C address won't be sent to a default gateway for delivery. A common symptom of this issue is when a computer can communicate with hosts that are on its local network and can talk to all remote networks except those networks that are nearby and have the same class A, B, or C address. To fix this problem, just enter the correct subnet mask in the TCP/IP configuration for that host.
+#### Incorrect Subnet Mask
 
-Incorrect IP Address: If you put computers with IP addresses that should be on separate subnets on a local network with each other, they won't be able to communicate. They'll try to send packets to each other through a router that can't forward them correctly. A symptom of this problem is a computer that can talk to hosts on remote networks, but can't communicate with some or all computers on their local network. To correct this problem, make sure all computers on the same physical network have IP addresses on the same IP subnet. If you run out of IP addresses on a single network segment, there are solutions that go beyond the scope of this article.
+If a network uses a subnet mask other than the default mask for its address class, and a client is still configured with the default subnet mask for the address class, communication will fail to some nearby networks but not too distant ones. 
 
-Incorrect Default Gateway: A computer configured with an incorrect default gateway can communicate with hosts on its own network segment. But it will fail to communicate with hosts on some or all remote networks. A host can communicate with some remote networks but not others if the following conditions are true:
+As an example, if you create four subnets (such as in the subnetting example) but use the incorrect subnet mask of 255.255.255.0 in your TCP/IP configuration, hosts won't be able to determine that some computers are on different subnets than their own. In this situation, packets destined for hosts on different physical networks that are part of the same Class C address won't be sent to a default gateway for delivery. 
+
+A common symptom of this issue is when a computer can communicate with hosts that are on its local network and can talk to all remote networks except those networks that are nearby and have the same class A, B, or C address. To fix this problem, just enter the correct subnet mask in the TCP/IP configuration for that host.
+
+#### Incorrect IP Address
+
+If you put computers with IP addresses that should be on separate subnets on a local network with each other, they won't be able to communicate. They'll try to send packets to each other through a router that can't forward them correctly. A symptom of this problem is a computer that can talk to hosts on remote networks but can't communicate with some or all computers on their local network. 
+
+To correct this problem, make sure all computers on the same physical network have IP addresses on the same IP subnet. If you run out of IP addresses on a single network segment, there are solutions that go beyond the scope of this article.
+
+#### Incorrect Default Gateway
+
+A computer configured with an incorrect default gateway can communicate with hosts on its own network segment. But it will fail to communicate with hosts on some or all remote networks. A host can communicate with some remote networks but not others if the following conditions are true:
 
 - A single physical network has more than one router.
 - The wrong router is configured as a default gateway.
