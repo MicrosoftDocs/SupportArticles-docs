@@ -7,7 +7,7 @@ ms.reviewer: tapanm
 ms.date: 10/11/2022
 ms.custom: sap:Desktop flows\Power Automate for desktop errors
 ---
-# Error communicating with the emulator
+# Error communicating with the emulator using Micro Focus Reflection Desktop
 
 This article provides a resolution when “Error communicating with the emulator” occurs, while calling the "Open terminal session" action in Power Automate for desktop.
 
