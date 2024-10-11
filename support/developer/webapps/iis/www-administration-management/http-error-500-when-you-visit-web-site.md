@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 942031
 
 ## Summary
 
-This article mainly describes HResult codes when you encounter 500.0 error on an Internet Information Services (IIS) Web application. For the 500.0 errors caused by the web application code, please check the [More information](#more-information) section below. 
+This article mainly describes HResult codes when you encounter 500.0 error on an Internet Information Services (IIS) Web application. For the 500.0 errors caused by the web application code, please refer to the [More information](#more-information) section below. 
 
 This article is intended for Web site administrators. These errors have many causes and can affect many different system configurations. The procedures that are described in this article must be performed by a member of the administrator group on the server.
 
