@@ -3,7 +3,7 @@ title: Microsoft Entra authentication error AADSTS220501
 description: Provides a solution to the Microsoft Entra authentication error AADSTS220501.
 ms.reviewer: laks, custorod, v-weizhu
 ms.service: entra-id
-ms.date: 10/10/2024
+ms.date: 10/11/2024
 ms.custom: sap:Issues Signing In to Applications
 ---
 # Error AADSTS220501 - Unable to download Certificate Revocation List
@@ -22,6 +22,8 @@ The Certificate Revocation List (CRL) is inaccessible or expired.
 
 ## Resolution
 
+To resolve this issue, follow these steps:
+
 1. Verify if the CRL file path is accessible publicly by opening the CRL distribution point URL via a web browser.
 
     Here's an example of the CRL distribution point URL:
@@ -30,7 +32,9 @@ The Certificate Revocation List (CRL) is inaccessible or expired.
 
     To find the CRL distribution point URL for the tenant, see [Configure certification authorities using the Microsoft Entra admin center](/entra/identity/authentication/how-to-certificate-based-authentication#configure-certification-authorities-using-the-microsoft-entra-admin-center).
 
-2. If the CRL file path is accessible, open the CRL file, go to the **General** tab, and then check the date and time in the **Next Update** field that denotes the expiry date for the CRL. If this date and time passes to the current system date, Windows computers will invalidate certificates that are checked against this CRL. You need to renew the CRL manually and replace the expired CRL.
+2. If the CRL file path is inaccessible, move the CRL to a publicly available location.
+
+3. If the CRL file path is accessible, open the CRL file, go to the **General** tab, and then check the date and time in the **Next Update** field that denotes the expiry date for the CRL. If this date and time passes to the current system date, Windows computers will invalidate certificates that are checked against this CRL. You have to renew the CRL manually and replace the expired CRL.
 
 ## More information
 
