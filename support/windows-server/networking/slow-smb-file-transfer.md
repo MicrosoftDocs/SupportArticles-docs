@@ -1,11 +1,11 @@
 ---
 title: Slow SMB files transfer speed
 description: Learn how to resolve transfer performance issues with SMB files by using the provided troubleshooting steps.
-ms.date: 06/21/2024
+ms.date: 10/09/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, v-lianna, jakehr, nedpyle
+ms.reviewer: kaushika, v-lianna, jakehr, nedpyle, cstrassn
 ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB), csstroubleshoot
 ---
 # Slow SMB files transfer speed
@@ -147,6 +147,9 @@ Network latency, SMB `create` commands, and antivirus programs contribute to a s
 Office documents can open slowly, which generally occurs on a WAN connection. The manner in which Office apps (Microsoft Excel, in particular) access and read data is typically what causes the documents to open slowly.
 
 You should verify that the Office and SMB binaries are up-to-date, and then test by having leasing disabled on the SMB server. To verify both conditions have resolved, follow these steps:
+
+> [!NOTE]
+> This method should be used with caution. Leasing is an integral part of the SMB protocol and is typically expected to be available on an SMBv2 or SMBv3 server. Multiple features depend on the availability of leasing, such as read caching, write caching, and handle caching. While disabling leasing might resolve some slow performance issues, it can negatively affect other applications that rely on the benefits of leasing.
 
 1. Run the following PowerShell cmdlet in Windows 8 and Windows Server 2012 or later versions of Windows:
 

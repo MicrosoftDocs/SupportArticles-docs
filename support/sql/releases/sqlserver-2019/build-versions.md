@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2019 build versions (KB4518398)
 description: This article lists cumulative update and GDR builds for SQL Server 2019.
-ms.date: 09/10/2024
+ms.date: 10/08/2024
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB4518398
 appliesto:
 - SQL Server 2019
@@ -49,6 +49,8 @@ This article lists the Microsoft SQL Server 2019 builds that were released after
 
 | GDR name | SQL Server build version | SQL Server (sqlservr.exe) file version | Analysis Services build version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date|
 |-------------------------|--------------|------------------|------------|----------------|---------------------------------------------------------|-------------------|
+| CU28 + GDR              | 15.0.4395.2  | 2019.150.4395.2  | 15.0.35.48 | 2018.150.35.48 | [KB5046060](https://support.microsoft.com/help/5046060) | October 08, 2024  |
+| GDR                     | 15.0.2125.1  | 2019.150.2125.1  | 15.0.32.62 | 2018.150.32.62 | [KB5046056](https://support.microsoft.com/help/5046056) | October 08, 2024  |
 | CU28 + GDR              | 15.0.4390.2  | 2019.150.4390.2  | 15.0.35.48 | 2018.150.35.48 | [KB5042749](https://support.microsoft.com/help/5042749) | September 10, 2024  |
 | GDR                     | 15.0.2120.1  | 2019.150.2120.1  | 15.0.32.62 | 2018.150.32.62 | [KB5042214](https://support.microsoft.com/help/5042214) | September 10, 2024  |
 | CU27 + GDR              | 15.0.4382.1  | 2019.150.4382.1  | 15.0.35.45 | 2018.150.35.45 | [KB5040948](https://support.microsoft.com/help/5040948) | July 09, 2024  |

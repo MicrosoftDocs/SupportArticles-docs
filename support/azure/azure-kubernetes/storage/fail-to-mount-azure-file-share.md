@@ -1,7 +1,7 @@
 ---
 title: Unable to mount Azure file share
 description: Describes errors that cause the mounting of an Azure file share to fail and provides solutions.
-ms.date: 08/29/2024
+ms.date: 10/10/2024
 ms.reviewer: chiragpa, akscsscic, shoguo, v-weizhu, v-rekhanain
 ms.service: azure-kubernetes-service
 ms.custom: sap:Storage
