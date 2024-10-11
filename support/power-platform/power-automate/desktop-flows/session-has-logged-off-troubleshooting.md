@@ -1,33 +1,39 @@
 ---
-title: Power Automate SessionHasLoggedOff troubleshooting
-description: Provides a set of troubleshooting steps for receiving the error SessionHasLoggedOff
+title: Troubleshoot SessionHasLoggedOff error code
+description: Provides troubleshooting steps for the SessionHasLoggedOff error code that occurs during a desktop flow run in Microsoft Power Automate.
 ms.subservice: power-automate-desktop-flows
-ms.date: 10/07/2024
+ms.date: 10/11/2024
 ms.author: johndund 
 author: johndund
 ---
-# Desktop flow cloud flow run ends in error code SessionHasLoggedOff
+# SessionHasLoggedOff occurs during a desktop flow run connected with the cloud
 
-This article provides troubleshooting steps for when you receive SessionHasLoggedOff during the middle of a desktop flow cloud run.
+This article provides troubleshooting steps for an issue where you receive the SessionHasLoggedOff error code during a desktop flow run in the cloud environment in Microsoft Power Automate.
 
 ## Symptoms
 
-In the middle of your desktop flow run, you receive the error message SessionHasLoggedOff with the message "The session logged off during run execution".
+During a desktop flow run, you receive the SessionHasLoggedOff error code with the "The session logged off during run execution" message.
 
-## Troubleshooting
+## Cause
 
-The SessionHasLoggedOff error code means that the Windows session that was running your desktop flow was logged off by the system. This can come from either a manual user action or another piece of software running on your machine.
+The error code means that the Windows session that runs your desktop flow is signed off by the system. This issue can be caused by a manual user action or a third-party software running on your machine.
 
-Steps to investigate:
+## Troubleshooting steps
 
-1. Verify that there is no custom sript (such as a batch file or any powershell script execution) in your desktop flow which may cause the session to be logged off or for the machine to reboot.
+Follow these steps to investigate the issue:
 
-1. Verify that no group policy setting may be logging off the remote desktop session due to time limits. You can verify settings opening the Local Group Policy Editor and navigating to Computer Configuration > Administrative Templates > Windows Components > Remote Desktop Services > Session Time Limits.
+1. Verify that there is no custom sript (such as a batch file or any powershell script execution) in your desktop flow. A custom sript might cause the session to be signed off or the machine to restart.
 
-1. Note the time of when the desktop flow run completed.
+1. Verify that no group policy settings sign off from the remote desktop session due to time limits. You can verify the settings by opening the [Local Group Policy Editor](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn789185(v=ws.11)) and navigating to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Remote Desktop Services** > **Session Time Limits**.
 
-1. Go to the machine that ran the flow and open the Windows Event Viewer. Look in the local session manager logs by going to Application and Service Logs > Microosft > Windows > TerminalServices-LocalSessionManager. Attempt to find the log corresponding to the time when the logoff occurred by using the time when the run completed and looking at logs at that time up to many minutes before. 
+1. Note the time of when the desktop flow run completes.
 
-1. Look for indications of what may have caused the disconnection of the session, including whether it may have come from a process running in session 0, or come from a user. If you see an event with Event ID 40 which describes that the session has been disconnected with a reason code, you can find mapping of the reason codes in [this documentation](https://learn.microsoft.com/en-us/windows/win32/termserv/extendeddisconnectreasoncode?redirectedfrom=MSDN).
+1. Go to the machine that runs the flow and open the Windows Event Viewer.
 
-1. If you see that the disconnect came from a third party piece of software, you can also look at the Event Viewer logs Windows > Application logs at the timestamp around when the disconnect occurred to see if the application may have logged anything.
+1. In the Windows Event Viewer, select **Application and Service Logs** > **Microsoft** > **Windows** > **TerminalServices-LocalSessionManager** to check the local session manager logs. Try to find the log corresponding to the time when the sign-off occurs by using the time when the run completes and looking at the logs at that time up to many minutes before.
+
+1. Look for indications of what might cause the disconnection of the session, including whether the disconnection might be caused by a process running in session 0, or a user.
+
+   If you see an event with **Event ID 40**, it describes that the session is disconnected with a [reason code](/windows/win32/termserv/extendeddisconnectreasoncode).
+
+   If the disconnection is caused by a third-party software, you can also check the logs around the timestamp when the disconnection occurs in **Windows Logs** > **Application** to see if the application might log something.
