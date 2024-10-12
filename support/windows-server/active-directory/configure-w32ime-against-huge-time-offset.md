@@ -1,7 +1,7 @@
 ---
 title: Configure W32Time against huge time offset
 description: Discusses how to configure W32Time to help prevent large time offsets in the domain.
-ms.date: 12/26/2023
+ms.date: 10/12/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -18,7 +18,7 @@ _Original KB number:_ &nbsp; 884776
 
 Windows operating systems include the Time Service tool (W32Time service) that is used by the Kerberos authentication protocol. Kerberos authentication will work if the time interval between the relevant computers is within the maximum enabled time skew. The default is 5 minutes. You can also turn off the Time Service tool. Then, you can install a third-party time service.
 
-The purpose of the Time Service tool is to make sure that all the computers in an organization that are running Microsoft Windows 2012 or later versions of Windows operating systems use a common time. To make sure that there's an appropriate common time usage, the Time Service uses a hierarchical relationship that controls authority. By default, Windows-based computers use the following hierarchy:
+The purpose of the Time Service tool is to make sure that all the computers in an organization that are running Microsoft Windows Server 2012 or later versions of Windows operating systems use a common time. To make sure that there's an appropriate common time usage, the Time Service uses a hierarchical relationship that controls authority. By default, Windows-based computers use the following hierarchy:
 
 - All the client desktop computers nominate the authenticating domain controller as their authoritative time source.
 - In a domain, all the servers follow the same process that client desktop computers follow.
@@ -88,7 +88,7 @@ So 48 hours was the next obvious time offset after 25 or 36 hours. Administrator
 
 Specific recommendations according to operating system version and computer role are described in the following sections.
 
-## Windows 10 and above, and Windows Server 2012 and above
+## Windows 10, Windows Server 2012 and later versions of Windows
 
 Domain servers
 
@@ -106,12 +106,13 @@ The default value of these two registry entries is 2a300 (hexadecimal) or 172800
 The `MaxPosPhaseCorrection` and `MaxNegPhaseCorrection` registry entries have a default value of 2a300 (hexadecimal) or 172800 (decimal) for Domain Controllers. This default value means "Accept time changes within the 48-hour range." Whilst on the member servers, the default value is 0xFFFFFFFF. The 48 hours value can also be set on member servers that are running time sensitive-based applications.
 
 > [!NOTE]
-> For more information about these registry entries, see the [Windows Server 2012 and above and Windows 10 and above Time Service registry entries](#windows-server-2003-and-windows-xp-time-service-registry-entries) section.
+> For more information about these registry entries, see the [Time Service registry entries in Windows 10, Windows Server 2012 and later versions of Windows](#time-service-registry-entries-in-windows-10-windows-server-2012-and-later-versions-of-windows) section.
+
 ### Stand-alone clients
 
 The `MaxPosPhaseCorrection` and `MaxNegPhaseCorrection` registry entries have a default value of 54,000 (15 hours). As a security best practice, we recommend that you reduce this default value. We also recommend that you set the value to 3600 (1 hour) or an even smaller value, depending on time source, on network condition, on poll interval, and on security requirements.
 
-## Windows Server 2012 and above and Windows 10 and above Time Service registry entries
+## Time Service registry entries in Windows 10, Windows Server 2012 and later versions of Windows
 
 |Type|Details|
 |---|---|
@@ -134,9 +135,10 @@ The `MaxPosPhaseCorrection` and `MaxNegPhaseCorrection` registry entries have a 
   
 > [!NOTE]
 > We recommend that you use the Global Policy object Editor to deploy these settings. For more information about the Windows Time service in a Windows Server 2012-based forest, see [Windows Time Service (W32Time)](/windows-server/networking/windows-time-service/windows-time-service-top).
+
 The default Windows Time service parameter values that are defined in the Group Policy object (GPO) may not match the default values that are defined in the registry of Windows Server 2012-based domain controllers. When you deploy MaxPosPhaseCorrection and MaxNegPhaseCorrection values to Windows Server 2012 domain controllers by using a GPO, make sure that the GPO isn't changing the values of other Windows Time service parameters in the registry. Other Windows Time service parameter values may also have to be changed in the GPO to match the default registry values in the domain controllers.
 
-## All versions of Windows 2012 and above
+## All editions of Windows Server 2012 and later versions of Windows
 
 Domain servers
 
