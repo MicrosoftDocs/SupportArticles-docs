@@ -22,7 +22,7 @@ This article helps you find and troubleshoot Azure Kubernetes Service (AKS) node
 
         :::image type="content" source="media/snat-port-exhaustion/aks-cluster-load-balancer.png" alt-text="Screenshot that shows how to find the default Kubernetes load balancer."  lightbox="media/snat-port-exhaustion/aks-cluster-load-balancer.png":::
     
-    2. Locate the AKS node that's experiencing SNAT port exhaustion by using the load balancer metrics portal. Check SNAT port usage and allocation.
+    2.  Locate the AKS node that's experiencing SNAT port exhaustion by [checking SNAT port usage and allocation](/azure/load-balancer/load-balancer-standard-diagnostics#how-do-i-check-my-snat-port-usage-and-allocation) in the load balancer metrics page.
 
         :::image type="content" source="media/snat-port-exhaustion/aks-node-ip-address.png" alt-text="Screenshot that shows how to find the AKS node's IP address." lightbox="media/snat-port-exhaustion/aks-node-ip-address.png":::
 
