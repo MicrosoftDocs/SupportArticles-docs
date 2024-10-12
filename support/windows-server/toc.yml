@@ -773,20 +773,48 @@ items:
     href: ./certificates-and-public-key-infrastructure-pki/certificates-and-public-key-infrastructure-pki-overview.md
   - name: Active Directory Certificate Services (ADCS)
     items:
+    - name: A Certification Authority can't use a certificate template
+      href: ./certificates-and-public-key-infrastructure-pki/ca-cant-use-certificate-template.md
     - name: CA certificate renewal fails when using a KSP provider
       href: ./certificates-and-public-key-infrastructure-pki/ca-certificate-renewal-fails-existing-key-pair.md
     - name: CA doesn't publish certificates in trusted domain
       href: ./certificates-and-public-key-infrastructure-pki/cannot-publish-certificate-trusted-domain.md
+    - name: Can't select CA-compatible certificate templates
+      href: ./certificates-and-public-key-infrastructure-pki/cannot-select-windows-server-2016-ca-compatible-certificate-templates.md
+    - name: Certificate Services doesn't start
+      href: ./certificates-and-public-key-infrastructure-pki/certificate-services-not-start.md
     - name: Certificate Services may not start on a computer
       href: ./certificates-and-public-key-infrastructure-pki/cs-cant-start-computer.md
+    - name: Change expiration date of certificates issued by CA
+      href: ./certificates-and-public-key-infrastructure-pki/change-certificates-expiration-date.md
+    - name: Export Root Certification Authority Certificate
+      href: ./certificates-and-public-key-infrastructure-pki/export-root-certification-authority-certificate.md
+    - name: Find the name of Enterprise Root CA server
+      href: ./certificates-and-public-key-infrastructure-pki/find-name-enterprise-root-ca-server.md
     - name: How to decommission Windows enterprise CA and remove related objects
       href: ./certificates-and-public-key-infrastructure-pki/decommission-enterprise-certification-authority-and-remove-objects.md
     - name: How to expand the maximum extension size limit at AD CS
       href: ./certificates-and-public-key-infrastructure-pki/expand-maximum-extension-size-limit-ad-cs.md
     - name: How to import third-party CAs into Enterprise NTAuth store
       href: ./certificates-and-public-key-infrastructure-pki/import-third-party-ca-to-enterprise-ntauth-store.md
+    - name: How to reinstall CA role
+      href: ./certificates-and-public-key-infrastructure-pki/uninstall-reinstall-ca-role.md
+    - name: How to remove manually Enterprise Windows Certificate Authority
+      href: ./certificates-and-public-key-infrastructure-pki/delete-enterprise-windows-certificate-authority.md
+    - name: Move a certification authority to another server
+      href: ./certificates-and-public-key-infrastructure-pki/move-certification-authority-to-another-server.md
+    - name: Move Certificate Server database and log files
+      href: ./certificates-and-public-key-infrastructure-pki/move-certificate-server-database-log-files.md
+    - name: Set different validity period for subordinate CA
+      href: ./certificates-and-public-key-infrastructure-pki/set-enterprise-subordinate-ca-validity-period.md
+    - name: Set up certificate-based authentication across forests without trust for a web server
+      href: ./certificates-and-public-key-infrastructure-pki/set-up-certificate-based-authentication-across-forest-without-trust.md
     - name: Superseded Certificate Templates and impact on user's AD store
       href: ./certificates-and-public-key-infrastructure-pki/superseded-certificate-templates-impact-user-ad-store.md
+    - name: Valid root CA certificates are untrusted
+      href: ./certificates-and-public-key-infrastructure-pki/valid-root-ca-certificates-untrusted.md
+    - name: Version 3 templates don't appear in certificate web enrollment
+      href: ./certificates-and-public-key-infrastructure-pki/cng-templates-not-appear-certificate-web-enrollment.md
   - name: Certificate-based authentication
     items:
     - name: Root CA certificate doesn't appear
@@ -807,6 +835,8 @@ items:
       href: ./certificates-and-public-key-infrastructure-pki/certutil-view-not-return-issued-certificate.md
     - name: Clients can't authenticate with a server
       href: ./certificates-and-public-key-infrastructure-pki/clients-cant-authenticate-server.md
+    - name: Error 0x800706ba during certificate enrollment
+      href: ./certificates-and-public-key-infrastructure-pki/error-0x800706ba-certificate-enrollment.md
     - name: How to install imported certificates on a Web server
       href: ./certificates-and-public-key-infrastructure-pki/install-imported-certificates.md
     - name: Remote Desktop server certificates are renewed two times daily
@@ -827,6 +857,8 @@ items:
       href: ./certificates-and-public-key-infrastructure-pki/cannot-request-certificate-with-web-enrollment.md
   - name: Encrypting File System (EFS)
     items:
+    - name: Back up recovery agent EFS private key
+      href: ./certificates-and-public-key-infrastructure-pki/back-up-recovery-agent-efs-private-key.md
     - name: Can't share files with multiple EFS certificates
       href: ./certificates-and-public-key-infrastructure-pki/cant-share-files-multiple-efs-certificates.md
     - name: Client computers can't encrypt a file in a domain
@@ -847,50 +879,18 @@ items:
       href: ./certificates-and-public-key-infrastructure-pki/renewal-of-enrollment-agent-certificate-fail.md
   - name: Smart card logon
     items:
-    - name: A Certification Authority can't use a certificate template
-      href: ./certificates-and-public-key-infrastructure-pki/ca-cant-use-certificate-template.md
-    - name: Back up recovery agent EFS private key
-      href: ./certificates-and-public-key-infrastructure-pki/back-up-recovery-agent-efs-private-key.md
-    - name: Can't select CA-compatible certificate templates
-      href: ./certificates-and-public-key-infrastructure-pki/cannot-select-windows-server-2016-ca-compatible-certificate-templates.md    
-    - name: Certificate Services doesn't start
-      href: ./certificates-and-public-key-infrastructure-pki/certificate-services-not-start.md    
-    - name: Change expiration date of certificates issued by CA
-      href: ./certificates-and-public-key-infrastructure-pki/change-certificates-expiration-date.md
-    - name: Disable TLS 1.0 and 1.1 and force the use of TLS 1.2
-      href: ./certificates-and-public-key-infrastructure-pki/disable-tls-1-1dot1-mbam-servers.md
     - name: DPAPI MasterKey backup failures
       href: ./certificates-and-public-key-infrastructure-pki/dpapi-masterkey-backup-failures.md
     - name: Enabling smart card logon
       href: ./certificates-and-public-key-infrastructure-pki/enabling-smart-card-logon-third-party-certification-authorities.md
     - name: Errors when applications try to connect to SQL Server
       href: ./certificates-and-public-key-infrastructure-pki/apps-forcibly-closed-tls-connection-errors.md
-    - name: Error 0x800706ba during certificate enrollment
-      href: ./certificates-and-public-key-infrastructure-pki/error-0x800706ba-certificate-enrollment.md
-    - name: Export Root Certification Authority Certificate
-      href: ./certificates-and-public-key-infrastructure-pki/export-root-certification-authority-certificate.md
-    - name: Find the name of Enterprise Root CA server
-      href: ./certificates-and-public-key-infrastructure-pki/find-name-enterprise-root-ca-server.md
-    - name: How to reinstall CA role
-      href: ./certificates-and-public-key-infrastructure-pki/uninstall-reinstall-ca-role.md
-    - name: How to remove manually Enterprise Windows Certificate Authority
-      href: ./certificates-and-public-key-infrastructure-pki/delete-enterprise-windows-certificate-authority.md
-    - name: Move a certification authority to another server
-      href: ./certificates-and-public-key-infrastructure-pki/move-certification-authority-to-another-server.md
-    - name: Move Certificate Server database and log files
-      href: ./certificates-and-public-key-infrastructure-pki/move-certificate-server-database-log-files.md
     - name: Required trusted root certificates
       href: ./certificates-and-public-key-infrastructure-pki/trusted-root-certificates-are-required.md
-    - name: Set different validity period for subordinate CA
-      href: ./certificates-and-public-key-infrastructure-pki/set-enterprise-subordinate-ca-validity-period.md
-    - name: Set up certificate-based authentication across forests without trust for a web server
-      href: ./certificates-and-public-key-infrastructure-pki/set-up-certificate-based-authentication-across-forest-without-trust.md
-    - name: Valid root CA certificates are untrusted
-      href: ./certificates-and-public-key-infrastructure-pki/valid-root-ca-certificates-untrusted.md
-    - name: Version 3 templates don't appear in certificate web enrollment
-      href: ./certificates-and-public-key-infrastructure-pki/cng-templates-not-appear-certificate-web-enrollment.md
   - name: SSL or TLS
     items:
+    - name: Disable TLS 1.0 and 1.1 and force the use of TLS 1.2
+      href: ./certificates-and-public-key-infrastructure-pki/disable-tls-1-1dot1-mbam-servers.md
     - name: Restrict cryptographic algorithms and protocols
       href: ./certificates-and-public-key-infrastructure-pki/restrict-cryptographic-algorithms-protocols-schannel.md
 - name: Containers
@@ -926,9 +926,7 @@ items:
     - name: AGPM and GPRESULT are not working
       href: ./group-policy/agpm-gpresult-not-working.md
     - name: Changes to GPO permissions aren't saved
-      href: ./group-policy/changes-to-gpo-permissions-ignored.md
-    - name: Create a Central Store on a domain controller
-      href: ./group-policy/create-central-store-domain-controller.md
+      href: ./group-policy/changes-to-gpo-permissions-ignored.md    
     - name: Dcgpofix tool doesn't restore security settings to the original state
       href: ./group-policy/dcgpofix-not-restore-default-domain-controller-policy-security-settings.md
     - name: Description of group policy restricted groups
@@ -1249,15 +1247,15 @@ items:
       href: ./networking/target-account-name-incorrect-error-access-file-share.md
     - name: Error "Element not found" with DFS namespaces
       href: ./networking/error-element-not-found-dfsn.md
-    - name: 'Error "Not enough memory resources are available to process this command"'
+    - name: Error "Not enough memory resources are available to process this command"
       href: ./networking/error-not-enough-memory-resources-available.md
-    - name: 'Error "The data is invalid" or "The Namespace has no targets"'
+    - name: Error "The data is invalid" or "The Namespace has no targets"
       href: ./networking/error-data-invalid-namespace-no-targets.md
-    - name: 'Error "The device is not ready for use"'
+    - name: Error "The device is not ready for use"
       href: ./networking/error-device-not-ready-for-use.md
     - name: Error "The remote procedure call failed"
       href: ./networking/error-remote-procedure-call-failed.md
-    - name: 'Error "The request is not supported"'
+    - name: Error "The request is not supported"
       href: ./networking/error-request-not-supported.md
     - name: Error "The RPC server is unavailable"
       href: ./networking/namespace-not-queried-rpc-server-unavailable.md
@@ -1265,7 +1263,7 @@ items:
       href: ./networking/error-specified-domain-not-exist-cannot-contacted.md
     - name: Error "The specified server cannot perform the requested operation"
       href: ./networking/error-specified-server-cannot-perform-requested-operation.md
-    - name: 'Error "The system cannot find the file specified"'
+    - name: Error "The system cannot find the file specified"
       href: ./networking/error-system-cannot-find-file-specified.md
     - name: Error messages on SMB connections
       href: ./networking/error-messages-smb-connections.md
@@ -1511,8 +1509,6 @@ items:
     items:
     - name: An incorrect IP address is returned
       href: ./networking/incorrect-ip-address-returned-ping-netbios.md
-    - name: Install and configure IP version 6
-      href: ./networking/install-configure-ip-version-6.md
   - name: Network Connection Status Indicator (NCSI)
     items:
     - name: 'Troubleshooting guidance: Network Connection Status Indicator (NCSI)'
@@ -1647,6 +1643,8 @@ items:
       href: ./networking/use-portqry-verify-active-directory-tcp-ip-connectivity.md
     - name: Information about Network Monitor 3
       href: ./networking/network-monitor-3.md
+    - name: Install and configure IP version 6
+      href: ./networking/install-configure-ip-version-6.md
     - name: IP and default gateway settings are assigned incorrectly
       href: ./networking/ip-default-gateway-settings-assigned-incorrectly.md
     - name: Multiple default gateways cause connectivity problems
@@ -3091,6 +3089,8 @@ items:
       href: ./support-tools/scripts-to-cleanup-profile-folder-information-and-prevent-temp-user-profiles-from-being-created.md
     - name: Scripts to extract .msu and .cab files
       href: ./support-tools/scripts-extract-msu-cab-files.md
+    - name: Scripts to inspect the content of the WMI repository
+      href: ./support-tools/script-inspect-the-content-of-the-wmi-repository.md
     - name: Scripts to list all running WMI providers
       href: ./support-tools/scripts-list-running-wmi-providers.md
     - name: Scripts to retrieve profile age

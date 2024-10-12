@@ -6,7 +6,7 @@ author: AndreiBarbu95
 ms.author: andbar
 editor: v-jsitser
 ms.reviewer: v-rekhanain, v-leedennis
-ms.service: azure-container-instances
+ms.service: azure-container-registry
 ms.topic: troubleshooting-problem-resolution
 ms.custom: sap:Image Pull Issues
 #Customer intent: As an Azure user, I want to fix an I/O time-out error so that I can successfully pull a container image or artifact from Azure Container Registry.

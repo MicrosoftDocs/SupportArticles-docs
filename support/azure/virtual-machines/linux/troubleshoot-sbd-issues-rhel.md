@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot SBD service failure in RHEL Pacemaker clusters
-description: Provides troubleshooting guidance to an issue where the SBD service don't fail to start.
+description: Provides troubleshooting guidance to an issue where the SBD service doesn't fail to start in a Red Hat Enterprise Server Pacemaker cluster.
 ms.reviewer: rnirek, sentj, hsisodia, divargas, v-weizhu
-ms.date: 09/30/2024
+ms.date: 10/12/2024
 ms.service: azure-virtual-machines
 ms.collection: linux
 ms.custom: sap:Issue with Pacemaker clustering, and fencing
@@ -15,18 +15,18 @@ This article outlines common scenarios where the STONITH Block Device (SBD) serv
 
 ## How SBD works
 
-The SBD device requires at least one additional virtual machine (VM) that acts as an Internet Small Computer System Interface (iSCSI) target server and provides an SBD device. These iSCSI target servers also can be shared with other Pacemaker clusters. The advantage of using an SBD device is that if you're already using SBD devices on-premises, they don't require any changes to how you operate the Pacemaker cluster.
+The SBD device requires at least one more virtual machine (VM) that acts as an Internet Small Computer System Interface (iSCSI) target server and provides an SBD device. These iSCSI target servers can also be shared with other Pacemaker clusters. The advantage of using an SBD device is that if you're already using SBD devices on-premises, they don't require any changes to how you operate the Pacemaker cluster.
 
 To set up an Azure Pacemaker cluster with the SBD fencing mechanism, use either of the two options:
 
 - [SBD with an iSCSI target server](/azure/sap/workloads/high-availability-guide-rhel-pacemaker#sbd-with-an-iscsi-target-server)
 
-- [SBD with an Azure shared disk](/azure/sap/workloads/high-availability-guide-rhel-pacemakersbd-with-an-azure-shared-disk)
+- [SBD with an Azure shared disk](/azure/sap/workloads/high-availability-guide-rhel-pacemaker#sbd-with-an-azure-shared-disk)
 
 
 ## Symptoms
 
-The SBD device isn't accessible on cluster nodes. In this case, the SBD daemon fails to start and prevents the Pacemaker cluster from starting up.
+When the SBD device isn't accessible on cluster nodes, the SBD daemon fails to start and prevents the Pacemaker cluster from starting up.
 
 To get the SBD server details, use the following methods on cluster nodes:
 
@@ -36,7 +36,7 @@ To get the SBD server details, use the following methods on cluster nodes:
 
 ## Scenario 1: The SBD service fails to start due to iSCSI service failures
 
-iSCSI services use iSCSI Qualified Name (IQN) for communication between initiator and target nodes. If the iSCSI services fail, SBD disks become inaccessible, causing the SBD service fails to start and the Pacemaker service doesn't run on cluster nodes.
+iSCSI services use iSCSI Qualified Name (IQN) for communication between initiator and target nodes. If the iSCSI services fail, SBD disks become inaccessible. In this case, the SBD service can't start and the Pacemaker service doesn't run on cluster nodes.
 
 The following examples show how to diagnose SBD and Pacemaker service failures:
 
@@ -46,7 +46,7 @@ The following examples show how to diagnose SBD and Pacemaker service failures:
     sudo pcs status
     ```
 
-    If the Pacemaker cluster doesn't run, you will see the command output that resembles the following text:
+    If the Pacemaker cluster doesn't run, you'll see the command output that resembles the following text:
 
     ```output
     Error: error running crm_mon, is pacemaker running?
@@ -60,7 +60,7 @@ The following examples show how to diagnose SBD and Pacemaker service failures:
     sudo systemctl status corosync
     ```
     
-    If the Corosync service is running, you will see the command output that resembles the following text:
+    If the Corosync service is running, you'll see the command output that resembles the following text:
 
     ```output
     ● corosync.service - Corosync Cluster Engine
@@ -94,7 +94,7 @@ The following examples show how to diagnose SBD and Pacemaker service failures:
     sudo systemctl status pacemaker
     ```
     
-    The SBD service is needed for the Pacemaker service to start. If the Pacemaker service fails to start due to dependency failures, you will see the command output that resembles the following text:
+    The SBD service is needed for the Pacemaker service to start. If the Pacemaker service fails to start due to dependency failures, you'll see the command output that resembles the following text:
 
     ```output
     ○ pacemaker.service - Pacemaker High Availability Cluster Manager
@@ -112,7 +112,7 @@ The following examples show how to diagnose SBD and Pacemaker service failures:
     sudo systemctl list-dependencies pacemaker
     ```
     
-    If the Pacemaker service doesn't have the SBD service as a dependency, you will see the command output that resembles the following text:
+    If the Pacemaker service doesn't have the SBD service as a dependency, you'll see the command output that resembles the following text:
     
     ```output
     pacemaker.service
@@ -130,7 +130,7 @@ The following examples show how to diagnose SBD and Pacemaker service failures:
     sudo systemctl status sbd
     ```
     
-    If the SBD service fails to run, you will see the command output that resembles the following text:
+    If the SBD service fails to run, you'll see the command output that resembles the following text:
 
     ```output
     × sbd.service - Shared-storage based fencing daemon
@@ -177,7 +177,7 @@ To resolve this issue, follow these steps:
     sudo systemctl status iscsid
     ```
 
-    If the services are enabled and run, you will see the command output that resembles the following text:
+    If the services are enabled and running, you'll see the command output that resembles the following text:
   
     ```output
     ● iscsi.service - Login and scanning of iSCSI devices
@@ -203,14 +203,14 @@ The SBD service fails to start due to the following issues:
 - Missing SBD configurations.
 - Incorrect SBD configurations such as incorrect SBD devices names or syntax errors.
 
-### Resolution: Ensure the correct SBD configuration exists
+### Resolution: Ensure the correct SBD configuration
 
 1. Validate the SBD configuration exists:
 
     ```bash
     sudo pcs stonith config sbd
     ```
-    If the SBD configuration exists, you will see the command output that resembles the following text:
+    If the SBD configuration exists, you'll see the command output that resembles the following text:
     
     ```output
     Resource: sbd (class=stonith type=fence_sbd)
@@ -222,6 +222,7 @@ The SBD service fails to start due to the following issues:
           interval=600
           timeout=15
     ```
+
 2. Validate and ensure the SBD configuration file */etc/sysconfig/sbd* has the following recommended parameters and the correct SBD devices:
 
     ```output
@@ -302,7 +303,7 @@ sr0                11:0    1  628K  0 rom
     SBD_DEVICE="/dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779;/dev/disk/by-id/scsi-36001405cbac988092e448059d25d1a4a;/dev/disk/by-id/scsi-36001405a29a443e4a6e4ceeae822e5eb"
     ```
 
-3. Check if the SBD devices are running and accessible. If the SBD services aren't running and accessible, you will see the "sbd failed; please check the logs." error message.
+3. Check if the SBD devices are running and accessible. If the SBD services aren't running and accessible, you'll see the error message "sbd failed; please check the logs."
 
     ```bash
     sudo  /usr/sbin/sbd -d /dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779 list
@@ -386,7 +387,7 @@ sr0                11:0    1  628K  0 rom
         [6:0:0:0]    disk    LIO-ORG  sbdnfs           4.0   /dev/sdc
         ```
 
-    6. Repeat step b-f to ensure other iSCSI devices are available.
+    6. Repeat step b-e to ensure other iSCSI devices are available.
     7. Repeat step a-f on another cluster node to ensure that all iSCSI devices on another cluster node are available.
 
 
@@ -431,7 +432,7 @@ sr0                11:0    1  628K  0 rom
 
 ## Scenario 4: The node fails to rejoin the cluster after being fenced
 
-If the SBD slot isn't in a clean state, the node will fail to rejoin the cluster after being fenced. This causes that the SBD device is in failed state and another node is in pending state.
+If the SBD slot isn't in a clean state, the node will fail to rejoin the cluster after being fenced. In this case, the SBD device on the node is in a failed state and another node is in a pending state.
 
 To validate the state of the SBD slot, run the following commands:
 
@@ -488,7 +489,7 @@ sudo  sbd -d /dev/sde list
     SBD_STARTMODE=clean
     ```
     
-    The `SBD_STARTMODE` parameter determines if a node rejoins or not. If it's set to `always`, even if the node was previously fenced, it rejoins the cluster. If it's set to `clean`, the node rejoins the cluster after the SBD slot is cleared. This is an expected behavior. It detects a fencing type message in the SBD slot for the node and not allows the node to rejoin the cluster unless the SBD slot is manually cleared.
+    The `SBD_STARTMODE` parameter determines whether a node rejoins or not. If it's set to `always`, even if the node was previously fenced, it rejoins the cluster. If it's set to `clean`, the node rejoins the cluster after the SBD slot is cleared. This is an expected behavior. It detects a fencing type message in the SBD slot for the node and not allows the node to rejoin the cluster unless the SBD slot is manually cleared.
 
 2. Clear the SBD slot on the node that was previously fenced and wasn't able to rejoin the cluster:
 
@@ -525,11 +526,11 @@ sudo  sbd -d /dev/sde list
 
 ## Scenario 5: The SBD service fails to start after you add a new SBD device
 
-After you add a new SBD device into the cluster, you see the following symptoms:
+After you add a new SBD device to the cluster, you see the following symptoms:
 
-- When you check the SBD service status by running the `sudo systemctl status sbd` command, you get the error message "sbd failed; please check the logs" and "Failed to start sbd.service: Operation refused".
+- When you check the SBD service status by running the `sudo systemctl status sbd` command, you get the error messages "sbd failed; please check the logs" and "Failed to start sbd.service: Operation refused."
 
-- When you send a test message to a node by SBD devices by running the following command, you also get the same error message: 
+- When you send a test message to a node by a SBD device, you also get the same error message: 
 
     ```bash
     sudo sbd -d  /dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779 message node1 test
@@ -539,7 +540,7 @@ After you add a new SBD device into the cluster, you see the following symptoms:
     sbd failed; please check the logs.
     ```
 
-    In the */var/log/messages* file, you also will find the following logs:
+    In the */var/log/messages* file, you'll also find the following logs:
     
     ```output
     Mar  2 06:58:06 node1 sbd[11105]: /dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779:    error: slot_msg: slot_msg(): No recipient / cmd specified.
@@ -550,7 +551,7 @@ After you add a new SBD device into the cluster, you see the following symptoms:
 
 ### Resolution: Restart the Pacemaker cluster
 
-When you use SBD as a fencing device and enable it for a Pacemaker cluster, services should be managed under cluster control. Therefore, you can't start/stop it manually. After adding any new SBD device in the Pacemaker cluster, you should restart the Pacemaker cluster to make the SBD device to take effect under cluster control.
+When you use SBD as a fencing device and enable it for a Pacemaker cluster, services should be managed under cluster control. Therefore, you can't start or stop it manually. After adding any new SBD device to the Pacemaker cluster, you should restart the Pacemaker cluster to make the SBD device take effect under cluster control.
 
 1. Stop and restart the cluster services on all cluster nodes.
 
@@ -587,7 +588,7 @@ sudo sbd -d /dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779 list
 
 ## Next steps
 
-If your issue isn't resolved, collect system logs from Red Hat systems, generate an sos report, and then contact support. For more information, see [What is an sos report and how to create one in Red Hat Enterprise Linux?](https://access.redhat.com/solutions/3592).
+If your issue isn't resolved, collect system logs from Red Hat systems, generate an sos report, and then contact support. For more information, see [What is an sos report and how to create one in Red Hat Enterprise Linux?](https://access.redhat.com/solutions/3592)
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 

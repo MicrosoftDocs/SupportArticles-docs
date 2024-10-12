@@ -27,7 +27,7 @@
       href: create-upgrade-delete/error-code-missingsubscriptionregistration.md
     - name: OperationNotAllowed or PublicIPCountLimitReached error
       href: create-upgrade-delete/error-code-operationnotallowed-publicipcountlimitreached.md
-    - name: OperationPreempted error
+    - name: AKSOperationPreempted error
       href: create-upgrade-delete/error-code-operationpreempted.md
     - name: OutboundConnFailVMExtensionError error (50)
       href: create-upgrade-delete/error-code-outboundconnfailvmextensionerror.md
@@ -165,6 +165,8 @@
 
 - name: Node/node pool availability and performance
   items:
+  - name: Improve container image pull performance in AKS
+    href: availability-performance/container-image-pull-performance.md
   - name: AKS cluster/node is in failed state
     href: availability-performance/cluster-node-virtual-machine-failed-state.md
   - name: Identify nodes and containers consuming high CPU

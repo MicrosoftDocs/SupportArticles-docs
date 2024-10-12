@@ -1,11 +1,11 @@
 ---
 title: Create and manage Central Store
 description: Describes how to create a Central Store on a domain controller to store and replicate registry-based policies for Windows.
-ms.date: 04/11/2024
+ms.date: 10/11/2024
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.reviewer: kaushika
+ms.reviewer: kaushika, herbertm
 ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstroubleshoot
 ---
 # How to create and manage the Central Store for Group Policy Administrative Templates in Windows
@@ -16,31 +16,17 @@ _Original KB number:_ &nbsp; 3087759
 
 ## Links to download the Administrative Templates files based on the operating system version
 
+- [Administrative Templates (.admx) for Windows 11 2024 Update (24H2)](https://www.microsoft.com/download/details.aspx?id=106254)
+- [Administrative Templates (.admx) for Windows 11 2023 Update (23H2)](https://www.microsoft.com/download/details.aspx?id=105667)
 - [Administrative Templates (.admx) for Windows 11 2022 Update (22H2) - v3.0](https://www.microsoft.com/download/details.aspx?id=105390)
 - [Administrative Templates (.admx) for Windows 11 2022 Update (22H2)](https://www.microsoft.com/download/details.aspx?id=104593)
-- [Administrative Templates (.admx) for Windows 11 October 2021 Update (21H2)](https://www.microsoft.com/download/details.aspx?id=103507)
 - [Administrative Templates (.admx) for Windows 10 2022 Update (22H2)](https://www.microsoft.com/download/details.aspx?id=104677) 
-- [Administrative Templates (.admx) for Windows 10 November 2021 Update (21H2) - v2.0](https://www.microsoft.com/download/details.aspx?id=104042)
-- [Administrative Templates (.admx) for Windows 10 November 2021 Update (21H2)](https://www.microsoft.com/download/details.aspx?id=103667)
-- [Administrative Templates (.admx) for Windows 10 May 2021 Update (21H1)](https://www.microsoft.com/download/details.aspx?id=103124)
-- [Administrative Templates (.admx) for Windows 10 October 2020 Update (20H2) - v2.0](https://www.microsoft.com/download/details.aspx?id=103060)
-- [Administrative Templates (.admx) for Windows 10 May 2020 Update (2004)](https://www.microsoft.com/download/details.aspx?id=101445)
-- [Administrative Templates (.admx) for Windows 10 November 2019 Update (1909)](https://www.microsoft.com/download/details.aspx?id=100591)
-- [Administrative Templates (.admx) for Windows 10 May 2019 Update (1903)](https://www.microsoft.com/download/details.aspx?id=58495)
-- [Administrative Templates (.admx) for Windows 10 October 2018 Update (1809)](https://www.microsoft.com/download/details.aspx?id=57576)
-- [Administrative Templates (.admx) for Windows 10, version 1803 (April 2018 Update)](https://www.microsoft.com/download/details.aspx?id=56880)
-- [Administrative Templates (.admx) for Windows 10, version 1709 (Fall Creators Update)](https://www.microsoft.com/download/details.aspx?id=56121)  
-- [Administrative Templates (.admx) for Windows 10, version 1703 (Creators Update)](https://www.microsoft.com/download/details.aspx?id=55080)
 - [Administrative Templates (.admx) for Windows 10, version 1607 and Windows Server 2016](https://www.microsoft.com/download/details.aspx?id=53430)
-- [Administrative Templates (.admx) for Windows 10 and Windows 10, version 1511](https://www.microsoft.com/download/details.aspx?id=48257)
-- [Administrative Templates (.admx) for Windows 8.1 Update and Windows Server 2012 R2 Update](https://www.microsoft.com/download/details.aspx?id=43413)
-- [Administrative Templates (.admx) for Windows 8.1 and Windows Server 2012 R2](https://www.microsoft.com/download/details.aspx?id=41193)
 
 To view ADMX spreadsheets of the new settings that are available in later operating system versions, see the following spreadsheets:
 
+- [Group Policy Settings Reference Spreadsheet for Windows 11 2023 Update (23H2) - v2.0](https://www.microsoft.com/download/details.aspx?id=106067)
 - [Group Policy Settings Reference Spreadsheet for Windows 11 2023 Update (23H2)](https://www.microsoft.com/download/details.aspx?id=105668)
-- [Group Policy Settings Reference Spreadsheet for Windows 11 October 2021 Update (21H2)](https://www.microsoft.com/download/details.aspx?id=103506)
-- [Group Policy Settings Reference Spreadsheet for Windows 10 November 2021 Update (21H2)](https://www.microsoft.com/download/details.aspx?id=103668)
 - [Group Policy Settings Reference Spreadsheet for Windows 10 2022 Update (22H2)](https://www.microsoft.com/download/details.aspx?id=104678)
 
 ## Overview
@@ -63,39 +49,39 @@ To create a Central Store for .admx and .adml files, create a new folder named P
 
 When you already have such a folder that has a previously built Central Store, use a new folder describing the current version such as:
 
-`\\contoso.com\SYSVOL\contoso.com\policies\PolicyDefinitions-1803`
+`\\contoso.com\SYSVOL\contoso.com\policies\PolicyDefinitions-24H2`
 
 Copy all files from the PolicyDefinitions folder on a source computer to the new PolicyDefinitions folder on the domain controller. The source location can be either of the following ones:
 
-- The `C:\Windows\PolicyDefinitions` folder on a Windows 8.1-based or Windows 10-based client computer
+- The `C:\Windows\PolicyDefinitions` folder on a Windows 10-based or Windows 11-based client computer
 - The `C:\Program Files (x86)\Microsoft Group Policy\<version-specific>\PolicyDefinitions` folder, if you have downloaded any of the Administrative Templates separately from the links above.
 
 The PolicyDefinitions folder on the Windows domain controller stores all .admx files and .adml files for all languages that are enabled on the client computer.
 
-The .adml files are stored in a language-specific folder. For example, English (United States).adml files are stored in a folder that is named *en-US*. Korean .adml files are stored in a folder that is named *ko_KR*, and so on.
+The .adml files are stored in a language-specific folder. For example, English (United States).adml files are stored in a folder that is named *en-US*. Korean .adml files are stored in a folder that is named *ko-KR*, and so on.
 
 If .adml files for additional languages are required, you must copy the folder that contains the .adml files for that language to the Central Store. When you have copied all .admx and .adml files, the PolicyDefinitions folder on the domain controller should contain the .admx files and one or more folders that contain language-specific .adml files.
 
 > [!NOTE]
-> When you copy the .admx and .adml files from a Windows 8.1-based or Windows 10-based computer, verify that the most recent updates to these files are installed. Also, make sure that the most recent Administrative Templates files are replicated. This advice also applies to service packs, as applicable.
+> When you copy the .admx and .adml files from a Windows 10-based or Windows 11-based computer, verify that the most recent updates to these files are installed. Also, make sure that the most recent Administrative Templates files are replicated. This advice also applies to service packs, as applicable.
 
 When the operating system collection is completed, merge any OS extension or application ADMX/ADML files into the new PolicyDefinitions folder.
 
-When this is finished, rename the current PolicyDefinitions folder to reflect that it's the previous version, such as PolicyDefinitions-1709. Then, rename the new folder (such as PolicyDefinitions-1803) to the production name.
+When this is finished, rename the current PolicyDefinitions folder to reflect that it's the previous version, such as PolicyDefinitions-23H2. Then, rename the new folder (such as PolicyDefinitions-24H2) to the production name.
 
 We suggest this approach as you can revert to the old folder in case you experience a severe problem with the new set of files. When you don't experience any problems with the new set of files, you can move the older PolicyDefinitions folder to an archive location outside sysvol folder.
 
 ## Group Policy administration
 
-Windows 8.1 and Windows 10 do not include Administrative Templates that have an .adm extension. We recommend that you use computers that are running Windows 8.1 or later versions of Windows to perform Group Policy administration.
+Windows 10 and later versions do not include Administrative Templates that have an .adm extension. We recommend that you use computers that are running Windows 10 or later versions of Windows to perform Group Policy administration.
 
 ## Updating the Administrative Templates files
 
 In Group Policy for Windows Vista and later version of Windows, if you change Administrative Templates policy settings on local computers, sysvol folder isn't automatically updated to include the new .admx or .adml files. This behavior is implemented to reduce network load and disk storage requirements, and to prevent conflicts between .admx and .adml files when changes are made to Administrative Templates policy settings across different locations.
 
-To ensure that any local updates are reflected in sysvol folder, you must manually copy the updated .admx or .adml files from the PolicyDefinitions file on the local computer to the Sysvol\PolicyDefinitions folder on the appropriate domain controller.
+To ensure that any local updates are reflected in sysvol folder, you must manually copy the updated .admx or .adml files from the PolicyDefinitions file on the local computer to domain controller share sysvol folder *contoso.com\\PolicyDefinitions*.
 
-The following update enables you to configure the Local Group Policy editor to use Local .admx files instead of the Central Store:
+The following update enables you to configure the Local Group Policy editor to use local .admx files instead of the Central Store:
 
 [An update is available to enable the use of Local ADMX files for Group Policy Editor](https://support.microsoft.com/help/2917033).
 
@@ -112,10 +98,8 @@ You can also use this setting to:
   
   > Namespace 'Microsoft.Policies.Sensors.WindowsLocationProvider' is already defined as the target namespace for another file in the store.  
   > File  
-  > \\\\<forest.root>\SysVol<forest.root>\Policies\PolicyDefinitions\Microsoft-Windows-Geolocation-WLPAdm.admx, line 5, column 110
+  > \\\\contoso.com\\SysVol\\contoso.com\\Policies\\PolicyDefinitions\\Microsoft-Windows-Geolocation-WLPAdm.admx, line 5, column 110
   
-  > [!NOTE]
-  > In the path in this message, **<forest.root>** represents the domain name.
   To resolve this problem, see ["'Microsoft.Policies.Sensors.WindowsLocationProvider' is already defined" error when you edit a policy in Windows](https://support.microsoft.com/help/3077013).
   
 - Issue 2

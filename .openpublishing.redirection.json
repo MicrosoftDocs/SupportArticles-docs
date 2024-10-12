@@ -11981,6 +11981,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/windows-server/group-policy/create-central-store-domain-controller.md",
+      "redirect_url": "/troubleshoot/windows-client/group-policy/create-and-manage-central-store",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/dynamics-365/sales/how-to-install-dynamics-crm-with-the-minimum-required-permissions.md",
       "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/how-to-install-dynamics-crm-with-the-minimum-required-permissions",
       "redirect_document_id": false
