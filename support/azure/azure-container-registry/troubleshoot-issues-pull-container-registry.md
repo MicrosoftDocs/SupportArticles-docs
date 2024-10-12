@@ -6,7 +6,7 @@ author: AndreiBarbu95
 ms.author: andbar
 editor: v-jsitser
 ms.reviewer: avtakkar, v-rekhanain, v-leedennis
-ms.service: azure-container-instances
+ms.service: azure-container-registry
 ms.topic: troubleshooting-general
 ms.custom: sap:Image Pull Issues
 #Customer intent: As an Azure Container Registry user, I want to learn how to troubleshoot common issues so that I can successfully pull a container image or artifact from Azure Container Registry by using an Azure virtual machine or other device.
