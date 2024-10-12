@@ -1,7 +1,7 @@
 ---
 title: Find the name of Enterprise Root CA server
 description: Helps you to find name of the Enterprise Root Certificate Authority (CA) server.
-ms.date: 12/26/2023
+ms.date: 10/12/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -12,7 +12,7 @@ ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory
 
 This article helps you to find name of the Enterprise Root Certificate Authority (CA) server.
 
-_Applies to:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server (All supported versions)  
 _Original KB number:_ &nbsp; 555529
 
 ## Summary
