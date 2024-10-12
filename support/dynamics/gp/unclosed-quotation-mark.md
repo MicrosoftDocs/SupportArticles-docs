@@ -3,7 +3,7 @@ title: Unclosed quotation mark error when running Historical Aged Trial Balance
 description: Provides a solution to an error that occurs when you run the Historical Aged Trial Balance report for Payables Management.
 ms.reviewer: theley, kenhub, cwaswick
 ms.topic: troubleshooting
-ms.date: 10/11/2024
+ms.date: 10/12/2024
 ms.custom: sap:Financial - Payables Management
 ---
 # "Unclosed quotation mark" error when running the Historical Aged Trial Balance for Payables Management
@@ -37,9 +37,9 @@ This issue occurs when a credit memo or manual payment document is entered with 
 
  If the voucher number or payment number is posted with special characters, to print the HATB report successfully, you can upgrade to [Microsoft Dynamics GP 18.7](https://community.dynamics.com/blogs/post/?postid=da2b849a-e349-ef11-a317-6045bda6fe6a).
 
-If you use an older version of Microsoft Dynamics GP, you can follow these steps.
+If you use an ealier version of Microsoft Dynamics GP, you can follow these steps:
 
-1. Run the following script in SQL against the company database to look for any voucher number, document numbers or vendor ID's with a single apostrophe in it, which is read as an unclosed quotation by the process. Any results for the voucher number (`CONTRLNUM`) are likely the clause, but the document number and vendor ID are also added to the script, and might or might not be an issue.
+1. Run the following script in SQL against the company database to look for any voucher number, document number or vendor ID with a single apostrophe in it, which is read as an unclosed quotation by the process. Any results for the voucher number (`CONTRLNUM`) are likely the clause, but the document number and vendor ID are also added to the script, and might or might not be an issue.
 
     ```sql
     SELECT * FROM PM00400
@@ -50,16 +50,16 @@ If you use an older version of Microsoft Dynamics GP, you can follow these steps
     ```
 
    > [!NOTE]
-   > If the issue is with the vendor ID, then don't follow these steps. You can use the vendor modifier tool in [Professional Services Tools Library](/dynamics-gp/installation/profservicestoolslibrary) to change a vendor ID.
+   > If the issue is with the vendor ID, then don't follow these steps. You can use the vendor modifier tool in the [Professional Services Tools Library](/dynamics-gp/installation/profservicestoolslibrary) to change a vendor ID.
 
-2. Run the _ALL Payables_ script for each result returned by the script above. (The problem is more than likely a voucher number because that's an editable field to the user. Check your payables setup to make sure you don't have an apostrophe in the default next voucher number.)
+2. Run the _ALL Payables_ script for each result returned by the preceding script. (The problem is most likely with the voucher number because that's an editable field for the user. Check your payables setup to make sure you don't have an apostrophe in the default next voucher number.)
 
 3. Manually fix the voucher number with a direct `update` statement in SQL for all the tables returned by the _ALL Payables_ script to remove the single apostrophe from a voucher number and document number. Be sure to write the field to be the exact same in all fields or tables where you change it.
 
 ## More information
 
-To prevent this issue from occuring in the future, you can lock the **Voucher Number** field to prevent users from modifying the voucher number. To do it, follow these steps:
+To prevent this issue from occurring in the future, you can lock the **Voucher Number** field to prevent users from modifying the voucher number. To do it, follow these steps:
 
 1. In Microsoft Dynamics GP, select **Microsoft Dynamics GP** > **Tools** > **Setup** > **Purchasing** > **Payables**.
 
-2. Disable the **Override Voucher Number at Transaction Entry** option, and then select **OK**.
+2. Clear the **Override Voucher Number at Transaction Entry** checkbox, and then select **OK**.
