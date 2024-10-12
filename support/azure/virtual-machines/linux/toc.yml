@@ -275,7 +275,7 @@
     items:
     - name: Troubleshoot Azure fence agent startup issues
       href: troubleshoot-azure-fence-agent-rhel.md
-    - name: Troubleshoot SBD issues in RHEL
+    - name: Troubleshoot SBD service failure in RHEL
       href: troubleshoot-sbd-issues-rhel.md
   - name: SLES
     items:
