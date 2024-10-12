@@ -53,7 +53,7 @@ If administrators reduce the value for positive and negative phase corrections, 
 > [!NOTE]
 > If the registry entry values for positive and negative corrections are reduced, time will be increased or decreased.
 
-The default value for the `MaxPosPhaseCorrection` and `MaxNegPhaseCorrection` registry entries in (domain members) Windows 10 and above, and in Windows Server 2012 and above is the following value:  
+The default value for the `MaxPosPhaseCorrection` and `MaxNegPhaseCorrection` registry entries in (domain members) Windows 10, Windows Server 2012 and later versions of Windows is the following value:  
 0xFFFFFFF
 
 This value enables the computer to receive the time that is contained in any time sample, whatever inaccuracy.
