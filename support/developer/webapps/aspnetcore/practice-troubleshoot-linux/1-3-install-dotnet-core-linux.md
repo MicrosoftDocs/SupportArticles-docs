@@ -27,7 +27,7 @@ If you're not at least familiar with these processes, refer to the previous part
 
 ## Install .NET Core
 
-For reference during this procedure, see [Preparing your Linux system for .NET Core](https://github.com/dotnet/core/blob/main/Documentation/linux-setup.md).
+For reference during this procedure, see [Preparing your Linux system for .NET Core]().
 
 For the supported versions of .NET Core on different Linux distributions, see [Install .NET on Linux](/dotnet/core/install/linux).
 
@@ -97,3 +97,4 @@ Both .NET Core and ASP.NET Core runtimes are installed together with the .NET Co
 The .NET Core SDKs and runtimes are now installed. In the next part, we'll create an ASP.NET Core application by using .NET CLI tools.
 
 [!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
+

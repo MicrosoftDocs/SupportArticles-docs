@@ -65,7 +65,7 @@ For this tutorial, you'll copy a test application that is named BuggyAmb. This a
 
 BuggyAmb is simply a buggy ASP.NET Core 3.1-based Razor Pages application. This application was intentionally created as a buggy application to be used as a learning resource to troubleshoot problematic scenarios for an ASP.NET Core application on Linux.
 
-You can find the source code files at [ASP.NET Core binaries for Linux](https://buggyambfiles.blob.core.windows.net/bin/buggyamb_v1.1.tar.gz). This is in *.tar.gz* format because that format is common in the Linux world. You can also download the [buggyamb_v1.1](https://buggyambfiles.blob.core.windows.net/bin/buggyamb_v1.1.zip) in *.zip* format for Windows.
+You can find the source code files at [ASP.NET Core binaries for Linux](). This is in *.tar.gz* format because that format is common in the Linux world. You can also download the [buggyamb_v1.1]() in *.zip* format for Windows.
 
 ### Copy buggyamb_v1.1.tar.gz file to a Linux VM
 
@@ -94,7 +94,7 @@ Use the *buggyamb_v1.1.tar.gz* file to create a second ASP.NET Core application 
 > If you have difficulties copying the *buggyamb_v1.1.tar.gz* file to your Linux machine, you can simply download the .tar.gz file from your Linux VM by using this simple `wget` command:
 
 ```bash
-wget https://buggyambfiles.blob.core.windows.net/bin/buggyamb_v1.1.tar.gz
+wget 
 ```
 
 ## Extract the files and copy to the /var/ folder
@@ -121,3 +121,4 @@ Choose either option, to extract the *buggyamb_v1.1* application files. These sh
 [Part 2.6 - Run two ASP.NET Core applications at the same time](2-6-run-two-aspnetcore-applications-same-time.md)
 
 Configure and run the buggy ASP.NET Core application behind Nginx. At the end of those steps, you'll have two ASP.NET Core applications running behind Nginx.
+

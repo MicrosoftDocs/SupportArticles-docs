@@ -33,10 +33,11 @@
 - name: Troubleshoot deletion errors
   items:
   - name: OperationNotAllowed
-    href: /delete/vmss-operation-not-allowed.md
+    href: delete/vmss-operation-not-allowed.md
 
 - name: Troubleshoot extension issues
   items:
   - name: VM extension provisioning errors
     href: extensions/vm-extension-provisioning-errors.md
+
 
