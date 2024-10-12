@@ -310,8 +310,6 @@
     items:
     - name: Understanding VM lifecycle and states
       href: /azure/virtual-machines/states-billing?context=/troubleshoot/azure/virtual-machines/windows/context/context
-    - name: Restarting or resizing a VM
-      href: restart-resize-error-troubleshooting.md
     - name: Troubleshoot Start/Stop VMs during off-hours (Azure Automation)
       href: /azure/automation/troubleshoot/start-stop-vm?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Start VM with last known good configuration
