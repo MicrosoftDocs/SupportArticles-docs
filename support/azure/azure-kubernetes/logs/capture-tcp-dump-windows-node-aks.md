@@ -70,9 +70,9 @@ The next step is to establish a connection to the AKS cluster node. You authenti
           key: node.kubernetes.io/unreachable
           operator: Exists
     ```
-2. Run the `kubectl apply -f hostprocess.yaml` command to deploy the Windows host process container in the specified Windows node.
+2. Run the `kubectl apply -f hostprocess.yaml` command to deploy the Windows HostProcess container in the specified Windows node.
 3. Run the `kubectl exec -it [HPC-POD-NAME] -- powershell` command.
-4. Run any PowerShell commands inside the host process container to access the Windows node.
+4. Run any PowerShell commands inside the HostProcess container to access the Windows node.
 
     > [!Note]
     > To access the files in the Windows node, switch the root folder to `C:\` inside the host process container.
