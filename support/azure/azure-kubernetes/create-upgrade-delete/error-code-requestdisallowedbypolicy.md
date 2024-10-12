@@ -1,7 +1,7 @@
 ---
-title: RequestDisallowedByPolicy when deploying an AKS cluster
-description: Learn how to troubleshoot the RequestDisallowedByPolicy error when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 10/11/2024
+title: RequestDisallowedByPolicy error when deploying an AKS cluster
+description: Learn how to fix the RequestDisallowedByPolicy error when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
+ms.date: 10/12/2024
 editor: v-jsitser
 ms.reviewer: rissing, chiragpa, erbookbi, albarqaw, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
@@ -39,7 +39,7 @@ To fix this issue, follow these steps:
 To get details about the policy that blocked your cluster deployment operation, see [RequestDisallowedByPolicy error with Azure resource policy](/azure/azure-resource-manager/troubleshooting/error-policy-requestdisallowedbypolicy).
 
 > [!NOTE]
-> After fixing the policy that blocks the AKS cluster creation, run the `az aks update -g MyResourceGroup -n MyManagedCluster` command to change the cluster from failed to success state. This will reconcile the cluster and retry the last failed operation. For more information about clusters in a failed state, see [Troubleshoot Azure Kubernetes Service clusters or nodes in a failed state](../availability-performance/cluster-node-virtual-machine-failed-state.md).
+> After fixing the policy that blocks the AKS cluster creation, run the `az aks update -g MyResourceGroup -n MyManagedCluster` command to change the cluster from a failed to a success state. This will reconcile the cluster and retry the last failed operation. For more information about clusters in a failed state, see [Troubleshoot Azure Kubernetes Service clusters or nodes in a failed state](../availability-performance/cluster-node-virtual-machine-failed-state.md).
 
 ## More information
 
