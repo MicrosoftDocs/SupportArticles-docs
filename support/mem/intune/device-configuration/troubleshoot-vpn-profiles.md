@@ -34,7 +34,7 @@ You can create VPN profiles by using different VPN connection types.
 
 ## How to create VPN profiles
 
-To create a VPN profile, follow the steps in [Create a device profile](/intune/vpn-settings-configure#create-a-device-profile).
+To create a VPN profile, follow the steps in [Create a device profile](/mem/intune/configuration/vpn-settings-configure#step-2---create-the-profile).
 
 For examples, see the following screenshots:
 
@@ -59,7 +59,7 @@ For information about how to create an Extensible Authentication Protocol (EAP) 
 
 ## How to assign VPN profiles
 
-After you create a VPN profile, [assign the profile](/intune/device-profile-assign#assign-a-device-profile) to selected groups.
+After you create a VPN profile, [assign the profile](/mem/intune/configuration/device-profile-assign#assign-a-policy-to-users-or-groups) to selected groups.
 
 > [!NOTE]
 > Group-type deployment (user group or device group) is important, and it must be consistent across all the policies involving this resource policy (Trusted Certificates, SCEP, and VPN). It will depend on the type of certificate you're deploying. If you're deploying a user certificate, all the deployments should be to a user group and vice versa. If the certificate deployed is a device type one, use a device group.
@@ -93,7 +93,7 @@ This scenario uses an Android device enrolled as a Personally owned work profile
     > [!NOTE]
     > When using a device administrator-managed Android device, there may be multiple certificates because the certificates aren't revoked or removed when a certificate profile is changed or removed. In this scenario, select the newest certificate. It's usually the last certificate displayed in the list.
 
-    This situation doesn't occur on Android Enterprise and Samsung Knox devices. For more information, see [Manage Android work profile devices with Intune](/intune/android-enterprise-overview) and [Remove SCEP and PKCS certificates in Microsoft Intune](/intune/remove-certificates#android-knox-devices).
+    This situation doesn't occur on Android Enterprise and Samsung Knox devices. For more information, see [Manage Android work profile devices with Intune](/mem/intune/enrollment/android-enterprise-overview) and [Remove SCEP and PKCS certificates in Microsoft Intune](/mem/intune/protect/remove-certificates#android-knox-devices).
 
 1. The VPN connection is successfully created.
 
@@ -474,9 +474,9 @@ If you want to open a support request to the Microsoft Intune product support te
 
 For more information about VPN profiles in Intune, see the following articles:
 
-- [Android device settings to configure VPN in Intune](/intune/vpn-settings-android)
-- [Configure VPN settings on iOS devices in Microsoft Intune](/intune/vpn-settings-ios)
-- [Windows 10 and Windows Holographic device settings to add VPN connections using Intune](/intune/vpn-settings-windows-10)
+- [Android device settings to configure VPN in Intune](/mem/intune/configuration/vpn-settings-android)
+- [Configure VPN settings on iOS devices in Microsoft Intune](/mem/intune/configuration/vpn-settings-ios)
+- [Windows 10 and Windows Holographic device settings to add VPN connections using Intune](/mem/intune/configuration/vpn-settings-windows-10)
 - [Support Tip - How to configure NDES for SCEP certificate deployments in Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-How-to-configure-NDES-for-SCEP-certificate/ba-p/455125)
 - [Troubleshooting SCEP certificate profile deployment in Microsoft Intune](../certificates/troubleshoot-scep-certificate-profiles.md)
 - [Troubleshooting NDES configuration for use with Microsoft Intune certificate profiles](/mem/intune/protect/certificates-scep-configure)
