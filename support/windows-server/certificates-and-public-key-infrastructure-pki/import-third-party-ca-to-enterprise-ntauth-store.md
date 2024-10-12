@@ -10,7 +10,7 @@ ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory
 ---
 # How to import third-party certification authority (CA) certificates into the Enterprise NTAuth store
 
-There are two methods you can use to import the certificates of third-party CAs into the Enterprise NTAuth store. This process is required if you're using a third-party CA to issue smart card logon or domain controller certificates. By publishing the CA certificate to the Enterprise NTAuth store, the Administrator indicates that the CA is trusted to issue certificates of these types and that issued certificates from these CA's can be used for authentication.  Windows Enterprise domain joined CAs automatically publish their own CA certificates to the NTAuth store.
+You can use two methods to import the certificates of third-party CAs into the Enterprise NTAuth store. This process is required if you're using a third-party CA to issue smart card logon or domain controller certificates. By publishing the CA certificate to the Enterprise NTAuth store, the Administrator indicates that the CA is trusted to issue certificates of these types and that issued certificates from these CA's can be used for authentication.  Windows Enterprise domain joined CAs automatically publish their own CA certificates to the NTAuth store.
 
 _Original KB number:_ &nbsp; 295663
 
@@ -22,11 +22,11 @@ The NTAuth store is an Active Directory directory service object that is located
 
 Certificates that are published to the NTAuth store are written to the cACertificate multiple-valued attribute. There are two supported methods to append a certificate to this attribute.
 
-## Method 1 - Import a certificate by using the PKI Health Tool
+## Method 1 - Import a certificate by using the PKI Health Tool (PKIView)
 
-PKI Health Tool (PKIView) is an MMC snap-in component. It displays the status of one or more Microsoft Windows CAs that comprise a PKI.
+PKIView is an MMC snap-in component. It displays the status of one or more Microsoft Windows CAs that comprise a PKI.
 
-The PKI Health tool is included in the install of the certificate services role.  The tool is installed by default when you install the Windows Active Directory Certificate Services Role and has been re-branded as "Enterprise PKI". The tool is implemented as a snap-in for the Microsoft Management Console.
+The PKIView is included in the install of the certificate services role. The tool is installed by default when you install the Windows Active Directory Certificate Services Role and has been re-branded as "Enterprise PKI". The tool is implemented as a snap-in for the Microsoft Management Console.
 
 PKIView can be launched from the command line via PKIView.msc or by adding Enterprise PKI to the MMC snap-in.
 
