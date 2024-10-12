@@ -108,7 +108,7 @@ The articles that are listed in the following table explain clearly what you hav
 |Dell| [Dell Networking Force10 switches and Microsoft Network Load Balancing](https://www.dell.com/support/kbdoc/en-sg/000121394/dell-networking-force10-switches-and-microsoft-network-load-balancing)|
 |Huawei| [Example for Connecting a Device to an NLB Cluster (Using Multi-Interface ARP)](https://support.huawei.com/ehedex/pages/DOC1000135317AEG0221R/04/DOC1000135317AEG0221R/04/resources/dc/dc_s_ccase_arp_003.html) |
 |D-Link| [D-Link Layer 3 Switch Microsoft NLB in Multicast Mode Configuration Example](https://files.dlink.com.au/Products/DGS-3620-52P/REV_A/SetupGuides/Layer_3_Switch_Microsoft_NLB_in_Multicast_Mode_Configuration_Example.pdf) |
-|Avaya| [Technical Configuration Guide for Microsoft Network Load Balancing](https://downloads.avaya.com/css/P8/documents/100123894) (download)|
+|Avaya| [Technical Configuration Guide for Microsoft Network Load Balancing](https://support.avaya.com/css/public/documents/101074182) (download)|
   
 ### Configure virtual environments in multicast mode
 
@@ -168,3 +168,4 @@ For more information about how to deploy and maintain NLB, see the following res
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 [!INCLUDE [Third-party contact disclaimer](../../includes/third-party-contact-disclaimer.md)]
+

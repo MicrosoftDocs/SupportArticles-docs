@@ -36,7 +36,7 @@ The **806 - ZtdDeviceAlreadyAssigned** and **808 - ZtdDeviceAssignedToOtherTenan
 
 To fix the issue, confirm whether the device record exists in Microsoft Store for Business:
 
-1. Sign in to [Microsoft Store for Business](https://businessstore.microsoft.com/).
+1. Sign in to [Microsoft Store for Business](https://www.microsoft.com/en-us/microsoft-365/business).
 1. Select **Manage**, and then select **Devices**.
 1. Locate the device. If the device record exists, select the device, and then select **Remove devices**.
 1. Return to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then reimport the CSV file.
@@ -67,3 +67,4 @@ If the device record doesn't exist in Microsoft Store for Business or Intune, yo
 
 > [!NOTE]
 > These files can be attached to the service request when you create the request.
+
