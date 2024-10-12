@@ -1,6 +1,6 @@
 ---
-title: Version 3 (CNG) templates won't appear in certificate web enrollment
-description: Fixes an issue where the CNG or 2008 templates don't appear in the Advanced Certificate Request template pulldown menu.
+title: Version 3 (CNG) templates don't appear in certificate web enrollment
+description: Fixes an issue where the CNG or 2,008 templates don't appear in the Advanced Certificate Request template pulldown menu.
 ms.date: 10/12/2024
 manager: dcscontentpm
 audience: itpro
@@ -8,7 +8,7 @@ ms.topic: troubleshooting
 ms.reviewer: kaushika
 ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory Certificate Services (ADCS), csstroubleshoot
 ---
-# Version 3 (CNG) templates won't appear in Windows Server Certificate Services Web Enrollment
+# Version 3 (CNG) templates don't appear in Windows Server Certificate Services Web Enrollment
 
 This article helps fix an issue where the CNG templates don't appear in the Advanced Certificate Request template pulldown menu.
 
@@ -24,13 +24,15 @@ Frequent other causes of not being able to blanket request a certificate may be 
 
 ## Cause
 
-This behavior is by design. Version 3 templates have additional request options and requirements that the certificate services web enrollment method cannot fulfill.  More about Certificate template concepts here - https://learn.microsoft.com/en-us/windows-server/identity/ad-cs/certificate-template-concepts]Resolution
+This behavior is by design. Version 3 templates have extra request options and requirements that the certificate services web enrollment method can't fulfill. For more information about Certificate template, see [Certificate templates concepts](/windows-server/identity/ad-cs/certificate-template-concepts).
+
+## Resolution
 
 Use a different request method for these certificates. Aside from web enrollment, all other request methods work in this scenario.
 
 ## More information
 
-An alternative, which shouldn't be attempted in production for customers without extensive testing in a test environment, is available that will allow the version 3 templates to appear in the web enrollment default pages. The reason it's not recommended is that the web enrollment pages, again, may not contain the code necessary for the certificate to populate all needed data, and so the result may be a problematic certificate. Make sure to keep that in mind when considering doing the steps below. This option is to alter the msPKI-Template-Schema-Version from 3 to 2.
+An alternative, which shouldn't be attempted in production for customers without extensive testing in a test environment, is available that allows the version 3 templates to appear in the web enrollment default pages. The reason it's not recommended is that the web enrollment pages, again, may not contain the code necessary for the certificate to populate all needed data, and so the result may be a problematic certificate. Make sure to keep that in mind when considering doing the steps below. This option is to alter the msPKI-Template-Schema-Version from 3 to 2.
 
 In addition, altering the msPKI-Template-Schema-Version attribute results in a reload of the template cache and CSP cache available.
 
@@ -38,7 +40,7 @@ In addition, altering the msPKI-Template-Schema-Version attribute results in a r
 
 2. In **AdsiEdit.msc** right-click on the **ADSIEDIT** node in the left-hand pane and select **Connect To** in the menu that appears.
 
-3. In the **Connection Settings** dialog, select **Configuration** in the **Connection Point** section and click **OK**.
+3. In the **Connection Settings** dialog, select **Configuration** in the **Connection Point** section and select **OK**.
 
 4. Expand the nodes in the left-hand pane until you've drilled down to your **Templates** store (CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=,DC=).
 
@@ -46,8 +48,8 @@ In addition, altering the msPKI-Template-Schema-Version attribute results in a r
 
 6. Scroll down and select the **msPKI-Template-Schema-Version** attribute.
 
-7. Double-click the **msPKI-Template-Schema-Version** attribute and change the value from **3** to **2** and click **OK**.
+7. Double-click the **msPKI-Template-Schema-Version** attribute and change the value from **3** to **2** and select **OK**.
 
-8. Click **Apply**. This updates the template and CSP list. Keep this in mind if you use 3rd-party CSPs in your environment.
+8. Select **Apply**. This updates the template and CSP list. Keep this in mind if you use 3rd-party CSPs in your environment.
 
 9. Go to your web enrollment page (if ran from your CA server) and attempt to enroll the certificate using an advanced request.
