@@ -1,60 +1,64 @@
 ---
 title: Error 3456 when restoring a SQL Server database using a VDI application with multi-striping
 description: This article provides a resolution for an issue that occurs when you back up a SQL Server database using VDI applications with multi-striping.
-ms.date: 09/18/2023
+ms.date: 10/12/2024
 ms.custom: sap:Database Backup and Restore
 ms.author: jopilov
 author: PiJoCoder
 ms.reviewer: hesha, amamun, v-sidong
 ---
-# Restoring a SQL Server database using a VDI application with multi-striping may fail with error 3456
+# Restoring a SQL Server database using a VDI application with multi-striping might fail with error 3456
 
 This article helps you resolve an issue that occurs when you use Virtual Device Interface (VDI) based applications to back up your SQL Server databases.
 
 ## Symptoms
 
-When you restore a multi-striped [virtual device interface](/sql/relational-databases/backup-restore/vdi-reference/reference-virtual-device-interface) (VDI) full backup on SQL Server 2019 or later, you may get the error [MSSQLSERVER_3456](/sql/relational-databases/errors-events/mssqlserver-3456-database-engine-error):
+When you restore a multi-striped [virtual device interface](/sql/relational-databases/backup-restore/vdi-reference/reference-virtual-device-interface) (VDI) full backup on SQL Server 2019 or later, you might get the error [MSSQLSERVER_3456](/sql/relational-databases/errors-events/mssqlserver-3456-database-engine-error):
 
 ```output
-Msg 3456, Level 16, State 1, Line 1
+Msg 3456, Level 16, State 1, Line <LineNum>
 Could not redo log record (120600:18965748:1), for transaction ID (0:1527178398), on page (14:1987189), allocation unit 72057761533001728, database 'DB1_STRIPE' (database ID 8).
 Page: LSN = (120598:23255372:8), allocation unit = 72057761317781504, type = 1. Log: OpCode = 6, context 2, PrevPageLSN: (120600:18965371:85).
 ```
 
 ## Cause
 
-When SQL Server backs up to VDI, it passes data to the VDI through a buffer. The VDI then handles the formatting of how to store that backup. However, in many cases, the VDI client may expect only a single copy of each data page.
+When SQL Server backs up to VDI, it passes data to the VDI through a buffer. The VDI then handles the formatting of how to store that backup. However, in many cases, the VDI client might expect only a single copy of each data page.
 
-When you stripe a backup to VDI, multiple backup devices together make up the contents of a full backup. The data is written asynchronously, and the data copy ordering is handled by the VDI client's logic. Since the data copy phase is asynchronous, the data can be written out of order. However, in a full backup scenario prior to SQL Server 2019, there's only one copy per data page. So when the VDI client sends data to the buffer that SQL Server reads from for a restore, SQL Server would still be able to know exactly where and how to restore each data page. With the introduction of delayed log pinning in SQL Server 2019, multiple copies of the data page may be found in the backup files. Multiple copies exist due to a mini differential backup happening inside the full backup (see the [More information](#more-information) section for details). The VDI client is either not expecting multiple copies of the same data page, or passing the data pages back to SQL Server in the wrong order. This behavior causes the restore failure. The error 3456 `Could not redo log record` indicates that SQL Server tries to apply a log record that expects the latest version of the data page, but it finds an older version.
+When you stripe a backup to VDI, multiple backup devices together make up the contents of a full backup. The data is written asynchronously, and the data copy ordering is handled by the VDI client's logic. Since the data copy phase is asynchronous, the data can be written out of order. However, in a full backup scenario prior to SQL Server 2019, there's only one copy per data page. So when the VDI client sends data to the buffer that SQL Server reads from for a restore, SQL Server would still be able to know exactly where and how to restore each data page. With the introduction of delayed log pinning in SQL Server 2019, multiple copies of the data page might be found in the backup files. Multiple copies exist due to a mini differential backup happening inside the full backup (see the [More information](#more-information) section for details). The VDI client is either not expecting multiple copies of the same data page, or passing the data pages back to SQL Server in the wrong order. This behavior causes the restore failure. The error 3456 `Could not redo log record` indicates that SQL Server tries to apply a log record that expects the latest version of the data page, but it finds an older version.
 
 ## Resolution
 
-1.	Depending on your configuration you need to enable one or several trace flags as startup parameters for your SQL Server instance
-  -	If you’re taking full backups when the instance is acting as primary replica or an instance without availability groups,  enable trace flag 3471 to disables the feature delayed log pinning for full backups.
-  -	If you’re taking differential backups when the instance is acting as is acting a primary replica or an instance without availability groups, enable trace flag  3475 to disable the feature delayed log pinning for differential backups.
-  -	If you’re taking full backups with copy_only when the instance is acting as secondary replica, enable trace flag  3472 to disable the feature delayed log pinning for differential backups.
-2.	Restart SQL Server.
-3.	Take your full/differential backups again.
+1. Depending on your configuration, you need to enable one or several trace flags as startup parameters for your SQL Server instance:
 
-## Note: 
+   -	If you're taking full backups when the instance is acting as a primary replica or an instance without availability groups, enable trace flag 3471 to disable the feature delayed log pinning for full backups.
 
-It is also possible to temporarily enable these trace flags using DBCC TRACEON command. 
+   -	If you're taking differential backups when the instance is acting as a primary replica or an instance without availability groups, enable trace flag 3475 to disable the feature delayed log pinning for differential backups.
 
-```SQL
-DBCC TRACEON(3471,3472,3475,-1)
-```
+   -	If you're taking full backups with [COPY_ONLY](/sql/relational-databases/backup-restore/copy-only-backups-sql-server) when the instance is acting as a secondary replica, enable trace flag 3472 to disable the feature delayed log pinning for differential backups.
 
-It can be used to mitigate the issue if you can’t restart your SQL Server instance immediately.
+1. Restart SQL Server.
 
-## Important: 
+1. Take your full or differential backups again.
 
-Due to this issue existing backups may not be restorable if the following conditions were true :
 
--	Backup taken with delay log pining feature enable 
--	Backup tool is using VDI
--	Backup was done using multi-striping (backup to several files)
+> [!NOTE]
+> It's also possible to temporarily enable these trace flags using the [DBCC TRACEON](/sql/t-sql/database-console-commands/dbcc-traceon-transact-sql) command. 
+>
+> ```SQL
+> DBCC TRACEON(3471,3472,3475,-1)
+> ```
+> It can be used to mitigate the issue if you can't restart your SQL Server instance immediately.
 
-We encourage you to restore your existing backups on a test server to check if they can be restored successfully
+## Important
+
+Due to this issue, existing backups might not be restorable if the following conditions are true:
+
+-	Backup is taken with delay log pining feature enabled.
+-	Backup tool is using VDI.
+-	Backup is done using multi-striping (backup to several files).
+
+We encourage you to restore your existing backups on a test server to check if they can be restored successfully.
 
 ## More information
 
