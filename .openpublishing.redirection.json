@@ -11979,6 +11979,11 @@
       "source_path": "support/windows-client/shell-experience/scenario-guide-infinite-black-screen-after-sign-in.md",
       "redirect_url": "/troubleshoot/windows-client/shell-experience/scenario-guide-black-screen-after-sign-in",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/group-policy/create-central-store-domain-controller.md",
+      "redirect_url": "/troubleshoot/windows-client/group-policy/create-and-manage-central-store",
+      "redirect_document_id": true
     }
   ]
 }

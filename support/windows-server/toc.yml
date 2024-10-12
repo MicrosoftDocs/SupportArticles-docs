@@ -926,9 +926,7 @@ items:
     - name: AGPM and GPRESULT are not working
       href: ./group-policy/agpm-gpresult-not-working.md
     - name: Changes to GPO permissions aren't saved
-      href: ./group-policy/changes-to-gpo-permissions-ignored.md
-    - name: Create a Central Store on a domain controller
-      href: ./group-policy/create-central-store-domain-controller.md
+      href: ./group-policy/changes-to-gpo-permissions-ignored.md    
     - name: Dcgpofix tool doesn't restore security settings to the original state
       href: ./group-policy/dcgpofix-not-restore-default-domain-controller-policy-security-settings.md
     - name: Description of group policy restricted groups
