@@ -75,7 +75,7 @@ The next step is to establish a connection to the AKS cluster node. You authenti
 4. Run any PowerShell commands inside the HostProcess container to access the Windows node.
 
     > [!Note]
-    > To access the files in the Windows node, switch the root folder to `C:\` inside the host process container.
+    > To access the files in the Windows node, switch the root folder to `C:\` inside the HostProcess container.
 
 ### [SSH](#tab/ssh)
 
