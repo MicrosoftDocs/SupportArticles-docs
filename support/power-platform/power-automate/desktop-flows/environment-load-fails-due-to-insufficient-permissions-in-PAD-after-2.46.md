@@ -5,7 +5,7 @@ ms.reviewer: iomavrid
 ms.date: 10/12/2024
 ms.custom: sap:Desktop flows\Power Automate for desktop errors
 ---
-# Environment load in schema v2 fails due to insufficient permissions in Power Automate fdr desktop after 2.46
+# Environment load in schema v2 fails due to insufficient permissions in Power Automate for desktop after 2.46
 
 This article provides a resolution when the user has insufficient permissions in their schema v2 environment in Power Automate for desktop.
 
