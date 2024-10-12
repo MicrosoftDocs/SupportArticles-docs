@@ -3,7 +3,7 @@ title: Troubleshoot Azure Container Registry delete operation issues
 description: Discusses some issues you might encounter during the ACR deletion process.
 ms.date: 08/30/2024
 ms.reviewer: kukondep, chiragpa, v-rekhanain, v-weizhu
-ms.service: azure-container-instances
+ms.service: azure-container-registry
 ms.custom: sap:Delete images from registry
 ---
 # Troubleshoot Azure Container Registry delete operation issues

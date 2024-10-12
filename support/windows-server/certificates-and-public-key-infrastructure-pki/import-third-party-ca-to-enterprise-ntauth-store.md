@@ -5,7 +5,7 @@ ms.date: 10/12/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, slight
+ms.reviewer: kaushika, slight, flbelea
 ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory Certificate Services (ADCS), csstroubleshoot
 ---
 # How to import third-party certification authority (CA) certificates into the Enterprise NTAuth store
@@ -40,8 +40,8 @@ To import a CA certificate into the Enterprise NTAuth store, follow these steps:
    - DER encoded binary X.509 (.cer)
    - Base-64 encoded X.509 (.cer)
 
-2. Install the Windows Server 2003 Resource Kit Tools. The tools package requires Windows XP or later.
-3. Start Microsoft Management Console (Mmc.exe), and then add the PKI Health snap-in:
+2. Sign in to Windows Server Enterprise CAs or to an administrative workstation with RSAT installed.
+3. Start Microsoft Management Console (Mmc.exe), and then add the Enterprise PKI snap-in:
 
    1. On the Console menu, select **Add/Remove Snap-in**.
    2. Select the **Standalone** tab, and then select the **Add** button.

@@ -29,7 +29,7 @@ If DC Locator doesn't work as expected in Active Directory domains, troubleshoot
 3. Use the Ping utility to verify network connectivity and the name resolution. Ping the IP address, the server name, and the domain name.
 4. Use the [PortQryUI](https://www.microsoft.com/en-us/download/details.aspx?id=24009&msockid=010f589c35de634f3bee4ca4341562b2) tool to probe for availability of important domain controller services. When you start the tool, specify the domain controller fully qualified domain name (FQDN), and query the **Domains and Trusts** set of services as follows:
 
-    :::image type="content" source="media/how-domain-controllers-are-located/port-query-udp-389.png" alt-text="Screenshot of the Port Query tool window showing the query result with UDP port 389.":::
+    :::image type="content" source="media/troubleshoot-domain-controller-location-issues/port-query-udp-389.png" alt-text="Screenshot of the Port Query tool window showing the query result with UDP port 389.":::
 
     The screenshot shows one important port for DC discovery which is UDP/389, and in this case, it is successful.
 

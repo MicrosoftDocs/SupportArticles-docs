@@ -5,7 +5,7 @@ author: rpapostolis # GitHub alias
 ms.author: appapaio # Microsoft alias
 ms.reviewer: befrey, lulubran, johndund, guco, fredg
 ms.custom: sap:Desktop flows\Power Automate for desktop errors
-ms.date: 05/20/2024
+ms.date: 10/08/2024
 ---
 # Troubleshoot desktop flow run queue errors
 
@@ -18,10 +18,11 @@ _Original KB number:_ &nbsp; 5004537
 
 Your desktop flow might fail to run with the error code `NoCandidateMachine` or the error details "No machine able to run the desktop flow has been found."
 
-You might also receive one of these common sub-error codes:
+You might also receive one of these common suberror codes:
 
 - [SessionExistsForTheUserWhenUnattended](#sessionexistsfortheuserwhenunattended)
-- [NoUnlockedActiveSessionForAttended](#nounlockedactivesessionforattended)
+- [UnattendedUserSessionDisconnected](#unattendedusersessiondisconnected)
+- [UnattendedUserSessionLocked](#unattendedusersessionlocked)
 - [AttendedUserSessionNotActive](#attendedusersessionnotactive)
 - [AttendedUserNotLoggedIn](#attendedusernotloggedin)
 - [UIFlowAlreadyRunning](#uiflowalreadyrunning)
@@ -43,25 +44,32 @@ This error occurs when you try to run an unattended desktop flow on a target mac
 
 To resolve the issue, sign out of the session (a locked session will lead to this error), and confirm that you aren't signed in with the same user on the machine.
 
-## NoUnlockedActiveSessionForAttended
+## UnattendedUserSessionDisconnected
 
-This error usually occurs when you try to run an attended desktop flow on a target machine that is locked or has no user signed in. You can also get this error when the Windows user you're currently signed in on the target machine doesn't match the user you entered in your connection. Attended desktop flows can only execute if the machine is unlocked on a session where the current user matches the one in the desktop flow connection.
+This error occurs when you try to run an unattended desktop flow on a target machine where there's a disconnected session for the user used in the desktop flow connection.
 
 #### Resolution
 
-To resolve the issue:
+To resolve the issue, sign out of the disconnected session, and confirm that you aren't signed in with the same user on the machine.
 
-- Check the credentials used in your connection and make sure they're the ones used in the unlocked session. You can verify your identity by typing `whoami` in any command prompt.
-- Verify that you're targeting the right machine. To do so, open the machine runtime application and select **View machine in portal** to verify that it brings you to the machine you're targeting in your run.
-- Verify that the account that runs the Power Automate service (UIFlowService) has Remote Desktop permissions on the machine. By default, the Power Automate service runs as `NT SERVICE\UIFlowService`. If you didn't change this, verify that `NT SERVICE\UIFlowService` is in the **Remote Desktop Users** group. To do so, go to **Start** > **Run**, type *usrmgr.msc*, select **Groups**, double-click the **Remote Desktop Users** group and verify the account is included. If it's not included, include it (this requires administrator permissions) and restart the machine.
+## UnattendedUserSessionLocked
+
+This error occurs when you try to run an unattended desktop flow on a target machine where there's a locked session for the user used in the desktop flow connection.
+
+#### Resolution
+
+To resolve the issue, sign out of the locked session, and confirm that you aren't signed in with the same user on the machine.
 
 ## AttendedUserSessionNotActive
 
-This error occurs when the user specified in the connection is signed in to the target machine but the target session is either in a locked or disconnected state.
+This error occurs when you try to run an attended desktop flow on a target machine where the user session is either locked or disconnected. Attended desktop flows can only execute if the machine is unlocked on a session where the current user matches the one in the desktop flow connection.
 
 #### Resolution
 
-Try connecting to the target session and running the attended flow again.
+To resolve the issue,
+
+- Reconnect on the machine with the user used for attended run and let the session active on the machine.
+- Verify that you're targeting the right machine. To do so, open the machine runtime application and select **View machine in portal** to verify that it brings you to the machine you're targeting in your run.
 
 ## AttendedUserNotLoggedIn
 
@@ -69,7 +77,14 @@ This error occurs when the user specified in the connection isn't signed in to t
 
 #### Resolution
 
-Sign in to the target machine as the user specified in the connection, leave the session active, and try running your attended flow again.
+To resolve the issue,
+
+- Connect on the machine with the user used for attended run and let the session active on the machine.
+- Verify that you're targeting the right machine. To do so, open the machine runtime application and select **View machine in portal** to verify that it brings you to the machine you're targeting in your run.
+- Check the credentials used in your connection and make sure they're the ones used in the unlocked session. You can verify your identity by typing `whoami` in any command prompt.
+
+> [!NOTE]
+> For `AttendedUserSessionNotActive` or `AttendedUserNotLoggedIn` errors, verify that the account that runs the Power Automate service (UIFlowService) has Remote Desktop permissions on the machine. By default, the Power Automate service runs as `NT SERVICE\UIFlowService`. If you didn't change this, verify that `NT SERVICE\UIFlowService` is in the **Remote Desktop Users** group. To do so, go to **Start** > **Run**, type _usrmgr.msc_, select **Groups**, double-click the **Remote Desktop Users** group and verify the account is included. If it's not included, include it (this requires administrator permissions) and restart the machine.
 
 ## UIFlowAlreadyRunning
 
@@ -88,7 +103,7 @@ For information on other error codes that might occur when running desktop flows
 
 ## More information
 
-If the sub-error code isn't provided, check if:
+If the suberror code isn't provided, check if:
 
 - The machine or all machines in the machine group are offline.
 

@@ -1,22 +1,22 @@
 ---
 title: CS can't start on a computer
-description: Explains how to troubleshoot an issue when Certificate Services doesn't start on a computer that is running Windows Server.
-ms.date: 09/06/2024
+description: Explains how to troubleshoot an issue when the Certificate Services service doesn't start on a computer that is running Windows Server.
+ms.date: 10/10/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, shawnrab, v-jomcc, flbelea
+ms.reviewer: kaushika, shawnrab, v-jomcc, flbelea, jtierney
 ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory Certificate Services (ADCS), csstroubleshoot
 ---
 # Certificate Services may not start on a computer that is running Windows Server
 
-This article provides a solution to an issue where Certificate Services(CS) may not start on a computer that is running Windows Server.
+This article provides a solution to an issue where the Certificate Services(CS) service may not start on a computer that is running Windows Server.
 
 _Original KB number:_ &nbsp; 842210
 
 ## Symptoms
 
-On a computer that is running Windows Server, Certificate Services may not start.
+On a computer that is running Windows Server, the Certificate Services service may not start.
 
 Additionally, the following error message may be logged in the Application log in Event Viewer.
 
@@ -24,7 +24,7 @@ Additionally, the following error message may be logged in the Application log i
 
 ## Cause
 
-Before Certificate Services starts, it enumerates all the keys and certificates that have been issued to the certification authority (CA), even if the keys and the certificates have expired. Certificate Services won't start if any one of these certificates has been removed from the local computer Personal certificate store.
+Before the Certificate Services service starts, it enumerates all the keys and certificates that have been issued to the certification authority (CA), even if the keys and the certificates have expired. The Certificate Services service won't start if any one of these certificates has been removed from the local computer Personal certificate store.
 
 ## Resolution
 

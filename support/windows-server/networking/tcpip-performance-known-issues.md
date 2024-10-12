@@ -1,11 +1,11 @@
 ---
 title: TCP/IP performance known issues
 description: Describes several TCP/IP performance known issues about slow throughput and underlying networks.
-ms.date: 12/26/2023
+ms.date: 10/08/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, rabhardw, anupamk
+ms.reviewer: kaushika, rabhardw, anupamk, bihua
 ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 ---
 # Known issues of TCP/IP performance
@@ -183,8 +183,8 @@ Loopbackexecutionmode
 Worker
 ```
 
-In this mode, packets are queued on the send side and processed by a worker thread on the receive side. This mode favors throughput over latency.
-  
+In this mode, packets are queued on the sender side and processed by a worker thread on the receiver side. This mode favors throughput over latency.
+
 ```console
 Inline
 ```
@@ -195,16 +195,16 @@ In this mode, processing is done in context of application threads both on sende
 Adaptive
 ```
 
-First packets of the data flow are processing inline,and then packets are deferred to workerthread. This mode tries to balance latency and throughput.
-  
+First packets of the data flow are processing inline, and then packets are deferred to worker threads. This mode tries to balance latency and throughput.
+
 ```console
 Loopbackworkercount
 ```
 
-Allows to configure the number of workerthreads been used.
+Allows to configure the number of worker threads been used.
   
 ```console
 Loopbacklargemtu
 ```
 
-Allows to configure the use of large MTU, this should enabled.
+Allows to configure the use of large MTU, this should be enabled.
