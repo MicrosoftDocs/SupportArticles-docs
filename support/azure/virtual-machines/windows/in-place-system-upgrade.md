@@ -1,8 +1,8 @@
 ---
 title: In-place upgrade for supported VMs running Windows in Azure
 description: Understand how to work around the unsupported in-place system upgrade on an Azure VM that runs Windows.
-ms.date: 07/16/2024
-ms.reviewer: joscon, scotro, azurevmcptcic, maulikshah, v-weizhu
+ms.date: 10/14/2024
+ms.reviewer: joscon, scotro, azurevmcptcic, maulikshah, yogitagohel, v-weizhu
 ms.service: azure-virtual-machines
 ms.collection: windows
 ms.custom: sap:VM Admin - Windows (Guest OS)
@@ -91,8 +91,8 @@ Follow the steps in the following article to upload the VHD to Azure and to depl
 
 [Upload a generalized VHD and use it to create new VMs in Azure](/azure/virtual-machines/windows/upload-generalized-managed)
 
-   > [!NOTE]  
-   > The source image information, including Publisher, offer, and plan, does not change after performing an in-place upgrade. The image used to deploy the VM remains the same; only the OS is upgraded.
+> [!NOTE]  
+> When performing an in-place upgrade on Windows Azure VMs, the VM properties on the Azure portal won't be updated; the changes will only be reflected within the OS. This means that the source image information in the VM properties, including the publisher, Offer, and plan, doesn't change. The image used to deploy the VM remains the same; only the OS is upgraded.
 
 
 ## References
