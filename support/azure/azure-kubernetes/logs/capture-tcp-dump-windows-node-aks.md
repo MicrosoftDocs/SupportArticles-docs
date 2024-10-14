@@ -1,8 +1,8 @@
 ---
 title: Capture a TCP dump from a Windows node in an AKS cluster
 description: Understand how to capture a TCP dump from a Windows node within an Azure Kubernetes Service (AKS) cluster.
-ms.date: 11/15/2021
-ms.reviewer: erbookbi, v-leedennis
+ms.date: 10/14/2024
+ms.reviewer: erbookbi, jopalhei, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Monitoring and Logging
 ---
@@ -29,7 +29,53 @@ akswin000002                        Ready    agent   3m32s   v1.20.9   10.240.0.
 
 ## Step 2: Connect to a Windows node
 
-The next step is to establish a connection to the AKS cluster node. You authenticate either using a Secure Shell (SSH) key, or using the Windows admin password in a Remote Desktop Protocol (RDP) connection. Both methods require creating an intermediate connection, because you can't currently connect directly to the AKS Windows node. Whether you connect to a node through SSH or RDP, you need to specify the user name for the AKS nodes. By default, this user name is *azureuser*.
+The next step is to establish a connection to the AKS cluster node. You authenticate either using a Secure Shell (SSH) key, or using the Windows admin password in a Remote Desktop Protocol (RDP) connection. Both methods require creating an intermediate connection, because you can't currently connect directly to the AKS Windows node. Whether you connect to a node through SSH or RDP, you need to specify the user name for the AKS nodes. By default, this user name is *azureuser*. Besides using an SSH or RDP connection, you can connect to a Windows node from the HostProcess container.
+
+### [HostProcess](#tab/hostprocess)
+
+1. Create *hostprocess.yaml* with the following content. Replace `AKSWINDOWSNODENAME` with the AKS Windows node name.
+
+    ```yaml
+    apiVersion: v1
+    kind: Pod
+    metadata:
+      labels:
+        pod: hpc
+      name: hpc
+    spec:
+      securityContext:
+        windowsOptions:
+          hostProcess: true
+          runAsUserName: "NT AUTHORITY\\SYSTEM"
+      hostNetwork: true
+      containers:
+        - name: hpc
+          image: mcr.microsoft.com/windows/servercore:ltsc2022 # Use servercore:1809 for WS2019
+          command:
+            - powershell.exe
+            - -Command
+            - "Start-Sleep 2147483"
+          imagePullPolicy: IfNotPresent
+      nodeSelector:
+        kubernetes.io/os: windows
+        kubernetes.io/hostname: AKSWINDOWSNODENAME
+      tolerations:
+        - effect: NoSchedule
+          key: node.kubernetes.io/unschedulable
+          operator: Exists
+        - effect: NoSchedule
+          key: node.kubernetes.io/network-unavailable
+          operator: Exists
+        - effect: NoExecute
+          key: node.kubernetes.io/unreachable
+          operator: Exists
+    ```
+2. Run the `kubectl apply -f hostprocess.yaml` command to deploy the Windows HostProcess container in the specified Windows node.
+3. Run the `kubectl exec -it [HPC-POD-NAME] -- powershell` command.
+4. Run any PowerShell commands inside the HostProcess container to access the Windows node.
+
+    > [!Note]
+    > To access the files in the Windows node, switch the root folder to `C:\` inside the HostProcess container.
 
 ### [SSH](#tab/ssh)
 
@@ -74,7 +120,7 @@ Then finish connecting to the Windows virtual machine that you set up earlier.
 
 ## Step 3: Create a packet capture
 
-When you're connected to the Windows node through SSH or RDP, a form of the Windows command prompt appears:
+When you're connected to the Windows node through SSH or RDP, or from the HostProcess container, a form of the Windows command prompt appears:
 
 ```cmd
 azureuser@akswin000000 C:\Users\azureuser>
@@ -83,7 +129,7 @@ azureuser@akswin000000 C:\Users\azureuser>
 Now open a command prompt and enter the [Network Shell](/windows-server/networking/technologies/netsh/netsh) (netsh) command below for capturing traces ([netsh trace start](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj129382(v=ws.11)#start)). This command starts the packet capture process.
 
 ```cmd
-netsh trace start capture=yes tracefile=C:\Users\azureuser\AKS_node_name.etl 
+netsh trace start capture=yes tracefile=C:\temp\AKS_node_name.etl
 ```
 
 Output appears that's similar to the following text:
@@ -105,18 +151,45 @@ While the trace is running, replicate your issue many times. This action ensures
 azureuser@akswin000000 C:\Users\azureuser>netsh trace stop
 Merging traces ... done
 Generating data collection ... done
-The trace file and additional troubleshooting information have been compiled as "C:\Users\azureuser\AKS_node_name.cab".
-File location = C:\Users\azureuser\AKS_node_name.etl
+The trace file and additional troubleshooting information have been compiled as "C:\temp\AKS_node_name.cab".
+File location = C:\temp\AKS_node_name.etl
 Tracing session was successfully stopped.
 ```
 
 ## Step 4: Transfer the capture locally
 
+### [HostProcess](#tab/hostprocess)
+
+After you complete the packet capture, identify the HostProcess pod so that you can copy the dump locally. 
+
+1. On your local machine, open a second console, and then get a list of pods by running the `kubectl get pods` command:
+
+    ```console
+    kubectl get pods
+    NAME                                                    READY   STATUS    RESTARTS   AGE
+    azure-vote-back-6c4dd64bdf-m4nk7                        1/1     Running   2          3d21h
+    azure-vote-front-85b4df594d-jhpzw                       1/1     Running   2          3d21h
+    hpc                                                     1/1     Running   0          3m58s
+    ```
+
+    The HostProcess pod's default name is *hpc*, as shown in the third line.
+
+2. Copy the TCP dump files locally by running the following commands. Replace the pod name with `hpc`.
+
+    ```console
+    kubectl cp -n default hpc:/temp/AKS_node_name.etl ./AKS_node_name.etl
+    tar: Removing leading '/' from member names
+    kubectl cp -n default hpc:/temp/AKS_node_name.etl ./AKS_node_name.cab
+    tar: Removing leading '/' from member names
+    ```
+
+    The *.etl* and *.cab* files will now be present in your local directory.
+
 ### [SSH](#tab/ssh)
 
 After you complete the packet capture, identify the helper pod so you can copy the dump locally. Open a second console, and then get a list of pods by running `kubectl get pods`, as shown below.
 
-```output
+```console
 kubectl get pods
 NAME                                                    READY   STATUS    RESTARTS   AGE
 azure-vote-back-6c4dd64bdf-m4nk7                        1/1     Running   2          3d21h
@@ -126,7 +199,7 @@ node-debugger-aks-nodepool1-38878740-vmss000000-6ztp6   1/1     Running   0     
 
 The helper pod has a prefix of `node-debugger-aks`, as shown in the third row. Replace the pod name, and then run the following Secure Copy (scp) commands. These commands retrieve the event trace log (.etl) and archive (.cab) files, which are generated for the packet capture.
 
-```cmd
+```console
 scp -o 'ProxyCommand ssh -p 2022 -W %h:%p azureuser@127.0.0.1' azureuser@10.240.0.97:AKS_node_name.cab .
 scp -o 'ProxyCommand ssh -p 2022 -W %h:%p azureuser@127.0.0.1' azureuser@10.240.0.97:AKS_node_name.etl .
 ```
@@ -160,7 +233,7 @@ First, follow these steps to transfer the TCP dump files from the AKS Windows no
 1. Then run the following copy command to copy the TCP dump files to your jump VM:
 
     ```output
-    C:\Users\azureuser>copy AKS_node_name.* z:\
+    C:\Users\azureuser>copy c:\temp\AKS_node_name.* z:\
     AKS_node_name.cab
     AKS_node_name.etl
             2 file(s) copied.
