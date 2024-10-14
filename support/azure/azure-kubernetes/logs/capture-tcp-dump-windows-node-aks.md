@@ -29,7 +29,7 @@ akswin000002                        Ready    agent   3m32s   v1.20.9   10.240.0.
 
 ## Step 2: Connect to a Windows node
 
-The next step is to establish a connection to the AKS cluster node. You authenticate either using a Secure Shell (SSH) key, or using the Windows admin password in a Remote Desktop Protocol (RDP) connection. Both methods require creating an intermediate connection, because you can't currently connect directly to the AKS Windows node. Whether you connect to a node through SSH or RDP, you need to specify the user name for the AKS nodes. By default, this user name is *azureuser*. Besides using a SSH or RDP connection, you can connect to a Windows node from the HostProcess container.
+The next step is to establish a connection to the AKS cluster node. You authenticate either using a Secure Shell (SSH) key, or using the Windows admin password in a Remote Desktop Protocol (RDP) connection. Both methods require creating an intermediate connection, because you can't currently connect directly to the AKS Windows node. Whether you connect to a node through SSH or RDP, you need to specify the user name for the AKS nodes. By default, this user name is *azureuser*. Besides using an SSH or RDP connection, you can connect to a Windows node from the HostProcess container.
 
 ### [HostProcess](#tab/hostprocess)
 
@@ -160,7 +160,7 @@ Tracing session was successfully stopped.
 
 ### [HostProcess](#tab/hostprocess)
 
-After you complete the packet capture, identify the HostProcess pod so you can copy the dump locally. 
+After you complete the packet capture, identify the HostProcess pod so that you can copy the dump locally. 
 
 1. On your local machine, open a second console, and then get a list of pods by running the `kubectl get pods` command:
 
@@ -183,7 +183,7 @@ After you complete the packet capture, identify the HostProcess pod so you can c
     tar: Removing leading '/' from member names
     ```
 
-    The *.etl* and *.cab* files will now be present on your local directory.
+    The *.etl* and *.cab* files will now be present in your local directory.
 
 ### [SSH](#tab/ssh)
 
