@@ -1,11 +1,11 @@
 ---
 title: Windows 10 upgrade quick fixes
 description: Learn how to quickly resolve many problems, which may come up during a Windows 10 upgrade.
-ms.date: 05/10/2024
+ms.date: 10/14/2024
 manager: dcscontentpm
 ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
 ms.topic: troubleshooting
-ms.reviewer: dougeby,aaroncz
+ms.reviewer: dougeby, aaroncz, kaushika
 audience: itpro
 ---
 
@@ -19,8 +19,6 @@ _Applies to:_ &nbsp; Windows 10
 > For IT professionals, check more information in [Resolve Windows 10 upgrade errors](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors).
 
 The following list of fixes can resolve many Windows upgrade problems. You should try these steps before contacting Microsoft support, or attempting a more advanced analysis of a Windows upgrade failure. Also review information at [Windows 10 help](https://support.microsoft.com/products/windows?os=windows-10).
-
-The Microsoft Virtual Agent provided by [Microsoft Support](https://support.microsoft.com/contactus/) can help you to analyze and correct some Windows upgrade errors.
 
 > [!TIP]
 > You might also wish to try a new tool available from Microsoft that helps to diagnose many Windows upgrade errors. For more information and to download this tool, see [SetupDiag](/windows/deployment/upgrade/setupdiag). The topic is more advanced (300 level) because several advanced options are available for using the tool. However, you can now just download and then double-click the tool to run it. By default when you click Save, the tool is saved in your *Downloads* folder. Double-click the tool in the folder and wait until it finishes running (it might take a few minutes), then double-click the *SetupDiagResults.log* file and open it using Notepad to see the results of the analysis.
