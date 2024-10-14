@@ -69,10 +69,7 @@ Ensuring you have access to the Azure Serial Console and GRUB means that a passw
 
 - Azure Serial Console
 
-- Disk Swap – can be automated using either:
-
-  - [PowerShell Recovery Scripts]()
-  - [bash Recovery Scripts](https://github.com/sribs/azure-support-scripts)
+- [Disk Swap](/azure/virtual-machines/windows/os-disk-swap)
 
 - Legacy Method
 
