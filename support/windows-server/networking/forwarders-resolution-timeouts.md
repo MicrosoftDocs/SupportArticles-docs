@@ -1,11 +1,11 @@
 ---
 title: Forwarders resolution timeouts
 description: Describes the fallback and timeout behavior that exist when one or more DNS Servers IPs are configured as forwarders or conditional forwarders on a DNS server.
-ms.date: 12/26/2023
+ms.date: 10/14/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, arrenc, dpracht, kellyv, stegag
+ms.reviewer: kaushika, arrenc, dpracht, kellyv, stegag, maaztorgal
 ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
 ---
 # Forwarders and conditional forwarders resolution timeouts
@@ -28,23 +28,20 @@ In order to understand how this works, the key variables are:
 
 - **RecursionTimeout** - how long the Domain Name System (DNS) waits for remote servers to respond to a recursive client query before terminating the search.
 
-  It's saved in the registry under `HKLM\SYSTEM\CurrentControlSet\Services\DNS\Parameters\**RecursionTimeout`, and configurable `via dnscmd /config /RecursionTimeout <value>. `and can be verified through power shell command **Get-DnsServerRecursion **
+  It's saved in the registry under `HKLM\SYSTEM\CurrentControlSet\Services\DNS\Parameters\RecursionTimeout`, and configurable via `dnscmd /config /RecursionTimeout <value>`, and can be verified through the PowerShell cmdlet `Get-DnsServerRecursion`.
   
-  The default value is:  
-  - 8 seconds on Windows Server 2012, 2012R2, 2016, 2019 and 2022
+  The default value is 8 seconds in Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, and Windows Server 2022.
   
-    The **RecursionTimeout** is defined at DNS server level and is independent from the specific zone queried.
-    
+  The **RecursionTimeout** is defined at DNS server level and is independent from the specific zone queried.
+
 - **ForwardingTimeout** - how long the Domain Name System (DNS) waits for each server in the list in Forwarders to respond to a query.
 
-  It's saved in the registry under `HKLM\SYSTEM\CurrentControlSet\Services\DNS\Parameters\**ForwardingTimeout` and configurable via `dnscmd /config /ForwardingTimeout <value> `This can also be verified through power shell command Get**-DnsServerForwarder** 
+  It's saved in the registry under `HKLM\SYSTEM\CurrentControlSet\Services\DNS\Parameters\ForwardingTimeout` and configurable via `dnscmd /config /ForwardingTimeout <value>`. This can also be verified through the PowerShell cmdlet `Get-DnsServerForwarder`.
   
-    The default value is:
+  The default value is 3 seconds in Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019 and Windows Server 2022.
   
-  - 3 seconds on Windows Server 2012, 2012R2, 2016, 2019 and 2022
-  
-    The **ForwardingTimeout** is defined at DNS server level and is independent from the specific zone queried.
-    
+  The **ForwardingTimeout** is defined at DNS server level and is independent from the specific zone queried.
+
 When the DNS server receives a query for a record in a zone that it is not authoritative for, and needs to use forwarders, the default behavior is the following:
 
 | Time (seconds since start)| Action |
@@ -63,9 +60,9 @@ When the DNS server receives a query for a record in a zone that it is not autho
 If the **RecursionTimeout** expires, the DNS server will reply back to the client with a Server Failure.
 
 > [!NOTE]
-> We don't send the Server Failure immediately after the RecursionTimeout expiration, but only when it is time to try the next forwarder.
+> We don't send the Server Failure immediately after the **RecursionTimeout** expiration, but only when it is time to try the next forwarder.
 
-If the server manages to contact all forwarders before the RecursionTimeout expires without getting answers, it will try to use the root hints for the name resolution (default setting, unless recursion was disabled at the server level).
+If the server manages to contact all forwarders before the **RecursionTimeout** expires without getting answers, it will try to use the root hints for the name resolution (default setting, unless recursion was disabled at the server level).
 
 This means that with default settings, a Windows DNS server will be able to query at most 3 forwarders. There will not be enough time to arrive to use the fourth forwarder. In fact, with default settings the Windows DNS server will:
 
@@ -98,12 +95,11 @@ Similar to forwarders, there are two key variables for Conditional Forwarders. W
 
 - **RecursionTimeout** - how long the Domain Name System (DNS) waits for remote servers to respond to a recursive client query before terminating the search.
 
-    It's saved in the registry under `HKLM\SYSTEM\CurrentControlSet\Services\DNS\Parameters\RecursionTimeout`
+    It's saved in the registry under `HKLM\SYSTEM\CurrentControlSet\Services\DNS\Parameters\RecursionTimeout`.
   
     It's configurable via `dnscmd /config /RecursionTimeout <value>`.
   
-    The default value is:
-  - 8 seconds on Windows Server 2012, 2012R2, 2016, 2019 and 2022
+    The default value is 8 seconds in Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, and Windows Server 2022.
   
     The **RecursionTimeout** is defined at DNS server level and is independent from the specific zone queried  
     
@@ -113,9 +109,9 @@ Similar to forwarders, there are two key variables for Conditional Forwarders. W
 
     It's saved in the registry under `HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\DNS Server\Zones\ <zone_name>\ForwarderTimeout`.
 
-    The default value is 5 seconds on Windows Server 2012, 2012R2, 2016, 2019 and 2022
+    The default value is 5 seconds in Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, and Windows Server 2022.
   
-      This is also the setting you can see in the Conditional Forwarders GUI.
+    This is also the setting you can see in the Conditional Forwarders GUI.
 
 When the DNS server receives a query for a record in a zone that it is not authoritative for, and is configured to use Conditional Forwarders for it, the default behavior is the following:
 
