@@ -259,7 +259,6 @@ The following table contains a list of possible error messages (for deploying th
 | `ServiceMeshProfile revision field must not be empty` | You tried to upgrade the Istio add-on without specifying a revision. | Specify the revision and all other parameters (for more information, see [Minor revision upgrade](/azure/aks/istio-upgrade#minor-revision-upgrade)). |
 | `Request exceeds maximum allowed number of revisions (%d)` | You tried to do an upgrade operation even though there are already `(%d)` revisions installed. | [Complete or roll back the upgrade operation](/azure/aks/istio-upgrade#minor-revision-upgrade) before you upgrade to another revision. |
 | `Mesh upgrade is in progress. Please complete or roll back the current upgrade before attempting to retrieve versioning and compatibility information` | You tried to access revisioning and compatibility information before completing or rolling back the current upgrade operation. | [Complete or roll back the current upgrade operation](/azure/aks/istio-upgrade#minor-revision-upgrade) before you retrieve revisioning and compatibility information. |
-| `Received HTTP code 404 from proxy after CONNECT` | You are using HTTP proxy for outbound traffic without deploying a SerivceEntry resource. | [Setup ServiceEntry for HTTP proxy](/azure/aks/http-proxy#istio-add-on-http-proxy-for-external-services) before you make outbound requests. |
 
 ## References
 
