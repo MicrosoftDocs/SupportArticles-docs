@@ -3,7 +3,7 @@ title: Unclosed quotation mark error when running Historical Aged Trial Balance
 description: Provides a solution to an error that occurs when you run the Historical Aged Trial Balance report for Payables Management.
 ms.reviewer: theley, kenhub, cwaswick
 ms.topic: troubleshooting
-ms.date: 10/12/2024
+ms.date: 10/14/2024
 ms.custom: sap:Financial - Payables Management
 ---
 # "Unclosed quotation mark" error when running the Historical Aged Trial Balance for Payables Management
