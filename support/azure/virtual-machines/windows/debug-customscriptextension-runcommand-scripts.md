@@ -377,7 +377,7 @@ To undo the changes that you made to enable the logging of PowerShell scripting 
 
 ## Test Run Command logging on your VM
 
-Download the [Test-CustomScriptExtension.ps1]() test script to the current local directory. Then, run the script on your VM by using the [Invoke-AzVMRunCommand](/powershell/module/az.compute/invoke-azvmruncommand) cmdlet. Use the properties of your VM to replace the placeholders for the resource group name and VM name.
+Download the [Test-CustomScriptExtension.ps1](https://github.com/Azure/azure-support-scripts/blob/master/Images_Extensions/PowerShell/Test-CustomScriptExtension.ps1) test script to the current local directory. Then, run the script on your VM by using the [Invoke-AzVMRunCommand](/powershell/module/az.compute/invoke-azvmruncommand) cmdlet. Use the properties of your VM to replace the placeholders for the resource group name and VM name.
 
 ```azurepowershell
 $scriptUri = 'https://raw.githubusercontent.com/Azure/azure-support-scripts/master/Images_Extensions/PowerShell/Test-CustomScriptExtension.ps1'
@@ -395,7 +395,7 @@ Invoke-AzVMRunCommand @commandSettings
 
 ## Test Custom Script Extension logging on your VM
 
-Run the test script [Test-CustomScriptExtension.ps1]() on your VM by using the [Set-AzVMCustomScriptExtension](/powershell/module/az.compute/set-azvmcustomscriptextension) cmdlet. Use the properties of your VM to replace the placeholders for the resource group name, VM name, and location.
+Run the test script [Test-CustomScriptExtension.ps1](https://github.com/Azure/azure-support-scripts/blob/master/Images_Extensions/PowerShell/Test-CustomScriptExtension.ps1) on your VM by using the [Set-AzVMCustomScriptExtension](/powershell/module/az.compute/set-azvmcustomscriptextension) cmdlet. Use the properties of your VM to replace the placeholders for the resource group name, VM name, and location.
 
 ```azurepowershell
 $commandSettings = @{
