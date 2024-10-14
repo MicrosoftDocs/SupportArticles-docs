@@ -1,7 +1,7 @@
 ---
 title: Capture a TCP dump from a Windows node in an AKS cluster
 description: Understand how to capture a TCP dump from a Windows node within an Azure Kubernetes Service (AKS) cluster.
-ms.date: 10/12/2024
+ms.date: 10/14/2024
 ms.reviewer: erbookbi, jopalhei, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Monitoring and Logging
@@ -29,7 +29,7 @@ akswin000002                        Ready    agent   3m32s   v1.20.9   10.240.0.
 
 ## Step 2: Connect to a Windows node
 
-The next step is to establish a connection to the AKS cluster node. You authenticate either using a Secure Shell (SSH) key, or using the Windows admin password in a Remote Desktop Protocol (RDP) connection. Both methods require creating an intermediate connection, because you can't currently connect directly to the AKS Windows node. Whether you connect to a node through SSH or RDP, you need to specify the user name for the AKS nodes. By default, this user name is *azureuser*.
+The next step is to establish a connection to the AKS cluster node. You authenticate either using a Secure Shell (SSH) key, or using the Windows admin password in a Remote Desktop Protocol (RDP) connection. Both methods require creating an intermediate connection, because you can't currently connect directly to the AKS Windows node. Whether you connect to a node through SSH or RDP, you need to specify the user name for the AKS nodes. By default, this user name is *azureuser*. Besides using a SSH or RDP connection, you can connect to a Windows node from the HostProcess container.
 
 ### [HostProcess](#tab/hostprocess)
 
@@ -120,7 +120,7 @@ Then finish connecting to the Windows virtual machine that you set up earlier.
 
 ## Step 3: Create a packet capture
 
-When you're connected to the Windows node through SSH or RDP, a form of the Windows command prompt appears:
+When you're connected to the Windows node through SSH or RDP, or from the HostProcess container, a form of the Windows command prompt appears:
 
 ```cmd
 azureuser@akswin000000 C:\Users\azureuser>
