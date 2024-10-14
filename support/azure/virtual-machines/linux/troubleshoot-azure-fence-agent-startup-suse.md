@@ -277,6 +277,39 @@ SUSE has rebuilt the Azure Fence Agent package as `fence-agents-azure-arm` for P
 	```
 4. Make sure that the fencing agent issue is resolved. To do this, run `crm status` to check the cluster status.
 
+## Cause 6: Failed Secret Credentials while using Service Principal
+```output /var/log/messages
+2024-09-24T18:10:23.993806-04:00 node1 pacemaker-fenced[3884]: warning: fence_azure_arm[20045] stderr: [ ]
+2024-09-24T18:10:26.030957-04:00 node1 fence_azure_arm: ClientSecretCredential.get_token failed: Authentication failed: AADSTS7000222: The provided client secret keys for app 'b8399b93-24e9-42a3-a752-51d04f9eb49b' are expired. Visit the Azure portal to create new keys for your app: https://aka.ms/NewClientSecret , or consider using certificate credentials for added security: https://aka.ms/certCreds . Trace ID: 65f2b43e-fc78-4997-bf0b-823e4a377400 Correlation ID: e70f3356-1d57-4634-8ebb-aacb4765ad1f Timestamp: 2024-09-24 22:10:25Z
+2024-09-24T18:10:26.031794-04:00 node1 fence_azure_arm: Failed: Authentication failed: AADSTS7000222: The provided client secret keys for app 'b8399b93-24e9-42a3-a752-51d04f9eb49b' are expired. Visit the Azure portal to create new keys for your app: https://aka.ms/NewClientSecret , or consider using certificate credentials for added security: https://aka.ms/certCreds . Trace ID: 65f2b43e-fc78-4997-bf0b-823e4a377400 Correlation ID: e70f3356-1d57-4634-8ebb-aacb4765ad1f Timestamp: 2024-09-24 22:10:25Z
+```
+
+### Resolution
+1. Update the **Client Secret** of [Service Principal](/azure/sap/workloads/high-availability-guide-suse-pacemaker?tabs=spn#use-an-azure-fence-agent-1).
+2. Follow the procedure to update cluster configuration within OS:
+* Put the cluster under maintenance-mode.
+ ```bash
+ sudo crm configure property maintenance-mode=true
+```
+* Reconfigure the fence agent resource:
+```bash
+sudo crm configure edit <fencing agent resource>
+```
+* Copy the **Client Secret**  updated in Step 1 and update the `passwd` for `<fencing agent resource>` configuration.
+* Save the changes.
+* Remove the cluster out of maintenance-mode.
+```bash
+   sudo crm configure property maintenance-mode=false
+```
+* Verify the cluster status to confirm if fencing agent issue is fixed:
+```bash
+sudo /usr/sbin/fence_azure_arm --action=list --username='<user name>' --password='<password>' --tenantId=<tenant ID> --resourceGroup=<resource group>
+```
+This command should return the nodenames of the VMs in the cluster after updating the **Client Secret**. If the command isn't successful, rerun it together with the `-v` flag to enable verbose output and `-D` flag to enable debug output, as shown in the following example for further troubleshooting:
+```bash
+ sudo /usr/sbin/fence_azure_arm --action=list --username='<user name>' --password='<password>' --tenantId=<tenant ID> --resourceGroup=<resource group> -v -D /var/tmp/debug-fence.out 
+ ```
+
 ## Next steps
 
 If you need additional help, use the following instructions to open a support request:
