@@ -49,3 +49,5 @@ To turn on debug logging in the Windows Time service:
 
     > [!NOTE]
     > The Data Type value must be of type REG_SZ (String). You must type the value exactly as shown (that is, type 0-116 ). The highest possible value is 0-300 for most detailed logging. The meaning of this value is: Log all entries within the range of 0 and 116.
+
+4. Restart the service w32time whose display name is "Windows Time" for the change to take effect.
