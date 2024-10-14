@@ -98,10 +98,6 @@ The Windows Update Troubleshooter tool will automatically analyze and fix proble
 
 To run the tool, select the appropriate link above. Your web browser will prompt you to save or open the file. Select **open** and the tool will automatically start. The tool will walk you through analyzing and fixing some common problems.
 
-You can also download the Windows Update Troubleshooter by starting the Microsoft [Virtual Agent](https://support.microsoft.com/contact/virtual-agent/), typing *update Windows*, selecting the version of Windows you're running, and then answering **Yes** when asked "Do you need help troubleshooting Windows Update?"
-
-If any errors are displayed in the Windows Update Troubleshooter, use the Microsoft [Virtual Agent](https://support.microsoft.com/contact/virtual-agent/) to ask about these errors. The Virtual Agent will perform a search and provide a list of helpful links.
-
 ### Repair system files
 
 This fix is also described in detail at [answers.microsoft.com](https://answers.microsoft.com/EN-US/windows/forum/all/sfc-scannow/bc609315-da1f-4775-812c-695b60477a93).
@@ -146,10 +142,6 @@ To check and repair system files:
 ### Update Windows
 
 You should ensure that all important updates are installed before attempting to upgrade. This includes updates to hardware drivers on your computer.
-
-The Microsoft [Virtual Agent](https://support.microsoft.com/contact/virtual-agent/) can walk you through the process of making sure that Windows is updated.
-
-Start the [Virtual Agent](https://support.microsoft.com/contact/virtual-agent/) and then type *update windows*.
 
 Answer questions that the agent asks, and follow instructions to ensure that Windows is up to date. You can also run the [Windows Update Troubleshooter](#windows-update-troubleshooter) described above.
 
