@@ -55,29 +55,15 @@ Device logs depend on the device platform:
   
 On-premises infrastructure that supports use of SCEP certificate profiles for certificate deployments includes the Microsoft Intune Certificate Connector, NDES that runs on a Windows Server, and the certification authority.
 
-Log files for these roles include Windows Event Viewer, Certificate consoles, and various log files specific to the Intune Certificate Connector, NDES, or other role and operations that are part of the on-premises infrastructure.
+Log files for these roles include Windows Event Viewer that would be consider "Intune Connector logs" and IIS logs:
 
-The following list includes logs or consoles that are referenced in the subsequent SCEP troubleshooting articles.
 
-- **NDESConnector_date_time.svclog**:
+- **Intune connector logs**:
 
-  This log shows communication from the Microsoft Intune Certificate Connector to the Intune cloud service. You can use the [Service Trace Viewer Tool](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) to view this log file.
+  These logs show all the requests / communication from the device and Intune Cloud service. 
 
-  Related registry key: *HKLM\Software\Microsoft\MicrosoftIntune\NDESConnector\ConnectionStatus*
-
-  Location: On the server that hosts NDES at *%program_files%\Microsoft intune\ndesconnectorsvc\logs\logs*
-
-- **CertificateRegistrationPoint_date_time.svclog**:
-
-  This log shows the NDES policy module receiving and verifying certificate requests. You can use the [Service Trace Viewer Tool](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) to view this log file.
-
-  Location: On the server that hosts NDES at *%program_files%\Microsoft intune\ndesconnectorsvc\logs\logs*
-
-- **NDESPlugin.log**:
-
-  This log shows the passing of certificate requests to the Certificate Registration Point, and the resulting verification of those requests.
-
-  Location: On the server that hosts NDES at *%program_files%\Microsoft Intune\NDESPolicyModule\logs*
+  Location: On the server that hosts NDES: Run **eventvwr.msc** to open Windows Event Viewer and go to:
+  Applications and Services > Microsoft > Intune > CertificateConnector > Admin and Operational 
 
 - **IIS logs**:
 
@@ -85,23 +71,22 @@ The following list includes logs or consoles that are referenced in the subseque
 
   Location: On the server that hosts NDES at *c:\inetpub\logs\LogFiles\W3SVC1*
 
-- **Windows Application log**:
-
-  This log is useful when investigating IIS issues, like the SCEP application pool.
-
-  Location: On the server that hosts NDES: Run **eventvwr.msc** to open Windows Event Viewer
 
 ### Logs for Android devices
 
-For devices that run Android, use the **Android Company Portal** app log file, **OMADM.log**. Before you collect and review logs, ensure [Verbose Logging](/mem/intune/user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android) is enabled, and then reproduce the issue.
+Depending on the enrollment type you would need:
+
+- Android Personally-Owned Work profile (AKA BYOD): use the **Android Company Portal** app log file, **OMADM.log**. Before you collect and review logs, ensure [Verbose Logging](/mem/intune/user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android) is enabled, and then reproduce the issue.
 
 To collect the OMADM.logs from a device, see [Upload and email logs using a USB cable](/mem/intune/user-help/send-logs-to-your-it-admin-using-cable-android).
 
 You can also [Upload and email logs](/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android#upload-and-email-logs-from-microsoft-intune-app) to support.
 
+- Android Device Owner (this includes Fully managed, Corporate-owned and Dedicated devices): Collect **Intune App logs** and the files to review would be **CloudExtension** logs. As above, please remember to enable verbose logging before reproducing the error.
+
 ### Logs for iOS and iPadOS devices
 
-For devices that run iOS/iPadOS, you use debug logs and **Xcode** that runs on a Mac computer:
+For devices that run iOS/iPadOS, you use **Console** logs that runs on a Mac computer:
 
 1. Connect the iOS/iPadOS device to Mac, and then go to **Applications** > **Utilities** to open the Console app.
 
