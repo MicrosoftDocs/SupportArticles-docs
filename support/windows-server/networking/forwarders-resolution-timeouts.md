@@ -28,7 +28,7 @@ In order to understand how this works, the key variables are:
 
 - **RecursionTimeout** - how long the Domain Name System (DNS) waits for remote servers to respond to a recursive client query before terminating the search.
 
-  It's saved in the registry under `HKLM\SYSTEM\CurrentControlSet\Services\DNS\Parameters\RecursionTimeout`, and configurable via `dnscmd /config /RecursionTimeout <value>`, and can be verified through the PowerShell cmdlet `Get-DnsServerRecursion`.
+  It's saved in the registry under `HKLM\SYSTEM\CurrentControlSet\Services\DNS\Parameters\RecursionTimeout`, and configurable via `dnscmd /config /RecursionTimeout <value>`. This can be verified through the PowerShell cmdlet `Get-DnsServerRecursion`.
   
   The default value is 8 seconds in Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, and Windows Server 2022.
   
