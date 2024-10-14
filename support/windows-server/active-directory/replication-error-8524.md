@@ -1,7 +1,7 @@
 ---
 title: Active Directory Replication fails with Win32 error 8524
 description: Describes an issue that Active Directory Replications fail with Win32 error 8524 (The DSA operation is unable to proceed because of a DNS lookup failure).
-ms.date: 12/26/2023
+ms.date: 10/14/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -175,7 +175,7 @@ Microsoft support regularly finds stale metadata for nonexistent DCs, or stale m
 
 #### Command-line Metadata Cleanup using NTDSUTIL
 
-The legacy or command-line method of deleting stale NTDS Settings objects using the NTDSUTIL metadata cleanup command is documented in MSKB [216498](https://support.microsoft.com/default.aspx?scid=kb;EN-US;216498).
+The legacy or command-line method of deleting stale NTDS Settings objects using the NTDSUTIL metadata cleanup command is documented in [Clean up Active Directory Domain Controller server metadata](/windows-server/identity/ad-ds/deploy/ad-ds-metadata-cleanup).
 
 ### Run `DCDIAG /TEST:DNS` on the source DC + destination DC
   
