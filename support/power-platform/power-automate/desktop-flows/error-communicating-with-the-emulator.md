@@ -27,7 +27,7 @@ Here are the parameters configured in the **Open terminal session** action:
 
 To solve this issue, make sure the Micro Focus Reflection Desktop "Application Programmer Interface" in the **Feature Selection** is installed for Power Automate for desktop.
 
-:::image type="content" source="media/error-communicating-with-the-emulator/micro-focus-reflection-desktop-configuration.png" alt-text="Screenshot that shows the Application Programmer Interface feature in the Micro Focus Reflection Desktop installation.:::
+:::image type="content" source="media/error-communicating-with-the-emulator/micro-focus-reflection-desktop-configuration.png" alt-text="Screenshot that shows the Application Programmer Interface feature in the Micro Focus Reflection Desktop installation.":::
 
 > [!NOTE]
 > Power Automate for desktop will only communicate through the .NET interface of Reflection Desktop when using a 3270, 5250, or a UNIX and OpenVMS session.
