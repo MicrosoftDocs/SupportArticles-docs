@@ -1,15 +1,15 @@
 ---
 title: Resolve issues when accessing Viva Glint survey results as a manager
-description: Lists some common issues and the steps to resolve them.
+description: Lists some common issues that you might encounter when you try to view survey results for your team. And provide solutions to these issues.
 manager: dcscontentpm
 ms.reviewer: aweixelman
-ms.date: 09/23/2024
+ms.date: 10/14/2024
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
 ms.custom: 
   - CSSTroubleshoot
-  - CI 195092
+  - CI 195105
 ---
 
 # Resolve issues when accessing Viva Glint survey results as a manager
@@ -23,7 +23,7 @@ After you sign in, you might occasionally encounter issues, such as unexpected c
 
 ## No access to live surveys
 
-There are two levels of reporting access in Viva Glint. Live access is usually restricted to admins, while phased access is recommended for managers and Human Resources Business Partners (HRBPs). As a manager, you can only access phased surveys.  For more information, see [Grant live versus phased access in Viva Glint reporting](/viva/glint/setup/live-versus-phased-access).
+There are two levels of reporting access in Viva Glint. Live access is usually restricted to admins, while phased access is recommended for managers and Human Resources Business Partners (HRBPs). As a manager, you can only access phased surveys. For more information, see [Grant live versus phased access in Viva Glint reporting](/viva/glint/setup/live-versus-phased-access).
 
 ## No access due to monthly maintenance
 
@@ -35,7 +35,7 @@ You receive the following error message when you try to sign in to Viva Glint:
 
 > You do not have access. Please contact your Glint administrator for help.
 
-You see this error message if you don't have permissions to access the Viva Glint app.
+You see this error message if you don't have permission to access the Viva Glint app.
 
 To resolve the issue, contact your Glint admin to grant you access to the Viva Glint app.
 
@@ -43,9 +43,10 @@ To resolve the issue, contact your Glint admin to grant you access to the Viva G
 
 You receive the following welcome message but can't access any survey reports:
 
-> Welcome to Viva Glint
+> Welcome to Viva Glint  
+> To access the survey reports, contact your Glint admin to assign you the necessary role to access them.
 
-To access the survey reports, contact your Glint admin to assign you the necessary role to access them.
+The resolve the issue, follow the instruction that's mentioned in the message to contact your Viva Glint admin.
 
 ## Not enough respondents to see your team's results
 
@@ -67,7 +68,7 @@ To resolve the issue, select the appropriate solution for your situation:
 
 Recent changes to your team aren’t shown in your Viva Glint dashboard. For example, new members have joined your team but this change isn't reflected in the dashboard.
 
-This issue occurs if the employee data wasn't updated before a survey was launched.
+This issue occurs if employee data wasn't updated before a survey was launched.
 
 To resolve the issue, check whether the Viva Glint admin can accommodate updating your results data.
 

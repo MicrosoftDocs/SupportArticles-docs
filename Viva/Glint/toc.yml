@@ -1,6 +1,10 @@
 - name: Viva Glint troubleshooting
   href: viva-glint-welcome.yml
   items:
+    - name: Accessing the Platform
+      items:
+        - name: Resolve issues when accessing survey results as a manager
+          href: ./access/manager-access-issues.md
     - name: Contact support
       href: ./contact-support/get-support-viva-glint.md
     - name: Data File Uploads
