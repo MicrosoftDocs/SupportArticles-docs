@@ -1,11 +1,11 @@
 ---
 title: .NET Framework 3.5 installation errors
 description: This article describes a problem where you receive an 0x800F0906, 0x800F081F, or 0x800F0907 error code when you try to install the .NET Framework 3.5 in Windows.
-ms.date: 12/26/2023
+ms.date: 10/14/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika
+ms.reviewer: kaushika, amjosh
 ms.custom: sap:Application Technologies and Compatibility\.Net Framework Installation , csstroubleshoot
 adobe-target: true
 ---
@@ -232,6 +232,4 @@ The .NET Framework 3.5 is available for customers with Volume Licensing or MSDN 
 
 ### Error codes are not listed when you install .NET Framework 3.5
 
-When you install .NET Framework 3.5, you may encounter other error codes that are not listed in this article, for more information, go to the following articles:
-
-[Install the .NET Framework 3.5 in Windows 10](/dotnet/framework/install/dotnet-35-windows)
+When you install .NET Framework 3.5, you may encounter other error codes that are not listed in this article. For more information, see [Install the .NET Framework 3.5 in Windows 10](/dotnet/framework/install/dotnet-35-windows).
