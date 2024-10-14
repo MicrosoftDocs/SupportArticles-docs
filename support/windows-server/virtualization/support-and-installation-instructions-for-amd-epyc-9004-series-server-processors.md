@@ -62,7 +62,7 @@ In addition to the above observations, on AMD EPYC 9005 series-based systems whe
 
 * The root partition will use a maximum of 512 logical processors.
 
-For more information, see [Windows Server 2019 Hyper-V host behavior running in the Minroot configuration](windows-server-hyper-v-host-minroot-behaviors.md) and [Plan for Hyper-V scalability in Windows Server](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server?pivots=windows-server-2019).
+For more information, see [Windows Server 2019 Hyper-V host behavior running in the Minroot configuration](windows-server-hyper-v-host-minroot-behaviors.md) and [Plan for Hyper-V scalability in Windows Server](https://learn.microsoft.com/windows-server/virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server?pivots=windows-server-2019).
 
 In systems running Windows Server 2022 with the Hyper-V virtualization feature enabled, the following issues and limitations may be observed in AMD EPYC 9005 series-bases systems that have greater thatn 256 logical processors per NUMA node.
 
