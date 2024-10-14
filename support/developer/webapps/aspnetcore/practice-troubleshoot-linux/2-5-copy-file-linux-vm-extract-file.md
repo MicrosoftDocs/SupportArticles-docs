@@ -121,4 +121,3 @@ Choose either option, to extract the *buggyamb_v1.1* application files. These sh
 [Part 2.6 - Run two ASP.NET Core applications at the same time](2-6-run-two-aspnetcore-applications-same-time.md)
 
 Configure and run the buggy ASP.NET Core application behind Nginx. At the end of those steps, you'll have two ASP.NET Core applications running behind Nginx.
-
