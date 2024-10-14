@@ -77,7 +77,7 @@ Ultimately, this scenario could end up being Scenario 2 or Scenario 3.
 
 ### Resolution for scenario 2
 
-Collect Network Traces to review UDP port 123 traffic. Do this by starting a capture, then running a w32tm /resync /rediscover.
+Collect Network Traces to review UDP port 123 traffic. Do this by starting a capture, then running a `w32tm /resync /rediscover`.
 
 1. If you don’t see any UDP 123 (NTP Request) packets being sent, it’s likely that UDP port 123 is blocked on the local Windows Firewall.
 2. If you do see UDP port 123 (NTP Request) packets being sent but no response back, it’s likely that UDP port 123 is blocked on a non-Microsoft firewall.
