@@ -52,71 +52,66 @@ The timestamps are required if you plan to scavenge stale records. Without a tim
 
 ### Scavenge settings for the DNS in case of Active Directory (AD) integrated zone
 
-The above-mentioned setting (Scavenge Stale Records" under "Ageing" in the properties dialogue box of Zone) is to ensure that the AD object carries a Timestamp. But the scavenging of stale record, happens at DNS server level for all the zones on which the given setting is enabled. For complete detail on Scavenging refer to [Don't be afraid of DNS scavenging, just be patient - Windows Server " Microsoft Learn](../../windows-server/networking/dns-scavenging-setup.md).
+The **Scavenge Stale Records** option in the zone's **Aging** properties ensures AD objects to carry a timestamp. However, the actual scavenging of stale records occurs at the DNS server level, affecting all zones where this setting is enabled. For a detailed explanation of scavenging, refer to [Don't be afraid of DNS scavenging, just be patient - Windows Server](../../windows-server/networking/dns-scavenging-setup.md).
 
-Scavenging cycle is a low priority thread for DNS process. Thus, there is no guarantee that the scavenging cycle will run. That said, we can maximize the chances of this to run by choosing a DC DNS server, in an AD integrated zone environment, which does not have any critical role like FSMO roles and more specifically PDC Emulator. It is recommended that the scavenging is configured on a DC which does not have any FSMO role but if that is not possible, avoid configuring scavenging on a PDC Emulator.
+Scavenging cycle is a low priority thread for DNS process, so it may not always run consistently. To maximize the chances of it running, configure scavenging on a Domain Controller (DC) DNS server in an AD-integrated zone environment that does not have critical roles, such as Flexible Single Master Operation (FSMO) roles, and especially avoid the PDC Emulator. Ideally, scavenging should be set up on a DC without any FSMO roles. If this isn't possible, avoid configuring it on the PDC Emulator.
 
 ### Maintain standard DNS zone permissions
 
-Standard DNS zone permissions should be kept intact:  
+Standard DNS zone permissions should remain intact:  
 
-In an AD integrated zone setup, we follow standard permission hierarchy pretty much like NTFS or File system, which means if an account has access to zone and its child objects for Create, Delete, Modify, it can simply do all these operations. That said, by-default only Enterprise Admin (forest level) has this access followed by Domain Admins (domain level).  
+In an AD-integrated zone setup, permissions follow standard hierarchy similar to NTFS or file systems. This means that if an account has permissions to create, delete, or modify a zone and its child objects, it can simply perform these operations. By default, only Enterprise Admins (forest-wide) and Domain Admins (domain-wide) have these privileges.
 
-When we enable "Secure Only" dynamic update, the authenticated account i.e. a domain joined machine can update/delete/modify a given object if the requesting machine account is owner of that record. This is the intended purpose of Secure Only Dynamic update i.e. only the original creator of the record can modify or delete an existing record. 
+When **Secure Only** dynamic updates are enabled, an authenticated account (for example, a domain-joined computer) can update, delete, or modify a DNS record if the account is the owner of that record. This ensures that only the original creator of the record can modify or delete it, which is the intended behavior of secure only dynamic updates.
 
-We have seen this becoming a challenge where a DHCP server also does the DNS record updating on behalf of clients using FQDN DHCP option (option 81). In such cases, updating record becomes a challenge due to inconsistency. The records which are updated by DHCP server cannot be modified by the original client and vice versa.  
+However, challenges can arise when a DHCP server updates DNS records on behalf of clients using FQDN DHCP option (option 81). In such cases, inconsistencies may occur because DNS records updated by the DHCP server cannot be modified by the original client, and vice versa.
 
-As mentioned above, Microsoft recommends that the client machine should update its own record instead of DHCP server due to various reasons. Microsoft also made a design change to enforce this behaviour. Which disregards the DHCP server's preference of updating both A and PTR record for the client. To override this behaviour please refer to [Unexpected DNS record registration behavior if DHCP server uses "Always dynamically update DNS records"](../../windows-server/networking/dns-registration-behavior-when-dhcp-server-manages-dynamic-dns-updates.md).
+As mentioned earlier, Microsoft recommends that client machines update their own DNS records rather than relying on the DHCP server. This is due to several reasons, and Microsoft has also implemented a design change to enforce this behavior. This change prevents the DHCP server from updating both A and PTR records for clients. To override this behavior, refer to [Unexpected DNS record registration behavior if DHCP server uses "Always dynamically update DNS records"](../../windows-server/networking/dns-registration-behavior-when-dhcp-server-manages-dynamic-dns-updates.md).
 
-However, in an ideal scenario, the client should be updating its record. But if there are already existing records which were updated by DHCP, the client won't be able to update them. So, to overcome such situation, many enterprises use a reciprocal practice of enforcing the DHCP server to update the client's record, which is highly discouraged.  
+Ideally, the client should update its own DNS record. However, if a record was previously updated by the DHCP server, the client won't be able to modify it. To address this, some enterprises enforce the DHCP server to update the client’s record, which is strongly discouraged.
 
-The recommendation is to let DHCP server remove them, or scavenging cycle remove them post which the client will be able to update it. 
+The recommended approach is to allow the DHCP server, or the scavenging process, to remove the records. Once it's removed, the client will then be able to update it.
 
-### Separate DHCP server from AD-DS
+### Separate DHCP server from ADDS
 
-DHCP Server should be on a different server and not on AD-DS (Domain Controller): 
+The DHCP server should be hosted on a separate server, not on a DC running Active Directory Domain Services (ADDS).
 
-DHCP Server, in a secure update setup, uses machine's domain account to register any record. Due to permissions involved in updating a secure record, when DHCP server is on an AD-DS server, it uses computer account i.e. Domain Controller's Account, to register any record. This means that the static records can get overwritten by the DHCP server if FQDN option is also enabled on DHCP server and DHCP server is not configured with a service account. This can cause potential problems like scavenging of Static records later. To avoid such problems, the DHCP server should be configured with a service account and should be on a different server. Please refer to [How to configure DNS dynamic updates in Windows Server - Windows Server " Microsoft Learn](../../windows-server/networking/configure-dns-dynamic-updates-windows-server-2003.md).
+In a secure update setup, the DHCP server uses its machine's domain account to register DNS records. When the DHCP server runs on a DC, it uses the DC's account to register records. This means that static records can be overwritten by the DHCP server if the FQDN option is enabled and the DHCP server is not configured with a dedicated service account. This can cause issues like the unintended scavenging of static records.
+
+To prevent such problems, the DHCP server should be configured with a service account and run on a separate server. For more information, see [How to configure DNS dynamic updates in Windows Server - Windows Server](../../windows-server/networking/configure-dns-dynamic-updates-windows-server-2003.md).
 
 ## Troubleshoot general and known issues
 
 ### Client side issues
 
-SOA not found.
-
-Client not sending dynamic Update. Discussed in the article: [How to enable or disable DNS updates in Windows](../../windows-server/networking/enable-disable-dns-dynamic-registration.md)
-
-Client unable to get Authentication ticket TSIG from DC.
+1. Start of Authority (SOA) not found.
+2. Client not sending dynamic Update. See [How to enable or disable DNS updates in Windows](../../windows-server/networking/enable-disable-dns-dynamic-registration.md).
+3. Client cannot get authentication ticket Transaction Signature(TSIG) from DC.
 
 ### DHCP server issues
 
-DHCP Server not sending Dynamic Update on behalf of client.
-
-DHCP DNS Update queue length. Majorly covered in [DHCP dynamic updates of DNS registrations are delayed or not processed](../../windows-server/networking/dhcp-dynamic-updates-of-dns-registrations-delayed.md)  
-
-There is a conflict when DHCP tries updating client's record as it is already registered with Client's Machine account. [Unexpected DNS record registration behavior if DHCP server uses "Always dynamically update DNS records"](../../windows-server/networking/dns-registration-behavior-when-dhcp-server-manages-dynamic-dns-updates.md)  
+1. DHCP server doesn't send dynamic update on behalf of client.
+2. DHCP DNS update queue length. See [DHCP dynamic updates of DNS registrations are delayed or not processed](../../windows-server/networking/dhcp-dynamic-updates-of-dns-registrations-delayed.md).
+3. There is a conflict when DHCP tries to update client's record as it is already registered with client's machine account. See [Unexpected DNS record registration behavior if DHCP server uses "Always dynamically update DNS records"](../../windows-server/networking/dns-registration-behavior-when-dhcp-server-manages-dynamic-dns-updates.md).
 
 ### DNS server issues
 
-Permissions issue with DNS zone. 
+1. Permissions issue with DNS zone.
+2. Changes in the authenticated account settings on the DNS Zone level.
+3. DHCP's configuration for the service account for dynamic update.
 
-Changes in the authenticated account settings on the DNS Zone level. 
+## Troubleshoot DNS dynamic update issues.  
 
-DHCP's configuration for the service account for dynamic update. 
+> [!NOTE]
+> This section is a multipart series which discusses various aspects from Windows client to server to be checked when such issue occurs.
 
-### Working with DNS Dynamic Update issues.  
-
-Note: This is a multipart series which discusses various aspects from Windows Client to server to be checked when such issue occurs. 
-
-We should always start with basic checks like if the issue is happening with multiple clients, Clients of same subnet, particular client etc. This helps in scoping the issue from client to server or the network. To understand how DNS Dynamic update is triggered (with example) please read [How to configure DNS dynamic updates in Windows Server - Windows Server " Microsoft Learn](../../windows-server/networking/configure-dns-dynamic-updates-windows-server-2003#how-windows-based-computers-update-their-dns-names.md).
-
-## General Checklist
+We should begin with basic checks, such as determining whether the issue affects multiple clients, clients on the same subnet, or a specific client. This helps narrow down whether the problem lies with the client, server, or network. For an explanation of how DNS dynamic updates are triggered, including examples, see [How to configure DNS dynamic updates in Windows Server - Windows Server](../../windows-server/networking/configure-dns-dynamic-updates-windows-server-2003#how-windows-based-computers-update-their-dns-names.md).
 
 Now as we understand the DNS dynamic updates. Let's also follow a checklist to ensure that the settings are in place for dynamic updates for the client.
 
-### DNS Client side
+### DNS client side checklist
 
-Check if "Register this connection's addresses in DNS" is selected: 
+Check if **Register this connection's addresses in DNS** is selected:
 
 ```powershell
 #Get the list of interfaces which are up and connected.
@@ -128,11 +123,7 @@ Get-DnsClient -InterfaceIndex $Adapters.ifIndex
 #If there are more than one interface active and up you may use "Get-DNSClient" to see the registration status of all interfaces.
 ```
 
-What are we looking for?
-
-**RegisterThisConnectionsAddress** should be **True**.
-
-Change its value to **True** if it was **False**:
+In the outcome, **RegisterThisConnectionsAddress** should be **True**. Change the value to **True** if it was **False**:
 
 ```powershell
 #Get the list of interfaces which are up and connected.
@@ -144,88 +135,80 @@ Set-DnsClient -RegisterThisConnectionsAddress $True -InterfaceIndex $Adapters.if
 
 Verify the value by taking the `Get-DnsClient` output and ensure that the RegisterThisConnectionsAddress is set to **True**.
 
-#### Is there a group policy which can affect this setting?
+There is a Group Policy that can modify this behavior. By default, network interfaces are set to register their connection. However, an enterprise can use the "dynamic update" Group Policy setting to control how a client sends DNS dynamic updates. The group policy locates at:
 
-There is a group policy which can modify the behaviour. However, the default setting of interface is to register the connection. That said, an enterprise can choose "Dynamic Update" group policy setting to define the behaviour of a client about Sending DNS Dynamic Updates. 
+**Computer Configuration** > **Administrative Templates** > **Network** > **DNS Client** > **dynamic update**
 
-Computer Configuration > Administrative Templates > Network > DNS Client > Dynamic Update. 
+### DNS server side check list
 
-### DNS Server side
+#### Ensure the Zone is Writable
 
-**Ensure the Zone is Writable**:
+The domain where the client is dynamically registered must be a zone that is a writable copy. This means the zone should contain an SOA record for the DNS server hosting the zone, and the client must be able to reach this server through the network.
 
-The domain in which the client is going to get dynamically registered, is a zone which should be a writable copy. Which also means that the given zone should bear an SOA record of the same DNS server where the zone is hosted and to which the clients can reach through the network. 
+There are typically two types of setups.  
 
-There are generally multiple types of setups.  
+1. Client pointing to a cache-only DNS server: This DNS server doesn't host any domain zone but uses conditional forwarders or forwarders to point to the actual DNS server, which holds the zone (either writable or readable).
+2. Simple setup: The client points directly to DNS servers that host the domain zone.
 
-Client pointing to Cache only DNS server (a DNS server which does not has any Domain zone but just conditional forwarders or forwarders. Which in-turn points to the actual DNS server which has the zone (writable or readable). 
+The option one is generally chosen for load balancing and a bigger environment with a lot of clients and the idea is to shift the load of Name resolution from the available DCs to Additional servers. However, in this setup it is important that the client should have connectivity for DNS protocol to the server bearing SOA record for the domain zone. Without which the dynamic update will fail.
 
-Simple setup where the clients are pointing to the DNS servers which has the given Domain zone hosted. 
+#### Allow dynamic updates
 
-The option one is generally chosen for load balancing and a bigger environment with a lot of clients and the idea is to shift the load of Name resolution from the available DCs to Additional servers. However, in this setup it is important that the client should have connectivity for DNS protocol to the server bearing SOA record for the domain zone. Without which the dynamic update will fail. 
+An AD-integrated DNS zone hosted on Microsoft DNS server has three options about dynamic update:
 
-**Allow Dynamic Updates**: An AD-Integrated DNS zone hosted on Microsoft DNS server has three options about dynamic update: 
+- None
+- Non-Secure and Secure
+- Secure Only
 
-None 
+> [!NOTE]
+> Option 3 is available only in case of AD integrated DNS zone.
 
-Non-Secure and Secure 
+To allow dynamic update the zone should be configured with "Non-Secure and Secure" or "Secure Only" update type. It is recommended to use "Secure Only" for AD integrated zones.
 
-Secure Only 
+#### Check DNS Auditing
 
-Note: Option 3 is available only in case of AD integrated DNS zone. 
+DNS Server logging is discussed in [DNS Logging and Diagnostics](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn800669(v=ws.11)) and specifically to verify if the record(s) that you are concerned about, is getting registered, can be tracked with DNS Audit events [DNS Logging and Diagnostics](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn800669(v=ws.11)#audit-events), Event ID: 519. One can filter the DNS audit events, which are enabled by default, with the given ID and verify if the record was successfully registered.  
 
-To Allow dynamic update the zone should be configured with "Non-Secure and Secure" or "Secure Only" update type. It is recommended to use "Secure Only" for AD integrated zones. 
+> [!NOTE]
+> The Audit event log is local to the given DNS server. Which means, that the given ID will only be visible on the DNS server where the record is registered.  
 
-**Check DNS Auditing**:
+### Scenario: DHCP server can't complete dynamic update on behalf of client or the registrations are happening with a delay.
 
-DNS Server logging is discussed in [DNS Logging and Diagnostics " Microsoft Learn](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn800669(v=ws.11)) and specifically to verify if the record(s) that you are concerned about, is getting registered, can be tracked with DNS Audit events [DNS Logging and Diagnostics " Microsoft Learn](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn800669(v=ws.11)#audit-events), Event ID: 519. One can filter the DNS audit events, which are enabled by default, with the given ID and verify if the record was successfully registered.  
+DHCP Server is configured to update DHCP client's record. The configuration is as specified in [How to configure DNS dynamic updates in Windows Server](../../windows-server/networking/configure-dns-dynamic-updates-windows-server-2003#how-dhcpdns-update-interaction-works.md). The windows clients are also configured to honour DHCP option 81 and is configured as mentioned in [Unexpected DNS record registration behavior when the DHCP server manages dynamic DNS updates](../../windows-server/networking/dns-registration-behavior-when-dhcp-server-manages-dynamic-dns-updates.md).
 
-**Note:** The Audit event log is local to the given DNS server. Which means, that the given ID will only be visible on the DNS server where the record is registered.  
+> [!NOTE]
+> Microsoft recommends that the client should register its record instead of DHCP or any other device.
 
-## Scenario
+With all configurations in place, the DNS record may be registered with significant delay or might not get registered at all. You can verify this by checking the DHCP Server audit logs, located in the daily audit files at *C:\Windows\System32\DHCP*.
 
-DHCP Server unable to complete Dynamic Update on behalf of client or the registrations are happening with a delay. 
-
-DHCP Server is configured to update DHCP client's record. The configuration is as specified in [How to configure DNS dynamic updates in Windows Server - Windows Server " Microsoft Learn](https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/configure-dns-dynamic-updates-windows-server-2003#how-dhcpdns-update-interaction-works). The windows clients are also configured to honour DHCP option 81 and is configured as mentioned in [Unexpected DNS record registration behavior when the DHCP server manages dynamic DNS updates - Windows Server " Microsoft Learn](https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/dns-registration-behavior-when-dhcp-server-manages-dynamic-dns-updates). 
-
-*Note: Microsoft recommends that the client should register its record instead of DHCP or any other device.** *
-
-With all the configuration in place, the DNS record is either registered with a lot of delay or it never gets registered on the DNS server. One can verify that from DHCP Server Audit logs present in Day wise audit in "C:\Windows\System32\DHCP". 
-
-*Important** *
-
-*A similar issue is discussed in *[https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/dhcp-dynamic-updates-of-dns-registrations-delayed](https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/dhcp-dynamic-updates-of-dns-registrations-delayed)* ** *
+> [!IMPORTANT]
+> A similar issue is discussed in [DHCP dynamic updates of DNS registrations are delayed or not processed](../../windows-server/networking/dhcp-dynamic-updates-of-dns-registrations-delayed.md).
 
 ### Cause
 
-There could be different scenarios due to which this can happen but one of the major issues is with DHCP's DNS dynamic queue is full i.e. DHCP is not able to accommodate any new requests. This can generally happen due to two major reasons 
+There are various reasons why this issue might occur, but a common cause is the DHCP server's DNS dynamic update queue being full, meaning it cannot process new requests. This typically happens for two main reasons:
 
-There is no SOA response from the DNS servers (configured in the DHCP scope) as the SOA query is for Reverse lookup zone and these Zones are not configured on the DNS servers.
-
-There is no SOA response or Dynamic update is not allowed on the SOA server. This is covered in [https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/dhcp-dynamic-updates-of-dns-registrations-delayed](https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/dhcp-dynamic-updates-of-dns-registrations-delayed) 
+1. The DNS servers (configured in the DHCP scope) are not returning an SOA response because the SOA query is for a reverse lookup zone, and these zones are not configured on the DNS servers.
+2. There is no SOA response or Dynamic update is not allowed on the SOA server. For more information, see [DHCP dynamic updates of DNS registrations are delayed or not processed](../../windows-server/networking/dhcp-dynamic-updates-of-dns-registrations-delayed.md).
 
 ### Resolution
 
-Create Reverse lookup zone(s) on the DNS server(s). 
+Create reverse lookup zones on the DNS servers.
 
-Method 1: 
+#### Method 1
 
 Check and consult your network team and the DHCP configuration to get a list of all the scopes/subnets in your network. Create Reverse lookup for each such subnet. This is appropriate for both IPv4 and IPv6 reverse lookup zones.  
 
- 
+#### Method 2
 
-Method 2: 
+Create zone with Private IP root range to avoid any misses. For example:
 
-Create zone with Private IP root range to avoid any misses. Like  
+- 168.192.in-addr.arpa
+- 16.172.in-addr.arpa
+- 10.in-addr.arpa
 
-168.192.in-addr.arpa 
+This covers all the subnet ranges for IPv4 addresses in the environment. If you have some reverse lookup zones already created, they automatically become delegation in these zones.  
 
-16.172.in-addr.arpa 
+### Explanation
 
-10.in-addr.arpa 
-
-This will cover all the subnet ranges for IPv4 addresses in the environment. If you have some reverse lookup zones already created, they will automatically become delegation in these zones.  
-
-Explanation 
-
-When DHCP option 81 is configured, the DHCP server checks for the FQDN returned by the client and asks for its SOA from the configured DNS servers in the Scope. If the SOA is not returned by the configured DNS servers in the Scope, the request is queued for retry. When there is a missing reverse lookup zone, the queue tends to get filled up as there will be a request for each lease and no zone to register the PTR record. Same goes for forward lookup if the Dynamic update is disabled on the SOA or the SOA is not reachable. 
+When DHCP option 81 is configured, the DHCP server checks the FQDN returned by the client and requests its SOA from the DNS servers configured in the scope. If the SOA is not returned, the request is queued for a retry. When a reverse lookup zone is missing, the queue tends to fill up because there will be a request for each lease, but no zone to register the PTR record. Similarly, for forward lookups, if dynamic updates are disabled on the SOA server or the SOA server is unreachable, the queue will also fill up.
