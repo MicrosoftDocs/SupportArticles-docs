@@ -4,7 +4,7 @@ description: Resolves issues related to upgrading the LinkedInSalesNavigatorForU
 author: udaykirang
 ms.author: udag
 ms.reviewer: sagarwwal
-ms.date: 10/09/2024
+ms.date: 10/15/2024
 ms.custom: sap:LinkedIn Sales Navigator\LinkedIn Sales Navigator integration errors
 ---
 # Can't upgrade the LinkedInSalesNavigatorForUnifiedClient solution
@@ -17,7 +17,7 @@ You can't upgrade the **LinkedInSalesNavigatorForUnifiedClient** solution from v
 
 ## Cause
 
-This issue occurs because of the dependencies that exist for the solution. You can't update a solution that has dependencies associated with it.  
+This issue occurs due to existing dependencies associated with the solution. You can't update a solution that has dependencies.
 
 ## Resolution  
 
@@ -27,4 +27,4 @@ To resolve this issue, you must remove the existing dependencies for the **Linke
 
 1. Uninstall the **msdyn_LinkedInSalesNavigatorAnchor** solution.  
 
-1. After the solutions are successfully deleted, install them again. For more information, see [Install and enable LinkedIn Sales Navigator](/dynamics365/linkedin/install-sales-navigator).  
+1. After the solutions are successfully deleted, reinstall them. For more information, see [Install and enable LinkedIn Sales Navigator](/dynamics365/linkedin/install-sales-navigator).  
