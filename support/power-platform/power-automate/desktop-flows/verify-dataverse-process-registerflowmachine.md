@@ -2,14 +2,14 @@
 title: Verify and activate the RegisterFlowMachine process
 description: Resolves the Dataverse solution has the process RegisterFlowMachine deactivated error that occurs when you register a machine with Microsoft Power Automate for desktop.
 ms.custom: sap:Desktop flows\Verify dataverse process RegisterFlowMachine 
-ms.date: 10/10/2024
+ms.date: 10/15/2024
 ms.reviewer: alarnaud, johndund, guco
 ms.author: fredg
 author: fredg
 ---
 # "The registration failed because Dataverse solution has the process 'RegisterFlowMachine' deactivated" error
 
-This article provides a resolution for an issue where you can't register your machine with Microsoft Power Automate for desktop.
+This article provides a resolution for an issue where you can't [register your machine](/power-automate/desktop-flows/manage-machines#register-a-new-machine) with Microsoft Power Automate for desktop.
 
 ## Symptoms
 
@@ -25,7 +25,7 @@ For more information, see [the processes](#processes-that-should-be-activated-fo
 
 ## Resolution
 
-To solve this issue, you should activate the **RegisterFlowMachine** process.
+To solve this issue, activate the **RegisterFlowMachine** process.
 
 ### Prerequites
 
@@ -59,7 +59,7 @@ The organization endpoint could be found in [Environments](https://admin.powerpl
 
     :::image type="content" source="media/verify-dataverse-process-registerflowmachine/activate-process.png" alt-text="Screenshot that shows how to activate the RegisterFlowMachine process.":::
 
-7. Open the Power Automate machine runtime application and try to register again in the same environment.
+7. Open the Power Automate machine runtime application and try to [register](/power-automate/desktop-flows/manage-machines#register-a-new-machine) again in the same environment.
 
 ## Processes that should be activated for Power Automate
 
