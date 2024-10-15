@@ -1,12 +1,10 @@
 ---
 title: Troubleshoot Azure App Configuration extension installation errors 
-description: Troubleshoot errors that occur while installing the Azure App Configuration extension  for Azure Kubernetes Service (AKS).
-author: RichardChen820
-ms.author: junbchen
+description: Troubleshoot errors that occur while installing the Azure App Configuration extension for Azure Kubernetes Service (AKS).
 editor: v-jsitser
-ms.reviewer: v-leedennis
+ms.reviewer: junbchen, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
-ms.date: 09/26/2024
+ms.date: 10/15/2024
 ms.custom: sap:Extensions, Policies and Add-Ons
 ---
 # Troubleshoot Azure App Configuration extension installation errors
