@@ -1,7 +1,7 @@
 ---
 title: TLS client offered only unsupported versions
 description: Troubleshoot tls client offered only unsupported versions error messages from the client when connecting to the Azure Kubernetes Service (AKS) API server.
-ms.date: 07/08/2022
+ms.date: 10/14/2024
 editor: v-jsitser
 ms.reviewer: chiragpa, nickoman, v-leedennis
 ms.service: azure-kubernetes-service
