@@ -326,7 +326,7 @@ While performing OS migration, you have migrated from SLES15SP3 to SLES15SP4. No
 SUSE migration from SLES15SP3 to SP4 fails  and an error stating `no migration available` as shown:
 
 **Error:** 
-:::image type="content" source="media/linux-upgrade-suse-15sp1/Slesmigrationfailure.png" :::
+:::image type="content" source="media/linux-upgrade-suse-15sp1/upgrade-path.png" alt-text="Diagram shows the supported upgrade path. Only SLES 12 SP4 or 12 SP5 can upgrade to SLES 15 SP1." border="false":::
 
 **Cause:** The 'certification module' is present due to which the `zypper migration` fails.
 
