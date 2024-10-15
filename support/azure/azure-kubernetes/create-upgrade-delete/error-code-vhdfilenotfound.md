@@ -30,13 +30,13 @@ Under rare circumstances, the 124 exit code for the Azure Virtual Machine Scale 
 | `K8SAPIServerConnFailVMExtensionError`      | 51                |
 | `K8SAPIServerDNSLookupFailVMExtensionError` | 52                |
 
-It usually hides a network connectivity issue from the AKS node to `mcr.microsoft.com`, or to the API server's fully qualified domain name (FQDN) address.
-
-Besides that, this error may also occur when there is a connectivity issue with FQDNs such as acs-mirror.azureedge.net, which is one of the required FQDNs for AKS.
+This error occurs when there’s a connectivity issue between your AKS cluster and the required Azure endpoints, such as `mcr.microsoft.com` or `acs-mirror.azureedge.net`.
 
 ## Solution
 
-Follow the troubleshooting guides in the following articles:
+Review [outbound network and FQDN rules for Azure Kubernetes Service (AKS) clusters](/azure/aks/outbound-rules-control-egress) and make sure that all API services FQDN are all allowed.
+
+For detailed troubleshooting steps, refer to the troubleshooting guides in these articles
 
 - [Troubleshoot the OutboundConnFailVMExtensionError error code (50)](error-code-outboundconnfailvmextensionerror.md)
 
@@ -44,7 +44,6 @@ Follow the troubleshooting guides in the following articles:
 
 - [Troubleshoot the K8SAPIServerDNSLookupFailVMExtensionError error code (52)](error-code-k8sapiserverdnslookupfailvmextensionerror.md)
 
-Also, take a look at the [all AKS required FQDNs](/azure/aks/outbound-rules-control-egress) and make sure they are all allowed.
 
 ## References
 
