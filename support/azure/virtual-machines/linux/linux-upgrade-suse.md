@@ -2,16 +2,13 @@
 title: Troubleshoot SLES migration issue
 description: This article provides troubleshooting scneario with associated solution while performing SLES migrations
 services: virtual-machines
-documentationcenter: ''
 author: rnirek
+ms.author: rnirek
 tags: virtual-machines
-ms.custom: sap:Kernel Upgrades, Package Management issue (Yum, Zypper, RPM, DPKG, APT), linux-related-content
 ms.service: azure-virtual-machines
 ms.collection: linux
 ms.topic: troubleshooting
-ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
-ms.devlang: azurecli
 ms.date: 10/15/2024
 ms.reviewer: dvargas
 ---
