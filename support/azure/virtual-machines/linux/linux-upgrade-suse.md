@@ -302,7 +302,30 @@ Mar 11 13:39:15 localhost systemd[1]: suse-migration-prepare.service: Failed wit
 While performing OS migration, you have migrated from SLES15SP3 to SLES15SP4. Now, while performing migration from SLES15SP4 to SLES15SP5, Migration and updates are not working as expected. 
 
 **Error:** 
-![TSG1.png](/.attachments/TSG1-88495cb7-29ea-4a57-94b0-b8a8374fb96e.png)
+```output
+         sle-module-desktop-applications/15.3/x86_64 Desktop Applications Module
+         sle-module-development-tools/15.3/x86_64 Development Tools Module
+         sle-ha/15.3/x86_64          SUSE Linux Enterprise High Availability Extension 15 SP3
+         sle-module-sap-applications/15.3/x86 64  SAP Applications Module
+         sle-module-live-patching/15.3/x86_64   SUSE Linux Enterprise Live Patching
+         PackageHub/15.3/x86 64   SUSE Package Hub 15
+         sle-module-certifications/15.3/x86_64   Certifications Module
+ Unavailable migrations (product is not mirrored):
+         SUSE Linux Enterprise Server for SAP Applications 15 SP6 x86_64 (not available) Basesystem Module 15 SP6 x86_64 (not available) Certifications Module 15 SP6 x86_64 (not available) Containers Module 15 SP6 x86_64 (not available)
+         Desktop Applications Module 15 SP6 x86_64 (not available)
+         Server Applications Module 15 SP6 x86_64 (not available)
+         SUSE Linux Enterprise Live Patching 15 SP6 x86_64 (not available)
+         SUSE Package Hub 15 SP6 x86_64 (not available)
+         Development Tools Module 15 SP6 x86_64 (not available)
+         Legacy Module 15 SP6 x86_64 (not available)
+         Public Cloud Module 15 SP6 x86_64 (not available)
+         SUSE Linux Enterprise High Availability Extension 15 SP6 x86 64 (not available) Web and Scripting Module 15 SP6 x86_64 (not available)
+         SAP Applications Module 15 SP6 x86_64 (not available)
+
+No migration available.
+
+'/usr/lib/zypper/commands/zypper-migration' exited with status 1
+```
 
 **Resolution:**
  Activate and Deactivate the following modules  prior to the migration.
@@ -323,11 +346,27 @@ While performing OS migration, you have migrated from SLES15SP3 to SLES15SP4. No
 
 # 9. Migration fails from SLES15SP3 to SLES15SP4 with the error `No Migration available`.
 
-SUSE migration from SLES15SP3 to SP4 fails  and an error stating `no migration available` as shown:
-
 **Error:** 
+```output
+      Node01:~# SUSEConnect -S
+      Error: Invalid system credentials, probably because the registered system was deleted in SUSE Customer Center. Check https://scc.suse.co m whether your system appears there. If it does not, please call SUSEConnect --cleanup 
+      and re-register this system.
+      Node01:~# zypper migration
 
-:::image type="content" source="media/linux-upgrade-suse-15sp1/Slesmigrationfailure.png"  border="false":::
+      Executing '/usr/bin/zypper patch-check-updatestack-only'
+      Loading repository data...
+      Warning: No repositories defined. Operating only with the installed resolvables. Nothing can be installed. Reading installed packages...
+
+     O patches needed (0 security patches)
+
+
+     Executing '/usr/bin/zypper ref'
+
+     Warning: There are no enabled repositories defined.
+     Use 'zypper addrepo' or 'zypper modifyrepo' commands to add or enable repositories.
+     repository refresh failed, exiting
+     '/usr/lib/zypper/commands/zypper-migration' exited with status 1
+```
 
 **Cause:** The 'certification module' is present due to which the `zypper migration` fails.
 
