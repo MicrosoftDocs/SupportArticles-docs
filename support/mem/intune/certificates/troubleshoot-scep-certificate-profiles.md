@@ -86,7 +86,7 @@ Depending on the enrollment type:
 
 ### Logs for iOS and iPadOS devices
 
-For devices that run iOS/iPadOS, collect console logs:
+For devices that run iOS/iPadOS, collect console logs on a Mac computer:
 
 1. Connect the iOS/iPadOS device to Mac, and then go to **Applications** > **Utilities** to open the Console app.
 
