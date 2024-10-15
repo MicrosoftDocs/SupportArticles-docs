@@ -236,7 +236,7 @@ If your application pod starts before the Envoy sidecar starts, the application 
 
 ### Step 5: Setup Service Entry if using HTTP proxy for outbound traffic access
 
-Clusters using an HTTP proxy for outbound internet access will need to set up a Service Entry. For setup instructions see [HTTP proxy support in Azure Kubernetes Service](/azure/aks/http-proxy#istio-add-on-http-proxy-for-external-services)
+Clusters using an HTTP proxy for outbound internet access will need to set up a Service Entry. For setup instructions see [HTTP proxy support in Azure Kubernetes Service](/azure/aks/http-proxy#istio-add-on-http-proxy-for-external-services).
 
 ## Error messages
 
