@@ -15,7 +15,7 @@ This article explains how to identify and resolve the "PublicIPCountLimitReached
 
 ## Symptoms
 
-AKS cluster creation, update, upgrade, or any operation that triggers the creation of a Public IP address, such as deploying a Kubernetes Service with a Public Load Balancer, may fail with the error message "PublicIPCountLimitReached."
+AKS cluster creation, update, upgrade, or any operation that triggers the creation of a Public IP address, such as deploying a Kubernetes Service with a Public Load Balancer, may fail with the error message "PublicIPCountLimitReached".
 
 ## Cause
 
@@ -23,7 +23,11 @@ This error occurs when you've reached the maximum number of public IP addresses 
 
 ## Solution
 
-To increase the public IP limit or quota for your subscription, navigate to the [Azure portal](https://portal.azure.com/#view/Microsoft_Azure_Billing/SubscriptionsBladeV2), open your subscriptions, and select the one where you're performing the operation. Go to "Usage + quotas," set the Provider to "Networking," and optionally filter by the region of your AKS cluster. Next to "Public IP Addresses," click the "Create a new support request" button. You'll be redirected to a page where you can specify the new limit you require and provide additional details such as contact information.
+To increase the public IP limit or quota for your subscription, follow these steps:
+
+1. Navigate to the [Azure portal](https://portal.azure.com/#view/Microsoft_Azure_Billing/SubscriptionsBladeV2), select your subscriptions that you're performing the operation.
+2. In the **Settings** section, select **Usage + quotas**. Set the **Provider** to **Networking**, and optionally filter by the region of your AKS cluster.
+3. Locate the **Public IP Addresses** record. In the same line, select the **Create a new support request** button. You'll be redirected to a page where you can specify the new limit you require and provide additional details such as contact information.
 
 This process will create a support request to increase your public IP address quota for the specified region. See the screenshots below for visual guidance.
 
