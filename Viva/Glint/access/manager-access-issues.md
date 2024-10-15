@@ -3,16 +3,17 @@ title: Resolve issues when accessing Viva Glint survey results as a manager
 description: Resolves some common issues that you might encounter when you try to view survey results for your team.
 manager: dcscontentpm
 ms.reviewer: aweixelman
-ms.date: 10/14/2024
+ms.date: 10/15/2024
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
 ms.custom: 
+  - sap:User Management\User Permissions and Roles
   - CSSTroubleshoot
   - CI 195105
 ---
 
-# Can't access Viva Glint survey results as a manager
+# Resolve issues when accessing Viva Glint survey results as a manager
 
 Microsoft Viva Glint survey programs enable your organization to collect data and listen to feedback about employee job satisfaction. To access your Viva Glint dashboard as a manager in your organization, sign in by using one of the following links based on the region of your organization:  
 
