@@ -60,6 +60,6 @@ If browsing in Incognito mode, disable the **Block third-party cookies** option 
 1. In Apple Safari, open your organization.
 1. Go to **Preferences** and check the following configurations:
 
-    - Ensure LinkedIn and your Dynamics 365 organization aren't listed in the **Content Blockers**. For more information, see [Change Websites preferences in Safari on Mac](https://support.apple.com/en-in/guide/safari/ibrwe2159f50/16.0/mac/11.0.)
+    - Ensure LinkedIn and your Dynamics 365 organization aren't listed in the **Content Blockers**. For more information, see [Change Websites preferences in Safari on Mac](https://support.apple.com/en-in/guide/safari/ibrwe2159f50/16.0/mac/11.0).
     - [Allow pop-up windows for your Dynamics 365 organization](https://support.apple.com/en-sg/guide/safari/sfri40696/mac).
     - Ensure the **Prevent cross-site tracking** and **Block all Cookies** options aren't selected in the **Privacy** tab.  
