@@ -69,11 +69,11 @@ First, make sure that you have  the [latest PowerShell module installed and conf
  
     Connect-AzAccount 
     Select-AzSubscription -SubscriptionId $SubID 
-    Set-AzVMAccessExtension -ResourceGroupName $RgName -Location $Location -VMName $VmName -Credential (get-credential) -typeHandlerVersion "2.0" -Name VMAccessAgent 
+    Set-AzVMAccessExtension -ResourceGroupName $RgName -VMName $VmName -Credential (get-credential) -typeHandlerVersion "2.0" -Name VMAccessAgent 
     ```
 ### **Reset the Remote Desktop Services configuration**
 
-1. Reset remote access to your VM with the [Set-AzVMAccessExtension](/powershell/module/az.compute/set-azvmaccessextension) PowerShell cmdlet. The following example resets the access extension named `VMAccessAgent` on the VM named `myVM` in the `myResourceGroup` resource group:
+1. Reset remote access to your VM with the [Set-AzVMAccessExtension](/powershell/module/az.compute/set-azvmaccessextension) PowerShell cmdlet. The following example resets the access extension named `VMAccessAgent` on a VM in the resource group:
 
     ```powershell
     $SubID = "<SUBSCRIPTION ID>" 
