@@ -89,7 +89,7 @@ You have to make sure that the Report Viewer controls are available either in th
    - *Microsoft.ReportViewer.ProcessingObjectModel.dll*
    - *Microsoft.ReportViewer.WinForms.dll*
 
-1. The latest versions of RML Utilities includes these DLLs in the application folder.
+1. The latest versions of RML Utilities include these DLLs in the application folder.
 1. If not available, you can download these DLLs by using the following PowerShell script:
 
    ```powershell
@@ -129,14 +129,14 @@ You can obtain these DLLs from the respective software packages of the vendors:
 
 ### Dependencies for ReadTrace and Ostress
 
-ReadTrace and Ostress use the ODBC and OLEDB drivers shipped as part of the [SQL Server Native Client](/sql/relational-databases/native-client/applications/installing-sql-server-native-client). Starting with version **09.04.0103**, RML Utilities isn't dependent on SQL Server Native client (SNAC) only. It can use the Microsoft ODBC or OLEDB drivers on the system where it's installed. 
+ReadTrace and Ostress use the ODBC and OLEDB drivers shipped as part of the [SQL Server Native Client](/sql/relational-databases/native-client/applications/installing-sql-server-native-client). Starting with version **09.04.0103**, the RML Utilities suite isn't dependent on SQL Server Native client (SNAC) only. It can use the Microsoft ODBC or OLEDB drivers on the system where it's installed.
 If you plan to analyze Extended Event files (_*.xel_), make sure that [Visual C++ 2010 Redistributable](/cpp/windows/latest-supported-vc-redist) is installed on the system.
 
 ## Known issues and fixes
 
 |Issue|Resolution|
 |------|---|
-|ReadTrace encounters error "Unable to connect to the specified server.  Initial HRESULT: 0x80040154" on machines where SQL Server isn't installed or only SQL Server 2022 is installed|Fixed in version 09.04.0103. As a workaround, you can install SQL Native Client or another version of SQL Server. HRESULT 0x80040154	-2147221164	REGDB_E_CLASSNOTREG	Class not registered	winerror.h. It happens because SQL 2022 doesn't ship the SQL Native Client.|
+|ReadTrace encounters error "Unable to connect to the specified server.  Initial HRESULT: 0x80040154" on machines where SQL Server isn't installed or only SQL Server 2022 is installed|Fixed in version 09.04.0103. As a workaround, you can install SQL Native Client or another version of SQL Server. HRESULT 0x80040154 REGDB_E_CLASSNOTREG Class not registered is a winerror.h that means a COM component is not registered because likely it isn't installed. It happens because SQL 2022 doesn't ship the SQL Native Client.|
 |ReadTrace encounters "ERROR: Event runtime check: Detected missing column [cached_text] in event [sp_cache_remove] at event sequence 209494"|Fixed in version 09.04.0102. As a workaround, you can add trace flags (`-T28 -T29`) to the ReadTrace command line.|
 |Reporter encounters "Could not load file or assembly 'Reporter, Version=9.4.10000.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. Strong name validation failed. (Exception from HRESULT: 0x8013141A)"|Fixed in version 09.04.0102. As a workaround, you can create the following registry key to override the strong name verification: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\StrongName\Verification\Reporter,31BF3856AD364E35`.|
 |ReadTrace fails with error "Unable to connect to the specified server. Initial HRESULT: 0x80040154". Ostress fails with error "Attempt to establish connection failed. SSL Security error.".|See instructions to [Install SQL Server Native Client](/sql/relational-databases/native-client/applications/installing-sql-server-native-client).|
