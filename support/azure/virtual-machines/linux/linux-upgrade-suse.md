@@ -326,7 +326,7 @@ While performing OS migration, you have migrated from SLES15SP3 to SLES15SP4. No
 SUSE migration from SLES15SP3 to SP4 fails  and an error stating `no migration available` as shown:
 
 **Error:** 
-![TSG2.png](/.attachments/TSG2-6d4aa25a-f287-46dd-8306-b5249dbf7b62.png)
+:::image type="content" source="media/linux-upgrade-suse-15sp1/Slesmigrationfailure.png" :::
 
 **Cause:** The 'certification module' is present due to which the `zypper migration` fails.
 
