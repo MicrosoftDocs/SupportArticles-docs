@@ -12,12 +12,10 @@ ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.devlang: azurecli
-ms.date: 10/11/2024
+ms.date: 10/15/2024
 ms.reviewer: dvargas
 ---
  [**Tags**](/Tags): [Azure](/Tags/Azure) [Azure Linux Escalation](/Tags/Azure-Linux-Escalation) [Azure-Linux-SAP&Clustering](/Tags/Azure%2DLinux%2DSAP&Clustering) [Azure-Linux-SAP-Clustering-howto](/Tags/Azure%2DLinux%2DSAP%2DClustering%2Dhowto) [Linux](/Tags/Linux) [SUSE](/Tags/SUSE) [Virtual Machine](/Tags/Virtual-Machine) [suse-tsg](/Tags/suse%2Dtsg)                                                                                                                                              
-
-
 # Scope of this article
 
 This TSG covers different issues and their possible resolution during SLES migrations.
@@ -29,13 +27,13 @@ This TSG covers different issues and their possible resolution during SLES migra
 
 - Plan the migration activity as per the approved downtime window. This is because the VM reboots during the migration.
 - Prior to the migration activity, take a complete backup of the VM.
-- If backup is not configured, take a snapshot backup of the OS disk.
+- If backup isn't configured, take a snapshot backup of the OS disk.
 - [Check if the VM is generation V1 or generation V2](#check-the-generation-version-for-a-vm).
 
 
 # 1. Successful Migration from SLES12 to SLES15, but SLES15 SP1 to SP2 Upgrade Fails with Error
 
-While running `zypper migration` , the migration fails showing the following output which can also be seen in `/var/log/messages` or `/var/log/distro-migration.log` file:
+While running `zypper migration`, the migration fails showing the following output which can also be seen in `/var/log/messages` or `/var/log/distro-migration.log` file:
 
 **Error :**
 ```output
@@ -73,7 +71,7 @@ Move `sle-module-hpc.prod` from `/etc/products.d/` to a temporary location and t
 
 # 2. Error while installing the `suse-migration-sles15-activation`  package.
 
-While installing the `suse-migration-sles15-activation`  package, the migration fails showing the following output which can also be seen in `/var/log/messages` or `/var/log/distro-migration.log` file:
+While installing the `suse-migration-sles15-activation` package, the migration fails showing the following output which can also be seen in `/var/log/messages` or `/var/log/distro-migration.log` file:
 
 **Error :**
 ```output
@@ -81,15 +79,16 @@ While installing the `suse-migration-sles15-activation`  package, the migration 
 ```
 **Cause :**
 
-You will notice that  the SLES12 Public Cloud module is not enabled by default.
+You will notice that the SLES12 Public Cloud module isn't enabled by default.
 
 **Resolution :**
 
-1. Enable the following module and then try package install again.
+1. Enable the following module and then try installing the package again.
    ```bash
          sudo SUSEConnect -p sle-module-public-cloud/12/x86_64
    ```
-   **NOTE** : On SLES for SAP instances, the following two packages should never be present: `sle-ha-release` and `sle-ha-release-POOL`. If the instance is SLES for SAP, remove these packages before starting the distribution migration:
+   **Note:**
+    On SLES for SAP instances, the following two packages should never be present: `sle-ha-release` and `sle-ha-release-POOL`. If the instance is SLES for SAP, remove these packages before starting the distribution migration:
 
     ```bash 
       sudo zypper remove sle-ha-release sle-ha-release-POOL
@@ -125,7 +124,7 @@ You will notice that  the SLES12 Public Cloud module is not enabled by default.
 
 # 3. Gen2 VMs Fail to Boot After SLE15SP1 to SP2 Upgrade When Stopped via Azure Portal or Shutdown(init 0 or shutdown -h) command.
 
-After the VM is upgrade to SLES15SP1 to SP2, VM does not boot when stopped from Azure Portal. The `serialconsole.log` or `boot.log` will display the following output:
+After the VM is upgrade to SLES15SP1 to SP2, VM doesn't boot when stopped from Azure Portal. The `serialconsole.log` or `boot.log` will display the following output:
 
 **Error :**
 ```output
@@ -144,15 +143,15 @@ OR
     Press any key to continue...
 ```
 **Cause :**
-Hyper-V in the Azure environment doesn't preserve the Generation-2 VM (UEFI VM)'s Boot Entries after the VM is rebooted, stopped and deallocated. This causes SUSE Linux VM to fail to boot up
+Hyper-V in the Azure environment doesn't preserve the Generation-2 VM (UEFI VM)'s Boot Entries after the VM is rebooted, stopped and deallocated. This causes SUSE Linux VM to fail to boot up. 
 
 **Resolution :**
-1. Setup chroot environment for the affected VM OS snapshot disk  on a rescue VM as described in [chroot-environment-linux](/azure/virtual-machines/chroot-environment-linux)
+1. Setup chroot environment from the affected VM OS snapshot disk  on a rescue VM as described in [chroot-environment-linux](/azure/virtual-machines/chroot-environment-linux).
 2. Re-install Grub boot loader executing:
      ```bash
           sudo /usr/sbin/shim-install --config-file=/boot/grub2/grub.cfg
      ```
-3. Swap back snapshot disk on problematic VM as described in [chroot-environment-linux](/azure/virtual-machines/chroot-environment-linux)
+3. Swap the snapshot disk back to the problematic VM as described in [chroot-environment-linux](/azure/virtual-machines/chroot-environment-linux).
 
 **Reference :**
  https://www.suse.com/support/kb/doc/?id=000019919
@@ -338,11 +337,7 @@ Disable 'certification module' prior to the update and try again the migration:
 ```
 
 # 10. Migration fails due to third party modules and security tools.
-Several issues have been encountered during VM migration, such as VM in hung state, boot failures, or prolonged processes at zypper module repositories. 
-It is advisable to consult with the customer to ensure that any third-party repositories and security tools on the system are disabled before proceeding with the SUSE migration.
-Security tools can disrupt the migration by blocking operations or modifying system files, leading to instability. Additionally, third-party repositories may introduce packages that conflict with official SUSE packages, potentially causing further complications during the upgrade.
-Disabling them during the migration is crucial to prevent dependency conflicts, ensure system stability, maintain consistency with official packages, simplify troubleshooting, and provide a smoother upgrade process. 
-
+Several issues have been encountered during VM migration, such as VM in hung state, boot failures, or prolonged processes at zypper module repositories. It is advisable to consult with the customer to ensure that any third-party repositories and security tools on the system are disabled before proceeding with the SUSE migration.Security tools can disrupt the migration by blocking operations or modifying system files, leading to instability. Additionally, third-party repositories may introduce packages that conflict with official SUSE packages, potentially causing further complications during the upgrade.Disabling them during the migration is crucial to prevent dependency conflicts, ensure system stability, maintain consistency with official packages, simplify troubleshooting, and provide a smoother upgrade process. 
 
 # Contact & Feedback
 ::: template /.templates/Shared/Azure-Virtual-Machine-RDPSSH-Contact-Feedback-LTemplate
