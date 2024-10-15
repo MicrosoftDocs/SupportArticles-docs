@@ -1,9 +1,13 @@
 - name: Viva Glint troubleshooting
   href: viva-glint-welcome.yml
   items:
+    - name: Accessing the platform
+      items:
+        - name: Resolve issues when accessing survey results as a manager
+          href: ./access/manager-access-issues.md
     - name: Contact support
       href: ./contact-support/get-support-viva-glint.md
-    - name: Data File Uploads
+    - name: Data file uploads
       items:
         - name: Resolve upload errors related to attributes
           href: ./data-file-upload/fix-upload-attributes-errors.md
@@ -15,7 +19,7 @@
           href: ./data-file-upload/fix-upload-invalid-unexpected-values-warnings.md
         - name: Resolve upload warnings related to manager hierarchy
           href: ./data-file-upload/fix-upload-manager-hierarchy-warnings.md
-    - name: Historical Imports
+    - name: Historical imports
       items:
         - name: Error "Duplicate entry"
           href: ./historical-import/import-error-duplicate-entry.md
