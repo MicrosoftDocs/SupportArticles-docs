@@ -1,14 +1,14 @@
 ---
 title: Troubleshoot use of Simple Certificate Enrollment Protocol (SCEP) certificate profiles to provision certificates with Microsoft Intune
 description: Troubleshoot the use of SCEP by devices to request certificates for use with Intune, including communication from devices to Network Device Enrollment Service (NDES), NDES to certification authorities, and from the Intune Certificate Connector to the Intune service.  
-ms.date: 12/05/2023
-ms.reviewer: kaushika, lacranda
+ms.date: 10/15/2024
+ms.reviewer: kaushika, lacranda, cajenk
 search.appverid: MET150
 ms.custom: sap:Configure Devices - iOS\SCEP Certificates
 ---
 # Troubleshooting SCEP certificate profiles with Intune
 
-This articles gives guidance to help you troubleshoot and resolve issues with Simple Certificate Enrollment Protocol (SCEP) certificate profiles in Microsoft Intune. The following sections cover these concepts:
+This article gives guidance to help you troubleshoot and resolve issues with Simple Certificate Enrollment Protocol (SCEP) certificate profiles in Microsoft Intune. The following sections cover these concepts:
 
 - The architecture and the communication flow of the SCEP process
 - Narrowing down where a problem exists in that communication flow
@@ -55,38 +55,38 @@ Device logs depend on the device platform:
   
 On-premises infrastructure that supports use of SCEP certificate profiles for certificate deployments includes the Microsoft Intune Certificate Connector, NDES that runs on a Windows Server, and the certification authority.
 
-Log files for these roles include Windows Event Viewer that would be consider "Intune Connector logs" and IIS logs:
-
+Log files for these roles include Windows Event Viewer, considered as Intune connector logs, and Internet Information Services (IIS) logs:
 
 - **Intune connector logs**:
 
-  These logs show all the requests / communication from the device and Intune Cloud service. 
+  These logs show all requests and communications from the devices and Intune cloud services.
 
-  Location: On the server that hosts NDES: Run **eventvwr.msc** to open Windows Event Viewer and go to:
-  Applications and Services > Microsoft > Intune > CertificateConnector > Admin and Operational 
+  Location: On the server that hosts NDES, open **Event Viewer** > **Applications and Services Logs** > **Microsoft** > **Intune** > **CertificateConnectors** > **Admin** and **Operational**.
 
 - **IIS logs**:
 
   IIS logs show the certificate requests from mobile devices entering NDES.
 
-  Location: On the server that hosts NDES at *c:\inetpub\logs\LogFiles\W3SVC1*
-
+  Location: On the server that hosts NDES at *c:\inetpub\logs\LogFiles\W3SVC1*.
 
 ### Logs for Android devices
 
-Depending on the enrollment type you would need:
+> [!NOTE]
+> Before you collect and review logs, ensure [Verbose Logging](/mem/intune/user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android) is enabled, and then reproduce the issue.
 
-- Android Personally-Owned Work profile (AKA BYOD): use the **Android Company Portal** app log file, **OMADM.log**. Before you collect and review logs, ensure [Verbose Logging](/mem/intune/user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android) is enabled, and then reproduce the issue.
+Depending on the enrollment type:
 
-To collect the OMADM.logs from a device, see [Upload and email logs using a USB cable](/mem/intune/user-help/send-logs-to-your-it-admin-using-cable-android).
+- Personally owned devices with a work profile (BYOD): review the *OMADM.log* file.
 
-You can also [Upload and email logs](/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android#upload-and-email-logs-from-microsoft-intune-app) to support.
+  To collect the *OMADM.log* file from a device, see [Upload and email logs using a USB cable](/mem/intune/user-help/send-logs-to-your-it-admin-using-cable-android).
 
-- Android Device Owner (this includes Fully managed, Corporate-owned and Dedicated devices): Collect **Intune App logs** and the files to review would be **CloudExtension** logs. As above, please remember to enable verbose logging before reproducing the error.
+  You can also [upload and email logs](/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android#upload-and-email-logs-from-microsoft-intune-app) to support.
+
+- Corporate-owned work profile (COPE), fully managed (COBO), or dedicated devices (COSU): review the *CloudExtension.log* file.
 
 ### Logs for iOS and iPadOS devices
 
-For devices that run iOS/iPadOS, you use **Console** logs that runs on a Mac computer:
+For devices that run iOS/iPadOS, collect console logs:
 
 1. Connect the iOS/iPadOS device to Mac, and then go to **Applications** > **Utilities** to open the Console app.
 
