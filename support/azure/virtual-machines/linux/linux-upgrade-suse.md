@@ -109,11 +109,11 @@ You will notice that the SLES12 Public Cloud module isn't enabled by default.
      ```bash
          sudo registercloudguest --force-new
      ```
-4. Verify the VM registration status by running SUSEConnect again:
+3. Verify the VM registration status by running SUSEConnect again:
      ```bash
          sudo SUSEConnect --status
      ```
-5. Then proceed with the migration.
+4. Then proceed with the migration.
      ```bash
             sudo zypper migration
      ```
@@ -299,7 +299,7 @@ Mar 11 13:39:15 localhost systemd[1]: suse-migration-prepare.service: Failed wit
    ```
 
 # 8. SUSE registration and repos fail to work after migration.
-While performing OS migration, you have migrated from SLES15SP3 to SLES15SP4. Now, while performing migration from SLES15SP4 to SLES15SP5, Migration and updates are not working as expected. 
+While performing OS migration, you have migrated from SLES15SP3 to SLES15SP4. Now, while performing migration from SLES15SP4 to SLES15SP5, migration and updates are not working as expected. 
 
 **Error:** 
 ```output
@@ -328,7 +328,7 @@ No migration available.
 ```
 
 **Resolution:**
- Activate and Deactivate the following modules  prior to the migration.
+1. Activate and Deactivate the following modules  prior to the migration.
 
  * Activate the following modules:
      ```bash
@@ -342,6 +342,26 @@ No migration available.
         SUSEConnect -d -p sle-module-legacy/15.3/x86_64
         SUSEConnect -d -p sle-module-python2/15.3/x86_64
         SUSEConnect -d -p PackageHub/15.3/x86_64
+     ```
+2. Perform a cleanup and then re-register the system.
+     ```bash
+            sudo SUSEConnect --cleanup
+     ```
+     ```bash
+          sudo rm /etc/zypp/{credentials,services,repos}.d/*
+     ```
+     ```bash
+         sudo rm --force --recursive /var/cache/zypp/*
+     ```
+     ```bash
+         sudo rm /var/lib/cloudregister/*
+     ```
+     ```bash
+         sudo registercloudguest --force-new
+     ```
+3. Verify the VM registration status by running SUSEConnect again:
+     ```bash
+         sudo SUSEConnect --status
      ```
 
 # 9. Migration fails from SLES15SP3 to SLES15SP4 with the error `No Migration available`.
@@ -368,10 +388,10 @@ No migration available.
      '/usr/lib/zypper/commands/zypper-migration' exited with status 1
 ```
 
-**Cause:** The 'certification module' is present due to which the `zypper migration` fails.
+**Cause:** The `Certification Module` is present due to which the `zypper migration` fails.
 
 **Resolution:**
-Disable 'certification module' prior to the update and try again the migration:
+Disable 'Certification Module' prior to the update and try again the migration:
 ```bash
     sudo SUSEConnect -d -p sle-module-certifications/15.3/x86_64
 ```
