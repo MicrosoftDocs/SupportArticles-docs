@@ -1,8 +1,8 @@
 ---
 title: Boot error code 0xC000000F in an Azure VM
 description: Fixes a Boot error code 0xc000000f that occurs on an Azure virtual machine (VM).
-ms.date: 07/12/2024
-ms.reviewer: jarrettr, v-leedennis
+ms.date: 10/15/2024
+ms.reviewer: jarrettr, kageorge, v-leedennis, v-weizhu
 ms.service: azure-virtual-machines
 ms.collection: windows
 ms.custom: sap:My VM is not booting
@@ -60,7 +60,7 @@ This issue occurs when one of following conditions is true:
 1. Delete the virtual machine (VM). Make sure that you select the **Keep the disks** option when you do this.
 2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](/azure/virtual-machines/windows/attach-managed-disk-portal).
 3. Connect to the troubleshooting VM. Open **Computer management** > **Disk management**. Make sure that the OS disk is online and that its partitions have drive letters assigned.
-4. Identify the Boot partition and the Windows partition. If there's only one partition on the OS disk, this partition is the Boot partitionandthe Windows partition.
+4. Identify the Boot partition and the Windows partition. If there's only one partition on the OS disk, this partition is the Boot partition and the Windows partition.
 
     If the OS disk contains more than one partition, you can identify them by viewing the folders in the partitions:  
 
@@ -71,14 +71,24 @@ This issue occurs when one of following conditions is true:
 
 1. Run the following command line as an administrator, and then record the identifier of Windows Boot Loader (not Windows Boot Manager). The identifier is either the tag {default} or a 32-character code and it looks like this: xxxxxxxx-xxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. You will use this identifier in the next step.
 
-    ```console
-    bcdedit /store <Boot partition>:\boot\bcd /enum /v
-    ```
+    - For Generation 1 VMs
+
+        ```console
+        bcdedit /store <Boot partition>:\boot\bcd /enum /v
+        ```
+    - For Generation 2 VMs
+
+        ```console
+        bcdedit /store <Boot partition>:\EFI\Microsoft\Boot\BCD
+        ```
+
+        > [!NOTE]
+        > In Generation 2 VMs, the boot partition isn't labeled by default. You can run the `diskpart` command to label the partition so it can be used with the BCDEdit tool.
 
 2. Repair the Boot Configuration data by running the following command lines. You must replace these placeholders by the actual values:
 
     > [!NOTE]
-    > This step is applied to most Boot configuration data corruption issues. You need perform this step even if you see the **Device**  and **OSDevice**  are pointing to the correct partition.
+    > This step is applied to most Boot configuration data corruption issues. You need perform this step even if you see the **Device** and **OSDevice** are pointing to the correct partition.
 
     **\<Windows partition>** is the partition that contains a folder named "Windows."  
     **\<Boot partition>** is the partition that contains a hidden system folder named "Boot."  
