@@ -11,9 +11,9 @@ ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.topic: article
-ms.date: 11/28/2023
+ms.date: 10/15/2024
 ms.author: glimoli
-ms.reviewer: v-weizhu, v-six, ekpathak, glimoli
+ms.reviewer: v-weizhu, v-six, ekpathak, glimoli, kageorge
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # Troubleshoot a faulty Azure VM by using nested virtualization in Azure
@@ -34,7 +34,7 @@ In order to mount the faulty VM, the Rescue VM must use the same type of Storage
 
     - Size: Select a series that supports nested virtualization. For example: [Dv3](/azure/virtual-machines/dv3-dsv3-series) or [Dv4](/azure/virtual-machines/dv4-dsv4-series).
 
-    - Same location, Storage Account, and Resource Group as the faulty VM.
+    - Same location as the faulty VM.
 
     - Select the same storage type as the faulty VM (Standard or Premium).
 
