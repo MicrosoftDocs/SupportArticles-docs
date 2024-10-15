@@ -12,7 +12,7 @@ ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
-ms.date: 06/08/2023
+ms.date: 10/15/2024
 ms.author: genli
 ---
 # Reset Remote Desktop Services or its administrator password in a Windows VM
@@ -66,7 +66,6 @@ First, make sure that you have  the [latest PowerShell module installed and conf
     $SubID = "<SUBSCRIPTION ID>" 
     $RgName = "<RESOURCE GROUP NAME>" 
     $VmName = "<VM NAME>" 
-    $Location = "<LOCATION>" 
  
     Connect-AzAccount 
     Select-AzSubscription -SubscriptionId $SubID 
@@ -74,10 +73,16 @@ First, make sure that you have  the [latest PowerShell module installed and conf
     ```
 ### **Reset the Remote Desktop Services configuration**
 
-1. Reset remote access to your VM with the [Set-AzVMAccessExtension](/powershell/module/az.compute/set-azvmaccessextension) PowerShell cmdlet. The following example resets the access extension named `myVMAccess` on the VM named `myVM` in the `myResourceGroup` resource group:
+1. Reset remote access to your VM with the [Set-AzVMAccessExtension](/powershell/module/az.compute/set-azvmaccessextension) PowerShell cmdlet. The following example resets the access extension named `VMAccessAgent` on the VM named `myVM` in the `myResourceGroup` resource group:
 
     ```powershell
-    Set-AzVMAccessExtension -ResourceGroupName "myResoureGroup" -VMName "myVM" -Name "myVMAccess" -Location WestUS -typeHandlerVersion "2.0" -ForceRerun $true
+    $SubID = "<SUBSCRIPTION ID>" 
+    $RgName = "<RESOURCE GROUP NAME>" 
+    $VmName = "<VM NAME>" 
+ 
+    Connect-AzAccount 
+    Select-AzSubscription -SubscriptionId $SubID
+    Set-AzVMAccessExtension -ResourceGroupName $RgName -VMName $VmName -Name VMAccessAgent -typeHandlerVersion "2.0" -ForceRerun $true
     ```
 
     > [!TIP]
