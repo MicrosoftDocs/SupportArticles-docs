@@ -430,7 +430,7 @@ If you need assistance from Microsoft support, we recommend you collect the info
 - Keep the tracing running when the machine is experiencing high CPU issue or reproduce the issue.
 
 
-```
+```powershell
 .\TSS.ps1 -UEX_WMIBase -WIN_Kernel -ETWflags 1 -WPR CPU -Perfmon UEX_WMIPrvSE -PerfIntervalSec 1 -noBasicLog
 ```
 
