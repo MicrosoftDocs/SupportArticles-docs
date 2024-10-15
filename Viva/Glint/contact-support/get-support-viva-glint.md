@@ -48,11 +48,24 @@ Follow these steps:
 1. In the **Contact Support** pane, specify your preferred contact settings. Then, select a contact method and provide the following information:
 
    - **Title**: Enter **Viva Glint**, and then add a brief summary. If the issue is urgent, include the word **Urgent**.
-   - **Description**: Add a detailed description of the issue, including steps to reproduce and the date and approximate time that the issue occurred.
+   - **Description**: Add a detailed description of the issue, including (where applicable):
+     - Users experiencing this issue and their Viva Glint User Roles
+     - The date and time (including time zone) that the issue occurred
+     - Any steps taken to attempt to resolve the issue
+     - Exact error messages or codes
+     - Screenshots or screen recordings, not including Personally Identifiable Information (PII)
+     - Survey program and cycle names
+     - Survey start and end dates
+     - The link for a site or page that is causing an issue
+     - The name of the feature or other Viva Glint resource that a user is attempting to access
+     - The access method the user is attempting
+     - Which type of device a user is accessing from (laptop, mobile device)
+     - Which operating system a user has (Windows, Macintosh, Linux)
+     - Which browser a user is accessing Glint from
    - **Confirm your number**: Check whether the telephone number listed is correct. If not, update it as appropriate.
    - **Confirm email address of authorized contacts**: Check whether the email address listed for you is correct. If not, update it as appropriate and then add the email addresses of other users who should receive updates.
    - **Consent to the recording of all calls**: Select **Yes** or **No**.
-   - **Attachments**: Add any relevant attachments, including network trace files that you generated and saved.
+   - **Attachments**: Add any relevant attachments, including network trace files that you generated and saved, screenshots, and screen recordings (not including Personally Identifiable Information (PII)).
    - **Accessibility settings**: Select or clear the **I have accessibility related needs** option.
 
    :::image type="content" source="./media/get-support-viva-glint/provide-detail-information.png" alt-text="Screenshot of required fields to complete before you submit a service request.":::
