@@ -366,6 +366,7 @@ No migration available.
 
 # 9. Migration fails from SLES15SP3 to SLES15SP4 with the error `No Migration available`.
 The SLES15 Migration from SP3 to SP4 fails showing the following output which can also be seen in `/var/log/messages` or `/var/log/distro-migration.log` file:
+
 **Error:** 
 ```output
       Node01:~# SUSEConnect -S
