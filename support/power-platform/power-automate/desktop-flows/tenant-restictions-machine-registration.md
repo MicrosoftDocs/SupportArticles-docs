@@ -7,14 +7,14 @@ ms.custom: sap:Desktop flows\Administration issues
 ---
 # Tenant restrictions for Power Automate desktop machine registration
 
-This article provides guidelines for resolving tenant restrictions when you register a machine to a tenant in Power Automate for desktop.
+This article provides guidelines for resolving tenant restrictions when you [register a machine](/power-automate/desktop-flows/manage-machines#register-a-new-machine) to a tenant in Power Automate for desktop.
 
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 5017807
 
 ## Symptoms
 
-When you try to register a machine to a tenant, the registration might fail with an error that resembles the following:
+When you try to [register a machine](/power-automate/desktop-flows/manage-machines#register-a-new-machine) to a tenant, the registration might fail with an error that resembles the following:
 
 > UnauthorizedTenantSwitching
 
