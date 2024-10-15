@@ -69,7 +69,7 @@ Move `sle-module-hpc.prod` from `/etc/products.d/` to a temporary location and t
 1. https://www.suse.com/c/major-distro-upgrade-in-the-public-cloud-made-easy/ 
 2. https://www.suse.com/support/kb/doc/?id=000019232
 
-# 2. Error while installing the `suse-migration-sles15-activation`  package.
+# 2. Error while installing the `suse-migration-sles15-activation` package.
 
 While installing the `suse-migration-sles15-activation` package, the migration fails showing the following output which can also be seen in `/var/log/messages` or `/var/log/distro-migration.log` file:
 
@@ -204,7 +204,7 @@ Clean up registration by following below steps:
      ```bash
          sudo registercloudguest --force-new
      ```
-2. After the registration is successfully completed, the issue with repositories will be solved.Patch the VM and reboot: 
+2. After the registration is successfully completed, patch the VM and reboot: 
      ```bash
           sudo zypper update
      ```
@@ -293,9 +293,13 @@ Mar 11 13:39:15 localhost systemd[1]: suse-migration-prepare.service: Failed wit
    ```bash
      sudo mv /etc/pki/trust/anchors/temp /backuplocation/temp
    ```
-2. Run the migration again.
+2. Install the migration package.
    ```bash
      sudo zypper install suse-migration-sle15-activation
+   ```
+3. Perform the migration.
+   ```bash
+      sudo zypper migration
    ```
 
 # 8. SUSE registration and repos fail to work after migration.
