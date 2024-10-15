@@ -2,7 +2,7 @@
 title: Tenant restrictions for Power Automate desktop machine registration
 description: Provides a resolution for an error that occurs when you register a machine to a tenant in Power Automate for desktop.
 ms.reviewer: guco, johndund, aartigoyle
-ms.date: 10/10/2024
+ms.date: 10/15/2024
 ms.custom: sap:Desktop flows\Administration issues
 ---
 # Tenant restrictions for Power Automate desktop machine registration
@@ -29,7 +29,7 @@ These registration errors occur when you try to register your machine to an unau
 - Change the tenant that a machine is registered to.
 - Register a Microsoft Entra-joined machine to a tenant that's different from its Microsoft Entra ID tenant.
 
-These tenant restrictions are in place to prevent malicious actors from using Power Automate for desktop to take control of a machine over the network. To allow nonadministrators to perform these actions, you can configure Windows registry settings as described in the following section.
+These tenant restrictions prevent malicious actors from using Power Automate for desktop to control a machine over the network. To allow non-administrators to perform these actions, you can configure Windows registry settings as described in the following section.
 
 ## Resolution
 
@@ -47,13 +47,13 @@ We recommend that you define a list of allowed tenants that your machines can re
 If you use [connect with sign-in](/power-automate/desktop-flows/desktop-flow-connections#connect-with-sign-in-for-attended-runs) to perform an attended run, and the target machine is Active Directory (AD) domain-joined but not Microsoft Entra-joined, you're required to add the tenant to the **AllowedRegistrationTenants** allowlist. For more information, see [Connect with sign-in security update on AD domain-joined machines](connect-with-sign-in-security-update.md).
 
 > [!IMPORTANT]
-> The following steps can be used to add your tenant to the allowlist on a single machine. However, we recommend consulting with your domain administrators to create a Group Policy Object (GPO) that applies the appropriate allowlist across all your machines. Creating such a GPO can centrally specify which tenants are trusted to use Power Automate for desktop on the machines in your tenant.
+> You can use the following steps to add your tenant to the allowlist on a single machine. However, we recommend consulting with your domain administrators to create a Group Policy Object (GPO) that applies the appropriate allowlist across all your machines. Creating such a GPO can centrally specify which tenants are trusted to use Power Automate for desktop on the machines in your tenant.
 
 To define the allowlist:
 
-1. Run the Rgistry Editor (regedit.exe).
+1. Run the Registry Editor (regedit.exe).
 2. Navigate to this key: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Power Automate Desktop\Registration`.
-3. If it doesn't already exist, select **Edit** > **new** > **string value** to create a new string value named **AllowedRegistrationTenants**.
+3. Select **Edit** > **new** > **string value** to create a new string value named **AllowedRegistrationTenants**.
 4. Double-click the value and set its data field to a comma separated list of the tenant IDs to which the machine is allowed to register.
 
    For example: 3EF1d993-CBD4-4DEA-A50E-939AEDB23F21,5B19777D-814C-43F3-9317-CDBAD0846ED8  
@@ -73,7 +73,7 @@ To enable continuous validation:
 
 1. Run the Registry Editor (regedit.exe).
 2. Navigate to this key: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Power Automate Desktop\Registration`.
-3. Create a new DWORD value (**Edit** > **new** > **DWORD (32 bit) value**) named **EnforceRegistrationTenantRestrictionsOnServiceStart**.
+3. Select **Edit** > **new** > **DWORD (32 bit) value** to create a new DWORD value named **EnforceRegistrationTenantRestrictionsOnServiceStart**.
 4. Double-click the new value and set its data field to **1**. Any value other than **1** disables this setting.
 
 ### Disallow ability to override tenant restrictions
@@ -89,7 +89,7 @@ An administrator can override tenant restrictions and register machines regardle
 
 1. Run the Registry Editor (regedit.exe).
 2. Navigate to this key: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Power Automate Desktop\Registration`.
-3. Create a new DWORD value (**Edit** > **new** > **DWORD (32 bit) value**) named **AllowRegisteringOutsideOfAADJoinedTenant**.
+3. Select **Edit** > **new** > **DWORD (32 bit) value** to create a new DWORD value named **AllowRegisteringOutsideOfAADJoinedTenant**.
 4. Double-click the new value and set its data field to **1**. Any value other than **1** disables this setting.
 
 > [!IMPORTANT]
@@ -99,7 +99,7 @@ An administrator can override tenant restrictions and register machines regardle
 
 1. Run the Registry Editor (regedit.exe).
 2. Navigate to this key: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Power Automate Desktop\Registration`.
-3. Create a new DWORD value (**Edit** > **new** > **DWORD (32 bit) value**) named **AllowTenantSwitching**.
+3. Select **Edit** > **new** > **DWORD (32 bit) value** to create a new DWORD value named **AllowTenantSwitching**.
 4. Double-click the new value and set its data field to **1**. Any value other than **1** disables this setting.
 
 > [!IMPORTANT]
