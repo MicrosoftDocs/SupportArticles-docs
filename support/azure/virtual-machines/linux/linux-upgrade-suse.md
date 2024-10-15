@@ -87,12 +87,12 @@ You will notice that the SLES12 Public Cloud module isn't enabled by default.
    ```bash
          sudo SUSEConnect -p sle-module-public-cloud/12/x86_64
    ```
-   **Note:**
-    On SLES for SAP instances, the following two packages should never be present: `sle-ha-release` and `sle-ha-release-POOL`. If the instance is SLES for SAP, remove these packages before starting the distribution migration:
-
-    ```bash 
+> [!NOTE]
+> On SLES for SAP instances, the following two packages should never be present: `sle-ha-release` and `sle-ha-release-POOL`. If the instance is SLES for SAP, remove these packages before starting the distribution migration:
+  
+  ```bash 
       sudo zypper remove sle-ha-release sle-ha-release-POOL
-    ```
+  ```
 2. Perform a cleanup and then re-register the system.
      ```bash
             sudo SUSEConnect --cleanup
