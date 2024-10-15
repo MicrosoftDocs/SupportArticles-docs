@@ -4,18 +4,18 @@ description: Resolves the communicating with the emulator error that occurs when
 ms.author: iomavrid
 author: YiannisMavridis
 ms.reviewer: tapanm
-ms.date: 10/14/2024
+ms.date: 10/15/2024
 ms.custom: sap:Desktop flows\Power Automate for desktop errors
 ---
-# "Error communicating with the emulator" occurs when you use Micro Focus Reflection Desktop
+# "Error communicating with the emulator" when you run Open terminal session with Micro Focus Reflection Desktop
 
-This article provides a resolution for the "Error communicating with the emulator" error that occurs when you run the [Open terminal session](Terminal emulation actions) action using the Micro Focus Reflection Desktop in Power Automate for desktop.
+This article provides a resolution for the "Error communicating with the emulator" error that occurs when you run the [Open terminal session](Terminal emulation actions) action using Micro Focus Reflection Desktop in Power Automate for desktop.
 
 _Applies to:_ &nbsp; Power Automate
 
 ## Symptoms
 
-When you run the **Open terminal session** action with the Micro Focus Reflection Desktop in Power Automate for desktop, you receive the following error message:
+When you run the **Open terminal session** action using Micro Focus Reflection Desktop in Power Automate for desktop, you receive the following error message:
 
 > Error communicating with the emulator
 
@@ -25,7 +25,7 @@ Here are the parameters configured in the **Open terminal session** action:
 
 ## Resolution
 
-To solve this issue, make sure the Micro Focus Reflection Desktop "Application Programmer Interface" in the **Feature Selection** is installed for Power Automate for desktop.
+To solve this issue, ensure that the Reflection Desktop Application Programmer Interface in the **Feature Selection** is installed for Power Automate for desktop. For more information, see [How to install the Reflection Desktop Application Programmer Interface option](https://portal.microfocus.com/s/article/KM000002924).
 
 :::image type="content" source="media/error-communicating-with-the-emulator/micro-focus-reflection-desktop-configuration.png" alt-text="Screenshot that shows the Application Programmer Interface feature in the Micro Focus Reflection Desktop installation.":::
 
