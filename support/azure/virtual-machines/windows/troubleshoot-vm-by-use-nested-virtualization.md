@@ -22,10 +22,6 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 
 This article shows how to create a nested virtualization environment in Microsoft Azure, so you can mount the disk of the faulty VM on the Hyper-V host (Rescue VM) for troubleshooting purposes.
 
-## Prerequisites
-
-In order to mount the faulty VM, the Rescue VM must use the same type of Storage Account (Standard or Premium) as the faulty VM.
-
 ## Step 1: Create a Rescue VM and install Hyper-V role
 
 1. Create a new Rescue VM:
@@ -35,8 +31,6 @@ In order to mount the faulty VM, the Rescue VM must use the same type of Storage
     - Size: Select a series that supports nested virtualization. For example: [Dv3](/azure/virtual-machines/dv3-dsv3-series) or [Dv4](/azure/virtual-machines/dv4-dsv4-series).
 
     - Same location as the faulty VM.
-
-    - Select the same storage type as the faulty VM (Standard or Premium).
 
     - Image: Choose either a Generation 2 image or a Generation 1 image.
 
