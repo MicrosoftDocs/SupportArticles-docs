@@ -187,7 +187,7 @@ The `credentials.d` directory had incorrect permission or the contents of a file
 1.  The registration was failing because the `credentials.d` directory had incorrect permission or the contents of a file inside `credentials.d` was triggering this error.
 Clean up registration by following below steps:
      ```bash
-            sudo rm /var/cache/cloudregister/
+          sudo rm /var/cache/cloudregister/
      ```
      ```bash
           sudo rm /etc/zypp/credentials.d/
@@ -203,7 +203,7 @@ Clean up registration by following below steps:
      ```
 2. After the registration is successfully completed, patch the VM and reboot: 
      ```bash
-          sudo zypper update
+         sudo zypper update
      ```
      ```bash
          sudo reboot
@@ -237,7 +237,7 @@ The  regionService directory has moved from `/var/lib` to `/usr/lib` and the DMS
 **Resolution:**
 1. Create the old/previously used directories: `/var/lib/regionService/certs`.
    ```bash
-      sudo mkdir -p /var/lib/regionService/certs
+    sudo mkdir -p /var/lib/regionService/certs
    ```
 2. Copy the cert files.
    ```bash 
@@ -268,7 +268,7 @@ The  regionService directory has moved from `/var/lib` to `/usr/lib` and the DMS
    ```
 6. Trigger the migration:
    ``` bash
-        sudo zypper migration
+      sudo zypper migration
    ```
 
 **Reference:** https://www.suse.com/support/kb/doc/?id=000021338
