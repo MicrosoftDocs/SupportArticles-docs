@@ -333,10 +333,9 @@ SUSE migration from SLES15SP3 to SP4 fails  and an error stating `no migration a
 
 **Resolution:**
 Disable 'certification module' prior to the update and try again the migration:
-
-    ```bash
-        sudo SUSEConnect -d -p sle-module-certifications/15.3/x86_64
-    ```
+```bash
+    sudo SUSEConnect -d -p sle-module-certifications/15.3/x86_64
+```
 
 # 10. Migration fails due to third party modules and security tools.
 Several issues have been encountered during VM migration, such as VM in hung state, boot failures, or prolonged processes at zypper module repositories. 
