@@ -29,6 +29,8 @@ To increase the public IP limit or quota for your subscription, follow these ste
 2. In the **Settings** section, select **Usage + quotas**. Set the **Provider** to **Networking**, and optionally filter by the region of your AKS cluster.
 3. Locate the **Public IP Addresses** record. In the same line, select the **Create a new support request** button. You'll be redirected to a page where you can specify the new limit you require and provide additional details such as contact information.
 
+   :::image type="content" source="media/error-code-publicipcountlimitreached/submit-quotas-request.png" alt-text="Screenshot that shows how to create a new support request for quota increase." lightbox="media/error-code-publicipcountlimitreached/submit-quotas-request.png":::
+
 This process will create a support request to increase your public IP address quota for the specified region. See the screenshots below for visual guidance.
 
 ![public-ip-limit](https://github.com/user-attachments/assets/85e93fa0-e151-4410-99b3-13410b4049b1)
