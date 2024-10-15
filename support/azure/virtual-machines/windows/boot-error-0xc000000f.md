@@ -71,12 +71,12 @@ This issue occurs when one of following conditions is true:
 
 1. Run the following command line as an administrator, and then record the identifier of Windows Boot Loader (not Windows Boot Manager). The identifier is either the tag {default} or a 32-character code and it looks like this: xxxxxxxx-xxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. You will use this identifier in the next step.
 
-    - For Generation 1 VMs
+    - In Generation 1 VMs
 
         ```console
         bcdedit /store <Boot partition>:\boot\bcd /enum /v
         ```
-    - For Generation 2 VMs
+    - In Generation 2 VMs
 
         ```console
         bcdedit /store <Boot partition>:\EFI\Microsoft\Boot\BCD
@@ -94,21 +94,40 @@ This issue occurs when one of following conditions is true:
     **\<Boot partition>** is the partition that contains a hidden system folder named "Boot."  
     **\<Identifier>** is the identifier of Windows Boot Loader you found in the previous step.  
 
-    ```console
-    bcdedit /store <Boot partition>:\boot\bcd /set {bootmgr} device partition=<boot partition>:
+    - In Generation 1 VMs
 
-    bcdedit /store <Boot partition>:\boot\bcd /set {bootmgr} integrityservices enable
+        ```console
+        bcdedit /store <Boot partition>:\boot\bcd /set {bootmgr} device partition=<boot partition>:
 
-    bcdedit /store <Boot partition>:\boot\bcd /set {<Identifier>} device partition=<Windows partition>:
+        bcdedit /store <Boot partition>:\boot\bcd /set {bootmgr} integrityservices enable
 
-    bcdedit /store <Boot partition>:\boot\bcd /set {<Identifier>} integrityservices enable
+        bcdedit /store <Boot partition>:\boot\bcd /set {<Identifier>} device partition=<Windows partition>:
 
-    bcdedit /store <Boot partition>:\boot\bcd /set {<identifier>} recoveryenabled Off
+        bcdedit /store <Boot partition>:\boot\bcd /set {<Identifier>} integrityservices enable
 
-    bcdedit /store <Boot partition>:\boot\bcd /set {<identifier>} osdevice partition=<Windows partition>:
+        bcdedit /store <Boot partition>:\boot\bcd /set {<identifier>} recoveryenabled Off
 
-    bcdedit /store <Boot partition>:\boot\bcd /set {<identifier>} bootstatuspolicy IgnoreAllFailures
-    ```
+        bcdedit /store <Boot partition>:\boot\bcd /set {<identifier>} osdevice partition=<Windows partition>:
+
+        bcdedit /store <Boot partition>:\boot\bcd /set {<identifier>} bootstatuspolicy IgnoreAllFailures
+        ```
+    - In Generation 2 VMs
+
+        ```console
+        bcdedit /store <Boot partition>:\EFI\Microsoft\Boot\BCD /set {bootmgr} device partition=<boot partition>:
+
+        bcdedit /store <Boot partition>:\EFI\Microsoft\Boot\BCD /set {bootmgr} integrityservices enable
+
+        bcdedit /store <Boot partition>:\EFI\Microsoft\Boot\BCD /set {<Identifier>} device partition=<Windows partition>:
+
+        bcdedit /store <Boot partition>:\EFI\Microsoft\Boot\BCD /set {<Identifier>} integrityservices enable
+
+        bcdedit /store <Boot partition>:\EFI\Microsoft\Boot\BCD /set {<identifier>} recoveryenabled Off
+
+        bcdedit /store <Boot partition>:\EFI\Microsoft\Boot\BCD /set {<identifier>} osdevice partition=<Windows partition>:
+
+        bcdedit /store <Boot partition>:\EFI\Microsoft\Boot\BCD /set {<identifier>} bootstatuspolicy IgnoreAllFailures
+        ```
 
 3. Detach the repaired OS disk from the troubleshooting VM. Then, create a new VM from the OS disk.
 
