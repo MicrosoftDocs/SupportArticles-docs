@@ -60,7 +60,7 @@ To define the allowlist:
 
 > [!NOTE]
 >
-> - To find your tenant ID from the [Power Automate portal](https://make.powerautomate.com/), see [Allowlist tenants for registration and connect with sign-in connections](/power-automate/desktop-flows/how-to/allowlist-tenant-for-connect-with-sign-in-and-registration.md).
+> - To find your tenant ID from the [Power Automate portal](https://make.powerautomate.com/), see [Allowlist tenants for registration and connect with sign-in connections](allowlist-tenant-for-connect-with-sign-in-and-registration.md).
 > - To find your tenant ID from the [Power Apps portal](https://make.powerapps.com/), go to **Settings** and select **Session details**.
 
 If setting up the tenant allowlist isn't possible for some reasons, see the following sections on how to [allow registration to a tenant other than the machine joined Microsoft Entra tenant](#allow-machine-registration-to-a-tenant-other-than-the-machine-joined-microsoft-entra-tenant) or [allow switching to another tenant](#allow-switching-machine-registration-to-another-tenant).
