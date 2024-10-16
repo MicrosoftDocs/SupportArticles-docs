@@ -14,19 +14,18 @@ ms.reviewer: dvargas
 ---
                                                                                                                                    
 # Scope of this article
-
 This troubleshooting guide covers different issues and their solutions during SUSE Linux Enterprise server(SLES) migrations.
 
 > [!CAUTION]
 > Following the process in this article will cause a disconnection between the data plane, and the [control plane](/azure/architecture/guide/multitenant/considerations/control-planes#responsibilities-of-a-control-plane) of the virtual machine (VM). Azure capabilities such as [Auto guest patching](/azure/virtual-machines/automatic-vm-guest-patching#how-does-automatic-vm-guest-patching-work), [Auto OS image upgrades](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade), [Hotpatching](/windows-server/get-started/hotpatch?toc=%2Fazure%2Fvirtual-machines%2Ftoc.json#supported-updates), and [Azure Update Manager](/azure/update-manager/overview) won't be available. To utilize these features, it's recommended to create a new VM using your preferred operating system instead of performing an in-place upgrade.
 
-# Prerequisite 
+## Prerequisite 
 - This [Distribution Migration System (DMS)](https://documentation.suse.com/suse-distribution-migration-system/15/single-html/distribution-migration-system/index.html) guide provides general steps about how to upgrade  SLES12 to SLES 15 for an Azure VM. For more information, see [Upgrading SUSE Linux Enterprise in the Public Cloud](https://www.suse.com/c/upgrading-suse-linux-enterprise-in-the-public-cloud/) and [SUSE Product Lifecycle](https://www.suse.com/lifecycle)
 - Plan the migration activity as per the approved downtime window since the migration requires VM to reboot. 
 - Take a complete backup/snapshot of VM before performing the migration.
 - [Check if the VM is generation V1 or generation V2](#check-the-generation-version-for-a-vm).
 
-# Check the generation version for a VM
+## Check the generation version for a VM
 
 You can use one of the following methods to check the generation version:
 
@@ -35,7 +34,7 @@ You can use one of the following methods to check the generation version:
      :::image type="content" source="media/linux-upgrade-suse-15sp1/output-gen2.png" alt-text="Screenshot shows output of the command for generation 2 V M." border="false":::
 - In the [Azure portal](https://portal.azure.com),  go to **Properties**  of the VM, and then check the **VM generation** field.
 
-# 1. Successful Migration from SLES12 to SLES15, but SLES15 SP1 to SP2 Upgrade Fails with Error
+## 1. Successful Migration from SLES12 to SLES15, but SLES15 SP1 to SP2 Upgrade Fails with Error
 
 While executing `zypper migration`, the migration fails to show the following output which can also be seen in `/var/log/messages` or `/var/log/distro-migration.log` file:
 
@@ -73,7 +72,7 @@ Move `sle-module-hpc.prod` from `/etc/products.d/` to a temporary location, and 
 1. https://www.suse.com/c/major-distro-upgrade-in-the-public-cloud-made-easy/ 
 2. https://www.suse.com/support/kb/doc/?id=000019232
 
-# 2. Error while installing the `suse-migration-sles15-activation` package.
+## 2. Error while installing the `suse-migration-sles15-activation` package.
 
 While installing the `suse-migration-sles15-activation` package, the migration fails to show the following output which can also be seen in `/var/log/messages` or `/var/log/distro-migration.log` file:
 
@@ -126,7 +125,7 @@ You notice that the SLES12 Public Cloud module isn't enabled by default.
 1. https://www.suse.com/c/major-distro-upgrade-in-the-public-cloud-made-easy/
 2. https://www.suse.com/c/upgrading-suse-linux-enterprise-in-the-public-cloud/
 
-# 3. Gen2 VMs Fail to Boot After SLE15SP1 to SP2 Upgrade When Stopped via Azure Portal or Shutdown(init 0 or shutdown -h) command.
+## 3. Gen2 VMs Fail to Boot After SLE15SP1 to SP2 Upgrade When Stopped via Azure Portal or Shutdown(init 0 or shutdown -h) command.
 
 After the VM is upgrade to SLES15SP1 to SP2, VM doesn't boot when stopped from Azure Portal. The serial console log or `boot.log` under `/var/log/` display the following output:
 
@@ -150,17 +149,17 @@ OR
 Hyper-V in the Azure environment doesn't preserve the Generation-2 VM (UEFI VM)'s Boot Entries after the VM is rebooted, stopped, and deallocated. This causes SUSE Linux VM to fail to boot up. 
 
 **Resolution :**
-1. Set up chroot environment from the affected VM OS snapshot disk  on a rescue VM as described in [chroot-environment-linux](/azure/virtual-machines/chroot-environment-linux).
+1. Set up chroot environment from the affected VM OS snapshot disk  on a rescue VM as described in [chroot-environment-linux](/azure/virtual-machines/linux/chroot-environment-linux).
 2. Reinstall Grub boot loader executing:
      ```bash
           sudo /usr/sbin/shim-install --config-file=/boot/grub2/grub.cfg
      ```
-3. Swap the snapshot disk back to the problematic VM as described in [chroot-environment-linux](/azure/virtual-machines/chroot-environment-linux).
+3. Swap the snapshot disk back to the problematic VM as described in [chroot-environment-linux](/azure/virtual-machines/linux/chroot-environment-linux).
 
 **Reference :**
  https://www.suse.com/support/kb/doc/?id=000019919
 
-# 4. Migration failure from SLES15 SP0 to SP3.
+## 4. Migration failure from SLES15 SP0 to SP3.
 
 The migration fails from SLES15 SP0 to SP3 showing the following output which can also be seen in `/var/log/messages` or `/var/log/distro-migration.log` file:
 
@@ -184,7 +183,7 @@ Roll back all the packages to the versions compatible with SLE15SP0, and perform
        sudo zypper migration
   ```
 
-# 5. Post Migration SUSE fails to boot to latest kernel followed by registration failure
+## 5. Post Migration SUSE fails to boot to latest kernel followed by registration failure
 Post-migration, there may be issues where the VM fails to boot with the latest kernel. Additionally, repositories do not work on the VM, displaying an error stating that the repositories aren't defined.
 
 **Cause:** 
@@ -216,7 +215,7 @@ Clean up registration by following below steps:
          sudo reboot
     ```
 
-# 6. Migration from SLES12SP5 to SLES15SP1 fails due to issue with `regionService` directory:
+## 6. Migration from SLES12SP5 to SLES15SP1 fails due to issue with `regionService` directory:
 The migration fails from SLES12 SP5 to SLES15 SP1 showing the following output which can also be seen in `/var/log/messages` or `/var/log/distro-migration.log` file:
 
 **Error:**
@@ -280,7 +279,7 @@ The `regionService` directory moves from `/var/lib` to `/usr/lib`, and the DMS s
 
 **Reference:** https://www.suse.com/support/kb/doc/?id=000021338
 
-# 7. Migration fails due to unknown folder in `/etc/pki/trust/anchors`.
+## 7. Migration fails due to unknown folder in `/etc/pki/trust/anchors`.
 
 Migration from SLES12SP5 to SLES15SP1 is failing, and these errors can be seen in the `/var/log/distro_migration.log`
 
@@ -306,7 +305,7 @@ Mar 11 13:39:15 localhost systemd[1]: suse-migration-prepare.service: Failed wit
       sudo zypper migration
    ```
 
-# 8. SUSE registration and repos fail to work after migration.
+## 8. SUSE registration and repos fail to work after migration.
 During the OS migration from SLES15SP3 to SLES15SP4, the process completes successfully. However, when migrating from SLES15SP4 to SLES15SP5, the migration and updates do not work as expected.
 
 **Error:** 
@@ -372,7 +371,7 @@ No migration available.
          sudo SUSEConnect --status
      ```
 
-# 9. Migration fails from SLES15SP3 to SLES15SP4 with the error `No Migration available`.
+## 9. Migration fails from SLES15SP3 to SLES15SP4 with the error `No Migration available`.
 The SLES15 Migration from SP3 to SP4 fails to show the following output which can also be seen in `/var/log/messages` or `/var/log/distro-migration.log` file:
 
 **Error:** 
@@ -405,7 +404,7 @@ Disable 'Certification Module' before the update, and try the migration again:
     sudo SUSEConnect -d -p sle-module-certifications/15.3/x86_64
 ```
 
-# 10. Migration fails due to third-party modules and security tools.
+## 10. Migration fails due to third-party modules and security tools.
 Several issues arise during VM migration, such as the VM entering a hung state, boot failures, or prolonged processes at zypper module repositories:
 - It's advisable to consult with the customer to ensure that any third-party repositories, and security tools on the system are disabled before proceeding with the SUSE migration.
 - Security tools can disrupt the migration by blocking operations or modifying system files, leading to instability.
