@@ -11,7 +11,7 @@ ms.topic: troubleshooting-general
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.custom: linux-related-content
-ms.date: 07/02/2024
+ms.date: 10/16/2024
 #customer intent: As an Azure Linux VM administrator, I want troubleshoot issues in the yum and dnf tools so that I can successfully install or update applications on my VMs.
 ---
 # Troubleshoot common issues in the yum and dnf package management tools for Linux
@@ -32,6 +32,70 @@ The [dnf](https://rpm-software-management.github.io) command-line package manage
 ## Scenario 1: Repository access issue
 
 You encounter errors that apply to certificates or network connectivity.
+
+### Run a validation script
+
+Azure makes available an RHUI repository validation script in GitHub. This Python script has the following features:
+
+- Validates the RHUI client certificate.
+- Validates RHUI rpm consistency.
+- Does a consistency check between EUS and non-EUS repository configuration and their requirements.
+- Validates Connectivity to the RHUI Repositories.
+  - Reports that repository connectivity is successful if no errors are observed
+- Validates SSL connectivity to the RHUI repositories.
+- Focuses exclusively in the RHUI repositories.
+- Validates a found error by using the defined conditions and provides recommendations for a fix
+
+To get the script, see [RHUI_repo_validation_scripts](https://github.com/Azure/azure-support-scripts/tree/master/Linux_scripts/RHUI_repo_validation_scripts).
+
+#### Supported Red Hat images
+
+This version of the validation script currently supports only the following Red Hat VMs that are deployed from the Azure Marketplace image:
+
+- RHEL 7._x_ PAYG VMs
+- RHEL 8._x_ PAYG VMs
+- RHEL 9._x_ PAYG VMs
+
+#### How to run the validation script
+
+To run the validation script, enter the following shell commands on a Red Hat VM:
+
+#### [Red Hat 7.x](#tab/rhel7)
+
+1. If the virtual machine has internet access, execute the script directly from the VM using the following command:
+
+```bash
+curl -sL https://raw.githubusercontent.com/Azure/azure-support-scripts/refs/heads/master/Linux_scripts/rhui-check/rhui-check.py | sudo python2 -
+```
+
+2. In case no direct internet access is possible from the virtual machine, download and transfer the script to the virtual machine using the given URL: [RHUI check script](https://raw.githubusercontent.com/Azure/azure-support-scripts/master/Linux_scripts/rhui-check/rhui-check.py) and then execute the following command:
+
+```bash
+sudo python2 ./rhui-check.py 
+```
+
+3. The script will generate a report and point you out to any specific issue. The script output is also available in `/var/log/rhuicheck.log` post script execution. You can inspect that log file separately as well.
+
+#### [Red Hat 8.x and 9.x](#tab/rhel89)
+
+1. If the virtual machine has internet access, execute the script directly from the VM using the following command:
+
+```bash
+curl -sL https://raw.githubusercontent.com/Azure/azure-support-scripts/refs/heads/master/Linux_scripts/rhui-check/rhui-check.py | sudo python3 -
+```
+
+2. In case no direct internet access is possible from the virtual machine, download and transfer the script to the virtual machine using the given URL: [RHUI check script](https://raw.githubusercontent.com/Azure/azure-support-scripts/master/Linux_scripts/rhui-check/rhui-check.py) and then execute the following command:
+
+```bash
+sudo python3 ./rhui-check.py 
+```
+
+> [!IMPORTANT]
+> Replace python3 with `/usr/libexec/platform-python` in case the `python3` command is not found.
+
+3. The script will generate a report and point you out to any specific issue. The script output is also available in `/var/log/rhuicheck.log` post script execution. You can inspect that log file separately as well.
+
+---
 
 ### Solution 1
 
