@@ -52,9 +52,9 @@ Jun 16 11:17:53 rhel9a pacemaker-controld[509433]: error: Corosync quorum is not
 
 ## Cause:
 
-The votequorum service is part of the corosync project. This service can be optionally loaded into the nodes of a corosync cluster to avoid split-brain situations. It does this by having a number of votes assigned to each system in the cluster and ensuring that only when a majority of the votes are present, cluster operations are allowed to proceed. The service must be loaded into all nodes or none. If it is loaded into a subset of cluster nodes the results will be unpredictable.
+The votequorum service is part of the corosync project. This service can be optionally loaded into the nodes of a corosync cluster to avoid split-brain situations. It does this by having a number of votes assigned to each system in the cluster which ensuring that only when a majority of the votes are present, cluster operations are allowed to proceed. The service must be loaded into all nodes or none. If it is loaded into a subset of cluster nodes the results are unpredictable.
 
-The following corosync.conf extract will enable votequorum service within corosync:
+The following corosync.conf extract will enables votequorum service within corosync:
 
 ```bash
        quorum {
@@ -62,7 +62,7 @@ The following corosync.conf extract will enable votequorum service within corosy
        }
 ```
 
-votequorum reads its configuration from corosync.conf. Some values can be changed at runtime, others are only read at corosync startup. It is very important that those values are consistent across all the nodes participating in the cluster or votequorum behavior will be unpredictable.
+votequorum reads its configuration from corosync.conf. Some values can be changed at runtime, others are only read at corosync startup. It is very important that those values are consistent across all the nodes participating in the cluster or votequorum behavior are unpredictable.
 
 ## Resolution:
 
@@ -306,7 +306,7 @@ SAP HANA resource cannot be started by pacemaker when there are SYN failures bet
 
    - NOTE: When re-configuring replication on an existing SAP cluster, it is imperative that the database/node with the most correct and up-to-date data is designated as the 'primary'. If this is done incorrectly, there is a risk of over-writing the most up-to-date database with an out-of-date or 'empty' database, leading to loss of data and a need to restore from any existing backup.
 
-4. After enabling replication check the system replication status as <HANA SID> account by calling the systemReplicationStatus.py SAP Python script. The SAP binaries will be usually available in 
+4. After enabling replication check the system replication status as <HANA SID> account by calling the systemReplicationStatus.py SAP Python script. The SAP binaries are usually available in 
 
    ```bash
    /hana/shared/A00/HDB00/exe/python_support directory.
@@ -337,7 +337,7 @@ If you are seeing a different message, then most likely there are other issues b
    ```
 
 
-5.	You can also check the failover process by running SAPHanaSR-showAttr command in primary VM. If the SYN issue is resolved then the output of this command will show Primary in Promoted mode and Secondary in Demoted mode. Once you see the primary and secondary nodes in Promoted and Demoted mode respectively, remove the cluster out of maintenance, this will allow pacemaker to start SAP HANA DB.
+5.	You can also check the failover process by running SAPHanaSR-showAttr command in primary VM. If the SYN issue is resolved then the output of this command shows Primary in Promoted mode and Secondary in Demoted mode. Once you see the primary and secondary nodes in Promoted and Demoted mode respectively, remove the cluster out of maintenance, this allows pacemaker to start SAP HANA DB.
 
      ```bash
      pcs property set maintenance-mode=false
