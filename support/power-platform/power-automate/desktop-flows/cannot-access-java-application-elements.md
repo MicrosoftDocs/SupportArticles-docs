@@ -1,13 +1,13 @@
 ---
 title: Can't access elements of a Java application
-description: Provides resolutions for the issue that Power Automate for desktop can't access the elements of a Java desktop application.
+description: Troubleshoot the issue that Power Automate for desktop can't access the elements of a Java desktop application.
 ms.reviewer: pefelesk
-ms.date: 09/30/2022
+ms.date: 10/16/2024
 ms.custom: sap:Desktop flows\Working with Power Automate for desktop
 ---
 # Can't access the elements of a Java application
 
-This article provides resolutions for the issue that you can't access the elements of a Java desktop application in Microsoft Power Automate for desktop.
+This article provides possible causes and solutions for the issue where you can't access the elements of a Java desktop application in Microsoft Power Automate for desktop.
 
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 5014922
@@ -16,55 +16,63 @@ _Original KB number:_ &nbsp; 5014922
 
 Microsoft Power Automate for desktop can't access the elements of a Java desktop application.
 
-## Verifying issue
+## Verifying the issue
 
-Make sure that you aren't able to capture an element of the application by using either the Recorder or the "Add UI element" action in the Designer.
+Ensure that you can't capture an element of the application by using either the [Recorder](/power-automate/desktop-flows/recording-flow) or the [Add UI element](/power-automate/desktop-flows/ui-elements) action in the flow designer.
 
-## Cause 1: Java isn't installed on your machine
+## Troubleshooting steps
 
-### Resolution
+1. Ensure that you have Java installed on your machine:
 
-To solve this issue, make sure that you have Java installed. You can check this by:
+   - Open the Command Line tool (cmd) and run the following command:
 
-- Open a command window or terminal and enter: `> java –version`.
-- If Java isn't installed on your machine, you'll receive an error message:
+     ```cmd
+     java –version
+     ```
 
-  > 'java' is not recognized as an internal or external command, operable program or batch file.
+   - If Java isn't installed, you receive an error message:
 
-## Cause 2: Java Access Bridge is enabled
+     > 'java' is not recognized as an internal or external command, operable program or batch file.
 
-### Resolution
+2. Ensure that the **Enable Java Access Bridge** option is disabled in the Control Panel.
 
-To solve this issue, make sure that you've disabled the Java Access Bridge in Control Panel.
+   Go to **Control Panel** > **Ease of Access** > **Optimize visual display** > **Java Access Bridge from Oracle, Inc. Providing Assistive Technology access to Java applications**, and then disable the **Enable Java Access Bridge** option.
 
-Go to **Control Panel** > **Ease of Access** > **Optimize visual display** > **Java Access Bridge from Oracle, Inc. Providing Assistive Technology access to Java applications**, and then disable (uncheck) the **Enable Java Access Bridge** option.
+   :::image type="content" source="media/cannot-access-java-application-elements/enable-java-access-bridge-option.png" alt-text="Screenshot of the Enable Java Access Bridge option in the Windows Control Panel.":::
 
-## Cause 3: Some files aren't available in the Java folder(s) of the machine after you install Power Automate for desktop
+3. Ensure that specific files exist in one or more Java folders of the machine after the Power Automate for desktop installation.
 
-### Resolution
+   To check the installed Java version and installation path on your machine:
 
-Specific files should exist in the Java folder(s) of the machine after the Power Automate for desktop installation.
+    1. Type _Configure Java_ in the Windows search bar.
+    1. Open Java Control Panel and go to the **Java** tab.
+    1. Select **View**.
 
-Follow the below steps to check the installed Java version and installation path in your machine:
+       :::image type="content" source="media/cannot-access-java-application-elements/java-control-panel.png" alt-text="Screenshot of the Java Control Panel.":::
 
-1. Type _Configure Java_ in the Search bar of Windows.
-1. Open Java control panel and go to the **Java** tab.
-1. Select **View**.
-1. Check values in the **Path** column. The row with **Architecture** equal to x86 refers to 32-bit Java installation, while the row with value x64 refers to 64-bit Java installation.
+    1. Check the values in the **Path** column. The row with **Architecture** equal to x86 refers to 32-bit Java installation, while the row with value x64 refers to 64-bit Java installation.
 
-You may check the below files:
+       :::image type="content" source="media/cannot-access-java-application-elements/java-runtime-environments-settings.png" alt-text="Screnshot of the Java Runtime Environment Settings.":::
 
-- For 64-bit Java installation:
+   Additionally, check the following files:
 
-  - File _Microsoft.Flow.RPA.Desktop.UIAutomation.Java.Bridge.Native.dll_ should have been replaced in folder _C:\Program Files\Java\jre1.8.0_271\bin_. (jre1.8.0_271 could be replaced with your machine's Java installation.)
-  - File _accessibility.properties_ should have been replaced in folder _C:\Program Files\Java\jre1.8.0_271\lib_. (jre1.8.0_271 could be replaced with your machine's Java installation.) If you edit the file with a notepad, it should have the following value:  
+   - For 64-bit Java installation:
+
+     - File _Microsoft.Flow.RPA.Desktop.UIAutomation.Java.Bridge.Native.dll_ should have been replaced in folder _C:\Program Files\Java\jre1.8.0_271\bin_. (_jre1.8.0_271_ could be replaced with your machine's Java installation.)
+     - File _accessibility.properties_ should have been replaced in folder _C:\Program Files\Java\jre1.8.0_271\lib_. (_jre1.8.0_271_ could be replaced with your machine's Java installation.)  
+       - If you edit the file with Notepad, it should have the following value:  
   `assistive_technologies=com.sun.java.accessibility.AccessBridge, microsoft.flows.rpa.desktop.uiautomation.JavaBridge`
-  - File _access-bridge-64_ should have been inserted in folder _C:\Program Files\Java\jre1.8.0_271\lib\ext_. (jre1.8.0_271 could be replaced with your machine's Java installation.)
+     - File _PAD.JavaBridge.jar_ should have been inserted in folder _C:\Program Files\Java\jre1.8.0_271\lib\ext_. (_jre1.8.0_271_ could be replaced with your machine's Java installation.)
 
-- For 32-bit Java installation:
+   - For 32-bit Java installation:
 
-  Same actions for the same files as above but in folder path _C:\Program Files (x86) \Java…_.
+     - Same actions for the same files as above but in folder path _C:\Program Files (x86) \Java…_.
 
-- Make sure there isn't an _.accessibility.properties_ file present in your user folder.
-- Check _C:\Users\user_ if a file with name _.accessibility.properties_ is present. If yes, rename it.
-- Ensure that _VC_redist.x64.exe_ and/or _VC_redist.x86.exe_ have been executed.
+4. Check for _.accessibility.properties_ file:
+
+    - Ensure there isn't an _.accessibility.properties_ file present in your user folder.
+    - If a file named _.accessibility.properties_ is present in the _C:\Users\user_ folder, rename it.
+
+5. Ensure that _VC_redist.x64.exe_ and/or _VC_redist.x86.exe_ have been run.
+
+   :::image type="content" source="media/cannot-access-java-application-elements/installed-microsoft-visual-c-plus-plus-redistributable-versions.png" alt-text="Screenshot of the installed Microsoft Visual C++ Redistributable versions.":::
