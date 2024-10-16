@@ -33,7 +33,7 @@ To increase the public IP limit or quota for your subscription, follow these ste
 
 4. On the **New support request** page, specify the new limit that you require, and then follow the instructions to create the support request.
 
-   :::image type="content" source="media/error-code-publicipcountlimitreached/new-limit-public-ip.png" alt-text="Screenshot that shows how to create a support request for quota increase." lightbox="media/error-code-publicipcountlimitreached/new-limit-public-ip.png":::
+   :::image type="content" source="media/error-code-publicipcountlimitreached/new-limit-public-ip.png" alt-text="Screenshot that how to specify the new limit for public IP addresses." lightbox="media/error-code-publicipcountlimitreached/new-limit-public-ip.png":::
 
 After the quota change takes effect, retry the operation that initially triggered the "PublicIPCountLimitReached" error.
 
