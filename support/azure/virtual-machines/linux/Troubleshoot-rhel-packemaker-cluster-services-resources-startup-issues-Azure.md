@@ -14,7 +14,7 @@ ms.custom: sap:Issue with Pacemaker clustering, and fencing
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-This article describes the most typical reasons of startup issues for RHEL (RedHat Enterprise Linux) pacemaker cluster resources or services, as well as guidance for determining the cause and resolving the issues.
+This article describes the most typical reasons of startup issues for RHEL (RedHat Enterprise Linux) pacemaker cluster resources or services and guidance for determining the cause and resolving the issues.
 
 # Scenario 1: Unable to start cluster service due to quorum
 
@@ -200,7 +200,7 @@ ip-172.17.223.36 successfully restarted
 
 SAP HANADB fails to start with `'unknown error'`
 
-- In the /var/log/messages, we can see SRHOOK=SFAIL messages.
+- From the /var/log/messages, we can see SRHOOK=SFAIL messages.
 - Secondary cluster node is in WAITING4PRIM status.
 - Cluster resource status when you run "pcs status" is as:
 
