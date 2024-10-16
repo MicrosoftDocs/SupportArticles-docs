@@ -53,9 +53,9 @@ When you stripe a backup to VDI, multiple backup devices together make up the co
 > [!Important]
 > Due to this issue, existing backups might not be restorable if the following conditions are true:
 > 
-> -	The backup is taken with delay log pining feature enabled.
-> -	The backup tool is using VDI.
-> -	The backup is done using multi-striping (backing up to several files).
+> - The backup is taken with the delay log pining feature enabled.
+> - The backup tool is using VDI.
+> - The backup is done using multi-striping (backing up to several files).
 
 We encourage you to restore your existing backups on a test server to check if they can be restored successfully.
 
