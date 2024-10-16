@@ -83,7 +83,7 @@ Azure makes available an RHUI repository validation script in GitHub. One of the
 - Focuses exclusively in the RHUI repositories.
 - Validates a found error by using the defined conditions and provides recommendations for a fix
 
-To get the script, see [RHUI_repo_validation_scripts](https://github.com/Azure/azure-support-scripts/tree/master/Linux_scripts/RHUI_repo_validation_scripts).
+To get the script, see [RHUI_check script](https://github.com/Azure/azure-support-scripts/tree/master/Linux_scripts/rhui-check).
 
 #### Supported Red Hat images
 
@@ -105,7 +105,7 @@ To run the validation script, enter the following shell commands on a Red Hat VM
 curl -sL https://raw.githubusercontent.com/Azure/azure-support-scripts/refs/heads/master/Linux_scripts/rhui-check/rhui-check.py | sudo python2 -
 ```
 
-2. In case no direct internet access is possible from the virtual machine, download and transfer the script to the virtual machine using the given URL: [RHUI check script](https://raw.githubusercontent.com/Azure/azure-support-scripts/master/Linux_scripts/rhui-check/rhui-check.py) and then execute the following command:
+2. In case no direct internet access is possible from the virtual machine, download and transfer the script to the virtual machine using the given URL: [RHUI check script](https://raw.githubusercontent.com/Azure/azure-support-scripts/refs/heads/master/Linux_scripts/rhui-check/rhui-check.py) and then execute the following command:
 
 ```bash
 sudo python2 ./rhui-check.py 
@@ -121,7 +121,7 @@ sudo python2 ./rhui-check.py
 curl -sL https://raw.githubusercontent.com/Azure/azure-support-scripts/refs/heads/master/Linux_scripts/rhui-check/rhui-check.py | sudo python3 -
 ```
 
-2. In case no direct internet access is possible from the virtual machine, download and transfer the script to the virtual machine using the given URL: [RHUI check script](https://raw.githubusercontent.com/Azure/azure-support-scripts/master/Linux_scripts/rhui-check/rhui-check.py) and then execute the following command:
+2. In case no direct internet access is possible from the virtual machine, download and transfer the script to the virtual machine using the given URL: [RHUI check script](https://raw.githubusercontent.com/Azure/azure-support-scripts/refs/heads/master/Linux_scripts/rhui-check/rhui-check.py) and then execute the following command:
 
 ```bash
 sudo python3 ./rhui-check.py 
