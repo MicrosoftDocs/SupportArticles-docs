@@ -34,9 +34,9 @@ This error occurs if a connectivity issue exists between your AKS cluster and th
 
 ## Solution
 
-Review [outbound network and FQDN rules for Azure Kubernetes Service (AKS) clusters](/azure/aks/outbound-rules-control-egress) and make sure that all API services FQDN are all allowed.
+Review [outbound network and FQDN rules for Azure Kubernetes Service (AKS) clusters](/azure/aks/outbound-rules-control-egress) and make sure that all API services FQDN are allowed.
 
-For detailed troubleshooting steps, refer to the troubleshooting guides in these articles
+For detailed troubleshooting steps, refer to the troubleshooting guides in the following articles:
 
 - [Troubleshoot the OutboundConnFailVMExtensionError error code (50)](error-code-outboundconnfailvmextensionerror.md)
 
