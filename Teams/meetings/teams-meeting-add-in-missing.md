@@ -57,9 +57,7 @@ For non-VDI environments, follow these steps to reinstall the Teams meeting add-
          1. In Notepad, add the following entry to the `$msixDictionary` variable, and then save the script.
 
              "\<version of the Teams meeting add-in\>" = "\<version of Teams\>"
-     1. Close the new Teams app.
-     1. Close the Outlook app.
-     1. Run the UninstallOldTMA.ps1 script to uninstall the Teams meeting add-in, and then go to step 5.
+     1. Run the UninstallOldTMA.ps1 script to uninstall the Teams meeting add-in, and then go to step 3.
 1. Close the new Teams app.
 1. Close the Outlook app.
 1. Start the new Teams app.
