@@ -41,4 +41,4 @@ To use the ADMX/ADML files from the local store instead of the Central Store, se
 |---------|---------|---------|
 |`EnableLocalStoreOverride`|`REG_DWORD`|`0` - Use the *PolicyDefinitions* folder in the *SYSVOL* folder if present (default).</br></br>`1` - Use the local *PolicyDefinitions* folder always.|
 
-For more information about how to create a Central Store, see [How to create and manage the Central Store for Group Policy Administrative Templates in Windows](../../windows-client/group-policy/create-and-manage-central-store.md)
+For more information, see [How to create and manage the Central Store for Group Policy Administrative Templates in Windows](../../windows-client/group-policy/create-and-manage-central-store.md)
