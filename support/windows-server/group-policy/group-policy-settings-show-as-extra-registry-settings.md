@@ -5,7 +5,7 @@ ms.date: 10/16/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, herbertm
+ms.reviewer: kaushika, herbertm, v-lianna
 ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstroubleshoot
 ---
 # Group Policy settings show as Extra Registry Settings and can't be configured
@@ -41,4 +41,4 @@ To use the ADMX/ADML files from the local store instead of the Central Store, se
 |---------|---------|---------|
 |`EnableLocalStoreOverride`|`REG_DWORD`|`0` - Use the *PolicyDefinitions* folder in the *SYSVOL* folder if present (default).</br></br>`1` - Use the local *PolicyDefinitions* folder always.|
 
-For more information, see [How to create and manage the Central Store for Group Policy Administrative Templates in Windows](../../windows-client/group-policy/create-and-manage-central-store.md)
+For more information, see [How to create and manage the Central Store for Group Policy Administrative Templates in Windows](../../windows-client/group-policy/create-and-manage-central-store.md).
