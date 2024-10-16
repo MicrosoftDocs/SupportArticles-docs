@@ -14,7 +14,7 @@ ms.custom: sap:Issue with Pacemaker clustering, and fencing
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-This article lists the common causes of startup issues for RHEL(RedHat Enterprise Linux) pacemaker cluster resources or services and offers guidance for identification of cause and resolution for the issues.
+This article describes the most typical reasons of startup issues for RHEL (RedHat Enterprise Linux) pacemaker cluster resources or services, as well as guidance for determining the cause and resolving the issues.
 
 # Scenario 1: Unable to start cluster service due to quorum
 
@@ -52,9 +52,9 @@ Jun 16 11:17:53 rhel9a pacemaker-controld[509433]: error: Corosync quorum is not
 
 ## Cause:
 
-The votequorum service is part of the corosync project. This service can be optionally loaded into the nodes of a corosync cluster to avoid split-brain situations. This is accomplished by allocating number of votes to every system in the cluster. Guaranteeing that cluster actions may only take place when a majority of the votes are present. The service must be loaded into all nodes or none. If it's loaded into a subset of cluster nodes the results are unpredictable.
+The **votequorum** service is part of the corosync project. This service can be optionally loaded into the nodes of a corosync cluster to avoid split-brain situations. It's accomplished by allocating number of votes to every system in the cluster. Guaranteeing that cluster actions may only take place when a most of the votes are present. The service must be loaded into all nodes or none. If it loaded into a subset of cluster nodes, the results are unpredictable.
 
-The following corosync.conf extract will enables votequorum service within corosync:
+The following corosync.conf extract will enables **votequorum** service within corosync:
 
 ```bash
        quorum {
@@ -62,14 +62,15 @@ The following corosync.conf extract will enables votequorum service within coros
        }
 ```
 
-votequorum reads its configuration from corosync.conf. Some values can be changed at runtime, others are only read at corosync startup. It's very important that those values are consistent across all the nodes participating in the cluster or votequorum behavior are unpredictable.
+"Votequorum" reads its configuration from corosync.conf. Some values can be changed at runtime and others are only read at corosync startup. It's important that those values are consistent across all the nodes participating in the cluster or votequorum behavior are unpredictable.
 
 ## Resolution:
 
 1.	Check for missing quorum stanza in /etc/corosync/corosync.conf. Compare the existing corosync.conf with any of the available backup present under /etc/corosync/
 
 2.	Add the missing entry from any of the node present in the cluster.
-Example for two node cluster :
+
+Example for two node cluster:
 
 ```bash
 # cat /etc/corosync/corosync.conf
@@ -141,7 +142,7 @@ myip_start_0 on cluster0.heartbeat.example.com 'unknown error' (1): call=20, sta
 
 ## Cause: 
 
-IPaddr2 will call `findif()` function as specified in `/usr/lib/ocf/resource.d/heartbeat/IPaddr2` ( belongs to resource-agents package)  to determine which network interface to start the IPAddr2 resource on.
+IPaddr2 call `findif()` function as specified in `/usr/lib/ocf/resource.d/heartbeat/IPaddr2` (belongs to resource-agents package)  to determine which network interface to start the IPAddr2 resource on.
 
 The correct NIC(Network Interface Card) will be determined by the options set on the IPAddr2 resource: ip (required), cidr_netmask, and broadcast.
 
@@ -164,7 +165,7 @@ Try to determine NIC information manually. In this example, based on the ip addr
 [root@cluster0 ~]# ip -o -f inet route list match 192.168.111.222/24 scope link
 192.168.111.0/24 dev ens6  proto kernel  src 192.168.111.195    <<<=== ens6
 ```
-In case if the NIC (ens6) is down, we won't manually find the NIC information, and that might lead to `[findif] failed:`
+In case if the NIC (ens6) is down, we couldn't manually find the NIC information, and that might lead to `[findif] failed:`
 
 ```bash
 [root@cluster0 ~]# ip link set ens6 down 
@@ -201,7 +202,7 @@ SAP HANADB fails to start with `'unknown error'`
 
 - In the /var/log/messages, we can see SRHOOK=SFAIL messages.
 - Secondary cluster node is in WAITING4PRIM status.
-- Cluster resource status when you run ‘pcs status’ is as:
+- Cluster resource status when you run "pcs status" is as:
 
 
 ```bash
@@ -260,7 +261,7 @@ SAP HANA resource can't be start by pacemaker when there are SYN failures betwee
     ``` 
 2.	Check SAP HANA DB and processes state. 
 
-     -  Validate primary and secondary nodes are running SAP database and related SAP processes. Even though one node is designated as a slave and one node is a master, both nodes actually run a database. Master database is continuously synchronized to the slave database. In order to check if nodes can synchronize properly, we need to make sure that both nodes are correctly running the expected SAP DB and processes.
+     -  Validate primary and secondary nodes are running SAP database and related SAP processes. Even though one node is designated as a slave and one node is a master, both nodes actually run a database. Master database is continuously synchronized to the slave database. In order to check if nodes can synchronize properly, we need to make sure that both nodes are correctly running the expected SAP DB(Data Base) and processes.
      
      - Run 'HDB info' on each node to check the SAP related processes running in the node. SAP Admin should be able to confirm if the required process are running on both of the nodes.
   
@@ -304,7 +305,7 @@ SAP HANA resource can't be start by pacemaker when there are SYN failures betwee
 
 3. Usually stop and start operation of HANA DB should synchronize both nodes. If we're still not seeing the synchronization, then we have to disable and re-enable replication between the nodes. SAP Administrator should be able to perform this step of disabling SAP HANA system replication and then enabling the replication. 
 
-   - NOTE: When re-configuring replication on an existing SAP cluster, it's imperative that the database/node with the most accurate and up-to-date data is designated as the 'primary'. A wrong execution of this might result in an outdated or "empty" database being overwritten with the most recent database, leading to loss of data and a need to restore from any existing backup.
+   - NOTE: When reconfiguring replication on an existing SAP cluster, it's imperative that the database/node with the most accurate and up-to-date data is designated as the **primary**. A wrong execution of this process might result in an outdated or "empty" database being overwritten with the most recent database, leading to loss of data and a need to restore from any existing backup.
 
 4. After enabling replication, check the system replication status as <HANA SID> account by calling the systemReplicationStatus.py SAP Python script. The SAP binaries are typically available in 
 
@@ -337,7 +338,7 @@ If you're seeing a different message, then most likely there are other issues be
    ```
 
 
-5.	You can also check the failover process by running SAPHanaSR-showAttr command in primary VM(Virtual Machine). If the SYN issue is resolved, then the output of this command shows Primary in Promoted mode and Secondary in Demoted mode. Once you see the primary and secondary nodes in Promoted and Demoted mode respectively, remove the cluster out of maintenance, this allows pacemaker to start SAP HANA DB.
+5.	You can also check the failover process by running SAPHanaSR-showAttr command in primary VM(Virtual Machine). If the SYN issue is resolved, then the output of this command shows Primary in Promoted mode and Secondary in Demoted mode. Once you see the primary and secondary nodes in Promoted and Demoted mode respectively, remove the cluster out of maintenance, this action allows pacemaker to start SAP HANA DB.
 
      ```bash
      pcs property set maintenance-mode=false
@@ -346,7 +347,7 @@ If you're seeing a different message, then most likely there are other issues be
 
 ## Symptom 2:
 
-SAPHana Resource Experiencing Start Failures with `hana_xxx_roles` Reporting N (Standalone) mode
+SAPHana Resource Experiencing Start Failures with `hana_xxx_roles` Reporting N (Standalone) mode.
 Database resource doesn't primary or secondary on either node. With `hana_xxx_roles` reporting **N** for Standalone node mode.
 
 ```bash
@@ -376,7 +377,7 @@ Node Attributes:
     * lpa_xxx_lpt                       : 1711641128
 ```
 
-With migration summary reporting INF fail-count with failed SAPHana resource action reporting start failures due to "not running."
+With migration summary reporting INF fail-count with failed SAPHana resource action reporting start failures due to "not running".
 
 ```bash
 Migration Summary:
@@ -392,9 +393,9 @@ Failed Resource Actions:
 
 ## Cause:
 
-- While in Standalone node, each database node tries to run independently instead of communicating.
-- Commonly seen to occur when the database is altered (database manually stopped, started, replication paused, etc) while the cluster is in maintenance mode.
-- Run pcs status --full and check under Node Attributes for hana_xxx_roles and confirm it's reporting #:N:X:X:X:X instead of #:P:X:X:X:X.
+- Each database node in a standalone node attempts to function alone rather than interacting with one another.
+- Commonly seen this issue occur when the database is altered (database manually stopped, started, replication paused, etc.,) while the cluster is in maintenance mode.
+- Run "pcs status --full" and check under Node Attributes for hana_xxx_roles and confirm it's reporting #:N:X:X:X:X instead of #:P:X:X:X:X.
 
 ## Resolution:
 
@@ -447,7 +448,7 @@ Error message:
 
 ## Cause:
 
-- Run pcs status --full and collect the time frame the start error occurred under "Failed Resource Actions."
+- Run "pcs status --full" and collect the time frame the start error occurred under "Failed Resource Actions."
 
 ```bash
 Failed Resource Actions:
@@ -485,13 +486,13 @@ Apr  6 23:29:16 nodeci SAPRH2_00[340486]: Unable to change to Directory /usr/sap
 
 ## Cause:
 
-- Due to incorrect InstanceName and START_PROFILE attributes SAP instance (ASCS & ERS) won't  start under cluster control.
+- Due to incorrect InstanceName and START_PROFILE attributes SAP instance (ASCS & ERS) not start under cluster control.
 
 ## Resolution:
 
 **Note:** *This resolution is applicable when your Instance profile and START profile are individual.*
 
-- Verify the pf (profile) path from /usr/sap/sapservices file 
+- Verify the PF (profile) path from /usr/sap/sapservices file 
 
 
 ```bash
@@ -512,11 +513,11 @@ LD_LIBRARY_PATH=/usr/sap/RH2/ERS10/exe:$LD_LIBRARY_PATH;export LD_LIBRARY_PATH;/
 # pcs resource update ERS_RH2_ERS10 InstanceName=RH2_ERS10_nodersvi START_PROFILE=/usr/sap/RH2/ERS10/profile/START_ERS10_nodersvi
 ```
 
-**Note**: *Above instance name and start_profile path can vary as per the setup.*
+**Note**: *This instance name and start_profile path can vary as per the setup.*
 
 ## Next Steps
 
-If you need additional help, open a support request by using the following instructions. When you submit your request, attach `sosreport` logs for troubleshooting.
+If you need further help, open a support request by using the following instructions. When you submit your request, attach `sosreport` logs for troubleshooting.
 
 
 
