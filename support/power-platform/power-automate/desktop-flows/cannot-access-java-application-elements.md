@@ -73,6 +73,6 @@ Ensure that you can't capture an element of the application by using either the 
     - Ensure there isn't an _.accessibility.properties_ file in your user folder.
     - If a file named _.accessibility.properties_ is in the _C:\Users\user_ folder, rename it.
 
-5. Ensure that _VC_redist.x64.exe_ and/or _VC_redist.x86.exe_ have been run.
+5. Ensure that _VC_redist.x64.exe_, _VC_redist.x86.exe_, or both are run.
 
    :::image type="content" source="media/cannot-access-java-application-elements/installed-microsoft-visual-c-plus-plus-redistributable-versions.png" alt-text="Screenshot of the installed Microsoft Visual C++ Redistributable versions.":::
