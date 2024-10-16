@@ -5,7 +5,7 @@ ms.reviewer: rnirek
 ms.author: skarthikeyan
 ms.topic: troubleshooting
 ms.date: 10/16/2024
-ms.service: virtual-machines
+ms.service: virtual-machines-linux
 ms.collection: linux
 ms.custom: sap:Issue with Pacemaker clustering, and fencing
 ---
@@ -52,7 +52,7 @@ Jun 16 11:17:53 rhel9a pacemaker-controld[509433]: error: Corosync quorum is not
 
 ## Cause:
 
-The votequorum service is part of the corosync project. This service can be optionally loaded into the nodes of a corosync cluster to avoid split-brain situations. It does this by having a number of votes assigned to each system in the cluster which ensuring that only when a majority of the votes are present, cluster operations are allowed to proceed. The service must be loaded into all nodes or none. If it's loaded into a subset of cluster nodes the results are unpredictable.
+The votequorum service is part of the corosync project. This service can be optionally loaded into the nodes of a corosync cluster to avoid split-brain situations. This is accomplished by allocating number of votes to every system in the cluster, guaranteeing that cluster actions may only take place when a majority of the votes are present. The service must be loaded into all nodes or none. If it's loaded into a subset of cluster nodes the results are unpredictable.
 
 The following corosync.conf extract will enables votequorum service within corosync:
 
