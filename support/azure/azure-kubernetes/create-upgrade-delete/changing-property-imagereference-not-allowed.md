@@ -21,6 +21,6 @@ Unexpected results might occur if you modify or delete tags and other properties
 
  
 ## Solution
-Add Another Nodepool and delete the impacted one.
+Add another node pool, and then delete the affected node pool.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
