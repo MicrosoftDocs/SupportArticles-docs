@@ -97,7 +97,7 @@ If you require additional storage beyond this limit, contact [Azure Support](#co
 ### Solution 1: Ensure network connectivity between the device and the container registry login server on port 443
 
 > [!TIP]
-> The container registry login server, also referred to as the Registry REST API endpoint. The login server name is in the format <registry-name>.azurecr.io (must be all lowercase).
+> The container registry login server, also referred to as the Registry REST API endpoint. The login server name is in the format `<registry-name>.azurecr.io` (must be all lowercase).
 
 Authentication and registry management operations are handled through the registry's public login server.
 
@@ -149,7 +149,7 @@ Check the output of the `nc` or `telnet` command. If a timeout is displayed, mak
 
 ## Error 3: Denied, client is not allowed access
 
->`denied: {"errors":[{"code":"DENIED","message":"client with IP \u0027<your-device-IP>\u0027 is not allowed access. Refer https://aka.ms/acr/firewall to grant access."}]}
+>`denied: {"errors":[{"code":"DENIED","message":"client with IP \u0027<your-device-IP>\u0027 is not allowed access. Refer https://aka.ms/acr/firewall to grant access."}]}`
 
 ### Solution: Ensure the container registry's built-in firewall allows your device's IP address
 
