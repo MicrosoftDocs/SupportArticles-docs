@@ -30,7 +30,7 @@ Under rare circumstances, the 124 exit code for the Azure Virtual Machine Scale 
 | `K8SAPIServerConnFailVMExtensionError`      | 51                |
 | `K8SAPIServerDNSLookupFailVMExtensionError` | 52                |
 
-This error occurs when there’s a connectivity issue between your AKS cluster and the required Azure endpoints, such as `mcr.microsoft.com` or `acs-mirror.azureedge.net`.
+This error occurs if a connectivity issue exists between your AKS cluster and the required Azure endpoints, such as `mcr.microsoft.com` or `acs-mirror.azureedge.net`.
 
 ## Solution
 
