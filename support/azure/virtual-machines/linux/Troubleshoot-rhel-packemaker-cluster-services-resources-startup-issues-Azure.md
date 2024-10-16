@@ -52,7 +52,7 @@ Jun 16 11:17:53 rhel9a pacemaker-controld[509433]: error: Corosync quorum is not
 
 ## Cause:
 
-The votequorum service is part of the corosync project. This service can be optionally loaded into the nodes of a corosync cluster to avoid split-brain situations. This is accomplished by allocating number of votes to every system in the cluster, guaranteeing that cluster actions may only take place when a majority of the votes are present. The service must be loaded into all nodes or none. If it's loaded into a subset of cluster nodes the results are unpredictable.
+The votequorum service is part of the corosync project. This service can be optionally loaded into the nodes of a corosync cluster to avoid split-brain situations. This is accomplished by allocating number of votes to every system in the cluster. Guaranteeing that cluster actions may only take place when a majority of the votes are present. The service must be loaded into all nodes or none. If it's loaded into a subset of cluster nodes the results are unpredictable.
 
 The following corosync.conf extract will enables votequorum service within corosync:
 
