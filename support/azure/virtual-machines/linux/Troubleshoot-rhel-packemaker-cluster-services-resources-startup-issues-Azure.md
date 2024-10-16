@@ -193,15 +193,15 @@ Warning: This command is deprecated and will be removed. Please use 'pcs resourc
 ip-172.17.223.36 successfully restarted
 ```
 
-# Scenario 3:  Issue with SAP HANA
+# Scenario 3:  Issue with SAP HANA(High-performance ANalytic Appliance)
 
 ## Symptom 1:  
 
 SAP HANADB fails to start with `'unknown error'`
 
-- In the /var/log/messages we can see SRHOOK=SFAIL messages.
+- In the /var/log/messages, we can see SRHOOK=SFAIL messages.
 - Secondary cluster node is in WAITING4PRIM status.
-- Cluster resource status when you run ‘pcs status’ is as below:
+- Cluster resource status when you run ‘pcs status’ is as:
 
 
 ```bash
@@ -249,7 +249,7 @@ node-1:~ # SAPHanaSR-showAttr
 
 ## Resolution:
 
-SAP HANA resource can't be started by pacemaker when there are SYN failures between primary and secondary cluster nodes. To mitigate this issue, we must manually enable SYN between the primary and secondary nodes.
+SAP HANA resource can't be start by pacemaker when there are SYN failures between primary and secondary cluster nodes. To mitigate this issue, we must manually enable SYN between the primary and secondary nodes.
  
 `Caution: Steps 2,3 & 4 are to be performed using SAP administrator account as these steps involve using SAP System ID to stop, start and re-enable replication manually.`
 
@@ -260,7 +260,7 @@ SAP HANA resource can't be started by pacemaker when there are SYN failures betw
     ``` 
 2.	Check SAP HANA DB and processes state. 
 
-     -  Validate primary and secondary nodes are running SAP database and related SAP processes. Even though one node is designated as a slave and one node is a master, both nodes actually run a database, where the master database is continuously synchronized to the slave database. In order to check if nodes can synchronize properly, we need to make sure that both nodes are correctly running the expected SAP DB and processes.
+     -  Validate primary and secondary nodes are running SAP database and related SAP processes. Even though one node is designated as a slave and one node is a master, both nodes actually run a database. Master database is continuously synchronized to the slave database. In order to check if nodes can synchronize properly, we need to make sure that both nodes are correctly running the expected SAP DB and processes.
      
      - Run 'HDB info' on each node to check the SAP related processes running in the node. SAP Admin should be able to confirm if the required process are running on both of the nodes.
   
@@ -304,9 +304,9 @@ SAP HANA resource can't be started by pacemaker when there are SYN failures betw
 
 3. Usually stop and start operation of HANA DB should synchronize both nodes. If we're still not seeing the synchronization, then we have to disable and re-enable replication between the nodes. SAP Administrator should be able to perform this step of disabling SAP HANA system replication and then enabling the replication. 
 
-   - NOTE: When re-configuring replication on an existing SAP cluster, it's imperative that the database/node with the most correct and up-to-date data is designated as the 'primary'. If this is done incorrectly, there's a risk of over-writing the most up-to-date database with an out-of-date or 'empty' database, leading to loss of data and a need to restore from any existing backup.
+   - NOTE: When re-configuring replication on an existing SAP cluster, it's imperative that the database/node with the most accurate and up-to-date data is designated as the 'primary'. A wrong execution of this might result in an outdated or "empty" database being overwritten with the most recent database, leading to loss of data and a need to restore from any existing backup.
 
-4. After enabling replication check the system replication status as <HANA SID> account by calling the systemReplicationStatus.py SAP Python script. The SAP binaries are usually available in 
+4. After enabling replication, check the system replication status as <HANA SID> account by calling the systemReplicationStatus.py SAP Python script. The SAP binaries are typically available in 
 
    ```bash
    /hana/shared/A00/HDB00/exe/python_support directory.
@@ -337,7 +337,7 @@ If you're seeing a different message, then most likely there are other issues be
    ```
 
 
-5.	You can also check the failover process by running SAPHanaSR-showAttr command in primary VM(Virtual Machine). If the SYN issue is resolved then the output of this command shows Primary in Promoted mode and Secondary in Demoted mode. Once you see the primary and secondary nodes in Promoted and Demoted mode respectively, remove the cluster out of maintenance, this allows pacemaker to start SAP HANA DB.
+5.	You can also check the failover process by running SAPHanaSR-showAttr command in primary VM(Virtual Machine). If the SYN issue is resolved, then the output of this command shows Primary in Promoted mode and Secondary in Demoted mode. Once you see the primary and secondary nodes in Promoted and Demoted mode respectively, remove the cluster out of maintenance, this allows pacemaker to start SAP HANA DB.
 
      ```bash
      pcs property set maintenance-mode=false
