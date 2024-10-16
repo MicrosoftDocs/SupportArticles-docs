@@ -148,8 +148,8 @@ To resolve this issue, perform changes accordingly at the NSG level to allow the
 
 Check the output of the `nc` or `telnet` command. If a timeout is displayed, make sure that:
 
-- The route table doesn't drop the traffic towards the container registry login server. The traffic is dropped if the next hop for a route associated with the container registry login server is set to **None**. For more information, see [next hop types: None](/azure/virtual-network/virtual-networks-udr-overview#:~:text=custom%20route.-,None,-%3A%20Traffic%20routed%20to)
-- If the route table sends the traffic towards a virtual appliance, like a firewall, make sure the firewall doesn't block the traffic to the container registry login server on port 443. For more information, see [Configure rules to access an Azure container registry behind a firewall](/azure/container-registry/container-registry-firewall-access-rules)
+- The route table doesn't drop the traffic towards the container registry login server. The traffic is dropped if the next hop for a route associated with the container registry login server is set to **None**. For more information, see [Next hop types: None](/azure/virtual-network/virtual-networks-udr-overview#:~:text=custom%20route.-,None,-%3A%20Traffic%20routed%20to).
+- If the route table sends the traffic towards a virtual appliance, like a firewall, make sure the firewall doesn't block the traffic to the container registry login server on port 443. For more information, see [Configure rules to access an Azure container registry behind a firewall](/azure/container-registry/container-registry-firewall-access-rules).
 
 ## Error 3: Denied, client is not allowed access
 
