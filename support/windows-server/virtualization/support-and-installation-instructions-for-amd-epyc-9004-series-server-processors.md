@@ -18,7 +18,7 @@ The following Windows Server releases are supported on AMD EPYC 9004 and AMD EPY
 * Windows Server 2019
 * Windows Server 2022
 
-## AMD EPYC processor OPN support
+## AMD EPYC processor Ordering Part Number (OPN) support
 
 AMD offers a wide range of AMD EPYC 9004 series processors. You can determine the specific processor model in [AMD EPYC 9004 series processors](https://www.amd.com/en/products/processors/server/epyc/4th-generation-9004-and-8004-series.html).
 
