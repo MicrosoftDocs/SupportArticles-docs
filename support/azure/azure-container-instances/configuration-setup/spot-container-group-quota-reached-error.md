@@ -12,12 +12,12 @@ This article provides a solution to the Spot container deployment error Containe
 
 ## Symptoms 
 
-When you deploy a Spot container to Azure Container Instances (ACI) with a default quota from the Azure portal or by using the Azure CLI, the deployment fails with a ContainerGroupQuotaReached error like the following text:
+When you deploy a Spot container to Azure Container Instances (ACI) from the Azure portal or by using the Azure CLI, the deployment fails with a ContainerGroupQuotaReached error like the following text:
 
 > Code: ContainerGroupQuotaReached  
 > Message: Resource type 'Microsoft.ContainerInstance/containerGroups' container group quota 'StandardSpotCores' exceeded in region 'westeurope'. Limit: '100', Usage: '12' Requested: '90'.
 
-Here's a command example for deploying a Spot container with a default quota:
+Here's a command example for deploying a Spot container:
 
 ```azurecli
 az container create -g MyResourceGroup --name myapp --image myimage:latest --priority spot --cpu 10
