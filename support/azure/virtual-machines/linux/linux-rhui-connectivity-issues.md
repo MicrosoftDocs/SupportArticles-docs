@@ -83,8 +83,6 @@ Azure makes available an RHUI repository validation script in GitHub. One of the
 - Focuses exclusively in the RHUI repositories.
 - Validates a found error by using the defined conditions and provides recommendations for a fix
 
-To get the script, see [RHUI_check script](https://github.com/Azure/azure-support-scripts/tree/master/Linux_scripts/rhui-check).
-
 #### Supported Red Hat images
 
 This version of the validation script currently supports only the following Red Hat VMs that are deployed from the Azure Marketplace image:
