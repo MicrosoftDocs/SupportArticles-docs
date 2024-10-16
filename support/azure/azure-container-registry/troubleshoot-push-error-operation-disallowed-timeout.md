@@ -2,7 +2,7 @@
 title: Cannot push images or artifacts to Azure Container Registry
 description: Provides guidance for troubleshooting common errors when you push images or artifacts to an Azure container registry.
 ms.date: 10/11/2024
-ms.reviewer: v-rekhanain;chiragpa
+ms.reviewer: v-rekhanain;chiragpa;andbar
 ms.service: azure-container-registry
 ms.custom: sap:Image Push Issues
 ---
@@ -116,7 +116,7 @@ nc -vz <acr-name>.azurecr.io 443 -w 10
 Example output:
 
 ```output
-nc: connect to <acr-name>.azurecr.io 443 port (tcp) failed: Connection timeout
+nc: connect to <acr-name>.azurecr.io 443 port (TCP) failed: Connection timeout
 ```
 
 If you push to the container registry from an Azure resource, follow these steps to troubleshoot the issue:
@@ -127,15 +127,19 @@ Check the output of the `nc` or `telnet` command mentioned earlier. If the timeo
 
 To check if the NSG blocks the IP address of the container registry login server, follow these steps:
 
-1. In the Azure portal, go to **Network Watcher** and select **NSG diagnostic**.
-2. Fill the fields by using the following values:
+1. Locate the IP address of the container registry login server.
+   1. In the Azure portal, open the container registry.
+   2. Select **Overview**, check the fully qualified domain name (FQDN) of the **Login server**.
+   3. Use tools like `nslookup` to find the IP address of the FQDN: `nslookup <acr-name>.azurecr.io`.
+3. In the Azure portal, go to **Network Watcher** and select **NSG diagnostic**.
+4. Fill the fields by using the following values:
 	- Protocol: TCP
 	- Direction: Outbound
     - Source type: IPv4 address/CIDR
 	- IPv4 address/CIDR: The IP address of the Azure resource
 	- Destination IP address: The IP address of the container registry login server
 	- Destination port: 443
-3. Select the **Run NSG diagnostic** button and check the **Traffic** status.
+5. Select the **Run NSG diagnostic** button and check the **Traffic** status.
 The Traffic status can be **Allowed** or **Denied**. The Denied status means that the NSG is blocking the traffic between the Azure resource and the login server. If the status is Denied, the NSG name will be shown.
 
 To resolve this issue, perform changes accordingly at the NSG level to allow the connectivity between the Azure device and the container registry login server on port 443.
@@ -144,7 +148,7 @@ To resolve this issue, perform changes accordingly at the NSG level to allow the
 
 Check the output of the `nc` or `telnet` command. If a timeout is displayed, make sure that:
 
-- The route table doesn't drop the traffic towards the container registry login server. The traffic is dropped if the next hop for a route associated with the container registry login server is set to **None**. To learn more about next hop None please visit this page.
+- The route table doesn't drop the traffic towards the container registry login server. The traffic is dropped if the next hop for a route associated with the container registry login server is set to **None**. For more information, see 
 - If the route table sends the traffic towards a virtual appliance, like a firewall, make sure the firewall doesn't block the traffic to the container registry login server on port 443. To learn more on how to configure rules to access an Azure container registry behind a firewall please visit this page.
 
 ## Error 3: Denied, client is not allowed access
@@ -157,7 +161,7 @@ Azure container registry by default accepts connections over the internet from h
 
 Disabling or restricting access to specific IP addresses or CIDRs can lead to the `DENIED` error if your device's IP address was not allowed by the built-in firewall.
 
-To address this issue, make sure the the container registry built-in firewall allows the IP address of the device used to perform the push the operation. For more information, see [Configure public IP network rules for Azure container registry](/azure/container-registry/container-registry-access-selected-networks).
+To address this issue, make sure the container registry built-in firewall allows the IP address of the device used to perform the push the operation. For more information, see [Configure public IP network rules for Azure container registry](/azure/container-registry/container-registry-access-selected-networks).
 Alternatively, if you disabled the public network access, you can [configure connectivity using private endpoint](/azure/container-registry/container-registry-private-link).
 
 
