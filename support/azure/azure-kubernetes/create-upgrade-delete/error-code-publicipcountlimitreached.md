@@ -27,15 +27,13 @@ To increase the public IP limit or quota for your subscription, follow these ste
 
 1. Navigate to the [Azure portal](https://portal.azure.com/#view/Microsoft_Azure_Billing/SubscriptionsBladeV2), and select the subscriptions for which you're performing the operation.
 2. In the **Settings** section, select **Usage + quotas**. Set the **Provider** to **Networking**, and optionally filter by the region of your AKS cluster.
-3. Locate the **Public IP Addresses** record. On the same line, select the **Create a new support request** button. You'll be redirected to a page where you can specify the new limit that you require and also provide additional details, such as contact information.
+3. Locate the **Public IP Addresses** record. On the same line, select the **Create a new support request** button. 
 
    :::image type="content" source="media/error-code-publicipcountlimitreached/submit-quotas-request.png" alt-text="Screenshot that shows how to create a support request for quota increase." lightbox="media/error-code-publicipcountlimitreached/submit-quotas-request.png":::
 
-This process will create a support request to increase your public IP address quota for the specified region. See the following screenshots for visual guidance.
+4. On the **New support request** page, specify the new limit that you require, and then follow the instructions to create the support request.
 
-![public-ip-limit](https://github.com/user-attachments/assets/85e93fa0-e151-4410-99b3-13410b4049b1)
-
-![specify-new-limit](https://github.com/user-attachments/assets/de006bb5-e5c3-4c7e-91db-3a89b2991450)
+   :::image type="content" source="media/error-code-publicipcountlimitreached/new-limit-public-ip.png" alt-text="Screenshot that shows how to create a support request for quota increase." lightbox="media/error-code-publicipcountlimitreached/new-limit-public-ip.png":::
 
 After the quota change takes effect, retry the operation that initially triggered the "PublicIPCountLimitReached" error.
 
