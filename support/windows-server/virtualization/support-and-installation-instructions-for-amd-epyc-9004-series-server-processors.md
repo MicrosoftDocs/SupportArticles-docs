@@ -50,12 +50,12 @@ To use earlier OS media releases prior to aforementioned releases, use one of th
   1. Download Windows Server Latest Cumulative Update packages and prerequisite packages. For details, see [Microsoft Windows Server 2019 Update Site](https://support.microsoft.com/topic/windows-10-and-windows-server-2019-update-history-725fc2e1-4443-6831-a5ca-51ff5cbcb059) and [Microsoft Windows Server 2022 Update Site](https://support.microsoft.com/topic/windows-server-2022-update-history-e1caa597-00c5-4ab9-9f3e-8212fe80b2ee).
   2. Add prerequisite packages followed by the Latest Cumulative Update package to the boot.wim and install.wim image files in the OS installation media. For details, see [Add Packages Offline using DISM](/windows-hardware/manufacture/desktop/add-or-remove-packages-offline-using-dism).
 
-## Known Issues and Limitations
+## Known issues and limitations
 
 In systems running Windows Server 2019 with many logical processors and the Hyper-V virtualization feature enabled, the operating system runs Hyper-V Minroot configuration. In such systems, the followings are issues and limitations that may be observed in AMD EPYC 9004/9005 series-based systems have more than 320 logical processors.
 
-* Task Manager in the root partition does not show CPU utilization accounting for virtual machines' workloads.
-* The operating system does not use Collaborative Processor Performance Control (CPPC) for processor power management despite CPPC being set to enable in BIOS.
+* Task Manager in the root partition doesn't show CPU utilization accounting for virtual machines' workloads.
+* The operating system doesn't use Collaborative Processor Performance Control (CPPC) for processor power management despite CPPC being set to enable in BIOS.
 * The root partition may not utilize all maximum 320 logical processors available when running Minroot configuration.
 
 In addition to the preceding observations, on AMD EPYC 9005 series-based systems where the total number of logical processors is greater than 512, the following limitation is applicable.
