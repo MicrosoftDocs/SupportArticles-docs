@@ -33,7 +33,7 @@ To install Windows Server on systems that use AMD EPYC 9004 or 9005 parts that h
 * Windows Server 2019: Build 17763.3532 (2022 October) or later
 * Windows Server 2022: Build 20348.859 (2022 July) or later
 
-To use earlier OS media releases prior to aforementioned releases, use one of the following options:
+To use earlier OS media releases prior to the preceding releases, use one of the following options:
 
 * Option 1: Change the number of enabled CCD setting in BIOS
   
@@ -52,20 +52,20 @@ To use earlier OS media releases prior to aforementioned releases, use one of th
 
 ## Known issues and limitations
 
-On systems running Windows Server 2019 with many logical processors and the Hyper-V virtualization feature enabled, the operating system runs a Hyper-V Minroot configuration. The following issues and limitations may be observed on AMD EPYC 9004 or 9005 series-based systems with more than 320 logical processors.
+On systems running Windows Server 2019 with many logical processors and the Hyper-V virtualization feature enabled, the operating system runs a Hyper-V Minroot configuration. The following issues and limitations may be observed on AMD EPYC 9004 or 9005 series-based systems with more than 320 logical processors:
 
 * Task Manager in the root partition doesn't show CPU utilization accounting for virtual machines' workloads.
 * The operating system doesn't use Collaborative Processor Performance Control (CPPC) for processor power management despite CPPC being set to enable in BIOS.
 * The root partition may not utilize all maximum 320 logical processors available when running a Minroot configuration.
 
-In addition to the preceding observations, the following limitation applies to AMD EPYC 9005 series-based systems with a total number of logical processors greater than 512.
+In addition to the preceding observations, the following limitation applies to AMD EPYC 9005 series-based systems with a total number of logical processors greater than 512:
 
-- The root partition will use a maximum of 512 logical processors.
+The root partition will use a maximum of 512 logical processors.
 
-  For more information, see [Windows Server 2019 Hyper-V host behavior running in the Minroot configuration](windows-server-hyper-v-host-minroot-behaviors.md) and [Plan for Hyper-V scalability in Windows Server](/windows-server/virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server?pivots=windows-server-2019).
+For more information, see [Windows Server 2019 Hyper-V host behavior running in the Minroot configuration](windows-server-hyper-v-host-minroot-behaviors.md) and [Plan for Hyper-V scalability in Windows Server](/windows-server/virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server?pivots=windows-server-2019).
 
-On systems running Windows Server 2022 with the Hyper-V virtualization feature enabled, the following limitation may be observed on AMD EPYC 9005 series-based systems with greater than 256 logical processors per NUMA node.
+On systems running Windows Server 2022 with the Hyper-V virtualization feature enabled, the following limitation may be observed on AMD EPYC 9005 series-based systems with greater than 256 logical processors per NUMA node:
 
-- The root partition will only enumerate the first 256 logical processors. This limitation is addressed in KB 504428 (build 10.0.20348.2110).
+The root partition will only enumerate the first 256 logical processors. This limitation is addressed in KB 504428 (build 10.0.20348.2110).
 
 Attempting to boot to the Windows Server 2019 Recovery Environment (WinRE) may result in a blue screen error 0x5C HAL_INITIALIZATION_FAILED. The WinRE image must be updated to support configurations with greater than 64 cores per socket. To enable this support, apply the latest cumulative update for Server 2019 to the WinRE image. See [Add an update package to Windows RE](/windows-hardware/manufacture/desktop/add-update-to-winre?view=windows-11&preserve-view=true) for instructions.
