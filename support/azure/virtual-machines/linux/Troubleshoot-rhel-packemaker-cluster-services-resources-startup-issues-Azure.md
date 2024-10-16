@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot RHEL pacemaker cluster services and resources startup issues Azure
-description: Provides troubleshooting guidance for issues related to cluster resources or services in RHEL Pacemaker cluster
+title: Troubleshoot RHEL(RedHat Enterprise Linux) pacemaker cluster services and resources startup issues Azure
+description: Provides troubleshooting guidance for issues related to cluster resources or services in RHEL(RedHat Enterprise Linux) Pacemaker cluster
 ms.reviewer: rnirek
 ms.author: skarthikeyan
 ms.topic: troubleshooting
@@ -10,11 +10,11 @@ ms.collection: linux
 ms.custom: sap:Issue with Pacemaker clustering, and fencing
 ---
 
-#  Troubleshoot issues related to cluster resources or services in RHEL Pacemaker Cluster Azure
+#  Troubleshoot issues related to cluster resources or services in RHEL(RedHat Enterprise Linux) Pacemaker Cluster Azure
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-This article lists the common causes of startup issues for RHEL pacemaker cluster resources or services and offers guidance for identification of cause and resolution for the issues.
+This article lists the common causes of startup issues for RHEL(RedHat Enterprise Linux) pacemaker cluster resources or services and offers guidance for identification of cause and resolution for the issues.
 
 # Scenario 1: Unable to start cluster service due to quorum
 
@@ -41,7 +41,7 @@ Node List:
 * Node rhel9b: UNCLEAN (offline)      <----------
 ```
 
-- pcs quorum status results in following error :
+- pcs quorum status results in following error:
 
 ```bash
 # pcs quorum status
@@ -52,7 +52,7 @@ Jun 16 11:17:53 rhel9a pacemaker-controld[509433]: error: Corosync quorum is not
 
 ## Cause:
 
-The votequorum service is part of the corosync project. This service can be optionally loaded into the nodes of a corosync cluster to avoid split-brain situations. It does this by having a number of votes assigned to each system in the cluster which ensuring that only when a majority of the votes are present, cluster operations are allowed to proceed. The service must be loaded into all nodes or none. If it is loaded into a subset of cluster nodes the results are unpredictable.
+The votequorum service is part of the corosync project. This service can be optionally loaded into the nodes of a corosync cluster to avoid split-brain situations. It does this by having a number of votes assigned to each system in the cluster which ensuring that only when a majority of the votes are present, cluster operations are allowed to proceed. The service must be loaded into all nodes or none. If it's loaded into a subset of cluster nodes the results are unpredictable.
 
 The following corosync.conf extract will enables votequorum service within corosync:
 
@@ -62,7 +62,7 @@ The following corosync.conf extract will enables votequorum service within coros
        }
 ```
 
-votequorum reads its configuration from corosync.conf. Some values can be changed at runtime, others are only read at corosync startup. It is very important that those values are consistent across all the nodes participating in the cluster or votequorum behavior are unpredictable.
+votequorum reads its configuration from corosync.conf. Some values can be changed at runtime, others are only read at corosync startup. It's very important that those values are consistent across all the nodes participating in the cluster or votequorum behavior are unpredictable.
 
 ## Resolution:
 
@@ -143,7 +143,7 @@ myip_start_0 on cluster0.heartbeat.example.com 'unknown error' (1): call=20, sta
 
 IPaddr2 will call `findif()` function as specified in `/usr/lib/ocf/resource.d/heartbeat/IPaddr2` ( belongs to resource-agents package)  to determine which network interface to start the IPAddr2 resource on.
 
-The correct NIC will be determined by the options set on the IPAddr2 resource: ip (required), cidr_netmask, and broadcast.
+The correct NIC(Network Interface Card) will be determined by the options set on the IPAddr2 resource: ip (required), cidr_netmask, and broadcast.
 
 *For example:*
 
@@ -164,7 +164,7 @@ Try to determine NIC information manually. In this example, based on the ip addr
 [root@cluster0 ~]# ip -o -f inet route list match 192.168.111.222/24 scope link
 192.168.111.0/24 dev ens6  proto kernel  src 192.168.111.195    <<<=== ens6
 ```
-In case if the NIC (ens6) is down, we will not manually find the NIC information, and that might lead to `[findif] failed:`
+In case if the NIC (ens6) is down, we won't manually find the NIC information, and that might lead to `[findif] failed:`
 
 ```bash
 [root@cluster0 ~]# ip link set ens6 down 
@@ -175,7 +175,7 @@ In case if the NIC (ens6) is down, we will not manually find the NIC information
 
 ## Resolution: 
 
-If the route that matches the VIP is not in the default routing table, then one can specify the NIC name in pacemaker resource, so that it can be configured bypassing the check:
+If the route that matches the VIP isn't in the default routing table, then one can specify the NIC name in pacemaker resource, so that it can be configured bypassing the check:
 
 ```bash
 # pcs resource update ip-172.17.223.36 nic=vlan10
@@ -231,7 +231,7 @@ SAP HANADB fails to start with `'unknown error'`
 ```
 
 ## Cause:
-Pacemaker cannot start SAP HANA resource when there are SYN failures between primary and secondary nodes.
+Pacemaker can't start SAP HANA resource when there are SYN failures between primary and secondary nodes.
 
 
 ```bash
@@ -249,7 +249,7 @@ node-1:~ # SAPHanaSR-showAttr
 
 ## Resolution:
 
-SAP HANA resource cannot be started by pacemaker when there are SYN failures between primary and secondary cluster nodes. To mitigate this issue, we must manually enable SYN between the primary and secondary nodes.
+SAP HANA resource can't be started by pacemaker when there are SYN failures between primary and secondary cluster nodes. To mitigate this issue, we must manually enable SYN between the primary and secondary nodes.
  
 `Caution: Steps 2,3 & 4 are to be performed using SAP administrator account as these steps involve using SAP System ID to stop, start and re-enable replication manually.`
 
@@ -262,7 +262,7 @@ SAP HANA resource cannot be started by pacemaker when there are SYN failures bet
 
      -  Validate primary and secondary nodes are running SAP database and related SAP processes. Even though one node is designated as a slave and one node is a master, both nodes actually run a database, where the master database is continuously synchronized to the slave database. In order to check if nodes can synchronize properly, we need to make sure that both nodes are correctly running the expected SAP DB and processes.
      
-     - Run HDB info on each node to check the SAP related processes running in the node. SAP Admin should be able to confirm if the required process are running on both of the nodes.
+     - Run 'HDB info' on each node to check the SAP related processes running in the node. SAP Admin should be able to confirm if the required process are running on both of the nodes.
   
     
     ```bash
@@ -286,7 +286,7 @@ SAP HANA resource cannot be started by pacemaker when there are SYN failures bet
     ```
 
 
-       - If SAP DB and services are not active on the node, ask SAP admin to Stop HANA DB in secondary node first and then in the primary node. 
+       - If SAP DB and services aren't active on the node, ask SAP admin to Stop HANA DB in secondary node first and then in the primary node. 
 
     ```bash
     'HDB stop' 
@@ -302,9 +302,9 @@ SAP HANA resource cannot be started by pacemaker when there are SYN failures bet
     'sapcontrol -nr <SAPInstanceNo.> -function Start'
     ```
 
-3. Usually stop and start operation of HANA DB should synchronize both nodes. If we are still not seeing the synchronization, then we have to disable and re-enable replication between the nodes. SAP Administrator should be able to perform this step of disabling SAP HANA system replication and then enabling the replication. 
+3. Usually stop and start operation of HANA DB should synchronize both nodes. If we're still not seeing the synchronization, then we have to disable and re-enable replication between the nodes. SAP Administrator should be able to perform this step of disabling SAP HANA system replication and then enabling the replication. 
 
-   - NOTE: When re-configuring replication on an existing SAP cluster, it is imperative that the database/node with the most correct and up-to-date data is designated as the 'primary'. If this is done incorrectly, there is a risk of over-writing the most up-to-date database with an out-of-date or 'empty' database, leading to loss of data and a need to restore from any existing backup.
+   - NOTE: When re-configuring replication on an existing SAP cluster, it's imperative that the database/node with the most correct and up-to-date data is designated as the 'primary'. If this is done incorrectly, there's a risk of over-writing the most up-to-date database with an out-of-date or 'empty' database, leading to loss of data and a need to restore from any existing backup.
 
 4. After enabling replication check the system replication status as <HANA SID> account by calling the systemReplicationStatus.py SAP Python script. The SAP binaries are usually available in 
 
@@ -313,7 +313,7 @@ SAP HANA resource cannot be started by pacemaker when there are SYN failures bet
    ```
 
      From the primary node, check if overall system replication status: `ACTIVE`. 
-If you are seeing a different message, then most likely there are other issues between primary and secondary, which needs to be sorted from SAP end.
+If you're seeing a different message, then most likely there are other issues between primary and secondary, which needs to be sorted from SAP end.
 
     ```bash
     sh-4.2$ python /hana/shared/A00/HDB00/exe/python_support/systemReplicationStatus.py
@@ -337,7 +337,7 @@ If you are seeing a different message, then most likely there are other issues b
    ```
 
 
-5.	You can also check the failover process by running SAPHanaSR-showAttr command in primary VM. If the SYN issue is resolved then the output of this command shows Primary in Promoted mode and Secondary in Demoted mode. Once you see the primary and secondary nodes in Promoted and Demoted mode respectively, remove the cluster out of maintenance, this allows pacemaker to start SAP HANA DB.
+5.	You can also check the failover process by running SAPHanaSR-showAttr command in primary VM(Virtual Machine). If the SYN issue is resolved then the output of this command shows Primary in Promoted mode and Secondary in Demoted mode. Once you see the primary and secondary nodes in Promoted and Demoted mode respectively, remove the cluster out of maintenance, this allows pacemaker to start SAP HANA DB.
 
      ```bash
      pcs property set maintenance-mode=false
@@ -347,7 +347,7 @@ If you are seeing a different message, then most likely there are other issues b
 ## Symptom 2:
 
 SAPHana Resource Experiencing Start Failures with `hana_xxx_roles` Reporting N (Standalone) mode
-Database resource does not primary or secondary on either node. With `hana_xxx_roles` reporting **N** for Standalone node mode.
+Database resource doesn't primary or secondary on either node. With `hana_xxx_roles` reporting **N** for Standalone node mode.
 
 ```bash
 Node Attributes:
@@ -394,7 +394,7 @@ Failed Resource Actions:
 
 - While in Standalone node, each database node tries to run independently instead of communicating.
 - Commonly seen to occur when the database is altered (database manually stopped, started, replication paused, etc) while the cluster is in maintenance mode.
-- Run pcs status --full and check under Node Attributes for hana_xxx_roles and confirm it is reporting #:N:X:X:X:X instead of #:P:X:X:X:X.
+- Run pcs status --full and check under Node Attributes for hana_xxx_roles and confirm it's reporting #:N:X:X:X:X instead of #:P:X:X:X:X.
 
 ## Resolution:
 
@@ -471,12 +471,12 @@ Mar  1 02:25:09 Node1 pacemaker-attrd[8568]: notice: Setting last-failure-SAPHan
 
 ## Resolution:
 
-Open a case with SAP Hana to investigate why hdbdaemon did not start.
+Open a case with SAP Hana to investigate why hdbdaemon didn't start.
 
 # Scenario 4: Issue with ASCS and ERS resource.
 
 ## Symptom 1:
-ASCS and ERS instances are not able to start under cluster control. The following errors can be seen from /var/log/messages.
+ASCS and ERS instances aren't able to start under cluster control. The following errors can be seen from /var/log/messages.
 
 ```bash
 Apr  6 23:29:16 nodeci SAPRh2_10[340480]: Unable to change to Directory /usr/sap/RH2/ERS10/work. (Error 2 No such file or directory) [ntservsserver.cpp 3845]
