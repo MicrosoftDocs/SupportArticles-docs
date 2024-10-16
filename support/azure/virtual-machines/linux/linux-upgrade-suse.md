@@ -411,7 +411,7 @@ Several issues arise during VM migration, such as the VM entering a hung state, 
 - Additionally, third-party repositories may introduce packages that conflict with official SUSE packages, potentially causing further complications during the upgrade.
 - Disabling them during the migration is crucial to prevent dependency conflicts, ensure system stability, maintain consistency with official packages, simplify troubleshooting, and provide a smoother upgrade process. 
 
-# Contact & Feedback
+## Contact & Feedback
 ::: template /.templates/Shared/Azure-Virtual-Machine-RDPSSH-Contact-Feedback-LTemplate
 ::: 
 
