@@ -206,11 +206,11 @@ To fix the issue, follow these steps:
 1. Replace the invalid **User Timezone** value with a valid value. For a list of valid time zone values, download the [Viva Glint Employee Attribute Template](https://www.microsoft.com/en-us/download/details.aspx?id=105533), select the **Time Zones** worksheet, and then check the values in the **Canonical Time Zone** column.
 1. Save the file and upload it again to Viva Glint.
 
-## INVALID_USER_TIMEZONE
+## INVALID_PERSONAL_EMAIL
 
 Warning message:
 
-> INVALID_USER_TIMEZONE: Line \<x\> the Personal Email value 'y' is not formatted like a valid email address.
+> INVALID_PERSONAL_EMAIL: Line \<x\> the Personal Email value 'y' is not formatted like a valid email address.
 
 This issue occurs if the file that you upload contains personal emails that aren't in a valid email format: user@outlook.com
 
