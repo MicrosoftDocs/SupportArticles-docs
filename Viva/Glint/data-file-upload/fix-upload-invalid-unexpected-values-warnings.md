@@ -205,3 +205,29 @@ To fix the issue, follow these steps:
    **Note**: The header row isn't included in the row count. For example, if the warning indicates line 20, go to row 21.
 1. Replace the invalid **User Timezone** value with a valid value. For a list of valid time zone values, download the [Viva Glint Employee Attribute Template](https://www.microsoft.com/en-us/download/details.aspx?id=105533), select the **Time Zones** worksheet, and then check the values in the **Canonical Time Zone** column.
 1. Save the file and upload it again to Viva Glint.
+
+## INVALID_USER_TIMEZONE
+
+Warning message:
+
+> INVALID_USER_TIMEZONE: Line \<x\> the Personal Email value 'y' is not formatted like a valid email address.
+
+This issue occurs if the file that you upload contains personal emails that aren't in a valid email format: user@outlook.com
+
+### Resolution
+
+To address the issue:
+
+**Option 1:**
+
+1. Confirm the import and add users with invalid personal emails to be corrected with a future upload.
+
+**Option 2:**
+
+1. Open the employee attribute data file in Excel. If the file is in .csv format, [import it in Excel](https://support.microsoft.com/en-us/office/import-data-from-a-csv-html-or-text-file-b62efe49-4d5b-4429-b788-e1211b5e90f6) to preserve the data in the expected format.
+1. Locate the row or rows that are listed in the warning message.
+2. Update personal email values to a valid email format that contains:
+   - a username
+   - an @ symbol
+   - a domain name
+3. Save the file and upload it again to Viva Glint.
