@@ -36,7 +36,7 @@ This issue occurs because the container group default quota exceeds over your Az
 |Default|	10|
 |Others|	0|
 
-To check the subscription type of your account, see [Check the type of your account](/azure/cost-management-billing/manage/view-all-accounts#check-the-type-of-your-account).
+To check the subscription type of your billing account, see [Check the type of your account](/azure/cost-management-billing/manage/view-all-accounts#check-the-type-of-your-account).
 
 ## Solution
 
