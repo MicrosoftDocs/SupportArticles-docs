@@ -15,17 +15,25 @@ ms.reviewer: dvargas
                                                                                                                                    
 # Scope of this article
 
-This troubleshooting guide covers different issues and their solutions during SLES migrations.
+This troubleshooting guide covers different issues and their solutions during SUSE Linux Enterprise server(SLES) migrations.
 
 > [!CAUTION]
 > Following the process in this article will cause a disconnection between the data plane, and the [control plane](/azure/architecture/guide/multitenant/considerations/control-planes#responsibilities-of-a-control-plane) of the virtual machine (VM). Azure capabilities such as [Auto guest patching](/azure/virtual-machines/automatic-vm-guest-patching#how-does-automatic-vm-guest-patching-work), [Auto OS image upgrades](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade), [Hotpatching](/windows-server/get-started/hotpatch?toc=%2Fazure%2Fvirtual-machines%2Ftoc.json#supported-updates), and [Azure Update Manager](/azure/update-manager/overview) won't be available. To utilize these features, it's recommended to create a new VM using your preferred operating system instead of performing an in-place upgrade.
 
 # Prerequisite 
-
+- This [Distribution Migration System (DMS)](https://documentation.suse.com/suse-distribution-migration-system/15/single-html/distribution-migration-system/index.html) guide provides general steps about how to upgrade  SLES12 to SLES 15 for an Azure VM. For more information, see [Upgrading SUSE Linux Enterprise in the Public Cloud](https://www.suse.com/c/upgrading-suse-linux-enterprise-in-the-public-cloud/) and [SUSE Product Lifecycle](https://www.suse.com/lifecycle)
 - Plan the migration activity as per the approved downtime window since the migration requires VM to reboot. 
 - Take a complete backup/snapshot of VM before performing the migration.
 - [Check if the VM is generation V1 or generation V2](#check-the-generation-version-for-a-vm).
 
+# Check the generation version for a VM
+
+You can use one of the following methods to check the generation version:
+
+- In the SLES terminal,  run the command `dmidecode | grep -i hyper`. If it's a generation V1 VM,  there is no output returned. For the generations V2 VMs, you will see the following output:
+
+     :::image type="content" source="media/linux-upgrade-suse-15sp1/output-gen2.png" alt-text="Screenshot shows output of the command for generation 2 V M." border="false":::
+- In the [Azure portal](https://portal.azure.com),  go to **Properties**  of the VM, and then check the **VM generation** field.
 
 # 1. Successful Migration from SLES12 to SLES15, but SLES15 SP1 to SP2 Upgrade Fails with Error
 
