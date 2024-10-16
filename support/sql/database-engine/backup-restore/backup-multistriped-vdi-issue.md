@@ -1,7 +1,7 @@
 ---
 title: Error 3456 when restoring a SQL Server database using a VDI application with multi-striping
-description: This article provides a resolution for an issue that occurs when you back up a SQL Server database using VDI applications with multi-striping.
-ms.date: 10/12/2024
+description: This article provides a resolution for an issue that occurs when you restore a SQL Server database using VDI applications with multi-striping.
+ms.date: 10/16/2024
 ms.custom: sap:Database Backup and Restore
 ms.author: jopilov
 author: PiJoCoder
@@ -9,14 +9,14 @@ ms.reviewer: hesha, amamun, v-sidong
 ---
 # Restoring a SQL Server database using a VDI application with multi-striping might fail with error 3456
 
-This article helps you resolve an issue that occurs when you use Virtual Device Interface (VDI) based applications to back up your SQL Server databases.
+This article helps you resolve an issue that occurs when you use Virtual Device Interface (VDI)-based applications to restore your SQL Server databases.
 
 ## Symptoms
 
-When you restore a multi-striped [virtual device interface](/sql/relational-databases/backup-restore/vdi-reference/reference-virtual-device-interface) (VDI) full backup on SQL Server 2019 or later, you might get the error [MSSQLSERVER_3456](/sql/relational-databases/errors-events/mssqlserver-3456-database-engine-error):
+When you restore a multi-striped [virtual device interface (VDI)](/sql/relational-databases/backup-restore/vdi-reference/reference-virtual-device-interface) full backup on SQL Server 2019 or later, you might get the error [MSSQLSERVER_3456](/sql/relational-databases/errors-events/mssqlserver-3456-database-engine-error):
 
 ```output
-Msg 3456, Level 16, State 1, Line <LineNum>
+Msg 3456, Level 16, State 1, Line <LineNumber>
 Could not redo log record (120600:18965748:1), for transaction ID (0:1527178398), on page (14:1987189), allocation unit 72057761533001728, database 'DB1_STRIPE' (database ID 8).
 Page: LSN = (120598:23255372:8), allocation unit = 72057761317781504, type = 1. Log: OpCode = 6, context 2, PrevPageLSN: (120600:18965371:85).
 ```
@@ -29,13 +29,13 @@ When you stripe a backup to VDI, multiple backup devices together make up the co
 
 ## Resolution
 
-1. Depending on your configuration, you need to enable one or several trace flags as startup parameters for your SQL Server instance:
+1. Depending on your configuration, you need to enable one or more trace flags as startup parameters for your SQL Server instance:
 
-   -	If you're taking full backups when the instance is acting as a primary replica or an instance without availability groups, enable trace flag 3471 to disable the feature delayed log pinning for full backups.
+   -	If you're taking full backups when the instance is acting as a primary replica or an instance without availability groups, enable trace flag 3471 to disable the delayed log pinning feature for full backups.
 
-   -	If you're taking differential backups when the instance is acting as a primary replica or an instance without availability groups, enable trace flag 3475 to disable the feature delayed log pinning for differential backups.
+   -	If you're taking differential backups when the instance is acting as a primary replica or an instance without availability groups, enable trace flag 3475 to disable the delayed log pinning feature for differential backups.
 
-   -	If you're taking full backups with [COPY_ONLY](/sql/relational-databases/backup-restore/copy-only-backups-sql-server) when the instance is acting as a secondary replica, enable trace flag 3472 to disable the feature delayed log pinning for differential backups.
+   -	If you're taking full backups with [COPY_ONLY](/sql/relational-databases/backup-restore/copy-only-backups-sql-server) when the instance is acting as a secondary replica, enable trace flag 3472 to disable the delayed log pinning feature for differential backups.
 
 1. Restart SQL Server.
 
@@ -43,20 +43,19 @@ When you stripe a backup to VDI, multiple backup devices together make up the co
 
 
 > [!NOTE]
-> It's also possible to temporarily enable these trace flags using the [DBCC TRACEON](/sql/t-sql/database-console-commands/dbcc-traceon-transact-sql) command. 
+> You can also temporarily enable these trace flags using the [DBCC TRACEON](/sql/t-sql/database-console-commands/dbcc-traceon-transact-sql) command. 
 >
 > ```SQL
 > DBCC TRACEON(3471,3472,3475,-1)
 > ```
-> It can be used to mitigate the issue if you can't restart your SQL Server instance immediately.
+> This command can be used to mitigate the issue if you can't restart your SQL Server instance immediately.
 
-## Important
-
-Due to this issue, existing backups might not be restorable if the following conditions are true:
-
--	Backup is taken with delay log pining feature enabled.
--	Backup tool is using VDI.
--	Backup is done using multi-striping (backup to several files).
+> [!Important]
+> Due to this issue, existing backups might not be restorable if the following conditions are true:
+> 
+> -	The backup is taken with delay log pining feature enabled.
+> -	The backup tool is using VDI.
+> -	The backup is done using multi-striping (backing up to several files).
 
 We encourage you to restore your existing backups on a test server to check if they can be restored successfully.
 
