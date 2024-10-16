@@ -129,6 +129,6 @@ In rare circumstances, a widespread issue can affect multiple servers in an Azur
 
 ## Diagnose VM Restarts
 
-You can use the Diagnose and Solve blade on the VM blade to run additional diagnostics. This may uncover more specific reasons for your recent VM restart. If there is any Guest OS issue, please collect memory dump and contact support.
+You can use the Diagnose and Solve blade on the VM blade to run additional diagnostics. This may uncover more specific reasons for your recent VM restart. If there is any Guest OS issue, collect memory dump and contact support.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
