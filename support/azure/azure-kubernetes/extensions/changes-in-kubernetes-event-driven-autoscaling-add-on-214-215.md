@@ -68,7 +68,7 @@ To determine whether your cluster is affected by the recent KEDA upgrades, follo
    Example of the output:
       
     ```output
-    "2.14"
+    "1.30"
     ```
 2. Review the configurations of KEDA Scalers that are currently deployed in your cluster. Check whether Microsoft Entra pod-managed Identities are used for authentication. The following command displays output only if you're using Pod Identity together with KEDA:
     
