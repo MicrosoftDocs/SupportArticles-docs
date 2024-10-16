@@ -284,8 +284,6 @@
       href: the-account-does-not-have-permission-to-impersonate-the-requested-user-error.md
     - name: The mailbox location could not be determined
       href: error-when-testing-enabling-mailbox.md
-    - name: The server address (URL) is not valid
-      href: server-address-url-is-not-valid.md
     - name: The SMTP address has no mailbox associated with it
       href: the-smtp-address-has-no-mailbox.md
     - name: The view is not available when opening an email

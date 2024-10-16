@@ -203,7 +203,7 @@
         "power-platform/dataverse/**/*.md": "power-platform",
         "dynamics-365/business-central/**/**.*": "dynamics-365-business-central",
         "dynamics-365/customer-insights/**/**.*": "customer-insights",
-        "dynamics-365/customer-service/**/**.*": "dynamics-365-customerservice",
+        "dynamics-365/customer-service/**/**.*": "dynamics-365-customer-service",
         "dynamics-365/sales/*.md": "dynamics-365-sales",
         "dynamics-365/finance/**/**.*": "dynamics-365-finance",
         "dynamics-365/commerce/**/**.*": "dynamics-365-commerce",

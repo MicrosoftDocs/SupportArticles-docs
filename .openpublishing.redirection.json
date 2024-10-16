@@ -12264,6 +12264,11 @@
       "source_path": "support/dynamics-365/sales/a-blank-window-appears.md",
       "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/a-blank-window-appears",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/server-address-url-is-not-valid.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/the-server-address-is-not-valid",
+      "redirect_document_id": false
     }
   ]
 }
