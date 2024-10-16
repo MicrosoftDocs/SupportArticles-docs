@@ -1,5 +1,5 @@
 ---
-title: Support and installation instructions for AMD EPYC 9004 Series server processors
+title: Support and installation instructions for AMD EPYC 9004 and AMD EPYC 9005 series server processors
 description: Introduce the Windows Server operating system support statements and installation instructions for AMD EPYC 9004 and AMD EPYC 9005 series server processors.
 ms.topic: troubleshooting
 ms.date: 10/16/2024
@@ -18,11 +18,11 @@ The following Windows Server releases are supported on AMD EPYC 9004 and AMD EPY
 * Windows Server 2019
 * Windows Server 2022
 
-## AMD EPYC Processor OPN support
+## AMD EPYC processor OPN support
 
-AMD offers a wide range of AMD EPYC 9004 Series Processors. You can determine the specific processor model in [AMD EPYC 9004 Series Processors](https://www.amd.com/en/products/processors/server/epyc/4th-generation-9004-and-8004-series.html).
+AMD offers a wide range of AMD EPYC 9004 series processors. You can determine the specific processor model in [AMD EPYC 9004 series processors](https://www.amd.com/en/products/processors/server/epyc/4th-generation-9004-and-8004-series.html).
 
-AMD offers a wide range of AMD EPYC 9005 Series Processors. You can determine the specific processor model in [AMD EPYC 9005 Series Processors](https://www.amd.com/en/products/processors/server/epyc/9005-series.html).
+AMD offers a wide range of AMD EPYC 9005 series processors. You can determine the specific processor model in [AMD EPYC 9005 series processors](https://www.amd.com/en/products/processors/server/epyc/9005-series.html).
 
 ## Install Windows Server on a computer that uses AMD EPYC 9004 or AMD EPYC 9005 series processors
 
@@ -58,14 +58,14 @@ In systems running Windows Server 2019 with many logical processors and the Hype
 * The operating system does not use Collaborative Processor Performance Control (CPPC) for processor power management despite CPPC being set to enable in BIOS.
 * The root partition may not utilize all maximum 320 logical processors available when running Minroot configuration.
 
-In addition to the above observations, on AMD EPYC 9005 series-based systems where the total number of logical processors is greater than 512, the following limitation is applicable.
+In addition to the preceding observations, on AMD EPYC 9005 series-based systems where the total number of logical processors is greater than 512, the following limitation is applicable.
 
-* The root partition will use a maximum of 512 logical processors.
+- The root partition will use a maximum of 512 logical processors.
 
-For more information, see [Windows Server 2019 Hyper-V host behavior running in the Minroot configuration](windows-server-hyper-v-host-minroot-behaviors.md) and [Plan for Hyper-V scalability in Windows Server](/windows-server/virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server?pivots=windows-server-2019).
+  For more information, see [Windows Server 2019 Hyper-V host behavior running in the Minroot configuration](windows-server-hyper-v-host-minroot-behaviors.md) and [Plan for Hyper-V scalability in Windows Server](/windows-server/virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server?pivots=windows-server-2019).
 
-In systems running Windows Server 2022 with the Hyper-V virtualization feature enabled, the following issues and limitations may be observed in AMD EPYC 9005 series-bases systems that have greater thatn 256 logical processors per NUMA node.
+- In systems running Windows Server 2022 with the Hyper-V virtualization feature enabled, the following issues and limitations may be observed in AMD EPYC 9005 series-bases systems that have greater than 256 logical processors per NUMA node.
 
-* The root partition will only enumerate the first 256 logical processors. This limitation is addressed in KB504428 (build 10.0.20348.2110).
+  The root partition will only enumerate the first 256 logical processors. This limitation is addressed in KB504428 (build 10.0.20348.2110).
 
 Attempting to boot to the Windows Server 2019 Recovery Environment (WinRE) may result in a blue screen error 0x5C HAL_INITIALIZATION_FAILED. The WinRE image must be updated to support configurations with greater than 64 cores per socket. To enable this support, apply the latest cumulative update for Server 2019 to the WinRE image. See [Add an update package to Windows RE](/windows-hardware/manufacture/desktop/add-update-to-winre?view=windows-11&preserve-view=true) for instructions.
