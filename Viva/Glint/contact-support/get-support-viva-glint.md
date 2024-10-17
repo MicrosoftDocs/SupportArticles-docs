@@ -3,7 +3,7 @@ title: Get support for Viva Glint
 description: Provides steps to submit an online support request for Microsoft Viva Glint issues.
 manager: dcscontentpm
 ms.reviewer: aweixelman
-ms.date: 09/23/2024
+ms.date: 10/16/2024
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
