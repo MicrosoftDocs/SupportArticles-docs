@@ -161,7 +161,7 @@ Hyper-V in the Azure environment doesn't preserve the Generation-2 VM (UEFI VM)'
      ```
 3. Swap the snapshot disk back to the problematic VM as described in [chroot-environment-linux](chroot-environment-linux.md).
 
-For more information, see [grub2 error: symbol `grub_file_filters' not found](https://www.suse.com/support/kb/doc/?id=000019919).
+For more information, see [grub2 error: symbol 'grub_file_filters' not found](https://www.suse.com/support/kb/doc/?id=000019919).
 
 ## Migration failure from SLES15 SP0 to SP3
 
@@ -178,17 +178,17 @@ The  error occurs because SLES migration from SLE15SP0 to higher version was int
 ### Resolution
 Roll back all the packages to the versions compatible with SLE15SP0, and perform the following steps:
 1. Check for duplicate packages in the system.
-  ```bash
-  sudo zypper dup
-  ```
+```bash
+sudo zypper dup
+```
 2. Roll back the changes.
-  ```bash
-  sudo zypper rollback
-  ```
+```bash
+sudo zypper rollback
+```
 3. Then run migration again. 
-  ```bash 
-  sudo zypper migration
-  ```
+```bash 
+sudo zypper migration
+```
 
 ## Post Migration SUSE fails to boot to latest kernel followed by registration failure
 Post-migration, there may be issues where the VM fails to boot with the latest kernel. Additionally, repositories don't work on the VM, displaying an error stating that the repositories aren't defined.
