@@ -13,7 +13,7 @@ audience: itpro
 
 You might encounter an "RPC server unavailable" error when you connect to Windows Management Instrumentation (WMI) or Microsoft SQL Server, during a Remote Procedure Call (RPC) session, or when you use various Microsoft Management Console (MMC) snap-ins. The following image shows an example of an RPC error.
 
-:::image type="content" source="media/rpc-errors-troubleshooting/rpcunavailable.png" alt-text="Screenshot of an error message showing the RPC server is unavailable." border="false":::
+:::image type="content" source="media/rpc-errors-troubleshooting/rpc-unavailable.png" alt-text="Screenshot of an error message showing the RPC server is unavailable." border="false":::
 
 This is a common networking error that requires some basic familiarity with the process to successfully troubleshoot. To begin, there are several important terms to understand:
 
