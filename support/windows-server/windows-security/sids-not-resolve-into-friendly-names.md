@@ -35,7 +35,7 @@ Windows Server 2012 and Windows 8 introduced a type of SID that is known as a Ca
 
 Capability SIDs uniquely and immutably identify capabilities. In this context, a capability is an unforgeable token of authority that grants a Windows component or a Universal Windows Application access to a resource such as documents, cameras, locations, and so forth. An application that "has" a capability is granted access to the resource that is associated with the capability. An application that "does not have" a capability is denied access to the associated resource.
 
-The most commonly used Capability SID is the following:  
+The most commonly used Capability SID is:  
 S-1-15-3-1024-1065365936-1281604716-3511738428-1654721687-432734479-3232135806-4053264122-3456934681
 
 Windows 10, version 1809 uses more than 300 capability SIDs.
