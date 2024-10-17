@@ -2,9 +2,8 @@
 title: Guide to prepare AKS clusters for KEDA 2.15 and 2.14 breaking changes
 description: Explores the key breaking changes that are introduced in KEDA 2.15 and 2.14 and provides a guide to prepare your Azure Kubernetes Service (AKS) clusters for these updates. 
 ms.service: azure-kubernetes-service
-ms.date: 09/24/2024
-editor: 
-ms.reviewer: 
+ms.date: 10/17/2024
+ms.reviewer: albarqaw, v-weizhu
 #Customer intent: As an Azure Kubernetes user, I want to understand changes in Event-driven Autoscaling Add-ons version 2.15 and version 2.14. 
 ms.custom: sap:Extensions, Policies and Add-Ons
 ---
