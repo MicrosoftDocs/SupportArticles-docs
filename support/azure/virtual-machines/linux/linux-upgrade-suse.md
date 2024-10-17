@@ -176,12 +176,15 @@ The  error occurs because SLES migration from SLE15SP0 to higher version was int
 
 ### Resolution
 Roll back all the packages to the versions compatible with SLE15SP0, and perform the following steps:
+1. Check for duplicate packages in the system.
   ```bash
   sudo zypper dup
   ```
+2. Rollback the changes.
   ```bash
   sudo zypper rollback
   ```
+3. Then run migration again. 
   ```bash 
   sudo zypper migration
   ```
