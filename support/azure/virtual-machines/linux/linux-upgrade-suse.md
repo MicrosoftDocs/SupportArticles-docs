@@ -78,7 +78,7 @@ Move `sle-module-hpc.prod` from `/etc/products.d/` to a temporary location, and 
  ```bash
  sudo zypper migration
  ```
-For further information, refer [Major Distros in Public Cloud](https://www.suse.com/c/major-distro-upgrade-in-the-public-cloud-made-easy/) and [zypper migration fails in Azure](https://www.suse.com/support/kb/doc/?id=000019232)
+For further information, refer [Major Distros in Public Cloud](https://www.suse.com/c/major-distro-upgrade-in-the-public-cloud-made-easy/) and [zypper migration fails in Azure](https://www.suse.com/support/kb/doc/?id=000019232).
 
 ## Error while installing the `suse-migration-sles15-activation` package
 
@@ -161,7 +161,7 @@ Hyper-V in the Azure environment doesn't preserve the Generation-2 VM (UEFI VM)'
      ```
 3. Swap the snapshot disk back to the problematic VM as described in [chroot-environment-linux](chroot-environment-linux.md).
 
-For further information, see [grub2 error: symbol `grub_file_filters' not found](https://www.suse.com/support/kb/doc/?id=000019919)
+For further information, see [grub2 error: symbol `grub_file_filters' not found](https://www.suse.com/support/kb/doc/?id=000019919).
 
 ## Migration failure from SLES15 SP0 to SP3
 
@@ -284,7 +284,7 @@ The `regionService` directory moves from `/var/lib` to `/usr/lib`, and the DMS s
    sudo zypper migration
    ```
 
-For further information, see [SLES 12 SP5 Distribution Migration System (DMS) failed](https://www.suse.com/support/kb/doc/?id=000021338)
+For further information, see [SLES 12 SP5 Distribution Migration System (DMS) failed](https://www.suse.com/support/kb/doc/?id=000021338).
 
 ## Migration fails due to unknown folder in `/etc/pki/trust/anchors`
 
