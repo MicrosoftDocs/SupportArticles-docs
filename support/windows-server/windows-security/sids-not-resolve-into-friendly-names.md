@@ -7,6 +7,10 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-tea, v-jesits, johnbay
 ms.custom: sap:Windows Security Technologies\AD Object Permissions, access control, delegation, AdminSDHolder and auditing, csstroubleshoot
+searchScope:
+- Troubleshoot
+- Windows Server
+- Windows
 ---
 # Some SIDs do not resolve into friendly names
 
