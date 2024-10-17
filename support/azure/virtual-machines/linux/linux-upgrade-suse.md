@@ -29,11 +29,20 @@ This troubleshooting guide covers different issues and their solutions during SU
 
 You can  validate one of the following methods to check the generation version:
 
-**Option a**:  In the SLES terminal,  run the command `dmidecode | grep -i hyper`. If it's a generation V1 VM,  there is no output returned. For the generations V2 VMs, you will see the following output:
-
-     :::image type="content" source="media/linux-upgrade-suse-15sp1/output-gen2.png" alt-text="Screenshot shows output of the command for generation 2 VM." border="false":::
-     
-**Option b**: In the [Azure portal](https://portal.azure.com),  go to **Properties**  of the VM, and then check the **VM generation** field.
+**Option a**:  In the SLES terminal,  run the following command:
+```bash
+sudo dmidecode | grep -i hyper
+```
+ If it's a generation V1 VM,  there is no output returned. 
+ For the generations V2 VM, you will see the following output:
+ ```output
+ Version: Hyper-V UEFI Release v4.1
+ Version: Hyper-V UEFI Release v4.1
+ Version: Hyper-V UEFI Release v4.1
+ Version: Hyper-V UEFI Release v4.1
+ ```     
+**Option b**: In the [Azure portal](https://portal.azure.com),  go to **Properties**  of the VM, and then check the **VM generation** field as shown:
+::image type="content" source="media/linux-upgrade-suse/AzurePortal_VMgeneration.png"  border="false":::
 
 ## Successful Migration from SLES12 to SLES15, but SLES15 SP1 to SP2 Upgrade Fails with Error
 
