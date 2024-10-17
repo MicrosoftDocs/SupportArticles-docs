@@ -400,7 +400,7 @@ Disable 'Certification Module' before the update, and try the migration again:
 sudo SUSEConnect -d -p sle-module-certifications/15.3/x86_64
 ```
 
-## Migration fails due to third-party modules and security tools.
+## Migration fails due to third-party modules and security tools
 ### Error
 Several issues arise during VM migration, such as the VM entering a hung state, boot failures, or prolonged processes at zypper module repositories. 
 ### Cause
