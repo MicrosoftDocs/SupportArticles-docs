@@ -1,7 +1,7 @@
 ---
 title: Create an unmanaged ingress controller
 description: Learn how to create and configure an ingress controller in an Azure Kubernetes Service (AKS) cluster.
-ms.reviewer: allensu, v-rekhanain
+ms.reviewer: allensu, v-rekhanain, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Load balancer and Ingress controller
 ms.topic: how-to
