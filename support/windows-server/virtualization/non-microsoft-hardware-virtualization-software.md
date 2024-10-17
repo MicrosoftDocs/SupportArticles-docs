@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 944987
 
 ## Summary
 
-Microsoft has established a joint support relationship for non-Microsoft hardware virtualization software that have validated that their virtualization product supports the current version or Windows Server, for example, Windows Server 2019, and previous versions as well:
+Microsoft has established a joint support relationship for non-Microsoft hardware virtualization software that has validated that their virtualization product supports the current version or Windows Server, for example, Windows Server 2019, and previous versions as well:
 
 - Canonical, Ltd
 - Citrix Systems, Inc.
