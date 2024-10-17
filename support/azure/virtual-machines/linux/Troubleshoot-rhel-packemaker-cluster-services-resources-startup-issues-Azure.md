@@ -14,7 +14,7 @@ ms.custom: sap:Issue with Pacemaker clustering, and fencing
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-This article describes the most typical reasons of startup issues for RHEL (RedHat Enterprise Linux) pacemaker cluster resources or services and guidance for determining the cause and resolving the issues.
+This article describes the most typical reasons of startup issues for RHEL(RedHat Enterprise Linux) pacemaker cluster resources or services and guidance for determining the cause and resolving the issues.
 
 # Scenario 1: Unable to start cluster service due to quorum
 
@@ -24,8 +24,10 @@ This article describes the most typical reasons of startup issues for RHEL (RedH
 - Nodes are reported as `UNCLEAN (offline)`
 - Current DC shows as `NONE`
 
-```bash
-# pcs status
+```Bash
+sudo pcs status
+```
+```Output
 Cluster name: my_cluster
 Status of pacemakerd: 'Pacemaker is running' (last updated 2023-06-27 12:34:49 -04:00)
 Cluster Summary:
@@ -43,8 +45,10 @@ Node List:
 
 - pcs quorum status results in following error:
 
-```bash
-# pcs quorum status
+```Bash
+sudo pcs quorum status
+```
+```Output
 Error: Unable to get quorum status: Unable to start votequorum status tracking: CS_ERR_BAD_HANDLE
 Check for the error: Corosync quorum is not configured in /var/log/messeges:
 Jun 16 11:17:53 rhel9a pacemaker-controld[509433]: error: Corosync quorum is not configured
@@ -56,7 +60,7 @@ The **votequorum** service is part of the corosync project. This service can be 
 
 The following corosync.conf extract will enables **votequorum** service within corosync:
 
-```bash
+```Bash
        quorum {
            provider: corosync_votequorum
        }
@@ -66,14 +70,16 @@ The following corosync.conf extract will enables **votequorum** service within c
 
 ## Resolution:
 
-1.	Check for missing quorum stanza in /etc/corosync/corosync.conf. Compare the existing corosync.conf with any of the available backup present under /etc/corosync/
+1.	Check for missing quorum stanza in `/etc/corosync/corosync.conf`. Compare the existing corosync.conf with any of the available backup present under `/etc/corosync/`
 
 2.	Add the missing entry from any of the node present in the cluster.
 
 Example for two node cluster:
 
-```bash
-# cat /etc/corosync/corosync.conf
+```Bash
+sudo cat /etc/corosync/corosync.conf
+```
+```Output
 totem {
 version: 2
 cluster_name: my_cluster
@@ -111,13 +117,13 @@ timestamp: on
 
 3.	Propagate the updated corosync.conf to the rest of the nodes as follows:
 
-```bash
+```Bash
 sudo pcs cluster sync
 ```
 
 4.	Reload corosync.
 
-```bash
+```Bash
 sudo pcs cluster reload corosync
 ```
 
@@ -127,16 +133,16 @@ sudo pcs cluster reload corosync
 ## Symptom 1: 
 
 Virtual IP (`IPaddr2` resource) failed to start/stop in pacemaker.
-Below messages shown in /var/log/pacemaker.log:
+Below messages shown in `/var/log/pacemaker.log`:
 
-```bash
+```Output
 14168 IPaddr2(VIP)[12083]:    2016/01/07_09:44:19 ERROR: Unable to find nic or netmask.
 14169 IPaddr2(VIP)[12083]:    2016/01/07_09:44:19 ERROR: [findif] failed
 ```
-
-pcs status shows:
-
-```bash
+```Bash
+sudo pcs status
+```
+```Output
 myip_start_0 on cluster0.heartbeat.example.com 'unknown error' (1): call=20, status=complete, exit-reason='[findif] failed', last-rc-change='Mon Jan 11 13:24:32 2016', queued=0ms, exec=39ms
 ```
 
@@ -144,14 +150,16 @@ myip_start_0 on cluster0.heartbeat.example.com 'unknown error' (1): call=20, sta
 
 IPaddr2 call `findif()` function as specified in `/usr/lib/ocf/resource.d/heartbeat/IPaddr2` (belongs to resource-agents package)  to determine which network interface to start the IPAddr2 resource on.
 
-The correct NIC(Network Interface Card) will be determined by the options set on the IPAddr2 resource: ip (required), cidr_netmask, and broadcast.
+The correct NIC(Network Interface Card) will be determined by the options set on the IPAddr2 resource: `ip` (required), `cidr_netmask`, and `broadcast`.
 
 *For example:*
 
 Check the IPaddr2 settings,
 
-```bash
-[root@cluster0 ~]# pcs resource show myip
+```Bash
+sudo pcs resource show myip
+```
+```Output
 Resource: myip (class=ocf provider=heartbeat type=IPaddr2)
 Attributes: ip=192.168.111.222 cidr_netmask=24 
 Operations: start interval=0s timeout=20s (myip-start-timeout-20s)
@@ -161,27 +169,32 @@ Operations: start interval=0s timeout=20s (myip-start-timeout-20s)
 
 Try to determine NIC information manually. In this example, based on the ip address and netmask, we can successfully find ens6 from route table.
 
-```bash
-[root@cluster0 ~]# ip -o -f inet route list match 192.168.111.222/24 scope link
-192.168.111.0/24 dev ens6  proto kernel  src 192.168.111.195    <<<=== ens6
+```Bash
+sudo ip -o -f inet route list match 192.168.111.222/24 scope link
+```
+```Output
+192.168.111.0/24 dev ens6  proto kernel  src 192.168.111.195 
 ```
 In case if the NIC (ens6) is down, we couldn't manually find the NIC information, and that might lead to `[findif] failed:`
 
-```bash
-[root@cluster0 ~]# ip link set ens6 down 
-[root@cluster0 ~]# ip -o -f inet route list match 192.168.111.222/24 scope link
-[root@cluster0 ~]# 
+```Bash
+sudo ip link set ens6 down
+```
+```Bash
+sudo ip -o -f inet route list match 192.168.111.222/24 scope link 
 ````
-
 
 ## Resolution: 
 
 If the route that matches the VIP isn't in the default routing table, then one can specify the NIC name in pacemaker resource, so that it can be configured bypassing the check:
 
-```bash
-# pcs resource update ip-172.17.223.36 nic=vlan10
-
-# pcs resource show ip-172.17.223.36
+```Bash
+sudo pcs resource update ip-172.17.223.36 nic=vlan10
+```
+```Bash
+sudo pcs resource show ip-172.17.223.36
+```
+```Output
 Warning: This command is deprecated and will be removed. Please use 'pcs resource config' instead.
  Resource: ip-172.17.223.36 (class=ocf provider=heartbeat type=IPaddr2)
   Attributes: cidr_netmask=32 ip=172.17.223.36 nic=vlan10
@@ -189,23 +202,28 @@ Warning: This command is deprecated and will be removed. Please use 'pcs resourc
   Operations: monitor interval=10s timeout=20s (ip-172.17.223.36-monitor-interval-10s)
               start interval=0s timeout=20s (ip-172.17.223.36-start-interval-0s)
               stop interval=0s timeout=20s (ip-172.17.223.36-stop-interval-0s)
-
-# pcs resource restart ip-172.17.223.36
+```
+```Bash
+sudo pcs resource restart ip-172.17.223.36
+```
+```Output
 ip-172.17.223.36 successfully restarted
 ```
 
-# Scenario 3:  Issue with SAP HANA(High-performance ANalytic Appliance)
+# Scenario 3:  Issue with SAPHana(High-performance ANalytic Appliance)
 
 ## Symptom 1:  
 
-SAP HANADB fails to start with `'unknown error'`
+SAPHana DB fails to start with `'unknown error'`
 
-- From the /var/log/messages, we can see SRHOOK=SFAIL messages.
-- Secondary cluster node is in WAITING4PRIM status.
-- Cluster resource status when you run "pcs status" is as:
+- From the `/var/log/messages`, we can see `SRHOOK=SFAIL` indicating the cluster nodes are out of sync.
+- Secondary cluster node is in `WAITING4PRIM` status.
+- When you run `pcs status` the status of the cluster will be shown as following:
 
-
-```bash
+```Bash
+sudo pcs status
+```
+```Output
     2 nodes configured
     8 resources configured
     
@@ -230,14 +248,13 @@ SAP HANADB fails to start with `'unknown error'`
     * rsc_SAPHana_start_0 on node-2 'not running' (7): call=55, status=complete, exitreason='',
         last-rc-change='Sat May 22 09:36:32 2021', queued=0ms, exec=3093ms
 ```
-
 ## Cause:
-Pacemaker can't start SAP HANA resource when there are SYN failures between primary and secondary nodes.
+Pacemaker can't start SAPHana resource when there are `SYN` failures between primary and secondary nodes.
 
-
-```bash
-node-1:~ # SAPHanaSR-showAttr
-  
+```Bash
+sudo SAPHanaSR-showAttr
+```
+```Output  
  Global cib-time                 maintenance
  --------------------------------------------
  global Mon Aug 28 11:47:32 2023 false
@@ -250,24 +267,26 @@ node-1:~ # SAPHanaSR-showAttr
 
 ## Resolution:
 
-SAP HANA resource can't be start by pacemaker when there are SYN failures between primary and secondary cluster nodes. To mitigate this issue, we must manually enable SYN between the primary and secondary nodes.
- 
-`Caution: Steps 2,3 & 4 are to be performed using SAP administrator account as these steps involve using SAP System ID to stop, start and re-enable replication manually.`
+SAPHana resource can't be start by pacemaker when there are `SYN` failures between primary and secondary cluster nodes. To mitigate this issue, we must manually enable `SYN` between the primary and secondary nodes.
+
+> [!NOTE]
+> Steps 2,3 & 4 are to be performed using SAP administrator account as these steps involve using SAP System ID to stop, start and re-enable replication manually.
 
 1.	Place the cluster in maintenance mode
 
-    ```bash
-     pcs property set maintenance-mode=true
+    ```Bash
+    sudo pcs property set maintenance-mode=true
     ``` 
-2.	Check SAP HANA DB and processes state. 
+2.	Check SAPHana DB and processes state. 
 
-     -  Validate primary and secondary nodes are running SAP database and related SAP processes. Even though one node is designated as a slave and one node is a master, both nodes actually run a database. Master database is continuously synchronized to the slave database. In order to check if nodes can synchronize properly, we need to make sure that both nodes are correctly running the expected SAP DB(Data Base) and processes.
+     -  Validate primary and secondary nodes are running SAP database and related SAP processes. Even though one node is designated as a slave and one node is a master, both nodes actually run a database. Master database is continuously synchronized to the slave database. In order to check if nodes can synchronize properly, we need to make sure that both nodes are correctly running the expected SAP DB(DataBase) and processes.
      
-     - Run 'HDB info' on each node to check the SAP related processes running in the node. SAP Admin should be able to confirm if the required process are running on both of the nodes.
-  
-    
-    ```bash
+     - Run `HDB info` on each node to check the SAP related processes running in the node. SAP Admin should be able to confirm if the required process are running on both of the nodes.
+      
+    ```Bash
     a00adm@node1:/usr/sap/A00/HDB00> HDB info
+    ```
+    ```Output
     USER        PID   PPID %CPU    VSZ   RSS COMMAND
     a00adm     5183   5178  0.0  87684  1804 sshd: a00adm@pts/0
     a00adm     5184   5183  0.0  14808  3624  \_ -sh
@@ -285,39 +304,42 @@ SAP HANA resource can't be start by pacemaker when there are SYN failures betwee
     a00adm     2004      1  0.0  31844  2352 /usr/lib/systemd/systemd --user
     a00adm     2008   2004  0.0  63796  2620  \_ (sd-pam)
     ```
-
-
        - If SAP DB and services aren't active on the node, ask SAP admin to Stop HANA DB in secondary node first and then in the primary node. 
 
-    ```bash
-    'HDB stop' 
-     or
+    ```Bash
+    'HDB stop'
+    ```
+    or
+    ```Bash
     'sapcontrol -nr <SAPInstanceNo.> -function Stop'
     ```
-
       - Once the stop operation is completed, Start HANA DB in primary and then in secondary node.
 
-    ```bash
-    'HDB start' 
-      or 
+    ```Bash
+    'HDB start'
+    ```
+    or
+    ```Bash
     'sapcontrol -nr <SAPInstanceNo.> -function Start'
     ```
 
-3. Usually stop and start operation of HANA DB should synchronize both nodes. If we're still not seeing the synchronization, then we have to disable and re-enable replication between the nodes. SAP Administrator should be able to perform this step of disabling SAP HANA system replication and then enabling the replication. 
+4. Usually stop and start operation of HANA DB should synchronize both nodes. If we're still not seeing the synchronization, then we have to disable and re-enable replication between the nodes. SAP Administrator should be able to perform this step of disabling SAPHana system replication and then enabling the replication. 
+> [!Caution]
+> When reconfiguring replication on an existing SAP cluster, it's imperative that the database/node with the most accurate and up-to-date data is designated as the **primary**. A wrong execution of this process might result in an outdated or "empty" database being overwritten with the most recent database, leading to loss of data and a need to restore from any existing backup.
 
-   - NOTE: When reconfiguring replication on an existing SAP cluster, it's imperative that the database/node with the most accurate and up-to-date data is designated as the **primary**. A wrong execution of this process might result in an outdated or "empty" database being overwritten with the most recent database, leading to loss of data and a need to restore from any existing backup.
+5. After enabling replication, check the system replication status as <HANA SID> account by calling the `systemReplicationStatus.py` SAP Python script. The SAP binaries are typically available as shown: 
 
-4. After enabling replication, check the system replication status as <HANA SID> account by calling the systemReplicationStatus.py SAP Python script. The SAP binaries are typically available in 
-
-   ```bash
-   /hana/shared/A00/HDB00/exe/python_support directory.
+   ```Output
+   /hana/shared/A00/HDB00/exe/python_support
    ```
 
      From the primary node, check if overall system replication status: `ACTIVE`. 
 If you're seeing a different message, then most likely there are other issues between primary and secondary, which needs to be sorted from SAP end.
 
-    ```bash
-    sh-4.2$ python /hana/shared/A00/HDB00/exe/python_support/systemReplicationStatus.py
+    ```Bash
+    sudo python /hana/shared/A00/HDB00/exe/python_support/systemReplicationStatus.py
+    ```
+    ```Output
 
    | Host  | Port  | Service Name | Volume ID | Site ID | Site Name | Secondary | Secondary | Secondary | Secondary | Secondary     | Replication | Replication | Replication    |
    |       |       |              |           |         |           | Host      | Port      | Site ID   | Site Name | Active Status | Mode        | Status      | Status Details | 
@@ -338,10 +360,10 @@ If you're seeing a different message, then most likely there are other issues be
    ```
 
 
-5.	You can also check the failover process by running SAPHanaSR-showAttr command in primary VM(Virtual Machine). If the SYN issue is resolved, then the output of this command shows Primary in Promoted mode and Secondary in Demoted mode. Once you see the primary and secondary nodes in Promoted and Demoted mode respectively, remove the cluster out of maintenance, this action allows pacemaker to start SAP HANA DB.
+6.	You can also check the failover process by running SAPHanaSR-showAttr command in primary VM(Virtual Machine). If the SYN issue is resolved, then the output of this command shows Primary in Promoted mode and Secondary in Demoted mode. Once you see the primary and secondary nodes in Promoted and Demoted mode respectively, remove the cluster out of maintenance, this action allows pacemaker to start SAPHana DB.
 
-     ```bash
-     pcs property set maintenance-mode=false
+    ```Bash
+    sudo pcs property set maintenance-mode=false
     ```
 
 
@@ -350,7 +372,7 @@ If you're seeing a different message, then most likely there are other issues be
 SAPHana Resource Experiencing Start Failures with `hana_xxx_roles` Reporting N (Standalone) mode.
 Database resource doesn't primary or secondary on either node. With `hana_xxx_roles` reporting **N** for Standalone node mode.
 
-```bash
+```Output
 Node Attributes:
   * Node: Node1 (1):
     * hana_xxx_clone_state              : UNDEFINED 
@@ -379,7 +401,7 @@ Node Attributes:
 
 With migration summary reporting INF fail-count with failed SAPHana resource action reporting start failures due to "not running".
 
-```bash
+```Output
 Migration Summary:
   * Node: Node1 (1):
     * SAPHana_Resource: migration-threshold=5000 fail-count=1000000 last-failure='Thu Mar 28 09:39:07 2024'
@@ -395,70 +417,71 @@ Failed Resource Actions:
 
 - Each database node in a standalone node attempts to function alone rather than interacting with one another.
 - Commonly seen this issue occur when the database is altered (database manually stopped, started, replication paused, etc.,) while the cluster is in maintenance mode.
-- Run "pcs status --full" and check under Node Attributes for hana_xxx_roles and confirm it's reporting #:N:X:X:X:X instead of #:P:X:X:X:X.
+- Run `sudo pcs status --full` and check under Node Attributes for hana_xxx_roles and confirm it's reporting `#:N:X:X:X:X` instead of `#:P:X:X:X:X`.
 
 ## Resolution:
 
-**Note: These steps ( 1 to 5 ) should be performed by SAP admin.**
+> [!Note]
+> These steps ( 1 to 5 ) should be performed by SAP admin.
 
 1. Manually start the database outside the cluster on primary node. 
 
-```bash
-   # HDB start
- ```
+   ```Bash
+   sudo HDB start
+   ```
 
 2. Initialize replication on primary node. 
 
-  ```bash 
-   # hdbnsutil -sr_enable --name=<site id>
-  ``` 
+   ```Bash
+   sudo hdbnsutil -sr_enable --name=<site id>
+   ``` 
 
 3. Initialize replication on secondary node. 
 
-```bash
-   # hdbnsutil -sr_register --remoteHost=<primary node> --remoteInstance=<Instance ##> --replicationMode=syncmem --name=<site id>
- ```
+   ```Bash
+   sudo hdbnsutil -sr_register --remoteHost=<primary node> --remoteInstance=<Instance ##> --replicationMode=syncmem --name=<site id>
+   ```
 
 4. Manually start database outside the cluster on the secondary node. 
  
- ```bash
-   # HDB start
- ```
+   ```Bash
+   sudo HDB start
+   ```
 
 5. Confirm replications are running as expected by running the following on both nodes. 
  
- ```bash
-   # hdbnsutil -sr_state
- ```
+   ```Bash
+   sudo hdbnsutil -sr_state
+   ```
 
 6. Clear out fail count of SAPHana resource. 
 
-```bash
-   # pcs resource cleanup <SAPHana resource name>
-```
+   ```Bash
+   sudo pcs resource cleanup <SAPHana resource name>
+   ```
 
 ## Symptom 3:  
 
 SAPHana Resource Start Failure 
 Error message:
 
-```bash
+```Output
 'FAIL: process hdbdaemon HDB Daemon not running'
 ```
 
 ## Cause:
 
-- Run "pcs status --full" and collect the time frame the start error occurred under "Failed Resource Actions."
+- Run `pcs status --full` and collect the time frame the start error occurred under "Failed Resource Actions."
 
-```bash
+```Output
 Failed Resource Actions:
   * SAPHana_ECR_00_start_0 on Node1 'error' (1): call=44, status='complete', exitreason='', last-rc-change='2024-03-01 02:27:33 -08:00', queued=0ms, exec=23727ms
 ```
 
 - Check messages log at the time of the Start failure for a similar block of messages.
 
-```bash
-Mar  1 02:25:09 Node1 SAPHana(SAPHana_ECR_00)[12336]: ERROR: ACT: SAPHANA Instance ECR-HDB00 start failed: #01201.03.2024 02:25:09#012WaitforStarted#012FAIL: process hdbdaemon HDB Daemon not running
+```Output
+Mar  1 02:25:09 Node1 SAPHana(SAPHana_ECR_00)[12336]: ERROR: ACT: SAPHana Instance ECR-HDB00 start failed: #01201.03.2024 02:25:09#012WaitforStarted#012FAIL: process hdbdaemon HDB Daemon not running
 Mar  1 02:25:09 Node1 SAPHana(SAPHana_ECR_00)[12336]: INFO: RA ==== end action start_clone with rc=1 (0.154.0) (25s)====
 Mar  1 02:25:09 Node1 pacemaker-execd[8567]: notice: SAPHana_ECR_00_start_0[12336] error output [ tput: No value for $TERM and no -T specified ]
 Mar  1 02:25:09 Node1 pacemaker-execd[8567]: notice: SAPHana_ECR_00_start_0[12336] error output [ tput: No value for $TERM and no -T specified ]
@@ -477,47 +500,50 @@ Open a case with SAP Hana to investigate why hdbdaemon didn't start.
 # Scenario 4: Issue with ASCS and ERS resource.
 
 ## Symptom 1:
-ASCS and ERS instances aren't able to start under cluster control. The following errors can be seen from /var/log/messages.
+ASCS and ERS instances aren't able to start under cluster control. The following errors can be seen from `/var/log/messages`.
 
-```bash
+```Output
 Apr  6 23:29:16 nodeci SAPRh2_10[340480]: Unable to change to Directory /usr/sap/RH2/ERS10/work. (Error 2 No such file or directory) [ntservsserver.cpp 3845]
 Apr  6 23:29:16 nodeci SAPRH2_00[340486]: Unable to change to Directory /usr/sap/Rh2/ASCS00/work. (Error 2 No such file or directory) [ntservsserver.cpp 3845]
 ```
 
 ## Cause:
 
-- Due to incorrect InstanceName and START_PROFILE attributes SAP instance (ASCS & ERS) not start under cluster control.
+- Due to incorrect `InstanceName` and `START_PROFILE` attributes SAP instance (ASCS & ERS) not start under cluster control.
 
 ## Resolution:
 
-**Note:** *This resolution is applicable when your Instance profile and START profile are individual.*
+> [!Note]
+> This resolution is applicable when your `InstanceName` and `START_PROFILE` are individual.
 
-- Verify the PF (profile) path from /usr/sap/sapservices file 
+- Verify the `pf(profile)` path from `/usr/sap/sapservices` file:
 
-
-```bash
-$ cat /usr/sap/sapservices
- 
+```Bash
+sudo cat /usr/sap/sapservices
+```
+```Output
 LD_LIBRARY_PATH=/usr/sap/RH2/ASCS00/exe:$LD_LIBRARY_PATH;export LD_LIBRARY_PATH;/usr/sap/RH2/ASCS00/exe/sapstartsrv pf=/usr/sap/RH2/SYS/profile/START_ASCS00_nodeci -D -u rh2adm
 LD_LIBRARY_PATH=/usr/sap/RH2/ERS10/exe:$LD_LIBRARY_PATH;export LD_LIBRARY_PATH;/usr/sap/RH2/ERS10/exe/sapstartsrv pf=/usr/sap/RH2/ERS10/profile/START_ERS10_nodersvi -D -u rh2adm
 ```
 
 
-- Correct the InstanceName and START_PROFILE attribute values in a cluster configuration resource agent SAPInstance 
+- Correct the `InstanceName` and `START_PROFILE` attribute values in a cluster configuration resource agent SAPInstance 
 
 **Example:**
 
-```bash
-# pcs resource update ASCS_RH2_ASCS00 InstanceName=RH2_ASCS00_nodeci START_PROFILE=/usr/sap/RH2/SYS/profile/START_ASCS00_nodeci
- 
-# pcs resource update ERS_RH2_ERS10 InstanceName=RH2_ERS10_nodersvi START_PROFILE=/usr/sap/RH2/ERS10/profile/START_ERS10_nodersvi
+```Bash
+sudo pcs resource update ASCS_RH2_ASCS00 InstanceName=RH2_ASCS00_nodeci START_PROFILE=/usr/sap/RH2/SYS/profile/START_ASCS00_nodeci
+```
+```Bash
+sudo pcs resource update ERS_RH2_ERS10 InstanceName=RH2_ERS10_nodersvi START_PROFILE=/usr/sap/RH2/ERS10/profile/START_ERS10_nodersvi
 ```
 
-**Note**: *This instance name and start_profile path can vary as per the setup.*
+> [!Note]
+> For above commands use `InstanceName` and `START_PROFILE` path details as per your setup.
 
 ## Next Steps
 
-If you need further help, open a support request by using the following instructions. When you submit your request, attach `sosreport` logs for troubleshooting.
+For further help, open a support request by using the following instructions. When you submit your request, attach [sosreport](https://access.redhat.com/solutions/3592) from all the nodes in the cluster for troubleshooting.
 
 
 
