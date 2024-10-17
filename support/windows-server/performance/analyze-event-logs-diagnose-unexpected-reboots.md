@@ -21,14 +21,14 @@ You can filter the system event logs to determine the cause of an unexpected reb
 > [!NOTE]
 > Event ID numbers might be tied to different sources, so make sure you filter on the relevant ones for reboots.
 
+:::image type="content" source="media/analyze-event-logs-diagnose-unexpected-reboots/system-event-log-12-13-6005-6009.png" alt-text="Screenshot shows the System Event IDs 12, 13, 6005, and 6009 in Event Viewer.":::
+
 |Event ID|Source|Description|
 |---------|---------|---------|
 |12|Kernel-General|The operating system started at system time \<Date Time>.|
 |13|Kernel-General|The operating system is shutting down at system time \<Date Time>.|
 |6005|EventLog|The Event log service was started.|
 |6009|EventLog|Microsoft (R) Windows (R) \<OS Version>|
-
-:::image type="content" source="media/analyze-event-logs-diagnose-unexpected-reboots/system-event-log-12-13-6005-6009.png" alt-text="Screenshot shows the System Event IDs 12, 13, 6005, and 6009 in Event Viewer.":::
 
 ## Review Event IDs 13, 41, 1074, 6008, and 6009 to determine reboot types
 
@@ -37,6 +37,8 @@ Event IDs 13, 41, 1074, 6008, and 6009 can help determine if a reboot is normal 
 > [!NOTE]
 > Event ID numbers may be tied to different sources, so make sure you filter on the relevant ones for reboots.
 
+:::image type="content" source="media/analyze-event-logs-diagnose-unexpected-reboots/system-event-log-13-41-1074-6008-6009.png" alt-text="Screenshot shows the System Event logs with 13, 41, 1074, 6008, and 6009 filtered in Event Viewer.":::
+
 |Event ID|Source|Description|
 |---------|---------|---------|
 |13|Kernel-General|The operating system is shutting down at system time \<Date Time>.|
@@ -44,8 +46,6 @@ Event IDs 13, 41, 1074, 6008, and 6009 can help determine if a reboot is normal 
 |1074|USER32|The process \<Process Name> has initiated the restart of computer \<Computer Name> on behalf of user \<Domain User> for the following reason: \<Reason></br>Reason Code: \<Hex Code></br>Shutdown Type: \<Type></br>Comment:|
 |6008|EventLog|The previous system shutdown at \<Time> on \<Date> was unexpected.|
 |6009|EventLog|Microsoft (R) Windows (R) \<OS Version>.|
-
-:::image type="content" source="media/analyze-event-logs-diagnose-unexpected-reboots/system-event-log-13-41-1074-6008-6009.png" alt-text="Screenshot shows the System Event logs with 13, 41, 1074, 6008, and 6009 filtered in Event Viewer.":::
 
 ## Review Event IDs 19, 41, 1001, 1074, and 7045 for the causes of reboot
 
