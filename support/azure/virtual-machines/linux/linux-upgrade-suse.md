@@ -33,8 +33,8 @@ You can  validate one of the following methods to check the generation version:
 ```bash
 sudo dmidecode | grep -i hyper
 ```
- If it's a generation V1 VM,  there is no output returned. 
- For the generations V2 VM, you will see the following output:
+ If it's a generation V1 VM,  there's no output returned. 
+ For the generations V2 VM, you'll see the following output:
  ```output
  Version: Hyper-V UEFI Release v4.1
  Version: Hyper-V UEFI Release v4.1
@@ -78,7 +78,7 @@ Move `sle-module-hpc.prod` from `/etc/products.d/` to a temporary location, and 
  ```bash
  sudo zypper migration
  ```
-For further information, refer [Major Distros in Public Cloud](https://www.suse.com/c/major-distro-upgrade-in-the-public-cloud-made-easy/) and [zypper migration fails in Azure](https://www.suse.com/support/kb/doc/?id=000019232).
+For more information, refer [Major Distros in Public Cloud](https://www.suse.com/c/major-distro-upgrade-in-the-public-cloud-made-easy/) and [zypper migration fails in Azure](https://www.suse.com/support/kb/doc/?id=000019232).
 
 ## Error while installing the `suse-migration-sles15-activation` package
 
@@ -128,7 +128,7 @@ You notice that the SLES12 Public Cloud module isn't enabled by default.
      ```bash
      sudo zypper migration
      ```
-For further information, refer [Major Distros in Public Cloud](https://www.suse.com/c/major-distro-upgrade-in-the-public-cloud-made-easy/) and [Upgrading SUSE Linux Enterprise in the Public Cloud](https://www.suse.com/c/upgrading-suse-linux-enterprise-in-the-public-cloud/).
+For more information, refer [Major Distros in Public Cloud](https://www.suse.com/c/major-distro-upgrade-in-the-public-cloud-made-easy/) and [Upgrading SUSE Linux Enterprise in the Public Cloud](https://www.suse.com/c/upgrading-suse-linux-enterprise-in-the-public-cloud/).
 
 ## Gen2 VMs Fail to Boot After SLE15SP1 to SP2 Upgrade When Stopped via Azure Portal or Shutdown(init 0 or shutdown -h) command
 
@@ -161,7 +161,7 @@ Hyper-V in the Azure environment doesn't preserve the Generation-2 VM (UEFI VM)'
      ```
 3. Swap the snapshot disk back to the problematic VM as described in [chroot-environment-linux](chroot-environment-linux.md).
 
-For further information, see [grub2 error: symbol `grub_file_filters' not found](https://www.suse.com/support/kb/doc/?id=000019919).
+For more information, see [grub2 error: symbol `grub_file_filters' not found](https://www.suse.com/support/kb/doc/?id=000019919).
 
 ## Migration failure from SLES15 SP0 to SP3
 
@@ -173,7 +173,7 @@ Can't get available migrations from server: SUSE::Connect::ApiError: The request
 /usr/lib/zypper/commands/zypper-migration' exited with status 1
 ```  
 ### Cause
-The  error occurs because SLES migration from SLE15SP0 to higher version was interrupted/stopped midway, or was accidentally terminated for some reason. This causes the incomplete package updates in the system. 
+The  error occurs because SLES migration from SLE15SP0 to higher version was interrupted/stopped midway, or was accidentally terminated for some reason resulting in the incomplete package updates in the system. 
 
 ### Resolution
 Roll back all the packages to the versions compatible with SLE15SP0, and perform the following steps:
@@ -181,7 +181,7 @@ Roll back all the packages to the versions compatible with SLE15SP0, and perform
   ```bash
   sudo zypper dup
   ```
-2. Rollback the changes.
+2. Roll back the changes.
   ```bash
   sudo zypper rollback
   ```
@@ -284,7 +284,7 @@ The `regionService` directory moves from `/var/lib` to `/usr/lib`, and the DMS s
    sudo zypper migration
    ```
 
-For further information, see [SLES 12 SP5 Distribution Migration System (DMS) failed](https://www.suse.com/support/kb/doc/?id=000021338).
+For more information, see [SLES 12 SP5 Distribution Migration System (DMS) failed](https://www.suse.com/support/kb/doc/?id=000021338).
 
 ## Migration fails due to unknown folder in `/etc/pki/trust/anchors`
 
@@ -313,7 +313,7 @@ Mar 11 13:39:15 localhost systemd[1]: suse-migration-prepare.service: Failed wit
    ```
 
 ## SUSE registration and repos fail to work after migration
-During the OS migration from SLES15SP3 to SLES15SP4, the process completes successfully. However, when migrating from SLES15SP4 to SLES15SP5, the migration and updates do not work as expected.
+During the OS migration from SLES15SP3 to SLES15SP4, the process completes successfully. However, when migrating from SLES15SP4 to SLES15SP5, the migration and updates don't work as expected.
 
 ### Error
 ```output
@@ -342,7 +342,7 @@ No migration available.
 ```
 
 ### Resolution
-1. Before the migration, Aactivate, and deactivate the following modules.
+1. Before the migration, activate, and deactivate the following modules.
 
  * Activate the following modules:
      ```bash
@@ -423,7 +423,7 @@ Several issues arise during VM migration, such as the VM entering a hung state, 
 - Security tools can disrupt the migration by blocking operations or modifying system files, leading to instability.
 - Additionally, third-party repositories may introduce packages that conflict with official SUSE packages, potentially causing further complications during the upgrade.
 ### Resolution
-- It is advised that any third-party repositories, and security tools on the system are disabled before proceeding with the SUSE migration.
+- It's advised that any third-party repositories, and security tools on the system are disabled before proceeding with the SUSE migration.
 - Disabling them during the migration is crucial to prevent dependency conflicts, ensure system stability, maintain consistency with official packages, simplify troubleshooting, and provide a smoother upgrade process. 
 
 ## Next steps
