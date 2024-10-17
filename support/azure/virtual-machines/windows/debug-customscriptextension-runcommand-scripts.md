@@ -377,10 +377,10 @@ To undo the changes that you made to enable the logging of PowerShell scripting 
 
 ## Test Run Command logging on your VM
 
-Download the [Test-CustomScriptExtension.ps1](https://github.com/Azure/azure-support-scripts/blob/master/Images_Extensions/PowerShell/Test-CustomScriptExtension.ps1) test script to the current local directory. Then, run the script on your VM by using the [Invoke-AzVMRunCommand](/powershell/module/az.compute/invoke-azvmruncommand) cmdlet. Use the properties of your VM to replace the placeholders for the resource group name and VM name.
+Download the [Test-CustomScriptExtension.ps1](https://github.com/Azure/azure-support-scripts/blob/users/GitHubPolicyService/6294a303-e34d-4bad-b6cd-5ed54245f020/Images_Extensions/PowerShell/Test-CustomScriptExtension.ps1) test script to the current local directory. Then, run the script on your VM by using the [Invoke-AzVMRunCommand](/powershell/module/az.compute/invoke-azvmruncommand) cmdlet. Use the properties of your VM to replace the placeholders for the resource group name and VM name.
 
 ```azurepowershell
-$scriptUri = 'https://raw.githubusercontent.com/Azure/azure-support-scripts/master/Images_Extensions/PowerShell/Test-CustomScriptExtension.ps1'
+$scriptUri = 'https://raw.githubusercontent.com/Azure/azure-support-scripts/blob/users/GitHubPolicyService/6294a303-e34d-4bad-b6cd-5ed54245f020/Images_Extensions/PowerShell/Test-CustomScriptExtension.ps1'
 $localFileLocation = "$PWD\Test-CustomScriptExtension.ps1"
 (New-Object System.Net.WebClient).DownloadFile($scriptUri, $localFileLocation)
 
@@ -395,14 +395,14 @@ Invoke-AzVMRunCommand @commandSettings
 
 ## Test Custom Script Extension logging on your VM
 
-Run the test script [Test-CustomScriptExtension.ps1](https://github.com/Azure/azure-support-scripts/blob/master/Images_Extensions/PowerShell/Test-CustomScriptExtension.ps1) on your VM by using the [Set-AzVMCustomScriptExtension](/powershell/module/az.compute/set-azvmcustomscriptextension) cmdlet. Use the properties of your VM to replace the placeholders for the resource group name, VM name, and location.
+Run the test script [Test-CustomScriptExtension.ps1](https://github.com/Azure/azure-support-scripts/blob/users/GitHubPolicyService/6294a303-e34d-4bad-b6cd-5ed54245f020/Images_Extensions/PowerShell/Test-CustomScriptExtension.ps1) on your VM by using the [Set-AzVMCustomScriptExtension](/powershell/module/az.compute/set-azvmcustomscriptextension) cmdlet. Use the properties of your VM to replace the placeholders for the resource group name, VM name, and location.
 
 ```azurepowershell
 $commandSettings = @{
     ResourceGroupName = '<resource-group-name>'
     VMName = '<vm-name>'
     Name = 'CustomScriptExtension'
-    FileUri = 'https://raw.githubusercontent.com/Azure/azure-support-scripts/master/Images_Extensions/PowerShell/Test-CustomScriptExtension.ps1'
+    FileUri = 'https://raw.githubusercontent.com/Azure/azure-support-scripts/blob/users/GitHubPolicyService/6294a303-e34d-4bad-b6cd-5ed54245f020/Images_Extensions/PowerShell/Test-CustomScriptExtension.ps1'
     Run = 'Test-CustomScriptExtension.ps1'
     Location = '<azure-region-name-or-code>'
     ForceRerun = (Get-Date).Ticks
@@ -414,7 +414,7 @@ Alternatively, you can run that test script on your VM by using the [Set-AzVMExt
 
 ```azurepowershell
 $publicConfigSettings = @{
-    'fileUris' = @('https://raw.githubusercontent.com/Azure/azure-support-scripts/master/Images_Extensions/PowerShell/Test-CustomScriptExtension.ps1')
+    'fileUris' = @('https://raw.githubusercontent.com/Azure/azure-support-scripts/blob/users/GitHubPolicyService/6294a303-e34d-4bad-b6cd-5ed54245f020/Images_Extensions/PowerShell/Test-CustomScriptExtension.ps1')
     'commandToExecute' = 'powershell -File Test-CustomScriptExtension.ps1 -ExecutionPolicy Unrestricted'
 }
 $commandSettings = @{
