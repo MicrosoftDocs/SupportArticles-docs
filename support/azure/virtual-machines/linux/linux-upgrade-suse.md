@@ -425,4 +425,12 @@ Several issues arise during VM migration, such as the VM entering a hung state, 
 - It is advised that any third-party repositories, and security tools on the system are disabled before proceeding with the SUSE migration.
 - Disabling them during the migration is crucial to prevent dependency conflicts, ensure system stability, maintain consistency with official packages, simplify troubleshooting, and provide a smoother upgrade process. 
 
+## Next steps
 
+If you need additional help, use the following instructions to open a support request:
+
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+
+When you submit your request, attach a copy of `/var/log/distromigration.log` for troubleshooting.
+
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
