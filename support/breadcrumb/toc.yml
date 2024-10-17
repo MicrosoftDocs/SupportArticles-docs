@@ -141,7 +141,7 @@ items:
         topicHref: /troubleshoot/azure/azure-storage/blobs/welcome-blob-storage
       - name: Data API builder
         tocHref: /troubleshoot/azure/data-api-builder/
-        topicHref: /troubleshoot/azure/data-api-builder/index.yml
+        topicHref: /troubleshoot/azure/data-api-builder
       - name: Files Storage
         tocHref: /troubleshoot/azure/azure-storage/files
         topicHref: /troubleshoot/azure/azure-storage/files/welcome-files-storage
@@ -260,3 +260,4 @@ items:
     - name: Surface
       tocHref: /troubleshoot/devices/
       topicHref: /troubleshoot/devices/
+

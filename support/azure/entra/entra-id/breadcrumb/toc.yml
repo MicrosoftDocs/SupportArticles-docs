@@ -15,8 +15,9 @@ items:
       items:
       - name: Microsoft Entra
         tocHref: /powershell/microsoftgraph/
-        topicHref: /troubleshoot/azure/microsoft-entra/welcome-microsoft-entra
+        topicHref: /troubleshoot/azure/microsoft-entra/welcome-entra
         items:
         - name: Microsoft Entra ID
           tocHref: /powershell/microsoftgraph/
           topicHref: /troubleshoot/azure/active-directory/welcome-azure-ad
+
