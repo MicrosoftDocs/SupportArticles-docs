@@ -5,7 +5,7 @@ ms.reviewer: allensu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Load balancer and Ingress controller
 ms.topic: how-to
-ms.date: 10/10/2024
+ms.date: 10/17/2024
 ---
 # Create an unmanaged ingress controller
 
