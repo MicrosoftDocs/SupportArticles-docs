@@ -15,9 +15,13 @@ appliesto:
   - Microsoft 365 Apps for enterprise
   - Outlook
 search.appverid: MET150
-ms.date: 02/22/2024
+ms.date: 10/17/2024
 ---
+
 # Install Microsoft Support and Recovery Assistant from a network share or internet location
+
+> [!Important]
+> Microsoft Support and Recovery Assistant features have migrated to [Get Help](https://support.microsoft.com/en-us/windows/about-get-help-717c7ae9-5c45-45f0-b637-900b7437a395).
 
 You can install Microsoft Support and Recovery Assistant on your company's Windows-based devices from the following locations:
 
