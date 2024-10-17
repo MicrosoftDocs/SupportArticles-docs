@@ -581,3 +581,4 @@ This article included some external components to AKS. To learn more about these
 - [Helm CLI](/azure/aks/kubernetes-helm)
 - [NGINX ingress controller](https://github.com/kubernetes/ingress-nginx)
 
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
