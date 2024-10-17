@@ -3,7 +3,7 @@ title: Manual and automatic WSUS database maintenance
 description: Describes steps and scripts to perform the maintenance of the Windows Server Update Services (WSUS) database manually or automatically.
 author: danschuh
 ms.author: daschuh
-ms.date: 10/10/2024
+ms.date: 10/17/2024
 ms.custom: sap:Software Update Management (SUM)\WSUS Database Maintenance
 ---
 # Maintain the Windows Server Update Services (WSUS) database manually or automatically
@@ -16,11 +16,11 @@ For more information, see [The complete guide to WSUS and Configuration Manager 
 
 The maintenance duration might vary depending on the machine's resources, including CPU, memory, and disk capacity. Factors affecting the maintenance duration include the time since the last maintenance, the number of selected products and classifications, and the volume of updates that need to be cleaned up.
 
-In a small environment with minimal products and classifications, and with recent maintenance on SUSDB, the automatic scripts with the `RA` option might take less than one minute to run. However, in some cases, it might take several days to complete. If it takes longer than expected and you're unable to complete the maintenance successfully, you need to create a new SUSDB.
+In a small environment, with minimal products and classifications and recent maintenance on SUSDB, the automatic scripts with the `RA` option might take less than one minute to run. However, in some cases, it might take several days to complete. If it takes longer than expected and you can't complete the maintenance successfully, you need to create a new SUSDB.
 
 ## Query to obtain the update count
 
-An excessive number of superseded, declined, and obsolete updates often causes the poor health of SUSDB. To obtain the update count, run the following SQL query. If the counts in the last three columns of the query result exceed a few hundred, maintenance should be performed.
+An excessive number of superseded, declined, and obsolete updates often cause poor health of SUSDB. To obtain the update count, run the following SQL query. If the counts in the last three columns of the query result exceed a few hundred, maintenance should be performed.
 
 ```sql
 use SUSDB;
@@ -47,11 +47,11 @@ select
 > [!IMPORTANT]
 >
 > - Run the steps on each WSUS server in the hierarchy. When performing a cleanup and removing items from WSUS servers, start at the lowest level of the hierarchy.
-> - Ensure that any scheduled synchronizations are disabled, either in Configuration Manager (if in use) or on standalone WSUS servers.
+> - Ensure that any scheduled synchronizations are disabled, either in Configuration Manager (if used) or on standalone WSUS servers.
 
-The following steps can resolve many issues with scanning and synchronization. You might need to repeat steps 9 through 12 multiple times if there's a large number of declined updates. After each run, execute the [SQL query](#query-to-obtain-the-update-count) to confirm that the update count is decreasing. Steps 8 and 9 might result in errors each time, which is expected. Therefore, you need to repeat steps 9 through 12 multiple times. Some steps especially step 9 might take several hours to complete.
+The following steps can resolve many issues with scanning and synchronization. If there are a large number of declined updates, you might need to repeat steps 9 through 12 multiple times. After each run, execute the [SQL query](#query-to-obtain-the-update-count) to confirm that the update count is decreasing. Steps 8 and 9 might result in errors each time, which is expected. Therefore, you need to repeat steps 9 through 12 multiple times. Some steps, especially step 9, might take several hours to complete.
 
-1. Run the SQL script that is described in [Slow performance of the spDeleteUpdate procedure](spdeleteupdate-slow-performance.md).
+1. Run the SQL script described in [Slow performance of the spDeleteUpdate procedure](spdeleteupdate-slow-performance.md).
 2. Shrink the SUSDB files.
 3. Shrink the SUSDB database.
 4. Reindex and update statistics on SUSDB.
@@ -68,10 +68,10 @@ The following steps can resolve many issues with scanning and synchronization. Y
         Exec sp_msforeachtable "UPDATE STATISTICS ? WITH FULLSCAN, COLUMNS" 
         ```
 
-5. Perform a cleanup of synchronization history.
+5. Perform a cleanup of the synchronization history.
 
     > [!NOTE]
-    > If there is a large number of synchronizations, the WSUS console may crash.
+    > If there are a large number of synchronizations, the WSUS console may crash.
 
     ```sql
     USE SUSDB 
@@ -79,16 +79,16 @@ The following steps can resolve many issues with scanning and synchronization. Y
     DELETE FROM tbEventInstance WHERE EventNamespaceID = '2' AND EVENTID IN ('381', '382', '384', '386', '387', '389')
     ```
 
-6. Perform a cleanup of superseded updates older than 30 days, or according to your specific configuration.
+6. Perform a cleanup of superseded updates older than 30 days or according to your specific configuration.
 
     > [!NOTE]
     >
-    > - The value of `30` in the first line indicates the number of days between today and the release date, during which superseded updates should not be marked as declined.
-    > - In Configuration Manager, this value should align with the [supersedence rules](/mem/configmgr/sum/plan-design/plan-for-software-updates#BKMK_SupersedenceRules) configured in the Software Update Point (SUP) component properties.
-    > - On standalone WSUS servers, specify the number of days you want to retain superseded updates. For instance, set the value to `60` instead of `30` to keep two months' superseded updates. Any updates older than this period will be marked as declined and subsequently cleaned up.
+    > - The value of `30` in the first line indicates the number of days between today and the release date, during which superseded updates shouldn't be marked as declined.
+    > - In Configuration Manager, this value should align with the [supersedence rules](/mem/configmgr/sum/plan-design/plan-for-software-updates#BKMK_SupersedenceRules) configured in the software update point (SUP) component properties.
+    > - On standalone WSUS servers, specify the number of days you want to retain superseded updates. For instance, set the value to `60` instead of `30` to keep two months of superseded updates. Any updates older than this period will be marked as declined and subsequently cleaned up.
 
     ```sql
-    DECLARE @thresholdDays INT = 30   -- Specify the number of days between today and the release date during which superseded updates should not be marked as declined. If Configuration Manager is being used with WSUS, this value should match the configuration of supersedence rules in software update point (SUP) component properties.
+    DECLARE @thresholdDays INT = 30   -- Specify the number of days between today and the release date during which superseded updates should not be marked as declined. If Configuration Manager is being used with WSUS, this value should match the configuration of supersedence rules in the software update point (SUP) component properties.
     DECLARE @testRun BIT = 0          -- Set this value to 1 to test without declining anything. 
     -- There shouldn't be any need to modify anything after this line.
     DECLARE @uid UNIQUEIDENTIFIER
@@ -183,22 +183,22 @@ The following steps can resolve many issues with scanning and synchronization. Y
 
 ## Maintain the WSUS database (SUSDB) automatically
 
-The following PowerShell script replicates the manual steps, and a *SUSDB-Maintenance.log* file is created and opened when the script is executed.
+The following PowerShell script replicates the manual steps. When the script is executed, a *SUSDB-Maintenance.log* file will be created and opened.
 
 > [!IMPORTANT]
-> Ensure that any scheduled synchronizations are disabled, either in Configuration Manager (if in use) or on standalone WSUS servers.
+> Ensure that any scheduled synchronizations are disabled, either in Configuration Manager (if used) or on standalone WSUS servers.
 
 ```powershell
 <# SUSDB-Maintenance
 
 Requirements
 * WID must be local.
-* Remote connections for SQL now supported, choose [S] Change SQL Server from menu to set the SQL Server.
-* WSUS Console must be installed local.
-* Must have internet access to download SQL PowerShell Module.
-* Must be using v22 or higher of SQL Server PowerShell Module.
+* Remote connections to SQL are now supported; choose [S] Change SQL Server from the menu to set the SQL Server.
+* WSUS Console must be installed locally.
+* Must have internet access to download the SQL PowerShell Module.
+* Must be using v22 or higher of the SQL Server PowerShell Module.
 
-This script will present the following menu options for performing SUSDB Maintenance. A SUSDB-Maintenance.log file will be created and opened when the script is executed.
+This script will present the following menu options for performing SUSDB maintenance. When the script is executed, a SUSDB-Maintenance.log file will be created and opened.
 
 [S] Change SQL Server, currently set to 
 [A] Update Count
@@ -695,7 +695,7 @@ function Show-Menu {
 }
 function Test-SQLModuleInstalled {
     ##############################################
-    # Checking to see if the SqlServer module is already installed, if not installing it for the current user
+    # Checking to see if the SqlServer module is already installed; if not, installing it for the current user
     ##############################################
     $SQLModuleCheck = (Get-Module -ListAvailable SqlServer).Version.Major
     if ($SQLModuleCheck -notin 22) {
