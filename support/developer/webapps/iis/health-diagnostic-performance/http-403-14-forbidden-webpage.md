@@ -1,7 +1,7 @@
 ---
 title: HTTP Error 403.14 when you open IIS webpages
 description: Helps resolve the HTTP 403.14 The web server is configured to not list the contents of this directory error when you visit an Internet Information Services webpage.
-ms.date: 10/09/2024
+ms.date: 10/17/2024
 ms.reviewer: damatei
 ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
 ---
@@ -38,7 +38,7 @@ This problem occurs because the website doesn't have the Directory Browsing feat
 To resolve this problem, follow these steps:
 
 1. Select **Start** > **Run**, type *inetmgr.exe*, and then select **OK** to start IIS Manager.
-1. In IIS Manager, expand **server name** > **Web sites**, and select the website that you want to change.
+1. In IIS Manager, expand **\<server name>** > **Web sites**, and select the website that you want to change.
 1. In the **Features** view, double-click **Directory Browsing**.
 1. In the **Actions** pane, select **Enable**.
 
@@ -47,7 +47,7 @@ To resolve this problem, follow these steps:
 To resolve this problem, follow these steps:
 
 1. Select **Start** > **Run**, type *inetmgr.exe*, and then select **OK** to start IIS Manager.
-1. In IIS Manager, expand **server name** > **Web sites**, and then select the website that you want to change.
+1. In IIS Manager, expand **\<server name>** > **Web sites**, and then select the website that you want to change.
 1. In the **Features** view, double-click **Default Document**.
 1. In the **Actions** pane, select **Enable**.
 1. In the **Features** view, the **Default Document** must be listed (preferably first). If not, in the **Actions** pane, select **Add**, type the name of the default document in the **Add Default Document** box, and then select **OK**. The file must exist in the site's root folder.
