@@ -12,7 +12,16 @@ This article provides troubleshooting steps for an issue where you receive the S
 
 ## Symptoms
 
-During a desktop flow run in the cloud environment, you receive the SessionHasLoggedOff error code with the "The session logged off during run execution" message.
+During a desktop flow run in the cloud environment, you receive the `SessionHasLoggedOff` error code with the "The session logged off during run execution" message.
+
+```json
+{
+    "error":{
+        "code": "SessionHasLoggedOff",
+        "message": "The session logged off during run execution."
+    }    
+}
+```
 
 ## Cause
 
