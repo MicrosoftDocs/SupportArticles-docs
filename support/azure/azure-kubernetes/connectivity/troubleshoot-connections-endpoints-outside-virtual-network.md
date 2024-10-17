@@ -2,7 +2,7 @@
 title: Troubleshoot connections to endpoints outside the virtual network
 description: Troubleshoot connections to endpoints outside the virtual network (through the public internet) from an Azure Kubernetes Service (AKS) cluster.
 ms.date: 10/17/2024
-ms.reviewer: chiragpa, rissing, v-leedennis
+ms.reviewer: chiragpa, rissing, jaewonpark, v-leedennis, v-weizhu
 editor: v-jsitser
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot connections to endpoints outside the virtual network so that I don't experience outbound connection issues from an Azure Kubernetes Service (AKS) cluster.
