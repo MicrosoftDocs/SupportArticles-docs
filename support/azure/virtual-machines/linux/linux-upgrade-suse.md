@@ -42,6 +42,7 @@ sudo dmidecode | grep -i hyper
  Version: Hyper-V UEFI Release v4.1
  ```     
 **Option b**: In the [Azure portal](https://portal.azure.com),  go to **Properties**  of the VM, and then check the **VM generation** field as shown:
+
 ::image type="content" source="media/linux-upgrade-suse/AzurePortal_VMgeneration.png"  border="false":::
 
 ## Successful Migration from SLES12 to SLES15, but SLES15 SP1 to SP2 Upgrade Fails with Error
