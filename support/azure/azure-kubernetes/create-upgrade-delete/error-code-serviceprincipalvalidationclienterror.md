@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot the ServicePrincipalValidationClientError error code
 description: Learn how to troubleshoot the ServicePrincipalValidationClientError error when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 03/22/2022
-editor: v-jsitser
+ms.date: 10/17/2024
+editor: momajed
 ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the ServicePrincipalValidationClientError error code so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
