@@ -443,6 +443,8 @@ items:
           href: update-management/wsus-client-long-time-finish-update-scan.md
         - name: WSUS console crashes
           href: update-management/wsus-console-crashes.md
+        - name: WSUS database maintenance
+          href: update-management/wsus-automatic-maintenance.md
         - name: WSUS maintenance guide
           href: update-management/wsus-maintenance-guide.md
         - name: WSUS sync fails in Windows Server 2008 R2

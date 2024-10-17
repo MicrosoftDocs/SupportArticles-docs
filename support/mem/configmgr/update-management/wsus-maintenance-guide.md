@@ -18,6 +18,8 @@ Questions are often along the lines of **How should I properly run this maintena
 
 With the understanding that this maintenance needs to be done, you're wondering what maintenance you need to do and how often you need to be doing it. The answer is that you should perform monthly maintenance. Maintenance is easy and doesn't take long for WSUS servers that have been well maintained from the start. However, if it has been some time since WSUS maintenance was done, the cleanup may be more difficult or time consuming the first time. It will be much easier or faster in subsequent months.
 
+For more information on concise steps and automatic scripts, see [Manual and automatic WSUS database maintenance](wsus-automatic-maintenance.md).
+
 ## Maintain WSUS while supporting Configuration Manager current branch version 1906 and later versions
 
 If you are using Configuration Manager current branch version 1906 or later versions, we recommend that you enable the **WSUS Maintenance** options in the software update point configuration at the top-level site to automate the cleanup procedures after each synchronization. It would effectively handle all cleanup operations described in this article, except backup and reindexing of WSUS database. You should still automate backup of WSUS database along with reindexing of the WSUS database on a schedule.
