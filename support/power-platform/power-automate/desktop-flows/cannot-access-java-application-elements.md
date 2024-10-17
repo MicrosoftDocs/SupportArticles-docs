@@ -7,7 +7,7 @@ ms.custom: sap:Desktop flows\Working with Power Automate for desktop
 ---
 # Can't access the elements of a Java application
 
-If you encounter issues while [automating Java applications]((/power-automate/desktop-flows/how-to/java)) with Power Automate for desktop, follow the steps in this article to troubleshoot the issue.
+If you encounter issues while [automating Java applications](/power-automate/desktop-flows/how-to/java) with Power Automate for desktop, follow the steps in this article to troubleshoot the issue.
 
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 5014922
