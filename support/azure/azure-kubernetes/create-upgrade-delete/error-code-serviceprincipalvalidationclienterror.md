@@ -58,7 +58,20 @@ Reset the secret that's used for the service principal by running the [az ad sp 
 az ad sp credential reset --name "01234567-89ab-cdef-0123-456789abcdef" --query password --output tsv
 ```
 
+Or you can reset the service principal secret by specifiying the expiration date using the following command: 
+
+```azurecli-interactive
+az ad sp credential reset --name <service-principal-name> --credential-description "New secret for AKS" --years 1
+```
+
 This command resets the secret, and displays it as output. Then, you can specify the new secret when you try again to create the new cluster.
+
+For existing cluster failing operation, ensure you update your AKS cluster with the new secret:
+
+```azurecli-interactive
+az aks update-credentials --resource-group <resource-group> --name <aks-cluster> --reset-service-principal --client-secret <new-client-secret>
+```
+
 
 ## Solution 2: Create a new service principal
 
@@ -80,6 +93,12 @@ The output of the command should resemble the following JSON string:
 ```
 
 Note the `appId` and `password` values that are generated. After you get these values, you can rerun the cluster creation command for the new service principal and secret.
+
+Update your AKS cluster with the new service principal credentials:
+
+```azurecli-interactive
+az aks update-credentials --resource-group <resource-group> --name <aks-cluster> --service-principal <new-client-id> --client-secret <new-client-secret>
+```
 
 ## More information
 
