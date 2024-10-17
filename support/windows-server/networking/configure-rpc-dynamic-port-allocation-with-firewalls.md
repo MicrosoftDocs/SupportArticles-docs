@@ -1,11 +1,11 @@
 ---
 title: Remote Procedure Call (RPC) dynamic port work with firewalls
 description: This article describes how to use the solution together with a firewall when configuring RPC dynamic port allocation.
-ms.date: 12/26/2023
+ms.date: 10/17/2024
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, timball
+ms.reviewer: kaushika, timball, moshalaby
 ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 ---
 # How to configure RPC dynamic port allocation to work with firewalls
