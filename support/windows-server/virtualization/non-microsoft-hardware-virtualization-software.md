@@ -27,7 +27,7 @@ Microsoft has established a joint support relationship for non-Microsoft hardwar
 - Virtuozzo International GmbH
 - VMware, Inc
 
-See [Server Virtualization](https://www.windowsservercatalog.com/results.aspx?&bCatID=1521&cpID=0&avc=0&ava=0&avq=0&OR=1&PGS=25) for the validated products from vendors that support Windows Server 2019 and earlier Windows Server versions.
+See [Server Virtualization](https://www.windowsservercatalog.com/svvp/product) for the validated products from vendors that support Windows Server 2019 and earlier Windows Server versions.
 
 ## More information
 
