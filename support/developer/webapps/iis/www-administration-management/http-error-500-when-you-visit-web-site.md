@@ -1,11 +1,11 @@
 ---
-title: HTTP Error 500.0 error
+title: HTTP Error 500.0 Internal Server Error
 description: This article provides resolutions for the HTTP Error 500.0 error that occurs when you visit a web site that is hosted on IIS.
 ms.date: 10/16/2024
 ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
 ms.reviewer: zixie
 ---
-# HTTP Error 500.0 - Internal Server Error error when you open an IIS Webpage
+# HTTP Error 500.0 - Internal Server Error error when you open an IIS webpage
 
 This article helps you resolve the HTTP Error 500.0 error that occurs when you visit a web site that is hosted on Internet Information Services (IIS).
 
@@ -33,7 +33,7 @@ Error message:
 > Server Error in Application "\<application name\>"  
 HTTP Error 500.0 - Internal Server Error  
 HRESULT: 0x80070032  
-Description of HRESULT ISAPI filter *:::no-loc text="drive:\FilePath\ISAPI_FLT.dll":::* tried to register for `SF_NOTIFY_READ_RAW_DATA` notification.
+Description of HRESULT ISAPI filter *:::no-loc text="drive:\\FilePath\\ISAPI_FLT.dll":::* tried to register for `SF_NOTIFY_READ_RAW_DATA` notification.
 
 ### Cause
 
@@ -71,7 +71,7 @@ Description of HRESULT Handler "ASPClassic" has a bad module "IsapiModule" in it
 
 ### Cause
 
-This problem occurs because the ISAPIModule module is missing from the modules list for the web site. The ISAPIModule module is in this location:  *:::no-loc text="drive:\Windows\System32\inetsrv\isapi.dll":::*.
+This problem occurs because the ISAPIModule module is missing from the modules list for the web site. The ISAPIModule module is in this location:  *:::no-loc text="drive:\\Windows\\System32\\inetsrv\\isapi.dll":::*.
 
 ### Resolution
 
@@ -81,7 +81,7 @@ To add the ISAPIModule module to the modules list for the web site, follow these
 2. In IIS Manager, expand **\<server name>** > **Web sites**, and then select the web site that you want to modify.
 3. In **Features** view, double-click **Module**.
 4. In the **Actions** pane, select **Add Native Module**.
-5. In the **Add Native Module** dialog box, select the **IsapiModule** check box, and then select **OK**.
+5. In the **Add Native Module** dialog box, select the **IsapiModule** checkbox, and then select **OK**.
 
 ## HResult code 0x800700c1
 
@@ -98,14 +98,14 @@ This problem occurs because a script mapping isn't valid.
 
 ### Resolution
 
-To make sure that the script-mapping points to the *ISAPI.dll* file that can process the request, follow these steps:
+To make sure that the script-mapping points to the *ISAPI.dll* file can process the request, follow these steps:
 
 1. Select **Start** > **Run**, type *inetmgr.exe*, and then select **OK**.
 2. In IIS Manager, expand **\<server name>** > **Web sites**, and then select the web site that you want to modify.
 3. In **Features** view, double-click **Handler Mappings**.
 4. Make sure that the script-mapping points to the correct *ISAPI.dll* file.
 
-   For example, *.asp* files should map to the *:::no-loc text="%windir%\system32\inetsrv\asp.dll":::* file.
+   For example, *.asp* files should map to the *:::no-loc text="%windir%\\system32\\inetsrv\\asp.dll":::* file.
 
 ## HResult code 0x80070005
 
@@ -149,7 +149,7 @@ This problem occurs because an ISAPI filter that isn't valid is loaded at the gl
 To remove the ISAPI filter that isn't valid, follow these steps:
 
 1. Select **Start** > **Run**, type *inetmgr.exe*, and then select **OK**.
-1. In IIS Manager, expand **\<server name>**, expand **Web sites**, and then select the web site that you want to modify.
+1. In IIS Manager, expand **\<server name>** > **Web sites**, and then select the web site that you want to modify.
 1. In **Features** view, double-click **ISAPI Filters**.
 1. Right-click the ISAPI filter that you want to remove, and then select **Remove**.
 
@@ -166,7 +166,7 @@ This problem occurs because the handler mapping for the requested resource point
 
 #### Resolution
 
-To make the handler mapping for the requested resource to point to the *.dll* file that can process the request, follow these steps:
+To make the handler mapping for the requested resource point to the *.dll* file that can process the request, follow these steps:
 
 1. Select **Start** > **Run**, type *inetmgr.exe*, and then select **OK**.
 1. In IIS Manager, expand **\<server name>** > **Web sites**, and then select the web site that you want to modify.
@@ -174,10 +174,10 @@ To make the handler mapping for the requested resource to point to the *.dll* fi
 1. Right-click the script mapping that you want to edit, and then select **Edit**.
 1. In the **Edit Script Map** dialog box, type the appropriate executable file in the **Executable** box, and then select **OK**.  
 
-   For example, *.asp* files should map to the *:::no-loc text="%windir%\system32\inetsrv\asp.dll":::* file.
+   For example, *.asp* files should map to the *:::no-loc text="%windir%\\system32\\inetsrv\\asp.dll":::* file.
 
 ## More information
 
-If the web application code throws an exception and gets caught by the application's runtime (for example, ASP.NET runtime), you might also see the HTTP Error 500.0 error in the web response. For any exception thrown from the web application code, check Application event log or your own custom Application log, for Exception Type, Exception Message, and Exception Call Stack. 
+If the web application code throws an exception and is caught by the application's runtime (for example, the ASP.NET runtime), you might also see the HTTP Error 500.0 error in the web response. For any exception thrown from the web application code, check the Application event log or your own custom Application log for the Exception Type, Exception Message, and Exception Call Stack. 
 
-If further debugging is needed, use DebugDiag latest version to capture [first chance exception dumps](https://techcommunity.microsoft.com/t5/iis-support-blog/using-debugdiag-to-capture-memory-dumps-on-first-chance/ba-p/377131).  
+If further debugging is needed, use the latest version of DebugDiag to capture [first-chance exception dumps](https://techcommunity.microsoft.com/t5/iis-support-blog/using-debugdiag-to-capture-memory-dumps-on-first-chance/ba-p/377131).  
