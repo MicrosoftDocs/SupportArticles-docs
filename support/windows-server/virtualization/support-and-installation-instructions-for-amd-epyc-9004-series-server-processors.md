@@ -2,7 +2,7 @@
 title: Support and installation instructions for AMD EPYC 9004 and 9005 series server processors
 description: Introduces the Windows Server operating system support statements and installation instructions for AMD EPYC 9004 and AMD EPYC 9005 series server processors.
 ms.topic: troubleshooting
-ms.date: 10/16/2024
+ms.date: 10/17/2024
 ms.custom: sap:Virtualization and Hyper-V\Installation and configuration of Hyper-V, csstroubleshoot
 ---
 # Windows Server support and installation instructions for the AMD EPYC 9004 and AMD EPYC 9005 series server processors
@@ -66,6 +66,6 @@ For more information, see [Windows Server 2019 Hyper-V host behavior running in 
 
 On systems running Windows Server 2022 with the Hyper-V virtualization feature enabled, the following limitation may be observed on AMD EPYC 9005 series-based systems with greater than 256 logical processors per NUMA node:
 
-The root partition will only enumerate the first 256 logical processors. This limitation is addressed in KB 504428 (build 10.0.20348.2110).
+The root partition will only enumerate the first 256 logical processors. This limitation is addressed in [KB5044281 (OS Build 20348.2762)](https://support.microsoft.com/topic/october-8-2024-kb5044281-os-build-20348-2762-e063059c-9122-4324-86e8-4f6f3383a20a).
 
 Attempting to boot to the Windows Server 2019 Recovery Environment (WinRE) may result in a blue screen error 0x5C HAL_INITIALIZATION_FAILED. The WinRE image must be updated to support configurations with greater than 64 cores per socket. To enable this support, apply the latest cumulative update for Server 2019 to the WinRE image. See [Add an update package to Windows RE](/windows-hardware/manufacture/desktop/add-update-to-winre?view=windows-11&preserve-view=true) for instructions.
