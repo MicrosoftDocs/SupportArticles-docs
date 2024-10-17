@@ -2,23 +2,19 @@
 title: Can't access elements of a Java application
 description: Troubleshoot the issue that Power Automate for desktop can't access the elements of a Java desktop application.
 ms.reviewer: pefelesk
-ms.date: 10/16/2024
+ms.date: 10/17/2024
 ms.custom: sap:Desktop flows\Working with Power Automate for desktop
 ---
 # Can't access the elements of a Java application
 
-This article provides causes and solutions for the issue where you can't access the elements of a Java desktop application in Microsoft Power Automate for desktop.
+If you encounter issues while [automating Java applications]((/power-automate/desktop-flows/how-to/java)) with Power Automate for desktop, follow the steps in this article to troubleshoot the issue.
 
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 5014922
 
 ## Symptoms
 
-Microsoft Power Automate for desktop can't access the elements of a Java desktop application.
-
-## Verifying the issue
-
-Ensure that you can't capture an element of the application by using either the [Recorder](/power-automate/desktop-flows/recording-flow) or the [Add UI element](/power-automate/desktop-flows/ui-elements) action in the flow designer.
+Power Automate for desktop can't access the UI elements of a Java desktop application when you use either the [Recorder](/power-automate/desktop-flows/recording-flow) or the [Add UI element](/power-automate/desktop-flows/ui-elements) action in the flow designer.
 
 ## Troubleshooting steps
 
@@ -54,15 +50,15 @@ Ensure that you can't capture an element of the application by using either the 
 
        :::image type="content" source="media/cannot-access-java-application-elements/java-runtime-environments-settings.png" alt-text="Screnshot of the Java Runtime Environment Settings.":::
 
-   Additionally, check the following files:
+   Check that the following files exist:
 
    - For 64-bit Java installation:
 
-     - File _Microsoft.Flow.RPA.Desktop.UIAutomation.Java.Bridge.Native.dll_ is replaced in folder _C:\Program Files\Java\jre1.8.0_271\bin_. (_jre1.8.0_271_ is replaced with your machine's Java installation.)
-     - File _accessibility.properties_ is replaced in folder _C:\Program Files\Java\jre1.8.0_271\lib_. (_jre1.8.0_271_ is replaced with your machine's Java installation.)  
-       - If you edit the file with Notepad, it has the following value:  
+     - File _Microsoft.Flow.RPA.Desktop.UIAutomation.Java.Bridge.Native.dll_ is replaced in folder _C:\Program Files\Java\jre1.8.0_271\bin_. (replace _jre1.8.0_271_ with your machine's Java installation folder.)
+     - File _accessibility.properties_ is replaced in folder _C:\Program Files\Java\jre1.8.0_271\lib_. (replace _jre1.8.0_271_ with your machine's Java installation folder.)  
+       - If you open the file with Notepad, you should see the following value:  
   `assistive_technologies=com.sun.java.accessibility.AccessBridge, microsoft.flows.rpa.desktop.uiautomation.JavaBridge`
-     - File _PAD.JavaBridge.jar_ is inserted in folder _C:\Program Files\Java\jre1.8.0_271\lib\ext_. (_jre1.8.0_271_ is replaced with your machine's Java installation.)
+     - File _PAD.JavaBridge.jar_ is inserted in folder _C:\Program Files\Java\jre1.8.0_271\lib\ext_. (replace _jre1.8.0_271_ with your machine's Java installation folder.)
 
    - For 32-bit Java installation:
 
@@ -70,8 +66,8 @@ Ensure that you can't capture an element of the application by using either the 
 
 4. Check _.accessibility.properties_ file:
 
-    - Ensure there isn't an _.accessibility.properties_ file in your user folder.
-    - If a file named _.accessibility.properties_ is in the _C:\Users\user_ folder, rename it.
+    - Ensure there isn't an _.accessibility.properties_ file in your _C:\Users\user_ folder. (replace with your user name.)
+    - If the file exists, rename it.
 
 5. Ensure that _VC_redist.x64.exe_, _VC_redist.x86.exe_, or both are run.
 
