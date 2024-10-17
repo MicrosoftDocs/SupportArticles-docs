@@ -459,12 +459,12 @@ In the following example, traffic to *EXTERNAL_IP/hello-world-one* is routed to 
 
 To test the routes for the ingress controller, browse to the two applications. Open a web browser to the IP address of your NGINX ingress controller, such as *EXTERNAL_IP*. The first demo application is displayed in the web browser, as shown in the following example:
 
- :::image type="content" source="media/create-unmanaged-ingress-controller/app-one.png" alt-text="A screenshot that shows the first app running behind the ingress controller." lightbox="media/create-unmanaged-ingress-controller/app-one.png"  border="false":::
+ :::image type="content" source="../media/create-unmanaged-ingress-controller/app-one.png" alt-text="A screenshot that shows the first app running behind the ingress controller." lightbox="../media/create-unmanaged-ingress-controller/app-one.png"  border="false":::
 
 
 Now add the */hello-world-two* path to the IP address, such as *EXTERNAL_IP/hello-world-two*. The second demo application with the custom title is displayed:
 
- :::image type="content" source="media/create-unmanaged-ingress-controller/app-two.png" alt-text="A screenshot that shows the second app running behind the ingress controller." lightbox="media/create-unmanaged-ingress-controller/app-two.png"  border="false":::
+ :::image type="content" source="../media/create-unmanaged-ingress-controller/app-two.png" alt-text="A screenshot that shows the second app running behind the ingress controller." lightbox="../media/create-unmanaged-ingress-controller/app-two.png"  border="false":::
 
 ### Test an internal IP address
 
