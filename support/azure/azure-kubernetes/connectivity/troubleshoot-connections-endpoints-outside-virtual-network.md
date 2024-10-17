@@ -78,21 +78,21 @@ The following HTTP status codes might indicate the listed issues.
 You can try to connect to your application endpoint using curl. Here's a command and output example:
 
 ```bash
-# 404 Error Code Example via curl
-$ curl -vv 20.249.69.36/test.index
+# 404 error code example
+$ curl -vv <host IP address>/test.index
 
-*   Trying 20.249.69.36:80...
+*   Trying <host IP address>:80...
 * TCP_NODELAY set
-* Connected to 20.249.69.36 (20.249.69.36) port 80 (#0)
+* Connected to <host IP address> (<host IP address>) port 80 (#0)
 > GET /test.index HTTP/1.1
-> Host: 20.249.69.36
+> Host: <host IP address>
 > User-Agent: curl/7.68.0
 > Accept: */*
 >
 * Mark bundle as not supporting multiuse
 < HTTP/1.1 404 Not Found
 ...
-* Connection #0 to host 20.249.69.36 left intact
+* Connection #0 to host <host IP address> left intact
 ```
 
 #### Step 4: Check what happens if outbound traffic bypasses the virtual appliance temporarily 
