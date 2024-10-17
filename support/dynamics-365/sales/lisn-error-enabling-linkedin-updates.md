@@ -19,6 +19,8 @@ When you turn on the **Enable LinkedIn updates** option in the **Sales Navigator
 
 :::image type="content" source="media/lisn-error-enabling-linkedin-updates/lisn-update-error.png" alt-text="Screenshot of the error in enabling LinkedIn updates.":::
 
+The issue occurs for the following reasons and should be resolved accordingly.
+
 ## Cause 1: CRM sync is disabled in LinkedIn Sales Navigator
 
 To solve this issue, verify the following settings:
