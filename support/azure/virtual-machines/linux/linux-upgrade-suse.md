@@ -385,23 +385,25 @@ The SLES15 Migration from SP3 to SP4 fails to show the following output which ca
 sudo SUSEConnect -S
 ```
 ```output
-      Error: Invalid system credentials, probably because the registered system was deleted in SUSE Customer Center. Check https://scc.suse.co m whether your system appears there. If it does not, please call SUSEConnect --cleanup 
-      and re-register this system.
-      Node01:~# zypper migration
+Error: Invalid system credentials, probably because the registered system was deleted in SUSE Customer Center. Check https://scc.suse.co m whether your system appears there. If it does not, please call SUSEConnect --cleanup  and re-register this system.
+```
+```bash
+sudo zypper migration
+```
+```output
+Executing '/usr/bin/zypper patch-check-updatestack-only'
+Loading repository data...
+Warning: No repositories defined. Operating only with the installed resolvables. Nothing can be installed. Reading installed packages...
 
-      Executing '/usr/bin/zypper patch-check-updatestack-only'
-      Loading repository data...
-      Warning: No repositories defined. Operating only with the installed resolvables. Nothing can be installed. Reading installed packages...
-
-     O patches needed (0 security patches)
+O patches needed (0 security patches)
 
 
-     Executing '/usr/bin/zypper ref'
+Executing '/usr/bin/zypper ref'
 
-     Warning: There are no enabled repositories defined.
-     Use 'zypper addrepo' or 'zypper modifyrepo' commands to add or enable repositories.
-     repository refresh failed, exiting
-     '/usr/lib/zypper/commands/zypper-migration' exited with status 1
+Warning: There are no enabled repositories defined.
+Use 'zypper addrepo' or 'zypper modifyrepo' commands to add or enable repositories.
+repository refresh failed, exiting
+'/usr/lib/zypper/commands/zypper-migration' exited with status 1
 ```
 
 ### Cause
