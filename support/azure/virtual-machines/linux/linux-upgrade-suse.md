@@ -51,11 +51,11 @@ While executing `sudo zypper migration`, the migration fails to show the followi
 
 ### Error
 ```output
-    Can't get available migrations from server: SUSE::Connect::ApiError: The requested products 'HPC Module 12 x86_64' are not activated on the system.
+Can't get available migrations from server: SUSE::Connect::ApiError: The requested products 'HPC Module 12 x86_64' are not activated on the system.
 ```
 OR
 ```output
-    Can't get available migrations from server: SUSE::Connect::ApiError: Invalid combination of  products registered.
+Can't get available migrations from server: SUSE::Connect::ApiError: Invalid combination of  products registered.
 ```
 ### Cause 
 
@@ -63,7 +63,7 @@ One of the bigger changes between SLE12 and SLE15 was that HPC became a standalo
 
 ### Resolution
 ```bash
-     sudo zypper rm sle-module-hpc-release-POOL sle-module-hpc-release
+sudo zypper rm sle-module-hpc-release-POOL sle-module-hpc-release
 ```
 
 ### Workaround
@@ -86,7 +86,7 @@ While installing the `suse-migration-sles15-activation` package, the migration f
 
 ### Error
 ```output
-    'suse-migration-sle15-activation' not found in package names. Trying capabilities. No provider of 'suse-migration-sle15-activation' found.
+'suse-migration-sle15-activation' not found in package names. Trying capabilities. No provider of 'suse-migration-sle15-activation' found.
 ```
 ### Cause
 
@@ -95,9 +95,9 @@ You notice that the SLES12 Public Cloud module isn't enabled by default.
 ### Resolution
 
 1. Enable the following module, and then try installing the package again.
-   ```bash
-   sudo SUSEConnect -p sle-module-public-cloud/12/x86_64
-   ```
+```bash
+sudo SUSEConnect -p sle-module-public-cloud/12/x86_64
+```
 > [!NOTE]
 > On SLES for SAP instances, the following two packages should never be present: `sle-ha-release`, and `sle-ha-release-POOL`. If the instance is SLES for SAP, remove these packages before starting the distribution migration:
   
@@ -105,29 +105,29 @@ You notice that the SLES12 Public Cloud module isn't enabled by default.
   sudo zypper remove sle-ha-release sle-ha-release-POOL
   ```
 2. Perform a cleanup, and then re-register the system.
-     ```bash
-     sudo SUSEConnect --cleanup
-     ```
-     ```bash
-     sudo rm /etc/zypp/{credentials,services,repos}.d/*
-     ```
-     ```bash
-     sudo rm --force --recursive /var/cache/zypp/*
-     ```
-     ```bash
-     sudo rm /var/lib/cloudregister/*
-     ```
-     ```bash
-     sudo registercloudguest --force-new
-     ```
+```bash
+sudo SUSEConnect --cleanup
+```
+```bash
+sudo rm /etc/zypp/{credentials,services,repos}.d/*
+```
+```bash
+sudo rm --force --recursive /var/cache/zypp/*
+```
+```bash
+sudo rm /var/lib/cloudregister/*
+```
+```bash
+sudo registercloudguest --force-new
+```
 3. Verify the VM registration status by running SUSEConnect again:
-     ```bash
-     sudo SUSEConnect --status
-     ```
+```bash
+sudo SUSEConnect --status
+```
 4. Then proceed with the migration.
-     ```bash
-     sudo zypper migration
-     ```
+```bash
+sudo zypper migration
+```
 For more information, refer [Major Distros in Public Cloud](https://www.suse.com/c/major-distro-upgrade-in-the-public-cloud-made-easy/) and [Upgrading SUSE Linux Enterprise in the Public Cloud](https://www.suse.com/c/upgrading-suse-linux-enterprise-in-the-public-cloud/).
 
 ## Gen2 VMs Fail to Boot After SLE15SP1 to SP2 Upgrade When Stopped via Azure Portal or Shutdown(init 0 or shutdown -h) command
@@ -156,9 +156,9 @@ Hyper-V in the Azure environment doesn't preserve the Generation-2 VM (UEFI VM)'
 ### Resolution
 1. Set up chroot environment from the affected VM OS snapshot disk  on a rescue VM as described in [chroot-environment-linux](chroot-environment-linux.md).
 2. Reinstall Grub boot loader executing:
-     ```bash
-     sudo /usr/sbin/shim-install --config-file=/boot/grub2/grub.cfg
-     ```
+```bash
+sudo /usr/sbin/shim-install --config-file=/boot/grub2/grub.cfg
+```
 3. Swap the snapshot disk back to the problematic VM as described in [chroot-environment-linux](chroot-environment-linux.md).
 
 For more information, see [grub2 error: symbol 'grub_file_filters' not found](https://www.suse.com/support/kb/doc/?id=000019919).
@@ -199,28 +199,28 @@ The `/etc/credentials.d` directory had incorrect permission or the contents of a
 ### Resolution
 1.  The registration was failing because the `/etc/credentials.d` directory had incorrect permission or the contents of a file inside `credentials.d` was triggering this error.
 Clean up registration by following below steps:
-     ```bash
-     sudo rm /var/cache/cloudregister/
-     ```
-     ```bash
-     sudo rm /etc/zypp/credentials.d/
-     ```
-     ```bash
-     sudo rm /etc/zypp/credentials.d/
-     ```
-     ```bash
-     sudo chmod 0755 /etc/zypp/credentials.d*
-     ```
-     ```bash
-     sudo registercloudguest --force-new
-     ```
+```bash
+sudo rm /var/cache/cloudregister/
+```
+```bash
+sudo rm /etc/zypp/credentials.d/
+```
+```bash
+sudo rm /etc/zypp/credentials.d/
+```
+```bash
+sudo chmod 0755 /etc/zypp/credentials.d*
+```
+```bash
+sudo registercloudguest --force-new
+```
 2. After the registration is successfully completed, patch the VM, and reboot: 
-     ```bash
-     sudo zypper update
-     ```
-     ```bash
-     sudo reboot
-    ```
+```bash
+sudo zypper update
+```
+```bash
+sudo reboot
+```
 
 ## Migration from SLES12SP5 to SLES15SP1 fails due to issue with `regionService` directory
 The migration fails from SLES12 SP5 to SLES15 SP1 showing the following output which can also be seen in `/var/log/messages` or `/var/log/distro-migration.log` file:
@@ -249,40 +249,40 @@ The `regionService` directory moves from `/var/lib` to `/usr/lib`, and the DMS s
 
 ### Resolution
 1. Create the old/previously used directories: `/var/lib/regionService/certs`.
-   ```bash
-   sudo mkdir -p /var/lib/regionService/certs
-   ```
+```bash
+sudo mkdir -p /var/lib/regionService/certs
+```
 2. Copy the cert files.
-   ```bash 
-   sudo cp -a /usr/lib/regionService/certs/* /var/lib/regionService/certs/
-   ```
+```bash 
+sudo cp -a /usr/lib/regionService/certs/* /var/lib/regionService/certs/
+```
 3. Modify `/etc/regionserverclnt.cfg`, and set `certLocation` to the previously used path `/var/lib/regionService/certs`.
-   ```bash
-   sudo  vi /etc/regionserverclnt.cfg
-   ```
+```bash
+sudo  vi /etc/regionserverclnt.cfg
+```
 4. The modified file looks like this:
-   ```bash
-   sudo cat /etc/regionserverclnt.cfg
-   ```
-   ```output        
-    [server]
-     api = regionInfo
-     #certLocation = /usr/lib/regionService/certs
-     certLocation = /var/lib/regionService/certs
-     regionsrv = 23.100.36.229,40.121.202.140,52.187.53.250,104.45.31.195,191.237.254.253
-    [instance]
-     dataProvider = /usr/bin/azuremetadata --api latest --subscriptionId --billingTag --attestedData --signature --xml
-     instanceArgs = msftazure
-     httpsOnly = true
-   ```
+```bash
+sudo cat /etc/regionserverclnt.cfg
+```
+```output        
+[server]
+api = regionInfo
+#certLocation = /usr/lib/regionService/certs
+certLocation = /var/lib/regionService/certs
+regionsrv = 23.100.36.229,40.121.202.140,52.187.53.250,104.45.31.195,191.237.254.253
+[instance]
+dataProvider = /usr/bin/azuremetadata --api latest --subscriptionId --billingTag --attestedData --signature --xml
+instanceArgs = msftazure
+httpsOnly = true
+```
 5. Install the latest `SLES15-Migration` package.
-   ``` bash
-   sudo zypper in SLES15-Migration
-   ```
+``` bash
+sudo zypper in SLES15-Migration
+```
 6. Trigger the migration:
-   ``` bash
-   sudo zypper migration
-   ```
+``` bash
+sudo zypper migration
+```
 
 For more information, see [SLES 12 SP5 Distribution Migration System (DMS) failed](https://www.suse.com/support/kb/doc/?id=000021338).
 
@@ -300,17 +300,17 @@ Mar 11 13:39:15 localhost systemd[1]: suse-migration-prepare.service: Failed wit
 ````
 ### Resolution
 1. Move the `/etc/pki/trust/anchors` to 1tmp` folder. 
-   ```bash
-   sudo mv /etc/pki/trust/anchors/temp /backuplocation/temp
-   ```
+```bash
+sudo mv /etc/pki/trust/anchors/temp /backuplocation/temp
+```
 2. Install the migration package.
-   ```bash
-   sudo zypper install suse-migration-sle15-activation
-   ```
+```bash
+sudo zypper install suse-migration-sle15-activation
+```
 3. Perform the migration.
-   ```bash
-   sudo zypper migration
-   ```
+```bash
+sudo zypper migration
+```
 
 ## SUSE registration and repos fail to work after migration
 During the OS migration from SLES15SP3 to SLES15SP4, the process completes successfully. However, when migrating from SLES15SP4 to SLES15SP5, the migration and updates don't work as expected.
@@ -345,38 +345,38 @@ No migration available.
 1. Before the migration, activate, and deactivate the following modules.
 
  * Activate the following modules:
-     ```bash
-     sudo SUSEConnect -p sle-module-web-scripting/15.3/x86_64
-     sudo SUSEConnect -p sle-module-public-cloud/15.3/x86_64
-     sudo SUSEConnect -p sle-module-containers/15.3/x86_64
-     sudo SUSEConnect -p sle-module-live-patching/15.3/x86_64
-     ```
+   ```bash
+   sudo SUSEConnect -p sle-module-web-scripting/15.3/x86_64
+   sudo SUSEConnect -p sle-module-public-cloud/15.3/x86_64
+   sudo SUSEConnect -p sle-module-containers/15.3/x86_64
+   sudo SUSEConnect -p sle-module-live-patching/15.3/x86_64
+   ```
  * Deactivate the following modules:
-     ```bash
-     sudo SUSEConnect -d -p sle-module-legacy/15.3/x86_64
-     sudo SUSEConnect -d -p sle-module-python2/15.3/x86_64
-     sudo SUSEConnect -d -p PackageHub/15.3/x86_64
-     ```
+   ```bash
+   sudo SUSEConnect -d -p sle-module-legacy/15.3/x86_64
+   sudo SUSEConnect -d -p sle-module-python2/15.3/x86_64
+   sudo SUSEConnect -d -p PackageHub/15.3/x86_64
+   ```
 2. Perform a cleanup, and then re-register the system.
-     ```bash
-     sudo SUSEConnect --cleanup
-     ```
-     ```bash
-     sudo rm /etc/zypp/{credentials,services,repos}.d/*
-     ```
-     ```bash
-     sudo rm --force --recursive /var/cache/zypp/*
-     ```
-     ```bash
-     sudo rm /var/lib/cloudregister/*
-     ```
-     ```bash
-     sudo registercloudguest --force-new
-     ```
+```bash
+sudo SUSEConnect --cleanup
+```
+```bash
+sudo rm /etc/zypp/{credentials,services,repos}.d/*
+```
+```bash
+sudo rm --force --recursive /var/cache/zypp/*
+```
+```bash
+sudo rm /var/lib/cloudregister/*
+```
+```bash
+sudo registercloudguest --force-new
+```
 3. Verify the VM registration status by running SUSEConnect again:
-     ```bash
-     sudo SUSEConnect --status
-     ```
+```bash
+sudo SUSEConnect --status
+```
 
 ## Migration fails from SLES15SP3 to SLES15SP4 with the error `No Migration available`
 The SLES15 Migration from SP3 to SP4 fails to show the following output which can also be seen in `/var/log/messages` or `/var/log/distro-migration.log` file:
