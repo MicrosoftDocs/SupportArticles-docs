@@ -41,4 +41,4 @@ To investigate the issue, follow these steps:
    - Look for indications of what might cause the session disconnection, such as processes running in session 0 or user actions.
    - If you see an event with **Event ID 40**, it indicates that the session is disconnected with a [reason code](/windows/win32/termserv/extendeddisconnectreasoncode).
 
-1. Check third-party software: If the disconnection is caused by third-party software, check the logs around the timestamp of the disconnection in **Windows Logs** > **Application** to see if the application is logged any relevant information.
+1. Check third-party software: If the disconnection is caused by third-party software, check the logs around the timestamp of the disconnection in **Windows Logs** > **Application** to see if the application logged any relevant information.
