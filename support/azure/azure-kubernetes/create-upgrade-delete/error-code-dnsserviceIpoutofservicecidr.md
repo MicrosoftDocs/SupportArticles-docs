@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the DnsServiceIpOutOfServiceCidr error code
 description: Learn how to troubleshoot the DnsServiceIpOutOfServiceCidr error when you try to create or upgrade an Azure Kubernetes Service (AKS) cluster.
-ms.date: 17/10/2024
+ms.date: 10/17/2024
 editor: v-jsitser
 ms.reviewer: rissing, chiragpa, edneto, v-leedennis
 ms.service: azure-kubernetes-service

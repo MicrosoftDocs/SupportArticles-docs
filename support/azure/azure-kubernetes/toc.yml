@@ -62,7 +62,7 @@
     - name: PublicIPCountLimitReached error
       href: create-upgrade-delete/error-code-publicipcountlimitreached.md
     - name: DnsServiceIpOutOfServiceCidr error
-      href: error-code-dnsserviceIpoutofservicecidr.md
+      href: create-upgrade-delete/error-code-dnsserviceIpoutofservicecidr.md
     - name: QuotaExceeded error
       href: create-upgrade-delete/error-code-quotaexceeded.md
     - name: ServiceCidrOverlapExistingSubnetsCidr error
