@@ -31,7 +31,8 @@ You can  validate one of the following methods to check the generation version:
 
 **Option a**:  In the SLES terminal,  run the command `dmidecode | grep -i hyper`. If it's a generation V1 VM,  there is no output returned. For the generations V2 VMs, you will see the following output:
 
-     :::image type="content" source="media/linux-upgrade-suse-15sp1/output-gen2.png" alt-text="Screenshot shows output of the command for generation 2 V M." border="false":::
+     :::image type="content" source="media/linux-upgrade-suse-15sp1/output-gen2.png" alt-text="Screenshot shows output of the command for generation 2 VM." border="false":::
+     
 **Option b**: In the [Azure portal](https://portal.azure.com),  go to **Properties**  of the VM, and then check the **VM generation** field.
 
 ## Successful Migration from SLES12 to SLES15, but SLES15 SP1 to SP2 Upgrade Fails with Error
@@ -117,7 +118,7 @@ You notice that the SLES12 Public Cloud module isn't enabled by default.
      ```bash
      sudo zypper migration
      ```
-For further information, refer [Major Distros in Public Cloud](https://www.suse.com/c/major-distro-upgrade-in-the-public-cloud-made-easy/) and [Upgrading SUSE Linux Enterprise in the Public Cloud]([https://www.suse.com/support/kb/doc/?id=000019232](https://www.suse.com/c/upgrading-suse-linux-enterprise-in-the-public-cloud/))
+For further information, refer [Major Distros in Public Cloud](https://www.suse.com/c/major-distro-upgrade-in-the-public-cloud-made-easy/) and [Upgrading SUSE Linux Enterprise in the Public Cloud](https://www.suse.com/c/upgrading-suse-linux-enterprise-in-the-public-cloud/).
 
 ## Gen2 VMs Fail to Boot After SLE15SP1 to SP2 Upgrade When Stopped via Azure Portal or Shutdown(init 0 or shutdown -h) command
 
