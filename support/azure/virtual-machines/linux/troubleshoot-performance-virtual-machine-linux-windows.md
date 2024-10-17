@@ -26,7 +26,7 @@ This article will walk through using monitoring to diagnose Performance bottlene
 
 ## Enabling monitoring
 
-### Azure IAAS virtual machine monitoring
+### Azure VM monitoring
 
 To monitor the Guest VM, use the Azure VM Monitoring, which will alert you to certain high-level resource conditions. To check whether you have the VM diagnostics enabled, see [Azure Resource logs overview](/azure/azure-monitor/learn/tutorial-resource-logs). If you see the following, then you most likely don't have the diagnostics enabled:
 
@@ -46,9 +46,12 @@ You can check the storage account used for Diagnostics setup from **Agent** tab 
 
 :::image type="content" source="media/troubleshoot-performance-virtual-machine-linux-windows/check-storage-account.png" alt-text="Screenshot highlights the Storage account under the Agent tab.":::
 
-### Enable storage account diagnostics through Azure portal
+### For unmanaged disks: Enable storage account diagnostics 
 
-Storage is a very important tier when we intend to analyze IO performance for a Virtual Machine in Azure. For storage related metrics we need to enable diagnostics as an additional step. This could also be enabled, if we only want to analyze the storage related counters.
+> [!NOTE]
+> The following information doesn't apply to VMs using managed disks.
+
+If you are using a VM with the [unmanaged disk](/azure/virtual-machines/unmanaged-disks-deprecation), you may need to check storage metrics to troubleshoot performance issues. To enable diagnostics for the storage account, follow these steps:
 
 1. Identify which storage account (or accounts) your VM is using by selecting the VM. Click **Settings**, and then click **Disks**:
 
