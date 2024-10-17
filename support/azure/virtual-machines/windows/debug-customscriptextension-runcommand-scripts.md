@@ -380,7 +380,7 @@ To undo the changes that you made to enable the logging of PowerShell scripting 
 Download the [Test-CustomScriptExtension.ps1](https://github.com/Azure/azure-support-scripts/blob/users/GitHubPolicyService/6294a303-e34d-4bad-b6cd-5ed54245f020/Images_Extensions/PowerShell/Test-CustomScriptExtension.ps1) test script to the current local directory. Then, run the script on your VM by using the [Invoke-AzVMRunCommand](/powershell/module/az.compute/invoke-azvmruncommand) cmdlet. Use the properties of your VM to replace the placeholders for the resource group name and VM name.
 
 ```azurepowershell
-$scriptUri = ''https://raw.githubusercontent.com/Azure/azure-support-scripts/blob/users/GitHubPolicyService/6294a303-e34d-4bad-b6cd-5ed54245f020/Images_Extensions/PowerShell/Test-CustomScriptExtension.ps1'
+$scriptUri = 'https://raw.githubusercontent.com/Azure/azure-support-scripts/blob/users/GitHubPolicyService/6294a303-e34d-4bad-b6cd-5ed54245f020/Images_Extensions/PowerShell/Test-CustomScriptExtension.ps1'
 $localFileLocation = "$PWD\Test-CustomScriptExtension.ps1"
 (New-Object System.Net.WebClient).DownloadFile($scriptUri, $localFileLocation)
 
