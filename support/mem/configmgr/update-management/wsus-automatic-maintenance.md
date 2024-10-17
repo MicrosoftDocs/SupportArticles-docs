@@ -49,7 +49,7 @@ select
 > - Run the steps on each WSUS server in the hierarchy. When performing a cleanup and removing items from WSUS servers, start at the lowest level of the hierarchy.
 > - Ensure that any scheduled synchronizations are disabled, either in Configuration Manager (if used) or on standalone WSUS servers.
 
-The following steps can resolve many issues with scanning and synchronization. If there are a large number of declined updates, you might need to repeat steps 9 through 12 multiple times. After each run, execute the [SQL query](#query-to-obtain-the-update-count) to confirm that the update count is decreasing. Steps 8 and 9 might result in errors each time, which is expected. Therefore, you need to repeat steps 9 through 12 multiple times. Some steps, especially step 9, might take several hours to complete.
+The following steps can resolve many issues with scanning and synchronization. If there are a large number of declined updates, you might need to repeat steps 9 through 12 multiple times. After each run, execute the [SQL query](#query-to-obtain-the-update-count) to confirm that the update count is decreasing. Steps 8 and 9 might result in errors each time, which is expected. Therefore, you need to repeat steps 9 through 12 multiple times. Some steps (especially step 9) might take several hours to complete.
 
 1. Run the SQL script described in [Slow performance of the spDeleteUpdate procedure](spdeleteupdate-slow-performance.md).
 2. Shrink the SUSDB files.
