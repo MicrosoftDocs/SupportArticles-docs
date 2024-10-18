@@ -425,12 +425,12 @@ If you need assistance from Microsoft support, we recommend you collect the info
 1. Download [TSS.zip](https://aka.ms/getTSS) and extract the contents. 
 2. Start the tracing by running the following cmdlet from an elevated PowerShell command prompt. Keep the tracing running when the machine is experiencing high CPU issue or reproducing the issue.
 
-  ```powershell
-  .\TSS.ps1 -UEX_WMIBase -WIN_Kernel -ETWflags 1 -WPR CPU -Perfmon UEX_WMIPrvSE -PerfIntervalSec 1 -noBasicLog
-  ```
+   ```powershell
+   .\TSS.ps1 -UEX_WMIBase -WIN_Kernel -ETWflags 1 -WPR CPU -Perfmon UEX_WMIPrvSE -PerfIntervalSec 1 -noBasicLog
+   ```
 
-  > [!NOTE]
-  > Keep the tracing running for more than two minutes. Make sure the issue is reproduced during this window.
+   > [!NOTE]
+   > Keep the tracing running for more than two minutes. Make sure the issue is reproduced during this window.
 
 3. Stop the tracing by following instructions in the PowerShell command prompt as per the TSS toolset.
 
