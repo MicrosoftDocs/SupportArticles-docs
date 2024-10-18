@@ -70,8 +70,8 @@ To troubleshoot the issue, collect the data to determine the cause of the issue.
 
 Based on the scenario that you are encountering, see the corresponding article for solutions:
 
-- [Active Directory having newer pwdLastSet value than client device](scenario-active-directory-having-newer-pwdlastset-value-than-client-device.md)
-- [Client device having a newer pwdLastSet value than Active Directory](scenario-client-device-having-a-newer-password-value-than-active-directory.md)
+- [Active Directory having newer password value than client device](scenario-active-directory-having-newer-password-value-than-client-device.md)
+- [Client device having a newer password value than Active Directory](scenario-client-device-having-a-newer-password-value-than-active-directory.md)
 
 ## Additional considerations
 

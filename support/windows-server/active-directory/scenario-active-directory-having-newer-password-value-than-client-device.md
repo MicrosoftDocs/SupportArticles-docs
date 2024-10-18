@@ -1,5 +1,5 @@
 ---
-title: Active Directory having newer pwdLastSet value than client device
+title: Active Directory having newer password value than client device
 description: Introduces the resolution for the scenario in which Active Directory having newer pwdLastSet value than client device.
 ms.date: 10/18/2024
 manager: dcscontentpm
@@ -8,7 +8,7 @@ ms.topic: troubleshooting
 ms.reviewer: kaushika, herbertm
 ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
 ---
-# Active Directory having newer pwdLastSet value than client device
+# Active Directory having newer password value than client device
 
 After collecting data based on the steps in [Data collection for troubleshooting secure channel issues](data-collection-for-troubleshooting-secure-channel-issues.md), you may find Active Directory having newer pwdLastSet value than client device. This article introduces how to fix the issue in this scenario.
 
