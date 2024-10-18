@@ -17,9 +17,9 @@ _Original KB number:_ &nbsp; 4492348
 A computer in a child domain of an Active Directory Domain Services (AD DS) forest cannot access a service that resides in a different domain within the same forest. If you run a network trace on communications to and from the client computer, the trace contains the following Kerberos messages:
 
 ```output
-6 9:35:19 AM 8/14/2018   17.8417442   192.168.1.101   192.168.1.2  KerberosV5   KerberosV5:AS Request Cname: Administrator Realm: contoso.com Sname: krbtgt/contoso.com   {TCP:4, IPv4:1}  
+6 9:35:19 AM 8/14/2018   17.8417442   x.y.1.101  x.y.1.2  KerberosV5   KerberosV5:AS Request Cname: Administrator Realm: contoso.com Sname: krbtgt/contoso.com   {TCP:4, IPv4:1}  
   
-7 9:35:19 AM 8/14/2018   17.8452544   192.168.1.2   192.168.1.101  KerberosV5   KerberosV5:KRB_ERROR - KDC_ERR_ETYPE_NOSUPP (14)  {TCP:4, IPv4:1}  
+7 9:35:19 AM 8/14/2018   17.8452544   x.y.1.2   x.y.1.101  KerberosV5   KerberosV5:KRB_ERROR - KDC_ERR_ETYPE_NOSUPP (14)  {TCP:4, IPv4:1}  
 ```
 
 On the domain controller of the child domain, Event Viewer records the following Event 14 entry:
