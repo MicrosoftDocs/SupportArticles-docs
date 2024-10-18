@@ -31,9 +31,7 @@ This issue occurs because the updated ADMX/ADML files might not contain some set
 
 There's a registry setting that allows the use of local ADMX/ADML files instead of the Central Store for computers running the Group Policy Editor.
 
-To use the ADMX/ADML files in the local store, set the following registry value to `1` manually:
-
-`HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Group Policy`
+To use the ADMX/ADML files in the local store, manually set the following registry value to `1` under `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Group Policy`:
 
 |Value name|Value type|Value data|
 |---------|---------|---------|
