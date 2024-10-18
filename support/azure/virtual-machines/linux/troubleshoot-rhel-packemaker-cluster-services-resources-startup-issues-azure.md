@@ -5,7 +5,7 @@ ms.reviewer: rnirek
 ms.author: skarthikeyan
 ms.topic: troubleshooting
 ms.date: 10/16/2024
-ms.service: virtual-machines-linux
+ms.service: azure-virtual-machines
 ms.collection: linux
 ms.custom: sap:Issue with Pacemaker clustering, and fencing
 ---
