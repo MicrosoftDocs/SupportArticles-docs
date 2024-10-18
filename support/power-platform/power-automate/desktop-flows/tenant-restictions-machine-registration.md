@@ -38,7 +38,7 @@ An administrator can use Windows registry settings to control which tenants can 
 Initial machine registration doesn't require administrator privileges but changing the registration restrictions does.
 
 > [!CAUTION]
-> Modifying Windows registry settings incorrectly can cause serious problems that may prevent your computer from booting properly. Microsoft cannot guarantee that any problems resulting from the configuring of registry settings can be solved. Modification of these settings is at your own risk. We strongly recommend that you [back up your Windows registry](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692) before proceeding.
+> [!INCLUDE [Registry disclaimer](../../../includes/registry-important-alert.md)]
 
 ### Allow machine registration to specific tenants
 
