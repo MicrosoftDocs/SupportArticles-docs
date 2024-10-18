@@ -1,13 +1,13 @@
 ---
-title: Troubleshoot creating and deploying Azure resource groups throught Visual Studio
-description: Learn how to resolve errors while creating and deploying Azure resource groups throught Visual Studio.
+title: Troubleshoot creating and deploying Azure resource groups through Visual Studio
+description: Learn how to resolve errors while creating and deploying Azure resource groups through Visual Studio.
 ms.date: 10/18/2024
 author: mumian
 ms.author: jgao
 ms.reviewer: puichan
 ---
 
-# Troubleshoot creating and deploying Azure resource groups throught Visual Studio
+# Troubleshoot creating and deploying Azure resource groups through Visual Studio
 
 _Applies to:_&nbsp;Visual Studio
 
@@ -18,15 +18,15 @@ This article assists you in troubleshooting issues related to creating and deplo
 
 ## Symptoms
 
-- Cannot Create a new Azure Resource Group project.
-- Cannot add new resources to an existing Azure Resource Manager template via the **Add Resource** button in the JSON Outline tool window.
-- Errors are not flagged in Azure Resource Manager template files in existing projects.  
+- Can't Create a new Azure Resource Group project.
+- Can't add new resources to an existing Azure Resource Manager template via the **Add Resource** button in the JSON Outline tool window.
+- Errors aren't flagged in Azure Resource Manager template files in existing projects.  
 
 ## Resolution
 
-Upgrade to the latest [Long-Term Support (LTS) version](/visualstudio/install/update-visual-studio?view=vs-2022). Upgrading to the latest version will enhance the reliability and overall experience of your Visual Studio installation.
+Upgrade to the latest [Long-Term Support (LTS) version](/visualstudio/install/update-visual-studio?view=vs-2022). Upgrading to the latest version enhances the reliability and overall experience of your Visual Studio installation.
 
-## Additional resources for Visual Studio Support Resources: 
+## More resources
 
 - [Release Dates and Build numbers](https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-history#release-dates-and-build-numbers)
 - [Visual Studio Product Lifecycle and Servicing](https://learn.microsoft.com/en-us/visualstudio/productinfo/vs-servicing)
