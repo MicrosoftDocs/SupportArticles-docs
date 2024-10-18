@@ -1,7 +1,7 @@
 ---
 title: Boot error code 0xC000000F in an Azure VM
 description: Fixes a Boot error code 0xc000000f that occurs on an Azure virtual machine (VM).
-ms.date: 10/15/2024
+ms.date: 10/17/2024
 ms.reviewer: jarrettr, kageorge, v-leedennis, v-weizhu
 ms.service: azure-virtual-machines
 ms.collection: windows
@@ -74,7 +74,7 @@ This issue occurs when one of following conditions is true:
     - In Generation 1 VMs
 
         ```console
-        bcdedit /store <Boot partition>:\boot\bcd /enum /v
+        bcdedit /store <Boot partition>:\Boot\BCD /enum /v
         ```
     - In Generation 2 VMs
 
@@ -97,19 +97,19 @@ This issue occurs when one of following conditions is true:
     - In Generation 1 VMs
 
         ```console
-        bcdedit /store <Boot partition>:\boot\bcd /set {bootmgr} device partition=<boot partition>:
+        bcdedit /store <Boot partition>:\Boot\BCD /set {bootmgr} device partition=<boot partition>:
 
-        bcdedit /store <Boot partition>:\boot\bcd /set {bootmgr} integrityservices enable
+        bcdedit /store <Boot partition>:\Boot\BCD /set {bootmgr} integrityservices enable
 
-        bcdedit /store <Boot partition>:\boot\bcd /set {<Identifier>} device partition=<Windows partition>:
+        bcdedit /store <Boot partition>:\Boot\BCD /set {<Identifier>} device partition=<Windows partition>:
 
-        bcdedit /store <Boot partition>:\boot\bcd /set {<Identifier>} integrityservices enable
+        bcdedit /store <Boot partition>:\Boot\BCD /set {<Identifier>} integrityservices enable
 
-        bcdedit /store <Boot partition>:\boot\bcd /set {<identifier>} recoveryenabled Off
+        bcdedit /store <Boot partition>:\Boot\BCD /set {<identifier>} recoveryenabled Off
 
-        bcdedit /store <Boot partition>:\boot\bcd /set {<identifier>} osdevice partition=<Windows partition>:
+        bcdedit /store <Boot partition>:\Boot\BCD /set {<identifier>} osdevice partition=<Windows partition>:
 
-        bcdedit /store <Boot partition>:\boot\bcd /set {<identifier>} bootstatuspolicy IgnoreAllFailures
+        bcdedit /store <Boot partition>:\Boot\BCD /set {<identifier>} bootstatuspolicy IgnoreAllFailures
         ```
     - In Generation 2 VMs
 
