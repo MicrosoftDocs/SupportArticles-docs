@@ -117,6 +117,14 @@ The following history shows there's a driver update, highlighted in red, and the
 
 See the following Event ID 7045 for an example:
 
-:::image type="content" source="media/analyze-event-logs-diagnose-unexpected-reboots/system-event-log-7045.png" alt-text="Screenshot shows the detail of Event ID 7045.":::
+```output
+A service was installed in the system.
+ 
+Service Name:  Intel(R) Dynamic Application Loader Host Interface Service
+Service File Name:  %SystemRoot%\System32\DriverStore\FileRepository\dal.inf_amd64_af50fdb80983f7bc\jhi_service.exe
+Service Type:  user mode service
+Service Start Type:  auto start
+Service Account:  LocalSystem
+```
 
 The example might indicate the bug check is due to a recent driver update. You can remove or roll back the driver update to see if the bug check stops or not. If not, you can collect a memory dump for analysis.
