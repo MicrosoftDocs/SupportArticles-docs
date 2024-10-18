@@ -62,8 +62,8 @@ To identify if you have any resource bottlenecks, review your data. If your find
 
 :::image type="content" source="media/troubleshoot-performance-virtual-machine-linux-windows/cpu-bottleneck-time-range.png" alt-text="Screenshot shows steps to check CPU Bottleneck.":::
 
-1. Set the time Range.
-2. In Metric, select CPU Percentage.
+1. Set the time range.
+2. In **Metric**, select **CPU Percentage**.
 
 ### Monitor CPU performance trends
 
