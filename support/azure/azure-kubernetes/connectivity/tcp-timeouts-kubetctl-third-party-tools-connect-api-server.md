@@ -1,7 +1,7 @@
 ---
 title: TCP time-outs when kubectl, other 3rd-party tools connect to API
 description: Troubleshoot TCP time-outs that occur when kubectl or other third-party tools connect to the API server in Azure Kubernetes Service (AKS).
-ms.date: 06/09/2022
+ms.date: 10/18/2024
 ms.reviewer: chiragpa, nickoman, v-leedennis
 ms.service: azure-kubernetes-service
 keywords:
@@ -20,7 +20,7 @@ You experience repeated connection time-outs.
 
 If only a few of your API commands are timing out consistently, the following pods might not be in a running state:
 
-- `konnectivity-agent`
+- `konnectivity-agent` *(Recent)*
 - `tunnelfront`
 - `aks-link`
 
@@ -29,6 +29,15 @@ These pods are responsible for communication between a node and the control plan
 ### Solution: Reduce the utilization or stress of the node hosts
 
 Make sure the nodes that host this pod aren't overly utilized or under stress. Consider moving the nodes to their own [system node pool](/azure/aks/use-system-pools).
+To check the usage of the node where the konnectivity-agent pod is hosted, and which node the pod is in, use the following commands:
+
+```bash
+# To check which node the konnectivity-agent pod is hosted,
+$ kubectl get pod -n kube-system -o wide
+    
+# To check the usage of the node hosting the pod,
+$ kubectl top node
+```
 
 ## Cause 2: Access is blocked on some required ports, FQDNs, and IP addresses
 
@@ -36,7 +45,7 @@ If the required ports, fully qualified domain names (FQDNs), and IP addresses ar
 
 ### Solution: Open the necessary ports, FQDNs, and IP addresses
 
-For more information about what ports, FQDNs, and IP addresses need to be opened, see [Control egress traffic for cluster nodes in Azure Kubernetes Service (AKS)](/azure/aks/limit-egress-traffic).
+For more information about what ports, FQDNs, and IP addresses need to be opened, see [Outbound network and FQDN rules for Azure Kubernetes Service (AKS) clusters](/azure/aks/outbound-rules-control-egress).
 
 ## Cause 3: The Application-Layer Protocol Negotiation TLS extension is blocked
 
@@ -82,6 +91,16 @@ There might be internal traffic blockages between nodes in your AKS cluster.
 ### Solution: Troubleshoot the "dial tcp <Node_IP>:10250: i/o timeout" error
 
 See [Troubleshoot TCP timeouts, such as "dial tcp <Node_IP>:10250: i/o timeout"](tcp-timeouts-dial-tcp-nodeip-10250-io-timeout.md).
+
+## Cause 8: It is a private cluster
+
+It is a private cluster, but the client you are trying to access to API server is in the public or different network which cannot connect to the subnet AKS uses.
+
+### Solution: Try it in the client that can access to the subnet that AKS uses
+
+Since it's a private cluster, and the controlplane for the private cluster is in your subnet AKS uses. Therefore, unless your client is in the network which can connect to the AKS subnet, it cannot be connected to the API server. It is expected behavior.
+
+In this case, try to access to the API server from the client on a network that can communicate with the AKS subnet. Also, make sure whether NSG or other appliances between networks is blocking packets.
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
