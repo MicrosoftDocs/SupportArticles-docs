@@ -2,7 +2,7 @@
 title: Troubleshoot common node auto-repair errors
 description: Troubleshoot scenarios where node auto-repair returns an error code when trying to repair a node with a status of NotReady.
 ms.date: 10/17/2024
-ms.reviewer: 
+ms.reviewer: juliayin;tamram
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to make sure the automatic repair actions from AKS node auto-repair do not cause any impacts on my applications or cluster health.
 ms.custom: sap:Node/node pool availability and performance
