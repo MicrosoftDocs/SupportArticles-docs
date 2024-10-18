@@ -9,13 +9,14 @@ ms.topic: troubleshooting
 ms.custom: 
   - sap:Teams Meetings\Meetings Other
   - CI 191699
+  - CI 193233
   - CSSTroubleshoot
 ms.reviewer: mfoland; shmurth; wayvad
 appliesto: 
   - New Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 10/09/2024
+ms.date: 10/17/2024
 ---
 # Teams meeting add-in missing from Outlook and new Teams
 
