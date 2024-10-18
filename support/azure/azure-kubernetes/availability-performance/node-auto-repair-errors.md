@@ -17,9 +17,9 @@ During the node auto-repair process, AKS will initiate reboot, reimage, and rede
 To determine what type of node auto-repair error has occurred, look for one of the following Kubernetes events: 
 | Reason | Event Message | Description |
 | --- | --- | --- |
-| NodeRebootError | Node auto-repair reboot action failed due to an operation failure: [error code here] | Emitted when there is an error with the reboot action. |
-| NodeReimageError | Node auto-repair reimage action failed due to an operation failure: [error code here] | Emitted when there is an error with the reimage action. |
-| NodeRedeployError | Node auto-repair redeploy action failed due to an operation failure: [error code here] | Emitted when there is an error with the redeploy action. |
+| NodeRebootError | Node auto-repair reboot action failed due to an operation failure: [error code] | The event is logged when there is an error with the reboot action. |
+| NodeReimageError | Node auto-repair reimage action failed due to an operation failure: [error code] | The event is logged when there is an error with the reimage action. |
+| NodeRedeployError | Node auto-repair redeploy action failed due to an operation failure: [error code] | The event is logged when there is an error with the redeploy action. |
 
 > [!NOTE]
 > In most cases, node auto-repair errors will not cause any impact to your cluster or applications since your node was already in an unhealthy state prior to the auto-repair process. When encountering node auto-repair errors, we recommend that you first attempt to repair the node yourself by following the instructions here: [Basic troubleshooting of Node Not Ready failures](./node-not-ready-basic-troubleshooting.md). If you are unable to restore your node back to a Succeeded status and are noticing persistent errors reported by node auto-repair, you may be encountering a rare issue and should reach out to Azure support.
