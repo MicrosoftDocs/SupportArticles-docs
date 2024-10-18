@@ -44,11 +44,11 @@ Identify which storage account (or accounts) your VM is using by selecting the V
 2. Under **Settings**, select **Disk**, and then find the storage account where the disk is saved.
 3. Navigate to the storage account and select **Metrics**.
 
-## Observing bottlenecks
+## Identify performance bottlenecks
 
 Once we are through the initial setup process for needed metrics, and post enabling the diagnostics for VM and related Storage account, we can shift to analysis phase.
 
-### Accessing the monitoring
+### Access the monitoring
 
 In the Azure portal, select the Azure VM you want to investigate, select **Metrics** the **Monitoring** section, and then select a metric.
 
@@ -58,7 +58,7 @@ In the Azure portal, select the Azure VM you want to investigate, select **Metri
 
 To identify if you have any resource bottlenecks, review your data. If your find that your machine has been running fine, but it has been reported that the performance has recently degraded, review a time range of data that encompasses performance metric data before the reported changed, during and after the issue.
 
-### Check for CPU bottleneck
+## Check for CPU bottleneck
 
 :::image type="content" source="media/troubleshoot-performance-virtual-machine-linux-windows/cpu-bottleneck-time-range.png" alt-text="Screenshot shows steps to check CPU Bottleneck.":::
 
