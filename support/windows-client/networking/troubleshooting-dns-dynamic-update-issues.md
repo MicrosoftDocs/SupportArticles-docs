@@ -20,7 +20,7 @@ The following bullets list the general causes for dynamic update failures:
 - DHCP is supposed to update the record, but that functionality isn't working as expected.
 - DNS server doesn't update the record due to permissions issues.
 
-Before troubleshooting, we recommend that you implement the following best practices.  
+Before troubleshooting, we recommend that you implement the following best practices.
 
 ## Microsoft standard recommendations
 
@@ -56,7 +56,7 @@ Scavenging cycle is a low priority thread for DNS process, so it might not alway
 
 ### Maintain standard DNS zone permissions
 
-Standard DNS zone permissions should remain intact:  
+Standard DNS zone permissions should remain intact:
 
 In an AD-integrated zone setup, permissions follow standard hierarchy similar to NTFS or file systems. This means that if an account has permissions to create, delete, or modify a zone and its child objects, it can simply perform these operations. By default, only Enterprise Admins (forest-wide) and Domain Admins (domain-wide) have these privileges.
 
@@ -98,7 +98,7 @@ To prevent such problems, the DHCP server should be configured with a service ac
 2. Changes in the authenticated account settings on the DNS Zone level.
 3. DHCP's configuration for the service account for dynamic update.
 
-## Troubleshoot DNS dynamic update issues.  
+## Troubleshoot DNS dynamic update issues
 
 > [!NOTE]
 > This section is a multipart series which discusses various aspects from Windows client to server to be checked when such issue occurs.
@@ -143,7 +143,7 @@ There's a Group Policy that can modify this behavior. By default, network interf
 
 The domain where the client is dynamically registered must be a zone that is a writable copy. This means the zone should contain an SOA record for the DNS server hosting the zone, and the client must be able to reach this server through the network.
 
-There are typically two types of setups.  
+There are typically two types of setups.
 
 1. Client pointing to a cache-only DNS server: This DNS server doesn't host any domain zone but uses conditional forwarders or forwarders to point to the actual DNS server, which holds the zone (either writable or readable).
 2. Simple setup: The client points directly to DNS servers that host the domain zone.
@@ -165,12 +165,12 @@ To allow dynamic update, the zone should be configured with "Non-Secure and Secu
 
 #### Check DNS Auditing
 
-DNS Server logging is discussed in [DNS Logging and Diagnostics](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn800669(v=ws.11)) and specifically to verify if the records that you're concerned about, is getting registered, can be tracked with DNS Audit events [DNS Logging and Diagnostics](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn800669(v=ws.11)#audit-events), Event ID: 519. One can filter the DNS audit events, which are enabled by default, with the given ID and verify if the record was successfully registered.  
+DNS Server logging is discussed in [DNS Logging and Diagnostics](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn800669(v=ws.11)) and specifically to verify if the records that you're concerned about, is getting registered, can be tracked with DNS Audit events [DNS Logging and Diagnostics](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn800669(v=ws.11)#audit-events), Event ID: 519. One can filter the DNS audit events, which are enabled by default, with the given ID and verify if the record was successfully registered.
 
 > [!NOTE]
-> The Audit event log is local to the given DNS server. Which means, that the given ID will only be visible on the DNS server where the record is registered.  
+> The Audit event log is local to the given DNS server. Which means, that the given ID will only be visible on the DNS server where the record is registered.
 
-### Scenario: DHCP server can't complete dynamic update on behalf of client or the registrations are happening with a delay.
+### Scenario: DHCP server can't complete dynamic update on behalf of client or the registrations are happening with a delay
 
 DHCP Server is configured to update DHCP client's record. The configuration is as specified in [How to configure DNS dynamic updates in Windows Server](../../windows-server/networking/configure-dns-dynamic-updates-windows-server-2003.md#how-dhcpdns-update-interaction-works.md). The windows clients are also configured to honor DHCP option 81 and is configured as mentioned in [Unexpected DNS record registration behavior when the DHCP server manages dynamic DNS updates](../../windows-server/networking/dns-registration-behavior-when-dhcp-server-manages-dynamic-dns-updates.md).
 
@@ -195,7 +195,7 @@ Create reverse lookup zones on the DNS servers.
 
 #### Method 1
 
-Check and consult your network team and the DHCP configuration to get a list of all the scopes/subnets in your network. Create Reverse lookup for each such subnet. This is appropriate for both IPv4 and IPv6 reverse lookup zones.  
+Check and consult your network team and the DHCP configuration to get a list of all the scopes/subnets in your network. Create Reverse lookup for each such subnet. This is appropriate for both IPv4 and IPv6 reverse lookup zones.
 
 #### Method 2
 
@@ -205,7 +205,7 @@ To avoid any misses, create zone with private IP root range. For example:
 - 16.172.in-addr.arpa
 - 10.in-addr.arpa
 
-This covers all the subnet ranges for IPv4 addresses in the environment. If you have some reverse lookup zones already created, they automatically become delegation in these zones.  
+This covers all the subnet ranges for IPv4 addresses in the environment. If you have some reverse lookup zones already created, they automatically become delegation in these zones.
 
 ### Explanation
 
