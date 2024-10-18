@@ -20,7 +20,7 @@ ms.author: genli
 
 **Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
-This article describes virtual machine (VM) generic performance troubleshooting through monitoring and observing bottlenecks and provides possible remediation for issues that may occur. Besides monitoring, you can also use Perfinsights which can provide a report with best practices recommendations and key bottlenecks around IO/CPU/Memory. Perfinsights is available for both [Windows](../windows/how-to-use-perfinsights.md) and [Linux](how-to-use-perfinsights-linux.md) VM's in Azure.
+This article describes virtual machine (VM) generic performance troubleshooting through monitoring and observing bottlenecks and provides possible remediation for issues that may occur. Besides monitoring, you can also use Perfinsights which can provide a report with best practices recommendations and key bottlenecks around IO/CPU/Memory. Perfinsights is available for both [Windows](../windows/how-to-use-perfinsights.md) and [Linux](how-to-use-perfinsights-linux.md) VMs in Azure.
 
 This article will walk through using monitoring to diagnose Performance bottlenecks.
 
@@ -65,7 +65,7 @@ To identify if you have any resource bottlenecks, review your data. If your find
 1. Set the time Range.
 2. In Metric, select CPU Percentage.
 
-### CPU observe trends
+### Monitor CPU performance trends
 
 When looking at performance issues, be aware of the trends and understand if they affect you. In the next sections, we'll use the Monitoring graphs from the portal to show trends. They can also be useful for cross referencing difference resource behaviors in the same time period. To customize the graphs, click [Azure Monitor data platform](/azure/azure-monitor/platform/data-platform).
 
@@ -97,7 +97,7 @@ To view the metrics:
 3. Open the Gallery.
 4. Select the Memory Usage and drag. When the tile is docked, right-click and select **6x4**.
 
-### Memory observe trends
+### Monitor Memory performance trends
 
 The Memory Usage shows you how much memory is being consumed with the VM. Understand the trend and whether it maps to the time where you see issues. You should always have more than 100 MB of available memory.
 
@@ -137,7 +137,7 @@ To work on the below items, go into the storage account for the VM in the portal
 2. Set **Metric Namespace** to **Blob**.
 3. Set **Metric** to **Availability**.
 
-### Disk observe trends (standard storage only)
+### Monitor Disk performance trends (standard storage only)
 
 To identify issues with storage, look at the performance metrics from the Storage Account Diagnostics and the VM Diagnostics.
 
@@ -159,11 +159,11 @@ Values in the *TimeOutError metrics indicate that an IO operation took too long 
 
 AverageServerLatency increases at the same time at the TimeOutErrors could be a platform issue. Raise a new support request in this situation.
 
-AverageE2ELatency represents client latency. Verify how the IOPS are being performed by the application. Look for an increase or constantly high TotalRequests metric. This metric represents IOPS. If you're starting to hit the limits of the storage account or single VHD, the latency could be related to throttling.
+AverageE2ELatency represents client latency. Verify how the IOPS is performed by the application. Look for an increase or constantly high TotalRequests metric. This metric represents IOPS. If you're starting to hit the limits of the storage account or single VHD, the latency could be related to throttling.
 
 #### Check for Azure storage throttling - Add the storage account metrics: ThrottlingError
 
-Values for throttling indicates that you're being throttled at storage account level, meaning that your hitting the IOPS limit of the account. You can determine whether you're hitting the IOPs threshold by checking the metric **TotalRequests**.
+Values for throttling indicate that you're being throttled at storage account level, meaning that your hitting the IOPS limit of the account. You can determine whether you're hitting the IOPs threshold by checking the metric **TotalRequests**.
 
 Note that each VHD has a limit of 500 IOPS or 60 MBits, but is bound by the cumulative limit of 20000 IOPS per storage account.
 
