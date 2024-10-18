@@ -44,7 +44,7 @@ The issue occurs if both the following conditions are true:
 
    :::image type="content" source="media/click-here-to-view-more-on-microsoft-exchange-hyperlink-is-missing/download-preferences-settings.png" border="true" alt-text="Screenshot of the Download Preferences setting.":::
 
-- In the **Exchange Account Settings** window, the value of the **Download email for the past** setting isn't **All**. For example, in the following screenshot, the value is **3 Months**.
+- In the **Exchange Account Settings** window, the value of the **Download email for the past** setting isn't **All**. For example, in the following screenshot, the value is **3 months**.
 
    :::image type="content" source="media/click-here-to-view-more-on-microsoft-exchange-hyperlink-is-missing/offline-settings.png" border="true" alt-text="Screenshot of the Exchange Account Settings window.":::
 
