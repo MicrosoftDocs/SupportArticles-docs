@@ -12269,6 +12269,76 @@
       "source_path": "support/dynamics-365/sales/server-address-url-is-not-valid.md",
       "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/the-server-address-is-not-valid",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-365-on-premises-v9-0.md",
+      "redirect_url": "/dynamics365/customerengagement/on-premises/deploy/installing-on-premises-dynamics-365?view=op-9-1",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/operation-failed-because-you-are-offline.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/outlook-has-not-been-configured-with-an-account-yet-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/installing-product-updates-status-not-updated.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-access-dynamics-365-app-outlook.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/your-browser-is-currently-unsupported.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/web-server-returned-sendfailure-exception.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/you-do-not-have-license-to-use-this-app-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/lookup-fields-fail-to-save-or-provide-results-with-google-chrome-38.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/uci-dashboard-does-not-load.md",
+      "redirect_url": "/troubleshoot/dynamics-365/sales/welcome-sales",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-365-how-to-articles.md",
+      "redirect_url": "/troubleshoot/dynamics-365/sales/welcome-sales",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/business-process-flow-deletion-fails.md",
+      "redirect_url": "/dynamics365/sales/customize-business-process-flows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/troubleshoot-server-side-synchronization.md",
+      "redirect_url": "/power-platform/admin/troubleshooting-monitoring-server-side-synchronization which has more current info",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/sorry-something-went-wrong-while-initializing-the-app-error.md",
+      "redirect_url": "/troubleshoot/dynamics-365/sales/errors-when-opening-365-app-outlook",
+      "redirect_document_id": false
     }
   ]
 }
