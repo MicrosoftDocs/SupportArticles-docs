@@ -1,7 +1,7 @@
 ---
 title: General Istio service mesh add-on troubleshooting
 description: Learn how to do general troubleshooting of the Istio service mesh add-on for Azure Kubernetes Service (AKS).
-ms.date: 04/26/2024
+ms.date: 10/17/2024
 author: nshankar13
 ms.author: nshankar
 editor: v-jsitser
@@ -233,6 +233,10 @@ Issues that relate to CoreDNS overload might require you to change certain Istio
 ### Step 4: Fix pod and sidecar race conditions
 
 If your application pod starts before the Envoy sidecar starts, the application might become unresponsive, or it might restart. For instructions about how to avoid this problem, see [Pod or containers start with network issues if istio-proxy is not ready](https://istio.io/latest/docs/ops/common-problems/injection/#pod-or-containers-start-with-network-issues-if-istio-proxy-is-not-ready). Specifically, setting the `holdApplicationUntilProxyStarts` MeshConfig field under `defaultConfig` to `true` can help prevent these race conditions.
+
+### Step 5: Configure a Service Entry when using an HTTP proxy for outbound traffic
+
+If your cluster uses an HTTP proxy for outbound internet access, you'll need to configure a Service Entry. For more information, see [HTTP proxy support in Azure Kubernetes Service](/azure/aks/http-proxy#istio-add-on-http-proxy-for-external-services).
 
 ## Error messages
 
