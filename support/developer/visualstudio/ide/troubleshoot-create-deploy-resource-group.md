@@ -24,12 +24,12 @@ This article assists you in troubleshooting issues related to creating and deplo
 
 ## Resolution
 
-Upgrade to the latest [Long-Term Support (LTS) version](/visualstudio/install/update-visual-studio?view=vs-2022). Upgrading to the latest version enhances the reliability and overall experience of your Visual Studio installation.
+Upgrade to the latest [Long-Term Support (LTS) version](/visualstudio/install/update-visual-studio). Upgrading to the latest version enhances the reliability and overall experience of your Visual Studio installation.
 
 ## More resources
 
-- [Release Dates and Build numbers](https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-history#release-dates-and-build-numbers)
-- [Visual Studio Product Lifecycle and Servicing](https://learn.microsoft.com/en-us/visualstudio/productinfo/vs-servicing)
+- [Release Dates and Build numbers](/visualstudio/releases/2022/release-history#release-dates-and-build-numbers)
+- [Visual Studio Product Lifecycle and Servicing](/visualstudio/productinfo/vs-servicing)
 
 ## References
 
