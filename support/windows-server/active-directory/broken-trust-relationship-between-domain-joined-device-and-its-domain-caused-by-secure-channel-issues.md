@@ -94,10 +94,10 @@ Reg query HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\Tcpip\Parameters /v h
 
 The following lists further information regarding the topics mentioned within this article.
 
-- PsExec - [PsExec - Sysinternals | Microsoft Learn](https://learn.microsoft.com/en-us/sysinternals/downloads/psexec)
-- Nltest - [Nltest | Microsoft Learn](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731935(v=ws.11))
-- Netlogon logging - [Enable debug logging for Netlogon service - Windows Client | Microsoft Learn](https://learn.microsoft.com/en-us/troubleshoot/windows-client/windows-security/enable-debug-logging-netlogon-service)
-- Cached credentials - [Credentials Processes in Windows Authentication | Microsoft Learn](https://learn.microsoft.com/en-us/windows-server/security/windows-authentication/credentials-processes-in-windows-authentication#BKMK_CachedCredentialsAndValidation)
+- PsExec - [PsExec - Sysinternals | Microsoft Learn](/sysinternals/downloads/psexec)
+- Nltest - [Nltest | Microsoft Learn](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731935(v=ws.11))
+- Netlogon logging - [Enable debug logging for Netlogon service - Windows Client | Microsoft Learn](../../windows-client/windows-security/enable-debug-logging-netlogon-service.md)
+- Cached credentials - [Credentials Processes in Windows Authentication | Microsoft Learn](/security/windows-authentication/credentials-processes-in-windows-authentication#BKMK_CachedCredentialsAndValidation)
 
 ### Terminology
 
