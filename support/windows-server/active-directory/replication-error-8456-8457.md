@@ -35,7 +35,7 @@ Active Directory operations fail with error 8456 or 8457: The source | destinati
     Starting test: Replications  
     \* Replications Check  
     [Replications Check,\<DC NAME>] A recent replication attempt failed:  
-    From IADOMINO to \<DC NAME>  
+    From \<Source DC> to \<DC NAME>  
     Naming Context: DC=\<DN path of partition>  
      **The replication generated an error (8456):**  
     The source server is currently rejecting replication requests.  
@@ -48,7 +48,7 @@ Active Directory operations fail with error 8456 or 8457: The source | destinati
     Starting test: Replications  
     \* Replications Check  
     [Replications Check,\<DC NAME>] A recent replication attempt failed:  
-    From IADOMINO to \<DC NAME>  
+    From \<Source DC> to \<DC NAME>  
     Naming Context: DC=\<DN path of partition>  
      **The replication generated an error (8457):**  
     The destination server is currently rejecting replication requests.  
