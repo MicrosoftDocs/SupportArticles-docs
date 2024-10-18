@@ -2,7 +2,7 @@
 title: Troubleshoot SessionHasLoggedOff error code
 description: Provides troubleshooting steps for the SessionHasLoggedOff error code that occurs during a desktop flow run in Microsoft Power Automate.
 ms.custom: sap:Desktop flows\Power Automate for desktop errors
-ms.date: 10/17/2024
+ms.date: 10/18/2024
 ms.author: johndund 
 author: johndund
 ---
