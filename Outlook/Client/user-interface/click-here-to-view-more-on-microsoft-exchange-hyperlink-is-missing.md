@@ -60,7 +60,7 @@ If you view a shared or delegate folder in another mailbox, Outlook doesn't show
 
 Select one of the following workarounds, depending on the cause.
 
-### Workaround for Cause 1: 
+### Workaround for Cause 1
 
 On the **Send/Receive** tab in Outlook, select **Download Preferences**, and then select **Download Full Items**.
 
@@ -69,6 +69,6 @@ On the **Send/Receive** tab in Outlook, select **Download Preferences**, and the
 > - The **Download Preferences** value is **Download Full Items**.
 > - The **Download email for the past** (or **Mail to keep offline**) setting causes Outlook not to download all folder items from the server.
 
-### Workaround for Cause 2:
+### Workaround for Cause 2
 
 In an Outlook search, use the **Current Folder** scope to find server-side items.
