@@ -500,8 +500,8 @@ items:
       items:
         - name: Data collection for troubleshooting secure channel issues
           href: ./active-directory/data-collection-for-troubleshooting-secure-channel-issues.md
-        - name: Active Directory having newer pwdLastSet value than client device
-          href: ./active-directory/scenario-active-directory-having-newer-pwdlastset-value-than-client-device.md
+        - name: Active Directory having newer password value than client device
+          href: ./active-directory/scenario-active-directory-having-newer-password-value-than-client-device.md
         - name: Client device having a newer password value than Active Directory
           href: ./active-directory/scenario-client-device-having-a-newer-password-value-than-active-directory.md
     - name: Use Adminpak to remotely administer computers
