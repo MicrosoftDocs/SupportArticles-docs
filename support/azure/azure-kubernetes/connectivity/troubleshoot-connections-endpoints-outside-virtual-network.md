@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot connections to endpoints outside the virtual network
 description: Troubleshoot connections to endpoints outside the virtual network (through the public internet) from an Azure Kubernetes Service (AKS) cluster.
-ms.date: 11/04/2022
-ms.reviewer: chiragpa, rissing, v-leedennis
+ms.date: 10/18/2024
+ms.reviewer: chiragpa, rissing, jaewonpark, v-leedennis, v-weizhu
 editor: v-jsitser
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot connections to endpoints outside the virtual network so that I don't experience outbound connection issues from an Azure Kubernetes Service (AKS) cluster.
@@ -16,15 +16,19 @@ This article discusses how to troubleshoot connections to endpoints outside the 
 
 - [Azure CLI](/cli/azure/install-azure-cli).
 
+- The client URL ([curl](https://techcommunity.microsoft.com/t5/containers/tar-and-curl-come-to-windows/ba-p/382409)) tool.
+
 - The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) tool, or a similar tool to connect to the cluster. To install kubectl by using Azure CLI, run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
 
 ## Troubleshooting checklist
 
-### Step 1: Do basic troubleshooting
+### Is the issue persistent?
+
+#### Step 1: Do basic troubleshooting
 
 Make sure that you can connect to public endpoints on the internet. For instructions, see [Basic troubleshooting of outbound AKS cluster connections](basic-troubleshooting-outbound-connections.md).
 
-### Step 2: Determine the outbound type for the AKS cluster
+#### Step 2: Determine the outbound type for the AKS cluster
 
 To identify the outbound type of the AKS cluster, run the [az aks show](/cli/azure/aks#az-aks-show) command:
 
@@ -32,11 +36,7 @@ To identify the outbound type of the AKS cluster, run the [az aks show](/cli/azu
 az aks show --resource-group <resource_group> --name <cluster_name> --query "networkProfile.outboundType"
 ```
 
-If the outbound type is `loadBalancer`, make sure that the route table that's associated with the AKS nodes has the default route to the internet. Details are shown in the following table.
-
-| Source  | Address prefixes | Next hop type |
-|:--------|:-----------------|:--------------|
-| Default | 0.0.0.0/0        | Internet      |
+If the outbound type is `loadBalancer`, there's no route table unless you use *kubenet* network. If you use *kubenet*, make sure that the default route table has no additional configuration that blocks outbound internet connection. If you use another network, such as Azure CNI, Dynamic Allocation, or Azure CNI Overlay, no route table is created by default. In this case, make sure the NSG (network security group) has no custom configuration that blocks outbound internet connection. 
 
 If the outbound type is `userDefinedRouting`, make sure that the following conditions are met:
 
@@ -58,9 +58,9 @@ az network nat gateway show --resource-group <resource_group> --name <nat_gatewa
 
 For more information about how to use a NAT gateway together with AKS, see [Managed NAT gateway](/azure/aks/nat-gateway).
 
-### Step 3: Examine the cURL output when you connect to the cluster
+#### Step 3: Examine the curl output when you connect to the application pod
 
-The cURL response codes can help you identify the issue type. After the response code becomes available, try to better understand how the issue behaves. For more information about the HTTP status codes and the underlying behavior of the issue, refer to the following table.
+The curl response codes can help you identify the issue type. After the response code becomes available, try to better understand how the issue behaves. For more information about the HTTP status codes and the underlying behavior of the issue, refer to the following table.
 
 | Information source | Link |
 |:-|:-|
@@ -75,24 +75,46 @@ The following HTTP status codes might indicate the listed issues.
 | `4xx` | <ol> <li>An issue affects the client request.</li> <li>A network blocker exists between the client and the server.</li> </ol> | <ol> <li>The requested page doesn't exist, or the client doesn't have permission to access the page.</li> <li>Traffic is being blocked by a network security group or a firewall.</li> </ol> |
 | `5xx` | An issue affects the server. | The application is down, or a gateway isn't working. |
 
-### Step 4: Determine what happens if the outbound traffic usually travels through a virtual appliance, but you bypass it instead
+You can try to connect to the application endpoint using curl. Here's an example command and output:
+
+```bash
+# 404 error code example
+$ curl -vv <host IP address>/test.index
+
+*   Trying <host IP address>:80...
+* TCP_NODELAY set
+* Connected to <host IP address> (<host IP address>) port 80 (#0)
+> GET /test.index HTTP/1.1
+> Host: <host IP address>
+> User-Agent: curl/7.68.0
+> Accept: */*
+>
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 404 Not Found
+...
+* Connection #0 to host <host IP address> left intact
+```
+
+#### Step 4: Check what happens if outbound traffic bypasses the virtual appliance temporarily 
 
 For quick testing to determine whether the egress device (virtual appliance) causes the issue, you can temporarily allow all traffic to go through the internet. To configure this setup, you can change the default IP address and port route of `0.0.0.0`/`0` through the virtual appliance to go through the internet instead.
 
-#### Is the issue intermittent?
+If the egress device works well when bypassing the virtual appliance, check the logs of the virtual appliance to see which packets are denied and add allow rules in the virtual appliance accordingly.
 
-You may experience intermittent outbound issues for many reasons. For troubleshooting intermittent outbound connection issues, try the following checks:
+### Is the issue intermittent?
 
-#### Is the pod or node exhausted on resources?
+You may experience intermittent outbound issues for many reasons. For troubleshooting intermittent outbound connection issues, try the following steps:
 
-Run the following code to check how the resources are used:
+#### Step 1: Check if the pod or node resources are exhausted
+
+Run the following commands to check how much the resources are used:
 
 ```bash
 kubectl top pods
 kubectl top nodes
 ```
 
-#### Is the operating system disk used heavily?
+#### Step 2: Check if the operating system disk is used heavily
 
 To check whether the operating system disk is used heavily, follow these steps:
 
@@ -130,7 +152,7 @@ If the OS disk is used heavily, consider using the following remedies:
 
 If these remedies don't resolve the issue, analyze the process that does heavy read/write operations on the disk. Then, check whether you can move the actions to a data disk instead of the OS disk.
 
-#### Is the source network address translation port exhausted?
+#### Step 3: Check if the source network address translation port is exhausted
 
 If applications are making many outbound connections, they may exhaust the number of available ports on the outbound device's IP address. Follow [Standard load balancer diagnostics with metrics, alerts, and resource health](/azure/load-balancer/load-balancer-standard-diagnostics) to monitor the usage and allocation of your existing load balancer's [source network address translation (SNAT) port](/azure/load-balancer/load-balancer-outbound-connections#what-are-snat-ports). Monitor to verify or determine the risk of [SNAT port exhaustion](/azure/load-balancer/load-balancer-outbound-connections#port-exhaustion).
 
