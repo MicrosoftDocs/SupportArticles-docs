@@ -2,7 +2,7 @@
 title: Tenant restrictions for Power Automate desktop machine registration
 description: Provides a resolution for an error that occurs when you register a machine to a tenant in Power Automate for desktop.
 ms.reviewer: guco, johndund, aartigoyle
-ms.date: 10/15/2024
+ms.date: 10/18/2024
 ms.custom: sap:Desktop flows\Administration issues
 ---
 # Tenant restrictions for Power Automate desktop machine registration
@@ -38,7 +38,7 @@ An administrator can use Windows registry settings to control which tenants can 
 Initial machine registration doesn't require administrator privileges but changing the registration restrictions does.
 
 > [!CAUTION]
-> Don't edit the registry directly unless you have no alternative. The registry editor bypasses standard safeguards, allowing settings that can degrade performance, damage your system, or even require you to reinstall Windows. You can safely alter most registry settings by using the programs in Control Panel or Microsoft Management Console (MMC). If you must edit the registry directly, back it up first.
+> Modifying Windows registry settings incorrectly can cause serious problems that may prevent your computer from booting properly. Microsoft cannot guarantee that any problems resulting from the configuring of registry settings can be solved. Modification of these settings is at your own risk. We strongly recommend that you [back up your Windows registry](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692) before proceeding.
 
 ### Allow machine registration to specific tenants
 
