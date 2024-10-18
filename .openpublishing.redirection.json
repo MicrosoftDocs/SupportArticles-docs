@@ -12273,7 +12273,7 @@
     {
       "source_path": "support/dynamics-365/sales/dynamics-365-on-premises-v9-0.md",
       "redirect_url": "/dynamics365/customerengagement/on-premises/deploy/installing-on-premises-dynamics-365?view=op-9-1",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dynamics-365/sales/operation-failed-because-you-are-offline.md",
@@ -12328,12 +12328,12 @@
     {
       "source_path": "support/dynamics-365/sales/business-process-flow-deletion-fails.md",
       "redirect_url": "/dynamics365/sales/customize-business-process-flows",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dynamics-365/sales/troubleshoot-server-side-synchronization.md",
       "redirect_url": "/power-platform/admin/troubleshooting-monitoring-server-side-synchronization which has more current info",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dynamics-365/sales/sorry-something-went-wrong-while-initializing-the-app-error.md",
