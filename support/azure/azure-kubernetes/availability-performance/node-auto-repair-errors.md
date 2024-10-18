@@ -9,7 +9,7 @@ ms.custom: sap:Node/node pool availability and performance
 ---
 # Troubleshoot common node auto-repair errors
 
-When AKS detects a node that reports the NotReady status for more than 5 minutes, AKS will attempt to automatically repair your node. Node auto-repair is a best-effort service and does not guarantee that your node will be restored to a healthy state. Learn more about the [node auto-repair process](/azure/aks/node-auto-repair).
+When Azure Kubernetes Service (AKS) detects a node that reports the NotReady status for more than 5 minutes, AKS will attempt to automatically repair the node. Node auto-repair is a best-effort service and does not guarantee that your node will be restored to a healthy state. Learn more about the [node auto-repair process](/azure/aks/node-auto-repair).
 
 During the node auto-repair process, AKS will initiate reboot, reimage, and redeploy actions on your unhealthy node. These repair actions may encounter errors due to various underlying causes. The resulting error code is surfaced through a [Kubernetes event](/azure/aks/events), which you can use to monitor the status of your node and auto-repair actions. This article discusses common errors, together with their potential causes and next steps, as well as best practices for monitoring node auto-repair.
 
@@ -22,18 +22,18 @@ To determine what type of node auto-repair error has occurred, look for one of t
 | NodeRedeployError | Node auto-repair redeploy action failed due to an operation failure: [error code] | The event is logged when there is an error with the redeploy action. |
 
 > [!NOTE]
-> In most cases, node auto-repair errors will not cause any impact to your cluster or applications since your node was already in an unhealthy state prior to the auto-repair process. When encountering node auto-repair errors, we recommend that you first attempt to repair the node yourself by following the instructions: [Basic troubleshooting of Node Not Ready failures](./node-not-ready-basic-troubleshooting.md). If you are unable to restore your node back to a Succeeded status and are noticing persistent errors reported by node auto-repair, you may be encountering a rare issue. In this case, contact [Azure support](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot) for assistance.
+> In most cases, node auto-repair errors will not cause any impact to your cluster or applications since your node was already in an unhealthy state prior to the auto-repair process. When encountering node auto-repair errors, we recommend that you first attempt to repair the node yourself by following the instructions: [Basic troubleshooting of Node Not Ready failures](./node-not-ready-basic-troubleshooting.md). If you are unable to restore your node back to a Succeeded status and are noticing persistent errors reported by node auto-repair, contact [Azure support](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot) for assistance.
 
 ## Common error codes
 The table below contains the most common node auto-repair errors.
 
 | Error code | Causes & Solution |
 |---|---|
-| VMExtensionProvisioningError | One or more VM extensions failed to be provisioned on the VM. Learn more about possible error types and troubleshooting steps at [Troubleshoot the ERR_VHD_FILE_NOT_FOUND error code (124)](../create-upgrade-delete/error-code-vhdfilenotfound.md). To determine the exact VM extension provisioning error on your node, read more at [View error details in the Azure portal](../create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md#view-resources-in-the-azure-portal). |
+| VMExtensionProvisioningError | One or more VM extensions failed to be provisioned on the node. Learn more about possible error types and troubleshooting steps at [Troubleshoot the ERR_VHD_FILE_NOT_FOUND error code (124)](../create-upgrade-delete/error-code-vhdfilenotfound.md). To determine the exact VM extension provisioning error on your node, read more at [View error details in the Azure portal](../create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md#view-resources-in-the-azure-portal). |
 | InvalidParameter | This error occurs when the node auto-repair process tries to access a node that no longer exists.  |
 | scaleSetNameAndInstanceIDFromProviderID failed | This is an issue where the node may not have been provisioned correctly. |
-| ManagedIdentityCredential authentication failed | This is likely due to an issue where your nodes were not initialized properly. |
-| VMRedeploymentFailed | There was an error with redeploying your node. This may cause your nodepool to enter a failed state. Read more on potential causes and next steps at [Troubleshoot Azure Kubernetes Service clusters or nodes in a failed state](./cluster-node-virtual-machine-failed-state.md#scenario-3-node-pool-is-in-a-failed-state). |
+| ManagedIdentityCredential authentication failed | This error occurs when the node is not initialized properly. |
+| VMRedeploymentFailed | There was an error when redeploying the node. This may cause your nodepool to enter a failed state. Learn more about potential causes and next steps at [Troubleshoot Azure Kubernetes Service clusters or nodes in a failed state](./cluster-node-virtual-machine-failed-state.md#scenario-3-node-pool-is-in-a-failed-state). |
 | TooManyVMRedeploymentRequests | This error occurs when your cluster exceeds the limit for VM redeployment requests. Redeploy is one of the auto-repair actions, which means that the auto-repair is unable to repair your node using redeploy actions. To troubleshoot the node's NotReady issue manually, see [Basic troubleshooting of Node Not Ready failures](./node-not-ready-basic-troubleshooting.md). |
 | OutboundConnectivityNotEnabledOnVMSS | This error occurs when your node or overall Virtual Machine Scale Set (VMSS) does not have outbound access enabled. Enable secure outbound access for your VMSS by using a method that's best suited for your application. Read more about the methods at [OutboundConnectivityNotEnabledOnVM. No outbound connectivity configured for virtual machine](../../virtual-machine-scale-sets/deploy/vmss-outbound-connectivity-not-enabled.md#solution). |
 
