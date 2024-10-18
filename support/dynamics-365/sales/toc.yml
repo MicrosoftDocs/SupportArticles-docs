@@ -292,6 +292,18 @@
       href: you-do-not-have-required-role-privilege.md
     - name: You don't have the required role or privilege to complete this action
       href: you-do-not-have-the-required-role-or-privilege-to-complete-this-action-error.md
+- name: LinkedIn Sales Navigator
+  items:
+    - name: Can't view photos on custom contact and lead forms in Unified Interface
+      href: lisn-unable-view-photos-custom-contact-lead-forms.md
+    - name: Can't upgrade the LinkedInSalesNavigatorForUnifiedClient solution
+      href: lisn-unable-upgrade-lisn-solution.md
+    - name: Data validation fails when you enable LinkedIn updates
+      href: lisn-error-enabling-linkedin-updates.md
+    - name: LinkedIn Sales Navigator display widgets don't load properly
+      href: lisn-display-widgets-not-loading-properly.md
+    - name: LinkedInSalesNavigatorControlsForUnifiedClient isn't available in the organization
+      href: lisn-solution-not-available-configure-lisn.md 
 - name: Microsoft Teams Integration
   items:
     - name: Can't enable Teams dialer
