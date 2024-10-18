@@ -27,7 +27,7 @@ To determine which type of node auto-repair error occurred, look for one of the 
 ## Common error codes
 The following table contains the most common node auto-repair errors.
 
-| Error code | Causes & Solution |
+| Error code | Causes and solutions |
 |---|---|
 | VMExtensionProvisioningError | One or more VM extensions weren't provisioned on the node. Learn more about possible causes and troubleshooting steps at [Troubleshoot the ERR_VHD_FILE_NOT_FOUND error code (124)](../create-upgrade-delete/error-code-vhdfilenotfound.md). To determine the exact VM extension provisioning error on your node, read more at [View error details in the Azure portal](../create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md#view-resources-in-the-azure-portal). |
 | InvalidParameter | This error occurs if the node auto-repair process tries to access a node that no longer exists. |
