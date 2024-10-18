@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot WMI high CPU usage issues
 description: Describes how to diagnose Windows Management Instrumentation (WMI) high CPU issues on any Windows operating system.
-ms.date: 12/26/2023
+ms.date: 10/18/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -115,24 +115,21 @@ Gather information on other resource usage, such as memory, handles, threads, an
 
 ### Identify the exact WMI provider (DLL) hosted by the WmiPrvse.exe PID identified
 
-There are multiple methods to identify the provider(s) loaded in WmiPrvSE.exe process. 
+There are multiple methods to identify the provider(s) loaded in the *WmiPrvSE.exe* process. 
 
-1. Using [Scripts: List all running WMI providers](/troubleshoot/windows-server/support-tools/scripts-list-running-wmi-providers?branch=main) - this script outputs all running Windows Management Instrumentation (WMI) providers.
-
-1. [Process Explorer](/sysinternals/downloads/process-explorer) can help you identify the exact providers hosted in the PID identified. Follow these steps:
+1. Use [Scripts: List all running WMI providers](/troubleshoot/windows-server/support-tools/scripts-list-running-wmi-providers?branch=main) to output all running Windows Management Instrumentation (WMI) providers.
+2. [Process Explorer](/sysinternals/downloads/process-explorer) can help you identify the exact providers hosted in the PID identified. Follow these steps:
 
    a. Run Process Explorer as administrator. Locate the identified *WmiPrvse.exe* PID, go to its properties, and select the **WMI Providers** tab.
    b. In the following example, *WmiPrvse.exe* PID 556 is located and found to be hosting:
    
    - WMI provider: `MS_NT_EVENTLOG_PROVIDER`
-      
-   - Namespace: `root\CIMV2`
-      
+   - Namespace: `root\CIMV2` 
    - DLL path: *%systemroot%\system32\wbem\ntevt.dll*
    
-        :::image type="content" source="media/troubleshoot-wmi-high-cpu-issues/wmiprvse-pid-556.png" alt-text="Screenshot shows the WmiPrvSE.exe:556 properties.":::
+   :::image type="content" source="media/troubleshoot-wmi-high-cpu-issues/wmiprvse-pid-556.png" alt-text="Screenshot shows the WmiPrvSE.exe:556 properties.":::
       
-1. In most cases, there may be more than one provider loaded. It may be any of the providers that are spending time in the CPU, causing high CPU issues.
+3. In most cases, there may be more than one provider loaded. It may be any of the providers that are spending time in the CPU, causing high CPU issues.
 
 Sometimes, if the issue is intermittent or infrequent, the *WmiPrvse.exe* causing the issue may be terminated over time. When the issue occurs again, it may be the same provider(s) in a new *WmiPrvse.exe* instance. In this situation, once you have the provider(s) noted, run the following cmdlet to show the current PID of the *WmiPrvse.exe* process containing that provider:
 
@@ -425,21 +422,16 @@ Here are some scenarios where disabling it can validate your observations.
 
 If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md#wmi).
 
-- Download TSS.zip and extract the contents. 
+1. Download [TSS.zip](https://aka.ms/getTSS) and extract the contents. 
+2. Start the tracing by running the following cmdlet from an elevated PowerShell command prompt. Keep the tracing running when the machine is experiencing high CPU issue or reproducing the issue.
 
-- Start the tracing by running the following command under elevated PowerShell console: 
+  ```powershell
+  .\TSS.ps1 -UEX_WMIBase -WIN_Kernel -ETWflags 1 -WPR CPU -Perfmon UEX_WMIPrvSE -PerfIntervalSec 1 -noBasicLog
+  ```
 
-- Keep the tracing running when the machine is experiencing high CPU issue or reproduce the issue.
+  > [!NOTE]
+  > Keep the tracing running for more than two minutes. Make sure the issue is reproduced during this window.
 
-
-```powershell
-.\TSS.ps1 -UEX_WMIBase -WIN_Kernel -ETWflags 1 -WPR CPU -Perfmon UEX_WMIPrvSE -PerfIntervalSec 1 -noBasicLog
-```
-
-> [!NOTE]
-> Note: Do not keep the tracing running for not more than 2minutes. Make sure the issue is reproduced during this window.
-> 
-> 
-- Stop the tracing by following instructions under PowerShell, as per TSS
+3. Stop the tracing by following instructions in the PowerShell command prompt as per the TSS toolset.
 
 The script will create a zip file containing the results of all traces and the diagnostic information. After a support case is created, this file can be uploaded to the secure workspace for analysis.
