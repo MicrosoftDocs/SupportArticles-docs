@@ -115,4 +115,8 @@ The following history shows there's a driver update, highlighted in red, and the
 
 :::image type="content" source="media/analyze-event-logs-diagnose-unexpected-reboots/system-event-log-7045.png" alt-text="Screenshot shows the System Event ID 7045 highlighted in Event Viewer.":::
 
+See the following Event ID 7045 for an example:
+
+:::image type="content" source="media/analyze-event-logs-diagnose-unexpected-reboots/system-event-log-7045.png" alt-text="Screenshot shows the detail of Event ID 7045.":::
+
 The example might indicate the bug check is due to a recent driver update. You can remove or roll back the driver update to see if the bug check stops or not. If not, you can collect a memory dump for analysis.
