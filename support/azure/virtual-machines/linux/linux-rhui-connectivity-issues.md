@@ -76,7 +76,7 @@ Azure makes available an RHUI repository validation script in GitHub. One of the
 
 - Validates the RHUI client certificate.
 - Validates RHUI rpm consistency.
-- Does a consistency check between EUS and non-EUS repository configuration and their requirements.
+- Does a consistency check between EUS, non-EUS repository configuration and their requirements.
 - Validates connectivity to the RHUI repositories. Reports that repository connectivity is successful if no errors are observed.
 - Validates SSL connectivity to the RHUI repositories.
 - Focuses exclusively in the RHUI repositories.
