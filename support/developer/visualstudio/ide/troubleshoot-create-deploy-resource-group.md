@@ -26,11 +26,7 @@ This article assists you in troubleshooting issues related to creating and deplo
 
 Upgrade to the latest [Long-Term Support (LTS) version](/visualstudio/install/update-visual-studio). Upgrading to the latest version enhances the reliability and overall experience of your Visual Studio installation.
 
-## More resources
+## References
 
 - [Release Dates and Build numbers](/visualstudio/releases/2022/release-history#release-dates-and-build-numbers)
 - [Visual Studio Product Lifecycle and Servicing](/visualstudio/productinfo/vs-servicing)
-
-## References
-
-- [Use code coverage to determine how much code is being tested](/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested)
