@@ -26,9 +26,7 @@ Before troubleshooting, we recommend that you implement the following best pract
 
 ### Client-side DNS registration
 
-In many environments, there's a practice of DHCP updating the DNS record on behalf of the client. This anyway works if the client is configured with a static IP address.
-
-Given hybrid nature of the infrastructure these days and employees using VPN to connect to office, there are often more than one IP associated with one endpoint. This situation can be avoided, if the client registers its record. Thus, the recommendation is to not use DHCP option 81 and instead, let client register its record.
+In many environments, there's a practice of DHCP updating the DNS record on behalf of the client. Given hybrid nature of the infrastructure these days and employees using VPN to connect to office, there are often more than one IP associated with one endpoint. This situation can be avoided, if the client registers its record. Thus, the recommendation is to not use DHCP option 81 and instead, let client register its record.
 
 For more information on how DHCP option 81 works, see the following two articles:
 
@@ -43,7 +41,7 @@ If client computers performing dynamic registration are domain-joined (which sho
 
 ### Enable time stamp for dynamic records
 
-By default, dynamic records don't include a timestamp. When configuring zone properties, you can enable the **Scavenge Stale Records** option under the **Aging** section of the zone's properties dialog. Once this option is enabled, newly registered records include a timestamp.
+By default, dynamic records does not include a timestamp. When configuring zone properties, you can enable the **Scavenge Stale Records** option under the **Aging** section of the zone's properties dialog. Once this option is enabled, newly registered records include a timestamp.
 
 The timestamps are required if you plan to scavenge stale records. Without a timestamp, a DNS record can't be compared to the current time and won't be considered stale, even if it was dynamically registered.
 
@@ -54,7 +52,7 @@ The timestamps are required if you plan to scavenge stale records. Without a tim
 
 The **Scavenge Stale Records** option in the zone's **Aging** properties ensures AD objects to carry a timestamp. However, the actual scavenging of stale records occurs at the DNS server level, affecting all zones where this setting is enabled. For a detailed explanation of scavenging, refer to [Don't be afraid of DNS scavenging, just be patient - Windows Server](../../windows-server/networking/dns-scavenging-setup.md).
 
-Scavenging cycle is a low priority thread for DNS process, so it might not always run consistently. To maximize the chances of it running, configure scavenging on a Domain Controller (DC) DNS server in an AD-integrated zone environment that doesn't have critical roles, such as Flexible Single Master Operation (FSMO) roles, and especially avoid the PDC Emulator. Ideally, scavenging should be set up on a DC without any FSMO roles. If this configuration isn't possible, avoid configuring it on the PDC Emulator.
+Scavenging cycle is a low priority thread for DNS process, so it might not always run consistently. To maximize the chances of it running, configure scavenging on a Domain Controller (DC) DNS server, in an AD-integrated zone environment, that doesn't have critical roles, such as Flexible Single Master Operation (FSMO) roles, and especially avoid the PDC Emulator. Ideally, scavenging should be set up on a DC without any FSMO roles. If this configuration isn't possible, avoid configuring it on the PDC Emulator.
 
 ### Maintain standard DNS zone permissions
 
@@ -68,7 +66,7 @@ However, challenges can arise when a DHCP server updates DNS records on behalf o
 
 As mentioned earlier, Microsoft recommends that client machines update their own DNS records rather than relying on the DHCP server. This is due to several reasons, and Microsoft has also implemented a design change to enforce this behavior. This change prevents the DHCP server from updating both A and PTR records for clients. To override this behavior, refer to [Unexpected DNS record registration behavior if DHCP server uses "Always dynamically update DNS records"](../../windows-server/networking/dns-registration-behavior-when-dhcp-server-manages-dynamic-dns-updates.md).
 
-Ideally, the client should update its own DNS record. However, if a record was previously updated by the DHCP server, the client won't be able to modify it. To address this, some enterprises enforce the DHCP server to update the client’s record, which is strongly discouraged.
+Ideally, the client should update its own DNS record. However, if a record was previously updated by the DHCP server, the actual client won't be able to modify it. To address this, some enterprises enforce the DHCP server to continue to update the client’s records, which is strongly discouraged. 
 
 The recommended approach is to allow the DHCP server, or the scavenging process, to remove the records. Once it's removed, the client will then be able to update it.
 
