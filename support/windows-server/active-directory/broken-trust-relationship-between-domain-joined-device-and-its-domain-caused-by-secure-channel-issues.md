@@ -1,7 +1,7 @@
 ---
 title: Broken trust relationship between domain joined device and its domain caused by secure channel issues
 description: Introduces how to troubleshoot secure channel issues which cause broken trust relationship between domain joined device and its domain.
-ms.date: 10/16/2024
+ms.date: 10/18/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -92,17 +92,15 @@ Reg query HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\Tcpip\Parameters /v h
 
 ## More information
 
+The following lists further information regarding the topics mentioned within this article.
+
+- PsExec - [PsExec - Sysinternals | Microsoft Learn](https://learn.microsoft.com/en-us/sysinternals/downloads/psexec)
+- Nltest - [Nltest | Microsoft Learn](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731935(v=ws.11))
+- Netlogon logging - [Enable debug logging for Netlogon service - Windows Client | Microsoft Learn](https://learn.microsoft.com/en-us/troubleshoot/windows-client/windows-security/enable-debug-logging-netlogon-service)
+- Cached credentials - [Credentials Processes in Windows Authentication | Microsoft Learn](https://learn.microsoft.com/en-us/windows-server/security/windows-authentication/credentials-processes-in-windows-authentication#BKMK_CachedCredentialsAndValidation)
+
 ### Terminology
 
 - **LSA Secret**: A special protected storage for important data used by the Local Security Authority in Windows. In this article, LSA Secret refers to the computer password for a domain-joined device.
 - **Cupdtime**: refers to the last update time for LSA Secret, in this case the computer password. This information is stored in the Windows registry under the key HKEY_LOCAL_MACHINE/Security/Policy/Secrets$MACHINE.ACC/cupdtime.
 - **pwdLastSet (PasswordLastSet)**: Computer object attribute, stored in Active Directory.
-
-Here you can find further information regarding the topics mentioned within this article:
-
-- PsExec - [PsExec - Sysinternals | Microsoft Learn](https://learn.microsoft.com/en-us/sysinternals/downloads/psexec)
-- Nltest - [Nltest | Microsoft Learn](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731935(v=ws.11))
-- Netlogon logging - [Enable debug logging for Netlogon service - Windows Client | Microsoft Learn](https://learn.microsoft.com/en-us/troubleshoot/windows-client/windows-security/enable-debug-logging-netlogon-service)
-- Active Directory replication troubleshooting - [Troubleshooting Active Directory Replication Problems | Microsoft Learn](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/troubleshoot/troubleshooting-active-directory-replication-problems)
-- Cached credentials - [Credentials Processes in Windows Authentication | Microsoft Learn](https://learn.microsoft.com/en-us/windows-server/security/windows-authentication/credentials-processes-in-windows-authentication#BKMK_CachedCredentialsAndValidation)
-- Active Directory required ports - [Configure firewall for AD domain and trusts - Windows Server | Microsoft Learn](https://learn.microsoft.com/en-us/troubleshoot/windows-server/active-directory/config-firewall-for-ad-domains-and-trusts)

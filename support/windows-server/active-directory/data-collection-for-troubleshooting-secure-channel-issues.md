@@ -66,18 +66,19 @@ The value is **154731 14:32:23.8220070 - 8/22/2024 7:32:23 AM**.
 
 ## Obtaining Active Directory pwdLastSet value
 
-1. Open Active Directory Users and Computers console, navigate to the Organizational Unit where the machine object belongs to, and look for the pwdLastSet attribute to see the value:  
-![alt text](media/data-collection-for-troubleshooting-secure-channel-issues/image-3.png)
+1. Open Active Directory Users and Computers console, navigate to the **Organizational Unit** where the computer object belongs to, and look for the pwdLastSet attribute to see the value:
+
+   ![alt text](media/data-collection-for-troubleshooting-secure-channel-issues/image-3.png)
 
 2. Alternatively, you can use PowerShell (Active Directory module is required) and run:
 
    ```powershell
-   Get-ADComputer 'ComputerNameHere' -properties PasswordLastSet | Format-List
+   Get-ADComputer '<ComputerName>' -properties PasswordLastSet | Format-List
    ```
 
    ![alt text](media/data-collection-for-troubleshooting-secure-channel-issues/image-4.png)
 
-3. The above information will give us the value for a single Domain Controller (the one we are connecting to through the console or when running the commands). Consider gathering the metadata for the affected computer object from Active Directory, this way you can confirm the value is consistent across all Domain Controllers in the environment:
+3. The above information will give us the value for a single domain controller (the one we are connecting to through the console or when running the commands). Consider gathering the metadata for the affected computer object from Active Directory, this way you can confirm the value is consistent across all domain controllers in the environment:
 
 Run the following command in cmd or PowerShell, just replace the Distinguished Name for the actual affected computer you are troubleshooting and export it to a file (easier to check information if you have a considerable number of Domain Controllers): 
 
@@ -89,4 +90,4 @@ Open the file and look for the values of the pwdLastSet attribute (you will get 
 
 ![alt text](media/data-collection-for-troubleshooting-secure-channel-issues/image-5.png)
 
-The above information will work as a reference and could help us in troubleshooting when Secure Channel is broken.
+The above information will work as a reference and can help us in troubleshooting when secure channel is broken.

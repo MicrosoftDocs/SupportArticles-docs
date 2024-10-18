@@ -495,6 +495,15 @@ items:
       href: ./active-directory/this-property-limited-64-values.md
     - name: Troubleshoot AD replication error 8589
       href: ./active-directory/replication-error-8589.md
+    - name: Trust relationship broken between domain joined device and its domain
+      href: ./active-directory/broken-trust-relationship-between-domain-joined-device-and-its-domain-caused-by-secure-channel-issues.md
+      items:
+        - name: Data collection for troubleshooting secure channel issues
+          href: ./active-directory/data-collection-for-troubleshooting-secure-channel-issues.md
+        - name: Active Directory having newer pwdLastSet value than client device
+          href: ./active-directory/scenario-active-directory-having-newer-pwdlastset-value-than-client-device.md
+        - name: Client device having a newer password value than Active Directory
+          href: ./active-directory/scenario-client-device-having-a-newer-password-value-than-active-directory.md
     - name: Use Adminpak to remotely administer computers
       href: ./active-directory/use-adminpak-remotely-administer-computers.md
     - name: Use Directory Service to manage AD objects
