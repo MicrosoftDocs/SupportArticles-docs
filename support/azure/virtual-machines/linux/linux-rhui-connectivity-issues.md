@@ -11,7 +11,7 @@ ms.collection: linux
 ms.topic: troubleshooting-general
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
-ms.date: 10/16/2024
+ms.date: 10/18/2024
 ---
 
 # Troubleshoot Red Hat RHUI connectivity issues
@@ -77,11 +77,10 @@ Azure makes available an RHUI repository validation script in GitHub. One of the
 - Validates the RHUI client certificate.
 - Validates RHUI rpm consistency.
 - Does a consistency check between EUS and non-EUS repository configuration and their requirements.
-- Validates Connectivity to the RHUI Repositories.
-  - Reports that repository connectivity is successful if no errors are observed
+- Validates connectivity to the RHUI repositories. Reports that repository connectivity is successful if no errors are observed.
 - Validates SSL connectivity to the RHUI repositories.
 - Focuses exclusively in the RHUI repositories.
-- Validates a found error by using the defined conditions and provides recommendations for a fix
+- Validates a found error by using the defined conditions and provides recommendations for a fix.
 
 #### Supported Red Hat images
 
@@ -97,38 +96,38 @@ To run the validation script, enter the following shell commands on a Red Hat VM
 
 #### [Red Hat 7.x](#tab/rhel7)
 
-1. If the virtual machine has internet access, execute the script directly from the VM using the following command:
+1. If the virtual machine has internet access, execute the script from the VM using the following command:
 
-```bash
-curl -sL https://raw.githubusercontent.com/Azure/azure-support-scripts/refs/heads/master/Linux_scripts/rhui-check/rhui-check.py | sudo python2 -
-```
+    ```bash
+    curl -sL https://raw.githubusercontent.com/Azure/azure-support-scripts/refs/heads/master/Linux_scripts/rhui-check/rhui-check.py | sudo python2 -
+    ```
 
-2. In case no direct internet access is possible from the virtual machine, download and transfer the script to the virtual machine using the given URL: [RHUI check script](https://raw.githubusercontent.com/Azure/azure-support-scripts/refs/heads/master/Linux_scripts/rhui-check/rhui-check.py) and then execute the following command:
+2. If the virtual machine doesn't have internet access, download the [RHUI check script](https://raw.githubusercontent.com/Azure/azure-support-scripts/refs/heads/master/Linux_scripts/rhui-check/rhui-check.py) and transfer it to the virtual machine, and then execute the following command:
 
-```bash
-sudo python2 ./rhui-check.py 
-```
+    ```bash
+    sudo python2 ./rhui-check.py 
+    ```
 
-3. The script will generate a report and point you out to any specific issue. The script output is also available in `/var/log/rhuicheck.log` post script execution. You can inspect that log file separately as well.
+  The script will generate a report that identifies any specific issues. The script output is also saved in `/var/log/rhuicheck.log` after execution. You can also inspect that log file separately.
 
 #### [Red Hat 8.x and 9.x](#tab/rhel89)
 
 1. If the virtual machine has internet access, execute the script directly from the VM using the following command:
 
-```bash
-curl -sL https://raw.githubusercontent.com/Azure/azure-support-scripts/refs/heads/master/Linux_scripts/rhui-check/rhui-check.py | sudo python3 -
-```
+    ```bash
+    curl -sL https://raw.githubusercontent.com/Azure/azure-support-scripts/refs/heads/master/Linux_scripts/rhui-check/rhui-check.py | sudo python3 -
+    ```
 
-2. In case no direct internet access is possible from the virtual machine, download and transfer the script to the virtual machine using the given URL: [RHUI check script](https://raw.githubusercontent.com/Azure/azure-support-scripts/refs/heads/master/Linux_scripts/rhui-check/rhui-check.py) and then execute the following command:
+2. If the virtual machine doesn't have internet access, download the [RHUI check script](https://raw.githubusercontent.com/Azure/azure-support-scripts/refs/heads/master/Linux_scripts/rhui-check/rhui-check.py) and transfer it to the virtual machine, and then execute the following command:
 
-```bash
-sudo python3 ./rhui-check.py 
-```
+    ```bash
+    sudo python3 ./rhui-check.py 
+    ```
 
-> [!IMPORTANT]
-> Replace python3 with `/usr/libexec/platform-python` in case the `python3` command is not found.
-
-3. The script will generate a report and point you out to any specific issue. The script output is also available in `/var/log/rhuicheck.log` post script execution. You can inspect that log file separately as well.
+  > [!IMPORTANT]
+  > Replace `python3` with `/usr/libexec/platform-python` if the `python3` command isn't found.
+  
+  The script will generate a report that identifies any specific issues. The script output is also saved in `/var/log/rhuicheck.log` after execution. You can also inspect that log file separately.
 
 ---
 
