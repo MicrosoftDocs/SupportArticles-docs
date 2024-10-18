@@ -4,7 +4,7 @@ description: Resolves issues related to upgrading the LinkedInSalesNavigatorForU
 author: udaykirang
 ms.author: udag
 ms.reviewer: sagarwwal
-ms.date: 10/17/2024
+ms.date: 10/18/2024
 ms.custom: sap:LinkedIn Sales Navigator\LinkedIn Sales Navigator integration errors
 ---
 # Can't upgrade the LinkedInSalesNavigatorForUnifiedClient solution

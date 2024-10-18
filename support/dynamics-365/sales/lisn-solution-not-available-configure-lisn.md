@@ -4,7 +4,7 @@ description: Resolves an issue where the LinkedInSalesNavigatorControlsForUnifie
 author: udaykirang
 ms.author: udag
 ms.reviewer: sagarwwal
-ms.date: 10/17/2024
+ms.date: 10/18/2024
 ms.custom: sap:LinkedIn Sales Navigator\LinkedIn Sales Navigator integration errors
 ---
 # LinkedInSalesNavigatorControlsForUnifiedClient isn't available in the organization
