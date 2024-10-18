@@ -16,29 +16,27 @@ This article describes a registry setting that allows you to configure the Group
 
 You use updated ADMX/ADML files in the Central Store under the *SYSVOL* folder for Group Policy tools on a domain controller. The Group Policy Management Console (GPMC) on clients uses the ADMX/ADML files in the Central Store instead of the local store.
 
-In this situation, some Group Policy settings can't be configured for computers that using the previous versions of the ADMX/ADML files. The settings appear as **Extra Registry Settings** in the Group Policy editor. The updated ADMX/ADML files in the domain Central Store (SYSVOL) don't contain the editor metadata for these settings.
+In this situation, some Group Policy settings can't be configured for computers (either domain controllers or clients with Remote Server Administration Tools (RSAT) installed) that use the previous versions of the ADMX/ADML files. The settings appear as **Extra Registry Settings** in the Group Policy Editor. The updated ADMX/ADML files in the domain Central Store (SYSVOL) don't contain the editor metadata for these settings.
 
 > [!NOTE]
-> Settings that are made prior to the upgrade of the Central Store apply to the clients, but can't be edited anymore.
+> Settings that are made before the upgrade of the Central Store apply to the clients but can no longer be edited.
 
 ## The updated ADMX/ADML files might not contain some settings
 
-This issue occurs because the updated ADMX/ADML files might not contain some settings for computers that using the previous versions of the ADMX/ADML files.
+This issue occurs because the updated ADMX/ADML files might not contain some settings for computers that use the previous versions of the ADMX/ADML files.
 
 ## Use local ADMX/ADML files instead of the Central Store
 
-There's a registry setting for the computers running the Group Policy editor that allows to use the local ADMX/ADML files instead of the Central Store.
-
 [!INCLUDE [Registry important alert](../../includes/registry-important-alert.md)]
 
-You can manually enable the use of local ADMX/ADML files. You need to configure on the computer executing the Group Policy editor, which is either a domain controller or a client that has Remote Server Administration Tools (RSAT) installed.
+There's a registry setting that allows the use of local ADMX/ADML files instead of the Central Store for computers running the Group Policy Editor.
 
-To use the ADMX/ADML files from the local store instead of the Central Store, set the following registry value to `1`:
+To use the ADMX/ADML files inm the local store, set the following registry value to `1` manually:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Group Policy`
 
 |Value name|Value type|Value data|
 |---------|---------|---------|
-|`EnableLocalStoreOverride`|`REG_DWORD`|`0` - Use the *PolicyDefinitions* folder in the *SYSVOL* folder if present (default).</br></br>`1` - Use the local *PolicyDefinitions* folder always.|
+|`EnableLocalStoreOverride`|`REG_DWORD`|`0` - Use the *PolicyDefinitions* folder in the *SYSVOL* folder if present (default).</br></br>`1` - Always use the local *PolicyDefinitions* folder.|
 
 For more information, see [How to create and manage the Central Store for Group Policy Administrative Templates in Windows](../../windows-client/group-policy/create-and-manage-central-store.md).
