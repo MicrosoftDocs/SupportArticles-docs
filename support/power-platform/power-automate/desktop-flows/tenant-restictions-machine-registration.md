@@ -37,8 +37,7 @@ An administrator can use Windows registry settings to control which tenants can 
 
 Initial machine registration doesn't require administrator privileges but changing the registration restrictions does.
 
-> [!CAUTION]
-> [!INCLUDE [Registry disclaimer](../../../includes/registry-important-alert.md)]
+[!INCLUDE [Registry disclaimer](../../../includes/registry-important-alert.md)]
 
 ### Allow machine registration to specific tenants
 
