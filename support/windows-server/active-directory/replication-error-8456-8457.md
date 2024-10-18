@@ -1,11 +1,11 @@
 ---
 title: Troubleshoot replication error 8456 or 8457
 description: Describes how to troubleshoot replication error 8456 or 8457.
-ms.date: 04/10/2024
+ms.date: 10/18/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika
+ms.reviewer: kaushika, jcoates
 ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---
 # Active Directory replication error 8456 or 8457: The source | destination server is currently rejecting replication requests
