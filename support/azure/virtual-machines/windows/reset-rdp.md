@@ -12,8 +12,9 @@ ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
-ms.date: 10/15/2024
+ms.date: 10/18/2024
 ms.author: genli
+ms.reviewer: herensin
 ---
 # Reset Remote Desktop Services or its administrator password in a Windows VM
 
