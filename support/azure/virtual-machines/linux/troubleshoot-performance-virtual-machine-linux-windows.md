@@ -12,7 +12,7 @@ ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
-ms.date: 09/18/2019
+ms.date: 10/17/2024
 ms.author: genli
 ---
 
@@ -24,58 +24,25 @@ This article describes virtual machine (VM) generic performance troubleshooting 
 
 This article will walk through using monitoring to diagnose Performance bottlenecks.
 
-## Enabling monitoring
-
-### Azure VM monitoring
-
-To monitor the Guest VM, use the Azure VM Monitoring, which will alert you to certain high-level resource conditions. To check whether you have the VM diagnostics enabled, see [Azure Resource logs overview](/azure/azure-monitor/learn/tutorial-resource-logs). If you see the following, then you most likely don't have the diagnostics enabled:
-
-:::image type="content" source="media/troubleshoot-performance-virtual-machine-linux-windows/monitoring-not-enabled.png" alt-text="Screenshot shows Monitoring may not be enabled message.":::
-
-### Enable VM diagnostics through microsoft Azure portal
+## Enable VM diagnostics through Azure portal
 
 To enable VM diagnostics:
 
 1. Go to the VM.
-2. Click **Diagnostics Settings**.
-3. Select the storage account and click **Enable guest-level monitoring**.
+2. In the **Monitoring** section, select **Diagnostics Settings**.
+3. Select a storage account, and then select **Enable guest-level monitoring**.
 
-    :::image type="content" source="media/troubleshoot-performance-virtual-machine-linux-windows/diagnostic-settings.png" alt-text="Screenshot shows steps to enable VM diagnostics.":::
+    :::image type="content" source="media/troubleshoot-performance-virtual-machine-linux-windows/diagnostic-settings.png" alt-text="Screenshot shows steps to enable VM diagnostics."  lightbox="media/troubleshoot-performance-virtual-machine-linux-windows/diagnostic-settings.png":::
 
-You can check the storage account used for Diagnostics setup from **Agent** tab under **Diagnostics Settings**.
+## View storage account metrics through Azure portal (for unmanaged disk)
 
-:::image type="content" source="media/troubleshoot-performance-virtual-machine-linux-windows/check-storage-account.png" alt-text="Screenshot highlights the Storage account under the Agent tab.":::
+For the VMs that use [unmanaged disks](/azure/virtual-machines/unmanaged-disks-deprecation), storage is a very important tier when we intend to analyze IO performance. For storage related metrics we need to enable diagnostics as an additional step:
 
-### For unmanaged disks: Enable storage account diagnostics 
+Identify which storage account (or accounts) your VM is using by selecting the VM:
 
-> [!NOTE]
-> The following information doesn't apply to VMs using managed disks.
-
-If you are using a VM with the [unmanaged disk](/azure/virtual-machines/unmanaged-disks-deprecation), you may need to check storage metrics to troubleshoot performance issues. To enable diagnostics for the storage account, follow these steps:
-
-1. Identify which storage account (or accounts) your VM is using by selecting the VM. Click **Settings**, and then click **Disks**:
-
-    :::image type="content" source="media/troubleshoot-performance-virtual-machine-linux-windows/storage-account-disks-selection.png" alt-text="Screenshot shows the OS disk under disks.":::
-
-2. In the portal, go to the storage account (or accounts) for the VM and work through the following steps:
-
-   1. Click overview for the Storage account you found with step above.
-   2. Default metrics would be shown.
-
-    :::image type="content" source="media/troubleshoot-performance-virtual-machine-linux-windows/default-metrics.png" alt-text="Screenshot shows default metrics under Overview.":::
-
-3. Click on any of the metrics, which will show another blade with more options to configure and add metrics.
-
-    :::image type="content" source="media/troubleshoot-performance-virtual-machine-linux-windows/add-metrics.png" alt-text="Screenshot shows steps to add and configure metrics.":::
-
-To configure these options:
-
-1. Select **Metrics**.
-2. Select the **Resource** (storage account).
-3. Select the **Namespace**
-4. Select **Metric**.
-5. Select the type of **Aggregation**
-6. You can pin this view on dashboard.
+1. In the Azure portal, select your VM.
+2. Under **Settings**, select **Disk**, and then find the storage account where the disk is saved.
+3. Navigate to the storage account and select **Metrics**.
 
 ## Observing bottlenecks
 
@@ -83,9 +50,9 @@ Once we are through the initial setup process for needed metrics, and post enabl
 
 ### Accessing the monitoring
 
-Select the Azure VM you want to investigate and select **Monitoring**.
+In the Azure portal, select the Azure VM you want to investigate, select **Metrics** the **Monitoring** section, and then select a metric.
 
-:::image type="content" source="media/troubleshoot-performance-virtual-machine-linux-windows/select-monitoring.png" alt-text="Screenshot shows the Monitoring panel.":::
+:::image type="content" source="media/troubleshoot-performance-virtual-machine-linux-windows/select-monitoring.png" alt-text="Screenshot that shows how to open the Usage and estimated costs page."  lightbox="media/troubleshoot-performance-virtual-machine-linux-windows/select-monitoring.png":::
 
 ### Timelines of observation
 
@@ -95,10 +62,8 @@ To identify if you have any resource bottlenecks, review your data. If your find
 
 :::image type="content" source="media/troubleshoot-performance-virtual-machine-linux-windows/cpu-bottleneck-time-range.png" alt-text="Screenshot shows steps to check CPU Bottleneck.":::
 
-1. Edit the Graph.
-2. Set the time Range.
-3. You then need to add in the counter: CPU Percentage Guest OS
-4. Save.
+1. Set the time Range.
+2. In Metric, select CPU Percentage.
 
 ### CPU observe trends
 
@@ -154,7 +119,7 @@ If after upgrading to a larger VM, you discover that you still have a constant s
 
 You can use Perfinsights for [Windows](../windows/how-to-use-perfinsights.md) or [Linux](how-to-use-perfinsights-linux.md) to analyze which process is driving the Memory consumption.
 
-## Check for disk bottleneck
+## Check for disk bottleneck (for unmanaged disk)
 
 To check the storage subsystem for the VM, check the diagnostics at the Azure VM level by using the counters in VM Diagnostics and also the Storage Account Diagnostics.
 
@@ -168,10 +133,9 @@ To work on the below items, go into the storage account for the VM in the portal
 
 :::image type="content" source="media/troubleshoot-performance-virtual-machine-linux-windows/vm-storage-account.png" alt-text="Screenshot shows steps to view Storage Account Diagnostics in Monitoring.":::
 
-1. Edit the Monitoring Graph.
-2. Set the time range.
-3. Add the counters described in the steps below.
-4. Save the changes.
+1. Set the time range.
+2. Set **Metric Namespace** to **Blob**.
+3. Set **Metric** to **Availability**.
 
 ### Disk observe trends (standard storage only)
 
@@ -211,13 +175,12 @@ With new disk offerings under Standard storage, the IOPS and Throughput limits c
 
 * [Scalability and performance targets for VM disks on Windows](/azure/virtual-machines/disks-scalability-targets).
 
-#### References
+## References
 
-* [Scalability and performance targets for premium page blob storage accounts](/azure/storage/blobs/scalability-targets-premium-page-blobs)
-
-The bandwidth of the storage account is measured by the Storage Account Metrics: TotalIngress and TotalEgress. You have different thresholds for bandwidth depending on type of redundancy and regions.
+The bandwidth of the storage account is measured by the Storage Account Metrics: TotalIngress and TotalEgress. You have different thresholds for bandwidth depending on type of redundancy and regions:
 
 * [Scalability and performance targets for standard storage accounts](/azure/storage/common/scalability-targets-standard-account)
+* [Scalability and performance targets for premium page blob storage accounts](/azure/storage/blobs/scalability-targets-premium-page-blobs)
 
 Check the TotalIngress and TotalEgress against the Ingress and Egress limits for the storage account redundancy type and region.
 
