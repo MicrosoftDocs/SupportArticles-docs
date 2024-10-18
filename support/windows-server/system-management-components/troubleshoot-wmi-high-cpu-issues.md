@@ -120,14 +120,14 @@ There are multiple methods to identify the provider(s) loaded in the *WmiPrvSE.e
 1. Use [Scripts: List all running WMI providers](/troubleshoot/windows-server/support-tools/scripts-list-running-wmi-providers?branch=main) to output all running Windows Management Instrumentation (WMI) providers.
 2. [Process Explorer](/sysinternals/downloads/process-explorer) can help you identify the exact providers hosted in the PID identified. Follow these steps:
 
-   a. Run Process Explorer as administrator. Locate the identified *WmiPrvse.exe* PID, go to its properties, and select the **WMI Providers** tab.
-   b. In the following example, *WmiPrvse.exe* PID 556 is located and found to be hosting:
+   1. Run Process Explorer as administrator. Locate the identified *WmiPrvse.exe* PID, go to its properties, and select the **WMI Providers** tab.
+   2. In the following example, *WmiPrvse.exe* PID 556 is located and found to be hosting:
    
-   - WMI provider: `MS_NT_EVENTLOG_PROVIDER`
-   - Namespace: `root\CIMV2` 
-   - DLL path: *%systemroot%\system32\wbem\ntevt.dll*
+      - WMI provider: `MS_NT_EVENTLOG_PROVIDER`
+      - Namespace: `root\CIMV2` 
+      - DLL path: *%systemroot%\system32\wbem\ntevt.dll*
    
-   :::image type="content" source="media/troubleshoot-wmi-high-cpu-issues/wmiprvse-pid-556.png" alt-text="Screenshot shows the WmiPrvSE.exe:556 properties.":::
+      :::image type="content" source="media/troubleshoot-wmi-high-cpu-issues/wmiprvse-pid-556.png" alt-text="Screenshot shows the WmiPrvSE.exe:556 properties.":::
       
 3. In most cases, there may be more than one provider loaded. It may be any of the providers that are spending time in the CPU, causing high CPU issues.
 
