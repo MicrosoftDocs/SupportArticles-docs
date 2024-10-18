@@ -1,7 +1,7 @@
 ---
 title: Can't log on to Windows
 description: Describes an issue where you're prompted for user name and password repeatedly when logging on Windows.
-ms.date: 10/11/2024
+ms.date: 10/18/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -44,22 +44,23 @@ Userinit = C:\windows\system32\userinit.exe
 - Type the computer name (infected computer).
 - Navigate to the following location in registry of destination or infected computer:
 
-    `HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon`
+  `HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon`
   
 - Edit these two values in right pane:
 
-     Shell  
+  Shell  
   Userinit
   
 - Change these two values to
 
-    Shell = explorer.exe  
+  Shell = explorer.exe  
   Userinit = C:\windows\system32\userinit.exe
   
 - Exit from Registry.
 - Restart the infected computer.
 - You should be able to log on to the computer.
 
-**DISCLAIMER: If the above steps do not resolve the issue, the machine should be considered compromised.** 
+> [!IMPORTANT]
+> If the above steps didn't resolve the issue, the machine should be considered compromised.
 
 [!INCLUDE [Community Solutions Content Disclaimer](../../includes/community-solutions-content-disclaimer.md)]
