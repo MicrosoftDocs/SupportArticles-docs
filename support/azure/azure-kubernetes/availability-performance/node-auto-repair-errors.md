@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot common node auto-repair errors
 description: Troubleshoot scenarios where node auto-repair returns an error code when trying to repair a node with a status of NotReady.
-ms.date: 10/01/2024
+ms.date: 10/17/2024
 ms.reviewer: 
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to make sure the automatic repair actions from AKS node auto-repair do not cause any impacts on my applications or cluster health.
@@ -14,7 +14,7 @@ When AKS detects a node which reports the NotReady status for more than 5 minute
 During the node auto-repair process, AKS will initiate reboot, reimage, and redeploy actions on your unhealthy node. These repair actions may encounter errors due to various underlying causes. The resulting error code is surfaced through a [Kubernetes event](/azure/aks/events), which you can use to monitor the status of your node and auto-repair actions. This article discusses common errors, together with their potential causes and next steps, as well as best practices for monitoring node auto-repair.
 
 ## Prerequisites
-To determine what type of node auto-repair error has occured, look for one of the following Kubernetes events: 
+To determine what type of node auto-repair error has occurred, look for one of the following Kubernetes events: 
 | Reason | Event Message | Description |
 | --- | --- | --- |
 | NodeRebootError | Node auto-repair reboot action failed due to an operation failure: [error code here] | Emitted when there is an error with the reboot action. |
