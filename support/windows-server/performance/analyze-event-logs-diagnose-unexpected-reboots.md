@@ -82,7 +82,7 @@ Here are some examples of different kinds of requests from Event ID 1074:
   ```
 
 - ```output
-  The process <ProcessName> has initiated the restart of computer <Computer Name> on behalf of user <Domain User> for the following reason: Operating System: Service pack (Planned)  
+  The process <Process Name> has initiated the restart of computer <Computer Name> on behalf of user <Domain User> for the following reason: Operating System: Service pack (Planned)  
   Reason Code: 0x80020010  
   Shutdown Type: restart  
   Comment:
