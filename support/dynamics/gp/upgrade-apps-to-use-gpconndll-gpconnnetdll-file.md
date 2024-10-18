@@ -29,5 +29,4 @@ You can open a Dexterity support incident to obtain help that's unavailable in t
 
 For more information about technical support options for Microsoft Business Solutions partners, customers, and ISVs, visit the following Microsoft Web site:
 
-[Microsoft Dynamics Technical Support](https://learn.microsoft.com/dynamics/s-e/crm/global_support_contacts_eng_187)
-
+[Microsoft Dynamics Technical Support](/dynamics/s-e/crm/global_support_contacts_eng_187)
