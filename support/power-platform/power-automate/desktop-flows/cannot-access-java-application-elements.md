@@ -2,7 +2,7 @@
 title: Can't access elements of a Java application
 description: Troubleshoot the issue that Power Automate for desktop can't access the elements of a Java desktop application.
 ms.reviewer: pefelesk
-ms.date: 10/17/2024
+ms.date: 10/18/2024
 ms.custom: sap:Desktop flows\Working with Power Automate for desktop
 ---
 # Can't access the elements of a Java application
@@ -66,7 +66,7 @@ Power Automate for desktop can't access the UI elements of a Java desktop applic
 
 4. Check _.accessibility.properties_ file:
 
-    - Ensure there isn't an _.accessibility.properties_ file in your _C:\Users\user_ folder. (replace with your user name.)
+    - Ensure there isn't an _.accessibility.properties_ file in your _C:\Users\user_ folder. (replace _user_ with your user name.)
     - If the file exists, rename it.
 
 5. Ensure that _VC_redist.x64.exe_, _VC_redist.x86.exe_, or both are run.
