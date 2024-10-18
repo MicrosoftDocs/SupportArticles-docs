@@ -18,7 +18,7 @@ This article describes the most typical reasons of startup issues for RHEL(RedHa
 
 # Scenario 1: Unable to start cluster service due to quorum
 
-## Symptom 1:
+## Symptom 1
 
 - Cluster node fails to join cluster after cluster restart.
 - Nodes are reported as `UNCLEAN (offline)`
@@ -54,7 +54,7 @@ Check for the error: Corosync quorum is not configured in /var/log/messeges:
 Jun 16 11:17:53 rhel9a pacemaker-controld[509433]: error: Corosync quorum is not configured
 ```
 
-## Cause:
+## Cause
 
 The **votequorum** service is part of the corosync project. This service can be optionally loaded into the nodes of a corosync cluster to avoid split-brain situations. It's accomplished by allocating number of votes to every system in the cluster. Guaranteeing that cluster actions may only take place when a most of the votes are present. The service must be loaded into all nodes or none. If it loaded into a subset of cluster nodes, the results are unpredictable.
 
@@ -68,7 +68,7 @@ The following corosync.conf extract will enables **votequorum** service within c
 
 "Votequorum" reads its configuration from corosync.conf. Some values can be changed at runtime and others are only read at corosync startup. It's important that those values are consistent across all the nodes participating in the cluster or votequorum behavior are unpredictable.
 
-## Resolution:
+## Resolution
 
 1.	Check for missing quorum stanza in `/etc/corosync/corosync.conf`. Compare the existing corosync.conf with any of the available backup present under `/etc/corosync/`
 
@@ -130,7 +130,7 @@ sudo pcs cluster reload corosync
 
 # Scenario 2:  Issue with VIP resource
 
-## Symptom 1: 
+## Symptom 1
 
 Virtual IP (`IPaddr2` resource) failed to start/stop in pacemaker.
 Below messages shown in `/var/log/pacemaker.log`:
@@ -146,7 +146,7 @@ sudo pcs status
 myip_start_0 on cluster0.heartbeat.example.com 'unknown error' (1): call=20, status=complete, exit-reason='[findif] failed', last-rc-change='Mon Jan 11 13:24:32 2016', queued=0ms, exec=39ms
 ```
 
-## Cause: 
+## Cause
 
 IPaddr2 call `findif()` function as specified in `/usr/lib/ocf/resource.d/heartbeat/IPaddr2` (belongs to resource-agents package)  to determine which network interface to start the IPAddr2 resource on.
 
@@ -184,7 +184,7 @@ sudo ip link set ens6 down
 sudo ip -o -f inet route list match 192.168.111.222/24 scope link 
 ````
 
-## Resolution: 
+## Resolution
 
 If the route that matches the VIP isn't in the default routing table, then one can specify the NIC name in pacemaker resource, so that it can be configured bypassing the check:
 
@@ -212,7 +212,7 @@ ip-172.17.223.36 successfully restarted
 
 # Scenario 3:  Issue with SAPHana(High-performance ANalytic Appliance)
 
-## Symptom 1:  
+## Symptom 1
 
 SAPHana DB fails to start with `'unknown error'`
 
@@ -248,7 +248,7 @@ sudo pcs status
     * rsc_SAPHana_start_0 on node-2 'not running' (7): call=55, status=complete, exitreason='',
         last-rc-change='Sat May 22 09:36:32 2021', queued=0ms, exec=3093ms
 ```
-## Cause:
+## Cause
 Pacemaker can't start SAPHana resource when there are `SYN` failures between primary and secondary nodes.
 
 ```Bash
@@ -265,11 +265,11 @@ sudo SAPHanaSR-showAttr
  node-2 PROMOTED    1693237652  online     logreplay node-1 4:P:master1:master:worker:master 150   SITEA syncmem PRIM       2.00.046.00.1581325702 node-2
 ```
 
-## Resolution:
+## Resolution
 
 SAPHana resource can't be start by pacemaker when there are `SYN` failures between primary and secondary cluster nodes. To mitigate this issue, we must manually enable `SYN` between the primary and secondary nodes.
 
-> [!NOTE]
+> [!Important]
 > Steps 2,3 & 4 are to be performed using SAP administrator account as these steps involve using SAP System ID to stop, start and re-enable replication manually.
 
 1.	Place the cluster in maintenance mode
@@ -367,7 +367,7 @@ If you're seeing a different message, then most likely there are other issues be
     ```
 
 
-## Symptom 2:
+## Symptom 2
 
 SAPHana Resource Experiencing Start Failures with `hana_xxx_roles` Reporting N (Standalone) mode.
 Database resource doesn't primary or secondary on either node. With `hana_xxx_roles` reporting **N** for Standalone node mode.
@@ -413,13 +413,13 @@ Failed Resource Actions:
   * SAPHana_Resource_start_0 on Node2 'not running' (7): call=27, status='complete', last-rc-change='Thu Mar 28 09:23:05 2024', queued=0ms, exec=1024ms
 ```
 
-## Cause:
+## Cause
 
 - Each database node in a standalone node attempts to function alone rather than interacting with one another.
 - Commonly seen this issue occur when the database is altered (database manually stopped, started, replication paused, etc.,) while the cluster is in maintenance mode.
 - Run `sudo pcs status --full` and check under Node Attributes for hana_xxx_roles and confirm it's reporting `#:N:X:X:X:X` instead of `#:P:X:X:X:X`.
 
-## Resolution:
+## Resolution
 
 > [!Note]
 > These steps ( 1 to 5 ) should be performed by SAP admin.
@@ -460,7 +460,7 @@ Failed Resource Actions:
    sudo pcs resource cleanup <SAPHana resource name>
    ```
 
-## Symptom 3:  
+## Symptom 3
 
 SAPHana Resource Start Failure 
 Error message:
@@ -469,7 +469,7 @@ Error message:
 'FAIL: process hdbdaemon HDB Daemon not running'
 ```
 
-## Cause:
+## Cause
 
 - Run `pcs status --full` and collect the time frame the start error occurred under "Failed Resource Actions."
 
@@ -493,13 +493,13 @@ Mar  1 02:25:09 Node1 pacemaker-attrd[8568]: notice: Setting fail-count-SAPHana_
 Mar  1 02:25:09 Node1 pacemaker-attrd[8568]: notice: Setting last-failure-SAPHana_ECR_00#start_0[Node1]: (unset) -> 1709288709
 ```
 
-## Resolution:
+## Resolution
 
 Open a case with SAP Hana to investigate why hdbdaemon didn't start.
 
 # Scenario 4: Issue with ASCS and ERS resource.
 
-## Symptom 1:
+## Symptom 1
 ASCS and ERS instances aren't able to start under cluster control. The following errors can be seen from `/var/log/messages`.
 
 ```Output
@@ -507,11 +507,11 @@ Apr  6 23:29:16 nodeci SAPRh2_10[340480]: Unable to change to Directory /usr/sap
 Apr  6 23:29:16 nodeci SAPRH2_00[340486]: Unable to change to Directory /usr/sap/Rh2/ASCS00/work. (Error 2 No such file or directory) [ntservsserver.cpp 3845]
 ```
 
-## Cause:
+## Cause
 
 - Due to incorrect `InstanceName` and `START_PROFILE` attributes SAP instance (ASCS & ERS) not start under cluster control.
 
-## Resolution:
+## Resolution
 
 > [!Note]
 > This resolution is applicable when your `InstanceName` and `START_PROFILE` are individual.
