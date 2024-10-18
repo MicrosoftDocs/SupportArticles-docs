@@ -79,7 +79,7 @@ Steadily Increasing – A constant increase in consumption is often either ineff
 
 ### High CPU utilization remediation
 
-If your application or process isn't running at the correct performance level, and you're seeing 95% + CPU utilization constant, you can perform either of the following tasks:
+If your application or process isn’t running optimally and CPU usage stays above 95%, you can perform either of the following tasks:
 
 * For immediate relief - Increase the size of the VM to a size with more cores
 * Understand the issue – locate application/process and troubleshoot accordingly.
