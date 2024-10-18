@@ -234,9 +234,9 @@ Issues that relate to CoreDNS overload might require you to change certain Istio
 
 If your application pod starts before the Envoy sidecar starts, the application might become unresponsive, or it might restart. For instructions about how to avoid this problem, see [Pod or containers start with network issues if istio-proxy is not ready](https://istio.io/latest/docs/ops/common-problems/injection/#pod-or-containers-start-with-network-issues-if-istio-proxy-is-not-ready). Specifically, setting the `holdApplicationUntilProxyStarts` MeshConfig field under `defaultConfig` to `true` can help prevent these race conditions.
 
-### Step 5: Setup Service Entry if using HTTP proxy for outbound traffic access
+### Step 5: Configure a Service Entry when using an HTTP proxy for outbound traffic
 
-Clusters using an HTTP proxy for outbound internet access will need to set up a Service Entry. For setup instructions see [HTTP proxy support in Azure Kubernetes Service](/azure/aks/http-proxy#istio-add-on-http-proxy-for-external-services).
+If your cluster uses an HTTP proxy for outbound internet access, you'll need to configure a Service Entry. For more information, see [HTTP proxy support in Azure Kubernetes Service](/azure/aks/http-proxy#istio-add-on-http-proxy-for-external-services).
 
 ## Error messages
 
