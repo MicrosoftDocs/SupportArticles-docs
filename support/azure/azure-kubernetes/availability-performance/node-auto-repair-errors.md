@@ -15,7 +15,8 @@ During the node auto-repair process, AKS initiates restart, reimage, and redeplo
 
 ## Prerequisites
 To determine which type of node auto-repair error occurred, look for one of the following Kubernetes events.  
-| Reason | Event message | Description |
+
+| Reason | Event message | Description|
 | --- | --- | --- |
 | NodeRebootError | Node auto-repair reboot action failed due to an operation failure: [error code] | This event is logged if an error affects the restart action. |
 | NodeReimageError | Node auto-repair reimage action failed due to an operation failure: [error code] | This event is logged if an error affects the reimage action. |
