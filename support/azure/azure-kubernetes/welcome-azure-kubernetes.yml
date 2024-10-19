@@ -124,6 +124,8 @@ landingContent:
             url: ./node-not-ready-after-being-healthy.md
           - text: Node not ready but then recovers
             url: ./node-not-ready-then-recovers.md
+          - text: Troubleshoot node auto-repair errors
+            url: ./availability-performance/node-auto-repair-errors.md
 
  # Card
   - title: Cannot connect to application hosted on AKS cluster
