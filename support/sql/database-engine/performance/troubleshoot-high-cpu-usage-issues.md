@@ -53,6 +53,10 @@ Use one of the following tools to check whether the SQL Server process is actual
 
 If `% User Time` is consistently greater than 90 percent (% User Time is the sum of processor time on each processor, its maximum value is 100% * (no of CPUs)), the SQL Server process is causing high CPU usage. However, if `% Privileged time` is consistently greater than 90 percent, your antivirus software, other drivers, or another OS component on the computer is contributing to high CPU usage. You should work with your system administrator to analyze the root cause of this behavior.
 
+- Performance Dashboard: In SQL Server Management Studio Right Click on your connection associated with SQL Server Instance ---> Reports ----> Standard Reports---> Performance Dashboard
+
+The dashboard will illustrate a graph titled "System CPU Utiliztion" with a bar chart , "blue" color indicates SQL Server engine CPU utilization while "orange" represents other operating system processes. Click on Refresh (F5) to see updated data displayed.
+
 ## Step 2: Identify queries contributing to CPU usage
 
 If the `Sqlservr.exe` process is causing high CPU usage, by far, the most common reason is SQL Server queries that perform table or index scans, followed by sort, hash operations and loops (nested loop operator or WHILE (T-SQL)). To get an idea of how much CPU the queries are currently using, out of overall CPU capacity, run the following statement:
