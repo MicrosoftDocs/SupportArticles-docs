@@ -229,4 +229,4 @@ To fix the issue, follow these steps:
    For example, john@outlook.com.
 1. Save the file and upload it again to Viva Glint.
 
-   **Note**: You can confirm the current upload by removing the invalid personal email addresses, and upload the corrected addresses in a future batch. However until they are corrected, personal emails in an invalid format will remain associated with the affected users in Viva Glint.
+   **Note**: You can confirm the current upload by removing the invalid personal email addresses, and add the corrected addresses in a future upload. However until they are corrected, personal emails in an invalid format will remain associated with the affected users in Viva Glint.
