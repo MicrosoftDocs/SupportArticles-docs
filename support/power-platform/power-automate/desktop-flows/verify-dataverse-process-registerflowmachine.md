@@ -27,7 +27,7 @@ For more information, see [the processes](#processes-that-should-be-activated-fo
 
 To solve this issue, activate the **RegisterFlowMachine** process.
 
-### Prerequites
+### Prerequisites
 
 You should have access to your organization endpoint like `https://[org].crm.dynamics.com`.
 
@@ -41,17 +41,17 @@ The organization endpoint could be found in [Environments](https://admin.powerpl
 
 2. Select the gear icon in the upper-right corner and select **Advanced Settings**.
 
-    :::image type="content" source="media/verify-dataverse-process-registerflowmachine/advanced-settings.png" alt-text="Screenshot of the Advanced Settings option that you can find it by selecting the gear icon.":::
+    :::image type="content" source="media/verify-dataverse-process-registerflowmachine/advanced-settings.png" alt-text="Screenshot of the Advanced Settings option by selecting the gear icon.":::
 
 3. Select **Settings** > **Customizations**.
 
-    :::image type="content" source="media/verify-dataverse-process-registerflowmachine/customizations.png" alt-text="Screenshot of the Customizations setting that you can find it by selecting the Settings.":::
+    :::image type="content" source="media/verify-dataverse-process-registerflowmachine/customizations.png" alt-text="Screenshot of the Customizations setting by selecting the Settings.":::
 
 4. Select **Customize the System**.
 
-    :::image type="content" source="media/verify-dataverse-process-registerflowmachine/customize-the-system.png" alt-text="Screenshot of the Customize the System option that you can select it to open the feature.":::
+    :::image type="content" source="media/verify-dataverse-process-registerflowmachine/customize-the-system.png" alt-text="Screenshot of the Customize the System option to open the feature.":::
 
-5. Go to **Components** > **Processes**, set the **View**  to **All**. Check the status of the **RegisterFlowMachine** process. If the status is **Deactivated**, go to step 6.
+5. Go to **Components** > **Processes** and set the **View**  to **All**. Check the status of the **RegisterFlowMachine** process. If the status is **Deactivated**, go to step 6.
 
     :::image type="content" source="media/verify-dataverse-process-registerflowmachine/registerflowmachine-process.png" alt-text="Screenshot that shows how to find the status of the RegisterFlowMachine process in Components.":::
 
