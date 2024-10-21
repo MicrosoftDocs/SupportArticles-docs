@@ -212,7 +212,7 @@ Warning message:
 
 > INVALID_PERSONAL_EMAIL: Line \<x\> the Personal Email value '\<email address\>' is not formatted like a valid email address.
 
-This issue occurs because the file you upload contains invalid values for the personal email address attribute.
+This issue occurs because the file you tried to upload contains invalid values for the personal email address attribute.
 
 ### Resolution
 
@@ -229,5 +229,4 @@ To fix the issue, follow these steps:
    For example, john@outlook.com.
 1. Save the file and upload it again to Viva Glint.
 
-   **Note**: You can also confirm this upload without correcting the invalid personal email values and correct them in future uploads. Personal emails with an invalid format will remain associated with these users in Glint until they are corrected.
-   . 
+   **Note**: You can confirm the current upload by removing the invalid personal email addresses, and upload the corrected addresses in a future batch. However until they are corrected, personal emails in an invalid format will remain associated with the affected users in Viva Glint.
