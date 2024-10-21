@@ -124,7 +124,7 @@ timestamp: on
 4. Put the cluster out of maintenance-mode.
 
 ```Bash
-sudo pcs property set maintenance-mode=true
+sudo pcs property set maintenance-mode=false
 ```
 
 5. Sync the cluster:
@@ -242,11 +242,11 @@ Warning: This command is deprecated and will be removed. Please use 'pcs resourc
               stop interval=0s timeout=20s (ip-172.17.223.36-stop-interval-0s)
 ```
 
-## Scenario 3:  Issue with SAPHana(High-performance ANalytic Appliance)
+## Scenario 3:  Issue with SAP HANA(High-performance ANalytic Appliance)
 
 ### Symptom 1
 
-SAPHana DB fails to start with `'unknown error'`
+SAP HANA DB fails to start with `'unknown error'`
 
 a. From the `/var/log/messages`, we can see `SRHOOK=SFAIL` indicating the cluster nodes are out of sync.
 b. Secondary cluster node is in `WAITING4PRIM` status.
@@ -310,7 +310,7 @@ SAPHana resource can't be start by pacemaker when there are `SYN` failures betwe
     sudo pcs property set maintenance-mode=true
     ```
     
-2. Check SAPHana DB and processes state. 
+2. Check SAP HANA DB and processes state. 
 
    a. Validate primary and secondary nodes are running SAP database and related SAP processes. Even though one node is designated as a slave and one node is a master, both nodes actually run a database. Master database is continuously synchronized to the slave database. In order to check if nodes can synchronize properly, we need to make sure that both nodes are correctly running the expected SAP DB(DataBase) and processes.
 
@@ -357,7 +357,7 @@ SAPHana resource can't be start by pacemaker when there are `SYN` failures betwe
     sapcontrol -nr <SAPInstanceNo> -function start
     ```
 
-3. Usually stop and start operation of HANA DB should synchronize both nodes. If we're still not seeing the synchronization, then we have to disable and re-enable replication between the nodes. SAP Administrator should be able to perform this step of disabling SAPHana system replication and then enabling the replication.
+3. Usually stop and start operation of SAP HANA DB should synchronize both nodes. If we're still not seeing the synchronization, then we have to disable and re-enable replication between the nodes. SAP Administrator should be able to perform this step of disabling SAP HANA system replication and then enabling the replication.
 > [!Caution]
 > When reconfiguring replication on an existing SAP cluster, it's imperative that the database/node with the most accurate and up-to-date data is designated as the **primary**. A wrong execution of this process might result in an outdated or "empty" database being overwritten with the most recent database, leading to loss of data and a need to restore from any existing backup.
 
@@ -393,7 +393,7 @@ SAPHana resource can't be start by pacemaker when there are `SYN` failures betwe
      site name: node1
    ```
 
-5. You can also check the failover process by running SAPHanaSR-showAttr command in primary VM(Virtual Machine). If the SYN issue is resolved, then the output of this command shows Primary in Promoted mode and Secondary in Demoted mode. Once you see the primary and secondary nodes in Promoted and Demoted mode respectively, remove the cluster out of maintenance-mode, this action allows pacemaker to start SAPHana DB.
+5. You can also check the failover process by running SAPHanaSR-showAttr command in primary VM(Virtual Machine). If the SYN issue is resolved, then the output of this command shows Primary in Promoted mode and Secondary in Demoted mode. Once you see the primary and secondary nodes in Promoted and Demoted mode respectively, remove the cluster out of maintenance-mode, this action allows pacemaker to start SAP HANA DB.
 
    ```Bash
    sudo pcs property set maintenance-mode=false
@@ -401,7 +401,7 @@ SAPHana resource can't be start by pacemaker when there are `SYN` failures betwe
 
 ### Symptom 2
 
-SAPHana Resource Experiencing Start Failures with `hana_xxx_roles` Reporting N (Standalone) mode.
+SAP HANA Resource Experiencing Start Failures with `hana_xxx_roles` Reporting N (Standalone) mode.
 Database resource doesn't primary or secondary on either node. With `hana_xxx_roles` reporting **N** for Standalone node mode.
 
 ```Output
@@ -431,7 +431,7 @@ Node Attributes:
     * lpa_xxx_lpt                       : 1711641128
 ```
 
-With migration summary reporting INF fail-count with failed SAPHana resource action reporting start failures due to "not running".
+With migration summary reporting INF fail-count with failed SAP HANA resource action reporting start failures due to "not running".
 
 ```Output
 Migration Summary:
@@ -497,7 +497,7 @@ sudo hdbnsutil -sr_state
 sudo pcs property set maintenance-mode=false
 ```
 
-8. Clear out fail count of SAPHana resource. 
+8. Clear out fail count of SAP HANA resource. 
 
 ```Bash
 sudo pcs resource cleanup <SAPHana resource name>
@@ -505,7 +505,7 @@ sudo pcs resource cleanup <SAPHana resource name>
 
 ### Symptom 3
 
-SAPHana Resource Start Failure with error message as shown:
+SAP HANA Resource Start Failure with error message as shown:
 
 ```Output
 'FAIL: process hdbdaemon HDB Daemon not running'
@@ -561,7 +561,7 @@ Due to incorrect `InstanceName` and `START_PROFILE` attributes SAP instance (ASC
 1.  Put the cluster under maintenance-mode.
 
 ```Bash
-sudo pcs property set maintanance-more=true
+sudo pcs property set maintanance-mode=true
 ```
 
 2. Verify the `pf(profile)` path from `/usr/sap/sapservices` file:
@@ -588,7 +588,7 @@ sudo pcs resource update ERS_RH2_ERS10 InstanceName=RH2_ERS10_nodersvi START_PRO
 4.  Put the cluster out of maintenance-mode.
 
 ```Bash
-sudo pcs property set maintanance-more=false
+sudo pcs property set maintanance-mode=false
 ```
 
 > [!Note]
