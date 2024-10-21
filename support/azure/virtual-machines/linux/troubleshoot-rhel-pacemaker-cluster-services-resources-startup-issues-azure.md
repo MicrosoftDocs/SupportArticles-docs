@@ -281,7 +281,7 @@ sudo pcs status
         last-rc-change='Sat May 22 09:36:32 2021', queued=0ms, exec=3093ms
 ```
 ### Cause
-Pacemaker can't start SAPHana resource when there are `SYN` failures between primary and secondary nodes.
+Pacemaker can't start SAP HANA resource when there are `SYN` failures between primary and secondary nodes.
 
 ```Bash
 sudo SAPHanaSR-showAttr
@@ -299,7 +299,7 @@ sudo SAPHanaSR-showAttr
 
 ### Resolution
 
-SAPHana resource can't be start by pacemaker when there are `SYN` failures between primary and secondary cluster nodes. To mitigate this issue, we must manually enable `SYN` between the primary and secondary nodes.
+SAP HANA resource can't be start by pacemaker when there are `SYN` failures between primary and secondary cluster nodes. To mitigate this issue, we must manually enable `SYN` between the primary and secondary nodes.
 
 > [!Important]
 > Steps 2,3 & 4 are to be performed using SAP administrator account as these steps involve using SAP System ID to stop, start and re-enable replication manually.
@@ -361,7 +361,7 @@ SAPHana resource can't be start by pacemaker when there are `SYN` failures betwe
 > [!Caution]
 > When reconfiguring replication on an existing SAP cluster, it's imperative that the database/node with the most accurate and up-to-date data is designated as the **primary**. A wrong execution of this process might result in an outdated or "empty" database being overwritten with the most recent database, leading to loss of data and a need to restore from any existing backup.
 
-4. After enabling replication, check the system replication status as <HANA SID> account by calling the `systemReplicationStatus.py` SAP Python script. The SAP binaries are typically available as shown: 
+4. After enabling replication, check the system replication status as `HANA SID` account by calling the `systemReplicationStatus.py` SAP Python script. The SAP binaries are typically available as shown: 
 
    ```Output
    /hana/shared/A00/HDB00/exe/python_support
@@ -561,7 +561,7 @@ Due to incorrect `InstanceName` and `START_PROFILE` attributes SAP instance (ASC
 1.  Put the cluster under maintenance-mode.
 
 ```Bash
-sudo pcs property set maintanance-mode=true
+sudo pcs property set maintenance-mode=true
 ```
 
 2. Verify the `pf(profile)` path from `/usr/sap/sapservices` file:
@@ -588,7 +588,7 @@ sudo pcs resource update ERS_RH2_ERS10 InstanceName=RH2_ERS10_nodersvi START_PRO
 4.  Put the cluster out of maintenance-mode.
 
 ```Bash
-sudo pcs property set maintanance-mode=false
+sudo pcs property set maintenance-mode=false
 ```
 
 > [!Note]
