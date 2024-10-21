@@ -1,7 +1,7 @@
 ---
 title: Replay Markup Language Utilities
 description: This article discusses a group of tools that are used by support professionals to troubleshoot SQL Server.
-ms.date: 06/11/2023
+ms.date: 10/21/2024
 ms.custom: sap:SQL Server Management, Query and Data Tools
 ms.reviewer: sureshka, jopilov, toddhayn, troymoen, v-jayaramanp
 ms.topic: article
@@ -36,14 +36,15 @@ After you capture a trace for an instance of SQL Server, you can use RML Utiliti
 
 |Version number|Description|
 |---|---|
-|[09.04.0102](https://www.microsoft.com/download/details.aspx?id=104868)| Indicates the current web release that's available from the Microsoft Download Center. It supports all released versions of SQL Server (SQL Server 2022, SQL Server 2019, SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, and SQL Server 2008).|
-|[9.04.0100](https://www.microsoft.com/download/details.aspx?id=103126)| Is the previous web release that's available from the Microsoft Download Center. It supports all released versions of SQL Server (SQL Server 2019, SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008, SQL Server 2005, and SQL Server 2000).|
-|[9.04.0098](https://www.microsoft.com/download/details.aspx?id=54090)| Indicates the current release package that is included with the Database Experimentation Assistant tool. It supports all released versions of SQL Server.|
+|[09.04.0103](https://www.microsoft.com/download/details.aspx?id=106287)| Indicates the current web release that's available from the Microsoft Download Center. It supports all released versions of SQL Server (SQL Server 2022, SQL Server 2019, SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, and SQL Server 2008).|
+|[09.04.0102](https://www.microsoft.com/download/details.aspx?id=104868)| Indicates the previous web release that's available from the Microsoft Download Center. It supports all released versions of SQL Server (SQL Server 2022, SQL Server 2019, SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, and SQL Server 2008).|
+|[9.04.0100](https://www.microsoft.com/download/details.aspx?id=103126)| Indicates a previous web release that's available from the Microsoft Download Center. It supports all released versions of SQL Server (SQL Server 2019, SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008, SQL Server 2005, and SQL Server 2000).|
+|[9.04.0098](https://www.microsoft.com/download/details.aspx?id=54090)| Indicates a previous web release package that is included with the Database Experimentation Assistant tool. It supports all released versions of SQL Server.|
 |9.04.0097| Indicates current release available from the SQL Nexus site that supports all released versions of SQL Server.|
 |9.04.0051| Is the previous web release that's available from the Microsoft Download Center that supports SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008, SQL Server 2005, and SQL Server 2000.|
-|9.04.0004| Is the previous web release that supports SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008, SQL Server 2005, and SQL Server 2000.|
-|9.01.0109| Is the previous web release that supports SQL Server 2008 R2, SQL Server 2008, SQL Server 2005, and SQL Server 2000.|
-|9.00.0023| Is the previous web release that supports SQL Server 2005 and SQL Server 2000.|
+|9.04.0004| Is a previous web release that supports SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008, SQL Server 2005, and SQL Server 2000.|
+|9.01.0109| Is a  previous web release that supports SQL Server 2008 R2, SQL Server 2008, SQL Server 2005, and SQL Server 2000.|
+|9.00.0023| Is a previous web release that supports SQL Server 2005 and SQL Server 2000.|
 |8.10.0010| Is the initial web release that supports SQL Server 2000 and SQL Server 7.0.|
   
 The current version of RML Utilities for SQL Server supersedes any earlier versions. You must uninstall any earlier version of RML Utilities for SQL Server before you install the current version. The current version of the tool suite contains important software updates, improved features (process *.trc* and *.xel* files) and reports, and performance and scalability improvements.
@@ -61,7 +62,7 @@ The current version of RML Utilities for SQL Server supersedes any earlier versi
 
 RML Utilities for SQL Server is useful if you want to simulate application testing when it's impractical or impossible to test by using the real application. In a test environment, it may be difficult to generate the same user load that exists in the production environment. You could use RML Utilities for SQL Server to replay a production workload in a test environment and assess the performance effect of any changes. For example, you could test an upgrade to SQL Server 2008 or the application of a SQL Server service pack. Additionally, you can use RML Utilities for SQL Server to analyze and compare various replay workloads. This kind of regression analysis would otherwise be a difficult process that you would have to do manually.
 
-The Help file contains a Quick Start topic. This topic includes a brief exercise that will familiarize you with every RML tool. To open the Help file, select **Start**, point to **All Programs**, point to **RML Utilities for SQL Server**, point to **Help**, and then select **RML Help**.
+The Help file contains a Quick Start topic. This topic includes a brief exercise that familiarizes you with every RML tool. To open the Help file, select **Start**, point to **All Programs**, point to **RML Utilities for SQL Server**, point to **Help**, and then select **RML Help**.
 
 ## Tools in RML Utilities for SQL Server
 
@@ -81,14 +82,15 @@ For a complete description of every tool and sample usage, see the RML Help file
 
 ### Dependencies for Reporter
 
-1. You have to make sure that the Report Viewer controls are available either in the same folder as *Reporter.exe* or in the Global Assembly Cache (GAC). The DLLs that *Reporter.exe* requires are:
+You have to make sure that the Report Viewer controls are available either in the same folder as *Reporter.exe* or in the Global Assembly Cache (GAC). The DLLs that *Reporter.exe* requires are:
 
    - *Microsoft.ReportViewer.Common.dll*
    - *Microsoft.ReportViewer.DataVisualization.dll*
    - *Microsoft.ReportViewer.ProcessingObjectModel.dll*
    - *Microsoft.ReportViewer.WinForms.dll*
 
-   You can download these DLLs by using the following PowerShell script:
+1. The latest versions of RML Utilities include these DLLs in the application folder.
+1. If not available, you can download these DLLs by using the following PowerShell script:
 
    ```powershell
    Register-PackageSource -Name MyNuGet -Location https://www.nuget.org/api/v2 -ProviderName NuGet
@@ -127,13 +129,15 @@ You can obtain these DLLs from the respective software packages of the vendors:
 
 ### Dependencies for ReadTrace and Ostress
 
-ReadTrace and Ostress use the ODBC and OLEDB drivers shipped as part of the [SQL Server Native Client](/sql/relational-databases/native-client/applications/installing-sql-server-native-client).
+ReadTrace and Ostress use the ODBC and OLEDB drivers shipped as part of the [SQL Server Native Client](/sql/relational-databases/native-client/applications/installing-sql-server-native-client). Starting with the version **09.04.0103**, the RML Utilities suite isn't dependent on SQL Server Native client (SNAC) only. It can use the Microsoft ODBC or OLEDB drivers on the system where it's installed.
+
 If you plan to analyze Extended Event files (_*.xel_), make sure that [Visual C++ 2010 Redistributable](/cpp/windows/latest-supported-vc-redist) is installed on the system.
 
 ## Known issues and fixes
 
 |Issue|Resolution|
 |------|---|
+|ReadTrace encounters an error "Unable to connect to the specified server. Initial HRESULT: 0x80040154" on machines where SQL Server isn't installed or only SQL Server 2022 is installed|Fixed in version 09.04.0103. As a workaround, you can install SQL Server Native Client or another version of SQL Server. HRESULT 0x80040154 REGDB_E_CLASSNOTREG Class not registered is a header file *winerror.h* that means a COM component isn't registered because likely it isn't installed. It happens because SQL Server 2022 doesn't ship the SQL Server Native Client.|
 |ReadTrace encounters "ERROR: Event runtime check: Detected missing column [cached_text] in event [sp_cache_remove] at event sequence 209494"|Fixed in version 09.04.0102. As a workaround, you can add trace flags (`-T28 -T29`) to the ReadTrace command line.|
 |Reporter encounters "Could not load file or assembly 'Reporter, Version=9.4.10000.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. Strong name validation failed. (Exception from HRESULT: 0x8013141A)"|Fixed in version 09.04.0102. As a workaround, you can create the following registry key to override the strong name verification: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\StrongName\Verification\Reporter,31BF3856AD364E35`.|
 |ReadTrace fails with error "Unable to connect to the specified server. Initial HRESULT: 0x80040154". Ostress fails with error "Attempt to establish connection failed. SSL Security error.".|See instructions to [Install SQL Server Native Client](/sql/relational-databases/native-client/applications/installing-sql-server-native-client).|
