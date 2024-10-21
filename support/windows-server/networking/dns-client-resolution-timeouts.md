@@ -8,24 +8,22 @@ ms.topic: troubleshooting
 ms.reviewer: kaushika, arrenc, dpracht
 ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
 ---
-# NET: DNS: DNS client resolution timeouts
+# DNS client resolution timeouts
 
 This document describes the fallback and timeout behavior that exist when one or more Domain Name System (DNS) Servers IPs are configured on a Windows DNS client.
 
-_Applies to:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 and above.  
 _Original KB number:_ &nbsp; 2834226
 
 ## Summary
 
-For more information, see [NET: DNS: Forwarders and Conditional Forwarders resolution timeouts](https://support.microsoft.com/kb/2834250).
+For more information, see [Forwarders and Conditional Forwarders resolution timeouts](https://support.microsoft.com/kb/2834250).
 
 Configuring DNS clients with more than one DNS Server IP adds additional fault tolerance to your DNS infrastructure. Adding multiple DNS Servers IPs allows DNS names to continue to be resolved if failures of the only configured DNS Server, of the underlying network link, or the supporting network infrastructure that connects a given client to a DNS Server. Such name failures may cause application or component hangs, resource outages waiting for dependent timeout expirations that directly or indirectly cause operational failures.
 
 For these reasons, it's recommended to configure any Windows client with more than one DNS server, but it's important to be aware of the Windows client resolution process, as it's different based on how many DNS servers we've configured.
 
 ## What is the default behavior of a DNS client when a single DNS server is configured on the NIC
-
-The behavior is the following (tested on Windows XP, Windows 7, and Windows 8 clients with a single NIC):  
 
 |Time (seconds since start)|Action|
 |---|---|
@@ -42,14 +40,14 @@ In this scenario, the client is then trying to query the same DNS server five ti
 
 Example
 
-Windows 8 Client with a single DNS server configured, querying for Microsoft.com
+Windows DNS Client with a single DNS server configured, querying for Microsoft.com
 
 Ipconfig on the client
 
 > IPv4 Address. . . . . . . . . . . : 10.0.0.31(Preferred)  
 DNS Servers . . . . . . . . . . . :  10.0.0.1
 
-Network Monitor output
+Network trace output
 
 > Time                      Time Offset    TimeDelta      Source        Dest          Details  
 >
@@ -63,51 +61,7 @@ Network Monitor output
 >
 > 6:23:41.8394589     8.0330777     4.0210332     10.0.0.31     10.0.0.1     DNS:QueryId = 0xA5B4, QUERY (Standard query), Query  for microsoft.com of type Host Addr on class Internet
 
-## What is the default behavior of a Windows XP DNS client when two DNS servers are configured on the NIC
-
-The behavior is the following (tested on Windows XP clients with a single NIC):
-
-|Time (seconds since start)| Action|
-|---|---|
-|0| Client queries the first DNS server of the list |
-|1| If no response is received after 1 second, client queries the second DNS server of the list and at the same time queries again the first DNS server |
-|3| If no response is received after 2 more seconds, client queries again the first DNS server |
-|7| If no response is received after 4 more seconds, client queries again the first DNS server |
-|9| If no response is received after 2 more seconds, client stops querying |
-  
-Any Name Error response by any of the DNS servers will cause the process to stop - client doesn't retry with the next server if the response was negative. Client tries new servers only if the previous are unreachable.
-
-In this scenario, the client is then trying to query mostly the first DNS server, and the secondary once.
-
-Example
-
-Windows XP Client with two DNS servers configured querying for Microsoft.com
-
-Ipconfig on the client
-
-```console
-IPv4 Address. . . . . . . . . . . : 10.0.0.31(Preferred)  
-DNS Servers . . . . . . . . . . . : 10.0.0.1  
-                                10.0.0.2
-```
-
-Network Monitor output
-
-> Time                      Time Offset    TimeDelta      Source        Dest          Details
->
-> 6:39:09.8013750     0.0000000     0.0000000     10.0.0.31     10.0.0.1     DNS:QueryId = 0x1960, QUERY (Standard query), Query  for microsoft.com of type Host Addr on class Internet
->
-> 6:39:10.8013750     1.0000000     1.0000000     10.0.0.31     10.0.0.2     DNS:QueryId = 0x1960, QUERY (Standard query), Query  for microsoft.com of type Host Addr on class Internet
->
-> 6:39:10.8013750     1.0000000     0.0000000     10.0.0.31     10.0.0.1     DNS:QueryId = 0x1960, QUERY (Standard query), Query  for microsoft.com of type Host Addr on class Internet
->
-> 6:39:12.8013750     3.0000000     2.0000000     10.0.0.31     10.0.0.1     DNS:QueryId = 0x1960, QUERY (Standard query), Query  for microsoft.com of type Host Addr on class Internet
->
-> 6:39:16.8013750     7.0000000     4.0000000     10.0.0.31     10.0.0.1     DNS:QueryId = 0x1960, QUERY (Standard query), Query  for microsoft.com of type Host Addr on class Internet  
-
-## What is the default behavior of a Windows 7 or Windows 8 DNS client when two DNS servers are configured on the NIC
-
-The behavior is the following (tested on Windows 7 and Windows 8 clients with a single NIC):
+## What is the default behavior of a DNS client when two DNS servers are configured on the NIC
 
 | Time (seconds since start)| Action |
 |---|---|
@@ -122,7 +76,7 @@ Any Name Error response by any of the DNS servers will cause the process to stop
 
 Example
 
-Windows 8 Client with two DNS servers configured querying for Microsoft.com
+Windows DNS Client with two DNS servers configured querying for Microsoft.com
 
 Ipconfig on the client
 
@@ -132,7 +86,7 @@ DNS Servers . . . . . . . . . . . : 10.0.0.1
                                 10.0.0.2  
 ```
 
-Network Monitor output
+Network trace output
 
 > Time                      Time Offset    TimeDelta      Source        Dest          Details
 >
@@ -153,8 +107,6 @@ Network Monitor output
 ## What is the default behavior of a DNS client when three or more DNS servers are configured on the NIC
 
 How many of them are used and what are the timeouts?
-
-The behavior is the following (tested on Windows XP, Windows 7, and Windows 8 clients with a single NIC):
 
 | Time (seconds since start)| Action |
 |---|---|
@@ -184,7 +136,7 @@ DNS Servers . . . . . . . . . . . : 10.0.0.1
                                 10.0.0.5
 ```
 
-Network Monitor output
+Network trace output
 
 > Time                      Time Offset    TimeDelta      Source        Dest          Details
 >
@@ -216,4 +168,5 @@ Network Monitor output
 
 ## More information
 
-Shall the client have more than one NIC active with different DNS servers configured on them, the client resolution behavior is slightly different.
+Shall the client have more than one NIC active with different DNS servers configured on them, the client resolution behavior is slightly different.  
+If name resolution tools such as Nslookup is used, then the client resolution behavior is different. 
