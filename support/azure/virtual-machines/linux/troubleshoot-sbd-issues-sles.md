@@ -2,7 +2,7 @@
 title: Troubleshoot SBD service failure in SUSE Pacemaker clusters
 description: Provides troubleshooting guidance if SBD services fail
 ms.reviewer: rnirek
-ms.author: rnirek
+ms.author: hsisodia
 author: rnirek
 ms.topic: troubleshooting
 ms.date: 09/24/2024
@@ -69,7 +69,7 @@ The following example demonstrates how to determine that the cluster startup iss
       ```
 4. Check the status of each service. In the following example, you can see that all dependency services, such as Corosync, are active, but the SBD service is not running: 
 
-      ```bash
+    ```bash
     sudo systemctl status corosync
     ```
     ```output
@@ -90,6 +90,7 @@ The following example demonstrates how to determine that the cluster startup iss
     Aug 01 04:49:15 nfs-0 corosync[24094]:   [QUORUM] Members[2]: 1 2
     Aug 01 04:49:15 nfs-0 corosync[24094]:   [MAIN ] Completed service synchronization, ready to provide service.
     Aug 01 04:49:15 nfs-0 corosync[24075]: Starting Corosync Cluster Engine (corosync): [ OK ]
+    ```
 
 5. Check the SBD service status. The service doesn't start, and it returns a `Failed to start Shared-storage based fencing daemon` error message. 
 
@@ -118,39 +119,45 @@ The Pacemaker service is not running, and the SBD service is in a failed state o
 ### Resolution
 
 1. Make sure that the setup is correctly configured as documented in [SUSE - set up Pacemaker on SUSE Linux Enterprise Server in Azure ](/azure/sap/workloads/high-availability-guide-suse-pacemaker).
-
-2. Make sure that the `iscsid` and `iscsi` services are enabled and running:
-
-    ```  bash
-    sudo systemctl enable iscsi
-    ```
-    ```bash
-    sudo systemctl enable iscsid
-    ```
-    ```bash
-    sudo systemctl status iscsi 
-    ```
-    ```bash
-    sudo systemctl status iscsid
-    ```
-    If the services are working, the output should resemble the following:
+2. Place the cluster in maintenance-mode.
+   ```bash
+   sudo crm configure property maintenance-mode=true
+   ```
+3. Make sure that the `iscsid` and `iscsi` services are enabled :
+   ```  bash
+   sudo systemctl enable iscsi
+   ```
+   ```bash
+   sudo systemctl enable iscsid
+   ```
+4. Verify the status of the of `iscsid` and `iscsi` services are running:
+   ```bash
+   sudo systemctl status iscsi
+   ```
+   ```bash
+   sudo systemctl status iscsid
+   ```
+   If the services are working, the output should resemble the following:    
+   ```output
+   iscsi.service - Login and scanning of iSCSI devices
+   Loaded: loaded (/usr/lib/systemd/system/iscsi.service; enabled; vendor preset: enabled)
+   Active: active (exited) since Thu 2024-08-01 04:18:51 UTC; 31min ago
+   Docs: man:iscsiadm(8)
+   man:iscsid(8)
+   Main PID: 1823 (code=exited, status=0/SUCCESS)
+   Tasks: 0 (limit: 4096)
+   CGroup: /system.slice/iscsi.service
     
-    ```output
-    iscsi.service - Login and scanning of iSCSI devices
-     Loaded: loaded (/usr/lib/systemd/system/iscsi.service; enabled; vendor preset: enabled)
-     Active: active (exited) since Thu 2024-08-01 04:18:51 UTC; 31min ago
-       Docs: man:iscsiadm(8)
-             man:iscsid(8)
-    Main PID: 1823 (code=exited, status=0/SUCCESS)
-      Tasks: 0 (limit: 4096)
-     CGroup: /system.slice/iscsi.service
-    
-    Aug 01 04:18:51 nfs-0 systemd[1]: Starting Login and scanning of iSCSI devices...
-    Aug 01 04:18:51 nfs-0 iscsiadm[1823]: Logging in to [iface: default, target: iqn.2006-04.nfs.local:nfs, portal: 10.0.0.17,3260]
-    Aug 01 04:18:51 nfs-0 iscsiadm[1823]: Logging in to [iface: default, target: iqn.2006-04.nfs.local:nfs, portal: 10.0.0.18,3260]
-    Aug 01 04:18:51 nfs-0 iscsiadm[1823]: Logging in to [iface: default, target: iqn.2006-04.nfs.local:nfs, portal: 10.0.0.19,3260]
-    Aug 01 04:18:51 nfs-0 systemd[1]: Started Login and scanning of iSCSI devices.
-    ```
+   Aug 01 04:18:51 nfs-0 systemd[1]: Starting Login and scanning of iSCSI devices...
+   Aug 01 04:18:51 nfs-0 iscsiadm[1823]: Logging in to [iface: default, target: iqn.2006-04.nfs.local:nfs, portal: 10.0.0.17,3260]
+   Aug 01 04:18:51 nfs-0 iscsiadm[1823]: Logging in to [iface: default, target: iqn.2006-04.nfs.local:nfs, portal: 10.0.0.18,3260]
+   Aug 01 04:18:51 nfs-0 iscsiadm[1823]: Logging in to [iface: default, target: iqn.2006-04.nfs.local:nfs, portal: 10.0.0.19,3260]
+   Aug 01 04:18:51 nfs-0 systemd[1]: Started Login and scanning of iSCSI devices.
+   ```
+5. Remove the cluster out of maintenance-mode.
+   ```bash
+   sudo crm configure property maintenance-mode=false
+   ```
 ## Cause 2: Configurations issues 
 
 Incorrect SBD configurations that have, for example, missing or incorrectly named SBD devices or syntax errors can cause the SBD service to fail.
@@ -291,7 +298,7 @@ Perform the following checks:
     [1:0:0:1]    disk    Msft     Virtual Disk     1.0   /dev/sdd
     [2:0:0:0]    disk    LIO-ORG  sbdnfs           4.0   /dev/sde
     ```
-    Run the same commands to connect to the rest of the devices. Also, run the same set of commands on the other cluster node.
+    Run the same commands to connect to the rest of the devices. Also, run the same set of commands on the other node in the cluster.
 
 5. After iSCSI devices are detected, the command output should reflect the SBD devices:
 
@@ -401,7 +408,7 @@ To clear the node slot, follow these steps:
     ```
 
 > [!NOTE]
-> In these commands, replace `<SBD_DEVICE>`,`<DEVICE_NAME>`, and `<NODENAME>` with the actual values.
+> In these commands, replace `<SBD_DEVICE>`,`<DEVICE_NAME>`, and `<NODENAME>` with the actual values as per the cluster setup.
 
 ## Cause 5: SBD service doesn't start after you add new SBD device
 
