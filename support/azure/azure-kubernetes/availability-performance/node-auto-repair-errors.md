@@ -47,4 +47,4 @@ To identify the type of a node auto-repair error, check the following Kubernetes
 
 - Node auto-repair is a best-effort service and doesn't guarantee that your node can be restored to Ready status. We recommend that you actively monitor and alert on node NotReady issues, and troubleshoot and resolve these issues yourself. For more information, see [basic troubleshooting of node NotReady issues](./node-not-ready-basic-troubleshooting.md).
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
