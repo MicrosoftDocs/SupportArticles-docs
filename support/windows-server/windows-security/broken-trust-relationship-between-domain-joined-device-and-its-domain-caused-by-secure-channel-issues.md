@@ -20,11 +20,12 @@ When secure channel issues cause broken trust relationship between domain joined
   
   > The trust relationship between this workstation and the primary domain failed.
 
-  ![alt text](media/broken-trust-relationship-between-domain-joined-device-and-its-domain-caused-by-secure-channel-issues/image.png)
+  :::image type="content" source="media/broken-trust-relationship-between-domain-joined-device-and-its-domain-caused-by-secure-channel-issues/screenshot-of-the-error-message-during-sign-in.png" alt-text="Screenshot of the error message during sign-in.":::
 
 - You can log in using a local user or cached credentials.
 - You see an Event 3210 from NETLOGON source on System Event Viewer log:
 
+  :::image type="content" source="media/broken-trust-relationship-between-domain-joined-device-and-its-domain-caused-by-secure-channel-issues/screenshot-of-the-event-id-3210.png" alt-text="Screenshot of the event ID 3210.":::
   ![alt text](media/broken-trust-relationship-between-domain-joined-device-and-its-domain-caused-by-secure-channel-issues/image-1.png)
 
   > Log name: System  

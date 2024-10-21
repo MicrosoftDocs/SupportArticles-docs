@@ -20,7 +20,7 @@ There is no specific event you can find to confirm this cause. Instead, you can 
 
 Also, you can check if the system has started recently:
 
-![alt text](media/scenario-active-directory-having-newer-pwd-last-set-value-than-client-device/image.png)
+:::image type="content" source="media/scenario-active-directory-having-newer-pwd-last-set-value-than-client-device/screenshot-of-event-id-12.png" alt-text="Screenshot of event ID 12.":::
 
 > Event ID 12  
 > Log name: System  
@@ -29,7 +29,7 @@ Also, you can check if the system has started recently:
 
 You can also check the uptime. If the Virtual Machine was reverted to a previous snapshot, the uptime would be recent. It could also be related to a desired operation, not only because of a snapshot reversion.
 
-![alt text](media/scenario-active-directory-having-newer-pwd-last-set-value-than-client-device/image-1.png)
+:::image type="content" source="media/scenario-active-directory-having-newer-pwd-last-set-value-than-client-device/screenshot-of-the-task-manager.png" alt-text="Screenshot of the Task Manager.":::
 
 > [!NOTE]
 > You need to confirm if the boot time was provoked by a desired reboot of the machine. Communication with the user would be required to determine what was done on the computer.

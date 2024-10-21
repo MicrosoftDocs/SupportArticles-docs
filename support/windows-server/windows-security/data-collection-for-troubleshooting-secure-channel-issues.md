@@ -16,7 +16,7 @@ To determine the cause of the secure channel issues, collect these data informat
 
 On the affected device, check for successful password change events in System Event Viewer log (Event ID 5823 - Source: NETLOGON). This will help to find out the last time the password was changed by the system and use it as a reference value (if present - consider it could be overwritten by newer events):
 
-![alt text](media/data-collection-for-troubleshooting-secure-channel-issues/image.png)
+:::image type="content" source="media/data-collection-for-troubleshooting-secure-channel-issues/screenshot-of-event-id-5823.png" alt-text="Screenshot of event ID 5823.":::
 
 > Log name: System  
 > Source: NETLOGON  
@@ -43,7 +43,7 @@ Follow these steps to look for the **cupdtime** value from registry.
 > By default, only "System" account has access to the registry key "HKLM\SECURITY", so you have 2 options, use PsExec tool to run the following steps in System context or give the desired user full permissions on above mentioned registry key (remember to remove them after no longer needed):
 
 1. Run `reg query "HKLM\SECURITY\Policy\Secrets\$MACHINE.ACC\CupdTime"`.  
-![alt text](media/data-collection-for-troubleshooting-secure-channel-issues/image-1.png)
+:::image type="content" source="media/data-collection-for-troubleshooting-secure-channel-issues/screenshot-of-running-command-to-retrieve-the-cupdtime-value.png" alt-text="Screenshot of running command to retrieve the cupdtime value.":::
 
 2. In this example, you receive the value **26A38C1AA0F4DA01**.
 
@@ -60,7 +60,7 @@ w32tm /ntte 133688107438220070
 
 You receive the following output:
 
-![alt text](media/data-collection-for-troubleshooting-secure-channel-issues/image-2.png)
+:::image type="content" source="media/data-collection-for-troubleshooting-secure-channel-issues/screenshot-of-the-w32tm-command-to-get-the-date-time.png" alt-text="Screenshot of the w32tm command to get the date time.":::
 
 The value is **154731 14:32:23.8220070 - 8/22/2024 7:32:23 AM**.
 
@@ -68,7 +68,7 @@ The value is **154731 14:32:23.8220070 - 8/22/2024 7:32:23 AM**.
 
 1. Open Active Directory Users and Computers console, navigate to the **Organizational Unit** where the computer object belongs to, and look for the pwdLastSet attribute to see the value:
 
-   ![alt text](media/data-collection-for-troubleshooting-secure-channel-issues/image-3.png)
+   :::image type="content" source="media/data-collection-for-troubleshooting-secure-channel-issues/the-pwd-last-set-attribute-in-organizational-unit-properties.png" alt-text="The pwdLastSet attribute in Organizational Unit properties.":::
 
 2. Alternatively, you can use PowerShell (Active Directory module is required) and run:
 
@@ -76,7 +76,7 @@ The value is **154731 14:32:23.8220070 - 8/22/2024 7:32:23 AM**.
    Get-ADComputer '<ComputerName>' -properties PasswordLastSet | Format-List
    ```
 
-   ![alt text](media/data-collection-for-troubleshooting-secure-channel-issues/image-4.png)
+   :::image type="content" source="media/data-collection-for-troubleshooting-secure-channel-issues/get-password-last-set-value-by-using-a-powershell-command.png" alt-text="Get PasswordLastSet value by using a Powershell command.":::
 
 3. The above information will give us the value for a single domain controller (the one we are connecting to through the console or when running the commands). Consider gathering the metadata for the affected computer object from Active Directory, this way you can confirm the value is consistent across all domain controllers in the environment:
 
@@ -88,6 +88,6 @@ repadmin /showobjmeta * "CN=ComputerName,OU=Computers,DC=domain,DC=com" > c:\tem
 
 Open the file and look for the values of the pwdLastSet attribute (you will get metadata for the object from all Domain Controllers available in the environment) and compare them, in a good scenario, the data in the attribute should be consistent in all Domain Controllers. You will see other attributes’ information on the output, but we are focusing just on the required attribute. This is an example of the output:
 
-![alt text](media/data-collection-for-troubleshooting-secure-channel-issues/image-5.png)
+:::image type="content" source="media/data-collection-for-troubleshooting-secure-channel-issues/sample-of-computer-name-metadata.png" alt-text="Sample of computer name metadata.":::
 
 The above information will work as a reference and can help us in troubleshooting when secure channel is broken.
