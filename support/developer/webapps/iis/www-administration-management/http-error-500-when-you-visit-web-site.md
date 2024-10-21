@@ -1,7 +1,7 @@
 ---
 title: HTTP Error 500.0 Internal Server Error
 description: This article provides resolutions for the HTTP Error 500.0 error that occurs when you visit a web site that is hosted on IIS.
-ms.date: 10/16/2024
+ms.date: 10/21/2024
 ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
 ms.reviewer: zixie
 ---
