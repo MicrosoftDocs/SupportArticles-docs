@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot RHEL(RedHat Enterprise Linux) pacemaker cluster services and resources startup issues Azure
 description: Provides troubleshooting guidance for issues related to cluster resources or services in RHEL(RedHat Enterprise Linux) Pacemaker cluster
-ms.reviewer: rnirek
+ms.reviewer: rnirek,srsakthi
 ms.author: skarthikeyan
 ms.topic: troubleshooting
 ms.date: 10/16/2024
