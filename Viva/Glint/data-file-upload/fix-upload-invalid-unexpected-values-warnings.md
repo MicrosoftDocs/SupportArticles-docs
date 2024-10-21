@@ -3,7 +3,7 @@ title: Resolve file upload warnings related to invalid or unexpected values
 description: Fix warnings that occur when you upload employee attribute data to Microsoft Viva Glint. These warnings are related to invalid or unexpected values.
 manager: dcscontentpm
 ms.reviewer: aweixelman
-ms.date: 08/16/2024
+ms.date: 10/21/2024
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
@@ -210,24 +210,24 @@ To fix the issue, follow these steps:
 
 Warning message:
 
-> INVALID_PERSONAL_EMAIL: Line \<x\> the Personal Email value 'y' is not formatted like a valid email address.
+> INVALID_PERSONAL_EMAIL: Line \<x\> the Personal Email value '\<email address\>' is not formatted like a valid email address.
 
-This issue occurs if the file that you upload contains personal emails that aren't in a valid email format: user@outlook.com
+This issue occurs because the file you upload contains invalid values for the personal email address attribute.
 
 ### Resolution
 
-To address the issue:
+To fix the issue, follow these steps:
 
-**Option 1:**
+1. Open the employee attribute data file in Excel. If the file is in .csv format, [import it in Excel]([https://support.microsoft.com/office/import-data-from-a-csv-html-or-text-file-b62efe49-4d5b-4429-b788-e1211b5e90f6](https://support.microsoft.com/en-us/office/import-or-export-text-txt-or-csv-files-5250ac4c-663c-47ce-937b-339e391393ba)) to preserve the data in the expected format.
+1. Locate the row that's listed in the warning message.
 
-1. Confirm the import and add users with invalid personal emails to be corrected with a future upload.
+   **Note**: The header row isn't included in the row count. For example, if the warning indicates line 20, go to row 21.
+1. Replace the invalid **Personal Email** value with a valid value. A valid email address uses the following syntax:
 
-**Option 2:**
+   \<username\>@\<email domain\>
 
-1. Open the employee attribute data file in Excel. If the file is in .csv format, [import it in Excel](https://support.microsoft.com/en-us/office/import-data-from-a-csv-html-or-text-file-b62efe49-4d5b-4429-b788-e1211b5e90f6) to preserve the data in the expected format.
-1. Locate the row or rows that are listed in the warning message.
-2. Update personal email values to a valid email format that contains:
-   - a username
-   - an @ symbol
-   - a domain name
-3. Save the file and upload it again to Viva Glint.
+   For example, john@outlook.com.
+1. Save the file and upload it again to Viva Glint.
+
+   **Note**: You can also confirm this upload without correcting the invalid personal email values and correct them in future uploads. Personal emails with an invalid format will remain associated with these users in Glint until they are corrected.
+   . 
