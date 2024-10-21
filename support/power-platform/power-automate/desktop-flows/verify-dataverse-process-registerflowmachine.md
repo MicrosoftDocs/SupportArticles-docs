@@ -35,7 +35,7 @@ The organization endpoint could be found in [Environments](https://admin.powerpl
 
 ### Steps to activate the RegisterFlowMachine process
 
-1. Open the following url in a web browser (replace [org] with your orgnization identifier) and sign in.
+1. Open the following url in a web browser (replace [org] with your organization identifier) and sign in.
 
    `https://[org].crm.dynamics.com`
 
