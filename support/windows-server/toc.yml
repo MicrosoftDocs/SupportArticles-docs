@@ -495,15 +495,6 @@ items:
       href: ./active-directory/this-property-limited-64-values.md
     - name: Troubleshoot AD replication error 8589
       href: ./active-directory/replication-error-8589.md
-    - name: Trust relationship broken between domain joined device and its domain
-      href: ./active-directory/broken-trust-relationship-between-domain-joined-device-and-its-domain-caused-by-secure-channel-issues.md
-      items:
-        - name: Data collection for troubleshooting secure channel issues
-          href: ./active-directory/data-collection-for-troubleshooting-secure-channel-issues.md
-        - name: Active Directory having newer password value than client device
-          href: ./active-directory/scenario-active-directory-having-newer-password-value-than-client-device.md
-        - name: Client device having a newer password value than Active Directory
-          href: ./active-directory/scenario-client-device-having-a-newer-password-value-than-active-directory.md
     - name: Use Adminpak to remotely administer computers
       href: ./active-directory/use-adminpak-remotely-administer-computers.md
     - name: Use Directory Service to manage AD objects
@@ -2932,6 +2923,16 @@ items:
       href: ./windows-security/performance-tuning-ntlm-authentication-maxconcurrentapi.md
     - name: Windows updates add new NTLM pass-through authentication protections for CVE-2022-21857
       href: ./windows-security/windows-updates-add-new-ntlm-pass-through-authentication-protections.md
+  - name: Netlogon, secure channel, DC Locator
+    items:
+      - name: Trust relationship broken between domain joined device and its domain
+        href: ./windows-security/broken-trust-relationship-between-domain-joined-device-and-its-domain-caused-by-secure-channel-issues.md      
+      - name: Data collection for troubleshooting secure channel issues
+        href: ./windows-security/data-collection-for-troubleshooting-secure-channel-issues.md
+      - name: Active Directory having newer password value than client device
+        href: ./windows-security/scenario-active-directory-having-newer-password-value-than-client-device.md
+      - name: Client device having a newer password value than Active Directory
+        href: ./windows-security/scenario-client-device-having-a-newer-password-value-than-active-directory.md
   - name: Permissions, access control, and auditing
     items:
     - name: .bak log files are deleted and lost
