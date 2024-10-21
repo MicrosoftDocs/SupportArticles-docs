@@ -41,4 +41,4 @@ Once the issue has been resolved at the Active Directory end, reset computer sec
 ## More information
 
 - Active Directory replication troubleshooting - [Troubleshooting Active Directory Replication Problems](/windows-server/identity/ad-ds/manage/troubleshoot/troubleshooting-active-directory-replication-problems)
-- Active Directory required ports - [Configure firewall for AD domain and trusts](config-firewall-for-ad-domains-and-trusts.md)
+- Active Directory required ports - [Configure firewall for AD domain and trusts](../active-directory/config-firewall-for-ad-domains-and-trusts.md)

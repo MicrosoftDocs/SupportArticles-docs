@@ -25,8 +25,7 @@ When secure channel issues cause broken trust relationship between domain joined
 - You can log in using a local user or cached credentials.
 - You see an Event 3210 from NETLOGON source on System Event Viewer log:
 
-  :::image type="content" source="media/broken-trust-relationship-between-domain-joined-device-and-its-domain-caused-by-secure-channel-issues/screenshot-of-the-event-id-3210.png" alt-text="Screenshot of the event ID 3210.":::
-  ![alt text](media/broken-trust-relationship-between-domain-joined-device-and-its-domain-caused-by-secure-channel-issues/image-1.png)
+  :::image type="content" source="media/broken-trust-relationship-between-domain-joined-device-and-its-domain-caused-by-secure-channel-issues/screenshot-of-the-event-id-3210.png" alt-text="Screenshot of the event ID 3210.":::  
 
   > Log name: System  
   > Source: NETLOGON  
@@ -98,7 +97,7 @@ The following lists further information regarding the topics mentioned within th
 - PsExec - [PsExec - Sysinternals | Microsoft Learn](/sysinternals/downloads/psexec)
 - Nltest - [Nltest | Microsoft Learn](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731935(v=ws.11))
 - Netlogon logging - [Enable debug logging for Netlogon service - Windows Client | Microsoft Learn](../../windows-client/windows-security/enable-debug-logging-netlogon-service.md)
-- Cached credentials - [Credentials Processes in Windows Authentication | Microsoft Learn](/security/windows-authentication/credentials-processes-in-windows-authentication#BKMK_CachedCredentialsAndValidation)
+- Cached credentials - [Credentials Processes in Windows Authentication | Microsoft Learn](/windows-server/security/windows-authentication/credentials-processes-in-windows-authentication#BKMK_CachedCredentialsAndValidation)
 
 ### Terminology
 
