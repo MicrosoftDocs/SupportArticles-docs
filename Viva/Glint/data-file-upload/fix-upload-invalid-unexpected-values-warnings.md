@@ -24,7 +24,7 @@ Warning message:
 
 > RECORD_STAGING_FAILURE: Found \<x\> existing record that has been previously deleted corresponding to line number \<y\>.
 
-This issue occurs when users are deleted from Microsoft Entra ID and their corresponding records in Viva Glint are marked as **Deleted**.
+This issue occurs when users are deleted from Microsoft Entra ID and their corresponding records in Viva Glint are marked as **Deleted**. The [Disregard Employee IDs of previously deleted employees](/viva/glint/setup/manage-general-settings#disregard-employee-ids-of-previously-deleted-employees) setting manages how Viva Glint processes deleted user records.
 
 ### Resolution
 
