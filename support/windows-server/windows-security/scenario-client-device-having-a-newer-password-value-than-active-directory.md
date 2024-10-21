@@ -6,7 +6,7 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, herbertm
-ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
+ms.custom: sap:Windows Security\Netlogon, secure channel, DC locator, csstroubleshoot
 ---
 # Client device having a newer password value than Active Directory
 

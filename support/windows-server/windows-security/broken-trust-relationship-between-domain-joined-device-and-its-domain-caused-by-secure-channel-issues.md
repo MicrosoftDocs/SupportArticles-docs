@@ -6,7 +6,7 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, herbertm
-ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
+ms.custom: sap:Windows Security\Netlogon, secure channel, DC locator, csstroubleshoot
 ---
 # Broken trust relationship between domain joined device and its domain caused by secure channel issues
 
