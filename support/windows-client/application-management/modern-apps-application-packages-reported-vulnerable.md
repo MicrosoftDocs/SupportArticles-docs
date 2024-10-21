@@ -40,7 +40,7 @@ In these scenarios, there are multiple versions of the app per user in the syste
 
 To resolve this issue, use one or more of the following methods:
 
-### Method 1: Ensure that the app is updated for all users in the system by reconnecting to the machine with user profiles.
+### Method 1: Ensure that the app is updated for all users in the system by reconnecting to the machine with user profiles
 
 1. Identify the user profiles in which the old Appx version package is installed by using the Appx cmdlet [Get-AppxPackage](/powershell/module/appx/get-appxpackage) from an elevated PowerShell window:
 
@@ -50,7 +50,7 @@ To resolve this issue, use one or more of the following methods:
 
 2. Reconnect to the machine with the identified user.
 
-### Method 2: Remove the old packages (*.appx*).
+### Method 2: Remove the old packages (*.appx*)
 
 1. Identify the user profiles in which the Appx package is installed with the Appx cmdlet [Get-AppxPackage](/powershell/module/appx/get-appxpackage) from an elevated PowerShell prompt:
 
@@ -78,7 +78,7 @@ To resolve this issue, use one or more of the following methods:
    > - [Remove-AppxPackage (Appx)](/powershell/module/appx/remove-appxpackage)
    > - [Remove-AppxProvisionedPackage](/powershell/module/dism/remove-appxprovisionedpackage)
 
-### Method 3: Delete the user profiles pointing to the old version of the app.
+### Method 3: Delete the user profiles pointing to the old version of the app
 
 To do so, see the following articles:
 
