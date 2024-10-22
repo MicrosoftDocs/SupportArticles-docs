@@ -185,11 +185,11 @@
           href: ../calendars/delegates-accept-meetings-automatically.md
         - name: Calendar diagnostic logs (CDL)
           items:
-            - name: Use calendar diagnostic logs
+            - name: Use Calendar Diagnostic logs
               href: ../calendars/cdl/use-calendar-diagnostic-logs.md
-            - name: Get calendar diagnostic logs
+            - name: Get Calendar Diagnostic logs
               href: ../calendars/cdl/get-calendar-diagnostic-logs.md
-            - name: Analyze calendar diagnostic logs
+            - name: Analyze Calendar Diagnostic logs
               href: ../calendars/cdl/analyze-calendar-diagnostic-logs.md
             - name: Get the meeting ID
               href: ../calendars/cdl/get-meeting-id.md
