@@ -12,7 +12,7 @@ ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory
 
 This article describes how to export Root Certification Authority Certificate.
 
-_Applies to:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003, Windows Server 2022  
 _Original KB number:_ &nbsp; 555252
 
 ## Tips
