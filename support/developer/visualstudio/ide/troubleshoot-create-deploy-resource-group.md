@@ -2,9 +2,7 @@
 title: Troubleshoot creating and deploying Azure resource groups
 description: Provides a resolution for an issue that occurs when you try to create and deploy Azure resource groups through Visual Studio.
 ms.date: 10/22/2024
-author: mumian
-ms.author: jgao
-ms.reviewer: puichan
+ms.reviewer: jgao, puichan, v-sidong
 ms.custom: sap:Integrated Development Environment (IDE)\Other
 ---
 
