@@ -1,7 +1,7 @@
 ---
 title: Export Root Certification Authority Certificate
 description: describes how to export Root Certification Authority Certificate.
-ms.date: 12/26/2023
+ms.date: 10/22/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
