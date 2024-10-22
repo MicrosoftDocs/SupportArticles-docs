@@ -5484,6 +5484,11 @@
         "source_path": "virtual-machines/windows/allocation-failure-classic.md",
         "redirect_url": "/troubleshoot/azure/virtual-machines/windows/allocation-failure",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "virtual-machines/linux/linux-upgrade-suse-15sp1.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/linux-upgrade-sles",
+        "redirect_document_id": false
       }
   ]
 }
