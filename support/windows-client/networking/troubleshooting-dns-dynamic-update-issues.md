@@ -33,13 +33,13 @@ For more information on how DHCP option 81 works, see the following two articles
 - [2.2.7 DHCPv4 Option Code 81 (0x51) - Client FQDN Option](/openspecs/windows_protocols/ms-dhcpe/e4c46e9d-5013-4ab0-9434-ccd11f1347f5)
 - [Unexpected DNS record registration behavior if DHCP server uses "Always dynamically update DNS records"](../../windows-server/networking/dns-registration-behavior-when-dhcp-server-manages-dynamic-dns-updates.md) (This article mentions Windows DNS client behavior.)
 
-### Configure dynamic update as "Secure only"
+### Configure dynamic updates as "Secure only"
 
 The dynamic update on the domain zone should be configured as **Secure only**.
 
 If client computers performing dynamic registration are domain-joined (which should be verified by the domain's administrator or solution architect), configure the domain zone to allow dynamic updates with **Secure only** to ensure consistent behavior on the dynamic registration.
 
-### Enable timestamp for dynamic records
+### Enable timestamps for dynamic records
 
 By default, dynamic records don't include a timestamp. When configuring zone properties, you can enable the **Scavenge Stale Records** option under the **Aging** section of the zone's properties dialog. Once this option is enabled, newly registered records include a timestamp.
 
@@ -56,7 +56,7 @@ The scavenging cycle is a low-priority thread of the DNS process, so it might no
 
 ### Maintain standard DNS zone permissions
 
-Standard DNS zone permissions should remain intact:
+Standard DNS zone permissions should remain intact.
 
 In an AD-integrated zone setup, permissions follow a standard hierarchy similar to the New Technology File System (NTFS) or file systems. This means that if an account has permission to create, delete, or modify a zone and its child objects, it can perform these operations. By default, only Enterprise Admins (forest-wide) and Domain Admins (domain-wide) have these privileges.
 
@@ -76,7 +76,7 @@ The DHCP server should be hosted on a separate server, not on a DC running Activ
 
 In a secure update setup, the DHCP server uses its machine's domain account to register DNS records. When the DHCP server runs on a DC, it uses the DC's account to register records. This means that static records can be overwritten by the DHCP server if the FQDN option is enabled and the DHCP server isn't configured with a dedicated service account. This can cause issues like the unintended scavenging of static records.
 
-To prevent such problems, the DHCP server should be configured with a service account and run on a separate server. For more information, see [How to configure DNS dynamic updates in Windows Server](../../windows-server/networking/configure-dns-dynamic-updates-windows-server-2003.md).
+To prevent such problems, the DHCP server should be configured with a service account and run on a separate server. For more information, see [How to configure DNS dynamic updates in Windows](../../windows-server/networking/configure-dns-dynamic-updates-windows-server-2003.md).
 
 ## Troubleshoot general and known issues
 
