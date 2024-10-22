@@ -10,7 +10,7 @@
   href: ./release-management-client-crash.md
 - name: Screen readers can't read tool windows
   href: ./screen-readers-not-read-tool-windows.md
-- name: Troubleshoot Azure Resource Group Issues
+- name: Troubleshoot Azure Resource Group issues
   href: ./troubleshoot-create-deploy-resource-group.md
 - name: Troubleshoot Class Designer errors
   href: ./troubleshoot-class-designer-errors.md
