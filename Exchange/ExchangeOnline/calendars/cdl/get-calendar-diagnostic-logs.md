@@ -42,7 +42,7 @@ The following sections present different methods to get the CDLs for a meeting.
 
 ## Use the Get-CalendarDiagnosticObjectsSummary.ps1 script
 
-Select one of the following methods to get raw CDLs, enhanced CDLs that contain additional diagnostic information, and a concise timeline of meeting actions:
+Select either of the following methods to get raw CDLs, enhanced CDLs that contain additional diagnostic information, and a concise timeline of meeting actions:
 
 - [Get CDLs by using the meeting ID](#get-cdls-by-using-the-meeting-id)
 - [Get CDLs by using the subject of the meeting](#get-cdls-by-using-the-subject-of-the-meeting)
