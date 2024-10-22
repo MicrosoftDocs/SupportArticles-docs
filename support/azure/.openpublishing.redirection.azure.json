@@ -5488,7 +5488,7 @@
       {
         "source_path": "virtual-machines/linux/linux-upgrade-suse-15sp1.md",
         "redirect_url": "/troubleshoot/azure/virtual-machines/linux/linux-upgrade-sles",
-        "redirect_document_id": false
+        "redirect_document_id": true
       }
   ]
 }
