@@ -39,4 +39,4 @@ For example, a meeting organizer might have one of the following questions:
 - Why were attendees inadvertently removed from a meeting?
 - Why is a conference room double-booked?
 
-**Note**: If a user reports a meeting issue to you, consider asking them to [provide the ID](./get-meeting-id.md) of the meeting in question.
+**Note**: If a user reports a meeting issue to you, consider asking them to [provide you the ID](./get-meeting-id.md) of the meeting in question. The preferred way to get CDLs is by using the meeting ID.
