@@ -82,7 +82,7 @@ Select one of the following methods, depending on your Outlook client:
 
    - Use a desktop app. For example, if you have [MFCMAPI](https://github.com/stephenegriffin/mfcmapi/releases) installed, select **Tools** > **Hex editor** to open the **Hex Editor** window, and then paste the Base64-encoded text into the **Base 64** section of the **Hex Editor** window. The decoded text appears in the **Text (Ansi/Unicode)** section of the **Hex Editor** window.
 
-   The following screenshot shows an example of the Base64-encoded text block in the .eml file.
+   The following screenshot shows an example of the Base64-encoded text block in an .eml file.
 
    :::image type="content" source="media/get-meeting-id/base64-encode-text-block.png" border="true" alt-text="Screenshot of a Base64-encoded text block." lightbox="media/get-meeting-id/base64-encode-text-block-lrg.png":::
 
@@ -103,7 +103,10 @@ Select one of the following methods, depending on your Outlook client:
 
 ### Outlook on the web
 
-Use either of the following methods. Select Method A if your Outlook Inbox or Deleted Items folder contains a meeting notification, such as a meeting invitation, attendee response, meeting update, or meeting cancellation. Otherwise, select Method B.
+Use either of the following methods.
+
+> [!TIP]
+> Select Method A if your Outlook Inbox or Deleted Items folder contains a meeting notification, such as a meeting invitation, attendee response, meeting update, or meeting cancellation. Otherwise, select Method B.
 
 - Method A: Use the same steps that are provided for the [new Outlook for Windows](#new-outlook-for-windows).
 - Method B: Use the [network tool](/microsoft-edge/devtools-guide-chromium/network/) in Microsoft Edge, as described in the following steps:
