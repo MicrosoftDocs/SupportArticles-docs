@@ -4,14 +4,14 @@
   href: ./developer-license-notification-not-dismiss.md
 - name: Can't switch between organizational accounts
   href: ./cannot-switch-accounts.md
+- name: Issues when creating and deploying Azure resource groups
+  href: ./troubleshoot-create-deploy-resource-group.md
 - name: Performance and crashes issues
   href: ./performance-crash-issue.md
 - name: Release Management Client crashes 
   href: ./release-management-client-crash.md
 - name: Screen readers can't read tool windows
   href: ./screen-readers-not-read-tool-windows.md
-- name: Troubleshoot Azure Resource Group issues
-  href: ./troubleshoot-create-deploy-resource-group.md
 - name: Troubleshoot Class Designer errors
   href: ./troubleshoot-class-designer-errors.md
 - name: Troubleshoot Docker client errors on Windows
