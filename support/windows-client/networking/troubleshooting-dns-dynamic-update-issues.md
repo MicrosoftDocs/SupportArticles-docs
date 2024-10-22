@@ -66,7 +66,7 @@ However, challenges can arise when a DHCP server updates DNS records on behalf o
 
 As mentioned earlier, Microsoft recommends that client machines update their own DNS records rather than relying on the DHCP server. This is due to several reasons, and Microsoft has also implemented a design change to enforce this behavior. This change prevents the DHCP server from updating both A and PTR records for clients. To override this behavior, refer to [Unexpected DNS record registration behavior if DHCP server uses "Always dynamically update DNS records"](../../windows-server/networking/dns-registration-behavior-when-dhcp-server-manages-dynamic-dns-updates.md).
 
-Ideally, the client should update its own DNS record. However, if a record was previously updated by the DHCP server, the actual client won't be able to modify it. To address this, some enterprises enforce the DHCP server to continue to update the client’s records, which is strongly discouraged. 
+Ideally, the client should update its own DNS record. However, if a record was previously updated by the DHCP server, the actual client won't be able to modify it. To address this, some enterprises enforce the DHCP server to continue to update the client's records, which is strongly discouraged. 
 
 The recommended approach is to allow the DHCP server, or the scavenging process, to remove the records. Once it's removed, the client will then be able to update it.
 
@@ -103,7 +103,7 @@ To prevent such problems, the DHCP server should be configured with a service ac
 > [!NOTE]
 > This section is a multipart series which discusses various aspects from Windows client to server to be checked when such issue occurs.
 
-We should begin with basic checks, such as determining whether the issue affects multiple clients, clients on the same subnet, or a specific client. This helps narrow down whether the problem lies with the client, server, or network. For an explanation of how DNS dynamic updates are triggered, including examples, see [How to configure DNS dynamic updates in Windows Server - Windows Server](../../windows-server/networking/configure-dns-dynamic-updates-windows-server-2003.md#how-windows-based-computers-update-their-dns-names.md).
+We should begin with basic checks, such as determining whether the issue affects multiple clients, clients on the same subnet, or a specific client. This helps narrow down whether the problem lies with the client, server, or network. For an explanation of how DNS dynamic updates are triggered, including examples, see [How to configure DNS dynamic updates in Windows Server - Windows Server](../../windows-server/networking/configure-dns-dynamic-updates-windows-server-2003.md#how-windows-based-computers-update-their-dns-names).
 
 Now as we understand the DNS dynamic updates. Let's also follow a checklist to ensure that the settings are in place for dynamic updates for the client.
 
@@ -172,7 +172,7 @@ DNS Server logging is discussed in [DNS Logging and Diagnostics](/previous-versi
 
 ### Scenario: DHCP server can't complete dynamic update on behalf of client or the registrations are happening with a delay
 
-DHCP Server is configured to update DHCP client's record. The configuration is as specified in [How to configure DNS dynamic updates in Windows Server](../../windows-server/networking/configure-dns-dynamic-updates-windows-server-2003.md#how-dhcpdns-update-interaction-works.md). The windows clients are also configured to honor DHCP option 81 and is configured as mentioned in [Unexpected DNS record registration behavior when the DHCP server manages dynamic DNS updates](../../windows-server/networking/dns-registration-behavior-when-dhcp-server-manages-dynamic-dns-updates.md).
+DHCP Server is configured to update DHCP client's record. The configuration is as specified in [How to configure DNS dynamic updates in Windows Server](../../windows-server/networking/configure-dns-dynamic-updates-windows-server-2003.md#how-dhcpdns-update-interaction-works). The windows clients are also configured to honor DHCP option 81 and is configured as mentioned in [Unexpected DNS record registration behavior when the DHCP server manages dynamic DNS updates](../../windows-server/networking/dns-registration-behavior-when-dhcp-server-manages-dynamic-dns-updates.md).
 
 > [!NOTE]
 > Microsoft recommends that the client should register its record instead of DHCP or any other device.
