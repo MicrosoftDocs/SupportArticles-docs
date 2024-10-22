@@ -21,22 +21,22 @@ When you access, modify, or create a Distributed File System (DFS) Namespace on 
 You use the DFS Management console, on a machine that's a member server or a member client with RSAT File Services tools installed, to view, manage or perform changes in a DFS Namespace. This issue occurs because the DFS Namespace service running on the DFS Namespace server you have (just moments ago) successfully connected to (via Remote Procedure Call (RPC) over Transmission Control Protocol (TCP)), crashes or stops responding.
 
 > [!NOTE]
-> If the DFS Namespace service doesn't restart or isn't manually started on the DFS Namespace server, subsequent tries to access the namespace via the DFS Management console will result in the error "[The Namespace cannot be queried. The RPC Server is unavailable](/troubleshoot/windows-server/active-directory/namespace-not-queried-rpc-server-unavailable)."
+> If the DFS Namespace service doesn't restart or isn't manually started on the DFS Namespace server, subsequent tries to access the namespace via the DFS Management console will result in the error "[The Namespace cannot be queried. The RPC Server is unavailable](namespace-not-queried-rpc-server-unavailable.md)."
 
 ### Wireshark trace example
 
 The Server Message Block (SMB) Create Request for `netdfs` is successful. The DFS Namespace service is still started or running:
 
 ```output
-192.168.0.45	192.168.0.42	SMB2	190	Create Request File: netdfs
-192.168.0.42	192.168.0.45	SMB2	210	Create Response File: netdfs
+192.168.0.45    192.168.0.42    SMB2    190    Create Request File: netdfs
+192.168.0.42    192.168.0.45    SMB2    210    Create Response File: netdfs
 ```
 
 After the DFS Namespace service stops responding, the following error occurs:
 
 ```output
-192.168.0.45	192.168.0.42	NETDFS	310	dfs_GetInfo request
-192.168.0.42	192.168.0.45	SMB2	130	Ioctl Response, Error: STATUS_PIPE_BROKEN
+192.168.0.45    192.168.0.42    NETDFS    310    dfs_GetInfo request
+192.168.0.42    192.168.0.45    SMB2    130    Ioctl Response, Error: STATUS_PIPE_BROKEN
 ```
 
 ## Start the DFS Namespace service

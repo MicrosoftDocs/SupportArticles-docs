@@ -96,7 +96,7 @@ Examine how the conversations end in NETMON or WireShark. Check if the client an
 
 #### Connection closed during SSL handshake
 
-In the ServerHello packet, if the cipher suite used is a Diffie-Hellman suite, and the traffic is between Windows 2012 or earlier and Windows 2016 or later, this algorithm changes starting with Windows 2016 security patches. You should disable this group of cipher suites. For more information, see [Applications experience forcibly closed TLS connection errors when connecting SQL Servers in Windows](/troubleshoot/windows-server/identity/apps-forcibly-closed-tls-connection-errors).
+In the ServerHello packet, if the cipher suite used is a Diffie-Hellman suite, and the traffic is between Windows 2012 or earlier and Windows 2016 or later, this algorithm changes starting with Windows 2016 security patches. You should disable this group of cipher suites. For more information, see [Applications experience forcibly closed TLS connection errors when connecting SQL Servers in Windows](../../../windows-server/certificates-and-public-key-infrastructure-pki/apps-forcibly-closed-tls-connection-errors.md).
 
 If the connection is closed after the ClientHello, check if there's a TLS 1.0 or TLS 1.2 mismatch between the client and server. If they're the same, check the enabled cipher suites and enabled hashes on both machines.
 
