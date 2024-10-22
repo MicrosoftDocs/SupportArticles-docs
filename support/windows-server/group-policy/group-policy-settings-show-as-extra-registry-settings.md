@@ -16,7 +16,7 @@ This article describes a registry setting that allows you to configure the Group
 
 ## ADMX/ADML file versions
 
-You use updated ADMX/ADML files in the Central Store under the *SYSVOL* folder for Group Policy tools on a domain controller. The Group Policy Management Console (GPMC) on clients uses the ADMX/ADML files in the Central Store instead of the local folder *c:\\windows\\PolicyDefinitions*.
+You use updated ADMX/ADML files in the Central Store under the *SYSVOL* folder for Group Policy tools on a domain controller. The Group Policy Management Console (GPMC) on clients uses the ADMX/ADML files in the Central Store instead of the local folder *C:\\Windows\\PolicyDefinitions*.
 
 In this situation, some Group Policy settings can't be configured on computers (either domain controllers or clients with Remote Server Administration Tools (RSAT) installed) that use the different versions of the ADMX/ADML files which you use for different OS versions or applications. The settings appear as **Extra Registry Settings** in the Group Policy Editor when the *PolicyDefinitions* folder doesn't have the correct versions of ADMX/ADML files. The updated ADMX/ADML files in the domain Central Store (SYSVOL) don't contain the editor data for these settings.
 
@@ -33,7 +33,7 @@ But you can't merge the ADMX/ADML files, because the different versions use the 
 
 [!INCLUDE [Registry important alert](../../includes/registry-important-alert.md)]
 
-There's a registry setting that allows the use of local ADMX/ADML files at *c:\\windows\\PolicyDefinitions* instead of the Central Store for computers running the Group Policy Editor.
+There's a registry setting that allows the use of local ADMX/ADML files at *C:\\Windows\\PolicyDefinitions* instead of the Central Store for computers running the Group Policy Editor.
 
 To use the ADMX/ADML files in the local store, manually set the following registry value to `1` under `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Group Policy`:
 
