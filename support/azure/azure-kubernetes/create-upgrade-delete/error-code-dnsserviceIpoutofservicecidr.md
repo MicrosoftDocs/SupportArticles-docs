@@ -1,14 +1,14 @@
 ---
 title: Troubleshoot the DnsServiceIpOutOfServiceCidr error code
-description: Learn how to troubleshoot the DnsServiceIpOutOfServiceCidr error when you try to create or upgrade an Azure Kubernetes Service (AKS) cluster.
+description: Learn how to troubleshoot the DnsServiceIpOutOfServiceCidr error when you try to create or upgrade an AKS cluster.
 ms.date: 10/17/2024
 editor: v-jsitser
 ms.reviewer: rissing, chiragpa, edneto, v-leedennis
 ms.service: azure-kubernetes-service
-#Customer intent: As an Azure Kubernetes user, I want to troubleshoot the InUseRouteTableCannotBeDeleted error code so that I can successfully delete an Azure Kubernetes Service (AKS) cluster.
+#Customer intent: As an Azure Kubernetes user, I want to troubleshoot the InUseRouteTableCannotBeDeleted error so that I can successfully delete an AKS cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
-# Troubleshoot the DnsServiceIpOutOfServiceCidr error code
+# Troubleshoot the DnsServiceIpOutOfServiceCidr error
 
 This article discusses how to identify and resolve the `DnsServiceIpOutOfServiceCidr` error that occurs when you try to create or upgrade an Azure Kubernetes Service (AKS) cluster.
 
@@ -20,10 +20,9 @@ For more detailed information about the upgrade process, see [Upgrade an AKS clu
 
 ## Symptoms
 
-An AKS cluster create fails, and you receive a `DnsServiceIpOutOfServiceCidr` error message.
+An AKS cluster create operation fails, and you receive a `DnsServiceIpOutOfServiceCidr` error message.
 
 >`(DnsServiceIpOutOfServiceCidr) The DNS service IP 10.0.0.10 is out of the range defined by service CIDR 10.200.0.0/16.`
-
 
 - **Code**: `DnsServiceIpOutOfServiceCidr`
 - **Message**: The DNS service IP 10.0.0.10 is out of the range defined by service CIDR 10.200.0.0/16.
@@ -31,10 +30,10 @@ An AKS cluster create fails, and you receive a `DnsServiceIpOutOfServiceCidr` er
 
 ## Cause
 
-This error occurs when the DNS service IP (`--dns-service-ip`) for AKS is out of the range defined by service CIDR (`--service-cidr`).
+This error occurs if the DNS service IP (`--dns-service-ip`) for AKS is out of the range that's defined by the service CIDR (`--service-cidr`).
 
 ## Solution
 
-Make sure that the DNS service IP is within the range defined by service CIDR.
+Make sure that the DNS service IP is within the range that's defined by service CIDR.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
