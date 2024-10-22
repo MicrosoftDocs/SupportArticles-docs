@@ -3,7 +3,7 @@ title: Resolve file upload warnings related to invalid or unexpected values
 description: Fix issues that cause invalid or unexpected values when you upload employee attribute data to Viva Glint.
 manager: dcscontentpm
 ms.reviewer: aweixelman
-ms.date: 10/21/2024
+ms.date: 10/22/2024
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
@@ -14,7 +14,7 @@ ms.custom:
   - CI192293
 ---
 
-# Resolve file upload issues related to invalid or unexpected values
+# Resolve file upload warnings related to invalid or unexpected values
 
 When you upload employee attribute data to Microsoft Viva Glint, you receive one of the following warning messages. Select the warning that you experience from the list at the top of the article, and follow the appropriate resolution to fix the issue.
 
@@ -30,12 +30,12 @@ This issue occurs if users are deleted from Microsoft Entra ID and their corresp
 
 To fix the issue, use one of the following methods:
 
-- If you upload the data by using **Import** on the **People** page, confirm the upload. After you do this, records that are marked as deleted in Microsoft Entra ID and Viva Glint will be skipped. All other data without other errors or warnings will be imported into Viva Glint.
+- If you upload the data by using **Import** on the **People** page, confirm the upload. This way records that are marked as deleted in Microsoft Entra ID and Viva Glint will be skipped. All other data without other errors or warnings will be imported into Viva Glint.
 
   **Note**: If you upload the data by using Viva Glint Secure File Transfer Protocol (SFTP), records that are marked as deleted will be automatically skipped.
 - Remove the deleted records and upload the file again. Follow these steps:
 
-  1. If necessary, work with your Microsoft 365 or Entra ID administrator to verify which users are deleted from Microsoft Entra ID.
+  1. If necessary, work with your Microsoft 365 or Entra ID administrator to confirm the users that are deleted from Microsoft Entra ID.
   1. Open the employee attribute data file in Excel. If the file is in .csv format, [import it into Excel](https://support.microsoft.com/office/import-data-from-a-csv-html-or-text-file-b62efe49-4d5b-4429-b788-e1211b5e90f6) to preserve the data in the expected format.
   1. Remove the rows that are listed in the warning message.
 
@@ -218,7 +218,7 @@ This issue occurs because the file that you tried to upload contains invalid val
 
 To fix the issue, follow these steps:
 
-1. Open the employee attribute data file in Excel. If the file is in .csv format, [import it in Excel](https://support.microsoft.com/office/import-or-export-text-txt-or-csv-files-5250ac4c-663c-47ce-937b-339e391393ba) to preserve the data in the expected format.
+1. Open the employee attribute data file in Excel. If the file is in .csv format, [import it into Excel](https://support.microsoft.com/office/import-or-export-text-txt-or-csv-files-5250ac4c-663c-47ce-937b-339e391393ba) to preserve the data in the expected format.
 1. Locate the row that's listed in the warning message.
 
    **Note**: The header row isn't included in the row count. For example, if the warning indicates line 20, go to row 21.
@@ -229,4 +229,4 @@ To fix the issue, follow these steps:
    For example, john@outlook.com.
 1. Save the file, and upload it again to Viva Glint.
 
-   **Note**: You can confirm the current upload by removing the invalid personal email addresses, and adding the corrected addresses in a future upload. However, until they are corrected, personal email messages that are in an invalid format will remain associated with the affected users in Viva Glint.
+   **Note**: You can confirm the current upload, and add the corrected addresses in a future upload. However, until they are corrected, personal email addresses that are in an invalid format will remain associated with the affected users in Viva Glint.
