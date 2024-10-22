@@ -114,7 +114,7 @@ IIS on Windows Server 2016 and later versions define the following HTTP status c
 | 400.8 | Invalid Timeout |
 | 400.9 | Invalid Lock Token |
 
-The following HTTP sub-status codes were introduced as of IIS 8.0 that was included in Windows Server 2012 (operating system that is now out of support):
+The following HTTP sub-status codes were introduced since IIS 8.0 that was included in Windows Server 2012 (operating system that is now out of support):
 
 | Code | Description |
 |---|---|
@@ -287,7 +287,7 @@ IIS on Windows Server 2016 and later versions define the following HTTP status c
 | Code | Description | Notes |
 |---|---|---|
 | 503.0 | Application pool unavailable. | The request is sent to an application pool that is currently stopped or disabled. To resolve this issue, make sure that the destination application pool is started. The event log may give information about why the application pool is stopped or disabled. |
-| 503.2 | Concurrent request limit exceeded. | The `appConcurrentRequestLimit` property is set to a value that is lower than the current number of concurrent requests. IIS on Windows Server 2016 and above does not allow more concurrent requests than the value of the `appConcurrentRequestLimit` property. |
+| 503.2 | Concurrent request limit exceeded. | The `appConcurrentRequestLimit` property is set to a value that is lower than the current number of concurrent requests. IIS on Windows Server 2016 and later versions does not allow more concurrent requests than the value of the `appConcurrentRequestLimit` property. |
 | 503.3 | ASP.NET queue full |
 | 503.4 | FastCGI queue full |
 
