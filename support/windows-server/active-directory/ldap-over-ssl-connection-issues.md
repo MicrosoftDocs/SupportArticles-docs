@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot LDAP over SSL connection problems
 description: Describes how to troubleshoot connection problems that involve LDAP over SSL (LDAPS).
-ms.date: 12/26/2023
+ms.date: 10/22/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
