@@ -27,7 +27,7 @@ This article helps you in troubleshooting issues related to creating and deployi
 
 To solve this issue, upgrade your Visual Studio installation to the latest [Long-Term Support (LTS) version](/visualstudio/install/update-visual-studio). It will enhance the reliability and overall experience of your Visual Studio environment.
 
-## References
+## More information
 
 - [Release Dates and Build numbers](/visualstudio/releases/2022/release-history#release-dates-and-build-numbers)
 - [Visual Studio Product Lifecycle and Servicing](/visualstudio/productinfo/vs-servicing)
