@@ -1,22 +1,22 @@
 ---
 title: Errors when you run WinRM commands
 description: Describes the errors that are triggered when you run various WinRM commands to verify local computer functionality in a Windows Remote Management environment.
-ms.date: 12/26/2023
+ms.date: 10/22/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
 ms.custom: sap:System Management Components\WinRM, including event forwarding and collections, csstroubleshoot
 ---
-# Errors when you run WinRM commands to check local functionality in a Windows Server 2008 environment
+# Errors when you run WinRM commands to check local functionality in a Windows Server
 
-This article provides a solution to errors that occur when you run WinRM commands to check local functionality in a Windows Server 2008 environment.
+This article provides a solution to errors that occur when you run WinRM commands to check local functionality in a Windows Server environment.
 
 _Original KB number:_ &nbsp; 2269634
 
 ## Symptoms
 
-When you run WinRM commands to check the local functionality on a server in a Windows Server 2008 environment, you may receive error messages that resemble the following ones:
+When you run WinRM commands to check the local functionality on a server in a Windows Server environment, you may receive error messages that resemble the following ones:
 
 > winrm e winrm/config/listener  
 WSManFault Message = The client cannot connect to the destination specified in the requests. Verify that the service on the destination is running and is accepting request. Consult the logs and documentation for the WS-Management service running on the destination, most commonly IIS or WinRM. If the destination is the WinRM service, run the following command on the destination to analyze and configure the WinRM service: "winrm quickconfig"  

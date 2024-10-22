@@ -6,7 +6,7 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Group Policy\Applocker or software restriction policies , csstroubleshoot
+ms.custom: sap:Group Policy\Applocker or software restriction policies, csstroubleshoot
 ---
 # How to apply Group Policy objects to Terminal Services servers
 

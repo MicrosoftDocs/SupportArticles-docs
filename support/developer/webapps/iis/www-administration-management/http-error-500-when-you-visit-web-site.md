@@ -98,7 +98,7 @@ This problem occurs because a script mapping isn't valid.
 
 ### Resolution
 
-To make sure that the script-mapping points to the *ISAPI.dll* file can process the request, follow these steps:
+To make sure that the script-mapping points to the *ISAPI.dll* file that can process the request, follow these steps:
 
 1. Select **Start** > **Run**, type *inetmgr.exe*, and then select **OK**.
 2. In IIS Manager, expand **\<server name>** > **Web sites**, and then select the web site that you want to modify.
