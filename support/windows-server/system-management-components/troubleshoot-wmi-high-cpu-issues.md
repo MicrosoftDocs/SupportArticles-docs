@@ -117,7 +117,7 @@ Gather information on other resource usage, such as memory, handles, threads, an
 
 There are multiple methods to identify the provider(s) loaded in the *WmiPrvSE.exe* process. 
 
-1. Use [Scripts: List all running WMI providers](../../scripts-list-running-wmi-providers.md) to output all running Windows Management Instrumentation (WMI) providers.
+1. Use [Scripts: List all running WMI providers](../support-tools/scripts-list-running-wmi-providers.md) to output all running Windows Management Instrumentation (WMI) providers.
 2. [Process Explorer](/sysinternals/downloads/process-explorer) can help you identify the exact providers hosted in the PID identified. Follow these steps:
 
    1. Run Process Explorer as an administrator. Locate the identified *WmiPrvse.exe* PID, go to its properties, and select the **WMI Providers** tab.
