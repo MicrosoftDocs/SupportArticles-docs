@@ -48,7 +48,7 @@ Select one of the following methods, depending on your Outlook client:
 
 ### Classic Outlook for Windows
 
-1. Find the meeting in your Outlook calendar, and then open it. If the meeting is a recurring meeting and you want the meeting ID of the entire series, select **The entire series** when you're prompted. Otherwise, if you want the meeting ID of a single meeting in the series, select **Just this one**.
+1. Find the meeting in your Outlook calendar, and then open it. If the meeting is a recurring meeting, and you want the meeting ID of the entire series, select **The entire series** when you're prompted. Otherwise, if you want the meeting ID of a single meeting in the series, select **Just this one**.
 
 2. In the meeting window, select **File** > **Save as**, and then select **Save** to save the meeting item as an .ics file.
 
