@@ -47,25 +47,25 @@ To create a Terminal Services Group Policy object, follow these steps:
 
 1. __Open__ the __Start Menu__ and type __“Group Policy Management”__. Click on it to open.
 
-In the __Group Policy Management__ console, navigate to your domain.
+1. In the __Group Policy Management__ console, navigate to your domain.
 
-__Right-click__ on the __Group Policy Objects__ container and select __New__.
+1. __Right-click__ on the __Group Policy Objects__ container and select __New__.
 
-Enter a name for the new GPO, such as __“Terminal Servers Policy”__.
+1. Enter a name for the new GPO, such as __“Terminal Servers Policy”__.
 
-Click __OK__ to create the GPO.
+1. Click __OK__ to create the GPO.
 
-__Right-click__ on the newly created GPO and select __Edit__.
+1. __Right-click__ on the newly created GPO and select __Edit__.
 
-This will open the __Group Policy Management Editor__ where you can configure the policy settings as needed.
+1. This will open the __Group Policy Management Editor__ where you can configure the policy settings as needed.
 
-In the __Group Policy Management__ console, navigate to the __“Terminal Servers”__ OU.
+1. In the __Group Policy Management__ console, navigate to the __“Terminal Servers”__ OU.
 
-__Right-click__ on the __“Terminal Servers”__ OU and select __Link an Existing GPO__.
+1. __Right-click__ on the __“Terminal Servers”__ OU and select __Link an Existing GPO__.
 
-In the __Select GPO__ dialog box, choose __“Terminal Servers Policy”__ from the list.
+1. In the __Select GPO__ dialog box, choose __“Terminal Servers Policy”__ from the list.
 
-Click __OK__ to link the GPO to the OU.
+1. Click __OK__ to link the GPO to the OU.
 
 > [!NOTE]
 > Most of the relevant settings are under Computer Configuration , Security Settings , or Local Policies . For example, under User Rights Assignment in the list on the right, you find **Log on Locally**. This setting is required for logging on to a session on Terminal Services. You also find **Access this computer from the network**. This setting is required to connect to the server outside a Terminal Services session. This is also where you can prevent users from being able to shut down the system. Settings for the user part of the policy should not be applied here because the users have not been put into this OU with the Terminal Services server. This article is written for computer policy implementation.  
