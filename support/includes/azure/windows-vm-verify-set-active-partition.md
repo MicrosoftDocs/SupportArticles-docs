@@ -7,7 +7,7 @@ ms.date: 07/12/2024
 > [!NOTE]
 > This mitigation applies only for Generation 1 VMs. Generation 2 VMs (using UEFI) don't use an active partition.
 
-1. [Attach the system disk to a recovery VM](troubleshoot-recovery-disks-portal-windows.md).
+1. [Attach the system disk to a recovery VM](../../azure/virtual-machines/windows/troubleshoot-recovery-disks-portal-windows.md).
 
 2. Start a Remote Desktop connection to the recovery VM.
 
