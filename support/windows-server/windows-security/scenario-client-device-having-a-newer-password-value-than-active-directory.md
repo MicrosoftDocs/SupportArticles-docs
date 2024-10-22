@@ -24,7 +24,7 @@ All these common reasons need to be resolved from the Active Directory end, as t
 
 Once the issue has been resolved at the Active Directory end, reset the computer secure channel by following these steps:
 
-1. Run the following commands:
+1. Run one of the following commands:
 
    - From a Windows command prompt:
    
