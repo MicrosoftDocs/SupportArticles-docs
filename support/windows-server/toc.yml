@@ -687,8 +687,8 @@ items:
       href: ./backup-and-storage/disk-defragmenter-limitations.md
     - name: Establish and boot to GPT mirrors in 64-bit Windows
       href: ./backup-and-storage/establish-boot-to-gpt-mirrors.md
-    - name: Extend a data volume
-      href: ./backup-and-storage/extend-data-volume.md
+    - name: Extend or shrink a data volume
+      href: ./backup-and-storage/extend-shrink-data-volume.md
     - name: FAQs about GUID Partitioning Table disk architecture
       href: ./backup-and-storage/guid-partitioning-table-disk-faq.yml
     - name: Fix heavy memory usage in ReFS
