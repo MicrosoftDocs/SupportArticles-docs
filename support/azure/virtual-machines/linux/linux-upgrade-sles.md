@@ -93,7 +93,7 @@ sudo zypper migration
 
 For more information, see [Major distros in Public Cloud](https://www.suse.com/c/major-distro-upgrade-in-the-public-cloud-made-easy/) and [zypper migration fails in Azure](https://www.suse.com/support/kb/doc/?id=000019232).
 
-## Scenario 2: Error while installing the "suse-migration-sles15-activation" package
+## Scenario 2: Installing the "suse-migration-sles15-activation" package fails
 
 While you install the `suse-migration-sles15-activation` package, the migration fails and you get the following output:
 
@@ -117,11 +117,9 @@ To resolve this issue, follow these steps:
     sudo SUSEConnect -p sle-module-public-cloud/12/x86_64
     ```
 
-    On SLES for SAP instances, two packages should never be present: `sle-ha-release` and `sle-ha-release-POOL`. In this case, remove these packages before starting the distribution migration by running the following command:
-  
-    ```bash 
-    sudo zypper remove sle-ha-release sle-ha-release-POOL
-    ```
+    > [!NOTE]
+    > On SLES for SAP instances, two packages should never be present: `sle-ha-release` and `sle-ha-release-POOL`. In this case, before starting the distribution migration, remove these packages by running the `sudo zypper remove sle-ha-release sle-ha-release-POOL` command.
+
 2. Perform a cleanup on the system, and then re-register it:
 
     ```bash
@@ -148,7 +146,7 @@ To resolve this issue, follow these steps:
     ```bash
     sudo SUSEConnect --status
     ```
-4. Proceed with the migration.
+4. Proceed with the migration:
 
     ```bash
     sudo zypper migration
@@ -156,9 +154,9 @@ To resolve this issue, follow these steps:
 
 For more information, see [Major Distros in Public Cloud](https://www.suse.com/c/major-distro-upgrade-in-the-public-cloud-made-easy/) and [Upgrading SUSE Linux Enterprise in the Public Cloud](https://www.suse.com/c/upgrading-suse-linux-enterprise-in-the-public-cloud/).
 
-## Scenario 3: After you upgrade from SLE 15 SP1 to SP2, Gen2 VMs fail to boot when stopped
+## Scenario 3: After you upgrade from SLE 15 SP1 to SLE 15 SP2, Gen2 VMs fail to boot when stopped
 
-After the VM is upgraded from SLES 15 SP1 to SP2, VM doesn't boot when stopped from the Azure portal or by running the `init 0` or `shutdown -h` command. The following output is displayed in the serial console log or `boot.log` under the `/var/log/` directory:
+After the Generation-2 VM is upgraded from SLES 15 SP1 to SLES 15 SP2, the VM doesn't boot when stopped from the Azure portal or by running the `init 0` or `shutdown -h` command. The following output is displayed in the serial console log or `boot.log` under the `/var/log/` directory:
 
 ```output
 Loading Linux 5.3.18-24.49-default ...  
@@ -241,7 +239,9 @@ The `/etc/credentials.d` directory has incorrect permissions or the content of a
 
 ### Resolution
 
-1. Clean up the registration by running the following commands:
+To resolve this issue, follow these steps:
+
+1. Clean up the registration:
 
     ```bash
     sudo rm /var/cache/cloudregister/
@@ -304,6 +304,8 @@ The `regionService` directory moves from `/var/lib` to `/usr/lib`, but the DMS s
 
 ### Resolution
 
+To resolve this issue, follow these steps:
+
 1. Create the previously used directory `/var/lib/regionService/certs`:
 
     ```bash
@@ -364,6 +366,8 @@ Mar 11 13:39:15 localhost systemd[1]: suse-migration-prepare.service: Failed wit
 ````
 
 ### Resolution
+
+To resolve this issue, follow these steps:
 
 1. Move the temp folder in the `/etc/pki/trust/anchors` directory to the `/backuplocation/` directory:
 
