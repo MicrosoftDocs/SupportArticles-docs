@@ -130,10 +130,10 @@ Use either of the following methods.
 
 Select one of the following methods, depending on whether you know the subject of the meeting:
 
-- [PowerShell: Subject is available](#powershell-subject-is-available)
-- [PowerShell: Subject isn't available](#powershell-subject-isnt-available)
+- [Subject is available](#subject-is-available)
+- [Subject isn't available](#subject-isnt-available)
 
-### PowerShell: Subject is available
+### Subject is available
 
 Run the following commands in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) to get the meeting ID for meetings that match the search criteria. The search criteria are the subject of the meeting and the user ID of a meeting participant. The code uses the [Get-CalendarDiagnosticObjects](/powershell/module/exchange/get-calendardiagnosticobjects) cmdlet to get the start time and ID of each meeting.
 
@@ -150,7 +150,7 @@ For each meeting that's listed in the output, the value of the **CleanGlobalObje
 
 If the output lists multiple meetings, ask the user to confirm the meeting time.
 
-### PowerShell: Subject isn't available
+### Subject isn't available
 
 Select one of the following methods:
 
