@@ -6,7 +6,7 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Group Policy\Deploying software through Group Policy , csstroubleshoot
+ms.custom: sap:Group Policy\Deploying software through Group Policy, csstroubleshoot
 ---
 # Use Group Policy to remotely install software
 

@@ -6,7 +6,7 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Storage hardware , csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Storage hardware, csstroubleshoot
 ---
 # Information about Event ID 51
 
