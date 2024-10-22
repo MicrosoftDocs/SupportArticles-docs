@@ -72,7 +72,7 @@ Follow these steps:
 
    - Ask the user who has the meeting issue to [find the meeting ID](./get-meeting-id.md#non-admin-methods).
    - [Find the meeting ID yourself as an admin](./get-meeting-id.md#admin-methods).
-   - [Get CDLs by using the subject of the meeting](#get-cdls-by-using-the-subject-of-the-meeting), and then extract the meeting ID for the relevant meeting from the timeline worksheet.
+   - [Get CDLs by using the subject of the meeting](#get-cdls-by-using-the-subject-of-the-meeting), and then extract the meeting ID from the timeline worksheet for the relevant meeting.
 
 4. In the folder that contains the script, run the following PowerShell command in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell):
 
