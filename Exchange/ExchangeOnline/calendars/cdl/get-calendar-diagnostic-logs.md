@@ -15,18 +15,6 @@ ms.custom:
 ms.reviewer: mburuiana, shanefe, meshel, erichart, ninob, meerak, v-trisshores
 appliesto:
   - Exchange Online
-  - Outlook on the web
-  - Outlook for Windows
-  - New Outlook for Windows
-  - Outlook for Microsoft 365
-  - Outlook 2024
-  - Outlook 2021
-  - Outlook 2019
-  - Outlook 2016
-  - Outlook for Mac
-  - Outlook for Mac for Microsoft 365
-  - Outlook for iOS
-  - Outlook for Android
 search.appverid: MET150
 ms.date: 10/22/2024
 ---

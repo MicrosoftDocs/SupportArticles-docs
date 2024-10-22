@@ -24,8 +24,6 @@ appliesto:
   - Outlook 2016
   - Outlook for Mac
   - Outlook for Mac for Microsoft 365
-  - Outlook for iOS
-  - Outlook for Android
 search.appverid: MET150
 ms.date: 10/22/2024
 ---
