@@ -1,7 +1,7 @@
 ---
 title: HTTP Error 403.14 when you open IIS webpages
 description: Helps resolve the HTTP 403.14 The web server is configured to not list the contents of this directory error when you visit an Internet Information Services webpage.
-ms.date: 10/17/2024
+ms.date: 10/22/2024
 ms.reviewer: damatei
 ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
 ---
