@@ -92,7 +92,7 @@ Follow the steps in the following article to upload the VHD to Azure and to depl
 [Upload a generalized VHD and use it to create new VMs in Azure](/azure/virtual-machines/windows/upload-generalized-managed)
 
 > [!NOTE]  
-> When performing an in-place upgrade on Windows Azure VMs, the VM properties on the Azure portal won't be updated; the changes will only be reflected within the OS. This means that the source image information in the VM properties, including the publisher, Offer, and plan, doesn't change. The image used to deploy the VM remains the same; only the OS is upgraded.
+> When performing an in-place upgrade on Microsoft Azure VMs, the VM properties on the Azure portal aren't updated; the changes are only reflected within the OS. This means that the source image information in the VM properties, including the publisher, offer, and plan, remains unchanged. The image used to deploy the VM remains the same, and only the OS is upgraded.
 
 
 ## References
