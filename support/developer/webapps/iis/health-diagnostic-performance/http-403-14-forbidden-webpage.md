@@ -9,7 +9,7 @@ ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, incl
 
 This article helps you resolve the "HTTP Error 403.14 - Forbidden - The web server is configured to not list the contents of this directory" error that occurs when you open an Internet Information Services (IIS) webpage.
 
-_Original product version:_ &nbsp; Internet Information Services 10.0 and later versions  
+_Original product version:_ &nbsp; Internet Information Services
 _Original KB number:_ &nbsp; 942062
 
 > [!NOTE]
@@ -18,7 +18,7 @@ _Original KB number:_ &nbsp; 942062
 
 ## Symptoms
 
-When you visit a website hosted on IIS 10.0 or a later version, you receive an error message that resembles the following one:
+When you visit a website hosted on IIS, you receive an error message that resembles the following one:
 
 > Server Error in Application "\<application name\>"  
 > HTTP Error 403.14 - Forbidden  
