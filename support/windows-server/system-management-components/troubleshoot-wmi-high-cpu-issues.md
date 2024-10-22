@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot WMI high CPU usage issues
 description: Describes how to diagnose Windows Management Instrumentation (WMI) high CPU issues on any Windows operating system.
-ms.date: 10/18/2024
+ms.date: 10/22/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -120,7 +120,7 @@ There are multiple methods to identify the provider(s) loaded in the *WmiPrvSE.e
 1. Use [Scripts: List all running WMI providers](/troubleshoot/windows-server/support-tools/scripts-list-running-wmi-providers?branch=main) to output all running Windows Management Instrumentation (WMI) providers.
 2. [Process Explorer](/sysinternals/downloads/process-explorer) can help you identify the exact providers hosted in the PID identified. Follow these steps:
 
-   1. Run Process Explorer as administrator. Locate the identified *WmiPrvse.exe* PID, go to its properties, and select the **WMI Providers** tab.
+   1. Run Process Explorer as an administrator. Locate the identified *WmiPrvse.exe* PID, go to its properties, and select the **WMI Providers** tab.
    2. In the following example, *WmiPrvse.exe* PID 556 is located and found to be hosting:
    
       - WMI provider: `MS_NT_EVENTLOG_PROVIDER`
@@ -423,7 +423,7 @@ Here are some scenarios where disabling it can validate your observations.
 If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md#wmi).
 
 1. Download [TSS.zip](https://aka.ms/getTSS) and extract the contents. 
-2. Start the tracing by running the following cmdlet from an elevated PowerShell command prompt. Keep the tracing running when the machine is experiencing high CPU issue or reproducing the issue.
+2. Start the tracing by running the following cmdlet from an elevated PowerShell command prompt. Keep the tracing running when the machine is experiencing a high CPU issue or reproducing the issue.
 
    ```powershell
    .\TSS.ps1 -UEX_WMIBase -WIN_Kernel -ETWflags 1 -WPR CPU -Perfmon UEX_WMIPrvSE -PerfIntervalSec 1 -noBasicLog
