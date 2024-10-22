@@ -67,9 +67,10 @@ To create a disk from the snapshot, follow these steps:
 
 1. In the Azure portal, go to the snapshot you want to use for creating a disk.
 2. On the **Overview** page, select **Create disk**.
+
    :::image type="content" source="media/troubleshoot-recovery-disks-portal-linux/create-disk-from-snapshot.png" alt-text="Screenshot of the create disk button in Azure portal.":::
 
-3. Follow the instructions to complete the disk creation process.
+4. Follow the instructions to complete the disk creation process.
 
 ## Use Azure CLI
 
