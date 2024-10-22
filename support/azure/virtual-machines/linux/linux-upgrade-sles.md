@@ -32,9 +32,9 @@ You can check the generation version by using one of the following methods:
     sudo dmidecode | grep -i hyper
     ```
 
-    If it's a generation V1 VM,  there's no output returned. 
+    If it's a Generation 1 VM,  there's no output returned. 
     
-    For the generations V2 VM, you'll see an output like the following text:
+    For the Generation 2 VM, you can see an output like the following text:
     
     ```output
     Version: Hyper-V UEFI Release v4.1
@@ -45,7 +45,7 @@ You can check the generation version by using one of the following methods:
  
 - In the [Azure portal](https://portal.azure.com), go to the VM **Properties**, and then check the **VM generation** field as shown:
 
-    :::image type="content" source="media/linux-upgrade-sles/vm-generation-property.png" alt-text="A screenshot that shows the 'VM generation' property." lightbox="media/linux-upgrade-sles/vm-generation-property.png"  border="false":::
+    :::image type="content" source="media/linux-upgrade-sles/vm-generation-property.png" alt-text="A screenshot that shows the 'VM generation' property." lightbox="media/linux-upgrade-sles/vm-generation-property.png":::
 
 ## Scenario 1: Migration from SLES 12 to SLES 15 succeeds, but upgrade from SLES 15 SP1 to SP2 fails
 
@@ -77,7 +77,7 @@ sudo zypper rm sle-module-hpc-release-POOL sle-module-hpc-release
 
 ### Workaround
 
-Move `sle-module-hpc.prod` from the `/etc/products.d/` directory to a temporary location, and try the migration again. To do so, run the following commands:
+To work around this issue, move `sle-module-hpc.prod` from the `/etc/products.d/` directory to a temporary location, and try the migration again. To do so, run the following commands:
 
 ```bash
 cd /etc/products.d
@@ -111,7 +111,7 @@ The SLES 12 Public Cloud module isn't enabled by default.
 
 To resolve this issue, follow these steps:
 
-1. Enable the Public Cloud module by running the following command, and then try installing the package again:
+1. Enable the Public Cloud module and then try installing the package again:
 
     ```bash
     sudo SUSEConnect -p sle-module-public-cloud/12/x86_64
@@ -154,9 +154,9 @@ To resolve this issue, follow these steps:
 
 For more information, see [Major Distros in Public Cloud](https://www.suse.com/c/major-distro-upgrade-in-the-public-cloud-made-easy/) and [Upgrading SUSE Linux Enterprise in the Public Cloud](https://www.suse.com/c/upgrading-suse-linux-enterprise-in-the-public-cloud/).
 
-## Scenario 3: After you upgrade from SLE 15 SP1 to SLE 15 SP2, Gen2 VMs fail to boot when stopped
+## Scenario 3: After you upgrade from SLE 15 SP1 to SLE 15 SP2, Generation 2 VMs fail to boot when stopped
 
-After the Generation-2 VM is upgraded from SLES 15 SP1 to SLES 15 SP2, the VM doesn't boot when stopped from the Azure portal or by running the `init 0` or `shutdown -h` command. The following output is displayed in the serial console log or `boot.log` under the `/var/log/` directory:
+After the Generation 2 VM is upgraded from SLES 15 SP1 to SLES 15 SP2, the VM doesn't boot when stopped from the Azure portal or by running the `init 0` or `shutdown -h` command. The following output is displayed in the serial console log or `boot.log` under the `/var/log/` directory:
 
 ```output
 Loading Linux 5.3.18-24.49-default ...  
@@ -177,7 +177,7 @@ Press any key to continue...
 
 ### Cause
 
-After the Generation-2 VM is rebooted, stopped, or deallocated, Hyper-V in the Azure environment doesn't preserve its boot entries. This causes the SUSE Linux VM to fail to boot up.
+After the Generation 2 VM is rebooted, stopped, or deallocated, Hyper-V in the Azure environment doesn't preserve its boot entries. This causes the SUSE Linux VM to fail to boot up.
 
 ### Resolution
 
@@ -223,15 +223,15 @@ To resolve this issue, roll back all the packages to the versions compatible wit
     ```bash
     sudo zypper rollback
     ```
-3. Run migration again:
+3. Perform the migration again:
 
     ```bash 
     sudo zypper migration
     ```
 
-## Scenario 6: After migration, SUSE fails to boot to the latest kernel followed by registration failure
+## Scenario 6: After migration, SUSE fails to boot with the latest kernel followed by a registration failure
 
-After migration, the VM fails to boot with the latest kernel. Additionally, repositories don't work because they aren't defined.
+After migration, the VM fails to boot with the latest kernel. Additionally, repositories don't work and you get an error stating that the repositories aren't defined.
 
 ### Cause
 
@@ -245,10 +245,6 @@ To resolve this issue, follow these steps:
 
     ```bash
     sudo rm /var/cache/cloudregister/
-    ```
-    
-    ```bash
-    sudo rm /etc/zypp/credentials.d/
     ```
     
     ```bash
@@ -345,7 +341,7 @@ To resolve this issue, follow these steps:
     sudo zypper in SLES15-Migration
     ```
 
-5. Try the migration again:
+5. Perform the migration again:
 
     ``` bash
     sudo zypper migration
@@ -369,7 +365,7 @@ Mar 11 13:39:15 localhost systemd[1]: suse-migration-prepare.service: Failed wit
 
 To resolve this issue, follow these steps:
 
-1. Move the temp folder in the `/etc/pki/trust/anchors` directory to the `/backuplocation/` directory:
+1. Move the `temp` folder in the `/etc/pki/trust/anchors` directory to the `/backuplocation/` directory:
 
     ```bash
     sudo mv /etc/pki/trust/anchors/temp /backuplocation/temp
@@ -379,15 +375,15 @@ To resolve this issue, follow these steps:
     ```bash
     sudo zypper install suse-migration-sle15-activation
     ```
-3. Perform the migration:
+3. Perform the migration again:
 
     ```bash
     sudo zypper migration
     ```
 
-## Scenario 9: SUSE registration and repos don't work after migration
+## Scenario 9: SUSE registration and repositories don't work after migration
 
-During the OS migration from SLES 15 SP3 to SLES 15 SP4, the process completes successfully. However, when you migrate from SLES 15 SP4 to SLES 15 SP5, the migration and updates don't work as expected and you get the following output:
+During the OS migration from SLES 15 SP3 to SLES 15 SP4, the process completes successfully. However, when you migrate from SLES 15 SP4 to SLES 15 SP5, the migration and updates don't work as expected, and you get the following output:
 
 ```output
          sle-module-desktop-applications/15.3/x86_64 Desktop Applications Module
@@ -418,7 +414,7 @@ To resolve this issue, follow these steps:
 
 1. Before the migration, activate and then deactivate the following modules.
 
-   - Activate the following modules:
+   1. Activate the following modules:
 
        ```bash
        sudo SUSEConnect -p sle-module-web-scripting/15.3/x86_64
@@ -426,7 +422,7 @@ To resolve this issue, follow these steps:
        sudo SUSEConnect -p sle-module-containers/15.3/x86_64
        sudo SUSEConnect -p sle-module-live-patching/15.3/x86_64
        ```
-   - Deactivate the following modules:
+   2. Deactivate the following modules:
 
        ```bash
        sudo SUSEConnect -d -p sle-module-legacy/15.3/x86_64
@@ -434,7 +430,7 @@ To resolve this issue, follow these steps:
        sudo SUSEConnect -d -p PackageHub/15.3/x86_64
        ```
 
-2. Perform a cleanup on the system, and then re-register the system:
+2. Perform a cleanup on the system, and then re-register it:
 
     ```bash
     sudo SUSEConnect --cleanup
@@ -456,7 +452,7 @@ To resolve this issue, follow these steps:
     sudo registercloudguest --force-new
     ```
 
-3. Verify the VM registration status by running SUSEConnect again:
+3. Verify the VM registration status:
 
     ```bash
     sudo SUSEConnect --status
@@ -494,11 +490,11 @@ You can also find the outputs in the `/var/log/messages` or `/var/log/distro-mig
 
 ### Cause
 
-The `Certification Module` is present, which causes that the migration fails.
+The certification module is present, which causes that the migration fails.
 
 ### Resolution
 
-To resolve this issue, run the following command to disable the Certification Module before the update, and try the migration again:
+To resolve this issue, run the following command to disable the certification module before the update, and try the migration again:
 
 ```bash
 sudo SUSEConnect -d -p sle-module-certifications/15.3/x86_64
