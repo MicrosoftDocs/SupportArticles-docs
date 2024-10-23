@@ -1,7 +1,7 @@
 ---
 title: Debug PowerShell scripts run by Custom Script Extension or Run Command
 description: Troubleshoot PowerShell script failures when you run them remotely on a virtual machine by using the Custom Script Extension or Run Command feature.
-ms.date: 10/17/2024
+ms.date: 10/23/2024
 ms.reviewer: clandis, kegregoi, v-leedennis, v-weizhu
 editor: v-jsitser
 ms.service: azure-virtual-machines
@@ -130,9 +130,9 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\S
 ### Turn on PowerShell transcription
 
 ```console
-reg add "HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\PowerShell\Transcription'" /v "EnableTranscripting" /t REG_DWORD /d 1 /f
-reg add "HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\PowerShell\Transcription'" /v "EnableInvocationHeader" /t REG_DWORD /d 1 /f
-reg add "HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\PowerShell\Transcription'" /v "OutputDirectory" /t REG_SZ /d C:\Transcripts /f
+reg add "HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\PowerShell\Transcription" /v "EnableTranscripting" /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\PowerShell\Transcription" /v "EnableInvocationHeader" /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\PowerShell\Transcription" /v "OutputDirectory" /t REG_SZ /d C:\Transcripts /f
 ```
 
 ### Turn on PowerShell module logging
