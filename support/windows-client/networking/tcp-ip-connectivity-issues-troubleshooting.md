@@ -41,13 +41,13 @@ A network trace collected simultaneously on the source and the destination helps
 
 The following sections outline scenarios in which a RESET may occur.
 
-## Packet drops
+## Packet loss over the network
 
 When a TCP peer sends packets without receiving a response, it will retransmit the data. If there is still no response, the session will end with an ACK RESET, indicating that the application acknowledges the exchanged data but closes the connection due to packet loss.
 
 Simultaneous network traces at both the source and destination can verify this behavior. On the source side, you will see retransmitted packets, while on the destination side, these packets will not be present. This scenario indicates that a network device between the source and destination is dropping the packets.
 
-#### Scenario 1: Initial TCP handshake packet drop
+#### Scenario 1: Packet Loss During Initial TCP Handshake
 
 If the initial TCP handshake fails due to packet drops, the TCP SYN packet will be retransmitted 3 times by default.
 
@@ -67,7 +67,7 @@ If you see that the TCP SYN packets are reaching the destination, but the destin
 
 If the port is listening and there's still no response, then there could be a drop at the Windows Filtering Platform (WFP).
 
-#### Scenario 2: Packet drops during data transfer after TCP connection is established
+#### Scenario 2: Packet Loss During Data Transfer Post TCP Connection Establishment
 
 In a scenario where a data packet sent after the TCP connection is established gets dropped over the network, TCP will retransmit the packet 5 times by default.
 
@@ -95,7 +95,7 @@ Begin by comparing the source and destination traces to detect any changes in th
 
 In such cases, it is advisable to seek assistance from the internal network team to identify any devices that are modifying or replaying packets to the destination. Common culprits include Riverbed devices or WAN accelerators.
 
-## Application side reset
+## Application-level reset
 
 When you have determined that the resets are not due to packet drops, incorrect parameters, or packet modifications (as identified through network traces), you can conclude that the issue is an application-level reset.
 
