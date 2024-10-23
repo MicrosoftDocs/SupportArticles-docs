@@ -10,7 +10,7 @@ ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Encrypting File 
 ---
 # Use Cipher.exe to overwrite deleted data in Windows
 
-This article describes how to use Cipher.exe to overwrite deleted data in Windows Server 2003.
+This article describes how to use Cipher.exe to overwrite deleted data in Windows.
 
 _Original KB number:_ &nbsp; 814599
 
