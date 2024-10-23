@@ -1,16 +1,16 @@
 ---
-title: Analyze System Event logs to diagnose unexpected reboots
-description: Provides guidelines to analyze System Event logs for system reboot history, reboot types, and the causes of reboots.
-ms.date: 10/18/2024
+title: Diagnose unexpected reboots using system event logs
+description: Provides guidelines to analyze system event logs for system reboot history, reboot types, and the causes of reboots.
+ms.date: 10/23/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, mchamp, warrenw
+ms.reviewer: kaushika, mchamp, warrenw, v-lianna
 ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshoot
 ---
-# Analyze system event logs to diagnose unexpected reboots
+# Diagnose unexpected reboots using system event logs
 
-This article provides a comprehensive guide on analyzing system event logs to diagnose unexpected reboots. The analysis helps determine the cause or lead up to other troubleshooting steps to find the root cause.
+This article provides a comprehensive guide on diagnosing unexpected reboots using system event logs. The diagnosis helps determine the cause or lead up to other troubleshooting steps to find the root cause.
 
 There are generally two types of reboots, normal reboots and unexpected reboots. A normal reboot occurs when a computer is shut down or restarted using the shutdown or restart option in Windows. An unexpected reboot occurs when a computer is running normally but reboots due to power loss, hardware failures, or bug checks.
 
@@ -21,7 +21,7 @@ You can filter the system event logs to determine the cause of an unexpected reb
 > [!NOTE]
 > Event ID numbers might be tied to different sources, so make sure you filter on the relevant ones for reboots.
 
-:::image type="content" source="media/analyze-event-logs-diagnose-unexpected-reboots/system-event-log-12-13-6005-6009.png" alt-text="Screenshot shows the System Event IDs 12, 13, 6005, and 6009 in Event Viewer.":::
+:::image type="content" source="media/diagnose-unexpected-reboots-system-event-logs/system-event-log-12-13-6005-6009.png" alt-text="Screenshot shows the System Event IDs 12, 13, 6005, and 6009 in Event Viewer.":::
 
 |Event ID|Source|Description|
 |---------|---------|---------|
@@ -37,7 +37,7 @@ Event IDs 13, 41, 1074, 6008, and 6009 can help determine if a reboot is normal 
 > [!NOTE]
 > Event ID numbers may be tied to different sources, so make sure you filter on the relevant ones for reboots.
 
-:::image type="content" source="media/analyze-event-logs-diagnose-unexpected-reboots/system-event-log-13-41-1074-6008-6009.png" alt-text="Screenshot shows the System Event logs with 13, 41, 1074, 6008, and 6009 filtered in Event Viewer.":::
+:::image type="content" source="media/diagnose-unexpected-reboots-system-event-logs/system-event-log-13-41-1074-6008-6009.png" alt-text="Screenshot shows the System Event logs with 13, 41, 1074, 6008, and 6009 filtered in Event Viewer.":::
 
 |Event ID|Source|Description|
 |---------|---------|---------|
@@ -61,7 +61,7 @@ Event IDs 19, 41, 1001, 1074, and 7045 might indicate reboot causes. Some reboot
 
 By combining all the event IDs together, you can get a history of reboots, shutdowns, and possible reasons why the computer might have rebooted.
 
-:::image type="content" source="media/analyze-event-logs-diagnose-unexpected-reboots/system-event-log-19-41-1001-1074-7045.png" alt-text="Screenshot shows the System Event logs with 19, 41, 1001, 1074, and 7045 filtered in Event Viewer.":::
+:::image type="content" source="media/diagnose-unexpected-reboots-system-event-logs/system-event-log-19-41-1001-1074-7045.png" alt-text="Screenshot shows the System Event logs with 19, 41, 1001, 1074, and 7045 filtered in Event Viewer.":::
 
 Starting with the normal reboot scenario, you can try to determine why a reboot was issued. It can be due to a Cumulative Update, driver update, application update, or something like a shutdown. In any case, there should be an Event ID 1074 indicating what requested the reboot and a reason.
 
@@ -99,7 +99,7 @@ Reason codes can be further decoded. For more information, see:
 
 With an unexpected reboot, there usually isn't an Event ID 1074 log entry. Unexpected reboots are denoted by Event IDs 41, 1001, and 6008. Here's an example:
 
-:::image type="content" source="media/analyze-event-logs-diagnose-unexpected-reboots/system-event-log-41-1001-6008.png" alt-text="Screenshot shows the System Event logs with 41, 1001, and 6008 filtered in Event Viewer.":::
+:::image type="content" source="media/diagnose-unexpected-reboots-system-event-logs/system-event-log-41-1001-6008.png" alt-text="Screenshot shows the System Event logs with 41, 1001, and 6008 filtered in Event Viewer.":::
 
 |Event ID|Source|Description|
 |---------|---------|---------|
@@ -113,7 +113,7 @@ You can check the system reboots history by filtering Event IDs 12, 13, 19, 41, 
 
 The following history shows there's a driver update, highlighted in red, and the bug check starts shortly after.
 
-:::image type="content" source="media/analyze-event-logs-diagnose-unexpected-reboots/system-event-log-7045.png" alt-text="Screenshot shows the System Event ID 7045 highlighted in Event Viewer.":::
+:::image type="content" source="media/diagnose-unexpected-reboots-system-event-logs/system-event-log-7045.png" alt-text="Screenshot shows the System Event ID 7045 highlighted in Event Viewer.":::
 
 See the following Event ID 7045 for an example:
 
