@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 29 for SQL Server 2019 (KB5046365)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 29 (KB5046365).
-ms.date: 10/21/2024
+ms.date: 10/23/2024
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5046365
 ms.reviewer: v-qianli2
 appliesto:
@@ -11,12 +11,12 @@ appliesto:
 
 # KB5046365 - Cumulative Update 29 for SQL Server 2019
 
-_Release Date:_ &nbsp; October 21, 2024  
+_Release Date:_ &nbsp; October 23, 2024  
 _Version:_ &nbsp; 15.0.4405.2
 
 ## Summary
 
-This article describes Cumulative Update package 29 (CU29) for Microsoft SQL Server 2019. This update contains 17 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 28, and it updates components in the following builds:
+This article describes Cumulative Update package 29 (CU29) for Microsoft SQL Server 2019. This update contains 18 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 28, and it updates components in the following builds:
 
 - SQL Server - Product version: **15.0.4405.2**, file version: **2019.150.4405.2**
 - Analysis Services - Product version: **15.0.35.51**, file version: **2018.150.35.51**
@@ -48,6 +48,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=3515480>[3515480](#3515480) </a> | Adds *SQL2019_SSIS.cat*, a digitally-signed catalog file in *%SystemRoot%\System32\CatRoot\\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}*, to sign *Attunity.SqlServer.CDCControlTask.dll*, *Attunity.SqlServer.CDCDesign.dll*, *Attunity.SqlServer.CDCSplit.dll*, *Attunity.SqlServer.CDCSrc.dll* and their resource assemblies for catalog signing. | Integration Services | Integration Services| Windows|
 | <a id=3354260>[3354260](#3354260) </a> | Fixes a domain account authentication issue in the configuration tool by adding an auto-retry method to the account validation part, which will use the **UPN** format and try to authenticate using three separate authentication methods after the authentication fails in **SAM** format and default.| Master Data Services | Master Data Services| Windows|
 | <a id=3459328>[3459328](#3459328) </a> | Fixes an issue in which the SQL Server Volume Shadow Copy Service (VSS) Writer can't freeze the database during a VSS-based backup. For more information, see [known issue three of SQL Server 2019 CU28](cumulativeupdate28.md#issue-three-sql-server-vss-writer-might-fail-to-perform-a-backup-because-no-database-is-available-to-freeze). | SQL Server Engine| Backup Restore| Windows|
+| <a id=3539961>[3539961](#3539961) </a> | Fixes an issue in which database striped backups using virtual device interface (VDI) tools might fail to restore with [error 3456](../../sql/database-engine/backup-restore/backup-multistriped-vdi-issue.md). | SQL Server Engine| Backup Restore||
 | <a id=3287653>[3287653](#3287653) </a> | Fixes an assertion failure (Location: ListenerSpec.cpp:480; Expression: totalUsed + cbListenerName <= cbObj) that you encounter when creating a [distributed availability group (DAG)](/sql/database-engine/availability-groups/windows/distributed-availability-groups) and incorrectly specifying the number of availability groups in it to be other than two. | SQL Server Engine| High Availability and Disaster Recovery | All|
 | <a id=3407955>[3407955](#3407955) </a> | Fixes an issue in which a log backup stops responding on the primary replica after the secondary replica restarts if no additional workloads exist on the primary database. | SQL Server Engine| High Availability and Disaster Recovery | All|
 | <a id=3418490>[3418490](#3418490) </a> | Fixes a patching error that you encounter in secondary replicas of an availability group with databases that have SQL replication, change data capture (CDC), or SQL Server Integration Services database (SSISDB) enabled. For more information, see [known issue two of SQL Server 2019 CU28](cumulativeupdate28.md#issue-two-patching-error-for-secondary-replicas-in-an-availability-group-with-databases-enabled-replication-cdc-or-ssisdb) or [known issue three of SQL Server 2019 CU27](cumulativeupdate27.md#issue-three-patching-error-for-secondary-replicas-in-an-availability-group-with-databases-enabled-replication-cdc-or-ssisdb). | SQL Server Engine| High Availability and Disaster Recovery | Windows|
