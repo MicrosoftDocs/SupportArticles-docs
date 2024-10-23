@@ -183,15 +183,15 @@
           href: ../calendars/delegate-only-sees-freebusy-info-if-manager-is-in-another-forest.md
         - name: Delegates accept meetings automatically
           href: ../calendars/delegates-accept-meetings-automatically.md
-        - name: Calendar Diagnostic logs (CDL)
+        - name: Calendar diagnostic logs (CDL)
           items:
-            - name: Use Calendar Diagnostic logs
+            - name: Use Calendar diagnostic logs
               href: ../calendars/cdl/use-calendar-diagnostic-logs.md
-            - name: Get Calendar Diagnostic logs
+            - name: Get Calendar diagnostic logs
               href: ../calendars/cdl/get-calendar-diagnostic-logs.md
-            - name: Analyze Calendar Diagnostic logs
+            - name: Analyze Calendar diagnostic logs
               href: ../calendars/cdl/analyze-calendar-diagnostic-logs.md
-            - name: Get the meeting ID
+            - name: Get the ID of a meeting
               href: ../calendars/cdl/get-meeting-id.md
         - name: Meeting requests added to resource delegate's calendar
           href: ../calendars/meeting-requests-sent-to-resource-mailbox-added-to-resource-delegate-calendar.md
