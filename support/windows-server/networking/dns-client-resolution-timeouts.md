@@ -1,11 +1,11 @@
 ---
 title: DNS client resolution timeouts
 description: Describes the fallback and timeout behavior that exist when one or more Domain Name System (DNS) Servers IPs are configured on a Windows DNS client.
-ms.date: 12/26/2023
+ms.date: 10/23/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, arrenc, dpracht
+ms.reviewer: kaushika, arrenc, dpracht, maaztorgal
 ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
 ---
 # DNS client resolution timeouts
@@ -50,7 +50,7 @@ DNS Servers . . . . . . . . . . . :  10.0.0.1
 Network trace output
 
 ```output
-Time                      Time Offset    TimeDelta      Source        Dest          Details  
+Time                Time Offset    TimeDelta      Source        Dest          Details  
 
 6:23:33.8063812     0.0000000     0.0000000     10.0.0.31     10.0.0.1     DNS:QueryId = 0xA5B4, QUERY (Standard query), Query  for microsoft.com of type Host Addr on class Internet
 
@@ -91,7 +91,7 @@ DNS Servers . . . . . . . . . . . : 10.0.0.1
 Network trace output
 
 ```output
-Time                      Time Offset    TimeDelta      Source        Dest          Details
+Time                Time Offset    TimeDelta      Source        Dest          Details
 
 6:28:12.5060330     0.0000000     0.0000000     10.0.0.31     10.0.0.1     DNS:QueryId = 0x7B1C, QUERY (Standard query), Query  for microsoft.com of type Host Addr on class Internet
 
@@ -143,7 +143,7 @@ DNS Servers . . . . . . . . . . . : 10.0.0.1
 Network trace output
 
 ```output
-Time                      Time Offset    TimeDelta      Source        Dest          Details
+Time                Time Offset    TimeDelta      Source        Dest          Details
 
 9:50:19.4165728     0.0000000     0.0000000     10.0.0.31     10.0.0.1     DNS:QueryId = 0xE2A2, QUERY (Standard query), Query  for microsoft.com of type Host Addr on class Internet
 
