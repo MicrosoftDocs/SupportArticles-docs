@@ -183,7 +183,7 @@
           href: ../calendars/delegate-only-sees-freebusy-info-if-manager-is-in-another-forest.md
         - name: Delegates accept meetings automatically
           href: ../calendars/delegates-accept-meetings-automatically.md
-        - name: Calendar diagnostic logs (CDL)
+        - name: Calendar Diagnostic logs (CDL)
           items:
             - name: Use Calendar Diagnostic logs
               href: ../calendars/cdl/use-calendar-diagnostic-logs.md
