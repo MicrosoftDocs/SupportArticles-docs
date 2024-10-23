@@ -55,7 +55,7 @@ If `% User Time` is consistently greater than 90 percent (% User Time is the sum
 
 - Performance Dashboard: In SQL Server Management Studio Right Click on your connection associated with SQL Server Instance ---> Reports ----> Standard Reports---> Performance Dashboard
 
-The dashboard will illustrate a graph titled "System CPU Utiliztion" with a bar chart , "blue" color indicates SQL Server engine CPU utilization while "orange" represents other operating system processes. Click on Refresh (F5) to see updated data displayed.
+The dashboard will illustrate a graph titled "System CPU Utilization" with a bar chart. The darker color indicates SQL Server engine CPU utilization while the lighter color represents overall operating system CPU utilization (see legend on the graph for reference). Click on the circular Refresh (F5) button to see updated utilization.
 
 ## Step 2: Identify queries contributing to CPU usage
 
