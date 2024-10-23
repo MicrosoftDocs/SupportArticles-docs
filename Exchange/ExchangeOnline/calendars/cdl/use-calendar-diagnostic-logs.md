@@ -1,5 +1,5 @@
 ---
-title: Use calendar diagnostic logs to resolve calendar issues
+title: Use Calendar diagnostic logs to resolve calendar issues
 description: Discusses how to use CDLs to resolve calendar issues in Exchange Online.
 author: cloud-writer
 ms.author: meerak
@@ -18,7 +18,7 @@ search.appverid: MET150
 ms.date: 10/22/2024
 ---
 
-# Use calendar diagnostic logs to diagnose calendar issues
+# Use Calendar diagnostic logs to diagnose calendar issues
 
 Calendar diagnostic logs (CDLs) contain important calendar-related event data. You can [get](./get-calendar-diagnostic-logs.md) and [analyze](./analyze-calendar-diagnostic-logs.md) the CDLs to diagnose calendar issues.
 
