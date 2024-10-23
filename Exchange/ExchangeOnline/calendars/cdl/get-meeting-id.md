@@ -30,7 +30,7 @@ ms.date: 10/22/2024
 
 # Get the ID of a meeting
 
-The meeting ID is a unique identifier that can be used to [get Calendar Diagnostic logs](./get-calendar-diagnostic-logs.md#use-the-get-calendardiagnosticobjectssummaryps1-script) (CDLs) for a specific meeting. Although you can use the subject of a meeting to get the CDLs, that approach generates less-detailed CDLs for all the meetings that match the subject. Therefore, we recommend that you use the meeting ID to get CDLs.
+The meeting ID is a unique identifier that can be used to [get Calendar diagnostic logs](./get-calendar-diagnostic-logs.md#use-the-get-calendardiagnosticobjectssummaryps1-script) (CDLs) for a specific meeting. Although you can use the subject of a meeting to get the CDLs, that approach generates less-detailed CDLs for all the meetings that match the subject. Therefore, we recommend that you use the meeting ID to get CDLs.
 
 > [!TIP]
 > The meeting ID is a GUID that starts with `040000008200`, such as `040000008200E00074C5B7101A82E00800000000A0D1E89273EFDA010000000000000000100000002D9427567554FA4AA9162A58A8B968CB`.
