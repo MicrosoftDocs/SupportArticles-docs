@@ -76,13 +76,13 @@ When modifications are completed, close the Group Policy Management editor, and 
 Use the Group Policy loopback feature to apply User Configuration GPO settings to users only when they log on to the Terminal Servers. When GPO Loopback processing is enabled for the computers in an OU that contains only Terminal Servers, those computers apply the User Configuration settings from the set of GPOs that apply to that OU. Additionally, those computers apply the User Configuration settings from GPOs that are linked to or inherited by the OU that contains the user's account.
 
 This implementation is described in the following article:  
-[https://learn.microsoft.com/en-us/troubleshoot/windows-server/group-policy/loopback-processing-of-group-policy](https://learn.microsoft.com/en-us/troubleshoot/windows-server/group-policy/loopback-processing-of-group-policy) 
+[Loopback processing of Group Policy](/troubleshoot/windows-server/group-policy/loopback-processing-of-group-policy) 
 
 When it is possible, Terminal Services should be installed on member servers instead of on domain controllers because the users need Log on Locally user rights. When the Logon Locally right is assigned to domain controllers, it is assigned to every domain controller in the domain because of the shared Active Directory database. By default, member servers are granted Log on Locally user rights in the Local Security Policy.
 
 For additional information, click the following article number to view the article:
 
-[https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/local-policy-not-permit-log-on-interactively](https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/local-policy-not-permit-log-on-interactively)
+[Local policy doesn't permit you to log on interactively](/troubleshoot/windows-server/remote/local-policy-not-permit-log-on-interactively)
 
 The computer account of the terminal server should be added to the security properties of the GPO being created for the loopback. To do it, follow these steps:  
 
