@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the CniDownloadTimeoutVMExtensionError error code
 description: Learn how to troubleshoot the CniDownloadTimeoutVMExtensionError error (41) when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 05/03/2023
+ms.date: 10/23/2024
 editor: v-jsitser
 ms.reviewer: axelg, chiragpa, v-leedennis
 ms.service: azure-kubernetes-service
@@ -10,7 +10,7 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 ---
 # Troubleshoot the CniDownloadTimeoutVMExtensionError error code (41)
 
-This article discusses how to identify and resolve the `CniDownloadTimeoutVMExtensionError` error (also known as error code `ERR_CNI_DOWNLOAD_TIMEOUT`, error number 41) that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
+This article discusses how to identify and resolve the `CniDownloadTimeoutVMExtensionError` error (also known as error code `ERR_CNI_DOWNLOAD_TIMEOUT`, error number `41` when uses linux distros or error number `35` to the windows nodes) that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Prerequisites
 
@@ -20,15 +20,23 @@ This article discusses how to identify and resolve the `CniDownloadTimeoutVMExte
 
 When you try to create an AKS cluster, you receive the following error message:
 
-> Message: We are unable to serve this request due to an internal error
->
-> SubCode: CniDownloadTimeoutVMExtensionError;
->
-> Message="VM has reported a failure when processing extension 'vmssCSE'.
->
-> Error message: "**Enable failed: failed to execute command: command terminated with exit status=41**\n[stdout]\n{
->
-> "ExitCode": "41",
+```console
+Message: We are unable to serve this request due to an internal error
+SubCode: CniDownloadTimeoutVMExtensionError;
+Message="VM has reported a failure when processing extension 'vmssCSE'.
+Error message: "**Enable failed: failed to execute command: command terminated with exit status=41**\n[stdout]\n{
+"ExitCode": "41",
+```
+
+or 
+
+```console
+Message="VM has reported a failure when processing extension 'vmssCSE' (publisher 'Microsoft.Compute' and type 'CustomScriptExtension').
+Error message: 'Command execution finished, but failed because it returned a non-zero exit code of: '1'. The command had an error output of: 'ExitCode: |35|,
+Output: |WINDOWS_CSE_ERROR_DOWNLOAD_CNI_PACKAGE|, Error: |Failed in downloading \r\nhttps://acs-mirror.azureedge.net/azure-cni/v1.4.56/binaries/azure-vnet-cni-overlay-windows-amd64-v1.4.56.zip.
+Error: \r\nUnable to connect to the r|\r\nAt line:1 ...'
+For more information, check the instance view by executing Get-AzVmssVm or Get-AzVm (https://aka.ms/GetAzVm). These commands can be executed using CloudShell (https://aka.ms/CloudShell)'. More information on troubleshooting is available at https://aka.ms/VMExtensionCSEWindowsTroubleshoot.
+```
 
 ## Cause
 
