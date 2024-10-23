@@ -12344,6 +12344,7 @@
       "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/site-system-installation-account-used-for-db-connection.md",
       "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
       "redirect_document_id": false,
+    {,
     {
       "source_path": "support/windows-server/backup-and-storage/extend-data-volume.md",
       "redirect_url": "/troubleshoot/windows-server/backup-and-storage/extend-shrink-data-volume",
