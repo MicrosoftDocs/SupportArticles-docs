@@ -44,6 +44,9 @@ Manually update the `azurestorageaccountkey` field in an Azure file secret with 
 
 1. Redeploy your pods.
 
+> [!NOTE]
+> Simply deleting the pod and let it recreate again may not take effect. Be sure to redeploy the pod.
+
 After a few minutes, the agent node will retry the Azure File mount with the updated storage key.
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
