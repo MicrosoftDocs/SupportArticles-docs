@@ -136,6 +136,8 @@
       href: desktop-flows/console-not-show-desktop-flows.md
     - name: Power Automate service doesn't start automatically after restarting
       href: desktop-flows/windows-services-not-start-after-restart.md
+    - name: Registration fails with RegisterFlowMachine deactivated error
+      href: desktop-flows/verify-dataverse-process-registerflowmachine.md
     - name: SessionHasLoggedOff occurs during a desktop flow run connected with the cloud
       href: desktop-flows/session-has-logged-off-troubleshooting.md
     - name: 'Security update for "connect with sign-in" connections on AD domain-joined machines'
