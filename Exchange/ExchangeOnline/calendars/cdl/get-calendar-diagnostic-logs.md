@@ -1,5 +1,5 @@
 ---
-title: Get Calendar Diagnostic logs for Exchange Online mailboxes
+title: Get Calendar diagnostic logs for Exchange Online mailboxes
 description: Discusses how to collect CDL logs to investigate calendar issues for Exchange Online mailboxes.
 author: cloud-writer
 ms.author: meerak
@@ -19,9 +19,9 @@ search.appverid: MET150
 ms.date: 10/22/2024
 ---
 
-# Get Calendar Diagnostic logs for Exchange Online mailboxes
+# Get Calendar diagnostic logs for Exchange Online mailboxes
 
-Calendar Diagnostic logs (CDLs) contain important calendar-related event data for Microsoft Exchange Online mailboxes. You can use CDLs to get detailed information about calendar items, such as meetings, to help diagnose issues. For example, a meeting organizer might ask you to find out who canceled their meeting.
+Calendar diagnostic logs (CDLs) contain important calendar-related event data for Microsoft Exchange Online mailboxes. You can use CDLs to get detailed information about calendar items, such as meetings, to help diagnose issues. For example, a meeting organizer might ask you to find out who canceled their meeting.
 
 For information about how to analyze the data, see [Analyze Calendar Diagnostic logs for Exchange Online mailboxes](./analyze-calendar-diagnostic-logs.md).
 
