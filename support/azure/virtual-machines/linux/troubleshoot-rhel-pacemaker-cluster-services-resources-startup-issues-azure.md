@@ -189,6 +189,7 @@ sudo ip -o -f inet route list match 192.168.111.222/24 scope link
 ```output
 192.168.111.0/24 dev ens6  proto kernel  src 192.168.111.195 
 ```
+
 In case if the `NIC (ens6)` is down, we couldn't manually find the `NIC` information, and that might lead to `[findif]` failed:
 
 ```bash
@@ -196,9 +197,9 @@ sudo ip link set ens6 down
 ```
 ```bash
 sudo ip -o -f inet route list match 192.168.111.222/24 scope link 
-````
+```
 > [!Note]
-> Replace 192.168.111.222/24 and ens6 accordingly.
+> Replace `192.168.111.222/24` and `ens6` accordingly.
 
 ### Resolution
 
@@ -246,7 +247,7 @@ Warning: This command is deprecated and will be removed. Please use 'pcs resourc
               stop interval=0s timeout=20s (ip-172.17.223.36-stop-interval-0s)
 ```
 > [!Note]
-> Replace ip-172.17.223.36 accordingly.
+> Replace `ip-172.17.223.36` accordingly.
 
 ## Scenario 3:  Issue with SAP HANA(High-performance ANalytic Appliance)
 
@@ -286,7 +287,9 @@ sudo pcs status
     * rsc_SAPHana_start_0 on node-2 'not running' (7): call=55, status=complete, exitreason='',
         last-rc-change='Sat May 22 09:36:32 2021', queued=0ms, exec=3093ms
 ```
+
 ### Cause
+
 Pacemaker can't start SAP HANA resource when there are `SYN` failures between primary and secondary nodes.
 
 ```bash
@@ -365,7 +368,7 @@ SAP HANA resource can't be start by pacemaker when there are `SYN` failures betw
     sapcontrol -nr <SAPInstanceNo> -function start
     ```
 > [!Note]
-> Modify <SAPInstanceNo> accordingly.
+> Modify `<SAPInstanceNo>` accordingly.
 
 3. Usually stop and start operation of SAP HANA DB should synchronize both nodes. If we're still not seeing the synchronization, then we have to disable and re-enable replication between the nodes. SAP Administrator should be able to perform this step of disabling SAP HANA system replication and then enabling the replication.
    
@@ -484,7 +487,7 @@ sudo HDB start
 sudo hdbnsutil -sr_enable --name=<site id>
 ```
 > [!Note]
-> Replace `<site id>` accodingly.
+> Replace `<site id>` accordingly.
 
 4. Initialize replication on secondary node. 
 
@@ -553,6 +556,10 @@ Mar  1 02:25:09 Node1 pacemaker-attrd[8568]: notice: Setting last-failure-SAPHan
 ```
 
 ### Resolution
+
+The error message “tput: No value for `$TERM` and no -T specified” typically occurs when the `TERM` environment variable is not set or is set incorrectly. The `$TERM` environment variable defines the type of terminal to emulate, which is crucial for commands like `tput` to function correctly.
+
+Here is the steps to resolve this issue:
 
 1. Ensure that the `$TERM` environment variable is set to a valid terminal type. You can set it to a common terminal type like `xterm` or `vt100`:
    
