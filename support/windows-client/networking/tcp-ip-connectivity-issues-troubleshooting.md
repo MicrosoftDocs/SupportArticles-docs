@@ -16,62 +16,60 @@ audience: itpro
 
 _Applies to:_ &nbsp; All Windows Client and Server OS versions
 
-This article is designed to guide you through troubleshooting TCP/IP connectivity errors.
+This article aims to provide a comprehensive guide for troubleshooting TCP/IP connectivity errors.
 
-You might come across connectivity errors on the application end or timeout errors. Here are a few common scenarios:
+You may encounter connectivity issues at the application level or experience timeout errors. A few common scenarios include:
 
-- Connectivity failure between an application and database server
-
+- Application connectivity to a database server
 - SQL timeout errors
 - BizTalk application timeout errors
-- Remote Desktop Protocol (RDP) connection failures
-
+- Remote Desktop Protocol (RDP) failures
 - File share access failures
-- General connectivity issues
+- General connectivity
 
-When you suspect that the issue is on the network, you can collect a network packet capture. The packet capture can then be filtered to identify the problematic TCP connection and understand the cause of failure. 
+When a network-related issue is suspected, it is advisable to collect a network packet capture. This capture can be filtered to identify the problematic TCP connection and determine the cause of the failure.
 
-During troubleshooting connectivity errors, you might come across TCP reset in a network capture that could indicate a network issue.  
+During the troubleshooting process, you may encounter a TCP reset in the network capture, which could indicate a network issue.
 
-- TCP is defined as connection-oriented and reliable protocol. One of the ways in which TCP ensures reliability is through the handshake process. Establishing a TCP session would begin with a three-way handshake, followed by data transfer, and then a four-way closure. 
+TCP is characterized as a connection-oriented and reliable protocol. It ensures reliability through the handshake process. A TCP session initiates with a three-way handshake, followed by data transfer, and concludes with a four-way closure.
 
-- The four-way closure where both sender and receiver agree on closing the session is termed as graceful closure. After the four-way closure, the server will allow 4 minutes of time (default), during which any pending packets on the network are to be processed, this period is the TIME_WAIT state. After the TIME_WAIT state completes, all the resources allocated for this connection are released.  
-- TCP reset is an abrupt closure of the session; it causes the resources allocated to the connection to be immediately released and all other information about the connection is erased.  
-- TCP reset is identified by the RESET flag in the TCP header set to 1.  
+- A four-way closure, where both the sender and receiver agree to close the session, is known as a graceful closure. This is identified by the FIN flag in the TCP header being set to 1.
 
+- After the four-way closure, the machine waits for 4 minutes (by default) before releasing the port. This is termed as TIME_WAIT state. During this TIME_WAIT state, any pending packets for the TCP connection can be processed. Once the TIME_WAIT state completes, all resources allocated for the connection are released.  
+- A TCP reset is an abrupt session closure, causing the immediate release of allocated resources and erasure of all connection information. This is identified by the RESET flag in the TCP header being set to 1. 
 A network trace collected simultaneously on the source and the destination helps you to determine the flow of the traffic and identify the point of failure.
 
-The following sections describe some of the scenarios when you'll see a RESET.
+The following sections outline scenarios in which a RESET may occur.
 
 ## Packet drops
 
-When one TCP peer is sending out TCP packets for which there's no response received from the other end, the TCP peer would end up retransmitting the data and when there's no response received, it would end the session by sending an ACK RESET (this ACK RESET means that the application acknowledges whatever data is exchanged so far, but because of packet drop, the connection is closed).  
+When a TCP peer sends packets without receiving a response, it will retransmit the data. If there is still no response, the session will end with an ACK RESET, indicating that the application acknowledges the exchanged data but closes the connection due to packet loss.
 
-The simultaneous network traces on source and destination will help you verify this behavior where on the source side you would see the packets being retransmitted and on the destination none of these packets are seen. This scenario denotes that the network device between the source and destination is dropping the packets.
+Simultaneous network traces at both the source and destination can verify this behavior. On the source side, you will see retransmitted packets, while on the destination side, these packets will not be present. This scenario indicates that a network device between the source and destination is dropping the packets.
 
 #### Scenario 1: Initial TCP handshake packet drop
 
-If the initial TCP handshake is failing because of packet drops, then you would see that the TCP SYN packet is retransmitted only three times.
+If the initial TCP handshake fails due to packet drops, the TCP SYN packet will be retransmitted 3 times by default.
 
 > NOTE: The number of times that the TCP SYN packet is retransmitted can be different based on the OS. This is determined by the value "Max SYN Retransmissions" under TCP Global parameters which can be viewed using the command `netsh int tcp show global`. 
 
 Consider an example where source machine with IP Address 10.10.10.1 is connecting to destination with IP Address 10.10.10.2 over TCP port 445.
 
-Here's a snippet of the network trace collected on source which shows the initial TCP handshake wherein TCP SYN packet is sent and then retransmitted by the source because of no response received from destination.
+Here's a snippet of the network trace collected on source which shows the initial TCP handshake wherein TCP SYN packet is sent and then retransmitted by the source since no response was received from destination.
 
 :::image type="content" source="media/tcp-ip-connectivity-issues-troubleshooting/source-side-port-445.png" alt-text="Screenshot of frame summary in Network Monitor.":::
 
-The same TCP conversation seen in the network trace collected on the destination shows that none of the above packets were received at the destination machine. This implies that the TCP SYN packet was dropped over the intermediate network.
+The same TCP conversation seen in the network trace collected on the destination shows that none of the above packets were received by the destination. This implies that the TCP SYN packet was dropped over the intermediate network.
 
 :::image type="content" source="media/tcp-ip-connectivity-issues-troubleshooting/destination-side-same-filter.png" alt-text="Screenshot of frame summary with filter in Network Monitor.":::
 
-If you see that the TCP SYN packets are reaching the destination, but the destination is still not responding, then verify if the TCP port that you're trying to connect to is in the LISTENING state on destination (this can be checked in the output of this command `netstat -anob`). 
+If you see that the TCP SYN packets are reaching the destination, but the destination is still not responding, then verify if the TCP port that you're trying to connect to is in the LISTENING state on destination (this can be checked in the output of the command `netstat -anob`). 
 
 If the port is listening and there's still no response, then there could be a drop at the Windows Filtering Platform (WFP).
 
 #### Scenario 2: Packet drops during data transfer after TCP connection is established
 
-In a scenario where a data packet which is sent after the TCP connection is established gets dropped over the network, TCP will retransmit the packet five times by default.
+In a scenario where a data packet sent after the TCP connection is established gets dropped over the network, TCP will retransmit the packet 5 times by default.
 
 Consider an example where source machine with IP Address 192.168.1.62 has established a connection with destination machine having IP Address 192.168.1.2 over TCP port 445. 
 
@@ -89,21 +87,21 @@ You will need to engage your internal network team to investigate the different 
 
 ## Incorrect parameter in the TCP header
 
-You see this behavior when the packets are modified in the network by middle devices and TCP on the receiving end is unable to accept the packet. An example could be the TCP sequence number being modified or packets being re-played by middle device by changing the TCP sequence number. 
+This behavior occurs when intermediary devices in the network modify packets, causing TCP at the receiving end to reject them. For instance, the TCP sequence number might be altered, or packets could be replayed by an intermediary device with a modified TCP sequence number. 
 
-A simultaneous network trace on the source and destination will be helpful to check if any of the TCP headers are modified. 
+A simultaneous network trace on the source and destination can help identify any modifications to the TCP headers.
 
-You will need to start by comparing the source trace and destination trace, you'll be able to notice if there's a change in the packets itself or if any new packets are reaching the destination on behalf of the source.  
+Begin by comparing the source and destination traces to detect any changes in the packets or the presence of new packets reaching the destination on behalf of the source. 
 
-In this case, you'll again need help from the internal network team to identify any device that's modifying packets or re-playing packets to the destination. The most common ones are Riverbed devices or WAN accelerators.
+In such cases, it is advisable to seek assistance from the internal network team to identify any devices that are modifying or replaying packets to the destination. Common culprits include Riverbed devices or WAN accelerators.
 
 ## Application side reset
 
-When you've identified that the resets aren't due to packet drops or incorrect parameter or packets being modified with the help of network trace, then you've narrowed it down to an application-level reset.
+When you have determined that the resets are not due to packet drops, incorrect parameters, or packet modifications (as identified through network traces), you can conclude that the issue is an application-level reset.
 
-The application resets are the ones where you see the Acknowledgment flag (ACK) set to 1 along with the Reset (R) flag. This setting would mean that the server is acknowledging the receipt of the packet but for some reason it will not accept the connection. This stage is when the application that received the packet didn't like something it received.  
+Application-level resets are characterized by the Acknowledgment (ACK) flag being set to 1 along with the Reset (R) flag. This indicates that the server acknowledges the receipt of the packet but, for some reason, will not accept the connection. This typically occurs when the application receiving the packet finds something unacceptable in the data.  
 
-In the below screenshots, you see that the packets seen on the source and the destination are the same without any modification or any drops, but you see an explicit reset sent by the destination to the source.
+In the screenshots below, you can observe that the packets at both the source and destination are identical, with no modifications or drops. However, an explicit reset is sent by the destination to the source.
 
 Source-side trace:
 
@@ -113,34 +111,32 @@ Destination-side trace:
 
 ![Screenshot of packets on destination side in Network Monitor.](media/tcp-ip-connectivity-issues-troubleshooting/uv8snmuo.png)
 
-An ACK+RST flagged TCP packet can also be seen in a case when the TCP establishment packet SYN is sent out. The TCP SYN packet is sent when the client wants to connect on a particular port, but if the destination/server for some reason doesn't want to accept the packet, it would send an ACK+RST packet.  
+An ACK+RST flagged TCP packet can also occur when a TCP SYN packet is sent out. The TCP SYN packet is initiated by the source machine to establish a connection on a specific port. However, if the destination server does not want to accept the packet for any reason, it will respond with an ACK+RST packet.
 
-:::image type="content" source="media/tcp-ip-connectivity-issues-troubleshooting/ack-rst-flag-packet.png" alt-text="Screenshot of packet with ACK RSK flag.":::
-
-In this case, the application that's causing the reset (identified by port numbers) should be investigated further to understand why it is resetting the connection.
+:::image type="content" source="media/tcp-ip-connectivity-issues-troubleshooting/ack-rst-flag-packet.png" alt-text="Screenshot of packet with ACK RSK flag.":::In such cases, it is essential to investigate the application causing the reset (identified by port numbers) to understand why the connection is being reset.
 
 > [!NOTE]
-> The above information is about resets from a TCP standpoint and not UDP. UDP is a connectionless protocol, and the packets are sent unreliably. You wouldn't see retransmission or resets when using UDP as a transport protocol. However, UDP makes use of ICMP as an error reporting protocol. When there's a UDP packet sent out on a port and the destination does not have port listed, you'll see the destination sending out **ICMP Destination host unreachable: Port unreachable** message immediately after the UDP packet.
+> The above information pertains to resets from a TCP perspective and not UDP. UDP is a connectionless protocol, and packets are sent unreliably. Consequently, retransmissions or resets are not observed when using UDP as a transport protocol. However, UDP utilizes ICMP as an error reporting protocol. When a UDP packet is sent to a port that is not listed at the destination, the destination will immediately respond with an ICMP "**Destination Host Unreachable: Port Unreachable**" message.
 ```output
 10.10.10.1  10.10.10.2  UDP UDP:SrcPort=49875,DstPort=3343
  
 10.10.10.2  10.10.10.1  ICMP    ICMP:Destination Unreachable Message, Port Unreachable,10.10.10.2:3343
 ```
 
-During troubleshooting TCP/IP connectivity issues, you might also see in the network trace that a machine receives packets but doesn't respond to them. In such cases, there could be a drop at the destination server network stack.
+During the troubleshooting of TCP/IP connectivity issues, you may observe in the network trace that a machine receives packets but does not respond to them. This could indicate a drop at the destination server's network stack.
 
-To understand whether the local Windows Firewall is dropping the packet, enable the auditing for Windows Filtering Platform (WFP) on the machine using the following command.
+To determine whether the local Windows Firewall is dropping the packet, enable auditing for the Windows Filtering Platform (WFP) on the machine using the following command.
 
 ```console
 auditpol /set /subcategory:"Filtering Platform Packet Drop" /success:enable /failure:enable
 ```
 
-You can then review the Security event logs to find a packet drop on a particular TCP Port and IP Address with a WFP filter ID associated.
+You can then review the Security event logs to identify a packet drop on a specific TCP port and IP address, along with an associated WFP filter ID.
 
 :::image type="content" source="media/tcp-ip-connectivity-issues-troubleshooting/security-event-log.png" alt-text="Screenshot of Event Properties with filter id." border="false":::
 
-You can then run the command `netsh wfp show state` which will generate a *wfpstate.xml* file. 
+Next, run the command `netsh wfp show state` which will generate a *wfpstate.xml* file. 
 
-You can open this file with Notepad and filter for the ID that you find in the above event (for example, 2944008 in the sample event above), you'll be able to see a firewall rule name that's associated with this ID that's blocking the connection.
+You can open this file with Notepad and filter for the ID found in the event logs (for example, 2944008 in the sample event). This will reveal the firewall rule name associated with the Filter ID that is blocking the connection.
 
 :::image type="content" source="media/tcp-ip-connectivity-issues-troubleshooting/wfpstate-file.png" alt-text="Screenshot of the wfpstate xml file which includes the firewall rule name that's associated with the filter id that's blocking the connection.":::
