@@ -51,19 +51,21 @@ The secret that's provided for the highlighted service principal isn't valid.
 
 ## Solution 1: Reset the service principal secret
 
-Reset the secret that's used for the service principal by running the [az ad sp credential reset](/cli/azure/ad/sp/credential#az-ad-sp-credential-reset) command:
+To resolve this issue, reset the service principal secret by using one of the following methods:
 
-```azurecli-interactive
-az ad sp credential reset --name "01234567-89ab-cdef-0123-456789abcdef" --query password --output tsv
-```
+- Reset the service principal's credential by running the [az ad sp credential reset](/cli/azure/ad/sp/credential#az-ad-sp-credential-reset) command:
 
-Or you can reset it by specifiying the expiration date using the following command: 
+  ```azurecli-interactive
+  az ad sp credential reset --name "01234567-89ab-cdef-0123-456789abcdef" --query password --output tsv
+  ```
 
-```azurecli-interactive
-az ad sp credential reset --name <service-principal-name> --credential-description "New secret for AKS" --years 1
-```
+- Specify the expiration date by running the following command: 
 
-This command resets the secret, and displays it as output. Then, you can specify the new secret when you try again to create the new cluster.
+  ```azurecli-interactive
+  az ad sp credential reset --name <service-principal-name> --credential-description "New secret for AKS" --years 1
+  ```
+
+The preceding command resets the secret and displays it as output. Then, you can specify the new secret when you try to create the new cluster again.
 
 For failed operations in an existing cluster, ensure that you update your AKS cluster with the new secret:
 
@@ -92,7 +94,7 @@ The output of the command should resemble the following JSON string:
 
 Note the `appId` and `password` values that are generated. After you get these values, you can rerun the cluster creation command for the new service principal and secret.
 
-To update your AKS cluster with the new service principal credentials, run the following command:
+To update your AKS cluster with the new service principal's credential, run the following command:
 
 ```azurecli-interactive
 az aks update-credentials --resource-group <resource-group> --name <aks-cluster> --service-principal <new-client-id> --client-secret <new-client-secret>
