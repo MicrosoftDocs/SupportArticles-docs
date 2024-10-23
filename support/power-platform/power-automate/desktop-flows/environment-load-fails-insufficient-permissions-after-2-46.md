@@ -2,8 +2,8 @@
 title: Environment load fails with insufficient permissions in version 2.46 or later
 description: Resolves the insufficient permissions error that occurs in a v2 schema enabled environment in Power Automate for desktop version 2.46 or later.
 ms.reviewer: iomavrid
-ms.date: 10/18/2024
-ms.custom: sap:Desktop flows\Power Automate for desktop errors
+ms.date: 10/23/2024
+ms.custom: sap:Desktop flows\Administration issues
 ---
 # Environment load fails with "insufficient permissions" error in v2 schema
 
