@@ -30,6 +30,6 @@ To solve this issue, ensure that the Reflection Desktop Application Programmer I
 :::image type="content" source="media/error-communicating-with-the-emulator/micro-focus-reflection-desktop-configuration.png" alt-text="Screenshot that shows the Application Programmer Interface feature in the Micro Focus Reflection Desktop installation.":::
 
 > [!NOTE]
-> Power Automate for desktop will only communicate through the .NET interface of Reflection Desktop when using a 3270, 5250, or a UNIX and OpenVMS session.
+> Power Automate for desktop only communicates through the .NET interface of Reflection Desktop when using a 3270, 5250, or a UNIX and OpenVMS session.
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
