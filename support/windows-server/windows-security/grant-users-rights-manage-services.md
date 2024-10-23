@@ -25,7 +25,7 @@ You can use Group Policy to change permissions on system services. See [How To C
 
 To use security templates to change permissions on system services, create a security template following these steps:
 
-1. Select **Start**, search *mmc* and select it.
+1. Select **Start**, search *mmc.exe* and select it.
 2. On the **File** menu, click **Add/Remove Snap-in**.
 3. Select **Security Configuration and Analysis**, select **Add**, and then select **OK**.
 4. In the console tree, right-click **Security Configuration and Analysis**, and then select **Open Database**.
