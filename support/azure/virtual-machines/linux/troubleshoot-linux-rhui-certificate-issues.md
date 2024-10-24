@@ -110,7 +110,7 @@ All the commands in the following steps should be run by using root privileges o
 3. Reinstall the corresponding `rhui-azure` package by running the `yum reinstall` command:
 
    ```bash
-   sudo yum reinstall $(rpm -qa | grep -i rhui-azure) --disablerepo=* --enablerepo="*microsoft*"
+   sudo yum reinstall $(rpm -qa | grep -i rhui-azure) --disablerepo=* --enablerepo="*microsoft-azure*"
    ```
 
 4. If the `EUS` or `E4S` repo is installed, lock the `releasever` variable:
