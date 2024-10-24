@@ -2925,7 +2925,7 @@ items:
       href: ./windows-security/windows-updates-add-new-ntlm-pass-through-authentication-protections.md
   - name: Netlogon, secure channel, DC Locator
     items:
-      - name: Troubleshooting guidance: Secure channel
+      - name: 'Troubleshooting guidance: Secure channel'
         href: ./windows-security/broken-trust-relationship-domain-joined-device-its-domain-secure-channel-issues.md      
       - name: Gather information for secure channel issues
         href: ./windows-security/data-collection-for-troubleshooting-secure-channel-issues.md
