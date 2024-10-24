@@ -3,7 +3,7 @@ title: Can't accrue transactions for a date
 description: Provides a solution to an error that occurs when you save a transaction or accrue attendance in Microsoft Dynamics GP.
 ms.reviewer: theley, lmuelle, jakelaux
 ms.topic: troubleshooting
-ms.date: 10/18/2024
+ms.date: 10/24/2024
 ms.custom: sap:Human Resources
 ---
 # "You cannot accrue transactions for a date that isn't within an accrual period" error when you save a transaction or accrue attendance
@@ -51,15 +51,15 @@ To resolve this problem, follow these steps:
 
 3. ​​​Make sure that no dates are missing from an accrual setup.
 
-   To do this, select each accrual period and make sure that all the dates are included for the whole year, through December 31 (not 30). For example, if you use a semimonthly setup, you should also review the weekly and biweekly setups as well. The system reads from the top down, so be sure to set all those up for the period setups down to the one you're using. Make sure that in each setup, no dates are skipped or overlap in between periods and each year.
+   To do this, select each accrual period and make sure that all the dates are included for the whole year, through December 31 (not 30). For example, if you use a semimonthly setup, you should also review the weekly and biweekly setups. The system reads from the top down, so be sure to set all those up for the period setups down to the one you're using. Make sure that in each setup, no dates are skipped or overlap in between periods and each year.
 
     Additionally, make sure that no gaps exist between periods or years.
 
-4. Make sure that no dates that are included multiple times in any accrual period or in any pay period.
+4. Make sure that no dates are included multiple times in any accrual period or in any pay period.
 
 5. Make sure that all accrual periods or pay periods have setup information, even if you don't use the periods.
 
-   For example, if all accrual periods or pay periods are completed on a bi-weekly schedule, you still have to set up information for weekly accrual periods or for the pay periods. Errors can occur if any setup is accidentally configured for a different pay period, especially for new employees. To avoid these issues, it's best practice to set up all periods for the entire year.
+   For example, if all accrual periods or pay periods are completed on a biweekly schedule, you still have to set up information for weekly accrual periods or for the pay periods. Errors can occur if any setup is accidentally configured for a different pay period, especially for new employees. To avoid these issues, it's best practice to set up all periods for the entire year.
 
 6. If the error occurs on transactions, make sure that the date in the **Attendance transaction entry** box is correct in the **Attendance Transaction Entry** window. Additionally, make sure that these dates fall in the accrual period or in the pay period that you want.
 
