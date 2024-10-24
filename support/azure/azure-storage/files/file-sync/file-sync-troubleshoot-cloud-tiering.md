@@ -6,7 +6,7 @@ ms.service: azure-file-storage
 ms.topic: troubleshooting
 ms.date: 10/24/2024
 ms.author: kendownie
-ms.reviewer: v-weizhu
+ms.reviewer: vritikanaik, v-weizhu
 ms.custom: sap:File Sync
 ---
 # Troubleshoot Azure File Sync cloud tiering
