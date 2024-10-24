@@ -57,7 +57,7 @@ To identify that you're experiencing the issue, follow these steps:
 
     **Applications and Services Logs** > **Microsoft** > **Windows** > **Dhcp-Client** > **Microsoft-Windows-DHCP Client Events/Operational**
 
-2. Once enabled, open an elevated command prompt window and run the following  command:
+2. Once enabled, open an elevated command prompt window and run the following command:
 
     ```console
     ipconfig /renew
@@ -66,19 +66,20 @@ To identify that you're experiencing the issue, follow these steps:
     Then, some events will be generated under **Dhcp-Client** > **Microsoft-Windows-DHCP Client Events/Operational**.
 
 3. Search for Event ID 50042 which task category is **DNS State Event**. This event gives the DNS Flag value.
-4. If the DNS Flag value is set to 64. This indicates the client machine doesn't send a dynamic update itself and relies on the DHCP server.
 
-    The value 64 can be caused by the registry cache when the DHCP server doesn't send back the Option 81 response.
+4. If the DNS Flag value is set to 64. This indicates that the client machine doesn't send a dynamic update itself and relies on the DHCP server.
 
-    In some cases, the value 64 can also indicate the DHCP server responds back with Option 81 overriding the client options as shown below:
+    The value 64 can be caused by the registry cache when the DHCP server doesn't send back Option 81.
 
-    :::image type="content" source="media/client-ddns-updates-dhcp-option-81/value-64-override.png" alt-text="Screenshot showing the DHCP server responds back with Option 81 overriding the client options.":::
+    In some cases, the value 64 might also indicate that the DHCP server responds back with Option 81, which overrides the client options:
 
-    This article corresponds to the issue when the value 64 is caused by the cache, not the DHCP server response.
+    :::image type="content" source="media/client-ddns-updates-dhcp-option-81/value-64-override.png" alt-text="Screenshot that shows the DHCP server responds back with Option 81 overriding the client options.":::
+
+    This article fixes the issue in which the value 64 is caused by the cache rather than the DHCP server response.
 
 ### Log collection
 
-To diagnose the issue, collect the following logs using `netsh`:
+To diagnose the issue, collect a network trace using `netsh`:
 
 1. Open an elevated Windows Command Prompt.
 2. Start a network trace by running the following command:
@@ -93,7 +94,7 @@ To diagnose the issue, collect the following logs using `netsh`:
     ipconfig /renew
     ```
 
-4. Stop the log collection by running the following command:
+4. Stop the network trace by running the following command:
 
     ```console
     netsh trace stop
