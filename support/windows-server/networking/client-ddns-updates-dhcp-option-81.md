@@ -77,7 +77,7 @@ To identify that you're experiencing the issue, follow these steps:
 
     This article fixes the issue in which the value 64 is caused by the cache rather than the DHCP server response.
 
-### Log collection
+### Collect trace logs
 
 To diagnose the issue, collect a network trace using `netsh`:
 
