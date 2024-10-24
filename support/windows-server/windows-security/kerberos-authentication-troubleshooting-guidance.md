@@ -1,12 +1,12 @@
 ---
 title: Kerberos authentication troubleshooting guidance
 description: Provides guidance to troubleshoot Kerberos authentication issues.
-ms.date: 12/26/2023
+ms.date: 10/24/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.custom: sap:Windows Security Technologies\Kerberos authentication, csstroubleshoot
-ms.reviewer: kaushika, raviks, v-lianna
+ms.reviewer: kaushika, raviks, v-lianna, jobesanc
 ---
 # Kerberos authentication troubleshooting guidance
 
@@ -15,7 +15,7 @@ This guide provides you with the fundamental concepts used when troubleshooting 
 ## Troubleshooting checklist
 
 - A Kerberos-related error is a symptom of another service failing. The Kerberos protocol relies on many services that must be available and functioning properly for any authentication to take place.
-- To determine whether a problem is occurring with Kerberos authentication, check the System event log for errors from any services (filtering it using "Source" such as Kerberos, kdc, LsaSrv, or Netlogon) on the client, target server, or domain controller that provide authentication. If any such errors exist, there might be errors associated with the Kerberos protocol as well.
+- To determine whether a problem is occurring with Kerberos authentication, check the System event log for errors from any services by filtering it using the "source" (such as Kerberos, kdc, LsaSrv, or Netlogon) on the client, target server, or domain controller that provide authentication. If any such errors exist, there might be errors associated with the Kerberos protocol as well.
 - Failure audits on the target server's Security event log might show that the Kerberos protocol was being used when a logon failure occurred.
 - Before you inspect the Kerberos protocol, make sure that the following services or conditions are functioning properly:
 
@@ -70,7 +70,7 @@ Consider the following scenarios:
 - A client and server application like Microsoft Edge and Internet Information Services (IIS) server. The IIS server is configured with Windows Authentication (Negotiate).
 - A client and server application like an SMB client and SMB server. By default, the SMB server is configured with Negotiate Security Support Provider Interface (SSPI).
 
-A User opens Microsoft Edge and browses an internal website `http://webserver.contoso.com`. The website is configured with [Negotiate](https://learn.microsoft.com/en-us/windows/win32/secauthn/microsoft-negotiate), and this website prompts for authentication. After the user manually enters the username and password, the user gets authentication, and the website works as expected.
+A User opens Microsoft Edge and browses an internal website `http://webserver.contoso.com`. The website is configured with [Negotiate](/windows/win32/secauthn/microsoft-negotiate), and this website prompts for authentication. After the user manually enters the username and password, the user gets authentication, and the website works as expected.
 
 > [!NOTE]
 > This scenario is an example of a client and server. The troubleshooting technique is the same for any client and server configured with Integrated Windows authentication.
@@ -150,7 +150,7 @@ Here are examples of such error messages:
 
 - Client machine
 
-    `Client1.contoso.com` (a Windows 11 machine) joined to the domain `Contoso.com`.
+    `Client1.contoso.com` (a Windows 11 machine) joins the domain `Contoso.com`.
 - User `John`
 
     The user belongs to `Contoso.com` and signs in on the client machine.
@@ -162,7 +162,7 @@ Here are examples of such error messages:
 
 - Server
 
-    `IISServer.contoso.com` (Windows Server 2019) joined to the domain `Contoso.com`.
+    `IISServer.contoso.com` (Windows Server 2019) joins the domain `Contoso.com`.
 - Authentication configuration
 
     **Windows Authentication** is **Enabled**.
