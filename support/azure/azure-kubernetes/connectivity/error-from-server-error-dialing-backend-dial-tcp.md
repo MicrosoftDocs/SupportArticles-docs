@@ -1,38 +1,82 @@
 ---
 title: 'Error from server: error dialing backend: dial tcp'
-description: 'Troubleshoot the Error from server: error dialing backend: dial tcp error that blocks you from using kubectl logs or connecting to the API server.'
-ms.date: 09/07/2022
-editor: v-jsitser
-ms.reviewer: chiragpa, nickoman, v-leedennis
+description: 'Troubleshoot the Error from server: error dialing backend: dial tcp error that blocks you from using kubectl commands or other tools when connecting to the API server.'
+ms.date: 10/21/2024
+editor: pihe
+ms.reviewer: chiragpa, nickoman, v-leedennis, pihe
 ms.service: azure-kubernetes-service
 keywords:
-#Customer intent: As an Azure Kubernetes user, I want to troubleshoot the "Error from server: error dialing backend: dial tcp" error so that I can connect to the API server or use the `kubectl logs` command to get logs.
+#Customer intent: As an Azure Kubernetes user, I want to troubleshoot the "Error from server: error dialing backend: dial tcp" error so that I can connect to the API server, or use the `kubectl logs` command to get logs.
 ms.custom: sap:Connectivity
 ---
 # "Error from server: error dialing backend: dial tcp" message
 
+
 ## Symptoms
 
-You receive an "Error from server: error dialing backend: dial tcp" error message when you take one of the following actions:
+You receive an "Error from server: error dialing backend: dial tcp" error
+message when you take one of the following actions:
 
-- Use the [kubectl logs](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#logs) command to print the logs for a Kubernetes resource
-- Connect to the API server
+- Use any of the `kubectl` `logs`, `exec`, `attach`, `top`, `port-forward`
+  command.
+- Using thrird-party Kubernetes client tools to do the equivalent of above.
 
-## Cause 1: Ports are disabled
+## What does it mean
 
-The required ports aren't enabled for use.
+Kubernetes APIServer need to forward API requests to an upsteram component for
+several use cases. This error occurs when apiserver fails to establish TCP
+connection to the upstream component.
 
-### Solution: Enable ports 22, 1194, and 9000
+Example of such upstream components are kubernetes services inside the cluster
+and kubelet.
 
-Make sure that ports 22, 1194, and 9000 are open for an API server connection.
+If the issue is consistent, networking blockage is the most likely cause. To
+identify which networking configuration is responsible, we must first identify
+the problem scope:
 
-## Cause 2: The tunnelfront, aks-link, or konnectivity-agent pod isn't running
+## Narrowing down: Is all kubectl suspectable sub-command failing
 
-When you run the [kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get) command to display the resources in the `kube-system` namespace (`kubectl get pods --namespace kube-system`), the `tunnelfront`, `aks-link`, or `konnectivity-agent` pod is shown to be in a non-running state.
+Try at least `kubectl logs <podname>` and `kubectl top pods`.
 
-### Solution: Delete the non-running pod
+If only `kubectl logs <podname>` or `kubectl exec` is failing, try to see if it
+fails for pods on different nodes.
 
-Force delete the non-running pod so that it restarts.
+If only `kubectl top pods` failing, try to see if it fails for all nodes, or
+just for pods on one node. 
+
+## Cause 1: kubelet port (node:10250) blocked
+
+For pod specific access failures, such as `kubectl logs` and `kubectl exec`,
+apiserver reaches node:10250 when it needs to access kubelet API. If the access
+is blocked by any component such as NSG, the connectivity fails.
+
+Check if NSG on the node subnet includes a block inbound rule that might block
+port TCP port 10250.
+
+## Cause 2: Specific service failing
+
+Kubernetes accesses `svc/metrics-server` under `kube-system` namespace for
+`kubectl top` commands. There are other scenarios, such as
+[admission webhooks](https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/),
+that apiserver can reach other services as well. Noting that depending on the
+service failure pattern, the error message may be different.
+
+## Cause 3: Konnectivity/tunnel failing
+
+When not enabling
+[API Server VNet Integration](/azure/aks/api-server-vnet-integration),
+AKS deploys a tunnel solution proxying apiserver requests to in-cluster
+networking locations.
+
+Most AKS clusters are using
+[Konnectivity](/azure/aks/faq#how-does-the-managed-control-plane-communicate-with-my-nodes-)
+solution which does not require opening special ports on apiserver. Review
+[AKS required network rules](/azure/aks/outbound-rules-control-egress#azure-global-required-network-rules)
+for detail.
+
+Check if `konnectivity-agent` under `kube-system` namespace are in running, and
+containers in ready state. Try deleting the pods to see if connection recovers
+after new pods become ready.
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
