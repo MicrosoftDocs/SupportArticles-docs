@@ -1,7 +1,7 @@
 ---
 title: Client device has a newer password value than Active Directory
-description: Introduces the resolution for the scenario in which the client device has a newer password value than Active Directory.
-ms.date: 10/22/2024
+description: Introduces a resolution for the scenario in which the client device has a newer password value than Active Directory.
+ms.date: 10/24/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ ms.custom: sap:Windows Security\Netlogon, secure channel, DC locator, csstrouble
 ---
 # Client device has a newer password value than Active Directory
 
-After collecting data based on the steps in [Data collection for troubleshooting secure channel issues](data-collection-for-troubleshooting-secure-channel-issues.md), you may find that the Active Directory value for the `pwdLastSet` attribute has an older value than `Cupdtime` in the affected device. This article introduces the common causes and the resolution.
+After collecting data based on the steps in [Data collection for troubleshooting secure channel issues](data-collection-for-troubleshooting-secure-channel-issues.md), you might find that the Active Directory value for the `pwdLastSet` attribute has an older value than `Cupdtime` in the affected device. This article introduces the common causes and the resolution.
 
 ## Common causes
 

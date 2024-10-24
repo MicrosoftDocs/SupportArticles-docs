@@ -1,101 +1,114 @@
 ---
-title: Active Directory having newer password value than client device
-description: Introduces the resolution for the scenario in which Active Directory having newer pwdLastSet value than client device.
-ms.date: 10/18/2024
+title: Active Directory has a newer password value than client device
+description: Introduces a resolution for the scenario in which Active Directory has a newer pwdLastSet value than the client device.
+ms.date: 10/24/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, herbertm
 ms.custom: sap:Windows Security\Netlogon, secure channel, DC locator, csstroubleshoot
 ---
-# Active Directory having newer password value than client device
+# Active Directory has a newer password value than the client device
 
-After collecting data based on the steps in [Data collection for troubleshooting secure channel issues](data-collection-for-troubleshooting-secure-channel-issues.md), you may find Active Directory having newer pwdLastSet value than client device. This article introduces how to fix the issue in this scenario.
+After collecting data based on the steps in [Data collection for troubleshooting secure channel issues](data-collection-for-troubleshooting-secure-channel-issues.md), you might find that Active Directory has a newer pwdLastSet value than the client device. This article introduces how to fix the issue in this scenario.
 
 ## Possible causes
 
-### Reverting virtual machine to an old snapshot
+### Reverting the virtual machine to an old snapshot
 
-There is no specific event you can find to confirm this cause. Instead, you can check if there are jumps in time within logs. For example, it is suspicious if you find System Event Viewer events having a jump from February to July. That couple of months without data on a computer that is constantly in use, should be a reason to start questioning.
+You can't find a specific event to confirm this cause. Instead, you can check the logs for jumps in time. For example, it's suspicious if you find System Event Viewer events having a jump from February to July. That couple of months without data on a computer that is constantly in use, should be a reason to start questioning.
 
 Also, you can check if the system has started recently:
 
-:::image type="content" source="media/scenario-active-directory-having-newer-pwd-last-set-value-than-client-device/screenshot-of-event-id-12.png" alt-text="Screenshot of event ID 12.":::
+:::image type="content" source="media/scenario-active-directory-having-newer-pwd-last-set-value-than-client-device/evnt-id-12.png" alt-text="Screenshot of event ID 12.":::
 
-> Event ID 12  
-> Log name: System  
-> Source: Kernel-General  
-> Description: The operating system started at system time 2024-08-24T19:15:58.500000000Z.
+```output
+Event ID 12  
+Log name: System  
+Source: Kernel-General  
+Description: The operating system started at system time 2024-08-24T19:15:58.500000000Z.
+```
 
-You can also check the uptime. If the Virtual Machine was reverted to a previous snapshot, the uptime would be recent. It could also be related to a desired operation, not only because of a snapshot reversion.
+You can also check the uptime. If the virtual machine has been reverted to a previous snapshot, the uptime will be recent. It might also be related to a desired operation and not only because of the snapshot reversion.
 
-:::image type="content" source="media/scenario-active-directory-having-newer-pwd-last-set-value-than-client-device/screenshot-of-the-task-manager.png" alt-text="Screenshot of the Task Manager.":::
+:::image type="content" source="media/scenario-active-directory-having-newer-pwd-last-set-value-than-client-device/ task-manager-uptime.png" alt-text="Screenshot of the uptime in Task Manager.":::
+
 
 > [!NOTE]
-> You need to confirm if the boot time was provoked by a desired reboot of the machine. Communication with the user would be required to determine what was done on the computer.
+> You need to confirm if the boot time was provoked by a desired reboot of the machine. Communication with the user is required to determine what was done on the computer.
 
-### Restoring physical or virtual machine from bare metal backup
+### Restoring the physical or virtual machine from a bare metal backup
 
-This cause is like the cause in the previous section. will be like the above cause. The first step will be to check with the backup solution administrator if there is any log to confirm any action on the affected device.
+This cause is like the one in the previous section. The first step is to check with the backup solution administrator if there's any log to confirm any action on the affected device.
 
-You can also check if there are jumps in time within logs, for example, it will be suspicious if you find System Event Viewer events having a jump from February to July. That couple of months without data on a computer that is constantly in use, should be a reason to start questioning.
+You can also check the logs for jumps in time. For example, it's suspicious if you find System Event Viewer events having a jump from February to July. That couple of months without data on a computer that is constantly in use should be a reason to start questioning.
 
-Confirm if there is a recent uptime on the device too.
+Confirm if there's a recent uptime on the device.
 
-### Restoring machine from an old system restore point
+### Restoring the machine from an old system restore point
 
-You can investigate System and/or Application event viewer logs for events which indicate a system restore happened (ID:1208/8202)
+You can investigate the System and Application event viewer logs for events that  indicate a system restore happened (ID: 1208 or 8202)
 
-> Log Name:      System  
-> Source:        Microsoft-Windows-StartupRepair  
-> Event ID:      1208  
-> Level:         Information  
-> User:          SYSTEM  
-> Description: Restored system to an earlier restore point.  
+```output
+Log Name:      System  
+Source:        Microsoft-Windows-StartupRepair  
+Event ID:      1208  
+Level:         Information  
+User:          SYSTEM  
+Description: Restored system to an earlier restore point.  
+```
 
-> Log Name:      Application  
-> Source:        System Restore  
-> Event ID:      8202  
-> Level:         Information  
-> Description: Successfully restored system (Restore Operation).
+```output
+Log Name:      Application  
+Source:        System Restore  
+Event ID:      8202  
+Level:         Information  
+Description: Successfully restored system (Restore Operation).
+```
 
 ### Unexpected shutdown or power outage
 
-After the computer starts up, a “recovery” screen is presented, and the user chooses the default option which is restoring the machine back to the last system restore point. Also, Windows Embedded clients that are unexpectedly shut down after machine password change, the data on the Regfdata volume is lost and restored to the last known state, for example, changes within `HKLM\SECURITY\Policy\Secrets$machine.ACC` would be lost if the machine lost power or was not cleanly shut down.
+After the computer starts up, a "recovery" screen is presented, and the user chooses the default option, which is to restore the machine back to the last system restore point. Also, if the Windows Embedded client is unexpectedly shut down after machine password change, the data on the Regfdata volume is lost and restored to the last known state—for example, changes within `HKLM\SECURITY\Policy\Secrets$machine.ACC` are lost if the machine loses power or isn't cleanly shut down.
 
-You can look for events about an unexpected shutdown or power outage (ID:41/6008)
+You can look for events about an unexpected shutdown or power outage (ID: 41 or 6008)
 
-> Log Name:      System  
-> Source:        Microsoft-Windows-Kernel-Power  
-> Event ID:      41  
-> Task Category: (63)  
-> Level:         Critical  
-> Description: The system has rebooted without cleanly shutting down first. This error could be caused if the system stopped responding, crashed, or lost power unexpectedly. 
+```output
+Log Name:      System  
+Source:        Microsoft-Windows-Kernel-Power  
+Event ID:      41  
+Task Category: (63)  
+Level:         Critical  
+Description: The system has rebooted without cleanly shutting down first. This error could be caused if the system stopped responding, crashed, or lost power unexpectedly. 
+```
 
-> Log Name:      System  
-> Source:        EventLog  
-> Event ID:      6008  
-> Description: The previous system shutdown at 9:03:23 AM on 6/28/2018 was unexpected.
+```output
+Log Name:      System  
+Source:        EventLog  
+Event ID:      6008  
+Description: The previous system shutdown at 9:03:23 AM on 6/28/2018 was unexpected.
+```
 
-VDI computers configured with pooled desktops that are based on an image and are restored to a snapshot when a user logs off (aka non-persistent machines).
+Virtual desktop infrastructure (VDI) computers configured with pooled desktops are based on an image and restored to a snapshot when a user signs out (also known as non-persistent machines).
 
-On some VDI infrastructures, there are services having Netlogon as a dependency, we need to confirm if the service from the VDI Infrastructure is not manipulating the Netlogon service in a way that is avoiding Secure Channel operations.
+On some VDI infrastructures, there are services having Netlogon as a dependency. In this case, you need to confirm that the service from the VDI infrastructure isn't manipulating the Netlogon service in a way that avoids Secure Channel operations.
 
-Also, the affected device could be created from an image, and the machine can enter the environment having obsolete data regarding Secure Channel values according to what is on Active Directory.
+Also, the affected device might be created from an image, and the machine can enter an environment with obsolete data regarding secure channel values according to what is on Active Directory.
 
-This cause must be handled with VDI Infrastructure administrator.
+This case must be handled by the VDI infrastructure administrator.
 
 ## Resolution
 
-To repair Secure Channel (or Trust Relationship), you can run one of the following commands using domain admin credentials:
+To repair Secure Channel (or Trust Relationship), follow these steps:
 
-1. Run the following command
+1. Run one of the following commands using domain admin credentials:
 
+   -	From a Windows command prompt:
+   
    ```console
    nltest /sc_reset:domain_name
    ```
 
-   Or in PowerShell:
+   -	From a Windows command prompt:
 
    ```powershell
    Test-ComputerSecureChannel -Repair -Credential *
