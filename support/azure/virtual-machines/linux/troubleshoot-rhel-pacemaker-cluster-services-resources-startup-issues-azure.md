@@ -557,29 +557,17 @@ Mar  1 02:25:09 Node1 pacemaker-attrd[8568]: notice: Setting last-failure-SAPHan
 
 ### Resolution
 
-The error message “tput: No value for `$TERM` and no -T specified” typically occurs when the `TERM` environment variable is not set or is set incorrectly. The `$TERM` environment variable defines the type of terminal to emulate, which is crucial for commands like `tput` to function correctly.
+1. Review the SAP HANA logs for more detailed error messages. Look for logs in the `/usr/sap/<SID>/HDB<instance_number>/trace` directory.
 
-Here is the steps to resolve this issue:
+2. Ensure that the user running the SAP HANA instance has the necessary permissions to access the required files and directories.
 
-1. Ensure that the `$TERM` environment variable is set to a valid terminal type. You can set it to a common terminal type like `xterm` or `vt100`:
-   
-   ```bash
-   sudo export TERM=xterm
-   ```
+3. Verify the configuration settings in the `global.ini` file, particularly the `basepath_datavolumes` parameter. Ensure that the paths are correct and accessible.
 
-2. Make sure that your shell configuration files (like `.bashrc` or `.profile`) are correctly setting the `$TERM` variable.
+4. Check the SAP cluster resource configuration, You might need to extend the timeout settings for starting the HANA DB resource, especially if it takes longer than expected to start.
 
-3. If you are running a script, you can specify the terminal type directly in the command:
+5. Try starting the HANA instance manually outside of the cluster control to see if it starts successfully. This can help isolate whether the issue is with the instance itself or the cluster management.
 
-   ```bash
-   sudo tput -T xterm clear
-   ```
-4. Ensure that the terminal type you are setting is supported by your system. You can list available terminal types using:
-
-   ```bash
-   toe
-   ```
-5. If these steps don't resolve the issue, Open a case with SAP with necessary logs to investigate `hdbdaemon` didn't start issue.
+If these steps don't resolve the issue, consider reaching out to SAP support for more specific guidance based on your environment.
 
 ## Scenario 4: Issue with ASCS and ERS resource.
 
