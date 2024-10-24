@@ -48,3 +48,53 @@ To fix this issue, the client machine needs to perform a complete DORA process t
 - Make the client machine's IP address expire. For example, turn off the operating system for the lease duration.
 - Run the `ipconfig /release` and `ipconfig /renew` commands on the machine.
 - Run a script to set a device to manually register the DNS using the `ipconfig /registerdns` command.
+
+## Diagnostics and log collection
+
+To identify that you're experiencing the issue, follow these steps:
+
+1. On the problematic client machine, enable the following event logs in the Event Viewer:
+
+    **Applications and Services Logs** > **Microsoft** > **Windows** > **Dhcp-Client** > **Microsoft-Windows-DHCP Client Events/Operational**
+
+2. Once enabled, open an elevated command prompt window and run the following  command:
+
+    ```console
+    ipconfig /renew
+    ```
+
+    Then, some events will be generated under **Dhcp-Client** > **Microsoft-Windows-DHCP Client Events/Operational**.
+
+3. Search for Event ID 50042 which task category is **DNS State Event**. This event gives the DNS Flag value.
+4. If the DNS Flag value is set to 64. This indicates the client machine doesn't send a dynamic update itself and relies on the DHCP server.
+
+    The value 64 can be caused by the registry cache when the DHCP server doesn't send back the Option 81 response.
+
+    In some cases, the value 64 can also indicate the DHCP server responds back with Option 81 overriding the client options as shown below:
+
+    :::image type="content" source="media/client-ddns-updates-dhcp-option-81/value-64-override.png" alt-text="Screenshot showing the DHCP server responds back with Option 81 overriding the client options.":::
+
+    This article corresponds to the issue when the value 64 is caused by the cache, not the DHCP server response.
+
+### Log collection
+
+To diagnose the issue, collect the following logs using `netsh`:
+
+1. Open an elevated Windows Command Prompt.
+2. Start a network trace by running the following command:
+
+    ```console
+    Netsh trace start overwrite=yes persistent=yes traceFile=C:\DDNSTrace.etl capture=yes report=disabled maxSize=16000 provider={1C95126E-7EEA-49A9-A3FE-A378B03DDB4D} keywords=0xffffffffffffffff level=0xff provider= {1540FF4C-3FD7-4BBA-9938-1D1BF31573A7} keywords=0xffffffffffffffff level=0xff provider= {9CA335ED-C0A6-4B4D-B084-9C9B5143AFF0} keywords=0xffffffffffffffff level=0xff provider= {609151DD-04F5-4DA7-974C-FC6947EAA323} keywords=0xffffffffffffffff level=0xff provider= {76325CAB-83BD-449E-AD45-A6D35F26BFAE} keywords=0xffffffffffffffff level=0xff provider={A7B8B859-D00E-45CC-85B8-89EA5D015C62} keywords=0xffffffffffffffff level=0xff provider={CFAA5446-C6C4-4F5C-866F-31C9B55B962D} keywords=0xffffffffffffffff level=0xff provider={CA030134-54CD-4130-9177-DAE76A3C5791} keywords=0xffffffffffffffff level=0xff provider="Microsoft-Windows-DNS-Client" keywords=0xffffffffffffffff level=0xff provider="Microsoft-Windows-Dhcp-Client" keywords=0xffffffffffffffff level=0xff provider={CC3DF8E3-4111-48d0-9B21-7631021F7CA6} keywords=0xffffffffffffffff level=0xff
+    ```
+
+3. Run the following command:
+
+    ```console
+    ipconfig /renew
+    ```
+
+4. Stop the log collection by running the following command:
+
+    ```console
+    netsh trace stop
+    ```
