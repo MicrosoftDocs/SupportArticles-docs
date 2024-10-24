@@ -74,12 +74,12 @@ To troubleshoot the issue, follow these steps:
 
 2. Based on the scenario that you encounter, see the corresponding article for solutions:
 
-  - [Active Directory has a newer password value than the client device](scenario-active-directory-having-newer-password-value-than-client-device.md)
-  - [Client device has a newer password value than Active Directory](scenario-client-device-having-a-newer-password-value-than-active-directory.md)
+  - [Active Directory has a newer password value than the client device](active-directory-has-newer-password-value-than-client-device.md)
+  - [Client device has a newer password value than Active Directory](client-device-has-newer-password-value-than-active-directory.md)
 
-## Additional considerations
+## Other considerations
 
-Make sure the following registry keys contain the actual name of the computer (not the FQDN):
+Make sure the following registry keys contain the actual name of the computer (not the fully qualified domain name (FQDN)):
 
 - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName\ComputerName`
 - `HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\Tcpip\Parameters\hostname`
@@ -103,6 +103,6 @@ Reg query HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\Tcpip\Parameters /v h
 
 ### Terminology
 
-- **LSA secret**: a special protected storage used by the Local Security Authority in Windows to store important data. In this series of articles, LSA secret refers to the computer password for a domain-joined device.
+- **Local Security Authority (LSA) secret**: a special protected storage used by the Local Security Authority in Windows to store important data. In this series of articles, LSA secret refers to the computer password for a domain-joined device.
 - **Cupdtime**: refers to the last update time for LSA secret, in this series of articles, the computer password. This information is stored in the Windows registry under `HKEY_LOCAL_MACHINE/Security/Policy/Secrets$MACHINE.ACC/cupdtime`.
 - **pwdLastSet (PasswordLastSet)**: a computer object attribute stored in Active Directory.

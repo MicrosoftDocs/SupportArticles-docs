@@ -10,7 +10,7 @@ ms.custom: sap:Windows Security\Netlogon, secure channel, DC locator, csstrouble
 ---
 # Data collection for troubleshooting secure channel issues
 
-The information in this article will work as a reference and help you troubleshoot when the secure channel is broken.
+The information in this article works as a reference and helps you troubleshoot when the secure channel is broken.
 
 To determine the cause of secure channel issues, collect the following information. 
 
@@ -89,8 +89,8 @@ The value is `154731 14:32:23.8220070 - 8/22/2024 7:32:23 AM`.
 
    :::image type="content" source="media/data-collection-for-troubleshooting-secure-channel-issues/get-passwordlastset-value-powershell-command.png" alt-text="Screenshot of the Get-ADComputer PasswordLastSet PowerShell command.":::
 
-3. Open Open the file and look for the values of the `pwdLastSet` attribute (you'll get the metadata for the object from all DCs available in the environment) and compare them. In a good scenario, the data in the attribute should be consistent across all DCs. You'll see information for other attributes in the output. Focus only on the required attribute. Here's an example of the output:
+3. Open the file and look for the values of the `pwdLastSet` attribute (you'll get the metadata for the object from all DCs available in the environment) and compare them. In a good scenario, the data in the attribute should be consistent across all DCs. You'll see information for other attributes in the output. Focus only on the required attribute. Here's an example of the output:
 
    :::image type="content" source="media/data-collection-for-troubleshooting-secure-channel-issues/sample-computer-name-metadata.png" alt-text="Screenshot of a sample of the computer name metadata.":::
 
-4. The preceding information gives you the value for a single DC (the one you're connected to through the console or when running the commands). Consider gathering the metadata for the affected computer object from Active Directory.  so you can confirm that the value is consistent across all DCs in the environment.
+4. The preceding information gives you the value for a single DC (the one you're connected to through the console or when running the commands). Consider gathering the metadata for the affected computer object from Active Directory so you can confirm that the value is consistent across all DCs in the environment.

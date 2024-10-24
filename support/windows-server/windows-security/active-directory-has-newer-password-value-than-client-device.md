@@ -92,7 +92,7 @@ Virtual desktop infrastructure (VDI) computers configured with pooled desktops a
 
 On some VDI infrastructures, there are services having Netlogon as a dependency. In this case, you need to confirm that the service from the VDI infrastructure isn't manipulating the Netlogon service in a way that avoids Secure Channel operations.
 
-Also, the affected device might be created from an image, and the machine can enter an environment with obsolete data regarding secure channel values according to what is on Active Directory.
+Also, the affected device might be created from an image, and the machine can enter an environment with obsolete data about secure channel values according to what is on Active Directory.
 
 This case must be handled by the VDI infrastructure administrator.
 
@@ -103,7 +103,7 @@ To repair Secure Channel (or Trust Relationship), follow these steps:
 1. Run one of the following commands using domain admin credentials:
 
    -	From a Windows command prompt:
-   
+
    ```console
    nltest /sc_reset:domain_name
    ```

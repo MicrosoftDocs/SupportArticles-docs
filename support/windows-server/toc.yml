@@ -2926,13 +2926,13 @@ items:
   - name: Netlogon, secure channel, DC Locator
     items:
       - name: Troubleshooting guidance: Secure channel
-        href: ./windows-security/broken-trust-relationship-between-domain-joined-device-and-its-domain-caused-by-secure-channel-issues.md      
+        href: ./windows-security/broken-trust-relationship-domain-joined-device-its-domain-secure-channel-issues.md      
       - name: Gather information for secure channel issues
         href: ./windows-security/data-collection-for-troubleshooting-secure-channel-issues.md
       - name: Active Directory has a newer password than the client
-        href: ./windows-security/scenario-active-directory-having-newer-password-value-than-client-device.md
+        href: ./windows-security/active-directory-has-newer-password-value-than-client-device.md
       - name: Client has a newer password than Active Directory
-        href: ./windows-security/scenario-client-device-having-a-newer-password-value-than-active-directory.md
+        href: ./windows-security/client-device-has-newer-password-value-than-active-directory.md
   - name: Permissions, access control, and auditing
     items:
     - name: .bak log files are deleted and lost
