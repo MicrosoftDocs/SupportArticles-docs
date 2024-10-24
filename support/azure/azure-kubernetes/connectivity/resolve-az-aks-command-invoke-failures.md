@@ -53,8 +53,8 @@ The operation returns a `Not Found` status because the `command-<ID>` pod can't 
 
 Make sure that the `command-<ID>` pod can be scheduled and run by adjusting the configuration. For example:
 
-- Increase the node pool size and make sure it doesn't have a pod secluding constraints like taints so that the `command-<ID>` pod can be deployed.
-- Adjust resource requests and limits in your pods specifications.
+- Increase the node pool size and make sure it has no pod secluding constraints like taints so that the `command-<ID>` pod can be deployed.
+- Adjust resource requests and limits in your pod specifications.
 
 ## Cause 2: Azure Policy doesn't allow the pod creation
 
@@ -108,9 +108,9 @@ To resolve this issue, follow these steps:
 1. Add the `Microsoft.ContainerService/managedClusters/runCommand/action` and `Microsoft.ContainerService/managedClusters/commandResults/read` roles.
 2. Assign the necessary roles to the user:
 
-  ```bash
-  az role assignment create --assignee {user-principal-name} --role "Azure Kubernetes Service Cluster User Role" --scope /subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.ContainerService/managedClusters/{aks-cluster}
-  ```
+    ```bash
+    az role assignment create --assignee {user-principal-name} --role "Azure Kubernetes Service Cluster User Role" --scope /subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.ContainerService/managedClusters/{aks-cluster}
+    ```
 
 ## Cause 4: There's a Cloud Shell issue
 
@@ -118,9 +118,7 @@ The `az aks command invoke` command isn't processed as expected when it's run di
 
 #### Solution 4a: Run the az login command first
 
-In Cloud Shell, run the [az login](/cli/azure/reference-index#az-login) command before you run the `az aks command invoke` command.
-
-Here's an exmaple command:
+In Cloud Shell, run the [az login](/cli/azure/reference-index#az-login) command before you run the `az aks command invoke` command. For example:
 
 ```bash
 az login
