@@ -1,16 +1,16 @@
 ---
 title: HTTP status code overview
-description: This article provides a list of the HTTP status codes in IIS on Windows Server 2016 and later versions.
-ms.date: 10/21/2024
+description: This article provides a list of the HTTP status codes in IIS.
+ms.date: 10/24/2024
 ms.custom: sap:Health, Diagnostic, and Performance Features\HTTP error logging
 ms.reviewer: robmcm, paulboc
 ---
 
 # HTTP status codes in IIS
 
-This article provides a list of the Hypertext Transfer Protocol (HTTP) status codes in Microsoft Internet Information Services (IIS) on Windows Server 2016 and later versions.
+This article provides a list of the Hypertext Transfer Protocol (HTTP) status codes in Microsoft Internet Information Services (IIS).
 
-_Original product version:_ &nbsp; Internet Information Services on Windows Server 2016 and later versions 
+_Original product version:_ &nbsp; Internet Information Services  
 _Original KB number:_ &nbsp; 943891
 
 ## Introduction
@@ -42,7 +42,7 @@ This section describes some of the common HTTP status codes.
 
 These HTTP status codes indicate an interim response for communicating request progress or status before sending a final response to the client computer.
 
-IIS on Windows Server 2016 and later versions use the following informational HTTP status codes:
+IIS uses the following informational HTTP status codes:
 
 | Code | Description | Notes |
 |--|--|--|
@@ -53,7 +53,7 @@ IIS on Windows Server 2016 and later versions use the following informational HT
 
 These HTTP status codes indicate that the server successfully received and accepted the client's request.
 
-IIS on Windows Server 2016 and later versions use the following success HTTP status codes:
+IIS uses the following success HTTP status codes:
 
 | Code | Description | Notes |
 |--|--|--|
@@ -82,7 +82,7 @@ IIS uses the following redirection HTTP status codes:
 
 These HTTP status codes indicate that an error has occurred and the client browser appears to be at fault. For example, the client browser might have requested a page that doesn't exist. Or, the client browser might not have provided valid authentication information.
 
-IIS on Windows Server 2016 and later versions use the following client error HTTP status codes:
+IIS uses the following client error HTTP status codes:
 
 | Code | Description | Notes |
 |---|---|---|
@@ -98,9 +98,9 @@ IIS on Windows Server 2016 and later versions use the following client error HTT
 
 #### 400 - Bad request
 
-The Hypertext Transfer Protocol Stack (_Http.sys_) file blocks IIS on Windows Server 2016 and later versions from processing the request because of a problem in the request. Typically, this HTTP status code means that the request contains invalid characters or sequences, or that the request goes against the security settings in the _Http.sys_ file.
+The Hypertext Transfer Protocol Stack (_Http.sys_) file blocks IIS from processing the request because of a problem in the request. Typically, this HTTP status code means that the request contains invalid characters or sequences, or that the request goes against the security settings in the _Http.sys_ file.
 
-IIS on Windows Server 2016 and later versions define the following HTTP status codes that indicate a more specific cause of an error 400:
+IIS defines the following HTTP status codes that indicate a more specific cause of an error 400:
 
 | Code | Description |
 |---|---|
@@ -134,7 +134,7 @@ The following HTTP sub-status codes are introduced in Application Request Routin
 
 #### 401 - Access denied
 
-IIS on Windows Server 2016 and later versions define several HTTP status codes that indicate a more specific cause of an error 401. The following specific HTTP status codes are displayed in the client browser but aren't displayed in the IIS log:
+IIS defines several HTTP status codes that indicate a more specific cause of an error 401. The following specific HTTP status codes are displayed in the client browser but aren't displayed in the IIS log:
 
 | Code | Description | Notes |
 |---|---|---|
@@ -150,7 +150,7 @@ IIS on Windows Server 2016 and later versions define several HTTP status codes t
 
 #### 403 - Forbidden
 
-IIS on Windows Server 2016 and later versions define the following HTTP status codes that indicate a more specific cause of an error 403:
+IIS defines the following HTTP status codes that indicate a more specific cause of an error 403:
 
 | Code | Description | Notes |
 |---|---|---|
@@ -169,7 +169,7 @@ IIS on Windows Server 2016 and later versions define the following HTTP status c
 | 403.13 | Client certificate revoked | The client browser tries to use a client certificate that was revoked by the issuing certification authority. |
 | 403.14 | Directory listing denied | The server isn't configured to display a content directory listing, and a default document isn't set. For more information, see [HTTP Error 403.14](../health-diagnostic-performance/http-403-14-forbidden-webpage.md). |
 | 403.15 | Client access licenses exceeded | The number of client access licenses has exceeded the limits on the web server. |
-| 403.16 | Client certificate is untrusted or invalid | The client browser tries to use an invalid client certificate. Or the server that is running IIS on Windows Server 2016 and later versions doesn't trust the client certificate. For more information, see [HTTP Error 403.16](../health-diagnostic-performance/http-403-forbidden-access-website.md). |
+| 403.16 | Client certificate is untrusted or invalid | The client browser tries to use an invalid client certificate. Or the server that is running IIS doesn't trust the client certificate. For more information, see [HTTP Error 403.16](../health-diagnostic-performance/http-403-forbidden-access-website.md). |
 | 403.17 | Client certificate has expired or is not yet valid | The client browser tries to use a client certificate that is expired or that isn't yet valid. |
 | 403.18 | Cannot execute requested URL in the current application pool | A custom error page is configured. And the application pool of the customer error page is different with the application pool of the requested URL. |
 | 403.19 | Cannot execute CGI applications for the client browser in this application pool | The identity of the application pool doesn't have the Replace a process level token user right. |
@@ -183,7 +183,7 @@ IIS on Windows Server 2016 and later versions define the following HTTP status c
 
 #### 404 - Not found
 
-IIS on Windows Server 2016 and later versions define the following HTTP status codes that indicate a more specific cause of an error 404:
+IIS defines the following HTTP status codes that indicate a more specific cause of an error 404:
 
 | Code | Description | Notes |
 |---|---|---|
@@ -227,7 +227,7 @@ IIS on Windows Server 2016 and later versions define the following HTTP status c
 
 The 5xx HTTP status codes indicate that the server can't complete the request because the server encounters an error.
 
-IIS on Windows Server 2016 and later versions use the following server error HTTP status codes:
+IIS uses the following server error HTTP status codes:
 
 | Code | Description | Notes |
 |---|---|---|
@@ -238,7 +238,7 @@ IIS on Windows Server 2016 and later versions use the following server error HTT
 
 #### 500 - Internal server error
 
-IIS on Windows Server 2016 and later versions define the following HTTP status codes that indicate a more specific cause of an error 500:
+IIS defines the following HTTP status codes that indicate a more specific cause of an error 500:
 
 | Code | Description | Notes |
 |---|---|---|
@@ -260,7 +260,7 @@ IIS on Windows Server 2016 and later versions define the following HTTP status c
 
 #### 502 - Bad gateway
 
-IIS on Windows Server 2016 and later versions define the following HTTP status codes that indicate a more specific cause of an error 502:
+IIS defines the following HTTP status codes that indicate a more specific cause of an error 502:
 
 | Code | Description |
 |---|---|
@@ -282,12 +282,12 @@ The following HTTP status codes are added in Application Request Routing (ARR) v
 
 #### 503 - Service unavailable
 
-IIS on Windows Server 2016 and later versions define the following HTTP status codes that indicate a more specific cause of an error 503:
+IIS defines the following HTTP status codes that indicate a more specific cause of an error 503:
 
 | Code | Description | Notes |
 |---|---|---|
 | 503.0 | Application pool unavailable. | The request is sent to an application pool that is currently stopped or disabled. To resolve this issue, make sure that the destination application pool is started. The event log may give information about why the application pool is stopped or disabled. |
-| 503.2 | Concurrent request limit exceeded. | The `appConcurrentRequestLimit` property is set to a value that is lower than the current number of concurrent requests. IIS on Windows Server 2016 and later versions does not allow more concurrent requests than the value of the `appConcurrentRequestLimit` property. |
+| 503.2 | Concurrent request limit exceeded. | The `appConcurrentRequestLimit` property is set to a value that is lower than the current number of concurrent requests. IIS doesn't allow more concurrent requests than the value of the `appConcurrentRequestLimit` property. |
 | 503.3 | ASP.NET queue full |
 | 503.4 | FastCGI queue full |
 
