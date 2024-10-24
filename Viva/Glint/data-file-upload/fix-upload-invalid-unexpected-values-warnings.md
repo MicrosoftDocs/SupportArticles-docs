@@ -36,7 +36,7 @@ To fix the issue, use one of the following methods:
 - Remove the deleted records and upload the file again. Follow these steps:
 
   1. If necessary, work with your Microsoft 365 or Entra ID administrator to confirm the users that are deleted from Microsoft Entra ID.
-  1. Open the employee attribute data file in Excel. If the file is in .csv format, [import it into Excel](https://support.microsoft.com/office/import-data-from-a-csv-html-or-text-file-b62efe49-4d5b-4429-b788-e1211b5e90f6) to preserve the data in the expected format.
+  1. Open the employee attribute data file in Excel. If the file is in .csv format, [import it into Excel](https://support.microsoft.com/office/import-or-export-text-txt-or-csv-files-5250ac4c-663c-47ce-937b-339e391393ba) to preserve the data in the expected format.
   1. Remove the rows that are listed in the warning message.
 
      **Note**: The header row isn't included in the row count. For example, if the warning indicates line 20, go to row 21.
@@ -54,7 +54,7 @@ This issue occurs because the file that you uploaded contains old Kanji characte
 
 To fix the issue, follow these steps:
 
-1. Open the employee attribute data file in Excel. If the file is in .csv format, [import it into Excel](https://support.microsoft.com/office/import-data-from-a-csv-html-or-text-file-b62efe49-4d5b-4429-b788-e1211b5e90f6) to preserve the data in the expected format.
+1. Open the employee attribute data file in Excel. If the file is in .csv format, [import it into Excel](https://support.microsoft.com/office/import-or-export-text-txt-or-csv-files-5250ac4c-663c-47ce-937b-339e391393ba) to preserve the data in the expected format.
 1. Locate the row that's listed in the warning message.
 
     **Note**: The header row isn't included in the row count. For example, if the warning indicates line 20, go to row 21.
