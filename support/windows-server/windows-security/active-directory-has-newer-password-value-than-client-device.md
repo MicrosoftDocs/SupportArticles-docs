@@ -20,7 +20,7 @@ You can't find a specific event to confirm this cause. Instead, you can check th
 
 Also, you can check if the system has started recently:
 
-:::image type="content" source="media/scenario-active-directory-having-newer-pwd-last-set-value-than-client-device/evnt-id-12.png" alt-text="Screenshot of event ID 12.":::
+:::image type="content" source="media/scenario-active-directory-having-newer-pwd-last-set-value-than-client-device/event-id-12.png" alt-text="Screenshot of event ID 12.":::
 
 ```output
 Event ID 12  
@@ -31,7 +31,7 @@ Description: The operating system started at system time 2024-08-24T19:15:58.500
 
 You can also check the uptime. If the virtual machine has been reverted to a previous snapshot, the uptime will be recent. It might also be related to a desired operation and not only because of the snapshot reversion.
 
-:::image type="content" source="media/scenario-active-directory-having-newer-pwd-last-set-value-than-client-device/ task-manager-uptime.png" alt-text="Screenshot of the uptime in Task Manager.":::
+:::image type="content" source="media/scenario-active-directory-having-newer-pwd-last-set-value-than-client-device/task-manager-uptime.png" alt-text="Screenshot of the uptime in Task Manager.":::
 
 
 > [!NOTE]
