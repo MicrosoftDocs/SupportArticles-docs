@@ -153,6 +153,8 @@ The cmdlet performs these checks in sequence and provides guidance for failures:
 6. `CheckAdminConsent`: Check if the Entra service principal has been [granted admin consent](/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable#grant-admin-consent-to-the-new-service-principal) for the Microsoft Graph permissions that are required to get a Kerberos ticket.
 7. `CheckWinHttpAutoProxySvc`: Checks for the WinHTTP Web Proxy Auto-Discovery Service (WinHttpAutoProxySvc) that's required for Microsoft Entra Kerberos authentication. Its state should be set to `Running`.
 8. `CheckIpHlpScv`: Checks for the IP Helper service (iphlpsvc) that's required for Microsoft Entra Kerberos authentication. Its state should be set to `Running`.
+9. `CheckFiddlerProxy`: Checks if a Fiddler proxy that would prevent Entra Kerberos authentication is present.
+10. `CheckEntraJoinType`: Checks if the machine is Entra Domain joined or Hybrid Entra Domain Joined. It is a pre-requisite for Microsoft Entra Kerberos authentication.
 
 If you just want to run a subselection of the previous checks, you can use the `-Filter` parameter, along with a comma-separated list of checks to run.
 
