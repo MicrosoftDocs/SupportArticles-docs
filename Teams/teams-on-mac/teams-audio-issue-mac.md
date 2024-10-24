@@ -1,5 +1,5 @@
 ---
-title: Audio issues when you use Teams on macOS
+title: Audio issues when using Teams on macOS
 description: Resolve audio-related issues when you use Microsoft Teams on macOS devices. 
 ms.date: 10/24/2024
 audience: ITPro
@@ -19,7 +19,7 @@ ms.custom:
 ms.reviewer: 
 ---
 
-# Audio issues when you use Teams on macOS
+# Audio issues when using Teams on macOS
 
 ## Symptoms
 
