@@ -10,7 +10,7 @@ ms.custom: sap:System Performance\System Reliability (crash, errors, bug check o
 ---
 # Troubleshoot unexpected reboots using system event logs
 
-This article provides a comprehensive guide on troubleshoot unexpected reboots using system event logs. It helps determine the cause or lead to other troubleshooting steps to find the root cause.
+This article provides a comprehensive guide on troubleshooting unexpected reboots using system event logs. It helps determine the cause or lead to other troubleshooting steps to find the root cause.
 
 There are generally two types of reboots, normal reboots and unexpected reboots. A normal reboot occurs when a computer is shut down or restarted using the shutdown or restart option in Windows. An unexpected reboot occurs when a computer is running normally but reboots due to power loss, hardware failures, or bug checks.
 
