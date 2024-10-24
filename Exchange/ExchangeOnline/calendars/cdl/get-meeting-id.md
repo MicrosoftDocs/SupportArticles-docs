@@ -30,7 +30,7 @@ ms.date: 10/22/2024
 
 # Get the ID of a meeting
 
-The meeting ID is a unique GUID that can be used to [get calendar diagnostic logs](./get-calendar-diagnostic-logs.md#use-the-get-calendardiagnosticobjectssummaryps1-script) (CDLs) for a specific meeting. Although you can use the subject of a meeting to get the CDLs, that approach generates less-detailed CDLs for all the meetings that match the subject. Therefore, we recommend that you use the meeting ID to get CDLs.
+The meeting ID is a unique identifier that can be used to [get Calendar diagnostic logs](./get-calendar-diagnostic-logs.md#use-the-get-calendardiagnosticobjectssummaryps1-script) (CDLs) for a specific meeting. Although you can use the subject of a meeting to get the CDLs, that approach generates less-detailed CDLs for all the meetings that match the subject. Therefore, we recommend that you use the meeting ID to get CDLs.
 
 > [!TIP]
 > The meeting ID is a GUID that starts with `040000008200`, such as `040000008200E00074C5B7101A82E00800000000A0D1E89273EFDA010000000000000000100000002D9427567554FA4AA9162A58A8B968CB`.
@@ -48,7 +48,7 @@ Select one of the following methods, depending on your Outlook client:
 
 ### Classic Outlook for Windows
 
-1. Find the meeting in your Outlook calendar, and then open it. If the meeting is a recurring meeting and you want the meeting ID of the entire series, select **The entire series** when you're prompted. Otherwise, if you want the meeting ID of a single meeting in the series, select **Just this one**.
+1. Find the meeting in your Outlook calendar, and then open it. If the meeting is a recurring meeting, and you want the meeting ID of the entire series, select **The entire series** when you're prompted. Otherwise, if you want the meeting ID of a single meeting in the series, select **Just this one**.
 
 2. In the meeting window, select **File** > **Save as**, and then select **Save** to save the meeting item as an .ics file.
 
