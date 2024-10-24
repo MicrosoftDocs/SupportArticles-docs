@@ -1,9 +1,8 @@
 ---
 title: Resolve az aks command invoke failures
 description: Resolve az aks command invoke failures in Azure CLI when you try to access a private Azure Kubernetes Service (AKS) cluster.
-ms.date: 10/17/2024
-ms.editor: momajed
-ms.reviewer: chiragpa, andbar, haitch, v-leedennis
+ms.date: 10/24/2024
+ms.reviewer: chiragpa, andbar, haitch, momajed, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Connectivity, devx-track-azurecli
 #Customer intent: As an Azure Kubernetes user, I want to resolve az aks command invoke failures in Azure CLI so that I can successfully connect to my private Azure Kubernetes Service (AKS) cluster.
@@ -52,12 +51,10 @@ The operation returns a `Not Found` status because the `command-<ID>` pod can't 
 
 #### Solution 1: Change the configuration so that you can schedule and run the pod
 
-Make sure that the `command-<ID>` pod can be scheduled and run by Adjusting the configuration.
+Make sure that the `command-<ID>` pod can be scheduled and run by adjusting the configuration. For example:
 
-For example :
-
-* You can increase the node pool size and make sure its not having a pod secluding constraints like taints so the command pod can be deployed.
-* Adjust resource requests and limits in your pods specifications.
+- Increase the node pool size and make sure it doesn't have a pod secluding constraints like taints so that the `command-<ID>` pod can be deployed.
+- Adjust resource requests and limits in your pods specifications.
 
 ## Cause 2: Azure Policy doesn't allow the pod creation
 
@@ -89,7 +86,7 @@ Alternatively, if the policy isn't a built-in policy, you can check the configur
 kubectl get pods command-<ID> --namespace aks-command --output yaml
 ```
 
-You can exempt the aks-command namespace from restrictive policies. Use the following command:
+You can exempt the `aks-command` namespace from restrictive policies by running the following command:
 
 ```bash
 az policy exemption create --name ExemptAksCommand --scope /subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.ContainerService/managedClusters/{aks-cluster} --policyAssignment /subscriptions/{subscription-id}/providers/Microsoft.Authorization/policyAssignments/{policy-assignment-id}
@@ -106,13 +103,14 @@ If you don't have these roles, the `az aks command invoke` command can't retriev
 
 #### Solution 3: Add the required roles
 
-Add the `Microsoft.ContainerService/managedClusters/runCommand/action` and `Microsoft.ContainerService/managedClusters/commandResults/read` roles.
+To resolve this issue, follow these steps:
 
-Assign the necessary roles to the user. For example:
+1. Add the `Microsoft.ContainerService/managedClusters/runCommand/action` and `Microsoft.ContainerService/managedClusters/commandResults/read` roles.
+2. Assign the necessary roles to the user:
 
-```bash
-az role assignment create --assignee {user-principal-name} --role "Azure Kubernetes Service Cluster User Role" --scope /subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.ContainerService/managedClusters/{aks-cluster}
-```
+  ```bash
+  az role assignment create --assignee {user-principal-name} --role "Azure Kubernetes Service Cluster User Role" --scope /subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.ContainerService/managedClusters/{aks-cluster}
+  ```
 
 ## Cause 4: There's a Cloud Shell issue
 
@@ -120,13 +118,12 @@ The `az aks command invoke` command isn't processed as expected when it's run di
 
 #### Solution 4a: Run the az login command first
 
-In Cloud Shell, run the [az login](/cli/azure/reference-index#az-login) command before you run `az aks command invoke`.
+In Cloud Shell, run the [az login](/cli/azure/reference-index#az-login) command before you run the `az aks command invoke` command.
 
-Run az login first or use a local machine/VM. For example:
+Here's an exmaple command:
 
 ```bash
 az login
-
 az aks command invoke --resource-group {resource-group} --name {aks-cluster} --command "kubectl get pods"
 ```
 
