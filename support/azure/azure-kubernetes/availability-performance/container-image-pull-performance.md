@@ -67,11 +67,11 @@ When you run the `az feature list --namespace Microsoft.ContainerService`, you s
 }
 `
 
-You can register the feature for your Azure subscription by using the following command:
+You can register the feature on your Azure subscription by the following command:
 
 `az feature register --namespace Microsoft.ContainerService --name DisableParallelImagePulls`
 
-Behavior expectation if the subscription is registered to the feature:
+Behavior expectation if the feature is registered:
 
 - By default, upgrading any node pool or cluster to Kubernetes 1.31 from a version that's earlier than 1.31 will cause serial image pulling, and upgrading in Kubernetes 1.31 or a later version will cause parallel pulling.
 - Node pools or clusters that are already running Kubernetes 1.31 but were created before the subscription registration will initially use parallel image pulling. However, any subsequent node image upgrade or Kubernetes version upgrade will cause the node pool or cluster to use serial image pulling.
