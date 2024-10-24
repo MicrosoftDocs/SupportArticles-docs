@@ -16,9 +16,9 @@ This article provides methods to improve container image pull performance in Azu
 
 There are two types of container image pulls: serialized and parallel image pulls.
 
-In AKS versions earlier than 1.31, AKS enables serialized image pulls by default. Starting from AKS version 1.31 preview, AKS pulls container images in parallel by default. Typically, serialized image pulls should be less performant than parallel image pulls, particularly when attempting to pull large or numerous container images.
+In AKS versions earlier than 1.31, by default, AKS enables serialized image pulls. Starting in AKS version 1.31 preview, by default, AKS pulls container images in parallel. Typically, serialized image pulls should be less performant than parallel image pulls, particularly when the service tries to pull large or numerous container images.
 
-However, you might still experience decreased performance with parallel compared to using serial image pulls. There is possibility to throttle the disk when trying to pull large or numerous images in parallel fashion, especially with unoptimized disk and VM resources. In this situation, you may notice that the time to complete the pull of the first images is faster with serial, but the time to pull all images is faster with parallel. Depending on your workload needs, consider following the steps below to scale your disk and VM resources or toggle the image pull type.
+However, you might still experience decreased performance by using parallel image pulls compared to using serial image pulls. Trying to pull large or numerous images in a parallel manner might throttle the disk. This is especially true when you use unoptimized disk and VM resources. In this situation, you might notice that the time to pull the first images is faster in a serial setup, but the time to pull all images is faster in a parallel setup. Depending on your workload needs, you should consider using the following steps to scale your disk and VM resources or toggle the image pull type.
 
 ## Improve image pull performance in AKS versions earlier than 1.31
 
@@ -52,9 +52,9 @@ Increase the available CPU cores on your VM SKU to reduce a CPU bottleneck in im
 
 ### Toggle image pull type
 
-Use the following AFEC flag instructions to toggle parallel image on or off. 
+Use the following AFEC flag instructions to toggle parallel images on or off. 
 
-When you run az feature list --namespace Microsoft.ContainerService, you should see the following feature appear:
+When you run the `az feature list --namespace Microsoft.ContainerService`, you should see the following feature appear:
 
 `
 {
@@ -67,15 +67,15 @@ When you run az feature list --namespace Microsoft.ContainerService, you should 
 }
 `
 
-You can register to the feature as follows:
+You can register the feature for your Azure subscription by using the following command:
 
 `az feature register --namespace Microsoft.ContainerService --name DisableParallelImagePulls`
 
-Behavior expectation if a subscription is registered to the feature:
+Behavior expectation if the subscription is registered to the feature:
 
-- Upgrading any nodepool or cluster to Kubernetes 1.31 from a version below 1.31 will result in serial image pulling, in contrast to the parallel pulling default in Kubernetes 1.31 and above.
-- Nodepools or clusters already running Kubernetes 1.31, but created before the subscription registration, will initially have parallel image pulling. However, any subsequent node image upgrade or Kubernetes version upgrade will switch the nodepool/cluster to serial image pulling.
-- For any new clusters or nodepools created or upgraded to Kubernetes versions below 1.31, registering for this feature will have no effect as parallel image pulling only applies to versions 1.31 and above.
-- Performing an empty PUT on existing Kubernetes 1.31 nodepools or clusters (created before subscription registration) will not immediately switch parallel image pulling to serial pulling. To trigger the change, the node must undergo a reimage, which only happens during a Kubernetes or node image upgrade. However, the PUT operation will update the flag in the database, and the change will take effect during the next upgrade.
+- By default, upgrading any node pool or cluster to Kubernetes 1.31 from a version that's earlier than 1.31 will cause serial image pulling, and upgrading in Kubernetes 1.31 or a later version will cause parallel pulling.
+- Node pools or clusters that are already running Kubernetes 1.31 but were created before the subscription registration will initially use parallel image pulling. However, any subsequent node image upgrade or Kubernetes version upgrade will cause the node pool or cluster to use serial image pulling.
+- For any new clusters or node pools that are created or upgraded to Kubernetes versions earlier than 1.31, registering for this feature will have no effect. This is because parallel image pulling applies to only versions 1.31 and later.
+- Performing an empty `PUT` on existing Kubernetes 1.31 node pools or clusters (that were created before subscription registration) will not immediately switch parallel image pulling to serial pulling. To trigger the change, the node must undergo a reimage. A reimage occurs only during a Kubernetes or node image upgrade. However, the PUT operation will update the flag in the database, and the change will take effect during the next upgrade.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
