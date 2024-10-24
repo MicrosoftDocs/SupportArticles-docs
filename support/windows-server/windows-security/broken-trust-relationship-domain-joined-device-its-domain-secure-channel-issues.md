@@ -74,8 +74,8 @@ To troubleshoot the issue, follow these steps:
 
 2. Based on the scenario that you encounter, see the corresponding article for solutions:
 
-  - [Active Directory has a newer password value than the client device](active-directory-has-newer-password-value-than-client-device.md)
-  - [Client device has a newer password value than Active Directory](client-device-has-newer-password-value-than-active-directory.md)
+    - [Active Directory has a newer password value than the client device](active-directory-has-newer-password-value-than-client-device.md)
+    - [Client device has a newer password value than Active Directory](client-device-has-newer-password-value-than-active-directory.md)
 
 ## Other considerations
 

@@ -57,17 +57,17 @@ Follow these steps to look for the `cupdtime` value from the registry.
    - The original value `26A38C1AA0F4DA01` turns into `01DAF4A01A8CA326`.
    - Convert the hexadecimal value into decimal (you can use the Calculator in Programmer mode). The result is `133688107438220070`.
 
-2.Run the following command:
+2. Run the following command:
 
    ```console
    w32tm /ntte 133688107438220070
    ```
 
-You receive the following output:
+   You receive the following output:
 
-:::image type="content" source="media/data-collection-for-troubleshooting-secure-channel-issues/w32tm-command-to-get-date-time.png" alt-text="Screenshot of the w32tm command output.":::
+   :::image type="content" source="media/data-collection-for-troubleshooting-secure-channel-issues/w32tm-command-to-get-date-time.png" alt-text="Screenshot of the w32tm command output.":::
 
-The value is `154731 14:32:23.8220070 - 8/22/2024 7:32:23 AM`.
+   The value is `154731 14:32:23.8220070 - 8/22/2024 7:32:23 AM`.
 
 ## Obtain the Active Directory pwdLastSet value
 

@@ -10,7 +10,7 @@ ms.custom: sap:Windows Security\Netlogon, secure channel, DC locator, csstrouble
 ---
 # Active Directory has a newer password value than the client device
 
-After collecting data based on the steps in [Data collection for troubleshooting secure channel issues](data-collection-for-troubleshooting-secure-channel-issues.md), you might find that Active Directory has a newer pwdLastSet value than the client device. This article introduces how to fix the issue in this scenario.
+After collecting data based on the steps in [Data collection for troubleshooting secure channel issues](data-collection-for-troubleshooting-secure-channel-issues.md), you might find that Active Directory has a newer `pwdLastSet` value than the client device. This article introduces how to fix the issue in this scenario.
 
 ## Possible causes
 
@@ -104,14 +104,14 @@ To repair Secure Channel (or Trust Relationship), follow these steps:
 
    -	From a Windows command prompt:
 
-   ```console
-   nltest /sc_reset:domain_name
-   ```
+      ```console
+      nltest /sc_reset:domain_name
+      ```
 
    -	From a Windows command prompt:
 
-   ```powershell
-   Test-ComputerSecureChannel -Repair -Credential *
-   ```
+      ```powershell
+      Test-ComputerSecureChannel -Repair -Credential *
+      ```
 
 2. Restart the computer.
