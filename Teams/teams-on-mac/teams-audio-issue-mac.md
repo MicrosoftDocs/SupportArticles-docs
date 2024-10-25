@@ -23,7 +23,7 @@ ms.reviewer:
 
 ## Symptoms
 
-You experience one of the following issues when using Microsoft Teams on your macOS device:
+You experience one of the following issues when you use Microsoft Teams on your macOS device:
 
 - You don't receive sound for Teams notifications.
 - You can't hear other participants clearly during Teams calls and meetings.
@@ -43,7 +43,7 @@ If you have administrator privileges on your macOS device, use method 1. Otherwi
 Restart the `coreaudiod` process by following these steps:
 
 1. [Open Terminal](https://support.apple.com/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac) on the macOS device.
-1. Enter the following command and press Return:
+1. Run the following command:
 
    ```console
     sudo killall coreaudiod
@@ -51,6 +51,6 @@ Restart the `coreaudiod` process by following these steps:
 
 1. Enter the administrator password.
 
-### Method 2: For non-administrators
+### Method 2: For nonadministrators
 
 Restart the macOS device by selecting Apple menu > **Restart**.
