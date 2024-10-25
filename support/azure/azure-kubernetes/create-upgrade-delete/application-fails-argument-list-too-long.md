@@ -1,7 +1,7 @@
 ---
 title: Argument list too long application failures
 description: Troubleshoot an argument list too long error message that causes an application to fail in Azure Kubernetes Service (AKS).
-ms.date: 05/23/2023
+ms.date: 10/23/2024
 ms.reviewer: chiragpa, nickoman, v-leedennis
 ms.service: azure-kubernetes-service
 keywords:
