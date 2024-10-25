@@ -20,9 +20,12 @@ You experience repeated connection time-outs.
 
 If only a few of your API commands are timing out consistently, the following pods might not be in a running state:
 
-- `konnectivity-agent` *(Recent)*
+- `konnectivity-agent`
 - `tunnelfront`
 - `aks-link`
+
+> [!NOTE]
+> In newer AKS versions, `tunnelfront` and `aks-link` are replaced with `konnectivity-agent`, so you will see `konnectivity-agent` only.
 
 These pods are responsible for communication between a node and the control plane.
 
