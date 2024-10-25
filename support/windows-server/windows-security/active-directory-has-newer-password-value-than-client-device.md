@@ -104,14 +104,14 @@ To repair Secure Channel (or Trust Relationship), follow these steps:
 
    -	From a Windows command prompt:
 
-      ```console
-      nltest /sc_reset:domain_name
-      ```
+         ```console
+         nltest /sc_reset:domain_name
+         ```
 
    -	From a Windows command prompt:
 
-      ```powershell
-      Test-ComputerSecureChannel -Repair -Credential *
-      ```
+         ```powershell
+         Test-ComputerSecureChannel -Repair -Credential *
+         ```
 
 2. Restart the computer.
