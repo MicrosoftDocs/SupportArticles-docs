@@ -8,7 +8,7 @@ ms.topic: troubleshooting
 ms.reviewer: kaushika
 ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshoot
 ---
-# Troubleshoot stop errors: Best practices and dump configurations recommendations
+# Troubleshoot stop errors: best practices and dump configurations recommendations
 
 This article introduces what Windows does when a Blue Screen occurs. Additionally, the article provides some best practices on preventing and troubleshooting Blue Screen issues.
 
@@ -75,7 +75,7 @@ During boot of the OS, the session manager process (SMSS.exe) loads the page fil
 >
 > In addition, you can also see the dump location (see black rectangle 2 in the picture).
 
-## Troubleshooting best practices
+## Best practices for troubleshooting and preventing stop errors
 
 In most scenarios, you can use the following steps to resolve a stop error.
 
