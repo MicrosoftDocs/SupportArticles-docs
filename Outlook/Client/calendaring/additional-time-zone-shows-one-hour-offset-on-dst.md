@@ -1,45 +1,69 @@
 ---
-title: Additional time zone shows a one-hour offset on DST start day in Outlook
-description: Discusses a problem in which an additional time zone shows a one-hour difference on the DST start day in the Outlook Calendar. Provides a workaround.
+title: Multiple time zones show an incorrect time difference for DST start and end days
+description: Provides a workaround for an issue in which multiple time zones on the Calendar time bar show an incorrect time difference on DST start and end days.
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - sap:Calendar\Other
   - CSSTroubleshoot
+  - CI 1948
 appliesto: 
-- Outlook 2013
-- Outlook 2016 
-- Outlook 2019 
-- Outlook for Microsoft 365 
-- Microsoft Outlook 2010
+  - Outlook for Microsoft 365
+  - Outlook 2024
+  - Outlook 2021
+  - Outlook 2019
+  - Outlook 2016
+  - New Outlook for Windows
+  - Outlook on the web
 search.appverid: MET150
-ms.reviewer: randyto, v-six
+ms.reviewer: brrogers, laboro, meerak, v-shorestris
 author: cloud-writer
 ms.author: meerak
-ms.date: 01/30/2024
+ms.date: 10/25/2024
 ---
-# Additional time zone shows a one-hour offset on DST start day in Outlook
+
+# Multiple time zones show an incorrect time difference for DST start and end days
 
 ## Symptoms
 
-You use the feature in Microsoft Outlook that displays multiple time zones on the time bar in your Calendar. On the day that the time setting changes for daylight saving time (DST), you might notice that the time difference between your primary and secondary time zones doesn't change.
+Consider the following scenario:
 
-Additionally, if you use the **Full Week** view in the Calendar, the whole week shows the incorrect offset between time zones.
+- You use the [multiple time zones](https://support.microsoft.com/office/manage-time-zone-settings-in-outlook-65239869-12e7-4a9d-bca1-76b0ad7ce273#ID0EDFBBFBBF) feature in Microsoft Outlook to display a primary and a secondary time zone on the time bar in your Calendar.
 
- **Example:**  
+- You use a Calendar view that displays the time bar.
 
-The first time zone in your Calendar is **(UTC-05:00) Eastern Time (US & Canada)**, and the second time zone is **(UTC-00:00) (Dublin, Edinburgh, Lisbon, London)**. When the time setting changes for Eastern Time (for example, on March 8, 2020), the time bar in Outlook on that Sunday still shows a seven-hour difference between the two time zones. However, on March 9, 2020, the two time displays show the correct offset between time zones.
+- Daylight saving time (DST) begins or ends on different dates in each time zone, or DST isn't observed in one of the time zones.
 
-## Cause
+For this scenario, on the first and last day of DST in either time zone, you notice both of the following symptoms:
 
-This problem occurs because of how Outlook calculates these differences for display in the Outlook user interface.
+- The time difference between the primary and secondary time zones in the time bar doesn't reflect the DST change.
+
+- Calendar events that are scheduled on the day when DST starts or ends, and on any subsequent day in your Calendar view, are shown as scheduled for the wrong time.
+
+> [!NOTE]
+> If the Calendar time bar displays more than two time zones, this issue affects all displayed time zones.
+
+### Example
+
+Your Calendar displays the **Week** view. The first day of that view is Sunday. The primary time zone in your Calendar is **(UTC-05:00) Eastern Time (US & Canada)**, and the secondary time zone is **(UTC+00:00) (Dublin, Edinburgh, Lisbon, London)**.
+
+On the day that DST starts in the **(UTC-05:00) Eastern Time (US & Canada)** time zone (for example, on Sunday, March 10, 2024), you notice that the time bar incorrectly shows a five-hour difference between the time zones. Calendar events on all days in the **Week** view are scheduled for the wrong time (for example, a 12 PM **(UTC+00:00) (Dublin, Edinburgh, Lisbon, London)** meeting might align with 1 PM in the time bar).
+
+In the following week's view (for example, the week that starts on Sunday, March 17, 2024), you notice that the time bar correctly shows a four-hour time difference between the time zones. Calendar events on all days in the view are scheduled for the correct time.
 
 ## Workaround
 
-To work around this problem use the **Work Week** view. This view starts on a Monday and shows the correct offset between time zones.
-This workaround should work in most cases. However, if the time zone that you are located in uses a different DST start day than the other time zone uses, the **Work Week** view might still show the incorrect offset.
+Select either of the following workarounds:
 
-## Status
+- Use a Calendar view in which the days when DST starts and ends aren't displayed in the view. For example, if DST starts and ends on Sundays, and your work week is Monday through Friday, use the **Work Week** view.
 
-Microsoft is researching this problem and will post more information in this article when the information becomes available.
+- For users of the new Outlook for Windows or Outlook on the web, the following workaround is also possible:
+
+   If the days when DST starts and ends are Sundays, and the first day of your **Week** view is Sunday, you can use the **Week** view to avoid the issue.
+
+   > [!NOTE]
+   > This additional workaround for the new Outlook for Windows and Outlook on the web is being rolled out gradually and might not be released in your organization yet.
+
+> [!TIP]
+> The DST start and end days for most regions around the world are Sundays.
