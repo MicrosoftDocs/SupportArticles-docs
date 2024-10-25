@@ -16,15 +16,15 @@ ms.custom:
 
 To upload your employee data to Viva Glint, you can use one of the following methods:
 
-- [Importing the data from the People page](/viva/glint/setup/upload-employee-attributes)
-- [Importing the data through Secure File Transfer Protocol (SFTP)](/viva/glint/setup/sftp-data-automation)
+- [Import the data from the People page](/viva/glint/setup/upload-employee-attributes)
+- [Import the data through Secure File Transfer Protocol (SFTP)](/viva/glint/setup/sftp-data-automation)
 
-There are two types of issues you may encounter during the file upload process:
+ During the file upload process, you might experience the following kinds of issues:
 
-- **Warnings**: These issues only affect specific rows or columns of data, allowing the rest of the file to be processed successfully.
+- **Warnings**: These issues affect only specific rows or columns of data. The rest of the file can be processed successfully.
 - **Errors**: These issues prevent the entire file from being uploaded.
 
-**Note**: Whenever an error occurs during a file upload, the process fails and stops. If there are any other issues in the file, they won't appear until the existing error is fixed. In this case, you may encounter further warnings or errors after you fix an error and re-upload the data file.
+**Note**: Whenever an error occurs during a file upload, the process fails and stops. If the file is affected by additional issues, those issues won't appear until the existing error is fixed. Therefore, you might experience further warnings or errors after you fix an error and re-upload the data file.
 
 For more information about these issues and how to resolve them, see the following articles:
 
@@ -34,7 +34,7 @@ For more information about these issues and how to resolve them, see the followi
 - [Resolve file upload warnings related to invalid or unexpected values](./fix-upload-invalid-unexpected-values-warnings.md)
 - [Resolve file upload warnings related to manager hierarchy](./fix-upload-manager-hierarchy-warnings.md)
 
-If you still can't resolve the issues, [contact support](../contact-support/get-support-viva-glint.md) for further assistance.
+If you still can't resolve the issues, [contact Microsoft Support](../contact-support/get-support-viva-glint.md) for further assistance.
 
 ## Email notification
 
@@ -42,13 +42,13 @@ When warnings or errors occur during file uploads, Viva Glint admins are notifie
 
 ### Upload from the People page
 
-If the data file is uploaded from the **People** page in Viva Glint, admins receive an email that summarizes data changes and errors when the upload is ready for review and confirmation. To download the errors, select **Review Upload** > **download errors** on the **People** page.
+If the data file is uploaded from the **People** page in Viva Glint, admins receive an email message that summarizes data changes and errors when the upload is ready for review and confirmation. To download an error list, open the **People** page, and then select **Review Upload** > **download errors**.
 
 ### Upload through SFTP
 
-If the data file is uploaded through SFTP, users that are specified by the admin receive an email with **Load succeeded** or **Load FAILED** in the subject line when the upload is complete. If the upload is successful but contains warnings, the warnings are included in the body of the email.
+If the data file is uploaded through SFTP, users who are specified by the admin receive an email message that indicates **Load succeeded** or **Load FAILED** in the subject line when the upload is completed. If the upload is successful but contains warnings, the warnings are included in the body of the email message.
 
-The following table lists possible status values for SFTP file uploads, whether the email contains warnings or errors, and specifies the actions required for admins.
+The following table lists possible status values for SFTP file uploads, indicates whether the email message contains warnings or errors, and specifies the actions that are required for admins.
 
 | File upload status | Warnings or errors | Admin action |
 | ------ | ------ | ------ |
@@ -56,10 +56,10 @@ The following table lists possible status values for SFTP file uploads, whether 
 |Succeeded|Yes|Review and resolve warnings|
 |Failed|Yes|Review and resolve errors|
 
-**Note**: SFTP upload notification emails contain up to 100 lines of warnings and errors.
+**Note**: SFTP upload notification messages can contain up to 100 lines of warnings and errors.
 
 ## Activity Audit Log
 
 Viva Glint admins can use the [Activity Audit Log](/viva/glint/setup/activity-audit-log) to download a complete list of errors and warnings for data upload failures and review other data import activities.
 
-**Note**: The downloadable error files in the Active Audit Log contain a maximum of 1,000 rows per error category. For example, if there are more than 1,000 warnings for DUPLICATED_EMAIL, only the first 1,000 are included in the file.
+**Note**: The downloadable error files in the Active Audit Log contain a maximum of 1,000 rows per error category. For example, if there are more than 1,000 warnings for DUPLICATED_EMAIL, only the first 1,000 warnings are included in the file.
