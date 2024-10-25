@@ -28,7 +28,7 @@ These pods are responsible for communication between a node and the control plan
 
 ### Solution: Reduce the utilization or stress of the node hosts
 
-Make sure the nodes that host this pod aren't overly utilized or under stress. Consider moving the nodes to their own [system node pool](/azure/aks/use-system-pools).
+Make sure the nodes that host these pods aren't overly utilized or under stress. Consider moving the nodes to their own [system node pool](/azure/aks/use-system-pools).
 
 To check which node the `konnectivity-agent` pod is hosted in and the usage of the node, run the following commands:
 
