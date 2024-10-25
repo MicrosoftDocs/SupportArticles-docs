@@ -1,5 +1,5 @@
 ---
-title: Multiple time zones show an incorrect time difference for DST start and end days
+title: Multiple time zones show an incorrect time difference when DST starts and ends
 description: Provides a workaround for an issue in which multiple time zones on the Calendar time bar show an incorrect time difference on DST start and end days.
 manager: dcscontentpm
 audience: ITPro
@@ -23,7 +23,7 @@ ms.author: meerak
 ms.date: 10/25/2024
 ---
 
-# Multiple time zones show an incorrect time difference for DST start and end days
+# Multiple time zones show an incorrect time difference when DST starts and ends
 
 ## Symptoms
 
