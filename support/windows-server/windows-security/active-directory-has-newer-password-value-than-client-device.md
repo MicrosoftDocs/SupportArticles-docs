@@ -108,7 +108,7 @@ To repair Secure Channel (or Trust Relationship), follow these steps:
          nltest /sc_reset:domain_name
          ```
 
-   -	From a Windows command prompt:
+   -	From a Windows PowerShell prompt:
 
          ```powershell
          Test-ComputerSecureChannel -Repair -Credential *
