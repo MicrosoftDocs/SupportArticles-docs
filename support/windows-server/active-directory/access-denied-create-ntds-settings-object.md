@@ -10,13 +10,13 @@ ms.custom: sap:Active Directory\DCPromo and the installation or removal of domai
 ---
 # "Access is denied" error when you try to create NTDS Settings object
 
-This article provides a solution to fix an error (Access is denied) that occurs when you promote new Windows Server 2012 R2 domain controllers in an existing domain.
+This article provides a solution to fix an error (Access is denied) that occurs when you promote Windows Server 2012 R2 or later domain controllers in an existing domain.
 
 _Original KB number:_ &nbsp; 3207962
 
 ## Symptoms
 
-When you try to promote new Windows Server 2012 R2 domain controllers in an existing domain, the operation fails with an "Access is denied" error. This issue occurs even when the user is a member of the Domain Admins or Enterprise Admins group.
+When you try to promote Windows Server 2012 R2 or later domain controllers in an existing domain, the operation fails with an "Access is denied" error. This issue occurs even when the user is a member of the Domain Admins or Enterprise Admins group.
 
 In this situation, the administrator sees the following error message:
 
@@ -63,6 +63,8 @@ DateTime[INFO] The attempted domain controller operation has completed
 Where the errors map to the following:
 
 :::image type="content" source="media/access-denied-create-ntds-settings-object/error-mappings.png" alt-text="Error mappings that contain error code, symbolic name, error description, and header.":::
+0xc0000001 : Operation Failed / The requested operation was unsuccessful.
+0x5 - Access is denied
 
 ## Cause
 
