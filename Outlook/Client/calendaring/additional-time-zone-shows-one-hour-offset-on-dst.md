@@ -48,9 +48,9 @@ For this scenario, on the first and last day of DST in either time zone, you not
 
 Your Calendar displays the **Week** view. The first day of that view is Sunday. The primary time zone in your Calendar is **(UTC-05:00) Eastern Time (US & Canada)**, and the secondary time zone is **(UTC+00:00) (Dublin, Edinburgh, Lisbon, London)**.
 
-On the day that DST starts in the **(UTC-05:00) Eastern Time (US & Canada)** time zone (for example, on Sunday, March 10, 2024), you notice that the time bar incorrectly shows a five-hour difference between the time zones. Calendar events on all days in the **Week** view are scheduled for the wrong time (for example, a 12 PM **(UTC+00:00) (Dublin, Edinburgh, Lisbon, London)** meeting might align with 1 PM in the time bar).
+On the day that DST starts in the **(UTC-05:00) Eastern Time (US & Canada)** time zone (for example, on Sunday, March 10, 2024), you notice that the time bar incorrectly shows a five-hour difference between the time zones. Calendar events on all days in the **Week** view are shown as scheduled for the wrong time (for example, a 12 PM **(UTC+00:00) (Dublin, Edinburgh, Lisbon, London)** meeting might align with 1 PM in the time bar).
 
-In the following week's view (for example, the week that starts on Sunday, March 17, 2024), you notice that the time bar correctly shows a four-hour time difference between the time zones. Calendar events on all days in the view are scheduled for the correct time.
+In the following week's view (for example, the week that starts on Sunday, March 17, 2024), you notice that the time bar correctly shows a four-hour time difference between the time zones. Calendar events on all days in the view are shown as scheduled for the correct time.
 
 ## Workaround
 
