@@ -2927,6 +2927,16 @@ items:
       href: ./windows-security/performance-tuning-ntlm-authentication-maxconcurrentapi.md
     - name: Windows updates add new NTLM pass-through authentication protections for CVE-2022-21857
       href: ./windows-security/windows-updates-add-new-ntlm-pass-through-authentication-protections.md
+  - name: Netlogon, secure channel, DC Locator
+    items:
+      - name: 'Troubleshooting guidance: Secure channel'
+        href: ./windows-security/broken-trust-relationship-domain-joined-device-its-domain-secure-channel-issues.md      
+      - name: Gather information for secure channel issues
+        href: ./windows-security/data-collection-for-troubleshooting-secure-channel-issues.md
+      - name: Active Directory has a newer password than the client
+        href: ./windows-security/active-directory-has-newer-password-value-than-client-device.md
+      - name: Client has a newer password than Active Directory
+        href: ./windows-security/client-device-has-newer-password-value-than-active-directory.md
   - name: Permissions, access control, and auditing
     items:
     - name: .bak log files are deleted and lost
