@@ -1,11 +1,11 @@
 ---
 title: Access is denied when you promote domain controller
 description: Provides a solution to fix an error (Access is denied) that occurs when you create NTDS Settings object.
-ms.date: 12/26/2023
+ms.date: 10/25/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika
+ms.reviewer: kaushika, shamilprem
 ms.custom: sap:Active Directory\DCPromo and the installation or removal of domain controllers, csstroubleshoot
 ---
 # "Access is denied" error when you try to create NTDS Settings object
@@ -62,9 +62,15 @@ DateTime[INFO] The attempted domain controller operation has completed
 
 Where the errors map to the following:
 
+> Error code: 0xc0000001  
+> Symbolic name: STATUS_UNSUCCESSFUL  
+> Error description: {Operation Failed} The requested operation was unsuccessful.
+
+> Error code: 0x5  
+> Symbolic name: ERROR_ACCESS_DENIED  
+> Error description: Access is denied.
+
 :::image type="content" source="media/access-denied-create-ntds-settings-object/error-mappings.png" alt-text="Error mappings that contain error code, symbolic name, error description, and header.":::
-0xc0000001 : Operation Failed / The requested operation was unsuccessful.
-0x5 - Access is denied
 
 ## Cause
 
