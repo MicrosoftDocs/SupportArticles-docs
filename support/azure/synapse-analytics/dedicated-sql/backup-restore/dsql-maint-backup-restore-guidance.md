@@ -1,8 +1,8 @@
 ---
 title: Backup, restore, and recovery guidance for Azure Synapse dedicated SQL pools
 description: FAQs and solutions to common issues on Azure Synapse dedicated SQL pools.
-ms.date: 02/21/2023
-ms.reviewer: scepperl, dialmoth, v-sidong
+ms.date: 10/14/2024
+ms.reviewer: scepperl, dialmoth, v-sidong, v-weizhu
 ms.custom: sap:Maintenance Schedules, Backup and Restore
 ---
 
@@ -49,6 +49,7 @@ The dedicated SQL pool (formerly SQL DW) backup and restore component provides a
 | **Can I determine the frequency of the geo-backup?** | No. The frequency of the geo-backup is predetermined. |
 | **With geo-back enabled, how many copies of backup are stored in the Azure-paired regions?** | A geo-backup is created once per day to a paired data center. The recovery point objective (RPO) for a geo-restore is 24 hours.<br><br>For more information about geo-backup, see [Geo-backups and disaster recovery](/azure/synapse-analytics/sql-data-warehouse/backup-and-restore#geo-backups-and-disaster-recovery).
 | **Is it possible to replicate a user-defined snapshot from a primary region to a secondary region?** | Snapshots (both user-defined and automatic) aren't replicated. Geo-backup is created once every 24 hours from the latest local snapshot. There are no public APIs for replicating a restore point to another region. You can still restore the required backup and pause the instance to save the compute cost. |
+| **What are the minimum permissions required to view geo-backup details from the Azure portal?** |For a dedicated SQL pool (formerly SQL Data Warehouse), if the user needs to interact with the Azure portal to retrieve details of the most recent geo-backup, you need to grant the Reader role at the SQL pool level along with Write permissions. However, if you don't want to provide elevated access with Write permissions to a specific user, you can still grant the Reader role at the SQL pool level. In this case, the user can use the REST API via PowerShell to retrieve a list of geo-backups. For more information, see [Geo Backup Policies - REST API](/rest/api/sql/geo-backup-policies).<br /><br />In a dedicated SQL pool within a Synapse workspace, you only need to assign the Reader role at the SQL pool level for the user to view geo-backups using the Azure portal.|
 
 ## Disaster recovery, recovery point objective, and recovery time objective FAQs
 

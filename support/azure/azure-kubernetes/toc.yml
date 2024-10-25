@@ -1,6 +1,5 @@
 - name: Welcome
   href: welcome-azure-kubernetes.yml
-
 - name: Create, Upgrade, Scale and Delete operations (cluster or nodepool)
   items:
   - name: Create operations
@@ -57,6 +56,8 @@
       href: create-upgrade-delete/error-code-badrequest-or-invalidclientsecret.md
     - name: Kubernetes 1.16 upgrades fail
       href: create-upgrade-delete/upgrades-to-kubernetes-fail-using-node-labels.md
+    - name: DnsServiceIpOutOfServiceCidr error
+      href: create-upgrade-delete/error-code-dnsserviceIpoutofservicecidr.md
     - name: NodePoolMcVersionIncompatible error
       href: create-upgrade-delete/nodepoolmcversionincompatible-error.md
     - name: PublicIPCountLimitReached error
@@ -79,6 +80,7 @@
       href: create-upgrade-delete/upgrade-fails-because-of-nsg-rules.md
     - name: Memory saturation occurs in pods after cluster upgrade
       href: create-upgrade-delete/aks-memory-saturation-after-upgrade.md
+
   - name: Delete operations
     items:
     - name: CannotDeleteLoadBalancerWithPrivateLinkService error
@@ -158,6 +160,11 @@
     - name: InvalidLoadBalancerProfileAllocatedOutboundPorts error
       href: create-upgrade-delete/error-code-invalidloadbalancerprofileallocatedoutboundports.md
 
+- name: Load balancer and Ingress controller
+  items:
+  - name: Create an unmanaged ingress controller
+    href: load-bal-ingress-c/create-unmanaged-ingress-controller.md
+    
 - name: Troubleshoot Kubernetes control plane
   items:
   - name: Troubleshoot API server and etcd
@@ -187,6 +194,8 @@
       href: availability-performance/node-not-ready-after-being-healthy.md
     - name: Node not ready but then recovers
       href: availability-performance/node-not-ready-then-recovers.md
+    - name: Troubleshoot node auto-repair errors
+      href: availability-performance/node-auto-repair-errors.md
 - name: Connectivity
   items:
   - name: Cannot connect to application hosted on AKS cluster

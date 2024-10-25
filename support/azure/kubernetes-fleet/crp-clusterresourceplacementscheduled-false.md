@@ -3,7 +3,7 @@ title: ClusterResourcePlacementScheduled failure when using ClusterResourcePlace
 description: Helps you resolve the ClusterResourcePlacementScheduled failure when you propagate resources using the ClusterResourcePlacement API object in Azure Kubernetes Fleet Manager.
 ms.date: 08/05/2024
 ms.reviewer: zhangryan, chiragpa, shasb, ericlucier, arfallas, sachidesai, v-weizhu
-ms.service: kubernetes-fleet
+ms.service: azure-kubernetes-fleet-manager
 ms.custom: sap:Other issue or questions related to Fleet manager
 ---
 # Resource propagation failure: ClusterResourcePlacementScheduled is false

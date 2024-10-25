@@ -201,7 +201,7 @@ For further troubleshooting, contact Microsoft Support.
 
 Before contacting Microsoft Support, you can gather information about your issue.
 
-Download and collect logs using the [TSS toolset](/troubleshoot/windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss), and then enable log collection on the impacted machine by using the following cmdlet:
+Download and collect logs using the [TSS toolset](../windows-tss/introduction-to-troubleshootingscript-toolset-tss.md), and then enable log collection on the impacted machine by using the following cmdlet:
 
 ```PowerShell
 .\TSS.ps1 -Scenario NET_NCSI
