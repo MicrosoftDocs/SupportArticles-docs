@@ -54,4 +54,4 @@ EXEC [mdm].[udpPerformanceToggleSwitch];
 GO
 ```
 
- For more information, see [Immediately Apply Member Permissions &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  
+ For more information, see [Immediately Apply Member Permissions &#40;Master Data Services&#41;](/sql/master-data-services/immediately-apply-member-permissions-master-data-services).
