@@ -69,7 +69,7 @@
           href: ../calendaring/how-to-use-internet-freebusy-feature.md
         - name: How to use vCalendar in Outlook
           href: ../calendaring/how-to-use-vcalendar-in-outlook.md
-        - name: Incorrect offset between time zones on DST start day in Outlook
+        - name: Multiple time zones show an incorrect time difference
           href: ../calendaring/additional-time-zone-shows-one-hour-offset-on-dst.md
         - name: Information about the Calendar Checking Tool for Outlook (CalCheck)
           href: ../calendaring/calendar-checking-tool-for-outlook.md
