@@ -1,25 +1,25 @@
 ---
 title: Environment load fails with insufficient permissions in version 2.46 or later
-description: Resolves the insufficient permissions error that occurs in a v2 schema enabled environment in Power Automate for desktop version 2.46 or later.
+description: Resolves the insufficient permissions error in a v2 schema-enabled environment in Power Automate for desktop version 2.46 or later.
 ms.reviewer: iomavrid
-ms.date: 10/23/2024
+ms.date: 10/25/2024
 ms.custom: sap:Desktop flows\Administration issues
 ---
-# Environment load fails with "insufficient permissions" error in v2 schema
+# Environment load fails with an "insufficient permissions" error in the v2 schema
 
-This article provides a resolution for an "insufficient permissions" error that occurs when you try to open an environment that has the [v2 schema](/power-automate/desktop-flows/schema) enabled in Power Automate for desktop version 2.46 or later.
+This article helps resolve the "insufficient permissions" error that occurs when you try to open an environment that has the [v2 schema](/power-automate/desktop-flows/schema) enabled in Power Automate for desktop version 2.46 or later.
 
 ## Symptoms
 
-When you start or open a v2 schema enabled environment in Power Automate for desktop (version 2.46 or later), the following error message occurs:
+When you start or open a v2 schema-enabled environment in Power Automate for desktop (version 2.46 or later), the following error message occurs:
 
 > You aren't permitted to view or create flows in this environment. Contact your administrator or switch to the default environment, or an environment, where you have sufficient permissions.
 
-:::image type="content" source="media/environment-load-fails-due-to-insufficient-permissions-in-PAD-after-2.46/pad-no-read-permissions-to-solution-entity.png" alt-text="Screenshot that shows the Insufficient permissions error.":::
+:::image type="content" source="media/environment-load-fails-insufficient-permissions-after-2.46/pad-insufficient-permissions.png" alt-text="Screenshot that shows the Insufficient permissions error.":::
 
 ## Cause
 
-This issue occurs when you have a custom role assigned or the default permissions for a built-in role are modified. The error occurs due to an issue with the permissions of the API that retrieves the installed environment solutions.
+This issue occurs when you have a custom role assigned or the default permissions of a built-in role are modified. The error occurs due to an issue with the permissions of the API that retrieves the installed environment solutions.
 
 ## Resolution
 
