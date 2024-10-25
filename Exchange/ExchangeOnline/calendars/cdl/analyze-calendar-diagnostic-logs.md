@@ -1,5 +1,5 @@
 ---
-title: Analyze calendar diagnostic logs for Exchange Online mailboxes
+title: Analyze Calendar diagnostic logs for Exchange Online mailboxes
 description: Discusses how to analyze CDL logs to investigate calendar issues for Exchange Online mailboxes. 
 author: cloud-writer
 ms.author: meerak
@@ -16,21 +16,23 @@ appliesto:
   - Exchange Online
   - Outlook on the web
   - Outlook for Windows
-  - Outlook for Mac
-  - Outlook for iOS
-  - Outlook for Android
+  - New Outlook for Windows
   - Outlook for Microsoft 365
+  - Outlook 2024
   - Outlook 2021
   - Outlook 2019
   - Outlook 2016
-  - New Outlook for Windows
+  - Outlook for Mac
+  - Outlook for Mac for Microsoft 365
+  - Outlook for iOS
+  - Outlook for Android
 search.appverid: MET150
-ms.date: 08/27/2024
+ms.date: 10/22/2024
 ---
 
-# Analyze calendar diagnostic logs for Exchange Online mailboxes
+# Analyze Calendar diagnostic logs for Exchange Online mailboxes
 
-To help diagnose meeting issues for Exchange Online mailboxes, you can analyze calendar diagnostic logs (CDLs). To get the CDLs for a meeting, see [Get calendar diagnostic logs for Exchange Online mailboxes](./get-calendar-diagnostic-logs.md).
+To help diagnose meeting issues for Exchange Online mailboxes, you can analyze Calendar diagnostic logs (CDLs). To get the CDLs for a meeting, see [Get calendar diagnostic logs for Exchange Online mailboxes](./get-calendar-diagnostic-logs.md).
 
 The following sections guide you through the analysis process.
 
@@ -42,9 +44,9 @@ The following sections guide you through the analysis process.
 
 The file should contain the following set of worksheets for each key participant:
 
-- `<participant SMTP address>_TimeLine`: Contains the timeline.
-- `<participant SMTP address>`: Contains the enhanced CDLs.
-- `<participant SMTP address>_Raw`: Contains the raw CDLs.
+- `<participant SMTP address>_TimeLine`: Contains the timeline
+- `<participant SMTP address>`: Contains the enhanced CDLs
+- `<participant SMTP address>_Raw`: Contains the raw CDLs
 
 > [!NOTE]
 > - The script downloads and processes the raw CDLs to provide enhanced CDLs and a concise timeline of meeting actions.
