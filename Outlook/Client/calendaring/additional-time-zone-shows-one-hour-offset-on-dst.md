@@ -17,7 +17,7 @@ appliesto:
   - New Outlook for Windows
   - Outlook on the web
 search.appverid: MET150
-ms.reviewer: brrogers, laboro, meerak, v-shorestris
+ms.reviewer: brrogers, laboro, randyto, meerak, v-shorestris
 author: cloud-writer
 ms.author: meerak
 ms.date: 10/25/2024
