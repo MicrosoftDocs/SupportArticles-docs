@@ -1,7 +1,7 @@
 ---
 title: TCP time-outs when kubectl, other 3rd-party tools connect to API
 description: Troubleshoot TCP time-outs that occur when kubectl or other third-party tools connect to the API server in Azure Kubernetes Service (AKS).
-ms.date: 10/18/2024
+ms.date: 10/25/2024
 ms.reviewer: chiragpa, nickoman, v-leedennis
 ms.service: azure-kubernetes-service
 keywords:
@@ -29,13 +29,14 @@ These pods are responsible for communication between a node and the control plan
 ### Solution: Reduce the utilization or stress of the node hosts
 
 Make sure the nodes that host this pod aren't overly utilized or under stress. Consider moving the nodes to their own [system node pool](/azure/aks/use-system-pools).
-To check the usage of the node where the konnectivity-agent pod is hosted, and which node the pod is in, use the following commands:
+
+To check which node the `konnectivity-agent` pod is hosted in and the usage of the node, run the following commands:
 
 ```bash
-# To check which node the konnectivity-agent pod is hosted,
+# Check which node the konnectivity-agent pod is hosted in
 $ kubectl get pod -n kube-system -o wide
     
-# To check the usage of the node hosting the pod,
+# Check the usage of the node hosting the pod
 $ kubectl top node
 ```
 
@@ -92,15 +93,15 @@ There might be internal traffic blockages between nodes in your AKS cluster.
 
 See [Troubleshoot TCP timeouts, such as "dial tcp <Node_IP>:10250: i/o timeout"](tcp-timeouts-dial-tcp-nodeip-10250-io-timeout.md).
 
-## Cause 8: It is a private cluster
+## Cause 8: Your cluster is private
 
-It is a private cluster, but the client you are trying to access to API server is in the public or different network which cannot connect to the subnet AKS uses.
+Your cluster is a private cluster, but the client you're trying to access to the API server is in the public or different network which can't connect to the subnet used by AKS.
 
-### Solution: Try it in the client that can access to the subnet that AKS uses
+### Solution: Use a client that can access to the AKS subnet
 
-Since it's a private cluster, and the controlplane for the private cluster is in your subnet AKS uses. Therefore, unless your client is in the network which can connect to the AKS subnet, it cannot be connected to the API server. It is expected behavior.
+Since your cluster is a private cluster and the control plane for it is in the AKS subnet, unless your client is in the network which can connect to the AKS subnet, it can't be connected to the API server. It is an expected behavior.
 
-In this case, try to access to the API server from the client on a network that can communicate with the AKS subnet. Also, make sure whether NSG or other appliances between networks is blocking packets.
+In this case, try to access to the API server from a client on a network that can communicate with the AKS subnet. Additionally, verify whether NSG or other appliances between networks are blocking packets.
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
