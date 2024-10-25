@@ -4,7 +4,7 @@ description: Resolves the communicating with the emulator error that occurs when
 ms.author: iomavrid
 author: YiannisMavridis
 ms.reviewer: tapanm
-ms.date: 10/24/2024
+ms.date: 10/25/2024
 ms.custom: sap:Desktop flows
 ---
 # "Error communicating with the emulator" when you run Open terminal session with Micro Focus Reflection Desktop
