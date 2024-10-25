@@ -176,4 +176,4 @@ Time                Time Offset    TimeDelta      Source        Dest          De
 
 Shall the client have more than one NIC active with different DNS servers configured on them, the client resolution behavior is slightly different.
 
-If name resolution tools such as nslookup is used, then the client resolution behavior is different.
+If name resolution tools such as nslookup are used, the client resolution behavior is different.
