@@ -29,7 +29,7 @@ If you are using out-of-the-box assignment methods like highest capacity or adva
 
 - If the workstream is using unit-based capacity, verify the available unit capacity.
 
-- If you are using capacity profile, verify the available capacity profile units in the profile used by the workstream. Also, confirm whether there's another capacity profile that's a blocking capacity and therefore is blocking assignment from other profiles.
+- If you are using a [capacity profile](/dynamics365/customer-service/administer/capacity-profiles), verify the available capacity profile units in the profile used by the workstream. Also, confirm whether there's another capacity profile that's blocking capacity and therefore is blocking assignment from other profiles.
 
 ## Agent capacity isn't refreshed 
 
@@ -41,9 +41,11 @@ Agent hasn't closed the conversation using the recommended method or wrap-up tim
 
 **Resolution**
 
-- Confirm that the agent used the “Close Conversation” button to close the conversation.
-- Verify if a wrap-up time is set in the workstream. Agents can end the wrap-up by <>.
-- Supervisors can look-up the active conversations assigned to the agent in the ongoing conversations dashboard and verify the status.
+- Confirm that the agent used the [**End**](/dynamics365/customer-service/use/oc-conversation-state#wrap-up) button on the communication panel to close the conversation.
+- Verify if **Block capacity for wrap up** is set in the [work distribution settings](/dynamics365/customer-service/administer/create-workstreams#configure-work-distribution) of the workstream.
+- Supervisors can look-up the active conversations assigned to the agent in the [ongoing conversations dashboard](/dynamics365/customer-service/use/realtime-ongoing) and verify the status.
 
 ### Related information
- 
+
+[Assignment methods](/dynamics365/customer-service/administer/assignment-methods)   
+[Set allowed presence in workstream](/dynamics365/customer-service/administer/create-workstreams#configure-work-distribution)  
