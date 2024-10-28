@@ -10,7 +10,7 @@ ms.custom: sap:Network Connectivity and File Sharing\Dynamic Host Configuration 
 ---
 # Client machines don't send DDNS updates when the DHCP server stops sending Option 81
 
-This article helps resolve an issue in which Windows client machines don't send dynamic domain name system (DNS) updates when the Dynamic Host Configuration Protocol (DHCP) server stops sending Option 81 (also known as the client fully qualified domain name (FQDN) option) in the DHCPREQUEST (REQ) and DHCPACK (ACK) packets of a DHCP response.
+This article helps resolve an issue in which Windows client machines don't send dynamic Domain Name System (DNS) updates when the Dynamic Host Configuration Protocol (DHCP) server stops sending Option 81 (also known as the client fully qualified domain name (FQDN) option) in the DHCPREQUEST (REQ) and DHCPACK (ACK) packets of a DHCP response.
 
 You have a DHCP server that is leasing IP addresses to client machines, and you have enabled the Option 81 configuration from the DHCP server side. Option 81 is configured to perform dynamic DNS (DDNS) updates for incoming DHCP client requests. With this configuration, the DHCP server performs DDNS updates for the clients and always sends Option 81 back to the clients.
 
@@ -73,7 +73,7 @@ To identify that you're experiencing the issue, follow these steps:
 
     In some cases, the value 64 might also indicate that the DHCP server responds with Option 81, which overrides the client options:
 
-    :::image type="content" source="media/client-ddns-updates-dhcp-option-81/value-64-override.png" alt-text="Screenshot that shows the DHCP server responds with Option 81, overriding the client options.":::
+    :::image type="content" source="media/client-ddns-updates-dhcp-option-81/value-64-override.png" alt-text="Screenshot that shows the DHCP server responds with Option 81, overriding the client options." lightbox="media/client-ddns-updates-dhcp-option-81/value-64-override.png":::
 
     This article fixes an issue in which the value 64 is caused by the cache rather than the DHCP server response.
 
