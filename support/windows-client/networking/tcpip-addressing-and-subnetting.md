@@ -180,6 +180,8 @@ It is recommended that a system administrator responsible for TCP/IP networks ha
 
 - Subnet or Subnetwork--A smaller network created by dividing a larger network into equal parts.
 
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+
 - TCP/IP--Used broadly, the set of protocols, standards, and utilities commonly used on the Internet and large networks.
 
 - Wide area network (WAN)--A large network that is a collection of smaller networks separated by routers. The Internet is an example of a large WAN.
