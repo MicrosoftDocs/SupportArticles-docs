@@ -12,7 +12,7 @@ ms.custom: sap:Mobile application
 
 ## Symptoms
 
-The mobile app doesn't load the new experience, even if it has been [enabled in the settings](/dynamics365/field-service/set-up-field-service-mobile).
+The mobile app doesn't load the new experience, even if it has been [enabled in the settings](/dynamics365/field-service/mobile/set-up-field-service-mobile).
 
 ## Resolution
 

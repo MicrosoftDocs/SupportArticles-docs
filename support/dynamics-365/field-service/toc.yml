@@ -54,18 +54,18 @@
     - name: '"Validations have been restarted in the background" error'
       href: mobile-app/validation-restarted-background.md
 
-    - name: New mobile experience
-      items: 
-        - name: Error on start due to permission/privilege issues
-          href: newux-error-on-start-permission.md
-        - name: Error on start due to missing files in the solution
-          href: newux-error-on-start-missing-files.md
-        - name: Settings area is missing in the Field Service Mobile app module navigation
-          href: newux-settings-missing.md
-        - name: The new experience doesn't show after enabling it in settings
-          href: newux-doesnot-load.md
-        - name: The new experience doesn't show dashboards from the navigation
-          href: newux-doesnot-show-dashboards.md
+- name: Mobile app - New experience
+  items: 
+    - name: Error on start due to permission/privilege issues
+      href: mobile-app/newux-error-on-start-permission.md
+    - name: Error on start due to missing files in the solution
+      href: mobile-app/newux-error-on-start-missing-files.md
+    - name: Settings area is missing in the Field Service Mobile app module navigation
+      href: mobile-app/newux-settings-missing.md
+    - name: The new experience doesn't show after enabling it in settings
+      href: mobile-app/newux-doesnot-load.md
+    - name: The new experience doesn't show dashboards from the navigation
+      href: mobile-app/newux-doesnot-show-dashboards.md
 
 - name: Resource Scheduling Optimization add-in
   items: 
