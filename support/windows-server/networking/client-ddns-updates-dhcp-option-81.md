@@ -73,7 +73,7 @@ To identify that you're experiencing the issue, follow these steps:
 
     In some cases, the value 64 might also indicate that the DHCP server responds with Option 81, which overrides the client options:
 
-    :::image type="content" source="media/client-ddns-updates-dhcp-option-81/value-64-override.png" alt-text="Screenshot that shows the DHCP server responds with Option 81, overriding the client options." lightbox="media/client-ddns-updates-dhcp-option-81/value-64-override.png":::
+    :::image type="content" source="media/client-ddns-updates-dhcp-option-81/value-64-override.png" alt-text="Screenshot that shows the DHCP server responds with Option 81, overriding the client options.":::
 
     This article fixes an issue in which the value 64 is caused by the cache rather than the DHCP server response.
 
