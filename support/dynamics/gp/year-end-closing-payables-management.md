@@ -2,7 +2,7 @@
 title: Year-end closing for Payables Management
 description: Describes how to do the year-end closing routine in Payables Management in Microsoft Dynamics GP.
 ms.reviewer: theley
-ms.date: 03/20/2024
+ms.date: 10/28/2024
 ms.custom: sap:Financial - Payables Management
 ---
 # Year-end closing procedures for the Payables Management module in Microsoft Dynamics GP
@@ -38,7 +38,7 @@ Read this whole article before you do the steps. If you've questions, contact Mi
 1. [Post all transactions for the year.](#step-1-post-all-transactions-for-the-year)
 1. [Print the Aged Trial Balance with Options report.](#step-2-print-the-aged-trial-balance-with-options-report)
 1. [Print the Vendor Period Analysis Report.](#step-3-print-the-vendor-period-analysis-report)
-1. [Install the Payroll year-end update (optional)](#step-4-install-the-payroll-year-end-update-optional)
+1. [Install the year-end update (optional)](#step-4-install-the-year-end-update-optional)
 1. [Make a backup that is named "Pre-1099 Edits."](#step-5-make-a-backup-that-is-named-pre-1099-edits)
 1. [Verify the 1099 information and edit it if it's required.](#step-6-verify-the-1099-information-and-edit-it-if-its-required)
 1. [Print the 1099 statements.](#step-7-print-the-1099-statements)
@@ -158,9 +158,9 @@ We recommend that you print a paper copy of the Vendor Period Analysis report to
 1. On the **Reports** menu, point to **Purchasing**, and then select **Analysis**.
 2. In the **Reports** list, select **Period**.
 
-### Step 4: Install the Payroll year-end update (optional)  
+### Step 4: Install the year-end update (optional)  
 
-If there are compliance changes for Payables Management, such as 1099 form changes, install the Payroll year-end update. If there are no changes or compliance issues for the tax year for Payables Management, you may skip this step.
+If there are compliance changes for Payables Management, such as 1099 form changes, install the year-end update. If there are no changes or compliance issues for the tax year for Payables Management, you may skip this step.
 
 Review the changes that are included in the Payroll year-end update.
 
@@ -206,8 +206,7 @@ To print the 1099 edit list, follow these steps:
 
 6. Select **Process** to have the changes made and the 1099 will be updated.
 
-**Method 2:** VENDOR NOT MARKED CORRECTLY: (Applies to Microsoft Dynamics GP 2013 and higher versions)
-
+**Method 2:** VENDOR NOT MARKED CORRECTLY: 
 If you marked a vendor as 1099able and shouldn't have, or you forgot to mark a vendor as 1099able at all, you can use the Update 1099 Information utility to change the 1099 status on the vendor and also to update the 1099 information. You can change a 1099 vendor to be non-1099 or visa versa.
 
 1. Select **Tools** under **Microsoft Dynamics GP**, point to **Utilities**, point to **Purchasing**, and select **Update 1099 Information**.
@@ -247,7 +246,7 @@ If you marked a vendor as 1099able and shouldn't have, or you forgot to mark a v
 
 5. In the Amount column, type the correct 1099 amount. Select **Save**.
 
-**Method 4:** Edit the 1099 directly (Use for Microsoft Dynamics GP 2010 and prior versions, but can work for all versions)
+**Method 4:** Edit the 1099 directly 
 > [!NOTE]
 > The Reconcile utility for 1099 Amounts would undo any edits you make using this method.
 
@@ -286,15 +285,8 @@ The following table provides additional information about the fields on the 1099
 |Recipients identification number| **Tax ID** field of the Vendor Maintenance Options window|
 |Amounts for boxes 1-9 on the Dividend Form or 1-16 on the Miscellaneous Form| **1099 Amount** field in the Vendor Yearly Summary window|
   
-Currently, Microsoft Dynamics GP doesn't handle magnetic media filing of state 1099s. The following Microsoft Dynamics Partner does offer compatible State W-2 and 1099 magnetic media products. For more information, contact:  
+Microsoft Dynamics GP does not handle electronic filing filing for 1099s. Review the following [blog for more options to prepare for the 1099 electronic submission](https://community.dynamics.com/blogs/post/?postid=2246f6af-3f2a-4faf-9da5-544613326c20).
 
-Greenshades Accounting Software, Inc.  
-7800 Belfort Parkway Suite 220  
-Jacksonville, FL 32207  
-General: 1-800-209-9793 (Toll-Free)  
-Sales: 1-800-209-9793x2 (Toll-Free)  
-`sales@greenshades.com`  
-[Greenshades](https://www.greenshades.com)
 
 ### Step 8: Make a backup that is named Pre Year-End
 
