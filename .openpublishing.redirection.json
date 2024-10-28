@@ -12349,6 +12349,11 @@
       "source_path": "support/windows-server/backup-and-storage/extend-data-volume.md",
       "redirect_url": "/troubleshoot/windows-server/backup-and-storage/extend-shrink-data-volume",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/group-policy/fail-to-run-gpmc.md",
+      "redirect_url": "/troubleshoot/windows-server/group-policy/permissions-this-gpo-inconsistent",
+      "redirect_document_id": true
     }
   ]
 }

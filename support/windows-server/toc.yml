@@ -1050,9 +1050,7 @@ items:
   - name: Sysvol access or replication issues
     items:
     - name: DFSR SYSVOL fails to migrate or replicate
-      href: ./group-policy/dfsr-sysvol-fails-migrate-replicate.md
-    - name: Errors when you run GPMC
-      href: ./group-policy/fail-to-run-gpmc.md
+      href: ./group-policy/dfsr-sysvol-fails-migrate-replicate.md    
     - name: How to force synchronization for DFSR-replicated sysvol replication
       href: ./group-policy/force-authoritative-non-authoritative-synchronization.md
     - name: Minimize SYSVOL size by removing administrative templates
