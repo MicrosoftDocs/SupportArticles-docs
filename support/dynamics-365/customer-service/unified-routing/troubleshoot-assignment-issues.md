@@ -15,11 +15,11 @@ This article contains resolutions for troubleshooting issues in assignments.
 
 Agents are available in the queue according to their presence but aren't receiving new work items.
 
-## Cause
+**Cause**
 
 Agents might not be meeting the assignment criteria. Automated assignment considers presence and capacity as availability criteria along with any skills or other attributes added in the assignment configuration.
 
-## Resolution
+**Resolution**
 
 Review the following settings:
 
@@ -35,12 +35,15 @@ Review the following settings:
 
 Agent has closed the conversations, but their capacity isn't refreshed.
 
-## Cause
+**Cause**
 
 Agent hasn't closed the conversation using the recommended method or wrap-up time is lengthy.
 
-## Resolution
+**Resolution**
 
 - Confirm that the agent used the “Close Conversation” button to close the conversation.
 - Verify if a wrap-up time is set in the workstream. Agents can end the wrap-up by <>.
 - Supervisors can look-up the active conversations assigned to the agent in the ongoing conversations dashboard and verify the status.
+
+### Related information
+ 
