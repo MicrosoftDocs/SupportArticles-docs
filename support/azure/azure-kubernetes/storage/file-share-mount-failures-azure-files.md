@@ -12,14 +12,9 @@ ms.custom: sap:Storage
 
 This article discusses how to troubleshoot file share mounting failures for Azure Files, so that you can set up storage successfully on your Microsoft Azure Kubernetes Service (AKS) clusters.
 
-## Cause
+## Common cause
 
-Your storage account key has changed.
-
-## Symptom
-
-This can occur as various errors, but the following event mainly occur in pods.
-
+Your storage account key has changed. This problem can lead to a range of errors, but the event described below typically occurs in pods:
 ```
 Error: failed to generate container "56907e9807c6f4203c3aace8c5a6e3a75832cf07d3080a3869d355114657b54f" spec: failed to generate spec: failed to stat "/var/lib/kubelet/pods/xxxxxxxx-9fe6-46d7-b12e-339951b8d2f5/volumes/kubernetes.io~csi/pvc-xxxxxxxx-3b70-498c-b357-3488e1c1f429/mount": stat /var/lib/kubelet/pods/xxxxxxxx-9fe6-46d7-b12e-339951b8d2f5/volumes/kubernetes.io~csi/pvc-xxxxxxxx-3b70-498c-b357-3488e1c1f429/mount: host is down
 ```
@@ -45,7 +40,7 @@ Manually update the `azurestorageaccountkey` field in an Azure file secret with 
 1. Redeploy your pods.
 
 > [!NOTE]
-> Simply deleting the pod and let it recreate again may not take effect. Be sure to redeploy the pod.
+> Simply deleting the pod and allowing it to be recreated may not resolve the issue. Be sure to redeploy the pod.
 
 After a few minutes, the agent node will retry the Azure File mount with the updated storage key.
 
