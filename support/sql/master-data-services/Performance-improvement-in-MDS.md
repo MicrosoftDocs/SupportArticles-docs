@@ -45,7 +45,7 @@ GO
 Disable the performance setting, create model/entity/attribute will be faster
 
 ```SQL
-UPDATE mdm.tblSystemSetting SET SettingValue = 1 WHERE SettingName = 'PerformanceImprovementEnable';
+UPDATE mdm.tblSystemSetting SET SettingValue = 0 WHERE SettingName = 'PerformanceImprovementEnable';
 
 EXEC [mdm].[udpPerformanceToggleSwitch];
 
