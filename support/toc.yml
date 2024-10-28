@@ -23,7 +23,7 @@
 - name: Welcome
   href: azure/index.yml
 - name: Welcome
-  href: entra/index.yml
+  href: entra/welcome-entra.yml
 - name: Welcome
   href: sql/welcome-sql-server.yml
 - name: Welcome
