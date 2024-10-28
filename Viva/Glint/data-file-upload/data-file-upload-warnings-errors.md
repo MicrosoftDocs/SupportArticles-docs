@@ -3,7 +3,7 @@ title: Handle data file upload warnings and errors in Viva Glint
 description: Overview of how to handle data file upload warnings and errors in Viva Glint. 
 manager: dcscontentpm
 ms.reviewer: aweixelman
-ms.date: 10/25/2024
+ms.date: 10/28/2024
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
@@ -28,11 +28,11 @@ To upload your employee data to Viva Glint, you can use one of the following met
 
 For more information about these issues and how to resolve them, see the following articles:
 
-- [Resolve file upload errors related to attributes](./fix-upload-attributes-errors.md)
-- [Resolve file upload errors related to derived attributes](./fix-upload-derivation-errors.md)
-- [Resolve file upload warnings related to duplicate data](./fix-upload-duplicate-data-warnings.md)
-- [Resolve file upload warnings related to invalid or unexpected values](./fix-upload-invalid-unexpected-values-warnings.md)
-- [Resolve file upload warnings related to manager hierarchy](./fix-upload-manager-hierarchy-warnings.md)
+- [Resolve file upload errors related to attributes](/viva/troubleshoot/glint/data-file-upload/fix-upload-attributes-errors?toc=/viva/glint/toc.json&bc=/viva/breadcrumb/toc.json)
+- [Resolve file upload errors related to derived attributes](/viva/troubleshoot/glint/data-file-upload/fix-upload-derivation-errors?toc=/viva/glint/toc.json&bc=/viva/breadcrumb/toc.json)
+- [Resolve file upload warnings related to duplicate data](/viva/troubleshoot/glint/data-file-upload/fix-upload-duplicate-data-warnings?toc=/viva/glint/toc.json&bc=/viva/breadcrumb/toc.json)
+- [Resolve file upload warnings related to invalid or unexpected values](/viva/troubleshoot/glint/data-file-upload/fix-upload-invalid-unexpected-values-warnings?toc=/viva/glint/toc.json&bc=/viva/breadcrumb/toc.json)
+- [Resolve file upload warnings related to manager hierarchy](/viva/troubleshoot/glint/data-file-upload/fix-upload-manager-hierarchy-warnings?toc=/viva/glint/toc.json&bc=/viva/breadcrumb/toc.json)
 
 If you still can't resolve the issues, [contact Microsoft Support](../contact-support/get-support-viva-glint.md) for further assistance.
 
