@@ -1,22 +1,18 @@
 ---
 title: Audio issues when using Teams on macOS
 description: Resolve audio-related issues when you use Microsoft Teams on macOS devices. 
-ms.date: 10/24/2024
+ms.date: 10/27/2024
 audience: ITPro
 ms.topic: troubleshooting
 manager: dcscontentpm
 search.appverid: 
   - SPO160
   - MET150
-appliesto: 
-  - New Microsoft Teams
-  - Classic Microsoft Teams
-  - Teams on the web
 ms.custom: 
   - sap:Teams Clients\Mac Desktop
-  - CI 184113
+  - CI 980
   - CSSTroubleshoot
-ms.reviewer: 
+ms.reviewer: martinmuzak
 ---
 
 # Audio issues when using Teams on macOS
@@ -53,4 +49,4 @@ Restart the `coreaudiod` process by following these steps:
 
 ### Method 2: For nonadministrators
 
-Restart the macOS device by selecting Apple menu > **Restart**.
+Restart the macOS device by selecting the Apple menu > **Restart**.
