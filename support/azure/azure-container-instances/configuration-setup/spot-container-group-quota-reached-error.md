@@ -28,7 +28,7 @@ az container create -g MyResourceGroup --name myapp --image myimage:latest --pri
 
 ## Cause
 
-This issue occurs because the container group default quota exceeds your Azure subscription. The default quotas are bound by Azure subscription type. The following table shows the default Spot quota for different subscription types:
+This issue occurs because the container group default quota exceeds the default Spot quota bound by your Azure subscription. The following table shows the default Spot quota for different subscription types:
 
 |Subscription type|	StandardSpotCores limit|
 |---|---|
