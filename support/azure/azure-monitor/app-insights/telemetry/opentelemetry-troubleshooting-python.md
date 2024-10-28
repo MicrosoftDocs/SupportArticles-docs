@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot OpenTelemetry issues in Python
 description: Learn how to troubleshoot OpenTelemetry issues in Python. View known issues that involve Azure Monitor OpenTelemetry Exporters.
-ms.date: 06/24/2024
+ms.date: 10/28/2024
 editor: v-jsitser
 ms.service: azure-monitor
 ms.devlang: python
@@ -72,8 +72,7 @@ Azure Workbooks and Jupyter Notebooks might keep exporter processes running in t
 
 ### Missing Requests telemetry from FastAPI or Flask apps
 
-If you are missing Requests table data but not other categories, it is likely that your http framework is not being instrumented. This can occur in FastAPI and Flask apps using the [Azure Monitor OpenTelemetry Distro client library for Python](/python/api/overview/azure/monitor-opentelemetry-readme)
-if you don't structure your `import` declarations correctly. You might be importing the `fastapi.FastAPI` or `flask.Flask` respectively before you call the `configure_azure_monitor` function to instrument the FastAPI and Flask libraries. For example, the following code doesn't successfully instrument the FastAPI and Flask apps:
+If you are missing Requests table data but not other categories, your HTTP framework might not be instrumented correctly. This issue can occur in FastAPI and Flask apps using the [Azure Monitor OpenTelemetry Distro client library for Python](/python/api/overview/azure/monitor-opentelemetry-readme) if you don't structure your `import` declarations correctly. You might be importing the `fastapi.FastAPI` or `flask.Flask` respectively before you call the `configure_azure_monitor` function to instrument the FastAPI and Flask libraries. For example, the following code doesn't successfully instrument the FastAPI and Flask apps:
 
 ```python
 # FastAPI
