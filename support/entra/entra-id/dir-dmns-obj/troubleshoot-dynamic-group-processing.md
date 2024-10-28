@@ -71,4 +71,4 @@ Run the `unPauseSpecificCritical.ps1` script to resume rule processing for speci
 
 - [Dynamic group processing sample scripts](https://github.com/barclayn/samples-dynamic-group/tree/main)
   
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
