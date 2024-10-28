@@ -2,7 +2,7 @@
   href: welcome-customer-service.yml
 - name: Unified routing
   items:
-    - name: Troubleshoot assignment issues
+    - name: Troubleshoot issues with automatic assignment
       href: unified-routing/troubleshoot-assignment-issues.md
 - name: Customer Service Insights
   items:
