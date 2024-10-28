@@ -3,8 +3,8 @@ title: Troubleshoot Azure Files identity-based authentication and authorization 
 description: Troubleshoot problems using identity-based authentication to connect to SMB Azure file shares and see possible resolutions.
 ms.service: azure-file-storage
 ms.custom: sap:Security, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
-ms.date: 07/10/2024
-ms.reviewer: kendownie, v-weizhu
+ms.date: 10/28/2024
+ms.reviewer: kendownie, v-surmaini, v-weizhu
 ---
 # Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
 
@@ -152,9 +152,9 @@ The cmdlet performs these checks in sequence and provides guidance for failures:
 5. `CheckRealmMap`: Check if the user has [configured any realm mappings](/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable#configure-coexistence-with-storage-accounts-using-on-premises-ad-ds) that would join the account to another Kerberos realm than `KERBEROS.MICROSOFTONLINE.COM`.
 6. `CheckAdminConsent`: Check if the Entra service principal has been [granted admin consent](/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable#grant-admin-consent-to-the-new-service-principal) for the Microsoft Graph permissions that are required to get a Kerberos ticket.
 7. `CheckWinHttpAutoProxySvc`: Checks for the WinHTTP Web Proxy Auto-Discovery Service (WinHttpAutoProxySvc) that's required for Microsoft Entra Kerberos authentication. Its state should be set to `Running`.
-8. `CheckIpHlpScv`: Checks for the IP Helper service (iphlpsvc) that's required for Microsoft Entra Kerberos authentication. Its state should be set to `Running`.
-9. `CheckFiddlerProxy`: Checks if a Fiddler proxy that would prevent Entra Kerberos authentication is present.
-10. `CheckEntraJoinType`: Checks if the machine is Entra Domain joined or Hybrid Entra Domain Joined. It is a pre-requisite for Microsoft Entra Kerberos authentication.
+8. `CheckIpHlpScv`: Check for the IP Helper service (iphlpsvc) that's required for Microsoft Entra Kerberos authentication. Its state should be set to `Running`.
+9. `CheckFiddlerProxy`: Check if a Fiddler proxy that prevents Microsoft Entra Kerberos authentication exists.
+10. `CheckEntraJoinType`: Check if the machine is Entra domain joined or hybrid Entra domain Joined. It is a prerequisite for Microsoft Entra Kerberos authentication.
 
 If you just want to run a subselection of the previous checks, you can use the `-Filter` parameter, along with a comma-separated list of checks to run.
 
