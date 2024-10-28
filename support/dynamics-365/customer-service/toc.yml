@@ -1,5 +1,9 @@
 - name: Dynamics 365 Customer Service
   href: welcome-customer-service.yml
+- name: Unified routing
+  items:
+    - name: Troubleshoot assignment scenarios
+      href: unified-routing/troubleshoot-assignment-issues.md
 - name: Customer Service Insights
   items:
     - name: Troubleshoot issues using Solution Health Hub
