@@ -1,23 +1,24 @@
 ---
-title: Extend a data volume
-description: Describes how to use the Diskpart.exe command prompt utility to extend a data volume in unallocated space. Also describes how to extend the boot partition.
-ms.date: 12/26/2023
+title: Extend or shrink a data volume
+description: Describes how to use the Diskpart.exe command prompt utility to extend a data volume in unallocated space. Also describes how to extend or shrink disk partitions.
+ms.date: 10/25/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Partition and volume management , csstroubleshoot
+ms.reviewer: kaushika, jeffhugh
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Partition and volume management, csstroubleshoot
 ---
-# Extend a data volume in Windows
+# Extend or shrink a data volume in Windows
 
 This article describes the following topics:
 
-- How to use the Diskpart.exe command prompt utility to extend a data volume into unallocated space in Windows Server 2003, Windows XP, and Windows 2000.
-- How to extend the boot partition in Windows Server 2008.
+- How to use the Diskpart.exe command prompt utility to extend a data volume into unallocated space in Windows Server.
+- How to extend the boot partition in Windows Server.
+- How to shrink the boot partition in Windows Server.
 
 _Original KB number:_ &nbsp; 325590
 
-## Use Diskpart.exe to extend a data volume in Windows Server 2003, in Windows XP, and in Windows 2000
+## Use Diskpart.exe to extend a data volume in Windows Server
 
 You can use the Diskpart.exe utility to manage disks, partitions, and volumes from a command-line interface. You can use Diskpart.exe on both Basic disks and Dynamic disks. If an NTFS volume resides on a hardware RAID 5 container that can add space to the container, you can extend the NTFS Volume with Diskpart.exe while the disk remains a Basic disk.
 
@@ -57,24 +58,28 @@ To extend a partition or volume, first select the volume to give it the focus, a
 
 When the extend command is complete, you should receive a message that states that Diskpart successfully extended the volume. The new space should be added to the existing drive while maintaining the data on the volume.
 
-In Windows XP and Windows 2000, you can't use Diskpart.exe to extend a simple volume on a Dynamic disk that was originally created on a Basic disk. You can extend only simple volumes that were created after the disk was upgraded to Dynamic disk. If you try to extend a simple volume on a Dynamic disk that was originally created on a Basic disk, you receive the following error message. This restriction was removed in Windows Server 2003.
-
-> Diskpart failed to extend the volume.  
-> Please make sure the volume is valid for extending
-
 > [!NOTE]
 >
-> - Windows Server 2003 and Windows XP include Diskpart.exe as part of the base operating system.
+> - Windows Server and Windows client include Diskpart.exe as part of the base operating system.
 > - We recommend that you contact your system vendor for updated BIOS, firmware, drivers, and agents before you convert to Dynamic disks.
 
-## Extend the boot partition in Windows Server 2008
+## Extend disk partitions in Windows Server
 
-To extend the boot partition in Windows Server 2008, follow these steps:
+To extend disk partitions in Windows Server, follow these steps:
 
-1. Click **Start** > **Server Manager**.
-2. In the navigation pane, expand **Storage**, and then click **Disk Management**.
-3. In the details pane, right-click the volume that you want, and then click **Extend Volume**.
-4. Follow the instructions in the Extend Volume Wizard to extend the boot partition.
+1. Select **Start** > **Server Manager**.
+2. In the navigation pane, expand **Storage**, and then select **Disk Management**.
+3. In the details pane, right-click the volume that you want, and then select **Extend Volume**.
+4. Follow the instructions in the Extend Volume Wizard to extend the partition.
 
 > [!NOTE]
 > You can only extend the boot partition in contiguous unallocated disk space.
+
+## Shrink disk partitions in Windows Server
+
+To shrink disk partitions in Windows Server, follow these steps:
+
+1. Select **Start** > **Server Manager**.
+2. In the navigation pane, expand **Storage**, and then select **Disk Management**.
+3. In the details pane, right-click the volume that you want, and then select **Shrink Volume**.
+4. Follow the instructions in the Shrink Volume Wizard to shrink the partition.

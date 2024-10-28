@@ -14,13 +14,12 @@ _Original KB number:_ &nbsp; 5017807
 
 ## Symptoms
 
-When you try to [register a machine](/power-automate/desktop-flows/manage-machines#register-a-new-machine) to a tenant, the registration might fail with an error that resembles the following:
+When you try to [register a machine](/power-automate/desktop-flows/manage-machines#register-a-new-machine) to a tenant, the registration might fail with one of the following errors:
+- > UnauthorizedTenantSwitching
 
-> UnauthorizedTenantSwitching
+- > UnauthorizedRegistrationToUnjoinedTenant
 
-> UnauthorizedRegistrationToUnjoinedTenant
-
-> UnauthorizedRegistrationToNonAllowListedTenant
+- > UnauthorizedRegistrationToNonAllowListedTenant
 
 ## Cause
 
@@ -57,10 +56,10 @@ To define the allowlist:
 
    For example: 3EF1d993-CBD4-4DEA-A50E-939AEDB23F21,5B19777D-814C-43F3-9317-CDBAD0846ED8  
 
-> [!NOTE]
->
-> - To find your tenant ID from the [Power Automate portal](https://make.powerautomate.com/), see [Allowlist tenants for registration and connect with sign-in connections](/power-automate/desktop-flows/how-to/allowlist-tenant-for-connect-with-sign-in-and-registration).
-> - To find your tenant ID from the [Power Apps portal](https://make.powerapps.com/), go to **Settings** and select **Session details**.
+   > [!NOTE]
+   >
+   > - To find your tenant ID from the [Power Automate portal](https://make.powerautomate.com/), see [Allowlist tenants for registration and connect with sign-in connections](/power-automate/desktop-flows/how-to/allowlist-tenant-for-connect-with-sign-in-and-registration).
+   > - To find your tenant ID from the [Power Apps portal](https://make.powerapps.com/), go to **Settings** and select **Session details**.
 
 If setting up the tenant allowlist isn't possible for some reasons, see the following sections on how to [allow registration to a tenant other than the machine joined Microsoft Entra tenant](#allow-machine-registration-to-a-tenant-other-than-the-machine-joined-microsoft-entra-tenant) or [allow switching to another tenant](#allow-switching-machine-registration-to-another-tenant).
 

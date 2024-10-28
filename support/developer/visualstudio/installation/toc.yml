@@ -36,8 +36,6 @@
   href: ./invalid-entries-passed-switch.md
 - name: Issues and workarounds in Visual Studio setup
   href: ./issues-workarounds-visual-studio-setup.md
-- name: Known issues for Visual Studio 2012 and updates
-  href: ./known-issues-visual-studio-2012-update.md
 - name: Known issues when you install Release Management
   href: ./release-management-installation-issues.md
 - name: MsiApplyMultiplePatches returns 1601 error
