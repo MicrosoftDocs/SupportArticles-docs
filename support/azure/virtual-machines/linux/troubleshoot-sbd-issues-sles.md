@@ -119,7 +119,7 @@ The Pacemaker service is not running, and the SBD service is in a failed state o
 ### Resolution
 
 1. Make sure that the setup is correctly configured as documented in [SUSE - set up Pacemaker on SUSE Linux Enterprise Server in Azure ](/azure/sap/workloads/high-availability-guide-suse-pacemaker).
-2. Place the cluster in maintenance-mode.
+2. Place the cluster into maintenance mode.
    ```bash
    sudo crm configure property maintenance-mode=true
    ```
@@ -154,7 +154,7 @@ The Pacemaker service is not running, and the SBD service is in a failed state o
    Aug 01 04:18:51 nfs-0 iscsiadm[1823]: Logging in to [iface: default, target: iqn.2006-04.nfs.local:nfs, portal: 10.0.0.19,3260]
    Aug 01 04:18:51 nfs-0 systemd[1]: Started Login and scanning of iSCSI devices.
    ```
-5. Remove the cluster out of maintenance-mode.
+5. Remove the cluster out of maintenance mode.
    ```bash
    sudo crm configure property maintenance-mode=false
    ```
