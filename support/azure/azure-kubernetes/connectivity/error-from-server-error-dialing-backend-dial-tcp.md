@@ -14,8 +14,7 @@ ms.custom: sap:Connectivity
 
 You receive an "Error from server: error dialing backend: dial tcp" error message when you take one of the following actions:
 
-- Use any of the `kubectl` `logs`, `exec`, `attach`, `top`, `port-forward`
-  command.
+- Use any of the `kubectl` `logs`, `exec`, `attach`, `top`, `port-forward` command.
 - Using thrird-party Kubernetes client tools to do the equivalent of above.
 
 ### What does it mean
