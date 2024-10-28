@@ -215,8 +215,6 @@ The following categories of rules are currently supported:
 
 ### Known issues
 
-- RHEL 8 does not have Python installed by default. To run PerfInsights Linux, you must first install Python 3.6 or a later version.
-
 - Guest Agent information collection may fail on CentOS 6.x.
 
 - PCI devices information is not collected on Debian based distributions.
