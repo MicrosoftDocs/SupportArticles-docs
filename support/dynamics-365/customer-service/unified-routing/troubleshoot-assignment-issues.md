@@ -4,7 +4,7 @@ description: Provides resolutions for various assignment scenarios.
 ms.reviewer: nenellim
 ms.author: ssugandha
 ms.date: 10/28/2024
-ms.custom: sap:
+ms.custom: 
 ---
 
 # Troubleshoot assignment issues
