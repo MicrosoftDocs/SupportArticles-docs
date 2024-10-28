@@ -1,7 +1,7 @@
 ---
 title: ContainerGroupQuotaReached error when deploying Spot containers
 description: Provides solutions to the ContainerGroupQuotaReached error that occurs when you deploy a Spot container to Azure Container Instances.
-ms.date: 10/16/2024
+ms.date: 10/28/2024
 ms.reviewer: chiragpa, v-weizhu
 ms.service: azure-container-instances
 ms.custom: sap:Configuration and Setup
@@ -28,7 +28,7 @@ az container create -g MyResourceGroup --name myapp --image myimage:latest --pri
 
 ## Cause
 
-This issue occurs because the container group default quota exceeds over your Azure subscription. The default quotas are bound by Azure subscription type. The following table shows the default Spot quota for different subscription types:
+This issue occurs because the container group default quota exceeds your Azure subscription. The default quotas are bound by Azure subscription type. The following table shows the default Spot quota for different subscription types:
 
 |Subscription type|	StandardSpotCores limit|
 |---|---|
@@ -40,7 +40,7 @@ To check the subscription type of your billing account, see [Check the type of y
 
 ## Solution
 
-To resolve this issue, increase the StandardSpotCores limit. To do so, use either of the following methods:
+To resolve this issue, increase the StandardSpotCores limit. To do so, use one of the following methods:
 
 - Change the subscription type to Default to get 10 StandardSpotCores limit.
 - [Change the subscription type to Enterprise Agreement](/azure/cost-management-billing/manage/mosp-ea-transfer) to get 100 StandardSpotCores limits.
