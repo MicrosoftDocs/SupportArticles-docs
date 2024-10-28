@@ -23,7 +23,7 @@ Agents might not be meeting the assignment criteria. Automated assignment consid
 
 Review the following settings:
 
-= If you are using out-of-the-box assignment methods like highest capacity or advanced round robin, check the work distribution settings in the workstream. Verify that the service representative’s presence matches the allowed presences in the work distribution settings.
+If you are using out-of-the-box assignment methods like highest capacity or advanced round robin, check the work distribution settings in the workstream. Verify that the service representative’s presence matches the allowed presences in the work distribution settings.
 
 - Confirm the agent’s available capacity in [Agent details drill–down](/dynamics365/customer-service/use/realtime-agents-analytics#agent-details-drill-down) in the real-time analytics dashboard available to supervisors.
 
