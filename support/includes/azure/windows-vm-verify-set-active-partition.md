@@ -13,7 +13,7 @@ ms.date: 10/28/2024
 
 3. Open **Computer management** > **Disk management**. Make sure that the disk is flagged as **Online** in the Disk Management console. Note the drive letter that is assigned to the attached system disk.
 
-    :::image type="content" source="media/windows-vm-verify-set-active-partition/disk-attached-to-rescue-vm-in-disk-management.png" alt-text="Screenshot that shows the error message" lightbox="media/windows-vm-verify-set-active-partition/disk-attached-to-rescue-vm-in-disk-management.png":::
+    :::image type="content" source="media/windows-vm-verify-set-active-partition/disk-attached-to-rescue-vm-in-disk-management.png" alt-text="Screenshot that shows the disk attached to the recovery VM." lightbox="media/windows-vm-verify-set-active-partition/disk-attached-to-rescue-vm-in-disk-management.png":::
 
 4. Identify the Boot partition and Windows partition. If there's only one partition on the OS disk, this partition is both Boot partition and Windows partition.
 
