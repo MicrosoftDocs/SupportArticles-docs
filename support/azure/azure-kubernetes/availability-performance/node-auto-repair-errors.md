@@ -16,9 +16,9 @@ When Azure Kubernetes Service (AKS) detects a node with a `NotReady` status for 
 
 During the node auto-repair process, AKS initiates `reboot`, `reimage`, and `redeploy` actions on your unhealthy node. Errors can occur due to various reasons and error codes are discovered through [Kubernetes events](/azure/aks/events). You can use Kubernetes events to monitor the status of your node and the auto-repair actions.
 
-## Kubernetes events
+## Prerequisites
 
-To identify the type of a node auto-repair error, check the following Kubernetes events:
+Check the following Kubernetes events to identify the type of a node auto-repair error:
  
 | Reason | Event message | Description |
 | --- | --- | --- |
