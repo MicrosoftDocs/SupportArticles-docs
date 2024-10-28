@@ -295,6 +295,8 @@
       href: ./teams-on-linux/linux-known-issues.md
   - name: Teams on Mac
     items:
+    - name: Audio issues when using Teams on macOS
+      href: ./teams-on-mac/teams-audio-issue-mac.md
     - name: Incorrect presence status in Teams for Mac
       href: ./teams-on-mac/incorrect-presence-status-teams-for-mac.md  
   - name: Teams on Windows
