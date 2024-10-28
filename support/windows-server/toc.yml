@@ -1050,9 +1050,7 @@ items:
   - name: Sysvol access or replication issues
     items:
     - name: DFSR SYSVOL fails to migrate or replicate
-      href: ./group-policy/dfsr-sysvol-fails-migrate-replicate.md
-    - name: Errors when you run GPMC
-      href: ./group-policy/fail-to-run-gpmc.md
+      href: ./group-policy/dfsr-sysvol-fails-migrate-replicate.md    
     - name: How to force synchronization for DFSR-replicated sysvol replication
       href: ./group-policy/force-authoritative-non-authoritative-synchronization.md
     - name: Minimize SYSVOL size by removing administrative templates
@@ -1461,6 +1459,8 @@ items:
       href: ./networking/troubleshoot-dhcp-guidance.md
     - name: Can't add a DHCP reservation
       href: ./networking/cant-add-dhcp-reservation.md
+    - name: Client machines don't send DDNS updates
+      href: ./networking/client-ddns-updates-dhcp-option-81.md
     - name: DHCP client can't get a DHCP-assigned IP address
       href: ./networking/dhcp-client-fail-obtain-valid-ip-address.md
     - name: DHCP server is slow or fails to respond to DHCP requests
