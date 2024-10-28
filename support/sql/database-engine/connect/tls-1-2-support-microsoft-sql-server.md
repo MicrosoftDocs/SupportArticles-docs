@@ -69,7 +69,7 @@ The following table summarizes support for SQL Server drivers and providers:
 |SQL Server Native Client 10                              |Yes, with updates   | Install the latest cumulative update for SQL Server 2008 or SQL Server 2008 R2. (See the table in the [How to know whether you need this update](#how-to-know-whether-you-need-this-update) section.)   |
 |SQL Server Native Client 11                              |Yes, with updates   | Install the latest cumulative update for SQL Server 2012 or SQL Server 2014. (See the table in the [How to know whether you need this update](#how-to-know-whether-you-need-this-update) section.)     |
 |SQL Server ODBC Driver (SQLSRV32.DLL)                    |Yes, for certain OSs| Added support in Windows Server 2019 and Windows 10. Earlier OS versions don't support it.  |
-|SQL Server OLE DB Provider (SQLOLEDB)                    |No                | Switch to OLEDB driver to get TLS 1.2 support.                                     |
+|SQL Server OLE DB Provider (SQLOLEDB)                    |Yes, for certain OSs| Added support in Windows Server 2019 and Windows 10. Earlier OS versions don't support it.|
 
 ## Additional fixes needed for SQL Server to use TLS 1.2
 
