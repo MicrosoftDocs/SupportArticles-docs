@@ -248,7 +248,7 @@ With the Java agent you can try to:
 * Try this experimental feature: [Startup time improvement for a limited number of CPU cores](https://github.com/microsoft/ApplicationInsights-Java/wiki/Start-up-time-improvement-with-a-limited-number-of-CPU-cores-(experimental)). If you experience any issues while using this feature, send us feedback.
 
 You can also try other monitoring solutions:
-* With Spring Boot, the Microsoft distribution of the OpenTelemetry starter. See the [Java native documentation](/azure/azure-monitor/app/opentelemetry-enable?tabs=java-native), also applicable to a JVM-based application.
+* With Spring Boot, the Microsoft distribution of the OpenTelemetry Spring Boot starter. See the [Java native documentation](/azure/azure-monitor/app/opentelemetry-enable?tabs=java-native), also applicable to a JVM-based application.
 * With Quarkus, the Quarkus Opentelemetry Exporter for Microsoft Azure. See the [Java native documentation](/azure/azure-monitor/app/opentelemetry-enable?tabs=java-native), also applicable to a JVM-based application.
 
 [!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
