@@ -21,7 +21,7 @@ You receive an "Error from server: error dialing backend: dial tcp" error messag
 
 The Kubernetes API server has to forward API requests to an upstream component for several use cases. This error occurs if the API server can't establish a TCP connection to the upstream component. Example of such upstream components include kubernetes services that are inside the cluster and kubelet.
 
-If the issue persists, a network blockage is likely the cause. To identify the responsible network configuration, first determine the scope of the problem:
+If the issue persists, a network blockage is likely the cause. To identify the responsible network configuration, first determine the scope of the problem.
 
 ### Narrowing down: Are all `kubectl` sub-commands failing?
 
