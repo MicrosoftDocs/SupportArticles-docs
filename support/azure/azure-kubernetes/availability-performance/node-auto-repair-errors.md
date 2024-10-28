@@ -8,13 +8,11 @@ ms.custom: sap:Node/node pool availability and performance
 ---
 # Troubleshoot common node auto-repair errors
 
-This article provides potential causes and solutions to common node auto-repair errors, and outlines best practices for monitoring the node auto-repair process.
-
-## Overview
-
 When Azure Kubernetes Service (AKS) detects a node with a `NotReady` status for more than five minutes, it attempts to automatically repair the node. Node auto-repair is a best-effort service. It doesn't guarantee that the node can be restored to a healthy state. For more information, see [node auto-repair process](/azure/aks/node-auto-repair).
 
 During the node auto-repair process, AKS initiates `reboot`, `reimage`, and `redeploy` actions on your unhealthy node. Errors can occur due to various reasons and error codes are discovered through [Kubernetes events](/azure/aks/events). You can use Kubernetes events to monitor the status of your node and the auto-repair actions.
+
+This article provides potential causes and solutions to common node auto-repair errors, and outlines best practices for monitoring the node auto-repair process.
 
 ## Prerequisites
 
