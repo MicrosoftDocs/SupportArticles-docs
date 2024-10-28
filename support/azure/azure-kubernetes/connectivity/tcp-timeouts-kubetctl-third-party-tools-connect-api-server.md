@@ -1,8 +1,8 @@
 ---
 title: TCP time-outs when kubectl, other 3rd-party tools connect to API
 description: Troubleshoot TCP time-outs that occur when kubectl or other third-party tools connect to the API server in Azure Kubernetes Service (AKS).
-ms.date: 10/25/2024
-ms.reviewer: chiragpa, nickoman, v-leedennis
+ms.date: 10/28/2024
+ms.reviewer: chiragpa, nickoman, jaewonpark, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot TCP connection time-outs that occur when kubectl or other third-party tools connect to the API server so that my Azure Kubernetes Service (AKS) cluster operates successfully.
@@ -25,7 +25,7 @@ If only a few of your API commands are timing out consistently, the following po
 - `aks-link`
 
 > [!NOTE]
-> In newer AKS versions, `tunnelfront` and `aks-link` are replaced with `konnectivity-agent`, so you will see `konnectivity-agent` only.
+> In newer AKS versions, `tunnelfront` and `aks-link` are replaced with `konnectivity-agent`, so you'll only see `konnectivity-agent`.
 
 These pods are responsible for communication between a node and the control plane.
 
@@ -33,10 +33,10 @@ These pods are responsible for communication between a node and the control plan
 
 Make sure the nodes that host these pods aren't overly utilized or under stress. Consider moving the nodes to their own [system node pool](/azure/aks/use-system-pools).
 
-To check which node the `konnectivity-agent` pod is hosted in and the usage of the node, run the following commands:
+To check which node the `konnectivity-agent` pod is hosted on and the usage of the node, run the following commands:
 
 ```bash
-# Check which node the konnectivity-agent pod is hosted in
+# Check which node the konnectivity-agent pod is hosted on
 $ kubectl get pod -n kube-system -o wide
     
 # Check the usage of the node hosting the pod
@@ -98,13 +98,13 @@ See [Troubleshoot TCP timeouts, such as "dial tcp <Node_IP>:10250: i/o timeout"]
 
 ## Cause 8: Your cluster is private
 
-Your cluster is a private cluster, but the client you're trying to access to the API server is in the public or different network which can't connect to the subnet used by AKS.
+Your cluster is a private cluster, but the client from which you're trying to access the API server is in a public or different network that can't connect to the subnet used by AKS.
 
-### Solution: Use a client that can access to the AKS subnet
+### Solution: Use a client that can access the AKS subnet
 
-Since your cluster is a private cluster and the control plane for it is in the AKS subnet, unless your client is in the network which can connect to the AKS subnet, it can't be connected to the API server. It is an expected behavior.
+Since your cluster is private and its control plane is in the AKS subnet, it can't be connected to the API server unless it's in a network that can connect to the AKS subnet. It's an expected behavior.
 
-In this case, try to access to the API server from a client on a network that can communicate with the AKS subnet. Additionally, verify whether NSG or other appliances between networks are blocking packets.
+In this case, try to access the API server from a client in a network that can communicate with the AKS subnet. Additionally, verify network security groups (NSGs) or other appliances between networks aren't blocking packets.
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
