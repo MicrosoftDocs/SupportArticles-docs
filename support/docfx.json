@@ -54,6 +54,7 @@
     "fileMetadata": {
       "uhfHeaderId": {
         "azure/**.*": "Azure",
+        "entra/**.*": "MSDocsHeader-Entra",
         "developer/dotnet/**.*": "MSDocsHeader-DotNet",
         "developer/host-integration-server/**.*": "MSDocsHeader-His",
         "developer/visualstudio/**.*": "MSDocsHeader-VisualStudio",
@@ -135,6 +136,7 @@
       "author": {
         "**/*.md": "ChristySu",
         "azure/**/*.md": "genlin",
+        "entra/**/*.md": "genlin",
         "azure/devops/**/*.md": "HaiyingYu",
         "azure/azure-functions/**/*.md": "haiyingyu",
         "azure/synapse-analytics/**/*.md": "HaiyingYu",
@@ -162,6 +164,7 @@
       "ms.author": {
         "**/*.md": "christys",
         "azure/**/*.md": "genli",
+        "entra/**/*.md": "genli",
         "azure/devops/**/*.md": "haiyingyu",
         "azure/azure-functions/**/*.md": "haiyingyu",
         "azure/synapse-analytics/**/*.md": "haiyingyu",
@@ -268,7 +271,7 @@
         "azure/**/*.md": "Azure",
         "azure/cloud-services/**/*.md": "Cloud Services",
         "azure/virtual-machines/**/*.md": "Virtual Machines",
-        "azure/entra/entra-id/*.md": "Microsoft Entra ID",
+        "entra/entra-id/*.md": "Microsoft Entra ID",
         "azure/devops/*.md": "Azure DevOps",
         "azure/synapse-analytics/**/*.md": "Azure Synapse Analytics",
         "azure/cosmos-db/**/*.md": "Azure Cosmos DB",
@@ -345,6 +348,10 @@
         "azure/**/*.md": [
           "Troubleshoot",
           "Azure"
+        ],
+        "entra/**/*.md": [
+          "Troubleshoot",
+          "Entra"
         ],
         "mem/intune/**/*.md": [
           "Troubleshoot",
