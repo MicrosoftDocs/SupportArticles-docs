@@ -63,6 +63,11 @@ productDirectory:
     summary: Troubleshooting articles for Microsoft Copilot for Sales
     url: sales-copilot/welcome-sales-copilot.yml
 
+  - title: Microsoft Entra
+    imageSrc: "media/hub-landing/microsoft-entra.svg"
+    summary: Troubleshooting articles for Microsoft Entra
+    url: entra/welcome-entra.yml
+
   - title: Microsoft Dynamics GP
     imageSrc: "media/hub-landing/microsoft.png"
     summary: Troubleshooting articles for Microsoft Dynamics GP
