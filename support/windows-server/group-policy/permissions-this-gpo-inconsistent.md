@@ -42,6 +42,8 @@ If you still receive the message, check whether permissions are set for the **Au
 
 :::image type="content" source="media/permissions-this-gpo-inconsistent/authenticated-users-permissions.png" alt-text="Authenticated Users permissions." border="true":::
 
+Advanced permissions:
+
 :::image type="content" source="media/permissions-this-gpo-inconsistent/authenticated-users-has-a-list-object-access.png" alt-text="Authenticated Users has a List Object access." border="true":::
 
 > [!NOTE]
