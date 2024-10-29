@@ -10,14 +10,10 @@ ms.custom: sap:Clustering and High Availability\Errors when running the Validati
 ---
 # Validate hardware for a failover cluster
 
-This article helps validate hardware for a failover cluster.
-
-You can use the Validate a Configuration Wizard, which is integrated in Failover Cluster Manager, or the [Test-Cluster](/powershell/module/failoverclusters/test-cluster) Windows PowerShell cmdlet, to run a set of focused validation tests. You can run this process on a collection of servers that you intend to use as nodes in a cluster. This tests the underlying hardware and software, directly and individually, to obtain an accurate assessment of how well Failover Clustering can be supported in a given configuration.
+This article provides steps to validate the hardware for a failover cluster. You can use the Validate a Configuration Wizard, which is integrated in Failover Cluster Manager, or the [Test-Cluster](/powershell/module/failoverclusters/test-cluster) Windows PowerShell cmdlet, to run a set of focused validation tests. You can run this process on a collection of servers that you intend to use as nodes in a cluster. This tests the underlying hardware and software, directly and individually, to obtain an accurate assessment of how well Failover Clustering can be supported in a given configuration.
 
 > [!IMPORTANT]
 > A cluster validation report is required by Microsoft as a condition of Microsoft support for a given configuration.
-
-This article provides steps to validate the hardware for a failover cluster.
 
 |Task  |Description  |
 |---------|---------|
