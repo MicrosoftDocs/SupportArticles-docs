@@ -138,7 +138,7 @@ This step provides procedures for running the Validate a Configuration Wizard or
 
 1. Identify the server or servers that you want to test.
 
-    - If the cluster doesn't yet exist, choose the servers that you want to include in the cluster, and make sure that you have installed the Failover Clustering feature on those servers. If the feature isn't installed, see the [installation instructions](https://techcommunity.microsoft.com/t5/failover-clustering/installing-the).
+    - If the cluster doesn't yet exist, choose the servers that you want to include in the cluster, and make sure that you have installed the Failover Clustering feature on those servers. If the feature isn't installed, see the [installation instructions](https://techcommunity.microsoft.com/t5/failover-clustering/installing-the-failover-cluster-feature-and-tools-in-windows/ba-p/371733).
     - If the cluster already exists, make sure that you know the name of the cluster or a node in the cluster.
 
 2. Review the cluster requirements for the hardware for the network or the storage that you want to validate, and confirm that it's connected to the servers.
