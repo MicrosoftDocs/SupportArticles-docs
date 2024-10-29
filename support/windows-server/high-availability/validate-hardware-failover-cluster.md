@@ -1,6 +1,6 @@
 ---
 title: Validate hardware for a failover cluster
-description: 
+description: Helps validate hardware for a failover cluster.
 ms.date: 10/25/2024
 manager: dcscontentpm
 audience: itpro
@@ -9,6 +9,8 @@ ms.reviewer: kaushika, v-lianna
 ms.custom: sap:Clustering and High Availability\Errors when running the Validation Wizard, csstroubleshoot
 ---
 # Validate hardware for a failover cluster
+
+This article helps validate hardware for a failover cluster.
 
 You can use the Validate a Configuration Wizard, which is integrated in Failover Cluster Manager, or the [Test-Cluster](/powershell/module/failoverclusters/test-cluster) Windows PowerShell cmdlet, to run a set of focused validation tests. You can run this process on a collection of servers that you intend to use as nodes in a cluster. This tests the underlying hardware and software, directly and individually, to obtain an accurate assessment of how well Failover Clustering can be supported in a given configuration.
 
@@ -179,10 +181,10 @@ After the Validate a Configuration Wizard has completed, the Failover Cluster Va
 
 |Symbol  |Explanation  |
 |---------|---------|
-|:::image type="icon" source="media/validate-hardware-failover-cluster/validation-test-passed.png" border="false":::     |The corresponding validation test passed, indicating that this aspect of the cluster can be supported.         |
-|:::image type="icon" source="media/validate-hardware-failover-cluster/validation-test-warning.png border="false":::    |The corresponding validation test produced a warning, indicating that this aspect of the cluster can be supported, but it might not meet the recommended best practices, and it should be reviewed. Microsoft customer support might ask you to investigate or address the issue if it appears to be directly linked to something that you are troubleshooting.         |
-|:::image type="icon" source="media/validate-hardware-failover-cluster/validation-test-failed.png border="false":::    |The corresponding validation test failed, and this aspect of the cluster is not supported. You must correct the issue before you can create a failover cluster that is supported.         |
-|:::image type="icon" source="media/validate-hardware-failover-cluster/validation-test-canceled.png border="false":::    |The corresponding validation test was canceled. This can occur when the test depended on another test that did not complete successfully.         |
+|:::image type="icon" source="./media/validate-hardware-failover-cluster/validation-test-passed.png" border="false":::     |The corresponding validation test passed, indicating that this aspect of the cluster can be supported.         |
+|:::image type="icon" source="./media/validate-hardware-failover-cluster/validation-test-warning.png border="false":::    |The corresponding validation test produced a warning, indicating that this aspect of the cluster can be supported, but it might not meet the recommended best practices, and it should be reviewed. Microsoft customer support might ask you to investigate or address the issue if it appears to be directly linked to something that you are troubleshooting.         |
+|:::image type="icon" source="./media/validate-hardware-failover-cluster/validation-test-failed.png border="false":::    |The corresponding validation test failed, and this aspect of the cluster is not supported. You must correct the issue before you can create a failover cluster that is supported.         |
+|:::image type="icon" source="./media/validate-hardware-failover-cluster/validation-test-canceled.png border="false":::    |The corresponding validation test was canceled. This can occur when the test depended on another test that did not complete successfully.         |
 
 When you look for problem areas (warning or failures), in the test results summary, click an individual test to review the details. Also review the summary statement for information about whether the cluster is a supported configuration.
 
