@@ -6,7 +6,7 @@ ms.date: 10/23/2024
 ms.author: quentinsele 
 author: quentinsele
 ---
-# Connection failed: Could not read the application certificate. 
+# Connection using CyberArk failed: Could not read the application certificate. 
 This article provides a solution to the error “could not read the application certificate error” that occurs when you create a connection with a CyberArk credential in Power Automate.
 
 ## Symptoms
