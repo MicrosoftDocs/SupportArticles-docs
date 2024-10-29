@@ -50,19 +50,19 @@ For Microsoft Customer Service and Support to officially support a failover clus
 
   - **Certified Windows Server 2012 R2 Systems**
 
-    The Certified for Windows Server 2012 R2 logo demonstrates that a server system meets Microsoft’s highest technical bar for security, reliability and manageability; and with other certified devices and drivers, it can support the roles, features and interfaces for Cloud and Enterprise workloads, as well as business critical applications.
+    The Certified for Windows Server 2012 R2 logo demonstrates that a server system meets Microsoft's highest technical bar for security, reliability and manageability; and with other certified devices and drivers, it can support the roles, features and interfaces for Cloud and Enterprise workloads, as well as business critical applications.
 
   - **Certified Windows Server 2012 R2 Devices**
 
-    The Certified for Windows Server 2012 R2 logo demonstrates that a server system meets Microsoft’s highest technical bar for security, reliability and manageability; and with other certified devices and drivers, it can support the roles, features and interfaces for Cloud and Enterprise workloads, as well as business critical applications.
+    The Certified for Windows Server 2012 R2 logo demonstrates that a server system meets Microsoft's highest technical bar for security, reliability and manageability; and with other certified devices and drivers, it can support the roles, features and interfaces for Cloud and Enterprise workloads, as well as business critical applications.
 
   - **Certified for Windows Server 2012 Devices**
 
-    Designed for line-of-business and mission-critical applications, the Certified for Windows Server 2012 logo demonstrates that your solution meets Microsoft’s highest technical bar for Windows fundamentals and platform compatibility.
+    Designed for line-of-business and mission-critical applications, the Certified for Windows Server 2012 logo demonstrates that your solution meets Microsoft's highest technical bar for Windows fundamentals and platform compatibility.
 
   - **Certified Windows Server 2012 Systems**
 
-    Designed for cloud and infrastructure workloads, as well as business critical applications, the Microsoft Certified for Windows Server 2012 logo demonstrates that a server system meets Microsoft’s highest technical bar for security, reliability, and manageability, and with any required hardware components, can support all the roles, features, and interfaces that are supported by Windows Server 2012.
+    Designed for cloud and infrastructure workloads, as well as business critical applications, the Microsoft Certified for Windows Server 2012 logo demonstrates that a server system meets Microsoft's highest technical bar for security, reliability, and manageability, and with any required hardware components, can support all the roles, features, and interfaces that are supported by Windows Server 2012.
 
 - The fully configured system (servers, network, and storage) must pass all the required tests in the Validate a Configuration Wizard, which you can run from Failover Cluster Manager. Alternatively, you can run the validation tests using the [Test-Cluster](/powershell/module/failoverclusters/test-cluster) Windows PowerShell cmdlet.
 
@@ -121,7 +121,7 @@ The following table lists the categories of validation tests. The tests in each 
 |Category  |Description  |
 |---------|---------|
 |Cluster configuration     |Lists and validates the resources that are configured for use in a cluster, including clustered roles and cluster volumes.         |
-|Hyper-V configuration     |Validates the Hyper-V configuration for use in a failover cluster. <br>Note: Hyper-V configuration tests are only required if you use or plan to use clustered virtual machines.         |
+|Hyper-V configuration     |Validates the Hyper-V configuration for use in a failover cluster. </br></br>Note: Hyper-V configuration tests are only required if you use or plan to use clustered virtual machines.         |
 |Inventory     |Lists host bus adapters (HBAs), devices, processes, and drivers that are in use on the computers in the cluster.         |
 |Network     |Validates the configuration of the cluster networks, IP addresses, and Windows Firewall.         |
 |Storage     |Validates storage disks and file systems that are available for use in a failover cluster.         |
@@ -149,7 +149,7 @@ This step provides procedures for running the Validate a Configuration Wizard or
     |---------|---------|
     |New or planned cluster with all hardware connected     |All tests         |
     |New or planned cluster with parts of the hardware connected     |System Configuration tests, Inventory tests, and tests that apply to the hardware that is connected (that is, network tests if the network is connected or storage tests if the storage is connected)         |
-    |Existing cluster to which you plan to add a server     |All tests <br>Note: Before you run the tests, be sure to connect the networks and storage for all servers that you plan to have in the cluster.         |
+    |Existing cluster to which you plan to add a server     |All tests </br></br>Note: Before you run the tests, be sure to connect the networks and storage for all servers that you plan to have in the cluster.         |
     |Troubleshooting an existing cluster     |All tests, although you could run only the tests that relate to the apparent issue.         |
 
     > [!IMPORTANT]
@@ -315,7 +315,7 @@ When you perform cluster validation tests on a configured cluster, you might not
 
 The Validate a Configuration Wizard runs all storage tests by default. All or some of the storage tests can be unselected by choosing the **Run only tests I select** option on the **Testing Options** page of the wizard. When storage tests are included, the **Review Storage Status** page of the wizard shows all of the disks and storage pools in the cluster and allows you to select the disks and storage pools to include in the storage tests. Storage tests require that a disk or storage pool that is assigned to a clustered role or Cluster Shared Volume be taken offline first. Therefore, anything using the storage will not have access to it during the storage tests. We recommend that any clustered role or other process that may be using the disk or storage pool is taken offline before the storage is included in the storage validation tests.
 
-The [Test-Cluster](/powershell/module/failoverclusters/test-cluster)Windows PowerShell cmdlet runs all storage tests by default. You can specify the **–Include** parameter to only run storage tests or to run a specific storage test. You can use the **–Disk** and **-Pool** parameters to enable targeted storage validation. The **–Disk** parameter or the **–Pool** parameter allows specifying, respectively, one or more disks or one or more storage pools to include in the storage validation testing. If the **–Disk** parameter or the **–Pool** parameter is used to specify a disk or storage pool that is currently online and is assigned to a clustered role or Cluster Shared Volume, you must also specify the **–Force** parameter to validate the corresponding disk or storage pool; otherwise, you must ensure that the clustered disk or storage pool is offline before running the tests. If the **–Disk** parameter or the **–Pool** parameter is not specified, **Test-Cluster** runs storage tests on all disks and storage pools that are available for cluster use or that are in the cluster resource offline or failed state. We recommend that any clustered role or other process that may be using the disk or storage pool is taken offline before the storage is included in the validation testing.
+The [Test-Cluster](/powershell/module/failoverclusters/test-cluster)Windows PowerShell cmdlet runs all storage tests by default. You can specify the **-Include** parameter to only run storage tests or to run a specific storage test. You can use the **-Disk** and **-Pool** parameters to enable targeted storage validation. The **-Disk** parameter or the **-Pool** parameter allows specifying, respectively, one or more disks or one or more storage pools to include in the storage validation testing. If the **-Disk** parameter or the **-Pool** parameter is used to specify a disk or storage pool that is currently online and is assigned to a clustered role or Cluster Shared Volume, you must also specify the **-Force** parameter to validate the corresponding disk or storage pool; otherwise, you must ensure that the clustered disk or storage pool is offline before running the tests. If the **-Disk** parameter or the **-Pool** parameter is not specified, **Test-Cluster** runs storage tests on all disks and storage pools that are available for cluster use or that are in the cluster resource offline or failed state. We recommend that any clustered role or other process that may be using the disk or storage pool is taken offline before the storage is included in the validation testing.
 
 **Storage that is not directly connected to all nodes in the cluster**
 
