@@ -1,5 +1,5 @@
 ---
-title: Connection failed with "Could not read the application certificate".
+title: Connection using CyberArk credentials failed with "Could not read the application certificate".
 description: Provides troubleshooting steps for error code that occurs during the creation a connection with CyberArk credential in Microsoft Power Automate.
 ms.custom: sap:Desktop flows\Power Automate for desktop errors
 ms.date: 10/23/2024
