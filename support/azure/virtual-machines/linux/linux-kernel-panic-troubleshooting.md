@@ -53,6 +53,7 @@ Some of the most common kernel panic events:
 | **Kernel panic - not syncing: nmi watchdog** | The system received an NMI, and either kernel.panic_on_timeout or kernel.panic_on_oops was set (not the default values). |
 | **Kernel panic - not syncing: Fatal Machine check** | A machine check exception event has been raised for a fatal condition. |
 | **Kernel panic - not syncing: Attempted to kill init!** | The init process is the first process to be started and should never exit. |
+| **Kernel Panic -  Not Syncing: VFS: Unable To Mount Root FS On Unknown-Block (0,0)** | Assumed that the kernel will use an initramfs to mount the rootfs. This is the behavior it falls back to when it has no initramfs. |
 
 ## Scenario 1: Kernel panic occurs at boot time
 
