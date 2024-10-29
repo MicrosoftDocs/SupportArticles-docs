@@ -179,10 +179,10 @@ After the Validate a Configuration Wizard has completed, the Failover Cluster Va
 
 |Symbol  |Explanation  |
 |---------|---------|
-|Row1     |The corresponding validation test passed, indicating that this aspect of the cluster can be supported.         |
-|Row2     |The corresponding validation test produced a warning, indicating that this aspect of the cluster can be supported, but it might not meet the recommended best practices, and it should be reviewed. Microsoft customer support might ask you to investigate or address the issue if it appears to be directly linked to something that you are troubleshooting.         |
-|Row3     |The corresponding validation test failed, and this aspect of the cluster is not supported. You must correct the issue before you can create a failover cluster that is supported.         |
-|Row4     |The corresponding validation test was canceled. This can occur when the test depended on another test that did not complete successfully.         |
+|:::image type="icon" source="media/validate-hardware-failover-cluster/validation-test-passed.png" border="false":::     |The corresponding validation test passed, indicating that this aspect of the cluster can be supported.         |
+|:::image type="icon" source="media/validate-hardware-failover-cluster/validation-test-warning.png border="false":::    |The corresponding validation test produced a warning, indicating that this aspect of the cluster can be supported, but it might not meet the recommended best practices, and it should be reviewed. Microsoft customer support might ask you to investigate or address the issue if it appears to be directly linked to something that you are troubleshooting.         |
+|:::image type="icon" source="media/validate-hardware-failover-cluster/validation-test-failed.png border="false":::    |The corresponding validation test failed, and this aspect of the cluster is not supported. You must correct the issue before you can create a failover cluster that is supported.         |
+|:::image type="icon" source="media/validate-hardware-failover-cluster/validation-test-canceled.png border="false":::    |The corresponding validation test was canceled. This can occur when the test depended on another test that did not complete successfully.         |
 
 When you look for problem areas (warning or failures), in the test results summary, click an individual test to review the details. Also review the summary statement for information about whether the cluster is a supported configuration.
 
