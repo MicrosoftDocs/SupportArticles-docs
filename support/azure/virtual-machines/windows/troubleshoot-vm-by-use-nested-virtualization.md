@@ -11,9 +11,9 @@ ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.topic: article
-ms.date: 10/15/2024
+ms.date: 10/29/2024
 ms.author: glimoli
-ms.reviewer: v-weizhu, v-six, ekpathak, glimoli, kageorge
+ms.reviewer: v-weizhu, v-six, ekpathak, glimoli, kageorge, herensin
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # Troubleshoot a faulty Azure VM by using nested virtualization in Azure
@@ -22,7 +22,19 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 
 This article shows how to create a nested virtualization environment in Microsoft Azure, so you can mount the disk of the faulty VM on the Hyper-V host (Rescue VM) for troubleshooting purposes.
 
-## Step 1: Create a Rescue VM and install Hyper-V role
+## Automatic process
+
+> [!NOTE]
+> This automatic process applies to both managed and umanaged disks.
+
+You can create a Hyper-V rescue VM and repair the faulty VM offline automatically by using Azure VM repair commands described in [Repair a Windows VM by using the Azure Virtual Machine repair commands](repair-windows-vm-using-azure-virtual-machine-repair-commands.md).
+
+## Manual process
+
+> [!NOTE]
+> This manual process applies to only umanaged disks.
+
+### Step 1: Create a rescue VM and install Hyper-V role
 
 1. Create a new Rescue VM:
 
@@ -117,7 +129,7 @@ This article shows how to create a nested virtualization environment in Microsof
 
 13. Allow the server to install the Hyper-V role. This takes a few minutes and the server will reboot automatically.
 
-## Step 2: Create the faulty VM on the Rescue VM's Hyper-V server
+### Step 2: Create the faulty VM on the Rescue VM's Hyper-V server
 
 1. [Create a snapshot disk](troubleshoot-recovery-disks-portal-windows.md#take-a-snapshot-of-the-os-disk) for the OS disk of the VM that has problem, and then attach the snapshot disk to the Rescue VM.
 
@@ -159,7 +171,7 @@ This article shows how to create a nested virtualization environment in Microsof
 
 17. Now you can work on the VM as the on-premises VM. You could follow any troubleshooting steps you need.
 
-## Step 3: Replace the OS disk used by the faulty VM
+### Step 3: Replace the OS disk used by the faulty VM
 
 1. After you get the VM back online, shut down the VM in the Hyper-V manager.
 
