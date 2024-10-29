@@ -303,6 +303,8 @@ items:
       href: ./networking/configure-domain-suffix-search-list-domain-name-system-clients.md
     - name: DNS requests appear to be random
       href: ./networking/dns-requests-random-network-properties-change.md
+    - name: Troubleshoot DNS dynamic update issues
+      href: ./networking/troubleshooting-dns-dynamic-update-issues.md
     - name: URI-encoding in UNC paths interpreted literally
       href: ./networking/url-encoding-unc-paths-not-url-decoded.md
   - name: Dynamic Host Configuration Protocol (DHCP)
@@ -859,6 +861,8 @@ items:
       href: ./shell-experience/x-app-titles-lower-right-corner.md
     - name: Black screen when unlocking a computer
       href: ./shell-experience/windows-7-black-screen-unlock-computer.md
+    - name: Blank icons on desktop, Start menu, and taskbar
+      href: ./shell-experience/application-shortcuts-show-blank-icons.md
     - name: Blank screen with no Start Menu
       href: ./shell-experience/windows-logon-process-failed-spawn-user-app.md
     - name: Fail to execute commands with RunOnce and RunOnceEx

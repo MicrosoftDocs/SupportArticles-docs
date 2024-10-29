@@ -67,3 +67,4 @@ If the device record doesn't exist in Microsoft Store for Business or Intune, yo
 
 > [!NOTE]
 > These files can be attached to the service request when you create the request.
+

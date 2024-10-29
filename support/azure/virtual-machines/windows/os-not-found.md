@@ -1,8 +1,8 @@
 ---
 title: Windows can't boot with (An operating system wasn't found) error 
 description: Provides a solution to an issue where Windows VM doesn't start with (An operating system wasn't found) error.
-ms.date: 07/12/2024
-ms.reviewer: 
+ms.date: 10/28/2024
+ms.reviewer: lbertolotti, v-weizhu
 ms.service: azure-virtual-machines
 ms.collection: windows
 ms.custom: sap:My VM is not booting
@@ -19,7 +19,10 @@ This article provides a solution to an issue where Windows VM doesn't start with
 
 Windows doesn't start, and it returns the following error message:
 
-> An operating system wasn't found. Try disconnecting any drivers that don't contain an operating system. Press Ctrl+Alt+Del to restart
+> An operating system wasn't found. Try disconnecting any drivers that don't contain an operating system.  
+> Press Ctrl+Alt+Del to restart
+
+ :::image type="content" source="media/os-not-found/error-message.png" alt-text="Screenshot that shows the error message" lightbox="media/os-not-found/error-message.png":::
 
 ## Cause
 
@@ -80,6 +83,7 @@ To fix this issue, stop (de-allocate) and restart the VM. Then, check whether th
     bcdedit /store <Boot partition>:\boot\bcd /set {<identifier>} bootstatuspolicy IgnoreAllFailures
     ```
 
-4. Detach the repaired OS disk from the troubleshooting VM. Then, create a VM from the OS disk.
+4. [Swap the failed VM's OS disk with the repaired disk](troubleshoot-recovery-disks-portal-windows.md#swap-the-failed-vms-os-disk-with-the-repaired-disk).
+5. Check whether the issue is resolved.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -1,7 +1,7 @@
 ---
 title: NodePoolMcVersionIncompatible - Node pool version 1.x and control plane version 1.y are incompatible
 description: This article discusses how to resolve a version incompatibility error that occurs when you upgrade a node pool in an Azure Kubernetes Service (AKS) cluster.
-ms.date: 04/06/2023
+ms.date: 10/23/2024
 editor: v-jsitser
 ms.reviewer: axelg, chiragpa, cssakscic, v-leedennis
 ms.service: azure-kubernetes-service

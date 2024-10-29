@@ -6,7 +6,7 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Containers\Management Of Containers , csstroubleshoot
+ms.custom: sap:Containers\Management Of Containers, csstroubleshoot
 ---
 # Support policy for Windows Server containers in on-premises scenarios
 
