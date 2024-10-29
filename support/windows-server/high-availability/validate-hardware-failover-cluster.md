@@ -33,7 +33,7 @@ This article provides steps to validate the hardware for a failover cluster.
 
 The Validate a Configuration Wizard or the [Test-Cluster](/powershell/module/failoverclusters/test-cluster) Windows PowerShell cmdlet enables you to run a set of focused tests on a collection of servers, networks, and associated storage that are planned for use as a failover cluster. The cluster validation process tests the underlying hardware and software to obtain an accurate assessment of how well Failover Clustering can be supported in a given configuration.
 
-Before you create a failover cluster, we strongly recommend that you run all the cluster validation tests.
+Before you create a failover cluster, we recommend that you run all the cluster validation tests.
 
 Cluster validation is intended to do the following:
 
@@ -46,7 +46,7 @@ Cluster validation is intended to do the following:
 
 For Microsoft Customer Service and Support to officially support a failover cluster in Windows Server 2012 R2 or Windows Server 2012, the cluster solution must meet the following criteria:
 
-- All hardware and software components must meet the qualifications for the appropriate logo. For Windows Server 2012 R2, this is the "Certified for Windows Server 2012 R2" logo. For Windows Server 2012, this is the "Certified for Windows Server 2012" logo. For more information, see [Logo Program Requirements and Policies](https://go.microsoft.com/fwlink/p/?linkid=111561) on the Microsoft website. The following are descriptions of the logos.
+- All hardware and software components must meet the qualifications for the appropriate logo. For Windows Server 2012 R2, this is the "Certified for Windows Server 2012 R2" logo. For Windows Server 2012, this is the "Certified for Windows Server 2012" logo. For more information, see [Windows Hardware Lab Kit](/windows-hardware/test/hlk/) on the Microsoft website. The following are descriptions of the logos.
 
   - **Certified Windows Server 2012 R2 Systems**
 
@@ -72,43 +72,43 @@ Microsoft support policies are also described in [Microsoft support policy for W
 
 The following lists describe scenarios in which hardware validation is required or is useful. In general, you need to run all the validation tests (some exceptions are noted).
 
-- **Validation before the cluster is configured**
+- Validation before the cluster is configured
 
-  - **A set of servers ready to become a failover cluster**
+  - A set of servers ready to become a failover cluster
 
     This is the most straightforward validation scenario. The hardware components (systems, networks, and storage) are connected, but the systems aren't functioning as a cluster. Running tests in this situation has no impact on availability.
 
-  - **Cloned or imaged systems**
+  - Cloned or imaged systems
 
     With systems that you have cloned or imaged to different hardware, you must run the Validate a Configuration Wizard as you would with any new cluster. We recommend that you run the wizard just after you connect the hardware components and install the Failover Clustering feature, before the cluster is used by clients.
 
-- **Virtualized servers**
+- Virtualized servers
 
   With virtualized servers in a cluster, run the Validate a Configuration Wizard as you would with any new cluster. The requirement for running the wizard is the same whether you have a "host cluster" (failover occurs between two physical computers), a "guest cluster" (failover occurs between guest operating systems on the same physical computer), or some other configuration that includes one or more virtualized servers.
 
-- **Validation when the cluster has only one node**
+- Validation when the cluster has only one node
 
   You might want to run a limited number of validation tests on a single server that you intend to use in a cluster. Some tests can't be run in this situation; for example, tests that confirm the software and software updates match between servers, and storage tests that simulate failover between nodes. You must have at least two nodes in a cluster before you can complete the cluster validation process. So if you bring more servers into the configuration, you must run the Cluster Validation Wizard again so that all the tests can be complete.
 
-- **Validation after the cluster is configured and in use**
+- Validation after the cluster is configured and in use
 
-  - **To confirm validation for Microsoft support, or to rule out configuration problems**
+  - To confirm validation for Microsoft support, or to rule out configuration problems
 
-    If you need support from Microsoft, you might be required to you provide the validation report from the wizard. If you have not already run the wizard and saved the report, you might need to take the cluster offline to run the wizard. The report shows whether your configuration is supported, and it can help Microsoft customer support troubleshoot configuration issues with hardware, drivers, and the basic system configuration.
+    If you need support from Microsoft, you might be required to provide the validation report from the wizard. If you have not already run the wizard and saved the report, you might need to take the cluster offline to run the wizard. The report shows whether your configuration is supported, and it can help Microsoft customer support troubleshoot configuration issues with hardware, drivers, and the basic system configuration.
 
-  - **Before adding a node**
+  - Before adding a node
 
-    When you add a server to a cluster, we strongly recommend that you start by connecting the server to the cluster networks and storage and then run the Validate a Configuration Wizard, specifying the existing cluster nodes and the new node.
+    When you add a server to a cluster, we recommend that you start by connecting the server to the cluster networks and storage and then run the Validate a Configuration Wizard, specifying the existing cluster nodes and the new node.
 
-  - **When attaching new storage**
+  - When attaching new storage
 
     When you attach new storage to the cluster (which is different than exposing a new logical unit number (LUN) in existing storage), you must run the Validate a Configuration Wizard to confirm that the new storage functions correctly. To minimize the impacts to availability, we recommend that you run the wizard after you attach the storage, and before you begin to use the new LUNs in clustered services or applications.
 
-  - **When making changes that affect firmware or drivers**
+  - When making changes that affect firmware or drivers
 
     If you want to upgrade or make other changes to the cluster that would require changing the firmware or drivers, you must run the Validate a Configuration Wizard to confirm that the new combination of hardware, firmware, drivers, and software supports your failover cluster functionality. If the change affects the firmware or drivers for storage, we recommend that you keep a small LUN available (unused by clustered roles) so that you can run the storage validation tests without taking your clustered roles offline.
 
-  - **After restoring a system from backup**
+  - After restoring a system from backup
 
     After you restore a system from backup, run the Validate a Configuration Wizard to confirm that the system can function properly as part of a cluster. The system isn't considered a supported system until the validation tests are completed.
 
@@ -139,7 +139,6 @@ This step provides procedures for running the Validate a Configuration Wizard or
 1. Identify the server or servers that you want to test.
 
     - If the cluster doesn't yet exist, choose the servers that you want to include in the cluster, and make sure that you have installed the Failover Clustering feature on those servers. If the feature isn't installed, see the [installation instructions](https://go.microsoft.com/fwlink/p/?linkid=253342).
-
     - If the cluster already exists, make sure that you know the name of the cluster or a node in the cluster.
 
 2. Review the cluster requirements for the hardware for the network or the storage that you want to validate, and confirm that it's connected to the servers.
@@ -155,7 +154,7 @@ This step provides procedures for running the Validate a Configuration Wizard or
     > [!IMPORTANT]
     > If a clustered role is using a disk when you start the wizard, the wizard will prompt you about whether to take that clustered role offline for the purposes of testing. If you choose to take a clustered role offline, it will remain offline until the tests finish.
 
-4. To open the wizard, in Failover Cluster Manager, under **Actions**, select **Validate Configuration**.
+4. To open the wizard, in Failover Cluster Manager, select **Validate Configuration** under **Actions**.
 5. Follow the instructions in the wizard to specify the servers (in a planned cluster) and the tests. For example, if you don't plan to use cluster features that require Hyper-V, you can omit the Hyper-V Configuration tests. The wizard then guides you to run the tests.
 
     > [!NOTE]
@@ -163,13 +162,13 @@ This step provides procedures for running the Validate a Configuration Wizard or
 
 6. The **Summary** page appears after the tests run. On the **Summary** page, select **View Report** to view the test results.
 
-    To view the results of the tests after you close the wizard, under **Actions** in Failover Cluster Manager, select **View Validation Report**. You can see %SystemRoot%\\Cluster\\Reports\\Validation Report *date and time***.html** where %SystemRoot% is the folder in which the operating system is installed (for example, C:\\Windows).
+    To view the results of the tests after you close the wizard, under **Actions** in Failover Cluster Manager, select **View Validation Report**. You can see *%SystemRoot%\\Cluster\\Reports\\Validation Report <Date and Time>.html* where *%SystemRoot%* is the folder in which the operating system is installed (for example, *C:\\Windows*).
 
 ### Windows PowerShell equivalent commands
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they might appear word-wrapped across several lines here because of formatting constraints.
 
-The following example runs all cluster validation tests on the nodes named *node1* and *node2*. If *node1* or *node2* is already a member of a cluster, the tests will include all nodes in that cluster.
+The following example runs all cluster validation tests on the nodes named node1 and node2. If node1 or node2 is already a member of a cluster, the tests will include all nodes in that cluster.
 
 ```PowerShell
 Test-Cluster -Node node1,node2
@@ -192,7 +191,7 @@ After you take action to correct the problem, you can rerun the wizard as needed
 
 ### What to do if a validation test fails
 
-In most cases, if any tests in the Validate a Configuration Wizard fail, Microsoft doesn't consider the configuration to be supported.
+In most cases, if any tests in the Validate a Configuration Wizard fail, the configuration isn't considered to be supported.
 
 If any of the Hyper-V Configuration tests fail, Hyper-V on the cluster isn't configured correctly. The problem must be corrected before the virtual machines in the cluster can be supported. However, failures in this category of tests don't mean that the cluster isn't supported for workloads other than clustered virtual machines.
 
@@ -204,7 +203,7 @@ After the issues have been addressed and resolved, it's necessary to rerun the V
 
 ### Provide a validation report when you request support from Microsoft
 
-If you need to contact Microsoft customer support about a validation problem, the support team will help you collect the validation report and other relevant configuration files by using the Microsoft Support Diagnostic Tool (MSDT). (This feature replaces the MPSReports data collection utility.) If needed, Microsoft will send instructions about how to capture the data. In some situations, Microsoft might request that the contents of the C:\\Windows\\Cluster\\Reports folder be zipped and sent for analysis. Either method will collect the required cluster validation report.
+If you need to contact Microsoft customer support about a validation problem, the support team will help you collect the validation report and other relevant configuration files by using the Microsoft Support Diagnostic Tool (MSDT). (This feature replaces the MPSReports data collection utility.) If needed, Microsoft will send instructions about how to capture the data. In some situations, Microsoft might request that the contents of the *C:\\Windows\\Cluster\\Reports* folder be zipped and sent for analysis. Either method will collect the required cluster validation report.
 
 ### Updates to validation tests
 
@@ -214,14 +213,11 @@ The Validate a Configuration Wizard provides an accurate picture of how well fai
 
 When you make a change to an existing cluster, you might not need to run all the cluster validation tests. The following tables in this section list the kinds of changes you might make to a cluster and the corresponding tests to run.
 
-**Key for the required validation tests shown in the following tables**
+Key for the required validation tests shown in the following tables:
 
 - **Full**: Run the complete set of tests. This requires some cluster downtime.
-
 - **Single LUN**: Run the complete set of tests, and run the storage tests on only one LUN. The LUN might be a small LUN that you set aside for testing purposes or the witness disk (if your cluster uses a witness disk). This validates the storage subsystem, but not specifically each individual LUN or disk. You can run these validation tests without causing downtime to your clustered services or applications.
-
 - **Omit storage tests**: Run the system configuration, inventory, and network tests, but not the storage tests. You can run these validation tests without causing downtime to your clustered roles.
-
 - **None**: No validation tests are needed.
 
 ### Server changes
@@ -315,11 +311,11 @@ When you perform cluster validation tests on a configured cluster, you might not
 
 The Validate a Configuration Wizard runs all storage tests by default. All or some of the storage tests can be unselected by choosing the **Run only tests I select** option on the **Testing Options** page of the wizard. When storage tests are included, the **Review Storage Status** page of the wizard shows all of the disks and storage pools in the cluster and allows you to select the disks and storage pools to include in the storage tests. Storage tests require that a disk or storage pool that is assigned to a clustered role or Cluster Shared Volume be taken offline first. Therefore, anything using the storage won't have access to it during the storage tests. We recommend that any clustered role or other process that might be using the disk or storage pool is taken offline before the storage is included in the storage validation tests.
 
-The [Test-Cluster](/powershell/module/failoverclusters/test-cluster)Windows PowerShell cmdlet runs all storage tests by default. You can specify the **-Include** parameter to only run storage tests or to run a specific storage test. You can use the **-Disk** and **-Pool** parameters to enable targeted storage validation. The **-Disk** parameter or the **-Pool** parameter allows specifying, respectively, one or more disks or one or more storage pools to include in the storage validation testing. If the **-Disk** parameter or the **-Pool** parameter is used to specify a disk or storage pool that is currently online and is assigned to a clustered role or Cluster Shared Volume, you must also specify the **-Force** parameter to validate the corresponding disk or storage pool; otherwise, you must ensure that the clustered disk or storage pool is offline before running the tests. If the **-Disk** parameter or the **-Pool** parameter isn't specified, **Test-Cluster** runs storage tests on all disks and storage pools that are available for cluster use or that are in the cluster resource offline or failed state. We recommend that any clustered role or other process that may be using the disk or storage pool is taken offline before the storage is included in the validation testing.
+The [Test-Cluster](/powershell/module/failoverclusters/test-cluster) Windows PowerShell cmdlet runs all storage tests by default. You can specify the `-Include` parameter to only run storage tests or to run a specific storage test. You can use the `-Disk` and `-Pool` parameters to enable targeted storage validation. The `-Disk` parameter or the `-Pool` parameter allows specifying, respectively, one or more disks or one or more storage pools to include in the storage validation testing. If the `-Disk` parameter or the `-Pool` parameter is used to specify a disk or storage pool that is currently online and is assigned to a clustered role or Cluster Shared Volume, you must also specify the `-Force` parameter to validate the corresponding disk or storage pool; otherwise, you must ensure that the clustered disk or storage pool is offline before running the tests. If the `-Disk` parameter or the `-Pool` parameter isn't specified, `Test-Cluster` runs storage tests on all disks and storage pools that are available for cluster use or that are in the cluster resource offline or failed state. We recommend that any clustered role or other process that may be using the disk or storage pool is taken offline before the storage is included in the validation testing.
 
-**Storage that is not directly connected to all nodes in the cluster**
+#### Storage that is not directly connected to all nodes in the cluster
 
-There might be cases where the cluster design includes storage that isn't connected to all nodes in the cluster. A common example is in multisite clusters where cluster nodes in *SiteA* are connected to one set of storage, the nodes in *SiteB* are connected to a different set of storage, and a non-Microsoft replication solution is used to ensure that both sets of storage have the same data. Failover cluster detects this asymmetric storage configuration, so the disks in *SiteA* only validate with the *SiteA* nodes, and the disks in *SiteB* only validate with nodes in *SiteB*.
+There might be cases where the cluster design includes storage that isn't connected to all nodes in the cluster. A common example is in multisite clusters where cluster nodes in SiteA are connected to one set of storage, the nodes in SiteB are connected to a different set of storage, and a non-Microsoft replication solution is used to ensure that both sets of storage have the same data. Failover cluster detects this asymmetric storage configuration, so the disks in SiteA only validate with the SiteA nodes, and the disks in SiteB only validate with nodes in SiteB.
 
 One scenario where Microsoft customer support might request that you run validation tests on production clusters is when there's a cluster storage failure that could be caused by some underlying storage configuration change or problem. It might not be advisable to take a disk that is in use offline due to the availability impact it might have on the clustered roles that use it. In this situation, you can run validation tests (including storage tests) by creating or choosing a new LUN from the same shared storage device and presenting it to all nodes in the cluster. By testing this LUN, you can avoid disruption to clustered roles that are already online within the cluster and still test the underlying storage subsystem.
 
@@ -353,7 +349,7 @@ The Validate a Configuration Wizard generates a simple HTML report that clearly 
 
 Yes, the Validate a Configuration Wizard should be run whenever a change is made to an existing failover cluster. For more information, see [Common validation scenarios](#common-validation-scenarios) earlier in this guide.
 
-## See also
+## More information
 
 - [Failover Clustering](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831579(v=ws.11))
 - [Failover Clustering Hardware Requirements and Storage Options](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj612869(v=ws.11))
