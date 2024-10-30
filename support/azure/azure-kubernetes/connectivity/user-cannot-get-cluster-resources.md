@@ -37,9 +37,9 @@ Run the following command to confirm which RBAC type is used by the cluster:
 	az aks show -g <CLUSTER_RESOURCE_GROUP> -n <CLUSTER_NAME> --query aadProfile.enableAzureRbac
   ```
 
-If the result of the previous command is "false" this means the cluster uses k8s RBAC, in which case proceed to step xxx. If, on the other hand, the result of the previous command is "true" this means the cluster uses Azure RBAC, in which case proceed to step YYYY.
+If the result of the previous command is **false** this means the cluster uses k8s RBAC, in which case proceed to step [Solving permission issues in k8s RBAC based AKS clusters](#k8srbac). If, on the other hand, the result of the previous command is **true** this means the cluster uses Azure RBAC, in which case proceed to step [Solving permission issues in Azure RBAC based AKS clusters](#azurerbac).
 
-### Solving permission issues in k8s RBAC based AKS clusters 
+### Solving permission issues in k8s RBAC based AKS clusters<a name="k8srbac">
 If the cluster uses k8s RBAC then permissions for a given user are configured through the creation of RoleBinding/ClusterRoleBinding k8s resources. You can check upstream [Kubernetes RBAC documentation](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) for more details on this.
 
 Furthermore, in Microsoft Entra ID integrated clusters a clusterrolebinding resource is automatically created granting members of a predesignated Microsoft Entra ID group the permissions to fully administer the cluster i.e. administrator access to the cluster.
@@ -58,7 +58,7 @@ Run the following command to retrieve the ID of the predesignated Microsoft Entr
 
 Add the user to the predesignated Microsoft Entra ID admin group - check [Add members or owners of a group](/entra/fundamentals/how-to-manage-groups#add-members-or-owners-of-a-group) for detailed guidance on how to add users to groups in Microsoft Entra ID.
 
-### Solving permission issues in Azure RBAC based AKS clusters 
+### Solving permission issues in Azure RBAC based AKS clusters<a name="azurerbac">
 
 If the cluster uses Azure RBAC then permissions for a given user are configured through the creation of [Azure Role Assignments](/azure/role-based-access-control/role-assignments).
 
