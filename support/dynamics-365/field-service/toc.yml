@@ -42,7 +42,7 @@
 - name: Mobile app
   items: 
     - name: App uses too much data
-      href: app-uses-too-much-data.md
+      href: mobile-app/app-uses-too-much-data.md
     - name: Booking timestamp is created with an incorrect time
       href: mobile-app/booking-timestamp-incorrect-time.md
     - name: Camera pictures are blurry or not focused
@@ -69,7 +69,7 @@
     - name: The new experience doesn't show dashboards from the navigation
       href: mobile-app/newux-doesnot-show-dashboards.md
     - name: WebView reset error
-      href: newux-webview-reset.md
+      href: mobile-app/newux-webview-reset.md
 
 - name: Resource Scheduling Optimization add-in
   items: 
