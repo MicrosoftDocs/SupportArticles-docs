@@ -20,7 +20,7 @@ This article describes how to troubleshoot and resolve "Error from server (Forbi
 
 ## Symptoms
 
-When runnning kubectl commands to view the details of a given k8s resource type (e.g. a deployment, pod, or worker node), you might see the following error message:
+When running kubectl commands to view the details of a given k8s resource type (e.g. a deployment, pod, or worker node), you might see the following error message:
 
 ```output
 $ kubectl get nodes
@@ -56,7 +56,7 @@ Run the following command to retrieve the ID of the predesignated Microsoft Entr
 	az aks show -g <CLUSTER_RESOURCE_GROUP> -n <CLUSTER_NAME> --query aadProfile.adminGroupObjectIDs
   ```
 
-Add the user to the predesignated Microsoft Entra ID admin group - check [Add members or owners of a group](/entra/fundamentals/how-to-manage-groups#add-members-or-owners-of-a-group) for detailed guidance on how to add users to groups in Microsoft Entra ID.
+Add the user to the predesignated Microsoft Entra ID admin group using the group ID retrieved in the previous step. Check [Add members or owners of a group](/entra/fundamentals/how-to-manage-groups#add-members-or-owners-of-a-group) for detailed guidance on how to add users to groups in Microsoft Entra ID.
 
 ### Solving permission issues in Azure RBAC based AKS clusters<a name="azurerbac">
 
