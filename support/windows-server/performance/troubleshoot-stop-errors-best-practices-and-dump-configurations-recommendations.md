@@ -14,13 +14,11 @@ This article introduces what Windows does when a Blue Screen occurs. Additionall
 
 ## What happens when a stop error happens
 
-The Operating System (OS) is monitoring itself continuously to verify that it runs within the expected parameters. If this isn't the case, the OS calls the kernel function **KeBugCheckEx** to restart to recover from such an unhealthy scenario. For more information, see [KeBugCheckEx function (wdm.h)](/windows-hardware/drivers/ddi/wdm/nf-wdm-kebugcheckex).
-
-The **KeBugCheckEx** function then triggers the stop error (also known as Bug Check, Blue Screen of Death, Dump) and restart the computer.
+The Operating System (OS) is monitoring itself continuously to verify that it runs within the expected parameters. If this isn't the case, the OS calls the kernel function **KeBugCheckEx** to restart to recover from such an unhealthy scenario. For more information, see [KeBugCheckEx function (wdm.h)](/windows-hardware/drivers/ddi/wdm/nf-wdm-kebugcheckex). The **KeBugCheckEx** function then triggers the stop error (also known as Bug Check, Blue Screen of Death, Dump) and restart the computer.
 
 The following sections use the issue described in [Bug Check 0x50: PAGE_FAULT_IN_NONPAGED_AREA](/windows-hardware/drivers/debugger/bug-check-0x50--page-fault-in-nonpaged-area) to explain what happens when a stop error occurs.
 
-### Symptom analysis
+### Example for stop error 0x50
 
 This stop error occurs in the following scenario:
 
@@ -50,7 +48,7 @@ At the black rectangle number 2, you can see the progress of moving RAM to page 
 
 On large systems, this process can take some time. Let´s explain this by using a specific scenario.
 
-Imaging that you have a system that has 1 terabyte of RAM (1,024 GB). A typical Hard Disk Drive (HDD) has a disk I/O speed of up to 100 MB per second, while a Solid State Drive (SSD) can achieve speeds of up to 500 MB. When the OS generates a complete dump, check the following table for the time it takes based on disk configuration:
+Imaging that you have a system that has 1,024 GB of RAM. A typical Hard Disk Drive (HDD) has a disk I/O speed of up to 100 MB per second, while a Solid State Drive (SSD) can achieve speeds of up to 500 MB. When the OS generates a complete dump, check the following table for the time it takes based on disk configuration:
 
 | Disk Type | Disk speed | Time to write a dump in seconds (minutes) |
 | :-------- | :--------- | :---------------------------------------- |
@@ -58,7 +56,7 @@ Imaging that you have a system that has 1 terabyte of RAM (1,024 GB). A typical 
 | SSD       | 500 MB/sec | 2,097 sec (~35 min)                       |
 
 > [!NOTE]
-> In a physical system, the computer Basic Input-Output System (BIOS) might have the Automated system recovery (ASR) feature. This feature periodically check if Windows is running. When the check fails, the feature initiates a power reset to recover the system. This behavior interrupts the dump process because Windows and services are no longer running during phase 2.
+> In a physical system, the computer Basic Input-Output System (BIOS) might have the Automated system recovery (ASR) feature. This feature periodically check if Windows is running. When the check fails, the feature initiates a power reset to recover the system. This behavior interrupts the dump process because Windows and its services are no longer running during phase 2.
 
 At the black rectangle number 3, you can see a potential hint on what was involved in the crash. If the message is about a driver or software, checking for an update is a valid option.
 
