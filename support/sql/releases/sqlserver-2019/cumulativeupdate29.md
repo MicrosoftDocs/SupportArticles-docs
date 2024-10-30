@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 29 for SQL Server 2019 (KB5046365)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 29 (KB5046365).
-ms.date: 10/29/2024
+ms.date: 10/30/2024
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5046365
 ms.reviewer: v-qianli2
 appliesto:
@@ -11,7 +11,7 @@ appliesto:
 
 # KB5046365 - Cumulative Update 29 for SQL Server 2019
 
-_Release Date:_ &nbsp; October 29, 2024  
+_Release Date:_ &nbsp; October 30, 2024  
 _Version:_ &nbsp; 15.0.4405.4
 
 ## Summary
