@@ -104,11 +104,11 @@ In the screenshots below, you can observe that the packets at both the source an
 
 Source-side trace:
 
-![Screenshot of packets on source side in Network Monitor.](media/tcp-ip-connectivity-issues-troubleshooting/7mbeof6d.png)
+:::image type="content" source="media/tcp-ip-connectivity-issues-troubleshooting/screenshot-of-packets-on-source-side-in-network-monitor.png" alt-text="Screenshot of packets on source side in Network Monitor.":::
 
 Destination-side trace:
 
-![Screenshot of packets on destination side in Network Monitor.](media/tcp-ip-connectivity-issues-troubleshooting/uv8snmuo.png)
+:::image type="content" source="media/tcp-ip-connectivity-issues-troubleshooting/screenshot-of-packets-on-destination-side-in-network-monitor.png" alt-text="Screenshot of packets on destination side in Network Monitor.":::
 
 An ACK+RST flagged TCP packet can also occur when a TCP SYN packet is sent out. The TCP SYN packet is initiated by the source machine to establish a connection on a specific port. However, if the destination server doesn't want to accept the packet for any reason, the server responds with an ACK+RST packet.
 
