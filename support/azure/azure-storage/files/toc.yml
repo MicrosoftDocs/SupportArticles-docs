@@ -46,3 +46,5 @@
       href: file-sync/file-sync-troubleshoot-sync-group-management.md
     - name: Troubleshoot sync issues
       href: file-sync/file-sync-troubleshoot-sync-errors.md
+    - name: Troubleshoot managed identity issues
+      href: file-sync/file-sync-troubleshoot-managed-identities.md
