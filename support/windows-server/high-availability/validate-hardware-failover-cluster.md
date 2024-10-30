@@ -262,8 +262,8 @@ Key for the required validation tests shown in the following tables:
 |---------|---------|
 |Adding or replacing a Fibre Channel switch or hub     |Full         |
 |Changing the number of ports within a switch block     |None         |
-|Making a minor (0.*x*) revision to the Fibre Channel switch firmware     |Single LUN         |
-|Making a major (*x*.0) revision to the Fibre Channel switch firmware     |Single LUN         |
+|Making a minor (0.x) revision to the Fibre Channel switch firmware     |Single LUN         |
+|Making a major (X.0) revision to the Fibre Channel switch firmware     |Single LUN         |
 |Changing a switch configuration or zoning     |Full, but test changed LUNs only         |
 
 ### Host bus adapter (HBA) changes
@@ -290,8 +290,8 @@ Key for the required validation tests shown in the following tables:
 |Change  |Validation tests required  |
 |---------|---------|
 |Modifying the networks that connect the nodes     |Omit storage tests         |
-|Making a minor (0.*x*) version change in the data replication software     |Single LUN         |
-|Making a major (*x*.0) version change in the data replication software, or changing to a different type of replication software     |Full         |
+|Making a minor (0.x) version change in the data replication software     |Single LUN         |
+|Making a major (X.0) version change in the data replication software, or changing to a different type of replication software     |Full         |
 
 ### Networking changes
 
@@ -311,7 +311,7 @@ The [Test-Cluster](/powershell/module/failoverclusters/test-cluster) Windows Pow
 
 #### Storage that isn't directly connected to all nodes in the cluster
 
-There might be cases where the cluster design includes storage that isn't connected to all nodes in the cluster. A common example is in multisite clusters where cluster nodes in SiteA are connected to one set of storage, the nodes in SiteB are connected to a different set of storage, and a non-Microsoft replication solution is used to ensure that both sets of storage have the same data. Failover Clustering detects this asymmetric storage configuration, so the disks in SiteA only validate with the SiteA nodes, and the disks in SiteB only validate with nodes in SiteB.
+There might be cases where the cluster design includes storage that isn't connected to all nodes in the cluster. A common example is in multisite clusters where cluster nodes in SiteA are connected to one set of storage, the nodes in SiteB are connected to a different set of storage, and a non-Microsoft replication solution is used to ensure that both sets of storage have the same data. Failover clusters detect this asymmetric storage configuration, so the disks in SiteA only validate with the SiteA nodes, and the disks in SiteB only validate with nodes in SiteB.
 
 One scenario where Microsoft customer support might request that you run validation tests on production clusters is when there's a cluster storage failure that could be caused by some underlying storage configuration change or problem. It might not be advisable to take a disk that is in use offline due to its availability impact on the clustered roles that use it. In this situation, you can run validation tests (including storage tests) by creating or choosing a new LUN from the same shared storage device and presenting it to all nodes in the cluster. By testing this LUN, you can avoid disrupting clustered roles that are already online within the cluster and still test the underlying storage subsystem.
 
