@@ -61,6 +61,8 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: App uses too much data
+            url: app-uses-too-much-data.md
           - text: Booking timestamp is created with an incorrect time
             url: mobile-app/booking-timestamp-incorrect-time.md
           - text: Camera pictures are blurry or not focused
@@ -89,6 +91,8 @@ landingContent:
             url: mobile-app/newux-doesnot-load.md
           - text: The new experience doesn't show dashboards from the navigation
             url: mobile-app/newux-doesnot-show-dashboards.md
+          - text: WebView reset error
+            url: newux-webview-reset.md
   
   # Card
   - title: Resource Scheduling Optimization Add-in for Field Service
