@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot connections to endpoints in the same virtual network
 description: Troubleshoot connections to endpoints in the same virtual network from an Azure Kubernetes Service (AKS) cluster.
-ms.date: 11/04/2022
-ms.reviewer: chiragpa, rissing, v-leedennis
+ms.date: 10/23/2024
+ms.reviewer: chiragpa, rissing, v-leedennis, andbar
 editor: v-jsitser
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot connections to endpoints in the same virtual network so that I don't experience outbound connection issues from an Azure Kubernetes Service (AKS) cluster.
@@ -53,7 +53,7 @@ To use AKS to check the network security groups (NSGs) and their associated rule
 
 By default, the egress traffic is allowed on the NSGs. However, in some scenarios, the custom NSG that's associated with the AKS subnet might have a **Deny** rule that has a more urgent priority. This rule stops traffic to some endpoints.
 
-AKS doesn't modify the egress rules in an NSG. If AKS uses a custom NSG, verify that it allows egress traffic for the endpoints on the correct port and protocol. To make sure that the AKS cluster functions as expected, verify that the egress for custom NSGs allows [Required outbound network rules for AKS clusters](/azure/aks/limit-egress-traffic#required-outbound-network-rules-and-fqdns-for-aks-clusters).
+AKS doesn't modify the egress rules in an NSG. If AKS uses a custom NSG, verify that it allows egress traffic for the endpoints on the correct port and protocol. To make sure that the AKS cluster functions as expected, verify that the egress for custom NSGs allows [Required outbound network rules for AKS clusters](/azure/aks/outbound-rules-control-egress).
 
 Custom NSGs can directly affect the egress traffic by blocking the outbound rules. They can also affect egress traffic indirectly. For more information, see [A custom network security group blocks traffic](./custom-nsg-blocks-traffic.md).
 
