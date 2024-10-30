@@ -7,7 +7,7 @@ ms.topic: troubleshooting
 ms.date: 10/30/2024
 ms.author: kendownie
 ---
-
+# Troubleshoot Azure File Sync managed identity issues
 This article is designed to help you troubleshoot and resolve issues that you might encounter when using a managed identity with Azure File Sync. 
 
 ## How to check if the Storage Sync Service is using a system-assigned managed identity
@@ -37,8 +37,8 @@ Verify the **ApplicationId** property has a GUID which indicates the server is c
 If the Set-AzStorageSyncServiceIdentity cmdlet does not configure a server to use a managed identity, it’s more than likely because the server does not have a system-assigned managed identity.
 
 To enable a system-assigned managed identity on a registered server that has the Azure File Sync v19 agent installed, perform the following steps:
-- If the server is hosted outside of Azure, it must be an **Azure Arc-enabled server** to have a system-assigned managed identity. For more information on Azure Arc-enabled servers and how to install the Azure Connected Machine agent, see: [Azure Arc-enabled servers Overview](https://learn.microsoft.com/azure/azure-arc/servers/overview)
-- If the server is an Azure virtual machine, **enable the system-assigned managed identity setting on the VM**. For more information, see: [Configure managed identities on Azure virtual machines](https://learn.microsoft.com/entra/identity/managed-identities-azure-resources/how-to-configure-managed-identities?pivots=qs-configure-portal-windows-vm#enable-system-assigned-managed-identity-on-an-existing-vm).
+- If the server is hosted outside of Azure, it must be an **Azure Arc-enabled server** to have a system-assigned managed identity. For more information on Azure Arc-enabled servers and how to install the Azure Connected Machine agent, see: [Azure Arc-enabled servers Overview](/azure/azure-arc/servers/overview)
+- If the server is an Azure virtual machine, **enable the system-assigned managed identity setting on the VM**. For more information, see: [Configure managed identities on Azure virtual machines](/entra/identity/managed-identities-azure-resources/how-to-configure-managed-identities?pivots=qs-configure-portal-windows-vm#enable-system-assigned-managed-identity-on-an-existing-vm).
 
 ### How to check if your registered servers have a system-assigned managed identity
 
@@ -88,7 +88,7 @@ Set-AzStorageSyncCloudEndpointPermission -ResourceGroupName <string> -StorageSyn
 ```
 
 > [!NOTE]
-> The -Name parameter is a GUID, not the friendly name that's displayed in the portal. To get the CloudEndpointName, use the [Get-AzStorageSyncCloudEndpoint](https://learn.microsoft.com/powershell/module/az.storagesync/get-azstoragesynccloudendpoint) cmdlet.
+> The -Name parameter is a GUID, not the friendly name that's displayed in the portal. To get the CloudEndpointName, use the [Get-AzStorageSyncCloudEndpoint](/powershell/module/az.storagesync/get-azstoragesynccloudendpoint) cmdlet.
 
 ### Sync fails with error 0x80c86053 (ECS_E_AZURE_FILE_SHARE_NOT_ACCESSIBLE)
 
@@ -108,7 +108,7 @@ Set-AzStorageSyncCloudEndpointPermission -ResourceGroupName <string> -StorageSyn
 ```
 
 > [!NOTE]
-> The -Name parameter is a GUID, not the friendly name that's displayed in the portal. To get the CloudEndpointName, use the [Get-AzStorageSyncCloudEndpoint](https://learn.microsoft.com/powershell/module/az.storagesync/get-azstoragesynccloudendpoint) cmdlet.
+> The -Name parameter is a GUID, not the friendly name that's displayed in the portal. To get the CloudEndpointName, use the [Get-AzStorageSyncCloudEndpoint](/powershell/module/az.storagesync/get-azstoragesynccloudendpoint) cmdlet.
 
 ### Files fail to sync with error 0x80c86063 (ECS_E_AZURE_AUTHORIZATION_PERMISSION_MISMATCH)
 
@@ -128,7 +128,7 @@ Set-AzStorageSyncServerEndpointPermission -ResourceGroupName <string> -StorageSy
 ```
 
 > [!NOTE]
-> The -Name parameter is a GUID, not the friendly name that's displayed in the portal. To get the ServerEndpointName, use the [Get-AzStorageSyncServerEndpoint](https://learn.microsoft.com/powershell/module/az.storagesync/get-azstoragesyncserverendpoint) cmdlet.
+> The -Name parameter is a GUID, not the friendly name that's displayed in the portal. To get the ServerEndpointName, use the [Get-AzStorageSyncServerEndpoint](/powershell/module/az.storagesync/get-azstoragesyncserverendpoint) cmdlet.
 
 ### Test-NetworkConnectivity cmdlet fails with error 0x80190193 (HTTP_E_STATUS_FORBIDDEN)
 This issue occurs if the managed identity for the registered server does not have access to the Azure file share.
@@ -140,7 +140,7 @@ Set-AzStorageSyncServerEndpointPermission -ResourceGroupName <string> -StorageSy
 ```
 
 > [!NOTE]
-> The -Name parameter is a GUID, not the friendly name that's displayed in the portal. To get the ServerEndpointName, use the [Get-AzStorageSyncServerEndpoint](https://learn.microsoft.com/powershell/module/az.storagesync/get-azstoragesyncserverendpoint) cmdlet.
+> The -Name parameter is a GUID, not the friendly name that's displayed in the portal. To get the ServerEndpointName, use the [Get-AzStorageSyncServerEndpoint](/powershell/module/az.storagesync/get-azstoragesyncserverendpoint) cmdlet.
 
 ### Test-NetworkConnectivity cmdlet fails with error 0x80131500 (COR_E_EXCEPTION)
-This issue occurs if the **Allow Azure services on the trusted services list to access this storage account** exception is not enabled on the storage account. This exception must be enabled for preview. [Learn more](file-sync-networking-endpoints.md#grant-access-to-trusted-azure-services-and-restrict-access-to-the-storage-account-public-endpoint-to-specific-virtual-networks)
+This issue occurs if the **Allow Azure services on the trusted services list to access this storage account** exception is not enabled on the storage account. This exception must be enabled for preview. [Learn more](/azure/storage/file-sync/file-sync-networking-endpoints?tabs=azure-portal#grant-access-to-trusted-azure-services-and-restrict-access-to-the-storage-account-public-endpoint-to-specific-virtual-networks).
