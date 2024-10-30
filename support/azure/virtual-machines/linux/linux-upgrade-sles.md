@@ -458,7 +458,7 @@ To resolve this issue, follow these steps:
     sudo SUSEConnect --status
     ```
 
-## Scenario 10: SLES 15 migration fails from SP3 to SP4 with the "No migration available" error
+## Scenario 10: SLES 15 Migration Fails from SP3 to SP4: Invalid Credentials and Repository Errors
 
 The SLES 15 migration from SP3 to SP4 fails and you get the following output:
 
@@ -490,7 +490,7 @@ You can also find the outputs in the `/var/log/messages` or `/var/log/distro-mig
 
 ### Cause
 
-The certification module is present, which causes that the migration fails.
+The certification module is present, which causes  the migration to fail.
 
 ### Resolution
 
