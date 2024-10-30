@@ -17,7 +17,7 @@ To check if the Storage Sync Service is using a system-assigned managed identity
 Get-AzStorageSyncService -ResourceGroupName <string> -StorageSyncServiceName <string>
 ```
 
-Verify the value for the **UseIdentity** property is **True**. If the value is False, the Storage Sync Service is using shared keys to authenticate to the Azure file shares.
+Verify the value for the **UseIdentity** property is **True**. If the value is **False**, the Storage Sync Service is using shared keys to authenticate to the Azure file shares.
 
 ## How to check if a registered server is configured to use a system-assigned managed identity
 
@@ -27,7 +27,7 @@ To check if a registered server is configured to use a system-assigned managed i
 Get-AzStorageSyncServer -ResourceGroupName <string> -StorageSyncServiceName <string>
 ```
 
-Verify the **ApplicationId** property has a GUID which indicates the server is configured to use the managed identity. The value for the **ActiveAuthType** property will be updated to ManagedIdentity once the server is using the system-assigned managed identity. If the value is **Certificate**, the server is using shared keys to authenticate to the Azure file shares. 
+Verify the **ApplicationId** property has a GUID which indicates the server is configured to use the managed identity. The value for the **ActiveAuthType** property will be updated to **ManagedIdentity** once the server is using the system-assigned managed identity. If the value is **Certificate**, the server is using shared keys to authenticate to the Azure file shares. 
 
 > [!NOTE]
 > Once a server is configured to use a system-assigned managed identity, it can take up to one hour before the server uses the system-assigned managed identity to authenticate to the Storage Sync Service and Azure file shares.
@@ -65,7 +65,7 @@ When Azure File Sync is configured to use managed identities, your cloud and ser
 **Server Endpoint**
 - **Register Server** managed identity must be a member of the **Storage File Data Privileged Contributor** role on the **Azure file share**.
 
-These permissions are granted when using the **Set-AzStorageSyncServiceIdentity** cmdlet or when creating new cloud and server endpoints. If these permissions are removed, operations will fail with the errors listed in the section below.
+These permissions are granted when using the Set-AzStorageSyncServiceIdentity cmdlet or when creating new cloud and server endpoints. If these permissions are removed, operations will fail with the errors listed in the section below.
 
 ## Common Errors
 This section covers errors that can occur if permissions or configuration settings are incorrect. 
