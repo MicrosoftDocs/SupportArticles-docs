@@ -2,7 +2,7 @@
 title: Email notifications from sharing events aren't delivered to recipients
 description: Resolves an issue that prevents delivery of sharing notifications that are triggered by sharing events in SharePoint, OneDrive, or Microsoft 365 apps, by task assignment in Planner, or by publishing news or comments in Viva Connections.
 manager: dcscontentpm
-ms.date: 10/29/2024
+ms.date: 10/30/2024
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
@@ -35,13 +35,13 @@ Examples of such scenarios include situations in which you:
 This issue is likely caused by one of the following conditions:
 
 - Your user profile in Microsoft Entra ID has no value assigned to the **Email** property.
-- Your email address is flagged as spam by each recipient's email provider.
+- Your email address is flagged as spam by the recipient's email provider.
 
 ## Resolution
 
 Ask the recipients to check their Junk or Spam folder. If your email address is blocked by a spam filter, the recipients should [add your email address to the Safe Senders list](https://support.microsoft.com/office/add-recipients-of-my-email-messages-to-the-safe-senders-list-be1baea0-beab-4a30-b968-9004332336ce) to avoid the issue in future.
 
-If the email notification isn't in the Junk or Spam folder, then your email address isn't specified in your user profile. Users who are assigned the User Administrator role in Microsoft Entra or the User admin role in Microsoft 365 have to assign a value to the **Email** property in their user profile by using one of the following methods.
+If the email notification isn't in the Junk or Spam folder, then your email address isn't specified in your user profile. Users who are assigned the User Administrator role in Microsoft Entra or the User admin role in Microsoft 365 have to assign a value to the **Email** property in your user profile by using one of the following methods.
 
 ### Method 1: Update from the Microsoft Entra admin center
 
