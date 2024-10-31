@@ -1,7 +1,7 @@
 ---
 title: Latest updates and version history for SQL Server
 description: This article lists various builds or updates that are available for different versions of SQL Server.
-ms.date: 10/30/2024
+ms.date: 10/31/2024
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen
 ms.reviewer: v-six
 ---
@@ -91,7 +91,7 @@ Each of the following links provides information for all of the applicable produ
 
 | Build number or version | Service pack | Update     | Knowledge Base number                                            | Release date       |
 |-------------------------|--------------|------------|-------------------------------------------------------|--------------------|
-| 15.0.4405.4            | None         | CU29       | [KB5046365](sqlserver-2019/cumulativeupdate29.md)       | October 30, 2024  |
+| 15.0.4405.4            | None         | CU29       | [KB5046365](sqlserver-2019/cumulativeupdate29.md)       | October 31, 2024  |
 | 15.0.4395.2             | None         | CU28 + GDR | [KB5046060](https://support.microsoft.com/help/5046060)       | October 08, 2024  |
 | 15.0.2125.1             | None         | GDR        | [KB5046056](https://support.microsoft.com/help/5046056)       | October 08, 2024  |
 | 15.0.4390.2             | None         | CU28 + GDR | [KB5042749](https://support.microsoft.com/help/5042749)       | September 10, 2024  |
