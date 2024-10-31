@@ -77,7 +77,7 @@ In most scenarios, you can use the following actions to resolve a stop error.
 
 ### Ensure you're running the latest patch for the OS
 
-Microsoft releases patches to any supported OS monthly on every second Tuesday (the patch cycle). Those patches contain improvements for security and reliability. We recommend you install them soon after the release.
+Microsoft releases patches to any supported OS monthly on every second Tuesday ( the patch cycle). Those patches contain improvements for security and reliability. We recommend you install them soon after the release.
 
 ### Ensure your software and drivers are up to date
 
@@ -105,7 +105,7 @@ This recommendation depends on the size of the system, as the RAM and the hard d
 2. Ensure that the system is set to a [complete dump](memory-dump-file-options.md#complete-memory-dump).
 3. Navigate to `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\CrashControl`, and set **CrashDumpEnabled** to **0x1**.
 
-Ensure that you have enough disk space for the Pagefile and the *memory.dmp* file.
+Ensure that you have enough disk space for the the Pagefile and the *memory.dmp* file.
 
 ### Systems memory over 32 GB
 
@@ -117,7 +117,7 @@ Normally, a kernel memory dump is smaller than 40 GB. The automatic dump, combin
 
 If necessary, you can configure the OS to save the dump file *%SystemRoot%\Memory.dmp* to a different location. For example, you can save the file to drive D, which is a second hard disk with enough disk space. To do so, follow these steps:
 
-1. Navigate to the `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\CrashControl` registry key.
+1. Navigate to the `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\CrashControl` registry key
 2. Set **DumpFile** to **d:\Memory.dmp**.
 
 Also, on large systems, ensure that ASR is disabled in the BIOS.
