@@ -17,9 +17,9 @@ This article discusses issues that occur during SUSE Linux Enterprise server (SL
 
 ## Prerequisite
 
-- This [Distribution Migration System (DMS)](https://documentation.suse.com/suse-distribution-migration-system/15/single-html/distribution-migration-system/index.html) guide provides general steps about how to upgrade SLES 12 to SLES 15 for an Azure VM. For more information, see [Upgrading SUSE Linux Enterprise in the Public Cloud](https://www.suse.com/c/upgrading-suse-linux-enterprise-in-the-public-cloud/) and [SUSE Product Lifecycle](https://www.suse.com/lifecycle)
+- This [Distribution Migration System (DMS)](https://documentation.suse.com/suse-distribution-migration-system/15/single-html/distribution-migration-system/index.html) guide provides general steps about how to upgrade SLES 12 to SLES 15 for an Azure VM. For more information, see [Upgrading SUSE Linux Enterprise in the Public Cloud](https://www.suse.com/c/upgrading-suse-linux-enterprise-in-the-public-cloud/) and [SUSE Product Lifecycle](https://www.suse.com/lifecycle).
 - Because the migration requires the VM to reboot, plan the migration activity as per the approved downtime window. 
-- Take a complete backup/snapshot of VM before performing the migration.
+- Take a complete backup or snapshot of VM before performing the migration.
 - [Check if the VM is generation V1 or generation V2](#check-the-generation-version-for-a-vm).
 
 ### Check the generation version for a VM
@@ -32,9 +32,9 @@ You can check the generation version by using one of the following methods:
     sudo dmidecode | grep -i hyper
     ```
 
-    If it's a Generation 1 VM,  there's no output returned. 
+    If it's a Generation 1 VM, no output is returned. 
     
-    For the Generation 2 VM, you can see an output like the following text:
+    If it's a Generation 2 VM, you can see an output like the following text:
     
     ```output
     Version: Hyper-V UEFI Release v4.1
@@ -45,7 +45,7 @@ You can check the generation version by using one of the following methods:
  
 - In the [Azure portal](https://portal.azure.com), go to the VM **Properties**, and then check the **VM generation** field as shown:
 
-    :::image type="content" source="media/linux-upgrade-sles/vm-generation-property.png" alt-text="A screenshot that shows the 'VM generation' property." lightbox="media/linux-upgrade-sles/vm-generation-property.png":::
+    :::image type="content" source="media/linux-upgrade-sles/vm-generation-property.png" alt-text="Screenshot that shows the 'VM generation' property." lightbox="media/linux-upgrade-sles/vm-generation-property.png":::
 
 ## Scenario 1: Migration from SLES 12 to SLES 15 succeeds, but upgrade from SLES 15 SP1 to SP2 fails
 
@@ -91,7 +91,7 @@ sudo mv sle-module-hpc.prod /tmp/
 sudo zypper migration
 ```
 
-For more information, see [Major distros in Public Cloud](https://www.suse.com/c/major-distro-upgrade-in-the-public-cloud-made-easy/) and [zypper migration fails in Azure](https://www.suse.com/support/kb/doc/?id=000019232).
+For more information, see [Major distros in the Public Cloud](https://www.suse.com/c/major-distro-upgrade-in-the-public-cloud-made-easy/) and [zypper migration fails in Azure](https://www.suse.com/support/kb/doc/?id=000019232).
 
 ## Scenario 2: Installing the "suse-migration-sles15-activation" package fails
 
@@ -118,7 +118,7 @@ To resolve this issue, follow these steps:
     ```
 
     > [!NOTE]
-    > On SLES for SAP instances, two packages should never be present: `sle-ha-release` and `sle-ha-release-POOL`. In this case, before starting the distribution migration, remove these packages by running the `sudo zypper remove sle-ha-release sle-ha-release-POOL` command.
+    > On SLES for SAP instances, two packages should never exist: `sle-ha-release` and `sle-ha-release-POOL`. In this case, before starting the distribution migration, remove these packages by running the `sudo zypper remove sle-ha-release sle-ha-release-POOL` command.
 
 2. Perform a cleanup on the system, and then re-register it:
 
@@ -152,11 +152,11 @@ To resolve this issue, follow these steps:
     sudo zypper migration
     ```
 
-For more information, see [Major Distros in Public Cloud](https://www.suse.com/c/major-distro-upgrade-in-the-public-cloud-made-easy/) and [Upgrading SUSE Linux Enterprise in the Public Cloud](https://www.suse.com/c/upgrading-suse-linux-enterprise-in-the-public-cloud/).
+For more information, see [Major Distros in the Public Cloud](https://www.suse.com/c/major-distro-upgrade-in-the-public-cloud-made-easy/) and [Upgrading SUSE Linux Enterprise in the Public Cloud](https://www.suse.com/c/upgrading-suse-linux-enterprise-in-the-public-cloud/).
 
 ## Scenario 3: After you upgrade from SLE 15 SP1 to SLE 15 SP2, Generation 2 VMs fail to boot after stopped
 
-After the Generation 2 VM is upgraded from SLES 15 SP1 to SLES 15 SP2, the VM doesn't boot after stopped from the Azure portal or by running the `init 0` or `shutdown -h` command. The following output is displayed in the serial console log or `boot.log` under the `/var/log/` directory:
+After the Generation 2 VM is upgraded from SLES 15 SP1 to SLES 15 SP2, the VM doesn't boot after it's stopped from the Azure portal or by running the `init 0` or `shutdown -h` command. The following output is displayed in the serial console log or `boot.log` under the `/var/log/` directory:
 
 ```output
 Loading Linux 5.3.18-24.49-default ...  
@@ -177,13 +177,13 @@ Press any key to continue...
 
 ### Cause
 
-After the Generation 2 VM is rebooted, stopped, or deallocated, Hyper-V in the Azure environment doesn't preserve its boot entries. This causes the SUSE Linux VM to fail to boot up.
+After the Generation 2 VM is rebooted, stopped, or deallocated, Hyper-V in the Azure environment doesn't preserve its boot entries. In this case, the SUSE Linux VM fails to boot.
 
 ### Resolution
 
 To resolve this issue, follow these steps:
 
-1. Set up the chroot environment from the affected VM OS snapshot disk on a rescue VM as described in[Chroot environment in a Linux rescue VM](chroot-environment-linux.md).
+1. Set up the chroot environment from the affected VM OS snapshot disk on a rescue VM as described in [Chroot environment in a Linux rescue VM](chroot-environment-linux.md).
 
 2. Reinstall the GRUB bootloader:
 
@@ -207,7 +207,7 @@ You can also find it in the `/var/log/messages` or `/var/log/distro-migration.lo
 
 ### Cause
 
-This error occurs because SLES migration from SLES 15 to a higher version is interrupted/stopped, or is accidentally terminated, resulting in the incomplete package updates in the system.
+This error occurs because SLES migration from SLES 15 to a later version is interrupted, stopped, or accidentally terminated, resulting in the incomplete package updates in the system.
 
 ### Resolution
 
@@ -296,7 +296,7 @@ You can also find the output in the `/var/log/messages` or `/var/log/distro-migr
 
 ### Cause
 
-The `regionService` directory moves from `/var/lib` to `/usr/lib`, but the DMS scripting only looks for the certs directory under `/var/lib` when setting up the bind mount into the ISO runtime environment.
+The `regionService` directory moves from `/var/lib` to `/usr/lib`, but the DMS scripting only looks for the `certs` directory under `/var/lib` when setting up the bind mount into the ISO runtime environment.
 
 ### Resolution
 
