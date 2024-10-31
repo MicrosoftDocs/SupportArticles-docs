@@ -54,6 +54,15 @@ Once the **LatestApplicationId** property has a GUID, run the **Set-AzStorageSyn
 
 Once the server is configured to use a system-assigned managed identity, verify the **ApplicationId** property has a GUID which indicates the server is configured to use the managed identity. The value for the **ActiveAuthType** property will be updated to **ManagedIdentity** once the server is using the system-assigned managed identity.
 
+## Unable to delete Storage Sync Service
+
+Attempting to delete a Storage Sync Service may fail with the following error: 
+
+```
+Unable to delete Storage Sync Service in region <region>. The Storage Sync Service is deleting snapshots that are no longer needed. Please try again in a few hours.
+```
+This issue occurs if your file share has unused Azure File Sync snapshots. To reduce your cost, we delete these snapshots before removing the Storage Sync Service. The snapshot count varies with dataset size. If you can't delete the Storage Sync Service after a few hours, try again the next day.
+
 ## Permissions required to access storage account and Azure file share
 
 When Azure File Sync is configured to use managed identities, your cloud and server endpoints need the following permissions to access the storage account and Azure file share:
