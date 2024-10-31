@@ -107,7 +107,7 @@ Run the tool as a domain administrator (or as an Enterprise administrator if you
    - Supports import and removal of objects from CSV import (leverage for objects not discoverable using DRSReplicaVerifyObjects).
    - Supports removal of objects by DRSReplicaVerifyObjects and LDAP rootDSE removeLingeringobjects modification.
   
-   The tool leverages the Advisory Mode method exposed by DRSReplicaVerifyObjects that the `repadmin /removelingeringobjects /Advisory_Mode` command uses. In addition to the normal Advisory Mode-related events logged on each DC, it displays each of the lingering objects within the main content pane.
+   The tool leverages the DRSReplicaVerifyObjects method (in Advisory Mode) that is used by the `repadmin /removelingeringobjects /Advisory_Mode` command. In addition to the normal Advisory Mode-related events logged on each DC, it displays each of the lingering objects within the main content pane.
 
    :::image type="content" source="media/lingering-object-liquidator-tool/lingering-objects-display.png" alt-text="Screenshot of the Lingering Object Liquidator window with the lingering objects within the main content pane displayed.":::
 
