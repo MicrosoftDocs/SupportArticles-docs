@@ -4,7 +4,7 @@ description: Troubleshoot common issues when your Azure File Sync deployment is 
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 10/30/2024
+ms.date: 10/31/2024
 ms.author: kendownie
 ---
 # Troubleshoot Azure File Sync managed identity issues
@@ -38,6 +38,7 @@ If the Set-AzStorageSyncServiceIdentity cmdlet does not configure a server to us
 
 To enable a system-assigned managed identity on a registered server that has the Azure File Sync v19 agent installed, perform the following steps:
 - If the server is hosted outside of Azure, it must be an **Azure Arc-enabled server** to have a system-assigned managed identity. For more information on Azure Arc-enabled servers and how to install the Azure Connected Machine agent, see: [Azure Arc-enabled servers Overview](/azure/azure-arc/servers/overview)
+  -   If the server is already Azure Arc-enabled, run the `azcmagent show` command from PowerShell and confirm the **Agent Status** is **Connected.** If the **Agent Status** is **Disconnected,** see: [Troubleshoot Azure Connected Machine agent connection issues](/azure/azure-arc/servers/troubleshoot-agent-onboard).
 - If the server is an Azure virtual machine, **enable the system-assigned managed identity setting on the VM**. For more information, see: [Configure managed identities on Azure virtual machines](/entra/identity/managed-identities-azure-resources/how-to-configure-managed-identities?pivots=qs-configure-portal-windows-vm#enable-system-assigned-managed-identity-on-an-existing-vm).
 
 ### How to check if your registered servers have a system-assigned managed identity
