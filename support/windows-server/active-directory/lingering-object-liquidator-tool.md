@@ -1,11 +1,11 @@
 ---
 title: Description of the Lingering Object Liquidator tool
 description: Describes the Lingering Object Liquidator (LoL) tool for finding and removing lingering objects.
-ms.date: 12/26/2023
+ms.date: 10/31/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika
+ms.reviewer: kaushika, shamilprem
 ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
 ---
 # Description of the Lingering Object Liquidator tool
@@ -56,7 +56,7 @@ Run the tool as a domain administrator (or as an Enterprise administrator if you
 
 1. In the Topology Detection section, select **Detect AD Topology**.
 
-    Detect AD Topology populates the Naming Context, Reference DC, and Target DC lists by querying the local DC. _Thorough_ detection does a more exhaustive search of all DCs and leverages DC Locator and DSBind  calls. Be aware that Thorough detection will likely fail if one or more DCs are unreachable.
+    **Detect AD Topology** populates the Naming Context, Reference DC, and Target DC lists by querying the local DC. _Thorough_ detection does a more exhaustive search of all DCs and leverages DC Locator and DSBind  calls. Be aware that Thorough detection will likely fail if one or more DCs are unreachable.
 
 2. The following are the fields on the Lingering Objects tab:
 
@@ -81,7 +81,7 @@ Run the tool as a domain administrator (or as an Enterprise administrator if you
 
    :::image type="content" source="media/lingering-object-liquidator-tool/target-dc.png" alt-text="Screenshot of the Target DC field on the Lingering Objects tab.":::
 
-3. Click **Detect Lingering Objects** to use the selected DCs for the comparison or select **Scan Entire Forest** and **Target ALL DCs** to scan entire environment.
+3. Select **Detect Lingering Objects** to use the selected DCs for the comparison or select **Scan Entire Forest** and **Target ALL DCs** to scan the entire environment.
 
     The tool does a comparison with all DCs for all partitions in a pair-wise fashion when all fields are left blank. In a large environment, this comparison will take a great deal of time (possibly even days) as the operation targets (n * (n-1)) number of DCs in the forest for all locally held partitions. For shorter, targeted operations, select a naming context, reference DC, and target DC. The reference DC must hold a writable copy of the selected naming context. Be aware that clicking Stop doesn't actually stop the server-side API, it just stops the work in the client-side tool.
 
@@ -95,8 +95,7 @@ Run the tool as a domain administrator (or as an Enterprise administrator if you
 
    If you see error 1396 or error 8440 in the status pane, you're using an early beta-preview version of the tool and should update to the latest version.
 
-    - Error 1396 is logged if the tool incorrectly used an RODC as a reference DC.
-
+    - Error 1396 is logged if the tool incorrectly uses an RODC as a reference DC.
     - Error 8440 is logged when the targeted reference DC doesn't host a writable copy of the partition.
 
    Notes about the Lingering Object Liquidator discovery method:
@@ -108,7 +107,7 @@ Run the tool as a domain administrator (or as an Enterprise administrator if you
    - Supports import and removal of objects from CSV import (leverage for objects not discoverable using DRSReplicaVerifyObjects).
    - Supports removal of objects by DRSReplicaVerifyObjects and LDAP rootDSE removeLingeringobjects modification.
   
-   The tool leverages the Advisory Mode method exposed by DRSReplicaVerifyObjects `repadmin /removelingeringobjects /Advisory_Mode`. In addition to the normal Advisory Mode-related events logged on each DC, it displays each of the lingering objects within the main content pane.
+   The tool leverages the Advisory Mode method exposed by DRSReplicaVerifyObjects that the `repadmin /removelingeringobjects /Advisory_Mode` command uses. In addition to the normal Advisory Mode-related events logged on each DC, it displays each of the lingering objects within the main content pane.
 
    :::image type="content" source="media/lingering-object-liquidator-tool/lingering-objects-display.png" alt-text="Screenshot of the Lingering Object Liquidator window with the lingering objects within the main content pane displayed.":::
 
