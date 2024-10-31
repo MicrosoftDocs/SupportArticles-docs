@@ -472,7 +472,7 @@
   - name: Can't enable Azure Disk Encryption
     href: extension-version-2.2-not-supported.md
 
-- name: Custom script extenions (CSE)
+- name: Custom script extensions (CSE)
   items:
   - name: Windows
     href: /azure/virtual-machines/extensions/custom-script-windows#troubleshoot-and-support?context=/troubleshoot/azure/virtual-machines/windows/context/context

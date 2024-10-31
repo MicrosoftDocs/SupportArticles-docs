@@ -335,8 +335,6 @@ items:
           href: setup-migrate-backup-recovery/failed-to-find-folder-or-file-error.md
         - name: Function sequence error in Smsdbmon.log
           href: setup-migrate-backup-recovery/function-sequence-error.md
-        - name: Site system installation account incorrectly used for database connection
-          href: setup-migrate-backup-recovery/site-system-installation-account-used-for-db-connection.md
         - name: SQL Server updates must be manually installed on secondary sites
           href: setup-migrate-backup-recovery/sql-cus-must-be-installed-on-secondary-sites.md
         - name: Support policies for manual database changes
@@ -443,6 +441,8 @@ items:
           href: update-management/wsus-client-long-time-finish-update-scan.md
         - name: WSUS console crashes
           href: update-management/wsus-console-crashes.md
+        - name: WSUS database maintenance
+          href: update-management/wsus-automatic-maintenance.md
         - name: WSUS maintenance guide
           href: update-management/wsus-maintenance-guide.md
         - name: WSUS sync fails in Windows Server 2008 R2

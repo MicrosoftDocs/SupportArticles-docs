@@ -138,7 +138,7 @@ When you set up a high availability solution for SQL Server on Linux, review the
 
 - [Support Policies for RHEL High Availability Clusters - Subscriptions, Support Services, and Software Access](https://access.redhat.com/articles/3290191)
 
-- [SUSE Linux Enterprise High Availability Extension](https://documentation.suse.com/sle-ha/12-SP4/#redirectmsg)
+- [SUSE Linux Enterprise High Availability Extension](https://www.suse.com/products/highavailability/)
 
 For supported high availability solution in SQL Server on Linux, see [Business continuity and database recovery - SQL Server on Linux](/sql/linux/sql-server-linux-business-continuity-dr).
 
