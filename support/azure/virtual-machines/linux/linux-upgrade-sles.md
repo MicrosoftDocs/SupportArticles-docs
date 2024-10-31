@@ -196,7 +196,7 @@ For more information, see [grub2 error: symbol 'grub_file_filters' not found](ht
 
 ## Scenario 4: Migration from SLES 15 to SLES 15 SP3 fails
 
-The migration fails from SLES 15 to SLES 15 SP3 and you get the following output:
+The migration fails from SLES 15 to SLES 15 SP3, and you get the following output:
 
 ```output
 Can't get available migrations from server: SUSE::Connect::ApiError: The requested products 'SUSE Linux Enterprise High Availability Extension 15 SP1 x86_64, Basesystem Module 15 SP1 x86_64, SUSE Cloud Application Platform Tools Module 15 SP1 x86_64, Containers Module 15 SP1 x86_64, Desktop Applications Module 15 SP1 x86_64, Development Tools Module 15 SP1 x86_64, Legacy Module 15 SP1 x86_64, Public Cloud Module 15 SP1 x86_64, Python 2 Module 15 SP1 x86_64, SAP Applications Module 15 SP1 x86_64, Server Applications Module 15 SP1 x86_64, Web and Scripting Module 15 SP1 x86_64, Transactional Server Module 15 SP1 x86_64' are not activated on the system.
@@ -270,7 +270,7 @@ To resolve this issue, follow these steps:
 
 ## Scenario 7: Migration from SLES 12 SP5 to SLES 15 SP1 fails due to the regionService directory issue
 
-The migration fails from SLES 12 SP5 to SLES 15 SP1 and you get the following output:
+The migration fails from SLES 12 SP5 to SLES 15 SP1, and you get the following output:
 
 ````output
 Skipping repository 'SLE-Module-Containers12-Updates' because of the above error.
@@ -351,7 +351,7 @@ For more information, see [SLES 12 SP5 Distribution Migration System (DMS) faile
 
 ## Scenario 8: Migration fails due to an unknown folder in the /etc/pki/trust/anchors directory
 
-Migration from SLES 12 SP5 to SLES 15 SP1 fails and the following error messages are displayed in the `/var/log/distro_migration.log` file:
+Migration from SLES 12 SP5 to SLES 15 SP1 fails, and the following error messages are displayed in the `/var/log/distro_migration.log` file:
 
 ````output
 Mar 11 13:39:15 localhost suse-migration-prepare[1510]: IsADirectoryError: [Errno 21] Is a directory: '/system-root/etc/pki/trust/anchors/temp'
@@ -460,7 +460,7 @@ To resolve this issue, follow these steps:
 
 ## Scenario 10: SLES 15 migration fails from SP3 to SP4 with invalid credentials and repository rrors
 
-The SLES 15 migration from SP3 to SP4 fails and you get the following output:
+The SLES 15 migration from SP3 to SP4 fails, and you get the following output:
 
 ```bash
 sudo SUSEConnect -S
