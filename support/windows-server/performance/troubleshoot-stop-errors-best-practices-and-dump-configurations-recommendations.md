@@ -104,7 +104,7 @@ This recommendation depends on the size of the system as the RAM and the hard di
 ### Systems memory up to 32 GB
 
 1. Ensure that page file is set to RAM + 300 MB.
-2. Ensure that the system is set to a complete dump. See [Overview of memory dump file options for Windows](memory-dump-file-options.md):  
+2. Ensure that the system is set to a [complete dump](memory-dump-file-options.md#complete-memory-dump):
    Navigate to `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\CrashControl`, and set **CrashDumpEnabled** to **0x1**.
 
 Ensure that you have enough disk space for the Pagefile + memory.dmp
@@ -112,7 +112,7 @@ Ensure that you have enough disk space for the Pagefile + memory.dmp
 ### Systems memory over 32 GB
 
 1. Ensure that page file is set to **System Managed**.
-2. Ensure that the system is set to an automatic memory dump. See [Overview of memory dump file options for Windows](memory-dump-file-options.md):  
+2. Ensure that the system is set to an [automatic memory dump](/windows-hardware/drivers/debugger/automatic-memory-dump):
    Navigate to `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\CrashControl` registry key, and set **CrashDumpEnabled** to **0x7**.
 
 Normally, a kernel memory dump is smaller than 40 GB in most of the cases. The automatic dump in combination of a system managed page file is trying to ensure that the hard disk requirements are kept at a minimum. You still need to ensure that you have enough disk space for the Pagefile and the memory.dmp file.
