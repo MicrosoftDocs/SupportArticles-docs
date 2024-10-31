@@ -1809,7 +1809,7 @@ items:
       href: ./performance/toggle-terminal-services-application-server-mode.md
     - name: Troubleshoot the "STOP 0xC000021A" error
       href: ./performance/troubleshoot-stop-0xc000021a-error.md
-    - name: 'Troubleshoot stop errors: Best practices and dump configurations'
+    - name: 'Troubleshoot stop errors: Best practices and dump configurations recommendations'
       href: ./performance/troubleshoot-stop-errors-best-practices-and-dump-configurations-recommendations.md
     - name: Troubleshoot unexpected reboots using system event logs
       href: ./performance/troubleshoot-unexpected-reboots-system-event-logs.md
