@@ -2,7 +2,7 @@
 title: Troubleshoot SLES migration issues 
 description: Provides solutions to issues that occur while you perform SUSE Linux Enterprise server migrations.
 ms.service: azure-virtual-machines
-ms.date: 10/22/2024
+ms.date: 10/31/2024
 ms.reviewer: divargas, rnirek, v-weizhu
 ms.custom: sap:Issue with OS Upgrade
 ---                                                                                                                      
@@ -154,9 +154,9 @@ To resolve this issue, follow these steps:
 
 For more information, see [Major Distros in Public Cloud](https://www.suse.com/c/major-distro-upgrade-in-the-public-cloud-made-easy/) and [Upgrading SUSE Linux Enterprise in the Public Cloud](https://www.suse.com/c/upgrading-suse-linux-enterprise-in-the-public-cloud/).
 
-## Scenario 3: After you upgrade from SLE 15 SP1 to SLE 15 SP2, Generation 2 VMs fail to boot when stopped
+## Scenario 3: After you upgrade from SLE 15 SP1 to SLE 15 SP2, Generation 2 VMs fail to boot after stopped
 
-After the Generation 2 VM is upgraded from SLES 15 SP1 to SLES 15 SP2, the VM doesn't boot when stopped from the Azure portal or by running the `init 0` or `shutdown -h` command. The following output is displayed in the serial console log or `boot.log` under the `/var/log/` directory:
+After the Generation 2 VM is upgraded from SLES 15 SP1 to SLES 15 SP2, the VM doesn't boot after stopped from the Azure portal or by running the `init 0` or `shutdown -h` command. The following output is displayed in the serial console log or `boot.log` under the `/var/log/` directory:
 
 ```output
 Loading Linux 5.3.18-24.49-default ...  
@@ -207,7 +207,7 @@ You can also find it in the `/var/log/messages` or `/var/log/distro-migration.lo
 
 ### Cause
 
-This error occurs because SLES migration from SLES 15 to a higher version is interrupted/stopped midway, or is accidentally terminated, resulting in the incomplete package updates in the system.
+This error occurs because SLES migration from SLES 15 to a higher version is interrupted/stopped, or is accidentally terminated, resulting in the incomplete package updates in the system.
 
 ### Resolution
 
@@ -458,7 +458,7 @@ To resolve this issue, follow these steps:
     sudo SUSEConnect --status
     ```
 
-## Scenario 10: SLES 15 Migration Fails from SP3 to SP4: Invalid Credentials and Repository Errors
+## Scenario 10: SLES 15 migration fails from SP3 to SP4 with invalid credentials and repository rrors
 
 The SLES 15 migration from SP3 to SP4 fails and you get the following output:
 
@@ -490,7 +490,7 @@ You can also find the outputs in the `/var/log/messages` or `/var/log/distro-mig
 
 ### Cause
 
-The certification module is present, which causes  the migration to fail.
+The migration fails because the certification module exists.
 
 ### Resolution
 
