@@ -71,10 +71,14 @@ landingContent:
             url: mobile-app/duplicate-inspection-responses.md
           - text: Incorrect or missing data in offline mode
             url: mobile-app/incorrect-missing-data-offline-mode.md
+          - text: Settings area is missing in the Field Service Mobile app module navigation
+            url: mobile-app/settings-area-missing.md
           - text: Troubleshoot issues with publishing a mobile offline profile
             url: mobile-app/publish-mobile-offline-profile.md
           - text: '"Validations have been restarted in the background" error'
             url: mobile-app/validation-restarted-background.md
+          - text: WebView reset error
+            url: mobile-app/newux-webview-reset.md
 
   # Card
   - title: Mobile app - new experience
@@ -85,14 +89,10 @@ landingContent:
             url: mobile-app/newux-error-on-start-permission.md
           - text: Error on start due to missing files in the solution
             url: mobile-app/newux-error-on-start-missing-files.md
-          - text: Settings area is missing in the Field Service Mobile app module navigation
-            url: mobile-app/newux-settings-missing.md
           - text: The new experience doesn't show after enabling it in settings
             url: mobile-app/newux-doesnot-load.md
           - text: The new experience doesn't show dashboards from the navigation
             url: mobile-app/newux-doesnot-show-dashboards.md
-          - text: WebView reset error
-            url: mobile-app/newux-webview-reset.md
   
   # Card
   - title: Resource Scheduling Optimization Add-in for Field Service
