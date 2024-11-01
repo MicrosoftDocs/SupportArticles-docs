@@ -4,15 +4,14 @@ description: Troubleshoot common issues when your Azure File Sync deployment is 
 ms.service: azure-file-storage
 ms.topic: troubleshooting
 ms.date: 10/31/2024
+author: khdownie
 ms.author: kendownie
 ---
 # Troubleshoot Azure File Sync managed identity issues
 
 This article helps you troubleshoot and resolve issues that you might encounter when using a managed identity with Azure File Sync. 
 
-## Troubleshooting checklist
-
-### Check if the Storage Sync Service uses a system-assigned managed identity
+## Check if the Storage Sync Service uses a system-assigned managed identity
 
 To check if the Storage Sync Service uses a system-assigned managed identity, run the following command from an elevated PowerShell window:
 
@@ -22,7 +21,7 @@ Get-AzStorageSyncService -ResourceGroupName <string> -StorageSyncServiceName <st
 
 Verify the value of the `UseIdentity` property is `True` from the command output. If the value is `False`, the Storage Sync Service uses shared keys to authenticate to Azure file shares.
 
-### Check if a registered server is configured to use a system-assigned managed identity
+## Check if a registered server is configured to use a system-assigned managed identity
 
 To check if a registered server is configured to use a system-assigned managed identity, run the following command from an elevated PowerShell window:
 
@@ -35,7 +34,7 @@ Verify the `ApplicationId` property has a GUID which indicates that the server i
 > [!NOTE]
 > Once a server is configured to use a system-assigned managed identity, it can take up to one hour before the server uses the system-assigned managed identity to authenticate to the Storage Sync Service and Azure file shares.
 
-#### Set-AzStorageSyncServiceIdentity cmdlet doesn't configure a server to use a system-assigned managed identity
+## Set-AzStorageSyncServiceIdentity cmdlet doesn't configure a server to use a system-assigned managed identity
 
 If running the `Set-AzStorageSyncServiceIdentity` cmdlet doesn't configure a registered server to use a system-assigned managed identity, it's likely because the server doesn't have a system-assigned managed identity.
 
@@ -46,7 +45,7 @@ To enable a system-assigned managed identity on a registered server that has the
   - If the server is already Azure Arc-enabled, run the `azcmagent show` command from PowerShell and confirm the **Agent Status** is **Connected**. If the **Agent Status** is **Disconnected**, [troubleshoot Azure Connected Machine agent connection issues](/azure/azure-arc/servers/troubleshoot-agent-onboard)。
 - If the server is an Azure virtual machine, [enable a system-assigned managed identity on the virtual machine](/entra/identity/managed-identities-azure-resources/how-to-configure-managed-identities#enable-system-assigned-managed-identity-on-an-existing-vm).
 
-### Check if a registered server has a system-assigned managed identity
+## Check if a registered server has a system-assigned managed identity
 
 To check if a registered server has a system-assigned managed identity, run the following PowerShell command:
 
@@ -58,13 +57,13 @@ Verify the `LatestApplicationId` property has a GUID which indicates that the se
 
 If the `LatestApplicationId` property has a GUID, run the `Set-AzStorageSyncServiceIdentity` cmdlet again to configure the server to use a system-assigned managed identity. Verify the `ApplicationId` property has a GUID which indicates that the server is configured to use the managed identity. Once the server uses the system-assigned managed identity, the value of the `ActiveAuthType` property is updated to `ManagedIdentity`.
 
-## Unable to delete Storage Sync Service
+## Unable to delete a Storage Sync Service
 
-Attempting to delete a Storage Sync Service may fail with the following error: 
+When you try to delete a Storage Sync Service, you might get the following error: 
 
 > Unable to delete Storage Sync Service in region \<region>. The Storage Sync Service is deleting snapshots that are no longer needed. Please try again in a few hours.
 
-This issue occurs if your file share has unused Azure File Sync snapshots. To reduce your cost, we delete these snapshots before removing the Storage Sync Service. The snapshot count varies with dataset size. If you can't delete the Storage Sync Service after a few hours, try again the next day.
+This issue occurs when your file share has unused Azure File Sync snapshots. To reduce your cost, the unused snapshots will be deleted before removing the Storage Sync Service. The snapshot count varies with the dataset size. If you can't delete the Storage Sync Service after a few hours, try again the next day.
 
 ## Permissions required to access storage account and Azure file share
 
@@ -79,7 +78,9 @@ Server endpoint:
 
 When you run the `Set-AzStorageSyncServiceIdentity` cmdlet or create new cloud and server endpoints, these permissions are granted. If these permissions are removed, operations will fail with the errors listed in the following section.
 
-## Common issues when permissions or configuration settings are incorrect
+## Common issues
+
+This section covers common issues that occur when permissions or configuration settings are incorrect.
 
 ### Sync fails with error 0x80c8305f (ECS_E_EXTERNAL_STORAGE_ACCOUNT_AUTHORIZATION_FAILED)
 
