@@ -44,4 +44,48 @@ To save the storage in ACR, layers referenced by multiple different manifests ar
 
 Based on the preceding screenshot, if you delete image B, the manifest and manifest digest will be cleaned up. At the layer level, only layer 4 will be deleted, and layers 1 and 2 will remain in the ACR storage as another manifest still references them. Hence, the storage reduction will be less than expected.
 
+## Issue 4: Disallowed error when deleting ACR repo
+
+- Get below error when trying to delete ACR repo 
+
+  > *<u>The operation is disallowed on this registry, repository or image.</u>*
+
+
+- Cause: This error occurs because there are some lock in your repo/manifest/image layer. We could leverage below command to check where has the lock:
+1. Check if any lock in the repo level.   ###If "writeEnabled" is "false", it means it has been locked.
+
+```
+az acr repository show \ --name myregistry --repository myrepo \ --output jsonc
+```
+
+2. Check if any lock In the repo manifest digest level:
+
+```
+az acr manifest list-metadata -r myregistry -n hello-world      ###List the metadata of the manifests in the repository 'hello-world'.
+```
+
+3. Check if any lock In the repo image tag level:
+
+```
+az acr repository show --name acrname --image imagename:tag --output jsonc
+```
+- Mitigation: we could leverage below command to change the "write-enabled" to "false" to mitigate. 
+
+1. Delete lock in the repo level: 
+
+```
+az acr repository update --name myregistry --repository hello-world --write-enabled true
+```
+
+2. Delete lock in the manifest level:
+
+```
+az acr repository update --name myregistry --image myrepo@sha256:123456abcdefg --write-enabled true
+```
+
+3. Delete lock in the image tag level:
+```
+az acr repository update --name myregistry --image hello-world:latest --write-enabled true
+```
+
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
