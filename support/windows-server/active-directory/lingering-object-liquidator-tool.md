@@ -129,7 +129,7 @@ Run the tool as a domain administrator (or as an Enterprise administrator if you
 
    :::image type="content" source="media/lingering-object-liquidator-tool/lol-remove-status.png" alt-text="Screenshot of the status bar of the Lingering Object Liquidator.":::
 
-    The tool dumps a list of attributes for each object before removal and logs this along with the results of the object removal in the *removedLingeringObjects.log.txt* log file. This log file is in the same location as the tool's executable.: *C:\tools\LingeringObjects\removedLingeringObjects\<DATE-TIMEStamp>.log.txt*.
+    The tool dumps a list of attributes for each object before removal and logs this along with the results of the object removal in the *removedLingeringObjects.log.txt* log file. This log file is in the same location as the tool's executable: *C:\tools\LingeringObjects\removedLingeringObjects\<DATE-TIMEStamp>.log.txt*.
 
     Example contents of the log file:
 
