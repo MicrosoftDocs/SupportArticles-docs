@@ -5486,6 +5486,11 @@
         "redirect_document_id": false
       },
       {
+        "source_path": "virtual-machines/linux/linux-upgrade-suse-15sp1.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/linux-upgrade-sles",
+        "redirect_document_id": true
+      },
+      {
         "source_path": "entra/entra-id/dir-dmns-obj/faq-set-up-enterprise-work-remotely.yml",
         "redirect_url": "/troubleshoot/entra/entra-id/dir-dmns-obj/faq-set-up-enterprise-work-remotely",
         "redirect_document_id": true
