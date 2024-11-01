@@ -1,7 +1,7 @@
 ---
 title: 'Troubleshoot stop errors: Best practices and dump configurations'
 description: Introduces what happens during a stop error and best practices for preventing and troubleshooting stop error issues.
-ms.date: 10/31/2024
+ms.date: 11/01/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -40,9 +40,9 @@ During the stop error phase, the OS displays this blue status screen. (This is w
 
 :::image type="content" source="media/troubleshoot-stop-errors-best-practices-dump-configuration-recommendations/blue-screen.png" alt-text="Screenshot of the blue screen.":::
 
-In the screenshot, you can see the specific stop code in the red rectangle 1. This stop code can help you identify the first step by checking the [Bug Check Code Reference](/windows-hardware/drivers/debugger/bug-check-code-reference2). In Windows, there are over 300 different stop codes, and each is documented in detail in the reference article.
+In the screenshot, you can see the specific stop code in the black rectangle 1. This stop code can help you identify the first step by checking the [Bug Check Code Reference](/windows-hardware/drivers/debugger/bug-check-code-reference2). In Windows, there are over 300 different stop codes, and each is documented in detail in the reference article.
 
-In the red rectangle 2, you can see the progress of moving RAM to the page file. This operation is based on the configuration in CrashControl that is read during the boot of the system.
+In the black rectangle 2, you can see the progress of moving RAM to the page file. This operation is based on the configuration in CrashControl that is read during the boot of the system.
 
 On large systems, this process can take some time. A specific scenario can be used to explain this.
 
@@ -56,7 +56,7 @@ Imagine that you have a system that has 1,024 GB of RAM. A typical hard disk dri
 > [!NOTE]
 > In a physical system, the computer Basic Input-Output System (BIOS) might have the Automated System Recovery (ASR) feature. This feature periodically checks if Windows is running. When the check fails, the feature initiates a power reset to recover the system. This behavior interrupts the dump process because Windows and its services no longer run during phase 2.
 
-In the red rectangle 3, you can see a potential hint about what was involved in the crash. If the message is about a driver or software, checking for an update is a valid option.
+In the black rectangle 3, you can see a potential hint about what was involved in the crash. If the message is about a driver or software, checking for an update is a valid option.
 
 Once the process of moving RAM to the page file is complete, the page file is marked as a dump. In the final step, the system restarts (based on the configuration) to complete phase 2 and go to phase 3.
 
