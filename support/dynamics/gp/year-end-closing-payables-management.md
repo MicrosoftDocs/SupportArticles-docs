@@ -2,7 +2,7 @@
 title: Year-end closing for Payables Management
 description: Describes how to do the year-end closing routine in Payables Management in Microsoft Dynamics GP.
 ms.reviewer: theley
-ms.date: 10/28/2024
+ms.date: 11/01/2024
 ms.custom: sap:Financial - Payables Management
 ---
 # Year-end closing procedures for the Payables Management module in Microsoft Dynamics GP
@@ -185,9 +185,9 @@ To print the 1099 edit list, follow these steps:
 
 3. Select the printer icon in the upper-right corner to print the 1099 edit list. Review for accuracy.
 
-4. If you need to edit any 1099 information, use one of the following methods. Method 1 is recommended for Microsoft Dynamics GP 2013 and higher versions. Method 1 and Method 2 are also illustrated in [Editing made EASY for 1099s in Microsoft Dynamics GP](https://community.dynamics.com/blogs/post/?postid=487c4288-7473-47de-a4e7-221c26a2adc6).
+4. If you need to edit any 1099 information, use one of the following methods. Method 1 is recommended for Microsoft Dynamics GP 2013 and later versions. Method 1 and Method 2 are also illustrated in [Editing made EASY for 1099s in Microsoft Dynamics GP](https://community.dynamics.com/blogs/post/?postid=487c4288-7473-47de-a4e7-221c26a2adc6).
 
-**Method 1:** (Recommended) Edit 1099 Transaction details (Applies to Microsoft Dynamics GP 2013 and higher versions)
+**Method 1:** (Recommended) Edit 1099 Transaction details (Applies to Microsoft Dynamics GP 2013 and later versions)
 
 1. Select **Transactions**, point to **Purchasing**, and select **Edit 1099 Transaction Information**.
 
@@ -200,7 +200,7 @@ To print the 1099 edit list, follow these steps:
 5. The vendor's transaction detail populates in the bottom of the window. For each transaction, you can edit the **Tax Type**, **Box Number**, and **Amount** on open and historical transactions.
 
    > [!NOTE]
-   > You may not enter a higher 1099 amount than the total amount of the document.
+   > You may not enter a larger 1099 amount than the total amount of the document.
 
 6. Select **Process** to have the changes made and the 1099 is updated.
 
@@ -218,7 +218,7 @@ If you mark a vendor as 1099able and shouldn't have, or you forget to mark a ven
 
     - _To change a vendor to not be 1099able_: Select the current Tax Type and 1099 Box Number that is selected on the **Vendor Maintenance Options** window for the vendor in the **FROM** section, and select **Not a 1099 Vendor** in the **TO** section.
 
-    *If **Not a 1099 Vendor** isn't an option in the drop-down lists, then either you aren't on a GP version higher than Microsoft Dynamics GP 2013, or you didn't select Vendor and 1099 Transactions as instructed in step 2.
+    *If **Not a 1099 Vendor** isn't an option in the drop-down lists, then either you aren't on a GP version later than Microsoft Dynamics GP 2013, or you didn't select Vendor and 1099 Transactions as instructed in step 2.
 
 4. Use the Range restriction to restrict to the Vendor ID that you wish to change and select **INSERT**.
 
@@ -281,7 +281,7 @@ The following table provides additional information about the fields on the 1099
 |Payers Federal Identification number|The **Print 1099** window|
 |Recipients name, address, and Zip Code/Postal Code| The **Primary Address** of the **Vendor Maintenance** window|
 |Recipients identification number| The **Tax ID** field of the **Vendor Maintenance Options** window|
-|Amounts for boxes 1-9 on the Dividend Form or 1-16 on the Miscellaneous Form| The **1099 Amount** field in the **Vendor Yearly Summary** window.|
+|Amounts for boxes 1-9 on the Dividend Form or 1-16 on the Miscellaneous Form| The **1099 Amount** field in the **Vendor Yearly Summary** window|
   
 Microsoft Dynamics GP doesn't handle electronic filing for 1099s. For more information, see [more options to prepare for the 1099 electronic submission](https://community.dynamics.com/blogs/post/?postid=2246f6af-3f2a-4faf-9da5-544613326c20).
 
