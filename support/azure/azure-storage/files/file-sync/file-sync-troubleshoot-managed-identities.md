@@ -2,8 +2,9 @@
 title: Troubleshoot Azure File Sync managed identity issues
 description: Troubleshoot common issues when your Azure File Sync deployment is configured to use managed identities.
 ms.service: azure-file-storage
-ms.date: 10/30/2024
-ms.reviewer: kendownie, v-weizhu
+ms.topic: troubleshooting
+ms.date: 10/31/2024
+ms.author: kendownie
 ---
 # Troubleshoot Azure File Sync managed identity issues
 
@@ -40,10 +41,9 @@ If running the `Set-AzStorageSyncServiceIdentity` cmdlet doesn't configure a reg
 
 To enable a system-assigned managed identity on a registered server that has the Azure File Sync v19 agent installed, perform the following steps:
 
-- If the server is hosted outside of Azure, it must be an Azure Arc-enabled server to have a system-assigned managed identity. 
+- If the server is hosted outside of Azure, it must be an Azure Arc-enabled server to have a system-assigned managed identity. For more information about Azure Arc-enabled servers and how to install the Azure Connected Machine agent, see [Azure Arc-enabled servers Overview](/azure/azure-arc/servers/overview).
 
-    For more information about Azure Arc-enabled servers and how to install the Azure Connected Machine agent, see [Azure Arc-enabled servers Overview](/azure/azure-arc/servers/overview).
-
+  - If the server is already Azure Arc-enabled, run the `azcmagent show` command from PowerShell and confirm the **Agent Status** is **Connected**. If the **Agent Status** is **Disconnected**, [troubleshoot Azure Connected Machine agent connection issues](/azure/azure-arc/servers/troubleshoot-agent-onboard)。
 - If the server is an Azure virtual machine, [enable a system-assigned managed identity on the virtual machine](/entra/identity/managed-identities-azure-resources/how-to-configure-managed-identities#enable-system-assigned-managed-identity-on-an-existing-vm).
 
 ### Check if a registered server has a system-assigned managed identity
@@ -58,7 +58,15 @@ Verify the `LatestApplicationId` property has a GUID which indicates that the se
 
 If the `LatestApplicationId` property has a GUID, run the `Set-AzStorageSyncServiceIdentity` cmdlet again to configure the server to use a system-assigned managed identity. Verify the `ApplicationId` property has a GUID which indicates that the server is configured to use the managed identity. Once the server uses the system-assigned managed identity, the value of the `ActiveAuthType` property is updated to `ManagedIdentity`.
 
-## Permissions required to access a storage account and Azure file share
+## Unable to delete Storage Sync Service
+
+Attempting to delete a Storage Sync Service may fail with the following error: 
+
+> Unable to delete Storage Sync Service in region \<region>. The Storage Sync Service is deleting snapshots that are no longer needed. Please try again in a few hours.
+
+This issue occurs if your file share has unused Azure File Sync snapshots. To reduce your cost, we delete these snapshots before removing the Storage Sync Service. The snapshot count varies with dataset size. If you can't delete the Storage Sync Service after a few hours, try again the next day.
+
+## Permissions required to access storage account and Azure file share
 
 When Azure File Sync is configured to use a managed identity, your cloud and server endpoints need the following permissions to access a storage account and Azure file share:
 
