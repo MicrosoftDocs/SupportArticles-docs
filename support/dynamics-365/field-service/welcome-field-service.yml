@@ -47,8 +47,6 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Can't change Time Series Insights instance
-            url: iot/change-time-series-insights-instance.md
           - text: IoT Edge modules data is aggregated in charts
             url: iot/edge-module-data-aggregated.md
           - text: No records after pulling IoT device data
