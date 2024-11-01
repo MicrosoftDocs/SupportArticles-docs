@@ -133,20 +133,20 @@ Run the tool as a domain administrator (or as an Enterprise administrator if you
 
     Example contents of the log file:
 
-    > the obj DN: <GUID=0bb376aa1c82a348997e5187ff012f4a>;  <SID=010500000000000515000000609701d7b0ce8f6a3e529d669f040000>;CN=\<CN_Name\>,OU=\<OU_Name\>,DC=root,DC=contoso,DC=com  
+    > the obj DN: <GUID=<GUID>>;  <SID=<SID>>;CN=\<CN_Name\>,OU=\<OU_Name\>,DC=root,DC=contoso,DC=com  
     objectClass:top, person, organizationalPerson, user;  
     sn:Schenk;  
     whenCreated:20121126224220.0Z;  
     name:\<CN_Name\>;  
-    objectSid:S-1-5-21-3607205728-1787809456-1721586238-1183;primaryGroupID:513;  
+    objectSid:<SID>;primaryGroupID:513;  
     sAMAccountType:805306368;  
     uSNChanged:32958;  
-    objectCategory:<GUID=11ba1167b1b0af429187547c7d089c61>;CN=Person,CN=Schema,CN=Configuration,DC=root,DC=contoso,DC=com;  
+    objectCategory:<GUID=<GUID>>;CN=Person,CN=Schema,CN=Configuration,DC=root,DC=contoso,DC=com;  
     whenChanged:20121126224322.0Z;  
     cn:\<CN_Name\>;  
     uSNCreated:32958;  
     l:Boulder;  
-    distinguishedName:<GUID=0bb376aa1c82a348997e5187ff012f4a>;  <SID=010500000000000515000000609701d7b0ce8f6a3e529d669f040000>;CN=\<CN_Name\>,OU=\<OU_Name\>,DC=root,DC=contoso,DC=com;  
+    distinguishedName:<GUID=<GUID>>;  <SID=<SID>>;CN=\<CN_Name\>,OU=\<OU_Name\>,DC=root,DC=contoso,DC=com;  
     displayName:\<CN_Name\>;  
     st:Colorado;  
     dSCorePropagationData:16010101000000.0Z;  
@@ -155,8 +155,8 @@ Run the tool as a domain administrator (or as an Enterprise administrator if you
     instanceType:0;  
     sAMAccountName:\<Account_Name\>;  
     userAccountControl:650;  
-    objectGUID:aa76b30b-821c-48a3-997e-5187ff012f4a;  
-    value is   :<GUID=70ff33ce-2f41-4bf4-b7ca-7fa71d4ca13e>:<GUID=aa76b30b-821c-48a3-997e-5187ff012f4a>
+    objectGUID:<GUID>;  
+    value is   :<GUID=<GUID>>:<GUID=<GUID>>
     Lingering Obj CN=\<CN_Name\>,OU=\<OU_Name\>,DC=root,DC=contoso,DC=com is removed from the directory, mod response result code = Success  
     \---------------------------------------------  
     RemoveLingeringObject returned Success
