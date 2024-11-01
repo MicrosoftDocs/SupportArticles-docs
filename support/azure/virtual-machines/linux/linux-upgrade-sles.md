@@ -2,7 +2,7 @@
 title: Troubleshoot SLES migration issues 
 description: Provides solutions to issues that occur while you perform SUSE Linux Enterprise server migrations.
 ms.service: azure-virtual-machines
-ms.date: 10/31/2024
+ms.date: 11/01/2024
 ms.reviewer: divargas, rnirek, v-weizhu
 ms.custom: sap:Issue with OS Upgrade
 ---                                                                                                                      
