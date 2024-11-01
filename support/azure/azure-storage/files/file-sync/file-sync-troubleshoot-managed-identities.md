@@ -9,7 +9,7 @@ ms.author: kendownie
 ---
 # Troubleshoot Azure File Sync managed identity issues
 
-This article helps you troubleshoot and resolve issues that you might encounter when using a managed identity with Azure File Sync. 
+This article helps you troubleshoot and resolve issues that you might encounter when using a managed identity with an Azure File Sync deployment. 
 
 ## Check if the Storage Sync Service uses a system-assigned managed identity
 
@@ -65,7 +65,7 @@ When you try to delete a Storage Sync Service, you might get the following error
 
 This issue occurs when your file share has unused Azure File Sync snapshots. To reduce your cost, the unused snapshots will be deleted before removing the Storage Sync Service. The snapshot count varies with the dataset size. If you can't delete the Storage Sync Service after a few hours, try again the next day.
 
-## Permissions required to access storage account and Azure file share
+## Permissions required to access a storage account and Azure file share
 
 When Azure File Sync is configured to use a managed identity, your cloud and server endpoints need the following permissions to access a storage account and Azure file share:
 
