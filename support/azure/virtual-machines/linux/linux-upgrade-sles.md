@@ -45,7 +45,7 @@ You can check the generation version by using one of the following methods:
  
 - In the [Azure portal](https://portal.azure.com), go to the VM **Properties**, and then check the **VM generation** field as shown:
 
-    :::image type="content" source="media/linux-upgrade-sles/vm-generation-property.png" alt-text="Screenshot that shows the 'VM generation' property." lightbox="media/linux-upgrade-sles/vm-generation-property.png":::
+    :::image type="content" source="media/linux-upgrade-sles/vm-generation-property.png" alt-text="Screenshot that shows the 'VM generation' property.":::
 
 ## Scenario 1: Migration from SLES 12 to SLES 15 succeeds, but upgrade from SLES 15 SP1 to SP2 fails
 
