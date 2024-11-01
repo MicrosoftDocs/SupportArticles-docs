@@ -1,7 +1,7 @@
 ---
 title: Description of the Lingering Object Liquidator tool
 description: Describes the Lingering Object Liquidator (LoL) tool for finding and removing lingering objects.
-ms.date: 10/31/2024
+ms.date: 11/01/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -47,7 +47,7 @@ The [Lingering Object Liquidator](https://techcommunity.microsoft.com/t5/ask-the
 
 #### Lingering object detection
 
-Run the tool as a domain administrator (or as an Enterprise administrator if you want to scan the entire forest). To do this follow these steps.
+Run the tool as a domain administrator (or as an Enterprise administrator if you want to scan the entire forest). To do this, follow these steps.
 
 > [!NOTE]
 > You will receive error 8453 if the tool isn't run as elevated.
@@ -56,17 +56,17 @@ Run the tool as a domain administrator (or as an Enterprise administrator if you
 
 1. In the Topology Detection section, select **Detect AD Topology**.
 
-    **Detect AD Topology** populates the Naming Context, Reference DC, and Target DC lists by querying the local DC. _Thorough_ detection does a more exhaustive search of all DCs and leverages DC Locator and DSBind  calls. Be aware that Thorough detection will likely fail if one or more DCs are unreachable.
+    **Detect AD Topology** populates the **Naming Context**, **Reference DC**, and **Target DC** lists by querying the local DC. _Thorough_ detection does a more exhaustive search of all DCs and leverages DC Locator and DSBind calls. Be aware that Thorough detection will likely fail if one or more DCs are unreachable.
 
 2. The following are the fields on the Lingering Objects tab:
 
-    Naming Context
+    **Naming Context**
 
    It contains each Active Directory naming context in the forest.
 
    :::image type="content" source="media/lingering-object-liquidator-tool/naming-context.png" alt-text="Screenshot of the Naming Context field on the Lingering Objects tab.":::
 
-    Reference DC
+    **Reference DC**
 
     This is the DC you'll compare to the target DC. The reference DC hosts a writeable copy of the partition.
 
@@ -75,13 +75,13 @@ Run the tool as a domain administrator (or as an Enterprise administrator if you
     > [!NOTE]
     > All DCs in the forest are displayed even if they are unsuitable as reference DCs (ChildDC2 is an RODC and is not a valid Reference DC since it doesn't host a writable copy of a DC).
 
-    Target DC
+    **Target DC**
 
    The target DC that lingering objects are to be removed from.
 
    :::image type="content" source="media/lingering-object-liquidator-tool/target-dc.png" alt-text="Screenshot of the Target DC field on the Lingering Objects tab.":::
 
-3. Select **Detect Lingering Objects** to use the selected DCs for the comparison or select **Scan Entire Forest** and **Target ALL DCs** to scan the entire environment.
+3. Select **Detect Lingering Objects** to use the selected DCs for the comparison, or select **Scan Entire Forest** and **Target ALL DCs** to scan the entire environment.
 
     The tool does a comparison with all DCs for all partitions in a pair-wise fashion when all fields are left blank. In a large environment, this comparison will take a great deal of time (possibly even days) as the operation targets (n * (n-1)) number of DCs in the forest for all locally held partitions. For shorter, targeted operations, select a naming context, reference DC, and target DC. The reference DC must hold a writable copy of the selected naming context. Be aware that clicking Stop doesn't actually stop the server-side API, it just stops the work in the client-side tool.
 
@@ -89,7 +89,7 @@ Run the tool as a domain administrator (or as an Enterprise administrator if you
 
    During the scan, several buttons are disabled, and the status box contains diagnostics and operational messages from the Lingering Object Liquidator tool. During this execution phase, the tool is running in an advisory mode and reading the event log data that's reported on each target DC.
 
-   When the scan is complete, the status bar updates, buttons are re-enabled, and total count of lingering objects is displayed. The Status box will display all the information, warnings, and errors that occurred during the scan.
+   When the scan is complete, the status bar updates, buttons are re-enabled, and the total count of lingering objects is displayed. The status box displays all the information, warnings, and errors that occurred during the scan.
 
    :::image type="content" source="media/lingering-object-liquidator-tool/current-lingering-objects-number.png" alt-text="Screenshot of the Lingering Object Liquidator window with the current count of lingering objects displayed on the status bar.":::
 
@@ -100,9 +100,9 @@ Run the tool as a domain administrator (or as an Enterprise administrator if you
 
    Notes about the Lingering Object Liquidator discovery method:
 
-   - Leverages DRSReplicaVerifyObjects method in Advisory Mode.
+   - Leverages the DRSReplicaVerifyObjects method in Advisory Mode.
    - Runs for all DCs and all partitions.
-   - Collects lingering object event ID 1946 and displays objects in main content pane.
+   - Collects lingering object event ID 1946 and displays objects in the main content pane.
    - List can be exported to CSV for offline analysis (or modification for import).
    - Supports import and removal of objects from CSV import (leverage for objects not discoverable using DRSReplicaVerifyObjects).
    - Supports removal of objects by DRSReplicaVerifyObjects and LDAP rootDSE removeLingeringobjects modification.
@@ -111,17 +111,17 @@ Run the tool as a domain administrator (or as an Enterprise administrator if you
 
    :::image type="content" source="media/lingering-object-liquidator-tool/lingering-objects-display.png" alt-text="Screenshot of the Lingering Object Liquidator window with the lingering objects within the main content pane displayed.":::
 
-   Results of the scan are logged in the Results pane. Many more details of all operations are logged in the linger\<Date-TimeStamp>.log.txt file in the same directory as the tool's executable.
+   The results of the scan are logged in the Results pane. Many more details of all operations are logged in the *linger\<Date-TimeStamp>.log.txt* file in the same directory as the tool's executable.
 
-   The Export button allows you to export a list of all lingering objects listed in the main pane into a CSV file. View the file in Excel, modify if necessary and use the Import button later to view the objects without having to do a new scan. The Import feature is also useful if you discover abandoned objects (not discoverable with DRSReplicaVerifyObjects) that you need to remove.
+   The **Export** button allows you to export a list of all lingering objects listed in the main pane into a CSV file. View the file in Excel, modify if necessary and use the **Import** button later to view the objects without having to do a new scan. The Import feature is also useful if you discover abandoned objects (not discoverable with DRSReplicaVerifyObjects) that you need to remove.
 
    A note about transient lingering objects:
 
-   Garbage collection is an independent process that runs on each DC every 12 hours by default. One of its jobs is to remove objects that have been deleted and have existed as a tombstone for greater than the tombstone lifetime number of days. There's a rolling 12-hour period where an object eligible for garbage collection exists on some DCs but has already been removed by the garbage collection process on other DCs. These objects will also be reported as lingering object by the tool, however no action is required as they'll automatically get removed the next time the garbage collector process runs on the DC.
+   Garbage collection is an independent process that runs on each DC every 12 hours by default. One of its jobs is to remove objects that have been deleted and have existed as a tombstone for greater than the tombstone lifetime number of days. There's a rolling 12-hour period where an object eligible for garbage collection exists on some DCs but has already been removed by the garbage collection process on other DCs. These objects will also be reported as lingering objects by the tool; however, no action is required, as they'll automatically get removed the next time the garbage collector process runs on the DC.
 
-4. There are two supported methods to remove the detected lingering objects. The "removeLingeringObject" method refers to the rootDSE modify operation , which can be used to remove individual lingering objects. "DsReplicaVerifyObjects" method will select all lingering objects all at once.
+4. There are two supported methods to remove the detected lingering objects. The "removeLingeringObject" method refers to the rootDSE modify operation, which can be used to remove individual lingering objects. The "DsReplicaVerifyObjects" method will select all lingering objects at once.
 
-   To remove individual objects, select a single object or multi-select multiple objects by using the Ctrl or Shift key. Press Ctrl to select multiple objects, or Shift to select a range of objects and then select **Remove Selected Lingering Objects**.
+   To remove individual objects, select a single object or multi-select multiple objects by using the <kbd>Ctrl</kbd> or <kbd>Shift</kbd> key. Press <kbd>Ctrl</kbd> to select multiple objects, or <kbd>Shift</kbd> to select a range of objects, and then select **Remove Selected Lingering Objects**.
 
    :::image type="content" source="media/lingering-object-liquidator-tool/lol-remove-button.png" alt-text="Screenshot of the Lingering Object Liquidator window with the Remove button to remove individual object.":::
 
@@ -129,8 +129,7 @@ Run the tool as a domain administrator (or as an Enterprise administrator if you
 
    :::image type="content" source="media/lingering-object-liquidator-tool/lol-remove-status.png" alt-text="Screenshot of the status bar of the Lingering Object Liquidator.":::
 
-    The tool dumps a list of attributes for each object before removal and logs this along with the results of the object removal in the removedLingeringObjects.log.txt log file. This log file is in the same location as the tool's executable.
-     C:\tools\LingeringObjects\removedLingeringObjects<DATE-TIMEStamp.log.txt
+    The tool dumps a list of attributes for each object before removal and logs this along with the results of the object removal in the *removedLingeringObjects.log.txt* log file. This log file is in the same location as the tool's executable.: *C:\tools\LingeringObjects\removedLingeringObjects\<DATE-TIMEStamp>.log.txt*.
 
     Example contents of the log file:
 
@@ -162,9 +161,9 @@ Run the tool as a domain administrator (or as an Enterprise administrator if you
     \---------------------------------------------  
     RemoveLingeringObject returned Success
 
-    After all objects are identified, they can be bulk-removed by selecting all objects and then Remove, or exported into a CSV file. The CSV file can later be imported again to do bulk removal. Be aware that there's a Remove All  button that leverages the `repadmin /removelingeringobject` method of lingering object removal
+    After all objects are identified, they can be bulk-removed by selecting all objects and then Remove, or exported into a CSV file. The CSV file can later be imported again to do bulk removal. Be aware that there's a **Remove All** button that leverages the `repadmin /removelingeringobject` method of lingering object removal.
 
-**Support:** While this tool has been thoroughly tested in many environments, it's provided to you **as-is**: There will be no official Microsoft support provided.
+**Support:** While this tool has been thoroughly tested in many environments, it's provided to you **as-is**. There will be no official Microsoft support provided.
 
 Access the [Troubleshooting Active Directory Lingering Objects](https://support.microsoft.com/help/910205) TechNet Virtual Lab if you would like practice using this tool in a lab environment containing lingering objects.
 
@@ -174,7 +173,7 @@ Access the [Troubleshooting Active Directory Lingering Objects](https://support.
 
 ## More information
 
-| Removal method| Object / Partition & and Removal Capabilities| Details |
+| Removal method| Object/Partition and Removal Capabilities| Details |
 |---|---|---|
 | Lingering Object Liquidator|Per-object and per-partition removal<br/><br/>Leverages:<br/>- RemoveLingeringObjects LDAP rootDSE modification<br/>- DRSReplicaVerifyObjects method|<br/>- GUI-based<br/>- Quickly displays all lingering objects in the forest to which the executing computer is joined<br/>- Built-in discovery through the DRSReplicaVerifyObjects method<br/>- Automated method to remove lingering objects from all partitions<br/>- Removes lingering objects from all DCs (including RODCs) but not lingering links<br/>- Windows Server 2008 and later DCs (will not work against Windows Server 2003 DCs)|
 | Repldiag /removelingeringobjects|Per-partition removal<br/><br/>Leverages:<br/>- DRSReplicaVerifyObjects method|<br/>- Command line only<br/>- Automated method to remove lingering objects from all partitions<br/>- Built-in discovery through DRSReplicaVerifyObjects <br/>- Displays discovered objects in events on DCs<br/>- Doesn't remove lingering links. Doesn't remove lingering objects from RODCs (yet).|
