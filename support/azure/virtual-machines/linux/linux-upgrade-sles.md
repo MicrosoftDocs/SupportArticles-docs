@@ -458,7 +458,7 @@ To resolve this issue, follow these steps:
     sudo SUSEConnect --status
     ```
 
-## Scenario 10: SLES 15 migration fails from SP3 to SP4 with invalid credentials and repository rrors
+## Scenario 10: SLES 15 migration fails from SP3 to SP4 with invalid credentials and repository errors
 
 The SLES 15 migration from SP3 to SP4 fails, and you get the following output:
 
