@@ -133,33 +133,35 @@ Run the tool as a domain administrator (or as an Enterprise administrator if you
 
     Example contents of the log file:
 
-    > the obj DN: <GUID=<GUID>>;  <SID=<SID>>;CN=\<CN_Name\>,OU=\<OU_Name\>,DC=root,DC=contoso,DC=com  
+    ```output
+    the obj DN: <GUID=<GUID>>;  <SID=<SID>>;CN=<CN_Name>,OU=<OU_Name>,DC=root,DC=contoso,DC=com  
     objectClass:top, person, organizationalPerson, user;  
     sn:Schenk;  
     whenCreated:20121126224220.0Z;  
-    name:\<CN_Name\>;  
+    name:<CN_Name>;  
     objectSid:<SID>;primaryGroupID:513;  
     sAMAccountType:805306368;  
     uSNChanged:32958;  
     objectCategory:<GUID=<GUID>>;CN=Person,CN=Schema,CN=Configuration,DC=root,DC=contoso,DC=com;  
     whenChanged:20121126224322.0Z;  
-    cn:\<CN_Name\>;  
+    cn:<CN_Name>;  
     uSNCreated:32958;  
     l:Boulder;  
-    distinguishedName:<GUID=<GUID>>;  <SID=<SID>>;CN=\<CN_Name\>,OU=\<OU_Name\>,DC=root,DC=contoso,DC=com;  
-    displayName:\<CN_Name\>;  
+    distinguishedName:<GUID=<GUID>>;  <SID=<SID>>;CN=<CN_Name>,OU=<OU_Name>,DC=root,DC=contoso,DC=com;  
+    displayName:<CN_Name>;  
     st:Colorado;  
     dSCorePropagationData:16010101000000.0Z;  
-    userPrincipalName:\<User_Name\>@root.contoso.com;  
-    givenName:\<User_Name\>;  
+    userPrincipalName:<User_Name>@root.contoso.com;  
+    givenName:<User_Name>;  
     instanceType:0;  
-    sAMAccountName:\<Account_Name\>;  
+    sAMAccountName:<Account_Name>;  
     userAccountControl:650;  
     objectGUID:<GUID>;  
     value is   :<GUID=<GUID>>:<GUID=<GUID>>
-    Lingering Obj CN=\<CN_Name\>,OU=\<OU_Name\>,DC=root,DC=contoso,DC=com is removed from the directory, mod response result code = Success  
-    \---------------------------------------------  
+    Lingering Obj CN=<CN_Name>,OU=<OU_Name>,DC=root,DC=contoso,DC=com is removed from the directory, mod response result code = Success  
+    ---------------------------------------------  
     RemoveLingeringObject returned Success
+    ```
 
     After all objects are identified, they can be bulk-removed by selecting all objects and then Remove, or exported into a CSV file. The CSV file can later be imported again to do bulk removal. Be aware that there's a **Remove All** button that leverages the `repadmin /removelingeringobject` method of lingering object removal.
 
