@@ -158,7 +158,7 @@ To reset Windows Search by using PowerShell, follow these steps:
    > [!NOTE]
    > In some earlier versions of Windows, this folder is named *Microsoft.Windows.Cortana_cw5n1h2txyewy*.
 1. While you're signed in by using the affected account, start Registry Editor, and then navigate to the `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Search` subkey.
-1. Delete the `Search` registry key.   
+1. Delete the `Search` registry key.
 1. Open an elevated PowerShell Window, and then run the following cmdlet based on your Windows version:
 
    Windows 10:
