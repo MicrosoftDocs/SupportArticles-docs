@@ -3,7 +3,7 @@ title: Troubleshoot Azure File Sync managed identity issues
 description: Troubleshoot common issues when your Azure File Sync deployment is configured to use managed identities.
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 10/31/2024
+ms.date: 11/04/2024
 author: khdownie
 ms.author: kendownie
 ---
@@ -29,7 +29,7 @@ To check if a registered server is configured to use a system-assigned managed i
 Get-AzStorageSyncServer -ResourceGroupName <string> -StorageSyncServiceName <string>
 ```
 
-Verify the `ApplicationId` property has a GUID which indicates that the server is configured to use a system-assigned managed identity. Once the server uses a system-assigned managed identity, the value of the `ActiveAuthType` property is updated to `ManagedIdentity`. If the value is `Certificate`, the server is using shared keys to authenticate to Azure file shares. 
+Verify the `ApplicationId` property has a GUID which indicates that the server is configured to use a system-assigned managed identity. Once the server uses a system-assigned managed identity, the value of the `ActiveAuthType` property is updated to `ManagedIdentity`. If the value is `Certificate`, the server uses shared keys to authenticate to Azure file shares. 
 
 > [!NOTE]
 > Once a server is configured to use a system-assigned managed identity, it can take up to one hour before the server uses the system-assigned managed identity to authenticate to the Storage Sync Service and Azure file shares.
@@ -63,7 +63,7 @@ When you try to delete a Storage Sync Service, you might get the following error
 
 > Unable to delete Storage Sync Service in region \<region>. The Storage Sync Service is deleting snapshots that are no longer needed. Please try again in a few hours.
 
-This issue occurs when your file share has unused Azure File Sync snapshots. To reduce your cost, the unused snapshots will be deleted before removing the Storage Sync Service. The snapshot count varies with the dataset size. If you can't delete the Storage Sync Service after a few hours, try again the next day.
+This issue occurs when your file share has unused Azure File Sync snapshots. To reduce your cost, the unused snapshots are deleted before removing the Storage Sync Service. The snapshot count varies with the dataset size. If you can't delete the Storage Sync Service after a few hours, try again the next day.
 
 ## Permissions required to access a storage account and Azure file share
 
@@ -76,7 +76,7 @@ Cloud endpoint:
 Server endpoint:
 - Register server managed identity must be a member of the **Storage File Data Privileged Contributor** role on an Azure file share.
 
-When you run the `Set-AzStorageSyncServiceIdentity` cmdlet or create new cloud and server endpoints, these permissions are granted. If these permissions are removed, operations will fail with the errors listed in the following section.
+When you run the `Set-AzStorageSyncServiceIdentity` cmdlet or create new cloud and server endpoints, these permissions are granted. If these permissions are removed, operations fail with the errors listed in the following section.
 
 ## Common issues
 
