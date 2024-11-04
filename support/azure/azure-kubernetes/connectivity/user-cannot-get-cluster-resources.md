@@ -38,9 +38,8 @@ Depending on the RBAC type configured for the cluster ([Kubernetes RBAC](/azure/
 	az aks show -g <CLUSTER_RESOURCE_GROUP> -n <CLUSTER_NAME> --query aadProfile.enableAzureRbac
   ```
 
-- If the result of the command is **false**, the cluster uses Kubernetes RBAC. In this case, see [Solving permission issues in Kubernetes RBAC-based AKS clusters](#k8srbac).
-- If the result is **true,** the cluster uses Azure RBAC.  see [Solving permission issues in Azure RBAC-based AKS clusters](#azurerbac).
-<a name="k8srbac">
+- If the result of the command is **false**, the cluster uses Kubernetes RBAC. In this case, see [Solving permission issues in Kubernetes RBAC based AKS clusters](#solving-permission-issues-in-kubernetes-rbac-based-aks-clusters).
+- If the result is **true,** the cluster uses Azure RBAC.  see [Solving permission issues in Azure RBAC based AKS clusters](#solving-permission-issues-in-azure-rbac-based-aks-clusters).
 
 ### Solving permission issues in Kubernetes RBAC based AKS clusters
 
@@ -62,8 +61,6 @@ You can create a custom RoleBinding or ClusterRoleBinding resource to grant the 
 
 1. Add the user to the pre-designated Microsoft Entra ID admin group using the group ID retrieved in the previous step. For detailed steps, see [Add members or owners of a group](/entra/fundamentals/how-to-manage-groups#add-members-or-owners-of-a-group).
 
-<a name="azurerbac">
-	
 ### Solving permission issues in Azure RBAC based AKS clusters
 
 If the cluster uses Azure RBAC, permissions for users are configured through the creation of [Azure Role Assignments](/azure/role-based-access-control/role-assignments).
