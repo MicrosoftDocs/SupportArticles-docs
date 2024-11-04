@@ -47,7 +47,7 @@ To solve this issue:
 
 - Confirm that your machine can communicate with the CyberArk server.
 - Ensure that the server certificate is trusted by installing it in the [Trusted Root Certification Authorities Certificate Store](/windows-hardware/drivers/install/trusted-root-certification-authorities-certificate-store).
-- Ensure that your proxy or firewall settings don't block Power Automate service users from connecting to the server.
+- Ensure that your [proxy](/power-automate/desktop-flows/how-to/proxy-settings) or firewall settings don't block Power Automate service users from connecting to the server.
 
 ### "The CyberArk object was not found, or the used application does not have the permission to retrieve it."
 
@@ -67,7 +67,7 @@ This error message means that the CyberArk certificate can't be processed correc
 
 This message often appears incorrectly for most errors with Power Automate for desktop versions before 2.50. If you're using a version earlier than 2.50, try an upgrade.
 
-Otherwise, delete and re-create the application in CyberArk as suggested in the error message. Ensure that you correctly enter the **Application ID**, **Safe**, **Folder**, and **Object** details when setting up the connection.
+Otherwise, [delete](https://docs.cyberark.com/identity/latest/en/content/applications/appsadminportal/appremove.htm) and [re-create](https://docs.cyberark.com/credential-providers/13.0/en/content/common/adding-applications.htm) the application in CyberArk as suggested in the error message. Ensure that you correctly enter the **Application ID**, **Safe**, **Folder**, and **Object** details when [setting up the connection](/power-automate/desktop-flows/create-cyberark-credential#create-a-cyberark-credential-1).
 
 ## Other troubleshooting steps
 
@@ -83,7 +83,7 @@ If you still don't have enough information to mitigate the issue by using the pr
 
 1. If you receive a warning message indicating that the server certificate isn't trusted with one of the methods in step 2, make sure you install the server certificate in the Trusted Root Certification Authorities Certificate Store.
 
-1. Try changing the Power Automate for desktop service user to a user who has successfully retrieved the secret with one of the methods in step 2.
+1. Try [changing the Power Automate for desktop service user](/power-automate/desktop-flows/troubleshoot#change-the-on-premises-service-account) to a user who has successfully retrieved the secret with one of the methods in step 2.
 
 ## More information
 
