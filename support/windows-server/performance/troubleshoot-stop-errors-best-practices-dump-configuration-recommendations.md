@@ -1,7 +1,7 @@
 ---
 title: 'Troubleshoot stop errors: Best practices and dump configurations'
 description: Introduces what happens during a stop error and best practices for preventing and troubleshooting stop error issues.
-ms.date: 11/01/2024
+ms.date: 11/04/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -67,9 +67,9 @@ During the boot of the OS, the session manager process (*SMSS.exe*) loads the pa
 :::image type="content" source="media/troubleshoot-stop-errors-best-practices-dump-configuration-recommendations/event-id-1001.png" alt-text="Screenshot of the event ID 1001.":::
 
 > [!IMPORTANT]
-> This event also contains a specific stop code with the parameters (see red rectangle 1 in the picture). You can use this information in our public documentation to learn more about the bug check and its meaning in the [Bug Check Code Reference](/windows-hardware/drivers/debugger/bug-check-code-reference2).
+> This event also contains a specific stop code with the parameters (see black rectangle 1 in the picture). You can use this information in our public documentation to learn more about the bug check and its meaning in the [Bug Check Code Reference](/windows-hardware/drivers/debugger/bug-check-code-reference2).
 >
-> In addition, you can see the dump location (see red rectangle 2 in the picture).
+> In addition, you can see the dump location (see black rectangle 2 in the picture).
 
 ## Best practices for troubleshooting and preventing stop errors
 
