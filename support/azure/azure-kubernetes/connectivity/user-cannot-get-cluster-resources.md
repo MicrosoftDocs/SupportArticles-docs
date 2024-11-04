@@ -70,6 +70,6 @@ If the cluster uses Azure RBAC, permissions for users are configured through the
 
 AKS provides a set of built-in roles which can be used to create role assignments for the Microsoft Entra ID users or groups access to Kubernetes objects in a specific namespace or at cluster scope. For detailed steps on how to assign built-in roles to users or groups in Azure RBAC based clusters, see [AKS built-in roles](/azure/aks/manage-azure-rbac#aks-built-in-roles).
 
-Alternatively, you can also create your own custom Azure role definitions which allows for a more granular management of permissions over specific types of Kubernetes objects and/or operations. Check [Create custom roles definitions](/azure/aks/manage-azure-rbac#create-custom-roles-definitions) for detailed guidance on how to create and assign custom roles to users/groups in Azure RBAC based clusters.
+Alternatively, you can also create your own custom Azure role definitions which allow for a more granular management of permissions over specific types of Kubernetes objects and/or operations. Check [Create custom roles definitions](/azure/aks/manage-azure-rbac#create-custom-roles-definitions) for detailed guidance on how to create and assign custom roles to users/groups in Azure RBAC based clusters.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
