@@ -13,7 +13,7 @@ This article explains how to troubleshoot and resolve "Error from server (Forbid
 
 ## Prerequisites
 
-- The Kubernetes cluster command-line tool ([kubectl](https://kubernetes.io/docs/tasks/tools/)).
+The Kubernetes cluster command-line tool ([kubectl](https://kubernetes.io/docs/tasks/tools/)).
 
 > [!NOTE]
 > If you use [Azure Cloud Shell](/azure/cloud-shell/overview) to run shell commands, kubectl is already installed. If you use a local shell and already have [Azure CLI](/cli/azure/install-azure-cli) installed, you can alternatively install kubectl by running the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
@@ -40,8 +40,10 @@ Depending on the RBAC type configured for the cluster ([Kubernetes RBAC](/azure/
 
 - If the result of the command is **false**, the cluster uses Kubernetes RBAC. In this case, see [Solving permission issues in Kubernetes RBAC-based AKS clusters](#k8srbac).
 - If the result is **true,** the cluster uses Azure RBAC.  see [Solving permission issues in Azure RBAC-based AKS clusters](#azurerbac).
+<a name="k8srbac">
 
-### Solving permission issues in Kubernetes RBAC based AKS clusters<a name="k8srbac">
+### Solving permission issues in Kubernetes RBAC based AKS clusters
+
 If the cluster uses Kubernetes RBAC, permissions for the user account are configured through the creation of RoleBinding or ClusterRoleBinding Kubernetes resources. For more information, see [Kubernetes RBAC documentation](https://kubernetes.io/docs/reference/access-authn-authz/rbac/).
 
 Furthermore, in Microsoft Entra ID integrated clusters, a ClusterRoleBinding resource is automatically created to grant members of a pre-designated Microsoft Entra ID group the permissions to fully administer the cluster likes administrator access to the cluster.
@@ -60,7 +62,9 @@ You can create a custom RoleBinding or ClusterRoleBinding resource to grant the 
 
 1. Add the user to the pre-designated Microsoft Entra ID admin group using the group ID retrieved in the previous step. For detailed steps, see [Add members or owners of a group](/entra/fundamentals/how-to-manage-groups#add-members-or-owners-of-a-group).
 
-### Solving permission issues in Azure RBAC based AKS clusters<a name="azurerbac">
+<a name="azurerbac">
+	
+### Solving permission issues in Azure RBAC based AKS clusters
 
 If the cluster uses Azure RBAC, permissions for users are configured through the creation of [Azure Role Assignments](/azure/role-based-access-control/role-assignments).
 
