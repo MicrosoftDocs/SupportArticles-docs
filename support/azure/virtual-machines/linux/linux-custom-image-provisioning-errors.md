@@ -84,7 +84,7 @@ To resolve these errors, delete the current image from the portal, and [recaptur
 ### 1. Prepare the Linux Machine
 Ensure that the Linux machine is prepared for imaging. This includes stopping unnecessary services and cleaning up temporary files.
 
-```sh
+```bash
 sudo systemctl stop <service-name>
 sudo apt-get clean
 sudo rm -rf /tmp/*
@@ -93,7 +93,7 @@ sudo rm -rf /tmp/*
 ### 2. Create a Disk Image Using `dd`
 Use the `dd` command to create an image of the disk. Replace `/dev/sdX` with the appropriate disk identifier.
 
-```sh
+```bash
 sudo dd if=/dev/sdX of=/path/to/output/image.img bs=4M
 ```
 
@@ -107,63 +107,63 @@ gzip /path/to/output/image.img
 ### 4. Install Azure CLI
 If not already installed, install the Azure CLI on your local machine.
 
-```sh
+```bash
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 ```
 
 ### 5. Login to Azure
 Log in to your Azure account using the Azure CLI.
 
-```sh
+```bash
 az login
 ```
 
 ### 6. Create a Resource Group (if needed)
 Create a resource group where you will store the image.
 
-```sh
+```bash
 az group create --name <ResourceGroupName> --location <Location>
 ```
 
 ### 7. Create a Storage Account
 Create a storage account to upload the image.
 
-```sh
+```bash
 az storage account create --name <StorageAccountName> --resource-group <ResourceGroupName> --location <Location> --sku Standard_LRS
 ```
 
 ### 8. Create a Storage Container
 Create a storage container within the storage account.
 
-```sh
+```bash
 az storage container create --account-name <StorageAccountName> --name <ContainerName>
 ```
 
 ### 9. Upload the Disk Image to Azure Storage
 Upload the compressed disk image to the storage container.
 
-```sh
+```bash
 az storage blob upload --account-name <StorageAccountName> --container-name <ContainerName> --name image.img.gz --file /path/to/output/image.img.gz
 ```
 
 ### 10. Create a Managed Disk from the Uploaded VHD
 Create a managed disk from the uploaded VHD.
 
-```sh
+```bash
 az disk create --resource-group <ResourceGroupName> --name <DiskName> --source https://<StorageAccountName>.blob.core.windows.net/<ContainerName>/image.img.gz
 ```
 
 ### 11. Create an Image from the Managed Disk
 Create an image from the managed disk.
 
-```sh
+```bash
 az image create --resource-group <ResourceGroupName> --name <ImageName> --source <DiskName>
 ```
 
 ### 12. Verify the Image
 Verify that the image has been created successfully.
 
-```sh
+```bash
 az image show --resource-group <ResourceGroupName> --name <ImageName>
 ```
 
