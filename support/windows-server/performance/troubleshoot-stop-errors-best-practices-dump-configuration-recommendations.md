@@ -1,5 +1,5 @@
 ---
-title: 'Troubleshoot stop errors: Best practices and dump configurations'
+title: 'Troubleshoot stop errors: Best practices and dump configuration recommendations'
 description: Introduces what happens during a stop error and best practices for preventing and troubleshooting stop error issues.
 ms.date: 11/04/2024
 manager: dcscontentpm
