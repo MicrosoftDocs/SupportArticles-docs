@@ -1,5 +1,5 @@
 ---
-title: Cannot list Kubernetes resource due to "Error from server (Forbidden)" in Azure Kubernetes Service
+title: User gets "Forbidden" message while accessing cluster resources in Azure Kubernetes Service
 description: Troubleshoot and resolve "Error from server (Forbidden)" RBAC related errors that occur when you try to view Kubernetes resources in an Azure Kubernetes Service (AKS) cluster.
 ms.date: 08/26/2024
 ms.reviewer: rissing chiragpa, v-leedennis
@@ -7,7 +7,7 @@ ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes administrator, I want to fix RBAC related errors so that users can access their cluster resources.
 ms.custom: sap:Connectivity
 ---
-# Cannot list Kubernetes resource due to "Error from server (Forbidden)"
+# User gets "Forbidden" message while accessing cluster resources
 
 This article explains how to troubleshoot and resolve "Error from server (Forbidden)" errors related to Role-Based Access Control (RBAC) when you try to view Kubernetes resources in an Azure Kubernetes Service (AKS) cluster.
 
