@@ -40,7 +40,7 @@ We strongly recommend creating a nested virtualization environment in Microsoft 
 
 1. Delete the faulty VM. Make sure that you select the **Keep the disks** option when you do this.
 2. Attach the OS disk as a data disk to a new VM. For more information, see [How to attach a data disk to a Windows VM in the Azure portal](/azure/virtual-machines/windows/attach-managed-disk-portal).
-3. Connect to the troubleshooting VM. Open **Computer management** > **Disk management**. Make sure that the OS disk is online and that its partitions have drive letters assigned.
+3. Connect to the VM. Open **Computer management** > **Disk management**. Make sure that the OS disk is online and that its partitions have drive letters assigned.
 4. Identify the Boot partition and the Windows partition. If there's only one partition on the OS disk, this partition is the Boot partition and the Windows partition.
 
     If the OS disk contains more than one partition, you can identify them by viewing the folders in the partitions:  
