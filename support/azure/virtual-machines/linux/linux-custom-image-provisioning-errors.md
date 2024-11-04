@@ -3,7 +3,7 @@ title: Custom Linux image provisioning errors
 description: Provides solutions to provisioning errors when you upload or capture a generalized VM image as a specialized Linux VM image or vice versa.
 ms.custom: sap:Cannot create a VM, linux-related-content
 ms.service: azure-virtual-machines
-ms.date: 06/24/2024
+ms.date: 11/03/2024
 ms.reviewer: srijangupta, scotro, jarrettr
 ---
 # Provisioning errors when deploying custom Linux images
@@ -14,7 +14,7 @@ ms.reviewer: srijangupta, scotro, jarrettr
 
 [!INCLUDE [virtual-machines-linux-troubleshoot-deployment-new-vm-table](../../../includes/azure/virtual-machines-linux-troubleshoot-deployment-new-vm-table.md)]
 
-**Y:** If the OS is Linux generalized, and it is uploaded and/or captured with the generalized setting, then there won't be any errors. Similarly, if the OS is Linux specialized, and it is uploaded and/or captured with the specialized setting, then there won't be any errors.
+**Y:** If the OS is Linux generalized, and it is uploaded and/or captured with the generalized setting upload and deployment will be successful. Similarly, if the OS is Linux specialized, and it is uploaded and/or captured with the specialized setting upload and deployment will be successful.
 
 ## Upload errors
 
@@ -38,7 +38,7 @@ Scenario 2: SSH Key or Password Reset Errors
 - **Solution**: Ensure that the VM configuration includes SSH or password authentication methods compatible with the OS state.
 
 Scenario 3: Missing Cloud-Init or Waagent Configuration
-- **Issue**: Generalized images require initialization tools (like `cloud-init` or `waagent`) to set up the VM during the first boot. If these configurations are missing or incompatible, provisioning stalls.
+- **Issue**: Generalized images require provisioning agents (like `cloud-init` or `waagent`) to set up the VM during the first boot. If these configurations are missing or incompatible, provisioning stalls.
 - **Cause**: In specialized images, initial setup scripts are already configured, whereas generalized images rely on these initialization tools for configuration.
 - **Solution**: Validate that `cloud-init` or `waagent` is properly configured in the image before uploading.
 
@@ -54,7 +54,7 @@ Scenario 5: Incompatible Kernel or Module Settings
 </details>
 
 
-### Resolution for upload errors
+## Resolution for upload errors
 
 To resolve these errors, upload the original VHD, available on premises, with the same setting as that for the OS (generalized/specialized). To upload as generalized, remember to run -deprovision first.
 
@@ -70,8 +70,6 @@ To resolve these errors, delete the current image from the portal, and [recaptur
 
 <details>
   <summary>Creating an image to prepare for upload</summary>
-
-# Creating a Linux Image from Disk on Premises for Azure
 
 ## Prerequisites
 - Access to the Linux machine whose disk you want to image.
