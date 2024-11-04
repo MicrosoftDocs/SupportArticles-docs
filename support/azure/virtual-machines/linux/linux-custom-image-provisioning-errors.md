@@ -14,11 +14,11 @@ ms.reviewer: srijangupta, scotro, jarrettr
 
 [!INCLUDE [virtual-machines-linux-troubleshoot-deployment-new-vm-table](../../../includes/azure/virtual-machines-linux-troubleshoot-deployment-new-vm-table.md)]
 
-**Y:** If the OS is Linux generalized, and it is uploaded and/or captured with the generalized setting upload and deployment will be successful. Similarly, if the OS is Linux specialized, and it is uploaded and/or captured with the specialized setting upload and deployment will be successful.
+**Y:** If the operating system is a generalized Linux image and it is uploaded or captured using the generalized setting, the upload and deployment will be successful. If the operating system is a generalized Linux image and you upload or capture it using the generalized setting, the upload and deployment will succeed.
 
 ## Upload errors
 
-**N<sup>1</sup>:** If the OS is Linux generalized, and it is uploaded as specialized, you will get a provisioning timeout error because the VM is stuck at the provisioning stage.
+**N<sup>1</sup>:** If the operating system is a generalized Linux image and it is uploaded as a specialized image, you will encounter a provisioning timeout error because the virtual machine will be unable to progress past the provisioning stage.
 
 **N<sup>2</sup>:** If the OS is Linux specialized, and it is uploaded as generalized, you will get a provisioning failure error because the new VM is running with the original computer name, username and password.
 
@@ -38,7 +38,7 @@ Scenario 2: SSH Key or Password Reset Errors
 - **Solution**: Ensure that the VM configuration includes SSH or password authentication methods compatible with the OS state.
 
 Scenario 3: Missing Cloud-Init or Waagent Configuration
-- **Issue**: Generalized images require provisioning agents (like `cloud-init` or `waagent`) to set up the VM during the first boot. If these configurations are missing or incompatible, provisioning stalls.
+- **Issue**: Generalized images require provisioning agents (like `cloud-init` or `waagent`) to set up the VM during the first boot. If these configurations are missing or incompatible, the provisioning will stall.
 - **Cause**: In specialized images, initial setup scripts are already configured, whereas generalized images rely on these initialization tools for configuration.
 - **Solution**: Validate that `cloud-init` or `waagent` is properly configured in the image before uploading.
 
@@ -56,20 +56,20 @@ Scenario 5: Incompatible Kernel or Module Settings
 
 ## Resolution for upload errors
 
-To resolve these errors, upload the original VHD, available on premises, with the same setting as that for the OS (generalized/specialized). To upload as generalized, remember to run -deprovision first.
+To resolve these errors, upload the original VHD from your on-premises environment using the same setting as the operating system (generalized or specialized). If you are uploading it as generalized, make sure to run the `-deprovision` command first.
 
 ## Capture errors
 
 **N<sup>3</sup>:** If the OS is Linux generalized, and it is captured as specialized, you will get a provisioning timeout error because the original VM is not usable as it is marked as generalized.
 
-**N<sup>4</sup>:** If the OS is Linux specialized, and it is captured as generalized, you will get a provisioning failure error because the new VM is running with the original computer name, username and password. Also, the original VM is not usable because it is marked as specialized.
+**N<sup>4</sup>:** If the OS is a Linux specialized and it is captured as generalized, you will get a provisioning failure error because the new virtual machine will retain the original computer name, username, and password. Additionally, the original virtual machine will become unusable as it will be marked as specialized.
 
 ### Resolution for capture errors
 
 To resolve these errors, delete the current image from the portal, and [recapture it from the current VHDs](/azure/virtual-machines/linux/capture-image) with the same setting as that for the OS (generalized/specialized).
 
 <details>
-  <summary>Creating an image to prepare for upload</summary>
+  <summary>How to capture an image to prepare for upload</summary>
 
 ## Prerequisites
 - Access to the Linux machine whose disk you want to image.
@@ -94,71 +94,61 @@ Use the `dd` command to create an image of the disk. Replace `/dev/sdX` with the
 sudo dd if=/dev/sdX of=/path/to/output/image.img bs=4M
 ```
 
- 3. Compress the Disk Image 
-Compress the disk image to save space and reduce upload time.
+ 3. To reduce upload time Compress the disk image to save space.
 
 ```sh
 gzip /path/to/output/image.img
 ```
 
-4. Install Azure CLI
-If not already installed, install the Azure CLI on your local machine.
+4. If not already installed, install the Azure CLI on your local machine.
 
 ```bash
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 ```
 
-5. Login to Azure
-Log in to your Azure account using the Azure CLI.
+5. Log in to your Azure account using the Azure CLI.
 
 ```bash
 az login
 ```
 
-6. Create a Resource Group (if needed)
-Create a resource group where you will store the image.
+6. Create a resource group, if needed, where you will store the image.
 
 ```bash
 az group create --name <ResourceGroupName> --location <Location>
 ```
 
-7. Create a Storage Account
-Create a storage account to upload the image.
+7. Create a storage account to upload the image.
 
 ```bash
 az storage account create --name <StorageAccountName> --resource-group <ResourceGroupName> --location <Location> --sku Standard_LRS
 ```
 
-8. Create a Storage Container
-Create a storage container within the storage account.
+8. Create a storage container within the storage account.
 
 ```bash
 az storage container create --account-name <StorageAccountName> --name <ContainerName>
 ```
 
-9. Upload the Disk Image to Azure Storage
-Upload the compressed disk image to the storage container.
+9. Upload the compressed disk image to the storage container.
 
 ```bash
 az storage blob upload --account-name <StorageAccountName> --container-name <ContainerName> --name image.img.gz --file /path/to/output/image.img.gz
 ```
 
-10. Create a Managed Disk from the Uploaded VHD
-Create a managed disk from the uploaded VHD.
+10. Create a managed disk from the uploaded VHD.
 
 ```bash
 az disk create --resource-group <ResourceGroupName> --name <DiskName> --source https://<StorageAccountName>.blob.core.windows.net/<ContainerName>/image.img.gz
 ```
 
-11. Create an Image from the Managed Disk
-Create an image from the managed disk.
+11. Create an image from the managed disk.
 
 ```bash
 az image create --resource-group <ResourceGroupName> --name <ImageName> --source <DiskName>
 ```
 
-12. Verify the Image
-Verify that the image has been created successfully.
+12. Verify that the image has been created successfully.
 
 ```bash
 az image show --resource-group <ResourceGroupName> --name <ImageName>
