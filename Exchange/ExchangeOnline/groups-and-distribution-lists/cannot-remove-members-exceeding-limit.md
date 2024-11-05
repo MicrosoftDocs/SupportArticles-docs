@@ -1,6 +1,6 @@
 ---
 title: Can't use the Exchange admin center to remove members from a distribution group
-description: Provides a workaround for when you're unabl eto remove a member of a distribution group by using the Exchange admin center. 
+description: Provides a workaround for when you're unable to remove a member of a distribution group by using the Exchange admin center. 
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -29,9 +29,9 @@ When you use the Exchange admin center (EAC) to delete a member from a distribut
 
 ## Cause
 
-The cause of the issue varies depending on whether you're using on-premises EAC or the EAC in Exchange Online.
-0
-- In the EAC in Exchange Online, only a maximum of 1,000 members are displayed. If the distribution group contains more than 1,000 members, there will be members missing from the displayed list.
+The cause of the issue varies depending on whether you're using on-premises EAC or the EAC in Exchange Online.0
+
+- In the EAC in Exchange Online, only a maximum of 1,000 members are displayed. If the distribution group contains more than 1,000 members, some members will be missing from the displayed list.
 - In on-premises EAC, only a maximum of 3,000 members are displayed. If the distribution group contains more than 3,000 members, then not all members are displayed. In this scenario, you can't use the on-premises EAC to remove members who aren't displayed.
 
 ## Workaround
@@ -40,7 +40,7 @@ Use the workaround that's appropriate for your scenario.
 
 **EAC in Exchange Online**:
 
-If the member you want to remove is not in the displayed list of 1,000 members, you can search for the member and then remove them.
+If the member you want to remove isn't in the displayed list of 1,000 members, you can search for the member and then remove them.
 
 **On-premises EAC**:
 
@@ -48,7 +48,7 @@ Use the [Remove-DistributionGroupMember](/powershell/module/exchange/remove-dist
 
 For example, to remove *roger@contoso.com* from a distribution group that's named Customer Service, follow these steps:
 
-1. Do one of the following:
+1. Use one of the following options:
 
    - [Connect to Exchange Online by using remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
    - Open the Exchange Management Shell on an Exchange server in your on-premises environment.
