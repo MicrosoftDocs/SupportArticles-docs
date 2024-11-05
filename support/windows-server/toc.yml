@@ -1115,6 +1115,8 @@ items:
       href: ./high-availability/cluster-validation-test-fails-multi-site-cluster-scenario.md
     - name: Storage tests on a failover cluster might not discover all shared LUNs
       href: ./high-availability/failover-cluster-storage-validation-tests-dont-discover-all-shared-luns.md
+    - name: Validate hardware for a failover cluster
+      href: ./high-availability/validate-hardware-failover-cluster.md
   - name: Initial Cluster Creation or Adding node
     items:
     - name: Error 0x80090327 when adding a node to a cluster
