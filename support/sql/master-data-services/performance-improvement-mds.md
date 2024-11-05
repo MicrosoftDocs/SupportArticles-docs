@@ -51,4 +51,6 @@ This change causes degraded performance. We provide a system setting that you ca
   GO
   ```
 
-For more information, see [Immediately apply member permissions (Master Data Services)](/sql/master-data-services/immediately-apply-member-permissions-master-data-services).
+## More information
+
+[Immediately apply member permissions (Master Data Services)](/sql/master-data-services/immediately-apply-member-permissions-master-data-services)
