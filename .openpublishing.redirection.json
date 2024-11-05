@@ -12354,6 +12354,16 @@
       "source_path": "support/windows-server/group-policy/fail-to-run-gpmc.md",
       "redirect_url": "/troubleshoot/windows-server/group-policy/permissions-this-gpo-inconsistent",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/field-service/iot/change-time-series-insights-instance.md",
+      "redirect_url": "/dynamics365/field-service/cfs-visualizations-iot-hub",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/field-service/iot/edge-module-data-aggregated.md",
+      "redirect_url": "/dynamics365/field-service/cfs-visualizations-iot-hub",
+      "redirect_document_id": false
     }
   ]
 }
