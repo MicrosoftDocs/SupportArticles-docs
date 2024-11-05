@@ -12,7 +12,7 @@ ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Certificate Enro
 
 This article provides solutions to an issue where you fail to request a certificate by using web enrollment.
 
-_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server (All supported versions)  
 _Original KB number:_ &nbsp; 2885758
 
 ## Symptoms
