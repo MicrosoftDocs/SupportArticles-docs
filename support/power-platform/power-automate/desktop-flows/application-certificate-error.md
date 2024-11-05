@@ -24,7 +24,7 @@ The error message occurs because the credential used in the connection can't be 
 
 If you use Power Automate with a version earlier than 2.50, you can upgrade to version 2.50 or later. After the upgrade, when you create a desktop flow connection using a CyberArk credential, you might see an error message with specific details on what went wrong. The details will give you enough information to solve the problem.
 
-Here are some specific error messages and their resolutions:
+Check the following sections for some specific error messages and their resolutions:
 
 ## "The configuration for the cyberArk store is incorrect. Validate all connection information."
 
@@ -64,7 +64,7 @@ Otherwise, [delete](https://docs.cyberark.com/identity/latest/en/content/applica
 
 ## Other troubleshooting steps
 
-If you still don't have enough information to mitigate the issue by using the previous resolutions, here are some steps you can take to troubleshoot the issue:
+If you still don't have enough information to mitigate the issue, here are some steps you can take to troubleshoot the issue:
 
 1. Try using a dedicated action to get a secret from CyberArk in Power Automate for desktop with a local run to validate your configuration.
 1. Try using a browser to get the secret from the target machine with one of the following methods:
