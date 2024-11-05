@@ -19,7 +19,7 @@ We made a significant performance improvement several years ago. This change can
 
   - This change improves the performance of loading pages that need permission checks, such as the explore page, model page, entities list page, and attributes list page.
   - On model permissions setting page, some customers reported that they sometimes faced the timeout exception. After this change, the issue is solved.
-  - On business rule edit page, loading add or edit condition page would take a long time. After this change, this page can load immediately.
+  - On the **Business Rules** page, loading add or edit condition page would take a long time. After this change, the page can load immediately.
 
 - Costs (Side effect):
 
@@ -28,7 +28,7 @@ We made a significant performance improvement several years ago. This change can
  
 In the Master Data Management (MDM) system, the `GET` operation is the most frequent operation. Operations for create or modify entities, attributes, or users(groups) have less frequency than the `GET` operation.
 
-So, through this performance improvement, we improve the performance in the `GET` operations, but it also brings some side effects for the `Modify` operations. We thought the benefits outweigh the side effects. 
+So, through this performance improvement, we improve the performance in the `GET` operations, but it also brings some side effects for the `Modify` operations. The benefits outweigh the side effects. 
 
 ## Resolution
 
