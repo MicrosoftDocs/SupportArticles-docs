@@ -220,7 +220,7 @@
       href: connectivity/config-file-is-not-available-when-connecting.md
     - name: Tunnel connectivity issues
       href: connectivity/tunnel-connectivity-issues.md
-    - name: User can't get cluster resources
+    - name: Troubleshoot "Forbidden" error when trying to access AKS cluster resources
       href: connectivity/user-cannot-get-cluster-resources.md
     - name: Can't access the cluster API server using authorized IP ranges
       href: connectivity/cannot-access-cluster-api-server-using-authorized-ip-ranges.md
