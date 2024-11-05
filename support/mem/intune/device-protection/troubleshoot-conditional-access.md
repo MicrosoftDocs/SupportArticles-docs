@@ -1,9 +1,9 @@
 ---
 title: Troubleshoot Intune Conditional Access
 description: What to do when your users fail to get access to resources through Intune Conditional Access.
-ms.date: 12/05/2023
+ms.date: 11/05/2024
 search.appverid: MET150
-ms.reviewer: kaushika
+ms.reviewer: kaushika, jodah
 ms.custom: sap:Set Up Conditional Access\Configure and monitor device compliance
 ---
 # Troubleshoot Conditional Access
@@ -36,7 +36,7 @@ You can view these conditions for each device in the Azure portal and in the dev
 
 - Non-Knox Android devices won't be granted access until the user clicks the **Get Started Now** link in the quarantine email they receive. This applies even if the user is already enrolled in Intune. If the user doesn't get the email with the link on their phone, they can use a PC to access their email and forward it to an email account on their device.
 
-- When a device is first enrolled, it might take some time for compliance information to be registered for a device. Wait a few minutes and try again.
+- When a device is first enrolled or updated, it might take some time for compliance information and attributes to be registered for a device. Wait a few minutes and try again.
 
 - For iOS/iPadOS devices, an existing email profile might block the deployment of an Intune admin-created email profile assigned to that user, making the device noncompliant. In this scenario, the Company Portal app will notify the user that they aren't compliant because of their manually configured email profile, and it prompts the user to remove that profile. Once the user removes the existing email profile, the Intune email profile can successfully deploy. To prevent this problem, instruct your users to remove any existing email profiles on their device before enrolling.
 
