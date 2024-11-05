@@ -1,13 +1,13 @@
 ---
 title: Issues after performance improvement in MDS 
-description: This article introduces the historical background and settings of performance improvement in MDS.
+description: Provides the historical background and a resolution for the issues that occur after a performance improvement in Master Data Services.
 ms.date: 10/23/2024
 ms.custom: sap:Master Data Services
 ms.reviewer: v-biguan, jiwang6
 ---
 # Issues after performance improvement in MDS 
 
-This article helps you understand and solve the issues that occur after performance improvement in Master Data Services (MDS).
+This article helps you understand and solve the issues that occur after a performance improvement in Master Data Services (MDS).
 
 ## Symptoms
 
