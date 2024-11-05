@@ -2,7 +2,7 @@
 title: Could not read the application certificate when creating connection with CyberArk credential
 description: Solves an error that occurs when you create a desktop flow connection using a CyberArk credential in Microsoft Power Automate.
 ms.custom: sap:Desktop flows\Cannot create desktop flow connection
-ms.date: 11/04/2024
+ms.date: 11/05/2024
 ms.author: quseleba 
 author: QuentinSele
 ---
@@ -22,8 +22,7 @@ The error message occurs because the credential used in the connection can't be 
 
 ## Resolution
 
-> [!TIP]
-> Ensure that you're using Power Automate version 2.50 or later. These versions provide more details on what went wrong, which is often sufficient to resolve the issue.
+If you use Power Automate with a version earlier than 2.50, you can upgrade to version 2.50 or later. After the upgrade, when you create a desktop flow connection using a CyberArk credential, you might see an error message with specific details on what went wrong. The details will give you enough information to solve the problem.
 
 Here are some specific error messages and their resolutions:
 
@@ -33,13 +32,13 @@ Here are some specific error messages and their resolutions:
 - [The CyberArk server was unable to verify the certificate, please confirm that the CyberArk server is correctly configured for SSL authentication.](#the-cyberark-server-was-unable-to-verify-the-certificate-please-confirm-that-the-cyberark-server-is-correctly-configured-for-ssl-authentication)
 - [Could not read the application certificate. Try to delete and recreate the application.](#could-not-read-the-application-certificate-error-when-you-create-a-connection-using-a-cyberark-credential)
 
-### "The configuration for the cyberArk store is incorrect. Validate all connection information."
+## "The configuration for the cyberArk store is incorrect. Validate all connection information."
 
 This error occurs because the CyberArk store is misconfigured, and a valid request can't be made for CyberArk.
 
 To solve this issue, make sure the hostname of the CyberArk server follows the `https://hostname.com` or `https://hostname.com:443` format.
 
-### "Could not contact the CyberArk vault. Verify connectivity to the server and validate all connection information."
+## "Could not contact the CyberArk vault. Verify connectivity to the server and validate all connection information."
 
 This error occurs due to issues with network connectivity between your machine and the CyberArk server.
 
@@ -47,21 +46,21 @@ To solve this issue:
 
 - Confirm that your machine can communicate with the CyberArk server.
 - Ensure that the server certificate is trusted by installing it in the [Trusted Root Certification Authorities Certificate Store](/windows-hardware/drivers/install/trusted-root-certification-authorities-certificate-store).
-- Ensure that your [proxy](/power-automate/desktop-flows/how-to/proxy-settings) or firewall settings don't block Power Automate service users from connecting to the server.
+- Ensure that your proxy or firewall settings don't block Power Automate service users from connecting to the server. For more information, see [Configure Power Automate for desktop proxy settings](/power-automate/desktop-flows/how-to/proxy-settings).
 
-### "The CyberArk object was not found, or the used application does not have the permission to retrieve it."
+## "The CyberArk object was not found, or the used application does not have the permission to retrieve it."
 
 This error occurs because the object name doesn't match a CyberArk secret that the configured application can retrieve.
 
 To solve this issue, change the object name or confirm with your CyberArk team that the application has access to the CyberArk safe that contains the object.
 
-### "The CyberArk server was unable to verify the certificate, please confirm that the CyberArk server is correctly configured for SSL authentication."
+## "The CyberArk server was unable to verify the certificate, please confirm that the CyberArk server is correctly configured for SSL authentication."
 
 This issue occurs because the CyberArk Central Credential Provider (CCP) might not be correctly set up or configured.
 
 To solve this issue, see [CCP Error APPAP330E Failed to verify application authentication data: Could not obtain client certificate details](https://community.cyberark.com/s/article/CCP-Error-APPAP330E-Failed-to-verify-application-authentication-data-Could-not-obtain-client-certificate-details).
 
-### "Could not read the application certificate. Try to delete and recreate the application."
+## "Could not read the application certificate. Try to delete and recreate the application."
 
 This error message means that the CyberArk certificate can't be processed correctly. The application certificate might be missing, corrupted, or incorrectly installed.
 
@@ -89,7 +88,7 @@ If you still don't have enough information to mitigate the issue by using the pr
 
 - [Create a CyberArk credential](/power-automate/desktop-flows/create-cyberark-credential)
 - [Configure Power Automate for desktop proxy settings](/power-automate/desktop-flows/how-to/proxy-settings)
-- [IP address configuration](/power-automate/ip-address-configuration)
+- [Power Automate IP address configuration](/power-automate/ip-address-configuration)
 - [Change the on-premises Service account](/power-automate/desktop-flows/troubleshoot#change-the-on-premises-service-account)
 - [\<Bypasslist> element (network settings)](/dotnet/framework/configure-apps/file-schema/network/bypasslist-element-network-settings)
 
