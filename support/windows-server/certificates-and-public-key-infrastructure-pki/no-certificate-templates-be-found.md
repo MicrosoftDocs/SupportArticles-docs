@@ -12,7 +12,7 @@ ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Certificate Enro
 
 This article provides help to solve an error "No certificate templates could be found" that occurs when you request certificates from CA web enrollment pages.
 
-_Applies to:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server (All supported versions)  
 _Original KB number:_ &nbsp; 811418
 
 ## Symptoms
