@@ -23,7 +23,7 @@ Customer service representatives might not meet the assignment criteria. The aut
 To troubleshoot this issue:
 
 - Check the work distribution settings in the workstream if you use an [out-of-the-box assignment method](/dynamics365/customer-service/administer/assignment-methods#types-of-assignment-methods) such as "highest capacity" or "advanced round robin." Verify that the customer service representatives' presences match the allowed presences in the work distribution settings.
-- Check the customer service representatives' available capacity in the [Agent details drill–down](/dynamics365/customer-service/use/realtime-agents-analytics#agent-details-drill-down) in the real-time analytics dashboard available to supervisors.
+- Check the customer service representatives' available capacity in the [Agent details drill-down](/dynamics365/customer-service/use/realtime-agents-analytics#agent-details-drill-down) in the real-time analytics dashboard available to supervisors.
 - Verify the available unit capacity if the workstream uses unit-based capacity.
 - Verify the available capacity profile units in the profile used by the workstream if you use a [capacity profile](/dynamics365/customer-service/administer/capacity-profiles). Also, see if another capacity profile blocks capacity and assignment from other profiles.
 
