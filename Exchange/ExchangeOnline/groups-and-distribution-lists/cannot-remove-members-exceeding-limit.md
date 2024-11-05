@@ -31,7 +31,7 @@ When you use the Exchange admin center (EAC) to delete a member from a distribut
 
 The cause of the issue varies depending on whether you're using on-premises EAC or the EAC in Exchange Online.0
 
-- In the EAC in Exchange Online, only a maximum of 1,000 members are displayed. If the distribution group contains more than 1,000 members, some members will be missing from the displayed list.
+- In the EAC in Exchange Online, only a maximum of 1,000 members are displayed. If the distribution group contains more than 1,000 members, some members won't appear in the displayed list.
 - In on-premises EAC, only a maximum of 3,000 members are displayed. If the distribution group contains more than 3,000 members, then not all members are displayed. In this scenario, you can't use the on-premises EAC to remove members who aren't displayed.
 
 ## Workaround
