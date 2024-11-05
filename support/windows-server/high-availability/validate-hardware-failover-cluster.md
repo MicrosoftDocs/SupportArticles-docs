@@ -1,7 +1,7 @@
 ---
 title: Validate hardware for a failover cluster
 description: Helps validate hardware for a failover cluster.
-ms.date: 10/30/2024
+ms.date: 11/03/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -37,32 +37,6 @@ Cluster validation is intended to do the following actions:
 - Help ensure that the clustering solution you deploy is dependable.
 - Provide a way to validate changes to the hardware of an existing cluster.
 - Perform diagnostic tests on an existing cluster.
-
-### Supported cluster configurations
-
-For Microsoft Customer Service and Support to provide official support for a failover cluster in Windows Server 2012 R2 or Windows Server 2012, the cluster solution must meet the following criteria:
-
-- All hardware and software components must meet the qualifications for the appropriate logo. For Windows Server 2012 R2, this is the "Certified for Windows Server 2012 R2" logo. For Windows Server 2012, this is the "Certified for Windows Server 2012" logo. For more information, see [Windows Hardware Lab Kit](/windows-hardware/test/hlk/) on the Microsoft website. Here are descriptions of the logos:
-
-  - **Certified Windows Server 2012 R2 Systems**
-
-    The "Certified for Windows Server 2012 R2" logo demonstrates that a server system meets Microsoft's highest technical bar for security, reliability, and manageability. Along with other certified devices and drivers, it can support the roles, features, and interfaces for Cloud and Enterprise workloads, as well as business-critical applications.
-
-  - **Certified Windows Server 2012 R2 Devices**
-
-    The "Certified for Windows Server 2012 R2" logo demonstrates that a server system meets Microsoft's highest technical bar for security, reliability, and manageability. Along with other certified devices and drivers, it can support the roles, features, and interfaces for Cloud and Enterprise workloads, as well as business-critical applications.
-
-  - **Certified for Windows Server 2012 Devices**
-
-    Designed for line-of-business and mission-critical applications, the "Certified for Windows Server 2012" logo demonstrates that your solution meets Microsoft's highest technical bar for Windows fundamentals and platform compatibility.
-
-  - **Certified Windows Server 2012 Systems**
-
-    Designed for cloud and infrastructure workloads, as well as business-critical applications, the "Microsoft Certified for Windows Server 2012" logo demonstrates that a server system meets Microsoft's highest technical bar for security, reliability, and manageability. Along with any required hardware components, it can support all the roles, features, and interfaces that are supported by Windows Server 2012.
-
-- The fully configured system (servers, network, and storage) must pass all the required tests in the Validate a Configuration Wizard, which you can run from Failover Cluster Manager. Alternatively, you can run the validation tests using the [Test-Cluster](/powershell/module/failoverclusters/test-cluster) Windows PowerShell cmdlet.
-
-Microsoft support policies are also described in [Microsoft support policy for Windows Server failover clusters](microsoft-support-policy-failover-clusters.md).
 
 ### Common validation scenarios
 
@@ -329,10 +303,6 @@ Microsoft customer support might request that you validate a production cluster 
 
 ## Frequently asked questions
 
-### If a cluster passes all tests in the Validate a Configuration Wizard, is it supported?
-
-If all the hardware and software components in the cluster meet the qualifications for the "Certified for Windows Server 2012 R2" or "Certified for Windows Server 2012" logo, and the cluster passes the validation tests, it's considered supported by Microsoft Customer Service and Support for Failover Clustering. For more information, see [Supported cluster configurations](#supported-cluster-configurations) earlier in this guide.
-
 ### Will failover cluster solutions be listed in the Windows Server Catalog?
 
 No, Microsoft won't maintain a list of vendor solutions for failover clusters. However, many vendors list recommended failover cluster solutions and components on their websites.
@@ -344,8 +314,3 @@ The Validate a Configuration Wizard generates a simple HTML report that clearly 
 ### What if I make a change to the cluster configuration, like adding a node? Do I have to run the Validate a Configuration Wizard again?
 
 Yes, the Validate a Configuration Wizard should be run whenever a change is made to an existing failover cluster. For more information, see [Common validation scenarios](#common-validation-scenarios) earlier in this guide.
-
-## More information
-
-- [Failover Clustering](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831579(v=ws.11))
-- [Failover Clustering Hardware Requirements and Storage Options](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj612869(v=ws.11))
