@@ -26,12 +26,6 @@ If you use Power Automate with a version earlier than 2.50, you can upgrade to v
 
 Here are some specific error messages and their resolutions:
 
-- [The configuration for the cyberArk store is incorrect. Validate all connection information.](#the-configuration-for-the-cyberark-store-is-incorrect-validate-all-connection-information)
-- [Could not contact the CyberArk vault. Verify connectivity to the server and validate all connection information.](#could-not-contact-the-cyberark-vault-verify-connectivity-to-the-server-and-validate-all-connection-information)
-- [The CyberArk object was not found, or the used application does not have the permission to retrieve it.](#the-cyberark-object-was-not-found-or-the-used-application-does-not-have-the-permission-to-retrieve-it)
-- [The CyberArk server was unable to verify the certificate, please confirm that the CyberArk server is correctly configured for SSL authentication.](#the-cyberark-server-was-unable-to-verify-the-certificate-please-confirm-that-the-cyberark-server-is-correctly-configured-for-ssl-authentication)
-- [Could not read the application certificate. Try to delete and recreate the application.](#could-not-read-the-application-certificate-error-when-you-create-a-connection-using-a-cyberark-credential)
-
 ## "The configuration for the cyberArk store is incorrect. Validate all connection information."
 
 This error occurs because the CyberArk store is misconfigured, and a valid request can't be made for CyberArk.
