@@ -29,13 +29,13 @@ This situation causes the following error 3081 when you run a subsequent `ALTER 
 
 This problem is fixed in the following cumulative update for SQL Server:
 
-- [Cumulative Update 16 for SQL Server 2022](cumulativeupdate16.md)
+[Cumulative Update 16 for SQL Server 2022](cumulativeupdate16.md)
 
 ## About cumulative updates for SQL Server
 
 Each new cumulative update for SQL Server contains all the hotfixes and security fixes that were in the previous build. We recommend that you install the latest build for your version of SQL Server:
 
-- [Latest cumulative update for SQL Server 2022](build-versions.md)
+[Latest cumulative update for SQL Server 2022](build-versions.md)
 
 ## Status
 
