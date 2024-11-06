@@ -248,12 +248,10 @@ To fix this issue with the Application Insights Java agent, try one of the follo
 - Disable some instrumentations described in [Suppress specific autocollected telemetry](/azure/azure-monitor/app/java-standalone-config#suppress-specific-autocollected-telemetry).
 - Try this experimental feature: [Startup time improvement for a limited number of CPU cores](https://github.com/microsoft/ApplicationInsights-Java/wiki/Start-up-time-improvement-with-a-limited-number-of-CPU-cores-(experimental)). If you experience any issues while using this feature, send us a feedback.
 
-You can also try other monitoring solutions:
+You can also try the [monitoring solutions for Java native](/azure/azure-monitor/app/opentelemetry-enable?tabs=java-native) also applicable to a JVM-based application:
 
-- With Spring Boot, the Microsoft distribution of the OpenTelemetry starter. See the [Java native documentation](/azure/azure-monitor/app/opentelemetry-enable?tabs=java-native), also applicable to a JVM-based application.
-- With Quarkus, the Quarkus Opentelemetry Exporter for Microsoft Azure. See the [Java native documentation](/azure/azure-monitor/app/opentelemetry-enable?tabs=java-native), also applicable to a JVM-based application.
-
-For more information, see the [Enable Azure Monitor OpenTelemetry for Java native applications](/azure/azure-monitor/app/opentelemetry-enable?tabs=java-native).
+- With Spring Boot, the Microsoft distribution of the OpenTelemetry starter.
+- With Quarkus, the Quarkus Opentelemetry Exporter for Microsoft Azure.
 
 [!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
 
