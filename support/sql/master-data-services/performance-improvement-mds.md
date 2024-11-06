@@ -56,7 +56,7 @@ Enable or disable the system setting [PerformanceImprovementEnable](/sql/master-
   After you disable the performance setting, creating and modifying models, entities, or attributes will be faster.
 
 > [!NOTE]
-> Alternatively, you can change the setting on the **Database Configuration** page in MDS Configuration Manager:
+> Alternatively, you can change the setting on the [**Database Configuration** page](/sql/master-data-services/database-configuration-page-master-data-services-configuration-manager) in MDS Configuration Manager:
 > :::image type="content" source="media/performance-improvement-mds/switch-enable-performance-setting.png" alt-text="Screenshot of the performance setting  PerformanceImprovementEnable.":::  
 > After changing this setting, you must run the command `EXEC [mdm].[udpPerformanceToggleSwitch];` to make sure that the view and data is correct.
 
