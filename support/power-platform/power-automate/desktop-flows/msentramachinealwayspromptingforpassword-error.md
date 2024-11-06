@@ -1,26 +1,37 @@
 ---
-title: Computer not joined Microsoft Entra or domain or MachineNotJoined
-description: Solves errors that occur when you create a desktop flow connection using the connect with sign-in option in Microsoft Power Automate for desktop.
-author: 
+title: Unattended desktop flow run fails with MSEntraMachineAlwaysPromptingForPassword
+description: Solves an error that occurs when you run an unattended desktop flow in Microsoft Power Automate for desktop.
 ms.author: moelaabo
 ms.reviewer: guco
-ms.custom: sap:Desktop flows\Cannot create desktop flow connection
+ms.custom: sap:Desktop flows\Unattended flow runtime errors
 ms.date: 11/06/2024
 ---
-# Desktop flow failing with AADMachineAlwaysPromptingForPassword error code
+# An unattended desktop flow run fails with the MSEntraMachineAlwaysPromptingForPassword error
+
+This article provides a resolution for an error that occurs when you run an unattended desktop flow in Microsoft Power Automate for desktop.
 
 ## Symptoms
 
-Your desktop flow unattended runs fail with the error code AADMachineAlwaysPromptingForPassword as shown in the screenshot below.
+Your unattended desktop flow run fails with the "MSEntraMachineAlwaysPromptingForPassword" error code (formerly "AADMachineAlwaysPromptingForPassword").
 
-:::image type="content" source="media/msentramachinealwayspromptingforpassword-error/addmachinealwayspromptingforpassword.png" alt-text="The error code that shows in the Body seciton of the Run a flow built with Power Automate for desktop page.":::
+:::image type="content" source="media/msentramachinealwayspromptingforpassword-error/addmachinealwayspromptingforpassword.png" alt-text="The error code that shows in the Body section of the Run a flow built with Power Automate for desktop page.":::
 
 ## Cause
 
-Power Automate for desktop failed to validate your Azure Active Directory credentials on the machine. This is typically caused by a group policy setting on your machine.
+Power Automate for desktop fails to validate your Microsoft Entra ID (formerly Azure Active Directory) credentials on the machine. This issue is typically caused by a group policy setting on your machine.
 
 ## Resolution
 
-To see if a group policy setting is causing the issue, you can go to the Local Group Policy Editor (Start > Run > "gpedit.msc"). From within there, look at Local Computer Policy > Computer Configuration > Administrative Templates > Windows Components > Remote Desktop Services > Remote Desktop Session Host > Security, and look at the value "**Always prompt for password upon connection**". If this is set to true, you need to work with your IT department to disable the policy for that machine. Note that this value is also reflected in the registry in the following path: **Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services**; if the Terminal Services key has a value **fPromptForPassword** set to 1, it means the setting is enabled and you must work with your IT department to disable it (simply changing the registry value is generally not sufficient as it may be reverted).
+To solve this issue, check the group policy setting on your machine.
 
-If "Always prompt for password upon connection" is not enabled yet you are still experiencing the error, then use regedit to open the following registry key: **Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp**. Then look for the DWORD **fPromptForPassword** and set it to 0; if that DWORD does not exist you can create it.
+1. Press Windows key + <kbd>R</kbd> to open the **Run** dialog.
+1. Type _gpedit.msc_ and press <kbd>Enter</kbd> to open the Local Group Policy Editor.
+1. Navigate to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Remote Desktop Services** > **Remote Desktop Session Host** > **Security**.
+1. Look for the **Always prompt for password upon connection** setting.
+
+   - If the setting is enabled, you need to work with your IT department to disable the policy for that machine.
+
+     > [!NOTE]
+     > This value is also reflected in the registry in the **Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services** path. If the **Terminal Services** key has a **fPromptForPassword** DWORD value set to **1**, it means the setting is enabled and you must work with your IT department to disable it (simply changing the registry value is generally not sufficient as it might be reverted.)
+
+   - If the **Always prompt for password upon connection** setting isn't enabled but you receive the error code, type _regedit_ in the **Run** dialog to open the Registry Editor. In the Registry Editor, navigate to the **Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp** registry key. Then, look for the **fPromptForPassword** DWORD and set it to **0**. If that DWORD doesn't exist, you can create it and then set its value to **0**.
