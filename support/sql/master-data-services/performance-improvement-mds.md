@@ -57,7 +57,7 @@ Enable or disable the system setting [PerformanceImprovementEnable](/sql/master-
 
 > [!NOTE]
 > Alternatively, you can change the setting on the **Database Configuration** page in MDS Configuration Manager:
-> :::image type="content" source="media/performance-improvement-mds/switch-enable-performance-setting.png" alt-text="Screenshot of the performance setting  PerformanceImprovementEnable.":::
+> :::image type="content" source="media/performance-improvement-mds/switch-enable-performance-setting.png" alt-text="Screenshot of the performance setting  PerformanceImprovementEnable.":::  
 > After changing this setting, you must run the command `EXEC [mdm].[udpPerformanceToggleSwitch];` to make sure that the view and data is correct.
 
 ## More information
