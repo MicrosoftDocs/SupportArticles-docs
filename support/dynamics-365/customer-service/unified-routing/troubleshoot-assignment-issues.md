@@ -39,9 +39,9 @@ The customer service representative doesn't close the conversation using the rec
 
 To troubleshoot this issue:
 
-- Verify that the customer service representative uses the [End](/dynamics365/customer-service/use/oc-conversation-state#wrap-up) button on the communication panel to close the conversation.
-- Verify that the **Block capacity for wrap up** field is set in the [work distribution settings](/dynamics365/customer-service/administer/create-workstreams#configure-work-distribution) of the workstream.
-- Supervisors can look up the active conversations assigned to the customer service representative in the [ongoing conversations dashboard](/dynamics365/customer-service/use/realtime-ongoing) and verify the status.
+- Verify that the customer service representative closed the conversation. For voice and chat conversations, if the representative ends the conversation without closing it, the conversation goes into the wrap-up state and the representative's capacity remains occupied until the [wrap-up time](/dynamics365/customer-service/administer/create-workstreams#configure-work-distribution) that's configured is completed.
+- Supervisors can look up the active conversations assigned to the customer service representative in the [ongoing conversations dashboard](/dynamics365/customer-service/use/realtime-ongoing) and track agent presence and capacity in the real-time dashboard.
+- Verify if the default time set for the [conversations to be closed automatically](/dynamics365/customer-service/administer/auto-close-conversation-powerapps) by the system meets your business needs. 
 
 ### More information
 
