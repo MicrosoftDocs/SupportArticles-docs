@@ -1,7 +1,7 @@
 ---
 title: Unable to request certificate with web enrollment
 description: Provides solutions to an issue where you fail to request a certificate by using web enrollment.
-ms.date: 12/26/2023
+ms.date: 11/06/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
