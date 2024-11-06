@@ -242,16 +242,16 @@ Java 8 has a known issue that's related to the JAR file signature verification o
 
 ### Java higher than version 8
 
-To fix this issue, try one of the following methods:
+To fix this issue with the Application Insights Java agent, try one of the following methods:
 
 - Use an Azure configuration with more CPU power.
 - Disable some instrumentations described in [Suppress specific autocollected telemetry](/azure/azure-monitor/app/java-standalone-config#suppress-specific-autocollected-telemetry).
 - Try this experimental feature: [Startup time improvement for a limited number of CPU cores](https://github.com/microsoft/ApplicationInsights-Java/wiki/Start-up-time-improvement-with-a-limited-number-of-CPU-cores-(experimental)). If you experience any issues while using this feature, send us a feedback.
 
-You can also try to use other monitoring solutions:
+You can also try other monitoring solutions:
 
-- For Spring Boot native applications, use the Microsoft distribution of the OpenTelemetry Spring Boot starter.
-- For Quarkus native applications, use the Quarkus Opentelemetry Exporter for Microsoft Azure.
+- With Spring Boot, the Microsoft distribution of the OpenTelemetry starter. See the [Java native documentation](/azure/azure-monitor/app/opentelemetry-enable?tabs=java-native), also applicable to a JVM-based application.
+- With Quarkus, the Quarkus Opentelemetry Exporter for Microsoft Azure. See the [Java native documentation](/azure/azure-monitor/app/opentelemetry-enable?tabs=java-native), also applicable to a JVM-based application.
 
 For more information, see the [Enable Azure Monitor OpenTelemetry for Java native applications](/azure/azure-monitor/app/opentelemetry-enable?tabs=java-native).
 
