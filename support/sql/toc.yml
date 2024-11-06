@@ -32,7 +32,7 @@ items:
 
 - name: Master Data Services
   items:
-  - name: Issues after performance improvement in MDS 
+  - name: Issues when modifying entities, attributes, users, or groups  
     href: master-data-services/performance-improvement-mds.md
   - name: MDS entity-based staging may fail
     href: master-data-services/mds-entity-based-staging-fail.md

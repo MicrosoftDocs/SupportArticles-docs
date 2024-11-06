@@ -1,41 +1,40 @@
 ---
-title: Issues after performance improvement in MDS 
+title: Issues when modifying entities, attributes, users, or groups in MDS 
 description: Provides the historical background and a resolution for the issues that occur after a performance improvement in Master Data Services.
-ms.date: 10/23/2024
+ms.date: 11/06/2024
 ms.custom: sap:Master Data Services
 ms.reviewer: v-biguan, jiwang6
 ---
-# Issues after performance improvement in MDS 
+# Performance issues when modifying entities, attributes, users, or groups in MDS
 
-This article helps you understand and solve the issues that occur after a performance improvement in Master Data Services (MDS).
+This article helps you understand and solve performance issues in [Master Data Services (MDS)](/sql/master-data-services/master-data-services-overview-mds) when you create or modify entities, attributes, users, or groups.
 
 ## Symptoms
 
-We made a significant performance improvement several years ago. This change can benefit all the `GET` operation for the data requiring permission check through Portal and API (that is, all the entities, attributes, and model permissions). But the cost for this change is low performance when you add, remove, or modify entity or attribute.
+When you add, remove, create, or modify entities, attributes, users, or groups, you experience performance issues like high memory usage, long load times, or slow response times. 
 
-## Benefits and costs for the performance improvement
+## Cause
+
+MDS introduced a significant improvement that enhanced the performance of all `GET` operations for data requiring permission checks through Portal and API (that is, all the entities, attributes, and model permissions). However, the side effect of this change is decreased performance when you add, remove, create, or modify entities, attributes, users, or groups.
 
 - Benefits (Performance improvement):
 
-  - This change improves the performance of loading pages that need permission checks, such as the explore page, model page, entities list page, and attributes list page.
-  - On model permissions setting page, some customers reported that they sometimes faced the timeout exception. After this change, the issue is solved.
-  - On the **Business Rules** page, loading add or edit condition page would take a long time. After this change, the page can load immediately.
+  - Improved performance for loading pages that need permission checks, such as the explore page, model page, entities list page, and attributes list page.
+  - Resolved timeout exceptions on model permissions setting page
+  - Improved load time of add or edit condition page on the Business Rules page.
 
 - Costs (Side effect):
 
-  - Low performance when you create or modify entities or attributes.
-  - Low performance when you add users or groups.
- 
-In the Master Data Management (MDM) system, the `GET` operation is the most frequent operation. Operations for create or modify entities, attributes, or users(groups) have less frequency than the `GET` operation.
-
-So, through this performance improvement, we improve the performance in the `GET` operations, but it also brings some side effects for the `Modify` operations. The benefits outweigh the side effects. 
+  - Decreased performance when you create or modify entities or attributes.
+  - Decreased performance when you add users or groups.
 
 ## Resolution
 
-This change causes degraded performance. We provide a system setting that you can use to flexibly disable and enable this change. For more information, see 
-[Performance Settings](/sql/master-data-services/system-settings-master-data-services#Performance).
+Enable or disable the system setting [PerformanceImprovementEnable](/sql/master-data-services/system-settings-master-data-services#Performance) (the setting is enabled by default) depending on your situation:
 
-- After you enable the performance setting, it will be faster when you load large user security related data. For example:
+- To improve the performance of load permissions related pages, enable the performance setting.
+
+  Run the following commands in SQL Server Management Studio (SSMS):
 
   ```SQL
   UPDATE mdm.tblSystemSetting SET SettingValue = 1 WHERE SettingName = 'PerformanceImprovementEnable';
@@ -43,13 +42,23 @@ This change causes degraded performance. We provide a system setting that you ca
   GO
   ```
 
-- After you disable the performance setting, it will be faster when you create model, entity, or attribute. For example:
+  After you enable the performance setting, loading large user security related data will be faster.
+
+- To improve performance when creating or modifying entities, attributes, users, or groups, disable the performance setting.
+
+  Run the following commands in SSMS:
 
   ```SQL
   UPDATE mdm.tblSystemSetting SET SettingValue = 0 WHERE SettingName = 'PerformanceImprovementEnable';
   EXEC [mdm].[udpPerformanceToggleSwitch];
   GO
   ```
+  After you disable the performance setting, creating and modifying models, entities, or attributes will be faster.
+
+> [!NOTE]
+> Alternatively, you can change the setting on the **Database Configuration** page in MDS Configuration Manager:
+> :::image type="content" source="media/performance-improvement-mds/switch-enable-performance-setting.png" alt-text="Screenshot of the performance setting  PerformanceImprovementEnable.":::
+> After changing this setting, you must run the command `EXEC [mdm].[udpPerformanceToggleSwitch];` to make sure that the view and data is correct.
 
 ## More information
 
