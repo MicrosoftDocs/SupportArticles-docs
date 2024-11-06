@@ -16,6 +16,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Outlook for Microsoft 365 for Mac
+  - Outlook 2024 for Mac
   - Outlook 2021 for Mac
   - Outlook 2019 for Mac
 ms.date: 02/07/2024
@@ -23,7 +24,7 @@ ms.date: 02/07/2024
 
 # Add Exchange Server mailboxes in the new Outlook for Mac
 
-In the new Outlook for Mac, you can add email accounts for Microsoft Exchange Server mailboxes. The new feature is unsupported and still in development. To beta test the new functionality, your environment must meet the following requirements:
+In the new Outlook for Mac, you can add email accounts for Microsoft Exchange Server mailboxes. This feature is fully supported and available for all users. To use this feature, ensure your environment must meet the following requirements:
 
 - The on-premises mailboxes must be in Exchange Server 2016 or a later version.
 
@@ -36,8 +37,6 @@ In the new Outlook for Mac, you can add email accounts for Microsoft Exchange Se
 - Outlook or Office must be downloaded from the Microsoft 365 portal ([https://office.com](https://office.com/)).
 
   Note: The Outlook and Office versions that are downloaded from the Apple App Store don't support the new functionality.
-
-After these requirements are met, [opt in to the beta channel](https://insider.microsoft365.com/join/Mac), and then install the latest beta channel release or current channel (preview) for the Outlook for Mac client.
 
 To add an Exchange Server mailbox in the new Outlook for Mac, see [Add an email account to Outlook](https://support.microsoft.com/office/add-an-email-account-to-outlook-6e27792a-9267-4aa4-8bb6-c84ef146101b?ui=en-us&rs=en-us&ad=us#PickTab=macOS).
 
