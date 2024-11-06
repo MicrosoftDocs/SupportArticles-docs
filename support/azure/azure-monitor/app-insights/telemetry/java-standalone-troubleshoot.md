@@ -2,7 +2,7 @@
 title: Troubleshoot Azure Monitor Application Insights for Java
 description: This article presents troubleshooting information for the Java agent for Azure Monitor Application Insights.
 ms.topic: conceptual
-ms.date: 06/24/2024
+ms.date: 11/06/2024
 editor: v-jsitser
 ms.reviewer: aaronmax, jeanbisutti, trstalna, toddfous, heya, v-leedennis
 ms.service: azure-monitor
@@ -240,16 +240,20 @@ Java 8 has a known issue that's related to the JAR file signature verification o
 
 - Use Java version 11 or a later version.
 
-### Java greater than 8
+### Java higher than version 8
 
-With the Java agent you can try to:
-* Use an Azure configuration with more CPU power.
-* [Disable some instrumentations](/azure/azure-monitor/app/azure-monitor/app/java-standalone-config).
-* Try this experimental feature: [Startup time improvement for a limited number of CPU cores](https://github.com/microsoft/ApplicationInsights-Java/wiki/Start-up-time-improvement-with-a-limited-number-of-CPU-cores-(experimental)). If you experience any issues while using this feature, send us feedback.
+To fix this issue, try one of the following methods:
 
-You can also try other monitoring solutions:
-* With Spring Boot, the Microsoft distribution of the OpenTelemetry Spring Boot starter. See the [Java native documentation](/azure/azure-monitor/app/opentelemetry-enable?tabs=java-native), also applicable to a JVM-based application.
-* With Quarkus, the Quarkus Opentelemetry Exporter for Microsoft Azure. See the [Java native documentation](/azure/azure-monitor/app/opentelemetry-enable?tabs=java-native), also applicable to a JVM-based application.
+- Use an Azure configuration with more CPU power.
+- Disable some instrumentations described in [Suppress specific autocollected telemetry](/azure/azure-monitor/app/java-standalone-config#suppress-specific-autocollected-telemetry).
+- Try this experimental feature: [Startup time improvement for a limited number of CPU cores](https://github.com/microsoft/ApplicationInsights-Java/wiki/Start-up-time-improvement-with-a-limited-number-of-CPU-cores-(experimental)). If you experience any issues while using this feature, send us a feedback.
+
+You can also try to use other monitoring solutions:
+
+- For Spring Boot native applications, use the Microsoft distribution of the OpenTelemetry Spring Boot starter.
+- For Quarkus native applications, use the Quarkus Opentelemetry Exporter for Microsoft Azure.
+
+For more information, see the [Enable Azure Monitor OpenTelemetry for Java native applications](/azure/azure-monitor/app/opentelemetry-enable?tabs=java-native).
 
 [!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
 
