@@ -18,7 +18,7 @@ This problem is fixed in the following cumulative update for SQL Server on Azure
 
 [Cumulative Update 16 for SQL Server 2022](cumulativeupdate16.md)
 
-In the SQL Server 2022 CU15 and later versions, the server-level [credential]( /sql/t-sql/statements/create-credential-transact-sql#e-creating-a-credential-for-managed-identity) is enabled for the Microsoft Entra managed identity authentication with SQL Server on Azure VMs and supports database backup and restore operations to Azure Storage.
+In the SQL Server 2022 CU16 and later versions, the Microsoft Entra managed identity authentication with SQL Server on Azure VMs supports the server-level [credential]( /sql/t-sql/statements/create-credential-transact-sql#e-creating-a-credential-for-managed-identity) for database backup and restore operations to Azure Storage.
 
 To enable the managed identity support for SQL Server on Azure VMs, the following steps are required:
 
