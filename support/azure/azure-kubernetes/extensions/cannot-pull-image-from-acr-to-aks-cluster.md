@@ -1,7 +1,7 @@
 ---
 title: Can't pull images from Azure Container Registry to Kubernetes
 description: This article helps you troubleshoot the most common errors that you may encounter when pulling images from a container registry to an AKS cluster.
-ms.date: 09/09/2024
+ms.date: 11/01/2024
 author: genlin
 ms.author: genli
 ms.reviewer: chiragpa, andbar, v-weizhu, v-leedennis
@@ -100,7 +100,7 @@ Make sure that the secret of the service principal that's associated with the AK
 SP_ID=$(az aks show --resource-group <myResourceGroup> --name <myAKSCluster> \
     --query servicePrincipalProfile.clientId -o tsv)
 
-az ad sp credential list --id "$SP_ID" --query "[].endDate" -o tsv
+az ad app credential list --id "SP_ID" --query "[].endDateTime" --output tsv
 ```
 
 For more information, see [Check the expiration date of your service principal](/azure/aks/update-credentials#check-the-expiration-date-of-your-service-principal).
