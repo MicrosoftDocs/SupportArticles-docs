@@ -45,5 +45,5 @@ To troubleshoot this issue:
 
 ### More information
 
-- [Assignment methods in unified routing](/dynamics365/customer-service/administer/assignment-methods)
-- [Set allowed presences in workstreams](/dynamics365/customer-service/administer/create-workstreams#configure-work-distribution)  
+[Assignment methods in unified routing](/dynamics365/customer-service/administer/assignment-methods)  
+[Set allowed presences in workstreams](/dynamics365/customer-service/administer/create-workstreams#configure-work-distribution)  
