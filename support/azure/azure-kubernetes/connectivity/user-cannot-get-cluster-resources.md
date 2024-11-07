@@ -38,14 +38,14 @@ Depending on the RBAC type that's configured for the cluster ([Kubernetes RBAC](
 	az aks show -g <CLUSTER_RESOURCE_GROUP> -n <CLUSTER_NAME> --query aadProfile.enableAzureRbac
   ```
 
-- If the result is **false**, the cluster uses Kubernetes RBAC. See [Solving permission issues in Kubernetes RBAC-based AKS clusters](#solving-permission-issues-in-kubernetes-rbac-based-aks-clusters).
+- If the result is **false**, the cluster uses Kubernetes RBAC. See [Solving permission issues in Kubernetes RBAC-based AKS clusters](#solving-permissions-issues-in-kubernetes-rbac-based-aks-clusters).
 - If the result is **true,** the cluster uses Azure RBAC. See [Solving permission issues in Azure RBAC-based AKS clusters](#solving-permissions-issues-in-azure-rbac-based-aks-clusters).
 
-### Solving permission issues in Kubernetes RBAC-based AKS clusters
+### Solving permissions issues in Kubernetes RBAC-based AKS clusters
 
 If the cluster uses Kubernetes RBAC, permissions for the user account are configured through the creation of RoleBinding or ClusterRoleBinding Kubernetes resources. For more information, see [Kubernetes RBAC documentation](https://kubernetes.io/docs/reference/access-authn-authz/rbac/).
 
-Additionally, in Microsoft Entra ID integrated clusters, a ClusterRoleBinding resource is automatically created to grant to members of a pre-designated Microsoft Entra ID group the permissions to fully administer the cluster likes granting administrator access to the cluster.
+Additionally, in Microsoft Entra ID integrated clusters, a ClusterRoleBinding resource is automatically created granting members of a pre-designated Microsoft Entra ID group administrator access to the cluster.
 
 To resolve the "Error from server (Forbidden)" error for a specific user, use one of the following methods.
 
