@@ -27,6 +27,19 @@ const provider = new NodeTracerProvider();
 diag.setLogger(new DiagConsoleLogger(), DiagLogLevel.ALL);
 provider.register();
 ```
+Alternatively, the following [environment variables](https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/monitor/monitor-opentelemetry/README.md#self-diagnostics) can also be used:
+
+```javascript
+import { useAzureMonitor } from "@azure/monitor-opentelemetry";
+import { DiagLogLevel } from "@opentelemetry/api";
+
+process.env.APPLICATIONINSIGHTS_INSTRUMENTATION_LOGGING_LEVEL = "VERBOSE";
+process.env.APPLICATIONINSIGHTS_LOG_DESTINATION = "file";
+process.env.APPLICATIONINSIGHTS_LOGDIR = "C:/applicationinsights/logs";
+
+useAzureMonitor();
+```
+
 
 ### Step 2: Test connectivity between your application host and the ingestion service
 
