@@ -12,13 +12,13 @@ appliesto:
 # KB5048033 - Cumulative Update 16 for SQL Server 2022
 
 _Release Date:_ &nbsp; November 14, 2024  
-_Version:_ &nbsp; 16.0.4165.3
+_Version:_ &nbsp; 16.0.4165.4
 
 ## Summary
 
-This article describes Cumulative Update package 15 (CU15) for Microsoft SQL Server 2022. This update contains 14 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 14, and it updates components in the following builds:
+This article describes Cumulative Update package 16 (CU16) for Microsoft SQL Server 2022. This update contains 16 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 15 and it updates components in the following builds:
 
-- SQL Server - Product version: **16.0.4165.3**, file version: **2022.160.4165.3**
+- SQL Server - Product version: **16.0.4165.4**, file version: **2022.160.4165.4**
 - Analysis Services - Product version: **16.0.43.233**, file version: **2022.160.43.233**
 
 ## Known issues in this update
@@ -50,7 +50,6 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=3419788>[3419788](#3419788) </a> | Allows you to disable [OLE DB streaming](/sql/relational-databases/replication/agents/replication-distribution-agent) by passing -UseOledbStreaming 0 for the Replication Distribution Agent to avoid the error mentioned in [Error message when you run the Distribution Agent in SQL Server](../../database-engine/replication/error-run-distribution-agent.md).| SQL Server Engine | Replication | All|
 | <a id=3459385>[3459385](#3459385) </a> | Fixes an issue in which the full-text auto crawl monitor is aborted when you use full-text search.| SQL Server Engine | Search| All|
 | <a id=3461615>[3461615](#3461615) </a> | Fixes an issue in which `fdhost` frequently restarts due to out-of-memory (OOM) of `fdhost` when there are too many outstanding global batches from SQL Server in the cloud.| SQL Server Engine | Search| All|
-| <a id=3445709>[3445709](#3445709) </a> | [Improvement: Microsoft Entra managed identity support for backup and restore database operations in SQL Server on Azure VMs (KB5043526)](microsoft-entra-managed-identity-support-for-backup-and-restorte-database.md) | SQL Server Engine | Security Infrastructure | All|
 | <a id=3495266>[3495266](#3495266) </a> | Fixes an issue in which the SQL Server error log might include invalid characters for SQL Server Agent login attempts when the Agent runs a job on a scheduler configured to run automatically once the Agent starts. | SQL Server Engine | SQL Agent | Windows|
 | <a id=3530163>[3530163](#3530163) </a> | Fixes an issue in which upgrading from SQL Server 2017 or SQL Server 2019 to SQL Server 2022 is blocked during the database model_msdb upgrade phase. The following message appears in the SQL Server error log: </br></br>\<DateandTime> Database 'model_msdb' running the upgrade step from version xxx to version 957. </br></br>Additionally, you might see the following error message when trying to log in: </br></br>\<DatabaseTime> Logon Error: 18401, Severity: 14, State: 1. </br>\<DatabaseTime> Logon Login failed for user 'UserName'. Reason: Server is in script upgrade mode. Only administrator can connect at this time. [CLIENT: ClientID] | SQL Server Engine | SQL Server Engine | All|
 | <a id=3417400>[3417400](#3417400) </a> | Fixes a contention issue with high `KTM_RECOVERY_MANAGER` wait times that you might encounter when running XA distributed transactions. </br></br>**Note**: You need to turn on trace flag 8531 as a startup trace flag.| SQL Server Engine | Transaction Services| All|
@@ -100,13 +99,13 @@ For installation instructions and direct links to the CU package downloads, see 
 <details>
 <summary><b>File hash information</b></summary>
 
-You can verify the download by computing the hash of the *SQLServer2022-KB5041321-x64.exe* file through the following command:
+You can verify the download by computing the hash of the *SQLServer2022-KB5048033-x64.exe* file through the following command:
 
-`certutil -hashfile SQLServer2022-KB5041321-x64.exe SHA256`
+`certutil -hashfile SQLServer2022-KB5048033-x64.exe SHA256`
 
 |File name|SHA256 hash|
 |---------|---------|
-|SQLServer2022-KB5041321-x64.exe| 758EE805FAA130028085114FB2BCE215765EE10C9648DDB80DAB40FD8D6AE51A  |
+|SQLServer2022-KB5048033-x64.exe|   |
 
 </details>
 
