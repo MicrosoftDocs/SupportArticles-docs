@@ -5,6 +5,7 @@ ms.date: 11/07/2024
 ms.custom: sap:Email and Exchange Synchronization\Synchronization of incoming email
 author: rahulmital
 ms.author: rahulmital
+ms.reviewer: debrau
 ---
 # Emails aren't automatically tracked or synchronized using server-side synchronization
 
