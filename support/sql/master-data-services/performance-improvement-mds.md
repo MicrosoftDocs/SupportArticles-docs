@@ -3,7 +3,7 @@ title: Issues when modifying entities, attributes, users, or groups in MDS
 description: Provides the historical background and a resolution for the issues that occur after a performance improvement in Master Data Services.
 ms.date: 11/07/2024
 ms.custom: sap:Master Data Services
-ms.reviewer: v-biguan, jiwang6
+ms.reviewer: v-biguan, jiwang6, v-sidong
 ---
 # Performance issues when modifying entities, attributes, users, or groups in MDS
 
@@ -53,10 +53,10 @@ Enable or disable the system setting [PerformanceImprovementEnable](/sql/master-
 
 > [!NOTE]
 > Alternatively, you can change the setting on the [Database Configuration page](/sql/master-data-services/database-configuration-page-master-data-services-configuration-manager) in MDS Configuration Manager:
->
+> 
 > :::image type="content" source="media/performance-improvement-mds/switch-enable-performance-setting.png" alt-text="Screenshot of the performance setting  PerformanceImprovementEnable.":::
->   
-> After changing this setting, you must run the `EXEC [mdm].[udpPerformanceToggleSwitch];` command to make sure that the view and data is correct.
+> 
+> After changing this setting, you must run the `EXEC [mdm].[udpPerformanceToggleSwitch];` command to make sure that the view and data are correct.
 
 ## More information
 
