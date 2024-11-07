@@ -122,6 +122,10 @@
   items:
     - name: Flow connection isn't valid in customer support swarming
       href: teams-collaboration/flow-connection-invalid-customer-support-swarming.md
+- name: Unified routing
+  items:
+    - name: Troubleshoot issues with automatic assignment
+      href: unified-routing/troubleshoot-assignment-issues.md
 - name: Dynamics 365 Contact Center (formerly Omnichannel for Customer Service)
   items:
     - name: Agent Scripts and Macros
