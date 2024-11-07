@@ -32,9 +32,9 @@ There's BCD corruption that is not allowing the boot partition to find where th
 > [!TIP]
 > If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
-### Step 1: Create a repair/rescue VM
+### Step 1: Create a Repair/Rescue VM
 
-We strongly recommend creating a nested virtualization environment in Microsoft Azure and mounting the disk of the faulty VM on the Hyper-V host (repair VM) to troubleshoot this issue. For more information, see [Troubleshoot a faulty Azure VM by using nested virtualization in Azure](troubleshoot-vm-by-use-nested-virtualization.md).
+We strongly recommend creating a nested virtualization environment in Microsoft Azure and mounting the disk of the faulty VM on the Hyper-V host (Repair VM) to troubleshoot this issue. For more information, see [Troubleshoot a faulty Azure VM by using nested virtualization in Azure](troubleshoot-vm-by-use-nested-virtualization.md).
 
 (Optional) You can also create a rescue VM by attaching the OS disk of the faulty VM to a new VM as a data disk. To do so, follow these steps:
 
