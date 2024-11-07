@@ -39,7 +39,7 @@ Depending on the RBAC type that's configured for the cluster ([Kubernetes RBAC](
   ```
 
 - If the result is **false**, the cluster uses Kubernetes RBAC. See [Solving permission issues in Kubernetes RBAC-based AKS clusters](#solving-permission-issues-in-kubernetes-rbac-based-aks-clusters).
-- If the result is **true,** the cluster uses Azure RBAC. See [Solving permission issues in Azure RBAC-based AKS clusters](#solving-permission-issues-in-azure-rbac-based-aks-clusters).
+- If the result is **true,** the cluster uses Azure RBAC. See [Solving permission issues in Azure RBAC-based AKS clusters](#solving-permissions-issues-in-azure-rbac-based-aks-clusters).
 
 ### Solving permission issues in Kubernetes RBAC-based AKS clusters
 
