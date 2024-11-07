@@ -1,6 +1,6 @@
 ---
 title: Issues when modifying entities, attributes, users, or groups in MDS 
-description: Provides the historical background and a resolution for the issues that occur after a performance improvement in Master Data Services.
+description: Provides the historical background and a resolution for performance issues that occur when modifying entities, attributes, users, or groups in Master Data Services.
 ms.date: 11/07/2024
 ms.custom: sap:Master Data Services
 ms.reviewer: v-biguan, jiwang6, v-sidong
