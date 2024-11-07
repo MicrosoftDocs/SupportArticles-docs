@@ -24,7 +24,7 @@ This article shows how to create a nested virtualization environment in Microsof
 
 ## Automatic process
 
-You can create a Hyper-V Repair VM and repair the faulty VM offline automatically by using Azure VM repair commands described in [Repair a Windows VM by using the Azure Virtual Machine repair commands](repair-windows-vm-using-azure-virtual-machine-repair-commands.md).
+You can create a Repair VM with nested Hyper-V and repair the faulty VM offline automatically by using Azure VM repair commands described in [Repair a Windows VM by using the Azure Virtual Machine repair commands](repair-windows-vm-using-azure-virtual-machine-repair-commands.md).
 
 ## Manual process
 
