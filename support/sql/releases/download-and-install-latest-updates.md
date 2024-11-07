@@ -1,7 +1,7 @@
 ---
 title: Latest updates and version history for SQL Server
 description: This article lists various builds or updates that are available for different versions of SQL Server.
-ms.date: 11/10/2024
+ms.date: 11/12/2024
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen
 ms.reviewer: v-six
 ---
@@ -57,8 +57,8 @@ Each of the following links provides information for all of the applicable produ
 
 | Build number or version | Service pack | Update    | Knowledge Base number                                            | Release date       |
 |-------------------------|--------------|-----------|-------------------------------------------------------|--------------------|
-| 16.0.4155.4             | None         | CU15 + GDR| [KB5046862](https://support.microsoft.com/help/5046862) | November 10, 2024    |
-| 16.0.1135.2             | None         | GDR       | [KB5046861](https://support.microsoft.com/help/5046861) | November 10, 2024    |
+| 16.0.4155.4             | None         | CU15 + GDR| [KB5046862](https://support.microsoft.com/help/5046862) | November 12, 2024    |
+| 16.0.1135.2             | None         | GDR       | [KB5046861](https://support.microsoft.com/help/5046861) | November 12, 2024    |
 | 16.0.4150.1             | None         | CU15 + GDR| [KB5046059](https://support.microsoft.com/help/5046059) | October 08, 2024    |
 | 16.0.1130.5             | None         | GDR       | [KB5046057](https://support.microsoft.com/help/5046057) | October 08, 2024    |
 | 16.0.4145.4             | None         | CU15| [KB5041321](sqlserver-2022/cumulativeupdate15.md) | September 25, 2024    |
@@ -93,8 +93,8 @@ Each of the following links provides information for all of the applicable produ
 
 | Build number or version | Service pack | Update     | Knowledge Base number                                            | Release date       |
 |-------------------------|--------------|------------|-------------------------------------------------------|--------------------|
-| 15.0.4410.1             | None         | CU29 + GDR | [KB5046860](https://support.microsoft.com/help/5046860)       | November 10, 2024  |
-| 15.0.2130.3             | None         | GDR        | [KB5046859](https://support.microsoft.com/help/5046859)       | November 10, 2024  |
+| 15.0.4410.1             | None         | CU29 + GDR | [KB5046860](https://support.microsoft.com/help/5046860)       | November 12, 2024  |
+| 15.0.2130.3             | None         | GDR        | [KB5046859](https://support.microsoft.com/help/5046859)       | November 12, 2024  |
 | 15.0.4405.4            | None         | CU29       | [KB5046365](sqlserver-2019/cumulativeupdate29.md)       | October 31, 2024  |
 | 15.0.4395.2             | None         | CU28 + GDR | [KB5046060](https://support.microsoft.com/help/5046060)       | October 08, 2024  |
 | 15.0.2125.1             | None         | GDR        | [KB5046056](https://support.microsoft.com/help/5046056)       | October 08, 2024  |
@@ -147,8 +147,8 @@ Each of the following links provides information for all of the applicable produ
 
 | Build number or version | Service pack | Update     | Knowledge Base number                                            | Release date       |
 |-------------------------|--------------|------------|-------------------------------------------------------|--------------------|
-| 14.0.3485.1             | None         | CU31 + GDR | [KB5046858](https://support.microsoft.com/help/5046858) | November 10, 2024   |
-| 14.0.2070.1             | None         | GDR        | [KB5046857](https://support.microsoft.com/help/5046857) | November 10, 2024   |
+| 14.0.3485.1             | None         | CU31 + GDR | [KB5046858](https://support.microsoft.com/help/5046858) | November 12, 2024   |
+| 14.0.2070.1             | None         | GDR        | [KB5046857](https://support.microsoft.com/help/5046857) | November 12, 2024   |
 | 14.0.3480.1             | None         | CU31 + GDR | [KB5046061](https://support.microsoft.com/help/5046061) | October 08, 2024   |
 | 14.0.2065.1             | None         | GDR        | [KB5046058](https://support.microsoft.com/help/5046058) | October 08, 2024   |
 | 14.0.3475.1             | None         | CU31 + GDR | [KB5042215](https://support.microsoft.com/help/5042215) | September 10, 2024   |
@@ -208,8 +208,8 @@ Each of the following links provides information for all of the applicable produ
 
 | Build number or version | Service pack | Update                   | Knowledge Base number                                            | Release date       |
 |-------------------------|--------------|--------------------------|-------------------------------------------------------|--------------------|
-| 13.0.7050.2             | None         | Azure Connect Pack + GDR | [KB5046856](https://support.microsoft.com/help/5046856) | November 10, 2024   |
-| 13.0.6455.2             | None         | SP3 + GDR                | [KB5046855](https://support.microsoft.com/help/5046855) | November 10, 2024   |
+| 13.0.7050.2             | None         | Azure Connect Pack + GDR | [KB5046856](https://support.microsoft.com/help/5046856) | November 12, 2024   |
+| 13.0.6455.2             | None         | SP3 + GDR                | [KB5046855](https://support.microsoft.com/help/5046855) | November 12, 2024   |
 | 13.0.7045.2             | None         | Azure Connect Pack + GDR | [KB5046062](https://support.microsoft.com/help/5046062) | October 08, 2024   |
 | 13.0.6450.1             | None         | SP3 + GDR                | [KB5046063](https://support.microsoft.com/help/5046063) | October 08, 2024   |
 | 13.0.7040.1             | None         | Azure Connect Pack + GDR | [KB5042209](https://support.microsoft.com/help/5042209) | September 10, 2024   |
