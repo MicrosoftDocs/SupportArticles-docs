@@ -41,6 +41,8 @@ To resolve the issue, check whether the NSG on the node subnet includes an inbou
 
 Kubernetes accesses `svc/metrics-server` under the `kube-system` namespace for running kubectl top commands. There are other scenarios, such as [admission webhooks](https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/), in which the API server can also reach other services. It is important to note that, depending on the service failure pattern, the error message may vary.
 
+To troubleshoot the issue, check the error message to identify which service is affected and review the status of the related pods, services, and endpoints.
+
 ## Cause 3: Konnectivity or tunnel failing
 
 When [API Server VNet Integration](/azure/aks/api-server-vnet-integration) is not enabled, AKS deploys a tunnel solution that proxies API server requests to in-cluster networking locations. Most AKS clusters use the Konnectivity solution. Konnectivity does not require that you open special ports on the API server. For more information, see [AKS required network rules](/azure/aks/outbound-rules-control-egress#azure-global-required-network-rules).
