@@ -1,8 +1,8 @@
 ---
 title: Emails aren't automatically tracked or synchronized
 description: Provides troubleshooting information for the email synchronization issues when you use server-side synchronization in Microsoft Dataverse.
-ms.date: 10/04/2024
-ms.custom: sap:E-mail and Microsoft 365 Integration\Set up and configuration of server-side synchronization
+ms.date: 11/07/2024
+ms.custom: sap:Email and Exchange Synchronization\Synchronization of incoming email
 author: rahulmital
 ms.author: rahulmital
 ---
@@ -73,10 +73,10 @@ To narrow down why an email might not be automatically tracked, check each of th
 1. For the email in question, ensure the email is in the _Inbox_ folder of the target Dataverse mailbox. Emails outside the _Inbox_ folder can't be processed, even if they're moved back to the _Inbox_ later.
 
     - If you want to reprocess an email that was moved back to the _Inbox_ folder, you can reset the processing date (`ProcessEmailsReceivedAfter`) on the Dataverse mailbox record. This action allows server-side synchronization to discover and process the email. The details are outlined in the Note section of this [best practices page](/power-platform/admin/best-practices-server-side-synchronization#considerations).
-    - If you want to automatically track email responses sent from Outlook (in your _Sent Items_ folder), see [Welcome to Alchemy Portal](https://alchemyportal.azurewebsites.net/#autotracksentfolderitems).
+    - If you want to automatically track email responses sent from Outlook (in your _Sent Items_ folder), see [Outlook replies aren't automatically synchronized](#outlook-replies-arent-automatically-synchronized).
     - If you want to track emails that were moved to subfolders, you need to enable [Folder-Based tracking](/power-platform/admin/configure-outlook-exchange-folder-level-tracking).
 
-2. Examine the recipient email addresses in the **To:** and **Cc:** lines and ensure that at least one of them is associated with a Dataverse mailbox, which is [tested and enabled](/power-platform/admin/connect-exchange-online#test-the-configuration-of-mailboxes) for server-side synchronization and is configured to automatically track the email based on its associated incoming email filtering method. If the email is sent to a distribution group or has a Bcc recipient, refer to the topic below, see  to ensure that the underlining Dataverse mailbox is correctly configured.
+2. Examine the recipient email addresses in the **To:** and **Cc:** lines and ensure that at least one of them is associated with a Dataverse mailbox, which is [tested and enabled](/power-platform/admin/connect-exchange-online#test-the-configuration-of-mailboxes) for server-side synchronization and is configured to automatically track the email based on its associated incoming email filtering method. If the email is sent to a distribution group or has a Bcc recipient, refer to the topic below to ensure that the underlining Dataverse mailbox is correctly configured.
 
 3. Ensure that the recipient email addresses in Exchange or Gmail match the corresponding email address of the Dataverse user or queue mailbox.
 
@@ -86,7 +86,7 @@ Dataverse will resolve the recipient email addresses on the email to known Datav
 
 ### Resolution
 
-To automatically track emails from distribution groups or Bcc recipients, set up the underlining Dataverse user or queue mailbox that receives the email to accept **All Email Messages**. For more information, see [Set personal options that affect tracking and synchronization between customer engagement apps and Outlook or Exchange](/power-platform/admin/set-personal-options-affect-tracking-synchronization-between-dynamics-365-outlook-exchange).
+To automatically track emails that are addressed to distribution groups or Bcc recipients, set up the underlining Dataverse user or queue mailbox that receives the email to accept **All Email Messages**. For more information, see [Set personal options that affect tracking and synchronization between customer engagement apps and Outlook or Exchange](/power-platform/admin/set-personal-options-affect-tracking-synchronization-between-dynamics-365-outlook-exchange).
 
 ## Emails assigned the Undeliverable category in Exchange
 

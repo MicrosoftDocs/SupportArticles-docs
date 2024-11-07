@@ -1,8 +1,8 @@
 ---
 title: Incoming emails are unexpectedly synchronized or contain unexpected or missing data
 description: Provides troubleshooting information for the incoming emails are unexpectedly synchronized or contain unexpected or missing data issue in Microsoft Dataverse.
-ms.date: 10/04/2024
-ms.custom: sap:E-mail and Microsoft 365 Integration\Set up and configuration of server-side synchronization
+ms.date: 11/07/2024
+ms.custom: sap:Email and Exchange Synchronization\Synchronization of incoming email
 author: rahulmital
 ms.author: rahulmital
 ---
@@ -18,7 +18,7 @@ The following email is addressed to a single recipient in Microsoft Exchange, bu
 
 :::image type="content" source="media/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data/email-resolved-to-user-and-queue.png" alt-text="Screenshot that shows an email example that is resolved to both a user and queue that share the same email address in Dataverse.":::
 
-In this case, the email is automatically accepted by **Paul Cannon's Queue** because it accepts **All email messages**, even though Paul Cannon's personal user options are set to **None**.
+In this case, the email is automatically accepted by **Paul Cannon's Queue** because it accepts **All email messages**, even though Paul Cannon's personal user options are set to **No email messages**.
 
 Paul Cannon's Queue:
 
@@ -43,10 +43,10 @@ If an email is unexpectedly synchronized into the system, first identify the Dat
   > This column is empty for manually tracked emails. In this case, you can refer to the **Created by** column.
 - **Receiving Mailbox**: The mailbox that's processed when server-side synchronization detects that an email contains a user or queue that's configured to automatically track it.
   > [!IMPORTANT]
-  > The value of this column can be different from the **Accepting Entity**. For example, suppose Paul Cannon, who is set up to automatically track replies to existing emails, receives a message. The "Customer Service" queue, which is set up to track all emails, receives the same message. Server-side synchronization might process Paul's mailbox first and recognize that another recipient, "Customer Service", is configured to automatically track the email. In this case, the **Accepting Entity** is the "Sales" queue, but the **Receiving Mailbox** is Paul's.
+  > The value of this column can be different from the **Accepting Entity**. For example, suppose Paul Cannon, who is set up to automatically track replies to existing emails, receives a message. The "Customer Service" queue, which is set up to track all emails, receives the same message. Server-side synchronization might process Paul's mailbox first and recognize that another recipient, "Customer Service", is configured to automatically track the email. In this case, the **Accepting Entity** is the "Customer Service" queue, but the **Receiving Mailbox** is Paul's.
 
 > [!NOTE]
-> These fields don't appear on the Email form by default. You can add them to the form or to an **Advanced Find** view to see their values.
+> These fields don't appear on the Email form by default. You can add them to the form or to an **Advanced Find** view to see their values. For more information on adding fields to the Advanced Find view, see [Create, edit, or save a view using legacy advanced find](/power-apps/user/advanced-find#create-edit-or-save-a-view-using-legacy-advanced-find).
 >
 > :::image type="content" source="media/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data/accepting-entity-receiving-mailbox.png" alt-text="Screenshot that shows the Accepting Entity and Receiving Mailbox properties.":::
 
