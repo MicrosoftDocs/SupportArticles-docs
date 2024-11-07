@@ -31,7 +31,7 @@ To get troubleshooting information in the **Server-Side Synchronization Item Lev
    :::image type="content" source="media/emails-not-automatically-tracked-or-synchronized/server-side -synchronization-item-level-monitoring-dashboard.png" alt-text="Screenshot that shows how to open the Server-Side Synchronization Item Level Monitoring dashboard.":::
 
    > [!NOTE]
-   > Dashboard failures are visible to the user who owns the mailbox or users who has the out-of-the-box **System Administrator** security role.
+   > Dashboard failures are visible to the user who owns the mailbox or a user who has the out-of-the-box **System Administrator** security role.
 
 2. The **Sync Error** column contains information about why an item didn't synchronize. Selecting the link directs you to an article about the error, if available. For example:
 

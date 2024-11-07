@@ -70,7 +70,7 @@
       href: working-with-solutions/maximum-row-size-exceeds.md
     - name: Missing dependencies during solution import
       href: working-with-solutions/missing-dependency-on-solution-import.md
-    - name: Newly added components don't appear in the app
+    - name: New components don't appear in the app
       href: working-with-solutions/newly-added-components-dont-appear.md
     - name: '"PrimaryName attribute not found for entity" error'
       href: working-with-solutions/primaryname-attribute-not-found.md
