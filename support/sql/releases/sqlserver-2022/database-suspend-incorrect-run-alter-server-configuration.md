@@ -5,12 +5,14 @@ ms.date: 11/14/2024
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5048510
 ms.reviewer: rvuppula, nicolasbruno, v-cuichen
 appliesto:
+- SQL Server 2022 on Windows
+- SQL Server 2022 on Linux
 ---
 # FIX: Database is suspended incorrectly when you run ALTER SERVER CONFIGURATION
 
 ## Symptoms
 
-When you run `ALTER SERVER CONFIGURATION` to suspend the server for a snapshot backup, you notice that the database is in an incorrect suspended state after errors occur. The errors that occur when initially suspending the server for a snapshot backup are similar to the following errors:
+When you run `ALTER SERVER CONFIGURATION` to suspend the server for a snapshot backup, you might occasionally notice that the database is in an incorrect suspended state after an error occurs. The error that occurs when suspending the server for a snapshot backup is similar to the following error:
 
 > Msg 9018, Level 16, State 1, Line \<LineNumber>  
 > The log for database \<DatabaseName> does not allow user writes.
@@ -18,9 +20,9 @@ When you run `ALTER SERVER CONFIGURATION` to suspend the server for a snapshot b
 > Msg 5901, Level 16, State 1, Line \<LineNumber>  
 > One or more recovery units belonging to database \<DatabaseName> failed to generate a checkpoint. This is typically caused by lack of system resources such as disk or memory, or in some cases due to database corruption. Examine previous entries in the error log for more detailed information on this failure.
 
-After the initial error, the suspended database count on the server shows 0, but at least one database is still in a suspended state.
+After this error occurs, the suspended database count on the server shows 0, but not all the databases are unsuspended correctly.
 
-This situation causes the following error 3081 when you run a subsequent `ALTER SERVER CONFIGURATION` command to suspend the server for a snapshot backup:
+This situation causes the following error when you run the `ALTER SERVER CONFIGURATION` command to suspend the server for a subsequent snapshot backup:
 
 > Msg 3081, Level 16, State 4, Line \<LineNumber>  
 > Database \<DatabaseName> was previously suspended for snapshot backup.
