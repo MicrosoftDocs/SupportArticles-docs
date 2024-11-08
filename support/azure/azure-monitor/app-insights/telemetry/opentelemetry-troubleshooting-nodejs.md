@@ -5,7 +5,7 @@ ms.date: 11/08/2024
 editor: v-jsitser
 ms.service: azure-monitor
 ms.devlang: javascript
-ms.reviewer: mmcc, lechen, aaronmax, v-leedennis
+ms.reviewer: mmcc, lechen, aaronmax, didiergbenou, v-leedennis, v-weizhu
 ms.custom: sap:Missing or Incorrect data after enabling Application Insights in Azure Portal
 ---
 
