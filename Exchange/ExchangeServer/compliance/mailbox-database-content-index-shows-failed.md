@@ -7,7 +7,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:Messaging Policy and Compliance\Issues with eDiscovery, import\export of mailbox
+  - sap:Messaging Policy and Compliance\Issues with eDiscovery, import/export of mailbox
   - Exchange Server
   - CSSTroubleshoot
 ms.reviewer: batre, nasira, v-six
