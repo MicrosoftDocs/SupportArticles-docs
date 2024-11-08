@@ -70,15 +70,13 @@ To resolve these errors, upload the original VHD from your on-premises environme
 
 To resolve these errors, delete the current image from the portal, and [recapture it from the current VHDs](/azure/virtual-machines/linux/capture-image) with the same setting as that for the OS (generalized/specialized).
 
-## How to capture an image to prepare for upload
+## Steps for capturing an image to prepare for upload
 
-### Prerequisites
-
-- Access to the Linux machine whose disk you want to image.
-- Azure CLI installed on your local machine.
-- An Azure account with appropriate permissions to upload images.
-
-### Step-by-step guide
+> [!NOTE]
+> Here are prerequisites to capture an image:
+> - Access to the Linux machine whose disk you want to image.
+> - Azure CLI installed on your local machine.
+> - An Azure account with appropriate permissions to upload images.
 
 1. Prepare the Linux machine for imaging, including stopping unnecessary services and cleaning up temporary files:
     
