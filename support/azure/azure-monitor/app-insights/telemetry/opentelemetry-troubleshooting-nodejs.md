@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot OpenTelemetry issues in Node.js
 description: Learn how to troubleshoot OpenTelemetry issues in Node.js. View known issues that involve Azure Monitor OpenTelemetry Exporters.
-ms.date: 06/24/2024
+ms.date: 11/08/2024
 editor: v-jsitser
 ms.service: azure-monitor
 ms.devlang: javascript
@@ -27,7 +27,7 @@ const provider = new NodeTracerProvider();
 diag.setLogger(new DiagConsoleLogger(), DiagLogLevel.ALL);
 provider.register();
 ```
-Alternatively, the following [environment variables](https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/monitor/monitor-opentelemetry/README.md#self-diagnostics) can also be used:
+Alternatively, you can use the following [environment variables](https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/monitor/monitor-opentelemetry/README.md#self-diagnostics):
 
 ```javascript
 import { useAzureMonitor } from "@azure/monitor-opentelemetry";
