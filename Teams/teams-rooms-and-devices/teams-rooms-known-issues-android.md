@@ -23,7 +23,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 10/22/2024
+ms.date: 11/08/2024
 ---
 # Known issues with Teams Rooms on Android
 
@@ -54,6 +54,8 @@ ms.date: 10/22/2024
 
   Instead of using the Call app, join the meeting by using the **Join with an ID** option and entering the meeting ID.
 - If you're in a call with another user who is on a Teams Rooms device, you can't transfer the call. This is because the Teams Rooms app is designed to support only one call at a time.
+- If your organization has configured policies to block legacy authentication for the Teams Rooms app, then Teams Rooms on Android devices, (Teams Rooms on Windows devices) Teams displays, Teams panels, and Teams phones can't join Teams meetings.
+- If your organization has configured policies to block legacy authentication for the Teams Rooms app, then Teams Rooms on Android devices, Teams displays, Teams panels, and Teams phones can't join Teams meetings.
 
 ## Support for third-party Teams devices
 
