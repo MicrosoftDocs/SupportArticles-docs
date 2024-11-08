@@ -1,37 +1,37 @@
 ---
-title: Some SIDs do not resolve into friendly names
-description: Some security identifiers that you see in access control lists or Security Audit reports do not resolve into friendly names. These may be capability SIDs.
-ms.date: 12/26/2023
+title: Some SIDs don't resolve into friendly names
+description: Some security identifiers that you see in access control lists or Security Audit reports don't resolve into friendly names. These may be capability SIDs.
+ms.date: 11/08/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, v-tea, v-jesits, johnbay
+ms.reviewer: kaushika, v-tea, v-jesits, johnbay, jessev
 ms.custom: sap:Windows Security Technologies\AD Object Permissions, access control, delegation, AdminSDHolder and auditing, csstroubleshoot
 searchScope:
 - Troubleshoot
 - Windows Server
 - Windows
 ---
-# Some SIDs do not resolve into friendly names
+# Some SIDs don't resolve into friendly names
 
-This article provides some information about the issue where some security identifiers (SIDS) do not resolve into friendly names.
+This article provides some information about the issue where some security identifiers (SIDS) don't resolve into friendly names.
 
 _Original KB number:_ &nbsp; 4502539
 
 ## Symptoms
 
-In some places in the Windows User Interface, you may see Windows account Security Identifiers (SIDs) that do not resolve to friendly names. These places include the following:
+In some places in the Windows User Interface, you may see Windows account Security Identifiers (SIDs) that don't resolve to friendly names. These places include the following:
 
 - File Explorer
 - Security Audit reports
 - The access control list (ACL) editor in Registry Editor, as shown in the following examples:
 
-    :::image type="content" source="media/sids-not-resolve-into-friendly-names/permissions-for-classes.png" alt-text="Screenshot of the Permissions for Classes window which shows that the SID dose not resolve to a friendly name.":::
-    :::image type="content" source="media/sids-not-resolve-into-friendly-names/advanced-security-settings-for-classes.png" alt-text="Screenshot of the Advanced Security Settings for Classes window which shows that the SID dose not resolve to a friendly name.":::
+    :::image type="content" source="media/sids-not-resolve-into-friendly-names/permissions-for-classes.png" alt-text="Screenshot of the Permissions for Classes window which shows that the SID doesn't resolve to a friendly name.":::
+    :::image type="content" source="media/sids-not-resolve-into-friendly-names/advanced-security-settings-for-classes.png" alt-text="Screenshot of the Advanced Security Settings for Classes window which shows that the SID doesn't resolve to a friendly name.":::
 
 ## Cause
 
-Windows Server 2012 and Windows 8 introduced a type of SID that is known as a Capability SID. By design, a Capability SID does not resolve to a friendly name.
+Windows Server 2012 and Windows 8 introduced a type of SID that is known as a Capability SID. By design, a Capability SID doesn't resolve to a friendly name.
 
 Capability SIDs uniquely and immutably identify capabilities. In this context, a capability is an unforgeable token of authority that grants a Windows component or a Universal Windows Application access to a resource such as documents, cameras, locations, and so forth. An application that "has" a capability is granted access to the resource that is associated with the capability. An application that "does not have" a capability is denied access to the associated resource.
 
@@ -43,19 +43,19 @@ Windows 10, version 1809 uses more than 300 capability SIDs.
 ## More information
 
 > [!Important]
-> DO NOT DELETE capability SIDS from either the Registry or file system permissions. Removing a capability SID from file system permissions or registry permissions may cause a feature or application to function incorrectly. After you remove a capability SID, you cannot use the UI to add it back.
+> Don't delete capability SIDS from either the registry or file system permissions. Removing a capability SID from file system permissions or registry permissions may cause a feature or application to function incorrectly. After you remove a capability SID, you cannot use the UI to add it back.
 
-When you are troubleshooting an unresolved SID, make sure that it is not a Capability SID. To get a list of all of the Capability SIDs follow these steps:
+When you're troubleshooting an unresolved SID, make sure that it isn't a Capability SID. To get a list of all of the Capability SIDs, follow these steps:
 
 1. Select **Start** > **Run**, and then enter *regedt32.exe*.
 2. Navigate to the following registry entry: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities`.
 
-1. Copy the value data and paste it into a text file (or a similar location where you can search the data).
+3. Copy the value data and paste it into a text file (or a similar location where you can search the data).
+
    > [!Note]
    > This value may not include all Capability SIDs that third-party applications use.
-1. Search the data for the SID that you are troubleshooting.
 
-   - If you find the SID in the registry data from above, then it is a Capability SID. By design, it will not resolve into a friendly name.
-      
-   - If you do not find the SID in the registry data, then it is not a known Capability SID. You can continue to troubleshoot it as a normal unresolved SID. Keep in mind that there is a small chance that the SID could be a third-party capability SID, in which case it will not resolve into a friendly name.
-      
+4. Search the data for the SID that you're troubleshooting.
+
+   - If you find the SID in the registry data from the preceding step, then it's a Capability SID. By design, it will not resolve into a friendly name.
+   - If you don't find the SID in the registry data, then it isn't a known Capability SID. You can continue to troubleshoot it as a normal unresolved SID. Keep in mind that there's a small chance that the SID could be a third-party capability SID, in which case it will not resolve into a friendly name.
