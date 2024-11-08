@@ -45,7 +45,7 @@ Depending on the RBAC type that's configured for the cluster ([Kubernetes RBAC](
 
 If the cluster uses Kubernetes RBAC, permissions for the user account are configured through the creation of RoleBinding or ClusterRoleBinding Kubernetes resources. For more information, see [Kubernetes RBAC documentation](https://kubernetes.io/docs/reference/access-authn-authz/rbac/).
 
-Additionally, in Microsoft Entra ID integrated clusters, a ClusterRoleBinding resource is automatically created granting members of a pre-designated Microsoft Entra ID group administrator access to the cluster.
+Additionally, in Microsoft Entra ID integrated clusters, a ClusterRoleBinding resource is automatically created to grant the administrator access to the cluster to the members of a pre-designated Microsoft Entra ID group.
 
 To resolve the "Error from server (Forbidden)" error for a specific user, use one of the following methods.
 
