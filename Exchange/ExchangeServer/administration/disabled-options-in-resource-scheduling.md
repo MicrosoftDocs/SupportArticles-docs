@@ -1,13 +1,13 @@
 ---
 title: Resource Scheduling options are disabled
-description: This article provides a solution to solve the issue that the options in the Outlook Resource Scheduling dialog box are not available.
+description: This article provides a solution to solve the issue that the options in the Outlook Resource Scheduling dialog box aren't available.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:Collaboration and Public Folders\Outlook\OWA Can't Connect to Public Folders
+  - sap:Collaboration and Public Folders\Outlook/OWA Can't Connect to Public Folders
   - Exchange Server
   - CSSTroubleshoot
 ms.reviewer: abarglo, v-six
@@ -43,5 +43,5 @@ Public folders are required for the direct booking feature (which is directly ti
 
 To resolve this problem, use one of these approaches:
 
-- Contact the Exchange administrator to see whether public folders can be added to the Exchange environment. Be aware that if they are currently not available, it is unlikely that the Exchange administrator will be able to do this because it is likely that the decision not to support public folders was already made.
-- Instead of using direct booking, use an Exchange server resource mailbox instead. Starting in Outlook 2013, direct booking is no longer supported. Therefore, using an Exchange server resource mailbox would be the better option because direct booking cannot be used in later versions of Outlook.
+- Contact the Exchange administrator to see whether public folders can be added to the Exchange environment. Be aware that if they're currently not available, it's unlikely that the Exchange administrator will be able to do this because it's likely that the decision not to support public folders was already made.
+- Instead of using direct booking, use an Exchange server resource mailbox instead. Starting in Outlook 2013, direct booking is no longer supported. Therefore, using an Exchange server resource mailbox would be the better option because direct booking can't be used in later versions of Outlook.

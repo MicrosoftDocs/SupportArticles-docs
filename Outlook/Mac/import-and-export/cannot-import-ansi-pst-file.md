@@ -7,7 +7,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:Errors, Crashes, and Performance\
+  - sap:Errors, Crashes, and Performance
   - Outlook for Mac
   - CSSTroubleshoot
 ms.reviewer: tsimon
