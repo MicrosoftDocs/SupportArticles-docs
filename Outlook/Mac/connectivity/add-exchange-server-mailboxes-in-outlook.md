@@ -1,6 +1,6 @@
 ---
 title: Add Exchange Server mailboxes in the new Outlook for Mac
-description: Discusses how to add email accounts for on-premises Exchange Server mailboxes in the new Outlook for Mac, and provide feedback.
+description: Discusses how to add email accounts for on-premises Exchange Server mailboxes in the new Outlook for Mac and provide feedback.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
