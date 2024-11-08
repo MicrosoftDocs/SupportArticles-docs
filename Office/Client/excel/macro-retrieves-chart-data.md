@@ -3,19 +3,19 @@ title: Macro to extract data from a chart in Excel
 description: Provides a macro to extract data from a chart in Excel.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - Extensibility\Macros
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Excel 2007
   - Excel 2003
   - Excel 2002
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Macro to extract data from a chart in Excel

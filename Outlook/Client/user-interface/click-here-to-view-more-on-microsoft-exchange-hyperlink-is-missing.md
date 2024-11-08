@@ -1,60 +1,74 @@
 ---
-title: Click here to view more hyperlink is missing
-description: Describes an issue in which your email folders display only newer items and the Click here to view more on Microsoft Exchange hyperlink is missing.
+title: Click here to view more on Microsoft Exchange hyperlink is missing
+description: Provides a workaround for an issue in which email folders display only newer items and the Click-here-to-view-more-on-Microsoft-Exchange hyperlink is missing.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Sending, Receiving, Synchronizing, or viewing email\Other
   - Outlook for Windows
   - CSSTroubleshoot
-ms.reviewer: aruiz
+  - CI 1674
+ms.reviewer: aruiz, meerak, v-shorestris
 appliesto: 
   - Outlook 2019
   - Outlook 2016
-  - Outlook 2013
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 01/30/2024
+ms.date: 10/19/2024
 ---
-# Click here to view more on Microsoft Exchange hyperlink is missing in Outlook
+
+# "Click here to view more on Microsoft Exchange" hyperlink is missing
 
 _Original KB number:_ &nbsp; 2898376
 
 ## Symptoms
 
-When you use Microsoft Outlook 2019, Outlook 2016, Outlook 2013, or Outlook for Microsoft 365 to connect to your Microsoft Exchange Server mailbox, your email folders display only newer items. Additionally, at the bottom of the list of items, the following message and hyperlink are missing:
+When you use Microsoft Outlook to connect to a mailbox in Microsoft Exchange Server, one or more email folders display only newer items.
 
-> This message is shown in the following figure:
+Also, the message and hyperlink that are shown in the following screenshot don't appear at the bottom of the item list.
 
-:::image type="content" source="media/click-here-to-view-more-on-microsoft-exchange-hyperlink-is-missing/error-details.jpg" alt-text="The screenshot for the error" border="false":::
+:::image type="content" source="media/click-here-to-view-more-on-microsoft-exchange-hyperlink-is-missing/missing-message-hyperlink.png" border="true" alt-text="Screenshot of the missing message and hyperlink." lightbox="media/click-here-to-view-more-on-microsoft-exchange-hyperlink-is-missing/missing-message-hyperlink-lrg.png":::
 
 ## Cause
 
-This issue occurs when the following conditions are true:
+The cause of the issue depends on the mailbox or folder that you connect to.
 
-- The **Download Preferences** setting is configured for **Download Headers** or **Download Headers and Then Full Items**.
+### Cause 1: Your mailbox
 
-  :::image type="content" source="media/click-here-to-view-more-on-microsoft-exchange-hyperlink-is-missing/configure-download-preferences.jpg" alt-text="The screenshot for Download Preferences setting" border="false":::
+The issue occurs if both the following conditions are true:
 
-- The **Mail to keep offline** setting is not set to **All**.
+- In the **Send/Receive** tab, the value of the **Download Preferences** setting isn't **Download Full Items**. For example, in the following screenshot, the value is **Download Headers and Then Full Items**.
 
-  :::image type="content" source="media/click-here-to-view-more-on-microsoft-exchange-hyperlink-is-missing/server-settings.jpg" alt-text="The screenshot for Server settings" border="false":::
+   :::image type="content" source="media/click-here-to-view-more-on-microsoft-exchange-hyperlink-is-missing/download-preferences-settings.png" border="true" alt-text="Screenshot of the Download Preferences setting.":::
 
-This is a known limitation in Outlook 2019, Outlook 2016, Outlook 2013, and Outlook for Microsoft 365.
+- In the **Exchange Account Settings** window, the value of the **Download email for the past** setting isn't **All**. For example, in the following screenshot, the value is **3 months**.
+
+   :::image type="content" source="media/click-here-to-view-more-on-microsoft-exchange-hyperlink-is-missing/offline-settings.png" border="true" alt-text="Screenshot of the Exchange Account Settings window.":::
+
+   **Note**: In some versions of Outlook, the **Download email for the past** setting is named **Mail to keep offline**. For more information about the setting, see [Only a subset of your Exchange mailbox items is synchronized in Outlook](/outlook/troubleshoot/user-interface/only-subset-items-synchronized).
+
+### Cause 2: Shared or delegate folder
+
+If you view a shared or delegate folder in another mailbox, Outlook doesn't show any server-side items if Outlook uses [Cached Exchange Mode](https://support.microsoft.com/office/turn-on-cached-exchange-mode-7885af08-9a60-4ec3-850a-e221c1ed0c1c#ID0EDJ).
+
+**Note**: In this context, a delegate folder is a folder that you access as a delegate.
 
 ## Workaround
 
-To work around this issue, change the **Download Preferences** setting to **Download Full Items**. To do this, follow these steps:
+Select one of the following workarounds, depending on the cause.
 
-1. Start Outlook.
-2. On the **Send/Receive** tab, select **Download Preferences**, and then select **Download Full Items**.
+### Workaround for Cause 1
 
-   :::image type="content" source="media/click-here-to-view-more-on-microsoft-exchange-hyperlink-is-missing/download-preferences-settings.png" alt-text="Screenshot of Download Preferences" border="false":::
+On the **Send/Receive** tab in Outlook, select **Download Preferences**, and then select **Download Full Items**.
 
-## More information
+> [!NOTE]
+> The **Click here to view more on Microsoft Exchange** hyperlink appears only if both the following conditions are true:
+> - The **Download Preferences** value is **Download Full Items**.
+> - The **Download email for the past** (or **Mail to keep offline**) setting causes Outlook not to download all folder items from the server.
 
-For more information about the **Mail to keep offline** setting, see [Only a subset of your Exchange mailbox items is synchronized in Outlook](/outlook/troubleshoot/user-interface/only-subset-items-synchronized).
+### Workaround for Cause 2
+
+In an Outlook search, use the **Current Folder** scope to find server-side items.

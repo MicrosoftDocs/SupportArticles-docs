@@ -3,7 +3,6 @@ title: Force a new line in a MsgBox message
 description: Describes the method of forcing a new line in the message box. You can use the method in this article. Alternatively, you can use the vbCrLf constant to create multiple lines in a text box on a form or on a data access page.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 ms.custom: 
   - CI 111294
   - CSSTroubleshoot
@@ -17,7 +16,7 @@ appliesto:
   - Access 2007
   - Access 2003
   - Access 2002
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # How to force a new line in a MsgBox message in Access

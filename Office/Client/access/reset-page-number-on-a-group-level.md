@@ -3,7 +3,6 @@ title: Reset the page number on a group level in a report
 description: Describes methods for designing a report that breaks the page for each new entry in a group and resetting the page number of the report.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 ms.custom: 
   - CI 111294
   - CSSTroubleshoot
@@ -15,7 +14,7 @@ ms.author: luche
 ms.reviewer: V-SHIRAP
 appliesto: 
   - Access 2007
-ms.date: 06/27/2023
+ms.date: 06/06/2024
 ---
 
 # How to reset the page number on a group level in an Access report

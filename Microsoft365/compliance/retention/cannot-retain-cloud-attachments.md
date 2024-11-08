@@ -4,7 +4,6 @@ description: Provides a table to identify which sharing mechanisms are cloud att
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
   - CI 158295
@@ -12,7 +11,7 @@ ms.reviewer: arungedela; meerak
 appliesto: 
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 06/24/2024
 ---
 
 # Can't retain cloud attachments

@@ -5,8 +5,9 @@ author: helenclu
 ms.author: luche
 ms.reviewer: warrenr
 manager: dcscontentpm
-localization_priority: Normal
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Web Server Integration (SharePoint & Non-SharePoint)
+  - Open
   - sap:office-experts
   - CSSTroubleshoot
 search.appverid: 
@@ -15,7 +16,7 @@ audience: ITPro
 ms.topic: troubleshooting
 appliesto: 
   - Microsoft 365
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Microsoft 365 can't open files from the most recently used document list (MRU)

@@ -3,7 +3,6 @@ title: A user with this name could not be found when resetting a password
 description: Describes an issue that occurs when you try to reset a password for a user in Microsoft 365. A resolution is provided.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

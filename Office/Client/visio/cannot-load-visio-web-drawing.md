@@ -3,11 +3,12 @@ title: Visio Services was unable to load this Web Drawing
 description: Describes an issue in which you receive an error message when you try to load a Visio web drawing that is hosted on a different SharePoint farm. This issue occurs because Visio Services in Microsoft SharePoint does not support federations.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Open\Errors
   - CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
@@ -19,7 +20,7 @@ appliesto:
   - Visio Services in Microsoft SharePoint Server 2010
   - Visio Professional 2013
   - Visio Standard 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "Visio Services was unable to load this Web Drawing" when you load a Visio web drawing hosted on a different SharePoint farm

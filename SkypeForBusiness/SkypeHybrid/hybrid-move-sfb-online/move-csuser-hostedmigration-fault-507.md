@@ -3,7 +3,6 @@ title: Move-CsUser HostedMigration fault Error=(507) when move to Online
 description: To resolve this issue, you must assign the user a license for Skype for Business Online.
 author: simonxjx
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

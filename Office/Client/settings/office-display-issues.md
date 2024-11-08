@@ -3,13 +3,14 @@ title: Display issues in Office client applications.
 description: Describes some display issues in Office client applications.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Reliability
   - CSSTroubleshoot
 appliesto: 
   - Outlook 2016
@@ -31,7 +32,7 @@ appliesto:
   - Visio Professional 2013
   - Access 2013
   - Project Professional 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Display issues in Office client applications

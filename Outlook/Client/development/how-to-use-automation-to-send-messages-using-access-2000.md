@@ -4,7 +4,6 @@ description: Describes how to use Automation to create and send an Outlook messa
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Developer Issues\Macros
   - CSSTroubleshoot

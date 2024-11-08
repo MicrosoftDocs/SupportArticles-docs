@@ -6,7 +6,6 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: alinastr
@@ -17,7 +16,7 @@ appliesto:
   - Exchange Server 2016
   - Exchange Server 2019
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 06/24/2024
 ---
 
 # Can't migrate on-premises archive mailboxes to Microsoft 365 in a hybrid migration

@@ -29,7 +29,7 @@
           href: ../authentication/blocked-smart-card-pin-using-outlook.md
     - name: Calendaring
       items:
-        - name: '"Send updates" prompt not displayed'
+        - name: '"Send update" prompt not displayed'
           href: ../calendaring/send-updates-prompt-not-displayed.md
         - name: Attached Outlook items not retained
           href: ../calendaring/attached-outlook-items-not-retained.md
@@ -41,8 +41,6 @@
           href: ../calendaring/cannot-delete-calendar-items.md
         - name: Can't send a response to a meeting request
           href: ../calendaring/cannot-send-response-to-meeting-request.md
-        - name: Can't receive tentative meeting requests or responses
-          href: ../calendaring/cannot-receive-requests-of-tentative-meeting-or-responses.md
         - name: Can't add an Internet calendar
           href: ../calendaring/cannot-add-an-internet-calendar.md
         - name: Configure rooms and workspaces for Room Finder
@@ -71,7 +69,7 @@
           href: ../calendaring/how-to-use-internet-freebusy-feature.md
         - name: How to use vCalendar in Outlook
           href: ../calendaring/how-to-use-vcalendar-in-outlook.md
-        - name: Incorrect offset between time zones on DST start day in Outlook
+        - name: Multiple time zones show an incorrect time difference
           href: ../calendaring/additional-time-zone-shows-one-hour-offset-on-dst.md
         - name: Information about the Calendar Checking Tool for Outlook (CalCheck)
           href: ../calendaring/calendar-checking-tool-for-outlook.md
@@ -81,6 +79,8 @@
           href: ../calendaring/room-finder.md
         - name: Manager can't respond to a meeting invite
           href: ../calendaring/manager-cannot-respond-to-meeting-invite.md
+        - name: Meeting requests or responses don't appear in the Inbox
+          href: ../calendaring/cannot-receive-requests-of-tentative-meeting-or-responses.md
         - name: Meeting tracking tab isn't updated
           href: ../calendaring/meeting-tracking-tab-not-updated.md
         - name: More than 12 months of free/busy data not shown
@@ -113,6 +113,8 @@
           href: ../calendaring/from-field-in-meeting-request-not-list-all-accounts.md
         - name: Time zones that do not observe daylight saving time
           href: ../calendaring/time-zones-that-do-not-observe-daylight-saving-time.md
+        - name: Resolve free/busy errors
+          href: ../calendaring/resolve-free-busy-errors.md
         - name: Unable to view free/busy information
           href: ../calendaring/cannot-view-free-busy-information.md
         - name: Wrong holidays in .hol files
@@ -163,8 +165,6 @@
           href: ../contacts/contact-card-cannot-be-changed-by-group-policy-or-oct.md
         - name: Contact card doesn't show user details or presence
           href: ../contacts/contact-card-not-showing-user-details-or-presence.md
-        - name: Contact is listed twice when selecting email recipient
-          href: ../contacts/contacts-with-both-email-address-and-fax-number-listed-twice.md
         - name: Contacts folder empty and contacts are in another folder
           href: ../contacts/contacts-folder-empty-and-contacts-are-in-different-folder.md
         - name: How to hide columns in Address Book
@@ -311,6 +311,8 @@
           href: ../message-body/accept-decline-buttons-missing-in-task-request.md
         - name: Actionable message doesn't automatically refresh
           href: ../message-body/actionable-message-in-reading-pane-not-refreshed.md
+        - name: Actionable messages render incorrectly
+          href: ../message-body/actionable-messages-render-incorrectly.md
         - name: Attachment doesn't show in a Plain Text message
           href: ../message-body/attachment-does-not-appear-in-plain-text-message.md
         - name: Attachment size exceeds the allowable limit error
@@ -419,20 +421,18 @@
           href: ../profiles-and-accounts/add-shared-mailbox-as-additional-account.md
         - name: Additional RSS feeds appear
           href: ../profiles-and-accounts/additional-rss-feeds-appear.md
+        - name: Archive mailbox doesn't display in Outlook or Outlook on the web
+          href: /exchange/troubleshoot/outlook-on-the-web-issues/archive-mailbox-not-visible?context=/outlook/troubleshoot/context/client-context
         - name: Can't send email with Metered Connection Warning
           href: ../profiles-and-accounts/metered-connection-warning.md
         - name: Can't subscribe to an RSS feed that needs authentication
           href: ../profiles-and-accounts/error-when-subscribing-to-rss-feed-that-needs-authentication.md
-        - name: Can't set up Microsoft 365 account
-          href: ../profiles-and-accounts/cannot-set-up-office-365-account-outlook.md
         - name: Can't use EAS to connect Outlook to Exchange
           href: ../profiles-and-accounts/outlook-cannot-use-activesync-connect-exchange.md
         - name: Enable ZeroConfigExchange automatically create first profile
           href: ../profiles-and-accounts/let-zeroconfigexchange-automatically-create-first-profile.md
         - name: Event 1098 and can't create new profiles
           href: ../profiles-and-accounts/event-1098-and-cannot-create-new-profiles.md
-        - name: Exchange Online Archive mailbox not shown
-          href: ../profiles-and-accounts/troubleshoot-exchange-online-archive-mailbox-not-shown.md
         - name: Focused Inbox disappears
           href: ../profiles-and-accounts/focused-inbox-disappears-switch-folder.md
         - name: How to control AutoDiscover via Group Policy
@@ -475,6 +475,8 @@
           href: ../security/outlook-trust-center-shows-antivirus-status-as-unavailable.md
         - name: Personal tags don't apply correctly for Inbox rule
           href: ../security/personal-policy-tag-not-work-correctly.md
+        - name: Prevent delegates from reading protected messages
+          href: ../security/prevent-delegate-access-to-irm-protected-messages.md
         - name: Your Digital ID name cannot be found error
           href: ../security/error-when-decrypting-message-via-3des-certificate.md
     - name: Synchronization

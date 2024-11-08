@@ -33,6 +33,10 @@
           href: /outlook/troubleshoot/calendaring/configure-room-finder-rooms-workspaces?context=/outlook/troubleshoot/context/mac-context
         - name: Create and book a workspace in Outlook
           href: /exchange/troubleshoot/outlook-issues/create-book-workspace-outlook?context=/outlook/troubleshoot/context/mac-context
+        - name: Meetings incorrectly display the UTC time zone
+          href: ../calendars/meetings-incorrectly-display-utc-timezone.md
+        - name: No meeting reminders for delegates
+          href: ../calendars/no-meeting-reminders-for-delegates.md
         - name: Shared calendar in delegate's Online Archive
           href: /exchange/troubleshoot/calendars/shared-calendar-in-delegate-online-archive?context=/outlook/troubleshoot/context/mac-context
         - name: Shared calendar shows private event details 

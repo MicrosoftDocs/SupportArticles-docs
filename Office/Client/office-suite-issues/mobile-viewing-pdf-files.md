@@ -3,17 +3,18 @@ title: Mobile viewing PDF files with Office Web Apps
 description: Office Online Server is not available for Office Online Server.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Web Server Integration (SharePoint & Non-SharePoint)
+  - Open
   - CSSTroubleshoot
 appliesto: 
   - Office Online Server
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Mobile viewing PDF files with Office Web Apps

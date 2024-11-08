@@ -3,7 +3,6 @@ title: Sync to Outlook button and Tasks link are missing
 description: This article describes an issue where the Sync to Outlook button and the Tasks link are missing in SharePoint Online, and provides a solution.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

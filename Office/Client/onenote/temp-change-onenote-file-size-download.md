@@ -3,16 +3,17 @@ title: OneNote temporary limit to file size download
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 04/01/2020
+ms.date: 06/06/2024
 audience: Admin
 ms.topic: troubleshooting
-localization_priority: Normal
 search.appverid: 
   - SPO160
   - MET150
 appliesto: 
   - OneNote
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Open\Attachments
   - CI 115970
   - CSSTroubleshoot
 ms.reviewer: morales

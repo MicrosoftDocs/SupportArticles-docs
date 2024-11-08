@@ -6,7 +6,6 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:High Availability, Health, Performance, Content Indexing\Database or Server Failed Over Unexpectedly
   - Exchange Server

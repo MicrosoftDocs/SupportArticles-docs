@@ -3,7 +3,6 @@ title: Can't open database compiled as MDE, ACCDE or ADE
 description: Resolves the problem that you receive an error message when you run a compiled Microsoft Access MDE, ACCDE, or ADE file in Access 2010. Resolution is to compile your Access 2010 MDE, ACCDE, or ADE application by using the version of Access 2010 in which you intend to deploy the MDE, ACCDE, or ADE file.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
@@ -22,9 +21,9 @@ ms.date: 03/31/2022
 
 Microsoft Access databases that are created by using the 64-bit version of Microsoft Access 2010 and that are compiled as MDE, ACCDE, and ADE files have to be recompiled in Microsoft Access 2010 Service Pack 1 (SP1) to work correctly with Access 2010 SP1. 
 
-Access 2010 MDE, ACCDE, and ADE databases that were built by using the initial release, or RTM, version of 64-bit Access 2010 are incompatible with SP1, Also, Access 2010 MDE, ACCDE, and ADE databases that were compiled in Access 2010 SP1 will not work with the RTM version. Compiled MDE, ACCDE, and ADE databases have to be re-created from their source ACCDB, MDB, or ADP databases.  
+Access 2010 MDE, ACCDE, and ADE databases that were built by using the initial release, or RTM, version of 64-bit Access 2010 are incompatible with SP1, Also, Access 2010 MDE, ACCDE, and ADE databases that were compiled in Access 2010 SP1 don't work with the RTM version. Compiled MDE, ACCDE, and ADE databases have to be re-created from their source ACCDB, MDB, or ADP databases.  
 
-Access databases that are created by using the 32-bit version of Access 2010 and that are compiled as MDE, ACCDE, and ADE files will work correctly with Microsoft Access 2010 SP1. However, Access MDE, ACCDE, and ADE databases that are created by using the 32-bit version of Microsoft Access 2010 SP1 will not work correctly with the RTM version.
+Access databases that are created by using the 32-bit version of Access 2010 and that are compiled as MDE, ACCDE, and ADE files work correctly with Microsoft Access 2010 SP1. However, Access MDE, ACCDE, and ADE databases that are created by using the 32-bit version of Microsoft Access 2010 SP1 don't work correctly with the RTM version.
 
 ## Symptoms
 
@@ -52,18 +51,18 @@ To resolve this issue, compile your Access 2010 MDE, ACCDE, or ADE application b
 
 ## More Information
 
-The following tables provide a summary of which compiled databases will work with which version of Access 2010. The tables assume that you are opening a 32-bit MDE, ACCDE, or ADE file in the 32-bit version of Microsoft Access or that you are opening a 64-bit MDE, ACCDE, or ADE file in the 64-bit version of Access. You cannot open a 32-bit MDE, ACCDE, or ADE file in 64-bit Access, and you cannot open a 64-bit MDE, ACCDE, or ADE file in 32-bit Access.
+The following tables provide a summary of which compiled databases work with which version of Access 2010. The tables assume that you open a 32-bit MDE, ACCDE, or ADE file in the 32-bit version of Microsoft Access or that you open a 64-bit MDE, ACCDE, or ADE file in the 64-bit version of Access. You can't open a 32-bit MDE, ACCDE, or ADE file in 64-bit Access, and you can't open a 64-bit MDE, ACCDE, or ADE file in 32-bit Access.
 
 An MDE, ACCDE, or ADE file that was created in Access 2010 RTM
 
-|Kind of file|Access 2010 RTM|Access 2010 SP1|
+|File type|Access 2010 RTM|Access 2010 SP1|
 |---|---|---|
 |32-bit MDE, ACCDE, or ADE|Works|Works|
 |64-bit MDE, ACCDE, or ADE|Works|Error occurs|
 
 An MDE, ACCDE, or ADE file that was created in Access 2010 SP1
 
-|Kind of file|Access 2010 RTM|Access 2010 SP1|
+|File type|Access 2010 RTM|Access 2010 SP1|
 |---|---|---|
 |32-bit MDE, ACCDE, or ADE|Error occurs|Works|
 |64-bit MDE, ACCDE, or ADE|Error occurs|Works|

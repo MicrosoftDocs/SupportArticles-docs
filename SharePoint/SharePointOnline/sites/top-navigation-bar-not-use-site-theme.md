@@ -5,7 +5,6 @@ author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche

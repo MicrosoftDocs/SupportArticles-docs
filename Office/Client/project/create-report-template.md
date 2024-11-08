@@ -3,7 +3,6 @@ title: Create a report template in Project 2013
 description: Describes two methods to create a report template in Project 2013.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

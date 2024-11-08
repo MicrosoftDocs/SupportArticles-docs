@@ -6,7 +6,6 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - CI 163457
   - CSSTroubleshoot
@@ -14,7 +13,7 @@ ms.reviewer: cabailey, vipg, roygles, lindabr
 appliesto: 
   - Exchange Online via Office 365 E Plans 
 search.appverid: MET150
-ms.date: 01/19/2023
+ms.date: 06/24/2024
 ---
 # Auto-apply retention label doesn't apply to items in a mailbox
 

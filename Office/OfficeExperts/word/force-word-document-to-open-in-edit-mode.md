@@ -5,17 +5,18 @@ author: helenclu
 ms.author: luche
 ms.reviewer: warrenr
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Open
   - sap:office-experts
   - CSSTroubleshoot
 appliesto: 
   - Microsoft Word
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Force a Word document to open in edit mode from an email link

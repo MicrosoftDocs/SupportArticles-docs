@@ -3,7 +3,6 @@ title: Linked table connection failed when using Microsoft Entra interactive aut
 description: You experience repetitive connection failed messages when opening objects that use an Access linked table connection.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
@@ -16,7 +15,7 @@ appliesto:
   - Access 2019
   - Access 2016
   - Access 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Access: Linked table "connection failed" messages when using Microsoft Entra interactive authentication

@@ -6,7 +6,6 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: chrisbur
@@ -15,7 +14,7 @@ appliesto:
   - Exchange Server 2003 Service Pack 2
   - Exchange Server 2010 Enterprise
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 06/24/2024
 ---
 
 # Archive mailbox issues for a mailbox that's migrated to or from Microsoft 365

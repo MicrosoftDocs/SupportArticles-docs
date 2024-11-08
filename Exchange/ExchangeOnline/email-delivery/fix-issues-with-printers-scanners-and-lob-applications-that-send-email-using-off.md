@@ -1,7 +1,6 @@
 ---
 title: Fix issues with printers, scanners, and LOB apps that send email using Microsoft 365
-ms.date: 01/24/2024
-ms.localizationpriority: medium
+ms.date: 08/13/2024
 description: Fix issues with printers, scanners, and line of business applications that use Microsoft 365 or Office 365 to send email.
 ms.topic: troubleshooting
 author: cloud-writer
@@ -98,9 +97,9 @@ The following list describes the available configuration options:
 
    Recently, we started rejecting a percentage of connections to smtp.office365.com that uses TLS1.0/1.1 for SMTP AUTH.
 
-   Your device must support TLS version 1.2 or above. Update the firmware on the device or try one of the other configuration options where TLS is optional. If you need to utilize TLS 1.0/1.1 for SMTP AUTH to retain legacy clients and devices, you must opt-in by:
+   Your device must support TLS version 1.2 or above. Update the firmware on the device or try one of the other configuration options where TLS is optional. If you need to utilize TLS 1.0/1.1 for SMTP AUTH to retain legacy clients and devices, you must opt in by:
 
-   - Set the AllowLegacyTLSClients parameter on the Set-TransportConfig cmdlet to True. Or from Exchange admin center, go to Settings > Mail Flow and (under Security) check "Turn on use of legacy TLS clients" and click on Save.
+   - Set the AllowLegacyTLSClients parameter on the Set-TransportConfig cmdlet to True. Or from Exchange admin center, go to Settings > Mail Flow and (under Security) check "Turn on use of legacy TLS clients" and select on Save.
    - Legacy clients and devices need to be configured to submit to the new endpoint smtp-legacy.office365.com.
 
 To learn more, see [New opt-in endpoint available for SMTP AUTH clients still needing legacy TLS](https://techcommunity.microsoft.com/t5/exchange-team-blog/new-opt-in-endpoint-available-for-smtp-auth-clients-still/ba-p/2659652)
@@ -112,7 +111,7 @@ For more information about TLS, see [How Exchange Online uses TLS to secure emai
 This error can be caused by a number of issues:
 
 1. Make sure that you entered the correct username and password.
-2. Try logging into Outlook on the web with the printer's username and password. Send an email to make sure that the mailbox is active and has not been blocked for sending spam.
+2. Try logging into Outlook on the web with the printer's username and password. Send an email to make sure that the mailbox is active and hasn't been blocked for sending spam.
 3. Check that your device or application supports TLS version 1.2 or above. The best way to check is by upgrading the firmware on the device or updating the application to the latest version. Contact the device manufacturer to confirm that it supports TLS version 1.2 or above.
 
 ### Error: Authentication unsuccessful
@@ -138,24 +137,24 @@ There are a few things you should check:
    Set-CASMailbox -Identity <EmailAddress> -SmtpClientAuthenticationDisabled $false
    ```
 
-2. Disable Multi-Factor Authentication (MFA) on the licensed mailbox that's being used:
+2. Disable multifactor authentication (MFA) on the licensed mailbox that's being used:
    - In the Microsoft 365 admin center, in the left navigation menu, choose **Users** > **Active users**.
    - On the Active users page, choose **Multi-Factor Authentication**.
-   - On the multi-factor authentication page, select the user and disable the Multi-Factor Authentication status.
+   - On the multi-factor authentication page, select the user and disable the multifactor authentication status.
 
 3. Disable the [Azure Security Defaults](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults) by toggling the **Enable Security Defaults** to **No**:
 
    > [!CAUTION]
    > Don't do this step unless you understand the risks that are involved.
 
-   - Sign in to the Azure portal as a Security administrator, Conditional Access administrator, or Global administrator.
+   - Sign in to the Azure portal as a Security administrator or Conditional Access administrator.
    - Browse to **Microsoft Entra ID** \> **Properties**.
    - Select **Manage security defaults**.
    - Set the **Enable security defaults** toggle to **No**.
    - Select **Save**.
 
 4. Exclude the user from a [Conditional Access policy](/azure/active-directory/conditional-access/overview) that [blocks Legacy Authentication](/azure/active-directory/conditional-access/block-legacy-authentication):
-   - Sign in to the Azure portal as a Security administrator, Conditional Access administrator, or Global administrator.
+   - Sign in to the Azure portal as a Security administrator or Conditional Access administrator.
    - Browse to **Microsoft Entra ID** \> **Security** \> **Conditional Access**.
    - In the policy that blocks Legacy Authentication, exclude the mailbox being used under **Users and Groups** > **Exclude**.
    - Select **Save**.
@@ -166,19 +165,19 @@ This error indicates that the device is trying to send an email from an address 
 
 ### Error: Client was not authenticated to send anonymous mail during MAIL FROM
 
-This error indicates that your printer connects to the SMTP client submission endpoint (smtp.office365.com). However, your printer must also logon to a mailbox to send a message. This error occurs when you have not entered mailbox logon credentials in the printer's settings. If there is no option to enter credentials, this printer does not support SMTP client submission; use either direct send or Microsoft 365 or Office 365 SMTP relay instead. See [How to set up a multifunction device or application to send email using Microsoft 365 or Office 365](/exchange/mail-flow-best-practices/how-to-set-up-a-multifunction-device-or-application-to-send-email-using-microsoft-365-or-office-365).
+This error indicates that your printer connects to the SMTP client submission endpoint (smtp.office365.com). However, your printer must also logon to a mailbox to send a message. This error occurs when you haven't entered mailbox logon credentials in the printer's settings. If there's no option to enter credentials, this printer doesn't support SMTP client submission; use either direct send or Microsoft 365 or Office 365 SMTP relay instead. See [How to set up a multifunction device or application to send email using Microsoft 365 or Office 365](/exchange/mail-flow-best-practices/how-to-set-up-a-multifunction-device-or-application-to-send-email-using-microsoft-365-or-office-365).
 
 ### Error: 550 5.1.8 Bad outbound sender
 
-This error indicates that the device is trying to send an email from a Microsoft 365 or Office 365 mailbox that is on a spam block list. For help, see [Remove blocked users from the Restricted Users portal](/microsoft-365/security/office-365-security/removing-user-from-restricted-users-portal-after-spam).
+This error indicates that the device is trying to send an email from a Microsoft 365 or Office 365 mailbox that is on a spam blocklist. For help, see [Remove blocked users from the Restricted Users portal](/microsoft-365/security/office-365-security/removing-user-from-restricted-users-portal-after-spam).
 
 ### Error: 535 5.7.139 Authentication unsuccessful, federated STS service was unreachable.
 
-This error related to federation gateway servers hosted on-premises by customers. We were unable to reach the configured server location and therefore could not authenticate the federated user.
+This error related to federation gateway servers hosted on-premises by customers. We were unable to reach the configured server location and therefore couldn't authenticate the federated user.
 
 ### Error: 535 5.7.139 Authentication unsuccessful, the federated STS URL does not support HTTPS.
 
-This error related to federation gateway servers hosted on-premises by customers.  We were unable to establish the required secure connection with the server and therefore could not authenticate the federated user. **Note:** This may be due to the deprecation of TLS1.0 and TLS1.1 which is occurring in 2022. You need to make sure your servers are able to use TLS1.2. You can find more information here: [Preparing for TLS 1.2 in Office 365 and Office 365 GCC](/microsoft-365/compliance/prepare-tls-1.2-in-office-365).
+This error related to federation gateway servers hosted on-premises by customers.  We were unable to establish the required secure connection with the server and therefore couldn't authenticate the federated user. **Note:** This may be due to the deprecation of TLS1.0 and TLS1.1 which is occurring in 2022. You need to make sure your servers are able to use TLS1.2. You can find more information here: [Preparing for TLS 1.2 in Office 365 and Office 365 GCC](/microsoft-365/compliance/prepare-tls-1.2-in-office-365).
 
 ## Fix issues with direct send
 <a name="Troubleshootdirectsend"> </a>
@@ -187,13 +186,13 @@ This error related to federation gateway servers hosted on-premises by customers
 
 This can be caused by a number of issues.
 
-1. A common reason for issues with direct send is a blocked IP address. If antispam tools detect outbound spam from your organization, your IP address can be blocked by a spam block list. Check whether your IP address is on a block list by using a third-party service, such as MXToolbox or WhatIsMyIPAddress. Follow up with the organization that added your IP address to their block list. Microsoft 365 and Office 365 use block lists to protect our service. For help, see [Remove blocked users from the Restricted Users portal](/microsoft-365/security/office-365-security/removing-user-from-restricted-users-portal-after-spam).
+1. A common reason for issues with direct send is a blocked IP address. If antispam tools detect outbound spam from your organization, your IP address can be blocked by a spam blocklist. Check whether your IP address is on a blocklist by using a third-party service, such as MXToolbox or WhatIsMyIPAddress. Follow up with the organization that added your IP address to their blocklist. Microsoft 365 and Office 365 use blocklists to protect our service. For help, see [Remove blocked users from the Restricted Users portal](/microsoft-365/security/office-365-security/removing-user-from-restricted-users-portal-after-spam).
 
 2. To rule out a problem with your device, send a test email to check your connection to Microsoft 365 or Office 365. To send a test email, follow these steps in the article, [Use Telnet to Test SMTP Communication](/exchange/mail-flow/test-smtp-telnet). If you can't connect to Microsoft 365 or Office 365, your network or ISP might have blocked communication using port 25. If you can't reverse this, use SMTP client submission instead.
 
 ### Client was not authenticated to send anonymous mail during MAIL FROM error
 
-This indicates that you are connecting to the SMTP client submission endpoint (smtp.office365.com), which can't be used for direct send. For direct send, use the MX endpoint for your Microsoft 365 or Office 365 organization, which ends with "mail.protection.outlook.com." You can find your MX endpoint by following the steps in [Option 2: Send mail directly from your printer or application to Microsoft 365 or Office 365 (direct send)](/exchange/mail-flow-best-practices/how-to-set-up-a-multifunction-device-or-application-to-send-email-using-microsoft-365-or-office-365#option-2-send-mail-directly-from-your-printer-or-application-to-microsoft-365-or-office-365-direct-send).
+This indicates that you're connecting to the SMTP client submission endpoint (smtp.office365.com), which can't be used for direct send. For direct send, use the MX endpoint for your Microsoft 365 or Office 365 organization, which ends with "mail.protection.outlook.com." You can find your MX endpoint by following the steps in [Option 2: Send mail directly from your printer or application to Microsoft 365 or Office 365 (direct send)](/exchange/mail-flow-best-practices/how-to-set-up-a-multifunction-device-or-application-to-send-email-using-microsoft-365-or-office-365#option-2-send-mail-directly-from-your-printer-or-application-to-microsoft-365-or-office-365-direct-send).
 
 ### My emails are not sent to recipients who are not in my organization
 
@@ -213,7 +212,7 @@ For direct send, we recommend using a device that sends from a static IP address
 
 This can be caused by a number of issues.
 
-1. A common reason for issues with Microsoft 365 or Office 365 SMTP relay is a blocked IP address. If antispam tools detect outbound spam from your organization, your IP address can be blocked by a spam block list. Check whether your IP address is on a block list by using a third-party service, such as MXToolbox or WhatIsMyIPAddress. Follow up with the organization that added your IP address to their block list. Microsoft 365 and Office 365 use block lists to protect our service. For help, see [Remove blocked users from the Restricted Users portal](/microsoft-365/security/office-365-security/removing-user-from-restricted-users-portal-after-spam).
+1. A common reason for issues with Microsoft 365 or Office 365 SMTP relay is a blocked IP address. If antispam tools detect outbound spam from your organization, your IP address can be blocked by a spam blocklist. Check whether your IP address is on a blocklist by using a third-party service, such as MXToolbox or WhatIsMyIPAddress. Follow up with the organization that added your IP address to their blocklist. Microsoft 365 and Office 365 use blocklists to protect our service. For help, see [Remove blocked users from the Restricted Users portal](/microsoft-365/security/office-365-security/removing-user-from-restricted-users-portal-after-spam).
 
 2. To rule out a problem with your device, send a test email to check your connection to Microsoft 365 or Office 365. To send a test email, follow these steps in the article, [Use Telnet to Test SMTP Communication](/exchange/mail-flow/test-smtp-telnet). If you can't connect to Microsoft 365 or Office 365, your network or ISP might have blocked communication using port 25. If you can't reverse this, use SMTP client submission instead.
 
@@ -223,7 +222,7 @@ Network or ISP changes might change your static IP address. This results in your
 
 ### 5.7.64 TenantAttribution; Relay Access Denied or 4.4.62 Mail sent to the wrong Office 365 region
 
-This error indicates that email sent from your application or device is not correctly [attributed](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-message-attribution/ba-p/749143) to your tenant. A common cause of this issue is a change in your dedicated and static IP address or a change in the certificate used by your application or device. Update the inbound connector with the new IP address or new certificate information.
+This error indicates that email sent from your application or device isn't correctly [attributed](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-message-attribution/ba-p/749143) to your tenant. A common cause of this issue is a change in your dedicated and static IP address or a change in the certificate used by your application or device. Update the inbound connector with the new IP address or new certificate information.
 
 ### Email from my device is marked as junk by Microsoft 365 or Office 365
 
@@ -241,4 +240,4 @@ To run the diagnostic check, select the following button:
 > [!div class="nextstepaction"]
 > [Run Tests: Send email using Microsoft 365](https://aka.ms/smtprelay)
 
-A flyout page opens in the Microsoft 365 admin center. Select the appropriate option that you are looking for, eg. new setup or troubleshooting existing setup.
+A flyout page opens in the Microsoft 365 admin center. Select the appropriate option that you're looking for, for example, new setup or troubleshooting existing setup.

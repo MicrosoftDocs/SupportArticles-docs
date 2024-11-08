@@ -3,10 +3,9 @@ title: Information about the deprecated ODT attributes ForceUpgrade and ForceDow
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 09/21/2020
+ms.date: 06/06/2024
 audience: Admin
 ms.topic: troubleshooting
-localization_priority: Normal
 search.appverid: 
   - SPO160
   - MET150
@@ -14,6 +13,8 @@ appliesto:
   - Microsoft Office 365 ProPlus 2016
   - Microsoft Office 365 ProPlus 2013
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - DownloadInstall\AdvancedConfiguration\OfficeDeploymentTool
   - CI 121610
   - CSSTroubleshoot
 ms.reviewer: balram, jalalb, vikkarti, bcorob

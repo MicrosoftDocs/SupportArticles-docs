@@ -4,11 +4,12 @@ description: Four locations must be cleared to reset the activation or install t
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - Activation\Errors\Error Codes
   - sap:office-experts
   - CSSTroubleshoot
   - CI 114181
@@ -17,7 +18,7 @@ ms.custom:
 ms.reviewer: mattphil
 appliesto: 
   - Microsoft 365 Apps for enterprise
-ms.date: 05/10/2022
+ms.date: 06/06/2024
 ---
 
 # Reset activation state for Microsoft 365 Apps for enterprise

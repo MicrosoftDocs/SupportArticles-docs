@@ -3,7 +3,6 @@ title: Error when you use CDec() function in Access query
 description: Describes that you receive an error message when you use the CDec() function in a Microsoft Access query.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 ms.custom: 
   - CI 111294
   - CSSTroubleshoot
@@ -18,7 +17,7 @@ appliesto:
   - Access 2007
   - Access 2003
   - Access 2002
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # "The expression you entered has a function containing the wrong number of arguments" when you use CDec() function in an Access query
@@ -50,7 +49,7 @@ End Function
 
 ```
 2. Save and close the module.   
-3. Type MyID: NewCDec([CategoryID]) in the Field row of a query. Note that when you run this function, it returns a valid value for the MyID field.   
+3. Type MyID: NewCDec([CategoryID]) in the Field row of a query. When you run this function, it returns a valid value for the MyID field.   
 
 ## Status
 

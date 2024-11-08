@@ -3,13 +3,14 @@ title: How to troubleshoot problems that occur when you start or use Word
 description: Provides a guide to identify and resolve problems that you experience when you start Word.
 author: helenclu
 manager: dcscontentpm
-ms.date: 05/05/2020
-localization_priority: Normal
+ms.date: 06/06/2024
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Reliability
   - CI 117479
   - CSSTroubleshoot
 ms.author: luche
@@ -606,4 +607,3 @@ To change the default printer, follow these steps:
 4. Start Word.
 
 If the problem is resolved after you start Word, you have determined that the printer is causing the problem. If this is the case, contact the vendor to see whether there is an update for the printer driver.
-

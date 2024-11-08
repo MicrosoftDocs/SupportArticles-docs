@@ -1,20 +1,19 @@
 ---
-title: Exclude antivirus and DLP applications from blocking Teams 
+title: Exclude antivirus and DLP applications from blocking Teams
 ms.author: meerak
 author: cloud-writer
 manager: dcscontentpm
-ms.date: 10/30/2023
+ms.date: 07/26/2024
 audience: Admin
 ms.topic: troubleshooting
-localization_priority: Normal
-search.appverid: 
+search.appverid:
   - SPO160
   - MET150
-ms.assetid: 
-appliesto: 
+ms.assetid:
+appliesto:
   - New Microsoft Teams
   - Classic Microsoft Teams
-ms.custom: 
+ms.custom:
   - sap:Teams Clients\Windows Desktop
   - CI 106370
   - CSSTroubleshoot
@@ -45,10 +44,11 @@ The MSIX installer installs the new Teams app in the WindowsApps folder instead 
 
 The name of the folder where the new Teams app is installed is dynamic and it changes when the app’s version is updated. The folder name begins with MSTeams_, ends with _8wekyb3d8bbwe, and includes the app’s version number in between.  For example, MSTeams_23247.1112.2396.409_x64_8wekyb3d8bbwe.
 
-To prevent issues with starting the new Teams app, add the following processes to the exclusion list in the antivirus software that you’re using:
+To prevent issues with starting or using the new Teams app, add the following processes to the exclusion list in the antivirus software that you’re using:
 
 - `ms-teams.exe`
 - `ms-teamsupdate.exe`
+- `msedgewebview2.exe`
 
 Alternatively, you can add the processes to the allowlist for programs in your DLP application. The method to accomplish this addition varies. For specific instructions, contact your DLP application’s manufacturer.
 
@@ -63,4 +63,4 @@ To add the Teams processes to either the exclusion list or the Safe list/Allow l
 1. To view the individual files, open **Task Manager** and select **More details**.
 1. On the **Details** tab, locate and right-click **ms-teams.exe** and select **Open file location**.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [Microsoft Support Community](https://answers.microsoft.com).

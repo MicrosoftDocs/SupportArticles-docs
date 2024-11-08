@@ -3,7 +3,6 @@ title: How to set Outlook 2016 for Mac to delay trying to renew a Kerberos ticke
 description: Describes how to suppress credentials prompting when connecting with Kerberos authentication.
 author: cloud-writer
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

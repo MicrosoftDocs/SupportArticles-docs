@@ -3,7 +3,6 @@ title: Build dynamic query with values from search form
 description: Explains how to create a search form and how to use it to dynamically build the appropriate SQL string by using the BuildCriteria method and values from the search form.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 ms.custom: 
   - CI 111294
   - CSSTroubleshoot

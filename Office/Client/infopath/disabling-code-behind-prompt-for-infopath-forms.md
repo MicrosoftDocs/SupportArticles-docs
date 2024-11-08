@@ -5,7 +5,6 @@ author: helenclu
 ms.author: luche
 ms.reviewer: dmahugh
 manager: dcscontentpm
-localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 search.appverid: 

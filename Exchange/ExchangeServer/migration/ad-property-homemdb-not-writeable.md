@@ -4,7 +4,6 @@ description: Fixes an issue in which you receive the Active Directory property h
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Migration\Issues with Move Mailbox within same organization
   - CSSTroubleshoot

@@ -3,11 +3,12 @@ title: Manage Office programs templates
 description: Describes the different template categories and the locations of templates in 2007 Office programs and in 2010 Office programs. Also describes the registry settings that control where to find your custom templates.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Editing\Templates
   - CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
@@ -15,7 +16,7 @@ ms.reviewer: of12sstr
 appliesto: 
   - Office 2010
   - Office 2007
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # How to manage templates in 2007 Office programs and in 2010 Office programs

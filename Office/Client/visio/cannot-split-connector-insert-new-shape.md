@@ -4,8 +4,9 @@ description: This article provides a workaround in Visio where you can't split a
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Editing\Shapes
   - CSSTroubleshoot
 appliesto:
 - Visio 2010
@@ -13,7 +14,7 @@ search.appverid: MET150
 ms.reviewer: 
 author: simonxjx
 ms.author: v-six
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 # You can't split a connector to insert a new shape in a Visio 2010 diagram
 

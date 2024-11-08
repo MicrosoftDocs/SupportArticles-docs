@@ -5,7 +5,6 @@ author: helenclu
 ms.author: luche
 ms.reviewer: thempel
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
@@ -15,7 +14,7 @@ ms.custom:
   - CSSTroubleshoot
 appliesto: 
   - Office Online Server
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # How to determine the build version of Office Online Server

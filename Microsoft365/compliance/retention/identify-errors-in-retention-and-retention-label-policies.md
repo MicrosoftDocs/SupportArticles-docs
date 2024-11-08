@@ -4,7 +4,6 @@ description: How to identify errors in Microsoft 365 retention and retention lab
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.reviewer: kyrachurney, lindabr, meerak
 ms.custom: 
   - CI 171536
@@ -12,7 +11,7 @@ ms.custom:
 appliesto: 
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 02/14/2023
+ms.date: 06/24/2024
 ---
 
 # Identify errors in Microsoft 365 retention and retention label policies

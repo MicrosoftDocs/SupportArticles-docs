@@ -6,14 +6,13 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: munatara, ioana
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 06/24/2024
 ---
 
 # UserAgent property value in the unified audit log from the Security & Compliance Center

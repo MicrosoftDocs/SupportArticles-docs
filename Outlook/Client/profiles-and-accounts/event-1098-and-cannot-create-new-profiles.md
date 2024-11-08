@@ -6,7 +6,6 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Exchange Mailbox Accounts\Problems after moving a mailbox
   - Outlook for Windows

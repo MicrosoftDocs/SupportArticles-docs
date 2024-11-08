@@ -6,7 +6,6 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: MS aliases for tech reviewers and CI requestor, without @microsoft.com.
@@ -15,7 +14,7 @@ appliesto:
   - Outlook for Mac 2011
   - Outlook 2016 for Mac
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 06/24/2024
 ---
 # Can't set up Outlook for Mac 2011 to use the archive mailbox feature in Exchange Online
 

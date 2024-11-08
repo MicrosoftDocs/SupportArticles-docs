@@ -5,7 +5,6 @@ author: helenclu
 ms.author: luche
 ms.reviewer: joergsi
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
@@ -19,7 +18,7 @@ appliesto:
 ms.date: 12/17/2023
 ---
 
-# SharePoint Designer 2013 login Issues in a cloud scenario
+# SharePoint Designer 2013 sign-in Issues in a cloud scenario
 
 This article was written by [Joerg Sinemus](https://social.msdn.microsoft.com/profile/Joerg+Sinemus), Escalation Engineer.
 

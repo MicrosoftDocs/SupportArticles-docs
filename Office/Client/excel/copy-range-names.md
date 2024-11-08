@@ -3,20 +3,20 @@ title: Copy all range names programmatically
 description: Describes how to create and use a macro to copy all of the range names from the active workbook to another workbook in Excel.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - Extensibility\Macros
   - CSSTroubleshoot
 appliesto: 
   - Excel 2007
   - Excel 2003
   - Excel 2002
   - Excel 2000
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Copy all range names programmatically in Excel
@@ -85,4 +85,4 @@ Range2, and then click **OK**.
     - In Excel 2003 and in earlier versions of Excel, point to **Macro** on the **Tools** menu, and then click **Macros**.   
 
 16. In the **Macro name** list, click **Copy_All_Defined_Names**, and then click **Run**.   
-17. Switch to Book2 and note that cell A1 is named Range1, and that cell B1 is named Range2.   
+17. Switch to Book2 and note that cell A1 is named Range1, and that cell B1 is named Range2.

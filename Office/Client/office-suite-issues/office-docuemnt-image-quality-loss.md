@@ -3,10 +3,11 @@ title: Loss of image quality in an Office document
 description: Discusses an issue in which a loss of image quality such as blur may occur after you save a document, spreadsheet, or presentation which contains an image. Provides a solution.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Save
   - CSSTroubleshoot
 audience: ITPro
 ms.topic: troubleshooting
@@ -14,7 +15,7 @@ ms.author: luche
 ms.reviewer: wbrandt, abraeg
 appliesto: 
   - Office 2007
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Loss of image quality after you save in Word, Excel, or PowerPoint 2007
@@ -29,7 +30,7 @@ This issue occurs because PowerPoint, Excel, and Word perform a basic compressio
 
 ## Resolution
 
-It is not possible to recover pictures that have already been compressed.
+It isn't possible to recover pictures that have already been compressed.
 For future saves, compression can be disabled on a per-file basis using the following steps:
 
 1. Click the **Office** Button, and then click **Save As**. 
@@ -39,7 +40,7 @@ For future saves, compression can be disabled on a per-file basis using the foll
 5. Click **OK**. 
 6. In the **Compress Pictures** dialog box, click **Cancel**.
 
-   **Note**:  Clicking OK on this dialog will not prevent the issue from occurring.
+   **Note**:  Clicking OK on this dialog won't prevent the issue from occurring.
 
 You can also modify the following registry setting to prevent basic compression from occurring by default.
 

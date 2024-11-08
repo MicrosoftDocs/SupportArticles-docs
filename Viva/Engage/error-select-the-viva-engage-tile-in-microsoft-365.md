@@ -1,23 +1,22 @@
 ---
-title: Sign-in error when selecting the Viva Engage tile in Microsoft 365
-description: Fix the Sorry, but we're having trouble signing you in error when you select the Viva Engage tile in Microsoft 365.
+title: Sign-in error when you select the Viva Engage tile in Microsoft 365
+description: Provides a fix for an error that displays when you select the Viva Engage tile in Microsoft 365.
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.service: viva-engage
-localization_priority: Normal
 search.appverid:
  - MET150
-ms.date: 12/20/2023
+ms.date: 08/08/2024
 ---
 
 # Sign-in error when you select the Viva Engage tile in Microsoft 365
 
 ## Symptoms
 
-You recently activated Viva Engage Enterprise by using the Microsoft 365 admin center. The Viva Engage tile appears in the app launcher, but when you select it, you receive the following error message:
+You recently activated Microsoft Viva Engage Enterprise by using the Microsoft 365 admin center. The Viva Engage tile appears in the app launcher, but when you select it, you receive the following error message:
 
 > Sorry, but we're having trouble signing you in. We received a bad request.
 
@@ -25,7 +24,7 @@ You recently activated Viva Engage Enterprise by using the Microsoft 365 admin c
 
 To resolve this issue, make sure that the Viva Engage Service Principal is enabled.
 
-**Note:** You must be a Microsoft 365 Global administrator to perform these steps.
+**Note:** You must have Yammer Administrator permissions to perform these steps.
 
 Follow these steps:
 

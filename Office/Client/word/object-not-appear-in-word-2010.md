@@ -3,17 +3,18 @@ title: A picture or an object may not appear in a Word 2010 or Word 2007 documen
 description: Describes how to troubleshoot an issue in which pictures or objects are not visible in documents. This issue occurs on the screen and in printed documents.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Editing\Insert
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Word 2010
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # A picture or an object may not appear in a Word 2010 or Word 2007 document

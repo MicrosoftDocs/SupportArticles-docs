@@ -3,7 +3,6 @@ title: Filtering doesn't work for Tasks list with a Managed Metadata column
 description: When trying to filter a Tasks list using the Managed Metadata column, the list doesn't filter as expected.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

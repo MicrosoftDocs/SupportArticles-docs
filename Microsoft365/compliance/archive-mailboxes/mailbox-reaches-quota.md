@@ -6,7 +6,6 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - CI 125839
   - CSSTroubleshoot
@@ -14,7 +13,7 @@ ms.reviewer: wesmils
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 06/24/2024
 ---
 # Your mailbox reaches its quota even if the Archive feature is enabled
 

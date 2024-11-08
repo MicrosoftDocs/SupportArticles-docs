@@ -6,7 +6,6 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Sending, Receiving, Synchronizing, or viewing email\Other
   - Outlook for Windows
@@ -26,14 +25,16 @@ ms.date: 01/30/2024
 
 In an Exchange Online mailbox that's configured in Microsoft Outlook, either some or all Microsoft 365 groups don't synchronize automatically.
 
-In the status bar in Outlook, the sync status displays the message, "This folder has not been updated yet".
+In the status bar in Outlook, the sync status displays the following message:
+
+> This folder has not been updated yet.
 
 ## Cause
 
 The issue can occur if:
 
 - Modern authentication isn't enabled for the tenant.
-- Modern authentication is enabled, and the affected Microsoft 365 groups have 100K items or more.
+- Modern authentication is enabled, and the affected Microsoft 365 groups have 100,000 items or more.
 
 ## Resolution
 
@@ -45,11 +46,11 @@ Resolution 1: If modern authentication isn't enabled for your tenant, use the fo
 2. [Create an Outlook profile](https://support.microsoft.com/office/create-an-outlook-profile-f544c1ba-3352-4b3b-be0b-8d42a540459d).
 3. Open the [Outlook Connection Status](../connectivity/description-of-the-connection-status-dialog-box.md) dialog.
 4. Verify that the entries in the **Authn** column display **Bearer***. This value confirms that Outlook is using modern authentication.
-5. Check whether the sync status in the status bar in Outlook has updated to display "This folder is up to date".
+5. Check whether the sync status in the status bar in Outlook updates to display "This folder is up to date".
 
-Resolution 2: If some of the Microsoft 365 groups have 100K items or more, use the following information.
+Resolution 2: If some of the Microsoft 365 groups have 100,000 items or more, use the following information.
 
-If modern authentication is enabled for your tenant, and the item count in some of the affected groups is 100K or more, you might need to reduce the time period for which Outlook caches items from Microsoft 365 groups. The default time period is 12 months.
+If modern authentication is enabled for your tenant, and the item count in some of the affected groups is 100,000 or more, you might need to reduce the time period for which Outlook caches items from Microsoft 365 groups. The default time period is 12 months.
 
 To reduce this time period and fix the issue, use the following steps:
 
@@ -61,4 +62,4 @@ To reduce this time period and fix the issue, use the following steps:
 
     The value is a number that specifies the time period in months for Outlook to cache content in Microsoft 365 groups.
 2. Restart Outlook.
-3. Check  whether the sync status in the status bar in Outlook has updated to display "This folder is up to date".
+3. Check whether the sync status in the status bar in Outlook updates to display "This folder is up to date".

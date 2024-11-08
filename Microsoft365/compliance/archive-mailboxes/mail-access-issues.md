@@ -6,7 +6,6 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
   - 'Associated content asset: 4555316'
@@ -20,7 +19,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 06/24/2024
 ---
 # Mail access issues in a hybrid Exchange deployment with cloud-based archive
 

@@ -3,12 +3,13 @@ title: Visio Services does not render diagrams
 description: Provides a workaround for a problem in which Visio Services does not render diagrams. This problem occurs when the diagrams are hosted on servers that have IDNs.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
+  - Editing\Diagrams
   - CSSTroubleshoot
 ms.author: luche
 ms.reviewer: parida, Arykhus, kevinmil, barbway, emilcico
@@ -17,7 +18,7 @@ appliesto:
   - Visio Premium 2010
   - Visio Professional 2013
   - Visio Standard 2013
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Visio Services does not render diagrams that are hosted on servers that have IDNs
@@ -69,4 +70,4 @@ To create a new Web part page, follow these steps:
 7. Click the **Click here to open the tool pane** link.   
 8. Click the **browse** button that is next to the **Web Drawing URL** field.   
 9. Select a Web drawing (.vdw), and then click **OK**.   
-10. Click **Apply**, and then click **OK**.   
+10. Click **Apply**, and then click **OK**.

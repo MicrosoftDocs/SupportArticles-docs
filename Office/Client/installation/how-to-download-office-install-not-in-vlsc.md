@@ -6,18 +6,19 @@ author: simonxjx
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
-localization_priority: Normal
 search.appverid: 
   - SPO160
   - MET150
 appliesto: 
   - Office
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - DownloadInstall\SxS\SxSOrPerpetual
   - CI 157620
   - CI 113921
   - CSSTroubleshoot
 ms.reviewer: joselr
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 # How to install Office LTSC installation files not found in VLSC
 

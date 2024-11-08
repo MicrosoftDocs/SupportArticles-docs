@@ -4,18 +4,19 @@ description: Describes how to activate the Office 2010 KMS host through telephon
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - Activation\Perpetual
   - sap:office-experts
   - CSSTroubleshoot
 ms.reviewer: ericspli
 appliesto: 
   - Office 2010
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 
 # Activate Office 2010 KMS host through phone activation

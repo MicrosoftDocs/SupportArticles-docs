@@ -1,43 +1,50 @@
 ---
-title: Litigation Hold mailbox doesn't turn into an inactive mailbox after license removal
-description: Fixes an issue in which a Litigation Hold enabled mailbox doesn't turn into an inactive mailbox after the license is removed.
+title: Can't convert a user mailbox to inactive by removing the user's license
+description: Resolves an issue in which you can't convert a user mailbox to inactive by removing the user's license.
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
+  - sap:Retention
   - CSSTroubleshoot
-  - CI 151537
-ms.reviewer: kellybos, lindabr, meerak
+  - CI 1021
+ms.reviewer: apascual, sathyana, meerak, v-shorestris
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 09/27/2024
 ---
 
-# A mailbox that's on Litigation Hold or assigned to a retention policy doesn't turn into an inactive mailbox after license removal
+# Can't convert a user mailbox to inactive by removing the user's license
 
 ## Symptoms
 
-Assume that you synchronize accounts from your local Active Directory Domain Services (AD DS) to Microsoft Entra ID by using Microsoft Entra Connect. After the Microsoft Exchange Server license is removed from a Microsoft 365 account, which has a mailbox that's placed on Litigation Hold or assigned to a retention policy, the mailbox doesn't turn into an inactive mailbox, as expected. Additionally, when you view the account information in the Microsoft 365 admin center, you see the following error message:
+You try to convert a regular user mailbox to an [inactive mailbox](/purview/create-and-manage-inactive-mailboxes) in Microsoft Exchange Online by removing the license for the user. However, the mailbox remains active, and you see the following error message in the Microsoft 365 admin center:
 
 > The execution of cmdlet Disable-Mailbox failed..; Exchange: An unknown error has occurred.
 
+The issue can occur for user mailboxes in both on-premises Exchange hybrid and Exchange Online environments.
+
 ## Cause
 
-Removing the Exchange Server license will hard delete the mailbox. However, a Litigation Hold-enabled mailbox, or a mailbox that's assigned to a retention policy, can't be deleted in Exchange Online. In this case, the mailbox won't become inactive.
+The issue occurs if you remove the user license for a mailbox that has a hold applied. This behavior is by design.
+
+> [!NOTE]
+> If you remove the user license for a mailbox that doesn't have a hold applied, Exchange Online immediately disconnects (disables) the mailbox and then permanently deletes it after 30 days. You can't access a disconnected mailbox.
 
 ## Resolution
 
-To turn the mailbox that's placed on Litigation Hold or assigned to a retention policy into an inactive mailbox, follow these steps in Microsoft Entra ID:
+To convert a regular user mailbox that has a hold to an inactive mailbox, follow these steps:
 
-1. Reassign the license to the account to recover the mailbox.
-1. Delete the account from AD DS, or delete the account from the scope of the synchronization with Microsoft Entra Connect.
+1. [Reassign a license to the user](/microsoft-365/admin/manage/assign-licenses-to-users#use-the-active-users-page-to-assign-or-unassign-licenses) to resolve the error.
 
-## More information
+2. If the cloud user account is synced from on-premises, delete the on-premises account or turn off sync.
 
-- [Remove-ADUser](/powershell/module/activedirectory/remove-aduser)
-- [Create an Organizational Unit (OU) in an AD DS-managed domain](/azure/active-directory-domain-services/create-ou)
-- [No soft-deleted mailbox after license removal in Microsoft 365](/exchange/troubleshoot/user-and-shared-mailboxes/no-soft-deleted-mailbox-after-license-removal)
-- [Overview of inactive mailboxes](/microsoft-365/compliance/inactive-mailboxes-in-office-365)
-- [How to identify the type of hold placed on an Exchange Online mailbox](/microsoft-365/compliance/identify-a-hold-on-an-exchange-online-mailbox?view=o365-worldwide&preserve-view=true)
+3. If the user account was created directly in the cloud:
+
+   1. [Delete the user account](/power-platform/admin/delete-users#delete-users-in-microsoft-365-admin-center) in the Microsoft 365 admin center.
+
+   2. [Permanently delete the user account](/entra/fundamentals/users-restore#permanently-delete-a-user). 
+
+> [!NOTE]
+> Exchange Online automatically unassigns the license for a deleted user account.

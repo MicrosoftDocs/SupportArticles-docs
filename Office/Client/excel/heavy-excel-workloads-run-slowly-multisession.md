@@ -6,16 +6,16 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.reviewer: rtaylor, jefferc
 ms.custom: 
+  - Reliability
   - CSSTroubleshoot
   - CI 172461
 search.appverid: 
   - MET150
 appliesto: 
   - Excel
-ms.date: 03/03/2023
+ms.date: 06/06/2024
 ---
 
 # Heavy Excel workloads run slowly in multi-session environments

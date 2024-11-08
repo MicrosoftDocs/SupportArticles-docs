@@ -3,12 +3,12 @@ title: Last digits are changed to zeros when you type long numbers in cells of E
 description: Describes that Excel can store only 15 significant digits in a number. If the number that you type contains more than 15 digits, any digits past the fifteenth digit are changed to zero. Format the number as text to work around this problem.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - Editing\Cells
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 
@@ -17,7 +17,7 @@ appliesto:
   - Microsoft Office Excel 2007
   - Microsoft Office Excel 2003
 ms.reviewer: 
-ms.date: 03/31/2022
+ms.date: 06/06/2024
 ---
 # Last digits are changed to zeros when you type long numbers in cells of Excel
 

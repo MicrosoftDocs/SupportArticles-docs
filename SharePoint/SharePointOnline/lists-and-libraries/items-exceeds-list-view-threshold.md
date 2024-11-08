@@ -3,7 +3,6 @@ title: The number of items in this list exceeds the list view threshold
 description: This article describes The number of items in this list exceeds the list view threshold error, and provides a solution.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
