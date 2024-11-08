@@ -55,11 +55,11 @@ You can create a custom RoleBinding or ClusterRoleBinding resource to grant the 
 #### Method 2: Add the user to the pre-designated Microsoft Entra ID admin group
 1. Retrieve the ID of the pre-designated Microsoft Entra ID admin group. To do this, run the following command:
 
-  ```bash
+	```bash
 	az aks show -g <CLUSTER_RESOURCE_GROUP> -n <CLUSTER_NAME> --query aadProfile.adminGroupObjectIDs
-  ```
+	```
 
-1. Add the user to the pre-designated Microsoft Entra ID admin group by using the group ID that you retrieved in the previous step. For more detailed steps, see [Add members or owners of a group](/entra/fundamentals/how-to-manage-groups#add-members-or-owners-of-a-group).
+2. Add the user to the pre-designated Microsoft Entra ID admin group by using the group ID that you retrieved in the previous step. For more detailed steps, see [Add members or owners of a group](/entra/fundamentals/how-to-manage-groups#add-members-or-owners-of-a-group).
 
 ### Solving permissions issues in Azure RBAC-based AKS clusters
 
