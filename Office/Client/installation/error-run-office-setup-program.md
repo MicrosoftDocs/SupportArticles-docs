@@ -3,7 +3,6 @@ title: Error when you install an Office program
 description: Describes an error message that you receive when you install an Office program.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

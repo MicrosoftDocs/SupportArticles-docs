@@ -6,7 +6,6 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Add-Ins\Centralized Deployment of Add-Ins
   - DownloadInstall\AdvancedConfiguration\AddInsOrIntegratedApps
@@ -41,14 +40,14 @@ ms.date: 06/06/2024
 
 ## Summary
 
-If you have the Adobe Acrobat PDFMaker Office COM add-in installed on your computer and your Office programs are crashing or not responding, this might mean that the version of PDFMaker you have installed is incompatible with your version of Office.
+If you have the Adobe Acrobat PDFMaker Office COM add-in installed on your computer and your Office programs are crashing or not responding, it might mean that the version of PDFMaker you have installed is incompatible with your version of Office.
 
 ## More information
 
-To verify that the PDFMaker add-in is installed on your computer, do the following:
+To verify that the PDFMaker add-in is installed on your computer, follow this step:
 
 - Office 2010: Open any Office application, and then select **File** > **Add-Ins**.
-- Office 2013 and later versions, select **File** > **Options** > **Add-Ins**. Next to **Manage COM Add-ins** select **Go**. You will see a dialog box that resembles the following screenshot:
+- Office 2013 and later versions, select **File** > **Options** > **Add-Ins**. Next to **Manage COM Add-ins** select **Go**. You'll see a dialog box that resembles the following screenshot:
 
 :::image type="content" source="media/incompatibilities-between-office-and-adob/add-ins-outlook-options.png" alt-text="Screenshot to check the add-ins in the Outlook Options window.":::
 
@@ -78,11 +77,11 @@ If you have administrative permissions, you can also disable the add-in by follo
 
 1. Open the Office program, and then select**File** > **Options** > **Add-ins**.
 2. In the Manage drop-down list, select **COM Add-Ins**, and then select **Go**.
-3. Clear the **Acrobat PDFMaker Office COM Addin** check box, as follows (Office 2010 screen shot), and then select **OK**.
+3. Clear the **Acrobat PDFMaker Office COM Addin** check box, as follows (Office 2010 screenshot), and then select **OK**.
 
 :::image type="content" source="media/incompatibilities-between-office-and-adob/disable-add-in.png" alt-text="Screenshot to clear the Acrobat PDFMaker Office COM Add-in check box.":::
 
-If you cannot disable the add-in by following these steps, use one of the following methods.
+If you can't disable the add-in by following these steps, use one of the following methods.
 
 > [!IMPORTANT]
 > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
@@ -91,7 +90,7 @@ First, exit the Office program that you're having issues with when the PDFMaker 
 
 #### Windows 8
 
-From the Start screen, type CMD. In the results pane, swipe down on Command Prompt to reveal the charm bar, then select **Run as administrator** on the charm bar. If you are using a mouse, right-click the **Command Prompt** to reveal the charm bar.
+From the Start screen, type CMD. In the results pane, swipe down on Command Prompt to reveal the charm bar, then select **Run as administrator** on the charm bar. If you're using a mouse, right-click the **Command Prompt** to reveal the charm bar.
 
 #### Windows 7, Windows Vista, or Windows XP
 
@@ -103,19 +102,19 @@ Select the Office program that you're having problems with, and then use the app
 #### Access, Excel, Word, PowerPoint, or Publisher
 
 > [!NOTE]
-> The <_Office program_> placeholder represents the name of the Office program that you're having issues with when the PDFMaker add-in was installed.
+> The \<_Office program_\> placeholder represents the name of the Office program that you're having issues with when the PDFMaker add-in was installed.
 
 1. Locate and select the following registry key:
 
-   HKEY_CURRENT_USER\software\microsoft\office\\\<Office program>\addins\Pdfmaker.OfficeAddin
+   HKEY_CURRENT_USER\software\microsoft\office\\\<Office program\>\addins\Pdfmaker.OfficeAddin
 
-   1. If the PDFmaker.\<Office program>Addin key exists, modify the **Load Behavior** value under the key to 0, and then go to step 2.
-   2. If the PDFmaker.\<Office program>Addin key does not exist, go to step 2.
+   1. If the PDFmaker.\<Office program\>Addin key exists, modify the **Load Behavior** value under the key to 0, and then go to step 2.
+   2. If the PDFmaker.\<Office program\>Addin key doesn't exist, go to step 2.
 
 2. Repeat step 1 with each of the following registry keys:
 
-   - HKEY_LOCAL_MACHINE\Software\Microsoft\Office\\\<Office program>\Addins\PDFMaker.OfficeAddin
-   - HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Office\\\<Office program>\Addins\PDFMaker.OfficeAddin
+   - HKEY_LOCAL_MACHINE\Software\Microsoft\Office\\\<Office program\>\Addins\PDFMaker.OfficeAddin
+   - HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Office\\\<Office program\>\Addins\PDFMaker.OfficeAddin
 
 3. Exit Registry Editor, and then start the Office program.
 
@@ -126,7 +125,7 @@ Select the Office program that you're having problems with, and then use the app
    HKEY_CURRENT_USER\software\microsoft\office\Outlook\addins\PdfmOutlook.PDFMOutlook
 
    1. If the PdfmOutlook.PDFMOutlook key exists, modify the **Load Behavior** value under the key to 0, and then go to step 2.
-   2. If the PdfmOutlook.PDFMOutlook key does not exist, go to step 2.
+   2. If the PdfmOutlook.PDFMOutlook key doesn't exist, go to step 2.
 
 2. Repeat step 1 with each of the following registry keys:
 
@@ -142,7 +141,7 @@ Select the Office program that you're having problems with, and then use the app
    HKEY_CURRENT_USER\software\microsoft\Visio\addins\PDFMVisio.PDFMVisioCOMAddin
 
    1. If the PDFMVisio.PDFMVisioCOMAddin exists, modify the **Load Behavior** value under the key to 0, and then go to step 2.
-   2. If the PDFMVisio.PDFMVisioCOMAddin key does not exist, go to step 2.
+   2. If the PDFMVisio.PDFMVisioCOMAddin key doesn't exist, go to step 2.
    > [!NOTE]
    > This registry path does not include the \Office subkey as do the registry paths used by other Office programs.
 2. Repeat step 1 with each of the following registry keys:
@@ -158,4 +157,4 @@ Select the Office program that you're having problems with, and then use the app
 
 [I get a "stopped working" error when I start Office applications on my PC](https://support.office.com/article/i-get-a-stopped-working-error-when-i-start-office-applications-on-my-pc-52bd7985-4e99-4a35-84c8-2d9b8301a2fa)
 
-[Excel not responding, hangs, freezes or stops working](https://support.microsoft.com/office/excel-not-responding-hangs-freezes-or-stops-working-37e7d3c9-9e84-40bf-a805-4ca6853a1ff4)
+[Excel not responding, hangs, freezes, or stops working](https://support.microsoft.com/office/excel-not-responding-hangs-freezes-or-stops-working-37e7d3c9-9e84-40bf-a805-4ca6853a1ff4)

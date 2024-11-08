@@ -4,7 +4,6 @@ description: Describes an issue in which Outlook doesn't show the Accept and Dec
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:User Interface features and Configuration\Icons, buttons, or commands are missing
   - Outlook for Windows

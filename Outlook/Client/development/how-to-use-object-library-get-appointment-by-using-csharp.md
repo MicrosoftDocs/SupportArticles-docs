@@ -4,7 +4,6 @@ description: Describes how to retrieve an appointment in a Visual C# project by 
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Developer Issues\Macros
   - CSSTroubleshoot

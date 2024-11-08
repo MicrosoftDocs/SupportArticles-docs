@@ -6,111 +6,66 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Teams Meetings\Meetings Other
   - CI 191699
+  - CI 193233
   - CSSTroubleshoot
 ms.reviewer: mfoland; shmurth; wayvad
 appliesto: 
   - New Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 06/25/2024
+ms.date: 10/17/2024
 ---
 # Teams meeting add-in missing from Outlook and new Teams
 
 ## Symptoms
 
-Either you or your organization uninstalls classic Microsoft Teams and then updates to new Teams. The classic Teams version is earlier than 1.7.00.6058. You uninstall the program by using one of the following methods:
+Either you or your organization uninstalls classic Microsoft Teams and then upgrades to new Teams. You uninstall the program by using one of the following methods:
 
 - Any of the available options to [uninstall programs](https://support.microsoft.com/windows/4b55f974-2cc6-2d2b-d092-5905080eaf98) in Windows 11 and Windows 10.
-
 - An administrative policy that triggers the removal of classic Teams. For example, organizations might choose to remove older versions of classic Teams from user computers to make sure that most users are on the same version.
-
 - The "new Teams only" policy setting to upgrade to new Teams. When a user is assigned this Teams upgrade policy, the new Teams app removes the classic Teams app from the user's computer after a set time. The default setting is 14 days.
 
-After the update, the Teams meeting add-in doesn't load in new Teams. Additionally, the add-in is removed from Microsoft Outlook.
+After the upgrade, the Teams meeting add-in doesn't load in new Teams. Additionally, the add-in is removed from Microsoft Outlook.
 
 ## Cause
 
-When a version of classic Teams that is earlier than 1.7.00.6058 is uninstalled, the Teams meeting add-in is also uninstalled. The uninstallation process removes the registry keys that are shared across all versions of the Teams meeting add-in. Therefore, when new Teams and Outlook start, the computer doesn't find the installed add-in to load.
+When a version of classic Teams is uninstalled, the Teams meeting add-in is also uninstalled. The uninstallation process removes the registry keys that are shared across all versions of the Teams meeting add-in. Therefore, when new Teams and Outlook start, the computer doesn't find the installed add-in to load.
 
 ## Resolution
 
-For non-VDI environments, follow these steps to reinstall the Teams meeting add-in.
+For non-VDI environments, follow these steps to reinstall the Teams meeting add-in:
 
-1. Use the following PowerShell script to verify that classic Teams was uninstalled correctly:
+1. Use the [Uninstall-ClassicTeams.ps1](https://aka.ms/AAslsri) PowerShell script to verify that classic Teams was uninstalled correctly.
+1. Use the [UninstallTMA.ps1](https://aka.ms/AAsllbb) PowerShell script to verify that the Teams meeting add-in was uninstalled correctly.
 
-    ```powershell
-    $userLocalAppData = [Environment]::GetFolderPath("LocalApplicationData")
-    $teamsUpdater = Join-Path -Path $userLocalAppData -ChildPath 'Microsoft\Teams\Update.exe'
-    
-    if (Test-Path -Path $teamsUpdater)
-    {
-        $process = Start-Process -Filepath $teamsUpdater -ArgumentList "--uninstall -s" -PassThru
-        $handle = $process.Handle;
-        $process.WaitForExit();
-        $exitCode = $process.ExitCode;
-    
-        if ($exitCode -ne 0) 
-        {
-            Write-Warning "classic Teams uninstallation failed with $($exitCode)"
-        }
-        else
-        {
-            Write-Output "classic Teams uninstallation was successful."
-        }
-    }
-    else
-    {
-        Write-Output "Could not find a classic Teams installation, could it already have been uninstalled?"
-    }
-    ```
+   If this script returns an error message, check the version of the Teams meeting add-in. Otherwise, go to step 3.
 
-1. Use the following PowerShell script to verify that the Teams meeting add-in was uninstalled correctly:
+   To check the Teams meeting add-in version, select **Start** > **Settings** > **Apps** > **Installed apps**, enter *Teams Meeting Add-in* in the search box, and then check the version of **Microsoft Teams Meeting Add-in for Microsoft Office**. If the version starts with *1.23*, follow these steps:
 
-    ```powershell
-    try {  
-       $tmaMsiPath = "{0}\MicrosoftTeamsMeetingAddinInstaller.msi" -f (get-appxpackage -name MSTeams).InstallLocation  
-       $process = Start-Process -FilePath "msiexec.exe" -ArgumentList "/x `"$tmaMsiPath`" InstallerVersion=v3 /quiet /l `"$env:USERPROFILE\Downloads\tma-uninstall.log`"" -PassThru -Wait -ErrorAction Stop
-      
-       if ($process.ExitCode -ne 0) {  
-          throw "msiexec.exe exited with code $($process.ExitCode)"  
-       }  
-       else  
-       {  
-          Write-Host "Successfully uninstalled teams meeting addin." -ForegroundColor Green  
-       }  
-    }  
-    catch {  
-       Write-Error "Failed to uninstall: $_. We'll try repairing MSI"   
-       $process = Start-Process -FilePath "msiexec.exe" -ArgumentList "/fav `"$tmaMsiPath`" /quiet /l `"$env:USERPROFILE\Downloads\tma-uninstall-repair.log`"" -PassThru -Wait -ErrorAction Stop  
+     1. Download the [UninstallOldTMA.ps1](https://aka.ms/AAsllbh) PowerShell script.
+     1. Open the script in Notepad.
+     1. Check whether your version of the Teams meeting add-in is included in the `$msixDictionary` variable. If it's not included, follow these steps:
 
-       if ($process.ExitCode -ne 0) {    
-          Write-Error "Repair failed with code $($process.ExitCode)"  
-       }  
-       else  
-       {  
-          Write-Output "Repair succeeded! We'll try to uninstall again"          
-          $process = Start-Process -FilePath "msiexec.exe" -ArgumentList "/x `"$tmaMsiPath`" /quiet InstallerVersion=v3 /l `"$env:USERPROFILE\Downloads\tma-uninstall-retry.log`"" -PassThru -Wait -ErrorAction Stop  
+         1. Select **Start** > **Settings** > **Apps** > **Installed apps**, enter *Teams Meeting Add-in* in the search box, and then locate the **Microsoft Teams Meeting Add-in for Microsoft Office** app in the results.
+         1. Select **More options** (...), and then select **Uninstall** two times.
+         1. Wait for Windows Installer to open a window that indicates that the installation package, `MicrosoftTeamsMeetingAddinInstaller.msi`, isn't available. The following screenshot shows an example of this pop-up window.
 
-          if ($process.ExitCode -eq 0) {  
-             Write-Host "Successfully uninstalled teams meeting addin." -ForegroundColor Green  
-          }
-          else  
-          {  
-             Write-Error "Could not uninstall teams meeting addin"  
-          }  
-       } 
-    }  
-    ```
+            :::image type="content" source="media/teams-meeting-add-in-missing/windows-installer-message.png" alt-text="Screenshot of a Windows Installer pop-up window that says uninstallation fails.":::
+         1. In the window, review the path under **Use source**, copy the portion that represents the corresponding Teams version, and then select **Cancel** to close the window. For example, if the path is *C:\Program Files\WindowsApps\MSTeams_**23231.512.3106.6573**_x64__8wekyb3d8bbwe\MicrosoftTeamsMeetingAddinInstaller.msi*, the version of Teams that the meeting add-in corresponds to is *23231.512.3106.6573*.  
+         1. In Notepad, add the following entry to the `$msixDictionary` variable, and then save the script:
 
+             "\<version of the Teams meeting add-in\>" = "\<version of Teams\>"
+     1. Run the UninstallOldTMA.ps1 script to uninstall the Teams meeting add-in, and then go to step 3.
 1. Close the new Teams app.
 1. Close the Outlook app.
 1. Start the new Teams app.
 1. Wait until the Teams meeting add-in appears in the list in **Start** > **Settings** > **Apps** > **Installed apps**.
 1. Restart the Outlook app.
+
+If the Teams meeting add-in still doesn't work correctly, use the [TeamsMeetingAddinFixKnownIssues.ps1](https://aka.ms/AAsmdxd) PowerShell script to resolve common issues that affect the add-in.
 
 ## More information
 
@@ -120,17 +75,17 @@ The following sections list registry entries for different versions of the Outlo
 
 - Registry subkey: `HKEY_CURRENT_USER\SOFTWARE\Microsoft\office\Outlook\Addins\TeamsAddin.FastConnect`
 
-  This key provides Outlook with the ProgID value of the add-in to load. If this value is missing, Outlook won't search for the add-in.
+  The `TeamsAddin.FastConnect` key provides Outlook with the ProgID value of the add-in to load. If this value is missing, Outlook doesn't search for the add-in.
 
   |Registry entry name|Description|
   |---------|---------|
   |FriendlyName|Display name of the add-in in Outlook.|
   |Description|Description of the add-in.|
-  |LoadBehavior|Determines when Outlook should try to load the add-in. "3" is the default value of this entry. This value tells Outlook to load the add-in at startup.|
+  |LoadBehavior|Determines when Outlook should try to load the add-in. The default value is "3" for this entry. This value tells Outlook to load the add-in at startup.|
 
 - Registry subkey: `HKEY_CLASSES_ROOT\TeamsAddin.FastConnect\CurVer`
 
-  This key provides details about the ProgID value so that programs can find the correct libraries.
+  The `CurVer` key provides details about the ProgID value so that programs can find the correct libraries.
 
   |Registry entry name|Description|
   |---------|---------|
@@ -225,13 +180,13 @@ The following sections list registry entries for different versions of the Outlo
 
 - Registry subkey: `HKEY_CURRENT_USER\SOFTWARE\Wow6432Node\Microsoft\office\Outlook\Addins\TeamsAddin.FastConnect`
 
-  This key provides Outlook with the ProgID value of the add-in to load. If the value is missing, Outlook won't try to look for the add-in.
+  This key provides Outlook with the ProgID value of the add-in to load. If the value is missing, Outlook doesn't try to look for the add-in.
 
   |Registry entry name|Description|
   |---------|---------|
   |FriendlyName|Display name of the add-in in Outlook.|
   |Description|Description of the add-in.|
-  |LoadBehavior|Determines when Outlook should try to load the add-in. "3" is the default value of this entry. This value tells Outlook to load the add-in at startup.|
+  |LoadBehavior|Determines when Outlook should try to load the add-in. The default value is "3" for this entry. This value tells Outlook to load the add-in at startup.|
 
 - Registry subkey: `HKEY_CLASSES_ROOT\TeamsAddin.FastConnect\CurVer`
 

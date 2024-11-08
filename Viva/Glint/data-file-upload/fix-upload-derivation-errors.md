@@ -10,7 +10,6 @@ search.appverid: MET150
 ms.custom: 
   - CSSTroubleshoot
   - CI190683
-localization_priority: Normal
 ---
 
 # Resolve file upload errors related to derived attributes
@@ -29,7 +28,7 @@ This issue occurs because the date format in the file that you upload doesn't ma
 
 To fix the issue, follow these steps:
 
-1. Open the employee attribute data file in Excel. If the file is in .csv format, [import it in Excel](https://support.microsoft.com/office/import-data-from-a-csv-html-or-text-file-b62efe49-4d5b-4429-b788-e1211b5e90f6) to preserve the data in the expected format.
+1. Open the employee attribute data file in Excel. If the file is in .csv format, [import it in Excel](https://support.microsoft.com/office/import-or-export-text-txt-or-csv-files-5250ac4c-663c-47ce-937b-339e391393ba) to preserve the data in the expected format.
 1. For each date format column that's listed in the error message, follow these steps:
    1. To the right of the column (for example column A), insert a new column (column B) that's formatted as **General**.
    1. Select the first cell of the new column (cell B1), enter the following formula, and then select Enter:
@@ -56,7 +55,7 @@ This issue is caused by a mismatch between the attribute header in the uploaded 
 
 To fix the issue, follow these steps:
 
-1. Open the employee attribute data file in Microsoft Excel. If the file is in .csv format, [import it in Excel](https://support.microsoft.com/office/import-data-from-a-csv-html-or-text-file-b62efe49-4d5b-4429-b788-e1211b5e90f6) to preserve the data in the expected format.
+1. Open the employee attribute data file in Microsoft Excel. If the file is in .csv format, [import it in Excel](https://support.microsoft.com/office/import-or-export-text-txt-or-csv-files-5250ac4c-663c-47ce-937b-339e391393ba) to preserve the data in the expected format.
 1. Review attribute names that are specified in Viva Glint:
 
     1. In the admin dashboard, select the **Configure** icon, then select **People** in the **Employees** section.
@@ -92,7 +91,7 @@ To fix the issue, follow these steps in Microsoft Excel or a text editor to resa
 
 - In Microsoft Excel:
 
-    1. [Import the .csv file in Excel](https://support.microsoft.com/office/import-data-from-a-csv-html-or-text-file-b62efe49-4d5b-4429-b788-e1211b5e90f6) to preserve the data in the expected format.
+    1. [Import the .csv file in Excel](https://support.microsoft.com/office/import-or-export-text-txt-or-csv-files-5250ac4c-663c-47ce-937b-339e391393ba) to preserve the data in the expected format.
     1. Select **File** > **Save As**.
     1. In the **Save As** dialog box, select **CSV UTF-8 (Comma delimited)** from the **Save as type** list, and then select **Save**.
 - In a text editor, such as Notepad or Notepad++:
@@ -143,7 +142,7 @@ This issue occurs because the file you that upload contains invalid data, such a
 
 To fix the issue, follow these steps:
 
-1. Open the employee attribute data file in Excel. If the file is in .csv format, [import it in Excel](https://support.microsoft.com/office/import-data-from-a-csv-html-or-text-file-b62efe49-4d5b-4429-b788-e1211b5e90f6) to preserve the data in the expected format.
+1. Open the employee attribute data file in Excel. If the file is in .csv format, [import it in Excel](https://support.microsoft.com/office/import-or-export-text-txt-or-csv-files-5250ac4c-663c-47ce-937b-339e391393ba) to preserve the data in the expected format.
 1. For the attribute that's listed in the error message, check the values, and identify any invalid data.
 1. Correct or remove invalid data.
 1. Save the file, and then upload it again to Viva Glint.
@@ -158,7 +157,7 @@ Error message:
 
 To fix the issue, follow these steps:
 
-1. Open the employee attribute data file in Excel. If the file is in .csv format, [import it in Excel](https://support.microsoft.com/office/import-data-from-a-csv-html-or-text-file-b62efe49-4d5b-4429-b788-e1211b5e90f6) to preserve the data in the expected format.
+1. Open the employee attribute data file in Excel. If the file is in .csv format, [import it in Excel](https://support.microsoft.com/office/import-or-export-text-txt-or-csv-files-5250ac4c-663c-47ce-937b-339e391393ba) to preserve the data in the expected format.
 1. Review the row that's specified in the error message.
 1. Update the data that's in that row to match the number of columns in the header row.
 1. Save the file, and then upload it again to Viva Glint.

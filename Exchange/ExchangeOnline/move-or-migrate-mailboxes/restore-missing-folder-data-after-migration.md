@@ -6,7 +6,6 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Migration
   - Exchange Online
@@ -83,3 +82,4 @@ If the retention period hasn't expired, and the soft-deleted mailbox for a migra
 5. [Export](/exchange/recipients/mailbox-import-and-export/export-procedures#use-the-exchange-management-shell-to-create-a-mailbox-export-request) the restored data that's in the temporary mailbox to a PST file.
 
 6. Instruct the affected user to [import the PST file](https://support.microsoft.com/office/import-email-contacts-and-calendar-from-an-outlook-pst-file-431a8e9a-f99f-4d5f-ae48-ded54b3440ac) that you created in step 5 into their Outlook app to restore the missing data.
+

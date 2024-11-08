@@ -6,7 +6,6 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.collection: 
   - M365-security-compliance
 ms.custom: 
@@ -16,7 +15,7 @@ ms.custom:
 search.appverid: MET150
 f1.keywords: 
   - NOCSH
-ms.date: 06/24/2024
+ms.date: 08/13/2024
 ---
 # Issues with communications and information barriers
 
@@ -27,8 +26,6 @@ When people run into unexpected issues after information barriers are in place, 
 > [!IMPORTANT]
 > To perform the tasks described in this article, you must be assigned an appropriate role, such as one of the following:
 >
-> - Microsoft 365 Enterprise Global Administrator
-> - global administrator
 > - Compliance Administrator
 > - IB Compliance Management (this is a new role!)
 >

@@ -6,7 +6,6 @@ ms.author: luche
 ms.reviewer: remcgurk
 ms.date: 12/17/2023
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

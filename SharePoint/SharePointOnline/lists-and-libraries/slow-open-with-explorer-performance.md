@@ -4,7 +4,6 @@ description: Discusses how to troubleshoot slow performance on Windows 8 or Wind
 author: helenclu
 manager: dcscontentpm
 ms.date: 12/17/2023
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

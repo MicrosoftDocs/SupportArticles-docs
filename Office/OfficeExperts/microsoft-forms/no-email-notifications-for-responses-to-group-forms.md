@@ -1,9 +1,8 @@
 ---
 title: No email notifications for responses to Group Forms
-description: Describes the steps to edit group to receive email notifications.
+description: Provides the steps to edit group to receive email notifications.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
@@ -16,7 +15,7 @@ ms.author: luche
 ms.reviwer: zakirh
 appliesto: 
   - Microsoft Forms
-ms.date: 06/06/2024
+ms.date: 08/10/2024
 ---
 # No email notifications for responses to Group Forms
 
@@ -44,7 +43,7 @@ You might not receive email notifications for responses that you submit to a Gro
 
    **Note:** If the **Edit group** option isn't available, it indicates that the group was created in Microsoft Teams. When a group is created in Teams, the Exchange Online setting `HiddenFromExchangeClientsEnabled` is set to **True** by default. When `HiddenFromExchangeClientsEnabled` is set to **True**, it removes the **Edit group** option from the group email settings, so you can't enable the settings that allow group email notifications to members.
 
-   To view the current setting, run the following command in Exhange Online PowerShell, replace \<groupname\> with the name of the group:
+   To view the current setting, run the following command in Exchange Online PowerShell, and replace \<groupname\> with the name of the group:
    
     ```powershell
      Get-UnifiedGroup -Filter {displayname -eq "<groupname>"} | Format-List HiddenFromExchangeClientsEnabled
@@ -59,13 +58,13 @@ You might not receive email notifications for responses that you submit to a Gro
 
     :::image type="content" source="media/no-email-notifications-for-responses-to-group-forms/select-two-checkboxes-in-edit-group-page.png" alt-text="Select the two checkboxes in the External email settings.":::
 
-    The global administrator can use these steps instead:
+    The Exchange administrator can use these steps instead:
 
     1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com) and go to **Groups** > **Active groups**.
     2. Select the appropriate group from the list, and then select the **Settings** tab.
     3. Select the **Allow external senders to email this group** and **Send copies of group conversations and events to group members** check boxes.
 
-    :::image type="content" source="media/no-email-notifications-for-responses-to-group-forms/active-groups.png" alt-text="Enable settings for global administrators.":::
+    :::image type="content" source="media/no-email-notifications-for-responses-to-group-forms/active-groups.png" alt-text="Enable settings for Exchange administrators.":::
 
 7. Open the Form, select the ellipsis button (...) on the upper-right corner of your screen, select **Settings**, and then select the **Get email notification of each response** check box.
 

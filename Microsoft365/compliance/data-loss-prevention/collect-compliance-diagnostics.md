@@ -6,7 +6,6 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
@@ -17,7 +16,7 @@ appliesto:
   - Exchange Online Protection
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 06/24/2024
+ms.date: 08/13/2024
 ---
 
 # Collect Microsoft Purview compliance diagnostics

@@ -3,7 +3,6 @@ title: Permissions required for managing the Secure Store Service app
 description: Describes some scenarios in which permissions are required to manage the Secure Store service application.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

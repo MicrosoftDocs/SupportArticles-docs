@@ -3,7 +3,6 @@ title: How Excel determines the current mode of calculation
 description: Discusses how Excel determines the calculation mode. You can change the caculation mode in the Tools menu. You can press SHIFT+F9 to recaculate the active sheet and press F9 to recaculate all open documents.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche

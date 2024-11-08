@@ -6,7 +6,6 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Outlook on the web / OWA
   - Exchange Online
@@ -125,3 +124,4 @@ To fix the issue, use one of the following methods. Method A is simpler than Met
    1. [Sync](/entra/identity/hybrid/connect/how-to-connect-sync-feature-scheduler#delta-sync-cycle) Active Directory to Exchange Online.
 
    2. Wait a few minutes for the archive mailbox to appear in the new Outlook for Windows or Outlook on the web.
+

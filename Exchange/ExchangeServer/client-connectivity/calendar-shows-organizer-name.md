@@ -10,7 +10,6 @@ ms.custom:
   - Exchange Server
   - CSSTroubleshoot
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 appliesto: 

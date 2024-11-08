@@ -4,7 +4,6 @@ description: Resolves an issue that blocks a user from accessing their mailbox t
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Hybrid
   - CSSTroubleshoot

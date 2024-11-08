@@ -4,7 +4,6 @@ description: Describes issues that occur when users try to access a shared folde
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-localization_priority: Normal
 ms.date: 12/17/2023
 audience: Admin
 ms.topic: troubleshooting

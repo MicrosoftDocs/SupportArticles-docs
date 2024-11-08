@@ -779,6 +779,14 @@
           href: ../onenote/notebook-offline-location.md
         - name: We couldn't start OneNote the last time we tried
           href: ../onenote/couldnt-start-onenote-the-last-time-error.md
+    - name: Outlook
+      items:
+        - name: Outlook for iOS and Android
+          href: /outlook/troubleshoot/outlook-mobile-welcome
+        - name: Outlook for Mac
+          href: /outlook/troubleshoot/outlook-mac-welcome
+        - name: Outlook for Windows  
+          href: /outlook/troubleshoot/outlook-client-welcome      
     - name: Performance
       items:
         - name: Some Office applications are not responding
@@ -845,8 +853,6 @@
           href: ../project/error-when-open-visual-report-in-project.md
         - name: Error when you click project link
           href: ../project/error-when-click-on-project-links.md
-        - name: Errors when you access PWA
-          href: ../project/error-accessing-project-web-app.md
         - name: Expect when calling into paid support
           href: ../project/expect-when-calling-into-paid-support.md
         - name: File size increases when inserting picture

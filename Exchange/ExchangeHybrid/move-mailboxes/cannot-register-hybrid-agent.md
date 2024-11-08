@@ -6,7 +6,6 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Migration
   - CI 167780
@@ -20,10 +19,12 @@ appliesto:
   - Exchange Server 2016
   - Exchange Server 2013
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 08/13/2024
 ---
 
 # Can't register a Hybrid Agent in Exchange Server
+
+<!-- This article has been reviewed and approved for the specific use of global admin perms.  -->
 
 ## Symptoms
 
@@ -111,7 +112,7 @@ Remove the previously installed, orphaned Hybrid Agent application. To do this, 
       Remove-HybridApplication -AppId <application GUID> -UserPrincipalName <tenant admin UPN>
       ```
 
-      When you're prompted for credentials, enter your Microsoft 365 or Office 365 Global Administrator credentials.
+      When you're prompted for credentials, enter your Microsoft 365 or Office 365 Global administrator credentials.
 1. Re-run the HCW in classic mode to unregister the Application Proxy service in Microsoft Entra ID.
 1. Go to **Programs and Features** in Control Panel, verify that **Microsoft Hybrid Service** isn't [installed](/exchange/hybrid-deployment/hybrid-agent#additional-information). If it is, re-run step 2 to remove the Hybrid Agent application.
 1. Re-run the HCW in modern mode.

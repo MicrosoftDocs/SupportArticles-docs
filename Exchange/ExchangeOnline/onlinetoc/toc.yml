@@ -133,7 +133,7 @@
           href: ../administration/update-of-client-access-rules-for-office-365-customers.md
         - name: UsageLocation validation error about Enable-UMMailbox
           href: ../administration/enable-ummailbox-cannot-be-performed-error.md
-        - name: Validation errors for a mailbox archive GUID
+        - name: Resolve validation errors for an archive mailbox
           href: ../administration/validation-errors-for-mailbox-archive-guid.md
         - name: View and update address list membership
           href: ../administration/view-update-address-list-membership.md
@@ -183,6 +183,16 @@
           href: ../calendars/delegate-only-sees-freebusy-info-if-manager-is-in-another-forest.md
         - name: Delegates accept meetings automatically
           href: ../calendars/delegates-accept-meetings-automatically.md
+        - name: Calendar diagnostic logs (CDL)
+          items:
+            - name: Use Calendar diagnostic logs
+              href: ../calendars/cdl/use-calendar-diagnostic-logs.md
+            - name: Get Calendar diagnostic logs
+              href: ../calendars/cdl/get-calendar-diagnostic-logs.md
+            - name: Analyze Calendar diagnostic logs
+              href: ../calendars/cdl/analyze-calendar-diagnostic-logs.md
+            - name: Get the ID of a meeting
+              href: ../calendars/cdl/get-meeting-id.md
         - name: Meeting requests added to resource delegate's calendar
           href: ../calendars/meeting-requests-sent-to-resource-mailbox-added-to-resource-delegate-calendar.md
         - name: Message store has reached its maximum size
@@ -671,7 +681,7 @@
           href: ../user-and-shared-mailboxes/increase-or-customize-mailbox-size.md
         - name: Mailbox provision delays
           href: ../user-and-shared-mailboxes/delays-provision-mailbox-sync-changes.md
-        - name: No soft-deleted mailbox after license removal
+        - name: Can't access the mailbox of an unlicensed user
           href: ../user-and-shared-mailboxes/no-soft-deleted-mailbox-after-license-removal.md
         - name: Microsoft 365 groups aren't visible from a shared mailbox
           href: ../user-and-shared-mailboxes/office-365-groups-not-visible-from-shared-mail.md

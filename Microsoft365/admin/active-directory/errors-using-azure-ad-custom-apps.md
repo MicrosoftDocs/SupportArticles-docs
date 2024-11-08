@@ -3,7 +3,6 @@ title: Errors using Azure Active Directory Graph API custom applications
 description: Describes an issue in which you receive error messages when you try to use Azure Active Directory Graph API custom applications in Microsoft 365. Provides a resolution.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

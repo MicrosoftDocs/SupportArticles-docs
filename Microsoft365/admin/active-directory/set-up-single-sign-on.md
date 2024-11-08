@@ -3,7 +3,6 @@ title: Supported scenarios to set up single sign-on in Microsoft 365, Azure, or 
 description: Provides an overview of various AD FS implementation scenarios for single sign-on (SSO) in Microsoft 365, Azure, or Microsoft Intune.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

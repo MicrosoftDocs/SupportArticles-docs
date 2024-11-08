@@ -1,6 +1,6 @@
 ---
 title: Resolve issues with your Viva Engage network in Native Mode
-description: Provides a resolution for issues with your Viva Engage network in Native Mode.
+description: Provides a resolution for issues when using the Viva Engage network in Native Mode.
 ms.reviewer: ethli
 ms.author: luche
 author: helenclu
@@ -8,10 +8,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.service: viva-engage
-localization_priority: Normal
 search.appverid:
  - MET150
-ms.date: 12/20/2023
+ms.date: 08/08/2024
 ---
 
 # Resolve issues with your Viva Engage network in Native Mode
@@ -91,7 +90,7 @@ Most end users won't see any change in their Viva Engage experience while the to
 
 ### How do I check the status of my network's migration to Native Mode?
 
-Any Global Admin from your tenant can check the status of your network's alignment to Native Mode by accessing the Viva Engage admin center. On the **Setup & configuration** tab, they can access **Configure tenant**, which will then route them to the Viva Engage admin center. In the Viva Engage admin center, they can select **native mode** to see their progress.
+Any Yammer Administrator from your tenant can check the status of your network's alignment to Native Mode by accessing the Viva Engage admin center. On the **Setup & configuration** tab, they can access **Configure tenant**, which will then route them to the Viva Engage admin center. In the Viva Engage admin center, they can select **native mode** to see their progress.
 
 ## Networks
 
@@ -257,9 +256,9 @@ Because Viva Engage external groups aren't compatible with Azure B2B, guests in 
 
 ### What happens to groups without owners who have Microsoft 365 group creation rights?
 
-- *Why do you need to add the global admin who runs the Alignment Tool as a group owner in groups that have no owner with Microsoft 365 group creation rights?*
+- *Why do you need to add the Yammer administrator who runs the Alignment Tool as a group owner in groups that have no owner with Microsoft 365 group creation rights?*
 
-  This change is done for groups without any owners or groups with owners but none of whom have Microsoft 365 Group creation rights. To make a Viva Engage community or group a Microsoft 365-connected group, at least one group owner must have Microsoft 365 Group creation rights. Because global admins have Microsoft 365 Group creation rights, adding the global admin as a group owner helps ensure that the group can become Microsoft 365 connected.
+  This change is done for groups without any owners or groups with owners but none of whom have Microsoft 365 Group creation rights. To make a Viva Engage community or group a Microsoft 365-connected group, at least one group owner must have Microsoft 365 Group creation rights. Because Yammer administrators have Microsoft 365 Group creation rights, adding the Yammer administrator as a group owner helps ensure that the group can become Microsoft 365 connected.
 
 - *What do I do about my groups without owners who have Microsoft 365 group creation rights?*
 
@@ -270,10 +269,10 @@ Because Viva Engage external groups aren't compatible with Azure B2B, guests in 
 
   If your network has many of these groups, you have a few options available to you.
 
-  - You can allow the tool to add the global admin who runs the tool to each group as an owner so that the group can become Microsoft 365 connected. After a group is connected, you can remove the global admin from ownership of the group.
+  - You can allow the tool to add the Yammer administrator who runs the tool to each group as an owner so that the group can become Microsoft 365 connected. After a group is connected, you can remove the Yammer Administrator from ownership of the group.
   
-  - You can also review the impacted groups from the downloadable Alignment Report and see if they have any recent activity or active group members. If they don't, you might decide to delete those groups before you run the tool. After those groups have been deleted, you can run the tool. If you delete inactive groups before you run the tool, you reduce the number of groups to which you as a global admin need to be added to in order to achieve Native Mode.  
+  - You can also review the impacted groups from the downloadable Alignment Report and see if they have any recent activity or active group members. If they don't, you might decide to delete those groups before you run the tool. After those groups have been deleted, you can run the tool. If you delete inactive groups before you run the tool, you reduce the number of groups to which you as a Yammer administrator need to be added to in order to achieve Native Mode.  
 
-  - You can grant Microsoft 365 Group creation rights to all users in your organization or at least to the users that are owners of unconnected groups in Viva Engage, so that those groups can be connected without adding the global admin as an owner. After those groups are connected, you can choose whether to revoke group creation rights from those users who you granted access.
+  - You can grant Microsoft 365 Group creation rights to all users in your organization or at least to the users that are owners of unconnected groups in Viva Engage, so that those groups can be connected without adding the Yammer administrator as an owner. After those groups are connected, you can choose whether to revoke group creation rights from those users who you granted access.
 
 Whichever option you choose, we recommend that you communicate clearly to the users in your network of the changes that are coming so that they can alert you of any concerns or potential issues.

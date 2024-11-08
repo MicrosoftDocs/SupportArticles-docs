@@ -3,7 +3,6 @@ title: Office activation process issues
 description: Provides troubleshooting information about the error codes and corresponding descriptions of Office 2010 and Office 2013 activation process issues that can be repaired by using the Office Repair tool.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche

@@ -3,7 +3,6 @@ title: How to calculate ages before January 1, 1900 in Excel
 description: Describes how to use Macro to calculate age before January 1, 1900 in Excel.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

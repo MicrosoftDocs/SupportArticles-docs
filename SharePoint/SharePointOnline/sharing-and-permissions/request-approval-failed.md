@@ -3,7 +3,6 @@ title: Request approval failed when you process a pending request
 description: This article describes an issue where Access Denied to Access Requests list or Request approval failed when you process a pending request, and provides a solution.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

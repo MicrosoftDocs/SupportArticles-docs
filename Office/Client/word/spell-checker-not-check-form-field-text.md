@@ -3,7 +3,6 @@ title: Spell checker doesn't check text in the form fields in Word
 description: Describes how to use a macro to spell check the form fields in Word.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

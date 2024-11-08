@@ -41,8 +41,6 @@
           href: ../calendaring/cannot-delete-calendar-items.md
         - name: Can't send a response to a meeting request
           href: ../calendaring/cannot-send-response-to-meeting-request.md
-        - name: Can't receive tentative meeting requests or responses
-          href: ../calendaring/cannot-receive-requests-of-tentative-meeting-or-responses.md
         - name: Can't add an Internet calendar
           href: ../calendaring/cannot-add-an-internet-calendar.md
         - name: Configure rooms and workspaces for Room Finder
@@ -71,7 +69,7 @@
           href: ../calendaring/how-to-use-internet-freebusy-feature.md
         - name: How to use vCalendar in Outlook
           href: ../calendaring/how-to-use-vcalendar-in-outlook.md
-        - name: Incorrect offset between time zones on DST start day in Outlook
+        - name: Multiple time zones show an incorrect time difference
           href: ../calendaring/additional-time-zone-shows-one-hour-offset-on-dst.md
         - name: Information about the Calendar Checking Tool for Outlook (CalCheck)
           href: ../calendaring/calendar-checking-tool-for-outlook.md
@@ -81,6 +79,8 @@
           href: ../calendaring/room-finder.md
         - name: Manager can't respond to a meeting invite
           href: ../calendaring/manager-cannot-respond-to-meeting-invite.md
+        - name: Meeting requests or responses don't appear in the Inbox
+          href: ../calendaring/cannot-receive-requests-of-tentative-meeting-or-responses.md
         - name: Meeting tracking tab isn't updated
           href: ../calendaring/meeting-tracking-tab-not-updated.md
         - name: More than 12 months of free/busy data not shown
@@ -427,8 +427,6 @@
           href: ../profiles-and-accounts/metered-connection-warning.md
         - name: Can't subscribe to an RSS feed that needs authentication
           href: ../profiles-and-accounts/error-when-subscribing-to-rss-feed-that-needs-authentication.md
-        - name: Can't set up Microsoft 365 account
-          href: ../profiles-and-accounts/cannot-set-up-office-365-account-outlook.md
         - name: Can't use EAS to connect Outlook to Exchange
           href: ../profiles-and-accounts/outlook-cannot-use-activesync-connect-exchange.md
         - name: Enable ZeroConfigExchange automatically create first profile

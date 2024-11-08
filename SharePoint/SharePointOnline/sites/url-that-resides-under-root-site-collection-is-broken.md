@@ -3,7 +3,6 @@ title: How to replace the root site in SharePoint Online
 description: Provides steps about how to replace the root site in SharePoint Online.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

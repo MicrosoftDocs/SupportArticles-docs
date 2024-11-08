@@ -3,7 +3,6 @@ title: SoapServerException error when customizing list form (SPO and SP-onprem) 
 description: Describes how to add a button to a Word document and assign its Click event at run-time
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

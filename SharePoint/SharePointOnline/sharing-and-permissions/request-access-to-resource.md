@@ -3,7 +3,6 @@ title: User without permission to resource can't receive the option to request a
 description: This article describes an issue that users without permissions to a SharePoint Online resource don't receive the option to request access to the resource, and provides a solution.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro

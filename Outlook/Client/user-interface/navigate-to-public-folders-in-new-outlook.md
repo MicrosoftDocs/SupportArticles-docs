@@ -4,7 +4,6 @@ description: Describes how to access your public folders in multiple versions of
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Exchange Mailbox Accounts\Public folders
   - Outlook for Windows
@@ -14,27 +13,15 @@ ms.reviewer: meerak, batre, v-trisshores
 appliesto: 
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 06/25/2024
+ms.date: 08/13/2024
 ---
 # Access public folders in Outlook for Windows
 
-In the redesigned user interface in Microsoft Outlook, you see that:
-
-- The horizontal navigation bar that was at the bottom of the **Folders** view is now a left-side vertical navigation bar.
-
-- The ellipsis icon on the horizontal navigation bar is now a **More Apps** icon on the vertical navigation bar.
-
-To access public folders in the updated design, select **More Apps** \> **Folders**.
-
-:::image type="content" source="media/navigate-to-public-folders-in-new-outlook/outlook-new-look-apps-menu.png" alt-text="Screenshot of the Folders icon in the More Apps menu in the new Outlook for Windows." border="true":::
-
-When you select **Folders**, the navigation bar shows a **Folders** icon. To permanently pin the **Folders** icon to the navigation bar, right-click the icon, and then select **Pin**.
-
-:::image type="content" source="media/navigate-to-public-folders-in-new-outlook/outlook-new-look-folders-pin.png" alt-text="Screenshot of the Pin option in the right-click menu for the Folders icon." border="true":::
+The steps to access public folders is different in new Outlook for Windows and classic Outlook for Windows. Use the information that's appropriate for your version of Outlook for Windows.
 
 ## Access public folders in new Outlook for Windows
 
-If your Microsoft Outlook app was updated to the new Outlook for Windows, you need to add public folders to **Favorites** before you can access them. Use the following steps:
+In new Microsoft Outlook for Windows, you need to add public folders to **Favorites** before you can access them. Use the following steps:
 
 1. Right-click the name of the account and select **Add public folder to Favorites**.
 
@@ -52,3 +39,19 @@ If your Microsoft Outlook app was updated to the new Outlook for Windows, you ne
    :::image type="content" source="media/navigate-to-public-folders-in-new-outlook/select-pf-and-add-pf.png" alt-text="Screenshot of a public folder selected from the list and the Add Public Folders option highlighted." border="true":::
 
 1. After the public folder is added, select it from the list of **Favorites** to access it.
+
+## Access public folders in classic Outlook for Windows
+
+In the redesigned user interface in classic Outlook, you see that:
+
+- The horizontal navigation bar that was at the bottom of the **Folders** view is now a left-side vertical navigation bar.
+
+- The ellipsis icon on the horizontal navigation bar is now a **More Apps** icon on the vertical navigation bar.
+
+To access public folders in the updated design, select **More Apps** \> **Folders**.
+
+:::image type="content" source="media/navigate-to-public-folders-in-new-outlook/outlook-new-look-apps-menu.png" alt-text="Screenshot of the Folders icon in the More Apps menu in the new Outlook for Windows." border="true":::
+
+When you select **Folders**, the navigation bar shows a **Folders** icon. To permanently pin the **Folders** icon to the navigation bar, right-click the icon, and then select **Pin**.
+
+:::image type="content" source="media/navigate-to-public-folders-in-new-outlook/outlook-new-look-folders-pin.png" alt-text="Screenshot of the Pin option in the right-click menu for the Folders icon." border="true":::

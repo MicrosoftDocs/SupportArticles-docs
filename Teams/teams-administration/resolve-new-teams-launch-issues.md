@@ -4,7 +4,6 @@ description: Provides troubleshooting steps to resolve issues when you try to st
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Teams Clients\Windows Desktop
   - CI 191453

@@ -1,11 +1,10 @@
 ---
 title: Fix site user ID mismatch in SharePoint or OneDrive
-description: Discusses common issues that are caused by a site user ID mismatch. Discusses how to use the Site User Mismatch Diagnostic to fix these issues.  
+description: Provides a diagnostic that offers resolutions for common issues caused by a site user ID mismatch. 
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-localization_priority: Normal
-ms.date: 06/12/2024
+ms.date: 08/09/2024
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
@@ -40,7 +39,7 @@ These issues might also occur during directory synchronization between an Active
 
 ## Resolution
 
-To fix these issues, run the Site User Mismatch diagnostic by using a Microsoft 365 administrator account (Global Admin or SharePoint Admin). 
+To fix these issues, run the Site User Mismatch diagnostic by using a SharePoint administrator account.
 
 > [!NOTE]
 >
@@ -48,7 +47,7 @@ To fix these issues, run the Site User Mismatch diagnostic by using a Microsoft 
 > - Before admins run the diagnostic to fix the issues for OneDrive sites, they must make sure that the UserName of the new user account matches the old account. Administrators are prohibited from connecting OneDrive sites that might have been owned previously by another user account. 
 > - If the diagnostic has successfully resolved an issue that's related to a OneDrive site, the changes might take approximately 24 hours to occur. This period includes updating the OneDrive tile to point to the correct site and recycling any additional OneDrive sites.
 
-Select the following **Run Tests** button to populate the diagnostic in the Microsoft 365 admin center. The diagnostic performs a large range of validations for internal users and guests who try to access SharePoint and OneDrive sites. 
+Select the following **Run Tests** button to populate the diagnostic in the Microsoft 365 admin center. The diagnostic performs a large range of validations for internal users and guests who try to access SharePoint and OneDrive sites.
 
 When prompted, provide the following information:
 
@@ -69,11 +68,11 @@ To retrieve multiple OneDrive URLs, use one of the methods in [View OneDrive URL
 
 ### Common scenarios
 
-The Site User Mismatch diagnostic can fix the following common issues that can occur when a new account is created by using the UPN that was used by a deleted account. 
+The Site User Mismatch diagnostic can fix the following common issues that can occur when a new account is created by using the UPN that was used by a deleted account.
 
 #### A user is directed to a new OneDrive site that has a suffix appended to the expected URL
 
-When a new user account is created, a new OneDrive site is assigned to it. When a user account is deleted, the OneDrive site assigned to the account is not deleted right away. So if a new user account is created by using the UPN of a deleted account, the new OneDrive site that's assigned to the new account has the same URL as the old OneDrive site together with an added suffix. This suffix is either a number or a GUID. 
+When a new user account is created, a new OneDrive site is assigned to it. When a user account is deleted, the OneDrive site assigned to the account is not deleted right away. So if a new user account is created by using the UPN of a deleted account, the new OneDrive site that's assigned to the new account has the same URL as the old OneDrive site together with an added suffix. This suffix is either a number or a GUID.
 
 If you want the new user account to use the same OneDrive site that was assigned to the old account, the diagnostic will check whether the user can be assigned ownership of the original site. After successfully verifying the user's permissions, the diagnostic will offer to reconnect the user to their original site and recycle the new active site that has the suffix such as `https://contoso-my.sharepoint.com/personal/UserA_Contoso_com1`.
 
@@ -81,14 +80,14 @@ If you have to access content in the new OneDrive site at a later time, you can 
 
 #### Access denied to a OneDrive site
 
-If a user is denied access to their old OneDrive site after a new account is created for them, the diagnostic will reconfigure the user's profile. Then it will reconnect the user to their old OneDrive site to fix the access issue. 
+If a user is denied access to their old OneDrive site after a new account is created for them, the diagnostic will reconfigure the user's profile. Then it will reconnect the user to their old OneDrive site to fix the access issue.
 
 > [!NOTE]  
 > Administrators can't fix this issue by manually updating the owners of the OneDrive site or editing the user profile properties that are associated with the OneDrive site. The diagnostic is the only recommended solution to fix this issue.
 
 #### User ID mismatch on SharePoint sites or OneDrive sites that don't belong to the user
 
-When the diagnostic detects a user ID mismatch in the UserInfo list, it will offer to remove the old ID. After you accept the offer and the old ID is removed, assign the new user account the appropriate permissions to the SharePoint site. 
+When the diagnostic detects a user ID mismatch in the UserInfo list, it will offer to remove the old ID. After you accept the offer and the old ID is removed, assign the new user account the appropriate permissions to the SharePoint site.
 
 **Note**: If you want to fix this issue manually, you must [remove the old user account from the UserInfo list](/sharepoint/remove-users#site-by-site-in-sharepoint), and then grant permissions to the new user account.
 

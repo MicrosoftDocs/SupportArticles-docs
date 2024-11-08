@@ -6,7 +6,6 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: Normal
 ms.custom: 
   - sap:Connectivity\
   - Outlook for Mac
@@ -18,21 +17,21 @@ appliesto:
 search.appverid: MET150
 ms.date: 01/30/2024
 ---
-# How to suppress the Microsoft 365 AutoDiscover redirect warning in Outlook 2016 for Mac
+# How to suppress the Microsoft 365 `AutoDiscover` redirect warning in Outlook 2016 for Mac
 
 _Original KB number:_ &nbsp; 3206915
 
 ## Symptoms
 
-When Microsoft Outlook 2016 for Mac connects to a Microsoft 365 account, Autodiscover is redirected from HTTP to HTTPS, and you may receive a warning message that resembles the following:
+When Microsoft Outlook 2016 for Mac connects to a Microsoft 365 account, `Autodiscover` is redirected from HTTP to HTTPS, and you may receive a warning message that resembles the following example:
 
 > Outlook was redirected to the server `Autodiscover-s.outlook.com` to get new settings for your account `user@domain.com`. Do you want to allow this server to configure your settings?  
 > `https://autodiscover-s.outlook.com/autodiscover/autodiscover.xml`  
 > Click Allow only if you fully trust the source, or if your Exchange administrator instructs you to.
 
-When this warning message occurs, you may select **Always use my response for this server** and then select **Allow** in order not to be asked about this specific server again for this Outlook 2016 for Mac profile.
+When this warning message occurs, you may select **Always use my response for this server**, and then select **Allow** in order not to be asked about this specific server again for this Outlook 2016 for Mac profile.
 
-You or administrators may want to suppress the initial warning message. This article contains information about how to do this.
+You or administrators may want to suppress the initial warning message. This article contains information about how to do so.
 
 ## Resolution
 
@@ -59,10 +58,10 @@ For information about this update or to download the Outlook update package, see
 
 ## More information
 
-The TrustO365AutodiscoverRedirect preference can be configured to use the following values:
+The `TrustO365AutodiscoverRedirect` preference can be configured to use the following values:
 
 |Boolean Setting value|Description|
 |---|---|
-|true|Don't prompt for trusted Microsoft 365 endpoints. Outlook defines what URLs are trusted and this is not configurable.|
-|false|Outlook will use the default behavior that is to prompt when Autodiscover Redirects occur.|
-|if value is not present|Outlook will use the default behavior that is to prompt when Autodiscover Redirects occur.|
+|true|Don't prompt for trusted Microsoft 365 endpoints. Outlook defines what URLs are trusted and it isn't configurable.|
+|false|Outlook uses the default behavior that is to prompt when `Autodiscover` Redirects occur.|
+|if value isn't present|Outlook uses the default behavior that is to prompt when `Autodiscover` Redirects occur.|

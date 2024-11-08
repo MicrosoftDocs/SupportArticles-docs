@@ -3,7 +3,6 @@ title: Excel survey does not have full functionality when you click new in a Sha
 description: Describes an issue in which you Excel survey does not have full functionality when you click new in a SharePoint Online library.
 author: helenclu
 manager: dcscontentpm
-localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
