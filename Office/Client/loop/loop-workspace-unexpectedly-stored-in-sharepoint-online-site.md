@@ -10,7 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.service: loop
 ms.custom: 
-  - sap: Loop App Client
+  - sap:Loop App\Loop App Client
   - CI191532
   - CSSTroubleshoot
 appliesto: 

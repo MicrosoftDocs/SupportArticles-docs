@@ -12,7 +12,7 @@ search.appverid:
 appliesto: 
   - Microsoft Teams
 ms.custom: 
-  - sap:MTR Pro\
+  - sap:MTR Pro
   - CI179889
 ---
 # The Sleep timer status is Unhealthy
