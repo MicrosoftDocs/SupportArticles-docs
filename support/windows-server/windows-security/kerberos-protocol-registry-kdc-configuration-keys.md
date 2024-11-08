@@ -276,10 +276,8 @@ The registry entries that are listed in this section must be added to the follow
   - Default value: 0x27
   - Possible values:
 
-    The default value 0x27 (DES, RC4, AES Session Keys) was chosen as the minimum change necessary for this security update. We recommend customers set the value to 0x3C for increased security as this value will allow 
-    for both AES-encrypted tickets and AES session keys. If customers have followed our guidance to move to an AES-only environment where RC4 is not used for the Kerberos protocol, we recommend that customers set the 
-    value to 0x38. See Change 1.
+    The default value is 0x27 (DES, RC4, AES session keys). We recommend setting the value to 0x3C for increased security, as this value allows for both AES-encrypted tickets and AES session keys. If you move to an AES-only environment where RC4 isn't used for the Kerberos protocol, we recommend setting the value to 0x38.
 
-    This value set AES as the default encryption type for session keys on accounts that are not marked with a default encryption type already.
+    This value sets AES as the default encryption type for session keys on accounts that aren't marked with a default encryption type.
 
-    For more information about this issue, see [KB5021131: How to manage the Kerberos protocol changes related to CVE-2022-37966](https://support.microsoft.com/topic/kb5021131-how-to-manage-the-kerberos-protocol-changes-related-to-cve-2022-37966-fd837ac3-cdec-4e76-a6ec-86e67501407d)
+    For more information, see [KB5021131: How to manage the Kerberos protocol changes related to CVE-2022-37966](https://support.microsoft.com/topic/kb5021131-how-to-manage-the-kerberos-protocol-changes-related-to-cve-2022-37966-fd837ac3-cdec-4e76-a6ec-86e67501407d).
