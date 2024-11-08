@@ -5,7 +5,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:Connectivity\
+  - sap:Connectivity
   - CSSTroubleshoot
   - CI 162524
 appliesto:

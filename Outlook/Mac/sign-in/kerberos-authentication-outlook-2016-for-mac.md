@@ -7,7 +7,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.collection: Ent_Office_Outlook
 ms.custom: 
-  - sap:Connectivity\
+  - sap:Connectivity
   - Outlook for Mac
   - CSSTroubleshoot
 description: Provides information for IT Pros about using Kerberos authentication with Outlook 2016 for Mac
