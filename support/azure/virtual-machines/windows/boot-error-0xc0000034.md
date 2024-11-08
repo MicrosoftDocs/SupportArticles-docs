@@ -36,7 +36,7 @@ There's BCD corruption that is not allowing the boot partition to find where th
 
 We strongly recommend creating a nested virtualization environment in Microsoft Azure and mounting the disk of the faulty VM on the Hyper-V host (Repair VM) to troubleshoot this issue. For more information, see [Troubleshoot a faulty Azure VM by using nested virtualization in Azure](troubleshoot-vm-by-use-nested-virtualization.md).
 
-(Optional) You can also create a rescue VM by attaching the OS disk of the faulty VM to a new VM as a data disk. To do so, follow these steps:
+(Optional) You can also create a Rescue VM by attaching the OS disk of the faulty VM to a new VM as a data disk. To do so, follow these steps:
 
 1. Delete the faulty VM. Make sure that you select the **Keep the disks** option when you do this.
 2. Attach the OS disk as a data disk to a new VM. For more information, see [How to attach a data disk to a Windows VM in the Azure portal](/azure/virtual-machines/windows/attach-managed-disk-portal).
@@ -50,7 +50,7 @@ We strongly recommend creating a nested virtualization environment in Microsoft 
 
 ### Step 2: Repair the Boot Configuration data
 
-1. On the rescue VM, run the following command line as an administrator, and then record the identifier of Windows Boot Loader (not Windows Boot Manager). The identifier is a 32-character code and it looks like this: xxxxxxxx-xxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. You will use this identifier in the next step.  
+1. On the Repair/Rescue VM, run the following command line as an administrator, and then record the identifier of Windows Boot Loader (not Windows Boot Manager). The identifier is a 32-character code and it looks like this: xxxxxxxx-xxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. You will use this identifier in the next step.  
 
     ```console
     bcdedit /store <Boot partition>:\boot\bcd /enum /v
@@ -76,6 +76,6 @@ We strongly recommend creating a nested virtualization environment in Microsoft 
     bcdedit /store <Boot partition>:\boot\bcd /set {bootmgr} timeout 30
     ```
 
-3. Detach the repaired OS disk from the rescue VM. Then, create a new VM from the OS disk.
+3. Detach the repaired OS disk from the Repair/Rescue VM. Then, create a new VM from the OS disk.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
