@@ -11,21 +11,21 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 ---
 # Missing or invalid service principal when creating an AKS cluster
 
-## Symptoms
+## Summary
 
 This article discusses how to troubleshoot a service principal that isn't found or is invalid when you try to create a Microsoft Azure Kubernetes Service (AKS) cluster.
 
-## Cause
+## More information
 
-When creating an AKS cluster, AKS needs a service principal or managed identity to manage resources on your behalf. By default, AKS uses a managed identity. If you prefer to use a service principal instead, be aware that AKS does not automatically create one for you. You’ll need to provide your own service principal and reference it during cluster creation, following [these instructions](/azure/aks/kubernetes-service-principal). Additionally, when creating a service principal, it must be propagated across all regions by Microsoft Entra ID. If this propagation takes too long, the cluster may fail validation because AKS is unable to locate the service principal.
+When you create an AKS cluster, AKS requires a service principal or managed identity to manage resources on your behalf. By default, AKS uses a managed identity. If you prefer to use a service principal instead, be aware that AKS does not automatically create one for you. You’ll have to provide your own service principal and reference it during cluster creation by following [these instructions](/azure/aks/kubernetes-service-principal). 
 
-## Solution
+Additionally, when you create a service principal, make sure that it's propagated across all regions by Microsoft Entra ID. If this propagation takes too long, the cluster might fail validation because AKS can't locate the service principal.
 
 Make sure that there's a valid, findable service principal. To do this, use one of the following methods:
 
-- When creating an AKS cluster, consider using an existing service principal that has already propagated across regions. Although there’s no direct way to verify the propagation status, using a previously deployed service principal can confirm functionality. Alternatively, if using a new principal, allow 5-10 minutes for it to propagate before proceeding with cluster creation.
+- When you create an AKS cluster, consider using an existing service principal that has already propagated across regions. Although there’s no direct way to verify the propagation status, you can verify functionality by using a previously deployed service principal. Alternatively, if you're using a new principal, allow 5-10 minutes for the principal to propagate before you start the cluster creation.
 
-- If you use automation scripts, add time delays between service principal creation and AKS cluster creation. A suggested delay is between 5 and 10 minutes.
+- If you use automation scripts, add time delays between service principal creation and AKS cluster creation. We recommend a delay of 5 to 10 minutes.
 
 - If you use the [Azure portal](https://portal.azure.com), return to the cluster settings after you try to create the cluster, and then retry the validation page after a few minutes.
 
