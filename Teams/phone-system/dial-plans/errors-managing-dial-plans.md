@@ -13,7 +13,7 @@ search.appverid:
 appliesto: 
   - Microsoft Teams
 ms.custom: 
-  - sap:Teams Calling (PSTN)\
+  - sap:Teams Calling (PSTN)
   - CI 148559
   - CSSTroubleshoot
 ms.reviewer: Shea Caperoon
