@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 260370
 
 ## Summary
 
-Microsoft Windows Server 2003 Terminal Services servers and Microsoft Windows 2000 Terminal Services servers are installed for users in Application Server mode. When the Terminal Services servers are in an Active Directory domain, the domain administrator implements Group Policy objects (GPOs) to the Terminal Services server to control the user environment. This article describes the recommended process of applying GPOs to Terminal Services without adversely affecting other servers on the network.
+Microsoft Windows Server operating system Terminal Service is installed for users in Application Server mode. When the Terminal Services servers are in an Active Directory domain, the domain administrator implements Group Policy objects (GPOs) to the Terminal Services server to control the user environment. This article describes the recommended process of applying GPOs to Terminal Services without adversely affecting other servers on the network.
 
 ## More information
 
@@ -49,7 +49,7 @@ To create a Terminal Services Group Policy object, follow these steps:
 4. Click New to create the New Group Policy object.
 5. Click Edit to modify the Group Policy.
     >[!NOTE]
-    >Most of the relevant settings are under Computer Configuration , Security Settings , or Local Policies . For example, under User Rights Assignment in the list on the right, you find **Log on Locally**. This setting is required for logging on to a session on Terminal Services. You also find **Access this computer from the network**. This setting is required to connect to the server outside a Terminal Services session. This is also where you can prevent users from being able to shut down the system. The Security Options folder is where many of the restrictions should be made and where there are similar settings to the NTConfig.pol file in Windows NT 4.0 Server and Terminal Server Edition. Settings for the user part of the policy should not be applied here because the users have not been put into this OU with the Terminal Services server. This article is written for computer policy implementation.  
+    >Most of the relevant settings are under Computer Configuration , Security Settings , or Local Policies . For example, under User Rights Assignment in the list on the right, you find **Allow log on through Remote Desktop Services**. This setting is required for logging on to a session on Terminal Services. You also find **Access this computer from the network**. This setting is required to connect to the server outside a Terminal Services session. This is also where you can prevent users from being able to shut down the system. The Security Options folder is where many of the restrictions should be made and where there are similar settings to the NTConfig.pol file in Windows NT 4.0 Server and Terminal Server Edition. Settings for the user part of the policy should not be applied here because the users have not been put into this OU with the Terminal Services server. This article is written for computer policy implementation.  
 
 6. When modifications are completed, close the Group Policy editor, and then click Close to close OU Properties.
 
