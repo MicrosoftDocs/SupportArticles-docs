@@ -20,11 +20,11 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-This article shows how to create a nested virtualization environment in Microsoft Azure, so you can mount the disk of the faulty VM on the Hyper-V host (Repair/Rescue VM) for troubleshooting purposes.
+This article shows how to create a nested virtualization environment in Microsoft Azure, so you can mount the disk of the faulty virtual machine (VM) on the Hyper-V host (Repair/Rescue VM) for troubleshooting purposes.
 
 ## Automatic process
 
-To create a nested virtual machine for troubleshooting purposes, we strongly recommend using Azure VM repair commands. You can [create a Repair VM with nested Hyper-V and repair the faulty VM offline automatically VM by using the Azure Virtual Machine repair commands](repair-windows-vm-using-azure-virtual-machine-repair-commands.md).
+To create a nested VM for troubleshooting purposes, we strongly recommend using Azure VM repair commands. You can [create a Repair VM with nested Hyper-V and repair the faulty VM offline automatically VM by using the Azure Virtual Machine repair commands](repair-windows-vm-using-azure-virtual-machine-repair-commands.md).
 
 ## Manual process
 
