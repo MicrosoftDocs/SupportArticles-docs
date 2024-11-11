@@ -1,7 +1,7 @@
 ---
 title: Some SIDs don't resolve into friendly names
-description: Some security identifiers that you see in access control lists or Security Audit reports don't resolve into friendly names. These may be capability SIDs.
-ms.date: 11/08/2024
+description: Some security identifiers that you see in access control lists or Security Audit reports don't resolve into friendly names. These might be Capability SIDs.
+ms.date: 11/11/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -20,7 +20,7 @@ _Original KB number:_ &nbsp; 4502539
 
 ## Symptoms
 
-In some places in the Windows User Interface, you may see Windows account Security Identifiers (SIDs) that don't resolve to friendly names. These places include the following:
+In some places in the Windows User Interface, you might see Windows account Security Identifiers (SIDs) that don't resolve to friendly names. These places include the following:
 
 - File Explorer
 - Security Audit reports
@@ -38,12 +38,12 @@ Capability SIDs uniquely and immutably identify capabilities. In this context, a
 The most commonly used Capability SID is:  
 S-1-15-3-1024-1065365936-1281604716-3511738428-1654721687-432734479-3232135806-4053264122-3456934681
 
-Windows 10, version 1809 uses more than 300 capability SIDs.
+Windows 10, version 1809 uses more than 300 Capability SIDs.
 
 ## More information
 
 > [!Important]
-> Don't delete capability SIDS from either the registry or file system permissions. Removing a capability SID from file system permissions or registry permissions may cause a feature or application to function incorrectly. After you remove a capability SID, you cannot use the UI to add it back.
+> Don't delete Capability SIDS from either the registry or file system permissions. Removing a Capability SID from file system permissions or registry permissions might cause a feature or application to function incorrectly. After you remove a Capability SID, you cannot use the UI to add it back.
 
 When you're troubleshooting an unresolved SID, make sure that it isn't a Capability SID. To get a list of all of the Capability SIDs, follow these steps:
 
@@ -53,9 +53,9 @@ When you're troubleshooting an unresolved SID, make sure that it isn't a Capabil
 3. Copy the value data and paste it into a text file (or a similar location where you can search the data).
 
    > [!Note]
-   > This value may not include all Capability SIDs that third-party applications use.
+   > This value might not include all Capability SIDs that third-party applications use.
 
 4. Search the data for the SID that you're troubleshooting.
 
    - If you find the SID in the registry data from the preceding step, then it's a Capability SID. By design, it will not resolve into a friendly name.
-   - If you don't find the SID in the registry data, then it isn't a known Capability SID. You can continue to troubleshoot it as a normal unresolved SID. Keep in mind that there's a small chance that the SID could be a third-party capability SID, in which case it will not resolve into a friendly name.
+   - If you don't find the SID in the registry data, then it isn't a known Capability SID. You can continue to troubleshoot it as a normal unresolved SID. Keep in mind that there's a small chance that the SID could be a third-party Capability SID, in which case it will not resolve into a friendly name.
