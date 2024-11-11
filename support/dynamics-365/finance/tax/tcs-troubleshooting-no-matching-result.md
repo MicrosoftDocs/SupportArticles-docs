@@ -113,7 +113,7 @@ The issue occurs when the feature setup in Globalization studio is incorrect.
 
 Follow these steps to mitigate the error.
 
-1. In Globalization Studio, go to **Globalization features** \> **Tax calculation**.
+1. In Globalization studio, go to **Globalization features** \> **Tax calculation**.
 2. Create a new version of the feature.
 3. Add a line for the corresponding information.
 
