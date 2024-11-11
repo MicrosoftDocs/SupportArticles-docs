@@ -74,7 +74,7 @@ landingContent:
           - text: '"Validations have been restarted in the background" error'
             url: mobile-app/validation-restarted-background.md
           - text: WebView reset error
-            url: mobile-app/newux-webview-reset.md
+            url: mobile-app/webview-reset.md
 
   # Card
   - title: Mobile app - new experience

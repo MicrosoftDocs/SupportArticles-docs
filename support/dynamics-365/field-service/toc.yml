@@ -54,7 +54,7 @@
     - name: '"Validations have been restarted in the background" error'
       href: mobile-app/validation-restarted-background.md
     - name: WebView reset error
-      href: mobile-app/newux-webview-reset.md
+      href: mobile-app/webview-reset.md
 
 - name: Mobile app - New experience
   items: 
