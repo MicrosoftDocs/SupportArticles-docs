@@ -2,7 +2,7 @@
 title: Could not read the application certificate when creating connection with CyberArk credential
 description: Solves an error that occurs when you create a desktop flow connection using a CyberArk credential in Microsoft Power Automate.
 ms.custom: sap:Desktop flows\Cannot create desktop flow connection
-ms.date: 11/05/2024
+ms.date: 11/11/2024
 ms.author: quseleba 
 author: QuentinSele
 ---
@@ -30,7 +30,7 @@ Check the following sections for some specific error messages and their resoluti
 
 This error occurs because the CyberArk store is misconfigured, and a valid request can't be made for CyberArk.
 
-To solve this issue, make sure the hostname of the CyberArk server follows the `https://hostname.com` or `https://hostname.com:443` format.
+To solve this issue, make sure that the configuration settings in Power Automate match those in CyberArk, including the server address and the application ID. For example, the hostname of the CyberArk server should follow the `https://hostname.com` or `https://hostname.com:443` format. For more information, see [Create a CyberArk credential](/power-automate/desktop-flows/create-cyberark-credential#create-a-cyberark-credential-1).
 
 ## "Could not contact the CyberArk vault. Verify connectivity to the server and validate all connection information."
 
@@ -74,7 +74,7 @@ If you still don't have enough information to mitigate the issue, here are some 
 
       `https://<hostname>/AIMWebService/api/Accounts?AppId=<appid>&Query=Safe=<safe>;Object=<object>`
 
-1. If you receive a warning message indicating that the server certificate isn't trusted with one of the methods in step 2, make sure you install the server certificate in the Trusted Root Certification Authorities Certificate Store.
+1. If you receive a warning message indicating that the server certificate isn't trusted with one of the methods in step 2, make sure you install the server certificate in the [Trusted Root Certification Authorities Certificate Store](/windows-hardware/drivers/install/trusted-root-certification-authorities-certificate-store).
 
 1. Try [changing the Power Automate for desktop service user](/power-automate/desktop-flows/troubleshoot#change-the-on-premises-service-account) to a user who has successfully retrieved the secret with one of the methods in step 2.
 
