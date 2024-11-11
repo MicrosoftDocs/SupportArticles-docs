@@ -1,7 +1,7 @@
 ---
 title: Emails aren't automatically tracked or synchronized
 description: Provides troubleshooting information for the email synchronization issues when you use server-side synchronization in Microsoft Dataverse.
-ms.date: 11/07/2024
+ms.date: 11/11/2024
 ms.custom: sap:Email and Exchange Synchronization\Synchronization of incoming email
 author: rahulmital
 ms.author: rahulmital
