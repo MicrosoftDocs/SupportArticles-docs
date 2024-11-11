@@ -8,7 +8,7 @@ ms.topic: troubleshooting
 ms.reviewer: kaushika, v-jomcc, davete, muagarwal
 ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
 ---
-# Error: Access is denied when non-administrator users who have been delegated control try to join computers to a domain.
+# Error: Access is denied when non-administrator users who have been delegated control try to join computers to a domain
 
 This article provides a solution to an error message when non-administrator users who have been delegated control try to join computers to a domain.
 
