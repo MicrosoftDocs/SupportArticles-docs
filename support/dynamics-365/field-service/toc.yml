@@ -30,10 +30,6 @@
       href: integrations/viva-incorrect-tiles.md
 - name: IoT and Connected Field Service
   items:
-    - name: Can't change Time Series Insights instance
-      href: iot/change-time-series-insights-instance.md
-    - name: IoT Edge modules data is aggregated in charts
-      href: iot/edge-module-data-aggregated.md
     - name: No records after pulling IoT device data
       href: iot/no-device-history-properties.md
     - name: Troubleshoot issues with IoT capabilities
