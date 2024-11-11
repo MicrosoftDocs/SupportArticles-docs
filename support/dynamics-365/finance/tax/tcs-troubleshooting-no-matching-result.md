@@ -2,7 +2,7 @@
 # required metadata
 
 title: No matching result could be found error
-description: Provides a resolution to solve the No matching result could be found error that occurs in the Tax Calculation service.
+description: Provides a resolution to solve the No matching result could be found error that occurs in the Tax Calculation.
 author: hangwan
 ms.date: 04/30/2024
 
@@ -13,7 +13,7 @@ audience: Application User
 # ms.devlang: 
 ms.reviewer: kfend, maplnan
 # ms.tgt_pltfrm: 
-ms.custom: sap:Tax - indirect tax\Issues with tax calculation service
+ms.custom: sap:Tax - indirect tax\Issues with tax calculation
 ms.search.region: Global
 # ms.search.industry: 
 ms.author: hangwan
@@ -22,9 +22,9 @@ ms.dyn365.ops.version: 10.0.21
 ---
 
 
-# "No matching result could be found" error in the Tax Calculation service
+# "No matching result could be found" error in the Tax Calculation
 
-This article explains the troubleshooting steps that you can take if you receive the "No matching result could be found" error in the Tax Calculation service.
+This article explains the troubleshooting steps that you can take if you receive the "No matching result could be found" error in the Tax Calculation.
 
 ## Symptoms
 
@@ -63,14 +63,14 @@ You receive the following error message:
 
 ## Cause
 
-The issue occurs when the feature setup in Regulatory Configuration Service (RCS) is incorrect.
+The issue occurs when the feature setup in Globalization studio is incorrect.
 
 ## Resolution
 
 1. Download the troubleshooting file. For more information, see [How to enable debug mode for troubleshooting](tcs-troubleshooting-enable-debug-mode.md).
-2. Compare the Tax service calculation input with the feature setup to fix the setup issue.
+2. Compare the Tax calculation input with the feature setup to fix the setup issue.
 
-    The following example shows the Tax service calculation input.
+    The following example shows the Tax calculation input.
 
     ```json
     ===============================Tax service calculation input JSON:=====================================
@@ -113,7 +113,7 @@ The issue occurs when the feature setup in Regulatory Configuration Service (RCS
 
 Follow these steps to mitigate the error.
 
-1. In RCS, go to **Globalization features** \> **Tax calculation**.
+1. In Globalization Studio, go to **Globalization features** \> **Tax calculation**.
 2. Create a new version of the feature.
 3. Add a line for the corresponding information.
 

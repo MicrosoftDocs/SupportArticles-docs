@@ -2,7 +2,7 @@
 # required metadata
 
 title: Tax code cannot be determined error
-description: Provides a resolution to solve the Tax code cannot be determined error that occurs in the Tax Calculation service.
+description: Provides a resolution to solve the Tax code cannot be determined error that occurs in the Tax Calculation.
 author: hangwan
 ms.date: 04/30/2024
 
@@ -13,7 +13,7 @@ audience: Application User
 # ms.devlang: 
 ms.reviewer: kfend, maplnan
 # ms.tgt_pltfrm: 
-ms.custom: sap:Tax - indirect tax\Issues with tax calculation service
+ms.custom: sap:Tax - indirect tax\Issues with tax calculation
 ms.search.region: Global
 # ms.search.industry: 
 ms.author: hangwan
@@ -21,9 +21,9 @@ ms.search.validFrom: 03/23/2022
 ms.dyn365.ops.version: 10.0.21
 ---
 
-# "Tax code cannot be determined" error in the Tax Calculation service
+# "Tax code cannot be determined" error in the Tax Calculation
 
-This article explains the troubleshooting steps that you can take if you receive a "Tax code cannot be determined" error in the Tax Calculation service.
+This article explains the troubleshooting steps that you can take if you receive a "Tax code cannot be determined" error in the Tax Calculation.
 
 ## Symptoms
 
@@ -104,7 +104,7 @@ Follow these steps to solve the issue:
 2. Verify that the **Override sales tax** option on the **Setup** tab of the sales order line details is enabled.
 
     - If it's enabled, tax codes are determined by the `Tax group` and `Item tax group` values that you enter on the transaction line. Verify that these values are entered correctly.
-    - If it isn't enabled, verify that correct values have been set for the **Tax group applicability** and **Item tax group applicability** fields. For more information, see ["No matching result could be found" error in the Tax Calculation service](tcs-troubleshooting-no-matching-result.md).
+    - If it isn't enabled, verify that correct values have been set for the **Tax group applicability** and **Item tax group applicability** fields. For more information, see ["No matching result could be found" error in the Tax Calculation](tcs-troubleshooting-no-matching-result.md).
 
 3. If the tax group and item tax group have been determined correctly, determine whether there's any intersection for them.
 
@@ -124,7 +124,7 @@ Follow these steps to solve the issue:
 
 ## Mitigation
 
-1. Go through each step in the [Resolution](#resolution) section of this article, and fix the setup as required. If the tax group and item tax group haven't been determined correctly, see ["No matching result could be found" error in the Tax Calculation service](tcs-troubleshooting-no-matching-result.md).
+1. Go through each step in the [Resolution](#resolution) section of this article, and fix the setup as required. If the tax group and item tax group haven't been determined correctly, see ["No matching result could be found" error in the Tax Calculation](tcs-troubleshooting-no-matching-result.md).
 2. If there's no intersection for the tax group and the item tax group, create a new feature version in RCS, and then fix the setup.
 
     - Go to **Tax features** \> **Tax codes and groups** \> **Item tax group**.
