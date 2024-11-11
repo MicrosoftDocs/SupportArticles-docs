@@ -938,9 +938,7 @@ items:
     - name: Group Policy settings show as Extra Registry Settings
       href: ./group-policy/group-policy-settings-show-as-extra-registry-settings.md
     - name: How to enable the Group Policy loopback feature
-      href: ./group-policy/loopback-processing-of-group-policy.md
-    - name: How to give users access to Group Policy Objects
-      href: ./group-policy/give-users-access-group-policy-objects.md
+      href: ./group-policy/loopback-processing-of-group-policy.md    
     - name: How to set event log security locally or via Group Policy
       href: ./group-policy/set-event-log-security-locally-or-via-group-policy.md
     - name: Manage Group Policy administrative template files
