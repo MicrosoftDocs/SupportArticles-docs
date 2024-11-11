@@ -7,7 +7,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:Administrator Tasks
+  - sap:Archiving
   - Exchange Online
   - Exchange Server
   - CSSTroubleshoot
