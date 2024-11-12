@@ -329,7 +329,7 @@
           href: ../message-body/url-multiple-slashes-become-single-slash.md
         - name: No subject or content in automatic emails
           href: ../message-body/no-subject-content-in-automatically-email.md
-        - name: Record videos in Loop
+        - name: Record videos in Outlook and Loop
           href: ../message-body/record-videos-in-outlook-and-loop.md
         - name: Strange characters in message body
           href: ../message-body/strange-characters-display-message-body.md
