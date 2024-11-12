@@ -7,7 +7,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:Teams People & Presence\Presence from Outlook (Free-Busy)
+  - sap:Teams People & Presence\Presence from Outlook (Free/Busy)
   - CI 126269
   - CSSTroubleshoot
 ms.reviewer: sylviebo, premgan
