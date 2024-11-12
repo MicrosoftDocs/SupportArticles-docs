@@ -8,7 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: Abdias Ruiz, offspms
 ms.custom: 
-  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment,  Activation
   - DownloadInstall\InstallErrors\AppLaunchErrors
   - CSSTroubleshoot
 search.appverid: 
