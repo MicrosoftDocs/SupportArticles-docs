@@ -87,8 +87,6 @@ landingContent:
             url: mobile-app/newux-error-on-start-missing-files.md
           - text: The new experience doesn't show after enabling it in settings
             url: mobile-app/newux-doesnot-load.md
-          - text: The new experience doesn't show dashboards from the navigation
-            url: mobile-app/newux-doesnot-show-dashboards.md
   
   # Card
   - title: Resource Scheduling Optimization Add-in for Field Service
