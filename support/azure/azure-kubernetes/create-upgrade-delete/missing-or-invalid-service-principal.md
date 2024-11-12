@@ -11,15 +11,15 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 ---
 # Missing or invalid service principal when creating an AKS cluster
 
-## Summary
-
 This article discusses how to troubleshoot a service principal that isn't found or is invalid when you try to create a Microsoft Azure Kubernetes Service (AKS) cluster.
 
-## More information
+## Cause
 
 When you create an AKS cluster, AKS requires a service principal or managed identity to manage resources on your behalf. By default, AKS uses a managed identity. If you prefer to use a service principal instead, be aware that AKS does not automatically create one for you. You’ll have to provide your own service principal and reference it during cluster creation by following [these instructions](/azure/aks/kubernetes-service-principal). 
 
 Additionally, when you create a service principal, make sure that it's propagated across all regions by Microsoft Entra ID. If this propagation takes too long, the cluster might fail validation because AKS can't locate the service principal.
+
+## Solution
 
 Make sure that there's a valid, findable service principal. To do this, use one of the following methods:
 
