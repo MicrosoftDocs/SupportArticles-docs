@@ -13,7 +13,7 @@ audience: Application User
 # ms.devlang: 
 ms.reviewer: kfend, maplnan
 # ms.tgt_pltfrm: 
-ms.custom: sap:Tax - indirect tax\Issues with tax calculation
+ms.custom: ms.custom: sap:Tax - indirect tax\Issues with advanced tax calculation
 ms.search.region: Global
 # ms.search.industry: 
 ms.author: hangwan
