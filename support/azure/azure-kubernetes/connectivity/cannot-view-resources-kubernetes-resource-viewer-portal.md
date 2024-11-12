@@ -1,8 +1,8 @@
 ---
 title: Can't view resources in Kubernetes resource viewer on Azure portal
 description: Troubleshoot why you can't view resources in the Kubernetes resource viewer on the Azure portal for a cluster configured with API server-authorized IP ranges.
-ms.date: 06/08/2022
-ms.reviewer: chiragpa, nickoman, v-leedennis
+ms.date: 11/12/2024
+ms.reviewer: chiragpa, nickoman, jaewonpark, v-leedennis
 ms.service: azure-kubernetes-service
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the inability to view resources in the Kubernetes resource viewer on the Azure portal so that I can use authorized IP address ranges to access my Azure Kubernetes Service (AKS) cluster configured with an API server.
@@ -16,13 +16,23 @@ This article discusses how to resolve a scenario in which you can't use the Azur
 
 You aren't able to view resources in the [Kubernetes resource viewer](/azure/aks/kubernetes-portal) on the [Azure portal](https://portal.azure.com).
 
-## Cause
+:::image type="content" source="media/cannot-view-resources-kubernetes-resource-viewer-portal/network-error.png" alt-text="Screenshot of workloads in the AKS resource." lightbox="media/cannot-view-resources-kubernetes-resource-viewer-portal/network-error.png":::
+
+## Cause 1: You configured authorized IP ranges
 
 You configured your Microsoft Azure Kubernetes Service (AKS) cluster to access the cluster API server by using authorized IP address ranges that your computer can't access.
 
-## Solution
+### Solution
 
 Make sure that when you run the [az aks create](/cli/azure/aks#az-aks-create) or [az aks update](/cli/azure/aks#az-aks-update) command in [Azure CLI](/cli/azure/install-azure-cli), the `--api-server-authorized-ip-ranges` parameter includes access for the local client computer to the IP addresses or IP address ranges from which the portal is being browsed.
+
+## Cause 2: AKS is private cluster
+
+Your AKS is private cluster and you are accessing the portal from a network that cannot communicate with the subnet to which AKS is connected.
+
+### Solution
+
+This is expected behavior. To make it viewable, you must access the Portal from a client located on a network that can communicate with the AKS subnet. Then, you can view all AKS related resources in the portal.
 
 ## More information
 
