@@ -14,7 +14,7 @@ search.appverid:
 appliesto: 
   - Microsoft Teams
 ms.custom: 
-  - sap:Teams Compatible Devices and Peripherals\
+  - sap:Teams Compatible Devices and Peripherals
   - CI168070
   - CI188847
 ---
