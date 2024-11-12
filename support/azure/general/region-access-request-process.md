@@ -58,7 +58,7 @@ The support request will be routed back to you once complete, letting you know o
 
 ## Reserved access regions
 
-You can view which regions are access restricted through [this document](https://learn.microsoft.com/azure/reliability/cross-region-replication-azure#azure-paired-regions).
+You can view which regions are access restricted through [this document](/azure/reliability/cross-region-replication-azure#azure-paired-regions).
 To request the access for the Reserved access regions, follow these steps:
 
 1. In the **New support request** page, complete the following:
