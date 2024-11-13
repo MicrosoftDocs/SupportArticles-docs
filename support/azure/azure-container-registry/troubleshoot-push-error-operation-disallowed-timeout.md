@@ -34,7 +34,7 @@ The following sections help you troubleshoot the most common errors that appear 
 
 > `The operation is disallowed on this registry, repository or image. View troubleshooting steps at https://aka.ms/acr/faq/#why-does-my-pull-or-push-request-fail-with-disallowed-operation`
 
-### Solution: Make sure the repository or image is not locked
+### Solution 1: Make sure the repository or image is not locked
 
 This issue might be caused by the write operation being disabled for repositories or images. This state denies the delete and push operations. Azure Container Registry allows you to set the `changeableAttributes` attribute to avoid accidental deletion, or a write or read operation over a repository or a container image.
 
@@ -94,7 +94,7 @@ If you require storage beyond this limit, contact [Azure Support](#contact-us-fo
 
 > `Get "https://yourARC.azurecr.io/v2/": net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)`
 
-### Solution 1: Ensure network connectivity between the device and the container registry login server on port 443
+### Solution: Ensure network connectivity between the device and the container registry login server on port 443
 
 > [!TIP]
 > The container registry login server is also known as the Registry REST API endpoint. The login server name is in the format of `<registry-name>.azurecr.io` (must be all lowercase).
