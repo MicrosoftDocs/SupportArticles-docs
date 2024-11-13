@@ -4,7 +4,7 @@ description: Provides a resolution to resolve the AttributeMap errors in Dynamic
 author: jshotts
 ms.author: jasonshotts
 ms.reviewer: mhart
-ms.date: 10/19/2023
+ms.date: 11/13/2024
 ms.custom: sap:Administration
 ---
 # Error with AttributeMap when upgrading Dynamics 365 Field Service
@@ -17,7 +17,7 @@ This article helps resolve the "AttributeMap" error messages when upgrading Micr
 
 #### Resolution
 
-You can follow these steps to resolve this issue. The attribute map will be automatically re-created by upgrading to a newer version. Review the attribute map and delete it in your environment.
+You can follow these steps to resolve this issue. The attribute map is automatically re-created by upgrading to a newer version. Review the attribute map and delete it in your environment.
 
 1. Go to **Settings** > **Customization** > **Customize the System**.
 2. Go to **Entities** > **Work Orders** > **N:1 Relationships**.
@@ -32,7 +32,7 @@ You can follow these steps to resolve this issue. The attribute map will be auto
 
 #### Resolution
 
-You can follow these steps to resolve this issue. The attribute map will be automatically recreated by upgrading to a newer version. Review the attribute map and delete it in your environment.
+You can follow these steps to resolve this issue. The attribute map is automatically recreated by upgrading to a newer version. Review the attribute map and delete it in your environment.
 
 1. Go to **Settings** > **Customization** > **Customize the System**.
 2. Go to **Entities** > **Work Orders** > **N:1 Relationships**.
