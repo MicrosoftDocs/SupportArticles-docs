@@ -34,7 +34,7 @@ The following sections help you troubleshoot the most common errors that appear 
 
 > `The operation is disallowed on this registry, repository or image. View troubleshooting steps at https://aka.ms/acr/faq/#why-does-my-pull-or-push-request-fail-with-disallowed-operation`
 
-### Solution 1: Make sure the repository or image is not locked
+### Solution: Make sure the repository or image is not locked
 
 This issue might be caused by the write operation being disabled for repositories or images. This state denies the delete and push operations. Azure Container Registry allows you to set the `changeableAttributes` attribute to avoid accidental deletion, or a write or read operation over a repository or a container image.
 
@@ -105,11 +105,11 @@ If your device is part of a restricted network environment, check whether there 
 
 To manually test the connectivity between your device and the container registry login server on port 443, you can use such network tools as `telnet` or `nc`:
 
-```command
+```cmd
 telnet <acr-name>.azurecr.io 443 
 ```
 
-```command
+```cmd
 nc -vz <acr-name>.azurecr.io 443 -w 10
 ```
 
