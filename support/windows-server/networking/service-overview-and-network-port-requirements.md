@@ -183,6 +183,7 @@ System service name: **ClusSvc**
 |RPC|TCP|135|
 |Cluster Administrator|UDP|137|
 |Randomly allocated high ports²|TCP|Random port number between 49152 and 65535|
+|WinRM|TCP|5985 (This port is required when deploying cloud witness.)|
   
 > [!NOTE]
 > Additionally, for successful validation on Windows Failover Clusters on 2008 and above, allow inbound and outbound traffic for ICMP4, ICMP6, and port 445/TCP for SMB.

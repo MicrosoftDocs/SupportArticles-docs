@@ -1,9 +1,9 @@
 ---
 title: Diagnose problems that cause availability tests to fail in Application Insights
 description: This article describes how to diagnose common issues that cause availability tests to fail in Application Insights.
-ms.date: 09/25/2024
+ms.date: 11/05/2024
 editor: v-jsitser
-ms.reviewer: aaronmax, cogoodson, v-leedennis, v-weizhu
+ms.reviewer: aaronmax, cogoodson, matthofa, v-leedennis, v-weizhu
 ms.service: azure-monitor
 ms.custom: sap:Availability Tests
 ---
@@ -13,11 +13,6 @@ ms.custom: sap:Availability Tests
 This article discusses how to access the Application Insights troubleshooting report. This report enables you to easily diagnose common problems that cause your availability tests to fail.  
 
 :::image type="content" source="./media/diagnose-ping-test-failure/availability-to-troubleshooter.gif" alt-text="Azure portal animation that shows how to view the end-to-end transaction details to find the troubleshooting report in Application Insights." lightbox="./media/diagnose-ping-test-failure/availability-to-troubleshooter.gif":::
-
-> [!NOTE]
-> Many webtest-related issues are caused by stale or outdated DNS records. As a first troubleshooting step, we recommend that you flush the DNS cache on your local computer.
->
-> In Windows, run the [ipconfig /flushdns](/windows-server/administration/windows-commands/ipconfig) command. For other operating systems, the equivalent command is different.
 
 ## View the Application Insights troubleshooting report
 

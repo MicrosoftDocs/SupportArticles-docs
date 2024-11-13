@@ -1,16 +1,16 @@
 ---
 title: Access is denied when joining computers
-description: Provides a solution to an error message when non-administrator users who have been delegated control try to join computers to a domain controller.
-ms.date: 12/26/2023
+description: Provides a solution to an error message when non-administrator users who have been delegated control try to join computers to a domain.
+ms.date: 11/11/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, v-jomcc, davete
+ms.reviewer: kaushika, v-jomcc, davete, muagarwal
 ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
 ---
-# Error: Access is denied when non-administrator users who have been delegated control try to join computers to a domain controller
+# Error: Access is denied when non-administrator users who have been delegated control try to join computers to a domain
 
-This article provides a solution to an error message when non-administrator users who have been delegated control try to join computers to a domain controller.
+This article provides a solution to an error message when non-administrator users who have been delegated control try to join computers to a domain.
 
 _Original KB number:_ &nbsp; 932455
 

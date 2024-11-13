@@ -147,7 +147,7 @@ sections:
 
           The media manufacturer performs any MBR partitioning of removable media; Windows never partitions removable media. If the media does have an MBR, only one partition is supported. There is little user-discernible difference between MBR-partitioned media and superfloppies.
 
-          Examples of removable media include floppy disk drives, JAZZ disk cartridges, magneto-optical media, DVD-ROM, and CD-ROM. Hard disk drives on external buses such as SCSI or IEEE 1394 are not considered removable.
+          Examples of removable media include floppy disks, JAZZ disk cartridges, magneto-optical media, DVD-ROM, and CD-ROM. Hard disk drives on external buses such as SCSI or IEEE 1394 are not considered removable.
 
       - question: |
           What is the default behavior of Windows when partitioning media

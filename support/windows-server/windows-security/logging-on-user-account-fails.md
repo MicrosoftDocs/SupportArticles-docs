@@ -1,7 +1,7 @@
 ---
 title: Logging on a user account fails
 description: Describes a problem when a user who is a member of more than 1,010 security groups tries to log on. Provides a resolution.
-ms.date: 12/26/2023
+ms.date: 11/07/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -12,7 +12,7 @@ ms.custom: sap:Windows Security Technologies\Kerberos authentication, csstrouble
 
 This article solves an issue where logging on a user account that's a member of more than 1,010 groups fails.
 
-_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2019, Windows Server 2022, Windows Server 2025  
 _Original KB number:_ &nbsp; 328889
 
 ## Symptoms
@@ -162,6 +162,8 @@ The resolution applies to the situation in which administrator account can't log
 
 When the user whose logon fails because of too many group memberships is a member of the Administrators group, an administrator who has the credentials for the Administrator account (that is, an account that has a well-known relative identifier [RID] of 500) must restart a domain controller by selecting the **Safe Mode** startup option (or by selecting the **Safe Mode** with Networking startup option). In safe mode, the administrator must then log on to the domain controller by using the Administrator account credentials.
 
+See [Restart the Domain Controller in Directory Services Restore Mode Locally](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc816897(v=ws.10))
+
 Microsoft has changed the token generation algorithm. The LSA can create an access token for the Administrator account so that the administrator can log on regardless of how many transitive groups or intransitive groups that the Administrator account is a member of. When one of these safe mode startup options is used, the access token that is created for the Administrator account includes the SIDs of all Built-in and all Domain Global groups that the Administrator account is a member of.
 
 These groups typically include:
@@ -178,7 +180,7 @@ These groups typically include:
 - NT AUTHORITY\This Organization (S-1-5-15) if the domain controller is running Windows Server 2003
 
 > [!NOTE]
-> If the **Safe Mode** startup option is used, the Active Directory Users and Computers snap-in user interface (UI) is not available. In Windows Server 2003, the administrator may alternatively log on by selecting the **Safe Mode** with Networking startup option; in this mode, the Active Directory Users and Computers snap-in UI is available.
+> If the **Safe Mode** startup option is used, the Active Directory Users and Computers snap-in user interface (UI) is not available. In Windows Server, the administrator may alternatively log on by selecting the **Safe Mode** with Networking startup option; in this mode, the Active Directory Users and Computers snap-in UI is available.
 
 After an administrator has logged on by selecting one of the safe mode startup options and by using the credentials of the Administrator account, the administrator must then identify and modify the membership of the security groups that caused the denial of logon service.
 
