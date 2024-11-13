@@ -15,7 +15,7 @@ ms.reviewer: meshel, meerak, v-shorestris
 appliesto:
   - Exchange Online
   - Outlook for Microsoft 365
-  - Outlook 2024
+  - New Outlook for Windows
   - Outlook 2021
   - Outlook 2019
   - Outlook 2016
