@@ -95,7 +95,7 @@ The issue occurs when the feature setup in [Globalization Studio](/dynamics365/f
     }
     ```
 
-    The following table lists the tax group applicability in RCS.
+    The following table lists the tax group applicability in [Regulatory Configuration Service (RCS)](https://marketing.configure.global.dynamics.com/).
 
     | Header.Business process | Lines.Business Unit | Header.Ship From Zip Code | Tax Group |
     |-------------------------|---------------------|---------------------------|-----------|
