@@ -3,7 +3,7 @@ title: Custom Linux image provisioning errors
 description: Provides solutions to provisioning errors when you upload or capture a generalized virtual machine image as a specialized Linux VM image or vice versa.
 ms.custom: sap:Cannot create a VM, linux-related-content
 ms.service: azure-virtual-machines
-ms.date: 11/03/2024
+ms.date: 11/13/2024
 ms.reviewer: srijangupta, scotro, jarrettr
 ---
 # Provisioning errors when deploying custom Linux images
@@ -18,7 +18,7 @@ ms.reviewer: srijangupta, scotro, jarrettr
 
 ## Upload errors
 
-**N<sup>1</sup>:** If the OS is a generalized Linux image and it's uploaded as a specialized image, the new VM will fail to progress past the provisioning stage with a provisioning timeout error.
+**N<sup>1</sup>:** If the OS is a generalized Linux image and it's uploaded as a specialized image, the new VM will fail to progress past the provisioning stage with a [provisioning timeout error](#provisioning-timeout-error).
 
 **N<sup>2</sup>:** If the OS is Linux specialized, and it's uploaded as a generalized image, the new VM will run with the original computer name, username and password, which causes a provisioning failure error.
 
@@ -26,37 +26,37 @@ ms.reviewer: srijangupta, scotro, jarrettr
 
 To resolve these errors, upload the original VHD from your on-premises environment using the same setting as the operating system (generalized or specialized). If you upload it as generalized, make sure to run the `-deprovision` command first.
 
-### Provisioning timeout error
+## Provisioning timeout error
 
 When a Linux generalized OS is uploaded as specialized, it might result in a provisioning timeout error, causing the VM to get stuck during provisioning. This issue typically occurs due to the fundamental differences in configuration between generalized and specialized images. For more information about the differences, see the [Comparison of specialized disks and generalized disks in Azure](#comparison-of-specialized-disks-and-generalized-disks-in-azure) section in this article.
 
 Here are some possible scenarios and the explanations of the provisioning timeout error:
 
-#### Scenario 1: Persistent network configuration conflicts
+### Scenario 1: Persistent network configuration conflicts
 
 - **Issue**: Generalized images are designed to remove unique identifiers and specific configurations, making them ready for new deployments. Uploading a generalized image as specialized might result in network conflicts due to the presence of persistent network configurations.
 - **Cause**: Residual network settings or DHCP client IDs remain in the image, which causes the system to hang when it tries to acquire a new IP address during provisioning.
 - **Solution**: Verify and remove any static network configurations or identifiers before uploading the image.
 
-#### Scenario 2: Secure Shell (SSH) key or password reset issues
+### Scenario 2: Secure Shell (SSH) key or password reset issues
 
 - **Issue**: Generalized images don't retain user-specific configurations like SSH keys or passwords. During provisioning, the VM might attempt to reset these configurations; however, due to their absence or misconfiguration, this can result in timeouts.
 - **Cause**: Without predefined SSH keys or passwords, the provisioning service can't complete the configuration.
 - **Solution**: Ensure that the VM configuration includes SSH or password authentication methods compatible with the OS state.
 
-#### Scenario 3: Missing Cloud-Init or Waagent configuration
+### Scenario 3: Missing Cloud-Init or Waagent configuration
 
 - **Issue**: Generalized images require provisioning agents such as `cloud-init` or `waagent` to set up the VM during the first boot. If these configurations are missing or incompatible, the provisioning will stall.
 - **Cause**: Specialized images come with preconfigured initial setup scripts, while generalized images depend on initialization tools for their configuration.
 - **Solution**: Validate that `cloud-init` or `waagent` is properly configured in the image before uploading.
 
-#### Scenario 4: System identity issues
+### Scenario 4: System identity issues
 
 - **Issue**: Specialized images retain system-specific identities such as hostname and UUIDs, which are absent in generalized images. During provisioning, the system fails to configure these identifiers properly, which causes delays.
 - **Cause**: The lack of unique identifiers prevents the VM from fully initializing.
 - **Solution**: Ensure all unique identifiers are removed or generalized before uploading.
 
-#### Scenario 5: Incompatible kernel or module settings
+### Scenario 5: Incompatible kernel or module settings
 
 - **Issue**: Specialized images might enable specific kernel modules or settings that are incompatible with generalized deployment.
 - **Cause**: Generalized images usually remove custom kernel settings, whereas specialized images might retain them, causing issues during provisioning.
@@ -72,9 +72,7 @@ Here are some possible scenarios and the explanations of the provisioning timeou
 
 To resolve these errors, delete the current image from the portal, and [recapture it from the current VHDs](/azure/virtual-machines/linux/capture-image) with the same setting as that for the OS (generalized/specialized).
 
-## More information
-
-### Comparison of specialized disks and generalized disks in Azure
+## Comparison of specialized disks and generalized disks in Azure
 
 In Azure, the terms "specialized disk" and "generalized disk" refer to different states of virtual machine (VM) images, specifically in relation to their use for provisioning new VMs. Here's an explanation of each term:
 
@@ -94,7 +92,7 @@ The following table summarizes the differences between specialized and generaliz
 | **Use case**          | Replicating a configured VM                           | Scaling applications or creating multiple VMs         |
 | **Creation process**  | Directly from a running VM                            | Requires preparation (for example, `waagent` and `sysprep`)     |
 
-### Steps for capturing an image to prepare for upload
+## Steps for capturing an image to prepare for upload
 
 > [!NOTE]
 > Here are prerequisites to capture an image:
