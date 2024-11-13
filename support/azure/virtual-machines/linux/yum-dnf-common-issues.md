@@ -62,15 +62,15 @@ To run the check script, enter the following shell commands on a Red Hat VM:
 
 1. If the VM has internet access, run the script directly from the VM by using the following command:
 
-```bash
-curl -sL https://raw.githubusercontent.com/Azure/azure-support-scripts/refs/heads/master/Linux_scripts/rhui-check/rhui-check.py | sudo python2 -
-```
+  ```bash
+  curl -sL https://raw.githubusercontent.com/Azure/azure-support-scripts/refs/heads/master/Linux_scripts/rhui-check/rhui-check.py | sudo python2 -
+  ```
 
 2. If the VM doesn't have direct internet access, download the script from the following URL: [RHUI check script](https://raw.githubusercontent.com/Azure/azure-support-scripts/refs/heads/master/Linux_scripts/rhui-check/rhui-check.py), transfer the script to the VM, and then run the following command:
 
-```bash
-sudo python2 ./rhui-check.py 
-```
+  ```bash
+  sudo python2 ./rhui-check.py 
+  ```
 3. The script generates a report that includes any issues that are found. The script output is also saved in `/var/log/rhuicheck.log` after you run it. 
 
 #### [Red Hat 8.x and 9.x](#tab/rhel89)
@@ -535,23 +535,23 @@ https://rhui4-1.microsoft.com/pulp/repos/content/dist/rhel/rhui/server/7/7Server
 
 1. Check whether a third-party curl package is installed on your VM: 
 
-```bash
-sudo rpm -qa | grep -i curl
-```
-
-```bash
-rpm -q --queryformat '%{VENDOR}\n' curl libcurl
-```
-
-```output
-curl-7.73.0-2.0.cf.rhel7.x86_64 
-libcurl-7.73.0-2.0.cf.rhel7.x86_64
-libcurl-devel-7.73.0-2.0.cf.rhel7.x86_64 
-```
-
-```output
-city-fan.org repo http://www.city-fan.org/ftp/contrib/
-```
+  ```bash
+  sudo rpm -qa | grep -i curl
+  ```
+  
+  ```bash
+  rpm -q --queryformat '%{VENDOR}\n' curl libcurl
+  ```
+  
+  ```output
+  curl-7.73.0-2.0.cf.rhel7.x86_64 
+  libcurl-7.73.0-2.0.cf.rhel7.x86_64
+  libcurl-devel-7.73.0-2.0.cf.rhel7.x86_64 
+  ```
+  
+  ```output
+  city-fan.org repo http://www.city-fan.org/ftp/contrib/
+  ```
 
 If any third-party package is installed, go to step 2.
 
