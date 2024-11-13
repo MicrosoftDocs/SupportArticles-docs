@@ -23,4 +23,6 @@ This behavior is expected. The cluster starts by setting the number of nodes tha
 
 Your cluster will eventually enter and remain in the desired range until you stop the cluster.
 
+For more information about this behavior please visit [Cluster Auto Scaler Documentation](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/FAQ.md#my-cluster-is-below-minimum--above-maximum-number-of-nodes-but-ca-did-not-fix-that-why). 
+
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
