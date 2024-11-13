@@ -8,7 +8,7 @@ ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the container network interface download failures so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
-# Troubleshoot container network interface download failures
+# Troubleshoot Container Network Interface download failures
 
 This article discusses how to identify and resolve the `CniDownloadTimeoutVMExtensionError` error code (also known as error code `ERR_CNI_DOWNLOAD_TIMEOUT`, error number 41) or the `WINDOWS_CSE_ERROR_DOWNLOAD_CNI_PACKAGE` error code (error number 35) that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
@@ -40,7 +40,7 @@ For more information, check the instance view by executing Get-AzVmssVm or Get-A
 
 ## Cause
 
-Your cluster nodes can't connect to the endpoint that's used to download the container network interface (CNI) libraries. In most cases, this issue occurs because a network virtual appliance is blocking Secure Sockets Layer (SSL) communication or an SSL certificate.
+Your cluster nodes can't connect to the endpoint that's used to download the Container Network Interface (CNI) libraries. In most cases, this issue occurs because a network virtual appliance is blocking Secure Sockets Layer (SSL) communication or an SSL certificate.
 
 ## Solution
 
