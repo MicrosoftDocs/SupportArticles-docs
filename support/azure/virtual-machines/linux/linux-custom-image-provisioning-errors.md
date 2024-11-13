@@ -22,9 +22,15 @@ ms.reviewer: srijangupta, scotro, jarrettr
 
 **N<sup>2</sup>:** If the OS is Linux specialized, and it's uploaded as a generalized image, the new VM will run with the original computer name, username and password, which causes a provisioning failure error.
 
-### Provisioning timeout error scenarios
+### Resolution for upload errors
 
-When a Linux generalized OS is uploaded as specialized, it might result in a provisioning timeout error, causing the VM to get stuck during provisioning. This issue typically occurs due to the fundamental differences in configuration between generalized and specialized images. Here are some possible scenarios and their explanations:
+To resolve these errors, upload the original VHD from your on-premises environment using the same setting as the operating system (generalized or specialized). If you upload it as generalized, make sure to run the `-deprovision` command first.
+
+### Provisioning timeout error
+
+When a Linux generalized OS is uploaded as specialized, it might result in a provisioning timeout error, causing the VM to get stuck during provisioning. This issue typically occurs due to the fundamental differences in configuration between generalized and specialized images. For more information about the differences, see the [Comparison of specialized disks and generalized disks in Azure](#comparison-of-specialized-disks-and-generalized-disks-in-azure) section in this article.
+
+Here are some possible scenarios and the explanations of the provisioning timeout error:
 
 #### Scenario 1: Persistent network configuration conflicts
 
@@ -56,10 +62,6 @@ When a Linux generalized OS is uploaded as specialized, it might result in a pro
 - **Cause**: Generalized images usually remove custom kernel settings, whereas specialized images might retain them, causing issues during provisioning.
 - **Solution**: Confirm that the kernel and module settings in the image are compatible with the deployment environment.
 
-## Resolution for upload errors
-
-To resolve these errors, upload the original VHD from your on-premises environment using the same setting as the operating system (generalized or specialized). If you upload it as generalized, make sure to run the `-deprovision` command first.
-
 ## Capture errors
 
 **N<sup>3</sup>:** If the OS is Linux generalized but captured as specialized, you'll get a provisioning timeout error because the original VM is unusable as it's marked as generalized.
@@ -70,7 +72,29 @@ To resolve these errors, upload the original VHD from your on-premises environme
 
 To resolve these errors, delete the current image from the portal, and [recapture it from the current VHDs](/azure/virtual-machines/linux/capture-image) with the same setting as that for the OS (generalized/specialized).
 
-## Steps for capturing an image to prepare for upload
+## More information
+
+### Comparison of specialized disks and generalized disks in Azure
+
+In Azure, the terms "specialized disk" and "generalized disk" refer to different states of virtual machine (VM) images, specifically in relation to their use for provisioning new VMs. Here's an explanation of each term:
+
+|                | Specialized disk                                      | Generalized disk                                      |
+|-----------------------|-------------------------------------------------------|-------------------------------------------------------|
+|**Definition**|A specialized disk is an image that contains the unique system and user-specific configurations of an individual VM. It includes all the settings, applications, and data as they exist on the source VM.|A generalized disk is an image that has been modified to remove any system-specific information. This is done through a process that prepares the VM for imaging, often known as "generalizing" the image.|
+|**Usage**|To create a new VM that retains all the specific settings and configurations of the original VM, specialized disks are used. This approach is particularly useful in situations where you want to replicate a VM already configured with specific applications or settings that must be maintained.|Generalized disks are used as templates to create new VMs. They enable multiple instances to be deployed without duplicating machine-specific information, which is useful for scaling out applications.|
+|**Characteristics**|A specialized disk contains unique information about the original VM, such as the machine SID and user accounts. It can't be used for efficiently provisioning multiple instances because each VM created from it retains the original configuration.|The VM is prepared (using commands like `waagent -deprovision+user` for Linux or `sysprep` for Windows) to remove unique identifiers such as the machine security identifier (SID), user accounts, and other specific configurations. New VMs created from a generalized disk can receive new machine identities, enabling them to operate independently from the original VM.|
+|**Example**|Creating a backup of a VM with all its settings, applications, and data.|Creating a template for a base operating system to deploy multiple identical VMs.|
+
+The following table summarizes the differences between specialized and generalized disks. Understanding these differences is important when managing Azure VMs, as it impacts the creation, management, and deployment of your VMs.
+
+|                | Specialized disk                                      | Generalized disk                                      |
+|-----------------------|-------------------------------------------------------|-------------------------------------------------------|
+| **Purpose**           | Backup of a specific VM with unique settings          | Template for deploying multiple VMs                   |
+| **Contents**          | Unique configuration and settings                     | Generic information, with system-specific information removed     |
+| **Use case**          | Replicating a configured VM                           | Scaling applications or creating multiple VMs         |
+| **Creation process**  | Directly from a running VM                            | Requires preparation (for example, `waagent` and `sysprep`)     |
+
+### Steps for capturing an image to prepare for upload
 
 > [!NOTE]
 > Here are prerequisites to capture an image:
@@ -156,6 +180,7 @@ To resolve these errors, delete the current image from the portal, and [recaptur
     ```
 
 You have now created a Linux image from an on-premises disk and uploaded it to Azure. You can use this image to create new virtual machines in your Azure environment.
+
 
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
