@@ -535,28 +535,28 @@ https://rhui4-1.microsoft.com/pulp/repos/content/dist/rhel/rhui/server/7/7Server
 
 1. Check whether a third-party curl package is installed on your VM: 
 
-  ```bash
-  sudo rpm -qa | grep -i curl
-  ```
+   ```bash
+   sudo rpm -qa | grep -i curl
+   ```
   
-  ```bash
-  rpm -q --queryformat '%{VENDOR}\n' curl libcurl
-  ```
+   ```bash
+   rpm -q --queryformat '%{VENDOR}\n' curl libcurl
+   ```
   
-  ```output
-  curl-7.73.0-2.0.cf.rhel7.x86_64 
-  libcurl-7.73.0-2.0.cf.rhel7.x86_64
-  libcurl-devel-7.73.0-2.0.cf.rhel7.x86_64 
-  ```
+    ```output
+    curl-7.73.0-2.0.cf.rhel7.x86_64 
+    libcurl-7.73.0-2.0.cf.rhel7.x86_64
+    libcurl-devel-7.73.0-2.0.cf.rhel7.x86_64 
+    ```
   
-  ```output
-  city-fan.org repo http://www.city-fan.org/ftp/contrib/
-  ```
+    ```output
+    city-fan.org repo http://www.city-fan.org/ftp/contrib/
+    ```
 
-If any third-party package is installed, go to step 2.
+    If any third-party package is installed, go to step 2.
 
->[!IMPORTANT]
->The curl packages from third-party sources are provided together with their own binaries and certificates that are not recognized by Red Hat. This incompatibility causes yum to experience issues.
+    >[!IMPORTANT]
+    >The curl packages from third-party sources are provided together with their own binaries and certificates that are not recognized by Red Hat. This incompatibility causes yum to experience issues.
 
 2. Use either of the following methods to dowload the latest version of the `curl`, `libcurl`, and `libcurl-devel` packages that are provided for RHEL 7.9:
 
