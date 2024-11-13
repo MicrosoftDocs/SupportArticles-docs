@@ -77,15 +77,15 @@ sudo python2 ./rhui-check.py
 
 1. If the VM has internet access, run the script directly from the VM by using the following command:
 
-```bash
-curl -sL https://raw.githubusercontent.com/Azure/azure-support-scripts/refs/heads/master/Linux_scripts/rhui-check/rhui-check.py | sudo python3 -
-```
+ ```bash
+ curl -sL https://raw.githubusercontent.com/Azure/azure-support-scripts/refs/heads/master/Linux_scripts/rhui-check/rhui-check.py | sudo python3 -
+ ```
 
 2.  If the VM doesn't have direct internet access, download the script from the following URL: [RHUI check script](https://raw.githubusercontent.com/Azure/azure-support-scripts/refs/heads/master/Linux_scripts/rhui-check/rhui-check.py), transfer the script to the VM, and then run the following command:
 
-```bash
-sudo python3 ./rhui-check.py 
-```
+ ```bash
+ sudo python3 ./rhui-check.py 
+ ```
 
 > [!IMPORTANT]
 > Replace python3 with `/usr/libexec/platform-python` in case the `python3` command is not found.
