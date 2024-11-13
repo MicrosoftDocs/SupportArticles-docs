@@ -25,8 +25,6 @@ This article describes Cumulative Update package 16 (CU16) for Microsoft SQL Ser
 
 There are no known issues in this cumulative update.
 
-[!INCLUDE [patching-error-2022](../includes/patching-error-2022.md)]
-
 ## Improvements and fixes included in this update
 
 A downloadable Excel workbook that contains a summary list of builds, together with their current support lifecycle, is available. The Excel file also contains detailed fix lists for SQL Server 2022, SQL Server 2019, and SQL Server 2017. [Select to download this Excel file now](https://aka.ms/sqlserverbuilds).
