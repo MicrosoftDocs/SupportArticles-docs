@@ -1,10 +1,11 @@
 ---
 # required metadata
 
-title: Empty tax feature list in Tax calculation parameters
-description: Explains how to solve an issue where the list of tax features on the Tax calculation parameters page is empty.
+title: Empty tax feature list on Tax calculation parameters
+description: Solves an issue where the list of tax features on the Tax calculation parameters page is empty.
 author: wangchen
-ms.date: 11/12/2024
+ms.date: 11/13/2024
+ms.custom: sap:Tax - indirect tax\Issues with advanced tax calculation
 
 # optional metadata
 
@@ -13,26 +14,26 @@ audience: Application User
 # ms.devlang: 
 ms.reviewer: kfend, maplnan
 # ms.tgt_pltfrm: 
-ms.custom: sap:Tax - indirect tax\Issues with tax calculation service
 ms.search.region: Global
 # ms.search.industry: 
 ms.author: wangchen
 ms.search.validFrom: 2021-10-26
 ms.dyn365.ops.version: 10.0.21
 ---
-# The tax features list is empty in the Tax calculation parameters page
+# The tax features list is empty on the Tax calculation parameters page
+
+This article provides a resolution for an issue where the list of tax features on the **Tax calculation parameters** page is empty in Dynamics 365 Finance.
 
 ## Symptoms
 
-When you open Finance, go to **Tax** \> **Setup** \> **Tax configuration** \> **Tax calculation parameters**, and try to select a value in the **Feature setup name** field, the list of values is empty.
+In Dynamics 365 Finance, when you try to select a value in the **Name** field under the **FEATURE** on the **Tax calculation parameters** page, the list of values is empty.
 
 ## Cause
 
-The tax feature is not created in Globalization studio.
+The tax feature isn't created in the [Globalization Studio](/dynamics365/finance/localizations/global/globalization-studio-overview).
 
 ## Resolution
 
-Create tax feature in Globalization studio.
+To solve this issue, create the tax feature in the Globalization Studio.
 
-1. In Globalization studio, go to **Globalization services** \> **Tax calculation**.
-2. Create a new feature
+For more information, see [Configure the Tax Calculation feature](/dynamics365/finance/localizations/global/global-get-started-with-tax-calculation-service#configure-the-tax-calculation-feature).

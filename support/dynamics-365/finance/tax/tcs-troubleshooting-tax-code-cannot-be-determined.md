@@ -4,7 +4,8 @@
 title: Tax code cannot be determined error
 description: Provides a resolution to solve the Tax code cannot be determined error that occurs in the Tax Calculation.
 author: hangwan
-ms.date: 11/12/2024
+ms.date: 11/13/2024
+ms.custom: sap:Tax - indirect tax\Issues with advanced tax calculation
 
 # optional metadata
 
@@ -13,17 +14,15 @@ audience: Application User
 # ms.devlang: 
 ms.reviewer: kfend, maplnan
 # ms.tgt_pltfrm: 
-ms.custom: sap:Tax - indirect tax\Issues with tax calculation
 ms.search.region: Global
 # ms.search.industry: 
 ms.author: hangwan
 ms.search.validFrom: 03/23/2022
 ms.dyn365.ops.version: 10.0.21
 ---
-
 # "Tax code cannot be determined" error in the Tax Calculation
 
-This article explains the troubleshooting steps that you can take if you receive a "Tax code cannot be determined" error in the Tax Calculation.
+This article explains the troubleshooting steps that you can take if you receive a "Tax code cannot be determined" error in the [Tax Calculation](/dynamics365/finance/localizations/global/global-tax-calcuation-service-overview) in Dynamics 365 Finance.
 
 ## Symptoms
 
@@ -34,7 +33,7 @@ You receive the following error message:
 Alternatively, you find the error message in the troubleshooting file, as shown in the following example. For more information, see [How to enable debug mode for troubleshooting](tcs-troubleshooting-enable-debug-mode.md).
 
 ```jsonc
-======================Tax service calculation result JSON:===========================
+======================Tax calculation result JSON:===========================
 {
     "taxDocument": {
         "Header": [
@@ -75,7 +74,7 @@ Follow these steps to solve the issue:
     Here's an example of a troubleshooting file:
 
     ```jsonc
-    ======================Tax service calculation result JSON:===========================
+    ======================Tax calculation result JSON:===========================
     {
         "taxDocument": {
             "Header": [
@@ -108,7 +107,7 @@ Follow these steps to solve the issue:
 
 3. If the tax group and item tax group have been determined correctly, determine whether there's any intersection for them.
 
-    1. In RCS, go to **Tax features** \> **Tax codes and groups** \> **Tax group**.
+    1. In [Regulatory Configuration Service (RCS)](/dynamics365/finance/localizations/global/rcs-overview), go to **Tax features** \> **Tax codes and groups** \> **Tax group**.
 
         | Line.Tax Group | Tax Codes |
         |----------------|-----------|
