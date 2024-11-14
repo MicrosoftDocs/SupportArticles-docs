@@ -66,7 +66,6 @@ Set-NetFirewallRule -Name 'DTC incoming connections' -Enabled True
 Set-NetFirewallRule -Name 'DTC outgoing connections' -Enabled True
 
 # Setting the MSDTC network authentication
-
 Set-DtcNetworkSetting -AuthenticationLevel Mutual `
     -DtcName "Local" -InboundTransactionsEnabled $True `
     -LUTransactionsEnabled $True `
@@ -76,11 +75,9 @@ Set-DtcNetworkSetting -AuthenticationLevel Mutual `
     -XATransactionsEnabled $True -verbose
 
 # Verify the new MSDTC resoruce is now listed
-
 Get-Dtc -Verbose |Sort-Object DtcName
 
 # Test the new MSDTC resource
-
 Test-Dtc -LocalComputerName RealSqlVsName -Verbose
 
 # $VSqlSrv can be substituted for RealSqlVsName if still active, Use $Env:COMPUTERNAME to test the local installation. The firewall rules and MSDTC authentication PowerShell commands will need to be executed on all the other existing cluster nodes.
