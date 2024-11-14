@@ -29,12 +29,16 @@ This error occurs because the operation that you try to perform results in excee
 
 ## Solution
 
-To resolve this error, request a quota increase for your subscription from the [Azure portal](https://portal.azure.com). For detailed steps about how to request regional vCPU quota increases for all VMs in a given region, see [Increase a regional vCPU quota](/azure/azure-portal/supportability/regional-quota-requests#increase-a-regional-vcpu-quota).
+To resolve this error, request a quota increase for your subscription. This can be done from the [Azure portal](https://portal.azure.com) by navigating to your subscription's **Quotas** page, selecting **Compute** and then submitting a request for a quota increase in the **My quotas** page.
 
-During the quota request process, there are two scenarios:
+There are three methods to submit a request for a quota increase:
 
-- Increase the quota yourself by selecting the pen icon in the **Adjustable** column or selecting **New Quota Request** in the **My quotas** page.
+- Select **New Quota Request** in the **My quotas** page.
 
-- Create a new support request by selecting the support icon in the **Adjustable** column.
+- Select the pen icon in the **Adjustable** column in the **My quotas** page.
+
+- For some specific quotas, create a new support request by selecting the support icon in the **Adjustable** column in the **My quotas** page.
+
+For more information about how to request regional vCPU quota increases for all VMs in a given region, see [Increase a regional vCPU quota](/azure/azure-portal/supportability/regional-quota-requests#increase-a-regional-vcpu-quota).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
