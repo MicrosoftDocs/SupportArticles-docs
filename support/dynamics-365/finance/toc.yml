@@ -70,8 +70,6 @@
       items:
         - name: Error 400 or 401 when setting Dataverse virtual table visibility
           href: tax/cannot-set-dataverse-virtual-table-visibility.md
-        - name: '"Failed to access tax service" error'
-          href: tax/tcs-troubleshooting-failed-access-tax-service.md
         - name: How to enable debug mode in Tax Calculation
           href: tax/tcs-troubleshooting-enable-debug-mode.md
         - name: '"No matching result could be found" error'
