@@ -12,7 +12,7 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 
 This article provides a solution to a "Quota exceeded" error that occurs during an Azure Kubernetes Service (AKS) creation or upgrade operation.
 
-# Symptoms
+## Symptoms
 
 When you try to scale up your node pools in an AKS cluster, deploy a new cluster, or deploy a new node pool, you receive an error message that resembles the following text:
 
@@ -23,11 +23,11 @@ Or
 
 > Insufficient vcpu quota requested 6, remaining 4 for family standardDCSv2Family for region westeurope.
 
-# Cause
+## Cause
 
 This error occurs because the operation that you try to perform results in exceeding the current quota limits.
 
-# Solution
+## Solution
 
 To resolve this error, request a quota increase for your subscription from the [Azure portal](https://portal.azure.com). For detailed steps about how to request regional vCPU quota increases for all VMs in a given region, see [Increase a regional vCPU quota](/azure/azure-portal/supportability/regional-quota-requests#increase-a-regional-vcpu-quota).
 
