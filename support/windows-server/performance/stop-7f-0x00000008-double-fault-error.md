@@ -86,8 +86,6 @@ Voltage that is higher or lower than specified, or that fluctuates, may cause pr
 
 ## More information
 
-For more information about STOP 0x0000007F errors, see [0x0000007F Stop error on a Windows-based computer](https://support.microsoft.com/help/137539).
-
 The ESP register is also known as the stack pointer register. A stack is a data structure in memory that is used to store information about the current state of the execution of a thread. A thread's stack is used to keep track of function calls in progress, of parameters that are passed to those functions, and of variables that are used by those functions. The value in the ESP register is expected to point to the current top of the stack. If the value in ESP is incorrect, it may point to incorrect information or to an invalid address. If the value in ESP points to an invalid address, a double-fault exception may occur.
 
 To determine if the Stop error is the result of a single-bit error in the ESP register, follow these steps:
