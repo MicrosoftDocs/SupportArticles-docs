@@ -47,7 +47,7 @@ To resolve these errors, delete the current image from the portal, and [recaptur
 
 ## Provisioning timeout error during an upload process
 
-When a Linux generalized OS is uploaded as specialized, it might result in a provisioning timeout error, causing the VM to get stuck during provisioning. This issue typically occurs due to the fundamental differences in configuration between generalized and specialized images. For more information about the differences, see the [Comparison of specialized disks and generalized disks in Azure](#comparison-of-specialized-disks-and-generalized-disks-in-azure) section in this article.
+When a Linux generalized OS is uploaded as specialized, it might result in a provisioning timeout error, causing the VM to get stuck during provisioning. This issue typically occurs due to the fundamental differences in configuration between generalized and specialized images. For more information about the differences, see the [Comparison of specialized disks and generalized disks](#comparison-of-specialized-disks-and-generalized-disks) section in this article.
 
 Here are some possible scenarios and the explanations of the provisioning timeout error:
 
