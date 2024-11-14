@@ -39,7 +39,7 @@ There are three methods to submit a request for a quota increase:
 
 - For some specific quotas, create a new support request by selecting the support icon in the **Adjustable** column in the **My quotas** page.
 
- :::image type="content" source="media/quota-exceeded-during-creation-upgrade/my-quotas.png" alt-text="Screenshot that shows the 'My quotas' page.":::
+ :::image type="content" source="media/quota-exceeded-during-creation-upgrade/my-quotas.png" alt-text="Screenshot that shows the 'My quotas' page." ligntbox="media/quota-exceeded-during-creation-upgrade/my-quotas.png" :::
 
 For more information about how to request regional vCPU quota increases for all VMs in a given region, see [Increase a regional vCPU quota](/azure/azure-portal/supportability/regional-quota-requests#increase-a-regional-vcpu-quota).
 
