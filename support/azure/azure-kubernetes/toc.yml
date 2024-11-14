@@ -365,3 +365,7 @@
       href: extensions/troubleshoot-kubernetes-event-driven-autoscaling-add-on.md
     - name: Breaking changes in KEDA add-on 2.15 and 2.14
       href: extensions/changes-in-kubernetes-event-driven-autoscaling-add-on-214-215.md
+  - name: Troubleshoot by Error codes 
+    items:
+    - name: VMExtensionError_K8SAPIServerConnFail error (51)
+      href: error-codes/VMExtensionError_K8SAPIServerConnFail.md
