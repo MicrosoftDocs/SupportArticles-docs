@@ -14,7 +14,7 @@ This article discusses how to troubleshoot issues that occur after you restrict 
 
 ## Symptoms
 
-Certain commands of the [kubectl](https://kubernetes.io/docs/reference/kubectl/) command-line tool don't work correctly, or you experience errors when you create an AKS cluster or scaling a node pool.
+Certain commands of the [kubectl](https://kubernetes.io/docs/reference/kubectl/) command-line tool don't work correctly, or you experience errors when you create an AKS cluster or scale a node pool.
 
 ## Cause
 
@@ -30,7 +30,7 @@ Verify that your configuration doesn't conflict with any of the [required Outbou
 - Application rules
 
 > [!NOTE]
-> The AKS outbound dependencies are almost entirely defined with FQDNs, which don't have static addresses behind them. The lack of static addresses means you can't use network security groups (NSGs) to lock down the outbound traffic from an AKS cluster.
+> The AKS outbound dependencies are almost entirely defined with FQDNs, which don't have static addresses behind them. The lack of static addresses means you can't use network security groups (NSGs) to restrict outbound traffic from an AKS cluster.
 
 ## More information
 
