@@ -187,7 +187,6 @@ From a domain-joined client, you can use the following PowerShell command to vie
 
 ```PowerShell
 Get-ChildItem <Path> | Get-ACL | Select Path, Owner
-    ```
 
 ## Errors when running Join-AzStorageAccountForAuth cmdlet
 
