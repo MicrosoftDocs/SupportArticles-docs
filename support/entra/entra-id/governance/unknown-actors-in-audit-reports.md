@@ -1,5 +1,5 @@
 ---
-title: Unknown Actors in Audit Reports
+title: Unknown actors in Audit reports
 description: Describes common examples of Microsoft first-party service principal actors that may be found in Microsoft Entra audit logs.
 ms.date: 11/30/2023
 ms.reviewer: bernaw, v-six
@@ -7,7 +7,7 @@ ms.service: entra-id
 ms.custom: sap:Audit Logs
 ---
 
-# Unknown Actors in Audit Reports
+# Unknown actors in Audit reports
 
 The following are common examples of Microsoft first-party service principal actors that may be found in Microsoft Entra audit logs, including a description of actions that these actors may take on Microsoft Entra objects in your tenant.
 
