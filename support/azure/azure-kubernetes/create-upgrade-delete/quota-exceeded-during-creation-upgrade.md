@@ -10,10 +10,13 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 ---
 # "Quota exceeded" error during creation or upgrade
 
-You can request a standard virtual CPU (vCPU) quota increase per virtual machine (VM) family in the Microsoft [Azure portal](https://portal.azure.com). Go to your Azure subscription's **Overview** page, and then select **Usage + quotas** to view your options.
+You can request a standard virtual CPU (vCPU) quota increase per virtual machine (VM) family in the Microsoft [Azure portal](https://portal.azure.com):
 
-:::image type="content" source="media/quota-exceeded-during-creation-upgrade/request-quotas-vcpu.png" alt-text="Screenshot of the Usage quotas page in the Azure portal." lightbox="media/quota-exceeded-during-creation-upgrade/request-quotas-vcpu.png":::
-
+1. Navigate to **Subscriptions**, select your Azure subscription.
+2. Under **Settings**, select **Usage + quotas**. Set the provider to **Compute**, and optionally filter by the region of your AKS cluster.
+    
+    :::image type="content" source="media/quota-exceeded-during-creation-upgrade/request-quotas-vcpu.png" alt-text="Screenshot of the Usage quotas page in the Azure portal." lightbox="media/quota-exceeded-during-creation-upgrade/request-quotas-vcpu.png":::
+3. Select the vCPU family that you want to request a quota increase, then choose **New quota request**.
 
 After your subscription's vCPU quota is increased, you can create or upgrade an Azure Kubernetes Service (AKS) cluster successfully.
 
