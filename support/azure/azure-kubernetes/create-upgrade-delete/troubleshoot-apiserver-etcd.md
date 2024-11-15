@@ -3,9 +3,9 @@ title: Troubleshoot API server and etcd problems in AKS
 description: Provides a troubleshooting guide for API server and etcd problems in Azure Kubernetes Services.
 author: seguler
 ms.author: segule
-ms.date: 02/21/2024
+ms.date: 11/15/2024
 ms.service: azure-kubernetes-service
-ms.reviewer: mikerooney, v-weizhu, axelg, josebl, v-leedennis
+ms.reviewer: mikerooney, v-weizhu, axelg, josebl, aritraghosh, v-leedennis
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
 # Troubleshoot API server and etcd problems in Azure Kubernetes Services
@@ -26,19 +26,19 @@ Microsoft has tested the reliability and performance of the API server at a scal
 
 - The [kubectl-aks](https://go.microsoft.com/fwlink/p/?linkid=2259767#install) plugin for running commands directly on AKS nodes without using the Kubernetes control plane.
 
+## Basic health checks
 
+- Resource health events
 
-## Basic Health Checks
+  AKS provides Resource health events for critical component downtime. Prior to proceeding, ensure there are no critical events reported in [Resource Health](/azure/service-health/resource-health-overview).
 
-- Resource Health Center events
-  AKS exposes Resource Health Events for critical downtime of components.  Before proceeeding, make sure to verify that there are no such critical events in Resource Health.
-  <img width="935" alt="image" src="https://github.com/user-attachments/assets/5a34b4a8-ada1-4a4a-91ea-e76b62eba430">
-- Diagnose and Solve problems
-  AKS has a dedicated troubleshooting category for Control plane availability and performance.
-  ![image](https://github.com/user-attachments/assets/36ef3b6b-d278-4dd7-8e8b-70bbbdbdfd90)
+   :::image type="content" source="media/troubleshoot-apiserver-etcd/resource-health-event.png" alt-text="Screenshot that shwows a resource health event.":::
 
+- Diagnose and solve problems
 
+  AKS provides a dedicated troubleshooting category for **Cluster and Control Plane Availability and Performance**.
 
+  :::image type="content" source="media/troubleshoot-apiserver-etcd/cluster-control-plane-availability-performance.png" alt-text="Screenshot that shwows the 'Cluster and Control Plane Availability and Performance' category.":::
 
 ## Symptoms
 
