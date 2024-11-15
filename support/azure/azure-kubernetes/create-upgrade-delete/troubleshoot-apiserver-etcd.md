@@ -3,9 +3,9 @@ title: Troubleshoot API server and etcd problems in AKS
 description: Provides a troubleshooting guide for API server and etcd problems in Azure Kubernetes Services.
 author: seguler
 ms.author: segule
-ms.date: 02/21/2024
+ms.date: 11/15/2024
 ms.service: azure-kubernetes-service
-ms.reviewer: mikerooney, v-weizhu, axelg, josebl, v-leedennis
+ms.reviewer: mikerooney, v-weizhu, axelg, josebl, aritraghosh, v-leedennis
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
 # Troubleshoot API server and etcd problems in Azure Kubernetes Services
@@ -25,6 +25,20 @@ Microsoft has tested the reliability and performance of the API server at a scal
 - The Standard tier for AKS clusters. If you're using the Free tier, the API server and etcd contain limited resources. AKS clusters in the Free tier don't provide high availability. This is often the root cause of API server and etcd problems.
 
 - The [kubectl-aks](https://go.microsoft.com/fwlink/p/?linkid=2259767#install) plugin for running commands directly on AKS nodes without using the Kubernetes control plane.
+
+## Basic health checks
+
+- Resource health events
+
+  AKS provides Resource health events for critical component downtime. Before proceeding, ensure there are no critical events reported in [Resource Health](/azure/service-health/resource-health-overview).
+
+   :::image type="content" source="media/troubleshoot-apiserver-etcd/resource-health-event.png" alt-text="Screenshot that shows a resource health event." lightbox="media/troubleshoot-apiserver-etcd/resource-health-event.png":::
+
+- Diagnose and solve problems
+
+  AKS provides a dedicated troubleshooting category for **Cluster and Control Plane Availability and Performance**.
+
+  :::image type="content" source="media/troubleshoot-apiserver-etcd/cluster-control-plane-availability-performance.png" alt-text="Screenshot that shows the 'Cluster and Control Plane Availability and Performance' category." lightbox="media/troubleshoot-apiserver-etcd/cluster-control-plane-availability-performance.png":::
 
 ## Symptoms
 
