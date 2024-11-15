@@ -38,7 +38,7 @@ Microsoft has tested the reliability and performance of the API server at a scal
 
   AKS provides a dedicated troubleshooting category for **Cluster and Control Plane Availability and Performance**.
 
-  :::image type="content" source="media/troubleshoot-apiserver-etcd/cluster-control-plane-availability-performance.png" alt-text="Screenshot that shwows the 'Cluster and Control Plane Availability and Performance' category.":::
+  :::image type="content" source="media/troubleshoot-apiserver-etcd/cluster-control-plane-availability-performance.png" alt-text="Screenshot that shwows the 'Cluster and Control Plane Availability and Performance' category." lightbox="media/troubleshoot-apiserver-etcd/cluster-control-plane-availability-performance.png":::
 
 ## Symptoms
 
