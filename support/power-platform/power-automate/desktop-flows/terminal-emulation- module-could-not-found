@@ -24,8 +24,8 @@ The terminal emulator requires access to some extra DLLs that are not present in
 - Locate the HLLAPI dll referenced in the Open Terminal Session action
 - Use a Process Hacker (or a similar tool) to identify its dependencies
 - Go to Tools > Inspect executable file
-- image.png
+:::image type="content" source="media/terminal-not-found/terminal_not_found_1.png" alt-text="Screnshot of the Inspect executable file option.":::
 - Select the HLLAPI dll to open it
 - Go to the import tabs
-- image.png
+:::image type="content" source="media/terminal-not-found/terminal_not_found_2.png" alt-text="Screnshot of the tabs to be imported.":::
 - Copy the DLLs from the terminal emulator installation directory to the Power Automate Desktop installation directory (e.g. C:\Program Files (x86)\Power Automate Desktop)
