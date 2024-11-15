@@ -32,7 +32,7 @@ Microsoft has tested the reliability and performance of the API server at a scal
 
   AKS provides Resource health events for critical component downtime. Prior to proceeding, ensure there are no critical events reported in [Resource Health](/azure/service-health/resource-health-overview).
 
-   :::image type="content" source="media/troubleshoot-apiserver-etcd/resource-health-event.png" alt-text="Screenshot that shwows a resource health event.":::
+   :::image type="content" source="media/troubleshoot-apiserver-etcd/resource-health-event.png" alt-text="Screenshot that shwows a resource health event." lightbox="media/troubleshoot-apiserver-etcd/resource-health-event.png":::
 
 - Diagnose and solve problems
 
