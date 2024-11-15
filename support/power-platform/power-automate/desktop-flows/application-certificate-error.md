@@ -49,7 +49,7 @@ This error occurs because the object name doesn't match a CyberArk secret that t
 To solve this issue,
 
 1. Use the [Get accounts API](https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/getaccounts.htm?tocpath=Developer%7CREST%20APIs%7CAccounts%7C_____1) to get a list of all the accounts in the Vault.
-1. If no account name matches with the object name, update the object name in Power Automate with an existing account, or confirm with your CyberArk team that the application has access to the CyberArk safe that contains the object.
+1. If no account name matches the object name, update the object name with an existing account, or confirm with your CyberArk team that the application has access to the CyberArk safe that contains the object.
 
 ## "The CyberArk server was unable to verify the certificate, please confirm that the CyberArk server is correctly configured for SSL authentication."
 
