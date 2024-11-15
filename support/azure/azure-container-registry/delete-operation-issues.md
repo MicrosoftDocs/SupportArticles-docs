@@ -59,7 +59,7 @@ This error occurs because a lock exists on your repository, manifest, or image l
 1. Check if there are any locks at the repository level. 
 
     ```CLI
-    az acr repository show --name myregistry --repository myrepo --output jsonc
+    az acr repository show --name myregistry --repository myrepo
     ```
 2. Check locks at the repository manifest digest level:
 
@@ -70,7 +70,7 @@ This error occurs because a lock exists on your repository, manifest, or image l
 3. Check locks at the repository image tag level:
 
     ```CLI
-    az acr repository show --name myregistry --image imagename:tag --output jsonc
+    az acr repository show --name myregistry --image imagename:tag
     ```
 Example of the output:
 
