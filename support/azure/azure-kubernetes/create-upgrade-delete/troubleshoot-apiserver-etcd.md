@@ -30,15 +30,15 @@ Microsoft has tested the reliability and performance of the API server at a scal
 
 - Resource health events
 
-  AKS provides Resource health events for critical component downtime. Prior to proceeding, ensure there are no critical events reported in [Resource Health](/azure/service-health/resource-health-overview).
+  AKS provides Resource health events for critical component downtime. Before proceeding, ensure there are no critical events reported in [Resource Health](/azure/service-health/resource-health-overview).
 
-   :::image type="content" source="media/troubleshoot-apiserver-etcd/resource-health-event.png" alt-text="Screenshot that shwows a resource health event." lightbox="media/troubleshoot-apiserver-etcd/resource-health-event.png":::
+   :::image type="content" source="media/troubleshoot-apiserver-etcd/resource-health-event.png" alt-text="Screenshot that shows a resource health event." lightbox="media/troubleshoot-apiserver-etcd/resource-health-event.png":::
 
 - Diagnose and solve problems
 
   AKS provides a dedicated troubleshooting category for **Cluster and Control Plane Availability and Performance**.
 
-  :::image type="content" source="media/troubleshoot-apiserver-etcd/cluster-control-plane-availability-performance.png" alt-text="Screenshot that shwows the 'Cluster and Control Plane Availability and Performance' category." lightbox="media/troubleshoot-apiserver-etcd/cluster-control-plane-availability-performance.png":::
+  :::image type="content" source="media/troubleshoot-apiserver-etcd/cluster-control-plane-availability-performance.png" alt-text="Screenshot that shows the 'Cluster and Control Plane Availability and Performance' category." lightbox="media/troubleshoot-apiserver-etcd/cluster-control-plane-availability-performance.png":::
 
 ## Symptoms
 
