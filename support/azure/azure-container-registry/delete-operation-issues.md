@@ -44,48 +44,52 @@ To save the storage in ACR, layers referenced by multiple different manifests ar
 
 Based on the preceding screenshot, if you delete image B, the manifest and manifest digest will be cleaned up. At the layer level, only layer 4 will be deleted, and layers 1 and 2 will remain in the ACR storage as another manifest still references them. Hence, the storage reduction will be less than expected.
 
-## Issue 4: Disallowed error when deleting ACR repo
+## Issue 4: The operation is disallowed error when deleting ACR repository
 
-- Get below error when trying to delete ACR repo 
+You may receive the following error when you try to delete an ACR repository:
+> `The operation is disallowed on this registry, repository or image.`
 
-  > *<u>The operation is disallowed on this registry, repository or image.</u>*
+### Cause
 
+This error occurs because a lock exists on your repository, manifest, or image layer. Use the following commands to check for locks.
 
-- Cause: This error occurs because there are some lock in your repo/manifest/image layer. We could leverage below command to check where has the lock:
-1. Check if any lock in the repo level.   ###If "writeEnabled" is "false", it means it has been locked.
+> [!NOTE]
+> You must replace the values of the `--name`, `--registry`, `--repository` and `--image` parameters in the following commands.
 
-```
-az acr repository show \ --name myregistry --repository myrepo \ --output jsonc
-```
+1. Check if there is any lock at the repository level. In the output, if `writeEnabled` is `false`, the repository is locked.
 
-2. Check if any lock In the repo manifest digest level:
+    ```CLI
+    az acr repository show --name myregistry --repository myrepo --output jsonc
+    ```
+2. Check if there is any lock in the repository manifest digest level:
 
-```
-az acr manifest list-metadata -r myregistry -n hello-world      ###List the metadata of the manifests in the repository 'hello-world'.
-```
+    ```CLI
 
-3. Check if any lock In the repo image tag level:
+    az acr manifest list-metadata -registry myregistry -name myrepo      
+    ```
+3. Check if any lock in the repository image tag level:
 
-```
-az acr repository show --name acrname --image imagename:tag --output jsonc
-```
-- Mitigation: we could leverage below command to change the "write-enabled" to "false" to mitigate. 
+    ```CLI
+    az acr repository show --name myregistry --image imagename:tag --output jsonc
+    ```
 
-1. Delete lock in the repo level: 
+### Solution
 
-```
-az acr repository update --name myregistry --repository hello-world --write-enabled true
-```
+To resolve this issue, use the following commands to change `writeEnabled` to true:
 
-2. Delete lock in the manifest level:
+1. Remove the lock at the repository level:
 
-```
-az acr repository update --name myregistry --image myrepo@sha256:123456abcdefg --write-enabled true
-```
+    ```CLI
+    az acr repository update --name myregistry --repository myrepo --write-enabled true
+    ```
+2. Remove the lock at the manifest level:
 
-3. Delete lock in the image tag level:
-```
-az acr repository update --name myregistry --image hello-world:latest --write-enabled true
-```
+    ```CLI
+    az acr repository update --name myregistry --image myrepo@sha256:123456abcdefg --write-enabled true
+    ```
+3. Remove the lock at the image tag level:
 
+    ```CLI
+    az acr repository update --name myregistry --image hello-world:latest --write-enabled true
+    ```
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
