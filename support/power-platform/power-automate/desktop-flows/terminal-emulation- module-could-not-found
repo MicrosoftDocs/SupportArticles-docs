@@ -1,0 +1,31 @@
+---
+title: Terminal emulation - The specified module could not be found error
+description: Provides a workaround when using the Open Terminal Session action gets an error 'The specified module could not be found'.
+ms.reviewer: nimoutzo
+ms.date: 11/15/2024
+ms.custom: sap:Desktop flows\Power Automate for desktop errors
+---
+# Terminal emulation - 'The specified module could not be found' error
+
+This article provides a workaround to an issue when utilizing the Open Terminal Session action with the HLLAPI provider, and encounter the error 'The specified module could not be found.'.
+
+_Applies to:_ &nbsp; Power Automate  
+_Original KB number:_ &nbsp; 4599053
+
+## Symptoms
+
+Using the Open Terminal Session action with the HLLAPI provider is the error message, 'The specified module could not be found.'.
+
+## Cause
+The terminal emulator requires access to some extra DLLs that are not present in the PAD installation directory.
+
+## Workaround
+- Find out what DLLs might be needed.
+- Locate the HLLAPI dll referenced in the Open Terminal Session action
+- Use a Process Hacker (or a similar tool) to identify its dependencies
+- Go to Tools > Inspect executable file
+- image.png
+- Select the HLLAPI dll to open it
+- Go to the import tabs
+- image.png
+- Copy the DLLs from the terminal emulator installation directory to the Power Automate Desktop installation directory (e.g. C:\Program Files (x86)\Power Automate Desktop)
