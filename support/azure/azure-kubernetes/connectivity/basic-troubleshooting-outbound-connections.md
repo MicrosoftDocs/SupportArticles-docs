@@ -1,8 +1,8 @@
 ---
 title: Basic troubleshooting of outbound connections from an AKS cluster
 description: Do basic troubleshooting of outbound connections that originate from an Azure Kubernetes Service (AKS) cluster.
-ms.date: 09/10/2024
-ms.reviewer: chiragpa, rissing, jopalhei, v-leedennis, v-weizhu
+ms.date: 11/15/2024
+ms.reviewer: chiragpa, rissing, jopalhei, jaewonpark, v-leedennis, v-weizhu
 editor: v-jsitser
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to perform basic troubleshooting of outbound connections from an Azure Kubernetes Service (AKS) cluster so that I don't experience connection issues when I use AKS.
@@ -28,7 +28,57 @@ This article discusses how to do basic troubleshooting of outbound connections f
 
 ## Scenarios for outbound traffic in Azure Kubernetes Service
 
-In any networking scenario, you should consider the following factors when troubleshooting:
+Traffic that originates from within the AKS cluster, whether it's from a pod or a worker node, is considered the outbound traffic from the cluster. What if there's an issue in the outbound flow for an AKS cluster? Before you troubleshoot, first let's look at the scenarios for outbound traffic flow.
+
+The outbound traffic from an AKS cluster can be classified within the following categories:
+
+1. [Traffic to a pod or service in the same cluster (internal traffic)](#internal-traffic)
+
+1. Traffic to a device or endpoint in the same virtual network or a different virtual network (that uses virtual network peering)
+
+1. Traffic to an on-premises environment through a VPN connection or an Azure ExpressRoute connection
+
+1. [Traffic outside the AKS network through Azure Load Balancer (public outbound traffic)](#public-outbound-traffic-through-azure-load-balancer)
+
+1. [Traffic outside the AKS network through Azure Firewall or a proxy server (public outbound traffic)](#public-outbound-traffic-through-azure-firewall-or-a-proxy-server)
+
+### Internal traffic
+
+A basic request flow for internal traffic from an AKS cluster would resemble the flow that's shown in the following diagram.
+
+:::image type="content" source="./media/basic-troubleshooting-outbound-connections/internal-traffic-aks-cluster.svg" alt-text="Diagram of a basic request flow for internal traffic from a Microsoft Azure Kubernetes Service (AKS) cluster." lightbox="./media/basic-troubleshooting-outbound-connections/internal-traffic-aks-cluster.svg" border="false":::
+
+### Public outbound traffic through Azure Load Balancer
+
+If the traffic is for a destination on the internet, the default method is to send the traffic through the Azure Load Balancer.
+
+:::image type="content" source="./media/basic-troubleshooting-outbound-connections/external-traffic-load-balancer.svg" alt-text="Diagram of a request flow for external internet traffic through Azure Load Balancer from a Microsoft Azure Kubernetes Service (AKS) cluster." lightbox="./media/basic-troubleshooting-outbound-connections/external-traffic-load-balancer.svg" border="false":::
+
+### Public outbound traffic through Azure Firewall or a proxy server
+
+In some cases, the egress traffic has to be filtered, and it might require Azure Firewall.
+
+:::image type="content" source="./media/basic-troubleshooting-outbound-connections/external-traffic-firewall.svg" alt-text="Diagram of a request flow for external internet traffic through Azure Firewall from a Microsoft Azure Kubernetes Service (AKS) cluster." lightbox="./media/basic-troubleshooting-outbound-connections/external-traffic-firewall.svg" border="false":::
+
+Instead of a firewall, a user might want to add a proxy server. Or, the user might want to set up an NAT gateway for egress traffic. The basic flow remains the same as shown in the diagram.
+
+It's important to understand the nature of egress flow for your cluster so that you can continue troubleshooting.
+
+## Considerations when troubleshooting
+
+### Check your egress device
+When you troubleshoot outbound traffic in AKS, it's important to know what your egress device is (that is, the device through which the traffic passes). Here, the egress device could be one of the following components:
+
+- Azure Load Balancer
+- Azure Firewall or a custom firewall
+- A network address translation (NAT) gateway
+- A proxy server
+
+The flow could also differ based on the destination. For example, internal traffic (that is, within the cluster) doesn't go through the egress device. The internal traffic would use only the cluster networking. On the other hand, if it is public outbound traffic, you may need to know if there is an egress device passing through and check for that device.
+
+### Check each hop within traffic flow
+
+After identifying the egress device, you now need to check the following factors:
 
 - The source and the destination for the request.
 - The hops in between the source and the destination.
@@ -39,7 +89,13 @@ In any networking scenario, you should consider the following factors when troub
   - Network security group (NSG)
   - Network policy
 
+If there is a hop that you suspect is an issue, you can check the response codes before and after that hop, and if you need to check whether the packets are arriving properly in a specific hop, you can proceed with packet captures.
+
+#### Check HTTP response codes
+
 When you check each component, [get and analyze HTTP response codes](get-and-analyze-http-response-codes.md). These codes are useful to identify the nature of the issue. The codes are especially helpful in scenarios in which the application responds to HTTP requests.
+
+#### Take packet captures from the client and server
 
 If other troubleshooting steps don't provide any conclusive outcome, take packet captures from the client and server. Packet captures are also useful when non-HTTP traffic is involved between the client and server. For more information about how to collect packet captures for AKS environment, see the following articles in the data collection guide:
 
@@ -49,62 +105,11 @@ If other troubleshooting steps don't provide any conclusive outcome, take packet
 
 - [Capture TCP packets from a pod on an AKS cluster](../logs/packet-capture-pod-level.md)
 
-If you know how to get the HTTP response codes and take packet captures, it's easier to troubleshoot a network connectivity issue.
-
-Traffic that originates from within the AKS cluster, whether it's from a pod or a worker node, is considered the outbound traffic from the cluster. What if there's an issue in the outbound flow for an AKS cluster? Before you troubleshoot, first understand the nature of the request-response flow.
-
-The outbound traffic from an AKS cluster can be classified within the following categories:
-
-1. Traffic to a pod or service in the same cluster (internal traffic)
-
-1. Traffic to a device or endpoint in the same virtual network or a different virtual network (that uses virtual network peering)
-
-1. Traffic to an on-premises environment through a VPN connection or an Azure ExpressRoute connection
-
-1. Traffic outside the AKS network (public outbound traffic)
-
-In this document, we cover basic troubleshooting steps for issues that affect outbound connectivity:
-
-- Within the cluster
-- Within the virtual networks
-- To the outside world (public traffic)
-
-When you troubleshoot outbound traffic in AKS, it's also important to know what your egress device is (that is, the device through which the traffic passes). Here, the egress device could be one of the following components:
-
-- Azure Load Balancer
-- Azure Firewall or a custom firewall
-- A network address translation (NAT) gateway
-- A proxy server
-
-The flow could also differ based on the destination. For example, internal traffic (that is, within the cluster) doesn't go through the egress device. The internal traffic would use only the cluster networking.
-
-### Internal traffic
-
-A basic request flow for internal traffic from an AKS cluster would resemble the flow that's shown in the following diagram.
-
-:::image type="content" source="./media/basic-troubleshooting-outbound-connections/internal-traffic-aks-cluster.svg" alt-text="Diagram of a basic request flow for internal traffic from a Microsoft Azure Kubernetes Service (AKS) cluster." lightbox="./media/basic-troubleshooting-outbound-connections/internal-traffic-aks-cluster.svg" border="false":::
-
-### External traffic through Azure Load Balancer
-
-If the traffic is for a destination on the internet, the default method is to send the traffic through the Azure Load Balancer.
-
-:::image type="content" source="./media/basic-troubleshooting-outbound-connections/external-traffic-load-balancer.svg" alt-text="Diagram of a request flow for external internet traffic through Azure Load Balancer from a Microsoft Azure Kubernetes Service (AKS) cluster." lightbox="./media/basic-troubleshooting-outbound-connections/external-traffic-load-balancer.svg" border="false":::
-
-### External traffic through Azure Firewall or a proxy server
-
-In some cases, the egress traffic has to be filtered, and it might require Azure Firewall.
-
-:::image type="content" source="./media/basic-troubleshooting-outbound-connections/external-traffic-firewall.svg" alt-text="Diagram of a request flow for external internet traffic through Azure Firewall from a Microsoft Azure Kubernetes Service (AKS) cluster." lightbox="./media/basic-troubleshooting-outbound-connections/external-traffic-firewall.svg" border="false":::
-
-Instead of a firewall, a user might want to add a proxy server. Or, the user might want to set up an NAT gateway for egress traffic. The basic flow remains the same as shown in the diagram.
-
-It's important to understand the nature of egress flow for your cluster so that you can continue troubleshooting.
-
-## Troubleshooting checklist
+## Troubleshooting Check List
 
 For basic troubleshooting for egress traffic from an AKS cluster, follow these steps:
 
-1. [Make sure that the Domain Name System (DNS) resolution for the endpoint works correctly](#check-whether-the-cluster-can-reach-the-endpoint-through-the-network).
+1. [Make sure that the Domain Name System (DNS) resolution for the endpoint works correctly](#check-whether-the-pod-and-the-node-can-reach-the-endpoint).
 
 1. Make sure that you can reach the endpoint through an IP address.
 
@@ -122,7 +127,7 @@ For basic troubleshooting for egress traffic from an AKS cluster, follow these s
 
 1. Check whether the AKS service principal or managed identity has the required [AKS service permissions](/azure/aks/concepts-identity#aks-service-permissions) to make the network changes to Azure resources.
 
-### Check whether the DNS resolution is successful for the endpoint
+### Check whether the pod and the node can reach the endpoint
 
 From within the pod, you can run a DNS lookup to the endpoint.
 
@@ -132,7 +137,7 @@ What if you can't run the [kubectl exec](https://kubernetes.io/docs/reference/ge
 >
 > If the DNS resolution or egress traffic doesn't let you install the necessary network packages, you can use the `rishasi/ubuntu-netutil:1.0` docker image. In this image, the required packages are already installed.
 
-Here's an example procedure for checking DNS resolution of a Linux pod:
+#### Example procedure for checking DNS resolution of a Linux pod
 
 1. Start a test pod in the same namespace as the problematic pod:
 
@@ -145,8 +150,11 @@ Here's an example procedure for checking DNS resolution of a Linux pod:
 1. Run the following `apt-get` commands to install other tool packages:
 
    ```bash
+   # Update to the latest
    apt-get update -y   
-   apt-get install -y dnsutils && apt-get install netcat-traditional -y && apt-get install curl -y
+
+   # Install tool packages
+   apt-get install -y dnsutils && apt-get install netcat-traditional -y && apt-get install curl -y && apt-get install -y traceroute
    ```
 
 1. After the packages are installed, run the [nslookup](/windows-server/administration/windows-commands/nslookup) command to test the DNS resolution to the endpoint:
@@ -196,8 +204,33 @@ Here's an example procedure for checking DNS resolution of a Linux pod:
    
    Received 2121 bytes from 10.0.0.10#53 in 232 ms
    ```
+1. Also, if DNS resolution has issues, check the route to the endpoint to determine whether there's a time-out at a specific operation:
 
-Here's an example procedure for checking DNS resolution of a Windows pod:
+   ```bash
+   traceroute -T microsoft.com -m 50 -p 443
+   ```
+
+Sometimes there is a problem with the endpoint itself rather than a cluster DNS issues. In preparation for such cases, also check below.
+
+1. Check whether the desired port is open on the remote host:
+
+   ```bash
+   nc -z -v microsoft.com 443
+   ```
+
+1. Check the HTTP response code:
+
+   ```bash
+   curl -Iv https://microsoft.com
+   ```
+
+1. Check whether you can connect to any other endpoint:
+
+   ```bash
+   curl -Iv https://kubernetes.io
+   ```
+
+#### Example procedure for checking DNS resolution of a Windows pod
 
 1. Run a test pod in the Windows node pool:
 
@@ -246,9 +279,9 @@ Here's an example procedure for checking DNS resolution of a Windows pod:
    IP4Address : 23.200.197.152
    ```
 
-You should also check whether the endpoint is reachable from the node. Then, verify the DNS settings in the node. Follow these steps:
+You should also verify that the endpoint is reachable from the node where the problematic pod is in. Verify the DNS settings as well. Follow these steps:
 
-1. [Connect to Azure Kubernetes Service (AKS) cluster nodes for maintenance or troubleshooting](/azure/aks/node-access).
+1. Enter the node where the problematic pod is in through the debug pod. Refer to the [Connect to Azure Kubernetes Service (AKS) cluster nodes for maintenance or troubleshooting](/azure/aks/node-access) for information on how to enter.
 
 1. Test the DNS resolution to the endpoint:
 
@@ -280,37 +313,6 @@ You should also check whether the endpoint is reachable from the node. Then, ver
 In one unusual scenario that involves DNS resolution, the DNS queries get a correct response from the node but fail from the pod. For this scenario, you might consider [checking DNS resolution failures from inside the pod but not from the worker node](troubleshoot-dns-failure-from-pod-but-not-from-worker-node.md). If you want to inspect DNS resolution for an endpoint across the cluster, you can consider [checking DNS resolution status across the cluster](troubleshoot-dns-failures-across-an-aks-cluster-in-real-time.md#step-3-verify-the-health-of-the-upstream-dns-servers).
 
 If the DNS resolution is successful, continue to the network tests. Otherwise, verify the DNS configuration for the cluster.
-
-### Check whether the cluster can reach the endpoint through the network
-
-To determine whether you can reach the endpoint through the network from your cluster, follow these steps:
-
-1. Check the route to the endpoint to determine whether there's a time-out at a specific operation:
-
-   ```bash
-   kubectl run -it --rm aks-ssh --namespace <namespace> --image=debian:stable --overrides='{"spec": { "nodeSelector": {"kubernetes.io/os": "linux"}}}'
-   apt-get update -y
-   apt-get install -y traceroute && apt-get install netcat-traditional -y && apt-get install curl -y
-   traceroute -T microsoft.com -m 50 -p 443
-   ```
-
-1. Check whether the desired port is open on the remote host:
-
-   ```bash
-   nc -z -v microsoft.com 443
-   ```
-
-1. Check the HTTP response code:
-
-   ```bash
-   curl -Iv https://microsoft.com
-   ```
-
-1. Check whether you can connect to any other endpoint:
-
-   ```bash
-   curl -Iv https://kubernetes.io
-   ```
 
 [!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
