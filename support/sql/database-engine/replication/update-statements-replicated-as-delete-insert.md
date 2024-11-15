@@ -23,7 +23,7 @@ The default behavior in transactional replication is to use the `INSERT`, `UPDAT
 
 `INSERT` statements made at the Publisher are applied to subscribers through an `INSERT` stored procedure call. Similarly, a `DELETE` statement is applied through a `DELETE` stored procedure call.
 
-However, when an `UPDATE` statement is executed as a "deferred update", the logreader agent places a pair of `DELETE`/`INSERT` stored procedure calls in the distribution database to be applied to the Subscribers rather than an update stored procedure call. For example, suppose you have a publishing table, named `TABLE1`, with these three columns:
+However, when an `UPDATE` statement is executed as a "deferred update", the log reader agent places a pair of `DELETE`/`INSERT` stored procedure calls in the distribution database to be applied to the Subscribers rather than an update stored procedure call. For example, suppose you have a publishing table, named `TABLE1`, with these three columns:
 
 - col1 int
 - col2 int
@@ -37,7 +37,7 @@ When you execute this code:
 UPDATE TABLE1 set col1 = 3 where col3 = 'Dallas'
 ```
 
-The `UPDATE` statement is implemented by SQL Server as a pair of `DELETE`/`INSERT` statements since you're updating `col1`, which has a unique index defined. Thus, the logreader places a pair of `DELETE`/`INSERT` calls in the distribution database. This can impact any business logic that is present in the triggers or custom stored procedures at the Subscriber. You should incorporate the additional business logic in `DELETE` and `INSERT` triggers or stored procedures to handle this situation.
+The `UPDATE` statement is implemented by SQL Server as a pair of `DELETE`/`INSERT` statements since you're updating `col1`, which has a unique index defined. Thus, the log reader places a pair of `DELETE`/`INSERT` calls in the distribution database. This can impact any business logic that is present in the triggers or custom stored procedures at the Subscriber. You should incorporate the additional business logic in `DELETE` and `INSERT` triggers or stored procedures to handle this situation.
 
 If you prefer to use single logic and you want all your `UPDATE` commands replicated as `DELETE`/`INSERT` pairs, you can enable [Trace Flag 8207](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf8207).
 
@@ -49,7 +49,7 @@ In the preceding example, assume that you also have a horizontal filter defined 
 UPDATE table1 set col3 = 'New York' where col1 = 3
 ```
 
-The logreader agent only places a `DELETE` stored procedure call to be applied to the subscribers since the updated row doesn't meet the horizontal filter criteria.
+The log reader agent only places a `DELETE` stored procedure call to be applied to the subscribers since the updated row doesn't meet the horizontal filter criteria.
 
 Now, if you execute this code:
 
@@ -57,6 +57,6 @@ Now, if you execute this code:
 UPDATE table1 set col3 = 'Dallas' where col1 = 3
 ```
 
-The logreader generates only the `INSERT` stored procedure call, since the row didn't previously meet the filter condition.
+The log reader generates only the `INSERT` stored procedure call, since the row didn't previously meet the filter condition.
 
 Although an `UPDATE` operation was performed at the Publisher, only the appropriate commands are applied at the Subscriber.
