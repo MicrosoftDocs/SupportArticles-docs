@@ -2,7 +2,7 @@
 title: Could not read the application certificate when creating connection with CyberArk credential
 description: Solves an error that occurs when you create a desktop flow connection using a CyberArk credential in Microsoft Power Automate.
 ms.custom: sap:Desktop flows\Cannot create desktop flow connection
-ms.date: 11/11/2024
+ms.date: 11/15/2024
 ms.author: quseleba 
 author: QuentinSele
 ---
@@ -22,7 +22,7 @@ The error message occurs because the credential used in the connection can't be 
 
 ## Resolution
 
-If you use Power Automate with a version earlier than 2.50, you can upgrade to version 2.50 or later. After the upgrade, when you create a desktop flow connection using a CyberArk credential, you might see an error message with specific details on what went wrong. The details will give you enough information to solve the problem.
+If you use [Power Automate for desktop installer version](/power-platform/released-versions/power-automate-desktop#all-power-automate-desktop-versions) earlier than 2.50, you can upgrade to version 2.50 or later. After the upgrade, when you create a desktop flow connection using a CyberArk credential, you might see an error message with specific details on what went wrong. The details will give you enough information to solve the problem.
 
 Check the following sections for some specific error messages and their resolutions:
 
@@ -46,7 +46,10 @@ To solve this issue:
 
 This error occurs because the object name doesn't match a CyberArk secret that the configured application can retrieve.
 
-To solve this issue, change the object name or confirm with your CyberArk team that the application has access to the CyberArk safe that contains the object.
+To solve this issue,
+
+1. Use the [Get accounts API](https://docs.cyberark.com/pam-self-hosted/latest/en/content/sdk/getaccounts.htm?tocpath=Developer%7CREST%20APIs%7CAccounts%7C_____1) to get a list of all the accounts in the Vault.
+1. If no account name matches with the object name, update the object name in Power Automate with an existing account, or confirm with your CyberArk team that the application has access to the CyberArk safe that contains the object.
 
 ## "The CyberArk server was unable to verify the certificate, please confirm that the CyberArk server is correctly configured for SSL authentication."
 
