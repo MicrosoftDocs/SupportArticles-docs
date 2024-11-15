@@ -113,6 +113,8 @@ kubectl logs <pod-name> --namespace <pod-namespace> --container istio-proxy
 
 The following troubleshooting steps describe how to collect information and debug your mesh environment by running various `istioctl` commands.
 
+All `istioctl` commands must be run with the `--istioNamespace aks-istio-system` flag to point to the AKS add-on installation of Istio.
+
 > [!WARNING]
 > Some `istioctl` commands send requests to all sidecars.
 
