@@ -56,7 +56,7 @@ This error occurs because a lock exists on your repository, manifest, or image l
 > [!NOTE]
 > You must replace the values of the `--name`, `--registry`, `--repository` and `--image` parameters in the following commands.
 
-1. Check if there are any locks at the repository level. In the output, if `writeEnabled` is `false`, the repository is locked.
+1. Check if there are any locks at the repository level. 
 
     ```CLI
     az acr repository show --name myregistry --repository myrepo --output jsonc
@@ -72,6 +72,25 @@ This error occurs because a lock exists on your repository, manifest, or image l
     ```CLI
     az acr repository show --name myregistry --image imagename:tag --output jsonc
     ```
+Example of the output:
+
+```output
+{
+  "changeableAttributes": {
+    "deleteEnabled": false,
+    "listEnabled": true,
+    "readEnabled": true,
+    "writeEnabled": false
+  },
+  "createdTime": "2024-08-20T15:22:51.0355721Z",
+  "imageName": "myImage_0a1c809cc2eb596028fcf7a68e498e09",
+  "lastUpdateTime": "2024-08-20T15:23:01.2739647Z",
+  "manifestCount": 1,
+  "registry": "myACR.azurecr.io",
+  "tagCount": 2
+}
+
+If the `writeEnabled` is set to false, this means that the repository or image is locked from delete operations. 
 
 ### Solution
 
