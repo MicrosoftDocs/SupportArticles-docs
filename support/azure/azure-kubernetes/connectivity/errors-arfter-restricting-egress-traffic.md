@@ -30,7 +30,7 @@ Verify that your configuration doesn't conflict with any of the [required Outbou
 - Application rules
 
 > [!NOTE]
-> The AKS outbound dependencies are almost entirely defined for FQDNs. These names don't have static addresses behind them. The lack of static addresses means that you can't use network security groups (NSGs) to restrict outbound traffic from an AKS cluster.
+> The AKS outbound dependencies are almost entirely defined by using FQDNs. These FQDNs don't have static addresses behind them. The lack of static addresses means that you can't use network security groups (NSGs) to restrict outbound traffic from an AKS cluster.
 
 ## More information
 
