@@ -12,7 +12,7 @@ author: fredg
 
 This article provides troubleshooting steps for an issue occurs during the desktop flow run with error code MaxRDSessionDurationReached or SessionHasLoggedOffWithMaxIdleTime in the cloud environment in Microsoft Power Automate.
 
-# Symptoms
+## Symptoms
 The desktop flow ended with error specifying a registry value name with a specific registry path:
 
 ```json
