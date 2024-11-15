@@ -4,7 +4,7 @@ description: Resolves the Field Service Settings area missing in the Microsoft D
 author: JonBaker007
 ms.author: jobaker
 ms.reviewer: mhart
-ms.date: 10/28/2024
+ms.date: 11/15/2024
 ms.custom: sap:Mobile application
 ---
 
@@ -18,7 +18,7 @@ The Field Service Mobile app module doesn't show the settings area, blocking adm
 
 The new mobile experience settings toggle is available through a new navigation area that comes with the default Field Service Mobile app module. Users need *write* permissions for the `FieldServiceSetting` entity to access this area. Default security roles like System Admin or Field Service Admin roles have that permission automatically.
 
-If any customizations were made on the sitemap of the out-of-box Field Service Mobile app module between release version 6.1 and 6.3 in 2023, there are two options to enable the settings area:
+There are two options to enable the settings area:
 
 - [Remove the sitemap customization layer and manually customize it again](#remove-the-sitemap-customization-layer-and-manually-customize-it-again).
 - [Manually add the settings area and toggle to the sitemap](#manually-add-settings-area-and-toggle-to-sitemap).
