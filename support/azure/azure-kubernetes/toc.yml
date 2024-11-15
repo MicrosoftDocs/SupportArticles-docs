@@ -367,5 +367,9 @@
       href: extensions/changes-in-kubernetes-event-driven-autoscaling-add-on-214-215.md
   - name: Troubleshoot by Error codes 
     items:
+    - name: VMExtensionError_OutboundConnFail error (50)
+      href: error-codes/VMExtensionError_OutboundConnFail.md
     - name: VMExtensionError_K8SAPIServerConnFail error (51)
       href: error-codes/VMExtensionError_K8SAPIServerConnFail.md
+    - name: VMExtensionError_K8SAPIServerDNSLookupFail error (52)
+      href: error-codes/VMExtensionError_K8SAPIServerDNSLookupFail.md
