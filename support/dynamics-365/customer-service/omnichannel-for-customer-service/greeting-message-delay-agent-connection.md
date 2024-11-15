@@ -5,6 +5,7 @@ ms.reviewer: laalexan
 ms.author: srubinstein
 ms.date: 02/23/2024
 ms.custom: sap:Voice channel
+ms.collection: CEnSKM-ai-copilot
 ---
 # Incoming voice calls with long greeting messages cause connection delays
 
