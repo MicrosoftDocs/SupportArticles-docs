@@ -367,6 +367,8 @@
       href: extensions/changes-in-kubernetes-event-driven-autoscaling-add-on-214-215.md
   - name: Troubleshoot by Error codes 
     items:
+    - name: VMExtensionError_CniDownloadTimeout error (41)
+      href: error-codes/VMExtensionError_CniDownloadTimeout.md
     - name: VMExtensionError_OutboundConnFail error (50)
       href: error-codes/VMExtensionError_OutboundConnFail.md
     - name: VMExtensionError_K8SAPIServerConnFail error (51)
