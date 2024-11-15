@@ -183,7 +183,7 @@ File Explorer calls an RPC API directly to the server (Azure Files) to translate
 
 ### Solution
 
-From a domain-joined client, you can use the following PowerShell command to view all items in a directory and their owner, including UPN: 
+On a domain-joined client, use the following PowerShell command to view all items in a directory and their owner, including UPN: 
 
 ```PowerShell
 Get-ChildItem <Path> | Get-ACL | Select Path, Owner
