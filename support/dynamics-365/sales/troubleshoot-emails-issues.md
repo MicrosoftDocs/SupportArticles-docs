@@ -6,7 +6,6 @@ ms.author: shjais
 ms.reviewer: lavanyakr, aam, veparim
 ms.date: 03/12/2024
 ms.subservice: d365-sales-sales
-ms.collection: CEnSKM-ai-copilot
 ---
 # Troubleshoot issues with emails
 

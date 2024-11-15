@@ -5,7 +5,6 @@ ms.reviewer: nenellim
 ms.author: yangao
 ms.date: 07/01/2024
 ms.custom: sap:Copilot Studio\End conversation
-ms.collection: CEnSKM-ai-copilot
 ---
 # Power Virtual Agents bot conversations appear as active on the dashboard after a user ends a chat
 

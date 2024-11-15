@@ -6,7 +6,6 @@ ms.author: shjais
 ms.reviewer: ladirohit, lavanyakr
 ms.date: 03/15/2024
 ms.subservice: d365-sales-sales
-ms.collection: CEnSKM-ai-copilot
 ---
 # Troubleshoot issues with forecasting
 
@@ -124,7 +123,7 @@ To resolve this error, activate the **ForecastInstanceActions** process. Follow 
 
 ### Cause
 
-You don’t have enough privileges for **Forecast Configuration** entity to view drill down data in the forecast grid. The error shown in the following image is displayed.
+You don't have enough privileges for **Forecast Configuration** entity to view drill down data in the forecast grid. The error shown in the following image is displayed.
 
 > Something went wrong.  
 > There was an error in retrieving the forecast records.  

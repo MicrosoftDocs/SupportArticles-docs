@@ -5,7 +5,6 @@ ms.reviewer: nenellim
 ms.author: yangao
 ms.date: 07/01/2024
 ms.custom: sap:Copilot Studio\Agent transfer
-ms.collection: CEnSKM-ai-copilot
 ---
 # Missing required variables and actions during agent transfers from Power Virtual Agents bots
 
