@@ -56,18 +56,18 @@ This error occurs because a lock exists on your repository, manifest, or image l
 > [!NOTE]
 > You must replace the values of the `--name`, `--registry`, `--repository` and `--image` parameters in the following commands.
 
-1. Check if there is any lock at the repository level. In the output, if `writeEnabled` is `false`, the repository is locked.
+1. Check if there are any locks at the repository level. In the output, if `writeEnabled` is `false`, the repository is locked.
 
     ```CLI
     az acr repository show --name myregistry --repository myrepo --output jsonc
     ```
-2. Check if there is any lock in the repository manifest digest level:
+2. Check locks at the repository manifest digest level:
 
     ```CLI
 
     az acr manifest list-metadata -registry myregistry -name myrepo      
     ```
-3. Check if any lock in the repository image tag level:
+3. Check locks at the repository image tag level:
 
     ```CLI
     az acr repository show --name myregistry --image imagename:tag --output jsonc
