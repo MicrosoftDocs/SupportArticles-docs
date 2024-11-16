@@ -8,13 +8,13 @@ ms.custom: sap:Delete images from registry
 ---
 # Troubleshoot Azure Container Registry delete operation issues
 
-Azure Container Registry (ACR) is a private registry service for building, storing, and managing container images and related artifacts. To maintain the registry's health and reduce storage costs, you might delete images, artifacts, and repositories as needed.
+Azure Container Registry (ACR) is a private registry service for building, storing, and managing container images and related artifacts. To maintain the registry's health and reduce storage costs, you might delete images, artifacts, and repositories as necessary.
 
 This article helps you troubleshoot some issues that occur when you delete images, artifacts, or repositories.
 
-## Issue 1: Unable to delete an empty repository
+## Issue 1: Can't delete an empty repository
 
-When you try to delete an empty repository from a container registry, an error like the following one is thrown:
+When you try to delete an empty repository from a container registry, an error message that resembles the following message is generated:
 
 - Error when using the Azure portal: 
 
@@ -24,29 +24,30 @@ When you try to delete an empty repository from a container registry, an error l
 
     > 2024-05-08 12:14:04.261355 Error: repository name not known to registry. Correlation ID: aaaa0000-bb11-2222-33cc-444444dddddd
 
-This error occurs because some orphaned metadata is left behind when the images were initially deleted. To avoid this error, don't empty the repository. Instead, deleting the entire repository is always simpler, as it deletes all images in the repository, including all tags, unique layers, and manifests. 
+This error occurs because some orphaned metadata is left behind when the images are initially deleted. To avoid this error, don't empty the repository. Instead, delete the entire repository. This process is more effective because it deletes all images in the repository, including all tags, unique layers, and manifests. 
 
-If you want to delete the repository, you can add a dummy image and then delete the entire repository.
+If you want to delete the repository, you can add a dummy image, and then delete the entire repository.
 
-## Issue 2: Unable to delete a container registry associated with private endpoints
+## Issue 2: Can't delete a container registry associated with private endpoints
 
-If an Azure container registry is associated with private endpoints, deleting the container registry fails. Before deleting it, you must remove all private endpoints associated with it. You can do this using the Azure portal or the [az acr private-endpoint-connection delete](/cli/azure/acr/private-endpoint-connection#az-acr-private-endpoint-connection-delete) command. For more information, see [Manage private endpoint connections](/azure/container-registry/container-registry-private-link#manage-private-endpoint-connections).
+If an Azure container registry is associated with private endpoints, deleting the container registry fails. Before you can delete it, you must remove all private endpoints that are associated with it. To do this, use the Azure portal or the [az acr private-endpoint-connection delete](/cli/azure/acr/private-endpoint-connection#az-acr-private-endpoint-connection-delete) command. For more information, see [Manage private endpoint connections](/azure/container-registry/container-registry-private-link#manage-private-endpoint-connections).
 
 ## Issue 3: Delete operation doesn't clear used storage
 
 When you run the `acr purge` command in an ACR task to delete lots of images, the storage usage doesn't decrease.
 
-In ACR, each image has its corresponding unique manifest and manifest digest. However, different images might share the same layers. See the following screenshot for an example:
+In ACR, each image has its corresponding unique manifest and manifest digest. However, different images might share the same layers. See the following screenshot for an example.
 
  :::image type="content" source="media/delete-operation-issues/container-image-manifest-layer.png" alt-text="Screenshot that shows how the container image is stored.":::
 
-To save the storage in ACR, layers referenced by multiple different manifests are stored only once.
+To save the storage in ACR, layers that are referenced by multiple different manifests are stored only one time.
 
-Based on the preceding screenshot, if you delete image B, the manifest and manifest digest will be cleaned up. At the layer level, only layer 4 will be deleted, and layers 1 and 2 will remain in the ACR storage as another manifest still references them. Hence, the storage reduction will be less than expected.
+Based on the preceding screenshot, if you delete image B, the manifest and manifest digest will be cleaned up. At the layer level, only layer 4 will be deleted, and layers 1 and 2 will remain in the ACR storage because another manifest still references them. Therefore, the storage reduction will be less than expected.
 
 ## Issue 4: The operation is disallowed error when deleting ACR repository
 
-You may receive the following error when you try to delete an ACR repository:
+You receive the following error message when you try to delete an ACR repository:
+
 > `The operation is disallowed on this registry, repository or image.`
 
 ### Cause
@@ -54,9 +55,9 @@ You may receive the following error when you try to delete an ACR repository:
 This error occurs because a lock exists on your repository, manifest, or image layer. Use the following commands to check for locks.
 
 > [!NOTE]
-> You must replace the values of the `--name`, `--registry`, `--repository` and `--image` parameters in the following commands.
+> In the following commands, you must replace the values of the `--name`, `--registry`, `--repository`, and `--image` parameters.
 
-1. Check if there are any locks at the repository level. 
+1. Check whether there are any locks at the repository level. 
 
     ```CLI
     az acr repository show --name myregistry --repository myrepo
@@ -89,8 +90,9 @@ Example of the output:
   "registry": "myACR.azurecr.io",
   "tagCount": 2
 }
+```
 
-If the `writeEnabled` is set to false, this means that the repository or image is locked from delete operations. 
+If the `writeEnabled` attribute is set to false, this means that the repository or image is locked against delete operations. 
 
 ### Solution
 
