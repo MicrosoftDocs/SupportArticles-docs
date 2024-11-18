@@ -72,22 +72,22 @@ To check and verify the value of the `IconHandler` subkey and its associated Cla
 
     In the following example, the value is `{00021401-0000-0000-C000-000000000046}`.
 
-   :::image type="content" source="media/application-shortcuts-show-blank-icons/iconhandler-value.png" alt-text="Screenshot that shows the default value of IconHandler.":::
+    :::image type="content" source="media/application-shortcuts-show-blank-icons/iconhandler-value.png" alt-text="Screenshot that shows the default value of IconHandler.":::
 
 1. Navigate to `HKEY_CLASSES_ROOT\CLSID\{00021401-0000-0000-C000-000000000046}`
 
-   > [!NOTE]
-   > The hexadecimal (hex) value is the one you found in the preceding step.
+    > [!NOTE]
+    > The hexadecimal (hex) value is the one you found in the preceding step.
 
     Make sure that the `(Default)` value in this key is `Shortcut`.
 
-   :::image type="content" source="media/application-shortcuts-show-blank-icons/clsid-value.png" alt-text="Screenshot that shows the default value is Shortcut.":::
+    :::image type="content" source="media/application-shortcuts-show-blank-icons/clsid-value.png" alt-text="Screenshot that shows the default value is Shortcut.":::
 
 1. Navigate to the `HKEY_CLASSES_ROOT\CLSID\{00021401-0000-0000-C000-000000000046}\InProcServer32` subkey.
 
     Make sure that the `(Default)` value in this key is `C:\Windows\System32\windows.storage.dll`.
 
-   :::image type="content" source="media/application-shortcuts-show-blank-icons/inprocserver32-value.png" alt-text="Screenshot that shows the default value of InProcServer32.":::
+    :::image type="content" source="media/application-shortcuts-show-blank-icons/inprocserver32-value.png" alt-text="Screenshot that shows the default value of InProcServer32.":::
 
 ## Scenario: Missing network/internet icon on taskbar**
 
