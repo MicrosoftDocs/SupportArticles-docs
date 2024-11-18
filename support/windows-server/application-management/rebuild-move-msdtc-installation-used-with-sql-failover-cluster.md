@@ -1,11 +1,11 @@
 ---
 title: How to rebuild or move an MSDTC installation for use with a SQL failover cluster
 description: Describes how to rebuild a broken MSDTC installation for use with a failover clustered SQL Server installation, and how to move the MSDTC clustered resource to a new group.
-ms.date: 11/14/2024
+ms.date: 11/20/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika
+ms.reviewer: kaushika,jdeffenbaugh
 ms.custom: sap:Application Technologies and Compatibility\DTC startup, configuration, connectivity, and cluster, csstroubleshoot
 ---
 # How to rebuild or move an MSDTC installation for use with a SQL failover cluster
@@ -53,6 +53,8 @@ $SqlRole = <Actual name of the role containing the SQL Server instance>
 $SqlNetName = <Actual SQL Servernetwork resourcename>
 $VSqlSrv = <Actual SQL Server virtual server name>
 $CluDsk = <Actual disk resource name>
+
+Add-ClusterResource -Name $VSqlSrv -ResourceType "Distributed Transaction Coordinator" -Group $SqlRole
 
 # NOTE: If the MSDTC resource did not accept the name provided you can alter the name using the following Powershell replacing the New Distributed Transaction Coordinator with RealSqlVsName:
 
