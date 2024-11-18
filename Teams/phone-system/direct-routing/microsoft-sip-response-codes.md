@@ -38,11 +38,14 @@ A key factor in troubleshooting Direct Routing issues is determining whether the
 
 For more information about the most common errors and suggested actions to further troubleshoot and mitigate the issue, select a SIP response code from the following list:
 
+- [400 Bad Request](./microsoft-sip-response-codes-400.md)
+- [402 Payment Required](./microsoft-sip-response-codes-402.md)
 - [403 Forbidden](./microsoft-sip-response-codes-403.md)
 - [404 Not Found](./microsoft-sip-response-codes-404.md)
 - [408 Request Timeout](./microsoft-sip-response-codes-408.md)
 - [410 Gone](./microsoft-sip-response-codes-410.md)
 - [412 Conditional Request Failed](./microsoft-sip-response-codes-412.md)
+- [420 Bad Extension](./microsoft-sip-response-codes-420.md)
 - [480 Temporarily Unavailable](./microsoft-sip-response-codes-480.md)
 - [484 Address Incomplete](./microsoft-sip-response-codes-484.md)
 - [486 Busy Here](./microsoft-sip-response-codes-486.md)

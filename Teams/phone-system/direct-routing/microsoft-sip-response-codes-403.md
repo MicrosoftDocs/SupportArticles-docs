@@ -1,7 +1,7 @@
 ---
 title: SIP 403 and Microsoft response codes
 description: Lists combinations of Microsoft response codes and the SIP 403 error, and provides actions to resolve the errors.
-ms.date: 10/30/2023
+ms.date: 11/18/2024
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -65,6 +65,24 @@ This article provides troubleshooting information for various combinations of th
 - SIP response code: **403**
 - Suggested actions:  
   - Check the [inbound call blocking settings](/microsoftteams/block-inbound-calls) for blocked caller numbers.
+
+## 510546 403 Get Outbound Direct routing - no trunk config found by LBR selection criteria
+
+- Microsoft response code: **510546**
+- SIP response code: **403**
+- Suggested actions:  
+  - If you use [Location-Based Routing](/microsoftteams/location-based-routing-plan) for Direct Routing, check the settings and determine if toll bypass is restricted for the affected user's location. If so, this error is expected and no action is required. Otherwise, fix any misconfiguration.
+  - If you don't use Direct Routing, check whether the [PreventTollBypass](/powershell/module/teams/set-csteamscallingpolicy?view=teams-ps#-preventtollbypass&preserve-view=true) setting in your Teams calling policy is set to **True**. To check the setting, run the following PowerShell command and look for the **PreventTollBypass** setting in the result:
+
+    ```powershell
+    Get-CsTeamsCallingPolicy -Identity <PolicyName>
+    ```
+
+    If it's set to **True**, run the [Set-CsTeamsCallingPolicy](/powershell/module/teams/set-csteamscallingpolicy?view=teams-ps&preserve-view=true) PowerShell command to set it to **False**:
+
+    ```powershell
+    Set-CsTeamsCallingPolicy -Identity <PolicyName> -PreventTollBypass $false
+    ```
 
 ## 510560 403 User is not Enterprise Voice enabled
 
