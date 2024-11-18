@@ -39,6 +39,8 @@
           href: ../calendaring/outlook-calendar-displays-working-hours-as-grey.md
         - name: Can't delete calendar items
           href: ../calendaring/cannot-delete-calendar-items.md
+        - name: Can't globally disable the birthday calendar
+          href: ../calendaring/cannot-globally-disable-birthday-calendar.md
         - name: Can't send a response to a meeting request
           href: ../calendaring/cannot-send-response-to-meeting-request.md
         - name: Can't add an Internet calendar
@@ -329,7 +331,7 @@
           href: ../message-body/url-multiple-slashes-become-single-slash.md
         - name: No subject or content in automatic emails
           href: ../message-body/no-subject-content-in-automatically-email.md
-        - name: Record videos in Loop
+        - name: Record videos in Outlook and Loop
           href: ../message-body/record-videos-in-outlook-and-loop.md
         - name: Strange characters in message body
           href: ../message-body/strange-characters-display-message-body.md
