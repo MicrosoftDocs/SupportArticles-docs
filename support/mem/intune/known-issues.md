@@ -31,7 +31,7 @@ For more information about this known issue, see our blog [Remediation message d
 
 - **Status:** Active
 
-There's a known issue (originally posted on the Service Health Dashboard as IT393575) where occasionally the enrollment of a macOS device fails or the device might become unenrolled because of the MDM agent's mishandling of failed MDM certificate installations. When this issue occurs and the MDM agent doesn't receive the expected headers, the client removes its MDM enrollment profile automatically. To fix this issue, you have to re-enroll the device.
+There's a known issue (originally posted on the Service Health Dashboard as IT393575) where, occasionally, the enrollment of a macOS device fails or the device might become unenrolled because the MDM agent mishandles failed MDM certificate installations. When this issue occurs and the MDM agent doesn't receive the expected headers, the client automatically removes its MDM enrollment profile. To fix this issue, you have to re-enroll the device.
 
 ## Android 12 clipboard data toast notification
 
