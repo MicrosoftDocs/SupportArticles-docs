@@ -1,7 +1,7 @@
 ---
 title: Slow attach and detach operations for an Azure disk
 description: Troubleshoot why attach and detach operations are slow when you use an Azure disk for storage on your Azure Kubernetes Service (AKS) clusters.
-ms.date: 06/10/2022
+ms.date: 11/18/2024
 ms.reviewer: chiragpa, nickoman, v-leedennis
 ms.service: azure-kubernetes-service
 keywords:
@@ -23,7 +23,7 @@ Attaching and detaching Azure disks takes more time than expected if there are a
 
 ## Cause
 
-The operations are done sequentially. This limitation is a known issue with the in-tree Azure disk driver (`kubernetes.io/azure-disk`).
+The operations are done sequentially. This limitation is a known issue with the in-tree Azure disk driver (`kubernetes.io/azure-disk`).The usage of in-tree driver was deprecated in since aks 1.21, we are using the CSI as the standard. You should migrate your data smoothly using this [migrate csi-in-tree-volumes](https://github.com/MicrosoftDocs/azure-aks-docs/blob/main/articles/aks/csi-migrate-in-tree-volumes.md)
 
 ## Workaround
 
