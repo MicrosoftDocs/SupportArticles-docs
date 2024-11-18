@@ -40,7 +40,7 @@ In ACR, each image has its corresponding unique manifest and manifest digest. Ho
 
  :::image type="content" source="media/delete-operation-issues/container-image-manifest-layer.png" alt-text="Screenshot that shows how the container image is stored.":::
 
-To save the storage in ACR, layers that are referenced by multiple different manifests are stored only one time.
+To save the storage space in ACR, layers that are referenced by multiple different manifests are stored only one time.
 
 Based on the preceding screenshot, if you delete image B, the manifest and manifest digest will be cleaned up. At the layer level, only layer 4 will be deleted, and layers 1 and 2 will remain in the ACR storage because another manifest still references them. Therefore, the storage reduction will be less than expected.
 
