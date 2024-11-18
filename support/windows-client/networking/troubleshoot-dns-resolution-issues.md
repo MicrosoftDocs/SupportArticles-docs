@@ -118,7 +118,7 @@ In this case, when you perform a DNS resolution by using the `Resolve-DnsName co
 
 By design, the DNS client will start sending this query to the DNS servers configured in a specific order and wait for a response within a specific grace period.
 
-This process can be seen in Wireshark with the filter "`dns.qry.name == contoso.com`".
+This process can be seen in Wireshark with the filter "`dns.qry.name == contoso.com`."
 
 The Wireshark output shows that the query takes nearly four seconds to complete. From a networking perspective, this duration can be lengthy and might cause some applications to time out.
 
@@ -161,7 +161,7 @@ In this case, when you perform a name resolution using the `Resolve-DnsName inte
 136 04:33:38.476248 10.0.1.10   10.0.1.2    DNS 80  Standard query 0x611f A internal.contoso.com
 ```
 
-Note If you need to test a specific query, you can add a trailing (.) at the end.  For example, `internal.contoso.com.`
+Note If you need to test a specific query, you can add a trailing (.) at the end. For example, `internal.contoso.com.`
 
 ## Measure how long a DNS resolution query takes
 
