@@ -45,7 +45,7 @@ This article provides troubleshooting information for various combinations of th
   - Verify that [compliance recording](/microsoftteams/teams-recording-policy) is set up correctly, including provisioning of the recorder bot.
   - Work with the compliance recording partner who provides the recorder service to check why the bot can't be invited.
   
-## 510532 403 Get Inbound Direct routing - RuntimeApi trunk config not found for customer
+## 510532 403 Get Inbound Direct Routing - RuntimeApi trunk config not found for customer
 
 - Microsoft response code: **510532**
 - SIP response code: **403**
@@ -59,14 +59,14 @@ This article provides troubleshooting information for various combinations of th
 - Suggested actions:  
   - Verify that the calls are sent from the correct Session Border Controller (SBC) Fully Qualified Domain Name (FQDN) that's associated with your tenant. Also, verify that the FQDN in the Contact header of the SIP INVITE message is registered under your tenant.
 
-## 510534 403 Get Inbound Direct routing - blocked calling number for customer
+## 510534 403 Get Inbound Direct Routing - blocked calling number for customer
 
 - Microsoft response code: **510534**
 - SIP response code: **403**
 - Suggested actions:  
   - Check the [inbound call blocking settings](/microsoftteams/block-inbound-calls) for blocked caller numbers.
 
-## 510546 403 Get Outbound Direct routing - no trunk config found by LBR selection criteria
+## 510546 403 Get Outbound Direct Routing - no trunk config found by LBR selection criteria
 
 - Microsoft response code: **510546**
 - SIP response code: **403**
@@ -78,7 +78,7 @@ This article provides troubleshooting information for various combinations of th
     Get-CsTeamsCallingPolicy -Identity <PolicyName>
     ```
 
-    If it's set to **True**, run the [Set-CsTeamsCallingPolicy](/powershell/module/teams/set-csteamscallingpolicy?view=teams-ps&preserve-view=true) PowerShell command to set it to **False**:
+    If its value is **True**, run the [Set-CsTeamsCallingPolicy](/powershell/module/teams/set-csteamscallingpolicy?view=teams-ps&preserve-view=true) PowerShell command to set it to **False**:
 
     ```powershell
     Set-CsTeamsCallingPolicy -Identity <PolicyName> -PreventTollBypass $false
