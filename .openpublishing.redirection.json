@@ -12369,6 +12369,11 @@
       "source_path": "support/dynamics-365/finance/tax/tcs-troubleshooting-failed-access-tax-service.md",
       "redirect_url": "/troubleshoot/dynamics-365/finance/welcome-finance",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/certificates-and-public-key-infrastructure-pki/restrict-cryptographic-algorithms-protocols-schannel.md",
+      "redirect_url": "/windows-server/security/tls/tls-registry-settings?tabs=diffie-hellman#ciphers",
+      "redirect_document_id": false
     }
   ]
 }
