@@ -26,7 +26,7 @@ Assume that there's an outbound firewall rule that blocks outbound connections o
 
 In this case, when you run the `Resolve-DnsName contoso.com` PowerShell cmdlet with [Wireshark](https://www.wireshark.org/) running, you receive the following error:
 
-```powershell
+```output
 resolve-dnsname : contoso.com : This operation returned because the timeout period expired
 At line:1 char:1
 + resolve-dnsname contoso.com
@@ -48,9 +48,9 @@ If you notice a DNS resolution request with no response, it's helpful to collect
 
 These are standard query requests for host A and host AAAA with no response. Checking the trace can isolate the issue. If you see the UDP packet on the switch, it means that the packet has already left the client machine, and the problem is beyond the client machine.
 
-## Scenario 2: There's an entry for the domain name in the hosts file
+## Scenario 2: There's an entry for the domain name in the Hosts file
 
-Assume that the `hosts` file located at *C:\\Windows\\System32\\drivers\\etc* has an entry for the domain name that you want to resolve. For example:
+Assume that the Hosts file located at *C:\\Windows\\System32\\drivers\\etc* has an entry for the domain name that you want to resolve. For example:
 
 `192.168.1.10`   `contoso.com`
 
@@ -69,10 +69,10 @@ Additionally, no traffic can be detected in Wireshark.
 This is because the DNS client uses the following sequence when resolving names:
 
 1. Check the cache.
-2. Check the `hosts` file.
+2. Check the Hosts file.
 3. Send the query to the DNS server.
 
-Since there's an entry in the hosts file, the DNS client service doesn't query the DNS server.
+Since there's an entry in the Hosts file, the DNS client service doesn't query the DNS server.
 
 ## Scenario 3: The client points to an incorrect or unreachable DNS server
 
@@ -114,11 +114,11 @@ DNS Servers . . . . . . . . . . . : 192.168.0.1
                                     10.0.1.2
 ```
 
-In this case, when you perform a DNS resolution by using the `Resolve-DnsName contoso.com` PowerShell cmdlet, all those DNS server addresses except 10.0.1.2 aren't reachable.
+In this case, when you perform a DNS resolution by using the `Resolve-DnsName contoso.com` PowerShell cmdlet, all those DNS server addresses except `10.0.1.2` aren't reachable.
 
 By design, the DNS client will start sending this query to the DNS servers configured in a specific order and wait for a response within a specific grace period.
 
-This process can be seen in Wireshark with the filter "`dns.qry.name == contoso.com`."
+This process can be seen in Wireshark with the filter `dns.qry.name == contoso.com`.
 
 The Wireshark output shows that the query takes nearly four seconds to complete. From a networking perspective, this duration can be lengthy and might cause some applications to time out.
 
@@ -132,7 +132,7 @@ The Wireshark output shows that the query takes nearly four seconds to complete.
 ```
 
 > [!NOTE]
-> In this scenario, using `nslookup` isn't applicable and will always fail. This is because `nslookup` uses nslookup.exe to contact only the primary DNS server configured, which in this case is `192.168.0.1`.
+> In this scenario, using `nslookup` isn't applicable and will always fail. This is because `nslookup` uses *nslookup.exe* to contact only the primary DNS server configured, which in this case is `192.168.0.1`.
 
 ## Scenario 5: Long DNS suffix search list
 
@@ -161,7 +161,8 @@ In this case, when you perform a name resolution using the `Resolve-DnsName inte
 136 04:33:38.476248 10.0.1.10   10.0.1.2    DNS 80  Standard query 0x611f A internal.contoso.com
 ```
 
-Note If you need to test a specific query, you can add a trailing (.) at the end. For example, `internal.contoso.com.`
+> [!NOTE]
+> If you need to test a specific query, you can add a trailing period (.) at the end. For example, `internal.contoso.com.`
 
 ## Measure how long a DNS resolution query takes
 
@@ -173,3 +174,5 @@ To measure the time taken for a DNS resolution query to complete, run the follow
 ```powershell
 (Measure-Command {Resolve-DnsName -Name contoso.com -Server <IP Address> -DnsOnly}).TotalMilliseconds
 ```
+
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
