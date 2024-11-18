@@ -37,7 +37,7 @@ This article provides troubleshooting information for various combinations of th
 - Suggested actions:  
   - Verify that [Location-Based Routing](/microsoftteams/location-based-routing-plan) is set up correctly, and fix any misconfigurations.  
 
-## 10553 403 Participant call leg has been cancelled because an invite to a required recorder failed
+## 10553 403 Participant call leg has been canceled because an invite to a required recorder failed
 
 - Microsoft response code: **10553**
 - SIP response code: **403**
@@ -57,7 +57,7 @@ This article provides troubleshooting information for various combinations of th
 - Microsoft response code: **510532**
 - SIP response code: **403**
 - Suggested actions:  
-  - Verify that the calls are sent from the correct SBC Fully Qualified Domain Name (FQDN) that's associated with your tenant. Also, verify that the FQDN in the Contact header of the SIP INVITE message is registered under your tenant.
+  - Verify that the calls are sent from the correct Session Border Controller (SBC) Fully Qualified Domain Name (FQDN) that's associated with your tenant. Also, verify that the FQDN in the Contact header of the SIP INVITE message is registered under your tenant.
 
 ## 510534 403 Get Inbound Direct routing - blocked calling number for customer
 
@@ -124,4 +124,4 @@ This article provides troubleshooting information for various combinations of th
 - Microsoft response code: **510559**
 - SIP response code: **403**
 - Suggested actions:  
-  - Make sure that the dialed number in Teams matches a corresponding number pattern in a voice route for the given user. In some cases, this error occurs because an incorrect number is dialed, or the customer's own internal policy prevents calls to specific countries/regions, or number patterns.
+  - Make sure that the dialed number in Teams matches a corresponding number pattern in a voice route for the given user. In some cases, this error occurs because an incorrect number is dialed, or the customer's own internal policy prevents calls to specific country/region, or number patterns.
