@@ -159,13 +159,13 @@ Multiple root causes exist. Known root causes include:
 3. Search for the SPN discovered in step 1 on the the global catalog discovered in step 2.
 
     ```console
-    C:\>repadmin /showattrServer_NameDC=corp,DC=contoso,dc=com <GC used by KDC> <DN path of forest root domain> /filter:"(serviceprincipalname=<SPN cited in the NTDS Replication event 1645>)" /gc /subtree /atts:cn,serviceprincipalname
+    C:\>repadmin /showattr contoso-dc1 DC=corp,DC=contoso,dc=com <GC used by KDC> <DN path of forest root domain> /filter:"(serviceprincipalname=<SPN cited in the NTDS Replication event 1645>)" /gc /subtree /atts:cn,serviceprincipalname
     ```
 
     Or
 
     ```console
-    C:\>dsquery * forestroot -scope subtree -filter "(serviceprincipalname=E3514235-4B06-11D1-AB04-00C04FC2DCD2/65cead9f-4949-46a3-a49a-f1fbfe13d2b3*)" -attr * -sServer_Name.europe.corp.microsoft.com
+    C:\>dsquery * forestroot -scope subtree -filter "(serviceprincipalname=E3514235-4B06-11D1-AB04-00C04FC2DCD2/ff9872f4-663a-4e15-8246-51a251613b58*)" -attr * -s contoso-dc1.corp.contoso.com
     ```
 
     Verify that the host object for the SPN exists.
