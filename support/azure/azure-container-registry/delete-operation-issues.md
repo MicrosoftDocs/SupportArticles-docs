@@ -26,7 +26,7 @@ When you try to delete an empty repository from a container registry, an error m
 
 This error occurs because some orphaned metadata is left behind when the images are initially deleted. To avoid this error, don't empty the repository. Instead, delete the entire repository. This process is more effective because it deletes all images in the repository, including all tags, unique layers, and manifests. 
 
-If you want to delete the repository, you can add a dummy image, and then delete the entire repository.
+Add a dummy image before you the entire repository.
 
 ## Issue 2: Can't delete a container registry associated with private endpoints
 
