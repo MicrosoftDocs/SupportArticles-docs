@@ -49,4 +49,4 @@ This article provides troubleshooting information for various combinations of th
 - Microsoft response code: **531052**
 - SIP response code: **488**
 - Suggested actions:  
-  - Check the SBC configuration to determine why it sends a SIP message with SDP that has a connection address of *0.0.0.0*. This isn’t supported by Microsoft SIP stack. For more information, see [Deviations from the RFCs](/microsoftteams/direct-routing-protocols#deviations-from-the-rfcs).
+  - Check the SBC configuration to determine why it sends a SIP message with SDP that has a connection address of *0.0.0.0*. Microsoft SIP stack doesn't support this scenario. For more information, see [Deviations from the RFCs](/microsoftteams/direct-routing-protocols#deviations-from-the-rfcs).
