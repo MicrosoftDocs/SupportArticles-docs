@@ -18,7 +18,8 @@ Domain Name System (DNS) resolution issues can occur for the following three pri
 - DNS server problems or configurations.
 - Intermediate devices or configurations between a DNS client and a DNS server, or between a DNS server and external resolvers (such as root hints, forwarders, and conditional forwarders), which might require further investigation.
 
-This article focuses on DNS name resolution issues caused by DNS client problems or configurations.
+> [!NOTE]
+> This article focuses on DNS name resolution issues caused by DNS client problems or configurations.
 
 DNS resolution issues can occur in the following scenarios:
 
