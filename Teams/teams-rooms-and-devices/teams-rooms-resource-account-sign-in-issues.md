@@ -42,7 +42,7 @@ Additionally, Event ID 2001 is logged under **Applications and Services Logs** >
 
 ## Resolution
 
-Sign-in issues can occur for different reasons. Identify the specific cause of the issue by checking multiple details about the resource account. To perform the required checks, you can use either an automated option or run the checks manually.
+Sign-in issues can occur for different reasons. Identify the specific cause of the issue by checking multiple details about the resource account. To perform the required checks, you can use an automated option or run the checks manually.
 
 ### Automated checks
 
