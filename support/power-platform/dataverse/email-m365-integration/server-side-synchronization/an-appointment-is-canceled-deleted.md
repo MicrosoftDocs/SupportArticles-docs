@@ -4,7 +4,7 @@ description: Provides a solution to an issue where an appointment is canceled or
 ms.author: dmartens
 author: DanaMartens
 ms.date: 11/19/2024
-ms.custom: sap:Email and Microsoft 365 Integration
+ms.custom: sap:Email and Exchange Synchronization
 ---
 # An appointment is canceled or deleted unexpectedly during server-side synchronization
 
