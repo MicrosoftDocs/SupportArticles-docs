@@ -267,14 +267,14 @@ To verify that the endpoint is reachable from the node where the problematic pod
 
 1. Run a test pod in the Windows node pool:
 
-   ```console
+   ```bash
    # For a Windows environment, use the Resolve-DnsName cmdlet.
    kubectl run dnsutil-win --image='mcr.microsoft.com/windows/servercore:ltsc2022' --overrides='{"spec": { "nodeSelector": {"kubernetes.io/os": "windows"}}}' -- powershell "Start-Sleep -s 3600"
    ```
 
 1. Run the [kubectl exec](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#exec) command to connect to the pod by using PowerShell:
 
-   ```console
+   ```bash
    kubectl exec -it dnsutil-win -- powershell
    ```
 
