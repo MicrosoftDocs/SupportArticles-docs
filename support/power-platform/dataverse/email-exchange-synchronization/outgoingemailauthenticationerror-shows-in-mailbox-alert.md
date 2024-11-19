@@ -43,4 +43,4 @@ This error can occur if you are using a POP3/SMTP email server profile configure
 
 Try following the steps from the Gmail article [Check Gmail through other email platforms](https://support.google.com/mail/answer/7126229?p=BadCredentials&visit_id=637425757915475978-2293973045&rd=2#cantsignin).
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]

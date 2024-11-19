@@ -62,4 +62,4 @@ This error can occur if the server location or port in the email server profile 
 
 8. After the tests complete, open the mailbox record and view the **Alerts** section if the results don't appear as Success.
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]

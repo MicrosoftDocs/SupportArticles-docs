@@ -48,4 +48,4 @@ This error can occur if the port values within the Advanced section of the email
 6. Select the **Test & Enable Mailboxes** button.
 7. After the tests complete, open the mailbox record and view the **Alerts** section if the results don't appear as Success.
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
