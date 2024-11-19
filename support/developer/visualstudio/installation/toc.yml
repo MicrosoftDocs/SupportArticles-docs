@@ -58,10 +58,10 @@
   items:
   - name: Error - No Internet connection detected on this machine
     href: ./error-no-internet-connection.md 
-  - name: Warnings about an untrusted certificate
-    href: ./warnings-untrusted-certificate.md
   - name: Error when testing or deploying a minimal layout
     href: ./error-test-deploy-minimal-layout.md
+  - name: Warnings about an untrusted certificate
+    href: ./warnings-untrusted-certificate.md
   - name: We recommend you close Visual Studio now before setup continues
     href: ./we-recommend-you-close-visual-studio.md
 - name: Servicing updates and service packs
