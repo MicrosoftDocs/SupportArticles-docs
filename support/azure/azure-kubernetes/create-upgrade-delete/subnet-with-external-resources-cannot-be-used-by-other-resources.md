@@ -1,7 +1,7 @@
 ---
 title: AKS cluster error code SubnetWithExternalResourcesCannotBeUsedByOtherResources
 description: Provides solutions to an error that occurs when you create, upgrade, or scale a Microsoft Azure Kubernetes Service cluster.
-ms.date: 05/25/2023
+ms.date: 11/18/2024
 author: axelgMS
 ms.author: axelg
 ms.reviewer: chiragpa, eddie
