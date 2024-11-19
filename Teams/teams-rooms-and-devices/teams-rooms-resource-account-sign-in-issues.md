@@ -3,9 +3,7 @@ title: Fix Teams Rooms resource account sign-in issues
 description: Troubleshoot common sign-in issues that occur when Microsoft Teams Rooms signs in to Exchange, and Microsoft Teams or Skype for Business.
 ms.reviewer: matart
 ms.topic: troubleshooting
-ms.date: 11/13/2024
-author: helenclu
-ms.author: luche
+ms.date: 11/19/2024
 manager: dcscontentpm
 audience: Admin
 search.appverid: 
@@ -16,6 +14,7 @@ appliesto:
 ms.custom: 
   - sap:MTR Pro
   - CI167672
+  - CI2522
 ---
 # Fix Teams Rooms resource account sign-in issues
 
@@ -43,11 +42,11 @@ Additionally, Event ID 2001 is logged under **Applications and Services Logs** >
 
 ## Resolution
 
-Sign-in issues can occur for different reasons. Identify the specific cause of the issue by checking multiple details about the resource account. To perform the checks that are required, you can either use an automated option or run the checks manually.
+Sign-in issues can occur for different reasons. Identify the specific cause of the issue by checking multiple details about the resource account. To perform the required checks, you can use either an automated option or run the checks manually.
 
 ### Automated checks
 
-The automated option is to run the [Microsoft Teams Room Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input) connectivity test in the Microsoft Remote Connectivity Analyzer tool. This tool is used to troubleshoot connectivity issues that affect Teams. The connectivity test performs checks to verify a specific user's permissions to sign in to Teams by using a Teams Rooms device.
+To automate the process, run the [Microsoft Teams Room Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input) connectivity test in the Microsoft Remote Connectivity Analyzer tool. This tool is used to troubleshoot connectivity issues that affect Microsoft Teams. The connectivity test performs checks to verify a specific user's permissions to sign in to Teams by using a Teams Rooms device.
 
 > [!NOTE]
 >
@@ -60,7 +59,7 @@ To run the connectivity test, follow these steps:
 1. Sign in by using the credentials of a Global Administrator account.
 1. Specify the username for the resource account.
 1. In the **Device Selection** field, select a type for the affected device.
-1. Enter the verification code that's displayed, and then **select Verify**.
+1. Enter the verification code that's displayed, and then select **Verify**.
 1. Select the checkbox to accept the terms of agreement, and then select **Perform Test**.
 
 After the test finishes, the screen displays details about all the checks that were performed and whether the test succeeded, failed, or was successful but displayed a few warnings. Select the provided link for more information about the warnings and failures, and about how to resolve them.
