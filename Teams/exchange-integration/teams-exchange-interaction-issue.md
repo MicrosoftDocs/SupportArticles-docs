@@ -131,7 +131,7 @@ For a mailbox that's hosted on-premises, the EWS URL should point to the on-prem
 >
 > EWS \<`https://mail.contoso.com/EWS/Exchange.asmx`\>
 
-If this test fails, or if the EWS URL is incorrect, review the [Prerequisites for integration of Teams and Exchange Server](#prerequisites-for-integration-of-Teams-and-Exchange-Server) section. The issue is likely caused by an Exchange hybrid configuration issue, or a firewall or reverse proxy that's blocking external requests.
+If this test fails, or if the EWS URL is incorrect, review the [Prerequisites for integration of Teams and Exchange Server](#prerequisites-for-integration-of-teams-and-exchange-server) section. The issue is likely caused by an Exchange hybrid configuration issue, or a firewall or reverse proxy that's blocking external requests.
 
 #### Step 3: Verify that the Exchange OAuth authentication protocol is enabled and functional
 
@@ -197,7 +197,7 @@ If the delegator's mailbox is hosted on an on-premises Exchange server, follow t
 
 After you perform these steps, the folder and the Send on Behalf permissions are stored in the delegator's mailbox. In addition, the delegate is added to the list of delegates that's stored in a hidden item in the delegator's mailbox.
 
-If the delegator's mailbox is hosted in Exchange Online, you can follow the same steps listed above as when the the delegator's mailbox is hosted on an on-premises Exchange server. Or, [connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps&perserve-view=true), and run the [Set-Mailboxfolderpermission](/powershell/module/exchange/set-mailboxfolderpermission?view=exchange-ps&perserve-view=true) PowerShell command with administrator privileges:
+If the delegator's mailbox is hosted in Exchange Online, you can follow the same steps listed above as when the the delegator's mailbox is hosted on an on-premises Exchange server. Or, [connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true), and run the [Set-Mailboxfolderpermission](/powershell/module/exchange/set-mailboxfolderpermission?view=exchange-ps&preserve-view=true) PowerShell command with administrator privileges:
 
 ```powershell
 Set-Mailboxfolderpermission -identity <delegator's UserPrincipalName>\Calendar -User <delegate's UserPrincipalName> -AccessRights Author –SharingpermissionFlags Delegate
