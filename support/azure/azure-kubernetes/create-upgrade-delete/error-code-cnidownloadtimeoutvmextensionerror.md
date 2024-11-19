@@ -24,7 +24,7 @@ When you try to create a Linux-based AKS cluster, you receive the following erro
 Message: We are unable to serve this request due to an internal error
 SubCode: CniDownloadTimeoutVMExtensionError;
 Message="VM has reported a failure when processing extension 'vmssCSE'.
-Error message: "**Enable failed: failed to execute command: command terminated with exit status=41**\n[stdout]\n{
+Error message: "Enable failed: failed to execute command: command terminated with exit status=41\n[stdout]\n{
 "ExitCode": "41",
 ```
 
