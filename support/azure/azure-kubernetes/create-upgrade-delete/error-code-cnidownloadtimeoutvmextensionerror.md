@@ -1,9 +1,9 @@
 ---
 title: Troubleshoot Container Network Interface download failures
 description: Learn how to resolve Container Network Interface download failures when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 11/13/2024
+ms.date: 11/18/2024
 editor: v-jsitser
-ms.reviewer: axelg, chiragpa, v-leedennis
+ms.reviewer: axelg, chiragpa, mariochaves, v-weizhu, v-leedennis
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the container network interface download failures so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
