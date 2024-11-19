@@ -1,31 +1,40 @@
 ---
-title: Terminal emulation - The specified module could not be found error
-description: Provides a workaround when using the Open Terminal Session action gets an error 'The specified module could not be found'.
+title: The specified module could not be found error
+description: Solves the error that occus when you use the Open terminal session action with a HLLAPI provider in Power Automate for desktop.
 ms.reviewer: nimoutzo
-ms.date: 11/15/2024
-ms.custom: sap:Desktop flows\Power Automate for desktop errors
+ms.date: 11/19/2024
+ms.custom: sap:Desktop flows
 ---
-# Terminal emulation - 'The specified module could not be found' error
+# "The specified module could not be found" error when using the Open terminal session action
 
-This article provides a workaround to an issue when utilizing the Open Terminal Session action with the HLLAPI provider, and encounter the error 'The specified module could not be found.'.
+This article provides a resolution for an error that occurs when you use the **Open terminal session** action with a HLLAPI provider in Power Automate for desktop.
 
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 4599053
 
 ## Symptoms
 
-Using the Open Terminal Session action with the HLLAPI provider is the error message, 'The specified module could not be found.'.
+When you use the [Open terminal session](/power-automate/desktop-flows/actions-reference/terminalemulation) action to open a new connection with a HLLAPI provider, you receive the following error message:
+
+> The specified module could not be found.
 
 ## Cause
-The terminal emulator requires access to some extra DLLs that are not present in the PAD installation directory.
 
-## Workaround
-- Find out what DLLs might be needed.
-- Locate the HLLAPI dll referenced in the Open Terminal Session action
-- Use a Process Hacker (or a similar tool) to identify its dependencies
-- Go to Tools > Inspect executable file
-:::image type="content" source="media/terminal-not-found/terminal_not_found_1.png" alt-text="Screnshot of the Inspect executable file option.":::
-- Select the HLLAPI dll to open it
-- Go to the import tabs
-:::image type="content" source="media/terminal-not-found/terminal_not_found_2.png" alt-text="Screnshot of the tabs to be imported.":::
-- Copy the DLLs from the terminal emulator installation directory to the Power Automate Desktop installation directory (e.g. C:\Program Files (x86)\Power Automate Desktop)
+The terminal emulator requires access to some extra DLL files that aren't present in the Power Automate for desktop installation directory.
+
+## Resolution
+
+1. Find out what DLL files might be needed:
+
+    1. In the terminal emulator installation directory, locate the HLLAPI DLL file referenced in the **Open terminal session** action.
+
+    1. Use [Process Hacker](https://processhacker.sourceforge.io/) (or a similar tool) to identify its dependencies.
+    1. In Process Hacker, select **Tools** > **Inspect executable file**.
+
+       :::image type="content" source="media/terminal-not-found/inspect-executable-file.png" alt-text="The Inspect executable file option in Process Hacker.":::
+
+    1. Select the HLLAPI DLL file and go to the **Imports** tab. The tab shows all the DLL files that the HLLAPI DLL file depends on.
+
+       :::image type="content" source="media/terminal-not-found/imports-tab-dll-files.png" alt-text="Screnshot of the Imports tab that contains the HLLAPI DLL files.":::
+
+1. Copy the DLL files from the terminal emulator installation directory to the Power Automate for desktop installation directory. The default installation path for Power Automate for desktop is usually _C:\Program Files (x86)\Power Automate Desktop_.
