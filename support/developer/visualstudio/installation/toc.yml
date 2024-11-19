@@ -49,7 +49,7 @@
   - name: Wait for setup to finish before trying again
     href: ./another-setup-already-running-wait-finish.md
   - name: Workarounds for Visual Studio 2022 on unsupported operating systems
-    href: ./visual-studio-2022-unsupported-operating-systems.md
+    href: ./general/visual-studio-2022-unsupported-operating-systems.md
   - name: Windows Program Compatibility mode is on
     href: ./windows-program-compatibility-mode-on.md
   - name: Windows Installer may display inaccurate progress
@@ -86,7 +86,7 @@
     href: ./update-deployed-via-configuration-manager-fails-install.md
   - name: Visual Studio 2015 is stuck while installing KB2999226
     href: ./stuck-installing-visual-studio-2015.md
-- other:
+- name: Other
   items:
   - name: Can't find Visual Studio 2015 on the Start menu
     href: ./not-finding-start-menu-visual-studio.md
@@ -94,15 +94,3 @@
     href: ./release-management-installation-issues.md
   - name: The trial will expire after you sign in to the IDE
     href: ./sign-into-ide-trial-expire.md
-
-
-
-
-
-
-
-
-
-
-
-
