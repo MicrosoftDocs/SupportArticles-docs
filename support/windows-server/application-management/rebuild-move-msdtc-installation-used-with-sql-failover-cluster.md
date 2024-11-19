@@ -44,70 +44,82 @@ If your SQL Server Failover Clustered Instance does require MSDTC and does requi
 
 ## Setup and test a new MSDTC cluster resource by using PowerShell
 
-Run the following PowerShell script to set up and test a new MSDTC cluster resource:
+1. Create a new MSDTC resource replacing the content between and including the <> sections below then execute.
 
-```powershell
-# Create a new MSDTC resource replacing the content between and including the <> sections below then execute.
+    ```powershell
+    $SqlRole = <Actual name of the role containing the SQL Server instance>
+    $SqlNetName = <Actual SQL Servernetwork resourcename>
+    $VSqlSrv = <Actual SQL Server virtual server name>
+    $CluDsk = <Actual disk resource name>
 
-$SqlRole = <Actual name of the role containing the SQL Server instance>
-$SqlNetName = <Actual SQL Servernetwork resourcename>
-$VSqlSrv = <Actual SQL Server virtual server name>
-$CluDsk = <Actual disk resource name>
+    Add-ClusterResource -Name $VSqlSrv -ResourceType "Distributed Transaction Coordinator" -Group $SqlRole
+    ```
 
-Add-ClusterResource -Name $VSqlSrv -ResourceType "Distributed Transaction Coordinator" -Group $SqlRole
+    If the MSDTC resource didn't accept the name provided, you can alter the name using the following PowerShell replacing the New Distributed Transaction Coordinator with RealSqlVsName:
 
-# NOTE: If the MSDTC resource did not accept the name provided you can alter the name using the following Powershell replacing the New Distributed Transaction Coordinator with RealSqlVsName:
+    ```powershell
+    Get-ClusterResource "New Distributed Transaction Coordinator" | %{$_.Name = RealSqlVsName }
+    ```
 
-Get-ClusterResource "New Distributed Transaction Coordinator" | %{$_.Name = RealSqlVsName }
+    You can substitute `$VSqlSrv` for RealSqlVsName if still active.
 
-# $VSqlSrv can be substituted for RealSqlVsName if still active
+2. Verify firewall rules by using the following script:
 
-# Script to verify firewall rules
-Set-NetFirewallRule -Name 'RPC Endpoint Mapper' -Enabled True
-Set-NetFirewallRule -Name 'DTC incoming connections' -Enabled True
-Set-NetFirewallRule -Name 'DTC outgoing connections' -Enabled True
+    ```powershell
+    Set-NetFirewallRule -Name 'RPC Endpoint Mapper' -Enabled True
+    Set-NetFirewallRule -Name 'DTC incoming connections' -Enabled True
+    Set-NetFirewallRule -Name 'DTC outgoing connections' -Enabled True
+    ```
 
-# Setting the MSDTC network authentication
-Set-DtcNetworkSetting -AuthenticationLevel Mutual `
+3. Set the MSDTC network authentication by using the following script:
+
+    ```powershell
+    Set-DtcNetworkSetting -AuthenticationLevel Mutual `
     -DtcName "Local" -InboundTransactionsEnabled $True `
     -LUTransactionsEnabled $True `
     -OutboundTransactionsEnabled $True `
     -RemoteAdministrationAccessEnabled $False `
     -RemoteClientAccessEnabled $False `
     -XATransactionsEnabled $True -verbose
+    ```
 
-# Verify the new MSDTC resoruce is now listed
-Get-Dtc -Verbose |Sort-Object DtcName
+4. Verify the new MSDTC resource is now listed by using the following command:
 
-# Test the new MSDTC resource
-Test-Dtc -LocalComputerName RealSqlVsName -Verbose
+    ```powershell
+    Get-Dtc -Verbose |Sort-Object DtcName
+    ```
 
-# $VSqlSrv can be substituted for RealSqlVsName if still active, Use $Env:COMPUTERNAME to test the local installation. The firewall rules and MSDTC authentication PowerShell commands will need to be executed on all the other existing cluster nodes.
-```
+5. Test the new MSDTC resource.
 
-## Test MSDTC
+    ```powershell
+    Test-Dtc -LocalComputerName RealSqlVsName -Verbose
+    ```
 
-In this example, we use the AdventureWorks2012 database. You have to substitute an actual database name that you want to test against. From a SQL Server query window, run the following SQL statement:  
+    You can substitute `$VSqlSrv` for RealSqlVsName if still active. Use `$Env:COMPUTERNAME` to test the local installation. You'll need to execute the firewall rules and MSDTC authentication PowerShell commands on all the other existing cluster nodes.  
 
-```sql
-USE AdventureWorks2012;
+6. Test MSDTC.
 
-GO
+    In this example, we'll use the AdventureWorks2012 database, you have to substitute an actual database name that you want to test against. From a SQL Server query window, run the following SQL statement:  
 
-BEGIN DISTRIBUTED TRANSACTION; 
+    ```sql
+    USE AdventureWorks2012;
+    
+    GO
+    
+    BEGIN DISTRIBUTED TRANSACTION; 
+    
+    -- Enter fake transaction to the database
+    
+    INSERT SQL_Statement
+    
+    DELETE SQL_Statement
+    
+    COMMIT TRANSACTION
+    
+    GO
+    ```
 
--- Enter fake transaction to the database
-
-INSERT SQL_Statement
-
-DELETE SQL_Statement
-
-COMMIT TRANSACTION
-
-GO
-```
-
-You should now see that one row affected and that the inserted record doesn't exist.
+    You should now see that one row affected and that the inserted record doesn't exist.
 
 ## References
 
