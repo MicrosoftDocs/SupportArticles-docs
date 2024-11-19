@@ -192,8 +192,6 @@
       href: trying-to-access-dynamics-365-app-for-outlook-from-email-do-not-recognize-error.md
     - name: Can't connect to Exchange message
       href: cannot-connect-to-exchange-message-when-using-dynamics-365-app-for-outlook.md
-    - name: Changes to mailbox approval
-      href: changes-to-mailbox-approval-in-dynamics-365.md
     - name: Crm.80040216. An unexpected error occurred
       href: an-error-occurred-while-synchronizing-item.md
     - name: Email can't be received because the license is invalid for the mailbox
@@ -224,12 +222,8 @@
       href: errorquotaexceeded-exchange-server-returned-403-error.md
     - name: ErrorSubmissionQuotaExceeded exception in mailbox
       href: errorsubmissionquotaexceeded-exception.md
-    - name: Exchange error in alert in a mailbox
-      href: exchange-error-in-dynamics-365-mailbox-alert.md
     - name: ExchangeSyncSchedulingConflictsError
       href: scheduling-conflict-saving-appointment.md
-    - name: HResult 0x80004005 error when configuration
-      href: hresult-0x80004005-error-when-configuring-dynmics-crm-for-outlook.md
     - name: Http server returned Forbidden exception
       href: http-server-returned-forbidden-exception.md
     - name: Http server returned ServiceUnavailable exception warning level message
@@ -248,8 +242,6 @@
       href: mailbox-does-not-have-email-server-profile.md
     - name: Mailbox fails to be tested and enabled
       href: mailbox-fails-tested-enabled.md
-    - name: MailboxNotEnabledForRESTAPI warning in mailbox alert
-      href: mailboxnotenabledforrestapi-warning-occurs.md
     - name: OutgoingEmailAuthenticationError in mailbox alert
       href: outgoingemailauthenticationerror-shows-in-mailbox-alert.md
     - name: Privilege error when using App for Outlook
