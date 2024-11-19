@@ -11,8 +11,6 @@ audience: Application User
 ---
 # Missing budget data: Error code: ERR00006 [Type: Warning]
 
-> [!NOTE]
-> The functionality that's described in this article is available as part of a preview release. The functionality and the content of this article are subject to change. For more information about how to participate in the public preview for [Business performance analytics](/dynamics365/finance/business-performance-analytics/business-performance-analytics-home-page), contact <bpaquestions@service.microsoft.com>.
 
 ## Symptoms
 
