@@ -4,7 +4,6 @@ description: An email fails to be created in Microsoft Dynamics 365 with a NoRec
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 11/19/2024
-ms.subservice: d365-sales-email-office-integration
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # An email fails to be created in Microsoft Dynamics 365 with a NoRecipientMatch sync error

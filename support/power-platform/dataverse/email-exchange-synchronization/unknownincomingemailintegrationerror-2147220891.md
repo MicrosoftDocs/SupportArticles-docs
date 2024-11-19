@@ -4,7 +4,6 @@ description: Provides a solution to an error that occurs within mailbox alerts i
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 11/19/2024
-ms.subservice: d365-sales-email-office-integration
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # UnknownIncomingEmailIntegrationError -2147220891 exception error appears within mailbox alerts in Microsoft Dynamics 365

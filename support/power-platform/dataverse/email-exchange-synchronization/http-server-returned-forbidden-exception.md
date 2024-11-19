@@ -4,7 +4,6 @@ description: Provides a solution to an error that occurs when you select the Tes
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 11/19/2024
-ms.subservice: d365-sales-email-office-integration
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # "Http server returned Forbidden exception" error appears in Microsoft Dynamics 365 mailbox

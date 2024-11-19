@@ -4,7 +4,6 @@ description: A general mailbox access error occurred while receiving email throu
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 11/19/2024
-ms.subservice: d365-sales-email-office-integration
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # A general mailbox access error occurred while receiving email through the mailbox warning occurs in Microsoft Dynamics 365

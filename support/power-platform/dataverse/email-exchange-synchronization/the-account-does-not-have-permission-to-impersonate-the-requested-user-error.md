@@ -4,7 +4,6 @@ description: You may receive an error message that states the account does not h
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 11/19/2024
-ms.subservice: d365-sales-email-office-integration
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # The account does not have permission to impersonate the requested user error when selecting Test Connection in Microsoft Dynamics 365

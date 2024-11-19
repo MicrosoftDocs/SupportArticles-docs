@@ -4,7 +4,6 @@ description: Provides a solution to an issue where Test Connection fails from Em
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 11/19/2024
-ms.subservice: d365-sales-email-office-integration
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # Test Connection fails from Email Server Profile in Microsoft Dynamics 365

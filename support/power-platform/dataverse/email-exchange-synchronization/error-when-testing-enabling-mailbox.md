@@ -4,7 +4,6 @@ description: Provides a solution to an error that occurs when you try to test an
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 11/19/2024
-ms.subservice: d365-sales-email-office-integration
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # The mailbox location could not be determined error appears when testing and enabling a mailbox in Microsoft Dynamics 365

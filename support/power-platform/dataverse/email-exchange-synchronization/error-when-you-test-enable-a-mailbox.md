@@ -4,7 +4,6 @@ description: Provides a solution to an error that occurs when you try to Test an
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 11/19/2024
-ms.subservice: d365-sales-email-office-integration
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # Appointments, contacts, and tasks can't be synchronized for the mailbox because the mailbox user doesn't have sufficient permissions on this mailbox
