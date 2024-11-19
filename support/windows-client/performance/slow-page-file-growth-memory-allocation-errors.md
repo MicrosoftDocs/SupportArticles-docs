@@ -12,7 +12,7 @@ ms.custom: sap:System Performance\System Configuration (page file, startup or ru
 
 This article provides a workaround for errors that occur when applications frequently allocate memory.
 
-_Applies to:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10, 11 - all editions  
 _Original KB number:_ &nbsp; 4055223
 
 ## Symptoms
