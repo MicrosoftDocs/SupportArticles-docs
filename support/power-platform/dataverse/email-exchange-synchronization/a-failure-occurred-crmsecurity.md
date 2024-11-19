@@ -5,6 +5,7 @@ ms.reviewer:
 ms.topic: troubleshooting
 ms.date: 11/19/2024
 ms.subservice: d365-sales-email-office-integration
+ms.custom: sap:Email and Exchange Synchronization
 ---
 # "A failure occurred in CrmSecurity" error occurs when attempting to approve the email address of a mailbox record in Microsoft Dynamics 365
 

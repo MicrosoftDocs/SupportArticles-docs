@@ -5,6 +5,7 @@ ms.reviewer:
 ms.topic: troubleshooting
 ms.date: 11/19/2024
 ms.subservice: d365-sales-email-office-integration
+ms.custom: sap:Email and Exchange Synchronization
 ---
 # "The email server location or the incoming email port specified in the associated email server profile [profile name] is incorrect" error occurs in Microsoft Dynamics 365
 

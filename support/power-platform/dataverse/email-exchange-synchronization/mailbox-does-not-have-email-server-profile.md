@@ -5,6 +5,7 @@ ms.reviewer:
 ms.topic: troubleshooting
 ms.date: 11/19/2024
 ms.subservice: d365-sales-email-office-integration
+ms.custom: sap:Email and Exchange Synchronization
 ---
 # "Mailbox does not have an email server profile associated with it or the email server profile is inactive" error occurs in Microsoft Dynamics 365
 

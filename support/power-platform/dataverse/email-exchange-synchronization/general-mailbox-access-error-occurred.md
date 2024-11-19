@@ -5,6 +5,7 @@ ms.reviewer:
 ms.topic: troubleshooting
 ms.date: 11/19/2024
 ms.subservice: d365-sales-email-office-integration
+ms.custom: sap:Email and Exchange Synchronization
 ---
 # A general mailbox access error occurred while receiving email error appears when testing and enabling a mailbox in Microsoft Dynamics 365
 
