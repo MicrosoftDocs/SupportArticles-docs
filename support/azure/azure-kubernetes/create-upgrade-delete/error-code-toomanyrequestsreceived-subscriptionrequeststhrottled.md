@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the TooManyRequestsReceived or SubscriptionRequestsThrottled error code
 description: Learn how to troubleshoot the TooManyRequestsReceived or SubscriptionRequestsThrottled error when you try to delete an Azure Kubernetes Service (AKS) cluster.
-ms.date: 04/01/2022
+ms.date: 11/18/2024
 editor: v-jsitser
 ms.reviewer: rissing, chiragpa, edneto, v-leedennis
 ms.service: azure-kubernetes-service
