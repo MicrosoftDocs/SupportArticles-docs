@@ -137,7 +137,7 @@ What if you can't run the [kubectl exec](https://kubernetes.io/docs/reference/ge
 > [!NOTE]
 >
 > If the DNS resolution or egress traffic doesn't let you install the necessary network packages, you can use the `rishasi/ubuntu-netutil:1.0` docker image. In this image, the required packages are already installed.
-
+    
 ##### Example procedure for checking DNS resolution of a Linux pod
 
 1. Start a test pod in the same namespace as the problematic pod:
@@ -232,18 +232,49 @@ Sometimes, there is a problem with the endpoint itself rather than a cluster DNS
    curl -Iv https://kubernetes.io
    ```
 
+To verify that the endpoint is reachable from the node where the problematic pod is in and then verify the DNS settings, follow these steps:
+
+1. Enter the node where the problematic pod is in through the debug pod. For more information about how to do this, see [Connect to Azure Kubernetes Service (AKS) cluster nodes for maintenance or troubleshooting](/azure/aks/node-access).
+
+1. Test the DNS resolution to the endpoint:
+
+   ```console
+   $ nslookup  microsoft.com
+   Server:         168.63.129.16
+   Address:        168.63.129.16#53
+   
+   Non-authoritative answer:
+   Name:   microsoft.com
+   Address: 20.112.52.29
+   Name:   microsoft.com
+   Address: 20.81.111.85
+   Name:   microsoft.com
+   Address: 20.84.181.62
+   Name:   microsoft.com
+   Address: 20.103.85.33
+   Name:   microsoft.com
+   Address: 20.53.203.50
+   ```
+
+1. Check the *resolv.conf* file to determine whether the expected name servers are added:
+
+   ```bash
+   cat /etc/resolv.conf
+   cat /run/systemd/resolve/resolv.conf
+   ```
+   
 ##### Example procedure for checking DNS resolution of a Windows pod
 
 1. Run a test pod in the Windows node pool:
 
-   ```bash
+   ```console
    # For a Windows environment, use the Resolve-DnsName cmdlet.
    kubectl run dnsutil-win --image='mcr.microsoft.com/windows/servercore:ltsc2022' --overrides='{"spec": { "nodeSelector": {"kubernetes.io/os": "windows"}}}' -- powershell "Start-Sleep -s 3600"
    ```
 
 1. Run the [kubectl exec](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#exec) command to connect to the pod by using PowerShell:
 
-   ```bash
+   ```console
    kubectl exec -it dnsutil-win -- powershell
    ```
 
@@ -279,37 +310,6 @@ Sometimes, there is a problem with the endpoint itself rather than a cluster DNS
    TTL        : 12
    Section    : Answer
    IP4Address : 23.200.197.152
-   ```
-
-You should also verify that the endpoint is reachable from the node where the problematic pod is in. Then, verify the DNS settings as well. Follow these steps:
-
-1. Enter the node where the problematic pod is in through the debug pod. Refer to the [Connect to Azure Kubernetes Service (AKS) cluster nodes for maintenance or troubleshooting](/azure/aks/node-access) for information on how to enter.
-
-1. Test the DNS resolution to the endpoint:
-
-   ```console
-   $ nslookup  microsoft.com
-   Server:         168.63.129.16
-   Address:        168.63.129.16#53
-   
-   Non-authoritative answer:
-   Name:   microsoft.com
-   Address: 20.112.52.29
-   Name:   microsoft.com
-   Address: 20.81.111.85
-   Name:   microsoft.com
-   Address: 20.84.181.62
-   Name:   microsoft.com
-   Address: 20.103.85.33
-   Name:   microsoft.com
-   Address: 20.53.203.50
-   ```
-
-1. Check the *resolv.conf* file to determine whether the expected name servers are added:
-
-   ```bash
-   cat /etc/resolv.conf
-   cat /run/systemd/resolve/resolv.conf
    ```
 
 In one unusual scenario that involves DNS resolution, the DNS queries get a correct response from the node but fail from the pod. For this scenario, you might consider [checking DNS resolution failures from inside the pod but not from the worker node](troubleshoot-dns-failure-from-pod-but-not-from-worker-node.md). If you want to inspect DNS resolution for an endpoint across the cluster, you can consider [checking DNS resolution status across the cluster](troubleshoot-dns-failures-across-an-aks-cluster-in-real-time.md#step-3-verify-the-health-of-the-upstream-dns-servers).
