@@ -90,7 +90,7 @@ After identifying the egress device, check the following factors:
   - Network security group (NSG)
   - Network policy
 
-To troubleshoot a problematic hop, check the response codes before and after it. To check whether the packets are arriving properly in a specific hop, you can proceed with packet captures.
+To identify a problematic hop, check the response codes before and after it. To check whether the packets are arriving properly in a specific hop, you can proceed with packet captures.
 
 ##### Check HTTP response codes
 
@@ -110,7 +110,7 @@ If other troubleshooting steps don't provide any conclusive outcome, take packet
 
 For basic troubleshooting for egress traffic from an AKS cluster, follow these steps:
 
-1. [Make sure that the Domain Name System (DNS) resolution for the endpoint works correctly](#check-whether-the-pod-and-the-node-can-reach-the-endpoint).
+1. [Make sure that the Domain Name System (DNS) resolution for the endpoint works correctly](#check-whether-the-pod-and-node-can-reach-the-endpoint).
 
 1. Make sure that you can reach the endpoint through an IP address.
 
@@ -205,31 +205,32 @@ What if you can't run the [kubectl exec](https://kubernetes.io/docs/reference/ge
    
    Received 2121 bytes from 10.0.0.10#53 in 232 ms
    ```
-1. If the DNS resolution has issues, check the route to the endpoint to determine whether there's a time-out at a specific operation:
+
+If the DNS resolution has issues, check the route to the endpoint to determine whether there's a time-out at a specific operation:
+
+```bash
+traceroute -T microsoft.com -m 50 -p 443
+```
+
+Sometimes, there is a problem with the endpoint itself rather than a cluster DNS. In such cases, consider the following checks:
+
+1. Check whether the desired port is open on the remote host:
 
    ```bash
-   traceroute -T microsoft.com -m 50 -p 443
+   nc -z -v microsoft.com 443
    ```
 
-   Sometimes, there is a problem with the endpoint itself rather than a cluster DNS. In such cases, consider the following checks:
+1. Check the HTTP response code:
 
-   1. Check whether the desired port is open on the remote host:
+   ```bash
+   curl -Iv https://microsoft.com
+   ```
 
-      ```bash
-      nc -z -v microsoft.com 443
-      ```
+1. Check whether you can connect to any other endpoint:
 
-   1. Check the HTTP response code:
-
-      ```bash
-      curl -Iv https://microsoft.com
-      ```
-
-   1. Check whether you can connect to any other endpoint:
-
-      ```bash
-      curl -Iv https://kubernetes.io
-      ```
+   ```bash
+   curl -Iv https://kubernetes.io
+   ```
 
 ##### Example procedure for checking DNS resolution of a Windows pod
 
