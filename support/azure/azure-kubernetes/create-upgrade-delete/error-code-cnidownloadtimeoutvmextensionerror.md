@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot container network interface download failures
-description: Learn how to troubleshoot container network interface download failures when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
+title: Troubleshoot Container Network Interface download failures
+description: Learn how to resolve Container Network Interface download failures when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.date: 11/13/2024
 editor: v-jsitser
 ms.reviewer: axelg, chiragpa, v-leedennis
@@ -28,7 +28,7 @@ Error message: "**Enable failed: failed to execute command: command terminated w
 "ExitCode": "41",
 ```
 
-When you try to create a Windows-based AKS cluster using Windows, you receive the following error message:
+When you try to create a Windows-based AKS cluster, you receive the following error message:
 
 ```output
 Message="VM has reported a failure when processing extension 'vmssCSE' (publisher 'Microsoft.Compute' and type 'CustomScriptExtension').
