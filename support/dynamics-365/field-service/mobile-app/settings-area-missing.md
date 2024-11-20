@@ -16,7 +16,7 @@ The Field Service Mobile app module doesn't show the settings area, blocking adm
 
 ## Resolution
 
-The new mobile experience settings toggle is available through a new navigation area that comes with the default Field Service Mobile app module. Users need *write* permissions for the `FieldServiceSetting` entity to access this area. Default security roles like System Admin or Field Service Admin roles have that permission automatically.
+The new mobile experience settings toggle is available through a new navigation area that comes with the default Field Service Mobile app module. Users need *write* permissions for the `FieldServiceSetting` entity to access this area. Default security roles like System Admin or Field Service Admin roles have that permission automatically. However, some times if customizations were made on the sitemap of the out-of-box Field Service Mobile app module, the settings area might now show.
 
 There are two options to enable the settings area:
 
