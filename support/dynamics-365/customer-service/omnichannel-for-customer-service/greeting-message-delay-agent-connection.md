@@ -3,7 +3,7 @@ title: Voice call greeting messages delay connection between agents and customer
 description: Resolves an issue where voice call greeting messages delay an agent's ability to connect to a customer in the voice channel in Omnichannel for Customer Service.
 ms.reviewer: laalexan
 ms.author: srubinstein
-ms.date: 02/23/2024
+ms.date: 11/20/2024
 ms.custom: sap:Voice channel
 ms.collection: CEnSKM-ai-copilot
 ---
