@@ -12482,7 +12482,7 @@
     },
     {
       "source_path": "support/dynamics-365/sales/an-appointment-is-canceled-deleted.md",
-      "redirect_url": "/troubleshoot/power-platform/dataverse/email-m365-integration/server-side-synchronization/an-appointment-is-canceled-deleted",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/an-appointment-is-canceled-deleted",
       "redirect_document_id": true
     },
     {
@@ -12538,6 +12538,41 @@
     {
       "source_path": "support/dynamics-365/sales/mailbox-does-not-have-email-server-profile.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/mailbox-does-not-have-email-server-profile",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/dataverse/email-m365-integration/server-side-synchronization/emails-not-automatically-tracked-or-synchronized.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/emails-not-automatically-tracked-or-synchronized",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/dataverse/email-m365-integration/server-side-synchronization/error-code-8005e259.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-code-8005e259",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/dataverse/email-m365-integration/server-side-synchronization/error-code-8005e272.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-code-8005e272",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/dataverse/email-m365-integration/server-side-synchronization/error-code-8005e273.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-code-8005e273",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/dataverse/email-m365-integration/server-side-synchronization/error-code-8005e274.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-code-8005e274",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/dataverse/email-m365-integration/server-side-synchronization/error-code-8005e276.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-code-8005e276",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/dataverse/email-m365-integration/server-side-synchronization/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data",
       "redirect_document_id": true
     }
   ]

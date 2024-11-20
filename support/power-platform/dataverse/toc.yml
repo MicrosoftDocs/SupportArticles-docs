@@ -14,6 +14,8 @@
   items:
     - name: 401 Unauthorized exception when using Server-Side Synchronization
       href: email-exchange-synchronization/exception-when-using-server-side-sync.md
+    - name: An appointment is canceled or deleted during server-side synchronization
+      href: email-exchange-synchronization/an-appointment-is-canceled-deleted.md
     - name: A failure occurred in CrmSecurity when approving email address
       href: email-exchange-synchronization/a-failure-occurred-crmsecurity.md
     - name: A general mailbox access error occurred while receiving email
@@ -30,6 +32,8 @@
       href: email-exchange-synchronization/appointments-do-not-sync-to-exchange-for-some-users.md
     - name: Appointments, contacts, and tasks can't be synchronized
       href: email-exchange-synchronization/error-when-you-test-enable-a-mailbox.md
+    - name: Emails aren't automatically tracked or synchronized
+      href: email-exchange-synchronization/emails-not-automatically-tracked-or-synchronized.md
     - name: Email can't be received because the license is invalid for the mailbox
       href: email-exchange-synchronization/email-cannot-be-received-because-license-is-invalid-error.md
     - name: Email fails to be created with NoRecipientMatch
@@ -42,6 +46,16 @@
       href: email-exchange-synchronization/email-cannot-be-received-mailbox.md
     - name: Error 2147209462 logged in mailbox record
       href: email-exchange-synchronization/error-2147209462-logged-mailbox-record.md
+    - name: Error code 8005E259
+      href: email-exchange-synchronization/error-code-8005e259.md
+    - name: Error code 8005E272
+      href: email-exchange-synchronization/error-code-8005e272.md
+    - name: Error code 8005E273
+      href: email-exchange-synchronization/error-code-8005e273.md
+    - name: Error code 8005E274
+      href: email-exchange-synchronization/error-code-8005e274.md
+    - name: Error code 8005E276
+      href: email-exchange-synchronization/error-code-8005e276.md
     - name: Error when creating the incoming email
       href: email-exchange-synchronization/error-when-creating-an-incoming-email.md
     - name: Error while synchronizing appointments, contacts, and tasks
@@ -54,6 +68,8 @@
       href: email-exchange-synchronization/scheduling-conflict-saving-appointment.md
     - name: Http server returned Forbidden exception
       href: email-exchange-synchronization/http-server-returned-forbidden-exception.md
+    - name: Incoming emails are unexpectedly synchronized
+      href: email-exchange-synchronization/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data.md
     - name: Mailbox doesn't have an email server profile
       href: email-exchange-synchronization/mailbox-does-not-have-email-server-profile.md
     - name: Mailbox fails to be tested and enabled
@@ -70,26 +86,6 @@
       href: email-exchange-synchronization/the-smtp-address-has-no-mailbox.md
     - name: unknownincomingemailintegrationerror -2147220891
       href: email-exchange-synchronization/unknownincomingemailintegrationerror-2147220891.md
-- name: Email and Microsoft 365 Integration
-  items:
-    - name: Server side synchronization
-      items:
-        - name: An appointment is canceled or deleted during server-side synchronization
-          href: email-m365-integration/server-side-synchronization/an-appointment-is-canceled-deleted.md
-        - name: Emails aren't automatically tracked or synchronized
-          href: email-m365-integration/server-side-synchronization/emails-not-automatically-tracked-or-synchronized.md
-        - name: Error code 8005E259
-          href: email-m365-integration/server-side-synchronization/error-code-8005e259.md
-        - name: Error code 8005E272
-          href: email-m365-integration/server-side-synchronization/error-code-8005e272.md
-        - name: Error code 8005E273
-          href: email-m365-integration/server-side-synchronization/error-code-8005e273.md
-        - name: Error code 8005E274
-          href: email-m365-integration/server-side-synchronization/error-code-8005e274.md        
-        - name: Error code 8005E276
-          href: email-m365-integration/server-side-synchronization/error-code-8005e276.md
-        - name: Incoming emails are unexpectedly synchronized
-          href: email-m365-integration/server-side-synchronization/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data.md
 - name: Plug-in execution
   items:
     - name: Dataverse plug-ins

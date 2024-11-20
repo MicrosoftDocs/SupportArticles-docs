@@ -2,7 +2,7 @@
 title: Error code 8005E273 when you test and enable a mailbox
 description: Provides a resolution for error code 8005E273 that occurs when you test and enable a mailbox for server-side synchronization.
 ms.date: 05/13/2024
-ms.custom: sap:E-mail and Microsoft 365 Integration\Set up and configuration of server-side synchronization
+ms.custom: sap:Email and Exchange Synchronization\Set up and configuration of server-side synchronization
 author: rahulmital
 ms.author: rahulmital
 ---
