@@ -70,8 +70,8 @@ The following tables list the diagnostics that are currently available in the Mi
 
 | Description |  Diagnostic shortcut | Connectivity test shortcut | Support article |
 |---|---|---|---|
-|Checks whether a user account meets the requirements for a Microsoft Teams user to be able to sign in to a Teams Android desk phone.||[Teams Android Desk Phone Sign in](https://testconnectivity.microsoft.com/tests/TeamsPhoneDeviceSignIn/input)||
-|Checks whether a user account meets the requirements for a Microsoft Teams user to be able to sign in to the following Microsoft Teams Rooms devices: <ul><li>Teams Rooms on Android</li><li>Teams Rooms on Windows</li><li>Teams panels</li></ul>||[Microsoft Teams Rooms Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input)|[Fix Conditional Access-related issues for Teams Android devices](../teams-rooms-and-devices/teams-android-devices-conditional-access-issues.md)|
+|Checks whether a user account meets the requirements for a Microsoft Teams user to be able to sign in to a Teams Android desk phone.|[Run Tests: Teams Android Desk Phone Sign in](https://aka.ms/TeamsAndroidDeskPhoneDiag)|[Teams Android Desk Phone Sign in](https://testconnectivity.microsoft.com/tests/TeamsPhoneDeviceSignIn/input)||
+|Checks whether a user account meets the requirements for a Microsoft Teams user to be able to sign in to the following Microsoft Teams Rooms devices: <ul><li>Teams Rooms on Android</li><li>Teams Rooms on Windows</li><li>Teams panels</li></ul>|<ul><li>[Run Tests: Teams Rooms Android Sign in](https://aka.ms/TeamsRoomsAndroidDiag)</li><li>[Run Tests: Teams Rooms Windows Sign in](https://aka.ms/TeamsRoomsWindowsDiag)</li><li>[Run Tests: Teams Panel Sign in](https://aka.ms/TeamsPanelDiag)</li></ul>|[Microsoft Teams Rooms Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input)|[Fix Conditional Access-related issues for Teams Android devices](../teams-rooms-and-devices/teams-android-devices-conditional-access-issues.md)|
 
 ### Files
 
