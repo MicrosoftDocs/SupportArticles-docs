@@ -4,8 +4,7 @@
 - name: Alerts, Metrics and Logging
   items:
   - name: Create file share throttling alerts
-    href: alerts/files-troubleshoot-create-alerts.md
-
+    href: /azure/storage/files/files-monitoring-alerts
 - name: Backup and Restore
   items:
   - name: Troubleshoot backing up file shares
