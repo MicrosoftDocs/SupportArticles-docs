@@ -4,7 +4,7 @@ description: Resolves issues with cascade crew changes in Dynamics 365 Field Ser
 author: jshotts
 ms.author: jasonshotts
 ms.reviewer: mhart
-ms.date: 11/13/2024
+ms.date: 11/20/2024
 ms.custom: sap:Schedule Board
 ---
 # Issue with cascade crew changes when assigning a booking
@@ -21,4 +21,4 @@ This issue occurs if the value of [msdyn_CascadeCrewChanges](/common-data-model/
 
 To fix the issue, open the booking and set the value of `msdyn_CascadeCrewChanges` to **Yes**. Then, assign the booking to a crew again.
 
-For more information, see [Group resources in crews](/dynamics365/field-service/resource-crews).
+For more information, go to [Group resources in crews](/dynamics365/field-service/resource-crews).
