@@ -95,4 +95,4 @@ If you're missing a network or internet icon on the taskbar, check if you have t
 
 To check local policies, see [How to disable user or computer policy settings in a Local Group Policy Object](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn789197(v=ws.11)#how-to-disable-user-or-computer-policy-settings-in-a-local-group-policy-object).
 
-To look for Group Policy Objects in a domain, see [Edit an existing GPO](../../windows-server/identity/ad-ds/manage/group-policy/group-policy-management-console.md#edit-an-existing-gpo).
+To look for Group Policy Objects in a domain, see [Edit an existing GPO](../windows-server/identity/ad-ds/manage/group-policy/group-policy-management-console.md#edit-an-existing-gpo).
