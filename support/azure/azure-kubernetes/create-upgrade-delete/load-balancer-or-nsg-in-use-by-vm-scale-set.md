@@ -48,6 +48,6 @@ To fix this issue, use one of the following methods:
 
 - Remove all public IP addresses that are associated with Azure Load Balancer. For more information, see [View, modify settings for, or delete a public IP address](/azure/virtual-network/ip-services/virtual-network-public-ip-address#view-modify-settings-for-or-delete-a-public-ip-address).
 
-- Dissociate the NSG that's used by the subnet. For more information, see [Associate or dissociate a network security group](/azure/virtual-network/virtual-network-network-interface#associate-or-dissociate-a-network-security-group)
+- Dissociate the NSG that's used by the subnet. For more information, see [Associate or dissociate a network security group](/azure/virtual-network/virtual-network-network-interface#associate-or-dissociate-a-network-security-group).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
