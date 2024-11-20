@@ -12371,6 +12371,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/windows-server/certificates-and-public-key-infrastructure-pki/restrict-cryptographic-algorithms-protocols-schannel.md",
+      "redirect_url": "/windows-server/security/tls/tls-registry-settings?tabs=diffie-hellman#ciphers",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/dynamics-365/sales/changes-to-mailbox-approval-in-dynamics-365.md",
       "redirect_url": "/power-platform/admin/connect-exchange-online#approve-email",
       "redirect_document_id": false

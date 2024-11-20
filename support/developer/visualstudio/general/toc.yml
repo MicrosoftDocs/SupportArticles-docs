@@ -10,5 +10,3 @@
   href: ./not-transform-license-file-to-binary-resource.md
 - name: Files can't be saved when you use Resource Editor
   href: ./resource-editor-cannot-save-file.md
-- name: Workarounds for Visual Studio 2022 on unsupported operating systems
-  href: ./visual-studio-2022-unsupported-operating-systems.md
