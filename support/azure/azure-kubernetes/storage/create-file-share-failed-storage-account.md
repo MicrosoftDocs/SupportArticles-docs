@@ -2,7 +2,7 @@
 title: Failed to create file share on storage account
 description: Troubleshoot why you can't create a file share on a storage account for an Azure Kubernetes Service (AKS) cluster.
 ms.date: 11/19/2024
-ms.reviewer: chiragpa, nickoman, v-leedennis
+ms.reviewer: chiragpa, nickoman, wonkilee, v-leedennis
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot why I can't create a file share on a storage account so that I can do dynamic provisioning on my Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Storage
@@ -13,8 +13,7 @@ This article discusses how to troubleshoot why you can't create a file share on 
 
 ## Symptoms
 
-PVC status stuck in Pending when AKS creates a file share.
-You receive the following error when `kubectl describe pvc`:
+When you create a file share on a storage account that's used for dynamic provisioning, the PersistentVolumeClaim (PVC) stuck in Pending status. In this case, when you run the `kubectl describe pvc` command, you receive the following error: 
 
 > persistentvolume-controller (combined from similar events):
 >
@@ -30,11 +29,10 @@ You receive the following error when `kubectl describe pvc`:
 
 ## Cause
 
-The Kubernetes `persistentvolume-controller` isn't on the network that was chosen when the **Allow access from** network setting was enabled for **Selected networks** on the storage account.
-Expecially, when user specifies `useDataPlaneAPI: "true"` on storage class, the persistentvolume-controller use data plane API for file share create/delete/resize, while it would fail when there is firewall or vnet setting on storage account.
+The Kubernetes `persistentvolume-controller` isn't on the network that was chosen when the **Allow access from** network setting was enabled for **Selected networks** on the storage account. Expecially, when you specify `useDataPlaneAPI: "true"` on the storage class, the `persistentvolume-controller` use data plane API for file share create/delete/resize, however, this will fail when there is a firewall or virtual network setting on the storage account.
 
 ## Workaround
 
-Creating a file share with dynamic provisioning would fail, so create a file share and set up your AKS cluster to use [static provisioning with Azure Files](/azure/aks/azure-files-volume).
+Create a file share and set up your AKS cluster to use [static provisioning with Azure Files](/azure/aks/azure-files-volume).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
