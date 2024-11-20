@@ -4,7 +4,8 @@
 title: Troubleshoot Finance insights setup issues
 description: Provides resolutions for the common issues that can occur when you use Finance insights capabilities in Microsoft Dynamics 365 Finance.
 author: twheeloc 
-ms.date: 04/30/2024
+ms.date: 11/20/2024
+ms.collection: CEnSKM-ai-copilot
 
 # optional metadata
 
@@ -14,7 +15,6 @@ audience: Application User
 # ms.devlang: 
 ms.reviewer: twheeloc
 # ms.tgt_pltfrm: 
-ms.collection: get-started
 ms.assetid: 3d43ba40-780c-459a-a66f-9a01d556e674
 ms.search.region: Global
 # ms.search.industry: 
