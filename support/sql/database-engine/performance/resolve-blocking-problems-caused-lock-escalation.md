@@ -55,7 +55,7 @@ The simplest and safest method to prevent lock escalation is to keep transaction
 
     ```sql
     BEGIN TRAN;
-    SELECT * FROM mytable (UPDLOCK, HOLDLOCK) WHERE 1 = 0;
+    SELECT * FROM mytable WITH (UPDLOCK, HOLDLOCK) WHERE 1 = 0;
     WAITFOR DELAY '1:00:00';
     COMMIT TRAN;
     ```
