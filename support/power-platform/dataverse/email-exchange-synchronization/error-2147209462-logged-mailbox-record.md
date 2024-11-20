@@ -10,7 +10,7 @@ ms.custom: sap:Email and Exchange Synchronization
 
 This article helps you resolve the problem that occurs when the corresponding Queue record in Microsoft Dynamics 365 is owned by a team that does not have any security roles assigned.
 
-_Applies to:_ &nbsp; Microsoft Dynamics 365 Customer Engagement Online  
+_Applies to:_ &nbsp; Microsoft Dynamics 365  
 _Original KB number:_ &nbsp; 4500778
 
 ## Symptoms

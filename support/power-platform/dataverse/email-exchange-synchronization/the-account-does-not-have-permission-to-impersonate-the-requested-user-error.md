@@ -10,7 +10,7 @@ ms.custom: sap:Email and Exchange Synchronization
 
 This article provides a resolution to solve **The account does not have permission to impersonate the requested user** error that may occur when you select Test Connection in Microsoft Dynamics 365.
 
-_Applies to:_ &nbsp; Microsoft Dynamics CRM Online  
+_Applies to:_ &nbsp; Microsoft Dynamics 365  
 _Original KB number:_ &nbsp; 4295275
 
 ## Symptoms

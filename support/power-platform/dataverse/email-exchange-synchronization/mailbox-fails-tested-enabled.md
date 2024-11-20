@@ -13,7 +13,7 @@ ms.custom: sap:Email and Exchange Synchronization
 
 This article helps you resolve the problem that occurs when a Dynamics 365 mailbox is configured to use Server-Side Synchronization with Gmail.
 
-_Applies to:_ &nbsp; Microsoft Dynamics 365 Customer Engagement Online  
+_Applies to:_ &nbsp; Microsoft Dynamics 365  
 _Original KB number:_ &nbsp; 4493342
 
 ## Symptoms

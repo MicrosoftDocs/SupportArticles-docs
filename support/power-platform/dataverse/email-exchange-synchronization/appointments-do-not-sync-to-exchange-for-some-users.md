@@ -10,7 +10,7 @@ ms.custom: sap:Email and Exchange Synchronization
 
 This article provides a resolution for the issue that appointments don't sync from Microsoft Dynamics 365 to Microsoft Exchange for some users.
 
-_Applies to:_ &nbsp; Microsoft Dynamics 365 Customer Engagement Online  
+_Applies to:_ &nbsp; Microsoft Dynamics 365  
 _Original KB number:_ &nbsp; 4494491
 
 ## Symptoms

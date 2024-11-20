@@ -10,7 +10,7 @@ ms.custom: sap:Email and Exchange Synchronization
 
 This article provides a solution to an issue where Test Connection fails from Email Server Profile in Microsoft Dynamics 365.
 
-_Applies to:_ &nbsp; Microsoft Dynamics 365 Customer Engagement Online  
+_Applies to:_ &nbsp; Microsoft Dynamics 365  
 _Original KB number:_ &nbsp; 4493267
 
 ## Symptoms

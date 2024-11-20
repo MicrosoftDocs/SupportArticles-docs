@@ -10,7 +10,7 @@ ms.custom: sap:Email and Exchange Synchronization
 
 This article provides a solution to an error that occurs when you try to test and enable a mailbox in Microsoft Dynamics 365.
 
-_Applies to:_ &nbsp; Microsoft Dynamics 365 Customer Engagement Online  
+_Applies to:_ &nbsp; Microsoft Dynamics 365  
 _Original KB number:_ &nbsp; 4513810
 
 ## Symptoms

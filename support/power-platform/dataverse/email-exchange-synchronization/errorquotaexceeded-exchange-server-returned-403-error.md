@@ -10,7 +10,7 @@ ms.custom: sap:Email and Exchange Synchronization
 
 This article provides a resolution for the issue that email remains in a Pending Send status after you send it in Microsoft Dynamics 365.
 
-_Applies to:_ &nbsp; Microsoft Dynamics 365 Customer Engagement Online  
+_Applies to:_ &nbsp; Microsoft Dynamics 365  
 _Original KB number:_ &nbsp; 4556585
 
 ## Symptoms

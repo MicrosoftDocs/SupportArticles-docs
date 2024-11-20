@@ -10,7 +10,7 @@ ms.custom: sap:Email and Exchange Synchronization
 
 This article provides a resolution for the **OutgoingEmailAuthenticationError** error that occurs in a Microsoft Dynamics 365 mailbox alert.
 
-_Applies to:_ &nbsp; Microsoft Dynamics 365 Customer Engagement Online  
+_Applies to:_ &nbsp; Microsoft Dynamics 365  
 _Original KB number:_ &nbsp; 4533293
 
 ## Symptoms
