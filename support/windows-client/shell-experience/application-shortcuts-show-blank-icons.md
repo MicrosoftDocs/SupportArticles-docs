@@ -1,7 +1,7 @@
 ---
 title: Blank icons on the desktop, Start menu, and taskbar
 description: Fixes an issue in which application shortcuts on the desktop, Start menu, and taskbar show blank icons in Windows.
-ms.date: 10/16/2024
+ms.date: 11/20/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -68,13 +68,13 @@ To check and verify the value of the `IconHandler` subkey and its associated Cla
 
 1. Select **Start**, type *regedit* and then press <kbd>Enter</kbd> to open the Registry Editor.
 
-1. Navigate to `HKEY_CLASSES_ROOT\lnkfile\shellex\IconHandler`, and then check the `(Default)` value.
+2. Navigate to `HKEY_CLASSES_ROOT\lnkfile\shellex\IconHandler`, and then check the `(Default)` value.
 
     In the following example, the value is `{00021401-0000-0000-C000-000000000046}`.
 
     :::image type="content" source="media/application-shortcuts-show-blank-icons/iconhandler-value.png" alt-text="Screenshot that shows the default value of IconHandler.":::
 
-1. Navigate to `HKEY_CLASSES_ROOT\CLSID\{00021401-0000-0000-C000-000000000046}`
+3. Navigate to `HKEY_CLASSES_ROOT\CLSID\{00021401-0000-0000-C000-000000000046}`
 
     > [!NOTE]
     > The hexadecimal (hex) value is the one you found in the preceding step.
@@ -83,24 +83,16 @@ To check and verify the value of the `IconHandler` subkey and its associated Cla
 
     :::image type="content" source="media/application-shortcuts-show-blank-icons/clsid-value.png" alt-text="Screenshot that shows the default value is Shortcut.":::
 
-1. Navigate to the `HKEY_CLASSES_ROOT\CLSID\{00021401-0000-0000-C000-000000000046}\InProcServer32` subkey.
+4. Navigate to the `HKEY_CLASSES_ROOT\CLSID\{00021401-0000-0000-C000-000000000046}\InProcServer32` subkey.
 
     Make sure that the `(Default)` value in this key is `C:\Windows\System32\windows.storage.dll`.
 
     :::image type="content" source="media/application-shortcuts-show-blank-icons/inprocserver32-value.png" alt-text="Screenshot that shows the default value of InProcServer32.":::
 
-## Scenario: Missing network/internet icon on taskbar**
+## Scenario: Missing network or internet icons on the taskbar
 
-If you are missing the network/internet icon on the taskbar, check if you have this policy in place User Configuration\Administrative Templates\Taskbar and Start Menu\Policy name: Hide notification area.
+If you're missing a network or internet icon on the taskbar, check if you have this policy setting in place: **User Configuration**\\**Administrative Templates**\\**Start Menu and Taskbar**\\**Hide the notification area**.
 
-To check local policies refer to this document:
+To check local policies, see [How to disable user or computer policy settings in a Local Group Policy Object](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn789197(v=ws.11)#how-to-disable-user-or-computer-policy-settings-in-a-local-group-policy-object).
 
-https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn789197(v=ws.11)
-
-under the section: "How to disable user or computer policy settings in a Local Group Policy Object"
-
-If you want to look for domain policies, then refer to:
-
-https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/group-policy/group-policy-management-console
-
-look for section: "Edit an existing GPO", then look for the policy path mentioned above
+To look for Group Policy Objects in a domain, see [Edit an existing GPO](../../windows-server/identity/ad-ds/manage/group-policy/group-policy-management-console.md#edit-an-existing-gpo).
