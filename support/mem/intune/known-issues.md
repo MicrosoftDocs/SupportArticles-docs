@@ -31,7 +31,7 @@ For more information about this known issue, see our blog [Remediation message d
 
 - **Status:** Active
 
-There is a known issue (originally posted on the Service Health Dashboard as IT393575) where occasionally a macOS device becomes unenrolled after performing an enrollment due to an issue with the headers being sent to the client MDM agent. This issue is specific to a very limited number of macOS devices with the Microsoft Intune management extension; the majority of macOS devices enroll as expected. To fix this issue, re-enroll the device. 
+There's a known issue (originally posted on the Service Health Dashboard as IT393575) where, occasionally, the enrollment of a macOS device fails or the device might become unenrolled because the MDM agent mishandles failed MDM certificate installations. When this issue occurs and the MDM agent doesn't receive the expected headers, the client automatically removes its MDM enrollment profile. To fix this issue, you have to re-enroll the device.
 
 ## Android 12 clipboard data toast notification
 
