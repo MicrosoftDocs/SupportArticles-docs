@@ -46,7 +46,7 @@ Sign-in issues can occur for different reasons. Identify the specific cause of t
 
 ### Automated checks
 
-To automate the process, run the [Microsoft Teams Room Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input) connectivity test in the Microsoft Remote Connectivity Analyzer tool. This tool is used to troubleshoot connectivity issues that affect Microsoft Teams. The connectivity test performs checks to verify a specific user's permissions to sign in to Teams by using a Teams Rooms device.
+To automate the process, run the [Microsoft Teams Rooms Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input) connectivity test in the Microsoft Remote Connectivity Analyzer tool. This tool is used to troubleshoot connectivity issues that affect Microsoft Teams. The connectivity test performs checks to verify a specific user's permissions to sign in to Teams by using a Teams Rooms device.
 
 > [!NOTE]
 >
@@ -55,7 +55,7 @@ To automate the process, run the [Microsoft Teams Room Sign in](https://testconn
 
 To run the connectivity test, follow these steps:
 
-1. Open a web browser and navigate to the [Microsoft Teams Room Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input) connectivity test.
+1. Open a web browser and navigate to the [Microsoft Teams Rooms Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input) connectivity test.
 1. Sign in by using the credentials of a Global Administrator account.
 1. Specify the username for the resource account.
 1. In the **Device Selection** field, select a type for the affected device.
