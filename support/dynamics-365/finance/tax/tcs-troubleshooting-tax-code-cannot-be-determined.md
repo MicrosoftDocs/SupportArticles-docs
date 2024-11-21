@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Tax code cannot be determined error
-description: Provides a resolution to solve the Tax code cannot be determined error that occurs in Tax Calculation.
+title: Tax code can't be determined error
+description: Provides a resolution to solve the Tax code can't be determined error that occurs in Tax Calculation.
 author: hangwan
 ms.date: 11/21/2024
 ms.custom: sap:Tax - indirect tax\Issues with advanced tax calculation
@@ -123,8 +123,8 @@ To solve the issue:
 
 ## Mitigation
 
-1. Go through each step in the [Resolution](#resolution) section of this article, and fix the setup as required. If the tax group and item tax group aren't determined correctly, see ["No matching result could be found" error in the Tax Calculation](tcs-troubleshooting-no-matching-result.md).
-2. If there's no intersection for the tax group and the item tax group, create a new feature version in RCS, and then fix the setup.
+1. Go through each step in the [Resolution](#resolution) section of this article, and fix the setup as required. If the tax group and item tax group aren't determined correctly, see ["No matching result could be found" error in Tax Calculation](tcs-troubleshooting-no-matching-result.md).
+2. If there's no intersection for the tax group and the item tax group, create a new feature version in Globalization Studio, and then fix the setup.
 
     - Go to **Tax features** \> **Tax codes and groups** \> **Item tax group**.
 
