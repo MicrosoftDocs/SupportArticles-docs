@@ -1,16 +1,16 @@
 ---
-title: Quota exceeded error during creation or upgrade
-description: Troubleshoot the Quota exceeded error during creation or upgrade of an Azure Kubernetes Service (AKS) cluster.
+title: QuotaExceeded or InsufficientVCPUQuota error during creation or upgrade
+description: Troubleshoot a "QuotaExceeded" or "InsufficientVCPUQuota" error during a creation or upgrade operation in an Azure Kubernetes Service (AKS) cluster.
 ms.date: 11/21/2024
 ms.reviewer: chiragpa, nickoman, v-weizhu
 ms.service: azure-kubernetes-service
 keywords:
-#Customer intent: As an Azure Kubernetes user, I want to avoid exceeding a "Quota exceeded" error for virtual CPU (vCPU) usage so that I can create or upgrade an Azure Kubernetes Service (AKS) cluster successfully.
+#Customer intent: As an Azure Kubernetes user, I want to avoid the "QuotaExceeded" or "InsufficientVCPUQuota" error for virtual CPU (vCPU) usage so that I can create or upgrade an AKS cluster successfully.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
-# "Quota exceeded" error during creation or upgrade
+# "QuotaExceeded" or "InsufficientVCPUQuota" error during AKS creation or upgrade
 
-This article provides a solution to a "Quota exceeded" error that occurs during an Azure Kubernetes Service (AKS) creation or upgrade operation.
+This article provides a solution to a "Quota exceeded" or "InsufficientVCPUQuota" error that occurs during an Azure Kubernetes Service (AKS) creation or upgrade operation.
 
 ## Symptoms
 

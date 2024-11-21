@@ -20,6 +20,6 @@ For a purchase order that is subject to change management, if the only change th
 
 ## Resolution
 
-Cancellation of a delivery remainder doesn't affect the contents of the confirmation journal. This functionality should be used when the line has been partially received, and the remainder quality should be canceled in the process step after the purchase order has been confirmed with the vendor.
+Cancellation of a delivery remainder doesn't affect the contents of the confirmation journal. This functionality should be used when the line has been partially received, and the remainder quantity should be canceled in the process step after the purchase order has been confirmed with the vendor.
 
 If this should be reflected on the purchase order confirmation, the quantity should be adjusted on the purchase order line so that the confirmation will be required. Alternatively, if nothing has been received on the line, the quantity can be removed. In this case, reconfirmation will be required.

@@ -7,7 +7,6 @@ ms.author: jasonchlus
 ms.reviewer: terry.g.lee, jagbal
 ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ---
-
 # Error "Another setup is already running. Please wait for it to finish before trying again"
 
 _Applies to:_&nbsp;Visual Studio 2015
