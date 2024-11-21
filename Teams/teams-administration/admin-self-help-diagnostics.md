@@ -12,7 +12,7 @@ search.appverid:
 appliesto:
   - Teams
 ms.custom:
-  - sap:949f60b5-3932-ddb3-cd2a-a6f9642f93bf
+  - sap:Teams Admin\TAC (Teams Admin Center)
   - CI 124054
   - CI 188816
   - CI 193380
