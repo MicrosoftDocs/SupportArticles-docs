@@ -1,7 +1,7 @@
 ---
 title: Blank icons on the desktop, Start menu, and taskbar
 description: Fixes an issue in which application shortcuts on the desktop, Start menu, and taskbar show blank icons in Windows.
-ms.date: 11/20/2024
+ms.date: 11/21/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -89,9 +89,9 @@ To check and verify the value of the `IconHandler` subkey and its associated Cla
 
     :::image type="content" source="media/application-shortcuts-show-blank-icons/inprocserver32-value.png" alt-text="Screenshot that shows the default value of InProcServer32.":::
 
-## Scenario: Missing network or internet icons on the taskbar
+## Scenario: Network or internet icon is missing from the taskbar
 
-If you're missing a network or internet icon on the taskbar, check if you have this policy setting in place: **User Configuration**\\**Administrative Templates**\\**Start Menu and Taskbar**\\**Hide the notification area**.
+If a network or internet icon is missing from the taskbar, check if this policy setting is in place: **User Configuration**\\**Administrative Templates**\\**Start Menu and Taskbar**\\**Hide the notification area**.
 
 To check local policies, see [How to disable user or computer policy settings in a Local Group Policy Object](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn789197(v=ws.11)#how-to-disable-user-or-computer-policy-settings-in-a-local-group-policy-object).
 
