@@ -32,6 +32,8 @@
       href: email-exchange-synchronization/appointments-do-not-sync-to-exchange-for-some-users.md
     - name: Appointments, contacts, and tasks can't be synchronized
       href: email-exchange-synchronization/error-when-you-test-enable-a-mailbox.md
+    - name: '"You cannot send email as the selected user" error'
+      href: email-exchange-synchronization/cannot-send-email-as-another-user.md
     - name: Emails aren't automatically tracked or synchronized
       href: email-exchange-synchronization/emails-not-automatically-tracked-or-synchronized.md
     - name: Email can't be received because the license is invalid for the mailbox
