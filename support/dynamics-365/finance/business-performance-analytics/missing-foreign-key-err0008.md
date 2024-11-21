@@ -4,13 +4,12 @@ description: Provides information about the Missing foreign key reference error 
 author: jinniew
 ms.author: jiwo
 ms.reviewer: twheeloc 
-ms.date: 02/05/2024
+ms.date: 11/21/2024
 ms.search.form: business-performance-analytics
 audience: Application User
 ms.custom: sap:Business intelligence, reporting, analytics
 ---
 # Missing foreign key reference: Error code: ERR00008 [Type: Warning]
-
 
 ## Symptoms
 

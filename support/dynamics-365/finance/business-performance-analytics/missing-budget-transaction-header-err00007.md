@@ -4,13 +4,12 @@ description: Provides information about the Missing budget transaction header er
 author: jinniew
 ms.author: jiwo
 ms.reviewer: twheeloc 
-ms.date: 04/30/2024
+ms.date: 11/21/2024
 ms.custom: sap:Business intelligence, reporting, analytics
 ms.search.form: business-performance-analytics
 audience: Application User
 ---
 # Missing budget transaction header: Error code: ERR00007 [Type: Warning]
-
 
 ## Symptoms
 

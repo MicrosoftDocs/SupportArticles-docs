@@ -4,13 +4,12 @@ description: Provides information about the Mismatch between debits and credits 
 author: jinniew
 ms.author: jiwo
 ms.reviewer: twheeloc 
-ms.date: 04/30/2024
+ms.date: 11/21/2024
 ms.custom: sap:Business intelligence, reporting, analytics
 ms.search.form: business-performance-analytics
 audience: Application User
 ---
 # Mismatch between debits and credits: Error code: ERR00005 [Type: Warning]
-
 
 ## Symptoms
 

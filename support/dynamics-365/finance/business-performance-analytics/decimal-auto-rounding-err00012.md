@@ -4,13 +4,12 @@ description: Provides information about the Decimal auto rounding error (error c
 author: jinniew
 ms.author: jiwo
 ms.reviewer: twheeloc 
-ms.date: 06/13/2024
+ms.date: 11/21/2024
 ms.search.form: business-performance-analytics
 audience: Application User
 ms.custom: sap:Business intelligence, reporting, analytics
 ---
 # Decimal auto rounding: Error code: ERR00012 [Type: Warning]
-
 
 ## Symptoms
 

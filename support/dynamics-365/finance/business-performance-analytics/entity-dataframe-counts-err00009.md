@@ -4,13 +4,12 @@ description: Provides information about the Entity dataframe counts differ betwe
 author: jinniew
 ms.author: jiwo
 ms.reviewer: twheeloc 
-ms.date: 02/05/2024
+ms.date: 11/21/2024
 ms.search.form: business-performance-analytics
 audience: Application User
 ms.custom: sap:Business intelligence, reporting, analytics
 ---
 # Entity dataframe counts differ between prejoin and postjoin: Error code: ERR00009 [Type: Warning]
-
 
 ## Symptoms
 

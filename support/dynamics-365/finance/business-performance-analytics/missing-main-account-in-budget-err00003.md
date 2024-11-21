@@ -4,13 +4,12 @@ description: Provides information about the Missing main account in budget error
 author: jinniew
 ms.author: jiwo
 ms.reviewer: twheeloc 
-ms.date: 04/30/2024
+ms.date: 11/21/2024
 ms.custom: sap:Business intelligence, reporting, analytics
 ms.search.form: business-performance-analytics
 audience: Application User
 ---
 # Missing main account in budget: Error code: ERR00003 [Type: Warning]
-
 
 ## Symptoms
 

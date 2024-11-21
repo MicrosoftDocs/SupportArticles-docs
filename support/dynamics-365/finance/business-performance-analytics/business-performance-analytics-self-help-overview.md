@@ -4,13 +4,12 @@ description: Provides information about Business performance analytics self-help
 author: jinniew
 ms.author: jiwo
 ms.reviewer: twheeloc 
-ms.date: 04/30/2024
+ms.date: 11/21/2024
 ms.custom: sap:Business intelligence, reporting, analytics
 ms.search.form: business-performance-analytics
 audience: Application User
 ---
 # Business performance analytics self-help
-
 
 To maintain the accuracy of report data, business performance analytics assesses the quality of the source data. If the assessments don't meet defined rules, business performance analytics logs information in the **Bpa self help logs** table in Microsoft Dataverse. This table provides insights into issues and helps you take appropriate action.
 
