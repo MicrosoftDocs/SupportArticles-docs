@@ -189,7 +189,7 @@ When you create an app protection policy, you can target it to all app types or 
 
 If you are targeting only iOS Intune-managed devices, the following additional [app configuration settings](/mem/intune/apps/app-configuration-policies-use-ios) are required to be targeted alongside your app protection policy:
 
-- **IntuneMAMUPN** must be configured for all MDM (Intune or a third-party EMM)-managed applications. For more information, see Configure user UPN setting for Microsoft Intune or third-party EMM.
+- **IntuneMAMUPN** and **IntuneMAMOID** must be configured for all MDM (Intune or a third-party EMM)-managed applications. For more information, see [Configure user UPN setting for Microsoft Intune or third-party EMM](/mem/intune/apps/data-transfer-between-apps-manage-ios#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
 - **IntuneMAMDeviceID** must be configured for all third-party and LOB MDM-managed applications.
 - **IntuneMAMDeviceID** must be configured as the device ID token. For example, key=IntuneMAMDeviceID, value={{deviceID}}. For more information, see [Add app configuration policies for managed iOS devices](/mem/intune/apps/app-configuration-policies-use-ios).
 - If only the **IntuneMAMDeviceID** value is configured, Intune APP will consider the device as unmanaged.
