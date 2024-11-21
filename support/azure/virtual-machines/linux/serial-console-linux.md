@@ -12,7 +12,7 @@ ms.collection: linux
 ms.topic: article
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure-services
-ms.date: 11/07/2024
+ms.date: 11/21/2024
 ms.author: mbifeld
 ---
 
@@ -110,52 +110,28 @@ Serial Console uses the storage account configured for boot diagnostics in its c
    > [!NOTE]
    > Storage account firewalls for the Serial Console aren't supported for VMs in geographies with only one region, such as Italy North in Italy.
 
-   |IP address      | Regions | Geography|
-   |-----------|--------------------|-----------------|
-   |102.37.86.194|South Africa North, South Africa West|Africa|
-   |20.87.80.28|South Africa North, South Africa West|Africa|
-   |20.205.69.28 | East Asia, Southeast Asia | AsiaPacific|
-   |20.195.85.180 | East Asia, Southeast Asia | AsiaPacific|
-   |20.53.53.224 | Australia Central, Australia Central 2, Australia East, Australia Southeast | Australia|
-   |20.70.222.112 | Australia Central, Australia Central 2, Australia East, Australia Southeast | Australia|
-   |191.234.136.63 | Brazil South, Brazil Southeast | Brazil|
-   |20.206.0.194 | Brazil South, Brazil Southeast | Brazil|
-   |52.228.86.177 | Canada Central, Canada East | Canada|
-   |52.242.40.90 | Canada Central, Canada East | Canada|
-   |20.45.242.18 |  | Canary (EUAP)|
-   |20.51.21.252 |  | Canary (EUAP)|
-   |52.146.139.220 | North Europe, West Europe | Europe|
-   |20.105.209.72 | North Europe, West Europe | Europe|
-   |20.111.0.244 | France Central, France South | France|
-   |52.136.191.10 | France Central, France South | France|
-   |51.116.75.88 | Germany North, Germany West Central | Germany|
-   |20.52.95.48 | Germany North, Germany West Central | Germany|
-   |20.192.168.150 | Central India, South India, West India | India|
-   |20.192.153.104 | Central India, South India, West India | India|
-   |20.43.70.205 | Japan East, Japan West | Japan|
-   |20.189.228.222 | Japan East, Japan West | Japan|
-   |20.200.196.96 | Korea Central, Korea South | Korea|
-   |52.147.119.29 | Korea Central, Korea South | Korea|
-   |20.100.1.184 | Norway West, Norway East | Norway|
-   |51.13.138.76 | Norway West, Norway East | Norway|
-   |20.208.4.98 | Switzerland North, Switzerland West | Switzerland|
-   |51.107.251.190 | Switzerland North, Switzerland West | Switzerland|
-   |20.45.95.66 | UAE Central, UAE North | UAE|
-   |20.38.141.5 | UAE Central, UAE North | UAE|
-   |20.90.132.144 | UK South, UK West | UnitedKingdom|
-   |20.58.68.62 | UK South, UK West | UnitedKingdom|
-   |51.12.72.223 | Sweden Central, Sweden South | Sweden|
-   |51.12.22.174 | Sweden Central, Sweden South | Sweden|
-   |20.98.146.84 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | UnitedStates|
-   |20.98.194.64 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | UnitedStates|
-   |20.69.5.160 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | UnitedStates|
-   |20.69.5.162 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | UnitedStates|
-   |20.83.222.102 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | United States|
-   |20.83.222.100 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | United States|
-   |20.141.10.131 | All US Government cloud regions | UsGov|
-   |52.235.252.253| All US Government cloud regions | UsGov|
-   |143.64.47.39|China North 3|China|
-   |163.228.70.115|China East 3|China|
+   | Geography | Regions | IP addresses |
+   |-----------|---------|--------------|
+   | Asia | Asia East, Asia Southeast | 4.145.74.168, 20.195.85.180, 20.195.85.181, 20.205.68.106, 20.205.68.107, 20.205.69.28, 23.97.88.117, 23.98.106.151 |
+   | Australia | Australia Central, Australia Central 2, Australia East, Australia Southeast | 4.198.45.55, 4.200.251.224, 20.167.131.228, 20.53.52.250, 20.53.53.224, 20.53.55.174, 20.70.222.112, 20.70.222.113, 68.218.123.133 |
+   | Brazil | Brazil South, Brazil Southeast | 20.206.0.192, 20.206.0.193, 20.206.0.194, 20.226.211.157, 108.140.5.172, 191.234.136.63, 191.238.77.232, 191.238.77.233 |
+   | Canada | Canada Central, Canada East | 20.175.7.183, 20.48.201.78, 20.48.201.79, 20.220.7.246, 52.139.106.74, 52.139.106.75, 52.228.86.177, 52.242.40.90 |
+   | Canary (EUAP) | Canary | 20.45.242.18, 20.51.21.252 |
+   | China | China North 3, China East 3 | 163.228.102.122, 163.228.102.123, 52.131.192.182, 52.131.192.183, 159.27.255.76, 159.27.253.236, 163.228.102.122, 163.228.102.123, 52.131.192.182, 52.131.192.183 |
+   | Europe | Europe North, Europe West | 4.210.131.60, 20.105.209.72, 20.105.209.73, 40.113.178.49, 52.146.137.65, 52.146.139.220, 52.146.139.221, 98.71.107.78 |
+   | France | France Central, France South | 20.111.0.244, 40.80.103.247, 51.138.215.126, 51.138.215.127, 52.136.191.8, 52.136.191.9, 52.136.191.10, 98.66.128.35 |
+   | Germany | Germany North, Germany West Central | 20.52.94.114, 20.52.94.115, 20.52.95.48, 20.113.251.155, 51.116.75.88, 51.116.75.89, 51.116.75.90, 98.67.183.186 |
+   | India | India Central, India South, India West | 4.187.107.68, 20.192.47.134, 20.192.47.135, 20.192.152.150, 20.192.152.151, 20.192.153.104, 20.207.175.96, 52.172.82.199, 98.70.20.180 |
+   | Japan | Japan East, Japan West | 20.18.7.188, 20.43.70.205, 20.89.12.192, 20.89.12.193, 20.189.194.100, 20.189.228.222, 20.189.228.223, 20.210.144.254 |
+   | Korea | Korea Central, Korea South | 20.200.166.136, 20.200.194.238, 20.200.194.239, 20.200.196.96, 20.214.133.81, 52.147.119.28, 52.147.119.29, 52.147.119.30 |
+   | Norway | Norway East, Norway West | 20.100.1.154, 20.100.1.155, 20.100.1.184, 20.100.21.182, 51.13.138.76, 51.13.138.77, 51.13.138.78, 51.120.183.54 |
+   | South Africa | South Africa North, South Africa West | 20.87.80.28, 20.87.86.207, 40.117.27.221, 102.37.86.192, 102.37.86.193, 102.37.86.194, 102.37.166.222, 102.37.166.223 |
+   | Sweden | Sweden Central, Sweden South | 20.91.100.236, 51.12.22.174, 51.12.22.175, 51.12.22.204, 51.12.72.222, 51.12.72.223, 51.12.73.92, 172.160.216.6 |
+   | Switzerland | Switzerland North, Switzerland West | 20.199.207.188, 20.208.4.98, 20.208.4.99, 20.208.4.120, 20.208.149.229, 51.107.251.190, 51.107.251.191, 51.107.255.176 |
+   | UAE | UAE Central, UAE North | 20.38.141.5, 20.45.95.64, 20.45.95.65, 20.45.95.66, 20.203.93.198, 20.233.132.205, 40.120.87.50, 40.120.87.51 |
+   | United Kingdom | UK South, UK West | 20.58.68.62, 20.58.68.63, 20.90.32.180, 20.90.132.144, 20.90.132.145, 51.104.30.169, 172.187.0.26, 172.187.65.53 |
+   | United States | US Central, US East, US East 2, US East 2 EUAP, US North, US South, US West, US West 2, US West 3 | 4.149.249.197, 4.150.239.210, 20.14.127.175, 20.40.200.175, 20.45.242.18, 20.45.242.19, 20.45.242.20, 20.47.232.186, 20.51.21.252, 20.69.5.160, 20.69.5.161, 20.69.5.162, 20.83.222.100, 20.83.222.101, 20.83.222.102, 20.98.146.84, 20.98.146.85, 20.98.194.64, 20.98.194.65, 20.98.194.66, 20.168.188.34, 20.241.116.153, 52.159.214.194, 57.152.124.244, 68.220.123.194, 74.249.127.175, 74.249.142.218, 157.55.93.0, 168.61.232.59, 172.183.234.204, 172.191.219.35 |
+   | USGov | All US Government Cloud regions | 20.140.104.48, 20.140.105.3, 20.140.144.58, 20.140.144.59, 20.140.147.168, 20.140.53.121, 20.141.10.130, 20.141.10.131, 20.141.13.121, 20.141.15.104, 52.127.55.131, 52.235.252.252, 52.235.252.253, 52.243.247.124, 52.245.155.139, 52.245.156.185, 62.10.196.24, 62.10.196.25, 62.10.84.240, 62.11.6.64, 62.11.6.65 |
 
    > [!IMPORTANT]
    > - The IPs that need to be permitted are specific to the region where the VM is located. For example, a virtual machine deployed in the North Europe region needs to add the following IP exclusions to the storage account firewall for the Europe geography: 52.146.139.220 and 20.105.209.72. View the table above to find the correct IPs for your region and geography.
