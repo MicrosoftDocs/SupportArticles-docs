@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot DNS resolution issues
-description: Helps troubleshoot DNS resolution issues.
+title: Troubleshoot DNS client name resolution issues
+description: Helps troubleshoot DNS client name resolution issues.
 ms.date: 11/18/2024
 manager: dcscontentpm
 audience: itpro
@@ -8,9 +8,9 @@ ms.topic: troubleshooting
 ms.reviewer: kaushika, moibrahi, warrenw, v-lianna
 ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
 ---
-# Troubleshoot DNS resolution issues
+# Troubleshoot DNS client name resolution issues
 
-This article helps troubleshoot Domain Name System (DNS) resolution issues.
+This article helps troubleshoot Domain Name System (DNS) client name resolution issues.
 
 Domain Name System (DNS) resolution issues can occur for the following three primary causes:
 
@@ -19,7 +19,7 @@ Domain Name System (DNS) resolution issues can occur for the following three pri
 - Intermediate devices or configurations between a DNS client and a DNS server, or between a DNS server and external resolvers (such as root hints, forwarders, and conditional forwarders), which might require further investigation.
 
 > [!NOTE]
-> This article focuses on DNS name resolution issues caused by DNS client problems or configurations.
+> This article focuses on DNS resolution issues caused by DNS client problems or configurations. For more information about troubleshooting issues on DNS servers, see [Troubleshooting DNS servers](/windows-server/networking/dns/troubleshoot/troubleshoot-dns-server).
 
 DNS resolution issues can occur in the following scenarios:
 
