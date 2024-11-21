@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the PublicIPAddressCannotBeDeleted, InUseSubnetCannotBeDeleted, or InUseNetworkSecurityGroupCannotBeDeleted error code
 description: Troubleshoot the PublicIPAddressCannotBeDeleted, InUseSubnetCannotBeDeleted, or InUseNetworkSecurityGroupCannotBeDeleted error when you delete an AKS cluster.
-ms.date: 05/27/2024
+ms.date: 11/12/2024
 editor: v-jsitser
 ms.reviewer: rissing, chiragpa, edneto, v-leedennis
 ms.service: azure-kubernetes-service

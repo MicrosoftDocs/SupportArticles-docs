@@ -3,8 +3,9 @@ title: Missing variables and actions during agent transfers from Power Virtual A
 description: Provides a resolution for the missing required variables and actions during agent transfers from Power Virtual Agents bots in Omnichannel for Customer Service.
 ms.reviewer: nenellim
 ms.author: yangao
-ms.date: 07/01/2024
+ms.date: 11/20/2024
 ms.custom: sap:Copilot Studio\Agent transfer
+ms.collection: CEnSKM-ai-copilot
 ---
 # Missing required variables and actions during agent transfers from Power Virtual Agents bots
 

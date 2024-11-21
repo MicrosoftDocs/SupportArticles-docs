@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the CannotDeleteLoadBalancerWithPrivateLinkService or PrivateLinkServiceWithPrivateEndpointConnectionsCannotBeDeleted error code
 description: Troubleshoot the CannotDeleteLoadBalancerWithPrivateLinkService or PrivateLinkServiceWithPrivateEndpointConnectionsCannotBeDeleted error when you delete an AKS cluster.
-ms.date: 04/01/2022
+ms.date: 11/12/2024
 editor: v-jsitser
 ms.reviewer: rissing, chiragpa, edneto, v-leedennis
 ms.service: azure-kubernetes-service

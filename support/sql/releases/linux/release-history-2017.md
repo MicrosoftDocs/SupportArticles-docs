@@ -4,7 +4,7 @@ description: This article contains the release history for SQL Server 2017 runni
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 10/10/2024
+ms.date: 11/12/2024
 appliesto:
   - SQL Server 2017
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, linux-related-content
@@ -21,6 +21,7 @@ The following table lists the release history for [!INCLUDE [sql-server-2017](..
 
 | Release                    | Version       | Release date |
 | -------------------------- | ------------- | ------------ |
+| [CU 31 GDR 6](#CU31-GDR6)  | 14.0.3485.1   | 2024-11-12   |
 | [CU 31 GDR 5](#CU31-GDR5)  | 14.0.3480.1   | 2024-10-08   |
 | [CU 31 GDR 4](#CU31-GDR4)  | 14.0.3475.1   | 2024-09-10   |
 | [CU 31 GDR 2](#CU31-GDR2)  | 14.0.3465.1   | 2023-10-10   |
@@ -66,6 +67,25 @@ The following table lists the release history for [!INCLUDE [sql-server-2017](..
 | [CU 2](#CU2)               | 14.0.3008.27  | 2017-11-28   |
 | [CU 1](#CU1)               | 14.0.3006.16  | 2017-10-24   |
 | [GA](#GA)                  | 14.0.1000.169 | 2017-10-02   |
+
+## <a id="CU31-GDR6"></a> CU 31 GDR 6 (November 2024)
+
+This is the Cumulative Update 31-GDR6 (CU 31 GDR 6) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. This is a security update that also includes the previously released CU (CU 31). The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3485.1. For information about the fixes and improvements in this release, see [KB 5046858](https://support.microsoft.com/help/5046858).
+
+> [!IMPORTANT]  
+> This is the final cumulative update for [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)].
+
+### Package details
+
+For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
+
+| Distribution | Package version | Downloads |
+| --- | --- | --- |
+| **RHEL 8.x RPM packages** | 14.0.3485.1-1 | [Database Engine RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-14.0.3485.1-1.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3485.1-1.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3485.1-1.x86_64.rpm) |
+| **SLES 12 RPM packages** | 14.0.3485.1-1 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-14.0.3485.1-1.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3485.1-1.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3485.1-1.x86_64.rpm) |
+| **Ubuntu 18.04 Debian packages** | 14.0.3485.1-1 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3485.1-1_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3485.1-1_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3485.1-1_amd64.deb) |
+
+Go back to the [release history](#release-history).
 
 ## <a id="CU31-GDR5"></a> CU 31 GDR 5 (October 2024)
 
