@@ -10,7 +10,7 @@ author: fredg
 # Error code MaxRDSessionDurationReached or SessionHasLoggedOffWithMaxIdleTime in Microsoft Power Automate during a desktop flow run.
 
 
-This article provides troubleshooting steps for an issue occurs during the desktop flow run with error code MaxRDSessionDurationReached or SessionHasLoggedOffWithMaxIdleTime in the cloud environment in Microsoft Power Automate.
+This article provides troubleshooting steps for an issue taht occurs during a desktop flow run with error code MaxRDSessionDurationReached or SessionHasLoggedOffWithMaxIdleTime in the cloud environment in Microsoft Power Automate.
 
 ## Symptoms
 The desktop flow ended with error specifying a registry value name with a specific registry path:
@@ -43,7 +43,7 @@ Those errors are returned when the remote desktop session used to run the deskto
 > You may ask to your administrator to change the settings in the following steps.
 
 ### Group Policy Settings
-Those registry settings are mostly done with the Group Policy settings: check the section **_Session time limits_** by opening the [Local Group Policy Editor](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn789185(v=ws.11)) and navigating to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Remote Desktop Services** > **Session Time Limits**. 
+Those registry settings are usually set with the Group Policy settings: check the section **_Session time limits_** by opening the [Local Group Policy Editor](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn789185(v=ws.11)) and navigating to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Remote Desktop Services** > **Session Time Limits**. 
 
 1. If the message error points the registry value **_MaxConnectionTime_**, verify the **_Set time limit for active Remote Desktop Services sessions_**, if enabled, disable it or set the value as **_Never_**. 
 
