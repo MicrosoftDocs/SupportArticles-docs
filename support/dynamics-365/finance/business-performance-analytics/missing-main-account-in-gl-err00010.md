@@ -13,7 +13,7 @@ ms.custom: sap:Business intelligence, reporting, analytics
 
 ## Symptoms
 
-Error code *ERR00010* is logged in the **Bpa self help logs** table in Microsoft Dataverse when general journal account entries in Dynamics 365 Finance are missing the corresponding main account entries in the ledger dimension column. To maintain data integrity, these records are excluded and won't be transferred to General Ledger Fact tables.
+Error code *ERR00010* is logged in the **Bpa self help logs** table in Microsoft Dataverse when general journal account entries in Dynamics 365 Finance are missing the corresponding main account entries in the ledger dimension column. To maintain data integrity, these records are excluded and aren't transferred to General Ledger Fact tables.
 
 ## Resolution
 
