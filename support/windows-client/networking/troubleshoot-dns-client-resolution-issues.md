@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot DNS client name resolution issues
+title: Troubleshoot DNS Client Name Resolution Issues
 description: Helps troubleshoot DNS client name resolution issues.
 ms.date: 11/18/2024
 manager: dcscontentpm
@@ -19,7 +19,7 @@ Domain Name System (DNS) resolution issues can occur for the following three pri
 - Intermediate devices or configurations between a DNS client and a DNS server, or between a DNS server and external resolvers (such as root hints, forwarders, and conditional forwarders), which might require further investigation.
 
 > [!NOTE]
-> This article focuses on DNS resolution issues caused by DNS client problems or configurations. For more information about troubleshooting issues on DNS servers, see [Troubleshooting DNS servers](/windows-server/networking/dns/troubleshoot/troubleshoot-dns-server).
+> This article focuses on DNS resolution issues caused by DNS client problems or configurations. For more information, see [Troubleshooting DNS servers](/windows-server/networking/dns/troubleshoot/troubleshoot-dns-server).
 
 DNS resolution issues can occur in the following scenarios:
 
@@ -53,7 +53,7 @@ These are standard query requests for host A and host AAAA with no response. Che
 
 ## Scenario 2: There's an entry for the domain name in the Hosts file
 
-Assume that the Hosts file located at *C:\\Windows\\System32\\drivers\\etc* has an entry for the domain name that you want to resolve. For example:
+Assume that the Hosts file located at **C:\\Windows\\System32\\drivers\\etc** has an entry for the domain name that you want to resolve. For example:
 
 `192.168.1.10`   `contoso.com`
 
@@ -135,7 +135,7 @@ The Wireshark output shows that the query takes nearly four seconds to complete.
 ```
 
 > [!NOTE]
-> In this scenario, using `nslookup` isn't applicable and will always fail. This is because `nslookup` uses *nslookup.exe* to contact only the primary DNS server configured, which in this case is `192.168.0.1`.
+> In this scenario, using `nslookup` isn't applicable and will always fail. This is because `nslookup` uses **nslookup.exe** to contact only the primary DNS server configured, which in this case is `192.168.0.1`.
 
 ## Scenario 5: Long DNS suffix search list
 
