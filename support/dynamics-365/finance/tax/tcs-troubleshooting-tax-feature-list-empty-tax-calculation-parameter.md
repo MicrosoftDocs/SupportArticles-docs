@@ -26,14 +26,14 @@ This article provides a resolution for an issue where the list of tax features o
 
 ## Symptoms
 
-In Dynamics 365 Finance, when you try to select a value in the **Name** field under the **FEATURE** on the **Tax calculation parameters** page, the list of values is empty.
+In Dynamics 365 Finance, when you try to select a value in the **Name** field under **FEATURE** on the **Tax calculation parameters** page, the list of values is empty.
 
 ## Cause
 
-The tax feature isn't created in the [Globalization Studio](/dynamics365/finance/localizations/global/globalization-studio-overview).
+The tax feature isn't created in [Globalization Studio](/dynamics365/finance/localizations/global/globalization-studio-overview).
 
 ## Resolution
 
-To solve this issue, create the tax feature in the Globalization Studio.
+To solve this issue, create the tax feature in Globalization Studio.
 
 For more information, see [Configure the Tax Calculation feature](/dynamics365/finance/localizations/global/global-get-started-with-tax-calculation-service#configure-the-tax-calculation-feature).

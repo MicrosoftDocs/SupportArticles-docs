@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Tax code can't be determined error
-description: Provides a resolution to solve the Tax code can't be determined error that occurs in the Tax Calculation.
+title: Tax code cannot be determined error
+description: Provides a resolution to solve the Tax code cannot be determined error that occurs in Tax Calculation.
 author: hangwan
 ms.date: 11/21/2024
 ms.custom: sap:Tax - indirect tax\Issues with advanced tax calculation
@@ -20,9 +20,9 @@ ms.author: hangwan
 ms.search.validFrom: 03/23/2022
 ms.dyn365.ops.version: 10.0.21
 ---
-# "Tax code cannot be determined" error in the Tax Calculation
+# "Tax code cannot be determined" error in Tax Calculation
 
-This article explains the troubleshooting steps that you can take if you receive a "Tax code cannot be determined" error in the [Tax Calculation](/dynamics365/finance/localizations/global/global-tax-calcuation-service-overview) in Dynamics 365 Finance.
+This article explains the troubleshooting steps that you can take if you receive a "Tax code cannot be determined" error in [Tax Calculation](/dynamics365/finance/localizations/global/global-tax-calcuation-service-overview) in Dynamics 365 Finance.
 
 ## Symptoms
 
@@ -67,7 +67,7 @@ The issue is probably occurring because the tax group and the item tax group don
 
 ## Resolution
 
-To solve the issue,
+To solve the issue:
 
 1. In the troubleshooting file, verify that tax group and item tax group are determined. If the values for `Tax Group` and `Item Tax Group` are blank, the tax group and item tax group aren't determined. If they're determined, the results might be incorrect.
 

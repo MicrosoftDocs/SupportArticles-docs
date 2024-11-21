@@ -2,7 +2,7 @@
 # required metadata
 
 title: No matching result could be found error
-description: Provides a resolution to solve the No matching result could be found error that occurs in the Tax Calculation.
+description: Provides a resolution to solve the No matching result could be found error that occurs in Tax Calculation.
 author: hangwan
 ms.date: 11/21/2024
 ms.custom: sap:Tax - indirect tax\Issues with advanced tax calculation
@@ -22,7 +22,7 @@ ms.dyn365.ops.version: 10.0.21
 ---
 # "No matching result could be found" error in the Tax Calculation
 
-This article explains the troubleshooting steps that you can take if you receive the "No matching result could be found" error in the [Tax Calculation](/dynamics365/finance/localizations/global/global-tax-calcuation-service-overview) in Dynamics 365 Finance.
+This article explains the troubleshooting steps that you can take if you receive the "No matching result could be found" error in [Tax Calculation](/dynamics365/finance/localizations/global/global-tax-calcuation-service-overview) in Dynamics 365 Finance.
 
 ## Symptoms
 
@@ -102,7 +102,7 @@ The issue occurs when the feature setup in [Globalization Studio](/dynamics365/f
     | Journal                 |                     |                           | Group A   |
     | Sales                   |                     | 30160                     | Group B   |
 
-    According to the Tax calculation input, the **Business Process** value on the header is **Sales**, and the **Ship From Zip Code** value on the header is **30159**. This input is based on the setup of applicability rules in RCS. Because there's no matching line, the error message occurs.
+    According to the Tax calculation input, the **Business Process** value on the header is **Sales**, and the **Ship From Zip Code** value on the header is **30159**. This input is based on the setup of the applicability rules in Globalization Studio. Because there's no matching line, the error message occurs.
 
     > [!NOTE]
     > If the value in the applicability rule is blank, the rule is applicable to any value.
