@@ -154,7 +154,7 @@
       href: desktop-flows/troubleshoot-session-creation-errrors.md
     - name: Tenant restrictions for machine registration
       href: desktop-flows/tenant-restictions-machine-registration.md  
-    - name: '"Specified module could not be found" error with terminal emulation'
+    - name: '"The specified module could not be found" error with terminal emulation action'
       href: desktop-flows/terminal-emulation-module-not-found.md
     - name: Troubleshoot direct connectivity issues
       href: desktop-flows/troubleshoot-direct-connectivity-issues.md
