@@ -18,31 +18,33 @@ This article discusses how to identify and resolve the `InvalidParameter` error 
 
 ## Symptoms
 
-When you create an AKS cluster, the provided input is usually validated before the cluster is created. However, on rare occasions, a parameter passes the precreation validation but causes errors when the resources for the AKS cluster are created. Errors that are related to invalid parameters might resemble the following example:
+When you create an AKS cluster, the provided configurations are usually validated before the cluster is created. However, on rare occasions, a parameter passes the precreation validation but causes errors when the resources for the AKS cluster are created. Errors that are related to invalid parameters might resemble the following example:
 
-- For the error related to VM size not being available:
+- For the scenario that the selected VM size is not available
 
-    > Code="InvalidParameter"
-    >
-    > Message="**The requested VM size Standard_D4s_v3 is not available in the current region.** The sizes available in the current region are: ExtraSmall_Internal, Small_Internal, Medium_Internal, Large_Internal, ExtraLarge_Internal, Standard_DC2as_v5, Standard_DC4as_v5, Standard_DC8as_v5, Standard_DC16as_v5, Standard_DC32as_v5, Standard_DC48as_v5, Standard_DC64as_v5, Standard_DC96as_v5, Standard_DC2ads_v5, Standard_DC4ads_v5, Standard_DC8ads_v5, Standard_DC16ads_v5, Standard_DC32ads_v5, Standard_DC48ads_v5, Standard_DC64ads_v5, Standard_DC96ads_v5, Standard_EC2as_v5, Standard_EC4as_v5, Standard_EC8as_v5, Standard_EC16as_v5, Standard_EC20as_v5, Standard_EC32as_v5, Standard_EC48as_v5, Standard_EC64as_v5, Standard_EC96as_v5, Standard_EC96ias_v5, Standard_EC2ads_v5, Standard_EC4ads_v5, Standard_EC8ads_v5, Standard_EC16ads_v5, Standard_EC20ads_v5, Standard_EC32ads_v5, Standard_EC48ads_v5, Standard_EC64ads_v5, Standard_EC96ads_v5, Standard_EC96iads_v5.\r\nFind out more on the available VM sizes in each region at <https://aka.ms/azureregions>."
-    >
-    > Target="vmSize"
+    ```
+    Code="InvalidParameter"
+        
+    Message="**The requested VM size Standard_D4s_v3 is not available in the current region. The sizes available in the current region are: ExtraSmall_Internal, Small_Internal, Medium_Internal, Large_Internal, ExtraLarge_Internal, Standard_DC2as_v5, Standard_DC4as_v5, Standard_DC8as_v5, Standard_DC16as_v5, Standard_DC32as_v5, Standard_DC48as_v5, Standard_DC64as_v5, Standard_DC96as_v5, Standard_DC2ads_v5, Standard_DC4ads_v5, Standard_DC8ads_v5, Standard_DC16ads_v5, Standard_DC32ads_v5, Standard_DC48ads_v5, Standard_DC64ads_v5, Standard_DC96ads_v5, Standard_EC2as_v5, Standard_EC4as_v5, Standard_EC8as_v5, Standard_EC16as_v5, Standard_EC20as_v5, Standard_EC32as_v5, Standard_EC48as_v5, Standard_EC64as_v5, Standard_EC96as_v5, Standard_EC96ias_v5, Standard_EC2ads_v5, Standard_EC4ads_v5, Standard_EC8ads_v5, Standard_EC16ads_v5, Standard_EC20ads_v5, Standard_EC32ads_v5, Standard_EC48ads_v5, Standard_EC64ads_v5, Standard_EC96ads_v5, Standard_EC96iads_v5.\r\nFind out more on the available VM sizes in each region at <https://aka.ms/azureregions>."
+        
+    Target="vmSize"
+    ```
+-  For scenarios that configuration like the cluster name are unavailable or conflict with Azure reserved values:
 
-- For errors related to unavailable or Azure reserved values:
-
-    > Code="InvalidParameter"
-    >
-    > Message="The value of parameter name is invalid. Error details: "omsagent-aks-dev-microsoft" managed cluster name is invalid because 'MICROSOFT' and 'WINDOWS' can't be used as either a whole word or a substring in the name.. Please see https://aka.ms/aks-naming-rules for more details."
-    >
-    > or
-    >
-    > Message="The value of parameter name is invalid. Error details: "login" managed cluster name is invalid because 'LOGIN' and 'XBOX' can't be used at the start of a resource name, but can be used later in the name.. Please see https://aka.ms/aks-naming-rules for more details."
-    >
-    > or
-    >
-    > Message=" The value of parameter name is invalid. Error details: "azure" managed cluster name is invalid because it is reserved.. Please see https://aka.ms/aks-naming-rules for more details.
+    ```
+    Code="InvalidParameter"
+        
+    Message="The value of parameter name is invalid. Error details: "omsagent-aks-dev-microsoft" managed cluster name is invalid because 'MICROSOFT' and 'WINDOWS' can't be used as either a whole word or a substring in the name.. Please see https://aka.ms/aks-naming-rules for more details."
+    ```
+    or
+    ```
+    Message="The value of parameter name is invalid. Error details: "login" managed cluster name is invalid because 'LOGIN' and 'XBOX' can't be used at the start of a resource name, but can be used later in the name.. Please see https://aka.ms/aks-naming-rules for more details."
+     ```
+    or
+    ```
+    Message=" The value of parameter name is invalid. Error details: "azure" managed cluster name is invalid because it is reserved.. Please see https://aka.ms/aks-naming-rules for more details.
     Target: name"
-
+    ```
 ## Cause
 
 This issue occurs because one of the following conditions is true:
