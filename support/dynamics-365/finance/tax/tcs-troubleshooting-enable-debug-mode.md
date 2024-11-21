@@ -4,7 +4,7 @@
 title: Enable debug mode in Tax Calculation
 description: Introduces how to enable the debug mode in the Tax Calculation to investigate issues. 
 author: hangwan
-ms.date: 11/13/2024
+ms.date: 11/21/2024
 ms.custom: sap:Tax - indirect tax\Issues with advanced tax calculation
 
 # optional metadata 

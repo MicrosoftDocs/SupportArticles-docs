@@ -4,7 +4,7 @@
 title: Empty tax feature list on Tax calculation parameters
 description: Solves an issue where the list of tax features on the Tax calculation parameters page is empty.
 author: wangchen
-ms.date: 11/13/2024
+ms.date: 11/21/2024
 ms.custom: sap:Tax - indirect tax\Issues with advanced tax calculation
 
 # optional metadata

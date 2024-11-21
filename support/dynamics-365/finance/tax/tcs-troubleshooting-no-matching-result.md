@@ -4,7 +4,7 @@
 title: No matching result could be found error
 description: Provides a resolution to solve the No matching result could be found error that occurs in the Tax Calculation.
 author: hangwan
-ms.date: 11/13/2024
+ms.date: 11/21/2024
 ms.custom: sap:Tax - indirect tax\Issues with advanced tax calculation
 
 # optional metadata
@@ -95,7 +95,7 @@ The issue occurs when the feature setup in [Globalization Studio](/dynamics365/f
     }
     ```
 
-    The following table lists the tax group applicability in [Regulatory Configuration Service (RCS)](/dynamics365/finance/localizations/global/rcs-overview).
+    The following table lists the tax group applicability in [Globalization Studio](/dynamics365/finance/localizations/global/globalization-studio-overview).
 
     | Header.Business process | Lines.Business Unit | Header.Ship From Zip Code | Tax Group |
     |-------------------------|---------------------|---------------------------|-----------|
