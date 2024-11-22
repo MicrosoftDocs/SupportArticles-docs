@@ -1,9 +1,7 @@
 ---
 title: SIP 488 and Microsoft response codes
 description: Lists combinations of Microsoft response code and the SIP 488 error, and provides actions to resolve the errors.
-ms.date: 11/18/2024
-author: helenclu
-ms.author: luche
+ms.date: 11/22/2024
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
@@ -15,6 +13,7 @@ appliesto:
 ms.custom: 
   - sap:Teams Calling (PSTN)\Direct Routing
   - CI173631
+  - CI2382
   - CSSTroubleshoot
 ms.reviewer: teddygyabaah
 ---
@@ -49,4 +48,4 @@ This article provides troubleshooting information for various combinations of th
 - Microsoft response code: **531052**
 - SIP response code: **488**
 - Suggested actions:  
-  - Check the SBC configuration to determine why it sends a SIP message with SDP that has a connection address of *0.0.0.0*. Microsoft SIP stack doesn't support this scenario. For more information, see [Deviations from the RFCs](/microsoftteams/direct-routing-protocols#deviations-from-the-rfcs).
+  - Check the SBC configuration to determine why it sends an SIP message with SDP that has a connection address of *0.0.0.0*. Microsoft SIP stack doesn't support this scenario. For more information, see [Deviations from the RFCs](/microsoftteams/direct-routing-protocols#deviations-from-the-rfcs).

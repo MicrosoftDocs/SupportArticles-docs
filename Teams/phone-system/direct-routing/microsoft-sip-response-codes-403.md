@@ -1,9 +1,7 @@
 ---
 title: SIP 403 and Microsoft response codes
 description: Lists combinations of Microsoft response codes and the SIP 403 error, and provides actions to resolve the errors.
-ms.date: 11/18/2024
-author: helenclu
-ms.author: luche
+ms.date: 11/22/2024
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
@@ -15,6 +13,7 @@ appliesto:
 ms.custom: 
   - sap:Teams Calling (PSTN)\Direct Routing
   - CI173631
+  - CI2381
   - CSSTroubleshoot
 ms.reviewer: teddygyabaah
 ---
@@ -71,7 +70,7 @@ This article provides troubleshooting information for various combinations of th
 - Microsoft response code: **510546**
 - SIP response code: **403**
 - Suggested actions:  
-  - If you use [Location-Based Routing](/microsoftteams/location-based-routing-plan) for Direct Routing, check the settings and determine if toll bypass is restricted for the affected user's location. If so, this error is expected and no action is required. Otherwise, fix any misconfiguration.
+  - If you use [Location-Based Routing](/microsoftteams/location-based-routing-plan) for Direct Routing, check the settings to determine whether toll bypass is restricted for the affected user's location. If it is, this error is expected and no action is required. Otherwise, fix any misconfiguration.
   - If you don't use Direct Routing, check whether the [PreventTollBypass](/powershell/module/teams/set-csteamscallingpolicy?view=teams-ps#-preventtollbypass&preserve-view=true) setting in your Teams calling policy is set to **True**. To check the setting, run the following PowerShell command and look for the **PreventTollBypass** setting in the result:
 
     ```powershell
