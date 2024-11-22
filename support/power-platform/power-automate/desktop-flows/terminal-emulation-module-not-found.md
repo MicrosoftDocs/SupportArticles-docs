@@ -27,10 +27,10 @@ The terminal emulator requires access to some extra DLL files that aren't presen
 
     1. In the terminal emulator installation directory, locate the HLLAPI DLL file referenced in the **Open terminal session** action.
 
-    1. Use [Process Hacker](https://processhacker.sourceforge.io/) (or a similar tool) to identify its dependencies.
-    1. In Process Hacker, select **Tools** > **Inspect executable file**.
+    1. Use [System Informer](https://systeminformer.sourceforge.io/) (or a similar tool) to identify its dependencies.
+    1. In System Informer, select **Tools** > **Inspect executable file**.
 
-       :::image type="content" source="media/terminal-not-found/inspect-executable-file.png" alt-text="Screenshot of the Inspect executable file option in Process Hacker.":::
+       :::image type="content" source="media/terminal-not-found/inspect-executable-file.png" alt-text="Screenshot of the Inspect executable file option in System Informer.":::
 
     1. Select the HLLAPI DLL file and go to the **Imports** tab. The tab shows all the DLL files that the HLLAPI DLL file depends on.
 
