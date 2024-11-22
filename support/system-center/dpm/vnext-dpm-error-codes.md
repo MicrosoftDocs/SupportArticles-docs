@@ -2,7 +2,7 @@
 title: System Center vNext DPM error codes
 description: Lists error codes that may occur in System Center vNext Data Protection Manager.
 ms.date: 11/22/2024
-ms.reviewer: Mjacquet, aaronmax, jchornbe, sooryar
+ms.reviewer: Mjacquet, aaronmax, jchornbe, sooryar, v-gjeronika
 ---
 # System Center vNext Data Protection Manager error codes
 
