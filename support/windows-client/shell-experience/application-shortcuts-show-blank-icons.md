@@ -91,7 +91,7 @@ To check and verify the value of the `IconHandler` subkey and its associated Cla
 
 ## Scenario: Network or internet icon is missing from the taskbar
 
-If a network or internet icon is missing from the taskbar, check if this policy setting is in place: **User Configuration**\\**Administrative Templates**\\**Start Menu and Taskbar**\\**Hide the notification area**.
+If the network or internet icon is missing from the taskbar, check if this policy setting is in place: **User Configuration**\\**Administrative Templates**\\**Start Menu and Taskbar**\\**Hide the notification area**.
 
 To check local policies, see [How to disable user or computer policy settings in a Local Group Policy Object](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn789197(v=ws.11)#how-to-disable-user-or-computer-policy-settings-in-a-local-group-policy-object).
 
