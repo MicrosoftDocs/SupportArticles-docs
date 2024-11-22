@@ -2,6 +2,8 @@
   items:
   - name: Can't find Windows 10 developer tools
     href: ./cant-find-win-10-developer-tools-vs-2015.md
+  - name: Can't Install Visual Studio 2022 Using Online Installer
+    href: ./unable-install-vs-2022-online-installer-windows-10-21h2.md
   - name: Can't update Visual Studio using the Help menu
     href: ./unable-update-using-help-menu.md
   - name: Error - Please restart the computer and run setup again
@@ -22,8 +24,14 @@
     href: ./installer-fails-perform-repair-update.md
   - name: Install Windows SDK 7.1 in Silent Mode
     href: ./install-windows-sdk-silent-mode.md
+  - name: License Key is invalid when Install Visual Studio 2022
+    href: ./installation-vs-2022-license-key-shows-invalid.md
+  - name: .NET Multi-platform App UI Template Is Missing
+    href: ./maui-template-missing-vs-2022-professional.md
   - name: Network or proxy errors
     href: ./troubleshoot-network-related-errors.md
+  - name: Python Development Workload Fails to Install in Visual Studio 2022
+    href: ./python-development-workload-fails-install-vs-2022.md
   - name: Release Management component doesn't work
     href: ./other-release-management-component-no-work.md
   - name: Running Parallels on Mac may cause error 1606
@@ -40,8 +48,12 @@
     href: ./troubleshoot-installation-issues.md
   - name: Uninstall third-party applications in Visual Studio 2015
     href: ./secondary-installer-third-party-app.md
+  - name: Visual Studio 2022 installation stops on Windows 10 21H2
+    href: ./installation-stops-package-10-windows-10-21h2.md
   - name: Visual Studio 2015 and 2013 features doesn't work
     href: ./visual-studio-2015-2013-feature-not-work.md
+  - name: Visual Studio 2022 online installation fails with error 1625
+    href: ./visual-studio-2022-online-installation-fails-code-1625.md
   - name: Visual Studio requires the April 2014 update
     href: ./version-visual-studio-requires-april-2014-update.md
   - name: Visual Studio requires a newer version of Windows
@@ -60,6 +72,10 @@
     href: ./error-no-internet-connection.md 
   - name: Error when testing or deploying a minimal layout
     href: ./error-test-deploy-minimal-layout.md
+  - name: Offline installation of Windows App SDK C# extension failed
+    href: ./offline-installation-windows-app-sdk-extension.md
+  - name: Set up Visual Studio Professional 2022 offline
+    href: ./set-up-vs-professional-2022-offline-machine.md
   - name: Warnings about an untrusted certificate
     href: ./warnings-untrusted-certificate.md
   - name: We recommend you close Visual Studio now before setup continues
