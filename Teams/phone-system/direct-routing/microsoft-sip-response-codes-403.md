@@ -1,9 +1,7 @@
 ---
 title: SIP 403 and Microsoft response codes
 description: Lists combinations of Microsoft response codes and the SIP 403 error, and provides actions to resolve the errors.
-ms.date: 10/30/2023
-author: helenclu
-ms.author: luche
+ms.date: 11/22/2024
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
@@ -15,6 +13,7 @@ appliesto:
 ms.custom: 
   - sap:Teams Calling (PSTN)\Direct Routing
   - CI173631
+  - CI2381
   - CSSTroubleshoot
 ms.reviewer: teddygyabaah
 ---
@@ -37,7 +36,7 @@ This article provides troubleshooting information for various combinations of th
 - Suggested actions:  
   - Verify that [Location-Based Routing](/microsoftteams/location-based-routing-plan) is set up correctly, and fix any misconfigurations.  
 
-## 10553 403 Participant call leg has been cancelled because an invite to a required recorder failed
+## 10553 403 Participant call leg has been canceled because an invite to a required recorder failed
 
 - Microsoft response code: **10553**
 - SIP response code: **403**
@@ -45,7 +44,7 @@ This article provides troubleshooting information for various combinations of th
   - Verify that [compliance recording](/microsoftteams/teams-recording-policy) is set up correctly, including provisioning of the recorder bot.
   - Work with the compliance recording partner who provides the recorder service to check why the bot can't be invited.
   
-## 510532 403 Get Inbound Direct routing - RuntimeApi trunk config not found for customer
+## 510532 403 Get Inbound Direct Routing - RuntimeApi trunk config not found for customer
 
 - Microsoft response code: **510532**
 - SIP response code: **403**
@@ -57,14 +56,32 @@ This article provides troubleshooting information for various combinations of th
 - Microsoft response code: **510532**
 - SIP response code: **403**
 - Suggested actions:  
-  - Verify that the calls are sent from the correct SBC Fully Qualified Domain Name (FQDN) that's associated with your tenant. Also, verify that the FQDN in the Contact header of the SIP INVITE message is registered under your tenant.
+  - Verify that the calls are sent from the correct Session Border Controller (SBC) Fully Qualified Domain Name (FQDN) that's associated with your tenant. Also, verify that the FQDN in the Contact header of the SIP INVITE message is registered under your tenant.
 
-## 510534 403 Get Inbound Direct routing - blocked calling number for customer
+## 510534 403 Get Inbound Direct Routing - blocked calling number for customer
 
 - Microsoft response code: **510534**
 - SIP response code: **403**
 - Suggested actions:  
   - Check the [inbound call blocking settings](/microsoftteams/block-inbound-calls) for blocked caller numbers.
+
+## 510546 403 Get Outbound Direct Routing - no trunk config found by LBR selection criteria
+
+- Microsoft response code: **510546**
+- SIP response code: **403**
+- Suggested actions:  
+  - If you use [Location-Based Routing](/microsoftteams/location-based-routing-plan) for Direct Routing, check the settings to determine whether toll bypass is restricted for the affected user's location. If it is, this error is expected and no action is required. Otherwise, fix any misconfiguration.
+  - If you don't use Direct Routing, check whether the [PreventTollBypass](/powershell/module/teams/set-csteamscallingpolicy?view=teams-ps#-preventtollbypass&preserve-view=true) setting in your Teams calling policy is set to **True**. To check the setting, run the following PowerShell command and look for the **PreventTollBypass** setting in the result:
+
+    ```powershell
+    Get-CsTeamsCallingPolicy -Identity <PolicyName>
+    ```
+
+    If its value is **True**, run the [Set-CsTeamsCallingPolicy](/powershell/module/teams/set-csteamscallingpolicy?view=teams-ps&preserve-view=true) PowerShell command to set it to **False**:
+
+    ```powershell
+    Set-CsTeamsCallingPolicy -Identity <PolicyName> -PreventTollBypass $false
+    ```
 
 ## 510560 403 User is not Enterprise Voice enabled
 
@@ -106,4 +123,4 @@ This article provides troubleshooting information for various combinations of th
 - Microsoft response code: **510559**
 - SIP response code: **403**
 - Suggested actions:  
-  - Make sure that the dialed number in Teams matches a corresponding number pattern in a voice route for the given user. In some cases, this error occurs because an incorrect number is dialed, or the customer's own internal policy prevents calls to specific countries/regions, or number patterns.
+  - Make sure that the dialed number in Teams matches a corresponding number pattern in a voice route for the given user. In some cases, this error occurs because an incorrect number is dialed, or the customer's own internal policy prevents calls to specific country/region, or number patterns.
