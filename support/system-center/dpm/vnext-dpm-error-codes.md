@@ -1,8 +1,8 @@
 ---
 title: System Center vNext DPM error codes
 description: Lists error codes that may occur in System Center vNext Data Protection Manager.
-ms.date: 05/06/2024
-ms.reviewer: Mjacquet, aaronmax, jchornbe, sooryar
+ms.date: 11/22/2024
+ms.reviewer: Mjacquet, aaronmax, jchornbe, sooryar, v-gjeronika
 ---
 # System Center vNext Data Protection Manager error codes
 
@@ -2460,7 +2460,7 @@ _Original KB number:_ &nbsp; 3041345
 |120001|The operation was performed successfully.| |
 |120002|Operation failed.| |
 |120003|Operation is in progress.| |
-|130001|Microsoft Azure Backup encountered an internal error.|Wait for a few minutes and then try the operation again. If the issue persists, contact Microsoft Support.|
+|130001|Microsoft Azure Backup encountered an internal error.|1. Wait for a few minutes and then try the operation again.<br>2. Check [Tenant Access Restrictions](/entra/identity/enterprise-apps/tenant-restrictions).<br>3. If the issue persists, contact Microsoft Support.|
 |130002|CloudInvalidInputError| |
 |130003|The service version of the backup service and the Microsoft Azure Backup Agent do not match. Install the latest version of Microsoft Azure Backup Agent from the Microsoft Download Center ([http://go.microsoft.com/fwlink/p/?LinkId=229525](https://go.microsoft.com/fwlink/p/?LinkId=229525)).|If the issue persists, contact Microsoft Support.|
 |130004|IdInvalidAudienceError| |
