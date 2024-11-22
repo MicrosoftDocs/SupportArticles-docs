@@ -3,7 +3,7 @@ title: Offline Installation of Windows App SDK C# Extension Failed
 description: Helps resolve an error that occurs when you install the Windows App SDK C# extension for Visual Studio 2022 offline.
 ms.date: 11/22/2024
 ms.reviewer: khgupta
-ms.custom: sap:Installation\Setup, maintenance, or uninstall
+ms.custom: sap:Installation\Offline Install
 ---
 
 # Offline installation of the Windows App SDK C# extension for Visual Studio 2022 failed
