@@ -12579,6 +12579,11 @@
       "source_path": "support/power-platform/dataverse/email-m365-integration/server-side-synchronization/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/tracked-to-dynamics-365-category-added.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/tracked-to-dynamics-365-category-added",
+      "redirect_document_id": true
     }
   ]
 }
