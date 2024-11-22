@@ -175,6 +175,10 @@
         items:
         - name: Microsoft and SIP response codes
           href: ./phone-system/direct-routing/microsoft-sip-response-codes.md
+        - name: SIP response code 400
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes-400.md
+        - name: SIP response code 402
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes-402.md
         - name: SIP response code 403
           href: ./phone-system/direct-routing/microsoft-sip-response-codes-403.md
         - name: SIP response code 404
@@ -185,6 +189,8 @@
           href: ./phone-system/direct-routing/microsoft-sip-response-codes-410.md
         - name: SIP response code 412
           href: ./phone-system/direct-routing/microsoft-sip-response-codes-412.md
+        - name: SIP response code 420
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes-420.md
         - name: SIP response code 480
           href: ./phone-system/direct-routing/microsoft-sip-response-codes-480.md
         - name: SIP response code 484
