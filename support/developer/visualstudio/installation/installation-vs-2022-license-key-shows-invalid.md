@@ -1,6 +1,6 @@
 ---
 title: License Key Is Invalid when Install Visual Studio 2022
-description: Helps resolve an error that occurs when you install Visual Studio 2022 using the online installer on a Windows 10, version 21H2 machine.
+description: Helps resolve an error where the license key shows as invalid even though the license key is mentioned on the package When install Visual Studio 2022.
 ms.date: 11/22/2024
 ms.reviewer: khgupta
 ms.custom: sap:Installation\Setup, maintenance, or uninstall
