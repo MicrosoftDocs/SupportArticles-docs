@@ -30,7 +30,7 @@ You can follow these steps to resolve this issue. The attribute map is automatic
 
 #### Resolution
 
-You can follow these steps to resolve this issue. The attribute map is automatically recreated by upgrading to a newer version. Review the attribute map and delete it in your environment.
+You can follow these steps to resolve this issue. The attribute map is automatically re-created by upgrading to a newer version. Review the attribute map and delete it in your environment.
 
 1. [View mappable columns](/power-apps/maker/data-platform/map-entity-fields#view-mappable-columns) for the **Work Order** entity that has an N:1 relationship with **msdyn_account_msdyn_workorder_BillingAccount**.
 1. Select **Mappings**.
