@@ -1,7 +1,7 @@
 ---
 title: Blank icons on the desktop, Start menu, and taskbar
 description: Fixes an issue in which application shortcuts on the desktop, Start menu, and taskbar show blank icons in Windows.
-ms.date: 11/21/2024
+ms.date: 11/22/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
