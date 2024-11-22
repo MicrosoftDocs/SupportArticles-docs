@@ -12,7 +12,7 @@ ms.custom: sap:Installation\Setup, maintenance, or uninstall
 
 When you install Visual Studio 2022 online, the process fails with the following error:
 
-> Package ‘Microsoft.VisualStudio.Devenv.MSI' fails to install, Return Code 1625.
+> Package 'Microsoft.VisualStudio.Devenv.MSI' fails to install, Return Code 1625.
 
 ## Cause
 
