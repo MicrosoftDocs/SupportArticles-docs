@@ -25,7 +25,7 @@ To set up Visual Studio Professional 2022 on an offline machine, follow these st
    ```
 
 1. Follow the remaining instructions in the setup wizard to complete the installation.
-1. Once the installation is completed successfully, open any of your browsers and browse to [Microsoft Volume Licensing Service Center](https://microsoft.com/Licensing/ServiceCenter/Downloads/DownloadsAndKeys.aspx.)  
+1. Once the installation is completed successfully, open any of your browsers and browse to [Microsoft Volume Licensing Service Center](https://microsoft.com/Licensing/ServiceCenter/Downloads/DownloadsAndKeys.aspx).
 1. Sign in with your Visual Studio Subscription account.
 1. Navigate to the **Downloads and Keys** tab.
 1. Search for **Visual Studio Professional 2022** and select **Key**.
