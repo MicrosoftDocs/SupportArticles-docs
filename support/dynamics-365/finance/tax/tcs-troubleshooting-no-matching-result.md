@@ -28,7 +28,7 @@ This article explains the troubleshooting steps that you can take if you receive
 
 You receive the following error message:
 
-> Header/Lines - 1, Tax group, no matching result could be found.
+> Header/Lines - 1, Tax group applicability, no matching result could be found.
 
 ```jsonc
 ======================Tax calculation result JSON:===========================
