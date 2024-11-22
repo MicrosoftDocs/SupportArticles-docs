@@ -22,4 +22,4 @@ To perform an offline installation of the Windows App SDK extension for Visual S
 
 Replace `<path to the WindowsAppSDK VSIX>` with the actual file path of the Windows App SDK VSIX extension file. For more information, see [WinApp SDK Dev 17 Offline Install Failure](https://github.com/microsoft/WindowsAppSDK/issues/1846 ).
 
-Additionally, you can use [Create your first WinUI 3 (Windows App SDK) project](https://learn.microsoft.com/windows/apps/winui/winui3/create-your-first-winui3-app) to test a sample WinUI 3 project using the Windows App SDK.
+Additionally, you can use [Create your first WinUI 3 (Windows App SDK) project]/windows/apps/winui/winui3/create-your-first-winui3-app) to test a sample WinUI 3 project using the Windows App SDK.
