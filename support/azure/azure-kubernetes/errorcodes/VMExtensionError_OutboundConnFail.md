@@ -6,7 +6,7 @@ ms.reviewer: rissing, chiragpa, v-leedennis, jovieir
 ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
-# Troubleshoot the VMExtensionError_OutboundConnFail error code (50)
+# Troubleshoot the VMExtensionError_OutboundConnFail error code
 
 This article describes how to identify and resolve the `VMExtensionError_OutboundConnFail` error (also known as error code `ERR_OUTBOUND_CONN_FAIL`, error number 50) that might occur if you try to start or create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
@@ -22,19 +22,18 @@ This article describes how to identify and resolve the `VMExtensionError_Outboun
 
 When you try to start or create an AKS cluster, you receive the following error message:
 
-> Unable to establish outbound connection from agents, please see <https://aka.ms/aks-required-ports-and-addresses> for more information.
+> **Code**: VMExtensionError_OutboundConnFail
 >
-> Details: Code="VMExtensionProvisioningError"
+> **Message**: Unable to establish outbound connection from agents, please see https://aka.ms/aks-error/VMExtensionError_OutboundConnFail and https://aka.ms/aks-required-ports-and-addresses for more information.
+> 
 >
-> Message="VM has reported a failure when processing extension 'vmssCSE'.
->
-> Error message: "**Enable failed: failed to execute command: command terminated with exit status=50**\n[stdout]\n\n[stderr]\nnc: connect to mcr.microsoft.com port 443 (tcp) failed: Connection timed out\nCommand exited with non-zero status
->
-> Error details : "vmssCSE error messages : {**vmssCSE exit status=50, output=pt/apt.conf.d/95proxy**...}
+> **Details** </br>
+> &ensp;**Code**: VMExtensionProvisioningError</br>
+> &ensp;**Message**:  VM has reported a failure when processing extension 'vmssCSE' (publisher 'Microsoft.Azure.Extensions' and type 'CustomScript'). Error message: 'Enable failed: failed to execute command: command terminated with exit status=50\n[stdout]...
 
 ## Cause
 
-The custom script extension that downloads the necessary components to provision the nodes couldn't establish the necessary outbound connectivity to obtain packages. For public clusters, the nodes try to communicate with the Microsoft Container Registry (MCR) endpoint (`mcr.microsoft.com`) on port 443.
+The custom script extension that downloads the necessary components to provision the nodes could not establish the necessary outbound connectivity to obtain packages. For public clusters, the nodes try to communicate with the Microsoft Container Registry (MCR) endpoint (`mcr.microsoft.com`) on port 443.
 
 There are many reasons why the traffic might be blocked. In any of these situations, the best way to test connectivity is to use the Secure Shell protocol (SSH) to connect to the node. To make the connection, follow the instructions in [Connect to Azure Kubernetes Service (AKS) cluster nodes for maintenance or troubleshooting](/azure/aks/node-access). Then, test the connectivity on the cluster by following these steps:
 

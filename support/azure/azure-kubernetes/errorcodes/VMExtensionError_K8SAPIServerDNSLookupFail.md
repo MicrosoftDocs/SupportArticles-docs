@@ -1,13 +1,13 @@
 ---
 title: Troubleshoot the VMExtensionError_K8SAPIServerDNSLookupFail error code 
-description: Learn how to troubleshoot the VMExtensionError_K8SAPIServerDNSLookupFail (52) when you try to start or create and deploy an Azure Kubernetes Service (AKS) cluster.
+description: Learn how to troubleshoot the VMExtensionError_K8SAPIServerDNSLookupFail when you try to start or create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.date: 01/24/2024
 ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis, jovieir
 ms.service: azure-kubernetes-service
-#Customer intent: As an Azure Kubernetes user, I want to troubleshoot the VMExtensionError_K8SAPIServerDNSLookupFail error code (or error code ERR_K8S_API_SERVER_DNS_LOOKUP_FAIL, error number 52) so that I can successfully start or create and deploy an Azure Kubernetes Service (AKS) cluster.
+#Customer intent: As an Azure Kubernetes user, I want to troubleshoot the VMExtensionError_K8SAPIServerDNSLookupFail error code so that I can successfully start or create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
-# Troubleshoot the VMExtensionError_K8SAPIServerDNSLookupFail error code (52)
+# Troubleshoot the VMExtensionError_K8SAPIServerDNSLookupFail error code
 
 This article discusses how to identify and resolve the `VMExtensionError_K8SAPIServerDNSLookupFail` error (also known as error code ERR_K8S_API_SERVER_DNS_LOOKUP_FAIL, error number 52) that occurs when you try to start or create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
@@ -21,21 +21,18 @@ This article discusses how to identify and resolve the `VMExtensionError_K8SAPIS
 
 When you try to start or create an AKS cluster, you receive the following error message:
 
-> Agents are unable to resolve Kubernetes API server name. It's likely custom DNS server is not correctly configured, please see <https://aka.ms/aks/private-cluster#hub-and-spoke-with-custom-dns> for more information.
+> **Code**: VMExtensionError_K8SAPIServerDNSLookupFail
 >
-> Details: Code="VMExtensionProvisioningError"
+> **Message**: Agents are unable to resolve Kubernetes API server name. It's likely custom DNS server is not correctly configured, please see https://aka.ms/aks-error/VMExtensionError_K8SAPIServerDNSLookupFail and https://aka.ms/aks/private-cluster#hub-and-spoke-with-custom-dns for more information.
+> 
 >
-> Message="VM has reported a failure when processing extension 'vmssCSE'.
->
-> Error message: "**Enable failed: failed to execute command: command terminated with exit status=52**\n[stdout]\n{
->
-> "ExitCode": "52",
->
-> "Output": "Fri Oct 15 10:06:00 UTC 2021,aks- nodepool1-36696444-vmss000000\\nConnection to mcr.microsoft.com 443 port [tcp/https]
+> **Details** </br>
+> &ensp;**Code**: VMExtensionProvisioningError</br>
+> &ensp;**Message**:  VM has reported a failure when processing extension 'vmssCSE' (publisher 'Microsoft.Azure.Extensions' and type 'CustomScript'). Error message: 'Enable failed: failed to execute command: command terminated with exit status=52\n[stdout]...
 
 ## Cause
 
-The cluster nodes can't resolve the cluster's fully qualified domain name (FQDN) in Azure DNS. Run the following DNS lookup command on the failed cluster node to find DNS resolutions that are valid.
+The cluster nodes cannot resolve the fully qualified domain name (FQDN) of the cluster in Azure DNS. Run the following DNS lookup command on the failed cluster node to find DNS resolutions that are valid.
 
 | Node OS | Command                   |
 | ------- | ------------------------- |
