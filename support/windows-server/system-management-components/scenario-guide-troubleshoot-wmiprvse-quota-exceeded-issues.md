@@ -178,7 +178,7 @@ Before opening a support case to further investigate the issue, you can collect 
    .\TSS.ps1 -UEX_WMIAdvanced -noBasicLog
    ```
    
-1. Keep the tracing on until the error/even ID is reproduced or the identified WmiPrvSE.exe issue surfaces. Do not keep the tracing running for more than 2-3minutes.
+1. Keep the tracing on until the error/even ID you've noticed is reproduced or the identified WmiPrvSE.exe issue surfaces. Do keep the tracing running for more than 2-3minutes.
 
 1. Stop the tracing by following instructions in the PowerShell command prompt as per the TSS toolset.
 
