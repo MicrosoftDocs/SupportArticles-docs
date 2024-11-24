@@ -105,11 +105,11 @@ To diagnose the issue, follow these steps:
     The providers listed may be the same across all the events. Another possibility is that one of the providers consumes more resources, causing this issue and disturbing other WMI providers. In this case, the goal is to diagnose and identify the problematic provider.
 1. [Identify the currently active WMI providers hosting the same list of WMI providers.](/troubleshoot/windows-server/system-management-components/troubleshoot-wmi-high-cpu-issues) 
 
-4. Analyze the incoming queries that are handled by the *WmiPrvse.exe* process listed in Event ID 5612.
+1. Analyze the incoming queries that are handled by the *WmiPrvse.exe* process listed in Event ID 5612.
 
     Go through the steps mentioned in the "Analyze the incoming queries," "Review the WMI trace files," and "Find the client PIDs that causing high CPU usage" sections in [Troubleshoot WMI high CPU usage issues](troubleshoot-wmi-high-cpu-issues.md). Then, you can identify:
 
-    - The client process(es)
+- The client process(es)
     - The query leading to the issue
     - The frequency of the query  
 
