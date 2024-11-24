@@ -174,5 +174,13 @@ Before opening a support case to further investigate the issue, you can collect 
 
 1. Start the tracing by running the following cmdlet from an elevated PowerShell command prompt.
 
-.\TSS.ps1 -UEX_WMIAdvanced -noBasicLog
+   ```powershell
+   .\TSS.ps1 -UEX_WMIAdvanced -noBasicLog
+   ```
+   
+1. Keep the tracing on until the error/even ID is reproduced or the identified WmiPrvSE.exe issue surfaces. Do not keep the tracing running for more than 2-3minutes.
+
+1. Stop the tracing by following instructions in the PowerShell command prompt as per the TSS toolset.
+
+The script will create a zip file containing the results of all traces and the diagnostic information. After a support case is created, this file can be uploaded to the secure workspace for analysis.
 
