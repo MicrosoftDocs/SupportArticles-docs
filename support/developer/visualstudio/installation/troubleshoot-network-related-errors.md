@@ -32,13 +32,52 @@ To resolve this issue, try these steps:
 
 1. We recommend that you remove the `http://go.microsoft.com` address from the allowlist. Removing the address allows the proxy authentication dialog to show up for both the `http://go.microsoft.com` address and the server endpoints when Visual Studio restarts.
 
-Or if you want to use your default credentials with your proxy, follow these steps:
+## Configure Proxy Server
+
+Visual studio should pick up the proxy setting from windows. However, you can set a specific proxy sercer in the following way.
 
 1. Find _devenv.exe.config_ (the configuration file of _devenv.exe_) in:
 
     - Visual Studio 2019: _%ProgramFiles%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE_ or _%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE_.
     - Visual Studio 2022: _%ProgramFiles%\Microsoft Visual Studio\2022\Enterprise\Common7\IDE_ or _%ProgramFiles(x86)%\Microsoft Visual Studio\2022\Enterprise\Common7\IDE_.
-1. In the configuration file, find the `<system.net>` block, and then add this code:
+
+2. In the configuration file, find the `<system.net>` block, and then add this code:
+
+    ```xml
+    <defaultProxy enabled="true">
+        <proxy bypassonlocal="True" proxyaddress="http://<yourproxy:port#>"/>
+    </defaultProxy>
+    ```
+
+    You must insert the correct proxy address for your network in `proxyaddress="<http://<yourproxy:port#>`.
+
+    > [!NOTE]
+    > For more information, see the [\<defaultProxy> Element (Network Settings)](/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings/) and [\<proxy>  Element (Network Settings)](/dotnet/framework/configure-apps/file-schema/network/proxy-element-network-settings) pages.
+
+3. For VS2022 also set the proxy environment variables
+    ```
+    http_proxy: the proxy server used on HTTP requests. Note this is lowercase because some tools expect the variable to be lowercase.
+
+    HTTPS_PROXY: the proxy server used on HTTPS requests.
+    
+    ALL_PROXY: the proxy server used on HTTP and/or HTTPS requests in case HTTP_PROXY and/or HTTPS_PROXY are not defined.
+    ```
+    
+    > [!NOTE]
+    > For more information, see the [HttpClient.DefaultProxy](/dotnet/api/system.net.http.httpclient.defaultproxy/)
+
+
+
+## Default user credentials
+
+If you want to use the default credentials for the user account which is running visual studio with your proxy, follow these steps:
+
+1. Find _devenv.exe.config_ (the configuration file of _devenv.exe_) in:
+
+    - Visual Studio 2019: _%ProgramFiles%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE_ or _%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE_.
+    - Visual Studio 2022: _%ProgramFiles%\Microsoft Visual Studio\2022\Enterprise\Common7\IDE_ or _%ProgramFiles(x86)%\Microsoft Visual Studio\2022\Enterprise\Common7\IDE_.
+
+2. In the configuration file, find the `<system.net>` block, and then add this code:
 
     ```xml
     <defaultProxy enabled="true" useDefaultCredentials="true">
@@ -50,6 +89,36 @@ Or if you want to use your default credentials with your proxy, follow these ste
 
     > [!NOTE]
     > For more information, see the [\<defaultProxy> Element (Network Settings)](/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings/) and [\<proxy>  Element (Network Settings)](/dotnet/framework/configure-apps/file-schema/network/proxy-element-network-settings) pages.
+
+3. With [Visual Studio 17.8](/visualstudio/releases/2022/release-notes-v17.8) onwards, we've updated the configuration process for default proxy credentials in web requests. To enable default proxy credentials following this update, create a new environment variable named `VS_USE_DEFAULTPROXY`, set its value to `true`, and then restart Visual Studio. This variable will tell visual stduio and associated processes to attach the default credentials of the user running the process to proxy requests. This is similar to what useDefaultCredentials does in the exe config file in step #2.
+
+## Debugging proxy errors
+
+While trying to make network connections while behind a proxy server you may encounter a number of different kinds of failures.  Some of the failures include, Error on Send, Connection Refused, Could not resolve address. There could be other kinds of failures but what they have in common is some configuration is incorrect on the local machine or network. To help dignose what is blocking the connecting using a tool outside of visual studio can be helpful. 
+
+If you are encountering an error such as connection refused or Error on send try the following commandline. 
+
+```
+curl "https://resource" -v
+
+Running this command will try and make a network connection to the resource and may fail in a similar manner to what is seen in visual studio. At that point diagnosing this failure will be required before attempting to make the connection using visual studio. A failure here indicates a machine or network configuration problem rather than a product issue with visual studio. 
+
+If you know you are behind a proxy server that has a specific address, then settings the http_proxy and https_proxy environment variables will be necessary before running the curl command since it uses those environment variables for proxy settings. 
+
+You may also use the help switch in curl for additional options.
+
+curl --help proxy for switches to setup to the proxy on the commandline. 
+
+One example would be do debug a sign in problem with visual studio. To do so you would run the following commands, looking for failures. 
+
+curl "https://login.microsoftonline.com/common/discovery/instance?api-version=1.1&authorization_endpoint=https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize" -v
+
+curl "https://management.azure.com" -v
+
+curl "https://graph.microsoft.com" -v
+```
+As so on for the urls required by sign in listed in [Install and use visual studio behind a firewall or proxy server](/visualstudio/install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server)
+
 
 ## Error "Disconnected from Visual Studio" when attempting to report a problem
 
