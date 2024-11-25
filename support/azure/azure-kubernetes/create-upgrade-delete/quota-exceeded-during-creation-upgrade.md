@@ -1,7 +1,7 @@
 ---
 title: QuotaExceeded or InsufficientVCPUQuota error during creation or upgrade
-description: Troubleshoot a "QuotaExceeded" or "InsufficientVCPUQuota" error during a creation or upgrade operation in an Azure Kubernetes Service (AKS) cluster.
-ms.date: 11/21/2024
+description: Resolves a QuotaExceeded or InsufficientVCPUQuota error during a creation or upgrade operation in an Azure Kubernetes Service (AKS) cluster.
+ms.date: 11/25/2024
 ms.reviewer: chiragpa, nickoman, v-weizhu
 ms.service: azure-kubernetes-service
 keywords:
@@ -23,8 +23,8 @@ When you try to scale up your node pools in an AKS cluster, deploy a new cluster
   
    Or
    
-   > code: "ErrCode_InsufficientVCPUQuota"   
-   > message: Insufficient vcpu quota requested 48, remaining 32 for family standardDSv5Family for region qatarcentral
+   > Code: ErrCode_InsufficientVCPUQuota   
+   > Message: Insufficient vcpu quota requested 48, remaining 32 for family standardDSv5Family for region qatarcentral
 
 - Regional quota errors
 
@@ -39,7 +39,7 @@ When you try to scale up your node pools in an AKS cluster, deploy a new cluster
 
 ## Cause
 
-This error occurs because the operation that you try to perform results in exceeding the current quota limits.
+This error occurs because the operation that you try to perform exceeds the current quota limits.
 
 ## Solution
 
