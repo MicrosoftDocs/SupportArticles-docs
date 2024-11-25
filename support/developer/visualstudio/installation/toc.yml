@@ -22,6 +22,8 @@
     href: ./installer-fails-perform-repair-update.md
   - name: Install Windows SDK 7.1 in Silent Mode
     href: ./install-windows-sdk-silent-mode.md
+  - name: Known issues when you install Release Management
+    href: ./release-management-installation-issues.md
   - name: Network or proxy errors
     href: ./troubleshoot-network-related-errors.md
   - name: Release Management component doesn't work
@@ -86,11 +88,6 @@
     href: ./update-deployed-via-configuration-manager-fails-install.md
   - name: Visual Studio 2015 is stuck while installing KB2999226
     href: ./stuck-installing-visual-studio-2015.md
-- name: Other
-  items:
-  - name: Can't find Visual Studio 2015 on the Start menu
-    href: ./not-finding-start-menu-visual-studio.md
-  - name: Known issues when you install Release Management
-    href: ./release-management-installation-issues.md
-  - name: The trial will expire after you sign in to the IDE
-    href: ./sign-into-ide-trial-expire.md
+
+
+

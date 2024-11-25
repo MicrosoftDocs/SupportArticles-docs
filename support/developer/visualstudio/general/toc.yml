@@ -4,6 +4,8 @@
   href: ./alternate-credentials-stop-working.md
 - name: Can't find resources in XAML or WPF designer
   href: ./cannot-find-resource-named-error.md
+- name: Can't find Visual Studio 2015 on the Start menu
+  href: ../installation/not-finding-start-menu-visual-studio.md
 - name: Can't sign in when JavaScript is disabled
   href: ./cannot-sign-in-javascript-disabled.md
 - name: Error when you build applications
