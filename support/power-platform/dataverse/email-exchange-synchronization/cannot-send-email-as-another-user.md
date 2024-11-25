@@ -31,7 +31,7 @@ This issue occurs if one of the following conditions exists:
   > [!NOTE]
   > If you use a Workflow rule to send the email, the owner of the Workflow rule needs this privilege.
 
-- TThe user you try to send as hasn't enabled the option that allows other users to send an email on their behalf.
+- The user you try to send as hasn't enabled the option that allows other users to send an email on their behalf.
 
 ## Resolution
 
