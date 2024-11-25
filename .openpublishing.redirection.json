@@ -12584,6 +12584,11 @@
       "source_path": "support/dynamics-365/sales/tracked-to-dynamics-365-category-added.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/tracked-to-dynamics-365-category-added",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-send-email-as-another-user.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/cannot-send-email-as-another-user",
+      "redirect_document_id": true
     }
   ]
 }

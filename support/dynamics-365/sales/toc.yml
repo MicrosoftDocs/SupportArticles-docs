@@ -214,8 +214,6 @@
       href: we-are-unable-to-connect-to-your-dynamics-365-app-for-outlook-error.md
     - name: You are not part of this organization
       href: you-are-not-part-this-organization.md
-    - name: You cannot send email as the selected user error
-      href: cannot-send-email-as-another-user.md
     - name: You don't have permission to access this app
       href: you-do-not-have-permission-to-access-this-app-error-when-accessing-dynamics-365-app-for-outlook.md
     - name: You don't have required role or privilege
