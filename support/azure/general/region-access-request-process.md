@@ -1,7 +1,7 @@
 ---
 title: Azure region access request process
 description: Describes the process to request access for certain Azure regions.
-ms.date: 05/17/2022
+ms.date: 11/25/2024
 ms.service: azure-common-issues-support
 ms.author: genli
 author: genlin
@@ -32,7 +32,7 @@ The process to request access is relatively straight forward. You can initiate t
 
 ## Step 2: Provide problem details
 
-1. In the **Problem details** section, select ** details**.
+1. In the **Problem details** section, select **Enter details**.
     :::image type="content" source="media/region-access-request-process/enter-details.png" alt-text="Screenshot of the Enter details button." border="true":::
 
 1. Select the deployment mode.
@@ -58,8 +58,9 @@ The support request will be routed back to you once complete, letting you know o
 
 ## Reserved access regions
 
-You can view which regions are access restricted through [this document](/azure/reliability/cross-region-replication-azure#azure-paired-regions).
-To request the access for the Reserved access regions, follow these steps:
+To view which regions are access restricted, see [Azure paired regions](/azure/reliability/cross-region-replication-azure#azure-paired-regions).
+
+To request the access for the reserved access regions, follow these steps:
 
 1. In the **New support request** page, complete the following:
  
