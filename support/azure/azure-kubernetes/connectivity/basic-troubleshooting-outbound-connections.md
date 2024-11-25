@@ -1,7 +1,7 @@
 ---
 title: Basic troubleshooting of outbound connections from an AKS cluster
 description: Do basic troubleshooting of outbound connections that originate from an Azure Kubernetes Service (AKS) cluster.
-ms.date: 11/19/2024
+ms.date: 11/22/2024
 ms.reviewer: chiragpa, rissing, jopalhei, jaewonpark, v-leedennis, v-weizhu
 editor: v-jsitser
 ms.service: azure-kubernetes-service
@@ -11,6 +11,7 @@ ms.custom: sap:Connectivity
 # Basic troubleshooting of outbound connections from an AKS cluster
 
 This article discusses how to do basic troubleshooting of outbound connections from a Microsoft Azure Kubernetes Service (AKS) cluster.
+It is to narrow-down and identify faulty component, rather than to fix.
 
 ## Prerequisites
 
@@ -20,11 +21,7 @@ This article discusses how to do basic troubleshooting of outbound connections f
 
 - The Client URL ([cURL](https://www.tecmint.com/install-curl-in-linux/)) tool, or a similar command-line tool.
 
-- The [host](https://linux.die.net/man/1/host) command-line tool for DNS lookups.
-
-- The [Netcat](https://linux.die.net/man/1/nc) (`nc`) command-line tool for TCP connections.
-
-- The [traceroute](https://linux.die.net/man/8/traceroute) command-line tool for printing the trace of routing packets to the network host.
+- The `nslookup` command-line ([dnsutils](https://www.tecmint.com/install-dig-and-nslookup-in-linux/)) tool for checking DNS resolution.
 
 ## Scenarios for outbound traffic in Azure Kubernetes Service
 
@@ -106,7 +103,7 @@ If other troubleshooting steps don't provide any conclusive outcome, take packet
 
 - [Capture TCP packets from a pod on an AKS cluster](../logs/packet-capture-pod-level.md)
 
-## Troubleshooting checkists
+## Troubleshooting checklists
 
 For basic troubleshooting for egress traffic from an AKS cluster, follow these steps:
 
@@ -128,6 +125,10 @@ For basic troubleshooting for egress traffic from an AKS cluster, follow these s
 
 1. Check whether the AKS service principal or managed identity has the required [AKS service permissions](/azure/aks/concepts-identity#aks-service-permissions) to make the network changes to Azure resources.
 
+> [!NOTE]
+>
+> Troubleshooting assumes no service mesh. If you use a service mesh such as Istio, it gives unusual outcomes for TCP based traffic.
+
 #### Check whether the pod and node can reach the endpoint
 
 From within the pod, you can run a DNS lookup to the endpoint.
@@ -137,7 +138,7 @@ What if you can't run the [kubectl exec](https://kubernetes.io/docs/reference/ge
 > [!NOTE]
 >
 > If the DNS resolution or egress traffic doesn't let you install the necessary network packages, you can use the `rishasi/ubuntu-netutil:1.0` docker image. In this image, the required packages are already installed.
-    
+
 ##### Example procedure for checking DNS resolution of a Linux pod
 
 1. Start a test pod in the same namespace as the problematic pod:
@@ -151,17 +152,14 @@ What if you can't run the [kubectl exec](https://kubernetes.io/docs/reference/ge
 1. Run the following `apt-get` commands to install other tool packages:
 
    ```bash
-   # Update to the latest
-   apt-get update -y   
-
-   # Install tool packages
-   apt-get install -y dnsutils && apt-get install netcat-traditional -y && apt-get install curl -y && apt-get install -y traceroute
+   # Update & Install tool packages
+   apt-get update && apt-get install -y dnsutils curl
    ```
 
 1. After the packages are installed, run the [nslookup](/windows-server/administration/windows-commands/nslookup) command to test the DNS resolution to the endpoint:
 
    ```console
-   $ nslookup microsoft.com
+   $ nslookup microsoft.com # Microsoft.com as an example
    Server:         10.0.0.10
    Address:        10.0.0.10#53
    ...
@@ -181,55 +179,24 @@ What if you can't run the [kubectl exec](https://kubernetes.io/docs/reference/ge
    Address: 20.81.111.85
    ```
 
-1. Run the `host` command to check whether the DNS requests are routed to the upstream server:
-
-   ```console
-   $ host -a microsoft.com
-   Trying "microsoft.com.default.svc.cluster.local"
-   Trying "microsoft.com.svc.cluster.local"
-   Trying "microsoft.com.cluster.local"
-   Trying "microsoft.com.00idcnmrrm4edot5s2or1onxsc.bx.internal.cloudapp.net"
-   Trying "microsoft.com"
-   Trying "microsoft.com"
-   ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 62884
-   ;; flags: qr rd ra; QUERY: 1, ANSWER: 27, AUTHORITY: 0, ADDITIONAL: 5
-   
-   ;; QUESTION SECTION:
-   ;microsoft.com.                 IN      ANY
-   
-   ;; ANSWER SECTION:
-   microsoft.com.          30      IN      NS      ns1-39.azure-dns.com.
-   ...
-   ...
-   ns4-39.azure-dns.info.  30      IN      A       13.107.206.39
-   
-   Received 2121 bytes from 10.0.0.10#53 in 232 ms
-   ```
-
-If the DNS resolution has issues, check the route to the endpoint to determine whether there's a time-out at a specific operation:
-
-```bash
-traceroute -T microsoft.com -m 50 -p 443
-```
-
 Sometimes, there is a problem with the endpoint itself rather than a cluster DNS. In such cases, consider the following checks:
 
 1. Check whether the desired port is open on the remote host:
 
    ```bash
-   nc -z -v microsoft.com 443
+   curl -Ivm5 telnet://microsoft.com:443
    ```
 
 1. Check the HTTP response code:
 
    ```bash
-   curl -Iv https://microsoft.com
+   curl -Ivm5 https://microsoft.com
    ```
 
 1. Check whether you can connect to any other endpoint:
 
    ```bash
-   curl -Iv https://kubernetes.io
+   curl -Ivm5 https://kubernetes.io
    ```
 
 To verify that the endpoint is reachable from the node where the problematic pod is in and then verify the DNS settings, follow these steps:
