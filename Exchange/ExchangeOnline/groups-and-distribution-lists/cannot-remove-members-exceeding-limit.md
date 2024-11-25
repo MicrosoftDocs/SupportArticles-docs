@@ -16,7 +16,7 @@ appliesto:
   - Exchange Server 2019
   - Exchange Server 2016
 search.appverid: MET150
-ms.date: 11/04/2024
+ms.date: 11/08/2024
 ---
 # Can't use the Exchange admin center to remove members from a distribution group
 

@@ -14,7 +14,7 @@ search.appverid:
 appliesto: 
   - Microsoft Teams
 ms.custom: 
-  - sap:Teams Compatible Devices and Peripherals\
+  - sap:Teams Compatible Devices and Peripherals
   - CI168070
   - CI188847
 ---
@@ -54,7 +54,7 @@ Identify the specific cause of the issue by checking multiple details about the 
 
 ### Automated checks
 
-The automated option is to run the [Microsoft Teams Room Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input) connectivity test in the Microsoft Remote Connectivity Analyzer tool. This tool is used to troubleshoot connectivity issues that affect Teams. The connectivity test performs checks to verify a specific user's permissions to sign in to Teams by using a Teams Rooms device.
+The automated option is to run the [Microsoft Teams Rooms Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input) connectivity test in the Microsoft Remote Connectivity Analyzer tool. This tool is used to troubleshoot connectivity issues that affect Teams. The connectivity test performs checks to verify a specific user's permissions to sign in to Teams by using a Teams Rooms device.
 
 > [!NOTE]
 >
@@ -63,7 +63,7 @@ The automated option is to run the [Microsoft Teams Room Sign in](https://testco
 
 To run the connectivity test, follow these steps:
 
-1. Open a web browser and navigate to the [Microsoft Teams Room Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input) connectivity test.
+1. Open a web browser and navigate to the [Microsoft Teams Rooms Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input) connectivity test.
 1. Sign in by using the credentials of a Global Administrator account.
 1. Specify the username for the account that can't access the Teams Rooms app.
 1. In the **Device Selection** field, select a type for the affected user's device.

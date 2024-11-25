@@ -7,7 +7,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.custom: 
-  - sap:Connectivity\
+  - sap:Connectivity
   - Outlook for Mac
   - CSSTroubleshoot
 ms.topic: troubleshooting

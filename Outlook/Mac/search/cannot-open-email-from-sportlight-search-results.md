@@ -7,7 +7,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:Search\
+  - sap:Search
   - Outlook for Mac
   - CSSTroubleshoot
 ms.reviewer: tasitae

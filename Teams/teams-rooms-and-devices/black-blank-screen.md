@@ -14,7 +14,7 @@ search.appverid:
 appliesto: 
   - Microsoft Teams
 ms.custom: 
-  - sap:MTR Pro\
+  - sap:MTR Pro
   - CI167993
 ---
 # Black or blank screen or no system response in Teams Rooms

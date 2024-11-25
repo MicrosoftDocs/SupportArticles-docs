@@ -7,7 +7,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:Issues with product features\
+  - sap:Issues with product features
   - Outlook for Mac
   - CSSTroubleshoot
 ms.reviewer: tsimon

@@ -7,7 +7,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:Calendar\
+  - sap:Calendar
   - Outlook for Mac
   - CSSTroubleshoot
 ms.reviewer: tasitae; ahaque

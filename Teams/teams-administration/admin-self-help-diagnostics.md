@@ -3,7 +3,7 @@ title: Self-help diagnostics for Teams administrators
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 07/23/2024
+ms.date: 11/20/2024
 audience: Admin|ITPro|Developer
 ms.topic: troubleshooting
 search.appverid:
@@ -63,7 +63,7 @@ The following tables list the diagnostics that are currently available in the Mi
 |---|---|---|---|
 |Checks whether a user can sign in to the Teams app.|[Run Tests: Teams Sign-In](https://aka.ms/TeamsSignInDiag)|[Teams Sign in](https://testconnectivity.microsoft.com/tests/TeamsSignin/input)|[Resolve sign-in errors in Teams](../teams-sign-in/resolve-sign-in-errors.md)|
 |Checks whether a user account meets the requirements for a Microsoft Teams user to be able to sign in to a Teams Android desk phone.||[Teams Android Desk Phone Sign in](https://testconnectivity.microsoft.com/tests/TeamsAndroidDeskPhone/input)|[Certified Android devices get signed out of Teams](../teams-rooms-and-devices/signed-out-of-teams-android-devices.md)|
-|Checks whether a user account meets the requirements for a Microsoft Teams user to be able to sign in to a Microsoft Teams Rooms device.||[Microsoft Teams Rooms Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input)|[Fix Conditional Access-related issues for Teams Android devices](../teams-rooms-and-devices/teams-android-devices-conditional-access-issues.md)|
+|Checks whether a user account meets the requirements for a Microsoft Teams user to be able to sign in to a Microsoft Teams Rooms device.||[Microsoft Teams Rooms Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input)|[Fix Conditional Access-related issues for Teams Android devices](../teams-rooms-and-devices/teams-android-devices-conditional-access-issues.md)<br/><br/>[Fix Teams Rooms resource account sign-in issues](../teams-rooms-and-devices/teams-rooms-resource-account-sign-in-issues.md)|
 |Checks whether the Teams user can communicate with a federated Teams user.|[Run Tests: Teams Federation](https://aka.ms/TeamsFederationDiag)|[Teams Federation and Interoperability](https://testconnectivity.microsoft.com/tests/TeamsFederation/input)|[Manage external access (federation)](/microsoftteams/manage-external-access#federation-diagnostic-tool)<br/><br/>[External federated contacts don't appear in Teams search](../exchange-integration/external-contacts-not-in-search.md)|
 
 ### Exchange integration
@@ -76,8 +76,8 @@ The following tables list the diagnostics that are currently available in the Mi
 
 | Description |  Diagnostic shortcut | Connectivity test shortcut | Support article |
 |---|---|---|---|
-|Checks whether a user account meets the requirements for a Microsoft Teams user to be able to sign in to a Teams Android desk phone.||[Teams Android Desk Phone Sign in](https://testconnectivity.microsoft.com/tests/TeamsPhoneDeviceSignIn/input)||
-|Checks whether a user account meets the requirements for a Microsoft Teams user to be able to sign in to the following Microsoft Teams Rooms devices: <ul><li>Teams Rooms on Android</li><li>Teams Rooms on Windows</li><li>Teams panels</li></ul>||[Microsoft Teams Rooms Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input)|[Fix Conditional Access-related issues for Teams Android devices](../teams-rooms-and-devices/teams-android-devices-conditional-access-issues.md)|
+|Checks whether a user account meets the requirements for a Microsoft Teams user to be able to sign in to a Teams Android desk phone.|[Run Tests: Teams Android Desk Phone Sign in](https://aka.ms/TeamsAndroidDeskPhoneDiag)|[Teams Android Desk Phone Sign in](https://testconnectivity.microsoft.com/tests/TeamsPhoneDeviceSignIn/input)|[Certified Android devices get signed out of Teams](../teams-rooms-and-devices/signed-out-of-teams-android-devices.md)|
+|Checks whether a user account meets the requirements for a Microsoft Teams user to be able to sign in to the following Microsoft Teams Rooms devices: <ul><li>Teams Rooms on Android</li><li>Teams Rooms on Windows</li><li>Teams panels</li></ul>|<ul><li>[Run Tests: Teams Rooms Android Sign in](https://aka.ms/TeamsRoomsAndroidDiag)</li><li>[Run Tests: Teams Rooms Windows Sign in](https://aka.ms/TeamsRoomsWindowsDiag)</li><li>[Run Tests: Teams Panel Sign in](https://aka.ms/TeamsPanelDiag)</li></ul>|[Microsoft Teams Rooms Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input)|[Fix Conditional Access-related issues for Teams Android devices](../teams-rooms-and-devices/teams-android-devices-conditional-access-issues.md)<br/><br/>[Fix Teams Rooms resource account sign-in issues](../teams-rooms-and-devices/teams-rooms-resource-account-sign-in-issues.md)|
 
 ### Files
 

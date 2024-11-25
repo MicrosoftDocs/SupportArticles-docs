@@ -7,7 +7,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:Plan and Deploy\Need help with Active Directory\DNS\Network Exchange pre-requisites
+  - sap:Plan and Deploy\Need help with Active Directory/DNS/Network Exchange pre-requisites
   - Exchange Server
   - CSSTroubleshoot
 ms.reviewer: v-six
