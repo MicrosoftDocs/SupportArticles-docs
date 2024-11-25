@@ -1,7 +1,7 @@
 ---
 title: Basic troubleshooting of outbound connections from an AKS cluster
 description: Do basic troubleshooting of outbound connections that originate from an Azure Kubernetes Service (AKS) cluster.
-ms.date: 11/22/2024
+ms.date: 11/25/2024
 ms.reviewer: chiragpa, rissing, jopalhei, jaewonpark, v-leedennis, v-weizhu
 editor: v-jsitser
 ms.service: azure-kubernetes-service
@@ -10,8 +10,7 @@ ms.custom: sap:Connectivity
 ---
 # Basic troubleshooting of outbound connections from an AKS cluster
 
-This article discusses how to do basic troubleshooting of outbound connections from a Microsoft Azure Kubernetes Service (AKS) cluster.
-It is to narrow-down and identify faulty component, rather than to fix.
+This article discusses how to do basic troubleshooting of outbound connections from a Microsoft Azure Kubernetes Service (AKS) cluster and identify faulty components.
 
 ## Prerequisites
 
@@ -29,15 +28,15 @@ Traffic that originates from within the AKS cluster, whether it's from a pod or 
 
 The outbound traffic from an AKS cluster can be classified within the following categories:
 
-1. [Traffic to a pod or service in the same cluster (internal traffic)](#internal-traffic)
+1. [Traffic to a pod or service in the same cluster (internal traffic)](#internal-traffic).
 
-1. Traffic to a device or endpoint in the same virtual network or a different virtual network (that uses virtual network peering)
+1. Traffic to a device or endpoint in the same virtual network or a different virtual network (that uses virtual network peering).
 
-1. Traffic to an on-premises environment through a VPN connection or an Azure ExpressRoute connection
+1. Traffic to an on-premises environment through a VPN connection or an Azure ExpressRoute connection.
 
-1. [Traffic outside the AKS network through Azure Load Balancer (public outbound traffic)](#public-outbound-traffic-through-azure-load-balancer)
+1. [Traffic outside the AKS network through Azure Load Balancer (public outbound traffic)](#public-outbound-traffic-through-azure-load-balancer).
 
-1. [Traffic outside the AKS network through Azure Firewall or a proxy server (public outbound traffic)](#public-outbound-traffic-through-azure-firewall-or-a-proxy-server)
+1. [Traffic outside the AKS network through Azure Firewall or a proxy server (public outbound traffic)](#public-outbound-traffic-through-azure-firewall-or-a-proxy-server).
 
 #### Internal traffic
 
@@ -127,7 +126,7 @@ For basic troubleshooting for egress traffic from an AKS cluster, follow these s
 
 > [!NOTE]
 >
-> Troubleshooting assumes no service mesh. If you use a service mesh such as Istio, it gives unusual outcomes for TCP based traffic.
+> Assumes no service mesh when you do basic troubleshooting. If you use a service mesh such as Istio, it produces unusual outcomes for TCP based traffic.
 
 #### Check whether the pod and node can reach the endpoint
 
