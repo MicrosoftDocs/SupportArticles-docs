@@ -4,7 +4,7 @@ description: Provides a resolution to resolve the AttributeMap errors in Dynamic
 author: jshotts
 ms.author: jasonshotts
 ms.reviewer: mhart
-ms.date: 11/22/2024
+ms.date: 11/25/2024
 ms.custom: sap:Administration
 ---
 # Error with AttributeMap when upgrading Dynamics 365 Field Service

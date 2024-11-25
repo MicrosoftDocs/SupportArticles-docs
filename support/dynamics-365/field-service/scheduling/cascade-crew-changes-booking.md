@@ -4,7 +4,7 @@ description: Resolves issues with cascade crew changes in Dynamics 365 Field Ser
 author: jshotts
 ms.author: jasonshotts
 ms.reviewer: mhart
-ms.date: 11/22/2024
+ms.date: 11/25/2024
 ms.custom: sap:Schedule Board
 ---
 # Issue with cascade crew changes when assigning a booking
