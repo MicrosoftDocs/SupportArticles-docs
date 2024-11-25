@@ -76,7 +76,7 @@
       href: email-exchange-synchronization/mailbox-fails-tested-enabled.md
     - name: OutgoingEmailAuthenticationError in mailbox alert
       href: email-exchange-synchronization/outgoingemailauthenticationerror-shows-in-mailbox-alert.md
-    - name: '"Tracked to Dynamics 365" category is added to mailbox'
+    - name: '"Tracked to Dynamics 365" category is added to a mailbox'
       href: email-exchange-synchronization/tracked-to-dynamics-365-category-added.md
     - name: Test Connection fails from Email Server Profile
       href: email-exchange-synchronization/test-connection-fails-email-server.md
