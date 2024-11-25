@@ -2,14 +2,14 @@
 title: You cannot send email as the selected user error
 description: Resolves the You cannot send email as the selected user error that occurs when you send an email on behalf of another user in Microsoft Dynamics 365.
 ms.reviewer: dmartens
-ms.date: 11/21/2024
+ms.date: 11/25/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # "You cannot send email as the selected user" error when sending an email as another user
 
 This article presents possible causes and a resolution for the "You cannot send email as the selected user" error that occurs when you send an email on behalf of another user in Microsoft Dynamics 365.
 
-_Applies to:_ &nbsp; Dynamics 365  
+_Applies to:_ &nbsp; Microsoft Dynamics 365  
 _Original KB number:_ &nbsp; 3184980
 
 ## Symptoms
@@ -31,7 +31,7 @@ This issue occurs if one of the following conditions exists:
   > [!NOTE]
   > If you use a Workflow rule to send the email, the owner of the Workflow rule needs this privilege.
 
-- The user you try to send as doesn't enable the option that allows other users to send an email on their behalf.
+- TThe user you try to send as hasn't enabled the option that allows other users to send an email on their behalf.
 
 ## Resolution
 
