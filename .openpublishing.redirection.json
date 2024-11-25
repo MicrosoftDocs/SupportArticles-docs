@@ -12369,6 +12369,221 @@
       "source_path": "support/dynamics-365/finance/tax/tcs-troubleshooting-failed-access-tax-service.md",
       "redirect_url": "/troubleshoot/dynamics-365/finance/welcome-finance",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/certificates-and-public-key-infrastructure-pki/restrict-cryptographic-algorithms-protocols-schannel.md",
+      "redirect_url": "/windows-server/security/tls/tls-registry-settings?tabs=diffie-hellman#ciphers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/changes-to-mailbox-approval-in-dynamics-365.md",
+      "redirect_url": "/power-platform/admin/connect-exchange-online#approve-email",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/exchange-error-in-dynamics-365-mailbox-alert.md",
+      "redirect_url": "/power-platform/admin/monitor-email-processing-errors",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/mailboxnotenabledforrestapi-warning-occurs.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/mailboxnotenabledforrestapi-warning-occurs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/hresult-0x80004005-error-when-configuring-dynmics-crm-for-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/hresult-0x80004005-error-when-configuring-dynmics-crm-for-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/the-account-does-not-have-permission-to-impersonate-the-requested-user-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/the-account-does-not-have-permission-to-impersonate-the-requested-user-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/email-cannot-be-received-because-license-is-invalid-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/email-cannot-be-received-because-license-is-invalid-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/unknownincomingemailintegrationerror-2147220891.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/unknownincomingemailintegrationerror-2147220891",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/appointments-do-not-synchronize-to-exchange-or-outlook.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/appointments-do-not-synchronize-to-exchange-or-outlook",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-you-test-enable-a-mailbox.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-when-you-test-enable-a-mailbox",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-occurs-sending-email-for-mailbox.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-occurs-sending-email-for-mailbox",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/errorquotaexceeded-exchange-server-returned-403-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/errorquotaexceeded-exchange-server-returned-403-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/exception-when-using-server-side-sync.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/exception-when-using-server-side-sync",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/the-smtp-address-has-no-mailbox.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/the-smtp-address-has-no-mailbox",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/general-mailbox-access-error-occurred-while-receiving-email-through-mailbox-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/general-mailbox-access-error-occurred-while-receiving-email-through-mailbox-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/test-connection-fails-email-server.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/test-connection-fails-email-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/http-server-returned-forbidden-exception.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/http-server-returned-forbidden-exception",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-while-sending-the-email-message.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-while-sending-the-email-message",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-testing-enabling-mailbox.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-when-testing-enabling-mailbox",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/outgoingemailauthenticationerror-shows-in-mailbox-alert.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/outgoingemailauthenticationerror-shows-in-mailbox-alert",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/email-message-cannot-be-sent.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/email-message-cannot-be-sent",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/mailbox-fails-tested-enabled.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/mailbox-fails-tested-enabled",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/email-cannot-be-received-mailbox.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/email-cannot-be-received-mailbox",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/an-appointment-is-canceled-deleted.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/an-appointment-is-canceled-deleted",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-2147209462-logged-mailbox-record.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-2147209462-logged-mailbox-record",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/an-internal-dynamics-365-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/an-internal-dynamics-365-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/appointments-do-not-sync-to-exchange-for-some-users.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/appointments-do-not-sync-to-exchange-for-some-users",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-creating-an-incoming-email.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-when-creating-an-incoming-email",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/a-failure-occurred-crmsecurity.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/a-failure-occurred-crmsecurity",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/email-fails-to-create-with-norecipientmatch-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/email-fails-to-create-with-norecipientmatch-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/general-mailbox-access-error-occurred.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/general-mailbox-access-error-occurred",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/email-fails-to-create-with-nocorrelationmatch-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/email-fails-to-create-with-nocorrelationmatch-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/scheduling-conflict-saving-appointment.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/scheduling-conflict-saving-appointment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/errorsubmissionquotaexceeded-exception.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/errorsubmissionquotaexceeded-exception",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/mailbox-does-not-have-email-server-profile.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/mailbox-does-not-have-email-server-profile",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/dataverse/email-m365-integration/server-side-synchronization/emails-not-automatically-tracked-or-synchronized.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/emails-not-automatically-tracked-or-synchronized",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/dataverse/email-m365-integration/server-side-synchronization/error-code-8005e259.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-code-8005e259",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/dataverse/email-m365-integration/server-side-synchronization/error-code-8005e272.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-code-8005e272",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/dataverse/email-m365-integration/server-side-synchronization/error-code-8005e273.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-code-8005e273",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/dataverse/email-m365-integration/server-side-synchronization/error-code-8005e274.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-code-8005e274",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/dataverse/email-m365-integration/server-side-synchronization/error-code-8005e276.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-code-8005e276",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/dataverse/email-m365-integration/server-side-synchronization/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-send-email-as-another-user.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/cannot-send-email-as-another-user",
+      "redirect_document_id": true
     }
   ]
 }

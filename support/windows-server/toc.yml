@@ -891,8 +891,6 @@ items:
     items:
     - name: Disable TLS 1.0 and 1.1 and force the use of TLS 1.2
       href: ./certificates-and-public-key-infrastructure-pki/disable-tls-1-1dot1-mbam-servers.md
-    - name: Restrict cryptographic algorithms and protocols
-      href: ./certificates-and-public-key-infrastructure-pki/restrict-cryptographic-algorithms-protocols-schannel.md
 - name: Containers
   items:
   - name: Management of Containers

@@ -160,6 +160,10 @@
         "dynamics-365/supply-chain/transportation/*.md": "Weijiesa",
         "dynamics-365/supply-chain/warehousing/*.md": "Mirzaab"
       },
+      "ms.collection": {
+        "power-platform/ai-builder/**/*.md": "CEnSKM-ai-copilot",
+        "sales-copilot/**/*.md": "CEnSKM-ai-copilot"
+      },
       "ms.author": {
         "**/*.md": "christys",
         "azure/**/*.md": "genli",
