@@ -1,14 +1,14 @@
 ---
-title: Troubleshoot the InvalidParameter error code
+title: Troubleshoot the InvalidParameter error
 description: Learn how to troubleshoot the InvalidParameter error when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.date: 11/19/2024
-editor: v-jsitser
+editor: v-gsitser
 ms.reviewer: rissing, chiragpa, erbookbi, jaewonpark, v-leedennis
 ms.service: azure-kubernetes-service
-#Customer intent: As an Azure Kubernetes user, I want to troubleshoot the InvalidParameter error code so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
+#Customer intent: As an Azure Kubernetes user, I want to troubleshoot the InvalidParameter error so that I can successfully create and deploy an AKS cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
-# Troubleshoot the InvalidParameter error code
+# Troubleshoot the InvalidParameter error
 
 This article discusses how to identify and resolve the `InvalidParameter` error that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
@@ -18,9 +18,9 @@ This article discusses how to identify and resolve the `InvalidParameter` error 
 
 ## Symptoms
 
-When you create an AKS cluster, the provided configurations are usually validated before the cluster is created. However, on rare occasions, a parameter passes the precreation validation but causes errors when the resources for the AKS cluster are created. Errors that are related to invalid parameters might resemble the following example:
+When you create an AKS cluster, the provided configurations are usually validated before the cluster is created. However, on rare occasions, a parameter passes validation before the AKS cluster is created but causes errors when the resources for the cluster are created. Errors that are related to invalid parameters might resemble the following examples:
 
-- For the scenario that the selected VM size is not available
+- Scenario: The selected VM size is not available
 
     ```
     Code="InvalidParameter"
@@ -29,18 +29,24 @@ When you create an AKS cluster, the provided configurations are usually validate
         
     Target="vmSize"
     ```
--  For scenarios that configuration like the cluster name are unavailable or conflict with Azure reserved values:
+- Scenario: Cluster names are unavailable or conflict with Azure reserved values
+
+   - Example 1
 
     ```
     Code="InvalidParameter"
         
     Message="The value of parameter name is invalid. Error details: "omsagent-aks-dev-microsoft" managed cluster name is invalid because 'MICROSOFT' and 'WINDOWS' can't be used as either a whole word or a substring in the name.. Please see https://aka.ms/aks-naming-rules for more details."
     ```
-    or
+
+   - Example 2
+
     ```
     Message="The value of parameter name is invalid. Error details: "login" managed cluster name is invalid because 'LOGIN' and 'XBOX' can't be used at the start of a resource name, but can be used later in the name.. Please see https://aka.ms/aks-naming-rules for more details."
      ```
-    or
+    
+   - Example 3
+
     ```
     Message=" The value of parameter name is invalid. Error details: "azure" managed cluster name is invalid because it is reserved.. Please see https://aka.ms/aks-naming-rules for more details.
     Target: name"
@@ -53,7 +59,7 @@ This issue occurs because one of the following conditions is true:
 - The service principal is invalid.
 - A virtual network, subnet, or route table is invalid.
 - An Azure CLI parameter is invalid.
-- The value of parameter name is unavailable or Azure reserved.
+- The value of parameter name is unavailable or reserved by Azure.
 
 There might also be other reasons that your cluster creation attempt failed.
 
@@ -64,10 +70,10 @@ In the following table, follow the link for the appropriate troubleshooting step
 | Troubleshooting step | Reference link |
 | -------------------- | -------------- |
 | Check whether the SKU is available | [Resolve errors for SKU not available](/azure/azure-resource-manager/troubleshooting/error-sku-not-available) |
-| Verify that the service principal is valid | [Service principals with AKS](/azure/aks/kubernetes-service-principal) |
+| Verify that the service principal is valid | [Service principals together with AKS](/azure/aks/kubernetes-service-principal) |
 | Verify that any commands that were used to create the cluster are valid | [az aks](/cli/azure/aks#az-aks-create) (Azure CLI reference) |
 | Verify that any custom network resources that were used to create the cluster are valid | [Configure Azure CNI networking in AKS](/azure/aks/configure-azure-cni) and [Customize cluster egress with a user-defined route](/azure/aks/egress-outboundtype) |
-| Avoid using unavailable or Azure reserved values for names | [Refer to the error messages provided](#symptoms)
+| Avoid using unavailable or Azure-reserved values for names | [Refer to the error messages provided](#symptoms)
 
 ## More information
 
