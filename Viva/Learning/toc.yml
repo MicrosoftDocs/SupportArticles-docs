@@ -1,11 +1,2 @@
 - name: Viva Learning troubleshooting
   href: viva-learning-welcome.yml
-  items:
-    - name: Learning management systems
-      items:
-        - name: Content ingestion errors when adding an LMS 
-          href: lms-content-ingestion-errors.md
-    - name: Content providers
-      items:
-        - name: Content ingestion errors when adding a content provider
-          href: provider-content-ingestion-errors.md
