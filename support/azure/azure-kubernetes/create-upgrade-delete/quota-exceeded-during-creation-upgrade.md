@@ -33,8 +33,8 @@ When you try to scale up your node pools in an AKS cluster, deploy a new cluster
    
    Or 
    
-   > code: "ErrCode_InsufficientVCPUQuota"  
-   > message: "Insufficient regional vcpu quota left for location eastus. left regional vcpu quota 0, requested quota 4"
+   > Code: ErrCode_InsufficientVCPUQuota   
+   > Message: "Insufficient regional vcpu quota left for location eastus. left regional vcpu quota 0, requested quota 4"
 
 
 ## Cause
