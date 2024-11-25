@@ -13,7 +13,7 @@
 - name: Screen readers can't read tool windows
   href: ./screen-readers-not-read-tool-windows.md
 - name: The trial will expire after you sign in to the IDE
-  href: ./sign-into-ide-trial-expire.md
+  href: ../installation/sign-into-ide-trial-expire.md
 - name: Troubleshoot Class Designer errors
   href: ./troubleshoot-class-designer-errors.md
 - name: Troubleshoot Docker client errors on Windows
