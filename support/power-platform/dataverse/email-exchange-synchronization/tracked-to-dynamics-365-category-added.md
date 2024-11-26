@@ -31,7 +31,7 @@ As an administrator, you can disable the feature in the [Power Platform admin ce
 ### Disable the "Tracked to Dynamics 365" category in the Power Platform admin center
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
-2. Select **Environments** on the left navigation pane, select an environment and then select **Settings**.
+2. Select **Environments** on the left navigation pane, select an environment, and then select **Settings**.
 3. Under the **Email** section, select **Email tracking**.
 4. Locate the **People can use categories to track emails and appointments** option and switch it to **Off**.
 
@@ -42,7 +42,7 @@ As an administrator, you can disable the feature in the [Power Platform admin ce
 
 Dynamics 365 provides the OrgDBOrgSettings tool, allowing administrators to implement specific updates that were previously reserved for registry implementations.
 
-To disable the **Tracked to Dynamics 365** Outlook category, install the OrgDBOrgSetting tool in your organization and set the value of `TrackCategorizedItems` to **False** to remove the category tracking flag and functionality as described in [OrgDBOrgSettings tool for Microsoft Dynamics 365](https://support.microsoft.com/help/2691237/orgdborgsettings-tool-for-microsoft-dynamics-crm).
+To disable the **Tracked to Dynamics 365** Outlook category, install the OrgDBOrgSettings tool in your organization and set the value of `TrackCategorizedItems` to **False** to remove the category tracking flag and functionality as described in [OrgDBOrgSettings tool for Microsoft Dynamics 365](https://support.microsoft.com/help/2691237/orgdborgsettings-tool-for-microsoft-dynamics-crm).
 
 > [!NOTE]
 >
