@@ -405,4 +405,20 @@ This can help determine if the issue is a network connectivity issue.
 
 ## Data collection
 
-Before opening a support case to further investigate the issue, you can collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-tss/gather-information-using-tss-user-experience.md#wmi).
+Before opening a support case for further investigation, you can collect data by following the steps below:
+
+Download [TSS.zip](https://aka.ms/getTSS) and extract the contents.
+
+1. Start the tracing by running the following cmdlet from an elevated PowerShell command prompt.
+
+
+```powershell
+.\TSS.ps1 -UEX_WMIAdvanced -WMIProvList RPC,DCOM -NetshScenario netconnection -noBasicLog
+```
+
+1. Reproduce the connectivity error or wait until the error is reproduce. Do keep the tracing running for more than two minutes.
+
+1. Stop the tracing by following instructions a per Powershell console running TSS.
+
+The script will create a zip file containing all the trace results and diagnostic information. After a support case is created, this file can be uploaded to the secure workspace for analysis. 
+
