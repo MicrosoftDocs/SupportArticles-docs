@@ -1,5 +1,7 @@
 - name: Setup, maintenance or uninstall
   items:
+  - name: .NET Multi-platform App UI Template Is Missing
+    href: ./maui-template-missing-vs-2022-professional.md
   - name: Can't find Windows 10 developer tools
     href: ./cant-find-win-10-developer-tools-vs-2015.md
   - name: Can't Install Visual Studio 2022 Using Online Installer
@@ -24,10 +26,10 @@
     href: ./installer-fails-perform-repair-update.md
   - name: Install Windows SDK 7.1 in Silent Mode
     href: ./install-windows-sdk-silent-mode.md
+  - name: Known issues when you install Release Management
+    href: ./release-management-installation-issues.md
   - name: License Key is invalid when Install Visual Studio 2022
     href: ./installation-vs-2022-license-key-shows-invalid.md
-  - name: .NET Multi-platform App UI Template Is Missing
-    href: ./maui-template-missing-vs-2022-professional.md
   - name: Network or proxy errors
     href: ./troubleshoot-network-related-errors.md
   - name: Python Development Workload Fails to Install in Visual Studio 2022
@@ -102,11 +104,6 @@
     href: ./update-deployed-via-configuration-manager-fails-install.md
   - name: Visual Studio 2015 is stuck while installing KB2999226
     href: ./stuck-installing-visual-studio-2015.md
-- name: Other
-  items:
-  - name: Can't find Visual Studio 2015 on the Start menu
-    href: ./not-finding-start-menu-visual-studio.md
-  - name: Known issues when you install Release Management
-    href: ./release-management-installation-issues.md
-  - name: The trial will expire after you sign in to the IDE
-    href: ./sign-into-ide-trial-expire.md
+
+
+
