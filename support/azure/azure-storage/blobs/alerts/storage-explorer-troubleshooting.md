@@ -613,7 +613,7 @@ When you report an issue to GitHub, you might be asked to gather certain logs to
 
 ### Storage Explorer logs
 
-Storage Explorer logs various things to its own application logs. You can easily get to these logs by selecting **Help** > **Open Logs Directory**. By default, Storage Explorer logs at a low level of verbosity. To change the verbosity level, go to **Settings** (the **gear** symbol on the left) > **Application** > **Logging** > **Log Level**. You can then set the log level as needed. For troubleshooting, the Trace log level is recommended as it's the most verbose level.
+Storage Explorer logs various things to its own application logs. You can easily get to these logs by selecting **Help** > **Open Logs Directory**. By default, Storage Explorer logs at a low level of verbosity. To change the verbosity level, go to **Settings** (the **gear** symbol on the left) > **Application** > **Logging** > **Log Level**. You can then set the log level as needed. For troubleshooting, the **Trace** log level is recommended as it's the most verbose level. After changing the log level, you will need to restart Storage Explorer and reproduce the issue you're having.
 
 Logs are split into folders for each session of Storage Explorer that you run. For whatever log files you need to share, place them in a zip archive, with files from different sessions in different folders.
 
@@ -636,11 +636,12 @@ Generally, you can follow these steps to gather the logs:
 
 ### AzCopy logs
 
-If you're having trouble transferring data, you might need to get the AzCopy logs. AzCopy logs can be found easily via two different methods:
+If you're having trouble transferring data, you might need to get the AzCopy logs. By default, AzCopy logs at a low level of verbosity. To change the verbosity level, go to **Settings** (the **gear** symbol on the left) > **Transfers** > **AzCopy** > **Log Level**. You can then set the log level as needed. For troubleshooting, the **Debug** log level is recommended as it's the most verbose level. After changing the log level, you will need to restart Storage Explorer and reproduce the issue you're having.
+
+AzCopy logs can be found easily via two different methods:
 
 - For failed transfers still in the Activity Log, select **Go to AzCopy Log File**.
 - For transfers that failed in the past, go to the AzCopy logs folder. This folder can be found at:
-
   - Windows: *C:\Users\\<your username\>\\.azcopy*
   - macOS: *~/.azcopy*
   - Linux: *~/.azcopy*
