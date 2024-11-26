@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4509420
 
 ## Symptoms
 
-After you [create an appointment in Microsoft Dynamics 365](/dynamics365/customerengagement/on-premises/basics/create-edit-appointment?view=op-9-1), the appointment isn't synchronized to Exchange or Outlook.
+After you [create an appointment in Microsoft Dynamics 365](/dynamics365/customerengagement/on-premises/basics/create-edit-appointment), the appointment isn't synchronized to Exchange or Outlook.
 
 ## Cause 1
 
