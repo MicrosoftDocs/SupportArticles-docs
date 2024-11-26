@@ -182,4 +182,4 @@ Before opening a support case to further investigate the issue, you can collect 
 
 4. Stop the tracing by following instructions in the PowerShell command prompt according to the TSS toolset.
 
-The script will create a zip file containing the results of all traces and the diagnostic information. After a support case is created, this file can be uploaded to the secure workspace for analysis.
+The script will create a zip file containing all the trace results and diagnostic information. After a support case is created, this file can be uploaded to the secure workspace for analysis.
