@@ -109,9 +109,9 @@ To diagnose the issue, follow these steps:
 
     Go through the steps mentioned in the "Analyze the incoming queries," "Review the WMI trace files," and "Find the client PIDs that causing high CPU usage" sections in [Troubleshoot WMI high CPU usage issues](troubleshoot-wmi-high-cpu-issues.md). Then, you can identify:
 
-- The client process(es)
-    - The query leading to the issue
-    - The frequency of the query  
+    - The client process(es)
+        - The query leading to the issue
+        - The frequency of the query  
 
 ### Client application performs abnormal, inefficient, or large queries
 
