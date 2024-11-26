@@ -1,21 +1,20 @@
 ---
-title: Desktop flow ended with max session duration error.
-description: Provides troubleshooting steps when the desktop flow ended with error code MaxRDSessionDurationReached or SessionHasLoggedOffWithMaxIdleTime.
+title: MaxRDSessionDurationReached or SessionHasLoggedOffWithMaxIdleTime Error
+description: Solves the error code that occurs during a desktop flow run in Microsoft Power Automate.
 ms.custom: sap:Desktop flows\Power Automate for desktop errors
-ms.date: 11/15/2024
+ms.date: 11/26/2024
 ms.author: fredg 
 author: fredg
 ---
+# MaxRDSessionDurationReached or SessionHasLoggedOffWithMaxIdleTime occurs during a desktop flow run
 
-# Error code MaxRDSessionDurationReached or SessionHasLoggedOffWithMaxIdleTime in Microsoft Power Automate during a desktop flow run.
-
-
-This article provides troubleshooting steps for an issue taht occurs during a desktop flow run with error code MaxRDSessionDurationReached or SessionHasLoggedOffWithMaxIdleTime in the cloud environment in Microsoft Power Automate.
+This article provides a resolution for the error code that occurs during a desktop flow run in the cloud environment in Microsoft Power Automate.
 
 ## Symptoms
-The desktop flow ended with error specifying a registry value name with a specific registry path:
 
-```json
+When you run a desktop flow in the cloud environment in Power Automate, the flow run might fail with one of the error codes that indicate a registry value name and its specific registry path.
+
+```jsonc
 { 
     "error":{
         "code": "MaxRDSessionDurationReached",
@@ -24,8 +23,9 @@ The desktop flow ended with error specifying a registry value name with a specif
 }
 ```
 
-or 
-```json
+Or
+
+```jsonc
 { 
     "error":{
         "code": "SessionHasLoggedOffWithMaxIdleTime",
@@ -33,32 +33,35 @@ or
     } 
 }
 ```
-The error message explains that the Remote Desktop session has been logged off after a duration in milliseconds. The duration is greater than the value found in the registry value name (MaxConnectionTime or MaxIdleTime) in the specified registry path.
 
 ## Cause
-Those errors are returned when the remote desktop session used to run the desktop flow has been logged off. The flow service detected a session registry setting with a registry value lower than the execution time needed for the desktop flow.
+
+The error message indicates that the remote desktop session has been logged off after a duration in milliseconds, which exceeds the value specified in the registry (MaxConnectionTime or MaxIdleTime) at the given registry path. These errors occur when the remote desktop session used to run the desktop flow is logged off because the session registry setting has a value lower than the time required for the desktop flow to execute.
 
 ## Resolution
+
 > [!NOTE]
-> You may ask to your administrator to change the settings in the following steps.
+> To solve this issue, contact your administrator to change the settings by following one of the options.
 
-### Group Policy Settings
-Those registry settings are usually set with the Group Policy settings: check the section **_Session time limits_** by opening the [Local Group Policy Editor](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn789185(v=ws.11)) and navigating to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Remote Desktop Services** > **Session Time Limits**. 
+### Option 1: Through the Local Group Policy Editor
 
-1. If the message error points the registry value **_MaxConnectionTime_**, verify the **_Set time limit for active Remote Desktop Services sessions_**, if enabled, disable it or set the value as **_Never_**. 
+Verify group policy settings to ensure no configurations are set to sign out from the remote desktop session due to time limits. You can do this by [opening the Local Group Policy Editor](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn789185(v=ws.11)) and navigating to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Remote Desktop Services** > **Session Time Limits**.
 
-1. If the message error points the registry value **_MaxIdleTime_**, verify the **_Set time limit for active but idle Remote Desktop Services sessions_**, if enabled, disable it or set the value as **_Never_**. 
+- If the message error points the **MaxConnectionTime** registry value, verify the **Set time limit for active Remote Desktop Services sessions** setting. If it's enabled, disable it or set the **Active session limit** value to **Never**.
+- If the message error points the **MaxIdleTime** registry value, verify the **Set time limit for active but idle Remote Desktop Services sessions** setting. If it's enabled, disable it or set the **Active session limit** value to **Never**.
 
-### Registry
-Based on the registry path in error message, open **_Registry Editor_** tool and find the registry value name from the error message in the specified registry path under ``Computer\HKEY_LOCAL_MACHINE\``.
+### Option 2: Manually set up in Registry Editor
 
-- example: ``Computer\HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows NT\Terminal Service``. 
+Based on the registry path in the error message, [open Registry Editor](/previous-versions/windows/it-pro/windows-server-2003/cc758067(v=ws.10)) and find the registry value name from the error message in the specified registry path under **Computer\HKEY_LOCAL_MACHINE\\**.
 
-If the **_MaxConnectionTime_** or **_MaxIdleTime_** registry value exists, set it to **0** (zero) which means unlimited.
-    - Note: the registry value can also be deleted, or set with a value greater than the max execution time of the desktop flow.
+For example: **Computer\HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows NT\Terminal Service**
 
+If the **MaxConnectionTime** or **MaxIdleTime** registry value exists, set it to **0** (zero) which means unlimited.
+
+> [!NOTE]
+> The registry value can also be deleted, or set to a value greater than the maximum execution time of the desktop flow.
 
 |Registry value name|Description|
 |---|---|
-| **_MaxConnectionTime_** | Specifies the max time of an active Remote Desktop session.|
-| **_MaxIdleTime_** | Specifies the max time of an active Remote Desktop session but idle, meaning, without user input (mouse, key...).|
+| **MaxConnectionTime** | Specifies the maximum time of an active remote desktop session.|
+| **MaxIdleTime** | Specifies the maximum time of an active remote desktop session can be idle (without any user input such as mouse movements or keystrokes.)|
