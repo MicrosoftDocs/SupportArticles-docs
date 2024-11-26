@@ -94,7 +94,8 @@ You can perform an in-place upgrade from RHEL 8 to the following RHEL 9 minor ve
 | Source OS version| Target version  | End of support      |
 |------------------|-----------------|---------------------|
 | RHEL 8.8         | RHEL 9.2        | May 31, 2025 (EUS)  |
-| RHEL 8.10        | RHEL 9.4        | May 31, 2026        |
+| RHEL 8.10        | RHEL 9.4        | May 31, 2026 (EUS)  |
+| RHEL 8.10        | RHEL 9.5        | May 31, 2026        |
 
 
 > [!NOTE]  
