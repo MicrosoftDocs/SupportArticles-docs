@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot WmiPrvse.exe quota exceeded issues
 description: Helps troubleshoot the WmiPrvse.exe process quota exceeded issues, and describes how to gather additional information.
-ms.date: 12/26/2023
+ms.date: 11/26/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -103,9 +103,9 @@ To diagnose the issue, follow these steps:
 2. Identify the common WMI providers listed in the event.
 
     The providers listed may be the same across all the events. Another possibility is that one of the providers consumes more resources, causing this issue and disturbing other WMI providers. In this case, the goal is to diagnose and identify the problematic provider.
-1. [Identify the currently active WMI providers hosting the same list of WMI providers.](/troubleshoot/windows-server/system-management-components/troubleshoot-wmi-high-cpu-issues) 
+3. [Identify the currently active WMI providers hosting the same list of WMI providers](troubleshoot-wmi-high-cpu-issues.md#identify-the-exact-wmi-provider-dll-hosted-by-the-wmiprvseexe-pid-identified).
 
-1. Analyze the incoming queries that are handled by the *WmiPrvse.exe* process listed in Event ID 5612.
+4. Analyze the incoming queries that are handled by the *WmiPrvse.exe* process listed in Event ID 5612.
 
     Go through the steps mentioned in the "Analyze the incoming queries," "Review the WMI trace files," and "Find the client PIDs that causing high CPU usage" sections in [Troubleshoot WMI high CPU usage issues](troubleshoot-wmi-high-cpu-issues.md). Then, you can identify:
 
@@ -172,15 +172,14 @@ Before opening a support case to further investigate the issue, you can collect 
 
 1. Download [TSS.zip](https://aka.ms/getTSS) and extract the contents.
 
-1. Start the tracing by running the following cmdlet from an elevated PowerShell command prompt.
+2. Start the tracing by running the following cmdlet from an elevated PowerShell command prompt.
 
    ```powershell
    .\TSS.ps1 -UEX_WMIAdvanced -noBasicLog
    ```
    
-1. Keep the tracing on until the error/even ID you've noticed is reproduced or the identified WmiPrvSE.exe issue surfaces. Do keep the tracing running for more than 2-3minutes.
+3. Keep the tracing on until the error or even ID you've noticed is reproduced, or the identified **WmiPrvSE.exe** issue appears. Do keep the tracing running for more than two to three minutes.
 
-1. Stop the tracing by following instructions in the PowerShell command prompt as per the TSS toolset.
+4. Stop the tracing by following instructions in the PowerShell command prompt according to the TSS toolset.
 
 The script will create a zip file containing the results of all traces and the diagnostic information. After a support case is created, this file can be uploaded to the secure workspace for analysis.
-
