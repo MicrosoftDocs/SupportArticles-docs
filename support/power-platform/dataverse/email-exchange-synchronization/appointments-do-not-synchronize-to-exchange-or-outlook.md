@@ -2,11 +2,10 @@
 title: Appointment not synchronized to Exchange or Outlook
 description: Appointments that are created in Microsoft Dynamics 365 can't synchronize to Microsoft Exchange or Microsoft Outlook. Provides a resolution.
 ms.reviewer: 
-ms.topic: troubleshooting
-ms.date: 11/19/2024
+ms.date: 11/26/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
-# Appointments do not synchronize to Exchange or Outlook after being created in Microsoft Dynamics 365
+# Appointments don't synchronize to Exchange or Outlook after being created in Microsoft Dynamics 365
 
 This article provides resolutions for the issue that appointments created in Microsoft Dynamics 365 don't synchronize to Microsoft Exchange or Microsoft Outlook.
 
@@ -15,33 +14,37 @@ _Original KB number:_ &nbsp; 4509420
 
 ## Symptoms
 
-After creating an appointment in Microsoft Dynamics 365, the appointment is not synchronized to Exchange or Outlook.
+After you [create an appointment in Microsoft Dynamics 365](/dynamics365/customerengagement/on-premises/basics/create-edit-appointment?view=op-9-1), the appointment isn't synchronized to Exchange or Outlook.
 
-## Cause
+## Cause 1
 
-Cause 1
+Your mailbox record in Microsoft Dynamics 365 isn't configured to synchronize appointments, contacts, and tasks.
 
-Your mailbox record in Microsoft Dynamics 365 is not configured to synchronize Appointments, Contacts, and Tasks.
+### Resolution
 
-Cause 2
-
-The appointment does not meet the conditions used in your synchronization filters for the Appointment entity.
-
-## Resolution 1 - Verify the mailbox is configured to synchronize appointments, contacts, and tasks
+To sovle this issue, verify the mailbox is configured to synchronize appointments, contacts, and tasks:
 
 1. Within the Microsoft Dynamics 365 web application, navigate to **Settings** and then select **Email Configuration**.
 2. Select **Mailboxes** and then change the view to **Active Mailboxes**.
 3. Open the mailbox record for the user.
-4. Verify the **Appointments, Contacts, and Tasks** synchronization method is configured to use **Server-Side Synchronization** and the mailbox has been tested and enabled. The Appointments, Contacts, and Tasks Status should be Success.
+4. Verify the **Appointments, Contacts, and Tasks** synchronization method is configured to use **Server-Side Synchronization** and the mailbox has been tested and enabled. The **Appointments, Contacts, and Tasks Status** should be **Success**.
 
-   If the mailbox is configured to use Microsoft Dynamics 365 for Outlook, verify the user has Microsoft Dynamics 365 for Outlook installed and running on their computer.
+   If the mailbox is configured to use [Dynamics 365 for Outlook](/dynamics365/outlook-addin/admin-guide/install), verify the user has Dynamics 365 for Outlook installed and running on their computer.
 
-## Resolution 2 - Verify the properties of the appointment record meet the conditions in your synchronization filters
+## Cause 2
 
-You can view your synchronization filters in the Microsoft Dynamics 365 web application by following these steps:
+The appointment doesn't meet the conditions used in your synchronization filters for the Appointment entity.
 
-1. Select gear icon and then select **Options**.
+### Resolution
+
+To sovle this issue, verify the properties of the appointment record meet the conditions in your synchronization filters:
+
+1. Select the gear icon in the upper-right corner of the screen and then select **Options**.
 2. Select the **Synchronization** tab and then select the option to view or manage filters.
 3. Locate the filter(s) for the **Returned Type** set to **Appointment**.
 
-   The default filter is to only sync appointments where you are a party on the appointment but are not just the owner. This means you need to be on the **Required Attendees** field or the **Organizer** field.
+   The default filter is to only synchronize appointments where you're a party on the appointment but aren't just the owner. This means you need to be in the **Required Attendees** field or the **Organizer** field.
+
+## More information
+
+[Synchronization logic for appointments, contacts, and tasks](/power-platform/admin/sync-logic)
