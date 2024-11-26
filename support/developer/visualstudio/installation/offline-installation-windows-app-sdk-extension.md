@@ -12,6 +12,8 @@ ms.custom: sap:Installation\Offline Install
 
 When you install the Windows App SDK C# extension for Visual Studio 2022 offline, it fails with the following error message:
 
+:::image type="content" source="/media/offline-installation-windows-app-sdk-extension/windows-app-sdk-extension-vs-2022-fail.png" alt-text="Screenshot of error messages when you install the Windows App SDK C# extension for Visual Studio 2022 offline.":::
+
 ## Resolution
 
 To perform an offline installation of the Windows App SDK extension for Visual Studio 2019, use the following command line:
