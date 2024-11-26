@@ -160,7 +160,7 @@ If you have other conditional access policies that need to be satisfied for your
 
 ### Issues with authentication broker (WAM) on Windows
 
-If you are using the **Authentication Broker** sign-in method on Windows and you encounter issues, try referring to [this guide](https://learn.microsoft.com/en-us/entra/msal/dotnet/advanced/exceptions/wam-errors) for steps on how to mitigate various errors.
+If you are using the **Authentication Broker** sign-in method on Windows and you encounter issues, try referring to [this guide](/entra/msal/dotnet/advanced/exceptions/wam-errors) for steps on how to mitigate various errors.
 
 ### Browser complains about HTTP redirect or insecure connection during sign-in
 
