@@ -2,8 +2,7 @@
 title: Appointment not synchronized to Exchange or Outlook
 description: Appointments that are created in Microsoft Dynamics 365 can't synchronize to Microsoft Exchange or Microsoft Outlook. Provides a resolution.
 ms.reviewer: 
-ms.topic: troubleshooting
-ms.date: 11/19/2024
+ms.date: 11/26/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # Appointments do not synchronize to Exchange or Outlook after being created in Microsoft Dynamics 365
