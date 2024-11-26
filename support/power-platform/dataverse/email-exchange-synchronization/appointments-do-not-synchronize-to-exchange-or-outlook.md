@@ -18,7 +18,7 @@ After you [create an appointment in Microsoft Dynamics 365](/dynamics365/custome
 
 ## Cause 1
 
-Your mailbox record in Microsoft Dynamics 365 isn't configured to synchronize appointments, contacts, and tasks.
+Your mailbox record in Dynamics 365 isn't configured to synchronize appointments, contacts, and tasks.
 
 ### Resolution
 
