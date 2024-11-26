@@ -2,7 +2,7 @@
 title: The Specified Module Could Not Be Found Error
 description: Helps resolve an error that occurs when you use the Open terminal session action with an HLLAPI provider in Power Automate for desktop.
 ms.reviewer: nimoutzo
-ms.date: 11/20/2024
+ms.date: 11/26/2024
 ms.custom: sap:Desktop flows
 ---
 # "The specified module could not be found" error when using the Open terminal session action
