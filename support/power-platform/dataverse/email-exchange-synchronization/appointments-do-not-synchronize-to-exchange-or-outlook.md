@@ -14,15 +14,11 @@ _Original KB number:_ &nbsp; 4509420
 
 ## Symptoms
 
-After you [create an appointment in Microsoft Dynamics 365](/dynamics365/customerengagement/on-premises/basics/create-edit-appointment), the appointment isn't synchronized to Exchange or Outlook.
+After you [creates an appointment in Microsoft Dynamics 365](/dynamics365/customerengagement/on-premises/basics/create-edit-appointment), the appointment isn't synchronized to Exchange or Outlook.
 
-## Cause 1
+## Cause 1: The mailbox record isn't configured to synchronize appointments, contacts, and tasks
 
-Your mailbox record in Dynamics 365 isn't configured to synchronize appointments, contacts, and tasks.
-
-### Resolution
-
-To sovle this issue, verify the mailbox is configured to synchronize appointments, contacts, and tasks:
+An administrator should verify the mailbox is configured to synchronize appointments, contacts, and tasks:
 
 1. Within the Microsoft Dynamics 365 web application, navigate to **Settings** and then select **Email Configuration**.
 2. Select **Mailboxes** and then change the view to **Active Mailboxes**.
@@ -31,13 +27,9 @@ To sovle this issue, verify the mailbox is configured to synchronize appointment
 
    If the mailbox is configured to use [Dynamics 365 for Outlook](/dynamics365/outlook-addin/admin-guide/install), verify the user has Dynamics 365 for Outlook installed and running on their computer.
 
-## Cause 2
+## Cause 2: The appointment doesn't meet the conditions used in synchronization filters for the Appointment entity
 
-The appointment doesn't meet the conditions used in your synchronization filters for the Appointment entity.
-
-### Resolution
-
-To sovle this issue, verify the properties of the appointment record meet the conditions in your synchronization filters:
+To sovle this issue, you should verify the properties of the appointment record meet the conditions in your synchronization filters:
 
 1. Select the gear icon in the upper-right corner of the screen and then select **Options**.
 2. Select the **Synchronization** tab and then select the option to view or manage filters.
@@ -47,4 +39,6 @@ To sovle this issue, verify the properties of the appointment record meet the co
 
 ## More information
 
-[Synchronization logic for appointments, contacts, and tasks](/power-platform/admin/sync-logic)
+- [Configure synchronization for appointments, contacts, and tasks](/dynamics365/outlook-addin/admin-guide/configure-synchronization-appointments-contacts-tasks)
+- [Synchronization logic for appointments, contacts, and tasks](/power-platform/admin/sync-logic)
+- [Set up default sync filters for multiple users for appointments, contacts, or tasks](/power-platform/admin/configure-default-sync-filters)
