@@ -6249,6 +6249,11 @@
         "source_path": "azure-storage/files/alerts/files-troubleshoot-create-alerts.md",
         "redirect_url": "/azure/storage/files/files-monitoring-alerts",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "virtual-machines/linux/ed25519-ssh-keys.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/welcome-virtual-machines-linux",
+        "redirect_document_id": false
       }
   ]
 }
