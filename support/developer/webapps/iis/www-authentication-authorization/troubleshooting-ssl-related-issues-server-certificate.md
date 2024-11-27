@@ -131,7 +131,7 @@ The first two scenarios helps check the integrity of the certificate. After you 
 1. Run the following command to make sure that no other process is listening on the SSL port used by the website.
 
    ```Console
-   netstat -ano" or "netstat -anob
+   netstat -ano" or "netstat -anob"
    ```
 
 1. If there's another process listening on that port, then check why that process is using that port.
