@@ -2,8 +2,7 @@
 title: Appointments don't sync to Exchange for some users
 description: Appointments don't sync from Microsoft Dynamics 365 to Exchange for some users. Provides a resolution.
 ms.reviewer: 
-ms.topic: troubleshooting
-ms.date: 11/19/2024
+ms.date: 11/27/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # Appointments don't sync from Microsoft Dynamics 365 to Exchange for some users
