@@ -48,7 +48,7 @@ Check if the server certificate has the private key corresponding to it. See the
 If private key is missing, then you need to get a certificate that contains the private key, which is essentially a .PFX file. Here's a command that you could try to run to associate the private key with the certificate::
 
 ```Console
-C:\>certutil - repairstore my "1a 1f 94 8b 21 a2 99 36 77 a8 8e b2 3f 42 8c 7e 47 e3 d1 33"
+C:\>certutil - repairstore my "906c9825e56a13f1017ea40eca770df4c24cb735"
 ```
 
 :::image type="content" source="media/troubleshooting-ssl-related-issues-server-certificate/command-console-certutil-syntax.png" alt-text="Screenshot of the command console showing the certutil syntax.":::
@@ -57,7 +57,7 @@ If the association is successful, then you would see the following window:
 
 :::image type="content" source="media/troubleshooting-ssl-related-issues-server-certificate/certutil-repairstore-successful.png" alt-text="Screenshot of the command console showing a message that the command completed successfully.":::
 
-In this example, `1a 1f 94 8b 21 a2 99 36 77 a8 8e b2 3f 42 8c 7e 47 e3 d1 33` is the thumbprint of the certificate. To get the thumbprint:
+In this example, `906c9825e56a13f1017ea40eca770df4c24cb735` is the thumbprint of the certificate. To get the thumbprint:
 
  1. Open the certificate.
  1. Select the **Details** tab.
