@@ -6252,7 +6252,7 @@
       },
       {
         "source_path": "virtual-machines/linux/ed25519-ssh-keys.md",
-        "redirect_url": "/azure/virtual-machines/linux/welcome-virtual-machines-linux",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/welcome-virtual-machines-linux",
         "redirect_document_id": true
       }
   ]
