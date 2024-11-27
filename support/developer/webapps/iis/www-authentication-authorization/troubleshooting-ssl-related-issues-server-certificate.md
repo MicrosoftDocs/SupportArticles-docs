@@ -2,14 +2,14 @@
 title: Troubleshooting SSL related issues (Server Certificate)
 description: This article provides various troubleshooting scenarios and resolutions related to SSL server certificates.
 ms.topic: troubleshooting 
-ms.date: 06/24/2024
-ms.reviewer: kaushalp, johnhart, v-jayaramanp
+ms.date: 11/27/2024
+ms.reviewer: kaushalp, johnhart, v-jayaramanp, zixie
 ms.custom: sap:WWW Authentication and Authorization\SSL and SSL Server certificates
 ---
 
 # Troubleshooting SSL related issues (Server Certificate)
 
-_Applies to:_ &nbsp; Internet Information Services 6.0, Internet Information Services 7.0 and later versions
+_Applies to:_ &nbsp; Internet Information Services
 
 ## Overview
 
@@ -165,8 +165,7 @@ The Certificate hash registered with *HTTP.sys* may be NULL or it may contain in
 1. Execute the following command:
 
    ```Console
-   IIS 6: "httpcfg.exe query ssl"
-   IIS 7/7.5: "netsh http show ssl"
+   netsh http show ssl
    ```
 
      > [!NOTE]
@@ -221,11 +220,7 @@ The Certificate hash registered with *HTTP.sys* may be NULL or it may contain in
    1. To determine whether any IP addresses are listed, open a command prompt, and then run the following commands:
 
        ```Console
-       IIS 6: httpcfg query iplisten
-       ```
-
-       ```Console
-       IIS 7/7.5: netsh http show iplisten
+       netsh http show iplisten
        ```
 
       If the IP Listen list is empty, the command returns the following string:
@@ -257,7 +252,7 @@ Following is a network trace snapshot of a working scenario:
 
 This is the method of how you look at a network trace. You need to expand the frame details and see what protocol and cipher was chosen by the server. Select "Server Hello" from the description to view those details.
 
-In the non-working scenario, the client was configured to use TLS 1.1 and TLS 1.2 only. However, the web server was IIS 6, which can support until TLS 1.0 and hence the handshake failed.
+In the non-working scenario, the client was configured to use TLS 1.1 and TLS 1.2 only. However, the IIS web server was configured to support until TLS 1.0 and hence the handshake failed.
 
 Check the registry keys to determine what protocols are enabled or disabled. Here's the path:
 
