@@ -1,20 +1,20 @@
 ---
 title: Appointments don't sync to Exchange for some users
-description: Appointments don't sync from Microsoft Dynamics 365 to Exchange for some users. Provides a resolution.
+description: Appointments don't sync from Microsoft Dynamics 365 to Exchange for some users. Provides a workaround.
 ms.reviewer: 
 ms.date: 11/27/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # Appointments don't sync from Microsoft Dynamics 365 to Exchange for some users
 
-This article provides a resolution for the issue that appointments don't sync from Microsoft Dynamics 365 to Microsoft Exchange for some users.
+This article provides a workaround for the issue that appointments don't sync from Microsoft Dynamics 365 to Microsoft Exchange for some users.
 
 _Applies to:_ &nbsp; Microsoft Dynamics 365  
 _Original KB number:_ &nbsp; 4494491
 
 ## Symptoms
 
-Appointments don't sync from Microsoft Dynamics 365 to Microsoft Exchange for some users. If you view the Alerts section for a corresponding mailbox in Microsoft Dynamics 365, you see the following alert message:
+Appointments don't sync from Dynamics 365 to Exchange for some users. If you view the **Alerts** section for a corresponding mailbox in Dynamics 365, you see the following alert message:
 
 > Appointments, contacts, and tasks for the mailbox \<Mailbox Name> couldn't be synchronized. The owner of the associated email server profile \<Profile Name> has been notified. The system will try again later.  
 > **Email Server Error Code:** Exchange.server returned 383 error.
@@ -56,13 +56,20 @@ Microsoft is aware of an [issue with the Exchange Web Services API](https://gith
 - (GMT+11:00) Sakhalin - Sakhalin Standard Time
 - (GMT+12:00) Anadyr, Petropavlovsk-Kamchatsky - Russia Time Zone 11
 
-## Resolution
+## Workaround
 
-Microsoft is investigation a solution to this issue. In the meantime, you can work around the issue by changing the user's time zone setting in Microsoft Dynamics 365:
+Microsoft is investigating a solution to this issue. In the meantime, you can work around the issue by changing the user's time zone setting in Dynamics 365:
 
-1. A Microsoft Dynamics 365 user can access their personal options by selecting the gear icon in the upper-right corner of Microsoft Dynamics 365 and then selecting **Options**.
-2. If the **Time Zone** value is one of the time zones listed in the Cause section above, update the value to another time zone that has the same time offset but isn't in the list within the Cause section of this article.
+1. A Dynamics 365 user can access their personal options by selecting the gear icon in the upper-right corner of Dynamics 365 and then selecting **Options**.
+
+2. If the **Time Zone** value is one of the time zones listed in the Cause section of this article, update the value to another time zone that has the same time offset but isn't in the list.
 
    For example: If you're using **(GMT-05:00)** Chetumal, you could try switching to **(GMT-05:00)** Havana.
+
 3. Select **OK**.
-4. The appointments should sync on the next sync cycle for the mailbox, which may take 15-30 minutes.
+
+4. The appointments should sync on the next sync cycle for the mailbox, which might take 15-30 minutes.
+
+## More information
+
+[Synchronization logic for appointments, contacts, and tasks](/power-platform/admin/sync-logic)
