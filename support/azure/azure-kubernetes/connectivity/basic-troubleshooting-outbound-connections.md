@@ -71,7 +71,7 @@ When you troubleshoot outbound traffic in AKS, it's important to know what your 
 - A network address translation (NAT) gateway
 - A proxy server
 
-The flow could also differ based on the destination. For example, internal traffic (that is, within the cluster) doesn't go through the egress device. The internal traffic would use only the cluster networking. For public outbound traffic, determine if there is an egress device passing through and check that device.
+The flow could also differ based on the destination. For example, internal traffic (that is, within the cluster) doesn't go through the egress device. The internal traffic would use only the cluster networking. For public outbound traffic, determine if there's an egress device passing through and check that device.
 
 #### Check each hop within traffic flow
 
@@ -86,7 +86,7 @@ After identifying the egress device, check the following factors:
   - Network security group (NSG)
   - Network policy
 
-To identify a problematic hop, check the response codes before and after it. To check whether the packets are arriving properly in a specific hop, you can proceed with packet captures.
+To identify a problematic hop, check the response codes before and after it. To check whether the packets arrive properly in a specific hop, you can proceed with packet captures.
 
 ##### Check HTTP response codes
 
@@ -178,7 +178,7 @@ What if you can't run the [kubectl exec](https://kubernetes.io/docs/reference/ge
    Address: 20.81.111.85
    ```
 
-Sometimes, there is a problem with the endpoint itself rather than a cluster DNS. In such cases, consider the following checks:
+Sometimes, there's a problem with the endpoint itself rather than a cluster DNS. In such cases, consider the following checks:
 
 1. Check whether the desired port is open on the remote host:
 
@@ -186,7 +186,7 @@ Sometimes, there is a problem with the endpoint itself rather than a cluster DNS
    curl -Ivm5 telnet://microsoft.com:443
    ```
 
-1.  HTTP response code:
+1.  Check the HTTP response code:
 
    ```bash
    curl -Ivm5 https://microsoft.com
