@@ -1,7 +1,7 @@
 ---
 title: Basic troubleshooting of outbound connections from an AKS cluster
 description: Do basic troubleshooting of outbound connections that originate from an Azure Kubernetes Service (AKS) cluster.
-ms.date: 11/25/2024
+ms.date: 11/27/2024
 ms.reviewer: chiragpa, rissing, jopalhei, jaewonpark, v-leedennis, v-weizhu
 editor: v-jsitser
 ms.service: azure-kubernetes-service
@@ -26,11 +26,11 @@ This article discusses how to do basic troubleshooting of outbound connections f
 
 Traffic that originates from within the AKS cluster, whether it's from a pod or a worker node, is considered the outbound traffic from the cluster. What if there's an issue in the outbound flow for an AKS cluster? Before you troubleshoot, first look at the scenarios for outbound traffic flow.
 
-The outbound traffic from an AKS cluster can be classified within the following categories:
+The outbound traffic from an AKS cluster can be classified into the following categories:
 
 1. [Traffic to a pod or service in the same cluster (internal traffic)](#internal-traffic).
 
-1. Traffic to a device or endpoint in the same virtual network or a different virtual network (that uses virtual network peering).
+1. Traffic to a device or endpoint in the same virtual network or a different virtual network that uses virtual network peering.
 
 1. Traffic to an on-premises environment through a VPN connection or an Azure ExpressRoute connection.
 
@@ -40,23 +40,23 @@ The outbound traffic from an AKS cluster can be classified within the following 
 
 #### Internal traffic
 
-A basic request flow for internal traffic from an AKS cluster would resemble the flow that's shown in the following diagram.
+A basic request flow for internal traffic from an AKS cluster resembles the flow that's shown in the following diagram.
 
-:::image type="content" source="./media/basic-troubleshooting-outbound-connections/internal-traffic-aks-cluster.svg" alt-text="Diagram of a basic request flow for internal traffic from a Microsoft Azure Kubernetes Service (AKS) cluster." lightbox="./media/basic-troubleshooting-outbound-connections/internal-traffic-aks-cluster.svg" border="false":::
+:::image type="content" source="./media/basic-troubleshooting-outbound-connections/internal-traffic-aks-cluster.svg" alt-text="Diagram of a basic request flow for internal traffic from an AKS cluster." lightbox="./media/basic-troubleshooting-outbound-connections/internal-traffic-aks-cluster.svg" border="false":::
 
 #### Public outbound traffic through Azure Load Balancer
 
 If the traffic is for a destination on the internet, the default method is to send the traffic through the Azure Load Balancer.
 
-:::image type="content" source="./media/basic-troubleshooting-outbound-connections/external-traffic-load-balancer.svg" alt-text="Diagram of a request flow for external internet traffic through Azure Load Balancer from a Microsoft Azure Kubernetes Service (AKS) cluster." lightbox="./media/basic-troubleshooting-outbound-connections/external-traffic-load-balancer.svg" border="false":::
+:::image type="content" source="./media/basic-troubleshooting-outbound-connections/external-traffic-load-balancer.svg" alt-text="Diagram of a request flow for external internet traffic through Azure Load Balancer from an AKS cluster." lightbox="./media/basic-troubleshooting-outbound-connections/external-traffic-load-balancer.svg" border="false":::
 
 #### Public outbound traffic through Azure Firewall or a proxy server
 
 In some cases, the egress traffic has to be filtered, and it might require Azure Firewall.
 
-:::image type="content" source="./media/basic-troubleshooting-outbound-connections/external-traffic-firewall.svg" alt-text="Diagram of a request flow for external internet traffic through Azure Firewall from a Microsoft Azure Kubernetes Service (AKS) cluster." lightbox="./media/basic-troubleshooting-outbound-connections/external-traffic-firewall.svg" border="false":::
+:::image type="content" source="./media/basic-troubleshooting-outbound-connections/external-traffic-firewall.svg" alt-text="Diagram of a request flow for external internet traffic through Azure Firewall from an AKS cluster." lightbox="./media/basic-troubleshooting-outbound-connections/external-traffic-firewall.svg" border="false":::
 
-Instead of a firewall, a user might want to add a proxy server. Or, the user might want to set up an NAT gateway for egress traffic. The basic flow remains the same as shown in the diagram.
+A user might want to add a proxy server instead of a firewall, or set up a NAT gateway for egress traffic. The basic flow remains the same as shown in the diagram.
 
 It's important to understand the nature of egress flow for your cluster so that you can continue troubleshooting.
 
@@ -186,7 +186,7 @@ Sometimes, there is a problem with the endpoint itself rather than a cluster DNS
    curl -Ivm5 telnet://microsoft.com:443
    ```
 
-1. Check the HTTP response code:
+1.  HTTP response code:
 
    ```bash
    curl -Ivm5 https://microsoft.com
@@ -222,7 +222,7 @@ To verify that the endpoint is reachable from the node where the problematic pod
    Address: 20.53.203.50
    ```
 
-1. Check the *resolv.conf* file to determine whether the expected name servers are added:
+1. Check the **resolv.conf** file to determine whether the expected name servers are added:
 
    ```bash
    cat /etc/resolv.conf
