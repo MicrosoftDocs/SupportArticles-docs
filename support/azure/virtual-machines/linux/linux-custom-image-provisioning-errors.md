@@ -12,11 +12,11 @@ ms.reviewer: srijangupta, scotro, maries, jarrettr
 
 When you upload or capture a generalized virtual machine (VM) image as a specialized VM image or vice versa, provisioning errors occur. The former will cause a [provisioning timeout error](#provisioning-timeout-error-during-an-upload-process), and the latter will cause a provisioning failure. To deploy your custom image without errors, you must ensure that the type of the image doesn't change during the upload or capture process.
 
-This article covers the possible combinations of generalized and specialized images, the error type you will encounter, and how to fix the errors.
+This article covers the possible combinations of generalized and specialized images, the error types you'll encounter, and how to fix the errors.
 
 ## Upload and capture combinations of generalized and specialized images
 
-The following table lists the possible upload and capture combinations of Linux generalized and specialized operating system (OS) images. Y indicateds the combinations that will process without errors, and N indicates those that will throw errors. For more details about the errors, see the following sections.
+The following table lists the possible upload and capture combinations of Linux generalized and specialized operating system (OS) images. Y indicates the combinations that will process without errors, and N indicates those that will throw errors. For more information about the errors, see the following sections.
 
 | OS | Upload spec. | Upload gen. | Capture spec. | Capture gen. |
 | --- | --- | --- | --- | --- |
