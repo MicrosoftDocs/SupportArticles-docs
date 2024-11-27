@@ -151,14 +151,14 @@ What if you can't run the [kubectl exec](https://kubernetes.io/docs/reference/ge
 1. Run the following `apt-get` commands to install other tool packages:
 
    ```bash
-   # Update & Install tool packages
+   # Update and install tool packages
    apt-get update && apt-get install -y dnsutils curl
    ```
 
 1. After the packages are installed, run the [nslookup](/windows-server/administration/windows-commands/nslookup) command to test the DNS resolution to the endpoint:
 
    ```console
-   $ nslookup microsoft.com # Microsoft.com as an example
+   $ nslookup microsoft.com # Microsoft.com is used as an example
    Server:         10.0.0.10
    Address:        10.0.0.10#53
    ...
@@ -188,9 +188,9 @@ Sometimes, there's a problem with the endpoint itself rather than a cluster DNS.
 
 1.  Check the HTTP response code:
 
-   ```bash
-   curl -Ivm5 https://microsoft.com
-   ```
+     ```bash
+     curl -Ivm5 https://microsoft.com
+     ```
 
 1. Check whether you can connect to any other endpoint:
 
