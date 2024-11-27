@@ -109,15 +109,9 @@ In this scenario, consider that you have a server certificate that contains the 
 
  1. Check if the website works with a test certificate.
  1. Take a backup of the existing certificate and then replace it with a self-signed certificate.
- 1. Try accessing the website using HTTPS. If it works, then the certificate used earlier was corrupted and it has to be replaced with a new working certificate. Sometimes, the problem may not be with the certificate but with the issuer. You may see the following error in SSLDiag:
+ 1. Try accessing the website using HTTPS. If it works, then the certificate used earlier was corrupted and it has to be replaced with a new working certificate. Sometimes, the problem may not be with the certificate but with the issuer. During the verification of the certificate chain, you may see the error `CERT_E_UNTRUSTEDROOT (0x800b0109)`, if the root CA certificate isn't trusted root.
 
-    :::image type="content" source="media/troubleshooting-ssl-related-issues-server-certificate/ssl-diagnostics-window-error-message.png" alt-text="Screenshot of the SSL Diagnostics window, the error message is highlighted.":::
-
-    `CertVerifyCertificateChainPolicy` will fail with `CERT_E_UNTRUSTEDROOT (0x800b0109)`, if the root CA certificate isn't trusted root.
-
- 1. To fix this error, add the CA's certificate to the "Trusted Root CA" store under My computer account on the server. You may also get the following error:
-
-    > CertVerifyCertificateChainPolicy returned error -2146762480(0x800b0110).
+ 1. To fix this error, add the CA's certificate to the "Trusted Root CA" store under My computer account on the server. During the verification of the certificate chain, you may also get the error `-2146762480(0x800b0110)`.
 
  1. To resolve the error, check the usage type of the certificate by doing the following steps:
 
@@ -158,53 +152,46 @@ The Certificate hash registered with *HTTP.sys* may be NULL or it may contain in
    netsh http show ssl
    ```
 
-     > [!NOTE]
-     > [HttpCfg](/windows/win32/http/httpcfg-exe) is part of Windows Support tools and is present on the installation disk.
-
    Following is a sample of a working and non-working scenario:
 
    **Working scenario**
 
       |Configuration|Setting |
       | --- | --- |
-      | IP | 0.0.0.0:443 |
-      | Hash | c09b416d6b 8d615db22 64079d15638e96823d |
-      | Guid | {4dc3e181-e14b-4a21-b022-59fc669b0914} |
-      | CertStoreName | MY |
-      | CertCheckMode | 0 |
-      | RevocationFreshnessTime | 0 |
-      | UrlRetrievalTimeout | 0 |
-      | SslCtlIdentifier | 0 |
-      | SslCtlStoreName | 0 |
-      | Flags | 0 |
+      | IP:port | 0.0.0.0:443 |
+      | Certificate Hash | c09b416d6b 8d615db22 64079d15638e96823d |
+      | Application ID | {4dc3e181-e14b-4a21-b022-59fc669b0914} |
+      | Certificate Store Name | My |
+      | Verify Client Certificate Revocation | Enabled |
+      | Revocation Freshness Time | 0 |
+      | URL Retrieval Timeout | 0 |
+      | ...... | ...... |
 
    **Non-working scenario**
 
       |Configuration |Setting |
       | --- | --- |
-      | IP | 0.0.0.0:443 |
-      | Hash |  |
-      | Guid | **{00000000-0000-0000-0000-000000000000}** |
-      | CertStoreName | MY |
-      | CertCheckMode | 0 |
-      | RevocationFreshnessTime | 0 |
-      | UrlRetrievalTimeout | 0 |
-      | SslCtlIdentifier | 0 |
-      | SslCtlStoreName | 0 |
-      | Flags | 0 |
+      | IP:port | 0.0.0.0:443 |
+      | Certificate Hash |  |
+      | Application ID | **{00000000-0000-0000-0000-000000000000}** |
+      | CertStoreName | My |
+      | Verify Client Certificate Revocation | 0 |
+      | Revocation Freshness Time | 0 |
+      | URL Retrieval Timeout | 0 |
+      | ...... | ...... |
 
-      The Hash value seen in **Working scenario** is the Thumbprint of your SSL certificate. Notice, that the GUID is all zero in a non-working scenario. You may see the Hash either having some value or blank. Even if you remove the certificate from the website, and then run `httpcfg query ssl`, the website will still list GUID as all 0s. If you see the GUID as "{0000...............000}", then there's a problem.
+      The Hash value seen in **Working scenario** is the Thumbprint of your SSL certificate. Notice, that the GUID is all zero in a non-working scenario. You may see the Hash either having some value or blank. Even if you remove the certificate from the website, and then run `netsh http show ssl`, the website will still list GUID as all 0s. If you see the GUID as "{0000...............000}", then there's a problem.
 
   1. Remove this entry by running the following command:
 
        ```Console
-       httpcfg delete ssl -i "IP:Port Number"
+       netsh http delete sslcert ipport=<IP Address>:<Port>
        ```
 
        For example:
 
        ```Console
-       httpcfg delete ssl -i 0.0.0.0:443
+       netsh http delete sslcert ipport=0.0.0.0:443
        ```
 
    1. To determine whether any IP addresses are listed, open a command prompt, and then run the following commands:
@@ -213,16 +200,10 @@ The Certificate hash registered with *HTTP.sys* may be NULL or it may contain in
        netsh http show iplisten
        ```
 
-      If the IP Listen list is empty, the command returns the following string:
-
-       ```output
-       HttpQueryServiceConfiguration completed with 1168.
-       ```
-
       If the command returns a list of IP addresses, remove each IP address in the list by using the following command:
 
       ```Console
-      httpcfg delete iplisten -i x.x.x.x
+      netsh http delete iplisten ipaddress=<IP Address>
       ```
 
       > [!NOTE]
