@@ -25,7 +25,6 @@ The default port for HTTPS is 443. It's assumed that you're well-versed in SSL H
 
 The tools used to troubleshoot the various scenarios are:
 
-- SSLDiag
 - Network Monitor 3.4 or Wireshark
 
 ## Scenarios
@@ -49,7 +48,7 @@ Check if the server certificate has the private key corresponding to it. See the
 If private key is missing, then you need to get a certificate that contains the private key, which is essentially a .PFX file. Here's a command that you could try to run to associate the private key with the certificate::
 
 ```Console
-C:\>certutil - repairstore my "[U+200E] 1a 1f 94 8b 21 a2 99 36 77 a8 8e b2 3f 42 8c 7e 47 e3 d1 33"
+C:\>certutil - repairstore my "1a 1f 94 8b 21 a2 99 36 77 a8 8e b2 3f 42 8c 7e 47 e3 d1 33"
 ```
 
 :::image type="content" source="media/troubleshooting-ssl-related-issues-server-certificate/command-console-certutil-syntax.png" alt-text="Screenshot of the command console showing the certutil syntax.":::
@@ -77,16 +76,7 @@ In this scenario, consider that you have a server certificate that contains the 
 
 ### Resolution
 
-1. Download and install [SSL Diagnostics](https://www.iis.net/downloads/community/2009/09/ssl-diagnostics-tool-for-iis-7) tool on the server.
-1. If you have a certificate that contains the private key and you're still unable to access the website, then try running this tool or check the system event logs for SChannel related warnings or errors.
-
-    While running the SSLDiag tool, you may see the following error message:
-
-    > You have a private key that corresponds to this certificate but CryptAcquireCertificatePrivateKey failed.
-
-    :::image type="content" source="media/troubleshooting-ssl-related-issues-server-certificate/ssl-diagnostics-failure-message.png" alt-text="Screenshot of the SSL Diagnostics window. The failure message is highlighted.":::
-
-    Additionally, the following SChannel warning will appear in the system event logs:
+1. If you have a certificate that contains the private key and you're still unable to access the website. Additionally, the following SChannel warning is appearing in the system event logs:
 
       ```output
       Event Type: Error 
@@ -261,34 +251,6 @@ Check the registry keys to determine what protocols are enabled or disabled. Her
 The "Enabled" DWORD should be set to "1". If it's set to 0, then the protocol is disabled.
 
 For example, SSL 2.0 is disabled by default.
-
-## Scenario 6
-
-If everything has been verified and if you're still running into issues accessing the website over HTTPS, then it most likely is some update, which is causing the SSL handshake to fail.
-
-Microsoft has released an update to the implementation of SSL in Windows:
-
-```output
-MS12-006: Vulnerability in SSL/TLS could allow information disclosure: January 10, 2012
-```
-
-There is potential for this update to impact customers using Internet Explorer or using an application that uses Internet Explorer to perform HTTPS requests.
-
-There were actually two changes made to address information disclosure vulnerability in SSL 3.0 / TLS 1.0. The MS12-006 update implements a new behavior in *schannel.dll*, which sends an extra record while using a common SSL chained-block cipher, when clients request that behavior. The other change was in *Wininet.dll*, part of the December Cumulative Update for Internet Explorer (MS11-099), so that Internet Explorer will request the new behavior.
-
-If a problem exists, it may manifest as a failure to connect to a server, or an incomplete request. Internet Explorer 9 and higher is able to display an "Internet Explorer cannot display the webpage" error. Prior versions of Internet Explorer may display a blank page.
-
-[Fiddler](https://www.telerik.com/fiddler) doesn't use the extra record when it captures and forwards HTTPS requests to the server. Therefore, if Fiddler is used to capture HTTPS traffic, the requests will succeed.
-
-**Registry keys**
-
-As documented in [MS12-006: Vulnerability in SSL/TLS could allow information disclosure: January 10, 2012](https://support.microsoft.com/kb/2643584), there is a SendExtraRecord registry value, which can:
-
-- Globally disable the new SSL behavior,
-- Globally enable it, or
-- (By default) enable it for SChannel clients that choose the new behavior.
-
-For Internet Explorer and for clients that consume Internet Explorer components, there is a registry key in the FeatureControl section, FEATURE\_SCH\_SEND\_AUX\_RECORD\_KB\_2618444, which determines whether *iexplore.exe* or any other named application chooses the new behavior. By default, this is enabled for Internet Explorer, and disabled for other applications.
 
 ## More information
 
