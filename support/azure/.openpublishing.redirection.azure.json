@@ -6254,6 +6254,16 @@
         "source_path": "virtual-machines/linux/ed25519-ssh-keys.md",
         "redirect_url": "/troubleshoot/azure/virtual-machines/linux/welcome-virtual-machines-linux",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-kubernetes/create-upgrade-delete/upgrades-to-kubernetes-fail-using-node-labels.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-kubernetes/create-upgrade-delete/error-code-requestdisallowedbypolicy-delete.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+        "redirect_document_id": false
       }
   ]
 }
