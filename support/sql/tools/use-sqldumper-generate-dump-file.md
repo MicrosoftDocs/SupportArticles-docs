@@ -537,10 +537,10 @@ An empty result set indicates that no trace flag is active. Conversely, if 2551 
 
 #### Extended DBCC STACKDUMP functionality introduced in SQL Server 2019
 
-Starting with SQL Server 2019 CU2, the `DBCC STACKDUMP` command was extended to support generating dumps of different types: mini, filtered, and full dumps. This command eliminates the need for using trace flags. It also allows you to limit the text output in the other text file that gets generated with the memory dump. Doing so might provide visible performance gain in the time it takes SQLDumper.exe to generate a memory dump.
+Starting with SQL Server 2019 CU2, the `DBCC STACKDUMP` command was extended to support generating dumps of different types: mini, filtered, and full dumps. You can also skip generating a dump and only have call stacks written in the SQL Server error log and on screen as a result set. The `DBCC STACKDUMP` command eliminates the need for using trace flags. It also allows you to limit the text output in the other text file that gets generated with the memory dump. Doing so might provide visible performance gain in the time it takes SQLDumper.exe to generate a memory dump.
 
 ```syntaxsql
-DBCC STACKDUMP WITH MINI_DUMP | FILTERED_DUMP | FULL_DUMP [, TEXT_DUMP = LIMITED | DETAILED]
+DBCC STACKDUMP WITH MINI_DUMP | FILTERED_DUMP | FULL_DUMP [, TEXT_DUMP = LIMITED | DETAILED] | SKIP_DUMP 
 ```
 
 The `TEXT_DUMP = LIMITED` is the default option. If you would like to receive detailed output in the *SQLDump000X.txt* file, you can use `TEXT_DUMP = DETAILED`.
@@ -550,6 +550,14 @@ To generate a filtered dump with limited output in the *.txt* file, run the foll
 ```sql
 DBCC STACKDUMP WITH FILTERED_DUMP , TEXT_DUMP = LIMITED
 ```
+
+To generate call stacks only as a result set and in the error log, run the following commmand:
+
+```sql
+DBCC STACKDUMP WITH SKIP_DUMP
+```
+
+This last command runs faster than when a memory dump is actually generated because SQLDumper spends no time writing the dump file on disk. However, as with all these options, the command would still cause threads to be temporarily suspended while information about their state is captured and produced.   
 
 ## How to use a PowerShell script to generate a dump file with SQLDumper
 
