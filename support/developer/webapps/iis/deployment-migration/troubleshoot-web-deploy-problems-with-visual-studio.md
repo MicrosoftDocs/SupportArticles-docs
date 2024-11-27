@@ -3,7 +3,7 @@ title: Troubleshoot Web Deploy problems with Visual Studio
 description: The article helps you troubleshoot a series of errors when trying to publish from Visual Studio to a server that hasn't been correctly configured via Web Deploy.
 ms.date: 04/09/2012
 ms.custom: sap:Deployment and Migration\Windows Management Service (WMSVC)
-ms.reviewer: johnhart, hulopesv, v-sidong
+ms.reviewer: johnhart, hulopesv, v-sidong, zixie
 ---
 # Troubleshoot Web Deploy problems with Visual Studio
 
@@ -11,7 +11,7 @@ _Applies to:_ &nbsp; Internet Information Services
 
 This article helps you troubleshoot a series of errors when trying to publish from Visual Studio to a server that hasn't been correctly configured via Web Deploy. Although the article is written for specific product versions, the concepts could be applied to newer versions as well.
 
-To collect the following screenshots and errors, use a new ASP.Net MVC 3 project in Visual Studio 2010 SP1. The destination server was a clean install of Windows Server 2008 R2 SP1 with Internet Information Services (IIS). No other configuration was done.
+To collect the following screenshots and errors, use a new ASP.Net MVC project in Visual Studio. The destination server was a clean install of Windows Server with Internet Information Services (IIS). No other configuration was done.
 
 ## Cannot connect to the server
 
@@ -115,11 +115,11 @@ The 404 error indicates that Web Deploy was able to contact the Web Management S
 
 **Is Web Deploy installed?**
 
-You can verify that Web Deploy is installed by going to the **Programs and Features** control panel and looking for **Microsoft Web Deploy 2.0** in the list of installed programs. If it isn't there, you can install it via the Web Platform Installer by going to the **Products** tab. It's listed as **Web Deployment Tool 2.1**. You should also ensure the Web Deployment Agent Service (MsDepSvc) is running.
+You can verify that Web Deploy is installed by going to the **Programs and Features** control panel and looking for **Microsoft Web Deploy 4.0** in the list of installed programs. If it isn't there, you can download and install it from our [official download page](https://www.microsoft.com/en-us/download/details.aspx?id=106070). You should also ensure the Web Deployment Agent Service (MsDepSvc) is running.
 
 **Is the web deployment handler installed?**
 
-If Web Deploy is installed and you still get this error, make sure the IIS 7 Deployment Handler feature in Web Deploy is installed. In the **Programs and Features** control panel, find **Microsoft Web Deploy 2.0**, right-click and select **Change**. In the Wizard that comes up, select **Next** on the first page and then select **Change** on the second page. Add **IIS 7 Deployment Handler** and everything under it.
+If Web Deploy is installed and you still get this error, make sure the IIS Deployment Handler feature in Web Deploy is installed. In the **Programs and Features** control panel, find **Microsoft Web Deploy 4.0**, right-click and select **Change**. In the Wizard that comes up, select **Next** on the first page and then select **Change** on the second page. Add **IIS Deployment Handler** and everything under it.
 
 :::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/web-deploy-set-up.png" alt-text="Screenshot that shows the Microsoft Web Deploy 2 dot 0 Setup dialog box. Web Deployment Framework is highlighted." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/web-deploy-set-up.png":::
 
