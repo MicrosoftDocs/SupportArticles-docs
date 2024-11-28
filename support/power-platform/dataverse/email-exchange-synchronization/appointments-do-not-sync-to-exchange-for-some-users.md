@@ -1,20 +1,20 @@
 ---
-title: Appointments don't sync to Exchange for some users
-description: Appointments don't sync from Microsoft Dynamics 365 to Exchange for some users. Provides a workaround.
+title: Appointments aren't synchronized to Exchange for some users
+description: Works around an issue that appointments aren't synchronized from Microsoft Dynamics 365 to Exchange for some users.
 ms.reviewer: 
-ms.date: 11/27/2024
+ms.date: 11/28/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
-# Appointments don't sync from Microsoft Dynamics 365 to Exchange for some users
+# Appointments aren't synchronized from Microsoft Dynamics 365 to Exchange for some users
 
-This article provides a workaround for the issue that appointments don't sync from Microsoft Dynamics 365 to Microsoft Exchange for some users.
+This article provides a workaround for the issue that appointments aren't synchronized from Microsoft Dynamics 365 to Microsoft Exchange for some users.
 
 _Applies to:_ &nbsp; Microsoft Dynamics 365  
 _Original KB number:_ &nbsp; 4494491
 
 ## Symptoms
 
-Appointments don't sync from Dynamics 365 to Exchange for some users. If you view the **Alerts** section for a corresponding mailbox in Dynamics 365, you see the following alert message:
+Appointments aren't synchronized from Dynamics 365 to Exchange for some users. If you view the **Alerts** section for a corresponding mailbox in Dynamics 365, you see the following alert message:
 
 > Appointments, contacts, and tasks for the mailbox \<Mailbox Name> couldn't be synchronized. The owner of the associated email server profile \<Profile Name> has been notified. The system will try again later.  
 > **Email Server Error Code:** Exchange.server returned 383 error.
@@ -62,13 +62,13 @@ Microsoft is investigating a solution to this issue. In the meantime, you can wo
 
 1. A Dynamics 365 user can access their personal options by selecting the gear icon in the upper-right corner of Dynamics 365 and then selecting **Options**.
 
-2. If the **Time Zone** value is one of the time zones listed in the Cause section of this article, update the value to another time zone that has the same time offset but isn't in the list.
+2. If the **Time Zone** value is one of the time zones listed in the **Cause** section of this article, update the value to another time zone that has the same time offset but isn't in the list.
 
-   For example: If you're using **(GMT-05:00)** Chetumal, you could try switching to **(GMT-05:00)** Havana.
+   For example, if you're using **(GMT-05:00)** Chetumal, you could try switching to **(GMT-05:00)** Havana.
 
 3. Select **OK**.
 
-4. The appointments should sync on the next sync cycle for the mailbox, which might take 15-30 minutes.
+4. The appointments should synchronize on the next synchronization cycle for the mailbox, which might take 15 to 30 minutes.
 
 ## More information
 
