@@ -35,7 +35,7 @@ If you have administrator privileges on your macOS device, use method 1. Otherwi
 
 Use the following steps:
 
-1. On the macOS device, [open Terminal](https://support.apple.com/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac).
+1. [Open Terminal](https://support.apple.com/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac) on the macOS device.
 1. Run the following command:
 
    ```console
