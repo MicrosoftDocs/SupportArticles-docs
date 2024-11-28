@@ -1,6 +1,6 @@
 ---
 title: UnknownIncomingEmailIntegrationError 2147209462
-description: Solves an error that occurs when the corresponding Queue record in Dynamics 365 is owned by a team that doesn't have any security roles assigned.
+description: Solves an error that occurs when the corresponding Queue record in Dynamics 365 is owned by a team without security roles assigned.
 ms.reviewer: 
 ms.date: 11/27/2024
 ms.custom: sap:Email and Exchange Synchronization
@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 4500778
 
 When [viewing the alerts section](/power-platform/admin/monitor-email-processing-errors#view-alerts) within a mailbox record in Dynamics 365, you see the following message:
 
-> An unknown error occurred while receiving email through the mailbox "Your mailbox is now connected to Dynamics 365". The owner of the associated email server profile [Mailbox Name] has been notified. The system will try to receive email again later.  
+> An unknown error occurred while receiving email through the mailbox "Your mailbox is now connected to Dynamics 365". The owner of the associated email server profile \Mailbox Name\> has been notified. The system will try to receive email again later.  
 > **Email Server Error Code:** Exchange server returned UnknownIncomingEmailIntegrationError -2147209462 exception.
 
 ## Cause
@@ -26,7 +26,7 @@ This error is logged if the corresponding Queue record in Dynamics 365 is owned 
 ## Resolution
 
 > [!NOTE]
-> You need to sign in to your Microsoft Dynamics 365 organization as a user with the "System Administrator" role to manage security roles and mailbox settings.
+> To manage security roles and mailbox settings, you need to sign in to your Dynamics 365 organization as a user with the "System Administrator" role.
 
 To fix this issue, follow these steps:
 
