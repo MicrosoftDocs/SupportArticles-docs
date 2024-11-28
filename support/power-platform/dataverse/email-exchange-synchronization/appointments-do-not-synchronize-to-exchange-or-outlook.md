@@ -23,7 +23,7 @@ An administrator should verify the mailbox is configured to synchronize appointm
 1. Within the Microsoft Dynamics 365 web application, navigate to **Settings** and then select **Email Configuration**.
 2. Select **Mailboxes** and then change the view to **Active Mailboxes**.
 3. Open the mailbox record for the user.
-4. Verify the **Appointments, Contacts, and Tasks** synchronization method is configured to use **Server-Side Synchronization** and the mailbox has been tested and enabled. The **Appointments, Contacts, and Tasks Status** should be **Success**.
+4. Verify the **Appointments, Contacts, and Tasks** synchronization method is configured to use **Server-Side Synchronization**, and the mailbox is tested and enabled. The **Appointments, Contacts, and Tasks Status** should be **Success**.
 
    If the mailbox is configured to use [Dynamics 365 for Outlook](/dynamics365/outlook-addin/admin-guide/install), verify the user has Dynamics 365 for Outlook installed and running on their computer.
 
