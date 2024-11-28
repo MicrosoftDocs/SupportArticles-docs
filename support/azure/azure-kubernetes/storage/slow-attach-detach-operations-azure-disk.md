@@ -23,9 +23,9 @@ Attaching and detaching Azure disks takes more time than expected if there are m
 
 ## Cause
 
-This limitation is a known issue that affects the in-tree Azure disk driver (`kubernetes.io/azure-disk`) where the operations are done sequentially.
+This limitation is a known issue that affects the in-tree Azure disk driver `kubernetes.io/azure-disk` where the operations are done sequentially.
 
-To verify if you're using the in-tree Azure Disk driver you'll need to check the Storage Class defined on the (`PersistentVolumeClaim`), if the (`provisioner`) is (`kubernetes.io/azure-disk`) then you're using the in-tree driver and you're exposed to the refered limitation where operations are done sequentially.
+To verify if you're using the in-tree Azure Disk driver you'll need to check the Storage Class defined on the `PersistentVolumeClaim`, if the `provisioner` is `kubernetes.io/azure-disk`, then you're using the in-tree driver and you're exposed to the refered limitation where operations are done sequentially.
 
 Usage of the in-tree driver was deprecated in AKS 1.21. We now use the Container Storage Interface (CSI) driver as the standard driver. 
 
