@@ -78,7 +78,7 @@
       href: email-exchange-synchronization/outgoingemailauthenticationerror-shows-in-mailbox-alert.md
     - name: Test Connection fails from Email Server Profile
       href: email-exchange-synchronization/test-connection-fails-email-server.md
-    - name: The account does not have permission to impersonate the requested user
+    - name: '"The account does not have permission to impersonate the requested user" error'
       href: email-exchange-synchronization/the-account-does-not-have-permission-to-impersonate-the-requested-user-error.md
     - name: The mailbox location could not be determined
       href: email-exchange-synchronization/error-when-testing-enabling-mailbox.md
