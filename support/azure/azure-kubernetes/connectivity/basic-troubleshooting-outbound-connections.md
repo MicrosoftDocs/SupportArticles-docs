@@ -1,7 +1,7 @@
 ---
 title: Basic troubleshooting of outbound connections from an AKS cluster
 description: Do basic troubleshooting of outbound connections that originate from an Azure Kubernetes Service (AKS) cluster.
-ms.date: 11/22/2024
+ms.date: 11/27/2024
 ms.reviewer: chiragpa, rissing, jopalhei, jaewonpark, v-leedennis, v-weizhu
 editor: v-jsitser
 ms.service: azure-kubernetes-service
@@ -160,8 +160,8 @@ What if you can't run the [kubectl exec](https://kubernetes.io/docs/reference/ge
 
    ```console
    $ nslookup microsoft.com # Microsoft.com as an example
-   Server:         10.0.0.10
-   Address:        10.0.0.10#53
+   Server:         <server>
+   Address:        <server IP address>#53
    ...
    ...
    Name:   microsoft.com
