@@ -1,13 +1,13 @@
 ---
 title: Appointment not synchronized to Exchange or Outlook
-description: Appointments that are created in Microsoft Dynamics 365 can't synchronize to Microsoft Exchange or Microsoft Outlook. Provides a resolution.
+description: Works around an issue that appointments created in Microsoft Dynamics 365 aren't synchronized to Microsoft Exchange or Microsoft Outlook.
 ms.reviewer: 
-ms.date: 11/26/2024
+ms.date: 11/28/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
-# Appointments don't synchronize to Exchange or Outlook after being created in Microsoft Dynamics 365
+# Appointments aren't synchronized to Exchange or Outlook after being created in Microsoft Dynamics 365
 
-This article provides resolutions for the issue that appointments created in Microsoft Dynamics 365 don't synchronize to Microsoft Exchange or Microsoft Outlook.
+This article provides resolutions for the issue that appointments created in Microsoft Dynamics 365 aren't synchronized to Microsoft Exchange or Microsoft Outlook.
 
 _Applies to:_ &nbsp; Microsoft Dynamics 365  
 _Original KB number:_ &nbsp; 4509420
@@ -29,13 +29,13 @@ An administrator should verify the mailbox is configured to synchronize appointm
 
 ## Cause 2: The appointment doesn't meet the conditions used in synchronization filters for the Appointment entity
 
-To sovle this issue, you should verify the properties of the appointment record meet the conditions in your synchronization filters:
+To solve this issue, you should verify the properties of the appointment record meet the conditions in your synchronization filters:
 
 1. Select the gear icon in the upper-right corner of the screen and then select **Options**.
 2. Select the **Synchronization** tab and then select the option to view or manage filters.
 3. Locate the filter(s) for the **Returned Type** set to **Appointment**.
 
-   The default filter is to only synchronize appointments where you're a party on the appointment but aren't just the owner. This means you need to be in the **Required Attendees** field or the **Organizer** field.
+   The default filter only synchronizes appointments where you're a party on the appointment but aren't just the owner. This means you need to be in the **Required Attendees** field or the **Organizer** field.
 
 ## More information
 
