@@ -30,8 +30,6 @@
       href: email-exchange-synchronization/appointments-do-not-synchronize-to-exchange-or-outlook.md
     - name: Appointments don't sync to Exchange for some users
       href: email-exchange-synchronization/appointments-do-not-sync-to-exchange-for-some-users.md
-    - name: Appointments, contacts, and tasks can't be synchronized
-      href: email-exchange-synchronization/error-when-you-test-enable-a-mailbox.md
     - name: Emails aren't automatically tracked or synchronized
       href: email-exchange-synchronization/emails-not-automatically-tracked-or-synchronized.md
     - name: Email can't be received because the license is invalid for the mailbox
@@ -70,6 +68,8 @@
       href: email-exchange-synchronization/http-server-returned-forbidden-exception.md
     - name: Incoming emails are unexpectedly synchronized
       href: email-exchange-synchronization/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data.md
+    - name: Mailbox user doesn't have sufficient permissions error when testing a mailbox
+      href: email-exchange-synchronization/error-when-you-test-enable-a-mailbox.md
     - name: Mailbox doesn't have an email server profile
       href: email-exchange-synchronization/mailbox-does-not-have-email-server-profile.md
     - name: Mailbox fails to be tested and enabled
