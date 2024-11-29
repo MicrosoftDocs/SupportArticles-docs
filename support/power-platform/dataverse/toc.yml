@@ -22,7 +22,7 @@
       href: email-exchange-synchronization/general-mailbox-access-error-occurred.md
     - name: A general mailbox access error while receiving email through the mailbox
       href: email-exchange-synchronization/general-mailbox-access-error-occurred-while-receiving-email-through-mailbox-error.md
-    - name: An error occurred in sending email for mailbox
+    - name: '"An error occurred in sending email for mailbox" when you test and enable a mailbox'
       href: email-exchange-synchronization/error-occurs-sending-email-for-mailbox.md
     - name: An unknown error when sending email messages
       href: email-exchange-synchronization/error-while-sending-the-email-message.md
