@@ -28,7 +28,7 @@
       href: email-exchange-synchronization/error-while-sending-the-email-message.md
     - name: Appointment aren't synchronized to Exchange or Outlook
       href: email-exchange-synchronization/appointments-do-not-synchronize-to-exchange-or-outlook.md
-    - name: Appointments don't sync to Exchange for some users
+    - name: Appointments, contacts, and tasks for the mailbox couldn't be synchronized error
       href: email-exchange-synchronization/appointments-do-not-sync-to-exchange-for-some-users.md
     - name: Appointments, contacts, and tasks can't be synchronized
       href: email-exchange-synchronization/error-when-you-test-enable-a-mailbox.md

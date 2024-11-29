@@ -1,11 +1,11 @@
 ---
-title: Appointments aren't synchronized to Exchange for some users
-description: Works around an issue that appointments aren't synchronized from Microsoft Dynamics 365 to Exchange for some users.
+title: Appointments, contacts, and tasks for the mailbox couldn't be synchronized error
+description: Works around an email server error code 383 that occurs when appointments aren't synchronized from Microsoft Dynamics 365 to Exchange for some users.
 ms.reviewer: 
-ms.date: 11/28/2024
+ms.date: 11/29/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
-# Appointments aren't synchronized from Microsoft Dynamics 365 to Exchange for some users
+# "Appointments, contacts, and tasks for the mailbox couldn't be synchronized" error occurs in Dynamics 365
 
 This article provides a workaround for the issue that appointments aren't synchronized from Microsoft Dynamics 365 to Microsoft Exchange for some users.
 
