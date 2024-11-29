@@ -12598,7 +12598,7 @@
     {
       "source_path": "support/dynamics-365/sales/you-are-not-part-this-organization.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-when-signing-dynamics-365",
-      "redirect_document_id": true
+      "redirect_document_id": false
     }
   ]
 }
