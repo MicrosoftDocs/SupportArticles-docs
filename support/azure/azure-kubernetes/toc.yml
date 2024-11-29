@@ -83,9 +83,9 @@
 
   - name: Delete operations
     items:
-    - name: CannotDeleteLoadBalancer/PrivateLinkServiceWithPrivateEndpointConnections error
+    - name: LoadBal/PvtLinkSvcWithPvtEndpointConn deletion error
       href: create-upgrade-delete/cannot-delete-load-balancer-private-link-service.md
-    - name: PublicIPAddress/InUseSubnet/InUseNetworkSecurityGroupCannotBeDeleted error
+    - name: PublicIPAddr/InUseSubnet/NetworkSecurityGrp deletion error
       href: create-upgrade-delete/cannot-delete-ip-subnet-nsg.md
     - name: InUseRouteTableCannotBeDeleted error
       href: create-upgrade-delete/error-code-inuseroutetablecannotbedeleted.md
