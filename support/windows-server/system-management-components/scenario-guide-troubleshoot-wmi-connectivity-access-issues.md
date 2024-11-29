@@ -1,7 +1,7 @@
 ---
 title: 'Scenario guide: Troubleshoot WMI connectivity and access issues'
 description: Covers how to review the Windows Management Instrumentation (WMI) configuration, diagnose and troubleshoot WMI connectivity or access issues.
-ms.date: 10/11/2024
+ms.date: 11/29/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -411,14 +411,12 @@ Download [TSS.zip](https://aka.ms/getTSS) and extract the contents.
 
 1. Start the tracing by running the following cmdlet from an elevated PowerShell command prompt.
 
+   ```powershell
+   .\TSS.ps1 -UEX_WMIAdvanced -WMIProvList RPC,DCOM -NetshScenario netconnection -noBasicLog
+   ```
 
-```powershell
-.\TSS.ps1 -UEX_WMIAdvanced -WMIProvList RPC,DCOM -NetshScenario netconnection -noBasicLog
-```
+2. Reproduce the connectivity error or wait until the error is reproduced. Keep the tracing running for more than two minutes.
 
-1. Reproduce the connectivity error or wait until the error is reproduce. Do keep the tracing running for more than two minutes.
+3. Stop the tracing by following instructions in the PowerShell window that is running the TSS tool.
 
-1. Stop the tracing by following instructions a per Powershell console running TSS.
-
-The script will create a zip file containing all the trace results and diagnostic information. After a support case is created, this file can be uploaded to the secure workspace for analysis. 
-
+The script creates a zip file containing all the trace results and diagnostic information. After a support case is created, you can upload this file to the secure workspace for analysis.
