@@ -2,7 +2,7 @@
 title: Appointment not synchronized to Exchange or Outlook
 description: Works around an issue that appointments created in Microsoft Dynamics 365 aren't synchronized to Microsoft Exchange or Microsoft Outlook.
 ms.reviewer: 
-ms.date: 11/28/2024
+ms.date: 11/29/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # Appointments aren't synchronized to Exchange or Outlook after being created in Microsoft Dynamics 365
@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4509420
 
 ## Symptoms
 
-After you [creates an appointment in Microsoft Dynamics 365](/dynamics365/customerengagement/on-premises/basics/create-edit-appointment), the appointment isn't synchronized to Exchange or Outlook.
+After you [create an appointment in Microsoft Dynamics 365](/dynamics365/customerengagement/on-premises/basics/create-edit-appointment), the appointment isn't synchronized to Exchange or Outlook.
 
 ## Cause 1: The mailbox record isn't configured to synchronize appointments, contacts, and tasks
 
