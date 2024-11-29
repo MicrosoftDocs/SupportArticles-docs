@@ -54,8 +54,6 @@
     items:
     - name: AADSTS7000222 - BadRequest or InvalidClientSecret error
       href: create-upgrade-delete/error-code-badrequest-or-invalidclientsecret.md
-    - name: Kubernetes 1.16 upgrades fail
-      href: create-upgrade-delete/upgrades-to-kubernetes-fail-using-node-labels.md
     - name: DnsServiceIpOutOfServiceCidr error
       href: create-upgrade-delete/error-code-dnsserviceIpoutofservicecidr.md
     - name: NodePoolMcVersionIncompatible error
@@ -93,8 +91,6 @@
       href: create-upgrade-delete/load-balancer-or-nsg-in-use-by-vm-scale-set.md
     - name: NetworkSecurityGroupInUseByVirtualMachineScaleSet error
       href: create-upgrade-delete/load-balancer-or-nsg-in-use-by-vm-scale-set.md
-    - name: RequestDisallowedByPolicy error
-      href: create-upgrade-delete/error-code-requestdisallowedbypolicy-delete.md
     - name: SubscriptionRequestsThrottled error
       href: create-upgrade-delete/error-code-toomanyrequestsreceived-subscriptionrequeststhrottled.md
     - name: TooManyRequestsReceived error
