@@ -1,20 +1,20 @@
 ---
-title: The account does not have permission to impersonate the requested user error when selecting Test Connection
+title: Account does not have permission to impersonate requested user error
 description: Solves an error that occurs when you select Test Connection on an email server profile in Microsoft Dynamics 365.
 ms.reviewer: 
-ms.date: 11/28/2024
+ms.date: 12/02/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
-# "The account does not have permission to impersonate the requested user" error when selecting Test Connection in Microsoft Dynamics 365
+# "The account does not have permission to impersonate the requested user" error when selecting Test Connection
 
-This article provides a resolution to solve **The account does not have permission to impersonate the requested user** error that might occur when you select **Test Connection** in Microsoft Dynamics 365.
+This article helps resolve "The account does not have permission to impersonate the requested user" error that might occur when you select **Test Connection** in Microsoft Dynamics 365.
 
 _Applies to:_ &nbsp; Microsoft Dynamics 365  
 _Original KB number:_ &nbsp; 4295275
 
 ## Symptoms
 
-When you [select Test Connection on an email server profile](/power-platform/admin/connect-exchange-server-on-premises#create-an-email-server-profile) to connect Dynamics 365 Online to Exchange Server (on-premises), you receive the following error:
+When you [select Test Connection on an email server profile](/power-platform/admin/connect-exchange-server-on-premises#create-an-email-server-profile) to connect Dynamics 365 Online to Microsoft Exchange Server (on-premises), you receive the following error:
 
 > The account does not have permission to impersonate the requested user
 
@@ -24,7 +24,7 @@ This error can occur if the user account specified in the email server profile r
 
 ## Resolution
 
-Make sure the user account provided in the email server profile record has impersonation permissions to each associated Exchange mailbox.
+Make sure the user account specified in the email server profile record has impersonation permissions for each associated Exchange mailbox.
 
 For more information on configuring Exchange impersonation, see:
 
