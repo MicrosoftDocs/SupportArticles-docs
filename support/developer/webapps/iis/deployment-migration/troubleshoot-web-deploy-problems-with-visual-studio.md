@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Web Deploy problems with Visual Studio
 description: The article helps you troubleshoot a series of errors when trying to publish from Visual Studio to a server that isn't correctly configured via Web Deploy.
-ms.date: 04/09/2012
+ms.date: 12/02/2024
 ms.custom: sap:Deployment and Migration\Windows Management Service (WMSVC)
 ms.reviewer: johnhart, hulopesv, v-sidong, zixie
 ---
@@ -15,7 +15,7 @@ To collect the following screenshots and errors, use a new ASP.NET MVC project i
 
 ## Cannot connect to the server
 
-The first error you're likely to encounter looks like the following screenshot in Visual Studio's output window. For improved readability, the full text of the message is provided below the screenshot:
+The first error you're likely to encounter looks like the following screenshot in Visual Studio's output window. For improved readability, the full text of the message is provided after the screenshot:
 
 :::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/error-list.png" alt-text="Screenshot that shows the Error List output in Visual Studio." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/error-list.png":::
 
@@ -28,7 +28,7 @@ make sure that Web Deploy is installed and that the required process
 ("The Web Management Service") is started.
 Unable to connect to the remote server
 A connection attempt failed because the connected party did not properly respond after a period
-of time, or established connection failed because connected host has failed to respond 1.1.1.1:8172
+of time, or established connection failed because connected host has failed to respond 192.168.0.211:8172
 ```
 
 The text highlighted in this error (and the other errors below) is the key to understanding the nature of the problem. Web Deploy didn't get a reply from the server, so Visual Studio can't distinguish between several possible causes. As a result, it gives a list of things to try.
@@ -66,7 +66,7 @@ The remote server returned an error: (403) Forbidden.
 
 This message is misleading. It states that the server didn't respond, but the 403 error indicates that Web Deploy could contact the server, but the request was actively refused. The HTTP log for the Web Management Service can help confirm the request reached the server and provide details about the actual request that failed. This log can be found at `%SystemDrive%\Inetpub\logs\WMSvc` by default. Like other IIS logs, data isn't written to the log immediately, so you might have to wait a couple of minutes to see the request or restart the Web Management Service to flush the log.
 
-In the `WMSVC` log, the error mentioned above looks like the following one:
+In the `WMSVC` log, the preceding error looks like the following one:
 
 ```Output
 2011-06-02 17:59:05 192.168.0.211 POST /msdeploy.axd site=default%20web%20site 8172 - 192.168.0.203 - 403 6 5 1669
@@ -88,7 +88,7 @@ If you're using a third-party firewall, you need to ensure that inbound connecti
 
 **Have IP restrictions been configured for the Management Service?**
 
-The other common reason you could get a 403 error is the management service has been configured to deny the IP of the client. By default, it's configured to allow all IPs as long as remote connections are allowed. You can check for IP restrictions by double-clicking the **Management Service** icon. Any configured IP restriction rules are at the bottom of the page in the IPv4 Address Restrictions.
+The other common reason you could get a 403 error is that the management service has been configured to deny the IP of the client. By default, it's configured to allow all IPs as long as remote connections are allowed. You can check for IP restrictions by double-clicking the **Management Service** icon. Any configured IP restriction rules are at the bottom of the page in the IPv4 Address Restrictions.
 
 ## (404) Not Found
 
@@ -105,7 +105,7 @@ On the destination computer, make sure that Web Deploy is installed and that the
 The remote server returned an error: (404) Not Found.
 ```
 
-The 404 error indicates that Web Deploy was able to contact the Web Management Service on the server but couldn't find what it needed. The first thing to do is to confirm what resource Web Deploy tried to connect to. If you look in the Web Management Service log under *%SystemDrive%\\Inetpub\\logs\\WMSvc* on the destination server, you see an entry in the `WMSVC` log that looks like the following one:
+The 404 error indicates that Web Deploy was able to contact the Web Management Service on the server but couldn't find what it needed. The first thing to do is to confirm what resource Web Deploy tried to connect to. If you look at the Web Management Service log under *%SystemDrive%\\Inetpub\\logs\\WMSvc* on the destination server, you see an entry in the `WMSVC` log that looks like the following one:
 
 ```Output
 2011-05-12 15:21:50 192.168.0.211 POST /msdeploy.axd site=default%20web%20site 8172 - 192.168.0.203 - 404 7 0 1606
@@ -119,9 +119,9 @@ You can verify that Web Deploy is installed by going to the **Programs and Featu
 
 **Is the web deployment handler installed?**
 
-If Web Deploy is installed and you still get this error, make sure the IIS Deployment Handler feature in Web Deploy is installed. In the **Programs and Features** control panel, find **Microsoft Web Deploy 4.0**, right-click it and select **Change**. In the Wizard that comes up, select **Next** on the first page and then select **Change** on the second page. Add **IIS Deployment Handler** and everything under it.
+If Web Deploy is installed and you still get this error, make sure the **IIS Deployment Handler** feature in Web Deploy is installed. In the **Programs and Features** control panel, find **Microsoft Web Deploy 4.0**, right-click it and select **Change**. In the Wizard that comes up, select **Next** on the first page and then select **Change** on the second page. Add **IIS Deployment Handler** and everything else under it.
 
-:::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/web-deploy-set-up.png" alt-text="Screenshot that shows the Microsoft Web Deploy 2 dot 0 Setup dialog box. Web Deployment Framework is highlighted." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/web-deploy-set-up.png":::
+:::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/web-deploy-set-up.png" alt-text="Screenshot that shows the Microsoft Web Deploy 4 dot 0 Setup dialog box. Web Deployment Framework is highlighted." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/web-deploy-set-up.png":::
 
 Select **Next** to complete the Wizard. You need to restart the web management service after making this change.
 
