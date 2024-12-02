@@ -304,7 +304,7 @@ Retrieve the status of the Secret Store CSI Driver pod running in the same node 
 kubectl get pod -l app=secrets-store-csi-driver -n kube-system -o wide
 ```
 
-If pod status is not `Running` or any of the containers in this pod is not in `Ready` state then proceed to check the logs for this pod by following the steps in [Check the Secrets Store CSI Driver pod logs](###troubleshooting-step-2-check-the-secrets-store-csi-driver-pod-logs)
+If pod status is not `Running` or any of the containers in this pod is not in `Ready` state then proceed to check the logs for this pod by following the steps in [Check the Secrets Store CSI Driver pod logs](#troubleshooting-step-2-check-the-secrets-store-csi-driver-pod-logs)
 
 ## Cause 6: The driver can't communicate with the provider
 
