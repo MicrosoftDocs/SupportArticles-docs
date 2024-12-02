@@ -2,8 +2,7 @@
 title: Error when using server-side sync
 description: Provides a solution to an error that occurs when you use Server-Side Synchronization in Dynamics 365.
 ms.reviewer: dmartens
-ms.topic: troubleshooting
-ms.date: 11/19/2024
+ms.date: 12/02/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # 401 Unauthorized exception occurs in Microsoft Dynamics 365 when using Server-Side Synchronization
@@ -18,7 +17,7 @@ _Original KB number:_ &nbsp; 3212785
 
 ## Symptoms
 
-When you use Server-Side Synchronization in Dynamics 365, you receive one of the following errors:
+When you use [server-side synchronization](/power-platform/admin/server-side-synchronization) in Dynamics 365, you receive one of the following errors:
 
 > - The email message "Test Message" cannot be sent. Make sure that the credentials specified in the mailbox \<Mailbox Name> are correct and have sufficient permissions for sending email. Then, enable the mailbox for email processing.
 
