@@ -4,7 +4,7 @@ description: Provides information about the Data quality error (error code ERR00
 author: jinniew
 ms.author: jiwo
 ms.reviewer: twheeloc 
-ms.date: 11/20/2024
+ms.date: 12/02/2024
 ms.search.form: business-performance-analytics
 audience: Application User
 ms.custom: sap:Business intelligence, reporting, analytics
@@ -17,30 +17,51 @@ Error code ERR00015 is logged in the Bpa self help logs table in Microsoft Datav
 
 ## Resolution
 
-The resolution will depend on the specific error. See below for a list of the errors and how to address them. If the issue persists after attempting resolution, contact Microsoft Support for further assistance.
+The resolution depends on the specific error. Below is a list of the errors and how to address them. If the issue persists after attempting resolution, contact Microsoft support for further assistance.
+
 Here’s an example of a record:
-One or more Data Quality Issues Found - Primary Key constraint violated with 1 duplicate count for dmo_generalledgerfact.dmo_generalledgerfactid
-Primary Key Violation
-For primary key violations, contact Microsoft Support for assistance.
-There are two messages that can be logged for primary key violations. Here are examples:
-Primary Key constraint violated with 1 duplicate count for dmo_budgetfact.dmo_budgetfactid
-Primary Key constraint violated with 1 null count for dmo_budgetfact.dmo_budgetfactid
-Alternate Key Violation
-For alternate key violations, contact Microsoft Support for assistance.
+
+One or more data quality issues found - Primary key constraint violated with 1 duplicate count for dmo_generalledgerfact.dmo_generalledgerfactid
+
+### Primary key violations
+For primary key violations, contact Microsoft support for assistance.
+There are two messages that can be logged for primary key violations. 
+
+Here are examples of the error messages:
+**Primary key constraint violated with 1 duplicate count for dmo_budgetfact.dmo_budgetfactid.**
+**Primary key constraint violated with 1 null count for dmo_budgetfact.dmo_budgetfactid.**
+
+
+### Alternate key violation
+For alternate key violations, contact Microsoft support for assistance.
+
 Here’s an example of the error message:
-Alternate Key constraint AK1 violated with 1 duplicates and 1 null values for dmo_budgetkey
-Null Guid Violation
-Validate the source data exists in Dynamics 365 Finance. If the data exists but the issue persists, contact Microsoft Support for further assistance.
+
+**Alternate key constraint AK1 violated with 1 duplicates and 1 null values for dmo_budgetkey.**
+
+
+### Null guid violation
+Validate the source data exists in Dynamics 365 Finance. If the data exists but the issue persists, contact Microsoft support for further assistance.
+
 Here’s an example of the error message:
-Not Null Guid constraint violated with 1 null  values for dmo_budgetfact.dmo_budgetfactid
-Null DateTime Violation
-Validate the source data exists in Dynamics 365 Finance. If the data exists but the issue persists, contact Microsoft Support for further assistance.
+
+**Not null guid constraint violated with 1 null values for dmo_budgetfact.dmo_budgetfactid.**
+
+
+### Null DateTime violation
+Validate the source data exists in Dynamics 365 Finance. If the data exists but the issue persists, contact Microsoft support for further assistance.
+
 Here’s an example of the error message:
-Not Null DateTime constraint violated with 1 null  values for dmo_budgetfact.dmo_budgetpostingtimestamputc
-Empty String Violation
-Validate the source data exists in Dynamics 365 Finance. If the data exists but the issue persists, contact Microsoft Support for further assistance.
+
+**Not Null DateTime constraint violated with 1 null values for dmo_budgetfact.dmo_budgetpostingtimestamputc.**
+
+
+### Empty string violation
+Validate the source data exists in Dynamics 365 Finance. If the data exists but the issue persists, contact Microsoft support for further assistance.
+
 Here’s an example of the error message:
-Not Empty String constraint violated with 1 empty values for dmo_generalledgerfact.dmo_generalledgercurrency
+
+**Not empty string constraint violated with 1 empty values for dmo_generalledgerfact.dmo_generalledgercurrency.**
 
 
 ## See also
