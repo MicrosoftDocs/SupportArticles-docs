@@ -13,11 +13,11 @@ ms.custom: sap:Business intelligence, reporting, analytics
 
 ## Symptoms
 
-Error code ERR00016 is logged in the Bpa self help logs table in Microsoft Dataverse when an output table is empty but no errors were encountered during processing.
+Error code *ERR00016* is logged in the **Bpa self help logs** table in Microsoft Dataverse. This error occurs when an output table is empty but no errors were encountered during processing.
 
 ## Resolution
 
-No immediate action is required. Most often an output will be empty because its corresponding input tables were empty and so the message is strictly informational, not indicative of a problem. If the output table is incorrectly empty, it could be caused by a delay in data synchronization. In that case, we recommend that you observe the next few Business performance analytics runs to see whether the issue is fixed.
+No immediate action is required. Most often an output is empty because its corresponding input tables were empty and so the message is strictly informational and doesn't indicate a problem. If the output table is incorrectly empty, it could be caused by a delay in data synchronization. In that case, it's recommended to observe the next few Business performance analytics runs to see whether the issue is fixed.
 If the issue persists, confirm that the relevant data exists in Dynamics 365 Finance. If the data exists but the issue persists, contact Microsoft support for further assistance.
 
 
