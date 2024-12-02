@@ -12,6 +12,10 @@ ms.custom: sap:Extensions, Policies and Add-Ons
 
 This article discusses how to troubleshoot problems that you might experience when using the [Azure Key Vault Secrets Provider add-on](/azure/aks/csi-secrets-store-driver) in Azure Kubernetes Service (AKS).
 
+> [!NOTE]
+>
+> The information contained in this troubleshooting guide applies to the AKS managed add-on version of the Azure Key Vault Secrets Provider. If, alternatively, you are using the helm installed (self-managed) version of this component please refer to the [Azure Key Vault Provider for Secrets Store CSI Driver github documentation](https://azure.github.io/secrets-store-csi-driver-provider-azure/docs/) for specific guidance and information on how to troubleshoot issues with your setup.  
+
 ## Prerequisites
 
 - [Azure CLI](/cli/azure/install-azure-cli)
