@@ -4,7 +4,7 @@ description: Provides information about the Null join violation error (error cod
 author: jinniew
 ms.author: jiwo
 ms.reviewer: twheeloc 
-ms.date: 11/20/2024
+ms.date: 12/2/2024
 ms.search.form: business-performance-analytics
 audience: Application User
 ms.custom: sap:Business intelligence, reporting, analytics
@@ -13,7 +13,7 @@ ms.custom: sap:Business intelligence, reporting, analytics
 
 ## Symptoms
 
-Error code ERR00014 is logged in the Bpa self help logs table in Microsoft Dataverse when records are missing from an input table. The missing data could impact the accuracy of your reports. 
+Error code *ERR00014* is logged in the **Bpa self help logs** table in Microsoft Dataverse. This error occorus when records are missing from an input table. The missing data could impact the accuracy of your reports. 
 
 ## Resolution
 
