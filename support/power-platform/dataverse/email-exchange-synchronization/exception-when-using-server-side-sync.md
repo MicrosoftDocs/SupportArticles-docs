@@ -1,13 +1,13 @@
 ---
 title: Error when using server-side sync
-description: Provides a solution to an error that occurs when you use Server-Side Synchronization in Dynamics 365.
+description: Provides a solution to an error that occurs when you use server-side synchronization in Dynamics 365.
 ms.reviewer: dmartens
 ms.date: 12/02/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
-# 401 Unauthorized exception occurs in Microsoft Dynamics 365 when using Server-Side Synchronization
+# 401 Unauthorized exception occurs in Microsoft Dynamics 365 when using server-side synchronization
 
-This article provides a solution to an error that occurs when you use Server-Side Synchronization in Dynamics 365.
+This article provides a solution to an error that occurs when you use server-side synchronization in Dynamics 365.
 
 _Applies to:_ &nbsp; Microsoft Dynamics 365  
 _Original KB number:_ &nbsp; 3212785
@@ -29,29 +29,32 @@ The message also includes the following error code:
 
 > Email Server Error Code: Http server returned 401 Unauthorized exception.
 
-## Cause
+## Cause 1: The e-mail address in Dynamics 365 doesn't match the one in Exchange
 
-These errors can occur for one of the following reasons:
+To solve this issue, verify the e-mail address of the mailbox record in Dynamics 365 matches the e-mail address in Exchange. The error includes a link to the mailbox record in Dynamics 365. You can use this link to quickly verify the **Email Address** field.
 
-1. The e-mail address of the mailbox record in Dynamics 365 doesn't match the e-mail address of the mailbox in Exchange.
-2. If you're using Dynamics 365 (online) with Exchange Online, this error can occur if you're using an Exchange Server (Hybrid) profile even though the user's mailbox is located in Exchange Online.
-3. If you're using Dynamics 365 with Exchange Online, this error can occur if the user doesn't have an Exchange Online license.
-4. If you're using Dynamics 365 (online) with Exchange Online, this error can occur if your Dynamics 365 subscription isn't in the same Office 365 tenant as your Exchange Online subscription. When using an Exchange Online email server profile, Dynamics 365 (online) and Exchange Online need to be in the same Office 365 account/tenant.
-5. If you're using Dynamics 365 (online) with Exchange on-premises, this error can occur if Basic authentication isn't enabled for EWS (Exchange Web Services).
-6. The user or mailbox that had been deleted was later recreated by using the same email address.
+## Cause 2: Using an Exchange Server (Hybrid) profile with a mailbox in Exchange Online
 
-    When you try to test and enable the mailbox, you may see that the **NoUserFoundWithGivenClaims** message is included as part of an error level alert. You may also see an alert where the details section shows, "User does not exist in tenant with id '\<_User ID_>'".
+If you're using Dynamics 365 (online) with Exchange Online, make sure you're using an Exchange Online email server profile. Only use an Exchange Server (Hybrid) profile for users that have mailboxes in Exchange on-premises.
 
-## Resolution
+## Cause 3: The user doesn't have an Exchange Online license
 
-To fix this issue, use the following steps:
+If you're using Dynamics 365 with Exchange Online, verify the user has an Exchange Online license. For more information about assigning licenses in Office 365, see [Add users and assign licenses at the same time](/microsoft-365/admin/add-users/add-users).
 
-1. Verify the e-mail address of the mailbox record in Dynamics 365 matches the e-mail address in Exchange. The error includes a link to the mailbox record in Dynamics 365. You can use this link to quickly verify the Email Address field.
-2. If you're using Dynamics 365 (online) with Exchange Online, make sure you're using an Exchange Online email server profile. Only use an Exchange Server (Hybrid) profile for users that have mailboxes in Exchange on-premises.
-3. If you're using Dynamics 365 with Exchange Online, verify the user has an Exchange Online license. For more information about assigning licenses in Office 365, see [Add users and assign licenses at the same time](/microsoft-365/admin/add-users/add-users).
-4. If you're using Dynamics 365 (online) with Exchange Online, verify Dynamics 365 (online) and Exchange Online are in the same Office 365 account/tenant.
-5. If you're using Dynamics 365 (online) with Exchange on-premises, verify Basic authentication is enabled for EWS (Exchange Web Services). For more information, see the Prerequisites section of [Connect Dynamics 365 (online) to Exchange Server (on-premises)](/previous-versions/dynamicscrm-2016/administering-dynamics-365/mt622059(v=crm.8)).
-6. If the user or mailbox that had been deleted was later recreated by using the same email address:
+## Cause 4: Dynamics 365 and Exchange Online aren't in the same Office 365 tenant
 
-    1. Make sure that the previously existing user or mailbox was permanently deleted. By default, a user who is deleted from Microsoft Entra ID can have their account restored within 30 days. For more information, see [Permanently delete a user](/azure/active-directory/fundamentals/active-directory-users-restore#permanently-delete-a-user).
-    2. After verifying that no user or mailbox uses the same email address, you can try to test and enable the mailbox again. If you still receive the error message, the issue can be caused by the result of caching. It may take up to 72 hours for the cache to be cleared. If you can't wait for 72 hours, contact [Microsoft Support](https://support.microsoft.com).
+If you're using Dynamics 365 (online) with Exchange Online, verify Dynamics 365 (online) and Exchange Online are in the same Office 365 account or tenant.
+
+## Cause 5: Basic authentication isn't enabled for EWS (Exchange Web Services)
+
+If you're using Dynamics 365 (online) with Exchange on-premises, verify Basic authentication is enabled for EWS (Exchange Web Services). For more information, see the Prerequisites section of [Connect Dynamics 365 (online) to Exchange Server (on-premises)](/previous-versions/dynamicscrm-2016/administering-dynamics-365/mt622059(v=crm.8)).
+
+## Cause 6: A deleted user or mailbox was recreated with the same email address
+
+When you try to test and enable the mailbox, you might see that the **NoUserFoundWithGivenClaims** message is included as part of an error level alert. You might also see an alert where the details section shows, "User does not exist in tenant with id '\<_User ID_>'".
+
+To solve this issue,
+
+1. Make sure that the previously existing user or mailbox was permanently deleted. By default, a user who is deleted from Microsoft Entra ID can have their account restored within 30 days. For more information, see [Permanently delete a user](/azure/active-directory/fundamentals/active-directory-users-restore#permanently-delete-a-user).
+
+1. After verifying that no user or mailbox uses the same email address, you can try to test and enable the mailbox again. If you still receive the error message, the issue can be caused by the result of caching. It might take up to 72 hours for the cache to be cleared. If you can't wait for 72 hours, contact [Microsoft Support](https://support.microsoft.com).
