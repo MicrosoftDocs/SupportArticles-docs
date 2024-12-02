@@ -5,7 +5,7 @@ ms.date: 11/25/2024
 ms.reviewer: jopalhei, chiragpa, nickoman, v-leedennis
 ms.service: azure-kubernetes-service
 keywords:
-#Customer intent: As an Azure Kubernetes user, I want to troubleshoot why attach and detach operations are slow so that I can successfully use an Azure disk for storage on my Azure Kubernetes Service (AKS) clusters.
+#Customer intent: As an Azure Kubernetes user, I want to troubleshoot why attach and detach operations are slow so that I can successfully use an Azure disk for storage on my AKS clusters.
 ms.custom: sap:Storage
 ---
 # Slow attach and detach operations for an Azure disk
@@ -23,14 +23,14 @@ Attaching and detaching Azure disks takes more time than expected if there are m
 
 ## Cause
 
-This limitation is a known issue that affects the in-tree Azure disk driver `kubernetes.io/azure-disk` where the operations are done sequentially.
+This limitation is a known issue that affects the in-tree Azure disk driver, `kubernetes.io/azure-disk`, that performs the operations sequentially.
 
-To verify if you're using the in-tree Azure Disk driver you'll need to check the Storage Class defined on the `PersistentVolumeClaim`, if the `provisioner` is `kubernetes.io/azure-disk`, then you're using the in-tree driver and you're exposed to the refered limitation where operations are done sequentially.
+To verify that you're using the in-tree Azure Disk driver, check the storage class that's defined on the persistent volume claim. If the `provisioner` is `kubernetes.io/azure-disk`, then you're using the in-tree driver. This means that you're exposed to the referred limitation in which operations are done sequentially.
 
 Usage of the in-tree driver was deprecated in AKS 1.21. We now use the Container Storage Interface (CSI) driver as the standard driver. 
 
 ## Workaround
 
-We recommend that you [migrate your in-tree volumes to CSI DDrivers using this documentation](/azure/aks/csi-migrate-in-tree-volumes).
+We recommend that you [migrate your in-tree volumes to CSI Drivers by using this documentation](/azure/aks/csi-migrate-in-tree-volumes).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
