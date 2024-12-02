@@ -296,17 +296,15 @@ If you receive the following error message about a missing `secrets-store.csi.k8
 
 > Warning FailedMount 42s (x12 over 8m56s) kubelet, akswin000000 MountVolume.SetUp failed for volume "secrets-store01-inline" : kubernetes.io/csi: mounter.SetUpAt failed to get CSI client: **driver name secrets-store.csi.k8s.io not found in the list of registered CSI drivers**
 
-### Solution 5a: Install the Secrets Store CSI Driver
+### Solution 5: Troubleshoot the Secret Store CSI Driver pod running in the same node
 
-If you installed the Key Vault provider by using deployment manifests, follow the [instructions to install the Secrets Store CSI Driver](https://azure.github.io/secrets-store-csi-driver-provider-azure/docs/getting-started/installation).
+Retrieve the status of the Secret Store CSI Driver pod running in the same node by running the following command:
 
-### Solution 5b: Redeploy the Secrets Store CSI Driver and Key Vault provider by adding taint toleration
+```bash
+kubectl get pod -l app=secrets-store-csi-driver -n kube-system -o wide
+```
 
-If you already deployed the Secrets Store CSI Driver, check whether the node is tainted. If the node is tainted, redeploy the Secrets Store CSI Driver and Key Vault provider by adding toleration for the taints.
-
-### Solution 5c: (Windows only) Use Helm configuration values when installing the Secrets Store CSI Driver and Key Vault provider
-
-If your application is running on a Windows node, install the Secrets Store CSI Driver and Key Vault provider on Windows nodes by using the Helm configuration values.
+If pod status is not `Running` or any of the containers in this pod is not in `Ready` state then proceed to check the logs for this pod as per [Check the Secrets Store CSI Driver pod logs](###troubleshooting-step-2:-check-the-secrets-store-csi-driver-pod-logs)
 
 ## Cause 6: The driver can't communicate with the provider
 
