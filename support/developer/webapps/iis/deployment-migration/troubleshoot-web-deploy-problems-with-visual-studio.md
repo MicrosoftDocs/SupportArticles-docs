@@ -15,7 +15,7 @@ To collect the following screenshots and errors, use a new ASP.NET MVC project i
 
 ## Cannot connect to the server
 
-The first error you're likely to encounter looks like the following screenshot in Visual Studio's output window. For improved readability, the full text of the message is provided after the screenshot:
+The first error you're likely to encounter looks like the following screenshot in Visual Studio's output window. For improved readability, the full text of the message is provided under the screenshot:
 
 :::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/error-list.png" alt-text="Screenshot that shows the Error List output in Visual Studio." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/error-list.png":::
 
@@ -66,7 +66,7 @@ The remote server returned an error: (403) Forbidden.
 
 This message is misleading. It states that the server didn't respond, but the 403 error indicates that Web Deploy could contact the server, but the request was actively refused. The HTTP log for the Web Management Service can help confirm the request reached the server and provide details about the actual request that failed. This log can be found at `%SystemDrive%\Inetpub\logs\WMSvc` by default. Like other IIS logs, data isn't written to the log immediately, so you might have to wait a couple of minutes to see the request or restart the Web Management Service to flush the log.
 
-In the `WMSVC` log, the preceding error looks like the following one:
+In the `WMSVC` log, you can see the following message:
 
 ```Output
 2011-06-02 17:59:05 192.168.0.211 POST /msdeploy.axd site=default%20web%20site 8172 - 192.168.0.203 - 403 6 5 1669
@@ -119,7 +119,7 @@ You can verify that Web Deploy is installed by going to the **Programs and Featu
 
 **Is the web deployment handler installed?**
 
-If Web Deploy is installed and you still get this error, make sure the **IIS Deployment Handler** feature in Web Deploy is installed. In the **Programs and Features** control panel, find **Microsoft Web Deploy 4.0**, right-click it and select **Change**. In the Wizard that comes up, select **Next** on the first page and then select **Change** on the second page. Add **IIS Deployment Handler** and everything else under it.
+If Web Deploy is installed and you still get this error, make sure the **IIS Deployment Handler** feature in Web Deploy is installed. In the **Programs and Features** control panel, find **Microsoft Web Deploy 4.0**, right-click it and select **Change**. In the Wizard that comes up, select **Next** on the first page and then select **Change** on the second page. Add **IIS Deployment Handler** and everything under it.
 
 :::image type="content" source="media/troubleshoot-web-deploy-problems-with-visual-studio/web-deploy-set-up.png" alt-text="Screenshot that shows the Microsoft Web Deploy 4 dot 0 Setup dialog box. Web Deployment Framework is highlighted." lightbox="media/troubleshoot-web-deploy-problems-with-visual-studio/web-deploy-set-up.png":::
 
