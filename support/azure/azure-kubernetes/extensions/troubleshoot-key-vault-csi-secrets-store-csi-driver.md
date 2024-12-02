@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot Azure Key Vault Provider for Secrets Store CSI Driver on AKS
-description: Troubleshoot and resolve common issues that occur when you use the Azure Key Vault Provider for Secrets Store CSI Driver on Azure Kubernetes Service (AKS).
+title: Troubleshoot Azure Key Vault Secrets Provider add-on in AKS
+description: Troubleshoot and resolve common issues that occur when you use the Azure Key Vault Secrets Provider add-on in Azure Kubernetes Service (AKS).
 editor: v-jsitser
 ms.service: azure-kubernetes-service
 ms.date: 11/12/2024
@@ -8,9 +8,9 @@ ms.reviewer: nickoman, cssakscic, v-ntjandra, v-leedennis
 ms.custom: sap:Extensions, Policies and Add-Ons
 ---
 
-# Troubleshoot Azure Key Vault Provider for Secrets Store CSI Driver
+# Troubleshoot Azure Key Vault Secrets Provider add-on in AKS
 
-This article discusses common issues that you might experience when you use the [Microsoft Azure Key Vault Provider for Secrets Store Container Storage Interface (CSI) Driver](/azure/aks/csi-secrets-store-driver) on Azure Kubernetes Service (AKS). The article provides troubleshooting tips for resolving these issues.
+This article discusses how to troubleshoot problems that you might experience when using the [Azure Key Vault Secrets Provider add-on](/azure/aks/csi-secrets-store-driver) in Azure Kubernetes Service (AKS).
 
 ## Prerequisites
 
