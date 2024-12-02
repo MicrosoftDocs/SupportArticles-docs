@@ -31,7 +31,7 @@ A connection attempt failed because the connected party did not properly respond
 of time, or established connection failed because connected host has failed to respond 192.168.0.211:8172
 ```
 
-The text highlighted in this error (and the other errors below) is the key to understanding the nature of the problem. Web Deploy didn't get a reply from the server, so Visual Studio can't distinguish between several possible causes. As a result, it gives a list of things to try.
+The text highlighted in this error (and the other errors in the following sections) is the key to understanding the nature of the problem. Web Deploy didn't get a reply from the server, so Visual Studio can't distinguish between several possible causes. As a result, it gives a list of things to try.
 
 **Is the web management service installed?**
 
@@ -46,7 +46,7 @@ If they aren't there, you need to install the Management Service through the **A
 
 **Is the service URL correct?**
 
-By default, the Web Management Service listens on port 8172, but this setting can be changed. The easiest way to check what port is being used is to open the **Management Service** pane as described above, and look at the IP and port information in the Connections section. If the port has been changed to something other than 8172, you need to ensure the new port is allowed through the firewall, and update the service URL in Visual Studio's publishing settings to use the new port.
+By default, the Web Management Service listens on port 8172, but this setting can be changed. The easiest way to check what port is being used is to open the **Management Service** pane as described earlier, and look at the IP and port information in the Connections section. If the port has been changed to something other than 8172, you need to ensure the new port is allowed through the firewall, and update the service URL in Visual Studio's publishing settings to use the new port.
 
 ## (403) Forbidden
 
