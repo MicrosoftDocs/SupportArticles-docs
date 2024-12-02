@@ -306,53 +306,19 @@ kubectl get pod -l app=secrets-store-csi-driver -n kube-system -o wide
 
 If pod status is not `Running` or any of the containers in this pod is not in `Ready` state then proceed to check the logs for this pod by following the steps in [Check the Secrets Store CSI Driver pod logs](#troubleshooting-step-2-check-the-secrets-store-csi-driver-pod-logs)
 
-## Cause 6: The driver can't communicate with the provider
-
-If you receive the following error message in the logs or events, then the driver can't communicate with the provider:
-
-> Warning FailedMount 85s (x10 over 5m35s) kubelet, aks-default-28951543-vmss000000 MountVolume.SetUp failed for volume "secrets-store01-inline" : kubernetes.io/csi: mounter.SetupAt failed: rpc error: code = Unknown desc = failed to mount secrets store objects for pod default/nginx-secrets-store-inline-user-msi, err: **failed to find provider binary azure, err: stat /etc/kubernetes/secrets-store-csi-providers/azure/provider-azure: no such file or directory**
-
-### Solution 6a: (Provider versions earlier than version 0.0.9) Make sure that provider pods run on all nodes
-
-If your installed Key Vault provider version is earlier than version 0.0.9, make sure that the provider pods are running on all nodes.
-
-### Solution 6b: (Provider version 0.0.9 and later) Use gRPC for provider communication
-
-If you installed Key Vault provider version 0.0.9 or a later version, [configure the driver to communicate with the provider](https://azure.github.io/secrets-store-csi-driver-provider-azure/docs/upgrading/#upgrading-to-key-vault-provider-009) by using [gRPC](/dotnet/architecture/cloud-native/grpc).
-
-## Cause 7: The CSI driver can't create the Kubernetes secret
-
-If you receive the following error message in the secret-store container in the CSI driver, then you haven't installed the role-based access control (RBAC) cluster role and cluster role binding. The cluster role and cluster role binding are necessary for the CSI driver to synchronize the mounted content as a Kubernetes secret.
-
-> E0610 22:27:02.283100       1 secretproviderclasspodstatus_controller.go:325] **"failed to create Kubernetes secret" err="secrets is forbidden: User \\"system:serviceaccount:default:secrets-store-csi-driver\\" cannot create resource \\"secrets\\" in API group \\"\\" in the namespace \\"default\\""** spc="default/azure-linux" pod="default/busybox-linux-5f479855f7-jvfw4" secret="default/dockerconfig" spcps="default/busybox-linux-5f479855f7-jvfw4-default-azure-linux"
-
-### Solution 7: Install the required cluster role and cluster role binding
-
-When you install or upgrade the CSI driver and Key Vault provider by using Helm charts from the [secrets-store-csi-driver-provider-azure GitHub repository](https://github.com/Azure/secrets-store-csi-driver-provider-azure/tree/master/charts/csi-secrets-store-provider-azure), set the `secrets-store-csi-driver.syncSecret.enabled` Helm parameter to `true`. This configuration change installs the required cluster role and cluster role binding.
-
-To verify that the cluster role and cluster role binding are installed, run the following `kubectl get` commands:
-
-```bash
-# Synchronize as Kubernetes secret cluster role.
-kubectl get clusterrole/secretprovidersyncing-role
-
-# Synchronize as Kubernetes secret cluster role binding.
-kubectl get clusterrolebinding/secretprovidersyncing-rolebinding
-```
-
-## Cause 8: The request is unauthenticated
+## Cause 6: The request is unauthenticated
 
 The request is unauthenticated for Key Vault, as indicated by a "401" error code.
 
-### Solution 8: Troubleshoot error code 401
+### Solution 6: Troubleshoot error code 401
 
 Troubleshoot error code "401" by reviewing the ["HTTP 401: Unauthenticated Request"](/azure/key-vault/general/rest-error-codes#http-401-unauthenticated-request) section of the [Azure Key Vault REST API Error Codes][error-codes] reference article.
 
-## Cause 9: The number of requests exceeds the stated maximum
+## Cause 7: The number of requests exceeds the stated maximum
 
 The number of requests exceeds the stated maximum for the timeframe, as indicated by a "429" error code.
 
-### Solution 9: Troubleshoot error code 429
+### Solution 7: Troubleshoot error code 429
 
 Troubleshoot error code "429" by reviewing the ["HTTP 429: Too Many Requests"](/azure/key-vault/general/rest-error-codes#http-429-too-many-requests) section of the [Azure Key Vault REST API Error Codes][error-codes] reference article.
 
