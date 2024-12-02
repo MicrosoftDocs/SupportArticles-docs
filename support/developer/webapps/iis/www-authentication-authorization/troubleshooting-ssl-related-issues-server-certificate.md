@@ -15,7 +15,7 @@ _Applies to:_ &nbsp; Internet Information Services
 
 This article helps you troubleshoot Secure Sockets Layer (SSL) issues related to Internet Information Services (IIS) only. It covers server certificates that are meant for server authentication, and doesn't cover client certificates.
 
-If the Client certificates section is set to "Require" and then you encounter problems, then this isn't the article you should refer. This article is meant for troubleshooting the SSL Server certificates issue only.
+If the Client certificates section is set to **Require** and then you encounter problems, this isn't the article you should refer. This article is meant for troubleshooting the SSL Server certificates issue only.
 
 It's important to know that every certificate comprises a public key (used for encryption) and a private key (used for decryption). The private key is known only to the server.
 
@@ -57,12 +57,12 @@ If the association is successful, then you would see the following window:
 
 :::image type="content" source="media/troubleshooting-ssl-related-issues-server-certificate/certutil-repairstore-successful.png" alt-text="Screenshot of the command console showing a message that the command completed successfully.":::
 
-In this example, `906c9825e56a13f1017ea40eca770df4c24cb735` is the thumbprint of the certificate. To get the thumbprint:
+In this example, `906c9825e56a13f1017ea40eca770df4c24cb735` is the thumbprint of the certificate. To get the thumbprint, follow these steps:
 
  1. Open the certificate.
  1. Select the **Details** tab.
  1. Scroll down to find the thumbprint section.
- 1. Select the thumbprint section and click on the text below.
+ 1. Select the thumbprint section and select the text below.
  1. Do a <kbd>Ctrl</kbd>+<kbd>A</kbd> and then <kbd>Ctrl</kbd>+<kbd>C</kbd> to select and copy it.
 
    :::image type="content" source="media/troubleshooting-ssl-related-issues-server-certificate/cert-dialog-details-tab-thumbprint.png" alt-text="Screenshot of the Certificate dialog showing the Details tab. The thumbprint value is highlighted.":::
@@ -78,6 +78,23 @@ In this scenario, consider that you have a server certificate that contains the 
 
 1. If you have a certificate that contains the private key and you're still unable to access the website. Additionally, the following SChannel warning is appearing in the system event logs:
 
+   ```output
+   Event Type: Error 
+   Event Source: Schannel 
+   Event Category: None 
+   Event ID: 36870 
+   Date: 2/11/2012 
+   Time: 12:44:55 AM 
+   User: N/A 
+   Computer: 
+   Description: A fatal error occurred when attempting to access the SSL server credential private key. The error code returned from the cryptographic module is 0x80090016. 
+   ```
+
+   This event or error indicates that there was a problem acquiring certificate's private key. To resolve the warning, follow these steps:
+
+   1. First, verify the permissions on the [MachineKeys](../../../../windows-server/windows-security/default-permissions-machinekeys-folders.md) folder. All the private keys are stored within the MachineKeys folder, so make sure you have the necessary permissions.
+   1. If the permissions are in place and if the issue is still not fixed, then there might be a problem with the certificate. It might have been corrupted. You might see an error code of 0x8009001a in the following SChannel event log:
+
       ```output
       Event Type: Error 
       Event Source: Schannel 
@@ -87,29 +104,12 @@ In this scenario, consider that you have a server certificate that contains the 
       Time: 12:44:55 AM 
       User: N/A 
       Computer: 
-      Description: A fatal error occurred when attempting to access the SSL server credential private key. The error code returned from the cryptographic module is 0x80090016. 
+      A fatal error occurred when attempting to access the SSL server credential private key. The error code returned from the cryptographic module is 0x8009001a. 
       ```
 
-    This event or error indicates that there was a problem acquiring certificate's private key. So, try the following steps to resolve the warning:
-
-  1. First, verify the permissions on the [MachineKeys](../../../../windows-server/windows-security/default-permissions-machinekeys-folders.md) folder. All the private keys are stored within the MachineKeys folder, so make sure you have the necessary permissions.
-  1. If the permissions are in place and if the issue is still not fixed, then there might be a problem with the certificate. It might have been corrupted. You may see an error code of 0x8009001a in the following SChannel event log:
-
-     ```output
-     Event Type: Error 
-     Event Source: Schannel 
-     Event Category: None 
-     Event ID: 36870 
-     Date: 2/11/2012 
-     Time: 12:44:55 AM 
-     User: N/A 
-     Computer: 
-     A fatal error occurred when attempting to access the SSL server credential private key. The error code returned from the cryptographic module is 0x8009001a. 
-     ```
-
- 1. Check if the website works with a test certificate.
- 1. Take a backup of the existing certificate and then replace it with a self-signed certificate.
- 1. Try accessing the website using HTTPS. If it works, then the certificate used earlier was corrupted and it has to be replaced with a new working certificate. Sometimes, the problem may not be with the certificate but with the issuer. During the verification of the certificate chain, you may see the error `CERT_E_UNTRUSTEDROOT (0x800b0109)`, if the root CA certificate isn't trusted root.
+1. Check if the website works with a test certificate.
+1. Take a backup of the existing certificate and then replace it with a self-signed certificate.
+1. Try accessing the website using HTTPS. If it works, then the certificate used earlier was corrupted and it has to be replaced with a new working certificate. Sometimes, the problem may not be with the certificate but with the issuer. During the verification of the certificate chain, you may see the error `CERT_E_UNTRUSTEDROOT (0x800b0109)`, if the root CA certificate isn't trusted root.
 
  1. To fix this error, add the CA's certificate to the "Trusted Root CA" store under My computer account on the server. During the verification of the certificate chain, you may also get the error `-2146762480(0x800b0110)`.
 
@@ -124,7 +124,7 @@ In this scenario, consider that you have a server certificate that contains the 
 
 ## Scenario 3
 
-The first two scenarios helps check the integrity of the certificate. After you confirm there are no issues with the certificate, a sizeable problem is solved. But, what if the website is still not accessible over HTTPS? Check the HTTPS bindings of the website and determine which port and IP it's listening on.
+The first two scenarios help check the integrity of the certificate. After you confirm there are no issues with the certificate, a sizeable problem is solved. But, what if the website is still not accessible over HTTPS? Check the HTTPS bindings of the website and determine which port and IP it's listening on.
 
 ### Resolution
 
