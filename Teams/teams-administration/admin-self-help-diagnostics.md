@@ -1,9 +1,7 @@
 ---
 title: Self-help diagnostics for Teams administrators
-ms.author: luche
-author: helenclu
 manager: dcscontentpm
-ms.date: 11/20/2024
+ms.date: 12/03/2024
 audience: Admin|ITPro|Developer
 ms.topic: troubleshooting
 search.appverid:
@@ -98,7 +96,6 @@ The following tables list the diagnostics that are currently available in the Mi
 |Checks whether a user has the correct policies to enable the Teams Outlook add-in.|[Run Tests: Teams Add-in Missing in Outlook](https://aka.ms/TeamsAdd-inDiag)||[Resolve issues with Teams Meeting add-in for Outlook](../meetings/resolve-teams-meeting-add-in-issues.md)|
 |Checks whether the user is correctly configured to record a meeting in Teams.|[Run Tests: Meeting Recording](https://aka.ms/MeetingRecordingDiag)|[Teams Meeting Recording](https://testconnectivity.microsoft.com/tests/TeamsRecording/input)|[Teams cloud meeting recording](/microsoftteams/cloud-recording#meeting-recording-diagnostic-tools)<br/><br/>[Issues with meeting recordings](../meetings/troubleshoot-meeting-recording-issues.md)|
 |Checks whether a user account meets the requirements to schedule a Teams Meeting on behalf of a delegator.||[Teams Meeting Delegation](https://testconnectivity.microsoft.com/tests/TeamsMeetingDelegation/input)|[Resolve interaction issues between Teams and Exchange Server](../exchange-integration/teams-exchange-interaction-issue.md)|
-|Checks whether a user account meets the requirements to schedule a channel meeting. If the mailbox is hosted on-premises, it also checks whether the Exchange on-premises inbound receive connector is correctly configured.||[Teams Channel Meeting](https://testconnectivity.microsoft.com/tests/TeamsChannelMeeting/input)|[Resolve interaction issues between Teams and Exchange Server](../exchange-integration/teams-exchange-interaction-issue.md)|
 
 ### Presence
 
@@ -116,5 +113,5 @@ The following tables list the diagnostics that are currently available in the Mi
 |Checks whether a user has the ability to make or receive domestic or international PSTN calls.|[Run Tests: Teams PSTN](https://aka.ms/TeamsPSTNDiag)||[Set up Microsoft Calling Plans](/microsoftteams/set-up-calling-plans)|
 |Checks whether a user has the ability to create a PSTN conference call.|[Run Tests: Teams Conference](https://aka.ms/TeasConfDiag)||[See a list of users that are enabled for Audio Conferencing in Microsoft Teams](/microsoftteams/see-a-list-of-users-that-are-enabled-for-audio-conferencing-in-teams)|
 |Checks whether an auto attendant is able to receive calls.|[Run Tests: Teams Auto Attendant](https://aka.ms/TeamsAADiag)||[Set up an auto attendant for Microsoft Teams](/microsoftteams/create-a-phone-system-auto-attendant#auto-attendant-diagnostic-tool)|
-|Checks whether a user is correctly configured to use Voicemail in Teams.|[Run Tests: Voicemail](https://aka.ms/TeamsVoicemailDiag)|[Teams Voicemail](https://testconnectivity.microsoft.com/tests/TeamsVoicemail/input)|[Set up Cloud Voicemail](/microsoftteams/set-up-phone-system-voicemail)<br/><br/>[SIP 480 and Microsoft response codes](../phone-system/direct-routing/microsoft-sip-response-codes-480.md#10191-480-routing-to-voicemail-is-disabled-in-policy)|
+|Checks whether a user is correctly configured to use Voicemail in Teams.|[Run Tests: Voicemail](https://aka.ms/TeamsVoicemailDiag)|[Teams Voicemail](https://testconnectivity.microsoft.com/tests/TeamsVoicemail/input)|[Set up Cloud Voicemail](/microsoftteams/set-up-phone-system-voicemail)|
 |Checks whether a user is correctly configured to forward calls to a specified number.|[Run Tests: Teams Call Forwarding](https://aka.ms/TeamsCallForwardingDiag)||[Configure call settings for your users](/microsoftteams/user-call-settings)|
