@@ -1,6 +1,6 @@
 ---
 title: SMTP address has no mailbox associated with it error
-description: Provides a solution to an error that occurs when you select Test Connection on an email server profile record in Dynamics 365.
+description: Solves an SMTP address error that occurs when you select Test Connection on an email server profile record in Dynamics 365.
 ms.reviewer: 
 ms.date: 12/03/2024
 ms.custom: sap:Email and Exchange Synchronization
@@ -14,23 +14,23 @@ _Original KB number:_ &nbsp; 3214326
 
 ## Symptoms
 
-When you select **Test Connection** on an email server profile record in Dynamics 365, you receive a "Test Failed" error. The **Failure Details** section contains the following message:
+When you select **Test Connection** on an email server profile record in Dynamics 365, a "Test Failed" error occurs. The **Failure Details** section shows the following message:
 
 > The SMTP address has no mailbox associated with it.
 
 ## Cause
 
-This error can occur if you use the `domain\username` format for the **User Name** field (Example: `contoso\user`).
+This error can occur if the **User Name** field in the email server profile record is populated using the `domain\username` format instead of the UPN format (Example: `contoso\user`).
 
 ## Resolution
 
-In the **Credentials** section of the email server profile record, use the UPN format (Example: `user@contoso.com`) for the **User Name** field instead of `domain\username` format.
+To solve this issue, use the UPN format (Example: `user@contoso.com`) for the **User Name** field instead of the `domain\username` format in the **Credentials** section of the email server profile record.
 
-If the user name is in the UPN format and you still receive this error, verify a mailbox exists for the user and the UPN value in the **User Name** field matches the email address for the user's mailbox in Exchange.
+If the user name is in the UPN format and you still receive this error, verify that the user has a mailbox and that the UPN value in the **User Name** field matches the email address for the user's mailbox in Exchange.
 
 ## More information
 
-The following example is the **Failure Details** that will appear:
+The following is an example of the error message and additional information about the failure shown in the **Failure Details** section:
 
 ```xml
 Request to Exchange::  
