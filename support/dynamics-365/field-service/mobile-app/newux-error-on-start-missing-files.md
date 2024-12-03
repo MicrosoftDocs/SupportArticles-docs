@@ -16,7 +16,7 @@ An error occurs when starting the new mobile app experience stating files are mi
 
 ## Resolution
 
-Some required source records are missing. These records should be created when installing the solution. In rare cases, these records don't get created successfully or corrupted. In some cases, a user deleted the records.
+Some required source records are missing. These records should be created when installing the solution. In rare cases, these records don't get created successfully or get corrupted. In some cases, a user deleted the records.
 
 ### Step 1: Check if the mobilesource table contains data
 
