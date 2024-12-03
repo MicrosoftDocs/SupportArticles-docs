@@ -13,7 +13,7 @@ _Applies to:_ &nbsp; Internet Information Services
 
 ## Overview
 
-This article helps you troubleshoot Secure Sockets Layer (SSL) issues related to Internet Information Services (IIS) only. It covers server certificates that are meant for server authentication, and doesn't cover client certificates.
+This article helps you troubleshoot Secure Sockets Layer (SSL) issues related to Internet Information Services (IIS) only. It covers server certificates used for server authentication, not client certificates.
 
 If the Client certificates section is set to **Require** and you encounter problems, this article isn't the one you should refer. This article is meant for troubleshooting the SSL Server certificates issue only.
 
@@ -77,7 +77,7 @@ In this scenario, consider that you have a server certificate that contains the 
 
 ### Resolution
 
-If you have a certificate that contains the private key and you're still unable to access the website, you might also see the following SChannel warning in the system event logs:
+If you have a certificate that contains the private key but you can't access the website, you might also see the following SChannel warning in the system event logs:
 
 ```output
 Event Type: Error 
@@ -143,7 +143,7 @@ The first two scenarios help check the integrity of the certificate. After you c
 
 ## Scenario 4
 
-By now you can be sure that you have a proper working certificate installed on the website and there's no other process using the SSL port for this website. However, you might still see the "Page cannot be displayed" error while accessing the website over HTTPS. When a client connects and initiates an SSL negotiation, *HTTP.sys* searches its SSL configuration for the "IP:Port" pair to which the client is connected. The *HTTP.sys* SSL configuration must include a certificate hash and the name of the certificate store before the SSL negotiation will succeed. The problem might be with the `HTTP.SYS SSL Listener`.
+By now, you can be sure that you have a proper working certificate installed on the website and there's no other process using the SSL port for this website. However, you might still see the "Page cannot be displayed" error while accessing the website over HTTPS. When a client connects and initiates an SSL negotiation, *HTTP.sys* searches its SSL configuration for the "IP:Port" pair to which the client is connected. The *HTTP.sys* SSL configuration must include a certificate hash and the name of the certificate store before the SSL negotiation will succeed. The problem might be with the `HTTP.SYS SSL Listener`.
 
 The Certificate hash registered with *HTTP.sys* might be NULL or it might contain invalid GUID.
 
