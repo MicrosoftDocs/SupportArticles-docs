@@ -32,7 +32,7 @@ This article discusses how to troubleshoot problems that you might experience wh
 
 ### Troubleshooting step 1: Confirm that Azure Key Vault Secrets Provider add-on is enabled on your cluster
 
-Run the [`az aks show`](https://learn.microsoft.com/cli/azure/aks#az-aks-show) command to confirm that the addon is enabled on your cluster:
+Run the [`az aks show`](https://learn.microsoft.com/cli/azure/aks#az-aks-show) command to confirm that the add-on is enabled on your cluster:
 
 ```azurecli-interactive
 az aks show -g <aks-resource-group-name> -n <aks-name> --query 'addonProfiles.azureKeyvaultSecretsProvider'
