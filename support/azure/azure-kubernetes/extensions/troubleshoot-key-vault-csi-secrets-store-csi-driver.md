@@ -329,19 +329,54 @@ kubectl get pod -l app=secrets-store-csi-driver -n kube-system -o wide
 
 If pod status is not `Running` or any of the containers in this pod is not in `Ready` state then proceed to check the logs for this pod by following the steps in [Check the Secrets Store CSI Driver pod logs](#troubleshooting-step-2-check-the-secrets-store-csi-driver-pod-logs)
 
-## Cause 6: The request is unauthenticated
+## Cause 6: SecretProviderClass not found
+
+You may see the following event when describing your application pod:
+
+```output
+Events:
+  Type     Reason       Age               From               Message
+  ----     ------       ----              ----               -------
+  Warning  FailedMount  2s (x5 over 10s)  kubelet            MountVolume.SetUp failed for volume "xxxxxxx" : rpc error: code = Unknown desc = failed to get secretproviderclass xxxxxxx/xxxxxxx, error: SecretProviderClass.secrets-store.csi.x-k8s.io "xxxxxxxxxxxxx" not found
+```
+
+This indicates that the SecretProviderClass referenced in your pod's volume specification does not exist in the same namespace as your application pod.
+
+### Solution 6a: Create the missing SecretProviderClass resource
+
+Make sure that the SecretProviderClass resource referenced in your pod's volume specification exists in the same namespace in which your application pod is running.
+
+### Solution 6b: Modify your application pod's volume specification to reference the correct SecretProviderClass resource name
+
+Edit your application pod's volume specification to reference the correct SecretProviderClass resource name:
+
+```output
+...
+spec:
+  containers:
+  ...
+  volumes:
+    - name: my-volume
+      csi:
+        driver: secrets-store.csi.k8s.io
+        readOnly: true
+        volumeAttributes:
+          secretProviderClass: "xxxxxxxxx"
+```
+
+## Cause 7: The request is unauthenticated
 
 The request is unauthenticated for Key Vault, as indicated by a "401" error code.
 
-### Solution 6: Troubleshoot error code 401
+### Solution 7: Troubleshoot error code 401
 
 Troubleshoot error code "401" by reviewing the ["HTTP 401: Unauthenticated Request"](/azure/key-vault/general/rest-error-codes#http-401-unauthenticated-request) section of the [Azure Key Vault REST API Error Codes][error-codes] reference article.
 
-## Cause 7: The number of requests exceeds the stated maximum
+## Cause 8: The number of requests exceeds the stated maximum
 
 The number of requests exceeds the stated maximum for the timeframe, as indicated by a "429" error code.
 
-### Solution 7: Troubleshoot error code 429
+### Solution 8: Troubleshoot error code 429
 
 Troubleshoot error code "429" by reviewing the ["HTTP 429: Too Many Requests"](/azure/key-vault/general/rest-error-codes#http-429-too-many-requests) section of the [Azure Key Vault REST API Error Codes][error-codes] reference article.
 
