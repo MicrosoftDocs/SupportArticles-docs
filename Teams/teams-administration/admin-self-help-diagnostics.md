@@ -1,9 +1,7 @@
 ---
 title: Self-help diagnostics for Teams administrators
-ms.author: luche
-author: helenclu
 manager: dcscontentpm
-ms.date: 11/20/2024
+ms.date: 12/03/2024
 audience: Admin|ITPro|Developer
 ms.topic: troubleshooting
 search.appverid:
@@ -66,6 +64,12 @@ The following tables list the diagnostics that are currently available in the Mi
 |Checks whether a user account meets the requirements for a Microsoft Teams user to be able to sign in to a Microsoft Teams Rooms device.||[Microsoft Teams Rooms Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input)|[Fix Conditional Access-related issues for Teams Android devices](../teams-rooms-and-devices/teams-android-devices-conditional-access-issues.md)<br/><br/>[Fix Teams Rooms resource account sign-in issues](../teams-rooms-and-devices/teams-rooms-resource-account-sign-in-issues.md)|
 |Checks whether the Teams user can communicate with a federated Teams user.|[Run Tests: Teams Federation](https://aka.ms/TeamsFederationDiag)|[Teams Federation and Interoperability](https://testconnectivity.microsoft.com/tests/TeamsFederation/input)|[Manage external access (federation)](/microsoftteams/manage-external-access#federation-diagnostic-tool)<br/><br/>[External federated contacts don't appear in Teams search](../exchange-integration/external-contacts-not-in-search.md)|
 
+### Exchange integration
+
+| Description |  Diagnostic shortcut | Connectivity test shortcut | Support article |
+|---|---|---|---|
+|Determines the ability of Teams to interact with Microsoft Exchange Server. For Exchange Hybrid, run the test two times by using a Microsoft 365 mailbox and an on-premises mailbox. This is useful for IT administrators who want to troubleshoot Teams and Exchange integration.||[Teams Exchange Integration](https://testconnectivity.microsoft.com/tests/TeamsExchangeIntegration/input)|[Resolve interaction issues between Teams and Exchange Server](../exchange-integration/teams-exchange-interaction-issue.md)|
+
 ### Devices
 
 | Description |  Diagnostic shortcut | Connectivity test shortcut | Support article |
@@ -91,6 +95,7 @@ The following tables list the diagnostics that are currently available in the Mi
 |Checks a user's policy for 1:1 Call Recording capability|[Run Tests: Teams 1:1 Call Recording](https://aka.ms/Teams11CallRecDiag)||[Issues with meeting recordings](../meetings/troubleshoot-meeting-recording-issues.md)|
 |Checks whether a user has the correct policies to enable the Teams Outlook add-in.|[Run Tests: Teams Add-in Missing in Outlook](https://aka.ms/TeamsAdd-inDiag)||[Resolve issues with Teams Meeting add-in for Outlook](../meetings/resolve-teams-meeting-add-in-issues.md)|
 |Checks whether the user is correctly configured to record a meeting in Teams.|[Run Tests: Meeting Recording](https://aka.ms/MeetingRecordingDiag)|[Teams Meeting Recording](https://testconnectivity.microsoft.com/tests/TeamsRecording/input)|[Teams cloud meeting recording](/microsoftteams/cloud-recording#meeting-recording-diagnostic-tools)<br/><br/>[Issues with meeting recordings](../meetings/troubleshoot-meeting-recording-issues.md)|
+|Checks whether a user account meets the requirements to schedule a Teams Meeting on behalf of a delegator.||[Teams Meeting Delegation](https://testconnectivity.microsoft.com/tests/TeamsMeetingDelegation/input)|[Resolve interaction issues between Teams and Exchange Server](../exchange-integration/teams-exchange-interaction-issue.md)|
 
 ### Presence
 
