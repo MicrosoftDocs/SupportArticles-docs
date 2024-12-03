@@ -12,7 +12,7 @@ search.appverid:
 appliesto: 
   - Microsoft Teams
 ms.custom: 
-  - sap:Teams Calling (PSTN)\PSTN Audio Conferencing Dial in-out
+  - sap:Teams Calling (PSTN)\PSTN Audio Conferencing Dial in/out
   - CI 113425
   - CSSTroubleshoot
 ms.reviewer: scapero

@@ -8,7 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: sercast, tasitae
 ms.custom: 
-  - sap:Connectivity\
+  - sap:Connectivity
   - Outlook for Mac
   - CSSTroubleshoot
 search.appverid: 
