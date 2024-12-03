@@ -2,7 +2,7 @@
 title: Troubleshooting SSL related issues (Server Certificate)
 description: This article provides various troubleshooting scenarios and resolutions related to SSL server certificates.
 ms.topic: troubleshooting 
-ms.date: 11/27/2024
+ms.date: 12/03/2024
 ms.reviewer: kaushalp, johnhart, v-jayaramanp, zixie
 ms.custom: sap:WWW Authentication and Authorization\SSL and SSL Server certificates
 ---
@@ -25,7 +25,8 @@ The default port for HTTPS is 443. It's assumed that you're well-versed in SSL H
 
 The tools used to troubleshoot the various scenarios are:
 
-- Network Monitor 3.4 or Wireshark
+- Network Monitor 3.4
+- Wireshark
 
 ## Scenarios
 
@@ -53,7 +54,7 @@ C:\>certutil - repairstore my "906c9825e56a13f1017ea40eca770df4c24cb735"
 
 :::image type="content" source="media/troubleshooting-ssl-related-issues-server-certificate/command-console-certutil-syntax.png" alt-text="Screenshot of the command console showing the certutil syntax.":::
 
-If the association is successful, then you would see the following window:
+If the association is successful, you would see the following window:
 
 :::image type="content" source="media/troubleshooting-ssl-related-issues-server-certificate/certutil-repairstore-successful.png" alt-text="Screenshot of the command console showing a message that the command completed successfully.":::
 
@@ -68,7 +69,7 @@ In this example, `906c9825e56a13f1017ea40eca770df4c24cb735` is the thumbprint of
    :::image type="content" source="media/troubleshooting-ssl-related-issues-server-certificate/cert-dialog-details-tab-thumbprint.png" alt-text="Screenshot of the Certificate dialog showing the Details tab. The thumbprint value is highlighted.":::
 
    > [!NOTE]
-   > The `certutil` command may not always succeed. If this fails, then you need to get a certificate containing the private key from the certification authority (CA).
+   > The `certutil` command may not always succeed. If this fails, you need to get a certificate containing the private key from the certification authority (CA).
 
 ## Scenario 2
 
@@ -76,7 +77,7 @@ In this scenario, consider that you have a server certificate that contains the 
 
 ### Resolution
 
-If you have a certificate that contains the private key and you're still unable to access the website. Additionally, the following SChannel warning is appearing in the system event logs:
+If you have a certificate that contains the private key and you're still unable to access the website, you might also see the following SChannel warning in the system event logs:
 
 ```output
 Event Type: Error 
@@ -92,7 +93,7 @@ Description: A fatal error occurred when attempting to access the SSL server cre
 
 This event or error indicates that there was a problem acquiring certificate's private key. To resolve the warning, follow these steps:
 
-1. First, verify the permissions on the [MachineKeys](../../../../windows-server/windows-security/default-permissions-machinekeys-folders.md) folder. All the private keys are stored within the MachineKeys folder, so make sure you have the necessary permissions.
+1. Verify the permissions on the [MachineKeys](../../../../windows-server/windows-security/default-permissions-machinekeys-folders.md) folder. All the private keys are stored within the **MachineKeys** folder, so make sure you have the necessary permissions.
 1. If the permissions are in place and if the issue is still not fixed, there might be a problem with the certificate. It might have been corrupted. You might see an error code of `0x8009001a` in the following SChannel event log:
 
    ```output
@@ -111,15 +112,15 @@ This event or error indicates that there was a problem acquiring certificate's p
 1. Take a backup of the existing certificate and then replace it with a self-signed certificate.
 1. Try accessing the website using HTTPS.
 
-   If it works, the certificate used earlier was corrupted and it has to be replaced with a new working certificate. Sometimes, the problem might not be with the certificate but with the issuer. During the verification of the certificate chain, you might see the error `CERT_E_UNTRUSTEDROOT (0x800b0109)`, if the root CA certificate isn't trusted root.
+   If it works, the certificate used earlier was corrupted and it has to be replaced with a new working certificate. Sometimes, the problem might not be with the certificate but with the issuer. During the verification of the certificate chain, you might see the error `CERT_E_UNTRUSTEDROOT (0x800b0109)` if the root CA certificate isn't trusted root.
 
  1. To fix this error, add the CA's certificate to the **Trusted Root CA** store under My computer account on the server. During the verification of the certificate chain, you might also get the error `-2146762480(0x800b0110)`.
 
- 1. To resolve the error, check the usage type of the certificate by doing the following steps:
+ 1. To resolve the error, follow these steps to check the usage type of the certificate:
 
     1. Open the certificate.
     1. Select the **Details** tab.
-    1. Select **Edit Properties…**.
+    1. Select **Edit Properties**.
     1. Under **General** tab, make sure that the **Enable all purposes for this certificate** option is selected and most importantly, the **Server Authentication** should be present in the list.
 
     :::image type="content" source="media/troubleshooting-ssl-related-issues-server-certificate/certificate-properties-enable-all-purposes-selected.png" alt-text="Screenshot shows a portion of the Certificate Properties dialog where the enable all purposes for this certificate is selected.":::
@@ -136,7 +137,7 @@ The first two scenarios help check the integrity of the certificate. After you c
    netstat -ano" or "netstat -anob"
    ```
 
-1. If there's another process listening on that port, then check why that process is using that port.
+1. If there's another process listening on that port, check why that process is using that port.
 
 1. Try changing the IP-Port combination to check if the website is accessible.
 
@@ -154,7 +155,7 @@ The Certificate hash registered with *HTTP.sys* might be NULL or it might contai
    netsh http show ssl
    ```
 
-   Following is a sample of a working and nonworking scenario:
+   Here are examples of working and non-working scenarios:
 
    **Working scenario**
 
@@ -169,7 +170,7 @@ The Certificate hash registered with *HTTP.sys* might be NULL or it might contai
       | URL Retrieval Timeout | 0 |
       | ...... | ...... |
 
-   **Nonworking scenario**
+   **Non-working scenario**
 
       |Configuration |Setting |
       | --- | --- |
@@ -182,7 +183,7 @@ The Certificate hash registered with *HTTP.sys* might be NULL or it might contai
       | URL Retrieval Timeout | 0 |
       | ...... | ...... |
 
-      The Hash value seen in **Working scenario** is the Thumbprint of your SSL certificate. Notice, that the GUID is all zero in a nonworking scenario. You might see the Hash either having some value or blank. Even if you remove the certificate from the website, and then run `netsh http show ssl`, the website will still list GUID as all 0s. If you see the GUID as "{0000...............000}", then there's a problem.
+      The Hash value seen in **Working scenario** is the Thumbprint of your SSL certificate. Notice that the GUID is all zero in a non-working scenario. You might see the Hash either has some value or is blank. Even if you remove the certificate from the website and then run `netsh http show ssl`, the website will still list the GUID as all 0s. If you see the GUID as "{0000...............000}", there's a problem.
 
   1. Remove this entry by running the following command:
 
@@ -196,7 +197,7 @@ The Certificate hash registered with *HTTP.sys* might be NULL or it might contai
        netsh http delete sslcert ipport=0.0.0.0:443
        ```
 
-   1. To determine whether any IP addresses are listed, open a command prompt, and then run the following commands:
+   1. To determine whether any IP addresses are listed, open a command prompt, and then run the following command:
 
        ```Console
        netsh http show iplisten
@@ -215,23 +216,23 @@ The Certificate hash registered with *HTTP.sys* might be NULL or it might contai
 
 In spite of all this, if you're still unable to browse the website on HTTPS, capture a network trace either from the client or server. Filter the trace by "SSL or TLS" to look at SSL traffic.
 
-Following is a network trace snapshot of a nonworking scenario:
+Here's a network trace snapshot of a non-working scenario:
 
 :::image type="content" source="media/troubleshooting-ssl-related-issues-server-certificate/display-filter-trace-snapshot.png" alt-text="Screenshot of the Display Filter window showing the trace snapshot.":::
 
-Following is a network trace snapshot of a working scenario:
+Here's a network trace snapshot of a working scenario:
 
 :::image type="content" source="media/troubleshooting-ssl-related-issues-server-certificate/display-filter-window-sucessful-trace.png" alt-text="Screenshot of the Display Filter window showing a snapshot of a successful trace.":::
 
 This is the method of how you look at a network trace. You need to expand the frame details and see what protocol and cipher was chosen by the server. Select "Server Hello" from the description to view those details.
 
-In the nonworking scenario, the client was configured to use TLS 1.1 and TLS 1.2 only. However, the IIS web server was configured to support until TLS 1.0 and hence the handshake failed.
+In the non-working scenario, the client was configured to use TLS 1.1 and TLS 1.2 only. However, the IIS web server was configured to support until TLS 1.0, so the handshake failed.
 
 Check the registry keys to determine what protocols are enabled or disabled. Here's the path:
 
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols`
 
-The "Enabled" DWORD should be set to "1". If it's set to 0, the protocol is disabled.
+The **Enabled** DWORD should be set to **1**. If it's set to **0**, the protocol is disabled.
 
 For example, SSL 2.0 is disabled by default.
 
