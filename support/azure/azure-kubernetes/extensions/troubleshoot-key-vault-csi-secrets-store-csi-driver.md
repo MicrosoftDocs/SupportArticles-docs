@@ -38,7 +38,7 @@ Run the [`az aks show`](https://learn.microsoft.com/cli/azure/aks#az-aks-show) c
 az aks show -g <aks-resource-group-name> -n <aks-name> --query 'addonProfiles.azureKeyvaultSecretsProvider'
 ```
 
-The output from the previous command will contain the `enabled` flag which, in case the add-on is enabled, should be set to `true`:
+The output from the previous command should be similar to the following and contain the `enabled` flag:
 
 ```output
 {
@@ -53,6 +53,8 @@ The output from the previous command will contain the `enabled` flag which, in c
 ```
 
 If the `enabled` flag is set to `false` in the above output, this indicates that the Azure Key Vault Secrets Provider add-on is not enabled in your cluster, in which case you should refer to the [Azure Key Vault Provider for Secrets Store CSI Driver github documentation](https://azure.github.io/secrets-store-csi-driver-provider-azure/docs/) for further troubleshooting guidance.
+
+If, on the other hand, the `enabled` flag is set to `true` in the above output, this indicates that the Azure Key Vault Secrets Provider add-on is enabled in your cluster, in which case you should proceed to the next steps in this troubleshooting guide.
 
 ### Troubleshooting step 2: Check the Secrets Store Provider and CSI Driver pod logs
 
