@@ -32,7 +32,7 @@ The tools used to troubleshoot the various scenarios are:
 
 You see the following error message while browsing a website over HTTPS:
 
-:::image type="content" source="media/troubleshooting-ssl-related-issues-server-certificate/ie-cannot-display-web-page.png" alt-text="Screenshot of a browser page showing the message, Internet Explorer cannot display the webpage.":::
+:::image type="content" source="media/troubleshooting-ssl-related-issues-server-certificate/ie-cannot-display-web-page.png" alt-text="Screenshot of a browser page showing the message, the connection for this site is not secure.":::
 
 The first prerequisite that has to be checked is whether the website is accessible over HTTP. If it's not, there likely is a separate issue that's not covered in this article. Before using this troubleshooter, you must have the website operational on HTTP.
 
@@ -183,7 +183,7 @@ The Certificate hash registered with *HTTP.sys* might be NULL or it might contai
       | URL Retrieval Timeout | 0 |
       | ...... | ...... |
 
-      The Hash value seen in **Working scenario** is the Thumbprint of your SSL certificate. Notice that the GUID is all zero in a non-working scenario. You might see the Hash either has some value or is blank. Even if you remove the certificate from the website and then run `netsh http show ssl`, the website will still list the GUID as all 0s. If you see the GUID as "{0000...............000}", there's a problem.
+      The Hash value seen in **Working scenario** is the Thumbprint of your SSL certificate. Notice that the GUID is all zero in a non-working scenario. You might see the Hash either has some value or is blank. Even if you remove the certificate from the website, and then run `netsh http show ssl`, the website will still list the GUID as all 0s. If you see the GUID as "{0000...............000}", there's a problem.
 
   1. Remove this entry by running the following command:
 
