@@ -22,6 +22,9 @@ This article describes some of the most common error codes and messages you migh
 >[!NOTE]
 > You can leave comments on this page for feedback or through [Azure feedback](https://feedback.azure.com/forums/216843-virtual-machines) with #azerrormessage tag.
 
+>[!TIP]
+> Consider implementing automated error detection and notification for Azure VMs using Azure Monitor and Event Grid. For straightforward remediations, such as restarting VMs, Automation Runbooks offer a lightweight and cost-effective solution. For custom workflows, complex logic, or multi-service integrations, Azure Logic Apps is recommended. Together, these tools enable proactive detection and remediation of common issues like disk errors or unresponsive VMs, reducing downtime and operational costs effectively.
+
 ## Error Response Format
 
 Azure VMs use the following JSON format for error response:
