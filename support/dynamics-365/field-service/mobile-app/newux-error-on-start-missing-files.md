@@ -1,6 +1,6 @@
 ---
 title: Error on start due to missing files in the solution
-description: Resolves the missing records issue where the mobile app fails to launch in Microsoft Dynamics 365 Field Service.
+description: Helps resolve Dynamics 365 Field Service mobile app launch issues.
 author: JonBaker007
 ms.author: jobaker
 ms.reviewer: mhart
@@ -12,11 +12,13 @@ ms.custom: sap:Mobile application
 
 ## Symptoms
 
-An error occurs when starting the new mobile app experience stating files are missing.
+An error occurs when starting the [new mobile app experience](/dynamics365/field-service/mobile/do-work-newux) stating that certain files are missing.
+
+## Cause
+
+Some required source records are missing. These records should be created when installing the solution, but in rare cases, they don't get created successfully or get corrupted. It is also possible that a user deleted the records.
 
 ## Resolution
-
-Some required source records are missing. These records should be created when installing the solution. In rare cases, these records don't get created successfully or get corrupted. In some cases, a user deleted the records.
 
 ### Step 1: Check if the mobilesource table contains data
 
@@ -41,7 +43,7 @@ If there's no data in the table, something went wrong with the solution update.
 
 1. Go to [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments) and select the environment in which you deleted the solution.
 
-1. In the environment details, under **Resources**, select **Dynamics 365 applications**.
+1. In the environment details, under **Resources**, select **Dynamics 365 apps**.
 
 1. Select **Install app**, choose **Dynamics 365 for Field Service**, and select **Next**.
 
