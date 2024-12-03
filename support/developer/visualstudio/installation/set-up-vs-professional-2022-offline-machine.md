@@ -11,11 +11,8 @@ ms.topic: how-to
 To set up Visual Studio Professional 2022 on an offline machine, follow these steps:
 
 1. Download the [web installer]( https://aka.ms/vs/17/release/vs_professional.exe) for the latest version of Visual Studio Professional 2022.
-
 1. Create an offline installer for Visual Studio Professional 2022 using the command line `vs_professional.exe --LayOut "C:\Temp\VS2022Offline" --Lang en-US`.
-
 1. After successfully creating the offline installer for Visual Studio Professional 2022, copy **C:\Temp\VS2022Offline** to the target offline machine.
-
 1. Once the **C:\Temp\VS2022Offline** folder is copied to the target offline machine, execute the following command lines via an admin command prompt:
 
    ```cmd
