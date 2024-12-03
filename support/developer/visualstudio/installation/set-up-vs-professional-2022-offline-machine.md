@@ -20,7 +20,6 @@ To set up Visual Studio Professional 2022 on an offline machine, follow these st
 
    ```cmd
    "C:\Temp\VS2022Offline\vs_professional.exe" --noWeb --channelURI
-    
    "C:\Temp\VS2022Offline\channelManifest.json"
    ```
 

@@ -13,7 +13,9 @@ ms.custom: sap:Installation\Setup, maintenance, or uninstall
 When you install Visual Studio 2022 using the online installer on a Windows 10, version 21H2 machine, it fails with the following error message in the setup logs:
 
 ```output
-HttpWebRequest& webRequest, String& remoteAddress, CancellationToken cancellationToken) Download failed using WebClient engine. System.Configuration.ConfigurationErrorsException: Configuration system failed to initialize ---> System.Configuration.ConfigurationErrorsException: Unrecognized element. (C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\machine.config line 141)
+HttpWebRequest& webRequest, String& remoteAddress, CancellationToken cancellationToken)
+Download failed using WebClient engine. System.Configuration.ConfigurationErrorsException: Configuration system failed to initialize --->
+System.Configuration.ConfigurationErrorsException: Unrecognized element. (C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\machine.config line 141)
 ```
 
 ## Cause

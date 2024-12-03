@@ -39,4 +39,4 @@ Next, follow these steps to repair your Visual Studio installation using the Vis
 1. Launch the Visual Studio Installer on your machine.
 1. In the**Visual Studio Installer** window, locate your installed version of Visual Studio 2022.
 1. Select the three dots (**...**) button next to the Visual Studio 2022 installation and select **Repair**.
-1. Follow the prompts to complete the repair process. The installer can repair your Visual Studio installation, which should resolve any issues related to the failed package installation.
+1. Follow the prompts to complete the repair process. The installer can repair your Visual Studio installation and resolve any issues related to the failed package installation.
