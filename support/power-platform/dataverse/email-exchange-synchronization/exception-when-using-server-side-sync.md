@@ -1,13 +1,13 @@
 ---
-title: Error when using server-side sync
+title: 401 Unauthorized exception when using server-side synchronization
 description: Provides a solution to an error that occurs when you use server-side synchronization in Dynamics 365.
 ms.reviewer: dmartens
-ms.date: 12/02/2024
+ms.date: 12/03/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
-# 401 Unauthorized exception occurs in Microsoft Dynamics 365 when using server-side synchronization
+# 401 Unauthorized exception occurs when using server-side synchronization in Microsoft Dynamics 365
 
-This article provides a solution to an error that occurs when you use server-side synchronization in Dynamics 365.
+This article presents possible causes and solutions for errors that might occur when you use server-side synchronization in Microsoft Dynamics 365.
 
 _Applies to:_ &nbsp; Microsoft Dynamics 365  
 _Original KB number:_ &nbsp; 3212785
@@ -35,19 +35,19 @@ To solve this issue, verify the e-mail address of the mailbox record in Dynamics
 
 ## Cause 2: Using an Exchange Server (Hybrid) profile with a mailbox in Exchange Online
 
-If you're using Dynamics 365 (online) with Exchange Online, make sure you're using an Exchange Online email server profile. Only use an Exchange Server (Hybrid) profile for users that have mailboxes in Exchange on-premises.
+If you're using Dynamics 365 (online) with Exchange Online, make sure you're using an [Exchange Online email server profile](/power-platform/admin/connect-exchange-online#create-an-email-server-profile-for-exchange-online). Only use an Exchange Server (Hybrid) profile for users that have mailboxes in Exchange on-premises. For more information, see [Connect to Exchange Server (on-premises)](/power-platform/admin/connect-exchange-server-on-premises).
 
 ## Cause 3: The user doesn't have an Exchange Online license
 
-If you're using Dynamics 365 with Exchange Online, verify the user has an Exchange Online license. For more information about assigning licenses in Office 365, see [Add users and assign licenses at the same time](/microsoft-365/admin/add-users/add-users).
+If you're using Dynamics 365 with Exchange Online, verify the user has an Exchange Online license. For more information about assigning licenses in Microsoft 365, see [Add users and assign licenses at the same time](/microsoft-365/admin/add-users/add-users).
 
-## Cause 4: Dynamics 365 and Exchange Online aren't in the same Office 365 tenant
+## Cause 4: Dynamics 365 and Exchange Online aren't in the same Microsoft 365 tenant
 
-If you're using Dynamics 365 (online) with Exchange Online, verify Dynamics 365 (online) and Exchange Online are in the same Office 365 account or tenant.
+If you're using Dynamics 365 (online) with Exchange Online, verify Dynamics 365 (online) and Exchange Online are in the same Microsoft 365 account or tenant.
 
 ## Cause 5: Basic authentication isn't enabled for EWS (Exchange Web Services)
 
-If you're using Dynamics 365 (online) with Exchange on-premises, verify Basic authentication is enabled for EWS (Exchange Web Services). For more information, see the Prerequisites section of [Connect Dynamics 365 (online) to Exchange Server (on-premises)](/previous-versions/dynamicscrm-2016/administering-dynamics-365/mt622059(v=crm.8)).
+If you're using Dynamics 365 (online) with Exchange on-premises, verify Basic authentication is enabled for [EWS (Exchange Web Services)](/exchange/client-developer/exchange-web-services/start-using-web-services-in-exchange). For more information, see the Prerequisites section of [Connect Dynamics 365 (online) to Exchange Server (on-premises)](/previous-versions/dynamicscrm-2016/administering-dynamics-365/mt622059(v=crm.8)#prerequisites).
 
 ## Cause 6: A deleted user or mailbox was recreated with the same email address
 
