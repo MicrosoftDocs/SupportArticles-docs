@@ -24,6 +24,8 @@ Description: The program setup.exe version 3.4.2246.31370 stopped interacting wi
 Event Xml: <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event"> <System> <Provider Name="Application Hang" /> <EventID Qualifiers="0">1002</EventID>
 ```
 
+This issue can occur if the Visual Studio Installer is corrupt or fails to launch.
+
 ## Resolution
 
 To resolve the issue, follow these steps:
