@@ -4,7 +4,7 @@ description: Describes the troubleshooting steps to identify the cause of variou
 ms.date: 11/27/2012
 ms.author: haiyingyu
 author: HaiyingYu
-ms.reviewer: johnhart, riande, mlaing
+ms.reviewer: johnhart, riande, mlaing, zixie
 ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
 ---
 # Troubleshooting HTTP 400 errors in IIS
@@ -15,30 +15,9 @@ This article describes the troubleshooting steps to identify the cause of variou
 
 ## Overview
 
-After sending an HTTP request to an IIS server, an HTTP client (such as Internet Explorer) may display the following type of error message:
+After sending an HTTP request to an IIS server, an HTTP client (such as Microsoft Edge) may display the following type of error message:
 
----
-
-:::image type="icon" source="media/troubleshoot-http-400-errors-in-iis/error-icon.png":::
-**HTTP 400**
-**The webpage cannot be found.**
-
-Most likely causes:
-
-- There might be a typing error in the address.
-- If you clicked on a link, it may be out of date.
-
-What you can try:
-
-- Retype the address.
-- Go back to the previous page.
-- Go to Bing and look for the information you want.
-
----
-
-If the HTTP client is Internet Explorer, and the **Show Friendly HTTP Error Messages** option is turned off, the error may resemble:
-
-> Bad Request
+> HTTP 400 - Bad Request
 
 In these scenarios, IIS has rejected the client's HTTP request because the request didn't meet the server's HTTP parsing rules, or it exceeded time limits, or failed some other rule that IIS or HTTP.sys require incoming requests to adhere to. IIS sends the "HTTP 400 - Bad Request" status back to the client, and then terminates the TCP connection.
 
@@ -51,11 +30,13 @@ In these scenarios, IIS has rejected the client's HTTP request because the reque
 
 When troubleshooting an HTTP 400 condition, it's important to remember that the underlying problem is that the client has sent a request to IIS that breaks one or more rules that HTTP.sys is enforcing. With that in mind, you'll want to see what exactly the client is sending to IIS. To do it, capture a network trace of the client sending the bad request. You can analyze the trace to see the raw data that the client sends to IIS, and to see the raw response data that IIS sends back to the client. You can also use an HTTP sniffer tool called [Fiddler](https://www.telerik.com/fiddler), a great tool as it allows you to see the HTTP headers even if the client and server are communicating over SSL.
 
-The next data item you use is the _C:\Windows\System32\LogFiles\HTTPERR\httperr.log_ file. Beginning in IIS 6.0, the HTTP.sys component handles incoming HTTP requests before they're passed along to IIS, and is the component responsible for blocking requests that don't meet the IIS requirements. When HTTP.sys blocks the request, it logs information to its _httperr.log_ file concerning the bad request and why it was blocked.
+The next data item you use is the _C:\Windows\System32\LogFiles\HTTPERR\httperr.log_ file. In IIS, the HTTP.sys component handles incoming HTTP requests before they're passed along to IIS, and is the component responsible for blocking requests that don't meet the IIS requirements. When HTTP.sys blocks the request, it logs information to its _httperr.log_ file concerning the bad request and why it was blocked.
 
 **NOTE:** For more information on the HTTP API error logging that HTTP.sys provides, see [Error logging in HTTP API](../../aspnet/site-behavior-performance/error-logging-http-apis.md).
 
 It's technically possible, although not very likely, that a client may receive an HTTP 400 response, which doesn't have an associated log entry in the _httperr.log_. It could happen if an ISAPI filter or extension or an HTTP module in IIS sets the 400 status, in which case you could look at the IIS log for more information. It could also happen if an entity between the client and the server, such as a proxy server or other network device, intercepts a response from IIS and overrides it with its own 400 status and/or "Bad Request" error.
+
+Please note that this article mainly talks about the common HTTP 400 errors before reaching your website. In some scenarios, your website may also return HTTP 400 errors to the clients according to its custom code logics, or runtime (e.g. ASP.Net) configurations. If you have followed the steps in the below sections but cannot resolve the HTTP 400 errors, you may try to troubleshoot using the [failed requests tracing feature](./troubleshoot-failed-requests-using-tracing-in-iis-85.md) in IIS. If you find the HTTP 400 errors are actually set by your website's corresponding runtime handler, e.g. ASP.Net, you may need to inspect the details of the requests and responses, along with your website's related code logics and runtime configurations, to understand the cause of the HTTP 400 errors.
 
 ## Sample scenario
 
