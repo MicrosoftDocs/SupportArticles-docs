@@ -41,27 +41,23 @@ The EAC in Exchange Server provides an option to **Apply changes to this public 
 
 ### Workaround
 
-Select one of the following workarounds, depending on the Exchange environment for the affected public folders.
+Select one of the following workarounds, depending on the Exchange environment for the affected public folders:
 
-#### Public folders in Exchange Online
+- For public folders in Exchange Online, run the [Update-PublicFolderPermissions.ps1](https://aka.ms/PFPermissionScript) script in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). Include the PowerShell parameters that are shown in the following example:
 
-Run the [Update-PublicFolderPermissions.ps1](https://aka.ms/PFPermissionScript) script in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). Include the PowerShell parameters that are shown in the following example:
+   ```PowerShell
+   .\Update-PublicFolderPermissions.ps1 -Users user1@contoso.com -AccessRights Owner -IncludeFolders "\FolderA" -Recurse -Confirm:$false
+   ```
 
-```PowerShell
-.\Update-PublicFolderPermissions.ps1 -Users user1@contoso.com -AccessRights Owner -IncludeFolders "\FolderA" -Recurse -Confirm:$false
-```
+   This command grants `user1@contoso.com` the Owner role on the `\FolderA` public folder and its entire subtree.
 
-This command grants `user1@contoso.com` the Owner role on the `\FolderA` public folder and its entire subtree.
+- For public folders in Exchange Server, run the [Update-PublicFolderPermissions.ps1](https://www.microsoft.com/download/details.aspx?id=48689) script in the Exchange Management Shell (EMS). Include the PowerShell parameters that are shown in the following example:
 
-#### Public folders in Exchange Server
+   ```PowerShell
+   .\Update-PublicFolderPermissions.ps1 -IncludeFolders "\FolderA" -AccessRights "Owner" -Users "user1@contoso.com", "user2@contoso.com" -Recurse -Confirm:$false
+   ```
 
-Run the [Update-PublicFolderPermissions.ps1](https://www.microsoft.com/download/details.aspx?id=48689) script in the Exchange Management Shell (EMS). Include the PowerShell parameters that are shown in the following example:
-
-```PowerShell
-.\Update-PublicFolderPermissions.ps1 -IncludeFolders "\FolderA" -AccessRights "Owner" -Users "user1@contoso.com", "user2@contoso.com" -Recurse -Confirm:$false
-```
-
-This command grants `user1@contoso.com` and `user2@contoso.com` the Owner role on the `\FolderA` public folder and its entire subtree.
+   This command grants `user1@contoso.com` and `user2@contoso.com` the Owner role on the `\FolderA` public folder and its entire subtree.
 
 ## Maintain per-user read setting isn't applied to all subfolders
 
