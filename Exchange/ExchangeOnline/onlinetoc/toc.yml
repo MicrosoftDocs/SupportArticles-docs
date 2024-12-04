@@ -613,7 +613,7 @@
           href: ../public-folders/pf-migration-fails-sourcepfprimarymailboxguid.md
         - name: '"Number of public folder mailboxes cannot exceed more than 100" error'
           href: ../public-folders/migration-batch-error-too-many-public-folders.md
-        - name: Permissions and settings don't propagate in EAC
+        - name: Permissions and settings don't propagate to all subfolders
           href: ../public-folders/permissions-settings-not-propagate-eac.md
         - name: Public folder couldn't be mail-enabled
           href: ../public-folders/public-folder-not-be-mail-enabled.md
