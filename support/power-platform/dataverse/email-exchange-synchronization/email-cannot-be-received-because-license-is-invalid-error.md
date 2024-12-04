@@ -2,19 +2,19 @@
 title: Email can't be received because the license is invalid for the mailbox error
 description: Solves an ErrorInvalidLicense error code that occurs when you select Test & Enable Mailbox in Microsoft Dynamics 365.
 ms.reviewer: 
-ms.date: 11/28/2024
+ms.date: 12/04/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
-# "Email can't be received because the license is invalid for the mailbox" error occurs in Microsoft Dynamics 365
+# "Email can't be received because the license is invalid for the mailbox" error when selecting Test & Enable Mailbox
 
-This article provides a resolution for an error that occurs when you test the configuration of mailboxes in Microsoft Dynamics 365.
+This article provides a resolution for an error that occurs when you test mailbox configuration in Microsoft Dynamics 365.
 
 _Applies to:_ &nbsp; Microsoft Dynamics 365  
 _Original KB number:_ &nbsp; 4459027
 
 ## Symptoms
 
-After you select [Test & Enable Mailbox](/power-platform/admin/connect-exchange-online#test-the-configuration-of-mailboxes) to test a mailbox, the **Incoming Email Status** shows **Failure** and an alert is logged with the following details:
+After you select [Test & Enable Mailbox](/power-platform/admin/connect-exchange-online#test-the-configuration-of-mailboxes) to test a mailbox, the **Incoming Email Status** shows **Failure**, and an alert is logged with the following details:
 
 > Email can't be received because the license is invalid for the mailbox \<Mailbox Name>.  
 > **Email Server Error Code:** ErrorInvalidLicense
@@ -28,7 +28,7 @@ This error can occur if you try to connect to an Exchange Online user mailbox th
 To solve this issue, [assign an Exchange Online license to the user mailbox](/microsoft-365/admin/add-users/add-users).
 
 > [!NOTE]
-> If the purpose of the mailbox is to function as a queue and not a user, it's recommended to use a shared mailbox in Exchange. Shared mailboxes don't require an Exchange Online license. If you open the [Exchange admin center](/exchange/features-in-new-eac), select **Recipients**, and then select **Shared**, check to see if the mailbox appears in this list. If the mailbox is a regular mailbox and you select it, you will see an option to convert it to a shared mailbox.
+> If the purpose of the mailbox is to function as a queue rather than for individual use, it's recommended to use a shared mailbox in Exchange. Shared mailboxes don't require an Exchange Online license. To check if a mailbox is shared, open the [Exchange admin center](/exchange/features-in-new-eac), select **Recipients**, and then select **Shared**. If the mailbox appears in this list, it's a shared mailbox. If it's a regular mailbox, you'll see an option to convert it to a shared mailbox.
 
 ## More information
 

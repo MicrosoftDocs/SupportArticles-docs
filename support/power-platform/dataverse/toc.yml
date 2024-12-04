@@ -34,7 +34,7 @@
       href: email-exchange-synchronization/error-when-you-test-enable-a-mailbox.md
     - name: Emails aren't automatically tracked or synchronized
       href: email-exchange-synchronization/emails-not-automatically-tracked-or-synchronized.md
-    - name: Email can't be received because the license is invalid for the mailbox
+    - name: '"Email can't be received because the license is invalid for the mailbox" error'
       href: email-exchange-synchronization/email-cannot-be-received-because-license-is-invalid-error.md
     - name: Email fails to be created with NoRecipientMatch
       href: email-exchange-synchronization/email-fails-to-create-with-norecipientmatch-error.md
