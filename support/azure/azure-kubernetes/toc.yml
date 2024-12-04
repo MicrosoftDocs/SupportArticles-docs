@@ -83,7 +83,7 @@
     items:
     - name: LB/PvtLinkSvcWithPvtEndptConn deletion error
       href: create-upgrade-delete/cannot-delete-load-balancer-private-link-service.md
-    - name: PublicIPAddr/InUseSubnet/NetworkSecGrp deletion error
+    - name: PublicIPAddr/InUseSubnet/NetSecGrp deletion error
       href: create-upgrade-delete/cannot-delete-ip-subnet-nsg.md
     - name: InUseRouteTableCannotBeDeleted error
       href: create-upgrade-delete/error-code-inuseroutetablecannotbedeleted.md
