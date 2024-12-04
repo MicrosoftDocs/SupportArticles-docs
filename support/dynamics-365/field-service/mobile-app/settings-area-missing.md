@@ -1,6 +1,6 @@
 ---
 title: Settings area is missing in the Field Service Mobile app module navigation
-description: Resolves the Field Service Settings area missing in the Microsoft Dynamics 365 Field Service mobile app.
+description: Provides resolution for missing settings area in the Dynamics 365 Field Service mobile app.
 author: JonBaker007
 ms.author: jobaker
 ms.reviewer: mhart
@@ -12,11 +12,13 @@ ms.custom: sap:Mobile application
 
 ## Symptoms
 
-The Field Service Mobile app module doesn't show the settings area, blocking administrators to enable the new experience.
+The Field Service Mobile app module doesn't show the settings area, blocking administrators from [enabling the new experience](/dynamics365/field-service/mobile/set-up-field-service-mobile#enable-the-new-mobile-user-experience).
+
+## Cause
+
+The new mobile experience settings toggle is available through a new navigation area that comes with the default Field Service Mobile app module. Users need *write* permissions for the `FieldServiceSetting` entity to access this area. Default security roles like System Admin or Field Service Admin roles have that permission automatically. However, if customizations were made on the sitemap of the out-of-box Field Service Mobile app module, the settings area might not show in some cases.
 
 ## Resolution
-
-The new mobile experience settings toggle is available through a new navigation area that comes with the default Field Service Mobile app module. Users need *write* permissions for the `FieldServiceSetting` entity to access this area. Default security roles like System Admin or Field Service Admin roles have that permission automatically. However, some times if customizations were made on the sitemap of the out-of-box Field Service Mobile app module, the settings area might not show.
 
 There are two options to enable the settings area:
 
@@ -31,7 +33,7 @@ First, check whether the sitemap area exists on the default Field Service Mobile
 1. Change to your environment and open `fieldservice_patch_update` solution.
 1. [View the solution layers](/power-apps/maker/data-platform/solution-layers) for the `msdyn_FSMobileSettingsArea` component in the `fieldservice_patch_update` solution.
 
-If the area is present, a customization layer on the sitemap sits on top, which removes the area. In that case, there are two options:
+If the area is present, a customization layer on the sitemap sits on top, which overrides the area. In that case, there are two options:
 
 1. Remove the customization layer and then manually customize the sitemap again:
    1. [Remove the unmanaged customization layer](/power-apps/maker/data-platform/solution-layers#remove-an-unmanaged-layer).
