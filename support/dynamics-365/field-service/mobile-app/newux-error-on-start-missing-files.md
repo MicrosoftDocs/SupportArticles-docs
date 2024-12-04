@@ -7,7 +7,7 @@ ms.reviewer: mhart
 ms.date: 12/04/2024
 ms.custom: sap:Mobile application\Application is throwing errors
 ---
-# The Field Service mobile app fails to start due to missing files in the solution
+# The Field Service mobile app fails to start due to missing files in the Field Service app
 
 This article provides a resolution for an issue where the [Dynamics 365 Field Service mobile app](/dynamics365/field-service/mobile/overview) fails to start.
 
@@ -17,7 +17,7 @@ When you start to use the [new user experience in the Dynamics 365 Field Service
 
 ## Cause
 
-Some required source records are missing. These records should be created when installing the solution, but in rare cases, they don't get created successfully or get corrupted. It's also possible that a user deleted the records.
+Some required source records are missing. These records should be created when installing the Field Service app, but in rare cases, they don't get created successfully or get corrupted. It's also possible that a user deleted the records.
 
 ## Resolution
 
