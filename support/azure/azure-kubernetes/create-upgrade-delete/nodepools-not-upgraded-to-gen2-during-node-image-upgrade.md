@@ -1,7 +1,7 @@
 ---
 title: Windows nodepools not upgraded to Gen2 during cluster node image upgrade
 description: Troubleshoot why Windows Server nodepools don't get upgraded automatically from Gen1 to Gen2 when a cluster node image is upgraded in Azure Kubernetes Service.
-ms.date: 01/27/2023
+ms.date: 11/20/2024
 editor: v-jsitser
 ms.reviewer: chiragpa, cssakscic, v-leedennis
 ms.service: azure-kubernetes-service
