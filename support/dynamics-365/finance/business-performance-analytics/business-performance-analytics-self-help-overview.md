@@ -4,7 +4,7 @@ description: Provides information about Business performance analytics self-help
 author: jinniew
 ms.author: jiwo
 ms.reviewer: twheeloc 
-ms.date: 04/30/2024
+ms.date: 12/04/2024
 ms.custom: sap:Business intelligence, reporting, analytics
 ms.search.form: business-performance-analytics
 audience: Application User
@@ -54,6 +54,7 @@ For information about specific errors or warnings, see the following articles:
 - [Missing main account in general ledger: Error code: ERR00010 [Type: Warning]](missing-main-account-in-gl-err00010.md)
 - [Decimal limit exceeded: Error code: ERR00011 [Type: Warning]](decimal-limit-exceed-err00011.md)
 - [Decimal auto rounding: Error code: ERR00012 [Type: Warning]](decimal-auto-rounding-err00012.md)
+- [Null join violation Error code: ERR00014 [Type: Warning]](ledger-join-err00014.md)
 
 ## See also
 

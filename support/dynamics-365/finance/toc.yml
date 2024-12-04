@@ -32,6 +32,9 @@
       href: business-performance-analytics/missing-budget-transaction-header-err00007.md
     - name: Missing foreign key reference ERR00008
       href: business-performance-analytics/missing-foreign-key-err0008.md
+    - name: Null join violation ERR00014
+      href: business-performance-analytics/null-join-violation-err00014.md
+
 - name: Cash and bank management
   items:
     - name: Troubleshoot issues with transactions that can't be settled
