@@ -48,14 +48,14 @@
       href: create-upgrade-delete/windows-cse-error-check-api-server-connectivity.md
     - name: ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error
       href: create-upgrade-delete/error-code-zonalallocationfailed-allocationfailed.md
-    - name: Quota exceeded error during creation or upgrade
+    - name: QuotaExceeded or InsufficientVCPUQuota error during creation or upgrade
       href: create-upgrade-delete/quota-exceeded-during-creation-upgrade.md
   - name: Upgrade operations
     items:
     - name: AADSTS7000222 - BadRequest or InvalidClientSecret error
       href: create-upgrade-delete/error-code-badrequest-or-invalidclientsecret.md
-    - name: Kubernetes 1.16 upgrades fail
-      href: create-upgrade-delete/upgrades-to-kubernetes-fail-using-node-labels.md
+    - name: DnsServiceIpOutOfServiceCidr error
+      href: create-upgrade-delete/error-code-dnsserviceIpoutofservicecidr.md
     - name: NodePoolMcVersionIncompatible error
       href: create-upgrade-delete/nodepoolmcversionincompatible-error.md
     - name: PublicIPCountLimitReached error
@@ -78,26 +78,19 @@
       href: create-upgrade-delete/upgrade-fails-because-of-nsg-rules.md
     - name: Memory saturation occurs in pods after cluster upgrade
       href: create-upgrade-delete/aks-memory-saturation-after-upgrade.md
+
   - name: Delete operations
     items:
-    - name: CannotDeleteLoadBalancerWithPrivateLinkService error
+    - name: LB/PvtLinkSvcWithPvtEndptConn deletion error
       href: create-upgrade-delete/cannot-delete-load-balancer-private-link-service.md
-    - name: InUseNetworkSecurityGroupCannotBeDeleted error
+    - name: PublicIPAddr/InUseSubnet/NetSecGrp deletion error
       href: create-upgrade-delete/cannot-delete-ip-subnet-nsg.md
     - name: InUseRouteTableCannotBeDeleted error
       href: create-upgrade-delete/error-code-inuseroutetablecannotbedeleted.md
-    - name: InUseSubnetCannotBeDeleted error
-      href: create-upgrade-delete/cannot-delete-ip-subnet-nsg.md
     - name: LoadBalancerInUseByVirtualMachineScaleSet error
       href: create-upgrade-delete/load-balancer-or-nsg-in-use-by-vm-scale-set.md
     - name: NetworkSecurityGroupInUseByVirtualMachineScaleSet error
       href: create-upgrade-delete/load-balancer-or-nsg-in-use-by-vm-scale-set.md
-    - name: PrivateLinkServiceWithPrivateEndpointConnectionsCannotBeDeleted error
-      href: create-upgrade-delete/cannot-delete-load-balancer-private-link-service.md
-    - name: PublicIPAddressCannotBeDeleted error
-      href: create-upgrade-delete/cannot-delete-ip-subnet-nsg.md
-    - name: RequestDisallowedByPolicy error
-      href: create-upgrade-delete/error-code-requestdisallowedbypolicy-delete.md
     - name: SubscriptionRequestsThrottled error
       href: create-upgrade-delete/error-code-toomanyrequestsreceived-subscriptionrequeststhrottled.md
     - name: TooManyRequestsReceived error
@@ -217,7 +210,7 @@
       href: connectivity/config-file-is-not-available-when-connecting.md
     - name: Tunnel connectivity issues
       href: connectivity/tunnel-connectivity-issues.md
-    - name: User can't get cluster resources
+    - name: Troubleshoot "Forbidden" error when trying to access AKS cluster resources
       href: connectivity/user-cannot-get-cluster-resources.md
     - name: Can't access the cluster API server using authorized IP ranges
       href: connectivity/cannot-access-cluster-api-server-using-authorized-ip-ranges.md

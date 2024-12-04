@@ -60,10 +60,10 @@ ADFS is developed by using Microsoft .NET Framework. For .NET applications to su
 >
 >    Examples of subkeys for this new registry key:
 >
->   - [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v2.0.50727] SchUseStrongCrypto=dword:00000001
->   - [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] SchUseStrongCrypto=dword:00000001
->   - [HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] SchUseStrongCrypto=dword:00000001
->   - [HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v2.0.50727] SchUseStrongCrypto=dword:00000001
+>   - [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework\v2.0.50727] SchUseStrongCrypto=dword:00000001
+>   - [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework\v4.0.30319] SchUseStrongCrypto=dword:00000001
+>   - [HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework\v4.0.30319] SchUseStrongCrypto=dword:00000001
+>   - [HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework\v2.0.50727] SchUseStrongCrypto=dword:00000001
 >
 > - To apply the change, you must restart the following services and applications:
 >   - ADFS Service (adfssrv)

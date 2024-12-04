@@ -687,8 +687,8 @@ items:
       href: ./backup-and-storage/disk-defragmenter-limitations.md
     - name: Establish and boot to GPT mirrors in 64-bit Windows
       href: ./backup-and-storage/establish-boot-to-gpt-mirrors.md
-    - name: Extend a data volume
-      href: ./backup-and-storage/extend-data-volume.md
+    - name: Extend or shrink a data volume
+      href: ./backup-and-storage/extend-shrink-data-volume.md
     - name: FAQs about GUID Partitioning Table disk architecture
       href: ./backup-and-storage/guid-partitioning-table-disk-faq.yml
     - name: Fix heavy memory usage in ReFS
@@ -799,8 +799,6 @@ items:
       href: ./certificates-and-public-key-infrastructure-pki/import-third-party-ca-to-enterprise-ntauth-store.md
     - name: How to reinstall CA role
       href: ./certificates-and-public-key-infrastructure-pki/uninstall-reinstall-ca-role.md
-    - name: How to remove manually Enterprise Windows Certificate Authority
-      href: ./certificates-and-public-key-infrastructure-pki/delete-enterprise-windows-certificate-authority.md
     - name: Move a certification authority to another server
       href: ./certificates-and-public-key-infrastructure-pki/move-certification-authority-to-another-server.md
     - name: Move Certificate Server database and log files
@@ -891,8 +889,6 @@ items:
     items:
     - name: Disable TLS 1.0 and 1.1 and force the use of TLS 1.2
       href: ./certificates-and-public-key-infrastructure-pki/disable-tls-1-1dot1-mbam-servers.md
-    - name: Restrict cryptographic algorithms and protocols
-      href: ./certificates-and-public-key-infrastructure-pki/restrict-cryptographic-algorithms-protocols-schannel.md
 - name: Containers
   items:
   - name: Management of Containers
@@ -926,7 +922,7 @@ items:
     - name: AGPM and GPRESULT are not working
       href: ./group-policy/agpm-gpresult-not-working.md
     - name: Changes to GPO permissions aren't saved
-      href: ./group-policy/changes-to-gpo-permissions-ignored.md    
+      href: ./group-policy/changes-to-gpo-permissions-ignored.md
     - name: Dcgpofix tool doesn't restore security settings to the original state
       href: ./group-policy/dcgpofix-not-restore-default-domain-controller-policy-security-settings.md
     - name: Description of group policy restricted groups
@@ -935,10 +931,10 @@ items:
       href: ./group-policy/error-0x8007000d-backup-gpo-cmdlet.md
     - name: GPMC or Import-GPO cmdlet fails to restore a GPO from backup
       href: ./group-policy/gpmc-import-gpo-fails-restore-gpo-backup.md
+    - name: Group Policy settings show as Extra Registry Settings
+      href: ./group-policy/group-policy-settings-show-as-extra-registry-settings.md
     - name: How to enable the Group Policy loopback feature
       href: ./group-policy/loopback-processing-of-group-policy.md
-    - name: How to give users access to Group Policy Objects
-      href: ./group-policy/give-users-access-group-policy-objects.md
     - name: How to set event log security locally or via Group Policy
       href: ./group-policy/set-event-log-security-locally-or-via-group-policy.md
     - name: Manage Group Policy administrative template files
@@ -1049,8 +1045,6 @@ items:
     items:
     - name: DFSR SYSVOL fails to migrate or replicate
       href: ./group-policy/dfsr-sysvol-fails-migrate-replicate.md
-    - name: Errors when you run GPMC
-      href: ./group-policy/fail-to-run-gpmc.md
     - name: How to force synchronization for DFSR-replicated sysvol replication
       href: ./group-policy/force-authoritative-non-authoritative-synchronization.md
     - name: Minimize SYSVOL size by removing administrative templates
@@ -1115,6 +1109,8 @@ items:
       href: ./high-availability/cluster-validation-test-fails-multi-site-cluster-scenario.md
     - name: Storage tests on a failover cluster might not discover all shared LUNs
       href: ./high-availability/failover-cluster-storage-validation-tests-dont-discover-all-shared-luns.md
+    - name: Validate hardware for a failover cluster
+      href: ./high-availability/validate-hardware-failover-cluster.md
   - name: Initial Cluster Creation or Adding node
     items:
     - name: Error 0x80090327 when adding a node to a cluster
@@ -1459,6 +1455,8 @@ items:
       href: ./networking/troubleshoot-dhcp-guidance.md
     - name: Can't add a DHCP reservation
       href: ./networking/cant-add-dhcp-reservation.md
+    - name: Client machines don't send DDNS updates
+      href: ./networking/client-ddns-updates-dhcp-option-81.md
     - name: DHCP client can't get a DHCP-assigned IP address
       href: ./networking/dhcp-client-fail-obtain-valid-ip-address.md
     - name: DHCP server is slow or fails to respond to DHCP requests
@@ -1807,6 +1805,10 @@ items:
       href: ./performance/toggle-terminal-services-application-server-mode.md
     - name: Troubleshoot the "STOP 0xC000021A" error
       href: ./performance/troubleshoot-stop-0xc000021a-error.md
+    - name: 'Troubleshoot stop errors: Best practices and dump configuration recommendations'
+      href: ./performance/troubleshoot-stop-errors-best-practices-dump-configuration-recommendations.md
+    - name: Troubleshoot unexpected reboots using system event logs
+      href: ./performance/troubleshoot-unexpected-reboots-system-event-logs.md
     - name: Use Dumpchk.exe to check a memory dump file
       href: ./performance/use-dumpchk-to-check-memory-dump-file.md
   - name: Boot is slow
@@ -2923,6 +2925,16 @@ items:
       href: ./windows-security/performance-tuning-ntlm-authentication-maxconcurrentapi.md
     - name: Windows updates add new NTLM pass-through authentication protections for CVE-2022-21857
       href: ./windows-security/windows-updates-add-new-ntlm-pass-through-authentication-protections.md
+  - name: Netlogon, secure channel, DC Locator
+    items:
+    - name: 'Troubleshooting guidance: Secure channel'
+      href: ./windows-security/broken-trust-relationship-domain-joined-device-its-domain-secure-channel-issues.md
+    - name: Gather information for secure channel issues
+      href: ./windows-security/data-collection-for-troubleshooting-secure-channel-issues.md
+    - name: Active Directory has a newer password than the client
+      href: ./windows-security/active-directory-has-newer-password-value-than-client-device.md
+    - name: Client has a newer password than Active Directory
+      href: ./windows-security/client-device-has-newer-password-value-than-active-directory.md
   - name: Permissions, access control, and auditing
     items:
     - name: .bak log files are deleted and lost

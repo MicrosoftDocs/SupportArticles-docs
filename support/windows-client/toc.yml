@@ -303,6 +303,10 @@ items:
       href: ./networking/configure-domain-suffix-search-list-domain-name-system-clients.md
     - name: DNS requests appear to be random
       href: ./networking/dns-requests-random-network-properties-change.md
+    - name: Troubleshoot DNS dynamic update issues
+      href: ./networking/troubleshooting-dns-dynamic-update-issues.md
+    - name: Troubleshoot DNS client name resolution issues
+      href: ./networking/troubleshoot-dns-client-resolution-issues.md
     - name: URI-encoding in UNC paths interpreted literally
       href: ./networking/url-encoding-unc-paths-not-url-decoded.md
   - name: Dynamic Host Configuration Protocol (DHCP)

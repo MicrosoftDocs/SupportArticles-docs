@@ -3,9 +3,9 @@ title: Troubleshoot common certificate issues in RHUI
 description: Troubleshoot common Red Hat Update Infrastructure certificate issues in Azure that are caused by expired or missing TLS or SSL certificates.
 author: msaenzbosupport
 ms.author: msaenzbo
-ms.reviewer: divargas-msft, pagienge, v-weizhu
+ms.reviewer: divargas-msft, pagienge, navpreetkaur, v-weizhu
 editor: v-jsitser
-ms.date: 04/28/2024
+ms.date: 10/24/2024
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ---
@@ -50,7 +50,7 @@ To access RHEL repositories on pay-as-you-go systems in cloud environments, use 
 In this situation, you have to install the new RHUI package in the system. This package has the renewed certificate. To update the RHUI package, run the [yum](https://access.redhat.com/articles/yum-cheat-sheet) command:
 
 ```bash
-sudo yum update -y --disablerepo='*' --enablerepo='*microsoft*'
+sudo yum update -y --disablerepo='*' --enablerepo='*microsoft-azure*'
 ```
 
 The `sudo yum update` command might also update the client certificate package (depending on your RHEL version). This is true even if the command output contains the same expired SSL certificate errors that you see for other repositories. If this update is successful, you have to restore normal connectivity to other RHUI repositories so that you can run `sudo yum update` successfully a second time.
@@ -110,7 +110,7 @@ All the commands in the following steps should be run by using root privileges o
 3. Reinstall the corresponding `rhui-azure` package by running the `yum reinstall` command:
 
    ```bash
-   sudo yum reinstall $(rpm -qa | grep -i rhui-azure) --disablerepo=* --enablerepo="*microsoft*"
+   sudo yum reinstall $(rpm -qa | grep -i rhui-azure) --disablerepo=* --enablerepo="*microsoft-azure*"
    ```
 
 4. If the `EUS` or `E4S` repo is installed, lock the `releasever` variable:

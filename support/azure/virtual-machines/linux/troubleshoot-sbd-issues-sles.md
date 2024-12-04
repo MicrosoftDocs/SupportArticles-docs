@@ -2,10 +2,10 @@
 title: Troubleshoot SBD service failure in SUSE Pacemaker clusters
 description: Provides troubleshooting guidance if SBD services fail
 ms.reviewer: rnirek
-ms.author: rnirek
+ms.author: hsisodia
 author: rnirek
 ms.topic: troubleshooting
-ms.date: 09/24/2024
+ms.date: 10/23/2024
 ms.service: azure-virtual-machines
 ms.collection: linux
 ms.custom: sap:Issue with Pacemaker clustering, and fencing
@@ -15,11 +15,11 @@ ms.custom: sap:Issue with Pacemaker clustering, and fencing
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-This article outlines common scenarios where the STONITH Block Device (SBD) service doesn't start in a SUSE Enterprise Linux Pacemaker cluster and provides guidance for identifying and resolving this issue.
+This article outlines common scenarios where the STONITH Block Device (SBD) service doesn't start in a SUSE Enterprise Linux Pacemaker cluster. This article also provides guidance for identifying and resolving this issue.
 
 ## How SBD works
 
-An SBD device requires at least one additional virtual machine (VM) that acts as an Internet Small Computer System Interface (iSCSI) target server and provides an SBD device. These iSCSI target servers can also be shared with other Pacemaker clusters. The advantage in using SBD is that, if you're already using them on-premises, SBD devices don't require you to change how you operate the Pacemaker cluster.
+An SBD device requires at least one additional virtual machine (VM) that acts as an Internet Small Computer System Interface (iSCSI) target server and provides an SBD device. These iSCSI target servers can also be shared with other Pacemaker clusters. The advantage to using an SBD is that, if you're already using them on-premises, SBD devices don't require you to change how you operate the Pacemaker cluster.
 
 For a Microsoft Azure Pacemaker cluster that has SBD storage protection, you can use either of the following options for the setup. For more information about these mechanisms, see:
 
@@ -28,7 +28,7 @@ For a Microsoft Azure Pacemaker cluster that has SBD storage protection, you can
 
 ## How to diagnose the issue
 
-The following example demonstrates how to determine that the cluster startup issue is due to the SBD service failure.
+The following example demonstrates how to determine that the cluster startup issue is caused by the SBD service failure.
 
 1. Check the status of the cluster:
 
@@ -38,7 +38,7 @@ The following example demonstrates how to determine that the cluster startup iss
     ```output
     ERROR: status: crm_mon (rc=102): Error: cluster is not available on this node
     ```
-2. Check the pacemaker service stauts. The following example output indicates that the Pacemaker service has failed because one or more dependent services are not functioning:
+2. Check whether the Pacemaker service starts. The following example output indicates that the Pacemaker service failed because one or more dependent services are not functioning:
 
     ```bash
     sudo systemctl status pacemaker
@@ -69,7 +69,7 @@ The following example demonstrates how to determine that the cluster startup iss
       ```
 4. Check the status of each service. In the following example, you can see that all dependency services, such as Corosync, are active, but the SBD service is not running: 
 
-      ```bash
+    ```bash
     sudo systemctl status corosync
     ```
     ```output
@@ -90,8 +90,9 @@ The following example demonstrates how to determine that the cluster startup iss
     Aug 01 04:49:15 nfs-0 corosync[24094]:   [QUORUM] Members[2]: 1 2
     Aug 01 04:49:15 nfs-0 corosync[24094]:   [MAIN ] Completed service synchronization, ready to provide service.
     Aug 01 04:49:15 nfs-0 corosync[24075]: Starting Corosync Cluster Engine (corosync): [ OK ]
+    ```
 
-5. Check the SBD service status. The service doesn't start, and it returns a `Failed to start Shared-storage based fencing daemon` error message. 
+5. Check the SBD service status. In this example, the service doesn't start, and it returns a `Failed to start Shared-storage based fencing daemon` error message: 
 
       ```bash
       sudo systemctl status sbd
@@ -113,44 +114,50 @@ The following example demonstrates how to determine that the cluster startup iss
       ```
 ## Cause 1 : SBD service failed because of iSCSI failure
 
-The Pacemaker service is not running, and the SBD service is in a failed state on both cluster nodes. The iSCSI services use the iSCSI Qualified Name (IQN) for communication between the initiator and target nodes. Failing to run services causes SBD disks to become inaccessible. This, in turn, causes the SBD and Pacemaker services to fail.
+The Pacemaker service is not running, and the SBD service is in a failed state on both cluster nodes. The iSCSI services use the iSCSI Qualified Name (IQN) for communication between the initiator and target nodes. SBD disks can become inaccessible if services are not run. This, in turn, causes the SBD and Pacemaker services to fail.
 
 ### Resolution
 
 1. Make sure that the setup is correctly configured as documented in [SUSE - set up Pacemaker on SUSE Linux Enterprise Server in Azure ](/azure/sap/workloads/high-availability-guide-suse-pacemaker).
-
-2. Make sure that the `iscsid` and `iscsi` services are enabled and running:
-
-    ```  bash
-    sudo systemctl enable iscsi
-    ```
-    ```bash
-    sudo systemctl enable iscsid
-    ```
-    ```bash
-    sudo systemctl status iscsi 
-    ```
-    ```bash
-    sudo systemctl status iscsid
-    ```
-    If the services are working, the output should resemble the following:
+2. Put the cluster into maintenance mode:
+   ```bash
+   sudo crm configure property maintenance-mode=true
+   ```
+3. Make sure that the `iscsid` and `iscsi` services are enabled:
+   ```  bash
+   sudo systemctl enable iscsi
+   ```
+   ```bash
+   sudo systemctl enable iscsid
+   ```
+4. Verify that the of `iscsid` and `iscsi` services are running:
+   ```bash
+   sudo systemctl status iscsi
+   ```
+   ```bash
+   sudo systemctl status iscsid
+   ```
+   If the services are working, the output should resemble the following:  
+   ```output
+   iscsi.service - Login and scanning of iSCSI devices
+   Loaded: loaded (/usr/lib/systemd/system/iscsi.service; enabled; vendor preset: enabled)
+   Active: active (exited) since Thu 2024-08-01 04:18:51 UTC; 31min ago
+   Docs: man:iscsiadm(8)
+   man:iscsid(8)
+   Main PID: 1823 (code=exited, status=0/SUCCESS)
+   Tasks: 0 (limit: 4096)
+   CGroup: /system.slice/iscsi.service
     
-    ```output
-    iscsi.service - Login and scanning of iSCSI devices
-     Loaded: loaded (/usr/lib/systemd/system/iscsi.service; enabled; vendor preset: enabled)
-     Active: active (exited) since Thu 2024-08-01 04:18:51 UTC; 31min ago
-       Docs: man:iscsiadm(8)
-             man:iscsid(8)
-    Main PID: 1823 (code=exited, status=0/SUCCESS)
-      Tasks: 0 (limit: 4096)
-     CGroup: /system.slice/iscsi.service
-    
-    Aug 01 04:18:51 nfs-0 systemd[1]: Starting Login and scanning of iSCSI devices...
-    Aug 01 04:18:51 nfs-0 iscsiadm[1823]: Logging in to [iface: default, target: iqn.2006-04.nfs.local:nfs, portal: 10.0.0.17,3260]
-    Aug 01 04:18:51 nfs-0 iscsiadm[1823]: Logging in to [iface: default, target: iqn.2006-04.nfs.local:nfs, portal: 10.0.0.18,3260]
-    Aug 01 04:18:51 nfs-0 iscsiadm[1823]: Logging in to [iface: default, target: iqn.2006-04.nfs.local:nfs, portal: 10.0.0.19,3260]
-    Aug 01 04:18:51 nfs-0 systemd[1]: Started Login and scanning of iSCSI devices.
-    ```
+   Aug 01 04:18:51 nfs-0 systemd[1]: Starting Login and scanning of iSCSI devices...
+   Aug 01 04:18:51 nfs-0 iscsiadm[1823]: Logging in to [iface: default, target: iqn.2006-04.nfs.local:nfs, portal: 10.0.0.17,3260]
+   Aug 01 04:18:51 nfs-0 iscsiadm[1823]: Logging in to [iface: default, target: iqn.2006-04.nfs.local:nfs, portal: 10.0.0.18,3260]
+   Aug 01 04:18:51 nfs-0 iscsiadm[1823]: Logging in to [iface: default, target: iqn.2006-04.nfs.local:nfs, portal: 10.0.0.19,3260]
+   Aug 01 04:18:51 nfs-0 systemd[1]: Started Login and scanning of iSCSI devices.
+   ```
+5. Remove the cluster from maintenance mode:
+   ```bash
+   sudo crm configure property maintenance-mode=false
+   ```
 ## Cause 2: Configurations issues 
 
 Incorrect SBD configurations that have, for example, missing or incorrectly named SBD devices or syntax errors can cause the SBD service to fail.
@@ -171,7 +178,7 @@ SBD_DEVICE="/dev/disk/by-id/scsi-xxxxxxxxxxxxxxxxxx;/dev/disk/by-id/scsi-xxxxxxx
 ```
 
 ### Resolution 2
-Verify the STONITH resource configuration by using the following command:
+Verify the STONITH resource configuration by running the following command:
 
 ```bash
 sudo crm configure show
@@ -253,7 +260,7 @@ Perform the following checks:
     sbd failed; please check the logs.
     ```
 
-4. To fix the error, run these steps on both nodes of the cluster to connect to the iSCSI devices after you make sure that SBD servers are running and accessible. In the following example, `iqn.2006-04.nfs.local:nfs` is a target name that's listed when you run the first command, `iscsiadm -m discovery`:
+4. To fix the error, run the following steps on both nodes of the cluster to connect to the iSCSI devices after you make sure that SBD servers are running and accessible. In the following example, `iqn.2006-04.nfs.local:nfs` is the target name that's listed when you run the first command, `iscsiadm -m discovery`:
 
     ```bash
     sudo iscsiadm -m discovery
@@ -291,7 +298,7 @@ Perform the following checks:
     [1:0:0:1]    disk    Msft     Virtual Disk     1.0   /dev/sdd
     [2:0:0:0]    disk    LIO-ORG  sbdnfs           4.0   /dev/sde
     ```
-    Run the same commands to connect to the rest of the devices. Also, run the same set of commands on the other cluster node.
+    Run the same commands to connect to the rest of the devices. Also, run the same set of commands on the other node in the cluster.
 
 5. After iSCSI devices are detected, the command output should reflect the SBD devices:
 
@@ -331,7 +338,7 @@ Perform the following checks:
     ```
 ## Cause 4: Node doesn't rejoin cluster after fencing
 
-One of the nodes doesn't rejoin the cluster after the fencing process is finished. SBD is in a failed state, and the other node is in a pending state.
+One of the nodes doesn't rejoin the cluster after the fencing process finishes. SBD is in a failed state, and the other node is in a pending state.
 
 ### Resolution 1
 
@@ -370,9 +377,9 @@ sudo grep -i SBD_STARTMODE  /etc/sysconfig/sbd
 ```output
 SBD_STARTMODE=clean
 ```
-The `SBD_STARTMODE` parameter determines whether a node can rejoin the cluster. If it's set to `always`, the node will rejoin the cluster even if it was previously fenced. If parameter is set to `clean`, the node will rejoin only after it's brought to a clean state.
+The `SBD_STARTMODE` parameter determines whether a node can rejoin the cluster. If it's set to `always`, the node will rejoin the cluster even if it was previously fenced. If the parameter is set to `clean`, the node will rejoin only after it's brought to a clean state.
 
-This behavior is expected. SBD detects a fencing message in the slot for the node and prevents it from joining the cluster until the issue is manually cleared.
+This behavior is expected. SBD detects a fencing message in the slot for the node, and prevents it from joining the cluster until the issue is manually cleared.
 
 To clear the node slot, follow these steps:
 
@@ -401,13 +408,13 @@ To clear the node slot, follow these steps:
     ```
 
 > [!NOTE]
-> In these commands, replace `<SBD_DEVICE>`,`<DEVICE_NAME>`, and `<NODENAME>` with the actual values.
+> In these commands, replace `<SBD_DEVICE>`,`<DEVICE_NAME>`, and `<NODENAME>` with the actual values per the cluster setup.
 
 ## Cause 5: SBD service doesn't start after you add new SBD device
 
 After you create an SBD device or add one to a cluster, you receive an `sbd failed; please check the logs` error message.
 
-Check if you're receiving error messages when sending messages to SBD devices:
+Check whether you're receiving error messages when you send messages to SBD devices:
 
 ```bash
 sudo sbd -d  /dev/disk/by-id/scsi-360014056eadbecfeca042d4a66b9d779 message node1 test

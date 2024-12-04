@@ -1,11 +1,11 @@
 ---
 title: Group Policy objects to Terminal Services
 description: Explains how to apply Group Policy objects to Terminal Services servers without adversely affecting other servers on the network.
-ms.date: 05/07/2024
+ms.date: 11/13/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika
+ms.reviewer: kaushika, shamilprem
 ms.custom: sap:Group Policy\Applocker or software restriction policies, csstroubleshoot
 ---
 # How to apply Group Policy objects to Terminal Services servers
@@ -31,7 +31,7 @@ To create a new OU for the Terminal Services servers, follow these steps:
 
 1. __Log in__ to a domain controller or a machine with the __Remote Server Administration Tools (RSAT)__ installed.
 
-1. __Open__ the __Start Menu__ and type __“Active Directory Users and Computers”__. Click on it to open.
+1. __Open__ the __Start Menu__ and type __"Active Directory Users and Computers"__. Click on it to open.
 
 1. In the __Active Directory Users and Computers__ console, navigate to the domain or container where you want to create the new OU.
 
@@ -39,19 +39,19 @@ To create a new OU for the Terminal Services servers, follow these steps:
 
 1. Select __New__ > __Organizational Unit__.
 
-1. In the __New Object - Organizational Unit__ dialog box, enter __“Terminal Servers”__ as the name.
+1. In the __New Object - Organizational Unit__ dialog box, enter __"Terminal Servers"__ as the name.
 
 1. Click __OK__ to create the OU.  
 
 To create a Terminal Services Group Policy object, follow these steps:
 
-1. __Open__ the __Start Menu__ and type __“Group Policy Management”__. Click on it to open.
+1. __Open__ the __Start Menu__ and type __"Group Policy Management"__. Click on it to open.
 
 1. In the __Group Policy Management__ console, navigate to your domain.
 
 1. __Right-click__ on the __Group Policy Objects__ container and select __New__.
 
-1. Enter a name for the new GPO, such as __“Terminal Servers Policy”__.
+1. Enter a name for the new GPO, such as __"Terminal Servers Policy"__.
 
 1. Click __OK__ to create the GPO.
 
@@ -59,11 +59,11 @@ To create a Terminal Services Group Policy object, follow these steps:
 
 1. This will open the __Group Policy Management Editor__ where you can configure the policy settings as needed.
 
-1. In the __Group Policy Management__ console, navigate to the __“Terminal Servers”__ OU.
+1. In the __Group Policy Management__ console, navigate to the __"Terminal Servers"__ OU.
 
-1. __Right-click__ on the __“Terminal Servers”__ OU and select __Link an Existing GPO__.
+1. __Right-click__ on the __"Terminal Servers"__ OU and select __Link an Existing GPO__.
 
-1. In the __Select GPO__ dialog box, choose __“Terminal Servers Policy”__ from the list.
+1. In the __Select GPO__ dialog box, choose __"Terminal Servers Policy"__ from the list.
 
 1. Click __OK__ to link the GPO to the OU.
 

@@ -4,8 +4,7 @@
 - name: Alerts, Metrics and Logging
   items:
   - name: Create file share throttling alerts
-    href: alerts/files-troubleshoot-create-alerts.md
-
+    href: /azure/storage/files/files-monitoring-alerts?context=/troubleshoot/azure/azure-storage/files/context/context
 - name: Backup and Restore
   items:
   - name: Troubleshoot backing up file shares
@@ -46,3 +45,5 @@
       href: file-sync/file-sync-troubleshoot-sync-group-management.md
     - name: Troubleshoot sync issues
       href: file-sync/file-sync-troubleshoot-sync-errors.md
+    - name: Troubleshoot managed identities
+      href: file-sync/file-sync-troubleshoot-managed-identities.md

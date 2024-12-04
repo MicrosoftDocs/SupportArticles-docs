@@ -4,7 +4,7 @@ description: Resolves an issue where you can't identify the user shown in an err
 author: jasonxian-msft
 ms.author: jasonxian
 ms.reviewer: v-wendysmith
-ms.date: 01/23/2024
+ms.date: 11/25/2024
 ms.custom: sap:Administration
 ---
 # Can't identify the user shown in an error message in Dynamics 365 Field Service
@@ -32,4 +32,4 @@ To identify the user, follow these steps:
 
    :::image type="content" source="media/cant-identify-user/systemuser-id.png" alt-text="Screenshot that shows the Field Service Settings Users page with the systemuser&id highlighted." lightbox="media/cant-identify-user/systemuser-id.png":::
 
-1. Replace the ID number with the ID shown in the error message, and then press <kbd>Enter </kbd>. The user's account tied to this ID appears.
+1. Replace the ID number with the ID shown in the error message, and then press <kbd>Enter</kbd>. The user's account tied to this ID appears.

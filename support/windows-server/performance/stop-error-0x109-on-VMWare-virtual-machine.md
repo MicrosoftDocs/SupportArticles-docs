@@ -1,7 +1,7 @@
 ---
 title: Stop error 0x109:CRITICAL_STRUCTURE_CORRUPTION on a VMware virtual machine
 description: describes how to fix Stop error 0x109:CRITICAL_STRUCTURE_CORRUPTION on a VMware virtual machine
-ms.date: 12/26/2023
+ms.date: 11/13/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -25,13 +25,9 @@ Arguments a3a01f58 \`92797517 b3b72bde \`e4f976b6 00000000 \`c0000103 00000000\`
 
 This problem occurs because the system detects a Critical MSR modification, and then it crashes.
 
-## Resolution
+## Workaround
 
-To resolve this problem, go to the following VMware website:
-
-[Windows 8.1/Windows Server 2012 virtual machines fail with a blue screen and report the error: CRITICAL_STRUCTURE_CORRUPTION (2060019)](https://kb.vmware.com/s/article/2060019)
-
-It is a known issue that affects ESXi 5.0.x. For more information, contact VMware.
+It is a known issue that affects ESXi 5.0.x. For more information, contact [VMware](https://www.vmware.com/).
 
 To work around this issue, manually create a CPUID mask for the affected virtual machines. To do it, follow these steps:
 

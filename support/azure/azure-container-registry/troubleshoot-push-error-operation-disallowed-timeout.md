@@ -94,7 +94,7 @@ If you require storage beyond this limit, contact [Azure Support](#contact-us-fo
 
 > `Get "https://yourARC.azurecr.io/v2/": net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)`
 
-### Solution 1: Ensure network connectivity between the device and the container registry login server on port 443
+### Solution: Ensure network connectivity between the device and the container registry login server on port 443
 
 > [!TIP]
 > The container registry login server is also known as the Registry REST API endpoint. The login server name is in the format of `<registry-name>.azurecr.io` (must be all lowercase).
@@ -105,11 +105,11 @@ If your device is part of a restricted network environment, check whether there 
 
 To manually test the connectivity between your device and the container registry login server on port 443, you can use such network tools as `telnet` or `nc`:
 
-```command
+```cmd
 telnet <acr-name>.azurecr.io 443 
 ```
 
-```command
+```cmd
 nc -vz <acr-name>.azurecr.io 443 -w 10
 ```
 

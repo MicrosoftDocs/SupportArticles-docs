@@ -1,11 +1,11 @@
 ---
 title: Introduction to TroubleShootingScript toolset (TSS)
 description: Introduces the TroubleShootingScript (TSS) toolset and provides answers to frequently asked questions about the toolset.
-ms.date: 12/26/2023
+ms.date: 11/29/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, muratka, waltere
+ms.reviewer: kaushika, muratka, waltere, gipauli
 ms.custom: sap:Support Tools\TSS, csstroubleshoot
 ---
 # Introduction to TroubleShootingScript toolset (TSS)
@@ -83,7 +83,7 @@ Start support tools or commands (for example, ProcMon, ProcDump, netsh, Performa
 |PowerShell cmdlet|Description|
 |---------|---------|
 |`-Fiddler`|Collect Fiddler trace. It requires Fiddler to be installed.<br><br>Enable the traffic decryption option by selecting **Tools** > **Options** and selecting **Decrypt HTTPS Traffic** on the **HTTPS** tab.|
-|`-GPresult` \<`Start`\|`Stop`\|`Both`>|Collect SysInternals *Handle.exe* output on phase `start`, `stop`, or `both`.|
+|`-GPresult` \<`Start`\|`Stop`\|`Both`>|Collect `GPresult` output on phase `start`, `stop`, or `both`.|
 |`-Handle` \<`Start`\|`Stop`\|`Both`>|Collect SysInternals *Handle.exe* output on phase `start`, `stop`, or `both`.|
 |`-LiveKD` \<`Start`\|`Stop`\|`Both`>|Start SysInternals LiveKD `-ml` (live kernel dump).<br>`<Start>`: the dump is taken at the start of the repro.<br>`<Stop>`: the dump is taken at stop.<br>`<Both>`: the dump is taken at both start and stop.|
 |`-Netsh`<br>1. `-NetshOptions '<Option string>'`<br>2. `-NetshMaxSizeMB <Int>`<br>3. `-noPacket`|Start network packet capturing.<br><br>1. Specify additional options for `Netsh`. For example, `'capturetype=both captureMultilayer=yes provider=Microsoft-Windows-PrimaryNetworkIcon provider={<GUID>}'`.<br>2. The maximum log size for `Netsh` in megabytes (MB) (for example, `-NetshMaxSizeMB 4096`). The default value is 2048.<br>3. Prevent packets from being captured with `Netsh` (only ETW traces in the `ScenarioName` will be captured).|

@@ -61,9 +61,7 @@ landingContent:
           - text: QuotaExceeded error
             url: ./error-code-quotaexceeded.md
           - text: SubnetIsFull error during an upgrade
-            url: ./error-code-subnetisfull-upgrade.md
-          - text: Kubernetes 1.16 upgrades fail using node labels
-            url: ./upgrades-to-kubernetes-fail-using-node-labels.md              
+            url: ./error-code-subnetisfull-upgrade.md           
           - text: Upgrade issues with Gen2 VMs on Windows AKS cluster
             url: ./nodepools-not-upgraded-to-gen2-during-node-image-upgrade.md
 
@@ -80,8 +78,6 @@ landingContent:
             url: ./load-balancer-or-nsg-in-use-by-vm-scale-set.md
           - text: PublicIPAddressCannotBeDeleted error
             url: ./cannot-delete-ip-subnet-nsg.md
-          - text: RequestDisallowedByPolicy error
-            url: ./error-code-requestdisallowedbypolicy-delete.md
           - text: TooManyRequestsReceived error
             url: ./error-code-toomanyrequestsreceived-subscriptionrequeststhrottled.md
 

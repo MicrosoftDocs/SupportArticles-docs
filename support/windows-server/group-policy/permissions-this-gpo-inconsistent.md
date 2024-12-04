@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 2838154
 
 ## Symptoms
 
-When you run Group Policy Management Console (GPMC), and then you select either **Default Domain Policy** or **Default Domain Controllers Policy**, you receive one of the following messages:
+When you run Group Policy Management Console (GPMC), and then you select a Group Policy, you receive one of the following messages:
 
 - > The permissions for this GPO in the SYSVOL folder are inconsistent with those in Active Directory. It is recommended that these permissions be consistent. To change the permissions in SYSVOL to those in Active Directory, click OK.
 
@@ -32,25 +32,31 @@ When you run Group Policy Management Console (GPMC), and then you select either 
 This issue occurs for one of the following reasons:
 
 - The access control list (ACL) on the Sysvol part of the Group Policy Object is set to inherit permissions from the parent folder.
-- The Special permission (List object) is set for the Authenticated Users group. However, the Authenticated Users group is missing from the **Delegation** tab of the Group Policy Object.
+- Manual changes to the permissions on SysVol can cause a mismatch between the policy permissions in Active Directory and SysVol.
 
 ## Resolution
 
-If you have permissions to modify security on the default GPOs, select **OK** in response to the message that is mentioned in the [Symptoms](#symptoms) section. This action modifies the ACLs on the Sysvol part of the Group Policy Object and makes them consistent with the ACLs on the Active Directory component. In this situation, Group Policy removes the inheritance attribute in the Sysvol folder.
+If you have permissions to modify security on the default GPOs, select **OK** in response to the message that is mentioned in the [Symptoms](#symptoms) section. This action modifies the ACLs on the Sysvol part of the Group Policy Object and makes them consistent with the ACLs on the Active Directory component. In this situation, Group Policy removes the inheritance attribute in the Sysvol folder if the attribute is present.
 
-If you still receive the message, follow these steps:
+If you still receive the message, check whether permissions are set for the **Authenticated Users** group and correct the permissions if needed. A problematic setting is when accounts have the **List Object** permission in Active Directory. This permission doesn't map to a file system permission. Below is an example configuration for **Authenticated Users**:
 
-1. Make sure that you're running the latest service pack for the system. For more information, see:
-   - [Windows 10 and Windows Server 2019 update history](https://support.microsoft.com/topic/windows-10-and-windows-server-2019-update-history-725fc2e1-4443-6831-a5ca-51ff5cbcb059)
-   - [Windows Server 2022 update history](https://support.microsoft.com/topic/windows-server-2022-update-history-e1caa597-00c5-4ab9-9f3e-8212fe80b2ee)
+:::image type="content" source="media/permissions-this-gpo-inconsistent/authenticated-users-permissions.png" alt-text="Authenticated Users permissions." border="true":::
 
-2. Check whether the List object permission is set for the Authenticated Users group and whether the Authenticated Users group is missing from the **Delegation** tab of the Group Policy Object.
+Advanced permissions:
 
-    :::image type="content" source="media/permissions-this-gpo-inconsistent/authenticated-users.png" alt-text="Check whether the Authenticated Users group is missing.":::
+:::image type="content" source="media/permissions-this-gpo-inconsistent/authenticated-users-has-a-list-object-access.png" alt-text="Authenticated Users has a List Object access." border="true":::
 
-    :::image type="content" source="media/permissions-this-gpo-inconsistent/delegation-tab.png" alt-text="Check whether the List object permission is set for the Authenticated Users group." border="false":::
+> [!NOTE]
+> Remember to set read and apply permissions according to [MS16-072: Description of the security update for Group Policy: June 14, 2016 - Microsoft Support](https://support.microsoft.com/topic/ms16-072-description-of-the-security-update-for-group-policy-june-14-2016-3cf9032b-ea6d-0125-0159-f3b3ce146400).
 
-If these conditions are true, take one of the following actions:
+If this applies, take one of the following actions:
 
 1. Select **Restore defaults** to reset the permissions to defaults.
-2. Remove the Authenticated Users group that has the List object permission (not recommended).
+2. Remove the group that has the **List object** permission from Active Directory permissions.
+3. If appropriate, replace the entry for the account, such as **Authenticated Users**, with an Access Control Entry (ACE) that grants read and, if needed, Group Policy permissions. Specify the account in the **Scope** tab in GPMC.msc:
+
+:::image type="content" source="media/permissions-this-gpo-inconsistent/screenshot-of-the-default-domain-controller-policy.png" alt-text="The screenshot of the default domain controller policy." border="true":::
+
+Or you can do this in the **Advanced Permissions**:
+
+:::image type="content" source="media/permissions-this-gpo-inconsistent/screenshot-of-the-advanced-permissions.png" alt-text="The screenshot of the Advanced Permissions." border="true":::

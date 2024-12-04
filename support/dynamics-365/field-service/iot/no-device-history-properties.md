@@ -4,7 +4,7 @@ description: Resolves issues with missing data from IoT devices in Dynamics 365 
 ms.author: vhorvath
 author: vhorvathms
 ms.reviewer: mhart
-ms.date: 10/19/2023
+ms.date: 11/05/2024
 ms.custom: sap:IoT - Connected Field Service
 ---
 # No records after pulling IoT device data in Dynamics 365 Field Service
