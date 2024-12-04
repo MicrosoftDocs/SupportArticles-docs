@@ -68,7 +68,7 @@
       href: email-exchange-synchronization/http-server-returned-forbidden-exception.md
     - name: Incoming emails are unexpectedly synchronized
       href: email-exchange-synchronization/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data.md
-    - name: Mailbox user doesn't have sufficient permissions error when testing a mailbox
+    - name: Mailbox user doesn't have sufficient permissions error
       href: email-exchange-synchronization/error-when-you-test-enable-a-mailbox.md
     - name: Mailbox doesn't have an email server profile
       href: email-exchange-synchronization/mailbox-does-not-have-email-server-profile.md
