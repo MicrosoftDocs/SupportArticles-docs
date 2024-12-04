@@ -86,6 +86,8 @@
       href: email-exchange-synchronization/the-smtp-address-has-no-mailbox.md
     - name: unknownincomingemailintegrationerror -2147220891
       href: email-exchange-synchronization/unknownincomingemailintegrationerror-2147220891.md
+    - name: '"You cannot send email as the selected user" error'
+      href: email-exchange-synchronization/cannot-send-email-as-another-user.md
 - name: Plug-in execution
   items:
     - name: Dataverse plug-ins

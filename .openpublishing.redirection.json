@@ -12579,6 +12579,16 @@
       "source_path": "support/power-platform/dataverse/email-m365-integration/server-side-synchronization/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-send-email-as-another-user.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/cannot-send-email-as-another-user",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/certificates-and-public-key-infrastructure-pki/delete-enterprise-windows-certificate-authority.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/delete-enterprise-windows-certificate-authority",
+      "redirect_document_id": false
     }
   ]
 }
