@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot WmiPrvse.exe quota exceeded issues
 description: Helps troubleshoot the WmiPrvse.exe process quota exceeded issues, and describes how to gather additional information.
-ms.date: 12/26/2023
+ms.date: 11/26/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -103,40 +103,15 @@ To diagnose the issue, follow these steps:
 2. Identify the common WMI providers listed in the event.
 
     The providers listed may be the same across all the events. Another possibility is that one of the providers consumes more resources, causing this issue and disturbing other WMI providers. In this case, the goal is to diagnose and identify the problematic provider.
-3. Identify the currently active WMI providers hosting the same list of WMI providers. You can use Process Explorer to diagnose further:
-
-    1. Run [Process Explorer](/sysinternals/downloads/process-explorer) as an administrator. Select one of the *WmiPrvse.exe* processes, go to its properties, and select the **WMI Providers** tab.
-
-        For example, the *WmiPrvse.exe* process ID (PID) 5584 hosts only one WMI provider, CIMWin32, and the DLL path is *%systemroot%\system32\wbem\cimwin32.dll*.
-    2. Review the same information for other active *WmiPrvse.exe* processes until you find the PID of the process that's hosting the list of providers listed in Event ID 5612.
-
-        :::image type="content" source="./media/scenario-guide-troubleshoot-wmiprvse-quota-exceeded-issues/wmiprvse-5584-properties.png" alt-text="Screenshot of the WmiPrvse.exe 5584 Properties window showing that PID 5584 is hosting only one WMI provider CIMWin32.":::
-
-    Sometimes, if the issue is intermittent or infrequent, the *WmiPrvse.exe* process causing the issue may be terminated over time. When the issue reoccurs, it may be the same provider(s) in a new *WmiPrvse.exe* instance.
-
-    In this case, once you have the provider(s) noted, run the following command to show the current PID of the *WmiPrvse.exe* process that contains the provider.
-
-    ```console
-    tasklist /m <Provider DLL> 
-    ```
-
-    For example:
-
-    ```console
-    tasklist /m ntevt.dll
-    ```
-
-    :::image type="content" source="./media/scenario-guide-troubleshoot-wmiprvse-quota-exceeded-issues/wmiprvse-instances-pid.png" alt-text="Screenshot showing that the CIMWin32.dll provider is loaded in two different WmiPrvse.exe instances and their PID.":::
-
-    It's important to understand which providers are loaded in the *WmiPrvse.exe* process and note the PID of the *WmiPrvse.exe* process every time.
+3. [Identify the currently active WMI providers hosting the same list of WMI providers](troubleshoot-wmi-high-cpu-issues.md#identify-the-exact-wmi-provider-dll-hosted-by-the-wmiprvseexe-pid-identified).
 
 4. Analyze the incoming queries that are handled by the *WmiPrvse.exe* process listed in Event ID 5612.
 
     Go through the steps mentioned in the "Analyze the incoming queries," "Review the WMI trace files," and "Find the client PIDs that causing high CPU usage" sections in [Troubleshoot WMI high CPU usage issues](troubleshoot-wmi-high-cpu-issues.md). Then, you can identify:
 
     - The client process(es)
-    - The query leading to the issue
-    - The frequency of the query  
+        - The query leading to the issue
+        - The frequency of the query  
 
 ### Client application performs abnormal, inefficient, or large queries
 
@@ -195,17 +170,16 @@ If not, you need to contact Microsoft support professionals to analyze the event
 
 Before opening a support case to further investigate the issue, you can collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-tss/gather-information-using-tss-user-experience.md#wmi).
 
-You can also gather information by using the WMI-Collect tool on the machine that has recently experienced the issue. Here are the steps:
+1. Download [TSS.zip](https://aka.ms/getTSS) and extract the contents.
 
-1. Download [WMI-Collect.zip](https://aka.ms/WMI-Collect) and extract it to a folder, such as *C:\\temp*.
-2. From an elevated PowerShell command prompt, run the *WMI-Collect.ps1* script from the folder where the script is saved. For example:
+2. Start the tracing by running the following cmdlet from an elevated PowerShell command prompt.
 
-    ```cmdlet
-    C:\temp\WMI-Collect.ps1 -Logs -Trace
-    ```
+   ```powershell
+   .\TSS.ps1 -UEX_WMIAdvanced -noBasicLog
+   ```
+   
+3. Keep the tracing on until the error or even ID you've noticed is reproduced, or the identified **WmiPrvSE.exe** issue appears. Do keep the tracing running for more than two to three minutes.
 
-3. Keep the PowerShell command prompt open with the "Press ENTER to stop the capture:" message.
+4. Stop the tracing by following instructions in the PowerShell command prompt according to the TSS toolset.
 
-    You can keep the tracing active for two to three minutes or until the affected *WmiPrvse.exe* is active. Stop the tracing by pressing <kbd>Enter</kbd>.
-
-4. The script creates a subfolder containing the results of all traces and diagnostic information. Compress the folder. After a support case is created, this file can be uploaded to the secure workspace for analysis.
+The script will create a zip file containing all the trace results and diagnostic information. After a support case is created, this file can be uploaded to the secure workspace for analysis.
