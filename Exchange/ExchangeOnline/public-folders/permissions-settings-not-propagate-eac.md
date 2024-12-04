@@ -11,7 +11,7 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - CI 2580
-ms.reviewer: meerak, v-shorestris
+ms.reviewer: batre, meerak, v-shorestris
 appliesto:
   - Exchange Online
   - Exchange Server 2019
