@@ -1,5 +1,5 @@
 ---
-title: Data quality error code ERR00015 in Business performance analytics
+title: Data quality ERR00015 in Business performance analytics
 description: Provides information about the Data quality error (error code ERR00015) in Business performance analytics in Microsoft Dynamics 365 Finance.
 author: jinniew
 ms.author: jiwo
@@ -15,7 +15,7 @@ This article provides a resolution for the Data quality error (error code ERR000
 
 ## Symptoms
 
-Error code *ERR00015* is logged in the **Bpa self help logs** table in Microsoft Dataverse when unresolvable errors are encountered while processing inputs in the [dimensional data model](/dynamics365/finance/business-performance-analytics/business-performance-analytics-data-model). In this case, the output table will be empty and reports will be missing data. The specifics of the unresolvable errors will be included in the log details.
+When inputs are processed in the [dimensional data model](/dynamics365/finance/business-performance-analytics/business-performance-analytics-data-model), an unresolvable error occurs, and the *ERR00015* error code is logged in the **Bpa self help logs** table in Microsoft Dataverse. In this case, the output table is empty, and reports are missing data. The details of the unresolvable error are included in the log details.
 
 Here's an example of a record:
 
@@ -23,15 +23,15 @@ Here's an example of a record:
 
 ## Resolution
 
-The resolution depends on the specific error. Below is a list of the errors and how to address them. If the issue persists after attempting resolution, contact Microsoft support for further assistance.
+The following table lists the errors and the related resolutions.
 
 |Error|Example of the error|Resolution|
 |--|--|--|
-|Primary key violations|Here are examples of two messages that can be logged for primary key violations. <br> - Primary key constraint violated with 1 duplicate count for dmo_budgetfact.dmo_budgetfactid. <br> - Primary key constraint violated with 1 null count for dmo_budgetfact.dmo_budgetfactid.|For primary key violations, contact Microsoft support for assistance.|
-|Alternate key violation|Alternate key constraint AK1 violated with 1 duplicates and 1 null values for dmo_budgetkey.|For alternate key violations, contact Microsoft support for assistance.|
-|Null guid violation|Not null guid constraint violated with 1 null values for dmo_budgetfact.dmo_budgetfactid.|Validate the source data exists in Dynamics 365 Finance. If the data exists but the issue persists, contact Microsoft support for further assistance.|
-|Null DateTime violation|Not Null DateTime constraint violated with 1 null values for dmo_budgetfact.dmo_budgetpostingtimestamputc.|Validate the source data exists in Dynamics 365 Finance. If the data exists but the issue persists, contact Microsoft support for further assistance.|
-|Empty string violation|Not empty string constraint violated with 1 empty values for dmo_generalledgerfact.dmo_generalledgercurrency.|Validate the source data exists in Dynamics 365 Finance. If the data exists but the issue persists, contact Microsoft support for further assistance.|
+|Primary key violations| Here are examples of two messages that can be logged for primary key violations: <br> - Primary key constraint violated with `1` duplicate count for dmo_budgetfact.dmo_budgetfactid. <br> - Primary key constraint violated with `1` null count for dmo_budgetfact.dmo_budgetfactid.| Contact Microsoft Support for assistance.|
+|Alternate key violation|Alternate key constraint AK1 violated with `1` duplicates and `1` null values for dmo_budgetkey.| Contact Microsoft Support for assistance.|
+|Null guid violation|Not null guid constraint violated with `1` null values for dmo_budgetfact.dmo_budgetfactid.|Validate the source data exists in Dynamics 365 Finance. If the data exists but the issue persists, contact Microsoft Support for further assistance.|
+|Null DateTime violation|Not Null DateTime constraint violated with `1` null values for dmo_budgetfact.dmo_budgetpostingtimestamputc.|Validate the source data exists in Dynamics 365 Finance. If the data exists but the issue persists, contact Microsoft Support for further assistance.|
+|Empty string violation|Not empty string constraint violated with `1` empty values for dmo_generalledgerfact.dmo_generalledgercurrency.|Validate the source data exists in Dynamics 365 Finance. If the data exists but the issue persists, contact Microsoft Support for further assistance.|
 
 ## See also
 
