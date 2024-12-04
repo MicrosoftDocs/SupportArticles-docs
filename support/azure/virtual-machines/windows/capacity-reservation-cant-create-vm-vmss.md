@@ -1,7 +1,7 @@
 ---
 title: Can't create a Capacity Reservation
 description: The following article discusses the reasons why you are not able to create Capacity Reservation.
-ms.date: 12/03/2024
+ms.date: 12/04/2024
 ms.reviewer: 
 ms.service: azure-virtual-machines
 ms.collection: windows
@@ -25,7 +25,7 @@ The following article discusses the reasons why you are not able to create Capac
 
 1. The VM size is unsupported.
 
-   Not all VM sizes are supported with Capacity Reservation. For currently supported VM sizes, please refer to [Capacity Reservation Limitations and Restrictions](/azure/virtual-machines/capacity-reservation-overview#limitations-and-restrictions)
+   Not all VM sizes are supported with Capacity Reservation. For currently supported VM sizes, see [Capacity Reservation limitations and restrictions](/azure/virtual-machines/capacity-reservation-overview#limitations-and-restrictions)
 
 1. The subscription doesn't have the required quota.
 
