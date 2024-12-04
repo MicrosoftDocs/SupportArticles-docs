@@ -73,7 +73,7 @@ To work around this issue, follow these steps:
 
 1. Open PowerShell in [Exchange Server](/powershell/exchange/open-the-exchange-management-shell) or [Exchange Online](/powershell/exchange/connect-to-exchange-online-powershell), depending on the Exchange environment in which the public folders are active.
 
-2. Run the following cmdlet. The cmdlet uses the [PerUserReadStateEnabled](/powershell/module/exchange/set-publicfolder#-peruserreadstateenabled) parameter to apply a **Maintain per-user read and unread information** setting for the parent public folder and all child public folders. Set the value to `$true` or `$false`, depending on your requirement.
+2. Run the following cmdlet. The cmdlet uses the [PerUserReadStateEnabled](/powershell/module/exchange/set-publicfolder#-peruserreadstateenabled) parameter to apply a **Maintain per-user read and unread information** setting for the parent public folder and all child public folders. Set the parameter value to `$true` or `$false`, depending on your requirement.
 
    ```PowerShell
    Get-PublicFolder -Identity "<\ParentPF>" -Recurse -ResultSize Unlimited | Set-PublicFolder -PerUserReadStateEnabled <$true or $false>
@@ -95,7 +95,7 @@ To work around this issue, follow these steps:
 
 1. Open PowerShell in [Exchange Server](/powershell/exchange/open-the-exchange-management-shell) or [Exchange Online](/powershell/exchange/connect-to-exchange-online-powershell), depending on the Exchange environment in which the public folders are active.
 
-2. Run the following cmdlet. The cmdlet uses the [AgeLimit](/powershell/module/exchange/set-publicfolder#-agelimit) parameter to apply an **Age limit for folder content** setting on the parent public folder and all child public folders. For example, set the value to `10.00:00:00` to specify 10 days.
+2. Run the following cmdlet. The cmdlet uses the [AgeLimit](/powershell/module/exchange/set-publicfolder#-agelimit) parameter to apply an **Age limit for folder content** setting on the parent public folder and all child public folders. For example, set the parameter value to `10.00:00:00` to specify 10 days.
 
    ```PowerShell
    Get-PublicFolder "<\ParentPF>" -Recurse -ResultSize Unlimited | Set-PublicFolder -AgeLimit <age limit>
@@ -117,7 +117,7 @@ To work around this issue, follow these steps:
 
 1. Open PowerShell in [Exchange Server](/powershell/exchange/open-the-exchange-management-shell) or [Exchange Online](/powershell/exchange/connect-to-exchange-online-powershell), depending on the Exchange environment in which the public folders are active.
 
-2. Run the following cmdlet. The cmdlet uses the [RetainDeletedItemsFor](/powershell/module/exchange/set-publicfolder#-retaindeleteditemsfor) parameter to apply a **Retain deleted items** setting on the parent public folder and all child public folders. Set the value depending on your requirement. For example, set the value to `30.00:00:00` to specify 30 days.
+2. Run the following cmdlet. The cmdlet uses the [RetainDeletedItemsFor](/powershell/module/exchange/set-publicfolder#-retaindeleteditemsfor) parameter to apply a **Retain deleted items** setting on the parent public folder and all child public folders. Set the parameter value depending on your requirement. For example, set the value to `30.00:00:00` to specify 30 days.
 
    ```PowerShell
    Get-PublicFolder "<\ParentPF>" -Recurse -ResultSize Unlimited | Set-PublicFolder -RetainDeletedItemsFor <retention period>
