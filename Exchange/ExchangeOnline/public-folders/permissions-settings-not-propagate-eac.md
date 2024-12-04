@@ -4,7 +4,7 @@ description: Provides workarounds for an issue in which the EAC doesn't apply pu
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-audience: Admin / ITPro
+audience: ITPro
 ms.topic: troubleshooting
 ms.custom:
   - sap:Groups, Lists, Contacts, Public Folders
