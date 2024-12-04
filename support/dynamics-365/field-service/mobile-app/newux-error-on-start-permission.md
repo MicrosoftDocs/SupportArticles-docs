@@ -1,6 +1,6 @@
 ---
 title: Error on start due to permission/privilege issues
-description: Resolves the permission issue where the mobile app fails to launch in Microsoft Dynamics 365 Field Service.
+description: Helps resolve Dynamics 365 Field Service mobile app launch issues caused by missing privileges.
 author: JonBaker007
 ms.author: jobaker
 ms.reviewer: mhart
@@ -10,15 +10,17 @@ ms.custom: sap:Mobile application
 
 # Error on start due to permission/privilege issues
 
-The new user experience for the Field Service mobile app requires some privileges added to the security roles that the user belongs to.
-
 ## Symptoms
 
 The Field Service mobile app fails to launch with the following error: `Principal user (Id=<GUID>, …) is missing 'prvReadmsdyn_Mobile' privilege (Id=<GUID>) on OTC=<INT> for entity 'msdyn_mobilesource' …`
 
+## Cause
+
+The [new user experience](/dynamics365/field-service/mobile/do-work-newux) in the Dynamics 365 Field Service mobile app requires certain privileges for the users' security roles.
+
 ## Resolution
 
-The new experience for Field Service mobile app requires privileges for users' security roles. The system automatically adds these privileges to all default security roles. If your organization uses custom security roles, you need to [edit the security roles](/power-platform/admin/create-edit-security-role) by adding the following [table privileges](/power-platform/admin/security-roles-privileges#table-privileges):
+The system automatically adds the necessary privileges to all default security roles. However, if your organization uses custom security roles, you need to [edit the security roles](/power-platform/admin/create-edit-security-role#edit-a-security-role) to add the following [table privileges](/power-platform/admin/security-roles-privileges#table-privileges):
 
 - Name=`"msdyn_richtextfile"` Permission="Create" Value="User"
 - Name=`"msdyn_richtextfile"` Permission="Delete" Value="User"
