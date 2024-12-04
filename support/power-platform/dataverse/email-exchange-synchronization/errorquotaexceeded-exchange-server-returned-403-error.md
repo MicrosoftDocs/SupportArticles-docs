@@ -2,7 +2,7 @@
 title: Email remains in Pending Send status with 403 error
 description: Solves an ErrorQuotaExceeded. Exchange.server returned 403 error that occurs when you send an email in Microsoft Dynamics 365.
 ms.reviewer: 
-ms.date: 12/02/2024
+ms.date: 12/04/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # "ErrorQuotaExceeded Exchange server returned 403" error in Microsoft Dynamics 365 mailbox alert
@@ -21,8 +21,8 @@ When you try to send an email in Dynamics 365, the email remains in a Pending Se
 
 ## Cause
 
-This error indicates that Microsoft Exchange Server is preventing the user from sending the email due to a quota or limit being exceeded. For example: if the mailbox has a limit of 10 GB of storage but has exceeded this limit, Microsoft Exchange Server might prevent you from sending email from that mailbox until the mailbox is within the allowed quota. Microsoft Exchange Online has multiple limits that might prevent you from sending email. For more information, see [Exchange Online limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits).
+This error indicates that Microsoft Exchange Server prevents the user from sending the email due to a quota or limit being exceeded. For example, if the mailbox has a limit of 10 GB of storage but exceeds this limit, Microsoft Exchange Server might prevent you from sending the email from that mailbox until the mailbox is within the allowed quota. Microsoft Exchange Online has multiple limits that might prevent you from sending the email. For more information, see [Exchange Online limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits).
 
 ## Resolution
 
-Verify that you can directly send an email from the mailbox in Outlook or [Outlook on the web (formerly known as Outlook Web App)](/exchange/clients-and-mobile-in-exchange-online/outlook-on-the-web/outlook-on-the-web). If you can't send an email and you have verified the mailbox hasn't exceeded any quotas, contact your Exchange administrator or Microsoft Exchange support.
+Verify that you can directly send an email from the mailbox in Outlook or [Outlook on the web (formerly known as Outlook Web App)](/exchange/clients-and-mobile-in-exchange-online/outlook-on-the-web/outlook-on-the-web). If you can't send an email and you verify the mailbox doesn't exceed any quotas, contact your Exchange administrator or Microsoft Exchange support.
