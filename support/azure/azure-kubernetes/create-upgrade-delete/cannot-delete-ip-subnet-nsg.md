@@ -1,9 +1,9 @@
 ---
 title: Public IP address/subnet/network security group in use can't be deleted
 description: Provides a solution to the PublicIPAddressCannotBeDeleted, InUseSubnetCannotBeDeleted, or InUseNetworkSecurityGroupCannotBeDeleted error when you delete an AKS cluster.
-ms.date: 11/26/2024
+ms.date: 12/04/2024
 editor: v-jsitser
-ms.reviewer: rissing, chiragpa, edneto, v-leedennis
+ms.reviewer: rissing, chiragpa, edneto, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the PublicIPAddressCannotBeDeleted, InUseSubnetCannotBeDeleted, or InUseNetworkSecurityGroupCannotBeDeleted error code so that I can successfully delete an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
