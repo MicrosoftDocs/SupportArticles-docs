@@ -23,7 +23,7 @@ When you use Microsoft Teams on your macOS device, you notice that the Teams-spe
 
 ## Cause
 
-The Notification Center on the macOS device is recaching the file that's associated with the configured sound.
+The Notification Center on the macOS device is recaching the file that's associated with the configured sound. As a result, Teams can't use the configured sound.
 
 ## Resolution
 
