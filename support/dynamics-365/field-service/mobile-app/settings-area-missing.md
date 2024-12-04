@@ -12,7 +12,7 @@ ms.custom: sap:Mobile application
 
 ## Symptoms
 
-The Field Service Mobile app module doesn't show the settings area, blocking administrators from [enabling the new experience](/dynamics365/field-service/mobile/set-up-field-service-mobile#enable-the-new-mobile-user-experience).
+The Field Service Mobile app module doesn't show the **Settings** area, blocking administrators from [enabling the new experience](/dynamics365/field-service/mobile/set-up-field-service-mobile#enable-the-new-mobile-user-experience).
 
 ## Cause
 
