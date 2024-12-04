@@ -1,5 +1,5 @@
 ---
-title: Field Service mobile app fails to start due to missing files in the solution
+title: Field Service mobile app fails to start due to missing files in the Field Service app
 description: Resolves Dynamics 365 Field Service mobile app launch issues due to missing source records.
 author: JonBaker007
 ms.author: jobaker
