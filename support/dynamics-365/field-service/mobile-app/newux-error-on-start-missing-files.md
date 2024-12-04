@@ -1,32 +1,33 @@
 ---
-title: Error on start due to missing files in the solution
-description: Helps resolve Dynamics 365 Field Service mobile app launch issues.
+title: Field Service mobile app fails to start due to missing files in the solution
+description: Resolves Dynamics 365 Field Service mobile app launch issues due to missing source records.
 author: JonBaker007
 ms.author: jobaker
 ms.reviewer: mhart
-ms.date: 11/15/2024
-ms.custom: sap:Mobile application
+ms.date: 12/04/2024
+ms.custom: sap:Mobile application\Application is throwing errors
 ---
+# The Field Service mobile app fails to start due to missing files in the solution
 
-# Error on start due to missing files in the solution
+This article provides a resolution for an issue where the [Dynamics 365 Field Service mobile app](/dynamics365/field-service/mobile/overview) fails to start.
 
 ## Symptoms
 
-An error occurs when starting the [new mobile app experience](/dynamics365/field-service/mobile/do-work-newux) stating that certain files are missing.
+When you start to use the [new user experience in the Dynamics 365 Field Service mobile app](/dynamics365/field-service/mobile/do-work-newux), you receive an error message that states certain files are missing.
 
 ## Cause
 
-Some required source records are missing. These records should be created when installing the solution, but in rare cases, they don't get created successfully or get corrupted. It is also possible that a user deleted the records.
+Some required source records are missing. These records should be created when installing the solution, but in rare cases, they don't get created successfully or get corrupted. It's also possible that a user deleted the records.
 
 ## Resolution
 
-### Step 1: Check if the mobilesource table contains data
+### Step 1: Check if the MobileSource table contains data
 
 1. Go to [Power Apps](https://make.powerapps.com/) and open the environment to check.
 
-1. Select **Tables**, choose the **All** filter and search for the table `MobileSource (msdyn_mobilesource)`.
+1. Select **Tables**, select the **All** filter and search for the `MobileSource (msdyn_mobilesource)` table.
 
-1. Select the table and verify if the table contains the following data in the **Name** column:
+1. Select the table and verify if it contains the following data in the **Name** column:
 
    - /card/bookingListViewItem.yml
    - /card/defaultViewItem.yml
@@ -45,8 +46,8 @@ If there's no data in the table, something went wrong with the solution update.
 
 1. In the environment details, under **Resources**, select **Dynamics 365 apps**.
 
-1. Select **Install app**, choose **Dynamics 365 for Field Service**, and select **Next**.
+1. Select **Install app** > **Dynamics 365 for Field Service** > **Next**.
 
 1. Accept the terms of service and select **Install**.
 
-After installing the solution, [verify that the table now contains the required data](#step-1-check-if-the-mobilesource-table-contains-data).
+After you install the solution, [verify that the table now contains the required data](#step-1-check-if-the-mobilesource-table-contains-data).

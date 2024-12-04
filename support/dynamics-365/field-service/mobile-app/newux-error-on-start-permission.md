@@ -1,22 +1,25 @@
 ---
-title: Error on start due to permission/privilege issues
-description: Helps resolve Dynamics 365 Field Service mobile app launch issues caused by missing privileges.
+title: Field Service mobile app fails to start due to permission or privilege issues
+description: Resolves Dynamics 365 Field Service mobile app launch issues caused by missing privileges.
 author: JonBaker007
 ms.author: jobaker
 ms.reviewer: mhart
-ms.date: 10/28/2024
-ms.custom: sap:Mobile application
+ms.date: 12/04/2024
+ms.custom: sap:Mobile Application\Application is throwing errors
 ---
+# The Field Service mobile app fails to start due to permission or privilege issues
 
-# Error on start due to permission/privilege issues
+This article provides a resolution for a "Principal user is missing privilege" error that occurs when the Field Service mobile app fails to start.
 
 ## Symptoms
 
-The Field Service mobile app fails to launch with the following error: `Principal user (Id=<GUID>, …) is missing 'prvReadmsdyn_Mobile' privilege (Id=<GUID>) on OTC=<INT> for entity 'msdyn_mobilesource' …`
+The [Dynamics 365 Field Service mobile app](/dynamics365/field-service/mobile/overview) fails to start with the following error:
+
+> Principal user (Id=\<GUID>, …) is missing 'prvReadmsdyn_Mobile' privilege (Id=\<GUID>) on OTC=\<INT> for entity 'msdyn_mobilesource' …
 
 ## Cause
 
-The [new user experience](/dynamics365/field-service/mobile/do-work-newux) in the Dynamics 365 Field Service mobile app requires certain privileges for the users' security roles.
+The [new user experience in the Dynamics 365 Field Service mobile app](/dynamics365/field-service/mobile/do-work-newux) requires certain privileges for the users' security roles.
 
 ## Resolution
 
@@ -33,4 +36,4 @@ The system automatically adds the necessary privileges to all default security r
 - Name=`"SettingDefinition"` Permission="Read" Value="Organization"
 
 > [!TIP]
-> If you don't know the name of the custom security role, expand **Users + permissions**, select **Users** and look for the user that reported seeing the error message. Take note of the user's security role and review the table privileges for that security role.
+> If you don't know the name of the custom security role, expand **Users + permissions**, select **Users** and look for the user who receives the error message. Take note of the user's security role and review the table privileges for that security role.

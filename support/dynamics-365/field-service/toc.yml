@@ -56,7 +56,7 @@
 
 - name: Mobile app - New experience
   items: 
-    - name: Error on start due to permission/privilege issues
+    - name: Error on start due to permission or privilege issues
       href: mobile-app/newux-error-on-start-permission.md
     - name: Error on start due to missing files in the solution
       href: mobile-app/newux-error-on-start-missing-files.md

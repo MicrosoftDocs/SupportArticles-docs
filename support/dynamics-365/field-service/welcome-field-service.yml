@@ -9,7 +9,7 @@ metadata:
   ms.service: dynamics-365-field-service
   author: m-hartmann
   ms.author: mhart
-  ms.date: 11/05/2024
+  ms.date: 12/04/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -79,7 +79,7 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Error on start due to permission/privilege issues
+          - text: Error on start due to permission or privilege issues
             url: mobile-app/newux-error-on-start-permission.md
           - text: Error on start due to missing files in the solution
             url: mobile-app/newux-error-on-start-missing-files.md
