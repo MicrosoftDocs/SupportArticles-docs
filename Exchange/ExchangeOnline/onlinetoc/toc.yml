@@ -669,6 +669,8 @@
           href: ../user-and-shared-mailboxes/could-not-find-database-running-cmdlets-for-different-region-mailbox.md
         - name: Enable or disable POP3, IMAP, MAPI, OWA or ActiveSync
           href: ../user-and-shared-mailboxes/pop3-imap-owa-activesync-office-365.md
+        - name: Errors after unassigning a user license
+          href: ../user-and-shared-mailboxes/litigation-hold-mailbox-not-turn-into-inactive.md
         - name: How to access other user's mailboxes
           href: ../user-and-shared-mailboxes/how-to-access-other-mailboxes.md
         - name: How to create and manage resource mailboxes
