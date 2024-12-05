@@ -41,7 +41,7 @@ A TNEF-encoded message contains a plain text version of the message, and a binar
 
 Additionally, the path of your personal folders (.pst) file and your sign-in name are embedded in the Winmail.dat file. Although this data isn't explicitly exposed to the recipient, if the recipient opens the Winmail.dat file in a binary or text editor, they can see the path and sign-in name. Password information isn't revealed. To make sure that the path of your .pst file and your sign-in name aren't sent, follow the recommendations in this article for how to send messages that don't include the Winmail.dat file.
 
-Some Outlook features require internet email recipients that use Outlook to have TNEF encoding enabled. For example, if you send a message that has voting buttons to a recipient over the internet, the voting buttons aren't received if the recipient doesn't have TNEF enabled. TNEF isn't required for messages that have regular file attachments. If you're sending messages that have file attachments to a recipient who doesn't use Outlook or the Exchange client, we recommend that you manually choose an email format that doesn't require TNEF (such as HTML or plain text). If a message is sent without TNEF, the recipient can view and save attachments as expected.
+Some Outlook features require internet email recipients that use Outlook to have TNEF encoding enabled. For example, if you send a message that has voting buttons to a recipient over the internet, the voting buttons aren't available if the recipient doesn't have TNEF enabled. TNEF isn't required for messages that have regular file attachments. If you're sending messages that have file attachments to a recipient who doesn't use Outlook or the Exchange client, we recommend that you manually choose an email format that doesn't require TNEF (such as HTML or plain text). If a message is sent without TNEF, the recipient can view and save attachments as expected.
 
 ### Send/receive issues
 
@@ -55,7 +55,7 @@ Similar to how the receiving client behaves, it's common for an email server to 
 
 ### Message encoding
 
-The internet standards for encoded messages, such as Multipart Internet Mail Extensions (MIME) and UUENCODE, are independent of TNEF. TNEF can exist in a MIME-encoded message as a MIME body part of type `application/ms-tnef`, or in a UUENCODED message as an attachment that's named Winmail.dat. To correctly display the encapsulated information, the receiving client must support TNEF encoding.
+The internet standards for message encoding, such as Multipart Internet Mail Extensions (MIME) and UUENCODE, are independent of TNEF. TNEF can exist in a MIME-encoded message as a MIME body part of type `application/ms-tnef`, or in a UUENCODED message as an attachment that's named Winmail.dat. To correctly display the encapsulated information, the receiving client must support TNEF encoding.
 
 ### Manage TNEF in messages
 
