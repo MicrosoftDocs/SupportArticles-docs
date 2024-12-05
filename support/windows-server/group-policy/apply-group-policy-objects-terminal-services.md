@@ -30,16 +30,15 @@ Put the Terminal Server computers into their own organizational unit (OU). This 
 To create a new OU for the Terminal Services servers, follow these steps:
 
 1. Sign in to a domain controller or a machine with the Remote Server Administration Tools (RSAT) installed.
-2. Open the Start menu and type **Active Directory Users and Computers**. Select **Active Directory Users and Computers** to open it.
+2. Open the Start menu and enter **Active Directory Users and Computers**. Select **Active Directory Users and Computers** to open it.
 3. In the **Active Directory Users and Computers** console, navigate to the domain or container where you want to create the new OU.
-4. Right-click the domain or container.
-5. Select **New** > **Organizational Unit**.
-6. In the **New Object - Organizational Unit** dialog box, enter **Terminal Servers** as the name.
-7. Select **OK** to create the OU.  
+4. Right-click the domain or container. Select **New** > **Organizational Unit**.
+5. In the **New Object - Organizational Unit** dialog box, enter **Terminal Servers** as the name.
+6. Select **OK** to create the OU.  
 
 To create a Terminal Services Group Policy object, follow these steps:
 
-1. Open the Start menu and type **Group Policy Management**. Select **Group Policy Management** to open it.
+1. Open the Start menu and enter **Group Policy Management**. Select **Group Policy Management** to open it.
 2. In the **Group Policy Management** console, navigate to your domain.
 3. Right-click the **Group Policy Objects** container and select **New**.
 4. Enter a name for the new GPO, such as **Terminal Servers Policy**.
@@ -51,7 +50,7 @@ To create a Terminal Services Group Policy object, follow these steps:
 10. Select **OK** to link the GPO to the OU.
 
 > [!NOTE]
-> Most of the relevant settings are under **Computer Configuration** > **Windows Settings** > **Security Settings** > **Local Policies**. For example, under **User Rights Assignment** in the list on the right, you find **Log on Locally**. This setting is required for logging on to a session on Terminal Services. You also find **Access this computer from the network**. This setting is required to connect to the server outside a Terminal Services session. This is also where you can prevent users from being able to shut down the system. Settings for the user part of the policy should not be applied here because the users have not been put into this OU with the Terminal Services server. This article is written for computer policy implementation.  
+> Most of the relevant settings are under **Computer Configuration** > **Windows Settings** > **Security Settings** > **Local Policies**. For example, under **User Rights Assignment** in the list on the right, you find **Log on locally**. This setting is required for logging on to a session on Terminal Services. You also find **Access this computer from the network**. This setting is required to connect to the server outside a Terminal Services session. This is also where you can prevent users from being able to shut down the system. Settings for the user part of the policy should not be applied here because the users have not been put into this OU with the Terminal Services server. This article is written for computer policy implementation.  
 When modifications are completed, close the Group Policy Management editor, and then click Close to close OU Properties.
 
 ### Method 2
@@ -66,12 +65,12 @@ For more information, see [Local policy doesn't permit you to log on interactive
 
 The computer account of the terminal server should be added to the security properties of the GPO being created for the loopback. To do it, follow these steps:  
 
-1. Select the GPO that is created for the loopback, and then click **Properties**.
-2. Click the **Security** tab, and then click **Add**.
-3. In the **Select Users, Computers, or Groups** box, select the computer account, and then click **OK**.
-4. Click the computer account from the **Group or user names** box.
-5. In the **Permissions for computer name** box, click to select the **Read** and **Apply Group Policy** check boxes in the **Allow** column.
-6. Click OK two times to close and save the policy settings.
+1. Select the GPO that is created for the loopback, and then select **Properties**.
+2. Select the **Security** tab, and then select **Add**.
+3. In the **Select Users, Computers, or Groups** box, select the computer account, and then select **OK**.
+4. Select the computer account from the **Group or user names** box.
+5. In the **Permissions for computer name** box, select the **Read** and **Apply Group Policy** check boxes in the **Allow** column.
+6. Select **OK** two times to close and save the policy settings.
 
 ## Data collection
 
