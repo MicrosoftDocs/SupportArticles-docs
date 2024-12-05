@@ -206,8 +206,6 @@
       href: unknownincomingemailintegrationerror-2147167669-shows-in-alert-in-mailbox.md
     - name: UnknownIncomingEmailIntegrationError -2147220192
       href: unknownincomingemailintegrationerror-2147220192.md
-    - name: UnknownIncomingEmailIntegrationError -2147220956
-      href: exception-appears-server-side-sync.md
     - name: UnknownIncomingEmailIntegrationError -2147220970
       href: unknownincomingemailintegrationerror-2147220970-exception.md
     - name: UnknownIncomingEmailIntegrationError in Dynamics 365 mailbox
