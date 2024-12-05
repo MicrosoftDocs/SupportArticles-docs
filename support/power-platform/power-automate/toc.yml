@@ -48,6 +48,8 @@
   items:
     - name: A desktop application crashes due to UI automation
       href: desktop-flows/desktop-application-crashes-ui-automation.md
+    - name: '"Could not read the application certificate" error when creating a connection'
+      href: desktop-flows/application-certificate-error.md
     - name: Agent-related errors when running attended or unattended desktop flows
       href: desktop-flows/agent-connectivity-issues-pad.md
     - name: Browser automation actions stop working after a browser update
@@ -154,6 +156,8 @@
       href: desktop-flows/troubleshoot-session-creation-errrors.md
     - name: Tenant restrictions for machine registration
       href: desktop-flows/tenant-restictions-machine-registration.md  
+    - name: '"The specified module could not be found" error with terminal emulation action'
+      href: desktop-flows/terminal-emulation-module-not-found.md
     - name: Troubleshoot direct connectivity issues
       href: desktop-flows/troubleshoot-direct-connectivity-issues.md
     - name: Troubleshoot desktop flow run queue-based errors

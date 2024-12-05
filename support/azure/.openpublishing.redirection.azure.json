@@ -6244,6 +6244,26 @@
         "source_path": "entra/entra-id/user-prov-sync/user-object-missing-filtered.md",
         "redirect_url": "/troubleshoot/entra/entra-id/user-prov-sync/user-object-missing-filtered",
         "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files/alerts/files-troubleshoot-create-alerts.md",
+        "redirect_url": "/azure/storage/files/files-monitoring-alerts",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "virtual-machines/linux/ed25519-ssh-keys.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/welcome-virtual-machines-linux",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-kubernetes/create-upgrade-delete/upgrades-to-kubernetes-fail-using-node-labels.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-kubernetes/create-upgrade-delete/error-code-requestdisallowedbypolicy-delete.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+        "redirect_document_id": false
       }
   ]
 }

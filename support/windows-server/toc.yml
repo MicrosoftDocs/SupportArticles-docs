@@ -799,8 +799,6 @@ items:
       href: ./certificates-and-public-key-infrastructure-pki/import-third-party-ca-to-enterprise-ntauth-store.md
     - name: How to reinstall CA role
       href: ./certificates-and-public-key-infrastructure-pki/uninstall-reinstall-ca-role.md
-    - name: How to remove manually Enterprise Windows Certificate Authority
-      href: ./certificates-and-public-key-infrastructure-pki/delete-enterprise-windows-certificate-authority.md
     - name: Move a certification authority to another server
       href: ./certificates-and-public-key-infrastructure-pki/move-certification-authority-to-another-server.md
     - name: Move Certificate Server database and log files
@@ -891,8 +889,6 @@ items:
     items:
     - name: Disable TLS 1.0 and 1.1 and force the use of TLS 1.2
       href: ./certificates-and-public-key-infrastructure-pki/disable-tls-1-1dot1-mbam-servers.md
-    - name: Restrict cryptographic algorithms and protocols
-      href: ./certificates-and-public-key-infrastructure-pki/restrict-cryptographic-algorithms-protocols-schannel.md
 - name: Containers
   items:
   - name: Management of Containers
@@ -926,7 +922,7 @@ items:
     - name: AGPM and GPRESULT are not working
       href: ./group-policy/agpm-gpresult-not-working.md
     - name: Changes to GPO permissions aren't saved
-      href: ./group-policy/changes-to-gpo-permissions-ignored.md    
+      href: ./group-policy/changes-to-gpo-permissions-ignored.md
     - name: Dcgpofix tool doesn't restore security settings to the original state
       href: ./group-policy/dcgpofix-not-restore-default-domain-controller-policy-security-settings.md
     - name: Description of group policy restricted groups
@@ -938,7 +934,7 @@ items:
     - name: Group Policy settings show as Extra Registry Settings
       href: ./group-policy/group-policy-settings-show-as-extra-registry-settings.md
     - name: How to enable the Group Policy loopback feature
-      href: ./group-policy/loopback-processing-of-group-policy.md    
+      href: ./group-policy/loopback-processing-of-group-policy.md
     - name: How to set event log security locally or via Group Policy
       href: ./group-policy/set-event-log-security-locally-or-via-group-policy.md
     - name: Manage Group Policy administrative template files
@@ -1048,7 +1044,7 @@ items:
   - name: Sysvol access or replication issues
     items:
     - name: DFSR SYSVOL fails to migrate or replicate
-      href: ./group-policy/dfsr-sysvol-fails-migrate-replicate.md    
+      href: ./group-policy/dfsr-sysvol-fails-migrate-replicate.md
     - name: How to force synchronization for DFSR-replicated sysvol replication
       href: ./group-policy/force-authoritative-non-authoritative-synchronization.md
     - name: Minimize SYSVOL size by removing administrative templates
@@ -2931,14 +2927,14 @@ items:
       href: ./windows-security/windows-updates-add-new-ntlm-pass-through-authentication-protections.md
   - name: Netlogon, secure channel, DC Locator
     items:
-      - name: 'Troubleshooting guidance: Secure channel'
-        href: ./windows-security/broken-trust-relationship-domain-joined-device-its-domain-secure-channel-issues.md      
-      - name: Gather information for secure channel issues
-        href: ./windows-security/data-collection-for-troubleshooting-secure-channel-issues.md
-      - name: Active Directory has a newer password than the client
-        href: ./windows-security/active-directory-has-newer-password-value-than-client-device.md
-      - name: Client has a newer password than Active Directory
-        href: ./windows-security/client-device-has-newer-password-value-than-active-directory.md
+    - name: 'Troubleshooting guidance: Secure channel'
+      href: ./windows-security/broken-trust-relationship-domain-joined-device-its-domain-secure-channel-issues.md
+    - name: Gather information for secure channel issues
+      href: ./windows-security/data-collection-for-troubleshooting-secure-channel-issues.md
+    - name: Active Directory has a newer password than the client
+      href: ./windows-security/active-directory-has-newer-password-value-than-client-device.md
+    - name: Client has a newer password than Active Directory
+      href: ./windows-security/client-device-has-newer-password-value-than-active-directory.md
   - name: Permissions, access control, and auditing
     items:
     - name: .bak log files are deleted and lost

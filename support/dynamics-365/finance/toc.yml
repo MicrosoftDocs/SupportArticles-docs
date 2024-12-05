@@ -66,7 +66,7 @@
       href: general-ledger/year-end-close-miss-opening-balances.md
 - name: Tax
   items:
-    - name: Tax Calculation service
+    - name: Tax Calculation
       items:
         - name: Error 400 or 401 when setting Dataverse virtual table visibility
           href: tax/cannot-set-dataverse-virtual-table-visibility.md

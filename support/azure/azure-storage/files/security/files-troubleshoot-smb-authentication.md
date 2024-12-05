@@ -3,7 +3,7 @@ title: Troubleshoot Azure Files identity-based authentication and authorization 
 description: Troubleshoot problems using identity-based authentication to connect to SMB Azure file shares and see possible resolutions.
 ms.service: azure-file-storage
 ms.custom: sap:Security, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
-ms.date: 10/28/2024
+ms.date: 11/15/2024
 ms.reviewer: kendownie, v-surmaini, v-weizhu
 ---
 # Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
@@ -170,6 +170,24 @@ You may experience one of the symptoms described below when trying to configure 
 ### Solution
 
 We recommend that you [configure directory/file level permissions using icacls](/azure/storage/files/storage-files-identity-configure-file-level-permissions#configure-windows-acls-with-icacls) instead of using Windows File Explorer.
+
+## Unable to view UserPrincipalName (UPN) of a file/directory owner in File Explorer 
+
+### Symptom
+
+File Explorer displays the security identifier (SID) of a file/directory owner, but not the UPN.
+
+### Cause
+
+File Explorer calls an RPC API directly to the server (Azure Files) to translate the SID to a UPN. Azure Files doesn't support this API, so the UPN isn't displayed.
+
+### Solution
+
+On a domain-joined client, use the following PowerShell command to view all items in a directory and their owner, including UPN: 
+
+```PowerShell
+Get-ChildItem <Path> | Get-ACL | Select Path, Owner
+```
 
 ## Errors when running Join-AzStorageAccountForAuth cmdlet
 
