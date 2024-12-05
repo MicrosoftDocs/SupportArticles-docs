@@ -2,10 +2,10 @@
 title: SMTP address has no mailbox associated with it error
 description: Solves an SMTP address error that occurs when you select Test Connection on an email server profile record in Dynamics 365.
 ms.reviewer: 
-ms.date: 12/03/2024
+ms.date: 12/05/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
-# "The SMTP address has no mailbox associated with it" error occurs in Microsoft Dynamics 365
+# "The SMTP address has no mailbox associated with it" error when selecting Test Connection
 
 This article provides a solution to an error that occurs when you select **Test Connection** on an email server profile record in Microsoft Dynamics 365.
 
@@ -20,11 +20,11 @@ When you select **Test Connection** on an email server profile record in Dynamic
 
 ## Cause
 
-This error can occur if the **User Name** field in the email server profile record is populated using the `domain\username` format instead of the UPN format (Example: `contoso\user`).
+This error can occur if the **User Name** field in the email server profile record is populated using the `domain\username` format instead of the UPN format (for example: `contoso\user`).
 
 ## Resolution
 
-To solve this issue, use the UPN format (Example: `user@contoso.com`) for the **User Name** field instead of the `domain\username` format in the **Credentials** section of the email server profile record.
+To solve this issue, use the UPN format (for example: `user@contoso.com`) for the **User Name** field instead of the `domain\username` format in the **Credentials** section of the email server profile record.
 
 If the user name is in the UPN format and you still receive this error, verify that the user has a mailbox and that the UPN value in the **User Name** field matches the email address for the user's mailbox in Exchange.
 
