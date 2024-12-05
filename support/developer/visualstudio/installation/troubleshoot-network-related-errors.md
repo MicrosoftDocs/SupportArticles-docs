@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot network or proxy errors
 description: Find solutions for network- or proxy-related errors that you might encounter when you install, update, or use Visual Studio behind a firewall or a proxy server.
-ms.date: 12/04/2024
+ms.date: 12/05/2024
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: meghaanand, jagbal
@@ -56,9 +56,9 @@ Visual Studio should pick up the proxy setting from Windows. However, you can se
 
 1. For Visual Studio 2022, set the proxy environment variables:
 
-   - http_proxy: This variable is used on HTTP requests. **Note**: This variable is lowercase because some tools expect the variable to be lowercase.
+   - http_proxy: This variable is used on HTTP requests. **Note** This variable is lowercase because some tools expect the variable to be lowercase.
    - HTTPS_PROXY: This variable is used on HTTPS requests.
-   - ALL_PROXY: This variable is used on HTTP and/or HTTPS requests if HTTP_PROXY and/or HTTPS_PROXY aren't defined.
+   - ALL_PROXY: This variable is used to specify a proxy server for HTTP or HTTPS requests if the `HTTP_PROXY` or `HTTPS_PROXY` variables aren't defined.
     
    > [!NOTE]
    > For more information, see [HttpClient.DefaultProxy](/dotnet/api/system.net.http.httpclient.defaultproxy/).
@@ -85,19 +85,19 @@ If you want to use the default credentials for the user account which is running
    > [!NOTE]
    > For more information, see the [\<defaultProxy> Element (Network Settings)](/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings/) and [\<proxy>  Element (Network Settings)](/dotnet/framework/configure-apps/file-schema/network/proxy-element-network-settings) pages.
 
-1. With [Visual Studio 17.8](/visualstudio/releases/2022/release-notes-v17.8) onwards, we've updated the configuration process for default proxy credentials in web requests. To enable default proxy credentials after this update, create a new environment variable named `VS_USE_DEFAULTPROXY`, set its value to `true`, and then restart Visual Studio. This variable will tell Visual Studio and associated processes to attach the default credentials of the user running the process to proxy requests. It's similar to what `useDefaultCredentials` does in the exe config file in step #2.
+1. With [Visual Studio 17.8](/visualstudio/releases/2022/release-notes-v17.8) onwards, we've updated the configuration process for default proxy credentials in web requests. To enable default proxy credentials after this update, create a new environment variable named `VS_USE_DEFAULTPROXY`, set its value to `true`, and then restart Visual Studio. This variable tells Visual Studio and associated processes to attach the default credentials of the user running the process to proxy requests. It's similar to what `useDefaultCredentials` does in the exe config file in step 2.
 
 ## Debugging proxy errors
 
-When trying to make network connections behind a proxy server, you might encounter many different kinds of failures. Some of the failures include error on send, connection refused, and could not resolve address. There could be other kinds of failures but what they have in common is some configuration is incorrect on the local machine or network. To help diagnose what is blocking the connection, using a tool outside of Visual Studio can be helpful. 
+When trying to make network connections behind a proxy server, you might encounter many different kinds of failures. Some of the failures include "error on send", "connection refused", and "could not resolve address". There might be other kinds of failures, but what they have in common is that some configuration is incorrect on the local machine or network. To help diagnose what blocks the connection, using a tool outside of Visual Studio can be helpful. 
 
-- If you're encountering an error such as connection refused or error on send, try the following command line:
+- If you encounter an error such as connection refused or error on send, try the following command line:
 
    ```cmd
    curl "https://resource" -v
    ```
 
-   Running this command makes a network connection to the resource and might fail in a similar manner to what is seen in Visual Studio. At that point, diagnosing this failure is required before attempting to make the connection using Visual Studio. A failure here indicates a machine or network configuration problem rather than a product issue with Visual Studio. 
+   Running this command makes a network connection to the resource and might fail in a similar manner to what is seen in Visual Studio. At that point, diagnosing this failure is required before attempting to make the connection by using Visual Studio. A failure here indicates a machine or network configuration problem rather than a product issue with Visual Studio. 
 
 - If you know you're behind a proxy server that has a specific address, setting the `http_proxy` and `https_proxy` environment variables are necessary before running the curl command since it uses those environment variables for proxy settings. 
 
