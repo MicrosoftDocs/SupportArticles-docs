@@ -86,5 +86,5 @@ The **Require approved client app** control is not supported for guest users and
 
 For a full list of Active Directory Authentication and authorization error codes, see [Microsoft Entra authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+To investigate individual errors, go to https://login.microsoftonline.com/error.
 
