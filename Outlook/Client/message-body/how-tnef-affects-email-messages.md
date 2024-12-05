@@ -51,11 +51,11 @@ When an email client that doesn't support TNEF receives a message containing TNE
 
 - The plain text version of the message is received and the message has an attachment that has a generic name such as ATT00008.dat or ATT00005.eml. In this case, the client can't recognize either the TNEF part of the message or the Winmail.dat file name. Therefore, a file name is created to hold the TNEF information.
 
-Similar to how the receiving client behaves, it's common for an email server to strip out TNEF information from messages as it delivers them. If a server option to remove TNEF is enabled, clients always receive a plain text version of the message. Exchange Server is an example of an email server program that can remove TNEF from messages.
+Similar to how the receiving client behaves, it's common for an email server to strip out TNEF information from messages as it delivers them. If a server option to remove TNEF is enabled, clients always receive a plain text version of the message. Exchange Server is an example of an email server that can remove TNEF from messages.
 
 ### Message encoding
 
-The internet standards for encoding messages such as Multipart Internet Mail Extensions (MIME) and UUENCODE are used independently of TNEF. TNEF can exist in a MIME-encoded message as a MIME body part of type `application/ms-tnef`, or in a UUENCODED message as an attachment that's named Winmail.dat. To correctly display the encapsulated information, the receiving client must support TNEF encoding.
+The internet standards for encoded messages, such as Multipart Internet Mail Extensions (MIME) and UUENCODE, are independent of TNEF. TNEF can exist in a MIME-encoded message as a MIME body part of type `application/ms-tnef`, or in a UUENCODED message as an attachment that's named Winmail.dat. To correctly display the encapsulated information, the receiving client must support TNEF encoding.
 
 ### Manage TNEF in messages
 
