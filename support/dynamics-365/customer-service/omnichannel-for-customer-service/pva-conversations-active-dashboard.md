@@ -11,11 +11,6 @@ ms.collection: CEnSKM-ai-copilot
 
 This article provides a resolution for the issue where Copilot Studio agent conversations are shown as active on the Omnichannel for Customer Service dashboard even though a user has ended a chat.
 
-> [!IMPORTANT]
-> Power Virtual Agents capabilities and features are [now part of Microsoft Copilot Studio](https://www.microsoft.com/microsoft-copilot/blog/copilot-studio/microsoft-power-virtual-agents-now-part-of-microsoft-copilot-studio/) following significant investments in generative AI and enhanced integrations across Microsoft Copilot.
->
-> Some articles and screenshots might refer to Power Virtual Agents while we update documentation and training content.
-
 ## Symptoms
 
 After a conversation has ended, the Copilot Studio agent conversations are still showing as active on the dashboard.

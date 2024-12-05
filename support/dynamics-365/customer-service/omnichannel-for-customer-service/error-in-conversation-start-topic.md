@@ -40,7 +40,7 @@ To resolve this error, you need to manually recreate the step that has the error
 
    :::image type="content" source="media/cant-reference-variable-publish-survey-agent/connector-action-fields.png" alt-text="Screenshot that shows that fields that must be filled for the Connector action.":::
 
-3. Save and publish the bot.
+3. Save and publish the survey agent.
 
 ### Related information
 
