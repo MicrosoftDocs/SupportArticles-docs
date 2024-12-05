@@ -1,5 +1,5 @@
 ---
-title: Error in Conversation Start topic prevents publish of survey agent
+title: Error in Conversation Start topic prevents publishing of survey agent
 description: Solves an error that occurs when you try to publish a survey agent in Microsoft Dynamics 365 Customer Service. 
 ms.reviewer: nenellim
 ms.author: srubinstein
@@ -7,15 +7,15 @@ ms.date: 12/05/2024
 ms.custom: sap:Copilot Studio\End conversation
 ---
 
-# Error in Conversation Start topic prevents publish of survey agent
+# Error in Conversation Start topic prevents publishing of survey agent
 
-This article provides a solution to an issue where publish of the Copilot Studio survey agent fails and the error points to the Conversation Start topic.
+This article provides a solution to an issue where publishes of the Copilot Studio survey agent fails and the error points to the Conversation Start topic.
 
 ## Symptoms
 
-As an admin, you notice that there is an error when you try to publish the Copilot Studio survey agent. The error says "Cannot reference variable from component 'msdyn_dataverse_mcs_survey_connectionreference'".
+As an admin, you notice that there's an error when you try to publish the Copilot Studio survey agent. The error says "Cannot reference variable from component 'msdyn_dataverse_mcs_survey_connectionreference'".
 
-:::image type="content" source="media/cant-reference-variable-publish-survey-agent/cant-reference-variable-from-component-error.png" alt-text="Screenshot that shows the error that you receive when you publish the Copilot Survey bot." lightbox="media/cant-reference-variable-publish-survey-agent/cant-reference-variable-from-component-error.png":::
+:::image type="content" source="media/cant-reference-variable-publish-survey-agent/cant-reference-variable-from-component-error.png" alt-text="Screenshot that shows the error that you receive when you publish the Copilot Studio survey agent." lightbox="media/cant-reference-variable-publish-survey-agent/cant-reference-variable-from-component-error.png":::
 
 ## Cause
 
@@ -25,7 +25,7 @@ This issue is caused by an incorrectly configured connection reference.
 
 To resolve this error, you need to manually recreate the step that has the error.
 
-1. Remove the errored step, and then recreate it. The connector name is "Perform an unbound action in selected environment".
+1. Remove the errored step, and then recreate it by selecting the connector with the name "`Perform an unbound action in selected environment`".
 
    :::image type="content" source="media/cant-reference-variable-publish-survey-agent/create-new-step-with-connector.png" alt-text="Screenshot that shows how to create a new step by using the Perform an unbound action in selected environment connector." lightbox="media/cant-reference-variable-publish-survey-agent/create-new-step-with-connector.png":::
 
