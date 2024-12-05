@@ -23,7 +23,7 @@ There are two methods for applying GPOs to Terminal Services without adversely a
 
 ## Method 1
 
-Put the Terminal Server computers into their own organizational unit (OU). This configuration permits relevant computer configuration settings to be put in GPOs that apply only to Terminal Server computers. This configuration does not affect the user experience on workstations or on other servers and lets you create a tightly controlled Terminal Server experience for users. This OU should not contain users or other computers so that domain administrators can fine-tune the Terminal Services experience. The OU can also be delegated for control to subordinate groups such as server operators or individual users.
+Put the Terminal Server computers into their own organizational unit (OU). This configuration permits relevant computer configuration settings to be put in GPOs that apply only to Terminal Server computers. This configuration doesn't affect the user experience on workstations or on other servers and lets you create a tightly controlled Terminal Server experience for users. This OU shouldn't contain users or other computers so that domain administrators can fine-tune the Terminal Services experience. The OU can also be delegated for control to subordinate groups such as server operators or individual users.
 
 To create a new OU for the Terminal Services servers, follow these steps:
 
@@ -48,7 +48,7 @@ To create a Terminal Services Group Policy object, follow these steps:
 10. Select **OK** to link the GPO to the OU.
 
 > [!NOTE]
-> Most of the relevant settings are under **Computer Configuration** > **Windows Settings** > **Security Settings** > **Local Policies**. For example, under **User Rights Assignment** in the list on the right, you find **Log on locally**. This setting is required for logging on to a session on Terminal Services. You also find **Access this computer from the network**. This setting is required to connect to the server outside a Terminal Services session. This is also where you can prevent users from being able to shut down the system. Settings for the user part of the policy should not be applied here because the users have not been put into this OU with the Terminal Services server. This article is written for computer policy implementation.  
+> Most of the relevant settings are under **Computer Configuration** > **Windows Settings** > **Security Settings** > **Local Policies**. For example, under **User Rights Assignment** in the list on the right, you find **Log on locally**. This setting is required for logging on to a session on Terminal Services. You also find **Access this computer from the network**. This setting is required to connect to the server outside a Terminal Services session. This is also where you can prevent users from being able to shut down the system. Settings for the user part of the policy shouldn't be applied here because the users have not been put into this OU with the Terminal Services server. This article is written for computer policy implementation.  
 When modifications are completed, close the Group Policy Management Editor, and then select **Close** to close **OU Properties**.
 
 ## Method 2
