@@ -6,7 +6,7 @@ metadata:
   author: auolivei
   ms.reviewer:  genli
   ms.topic: faq
-  ms.date: 08/03/2022
+  ms.date: 12/05/2024
   ms.author: auolivei
   ms.service: azure-app-service
 title: Frequently asked questions about scaling web apps in Azure App Service
@@ -78,8 +78,7 @@ sections:
 
       - question: |
           I'm seeing the error: "App Service Plans with fewer than 3 workers aren't allowed for zone redundancy. Requested number of workers: xxxx" What should I do?
-        answer: | 
-          Check if the App Service Plan has Zone Redundancy enabled and if you have auto scale on the App Service Plan to set number os instances to a value less than 3. [Availability zone support](/reliability/reliability/reliability-app-service#availability-zone-support) requires a minimum of 3 instances. You need to correct the auto scale rule to not set the number of instances less than 3.
+        answer: | [Availability zone support]( /azure/reliability/reliability-app-service#availability-zone-support) requires at least 3 instances. Verify if the App Service Plan has zone redundancy enabled and if you have auto scale on the App Service Plan. If yes, correct the auto scale rule to not set the number of instances to a value less than 3.
 
 
           [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
