@@ -129,7 +129,7 @@ To remove a published or assigned package, follow these steps:
 7. Perform one of the following actions:
    - Click **Immediately uninstall the software from users and computers**, and then click **OK**.
    - Click **Allow users to continue to use the software but prevent new installations**, and then click **OK**.
-8. Close the Group Policy snap-in, click **OK**, and then closet the Active Directory Users and Computers snap-in.
+8. Close the Group Policy snap-in, click **OK**, and then close the Active Directory Users and Computers snap-in.
 
 ## Troubleshoot
 
