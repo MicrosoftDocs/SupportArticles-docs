@@ -2,8 +2,7 @@
 title: Test Connection fails from Email Server
 description: Provides a solution to an issue where Test Connection fails from Email Server Profile in Microsoft Dynamics 365.
 ms.reviewer: 
-ms.topic: troubleshooting
-ms.date: 11/19/2024
+ms.date: 12/05/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # Test Connection fails from Email Server Profile in Microsoft Dynamics 365
@@ -27,9 +26,7 @@ at Microsoft.Crm.Asynchronous.EmailConnector.ExchangeConnectivityDiscoverer.Vali
 ## Cause
 
 - **Cause 1:** The username or password isn't correct.
-
 - **Cause 2:** If you're using Dynamics 365 (online) to connect to Exchange on-premises, this error can occur if your firewall doesn't allow connectivity from Dynamics 365 to your Exchange server.
-
 - **Cause 3:** In some cases, the test connection may fail even though the credentials are correct and connectivity isn't a problem. See Resolution 3 in the Resolution section.
 
 ## Resolution
