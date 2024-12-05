@@ -160,6 +160,8 @@
           href: omnichannel-for-customer-service/omnichannel-provision-fail-errors.md
     - name: Copilot Studio
       items:
+        - name: Can't publish Copilot Survey bot due to an error with Conversation Start topic
+          href: omnichannel-for-customer-service/cannot-refernce-variable-publish-copilot-survey-bot.md
         - name: Copilot Studio bot conversations are active after a chat ends
           href: omnichannel-for-customer-service/pva-conversations-active-dashboard.md  
         - name: Missing variables and actions when agent transfers from Copilot Studio bots
