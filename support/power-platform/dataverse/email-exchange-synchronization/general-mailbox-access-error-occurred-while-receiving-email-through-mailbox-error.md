@@ -21,7 +21,7 @@ A warning with the following message is recorded in a Dynamics 365 mailbox:
 
 ## Cause
 
-The alert might occur when using the [server-side synchronization](/power-platform/admin/set-up-server-side-synchronization-of-email-appointments-contacts-and-tasks) feature in Dynamics 365 to integrate with Microsoft Exchange. When Dynamics 365 attempts to retrieve information for a mailbox using Exchange web services (EWS), Exchange might respond with an **ErrorMailboxStoreUnavailable**. As documented in [ResponseCode](/exchange/client-developer/web-service-reference/responsecode), the response indicates that Exchange couldn't process the request because the mailbox isn't available at the time.
+The alert might occur when using the [server-side synchronization](/power-platform/admin/set-up-server-side-synchronization-of-email-appointments-contacts-and-tasks) feature in Dynamics 365 to integrate with Microsoft Exchange. When Dynamics 365 attempts to retrieve information for a mailbox using Exchange web services (EWS), Exchange might respond with an **ErrorMailboxStoreUnavailable**. As documented in [ResponseCode](/exchange/client-developer/web-service-reference/responsecode), the response indicates that Exchange couldn't process the request because the mailbox wasn't available at the time.
 
 This error indicates that one of the following error conditions occurred.
 
@@ -40,7 +40,7 @@ If the warning persists, ensure the Exchange mailbox is accessible. If you're us
 
 ## More information
 
-To disable warning-level alerts for server-side synchronization in the system settings,
+To disable warning-level alerts for server-side synchronization in the system settings:
 
 1. Sign in to the Dynamics 365 web application as a user with the System Administrator role.
 2. Navigate to **Settings** and then select **Email Configuration**.
