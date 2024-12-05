@@ -12592,7 +12592,7 @@
     },
     {
       "source_path": "support/dynamics-365/sales/exception-appears-server-side-sync.md",
-      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/dexception-appears-server-side-sync",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/exception-appears-server-side-sync",
       "redirect_document_id": true
     }
   ]
