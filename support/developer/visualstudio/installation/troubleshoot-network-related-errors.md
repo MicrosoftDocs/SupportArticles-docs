@@ -24,7 +24,7 @@ To resolve this issue, try these steps:
 1. Restart Visual Studio. A proxy authentication dialog should appear. Enter your credentials when prompted in the dialog.
 1. If restarting Visual Studio doesn't solve the problem, it might be because your proxy server doesn't prompt for credentials for `http://go.microsoft.com` addresses, but it does so for `*.visualStudio.microsoft.com` addresses. For these servers, add the following URLs to an allowlist to unblock all sign-in scenarios in Visual Studio:
 
-   - `*.windows.net`
+   - `*.Windows.net`
    - `*.microsoftonline.com`
    - `*.visualstudio.microsoft.com`
    - `*.microsoft.com`
@@ -34,7 +34,7 @@ To resolve this issue, try these steps:
 
 ## Configure proxy server
 
-Visual studio should pick up the proxy setting from windows. However, you can set a specific proxy server in the following way.
+Visual Studio should pick up the proxy setting from Windows. However, you can set a specific proxy server in the following way.
 
 1. Find **devenv.exe.config** (the configuration file of **devenv.exe**) in:
 
@@ -54,7 +54,7 @@ Visual studio should pick up the proxy setting from windows. However, you can se
     > [!NOTE]
     > For more information, see the [\<defaultProxy> Element (Network Settings)](/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings/) and [\<proxy>  Element (Network Settings)](/dotnet/framework/configure-apps/file-schema/network/proxy-element-network-settings) pages.
 
-1. For VS2022, set the proxy environment variables:
+1. For Visual Studio 2022, set the proxy environment variables:
 
    - http_proxy: This variable is used on HTTP requests. **Note**: This variable is lowercase because some tools expect the variable to be lowercase.
    - HTTPS_PROXY: This variable is used on HTTPS requests.
@@ -65,7 +65,7 @@ Visual studio should pick up the proxy setting from windows. However, you can se
 
 ## Default user credentials
 
-If you want to use the default credentials for the user account which is running visual studio with your proxy, follow these steps:
+If you want to use the default credentials for the user account which is running Visual Studio with your proxy, follow these steps:
 
 1. Find **devenv.exe.config** (the configuration file of **devenv.exe**) in:
 
@@ -85,11 +85,11 @@ If you want to use the default credentials for the user account which is running
    > [!NOTE]
    > For more information, see the [\<defaultProxy> Element (Network Settings)](/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings/) and [\<proxy>  Element (Network Settings)](/dotnet/framework/configure-apps/file-schema/network/proxy-element-network-settings) pages.
 
-1. With [Visual Studio 17.8](/visualstudio/releases/2022/release-notes-v17.8) onwards, we've updated the configuration process for default proxy credentials in web requests. To enable default proxy credentials after this update, create a new environment variable named `VS_USE_DEFAULTPROXY`, set its value to `true`, and then restart Visual Studio. This variable will tell visual studio and associated processes to attach the default credentials of the user running the process to proxy requests. It's similar to what `useDefaultCredentials` does in the exe config file in step #2.
+1. With [Visual Studio 17.8](/visualstudio/releases/2022/release-notes-v17.8) onwards, we've updated the configuration process for default proxy credentials in web requests. To enable default proxy credentials after this update, create a new environment variable named `VS_USE_DEFAULTPROXY`, set its value to `true`, and then restart Visual Studio. This variable will tell Visual Studio and associated processes to attach the default credentials of the user running the process to proxy requests. It's similar to what `useDefaultCredentials` does in the exe config file in step #2.
 
 ## Debugging proxy errors
 
-While trying to make network connections behind a proxy server, you might encounter many different kinds of failures. Some of the failures include error on send, connection refused, and could not resolve address. There could be other kinds of failures but what they have in common is some configuration is incorrect on the local machine or network. To help diagnose what is blocking the connecting using a tool outside of visual studio can be helpful. 
+When trying to make network connections behind a proxy server, you might encounter many different kinds of failures. Some of the failures include error on send, connection refused, and could not resolve address. There could be other kinds of failures but what they have in common is some configuration is incorrect on the local machine or network. To help diagnose what is blocking the connection, using a tool outside of Visual Studio can be helpful. 
 
 - If you're encountering an error such as connection refused or error on send, try the following command line:
 
@@ -97,13 +97,13 @@ While trying to make network connections behind a proxy server, you might encoun
    curl "https://resource" -v
    ```
 
-   Running this command makes a network connection to the resource and might fail in a similar manner to what is seen in visual studio. At that point, diagnosing this failure is required before attempting to make the connection using visual studio. A failure here indicates a machine or network configuration problem rather than a product issue with visual studio. 
+   Running this command makes a network connection to the resource and might fail in a similar manner to what is seen in Visual Studio. At that point, diagnosing this failure is required before attempting to make the connection using Visual Studio. A failure here indicates a machine or network configuration problem rather than a product issue with Visual Studio. 
 
-- If you know you're behind a proxy server that has a specific address, settings the `http_proxy` and `https_proxy` environment variables are necessary before running the curl command since it uses those environment variables for proxy settings. 
+- If you know you're behind a proxy server that has a specific address, setting the `http_proxy` and `https_proxy` environment variables are necessary before running the curl command since it uses those environment variables for proxy settings. 
 
   You might also use the `help` switch in curl for other options. This command `curl --help proxy` displays a list of options and switches that you can use to set up and configure a proxy with `curl`.  
 
-- If you have a sign-in problem with visual studio to debug, run the following commands:
+- If you have a sign-in problem with Visual Studio to debug, run the following commands:
 
   ```cmd
   curl "https://login.microsoftonline.com/common/discovery/instance?api-version=1.1&authorization_endpoint=https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize" -v
@@ -113,7 +113,7 @@ While trying to make network connections behind a proxy server, you might encoun
   curl "https://graph.microsoft.com" -v
   ```
 
-  For the urls required by sign-in, see [Install and use visual studio behind a firewall or proxy server](/visualstudio/install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server).
+  For the URLs required by sign-in, see [Install and use Visual Studio behind a firewall or proxy server](/visualstudio/install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server).
 
 ## Error "Disconnected from Visual Studio" when attempting to report a problem
 
@@ -148,7 +148,7 @@ Enable connections by adding [these domain URLs](/visualstudio/install/install-a
 
 You might encounter this error message when you use a Visual Studio bootstrapper and a **response.json** file on a network drive. The error's source is the User Account Control (UAC) in Windows.
 
-Here's why this error can happen: A mapped network drive or [UNC](/dotnet/standard/io/file-path-formats#unc-paths) share is linked to a user's access token. When UAC is enabled, two user [access tokens](/windows/win32/secauthz/access-tokens) are created: One with administrator access, and one without administrator access. When a network drive or share is created, the user's current access token is linked to it. Because the bootstrapper must be run as an administrator, it can't access the network drive or share if either the drive or the share isn't linked to a user-access token that has administrator access.
+Here's why this error can happen: A mapped network drive or [UNC](/dotnet/standard/io/file-path-formats#unc-paths) share is linked to a user's access token. When UAC is enabled, two user [access tokens](/Windows/win32/secauthz/access-tokens) are created: one with administrator access, and one without administrator access. When a network drive or share is created, the user's current access token is linked to it. Since the bootstrapper must be run as an administrator, it can't access the network drive or share unless either the drive or share is linked to a user-access token that has administrator access.
 
 ### Resolution
 
