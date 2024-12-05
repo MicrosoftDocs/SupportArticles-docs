@@ -28,7 +28,7 @@ This error occurs when a conditional access policy in the resource tenant is con
 
 ## Solution
 
-1.	Create XTAP policy to [Trust Compliant Devices](/entra/external-id/cross-tenant-access-settings-b2b-collaboration#to-change-inbound-trust-settings-for-mfa-and-device-claims) from the user’s home tenant.
+1.	Create an XTAP policy to [Trust Compliant Devices](/entra/external-id/cross-tenant-access-settings-b2b-collaboration#to-change-inbound-trust-settings-for-mfa-and-device-claims) from the user’s home tenant.
 
 2.	Ensure that device is authenticated.
 >[!Note]
@@ -54,7 +54,7 @@ The error can also occur when a conditional access policy in the resource tenant
 
 ## Solution
 
-1.	Create XTAP policy to ["Trust Microsoft Entra hybrid joined devices"](/entra/external-id/cross-tenant-access-settings-b2b-collaboration#to-change-inbound-trust-settings-for-mfa-and-device-claims) from the user’s home tenant.
+1.	Create an XTAP policy to ["Trust Microsoft Entra hybrid joined devices"](/entra/external-id/cross-tenant-access-settings-b2b-collaboration#to-change-inbound-trust-settings-for-mfa-and-device-claims) from the user’s home tenant.
 
 
  2.	Ensure that device is authenticated.
