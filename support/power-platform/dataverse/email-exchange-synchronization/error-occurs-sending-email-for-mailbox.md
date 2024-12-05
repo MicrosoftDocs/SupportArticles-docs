@@ -1,11 +1,11 @@
 ---
-title: An error occurred in sending email for mailbox while connecting to the email server
+title: Error occurred in sending email for mailbox while connecting to the email server
 description: Provides a solution to an email server error code ConnectFailure that occurs when you try to test and enable a mailbox in Microsoft Dynamics 365.
 ms.reviewer: 
-ms.date: 11/29/2024
+ms.date: 12/05/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
-# "An error occurred in sending email for mailbox" error when you test and enable a mailbox in Dynamics 365
+# "An error occurred in sending email for the mailbox" when you test and enable a mailbox in Dynamics 365
 
 This article provides a solution to an error that occurs when you try to test and enable a mailbox in Microsoft Dynamics 365.
 
@@ -14,10 +14,10 @@ _Original KB number:_ &nbsp; 4092737
 
 ## Symptoms
 
-When you try to [test and enable a mailbox](/power-platform/admin/connect-exchange-online#test-the-configuration-of-mailboxes) in Dynamics 365, you receive following error:
+When you try to [test and enable a mailbox](/power-platform/admin/connect-exchange-online#test-the-configuration-of-mailboxes) in Dynamics 365, you receive the following error:
 
-> "An error occurred in sending email for mailbox "Your mailbox is now connected to Dynamics 365" while connecting to the email server. The owner of the associated email server profile \<Mailbox Name> has been notified. The system will try to send email again later.  
-> **Email Server Error Code:**  Web server returned ConnectFailure exception."
+> An error occurred in sending email for the mailbox \<Mailbox Name> "Your mailbox is now connected to Dynamics 365" while connecting to the email server. The owner of the associated email server profile \<Mailbox Name> has been notified. The system will try to send email again later.  
+> **Email Server Error Code:**  Web server returned ConnectFailure exception.
 
 ## Cause
 
@@ -38,18 +38,18 @@ To solve this issue, verify the correct ports are specified:
 > [!NOTE]
 > To manage security roles and mailbox settings, you need to sign in to your Dynamics 365 organization as a user with the "System Administrator" role.
 
-1. In Dynamics 365, nvaigate to **Settings** > **Email Configuration** > **Email Server Profiles**.
-2. Open the email server profile that's used by the mailbox that receives the error.
+1. In Dynamics 365, navigate to **Settings** > **Email Configuration** > **Email Server Profiles**.
+2. Open the email server profile used by the mailbox that received the error.
 
     > [!NOTE]
-    > You can also select the name of the email server profile within the error message. It appears as a hyperlink which will open the correct email server profile record.
+    > You can also select the name of the email server profile within the error message. It appears as a hyperlink that will open the correct email server profile record.
 
 3. Select **Advanced**.
 4. Verify the **Incoming Port** and **Outgoing Port** values, and then select **Save**.
 
     > [!NOTE]
-    > Refer to the documentation from your email provider for the correct ports to use when connecting to the SMTP service. For [Gmail](https://support.google.com/mail/answer/7104828), the incoming POP3 port is 995 and outgoing SMTP port is 587.
+    > Refer to the documentation from your email provider for the correct ports to use when connecting to the SMTP service. For [Gmail](https://support.google.com/mail/answer/7104828), the incoming POP3 port is 995, and the outgoing SMTP port is 587.
 
-5. Select **Mailboxes** and then select the mailbox that receives the error.
+5. Select **Mailboxes**, and then select the mailbox that received the error.
 6. Select the **Test & Enable Mailboxes** button.
 7. After the test completes, open the mailbox record and view the **Alerts** section if the results don't appear as **Success**.
