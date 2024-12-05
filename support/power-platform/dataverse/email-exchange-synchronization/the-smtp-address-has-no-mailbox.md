@@ -20,11 +20,11 @@ When you select **Test Connection** on an email server profile record in Dynamic
 
 ## Cause
 
-This error can occur if the **User Name** field in the email server profile record is populated using the `domain\username` format instead of the UPN format (for example: `contoso\user`).
+This error can occur if the **User Name** field in the email server profile record is populated using the `domain\username` format instead of the UPN format (for example, `contoso\user`).
 
 ## Resolution
 
-To solve this issue, use the UPN format (for example: `user@contoso.com`) for the **User Name** field instead of the `domain\username` format in the **Credentials** section of the email server profile record.
+To solve this issue, use the UPN format (for example, `user@contoso.com`) for the **User Name** field instead of the `domain\username` format in the **Credentials** section of the email server profile record.
 
 If the user name is in the UPN format and you still receive this error, verify that the user has a mailbox and that the UPN value in the **User Name** field matches the email address for the user's mailbox in Exchange.
 
