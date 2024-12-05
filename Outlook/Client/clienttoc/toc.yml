@@ -321,6 +321,8 @@
           href: ../message-body/attachment-size-exceeds-the-allowable-limit-error.md
         - name: Embed and play back videos in Outlook and Loop
           href: ../message-body/embed-playback-videos-in-outlook-and-loop.md
+        - name: How message format affects email messages
+          href: ../message-body/how-tnef-affects-email-messages.md
         - name: HTTPS linked images in HTML emails display the red X
           href: ../message-body/https-linked-images-in-html-emails-show-red-x.md
         - name: Hyperlinks aren't working
