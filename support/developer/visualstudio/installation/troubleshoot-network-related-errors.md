@@ -24,7 +24,7 @@ To resolve this issue, try these steps:
 1. Restart Visual Studio. A proxy authentication dialog should appear. Enter your credentials when prompted in the dialog.
 1. If restarting Visual Studio doesn't solve the problem, it might be because your proxy server doesn't prompt for credentials for `http://go.microsoft.com` addresses, but it does so for `*.visualStudio.microsoft.com` addresses. For these servers, add the following URLs to an allowlist to unblock all sign-in scenarios in Visual Studio:
 
-   - `*.Windows.net`
+   - `*.windows.net`
    - `*.microsoftonline.com`
    - `*.visualstudio.microsoft.com`
    - `*.microsoft.com`
@@ -148,7 +148,7 @@ Enable connections by adding [these domain URLs](/visualstudio/install/install-a
 
 You might encounter this error message when you use a Visual Studio bootstrapper and a **response.json** file on a network drive. The error's source is the User Account Control (UAC) in Windows.
 
-Here's why this error can happen: A mapped network drive or [UNC](/dotnet/standard/io/file-path-formats#unc-paths) share is linked to a user's access token. When UAC is enabled, two user [access tokens](/Windows/win32/secauthz/access-tokens) are created: one with administrator access, and one without administrator access. When a network drive or share is created, the user's current access token is linked to it. Since the bootstrapper must be run as an administrator, it can't access the network drive or share unless either the drive or share is linked to a user-access token that has administrator access.
+Here's why this error can happen: A mapped network drive or [UNC](/dotnet/standard/io/file-path-formats#unc-paths) share is linked to a user's access token. When UAC is enabled, two user [access tokens](/windows/win32/secauthz/access-tokens) are created: one with administrator access, and one without administrator access. When a network drive or share is created, the user's current access token is linked to it. Since the bootstrapper must be run as an administrator, it can't access the network drive or share unless either the drive or share is linked to a user-access token that has administrator access.
 
 ### Resolution
 
