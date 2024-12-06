@@ -19,9 +19,9 @@ _Original KB number:_ &nbsp; 260370
 
 When the Remote Desktop Services servers are in an Active Directory domain, the domain administrator implements Group Policy objects (GPOs) to the Remote Desktop Services server to control the user environment. This article describes the recommended process of applying GPOs to Remote Desktop Services without adversely affecting other servers on the network.
 
-There are two methods for applying GPOs to Remote Desktop Services without adversely affecting other servers on the network.
+The approaches for applying GPOs to Remote Desktop Services are for computer policy settings. There are two methods for applying GPOs to Remote Desktop Services without adversely affecting other servers on the network.
 
-## Method 1
+## Computer policy settings
 
 Put the Remote Desktop Services computers into their own organizational unit (OU). This configuration permits relevant computer configuration settings to be put in GPOs that apply only to Remote Desktop Services computers. This configuration doesn't affect the user experience on workstations or on other servers and lets you create a tightly controlled Remote Desktop Services experience for users. This OU shouldn't contain users or other computers so that domain administrators can fine-tune the Remote Desktop Services experience. The OU can also be delegated for control to subordinate groups such as server operators or individual users.
 
@@ -58,13 +58,16 @@ To create a Remote Desktop Services Group Policy object, follow these steps:
 > Most of the relevant settings are under **Computer Configuration** > **Windows Settings** > **Security Settings** > **Local Policies**. For example, under **User Rights Assignment** in the list on the right, you find **Log on locally**. This setting is required for logging on to a session on Remote Desktop Services. You also find **Access this computer from the network**. This setting is required to connect to the server outside a Remote Desktop Services session. This is also where you can prevent users from being able to shut down the system. Settings for the user part of the policy shouldn't be applied here because the users have not been put into this OU with the Remote Desktop Services server. This article is written for computer policy implementation.  
 When modifications are completed, close the Group Policy Management Editor, and then select **Close** to close **OU Properties**.
 
-## Method 2
+## User policy settings
 
-Use the Group Policy loopback feature to apply User Configuration GPO settings to users only when they log on to the Remote Desktop Services servers. When GPO Loopback processing is enabled for the computers in an OU that contains only Remote Desktop Services servers, those computers apply the User Configuration settings from the set of GPOs that apply to that OU. Additionally, those computers apply the User Configuration settings from GPOs that are linked to or inherited by the OU that contains the user's account.
+Use the Group Policy loopback feature to apply User Configuration GPO settings to users only when they log on to the Remote Desktop Services servers. When GPO Loopback processing is enabled for the computers in an OU that contains only Remote Desktop Services servers, those computers apply the User Configuration settings from the set of GPOs that apply to that OU. If you use the loopback in merge mode, those computers start with applying the User Configuration settings from GPOs that are linked to or inherited by the OU that contains the user's account, and then process the user part of the computer policies.
 
 This implementation is described in [Loopback processing of Group Policy](loopback-processing-of-group-policy.md).
 
-If possible, Remote Desktop Services should be installed on member servers instead of domain controllers because the users need Log on Locally user rights. When the Log on Locally right is assigned to domain controllers, it's assigned to every domain controller in the domain because of the shared Active Directory database. By default, member servers are granted Log on Locally user rights in the Local Security Policy.
+We strongly recommend against using Remote Desktop Services on domain controllers (DC) for the following reasons:
+
+- The deployment would require non-domain Admins to logon to domain controllers, conflicting with the security sensitivity of DCs. Only Domain Admins should have the "Log on locally" right on DCs.
+- If users worked on DCs as RDS servers, a security vulnerability elevating the attacker to LocalSystem would instantly grant the attacker access to the whole forest.
 
 For more information, see [Local policy doesn't permit you to log on interactively](../remote/local-policy-not-permit-log-on-interactively.md).
 
