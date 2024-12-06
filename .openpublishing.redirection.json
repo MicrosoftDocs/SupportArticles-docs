@@ -12589,6 +12589,11 @@
       "source_path": "support/windows-server/certificates-and-public-key-infrastructure-pki/delete-enterprise-windows-certificate-authority.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/delete-enterprise-windows-certificate-authority",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/no-ethernet-after-pad-install.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
     }
   ]
 }

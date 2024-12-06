@@ -124,8 +124,6 @@
       href: desktop-flows/focus-window-action-not-working.md
     - name: '"Invalid Private key file" error in Open secure FTP connection action'
       href: desktop-flows/invalid-private-key-file-error.md
-    - name: Internet connection is interrupted after installing Power Automate
-      href: desktop-flows/no-ethernet-after-pad-install.md
     - name: Invalid credentials error when creating connection or running desktop flow
       href: desktop-flows/invalid-credentials-errors-running-desktop-flows.md
     - name: Invalid credentials error using Microsoft Entra account
