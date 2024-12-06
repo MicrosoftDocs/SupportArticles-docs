@@ -17,7 +17,7 @@ To follow the exercises in this part, you must have a .NET SDK installed. To ins
 
 ## Goal of this part
 
-You'll learn how to create an ASP.NET Core web application by using the .NET command-line interface (CLI) in Linux, and how to publish the application to the */var* directory. As you learn these concepts, you'll practice some basic tasks such as working with files and folders, and running commands as a privileged user. You'll also learn how to edit files by using the vi text editor in Linux.
+Learn how to create an ASP.NET Core web application by using the [.NET command-line interface (CLI)](/dotnet/core/tools/) in Linux, and how to publish the application to the */var* directory. As you learn these concepts, you'll practice some basic tasks such as working with files and folders, and running commands as a privileged user. You'll also learn how to edit files by using the vi text editor in Linux.
 
 ## .NET CLI
 
@@ -89,7 +89,7 @@ For more information about the difference between `curl` and `wget`, go to [Stac
 
 In this training series, you previously used `wget` to download the *.deb* package manager file from Microsoft servers before you installed .NET.
 
-If you run `curl http://localhost`, nothing occurs. This most likely means that there is no HTTP response. You can then run `wget http://localhost` to check whether more information is displayed when you try to access the site.
+If you run `curl http://localhost`, nothing occurs. This most likely means that there's no HTTP response. You can then run `wget http://localhost` to check whether more information is displayed when you try to access the site.
 
 :::image type="content" source="./media/2-1-create-configure-aspnet-core-applications/curl-localhost-command.png" alt-text="Screenshot of curl localhost command." border="true":::
 
@@ -100,7 +100,7 @@ This is what occurs now:
 - Wget is smart enough to follow this redirect and make a new request to `https://localhost:5001`.
 - You connect successfully again. However, `wget` doesn't trust the SSL certificate. Therefore, the connection fails.
 
-The `wget` command recommends that you work around this issue by using the `--no-check-certificate` switch to connect insecurely. However,  this approach involves SSL certificate settings that are **out-of-scope** for this training. Instead, you can configure your ASP.NET Core application so that it won't redirect the HTTP requests to HTTPS. If you're familiar with ASP.NET Core application development (or just configuration), you may already know how to do this: Edit the *Startup.cs* file to remove the redirection configuration.
+The `wget` command recommends that you work around this issue by using the `--no-check-certificate` switch to connect insecurely. However, this approach involves SSL certificate settings that are **out-of-scope** for this training. Instead, you can configure your ASP.NET Core application so that it won't redirect the HTTP requests to HTTPS. If you're familiar with ASP.NET Core application development (or just configuration), edit the **Startup.cs** file to remove the redirection configuration.
 
 ## Edit files by using vi
 
@@ -137,9 +137,9 @@ You have now successfully run your first ASP.NET Core Web App on Linux.
 
 The primary goal of this exercise is to host your web application behind a reverse proxy so that connecting clients can access the application from another computer by using only the hostname without the port number. This is what you'd expect to occur in real world scenarios. You'll work with Nginx later to complete this task.  But before you do that, publish your application to the */var* directory. This is because we recommend that you don't run the application in a user's home directory.
 
-Remember that the */var* directory is used to store content and log files by various applications such as Apache and Nginx. You'll follow that practice here by publishing the newly created web application to */var*.
+Remember that the **/var** directory is used to store content and log files by various applications such as Apache and Nginx. You'll follow that practice here by publishing the newly created web application to **/var**.
 
-Change to the project folder, and then run `dotnet publish` to create a publishing folder. Copy that folder to the /var directory.
+Change to the project folder, and then run `dotnet publish` to create a publishing folder. Copy that folder to the **/var** directory.
 
 :::image type="content" source="./media/2-1-create-configure-aspnet-core-applications/dotnet-publish.png" alt-text="Screenshot of dotnet publish command." border="true":::
 
