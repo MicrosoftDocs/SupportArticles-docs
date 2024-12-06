@@ -1,7 +1,7 @@
 ---
-title: .NET Multi-platform App UI Template Is Missing
+title: .NET Multi-Platform App UI Template Is Missing
 description: Helps resolve an error that occurs after you install the .NET Multi-platform App UI workload.
-ms.date: 11/22/2024
+ms.date: 12/06/2024
 ms.reviewer: khgupta
 ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ---
