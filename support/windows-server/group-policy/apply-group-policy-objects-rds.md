@@ -19,7 +19,7 @@ _Original KB number:_ &nbsp; 260370
 
 When the Remote Desktop Services servers are in an Active Directory domain, the domain administrator implements Group Policy objects (GPOs) to the Remote Desktop Services server to control the user environment. This article describes the recommended process of applying GPOs to Remote Desktop Services without adversely affecting other servers on the network.
 
-The approaches for applying GPOs to Remote Desktop Services are for computer policy settings. There are two methods for applying GPOs to Remote Desktop Services without adversely affecting other servers on the network.
+There are different approaches to applying GPOs to Remote Desktop Services, depending on whether the settings are for computers or users.
 
 ## Computer policy settings
 
