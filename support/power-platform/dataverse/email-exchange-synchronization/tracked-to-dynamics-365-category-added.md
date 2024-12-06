@@ -1,20 +1,20 @@
 ---
-title: Tracked to Dynamics 365 category is unexpectedly added to user's mailbox
-description: Fixes an issue in which users see a new category called Tracked to Dynamics 365 when they're configured to use server-side synchronization with Microsoft Dynamics 365.
+title: Tracked to Dynamics 365 category is added to user's mailbox
+description: Helps you understand the Outlook category called Tracked to Dynamics 365 when mailbox is configured for server-side synchronization.
 ms.reviewer: 
-ms.date: 11/25/2024
+ms.date: 12/06/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # A "Tracked to Dynamics 365" category is unexpectedly added to a user's mailbox
 
-This article helps you fix an issue in which users see a new category called **Tracked to Dynamics 365** when they're configured to use server-side synchronization with Microsoft Dynamics 365.
+This article helps you understand why users see the Outlook category called **Tracked to Dynamics 365** when they're configured to use server-side synchronization with Microsoft Dynamics 365. It also provides information on how an administrator can disable category-based tracking.
 
 _Applies to:_ &nbsp; Microsoft Dynamics 365  
 _Original KB number:_ &nbsp; 4501716
 
 ## Symptoms
 
-Users configured to use server-side synchronization with Dynamics 365 might see a new category available in their Exchange mailbox and Outlook. For example, if a user uses the **Categorize** option in Outlook on an item such as an email message or appointment, they see a new category called **Tracked to Dynamics 365**.
+Users configured to use server-side synchronization with Dynamics 365 might see a category called **Tracked to Dynamics 365** in their Exchange mailbox and Outlook. For example, when a user uses the **Categorize** option in Outlook on an item such as an email message or appointment, they'll see the **Tracked to Dynamics 365** category.
 
 When viewing [the Alerts area for a user's mailbox](/power-platform/admin/monitor-email-processing-errors#view-alerts), you might see the following information level alert message:
 
@@ -50,3 +50,7 @@ To disable the **Tracked to Dynamics 365** Outlook category, install the OrgDBOr
 > - If you disable OrgDBOrgSetting `TrackCategorizedItems`, the **Tracked to Dynamics 365** category is soft-deleted, with the category assignment retained in Outlook. If you delete the category from the master list, it will be deleted permanently.
 
 Instead of using the command-line option, you can also use [OrgDBOrgSetting/Releases](https://github.com/seanmcne/OrgDbOrgSettings/releases/) to edit OrgDBOrgSetting `TrackCategorizedItems`.
+
+## More information
+
+[FAQs about using the Tracked to Dynamics 365 category](/power-platform/admin/use-outlook-category-track-appointments-emails?branch=main#faq)
