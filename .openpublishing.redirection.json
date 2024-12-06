@@ -12608,7 +12608,7 @@
     {
       "source_path": "support/dynamics-365/sales/unknownincomingemailintegrationerror.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/exception-appears-server-side-sync",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dynamics-365/sales/unknownincomingemailintegrationerror-2147167669-shows-in-alert-in-mailbox.md",
