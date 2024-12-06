@@ -12598,7 +12598,7 @@
     {
       "source_path": "support/dynamics-365/sales/exception-appears-server-side-sync.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/exception-appears-server-side-sync",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/power-platform/power-automate/desktop-flows/no-ethernet-after-pad-install.md",
@@ -12631,14 +12631,14 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "support/dynamics-365/sales/unknownincomingemailintegrationerror-2147220891.md",
+      "source_path": "support/power-platform/dataverse/email-exchange-synchronization/unknownincomingemailintegrationerror-2147220891.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/exception-appears-server-side-sync",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/power-platform/dataverse/email-exchange-synchronization/error-2147209462-logged-mailbox-record.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/exception-appears-server-side-sync",
-      "redirect_document_id": true
+      "redirect_document_id": false
     }
   ]
 }
