@@ -21,7 +21,7 @@ When you try to send an email in Dynamics 365, the email remains in a Pending Se
 
 ## Cause
 
-This error indicates that Microsoft Exchange Server prevents the user from sending the email due to a quota or limit being exceeded. For example, if the mailbox has a limit of 10 GB of storage but exceeds this limit, Microsoft Exchange Server might prevent you from sending the email from that mailbox until the mailbox is within the allowed quota. Microsoft Exchange Online has multiple limits that might prevent you from sending the email. For more information, see [Exchange Online limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits).
+This error indicates that Microsoft Exchange Server prevents the user from sending the email due to a quota or limit being exceeded. For example, if the mailbox has exceeded its limit for storage, Microsoft Exchange Server might prevent you from sending the email from that mailbox until the mailbox is within the allowed quota. Microsoft Exchange Online has multiple limits that might prevent you from sending the email. For more information, see [Exchange Online limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits).
 
 ## Resolution
 
