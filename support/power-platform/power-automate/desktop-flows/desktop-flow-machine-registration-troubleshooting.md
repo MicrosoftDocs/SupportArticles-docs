@@ -2,7 +2,7 @@
 title: Power Automate machine registration failure
 description: Provides a set of troubleshooting steps for a failing machine registration in Microsoft Power Automate.
 ms.custom: sap:Desktop flows\Cannot create desktop flow connection
-ms.date: 10/21/2024
+ms.date: 12/06/2024
 ms.reviewer: madiazor, alarnaud, fredg, guco
 ms.author: johndund 
 author: johndund
