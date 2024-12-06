@@ -1,7 +1,7 @@
 ---
 title: MaxRDSessionDurationReached or SessionHasLoggedOffWithMaxIdleTime Error
 description: Solves the error code that occurs during a desktop flow run in Microsoft Power Automate.
-ms.date: 11/26/2024
+ms.date: 12/05/2024
 ms.reivewer: guco
 ms.author: fredg 
 author: fredgGitHub
@@ -37,7 +37,7 @@ Or
 
 ## Cause
 
-The error message indicates that the remote desktop session has been logged off after a duration in milliseconds, which exceeds the value specified in the registry (MaxConnectionTime or MaxIdleTime) at the given registry path. These errors occur when the remote desktop session used to run the desktop flow is logged off because the session registry setting has a value lower than the time required for the desktop flow to execute.
+The error message indicates that the remote desktop session was logged off because it exceeded the time limit specified in the registry (MaxConnectionTime or MaxIdleTime). This happens when the session time limit in the registry setting is shorter than the time needed for the desktop flow to complete.
 
 ## Resolution
 
@@ -64,5 +64,5 @@ If the **MaxConnectionTime** or **MaxIdleTime** registry value exists, set it to
 
 |Registry value name|Description|
 |---|---|
-| **MaxConnectionTime** | Specifies the maximum time of an active remote desktop session.|
-| **MaxIdleTime** | Specifies the maximum time of an active remote desktop session can be idle (without any user input such as mouse movements or keystrokes.)|
+| **MaxConnectionTime** | Specifies the maximum amount of time (in milliseconds) that a remote desktop session can remain active, regardless of activity.|
+| **MaxIdleTime** | Specifies the maximum amount of (in milliseconds) that a remote desktop session can remain idle (without user input such as keyboard or mouse activity) before it's logged off.|
