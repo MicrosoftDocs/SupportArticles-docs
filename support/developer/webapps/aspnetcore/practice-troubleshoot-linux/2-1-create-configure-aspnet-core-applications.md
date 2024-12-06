@@ -4,7 +4,7 @@ description: This article describes how to create and configure ASP.NET Core app
 ms.date: 12/05/2024
 ms.custom: sap:General Development Questions, linux-related-content
 ms.reviewer: ramakoni, ahmetmb
-author: ahmetmithat, zixie
+author: ahmetmithat, mszixie
 ---
 # Part 2.1 - Create and configure ASP.NET Core applications in Linux
 
@@ -18,7 +18,7 @@ To follow the exercises in this part, you must have a .NET SDK installed. To ins
 
 ## Goal of this part
 
-You'll learn how to create an ASP.NET Core web application by using .NET command-line interface (CLI) in Linux, and how to publish the application to the */var* directory. As you learn these concepts, you'll practice some basic tasks such as working with files and folders, and running commands as a privileged user. You'll also learn how to edit files by using the vi text editor in Linux.
+You'll learn how to create an ASP.NET Core web application by using the .NET command-line interface (CLI) in Linux, and how to publish the application to the */var* directory. As you learn these concepts, you'll practice some basic tasks such as working with files and folders, and running commands as a privileged user. You'll also learn how to edit files by using the vi text editor in Linux.
 
 ## .NET CLI
 
@@ -128,7 +128,7 @@ Press **esc** to exit editing mode, enter [:wq!](https://www.cyberciti.biz/faq/s
 
 After you press Enter, the changes should be saved. You can verify the changes by running `cat ~/firstwebapp/Startup.cs`. This command displays the contents of the *Startup.cs* file.
 
-Restart your application. To do this, change the current directory to the `~/firstwebapp` directory, and run dotnet run again. Then, open another terminal session to your server, and run the `curl http://localhost:5000` command again. This time, the command should return the HTML contents of the home page.
+Restart your application. To do this, change the current directory to the `~/firstwebapp` directory, and run `dotnet run` again. Then, open another terminal session to your server, and run the `curl http://localhost:5000` command again. This time, the command should return the HTML contents of the home page.
 
 :::image type="content" source="./media/2-1-create-configure-aspnet-core-applications/curl-localhost-5000-command.png" alt-text="Screenshot of curl localhost at 5000 port command." border="true":::
 
@@ -163,7 +163,7 @@ If you want, you can run these tests by using the same `curl` and `wget` command
 
 ## Lifetime of the process and next steps
 
-If the application requires constant uptime, running .NET application within an interactive user session isn't a good practice because of the following reasons:
+If the application requires constant uptime, running .NET applications within an interactive user session isn't a good practice for the following reasons:
 
 - If users were to terminate their sessions, for example by closing PuTTY or the PowerShell SSH client, or exit the session, the application would shut down.
 - If the process is terminated for some reason (for example, the process crashes because of an unhandled exception), it won't start automatically and must be restarted manually.
