@@ -170,6 +170,8 @@
       href: desktop-flows/temporary-profile-error-machine-registration.md
     - name: 'UnallowedTenantForConnectWithSignIn or connection errors when using "connect with sign-in"'
       href: desktop-flows/troubleshoot-unallowed-tenant-for-connect-with-sign-in.md
+    - name: Your machine doesn't appear when creating a desktop flow connection 
+      href: desktop-flows/machine-not-shown-in-list.md
 - name: Flow creation
   items:
     - name: Can't find Excel Online table in Microsoft Flow
