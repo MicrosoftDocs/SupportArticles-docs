@@ -1,7 +1,7 @@
 ---
 title: Can't deploy Virtual Machines or Virtual Machine Scale Sets (Uniform) with Capacity Reservation
 description: The following article discusses why you may not be able to deploy virtual machines (VMs) or Virtual Machine Scale Sets (VMSS) with Capacity Reservation.
-ms.date: 08/26/2021
+ms.date: 12/06/2024
 ms.reviewer: 
 ms.service: azure-virtual-machines
 ms.collection: windows
@@ -30,7 +30,7 @@ If you have an existing Capacity Reservations that you can't use with VMs or VMS
 
   - Spot VMs and Azure Dedicated Host Nodes are not supported with capacity reservation.
 
-  - For the supported VM series during public preview, up to three Fault Domains (FDs) will be supported. A deployment with more than 3 FDs will fail to deploy against capacity reservation.
+  - For the supported VM series, up to three Fault Domains (FDs) will be supported. A deployment with more than 3 FDs will fail to deploy against capacity reservation.
 
   - Availability Sets are not supported with capacity reservation.
 
