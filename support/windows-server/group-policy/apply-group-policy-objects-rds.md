@@ -60,14 +60,14 @@ When modifications are completed, close the Group Policy Management Editor, and 
 
 ## User policy settings
 
-Use the Group Policy loopback feature to apply User Configuration GPO settings to users only when they log on to the Remote Desktop Services servers. When GPO Loopback processing is enabled for the computers in an OU that contains only Remote Desktop Services servers, those computers apply the User Configuration settings from the set of GPOs that apply to that OU. If you use the loopback in merge mode, those computers start with applying the User Configuration settings from GPOs that are linked to or inherited by the OU that contains the user's account, and then process the user part of the computer policies.
+Use the Group Policy loopback feature to apply User Configuration GPO settings to users only when they log on to the Remote Desktop Services servers. When GPO Loopback processing is enabled for the computers in an OU that contains only Remote Desktop Services servers, those computers apply the User Configuration GPO settings from the set of GPOs that apply to that OU. When you use the [loopback policy setting](/windows-server/identity/ad-ds/manage/group-policy/group-policy-processing#loopback-processing-mode) in Merge mode, the computer first applies the User Configuration GPO settings from the GPOs linked to or inherited by the OU containing the user's account, followed by processing the user part of the computer policies.
 
 This implementation is described in [Loopback processing of Group Policy](loopback-processing-of-group-policy.md).
 
-We strongly recommend against using Remote Desktop Services on domain controllers (DC) for the following reasons:
+We strongly recommend against using Remote Desktop Services on domain controllers (DCs) for the following reasons:
 
-- The deployment would require non-domain Admins to logon to domain controllers, conflicting with the security sensitivity of DCs. Only Domain Admins should have the "Log on locally" right on DCs.
-- If users worked on DCs as RDS servers, a security vulnerability elevating the attacker to LocalSystem would instantly grant the attacker access to the whole forest.
+- The deployment would require non-domain admins to log on to domain controllers, conflicting with the security sensitivity of DCs. Only domain admins should have the "Log on locally" right on DCs.
+- If users work on DCs as RDS servers, a security vulnerability elevating the attacker to LocalSystem would instantly grant the attacker access to the whole forest.
 
 For more information, see [Local policy doesn't permit you to log on interactively](../remote/local-policy-not-permit-log-on-interactively.md).
 
