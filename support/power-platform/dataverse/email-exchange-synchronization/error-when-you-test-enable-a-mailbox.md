@@ -2,12 +2,12 @@
 title: Mailbox user doesn't have sufficient permissions error
 description: Solves an email server error code 80048306 that occurs when you try to test and enable a mailbox in Microsoft Dynamics 365.
 ms.reviewer: 
-ms.date: 12/04/2024
+ms.date: 12/06/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # "The mailbox user doesn't have sufficient permissions" error when you test and enable a mailbox
 
-This article provides a solution to an error that occurs when you try to test and enable a mailbox in Microsoft Dynamics 365.
+This article provides a solution to a permissions error that occurs when you try to test and enable a mailbox in Microsoft Dynamics 365.
 
 _Applies to:_ &nbsp; Microsoft Dynamics 365  
 _Original KB number:_ &nbsp; 4052824
