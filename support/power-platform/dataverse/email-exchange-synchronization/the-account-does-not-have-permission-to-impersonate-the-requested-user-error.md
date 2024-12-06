@@ -2,7 +2,7 @@
 title: Account does not have permission to impersonate requested user error
 description: Solves an error that occurs when you select Test Connection on an email server profile in Microsoft Dynamics 365.
 ms.reviewer: 
-ms.date: 12/02/2024
+ms.date: 12/06/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # "The account does not have permission to impersonate the requested user" error when selecting Test Connection
