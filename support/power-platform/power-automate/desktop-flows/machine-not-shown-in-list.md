@@ -1,8 +1,9 @@
 ---
 title: Machine not listed when creating desktop flow connection 
 description: Solves an issue where your machine isn't listed in the Machines or Group list when creating a desktop flow connection in Microsoft Power Automate for desktop.
-author: 
-ms.author: 
+author: ceporche
+ms.author: ceporche
+ms.writer: rbarni, alarnaud
 ms.custom: sap:Desktop flows\Cannot create desktop flow connection
 ms.date: 12/06/2024
 ---
@@ -37,7 +38,7 @@ Follow these steps to troubleshoot and resolve the issue:
 
    :::image type="content" source="media/machine-not-shown-in-list/machines-list-group-list.png" alt-text="The Machines and the Group lists shown in the Power Automate portal.":::
 
-    If the machine doesn't appear in the **Machines** list in the targeted environment, try [registering the machine]((/power-automate/desktop-flows/manage-machines#register-a-new-machine)) again in this environment.
+    If the machine doesn't appear in the **Machines** list in the targeted environment, try [registering the machine](/power-automate/desktop-flows/manage-machines#register-a-new-machine) again in this environment.
 
     If the machine is part of a machine group, you can do one of the followings:
 
