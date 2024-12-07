@@ -17,13 +17,13 @@ When users try to sign in to an application that's integrated into Microsoft Ent
 
 ## Cause
 
-The device object was deleted on the user's home tenant. When a device is deleted, "Delete device" activity type is recorded in [Microsoft Entra audit log](https://learn.microsoft.com/en-us/entra/identity/monitoring-health/concept-audit-logs). In Microsoft Entra ID, there are three ways to register or join user devices.
+The device object was deleted on the user's home tenant. When a device is deleted, "Delete device" activity type is recorded in [Microsoft Entra audit log](https://learn.microsoft.com/entra/identity/monitoring-health/concept-audit-logs). In Microsoft Entra ID, there are three ways to register or join user devices.
 
 - Microsoft Entra registred
 - Microsoft Entra joined
 - Microsoft Entra hybrid joined
 
-Device registration or join creates a [device identity](https://learn.microsoft.com/en-us/entra/identity/devices/overview) which is used in scenarios like [device-based Conditional Access policies](https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-conditional-access-grant) and [Mobile Device Management with the Microsoft Intune](https://learn.microsoft.com/en-us/mem/endpoint-manager-overview). When users get AADSTS700003 error, the device object was not found in the tenant.
+Device registration or join creates a [device identity](https://learn.microsoft.com/entra/identity/devices/overview) which is used in scenarios like [device-based Conditional Access policies](https://learn.microsoft.com/entra/identity/conditional-access/concept-conditional-access-grant) and [Mobile Device Management with the Microsoft Intune](https://learn.microsoft.com/mem/endpoint-manager-overview). When users get AADSTS700003 error, the device object was not found in the tenant.
 
 ## Solution
 
@@ -41,4 +41,4 @@ For a full list of authentication and authorization error codes, see [Microsoft 
 
 To investigate individual errors, go to [https://login.microsoftonline.com/error](https://login.microsoftonline.com/error).
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)] 
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
