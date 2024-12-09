@@ -1,10 +1,10 @@
 - name: Setup, maintenance or uninstall
   items:
-  - name: .NET Multi-platform App UI Template Is Missing
+  - name: .NET Multi-platform App UI template is missing
     href: ./maui-template-missing-vs-2022-professional.md
   - name: Can't find Windows 10 developer tools
     href: ./cant-find-win-10-developer-tools-vs-2015.md
-  - name: Can't Install Visual Studio 2022 Using Online Installer
+  - name: Can't install Visual Studio 2022 using online installer
     href: ./unable-install-vs-2022-online-installer-windows-10-21h2.md
   - name: Can't update Visual Studio using the Help menu
     href: ./unable-update-using-help-menu.md
@@ -28,11 +28,11 @@
     href: ./install-windows-sdk-silent-mode.md
   - name: Known issues when you install Release Management
     href: ./release-management-installation-issues.md
-  - name: License Key is invalid when Install Visual Studio 2022
+  - name: License key is invalid when installing Visual Studio 2022
     href: ./installation-vs-2022-license-key-shows-invalid.md
   - name: Network or proxy errors
     href: ./troubleshoot-network-related-errors.md
-  - name: Python Development Workload Fails to Install in Visual Studio 2022
+  - name: Python development workload fails to install in Visual Studio 2022
     href: ./python-development-workload-fails-install-vs-2022.md
   - name: Release Management component doesn't work
     href: ./other-release-management-component-no-work.md
@@ -74,7 +74,7 @@
     href: ./error-no-internet-connection.md 
   - name: Error when testing or deploying a minimal layout
     href: ./error-test-deploy-minimal-layout.md
-  - name: Offline installation of Windows App SDK C# extension failed
+  - name: Offline installation of Windows App SDK C# extension fails
     href: ./offline-installation-windows-app-sdk-extension.md
   - name: Set up Visual Studio Professional 2022 offline
     href: ./set-up-vs-professional-2022-offline-machine.md

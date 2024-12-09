@@ -1,20 +1,16 @@
 ---
-title: Offline Installation of Windows App SDK C# Extension Failed
+title: Offline Installation of Windows App SDK C# Extension Fails
 description: Helps resolve an error that occurs when you install the Windows App SDK C# extension for Visual Studio 2022 offline.
-ms.date: 11/22/2024
+ms.date: 12/09/2024
 ms.reviewer: khgupta
 ms.custom: sap:Installation\Offline Install
 ---
 
-# Offline installation of the Windows App SDK C# extension for Visual Studio 2022 failed
+# Offline installation of the Windows App SDK C# extension for Visual Studio 2022 fails
 
 ## Symptoms
 
 When you install the Windows App SDK C# extension for Visual Studio 2022 offline, it fails with the following error message:
-
-:::image type="content" source="media/offline-installation-windows-app-sdk-extension/windows-app-sdk-extension-vs-2022-fail.png" alt-text="Screenshot of error messages when you install the Windows App SDK C# extension for Visual Studio 2022 offline.":::
-
-Here is the text of this image:
 
 ```output
 Install Failed
@@ -24,9 +20,11 @@ Windows App SDK C# VS2022 Templates
 One or more errors occurred.
 ```
 
+:::image type="content" source="media/offline-installation-windows-app-sdk-extension/windows-app-sdk-extension-vs-2022-fail.png" alt-text="Screenshot of the error message when you install the Windows App SDK C# extension for Visual Studio 2022 offline.":::
+
 ## Resolution
 
-To perform an offline installation of the Windows App SDK extension for Visual Studio 2019, use the following command line:
+To perform an offline installation of the Windows App SDK extension for Visual Studio 2022, use the following command line:
 
 ```cmd
 "C:\Program Files (x86)\Microsoft Visual Studio\Installer\resources\app\ServiceHub\Services\Microsoft.VisualStudio.Setup.Service\VSIXInstaller.exe" /noextensionpack <path to the WindowsAppSDK VSIX>
