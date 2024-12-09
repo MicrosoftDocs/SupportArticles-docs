@@ -2,19 +2,19 @@
 title: A general mailbox access error occurred while receiving email error
 description: Solves the email server error code ErrorMailboxStoreUnavailable that occurs in Microsoft Dynamics 365.
 ms.reviewer: 
-ms.date: 12/04/2024
+ms.date: 12/09/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # "A general mailbox access error occurred while receiving email through the mailbox" occurs in Microsoft Dynamics 365
 
-This article provides a resolution for a warning that's logged in a Microsoft Dynamics 365 mailbox record.
+This article provides a resolution for an error that's logged in a Microsoft Dynamics 365 mailbox record.
 
 _Applies to:_ &nbsp; Microsoft Dynamics 365  
 _Original KB number:_ &nbsp; 4340389
 
 ## Symptoms
 
-A warning with the following message is recorded in a Dynamics 365 mailbox:
+The following error occurs in the [Alerts](/power-platform/admin/monitor-email-processing-errors#view-alerts) section in a Dynamics 365 mailbox record:
 
 > A general mailbox access error occurred while receiving email through the mailbox \<mailbox name>. The owner of the associated email server profile Microsoft Exchange Online has been notified. The system will try to receive email again later.  
 > **Email Server Error Code:** Exchange server returned ErrorMailboxStoreUnavailable exception.
@@ -34,9 +34,9 @@ This error indicates that one of the following error conditions occurred.
 
 ## Resolution
 
- If this warning appears intermittently but incoming and outgoing emails are processing successfully, you can disregard it. Dynamics 365 will try accessing the mailbox again.
+ If this error appears intermittently but incoming and outgoing emails are processing successfully, you can disregard it. Dynamics 365 will try accessing the mailbox again.
 
-If the warning persists, ensure the Exchange mailbox is accessible. If you're using Exchange Online, check the [Service Health Dashboard](https://portal.office.com/adminportal/home#/servicehealth) as a Microsoft 365 administrator to ensure there are no reported service health issues for Exchange Online.
+If the error persists, ensure the Exchange mailbox is accessible. If you're using Exchange Online, check the [Service Health Dashboard](https://portal.office.com/adminportal/home#/servicehealth) as a Microsoft 365 administrator to ensure there are no reported service health issues for Exchange Online.
 
 ## More information
 
