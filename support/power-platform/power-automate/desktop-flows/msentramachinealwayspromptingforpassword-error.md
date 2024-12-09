@@ -2,9 +2,9 @@
 title: Unattended desktop flow run fails with MSEntraMachineAlwaysPromptingForPassword
 description: Solves an error that occurs when you run an unattended desktop flow in Microsoft Power Automate for desktop.
 ms.author: moelaabo
-ms.reviewer: guco
+ms.reviewer: guco, alarnaud
 ms.custom: sap:Desktop flows\Unattended flow runtime errors
-ms.date: 11/06/2024
+ms.date: 12/09/2024
 ---
 # An unattended desktop flow run fails with the MSEntraMachineAlwaysPromptingForPassword error
 
@@ -14,7 +14,16 @@ This article provides a resolution for an error that occurs when you run an unat
 
 Your unattended desktop flow run fails with the "MSEntraMachineAlwaysPromptingForPassword" error code (formerly "AADMachineAlwaysPromptingForPassword").
 
-:::image type="content" source="media/msentramachinealwayspromptingforpassword-error/addmachinealwayspromptingforpassword.png" alt-text="The error code that shows in the Body section of the Run a flow built with Power Automate for desktop page.":::
+```jsonc
+{
+    "error":{
+        "code": "MSEntraMachineAlwaysPromptingForPassword",
+        "message": "Could not create unattended session with these credentials."  
+    }    
+}
+```
+
+:::image type="content" source="media/msentramachinealwayspromptingforpassword-error/msentramachinealwayspromptingforpassword.png" alt-text="The error code that shows in the Body section of the Run a flow built with Power Automate for desktop page.":::
 
 ## Cause
 
