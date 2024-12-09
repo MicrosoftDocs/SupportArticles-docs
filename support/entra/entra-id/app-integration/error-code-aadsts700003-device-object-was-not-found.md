@@ -27,11 +27,11 @@ Device registration or join creates a [device identity](https://learn.microsoft.
 
 ## Solution
 
-Engage the home tenant administrators to determine when and why your Windows device object was deleted. Then, take the corresponding action depending on the device registration/join types, as shown in the following table.
+Engage the home tenant administrators to determine when and why your device object was deleted. Then, take the corresponding action depending on the device registration/join types, as shown in the following table. 
 
 | Device join type | Action |
 |--|--|
-| Microsoft Entra registered | On Windows 11, open **Settings**, and then select **Accounts**. Select **Access work or school**, and click on your work or school account on the screen. Select **Disconnect** to disconnect the device. Then, register the device to Microsoft Entra ID again. |
+| Microsoft Entra registered | For Windows 10/11 Microsoft Entra registered devices, open **Settings**, and then select **Accounts**. Select **Access work or school**, and click on your work or school account on the screen. Select **Disconnect** to disconnect the device. Then, register the device to Microsoft Entra ID again.<br/><br/>For iOS and Android, you can use the Microsoft Authenticator application **Settings** > **Device Registration** and select **Unregister device**. Then, register the device to Microsoft Entra ID again.<br/><br/>For macOS, you can use the Microsoft Intune Company Portal application to unenroll the device from management and remove any registration. Then, register the device to Microsoft Entra ID again. |
 | Microsoft Entra joined | Open a PowerShell console with administrative right on the Windows device, and run **dsregcmd /forcerecovery** command. Select **Sign in** to sign in with your Microsoft Entra ID account. |
 | Microsoft Entra hybrid joined | Open a PowerShell console with administrative right on the Windows device, and run **dsregcmd /leave** command. Reboot the device and sign in to the device with your domain credential. |
 
