@@ -34,7 +34,7 @@ This error indicates that one of the following error conditions occurred.
 
 ## Resolution
 
- If this error appears intermittently but incoming and outgoing emails are processing successfully, you can disregard it. Dynamics 365 will try accessing the mailbox again.
+If this error appears intermittently but incoming and outgoing emails are processing successfully, you can disregard it. Dynamics 365 will try accessing the mailbox again.
 
 If the error persists, ensure the Exchange mailbox is accessible. If you're using Exchange Online, check the [Service Health Dashboard](https://portal.office.com/adminportal/home#/servicehealth) as a Microsoft 365 administrator to ensure there are no reported service health issues for Exchange Online.
 
