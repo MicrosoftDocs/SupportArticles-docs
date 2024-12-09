@@ -3,7 +3,7 @@ title: Voice call greeting messages delay connection between agents and customer
 description: Resolves an issue where voice call greeting messages delay a representative's ability to connect to a customer in the voice channel in Omnichannel for Customer Service.
 ms.reviewer: laalexan
 ms.author: srubinstein
-ms.date: 11/20/2024
+ms.date: 12/09/2024
 ms.custom: sap:Voice channel
 ms.collection: CEnSKM-ai-copilot
 ---
@@ -30,9 +30,9 @@ To resolve this issue, try the following workarounds:
   
 ### Introduce a Copilot Studio agent to greet customers
 
-1. Add a [Copilot Studio agent](/dynamics365/customer-service/administer/overview-bots) and connect it to your workstream. Learn more in [Manage your bots](/dynamics365/customer-service/administer/manage-your-bots#add-a-bot).
+1. Add a [Copilot Studio agent](/microsoft-copilot-studio/authoring-first-bot) and connect it to your workstream. For more information, see [Manage your bots](/dynamics365/customer-service/administer/manage-your-bots#manage-your-bots).
 
-1. Ensure that your agent is connected to Omnichannel for Customer Service. For more information, see [Configure Copilot Studio agents for voice](/dynamics365/customer-service/administer/voice-channel-pva-bots#configure-handoff-from-copilot-studio-to-omnichannel-for-customer-service).
+1. Ensure that your agent is connected to Omnichannel for Customer Service. For more information, see [Configure Copilot Studio agents for voice](/dynamics365/customer-service/administer/voice-channel-pva-bots).
 
 1. In the [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) app, open your copilot and go to the **Topics & Plugins** page.
 1. Under **System**, select the **Conversation start** topic.
@@ -73,7 +73,7 @@ To add a new node to create a delay flow, follow these steps:
 You can add another **Message** node to explain that the call will be transferred to a representative. This ensures that the call won't be transferred to the representative until both messages play.
 
 1. Select the "plus" icon, and then select **Topic management** > **Transfer conversation**.
-1. Type the message you want the representative to hear. Learn more about creating and editing topics in [Use topics to design a copilot conversation](/microsoft-copilot-studio/authoring-create-edit-topics).
+1. Type the message you want the representative to hear. Learn more about creating and editing topics, see [Use topics to design a copilot conversation](/microsoft-copilot-studio/authoring-create-edit-topics).
 
     :::image type="content" source="media/greeting-message-delay-agent-connection/configure-voice-message.png" alt-text="Screenshot that shows how to configure a voice agent in Copilot Studio.":::
 

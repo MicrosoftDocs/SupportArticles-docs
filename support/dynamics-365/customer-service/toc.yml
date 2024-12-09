@@ -160,11 +160,11 @@
           href: omnichannel-for-customer-service/omnichannel-provision-fail-errors.md
     - name: Copilot Studio agents
       items:
-        - name: Error in Conversation Start topic prevents publish of survey agent
-          href: omnichannel-for-customer-service/error-in-conversation-start-topic.md
         - name: Copilot Studio agent conversations are active after a chat ends
           href: omnichannel-for-customer-service/pva-conversations-active-dashboard.md
-        - name: Missing variables and actions in transfers from Copilot Studio agents to service reps
+        - name: Error in Conversation Start topic prevents publish of survey agent
+          href: omnichannel-for-customer-service/error-in-conversation-start-topic.md
+        - name: Missing variables and actions in transfers from Copilot Studio agents to service representatives
           href: omnichannel-for-customer-service/agent-transfer-pva-bot-issue.md
     - name: Omnichannel dashboards
       items:
