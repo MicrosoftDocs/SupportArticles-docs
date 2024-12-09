@@ -2,10 +2,10 @@
 title: Test Connection fails in email server profile
 description: Provides a solution to an issue where test connection fails from an email server profile in Microsoft Dynamics 365.
 ms.reviewer: 
-ms.date: 12/05/2024
+ms.date: 12/09/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
-# Test Connection fails with 401 or timeout error in email server profile in Microsoft Dynamics 365
+# Test Connection fails with 401 or time-out error in email server profile in Microsoft Dynamics 365
 
 This article provides a solution to an issue where **Test Connection** fails from an email server profile in Microsoft Dynamics 365.
 
@@ -33,7 +33,7 @@ To solve this issue, verify the username and password are correct.
 
 ## Cause 2: Firewall blocking connectivity
 
-If you're using Dynamics 365 (online) with Exchange on-premises, ensure your firewall allows connectivity from the list of IP ranges documented in [Microsoft Dynamics CRM Online IP Address Ranges](https://support.microsoft.com/help/2728473) including the referenced [Azure IP ranges](https://support.microsoft.com/topic/microsoft-dynamics-crm-online-ip-address-ranges-0b22a844-e61d-443b-482f-945de79f764d).
+If you use Dynamics 365 (online) with Exchange on-premises, ensure your firewall allows connectivity from the list of IP ranges documented in [Microsoft Dynamics CRM Online IP Address Ranges](https://support.microsoft.com/help/2728473) including the referenced [Azure IP Ranges](https://support.microsoft.com/topic/microsoft-dynamics-crm-online-ip-address-ranges-0b22a844-e61d-443b-482f-945de79f764d).
 
 ## Cause 3: Unreliable test connection results
 
