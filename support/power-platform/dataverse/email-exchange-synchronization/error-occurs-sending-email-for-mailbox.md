@@ -2,7 +2,7 @@
 title: Error occurred in sending email for mailbox while connecting to the email server
 description: Provides a solution to an email server error code ConnectFailure that occurs when you try to test and enable a mailbox in Microsoft Dynamics 365.
 ms.reviewer: 
-ms.date: 12/05/2024
+ms.date: 12/09/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # "An error occurred in sending email for the mailbox" when you test and enable a mailbox in Dynamics 365
@@ -51,5 +51,5 @@ To solve this issue, verify the correct ports are specified:
     > Refer to the documentation from your email provider for the correct ports to use when connecting to the SMTP service. For [Gmail](https://support.google.com/mail/answer/7104828), the incoming POP3 port is 995, and the outgoing SMTP port is 587.
 
 5. Select **Mailboxes**, and then select the mailbox that received the error.
-6. Select the **Test & Enable Mailboxes** button.
-7. After the test completes, open the mailbox record and view the **Alerts** section if the results don't appear as **Success**.
+6. Select the **Test & Enable Mailboxes** button to test again.
+7. After the test completes, open the mailbox record and [view the Alerts](/power-platform/admin/monitor-email-processing-errors#view-alerts) if the results don't appear as **Success**.
