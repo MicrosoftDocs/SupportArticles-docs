@@ -58,7 +58,7 @@ Visual Studio should pick up the proxy setting from Windows. However, you can se
 
    - http_proxy: This variable is used on HTTP requests. **Note** This variable is lowercase because some tools expect the variable to be lowercase.
    - HTTPS_PROXY: This variable is used on HTTPS requests.
-   - ALL_PROXY: This variable is used to specify a proxy server for HTTP or HTTPS requests if the `HTTP_PROXY` or `HTTPS_PROXY` variables aren't defined.
+   - ALL_PROXY: This variable is used to specify a proxy server for HTTP or HTTPS requests if the `HTTP_PROXY` or `HTTPS_PROXY` variable isn't defined.
     
    > [!NOTE]
    > For more information, see [HttpClient.DefaultProxy](/dotnet/api/system.net.http.httpclient.defaultproxy/).
@@ -97,9 +97,9 @@ When trying to make network connections behind a proxy server, you might encount
    curl "https://resource" -v
    ```
 
-   Running this command makes a network connection to the resource and might fail in a similar manner to what is seen in Visual Studio. At that point, diagnosing this failure is required before attempting to make the connection by using Visual Studio. A failure here indicates a machine or network configuration problem rather than a product issue with Visual Studio. 
+   Running this command makes a network connection to the resource and might fail similarly to what is seen in Visual Studio. At that point, diagnosing this failure is required before attempting to make the connection by using Visual Studio. A failure here indicates a machine or network configuration problem rather than a product issue with Visual Studio. 
 
-- If you know you're behind a proxy server that has a specific address, setting the `http_proxy` and `https_proxy` environment variables are necessary before running the curl command since it uses those environment variables for proxy settings. 
+- If you know you're behind a proxy server that has a specific address, setting the `http_proxy` and `https_proxy` environment variables are necessary before running the `curl` command as it uses those environment variables for proxy settings. 
 
   You might also use the `help` switch in curl for other options. This command `curl --help proxy` displays a list of options and switches that you can use to set up and configure a proxy with `curl`.  
 
