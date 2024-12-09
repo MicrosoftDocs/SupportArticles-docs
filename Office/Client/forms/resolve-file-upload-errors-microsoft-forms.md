@@ -1,6 +1,6 @@
 ---
 title: Resolve file upload errors in Microsoft Forms
-description: Resolve some common errors that you may exprience when you try to add a file upload question to a form or upload a file.
+description: Resolve some common errors that you might exprience when you try to add a file upload question to a form or upload a file.
 author: helenclu
 ms.reviewer: zakirh
 manager: dcscontentpm
@@ -51,7 +51,7 @@ To fix this error for an individual form that you create, sign in to your person
     1. Under **Features and storage**, select **Site collection features**.
     1. Locate **Limited-access user permission lockdown mode**.
     1. If its **Status** is **Active**, select **Deactivate**, and then select **Deactivate this feature** in the confirmation page.
-1. Enable the People in your organization sharing links if they are disabled.
+1. Enable the People in your organization sharing links if they're disabled.
 
     **Note**: You must be a SharePoint Online administrator and a site collection administrator to run the following PowerShell commands in [SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
 
@@ -74,7 +74,7 @@ To fix this error for an individual form that you create, sign in to your person
 To fix this error for a group form, sign in to the Microsoft 365 group's SharePoint site and follow these steps:
 
 1. Follow the steps in [Enable or disable site collection features](https://support.microsoft.com/office/enable-or-disable-site-collection-features-a2f2a5c2-093d-4897-8b7f-37f86d83df04) to disable the **Limited-access user permission lockdown mode** site collection feature is enabled if it's enabled.
-1. Enable the People in your organization sharing links if they are disabled.
+1. Enable the People in your organization sharing links if they're disabled.
 
     **Note**: You must be a SharePoint Online administrator and a site collection administrator to run the following PowerShell commands in [SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
 
