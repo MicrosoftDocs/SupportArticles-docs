@@ -6268,7 +6268,7 @@
       {
         "source_path": "general/support-policy-containers.md",
         "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
-        "redirect_document_id": true
+        "redirect_document_id": false
       }
   ]
 }
