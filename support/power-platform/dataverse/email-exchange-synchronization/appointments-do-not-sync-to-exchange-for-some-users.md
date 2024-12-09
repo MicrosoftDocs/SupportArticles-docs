@@ -2,7 +2,7 @@
 title: Appointments, contacts, and tasks for the mailbox couldn't be synchronized error
 description: Works around an email server error code 383 that occurs when appointments aren't synchronized from Microsoft Dynamics 365 to Exchange for some users.
 ms.reviewer: 
-ms.date: 11/29/2024
+ms.date: 12/09/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # "Appointments, contacts, and tasks for the mailbox couldn't be synchronized" error occurs in Dynamics 365
@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4494491
 
 ## Symptoms
 
-Appointments aren't synchronized from Dynamics 365 to Exchange for some users. If you view the **Alerts** section for a corresponding mailbox in Dynamics 365, you see the following alert message:
+Appointments aren't synchronized from Dynamics 365 to Exchange for some users. If you [view the Alerts](/power-platform/admin/monitor-email-processing-errors#view-alerts) for a corresponding mailbox in Dynamics 365, you see the following alert message:
 
 > Appointments, contacts, and tasks for the mailbox \<Mailbox Name> couldn't be synchronized. The owner of the associated email server profile \<Profile Name> has been notified. The system will try again later.  
 > **Email Server Error Code:** Exchange.server returned 383 error.
@@ -58,7 +58,7 @@ Microsoft is aware of an [issue with the Exchange Web Services API](https://gith
 
 ## Workaround
 
-Microsoft is investigating a solution to this issue. In the meantime, you can work around the issue by changing the user's time zone setting in Dynamics 365:
+If you're in one of the impacted time zones, you can work around the issue by changing the user's time zone setting in Dynamics 365:
 
 1. A Dynamics 365 user can access their personal options by selecting the gear icon in the upper-right corner of Dynamics 365 and then selecting **Options**.
 
