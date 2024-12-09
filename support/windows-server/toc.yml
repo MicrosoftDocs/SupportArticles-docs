@@ -901,8 +901,8 @@ items:
     href: ./group-policy/group-policy-overview.md
   - name: AppLocker or software restriction policies
     items:
-    - name: Apply Group Policy objects to Terminal Services servers
-      href: ./group-policy/apply-group-policy-objects-terminal-services.md
+    - name: Apply Group Policy objects to RDS servers
+      href: ./group-policy/apply-group-policy-objects-rds.md
     - name: Troubleshoot software restriction policies
       href: ./group-policy/troubleshoot-software-restriction-policies.md
   - name: Deploying software through Group Policy
