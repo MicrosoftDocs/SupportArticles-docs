@@ -1,6 +1,6 @@
 ---
-title: General Istio service mesh add-in troubleshooting
-description: Learn how to do general troubleshooting of the Istio service mesh add-in for Azure Kubernetes Service (AKS).
+title: General Istio service mesh add-on troubleshooting
+description: Learn how to do general troubleshooting of the Istio service mesh add-on for Azure Kubernetes Service (AKS).
 ms.date: 10/17/2024
 author: nshankar13
 ms.author: nshankar
@@ -8,11 +8,11 @@ editor: v-jsitser
 ms.reviewer: fuyuanbie, shasb, kochhars, ddama, v-leedennis
 ms.service: azure-kubernetes-service
 ms.topic: troubleshooting-general
-#Customer intent: As an Azure Kubernetes user, I want to do general troubleshooting on the Istio add-in so that I can use the Istio service mesh successfully.
+#Customer intent: As an Azure Kubernetes user, I want to do general troubleshooting on the Istio add-on so that I can use the Istio service mesh successfully.
 ---
-# General troubleshooting of the Istio service mesh add-in
+# General troubleshooting of the Istio service mesh add-on
 
-This article discusses general strategies (that use `kubectl`, `istioctl`, and other tools)  to troubleshoot issues that are related to the Istio service mesh add-in for Microsoft Azure Kubernetes Service (AKS). This article also provides a list of possible error messages, reasons for error occurrences, and recommendations to resolve these errors.
+This article discusses general strategies (that use `kubectl`, `istioctl`, and other tools)  to troubleshoot issues that are related to the Istio service mesh add-on for Microsoft Azure Kubernetes Service (AKS). This article also provides a list of possible error messages, reasons for error occurrences, and recommendations to resolve these errors.
 
 ## Prerequisites
 
@@ -113,7 +113,7 @@ kubectl logs <pod-name> --namespace <pod-namespace> --container istio-proxy
 
 The following troubleshooting steps describe how to collect information and debug your mesh environment by running various `istioctl` commands.
 
-All `istioctl` commands must be run together with the `--istioNamespace aks-istio-system` flag to point to the AKS add-in installation of Istio.
+All `istioctl` commands must be run together with the `--istioNamespace aks-istio-system` flag to point to the AKS add-on installation of Istio.
 
 > [!WARNING]
 > Some `istioctl` commands send requests to all sidecars.
@@ -125,7 +125,7 @@ All `istioctl` commands must be run together with the `--istioNamespace aks-isti
 
 ### Step 1: Make sure that Istio is installed correctly
 
-To verify that you have a correct Istio add-in installation, run the following [istioctl verify-install](https://istio.io/latest/docs/reference/commands/istioctl/#istioctl-verify-install) command:
+To verify that you have a correct Istio add-on installation, run the following [istioctl verify-install](https://istio.io/latest/docs/reference/commands/istioctl/#istioctl-verify-install) command:
 
 ```bash
 istioctl verify-install --istioNamespace aks-istio-system --revision <tag>
@@ -201,7 +201,7 @@ istioctl bug-report --istioNamespace aks-istio-system \
 
 ### Step 1: Fix resource usage issues
 
-If you encounter high memory consumption in Envoy, double-check your Envoy settings for [statistics data collection](https://istio.io/latest/docs/ops/configuration/telemetry/envoy-stats/). If you're [customizing Istio metrics](https://istio.io/latest/docs/tasks/observability/metrics/customize-metrics/) through [MeshConfig](./istio-add-in-meshconfig.md), remember that certain metrics can have [high cardinality](https://istio.io/latest/about/faq/metrics-and-logs/#metric-expiry) and, therefore, create a higher memory footprint. Other fields in MeshConfig, such as concurrency, affect CPU usage and should be configured carefully.
+If you encounter high memory consumption in Envoy, double-check your Envoy settings for [statistics data collection](https://istio.io/latest/docs/ops/configuration/telemetry/envoy-stats/). If you're [customizing Istio metrics](https://istio.io/latest/docs/tasks/observability/metrics/customize-metrics/) through [MeshConfig](./istio-add-on-meshconfig.md), remember that certain metrics can have [high cardinality](https://istio.io/latest/about/faq/metrics-and-logs/#metric-expiry) and, therefore, create a higher memory footprint. Other fields in MeshConfig, such as concurrency, affect CPU usage and should be configured carefully.
 
 By default, Istio adds information about all services that are in the cluster to every Envoy configuration. The [sidecar](https://istio.io/latest/docs/reference/config/networking/sidecar/) can limit the scope of this addition to workloads that are within specific namespaces only. For more information, see [Watch out for this Istio proxy sidecar memory pitfall](https://medium.com/geekculture/watch-out-for-this-istio-proxy-sidecar-memory-pitfall-8dbd99ea7e9d).
 
@@ -220,7 +220,7 @@ spec:
     - "aks-istio-system/*"
 ```
 
-You can also try to use the Istio [discoverySelectors](https://istio.io/latest/blog/2021/discovery-selectors/) option in [MeshConfig](./istio-add-in-meshconfig.md#step-5-fix-memory-consumption-issues). The `discoverySelectors` option contains an array of Kubernetes selectors, and it can restrict Istiod's awareness to specific namespaces (as opposed to all namespaces in the cluster). For more information, see [Use discovery selectors to configure namespaces for your Istio service mesh](https://istio.io/v1.14/blog/2021/discovery-selectors/).
+You can also try to use the Istio [discoverySelectors](https://istio.io/latest/blog/2021/discovery-selectors/) option in [MeshConfig](./istio-add-on-meshconfig.md#step-5-fix-memory-consumption-issues). The `discoverySelectors` option contains an array of Kubernetes selectors, and it can restrict Istiod's awareness to specific namespaces (as opposed to all namespaces in the cluster). For more information, see [Use discovery selectors to configure namespaces for your Istio service mesh](https://istio.io/v1.14/blog/2021/discovery-selectors/).
 
 ### Step 2: Fix traffic and security misconfiguration issues
 
@@ -238,11 +238,11 @@ If your application pod starts before the Envoy sidecar starts, the application 
 
 ### Step 5: Configure a Service Entry when using an HTTP proxy for outbound traffic
 
-If your cluster uses an HTTP proxy for outbound internet access, you'll have to configure a Service Entry. For more information, see [HTTP proxy support in Azure Kubernetes Service](/azure/aks/http-proxy#istio-add-in-http-proxy-for-external-services).
+If your cluster uses an HTTP proxy for outbound internet access, you'll have to configure a Service Entry. For more information, see [HTTP proxy support in Azure Kubernetes Service](/azure/aks/http-proxy#istio-add-on-http-proxy-for-external-services).
 
 ## Error messages
 
-The following table contains a list of possible error messages (for deploying the add-in, enabling ingress gateways, and performing upgrades), the reason why an error occurred, and recommendations for resolving the error.
+The following table contains a list of possible error messages (for deploying the add-on, enabling ingress gateways, and performing upgrades), the reason why an error occurred, and recommendations for resolving the error.
 
 | Error | Reason | Recommendations |
 |--|--|--|
@@ -250,15 +250,15 @@ The following table contains a list of possible error messages (for deploying th
 | `Missing service mesh mode: {}` | You didn't set the mode property in the service mesh profile of the managed cluster request. | In the [ServiceMeshProfile](/azure/templates/microsoft.containerservice/managedclusters?pivots=deployment-language-arm-template#servicemeshprofile-1) field of the `managedCluster` API request, set the `mode` property to `Istio`. |
 | `Invalid istio ingress mode: {}` | You set an invalid value for the ingress mode when adding ingress within the service mesh profile. | Set the ingress mode in the API request to either `External` or `Internal`. |
 | `Too many ingresses for type: {}. Only {} ingress gateway are allowed` | You tried to create too many ingresses on the cluster. | Create, at most, one external ingress and one internal ingress on the cluster. |
-| `Istio profile is missing even though Service Mesh mode is Istio` | You enabled the Istio add-in without providing the Istio profile. | When you enable the Istio add-in, specify component-specific (ingress gateway, plug-in CA) information for the Istio profile and the particular revision. |
-| `Istio based Azure service mesh is incompatible with feature %s` | You tried to use another extension, add-in, or feature that's currently incompatible with the Istio add-in (for example, Open Service Mesh). | Before you enable the Istio add-in, disable the other feature first and clean up all corresponding resources. |
-| `ServiceMeshProfile is missing required parameters: %s for plugin certificate authority` | You didn't provide all the required parameters for plug-in CA. | Provide all required parameters for the plug-in certificate authority (CA) feature (for more information, see [Set up Istio-based service mesh add-in with plug-in CA certificates](/azure/aks/istio-plugin-ca#set-up-istio-based-service-mesh-addon-with-plug-in-ca-certificates)). |
-| `AzureKeyvaultSecretsProvider addon is required for Azure Service Mesh plugin certificate authority feature` | You didn't enable the AKS Secrets-Store CSI Driver add-in before you used the plug-in CA. | [Set up Azure Key Vault](/azure/aks/istio-plugin-ca#set-up-azure-key-vault) before you use the plug-in CA feature. |
+| `Istio profile is missing even though Service Mesh mode is Istio` | You enabled the Istio add-on without providing the Istio profile. | When you enable the Istio add-on, specify component-specific (ingress gateway, plug-in CA) information for the Istio profile and the particular revision. |
+| `Istio based Azure service mesh is incompatible with feature %s` | You tried to use another extension, add-on, or feature that's currently incompatible with the Istio add-on (for example, Open Service Mesh). | Before you enable the Istio add-on, disable the other feature first and clean up all corresponding resources. |
+| `ServiceMeshProfile is missing required parameters: %s for plugin certificate authority` | You didn't provide all the required parameters for plug-in CA. | Provide all required parameters for the plug-in certificate authority (CA) feature (for more information, see [Set up Istio-based service mesh add-on with plug-in CA certificates](/azure/aks/istio-plugin-ca#set-up-istio-based-service-mesh-addon-with-plug-in-ca-certificates)). |
+| `AzureKeyvaultSecretsProvider addon is required for Azure Service Mesh plugin certificate authority feature` | You didn't enable the AKS Secrets-Store CSI Driver add-on before you used the plug-in CA. | [Set up Azure Key Vault](/azure/aks/istio-plugin-ca#set-up-azure-key-vault) before you use the plug-in CA feature. |
 | `'KeyVaultId': '%s' is not a valid Azure keyvault resource identifier. Please make sure that the format matches '/subscriptions//resourceGroups//providers/Microsoft.KeyVault/vaults/'` | You used an invalid AKS resource ID. | See the format that's mentioned in the error message to set a valid Azure Key Vault ID for the plug-in CA feature. |
-| `Kubernetes version is missing in orchestrator profile` | Your request is missing the Kubernetes version. Therefore, it can't do a version compatibility check. | Make sure that you provide the Kubernetes version in Istio add-in upgrade operations. |
-| `Service mesh revision %s is not compatible with cluster version %s. To find information about mesh-cluster compatibility, use 'az aks mesh get-upgrades'` | You tried to enable an Istio add-in revision that's incompatible with the current Kubernetes cluster version. | Use the [az aks mesh get-upgrades](/cli/azure/aks/mesh#az-aks-mesh-get-upgrades) Azure CLI command to learn which Istio add-in revisions are available for the current cluster. |
+| `Kubernetes version is missing in orchestrator profile` | Your request is missing the Kubernetes version. Therefore, it can't do a version compatibility check. | Make sure that you provide the Kubernetes version in Istio add-on upgrade operations. |
+| `Service mesh revision %s is not compatible with cluster version %s. To find information about mesh-cluster compatibility, use 'az aks mesh get-upgrades'` | You tried to enable an Istio add-on revision that's incompatible with the current Kubernetes cluster version. | Use the [az aks mesh get-upgrades](/cli/azure/aks/mesh#az-aks-mesh-get-upgrades) Azure CLI command to learn which Istio add-on revisions are available for the current cluster. |
 | `Kubernetes version %s not supported. Please upgrade to a supported cluster version first. To find compatibility information, use 'az aks mesh get-upgrades'` | You're using an unsupported Kubernetes version. | [Upgrade to a supported Kubernetes version](/azure/aks/upgrade-cluster). |
-| `ServiceMeshProfile revision field must not be empty` | You tried to upgrade the Istio add-in without specifying a revision. | Specify the revision and all other parameters (for more information, see [Minor revision upgrade](/azure/aks/istio-upgrade#minor-revision-upgrade)). |
+| `ServiceMeshProfile revision field must not be empty` | You tried to upgrade the Istio add-on without specifying a revision. | Specify the revision and all other parameters (for more information, see [Minor revision upgrade](/azure/aks/istio-upgrade#minor-revision-upgrade)). |
 | `Request exceeds maximum allowed number of revisions (%d)` | You tried to do an upgrade operation even though there are already `(%d)` revisions installed. | [Complete or roll back the upgrade operation](/azure/aks/istio-upgrade#minor-revision-upgrade) before you upgrade to another revision. |
 | `Mesh upgrade is in progress. Please complete or roll back the current upgrade before attempting to retrieve versioning and compatibility information` | You tried to access revisioning and compatibility information before completing or rolling back the current upgrade operation. | [Complete or roll back the current upgrade operation](/azure/aks/istio-upgrade#minor-revision-upgrade) before you retrieve revisioning and compatibility information. |
 
@@ -266,13 +266,13 @@ The following table contains a list of possible error messages (for deploying th
 
 - For general tips about Istio debugging, see [Istio diagnostic tools](https://istio.io/latest/docs/ops/diagnostic-tools/)
 
-- [Istio service mesh add-in MeshConfig troubleshooting](istio-add-in-meshconfig.md)
+- [Istio service mesh add-on MeshConfig troubleshooting](istio-add-on-meshconfig.md)
 
-- [Istio service mesh add-in ingress gateway troubleshooting](istio-add-in-ingress-gateway.md)
+- [Istio service mesh add-on ingress gateway troubleshooting](istio-add-on-ingress-gateway.md)
 
-- [Istio service mesh add-in minor revision upgrade troubleshooting](istio-add-in-minor-revision-upgrade.md)
+- [Istio service mesh add-on minor revision upgrade troubleshooting](istio-add-on-minor-revision-upgrade.md)
 
-- [Istio service mesh add-in plug-in CA certificate troubleshooting](istio-add-in-plug-in-ca-certificate.md)
+- [Istio service mesh add-on plug-in CA certificate troubleshooting](istio-add-on-plug-in-ca-certificate.md)
 
 [!INCLUDE [Third-party information disclaimer](../../../includes/third-party-disclaimer.md)]
 
