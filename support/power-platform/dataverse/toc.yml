@@ -22,13 +22,13 @@
       href: email-exchange-synchronization/general-mailbox-access-error-occurred.md
     - name: A general mailbox access error while receiving email through the mailbox
       href: email-exchange-synchronization/general-mailbox-access-error-occurred-while-receiving-email-through-mailbox-error.md
-    - name: An error occurred in sending email for mailbox
+    - name: '"An error occurred in sending email for the mailbox" error'
       href: email-exchange-synchronization/error-occurs-sending-email-for-mailbox.md
     - name: An unknown error when sending email messages
       href: email-exchange-synchronization/error-while-sending-the-email-message.md
-    - name: Appointment aren't synchronized to Exchange or Outlook
+    - name: Appointments aren't synchronized to Exchange or Outlook
       href: email-exchange-synchronization/appointments-do-not-synchronize-to-exchange-or-outlook.md
-    - name: Appointments don't sync to Exchange for some users
+    - name: Appointments, contacts, and tasks for the mailbox couldn't be synchronized error
       href: email-exchange-synchronization/appointments-do-not-sync-to-exchange-for-some-users.md
     - name: Emails aren't automatically tracked or synchronized
       href: email-exchange-synchronization/emails-not-automatically-tracked-or-synchronized.md
