@@ -1,7 +1,7 @@
 ---
 title: Group Policy objects to Remote Desktop Services
 description: Explains how to apply Group Policy objects to Remote Desktop Services servers without adversely affecting other servers on the network.
-ms.date: 12/06/2024
+ms.date: 12/09/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -34,7 +34,7 @@ For more information, see [Linking GPOs to Active Directory Containers](/previou
 
 To create a new OU for the Remote Desktop Services servers, follow these steps:
 
-1. Sign in to a domain controller or a machine with the Remote Server Administration Tools (RSAT) installed.
+1. Sign in to a domain controller (DC) or a machine with the Remote Server Administration Tools (RSAT) installed.
 2. Open the Start menu and enter **Active Directory Users and Computers**. Select **Active Directory Users and Computers** to open it.
 3. In the **Active Directory Users and Computers** console, navigate to the domain or container where you want to create the new OU.
 4. Right-click the domain or container. Select **New** > **Organizational Unit**.
@@ -64,10 +64,10 @@ Use the Group Policy loopback feature to apply User Configuration GPO settings t
 
 This implementation is described in [Loopback processing of Group Policy](loopback-processing-of-group-policy.md).
 
-We strongly recommend against using Remote Desktop Services on domain controllers (DCs) for the following reasons:
+We strongly recommend against using Remote Desktop Services on DCs for the following reasons:
 
-- The deployment would require non-domain admins to log on to domain controllers, conflicting with the security sensitivity of DCs. Only domain admins should have the "Log on locally" right on DCs.
-- If users work on DCs as RDS servers, a security vulnerability elevating the attacker to LocalSystem would instantly grant the attacker access to the whole forest.
+- The deployment would require non-domain admins to log on to DCs, conflicting with the security sensitivity of DCs. Only domain admins should have the "Log on locally" right on DCs.
+- If users work on DCs as RDS servers, a security vulnerability elevating an attacker to LocalSystem would instantly grant the attacker access to the whole forest.
 
 For more information, see [Local policy doesn't permit you to log on interactively](../remote/local-policy-not-permit-log-on-interactively.md).
 
