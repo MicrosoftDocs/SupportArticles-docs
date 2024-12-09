@@ -67,8 +67,6 @@
       href: ../holds/cannot-update-calendar-items-from-owa-or-outlook-on-mac.md
     - name: Changes to IgnoreLegalHold
       href: ../holds/ignorelegalhold-not-available.md
-    - name: Can't convert a user mailbox to inactive
-      href: ../holds/litigation-hold-mailbox-not-turn-into-inactive.md
     - name: Restore In-Place and Litigation Hold
       href: ../holds/restore-in-place-litigation-hold.md
     - name: Retention policy no longer works after a mailbox is moved
