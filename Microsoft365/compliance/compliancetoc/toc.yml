@@ -53,6 +53,10 @@
       href: ../data-loss-prevention/data-loss-prevention-policy-tips.md
     - name: Data loss prevention not working
       href: ../data-loss-prevention/data-loss-prevention-not-work.md
+  - name: Diagnostics
+    items:
+    - name: Self-help diagnostics for issues in Microsoft Purview
+      href: ../diagnostics/purview-compliance-diagnostics.md
   - name: eDiscovery
     items:
     - name: Can't run In-Place eDiscovery search in EAC
