@@ -9,11 +9,7 @@ ms.custom: sap:Node/node pool availability and performance
 ---
 # Troubleshoot Node Not Ready failures that are followed by recoveries
 
-This article helps troubleshoot scenarios in which a node within a Microsoft Azure Kubernetes Service (AKS) cluster shows the Node Not Ready status, but then automatically recovers to a healthy state.
-
-## Symptoms
-
-Maintaining node readiness in Azure Kubernetes Service (AKS) clusters is crucial for ensuring application availability and performance. When a node enters a "Not Ready" state, it can disrupt the application's functionality, causing it to stop responding. Although the node typically recovers automatically after a short period, understanding the underlying causes and implementing effective resolutions is essential to prevent recurring issues and maintain a stable environment. This document provides a comprehensive guide to troubleshooting and resolving node readiness issues in AKS clusters.
+This article provides a guide to troubleshoot and resolve node "Not ready" issues in AKS clusters. When a node enters a "Not Ready" state, it can disrupt the application's functionality, causing it to stop responding. Typically, the node recovers automatically after a short period. However, to prevent recurring issues and maintain a stable environment, it's important to understand the underlying causes and implementing effective resolutions. 
 
 ## Cause
 
@@ -28,7 +24,7 @@ There are several scenarios that could lead to this issue:
 
 ## Resolution
 
-Check the API server availability by running the following command: kubectl get apiservices.
+Check the API server availability by running the following command: `kubectl get apiservices`.
 
 Ensure that the readiness probe is correctly configured in the deployment YAML file.
 
