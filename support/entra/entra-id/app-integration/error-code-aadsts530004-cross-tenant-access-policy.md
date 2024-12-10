@@ -5,9 +5,9 @@ ms.reviewer: laks, v-weizhu
 ms.service: identity-platform
 ms.date: 12/10/2024
 ---
-# Error AADSTS530004 for cross-tenant access policy configurations
+# Error AADSTS530004 - AcceptCompliantDevice setting isn't configured for this organization
 
-This article covers the error AADSTS530004 that occurs when a guest user accesses an application or resource in the resource tenant and provides solutions in different scenarios.
+This article discusses several scenarios where the error AADSTS530004 occurs when a guest user accesses an application or resource in the resource tenant and provides solutions.
 
 ## Symptoms
 
