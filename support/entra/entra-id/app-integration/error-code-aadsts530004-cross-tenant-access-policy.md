@@ -1,90 +1,81 @@
 ---
-# Required metadata
-# For more information, see https://review.learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata?branch=main
-# For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
-
-title: Error AADSTS530004 –cross Tenant Access Policy(XTAP) Configurations
-description: "AADSTS530004: AcceptCompliantDevice setting isn't configured for this organization"
-author:      Laks1 # GitHub alias
-ms.author:   laks # Microsoft alias
+title: Cross-tenant access policy error AADSTS530004
+description: Provides solutions to the error AADSTS530004 when a guest user accesses an application or resource in the resource tenant.
+ms.reviewer: laks, v-weizhu
 ms.service: identity-platform
-ms.topic: troubleshooting-problem-resolution
-ms.date:     12/05/2024
-ms.subservice: external
+ms.date: 12/10/2024
 ---
-# Error AADSTS530004 – Cross Tenant Access Policy(XTAP) Configurations
+# Error AADSTS530004 for cross-tenant access policy configurations
 
-This article provides troubleshooting guidance for resolving error message   "Error AADSTS530004  - AcceptCompliantDevice setting isn't configured for this organization. The administrator needs to configure this setting to allow external user access to protected resources." 
+This article covers the error AADSTS530004 that occurs when a guest user accesses an application or resource in the resource tenant and provides solutions in different scenarios.
 
 ## Symptoms
 
-When a guest user tries to access an application or resource in the resource tenant, the sign-in process fails, and the following error message appears "AADSTS530004: AcceptCompliantDevice setting isn't configured for this organization. The administrator needs to configure this setting to allow external user access to protected resources"
+When a guest user tries to access an application or resource in the resource tenant, the sign-in process fails with the AADSTS530004 error and the following message:
 
-Additionally, when an administrator reviews the sign-in logs in the home tenant, they may see the same error code. 
+> AcceptCompliantDevice setting isn't configured for this organization. The administrator needs to configure this setting to allow external user access to protected resources.
 
-## Cause 1: Conditional Access Policy for Compliant Devices 
+Additionally, the administrators can see this error code in the sign-in logs in the guest user's home tenant.
 
-This error occurs when a conditional access policy in the resource tenant is configured to "Require device to be marked as compliant" and the policy applies to guest users.
+## Scenario 1: Conditional Access policy for compliant devices
 
-## Solution
+This error can occur when a Conditional Access policy in the resource tenant is set with the **Require device to be marked as compliant** control and the policy applies to guest users.
 
-1.	Create an XTAP policy to [Trust Compliant Devices](/entra/external-id/cross-tenant-access-settings-b2b-collaboration#to-change-inbound-trust-settings-for-mfa-and-device-claims) from the user’s home tenant.
+To resolve this error, follow these steps:
 
-2.	Ensure that device is authenticated.
->[!Note]
->Device authentication may fail under the following conditions:
->•	When accessed in a browser operating in private mode
->•	When using unsupported browsers or devices, particularly on mobile
->•	If cookies are disabled
->For more information on supported devices for mobile devices, please refer to the 
->[Microsoft Entra Conditional Access documentation](/entra/identity/conditional-access/concept-conditional-access-conditions#device-platforms).
->To verify whether the device claim is sent, review the sign-in logs for the failed or successful user in the resource tenant.
->•	Navigate to the sign-in logs for the user and locate the relevant failure or success event.
->•	Under the "Device Info" section, check the "Join type" field. This will indicate the device claim that was passed
+1. Create a Cross Tenant Access Policy (XTAP) policy with the [Trust compliant devices](/entra/external-id/cross-tenant-access-settings-b2b-collaboration#to-change-inbound-trust-settings-for-mfa-and-device-claims) setting in the user's home tenant.
 
-3.	Ensure guest user's device is joined to Intune or supported MDM in the home tenant and in a compliant state
+2. Ensure that the guest user's device is authenticated.
 
->[!Note]
->•	Several third-party device compliance partners have been evaluated and are supported for integration with Microsoft Intune. For more information, please refer to the article:[Device compliance partners in Microsoft Intune](/mem/intune/protect/device-compliance-partners )
->•	For more information on configuring Intune device compliance, refer to the [Create a compliance policy article](/mem/intune/protect/compliance-policy-monitor)
+    > [!NOTE]
+    > Device authentication might fail under the following conditions:
+    > - When accessed using a browser in private mode.
+    > - When using unsupported browsers or devices, particularly on mobiles.
+    > - When cookies are disabled.
+    >
+    > For more information on supported device platforms for mobiles, see [Microsoft Entra Conditional Access - Device platforms](/entra/identity/conditional-access/concept-conditional-access-conditions#device-platforms).
+    > 
+    > To verify whether the device claim is sent, review the sign-in logs for the failed or successful user in the resource tenant:
+    > 1. Navigate to the sign-in logs for the user and locate the relevant failure or success event.
+    > 2. Under the **Device Info** section, check the **Join type** field that indicates the passed device claim.
 
-## Cause 2: Conditional Access Policy for Hybrid-Joined Devices
+3.	Ensure the guest user's device is joined to Microsoft Intune or supported mobile device management (MDM) solutions in the home tenant and in a compliant state.
 
-The error can also occur when a conditional access policy in the resource tenant is configured to "Require Microsoft Entra hybrid joined device" and the policy applies to guest users. 
+    > [!NOTE]
+    > Several third-party device compliance partners are supported for integration with Microsoft Intune. For more information, see [Support third-party device compliance partners in Intune](/mem/intune/protect/device-compliance-partners). For more information about configuring Intune device compliance, see [Monitor results of your Intune Device compliance policies](/mem/intune/protect/compliance-policy-monitor).
 
-## Solution
+## Scenario 2: Conditional Access policy for hybrid-joined devices
 
-1.	Create an XTAP policy to ["Trust Microsoft Entra hybrid joined devices"](/entra/external-id/cross-tenant-access-settings-b2b-collaboration#to-change-inbound-trust-settings-for-mfa-and-device-claims) from the user’s home tenant.
+The error can occur when a Conditional Access policy in the resource tenant is set with the **Require Microsoft Entra hybrid joined device** control and the policy applies to guest users.
 
+To resolve this error, follow these steps:
 
- 2.	Ensure that device is authenticated.
+1. Create an XTAP policy with the [Trust Microsoft Entra hybrid joined devices](/entra/external-id/cross-tenant-access-settings-b2b-collaboration#to-change-inbound-trust-settings-for-mfa-and-device-claims) setting in the user's home tenant.
 
->[!Note]
->Device authentication may fail under the following conditions:
->•	When accessed in a browser operating in private mode
->•	When using unsupported browsers or devices, particularly on mobile
->•	If cookies are disabled
->For more information on supported devices for mobile devices, please refer to the article [Microsoft Entra Conditional Access documentation](/entra/identity/conditional-access/concept-conditional-access-conditions#device-platforms)
->To verify whether the device claim is sent, review the sign-in logs for the failed or successful user in the resource tenant.
->•	Navigate to the sign-in logs for the user and locate the relevant failure or success event
->•	Under the "Device Info" section, check the "Join type" field. This will indicate the device claim that was passed.
+2. Ensure that the guest user's device is authenticated.
 
-3.	Ensure guest user's device is [Microsoft Entra hybrid joined](/entra/identity/devices/how-to-hybrid-join) in the home tenant.
+    > [!NOTE]
+    > Device authentication might fail under the following conditions:
+    > - When accessed using a browser in private mode.
+    > - When using unsupported browsers or devices, particularly on mobiles.
+    > - When cookies are disabled.
+    >
+    > For more information on supported device platforms for mobiles, see [Microsoft Entra Conditional Access - Device platforms](/entra/identity/conditional-access/concept-conditional-access-conditions#device-platforms).
+    > 
+    > To verify whether the device claim is sent, review the sign-in logs for the failed or successful user in the resource tenant:
+    > 1. Navigate to the sign-in logs for the user and locate the relevant failure or success event.
+    > 2. Under the **Device Info** section, check the **Join type** field that indicates the passed device claim.
 
+3. Ensure that the guest user's device is [Microsoft Entra hybrid joined](/entra/identity/devices/how-to-hybrid-join) in the home tenant.
 
-## Cause 3: Conditional Access Policy for Require approved client app 
+## Scenario 3: Conditional Access policy for approved client apps
 
-The error can also occur when a conditional access policy in the resource tenant is configured to " Require approved client app" and the policy applies to guest users. 
+The error can occur when a Conditional Access policy in the resource tenant is configured with the **Require approved client app** control and the policy applies to guest users.
 
+To resolve this error, don't apply this control to guest users because they don't support it. 
 
-## Solution
+## More information
 
-The **Require approved client app** control is not supported for guest users and such control should not be applied to them. 
+For more information about authentication and authorization error codes, see [Microsoft Entra authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes). To investigate individual errors, do a search in https://login.microsoftonline.com/error.
 
-
-## More Information
-
-For a full list of Active Directory Authentication and authorization error codes, see [Microsoft Entra authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes)
-
-To investigate individual errors, go to https://login.microsoftonline.com/error.
-
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
