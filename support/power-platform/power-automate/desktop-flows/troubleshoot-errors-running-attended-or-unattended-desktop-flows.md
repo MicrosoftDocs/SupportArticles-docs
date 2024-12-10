@@ -2,7 +2,7 @@
 title: Error code occurs when running an attended or unattended desktop flow
 description: Provides mitigation steps for the error codes that occur when running attended or unattended desktop flows.
 ms.reviewer: cefriant, kenseongtan, guco, johndund
-ms.date: 12/09/2024
+ms.date: 12/10/2024
 ms.custom: sap:Desktop flows\Unattended flow runtime errors
 ---
 # Error code occurs when running an attended or unattended desktop flow
@@ -29,6 +29,9 @@ _Original KB number:_ &nbsp; 4555406
 |UnattendedUserSessionLocked|400|Unattended|For more information about this error code, see [UnattendedUserSessionLocked](troubleshoot-desktop-flow-run-queue-errors.md#unattendedusersessionlocked).|
 |SessionNotFound|400|Unattended|The Windows session on the machine for the given run can't be found. This issue can occur in the following cases:<br>- The machine reboots during the run.<br>- You're using a virtual machine that was cloned after installing Power Automate. If it was cloned after the installation and was registered, delete your machine from the Power Automate portal and re-register the machine.|
 |TooManyActiveSessions|400|Unattended|Windows Server only.</br>You need to sign out at least one active session on the machine.|
+|SessionHasLoggedOff|400|Unattended|To solve this issue, see [SessionHasLoggedOff occurs during a desktop flow run connected with the cloud](session-has-logged-off-troubleshooting.md).|
+|SessionHasLoggedOffWithMaxIdleTime |400|Unattended|To solve this issue, see [SessionHasLoggedOffWithMaxIdleTime occurs during a desktop flow run](desktop-flow-max-session-duration-error.md).|
+|MaxRDSessionDurationReached|400|Unattended|To solve this issue, see [MaxRDSessionDurationReached occurs during a desktop flow run](desktop-flow-max-session-duration-error.md).|
 |ExistingRecordingSession|400|Local|Windows Server only.</br> Check that there's no other user connected to the machine launching a recording or a test playback.|
 |LocalPlaybackOrRecordingOngoing|429|All|Check that there's no recording nor test playback ongoing on the machine for the same user session.|
 |UnattendedUnsupportedWithOldConnection|403|Unattended|You need to create a new connection on the portal.|
