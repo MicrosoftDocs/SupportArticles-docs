@@ -1,7 +1,7 @@
 ---
 title: MaxRDSessionDurationReached or SessionHasLoggedOffWithMaxIdleTime Error
 description: Solves the error code that occurs during a desktop flow run in Microsoft Power Automate.
-ms.date: 12/05/2024
+ms.date: 12/10/2024
 ms.reivewer: guco
 ms.author: fredg 
 author: fredgGitHub
