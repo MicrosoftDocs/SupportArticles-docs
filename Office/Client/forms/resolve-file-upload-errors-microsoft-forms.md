@@ -42,7 +42,7 @@ This error can occur for the following reasons:
 
 ### Resolution
 
-To fix this error for an individual form that you create, sign in to your personal OneDrive for work or school website, and then follow these steps:
+To fix this error for an individual form that you create, sign in to your OneDrive for work or school website, and then follow these steps:
 
 1. Disable the **Limited-access user permission lockdown mode** site collection feature if it's enabled.
 
@@ -126,7 +126,7 @@ To fix this error, enable the links by using the [Set-SPOSite](/powershell/modul
     (Get-SPOSite <your OneDrive site URL>).DisableCompanyWideSharingLinks
     ```
 
-    The URL for a personal OneDrive site is typically in the following format:
+    Typically, the URL for a personal OneDrive site is in the following format:
 
     `https://<tenant name>-my.sharepoint.com/personal/<user principal name>`
 
@@ -167,7 +167,7 @@ This error occurs if the **Require documents to be checked out before they can b
 
 ### Resolution
 
-To fix this error for an individual form that you create, sign in to your personal OneDrive for work or school site, and then follow these steps:
+To fix this error for an individual form that you create, sign in to your OneDrive for work or school site, and then follow these steps:
 
 1. Select the **Settings** icon in the upper-right corner of the screen.
 1. Select **OneDrive settings** > **More settings**.
@@ -178,7 +178,7 @@ To fix this error for an individual form that you create, sign in to your person
 1. Under **Require Check Out** > **Require documents to be checked out before they can be edited?**, select **No**.
 1. Select **OK**.
 
-To fix this error for a group form, sign in to the Microsoft 365 group's SharePoint sitem and then follow these steps:
+To fix this error for a group form, sign in to the Microsoft 365 group's SharePoint site, and then follow these steps:
 
 1. Select the library that stores the group form.
 1. Select the **Settings** icon in the upper-right corner of the screen.
@@ -193,7 +193,7 @@ This issue occurs if the New Folder command is disabled in the site settings. Th
 
 ### Resolution
 
-To fix this error for an individual form that you create, sign in to your personal OneDrive for work or school site, and then follow these steps:
+To fix this error for an individual form that you create, sign in to your OneDrive for work or school site, and then follow these steps:
 
 1. Select the **Settings** icon in the upper-right corner of the screen.
 1. Select **OneDrive settings** > **More settings**.
