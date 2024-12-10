@@ -81,22 +81,16 @@
 
   - name: Delete operations
     items:
-    - name: CannotDeleteLoadBalancerWithPrivateLinkService error
+    - name: LB/PvtLinkSvcWithPvtEndptConn deletion error
       href: create-upgrade-delete/cannot-delete-load-balancer-private-link-service.md
-    - name: InUseNetworkSecurityGroupCannotBeDeleted error
+    - name: PublicIPAddr/InUseSubnet/NetSecGrp deletion error
       href: create-upgrade-delete/cannot-delete-ip-subnet-nsg.md
     - name: InUseRouteTableCannotBeDeleted error
       href: create-upgrade-delete/error-code-inuseroutetablecannotbedeleted.md
-    - name: InUseSubnetCannotBeDeleted error
-      href: create-upgrade-delete/cannot-delete-ip-subnet-nsg.md
     - name: LoadBalancerInUseByVirtualMachineScaleSet error
       href: create-upgrade-delete/load-balancer-or-nsg-in-use-by-vm-scale-set.md
     - name: NetworkSecurityGroupInUseByVirtualMachineScaleSet error
       href: create-upgrade-delete/load-balancer-or-nsg-in-use-by-vm-scale-set.md
-    - name: PrivateLinkServiceWithPrivateEndpointConnectionsCannotBeDeleted error
-      href: create-upgrade-delete/cannot-delete-load-balancer-private-link-service.md
-    - name: PublicIPAddressCannotBeDeleted error
-      href: create-upgrade-delete/cannot-delete-ip-subnet-nsg.md
     - name: SubscriptionRequestsThrottled error
       href: create-upgrade-delete/error-code-toomanyrequestsreceived-subscriptionrequeststhrottled.md
     - name: TooManyRequestsReceived error

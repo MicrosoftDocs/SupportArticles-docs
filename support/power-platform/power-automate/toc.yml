@@ -124,8 +124,6 @@
       href: desktop-flows/focus-window-action-not-working.md
     - name: '"Invalid Private key file" error in Open secure FTP connection action'
       href: desktop-flows/invalid-private-key-file-error.md
-    - name: Internet connection is interrupted after installing Power Automate
-      href: desktop-flows/no-ethernet-after-pad-install.md
     - name: Invalid credentials error when creating connection or running desktop flow
       href: desktop-flows/invalid-credentials-errors-running-desktop-flows.md
     - name: Invalid credentials error using Microsoft Entra account
@@ -172,6 +170,8 @@
       href: desktop-flows/temporary-profile-error-machine-registration.md
     - name: 'UnallowedTenantForConnectWithSignIn or connection errors when using "connect with sign-in"'
       href: desktop-flows/troubleshoot-unallowed-tenant-for-connect-with-sign-in.md
+    - name: Unattended desktop flow fails with MSEntraMachineAlwaysPromptingForPassword
+      href: desktop-flows/msentramachinealwayspromptingforpassword-error.md
 - name: Flow creation
   items:
     - name: Can't find Excel Online table in Microsoft Flow

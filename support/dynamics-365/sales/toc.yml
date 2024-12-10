@@ -198,8 +198,6 @@
       href: error-when-using-365-app-outlook.md
     - name: The view is not available when opening an email
       href: the-view-is-not-available-error-when-opening-emails.md
-    - name: Tracked to category added to user's mailbox
-      href: tracked-to-dynamics-365-category-added.md
     - name: UnknownIncomingEmailIntegrationError -2147167669
       href: unknownincomingemailintegrationerror-2147167669-shows-in-alert-in-mailbox.md
     - name: UnknownIncomingEmailIntegrationError -2147220192
