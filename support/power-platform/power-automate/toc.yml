@@ -132,7 +132,7 @@
       href: desktop-flows/logon-type-has-not-been-granted.md
     - name: Machine registration failure
       href: desktop-flows/desktop-flow-machine-registration-troubleshooting.md
-    - name: MaxRDSessionDurationReached or SessionHasLoggedOffWithMaxIdleTime occurs during a desktop flow run
+    - name: MaxRDSessionDurationReached or SessionHasLoggedOffWithMaxIdleTime
       href: desktop-flows/desktop-flow-max-session-duration-error.md
     - name: Power Automate for desktop installation logs
       href: desktop-flows/how-to-get-power-automate-desktop-installer-logs.md
