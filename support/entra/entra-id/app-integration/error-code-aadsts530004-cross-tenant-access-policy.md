@@ -11,11 +11,11 @@ This article discusses several scenarios where the error AADSTS530004 occurs whe
 
 ## Symptoms
 
-When a guest user tries to access an application or resource in the resource tenant, the sign-in process fails with the AADSTS530004 error and the following message:
+When a guest user tries to access an application or resource in the resource tenant, the sign-in process fails and the following error message is displayed:
 
-> AcceptCompliantDevice setting isn't configured for this organization. The administrator needs to configure this setting to allow external user access to protected resources.
+> AADSTS530004: AcceptCompliantDevice setting isn't configured for this organization. The administrator needs to configure this setting to allow external user access to protected resources.
 
-Additionally, the administrators can see this error code in the sign-in logs in the guest user's home tenant.
+Additionally, when an administrator reviews the sign-in logs in the home tenant, the same error code is displayed.
 
 ## Scenario 1: Conditional Access policy for compliant devices
 
