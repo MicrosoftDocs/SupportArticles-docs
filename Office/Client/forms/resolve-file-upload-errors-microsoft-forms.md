@@ -20,38 +20,37 @@ ms.date: 12/09/2024
 
 # Resolve file upload errors in Microsoft Forms
 
-Files that are uploaded through Forms are stored in OneDrive for work or school or SharePoint:
+Files that are uploaded through Microsoft Forms are stored in Microsoft SharePoint or in OneDrive for work or school, as follows:
 
-- Files that are uploaded to individual forms are stored in the form author's personal OneDrive.
 - Files that are uploaded to group forms are stored in the document library on the Microsoft 365 group's SharePoint site.
+- Files that are uploaded to individual forms are stored in the form author's personal OneDrive folder.
 
 When you use the file upload functionality in Forms, you might receive an error message in the following scenarios:
 
 - You [try to add a file upload question](https://support.microsoft.com/office/add-questions-that-allow-for-file-uploads-6a75a658-c02b-450e-b119-d068f3cba4cf) to a form.
 - You try to upload a file in response to a question.
 
-These errors can occur if file uploads to OneDrive or SharePoint are blocked. This article lists some common error messages and resolutions to fix them.
+These errors might occur if file uploads to SharePoint or OneDrive are blocked. This article lists some common error messages and the methods to fix the errors.
 
 ## Error: We weren't able to create an upload file folder in OneDrive for Business
 
 This error can occur for the following reasons:
 
 - The **Limited-access user permission lockdown mode** site collection feature is enabled. This feature restricts sharing and access to files and folders.
-- The [People in your organization sharing links](/microsoft-365/solutions/microsoft-365-limit-sharing?view=o365-worldwide#people-in-your-organization-sharing-links&preserve-view=true) are disabled.
+- The [*People in your organization* sharing links](/microsoft-365/solutions/microsoft-365-limit-sharing?view=o365-worldwide#people-in-your-organization-sharing-links&preserve-view=true) are disabled.
 - Sharing files and folders is limited to site owners.
 
 ### Resolution
 
-To fix this error for an individual form that you create, sign in to your personal OneDrive for work or school site and follow these steps:
+To fix this error for an individual form that you create, sign in to your personal OneDrive for work or school website, and then follow these steps:
 
 1. Disable the **Limited-access user permission lockdown mode** site collection feature if it's enabled.
 
     1. Select the **Settings** icon in the upper-right corner of the screen.
     1. Select **OneDrive settings** > **More Settings**.
     1. Under **Features and storage**, select **Site collection features**.
-    1. Locate **Limited-access user permission lockdown mode**.
-    1. If its **Status** is **Active**, select **Deactivate**, and then select **Deactivate this feature** in the confirmation page.
-1. Enable the People in your organization sharing links if they're disabled.
+    1. Locate **Limited-access user permission lockdown mode**. If its **Status** value is **Active**, select **Deactivate**, and then select **Deactivate this feature** on the confirmation page.
+1. Enable the *People in your organization* sharing links if they're disabled.
 
     **Note**: You must be a SharePoint Online administrator and a site collection administrator to run the following PowerShell commands in [SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
 
@@ -67,14 +66,14 @@ To fix this error for an individual form that you create, sign in to your person
     Set-SPOSite -Identity <your OneDrive site URL> -DisableCompanyWideSharingLinks NotDisabled
     ```
 
-    The URL for a personal OneDrive site is typically in the following format:
+    Typically, the URL for a personal OneDrive site is in the following format:
 
     `https://<tenant name>-my.sharepoint.com/personal/<user principal name>`
 
-To fix this error for a group form, sign in to the Microsoft 365 group's SharePoint site and follow these steps:
+To fix this error for a group form, sign in to the Microsoft 365 group's SharePoint site, and then follow these steps:
 
 1. Follow the steps in [Enable or disable site collection features](https://support.microsoft.com/office/enable-or-disable-site-collection-features-a2f2a5c2-093d-4897-8b7f-37f86d83df04) to disable the **Limited-access user permission lockdown mode** site collection feature is enabled if it's enabled.
-1. Enable the People in your organization sharing links if they're disabled.
+1. Enable the *People in your organization* sharing links if they're disabled.
 
     **Note**: You must be a SharePoint Online administrator and a site collection administrator to run the following PowerShell commands in [SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
 
@@ -84,19 +83,19 @@ To fix this error for a group form, sign in to the Microsoft 365 group's SharePo
     (Get-SPOSite <Group SharePoint site URL>).DisableCompanyWideSharingLinks
     ```
 
-    If link sharing is disabled, run the following PowerShell command to enable company-wide link sharing for the group's SharePoint site, run the following PowerShell command:
+    If link sharing is disabled, run the following PowerShell command to enable company-wide link sharing for the group's SharePoint site:
 
     ```powershell
     Set-SPOSite -Identity <Group SharePoint site URL> -DisableCompanyWideSharingLinks NotDisabled
     ```
 
-    The URL for a Microsoft 365 group's SharePoint site is typically in the following format:
+    Typically, the URL for a Microsoft 365 group's SharePoint site is in the following format:
 
     `https://<tenant-name>.sharepoint.com/sites/<group-name>`
 
     > [!NOTE]
     > If information barriers are enabled in your SharePoint site, company-wide link sharing is disabled if the [mode](/purview/information-barriers-sharepoint#sharing-sites-for-ib-modes) is set to **Owner Moderated**, **Implicit**, or **Explicit**. In this case, change the information barriers mode to **Open**. To check the information barriers mode of your site, run the `Get-SPOSite <Group SharePoint site URL> | Select InformationBarriersMode` PowerShell command.
-1. Check whether site members can share files and folders. If they can't, update the sharing permission by following these steps.
+1. Check whether site members can share files and folders. If they can't, follow these steps to update the sharing permission:
 
     1. Sign in to the group's SharePoint site as a site owner.
     1. Select **Settings** > **Site permissions**.
@@ -109,7 +108,7 @@ To fix this error for a group form, sign in to the Microsoft 365 group's SharePo
 
 ## Error: Failed to upload your file
 
-This error occurs if the [People in your organization sharing links](/microsoft-365/solutions/microsoft-365-limit-sharing?view=o365-worldwide#people-in-your-organization-sharing-links&preserve-view=true) are disabled.
+This error occurs if the [*People in your organization* sharing links](/microsoft-365/solutions/microsoft-365-limit-sharing?view=o365-worldwide#people-in-your-organization-sharing-links&preserve-view=true) are disabled.
 
 To fix this error, enable the links by using the [Set-SPOSite](/powershell/module/sharepoint-online/set-sposite?view=sharepoint-ps&preserve-view=true) PowerShell command in [SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
 
@@ -143,7 +142,7 @@ To fix this error, enable the links by using the [Set-SPOSite](/powershell/modul
     (Get-SPOSite <Group SharePoint site URL>).DisableCompanyWideSharingLinks
     ```
 
-    The URL for a group SharePoint site is typically in the following format:
+    Typically, the URL for a group SharePoint site is in the following format:
 
     `https://<tenant-name>.sharepoint.com/sites/<group-name>`
 
@@ -168,7 +167,7 @@ This error occurs if the **Require documents to be checked out before they can b
 
 ### Resolution
 
-To fix this error for an individual form that you create, sign in to your personal OneDrive for work or school site and follow these steps:
+To fix this error for an individual form that you create, sign in to your personal OneDrive for work or school site, and then follow these steps:
 
 1. Select the **Settings** icon in the upper-right corner of the screen.
 1. Select **OneDrive settings** > **More settings**.
@@ -179,7 +178,7 @@ To fix this error for an individual form that you create, sign in to your person
 1. Under **Require Check Out** > **Require documents to be checked out before they can be edited?**, select **No**.
 1. Select **OK**.
 
-To fix this error for a group form, sign in to the Microsoft 365 group's SharePoint site and follow these steps:
+To fix this error for a group form, sign in to the Microsoft 365 group's SharePoint sitem and then follow these steps:
 
 1. Select the library that stores the group form.
 1. Select the **Settings** icon in the upper-right corner of the screen.
@@ -190,11 +189,11 @@ To fix this error for a group form, sign in to the Microsoft 365 group's SharePo
 
 ## Error: You do not have access to create this folder or you do not have a valid license
 
-This issue occurs if the New Folder command is disabled in the site settings, preventing you from creating new folders in the document library where the form is stored.
+This issue occurs if the New Folder command is disabled in the site settings. This would prevent you from creating folders in the document library where the form is stored.
 
 ### Resolution
 
-To fix this error for an individual form that you create, sign in to your personal OneDrive for work or school site and follow these steps:
+To fix this error for an individual form that you create, sign in to your personal OneDrive for work or school site, and then follow these steps:
 
 1. Select the **Settings** icon in the upper-right corner of the screen.
 1. Select **OneDrive settings** > **More settings**.
