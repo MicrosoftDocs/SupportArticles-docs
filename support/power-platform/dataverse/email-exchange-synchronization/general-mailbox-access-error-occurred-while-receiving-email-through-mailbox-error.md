@@ -2,7 +2,7 @@
 title: A general mailbox access error occurred while receiving email error
 description: Solves the email server error code ErrorMailboxStoreUnavailable that occurs in Microsoft Dynamics 365.
 ms.reviewer: 
-ms.date: 12/09/2024
+ms.date: 12/10/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # "A general mailbox access error occurred while receiving email through the mailbox" occurs in Microsoft Dynamics 365
@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4340389
 
 ## Symptoms
 
-The following error occurs in the [Alerts](/power-platform/admin/monitor-email-processing-errors#view-alerts) section in a Dynamics 365 mailbox record:
+The following error is logged in the [Alerts](/power-platform/admin/monitor-email-processing-errors#view-alerts) section in a Dynamics 365 mailbox record:
 
 > A general mailbox access error occurred while receiving email through the mailbox \<mailbox name>. The owner of the associated email server profile Microsoft Exchange Online has been notified. The system will try to receive email again later.  
 > **Email Server Error Code:** Exchange server returned ErrorMailboxStoreUnavailable exception.
