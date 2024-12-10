@@ -24,9 +24,7 @@ There are several scenarios that could cause a "Not Ready" state to occur:
 
 ## Resolution
 
-Check the API server availability by running the `kubectl get apiservices` command.
-
-Make sure that the readiness probe is correctly configured in the deployment YAML file.
+Check the API server availability by running the `kubectl get apiservices` command. Make sure that the readiness probe is correctly configured in the deployment YAML file.
 
 For further steps, see [Basic troubleshooting of Node Not Ready failures](node-not-ready-basic-troubleshooting.md).
 
