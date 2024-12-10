@@ -78,4 +78,4 @@ To resolve this error, don't apply this control to guest users because they don'
 
 For more information about authentication and authorization error codes, see [Microsoft Entra authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes). To investigate individual errors, do a search in https://login.microsoftonline.com/error.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
