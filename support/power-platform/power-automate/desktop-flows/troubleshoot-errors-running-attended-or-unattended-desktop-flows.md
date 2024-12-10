@@ -2,7 +2,7 @@
 title: Error code occurs when running an attended or unattended desktop flow
 description: Provides mitigation steps for the error codes that occur when running attended or unattended desktop flows.
 ms.reviewer: cefriant, kenseongtan, guco, johndund
-ms.date: 10/08/2024
+ms.date: 12/09/2024
 ms.custom: sap:Desktop flows\Unattended flow runtime errors
 ---
 # Error code occurs when running an attended or unattended desktop flow
@@ -44,6 +44,7 @@ _Original KB number:_ &nbsp; 4555406
 |ConnectionTimeout|404|Attended</br>Unattended|This request operation didn't receive a reply within the configured timeout.</br> Check that your machine is online and can communicate with the required Power Automate endpoints.|
 |EndpointDoNotExist|404|Attended</br>Unattended|The endpoint wasn't found.</br>Register your machine again and schedule new runs.|
 |GroupIsEmpty|400|Attended</br>Unattended|The machine group is empty.</br> Add machines to the group, then reschedule new runs.|
+|MSEntraMachineAlwaysPromptingForPassword|400|Unattended|For more information about this error code, see [An unattended desktop flow run fails with the MSEntraMachineAlwaysPromptingForPassword error](msentramachinealwayspromptingforpassword-error.md).|
 |NoCandidateMachine|400|Attended</br>Unattended|The run has exceeded the queue waiting time limit.</br> Consider allocating more machines or spreading desktop flow runs to optimize wait time in the queue.|
 |DesktopFlowsActionThrottled|429|Attended</br>Unattended|The desktop flow action failed because of throttling. This error code appears when too many desktop flows use the same connection. Check your connection usage and assign your desktop flows to multiple connections.|
 |DesktopFlowsActionTimeout|400|Attended</br>Unattended|The execution of the desktop flow action exceeded maximum duration.</br> Increase the time-out value that's set on the action or split the desktop flow into several shorter desktop flows.|
