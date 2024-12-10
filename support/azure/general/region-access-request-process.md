@@ -1,7 +1,7 @@
 ---
 title: Azure region access request process
 description: Describes the process to request access for certain Azure regions.
-ms.date: 05/17/2022
+ms.date: 11/25/2024
 ms.service: azure-common-issues-support
 ms.author: genli
 author: genlin
@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 4339658
 
 ## Step 1: Create a new support request
 
-The process to request access is relatively straight forward, you can initiate the process directly within the Azure portal, follow these steps:
+The process to request access is relatively straight forward. You can initiate the process directly within the Azure portal, follow these steps:
 
 1. Log into the [Azure Portal](https://portal.azure.com) and navigate to **Help + support**, then select **Create a new support request**.
 
@@ -33,7 +33,7 @@ The process to request access is relatively straight forward, you can initiate t
 ## Step 2: Provide problem details
 
 1. In the **Problem details** section, select **Enter details**.
-    :::image type="content" source="media/region-access-request-process/enter-details.png" alt-text="Screenshot of the enter details button." border="true":::
+    :::image type="content" source="media/region-access-request-process/enter-details.png" alt-text="Screenshot of the Enter details button." border="true":::
 
 1. Select the deployment mode.
 1. Select one or more regions that you want to request access. If the regions are not listed, go to the [Reserved access regions](#reserved-access-regions) section.  
@@ -45,12 +45,12 @@ The process to request access is relatively straight forward, you can initiate t
 ## Step 3: Enter your support method
 
 1. Select the severity based on your urgency of request.
-1. Fill in the details for the best way to contact you. We will use this information to follow up with you if we need additional details, or need to learn more about your intended use of the Azure Region to which you are requesting access.
+1. Fill in the details for the best way to contact you. We use this information to follow up with you if we need extra information, or need to learn more about your intended use of the Azure Region to which you are requesting access.
 1. Select **Create** to complete the process.
 
 ## Request processing
 
-Once you have created the support request, the ticket follows our standard process, including a stop with the Azure Engineering team, where we validate the claims made in the request. This may include reaching out to the requestor for further details, so please ensure you add up-to-date contact details.  
+Once you create the support request, the ticket follows our standard process, including a stop with the Azure Engineering team, where we validate the claims made in the request. This may include reaching out to the requestor for further details, so ensure that you add up-to-date contact details.  
 
 The support request will be routed back to you once complete, letting you know of the result. If successful, you will then see the Azure Region you have requested access to in your portal and can begin to consume resources just like any other Azure region.
 
@@ -58,7 +58,9 @@ The support request will be routed back to you once complete, letting you know o
 
 ## Reserved access regions
 
-To request the access for the Reserved access regions, follow these steps:
+To view which regions are access restricted, see [Azure paired regions](/azure/reliability/cross-region-replication-azure#azure-paired-regions).
+
+To request the access for the reserved access regions, follow these steps:
 
 1. In the **New support request** page, complete the following:
  

@@ -10,24 +10,86 @@
       href: dataverse-web-api-and-sdk/dataverse-records-missing-required-fields.md
     - name: Web API client errors
       href: dataverse-web-api-and-sdk/web-api-client-errors.md
-- name: Email and Microsoft 365 Integration
+- name: Email and Exchange Synchronization
   items:
-    - name: Server side synchronization
-      items:
-        - name: Emails aren't automatically tracked or synchronized
-          href: email-m365-integration/server-side-synchronization/emails-not-automatically-tracked-or-synchronized.md
-        - name: Error code 8005E259
-          href: email-m365-integration/server-side-synchronization/error-code-8005e259.md
-        - name: Error code 8005E272
-          href: email-m365-integration/server-side-synchronization/error-code-8005e272.md
-        - name: Error code 8005E273
-          href: email-m365-integration/server-side-synchronization/error-code-8005e273.md
-        - name: Error code 8005E274
-          href: email-m365-integration/server-side-synchronization/error-code-8005e274.md        
-        - name: Error code 8005E276
-          href: email-m365-integration/server-side-synchronization/error-code-8005e276.md
-        - name: Incoming emails are unexpectedly synchronized
-          href: email-m365-integration/server-side-synchronization/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data.md
+    - name: 401 Unauthorized exception when using Server-Side Synchronization
+      href: email-exchange-synchronization/exception-when-using-server-side-sync.md
+    - name: An appointment is canceled or deleted during server-side synchronization
+      href: email-exchange-synchronization/an-appointment-is-canceled-deleted.md
+    - name: A failure occurred in CrmSecurity when approving email address
+      href: email-exchange-synchronization/a-failure-occurred-crmsecurity.md
+    - name: A general mailbox access error occurred while receiving email
+      href: email-exchange-synchronization/general-mailbox-access-error-occurred.md
+    - name: A general mailbox access error while receiving email through the mailbox
+      href: email-exchange-synchronization/general-mailbox-access-error-occurred-while-receiving-email-through-mailbox-error.md
+    - name: '"An error occurred in sending email for the mailbox" error'
+      href: email-exchange-synchronization/error-occurs-sending-email-for-mailbox.md
+    - name: An unknown error when sending email messages
+      href: email-exchange-synchronization/error-while-sending-the-email-message.md
+    - name: Appointments aren't synchronized to Exchange or Outlook
+      href: email-exchange-synchronization/appointments-do-not-synchronize-to-exchange-or-outlook.md
+    - name: Appointments, contacts, and tasks for the mailbox couldn't be synchronized error
+      href: email-exchange-synchronization/appointments-do-not-sync-to-exchange-for-some-users.md
+    - name: Emails aren't automatically tracked or synchronized
+      href: email-exchange-synchronization/emails-not-automatically-tracked-or-synchronized.md
+    - name: Email can't be received because the license is invalid for the mailbox
+      href: email-exchange-synchronization/email-cannot-be-received-because-license-is-invalid-error.md
+    - name: Email fails to be created with NoRecipientMatch
+      href: email-exchange-synchronization/email-fails-to-create-with-norecipientmatch-error.md
+    - name: Email fails to create with NoCorrelationMatch sync
+      href: email-exchange-synchronization/email-fails-to-create-with-nocorrelationmatch-error.md
+    - name: Email message can't be sent because the mailbox is deactivated
+      href: email-exchange-synchronization/email-message-cannot-be-sent.md
+    - name: Email server location or incoming email port is incorrect
+      href: email-exchange-synchronization/email-cannot-be-received-mailbox.md
+    - name: Error 2147209462 logged in mailbox record
+      href: email-exchange-synchronization/error-2147209462-logged-mailbox-record.md
+    - name: Error code 8005E259
+      href: email-exchange-synchronization/error-code-8005e259.md
+    - name: Error code 8005E272
+      href: email-exchange-synchronization/error-code-8005e272.md
+    - name: Error code 8005E273
+      href: email-exchange-synchronization/error-code-8005e273.md
+    - name: Error code 8005E274
+      href: email-exchange-synchronization/error-code-8005e274.md
+    - name: Error code 8005E276
+      href: email-exchange-synchronization/error-code-8005e276.md
+    - name: Error when creating the incoming email
+      href: email-exchange-synchronization/error-when-creating-an-incoming-email.md
+    - name: Error while synchronizing appointments, contacts, and tasks
+      href: email-exchange-synchronization/an-internal-dynamics-365-error.md
+    - name: ErrorQuotaExceeded. Exchange.server returned 403 error
+      href: email-exchange-synchronization/errorquotaexceeded-exchange-server-returned-403-error.md
+    - name: ErrorSubmissionQuotaExceeded exception in mailbox
+      href: email-exchange-synchronization/errorsubmissionquotaexceeded-exception.md
+    - name: ExchangeSyncSchedulingConflictsError
+      href: email-exchange-synchronization/scheduling-conflict-saving-appointment.md
+    - name: Http server returned Forbidden exception
+      href: email-exchange-synchronization/http-server-returned-forbidden-exception.md
+    - name: Incoming emails are unexpectedly synchronized
+      href: email-exchange-synchronization/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data.md
+    - name: Mailbox user doesn't have sufficient permissions error
+      href: email-exchange-synchronization/error-when-you-test-enable-a-mailbox.md
+    - name: Mailbox doesn't have an email server profile
+      href: email-exchange-synchronization/mailbox-does-not-have-email-server-profile.md
+    - name: Mailbox fails to be tested and enabled
+      href: email-exchange-synchronization/mailbox-fails-tested-enabled.md
+    - name: OutgoingEmailAuthenticationError in mailbox alert
+      href: email-exchange-synchronization/outgoingemailauthenticationerror-shows-in-mailbox-alert.md
+    - name: '"Tracked to Dynamics 365" category is added to a mailbox'
+      href: email-exchange-synchronization/tracked-to-dynamics-365-category-added.md
+    - name: Test Connection fails from Email Server Profile
+      href: email-exchange-synchronization/test-connection-fails-email-server.md
+    - name: '"The account does not have permission to impersonate the requested user" error'
+      href: email-exchange-synchronization/the-account-does-not-have-permission-to-impersonate-the-requested-user-error.md
+    - name: The mailbox location could not be determined
+      href: email-exchange-synchronization/error-when-testing-enabling-mailbox.md
+    - name: The SMTP address has no mailbox associated with it
+      href: email-exchange-synchronization/the-smtp-address-has-no-mailbox.md
+    - name: unknownincomingemailintegrationerror -2147220891
+      href: email-exchange-synchronization/unknownincomingemailintegrationerror-2147220891.md
+    - name: '"You cannot send email as the selected user" error'
+      href: email-exchange-synchronization/cannot-send-email-as-another-user.md
 - name: Plug-in execution
   items:
     - name: Dataverse plug-ins

@@ -1,7 +1,7 @@
 ---
 title: Resolve blocking problem caused by lock escalation
 description: This article describes how to determine if lock escalation is causing blocking and how to resolve the problem.
-ms.date: 04/07/2021
+ms.date: 11/22/2024
 ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ms.reviewer: BARTD
 ---
@@ -55,7 +55,7 @@ The simplest and safest method to prevent lock escalation is to keep transaction
 
     ```sql
     BEGIN TRAN;
-    SELECT * FROM mytable (UPDLOCK, HOLDLOCK) WHERE 1 = 0;
+    SELECT * FROM mytable WITH (UPDLOCK, HOLDLOCK) WHERE 1 = 0;
     WAITFOR DELAY '1:00:00';
     COMMIT TRAN;
     ```
