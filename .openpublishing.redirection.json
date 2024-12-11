@@ -12596,6 +12596,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/dynamics-365/sales/error-when-signing-dynamics-365.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-when-signing-dynamics-365",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/you-are-not-part-this-organization.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-when-signing-dynamics-365",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/power-platform/power-automate/desktop-flows/no-ethernet-after-pad-install.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement",
       "redirect_document_id": false
