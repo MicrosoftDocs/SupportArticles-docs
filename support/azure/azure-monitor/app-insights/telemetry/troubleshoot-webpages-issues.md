@@ -11,6 +11,17 @@ ms.reviewer: mmcc, toddfous, aaronmax, v-weizhu
 
 The article explains certain issues involving [Application Insights JavaScript SDK for webpages](/azure/azure-monitor/app/javascript) and offers strategies to help fix these issues.
 
+## I'm seeing a "0" value recorded for page views in Application Insights
+
+This is by design when instrumenting Single Page Applications (SPA). See the following GitHub [issue](https://github.com/microsoft/ApplicationInsights-JS/issues/1139)(https://github.com/microsoft/ApplicationInsights-JS/issues/1139). 
+
+Different workarounds exist: 
+
+- Manually calculating the duration between different route changes in the app and feed that duration value into the trackPageView() method. See details [here](https://github.com/microsoft/ApplicationInsights-JS/issues/1139#issuecomment-566169033).
+- The methods startTrackPageView() and stopTrackPageView() can also be used as timers to calculate page load durations. See details [here](https://microsoft.github.io/ApplicationInsights-JS/webSdk/applicationinsights-web/classes/ApplicationInsights.html#startTrackPage).
+- Sample app measuring duration for SPA app can be found [here](https://github.com/microsoft/applicationinsights-react-js?tab=readme-ov-file#example-of-measuring-page-duration-in-an-spa).
+- You can set overridePageViewDuration. See details [here](https://github.com/microsoft/ApplicationInsights-JS#:~:text=overridePageViewDuration) to manually set/override duration.
+
 ## I'm getting an error message of "Failed to get Request-Context correlation header as it may be not included in the response or not accessible"
 
 The `correlationHeaderExcludedDomains` configuration property is an exclude list that disables correlation headers for specific domains. This option is useful if you include headers that cause the request to fail or not to be sent because of third-party server configuration. This property supports wildcards. Therefore, you can specify a value such as `*.queue.core.windows.net`. Avoid adding the application domain to this property because this stops the SDK from including the required distributed tracing `Request-Id`, `Request-Context`, and `traceparent` headers as part of the request.
