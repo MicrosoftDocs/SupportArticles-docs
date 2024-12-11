@@ -28,9 +28,6 @@ Check the Event Viewer logs for auto logon issues under *Applications and Servic
 
 ## Multi-app kiosk issues
 
-> [!NOTE]
-> Currently, multi-app kiosk is only supported on Windows 10. It's not supported on Windows 11.
-
 ### Unexpected results
 
 For example:
