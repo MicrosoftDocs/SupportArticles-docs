@@ -1,20 +1,20 @@
 ---
 title: HTTP 500 or Response buffer limit exceeded
-description: This article describes a problem where the client receives an 'HTTP 500' or 'Response buffer limit exceeded' error occurs when you send a file by using a web server that has IIS 7 or a later version installed.
+description: This article describes a problem where the client receives an 'HTTP 500' or 'Response buffer limit exceeded' error occurs when you send a file by using a web server that has IIS installed.
 ms.date: 04/15/2020
 ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
 ms.reviewer: mlaing, v-jayc
 ---
 # HTTP 500 or Response buffer limit exceeded error when using Response.BinaryWrite in IIS
 
-This article helps you resolve the error (HTTP 500 or Response buffer limit exceeded) that occurs when you use the `Response.BinaryWrite` method to send a file.
+This article helps you resolve the error (HTTP 500 or Response buffer limit exceeded) that occurs when you use the `Response.BinaryWrite` method in ASP to send a file.
 
-_Original product version:_ &nbsp; Internet Information Services 7 and later versions  
+_Original product version:_ &nbsp; Internet Information Services, Active Server Pages (ASP)  
 _Original KB number:_ &nbsp; 944886
 
 ## Symptoms
 
-When you send a file to a client computer from a Web server on which Internet Information Services (IIS) 7 or a later version is installed, you may receive an error message on the client computer that resembles one the following:
+When you send a file to a client computer from a Web server on which Internet Information Services (IIS) is installed, you may receive an error message on the client computer that resembles one the following:
 
 - Error message 1
 
@@ -51,13 +51,13 @@ If the response is larger than the 4-MB default value, this size frequently caus
 You can use the `AspBufferingOn` IIS metabase property to enable or disable buffering at the application level.
 
 > [!NOTE]
-> In IIS 7 and later versions, you can enable or disable ASP response buffering at the application level by using the `bufferingOn` value in the ASP section of `<System.webserver>` in the `ApplicationHost.config` file or in the `Web.config` file.
+> In IIS, you can enable or disable ASP response buffering at the application level by using the `bufferingOn` value in the ASP section of `<System.webserver>` in the `ApplicationHost.config` file or in the `Web.config` file.
 
 To enable or disable buffering at the page level, you can use the `Response.Buffer` property.
 
 If you must increase the buffer limit, select a buffer limit that allows for the largest known response size. If you do not know the largest response size in advance, you can increase the buffer limit to a large value during testing. After you finish testing, use the largest value that appears in the *sc-bytes* field in the IIS log file for the response that is generated for the page.
 
-To increase the buffering limit in IIS 7 and later versions, follow these steps:
+To increase the buffering limit in IIS, follow these steps:
 
 1. Select **Start**, select **Run**, type *cmd*, and then select **OK**.
 2. Type the `cd /d %systemdrive%\inetpub\adminscripts` command, and then press Enter.
@@ -74,7 +74,7 @@ To confirm that the buffer limit is set correctly, follow these steps:
 
 ## More information
 
-When you use the `Response.BinaryWrite` method and ASP response buffering is disabled, you can only send 4 MB of data to the client unless the buffering limit property for the page is explicitly set. By default, the value for the `bufferLimit` property in IIS 7 or a later version is 4,194,304 bytes.
+When you use the `Response.BinaryWrite` method and ASP response buffering is disabled, you can only send 4 MB of data to the client unless the buffering limit property for the page is explicitly set. By default, the value for the `bufferLimit` property in IIS is 4,194,304 bytes.
 
 Additionally, the `BinaryWrite()` API fails if the response to the client is larger than the buffer limit value even though ASP response buffering is turned off.
 
