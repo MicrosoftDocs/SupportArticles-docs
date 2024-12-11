@@ -3,24 +3,24 @@ title: HTTP error 401.1 with pre-authentication headers
 description: An unexpected 401.1 status is returned when you use Pre-Authentication headers with Internet Explorer and Internet Information Services (IIS).
 ms.date: 04/03/2020
 ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
-ms.reviewer: bretb, mlaing
+ms.reviewer: bretb, mlaing, zixie
 ---
 # An unexpected 401.1 status is returned when you use Pre-Authentication headers with Internet Explorer and IIS
 
 This article resolves the problem where an unexpected 401.1 status is returned with Pre-Authentication headers. It occurs when you use Internet Explorer to browser to a web application hosted on Internet Information Services (IIS).
 
-_Original product version:_&nbsp;IE mode for Edge, Internet Information Services, Internet Explorer 11, 10, 9  
+_Original product version:_&nbsp;IE mode in Edge, Internet Explorer 11, Internet Information Services  
 _Original KB number:_&nbsp;2749007
 
 ## Symptoms
 
 Consider the following scenario:
 
-- You use Windows Internet Explorer to browse to a web application hosted on IIS 7.0 or higher.
-- The Internet Explorer browser is configured to use Pre-Authentication, and Kernel Mode Authentication is enabled in IIS.
-- Additionally, this web request being sent by Internet Explorer is the first request to be sent to the IIS application.
+- You use Internet Explorer (or IE mode in Edge) to browse to a web application hosted on IIS.
+- The client machine is configured to use Pre-Authentication in Internet Settings, and Kernel Mode Authentication is enabled in IIS.
+- Additionally, this web request being sent by Internet Explorer (or IE mode in Edge) is the first request to be sent to the IIS application.
 
-In this scenario, IIS may return an HyperText Transfer Protocol (HTTP) 401.1 response to Internet Explorer in response to the browser's request. The web browser may prompt you to enter your username and password. Or, the HTTP 401.1 error message may be displayed in the browser window.
+In this scenario, IIS may return an HyperText Transfer Protocol (HTTP) 401.1 response to Internet Explorer (or IE mode in Edge) in response to the browser's request. The web browser may prompt you to enter your username and password. Or, the HTTP 401.1 error message may be displayed in the browser window.
 
 ## Cause
 
@@ -34,7 +34,7 @@ This behavior is by design. The 401.1 response will occur if the web browser's f
 
 ## Workaround
 
-To work around this behavior, disable Pre-Authentication in Internet Explorer, or turn off Kernel Mode Authentication for the IIS Web application.
+To work around this behavior, disable Pre-Authentication in Internet Settings, or turn off Kernel Mode Authentication for the IIS Web application.
 
 > [!WARNING]
 > If you use Registry Editor incorrectly, you may cause serious problems that may require you to reinstall your operating system. Microsoft can't guarantee that you can solve problems that result from using Registry Editor incorrectly. Use Registry Editor at your own risk.
@@ -76,7 +76,7 @@ To modify this behavior in IIS, disable Kernel Mode Authentication for the IIS w
 
 ## More information
 
-To determine if the prompt is caused by the issue described in this article, use the Fiddler tool. Use the tool to view the HTTP request/response traffic for the request resulting in the prompt in Internet Explorer. You'll also need the IIS logs from the IIS Server to confirm the HTTP status and sub status codes. The following example uses Internet Explorer 9 to illustrate this behavior:
+To determine if the prompt is caused by the issue described in this article, use the Fiddler tool. Use the tool to view the HTTP request/response traffic for the request resulting in the prompt in Internet Explorer (or IE mode in Edge). You'll also need the IIS logs from the IIS Server to confirm the HTTP status and sub status codes. The following example uses Internet Explorer to illustrate this behavior:
 
 1. Start the Fiddler Tool and enable traffic capture.
 2. Browse to the IIS web application such that it will result in the prompt for credentials.
