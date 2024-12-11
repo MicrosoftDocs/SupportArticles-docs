@@ -86,7 +86,7 @@
       href: email-exchange-synchronization/test-connection-fails-email-server.md
     - name: '"The account does not have permission to impersonate the requested user" error'
       href: email-exchange-synchronization/the-account-does-not-have-permission-to-impersonate-the-requested-user-error.md
-    - name: The mailbox location could not be determined
+    - name: '"The mailbox location could not be determined" error'
       href: email-exchange-synchronization/error-when-testing-enabling-mailbox.md
     - name: '"The SMTP address has no mailbox associated with it" error'
       href: email-exchange-synchronization/the-smtp-address-has-no-mailbox.md
