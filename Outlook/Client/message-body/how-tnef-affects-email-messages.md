@@ -1,5 +1,5 @@
 ---
-title: How Message Format Affects Email Messages in Outlook
+title: How Message Format Affects Email Messages
 description: Describes how message format and encoding, such as HTML, Rich Text, and TNEF, affect email messages.
 author: cloud-writer
 ms.author: meerak
@@ -18,7 +18,7 @@ search.appverid: MET150
 ms.date: 12/05/2024
 ---
 
-# How message format affects email messages in Outlook
+# How message format affects email messages
 
 <!-- Principal SPM Gabe Bratton requested that this article is retained even though PVs and engagement are low -->
 
