@@ -8,7 +8,7 @@ author: ahmetmithat
 ---
 # Part 3.2 - Linux task managers, top, and htop
 
-_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1, .NET 5  
+_Applies to:_ &nbsp; .NET in Linux  
 
 This article introduces how to use `top` and `htop` command line tools to monitor processes.
 
@@ -82,7 +82,7 @@ After a few seconds, you'll see that the process for PID 122632 is missing from 
 
 [Htop](https://htop.dev/) is a process viewer and a text mode application for system monitoring in real-time, similar to `top`. It's easy to use, and it displays a complete list of the processes that are running.
 
-The `htop` tool is pre-installed in the distribution of Ubuntu Linux that is used to install the virtual server for this course. If `htop` isn't installed in your Linux distro, you can use the package managers in Linux to install it. (See [Part 1.3 - Install .NET Core in Linux](1-3-install-dotnet-core-linux.md) for details.)
+The `htop` tool is pre-installed in the distribution of Ubuntu Linux that is used to install the virtual server for this course. If `htop` isn't installed in your Linux distro, you can use the package managers in Linux to install it. (See [Part 1.3 - Install .NET in Linux](1-3-install-dotnet-core-linux.md) for details.)
 
 To start the tool, run the `htop` command. You'll see a colorful output that resembles the following.
 
