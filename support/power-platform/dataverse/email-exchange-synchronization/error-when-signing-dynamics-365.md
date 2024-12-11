@@ -45,4 +45,4 @@ If you still can't access Dynamics 365 customer engagement apps, try [Microsoft 
 ## More information
 
 - For more information about the ways to sign in and access your Dynamics 365 and Office apps, see [Sign in to Dynamics 365 and Office apps](/power-platform/admin/sign-in-office-365-apps).
-- For more information on controlling user access with security groups, see [Control user access to environments: security groups and licenses](/power-platform/admin/control-user-access)
+- For more information on controlling user access with security groups, see [Control user access to environments: security groups and licenses](/power-platform/admin/control-user-access).
