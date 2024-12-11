@@ -4,8 +4,6 @@
   items:
     - name: Error when accessing an app module
       href: error-when-accessing-app-module.md
-    - name: Errors when signing into Dynamics 365 online
-      href: error-when-signing-dynamics-365.md
 - name: Applications and Add-ons
   items:
     - name: The record could not be deleted because of an association
@@ -212,8 +210,6 @@
       href: unknownincomingemailintegrationerror.md
     - name: We're unable to connect to your server
       href: we-are-unable-to-connect-to-your-dynamics-365-app-for-outlook-error.md
-    - name: You are not part of this organization
-      href: you-are-not-part-this-organization.md
     - name: You don't have permission to access this app
       href: you-do-not-have-permission-to-access-this-app-error-when-accessing-dynamics-365-app-for-outlook.md
     - name: You don't have required role or privilege
