@@ -3,7 +3,7 @@ title: An appointment is canceled or deleted
 description: Provides a solution to an issue where an appointment is canceled or deleted unexpectedly when using server-side synchronization.
 ms.author: dmartens
 author: DanaMartens
-ms.date: 11/19/2024
+ms.date: 12/11/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # An appointment is canceled or deleted unexpectedly during server-side synchronization
