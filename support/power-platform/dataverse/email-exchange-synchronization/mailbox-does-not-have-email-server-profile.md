@@ -2,8 +2,7 @@
 title: Mailbox doesn't have email server profile
 description: Provides a solution to an error that occurs after selecting the Test & Enable Mailbox button in Dynamics 365.
 ms.reviewer: 
-ms.topic: troubleshooting
-ms.date: 11/19/2024
+ms.date: 12/11/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # "Mailbox does not have an email server profile associated with it or the email server profile is inactive" error occurs in Microsoft Dynamics 365
