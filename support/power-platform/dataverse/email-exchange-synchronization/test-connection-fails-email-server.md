@@ -1,47 +1,49 @@
 ---
-title: Test Connection fails from Email Server
-description: Provides a solution to an issue where Test Connection fails from Email Server Profile in Microsoft Dynamics 365.
+title: Test Connection fails in email server profile
+description: Provides a solution to an issue where test connection fails from an email server profile in Microsoft Dynamics 365.
 ms.reviewer: 
-ms.topic: troubleshooting
-ms.date: 11/19/2024
+ms.date: 12/11/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
-# Test Connection fails from Email Server Profile in Microsoft Dynamics 365
+# Test Connection fails with 401 or time-out error in email server profile in Microsoft Dynamics 365
 
-This article provides a solution to an issue where Test Connection fails from Email Server Profile in Microsoft Dynamics 365.
+This article provides a solution to an issue where **Test Connection** fails from an email server profile in Microsoft Dynamics 365.
 
 _Applies to:_ &nbsp; Microsoft Dynamics 365  
 _Original KB number:_ &nbsp; 4493267
 
 ## Symptoms
 
-When using the Test Connection option from an Email Server Profile in Dynamics 365, the test fails and you may see an error like the following example:
+When you [test connection on an email server profile record](/power-platform/admin/connect-exchange-server-on-premises#create-an-email-server-profile) in Dynamics 365, the test fails and you might see one of the following errors:
 
-> "Remote server error: (401) Unauthorized. Make sure the user name and password you entered are correct and try again."
-or
+> Remote server error: (401) Unauthorized. Make sure the user name and password you entered are correct and try again.
 
-> "System.Net.WebException: The operation has timed out
-at System.Net.HttpWebRequest.GetResponse()  
-at Microsoft.Crm.Asynchronous.EmailConnector.ExchangeConnectivityDiscoverer.ValidateServerUrl(EmailDirectionCode emailDirection)"
+Or
 
-## Cause
+> System.Net.WebException: The operation has timed out  
+> at System.Net.HttpWebRequest.GetResponse()  
+> at Microsoft.Crm.Asynchronous.EmailConnector.ExchangeConnectivityDiscoverer.ValidateServerUrl(EmailDirectionCode emailDirection)
 
-- **Cause 1:** The username or password isn't correct.
+## Cause 1: Incorrect username or password
 
-- **Cause 2:** If you're using Dynamics 365 (online) to connect to Exchange on-premises, this error can occur if your firewall doesn't allow connectivity from Dynamics 365 to your Exchange server.
+To solve this issue, verify the username and password are correct.
 
-- **Cause 3:** In some cases, the test connection may fail even though the credentials are correct and connectivity isn't a problem. See Resolution 3 in the Resolution section.
+> [!NOTE]
+> The **User Name** value needs to be in the UPN (User Principal Name) format. For example, use `username@contoso.com` instead of `contoso\username`.
 
-## Resolution
+## Cause 2: Firewall blocking connectivity
 
-- **Resolution 1:** Verify the username and password are correct.
+If you use Dynamics 365 (online) with Exchange on-premises, ensure your firewall allows connectivity from the list of IP ranges documented in [Power Platform URLs and IP address ranges](/power-platform/admin/online-requirements#ip-addresses-and-urls) including the referenced [Azure IP ranges](/power-platform/admin/online-requirements#ip-addresses-required).
 
-    > [!NOTE]
-    > The User Name value needs to be in UPN (User Principal Name) format. Ex. `username@contoso.com` instead of `contoso\username`.
+## Cause 3: Unreliable test connection results
 
-- **Resolution 2**: If you're using Dynamics 365 (online) with Exchange on-premises, verify your firewall allows connectivity from the list of IP ranges documented in [Microsoft Dynamics CRM Online IP Address Ranges](https://support.microsoft.com/help/2728473) including the referenced [Azure IP ranges](https://support.microsoft.com/help/2728473).
+The test connection results aren't always reliable. If the same username and password works when [testing connection with Microsoft Remote Connectivity Analyzer](/power-platform/admin/test-connection-exchange-server-onpremises#test-connection-with-the-microsoft-remote-connectivity-analyzer), use the [Test & Enable Mailboxes](/power-platform/admin/connect-exchange-online#test-the-configuration-of-mailboxes) option in Dynamics 365 instead of the **Test Connection** option. If the **Test & Enable Mailboxes** is successful for your mailboxes, you can disregard the results from the **Test Connection** dialog.
 
-- **Resolution 3:** The Test Connection results aren't always reliable. If the same username and password works when doing a test connection from [Microsoft Remote Connectivity Analyzer](https://testconnectivity.microsoft.com/tests/o365), use the Test & Enable Mailboxes option in Dynamics 365 instead of the Test Connection option. If the Test & Enable is successful for your mailboxes, you can disregard the results from the **Test Connection** dialog.
+> [!NOTE]
+> If any failures occur using the **Test & Enable Mailboxes** button, see the **Alerts** tab in the mailbox record and review any help links that are included.
 
-    > [!NOTE]
-    > If any failures occur using the Test & Enable Mailboxes button, see the **Alerts** tab within the mailbox record and review any help links that are included.
+## More information
+
+- [Connect to Exchange Server (on-premises)](/power-platform/admin/connect-exchange-server-on-premises)
+- [Test connection to Exchange Server (on-premises)](/power-platform/admin/test-connection-exchange-server-onpremises)
+- [Connect Customer Engagement (on-premises) to Exchange Online](/dynamics365/customerengagement/on-premises/admin/connect-dynamics-365-on-premises-exchange-online)
