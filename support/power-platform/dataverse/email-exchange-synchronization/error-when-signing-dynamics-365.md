@@ -1,20 +1,20 @@
 ---
-title: Can't sign in to Dynamics 365 online or use Dynamics 365 App for Outlook
-description: Solves an error that occurs when you try to sign in to Microsoft Dynamics 365 online or use Dynamics 365 App for Outlook.
+title: Can't sign in to Dynamics 365 or use Dynamics 365 App for Outlook
+description: Solves an error that occurs when you try to sign in to Microsoft Dynamics 365 or use Dynamics 365 App for Outlook.
 ms.reviewer: 
-ms.date: 12/10/2024
+ms.date: 12/11/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
-# An error occurs when you sign in to Dynamics 365 online or use Dynamics 365 App for Outlook
+# An error occurs when you sign in to Dynamics 365 customer engagement apps or use Dynamics 365 App for Outlook
 
-This article provides a solution to an error that might occur when you try to sign in to Microsoft Dynamics 365 online or use Dynamics 365 App for Outlook.
+This article provides a solution to an error that might occur when you try to sign in to Microsoft Dynamics 365 customer engagement apps or use Dynamics 365 App for Outlook.
 
 _Applies to:_ &nbsp; Microsoft Dynamics 365  
-_Original KB number:_ &nbsp; 3210340
+_Original KB number:_ &nbsp; 3210340, 4555668
 
 ## Symptoms
 
-When you try to sign in to Dynamics 365 online or use Dynamics 365 App for Outlook, you receive one of the following errors:
+When you try to sign in to Dynamics 365 customer engagement apps or use Dynamics 365 App for Outlook, you receive one of the following errors:
 
 - > You are not part of this organization. Please contact your administrator.
 
@@ -38,11 +38,11 @@ The error can occur if you aren't a member of the security group that's associat
 
 To solve this issue, contact your Dynamics 365 administrator to add you to the security group that's associated with the Dynamics 365 environment you're trying to access.
 
-If you're a Dynamics 365 administrator, navigate to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/). Select the environment that the user can't access and then select **Edit**. If the **Security group** field is populated, verify the user is a member of that group. If the security group is managed in Microsoft 365, you can add the user to the group from the [Users area](https://portal.office.com/adminportal/home#/users) or the [Groups area](https://portal.office.com/adminportal/home#/groups) in the Microsoft 365 portal. For more information about how to add a security role in Power Platform admin center, see [Assign a security role to a user](/power-platform/admin/assign-security-roles).
+If you're a Dynamics 365 administrator, navigate to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/). Select the environment that the user can't access and then select **Edit**. If the **Security group** field is populated, ensure the user is a member of that group. If the security group is managed in Microsoft 365, you can add the user to the group from the [Users area](https://portal.office.com/adminportal/home#/users) or the [Groups area](https://portal.office.com/adminportal/home#/groups) in the Microsoft 365 portal. For more information about how to add a security role in Power Platform admin center, see [Assign a security role to a user](/power-platform/admin/assign-security-roles).
 
-If you still can't access Dynamics 365 online, try [Microsoft Support and Recovery Assistant](/outlook/troubleshoot/performance/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant) to troubleshoot sign-in issues.
+If you still can't access Dynamics 365 customer engagement apps, try [Microsoft Support and Recovery Assistant](/outlook/troubleshoot/performance/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant) to troubleshoot sign-in issues.
 
 ## More information
 
 - For more information about the ways to sign in and access your Dynamics 365 and Office apps, see [Sign in to Dynamics 365 and Office apps](/power-platform/admin/sign-in-office-365-apps).
-- [Control user access to environments: security groups and licenses](/power-platform/admin/control-user-access)
+- For more information on controlling user access with security groups, see [Control user access to environments: security groups and licenses](/power-platform/admin/control-user-access)
