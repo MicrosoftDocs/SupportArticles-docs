@@ -1,5 +1,5 @@
 ---
-title: An appointment is canceled or deleted
+title: Appointment cancellation issue with server-side synchronization in Dynamics 365
 description: Provides a solution to an issue where an appointment is canceled or deleted unexpectedly when using server-side synchronization.
 ms.author: dmartens
 author: DanaMartens
@@ -8,22 +8,24 @@ ms.custom: sap:Email and Exchange Synchronization
 ---
 # An appointment is canceled or deleted unexpectedly during server-side synchronization
 
-This article provides a solution to an issue where an appointment is canceled or deleted unexpectedly when you use server-side synchronization.
+This article provides a solution to an issue where an appointment is canceled or deleted unexpectedly when you use server-side synchronization in Microsoft Dynamics 365.
 
 _Applies to:_ &nbsp; Microsoft Dynamics 365  
 _Original KB number:_ &nbsp; 4345686
 
 ## Symptoms
 
-When you use server-side synchronization to synchronize appointments between Microsoft Dynamics 365 and Exchange, an appointment is canceled or deleted unexpectedly.
+When you use [server-side synchronization](/power-platform/admin/server-side-synchronization) to synchronize appointments between Microsoft Dynamics 365 and Exchange, an appointment is canceled or deleted unexpectedly.
 
 ## Cause
 
-This issue can occur if the appointment no longer meets the conditions of the user's [sync filters](/power-platform/admin/choose-records-synchronize-dynamics-365-outlook-exchange). As mentioned in [Ignore logically deleted items during synchronization](/power-platform/admin/sync-logic#ignore-logically-deleted-items-during-sync), there are multiple reasons an appointment may no longer match your sync filters, such as the organizer of the appointment being changed, the sync filters being modified, or the user no longer having access to the record due to changes in security roles or sharing. By default, server-side synchronization sends a delete operation to Exchange in this scenario, which results in an appointment cancellation.
+This issue can occur if the appointment no longer meets the conditions of the user's [sync filters](/power-platform/admin/choose-records-synchronize-dynamics-365-outlook-exchange). As explained in [Ignore logically deleted items during synchronization](/power-platform/admin/sync-logic#ignore-logically-deleted-items-during-sync), there are multiple reasons why an appointment may no longer match your sync filters. These reasons include changes such as the organizer of the appointment being changed, modifications to the sync filters, or changes in security roles or sharing that result in the user no longer having access to the record. By default, server-side synchronization sends a delete operation to Exchange in such scenario, leading to the cancellation of the appointment.
 
 ## Resolution
 
-A configurable setting was introduced to allow you to change this behavior. You can use one of the following tools to change the `DistinctPhysicalAndLogicalDeletesForExchangeSync` setting to **True**:
+To solve this issue, a configurable setting was introduced that allows you to modify this behavior. You can change the `DistinctPhysicalAndLogicalDeletesForExchangeSync` setting to **True** using one of the following tools:
 
 1. [Organization Settings Editor](https://github.com/seanmcne/OrgDbOrgSettings/releases)
-2. [OrgDBOrgSettings tool for Microsoft Dynamics CRM](https://support.microsoft.com/help/2691237)
+2. [OrgDBOrgSettings tool for Microsoft Dynamics 365](https://support.microsoft.com/topic/orgdborgsettings-tool-for-microsoft-dynamics-crm-20a10f46-2a24-a156-7144-365d49b842ba)
+
+By updating this setting, you can manage how deletions are handled during synchronization and prevent unexpected cancellations of appointments.
