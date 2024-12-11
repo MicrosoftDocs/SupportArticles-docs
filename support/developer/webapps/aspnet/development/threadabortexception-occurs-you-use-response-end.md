@@ -8,7 +8,7 @@ ms.custom: sap:General Development
 
 This article helps you resolve the ThreadAbortException error that occurs if you use `Response.End`, `Response.Redirect`, or `Server.Transfer`.
 
-_Original product version:_ &nbsp; ASP.NET on .NET Framework 4.5.2, ASP.NET on .NET Framework 3.5 Service Pack 1  
+_Original product version:_ &nbsp; ASP.NET on .NET Framework 4.6.2 or higher, ASP.NET on .NET Framework 3.5 Service Pack 1  
 _Original KB number:_ &nbsp; 312629
 
 ## Symptoms
