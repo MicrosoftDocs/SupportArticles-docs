@@ -30,7 +30,7 @@ To resolve the error, follow these steps:
 
 2. [Device authentication might fail under some conditions](#more-information). Ensure that the guest user's device is authenticated.
 
-3.	Ensure the guest user's device is joined to Microsoft Intune or supported mobile device management (MDM) solutions in the home tenant and in a compliant state.
+3. Ensure the guest user's device is joined to Microsoft Intune or supported mobile device management (MDM) solutions in the home tenant and in a compliant state.
 
     > [!NOTE]
     > Several third-party device compliance partners are supported for integration with Microsoft Intune. For more information, see [Support third-party device compliance partners in Intune](/mem/intune/protect/device-compliance-partners). For more information about configuring Intune device compliance, see [Monitor results of your Intune Device compliance policies](/mem/intune/protect/compliance-policy-monitor).
