@@ -2,7 +2,7 @@
 title: 401 Unauthorized exception when using server-side synchronization
 description: Provides a solution to an error that occurs when you use server-side synchronization in Dynamics 365.
 ms.reviewer: dmartens
-ms.date: 12/09/2024
+ms.date: 12/11/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # 401 Unauthorized exception occurs when using server-side synchronization in Microsoft Dynamics 365
@@ -57,4 +57,4 @@ To solve this issue:
 
 1. Make sure that the previously existing user or mailbox is permanently deleted. By default, a user who is deleted from Microsoft Entra ID can have their account restored within 30 days. For more information, see [Permanently delete a user](/azure/active-directory/fundamentals/active-directory-users-restore#permanently-delete-a-user).
 
-1. After verifying that no user or mailbox uses the same email address, you can try to test and enable the mailbox again. If you still receive the error message, the issue can be caused by the result of caching. It might take up to 72 hours for the cache to be cleared. If you can't wait for 72 hours, contact [Microsoft Support](https://support.microsoft.com).
+1. After verifying that no user or mailbox uses the same email address, you can try to test and enable the mailbox again. If you still receive the error message, it may be due to caching. It might take up to 72 hours for the cache to be cleared. If you can't wait for 72 hours, contact Microsoft Support through the **Help + Support** experience in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/support).
