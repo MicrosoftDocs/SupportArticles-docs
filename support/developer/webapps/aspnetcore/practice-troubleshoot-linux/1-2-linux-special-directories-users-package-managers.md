@@ -8,7 +8,7 @@ author: ahmetmithat
 ---
 # Part 1.2 - Basic operations on Linux
 
-_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1, .NET 5  
+_Applies to:_ &nbsp; .NET on Linux  
 
 **Goal of this part**
 
@@ -28,7 +28,7 @@ For this training, it's not necessary to dive deeply into how to manage Linux. H
 |/etc|Contains the configuration files for the local system and applications. For example, you'll create some configuration files in the */etc/system* directory to enable the ASP.NET Core application to be started automatically by the system.|
 |/home|Contains each user's home directory. For example, */home/\<username\>*.|
 |/tmp|Temporary directory to store temporary files that are created by the system and applications.|
-|/usr|Stores shareable files including executables, libraries, and documents. For example, .NET Core runtime and SDKs are installed in the */usr/share/dotnet/* directory.|
+|/usr|Stores shareable files including executables, libraries, and documents. For example, .NET runtime and SDKs are installed in the */usr/share/dotnet/* directory.|
 |/var|Stores variable data files. For example, Apache stores the root web site's content in the /var/www/html directory, and the log files in the */var/log/apache2/* directory. Although it's not necessary, you'll publish your web applications in this directory.|
 ||
 
@@ -283,6 +283,6 @@ As final step, run the `apt purge` command to see its effect. You can run a purg
 
 ## Next steps
 
-[Part 1.3 - Install .NET Core in Linux](1-3-install-dotnet-core-linux.md)
+[Part 1.3 - Install .NET in Linux](1-3-install-dotnet-core-linux.md)
 
 [!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
