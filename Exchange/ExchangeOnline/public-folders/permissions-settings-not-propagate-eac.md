@@ -31,7 +31,7 @@ You try to use the Exchange admin center (EAC) to update the permissions or othe
 - Microsoft Exchange Online:
    - The EAC doesn't provide an option to apply your changes to subfolders.
 
-The following sections provide PowerShell workarounds for multiple scenarios.
+The following sections provide PowerShell workarounds for various issues.
 
 ## Permissions aren't applied to all subfolders
 
