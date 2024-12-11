@@ -66,9 +66,9 @@ This behavior is by design.
 
 ## Steps to reproduce the behavior
 
-1. Start Microsoft Visual Studio .NET.
+1. Start Microsoft Visual Studio.
 2. On the **File** menu, point to **New**, and then select **Project**.
-3. Select **Visual Basic Projects** under **Project Types**, and then select **ASP.NET Web Application** under **Templates**. By default, `WebForm1.aspx` is created.
+3. Select **Visual Basic** under **Languages**, **Windows** under **Platforms** , and then select **ASP.NET Web Application(.NET Framework)** in the templates list. Then choose "Web Forms" in the project creation page. By default, `WebForm1.aspx` is created.
 4. In Design view, right-click **WebForm1**, and then select **View Code**.
 5. To add the database connection and the `DataAdapter` method to fill the dataset, replace the existing code with the following code:
 
