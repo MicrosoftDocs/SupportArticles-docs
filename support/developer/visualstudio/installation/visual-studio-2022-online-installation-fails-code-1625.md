@@ -16,9 +16,9 @@ When you install Visual Studio 2022 online, the process fails with the following
 
 ## Cause
 
-This error usually means that a required certificate is revoked. The error code 1625 means the installation is prohibited by system policy.
+The error code 1625 means the installation is prohibited by system policy. The authorization level returned by the Software Restriction Policy is 0x0 (returned status 0x800b010c). `0x800b010c` usually means that a required certificate is revoked. 
 
-Installation isn't allowed under the Software Restriction Policy. Windows Installer can only install unrestricted items. The authorization level returned by the software restriction policy is 0x0 (returned status 0x800b010c).
+Installation isn't allowed under the Software Restriction Policy. Windows Installer can only install unrestricted items. 
 
 ## Resolution
 
