@@ -8,7 +8,7 @@ author: ahmetmithat
 ---
 # Overview of ASP.NET Core on Linux troubleshooting
 
-_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1, .NET 5  
+_Applies to:_ &nbsp; .NET on Linux  
 
 This article provides an overview of how to troubleshoot ASP.NET Core applications on Linux and what you should consider before the troubleshooting.
 
@@ -28,7 +28,7 @@ This troubleshooting training covers the following topics.
 
 Part 1 is for those who have no previous experience with Linux. It covers the following topics:
 
-- How to create a Linux virtual machine in Microsoft Azure. You can skip this step if you already have access to a Linux virtual machine. The training will make use of an Ubuntu x18.04 LTS virtual machine. We recommend that you use the same distribution of Linux if you want to follow along with the exercises.
+- How to create a Linux virtual machine in Microsoft Azure. You can skip this step if you already have access to a Linux virtual machine. The training will make use of an Ubuntu virtual machine. We recommend that you use the same distribution of Linux if you want to follow along with the exercises.
 - How to connect to a Linux virtual machine from a Windows-based computer.
 
 If you already have a Linux virtual machine, you can skip this part entirely and start at Part 2 directly.
@@ -37,7 +37,7 @@ If you already have a Linux virtual machine, you can skip this part entirely and
 
 In Part 2, we will learn the following:
 
-- How to install .NET Core on Linux, and how to run ASP.NET Core applications on this operating system.
+- How to install .NET on Linux, and how to run ASP.NET Core applications on this operating system.
 - How to configure ASP.NET Core applications to start automatically.
 - How to host multiple web applications behind a reverse proxy.
 - How to deploy ASP.NET Core applications to a Linux virtual machine from a Windows-based computer.
