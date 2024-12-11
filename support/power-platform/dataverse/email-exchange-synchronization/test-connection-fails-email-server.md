@@ -46,4 +46,4 @@ The test connection results aren't always reliable. If the same username and pas
 
 - [Connect to Exchange Server (on-premises)](/power-platform/admin/connect-exchange-server-on-premises)
 - [Test connection to Exchange Server (on-premises)](/power-platform/admin/test-connection-exchange-server-onpremises)
-- [Connect Customer Engagement (on-premises) to Exchange Online](/dynamics365/customerengagement/on-premises/admin/connect-dynamics-365-on-premises-exchange-online?view=op-9-1)
+- [Connect Customer Engagement (on-premises) to Exchange Online](/dynamics365/customerengagement/on-premises/admin/connect-dynamics-365-on-premises-exchange-online)
