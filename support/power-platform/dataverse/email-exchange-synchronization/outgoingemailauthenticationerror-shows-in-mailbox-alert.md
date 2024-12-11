@@ -2,8 +2,7 @@
 title: OutgoingEmailAuthenticationError error in mailbox alert
 description: OutgoingEmailAuthenticationError error appears in Microsoft Dynamics 365 mailbox alert. Provides a resolution.
 ms.reviewer: 
-ms.topic: troubleshooting
-ms.date: 11/19/2024
+ms.date: 12/11/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # OutgoingEmailAuthenticationError error shows in Microsoft Dynamics 365 mailbox alert
