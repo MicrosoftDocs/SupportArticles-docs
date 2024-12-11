@@ -76,7 +76,7 @@
       href: email-exchange-synchronization/error-when-you-test-enable-a-mailbox.md
     - name: Mailbox doesn't have an email server profile
       href: email-exchange-synchronization/mailbox-does-not-have-email-server-profile.md
-    - name: Mailbox fails to be tested and enabled
+    - name: Mailbox can't be tested and enabled when using server-side synchronization with Gmail
       href: email-exchange-synchronization/mailbox-fails-tested-enabled.md
     - name: OutgoingEmailAuthenticationError in mailbox alert
       href: email-exchange-synchronization/outgoingemailauthenticationerror-shows-in-mailbox-alert.md
