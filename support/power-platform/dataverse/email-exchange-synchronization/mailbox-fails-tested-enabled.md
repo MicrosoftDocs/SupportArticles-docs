@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 4493342
 
 ## Symptoms
 
-When a Dynamics 365 mailbox is configured to use [server-side synchronization](/power-platform/admin/server-side-synchronization) with Gmail, the mailbox might fail to be [tested and enabled]((/power-platform/admin/connect-exchange-online#test-the-configuration-of-mailboxes)) successfully or incoming emails aren't received in Dynamics 365.
+When a Dynamics 365 mailbox is configured to use [server-side synchronization](/power-platform/admin/server-side-synchronization) with Gmail, the mailbox might fail to be [tested and enabled](/power-platform/admin/connect-exchange-online#test-the-configuration-of-mailboxes) successfully or incoming emails aren't received in Dynamics 365.
 
 ## Cause 1：Incorrect port configuration
 
