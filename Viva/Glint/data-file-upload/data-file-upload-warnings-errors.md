@@ -33,6 +33,7 @@ For more information about these issues and how to resolve them, see the followi
 - [Resolve file upload warnings related to duplicate data](/viva/troubleshoot/glint/data-file-upload/fix-upload-duplicate-data-warnings?toc=/viva/glint/toc.json&bc=/viva/breadcrumb/toc.json)
 - [Resolve file upload warnings related to invalid or unexpected values](/viva/troubleshoot/glint/data-file-upload/fix-upload-invalid-unexpected-values-warnings?toc=/viva/glint/toc.json&bc=/viva/breadcrumb/toc.json)
 - [Resolve file upload warnings related to manager hierarchy](/viva/troubleshoot/glint/data-file-upload/fix-upload-manager-hierarchy-warnings?toc=/viva/glint/toc.json&bc=/viva/breadcrumb/toc.json)
+- [Resolve upload errors and warnings related to employee ID updates](/viva/troubleshoot/glint/data-file-upload/fix-employee-id-updates-errors-warnings?toc=/viva/glint/toc.json&bc=/viva/breadcrumb/toc.json)
 
 If you still can't resolve the issues, [contact Microsoft Support](../contact-support/get-support-viva-glint.md) for further assistance.
 
