@@ -16,42 +16,43 @@ _Original KB number:_&nbsp;2749007
 
 Consider the following scenario:
 
-- You use Internet Explorer (or IE mode in Edge) to browse to a web application hosted on IIS.
+- You use Internet Explorer (or IE mode in Edge) to browse a web application hosted on IIS.
 - The client machine is configured to use Pre-Authentication in Internet Settings, and Kernel Mode Authentication is enabled in IIS.
-- Additionally, this web request being sent by Internet Explorer (or IE mode in Edge) is the first request to be sent to the IIS application.
+- The web request sent by Internet Explorer (or IE mode in Edge) is the first request to be sent to the IIS application.
 
-In this scenario, IIS may return an HyperText Transfer Protocol (HTTP) 401.1 response to Internet Explorer (or IE mode in Edge) in response to the browser's request. The web browser may prompt you to enter your username and password. Or, the HTTP 401.1 error message may be displayed in the browser window.
+In this scenario, IIS might return an HyperText Transfer Protocol (HTTP) 401.1 response to Internet Explorer (or IE mode in Edge) in response to the browser's request. The web browser might prompt you to enter your username and password. Or, the HTTP 401.1 error message might be displayed in the browser window.
 
 ## Cause
 
 This behavior is by design. The 401.1 response will occur if the web browser's first request that's sent to the IIS application contains one of the following headers:
 
-- a Windows Challenge/Response (NTLM) header
-- a Negotiate WWW-Authorization header (known as Pre-Authentication)
+- A Windows Challenge/Response (NTLM) header
+- A Negotiate WWW-Authorization header (known as Pre-Authentication)
 
 > [!NOTE]
-> There are many reasons a user may be prompted for credentials in Internet Explorer that are outside the scope of this article. See the [More information](#more-information) section below to learn how to determine if the cause of the prompt is from the issue described here.
+> There are many reasons a user might be prompted for credentials in Internet Explorer that are outside the scope of this article. See the [More information](#more-information) section below to learn how to determine if the cause of the prompt is from the issue described here.
 
 ## Workaround
 
-To work around this behavior, disable Pre-Authentication in Internet Settings, or turn off Kernel Mode Authentication for the IIS Web application.
+To work around this behavior, disable Pre-Authentication in Internet Settings or turn off Kernel Mode Authentication for the IIS Web application.
 
 > [!WARNING]
-> If you use Registry Editor incorrectly, you may cause serious problems that may require you to reinstall your operating system. Microsoft can't guarantee that you can solve problems that result from using Registry Editor incorrectly. Use Registry Editor at your own risk.
+> If you use Registry Editor incorrectly, you might cause serious problems that might require you to reinstall your operating system. Microsoft can't guarantee that you can solve problems that result from using Registry Editor incorrectly. Use Registry Editor at your own risk.
 
-To modify this behavior in Internet Explorer, use Registry Editor (`Regedt32.exe`) to add a value to the following registry key:  
+To modify this behavior in Internet Explorer, use Registry Editor (**Regedt32.exe**) to add a value to the following registry key:
+
 `HKEY_CURRENT_USER/Software/Microsoft/Windows/CurrentVersion/Internet Settings/`
 
 > [!NOTE]
 > The above registry key is one path; it has been wrapped for readability.
 
-Add the following registry value:
+Add the following registry values:
 
 - Value Name: `DisableNTLMPreAuth`  
-- Data Type: REG_DWORD  
-- Value: **1**
+- Data Type: `REG_DWORD`  
+- Value: `1`
 
-To modify this behavior in IIS, disable Kernel Mode Authentication for the IIS web application.
+To modify this behavior in IIS, disable Kernel Mode Authentication for the IIS web application:
 
 1. Open Internet Information Services (IIS) Manager by running the following command from an administrative command prompt:
 
@@ -59,7 +60,7 @@ To modify this behavior in IIS, disable Kernel Mode Authentication for the IIS w
     %windir%\System32\inetsrv\inetmgr.exe
     ```
 
-2. In the **Connections** pane, expand the server name, expand **Sites**, and then the site, application, or Web service for which you want to disable Kernel Mode Authentication.
+2. In the **Connections** pane, expand the server name, expand **Sites**, and then expand the site, application, or Web service for which you want to disable Kernel Mode Authentication.
 
 3. Scroll to the **Security** section in the **Home** pane, and then double-click **Authentication**.
 
@@ -72,7 +73,7 @@ To modify this behavior in IIS, disable Kernel Mode Authentication for the IIS w
 7. Select **OK** to close the **Advanced Settings** dialog box.
 
 > [!IMPORTANT]
-> Disabling Kernel Mode Authentication may cause web applications that require Kerberos authentication and delegation to fail.
+> Disabling Kernel Mode Authentication might cause web applications that require Kerberos authentication and delegation to fail.
 
 ## More information
 
