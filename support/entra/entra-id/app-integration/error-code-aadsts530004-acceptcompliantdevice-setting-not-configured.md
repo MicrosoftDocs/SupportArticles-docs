@@ -53,7 +53,7 @@ To resolve the error, follow these steps:
 
 When a Conditional Access policy in the resource tenant is configured with the **Require approved client app** control and the policy applies to guest users, the error can occur.
 
-This scenario isn't supported. To resolve the error, don't apply this control to guest user.
+This scenario isn't supported. To resolve the error, don't apply this control to guest users.
 
 ## Device authentication fails
 
@@ -69,7 +69,7 @@ Device authentication might fail under one of the following condition:
     - [Windows](/entra/identity/devices/concept-primary-refresh-token)
     - [Android](/entra/identity-platform/msal-android-single-sign-on#sso-through-brokered-authentication)
     - [iOS](/entra/msal/objc/single-sign-on-macos-ios#sso-through-authentication-broker-on-ios)
-    - [macOS, iOS and iPadOS](/entra/identity-platform/app le-sso-plugin)
+    - [macOS, iOS and iPadOS](/entra/identity-platform/apple-sso-plugin)
 
 For more information on supported device platforms, see [Microsoft Entra Conditional Access - Device platforms](/entra/identity/conditional-access/concept-conditional-access-conditions#device-platforms).
 
