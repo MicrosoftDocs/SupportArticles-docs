@@ -1,16 +1,14 @@
 ---
 title: Error AADSTS530004 - AcceptCompliantDevice setting isn't configured
 description: Provides solutions to the error AADSTS530004 when a guest user accesses an application or resource in the resource tenant.
-ms.reviewer: laks, v-weizhu
-ms.service: identity-platform
-ms.date: 12/11/2024
+ms.reviewer: laks, custorod, joaos, v-weizhu
+ms.service: entra-id
+ms.date: 12/12/2024
+ms.custom: sap:Issues Signing In to Applications
 ---
 # Error AADSTS530004 - AcceptCompliantDevice setting isn't configured for this organization
 
 This article discusses the scenarios where the error AADSTS530004 occurs when a guest user accesses an application or resource in the resource tenant and provides solutions to it.
-
-> [!NOTE]
-> For more information about authentication and authorization error codes, see [Microsoft Entra authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes). To investigate individual errors, do a search in https://login.microsoftonline.com/error.
 
 ## Symptoms
 
@@ -28,7 +26,9 @@ To resolve the error, follow these steps:
 
 1. Create a Cross Tenant Access Policy (XTAP) policy with the [Trust compliant devices](/entra/external-id/cross-tenant-access-settings-b2b-collaboration#to-change-inbound-trust-settings-for-mfa-and-device-claims) setting in the user's home tenant.
 
-2. [Device authentication might fail under some conditions](#more-information). Ensure that the guest user's device is authenticated.
+2. Ensure that the guest user's device is authenticated.
+
+    Device authentication might fail under some conditions. For more information, see [Device authentication fails](#device-authentication-fails).
 
 3. Ensure the guest user's device is joined to Microsoft Intune or supported mobile device management (MDM) solutions in the home tenant and in a compliant state.
 
@@ -43,7 +43,9 @@ To resolve the error, follow these steps:
 
 1. Create an XTAP policy with the [Trust Microsoft Entra hybrid joined devices](/entra/external-id/cross-tenant-access-settings-b2b-collaboration#to-change-inbound-trust-settings-for-mfa-and-device-claims) setting in the user's home tenant.
 
-2. [Device authentication might fail under some conditions](#more-information). Ensure that the guest user's device is authenticated.
+2. Ensure that the guest user's device is authenticated.
+
+    Device authentication might fail under some conditions. For more information, see [Device authentication fails](#device-authentication-fails).
 
 3. Ensure that the guest user's device is [Microsoft Entra hybrid joined](/entra/identity/devices/how-to-hybrid-join) in the home tenant.
 
@@ -51,15 +53,23 @@ To resolve the error, follow these steps:
 
 When a Conditional Access policy in the resource tenant is configured with the **Require approved client app** control and the policy applies to guest users, the error can occur.
 
-To resolve the error, don't apply this control to guest users because they don't support it. 
+This scenario isn't supported. To resolve the error, don't apply this control to guest user.
 
-## More information
+## Device authentication fails
 
 Device authentication might fail under one of the following condition:
 
-- When accessed using a browser in private mode.
+- When accessed using a browser in InPrivate/Incognito mode.
 - When using unsupported browsers or devices, particularly on mobiles.
 - When browser cookies are disabled.
+- When a desktop/native application doesn't support device authentication, or it isn't broker aware.
+
+    For more information about brokers and broker aware applications on different device platforms, see the following pages:
+
+    - [Windows](/entra/identity/devices/concept-primary-refresh-token)
+    - [Android](/entra/identity-platform/msal-android-single-sign-on#sso-through-brokered-authentication)
+    - [iOS](/entra/msal/objc/single-sign-on-macos-ios#sso-through-authentication-broker-on-ios)
+    - [macOS, iOS and iPadOS](/entra/identity-platform/app le-sso-plugin)
 
 For more information on supported device platforms, see [Microsoft Entra Conditional Access - Device platforms](/entra/identity/conditional-access/concept-conditional-access-conditions#device-platforms).
 
@@ -67,5 +77,9 @@ To verify whether the device claim is sent, review the sign-in logs for the fail
 
 1. Navigate to the sign-in logs for the user and locate the relevant failure or success event.
 2. Under the **Device Info** section, check the **Join type** field that indicates the passed device claim.
+
+## AADSTS error code reference
+
+For a full list of authentication and authorization error codes, see [Microsoft Entra authentication and authorization error codes](/entra/identity-platform/reference-error-codes). To investigate individual errors, do a search in https://login.microsoftonline.com/error.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
