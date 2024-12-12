@@ -1,20 +1,20 @@
 ---
 title: Error 530 when you browse anonymous FTP sites
-description: This article provides resolutions for the error 530 that occurs when users browse an anonymous FTP site configured for Active Directory User Isolation in IIS 7.0 and 7.5.
+description: This article provides resolutions for the error 530 that occurs when users browse an anonymous FTP site configured for Active Directory User Isolation in IIS.
 ms.date: 04/07/2020
 ms.custom: sap:FTP Authentication and Authorization\FTP authentication
 ms.reviewer: Robmcm, MLaing
 ---
-# Error 530 when you browse anonymous FTP sites configured for Active Directory User Isolation in IIS 7.0 and 7.5
+# Error 530 when you browse anonymous FTP sites configured for Active Directory User Isolation in IIS
 
-This article helps you resolve the error 530 that occurs when you browse an anonymous FTP site configured for Active Directory User Isolation in Microsoft Internet Information Services (IIS) 7.0 or 7.5.
+This article helps you resolve the error 530 that occurs when you browse an anonymous FTP site configured for Active Directory User Isolation in Microsoft Internet Information Services (IIS).
 
-_Original product version:_ &nbsp; Internet Information Services 7.0, 7.5  
+_Original product version:_ &nbsp; Internet Information Services  
 _Original KB number:_ &nbsp; 2649659
 
 ## Symptoms
 
-Consider the following scenario. You configure an FTP site in IIS 7.0 or 7.5. In the IIS manager, you allow anonymous authentication for the FTP site, and then configure Active Directory User Isolation to isolate users to their own FTP directories. When a user then tries to access the FTP site anonymously, one of the following error conditions may occur:
+Consider the following scenario. You configure an FTP site in IIS. In the IIS manager, you allow anonymous authentication for the FTP site, and then configure Active Directory User Isolation to isolate users to their own FTP directories. When a user then tries to access the FTP site anonymously, one of the following error conditions may occur:
 
 - Error condition 1: Using the ftp.exe FTP client
 
@@ -38,8 +38,8 @@ When configuring an FTP site for Active Directory User Isolation, do not allow a
 
 ## More information
 
-For more information about configure FTP User Isolation in IIS 7.0 and 7.5, see the following articles:
+For more information about configure FTP User Isolation in IIS, see the following articles:
 
 - [FTP User Isolation](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd722768(v=ws.10))
 
-- [Configuring FTP User Isolation in IIS 7](/iis/publish/using-the-ftp-service/configuring-ftp-user-isolation-in-iis-7)
+- [Configuring FTP User Isolation in IIS](/iis/publish/using-the-ftp-service/configuring-ftp-user-isolation-in-iis-7)
