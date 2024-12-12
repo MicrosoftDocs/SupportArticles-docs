@@ -21,7 +21,7 @@ This article describes the Microsoft support policy that applies when you run Ci
 Microsoft will provide support for Azure Platform and Services only. Support for Citrix Services will be provided directly by Citrix. For more information see:
 
 - [Azure support plans](https://azure.microsoft.com/support/plans/)
-- [Citrix Support](https://support.citrix.com/)
+- [Citrix support](https://support.citrix.com/)
 
 Customers can initiate joint troubleshooting between Microsoft and Citrix if they are entitled to support from both companies.
 
