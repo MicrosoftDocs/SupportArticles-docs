@@ -1,13 +1,13 @@
 ---
 title: Write binary files to the browser
-description: This article creates a sample page that demonstrates how to use Visual C# .NET to retrieve binary data from a file and then write the data out to the browser. 
+description: This article creates a sample page that demonstrates how to use C# to retrieve binary data from a file and then write the data out to the browser. 
 ms.date: 07/28/2020
 ms.custom: sap:General Development
 ms.topic: how-to
 ---
-# Use ASP.NET and Visual C# .NET to write binary files to the browser
+# Use ASP.NET and C# to write binary files to the browser
 
-This article creates a sample page that demonstrates how to use Visual C# .NET to retrieve binary data from a file and then write the data out to the browser. Although this demonstration uses an Adobe Acrobat (.pdf) file, you can apply this procedure to other binary file formats.
+This article creates a sample page that demonstrates how to use C# to retrieve binary data from a file and then write the data out to the browser. Although this demonstration uses an Adobe Acrobat (.pdf) file, you can apply this procedure to other binary file formats.
 
 _Original product version:_ &nbsp; ASP.NET  
 _Original KB number:_ &nbsp; 306654
@@ -22,21 +22,21 @@ _Original KB number:_ &nbsp; 306654
 
 This section demonstrates how to create a new ASP.NET web application named *BinaryDemo*:
 
-1. Open Visual Studio .NET
+1. Open Microsoft Visual Studio.
 2. From the **File** menu, point to **New**, and then click **Project**.
-3. Under **Project** types, click **Visual C# Projects**. Under **Templates**, click **ASP.NET Web Application**.
+3. Select **C#** under **Languages**, **Windows** under **Platforms** , and then select **ASP.NET Web Application(.NET Framework)** in the templates list.
 4. In the **Name** text box, type *BinaryDemo*. In the **Location** text box, type the *ServerName*. If you are using the local server, leave the location as `http://localhost`.
 
 ## Add the PDF file to the project
 
 To set up your project so that you can add and run the code in the [Create the ASPX page](#create-the-aspx-page) section to follow, you must first add an Adobe Acrobat (.pdf) file to your current project.
 
-To do this in Visual Studio .NET, follow these steps:
+To do this in Visual Studio, follow these steps:
 
 1. In **Solution Explorer**, right-click the project node, click **Add**, and then click **Add Existing Item**.
 2. Browse to the location of a .pdf file on your system.
 3. Click to highlight the file, and then click **Open**.
-4. In Visual Studio .NET **Solution Explorer**, right-click the file, and then click **Rename**. Rename the .pdf file so that it matches the file name *Acrobat.pdf* that is used in the code that follows.
+4. In Visual Studio **Solution Explorer**, right-click the file, and then click **Rename**. Rename the .pdf file so that it matches the file name *Acrobat.pdf* that is used in the code that follows.
 
 In addition, ensure that Adobe Acrobat Reader is installed on the client computer from which the .aspx page is viewed so that the browser can properly read and render the binary data. You can download the Adobe Acrobat Reader from [Adobe Web site](https://www.adobe.com/).
 
@@ -91,6 +91,6 @@ For more information, visit below sites:
 
 - [.NET Framework Class Library](/previous-versions/gg145045(v=vs.110))
 
-For a Visual Basic .NET version of this article, see [How To Write Binary Files to the Browser Using ASP.NET and Visual C# .NET](https://support.microsoft.com/help/306654/how-to-write-binary-files-to-the-browser-using-asp-net-and-visual-c-ne).
+For a Visual Basic .NET version of this article, see [Write binary files to the browser by using ASP.NET and Visual Basic .NET](https://learn.microsoft.com/en-us/troubleshoot/developer/webapps/aspnet/development/write-binary-files-browser-vb).
 
 [!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
