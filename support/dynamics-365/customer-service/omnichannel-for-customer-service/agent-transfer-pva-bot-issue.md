@@ -3,7 +3,7 @@ title: Missing variables and actions during agent transfers from Copilot Studio 
 description: Provides a resolution for the required variables and actions that are missing during transfers from Copilot Studio agents to service representatives in Omnichannel for Customer Service.
 ms.reviewer: nenellim
 ms.author: yangao
-ms.date: 12/09/2024
+ms.date: 12/12/2024
 ms.custom: sap:Copilot Studio\Agent transfer
 ms.collection: CEnSKM-ai-copilot
 ---

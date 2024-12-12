@@ -3,7 +3,7 @@ title: Error in Conversation Start Topic Prevents Survey Agent from Publishing
 description: Solves an error that occurs when you try to publish a survey agent in Microsoft Dynamics 365 Customer Service. 
 ms.reviewer: nenellim
 ms.author: srubinstein
-ms.date: 12/11/2024
+ms.date: 12/12/2024
 ms.custom: sap:Copilot Studio\End conversation
 ---
 # "Cannot reference variable" error when publishing a Copilot Studio survey agent
@@ -40,6 +40,6 @@ To resolve this error, follow these steps to manually re-create the step where t
 
 3. Save and publish the survey agent.
 
-### More information
+## Related information
 
 [Configure feedback surveys using Copilot Studio (preview)](/dynamics365/contact-center/administer/configure-surveys)

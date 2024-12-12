@@ -3,7 +3,7 @@ title: Copilot Studio agent conversations are active after a chat ends
 description: Provides a resolution for the issue where Copilot Studio agent conversations remain active on the Omnichannel for Customer Service dashboard after a user ends a chat.
 ms.reviewer: nenellim
 ms.author: yangao
-ms.date: 12/09/2024
+ms.date: 12/12/2024
 ms.custom: sap:Copilot Studio\End conversation
 ms.collection: CEnSKM-ai-copilot
 ---
