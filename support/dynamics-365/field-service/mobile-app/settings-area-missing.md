@@ -29,21 +29,21 @@ First, check whether the sitemap area exists on the default Field Service Mobile
 
 If you find that a customization layer on the sitemap is on top and overrides this area, use one of the following options to enable the **Settings** area:
 
-- **Option 1**: Remove the sitemap customization layer and manually customize it again
+**Option 1**: Remove the sitemap customization layer and manually customize it again
 
-   1. [Remove the unmanaged customization layer](/power-apps/maker/data-platform/solution-layers#remove-an-unmanaged-layer).
-   2. Apply the [sitemap customizations](/power-apps/maker/model-driven-apps/create-site-map-app) again.
+1. [Remove the unmanaged customization layer](/power-apps/maker/data-platform/solution-layers#remove-an-unmanaged-layer).
+2. Apply the [sitemap customizations](/power-apps/maker/model-driven-apps/create-site-map-app) again.
 
-- **Option 2**: Manually add the **Settings** area and switch to the sitemap
+**Option 2**: Manually add the **Settings** area and switch to the sitemap
 
-   1. Open your customized app in the [app designer](/power-apps/maker/model-driven-apps/app-designer-overview).
-   1. [Enable areas and create a new area](/power-apps/maker/model-driven-apps/app-navigation#create-an-area) for the Field Service Mobile settings.
-   1. [Create a new group](/power-apps/maker/model-driven-apps/app-navigation#create-a-group) for the mobile settings.
-   1. [Add a new page to the group](/power-apps/maker/model-driven-apps/app-navigation#create-a-page). Select **URL** for the content type.
-   1. Use `/main.aspx?etn=msdyn_fieldservicesetting&pagetype=entityrecord&id=e49c6117-5065-423f-8ab5-fcacfda85a04&formid=ee334fea-0cd5-471c-bb30-829f4511a59f` as the URL input.
-   1. Add a subarea for new features.
+1. Open your customized app in the [app designer](/power-apps/maker/model-driven-apps/app-designer-overview).
+1. [Enable areas and create a new area](/power-apps/maker/model-driven-apps/app-navigation#create-an-area) for the Field Service Mobile settings.
+1. [Create a new group](/power-apps/maker/model-driven-apps/app-navigation#create-a-group) for the mobile settings.
+1. [Add a new page to the group](/power-apps/maker/model-driven-apps/app-navigation#create-a-page). Select **URL** for the content type.
+1. Use `/main.aspx?etn=msdyn_fieldservicesetting&pagetype=entityrecord&id=e49c6117-5065-423f-8ab5-fcacfda85a04&formid=ee334fea-0cd5-471c-bb30-829f4511a59f` as the URL input.
+1. Add a subarea for new features.
 
-      1. Under **ID**, expand **Advanced settings** and **privileges**.
-      1. Select **Add table privilege** > **Field Service Setting**, and then select only the **Write** privilege.
+   1. Under **ID**, expand **Advanced settings** and **privileges**.
+   1. Select **Add table privilege** > **Field Service Setting**, and then select only the **Write** privilege.
 
-   1. Select **Apply** > **Save and Publish**.
+1. Select **Apply** > **Save and Publish**.
