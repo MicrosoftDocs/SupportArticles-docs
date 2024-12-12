@@ -9,7 +9,7 @@ ms.reviewer: atsushin, bariscag
 
 This article helps you resolve the problem where digest authentication fails when a client sends a request through a proxy to a site and Microsoft Internet Information Services (IIS) uses digest authentication.
 
-_Original product version:_ &nbsp; Internet Information Services 8.5, 8.0  
+_Original product version:_ &nbsp; Internet Information Services  
 _Original KB number:_ &nbsp; 3050055
 
 ## Symptoms
