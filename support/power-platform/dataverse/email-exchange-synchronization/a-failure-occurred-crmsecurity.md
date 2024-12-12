@@ -1,38 +1,39 @@
 ---
 title: A failure occurred in CrmSecurity
-description: Provides a solution to an error that occurs when you select the Approve Email button on a mailbox record in Microsoft Dynamics 365.
+description: Provides a solution to an error that occurs when you select Approve Email on a mailbox record in Microsoft Dynamics 365.
 ms.reviewer: 
 ms.date: 12/12/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
-# "A failure occurred in CrmSecurity" error occurs when attempting to approve the email address of a mailbox record in Microsoft Dynamics 365
+# "A failure occurred in CrmSecurity" error when approving email address of a mailbox record in Microsoft Dynamics 365
 
-This article provides a solution to an error that occurs when you select the **Approve Email** button on a mailbox record in Microsoft Dynamics 365.
+This article provides a solution to an error that occurs when you manually approve a mailbox in Microsoft Dynamics 365.
 
 _Applies to:_ &nbsp; Microsoft Dynamics 365  
 _Original KB number:_ &nbsp; 4510938
 
 ## Symptoms
 
-When you select the **Approve Email** button on a mailbox record, you receive the following error:
+When you select the [Approve Email](/power-platform/admin/connect-exchange-online#approve-a-mailbox-manually) button on a mailbox record in Dynamics 365, you receive the following error message:
 
-> "Error  
-A failure occurred in CrmSecurity. If you contact support, please provide the technical details."
+> A failure occurred in CrmSecurity. If you contact support, please provide the technical details.
 
 ## Cause
 
-This error occurs if you try to approve the email as a user that doesn't have both of the following required roles:
+This error occurs when you try to approve the email as a user that doesn't have both of the following required roles:
 
-- Global Administrator or Exchange Administrator in Office 365
+- Global Administrator or Exchange Administrator in Microsoft 365
 - System Administrator security role in Dynamics 365
 
 ## Resolution
 
-By default, Dynamics 365 requires that the approval of an email address in Dynamics 365 is performed by someone with both of the required roles mentioned in the [Cause](#cause) section. The System Administrator role in Dynamics 365 or the Dynamics 365 service administrator role in Office 365 aren't sufficient for doing this action. For more information including how this requirement can be disabled, see [Changes to Mailbox approval in Dynamics 365](https://support.microsoft.com/help/4506139).
+By default, Dynamics 365 requires that only users with both the roles mentioned above can approve an email address. The System Administrator role in Dynamics 365 or the Dynamics 365 service administrator role in Microsoft 365 alone isn't sufficient for this action.
+
+For more information and instructions on how to disable this requirement, see [Remove the requirement to approve mailboxes](/power-platform/admin/connect-exchange-online#remove-the-requirement-to-approve-mailboxes).
 
 ## More information
 
-If you select the **Download Log File** button, you see details like the following example:
+If you select the **Download Log File** button in the error message, you see details like the following example:
 
 > "Unhandled Exception: System.ServiceModel.FaultException'1[[Microsoft.Xrm.Sdk.OrganizationServiceFault, Microsoft.Xrm.Sdk, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]: System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> Microsoft.Crm.CrmException: The Queue: a5efd992-dbc6-48af-ad61-09e0258edb68 email `example@contoso.com` doesn't match with UPN. User 39ff663e-a75a-e811-a986-000d3a3672b5 should be a global administrator to approve mailbox in organization \<organization>.  
 at Microsoft.Crm.Dialogs.ApproveEmailAddressDialogPage.ConfigureForm()  
