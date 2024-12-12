@@ -217,9 +217,7 @@
   - name: Troubleshoot outbound connections
     items:
     - name: Basic network flow and troubleshooting
-      href: connectivity/basic-troubleshooting-outbound-connections.md
-    - name: Network watch is stale after egress traffic restriction
-      href: connectivity/stale-watch-azure-ad-pod-identity-nmi-status-500.md
+      href: connectivity/basic-troubleshooting-outbound-connections.md    
     - name: Restricting egress traffic causes errors
       href: connectivity/errors-arfter-restricting-egress-traffic.md
     - name: Troubleshoot SNAT port exhaustion on nodes
