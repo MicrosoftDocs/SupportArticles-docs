@@ -1,11 +1,11 @@
 ---
 title: Kiosk mode issues troubleshooting
 description: Learn how to troubleshoot single-app and multi-app kiosk configurations, as well as common problems like sign-in issues.
-ms.date: 05/10/2024
+ms.date: 12/12/2024
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.custom: sap:Windows Desktop and Shell Experience\Kiosk Mode, csstroubleshoot
-ms.reviewer: sybruckm, aaroncz,lizlong
+ms.reviewer: sybruckm, aaroncz,lizlong, paoloma
 audience: itpro
 ---
 # Troubleshoot kiosk mode issues
