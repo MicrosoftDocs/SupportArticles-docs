@@ -28,7 +28,7 @@ When you call `Server.Transfer`, ASP.NET internally calls the `Server.Execute` m
 
 To work around this problem, use `Server.Execute` instead of `Server.Transfer` in the `ProcessRequest` method of `HTTPHandler`. The modified `ProcessRequest` method is as follows:
 
-Visual C# .NET sample code
+C# sample code
 
 ```csharp
 public void ProcessRequest(HttpContext context)
@@ -45,7 +45,7 @@ public void ProcessRequest(HttpContext context)
 }
 ```
 
-Visual Basic .NET sample code
+Visual Basic sample code
 
 ```vb
 Public Sub ProcessRequest(ByVal context As HttpContext) _
@@ -64,7 +64,7 @@ This behavior is by design.
 
 ## Steps to reproduce the behavior
 
-1. In Microsoft Visual Studio .NET, use Visual Basic .NET or Visual C# .NET to create a new ASP.NET Web Application project. By default, *WebForm1.aspx* is created. Name the project *ServerTransferTest*.
+1. In Microsoft Visual Studio, use Visual Basic or C# to create a new ASP.NET Web Forms Application project. By default, *WebForm1.aspx* is created. Name the project *ServerTransferTest*.
 2. Right-click **WebForm1.aspx** and then select **View HTML Source**.
 3. Replace the existing code with the following sample code:
 
@@ -86,7 +86,7 @@ This behavior is by design.
 
 4. Double-click **Design View** of *WebForm1.aspx*, and then replace the exiting code in the code behind page with the following sample code:
 
-    Visual C# .NET sample code
+    C# sample code
 
     ```csharp
     using System;
@@ -128,7 +128,7 @@ This behavior is by design.
     }
     ```
 
-    Visual Basic .NET sample code
+    Visual Basic sample code
 
     ```vb
     Public Class WebForm1
@@ -157,7 +157,7 @@ This behavior is by design.
 6. Under **Add New Item**, select **Class**. In the **Name** text box under **Add New Item**, rename the class `HelloWorldHandler`, and then click **Open**.
 7. Replace the existing code in the `HelloWorldHandler` class file with the following sample code:
 
-    Visual C# .NET sample code
+    C# sample code
 
     ```csharp
     using System.Web;
@@ -187,7 +187,7 @@ This behavior is by design.
     }
     ```
 
-    Visual Basic .NET sample code
+    Visual Basic sample code
 
     ```vb
     Imports System
@@ -217,7 +217,7 @@ This behavior is by design.
 8. Repeat steps 5 and 6 to add another class file. Rename the class file `HelloWorldHandlerFactory`.
 9. Replace the existing code in the `HelloWorldHandlerFactory` class file with the following sample code:
 
-    Visual C# .NET sample code
+    C# sample code
 
     ```csharp
     using System.Web;
@@ -242,7 +242,7 @@ This behavior is by design.
     }
     ```
 
-    Visual Basic .NET sample code
+    Visual Basic sample code
 
     ```vb
     Imports System
