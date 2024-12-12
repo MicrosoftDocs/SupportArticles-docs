@@ -11,7 +11,7 @@ ms.custom: sap:Health, Diagnostic, and Performance Features\Failed Request Traci
 
 _Applies to:_ &nbsp; Internet Information Services
 
-One of the great troubleshooting features that is built in to IIS 7.0 and above is Failed Request Tracing, which lets you configure tracing rules on your server that will create detailed troubleshooting log files for custom failure conditions that you define. For example, you can capture the details for authentication failures by creating tracing rules that create log files for HTTP 401 errors.
+One of the great troubleshooting features that is built in to IIS is Failed Request Tracing, which lets you configure tracing rules on your server that will create detailed troubleshooting log files for custom failure conditions that you define. For example, you can capture the details for authentication failures by creating tracing rules that create log files for HTTP 401 errors.
 
 Failed Request Tracing in IIS can be configured to passively trace failures. This means that you can add tracing rules to IIS that will create log files when errors occur, even if you aren't actively monitoring your server. For example, the steps in this article show you how to create a tracing rule that will create trace logs whenever an HTTP 500 error occurs. This method of passive tracing is known as "no-repro" tracing, which means that you can periodically examine your server's logs to check if any failures have occurred, and then take action only when IIS has created logs.
 
@@ -22,20 +22,20 @@ Make sure that you follow the steps in this article by using an account that has
 - Sign in to your computer by using the local administrator account.
 - If you're signed in using an account with administrative permissions but that isn't the local administrator account, open all applications and all command prompt sessions by using the "Run as Administrator" option.
 
-These conditions are required because the User Account Control (UAC) security component in Windows Vista and Windows Server 2008 prevent administrative access to the IIS configuration settings. For more information about UAC, see [User Account Control](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772207(v=ws.10)).
+These conditions are required because the User Account Control (UAC) security component in Windows prevent administrative access to the IIS configuration settings. For more information about UAC, see [User Account Control](/windows/security/application-security/application-control/user-account-control/).
 
 ## Install Failed Request Tracing
 
 Failed Request Tracing isn't installed by default on IIS. Install Failed Request Tracing according to your version of Windows.
 
-### Windows Vista or Windows 7 Client
+### Windows Client OS
 
 1. Select **Start** > **Control Panel**.
 1. In **Control Panel**, select **Programs and Features** > **Turn Windows Features on or off**.
 1. Expand **Internet Information Services** > **World Wide Web Services** > **Health and Diagnostics**.
 1. Select **Tracing**, and then select **OK**.
 
-### Windows Server 2008 or Windows Server 2008 R2
+### Windows Server OS
 
 1. Select **Start**, point to **Administrative Tools**, and then select **Server Manager**.
 1. In the **Server Manager** hierarchy pane, expand **Roles**, and then select **Web Server (IIS)**.
@@ -109,13 +109,13 @@ When you use a Web browser to browse to this file, IIS should return an HTTP 500
 
 #### Read the trace log in Internet Explorer
 
-When you use Internet Explorer to open a Failed Request Tracing log file, various information is displayed in a **Request Summary**. This summary contains the general environment information for the failure condition such as the executing URL, the application pool, the authentication type and user name, and other information. You'll notice that the reason for the failure is the status code, and that the status was an HTTP 500 error.
+When you use Internet Explorer or IE mode in Edge browser to open a Failed Request Tracing log file, various information is displayed in a **Request Summary**. This summary contains the general environment information for the failure condition such as the executing URL, the application pool, the authentication type and user name, and other information. You'll notice that the reason for the failure is the status code, and that the status was an HTTP 500 error.
 
 In the **Errors and Warning** section of summary, you see a **view trace** link, as shown in the following illustration:
 
 :::image type="content" source="media/troubleshoot-classic-asp-errors-with-frt/browser-request-summary-ft-log-error.png" alt-text="Screenshot of a browser window displaying the Request Summary of a failed trace log error.":::
 
-When you select the **view trace** link, Internet Explorer jumps to the section of the trace where the ASP script failure occurred. If you expand the individual trace events, you can view the specific details for the event, such as the physical file path, the line number, the ASP error code and description, and the ASP code excerpt that caused the failure, which in this case was the attempt to instantiate an invalid COM class.
+When you select the **view trace** link, the browser jumps to the section of the trace where the ASP script failure occurred. If you expand the individual trace events, you can view the specific details for the event, such as the physical file path, the line number, the ASP error code and description, and the ASP code excerpt that caused the failure, which in this case was the attempt to instantiate an invalid COM class.
 
 An example is shown in the following illustration:
 
@@ -170,7 +170,7 @@ After five seconds, IIS will create a failed request trace log in your _%*System
 
 #### Read the trace log in Internet Explorer
 
-As shown in the previous example, when you use Internet Explorer to open a Failed Request Tracing log file, important information is displayed in a **Request Summary**. This summary contains the general environment information for the failure condition such as the executing URL, the application pool, the authentication type and user name, and other information. Notice that the reason for the failure was the amount of time taken, and that the time was slightly over five seconds, which was the time that you entered in the Failed Request Tracing rule.
+As shown in the previous example, when you use Internet Explorer or IE mode in Edge browser to open a Failed Request Tracing log file, important information is displayed in a **Request Summary**. This summary contains the general environment information for the failure condition such as the executing URL, the application pool, the authentication type and user name, and other information. Notice that the reason for the failure was the amount of time taken, and that the time was slightly over five seconds, which was the time that you entered in the Failed Request Tracing rule.
 
 > [!NOTE]
 > You will also notice that the HTTP status code for the response was HTTP 200, which is a successful response. This is one of the factors that often makes it more difficult to diagnose slow pages-the responses succeed, which make them more difficult to locate.
@@ -179,7 +179,7 @@ In the **Errors and Warning** section of summary, you see a **view trace** link,
 
 :::image type="content" source="media/troubleshoot-classic-asp-errors-with-frt/browser-request-summary-ft-log-warning.png" alt-text="Screenshot of a browser window displaying the Request Summary of a failed trace log warning.":::
 
-When you select the view **trace link**, Internet Explorer goes to the section of the trace where the ASP script failure occurred. If you expand the individual trace events, you can view the specific details for the event, such as the physical file path, the line number, the ASP error code and description, and the ASP code excerpt that was executing when the log file was creating. By using this information, you could examine your ASP page and locate the line of code that was executing inside a never-ending loop.
+When you select the view **trace link**, the browser goes to the section of the trace where the ASP script failure occurred. If you expand the individual trace events, you can view the specific details for the event, such as the physical file path, the line number, the ASP error code and description, and the ASP code excerpt that was executing when the log file was creating. By using this information, you could examine your ASP page and locate the line of code that was executing inside a never-ending loop.
 
 An example is shown in the following illustration:
 
