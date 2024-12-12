@@ -36,7 +36,10 @@ To fix the issue, use one of the following methods:
 - Remove the deleted records and upload the file again. Follow these steps:
 
   1. If necessary, work with your Microsoft 365 or Entra ID administrator to confirm the users that are deleted from Microsoft Entra ID.
-  1. Open the employee attribute data file in Excel. If the file is in .csv format, [import it into Excel](https://support.microsoft.com/office/import-or-export-text-txt-or-csv-files-5250ac4c-663c-47ce-937b-339e391393ba) to preserve the data in the expected format.
+  1. Open the employee attribute data file. Use the appropriate method depending on the file type:
+  
+       - If the data file has an *.xls* or a *.xlsx* extension, open it in Microsoft Excel.
+       - If the data file has a *.csv* extension, use the [Text Import Wizard](https://support.microsoft.com/office/text-import-wizard-c5b02af6-fda1-4440-899f-f78bafe41857) to import the data into Excel by preserving the data in the original format.
   1. Remove the rows that are listed in the warning message.
 
      **Note**: The header row isn't included in the row count. For example, if the warning indicates line 20, go to row 21.
@@ -54,7 +57,10 @@ This issue occurs because the file that you uploaded contains old Kanji characte
 
 To fix the issue, follow these steps:
 
-1. Open the employee attribute data file in Excel. If the file is in .csv format, [import it into Excel](https://support.microsoft.com/office/import-or-export-text-txt-or-csv-files-5250ac4c-663c-47ce-937b-339e391393ba) to preserve the data in the expected format.
+1. Open the employee attribute data file. Use the appropriate method depending on the file type:
+
+    - If the data file has an *.xls* or a *.xlsx* extension, open it in Microsoft Excel.
+    - If the data file has a *.csv* extension, use the [Text Import Wizard](https://support.microsoft.com/office/text-import-wizard-c5b02af6-fda1-4440-899f-f78bafe41857) to import the data into Excel by preserving the data in the original format.
 1. Locate the row that's listed in the warning message.
 
     **Note**: The header row isn't included in the row count. For example, if the warning indicates line 20, go to row 21.
@@ -180,7 +186,10 @@ This issue occurs if the file that you upload contains invalid language code val
 
 To fix the issue, follow these steps:
 
-1. Open the employee attribute data file in Excel. If the file is in .csv format, [import it in Excel](https://support.microsoft.com/en-us/office/import-data-from-a-csv-html-or-text-file-b62efe49-4d5b-4429-b788-e1211b5e90f6) to preserve the data in the expected format.
+1. Open the employee attribute data file. Use the appropriate method depending on the file type:
+
+    - If the data file has an *.xls* or a *.xlsx* extension, open it in Microsoft Excel.
+    - If the data file has a *.csv* extension, use the [Text Import Wizard](https://support.microsoft.com/office/text-import-wizard-c5b02af6-fda1-4440-899f-f78bafe41857) to import the data into Excel by preserving the data in the original format.
 1. Locate the row that's listed in the warning message.
 
    **Note**: The header row isn't included in the row count. For example, if the warning indicates line 20, go to row 21.
@@ -193,13 +202,16 @@ Warning message:
 
 > INVALID_USER_TIMEZONE: Line \<x\> the User Timezone value \<timezone\> is not a valid international timezone string.
 
-This issue occurs if the file that you upload contains invalid time zone values. 
+This issue occurs if the file that you upload contains invalid time zone values.
 
 ### Resolution
 
 To fix the issue, follow these steps:
 
-1. Open the employee attribute data file in Excel. If the file is in .csv format, [import it into Excel](https://support.microsoft.com/en-us/office/import-data-from-a-csv-html-or-text-file-b62efe49-4d5b-4429-b788-e1211b5e90f6) to preserve the data in the expected format.
+1. Open the employee attribute data file. Use the appropriate method depending on the file type:
+
+    - If the data file has an *.xls* or a *.xlsx* extension, open it in Microsoft Excel.
+    - If the data file has a *.csv* extension, use the [Text Import Wizard](https://support.microsoft.com/office/text-import-wizard-c5b02af6-fda1-4440-899f-f78bafe41857) to import the data into Excel by preserving the data in the original format.
 1. Locate the row that's listed in the warning message.
 
    **Note**: The header row isn't included in the row count. For example, if the warning indicates line 20, go to row 21.
@@ -218,7 +230,10 @@ This issue occurs because the file that you tried to upload contains invalid val
 
 To fix the issue, follow these steps:
 
-1. Open the employee attribute data file in Excel. If the file is in .csv format, [import it into Excel](https://support.microsoft.com/office/import-or-export-text-txt-or-csv-files-5250ac4c-663c-47ce-937b-339e391393ba) to preserve the data in the expected format.
+1. Open the employee attribute data file. Use the appropriate method depending on the file type:
+
+    - If the data file has an *.xls* or a *.xlsx* extension, open it in Microsoft Excel.
+    - If the data file has a *.csv* extension, use the [Text Import Wizard](https://support.microsoft.com/office/text-import-wizard-c5b02af6-fda1-4440-899f-f78bafe41857) to import the data into Excel by preserving the data in the original format.
 1. Locate the row that's listed in the warning message.
 
    **Note**: The header row isn't included in the row count. For example, if the warning indicates line 20, go to row 21.

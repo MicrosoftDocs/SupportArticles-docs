@@ -46,7 +46,10 @@ This issue occurs if one or more of the following required columns are missing f
 
 To fix the issue, follow these steps:
 
-1. Open the employee attribute data file in Microsoft Excel. If the file is in .csv format, [import it in Excel](https://support.microsoft.com/office/import-or-export-text-txt-or-csv-files-5250ac4c-663c-47ce-937b-339e391393ba) to preserve the data in the expected format.
+1. Open the employee attribute data file. Use the appropriate method depending on the file type:
+
+    - If the data file has an *.xls* or a *.xlsx* extension, open it in Microsoft Excel.
+    - If the data file has a *.csv* extension, use the [Text Import Wizard](https://support.microsoft.com/office/text-import-wizard-c5b02af6-fda1-4440-899f-f78bafe41857) to import the data into Excel by preserving the data in the original format.
 1. Check whether the missing column that's listed in the error message is included in the file.
 
    If the column isn't included, add the column and its data, and then go to step 5. Otherwise, go to step 3.
