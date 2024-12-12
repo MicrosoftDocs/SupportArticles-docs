@@ -1,6 +1,6 @@
 ---
 title: Mailbox doesn't have email server profile error
-description: Provides a solution to an email server error code InvalidIncomingEmailServerProfile that occurs after selecting the Test & Enable Mailbox button in Dynamics 365.
+description: Provides a solution to an email server error code InvalidIncomingEmailServerProfile that occurs when selecting Test & Enable Mailbox in Dynamics 365.
 ms.reviewer: 
 ms.date: 12/11/2024
 ms.custom: sap:Email and Exchange Synchronization
@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4484702
 
 ## Symptoms
 
-When you select the [Test & Enable Mailbox](/power-platform/admin/connect-exchange-online#test-the-configuration-of-mailboxes) button in Dynamics 365, the test results show as **Failure**. The following error message is logged in the **Alerts** section of the mailbox:
+When you try to [test and enable a mailbox](/power-platform/admin/connect-exchange-online#test-the-configuration-of-mailboxes) in Dynamics 365, the test results show as **Failure**. The following error message is logged in the [Alerts](/power-platform/admin/monitor-email-processing-errors#view-alerts) section of the mailbox:
 
 > Email cannot be received because the mailbox [Mailbox Name] does not have an email server profile associated with it or the email server profile is inactive.  
 > **Email Server Error Code:** InvalidIncomingEmailServerProfile
@@ -32,10 +32,11 @@ This error occurs if the user's mailbox record in Dynamics 365 either lacks a va
 
 2. If a value is already selected, open the associated server profile and review its **Status** at the bottom of the page.
 
-3. If the email Sserver profile shows a status of **Inactive**, follow these steps:
+3. If the email server profile shows the **Inactive** status, follow these steps to activate it:
+
     1. Navigate to **Settings** > **Email Configuration** > **Email Server Profiles**.
     2. Switch the view to **Inactive Email Server Profiles**.
-    3. Select the email Sserver profile, select **Activate**, and then select **OK**.
+    3. Select the email server profile, select **Activate**, and then select **OK**.
 
-4. Switch back to the mailbox record, and then select the **Test and Enable Mailbox** button.
+4. Switch back to the mailbox record, and then select the **Test & Enable Mailbox** button.
 5. If any test results still show as **Failure**, check under the **Alerts** section for more information.
