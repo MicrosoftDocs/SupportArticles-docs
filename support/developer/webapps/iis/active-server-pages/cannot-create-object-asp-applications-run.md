@@ -11,13 +11,6 @@ This article helps you resolve the error (Cannot create object) that occurs when
 _Original product version:_ &nbsp; Active Server Pages  
 _Original KB number:_ &nbsp; 201740
 
-> [!NOTE]
-> We strongly recommend that all users upgrade to Microsoft Internet Information Services (IIS) version 7.0 running on Microsoft Windows Server 2008. IIS 7.0 significantly increases Web infrastructure security.
->
-> For more information about IIS 7.0, visit the following Microsoft Web site:
->
-> [https://www.iis.net/default.aspx?tabid=1](https://www.iis.net/default.aspx?tabid=1)
-
 ## Symptoms
 
 When an Active Server Pages (ASP) application runs, you may receive the following error(s).
