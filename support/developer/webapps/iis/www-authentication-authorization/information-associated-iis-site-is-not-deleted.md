@@ -9,7 +9,7 @@ ms.reviewer: paulboc
 
 This article helps you resolve the problem where information associated with IIS site isn't deleted during programmatic site deletion.
 
-_Original product version:_ &nbsp; Internet Information Services 8.0, Internet Information Services 8.5  
+_Original product version:_ &nbsp; Internet Information Services  
 _Original KB number:_ &nbsp; 3202096
 
 ## Symptoms
@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 3202096
 Consider the following scenario:
 
 - You delete a site by using calls to `appcmd` or to the managed APIs that are exposed by `Microsoft.Web.Administration` binary.
-- You create a new site in Internet Information Services (IIS) 7.5 or later versions.
+- You create a new site in Internet Information Services (IIS).
 - The new site still uses the legacy metadata of the deleted site.
 
 In this scenario, unexpected behavior occurs when you try to access the newly created site. For example, you may receive an **HTTP 503 - Service Unavailable** error message in your web browser.
@@ -69,7 +69,7 @@ for (int i = customMetadata.Count - 1; i >= 0; i--) {
 
 ## Steps to reproduce
 
-On a Windows 2008 R2 / IIS 7.5 or a Windows 2012 R2 / IIS 8.5 Server:
+On a Windows Server:
 
 1. Install the IIS 6 metabase compatibility feature.
 1. In the IIS manager, create a second website: call this *WebTest* and make it run on any application pool desired.
