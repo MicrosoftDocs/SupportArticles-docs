@@ -521,7 +521,7 @@ sudo pcs property set maintenance-mode=false
 sudo pcs resource cleanup <SAPHana resource name>
 ```
 > [!Note]
-> Replace `<SAPHana resource name>` accordingly
+> Replace `<SAPHana resource name>` as per your SAP Pacemaker cluster setup.
 
 ### Symptom 3
 
@@ -531,16 +531,16 @@ SAP HANA Resource Start Failure with error message as shown:
 'FAIL: process hdbdaemon HDB Daemon not running'
 ```
 
-### Cause
-
-1. Run `sudo pcs status --full` and collect the time frame the start error occurred under `Failed Resource Actions`.
+The `sudo pcs status --full` command can also be used to view this, as it also resulted the SAP HANA Pacemaker cluster resources failover error.
 
 ```output
 Failed Resource Actions:
   * SAPHana_ECR_00_start_0 on Node1 'error' (1): call=44, status='complete', exitreason='', last-rc-change='2024-03-01 02:27:33 -08:00', queued=0ms, exec=23727ms
 ```
 
-2. Check `/var/log/messages` at the time of the Start failure displaying error:
+### Cause
+
+After reviewing `/var/log/messages` it was observed that `hbddaemon` failed to start due to the following error:
 
 ```output
 Mar  1 02:25:09 Node1 SAPHana(SAPHana_ECR_00)[12336]: ERROR: ACT: SAPHana Instance ECR-HDB00 start failed: #01201.03.2024 02:25:09#012WaitforStarted#012FAIL: process hdbdaemon HDB Daemon not running
@@ -557,17 +557,9 @@ Mar  1 02:25:09 Node1 pacemaker-attrd[8568]: notice: Setting last-failure-SAPHan
 
 ### Resolution
 
-1. Review the SAP HANA logs for more detailed error messages. Look for logs in the `/usr/sap/<SID>/HDB<instance_number>/trace` directory.
+As shown in the above output, there are no traces found other than why the 'hbddaemon' failed to start. After reviewing the provided output in the '/var/log/messages' log file, it is recommended that SAP vendor support investigate the application logs further to determine why the SAP application failed to start.
 
-2. Ensure that the user running the SAP HANA instance has the necessary permissions to access the required files and directories.
-
-3. Verify the configuration settings in the `global.ini` file, particularly the `basepath_datavolumes` parameter. Ensure that the paths are correct and accessible.
-
-4. Check the SAP cluster resource configuration, You might need to extend the timeout settings for starting the HANA DB resource, especially if it takes longer than expected to start.
-
-5. Try starting the HANA instance manually outside of the cluster control to see if it starts successfully. This can help isolate whether the issue is with the instance itself or the cluster management.
-
-If these steps don't resolve the issue, consider reaching out to SAP support for more specific guidance based on your environment.
+For additional refrence please refer to this RedHat Article [SAPHana Resource Start Failure with Error 'FAIL: process hdbdaemon HDB Daemon not running'](https://access.redhat.com/solutions/7058526).
 
 ## Scenario 4: Issue with ASCS and ERS resource.
 
