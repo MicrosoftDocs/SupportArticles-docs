@@ -57,7 +57,7 @@ This scenario isn't supported. To resolve the error, don't apply this control to
 
 ## Device authentication fails
 
-Device authentication might fail under one of the following condition:
+Device authentication might fail under one of the following conditions:
 
 - When accessed using a browser in InPrivate/Incognito mode.
 - When using unsupported browsers or devices, particularly on mobiles.
