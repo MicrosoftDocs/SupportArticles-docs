@@ -27,7 +27,7 @@ The problem occurs because the user hasn't been granted permissions to perform t
 The resolution will vary depending on the message returned and the provider specified. Consult the following resources for instrumentation to assist in diagnosing the problem:
 
 - [Configuring Web Management Service Logging and Tracing](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461173(v=ws.10))
-- [Process Monitor v3.53](/sysinternals/downloads/procmon) can assist with File System access issues.
+- [Process Monitor](/sysinternals/downloads/procmon) can assist with File System access issues.
 
 Below are some of the common issues that may be met in this scenario:  
 
