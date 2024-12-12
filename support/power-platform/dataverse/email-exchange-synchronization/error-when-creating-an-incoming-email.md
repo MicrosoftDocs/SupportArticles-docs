@@ -2,8 +2,7 @@
 title: Error when creating an incoming email
 description: Provides a solution to an error that occurs when you create the incoming email in Microsoft Dynamics 365.
 ms.reviewer: 
-ms.topic: troubleshooting
-ms.date: 11/19/2024
+ms.date: 12/12/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # An error occurred while creating the incoming email in Microsoft Dynamics 365
