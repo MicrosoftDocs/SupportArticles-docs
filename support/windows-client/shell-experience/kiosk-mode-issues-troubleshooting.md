@@ -1,11 +1,11 @@
 ---
 title: Kiosk mode issues troubleshooting
 description: Learn how to troubleshoot single-app and multi-app kiosk configurations, as well as common problems like sign-in issues.
-ms.date: 05/10/2024
+ms.date: 12/12/2024
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.custom: sap:Windows Desktop and Shell Experience\Kiosk Mode, csstroubleshoot
-ms.reviewer: sybruckm, aaroncz,lizlong
+ms.reviewer: sybruckm, aaroncz, lizlong, paoloma
 audience: itpro
 ---
 # Troubleshoot kiosk mode issues
@@ -27,9 +27,6 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 Check the Event Viewer logs for auto logon issues under *Applications and Services Logs\\Microsoft\\Windows\\Authentication User Interface\\Operational*.
 
 ## Multi-app kiosk issues
-
-> [!NOTE]
-> Currently, multi-app kiosk is only supported on Windows 10. It's not supported on Windows 11.
 
 ### Unexpected results
 
