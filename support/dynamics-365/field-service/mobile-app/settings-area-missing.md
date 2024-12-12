@@ -1,6 +1,6 @@
 ---
-title: : Settings Area Is Missing from the Field Service Mobile App Module
-description: Provides resolution for the missing Settings area in the Dynamics 365 Field Service mobile app.
+title: Settings Area Is Missing from the Field Service Mobile App Module
+description: Provides a resolution for the missing Settings area in the Dynamics 365 Field Service mobile app.
 author: JonBaker007
 ms.author: jobaker
 ms.reviewer: mhart
