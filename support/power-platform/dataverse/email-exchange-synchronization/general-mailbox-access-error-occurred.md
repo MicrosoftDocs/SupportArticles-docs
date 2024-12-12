@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4092736
 
 ## Symptoms
 
-When you try to [test and enable a mailbox]((/power-platform/admin/connect-exchange-online#test-the-configuration-of-mailboxes)) in Dynamics 365, you receive the following error message:
+When you try to [test and enable a mailbox](/power-platform/admin/connect-exchange-online#test-the-configuration-of-mailboxes) in Dynamics 365, you receive the following error message:
 
 > A general mailbox access error occurred while receiving email. Mailbox \<Mailbox Name> didn't synchronize. The owner of the associated email server profile \<Profile Name> has been notified.  
 > **Email Server Error Code:**  Socket returned exception TimedOut.
@@ -46,6 +46,6 @@ This error can occur if the port values within the **Advanced** section of the e
 
 1. Select **Mailboxes** and then select the mailbox that receives the error.
 1. Select the **Test & Enable Mailboxes** button.
-1. Once testing is complete, check if results appear as **Success**. Otherwise, review any alerts in the [Alerts]((/power-platform/admin/monitor-email-processing-errors#view-alerts)) section of your mailbox record.
+1. Once testing is complete, check if results appear as **Success**. Otherwise, review any alerts in the [Alerts](/power-platform/admin/monitor-email-processing-errors#view-alerts) section of your mailbox record.
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
