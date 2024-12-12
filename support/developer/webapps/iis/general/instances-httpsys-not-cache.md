@@ -8,7 +8,7 @@ ms.custom: sap:WWW Modules and Features\Output Cache
 
 This article introduces Instances where the HTTP.sys driver doesn't cache content.
 
-_Original product version:_ &nbsp; Internet Information Services 8.0  
+_Original product version:_ &nbsp; Internet Information Services  
 _Original KB number:_ &nbsp; 817445
 
 ## Situations where HTTP.sys doesn't cache
