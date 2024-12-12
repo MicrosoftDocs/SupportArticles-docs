@@ -1,15 +1,15 @@
 ---
-title: Field Service mobile app fails to start due to permission or privilege issues
+title: Field Service Mobile App Can't Start Due to Missing Privileges
 description: Resolves Dynamics 365 Field Service mobile app launch issues caused by missing privileges.
 author: JonBaker007
 ms.author: jobaker
 ms.reviewer: mhart
-ms.date: 12/04/2024
+ms.date: 12/12/2024
 ms.custom: sap:Mobile Application\Application is throwing errors
 ---
 # The Field Service mobile app fails to start due to permission or privilege issues
 
-This article provides a resolution for a "Principal user is missing privilege" error that occurs when the Field Service mobile app fails to start.
+This article provides a resolution for the "Principal user is missing privilege" error that occurs when the Field Service mobile app fails to start.
 
 ## Symptoms
 
@@ -19,7 +19,7 @@ The [Dynamics 365 Field Service mobile app](/dynamics365/field-service/mobile/ov
 
 ## Cause
 
-The [new user experience in the Dynamics 365 Field Service mobile app](/dynamics365/field-service/mobile/do-work-newux) requires certain privileges for the users' security roles.
+The [new user experience in the Dynamics 365 Field Service mobile app](/dynamics365/field-service/mobile/do-work-newux) requires certain privileges in the users' security roles.
 
 ## Resolution
 
@@ -36,4 +36,4 @@ The system automatically adds the necessary privileges to all default security r
 - Name=`"SettingDefinition"` Permission="Read" Value="Organization"
 
 > [!TIP]
-> If you don't know the name of the custom security role, expand **Users + permissions**, select **Users** and look for the user who receives the error message. Take note of the user's security role and review the table privileges for that security role.
+> If you don't know the name of the custom security role, expand **Users + permissions**, select **Users**, and look for the user who receives the error message. Note the user's security role and review the table privileges for that security role.

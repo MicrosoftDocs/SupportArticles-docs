@@ -1,15 +1,15 @@
 ---
-title: Settings area is missing from the Field Service Mobile app module navigation
-description: Provides resolution for missing settings area in the Dynamics 365 Field Service mobile app.
+title: : Settings Area Is Missing from the Field Service Mobile App Module
+description: Provides resolution for the missing Settings area in the Dynamics 365 Field Service mobile app.
 author: JonBaker007
 ms.author: jobaker
 ms.reviewer: mhart
-ms.date: 12/04/2024
+ms.date: 12/12/2024
 ms.custom: sap:Mobile application\Issues with performance
 ---
 # Settings area is missing in the Field Service Mobile app module navigation
 
-This article provides a resolution to enable the settings area in the Field Service Mobile app module navigation pane.
+This article provides a resolution for enabling the **Settings** area in the Field Service Mobile app module navigation pane.
 
 ## Symptoms
 
@@ -17,42 +17,33 @@ The Field Service Mobile app module doesn't show the **Settings** area, blocking
 
 ## Cause
 
-The new mobile experience settings toggle is available through a new navigation area that comes with the default Field Service Mobile app module. Users need *write* permissions for the `FieldServiceSetting` entity to access this area. Default security roles like System Admin or Field Service Admin have that permission automatically. However, if customizations were made on the sitemap of the out-of-box Field Service Mobile app module, the settings area might not show in some cases.
+The new mobile experience **Settings** toggle is available through a new navigation area that comes with the default Field Service Mobile app module. Users need *write* permissions on the `FieldServiceSetting` entity to access this area. Default security roles like System Admin or Field Service Admin have that permission automatically. However, if customizations are made on the sitemap of the out-of-box Field Service Mobile app module, the **Settings** area might not show in some cases.
 
 ## Resolution
-
-There are two options to enable the settings area:
-
-- [Remove the sitemap customization layer and manually customize it again](#remove-the-sitemap-customization-layer-and-manually-customize-it-again).
-- [Manually add the settings area and toggle to the sitemap](#manually-add-settings-area-and-toggle-to-sitemap).
-
-### Remove the sitemap customization layer and manually customize it again
 
 First, check whether the sitemap area exists on the default Field Service Mobile solution layer but a customization layer overrides it:
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
-1. Change to your environment and open `fieldservice_patch_update` solution.
+1. Change to your environment and open the `fieldservice_patch_update` solution.
 1. [View the solution layers](/power-apps/maker/data-platform/solution-layers) for the `msdyn_FSMobileSettingsArea` component in the `fieldservice_patch_update` solution.
 
-If you find that a customization layer on the sitemap sits on top and overrides this area, there are two options:
+If you find that a customization layer on the sitemap is on top and overrides this area, use one of the following options to enable the **Settings** area:
 
-1. Remove the customization layer and then manually customize the sitemap again:
+- **Option 1**: Remove the sitemap customization layer and manually customize it again
 
    1. [Remove the unmanaged customization layer](/power-apps/maker/data-platform/solution-layers#remove-an-unmanaged-layer).
    2. Apply the [sitemap customizations](/power-apps/maker/model-driven-apps/create-site-map-app) again.
 
-2. [Manually add the Settings area and toggle to the sitemap](#manually-add-settings-area-and-toggle-to-sitemap).
+- **Option 2**: Manually add the **Settings** area and switch to the sitemap
 
-### Manually add settings area and toggle to sitemap
+   1. Open your customized app in the [app designer](/power-apps/maker/model-driven-apps/app-designer-overview).
+   1. [Enable areas and create a new area](/power-apps/maker/model-driven-apps/app-navigation#create-an-area) for the Field Service Mobile settings.
+   1. [Create a new group](/power-apps/maker/model-driven-apps/app-navigation#create-a-group) for the mobile settings.
+   1. [Add a new page to the group](/power-apps/maker/model-driven-apps/app-navigation#create-a-page). Select **URL** for the content type.
+   1. Use `/main.aspx?etn=msdyn_fieldservicesetting&pagetype=entityrecord&id=e49c6117-5065-423f-8ab5-fcacfda85a04&formid=ee334fea-0cd5-471c-bb30-829f4511a59f` as the URL input.
+   1. Add a subarea for new features.
 
-1. Open your customized app in the [app designer](/power-apps/maker/model-driven-apps/app-designer-overview).
-1. [Enable areas and create a new area](/power-apps/maker/model-driven-apps/app-navigation#create-an-area) for the Field Service Mobile settings.
-1. [Create a new group](/power-apps/maker/model-driven-apps/app-navigation#create-a-group) for the mobile settings.
-1. [Add a new page to the group](/power-apps/maker/model-driven-apps/app-navigation#create-a-page). Select **URL** for content type.
-1. Use `/main.aspx?etn=msdyn_fieldservicesetting&pagetype=entityrecord&id=e49c6117-5065-423f-8ab5-fcacfda85a04&formid=ee334fea-0cd5-471c-bb30-829f4511a59f` as URL input.
-1. Add a child area for new features.
+      1. Under **ID**, expand **Advanced settings** and **privileges**.
+      1. Select **Add table privilege** > **Field Service Setting**, and then select only the **Write** privilege.
 
-   1. Under **ID**, expand **Advanced settings** and **privileges**.
-   1. Select **Add table privilege** > **Field Service Setting**, and select only the **Write** privilege.
-
-1. **Apply** the changes, then select **Save and Publish**.
+   1. Select **Apply** > **Save and Publish**.
