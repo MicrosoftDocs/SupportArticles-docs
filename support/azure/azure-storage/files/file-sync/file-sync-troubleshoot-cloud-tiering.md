@@ -245,7 +245,7 @@ If content doesn't exist for the error code, follow the general troubleshooting 
 | 0x80C80362 | -2134375582 | ECS_E_ITEM_PATH_COMPONENT_HAS_<br/>TRAILING_DOT | The file tiering or download failed because of a trailing dot in the path. | Rename the trailing dot in the folder or file name. |
 | 0x80c83096 | -2134364010 | ECS_E_MGMT_<br/>STORAGEACLSBYPASSNOTSET | This error occurs if the firewall and virtual network settings are enabled on the storage account and the **Allow trusted Microsoft services to access this storage account** exception isn't checked. | To resolve this issue, follow the steps in [Configure firewall and virtual network settings](/azure/storage/file-sync/file-sync-deployment-guide#optional-configure-firewall-and-virtual-network-settings). |
 
-## Tiered files are not accessible on the server after deleting a server endpoint
+## Tiered files are not accessible on the server
 
 Tiered files on a server will become inaccessible if the files aren't recalled prior to deleting a server endpoint or if tiered files were restored from on-premises (third-party) backup to the server endpoint location.
 
@@ -254,16 +254,7 @@ The following errors are logged if tiered files aren't accessible:
 - When syncing a file, error code -2147023890 (0x800703ee - ERROR_FILE_INVALID) or -2147942467 (0x80070043 - ERROR_BAD_NET_NAME) is logged in the *ItemResults* event log.
 - When recalling a file, error code -2147023890 (0x800703ee - ERROR_FILE_INVALID) or -2134376393 (0x80c80037 - ECS_E_SYNC_SHARE_NOT_FOUND) is logged in the *RecallResults* event log.
 
-If the tiered files aren't accessible due to deleting the server endpoint, restoring access to your tiered files is possible if the following conditions are met:
-
-- Server endpoint was deleted within the past 30 days.
-- Cloud endpoint wasn't deleted.
-- File share wasn't deleted.
-- Sync group wasn't deleted.
-
-If the conditions above are met, you can restore access to the files on the server by recreating the server endpoint at the same path on the server within the same sync group within 30 days.
-
-If the conditions above aren't met or the tiered files were restored from an on-premises (third-party) backup, restoring access isn't possible as these tiered files on the server are now orphaned. Follow these instructions to remove the orphaned tiered files.
+Follow the instructions in the sections below to remove the orphaned tiered files.
 
 > [!NOTE]
 >
