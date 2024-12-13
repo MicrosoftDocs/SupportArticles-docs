@@ -1,7 +1,7 @@
 ---
 title: HTTP error 401.1 with pre-authentication headers
 description: An unexpected 401.1 status is returned when you use Pre-Authentication headers with Internet Explorer and Internet Information Services (IIS).
-ms.date: 04/03/2020
+ms.date: 12/13/2024
 ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
 ms.reviewer: bretb, mlaing, zixie
 ---
@@ -9,28 +9,28 @@ ms.reviewer: bretb, mlaing, zixie
 
 This article resolves the problem where an unexpected 401.1 status is returned with Pre-Authentication headers. It occurs when you use Internet Explorer to browser to a web application hosted on Internet Information Services (IIS).
 
-_Original product version:_&nbsp;IE mode in Edge, Internet Explorer 11, Internet Information Services  
+_Original product version:_&nbsp;Internet Explorer mode in Microsoft Edge, Internet Explorer 11, Internet Information Services  
 _Original KB number:_&nbsp;2749007
 
 ## Symptoms
 
 Consider the following scenario:
 
-- You use Internet Explorer (or IE mode in Edge) to browse a web application hosted on IIS.
+- You use Internet Explorer (or Internet Explorer mode in Microsoft Edge) to browse a web application hosted on IIS.
 - The client machine is configured to use Pre-Authentication in Internet Settings, and Kernel Mode Authentication is enabled in IIS.
-- The web request sent by Internet Explorer (or IE mode in Edge) is the first request to be sent to the IIS application.
+- The web request sent by Internet Explorer (or Internet Explorer mode in Microsoft Edge) is the first request to be sent to the IIS application.
 
-In this scenario, IIS might return an HyperText Transfer Protocol (HTTP) 401.1 response to Internet Explorer (or IE mode in Edge) in response to the browser's request. The web browser might prompt you to enter your username and password. Or, the HTTP 401.1 error message might be displayed in the browser window.
+In this scenario, IIS might return a HyperText Transfer Protocol (HTTP) 401.1 response to Internet Explorer (or Internet Explorer mode in Microsoft Edge) in response to the browser's request. The web browser might prompt you to enter your username and password. Or, the HTTP 401.1 error message might be displayed in the browser window.
 
 ## Cause
 
-This behavior is by design. The 401.1 response will occur if the web browser's first request that's sent to the IIS application contains one of the following headers:
+This behavior is by design. The 401.1 response occurs if the web browser's first request that's sent to the IIS application contains one of the following headers:
 
 - A Windows Challenge/Response (NTLM) header
 - A Negotiate WWW-Authorization header (known as Pre-Authentication)
 
 > [!NOTE]
-> There are many reasons a user might be prompted for credentials in Internet Explorer that are outside the scope of this article. See the [More information](#more-information) section below to learn how to determine if the cause of the prompt is from the issue described here.
+> There are many reasons a user might be prompted for credentials in Internet Explorer that are outside the scope of this article. See the [More information](#more-information) section to learn how to determine if the cause of the prompt is from the issue described here.
 
 ## Workaround
 
@@ -44,7 +44,7 @@ To modify this behavior in Internet Explorer, use Registry Editor (**Regedt32.ex
 `HKEY_CURRENT_USER/Software/Microsoft/Windows/CurrentVersion/Internet Settings/`
 
 > [!NOTE]
-> The above registry key is one path; it has been wrapped for readability.
+> The registry key is one path; it has been wrapped for readability.
 
 Add the following registry values:
 
@@ -77,7 +77,7 @@ To modify this behavior in IIS, disable Kernel Mode Authentication for the IIS w
 
 ## More information
 
-To determine if the prompt is caused by the issue described in this article, use the Fiddler tool. Use the tool to view the HTTP request/response traffic for the request resulting in the prompt in Internet Explorer (or IE mode in Edge). You'll also need the IIS logs from the IIS Server to confirm the HTTP status and sub status codes. The following example uses Internet Explorer to illustrate this behavior:
+To determine if the prompt is caused by the issue described in this article, use the Fiddler tool. Use the tool to view the HTTP request/response traffic for the request resulting in the prompt in Internet Explorer (or Internet Explorer mode in Microsoft Edge). You'll also need the IIS logs from the IIS Server to confirm the HTTP status and sub status codes. The following example uses Internet Explorer to illustrate this behavior:
 
 1. Start the Fiddler Tool and enable traffic capture.
 2. Browse to the IIS web application such that it will result in the prompt for credentials.
