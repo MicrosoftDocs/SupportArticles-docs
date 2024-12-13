@@ -13,7 +13,7 @@ The article explains certain issues involving [Application Insights JavaScript S
 
 ## I'm seeing a "0" value recorded for page views in Application Insights
 
-This is by design when instrumenting Single Page Applications (SPA). See the following GitHub [issue](https://github.com/microsoft/ApplicationInsights-JS/issues/1139)(https://github.com/microsoft/ApplicationInsights-JS/issues/1139). 
+This is by design when instrumenting Single Page Applications (SPA). See the following GitHub [issue](https://github.com/microsoft/ApplicationInsights-JS/issues/1139). 
 
 Different workarounds exist: 
 
