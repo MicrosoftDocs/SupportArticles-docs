@@ -54,13 +54,13 @@ When you select <kbd>Enter</kbd>, you see the processes that are run by the give
 
 :::image type="content" source="./media/3-2-task-managers-top-htop/user-information.png" alt-text="Screenshot of user information." border="true":::
 
-When you inspect the output of the filtered `top` view, you can see that two of the processes are .NET processes. These two processes are the ones running the two ASP.NET Core applications, while the other two processes belong to Nginx.
+When you inspect the output of the filtered `top` view, you can see that two of the processes are .NET processes. These two processes run the two ASP.NET Core applications, while the other two processes belong to Nginx.
 
-You can use filters when you run `top` command directly. For example, if you run the `top -u www-data` command, it will yield the same output as you would get if you were to open the `top` tool and select <kbd>U</kbd> to filter by user.
+You can use filters when you run the `top` command directly. For example, if you run the `top -u www-data` command, it will yield the same output as you would get if you were to open the `top` tool and select <kbd>U</kbd> to filter by user.
 
 ### Remove idle processes
 
-Select I or run the `top -i` command to filter the `top` output to show only the processes that are consuming CPU. The following screenshot shows the output of `top -i -u www-data` command. Notice that the `top` output hides the idle processes even though there are four processes that were started by using the www-data user account. Only the process that has PID=19933 consumes CPU.
+Select <kbd>I</kbd> or run the `top -i` command to filter the `top` output to show only the processes that are consuming CPU. The following screenshot shows the output of the `top -i -u www-data` command. Notice that the `top` output hides the idle processes even though there are four processes that were started by using the www-data user account. Only the process that has PID=19933 consumes CPU.
 
 :::image type="content" source="./media/3-2-task-managers-top-htop/remove-information.png" alt-text="Screenshot of remove information." border="true":::
 
@@ -72,7 +72,7 @@ To kill or terminate a process, you have to send a kill signal to the process. Y
 
 :::image type="content" source="./media/3-2-task-managers-top-htop/kill-command.png" alt-text="Screenshot of kill command." border="true":::
 
-After you select <kbd>Enter</kbd>, `top` asks for the signal type. Select <kbd>Enter</kbd> one more time to send the terminate signal (`15/sigterm`).
+After you select <kbd>Enter</kbd>, `top` asks for the signal type. Select <kbd>Enter</kbd> one more time to send the "terminate" signal (`15/sigterm`).
 
 :::image type="content" source="./media/3-2-task-managers-top-htop/kill-top-command.png" alt-text="Screenshot of kill top command." border="true":::
 
@@ -89,7 +89,7 @@ To start the tool, run the `htop` command. You see a colorful output that resemb
 :::image type="content" source="./media/3-2-task-managers-top-htop/htop-command.png" alt-text="Screenshot of kill htop command." border="true":::
 
 > [!NOTE]
-> The bottom line indicates the function keys that you can use. Select <kbd>F6</kbd> key to sort by different options, use the arrow keys to select the `PERCENT_MEM` column, and then select <kbd>Enter</kbd>. This sorts the processes by memory usage.
+> The bottom line indicates the function keys that you can use. Select <kbd>F6</kbd> to sort by different options, use the arrow keys to select the `PERCENT_MEM` column, and then select <kbd>Enter</kbd>. This sorts the processes by memory usage.
 
 :::image type="content" source="./media/3-2-task-managers-top-htop/memory-usage.png" alt-text="Screenshot of memory usage." border="true":::
 
@@ -97,7 +97,7 @@ As with the `top` command, you can use keyboard shortcuts for several functions.
 
 :::image type="content" source="./media/3-2-task-managers-top-htop/username-information.png" alt-text="Screenshot of user name information." border="true":::
 
-However, there's something confusing in the `htop` output. Based on the output of the last examples, you should expect to see four processes for www-data user. However, we see that there are many more entries. What could be causing this behavior?
+However, there's something confusing in the `htop` output. Based on the output of the last examples, you should expect to see four processes for the www-data user. However, we see that there are many more entries. What could be causing this behavior?
 
 The difference in the output occurs because `htop` shows both processes and their threads by default. Unless you want to see the threads, we recommend that you always disable thread view to make the output clearer. To disable thread view and see only the processes, select <kbd>Shift</kbd>+<kbd>H</kbd>. The following screenshot shows the processes without threads.
 
@@ -111,6 +111,4 @@ This succinct overview should allow you to understand which processes are runnin
 
 ## Next steps
 
-[Part 3.3 - Debuggers, core dumps, and collecting core dumps](3-3-debuggers-collect-core-dumps.md)
-
-The next part of this series ("Get ready for troubleshooting") discusses debuggers and dump files.
+The next part of this series ([Part 3.3 - Debuggers, core dumps, and collecting core dumps](3-3-debuggers-collect-core-dumps.md)) discusses debuggers and dump files.
