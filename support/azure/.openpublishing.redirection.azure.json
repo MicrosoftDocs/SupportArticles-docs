@@ -6269,6 +6269,11 @@
         "source_path": "general/support-policy-containers.md",
         "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-kubernetes/connectivity/stale-watch-azure-ad-pod-identity-nmi-status-500.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+        "redirect_document_id": false
       }
   ]
 }
