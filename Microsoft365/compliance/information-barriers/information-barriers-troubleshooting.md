@@ -38,7 +38,7 @@ The following sections provide troubleshooting steps for various issues that you
 Your users report unexpected issues when they try to communicate with others by using Microsoft Teams. For example:
 
 - A user searches for, but can't find, another user in Teams.
-- A user can find, but cannot select, another user in Teams.
+- A user can find, but can't select, another user in Teams.
 - A user can see another user but can't send messages to that user in Teams.
 
 ### What to do
@@ -75,11 +75,11 @@ Determine whether the users are affected by an Information Barriers policy. Depe
 
    | **Syntax** | **Example** |
    |-|-|
-   | Get-OrganizationSegment<br><br>Use this cmdlet with the **Identity** parameter. | Get-OrganizationSegment -Identity c96e0837-c232-4a8a-841e-ef45787d8fcd<br><br>In this example, we are getting information about the segment that has GUID `c96e0837-c232-4a8a-841e-ef45787d8fcd`. |
+   | Get-OrganizationSegment<br><br>Use this cmdlet with the **Identity** parameter. | Get-OrganizationSegment -Identity c96e0837-c232-4a8a-841e-ef45787d8fcd<br><br>In this example, we're getting information about the segment that has GUID `c96e0837-c232-4a8a-841e-ef45787d8fcd`. |
 
    Review the details for the segment. If necessary, [edit a segment](/microsoft-365/compliance/information-barriers-edit-segments-policies#edit-a-segment), and then reuse the [Start-InformationBarrierPoliciesApplication](/powershell/module/exchange/start-informationbarrierpoliciesapplication) cmdlet.
 
-   If you are still having issues when you use your Information Barriers policy, contact [Microsoft Support](https://support.microsoft.com/contactus).
+   If you're still having issues when you use your Information Barriers policy, contact [Microsoft Support](https://support.microsoft.com/contactus).
 
 ## Issue: Communication is allowed between users who should be blocked in Teams
 
@@ -135,7 +135,7 @@ After running the [Start-InformationBarrierPoliciesApplication](/powershell/modu
 
 ### What to do
 
-Keep in mind that when you run the policy application cmdlet, Information Barriers policies are being applied (or removed) user by user for all accounts in your organization. If you have many users, the process will take a while to run. (As a general guideline, it takes about one hour to process 5,000 user accounts.)
+Keep in mind that when you run the policy application cmdlet, Information Barriers policies are being applied (or removed) user by user for all accounts in your organization. If you have many users, the process takes a while to run. (As a general guideline, it takes about one hour to process 5,000 user accounts.)
 
 1. Use the [Get-InformationBarrierPoliciesApplicationStatus](/powershell/module/exchange/get-informationbarrierpoliciesapplicationstatus) cmdlet to view the status of the most recent policy application.
 
@@ -149,8 +149,8 @@ Keep in mind that when you run the policy application cmdlet, Information Barrie
 
    | **Status** | **Next step** |
    |-|-|
-   | **Not started** | If more than 45 minutes have passed since the **Start-InformationBarrierPoliciesApplication** cmdlet was run, review your audit log to see whether policy definitions contain any errors, or the application did not start for some other reason. |
-   | **Failed** | If the application failed, review your audit log. Also review your segments and policies. Are any users assigned to more than one segment? Are any segments assigned more than one policy? If it is necessary, [edit segments](/microsoft-365/compliance/information-barriers-edit-segments-policies#edit-a-segment) or [edit policies](/microsoft-365/compliance/information-barriers-edit-segments-policies#edit-a-policy), and then run the **Start-InformationBarrierPoliciesApplication** cmdlet again. |
+   | **Not started** | If more than 45 minutes have passed since the **Start-InformationBarrierPoliciesApplication** cmdlet was run, review your audit log to see whether policy definitions contain any errors, or the application didn't start for some other reason. |
+   | **Failed** | If the application failed, review your audit log. Also review your segments and policies. Are any users assigned to more than one segment? Are any segments assigned more than one policy? If it's necessary, [edit segments](/microsoft-365/compliance/information-barriers-edit-segments-policies#edit-a-segment) or [edit policies](/microsoft-365/compliance/information-barriers-edit-segments-policies#edit-a-policy), and then run the **Start-InformationBarrierPoliciesApplication** cmdlet again. |
    | **In progress** | If the application is still in progress, allow more time for it to finish. If several days have passed since the application was started, gather your audit logs, and then contact [Microsoft Support](https://support.microsoft.com/contactus). |
 
 ## Issue: Information Barriers policies aren't applied at all
@@ -159,7 +159,7 @@ You have defined segments, defined Information Barriers policies, and tried to a
 
 ### What to do
 
-Make sure that your organization does not have [Exchange address book policies](/exchange/address-books/address-book-policies/address-book-policies) in place. Such policies will prevent Information Barriers policies from being applied.
+Make sure that your organization doesn't have [Exchange address book policies](/exchange/address-books/address-book-policies/address-book-policies) in place. Such policies prevent Information Barriers policies from being applied.
 
 1. Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -190,7 +190,7 @@ After you define segments and Information Barriers policies, and you try to appl
    $detailedLogs = Search-UnifiedAuditLog -EndDate <yyyy-mm-ddThh:mm:ss> -StartDate <yyyy-mm-ddThh:mm:ss> -RecordType InformationBarrierPolicyApplication -ResultSize 1000 |?{$_.AuditData.Contains(<application guid>)} 
    ```
 
-2. Check the detailed output from the audit log for the values of the **UserId** and **ErrorDetails** fields. Doing this will provide the reason for the failure. You can copy this PowerShell code and modify it by substituting your variables.
+2. Check the detailed output from the audit log for the values of the **UserId** and **ErrorDetails** fields. Doing this provides the reason for the failure. You can copy this PowerShell code and modify it by substituting your variables.
 
    ```PowerShell
    $detailedLogs[1] | FL
