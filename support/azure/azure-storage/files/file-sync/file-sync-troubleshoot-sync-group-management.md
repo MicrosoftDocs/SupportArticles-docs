@@ -19,7 +19,7 @@ A sync group defines the sync topology for a set of files. Endpoints within a sy
   
 This error can occur if the Azure File Sync service can't access the storage account due to Server Message Block (SMB) security settings. To enable Azure File Sync to access the storage account, the SMB security settings on the storage account must allow SMB 3.1.1 protocol version, NTLM v2 authentication and AES-128-GCM encryption. To check the SMB security settings on the storage account, see [SMB security settings](/azure/storage/files/files-smb-protocol#smb-security-settings).
 
-<a id="cloud-endpoint-mgmtforbidden"></a>**Cloud endpoint creation fails, with this error: "MgmtForbidden"**
+<a id="cloud-endpoint-mgmtforbidden"></a>**Cloud endpoint creation fails, with one of the following errors: "MgmtForbidden" or "MgmtStorageAccountInaccessible"**
 
 This error occurs if the Azure File Sync service can't access the storage account.
 

@@ -723,7 +723,10 @@ Reset-AzStorageSyncServerCertificate -ResourceGroupName <string> -StorageSyncSer
 | **Error string** | ECS_E_AUTH_IDENTITY_NOT_FOUND |
 | **Remediation required** | Yes |
 
-This error occurs because the server endpoint deletion failed, and the endpoint is now in a partially deleted state. To resolve this issue, retry deleting the server endpoint.
+This error may occur due to the following reasons:
+- A new server certificate was generated on the Azure File Sync server, and the old certificate is still cached. This error will resolve within a few hours once the server cache is refreshed.
+- The server endpoint deletion failed, leaving the endpoint in a partially deleted state. To address this issue, retry deleting the server endpoint.
+
 
 <a id="-1906441711"></a><a id="-2134375654"></a><a id="doesnt-have-enough-free-space"></a>**The volume where the server endpoint is located is low on disk space.**  
 
