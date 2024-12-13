@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 944886
 
 ## Symptoms
 
-When you send a file to a client computer from a Web server on which Internet Information Services (IIS) is installed, you might receive an error message that resembles one of the following examples on the client computer:
+When you send a file to a client computer from a Web server on which Internet Information Services (IIS) is installed, you might receive one of the following error messages on the client computer. This problem occurs when you use the `Response.BinaryWrite` method to send the file to the client computer and the `AspBufferingOn` property is set to **False**.
 
 - Error message 1
 
@@ -26,15 +26,13 @@ When you send a file to a client computer from a Web server on which Internet In
   > Response Buffer Limit Exceeded  
   > Execution of the ASP page caused the Response Buffer to exceed its configured limit.
 
-Additionally, you might receive a message that resembles the following one in the IIS log file:
+Additionally, you might receive a message like the following one in the IIS log file:
 
 > ASP_0251_:_80004005|Response_Buffer_Limit_Exceeded
 
-This problem occurs when you use the `Response.BinaryWrite` method to send the file to the client computer and the `AspBufferingOn` property is set to **False**.
-
 ## Cause
 
-This problem occurs because IIS enforces a default Active Server Pages (ASP) response buffer value of 4 MB when ASP response buffering is disabled.
+This problem occurs because IIS enforces a default ASP response buffer value of 4 MB when ASP response buffering is disabled.
 
 In most scenarios, the 4-MB buffer limit is sufficient for ASP responses that are sent to Web clients. If this limit is insufficient, use one of the following methods.
 
