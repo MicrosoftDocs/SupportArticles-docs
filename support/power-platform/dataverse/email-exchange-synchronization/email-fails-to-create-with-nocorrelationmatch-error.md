@@ -39,4 +39,7 @@ For example,
 > [!NOTE]
 > A **NoCorrelationMatch** error can also occur if you have disabled the **Use correlation to track email conversations** option. You can view this setting on the **Email** tab within **System Settings**.
 
-For more information about email correlation, see [Email message filtering and correlation](/previous-versions/dynamicscrm-2016/administering-dynamics-365/hh699705(v=crm.8)).
+## More information
+
+- For more information about email correlation, see [Email message filtering and correlation](/previous-versions/dynamicscrm-2016/administering-dynamics-365/hh699705(v=crm.8)).
+- For more information about automatically creating email activities for received messages, see [Specify which emails are automatically tracked](/power-platform/admin/email-message-filtering-correlation).
