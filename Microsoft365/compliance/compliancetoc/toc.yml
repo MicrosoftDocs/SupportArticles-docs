@@ -77,7 +77,7 @@
       href: ../holds/retention-policy-not-working-after-mailbox-moved.md
   - name: Information barriers
     items:
-    - name: Issues related to information barrier policies
+    - name: Resolve communication issues in Information Barriers
       href: ../information-barriers/information-barriers-troubleshooting.md
   - name: Information protection scanner
     items:
