@@ -11,7 +11,7 @@ This article provides a resolution for the `ExpiredDesktopFlowConnection` error 
 
 ## Symptoms
 
-You might reveive the following error message when using or testing a desktop flow connection:
+You receive the following error message when using or testing a desktop flow connection:
 
 ```json
   {
@@ -24,7 +24,7 @@ You might reveive the following error message when using or testing a desktop fl
 
 ## Cause
 
-The contents of the connection are encrypted using its target group or machine certificate. If the certificate is rotated and the connection isn't used during this period, it will expire because the certificate required to decrypt it has become outdated due to rotation.
+The contents of the connection are encrypted using its target group or machine certificate. If the certificate is rotated and the connection isn't used during this period, the connection will expire because the certificate required to decrypt it is outdated due to rotation.
 
 A connection in this state can't be recovered automatically and must be manually updated.
 
