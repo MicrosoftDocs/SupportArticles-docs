@@ -14,23 +14,23 @@ _Original KB number:_ &nbsp; 944886
 
 ## Symptoms
 
-When you send a file to a client computer from a Web server on which Internet Information Services (IIS) is installed, you may receive an error message on the client computer that resembles one the following:
+When you send a file to a client computer from a Web server on which Internet Information Services (IIS) is installed, you might receive an error message on the client computer that resembles the following one:
 
 - Error message 1
 
-    > HTTP 500 - Internal Server Error
+  > HTTP 500 - Internal Server Error
 
 - Error message 2
 
-    > Response object error 'ASP 0251 : 80004005'  
-    > Response Buffer Limit Exceeded  
-    > Execution of the ASP page caused the Response Buffer to exceed its configured limit.
+  > Response object error 'ASP 0251 : 80004005'  
+  > Response Buffer Limit Exceeded  
+  > Execution of the ASP page caused the Response Buffer to exceed its configured limit.
 
 - Error message 3
 
-    Additionally, you may receive a message in the IIS log file that resembles the following:
+  Additionally, you might receive a message in the IIS log file that resembles the following one:
 
-    > ASP_0251_:_80004005|Response_Buffer_Limit_Exceeded
+  > ASP_0251_:_80004005|Response_Buffer_Limit_Exceeded
 
 This problem occurs when you use the `Response.BinaryWrite` method to send the file to the client computer and the `AspBufferingOn` property is set to **False**.
 
