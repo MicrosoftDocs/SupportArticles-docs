@@ -20,7 +20,7 @@ Consider the following scenario:
 - The client machine is configured to use Pre-Authentication in Internet Settings, and Kernel Mode Authentication is enabled in IIS.
 - The web request sent by Internet Explorer (or Internet Explorer mode in Microsoft Edge) is the first request to be sent to the IIS application.
 
-In this scenario, IIS might return a HyperText Transfer Protocol (HTTP) 401.1 response to Internet Explorer (or Internet Explorer mode in Microsoft Edge) in response to the browser's request. The web browser might prompt you to enter your username and password. Or, the HTTP 401.1 error message might be displayed in the browser window.
+In this scenario, IIS might return a HyperText Transfer Protocol (HTTP) 401.1 response to Internet Explorer (or Internet Explorer mode in Microsoft Edge) in response to the browser's request. The web browser might prompt you to enter your username and password. Or, an HTTP 401.1 error message might be displayed in the browser window.
 
 ## Cause
 
@@ -44,7 +44,7 @@ To modify this behavior in Internet Explorer, use Registry Editor (**Regedt32.ex
 `HKEY_CURRENT_USER/Software/Microsoft/Windows/CurrentVersion/Internet Settings/`
 
 > [!NOTE]
-> The registry key is one path; it has been wrapped for readability.
+> The registry key is a path; it has been wrapped for readability.
 
 Add the following registry values:
 
