@@ -271,6 +271,40 @@ In this case, just adding a carriage return at the end of the last line is enoug
 
 Ensure all line endings in the `$batch` request body are `CRLF`. If you can't use `CRLF`, add two non-`CRLF` line endings at the end of the batch request body to resolve this deserialization error. For more information, see [Batch requests](/power-apps/developer/data-platform/webapi/execute-batch-operations-using-web-api#batch-requests).
 
+## Invalid Prefer request header value
+
+These errors occur when Dataverse Web API receives requests with invalid Prefer request header values.
+
+### Symptoms
+
+When sending a request using `POST`, `PATCH`, or `PUT` and a `Prefer` request header that contains an invalid value:
+
+**Request**
+
+```http
+Prefer: odata.include-annotations=\"*\"
+```
+
+You get a \< TODO: mention specific error>.
+
+**Response**
+
+```http
+TODO: Add example here that shows the error like the others
+```
+
+This is the same error you would get when sending a request using `GET`.
+
+### Cause
+
+To provide more secure service, we have fixed an issue that allowed invalid `Prefer` request header values to be processed without an exception being thrown.  This error will occur starting with Dataverse version `9.2.241???` which began deployment in December of 2024 and was deployed to all regions in March of 2025???.
+
+### How to avoid
+
+Review the guidance about how to properly set [Prefer Headers in the Dataverse Web API documentation](/power-apps/developer/data-platform/webapi/compose-http-requests-handle-errors#prefer-headers).
+
+If this issue occurs in code that you don't control, you should contact technical support to request \<Please specify what they should do in this case>
+
 ## See also
 
 - [Web API types and operations](/power-apps/developer/data-platform/webapi/web-api-types-operations)
