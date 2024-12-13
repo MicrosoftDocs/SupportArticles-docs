@@ -7,7 +7,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:People or Contacts\
+  - sap:People or Contacts
   - Outlook for Mac
   - CSSTroubleshoot
 ms.reviewer: dahans

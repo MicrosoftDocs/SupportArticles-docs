@@ -53,6 +53,10 @@
       href: ../data-loss-prevention/data-loss-prevention-policy-tips.md
     - name: Data loss prevention not working
       href: ../data-loss-prevention/data-loss-prevention-not-work.md
+  - name: Diagnostics
+    items:
+    - name: Self-help diagnostics for issues in Microsoft Purview
+      href: ../diagnostics/purview-compliance-diagnostics.md
   - name: eDiscovery
     items:
     - name: Can't run In-Place eDiscovery search in EAC
@@ -67,8 +71,6 @@
       href: ../holds/cannot-update-calendar-items-from-owa-or-outlook-on-mac.md
     - name: Changes to IgnoreLegalHold
       href: ../holds/ignorelegalhold-not-available.md
-    - name: Can't convert a user mailbox to inactive
-      href: ../holds/litigation-hold-mailbox-not-turn-into-inactive.md
     - name: Restore In-Place and Litigation Hold
       href: ../holds/restore-in-place-litigation-hold.md
     - name: Retention policy no longer works after a mailbox is moved

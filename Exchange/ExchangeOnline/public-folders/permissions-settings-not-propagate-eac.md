@@ -1,145 +1,126 @@
 ---
-title: Public folder permissions and settings don't propagate to subfolders in the Exchange admin center (EAC)
-description: When you apply permissions to a public folder and its subfolders in the EAC, the permissions aren't applied to some or all subfolders. When you apply other settings, you receive errors.
+title: Public folder permissions and settings don't propagate to all subfolders
+description: Provides workarounds for an issue in which the EAC doesn't apply public folder permissions or settings on all subfolders.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom: 
+ms.custom:
   - sap:Groups, Lists, Contacts, Public Folders
   - Exchange Online
-  - CI 150274
   - CSSTroubleshoot
-ms.reviewer: batre, v-six
-appliesto: 
+  - CI 2580
+ms.reviewer: batre, meerak, v-shorestris
+appliesto:
   - Exchange Online
-  - Exchange Server 2013
-  - Exchange Server 2016
   - Exchange Server 2019
-search.appverid: 
-  - MET150
-ms.date: 07/17/2024
+  - Exchange Server 2016
+search.appverid: MET150
+ms.date: 12/04/2024
 ---
-# Public folder permissions and settings don't propagate in EAC
 
-When you use the Exchange admin center (EAC) to apply permissions or settings to a public folder and its subfolders, the actions don't finish, or you experience errors. This article describes the following issues that affect common tasks, and provides workarounds to complete the tasks by using PowerShell.
+# Public folder permissions and settings don't propagate to all subfolders
 
-- [Permissions not applied to some or all subfolders](#permissions-not-applied-to-some-or-all-subfolders)
-- [The read and unread setting not applied](#the-read-and-unread-setting-not-applied)
-- [Age limit settings not applied to subfolders](#age-limit-settings-not-applied-to-subfolders)
+You try to use the Exchange admin center (EAC) to update the permissions or other settings of a public folder and all its subfolders. However, you encounter any of the following issues:
 
-## Permissions not applied to some or all subfolders
+- Microsoft Exchange Server (on-premises):
+   - The EAC doesn't apply your changes to all subfolders.
+   - The EAC displays an error message and the operation fails.
 
-When you apply permissions to a public folder and its subfolders by selecting the **Apply changes to this public folder and all its subfolders** check box in the EAC, the permissions aren't applied to some or all subfolders.
+- Microsoft Exchange Online:
+   - The EAC doesn't provide an option to apply your changes to subfolders.
 
-:::image type="content" source="media/permissions-settings-not-propagate-eac/public-folder-permission.png" alt-text="Screenshot of applying permissions to a public folder and its subfolders.":::
+The following sections provide PowerShell workarounds for various issues.
 
-The issue occurs if the parent folder and its subfolders are in different public folder mailboxes.
+## Permissions aren't applied to all subfolders
+
+The EAC in Exchange Online doesn't provide an option to update subfolders when you change permissions on a public folder. This functionality is by design.
+
+The EAC in Exchange Server provides an option to **Apply changes to this public folder and all its subfolders** when you update permissions on a public folder. However, for subfolders that are in a different public folder mailbox than the parent public folder, the operation might silently fail or not work reliably, depending on the number of public folder mailboxes in your organization.
+
+### Workaround
+
+Select one of the following workarounds, depending on the Exchange environment for the affected public folders:
+
+- For public folders in Exchange Online, run the [Update-PublicFolderPermissions.ps1](https://aka.ms/PFPermissionScript) script in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). Include the PowerShell parameters that are shown in the following example:
+
+   ```PowerShell
+   .\Update-PublicFolderPermissions.ps1 -Users user1@contoso.com -AccessRights Owner -IncludeFolders "\FolderA" -Recurse -Confirm:$false
+   ```
+
+   This command grants `user1@contoso.com` the Owner role on the `\FolderA` public folder and its entire subtree.
+
+- For public folders in Exchange Server, run the [Update-PublicFolderPermissions.ps1](https://www.microsoft.com/download/details.aspx?id=48689) script in the Exchange Management Shell (EMS). Include the PowerShell parameters that are shown in the following example:
+
+   ```PowerShell
+   .\Update-PublicFolderPermissions.ps1 -IncludeFolders "\FolderA" -AccessRights "Owner" -Users "user1@contoso.com", "user2@contoso.com" -Recurse -Confirm:$false
+   ```
+
+   This command grants `user1@contoso.com` and `user2@contoso.com` the Owner role on the `\FolderA` public folder and its entire subtree.
+
+## Maintain per-user read setting isn't applied to all subfolders
+
+The EAC in Exchange Online doesn't provide an option to update the **Maintain per-user** **read and unread information** setting.
+
+The EAC in Exchange Server provides an option to **Apply changes to this public folder and all its subfolders** when you update the **Maintain per-user** **read and unread information** setting for a public folder. However, the operation might fail and return the following error message:
+
+> The operation couldn't be performed because '\<\public folder\>' couldn't be found.
 
 ### Workaround
 
 To work around this issue, follow these steps:
 
-1. Open PowerShell in the Exchange environment where the public folder is active. You can do this in either [Exchange Server (on-premises)](/powershell/exchange/open-the-exchange-management-shell?view=exchange-ps&preserve-view=true) or [Exchange Online](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true).
-1. Run the [Update-PublicFolderPermissions.ps1](https://www.microsoft.com/download/details.aspx?id=48689) script by specifying the parameters that are shown in the following example:
+1. Open PowerShell in [Exchange Server](/powershell/exchange/open-the-exchange-management-shell) or [Exchange Online](/powershell/exchange/connect-to-exchange-online-powershell), depending on the Exchange environment in which the public folders are active.
 
-   ```powershell
-   .\Update-PublicFolderPermissions.ps1 -IncludeFolders "\MyFolder" -AccessRights "Owner" -Users "John", "Administrator" -Recurse -Confirm:$false
+2. Run the following cmdlet. The cmdlet uses the [PerUserReadStateEnabled](/powershell/module/exchange/set-publicfolder#-peruserreadstateenabled) parameter to apply a **Maintain per-user read and unread information** setting for the parent public folder and all child public folders. Set the parameter value to `$true` or `$false`, depending on your requirement.
+
+   ```PowerShell
+   Get-PublicFolder -Identity "<\ParentPF>" -Recurse -ResultSize Unlimited | Set-PublicFolder -PerUserReadStateEnabled <$true or $false>
    ```
 
-   This example script does the following:
+   **Note**: Replace \<\ParentPF\> with the identity of the parent public folder.
 
-   - Replaces the current client permissions on the "_\MyFolder_" public folder and all its child folders for users "John" and "Administrator".
-   - Grants "Owner" access rights to the users.
-   - Doesn't request confirmation from the user.
+## Age limit setting isn't applied to subfolders
 
-   The script has detailed help documentation. To view the documentation for the script, run the following command:
+The EAC in Exchange Online doesn't provide an option to update subfolders when you change the **Age limit for folder content** setting for a public folder.
 
-   ```powershell
-   Get-Help .\Update-PublicFolderPermissions.ps1 -Full
-   ```
+The EAC in Exchange Server provides an option to **Apply changes to this public folder and all its subfolders** when you update the **Age limit for folder content** setting for a public folder. However, the operation might fail and return the following error message:
 
-## The read and unread setting not applied
-
-When you select the **Apply the read and unread setting to this folder and all its subfolders** check box on a parent public folder in the EAC, you receive the following error message:
-
-> The operation couldn't be performed because '\public folder identity' couldn't be found.
-
-:::image type="content" source="media/permissions-settings-not-propagate-eac/public-folder-error.png" alt-text="Screenshot of the error when applying read and unread setting.":::
+> The operation couldn't be performed because '\<\public folder\>' couldn't be found.
 
 ### Workaround
 
 To work around this issue, follow these steps:
 
-1. Open PowerShell in the Exchange environment where the public folder is active, either in [Exchange Server (on-premises)](/powershell/exchange/open-the-exchange-management-shell?view=exchange-ps&preserve-view=true) or [Exchange Online](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true).
-1. Apply read and unread information tracking on the parent public folder by running the following cmdlet to set the `PerUserReadStateEnabled` value to **True**:
+1. Open PowerShell in [Exchange Server](/powershell/exchange/open-the-exchange-management-shell) or [Exchange Online](/powershell/exchange/connect-to-exchange-online-powershell), depending on the Exchange environment in which the public folders are active.
 
-   ```powershell
-   Set-PublicFolder -Identity "<\PF>" -PerUserReadStateEnabled $True
+2. Run the following cmdlet. The cmdlet uses the [AgeLimit](/powershell/module/exchange/set-publicfolder#-agelimit) parameter to apply an **Age limit for folder content** setting on the parent public folder and all child public folders. For example, set the parameter value to `10.00:00:00` to specify 10 days.
+
+   ```PowerShell
+   Get-PublicFolder "<\ParentPF>" -Recurse -ResultSize Unlimited | Set-PublicFolder -AgeLimit <age limit>
    ```
 
-   **Note**: Replace \<\PF> with your parent public folder identity.
-1. Apply read and unread information tracking on the child public folders by running the following cmdlet to set the `PerUserReadStateEnabled` value to **True** or **False** (depending on your requirement):
+   **Note**: Replace \<\ParentPF\> with the identity of the parent public folder.
 
-   ```powershell
-   Get-PublicFolder "<\PF>" -Recurse -ResultSize Unlimited | Set-PublicFolder -PerUserReadStateEnabled:<$True or $False>
-   ```
+## Retain deleted items setting isn't applied to subfolders
 
-   **Note**: Replace \<\PF> with your parent public folder identity.
+The EAC in Exchange Online doesn't provide an option to update subfolders when you change the **Retain deleted items** setting for a public folder.
 
-## Age limit settings not applied to subfolders
+The EAC in Exchange Server provides an option to **Apply changes to this public folder and all its subfolders** when you update the **Retain deleted items** setting for a public folder. However, the operation might fail and return the following error message:
 
-When you apply age limit settings to a public folder and its subfolders by selecting the **Apply setting to this folder and all its subfolders** check box in the EAC, you receive the following error message:
-
-> The operation couldn't be performed because '\public folder identity' couldn't be found.
-
-:::image type="content" source="media/permissions-settings-not-propagate-eac/set-age-limit-error.png" alt-text="Screenshot of the error when you apply age limit settings.":::
+> The operation couldn't be performed because '\<\public folder\>' couldn't be found.
 
 ### Workaround
 
 To work around this issue, follow these steps:
 
-1. Open PowerShell in the Exchange environment where the public folder is active, either in [Exchange Server (on-premises)](/powershell/exchange/open-the-exchange-management-shell?view=exchange-ps&preserve-view=true) or [Exchange Online](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true).
-2. Run the following cmdlet to apply age limit settings to subfolders:
+1. Open PowerShell in [Exchange Server](/powershell/exchange/open-the-exchange-management-shell) or [Exchange Online](/powershell/exchange/connect-to-exchange-online-powershell), depending on the Exchange environment in which the public folders are active.
 
-   ```powershell
-   Get-PublicFolder "<\ParentPF>" -Recurse -ResultSize Unlimited | Set-PublicFolder -AgeLimit <newagelimit>
-   ```
-  
-   **Note**: Replace \<\ParentPF> with your parent public folder identity.
+2. Run the following cmdlet. The cmdlet uses the [RetainDeletedItemsFor](/powershell/module/exchange/set-publicfolder#-retaindeleteditemsfor) parameter to apply a **Retain deleted items** setting on the parent public folder and all child public folders. Set the parameter value depending on your requirement. For example, set the value to `30.00:00:00` to specify 30 days.
 
-   For example, the following command applies an age limit of 10 days to all subfolders under Root1:
-
-   ```powershell
-   Get-PublicFolder \Root1 -Recurse -ResultSize Unlimited | foreach {Set-PublicFolder -Identity $_.identity -AgeLimit "10.00:00:00"}
+   ```PowerShell
+   Get-PublicFolder "<\ParentPF>" -Recurse -ResultSize Unlimited | Set-PublicFolder -RetainDeletedItemsFor <retention period>
    ```
 
-## RetainDeletedItemsFor settings not applied to subfolders
-
-When you apply RetainDeletedItemsFor settings to a public folder and its subfolders by selecting the **Apply setting to this folder and all its subfolders** check box in the EAC, you receive the following error message:
-
-> The operation couldn't be performed because '\public folder identity' couldn't be found.
-
-### Workaround
-
-To work around this issue, follow these steps:
-
-1. Open PowerShell in the Exchange environment where the public folder is active, either in [Exchange Server (on-premises)](/powershell/exchange/open-the-exchange-management-shell?view=exchange-ps&preserve-view=true) or [Exchange Online](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true).
-2. Run the following cmdlet to apply RetainDeletedItemsFor settings to subfolders:
-
-   ```powershell
-   Get-PublicFolder "<\ParentPF>" -Recurse  -ResultSize Unlimited | Set-PublicFolder -RetainDeletedItemsFor "<newRetainDeletedItemsFor>"
-   ```
-
-   **Note**: Replace \<\ParentPF> with your parent public folder identity.
-
-   For example, the following command applies RetainDeletedItemsFor 10 days to all subfolders under Root1:
-
-   ```powershell
-   Get-PublicFolder \Root1 -Recurse -ResultSize Unlimited | Set-PublicFolder -RetainDeletedItemsFor "10.00:00:00"
-   ```
-   
-## Status
-
-Microsoft is aware of these issues and will post more information in this article when a fix becomes available.
+   **Note**: Replace \<\ParentPF\> with the identity of the parent public folder.

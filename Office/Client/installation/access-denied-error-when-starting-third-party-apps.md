@@ -12,7 +12,7 @@ search.appverid:
 appliesto: 
   - Microsoft Office
 ms.custom: 
-  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment,  Activation
   - DownloadInstall\AdvancedConfiguration\AddInsOrIntegratedApps
   - CI 115993
   - CSSTroubleshoot

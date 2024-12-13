@@ -7,7 +7,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: article
 ms.custom: 
-  - sap:Teams Device Management (TAC)\
+  - sap:Teams Device Management (TAC)
   - CI 160238
   - CSSTroubleshoot
 ms.reviewer: miaitelh

@@ -21,7 +21,7 @@ ms.reviewer: teddygyabaah
 
 # SIP response code 484
 
-This article provides troubleshooting information for various combinations of the SIP 484 error and Microsoft response codes.
+This article provides troubleshooting information for the combination of the SIP 484 error and Microsoft response code 560484.
 
 ## 560484 484 Invalid number format. SBC rejected the call
 

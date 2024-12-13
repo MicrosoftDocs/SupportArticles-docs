@@ -31,7 +31,10 @@ To fix the issue, follow these steps:
 1. In the admin dashboard, select the **Configuration** icon, then select **Activity Audit Log** in the **Service Configuration** section.
 1. In the log, locate the file that didn't upload, and then select **Download errors file** in the **Details** column.
 1. Open the errors file, identify the users who are assigned the email address that's mentioned in the warning message.
-1. Open the employee attribute data file in Excel. If the file is in .csv format, [import it in Excel](https://support.microsoft.com/office/import-or-export-text-txt-or-csv-files-5250ac4c-663c-47ce-937b-339e391393ba) to preserve the data in the expected format.
+1. Open the employee attribute data file. Use the appropriate method depending on the file type:
+
+    - If the data file has an *.xls* or a *.xlsx* extension, open it in Microsoft Excel.
+    - If the data file has a *.csv* extension, use the [Text Import Wizard](https://support.microsoft.com/office/text-import-wizard-c5b02af6-fda1-4440-899f-f78bafe41857) to import the data into Excel by preserving the data in the original format.
 1. For each user that's identified in step 3, enter a unique email address.
 
     **Note**: For employees who aren't assigned an email address yet, use the following value as their email address:
@@ -55,7 +58,10 @@ To fix the issue, follow these steps:
 1. Locate the user that's associated with the email address that's mentioned in the warning message, and then select the user to view their profile.
 
     **Note**: If the user status is **INACTIVE** and your organization recycles email addresses for employees who have left, we recommend that you change their email address to their Employee ID so that the email address can be assigned to a new employee. This action is also recommended when you deactivate a user in Viva Glint.
-1. Open the employee attribute data file in Excel. If the file is in .csv format, [import it in Excel](https://support.microsoft.com/office/import-or-export-text-txt-or-csv-files-5250ac4c-663c-47ce-937b-339e391393ba) to preserve the data in the expected format.
+1. Open the employee attribute data file. Use the appropriate method depending on the file type:
+
+    - If the data file has an *.xls* or a *.xlsx* extension, open it in Microsoft Excel.
+    - If the data file has a *.csv* extension, use the [Text Import Wizard](https://support.microsoft.com/office/text-import-wizard-c5b02af6-fda1-4440-899f-f78bafe41857) to import the data into Excel by preserving the data in the original format.
 1. Identify all users that are assigned the email address that's mentioned in the warning message in the data file.
 1. For each user that's identified in step 4, compare their Employee ID to the Employee ID of the user that's found in step 2. If the Employee ID is different, enter a unique email address for the user in the data file.
 1. Save the employee attribute data file, and then upload it again to Viva Glint.

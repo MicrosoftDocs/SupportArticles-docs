@@ -1,9 +1,7 @@
 ---
 title: SIP 504 and Microsoft response codes
 description: Lists combinations of Microsoft response code and the SIP 504 error, and provides actions to resolve the errors.
-ms.date: 10/30/2023
-author: helenclu
-ms.author: luche
+ms.date: 11/22/2024
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
@@ -15,6 +13,7 @@ appliesto:
 ms.custom: 
   - sap:Teams Calling (PSTN)\Direct Routing
   - CI173631
+  - CI2384
   - CSSTroubleshoot
 ms.reviewer: teddygyabaah
 ---
@@ -37,6 +36,15 @@ This article provides troubleshooting information for various combinations of th
 - SIP response code: **504**
 - Suggested actions:  
   - Make sure that requests and responses include SIP version "SIP/2.0" in the Request-URI, Via header, and other relevant headers. For more information, see [Direct Routing - SIP protocol](/microsoftteams/direct-routing-protocols-sip).
+
+## 549018 504 Unable to deliver INVITE: Invalid Request/Response line
+
+- Microsoft response code: **549018**
+- SIP response code: **504**
+- Suggested actions:
+  - Check the SBC configuration to determine why it sends an invalid or unsupported SIP message format to Microsoft and fix any misconfiguration.
+
+    **Note**: This error might be represented by a slightly different phrase that's associated with the response code.
 
 ## 569002 504 Unable to deliver INVITE: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
 
@@ -115,3 +123,28 @@ This article provides troubleshooting information for various combinations of th
   - Request a certificate that's signed by one of the public root certification authorities that are listed in [public trusted certificate for the SBC](/microsoftteams/direct-routing-plan#public-trusted-certificate-for-the-sbc).
 
   If you have multiple TLS profiles, check that you're using a profile that has the correct certificate when you connect to the Direct Routing interface. If you have multiple TLS profiles on the SBC, make sure that you select a profile that's signed by using a certificate that's trusted by Direct Routing.
+
+## 569015 504 Unable to deliver INVITE: No such host is known
+
+- Microsoft response code: **569015**
+- SIP response code: **504**
+- Suggested actions:
+  - Determine why the FQDN of the SBC can’t be resolved through DNS, and fix the issue.
+
+## 569016 504 Unable to deliver INVITE/ACK: The requested name is valid, but no data of the requested type was found
+
+- Microsoft response code: **569016**
+- SIP response code: **504**
+- Suggested actions:  
+  - Check the DNS settings to make sure that the correct DNS record types (A or AAAA) are configured.
+
+    **Note**: This error might be represented by a slightly different phrase that's associated with the response code. This error indicates that a DNS record is found, typically a TXT record that's added for domain verification when you set up the SBC, but it's not an A or AAAA record.
+
+## 569018 504 Unable to deliver INVITE: Invalid Request/Response line
+
+- Microsoft response code: **569018**
+- SIP response code: **504**
+- Suggested actions:
+  - Check the SBC configuration to determine why it sends an invalid or unsupported SIP message format to Microsoft and fix any misconfiguration.
+
+    **Note**: This error might be represented by a slightly different phrase that’s associated with the response code.
