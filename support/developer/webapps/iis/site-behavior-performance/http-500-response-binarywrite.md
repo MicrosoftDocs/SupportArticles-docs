@@ -1,13 +1,13 @@
 ---
 title: HTTP 500 or Response buffer limit exceeded
 description: This article describes a problem where the client receives an 'HTTP 500' or 'Response buffer limit exceeded' error occurs when you send a file by using a web server that has IIS installed.
-ms.date: 04/15/2020
+ms.date: 12/13/2024
 ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
 ms.reviewer: mlaing, v-jayc
 ---
 # HTTP 500 or Response buffer limit exceeded error when using Response.BinaryWrite in IIS
 
-This article helps you resolve the error (HTTP 500 or Response buffer limit exceeded) that occurs when you use the `Response.BinaryWrite` method in ASP to send a file.
+This article helps you resolve the error (HTTP 500 or Response buffer limit exceeded) that occurs when you use the `Response.BinaryWrite` method in Active Server Pages (ASP) to send a file.
 
 _Original product version:_ &nbsp; Internet Information Services, Active Server Pages (ASP)  
 _Original KB number:_ &nbsp; 944886
@@ -42,7 +42,7 @@ In most scenarios, the 4-MB buffer limit is sufficient for ASP responses that ar
 
 ## Resolution 1: Decrease the response size
 
-To resolve this issue when you use the `Response.BinaryWrite` method and ASP buffering is turned off, verify that the data that is returned to the client is not larger than 4 MB.
+To resolve this issue when you use the `Response.BinaryWrite` method and ASP buffering is turned off, verify that the data that is returned to the client isn't larger than 4 MB.
 
 If the response is larger than the 4-MB default value, this size frequently causes a poor user experience. The Web browser must receive the large response over the network. Then, the Web browser must parse and display a large HTML response.
 
@@ -55,13 +55,13 @@ You can use the `AspBufferingOn` IIS metabase property to enable or disable buff
 
 To enable or disable buffering at the page level, you can use the `Response.Buffer` property.
 
-If you must increase the buffer limit, select a buffer limit that allows for the largest known response size. If you do not know the largest response size in advance, you can increase the buffer limit to a large value during testing. After you finish testing, use the largest value that appears in the *sc-bytes* field in the IIS log file for the response that is generated for the page.
+If you must increase the buffer limit, select a buffer limit that allows for the largest known response size. If you don't know the largest response size in advance, you can increase the buffer limit to a large value during testing. After you finish testing, use the largest value that appears in the *sc-bytes* field in the IIS log file for the response that is generated for the page.
 
 To increase the buffering limit in IIS, follow these steps:
 
 1. Select **Start**, select **Run**, type *cmd*, and then select **OK**.
-2. Type the `cd /d %systemdrive%\inetpub\adminscripts` command, and then press Enter.
-3. Type the `cscript.exe adsutil.vbs SET w3svc/aspbufferinglimit LimitSize` command, and then press Enter.
+2. Type the `cd /d %systemdrive%\inetpub\adminscripts` command, and then select <kbd>Enter</kbd>.
+3. Type the `cscript.exe adsutil.vbs SET w3svc/aspbufferinglimit LimitSize` command, and then select <kbd>Enter</kbd>.
 
    > [!NOTE]
    > `LimitSize` represents the buffering limit size in bytes. For example, the number 67108864 sets the buffering limit size to 64 MB.
@@ -69,8 +69,8 @@ To increase the buffering limit in IIS, follow these steps:
 To confirm that the buffer limit is set correctly, follow these steps:
 
 1. Select **Start**, select **Run**, type *cmd*, and then select **OK**.
-2. Type the `cd /d %systemdrive%\inetpub\adminscripts` command, and then press Enter.
-3. Type the `cscript.exe adsutil.vbs GET w3svc/aspbufferinglimit` command, and then press Enter.
+2. Type the `cd /d %systemdrive%\inetpub\adminscripts` command, and then select <kbd>Enter</kbd>.
+3. Type the `cscript.exe adsutil.vbs GET w3svc/aspbufferinglimit` command, and then select <kbd>Enter</kbd>.
 
 ## More information
 
