@@ -2,8 +2,7 @@
 title: ErrorSubmissionQuotaExceeded exception
 description: Provides a solution to an unknown error that occurs in Microsoft Dynamics 365 mailbox.
 ms.reviewer: 
-ms.topic: troubleshooting
-ms.date: 11/19/2024
+ms.date: 12/13/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # ErrorSubmissionQuotaExceeded exception appears in Microsoft Dynamics 365 mailbox
