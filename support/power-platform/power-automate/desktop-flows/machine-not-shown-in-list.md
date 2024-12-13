@@ -1,11 +1,11 @@
 ---
-title: Machine not listed when creating desktop flow connection 
+title: Machine Not Listed When Creating Desktop Flow Connection 
 description: Solves an issue where your machine isn't listed in the Machines or Group list when creating a desktop flow connection in Microsoft Power Automate for desktop.
 author: ceporche
 ms.author: ceporche
 ms.writer: rbarni, alarnaud
 ms.custom: sap:Desktop flows\Cannot create desktop flow connection
-ms.date: 12/10/2024
+ms.date: 12/13/2024
 ---
 # Your machine doesn't appear when creating a desktop flow connection 
 
@@ -28,15 +28,15 @@ Follow these steps to troubleshoot and resolve the issue:
 
 1. Open the Power Automate machine runtime app and verify that your machine is registered.
 
-   :::image type="content" source="media/machine-not-shown-in-list/machine-registered-in-runtime-app.png" alt-text="The Your machine has been registered message is shown if your machine is registered in the Power Automate machine runtime app." lightbox="media/machine-not-shown-in-list/machine-registered-in-runtime-app.png":::
+   :::image type="content" source="media/machine-not-shown-in-list/machine-registered-in-runtime-app.png" alt-text="Screenshot that shows your machine is registered in the Power Automate machine runtime app." lightbox="media/machine-not-shown-in-list/machine-registered-in-runtime-app.png":::
 
-1. Go to the [Power Automate portal](https://make.powerautomate.com) and verify that you're using the same environment as your machine was in Power Automate for desktop.
+1. Go to the [Power Automate portal](https://make.powerautomate.com) and verify that you're using the same environment as your machine in Power Automate for desktop.
 
-    :::image type="content" source="media/machine-not-shown-in-list/current-environment-shown-in-power-automate-portal.png" alt-text="The environment shown in the Power Automate portal." lightbox="media/machine-not-shown-in-list/current-environment-shown-in-power-automate-portal.png":::
+    :::image type="content" source="media/machine-not-shown-in-list/current-environment-shown-in-power-automate-portal.png" alt-text="Screenshot of the environment shown in the Power Automate portal." lightbox="media/machine-not-shown-in-list/current-environment-shown-in-power-automate-portal.png":::
 
 1. In Power Automate portal, check if your machine appears in the **Machines** list, and if it's part of a machine group.
 
-   :::image type="content" source="media/machine-not-shown-in-list/machines-list-group-list.png" alt-text="The Machines and the Group lists shown in the Power Automate portal." lightbox="media/machine-not-shown-in-list/machines-list-group-list.png":::
+   :::image type="content" source="media/machine-not-shown-in-list/machines-list-group-list.png" alt-text="Screenshot of the Machines and the Group lists shown in the Power Automate portal." lightbox="media/machine-not-shown-in-list/machines-list-group-list.png":::
 
     If the machine doesn't appear in the **Machines** list in the targeted environment, try [registering the machine](/power-automate/desktop-flows/manage-machines#register-a-new-machine) again in this environment.
 
