@@ -9,7 +9,7 @@ metadata:
   ms.service: dynamics-365-field-service
   author: m-hartmann
   ms.author: mhart
-  ms.date: 11/05/2024
+  ms.date: 12/12/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -65,11 +65,25 @@ landingContent:
             url: mobile-app/duplicate-inspection-responses.md
           - text: Incorrect or missing data in offline mode
             url: mobile-app/incorrect-missing-data-offline-mode.md
+          - text: Settings area is missing in the Field Service Mobile app module navigation
+            url: mobile-app/settings-area-missing.md
           - text: Troubleshoot issues with publishing a mobile offline profile
             url: mobile-app/publish-mobile-offline-profile.md
           - text: '"Validations have been restarted in the background" error'
             url: mobile-app/validation-restarted-background.md
+          - text: WebView reset error
+            url: mobile-app/webview-reset.md
 
+  # Card
+  - title: Mobile app - new experience
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Error on start due to permission or privilege issues
+            url: mobile-app/newux-error-on-start-permission.md
+          - text: Error on start due to missing files in the solution
+            url: mobile-app/newux-error-on-start-missing-files.md
+  
   # Card
   - title: Resource Scheduling Optimization Add-in for Field Service
     linkLists:
