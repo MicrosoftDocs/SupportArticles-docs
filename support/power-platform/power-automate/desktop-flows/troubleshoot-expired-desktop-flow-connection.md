@@ -1,17 +1,17 @@
 ---
-title: ExpiredDesktopFlowConnection
-description: Resolves errors that occur when you run a desktop flow or test a connection that hasn't been used since the target machine or group rotated its key.
+title: ExpiredDesktopFlowConnection when using or testing a desktop flow connection
+description: Resolves an error that occurs when using or testing a desktop flow connection that hasn't been used since the target machine or group rotated its key in Microsoft Power Automate.
 ms.reviewer: padib，aartigoyle, johndund, quseleba
-ms.date: 12/10/2024
+ms.date: 12/13/2024
 ms.custom: sap:Desktop flows\Unattended flow runtime errors
 ---
-# "ExpiredDesktopFlowConnection" errors when using or testing a desktop flow connection
+# "ExpiredDesktopFlowConnection" error when using or testing a desktop flow connection
 
-This article provides a resolution for `ExpiredDesktopFlowConnection` errors that might occur when you run a desktop flow or test a connection, and your connection has not been used while its target machine or group rotated its certificate.
+This article provides a resolution for the `ExpiredDesktopFlowConnection` error that might occur when you use or test a desktop flow connection in Microsoft Power Automate.
 
 ## Symptoms
 
-- Attempting to use your connection or running a desktop flow that uses it fails with the following error:
+You might reveive the following error message when using or testing a desktop flow connection:
 
 ```json
   {
@@ -24,12 +24,14 @@ This article provides a resolution for `ExpiredDesktopFlowConnection` errors tha
 
 ## Cause
 
-The contents of the connection are encrypted using its target group / machine certificate. During the period when the certificate is rotated, if a connection isn't used, it will expire as the certificate required to decrypt it has been deprecated by the rotation.
+The contents of the connection are encrypted using its target group or machine certificate. If the certificate is rotated and the connection isn't used during this period, it will expire because the certificate required to decrypt it has become outdated due to rotation.
 
-A connection in this state is not recoverable and must be manually edited to work again.
+A connection in this state can't be recovered automatically and must be manually updated.
 
 ## Resolution
 
-- Go to the Power Automate portal.
-- Navigate to **Data** > **Connections**.
-- Find the expired connection, select it, select **Edit** and reenter the necessary information.
+To resolve the issue, follow these steps:
+
+1. Sign in to [Power Automate](https://make.powerautomate.com/).
+2. On the left navigation pane, select **Data** > **Connections**.
+3. Find the expired connection, select it, and then select **Edit** to reenter the necessary information.
