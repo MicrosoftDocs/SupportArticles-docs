@@ -3,7 +3,7 @@ title: Error AADSTS530004 - AcceptCompliantDevice setting isn't configured
 description: Provides solutions to the error AADSTS530004 when a guest user accesses an application or resource in the resource tenant.
 ms.reviewer: laks, custorod, joaos, v-weizhu
 ms.service: entra-id
-ms.date: 12/12/2024
+ms.date: 12/13/2024
 ms.custom: sap:Issues Signing In to Applications
 ---
 # Error AADSTS530004 - AcceptCompliantDevice setting isn't configured for this organization
@@ -62,9 +62,9 @@ Device authentication might fail under one of the following conditions:
 - When accessed using a browser in InPrivate/Incognito mode.
 - When using unsupported browsers or devices, particularly on mobiles.
 - When browser cookies are disabled.
-- When a desktop/native application doesn't support device authentication, or it isn't broker aware.
+- When a desktop/native application doesn't support device authentication, or doesn't use Microsoft Authentication Broker.
 
-    For more information about brokers and broker aware applications on different device platforms, see the following pages:
+    For more information about Microsoft Authentication Broker on different device platforms, see the following pages:
 
     - [Windows](/entra/identity/devices/concept-primary-refresh-token)
     - [Android](/entra/identity-platform/msal-android-single-sign-on#sso-through-brokered-authentication)
