@@ -51,7 +51,7 @@ For information about specific errors or warnings, see the following articles:
 - [Missing main account in general ledger: Error code: ERR00010 [Type: Warning]](missing-main-account-in-gl-err00010.md)
 - [Decimal limit exceeded: Error code: ERR00011 [Type: Warning]](decimal-limit-exceed-err00011.md)
 - [Decimal auto rounding: Error code: ERR00012 [Type: Warning]](decimal-auto-rounding-err00012.md)
-- [Output table is empty:Error code: ERR00016 [Type: Info]](empty-entities-err00016.md)
+- [Output table is empty: Error code: ERR00016 [Type: Info]](empty-entities-err00016.md)
 
 ## See also
 
