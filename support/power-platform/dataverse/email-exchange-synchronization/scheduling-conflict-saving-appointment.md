@@ -20,7 +20,7 @@ The following error message is logged in the [Alerts](/power-platform/admin/moni
 >
 > **Email Server Error Code:** ExchangeSyncSchedulingConflictsError
 
-If you view the [Server-Side Synchronization Failures dashboard](/support/dynamics-365/sales/troubleshoot-item-level-server-side-synchronization-issues.md), you might see an appointment in the **Appointments, Contacts, and Tasks Failed To Sync** section with a **Sync Error** value of `ExchangeSyncSchedulingConflictsError`.
+If you view the [Server-Side Synchronization Failures dashboard](/support/dynamics-365/sales/troubleshoot-item-level-server-side-synchronization-issues#usage), you might see an appointment in the **Appointments, Contacts, and Tasks Failed To Sync** section with a **Sync Error** value of `ExchangeSyncSchedulingConflictsError`.
 
 ## Cause
 
