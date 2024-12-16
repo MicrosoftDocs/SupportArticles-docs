@@ -271,9 +271,9 @@ In this case, just adding a carriage return at the end of the last line is enoug
 
 Ensure all line endings in the `$batch` request body are `CRLF`. If you can't use `CRLF`, add two non-`CRLF` line endings at the end of the batch request body to resolve this deserialization error. For more information, see [Batch requests](/power-apps/developer/data-platform/webapi/execute-batch-operations-using-web-api#batch-requests).
 
-## Invalid Prefer request header value
+## Invalid OData Annotation values inside Prefer request header value
 
-These errors occur when Dataverse Web API receives requests with invalid Prefer request header values.
+These errors occur when Dataverse Web API receives requests with an invalid odata.include-annotations value inside the Prefer request header values.
 
 ### Symptoms
 
@@ -282,18 +282,32 @@ When sending a request using `POST`, `PATCH`, or `PUT` and a `Prefer` request he
 **Request**
 
 ```http
+POST [Organization URI]/api/data/v9.0/contacts HTTP/1.1
+
 Prefer: odata.include-annotations=\"*\"
+
+{
+  "firstname":"test",
+  "lastname":"contact"
+}
+
 ```
 
-You get a \< TODO: mention specific error>.
+You get the following error when you submit a `POST`, `PATCH`, or `PUT` request.
 
 **Response**
 
 ```http
-TODO: Add example here that shows the error like the others
+HTTP/1.1 400 Bad Request
+
+{
+	"Message": "Error identified on the 'odata.include-annotations' value inside the 'Prefer' header. Refer to the following link for more details: https://go.microsoft.com/fwlink/?linkid=2300109. See exception message for more details 'An error occurred when parsing the HTTP header 'Prefer'. The header value 'odata.include-annotations=\\\"*\\\"' is incorrect at position '26' because the escape character '\\' is not inside a quoted-string.'.",
+	"ErrorCode": "0x80097303"
+}
+
 ```
 
-This is the same error you would get when sending a request using `GET`.
+This is the same error you would get when sending a request using `GET` with an improperly formatted odata.include-annotations value.
 
 ### Cause
 
