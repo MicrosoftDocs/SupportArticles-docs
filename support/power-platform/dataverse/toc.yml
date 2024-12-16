@@ -14,6 +14,8 @@
   items:
     - name: 401 Unauthorized exception when using Server-Side Synchronization
       href: email-exchange-synchronization/exception-when-using-server-side-sync.md
+    - name: An error occurs when receiving or synchronizing an email in a Dynamics 365 mailbox
+      href: email-exchange-synchronization/an-error-occurred-while-synchronizing-item.md
     - name: An appointment is canceled or deleted during server-side synchronization
       href: email-exchange-synchronization/an-appointment-is-canceled-deleted.md
     - name: A failure occurred in CrmSecurity when approving email address

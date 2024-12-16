@@ -12614,6 +12614,26 @@
       "source_path": "support/windows-server/group-policy/apply-group-policy-objects-terminal-services.md",
       "redirect_url": "/troubleshoot/windows-server/group-policy/apply-group-policy-objects-rds",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/an-error-occurred-while-synchronizing-item.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/an-error-occurred-while-synchronizing-item",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/http-server-returned-serviceunavailable.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/an-error-occurred-while-synchronizing-item",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/incomingmailboxinternalcrmerror.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/an-error-occurred-while-synchronizing-item",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/errorinternalservertransienterror-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/an-error-occurred-while-synchronizing-item",
+      "redirect_document_id": false
     }
   ]
 }

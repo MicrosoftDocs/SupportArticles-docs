@@ -170,24 +170,16 @@
       href: trying-to-access-dynamics-365-app-for-outlook-from-email-do-not-recognize-error.md
     - name: Can't connect to Exchange message
       href: cannot-connect-to-exchange-message-when-using-dynamics-365-app-for-outlook.md
-    - name: Crm.80040216. An unexpected error occurred
-      href: an-error-occurred-while-synchronizing-item.md
     - name: Email or appointment tracked by App for Outlook shows as Track pending
       href: emails-tracked-by-dynamics-365-app-for-outlook-show-track-pending.md
     - name: Error in App for Outlook
       href: error-when-opening-365-app-outlook.md
     - name: Error when accessing CRM App for Outlook
       href: error-when-accessing-crm-app-outlook.md
-    - name: ErrorInternalServerTransientError error in mailbox
-      href: errorinternalservertransienterror-error.md
-    - name: Http server returned ServiceUnavailable exception warning level message
-      href: http-server-returned-serviceunavailable.md
     - name: IncomingEmailRejected error when installing App for Outlook
       href: error-incomingemailrejected-install-dynamics-365-app-outlook.md
     - name: IncomingEmailS2SApprovalNeeded error when installing App for Outlook
       href: error-install-dynamics-365-app-outlook.md
-    - name: IncomingMailboxInternalCrmError
-      href: incomingmailboxinternalcrmerror.md
     - name: Installation of Windows Live ID Sign-in Assistant failed
       href: installation-of-windows-live-id-sign-in-assistant-failed-exit-code-1603.md
     - name: Item level Server-Side Synchronization issues
