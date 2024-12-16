@@ -10,7 +10,7 @@ ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
-ms.date: 10/31/2019
+ms.date: 12/16/2024
 ms.author: genli
 ms.custom: sap:Cannot create a VM
 ---
@@ -24,7 +24,7 @@ When you're trying to update a virtual machine whose previous data disk detach f
 
 ```
 Code=\"AttachDiskWhileBeingDetached\" 
-Message=\"Cannot attach data disk '{disk ID}' to virtual machine '{vmName}' because the disk is currently being detached or the last detach  operation failed. Please wait until the disk is completely detached, and then try again or delete/detach the disk explicitly again\” 
+Message=\"Cannot attach data disk '{disk ID}' to virtual machine '{vmName}' because the disk is currently being detached or the last detach operation failed. Please wait until the disk is completely detached, and then try again or delete/detach the disk explicitly again\” 
 ```
 
 ## Cause
@@ -36,7 +36,7 @@ This error happens when you try reattaching a data disk whose last detach operat
 ### Step 1: Get the virtual machine and disk details
 
 ```azurepowershell-interactive
-PS D:> $vm = Get-AzureRmVM -ResourceGroupName "Example Resource Group" -Name "ERGVM999999" 
+PS D:> $vm = Get-AzVM -ResourceGroupName "Example Resource Group" -Name "ERGVM999999" 
 
 PS D:> $vm.StorageProfile.DataDisks 
 lun          : 0
@@ -52,30 +52,24 @@ toBeDetached : False
 
 Get the array index of the failing disk and set the **toBeDetached** flag for the failing disk (for which **AttachDiskWhileBeingDetached** error occurred) to "true". This setting implies detaching the disk from the virtual machine. The failing disk name can be found in the **errorMessage**.
 
-> !Note:
+> [!NOTE]
 > The API version specified for Get and Put calls needs to be 2019-03-01 or greater.
 
 ```azurepowershell-interactive
 PS D:> $vm.StorageProfile.DataDisks[0].ToBeDetached = $true 
 ```
 
-Alternately, you can also detach this disk using the command below, which will be helpful for users using API versions before March 01, 2019.
-
-```azurepowershell-interactive
-PS D:> Remove-AzureRmVMDataDisk -VM $vm -Name "<disk ID>" 
-```
-
 ### Step 3: Update the virtual machine
 
 ```azurepowershell-interactive
-PS D:> Update-AzureRmVM -ResourceGroupName "Example Resource Group" -VM $vm 
+PS D:> Update-AzVM -ResourceGroupName "Example Resource Group" -VM $vm 
 ```
 
 ## Solution 2: REST
 
 ### Step 1: Get the virtual machine payload
 
-```azurepowershell-interactive
+```rest
 GET https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}?$expand=instanceView&api-version=2019-03-01
 ```
 
@@ -85,7 +79,7 @@ Set the **toBeDetached** flag for failing disk to true in the payload returned i
 
 **Sample Request Body**
 
-```azurepowershell-interactive
+```json
 {
   "properties": {
     "hardwareProfile": {
@@ -147,13 +141,13 @@ Alternately you can also remove the failing data disk from the above payload, wh
 
 Use the request body payload set in Step 2 and update the virtual machine as follows:
 
-```azurepowershell-interactive
+```rest
 PATCH https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}?api-version=2019-03-01
 ```
 
 **Sample Response:**
 
-```azurepowershell-interactive
+```json
 {
   "id": "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM",
   "type": "Microsoft.Compute/virtualMachines",
