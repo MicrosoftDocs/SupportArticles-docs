@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4463808
 
 ## Symptoms
 
-When you attempt to [test and enable a mailbox]((/power-platform/admin/connect-exchange-online#test-the-configuration-of-mailboxes)) in Dynamics 365, you receive the following error:
+When you attempt to [test and enable a mailbox](/power-platform/admin/connect-exchange-online#test-the-configuration-of-mailboxes) in Dynamics 365, you receive the following error:
 
 > Email cannot be received for the mailbox [mailbox name] because the email server location or the incoming email port specified in the associated email server profile [profile name] is incorrect. The mailbox didn't synchronize. The owner of the email server profile has been notified.
 >
