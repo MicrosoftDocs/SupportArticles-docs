@@ -152,6 +152,7 @@ The following table lists some, but not all, first-party Microsoft applications.
 |Office Online Core SSO|243c63a3-247d-41c5-9d83-7788c43f1c43|
 |Office Online Search|a9b49b65-0a12-430b-9540-c80b3332c127|
 |Office.com|4b233688-031c-404b-9a80-a4f3f2351f90|
+|Office 356|72782ba9-4490-4f03-8d82-562370ea3566|
 |Office365 Shell WCSS-Client|89bee1f7-5e6e-4d8a-9f3d-ecd601259da7|
 |OfficeClientService|0f698dd4-f011-4d23-a33e-b36416dcb1e6|
 |OfficeHome|4765445b-32c6-49b0-83e6-1d93765276ca|
