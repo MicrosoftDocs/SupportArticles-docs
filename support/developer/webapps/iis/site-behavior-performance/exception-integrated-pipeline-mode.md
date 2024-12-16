@@ -1,7 +1,7 @@
 ---
 title: Application can't run in Integrated Pipeline mode
 description: This article provides resolutions for the System.Web.HttpException that occurs when an application runs in Integrated Pipeline mode.
-ms.date: 03/23/2020
+ms.date: 12/16/2024
 ms.custom: sap:Development\Native HTTP modules
 ms.reviewer: rakkim, mlaing
 ---
@@ -20,7 +20,7 @@ Consider the following scenario:
 - The application uses an ISAPI filter registered for the `SF_NOTIFY_AUTHENTICATION` event.
 - The application's *global.asax* implements the `Application_BeginRequest` event.
 
-Under these conditions, this exception may occur:
+Under these conditions, this exception might occur:
 
 > System.Web.HttpException: This server variable cannot be modified during request execution.
 
@@ -28,16 +28,16 @@ Under these conditions, this exception may occur:
 
 This behavior is by design.
 
-When IIS calls the ISAPI filter for the `SF_NOTIFY_AUTHENTICATION` event, it updates the `AUTH_USER` server variable. Since the application is configured to use the Integrated Pipeline, ASP.NET looks for changes in server variables. `AUTH_USER` is one of the variables that is not expected to change, and therefore ASP.NET throws the above exception.
+When IIS calls the ISAPI filter for the `SF_NOTIFY_AUTHENTICATION` event, it updates the `AUTH_USER` server variable. Since the application is configured to use the Integrated Pipeline, ASP.NET looks for changes in server variables. `AUTH_USER` is one of the variables that isn't expected to change, and therefore ASP.NET throws the exception.
 
-This exception will not get thrown if the application pool is running in Classic mode instead of Integrated Pipeline mode.
+This exception isn't thrown if the application pool is running in Classic mode instead of Integrated Pipeline mode.
 
 ## Resolution
 
-Either of the methods below prevents this exception:
+To prevent this exception, use one of the following methods:
 
-1. Configure the application pool to run in Classic mode instead of Integrated Pipeline mode.
-2. Use native or managed Http Modules to handle authentication notifications.
+- Configure the application pool to run in Classic mode instead of Integrated Pipeline mode.
+- Use native or managed Http Modules to handle authentication notifications.
 
 ### More information
 
