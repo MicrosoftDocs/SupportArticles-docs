@@ -10,7 +10,7 @@ ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
-ms.date: 10/31/2019
+ms.date: 12/16/2024
 ms.author: genli
 ms.custom: sap:Cannot create a VM
 ---
@@ -52,7 +52,7 @@ toBeDetached : False
 
 Get the array index of the failing disk and set the **toBeDetached** flag for the failing disk (for which **AttachDiskWhileBeingDetached** error occurred) to "true". This setting implies detaching the disk from the virtual machine. The failing disk name can be found in the **errorMessage**.
 
-> !Note:
+> [!NOTE]
 > The API version specified for Get and Put calls needs to be 2019-03-01 or greater.
 
 ```azurepowershell-interactive
