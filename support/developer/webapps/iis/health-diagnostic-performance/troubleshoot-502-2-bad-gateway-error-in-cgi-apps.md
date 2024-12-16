@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot HTTP 502.2 Bad Gateway error in CGI applications
 description: Describes HTTP 502.2 Bad Gateway error in CGI applications and provides troubleshooting steps to resolve this issue.
-ms.date: 04/09/2012
+ms.date: 12/16/2024
 ms.author: haiyingyu
 author: HaiyingYu
 ms.reviewer: johnhart
@@ -15,7 +15,7 @@ This article describes HTTP 502.2 Bad Gateway error in Common Gateway Interface 
 
 ## Symptom
 
-You have a Web site that is hosted on Internet Information Services (IIS). When you visit the Web site in a Web browser, you may receive an error message that resembles the following:
+You have a Web site that is hosted on Internet Information Services (IIS). When you visit the Web site in a Web browser, you might receive an error message that resembles the following one:
 
 > Server Error in Application \<application name\>
 > HTTP Error 502.2 - Bad Gateway
@@ -49,7 +49,7 @@ HTTP: Content-Type =text/html
 HTTP: Server =Microsoft-IIS/6.0
 HTTP: Date =Tue, 23 Aug 2005 20:25:47 GMT
 HTTP: Data: Number of data bytes remaining = 232 (0x00E8)
-00000: 00 11 BC 3E 62 3C 00 0F 1F 6C 1F E1 08 00 45 00 ..¼>b<...l.á..E.
+00000: 00 11 BC 3E 62 3C 00 0F 1F 6C 1F E1 08 00 45 00 ..%>b<...l.á..E.
 00010: 01 9A EF 40 40 00 80 06 00 00 D8 A2 10 5C 0A C8 .šï@@.&euro;...Ø¢.\.È
 00020: 04 15 00 50 55 B1 AA C6 89 52 E7 D6 85 01 50 18 ...PU±ªÆ‰RçÖ….P.
 00030: 09 2F F9 67 00 00 48 54 54 50 2F 31 2E 31 20 35 ./ùg..HTTP/1.1 5
@@ -80,6 +80,6 @@ HTTP: Data: Number of data bytes remaining = 232 (0x00E8)
 
 Capture [FREB](troubleshoot-php-with-failed-request-tracing.md) log for the HTTP error message and locate which module is throwing this error message.
 
-Troubleshoot the CGI process executable file to determine why the CGI process terminates unexpectedly. You may have to generate a memory dump file of the CGI process when the access violation occurs.
+Troubleshoot the CGI process executable file to determine why the CGI process terminates unexpectedly. You might have to generate a memory dump file of the CGI process when the access violation occurs.
 
 This problem occurs when the CGI application does exactly what the error suggests: inserts invalid data into the HTTP Header value(s) that is sends to IIS as part of its response. 
