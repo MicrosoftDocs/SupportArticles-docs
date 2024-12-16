@@ -14,13 +14,13 @@ _Original KB number:_ &nbsp; 4340070
 
 ## Symptoms
 
-The following error message is logged in the [Alerts]((/power-platform/admin/monitor-email-processing-errors#view-alerts)) section of a Dynamics 365 mailbox record:
+The following error message is logged in the [Alerts](/power-platform/admin/monitor-email-processing-errors#view-alerts) section of a Dynamics 365 mailbox record:
 
 > A scheduling conflict was found when saving appointment [appointment subject] from Exchange to Microsoft Dynamics 365 because [user] is unavailable at this time. Do you want to ignore the conflict and save anyway?
 >
 > **Email Server Error Code:** ExchangeSyncSchedulingConflictsError
 
-If you view the [Server-Side Synchronization Failures dashboard](troubleshoot-item-level-server-side-synchronization-issues.md#usage), you might see an appointment in the **Appointments, Contacts, and Tasks Failed To Sync** section with a **Sync Error** value of `ExchangeSyncSchedulingConflictsError`.
+If you view the [Server-Side Synchronization Failures dashboard](~/dynamics-365/sales/troubleshoot-item-level-server-side-synchronization-issues#usage), you might see an appointment in the **Appointments, Contacts, and Tasks Failed To Sync** section with a **Sync Error** value of `ExchangeSyncSchedulingConflictsError`.
 
 ## Cause
 
