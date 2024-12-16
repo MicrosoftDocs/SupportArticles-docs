@@ -37,7 +37,7 @@ You can perform an in-place upgrade from RHEL 7.9 to the following RHEL 8.8 or 8
 
 System configuration   | Source OS version| Target version     |
 |----------------------|------------------|--------------------|
-|SAP High-performance ANalytic Appliance (HANA)              | RHEL 7.9         | RHEL 8.8 (default)  | 
+|SAP HANA              | RHEL 7.9         | RHEL 8.8 (default)  | 
 |SAP HANA              |   RHEL 7.9       | RHEL 8.10          | 
 |SAP NetWeaver and other SAP Applications | RHEL 7.9         | RHEL 8.8           |      
 |SAP NetWeaver and other SAP Applications |  RHEL 7.9         | RHEL 8.10 (default) |
