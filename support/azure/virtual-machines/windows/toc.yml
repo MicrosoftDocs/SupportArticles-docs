@@ -20,8 +20,6 @@
   items:
   - name: What Microsoft server software is supported in Azure virtual machines
     href: server-software-support.md
-  - name: What 32-bit operating systems are supported?
-    href: support-32-bit-operating-systems-virtual-machines.md
   - name: Windows 11 support on Azure Virtual Machines
     href: windows-11-support-azure-virtual-machines.md
   - name: Windows Server 2012 R2 Support on Azure
@@ -40,12 +38,14 @@
     items:
       - name: Windows Server 2003 Support on Azure
         href: run-win-server-2003.md
-      - name: Citrix services support policy
-        href: support-policy-citrix-services.md
   - name: Retirement of the hybrid use benefit images
     href: retirement-hybrid-use-benefit-images.md
   - name: Windows Server images updated to .NET Framework 4.7
     href: updates-included-windows-server-images.md
+  - name: What 32-bit operating systems are supported?
+    href: support-32-bit-operating-systems-virtual-machines.md
+  - name: Citrix services support policy
+    href: support-policy-citrix-services.md
 
 - name: Procedures to repair a Windows VM
   items:

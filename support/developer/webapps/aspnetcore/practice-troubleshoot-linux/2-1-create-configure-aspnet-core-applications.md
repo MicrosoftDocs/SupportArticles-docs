@@ -1,24 +1,23 @@
 ---
 title: Create and configure ASP.NET Core applications in Linux
 description: This article describes how to create and configure ASP.NET Core applications in Linux.
-ms.date: 03/18/2021
+ms.date: 12/05/2024
 ms.custom: sap:General Development Questions, linux-related-content
-ms.reviewer: ramakoni, ahmetmb
-author: ahmetmithat
+ms.reviewer: ahmetmb, zixie
 ---
 # Part 2.1 - Create and configure ASP.NET Core applications in Linux
 
-_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1, .NET 5  
+_Applies to:_ &nbsp; .NET 8 and higher
 
 This article introduces how to create and configure ASP.NET Core applications in Linux.
 
 ## Prerequisites
 
-To follow the exercises in this part, you must have a .NET Core SDK installed. To install the SDK, refer to the installation instructions in [Part 1](1-1-creating-vm.md), as necessary.
+To follow the exercises in this part, you must have a .NET SDK installed. To install the SDK, refer to the installation instructions in [Part 1](1-1-creating-vm.md), as necessary.
 
 ## Goal of this part
 
-You'll learn how to create an ASP.NET Core web application by using .NET Core command-line interface (CLI) in Linux, and how to publish the application to the */var* directory. As you learn these concepts, you'll practice some basic tasks such as working with files and folders, and running commands as a privileged user. You'll also learn how to edit files by using the vi text editor in Linux.
+Learn how to create an ASP.NET Core web application by using the [.NET command-line interface (CLI)](/dotnet/core/tools/) in Linux, and how to publish the application to the */var* directory. As you learn these concepts, you'll practice some basic tasks such as working with files and folders, and running commands as a privileged user. You'll also learn how to edit files by using the vi text editor in Linux.
 
 ## .NET CLI
 
@@ -33,7 +32,7 @@ You'll use the `dotnet new` command to create your first ASP.NET Core project in
 
 :::image type="content" source="./media/2-1-create-configure-aspnet-core-applications/dotnet-new-command.png" alt-text="Screenshot of dotnet new command." border="true":::
 
-## Create a .NET Core web application using SDK
+## Create an ASP.NET Core web application using SDK
 
 You'll use the .NET CLI to create your first web application by using the following command:
 
@@ -88,9 +87,9 @@ The `wget` command also shows us some more details, such as redirection and any 
 
 For more information about the difference between `curl` and `wget`, go to [StackExchange webpage](https://unix.stackexchange.com/questions/47434/what-is-the-difference-between-curl-and-wget).
 
-In this training series, you previously used `wget` to download the *.deb* package manager file from Microsoft servers before you installed .NET Core.
+In this training series, you previously used `wget` to download the *.deb* package manager file from Microsoft servers before you installed .NET.
 
-If you run `curl http://localhost`, nothing occurs. This most likely means that there is no HTTP response. You can then run `wget http://localhost` to check whether more information is displayed when you try to access the site.
+If you run `curl http://localhost`, nothing occurs. This most likely means that there's no HTTP response. You can then run `wget http://localhost` to check whether more information is displayed when you try to access the site.
 
 :::image type="content" source="./media/2-1-create-configure-aspnet-core-applications/curl-localhost-command.png" alt-text="Screenshot of curl localhost command." border="true":::
 
@@ -101,7 +100,7 @@ This is what occurs now:
 - Wget is smart enough to follow this redirect and make a new request to `https://localhost:5001`.
 - You connect successfully again. However, `wget` doesn't trust the SSL certificate. Therefore, the connection fails.
 
-The `wget` command recommends that you work around this issue by using the `--no-check-certificate` switch to connect insecurely. However,  this approach involves SSL certificate settings that are **out-of-scope** for this training. Instead, you can configure your ASP.NET Core application so that it won't redirect the HTTP requests to HTTPS. If you're familiar with ASP.NET Core application development (or just configuration), you may already know how to do this: Edit the *Startup.cs* file to remove the redirection configuration.
+The `wget` command recommends that you work around this issue by using the `--no-check-certificate` switch to connect insecurely. However, this approach involves SSL certificate settings that are **out-of-scope** for this training. Instead, you can configure your ASP.NET Core application so that it won't redirect the HTTP requests to HTTPS. If you're familiar with ASP.NET Core application development (or just configuration), edit the **Startup.cs** file to remove the redirection configuration.
 
 ## Edit files by using vi
 
@@ -128,7 +127,7 @@ Press **esc** to exit editing mode, enter [:wq!](https://www.cyberciti.biz/faq/s
 
 After you press Enter, the changes should be saved. You can verify the changes by running `cat ~/firstwebapp/Startup.cs`. This command displays the contents of the *Startup.cs* file.
 
-Restart your application. To do this, change the current directory to the `~/firstwebapp` directory, and run dotnet run again. Then, open another terminal session to your server, and run the `curl http://localhost:5000` command again. This time, the command should return the HTML contents of the home page.
+Restart your application. To do this, change the current directory to the `~/firstwebapp` directory, and run `dotnet run` again. Then, open another terminal session to your server, and run the `curl http://localhost:5000` command again. This time, the command should return the HTML contents of the home page.
 
 :::image type="content" source="./media/2-1-create-configure-aspnet-core-applications/curl-localhost-5000-command.png" alt-text="Screenshot of curl localhost at 5000 port command." border="true":::
 
@@ -138,9 +137,9 @@ You have now successfully run your first ASP.NET Core Web App on Linux.
 
 The primary goal of this exercise is to host your web application behind a reverse proxy so that connecting clients can access the application from another computer by using only the hostname without the port number. This is what you'd expect to occur in real world scenarios. You'll work with Nginx later to complete this task.  But before you do that, publish your application to the */var* directory. This is because we recommend that you don't run the application in a user's home directory.
 
-Remember that the */var* directory is used to store content and log files by various applications such as Apache and Nginx. You'll follow that practice here by publishing the newly created web application to */var*.
+Remember that the **/var** directory is used to store content and log files by various applications such as Apache and Nginx. You'll follow that practice here by publishing the newly created web application to **/var**.
 
-Change to the project folder, and then run `dotnet publish` to create a publishing folder. Copy that folder to the /var directory.
+Change to the project folder, and then run `dotnet publish` to create a publishing folder. Copy that folder to the **/var** directory.
 
 :::image type="content" source="./media/2-1-create-configure-aspnet-core-applications/dotnet-publish.png" alt-text="Screenshot of dotnet publish command." border="true":::
 
@@ -163,7 +162,7 @@ If you want, you can run these tests by using the same `curl` and `wget` command
 
 ## Lifetime of the process and next steps
 
-If the application requires constant uptime, running .NET Core application within an interactive user session isn't a good practice because of the following reasons:
+If the application requires constant uptime, running .NET applications within an interactive user session isn't a good practice for the following reasons:
 
 - If users were to terminate their sessions, for example by closing PuTTY or the PowerShell SSH client, or exit the session, the application would shut down.
 - If the process is terminated for some reason (for example, the process crashes because of an unhandled exception), it won't start automatically and must be restarted manually.
