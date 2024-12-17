@@ -8,6 +8,8 @@
   items:
     - name: Business performance analytics self-help
       href: business-performance-analytics/business-performance-analytics-self-help-overview.md
+    - name: Data quality error ERR00015
+      href: business-performance-analytics/data-quality-err00015.md
     - name: Decimal auto rounding ERR00012
       href: business-performance-analytics/decimal-auto-rounding-err00012.md
     - name: Decimal limit exceeded ERR00011 
