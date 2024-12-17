@@ -4,7 +4,7 @@ description: Resolves issues with optimization requests in the Resource Scheduli
 ms.author: AnilMur
 author: anilmur
 ms.reviewer: mhart
-ms.date: 10/19/2023
+ms.date: 12/17/2024
 ms.custom: sap:Resource Scheduling Optimization
 ---
 # An optimization request fails to modify some bookings
@@ -24,5 +24,5 @@ The optimization request can fail in the following scenarios:
 - Multiple Resource Scheduling Optimization schedules share the same resources and run at the same time. For analysis and troubleshooting, check the following options:
 
   - Review the optimization request booking grid and inspect the operation details column for each requirement and booking.
-  - Check if multiple schedules that share the same resources, requirements, and bookings run at the same time. If that's the case, update the schedules to run sequentially or reconfigure them to avoid overlaps.
+  - Check if multiple schedules that share the same resources, requirements, and bookings run at the same time. If that's the case, update the schedules to run sequentially or reconfigure them to avoid overlaps. If schedules include overlapping resources, requirements, and bookings, a later schedule is cancelled with a status of blocked.
   - Check if any other user or workflow tries to update a booking during the optimization request run.

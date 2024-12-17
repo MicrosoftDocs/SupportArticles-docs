@@ -4,7 +4,7 @@ description: Resolves issues with bookings in the Resource Scheduling Optimizati
 ms.author: AnilMur
 author: anilmur
 ms.reviewer: mhart
-ms.date: 10/19/2023
+ms.date: 12/17/2024
 ms.custom: sap:Resource Scheduling Optimization
 ---
 # Troubleshoot issues with bookings in Resource Scheduling Optimization
@@ -37,8 +37,10 @@ Booking status has a **Scheduling Method** field that dictates how Resource Sche
 
 ### Block Resource Scheduling Optimization from moving past bookings
 
+The optimization range is the time range during which bookings can be created, updated, or deleted. It's defining the "output" side, but not the "input" side. The optimization range doesn't determine what bookings are included.
+
 - Set the booking status to **Don't Move**.
-- Remove the booking from the booking view.
+- Remove the booking from the booking view. To ensure that optimization runs, consider only future bookings that occur after a specific point. In the Booking View of optimization scope, you can select a value in the **On or After** field. Learn more: [Optimization scopes in Resource Scheduling Optimization](/dynamics365/field-service/rso-optimization-scope#create-an-optimization-scope).
 - Lock the booking to a time or time range in the past.
 - Set a promised date from/to while enabling the time window constraint.
 
