@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 3050055
 Consider the following scenario:
 
 - IIS is configured to use digest authentication.
-- The server receives a request via the HyperText Transfer Protocol (HTTP) header. (This behavior occurs if the client request is rerouted through a proxy.)
+- The server receives a request with the `Via` HyperText Transfer Protocol (HTTP) header. (This behavior occurs if the client request is rerouted through a proxy.)
 - The resource requested is protected by digest authentication.
 - A child request is created in the IIS pipeline. For example, a request is sent for a directory's default document, and the URL that is sent has a slash (/) as the last character.
 
