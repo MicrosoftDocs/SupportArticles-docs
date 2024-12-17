@@ -7,8 +7,6 @@
     items:
     - name: Basic troubleshooting
       href: create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md
-    - name: CniDownloadTimeoutVMExtensionError error (41)
-      href: create-upgrade-delete/error-code-cnidownloadtimeoutvmextensionerror.md
     - name: ERR_VHD_FILE_NOT_FOUND error (124)
       href: create-upgrade-delete/error-code-vhdfilenotfound.md
     - name: InvalidParameter error
@@ -17,10 +15,6 @@
       href: create-upgrade-delete/error-code-invalidresourcereference.md
     - name: Known issues - Custom kubelet configuration on Windows
       href: create-upgrade-delete/known-issues-custom-kubelet-configuration.md
-    - name: K8SAPIServerConnFailVMExtensionError error (51)
-      href: create-upgrade-delete/error-code-k8sapiserverconnfailvmextensionerror.md
-    - name: K8SAPIServerDNSLookupFailVMExtensionError error (52)
-      href: create-upgrade-delete/error-code-k8sapiserverdnslookupfailvmextensionerror.md
     - name: LinkedAuthorizationFailed error
       href: create-upgrade-delete/error-code-linkedauthorizationfailed.md
     - name: MissingSubscriptionRegistration error
@@ -29,8 +23,6 @@
       href: create-upgrade-delete/error-code-operationnotallowed-publicipcountlimitreached.md
     - name: OperationPreempted error
       href: create-upgrade-delete/error-code-operationpreempted.md
-    - name: OutboundConnFailVMExtensionError error (50)
-      href: create-upgrade-delete/error-code-outboundconnfailvmextensionerror.md
     - name: RequestDisallowedByPolicy error
       href: create-upgrade-delete/error-code-requestdisallowedbypolicy.md
     - name: ReservedResourceName error
@@ -364,4 +356,4 @@
     - name: VMExtensionError_K8SAPIServerConnFail error
       href: error-codes/vmextensionerror-k8sapiserverconnfail.md
     - name: VMExtensionError_K8SAPIServerDNSLookupFail error
-      href: error-codes/vmextensionerror-k8Ssapiserverdnslookupfail.md
+      href: error-codes/vmextensionerror-k8sapiserverdnslookupfail.md
