@@ -313,13 +313,11 @@ This is the same error you would get when sending a request using `GET` with an 
 
 ### Cause
 
-To provide more secure service, we have fixed an issue that allowed invalid `Prefer` request header values to be processed without an exception being thrown. This error will occur starting with Dataverse version `9.2.2412.2` which began deployment in December of 2024 and will deployed to all regions in February of 2025.
+To provide more secure service, we have fixed an issue that allowed invalid `Prefer` request header values to be processed without an exception being thrown. This error will occur starting with Dataverse version `9.2.2411.4` which began deployment in December of 2024 and will deployed to all regions in January of 2025.
 
 ### How to avoid
 
 Review the guidance about how to properly set [Prefer Headers in the Dataverse Web API documentation](/power-apps/developer/data-platform/webapi/compose-http-requests-handle-errors#prefer-headers).
-
-If this issue occurs in code that you don't control, you should contact technical support to request \<Please specify what they should do in this case>
 
 ## See also
 
