@@ -1,7 +1,7 @@
 ---
 title: Instances where HTTP.sys doesn't cache
 description: This article describes the instances that the HTTP.sys driver doesn't cache content.
-ms.date: 03/30/2020
+ms.date: 12/17/2024
 ms.custom: sap:WWW Modules and Features\Output Cache
 ---
 # Instances in which HTTP.sys doesn't cache content
@@ -23,7 +23,7 @@ The `HTTP.sys` response cache caches any request with the appropriate flag in th
     > [!NOTE]
     > Static compression can be used with `HTTP.sys` caching.
 
-- The static file is a Universal Naming Convention (UNC) file and the `DoDirMonitoringForUnc` registry key is not enabled.
+- The static file is a Universal Naming Convention (UNC) file and the `DoDirMonitoringForUnc` registry key isn't enabled.
 
     > [!NOTE]
     >  You can use the `DoDirMonitoringForUnc` registry property (a DWORD value) to switch the static file cache back to a change notification cache. This is set as follows:  `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Inetinfo\Parameters`  
@@ -37,7 +37,7 @@ The `HTTP.sys` response cache caches any request with the appropriate flag in th
 - The request has an entity body.
 - Certificate mapping is enabled for the URL.
 - Custom logging is enabled for the website.
-- The request HTTP version is not 1.1 or 1.0.
+- The request HTTP version isn't 1.1 or 1.0.
 - The request contains a `Translate: f` header.
 - An `Expect:` header that doesn't contain exactly `100 continue` is present.
 - The request contains either an `If-Range:` header or a `Range:` header.
