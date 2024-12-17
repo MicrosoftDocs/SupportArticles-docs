@@ -23,10 +23,10 @@ For more detailed information about the upgrade process, see the "Upgrade an AKS
 
 An AKS cluster upgrade operation fails with one of the following error messages:
 
-> (UpgradeFailed) Drain `node aks-<nodepool-name>-xxxxxxxx-vmssxxxxxx` failed when evicting pod `<pod-name>` failed with Too Many Requests error. This is often caused by a restrictive Pod Disruption Budget (PDB) policy. See http://aka.ms/aks/debugdrainfailures. Original error: Cannot evict pod as it would violate the pod's disruption budget.. PDB debug info: `<namespace>/<pod-name>` blocked by pdb `<pdb-nanme>` with 0 unready pods.
+> (UpgradeFailed) Drain `node aks-<nodepool-name>-xxxxxxxx-vmssxxxxxx` failed when evicting pod `<pod-name>` failed with Too Many Requests error. This is often caused by a restrictive Pod Disruption Budget (PDB) policy. See https://aka.ms/aks/debugdrainfailures. Original error: Cannot evict pod as it would violate the pod's disruption budget.. PDB debug info: `<namespace>/<pod-name>` blocked by pdb `<pdb-name>` with 0 unready pods.
 
 > Code: UpgradeFailed
-> Message: Drain node `aks-<nodepool-name>-xxxxxxxx-vmssxxxxxx` failed when evicting pod `<pod-name>` failed with Too Many Requests error. This is often caused by a restrictive Pod Disruption Budget (PDB) policy. See http://aka.ms/aks/debugdrainfailures. Original error: Cannot evict pod as it would violate the pod's disruption budget.. PDB debug info: `<namespace>/<pod-name>` blocked by pdb `<pdb-nanme>` with 0 unready pods.
+> Message: Drain node `aks-<nodepool-name>-xxxxxxxx-vmssxxxxxx` failed when evicting pod `<pod-name>` failed with Too Many Requests error. This is often caused by a restrictive Pod Disruption Budget (PDB) policy. See https://aka.ms/aks/debugdrainfailures. Original error: Cannot evict pod as it would violate the pod's disruption budget.. PDB debug info: `<namespace>/<pod-name>` blocked by pdb `<pdb-name>` with 0 unready pods.
 
 ## Cause
 
