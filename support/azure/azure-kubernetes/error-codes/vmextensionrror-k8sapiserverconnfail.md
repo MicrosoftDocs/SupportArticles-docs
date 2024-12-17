@@ -1,5 +1,5 @@
 ---
-title: VMExtensionError_K8SAPIServerConnFail error code 
+title: Troubleshoot the VMExtensionError_K8SAPIServerConnFail error code 
 description: Learn how to troubleshoot the VMExtensionError_K8SAPIServerConnFail error (51) when you try to start or create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.date: 01/24/2024
 ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis, jovieir
