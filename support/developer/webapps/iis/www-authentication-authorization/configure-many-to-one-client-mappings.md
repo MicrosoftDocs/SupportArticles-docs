@@ -9,7 +9,7 @@ ms.topic: how-to
 
 This article introduces how to use the Configuration Editor feature in Microsoft Internet Information Services (IIS) to configure Many-to-One client certificate mappings.
 
-_Original product version:_ &nbsp; Internet Information Services
+_Original product version:_ &nbsp; Internet Information Services  
 _Original KB number:_ &nbsp; 2026113
 
 ## Introduction
@@ -105,7 +105,7 @@ Here are the prerequisites needed for this walk-through:
 
 In these example images, there are two entries for rules for mapping the certificate.
 
-First, there are the **Subject** and **Issuer** fields in the certificate.  Second, there's the **matchcriteria** property to map the certificate to the account **mydomain\testuser**.  
+First, there are the **Subject** and **Issuer** fields in the certificate. Second, there's the **matchcriteria** property to map the certificate to the account **mydomain\testuser**.  
 
 In the following image, the final mapping for a specific windows account is illustrated. As you can see, there are two entries for **rules** for this account.
 
