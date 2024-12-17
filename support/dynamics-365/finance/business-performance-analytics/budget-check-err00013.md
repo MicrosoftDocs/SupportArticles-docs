@@ -4,7 +4,7 @@ description: Provides information about the Null check violation error (error co
 author: jinniew
 ms.author: jiwo
 ms.reviewer: twheeloc 
-ms.date: 12/13/2024
+ms.date: 12/17/2024
 ms.search.form: business-performance-analytics
 audience: Application User
 ms.custom: sap:Business intelligence, reporting, analytics\Business Performance Analytics (BPA)
