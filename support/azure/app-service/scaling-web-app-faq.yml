@@ -4,9 +4,9 @@ metadata:
   description: Describe common questions and answers about scaling in Azure App Service.
   services: app-service
   author: auolivei
-  ms.reviewer: amehrot, rimarr, genli
+  ms.reviewer:  genli
   ms.topic: faq
-  ms.date: 08/03/2022
+  ms.date: 12/05/2024
   ms.author: auolivei
   ms.service: azure-app-service
 title: Frequently asked questions about scaling web apps in Azure App Service
@@ -62,7 +62,7 @@ sections:
           Autoscale is triggered when metrics exceed preconfigured boundaries. Sometimes, you might notice that the capacity is only partially filled compared to what you expected. This behavior might occur when the number of instances you want isn't available. In that scenario, autoscale partially fills in with the available number of instances. Autoscale then runs the rebalance logic to get more capacity. It allocates the remaining instances, and this allocation might take a few minutes. If you don't see the expected number of instances after a few minutes, it might be because the partial refill was enough to bring the metrics within the boundaries. Or, autoscale might have scaled down because it reached the lower metrics boundary.
 
       - question: |
-           When I scale up an App Service Plan to a Premium V3 tier, the "Premium V3 is not supported for this scale unit. Please consider redeploying or cloning your app." error occurs. What should I do?
+           When I scale up an App Service Plan to a Premium V3 tier, the "Premium V3 isn't supported for this scale unit. Please consider redeploying or cloning your app." error occurs. What should I do?
         answer: |
           The Premium V3 feature requires the site to run on the newest hardware infrastructure. To scale up an App Service Plan to Premium V3, the Web App must be running in an App Service deployment that supports PremiumV3. For more information, see [Scale up from an unsupported resource group and region combination](/azure/app-service/app-service-configure-premium-tier#scale-up-from-an-unsupported-resource-group-and-region-combination).
 
@@ -75,6 +75,11 @@ sections:
           My Web App is using the Diagnostic setting "AppServiceFileAuditLogs" and I'm unable to scale the App Service Plan from Premium V2 to the Basic tier. What should I do? 
         answer: |
           The file change audit logs "AppServiceFileAuditLogs" are only available for App Services in Premium, PremiumV2, and Isolated App Service Plans. If you need "AppServiceFileAuditLogs," you won't be able to scale down to the Basic tier. To have these audit logs available, configure your App Service Plan for Premium or higher tier. 
+
+      - question: |
+          I'm getting the "App Service Plans with fewer than 3 workers aren't allowed for zone redundancy. Requested number of workers: number" error. What should I do?
+        answer: |
+          [Availability zone support](/azure/reliability/reliability-app-service#availability-zone-support) requires at least three instances. Verify if the App Service Plan has zone redundancy enabled and if you have autoscale on the App Service Plan. If so, correct the autoscale rule to not set the number of instances to a value less than three.
 
 
           [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

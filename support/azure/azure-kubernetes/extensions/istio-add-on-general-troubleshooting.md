@@ -40,13 +40,13 @@ kubectl logs --selector app=istiod --namespace aks-istio-system
 
 ### Step 2: Bounce (delete) a pod
 
-You might have a good reason to restart a pod. Because Istiod is a deployment, it's safe to just delete the pod by running the [kubectl delete](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_delete/) command:
+You might have a good reason to restart a pod. Because Istiod is a deployment, it's safe to simply delete the pod by running the [kubectl delete](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_delete/) command:
 
 ```bash
 kubectl delete pods <istio-pod> --namespace aks-istio-system
 ```
 
-The Istio pod is managed by a deployment, so the pod is automatically re-created and redeployed after you delete the Istio pod directly. Therefore, deleting the pod is an alternative method for restarting the pod.
+The Istio pod is managed by a deployment. It's automatically re-created and redeployed after you delete it directly. Therefore, deleting the pod is an alternative method for restarting the pod.
 
 > [!NOTE]
 > Alternatively, you can restart the deployment directly by running the following [kubectl rollout restart](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_rollout/kubectl_rollout_restart/) command:
@@ -73,7 +73,7 @@ To view the types of custom resource definitions (CRDs) that Istio uses, run the
 kubectl get crd | grep istio
 ```
 
-Next, run the following `kubectl get` command to list all the resource names that are based on a particular CRD:
+To list all the resource names that are based on a particular CRD, run the following `kubectl get` command:
 
 ```bash
 kubectl get <crd-type> --all-namespaces
@@ -81,7 +81,7 @@ kubectl get <crd-type> --all-namespaces
 
 ### Step 5: View the list of Istiod pods
 
-View the list of Istiod pods by running the following `kubectl get` command:
+To view the list of Istiod pods, run the following `kubectl get` command:
 
 ```bash
 kubectl get pod --namespace aks-istio-system --output yaml
@@ -112,6 +112,8 @@ kubectl logs <pod-name> --namespace <pod-namespace> --container istio-proxy
 ## Troubleshooting checklist: Using istioctl
 
 The following troubleshooting steps describe how to collect information and debug your mesh environment by running various `istioctl` commands.
+
+All `istioctl` commands must be run together with the `--istioNamespace aks-istio-system` flag to point to the AKS add-on installation of Istio.
 
 > [!WARNING]
 > Some `istioctl` commands send requests to all sidecars.
@@ -186,7 +188,7 @@ istioctl experimental check-inject --istioNamespace aks-istio-system \
 
 ### Step 6: Get a full bug report
 
-A full bug report contains the most detailed information. However, it can also be time-consuming on a large cluster because it includes all pods. You can limit the bug report to certain namespaces. You can also limit the report to certain deployments, pods, or label selectors.
+A full bug report contains the most detailed information. However, running this report can be time-consuming on a large cluster because it includes all pods. You can limit the bug report to certain namespaces. You can also limit the report to certain deployments, pods, or label selectors.
 
 To retrieve a bug report, run the following [istioctl bug-report](https://istio.io/latest/docs/reference/commands/istioctl/#istioctl-bug-report) command:
 
@@ -201,9 +203,9 @@ istioctl bug-report --istioNamespace aks-istio-system \
 
 If you encounter high memory consumption in Envoy, double-check your Envoy settings for [statistics data collection](https://istio.io/latest/docs/ops/configuration/telemetry/envoy-stats/). If you're [customizing Istio metrics](https://istio.io/latest/docs/tasks/observability/metrics/customize-metrics/) through [MeshConfig](./istio-add-on-meshconfig.md), remember that certain metrics can have [high cardinality](https://istio.io/latest/about/faq/metrics-and-logs/#metric-expiry) and, therefore, create a higher memory footprint. Other fields in MeshConfig, such as concurrency, affect CPU usage and should be configured carefully.
 
-By default, Istio adds information about all services that are in the cluster to every Envoy configuration. The [Sidecar](https://istio.io/latest/docs/reference/config/networking/sidecar/) can limit the scope of this addition to workloads within specific namespaces only. For more information, see [Watch out for this Istio proxy sidecar memory pitfall](https://medium.com/geekculture/watch-out-for-this-istio-proxy-sidecar-memory-pitfall-8dbd99ea7e9d).
+By default, Istio adds information about all services that are in the cluster to every Envoy configuration. The [sidecar](https://istio.io/latest/docs/reference/config/networking/sidecar/) can limit the scope of this addition to workloads that are within specific namespaces only. For more information, see [Watch out for this Istio proxy sidecar memory pitfall](https://medium.com/geekculture/watch-out-for-this-istio-proxy-sidecar-memory-pitfall-8dbd99ea7e9d).
 
-For example, the following `Sidecar` definition in the `aks-istio-system` namespace restricts the Envoy configuration for all proxies across the mesh to `aks-istio-system` and other workloads within the same namespace as that specific application.
+For example, the following `Sidecar` definition in the `aks-istio-system` namespace restricts the Envoy configuration for all proxies across the mesh to `aks-istio-system` and other workloads within the same namespace as that specific application:
 
 ```yaml
 apiVersion: networking.istio.io/v1alpha3
@@ -236,7 +238,7 @@ If your application pod starts before the Envoy sidecar starts, the application 
 
 ### Step 5: Configure a Service Entry when using an HTTP proxy for outbound traffic
 
-If your cluster uses an HTTP proxy for outbound internet access, you'll need to configure a Service Entry. For more information, see [HTTP proxy support in Azure Kubernetes Service](/azure/aks/http-proxy#istio-add-on-http-proxy-for-external-services).
+If your cluster uses an HTTP proxy for outbound internet access, you'll have to configure a Service Entry. For more information, see [HTTP proxy support in Azure Kubernetes Service](/azure/aks/http-proxy#istio-add-on-http-proxy-for-external-services).
 
 ## Error messages
 

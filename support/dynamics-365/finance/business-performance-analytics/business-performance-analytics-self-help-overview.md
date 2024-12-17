@@ -4,7 +4,7 @@ description: Provides information about Business performance analytics self-help
 author: jinniew
 ms.author: jiwo
 ms.reviewer: twheeloc 
-ms.date: 12/04/2024
+ms.date: 12/17/2024
 ms.custom: sap:Business intelligence, reporting, analytics
 ms.search.form: business-performance-analytics
 audience: Application User
@@ -52,6 +52,8 @@ For information about specific errors or warnings, see the following articles:
 - [Decimal limit exceeded: Error code: ERR00011 [Type: Warning]](decimal-limit-exceed-err00011.md)
 - [Decimal auto rounding: Error code: ERR00012 [Type: Warning]](decimal-auto-rounding-err00012.md)
 - [Data quality error: Error code: ERR00015 [Type: Warning]](data-quality-err00015.md)
+- [Null join violation: Error code: ERR00014 [Type: Warning]](ledger-join-err00014.md)
+- [Null check violation: Error code: ERR00013 [Type: Warning]](budget-check-err00013.md)
 
 ## See also
 
