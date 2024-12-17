@@ -96,7 +96,7 @@ If you run `curl http://localhost`, nothing occurs. This most likely means that 
 This is what occurs now:
 
 - You make an HTTP request to `http://localhost:5000`, and you connect successfully. This means that the application is accepting the connections on port 5000.
-- You receive an HTTP 307 Temporary Redirect response from the application that points to a secure HTTPS location: `https://locahost:5001`.
+- You receive an HTTP 307 Temporary Redirect response from the application that points to a secure HTTPS location: `https://localhost:5001`.
 - Wget is smart enough to follow this redirect and make a new request to `https://localhost:5001`.
 - You connect successfully again. However, `wget` doesn't trust the SSL certificate. Therefore, the connection fails.
 
