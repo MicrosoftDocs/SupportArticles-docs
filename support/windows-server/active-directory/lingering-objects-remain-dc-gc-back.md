@@ -32,15 +32,15 @@ The best way to identify in which domain an object is located (and from that to 
 
 1. Start **Ldp.exe**.
 2. On the **Connection** menu, select **Connect**.
-3. Enter the name of a global catalog. Enter **3268** as the port to which to connect. Select **OK**.
-4. On the **Connection** menu, select **Bind**. Enter valid credentials if your current credentials aren't sufficient to query all of the global catalog contents. Select **OK**.
+3. Enter the name of a global catalog server. Enter **3268** as the port to which to connect. Select **OK**.
+4. On the **Connection** menu, select **Bind**. Enter valid credentials if your current credentials aren't sufficient to query all of the global catalog server contents. Select **OK**.
 5. On the **View** menu, select **Tree**. Enter the distinguished name of the forest root. Select **OK**.
 6. Right-click the forest root in the tree list, and then select **Search**.
 7. Create a filter of the following form:
 
-    **([attribute]=[value])**
+    **(attribute=value)**
 
-    Substitute appropriate data for [*attribute*] and [*value*]. For example, to create a filter to return results where the **sAMAccountName** attribute has a value that is set to a user account named **testuser**, enter **(sAMAccountName=testuser)** in the **Filter** box. The **cn**, **userPrincipalName**, **sAMAccountName**, **name**, **mail**, and **sn** attributes are useful candidates for finding a user object. For group objects, use the **cn**, **sAMAccountName**, or **name** attributes. Note that you can use asterisks (*) in the [*value*] field if required.
+    Substitute appropriate data for *attribute* and *value*. For example, to create a filter to return results where the **sAMAccountName** attribute has a value that is set to a user account named **testuser**, enter **(sAMAccountName=testuser)** in the **Filter** box. The **cn**, **userPrincipalName**, **sAMAccountName**, **name**, **mail**, and **sn** attributes are useful candidates for finding a user object. For group objects, use the **cn**, **sAMAccountName**, or **name** attributes. Note that you can use asterisks (*) in the *value* field if required.
 
     For more information on Lightweight Directory Access Protocol (LDAP) filter syntax, see [Search Filter Syntax](/windows/win32/adsi/search-filter-syntax).
 
@@ -48,7 +48,7 @@ The best way to identify in which domain an object is located (and from that to 
 9. Select **Options**. In the **Search Options** dialog box, move to the end of the **Attributes** control.
 10. Append **objectGUID;** to the list. Select **OK**.
 11. Select **Run** to run the query.
-12. View the results. You must identify which of the displayed objects should be removed from the global catalog. One indication that you have found a problematic object is that the object doesn't exist on a read/write copy of the naming context.
+12. View the results. You must identify which of the displayed objects should be removed from the global catalog server. One indication that you have found a problematic object is that the object doesn't exist on a read/write copy of the naming context.
 13. Rephrase the query and run it again if required.
 14. If you have identified the lingering object, note its distinguished name and **objectGUID**.
 
@@ -65,10 +65,10 @@ objectGuid : <GUID>
 
 ## Delete lingering objects for few objects scenarios
 
-If you have only a few objects and global catalogs, follow these steps to delete the objects by using **Ldp.exe**:
+If you have only a few objects and global catalog servers, follow these steps to delete the objects by using **Ldp.exe**:
 
 1. Sign in to each global catalog server that contains a copy of the lingering object by using Enterprise Administrator credentials.
-2. Start **Ldp.exe** and connect to port 389 on the local domain controller (leave the Server box empty).
+2. Start **Ldp.exe** and connect to port 389 on the local domain controller (leave the **Server** box empty).
 3. On the **Connection** menu, select **Bind**. Leave all of the boxes empty (you're already signed in as an Enterprise Administrator).
 4. On the **Browse** menu, select **Modify**.
 5. Leave the **Dn** box empty.
@@ -97,13 +97,13 @@ If you have only a few objects and global catalogs, follow these steps to delete
 
 If you have many objects to delete and many global catalog servers, it may be more convenient to use the following scripts:
 
-1. Paste the following text into a new file named Walkservers.cmd in a new folder:
+1. Paste the following text into a new file named **Walkservers.cmd** in a new folder:
 
     ```console
     for /f %%j in (server-list.txt) do walkobjects %%j
     ```
 
-2. Paste the following text into a file named Walkobjects.cmd:
+2. Paste the following text into a file named **Walkobjects.cmd**:
 
     ```console
     for /f "delims=@" %%i in (object-list.txt) do cscript //NoLogo MODIFYROOTDSE.VBS %1 "%%i" >>update-%1.log
@@ -174,10 +174,6 @@ If you have many objects to delete and many global catalog servers, it may be mo
 
     `<GUID = <DC GUID>> : <GUID = <object GUID>>`
 
-    A sample entry looks like the following:
-
-    `<GUID=<GUID>> : <GUID=<GUID>>`
-
     Here, the first value is the GUID of the writable domain controller that is used to confirm that the original object no longer exists. The second value is the GUID of the lingering object to be removed.
 
 6. Run the **Walk-servers.cmd** file. The scripts generate a log file that is named **Update-server-name.log** for each global catalog server that is listed in the **Server-list.txt** file. The log files contain a line for each object that is to be deleted.
@@ -185,8 +181,8 @@ If you have many objects to delete and many global catalog servers, it may be mo
 > [!NOTE]
 > Errors in the log files don't necessarily indicate a problem because the lingering objects may not exist on all global catalog servers. However, error messages of the form "operation refused" or "operation error" indicate a problem with the GUIDs or with the syntax of the value. If these errors occur, verify the following items:
 >
-> Make sure that the domain controller GUIDs are the correct GUIDs for domain controllers that contain a writable copy of the domain that contains the object.
-> Make sure that the object GUIDs identify lingering objects in global catalog (read-only) naming contexts.
+> - Make sure that the domain controller GUIDs are the correct GUIDs for domain controllers that contain a writable copy of the domain that contains the object.
+> - Make sure that the object GUIDs identify lingering objects in global catalog (read-only) naming contexts.
 
 ### Error message when running Walkservers.cmd to modify many lingering objects in the environment
 
