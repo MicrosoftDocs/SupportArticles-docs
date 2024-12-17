@@ -76,10 +76,6 @@ When a VM is running, it is deployed to a physical server. The physical servers 
 
 Choose a size that is supported on the availability set's cluster. It is recommended when creating an availability set to choose the largest VM size you think you need, and have that be your first deployment to the Availability set.
 
-## Can I add an existing Classic VM to an availability set?
-
-Yes. You can add an existing classic VM to a new or existing Availability Set. For more information see [Add an existing virtual machine to an availability set](/previous-versions/azure/virtual-machines/windows/classic/configure-availability-classic#addmachine).
-
 ## Where can I deploy Azure VMs?
 
 You can deploy Azure VMs in any of the supported regions listed in [Choose the Right Azure Region for You](https://azure.microsoft.com/explore/global-infrastructure/geographies/#geographies). If a region isn't listed, it may be present for redundancy requirements. For example, South Africa West is available as redundancy for South Africa North as a replication point.
