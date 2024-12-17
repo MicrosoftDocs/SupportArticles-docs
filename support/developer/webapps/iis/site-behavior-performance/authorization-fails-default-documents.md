@@ -43,7 +43,7 @@ In this scenario, the pertinent section of the IIS configuration is similar to t
 </location>
 ```
 
-If the extensionless URL handlers aren't enabled, the IIS static file handler acts first when a request is sent to the root of the site and redirects the request to the configured default document. For example, if the default document is set to **default.aspx** and the site name is `http://www.contoso.com`, sending a request to `http://www.contoso.com` will automatically send the user to `http://www.contoso.com/default.aspx`. Next, ASP.NET will come in to play due to the .aspx extension of the request URL and will serve *default.aspx* to the user in accordance with the authorization setting in the `<location>` tag section of the configuration file.
+If the extensionless URL handlers aren't enabled, the IIS static file handler acts first when a request is sent to the root of the site and redirects the request to the configured default document. For example, if the default document is set to **default.aspx** and the site name is `http://www.contoso.com`, sending a request to `http://www.contoso.com` automatically sends the user to `http://www.contoso.com/default.aspx`. Next, ASP.NET comes in to play due to the .aspx extension of the request URL and serves *default.aspx* to the user in accordance with the authorization setting in the `<location>` tag section of the configuration file.
 
 If the extensionless URL handlers are enabled, the ASP.NET extensionless URL handler acts first for the request to `http://www.contoso.com`. ASP.NET determines that the URL requires authentication, so the user is redirected to the forms authentication login page before the IIS static file handler gets a chance to request the default document.
 
