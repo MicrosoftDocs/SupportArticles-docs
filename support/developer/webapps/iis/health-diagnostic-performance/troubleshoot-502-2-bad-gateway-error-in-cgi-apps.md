@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot HTTP 502.2 Bad Gateway error in CGI applications
 description: Describes HTTP 502.2 Bad Gateway error in CGI applications and provides troubleshooting steps to resolve this issue.
-ms.date: 12/16/2024
+ms.date: 12/17/2024
 ms.author: haiyingyu
 author: HaiyingYu
 ms.reviewer: johnhart
@@ -82,4 +82,4 @@ Capture [FREB](troubleshoot-php-with-failed-request-tracing.md) log for the HTTP
 
 Troubleshoot the CGI process executable file to determine why the CGI process terminates unexpectedly. You might have to generate a memory dump file of the CGI process when the access violation occurs.
 
-This problem occurs when the CGI application does exactly what the error suggests: inserts invalid data into the HTTP Header value(s) that is sends to IIS as part of its response. 
+This problem occurs when the CGI application does exactly what the error suggests, inserting invalid data into the HTTP header values that are sent to IIS as part of its response. 
