@@ -301,8 +301,10 @@ You get the following error when you submit a `POST`, `PATCH`, or `PUT` request.
 HTTP/1.1 400 Bad Request
 
 {
-	"Message": "Error identified on the 'odata.include-annotations' value inside the 'Prefer' header. Refer to the following link for more details: https://go.microsoft.com/fwlink/?linkid=2300109. See exception message for more details 'An error occurred when parsing the HTTP header 'Prefer'. The header value 'odata.include-annotations=\\\"*\\\"' is incorrect at position '26' because the escape character '\\' is not inside a quoted-string.'.",
-	"ErrorCode": "0x80097303"
+  "Message": "Error identified on the 'odata.include-annotations' value inside the 'Prefer' header. 
+  Refer to the following link for more details: https://go.microsoft.com/fwlink/?linkid=2300109. 
+  See exception message for more details 'An error occurred when parsing the HTTP header 'Prefer'. The header value 'odata.include-annotations=\\\"*\\\"' is incorrect at position '26' because the escape character '\\' is not inside a quoted-string.'.",
+  "ErrorCode": "0x80097303"
 }
 
 ```
@@ -311,7 +313,7 @@ This is the same error you would get when sending a request using `GET` with an 
 
 ### Cause
 
-To provide more secure service, we have fixed an issue that allowed invalid `Prefer` request header values to be processed without an exception being thrown.  This error will occur starting with Dataverse version `9.2.241???` which began deployment in December of 2024 and was deployed to all regions in March of 2025???.
+To provide more secure service, we have fixed an issue that allowed invalid `Prefer` request header values to be processed without an exception being thrown. This error will occur starting with Dataverse version `9.2.2412.2` which began deployment in December of 2024 and will deployed to all regions in February of 2025.
 
 ### How to avoid
 
