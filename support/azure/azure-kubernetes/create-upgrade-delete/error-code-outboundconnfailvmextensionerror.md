@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot the OutboundConnFailVMExtensionError error code (50)
 description: Learn how to troubleshoot the OutboundConnFailVMExtensionError error (50) when you try to start or create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 01/24/2024
-ms.reviewer: rissing, chiragpa, v-leedennis, jovieir
+ms.date: 12/17/2024
+ms.reviewer: rissing, chiragpa, jaewonpark, v-leedennis, jovieir
 ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
@@ -119,8 +119,7 @@ The following table lists specific reasons why traffic might be blocked, and the
 
 | Issue | Solution |
 | ----- | -------- |
-| Traffic is blocked by firewall rules or a proxy server | In this scenario, a firewall or a proxy server does egress filtering. To verify that all required domains and ports are allowed, see [Control egress traffic for cluster nodes in Azure Kubernetes Service (AKS)](/azure/aks/limit-egress-traffic). |
-| Traffic is blocked by a cluster network security group (NSG) | On any NSGs that are attached to your cluster, verify that there's no blocking on port 443, port 53, or any other port that might have to be used to connect to the endpoint. For more information, see [Control egress traffic for cluster nodes in Azure Kubernetes Service (AKS)](/azure/aks/limit-egress-traffic). |
+| Traffic is blocked by firewall rules, proxy server or network security group (NSG) | In this scenario, issue occurs when the required ports or FQDNs are blocked by firewall, proxy server or NSG. AKS contains required ports and FQDNs to be allowed. You can check what is blocked by checking the connectivity in `Cause` section above. For more information about AKS required ports and FQDNs, see [Outbound network and FQDN rules for Azure Kubernetes Service (AKS) clusters](/azure/aks/outbound-rules-control-egress).|
 | The AAAA (IPv6) record is blocked on the firewall | On your firewall, verify that nothing exists that would block the endpoint from resolving in Azure DNS. |
 | Private cluster can't resolve internal Azure resources | In private clusters, the Azure DNS IP address (`168.63.129.16`) must be added as an upstream DNS server if custom DNS is used. Verify that the address is set on your DNS servers. For more information, see [Create a private AKS cluster](/azure/aks/private-clusters) and [What is IP address 168.63.129.16?](/azure/virtual-network/what-is-ip-address-168-63-129-16) |
 
