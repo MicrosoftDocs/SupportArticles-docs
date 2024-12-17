@@ -31,11 +31,11 @@ To start troubleshooting, collect the activity logs to identify the error associ
 
 [View activity logs to manage Azure resources](/azure/azure-resource-manager/management/view-activity-logs)
 
+## References
+
+- [Troubleshoot common Azure deployment errors](/azure/azure-resource-manager/troubleshooting/common-deployment-errors)  
+- [Custom image provisioning errors](custom-image-provisioning-errors.md)
+- [Troubleshoot Azure VM allocation failures](allocation-failure.md)  
+- [Windows virtual machine deployment FAQs](windows-vm-deployment-faqs.md)
+
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
-
-## Additional Troubleshooting Resources
-
-[Troubleshoot common Azure Deployment errors](https://learn.microsoft.com/azure/azure-resource-manager/troubleshooting/common-deployment-errors)  
-[Custom Image Provisioning Errors](/support/azure/virtual-machines/windows/custom-image-provisioning-errors.md))  
-[Troubleshoot Azure VM Allocation Failures](/support/azure/virtual-machines/windows/allocation-failure)  
-[VM Deployment FAQs](/support/azure/virtual-machines/windows/windows-vm-deployment-faqs)
