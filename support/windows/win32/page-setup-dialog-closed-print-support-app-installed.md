@@ -12,7 +12,7 @@ ms.topic: troubleshooting
 
 Consider the following scenario:
 
-- You're using Windows 10 22H2.
+- You're using Windows 10, version 22H2.
 - You're developing a print support app (PSA) for IPP-based printers.
 - You're using the Notepad or Paint application.
 

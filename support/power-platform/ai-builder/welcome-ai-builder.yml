@@ -5,7 +5,7 @@ summary: Welcome to AI Builder troubleshooting. These articles explain how to de
 metadata:
   title: AI Builder troubleshooting
   description: Landing page for AI Builder troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
-  ms.service: aibuilder #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: ai-builder
   ms.topic: landing-page # Required
   author: ChristySu #Required; your GitHub user alias, with correct capitalization.
   ms.author: christys #Required; microsoft alias of author; optional team alias.

@@ -6,7 +6,7 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Partition and volume management , csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Partition and volume management, csstroubleshoot
 ---
 # Configure a Low Disk Space Alert by Using the Performance Logs and Alerts Feature
 

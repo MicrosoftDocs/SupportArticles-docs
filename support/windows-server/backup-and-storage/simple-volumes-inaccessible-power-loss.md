@@ -6,7 +6,7 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Partition and volume management , csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Partition and volume management, csstroubleshoot
 ---
 # Simple volumes may become inaccessible if a power loss occurs shortly after creation
 

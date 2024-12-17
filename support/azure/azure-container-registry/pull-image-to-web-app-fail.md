@@ -3,7 +3,7 @@ title: Cannot pull image to Azure Web App from Azure Container Registry
 description: Provides guidance for troubleshooting common errors when you pull images from a container registry to Azure Web App for Containers.
 ms.date: 08/12/2024
 ms.reviewer: andbar; chiragpa; v-rekhanain 
-ms.service: azure-container-instances
+ms.service: azure-container-registry
 ms.custom: sap:Image Pull Issues
 ---
 

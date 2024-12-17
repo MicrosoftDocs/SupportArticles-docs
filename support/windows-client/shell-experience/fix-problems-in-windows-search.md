@@ -1,7 +1,7 @@
 ---
 title: Fix problems in Windows Search
 description: Provides troubleshooting options for problems that affect the search results for the Windows Search feature in Windows 11 and Windows 10.
-ms.date: 09/24/2024
+ms.date: 11/06/2024
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -132,7 +132,7 @@ To reset Windows Search by using PowerShell, follow these steps:
       Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy <PreviousValue>
       ```
 
-       In this command, *`<PreviousValue>`* represents the original value of the `Get-ExecutionPolicy` cmdlet. As you did previously, accept the policy change by selecting <kbd>Y</kbd> and then selecting <kbd>Enter</kbd>.
+       In this command, `<PreviousValue>` represents the original value of the `Get-ExecutionPolicy` cmdlet. As you did previously, accept the policy change by selecting <kbd>Y</kbd> and then selecting <kbd>Enter</kbd>.
 
 1. Close the PowerShell Window.
 
@@ -154,15 +154,23 @@ To reset Windows Search by using PowerShell, follow these steps:
 1. If you're using Windows 10, delete the *%USERPROFILE%\\AppData\\Local\\Packages\\Microsoft.Windows.Search_cw5n1h2txyewy* folder.
 
    If you're using Windows 11, delete the *%USERPROFILE%\\AppData\\Local\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy* folder.
-   
+
    > [!NOTE]
    > In some earlier versions of Windows, this folder is named *Microsoft.Windows.Cortana_cw5n1h2txyewy*.
 1. While you're signed in by using the affected account, start Registry Editor, and then navigate to the `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Search` subkey.
 1. Delete the `Search` registry key.
-1. Open an elevated PowerShell Window, and then run the following cmdlet:
+1. Open an elevated PowerShell Window, and then run the following cmdlet based on your Windows version:
+
+   Windows 10:
 
    ```PowerShell
    Add-AppxPackage -Path "C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\Appxmanifest.xml" -DisableDevelopmentMode -Register
+   ```
+
+   Windows 11:
+
+   ```PowerShell
+   Add-AppxPackage -Path "C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\Appxmanifest.xml" -DisableDevelopmentMode -Register
    ```
 
 1. Restart the computer.

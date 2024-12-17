@@ -6,7 +6,7 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, brianlic, jgerend, v-lianna
-ms.custom: sap:Backup, Recovery, Disk, and Storage\File Server Resource Manager (FSRM) , csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\File Server Resource Manager (FSRM), csstroubleshoot
 ---
 # Troubleshoot File Server Resource Manager
 

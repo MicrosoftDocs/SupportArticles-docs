@@ -12,9 +12,6 @@ ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Pr
 
 This article explains why some services use both the protocols TCP and UDP.
 
-_Applies to:_ &nbsp; Windows Server 2003  
-_Original KB number:_ &nbsp; 556000
-
 ## SUMMARY
 
 DNS and some other services work on both the protocols. We'll take an example of DNS Service. Two protocols are different from each other. TCP is a connection-oriented protocol and it requires data to be consistent at the destination and UDP is connection-less protocol and doesn't require data to be consistent or don't need a connection to be established with host for consistency of data.

@@ -6,7 +6,7 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Partition and volume management , csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Partition and volume management, csstroubleshoot
 ---
 # How to establish a striped volume (RAID 0) in Windows Server 2003
 

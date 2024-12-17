@@ -66,8 +66,8 @@ The entire registry key for the DFS Namespace root is missing or other registry 
 Wireshark trace error example when trying to access a DFS Namespace, which is hosted on a remote DFS Namespace server, using the DFS Management console:
 
 ```output
-192.168.0.45	192.168.0.42	NETDFS	310	dfs_GetInfo request 
-192.168.0.42	192.168.0.45	NETDFS	214	dfs_GetInfo response, Error: WERR_NOT_FOUND
+192.168.0.45    192.168.0.42    NETDFS    310    dfs_GetInfo request 
+192.168.0.42    192.168.0.45    NETDFS    214    dfs_GetInfo response, Error: WERR_NOT_FOUND
 ```
 
 ## Resolution for cause 1: Import the registry key from a valid registry backup
@@ -83,7 +83,7 @@ Importing the registry key for the DFS Namespace root, from any other DFS root s
 
 If no backup is present and you have only a single DFS root server holding the DFS domain namespace, the fastest option is to delete the AD configuration of the DFS Namespace, run a DFS Namespaces cleanup on the DFS Namespace server and re-create the DFS Namespace. 
 
-For more information about recovering a DFS Namespace, see [Recovery process of a DFS Namespace](/troubleshoot/windows-server/networking/recovery-process-of-dfs-namespace).
+For more information about recovering a DFS Namespace, see [Recovery process of a DFS Namespace](recovery-process-of-dfs-namespace.md).
 
 ### For domain stand-alone DFS Namespaces
 
@@ -105,25 +105,25 @@ Tracing on a DFS Namespace server, member server, member client with RSAT File S
 The Domain Name System (DNS) queries for LDAP SRV records are successful.
 
 ```output
-192.168.0.42	192.168.0.2	    DNS	110	Standard query 0x7685 SRV _ldap._tcp.pdc._msdcs.contoso.com
-192.168.0.2	    192.168.0.42	DNS	168	Standard query response 0x7685 SRV _ldap._tcp.pdc._msdcs.contoso.com SRV 0 100 389 SRVPdc.contoso.com A 192.168.0.1
+192.168.0.42    192.168.0.2        DNS    110    Standard query 0x7685 SRV _ldap._tcp.pdc._msdcs.contoso.com
+192.168.0.2        192.168.0.42    DNS    168    Standard query response 0x7685 SRV _ldap._tcp.pdc._msdcs.contoso.com SRV 0 100 389 SRVPdc.contoso.com A 192.168.0.1
 ```
 
 However, establishing a TCP connection to the PDC will fail during the TCP three-way handshake.
 
 ```output
-192.168.0.42	192.168.0.1	TCP	66	49893 → 389 [SYN, ECE, CWR] Seq=0 Win=64240 Len=0 MSS=1460 WS=256 SACK_PERM
-192.168.0.42	192.168.0.1	TCP	66	[TCP Retransmission] 49893 → 389 [SYN, ECE, CWR] Seq=0 Win=64240 Len=0 MSS=1460 WS=256 SACK_PERM
-192.168.0.42	192.168.0.1	TCP	66	[TCP Retransmission] 49893 → 389 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 WS=256 SACK_PERM
-192.168.0.42	192.168.0.1	TCP	66	[TCP Retransmission] 49893 → 389 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 WS=256 SACK_PERM
-192.168.0.42	192.168.0.1	TCP	66	[TCP Retransmission] 49893 → 389 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 WS=256 SACK_PERM
+192.168.0.42    192.168.0.1    TCP    66    49893 → 389 [SYN, ECE, CWR] Seq=0 Win=64240 Len=0 MSS=1460 WS=256 SACK_PERM
+192.168.0.42    192.168.0.1    TCP    66    [TCP Retransmission] 49893 → 389 [SYN, ECE, CWR] Seq=0 Win=64240 Len=0 MSS=1460 WS=256 SACK_PERM
+192.168.0.42    192.168.0.1    TCP    66    [TCP Retransmission] 49893 → 389 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 WS=256 SACK_PERM
+192.168.0.42    192.168.0.1    TCP    66    [TCP Retransmission] 49893 → 389 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 WS=256 SACK_PERM
+192.168.0.42    192.168.0.1    TCP    66    [TCP Retransmission] 49893 → 389 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 WS=256 SACK_PERM
 ```
 
 Or you might see the following error in the trace:
 
 ```output
-192.168.0.45	192.168.0.42	NETDFS	310	dfs_GetInfo request 
-192.168.0.42	192.168.0.45	NETDFS	214	dfs_GetInfo response, Error: WERR_NOT_FOUND
+192.168.0.45    192.168.0.42    NETDFS    310    dfs_GetInfo request 
+192.168.0.42    192.168.0.45    NETDFS    214    dfs_GetInfo response, Error: WERR_NOT_FOUND
 ```
 
 ## Resolution for cause 2: Check the status of TCP/UDP port 389

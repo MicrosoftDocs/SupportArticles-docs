@@ -1,63 +1,95 @@
 ---
-title: Error message when you run the w32tm /resync command
-description: Describes a problem that occurs if a Group Policy object for a Windows Time Service object is configured incorrectly.
-ms.date: 12/26/2023
+title: w32tm /resync command fails with "The computer didn't resync because no time data was available."
+description: Describes a resync failure that can be due to multiple different causes. 
+ms.date: 10/11/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, karanr
 ms.custom: sap:Active Directory\Windows Time Service configuration, accuracy, and synchronization, csstroubleshoot
 ---
-# Error message when you run the "w32tm /resync" command to synchronize Windows Server 2003 or Windows SBS to an external time source: "The computer did not resync because no time data was available"
+# "w32tm /resync" fails with "The computer didn't resync because no time data was available."
 
-This article provides a solution to an error that occurs when you run the `w32tm /resync` command to synchronize Windows Server 2003 or Windows SBS to an external time source.
+This article provides several possible solutions to an error that you may get when you run the `w32tm /resync` command to synchronize time with a time source.
 
-_Applies to:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016
 _Original KB number:_ &nbsp; 929276
 
 ## Symptoms
 
-When you run the `w32tm /resync` command to synchronize Microsoft Windows Server 2003 or Microsoft Windows Small Business Server 2003 (Windows SBS) to an external time source, you receive the following error message:
-> The computer did not resync because no time data was available.
+The machine is having time synchronization issues. If you run a manual resync by running `w32tm /resync`, the following error is returned: **The computer did not resync because no time data was available.**
 
-If you run the `w32tm /config /syncfromflags:manual` command or the `w32tm /config /manualpeerlist:peerlist` command to determine whether Windows is configured correctly, the commands complete successfully.
+```console
+C:\Windows\system32>w32tm /resync /rediscover
+Sending resync command to local computer
+The computer did not resync because no time data was available
+```
+
+You may also see the following events:
+
+> Log Name: System  
+> Source: Microsoft-Windows-Time-Service  
+> Date: 24-04-2019 22:35:55  
+> Event ID: 129  
+> Task Category: None  
+> Level: Warning  
+> Keywords:  
+> User: LOCAL SERVICE  
+> Computer: MEM1.fabrikam.com  
+> Description: NtpClient was unable to set a domain peer to use as a time source because of discovery error. NtpClient will try again in 15 minutes and double the reattempt interval thereafter. The error was: The entry is not found. (0x800706E1)
+
+> Log Name: System  
+> Source: Microsoft-Windows-Time-Service  
+> Date: 24-04-2019 23:45:32  
+> Event ID: 134  
+> Task Category: None  
+> Level: Warning  
+> Keywords:  
+> User: LOCAL SERVICE  
+> Computer: MEM1.fabrikam.com  
+> Description: NtpClient was unable to set a manual peer to use as a time source because of DNS resolution error on 'time.windows.com,0x9'. NtpClient will try again in 15 minutes and double the reattempt interval thereafter. The error was: No such host is known. (0x80072AF9)
 
 ## Cause
 
-This problem occurs if a Group Policy object for a Windows Time Service object is configured incorrectly.
+This error generally occurs when the client sends an NTP request but doesn't get a proper NTP response in return. There are multiple scenarios that can cause this.
+
+### Scenario 1
+
+The NTP client can't find the NTP server. This could be due to name resolution (DNS) failing or due to a misspelling of the name/IP address defined in the NTPServer registry key.
+
+### Scenario 2
+
+UDP port 123 is blocked. This might be at the local Windows Firewall or on a non-Microsoft firewall.
+
+### Scenario 3
+
+The target NTP server the client is trying to sync time with isn't advertising as an NTP Server.
 
 ## Resolution
 
-To resolve this problem, examine the Group Policies that set the Windows Time Service Group Policy objects to their default values or to a value of **Not Configured**. Examine Group Policies on the computer and in the organization. Set these Windows Time Service Group Policy objects to use a value of **Not Configured**. To do this, follow these steps:
+### Resolution for scenario 1
 
-1. Open the container that contains the Group Policy object that you want to modify. To do this, follow these steps.
+1. Check the spelling and accuracy of the value defined in the NTPServer registry key. Have the customer verify it’s a valid server, with the correct name or IP address.
+2. Check DNS. Ensure the proper DNS servers are defined which can resolve the target NTP server.
+3. Use network traces for a better idea of what’s happening with name resolution.
 
-    For a domain object
+Ultimately, this scenario could end up being Scenario 2 or Scenario 3.
 
-   1. On a domain controller, click **Start**, click **Run**, type *dsa.msc*, and then click **OK**.
-   2. In the Active Directory Users and Computers Microsoft Management Console (MMC) snap-in, right-click the container that contains the Group Policy object, and then click **Properties**. For example, right-click the container that represents the domain or the organizational unit, and then click **Properties**.
+### Resolution for scenario 2
 
-      > [!NOTE]
-      > If the server that has this problem is a domain controller, examine the Group Policy objects in the **Domain Controllers** container.
-   3. In the **ContainerName Properties** dialog box, click the **Group Policy** tab.
-   4. Click the Group Policy object that you want to modify, and then click **Edit**. For example, if you are examining the Group Policy objects in the **Domain Controllers** container, click **Default Domain Controllers Policy**, and then click **Edit**.
+Collect Network Traces to review UDP port 123 traffic. Do this by starting a capture, then running a `w32tm /resync /rediscover`.
 
-    For a local computer object
+1. If you don’t see any UDP 123 (NTP Request) packets being sent, it’s likely that UDP port 123 is blocked on the local Windows Firewall.
+2. If you do see UDP port 123 (NTP Request) packets being sent but no response back, it’s likely that UDP port 123 is blocked on a non-Microsoft firewall.
 
-    Click **Start**, click **Run**, type *gpedit.msc*, and then click **OK**.
-2. In the **Group Policy Object Editor** MMC snap-in, expand **Computer Configuration**, expand **Administrative Templates**, expand **System**, and then click **Windows Time Service**.
-3. In the right pane, right-click **Global Configuration Settings**, and then click **Properties**.
-4. In the **Global Configuration Settings Properties** dialog box, click **Not Configured**, and then click **OK**.
-5. Expand **Windows Time Service**, click **Time Providers**, and then set all the objects in this node to **Not Configured**. To do this, follow these steps:
-   1. In the right pane, double-click **Enable Windows NTP Client**, click **Not Configured**, and then click **OK**.
-   2. In the right pane, double-click **Configure Windows NTP Client**, click **Not Configured**, and then click **OK**.
-   3. In the right pane, double-click **Enable Windows NTP Server**, click **Not Configured**, and then click **OK**.
-6. Exit **Group Policy Object Editor**, and then click **OK** to exit the **ContainerName Properties** dialog box.
-7. Update Group Policy on the server that has this problem. To do this, follow these steps:
-   1. Click **Start**, click **Run**, type *cmd*, and then click **OK**.
-   2. At the command prompt, type `gpupdate /force` , and then press ENTER.
+If this is validated and UDP port 123 isn't blocked, consider Scenario 3.
 
-## More Information
+### Resolution for scenario 3
 
-For more information, click the following article numbers to view the articles in the Microsoft Knowledge Base:  
-[816042](configure-authoritative-time-server.md) How to configure an authoritative time server in Windows Server 2003
+1. If your customer is attempting to sync with a Domain Controller (whether via NT5DS, NTP or AllSync), review the Windows Time hierarchy. Starting with the PDC, check the Domain Controllers to ensure they are all receiving time from their respective source. You can use w32tm /monitor for a quick status check on all the Domain Controllers.
+2. If the Domain Controllers are properly syncing time from their source, verify and ensure the Domain Controllers are advertising as Domain Controllers by running a `dcdiag /test:Advertising`.
+3. Finally, on the Domain Controllers, verify the following w32time Registry Keys are configured as follows (at `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time`):
+
+   - On all DCs: \TimeProviders\NtpServer – Enabled=1
+   - On the PDC: \Config – AnnounceFlags = 5
+   - On member DCs: \Config – AnnounceFlags = 10

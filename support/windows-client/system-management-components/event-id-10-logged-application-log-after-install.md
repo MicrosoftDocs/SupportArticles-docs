@@ -52,7 +52,7 @@ This problem occurs if the WMI filter is accessed without sufficient permission.
 ## Resolution
 
 To resolve this problem, run the script that is provided at the following Script Center website:  
-[Event ID 10 is logged in the Application log on Windows Vista](https://gallery.technet.microsoft.com/scriptcenter/event-id-10-is-logged-in-c5984711)  
+[Event ID 10 is logged in the Application log on Windows Vista](https://gallery.technet.microsoft.com/scriptcenter/event-id-10-is-logged-in-c5984711)
 
 This problem also occurs in Windows 7 and Windows Server 2008 R2. To resolve the problem in those systems, use the Fix it solution that is available in the following Microsoft Knowledge Base article:  
 [Event ID 10 is logged in the Application log after you install Service Pack 1 for Windows 7 or Windows Server 2008 R2](../setup-upgrade-and-drivers/event-10-is-logged-in-application-log.md)  
@@ -60,3 +60,4 @@ This problem also occurs in Windows 7 and Windows Server 2008 R2. To resolve the
 ## More information
 
 This particular Event ID 10 error message listed above can be safely ignored, it is not indicative of a problem with the Service Pack or with the operating system.
+

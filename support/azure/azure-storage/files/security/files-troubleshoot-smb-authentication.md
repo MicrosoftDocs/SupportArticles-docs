@@ -3,8 +3,8 @@ title: Troubleshoot Azure Files identity-based authentication and authorization 
 description: Troubleshoot problems using identity-based authentication to connect to SMB Azure file shares and see possible resolutions.
 ms.service: azure-file-storage
 ms.custom: sap:Security, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
-ms.date: 07/10/2024
-ms.reviewer: kendownie, v-weizhu
+ms.date: 11/15/2024
+ms.reviewer: kendownie, v-surmaini, v-weizhu
 ---
 # Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
 
@@ -49,9 +49,9 @@ If end users are accessing the Azure file share using Active Directory Domain Se
 
 Validate that permissions are configured correctly:
 
-- **Active Directory Domain Services (AD DS)** see [Assign share-level permissions](/azure/storage/files/storage-files-identity-ad-ds-assign-permissions).
+- **Active Directory Domain Services (AD DS)** see [Assign share-level permissions](/azure/storage/files/storage-files-identity-assign-share-level-permissions).
 
-    Share-level permission assignments are supported for groups and users that have been synced from AD DS to Microsoft Entra ID using Microsoft Entra Connect Sync or Microsoft Entra Connect cloud sync. Confirm that groups and users being assigned share-level permissions are not unsupported "cloud-only" groups.
+    Share-level permission assignments are supported for groups and users that are synced from AD DS to Microsoft Entra ID using Microsoft Entra Connect Sync or Microsoft Entra Connect cloud sync. Confirm that groups and users being assigned share-level permissions aren't unsupported "cloud-only" groups.
 
 - **Microsoft Entra Domain Services** see [Assign share-level permissions](/azure/storage/files/storage-files-identity-auth-active-directory-domain-service-enable?tabs=azure-portal#assign-share-level-permissions).
 
@@ -71,7 +71,7 @@ Enable Microsoft Entra Domain Services on the Microsoft Entra tenant of the subs
 
 ### Self diagnostics steps
 
-First, make sure that you've followed the steps to [enable Azure Files AD DS Authentication](/azure/storage/files/storage-files-identity-auth-active-directory-enable).
+First, make sure that you've followed the steps to [enable Azure Files AD DS Authentication](/azure/storage/files/storage-files-identity-ad-ds-overview).
 
 Second, try [mounting Azure file share with storage account key](/azure/storage/files/storage-how-to-use-files-windows). If the share fails to mount, download [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Windows) to help you validate the client running environment. AzFileDiagnostics can detect incompatible client configurations that might cause access failure for Azure Files, give prescriptive guidance on self-fix, and collect the diagnostics traces.
 
@@ -96,9 +96,9 @@ The cmdlet performs these checks in sequence and provides guidance for failures:
 5. `CheckSidHasAadUser`: Check if the logged on AD user is synced to Microsoft Entra ID. If you want to look up whether a specific AD user is synchronized to Microsoft Entra ID, you can specify the `-UserName` and `-Domain` in the input parameters. For a given SID, it checks if there is a Microsoft Entra user associated.
 6. `CheckAadUserHasSid`: Check if the logged on AD user is synced to Microsoft Entra ID. If you want to look up whether a specific AD user is synchronized to Microsoft Entra ID, you can specify the `-UserName` and `-Domain` in the input parameters. For a given Microsoft Entra user, it checks its SID. To run this check, you must provide the `-ObjectId` parameter, along with the object ID of the Microsoft Entra user.
 7. `CheckGetKerberosTicket`: Attempt to get a Kerberos ticket to connect to the storage account. If there isn't a valid Kerberos token, run the `klist get cifs/storage-account-name.file.core.windows.net` cmdlet and examine the error code to determine the cause of the ticket retrieval failure.
-8. `CheckStorageAccountDomainJoined`: Check if the AD authentication has been enabled and the account's AD properties are populated. If not, [enable AD DS authentication on Azure Files](/azure/storage/files/storage-files-identity-ad-ds-enable).
-9. `CheckUserRbacAssignment`: Check if the AD identity has the proper RBAC role assignment to provide share-level permissions to access Azure Files. If not, [configure the share-level permission](/azure/storage/files/storage-files-identity-ad-ds-assign-permissions). (Supported on AzFilesHybrid v0.2.3+ version)
-10. `CheckUserFileAccess`: Check if the AD identity has the proper directory/file permission (Windows ACLs) to access Azure Files. If not, [configure the directory/file level permission](/azure/storage/files/storage-files-identity-ad-ds-configure-permissions). To run this check, you must provide the `-FilePath` parameter, along with the path of the mounted file that you want to debug the access to. (Supported on AzFilesHybrid v0.2.3+ version)
+8. `CheckStorageAccountDomainJoined`: Check if the AD authentication is enabled and the account's AD properties are populated. If not, [enable AD DS authentication on Azure Files](/azure/storage/files/storage-files-identity-ad-ds-enable).
+9. `CheckUserRbacAssignment`: Check if the AD identity has the proper RBAC role assignment to provide share-level permissions to access Azure Files. If not, [configure the share-level permission](/azure/storage/files/storage-files-identity-assign-share-level-permissions). (Supported on AzFilesHybrid v0.2.3+ version)
+10. `CheckUserFileAccess`: Check if the AD identity has the proper directory/file permission (Windows ACLs) to access Azure Files. If not, [configure the directory/file level permission](/azure/storage/files/storage-files-identity-configure-file-level-permissions). To run this check, you must provide the `-FilePath` parameter, along with the path of the mounted file that you want to debug the access to. (Supported on AzFilesHybrid v0.2.3+ version)
 11. `CheckAadKerberosRegistryKeyIsOff`: Check if the Microsoft Entra Kerberos registry key is off. If the key is on, run `reg add HKLM\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Parameters /v CloudKerberosTicketRetrievalEnabled /t REG_DWORD /d 0` from an elevated command prompt to turn it off, and then reboot your machine. (Supported on AzFilesHybrid v0.2.9+ version)
 
 If you just want to run a subselection of the previous checks, you can use the `-Filter` parameter, along with a comma-separated list of checks to run. For example, to run all checks related to share-level permissions (RBAC), use the following PowerShell cmdlets:
@@ -152,7 +152,9 @@ The cmdlet performs these checks in sequence and provides guidance for failures:
 5. `CheckRealmMap`: Check if the user has [configured any realm mappings](/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable#configure-coexistence-with-storage-accounts-using-on-premises-ad-ds) that would join the account to another Kerberos realm than `KERBEROS.MICROSOFTONLINE.COM`.
 6. `CheckAdminConsent`: Check if the Entra service principal has been [granted admin consent](/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable#grant-admin-consent-to-the-new-service-principal) for the Microsoft Graph permissions that are required to get a Kerberos ticket.
 7. `CheckWinHttpAutoProxySvc`: Checks for the WinHTTP Web Proxy Auto-Discovery Service (WinHttpAutoProxySvc) that's required for Microsoft Entra Kerberos authentication. Its state should be set to `Running`.
-8. `CheckIpHlpScv`: Checks for the IP Helper service (iphlpsvc) that's required for Microsoft Entra Kerberos authentication. Its state should be set to `Running`.
+8. `CheckIpHlpScv`: Check for the IP Helper service (iphlpsvc) that's required for Microsoft Entra Kerberos authentication. Its state should be set to `Running`.
+9. `CheckFiddlerProxy`: Check if a Fiddler proxy that prevents Microsoft Entra Kerberos authentication exists.
+10. `CheckEntraJoinType`: Check if the machine is Entra domain joined or hybrid Entra domain Joined. It is a prerequisite for Microsoft Entra Kerberos authentication.
 
 If you just want to run a subselection of the previous checks, you can use the `-Filter` parameter, along with a comma-separated list of checks to run.
 
@@ -167,7 +169,25 @@ You may experience one of the symptoms described below when trying to configure 
 
 ### Solution
 
-We recommend that you [configure directory/file level permissions using icacls](/azure/storage/files/storage-files-identity-ad-ds-configure-permissions#configure-windows-acls-with-icacls) instead of using Windows File Explorer.
+We recommend that you [configure directory/file level permissions using icacls](/azure/storage/files/storage-files-identity-configure-file-level-permissions#configure-windows-acls-with-icacls) instead of using Windows File Explorer.
+
+## Unable to view UserPrincipalName (UPN) of a file/directory owner in File Explorer 
+
+### Symptom
+
+File Explorer displays the security identifier (SID) of a file/directory owner, but not the UPN.
+
+### Cause
+
+File Explorer calls an RPC API directly to the server (Azure Files) to translate the SID to a UPN. Azure Files doesn't support this API, so the UPN isn't displayed.
+
+### Solution
+
+On a domain-joined client, use the following PowerShell command to view all items in a directory and their owner, including UPN: 
+
+```PowerShell
+Get-ChildItem <Path> | Get-ACL | Select Path, Owner
+```
 
 ## Errors when running Join-AzStorageAccountForAuth cmdlet
 
@@ -181,7 +201,7 @@ This error is most likely triggered by a syntax error in the `Join-AzStorageAcco
 
 ## Azure Files on-premises AD DS Authentication support for AES-256 Kerberos encryption
 
-Azure Files supports AES-256 Kerberos encryption for AD DS authentication beginning with the AzFilesHybrid module v0.2.2. AES-256 is the recommended encryption method, and it's the default encryption method beginning in AzFilesHybrid module v0.2.5. If you've enabled AD DS authentication with a module version lower than v0.2.2, you'll need to [download the latest AzFilesHybrid module](https://github.com/Azure-Samples/azure-files-samples/releases) and run the PowerShell below. If you haven't enabled AD DS authentication on your storage account yet, follow this [guidance](/azure/storage/files/storage-files-identity-ad-ds-enable#option-one-recommended-use-azfileshybrid-powershell-module).
+Azure Files supports AES-256 Kerberos encryption for AD DS authentication beginning with the AzFilesHybrid module v0.2.2. AES-256 is the recommended encryption method, and it's the default encryption method beginning in AzFilesHybrid module v0.2.5. If you've enabled AD DS authentication with a module version lower than v0.2.2, you need to [download the latest AzFilesHybrid module](https://github.com/Azure-Samples/azure-files-samples/releases) and run the following PowerShell script. If you haven't enabled AD DS authentication on your storage account yet, follow this [guidance](/azure/storage/files/storage-files-identity-ad-ds-enable#option-one-recommended-use-azfileshybrid-powershell-module).
 
 > [!IMPORTANT]
 > If you were previously using RC4 encryption and update the storage account to use AES-256, you should run `klist purge` on the client and then remount the file share to get new Kerberos tickets with AES-256.
@@ -192,10 +212,10 @@ $StorageAccountName = "<storage-account-name-here>"
 
 Update-AzStorageAccountAuthForAES256 -ResourceGroupName $ResourceGroupName -StorageAccountName $StorageAccountName
 ```
-As part of the update, the cmdlet will rotate the Kerberos keys, which is necessary to switch to AES-256. There is no need to rotate back unless you want to regenerate both passwords.
+As part of the update, the cmdlet rotates the Kerberos keys, which is necessary to switch to AES-256. There is no need to rotate back unless you want to regenerate both passwords.
 
 ## User identity formerly having the Owner or Contributor role assignment still has storage account key access
-The storage account Owner and Contributor roles grant the ability to list the storage account keys. The storage account key enables full access to the storage account's data including file shares, blob containers, tables, and queues, and limited access to the Azure Files management operations via the legacy management APIs exposed through the FileREST API. If you're changing role assignments, you should consider that the users being removed from the Owner or Contributor roles may continue to maintain access to the storage account through saved storage account keys.
+The storage account Owner and Contributor roles grant the ability to list the storage account keys. The storage account key enables full access to the storage account's data including file shares, blobs, tables, and queues. It also provides limited access to the Azure Files management operations via the legacy management APIs exposed through the FileREST API. If you're changing role assignments, you should consider that the users being removed from the Owner or Contributor roles might continue to have access to the storage account through saved storage account keys.
 
 ### Solution 1
 You can remedy this issue easily by rotating the storage account keys. We recommend rotating the keys one at a time, switching access from one to the other as they are rotated. There are two types of shared keys the storage account provides: the storage account keys, which provide super-administrator access to the storage account's data, and the Kerberos keys, which function as a shared secret between the storage account and the Windows Server Active Directory domain controller for Windows Server Active Directory scenarios.
@@ -210,7 +230,7 @@ Navigate to the desired storage account in the Azure portal. In the table of con
 
 ### [PowerShell](#tab/azure-powershell)
 
-The following script will rotate both keys for the storage account. If you desire to swap out keys during rotation, you'll need to provide additional logic in your script to handle this scenario. Remember to replace `<resource-group>` and `<storage-account>` with the appropriate values for your environment.
+The following script rotates both keys for the storage account. If you desire to swap out keys during rotation, you'll need to provide additional logic in your script to handle this scenario. Remember to replace `<resource-group>` and `<storage-account>` with the appropriate values for your environment.
 
 ```powershell
 $resourceGroupName = "<resource-group>"
@@ -231,7 +251,7 @@ New-AzStorageAccountKey `
 
 ### [Azure CLI](#tab/azure-cli)
 
-The following script will rotate both keys for the storage account. If you desire to swap out keys during rotation, you'll need to provide additional logic in your script to handle this scenario. Remember to replace `<resource-group>` and `<storage-account>` with the appropriate values for your environment.
+The following script rotates both keys for the storage account. If you desire to swap out keys during rotation, you'll need to provide additional logic in your script to handle this scenario. Remember to replace `<resource-group>` and `<storage-account>` with the appropriate values for your environment.
 
 ```bash
 RESOURCE_GROUP_NAME="<resource-group>"
@@ -254,7 +274,7 @@ az storage account keys renew \
 
 ## Set the API permissions on a newly created application
 
-After enabling Microsoft Entra Kerberos authentication, you'll need to explicitly grant admin consent to the new Microsoft Entra application registered in your Microsoft Entra tenant to complete your configuration. You can configure the API permissions from the [Azure portal](https://portal.azure.com) by following these steps.
+After enabling Microsoft Entra Kerberos authentication, you must explicitly grant admin consent to the new Microsoft Entra application registered in your Microsoft Entra tenant to complete your configuration. You can configure the API permissions from the [Azure portal](https://portal.azure.com) by following these steps.
 
 1. Open **Microsoft Entra ID**.
 2. Select **App registrations** in the left pane.
@@ -272,7 +292,7 @@ You might encounter the following errors when enabling Microsoft Entra Kerberos 
 
 ### Error - Grant admin consent disabled
 
-In some cases, Microsoft Entra admin may disable the ability to grant admin consent to Microsoft Entra applications. Below is the screenshot of what this may look like in the Azure portal.
+In some cases, Microsoft Entra admin may disable the ability to grant admin consent to Microsoft Entra applications. Here's a screenshot of what this looks like in the Azure portal.
 
    :::image type="content" source="media/files-troubleshoot-smb-authentication/grant-admin-consent-disabled.png" alt-text="Screenshot that shows the 'Configured permissions' blade displaying a warning that some actions may be disabled due to your permissions." lightbox="media/files-troubleshoot-smb-authentication/grant-admin-consent-disabled.png":::
 
@@ -320,7 +340,7 @@ To mitigate this, you have two options: either rotate the service principal pass
 
 <a name='option-2-disable-azure-ad-kerberos-delete-the-existing-application-and-reconfigure'></a>
 
-Be sure to save domain properties (domainName and domainGUID) before disabling Microsoft Entra Kerberos, as you'll need them during reconfiguration if you want to configure directory and file-level permissions using Windows File Explorer. If you didn't save domain properties, you can still [configure directory/file-level permissions using icacls](/azure/storage/files/storage-files-identity-ad-ds-configure-permissions#configure-windows-acls-with-icacls) as a workaround.
+Be sure to save domain properties (domainName and domainGUID) before disabling Microsoft Entra Kerberos, as you'll need them during reconfiguration if you want to configure directory and file-level permissions using Windows File Explorer. If you didn't save domain properties, you can still [configure directory/file-level permissions using icacls](/azure/storage/files/storage-files-identity-configure-file-level-permissions#configure-windows-acls-with-icacls) as a workaround.
 
 1. [Disable Microsoft Entra Kerberos](/azure/storage/files/storage-files-identity-auth-azure-active-directory-enable#disable-azure-ad-authentication-on-your-storage-account)
 1. [Delete the existing application](#cause-2-an-application-already-exists-for-the-storage-account)

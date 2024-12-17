@@ -1,23 +1,23 @@
 ---
 title: Can't log on to Windows
 description: Describes an issue where you're prompted for user name and password repeatedly when logging on Windows.
-ms.date: 12/26/2023
+ms.date: 10/18/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika
+ms.reviewer: kaushika, raonwubu
 ms.custom: sap:User Logon and Profiles\Service Account and Interactive User Logon Issues and Credential Providers, csstroubleshoot
 ---
 # Windows logs on and logs off immediately
 
-This article describes an issue where you can't sign in to the system and you're prompted for user name and password repeatedly.
+This article describes an issue where you can't sign in to the system and you're prompted for username and password repeatedly.
 
-_Applies to:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Supported versions of Windows Server  
 _Original KB number:_ &nbsp; 555648
 
 ## Symptoms
 
-Windows logs on and logs off immediately when you try logging on to Windows. When you type the user name and password, you're again presented with User name and Password dialogue box. You try hard to get in but to no avail.
+Windows logs on and logs off immediately when you try logging on to Windows. When you type the username and password, you're again presented with **User name** and **Password** dialogue box. You try hard to get in but to no avail.
 
 ## Cause
 
@@ -30,7 +30,7 @@ You can't log on to system using either Normal Mode or Safe Mode. This occurs on
 Edit these values and type the correct path of shell:
 
 Shell = explorer.exe  
-Userinit=X:\windows\system32\userinit.exe
+Userinit = C:\windows\system32\userinit.exe
 
 > [!NOTE]
 > These files may also be deleted by spywares. You may need to extract them using Windows CD.
@@ -44,18 +44,23 @@ Userinit=X:\windows\system32\userinit.exe
 - Type the computer name (infected computer).
 - Navigate to the following location in registry of destination or infected computer:
 
-    `HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon`
+  `HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon`
+  
 - Edit these two values in right pane:
 
-     Shell  
-     Userinit
-
+  Shell  
+  Userinit
+  
 - Change these two values to
 
-    Shell=explorer.exe  
-    Userinit = x:\windows\system32\userinit.exe
+  Shell = explorer.exe  
+  Userinit = C:\windows\system32\userinit.exe
+  
 - Exit from Registry.
 - Restart the infected computer.
 - You should be able to log on to the computer.
+
+> [!IMPORTANT]
+> If the above steps didn't resolve the issue, the machine should be considered compromised.
 
 [!INCLUDE [Community Solutions Content Disclaimer](../../includes/community-solutions-content-disclaimer.md)]

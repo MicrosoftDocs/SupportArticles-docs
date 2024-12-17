@@ -215,7 +215,7 @@ To address the corrupted files identified in the *CBS.log* file, extract the mis
     Open a command prompt as an administrator and run the following DISM command with the `/Source` option:
 
     ```console
-    DISM /Online /Cleanup-Image /RestoreHealth /Source:C:\temp\Source\ /limit
+    DISM /Online /Cleanup-Image /RestoreHealth /Source:C:\temp\Source\ /LimitAccess
     ```
 
 ### Step 5: Verify and confirm

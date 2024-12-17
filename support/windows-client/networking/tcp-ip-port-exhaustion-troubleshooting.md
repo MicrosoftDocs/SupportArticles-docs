@@ -1,12 +1,12 @@
 ---
 title: TCP/IP port exhaustion troubleshooting
 description: Learn how to troubleshoot port exhaustion issues. Port exhaustion occurs when all the ports on a machine are used.
-ms.date: 05/10/2024
+ms.date: 10/11/2024
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.collection: highpri
 ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
-ms.reviewer: dansimp
+ms.reviewer: dansimp, shpune
 audience: itpro
 ---
 # Troubleshoot port exhaustion issues
@@ -112,18 +112,18 @@ If you suspect that the machine is in a state of port exhaustion:
 
 3. Collect a `netstat -anob` output from the server. The netstat output will show you a huge number of entries for TIME_WAIT state for a single PID.
 
-    :::image type="content" source="media/tcp-ip-port-exhaustion-troubleshooting/time-wait-state-entries.png" alt-text="Screenshot of netstate command output." border="false":::
+   :::image type="content" source="media/tcp-ip-port-exhaustion-troubleshooting/time-wait-state-entries.png" alt-text="Screenshot of netstate command output." border="false":::
 
     After a graceful closure or an abrupt closure of a session, after a period of 4 minutes (default), the port used by the process or application would be released back to the available pool. During this 4 minutes, the TCP connection state will be TIME_WAIT state. In a situation where you suspect port exhaustion, an application or process won't be able to release all the ports that it has consumed and will remain in the TIME_WAIT state.
 
     You might also see CLOSE_WAIT state connections in the same output; however, CLOSE_WAIT state is a state when one side of the TCP peer has no more data to send (FIN sent) but is able to receive data from the other end. This state doesn't necessarily indicate port exhaustion.
 
-    > [!NOTE]
-    > Having huge connections in TIME_WAIT state doesn't always indicate that the server is currently out of ports unless the first two points are verified. Having lot of TIME_WAIT connections does indicate that the process is creating lot of TCP connections and may eventually lead to port exhaustion.
-    >
-    > Netstat has been updated in Windows 10 with the addition of the `-Q` switch to show ports that have transitioned out of time wait as in the BOUND state.  An update for Windows 8.1 and Windows Server 2012 R2 has been released that contains this functionality. The PowerShell cmdlet `Get-NetTCPConnection` in Windows 10 also shows these BOUND ports.
-    >
-    > Until 10/2016, netstat was inaccurate. Fixes for netstat, back-ported to 2012 R2, allowed *Netstat.exe* and `Get-NetTcpConnection` to correctly report TCP or UDP port usage in Windows Server 2012 R2. See [Windows Server 2012 R2: Ephemeral ports hotfixes](https://support.microsoft.com/help/3123245/update-improves-port-exhaustion-identification-in-windows-server-2012) to learn more.
+   > [!NOTE]
+   > Having huge connections in TIME_WAIT state doesn't always indicate that the server is currently out of ports unless the first two points are verified. Having lot of TIME_WAIT connections does indicate that the process is creating lot of TCP connections and may eventually lead to port exhaustion.
+   > 
+   > Netstat has been updated in Windows 10 with the addition of the `-Q` switch to show ports that have transitioned out of time wait as in the BOUND state.  An update for Windows 8.1 and Windows Server 2012 R2 has been released that contains this functionality. The PowerShell cmdlet `Get-NetTCPConnection` in Windows 10 also shows these BOUND ports.
+   > 
+   > Until 10/2016, netstat was inaccurate. Fixes for netstat, back-ported to 2012 R2, allowed *Netstat.exe* and `Get-NetTcpConnection` to correctly report TCP or UDP port usage in Windows Server 2012 R2. See [Windows Server 2012 R2: Ephemeral ports hotfixes](https://support.microsoft.com/help/3123245/update-improves-port-exhaustion-identification-in-windows-server-2012) to learn more.
 
 4. Open a command prompt in admin mode and run the below command.
 

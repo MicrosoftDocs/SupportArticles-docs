@@ -1,7 +1,7 @@
 ---
 title: Configure FTP for IIS in a Windows Server failover cluster
 description: Describes how to configure FTP for IIS in a Windows Server failover cluster.
-ms.date: 12/26/2023
+ms.date: 12/13/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -73,7 +73,7 @@ On each of the other cluster nodes, use the shared configuration that you just e
 8. Select **OK**.
 
 > [!NOTE]
-> For more information about how to set up shared configurations in IIS, visit the following Microsoft website: [Shared Configuration](https://learn.iis.net/page.aspx/264/shared-configuration)
+> For more information about how to set up shared configurations in IIS, see [Shared Configuration](/iis/manage/managing-your-configuration-settings/shared-configuration_264).
 
 ## Configure Offline Files for IIS Shared Configuration on all cluster nodes
 

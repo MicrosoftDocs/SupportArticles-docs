@@ -6,7 +6,7 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, jeffpatt
-ms.custom: sap:Application Virtualization\Server issues\Publishing Server Issue , csstroubleshoot
+ms.custom: sap:Application Virtualization\Server issues\Publishing Server Issue, csstroubleshoot
 ---
 # How to troubleshoot publishing server refresh failures in App-V v5
 

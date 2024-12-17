@@ -6,7 +6,7 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, MASOUDH
-ms.custom: sap:Networking\Remote Access , csstroubleshoot
+ms.custom: sap:Networking\Remote Access, csstroubleshoot
 ---
 # How to troubleshoot a Microsoft L2TP/IPSec virtual private network client connection
 

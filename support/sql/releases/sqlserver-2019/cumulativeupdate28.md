@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 28 for SQL Server 2019 (KB5039747)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 28 (KB5039747).
-ms.date: 09/11/2024
+ms.date: 10/11/2024
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5039747
 ms.reviewer: v-qianli2
 appliesto:
@@ -16,7 +16,7 @@ _Version:_ &nbsp; 15.0.4385.2
 
 ## Summary
 
-This article describes Cumulative Update package 28 (CU28) for Microsoft SQL Server 2019. This update contains 12 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 27, and it updates components in the following builds:
+This article describes Cumulative Update package 28 (CU28) for Microsoft SQL Server 2019. This update contains 11 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 27, and it updates components in the following builds:
 
 - SQL Server - Product version: **15.0.4385.2**, file version: **2019.150.4385.2**
 - Analysis Services - Product version: **15.0.35.48**, file version: **2018.150.35.48**
@@ -79,7 +79,6 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=3285766>[3285766](#3285766) </a> | Fixes an issue in which the SQL Server Launchpad service can't shut down properly when certain errors occur during startup.| SQL Server Engine | Extensibility | Windows|
 | <a id=3323675>[3323675](#3323675) </a> | Fixes a latch time-out issue that you encounter when fetching the next value for sequence objects, which is due to self-deadlock during lock escalation. | SQL Server Engine | Metadata| All|
 | <a id=3296380>[3296380](#3296380) </a> | Fixes an issue in which PolyBase throws the following error at service startup if the SQL Server instance is configured to listen on multiple TCP ports: </br></br>System.ArgumentException: Unable to parse port, instance = '\<InstanceName>', text = '\<Text>'| SQL Server Engine | PolyBase| All|
-| <a id=3101926>[3101926](#3101926) </a> | Adds a validation for the `MODEL` parameter when running `PREDICT` to avoid errors due to the input of wrong models. | SQL Server Engine | Query Execution | All|
 | <a id=3312936>[3312936](#3312936) </a> | Fixes a non-yielding scheduler dump issue that you might encounter when forcing a query plan in the Query Store (QDS). | SQL Server Engine | Query Optimizer | All|
 | <a id=3312950>[3312950](#3312950) </a> | Fixes an issue in which error 18752 occurs and transactional replication stops working when you use a heavy workload in combination with availability groups and after a failover occurs. </br></br>Error message: </br></br>Only one Log Reader Agent or log-related procedure (sp_repldone, sp_replcmds, and sp_replshowcmds) can connect to a database at a time. If you executed a log-related procedure, drop the connection with session ID \<SessionID> over which the procedure was executed or execute sp_replflush over that connection before starting the Log Reader Agent or executing another log-related procedure. | SQL Server Engine | Replication | Windows|
 | <a id=3338718>[3338718](#3338718) </a> | Fixes the following error 21890 that you encounter when you use the case-sensitive collation and run `sp_validate_redirected_publisher`: </br></br>The SQL Server instance '\<InstanceName>' with distributor '\<DistributorName>' and distribution database '\<DatabaseName>' cannot be used with publisher database '\<DatabaseName>'. Reconfigure the publisher to make use of distributor '\<DistributorName>' and distribution database '\<DatabaseName>'. | SQL Server Engine | Replication | All |

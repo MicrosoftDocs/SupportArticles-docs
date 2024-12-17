@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot OpenTelemetry issues in Python
 description: Learn how to troubleshoot OpenTelemetry issues in Python. View known issues that involve Azure Monitor OpenTelemetry Exporters.
-ms.date: 06/24/2024
+ms.date: 10/28/2024
 editor: v-jsitser
 ms.service: azure-monitor
 ms.devlang: python
@@ -15,7 +15,7 @@ This article discusses how to troubleshoot OpenTelemetry issues in Python.
 
 ## Troubleshooting checklist
 
-### Step 1: Enable diagnostic logging
+### Enable diagnostic logging
 
 The Microsoft Azure Monitor Exporter uses the [Python standard logging library](https://docs.python.org/3/library/logging.html) for its internal logging. OpenTelemetry API and Azure Monitor Exporter logs are assigned a severity level of `WARNING` or `ERROR` for irregular activity. The `INFO` severity level is used for regular or successful activity.
 
@@ -35,11 +35,11 @@ logger.addHandler(stream)
 ...
 ```
 
-### Step 2: Test connectivity between your application host and the ingestion service
+### Test connectivity between your application host and the ingestion service
 
 Application Insights SDKs and agents send telemetry to get ingested as REST calls at our ingestion endpoints. To test connectivity from your web server or application host computer to the ingestion service endpoints, use cURL commands or raw REST requests from PowerShell. For more information, see [Troubleshoot missing application telemetry in Azure Monitor Application Insights](../investigate-missing-telemetry.md).
 
-### Step 3: Avoid duplicate telemetry
+### Avoid duplicate telemetry
 
 Duplicate telemetry is often caused if you create multiple instances of processors or exporters. Make sure that you run only one exporter and processor at a time for each telemetry pillar (logs, metrics, and distributed tracing).
 
@@ -70,11 +70,24 @@ get_logger_provider().shutdown()
 
 Azure Workbooks and Jupyter Notebooks might keep exporter processes running in the background. To prevent duplicate telemetry, clear the cache before you make more calls to `configure_azure_monitor`.
 
-### Step 4: Make sure that Flask request data is collected
+### Missing Requests telemetry from FastAPI or Flask apps
 
-If you implement a Flask application, you might find that you can't collect Requests table data from Application Insights while you use the [Azure Monitor OpenTelemetry Distro client library for Python](/python/api/overview/azure/monitor-opentelemetry-readme). This issue could occur if you don't structure your `import` declarations correctly. You might be importing the `flask.Flask` web application framework before you call the `configure_azure_monitor` function to instrument the Flask library. For example, the following code doesn't successfully instrument the Flask app:
+If you are missing Requests table data but not other categories of data, your HTTP framework might not be instrumented correctly. This issue can occur in FastAPI and Flask apps using the [Azure Monitor OpenTelemetry Distro client library for Python](/python/api/overview/azure/monitor-opentelemetry-readme) if you don't structure your `import` declarations correctly. You might be importing the `fastapi.FastAPI` or `flask.Flask` respectively before you call the `configure_azure_monitor` function to instrument the FastAPI and Flask libraries. For example, the following code doesn't successfully instrument the FastAPI and Flask apps:
 
 ```python
+# FastAPI
+
+from azure.monitor.opentelemetry import configure_azure_monitor
+from fastapi import FastAPI
+
+configure_azure_monitor()
+
+app = FastAPI()
+```
+
+```python
+# Flask
+
 from azure.monitor.opentelemetry import configure_azure_monitor
 from flask import Flask
 
@@ -83,9 +96,22 @@ configure_azure_monitor()
 app = Flask(__name__)
 ```
 
-Instead, we recommend that you import the `flask` module as a whole, and then call `configure_azure_monitor` to configure OpenTelemetry to use Azure Monitor before you access `flask.Flask`:
+Instead, we recommend that you import the `fastapi` or `flask` modules as a whole, and then call `configure_azure_monitor` to configure OpenTelemetry to use Azure Monitor before you access `fastapi.FastAPI` or `flask.Flask`:
 
 ```python
+# FastAPI
+
+from azure.monitor.opentelemetry import configure_azure_monitor
+import fastapi
+
+configure_azure_monitor()
+
+app = fastapi.FastAPI(__name__)
+```
+
+```python
+# Flask
+
 from azure.monitor.opentelemetry import configure_azure_monitor
 import flask
 
@@ -94,9 +120,23 @@ configure_azure_monitor()
 app = flask.Flask(__name__)
 ```
 
-Alternatively, you can call `configure_azure_monitor` before you import `flask.Flask`:
+Alternatively, you can call `configure_azure_monitor` before you import `fastapi.FastAPI` or `flask.Flask`:
 
 ```python
+# FastAPI
+
+from azure.monitor.opentelemetry import configure_azure_monitor
+
+configure_azure_monitor()
+
+from fastapi import FastAPI
+
+app = FastAPI(__name__)
+```
+
+```python
+# Flask
+
 from azure.monitor.opentelemetry import configure_azure_monitor
 
 configure_azure_monitor()

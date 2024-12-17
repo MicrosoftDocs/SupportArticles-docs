@@ -6,7 +6,7 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, mjacquet
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Partition and volume management , csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Partition and volume management, csstroubleshoot
 ---
 # Establish and boot to GPT mirrors in 64-bit Windows
 

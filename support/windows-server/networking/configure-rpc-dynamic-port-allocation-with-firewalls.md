@@ -1,11 +1,11 @@
 ---
 title: Remote Procedure Call (RPC) dynamic port work with firewalls
 description: This article describes how to use the solution together with a firewall when configuring RPC dynamic port allocation.
-ms.date: 12/26/2023
+ms.date: 10/17/2024
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, timball
+ms.reviewer: kaushika, timball, moshalaby
 ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 ---
 # How to configure RPC dynamic port allocation to work with firewalls
@@ -31,7 +31,7 @@ Some firewalls also allow for UUID filtering where it learns from an RPC Endpoin
 > [!IMPORTANT]
 > Use the method that is described in this article only if the RPC server does not offer a way to define the server port.
 
-The following registry entries apply to Windows NT 4.0 and above. They don't apply to previous versions of Windows NT. Even though you can configure the port used by the client to communicate with the server, the client must be able to reach the server by its actual IP address. You can't use DCOM through firewalls that do address translation. For example, a client connects to virtual address 198.252.145.1, which the firewall maps transparently to the server's actual address of, say, 192.100.81.101. DCOM stores raw IP addresses in the interface marshaling packets. If the client can't connect to the address specified in the packet, it won't work.
+The following registry entries apply to Windows NT 4.0 and above. They don't apply to previous versions of Windows NT. Even though you can configure the port used by the client to communicate with the server, the client must be able to reach the server by its actual IP address. You can't use DCOM through firewalls that do address translation. For example, a client connects to virtual address 192.168.1.2, which the firewall maps transparently to the server's actual address of, say, 192.168.1.3. DCOM stores raw IP addresses in the interface marshaling packets. If the client can't connect to the address specified in the packet, it won't work.
 
 ## More information
 

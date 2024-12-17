@@ -33,3 +33,5 @@ items:
     href: pull-image-to-web-app-fail.md
   - name: '"Request canceled while waiting for connection" error'
     href: request-canceled-waiting-connection-timeout-exceeded.md
+- name: Troubleshoot push issues
+  href: troubleshoot-push-error-operation-disallowed-timeout.md

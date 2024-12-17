@@ -11969,6 +11969,651 @@
       "source_path": "support/windows-server/virtualization/event-id-4096.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/event-id-4096",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/how-domain-controllers-are-located.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/troubleshoot-domain-controller-location-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/shell-experience/scenario-guide-infinite-black-screen-after-sign-in.md",
+      "redirect_url": "/troubleshoot/windows-client/shell-experience/scenario-guide-black-screen-after-sign-in",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/group-policy/create-central-store-domain-controller.md",
+      "redirect_url": "/troubleshoot/windows-client/group-policy/create-and-manage-central-store",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/how-to-install-dynamics-crm-with-the-minimum-required-permissions.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/how-to-install-dynamics-crm-with-the-minimum-required-permissions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/you-are-not-member-this-organization.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/you-are-not-member-this-organization",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-get-your-dynamics-365-environment.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/cannot-get-your-dynamics-365-environment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/installation-of-dynamics-crm-reporting-extensions-fails-to-locate-ssrs-instance.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/installation-of-dynamics-crm-reporting-extensions-fails-to-locate-ssrs-instance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/organization-database-updates-fail-during-import.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/organization-database-updates-fail-during-import",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-crm-outlook-is-disabled.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/dynamics-crm-outlook-is-disabled",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-accessing-dynamics-365-ifd.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-when-accessing-dynamics-365-ifd",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/crm-integration-azure-service-bus.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/crm-integration-azure-service-bus",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/new-button-disabled-you-add-new-user.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/new-button-disabled-you-add-new-user",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/unable-cast-object-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/unable-cast-object-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/upgrade-solutions-for-a-portals-deployment.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/upgrade-solutions-for-a-portals-deployment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-enabling-mailbox.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-when-enabling-mailbox",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/installation-of-windows-live-id-sign-in-assistant-failed-exit-code-1603.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/installation-of-windows-live-id-sign-in-assistant-failed-exit-code-1603",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-test-and-enable-user-mailbox.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-test-and-enable-user-mailbox",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/web-server-returned-securechannelfailure.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/web-server-returned-securechannelfailure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/errors-connecting-dynamics-crm-for-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/errors-connecting-dynamics-crm-for-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/365-integrations-other-products.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/365-integrations-other-products",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/email-router-fails-send-email.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/email-router-fails-send-email",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/the-specified-field-does-not-exist-in-dynamics-365-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/the-specified-field-does-not-exist-in-dynamics-365-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/integrated-authentication-fails-outlook-client.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/integrated-authentication-fails-outlook-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/portal-capabilities-dynamics-365-faq.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/portal-capabilities-dynamics-365-faq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/receiving-error-accessing-ws-metadata-exchange-failed-during-configuration.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/receiving-error-accessing-ws-metadata-exchange-failed-during-configuration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/you-are-signed-out-of-crm-online-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/you-are-signed-out-of-crm-online-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-crm-for-outlook-records-do-not-sync-or-missing-track-and-set-regarding.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/dynamics-crm-for-outlook-records-do-not-sync-or-missing-track-and-set-regarding",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-connect-dynamics-crm-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/cannot-connect-dynamics-crm-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/crm-users-do-not-sync-office-365.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/crm-users-do-not-sync-office-365",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/unable-log-into-planned-system-maintenance.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/unable-log-into-planned-system-maintenance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/no-search-results-regarding-lookup.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/no-search-results-regarding-lookup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-find-any-organization-on-the-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/cannot-find-any-organization-on-the-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error_message_0x8006fff-when-accessing-dynamics-365-in-add-ins-of-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error_message_0x8006fff-when-accessing-dynamics-365-in-add-ins-of-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/file-already-exists-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/file-already-exists-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/an-email-fails-be-created-with-duplicate.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/an-email-fails-be-created-with-duplicate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/changing-crm-online-instance-url-after-portal-deployment-causes-runtime-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/changing-crm-online-instance-url-after-portal-deployment-causes-runtime-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/client-side-scripts-no-longer-work.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/client-side-scripts-no-longer-work",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/invalidoutgoingmailboxemailaddress-error-in-mailbox-alert.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/invalidoutgoingmailboxemailaddress-error-in-mailbox-alert",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-use-dynamics-365-app-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-use-dynamics-365-app-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-connect-crm-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-when-connect-crm-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/an-email-fails-be-created.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/an-email-fails-be-created",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/email-fails-be-created-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/email-fails-be-created-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-search-outlook-dynamics-365-app.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-search-outlook-dynamics-365-app",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/exchange-email-address-is-currently-use.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/exchange-email-address-is-currently-use",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/generaloutgoingemailservererror.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/generaloutgoingemailservererror",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/warning-occurs-when-viewing-alerts-for-mailboxes.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/warning-occurs-when-viewing-alerts-for-mailboxes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/issue-when-adding-to-outlook-error-when-deploying-dynamics-365-app-for-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/issue-when-adding-to-outlook-error-when-deploying-dynamics-365-app-for-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/generaloutgoingemailservererror-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/generaloutgoingemailservererror-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-occurs-mailbox-record.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-occurs-mailbox-record",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/exchange-server-returned-203-error-in-mailbox-alert.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/exchange-server-returned-203-error-in-mailbox-alert",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/it-looks-like-the-app-is-not-installed-for-your-outlook-mailbox-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/it-looks-like-the-app-is-not-installed-for-your-outlook-mailbox-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/we-cannot-open-the-app.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/we-cannot-open-the-app",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-using-dynamics-365-app-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-when-using-dynamics-365-app-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-crm-online-outbound-phone-calls-default-to-lync.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/dynamics-crm-online-outbound-phone-calls-default-to-lync",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-access-dynamics-crm-app-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-access-dynamics-crm-app-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/another-configuration-wizard-is-already-running-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/another-configuration-wizard-is-already-running-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-you-access-app-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-you-access-app-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/relevance-search-not-working-as-expected-for-sandbox-instances.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/relevance-search-not-working-as-expected-for-sandbox-instances",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/a-blank-window-appears.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/a-blank-window-appears",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/server-address-url-is-not-valid.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/the-server-address-is-not-valid",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-365-on-premises-v9-0.md",
+      "redirect_url": "/dynamics365/customerengagement/on-premises/deploy/installing-on-premises-dynamics-365?view=op-9-1",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/operation-failed-because-you-are-offline.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/outlook-has-not-been-configured-with-an-account-yet-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/installing-product-updates-status-not-updated.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-access-dynamics-365-app-outlook.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/your-browser-is-currently-unsupported.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/web-server-returned-sendfailure-exception.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/you-do-not-have-license-to-use-this-app-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/lookup-fields-fail-to-save-or-provide-results-with-google-chrome-38.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/uci-dashboard-does-not-load.md",
+      "redirect_url": "/troubleshoot/dynamics-365/sales/welcome-sales",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-365-how-to-articles.md",
+      "redirect_url": "/troubleshoot/dynamics-365/sales/welcome-sales",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/business-process-flow-deletion-fails.md",
+      "redirect_url": "/dynamics365/sales/customize-business-process-flows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/troubleshoot-server-side-synchronization.md",
+      "redirect_url": "/power-platform/admin/troubleshooting-monitoring-server-side-synchronization which has more current info",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/sorry-something-went-wrong-while-initializing-the-app-error.md",
+      "redirect_url": "/troubleshoot/dynamics-365/sales/errors-when-opening-365-app-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/site-system-installation-account-used-for-db-connection.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/extend-data-volume.md",
+      "redirect_url": "/troubleshoot/windows-server/backup-and-storage/extend-shrink-data-volume",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/group-policy/fail-to-run-gpmc.md",
+      "redirect_url": "/troubleshoot/windows-server/group-policy/permissions-this-gpo-inconsistent",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/field-service/iot/change-time-series-insights-instance.md",
+      "redirect_url": "/dynamics365/field-service/cfs-visualizations-iot-hub",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/field-service/iot/edge-module-data-aggregated.md",
+      "redirect_url": "/dynamics365/field-service/cfs-visualizations-iot-hub",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/finance/tax/tcs-troubleshooting-failed-access-tax-service.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/welcome-finance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/certificates-and-public-key-infrastructure-pki/restrict-cryptographic-algorithms-protocols-schannel.md",
+      "redirect_url": "/windows-server/security/tls/tls-registry-settings?tabs=diffie-hellman#ciphers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/changes-to-mailbox-approval-in-dynamics-365.md",
+      "redirect_url": "/power-platform/admin/connect-exchange-online#approve-email",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/exchange-error-in-dynamics-365-mailbox-alert.md",
+      "redirect_url": "/power-platform/admin/monitor-email-processing-errors",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/mailboxnotenabledforrestapi-warning-occurs.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/mailboxnotenabledforrestapi-warning-occurs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/hresult-0x80004005-error-when-configuring-dynmics-crm-for-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/hresult-0x80004005-error-when-configuring-dynmics-crm-for-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/the-account-does-not-have-permission-to-impersonate-the-requested-user-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/the-account-does-not-have-permission-to-impersonate-the-requested-user-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/email-cannot-be-received-because-license-is-invalid-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/email-cannot-be-received-because-license-is-invalid-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/unknownincomingemailintegrationerror-2147220891.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/unknownincomingemailintegrationerror-2147220891",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/appointments-do-not-synchronize-to-exchange-or-outlook.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/appointments-do-not-synchronize-to-exchange-or-outlook",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-you-test-enable-a-mailbox.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-when-you-test-enable-a-mailbox",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-occurs-sending-email-for-mailbox.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-occurs-sending-email-for-mailbox",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/errorquotaexceeded-exchange-server-returned-403-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/errorquotaexceeded-exchange-server-returned-403-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/exception-when-using-server-side-sync.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/exception-when-using-server-side-sync",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/the-smtp-address-has-no-mailbox.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/the-smtp-address-has-no-mailbox",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/general-mailbox-access-error-occurred-while-receiving-email-through-mailbox-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/general-mailbox-access-error-occurred-while-receiving-email-through-mailbox-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/test-connection-fails-email-server.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/test-connection-fails-email-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/http-server-returned-forbidden-exception.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/http-server-returned-forbidden-exception",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-while-sending-the-email-message.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-while-sending-the-email-message",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-testing-enabling-mailbox.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-when-testing-enabling-mailbox",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/outgoingemailauthenticationerror-shows-in-mailbox-alert.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/outgoingemailauthenticationerror-shows-in-mailbox-alert",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/email-message-cannot-be-sent.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/email-message-cannot-be-sent",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/mailbox-fails-tested-enabled.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/mailbox-fails-tested-enabled",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/email-cannot-be-received-mailbox.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/email-cannot-be-received-mailbox",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/an-appointment-is-canceled-deleted.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/an-appointment-is-canceled-deleted",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-2147209462-logged-mailbox-record.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-2147209462-logged-mailbox-record",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/an-internal-dynamics-365-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/an-internal-dynamics-365-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/appointments-do-not-sync-to-exchange-for-some-users.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/appointments-do-not-sync-to-exchange-for-some-users",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-creating-an-incoming-email.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-when-creating-an-incoming-email",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/a-failure-occurred-crmsecurity.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/a-failure-occurred-crmsecurity",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/email-fails-to-create-with-norecipientmatch-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/email-fails-to-create-with-norecipientmatch-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/general-mailbox-access-error-occurred.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/general-mailbox-access-error-occurred",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/email-fails-to-create-with-nocorrelationmatch-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/email-fails-to-create-with-nocorrelationmatch-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/scheduling-conflict-saving-appointment.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/scheduling-conflict-saving-appointment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/errorsubmissionquotaexceeded-exception.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/errorsubmissionquotaexceeded-exception",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/mailbox-does-not-have-email-server-profile.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/mailbox-does-not-have-email-server-profile",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/dataverse/email-m365-integration/server-side-synchronization/emails-not-automatically-tracked-or-synchronized.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/emails-not-automatically-tracked-or-synchronized",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/dataverse/email-m365-integration/server-side-synchronization/error-code-8005e259.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-code-8005e259",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/dataverse/email-m365-integration/server-side-synchronization/error-code-8005e272.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-code-8005e272",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/dataverse/email-m365-integration/server-side-synchronization/error-code-8005e273.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-code-8005e273",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/dataverse/email-m365-integration/server-side-synchronization/error-code-8005e274.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-code-8005e274",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/dataverse/email-m365-integration/server-side-synchronization/error-code-8005e276.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-code-8005e276",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/dataverse/email-m365-integration/server-side-synchronization/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/tracked-to-dynamics-365-category-added.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/tracked-to-dynamics-365-category-added",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-send-email-as-another-user.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/cannot-send-email-as-another-user",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/certificates-and-public-key-infrastructure-pki/delete-enterprise-windows-certificate-authority.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/delete-enterprise-windows-certificate-authority",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-signing-dynamics-365.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-when-signing-dynamics-365",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/you-are-not-part-this-organization.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-when-signing-dynamics-365",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/no-ethernet-after-pad-install.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/group-policy/apply-group-policy-objects-terminal-services.md",
+      "redirect_url": "/troubleshoot/windows-server/group-policy/apply-group-policy-objects-rds",
+      "redirect_document_id": true
     }
   ]
 }

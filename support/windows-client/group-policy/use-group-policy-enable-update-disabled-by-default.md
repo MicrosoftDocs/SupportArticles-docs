@@ -8,11 +8,9 @@ ms.topic: troubleshooting
 ms.reviewer: kaushika, v-lianna, v-tanjoh, ptomas
 ms.custom: sap:Group Policy\Problems applying Group Policy, csstroubleshoot
 ---
-# How to use Group Policy to enable an update that is disabled by default
+# Use Group Policy to enable an update that is disabled by default
 
 This article describes how to configure Group Policy to use a feature preview policy definition that activates a preview update on managed devices.
-
-_Applies to:_ &nbsp; Windows Server 2019 (version 1809) and later versions, Windows 10, version 1809 and later versions
 
 ## Summary
 

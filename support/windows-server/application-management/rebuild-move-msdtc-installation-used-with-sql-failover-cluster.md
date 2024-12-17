@@ -1,14 +1,14 @@
 ---
-title: How to rebuild or move a MSDTC installation for use with a SQL failover cluster
-description: Describes how to rebuild a broken Microsoft Distributed Transaction Coordinator (MSDTC) installation for use with a failover clustered SQL Server installation, and how to move the MSDTC clustered resource to a new group.
-ms.date: 12/26/2023
+title: How to rebuild or move an MSDTC installation for use with a SQL failover cluster
+description: Describes how to rebuild a broken MSDTC installation for use with a failover clustered SQL Server installation, and how to move the MSDTC clustered resource to a new group.
+ms.date: 11/20/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika
+ms.reviewer: kaushika,jdeffenbaugh
 ms.custom: sap:Application Technologies and Compatibility\DTC startup, configuration, connectivity, and cluster, csstroubleshoot
 ---
-# How to rebuild or move a MSDTC installation for use with a SQL failover cluster
+# How to rebuild or move an MSDTC installation for use with a SQL failover cluster
 
 This article describes how to rebuild a broken Microsoft Distributed Transaction Coordinator (MSDTC) installation for use with a failover clustered SQL Server installation.
 
@@ -32,11 +32,11 @@ When deploying SQL Server in a highly available environment like Windows Failove
 
 - This is a true statement and the conversation tends to then focus on but why? In fact, some DBAs have tested various forms of these transaction types and not encountered errors.
 
-- The issue is the testing is not complete and the two-phase commit activity required can result in data loss or a database that does not recover as expected in certain configurations. In fact, the SQL Server testers inject failures at strategic locations to create the scenarios that are difficult (but not impossible) to create on a production server. For more information, see [Not-Supported: AGs with TC/Cross-Database Transaction](/archive/blogs/alwaysonpro/not-supported-ags-with-dtccross-database-transactions).  
+- The issue is the testing isn't complete and the two-phase commit activity required can result in data loss or a database that doesn't recover as expected in certain configurations. In fact, the SQL Server testers inject failures at strategic locations to create the scenarios that are difficult (but not impossible) to create on a production server. For more information, see [Not-Supported: AGs with TC/Cross-Database Transaction](/archive/blogs/alwaysonpro/not-supported-ags-with-dtccross-database-transactions).  
 
-With Windows 2008 Failover cluster and later, you don't need to cluster MSDTC to use the functionality of the MSDTC service because MSDTC was re-designed in Windows 2008. Unlike Windows 2003, if you install Windows Failover Cluster, you had to cluster MSDTC. This is no longer the case when using Windows 2008, since by default MSDTC service is running locally, even with Failover Clustering installed.  
+With Windows 2008 Failover cluster and later, you don't need to cluster MSDTC to use the functionality of the MSDTC service because MSDTC was redesigned in Windows 2008. Unlike Windows 2003, if you install Windows Failover Cluster, you had to cluster MSDTC. This is no longer the case when using Windows 2008, since by default MSDTC service is running locally, even with Failover Clustering installed.  
 
-If your SQL Server Failover Clustered Instance does require MSDTC and does require the MSDTC resources to fail over with the SQL Server Instance, we recommend creating a MSDTC resource within the FailoverCluster role that contains the SQL Server instance and that it use:  
+If your SQL Server Failover Clustered Instance does require MSDTC and does require the MSDTC resources to fail over with the SQL Server Instance, we recommend creating an MSDTC resource within the FailoverCluster role that contains the SQL Server instance and that it uses:  
 
 - The SQL Server network name\\client access point
 - A disk within the SQL Server role
@@ -51,6 +51,8 @@ If your SQL Server Failover Clustered Instance does require MSDTC and does requi
     $SqlNetName = <Actual SQL Servernetwork resourcename>
     $VSqlSrv = <Actual SQL Server virtual server name>
     $CluDsk = <Actual disk resource name>
+
+    Add-ClusterResource -Name $VSqlSrv -ResourceType "Distributed Transaction Coordinator" -Group $SqlRole
     ```
 
     If the MSDTC resource didn't accept the name provided, you can alter the name using the following PowerShell replacing the New Distributed Transaction Coordinator with RealSqlVsName:

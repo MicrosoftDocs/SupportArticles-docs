@@ -56,6 +56,8 @@
               href: create-and-use-apps/grid-or-subgrid-displays-incorrect-content.md
             - name: Grid or sub-grid doesn't display all the records
               href: create-and-use-apps/grid-or-subgrid-not-display-all-records.md
+            - name: Grid filter for lookup column not showing any suggestions
+              href: create-and-use-apps/grid-filter-not-showing-any-suggestions.md
             - name: Modern Advanced Find doesn't work correctly
               href: create-and-use-apps/modern-advanced-find-not-work-correctly.md
             - name: Nested grid doesn't display data

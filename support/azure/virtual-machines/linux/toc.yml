@@ -111,6 +111,9 @@
       href: troubleshoot-performance-virtual-machine-linux-windows.md
     - name: Out of memory error in Linux VM
       href: oom-swap-file-linux-vm.md
+
+  - name: Troubleshoot Linux CPU performance issues
+    href: troubleshoot-performance-cpu-linux.md
     
 - name: Windows Update and OS Updates
   items:
@@ -139,8 +142,8 @@
       href: troubleshoot-red-hat-os-upgrade-issues.md
   - name: SUSE
     items:
-    - name: Upgrade to SLES 15 SP1
-      href: linux-upgrade-suse-15sp1.md
+    - name: Troubleshoot SLES migration issues
+      href: linux-upgrade-sles.md
 
 - name: My VM is not booting
   items:
@@ -223,8 +226,6 @@
     href: linux-vm-deployment-top-issues.md
   - name: VM deployment FAQs
     href: linux-vm-deployment-faqs.md
-  - name: Fail to create a VM with Ed25519 SSH keys
-    href: ed25519-ssh-keys.md
   - name: Cloud-init-enabled VM takes a long time to start up
     href: cloud-init-deployment-delay.md
   - name: Support for Availability sets
@@ -263,6 +264,8 @@
     href: create-swap-file-linux-vm.md
   - name: Maximum RAM memory of Linux VM
     href: max-linux-ram-limited-64-gb.md
+  - name: Configure custom DNS servers
+    href: custom-dns-configuration-for-azure-linux-vms.md
 
 - name: Linux High Availability Pacemaker cluster
   items:
@@ -270,12 +273,17 @@
     items:
     - name: Troubleshoot Azure fence agent startup issues
       href: troubleshoot-azure-fence-agent-rhel.md
+    - name: Troubleshoot SBD service failure in RHEL
+      href: troubleshoot-sbd-issues-rhel.md
   - name: SLES
     items:
     - name: Troubleshoot Azure fence agent startup issues in SUSE
       href: troubleshoot-azure-fence-agent-startup-suse.md
     - name: Troubleshoot Pacemaker Services startup issues in SUSE
       href: troubleshoot-pacemaker-services-suse.md
+    - name: Troubleshoot SBD service failure in SUSE
+      href: troubleshoot-sbd-issues-sles.md
+      
       
 - name: Linux repositories
   items:

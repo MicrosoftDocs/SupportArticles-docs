@@ -19,6 +19,8 @@ items:
     href: configuration-setup/long-image-pulls.md
   - name: Error "service unavailable" when deploying GPU-enabled containers
     href: configuration-setup/service-unavailable-gpu-enabled-aci-deployment-failures.md
+  - name: ContainerGroupQuotaReached - container group quota exceeded in region
+    href: configuration-setup/spot-container-group-quota-reached-error.md
   - name: ServiceUnavailable - container group quota exceeded in region
     href: configuration-setup/service-unavailable-container-group-quota-exceeded.md
   - name: ServiceUnavailable (409) - requested resource is not available in the location

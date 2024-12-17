@@ -29,7 +29,7 @@ For a complete list of prerequisites, see [Prerequisites and limitations](/power
 
 ## Gather diagnostic information
 
-Installation logs can provide useful details about the installation and help you diagnose and fix issues. For more information about where to find the logs, see [Power Automate for desktop installation logs](/troubleshoot/power-platform/power-automate/desktop-flows/how-to-get-power-automate-desktop-installer-logs).
+Installation logs can provide useful details about the installation and help you diagnose and fix issues. For more information about where to find the logs, see [Power Automate for desktop installation logs](how-to-get-power-automate-desktop-installer-logs.md).
 
 ## Known issues and workarounds
 

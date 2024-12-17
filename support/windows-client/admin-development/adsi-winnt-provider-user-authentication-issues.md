@@ -6,7 +6,7 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Admin Mgmt Development\Active Directory Services Interface Adsi , csstroubleshoot
+ms.custom: sap:Admin Mgmt Development\Active Directory Services Interface Adsi, csstroubleshoot
 ---
 # User authentication issues with the Active Directory Service Interfaces WinNT provider
 

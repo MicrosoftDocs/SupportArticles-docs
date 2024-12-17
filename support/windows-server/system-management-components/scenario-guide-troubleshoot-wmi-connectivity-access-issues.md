@@ -1,11 +1,11 @@
 ---
 title: 'Scenario guide: Troubleshoot WMI connectivity and access issues'
 description: Covers how to review the Windows Management Instrumentation (WMI) configuration, diagnose and troubleshoot WMI connectivity or access issues.
-ms.date: 12/26/2023
+ms.date: 11/29/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, krpg, v-lianna
+ms.reviewer: kaushika, krpg, v-lianna, anleito
 ms.custom: sap:System Management Components\WMI management and troubleshooting, csstroubleshoot
 ---
 # Scenario guide: Troubleshoot WMI connectivity and access issues
@@ -405,23 +405,18 @@ This can help determine if the issue is a network connectivity issue.
 
 ## Data collection
 
-Before opening a support case to further investigate the issue, you can collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-tss/gather-information-using-tss-user-experience.md#wmi).
-You can also gather information by using the WMI-Collect tool on the machine that has recently experienced the issue. Here are the steps:
+Before opening a support case for further investigation, you can collect data by following the steps below:
 
-> [!NOTE]
-> The following steps can be performed on the source and the target machines while reproducing the issue.
+Download [TSS.zip](https://aka.ms/getTSS) and extract the contents.
 
-1. Download [WMI-Collect.zip](https://aka.ms/WMI-Collect) and extract it to a folder, such as *C:\\temp*.
-2. From an elevated PowerShell command prompt, run the *WMI-Collect.ps1* script from the folder where the script is saved. For example:
+1. Start the tracing by running the following cmdlet from an elevated PowerShell command prompt.
 
-    ```powershell
-        C:\temp\WMI-Collect.ps1 -Logs -Trace -Network
-    ```
+   ```powershell
+   .\TSS.ps1 -UEX_WMIAdvanced -WMIProvList RPC,DCOM -NetshScenario netconnection -noBasicLog
+   ```
 
-3. Keep the PowerShell command prompt open with the "Press ENTER to stop the capture:" message.
+2. Reproduce the connectivity error or wait until the error is reproduced. Keep the tracing running for more than two minutes.
 
-    > [!NOTE]
-    > Don't keep the tracing enabled for more than one minute.
+3. Stop the tracing by following instructions in the PowerShell window that is running the TSS tool.
 
-4. Stop the tracing by pressing <kbd>Enter</kbd>.
-5. The script creates a subfolder containing the results of all traces and diagnostic information. Compress the folder. After a support case is created, this file can be uploaded to the secure workspace for analysis.
+The script creates a zip file containing all the trace results and diagnostic information. After a support case is created, you can upload this file to the secure workspace for analysis.

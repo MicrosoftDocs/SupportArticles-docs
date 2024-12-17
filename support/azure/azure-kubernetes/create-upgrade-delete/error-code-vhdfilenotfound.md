@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the ERR_VHD_FILE_NOT_FOUND error code
 description: Learn how to troubleshoot the ERR_VHD_FILE_NOT_FOUND error (124) when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 05/03/2023
+ms.date: 10/14/2024
 editor: v-jsitser
 ms.reviewer: axelg, chiragpa, v-leedennis
 ms.service: azure-kubernetes-service
@@ -30,11 +30,13 @@ Under rare circumstances, the 124 exit code for the Azure Virtual Machine Scale 
 | `K8SAPIServerConnFailVMExtensionError`      | 51                |
 | `K8SAPIServerDNSLookupFailVMExtensionError` | 52                |
 
-It usually hides a network connectivity issue from the AKS node to `mcr.microsoft.com`, or to the API server's fully qualified domain name (FQDN) address.
+This error occurs if a connectivity issue exists between your AKS cluster and the required Azure endpoints, such as `mcr.microsoft.com` or `acs-mirror.azureedge.net`.
 
 ## Solution
 
-Follow the troubleshooting guides in the following articles:
+Review [outbound network and FQDN rules for Azure Kubernetes Service (AKS) clusters](/azure/aks/outbound-rules-control-egress) and make sure that all API services FQDN are allowed.
+
+For detailed troubleshooting steps, refer to the troubleshooting guides in the following articles:
 
 - [Troubleshoot the OutboundConnFailVMExtensionError error code (50)](error-code-outboundconnfailvmextensionerror.md)
 
@@ -42,8 +44,12 @@ Follow the troubleshooting guides in the following articles:
 
 - [Troubleshoot the K8SAPIServerDNSLookupFailVMExtensionError error code (52)](error-code-k8sapiserverdnslookupfailvmextensionerror.md)
 
+
 ## References
 
 - [General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)
 
+- [Outbound network and FQDN rules for Azure Kubernetes Service (AKS) clusters](/azure/aks/outbound-rules-control-egress)
+
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+

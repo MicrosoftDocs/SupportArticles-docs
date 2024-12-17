@@ -2,7 +2,7 @@
 title: Power Automate machine registration failure
 description: Provides a set of troubleshooting steps for a failing machine registration in Microsoft Power Automate.
 ms.custom: sap:Desktop flows\Cannot create desktop flow connection
-ms.date: 08/05/2024
+ms.date: 12/06/2024
 ms.reviewer: madiazor, alarnaud, fredg, guco
 ms.author: johndund 
 author: johndund
@@ -23,6 +23,8 @@ When you register your machine, you receive one of the following error messages:
 
 > The registration failed because the machine could not communicate with the cloud services due to a TLS error.
 
+> A cloud process needed for machine registration has been deactivated in Dataverse.
+
 ## Resolution
 
 To register your computer to run desktop flows through a Power Automate cloud flow, the Power Automate service on your computer needs to connect to the Power Automate cloud services. Here's a list of what to verify:
@@ -32,5 +34,7 @@ To register your computer to run desktop flows through a Power Automate cloud fl
 1. If your network uses a proxy, you must [configure the Power Automate runtime application for use with a proxy](https://support.microsoft.com/topic/power-automate-for-desktop-proxy-setup-8a79d690-1c02-416f-8af1-f057df5fe9b7).
 
 1. Verify that the Power Automate service itself can connect to the required services. This may require you to change the account that's running the Power Automate service on your computer. For more information, see the [runtime application troubleshooting tool](/power-automate/desktop-flows/troubleshoot#change-the-on-premises-service-account) that allows you to change the account.
+
+1. If you get an error indicating that the registration failed because a cloud process needed for machine registration has been deactivated, follow the instructions in ["The registration failed because Dataverse solution has the process 'RegisterFlowMachine' deactivated" error](verify-dataverse-process-registerflowmachine.md) to reactivate the process.
 
 If you've verified all of these and still occasionally receive the "We didn't get a response when trying to register your machine" error, you might have connectivity issues with your Dataverse organization. This might be due to temporary network instability or latency reaching your Dataverse organization. You can check the latency of your Dataverse organization by navigating to `https://[myorg].crm.dynamics.com/tools/diagnostics/diag.aspx` (replace `[myorg].crm.dynamics.com` with your organization's URL) and selecting **Run**. If you see extremely high latencies on the order of tens of seconds, you can try again when the situation improves or consult your network administrator.
