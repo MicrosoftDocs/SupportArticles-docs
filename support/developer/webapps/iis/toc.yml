@@ -3,7 +3,7 @@ items:
   href: iis-welcome.yml
 - name: Active Server Pages
   items:
-  - name: Can't create objects when an application run
+  - name: Can't create objects when an application runs
     href: active-server-pages/cannot-create-object-asp-applications-run.md
   - name: Create GUIDs
     href: active-server-pages/create-guids-asp.md
