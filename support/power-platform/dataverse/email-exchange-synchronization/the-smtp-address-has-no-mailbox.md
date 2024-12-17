@@ -1,37 +1,36 @@
 ---
-title: The SMTP address has no mailbox
-description: Provides a solution to an error that occurs when you select Test Connection on an Email Server Profile record in Dynamics 365.
+title: SMTP address has no mailbox associated with it error
+description: Solves an SMTP address error that occurs when you select Test Connection on an email server profile record in Dynamics 365.
 ms.reviewer: 
-ms.topic: troubleshooting
-ms.date: 11/19/2024
+ms.date: 12/11/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
-# The SMTP address has no mailbox associated with it error occurs in Microsoft Dynamics 365
+# "The SMTP address has no mailbox associated with it" error when selecting Test Connection
 
-This article provides a solution to an error that occurs when you select **Test Connection** on an Email Server Profile record in Dynamics 365.
+This article provides a solution to an error that occurs when you select **Test Connection** on an email server profile record in Microsoft Dynamics 365.
 
 _Applies to:_ &nbsp; Microsoft Dynamics 365  
 _Original KB number:_ &nbsp; 3214326
 
 ## Symptoms
 
-When you select **Test Connection** on an Email Server Profile record in Dynamics 365, you meet a Test Failed error. The Failure Details section contains the following message:
+When you [test connection on an email server profile record](/power-platform/admin/connect-exchange-server-on-premises#create-an-email-server-profile) in Dynamics 365, a "Test Failed" error occurs. The **Failure Details** section shows the following message:
 
-> "The SMTP address has no mailbox associated with it."
+> The SMTP address has no mailbox associated with it.
 
 ## Cause
 
-This error can occur if you use the format `domain\username` for the User Name (Example: `contoso\user`).
+This error can occur if the **User Name** field in the email server profile record is populated using the `domain\username` format instead of the UPN format (for example, `contoso\user`).
 
 ## Resolution
 
-Within the Credentials section of the Email Server Profile record, use the UPN format (Example: `user@contoso.com`) for the User Name instead of `domain\username` format.
+Use the UPN format (for example, `user@contoso.com`) for the **User Name** field instead of the `domain\username` format in the **Credentials** section of the email server profile record.
 
-If the User Name is in the UPN format and you still meet this error, verify a mailbox exists for the user and the UPN value in the User Name field matches the email address for the user's mailbox in Exchange.
+If the user name is in the UPN format and you still receive this error, verify that the user has a mailbox and that the UPN value in the **User Name** field matches the email address for the user's mailbox in Exchange.
 
 ## More information
 
-The following example is the Failure Details that will appear:
+The following is an example of the error message and additional information about the failure shown in the **Failure Details** section:
 
 ```xml
 Request to Exchange::  

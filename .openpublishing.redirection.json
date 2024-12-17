@@ -12581,6 +12581,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/dynamics-365/sales/tracked-to-dynamics-365-category-added.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/tracked-to-dynamics-365-category-added",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/dynamics-365/sales/cannot-send-email-as-another-user.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/cannot-send-email-as-another-user",
       "redirect_document_id": true
@@ -12589,6 +12594,26 @@
       "source_path": "support/windows-server/certificates-and-public-key-infrastructure-pki/delete-enterprise-windows-certificate-authority.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/delete-enterprise-windows-certificate-authority",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-signing-dynamics-365.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-when-signing-dynamics-365",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/you-are-not-part-this-organization.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-when-signing-dynamics-365",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/no-ethernet-after-pad-install.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/group-policy/apply-group-policy-objects-terminal-services.md",
+      "redirect_url": "/troubleshoot/windows-server/group-policy/apply-group-policy-objects-rds",
+      "redirect_document_id": true
     }
   ]
 }
