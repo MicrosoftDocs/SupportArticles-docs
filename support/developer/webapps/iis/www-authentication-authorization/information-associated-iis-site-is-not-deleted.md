@@ -24,17 +24,17 @@ In this scenario, unexpected behavior occurs when you try to access the newly cr
 
 ## Cause
 
-The problem occurs when a delete operation for an existing website in IIS is performed programmatically by using `appcmd` or `Microsoft.Web.Administration` APIs and if the site has legacy properties defined in the `<CustomMetaData>` configuration element of the ApplicationHost.config file of the IIS server. The information in the `<CustomMetaData>` tag that's relevant to the site isn't deleted in this scenario. If a new site with the same ID is created after the delete operation, this new site will be associated with the legacy properties of the old site.
+The problem occurs when a delete operation for an existing website in IIS is performed programmatically by using `appcmd` or `Microsoft.Web.Administration` APIs and if the site has legacy properties defined in the `<CustomMetaData>` configuration element of the ApplicationHost.config file of the IIS server. The information in the `<CustomMetaData>` tag that's relevant to the site isn't deleted in this scenario. If a new site with the same ID is created after the delete operation, this new site is associated with the legacy properties of the old site.
 
 ## Resolution
 
-You can use the IIS Administration Console to delete the website instead of making calls to `appcmd` or `Microsoft.Web.Administration`. This method makes sure that if there are any custom legacy properties associated with the website you're trying to delete, they'll also be deleted from the IIS configuration file (**ApplicationHost.config**). This behavior prevents these properties from being unexpectedly associated with a new website that you create on the same server that reuses the ID of the old deleted site.
+You can use the IIS Administration Console to delete the website instead of making calls to `appcmd` or `Microsoft.Web.Administration`. This method makes sure that if there are any custom legacy properties associated with the website you're trying to delete, they are also deleted from the IIS configuration file (**ApplicationHost.config**). This behavior prevents these properties from being unexpectedly associated with a new website that you create on the same server that reuses the ID of the old deleted site.
 
 If you must delete the site programmatically for any reason and can't use the IIS Manager Console, you can add either of the two workarounds to make sure that the information on the legacy properties that's associated with the site through the `<CustomMetaData>` element is also deleted.
 
 ### Workaround 1: Use appcmd commands
 
-If you're using `appcmd` to delete the site, you can then run the following command to remove any legacy properties that the site might have had in the IIS configuration:
+If you use `appcmd` to delete the site, you can then run the following command to remove any legacy properties that the site might have in the IIS configuration:
 
 ```console
 Appcmd clear config -section:customMetadata -[path='LM/W3SVC/<SiteID>']
@@ -45,7 +45,7 @@ Appcmd clear config -section:customMetadata -[path='LM/W3SVC/<SiteID>']
 
 ### Workaround 2: Use calls to Microsoft.Web.Administration
 
-If you're using managed API calls to `Microsoft.Web.Administration` to delete the website, you can add the following code after the website is deleted to also clear the legacy properties contained in the `<CustomMetaData>` element of the IIS configuration:
+If you use managed API calls to `Microsoft.Web.Administration` to delete the website, you can add the following code after the website is deleted to also clear the legacy properties contained in the `<CustomMetaData>` element of the IIS configuration:
 
 ```csharp
 string path = "LM/W3SVC/" + site.Id.ToString(CultureInfo.InvariantCulture);
@@ -88,4 +88,4 @@ On a Windows Server:
 
 1. Navigate to the `C:\windows\system32\inetsrv\` inside the command prompt.
 1. Run the command: `appcmd delete site WebTest`.
-1. After the site is deleted, the section of configuration is still present in **ApplicationHost.config**.
+1. After the site is deleted, the section of configuration still exits in **ApplicationHost.config**.
