@@ -4,7 +4,7 @@ description: Provides information about Business performance analytics self-help
 author: jinniew
 ms.author: jiwo
 ms.reviewer: twheeloc 
-ms.date: 12/04/2024
+ms.date: 12/17/2024
 ms.custom: sap:Business intelligence, reporting, analytics
 ms.search.form: business-performance-analytics
 audience: Application User
