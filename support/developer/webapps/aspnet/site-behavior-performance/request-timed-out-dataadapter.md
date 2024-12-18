@@ -3,7 +3,7 @@ title: Request timed out when using DataAdapter
 description: This article provides resolutions for Request Timed Out error that occurs when you use the DataAdapter method or run a query that takes more than 90 seconds to process in an ASP.NET Web application.
 ms.date: 12/18/2024
 ms.custom: sap:Performance
-ms.reviewer: koushikd
+ms.reviewer: koushikd, mszixie
 ---
 # Request timed out error when you use the DataAdapter method in an ASP.NET application
 
