@@ -1,7 +1,7 @@
 ---
 title: Request Restrictions can't be set for ISAPI
 description: This article provides resolutions for the problem where the Request Restrictions functionality not working for Wildcard ISAPI extension.
-ms.date: 12/17/2024
+ms.date: 12/18/2024
 ms.custom: sap:WWW Modules and Features\Handler mappings and ISAPI extensions
 ms.reviewer: pphadke, wadeh, bariscag
 ---
@@ -14,9 +14,9 @@ _Original KB number:_ &nbsp; 2725025
 
 ## Symptoms
 
-The **Request Restrictions** functionality of handler mappings can't be set for a Wildcard ISAPI extension on the current version of IIS. If the **Request Restrictions** are set by editing the IIS configuration and adding the sections `requireAccess` and `resourceType` for the wildcard ISAPI extension handler, you might experience unexpected behavior browsing pages that aren't handled by the Wildcard ISAPI extension, such as `StaticFile` handler requests.
+The **Request Restrictions** functionality of handler mappings can't be set for a Wildcard ISAPI extension on the current version of IIS. If the **Request Restrictions** feature is set by editing the IIS configuration and adding the sections `requireAccess` and `resourceType` for the wildcard ISAPI extension handler, you might experience unexpected behavior when browsing pages that aren't handled by the Wildcard ISAPI extension, such as `StaticFile` handler requests.
 
-The option to add **Request Restrictions** for a Wildcard ISAPI aren't available through the IIS Manager.
+The option to add **Request Restrictions** for a Wildcard ISAPI isn't available through the IIS Manager.
 
 ## Cause
 
