@@ -264,9 +264,9 @@ Configurations
 
 Computer that has a local security authority:
 
--Login account: USER1  
--Password: PSW1  
--Login Domain: LOCAL1
+- Login account: USER1  
+- Password: PSW1  
+- Login Domain: LOCAL1
 
 Active Directory domain controller:
 
@@ -283,10 +283,10 @@ The NET-DOMAIN domain:
 
 The CONTOSO-DOMAIN domain:
 
--Server Name: CONTOSO  
--Domain: CONTOSO-DOMAIN  
--Domain Database contains account: USER1  
--Domain Database contains password: PSW1
+- Server Name: CONTOSO  
+- Domain: CONTOSO-DOMAIN  
+- Domain Database contains account: USER1  
+- Domain Database contains password: PSW1
 
 In this example, the computer is logged on to its local domain, not the CONTOSO-DOMAIN domain where the computer's domain account resides.
 
