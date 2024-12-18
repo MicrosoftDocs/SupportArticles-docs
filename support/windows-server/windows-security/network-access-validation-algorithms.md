@@ -236,7 +236,7 @@ If the domain that is specified in the SMB is NULL, that is, no domain is specif
 
 3. If no account is found on the trusted domain, the operating system must use the local guest account to guarantee consistent behavior for authentication against the server.
 
-4. For more information about how to restrict the lookup and logon of isolated names in trusted domains by using the LsaLookupRestrictIsolatedNameLevel and NeverPing registry entries, see [The Lsass.exe process may stop responding if you have many external trusts on an Active Directory domain controller](https://support.microsoft.com/help/923241) and Hotfix is available that broadens logging to identify isolated name lookup requests in Windows Server 2008 SP2.
+4. For more information about how to restrict the lookup and logon of isolated names in trusted domains by using the LsaLookupRestrictIsolatedNameLevel and NeverPing registry entries, see [The Lsass.exe process may stop responding if you have many external trusts on an Active Directory domain controller](https://support.microsoft.com/help/923241). Additionally, hotfix is available that broadens logging to identify isolated name lookup requests in Windows Server 2008 SP2.
 
     - Guest accounts on trusted domains will never be available.
     - The actual internal process is more complex than the algorithms that are described here.
@@ -377,7 +377,7 @@ A good tip for troubleshooting network access problems is to enable auditing by 
 1. From the Administrative Tools on a domain controller, start Active Directory Users and Computers.
 2. Right-click the domain name, and then click **Properties**.
 3. On the **Group Policy** tab, double-click **Default Domain Policy**.
-4. In the Policy Editor, click **Computer Settings**, click **Windows Settings,** click **Security Settings**, click **Advanced Audit Policy Configuration**, and then click **Audit Policy**.
+4. In the Policy Editor, click **Computer Settings**, click **Windows Settings,** click **Security Settings**, click **Advanced Audit Policy Configuration**, and then click **Account Logon**.
 5. Select the **Audit Credential Validation** option and the **Failure** option.
 
 ### Local settings for Windows 2000 servers and members
