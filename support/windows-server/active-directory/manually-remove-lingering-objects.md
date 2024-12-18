@@ -1,6 +1,6 @@
 ---
-title: Lingering objects remain after a DC or GC server back online
-description: Helps resolve the issue in which lingering objects may remain after you bring an outdated DC or global catalog server back online.
+title: Manually remove lingering objects on outdated replication partners
+description: Helps with manual removal of lingering objects after you bring an outdated domain controller (DC) or global catalog server back online.
 ms.date: 12/17/2024
 manager: dcscontentpm
 audience: itpro
@@ -8,9 +8,9 @@ ms.topic: troubleshooting
 ms.reviewer: kaushika, herbertm, v-lianna
 ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---
-# Lingering objects remain after you bring an outdated DC or global catalog server back online
+# Manually remove lingering objects on outdated replication partners
 
-This article helps resolve an issue in which [lingering objects](information-lingering-objects.md#summary) may remain after you bring an outdated domain controller (DC) or global catalog server back online.
+This article helps with manual removal of [lingering objects](information-lingering-objects.md#summary) after you bring an outdated domain controller (DC) or global catalog server back online. In many cases, you can clean up lingering objects using the `repadmin /removelingeringobjects` command or tools like [Lingering Object Liquidator](lingering-object-liquidator-tool.md). However, these facilities don't work if you have [abandoned objects](https://support.microsoft.com/topic/attributes-that-contain-stale-or-bad-data-cause-exchange-offline-address-book-oab-generation-failures-and-event-ids-9126-9330-and-9339-together-with-stop-error-code-8004010e-occur-d505154b-f51f-6604-436b-e30fe4e486d9).
 
 After you bring back online a domain controller or global catalog server that has been offline for a long time, any of the following issues may occur:
 
