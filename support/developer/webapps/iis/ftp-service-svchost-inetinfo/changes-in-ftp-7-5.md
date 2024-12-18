@@ -1,6 +1,6 @@
 ---
 title: Changes in Microsoft FTP
-description: This article describes some of the changes that were introduced in the current version (7.5 and later) of Microsoft FTP.
+description: This article describes some of the changes that were introduced in Microsoft FTP 7.5 and later versions.
 ms.date: 12/16/2024
 ms.custom: sap:FTP Service and Svchost or Inetinfo Process Operation\Service configuration
 ms.reviewer: kaorif, mlaing, robmcm, dougste
@@ -8,24 +8,24 @@ ms.topic: article
 ---
 # Changes in Microsoft FTP
 
-This article describes some of the changes that were introduced in the current version (7.5 and later) of Microsoft FTP.
+This article describes some of the changes that were introduced in Microsoft FTP 7.5 and later versions.
 
 _Original product version:_ &nbsp; Internet Information Services  
 _Original KB number:_ &nbsp; 2505047
 
 ## Some NLST command-line options don't work
 
-In the current version of FTP, an FTP client can use only the `-C`, `-1`, `-l`, `-F`, `-a`, or `-A` command-line options with the NLST command. For example, the `-r` option (for the reverse sort direction) and the `-t` option (for sort by time of last write) no longer work. Because these command-line options aren't documented in the RFC, Microsoft might change the implementation in the feature version of FTP.
+In the current version of FTP, an FTP client can use only the `-C`, `-1`, `-l`, `-F`, `-a`, or `-A` command-line options with the NLST command. For example, the `-r` option (for the reverse sort direction) and the `-t` option (for sort by time of last write) no longer work. Because these command-line options aren't documented in the RFC, Microsoft might change the implementation in the future version of FTP.
 
 ## FTP data connections are established and disconnected asynchronously in the background
 
-The establishing and disconnecting of the FTP data connection is processed in the background of the response for the control connection. The current version of FTP starts a three-way handshake to establish the data connection before it returns **200 PORT command successful** as the response to the `PORT` command to the control connection. The **226 Transfer Complete** response returns as the response of the `LIST` and `RETR` commands to the control connection before the handshake to disconnect the data connection finishes.
+The establishing and disconnecting of the FTP data connection is processed in the background of the response for the control connection. The current version of FTP starts a three-way handshake to establish the data connection before it returns **200 PORT command successful** as the response to the `PORT` command to the control connection. The **226 Transfer complete** response returns as the response of the `LIST` and `RETR` commands to the control connection before the handshake to disconnect the data connection finishes.
 
 ## IisFtp.vbs isn't supported with FTP
 
-In the current version of FTP, the **IisFtp.vbs** script is no longer supported and isn't included as part of the FTP installation package. Therefore some functionality that was possible using *IisFtp.vbs* requires different action to be taken in the current version of FTP. For example, the `IIsFtp.vbs /setadprop` command available in Internet Information Services (IIS) 6.0 to create an FTP site in Active Directory isolation Mode can't be used in the current version of FTP. Instead, use ADSI Editor to set the `msIIS-FTPRoot` and `msIIS-FTPDir` properties to point to the home directories in Active Directory Isolation Mode.
+In the current version of FTP, the **IisFtp.vbs** script is no longer supported and isn't included as part of the FTP installation package. Therefore, a functionality that uses *IisFtp.vbs* requires different actions in the current version of FTP. For example, the `IIsFtp.vbs /setadprop` command available in Internet Information Services (IIS) 6.0 to create an FTP site in Active Directory isolation Mode can't be used in the current version of FTP. Instead, use ADSI Editor to set the `msIIS-FTPRoot` and `msIIS-FTPDir` properties to point to the home directories in Active Directory Isolation Mode.
 
-ADSI Editor is a Lightweight Directory Access Protocol (LDAP) editor that you can use to manage objects and attributes in Active Directory. It's installed on Windows Server domain controllers by default and will have to be manually installed on member servers.
+ADSI Editor is a Lightweight Directory Access Protocol (LDAP) editor that you can use to manage objects and attributes in Active Directory. It's installed on Windows Server domain controllers by default and has to be manually installed on member servers.
 
 There are three main steps to configure the Isolate users in Active Directory mode:
 
@@ -48,9 +48,9 @@ To configure Active Directory, you can use ADSI Editor instead of **IisFtp.vbs**
 
 ## FTP returns a 125 or 150 response when an FTP client sends a command needing the data connection in passive mode
 
-In earlier versions of IIS, the FTP service returns a **125 Data connection already open; transfer starting** response for `APPE`, `STOU`, and `STOR` commands sent by FTP clients when the client and server are communicating over a passive mode connection. Additionally, FTP returns a "150 File status okay; about to open data connection" response for the `APPE`, `STOU`, and `STOR` commands over active mode connections.
+In earlier versions of IIS, the FTP service returns a **125 Data connection already open; transfer starting** response for `APPE`, `STOU`, and `STOR` commands sent by FTP clients when the client and server are communicating over a passive mode connection. Additionally, FTP returns a **150 File status okay; about to open data connection** response for the `APPE`, `STOU`, and `STOR` commands over active mode connections.
 
-In the current version of FTP, the response message doesn't depend on whether the request for the data connection is over passive mode or active mode. Instead, if the data connection is already established FTP responds with **125 Data connection already open; transfer starting**. If the data connection isn't already established, FTP responds with **150 File status okay; about to open data connection**.
+In the current version of FTP, the response message doesn't depend on whether the request for the data connection is over passive mode or active mode. Instead, if the data connection is already established, FTP responds with **125 Data connection already open; transfer starting**. If the data connection isn't already established, FTP responds with **150 File status okay; about to open data connection**.
 
 > [!NOTE]
 > The current version of FTP does not start establishing the data connection for `PASV` or `EPSV` commands until the data connection for an earlier FTP request is disconnected.
@@ -63,7 +63,7 @@ In earlier versions of IIS, the FTP service accepted both `CRLF` and `LF` as the
 
 ## FTP resets the data connection if an FTP client tries to use a port lower than 1024 for the data connection
 
-In earlier versions of IIS, an FTP client could choose to use a port lower than 1024 for the data connection, in both passive mode and active mode FTP communications. In the current version of FTP, when an FTP client tries to use a port lower than 1024 for the data connection, FTP will reset the underlying TCP connection. For example, if an FTP client tries to do a passive-mode upload of a file using the `STOR` command, and tries to use a port lower than 1024 for the data connection, the upload fails and the following entries are written to the FTP log:
+In earlier versions of IIS, an FTP client could choose to use a port lower than 1024 for the data connection, in both passive mode and active mode FTP communications. In the current version of FTP, when an FTP client tries to use a port lower than 1024 for the data connection, FTP resets the underlying TCP connection. For example, if an FTP client tries to do a passive-mode upload of a file using the `STOR` command, and tries to use a port lower than 1024 for the data connection, the upload fails and the following entries are written to the FTP log:
 
 ```console
 2012-01-15 02:08:16 123.456.789.0 user01 123.1.1.1 40063 DataChannelOpened - - 0 0
@@ -72,13 +72,13 @@ In earlier versions of IIS, an FTP client could choose to use a port lower than 
 ```
 
 > [!NOTE]
-> For an active-mode FTP upload using a data port less than 1024, the Win32 status will be 87 instead of 1236.
+> For an active-mode FTP upload using a data port less than 1024, the Win32 status is 87 instead of 1236.
 
-This behavior occurs because in the current version of FTP, ports in the range of 0-1023 are now reserved for system processes or for programs executed by privileged users.
+This behavior occurs because in the current version of FTP, ports in the range of 0 to 1023 are now reserved for system processes or for programs executed by privileged users.
 
 ## FTP RETR for open files
 
-In the current version of FTP, `RETR(GET)` for files that are already opened by a different process (not FTP Service (FTPSVC)) will fail with `ERROR_SHARING_VIOLATION`.
+In the current version of FTP, `RETR(GET)` for files that are already opened by a different process (not FTP Service (FTPSVC))  fails with `ERROR_SHARING_VIOLATION`.
 
 ## More information
 
