@@ -64,7 +64,7 @@ CREATE CREDENTIAL [contoso.vault.azure.net] 
 For more information, see [Managed Identity Support for Extensible Key Management with Azure Key Vault](/azure/azure-sql/virtual-machines/windows/managed-identity-extensible-key-management).
 
 > [!NOTE]
-> -[Trace flag 4675](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql), disabled by default, allows troubleshooting the server-level credential and can be used to confirm the primary managed identity that is assigned to the SQL Server instance. 
+> - [Trace flag 4675](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql), disabled by default, allows troubleshooting the server-level credential and can be used to confirm the primary managed identity that is assigned to the SQL Server instance. 
 > - The managed identity support doesn't introduce any T-SQL syntax or system view changes, since this functionality already exists for Azure SQL Managed Instance. 
 > - Managed identities aren't supported for the server-level credential on SQL Server on-premises. When accidentally used with backup or restore to Azure Storage, you see the error message "The primary managed identity is not set for the server and refers to the public documentation. "
 
