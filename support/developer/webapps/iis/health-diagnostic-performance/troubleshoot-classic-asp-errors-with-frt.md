@@ -1,41 +1,42 @@
 ---
 title: Use Failed Request Tracing to troubleshoot Classic ASP errors
 description: Describes how to use Failed Request Tracing to troubleshoot Classic ASP errors
-ms.date: 02/19/2009
+ms.date: 12/18/2024
 ms.author: haiyingyu
 author: HaiyingYu
-ms.reviewer: johnhart, robmcm
+ms.reviewer: johnhart, robmcm, mszixie
+
 ms.custom: sap:Health, Diagnostic, and Performance Features\Failed Request Tracing
 ---
 # Use Failed Request Tracing to troubleshoot Classic ASP errors
 
 _Applies to:_ &nbsp; Internet Information Services
 
-One of the great troubleshooting features that is built in to IIS is Failed Request Tracing, which lets you configure tracing rules on your server that will create detailed troubleshooting log files for custom failure conditions that you define. For example, you can capture the details for authentication failures by creating tracing rules that create log files for HTTP 401 errors.
+One of the great troubleshooting features that is built in to Internet Information Services (IIS) is Failed Request Tracing, which lets you configure tracing rules on your server that will create detailed troubleshooting log files for custom failure conditions that you define. For example, you can capture the details for authentication failures by creating tracing rules that create log files for HTTP 401 errors.
 
 Failed Request Tracing in IIS can be configured to passively trace failures. This means that you can add tracing rules to IIS that will create log files when errors occur, even if you aren't actively monitoring your server. For example, the steps in this article show you how to create a tracing rule that will create trace logs whenever an HTTP 500 error occurs. This method of passive tracing is known as "no-repro" tracing, which means that you can periodically examine your server's logs to check if any failures have occurred, and then take action only when IIS has created logs.
 
 ## Work with User Access Control
 
-Make sure that you follow the steps in this article by using an account that has full administrative permissions. To do this, use one of the following two methods:
+To make sure that you follow the steps in this article by using an account that has full administrative permissions, use one of the following two methods:
 
 - Sign in to your computer by using the local administrator account.
-- If you're signed in using an account with administrative permissions but that isn't the local administrator account, open all applications and all command prompt sessions by using the "Run as Administrator" option.
+- If you're signed in using an account with administrative permissions but that isn't the local administrator account, open all applications and all command prompt sessions by using the **Run as Administrator** option.
 
-These conditions are required because the User Account Control (UAC) security component in Windows prevent administrative access to the IIS configuration settings. For more information about UAC, see [User Account Control](/windows/security/application-security/application-control/user-account-control/).
+These conditions are required because the User Account Control (UAC) security component in Windows prevents administrative access to the IIS configuration settings. For more information about UAC, see [User Account Control](/windows/security/application-security/application-control/user-account-control/).
 
 ## Install Failed Request Tracing
 
 Failed Request Tracing isn't installed by default on IIS. Install Failed Request Tracing according to your version of Windows.
 
-### Windows Client OS
+### Windows client operating system
 
 1. Select **Start** > **Control Panel**.
 1. In **Control Panel**, select **Programs and Features** > **Turn Windows Features on or off**.
 1. Expand **Internet Information Services** > **World Wide Web Services** > **Health and Diagnostics**.
 1. Select **Tracing**, and then select **OK**.
 
-### Windows Server OS
+### Windows server operating system
 
 1. Select **Start**, point to **Administrative Tools**, and then select **Server Manager**.
 1. In the **Server Manager** hierarchy pane, expand **Roles**, and then select **Web Server (IIS)**.
@@ -80,7 +81,7 @@ IIS returns HTTP 500 errors when ASP pages fail to execute, and without the Fail
 
 #### How to add a tracing rule for HTTP 500 errors
 
-The following steps configure a Failed Request Tracing rule for HTTP 500 errors, which you use later to troubleshoot classic ASP error messages.
+The following steps configure a Failed Request Tracing rule for HTTP 500 errors, which you use later to troubleshoot classic ASP error messages:
 
 1. Select **Start**, point to **Administrative Tools**, and then select **Internet Information Services (IIS) Manager**.
 2. In the **Connections** pane, go to the connection, site, application, or directory for which you want to configure Failed Request Tracing.
@@ -161,7 +162,7 @@ In this error condition, you examine a page that loops endlessly. This problem i
 </html>
 ```
 
-When you use a Web browser to browse to this file, you should see no error in your Web browser, but your browser may never return a page and will eventually time out.
+When you use a Web browser to browse to this file, you should see no error in your Web browser, but your browser might never return a page and will eventually time out.
 
 > [!NOTE]
 > This page is written to exit the loop after you close your Web browser. If you want to exit the loop before the script timeout is reached, you should manually close your browser after ten seconds.
@@ -170,7 +171,7 @@ After five seconds, IIS will create a failed request trace log in your _%*System
 
 #### Read the trace log in Internet Explorer
 
-As shown in the previous example, when you use Internet Explorer or IE mode in Edge browser to open a Failed Request Tracing log file, important information is displayed in a **Request Summary**. This summary contains the general environment information for the failure condition such as the executing URL, the application pool, the authentication type and user name, and other information. Notice that the reason for the failure was the amount of time taken, and that the time was slightly over five seconds, which was the time that you entered in the Failed Request Tracing rule.
+As shown in the previous example, when you use Internet Explorer or IE mode in Microsoft Edge browser to open a Failed Request Tracing log file, important information is displayed in a **Request Summary**. This summary contains the general environment information for the failure condition such as the executing URL, the application pool, the authentication type and user name, and other information. Notice that the reason for the failure was the amount of time taken, and that the time was slightly over five seconds, which was the time that you entered in the Failed Request Tracing rule.
 
 > [!NOTE]
 > You will also notice that the HTTP status code for the response was HTTP 200, which is a successful response. This is one of the factors that often makes it more difficult to diagnose slow pages-the responses succeed, which make them more difficult to locate.
@@ -189,5 +190,5 @@ An example is shown in the following illustration:
 
 For more information about Failed Request Tracing in IIS, see the following articles:
 
-- [Walkthrough: Troubleshooting Failed Requests Using Tracing in IIS 7.0 and Above](troubleshoot-failed-requests-using-tracing-in-iis-85.md)
+- [Walkthrough: Troubleshooting Failed Requests Using Tracing in IIS](troubleshoot-failed-requests-using-tracing-in-iis-85.md)
 - [Configuration Reference: Trace Failed Requests](/iis/configuration/system.webServer/tracing/traceFailedRequests)
