@@ -2,7 +2,7 @@
 title: ExpiredDesktopFlowConnection when using or testing a desktop flow connection
 description: Resolves an error that occurs when using or testing a desktop flow connection that hasn't been used since the target machine or group rotated its key in Microsoft Power Automate.
 ms.reviewer: padib，aartigoyle, johndund, quseleba
-ms.date: 12/13/2024
+ms.date: 12/18/2024
 ms.custom: sap:Desktop flows\Unattended flow runtime errors
 ---
 # "ExpiredDesktopFlowConnection" error when using or testing a desktop flow connection
@@ -11,7 +11,7 @@ This article provides a resolution for the `ExpiredDesktopFlowConnection` error 
 
 ## Symptoms
 
-You receive the following error message when using or testing a desktop flow connection:
+You receive the following error message when using or testing a [desktop flow connection](/power-automate/desktop-flows/desktop-flow-connections):
 
 ```json
   {
