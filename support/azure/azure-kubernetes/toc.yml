@@ -357,11 +357,13 @@
   
 - name: Troubleshoot error codes
   items:
-  - name: VMExtensionError_CniDownloadTimeout error
-    href: error-codes/vmextensionerror-cnidownloadtimeout.md
-  - name: VMExtensionError_OutboundConnFail error
-    href: error-codes/vmextensionerror-outboundconnfail.md
-  - name: VMExtensionError_K8SAPIServerConnFail error
-    href: error-codes/vmextensionerror-k8sapiserverconnfail.md
-  - name: VMExtensionError_K8SAPIServerDNSLookupFail error
-    href: error-codes/vmextensionerror-k8sapiserverdnslookupfail.md
+  - name: VMExtension error codes
+    items:
+    - name: VMExtensionError_CniDownloadTimeout error
+      href: error-codes/vmextensionerror-cnidownloadtimeout.md
+    - name: VMExtensionError_OutboundConnFail error
+      href: error-codes/vmextensionerror-outboundconnfail.md
+    - name: VMExtensionError_K8SAPIServerConnFail error
+      href: error-codes/vmextensionerror-k8sapiserverconnfail.md
+    - name: VMExtensionError_K8SAPIServerDNSLookupFail error
+      href: error-codes/vmextensionerror-k8sapiserverdnslookupfail.md
