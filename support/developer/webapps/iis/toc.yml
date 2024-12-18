@@ -124,8 +124,6 @@ items:
     href: site-behavior-performance/calling-postcompletion-cause-crash.md
   - name: Can't call MTS COM from ASP
     href: site-behavior-performance/server-execution-fail-call-mts-com-asp.md
-  - name: Default maximum stack size of a thread
-    href: site-behavior-performance/default-maximum-stack-size-thread.md
   - name: Event handles may leak
     href: site-behavior-performance/event-handles-leaked.md
   - name: Event ID 115 when you connect HTTPS websites

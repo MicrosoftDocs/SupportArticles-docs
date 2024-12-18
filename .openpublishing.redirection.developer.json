@@ -5784,6 +5784,11 @@
       "source_path": "support/developer/visualstudio/installation/known-issues-visual-studio-2012-update.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/welcome-visual-studio",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/webapps/iis/site-behavior-performance/default-maximum-stack-size-thread.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/iis-welcome",
+      "redirect_document_id": false
     }
   ]
 }
