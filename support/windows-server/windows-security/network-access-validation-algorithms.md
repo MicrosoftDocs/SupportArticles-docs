@@ -251,7 +251,7 @@ The following are examples of these algorithms in action.
 
 ### Example 1
 
-You are logged on to the computer by using the same account name and password that is in the CONTOSO-DOMAIN domain account database. When you run the `NET USE \\CONTOSO` command for the domain controller for the SCRATCH-DOMAIN domain, the command is completed successfully. When you run the `NET USE \\NET` command for the domain controller that trusts the CONTOSO-DOMAIN domain, you receive the following error message:
+You are logged on to the computer by using the same account name and password that is in the CONTOSO-DOMAIN domain account database. When you run the `NET USE \\CONTOSO` command for the domain controller for the CONTOSO-DOMAIN domain, the command is completed successfully. When you run the `NET USE \\NET` command for the domain controller that trusts the CONTOSO-DOMAIN domain, you receive the following error message:
 
 > System error 1326 has occurred. Logon failure: unknown user name or bad password.
 
