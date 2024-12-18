@@ -1,7 +1,7 @@
 ---
 title: Write binary files to the browser
 description: This article creates a sample page that demonstrates how to use C# to retrieve binary data from a file and then write the data out to the browser. 
-ms.date: 12/16/2024
+ms.date: 12/18/2024
 ms.custom: sap:General Development
 ms.topic: how-to
 ---
@@ -25,7 +25,7 @@ This section demonstrates how to create a new ASP.NET web application named *Bin
 1. Open Microsoft Visual Studio.
 2. From the **File** menu, point to **New**, and then select **Project**.
 3. Select **C#** under **All languages**, **Windows** under **All platforms**, and then select **ASP.NET Web Application(.NET Framework)** in the templates list.
-4. In the **Name** text box, type **BinaryDemo**. In the **Location** text box, type the **ServerName**. If you're using the local server, leave the location as `http://localhost`.
+4. In the **Name** text box, type **BinaryDemo**. In the **Location** text box, type the server name. If you're using the local server, leave the location as `http://localhost`.
 
 ## Add the PDF file to the project
 
@@ -51,7 +51,7 @@ In addition, ensure that Adobe Acrobat Reader is installed on the client compute
         > Make sure that your page is added to the project at the same level as the .pdf file that you added in the previous section. This is very important because the code uses the relative path to initially reference the .pdf file.
 
 2. In the **Solution Explorer**, right-click **BinaryData.aspx**, and then select **View Code**.
-3. Highlight the following code, right-click the code, and then select **Copy**. In the `Page_Load` event in the code-behind page, select **Paste** on the **Edit** menu to paste the code:
+3. Highlight the following code, right-click the code, and then select **Copy**. In the `Page_Load` event on the code-behind page, select **Paste** on the **Edit** menu to paste the code:
 
     ```csharp
     private void Page_Load(object sender, System.EventArgs e)
