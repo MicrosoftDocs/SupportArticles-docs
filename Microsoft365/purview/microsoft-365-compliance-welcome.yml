@@ -5,7 +5,7 @@ summary: This library of articles provides guidance to troubleshoot and fix erro
 metadata:
   title: Microsoft Purview troubleshooting
   description: Documentation for troubleshooting common issues with Microsoft Purview.
-  ms.service: microsoft-365-compliance
+  ms.service: purview
   ms.topic: landing-page
   author: helenclu
   ms.author: luche
