@@ -1,5 +1,5 @@
 ---
-title: Resolve issues when accessing Viva Glint survey results as a manager
+title: Resolve issues when accessing Viva Glint survey results
 description: Resolves some common issues that you might encounter when you try to view survey results for your team.
 manager: dcscontentpm
 ms.reviewer: aweixelman
@@ -13,9 +13,9 @@ ms.custom:
   - CI 195105
 ---
 
-# Resolve issues when accessing Viva Glint survey results as a manager
+# Resolve issues when accessing Viva Glint survey results
 
-Microsoft Viva Glint survey programs enable your organization to collect data and listen to feedback about employee job satisfaction. To access your Viva Glint dashboard as a manager in your organization, sign in by using one of the following links based on the region of your organization:  
+Microsoft Viva Glint survey programs enable your organization to collect data and listen to feedback about employee job satisfaction. To access your Viva Glint dashboard as a leader or manager in your organization, sign in by using one of the following links based on the region of your organization:  
 
 - US - [http://app.us1.glint.cloud.microsoft](http://app.us1.glint.cloud.microsoft)
 - EU - [http://app.eu1.glint.cloud.microsoft](http://app.eu1.glint.cloud.microsoft)
@@ -73,12 +73,32 @@ This issue occurs if employee data wasn't updated before a survey was launched.
 
 To resolve the issue, check whether the Viva Glint admin can update your results data.
 
-## No connection to the Glint service
+## Connection to Glint
+
+If you are repeatedly logged out of the Glint application or experience login issues, use this information to find a resolution.
+
+### Unable to connect to the Glint service
 
 You receive the following error message:
 
 > Sorry, we are unable to connect to the Glint service. Please check your network connection and try again.
 
-This error might occur if an issue prevents matching your information between the Viva Glint app and Microsoft Entra ID.
+This error might occur if an issue prevents matching your user principal name (UPN) and email between the Viva Glint app and Microsoft Entra ID.
 
 To resolve the issue, ask your Viva Glint admin to update the data so that it matches across the two systems.
+
+### Repeated logouts
+
+If you're repeatedly logged out of Glint:
+
+- Reach out to your Microsoft Entra admin to confirm that your user principal name (UPN) and email between Glint and Entra match.
+- Confirm that you only have **one** active Glint session open in your internet browser. If you have multiple sessions, logout, close all browser tabs/windows, and start a new session.
+- Review [session timeout information](/viva/glint/setup/access-glint#session-timeout). Glint logs out a user after 30 total minutes of inactivity, with a prompt to continue the session after the first 20 minutes.
+- Check the Glint link that you have bookmarked and verify that it doesn't contain any extra text like "/config" or "/dashboard." Your bookmarked link should be one of the following, depending on your region:
+  
+  - US - [http://app.us1.glint.cloud.microsoft](http://app.us1.glint.cloud.microsoft)
+  - EU - [http://app.eu1.glint.cloud.microsoft](http://app.eu1.glint.cloud.microsoft)
+
+- Check with your IT team to see if [idle session timeout](/microsoft-365/admin/manage/idle-session-timeout-web-apps) is enabled for your organization, which controls how long users can be inactive before being signed out of Microsoft 365 apps.
+
+If you still experience logout issues after reviewing the items included here, reach out to your Viva Glint Admin to determine next steps with Microsoft 365 Support.
