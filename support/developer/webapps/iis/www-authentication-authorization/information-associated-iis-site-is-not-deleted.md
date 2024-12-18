@@ -1,7 +1,7 @@
 ---
 title: Information associated with IIS site isn't deleted
 description: This article provides resolutions for the problem where information associated with IIS site isn't deleted during programmatic site deletion.
-ms.date: 12/17/2024
+ms.date: 12/18/2024
 ms.custom: sap:Development\Using AHAdmin
 ms.reviewer: paulboc
 ---
@@ -88,4 +88,4 @@ On a Windows Server:
 
 1. Navigate to the `C:\windows\system32\inetsrv\` inside the command prompt.
 1. Run the command: `appcmd delete site WebTest`.
-1. After the site is deleted, the section of the configuration still exists in **ApplicationHost.config**.
+1. After the site is deleted, the section of the configuration is still in **ApplicationHost.config**.
