@@ -1,7 +1,7 @@
 ---
 title: Request timed out when using DataAdapter
 description: This article provides resolutions for Request Timed Out error that occurs when you use the DataAdapter method or run a query that takes more than 90 seconds to process in an ASP.NET Web application.
-ms.date: 12/16/2024
+ms.date: 12/18/2024
 ms.custom: sap:Performance
 ms.reviewer: koushikd
 ---
@@ -28,7 +28,7 @@ By default, the value of the `executionTimeout` attribute is set to 90 seconds i
 
 To work around this problem, increase the time-out value that is set for the `executionTimeout` attribute in the configuration file.
 
-The `executionTimeout` attribute exists under `<httpRequest>` in the **machine.config** file. You can change these settings either in the **web.config** file or in the **machine.config** file. The default value for the time-out is 90 seconds. The `executionTimeout` attribute indicates the maximum number of seconds a request is permitted to run before being shut down by the ASP.NET Web application.
+The `executionTimeout` attribute exists under `<httpRequest>` in the **machine.config** file. You can change these settings either in the **web.config** file or in the **machine.config** file. The default value for time-out is 90 seconds. The `executionTimeout` attribute indicates the maximum number of seconds a request is permitted to run before being shut down by the ASP.NET Web application.
 
 ### Method 1: Set the executionTimeout attribute value in the web.config file
 
@@ -129,7 +129,7 @@ This behavior is by design.
 8. On the **Debug** menu, select **Start** to build and run the project. You might receive the error message that the [Symptoms](#symptoms) section describes.
 
 > [!NOTE]
-> The default value for the time-out as set in the **machine.config** file is 90 seconds. If the process time is less than 90 seconds, increase the processing time by increasing the number of records to be fetched.
+> The default value for time-out that's set in the **machine.config** file is 90 seconds. If the process time is less than 90 seconds, increase the processing time by increasing the number of records to be fetched.
 
 ## References
 
