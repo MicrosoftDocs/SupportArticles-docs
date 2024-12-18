@@ -14,7 +14,7 @@ This article helps with manual removal of [lingering objects](information-linger
 
 After you bring back online a domain controller or global catalog server that has been offline for a long time, any of the following issues may occur:
 
-- E-mail messages aren't delivered to a user whose user object was moved between domains. After you bring the outdated domain controller or global catalog server back online, both instances of the user object appear in the global catalog. Both objects have the same e-mail address, so e-mail messages can't be delivered.
+- E-mail messages aren't delivered to a user whose user object was moved between domains. After you bring the outdated domain controller or global catalog server back online, both instances of the user object appear in the global catalog contents. Both objects have the same e-mail address, so e-mail messages can't be delivered.
 - A user account that no longer exists still appears in the global address list.
 - A universal group that no longer exists still appears in a user's access token.
 
@@ -33,7 +33,7 @@ The best way to identify in which domain an object is located (and from that to 
 1. Start **Ldp.exe**.
 2. On the **Connection** menu, select **Connect**.
 3. Enter the name of a global catalog server. Enter **3268** as the port to which to connect. Select **OK**.
-4. On the **Connection** menu, select **Bind**. Enter valid credentials if your current credentials aren't sufficient to query all of the global catalog server contents. Select **OK**.
+4. On the **Connection** menu, select **Bind**. Enter valid credentials if your current credentials aren't sufficient to query all of the global catalog contents. Select **OK**.
 5. On the **View** menu, select **Tree**. Enter the distinguished name of the forest root. Select **OK**.
 6. Right-click the forest root in the tree list, and then select **Search**.
 7. Create a filter of the following form:
