@@ -33,10 +33,6 @@ landingContent:
         links:
           - text: Resolve eDiscovery issues
             url: ./ediscovery/resolve-ediscovery-issues.md
-          - text: Can't start eDiscovery PST Export Tool
-            url: ./ediscovery/cannot-start-ediscovery-pst-export.md
-          - text: eDiscovery search results export fails
-            url: ./ediscovery/ediscovery-results-export-fails.md
  # Card
   - title: Audit logs
     linkLists:
@@ -64,8 +60,6 @@ landingContent:
         links:
           - text: Common scenarios for tips
             url: ./data-loss-prevention/data-loss-prevention-policy-tips.md
-          - text: DLP tips not working
-            url: ./data-loss-prevention/dlp-tips-not-work.md
           - text: DLP not working
             url: ./data-loss-prevention/data-loss-prevention-not-work.md
  # Card
