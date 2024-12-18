@@ -5,7 +5,7 @@ author: ceporche
 ms.author: ceporche
 ms.writer: rbarni, alarnaud
 ms.custom: sap:Desktop flows\Cannot create desktop flow connection
-ms.date: 12/17/2024
+ms.date: 12/18/2024
 ---
 # Your machine doesn't appear when creating a desktop flow connection 
 
@@ -29,7 +29,7 @@ This issue might occur due to the following reasons:
 
 Follow these steps to troubleshoot and resolve the issue:
 
-1. Open the Power Automate machine runtime app by launching Power Automate for desktop. Select **Settings** > **Machine settings**. Verify that your machine is registered.
+1. Open the Power Automate machine runtime app and verify that your machine is registered.
 
    :::image type="content" source="media/machine-not-shown-in-list/machine-registered-in-runtime-app.png" alt-text="Screenshot that shows your machine is registered in the Power Automate machine runtime app." lightbox="media/machine-not-shown-in-list/machine-registered-in-runtime-app.png":::
 
