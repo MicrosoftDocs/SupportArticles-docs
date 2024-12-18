@@ -88,4 +88,4 @@ On a Windows Server:
 
 1. Navigate to the `C:\windows\system32\inetsrv\` inside the command prompt.
 1. Run the command: `appcmd delete site WebTest`.
-1. After the site is deleted, the section of configuration still exits in **ApplicationHost.config**.
+1. After the site is deleted, the section of the configuration still exists in **ApplicationHost.config**.
