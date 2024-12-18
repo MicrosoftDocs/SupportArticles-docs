@@ -1,5 +1,5 @@
 ---
-title: ExpiredDesktopFlowConnection when using or testing a desktop flow connection
+title: ExpiredDesktopFlowConnection When Using or Testing a Desktop Flow Connection
 description: Resolves an error that occurs when using or testing a desktop flow connection that hasn't been used since the target machine or group rotated its key in Microsoft Power Automate.
 ms.reviewer: padib，aartigoyle, johndund, quseleba
 ms.date: 12/18/2024
