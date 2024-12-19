@@ -7,14 +7,14 @@ ms.custom: sap:Email and Exchange Synchronization
 ---
 # OutgoingEmailAuthenticationError is logged in Microsoft Dynamics 365 mailbox alert
 
-This article provides a resolution for the **OutgoingEmailAuthenticationError** error that occurs in a Microsoft Dynamics 365 mailbox alert.
+This article provides a resolution for the **OutgoingEmailAuthenticationError** error that's logged in a Microsoft Dynamics 365 mailbox record.
 
 _Applies to:_ &nbsp; Microsoft Dynamics 365  
 _Original KB number:_ &nbsp; 4533293
 
 ## Symptoms
 
-When viewing [the Alerts area for a user's mailbox](/power-platform/admin/monitor-email-processing-errors#view-alerts), you might see the following error message:
+The following error is logged in the [Alerts](/power-platform/admin/monitor-email-processing-errors#view-alerts) section in a Dynamics 365 mailbox record:
 
 > Email cannot be sent for mailbox "Your mailbox is now connected to Dynamics 365" because either a server certificate needed to connect to the email server could not be validated or the credentials used to send email are incorrect or do not provide access. Mailbox "Your mailbox is now connected to Dynamics 365" didn't synchronize. A notification about this is posted on the alerts wall for the owner of the email server profile [Profile Name].
 >
