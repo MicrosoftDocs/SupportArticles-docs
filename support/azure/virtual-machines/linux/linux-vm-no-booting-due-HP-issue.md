@@ -284,7 +284,8 @@ sudo reboot
 ```
 
 [!IMPORTANT] Review how much memory the VM has and How much HugePage is set up. If the system needs 16GB for HugePages reservation and the VM size has only 16GB of RAM, the system runs out of memory. As a result, the VM doesn't  boot. In this case, the recommendation is to upgrade the VM with size that has at least 32G for example.
-> or refence on How much HugePages the VM and Database needs refer to: [Oracle Community](https://community.oracle.com/mosc/discussion/4516170/huge-pages)
+
+How much HugePages the VM and Database needs refer to: [Oracle Community](https://community.oracle.com/mosc/discussion/4516170/huge-pages)
 
 ### Next Steps
 
