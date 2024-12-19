@@ -56,7 +56,7 @@ Notice that if you're experiencing issues that affect Outlook for Mac or are hav
 
 As a Microsoft 365 for business admin, you have access to several tools that can help you investigate why users are not receiving email. The following video provides a brief overview of the tools that are available to you.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/8b10af9a-455c-410a-8c17-24d5e5be098a]
+> [!VIDEO 4b549682-96cd-4ba2-afcb-b648a6bc1ee4]
 
 The following list of tools is sorted from the simplest and quickest option to the most in-depth.
 
