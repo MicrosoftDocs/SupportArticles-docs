@@ -1,15 +1,15 @@
 ---
-title: Troubleshoot the K8SAPIServerConnFailVMExtensionError error code (51)
-description: Learn how to troubleshoot the K8SAPIServerConnFailVMExtensionError error (51) when you try to start or create and deploy an Azure Kubernetes Service (AKS) cluster.
+title: Troubleshoot the VMExtensionError_K8SAPIServerConnFail error code 
+description: Learn how to troubleshoot the VMExtensionError_K8SAPIServerConnFail error (51) when you try to start or create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.date: 01/24/2024
 ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis, jovieir
 ms.service: azure-kubernetes-service
-#Customer intent: As an Azure Kubernetes user, I want to troubleshoot the K8SAPIServerConnFailVMExtensionError error code (or error code ERR_K8S_API_SERVER_CONN_FAIL, error number 51) so that I can successfully start or create and deploy an Azure Kubernetes Service (AKS) cluster.
+#Customer intent: As an Azure Kubernetes user, I want to troubleshoot the VMExtensionError_K8SAPIServerConnFail error code (or error code ERR_K8S_API_SERVER_CONN_FAIL, error number 51) so that I can successfully start or create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
-# Troubleshoot the K8SAPIServerConnFailVMExtensionError error code (51)
+# Troubleshoot the VMExtensionError_K8SAPIServerConnFail error code (51)
 
-This article discusses how to identify and resolve the `K8SAPIServerConnFailVMExtensionError` error (also known as error code ERR_K8S_API_SERVER_CONN_FAIL, error number 51) that occurs when you try to start or create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
+This article discusses how to identify and resolve the `VMExtensionError_K8SAPIServerConnFail` error (also known as error code ERR_K8S_API_SERVER_CONN_FAIL, error number 51) that occurs when you try to start or create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Prerequisites
 
@@ -49,6 +49,6 @@ In rare cases, the firewall's outbound IP address can be blocked if you've autho
 
 ## More information
 
-- [General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)
+- [General troubleshooting of AKS cluster creation issues](../create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -38,11 +38,9 @@ Review [outbound network and FQDN rules for Azure Kubernetes Service (AKS) clust
 
 For detailed troubleshooting steps, refer to the troubleshooting guides in the following articles:
 
-- [Troubleshoot the OutboundConnFailVMExtensionError error code (50)](error-code-outboundconnfailvmextensionerror.md)
-
-- [Troubleshoot the K8SAPIServerConnFailVMExtensionError error code (51)](error-code-k8sapiserverconnfailvmextensionerror.md)
-
-- [Troubleshoot the K8SAPIServerDNSLookupFailVMExtensionError error code (52)](error-code-k8sapiserverdnslookupfailvmextensionerror.md)
+- [Troubleshoot the VMExtensionError_OutboundConnFail error code (50)](../error-codes/vmextensionerror-outboundconnfail.md)
+- [Troubleshoot the VMExtensionError_K8SAPIServerConnFail error code (51)](../error-codes/vmextensionerror-k8sapiserverconnfail.md)
+- [Troubleshoot the VMExtensionError_K8SAPIServerDNSLookupFail error code (52)](../error-codes/vmextensionerror-k8sapiserverdnslookupfail.md)
 
 
 ## References

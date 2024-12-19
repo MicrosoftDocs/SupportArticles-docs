@@ -1,14 +1,14 @@
 ---
-title: Troubleshoot the OutboundConnFailVMExtensionError error code (50)
-description: Learn how to troubleshoot the OutboundConnFailVMExtensionError error (50) when you try to start or create and deploy an Azure Kubernetes Service (AKS) cluster.
+title: Troubleshoot the VMExtensionError_OutboundConnFail error code
+description: Learn how to troubleshoot the VMExtensionError_OutboundConnFail error (50) when you try to start or create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.date: 01/24/2024
 ms.reviewer: rissing, chiragpa, v-leedennis, jovieir
 ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
-# Troubleshoot the OutboundConnFailVMExtensionError error code (50)
+# Troubleshoot the VMExtensionError_OutboundConnFail error code (50)
 
-This article describes how to identify and resolve the `OutboundConnFailVMExtensionError` error (also known as error code `ERR_OUTBOUND_CONN_FAIL`, error number 50) that might occur if you try to start or create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
+This article describes how to identify and resolve the `VMExtensionError_OutboundConnFail` error (also known as error code `ERR_OUTBOUND_CONN_FAIL`, error number 50) that might occur if you try to start or create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Prerequisites
 
@@ -126,7 +126,7 @@ The following table lists specific reasons why traffic might be blocked, and the
 
 ## More information
 
-- [General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)
+- [General troubleshooting of AKS cluster creation issues](../create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md)
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 

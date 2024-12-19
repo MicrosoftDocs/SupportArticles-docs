@@ -102,6 +102,8 @@
       href: desktop-flows/ui-flows-run-failed-with-aadlogonfailure-error.md
     - name: Desktop flow fails with the SessionCreationTimeout error code
       href: desktop-flows/sessioncreationtimeout-error-code.md
+    - name: '"ExpiredDesktopFlowConnection" error when using or testing a desktop flow connection'
+      href: desktop-flows/troubleshoot-expired-desktop-flow-connection.md
     - name: Environment load fails with insufficient permissions in the v2 schema
       href: desktop-flows/environment-load-fails-insufficient-permissions-after-2-46.md
     - name: Error communicating with the emulator using Micro Focus Reflection Desktop
