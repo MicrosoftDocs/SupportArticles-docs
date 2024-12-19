@@ -89,7 +89,7 @@ See 'systemctl status systemd-update-utmp.service' for details.
 [  OK  ] Reached target Local File Systems (Pre).
 ```
 
-- Output2
+- Output 2
 ```output
 [  385.665208][  T709] Hardware name: Microsoft Corporation Virtual Machine/Virtual Machine, BIOS 090008  12/07/2018
 [  385.675431][  T709] Call Trace:
@@ -242,19 +242,19 @@ In this specific scenario, the `vm.nr_hugepages` value was set to `65536` in the
 
 ## Resolution
 
-1. Access the system to fix the issue using one of the following methods:
+### Access the system to fix the issue using one of the following methods:
 
-### a) Using the Serial Console
+#### a) Using the Serial Console
 
 If the serial console is working, boot the VM in single-user mode.
 
 Refer to: [Boot the VM in single-user mode using the Azure Serial Console](serial-console-grub-single-user-mode.md)
 
-### b) Using the Azure VM Repair Utility
+#### b) Using the Azure VM Repair Utility
 
 Refer to: [Repair a Linux VM using the Azure VM repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md)
 
-### c) Creating a Rescue VM Manually (Offline Method)
+#### c) Creating a Rescue VM Manually (Offline Method)
 
 Refer to: [Use the manual method to fix VM boot issues](azure/virtual-machines/linux-virtual-machine-cannot-start-fstab-errors?source=recommendations#use-manual-method)
 
@@ -284,7 +284,7 @@ sudo reboot
 ```
 
 [!IMPORTANT] Review how much memory the VM has and How much HugePage is set up. If the system needs 16GB for HugePages reservation and the VM size has only 16GB of RAM, the system runs out of memory. As a result, the VM doesn't  boot. In this case, the recommendation is to upgrade the VM with size that has at least 32G for example.
-For refence on How much HugePages the VM and Database needs refer to: [Oracle Community](https://community.oracle.com/mosc/discussion/4516170/huge-pages)
+> or refence on How much HugePages the VM and Database needs refer to: [Oracle Community](https://community.oracle.com/mosc/discussion/4516170/huge-pages)
 
 ### Next Steps
 
