@@ -15,7 +15,7 @@ ms.collection: linux
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-When migrating or downsizing a Linux Virtual Machine (VM) to Azure, you might encounter issues where the VM doesn't boot properly. This can be caused by an incorrect configuration of HugePages, leading to memory allocation problems.
+When migrating or downsizing a Linux Virtual Machine (VM) to Azure, you might encounter issues where the VM doesn't boot properly. This issue can be caused by an incorrect configuration of HugePages, leading to memory allocation problems.
 
 ## Prerequisites
 
@@ -28,12 +28,12 @@ When migrating or downsizing a Linux Virtual Machine (VM) to Azure, you might en
 
 - After migrating a Linux VM from on-premises to Azure, the VM doesn't boot properly.
 - After downsizing the Linux VM, it doesn't boot properly.
-- The VM boots with some services, but the login prompt is slow, and you can't log in.
+- The issue occurs when the VM boots with some services, but the login prompt is slow, and you can't log in.
 
 
 ### Console Log Summary
 
-The console logs for various Linux distributions (RHEL, Oracle, SUSE, Ubuntu) indicate the following common issues:
+The console logs for various Linux distributions (Red Hat, Oracle, SUSE, Ubuntu) indicate the following common issues:
 
 - Failed to start udev Kernel Device Manager.
 - Timed out waiting for specific devices.
@@ -236,7 +236,7 @@ m.[  386.428454][  T709] [   1053]     0  1053    23636      109   192512       
 
 ### Cause
 
-The issue occurs because the server runs out of memory to boot up, as all the memory has been reserved for HugePages. This situation prevents the VM from running any processes due to the lack of available memory.
+The issue occurs because the server runs out of memory to boot up, as all the memory is reserved for HugePages. This situation prevents the VM from running any processes due to the lack of available memory.
 
 In this specific scenario, the `vm.nr_hugepages` value was set to `65536` in the `/etc/sysctl.conf` file, while the instance only had `16 GB` of total memory. This value of `65536 x 2048kb` would consume `134217728kb` of memory, causing an Out of Memory (OOM) condition.
 
@@ -260,7 +260,7 @@ Refer to: [Use the manual method to fix VM boot issues](https://learn.microsoft.
 
 ### Steps to Fix the HugePages Configuration
 
-1. Access the VM using one of the methods mentioned above.
+1. Access the VM using one of the previously mentioned methods.
 2. Follow the chroot process in case using method **b** or **c**: [Use the manual method to fix VM boot issues](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/chroot-environment-linux)
 3. Open the `/etc/sysctl.conf` or `/etc/sysctl.conf.d/*` file using a text editor.
 
@@ -276,15 +276,14 @@ vm.nr_hugepages=65536
 
 5. Comment the line for `vm.nr_hugepages` or ensure the number of HugePages is correct.
 6. Save the changes and exit the text editor.
-7. [Regenerate missing initramfs manually](kernel-related-boot-issues#missing-initramfs-manual.md) according OS distribution.
-8. Reboot the VM to apply the changes.
+7. [Regenerate missing initramfs manually](kernel-related-boot-issues#missing-initramfs-manual.md) according to OS distribution.
+8. To apply the changes, reboot the VM.
 
 ```bash
 sudo reboot
 ```
 
-[!IMPORTANT] Review how much memory the VM has and How much HugePage is setup. If needs 16GB for HugePages reservation and the VM size has only 16GB of memory ram then the VM will run OUT of Memory and it wont boot. In this case the recommendation will be to upgrade the VM with size that has at least 32G for example.
-
+[!IMPORTANT] Review how much memory the VM has and How much HugePage is set up. If the system needs 16GB for HugePages reservation and the VM size has only 16GB of RAM, the VM runs out of memory and does not boot. In this case, the recommendation will be to upgrade the VM with size that has at least 32G for example.
 For refence on How much HugePages the VM and Database needs refer to: [Oracle Community](https://community.oracle.com/mosc/discussion/4516170/huge-pages)
 
 ### Next Steps
