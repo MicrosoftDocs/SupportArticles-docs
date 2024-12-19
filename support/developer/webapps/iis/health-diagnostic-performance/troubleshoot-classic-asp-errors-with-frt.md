@@ -171,7 +171,7 @@ After five seconds, IIS will create a failed request trace log in your _%*System
 
 #### Read the trace log in Internet Explorer
 
-As shown in the previous example, when you use Internet Explorer or IE mode in Microsoft Edge browser to open a Failed Request Tracing log file, important information is displayed in a **Request Summary**. This summary contains the general environment information for the failure condition such as the executing URL, the application pool, the authentication type and user name, and other information. Notice that the reason for the failure was the amount of time taken, and that the time was slightly over five seconds, which was the time when you entered in the Failed Request Tracing rule.
+As shown in the previous example, when you use Internet Explorer or IE mode in Microsoft Edge browser to open a Failed Request Tracing log file, important information is displayed in a **Request Summary**. This summary contains the general environment information for the failure condition such as the executing URL, the application pool, the authentication type and user name, and other information. Notice that the reason for the failure was the amount of time taken, and that the time was slightly over five seconds, which was the time that you entered in the Failed Request Tracing rule.
 
 > [!NOTE]
 > You also notice that the HTTP status code for the response was HTTP 200, which is a successful response. This is one of the factors that often makes it more difficult to diagnose slow pages-the responses succeed, which make them more difficult to locate.
