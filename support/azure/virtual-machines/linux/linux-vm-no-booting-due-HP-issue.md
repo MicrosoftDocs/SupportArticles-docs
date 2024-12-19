@@ -256,7 +256,7 @@ Refer to: [Repair a Linux VM using the Azure VM repair commands](repair-linux-vm
 
 ### c) Creating a Rescue VM Manually (Offline Method)
 
-Refer to: [Use the manual method to fix VM boot issues](/azure/virtual-machines/linux-virtual-machine-cannot-start-fstab-errors?source=recommendations#use-manual-method)
+Refer to: [Use the manual method to fix VM boot issues](azure/virtual-machines/linux-virtual-machine-cannot-start-fstab-errors?source=recommendations#use-manual-method)
 
 ### Steps to Fix the HugePages Configuration
 
@@ -276,7 +276,7 @@ vm.nr_hugepages=65536
 
 5. Comment the line for `vm.nr_hugepages` or ensure the number of HugePages is correct.
 6. Save the changes and exit the text editor.
-7. [Regenerate missing initramfs manually](kernel-related-boot-issues#missing-initramfs-manual.md) according to OS distribution.
+7. [Regenerate missing initramfs manually](azure/virtual-machines/kernel-related-boot-issues#missing-initramfs-manual.md) according to OS distribution.
 8. To apply the changes, reboot the VM.
 
 ```bash
