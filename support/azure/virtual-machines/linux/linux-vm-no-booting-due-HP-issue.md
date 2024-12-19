@@ -248,20 +248,20 @@ In this specific scenario, the `vm.nr_hugepages` value was set to `65536` in the
 
 If the serial console is working, boot the VM in single-user mode.
 
-Refer to: [Boot the VM in single-user mode using the Azure Serial Console](https://learn.microsoft.com/troubleshoot/azure/virtual-machines/serial-console-grub-single-user-mode)
+Refer to: [Boot the VM in single-user mode using the Azure Serial Console](serial-console-grub-single-user-mode.md)
 
 ### b) Using the Azure VM Repair Utility
 
-Refer to: [Repair a Linux VM using the Azure VM repair commands](https://learn.microsoft.com/troubleshoot/azure/virtual-machines/repair-linux-vm-using-azure-virtual-machine-repair-commands)
+Refer to: [Repair a Linux VM using the Azure VM repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md)
 
 ### c) Creating a Rescue VM Manually (Offline Method)
 
-Refer to: [Use the manual method to fix VM boot issues](https://learn.microsoft.com/troubleshoot/azure/virtual-machines/linux-virtual-machine-cannot-start-fstab-errors?source=recommendations#use-manual-method)
+Refer to: [Use the manual method to fix VM boot issues](/azure/virtual-machines/linux-virtual-machine-cannot-start-fstab-errors?source=recommendations#use-manual-method)
 
 ### Steps to Fix the HugePages Configuration
 
 1. Access the VM using one of the previously mentioned methods.
-2. Follow the chroot process in case using method **b** or **c**: [Use the manual method to fix VM boot issues](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/chroot-environment-linux)
+2. Follow the chroot process in case using method **b** or **c**: [Use the manual method to fix VM boot issues](chroot-environment-linux.md)
 3. Open the `/etc/sysctl.conf` or `/etc/sysctl.conf.d/*` file using a text editor.
 
 ```bash
