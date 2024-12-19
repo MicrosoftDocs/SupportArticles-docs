@@ -15,7 +15,7 @@ ms.collection: linux
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-When migrating or downsizing a Linux Virtual Machine (VM) to Azure, you might encounter issues where the VM doesn't boot properly. This issue can be caused by an incorrect configuration of HugePages, leading to memory allocation problems.
+When migrating or downsizing a Linux Virtual Machine (VM) to Azure, you might encounter issues where the VM doesn't boot properly. An incorrect configuration of HugePages can cause this issue, leading to memory allocation problems.
 
 ## Prerequisites
 
@@ -283,7 +283,7 @@ vm.nr_hugepages=65536
 sudo reboot
 ```
 
-[!IMPORTANT] Review how much memory the VM has and How much HugePage is set up. If the system needs 16GB for HugePages reservation and the VM size has only 16GB of RAM, the VM runs out of memory and does not boot. In this case, the recommendation will be to upgrade the VM with size that has at least 32G for example.
+[!IMPORTANT] Review how much memory the VM has and How much HugePage is set up. If the system needs 16GB for HugePages reservation and the VM size has only 16GB of RAM, the system runs out of memory. As a result, the VM doesn't  boot. In this case, the recommendation is to upgrade the VM with size that has at least 32G for example.
 For refence on How much HugePages the VM and Database needs refer to: [Oracle Community](https://community.oracle.com/mosc/discussion/4516170/huge-pages)
 
 ### Next Steps
