@@ -29,6 +29,8 @@
       href: create-upgrade-delete/error-code-operationnotallowed-publicipcountlimitreached.md
     - name: AKSOperationPreempted error
       href: create-upgrade-delete/error-code-operationpreempted.md
+    - name: VMExtensionError_OutboundConnFail error (50)
+      href: error-codes/vmextensionerror-outboundconnfail.md
     - name: RequestDisallowedByPolicy error
       href: create-upgrade-delete/error-code-requestdisallowedbypolicy.md
     - name: ReservedResourceName error
