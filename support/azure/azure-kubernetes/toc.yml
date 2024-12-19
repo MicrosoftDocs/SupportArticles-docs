@@ -7,6 +7,8 @@
     items:
     - name: Basic troubleshooting
       href: create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md
+    - name: VMExtensionError_CniDownloadTimeout error error (41)
+      href: error-codes/vmextensionerror-cnidownloadtimeout.md
     - name: ERR_VHD_FILE_NOT_FOUND error (124)
       href: create-upgrade-delete/error-code-vhdfilenotfound.md
     - name: InvalidParameter error
@@ -15,6 +17,10 @@
       href: create-upgrade-delete/error-code-invalidresourcereference.md
     - name: Known issues - Custom kubelet configuration on Windows
       href: create-upgrade-delete/known-issues-custom-kubelet-configuration.md
+    - name: VMExtensionError_K8SAPIServerConnFail error (51)
+      href: error-codes/vmextensionerror-k8sapiserverconnfail.md
+    - name: VMExtensionError_K8SAPIServerDNSLookupFail error (52)
+      href: error-codes/vmextensionerror-k8sapiserverdnslookupfail.md
     - name: LinkedAuthorizationFailed error
       href: create-upgrade-delete/error-code-linkedauthorizationfailed.md
     - name: MissingSubscriptionRegistration error
@@ -107,6 +113,12 @@
     items:
     - name: Basic troubleshooting
       href: create-upgrade-delete/troubleshoot-aks-cluster-start-issues.md
+    - name: VMExtensionError_OutboundConnFail error (50)
+      href: error-codes/vmextensionerror-outboundconnfail.md
+    - name: VMExtensionError_K8SAPIServerConnFail error (51)
+      href: error-codes/vmextensionerror-k8sapiserverconnfail.md
+    - name: VMExtensionError_K8SAPIServerDNSLookupFail error (52)
+      href: error-codes/vmextensionerror-k8sapiserverdnslookupfail.md
     - name: OperationIsNotAllowed errors
       href: create-upgrade-delete/operationnotallowed.md
   - name: Common issues
