@@ -242,7 +242,7 @@ In this specific scenario, the `vm.nr_hugepages` value was set to `65536` in the
 
 ## Resolution
 
-### Access the system to fix the issue using one of the following methods:
+Access the system to fix the issue using one of the following methods:
 
 #### a) Using the Serial Console
 
