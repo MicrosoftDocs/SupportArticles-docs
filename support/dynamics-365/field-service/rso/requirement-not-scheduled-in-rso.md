@@ -4,7 +4,7 @@ description: Provides a resolution to solve the issues with unscheduled requirem
 ms.author: AnilMur
 author: anilmur
 ms.reviewer: mhart
-ms.date: 12/17/2024
+ms.date: 12/19/2024
 ms.custom: sap:Resource Scheduling Optimization
 ---
 # Requirements not scheduled in Resource Scheduling Optimization
