@@ -1,8 +1,8 @@
 ---
 title: ExpiredDesktopFlowConnection When Using or Testing a Desktop Flow Connection
-description: Resolves an error that occurs when using or testing a desktop flow connection that hasn't been used since the target machine or group rotated its key in Microsoft Power Automate.
+description: Resolves an error that occurs when using or testing a desktop flow connection that hasn't been used since the target machine or group renewed its key in Microsoft Power Automate.
 ms.reviewer: padib，aartigoyle, johndund, quseleba
-ms.date: 12/18/2024
+ms.date: 12/19/2024
 ms.custom: sap:Desktop flows\Unattended flow runtime errors
 ---
 # "ExpiredDesktopFlowConnection" error when using or testing a desktop flow connection
@@ -24,7 +24,7 @@ You receive the following error message when using or testing a [desktop flow co
 
 ## Cause
 
-The contents of the connection are encrypted using its target group or machine certificate. If the certificate is rotated and the connection isn't used during this period, the connection will expire because the certificate required to decrypt it is outdated due to rotation.
+The contents of the connection are encrypted using its target group or machine certificate. If the certificate is renewed and the connection isn't used during this period, the connection will expire because the certificate required to decrypt it is outdated due to the renewal.
 
 A connection in this state can't be recovered automatically and must be manually updated.
 
@@ -35,3 +35,7 @@ To resolve the issue, follow these steps:
 1. Sign in to [Power Automate](https://make.powerautomate.com/).
 2. On the left navigation pane, select **Data** > **Connections**.
 3. Find the expired connection, select it, and then select **Edit** to reenter the necessary information.
+
+## More information
+
+[Machine group certificate renewal for admins](/power-automate/desktop-flows/machine-group-certificates-admins)
