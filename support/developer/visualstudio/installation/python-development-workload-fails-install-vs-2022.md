@@ -12,6 +12,19 @@ ms.custom: sap:Installation\Setup, maintenance, or uninstall
 
 The Python development workload fails to install in Visual Studio 2022. In addition, you see the following error message:
 
+```output
+Package 'CPython39.Exe.x64,version=3.9.13, chip=x64' failed to download from 'https://go.microsoft.com/fwlink/?linkid=2222466'.
+Search URL
+https://aka.ms/VSSetupErrorReports?q=PackageId=CPython39.Exe.x64; PackageAction=DownloadPackage; ReturnCode=0x80096004
+Details
+WebClient download failed: Authenticode verification returned 0x800b0003 for path: python-3.9.13-amd64.exe.
+Bits download failed: Timeout reached for job VsBitsDownloadJob - -2114796084 whilst in state BG_JOB_STATE_CONNECTING WinInet download failed: Authenticode verification returned 0x800b0003 for path: python-3.9.13-amd64.exe.
+Impacted workloads
+Python development (Microsoft.VisualStudio.Workload.Python,version=17.5.33306.270)
+Impacted components
+Python 3 64-bit (3.9.13) (Component.CPython39.x64,version=3.9.13)
+```
+
 ## Cause
 
 The Visual Studio Installer can't download the **python-3.9.13-amd64.exe** file from the URL `https://go.microsoft.com/fwlink/?linkid=2222466`.

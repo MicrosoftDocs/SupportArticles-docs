@@ -13,10 +13,11 @@ ms.custom: sap:Installation\Setup, maintenance, or uninstall
 When you install Visual Studio 2022 online, the process fails with the following error:
 
 > Package 'Microsoft.VisualStudio.Devenv.MSI' fails to install, Return Code 1625.
+> Error code 1625: This installation is prohibited by system policy.
 
 ## Cause
 
-The error code 1625 means the installation is prohibited by system policy. The authorization level returned by the Software Restriction Policy is 0x0 (returned status 0x800b010c). `0x800b010c` usually means that a required certificate is revoked. 
+The authorization level returned by the Software Restriction Policy is 0x0 (returned status 0x800b010c). `0x800b010c` usually means that a required certificate is revoked. 
 
 Installation isn't allowed under the Software Restriction Policy. Windows Installer can only install unrestricted items. 
 

@@ -12,15 +12,13 @@ ms.custom: sap:Installation\Setup, maintenance, or uninstall
 
 When you install Visual Studio 2022 with the parameter `--productKey` like `XXXXX-XXXXX-XXXXX-XXXXX-XXXXX`, the license key shows as invalid, and the installer repeatedly asks for the license key, even though you use the license key mentioned in the package.
 
-## Cause
+## Resolution
 
 According to [Use command-line parameters to install, update, and manage Visual Studio](/visualstudio/install/use-command-line-parameters-to-install-visual-studio), the `--productkey` parameter only supports 25 alphanumeric characters in the format of `XXXXXXXXXXXXXXXXXXXXXXXXX`.
 
 | Parameter      | Description                                                 |
 |-----------------|-------------------------------------------------------------|
 | `--productKey`  | **Optional**: During an install command, this parameter defines the product key to use for an installed product. It's composed of 25 alphanumeric characters in the format of `XXXXXXXXXXXXXXXXXXXXXXXXX`.|
-
-## Resolution
 
 To solve the issue, remove the dashes in `XXXXX-XXXXX-XXXXX-XXXXX-XXXXX` from the parameter `--productKey`. Here's an example:
 
