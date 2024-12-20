@@ -17,7 +17,7 @@ You receive the following error message when using or testing a [desktop flow co
   {
       "error":{
           "code": "ExpiredDesktopFlowConnection",
-          "message": "Looks up a localized string similar to The connection is no longer valid and needs to be updated. [...]"
+          "message": "The connection is no longer valid and needs to be updated. [...]"
       }
   }
 ```
