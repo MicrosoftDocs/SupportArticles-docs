@@ -21,7 +21,7 @@ ms.date: 02/23/2023
 > [!NOTE]
 > The Azure Information Protection unified labeling scanner is being renamed **Microsoft Purview Information Protection scanner**. At the same time, configuration (currently in preview) is moving to the Microsoft Purview compliance portal. Currently, you can configure the scanner in both the Azure portal and the compliance portal. Instructions in this article refer to both admin portals.
 
-If you're having issues with the Microsoft Preview Information Protection scanner, verify whether your deployment is healthy by using the [Start-ScannerDiagnostics](/powershell/module/purviewinformationprotection/start-scannerdiagnostics) PowerShell cmdlet to start the scanner diagnostic tool:
+If you're having issues with the Microsoft Purview Information Protection scanner, verify whether your deployment is healthy by using the [Start-ScannerDiagnostics](/powershell/module/purviewinformationprotection/start-scannerdiagnostics) PowerShell cmdlet to start the scanner diagnostic tool:
 
 ```powershell
 Start-ScannerDiagnostics
