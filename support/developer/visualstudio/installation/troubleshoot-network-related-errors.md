@@ -1,10 +1,10 @@
 ---
 title: Troubleshoot network or proxy errors
 description: Find solutions for network- or proxy-related errors that you might encounter when you install, update, or use Visual Studio behind a firewall or a proxy server.
-ms.date: 04/15/2024
+ms.date: 12/09/2024
 author: HaiyingYu
 ms.author: haiyingyu
-ms.reviewer: meghaanand, jagbal
+ms.reviewer: meghaanand, chrmann, jagbal
 ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ---
 # Troubleshoot network-related errors when you install, update, or use Visual Studio
@@ -32,16 +32,19 @@ To resolve this issue, try these steps:
 
 1. We recommend that you remove the `http://go.microsoft.com` address from the allowlist. Removing the address allows the proxy authentication dialog to show up for both the `http://go.microsoft.com` address and the server endpoints when Visual Studio restarts.
 
-Or if you want to use your default credentials with your proxy, follow these steps:
+## Configure proxy server
 
-1. Find _devenv.exe.config_ (the configuration file of _devenv.exe_) in:
+Visual Studio should pick up the proxy setting from Windows. However, you can set a specific proxy server in the following way.
 
-    - Visual Studio 2019: _%ProgramFiles%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE_ or _%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE_.
-    - Visual Studio 2022: _%ProgramFiles%\Microsoft Visual Studio\2022\Enterprise\Common7\IDE_ or _%ProgramFiles(x86)%\Microsoft Visual Studio\2022\Enterprise\Common7\IDE_.
+1. Find **devenv.exe.config** (the configuration file of **devenv.exe**) in:
+
+    - Visual Studio 2019: **%ProgramFiles%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE** or **%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE**.
+    - Visual Studio 2022: **%ProgramFiles%\Microsoft Visual Studio\2022\Enterprise\Common7\IDE** or **%ProgramFiles(x86)%\Microsoft Visual Studio\2022\Enterprise\Common7\IDE**.
+
 1. In the configuration file, find the `<system.net>` block, and then add this code:
 
     ```xml
-    <defaultProxy enabled="true" useDefaultCredentials="true">
+    <defaultProxy enabled="true">
         <proxy bypassonlocal="True" proxyaddress="http://<yourproxy:port#>"/>
     </defaultProxy>
     ```
@@ -50,6 +53,67 @@ Or if you want to use your default credentials with your proxy, follow these ste
 
     > [!NOTE]
     > For more information, see the [\<defaultProxy> Element (Network Settings)](/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings/) and [\<proxy>  Element (Network Settings)](/dotnet/framework/configure-apps/file-schema/network/proxy-element-network-settings) pages.
+
+1. For Visual Studio 2022, set the proxy environment variables:
+
+   - http_proxy: This variable is used on HTTP requests. **Note** This variable is lowercase because some tools expect the variable to be lowercase.
+   - HTTPS_PROXY: This variable is used on HTTPS requests.
+   - ALL_PROXY: This variable is used to specify a proxy server for HTTP or HTTPS requests if the `HTTP_PROXY` or `HTTPS_PROXY` variable isn't defined.
+    
+   > [!NOTE]
+   > For more information, see [HttpClient.DefaultProxy](/dotnet/api/system.net.http.httpclient.defaultproxy/).
+
+## Default user credentials
+
+If you want to use the default credentials for the user account which is running Visual Studio with your proxy, follow these steps:
+
+1. Find **devenv.exe.config** (the configuration file of **devenv.exe**) in:
+
+   - Visual Studio 2019: **%ProgramFiles%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE** or **%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE**.
+   - Visual Studio 2022: **%ProgramFiles%\Microsoft Visual Studio\2022\Enterprise\Common7\IDE** or **%ProgramFiles(x86)%\Microsoft Visual Studio\2022\Enterprise\Common7\IDE**.
+
+1. In the configuration file, find the `<system.net>` block, and then add this code:
+
+   ```xml
+   <defaultProxy enabled="true" useDefaultCredentials="true">
+      <proxy bypassonlocal="True" proxyaddress="http://<yourproxy:port#>"/>
+   </defaultProxy>
+   ```
+
+   You must insert the correct proxy address for your network in `proxyaddress="<http://<yourproxy:port#>`.
+
+   > [!NOTE]
+   > For more information, see the [\<defaultProxy> Element (Network Settings)](/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings/) and [\<proxy>  Element (Network Settings)](/dotnet/framework/configure-apps/file-schema/network/proxy-element-network-settings) pages.
+
+1. With [Visual Studio 17.8](/visualstudio/releases/2022/release-notes-v17.8) onwards, we've updated the configuration process for default proxy credentials in web requests. To enable default proxy credentials after this update, create a new environment variable named `VS_USE_DEFAULTPROXY`, set its value to `true`, and then restart Visual Studio. This variable tells Visual Studio and associated processes to attach the default credentials of the user running the process to proxy requests. It's similar to what `useDefaultCredentials` does in the exe config file in step 2.
+
+## Debugging proxy errors
+
+When trying to make network connections behind a proxy server, you might encounter many different kinds of failures. Some of the failures include "error on send", "connection refused", and "could not resolve address". There might be other kinds of failures, but what they have in common is that some configuration is incorrect on the local machine or network. To help diagnose what blocks the connection, using a tool outside of Visual Studio can be helpful. 
+
+- If you encounter an error such as connection refused or error on send, try the following command line:
+
+   ```cmd
+   curl "https://resource" -v
+   ```
+
+   Running this command makes a network connection to the resource and might fail similarly to what is seen in Visual Studio. At that point, diagnosing this failure is required before attempting to make the connection by using Visual Studio. A failure here indicates a machine or network configuration problem rather than a product issue with Visual Studio. 
+
+- If you know you're behind a proxy server that has a specific address, setting the `http_proxy` and `https_proxy` environment variables are necessary before running the `curl` command as it uses those environment variables for proxy settings. 
+
+  You might also use the `help` switch in curl for other options. This command `curl --help proxy` displays a list of options and switches that you can use to set up and configure a proxy with `curl`.  
+
+- If you have a sign-in problem with Visual Studio to debug, run the following commands:
+
+  ```cmd
+  curl "https://login.microsoftonline.com/common/discovery/instance?api-version=1.1&authorization_endpoint=https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize" -v
+   
+  curl "https://management.azure.com" -v
+   
+  curl "https://graph.microsoft.com" -v
+  ```
+
+  For the URLs required by sign-in, see [Install and use Visual Studio behind a firewall or proxy server](/visualstudio/install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server).
 
 ## Error "Disconnected from Visual Studio" when attempting to report a problem
 
@@ -82,9 +146,9 @@ Enable connections by adding [these domain URLs](/visualstudio/install/install-a
 
 ## Error "Failed to parse ID from parent process"
 
-You might encounter this error message when you use a Visual Studio bootstrapper and a _response.json_ file on a network drive. The error's source is the User Account Control (UAC) in Windows.
+You might encounter this error message when you use a Visual Studio bootstrapper and a **response.json** file on a network drive. The error's source is the User Account Control (UAC) in Windows.
 
-Here's why this error can happen: A mapped network drive or [UNC](/dotnet/standard/io/file-path-formats#unc-paths) share is linked to a user's access token. When UAC is enabled, two user [access tokens](/windows/win32/secauthz/access-tokens) are created: One _with_ administrator access, and one _without_ administrator access. When a network drive or share is created, the user's current access token is linked to it. Because the bootstrapper must be run as administrator, it won't be able to access the network drive or share if either the drive or the share isn't linked to a user-access token that has administrator access.
+Here's why this error can happen: A mapped network drive or [UNC](/dotnet/standard/io/file-path-formats#unc-paths) share is linked to a user's access token. When UAC is enabled, two user [access tokens](/windows/win32/secauthz/access-tokens) are created: one with administrator access, and one without administrator access. When a network drive or share is created, the user's current access token is linked to it. Since the bootstrapper must be run as an administrator, it can't access the network drive or share unless either the drive or share is linked to a user-access token that has administrator access.
 
 ### Resolution
 
@@ -95,12 +159,12 @@ To resolve this issue, use the `net use` command or change the **UAC Group Polic
 
 ## The product fails to install or update because network share permissions aren't configured correctly
 
-Make sure that the account performing the install or update has sufficient access to the network shares.
+Make sure that the account performing the installation or update has sufficient access to the network shares.
 
 | Issue | Solution |
 |---|---|
-| User account can't access files. | If the user has administrator permissions on the machine and is going to be installing or updating from a layout, then you'll need to make sure that the network share permissions (ACLs) are configured to grant users read access _before_ the network location is shared. |
-| System account can't access files. | Sometimes the installation or update is run using the system account instead of a user account. This typically happens when Administrator updates are used to keep the machine updated and secure. You'll need to make sure that the client machines' system accounts have read permissions to the network file share. You can do this by creating an Active Directory group containing the machine accounts that need access to the share, and then granting that AD group access to the share. |
+| User account can't access files. | If the user has administrator permissions on the machine and is going to install or update from a layout, you need to make sure that the network share permissions (ACLs) are configured to grant users read access before the network location is shared. |
+| System account can't access files. | Sometimes the installation or update is run using the system account instead of a user account. This situation typically happens when Administrator updates are used to keep the machine updated and secure. You need to make sure that the client machines' system accounts have read permissions to the network file share. You can do this by creating an Active Directory group containing the machine accounts that need access to the share, and then granting that AD group access to the share. |
 
 ## Support or troubleshooting
 

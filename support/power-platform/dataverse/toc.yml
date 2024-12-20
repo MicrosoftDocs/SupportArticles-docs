@@ -22,14 +22,18 @@
       href: email-exchange-synchronization/general-mailbox-access-error-occurred.md
     - name: A general mailbox access error while receiving email through the mailbox
       href: email-exchange-synchronization/general-mailbox-access-error-occurred-while-receiving-email-through-mailbox-error.md
-    - name: An error occurred in sending email for mailbox
+    - name: '"An error occurred in sending email for the mailbox" error'
       href: email-exchange-synchronization/error-occurs-sending-email-for-mailbox.md
     - name: An unknown error when sending email messages
       href: email-exchange-synchronization/error-while-sending-the-email-message.md
-    - name: Appointment aren't synchronized to Exchange or Outlook
+    - name: Appointments aren't synchronized to Exchange or Outlook
       href: email-exchange-synchronization/appointments-do-not-synchronize-to-exchange-or-outlook.md
-    - name: Appointments don't sync to Exchange for some users
+    - name: Appointments, contacts, and tasks for the mailbox couldn't be synchronized error
       href: email-exchange-synchronization/appointments-do-not-sync-to-exchange-for-some-users.md
+    - name: Appointments, contacts, and tasks can't be synchronized
+      href: email-exchange-synchronization/error-when-you-test-enable-a-mailbox.md
+    - name: Errors when signing in to Dynamics 365 online or using Dynamics 365 App for Outlook
+      href: email-exchange-synchronization/error-when-signing-dynamics-365.md
     - name: Emails aren't automatically tracked or synchronized
       href: email-exchange-synchronization/emails-not-automatically-tracked-or-synchronized.md
     - name: Email can't be received because the license is invalid for the mailbox
@@ -82,7 +86,7 @@
       href: email-exchange-synchronization/the-account-does-not-have-permission-to-impersonate-the-requested-user-error.md
     - name: The mailbox location could not be determined
       href: email-exchange-synchronization/error-when-testing-enabling-mailbox.md
-    - name: The SMTP address has no mailbox associated with it
+    - name: '"The SMTP address has no mailbox associated with it" error'
       href: email-exchange-synchronization/the-smtp-address-has-no-mailbox.md
     - name: UnknownIncomingEmailIntegrationError -2147209462
       href: email-exchange-synchronization/error-2147209462-logged-mailbox-record.md

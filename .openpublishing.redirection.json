@@ -12598,6 +12598,15 @@
     {
       "source_path": "support/dynamics-365/sales/exception-appears-server-side-sync.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/exception-appears-server-side-sync",
+      "redirect_document_id": true
+    },
+      "source_path": "support/dynamics-365/sales/error-when-signing-dynamics-365.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-when-signing-dynamics-365",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/you-are-not-part-this-organization.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-when-signing-dynamics-365",
       "redirect_document_id": false
     },
     {
@@ -12628,6 +12637,10 @@
     {
       "source_path": "support/dynamics-365/sales/alert-appears-users-dynamics-365-mailbox-record.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/exception-appears-server-side-sync",
+      "redirect_document_id": false
+    },
+      "source_path": "support/windows-server/group-policy/apply-group-policy-objects-terminal-services.md",
+      "redirect_url": "/troubleshoot/windows-server/group-policy/apply-group-policy-objects-rds",
       "redirect_document_id": true
     }
   ]
