@@ -102,6 +102,8 @@
       href: desktop-flows/ui-flows-run-failed-with-aadlogonfailure-error.md
     - name: Desktop flow fails with the SessionCreationTimeout error code
       href: desktop-flows/sessioncreationtimeout-error-code.md
+    - name: '"ExpiredDesktopFlowConnection" error when using or testing a desktop flow connection'
+      href: desktop-flows/troubleshoot-expired-desktop-flow-connection.md
     - name: Environment load fails with insufficient permissions in the v2 schema
       href: desktop-flows/environment-load-fails-insufficient-permissions-after-2-46.md
     - name: Error communicating with the emulator using Micro Focus Reflection Desktop
@@ -124,8 +126,6 @@
       href: desktop-flows/focus-window-action-not-working.md
     - name: '"Invalid Private key file" error in Open secure FTP connection action'
       href: desktop-flows/invalid-private-key-file-error.md
-    - name: Internet connection is interrupted after installing Power Automate
-      href: desktop-flows/no-ethernet-after-pad-install.md
     - name: Invalid credentials error when creating connection or running desktop flow
       href: desktop-flows/invalid-credentials-errors-running-desktop-flows.md
     - name: Invalid credentials error using Microsoft Entra account
@@ -134,6 +134,8 @@
       href: desktop-flows/logon-type-has-not-been-granted.md
     - name: Machine registration failure
       href: desktop-flows/desktop-flow-machine-registration-troubleshooting.md
+    - name: MaxRDSessionDurationReached or SessionHasLoggedOffWithMaxIdleTime
+      href: desktop-flows/desktop-flow-max-session-duration-error.md
     - name: Power Automate for desktop installation logs
       href: desktop-flows/how-to-get-power-automate-desktop-installer-logs.md
     - name: '"Power Automate needs an update" occurs when opening Power Automate for desktop'
@@ -172,6 +174,10 @@
       href: desktop-flows/temporary-profile-error-machine-registration.md
     - name: 'UnallowedTenantForConnectWithSignIn or connection errors when using "connect with sign-in"'
       href: desktop-flows/troubleshoot-unallowed-tenant-for-connect-with-sign-in.md
+    - name: Your machine doesn't appear when creating a desktop flow connection 
+      href: desktop-flows/machine-not-shown-in-list.md
+    - name: Unattended desktop flow fails with MSEntraMachineAlwaysPromptingForPassword
+      href: desktop-flows/msentramachinealwayspromptingforpassword-error.md
 - name: Flow creation
   items:
     - name: Can't find Excel Online table in Microsoft Flow

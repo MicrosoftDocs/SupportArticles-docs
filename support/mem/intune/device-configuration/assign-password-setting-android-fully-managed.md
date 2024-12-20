@@ -3,8 +3,8 @@ title: Tips for assigning device password settings to Android Enterprise fully m
 description: Describes different behavior when a device restrictions profile that includes password settings is assigned to Android Enterprise fully managed devices before and after enrollment. 
 author: helenclu
 ms.author: luche
-ms.reviewer: kaushika, anziob
-ms.date: 12/05/2023
+ms.reviewer: kaushika, anziob, frcohen
+ms.date: 12/05/2024
 search.appverid: MET150
 ms.custom: sap:Configure Devices - Android\Device restrictions
 ---
@@ -28,7 +28,7 @@ When the profile is assigned to the device, you won't be notified or prompted to
 
 ## Recommendation
 
-Because of the OS limitation on Android Enterprise fully managed devices, we recommend that you assign the device restrictions profile that includes password settings to the devices before enrollment.
+Because end users will not be prompted to set a password based on a policy assigned after enrollment, we recommend that you assign the device restrictions profile that includes password settings to the devices before enrollment.
 
 ## More information
 

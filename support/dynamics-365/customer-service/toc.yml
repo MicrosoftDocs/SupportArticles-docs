@@ -158,12 +158,14 @@
           href: omnichannel-for-customer-service/instance-unavailable-provision-omnichannel.md
         - name: Omnichannel provisioning fails with an error
           href: omnichannel-for-customer-service/omnichannel-provision-fail-errors.md
-    - name: Copilot Studio
+    - name: Copilot Studio agents
       items:
-        - name: Copilot Studio bot conversations are active after a chat ends
-          href: omnichannel-for-customer-service/pva-conversations-active-dashboard.md  
-        - name: Missing variables and actions when agent transfers from Copilot Studio bots
-          href: omnichannel-for-customer-service/agent-transfer-pva-bot-issue.md          
+        - name: Copilot Studio agent conversations are active after a chat ends
+          href: omnichannel-for-customer-service/pva-conversations-active-dashboard.md
+        - name: Error in Conversation Start topic prevents survey agent from publishing
+          href: omnichannel-for-customer-service/error-in-conversation-start-topic.md
+        - name: Missing variables and actions in transfers from Copilot Studio agents to service representatives
+          href: omnichannel-for-customer-service/agent-transfer-pva-bot-issue.md
     - name: Omnichannel dashboards
       items:
         - name: Agent dashboard shows authentication error after provisioning

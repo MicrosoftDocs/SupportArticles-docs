@@ -45,10 +45,21 @@
       href: mobile-app/duplicate-inspection-responses.md
     - name: Incorrect or missing data in offline mode
       href: mobile-app/incorrect-missing-data-offline-mode.md
+    - name: Settings area is missing in the Field Service Mobile app module navigation
+      href: mobile-app/settings-area-missing.md
     - name: Troubleshoot issues with publishing a mobile offline profile
       href: mobile-app/publish-mobile-offline-profile.md
     - name: '"Validations have been restarted in the background" error'
       href: mobile-app/validation-restarted-background.md
+    - name: WebView reset error
+      href: mobile-app/webview-reset.md
+
+- name: Mobile app - New experience
+  items: 
+    - name: Error on startup due to permission or privilege issues
+      href: mobile-app/newux-error-on-start-permission.md
+    - name: Error on startup due to missing files in the solution
+      href: mobile-app/newux-error-on-start-missing-files.md
 
 - name: Resource Scheduling Optimization add-in
   items: 
