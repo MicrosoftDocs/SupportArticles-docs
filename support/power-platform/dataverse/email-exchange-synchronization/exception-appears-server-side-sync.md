@@ -2,7 +2,7 @@
 title: UnknownIncomingEmailIntegrationError appears in server-side synchronization
 description: Solves the UnknownIncomingEmailIntegrationError that occurs in a Microsoft Dynamics 365 mailbox record.
 ms.reviewer: 
-ms.date: 12/06/2024
+ms.date: 12/20/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # UnknownIncomingEmailIntegrationError appears in mailbox alerts in Microsoft Dynamics 365
@@ -14,19 +14,11 @@ _Original KB number:_ &nbsp; 4471762
 
 ## Symptoms
 
-When [viewing the alerts section](/power-platform/admin/monitor-email-processing-errors#view-alerts) within a mailbox record in Dynamics 365, you see one of the following messages:
+When [viewing the alerts section](/power-platform/admin/monitor-email-processing-errors#view-alerts) within a mailbox record in Dynamics 365, you see the following message:
 
-- > "An unknown error occurred while receiving email through the mailbox "\<Mailbox Name>". The owner of the associated email server profile \<Profile Name> has been notified. The system will try to receive email again later.
-    >
-    > **Email Server Error Code:** Exchange server returned UnknownIncomingEmailIntegrationError -2147220891 exception."
-
-- > "An unknown error occurred while receiving email through the mailbox "\<Mailbox Name>". The owner of the associated email server profile \<Profile Name> has been notified. The system will try to receive email again later.
-    >
-    > **Email Server Error Code:** Exchange server returned UnknownIncomingEmailIntegrationError -2147220956 exception."
-
-- > "An internal Microsoft Dynamics 365 error occurred while synchronizing appointments, contacts, and tasks for the mailbox "\<Mailbox Name>". The owner of the associated email server profile \<Profile Name> has been notified. The system will try again later.
-    >
-    > **Email Server Error Code:**  Crm.80040265.ISV code aborted the operation."
+> An unknown error occurred while receiving email through the mailbox "\<Mailbox Name>". The owner of the associated email server profile \<Profile Name> has been notified. The system will try to receive email again later.
+>
+> **Email Server Error Code:** Exchange server returned UnknownIncomingEmailIntegrationError -2147220956 exception.
 
 ## Cause
 
@@ -71,4 +63,3 @@ If you're able to reproduce the issue consistently, you can try disabling the wo
 |-2147218677|This error occurs if there was an invalid email address included on the To or Cc line of the email.|Review the email message that encountered this error and verify all email addresses on the To and Cc lines are [valid email addresses](https://tools.ietf.org/html/rfc5322#section-3.4.1).|
 |-2147220192|Error -2147220192 indicates the owner of the queue does not have sufficient privileges to work with the queue. The user is likely missing sufficient Read access to the Queue entity.|Verify the user's Microsoft Dynamics 365 security role has Read access to the Queue entity. Within a Microsoft Dynamics 365 security role, privileges for the Queue entity are located on the Core Records tab. <br> **NOTE**: If you verify the owner of the mailbox record has Read access to the Queue entity, check if there are other Microsoft Dynamics 365 users or queues that received the same email. You may need to verify privileges for those users as well.|
 |-2147167669|This warning is logged if the owner of the mailbox record does not have a Microsoft Dynamics 365 license assigned.|Verify the owner of the mailbox has a Microsoft Dynamics 365 license assigned.<br> **NOTE**: If you verify the user does have a license, verify there are not any other Microsoft Dynamics 365 mailbox records with the same email address. If there is another mailbox with the same email address and the owner of that mailbox does not have a license, change the email address value in the other mailbox record.|
-|-2147209462|This error is logged if the corresponding Queue record in Dynamics 365 is owned by a team that doesn't have any security roles assigned.|**NOTE**: To manage security roles and mailbox settings, you need to sign in to your Dynamics 365 organization as a user with the "System Administrator" role. <br> To fix this issue, follow these steps:<br> 1. In Dynamics 365, go to **Settings** > **Email Configuration** > **Mailboxes**.<br> 2. Select the mailbox record and select the value in the **Regarding** lookup to open the corresponding Queue record.<br> 3. Select the **Owner** field to verify the owner of this Queue record has a security role assigned.<br> 4. Select the **Manage Roles** button and assign a security role with sufficient access. For more information, see [Security roles and privileges](/power-platform/admin/security-roles-privileges).|

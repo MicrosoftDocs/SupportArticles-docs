@@ -12640,6 +12640,7 @@
       "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/exception-appears-server-side-sync",
       "redirect_document_id": false
     },
+    {
       "source_path": "support/windows-server/group-policy/apply-group-policy-objects-terminal-services.md",
       "redirect_url": "/troubleshoot/windows-server/group-policy/apply-group-policy-objects-rds",
       "redirect_document_id": true
