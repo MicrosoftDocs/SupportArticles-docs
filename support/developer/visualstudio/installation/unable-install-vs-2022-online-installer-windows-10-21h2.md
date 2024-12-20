@@ -31,9 +31,9 @@ To solve the issue, follow these steps:
 1. Rename the **machine.config** file to create a backup. You can rename it to **machine_bkp.config** or any other name of your choice.
 1. Still in the same directory, locate the **machine.config.default** file.
 1. Make a copy of the **machine.config.default** file.
-1. Rename the new copy of the file to **machine.config**. This behavior replaces the existing **machine.config** file.
-1. Restart your machine. It's important to reboot to ensure the changes take effect.
+1. Rename the new copy of the file to **machine.config**. This replaces the existing **machine.config** file with the default version.
+1. Restart your machine to ensure the changes take effect.
 
-Renaming the **machine.config** file and replacing it with the default version can reset the configuration to its original state. This behavior can help resolve any corrupt or incorrect settings that caused the Visual Studio bootstrapper to fail during installation.
+Renaming the **machine.config** file and replacing it with the default version resets the configuration to its original state, which can help resolve any corrupt or incorrect settings that might have caused the Visual Studio bootstrapper to fail during installation.
 
-After rebooting your machine, try running the Visual Studio 2022 online installation again. The bootstrapper should now be able to launch successfully without encountering the `ConfigurationErrorsException` related to the **machine.config** file.
+After restarting your machine, try running the Visual Studio 2022 online installation again. The bootstrapper should now be able to launch successfully without encountering the `ConfigurationErrorsException` related to the **machine.config** file.
