@@ -21,7 +21,7 @@ ms.date: 02/23/2023
 > [!NOTE]
 > The Azure Information Protection unified labeling scanner is being renamed **Microsoft Purview Information Protection scanner**. At the same time, configuration (currently in preview) is moving to the Microsoft Purview compliance portal. Currently, you can configure the scanner in both the Azure portal and the compliance portal. Instructions in this article refer to both admin portals.
 
-If you're having issues with the Microsoft Preview Information Protection scanner, verify whether your deployment is healthy by using the [Start-AIPScannerDiagnostics](/powershell/module/azureinformationprotection/start-aipscannerdiagnostics) PowerShell cmdlet to start the scanner diagnostic tool:
+If you're having issues with the Microsoft Preview Information Protection scanner, verify whether your deployment is healthy by using the [Start-AIPScannerDiagnostics](/powershell/module/purviewinformationprotection/start-aipscannerdiagnostics) PowerShell cmdlet to start the scanner diagnostic tool:
 
 ```powershell
 Start-AIPScannerDiagnostics
@@ -44,7 +44,7 @@ The `Start-AIPScannerDiagnostics` command doesn't run a complete prerequisites c
  
 ## Verify scanning details per scanner node and repository
 
-Run the [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/get-aipscannerstatus) PowerShell cmdlet to get details about the current scan status and the list of nodes in your scanner cluster.
+Run the [Get-AIPScannerStatus](/powershell/module/purviewinformationprotection/get-aipscannerstatus) PowerShell cmdlet to get details about the current scan status and the list of nodes in your scanner cluster.
 
 ```powershell
 PS C:\> Get-AIPScannerStatus
@@ -58,7 +58,7 @@ TimeFromStart  : 00:00:00:37
 NodesInfo      : {t-contoso1-T298-corp.contoso.com,t-contoso2-T298-corp.contoso.com}
 ```
 
-Use the `NodesInfo` variable with the [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/get-aipscannerstatus) cmdlet to get further details about each node in the cluster:
+Use the `NodesInfo` variable with the [Get-AIPScannerStatus](/powershell/module/purviewinformationprotection/get-aipscannerstatus) cmdlet to get further details about each node in the cluster:
 
 ```powershell
 PS C:\WINDOWS\system32> $x=Get-AIPScannerStatus
@@ -92,7 +92,7 @@ Labeled                 : 0
 ....
 ```
 
-Use the `Verbose` parameter with the [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/get-aipscannerstatus) cmdlet to get data about a current scan.
+Use the `Verbose` parameter with the [Get-AIPScannerStatus](/powershell/module/purviewinformationprotection/get-aipscannerstatus) cmdlet to get data about a current scan.
 
 ```powershell
 PS C:\> Get-AIPScannerStatus -Verbose
@@ -163,7 +163,7 @@ The following table provides information about specific error messages that are 
 
 **Description**
 
-The [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) command has failed.
+The [Set-AIPAuthentication](/powershell/module/purviewinformationprotection/set-aipauthentication) command has failed.
 
 **Resolution**
 
@@ -188,7 +188,7 @@ These authentication errors occur when the scanner runs non-interactively.
 
 **Resolution**
 
-You must authenticate by using a token by using the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) cmdlet.
+You must authenticate by using a token by using the [Set-AIPAuthentication](/powershell/module/purviewinformationprotection/set-aipauthentication) cmdlet.
 
 When you run the Set-AIPAuthentication cmdlet, make sure you use the token parameter on behalf of the service account that's used to run the scanner service as shown in the following example:
 
@@ -276,7 +276,7 @@ The database schema is not up to date.
 
 **Resolution**
 
-Run the [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) cmdlet to resynchronize your schema and ensure that it's up to date with any recent changes.
+Run the [Update-AIPScanner](/powershell/module/purviewinformationprotection/Update-AIPScanner) cmdlet to resynchronize your schema and ensure that it's up to date with any recent changes.
 
 ### Underlying connection was closed
 
@@ -328,8 +328,8 @@ If the file is no longer increasing in size, do the following:
 
 1. Run the following cmdlets:
 
-   - [Start-AIPScannerDiagnostics](/powershell/module/azureinformationprotection/start-aipscannerdiagnostics) cmdlet: to run diagnostic checks on your scanner, and export and zip log files for any errors that are found.
-   - [Export-AIPLogs](/powershell/module/azureinformationprotection/export-aiplogs) cmdlet: to export and create a .zip version of the log files from the *%localappdata%\Microsoft\MSIP\Logs* directory.
+   - [Start-AIPScannerDiagnostics](/powershell/module/purviewinformationprotection/start-aipscannerdiagnostics) cmdlet: to run diagnostic checks on your scanner, and export and zip log files for any errors that are found.
+   - [Export-AIPLogs](/powershell/module/purviewinformationprotection/export-aiplogs) cmdlet: to export and create a .zip version of the log files from the *%localappdata%\Microsoft\MSIP\Logs* directory.
 
 2. Create a dump file for the MSIP Scanner service. In the Windows Task Manager, right-click the **MSIP Scanner service**, and select **Create dump file**.
 3. In the Azure portal, stop the scan.
