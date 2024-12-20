@@ -33,6 +33,6 @@ The Visual Studio Installer can't download the **python-3.9.13-amd64.exe** file 
 
 To resolve the issue, ensure that the necessary domains and servers from which files are downloaded are added to the allowlist.
 
-By adding the necessary domain URLs to the allow, you enable the Visual Studio Installer to download the required files and successfully install the Python development workload. For more information and guidance on installing Visual Studio behind a firewall or proxy server, see [Install and use Visual Studio and Azure Services behind a firewall or proxy server](/visualstudio/install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server).
+By adding the necessary domain URLs to the allowlist, you enable the Visual Studio Installer to download the required files and successfully install the Python development workload. For more information and guidance on installing Visual Studio behind a firewall or proxy server, see [Install and use Visual Studio and Azure Services behind a firewall or proxy server](/visualstudio/install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server).
 
 Once you complete the allowlisting process, you can [install the Python development workload](/visualstudio/python/installing-python-support-in-visual-studio?view=vs-2022#download-and-install-the-python-workload) in Visual Studio 2022 without encountering any download failures.
