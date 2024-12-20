@@ -24,7 +24,7 @@ One or more errors occurred.
 
 ## Resolution
 
-To perform an offline installation of the Windows App SDK extension for Visual Studio 2022, use the following command line:
+To perform an offline installation of the Windows App SDK extension for Visual Studio, run the following command line:
 
 ```cmd
 "C:\Program Files (x86)\Microsoft Visual Studio\Installer\resources\app\ServiceHub\Services\Microsoft.VisualStudio.Setup.Service\VSIXInstaller.exe" /noextensionpack <path to the WindowsAppSDK VSIX>
