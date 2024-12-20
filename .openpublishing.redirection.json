@@ -12600,6 +12600,7 @@
       "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/exception-appears-server-side-sync",
       "redirect_document_id": true
     },
+    {
       "source_path": "support/dynamics-365/sales/error-when-signing-dynamics-365.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-when-signing-dynamics-365",
       "redirect_document_id": true
