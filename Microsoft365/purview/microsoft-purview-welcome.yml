@@ -5,7 +5,7 @@ summary: This library of articles provides guidance to troubleshoot and fix erro
 metadata:
   title: Microsoft Purview troubleshooting
   description: Documentation for troubleshooting common issues with Microsoft Purview.
-  ms.service: microsoft-365-compliance
+  ms.service: purview
   ms.topic: landing-page
   author: helenclu
   ms.author: luche
@@ -33,10 +33,6 @@ landingContent:
         links:
           - text: Resolve eDiscovery issues
             url: ./ediscovery/resolve-ediscovery-issues.md
-          - text: Can't start eDiscovery PST Export Tool
-            url: ./ediscovery/cannot-start-ediscovery-pst-export.md
-          - text: eDiscovery search results export fails
-            url: ./ediscovery/ediscovery-results-export-fails.md
  # Card
   - title: Audit logs
     linkLists:
@@ -64,8 +60,6 @@ landingContent:
         links:
           - text: Common scenarios for tips
             url: ./data-loss-prevention/data-loss-prevention-policy-tips.md
-          - text: DLP tips not working
-            url: ./data-loss-prevention/dlp-tips-not-work.md
           - text: DLP not working
             url: ./data-loss-prevention/data-loss-prevention-not-work.md
  # Card

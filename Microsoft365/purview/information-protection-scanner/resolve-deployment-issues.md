@@ -21,10 +21,10 @@ ms.date: 02/23/2023
 > [!NOTE]
 > The Azure Information Protection unified labeling scanner is being renamed **Microsoft Purview Information Protection scanner**. At the same time, configuration (currently in preview) is moving to the Microsoft Purview compliance portal. Currently, you can configure the scanner in both the Azure portal and the compliance portal. Instructions in this article refer to both admin portals.
 
-If you're having issues with the Microsoft Preview Information Protection scanner, verify whether your deployment is healthy by using the [Start-AIPScannerDiagnostics](/powershell/module/azureinformationprotection/start-aipscannerdiagnostics) PowerShell cmdlet to start the scanner diagnostic tool:
+If you're having issues with the Microsoft Purview Information Protection scanner, verify whether your deployment is healthy by using the [Start-ScannerDiagnostics](/powershell/module/purviewinformationprotection/start-scannerdiagnostics) PowerShell cmdlet to start the scanner diagnostic tool:
 
 ```powershell
-Start-AIPScannerDiagnostics
+Start-ScannerDiagnostics
 ```
 
 The diagnostics tool checks the following details and then creates a log file with the results:
@@ -40,14 +40,14 @@ The diagnostics tool checks the following details and then creates a log file wi
 > - If you're not running the tool by using the service account that is used to run the scanner service, you must use the `-OnBehalf` parameter. Else you will encounter errors.
 > - To print the last 10 errors from the scanner log, add the `Verbose` parameter. If you want to print more errors, use the `VerboseErrorCount` to define the number of errors you want to print.
 
-The `Start-AIPScannerDiagnostics` command doesn't run a complete prerequisites check. If you're having issues with the scanner, you must also ensure that your system complies with [scanner requirements](/microsoft-365/compliance/deploy-scanner-prereqs), and your [scanner configuration and installation](/microsoft-365/compliance/deploy-scanner-configure-install) is complete.
+The `Start-ScannerDiagnostics` command doesn't run a complete prerequisites check. If you're having issues with the scanner, you must also ensure that your system complies with [scanner requirements](/microsoft-365/compliance/deploy-scanner-prereqs), and your [scanner configuration and installation](/microsoft-365/compliance/deploy-scanner-configure-install) is complete.
  
 ## Verify scanning details per scanner node and repository
 
-Run the [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/get-aipscannerstatus) PowerShell cmdlet to get details about the current scan status and the list of nodes in your scanner cluster.
+Run the [Get-ScanStatus](/powershell/module/purviewinformationprotection/get-scanstatus) PowerShell cmdlet to get details about the current scan status and the list of nodes in your scanner cluster.
 
 ```powershell
-PS C:\> Get-AIPScannerStatus
+PS C:\> Get-ScanStatus
 ```
 
 ```output
@@ -58,10 +58,10 @@ TimeFromStart  : 00:00:00:37
 NodesInfo      : {t-contoso1-T298-corp.contoso.com,t-contoso2-T298-corp.contoso.com}
 ```
 
-Use the `NodesInfo` variable with the [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/get-aipscannerstatus) cmdlet to get further details about each node in the cluster:
+Use the `NodesInfo` variable with the [Get-ScanStatus](/powershell/module/purviewinformationprotection/get-scanstatus) cmdlet to get further details about each node in the cluster:
 
 ```powershell
-PS C:\WINDOWS\system32> $x=Get-AIPScannerStatus
+PS C:\WINDOWS\system32> $x=Get-ScanStatus
 PS C:\WINDOWS\system32> $x.NodesInfo
 ```
 
@@ -92,10 +92,10 @@ Labeled                 : 0
 ....
 ```
 
-Use the `Verbose` parameter with the [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/get-aipscannerstatus) cmdlet to get data about a current scan.
+Use the `Verbose` parameter with the [Get-ScanStatus](/powershell/module/purviewinformationprotection/get-scanstatus) cmdlet to get data about a current scan.
 
 ```powershell
-PS C:\> Get-AIPScannerStatus -Verbose
+PS C:\> Get-ScanStatus -Verbose
 ```
 
 ```output
@@ -163,13 +163,13 @@ The following table provides information about specific error messages that are 
 
 **Description**
 
-The [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) command has failed.
+The [Set-Authentication](/powershell/module/purviewinformationprotection/set-authentication) command has failed.
 
 **Resolution**
 
 Verfy that the appropriate permissions are defined correctly in the Azure portal.
 
-For more information, see [Create and configure Microsoft Entra applications for Set-AIPAuthentication](/azure/information-protection/rms-client/clientv2-admin-guide-powershell#create-and-configure-azure-ad-applications-for-set-aipauthentication).
+For more information, see [Create and configure Microsoft Entra applications for Set-Authentication](/powershell/azure/aip/setup-information-protection-client-powershell#create-and-configure-microsoft-entra-applications-for-set-authentication).
 
 ### Authentication token missing
 
@@ -188,13 +188,13 @@ These authentication errors occur when the scanner runs non-interactively.
 
 **Resolution**
 
-You must authenticate by using a token by using the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) cmdlet.
+You must authenticate by using a token by using the [Set-Authentication](/powershell/module/purviewinformationprotection/set-authentication) cmdlet.
 
-When you run the Set-AIPAuthentication cmdlet, make sure you use the token parameter on behalf of the service account that's used to run the scanner service as shown in the following example:
+When you run the Set-Authentication cmdlet, make sure you use the token parameter on behalf of the service account that's used to run the scanner service as shown in the following example:
 
 ```powershell
 $pscreds = Get-Credential CONTOSO\scanner
-Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -DelegatedUser scanner@contoso.com -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -OnBehalfOf $pscreds
+Set-Authentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -DelegatedUser scanner@contoso.com -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -OnBehalfOf $pscreds
 Acquired application access token on behalf of CONTOSO\scanner.
 ```
 
@@ -267,7 +267,7 @@ One of the following:
 
 - In the Azure portal, on the **Nodes** page: 
 
-  > DB schema is not up to date. Run Update-AIPScanner command to update the DB schema  
+  > DB schema is not up to date. Run Update-ScannerDatabase command to update the DB schema  
   Error: DB schema is not up to date
 
 **Description**
@@ -276,7 +276,7 @@ The database schema is not up to date.
 
 **Resolution**
 
-Run the [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) cmdlet to resynchronize your schema and ensure that it's up to date with any recent changes.
+Run the [Update-ScannerDatabase](/powershell/module/purviewinformationprotection/update-scannerdatabase) cmdlet to resynchronize your schema and ensure that it's up to date with any recent changes.
 
 ### Underlying connection was closed
 
@@ -328,8 +328,8 @@ If the file is no longer increasing in size, do the following:
 
 1. Run the following cmdlets:
 
-   - [Start-AIPScannerDiagnostics](/powershell/module/azureinformationprotection/start-aipscannerdiagnostics) cmdlet: to run diagnostic checks on your scanner, and export and zip log files for any errors that are found.
-   - [Export-AIPLogs](/powershell/module/azureinformationprotection/export-aiplogs) cmdlet: to export and create a .zip version of the log files from the *%localappdata%\Microsoft\MSIP\Logs* directory.
+   - [Start-ScannerDiagnostics](/powershell/module/purviewinformationprotection/start-scannerdiagnostics) cmdlet: to run diagnostic checks on your scanner, and export and zip log files for any errors that are found.
+   - [Export-DebugLogs](/powershell/module/purviewinformationprotection/export-debuglogs) cmdlet: to export and create a .zip version of the log files from the *%localappdata%\Microsoft\MSIP\Logs* directory.
 
 2. Create a dump file for the MSIP Scanner service. In the Windows Task Manager, right-click the **MSIP Scanner service**, and select **Create dump file**.
 3. In the Azure portal, stop the scan.
