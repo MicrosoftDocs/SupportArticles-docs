@@ -35,4 +35,4 @@ To resolve the issue, ensure that the necessary domains and servers from which f
 
 By adding the necessary domain URLs to the allow, you enable the Visual Studio Installer to download the required files and successfully install the Python development workload. For more information and guidance on installing Visual Studio behind a firewall or proxy server, see [Install and use Visual Studio and Azure Services behind a firewall or proxy server](/visualstudio/install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server).
 
-Once you complete the allowlisting process, you can install the Python development workload in Visual Studio 2022 without encountering any download failures.
+Once you complete the allowlisting process, you can [install the Python development workload](/visualstudio/python/installing-python-support-in-visual-studio?view=vs-2022#download-and-install-the-python-workload) in Visual Studio 2022 without encountering any download failures.
