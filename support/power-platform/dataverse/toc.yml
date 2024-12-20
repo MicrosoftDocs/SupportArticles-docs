@@ -46,8 +46,6 @@
       href: email-exchange-synchronization/email-message-cannot-be-sent.md
     - name: Email server location or incoming email port is incorrect
       href: email-exchange-synchronization/email-cannot-be-received-mailbox.md
-    - name: Error 2147209462 logged in mailbox record
-      href: email-exchange-synchronization/error-2147209462-logged-mailbox-record.md
     - name: Error code 8005E259
       href: email-exchange-synchronization/error-code-8005e259.md
     - name: Error code 8005E272
@@ -90,6 +88,9 @@
       href: email-exchange-synchronization/error-when-testing-enabling-mailbox.md
     - name: '"The SMTP address has no mailbox associated with it" error'
       href: email-exchange-synchronization/the-smtp-address-has-no-mailbox.md
+    - name: UnknownIncomingEmailIntegrationError -2147209462
+      href: email-exchange-synchronization/error-2147209462-logged-mailbox-record.md
+    - name: unknownincomingemailintegrationerror -2147220891
     - name: UnknownIncomingEmailIntegrationError -2147220891 or Crm.80040265.ISV
       href: email-exchange-synchronization/unknownincomingemailintegrationerror-2147220891.md
     - name: '"You cannot send email as the selected user" error'
