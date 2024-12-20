@@ -2,7 +2,7 @@
 title: UnknownIncomingEmailIntegrationError 2147209462
 description: Solves an error that occurs when the corresponding Queue record in Dynamics 365 is owned by a team without security roles assigned.
 ms.reviewer: 
-ms.date: 11/27/2024
+ms.date: 12/20/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # UnknownIncomingEmailIntegrationError -2147209462 appears in mailbox alerts in Microsoft Dynamics 365
@@ -34,3 +34,7 @@ To fix this issue, follow these steps:
 1. Select the mailbox record and select the value in the **Regarding** lookup to open the corresponding Queue record.
 1. Select the **Owner** field to verify the owner of this Queue record has a security role assigned.
 1. Select the **Manage Roles** button and assign a security role with sufficient access.
+
+## More information
+
+[Security roles and privileges in Power Platform](/power-platform/admin/security-roles-privileges)
