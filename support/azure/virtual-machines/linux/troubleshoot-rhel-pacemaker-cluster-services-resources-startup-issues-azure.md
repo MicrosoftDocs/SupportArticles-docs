@@ -15,7 +15,7 @@ ms.custom: sap:Issue with Pacemaker clustering, and fencing
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-This article describes the most typical reasons of startup issues for RHEL pacemaker cluster resources or services and guidance for determining the cause and resolving the issues.
+This article outlines the most common causes of RHEL pacemaker cluster resources or services startup problems along with guidance on how to identify and resolve them.
 
 ## Scenario 1: Unable to start cluster service due to quorum
 
@@ -57,7 +57,7 @@ Jun 16 11:17:53 node-0 pacemaker-controld[509433]: error: Corosync quorum is not
 
 ### Cause
 
-The **votequorum** service is a component of the corosync project. To prevent split-brain scenarios, this service can be optionally loaded into a corosync cluster's nodes. Each system in the cluster is given a certain amount of votes to achieve this. Ensuring that cluster actions can only occur when the majority of votes are cast. Either every node must have the service loaded, or none at all. The outcomes are uncertain if it loaded into a subset of cluster nodes.
+The **votequorum** service is a component of the corosync project. To prevent split-brain scenarios, this service can be optionally loaded into a corosync cluster's nodes. Each system in the cluster is given a certain number of votes to achieve this quorum. Ensuring that cluster actions can only occur when the majority of votes are cast. Either every node must have the service loaded, or none at all. The outcomes are uncertain if it loaded into a subset of cluster nodes.
 
 The following corosync.conf extract will enables **votequorum** service within corosync:
 
@@ -71,7 +71,7 @@ The following corosync.conf extract will enables **votequorum** service within c
 
 ### Resolution
 
-1. 1. As a precaution, please take a full backup or snapshot before making any changes. Please refer this document to know more about Azure VM backup [An overview of Azure VM backup](https://learn.microsoft.com/en-us/azure/backup/backup-azure-vms-introduction).
+1. As a precaution take a full backup or snapshot before making any changes. Refer this document to know more about Azure VM backup [An overview of Azure VM backup](https://learn.microsoft.com/en-us/azure/backup/backup-azure-vms-introduction).
 
 2. Check for missing quorum stanza in `/etc/corosync/corosync.conf`. Compare the existing `corosync.conf` with any of the available backup present under `/etc/corosync/`.
    
@@ -166,9 +166,9 @@ vip_HN1_03_start_0 on node-1.heartbeat.example.com 'unknown error' (1): call=20,
 
 ### Cause
 
-1. To choose which network interface to launch the `IPAddr2` resource on, IPaddr2 will invoke the `findif()` function as defined in `/usr/lib/ocf/resource.d/heartbeat/IPaddr2` (belongs to the resource-agents package).
+1. To choose which network interface to launch the `IPAddr2` resource on, IPaddr2 invoke the `findif()` function as defined in `/usr/lib/ocf/resource.d/heartbeat/IPaddr2` (belongs to the resource-agents package).
 
-2. Options set on the IPAddr2 resource, such as `ip` (needed), `cidr_netmask`, and `broadcast`, will determine the correct `NIC(Network Interface Card)`.
+2. The correct `NIC(Network Interface Card)` is determined by options set on the IPAddr2 resource, such as `ip` (required), `cidr_netmask`, and `broadcast`.
 
 *For example:*
 
@@ -194,7 +194,7 @@ sudo ip -o -f inet route list match 172.17.10.10/24 scope link
 172.17.10.0/24 dev ens6 proto kernel src 172.17.10.7 
 ```
 
-4. If the `NIC (ens6)` is unavailable, we will not be able to manually locate the `NIC` information, which could result in `[findif]` failing:
+4. If the `NIC (ens6)` is unavailable, we may now not be able to manually locate the `NIC` information, which could result in `[findif]` failing:
 
 ```bash
 sudo ip link set ens6 down
@@ -209,7 +209,7 @@ sudo ip -o -f inet route list match 172.17.10.10/24 scope link
 
 If route that matches the VIP isn't in the default routing table, then one can specify the `NIC` name in pacemaker resource, so that it can be configured bypassing the check:
 
-1. As a precaution, please take a full backup or snapshot before making any changes. Please refer this document to know more about Azure VM backup [An overview of Azure VM backup](https://learn.microsoft.com/en-us/azure/backup/backup-azure-vms-introduction).
+1. As a precaution take a full backup or snapshot before making any changes. Refer this document to know more about Azure VM backup [An overview of Azure VM backup](https://learn.microsoft.com/en-us/azure/backup/backup-azure-vms-introduction).
 
 2. Put the cluster under maintenance-mode.
    
@@ -263,7 +263,7 @@ SAP HANA DB fails to start with `unknown error`
 
 a. From the `/var/log/messages`, we can see `SRHOOK=SFAIL` indicating the cluster nodes are out of sync.
 b. Secondary cluster node is in `WAITING4PRIM` status.
-c. When you run `sudo pcs status` the status of the cluster will be shown as following:
+c. The cluster's status is shown as follows when we execute `sudo pcs status`:
 
 ```bash
 sudo pcs status
@@ -319,7 +319,7 @@ SAP HANA resource can't be start by pacemaker when there are `SYN` failures betw
 > [!Important]
 > Steps 2,3 & 4 are to be performed using SAP administrator account as these steps involve using SAP System ID to stop, start and re-enable replication manually.
 
-1. 1. As a precaution, please take a full backup or snapshot before making any changes. Please refer this document to know more about Azure VM backup [An overview of Azure VM backup](https://learn.microsoft.com/en-us/azure/backup/backup-azure-vms-introduction).
+1. As a precaution take a full backup or snapshot before making any changes. Refer this document to know more about Azure VM backup [An overview of Azure VM backup](https://learn.microsoft.com/en-us/azure/backup/backup-azure-vms-introduction).
 
 2. Put the cluster under maintenance-mode.
 
@@ -423,38 +423,38 @@ SAP HANA resource can't be start by pacemaker when there are `SYN` failures betw
 ### Symptom 2
 
 SAP HANA Resource Reporting N (Standalone) mode experiences start failures with `hana_xxx_roles`.
-Neither node's database resource is a primary or secondary. Standalone node mode with `hana_xxx_roles` reporting **N**.
+The cluster node's database resource is a primary or secondary. Standalone node mode with `hana_xxx_roles` reporting **N**.
 
 ```output
 Node Attributes:
   * Node: node-0 (1):
-    * hana_XXX_clone_state		       : UNDEFINED
-    * hana_XXX_op_mode			: logreplay
-    * hana_XXX_remoteHost		       : node-1
-    * hana_XXX_roles				: 1:N:master1::worker:
-    * hana_XXX_site				: SITE1    
-    * hana_XXX_srah				: -        
-    * hana_XXX_srmode			: sync     
-    * hana_XXX_version			: 2.00.079.00
-    * hana_XXX_vhost				: node-0
-    * lpa_XXX_lpt				: 10       
+    * hana_XXX_clone_state            : UNDEFINED
+    * hana_XXX_op_mode			          : logreplay
+    * hana_XXX_remoteHost             : node-1
+    * hana_XXX_roles                  : 1:N:master1::worker:
+    * hana_XXX_site                   : SITE1    
+    * hana_XXX_srah                   : -        
+    * hana_XXX_srmode                 : sync     
+    * hana_XXX_version                : 2.00.079.00
+    * hana_XXX_vhost                  : node-0
+    * lpa_XXX_lpt                     : 10       
   * Node: node-1 (2):
-    * hana_XXX_clone_state		       : UNDEFINED
-    * hana_XXX_op_mode			: logreplay
-    * hana_XXX_remoteHost		       : node-0
-    * hana_XXX_roles				: 4:N:master1:master:worker:master
-    * hana_XXX_site				: SITE2
-    * hana_XXX_sra				: -        
-    * hana_XXX_srah				: -        
-    * hana_XXX_srmode			: sync     
-    * hana_XXX_sync_state		       : PRIM     
-    * hana_XXX_version			: 2.00.079.00
-    * hana_XXX_vhost				: node-1
-    * lpa_XXX_lpt				: 1733552029
-    * master-SAPHana_XXX_00		       : 150
+    * hana_XXX_clone_state            : UNDEFINED
+    * hana_XXX_op_mode                : logreplay
+    * hana_XXX_remoteHost             : node-0
+    * hana_XXX_roles                  : 4:N:master1:master:worker:master
+    * hana_XXX_site                   : SITE2
+    * hana_XXX_sra                    : -        
+    * hana_XXX_srah                   : -        
+    * hana_XXX_srmode                 : sync     
+    * hana_XXX_sync_state		          : PRIM     
+    * hana_XXX_version			          : 2.00.079.00
+    * hana_XXX_vhost				          : node-1
+    * lpa_XXX_lpt				              : 1733552029
+    * master-SAPHana_XXX_00		        : 150
 ```
 
-With migration summary reporting `INF` fail-count with failed SAP HANA resource action reporting start failures due to "not running".
+The Migration summary reporting `INF` fail-count with failed SAP HANA resource action reporting start failures due to "not running"
 
 ```output
 Migration Summary:
@@ -471,7 +471,7 @@ Failed Resource Actions:
 ### Cause
 
 - Each database node in a standalone node seeks to function independently rather than communicating with one another.
-- This problem is often observed when the cluster is in maintenance mode and the database is changed (manually stopped, started, replication paused, etc.).
+- This issue frequently occurs when the database is modified (manually stopped, started, replication paused, etc.) while the cluster is in maintenance mode..
 - Run `sudo pcs status --full`, look for `hana_xxx_roles` under Node Attributes, and make sure it reports `#:N:X:X:X:X` rather than `#:P:X:X:X:X`.
 
 ### Resolution
@@ -479,7 +479,7 @@ Failed Resource Actions:
 > [!Note]
 > These steps ( 1 to 5 ) should be performed by SAP admin.
 
-1. 1. As a precaution, please take a full backup or snapshot before making any changes. Please refer this document to know more about Azure VM backup [An overview of Azure VM backup](https://learn.microsoft.com/en-us/azure/backup/backup-azure-vms-introduction).
+1. As a precaution take a full backup or snapshot before making any changes. Refer this document to know more about Azure VM backup [An overview of Azure VM backup](https://learn.microsoft.com/en-us/azure/backup/backup-azure-vms-introduction).
   
 2. Put the cluster under maintenance-mode.
 
@@ -543,7 +543,7 @@ SAP HANA Resource Start Failure with error message as shown:
 'FAIL: process hdbdaemon HDB Daemon not running'
 ```
 
-The `sudo pcs status --full` command can also be used to view this, as it also resulted the SAP HANA Pacemaker cluster resources failover error.
+The `sudo pcs status --full` command can also be used to view this error, as it also resulted the SAP HANA Pacemaker cluster resources failover error.
 
 ```output
 Failed Resource Actions:
@@ -552,7 +552,7 @@ Failed Resource Actions:
 
 ### Cause
 
-After reviewing `/var/log/messages` it was observed that `hbddaemon` failed to start due to the following error:
+Upon reviewing `/var/log/messages` it was observed that `hbddaemon` failed to start due to the following error:
 
 ```output
 Mar  1 02:25:09 node-0 SAPHana(SAPHana_ECR_00)[12336]: ERROR: ACT: SAPHana Instance ECR-HDB00 start failed: #01201.03.2024 02:25:09#012WaitforStarted#012FAIL: process hdbdaemon HDB Daemon not running
@@ -569,9 +569,9 @@ Mar  1 02:25:09 node-0 pacemaker-attrd[8568]: notice: Setting last-failure-SAPHa
 
 ### Resolution
 
-As shown in the above output, there are no traces found other than why the 'hbddaemon' failed to start. After reviewing the provided output in the '/var/log/messages' log file, it is recommended that SAP vendor support investigate the application logs further to determine why the SAP application failed to start.
+As shown in the output, there are no traces found other than why the 'hbddaemon' failed to start. After evaluating the provided output in the '/var/log/messages' log file, SAP vendor support should further study the application logs to understand why the SAP application failed to start.
 
-For additional refrence please refer to this RedHat Article [SAPHana Resource Start Failure with Error 'FAIL: process hdbdaemon HDB Daemon not running'](https://access.redhat.com/solutions/7058526).
+For more details refer this RedHat Article [SAPHana Resource Start Failure with Error 'FAIL: process hdbdaemon HDB Daemon not running'](https://access.redhat.com/solutions/7058526).
 
 ## Scenario 4: Issue with ASCS and ERS resource.
 
@@ -592,7 +592,7 @@ Due to incorrect `InstanceName` and `START_PROFILE` attributes SAP instance (ASC
 > [!Note]
 > This resolution is applicable when your `InstanceName` and `START_PROFILE` are individual.
 
-1. 1. As a precaution, please take a full backup or snapshot before making any changes. Please refer this document to know more about Azure VM backup [An overview of Azure VM backup](https://learn.microsoft.com/en-us/azure/backup/backup-azure-vms-introduction).
+1. As a precaution take a full backup or snapshot before making any changes. Refer this document to know more about Azure VM backup [An overview of Azure VM backup](https://learn.microsoft.com/en-us/azure/backup/backup-azure-vms-introduction).
   
 2. Put the cluster under maintenance-mode.
 
