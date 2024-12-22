@@ -51,7 +51,8 @@ This increase is caused by a change in memory accounting within version 2 of the
 - An alternative temporary solution is to revert the cgroup version on your nodes by using the following DaemonSet:  
 [Revert to cgroup v1 DaemonSet](https://github.com/Azure/AKS/blob/master/examples/cgroups/revert-cgroup-v1.yaml)
 
-**Note**:  
+**Important**:  
+- This DaemonSet is a best-effort solution and should be used with caution. Test it thoroughly in a lower environment before applying it to production to ensure compatibility and avoid unexpected disruptions.
 - The DaemonSet, by default, applies to all nodes in your cluster and will reboot them to implement the cgroup change.  
 - To control how this gets applied, configure a `nodeSelector` to target specific nodes.
 
