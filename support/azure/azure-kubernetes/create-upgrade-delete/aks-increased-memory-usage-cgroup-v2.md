@@ -61,7 +61,7 @@ This increase is caused by a change in memory accounting within version 2 of the
 
 ## Status
 
-We're actively working with the Kubernetes community to resolve the underlying issue. Progress on this effort can be tracked at [Azure/AKS Issue #3443](https://github.com/Azure/AKS/issues/3443). 
+We're actively working with the Kubernetes community to resolve the underlying issue. Progress on this effort can be tracked at [Azure/AKS Issue #3443](https://github.com/kubernetes/kubernetes/issues/118916). 
 
 As part of the resolution, we plan to either adjust the eviction thresholds or update [resource reservations](/azure/aks/concepts-clusters-workloads#resource-reservations), depending on the outcome of the fix.
 
