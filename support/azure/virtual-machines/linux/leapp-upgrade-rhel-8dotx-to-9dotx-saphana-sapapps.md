@@ -45,9 +45,6 @@ According to the [Upgrading SAP environments from RHEL 8 to RHEL 9 - Supported u
 
 SAP validates SAP NetWeaver for each major RHEL version. The supported in-place upgrade paths for an SAP NetWeaver system are the two latest Extended Update Support (EUS)/Update Services for SAP Solutions (E4S) releases that the Leapp tool supports for non-HANA systems. For more information, see [Upgrading from RHEL 8 to RHEL 9 - Supported upgrade paths](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/upgrading_from_rhel_8_to_rhel_9). Certain deviations from the default upgrade procedure are described in [Upgrading an SAP NetWeaver system](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux_for_sap_solutions/9/html/upgrading_sap_environments_from_rhel_8_to_rhel_9/asmb_upgrading_netweaver_asmb_upgrading-hana-system). For systems where both SAP HANA and SAP NetWeaver are installed, the SAP HANA restrictions apply.
 
-> [!IMPORTANT]  
-> When you upgrade a RHEL VM for SAP HANA or SAP Applications from 8.10 to 9.4, there is a known issue due to the RHUI client RPM name difference in 8.10 compared to earlier versions. As a result, the upgrade is currently not possible, and no workaround is available. However, the upgrade from 8.8 to 9.2 is unaffected by this issue. This article will be updated once the issue is resolved. Then, you can follow the steps in this article to perform the upgrade from 8.10 to 9.4.
-
 ### [RHEL 8.8 to RHEL 9.2 - SAP-HANA PAYG VMs](#tab/rhel92saphana)
 
 This section outlines the necessary steps before performing an in-place upgrade from RHEL 8.8 to RHEL 9.2 using the Leapp utility on SAP-HANA PAYG VMs.
