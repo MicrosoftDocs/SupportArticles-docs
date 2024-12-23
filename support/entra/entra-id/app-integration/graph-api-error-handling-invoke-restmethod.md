@@ -21,6 +21,8 @@ This article guides you through handling errors when making requests to the Micr
 
 ## Code sample
 
+For demonstration purposes of the retry logic, the sample tries to query the `signInActivity` data for Guest users. You will receive a 403 error, which is expected.
+
 - **Get-AccessTokenCC** This function requests an access token from Microsoft Entra ID, which can then be used to authenticate API requests to Microsoft Graph. You need to provides values for The `$clientSecret`, `$clientId`, and `$tenantId` of your Azure registration app.
 - **Get-GraphQueryOutput ($Uri)**  This function makes a request to the Microsoft Graph API to retrieve data and handles paging and retries if there is an error 403.
 
@@ -67,9 +69,9 @@ Function Get-GraphQueryOutput ($Uri)
            
             Write-Host $result
 
-            #  For more information about paging, see https://docs.microsoft.com/en-us/graph/paging
+         
             if($query.'@odata.nextLink'){
-                # set the url to get the next page of records
+                # set the url to get the next page of records. For more information about paging, see https://docs.microsoft.com/graph/paging
                 $Uri = $query.'@odata.nextLink'
             } else {
                 $Uri = $null
