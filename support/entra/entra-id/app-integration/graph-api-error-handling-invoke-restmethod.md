@@ -10,7 +10,7 @@ content_well_notification: AI-contribution
 ai-usage: ai-assisted
 ms.custom: sap:Enterprise Applications
 ---
-# Retry logic in Microsoft Graph API Requests with Invoke-RestMethod
+# Retry logics in Microsoft Graph API Requests with Invoke-RestMethod
 
 This article guides you through handling errors when making requests to the Microsoft Graph API using the `Invoke-RestMethod` cmdlet in PowerShell. The focus is on catching particular error categories, pausing, and retrying requests a specified number of times before quitting. Implementing robust error handling is highly recommended when interacting with Microsoft Graph.
 
@@ -22,9 +22,9 @@ This article guides you through handling errors when making requests to the Micr
 ## Code sample
 
 - **Get-AccessTokenCC** This function requests an access token from Microsoft Entra ID, which can then be used to authenticate API requests to Microsoft Graph. You need to provides values for The `$clientSecret`, `$clientId`, and `$tenantId` of your Azure registration app.
-- **Get-GraphQueryOutput ($Uri)**  This function makes a request to the Microsoft Graph API to retrieve data and handles paging and retries in case of error 403.
+- **Get-GraphQueryOutput ($Uri)**  This function makes a request to the Microsoft Graph API to retrieve data and handles paging and retries if there is an error 403.
 
-``` 
+``` powershell
 Function Get-AccessTokenCC
  
 {
@@ -126,7 +126,8 @@ Get-GraphQueryOutput -Uri $my_uri|out-file c:\\temp\\output.json
 
 For advanced scenarios such as capturing specific header values like `Retry-After` during throttling responses (HTTP 429), use:
 
+```powershell
 $retryAfterValue = $_.Exception.Response.Headers["Retry-After"]
-
+```
 To handle the 429 too many requests error, see [Microsoft Graph throttling guidance](https://learn.microsoft.com/en-us/graph/throttling)
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
