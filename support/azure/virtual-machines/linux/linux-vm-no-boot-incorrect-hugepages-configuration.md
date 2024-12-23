@@ -1,5 +1,5 @@
 ---
-title: Linux VM fails to boot due to incorrect HugePages configuration
+title: Linux VM boot issues due to incorrect HugePages configuration
 description: Provides a solution to Azure Linux VM boot issues due to incorrect HugePages configuration.
 ms.date: 12/23/2024
 ms.reviewer: msaenzbo, v-weizhu
@@ -239,7 +239,7 @@ This problem occurs because all available memory is reserved for HugePages, leav
 
 ## Resolution
 
-Check the VM's memory and HugePages configuration. If the system needs N GB for HugePages and the VM only has N GB of RAM, it runs out of memory causing the VM not to boot. In this case, we recommend upgrading the VM size to at least 32 GB of RAM. For more information about how much HugePages a VM and database needs, see [Oracle Community](https://community.oracle.com/mosc/discussion/4516170/huge-pages). If HugePages reservation exceeds VM memory, correct the configuration by following these steps::
+Check the VM's memory and HugePages configuration. For example, if the system needs 16 GB for HugePages and the VM only has 16 GB of RAM, it runs out of memory causing the VM not to boot. In this case, we recommend upgrading the VM size to at least 32 GB of RAM. For more information about how much HugePages a VM and database needs, see [Oracle Community](https://community.oracle.com/mosc/discussion/4516170/huge-pages). If HugePages reservation exceeds VM memory, correct the configuration by following these steps:
 
 1. Access the VM using one of the following methods:
 
