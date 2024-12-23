@@ -19,15 +19,13 @@ Incorrect HugePages configuration can cause boot issues in Linux Virtual Machine
 
 ## Symptoms
 
-The following issues can occurs due to incorrect HugePages configuration in the **/etc/sysctl.conf** file:
+The following issues can occurs due to incorrect HugePages configuration:
 
 - After you migrate a Linux VM from on-premises to Azure, the VM doesn't boot properly.
 
 - After you downsize an Azure Linux VM, it doesn't boot properly.
 
 - When an Azure Linux VM boots with some services, it doesn't boot properly. The sign-in prompt is displayed slowly, and you can't sign in.
-
-For example, the `vm.nr_hugepages` parameter is set to 65536 in the **/etc/sysctl.conf** file while the VM has only 16 GB of total memory, this configuration would consume 134,217,728 KB of memory, leading to an Out of Memory (OOM) condition.
 
 When you review the serial console logs for various Linux VMs (Red Hat, Oracle, SUSE, or Ubuntu), the following issues are commonly observed:
 
@@ -235,11 +233,16 @@ Here are some log examples:
 
 ## Cause
 
-This problem occurs because all available memory is reserved for HugePages, leaving insufficient free memory for the server to boot and execute processes.
+This issue occurs because all available memory is reserved for HugePages, leaving insufficient free memory for the server to boot and execute processes.
+
+For example, if the HugePages configuration parameter `vm.nr_hugepages` is set to 65536 in the **/etc/sysctl.conf** file while the VM has only 16 GB of total memory, this configuration would consume 134,217,728 KB of memory, which exceeds VM memory, leading to an Out of Memory (OOM) condition.
 
 ## Resolution
 
-Check the VM's memory and HugePages configuration. For example, if the system needs 16 GB for HugePages and the VM only has 16 GB of RAM, it runs out of memory causing the VM not to boot. In this case, we recommend upgrading the VM size to at least 32 GB of RAM. For more information about how much HugePages a VM and database needs, see [Oracle Community](https://community.oracle.com/mosc/discussion/4516170/huge-pages). If HugePages reservation exceeds VM memory, correct the configuration by following these steps:
+> [!IMPORTANT]
+> Review how much memory the VM has and How much HugePages are setup. Under some scenarios, for example, if the system needs 16 GB for HugePages and the VM only has 16 GB of RAM, it runs out of memory causing the VM not to boot. In this case, we recommend upgrading the VM size to at least 32 GB of RAM. For more information about how much HugePages a VM and database needs, see [Oracle Community](https://community.oracle.com/mosc/discussion/4516170/huge-pages).
+
+To fix the issue, follow these steps:
 
 1. Access the VM using one of the following methods:
 
@@ -257,12 +260,11 @@ Check the VM's memory and HugePages configuration. For example, if the system ne
     sudo vi /etc/sysctl.conf
     ```
 
-4. Locate where the `vm.nr_hugepages` is set:
+4. Locate where the `vm.nr_hugepages` parameter is set:
 
     ```bash
     vm.nr_hugepages=<the number of HugePages>
     ```
-
 5. Comment out the line or adjust the `vm.nr_hugepages` value to balance performance and memory allocation.
 6. Save the changes and exit the text editor.
 7. [Regenerate missing initramfs manually](kernel-related-boot-issues.md#missing-initramfs-manual) according to the operating system distribution.
