@@ -32,6 +32,5 @@ To resolve the issue, follow these steps:
 
 1. Uninstall the Visual Studio Installer application.
 1. Delete the folder and its contents located at **C:\Program Files (x86)\Microsoft Visual Studio\Installer**.
-1. Download the latest **vs_Professional.exe** file.
-1. Run the **vs_Professional.exe** file as an administrator.
-1. Install [Visual Studio 2022](https://visualstudio.microsoft.com/vs/).
+1. Go to the [Visual Studio page](https://visualstudio.microsoft.com/vs/) and download the edition that you're using.
+1. Run the Visual Studio setup as an administrator.
