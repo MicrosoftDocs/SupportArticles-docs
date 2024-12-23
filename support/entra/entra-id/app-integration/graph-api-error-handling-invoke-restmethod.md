@@ -17,7 +17,7 @@ This article guides you through handling errors when making requests to the Micr
 ## Prerequisites
 
 - An Azure app registration with a client secret
-- Application must have permission for Microsoft.Graph `user.read.all`. For more information, see [List users](/graph/api/user-get?view=graph-rest-1.0&tabs=http)
+- Application must have permission for Microsoft.Graph `user.read.all`. For more information, see [List users](/graph/api/user-get?view=graph-rest-1.0&tabs=http&preserve-view=true)
 
 ## Code sample
 
@@ -131,5 +131,5 @@ For advanced scenarios such as capturing specific header values like `Retry-Afte
 ```powershell
 $retryAfterValue = $_.Exception.Response.Headers["Retry-After"]
 ```
-To handle the 429 too many requests error, see [Microsoft Graph throttling guidance](https://learn.microsoft.com/en-us/graph/throttling)
+To handle the 429 too many requests error, see [Microsoft Graph throttling guidance](/graph/throttling)
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
