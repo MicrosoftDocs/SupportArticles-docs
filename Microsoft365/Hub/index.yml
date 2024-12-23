@@ -27,7 +27,7 @@ productDirectory:
           text: Microsoft 365 Enterprise
         - url: ../admin/o365-admin-welcome.yml
           text: Microsoft 365 admin center
-        - url: ../compliance/microsoft-365-compliance-welcome.yml
+        - url: ../purview/microsoft-purview-welcome.yml
           text: Microsoft Purview
         - url: ../security/microsoft-365-security-welcome.yml
           text: Microsoft 365 Security

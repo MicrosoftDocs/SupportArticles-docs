@@ -21,7 +21,7 @@ ms.date: 10/20/2023
 
 This video shows how to set up Active Directory Federation Service (AD FS) to work together with Microsoft 365. It doesn't cover the AD FS proxy server scenario. This video discusses AD FS for Windows Server 2012 R2. However, the procedure also applies to AD FS 2.0 — except for steps 1, 3, and 7. In each of those steps, see the "Notes for AD FS 2.0" section for more information about how to use this procedure in Windows Server 2008.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/9ffdb7ee-07bf-45ba-adec-f1acf576bd65]
+> [!VIDEO 5d085eb5-9229-4ce7-9d70-3cfb3d16e24e]
 
 ## Useful notes for the steps in the video
 

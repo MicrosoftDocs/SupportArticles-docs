@@ -22,7 +22,7 @@
           "**/*.md",
           "**/**.yml"
         ],
-        "src": "compliance",
+        "src": "purview",
         "dest": ".",
         "exclude": [
           "**/obj/**",
@@ -120,18 +120,18 @@
         "admin/**/*.md": "microsoft-365-admin",
         "enterprise/**/*.md": "microsoft-365-enterprise",
         "security/**/*.md": "microsoft-365-security",
-        "compliance/**/*.md": "microsoft-365-compliance"      
+        "purview/**/*.md": "purview"      
       },
       "author": {
         "admin/**/*.md": "helenclu",
         "enterprise/**/*.md": "helenclu",
-        "compliance/**/*.md": "cloud-writer",
+        "purview/**/*.md": "cloud-writer",
         "security/**/*.md": "cloud-writer"
       },
       "ms.author": {
         "admin/**/*.md": "luche",
         "enterprise/**/*.md": "luche",
-        "compliance/**/*.md": "meerak",
+        "purview/**/*.md": "meerak",
         "security/**/*.md": "meerak"
       }
     },
