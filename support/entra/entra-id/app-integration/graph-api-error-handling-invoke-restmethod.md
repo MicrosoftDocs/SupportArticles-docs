@@ -1,0 +1,132 @@
+---
+title: Handling errors in Microsoft Graph API requests with invoke-restmethod
+description: This article provides code sample about handling errors when making requests to the Microsoft Graph API using the Invoke-RestMethod cmdlet in PowerShell.
+ms.date: 02/18/2024
+author: genlin
+ms.author: raheld
+ms.service: entra-id
+ms.topic: overview
+content_well_notification: AI-contribution
+ai-usage: ai-assisted
+ms.custom: sap:Enterprise Applications
+---
+# Retry logic in Microsoft Graph API Requests with Invoke-RestMethod
+
+This article guides you through handling errors when making requests to the Microsoft Graph API using the `Invoke-RestMethod` cmdlet in PowerShell. The focus is on catching particular error categories, pausing, and retrying requests a specified number of times before quitting. Implementing robust error handling is highly recommended when interacting with Microsoft Graph.
+
+## Prerequisites
+
+- An Azure app registration with a client secret
+- Application must have permission for Microsoft.Graph `user.read.all`. For more information, see [List users](/graph/api/user-get?view=graph-rest-1.0&tabs=http)
+
+## Code sample
+
+- **Get-AccessTokenCC** This function requests an access token from Microsoft Entra ID, which can then be used to authenticate API requests to Microsoft Graph. You need to provides values for The `$clientSecret`, `$clientId`, and `$tenantId` of your Azure registration app.
+- **Get-GraphQueryOutput ($Uri)**  This function makes a request to the Microsoft Graph API to retrieve data and handles paging and retries in case of error 403.
+
+``` 
+Function Get-AccessTokenCC
+ 
+{
+    $clientSecret = ''
+    $clientId = ''
+    $tenantId = ''
+    # Construct URI
+    $uri = "https://login.microsoftonline.com/$tenantId/oauth2/v2.0/token"
+    # Construct Body
+    $body = @{
+        client_id = $clientId
+        client_secret = $clientSecret
+        scope = 'https://graph.microsoft.com/.default'
+        grant_type = 'client_credentials'
+    }
+    # Get OAuth 2.0 Token
+    $tokenRequest = Invoke-WebRequest -Method Post -Uri $uri -ContentType 'application/x-www-form-urlencoded' -Body $body -UseBasicParsing
+    # Access Token
+    $token = ($tokenRequest.Content | ConvertFrom-Json).access_token
+    #$token = "Junk"  #uncomment this line to cause a 401 error -- you can set that status in the error handler to test the pause and retry
+    #Write-Host "access_token = $token"
+    return $token
+}
+ 
+Function Get-GraphQueryOutput ($Uri)
+{
+    write-host "uri = $Uri"
+    write-host "token = $token"
+
+    $retryCount = 0
+    $maxRetries = 3
+    $pauseDuration = 2
+ 
+    $allRecords = @()
+    while ($Uri -ne $null){
+        Write-Host $Uri
+        try {
+            # todo: verify that the bearer token is still good -- hasn't expired yet -- if it has, then get a new token before making the request
+            $result=Invoke-RestMethod -Method Get -Uri $Uri -ContentType 'application/json' -Headers @{Authorization = "Bearer $token"}
+           
+            Write-Host $result
+
+            #  For more information about paging, see https://docs.microsoft.com/en-us/graph/paging
+            if($query.'@odata.nextLink'){
+                # set the url to get the next page of records
+                $Uri = $query.'@odata.nextLink'
+            } else {
+                $Uri = $null
+            }
+ 
+        } catch {
+            Write-Host "StatusCode: " $_.Exception.Response.StatusCode.value__
+            Write-Host "StatusDescription:" $_.Exception.Response.StatusDescription
+ 
+            if($_.ErrorDetails.Message){
+                Write-Host "Inner Error: $_.ErrorDetails.Message"
+            }
+ 
+            # check for a specific error so that we can retry the request otherwise, set the url to null so that we fall out of the loop
+            if($_.Exception.Response.StatusCode.value__ -eq 403 ){
+                # just ignore, leave the url the same to retry but pause first
+                if($retryCount -ge $maxRetries){
+                    # not going to retry again
+                    $Uri = $null
+                    Write-Host 'Not going to retry...'
+                } else {
+                    $retryCount += 1
+                    Write-Host "Retry attempt $retryCount after a $pauseDuration second pause..."
+                    Start-Sleep -Seconds $pauseDuration
+                }
+ 
+            } else {
+                # not going to retry -- set the url to null to fall back out of the while loop
+                $Uri = $null
+            }
+        }
+    }
+ 
+    $output = $allRecords | ConvertTo-Json
+
+
+if ($result.PSObject.Properties.Name -contains "value") {
+    return $result.value
+} else {
+    return $result
+}
+}
+ 
+# Graph API URIs
+$uri = 'https://graph.microsoft.com/v1.0/users?$filter=userType eq ''Guest''&$select=displayName,UserprincipalName,userType,identities,signInActivity'
+
+# Pull Data
+$token = Get-AccessTokenCC
+Get-GraphQueryOutput -Uri $my_uri|out-file c:\\temp\\output.json
+
+```
+
+## Capturing specific header
+
+For advanced scenarios such as capturing specific header values like `Retry-After` during throttling responses (HTTP 429), use:
+
+$retryAfterValue = $_.Exception.Response.Headers["Retry-After"]
+
+To handle the 429 too many requests error, see [Microsoft Graph throttling guidance](https://learn.microsoft.com/en-us/graph/throttling)
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

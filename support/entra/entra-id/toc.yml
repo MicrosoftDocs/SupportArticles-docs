@@ -58,6 +58,8 @@
         href: app-integration/unable-delete-app.md
       - name: Send notification details to Microsoft support
         href: app-integration/send-notification-details.md
+      - name: Handling errors in Graph API requests with PowerShell
+        href: graph-api-error-handling-invoke-restmethod.md
   - name: Troubleshoot sign-in to apps
     items:
       - name: Error AADSTS220501 - Unable to download Certificate Revocation List
