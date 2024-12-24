@@ -18,10 +18,10 @@ To set up Visual Studio on an offline machine, follow these steps:
    ```cmd
    "C:\Temp\VS2022Offline\vs_professional.exe" --noWeb --channelURI "C:\Temp\VS2022Offline\channelManifest.json"
    ```
-   For more details on the command-line parameters, see [Use command-line parameters to install, update, and manage Visual Studio](/visualstudio/install/use-command-line-parameters-to-install-visual-studio).
+   For more information on the command-line parameters, see [Use command-line parameters to install, update, and manage Visual Studio](/visualstudio/install/use-command-line-parameters-to-install-visual-studio).
 
 1. Follow the remaining instructions in the setup wizard to complete the installation.
-1. Once the installation is completed successfully, open any browser and browse to the [Microsoft M365 admin center](https://admin.microsoft.com/adminportal/home#/subscriptions/vlnew).
+1. Once the installation is completed successfully, open any browser and browse to the [Microsoft 365 admin center](https://admin.microsoft.com/adminportal/home#/subscriptions/vlnew).
 1. Sign in with your Visual Studio subscription account.
 1. Navigate to the **Downloads and Keys** tab.
 1. Search for **Visual Studio Professional 2022** and select **Key**.
