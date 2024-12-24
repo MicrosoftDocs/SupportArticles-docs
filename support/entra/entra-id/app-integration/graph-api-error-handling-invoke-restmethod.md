@@ -8,7 +8,7 @@ ms.service: entra-id
 ms.topic: overview
 content_well_notification: AI-contribution
 ai-usage: ai-assisted
-ms.custom: sap:Enterprise Applications
+ms.custom: sap:Microsoft Graph Users, Groups, and Entra APIs
 ---
 # Retry logics in Microsoft Graph API Requests with Invoke-RestMethod
 
