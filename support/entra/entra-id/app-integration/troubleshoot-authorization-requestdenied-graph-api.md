@@ -36,11 +36,12 @@ The following example uses [app-only authentication](/entra/identity-platform/pe
 
 ### Step 2: Configure the Postman
 
-1. In new request or collect, select **Authorization**.
-1. The following is the authorization configuration for using Microsoft Graph API:
+1. In a request or collect, select **Authorization**.
+1. Set Auth type to **OAuth 2.0**.
+1. In the **Configure New Token** section, specify the following configuration for using Microsoft Graph API:
 
    - Grant type: Client Credentials
-   - Access Token URl: \<OAuth 2.0 token endpoint\>.
+   - Access Token URL: \<OAuth 2.0 token endpoint\>.
    - Client ID: \<Application (client) ID\>
    - Client secret: \<Client secret value\>
    - Scope: `https://graph.microsoft.com/.default`
@@ -83,13 +84,13 @@ The following example uses [app-only authentication](/entra/identity-platform/pe
     }
     ```
         
-1. Check the [Update user scenario in Microsoft Graph REST API v1.0 endpoint reference](/graph/api/user-update?view=graph-rest-1.0&tabs=http#permissions&preserve-view=true). The following is the required permissions for enabling and disabling user that described in the Microsoft Graph REST API v1.0 endpoint reference:
+1. Check the [Update user scenario in Microsoft Graph REST API v1.0 endpoint reference](/graph/api/user-update?view=graph-rest-1.0&tabs=http#permissions&preserve-view=true). The following is the required permissions to enable and disable a user, as described in the Microsoft Graph REST API v1.0 endpoint reference:
 
     | Property        | Type    | Description |
     |:----------------|:--------|:------------|
     | accountEnabled  | Boolean | `true` if the account is enabled; otherwise, `false`. This property is required when a user is created. <br/> - *User.EnableDisableAccount.All* + *User.Read.All* is the least privileged combination of permissions required to update this property. <br/> - In delegated scenarios, *Privileged Authentication Administrator* is the least privileged role that's allowed to update this property for all administrators in the tenant. |
 
-1. Check if the app registration has the required permission:
+1. Check if the app registration has the required permissions:
     1. Locate your app registration in the Azure portal.
     2. In the **Manage** section, select **API permissions**
     3. Check the configured API Permissions. In this case, the app registration doesn't have the **EnableDisableAccount.All** permission that is the root cause of the issue.
