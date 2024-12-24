@@ -96,7 +96,10 @@
         href: app-integration/troubleshoot-sign-in-saml-based-apps.md
       - name: User redirected to incorrect reply URL or localhost
         href: app-integration/reply-url-redirected-to-localhost.md
-
+  - name: Troubleshoot App registrations
+    items: 
+      - name: Application and delegated permissions for access tokens
+        href: app-integration/application-delegated-permission-access-tokens-identity-platform.md
 - name: Business To Consumer (B2C) Tenants
   items:
   - name: Problem with app or API integration
