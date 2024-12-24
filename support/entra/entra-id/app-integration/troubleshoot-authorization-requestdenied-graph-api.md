@@ -30,7 +30,7 @@ The following sample uses [app-only authentication](/entra/identity-platform/per
 
 1. Log in to [Azure portal](https://portal.azure.com). Go to **App registrations**, and select your app registration.  
 1. On the **Overview** page, record the **Application (client) ID**.
-1. Select **Endpoints**. It provides the information such as token endpoints thats will be used in the Postman configuration. This sample use auth2.0 and token to authenticate with the Entra ID. In this case, you should record the **OAuth 2.0 token endpoint (v2)**.
+1. Select **Endpoints**. It provides the information such as token endpoints that will be used in the Postman configuration. This sample use auth2.0 and token to authenticate with the Entra ID. In this case, you should record the **OAuth 2.0 token endpoint (v2)**.
     ![Check the endpoints of the app registration](./media/troubleshoot-authorization-requestdenied-graph-api/check-endpoints.png)
 1. In the **Manage** section, select **Certificates & secrets**. Create a new client secret or use existing client secret for testing.
 
@@ -89,10 +89,10 @@ The following sample uses [app-only authentication](/entra/identity-platform/per
     |:----------------|:--------|:------------|
     | accountEnabled  | Boolean | `true` if the account is enabled; otherwise, `false`. This property is required when a user is created. <br/> - *User.EnableDisableAccount.All* + *User.Read.All* is the least privileged combination of permissions required to update this property. <br/> - In delegated scenarios, *Privileged Authentication Administrator* is the least privileged role that's allowed to update this property for all administrators in the tenant. |
 
-1. Check if the app app registration have the required permission:
+1. Check if the app registration has the required permission:
     1. Locate your app registration in the Azure portal.
     2. In the **Manage** section, select **API permissions**
-    3. Check the configured API Permissions. In this case, the app registration doesn't have the **EnableDisableAccount.All** permission that is the root cause the if issue.
+    3. Check the configured API Permissions. In this case, the app registration doesn't have the **EnableDisableAccount.All** permission that is the root cause of the issue.
 
         ![Postman configurations](./media/troubleshoot-authorization-requestdenied-graph-api/check-api-permissions.png)
 1. Select **Add Permissions** to add the `EnableDisableAccount.All` to the app registration. 
