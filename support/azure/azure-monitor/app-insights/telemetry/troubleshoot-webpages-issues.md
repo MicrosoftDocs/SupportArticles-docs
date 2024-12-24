@@ -15,11 +15,11 @@ The article explains certain issues that involve [Application Insights JavaScrip
 
 This is by design when instrumenting Single Page Applications (SPA). See the following [GitHub issue](https://github.com/microsoft/ApplicationInsights-JS/issues/1139). 
 
-Different workarounds exist: 
+Use any of the following workarounds, as appropriate: 
 
 - Manually calculate the duration between different route changes in the app, and feed that duration value into the trackPageView() method. See details [here](https://github.com/microsoft/ApplicationInsights-JS/issues/1139#issuecomment-566169033).
 - Use the startTrackPageView() and stopTrackPageView() methods as timers to calculate page load durations. See details [here](https://microsoft.github.io/ApplicationInsights-JS/webSdk/applicationinsights-web/classes/ApplicationInsights.html#startTrackPage).
-- Use sample app measuring duration for the SPA app. See details [here](https://github.com/microsoft/applicationinsights-react-js?tab=readme-ov-file#example-of-measuring-page-duration-in-an-spa).
+- Use sample app duration measuring for the SPA app. See details [here](https://github.com/microsoft/applicationinsights-react-js?tab=readme-ov-file#example-of-measuring-page-duration-in-an-spa).
 - Manually set an overridePageViewDuration value. See details [here](https://github.com/microsoft/ApplicationInsights-JS#:~:text=overridePageViewDuration).
 
 ## I'm getting the following error message: "Failed to get Request-Context correlation header as it may be not included in the response or not accessible"
