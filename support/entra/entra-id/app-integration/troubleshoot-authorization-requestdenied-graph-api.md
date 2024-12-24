@@ -10,11 +10,11 @@ ms.custom: sap:Microsoft Graph Users, Groups, and Entra APIs
 
 When using Microsoft Graph API to manage users, you may encounter the following error:
 
-> Authorization_RequestDenied. Insufficient privileges to complete the operation.
+> `Authorization_RequestDenied. Insufficient privileges to complete the operation.`
 
-This article demonstrates how to troubleshoot the `Authorization_RequestDenied` error by using a sample scenario of enabling or disabling a user. In this scenario, Postman is used as the API testing platform.
+This article demonstrates how to troubleshoot the `Authorization_RequestDenied` error in Microsoft Graph API using Postman, through a "disable user" scenario.
 
-## Cause
+## Cause of the Authorization_RequestDenied error
 
 This error typically occurs because the user does not have sufficient permissions. Specifically, the following conditions must be met:
 
@@ -22,7 +22,7 @@ This error typically occurs because the user does not have sufficient permission
 
 - Microsoft Graph access must have the appropriate permissions.
 
-## Troubleshooting Microsoft Graph API
+## Troubleshooting Microsoft Graph API by using Postman
 
 The following sample uses [app-only authentication](/entra/identity-platform/permissions-consent-overview#app-only-access-access-without-a-user) with Entra ID in Postman.  
 
