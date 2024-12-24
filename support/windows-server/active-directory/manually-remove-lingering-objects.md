@@ -63,7 +63,7 @@ DSA Options : (none)
 objectGuid : <GUID>
 ```
 
-## Delete lingering objects for a few objects
+## Delete lingering objects if you have only a few objects and global catalog servers
 
 If you have only a few objects and global catalog servers, follow these steps to delete the objects by using **Ldp.exe**:
 
@@ -93,7 +93,7 @@ If you have only a few objects and global catalog servers, follow these steps to
     Modified "".
     ```
 
-## Delete lingering objects for many objects
+## Delete lingering objects if you have many objects and global catalog servers
 
 If you have many objects to delete and many global catalog servers, it might be more convenient to use the following scripts:
 
