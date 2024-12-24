@@ -16,11 +16,7 @@ This article demonstrates how to troubleshoot the `Authorization_RequestDenied` 
 
 ## Cause of the Authorization_RequestDenied error
 
-This error typically occurs because the user does not have sufficient permissions. Specifically, the following conditions must be met:
-
-- The user or application must have an administrative role.
-
-- Microsoft Graph access must have the appropriate permissions.
+This error typically occurs because the user or app does not have sufficient permissions. 
 
 ## Troubleshooting Microsoft Graph API by using Postman
 
