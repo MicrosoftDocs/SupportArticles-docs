@@ -190,8 +190,10 @@ When you see the request that reached the server, make sure that the server rece
 - If the scenario involves a web farm, then the machineKeys should be same across everywhere. Use the following machineKey to maintain the consistency on all the servers on the farm:
 
     ```xml
-    <machineKey validationKey="87AC8F432C8DB844A4EFD024301AC1AB5808BEE9D1870689B63794D33EE3B55CDB315BB480721A107187561F388C6BEF5B623BF31E2E725FC3F3F71A32BA5DFC" decryptionKey="E001A307CCC8B1ADEA2C55B1246CDCFE8579576997FF92E7" validation="SHA1" />
+    <machineKey validationKey="[your key here]" decryptionKey="[your key here]" validation="SHA1" />
     ```
+
+    See [Appendix A: How to generate a <machineKey> element](https://support.microsoft.com/en-us/topic/resolving-view-state-message-authentication-code-mac-errors-6c0e9fd3-f8a8-c953-8fbe-ce840446a9f3) for instructions on generating keys.
 
 - Compare the timeout values for both forms that is authentication module and the session module on all of the web servers.
 - Compare the *System.Web.dll* version under Framework folder for ASP.NET 4 between all of the web servers in the farm. Forms authentication failed for the request. The reason is that the ticket supplied was invalid. This happens due to missing Reliability Update 1 for MS .NET framework 4 on one of the web server.
