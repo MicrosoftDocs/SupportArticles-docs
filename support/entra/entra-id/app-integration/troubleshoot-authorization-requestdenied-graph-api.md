@@ -24,13 +24,13 @@ This error typically occurs because the user does not have sufficient permission
 
 ## Troubleshooting Microsoft Graph API by using Postman
 
-The following sample uses [app-only authentication](/entra/identity-platform/permissions-consent-overview#app-only-access-access-without-a-user) with Entra ID in Postman.  
+The following example uses [app-only authentication](/entra/identity-platform/permissions-consent-overview#app-only-access-access-without-a-user) with Entra ID in Postman.  
 
 ### Step 1: Locate the application ID, client secret and token endpoints of your app
 
 1. Log in to [Azure portal](https://portal.azure.com). Go to **App registrations**, and select your app registration.  
 1. On the **Overview** page, record the **Application (client) ID**.
-1. Select **Endpoints**. It provides the information such as token endpoints that will be used in the Postman configuration. This sample use auth2.0 and token to authenticate with the Entra ID. In this case, you should record the **OAuth 2.0 token endpoint (v2)**.
+1. Select **Endpoints**. It provides information, such as token endpoints, that will be used in the Postman configuration. This article uses OAuth 2.0 and token-based authentication with Entra ID. In this case, you should record the **OAuth 2.0 token endpoint (v2)**.
     ![Screenshot of checking the endpoints of the app registration.](./media/troubleshoot-authorization-requestdenied-graph-api/check-endpoints.png)
 1. In the **Manage** section, select **Certificates & secrets**. Create a new client secret or use existing client secret for testing.
 
@@ -53,7 +53,7 @@ The following sample uses [app-only authentication](/entra/identity-platform/per
 
 ### Step 3: Test and troubleshoot the Microsoft Graph API
 
-1. Send the following PATCH request to disable a user. In the following sample, `1f953789-0000-0000-0000-6f21508fd4e2` is the object ID of a user in the Entra ID.
+1. Send the following PATCH request to disable a user. The `1f953789-0000-0000-0000-6f21508fd4e2` is the object ID of a user in the Entra ID.
 
     ``` REST
     Patch https://graph.microsoft.com/v1.0/users/1f953789-0000-0000-0000-6f21508fd4e2
