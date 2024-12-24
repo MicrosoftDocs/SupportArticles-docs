@@ -62,7 +62,7 @@ Understanding what type of permissions an API supports is essential. Many errors
 
 ### Example scenarios
 
-* [List trustFrameworkPolicies](/graph/api/trustframework-list-trustframeworkpolicies?view=graph-rest-beta&tabs=http): Calling this REST endpoint requires a delegated permission token. An application permission token won't work.
+* [List trustFrameworkPolicies](/graph/api/trustframework-list-trustframeworkpolicies): Calling this REST endpoint requires a delegated permission token. An application permission token won't work.
 
     :::image type="content" source="media/application-delegated-permission-access-tokens-identity-platform/list-trustframeworkpolicies-permissions-type.png" alt-text="Screenshot that shows supported/unsupported permission type." lightbox="media/application-delegated-permission-access-tokens-identity-platform/list-trustframeworkpolicies-permissions-type.png":::
 
