@@ -93,10 +93,10 @@ The following example uses [app-only authentication](/entra/identity-platform/pe
 1. Check if the app registration has the required permissions:
     1. Locate your app registration in the Azure portal.
     2. In the **Manage** section, select **API permissions**
-    3. Check the configured API Permissions. In this case, the app registration doesn't have the **EnableDisableAccount.All** permission that is the root cause of the issue.
+    3. Check the configured API permissions. In this case, the app registration doesn't have the **User.EnableDisableAccount.All** permission that is the root cause of the issue.
 
         :::image type="content" source="media/troubleshoot-authorization-requestdenied-graph-api/check-api-permissions.png" alt-text="Screenshot of checking API permissions." lightbox="media/troubleshoot-authorization-requestdenied-graph-api/check-api-permissions.png":::
 
-1. Select **Add Permissions** to add the `EnableDisableAccount.All` to the app registration. 
+1. Select **Add a permission** to add the **User.EnableDisableAccount.All** to the app registration.
 1. You must also select **Grant admin consent for default directory** for the permissions. Select **Yes** to confirm that you want to grant admin consent.
 1. Send the PATCH request to disable a user. If the request is successful, you should receive `204 No Content`.
