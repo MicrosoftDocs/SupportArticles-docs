@@ -7,6 +7,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Retention
   - CI 163457
   - CSSTroubleshoot
 ms.reviewer: cabailey, vipg, roygles, lindabr

@@ -7,6 +7,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Data loss prevention (DLP)
   - CSSTroubleshoot
 appliesto: 
   - Exchange Online
