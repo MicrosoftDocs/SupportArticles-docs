@@ -28,7 +28,8 @@ The following example uses [app-only authentication](/entra/identity-platform/pe
 1. Log in to [Azure portal](https://portal.azure.com). Go to **App registrations**, and select your app registration.  
 1. On the **Overview** page, record the **Application (client) ID**.
 1. Select **Endpoints**. It provides information, such as token endpoints, that will be used in the Postman configuration. This article uses OAuth 2.0 and token-based authentication with Entra ID. In this case, you should record the **OAuth 2.0 token endpoint (v2)**.
-    ![Screenshot of checking the endpoints of the app registration.](./media/troubleshoot-authorization-requestdenied-graph-api/check-endpoints.png)
+
+    :::image type="content" source="media/troubleshoot-authorization-requestdenied-graph-api/check-endpoints.png" alt-text="Screenshot of checking the endpoints of the app registration." lightbox="media/troubleshoot-authorization-requestdenied-graph-api/check-endpoints.png":::
 1. In the **Manage** section, select **Certificates & secrets**. Create a new client secret or use existing client secret for testing.
 
     In the Postman configuration, you should provide the **Client secret value**, not the Secret ID. The Client secret value cannot be viewed, except for immediately after creation.
@@ -44,7 +45,9 @@ The following example uses [app-only authentication](/entra/identity-platform/pe
    - Client secret: \<Client secret value\>
    - Scope: `https://graph.microsoft.com/.default`
    - Client Authentication: Send as Basic Auth header
-    ![Screenshot of Postman configurations.](./media/troubleshoot-authorization-requestdenied-graph-api/postman-config.png)
+
+    :::image type="content" source="media/troubleshoot-authorization-requestdenied-graph-api/postman-config.png" alt-text="Screenshot of Postman configurations." lightbox="media/troubleshoot-authorization-requestdenied-graph-api/postman-config.png":::
+
 1. Select **Get New Access Token**. If the configuration is correct, you should receive a token that will be used to run the Microsoft Graph API call.
 1. Select **Proceed**, and then select **Use token**.
 
@@ -91,7 +94,8 @@ The following example uses [app-only authentication](/entra/identity-platform/pe
     2. In the **Manage** section, select **API permissions**
     3. Check the configured API Permissions. In this case, the app registration doesn't have the **EnableDisableAccount.All** permission that is the root cause of the issue.
 
-        ![Screenshot of checking API permissions.](./media/troubleshoot-authorization-requestdenied-graph-api/check-api-permissions.png)
+        :::image type="content" source="media/troubleshoot-authorization-requestdenied-graph-api/check-api-permissions.png" alt-text="Screenshot of checking API permissions." lightbox="media/troubleshoot-authorization-requestdenied-graph-api/check-api-permissions.png":::
+
 1. Select **Add Permissions** to add the `EnableDisableAccount.All` to the app registration. 
 1. You must also select **Grant admin consent for default directory** for the permissions. Select **Yes** to confirm that you want to grant admin consent.
 1. Send the PATCH request to disable a user. If the request is successful, you should receive `204 No Content`.
