@@ -28,7 +28,7 @@ Sometimes, things just aren't working. Here's some help for fixing administrativ
   
 ## Troubleshoot Office installation issues
 
-Do you [need to install](https://support.office.com/article/4414eaaf-0478-48be-9c42-23adc4716658.aspx) Office apps for yourself, or are the Office apps not installing for you or your users? Get [help for your users](https://support.office.com/article/35ff2def-e0b2-4dac-9784-4cf212c1f6c2.aspx), or expand an option below to get help for admins.
+Do you [need to install](https://support.office.com/article/4414eaaf-0478-48be-9c42-23adc4716658) Office apps for yourself, or are the Office apps not installing for you or your users? Get [help for your users](https://support.office.com/article/35ff2def-e0b2-4dac-9784-4cf212c1f6c2), or expand an option below to get help for admins.
   
 ### I'm an admin and don't have an option to install Office, Project, or Visio
 

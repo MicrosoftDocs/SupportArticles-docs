@@ -40,7 +40,7 @@ If only one user reports having trouble receiving email, there might be a proble
 
 If a user is receiving email in their Outlook on the web mailbox but not on the email app that's installed on their computer, this could indicate that the issue is the user's computer or email app. Ask the user to sign in to Outlook on the web to verify that their Microsoft 365 email account is working correctly.
 
- **Instructions:** [Sign in to Outlook on the web for business](https://support.office.com/article/e08eb8ac-ac27-49f4-a400-a47311e1ee7e.aspx)
+ **Instructions:** [Sign in to Outlook on the web for business](https://support.office.com/article/e08eb8ac-ac27-49f4-a400-a47311e1ee7e)
 
 ### Run Support and Recovery Assistant to fix Outlook problems or account issues - 10 minutes
 
@@ -56,7 +56,7 @@ Notice that if you're experiencing issues that affect Outlook for Mac or are hav
 
 As a Microsoft 365 for business admin, you have access to several tools that can help you investigate why users are not receiving email. The following video provides a brief overview of the tools that are available to you.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/8b10af9a-455c-410a-8c17-24d5e5be098a]
+> [!VIDEO 4b549682-96cd-4ba2-afcb-b648a6bc1ee4]
 
 The following list of tools is sorted from the simplest and quickest option to the most in-depth.
 
