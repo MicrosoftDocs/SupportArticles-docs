@@ -1,16 +1,16 @@
 ---
-title: Visual Studio 2022 Online Installation Fails with Error 1625
-description: Helps resolve the error 1625 that occurs when you install Visual Studio 2022 using the online installer.
+title: Visual Studio Online Installation Fails with Error 1625
+description: Helps resolve the error 1625 that occurs when you install Visual Studio using the online installer.
 ms.date: 11/22/2024
 ms.reviewer: khgupta
 ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ---
 
-# Visual Studio 2022 online installation fails with the error code 1625
+# Visual Studio online installation fails with the error code 1625
 
 ## Symptoms
 
-When you install Visual Studio 2022 online, the process fails with the following error:
+When you install Visual Studio online, the process fails with the following error:
 
 > Package 'Microsoft.VisualStudio.Devenv.MSI' fails to install, Return Code 1625.
 
@@ -37,6 +37,6 @@ To resolve the error, follow these steps:
 Next, follow these steps to repair your Visual Studio installation using the Visual Studio Installer:
 
 1. Launch the Visual Studio Installer on your machine.
-1. In the **Visual Studio Installer** window, locate your installed version of Visual Studio 2022.
-1. Select the three dots (**...**) button next to the Visual Studio 2022 installation and select **Repair**.
+1. In the **Visual Studio Installer** window, locate your installed version of Visual Studio.
+1. Select the three dots (**...**) button next to the Visual Studio installation and select **Repair**.
 1. Follow the prompts to complete the repair process. The installer can repair your Visual Studio installation and resolve any issues related to the failed package installation.

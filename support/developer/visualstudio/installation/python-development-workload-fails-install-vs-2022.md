@@ -1,16 +1,16 @@
 ---
-title: Python Development Workload Fails to Install in Visual Studio 2022
-description: Helps resolve an issue where the Python development workload fails to install in Visual Studio 2022.
+title: Python Development Workload Fails to Install in Visual Studio
+description: Helps resolve an issue where the Python development workload fails to install in Visual Studio.
 ms.date: 12/09/2024
 ms.reviewer: khgupta
 ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ---
 
-# The Python development workload fails to install in Visual Studio 2022
+# The Python development workload fails to install in Visual Studio
 
 ## Symptoms
 
-The Python development workload fails to install in Visual Studio 2022. In addition, you see the following error message:
+The Python development workload fails to install in Visual Studio. In addition, you see the following error message:
 
 ```output
 Package 'CPython39.Exe.x64,version=3.9.13, chip=x64' failed to download from 'https://go.microsoft.com/fwlink/?linkid=2222466'.
@@ -35,4 +35,4 @@ To resolve the issue, ensure that the necessary domains and servers from which f
 
 By adding the necessary domain URLs to the allowlist, you enable the Visual Studio Installer to download the required files and successfully install the Python development workload. For more information and guidance on installing Visual Studio behind a firewall or proxy server, see [Install and use Visual Studio and Azure Services behind a firewall or proxy server](/visualstudio/install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server).
 
-Once you complete the allowlisting process, you can [install the Python development workload](/visualstudio/python/installing-python-support-in-visual-studio?view=vs-2022#download-and-install-the-python-workload) in Visual Studio 2022 without encountering any download failures.
+Once you complete the allowlisting process, you can [install the Python development workload](/visualstudio/python/installing-python-support-in-visual-studio#download-and-install-the-python-workload) in Visual Studio without encountering any download failures.

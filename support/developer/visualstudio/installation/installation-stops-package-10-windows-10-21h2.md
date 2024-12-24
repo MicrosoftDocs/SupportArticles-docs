@@ -1,16 +1,16 @@
 ---
-title: Visual Studio 2022 Installation Stops on Windows 10 21H2
-description: Helps resolve an error that occurs when you install Visual Studio Professional 2022 using the online installer on a Windows 10, version 21H2 machine.
+title: Visual Studio Installation Stops on Windows 10 21H2
+description: Helps resolve an error that occurs when you install Visual Studio using the online installer on a Windows 10, version 21H2 machine.
 ms.date: 12/09/2024
 ms.reviewer: khgupta
 ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ---
 
-# Visual Studio Professional 2022 installation stops during package 10 on Windows 10, version 21H2
+# Visual Studio installation stops during package 10 on Windows 10, version 21H2
 
 ## Symptoms
 
-When you install Visual Studio Professional 2022 on a Windows 10, version 21H2 machine, it stops during the installation of package 10, and you see the following message in the event viewer for **setup.exe**:
+When you install Visual Studio on a Windows 10, version 21H2 machine, it stops during the installation of package 10, and you see the following message in the event viewer for **setup.exe**:
 
 ```output
 Log Name: Application

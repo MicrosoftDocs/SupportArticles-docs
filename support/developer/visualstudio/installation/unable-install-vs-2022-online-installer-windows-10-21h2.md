@@ -1,16 +1,16 @@
 ---
-title: Can't Install Visual Studio 2022 Using Online Installer
-description: Helps resolve an error that occurs when you install Visual Studio 2022 using the online installer on a Windows 10, version 21H2 machine.
+title: System Configuration Error Using Online Installer
+description: Helps resolve a system configuration error that occurs when you install Visual Studio using the online installer on a Windows 10, version 21H2 machine.
 ms.date: 12/06/2024
 ms.reviewer: khgupta
 ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ---
 
-# Unable to install Visual Studio 2022 using online installer on a Windows 10, version 21H2 machine
+# Unable to install Visual Studio using online installer on a Windows 10, version 21H2 machine
 
 ## Symptoms
 
-When you install Visual Studio 2022 using the online installer on a Windows 10, version 21H2 machine, it fails with the following error message in the setup logs:
+When you install Visual Studio using the online installer on a Windows 10, version 21H2 machine, it fails with the following error message in the setup logs:
 
 ```output
 HttpWebRequest& webRequest, String& remoteAddress, CancellationToken cancellationToken)
@@ -36,4 +36,4 @@ To solve the issue, follow these steps:
 
 Renaming the **machine.config** file and replacing it with the default version resets the configuration to its original state, which can help resolve any corrupt or incorrect settings that might have caused the Visual Studio bootstrapper to fail during installation.
 
-After restarting your machine, try running the Visual Studio 2022 online installation again. The bootstrapper should now be able to launch successfully without encountering the `ConfigurationErrorsException` related to the **machine.config** file.
+After restarting your machine, run the Visual Studio online installation again. The bootstrapper should now be able to launch successfully without encountering the `ConfigurationErrorsException` related to the **machine.config** file.
