@@ -55,11 +55,11 @@ The following example uses [app-only authentication](/entra/identity-platform/pe
 
 1. Send the following PATCH request to disable a user. The `1f953789-0000-0000-0000-6f21508fd4e2` is the object ID of a user in the Entra ID.
 
-    ``` REST
+    ``` HTTP
     Patch https://graph.microsoft.com/v1.0/users/1f953789-0000-0000-0000-6f21508fd4e2
     ```
 
-    ```body
+    ```JSON
     {
     "accountEnabled": false
     }
@@ -69,7 +69,7 @@ The following example uses [app-only authentication](/entra/identity-platform/pe
 
 1. The `Authorization_RequestDenied` error is received in the response.
 
-    ```json
+    ```Output
     {
         "error": {
             "code": "Authorization_RequestDenied",
@@ -99,5 +99,3 @@ The following example uses [app-only authentication](/entra/identity-platform/pe
 1. Select **Add Permissions** to add the `EnableDisableAccount.All` to the app registration. 
 1. You must also select **Grant admin consent for default directory** for the permissions. Select **Yes** to confirm that you want to grant admin consent.
 1. Send the PATCH request to disable a user. If the request is successful, you should receive `204 No Content`.
-
-
