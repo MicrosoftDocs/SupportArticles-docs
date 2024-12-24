@@ -7,6 +7,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Encryption
   - CSSTroubleshoot
 ms.reviewer: gbratton, nagarajp, mamcfadd
 appliesto: 

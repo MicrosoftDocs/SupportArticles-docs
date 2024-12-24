@@ -9,7 +9,7 @@ ms.topic: troubleshooting
 ms.collection: 
   - M365-security-compliance
 ms.custom:
-  - sap:Information barriers
+  - sap:Information Barriers
   - Microsoft Purview
   - CSSTroubleshoot
   - CI 2883

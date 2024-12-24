@@ -6,6 +6,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kyrachurney, lindabr, meerak
 ms.custom: 
+  - sap:Retention Labels
   - CI 171536
   - CSSTroubleshoot
 appliesto: 

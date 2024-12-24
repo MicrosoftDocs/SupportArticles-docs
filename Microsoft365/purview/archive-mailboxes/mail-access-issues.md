@@ -7,6 +7,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Archiving
   - CSSTroubleshoot
   - 'Associated content asset: 4555316'
 ms.reviewer: timothyh, bilong

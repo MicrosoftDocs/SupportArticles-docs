@@ -5,6 +5,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Retention
   - CSSTroubleshoot
   - CI 158295
 ms.reviewer: arungedela; meerak

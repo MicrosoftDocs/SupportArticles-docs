@@ -7,6 +7,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Sensitivity Labels
   - CI 166253
   - CSSTroubleshoot
 ms.reviewer: esaggese, keschott, mvergara, cabailey, jricaurt, lindabr

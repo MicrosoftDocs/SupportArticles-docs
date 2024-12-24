@@ -9,6 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Auditing
   - CSSTroubleshoot
 appliesto: 
   - Office 365 Security & Compliance Center

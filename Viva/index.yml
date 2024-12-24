@@ -116,14 +116,6 @@ productDirectory:
           text: Microsoft Viva Pulse                  
         - url: ./viva-suite-administration/viva-suite-administration-welcome.yml
           text: Microsoft Viva Suite Administration
-    # Card
-    - title: Endpoint management
-      imageSrc: /media/logos/logo-ms-social.png
-      links:
-        - url: /troubleshoot/mem/configmgr/welcome-configuration-manager
-          text: Configuration Manager
-        - url: /troubleshoot/mem/intune/welcome-intune
-          text: Microsoft Intune
 
 # additionalContent section (optional)
 # Card with summary style
