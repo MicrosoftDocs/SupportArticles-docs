@@ -40,6 +40,6 @@ If the SDK reports correlation recursively, enable the configuration setting of 
 
 Application Insights SDKs and agents send telemetry to get ingested as REST calls to our ingestion endpoints. To test connectivity from your web server or application host device to the ingestion service endpoints, use raw REST clients from PowerShell or [curl](https://curl.se/docs/manpage.html) commands. For more information, see [Troubleshoot missing application telemetry in Azure Monitor Application Insights](../investigate-missing-telemetry.md).
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-contact-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-contact-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
