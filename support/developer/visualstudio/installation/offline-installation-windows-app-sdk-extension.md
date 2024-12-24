@@ -5,8 +5,9 @@ ms.date: 12/09/2024
 ms.reviewer: khgupta
 ms.custom: sap:Installation\Offline Install
 ---
-
 # Offline installation of the Windows App SDK C# extension for Visual Studio fails
+
+_Applies to:_&nbsp; Visual Studio 2022
 
 ## Symptoms
 

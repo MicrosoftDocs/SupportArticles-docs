@@ -8,6 +8,8 @@ ms.custom: sap:Installation\Setup, maintenance, or uninstall
 
 # The Python development workload fails to install in Visual Studio
 
+_Applies to:_&nbsp; Visual Studio 2022
+
 ## Symptoms
 
 The Python development workload fails to install in Visual Studio. In addition, you see the following error message:
