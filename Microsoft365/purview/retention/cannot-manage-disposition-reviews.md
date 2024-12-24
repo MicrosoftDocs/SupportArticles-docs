@@ -5,6 +5,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Records Management
   - CSSTroubleshoot
   - CI 157046
 ms.reviewer: subansal; lindabr; meerak
