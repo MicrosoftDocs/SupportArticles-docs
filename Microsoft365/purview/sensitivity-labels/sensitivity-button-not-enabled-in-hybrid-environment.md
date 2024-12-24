@@ -7,6 +7,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Sensitivity Labels
   - Exchange Online
   - CSSTroubleshoot
   - CI 189415

@@ -7,6 +7,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Retention
   - CSSTroubleshoot
 ms.reviewer: neozhu
 appliesto: 

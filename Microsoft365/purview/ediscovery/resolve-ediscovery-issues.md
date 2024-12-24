@@ -6,6 +6,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: jkushwah, lindabr, meerak
 ms.custom: 
+  - sap:eDiscovery
   - Exchange Online
   - CI 174006
   - CSSTroubleshoot

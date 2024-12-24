@@ -7,6 +7,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Import service
   - CSSTroubleshoot
   - 'Associated content asset: 4555323'
 ms.reviewer: subansal

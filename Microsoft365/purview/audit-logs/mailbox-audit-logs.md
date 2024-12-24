@@ -7,6 +7,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Auditing
   - CSSTroubleshoot
   - 'Associated content asset: 4555332'
 ms.reviewer: kerbo

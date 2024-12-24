@@ -7,6 +7,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Microsoft Information Protection (MIP)
   - Exchange Online
   - CSSTroubleshoot
   - CI 186303

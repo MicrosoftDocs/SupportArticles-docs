@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: chgary, lindabr, sathyana, meerak, v-trisshores
 ms.custom: 
+  - sap:Data loss prevention (DLP)
   - CSSTroubleshoot
   - CI 100086
   - CI 160472

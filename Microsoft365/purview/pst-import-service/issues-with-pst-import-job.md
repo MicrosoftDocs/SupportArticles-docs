@@ -7,6 +7,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Import service
   - CI 143255
   - CSSTroubleshoot
 ms.reviewer: lindabr, andreza
