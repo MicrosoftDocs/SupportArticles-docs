@@ -1,6 +1,7 @@
 ---
 title: Troubleshoot Authorization_RequestDenied error with Microsoft Graph
 description: Guides to troubleshoot Authorization_RequestDenied error with Microsoft Graph in Postman.
+ms.author: anukala
 ms.date: 12/24/2024
 ms.service: entra-id
 ms.custom: sap:Microsoft Graph Users, Groups, and Entra APIs
