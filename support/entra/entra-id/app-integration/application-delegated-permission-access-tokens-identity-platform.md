@@ -8,21 +8,19 @@ ms.custom: sap:App registrations
 ---
 # Application and delegated permissions for access tokens in Microsoft identity platform
 
-This article introduces the differences between application and delegated permission for access tokens in Microsoft identity platform to help diagnosing issues when applications calling web APIs.
+This article introduces the differences between application and delegated permissions for access tokens in Microsoft identity platform to help diagnosing issues when applications calling web APIs.
 
 ## Overview
 
 As described in [Overview of permissions and consent in the Microsoft identity platform](/entra/identity-platform/permissions-consent-overview) and [Glossary: Microsoft identity platform](/entra/identity-platform/developer-glossary), there are two types of permissions for an access token: delegated permission and application permission. Delegated permission is granted to a signed-in user, whereas application permission is granted directly to an application. The key difference is that delegated permission requires user sign-in, while application permission doesn't; instead, the application authenticates to Microsoft Entra ID using its own application identity (client ID and secret/assertion).
 
-Regardless of permission types, you must configure [API permissions](/entra/identity-platform/howto-update-permissions?pivots=portal#option-1-add-permissions-in-the-api-permissions-pane) on the Microsoft Entra **App registrations** page: 
+Regardless of permission types, you must [add permissions in the API permissions pane](/entra/identity-platform/quickstart-configure-app-access-web-apis#add-permissions-to-access-your-web-api) on the Microsoft Entra **App registrations** page: 
 
 * Select **Application permissions** if your application scenario doesn't need any user to sign in.
 * Select **Delegated permissions** if your application requires a user to sign in so that the access token can be issued for that sign-in.
 
 > [!NOTE]
 > When you select **Application permissions**, [admin consent](/azure/active-directory/manage-apps/configure-user-consent) must be granted for the permission to function correctly.
-
-For detailed steps, see [Add permissions to access your web API](/entra/identity-platform/quickstart-configure-app-access-web-apis#add-permissions-to-access-your-web-api).
 
 ## Permission type tokens issued from OAuth2 authentication flows
 
@@ -44,14 +42,14 @@ To determine whether an access token is a delegated or application permission to
 
 For application permission tokens, the permissions are in the `roles` claim:
 
- :::image type="content" source="media/application-delegated-permission-access-tokens-identity-platform/roles-claim.png" alt-text="Screenshot that shows the 'roles' claim." lightbox="media/application-delegated-permission-access-tokens-identity-platform/roles-claim.png":::
+ :::image type="content" source="media/application-delegated-permission-access-tokens-identity-platform/roles-claim.png" alt-text="Screenshot that shows the 'roles' claim.":::
 
 > [!NOTE]
 > The "scp" claim is absent in application permission tokens.
 
 For **delegated permission tokens**, the permissions are in the `scp` claim:
 
- :::image type="content" source="media/application-delegated-permission-access-tokens-identity-platform/scp-claim.png" alt-text="Screenshot that shows the 'scp' claim." lightbox="media/application-delegated-permission-access-tokens-identity-platform/scp-claim.png":::
+ :::image type="content" source="media/application-delegated-permission-access-tokens-identity-platform/scp-claim.png" alt-text="Screenshot that shows the 'scp' claim.":::
 
 > [!NOTE]
 > The `roles` claim might still appear in a delegated permission token, but it lists roles assigned to the user in the API app.
@@ -64,15 +62,15 @@ Understanding what type of permissions an API supports is essential. Many errors
 
 * [List trustFrameworkPolicies](/graph/api/trustframework-list-trustframeworkpolicies): Calling this REST endpoint requires a delegated permission token. An application permission token won't work.
 
-    :::image type="content" source="media/application-delegated-permission-access-tokens-identity-platform/list-trustframeworkpolicies-permissions-type.png" alt-text="Screenshot that shows supported/unsupported permission type." lightbox="media/application-delegated-permission-access-tokens-identity-platform/list-trustframeworkpolicies-permissions-type.png":::
+    :::image type="content" source="media/application-delegated-permission-access-tokens-identity-platform/list-trustframeworkpolicies-permissions-type.png" alt-text="Screenshot that shows supported/unsupported permission type.":::
 
 * Power BI API: While Power BI supports both delegated permissions and application permissions, some tasks like viewing reports (requiring `Report.Read.All` permission) can only be performed with a delegated token. In the **Request App Registration** page, **Application permissions** only support two permissions: **Tenant.Read.All** and **Tenant.ReadWrite.All.**
 
-    :::image type="content" source="media/application-delegated-permission-access-tokens-identity-platform/application-permissions-power-bi-api.png" alt-text="Screenshot that shows application permissions for Power BI API." lightbox="media/application-delegated-permission-access-tokens-identity-platform/application-permissions-power-bi-api.png":::
+    :::image type="content" source="media/application-delegated-permission-access-tokens-identity-platform/application-permissions-power-bi-api.png" alt-text="Screenshot that shows application permissions for Power BI API.":::
 
      In contrast, **Delegated permissions** offer a richer feature set:
 
-    :::image type="content" source="media/application-delegated-permission-access-tokens-identity-platform/delegated-permissions-power-bi-api.png" alt-text="Screenshot that shows delegated permissions for Power BI API." lightbox="media/application-delegated-permission-access-tokens-identity-platform/delegated-permissions-power-bi-api.png":::
+    :::image type="content" source="media/application-delegated-permission-access-tokens-identity-platform/delegated-permissions-power-bi-api.png" alt-text="Screenshot that shows delegated permissions for Power BI API.":::
 
 ## Troubleshoot issues when calling Microsoft Graph REST endpoints
 
