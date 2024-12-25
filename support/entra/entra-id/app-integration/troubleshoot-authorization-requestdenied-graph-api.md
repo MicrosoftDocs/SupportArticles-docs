@@ -46,7 +46,7 @@ The following example uses [app-only authentication](/entra/identity-platform/pe
 
 ### Step 3: Configure the Postman
 
-1. In the Postman, select a request or collect, and then select **Authorization**.
+1. In the Postman, select a request or collection, and then select **Authorization**.
 1. Set Auth type to **OAuth 2.0**.
 1. In the **Configure New Token** section, specify the following configuration for using Microsoft Graph API:
 
