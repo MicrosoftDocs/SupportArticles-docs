@@ -17,15 +17,15 @@ This article demonstrates how to troubleshoot the `Authorization_RequestDenied` 
 
 ## Cause of the Authorization_RequestDenied error
 
-This error typically occurs because the user or app does not have sufficient permissions. 
-
-## Troubleshooting Microsoft Graph API by using Postman
-
-The following example uses [app-only authentication](/entra/identity-platform/permissions-consent-overview#app-only-access-access-without-a-user) with Entra ID in Postman. To call Graph APIs, your app registration must have:
+This error typically occurs because the user or app does not have sufficient permissions. To call Graph APIs, your app registration must have the following two premisisons:
 
 - The appropriate Microsoft Entra RBAC role for the required access level. For more information, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference).
 - The necessary API permissions to access Microsoft Graph.
 
+
+## Troubleshooting Microsoft Graph API by using Postman
+
+The following example uses [app-only authentication](/entra/identity-platform/permissions-consent-overview#app-only-access-access-without-a-user) with Entra ID in Postman.
 ### Step 1: Assign RBAC role to the app registration (Service Principal)
 
 1. Log in to the [Azure portal](https://portal.azure.com). Go to **Microsoft Entra ID**.
