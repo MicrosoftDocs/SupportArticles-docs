@@ -30,7 +30,7 @@ The following example uses [app-only authentication](/entra/identity-platform/pe
 
 1. Log in to the [Azure portal](https://portal.azure.com). Go to **Microsoft Entra ID**.
 1. In the **Manage** section, select **Roles and administrators**.
-1. Select the appropriate role based on the required level of access. In this article, the app will manage the users. So **User Administrator** is selected.
+1. Select the appropriate role based on the required level of access. In this article, the app will manage the users, so **User Administrator** is selected.
 1. Select **Add assignments**, select your app registration, and then select **Add**.
 
 ### Step 2: Locate the application ID, client secret and token endpoints of your app
@@ -43,7 +43,6 @@ The following example uses [app-only authentication](/entra/identity-platform/pe
 1. In the **Manage** section, select **Certificates & secrets**. Create a new client secret or use existing client secret for testing.
 
     In the Postman configuration, you should provide the **Client secret value**, not the Secret ID. The Client secret value cannot be viewed, except for immediately after creation.
-
 
 ### Step 3: Configure the Postman
 
