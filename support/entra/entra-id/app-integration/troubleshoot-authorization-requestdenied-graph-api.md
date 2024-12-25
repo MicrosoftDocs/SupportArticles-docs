@@ -26,7 +26,8 @@ This error typically occurs because the user or app does not have sufficient per
 ## Troubleshooting Microsoft Graph API by using Postman
 
 The following example uses [app-only authentication](/entra/identity-platform/permissions-consent-overview#app-only-access-access-without-a-user) with Entra ID in Postman.
-### Step 1: Assign RBAC role to the app registration (Service Principal)
+
+### Step 1: Assign Microsoft Entra RBAC role to the app registration (Service Principal)
 
 1. Log in to the [Azure portal](https://portal.azure.com). Go to **Microsoft Entra ID**.
 1. In the **Manage** section, select **Roles and administrators**.
