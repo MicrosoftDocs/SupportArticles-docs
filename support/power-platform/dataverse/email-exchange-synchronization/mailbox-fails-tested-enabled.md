@@ -2,7 +2,7 @@
 title: Mailbox set up with Gmail fails to be tested and enabled
 description: This article provides a resolution for the problem that occurs when a Dynamics 365 mailbox is configured to use server-side synchronization with Gmail.
 ms.reviewer: 
-ms.date: 12/11/2024
+ms.date: 12/25/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # Troubleshooting server-side synchronization with Gmail
@@ -27,7 +27,7 @@ To solve this issue, verify that your email server profile is set up with port 9
 
 ## Cause 2: Absence of "recent mode"
 
-If the mailbox is tested and enabled successfully but emails aren't received in Dynamics 365, it could be because "recent mode" isn't being used.
+If the mailbox is tested and enabled successfully but emails aren't received in Dynamics 365, it might be because "recent mode" isn't used.
 
 Update the Gmail email address within Dynamics 365 by including `recent:` at the beginning of the address. For example, change `example@gmail.com` to `recent:example@gmail.com`. For more information, see [Emails aren't downloading correctly](https://support.google.com/mail/answer/7104828#zippy=%2Cemails-arent-downloading-correctly).
 
