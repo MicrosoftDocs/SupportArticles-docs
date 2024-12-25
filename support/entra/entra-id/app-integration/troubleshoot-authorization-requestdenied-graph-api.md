@@ -31,7 +31,7 @@ The following example uses [app-only authentication](/entra/identity-platform/pe
 1. Log in to the [Azure portal](https://portal.azure.com). Go to **Microsoft Entra ID**.
 1. In the **Manage** section, select **Roles and administrators**.
 1. Select the appropriate role based on the required level of access. In this article, the app will manage the users. So **User Administrator** is selected.
-1. Select ** Add assignments**, select your app registration, and then select **Add**.
+1. Select **Add assignments**, select your app registration, and then select **Add**.
 
 ### Step 2: Locate the application ID, client secret and token endpoints of your app
 
