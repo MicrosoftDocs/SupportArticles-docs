@@ -2,10 +2,10 @@
 title: A failure occurred in CrmSecurity
 description: Provides a solution to an error that occurs when you select Approve Email on a mailbox record in Microsoft Dynamics 365.
 ms.reviewer: 
-ms.date: 12/12/2024
+ms.date: 12/25/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
-# "A failure occurred in CrmSecurity" error when approving email address of a mailbox record in Microsoft Dynamics 365
+# "A failure occurred in CrmSecurity" error when approving the email address of a mailbox record in Dynamics 365
 
 This article provides a solution to an error that occurs when you manually approve a mailbox in Microsoft Dynamics 365.
 
@@ -20,14 +20,14 @@ When you select the [Approve Email](/power-platform/admin/connect-exchange-onlin
 
 ## Cause
 
-This error occurs when you try to approve the email as a user that doesn't have both of the following required roles:
+This error occurs when you try to approve the email as a user who doesn't have both of the following required roles:
 
 - Global Administrator or Exchange Administrator in Microsoft 365
 - System Administrator security role in Dynamics 365
 
 ## Resolution
 
-By default, Dynamics 365 requires that only users with both the roles mentioned above can approve an email address. The System Administrator role in Dynamics 365 or the Dynamics 365 service administrator role in Microsoft 365 alone isn't sufficient for this action.
+By default, Dynamics 365 requires that only users with both of the mentioned roles can approve an email address. The System Administrator role in Dynamics 365 or the Dynamics 365 service administrator role in Microsoft 365 alone isn't sufficient for this action.
 
 For more information and instructions on how to disable this requirement, see [Remove the requirement to approve mailboxes](/power-platform/admin/connect-exchange-online#remove-the-requirement-to-approve-mailboxes).
 
@@ -35,7 +35,8 @@ For more information and instructions on how to disable this requirement, see [R
 
 If you select the **Download Log File** button in the error message, you see details like the following example:
 
-> "Unhandled Exception: System.ServiceModel.FaultException'1[[Microsoft.Xrm.Sdk.OrganizationServiceFault, Microsoft.Xrm.Sdk, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]: System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> Microsoft.Crm.CrmException: The Queue: a5efd992-dbc6-48af-ad61-09e0258edb68 email `example@contoso.com` doesn't match with UPN. User 39ff663e-a75a-e811-a986-000d3a3672b5 should be a global administrator to approve mailbox in organization \<organization>.  
+```output
+Unhandled Exception: System.ServiceModel.FaultException'1[[Microsoft.Xrm.Sdk.OrganizationServiceFault, Microsoft.Xrm.Sdk, Version=9.0.0.0, Culture=neutral, PublicKeyToken=<Token ID>]]: System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> Microsoft.Crm.CrmException: The Queue: <Queue ID> email `example@contoso.com` doesn't match with UPN. User <User ID> should be a global administrator to approve mailbox in organization \<organization>.  
 at Microsoft.Crm.Dialogs.ApproveEmailAddressDialogPage.ConfigureForm()  
 at Microsoft.Crm.Application.Controls.AppUIPage.OnPreRender(EventArgs e)  
 at Microsoft.Crm.Application.Controls.AppPage.OnPreRender(EventArgs e)  
@@ -51,11 +52,11 @@ at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
 at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&
 completedSynchronously): Microsoft Dynamics CRM has experienced an error. Reference number
 for administrators or support: #3A5E4FEADetail:  
-\<OrganizationServiceFault xmlns:i="https://www.w3.org/2001/XMLSchema-instance" xmlns="https://schemas.microsoft.com/xrm/2011/Contracts">  
-  \<ActivityId>\<ID>\</ActivityId  
-  \<ErrorCode> \*\*-2147220970\*\* \</ErrorCode>  
-  \<ErrorDetails xmlns:d2p1="https://schemas.datacontract.org/2004/07/System.Collections.Generic" />  
-    \<Message>System.Web.HttpUnhandledException (0x80004005): Exception of type \'System.Web.HttpUnhandledException\' was thrown. ---&gt; Microsoft.Crm.CrmException: \*\*The Queue: a5efd992-dbc6-48af-ad61-09e0258edb68 email `example@contoso.com` doesn't match with UPN. User 39ff663e-a75a-e811-a986-000d3a3672b5 should be a global administrator to approve mailbox in organization \<organization>\*\*.  
+<OrganizationServiceFault xmlns:i="https://www.w3.org/2001/XMLSchema-instance" xmlns="https://schemas.microsoft.com/xrm/2011/Contracts">  
+  <ActivityId><ID></ActivityId  
+  <ErrorCode> **-2147220970** </ErrorCode>  
+  <ErrorDetails xmlns:d2p1="https://schemas.datacontract.org/2004/07/System.Collections.Generic" />  
+    <Message>System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> Microsoft.Crm.CrmException: The Queue: <Queue ID> email `example@contoso.com` doesn't match with UPN. User <User ID> should be a global administrator to approve mailbox in organization <organization>.  
    at Microsoft.Crm.Dialogs.ApproveEmailAddressDialogPage.ConfigureForm()  
    at Microsoft.Crm.Application.Controls.AppUIPage.OnPreRender(EventArgs e)  
    at Microsoft.Crm.Application.Controls.AppPage.OnPreRender(EventArgs e)  
@@ -70,21 +71,22 @@ for administrators or support: #3A5E4FEADetail:
 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()  
    at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)  
    at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously): Microsoft Dynamics CRM has experienced an error. Reference number for administrators or support: #3A5E4FEA</Message>  
-  \<Timestamp>2018-12-04T18:17:41.8971683Z\</Timestamp  
-  \<ExceptionRetriable>false</ExceptionRetriable>  
-  \<ExceptionSource i:nil="true" />  
-  \<InnerFault>  
-  \<ActivityId>\<ID></ActivityId  
-  \<ErrorCode> \*\*-2147220906\*\* \</ErrorCode>
-\<ErrorDetails xmlns:d3p1="https://schemas.datacontract.org/2004/07/System.Collections.Generic" />  
-\<Message>The Queue: a5efd992-dbc6-48af-ad61-09e0258edb68 email `testdl@MyContosoDemo.onmicrosoft.com` doesn't match with UPN. User 39ff663e-a75a-e811-a986-000d3a3672b5 should be a global administrator to approve mailbox in organization \<organization>.\</Message>  
-\<Timestamp>2018-12-04T18:17:41.8981705Z\</Timestamp  
-\<ExceptionRetriable>false\</ExceptionRetriable>  
-\<ExceptionSource i:nil="true" />  
-\<InnerFault i:nil="true" />  
-\<OriginalException i:nil="true" />  
-\<TraceText i:nil="true" />  
-\</InnerFault>  
-\<OriginalException i:nil="true" />  
-\<TraceText i:nil="true" />  
-\</OrganizationServiceFault>"
+  <Timestamp>2018-12-04T18:17:41.8971683Z\</Timestamp  
+  <ExceptionRetriable>false</ExceptionRetriable>  
+  <ExceptionSource i:nil="true" />  
+  <InnerFault>  
+  <ActivityId>\<ID></ActivityId  
+  <ErrorCode> **-2147220906** </ErrorCode>
+<ErrorDetails xmlns:d3p1="https://schemas.datacontract.org/2004/07/System.Collections.Generic" />  
+<Message>The Queue: <Queue ID> email `testdl@MyContosoDemo.onmicrosoft.com` doesn't match with UPN. User <User ID> should be a global administrator to approve mailbox in organization <organization>.\</Message>  
+<Timestamp>2018-12-04T18:17:41.8981705Z</Timestamp  
+<ExceptionRetriable>false</ExceptionRetriable>  
+<ExceptionSource i:nil="true" />  
+<InnerFault i:nil="true" />  
+<OriginalException i:nil="true" />  
+<TraceText i:nil="true" />  
+</InnerFault>  
+<OriginalException i:nil="true" />  
+<TraceText i:nil="true" />  
+</OrganizationServiceFault>"
+```
