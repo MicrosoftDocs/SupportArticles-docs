@@ -21,11 +21,21 @@ This error typically occurs because the user or app does not have sufficient per
 
 ## Troubleshooting Microsoft Graph API by using Postman
 
-The following example uses [app-only authentication](/entra/identity-platform/permissions-consent-overview#app-only-access-access-without-a-user) with Entra ID in Postman.  
+The following example uses [app-only authentication](/entra/identity-platform/permissions-consent-overview#app-only-access-access-without-a-user) with Entra ID in Postman. To call Graph APIs, your app registration must have:
 
-### Step 1: Locate the application ID, client secret and token endpoints of your app
+The appropriate Microsoft Entra RBAC role for the required access level. For more information, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference).
+The necessary API permissions to access Microsoft Graph.
 
-1. Log in to [Azure portal](https://portal.azure.com). Go to **App registrations**, and select your app registration.  
+### Step 1: Assign RBAC role to the app registration (Service Principal)
+
+1. Log in to the [Azure portal](https://portal.azure.com). Go to **Microsoft Entra ID**.
+1. In the **Manage** section, select **Roles and administrators**.
+1. Select the appropriate role based on the required level of access. In this article, the app will manage the users. So **User Administrator** is selected.
+1. Select ** Add assignments**, select your app registration, and then select **Add**.
+
+### Step 2: Locate the application ID, client secret and token endpoints of your app
+
+1. In the [Azure portal](https://portal.azure.com). Go to **App registrations**, and select your app registration.  
 1. On the **Overview** page, record the **Application (client) ID**.
 1. Select **Endpoints**. It provides information, such as token endpoints, that will be used in the Postman configuration. This article uses OAuth 2.0 and token-based authentication with Entra ID. In this case, you should record the **OAuth 2.0 token endpoint (v2)**.
 
@@ -34,9 +44,10 @@ The following example uses [app-only authentication](/entra/identity-platform/pe
 
     In the Postman configuration, you should provide the **Client secret value**, not the Secret ID. The Client secret value cannot be viewed, except for immediately after creation.
 
-### Step 2: Configure the Postman
 
-1. In a request or collect, select **Authorization**.
+### Step 3: Configure the Postman
+
+1. In the Postman, select a request or collect, and then select **Authorization**.
 1. Set Auth type to **OAuth 2.0**.
 1. In the **Configure New Token** section, specify the following configuration for using Microsoft Graph API:
 
@@ -52,7 +63,7 @@ The following example uses [app-only authentication](/entra/identity-platform/pe
 1. Select **Get New Access Token**. If the configuration is correct, you should receive a token that will be used to run the Microsoft Graph API call.
 1. Select **Proceed**, and then select **Use token**.
 
-### Step 3: Test and troubleshoot the Microsoft Graph API
+### Step 4: Test and troubleshoot the Microsoft Graph API
 
 1. Send the following PATCH request to disable a user. The `1f953789-0000-0000-0000-6f21508fd4e2` is the object ID of a user in the Entra ID.
 
