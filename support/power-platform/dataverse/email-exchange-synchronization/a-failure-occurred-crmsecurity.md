@@ -53,7 +53,7 @@ at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&
 completedSynchronously): Microsoft Dynamics CRM has experienced an error. Reference number
 for administrators or support: #3A5E4FEADetail:  
 <OrganizationServiceFault xmlns:i="https://www.w3.org/2001/XMLSchema-instance" xmlns="https://schemas.microsoft.com/xrm/2011/Contracts">  
-  <ActivityId><ID></ActivityId  
+  <ActivityId><ID></ActivityId>  
   <ErrorCode> **-2147220970** </ErrorCode>  
   <ErrorDetails xmlns:d2p1="https://schemas.datacontract.org/2004/07/System.Collections.Generic" />  
     <Message>System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> Microsoft.Crm.CrmException: The Queue: <Queue ID> email `example@contoso.com` doesn't match with UPN. User <User ID> should be a global administrator to approve mailbox in organization <organization>.  
@@ -71,15 +71,15 @@ for administrators or support: #3A5E4FEADetail:
 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()  
    at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)  
    at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously): Microsoft Dynamics CRM has experienced an error. Reference number for administrators or support: #3A5E4FEA</Message>  
-  <Timestamp>2018-12-04T18:17:41.8971683Z\</Timestamp  
+  <Timestamp>2018-12-04T18:17:41.8971683Z</Timestamp>  
   <ExceptionRetriable>false</ExceptionRetriable>  
   <ExceptionSource i:nil="true" />  
   <InnerFault>  
-  <ActivityId>\<ID></ActivityId  
+  <ActivityId><ID></ActivityId>  
   <ErrorCode> **-2147220906** </ErrorCode>
 <ErrorDetails xmlns:d3p1="https://schemas.datacontract.org/2004/07/System.Collections.Generic" />  
 <Message>The Queue: <Queue ID> email `testdl@MyContosoDemo.onmicrosoft.com` doesn't match with UPN. User <User ID> should be a global administrator to approve mailbox in organization <organization>.\</Message>  
-<Timestamp>2018-12-04T18:17:41.8981705Z</Timestamp  
+<Timestamp>2018-12-04T18:17:41.8981705Z</Timestamp>  
 <ExceptionRetriable>false</ExceptionRetriable>  
 <ExceptionSource i:nil="true" />  
 <InnerFault i:nil="true" />  
@@ -88,5 +88,5 @@ System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.I
 </InnerFault>  
 <OriginalException i:nil="true" />  
 <TraceText i:nil="true" />  
-</OrganizationServiceFault>"
+</OrganizationServiceFault>
 ```
