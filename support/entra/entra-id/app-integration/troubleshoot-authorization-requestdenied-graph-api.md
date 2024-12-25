@@ -17,7 +17,7 @@ This article demonstrates how to troubleshoot the `Authorization_RequestDenied` 
 
 ## Cause of the Authorization_RequestDenied error
 
-This error typically occurs because the user or app does not have sufficient permissions. To call Graph APIs, your app registration must have the following two premisisons:
+This error typically occurs because the user or app does not have sufficient permissions. To call Graph APIs, your app registration must have the following two permissions:
 
 - The appropriate Microsoft Entra RBAC role for the required access level. For more information, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference).
 - The necessary API permissions to access Microsoft Graph.
