@@ -15,11 +15,11 @@ This article describes an infinite redirection issue between an OpenID Connect (
 
 When you browse to a website that is built by using an OpenID Connect (OIDC) app and Microsoft Entra ID, the browser enters an infinite loop between the website and Microsoft Entra ID authentication process.
 
-The problem specifically occurs when you start browsing the website using the HTTP protocol. When using HTTPS, the issue does not occur.
+The problem specifically occurs when you start browsing the website using the HTTP protocol. When using HTTPS, the issue doesn't occur.
 
 ## Cause
 
-The `.AspNet.Cookies` cookie that store the access token is not sent in HTTP requests due to its secure attribute.
+The `.AspNet.Cookies` cookie that stores the access token isn't sent in HTTP requests due to its secure attribute.
 
 ## Solution
 
@@ -32,7 +32,7 @@ To resolve the issue, enforce HTTPS navigation for the site. HTTPS is always rec
 If your scenario requires the initial navigation to happen over http, you can customize the Cookies Authentication middleware to allow the authentication AspNet cookie for both HTTP and HTTPS scheme by setting the `CookieSecure` attribute to `CookieSecureOption.Never` as followed in the `Startup.Auth.cs` file:
 
 > [!Note]
-> This workaround is not recommended for production environments as it compromises security by allowing cookies to be sent over HTTP.
+> This workaround isn't recommended for production environments as it compromises security by allowing cookies to be sent over HTTP.
 
 ```csharp
 public void ConfigureAuth(IAppBuilder app)
