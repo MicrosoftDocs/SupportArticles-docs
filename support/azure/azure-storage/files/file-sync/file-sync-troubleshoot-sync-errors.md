@@ -206,6 +206,7 @@ If a file or directory fails to sync due to an error, an event is logged in the 
 | 0x80041007 | -2147217401 | SYNC_E_ITEM_MUST_EXIST | An internal error occurred. | If the error persists for more than a day, create a support request. |
 | 0X80C80293 | -2134375789 | ECS_E_SYNC_INITIAL_SCAN_COMPLETED | The sync session failed because the initial enumeration was completed. The next session will cover the full namespace. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
 | 0X80C80342 | -2134375614 | ECS_E_SYNC_CUSTOM_METADATA_VERSION_NOT_SUPPORTED | The sync database has custom metadata with a version higher than the supported version. | Please upgrade the File Sync agent to the latest version. If the error persists after upgrading the agent, create a support request. |
+| 0x80c80201 | -2134375935 | ECS_E_SYNC_UNPROCESSABLE_ITEM_REPARSEPOINT | The sync failed due to the presence of a reparse point. | Please remove the reparse point or replace it with regular file content before attempting the sync again. |
 
 ### Handling unsupported characters
 
