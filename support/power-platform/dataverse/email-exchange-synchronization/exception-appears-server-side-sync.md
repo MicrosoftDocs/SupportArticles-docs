@@ -1,13 +1,13 @@
 ---
 title: UnknownIncomingEmailIntegrationError during server-side synchronization
-description: Solves the UnknownIncomingEmailIntegrationError that's logged in a Microsoft Dynamics 365 mailbox record.
+description: Solves the UnknownIncomingEmailIntegrationError logged in a Microsoft Dynamics 365 mailbox record.
 ms.reviewer: 
 ms.date: 12/26/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # UnknownIncomingEmailIntegrationError logged in mailbox alerts in Microsoft Dynamics 365
 
-This article provides a solution to the `UnknownIncomingEmailIntegrationError` error code that's logged in mailbox alerts in Microsoft Dynamics 365.
+This article provides a solution to the `UnknownIncomingEmailIntegrationError` error code logged in mailbox alerts in Microsoft Dynamics 365.
 
 _Applies to:_ &nbsp; Microsoft Dynamics 365  
 _Original KB number:_ &nbsp; 4471762
