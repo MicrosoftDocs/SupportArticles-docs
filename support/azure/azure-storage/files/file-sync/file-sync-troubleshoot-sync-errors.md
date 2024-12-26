@@ -206,6 +206,7 @@ If a file or directory fails to sync due to an error, an event is logged in the 
 | 0x80041007 | -2147217401 | SYNC_E_ITEM_MUST_EXIST | An internal error occurred. | If the error persists for more than a day, create a support request. |
 | 0X80C80293 | -2134375789 | ECS_E_SYNC_INITIAL_SCAN_COMPLETED | The sync session failed because the initial enumeration was completed. The next session will cover the full namespace. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
 | 0X80C80342 | -2134375614 | ECS_E_SYNC_CUSTOM_METADATA_VERSION_NOT_SUPPORTED | The sync database has custom metadata with a version higher than the supported version. | Please upgrade the File Sync agent to the latest version. If the error persists after upgrading the agent, create a support request. |
+| 0x80c8604b | -2134351797 | ECS_E_AZURE_FILE_SHARE_FILE_NOT_FOUND | The specified Azure file was not found in the file share. This may occur if the file has been deleted and sync isn't aware of the change. | No action required. Sync will stop logging this error once change detection detects the file was deleted. |
 
 ### Handling unsupported characters
 
