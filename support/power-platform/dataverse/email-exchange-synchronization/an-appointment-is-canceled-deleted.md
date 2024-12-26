@@ -3,7 +3,7 @@ title: Appointment cancellation issue with server-side synchronization in Dynami
 description: Provides a solution to an issue where an appointment is canceled or deleted unexpectedly when using server-side synchronization.
 ms.author: dmartens
 author: DanaMartens
-ms.date: 12/11/2024
+ms.date: 12/26/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # An appointment is canceled or deleted unexpectedly during server-side synchronization
@@ -19,7 +19,7 @@ When you use [server-side synchronization](/power-platform/admin/server-side-syn
 
 ## Cause
 
-This issue can occur if the appointment no longer meets the conditions of the user's [sync filters](/power-platform/admin/choose-records-synchronize-dynamics-365-outlook-exchange). As explained in [Ignore logically deleted items during synchronization](/power-platform/admin/sync-logic#ignore-logically-deleted-items-during-sync), there are multiple reasons why an appointment may no longer match your sync filters. These reasons include changes such as the organizer of the appointment being changed, modifications to the sync filters, or changes in security roles or sharing that result in the user no longer having access to the record. By default, server-side synchronization sends a delete operation to Exchange in such scenario, leading to the cancellation of the appointment.
+This issue can occur if the appointment no longer meets the conditions of the user's [sync filters](/power-platform/admin/choose-records-synchronize-dynamics-365-outlook-exchange). As explained in [Ignore logically deleted items during synchronization](/power-platform/admin/sync-logic#ignore-logically-deleted-items-during-sync), there are multiple reasons why an appointment no longer matches your sync filters. These reasons include changes to the appointment organizer, the sync filters, and security roles or sharing settings, which cause the user to lose access to the record. By default, server-side synchronization sends a delete operation to Exchange in such scenario, leading to the cancellation of the appointment.
 
 ## Resolution
 
