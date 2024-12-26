@@ -77,7 +77,7 @@ The following example uses [app-only authentication](/entra/identity-platform/pe
     }
     ```
 
-1. The `Authorization_RequestDenied` error message is received in the response.
+1. The `Authorization_RequestDenied` error message is received in the response:
 
     ```Output
     {
@@ -93,7 +93,7 @@ The following example uses [app-only authentication](/entra/identity-platform/pe
     }
     ```
         
-1. Check the [Update user scenario in Microsoft Graph REST API v1.0 endpoint reference](/graph/api/user-update?view=graph-rest-1.0&tabs=http#permissions&preserve-view=true). The following permission is required to enable and disable a user, as described in the Microsoft Graph REST API v1.0 endpoint reference:
+1. Check the [Update user scenario in Microsoft Graph REST API v1.0 endpoint reference](/graph/api/user-update?view=graph-rest-1.0&tabs=http#permissions&preserve-view=true). The following permission is required to enable and disable a user, as described in the Microsoft Graph REST API v1.0 endpoint reference.
 
     | Property        | Type    | Description |
     |:----------------|:--------|:------------|
