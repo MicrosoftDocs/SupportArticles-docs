@@ -164,6 +164,13 @@ You can also work around this issue by using the following PowerShell commands t
 Connect-AzAccount -Subscription "<guid>" -Tenant "<guid>"
 Register-AzStorageSyncServer -ResourceGroupName "<your-resource-group-name>" -StorageSyncServiceName "<your-storage-sync-service-name>"
 ```
+
+<a id="server-registration-missing-resource-groups"></a>**Server Registration does not list all Resource Groups**
+
+When registering a server using ServerRegistration.exe, some resource groups are missing when you select the Resource Group drop-down.
+
+This issue occurs due to a known bug and has been fixed in File Sync Agent v19.1. Please install the latest version of the agent to resolve this.
+
 <a id="server-already-registered"></a>**Server Registration displays the following message: "This server is already registered"**
 
 :::image type="content" source="media/file-sync-troubleshoot-installation/server-already-registered-error.png" alt-text="Screenshot that shows the Server Registration dialog box with the 'server is already registered' error message.":::
