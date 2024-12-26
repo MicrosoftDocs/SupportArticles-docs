@@ -29,7 +29,7 @@ This problem occurs because the CGI process terminates unexpectedly before the C
 ## Tools
 
 - Tracing module on IIS
-- [Microsoft Network Monitor 3.4](https://www.microsoft.com/download/4865)
+- [Microsoft Network Monitor 3.4](https://www.microsoft.com/en-us/download/details.aspx?id=4865)
 
 ## Troubleshooting steps
 
