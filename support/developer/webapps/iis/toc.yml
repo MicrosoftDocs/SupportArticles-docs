@@ -94,6 +94,10 @@ items:
   - name: Can't access Web sites when security event log is full
     href: general/users-cannot-access-web-sites-when-log-full.md
 
+- name: High memory usage
+  items:
+  - name: Data Capture for Managed Memory Leak
+    href: site-behavior-performance/data-capture-managed-memory-leak.md
 - name: Health, diagnostic, and performance features
   href: health-diagnostic-performance/toc.yml
 
