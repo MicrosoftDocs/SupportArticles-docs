@@ -59,7 +59,7 @@ This article provides methods to capture data for managed memory leak that's eas
 
 ## Memory leak issue is too intermittent (automation needed)
 
-1. Download the [Procdump.exe](https://learn.microsoft.com/sysinternals/downloads/procdump) tool on the server.
+1. Download the [Procdump.exe](/sysinternals/downloads/procdump) tool on the server.
 1. Run **Command Prompt** as an Administrator.
 1. In **Command Prompt**, navigate to the folder containing **procdump.exe**.
 1. Run run the command: `procdump.exe -s 30 -m <memoryConsumption> -ma -n 3 PID`.
