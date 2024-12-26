@@ -11,7 +11,12 @@ ms.topic: how-to
 To set up Visual Studio on an offline machine, follow these steps:
 
 1. Download the Visual Studio installer from the [Visual Studio page](https://visualstudio.microsoft.com/vs/).
-1. Create an offline installer using the command line `vs_professional.exe --LayOut "C:\Temp\VS2022Offline" --Lang en-US` where **vs_professional.exe** is the Professional edition of Visual Studio, and **VS2022Offline** is the folder where you want to create the layout.
+1. Create an offline installer using the command line. In this example, **vs_professional.exe** is the Professional edition of Visual Studio, and **VS2022Offline** is the folder where you want to create the layout. 
+
+   ```cmd
+   "vs_professional.exe" --LayOut "C:\Temp\VS2022Offline" --Lang en-US"
+   ```
+   
 1. After successfully creating the offline installer for Visual Studio, copy **C:\Temp\VS2022Offline** to the target offline machine.
 1. Once the **C:\Temp\VS2022Offline** folder is copied to the target offline machine, execute the following command line from an administrator command prompt:
 
