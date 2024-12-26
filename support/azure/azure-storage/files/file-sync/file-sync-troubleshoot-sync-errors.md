@@ -617,6 +617,17 @@ No action required. This error should automatically resolve. If the error persis
 
 This error can occur if there is a file system corruption on the NTFS volume where the server endpoint is located. To resolve this error, run [chkdsk](/windows-server/administration/windows-commands/chkdsk?tabs=event-viewer) on the volume.
 
+<a id="-2147020503"></a>**Sync failed because the tag present in the reparse point buffer is invalid.**  
+
+| Error | Code |
+|-|-|
+| **HRESULT** | 0x80071129 |
+| **HRESULT (decimal)** | -2147020503 |
+| **Error string** | ERROR_REPARSE_TAG_INVALID |
+| **Remediation required** | Yes |
+
+This error occurs when files are copied between servers with different configurations, such as transferring files from a server with a file system filter driver or deduplication feature enabled to one where these features are not present, resulting in unreadable files due to invalid reparse points. To resolve this error, delete the affected files or re-copy them as actual files, not as reparse points.
+
 <a id="-2146762487"></a>**The server failed to establish a secure connection. The cloud service received an unexpected certificate.**  
 
 | Error | Code |
