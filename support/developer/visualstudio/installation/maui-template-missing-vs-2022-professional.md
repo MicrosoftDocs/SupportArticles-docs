@@ -25,3 +25,5 @@ To install the MAUI template, follow these steps:
 1. After the MAUI workload is installed, run the command `dotnet new --install Microsoft.Maui.Templates` to install the MAUI templates. This command fetches and installs the latest templates for creating MAUI projects.
 
 Once the templates are installed, you can see the .NET MAUI template available in Visual Studio when creating a new project.
+
+For more information on installing .NET MAUI workload in Visual Studio and building .NET MAUI apps, see [Installation](/dotnet/maui/get-started/installation) and [Build your first app](/dotnet/maui/get-started/first-app).
