@@ -196,26 +196,6 @@ Sorry, but we cannot resolve this issue by using this guide. Here are some other
 - Use the self-help options on the [Microsoft 365 Community website](https://answers.microsoft.com/msoffice/forum?sort=LastReplyDate&dir=Desc&tab=All&status=all&mod=&modAge=&advFil=&postedAfter=&postedBefore=&threadType=All&isFilterExpanded=false&page=1).
 - [Create a support incident](https://portal.office.com/Support/ServiceRequests.aspx) at Microsoft Online Services support. Ask your IT administrator to use the above link to create a new support incident.
 
-### Repair a sync connection
-
-You can fix sync errors you get while using the OneDrive for Business sync app by choosing **View sync problems...** in the OneDrive for Business menu. The error dialog recommends solutions for each sync error.
-
-You can also clear all sync errors at once by repairing the sync connection for your OneDrive for Business libraries. [Follow these steps](https://support.office.microsoft.com/article/21aac895-9f32-4e3e-a75a-6f12824f0975) to run the `Repair` command.
-
-Did this solve your problem?
-
-- If yes, we're glad that your issue is resolved.
-- If no, see [Review conflicts](#review-conflicts).
-
-### Reset the OneDrive for Business cache
-
-Sometimes the OneDrive for Business cache needs to be removed and rebuilt in order to sync.
-
-Did this solve your problem?
-
-- If yes, we're glad that your issue is resolved.
-- If no, see [Repair OneDrive for Business or Office installation](#repair-onedrive-for-business-or-office-installation).
-
 ### Uninstall and reinstall OneDrive for Business
 
 The steps to uninstall and reinstall OneDrive for Business depend on whether you installed the application through a setup program (MSI), or through Office Click-to-run. Read this article to learn how to tell [how Office or the OneDrive for Business sync app was installed](https://support.microsoft.com/office/update-the-onedrive-for-work-or-school-sync-app-49771c73-e7ad-4d26-bff1-50bb12a83817).
