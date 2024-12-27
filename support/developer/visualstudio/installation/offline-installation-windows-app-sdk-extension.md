@@ -1,7 +1,7 @@
 ---
 title: Offline Installation of Windows App SDK C# Extension Fails
 description: Helps resolve an error that occurs when you install the Windows App SDK C# extension for Visual Studio offline.
-ms.date: 12/09/2024
+ms.date: 12/27/2024
 ms.reviewer: khgupta
 ms.custom: sap:Installation\Offline Install
 ---
