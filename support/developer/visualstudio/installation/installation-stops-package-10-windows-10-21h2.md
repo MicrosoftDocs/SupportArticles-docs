@@ -1,7 +1,7 @@
 ---
 title: Visual Studio Installation Stops on Windows 10 21H2
 description: Helps resolve an error that occurs when you install Visual Studio using the online installer on a Windows 10, version 21H2 machine.
-ms.date: 12/09/2024
+ms.date: 12/27/2024
 ms.reviewer: khgupta
 ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ---
