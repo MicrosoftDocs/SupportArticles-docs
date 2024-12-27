@@ -2,7 +2,7 @@
 title: Error code occurs when running an attended or unattended desktop flow
 description: Provides mitigation steps for the error codes that occur when running attended or unattended desktop flows.
 ms.reviewer: cefriant, kenseongtan, guco, johndund
-ms.date: 12/10/2024
+ms.date: 12/27/2024
 ms.custom: sap:Desktop flows\Unattended flow runtime errors
 ---
 # Error code occurs when running an attended or unattended desktop flow
@@ -13,7 +13,7 @@ _Applies to:_ &nbsp; Power Automate
 _Original KB number:_ &nbsp; 4555406
 
 > [!NOTE]
-> If the error code that you receive is not listed in the table, contact [Power Automate support](https://powerautomate.microsoft.com/support/).
+> If the error code that you receive is not listed in the table, contact [Power Automate support](https://www.microsoft.com/power-platform/products/power-automate/support/).
 
 |Error code|HTTP status code|Run mode|Mitigation steps|
 |---|---|---|---|
