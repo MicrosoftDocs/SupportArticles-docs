@@ -11,8 +11,7 @@ ms.custom: sap:Desktop flows
 This article provides the mitigation steps for the agent-related error codes that occur when running attended or unattended desktop flows.
 
 > [!NOTE]
-> As a first step, we recommend [updating Power Automate for desktop to the latest version](/power-automate/desktop-flows/install#update-power-automate). If the agent-related error code persists after the upgrade, you can try the following mitigation steps to work around the issue. If the agent-related error code that you receive isn't listed in the table, contact [Power Automate support](https://www.microsoft.com/power-platform/products/power-automate/support/).  
-> If the agent-related error code that you receive isn’t listed in the table, contact [Power Automate support](https://www.microsoft.com/power-platform/products/power-automate/support/).
+> As a first step, we recommend [updating Power Automate for desktop to the latest version](/power-automate/desktop-flows/install#update-power-automate). If the agent-related error code persists after the upgrade, you can try the following mitigation steps to work around the issue. If the agent-related error code that you receive isn't listed in the table, contact [Power Automate support](https://www.microsoft.com/power-platform/products/power-automate/support/).
 
 ## Error codes
 
