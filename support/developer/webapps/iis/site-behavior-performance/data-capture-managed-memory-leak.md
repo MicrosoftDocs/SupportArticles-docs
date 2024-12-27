@@ -3,8 +3,9 @@ title: Data Capture for Managed Memory Leaks
 description: This article provides methods to capture data for managed memory leaks.
 ms.date: 12/25/2024
 ms.custom: sap:Site Behavior and Performance
-ms.reviewer: 
+ms.reviewer: v-sidong
 ---
+
 # Data capture for managed memory leaks
 
 This article provides methods to capture data for managed memory leaks that are easily replicable and intermittent.
@@ -76,7 +77,7 @@ This article provides methods to capture data for managed memory leaks that are 
 
    When you use `-m` in the command, `-s` indicates the number of consecutive seconds during which **w3wp.exe**'s memory consumption is >= the threshold specified by `-m`.  
 
-   For example, if the command is `procdump.exe -s 30 -m 5120 -ma -n 3 PID`, the process memory consumption must be >= 5120 MB (5 GB) for at least 30 seconds to generate a dump. If the first dump is written but then memory drops to less than 5,120 MB, the second and third dumps won't be collected, and the memory must increase back to 5,120 MB or higher and remain so for 30 seconds for the second dump to be generated, and so on. So, `-n` here doesn't necessarily mean the interval between the dumps.
+   For example, if the command is `procdump.exe -s 30 -m 5120 -ma -n 3 PID`, the process memory consumption must be >= 5,120 MB (5 GB) for at least 30 seconds to generate a dump. If the first dump is written but then memory drops to less than 5,120 MB, the second and third dumps won't be collected, and the memory must increase back to 5,120 MB or higher and remain so for 30 seconds for the second dump to be generated, and so on. So, `-n` here doesn't necessarily mean the interval between the dumps.
 
 1. The first memory dump will be created, and you'll see confirmation in **Command Prompt**. By default, the memory dump is saved in the same location as **procdump.exe**.
 
