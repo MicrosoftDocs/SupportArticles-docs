@@ -367,3 +367,11 @@
       href: user-prov-sync/exclude-user-primary-group.md
     - name: Yellow exclamation mark in Office 2013
       href: user-prov-sync/yellow-exclamation-mark-office2013.md
+
+- name: Microsoft Graph Users, Groups, and Entra APIs
+  items:
+  - name: Problem with querying or provisioning resources
+    items:
+    - name: 404 error when managing objects
+      href: app-integration/404-not-found-error-manage-objects-microsoft-graph.md
+
