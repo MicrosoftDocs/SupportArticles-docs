@@ -1,11 +1,11 @@
 ---
-title: Email fails to create with NoCorrelationMatch sync error
-description: An email fails to be created in Microsoft Dynamics 365 with a NoCorrelationMatch sync error.
+title: Email fails to create with a NoCorrelationMatch sync error
+description: An email fails to be created with a NoCorrelationMatch sync error in Microsoft Dynamics 365.
 ms.reviewer: 
 ms.date: 12/27/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
-# An email fails to be created in Microsoft Dynamics 365 with a NoCorrelationMatch sync error
+# An email fails to be created with a NoCorrelationMatch sync error in Microsoft Dynamics 365
 
 This article provides a resolution for the issue where an email message fails to be created in Microsoft Dynamics 365 due to a **NoCorrelationMatch** sync error.
 
@@ -14,11 +14,11 @@ _Original KB number:_ &nbsp; 4339713
 
 ## Symptoms
 
-When reviewing email messages analyzed for automatic promotion by Dynamics 365, you find an email message that fails to be created in Dynamics 365 with a **NoCorrelationMatch** sync error.
+When reviewing email messages analyzed for automatic promotion by Dynamics 365, you might receive an email message that fails to be created with a **NoCorrelationMatch** sync error.
 
 ## Cause
 
-When Dynamics 365 evaluates an email in your mailbox, multiple conditions are evaluated to determine if the message should be automatically created as an email activity. These conditions include the characteristics of the email, such as the email addresses in the **From**, **To**, and **Cc** fields, and whether the email is a reply to an email initially sent from Dynamics 365. Your personal options for email tracking also affect which emails are tracked automatically. A **NoCorrelationMatch** error indicates that no users or queues are configured to promote this email automatically.
+When evaluating an email in your mailbox, Dynamics 365 checks multiple conditions to determine if the message should automatically be created as an [email activity](/power-apps/developer/data-platform/email-activity-entities). These conditions include the characteristics of the email, such as the email addresses in the **From**, **To**, and **Cc** fields, and whether the email is a reply to an email initially sent from Dynamics 365. Your personal options for email tracking also affect which emails are tracked automatically. A **NoCorrelationMatch** error indicates that no users or queues are configured to promote this email automatically.
 
 For example, if user Christopher Reed receives an email from one of his contacts and his personal options are set with the default configuration to only track **Email messages in response to Microsoft Dynamics 365 email**, only replies to emails sent from Dynamics 365 are tracked automatically.
 
