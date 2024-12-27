@@ -96,7 +96,7 @@ items:
 
 - name: High memory usage
   items:
-  - name: Data Capture for Managed Memory Leak
+  - name: Data capture for managed memory leaks
     href: site-behavior-performance/data-capture-managed-memory-leak.md
 - name: Health, diagnostic, and performance features
   href: health-diagnostic-performance/toc.yml
