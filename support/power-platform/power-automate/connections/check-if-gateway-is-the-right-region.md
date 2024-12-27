@@ -2,7 +2,7 @@
 title: On-premises data gateways are missing in Power Automate portal
 description: Helps you resolve the issue when your on-premises data gateway isn't listed in Power Automate.
 ms.reviewer: quseleba, cgarty
-ms.date: 03/27/2024
+ms.date: 12/27/2024
 ms.custom: sap:Connections\Gateways
 ---
 # Data gateways are missing in Power Automate
@@ -59,7 +59,7 @@ To verify the issue, first check the region of the environment you're using and 
     > [!NOTE]
     > The region where your gateway is installed must map to your Power Automate region. To check the mapping of the gateway region to the Power Platform region, see [Regions overview for Power Automate](/power-automate/regions-overview).
 
-1. If the region doesn't match your environment, follow the steps in the **Resolution** section to resolve the issue. If the region matches your environment, or if the following steps don't resolve the issue, contact [Microsoft Power Automate support](https://powerautomate.microsoft.com/support/) for further assistance.
+1. If the region doesn't match your environment, follow the steps in the **Resolution** section to resolve the issue. If the region matches your environment, or if the following steps don't resolve the issue, contact [Power Automate support](https://www.microsoft.com/power-platform/products/power-automate/support/) for further assistance.
 
 ## Resolution
 
@@ -87,7 +87,7 @@ It's not possible to change the region of a gateway that's already installed. Ho
 
    If **Gateways** isn't visible in the navigation pane, select **More** > **Discover all**, find **Gateways** under **Data**, and then pin it to the navigation pane.
 
-1. Check if the gateway appears in the list of gateways. If the gateway is still missing, contact [Microsoft Power Automate support](https://powerautomate.microsoft.com/support/) for assistance.
+1. Check if the gateway appears in the list of gateways. If the gateway is still missing, contact [Power Automate support](https://www.microsoft.com/power-platform/products/power-automate/support/) for assistance.
 
 ## More information
 
