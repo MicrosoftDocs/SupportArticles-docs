@@ -549,7 +549,7 @@ The following steps apply if the OS version is *RHEL 8.10* and the VM was create
    ```
   
 
-#### [RHEL 8.10 - RHEL-HA (E4S)](#tab/rhe810-rhel-base-ha)
+#### [RHEL 8.10 - RHEL-HA](#tab/rhe810-rhel-base-ha)
 
 1. Remove the releasever file if it exists.
 
