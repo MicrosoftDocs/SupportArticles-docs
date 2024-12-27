@@ -1,7 +1,7 @@
 ---
 title: System Configuration Error Using Online Installer
 description: Helps resolve a system configuration error that occurs when you install Visual Studio using the online installer on a Windows 10, version 21H2 machine.
-ms.date: 12/06/2024
+ms.date: 12/27/2024
 ms.reviewer: khgupta
 ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ---
