@@ -16,11 +16,11 @@ Assume that you creates an object, such as a user, group, or application, in Mic
 
 ## Cause
 
-[Microsoft Entra ID architecture](https://learn.microsoft.com/en-us/entra/architecture/architecture) ensures that all data is replicated across geographically distributed data centers. This issue occurs due to a replication delay for the newly created object to be propagated across all data centers. It can take several minutes for this replication process to complete.
+[Microsoft Entra ID architecture](/entra/architecture/architecture) ensures that all data is replicated across geographically distributed data centers. This issue occurs due to a replication delay for the newly created object to be propagated across all data centers. It can take several minutes for this replication process to complete.
 
 As shown in the following diagram, when your application makes a request via Microsoft Graph to create a user in Microsoft Entra ID, the service begins the replication process and returns an object for that user, which includes the user's ID and other relevant data used in your request. If your application immediately attempts to update this user, it might connect with a replica that hasn't been updated with the new user object yet. Consequently, you receive a 404 error because the user isn't found on that replica.
 
- :::image type="content" source="media/404-not-found-error-manage-objects-microsoft-graph/404-error-diagram.png" alt-text=Diagram that explains the cause of the 404 error." border="false":::
+ :::image type="content" source="media/404-not-found-error-manage-objects-microsoft-graph/404-error-diagram.png" alt-text="Diagram that explains the cause of the 404 error." border="false":::
 
 ## Solution
 
