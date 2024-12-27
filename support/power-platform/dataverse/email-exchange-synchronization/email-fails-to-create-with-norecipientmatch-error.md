@@ -34,23 +34,23 @@ When evaluating an email in your mailbox, Dynamics 365 checks multiple condition
 
    For example, you receive the email because your email address is on the **Bcc** line of the email. Unless your personal options in Dynamics 365 are configured to track **All email messages**, the email isn't tracked.
 
-   Unless the email address on the **To** or **Cc** line of the email matches the email address stored in Dynamics 365 or your personal options in Dynamics 365 are configured to track **All email messages**, the email aren't be tracked.
+   Unless the email address on the **To** or **Cc** line of the email matches the email address stored in Dynamics 365 or your personal options in Dynamics 365 are configured to track **All email messages**, the email isn't tracked.
 
 4. There isn't a row in the `EmailSearchBase` table for the user or queue mailbox that receives the email.
 
-   When looking for matching user or queue records, Dynamics 365 queries a table called `EmailSearchBase`. This table should automatically have a row for the email address of every email enabled record including users and queues. On rare occasions, a row might be missing, which can then cause Dynamics 365 not to find a matching row when querying this table for users or queues that are on the email message.
+   When looking for matching user or queue records, Dynamics 365 queries a table called `EmailSearchBase`. This table should automatically have a row for the email address of every email enabled record including users and queues. On rare occasions, a row might be missing, which causes Dynamics 365 not to find a matching row when querying this table for users or queues that are on the email message.
 
    You can open a web browser and use the Dynamics 365 Web API to verify if a row exists for the user or queue email address that receives the email message. Use the following syntax:
 
    `https://<Your Organization URL>/api/data/v9.1/emailsearches?$filter=emailaddress eq '<email address of user or queue>'`
 
-   Example: `https://contoso.crm.dynamics.com/api/data/v9.1/emailsearches?$filter=emailaddress eq 'John@contoso.com'`
+   For example, `https://contoso.crm.dynamics.com/api/data/v9.1/emailsearches?$filter=emailaddress eq 'John@contoso.com'`
 
    If no record is returned, it indicates a row doesn't exist for that email address in the `EmailSearchBase` table.
 
 ## Resolution
 
-Review the characteristics of the email and which option you have configured in your personal options for email tracking.
+Review the characteristics of the email and which option you configure in your personal options for email tracking.
 
 > [!NOTE]
 > To manage security roles and mailbox settings, you need to sign in to your Dynamics 365 organization as a user with the "System Administrator" role.
@@ -80,7 +80,7 @@ Review the characteristics of the email and which option you have configured in 
 
     1. Open the user or queue record in Dynamics 365.
     2. Change the email address value to something else and select **Save**.
-    3. Then change the email address value back to the correct value and select **Save**. This will normally recreate the missing row.
+    3. Change the email address value back to the correct value and select **Save**. Then, the missing row is re-created.
 
 ## More information
 
