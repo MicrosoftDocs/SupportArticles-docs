@@ -40,7 +40,7 @@
       href: email-exchange-synchronization/email-cannot-be-received-because-license-is-invalid-error.md
     - name: Email fails to be created with NoRecipientMatch
       href: email-exchange-synchronization/email-fails-to-create-with-norecipientmatch-error.md
-    - name: Email fails to create with NoCorrelationMatch sync
+    - name: Email fails to be created with NoCorrelationMatch
       href: email-exchange-synchronization/email-fails-to-create-with-nocorrelationmatch-error.md
     - name: Email message can't be sent because the mailbox is deactivated
       href: email-exchange-synchronization/email-message-cannot-be-sent.md
