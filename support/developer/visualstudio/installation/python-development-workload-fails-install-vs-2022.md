@@ -1,7 +1,7 @@
 ---
 title: Python Development Workload Fails to Install in Visual Studio
 description: Helps resolve an issue where the Python development workload fails to install in Visual Studio.
-ms.date: 12/09/2024
+ms.date: 12/27/2024
 ms.reviewer: khgupta
 ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ---
