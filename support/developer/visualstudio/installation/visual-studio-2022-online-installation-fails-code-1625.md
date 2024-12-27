@@ -1,7 +1,7 @@
 ---
 title: Visual Studio Online Installation Fails with Error 1625
 description: Helps resolve the error 1625 that occurs when you install Visual Studio using the online installer.
-ms.date: 11/22/2024
+ms.date: 12/27/2024
 ms.reviewer: khgupta
 ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ---
