@@ -1,7 +1,7 @@
 ---
 title: License Key Is Invalid When Installing Visual Studio
 description: Helps resolve an issue where the license key shows as invalid even though the license key is mentioned in the package when installing Visual Studio.
-ms.date: 12/09/2024
+ms.date: 12/27/2024
 ms.reviewer: khgupta
 ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ---
