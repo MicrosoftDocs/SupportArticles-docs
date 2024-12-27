@@ -2,13 +2,15 @@
 title: Email fails to create with NoRecipientMatch error
 description: An email fails to be created with a NoRecipientMatch sync error in Microsoft Dynamics 365.
 ms.reviewer: 
-ms.date: 12/16/2024
+ms.date: 12/27/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # An email fails to be created with a NoRecipientMatch sync error in Microsoft Dynamics 365
 
 _Applies to:_ &nbsp; Microsoft Dynamics 365  
 _Original KB number:_ &nbsp; 4339830
+
+This article provides a resolution for the issue where an email message fails to be created in Microsoft Dynamics 365 due to a **NoRecipientMatch** sync error.
 
 ## Symptoms
 
