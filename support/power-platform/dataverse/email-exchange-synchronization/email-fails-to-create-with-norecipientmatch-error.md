@@ -44,7 +44,7 @@ When evaluating an email in your mailbox, Dynamics 365 checks multiple condition
 
    `https://<Your Organization URL>/api/data/v9.1/emailsearches?$filter=emailaddress eq '<email address of user or queue>'`
 
-   For example, `https://contoso.crm.dynamics.com/api/data/v9.1/emailsearches?$filter=emailaddress eq 'John@contoso.com'`
+   For example, `https://contoso.crm.dynamics.com/api/data/v9.1/emailsearches?$filter=emailaddress eq 'John@contoso.com'`.
 
    If no record is returned, it indicates a row doesn't exist for that email address in the `EmailSearchBase` table.
 
