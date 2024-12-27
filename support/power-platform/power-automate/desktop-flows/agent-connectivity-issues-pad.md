@@ -3,7 +3,7 @@ title: Agent-related error codes when running an attended or unattended desktop 
 description: Provides mitigation steps for the agent-related error codes that occur when running attended or unattended desktop flows.
 ms.reviewer: kenseongtan, johndund, guco
 ms.author: kenseongtan
-ms.date: 12/25/2024
+ms.date: 12/27/2024
 ms.custom: sap:Desktop flows
 ---
 # An agent-related error code occurs when running an attended or unattended desktop flow
@@ -11,7 +11,7 @@ ms.custom: sap:Desktop flows
 This article provides the mitigation steps for the agent-related error codes that occur when running attended or unattended desktop flows.
 
 > [!NOTE]
-> To solve this issue, we recommend [updating Power Automate for desktop to the latest version](/power-automate/desktop-flows/install#update-power-automate). If the agent-related error code persists after the upgrade, you can try the following mitigation steps to work around the issue. If the agent-related error code that you receive isn't listed in the table, contact [Power Automate support](https://www.microsoft.com/power-platform/products/power-automate/support/).
+> As a first step, we recommend [updating Power Automate for desktop to the latest version](/power-automate/desktop-flows/install#update-power-automate). If the agent-related error code persists after the upgrade, you can try the following mitigation steps to work around the issue. If the agent-related error code that you receive isn't listed in the table, contact [Power Automate support](https://www.microsoft.com/power-platform/products/power-automate/support/).
 
 ## Error codes
 
@@ -28,5 +28,5 @@ To increase the agent time-out in the registry:
 
 1. Press <kbd>Win</kbd>+<kbd>R</kbd> to open the **Run** dialog. Type **regedit** and press <kbd>Enter</kbd> to open the **Registry Editor**.
 1. Navigate to the `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Power Automate Desktop\Service` registry.
-1. Add a new DWORD (32-bit) and name it **AgentPingTimeoutSeconds**. Select the **Decimal** radio button, double-click the new value, and enter a desired value in the **Value data** field.
+1. Add a new DWORD (32-bit) and name it **AgentPingTimeoutSeconds**. Select the **Decimal** radio button, double-click the new value, and enter a desired value (the suggested value is **30**) in the **Value data** field.
 1. Restart the Power Automate service. In **Task Manager**, select the **Services** tab, right-click **UIFlowService** in the list, and then select **Restart**.
