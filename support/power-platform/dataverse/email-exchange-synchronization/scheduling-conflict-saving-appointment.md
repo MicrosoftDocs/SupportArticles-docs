@@ -2,7 +2,7 @@
 title: A scheduling conflict was found when saving appointment error 
 description: Solves the ExchangeSyncSchedulingConflictsError error code that occurs when saving an appointment from Exchange to Microsoft Dynamics 365.
 ms.reviewer: 
-ms.date: 12/26/2024
+ms.date: 12/30/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # A scheduling conflict was found when saving appointment from Exchange to Microsoft Dynamics 365
