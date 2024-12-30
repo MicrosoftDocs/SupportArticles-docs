@@ -115,7 +115,7 @@ There are many reasons why the traffic might be blocked. In any of these situati
 
 ## Solution
 
-The following table lists specific reasons why traffic might be blocked, and the corresponding solution for each reason.
+The following table lists specific reasons why traffic might be blocked, and the corresponding solution for each reason:
 
 | Issue | Solution |
 | ----- | -------- |
