@@ -72,7 +72,7 @@
       href: email-exchange-synchronization/email-message-cannot-be-sent.md
     - name: Mailbox user doesn't have sufficient permissions error
       href: email-exchange-synchronization/error-when-you-test-enable-a-mailbox.md
-    - name: Mailbox doesn't have an email server profile
+    - name: Mailbox doesn't have an email server profile or profile is inactive
       href: email-exchange-synchronization/mailbox-does-not-have-email-server-profile.md
     - name: Mailbox fails to be tested and enabled
       href: email-exchange-synchronization/mailbox-fails-tested-enabled.md
