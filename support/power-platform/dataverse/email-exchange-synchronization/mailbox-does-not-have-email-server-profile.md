@@ -2,7 +2,7 @@
 title: Mailbox doesn't have email server profile error
 description: Provides a solution to an email server error code InvalidIncomingEmailServerProfile that occurs when selecting Test & Enable Mailbox in Dynamics 365.
 ms.reviewer: 
-ms.date: 12/11/2024
+ms.date: 12/30/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # "Mailbox does not have an email server profile or the email server profile is inactive" error when testing a mailbox
