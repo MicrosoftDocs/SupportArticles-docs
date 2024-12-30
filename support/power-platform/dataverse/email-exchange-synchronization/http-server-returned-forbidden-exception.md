@@ -2,7 +2,7 @@
 title: Http server returned Forbidden exception
 description: Provides a solution to an error that occurs when you select the Test & Enable Mailbox button on a mailbox record in Dynamics 365.
 ms.reviewer: 
-ms.date: 12/26/2024
+ms.date: 12/30/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # "Http server returned Forbidden exception" error when testing a Dynamics 365 mailbox
@@ -55,7 +55,7 @@ Dynamics 365 communicates with Microsoft Exchange using Exchange Web Services (E
     > [!IMPORTANT]
     > After running this command, it might take up to 120 minutes before the setting change takes effect.
 
-## Check if EWS is disabled at the organization level or if the EwsAllowList limits the EWS traffic if the issue occurs for all mailboxes
+## Check if EWS is disabled at the organization level or if the EwsAllowList limits the EWS traffic
 
 1. Use this PowerShell command to check organization-level settings:
 
@@ -72,7 +72,7 @@ Dynamics 365 communicates with Microsoft Exchange using Exchange Web Services (E
     > [!IMPORTANT]
     > After running this command, it might take up to 120 minutes before the setting change takes effect.
 
-3. If `EwsApplicationAccessPolicy` is set to **EnforceAllowList** and the `EwsAllowList` doesn't contain a value for CRM (for example, CRM/\*), which prevents Dynamics 365 (CRM) from communicating with Exchange. Use the following command to update the list to include CRM/* and any other applications you want to allow (\<PreviousAllowList> in the following example):
+3. If `EwsApplicationAccessPolicy` is set to **EnforceAllowList**, check if the `EwsAllowList` contains a value for CRM (for example, CRM/\*) to allow Dynamics 365 (CRM) to communicate with Exchange. If it does not, use the following command to update the list to include CRM/* and any other applications you want to allow. In this example \<PreviousAllowedList> is the list of applications that were previously in the allowlist:
 
     ```powershell
     Set-OrganizationConfig -EwsApplicationAccessPolicy:EnforceAllowList -EwsAllowList:CRM/*,<PreviousAllowedList>
@@ -81,7 +81,7 @@ Dynamics 365 communicates with Microsoft Exchange using Exchange Web Services (E
     > [!IMPORTANT]
     > After running this command, it might take up to 120 minutes before the setting change takes effect.
 
-4. If `EwsApplicationAccessPolicy` is set to **EnforceBlockList** and the `EwsAllowList` contains a value for CRM (for example, CRM/*), which prevents Dynamics 365 (CRM) from communicating with Exchange. Use the following command to update the list to no longer include CRM:
+4. If `EwsApplicationAccessPolicy` is set to **EnforceBlockList**, check if the `EwsBlockList` contains a value for CRM (for example, CRM/*), which prevents Dynamics 365 (CRM) from communicating with Exchange. If it does, use the following command to update the list to no longer include CRM. In this example \<PreviousBlockList WITH CRM REMOVED> is the list of applications that were previously in the blocklist except for CRM:
 
     ```powershell
     Set-OrganizationConfig -EwsApplicationAccessPolicy:EnforceBlockList -EwsBlockList:<PreviousBlockList WITH CRM REMOVED>
