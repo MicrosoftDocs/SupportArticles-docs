@@ -43,7 +43,7 @@ The following example uses [app-only authentication](/entra/identity-platform/pe
     :::image type="content" source="media/troubleshoot-authorization-requestdenied-graph-api/check-endpoints.png" alt-text="Screenshot that shows checking the endpoints of the app registration." lightbox="media/troubleshoot-authorization-requestdenied-graph-api/check-endpoints.png":::
 1. In the **Manage** section, select **Certificates & secrets**. Create a client secret or use an existing client secret for testing.
 
-    In the Postman configuration, you should provide a value for **Client secret**, not for **Secret ID**. The client secret value cannot be viewed, except immediately after it's created.
+    In the Postman configuration, ensure you use the Client secret value, not the Secret ID. The client secret value cannot be viewed, except immediately after it's created.
 
 ### Step 3: Configure Postman
 
