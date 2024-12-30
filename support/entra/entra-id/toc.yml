@@ -233,7 +233,7 @@
 - name: Microsoft Graph Users, Groups, and Entra APIs
   items: 
    - name: Troubleshoot Authorization_RequestDenied error
-    href: app-integration/troubleshoot-authorization-requestdenied-graph-api.md
+     href: app-integration/troubleshoot-authorization-requestdenied-graph-api.md
 - name: Microsoft Entra User Provisioning and Synchronization
   items:
   - name: User Sign-in or password Problems
