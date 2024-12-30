@@ -1,8 +1,8 @@
 ---
 title: Data Capture for Managed Memory Leaks
 description: This article provides methods to capture data for managed memory leaks.
-ms.date: 12/25/2024
-ms.custom: sap:Site Behavior and Performance
+ms.date: 12/30/2024
+ms.custom: sap:Site Behavior and Performance\High memory usage
 ms.reviewer: v-sidong
 ---
 
@@ -20,14 +20,7 @@ This article provides methods to capture data for managed memory leaks that are 
 1. Download the [Procdump.exe](/sysinternals/downloads/procdump) tool on the server.
 1. Monitor memory usage:
 
-   Once the memory used by **w3wp.exe** (the IIS worker process) reaches a certain limit (as described in the [Overview of troubleshooting high memory issues]()), follow these steps to find the Process ID (PID):
-
-   1. Open **IIS Manager**.
-   1. Select your server name (on the left).
-   1. Double-click **Worker Processes**.
-   1. Find the **w3wp.exe** process that is using lots of memory. The PID is shown next to it. You might need to refresh this view manually.
-
-      :::image type="content" source="media/data-capture-managed-memory-leak/worker-process.png" alt-text="Screenshot of Worker Process.":::
+   Once the memory used by **w3wp.exe** (the IIS worker process) reaches a certain limit (as described in the [Overview of troubleshooting high memory issues](high-memory-consumption-issues-overview.md#symptoms-for-different-scenarios)), follow the steps in [Identifying the high memory usage](high-memory-consumption-issues-overview.md#identifying-the-high-memory-usage) to find the Process ID (PID).
 
 1. Run Procdump:
 
@@ -60,7 +53,7 @@ This article provides methods to capture data for managed memory leaks that are 
 
    :::image type="content" source="media/data-capture-managed-memory-leak/configure-userdump-series.png" alt-text="Screenshot of Configure UserDump Series.":::
 
-1. Once the memory consumption of **w3wp.exe** reaches the limit (the decision is based on the memory consumption values given in the table in the [Overview of troubleshooting high memory issues]()), select **Save & Close**.
+1. Once the memory consumption of **w3wp.exe** reaches the limit (the decision is based on the memory consumption values given in the table in the [Overview of troubleshooting high memory issues](high-memory-consumption-issues-overview.md#symptoms-for-different-scenarios)), select **Save & Close**.
 
 ## Memory leak issue is too intermittent (automation needed)
 
@@ -69,7 +62,7 @@ This article provides methods to capture data for managed memory leaks that are 
 1. In **Command Prompt**, navigate to the folder containing **procdump.exe**.
 1. Run the command: `procdump.exe -s 30 -m <memoryConsumption> -ma -n 3 PID`.
 
-   Replace `PID` with the actual PID of the **w3wp.exe** process that is facing the high memory issue. For more information on how to get the PID, see step 2 in [Method 1: Using Procdump](#method-1-using-procdump).
+   Replace `PID` with the actual PID of the **w3wp.exe** process that is facing the high memory issue. For more information on how to get the PID, see steps in [Identifying the high memory usage](high-memory-consumption-issues-overview.md#identifying-the-high-memory-usage).
 
    - `-n`: This parameter is the number of memory dumps to collect.
    - `-m`: This parameter is the memory commit threshold (in MB) for creating dumps.
@@ -85,4 +78,4 @@ This article provides methods to capture data for managed memory leaks that are 
 
 ## More information
 
-[Overview of troubleshooting high memory issues]()
+[Overview of troubleshooting high memory issues](high-memory-consumption-issues-overview.md)

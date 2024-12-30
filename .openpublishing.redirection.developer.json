@@ -5779,6 +5779,11 @@
       "source_path": "support/developer/visualstudio/visual-basic/ide/mouse-wheel-events-do-not-work.md",
       "redirect_url": "/previous-versions/troubleshoot/visualstudio/ide/mouse-wheel-events-do-not-work",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/webapps/iis/health-diagnostic-performance/troubleshoot-native-memory-leak-iis-7x-application-pool.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/troubleshoot-native-memory-leak-iis-7x-application-pool",
+      "redirect_document_id": true
     }
   ]
 }
