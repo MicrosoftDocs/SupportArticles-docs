@@ -1,46 +1,72 @@
 ---
-title: User can't get cluster resources
-description: Troubleshoot issues that are caused when a user can't list a resource within an API group in an Azure Kubernetes Service (AKS) cluster.
-ms.date: 03/07/2024
+title: Troubleshoot "Forbidden" error when trying to access AKS cluster resources
+description: Troubleshoot "Error from server (Forbidden)" RBAC-related errors that occur when you try to view Kubernetes resources in an AKS cluster.
+ms.date: 08/26/2024
 ms.reviewer: rissing chiragpa, v-leedennis
 ms.service: azure-kubernetes-service
-#Customer intent: As an Azure Kubernetes administrator, I want fix RBAC or security group assignments so that users can access their cluster resources.
+#Customer intent: As an Azure Kubernetes administrator, I want to fix RBAC-related errors so that users can access their cluster resources.
 ms.custom: sap:Connectivity
 ---
-# User can't get cluster resources
+# Troubleshoot "Forbidden" error when trying to access AKS cluster resources
 
-This article describes how to fix issues that occur when you can't get the details of a resource in an Azure Kubernetes Service (AKS) cluster.
+This article explains how to troubleshoot and resolve "Error from server (Forbidden)" errors that are related to Role-Based Access Control (RBAC) when you try to view Kubernetes resources in an Azure Kubernetes Service (AKS) cluster.
 
 ## Prerequisites
 
-- The Kubernetes cluster command-line tool ([kubectl](https://kubernetes.io/docs/tasks/tools/)).
+The Kubernetes cluster command-line tool ([kubectl](https://kubernetes.io/docs/tasks/tools/))
 
 > [!NOTE]
 > If you use [Azure Cloud Shell](/azure/cloud-shell/overview) to run shell commands, kubectl is already installed. If you use a local shell and already have [Azure CLI](/cli/azure/install-azure-cli) installed, you can alternatively install kubectl by running the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
 
 ## Symptoms
 
-If you run kubectl to get the details of an AKS cluster node, you might see the following error message:
+When you run `kubectl` commands to view details of a Kubernetes resource type, such as a deployment, pod, or worker node, you receive the following error message:
 
 ```output
 $ kubectl get nodes
 Error from server (Forbidden): nodes is forbidden: User "aaaa11111-11aa-aa11-a1a1-111111aaaaa" cannot list resource "nodes" in API group "" at the cluster scope
 ```
 
-## Cause 1: Incorrect role and role binding permissions
+## Cause
+This error indicates that you're trying to access Kubernetes resources by using a Microsoft Entra ID account that doesn’t have the required role-based access control (RBAC) permissions.
 
-When you enable role-based access control (RBAC) for your AKS cluster, you control the permissions for a User through Role and RoleBinding (or ClusterRole and ClusterRoleBinding) settings. If a User hasn't defined the correct permissions, the User sees errors when it tries to get the details of a resource in the cluster.
+## Solution
 
-### Solution: Set the correct roles and role bindings
+Depending on the RBAC type that's configured for the cluster ([Kubernetes RBAC](/azure/aks/azure-ad-rbac) or [Azure RBAC](/azure/aks/manage-azure-rbac)), different solutions might apply. Run the following command to determine which RBAC type the cluster is using: 
 
-Make sure you set the correct Role and RoleBinding for the User. For detailed examples, see [Use Kubernetes RBAC with Microsoft Entra integration](/azure/aks/azure-ad-rbac).
+  ```bash
+	az aks show -g <CLUSTER_RESOURCE_GROUP> -n <CLUSTER_NAME> --query aadProfile.enableAzureRbac
+  ```
 
-## Cause 2: Incorrect access assignments within a security group
+- If the result is **false**, the cluster uses Kubernetes RBAC. See [Solving permission issues in Kubernetes RBAC-based AKS clusters](#solving-permissions-issues-in-kubernetes-rbac-based-aks-clusters).
+- If the result is **true,** the cluster uses Azure RBAC. See [Solving permission issues in Azure RBAC-based AKS clusters](#solving-permissions-issues-in-azure-rbac-based-aks-clusters).
 
-If AKS manages integration with Microsoft Entra ID, the user might not have the correct assignment for the security group.
+### Solving permissions issues in Kubernetes RBAC-based AKS clusters
 
-### Solution: Have the security group admin assign the correct access level
+If the cluster uses Kubernetes RBAC, permissions for the user account are configured through the creation of RoleBinding or ClusterRoleBinding Kubernetes resources. For more information, see [Kubernetes RBAC documentation](https://kubernetes.io/docs/reference/access-authn-authz/rbac/).
 
-Make sure the security group's administrator has given your account an Active  or Conditional Access assignment. See [AKS-managed Microsoft Entra integration](/azure/aks/managed-aad). This article has instructions for setting either [Active assignment](/azure/aks/managed-aad#configure-just-in-time-cluster-access-with-azure-ad-and-aks) or [Conditional Access assignment](/azure/aks/managed-aad#use-conditional-access-with-azure-ad-and-aks).
+Additionally, in Microsoft Entra ID integrated clusters, a ClusterRoleBinding resource is automatically created to grant the administrator access to the cluster to members of a pre-designated Microsoft Entra ID group.
+
+To resolve the "Error from server (Forbidden)" error for a specific user, use one of the following methods.
+
+#### Method 1: Create a custom RoleBinding or ClusterRoleBinding resource
+You can create a custom RoleBinding or ClusterRoleBinding resource to grant the necessary permissions to the user (or a group of which the user is a member).  For detailed steps, see [Use Kubernetes role-based access control with Microsoft Entra ID in Azure Kubernetes Service](/azure/aks/azure-ad-rbac).
+
+#### Method 2: Add the user to the pre-designated Microsoft Entra ID admin group
+
+1. Retrieve the ID of the pre-designated Microsoft Entra ID admin group. To do this, run the following command:
+
+   ```bash
+   az aks show -g <CLUSTER_RESOURCE_GROUP> -n <CLUSTER_NAME> --query aadProfile.adminGroupObjectIDs
+   ```
+2. Add the user to the pre-designated Microsoft Entra ID admin group by using the group ID that you retrieved in the previous step. For more detailed steps, see [Add members or owners of a group](/entra/fundamentals/how-to-manage-groups#add-members-or-owners-of-a-group).
+
+### Solving permissions issues in Azure RBAC-based AKS clusters
+
+If the cluster uses Azure RBAC, permissions for users are configured through the creation of [Azure role assignments](/azure/role-based-access-control/role-assignments).
+
+AKS provides a set of built-in roles that can be used to create role assignments for the Microsoft Entra ID users or groups to give them access to Kubernetes objects in a specific namespace or at cluster scope. For detailed steps to assign built-in roles to users or groups in Azure RBAC-based clusters, see [AKS built-in roles](/azure/aks/manage-azure-rbac#aks-built-in-roles).
+
+Alternatively, you can create your own custom Azure role definitions to provide a more granular management of permissions over specific types of Kubernetes objects and operations. For detailed guidance to create and assign custom roles to users and groups in Azure RBAC-based clusters, see [Create custom roles definitions](/azure/aks/manage-azure-rbac#create-custom-roles-definitions).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

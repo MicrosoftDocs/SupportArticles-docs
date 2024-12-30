@@ -1,12 +1,11 @@
 ---
 title: Fix Windows Update corruptions and installation failures
 description: Use the DISM tool to fix problems that prevent Windows Update from installing successfully.
-ms.date: 08/02/2024
+ms.date: 09/26/2024
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: high
-ms.reviewer: kaushika, chkeen, cgibson, jesko, warrenw
+ms.reviewer: kaushika, chkeen, cgibson, jesko, warrenw, abjos
 ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update fails - installation stops with error, csstroubleshoot
 adobe-target: true
 ---
@@ -163,18 +162,27 @@ Staged Packages:
     (p) CSI Manifest Corrupt (n) wow64_microsoft-windows-audio-volumecontrol_31bf3856ad364e35_10.0.19045.3636_none_4514b27cf12f35d5
     ```
 
-2. Determine the version.
+2. Determine the update containing the missing files.
 
-    To determine which update has the missing files, you can use the Update Build Revision (UBR) in the file name. For example:
+    From the log entries, identify the Update Build Revision (UBR) numbers within the file paths:
 
-    - 10.0.19045.3636 is a UBR.
-    - 10.0.19045.4291 is a UBR.
+    - In the *EnterpriseModernAppMgmtCSP.dll* file, the UBR number is `10.0.19045.3636`.
+    - In the `Microsoft-Windows-Client-Features-Package` package, the UBR number is `10.0.19045.4291`.
 
-    You need to find updates that have these UBR numbers. For example, if you're using Windows 10, version 22H2, find the [update history page](/windows/release-health/release-information#windows-10-release-history) and locate the UBR number (for example, 3636). Each update has a UBR number, and you can download the corresponding update.
+3. Match the UBR number to the KB number:
 
-3. Download the missing files.
+   1. Go to the [Windows update history page](/windows/release-health/release-information#windows-10-release-history) for your version (for example, Windows 10, version 22H2).
+   2. Match the UBR number (`3636` or `4291`) to the listed updates to find the KB number.
 
-    Identify and download the update packages that contain the missing files. For example, if the log indicates that `Microsoft-Windows-Client-Features-Package~31bf3856ad364e35~amd64~~10.0.19045.4291` is missing, download the respective `.msu` file from the [Microsoft Update Catalog](https://catalog.update.microsoft.com).
+   For example:
+
+    - UBR `3636` might correspond to KB5031445.
+    - UBR `4291` might correspond to KB5036892.
+
+4. Search for and download the update by the KB number:
+
+    1. Use the identified KB numbers to search for the updates in the [Microsoft Update Catalog](https://catalog.update.microsoft.com).
+    2. Download the updates associated with each KB number to restore the missing or corrupted files.
 
 ### Step 3: Extract the .msu and .cab files
 
@@ -207,7 +215,7 @@ To address the corrupted files identified in the *CBS.log* file, extract the mis
     Open a command prompt as an administrator and run the following DISM command with the `/Source` option:
 
     ```console
-    DISM /Online /Cleanup-Image /RestoreHealth /Source:C:\temp\Source\ /limit
+    DISM /Online /Cleanup-Image /RestoreHealth /Source:C:\temp\Source\ /LimitAccess
     ```
 
 ### Step 5: Verify and confirm

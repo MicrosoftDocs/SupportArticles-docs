@@ -5,9 +5,8 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: cwest, jamirc, kaushika
-ms.custom: sap:Group Policy\Deploying software through Group Policy , csstroubleshoot
+ms.custom: sap:Group Policy\Deploying software through Group Policy, csstroubleshoot
 ---
 # How to use Group Policy to configure automatic logon in Windows Server 2003 Terminal Services
 

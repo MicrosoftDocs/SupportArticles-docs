@@ -1,7 +1,7 @@
 ---
 title: Role instance restarts from Azure VM OS upgrades
 description: Learn about service impacts and other common issues related to role instance restarts caused by Windows upgrades on an Azure virtual machine.
-ms.date: 04/01/2024
+ms.date: 11/01/2024
 editor: v-jsitser
 ms.reviewer: v-maallu, v-leedennis
 ms.service: azure-cloud-services-extended-support
@@ -65,7 +65,7 @@ The following list describes the impacts to and requirements for your cloud serv
 
 Currently, the Azure platform doesn't offer proactive notifications when an OS upgrade is occurring. Your role instances will receive a `RoleEnvironment.Stopping` event before they're shut down. You can use that event to gracefully end any work that the role instance is doing or to notify an administrator that an instance is shutting down.
 
-You can subscribe to the [Azure OS Updates RSS feed](https://azurecomcdn.azureedge.net/updates/feed). This feed should be updated the same day that the OS updates start being rolled out to the datacenter. The feed typically doesn't give advanced proactive notification, but it helps you identify when the updates are occurring. The update process can take several days to complete. Therefore, you might have to wait one or more days between when the RSS feed is updated and your hosted service begins updating.
+You can subscribe to the Azure OS Updates RSS feed. This feed should be updated the same day that the OS updates start being rolled out to the datacenter. The feed typically doesn't give advanced proactive notification, but it helps you identify when the updates are occurring. The update process can take several days to complete. Therefore, you might have to wait one or more days between when the RSS feed is updated and your hosted service begins updating.
 
 The [Azure Guest OS release list][matrix], and the list of OS versions that are available for selection in the Azure portal, are both typically updated after the guest OS rollout is completed. You shouldn't use the latest entry in these lists as an indication of when the OS updates are in progress.
 

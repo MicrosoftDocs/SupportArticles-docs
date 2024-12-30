@@ -1,8 +1,8 @@
 ---
 title: Resolve az aks command invoke failures
 description: Resolve az aks command invoke failures in Azure CLI when you try to access a private Azure Kubernetes Service (AKS) cluster.
-ms.date: 10/25/2022
-ms.reviewer: chiragpa, andbar, haitch, v-leedennis
+ms.date: 10/25/2024
+ms.reviewer: chiragpa, andbar, haitch, momajed, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Connectivity, devx-track-azurecli
 #Customer intent: As an Azure Kubernetes user, I want to resolve az aks command invoke failures in Azure CLI so that I can successfully connect to my private Azure Kubernetes Service (AKS) cluster.
@@ -51,7 +51,10 @@ The operation returns a `Not Found` status because the `command-<ID>` pod can't 
 
 #### Solution 1: Change the configuration so that you can schedule and run the pod
 
-Make sure that the `command-<ID>` pod can be scheduled and run.
+Make sure that the `command-<ID>` pod can be scheduled and run by adjusting the configuration. For example:
+
+- Increase the node pool size and make sure it has no pod secluding constraints like taints so that the `command-<ID>` pod can be deployed.
+- Adjust resource requests and limits in your pod specifications.
 
 ## Cause 2: Azure Policy doesn't allow the pod creation
 
@@ -83,6 +86,12 @@ Alternatively, if the policy isn't a built-in policy, you can check the configur
 kubectl get pods command-<ID> --namespace aks-command --output yaml
 ```
 
+You can exempt the `aks-command` namespace from restrictive policies by running the following command:
+
+```bash
+az policy exemption create --name ExemptAksCommand --scope /subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.ContainerService/managedClusters/{aks-cluster} --policyAssignment /subscriptions/{subscription-id}/providers/Microsoft.Authorization/policyAssignments/{policy-assignment-id}
+```
+
 ## Cause 3: Required roles aren't granted
 
 To use the `az aks command invoke` command, you must have access to the following roles on the cluster:
@@ -94,7 +103,14 @@ If you don't have these roles, the `az aks command invoke` command can't retriev
 
 #### Solution 3: Add the required roles
 
-Add the `Microsoft.ContainerService/managedClusters/runCommand/action` and `Microsoft.ContainerService/managedClusters/commandResults/read` roles.
+To resolve this issue, follow these steps:
+
+1. Add the `Microsoft.ContainerService/managedClusters/runCommand/action` and `Microsoft.ContainerService/managedClusters/commandResults/read` roles.
+2. Assign the necessary roles to the user:
+
+    ```bash
+    az role assignment create --assignee {user-principal-name} --role "Azure Kubernetes Service Cluster User Role" --scope /subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.ContainerService/managedClusters/{aks-cluster}
+    ```
 
 ## Cause 4: There's a Cloud Shell issue
 
@@ -102,7 +118,12 @@ The `az aks command invoke` command isn't processed as expected when it's run di
 
 #### Solution 4a: Run the az login command first
 
-In Cloud Shell, run the [az login](/cli/azure/reference-index#az-login) command before you run `az aks command invoke`.
+In Cloud Shell, run the [az login](/cli/azure/reference-index#az-login) command before you run the `az aks command invoke` command. For example:
+
+```bash
+az login
+az aks command invoke --resource-group {resource-group} --name {aks-cluster} --command "kubectl get pods"
+```
 
 #### Solution 4b: Run the command on a local computer or a virtual machine
 

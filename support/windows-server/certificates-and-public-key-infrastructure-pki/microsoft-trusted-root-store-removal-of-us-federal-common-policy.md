@@ -1,7 +1,6 @@
 ---
 title: Removal of the U.S. Federal Common Policy CA certificate from the Microsoft trusted root
 description: Discusses the removal of U.S. "G1" root certificate and provides solutions to avoid issues.
-localization_priority: medium
 audience: itpro
 manager: dcscontentpm
 ms.topic: troubleshooting

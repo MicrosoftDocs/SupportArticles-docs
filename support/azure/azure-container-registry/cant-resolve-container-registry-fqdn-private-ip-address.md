@@ -6,7 +6,7 @@ author: AndreiBarbu95
 ms.author: andbar
 editor: v-jsitser
 ms.reviewer: v-rekhanain, v-leedennis
-ms.service: azure-container-instances
+ms.service: azure-container-registry
 ms.topic: troubleshooting-problem-resolution
 ms.custom: sap:Connectivity
 #Customer intent: As an Azure administrator, I want to learn how to resolve a scenario in which the fully qualified domain name (FQDN) of an Azure Container Registry can't be resolved to its private IP address so that I can successfully use the container registry when I have to rely on only private connectivity.

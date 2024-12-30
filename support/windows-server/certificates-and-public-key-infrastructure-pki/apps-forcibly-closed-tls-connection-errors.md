@@ -5,7 +5,6 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: sureshka, arrenc, juburke, stacygr, jburchel, diassis, stefze, mastewa, ardenw, kaushika
 ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Transport Layer Security (TLS) or Schannel (SSL), csstroubleshoot
 ---

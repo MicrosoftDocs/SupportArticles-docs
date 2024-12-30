@@ -5,7 +5,6 @@ ms.date: 08/01/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, jeffhugh
 ms.custom: sap:Clustering and High Availability\Cannot failover a group, csstroubleshoot
 ---

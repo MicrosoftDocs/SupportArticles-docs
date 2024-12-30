@@ -1,11 +1,10 @@
 ---
 title: Back up and restore Hyper-V VM with BMR and data backup
 description: Describes behavior that occurs when you use Windows Server Backup on your VM data and bare metal recovery (BMR). Specifically, only critical volumes are backed up, and the VM enters an inconsistent state and fails to start. A resolution is provided.
-ms.date: 12/26/2023
+ms.date: 09/09/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:Virtualization and Hyper-V\Backup and restore of virtual machines, csstroubleshoot
 ---
@@ -19,7 +18,7 @@ _Original KB number:_ &nbsp; 3171712
 
 Consider the following scenario:
 
-- You have a Hyper-V host that's running Microsoft Windows Server 2012 R2.
+- You have a Hyper-V host that's running Microsoft Windows Server 2016, 2019 or 2022.
 - The Hyper-V Virtual Machines data resides somewhere other than on the system drive.
 - You back up VM data and BMR by using Windows Server Backup (WSB).
 

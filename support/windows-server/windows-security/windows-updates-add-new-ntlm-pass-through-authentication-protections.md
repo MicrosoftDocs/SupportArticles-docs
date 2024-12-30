@@ -5,7 +5,6 @@ ms.date: 03/28/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, ptomas, jsimmons, lindakup, arrenc, rizhang, clfish, herbertm, ruudv
 ms.custom: sap:Windows Security Technologies\Legacy authentication (NTLM), csstroubleshoot
 ---

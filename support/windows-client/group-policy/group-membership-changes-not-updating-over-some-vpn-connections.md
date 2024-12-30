@@ -7,7 +7,6 @@ audience: itpro
 ms.topic: troubleshooting
 ms.custom: sap:Group Policy\Problems applying Group Policy, csstroubleshoot
 ms.reviewer: kaushika, v-tappelgate, esolomou
-localization_priority: medium
 keywords: group policy, group membership
 ---
 

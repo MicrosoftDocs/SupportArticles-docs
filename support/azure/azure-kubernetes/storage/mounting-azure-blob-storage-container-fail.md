@@ -5,8 +5,8 @@ author: AndreiBarbu95
 ms.author: andbar
 ms.service: azure-kubernetes-service
 ms,subservice: troubleshoot-azure-storage-issues
-ms.date: 12/20/2022
-ms.reviewer: cssakscic, chiragpa 
+ms.date: 09/06/2024
+ms.reviewer: cssakscic, chiragpa
 ms.custom: sap:Storage
 ---
 # Errors when mounting an Azure Blob storage container
@@ -66,9 +66,9 @@ Here are the possible causes for this error:
 
 ### <a id="cause1-for-blobfuse-error2"></a>Cause 1: Kubernetes secret doesn't reference the correct storage account name or key
 
-If the Blob storage container is created [dynamically](/azure/aks/azure-csi-blob-storage-dynamic), a Kubernetes secret resource is automatically created with the name "azure-storage-account-\<storage-account-name>-secret".
+If the Blob storage container is created [dynamically](/azure/aks/azure-csi-blob-storage-provision#dynamically-provision-a-volume), a Kubernetes secret resource is automatically created with the name "azure-storage-account-\<storage-account-name>-secret".
 
-If the Blob storage container is created [manually](/azure/aks/azure-csi-blob-storage-static?tabs=secret), the Kubernetes secret resource should be created manually.
+If the Blob storage container is created [manually](/azure/aks/azure-csi-blob-storage-provision#statically-provision-a-volume), the Kubernetes secret resource should be created manually.
 
 Regardless of the creation method, if the storage account name or the key that's referenced in the Kubernetes secret mismatches the actual value, the mounting operation will fail with the "Permission denied" error.
 
@@ -78,7 +78,7 @@ Regardless of the creation method, if the storage account name or the key that's
 
 - If a "Rotate key" operation is performed at the storage account level, the changes won't be reflected at the Kubernetes secret level. This will lead to a mismatch between the key value at the storage account level and the value at the Kubernetes secret level.
 
-    If a "Rotate key" operation happens, an operation with the name "Regenerate Storage Account Keys" will be displayed in the Activity log of the storage account. Be aware of the [90 days retention period for Activity log](/azure/azure-monitor/essentials/activity-log#retention-period).
+    If a "Rotate key" operation happens, an operation with the name "Regenerate Storage Account Keys" will be displayed in the Activity log of the storage account. Be aware of the [90 days retention period for Activity log](/azure/azure-monitor/essentials/activity-log?tabs=powershell#send-to-log-analytics-workspace).
 
 #### Verify the mismatch
 
@@ -305,7 +305,7 @@ Here are possible causes for this error:
 
 ### <a id="initial-troubleshooting-nfs-error-3"></a>Initial troubleshooting for NFS 3.0 error 3
 
-[Azure Blob NFS 3.0 relies on ports 111 and 2048](/azure/storage/blobs/network-file-system-protocol-support#supported-network-connections). Make sure that ports 111 and 2048 and/or the IP address of the storage account aren't blocked.
+[Azure Blob NFS 3.0 relies on ports 111 and 2049](/azure/storage/blobs/network-file-system-protocol-support#supported-network-connections). Make sure that ports 111 and 2049 and/or the IP address of the storage account aren't blocked.
 
 To check the IP address of the storage account, run a Domain Name System (DNS) command like `nslookup`, `dig`, or `host`. For example:
 
@@ -320,7 +320,7 @@ nc -v -w 2 <storage-account-name>.blob.core.windows.net 111
 ```
 
 ```console
-nc -v -w 2 <storage-account-name>.blob.core.windows.net 2048
+nc -v -w 2 <storage-account-name>.blob.core.windows.net 2049
 ```
 
 ```console
@@ -328,7 +328,7 @@ telnet <storage-account-name>.blob.core.windows.net 111
 ```
 
 ```console
-telnet <storage-account-name>.blob.core.windows.net 2048
+telnet <storage-account-name>.blob.core.windows.net 2049
 ```
 
 ### <a id="cause1-for-nfs-error3"></a>Cause 1: Network Security Group blocks traffic between AKS and the storage account
@@ -380,6 +380,6 @@ After you add the route, test the connectivity by using the `nc` or `telnet` com
 
 ### Solution: Ensure Virtual Appliance allows traffic between AKS and the storage account
 
-If the mounting operation succeeds, we recommend that you consult your networking team to make sure that the Virtual Appliance can allow traffic between the AKS cluster and the storage account on ports 111 and 2048.
+If the mounting operation succeeds, we recommend that you consult your networking team to make sure that the Virtual Appliance can allow traffic between the AKS cluster and the storage account on ports 111 and 2049.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

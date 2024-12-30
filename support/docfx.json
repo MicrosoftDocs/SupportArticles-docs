@@ -54,6 +54,7 @@
     "fileMetadata": {
       "uhfHeaderId": {
         "azure/**.*": "Azure",
+        "entra/**.*": "MSDocsHeader-Entra",
         "developer/dotnet/**.*": "MSDocsHeader-DotNet",
         "developer/host-integration-server/**.*": "MSDocsHeader-His",
         "developer/visualstudio/**.*": "MSDocsHeader-VisualStudio",
@@ -99,7 +100,7 @@
         "power-platform/power-automate/**/*.md": "https://ideas.powerautomate.com/d365community/forum/086dd68e-597f-ec11-8d21-0022482e8f9f",
         "power-platform/ai-builder/**/*.md": "https://powerusers.microsoft.com/t5/AI-Builder/bd-p/AIBuilder1",
         "power-platform/power-pages/*.md": "https://ideas.powerpages.microsoft.com/d365community/forum/1edba0ec-30cf-ec11-a7b5-000d3a545c96",
-        "power-platform/dataverse/*.md": "https://powerusers.microsoft.com/t5/Microsoft-Dataverse/bd-p/CDS_Apps",
+        "power-platform/dataverse/**/*.md": "https://powerusers.microsoft.com/t5/Microsoft-Dataverse/bd-p/CDS_Apps",
         "windows-server/**/*.md": "https://techcommunity.microsoft.com/t5/windows-server-for-it-pro/bd-p/WindowsServer",
         "windows-client/**/*.md": "https://support.microsoft.com/windows/f59187f8-8739-22d6-ba93-f66612949332",
         "windows-hardware/**/*.md": "https://support.microsoft.com/windows/f59187f8-8739-22d6-ba93-f66612949332",
@@ -109,19 +110,18 @@
         "mem/configmgr/**/*.md": "https://feedbackportal.microsoft.com/feedback/forum/4669adfc-ee1b-ec11-b6e7-0022481f8472",
         "mem/intune/**/*.md": "https://feedbackportal.microsoft.com/feedback/forum/ef1d6d38-fd1b-ec11-b6e7-0022481f8472",
         "system-center/**/*.md": "https://techcommunity.microsoft.com/t5/system-center/bd-p/SystemCenter",
-        "azure/active-directory/*.md": "https://feedback.azure.com/d365community/forum/22920db1-ad25-ec11-b6e6-000d3a4f0789",
+        "entra/**/*.md": "https://feedback.azure.com/d365community/forum/22920db1-ad25-ec11-b6e6-000d3a4f0789",
         "azure/app-service/*.md": "https://feedback.azure.com/d365community/forum/b09330d1-c625-ec11-b6e6-000d3a4f0f1c",
-        "azure/cloud-services/*.md": "https://feedback.azure.com/d365community/forum/79b1327d-d925-ec11-b6e6-000d3a4f06a4",
+        "azure/cloud-services/**/*.md": "https://feedback.azure.com/d365community/forum/79b1327d-d925-ec11-b6e6-000d3a4f06a4",
         "azure/devops/*.md": "https://developercommunity.visualstudio.com/home",
         "azure/azure-monitor/**/*.md": "https://feedback.azure.com/d365community/forum/3887dc70-2025-ec11-b6e6-000d3a4f09d0",
-        "azure/virtual-machines/*.md": "https://feedback.azure.com/d365community/forum/ec2f1827-be25-ec11-b6e6-000d3a4f0f1c",
-        "azure/virtual-machine-scale-sets/*.md": "https://feedback.azure.com/d365community/forum/ec2f1827-be25-ec11-b6e6-000d3a4f0f1c",
-        "azure/azure-kubernetes/*.md": "https://feedback.azure.com/d365community/forum/aabe212a-f724-ec11-b6e6-000d3a4f0da0",
-        "azure/site-recovery/*.md": "https://feedback.azure.com/d365community/forum/3ccca344-2d25-ec11-b6e6-000d3a4f0f84",
+        "azure/virtual-machines/**/*.md": "https://feedback.azure.com/d365community/forum/ec2f1827-be25-ec11-b6e6-000d3a4f0f1c",
+        "azure/virtual-machine-scale-sets/**/*.md": "https://feedback.azure.com/d365community/forum/ec2f1827-be25-ec11-b6e6-000d3a4f0f1c",
+        "azure/azure-kubernetes/**/*.md": "https://feedback.azure.com/d365community/forum/aabe212a-f724-ec11-b6e6-000d3a4f0da0",
+        "azure/site-recovery/**/*.md": "https://feedback.azure.com/d365community/forum/3ccca344-2d25-ec11-b6e6-000d3a4f0f84",
         "azure/synapse-analytics/**/*.md": "https://feedback.azure.com/d365community/forum/9b9ba8e4-0825-ec11-b6e6-000d3a4f07b8",
         "azure/cosmos-db/**/*.md": "https://feedback.azure.com/d365community/forum/3002b3be-0d25-ec11-b6e6-000d3a4f0858",
-        "azure/general/*.md": "https://learn.microsoft.com/answers/tags/133/azure",
-        "azure/virtual-desktop/*.md": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/idb-p/AzureVirtualDesktop"
+        "azure/general/*.md": "https://learn.microsoft.com/answers/tags/133/azure"
       },
       "layout": {
         "**/index.yml": "LandingPage"
@@ -135,6 +135,7 @@
       "author": {
         "**/*.md": "ChristySu",
         "azure/**/*.md": "genlin",
+        "entra/**/*.md": "genlin",
         "azure/devops/**/*.md": "HaiyingYu",
         "azure/azure-functions/**/*.md": "haiyingyu",
         "azure/synapse-analytics/**/*.md": "HaiyingYu",
@@ -159,9 +160,14 @@
         "dynamics-365/supply-chain/transportation/*.md": "Weijiesa",
         "dynamics-365/supply-chain/warehousing/*.md": "Mirzaab"
       },
+      "ms.collection": {
+        "power-platform/ai-builder/**/*.md": "CEnSKM-ai-copilot",
+        "sales-copilot/**/*.md": "CEnSKM-ai-copilot"
+      },
       "ms.author": {
         "**/*.md": "christys",
         "azure/**/*.md": "genli",
+        "entra/**/*.md": "genli",
         "azure/devops/**/*.md": "haiyingyu",
         "azure/azure-functions/**/*.md": "haiyingyu",
         "azure/synapse-analytics/**/*.md": "haiyingyu",
@@ -196,14 +202,14 @@
         "azure/cloud-services/*.md": "azure-cloud-services-classic",
         "azure/azure-functions/**/*.md": "azure-functions",
         "azure/synapse-analytics/**/*.md": "azure-synapse-analytics",
-        "azure/cosmos-db/**/*.md": "cosmos-db",
+        "azure/cosmos-db/**/*.md": "azure-cosmos-db",
         "power-platform/power-apps/**/**.*": "powerapps",
         "power-platform/power-pages/**/**.*": "power-pages",
         "power-platform/power-automate/**/*.md": "power-automate",
         "power-platform/dataverse/**/*.md": "power-platform",
         "dynamics-365/business-central/**/**.*": "dynamics-365-business-central",
         "dynamics-365/customer-insights/**/**.*": "customer-insights",
-        "dynamics-365/customer-service/**/**.*": "dynamics-365-customerservice",
+        "dynamics-365/customer-service/**/**.*": "dynamics-365-customer-service",
         "dynamics-365/sales/*.md": "dynamics-365-sales",
         "dynamics-365/finance/**/**.*": "dynamics-365-finance",
         "dynamics-365/commerce/**/**.*": "dynamics-365-commerce",
@@ -214,10 +220,10 @@
         "devices/**.*": "surface",
         "mem/intune/**/*.md": "microsoft-intune",
         "sales-copilot/**/*.md": "microsoft-sales-copilot",
-        "power-platform/ai-builder/**/**.*": "aibuilder",
+        "power-platform/ai-builder/**/**.*": "ai-builder",
         "sql/**/*.md": "sql",
         "sql/analysis-services/**/*.md": "analysis-services",
-        "sql/azure-sql/**/*.md": "virtual-machines-sql",
+        "sql/azure-sql/**/*.md": "azure-vm-sql-server",
         "sql/reporting-services/**/*.md": "reporting-services",
         "developer/dotnet/**/*.md": "dotnet",
         "developer/visualstudio/**/*.md": "visual-studio-family",
@@ -268,7 +274,7 @@
         "azure/**/*.md": "Azure",
         "azure/cloud-services/**/*.md": "Cloud Services",
         "azure/virtual-machines/**/*.md": "Virtual Machines",
-        "azure/entra/entra-id/*.md": "Microsoft Entra ID",
+        "entra/entra-id/*.md": "Microsoft Entra ID",
         "azure/devops/*.md": "Azure DevOps",
         "azure/synapse-analytics/**/*.md": "Azure Synapse Analytics",
         "azure/cosmos-db/**/*.md": "Azure Cosmos DB",
@@ -345,6 +351,10 @@
         "azure/**/*.md": [
           "Troubleshoot",
           "Azure"
+        ],
+        "entra/**/*.md": [
+          "Troubleshoot",
+          "Entra"
         ],
         "mem/intune/**/*.md": [
           "Troubleshoot",

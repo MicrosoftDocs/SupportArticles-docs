@@ -1,9 +1,9 @@
 ---
 title: Troubleshoot a SubnetIsFull error code that occurs during an AKS cluster upgrade
 description: Learn how to troubleshoot the SubnetIsFull error when you try to upgrade an Azure Kubernetes Service (AKS) cluster.
-ms.date: 07/28/2022
+ms.date: 10/10/2024
 editor: v-jsitser
-ms.reviewer: chiragpa, v-leedennis
+ms.reviewer: chiragpa, albarqaw, v-leedennis
 ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 #Customer intent: As an Azure Kubernetes Services (AKS) user, I want to troubleshoot an Azure Kubernetes Service cluster upgrade that failed because of a SubnetIsFull error so that I can upgrade the cluster successfully.
@@ -31,7 +31,7 @@ An AKS cluster upgrade fails, and you receive a "SubnetIsFull" error message.
 
 This error occurs if your cluster doesn't have enough IP addresses to create a new node.
 
-When you plan to do an upgrade or scaling operation, consider the number of required IP addresses. If the IP address range that you configured in the cluster supports only a fixed number of nodes, the upgrade or scaling operation will fail. For more information, see the "Plan IP addressing for the cluster" section of [Configure Azure CNI networking in Azure Kubernetes Service (AKS)](/azure/aks/configure-azure-cni#plan-ip-addressing-for-your-cluster).
+When you plan to do an upgrade or scaling operation, consider the number of required IP addresses. If the IP address range that you configured in the cluster supports only a fixed number of nodes, the upgrade or scaling operation will fail. For more information, see [IP address planning for your Azure Kubernetes Service (AKS) clusters](/azure/aks/concepts-network-ip-address-planning).
 
 ## Solution
 
@@ -43,5 +43,9 @@ If scaling down isn't an option, and your virtual network CIDR has enough IP add
 1. Switch the original node pool to a system node pool type.
 1. Scale up the user node pool.
 1. Scale down the original node pool.
+
+## More information
+
+- [InsufficientSubnetSize error code](../connectivity/insufficientsubnetsize-error-advanced-networking.md)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

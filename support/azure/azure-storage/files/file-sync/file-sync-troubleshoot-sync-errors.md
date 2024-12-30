@@ -4,7 +4,7 @@ description: Troubleshoot common issues with monitoring sync health and resolvin
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 06/11/2024
+ms.date: 12/16/2024
 ms.author: kendownie
 ms.custom: sap:File Sync, devx-track-azurepowershell
 ms.reviewer: v-weizhu
@@ -168,7 +168,7 @@ If a file or directory fails to sync due to an error, an event is logged in the 
 
 | HRESULT | HRESULT (decimal) | Error string | Issue | Remediation |
 |---------|-------------------|--------------|-------|-------------|
-| 0x80070043 | -2147942467 | ERROR_BAD_NET_NAME | The tiered file on the server isn't accessible. This issue occurs if the tiered file was not recalled prior to deleting a server endpoint. | To resolve this issue, see [Tiered files are not accessible on the server after deleting a server endpoint](file-sync-troubleshoot-cloud-tiering.md#tiered-files-are-not-accessible-on-the-server-after-deleting-a-server-endpoint ).|
+| 0x80070043 | -2147942467 | ERROR_BAD_NET_NAME | The tiered file on the server isn't accessible. This issue occurs if the tiered file was not recalled prior to deleting a server endpoint. | To resolve this issue, see [Tiered files are not accessible on the server](file-sync-troubleshoot-cloud-tiering.md#tiered-files-are-not-accessible-on-the-server).|
 | 0x80c80207 | -2134375929 | ECS_E_SYNC_CONSTRAINT_CONFLICT | The file or directory change can't be synced yet because a dependent folder isn't yet synced. This item will sync after the dependent changes are synced. | Transient error. If the error persists for several days, create a support request. |
 | 0x80C8028A | -2134375798 | ECS_E_SYNC_CONSTRAINT_CONFLICT_ON_FAILED_DEPENDEE | The file or directory change can't be synced yet because a dependent folder isn't yet synced. This item will sync after the dependent changes are synced. | Transient error. If the error persists, use the *FileSyncErrorsReport.ps1* PowerShell script to determine why the dependent folder isn't yet synced. |
 | 0x80c80284 | -2134375804 | ECS_E_SYNC_CONSTRAINT_CONFLICT_SESSION_FAILED | The file or directory change can't be synced yet because a dependent folder isn't yet synced and the sync session failed. This item will sync after the dependent changes are synced. | No action required. If the error persists, investigate the sync session failure. |
@@ -190,8 +190,8 @@ If a file or directory fails to sync due to an error, an event is logged in the 
 | 0x8000ffff | -2147418113 | E_UNEXPECTED | The file can't be synced due to an unexpected error. | If the error persists for several days, please open a support case. |
 | 0x80070020 | -2147024864 | ERROR_SHARING_VIOLATION | The file can't be synced because it's in use. The file will be synced when it's no longer in use. | No action required. |
 | 0x80c80017 | -2134376425 | ECS_E_SYNC_OPLOCK_BROKEN | The file was changed during sync, so it needs to be synced again. | No action required. |
-| 0x80070017 | -2147024873 | ERROR_CRC | The file can't be synced due to CRC error. This error can occur if a tiered file was not recalled prior to deleting a server endpoint or if the file is corrupt. | To resolve this issue, see [Tiered files are not accessible on the server after deleting a server endpoint](file-sync-troubleshoot-cloud-tiering.md#tiered-files-are-not-accessible-on-the-server-after-deleting-a-server-endpoint) to remove tiered files that are orphaned. If the error continues to occur after removing orphaned tiered files, run [chkdsk](/windows-server/administration/windows-commands/chkdsk) on the volume. |
-| 0x800703ee | -2147023890 | ERROR_FILE_INVALID |  The file can't be synced because it's no longer valid. This error typically occurs if the file is tiered and orphaned. | If the file is tiered, see [Tiered files are not accessible on the server after deleting a server endpoint](file-sync-troubleshoot-cloud-tiering.md#tiered-files-are-not-accessible-on-the-server-after-deleting-a-server-endpoint) to remove tiered files that are orphaned. |
+| 0x80070017 | -2147024873 | ERROR_CRC | The file can't be synced due to CRC error. This error can occur if a tiered file was not recalled prior to deleting a server endpoint or if the file is corrupt. | To resolve this issue, see [Tiered files are not accessible on the server](file-sync-troubleshoot-cloud-tiering.md#tiered-files-are-not-accessible-on-the-server) to remove tiered files that are orphaned. If the error continues to occur after removing orphaned tiered files, run [chkdsk](/windows-server/administration/windows-commands/chkdsk) on the volume. |
+| 0x800703ee | -2147023890 | ERROR_FILE_INVALID |  The file can't be synced because it's no longer valid. This error typically occurs if the file is tiered and orphaned. | If the file is tiered, see [Tiered files are not accessible on the server](file-sync-troubleshoot-cloud-tiering.md#tiered-files-are-not-accessible-on-the-server) to remove tiered files that are orphaned. |
 | 0x80070570 | -2147023504 | ERROR_FILE_CORRUPT |  The file or directory is corrupted and unreadable. | Run [chkdsk](/windows-server/administration/windows-commands/chkdsk) on the volume. |
 | 0x80c80200 | -2134375936 | ECS_E_SYNC_CONFLICT_NAME_EXISTS | The file can't be synced because the maximum number of conflict files has been reached. Azure File Sync supports 100 conflict files per file. To learn more about file conflicts, see Azure File Sync [FAQ](/azure/storage/files/storage-files-faq?toc=/azure/storage/filesync/toc.json#afs-conflict-resolution). | To resolve this issue, reduce the number of conflict files. The file will sync once the number of conflict files is less than 100. |
 | 0x80c8027d | -2134375811 | ECS_E_DIRECTORY_RENAME_FAILED | Rename of a directory can't be synced because files or folders within the directory have open handles. | No action required. The rename of the directory will be synced once all open file handles within the directory are closed. |
@@ -723,7 +723,11 @@ Reset-AzStorageSyncServerCertificate -ResourceGroupName <string> -StorageSyncSer
 | **Error string** | ECS_E_AUTH_IDENTITY_NOT_FOUND |
 | **Remediation required** | Yes |
 
-This error occurs because the server endpoint deletion failed, and the endpoint is now in a partially deleted state. To resolve this issue, retry deleting the server endpoint.
+This error might occur due to the following reasons:
+
+- A new server certificate is generated on the Azure File Sync server, and the old certificate is still cached. This error will be resolved within a few hours once the server cache is refreshed.
+- The server endpoint deletion failed, leaving the endpoint in a partially deleted state. To resolve this issue, retry deleting the server endpoint.
+
 
 <a id="-1906441711"></a><a id="-2134375654"></a><a id="doesnt-have-enough-free-space"></a>**The volume where the server endpoint is located is low on disk space.**  
 
@@ -915,7 +919,7 @@ To resolve this issue, delete and recreate the sync group by performing the foll
 1. Delete all server endpoints in the sync group.
 2. Delete the cloud endpoint.
 3. Delete the sync group.
-4. If cloud tiering was enabled on a server endpoint, delete the orphaned tiered files on the server by performing the steps documented in the [Tiered files are not accessible on the server after deleting a server endpoint](file-sync-troubleshoot-cloud-tiering.md#tiered-files-are-not-accessible-on-the-server-after-deleting-a-server-endpoint) section.
+4. If cloud tiering was enabled on a server endpoint, delete the orphaned tiered files on the server by performing the steps documented in the [Tiered files are not accessible on the server](file-sync-troubleshoot-cloud-tiering.md#tiered-files-are-not-accessible-on-the-server) section.
 5. Recreate the sync group.
 
 <a id="-2134375852"></a>**Sync detected the replica has been restored to an older state**  

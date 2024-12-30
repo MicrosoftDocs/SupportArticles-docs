@@ -1,11 +1,10 @@
 ---
 title: Can't request certificate from web enrollment pages
 description: Provides help to solve an error that occurs when you request certificates from CA Web enrollment pages.
-ms.date: 12/26/2023
+ms.date: 11/06/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, shawnrab, spat
 ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Certificate Enrollment Technologies (Auto Enrollment, NDES, CWE, CEP, CES), csstroubleshoot
 ---
@@ -13,7 +12,7 @@ ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Certificate Enro
 
 This article provides help to solve an error "No certificate templates could be found" that occurs when you request certificates from CA web enrollment pages.
 
-_Applies to:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server (All supported versions)  
 _Original KB number:_ &nbsp; 811418
 
 ## Symptoms
@@ -43,7 +42,7 @@ To correct this behavior, follow these steps:
     > [!NOTE]
     > The sServerConfig value must be in the same exact case as the dNSHostName attribute. If this is not true, you will continue to get the same error.
 
-3. For example, if the DNS hostname for the Certification Authority is *server1.domain.local* and name of the Certification Authority is *MYCA*, then ensure the dNSHostName attribute for **CN=MYCA,CN=Enrollment Services,CN=Public Key Services,CN=Services,CN=Configuration,DC= *Domain*,DC=local** object is set to server1.domain.local and sServerConfig in the certdat.inc file in the `%systemroot%\system32\certsrv` folder on the Certification Authority should be set to **server1.domain.local\MYCA**.
+3. For example, if the DNS hostname for the Certification Authority is *server1.domain.local* and name of the Certification Authority is *MYCA*, then ensure the dNSHostName attribute for **CN=MYCA,CN=Enrollment Services,CN=Public Key Services,CN=Services,CN=Configuration,DC=*Domain*,DC=local** object is set to server1.domain.local and sServerConfig in the certdat.inc file in the `%systemroot%\system32\certsrv` folder on the Certification Authority should be set to **server1.domain.local\MYCA**.
 
 4. Have the user who wants to request the certificate restart Internet Explorer. This permits the new credentials to pass to the CA.
 

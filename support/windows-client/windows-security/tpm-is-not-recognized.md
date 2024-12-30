@@ -5,7 +5,6 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, manojse, raverma, suhasm
 ms.custom: sap:System Performance\Startup configuration (general, secure boot, UEFI), csstroubleshoot
 ---

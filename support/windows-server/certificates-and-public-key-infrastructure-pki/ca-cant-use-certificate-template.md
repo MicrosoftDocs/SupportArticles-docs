@@ -1,67 +1,75 @@
 ---
-title: A CA can't use a certificate template
+title: CA can't use a certificate template
 description: Provides a solution to an issue where a certificate template is unable to load and certificate requests are unsuccessful using the same template.
-ms.date: 12/26/2023
+ms.date: 09/04/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, slight
 ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory Certificate Services (ADCS), csstroubleshoot
 ---
-# A Certification Authority can't use a certificate template
+# Certification Authority can't use a certificate template
 
-This article provides a solution to an issue where a certificate template is unable to load and certificate requests are unsuccessful using the same template.
+This article provides a solution to an issue where a certificate template can't load, and certificate requests fail to use the template.
 
 _Original KB number:_ &nbsp; 283218
 
-## Summary
+## Symptoms
 
-When Certificate Services starts on a Certification Authority (CA), a certificate template is unable to load and certificate requests are unsuccessful using the same template.
+When Certificate Services starts in the Certification Authority (CA), a certificate template is unable to load and certificate requests are unsuccessful using the template.
 
-## More information
+When requesting a certificate, once you select the template and click **Enroll**, you receive the error: "The requested certificate template is not supported by this CA. 0x80094800 (-2146875392 CERTSRV_E_UNSUPPORTED_CERT_TYPE)"
 
-The behavior occurs because the Authenticated Users group is removed from the template's access control list (ACL). The Authenticated Users group is on a template ACL, by default. (The CA itself is included in this group.) If the Authenticated Users group is removed, the (enterprise) CA itself can no longer read the template in the Active Directory, and that's why certificate requests can be unsuccessful.
+## Cause
+
+The behavior occurs because the Authenticated Users group is removed from the template's access control list (ACL). The Authenticated Users group is on a template ACL, by default. (The Certification Authority object itself is included in this group.) If the Authenticated Users group is removed, the (enterprise) CA itself can no longer read the template in the Active Directory, and that's why certificate requests can be unsuccessful.
+
+## Resolution
 
 If an administrator wants to remove the Authenticated Users group, each and every CA's computer account must be added to the template ACLs and set to Read.
 
-If authenticated users have been removed from the ACLs of a template, the following errors may be observed when the CA starts and when a certificate is requested against the template.
+## More information
+
+Minimum permissions required for an entity to request a certificate:  
+
+Requesting user/machine: Read & Enroll, Certification Authority Object: Read 
+
+If authenticated users group is removed from the ACLs of a template, the following errors may be observed when the CA starts and when a certificate is requested against the template. 
 
 ## Errors observed when enrollment is unsuccessful
 
 - For the client:
 
-    Enrollment by means of a Web page:
+    Enrollment with Web Enrollment page:
+  
+  > Certificate Request Denied  
+  > Your certificate request was denied.  
+  > Your Request Id is RequestID. The disposition message is "Denied by Policy Module 0x80094800, The request was for a certificate template that is not supported by the Active Directory Certificate Services policy: Template_information
+  >
+- Enrollment with Microsoft Management Console (MMC):
 
-    > Certificate Request Denied  
-    Your certificate request was denied.  
-    Contact your administrator for further information.
-    Enrollment by means of the Microsoft Management Console (MMC):
-    Certificate Request Wizard:
-    The certification authority denied the request. Unspecified error.
-
+  > The requested certificate template is not supported by this CA.
+  >
+  > CA info  
+  > Denied by Policy Module 0x80094800, The request was for a certificate template that is not supported by the Active Directory Certificate Services Policy: Template_information.
+  >
+  > The requested certificate template is not supported by this CA. 0x80094800 (-2146875392 CERTSRV_E_UNSUPPORTED_CERT_TYPE)
+  >
+  > A certification authority that can issue the requested certificate type is not available.
+  
 - For the CA:
 
-    > Event Type:Warning  
-    Event Source:CertSvc  
-    Event Category:None  
-    Event ID: 53  
-    Date: *\<DateTime>*  
-    Time: *\<DateTime>*  
-    User:N/A  
-    Computer: MUSGRAVE  
-    Description:  
-    Certificate Services denied request 9 because the requested certificate template is not supported by this CA. 0x80094800 (-2146875392). The request was for TED\administrator. Additional information: Denied by Policy Module. The request was for certificate template (\<template name>) that is not supported by the Certificate Services policy.
+  > Event Type:Warning  
+  > Event Source: CertificationAuthority  
+  > Event ID: 53  
+  >
+  > Description:  
+  > Active Directory Certificate Services denied request RequestID because The requested certificate template is not supported by this CA. 0x80094800 (-2146875392 CERTSRV_E_UNSUPPORTED_CERT_TYPE).  The request was for Template_name.  Additional information: Denied by Policy Module  0x80094800, The request was for a certificate template that is not supported by the Active Directory Certificate Services policy: Template_Info
+  
+- Error on CA When Certificate Services starts:
 
-## Error on CA When Certificate Services starts
-
-> Event Type:Error  
-Event Source:CertSvc  
-Event Category:None  
-Event ID: 78  
-Date: *\<DateTime>*  
-Time: *\<DateTime>*  
-User:N/A  
-Computer: MUSGRAVE  
-Description:  
-The "Enterprise and Stand-alone Policy Module" Policy Module logged the following error: The \<template name> Certificate Template could not be loaded. Element not found. 0x80070490 (WIN32: 1168).
+  > Event Type:Warning
+  > Event Source: CertificationAuthority  
+  > Event ID: 77  
+  > Description:  
+  > The "Windows default" Policy Module logged the following warning: The template_name Certificate Template could not be loaded.  Element not found. 0x80070490 (WIN32: 1168 ERROR_NOT_FOUND).

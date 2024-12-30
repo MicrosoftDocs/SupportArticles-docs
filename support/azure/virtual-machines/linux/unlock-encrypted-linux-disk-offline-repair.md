@@ -11,7 +11,7 @@ ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-linux
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ms.workload: infrastructure
-ms.date: 05/17/2022
+ms.date: 10/17/2024
 ms.author: diambroi
 ---
 # Unlocking an encrypted Linux disk for offline repair
@@ -100,7 +100,7 @@ Choose one of the following methods to unlock the encrypted disk:
 
 - If the disk is managed and encrypted by using ADE version 1, and your infrastructure and company policy allow you to assign a public IP address to a repair VM, use [Method 1: Unlock the encrypted disk automatically by using az vm repair command](#method1).
 - If your disk is both managed and encrypted by using ADE version 1, but your infrastructure or company policy prevent you from assigning a public IP address to a repair VM, use [Method 2: Unlock the encrypted disk by the Key file in the BEK volume](#method2). Another reason to choose this method is if you lack the permissions to create a resource group in Azure.
-- If either of these methods fails, or if the disk is unmanaged or encrypted by using ADE version 1 (dual-pass encryption), follow the steps in [Method 3](#method3) to unlock the disk.
+- If either of these methods fails, or if the disk is unmanaged or encrypted by using ADE version 0 (dual-pass encryption), follow the steps in [Method 3](#method3) to unlock the disk.
 
 ## <a name="method1"></a> Method 1: Unlock the encrypted disk automatically by using az vm repair command
 

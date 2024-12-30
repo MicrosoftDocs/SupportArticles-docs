@@ -5,9 +5,8 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Deduplication , csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Deduplication, csstroubleshoot
 ---
 # Files are corrupted on deduplicated volumes that were created as NTFS-compressed
 

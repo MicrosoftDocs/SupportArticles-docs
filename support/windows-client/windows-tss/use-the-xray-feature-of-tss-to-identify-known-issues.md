@@ -5,7 +5,6 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: tdimli, ronsto, ravikiran.s, gipauli, warrenw
 ms.custom: sap:Support Tools\Xray, csstroubleshoot
 ---

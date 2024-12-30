@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 14 for SQL Server 2022 (KB5038325)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 14 (KB5038325).
-ms.date: 08/19/2024
+ms.date: 09/11/2024
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5038325
 ms.reviewer: v-qianli2
 appliesto:
@@ -16,16 +16,41 @@ _Version:_ &nbsp; 16.0.4135.4
 
 ## Summary
 
-This article describes Cumulative Update package 14 (CU14) for Microsoft SQL Server 2022. This update contains 13 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 13, and it updates components in the following builds:
+This article describes Cumulative Update package 14 (CU14) for Microsoft SQL Server 2022. This update contains 12 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 13, and it updates components in the following builds:
 
 - SQL Server - Product version: **16.0.4135.4**, file version: **2022.160.4135.4**
 - Analysis Services - Product version: **16.0.43.233**, file version: **2022.160.43.233**
 
 ## Known issues in this update
 
-### Patching error for secondary replicas in an availability group with databases enabled replication, CDC, or SSISDB
+### Issue one: Patching error for secondary replicas in an availability group with databases enabled replication, CDC, or SSISDB
 
 [!INCLUDE [patching-error-2022](../includes/patching-error-2022.md)]
+
+### Issue two: SQL Server VSS Writer might fail to perform a backup because no database is available to freeze
+
+When backup tools such as Azure Recovery Vault perform a backup on a virtual machine (VM), they might fail to achieve application consistency. There might not be any errors. The application runs fast without any backups being done. The SQL Server Volume Shadow Copy Service (VSS) Writer ends up in a non-retryable error state. If you enable SQL Server VSS Writer trace, you might see the following exception, which indicates there's no database to freeze, resulting in an unsuccessful snapshot:
+
+```output
+[0543739500,0x002948:011b4:0xb87fa68e] sqlwriter.yukon\sqllib\snapsql.cpp(1058): Snapshot::Prepare: Server PROD-SQL01 has no databases to freeze
+```
+
+Additionally, some databases might be detected with `Online:0`:
+
+```output
+[0543739390,0x002948:0x11b4:0xb87fa68e] sqlwriter.yukon\sqllib\snapsql.cpp(0408): FrozenServer::FindDatabases2000: Examining database <ReportServerTempDB>
+Online:0 Standby:0 AutoClose:0 Closed:0
+```
+
+If you use Azure Recovery Vault, you might see an error like the following one in the event list:
+
+```output
+App-consistent recovery point generation failed.
+```
+
+The issue arises from a code change in SQL Server 2022 CU14 that checks if a database is online and ready to be frozen. The current solution is to roll back to SQL Server 2022 CU13 and perform the snapshot backup. For more information about how to roll back the package to a previous version, see [Uninstall a Cumulative Update from SQL Server](/sql/sql-server/install/uninstall-a-cumulative-update-from-sql-server).
+
+Microsoft is working on a fix for this issue and it will be available in a future CU.
 
 ## Improvements and fixes included in this update
 
@@ -47,7 +72,6 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=3157066>[3157066](#3157066) </a> | Adds performance monitor counters to the cluster log report when the health check timeout is reported.| SQL Server Engine | High Availability and Disaster Recovery | Windows|
 | <a id=3207515>[3207515](#3207515) </a> | [FIX: Memory exceeds the configured limits that are specified by memory.memorylimitmb in SQL Server (KB5042369)](memory-exceed-configured-limits-memory-memorylimitmb.md) | SQL Server Engine | Linux | Linux|
 | <a id=3155852>[3155852](#3155852) </a> | Fixes an assertion failure (Location: sosmemobj.cpp:2744; Expression: pvb->FInUse()) in `CVariableInfo::PviRelease` that you encounter when you use UTF-8 collations and the `WITH RESULT SETS` clause. | SQL Server Engine | Programmability | All|
-| <a id=3308723>[3308723](#3308723) </a> | Adds a validation for the `MODEL` parameter when running `PREDICT` to avoid errors due to the input of wrong models.| SQL Server Engine | Query Execution | All|
 | <a id=3157452>[3157452](#3157452) </a> | Fixes two issues related to cardinality estimation (CE) feedback: plan cache leaks and access violations due to race conditions with statement recompilations.| SQL Server Engine | Query Optimizer | All|
 | <a id=3236328>[3236328](#3236328) </a> | Improves cardinality estimation (CE) for predicates that request ranges disjoint with column statistics when statistics have only one histogram step. | SQL Server Engine | Query Optimizer | All|
 | <a id=3222639>[3222639](#3222639) </a> | Fixes an issue in which change tracking auto cleanup consumes CPU in cycles every 30 minutes even if change tracking isn't enabled on any databases. </br></br>**Note**: After applying the fix, if you see some rows in `sys.syscommittab` or `dbo.MSchange_tracking_history` tables in databases where change tracking is disabled, you need to re-enable and then disable change tracking on these databases. This will clean all tracking data. For more information, see [Enable and Disable Change Tracking](/sql/relational-databases/track-changes/enable-and-disable-change-tracking-sql-server). | SQL Server Engine | Replication | All|
@@ -59,7 +83,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 
 The following update is available from the Microsoft Download Center:
 
-:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2022 now](https://www.microsoft.com/download/details.aspx?familyid=4fa9aa71-05f4-40ef-bc55-606ac00479b1)
+:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2022 now](https://www.microsoft.com/download/details.aspx?id=105013)
 
 > [!NOTE]
 >

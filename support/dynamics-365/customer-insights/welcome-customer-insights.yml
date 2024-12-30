@@ -9,7 +9,7 @@ metadata:
   ms.service: customer-insights
   author: m-hartmann
   ms.author: mhart
-  ms.date: 06/13/2024
+  ms.date: 09/02/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -22,6 +22,8 @@ landingContent:
         links:
           - text: Data refresh fails and dataflow refresh is skipped
             url: data/data-ingestion/data-refresh-failed-skipped.md
+          - text: '"Delta Lake ingestion job failed to get version" error'
+            url: data/data-ingestion/delta-lake-ingestion-failed.md
           - text: '"Data source credentials are missing or invalid" error'
             url: data/data-ingestion/power-query-multi-factor-authentication.md
           - text: Power Query Text/CSV connector authentication fails

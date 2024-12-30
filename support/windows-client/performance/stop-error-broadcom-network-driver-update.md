@@ -4,7 +4,6 @@ description: Describes an issue that causes a stop error when you update an in-b
 ms.date: 05/10/2024
 ms.topic: troubleshooting
 audience: itpro
-localization_priority: medium
 manager: dcscontentpm
 ms.reviewer: kaushika,dougeby
 ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshooting, CI 113175

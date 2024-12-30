@@ -3,7 +3,7 @@ items:
   href: iis-welcome.yml
 - name: Active Server Pages
   items:
-  - name: Can't create objects when an application run
+  - name: Can't create objects when an application runs
     href: active-server-pages/cannot-create-object-asp-applications-run.md
   - name: Create GUIDs
     href: active-server-pages/create-guids-asp.md
@@ -124,8 +124,6 @@ items:
     href: site-behavior-performance/calling-postcompletion-cause-crash.md
   - name: Can't call MTS COM from ASP
     href: site-behavior-performance/server-execution-fail-call-mts-com-asp.md
-  - name: Default maximum stack size of a thread
-    href: site-behavior-performance/default-maximum-stack-size-thread.md
   - name: Event handles may leak
     href: site-behavior-performance/event-handles-leaked.md
   - name: Event ID 115 when you connect HTTPS websites
@@ -148,8 +146,6 @@ items:
     href: site-behavior-performance/http-500-response-binarywrite.md
   - name: Internet printing fails
     href: site-behavior-performance/internet-printing-fails.md
-  - name: Page can't be displayed when you connect through SSL
-    href: site-behavior-performance/page-cannot-displayed-when-you-connect-ssl.md
   - name: Worker Process takes much memory
     href: site-behavior-performance/work-process-takes-much-memory.md
 
@@ -167,7 +163,7 @@ items:
     href: www-administration-management/error-when-you-configure-32-bit-handlers.md
   - name: HTTP error 400 when you send requests
     href: www-administration-management/http-bad-request-response-kerberos.md
-  - name: HTTP error 500.0 when you visit a Web site
+  - name: HTTP error 500.0 when you visit a web site
     href: www-administration-management/http-error-500-when-you-visit-web-site.md
   - name: HTTP status code
     href: www-administration-management/http-status-code.md

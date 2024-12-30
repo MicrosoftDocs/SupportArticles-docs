@@ -1,8 +1,8 @@
 ---
 title: Unable to mount Azure file share
 description: Describes errors that cause the mounting of an Azure file share to fail and provides solutions.
-ms.date: 10/25/2023
-ms.reviewer: chiragpa, akscsscic, v-weizhu
+ms.date: 10/10/2024
+ms.reviewer: chiragpa, akscsscic, shoguo, v-weizhu, v-rekhanain
 ms.service: azure-kubernetes-service
 ms.custom: sap:Storage
 ---
@@ -240,6 +240,7 @@ Here are possible causes for this error:
 - [Cause 3: Connectivity is via a private link but nodes and the private endpoint are in different VNETs](#aksnotawareprivateipaddress)
 - [Cause 4: Storage account is set to require encryption that the client doesn't support](#akssmbencryption)
 - [Cause 5: Minimum encryption requirement for a storage account isn't met](#minimumencryption)
+- [Cause 6: Security profile is used without the NTLM v2 authentication enabled](#securityprofile)
 
 > [!NOTE]
 >
@@ -248,6 +249,7 @@ Here are possible causes for this error:
 > - Cause 3 applies to the private scenario only.
 > - Cause 4 applies to public and private scenarios.
 > - Cause 5 applies to public and private scenarios.
+> - Cause 6 applies to public and private scenarios.
 
 ### <a id="secretnotusecorrectstorageaccountkey"></a>Cause 1: Kubernetes secret doesn't reference correct storage account name or key
 
@@ -409,25 +411,39 @@ Enable the AES-128-GCM algorithm by using the **Maximum compatibility** profile 
 
 To successfully mount or access a file share, the AES-128-GCM encryption algorithm should be enabled for all storage accounts.
 
-If you want to use the AES-256-GCM encryption only, which is the maximum security (SMB 3.1.1), do the following:
+If you want to use the AES-256-GCM encryption only, do the following:
 
 #### Linux
 
 Use the following script to check if the client supports AES-256-GCM and enforce it only if it does:
 
 ```bash
-cifsConfPath="/etc/modprobe.d/cifs.conf" 
-echo "`date` before change ${cifsConfPath}:"
+cifsConfPath="/etc/modprobe.d/cifs.conf"
+echo "$(date) before change ${cifsConfPath}:"
 cat ${cifsConfPath}
-if !(( grep require_gcm_256 ${cifsConfPath} ))
-then
-modprobe cifs
-echo 1 > /sys/module/cifs/parameters/require_gcm_256
-echo "options cifs require_gcm_256=1" > ${cifsConfPath}
-echo "`date` after changing ${cifsConfPath}:"
-cat ${cifsConfPath}
+
+# Check if 'require_gcm_256' is already present in the configuration file
+if ! grep -q "require_gcm_256" "${cifsConfPath}"; then
+
+    # Load the CIFS module
+    modprobe cifs
+
+    # Set the parameter at runtime
+    echo 1 > /sys/module/cifs/parameters/require_gcm_256
+
+    # Persist the configuration
+    echo "options cifs require_gcm_256=1" >> "${cifsConfPath}"
+
+    echo "$(date) after changing ${cifsConfPath}:"
+    cat "${cifsConfPath}"
+else
+    echo "require_gcm_256 is already set in ${cifsConfPath}"
 fi
 ```
+
+You can also use a Kubernetes DaemonSet to enforce AES-256 on every node. See the following example:
+
+[support-cifs-aes-256-gcm.yaml](https://github.com/andyzhangx/demo/blob/master/aks/support-cifs-aes-256-gcm.yaml)
 
 #### Windows
 
@@ -439,6 +455,14 @@ Set-SmbClientConfiguration -EncryptionCiphers "AES_256_GCM" -Confirm:$false
 
 > [!NOTE]
 > The `EncryptionCiphers` parameter is available beginning with the 2022-06 Cumulative Update for Windows Server version 21H2 for x64-based systems ([KB5014665](https://support.microsoft.com/help/5014665)) and the Cumulative Update for Windows 11, version 22H2 ([KB5014668](https://support.microsoft.com/help/5014668)).
+
+### <a id="securityprofile"></a>Cause 6: Security profile is used without the NTLM v2 authentication enabled
+
+When you use the **Maximum security** profile or a **Custom** security profile without the **NTLM v2** authentication mechanism enabled, the mounting operation will fail with the "Mount error(13): Permission denied" error.
+
+#### Solution: Enable the NTLM v2 authentication or use the "Maximum compatibility" profile
+
+To mount it properly in AKS, you have to enable the **NTLM v2** authentication mechanism for the **Custom** security profile or use the **Maximum compatibility** security profile.
 
 ## More information
 

@@ -17,6 +17,16 @@ items:
   items:
   - name: SQL Server 2022 build versions
     href: sqlserver-2022/build-versions.md
+  - name: Cumulative Update 16
+    items:
+    - name: Cumulative Update 16 (KB5048033)
+      href: sqlserver-2022/cumulativeupdate16.md
+    - name: 'FIX: Database is suspended incorrectly when you run ALTER SERVER CONFIGURATION'
+      href: sqlserver-2022/database-suspend-incorrect-run-alter-server-configuration.md
+  - name: Cumulative Update 15
+    items:
+    - name: Cumulative Update 15 (KB5041321)
+      href: sqlserver-2022/cumulativeupdate15.md
   - name: Cumulative Update 14
     items:
     - name: Cumulative Update 14 (KB5038325)
@@ -89,6 +99,14 @@ items:
   items:
   - name: SQL Server 2019 build versions
     href: sqlserver-2019/build-versions.md
+  - name: Cumulative Update 30
+    items:
+    - name: Cumulative Update 30 (KB5049235)
+      href: sqlserver-2019/cumulativeupdate30.md
+  - name: Cumulative Update 29
+    items:
+    - name: Cumulative Update 29 (KB5046365)
+      href: sqlserver-2019/cumulativeupdate29.md
   - name: Cumulative Update 28
     items:
     - name: Cumulative Update 28 (KB5039747)

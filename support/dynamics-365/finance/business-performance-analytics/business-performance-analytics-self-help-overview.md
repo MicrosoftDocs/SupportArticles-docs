@@ -4,15 +4,12 @@ description: Provides information about Business performance analytics self-help
 author: jinniew
 ms.author: jiwo
 ms.reviewer: twheeloc 
-ms.date: 04/30/2024
+ms.date: 12/17/2024
 ms.custom: sap:Business intelligence, reporting, analytics
 ms.search.form: business-performance-analytics
 audience: Application User
 ---
 # Business performance analytics self-help
-
-> [!NOTE]
-> The functionality that's described in this article is available as part of a preview release. The functionality and the content of this article are subject to change. For more information about how to participate in the public preview for [Business performance analytics](/dynamics365/finance/business-performance-analytics/business-performance-analytics-home-page), contact <bpaquestions@service.microsoft.com>.
 
 To maintain the accuracy of report data, business performance analytics assesses the quality of the source data. If the assessments don't meet defined rules, business performance analytics logs information in the **Bpa self help logs** table in Microsoft Dataverse. This table provides insights into issues and helps you take appropriate action.
 
@@ -54,6 +51,10 @@ For information about specific errors or warnings, see the following articles:
 - [Missing main account in general ledger: Error code: ERR00010 [Type: Warning]](missing-main-account-in-gl-err00010.md)
 - [Decimal limit exceeded: Error code: ERR00011 [Type: Warning]](decimal-limit-exceed-err00011.md)
 - [Decimal auto rounding: Error code: ERR00012 [Type: Warning]](decimal-auto-rounding-err00012.md)
+- [Null check violation: Error code: ERR00013 [Type: Warning]](budget-check-err00013.md)
+- [Null join violation: Error code: ERR00014 [Type: Warning]](ledger-join-err00014.md)
+- [Data quality error: Error code: ERR00015 [Type: Warning]](data-quality-err00015.md)
+- [Output table is empty: Error code: ERR00016 [Type: Info]](empty-entities-err00016.md)
 
 ## See also
 

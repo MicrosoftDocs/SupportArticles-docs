@@ -1,17 +1,19 @@
 ---
 ms.service: azure-virtual-machines
 ms.topic: include
-ms.date: 07/12/2024
+ms.date: 10/28/2024
 ---
 
 > [!NOTE]
 > This mitigation applies only for Generation 1 VMs. Generation 2 VMs (using UEFI) don't use an active partition.
 
-1. Delete the VM. Make sure that you select the **Keep the disks** option when you do this.
+1. [Attach the system disk to a recovery VM](../../azure/virtual-machines/windows/troubleshoot-recovery-disks-portal-windows.md).
 
-2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](/azure/virtual-machines/windows/attach-managed-disk-portal).
+2. Start a Remote Desktop connection to the recovery VM.
 
-3. Connect to the troubleshooting VM. Open **Computer management** > **Disk management**. Make sure that the OS disk is online and that its partitions have drive letters assigned.
+3. Open **Computer management** > **Disk management**. Make sure that the disk is flagged as **Online** in the Disk Management console. Note the drive letter that is assigned to the attached system disk.
+
+    :::image type="content" source="../../azure/virtual-machines/windows/media/os-not-found/disk-attached-to-rescue-vm-in-disk-management.png" alt-text="Screenshot that shows the disk attached to the recovery VM." lightbox="../../azure/virtual-machines/windows/media/os-not-found/disk-attached-to-rescue-vm-in-disk-management.png":::
 
 4. Identify the Boot partition and Windows partition. If there's only one partition on the OS disk, this partition is both Boot partition and Windows partition.
 
@@ -49,7 +51,7 @@ ms.date: 07/12/2024
       sel partition 1
       ```
 
-      :::image type="content" source="../../azure/virtual-machines/windows/media/windows-vm-verify-set-active-partition/list-partition.png" alt-text="The diskpart window shows outputs of list partition and sel partition 1 commands. Partition 1 is the selected disk.":::
+      :::image type="content" source="../../azure/virtual-machines/windows/media/windows-vm-verify-set-active-partition/list-partition.png" alt-text="Screenshot that shows the 'Partition 1' is the selected partition.":::
 
    4. Check the status of the partition. In our example, Partition 1 is not active.
 

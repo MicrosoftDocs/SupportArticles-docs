@@ -3,7 +3,7 @@ title: Troubleshoot grid issues in model-driven apps
 description: Provides a resolution for grid issues in model-driven apps in Microsoft Power Apps.
 ms.reviewer: tapanm, moroch, dinusc
 ms.custom: sap:Using grids and lists in model-driven apps
-ms.date: 08/16/2024
+ms.date: 10/10/2024
 author: fikaradz
 ms.author: fikaradz
 ---
@@ -16,6 +16,7 @@ This guide helps you resolve the following grid issues that occur in a Power App
 - [Can't edit data in the grid after enabling editing mode](cannot-edit-data-in-the-grid-in-editing-mode.md).
 - [Grid or subgrid displays incorrect content](grid-or-subgrid-displays-incorrect-content.md).
 - [Grid or subgrid doesn't display all the records](grid-or-subgrid-not-display-all-records.md).
+- [Grid filter for a lookup column doesn't show any suggestions](grid-filter-not-showing-any-suggestions.md).
 - [Modern Advanced Find doesn't work correctly](modern-advanced-find-not-work-correctly.md).
 - [Nested grid doesn't display data](nested-grid-not-display-data.md).
 - [Quick Find doesn't return correct results](quick-find-not-produce-correct-results.md).

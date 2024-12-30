@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot connections to pods and services within an AKS cluster
 description: Troubleshoot connections to pods and services (internal traffic) from within an Azure Kubernetes Service (AKS) cluster.
-ms.date: 11/04/2022
+ms.date: 08/28/2024
 ms.reviewer: chiragpa, rissing, v-leedennis
 editor: v-jsitser
 ms.service: azure-kubernetes-service
@@ -40,7 +40,7 @@ Set up the test pod and make sure that the required port is open on the remote s
    apt-get update -y
    apt-get install dnsutils -y
    apt-get install curl -y
-   apt-get install netcat -y
+   apt-get install netcat-openbsd -y
    ```
 
 1. After the packages are installed, run the following cURL command to test the connectivity to the IP address of the pod:
@@ -85,11 +85,13 @@ Using kubectl and cURL at the command line, follow these steps to check that eve
    kubectl logs <pod-name> -n <namespace-name> -c <container-name>
    ```
 
-1. If the application that's inside the pod restarts repeatedly, view the `stdout` dump pod logs of a previous container instance to get the exit messages. For the multicontainer case, get the exit messages by viewing the `stdout` dump pod container logs for a previous container instance:
+1. If the application that's inside the pod restarts repeatedly, view pod logs of a previous container instance to get the exit messages:
 
    ```bash
    kubectl logs <pod-name> --previous                      
    ```
+
+   For the multicontainer case, use the following command:
 
    ```bash
    kubectl logs <pod-name> -c <container-name> --previous  

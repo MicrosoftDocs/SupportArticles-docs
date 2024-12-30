@@ -5,7 +5,6 @@ ms.date: 02/06/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika
 ---
 # Setup upgrade and drivers troubleshooting documentation for Windows clients

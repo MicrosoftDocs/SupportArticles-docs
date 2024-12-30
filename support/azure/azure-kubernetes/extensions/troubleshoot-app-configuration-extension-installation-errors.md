@@ -1,23 +1,19 @@
 ---
-title: Troubleshoot Azure App Configuration extension (Preview) installation errors 
-description: Troubleshoot errors that occur while installing the Azure App Configuration extension (Preview) for Azure Kubernetes Service (AKS).
-author: RichardChen820
-ms.author: junbchen
+title: Troubleshoot Azure App Configuration extension installation errors 
+description: Troubleshoot errors that occur while installing the Azure App Configuration extension for Azure Kubernetes Service (AKS).
 editor: v-jsitser
-ms.reviewer: v-leedennis
+ms.reviewer: junbchen, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
-ms.date: 05/28/2024
+ms.date: 10/15/2024
 ms.custom: sap:Extensions, Policies and Add-Ons
 ---
-# Troubleshoot Azure App Configuration extension (Preview) installation errors
+# Troubleshoot Azure App Configuration extension installation errors
 
 This article discusses some common error scenarios that you might encounter when you install or update the [Azure App Configuration extension](/azure/aks/azure-app-configuration) for Microsoft Azure Kubernetes Service (AKS).
 
 > [!NOTE]
 >
-> - This issue applies to only the Preview version of the extension.
->
-> - If the Azure App Configuration extension was successfully installed but you experience issues while using it, see the [Azure App Configuration Kubernetes Provider troubleshooting guide](/azure/azure-app-configuration/quickstart-azure-kubernetes-service#troubleshooting).
+> If the Azure App Configuration extension was successfully installed but you experience issues while using it, see the [Azure App Configuration Kubernetes Provider troubleshooting guide](/azure/azure-app-configuration/quickstart-azure-kubernetes-service#troubleshooting).
 
 ## Scenario 1: Azure App Configuration Kubernetes Provider is already installed
 
@@ -51,7 +47,7 @@ Try again to install the extension. Make sure that you use a [supported version 
 
 ## Scenario 3: The targeted Azure App Configuration extension version exists but not in the specified region
 
-Because some versions of Azure App Configuration extension aren't available in all regions, you might receive the following error message:
+Because Azure App Configuration extension aren't available in all AKS regions, you might receive the following error message:
 
 > (ExtensionTypeRegistrationGetFailed) Extension type microsoft.appconfiguration is not registered in region \<region-name>.
 >
@@ -61,7 +57,7 @@ Because some versions of Azure App Configuration extension aren't available in a
 
 ### Solution 3: Install in a different region
 
-Run the installation in a [region in which your Azure App Configuration extension is supported](/azure/aks/azure-app-configuration#regions).
+Run the installation in a [region](/azure/aks/cluster-extensions#cluster-extension-requirements) that the cluster extension supports.
 
 ## Next steps
 

@@ -1,8 +1,8 @@
 ---
 title: Direct connectivity issues in Power Automate for desktop
 description: Provides more information about how to solve the direct connectivity issues in Power Automate for desktop.
-ms.reviewer: guco, madiazor, johndund
-ms.date: 08/05/2024
+ms.reviewer: guco, madiazor, johndund, qliu
+ms.date: 11/21/2024
 ms.custom: sap:Desktop flows\Power Automate for desktop errors
 ---
 # Direct connectivity issues in Power Automate for desktop
@@ -38,6 +38,9 @@ Direct to machine connectivity uses Azure WCF relays to allow the Microsoft clou
 The most common cause of relay connectivity issues is the machine losing connection to the network. This can be caused by your machine not being powered on or losing network when no user is signed in to the machine for instance.
 
 The Power Automate service runs under its own Windows account (NT Service\UIFlowService by default) which must have access to the network and be able to connect to _*.servicebus.windows.net_ (for more information, see [network requirements](/power-automate/ip-address-configuration#desktop-flows-services-required-for-runtime).)
+
+> [!NOTE]
+> If you use an Azure virtual machine (VM) to run Power Automate for desktop, make sure the Microsoft.ServiceBus endpoint is turned off at the subnet level where the Azure VM is located. This is a known limitation. For more information, see [Azure Relay doesn't support network service endpoints](/azure/azure-relay/network-security).
 
 If the machine and Power Automate service have reliable access to the network, the next likeliest source of issues is the on-premises network blocking or interfering with Azure relay connections.
 

@@ -5,7 +5,6 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, robsim, cpuckett
 ms.custom: sap:Clustering and High Availability\Errors when running the Validation Wizard, csstroubleshoot
 ---

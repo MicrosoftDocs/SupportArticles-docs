@@ -5,9 +5,8 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, v-jeffbo
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Volume Shadow Copy Service (VSS) , csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Volume Shadow Copy Service (VSS), csstroubleshoot
 ---
 # Third-party backup warnings after you install a servicing update in Windows Server 2016
 

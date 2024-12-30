@@ -1,7 +1,7 @@
 ---
 title: A button on the command bar has incorrect labels
 description: Introduces how to troubleshoot issues with command buttons not showing the correct label text in Microsoft Power Apps.
-ms.date: 09/25/2023
+ms.date: 09/10/2024
 ms.reviewer: tahoon
 ms.custom: sap:Configuring model-driven app commands\Command is not shown or hidden as expected
 ---
@@ -61,6 +61,10 @@ You can [customize labels and create translations for classic commands](/power-a
 #### Check solution layering
 
 If the correct LocLabel is present in a solution, there might be other solutions that override it. [View label solution layers](#check-if-correct-translations-are-present) and check if a higher solution has defined the same LocLabel.
+
+#### Check if label IDs match exactly in the letter casing
+
+Label IDs are case-sensitive when matching IDs in the ribbon XML to localized label values. The button's **LabelText** should contain a valid LocLabel reference that exactly matches the casing of the ID of a LocLabel record.
 
 ## Reference
 

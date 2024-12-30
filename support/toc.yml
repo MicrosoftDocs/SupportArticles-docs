@@ -23,6 +23,8 @@
 - name: Welcome
   href: azure/index.yml
 - name: Welcome
+  href: entra/welcome-entra.yml
+- name: Welcome
   href: sql/welcome-sql-server.yml
 - name: Welcome
   href: dynamics-365/index.yml

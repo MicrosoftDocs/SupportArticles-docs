@@ -8,7 +8,6 @@ ms.topic: troubleshooting
 ms.reviewer: warren-msft, kimberj, v-jayaramanp
 ms.custom: sap:Application Technologies and Compatibility\Windows Script Host (CScript or WScript), csstroubleshoot
 audience: itpro
-localization_priority: medium
 ---
 # Managing the Teams Chat icon on Windows 11
 

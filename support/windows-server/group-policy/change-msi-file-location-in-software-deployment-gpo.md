@@ -5,9 +5,8 @@ ms.date: 04/09/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, anshg
-ms.custom: sap:Group Policy\Deploying software through Group Policy , csstroubleshoot
+ms.custom: sap:Group Policy\Deploying software through Group Policy, csstroubleshoot
 ---
 # How to change the MSI file location in the Software Deployment GPO (Multiple UNC paths for same package)
 

@@ -5,7 +5,6 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: high
 ms.reviewer: kaushika, hikono
 ms.custom: sap:Application Technologies and Compatibility\DCOM service startup and permissions, csstroubleshoot
 adobe-target: true

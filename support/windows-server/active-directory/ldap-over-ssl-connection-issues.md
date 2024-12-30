@@ -1,11 +1,10 @@
 ---
 title: Troubleshoot LDAP over SSL connection problems
 description: Describes how to troubleshoot connection problems that involve LDAP over SSL (LDAPS).
-ms.date: 12/26/2023
+ms.date: 10/22/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:Active Directory\LDAP configuration and interoperability, csstroubleshoot
 ---
@@ -13,7 +12,7 @@ ms.custom: sap:Active Directory\LDAP configuration and interoperability, csstrou
 
 This article discusses steps about how to troubleshoot LDAP over SSL (LDAPS) connection problems.
 
-_Applies to:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2019, Windows Server 2022  
 _Original KB number:_ &nbsp; 938703
 
 ## Step 1: Verify the Server Authentication certificate

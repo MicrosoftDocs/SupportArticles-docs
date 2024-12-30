@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot QuotaExceeded error code
 description: Learn how to troubleshoot the QuotaExceeded error when you try to upgrade an Azure Kubernetes Service cluster.
-ms.date: 07/28/2022
+ms.date: 09/16/2024
 editor: v-jsitser
 ms.reviewer: chiragpa, v-leedennis
 ms.service: azure-kubernetes-service

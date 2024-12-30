@@ -1,13 +1,12 @@
 ---
 title: Windows 10 upgrade quick fixes
 description: Learn how to quickly resolve many problems, which may come up during a Windows 10 upgrade.
-ms.date: 05/10/2024
+ms.date: 10/14/2024
 manager: dcscontentpm
 ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
 ms.topic: troubleshooting
-ms.reviewer: dougeby,aaroncz
+ms.reviewer: dougeby, aaroncz, kaushika
 audience: itpro
-localization_priority: medium
 ---
 
 # Windows 10 upgrade quick fixes
@@ -20,8 +19,6 @@ _Applies to:_ &nbsp; Windows 10
 > For IT professionals, check more information in [Resolve Windows 10 upgrade errors](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors).
 
 The following list of fixes can resolve many Windows upgrade problems. You should try these steps before contacting Microsoft support, or attempting a more advanced analysis of a Windows upgrade failure. Also review information at [Windows 10 help](https://support.microsoft.com/products/windows?os=windows-10).
-
-The Microsoft Virtual Agent provided by [Microsoft Support](https://support.microsoft.com/contactus/) can help you to analyze and correct some Windows upgrade errors.
 
 > [!TIP]
 > You might also wish to try a new tool available from Microsoft that helps to diagnose many Windows upgrade errors. For more information and to download this tool, see [SetupDiag](/windows/deployment/upgrade/setupdiag). The topic is more advanced (300 level) because several advanced options are available for using the tool. However, you can now just download and then double-click the tool to run it. By default when you click Save, the tool is saved in your *Downloads* folder. Double-click the tool in the folder and wait until it finishes running (it might take a few minutes), then double-click the *SetupDiagResults.log* file and open it using Notepad to see the results of the analysis.
@@ -101,10 +98,6 @@ The Windows Update Troubleshooter tool will automatically analyze and fix proble
 
 To run the tool, select the appropriate link above. Your web browser will prompt you to save or open the file. Select **open** and the tool will automatically start. The tool will walk you through analyzing and fixing some common problems.
 
-You can also download the Windows Update Troubleshooter by starting the Microsoft [Virtual Agent](https://support.microsoft.com/contact/virtual-agent/), typing *update Windows*, selecting the version of Windows you're running, and then answering **Yes** when asked "Do you need help troubleshooting Windows Update?"
-
-If any errors are displayed in the Windows Update Troubleshooter, use the Microsoft [Virtual Agent](https://support.microsoft.com/contact/virtual-agent/) to ask about these errors. The Virtual Agent will perform a search and provide a list of helpful links.
-
 ### Repair system files
 
 This fix is also described in detail at [answers.microsoft.com](https://answers.microsoft.com/EN-US/windows/forum/all/sfc-scannow/bc609315-da1f-4775-812c-695b60477a93).
@@ -149,10 +142,6 @@ To check and repair system files:
 ### Update Windows
 
 You should ensure that all important updates are installed before attempting to upgrade. This includes updates to hardware drivers on your computer.
-
-The Microsoft [Virtual Agent](https://support.microsoft.com/contact/virtual-agent/) can walk you through the process of making sure that Windows is updated.
-
-Start the [Virtual Agent](https://support.microsoft.com/contact/virtual-agent/) and then type *update windows*.
 
 Answer questions that the agent asks, and follow instructions to ensure that Windows is up to date. You can also run the [Windows Update Troubleshooter](#windows-update-troubleshooter) described above.
 

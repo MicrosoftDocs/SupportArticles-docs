@@ -5,7 +5,6 @@ ms.date: 03/11/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: high
 ms.reviewer: kaushika, herbertm
 ms.custom: sap:User Logon and Profiles\Service Account and Interactive User Logon Issues and Credential Providers, csstroubleshoot
 adobe-target: true

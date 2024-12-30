@@ -6,7 +6,7 @@ author: AndreiBarbu95
 ms.author: andbar
 editor: v-jsitser
 ms.reviewer: avtakkar, v-rekhanain, v-leedennis
-ms.service: azure-container-instances
+ms.service: azure-container-registry
 ms.topic: troubleshooting-problem-resolution
 ms.custom: sap:Image Pull Issues
 #Customer intent: As an Azure Container Registry user, I want to fix an "unauthorized: authentication required" error so that I can pull a container image or artifact successfully.

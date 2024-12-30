@@ -5,7 +5,6 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:Remote Desktop Services and Terminal Services\Performance (audio and video) and RemoteFX, csstroubleshoot
 ---
@@ -96,3 +95,4 @@ You must enable the RemoteFX Windows Firewall rule manually if you enable Remote
 
 4. Using PowerShell script provided on [Microsoft TechNet Script Center](https://go.microsoft.com/fwlink/?linkid=184804) to configure VDI desktops.
 5. Upgrading to Windows 7 with SP1 on a virtual desktop that already had Remote Desktop enabled.
+

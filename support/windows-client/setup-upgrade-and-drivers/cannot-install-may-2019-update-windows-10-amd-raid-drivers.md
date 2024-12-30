@@ -5,7 +5,6 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, paudina, mingcheh, caroul, v-jesits, v-tea, tlavoy
 ms.custom: sap:Windows Device and Driver Management\System driver installation or update, csstroubleshoot
 ---

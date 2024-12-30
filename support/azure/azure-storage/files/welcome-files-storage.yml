@@ -30,7 +30,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Create file share throttling alerts
-            url: alerts/files-troubleshoot-create-alerts.md
+            url: /azure/storage/files/files-monitoring-alerts?context=/troubleshoot/azure/azure-storage/files/context/context
           - text: Troubleshoot Azure Files
             url: connectivity/files-troubleshoot.md
           - text: Troubleshoot Azure Files connectivity (SMB)

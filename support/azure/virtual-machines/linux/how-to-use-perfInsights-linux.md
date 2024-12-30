@@ -12,7 +12,7 @@ ms.collection: linux
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.topic: troubleshooting
-ms.date: 05/14/2024
+ms.date: 12/04/2024
 ms.author: genli
 ---
 # Troubleshoot Linux virtual machine performance issues with Performance Diagnostics (PerfInsights)
@@ -215,7 +215,7 @@ The following categories of rules are currently supported:
 
 ### Known issues
 
-- RHEL 8 does not have Python installed by default. To run PerfInsights Linux, you must first install Python 3.6 or a later version.
+- RHEL 8 doesn't have Python installed by default because both Python 2 and Python 3.6 are available. To install Python 3.6, run the `yum install python3` command.
 
 - Guest Agent information collection may fail on CentOS 6.x.
 

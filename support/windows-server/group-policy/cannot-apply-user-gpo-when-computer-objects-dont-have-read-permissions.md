@@ -7,7 +7,6 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstroubleshoot
 keywords: GPMC, Group Policy, permissions, user policies

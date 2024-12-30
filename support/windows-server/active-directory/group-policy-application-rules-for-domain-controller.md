@@ -1,11 +1,10 @@
 ---
 title: Group policy application rules for domain controllers
 description: Describes group policy application rules for domain controllers.
-ms.date: 12/26/2023
+ms.date: 11/04/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, jseifert
 ms.custom: sap:Active Directory\DCPromo and the installation or removal of domain controllers, csstroubleshoot
 ---
@@ -17,9 +16,9 @@ _Original KB number:_ &nbsp; 259576
 
 ## Summary
 
-Domain controllers pull some security settings only from group policy objects linked to the root of the domain. Because domain controllers share the same account database for the domain, certain security settings must be set uniformly on all domain controllers. This ensures the members of the domain have a consistent experience regardless of which domain controller they use to log on. Windows 2000 accomplishes this task by allowing only certain setting in the group policy to be applied to domain controllers at the domain level. This group policy behavior is different for member server and workstations.
+Domain controllers pull some security settings only from group policy objects linked to the root of the domain. Because domain controllers share the same account database for the domain, certain security settings must be set uniformly on all domain controllers. This ensures the members of the domain have a consistent experience regardless of which domain controller they use to log on. Windows accomplishes this task by allowing only certain setting in the group policy to be applied to domain controllers at the domain level. This group policy behavior is different for member server and workstations.
 
-The following settings are applied to domain controllers in Windows 2000 only when the group policy is linked to the Domain container:
+The following settings are applied to domain controllers in Windows when the group policy is linked to the Domain container:
 
 - All settings in **Computer Configuration/Windows Settings/Security Settings/Account Policies** (This includes all of the Account Lockout, Password, and Kerberos policies.)
 
@@ -29,7 +28,7 @@ The following settings are applied to domain controllers in Windows 2000 only wh
   - Rename administrator account
   - Rename guest account
 
-The following settings are applied to Windows Server 2003-based domain controllers only when the group policy is linked to the domain container. (The settings are located in **Computer Configuration/Windows Settings/Security Settings/Local Policies/Security Options**.)
+The following settings are applied to Windows-based domain controllers only when the group policy is linked to the domain container. (The settings are located in **Computer Configuration/Windows Settings/Security Settings/Local Policies/Security Options**.)
 
 - Accounts: Administrator account status
 - Accounts: Guest account status

@@ -141,4 +141,12 @@ items:
       href: azure-monitor-agent/migration/step-3-configure-data-collections.md
     - name: Step 4 - Test data collections in Azure Monitor Agent
       href: azure-monitor-agent/migration/step-4-test-data-collections-azure-monitor-agent.md
+  - name: Troubleshoot Azure Monitor Agent installation issues on Windows virtual machines
+    items:
+    - name: Preparation for troubleshooting
+      href: azure-monitor-agent/ama-windows-installation-issues-prepare-troubleshooting.md
+    - name: Detailed troubleshooting steps
+      href: azure-monitor-agent/ama-windows-installation-issues-detailed-troubleshooting-steps.md
+    - name: Advanced troubleshooting steps
+      href: azure-monitor-agent/ama-windows-installation-issues-advanced-troubleshooting-steps.md
 

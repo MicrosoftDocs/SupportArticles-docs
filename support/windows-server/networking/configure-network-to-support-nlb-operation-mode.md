@@ -5,7 +5,6 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:Network Connectivity and File Sharing\Network Load Balancing (NLB), csstroubleshoot
 ---
@@ -169,3 +168,4 @@ For more information about how to deploy and maintain NLB, see the following res
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 [!INCLUDE [Third-party contact disclaimer](../../includes/third-party-contact-disclaimer.md)]
+

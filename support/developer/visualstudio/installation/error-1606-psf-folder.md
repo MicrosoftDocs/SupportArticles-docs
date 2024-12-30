@@ -20,6 +20,7 @@ When you try to install Microsoft Visual Studio on a Mac that’s running Parall
 
 ## Resolution
 
-To fix this issue, see [Windows cannot access the \\Mac\Home\Desktop notification](http://kb.parallels.com/115026), and then reinstall the “Parallels Tools” integration part that is specific to Macs that are running Parallels.
+To fix this issue, see [Windows cannot access the \\Mac\Home\Desktop notification](https://kb.parallels.com/115026), and then reinstall the “Parallels Tools” integration part that is specific to Macs that are running Parallels.
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-contact-disclaimer.md)]
+

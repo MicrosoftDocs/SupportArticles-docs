@@ -8,7 +8,6 @@ ms.collection: highpri
 ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
 ms.reviewer: dougeby,aaroncz
 audience: itpro
-localization_priority: medium
 ---
 # Windows 10 upgrade resolution procedures
 

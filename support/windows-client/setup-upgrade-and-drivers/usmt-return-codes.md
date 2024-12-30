@@ -7,7 +7,6 @@ ms.date: 12/26/2023
 ms.topic: troubleshooting
 ms.custom: sap:Windows Setup, Upgrade and Deployment\User State Migration Tool (USMT), csstroubleshoot
 audience: itpro
-localization_priority: medium
 ---
 # User State Migration Tool (USMT) return codes
 

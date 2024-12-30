@@ -1,7 +1,7 @@
 ---
 title: Traffic between node pools is blocked by a custom NSG
 description: Resolve blocked traffic between node pools by a custom network security group (NSG) within an Azure Kubernetes Service (AKS) cluster.
-ms.date: 11/04/2022
+ms.date: 09/23/2024
 ms.reviewer: chiragpa, rissing, v-leedennis
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to fix a scenario in which traffic between node pools is blocked by a network security group (NSG) so that I don't experience outbound connection issues from an Azure Kubernetes Service (AKS) cluster.

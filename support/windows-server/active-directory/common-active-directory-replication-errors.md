@@ -5,7 +5,6 @@ ms.date: 04/10/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, arrenc, justintu
 ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---

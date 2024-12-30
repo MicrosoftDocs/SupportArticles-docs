@@ -5,7 +5,6 @@ ms.date: 07/16/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, jeffhugh
 ms.custom: sap:Backup, Recovery, Disk, and Storage\Data corruption and disk errors, csstroubleshoot
 ---

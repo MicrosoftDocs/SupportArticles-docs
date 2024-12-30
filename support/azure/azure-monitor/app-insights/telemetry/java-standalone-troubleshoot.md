@@ -2,7 +2,7 @@
 title: Troubleshoot Azure Monitor Application Insights for Java
 description: This article presents troubleshooting information for the Java agent for Azure Monitor Application Insights.
 ms.topic: conceptual
-ms.date: 06/24/2024
+ms.date: 11/06/2024
 editor: v-jsitser
 ms.reviewer: aaronmax, jeanbisutti, trstalna, toddfous, heya, v-leedennis
 ms.service: azure-monitor
@@ -230,14 +230,28 @@ If you're using Java 9 or a later version, check to make sure that the JVM inclu
 
 Otherwise, these cipher suites should already be part of modern Java 8+ distributions. We recommend that you check the source of your installed Java distribution to investigate why the security providers in that Java distribution's *java.security* configuration file differ from standard Java distributions.
 
-## Slow startup time in Application Insights and Java 8
+## Slow startup time in Application Insights 
+
+### Java 8
+
 Java 8 has a known issue that's related to the JAR file signature verification of Java agents. This issue can increase the startup time in Application Insights. To fix this issue, you can apply one of the following options:
 
 - If your application is based on Spring Boot, [programmatically attach the Application Insights Java agent to the JVM](/azure/azure-monitor/app/java-spring-boot#enabling-programmatically).
 
 - Use Java version 11 or a later version.
 
-Alternatively, you can try the following experimental feature: [Startup time improvement for a limited number of CPU cores](https://github.com/microsoft/ApplicationInsights-Java/wiki/Start-up-time-improvement-with-a-limited-number-of-CPU-cores-(experimental)). If you experience any issues while using this feature, send us feedback.
+### Java higher than version 8
+
+To fix this issue with the Application Insights Java agent, try one of the following methods:
+
+- Use an Azure configuration with more CPU power.
+- Disable some instrumentations described in [Suppress specific autocollected telemetry](/azure/azure-monitor/app/java-standalone-config#suppress-specific-autocollected-telemetry).
+- Try this experimental feature: [Startup time improvement for a limited number of CPU cores](https://github.com/microsoft/ApplicationInsights-Java/wiki/Start-up-time-improvement-with-a-limited-number-of-CPU-cores-(experimental)). If you experience any issues while using this feature, send us a feedback.
+
+You can also try the [monitoring solutions for Java native](/azure/azure-monitor/app/opentelemetry-enable?tabs=java-native) also applicable to a JVM-based application:
+
+- With Spring Boot, the Microsoft distribution of the OpenTelemetry starter.
+- With Quarkus, the Quarkus Opentelemetry Exporter for Microsoft Azure.
 
 [!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
 

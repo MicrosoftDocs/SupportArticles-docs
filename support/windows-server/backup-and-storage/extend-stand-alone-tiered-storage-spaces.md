@@ -5,7 +5,6 @@ ms.date: 08/13/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.localizationpriority: medium
 ms.reviewer: kaushika, v-mafect, jeffhugh
 ms.custom: sap:Backup, Recovery, Disk, and Storage\Storage spaces, csstroubleshoot
 ---

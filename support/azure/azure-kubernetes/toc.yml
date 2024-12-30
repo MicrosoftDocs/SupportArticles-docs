@@ -27,7 +27,7 @@
       href: create-upgrade-delete/error-code-missingsubscriptionregistration.md
     - name: OperationNotAllowed or PublicIPCountLimitReached error
       href: create-upgrade-delete/error-code-operationnotallowed-publicipcountlimitreached.md
-    - name: OperationPreempted error
+    - name: AKSOperationPreempted error
       href: create-upgrade-delete/error-code-operationpreempted.md
     - name: OutboundConnFailVMExtensionError error (50)
       href: create-upgrade-delete/error-code-outboundconnfailvmextensionerror.md
@@ -49,14 +49,14 @@
       href: create-upgrade-delete/windows-cse-error-check-api-server-connectivity.md
     - name: ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error
       href: create-upgrade-delete/error-code-zonalallocationfailed-allocationfailed.md
-    - name: Quota exceeded error during creation or upgrade
+    - name: QuotaExceeded or InsufficientVCPUQuota error during creation or upgrade
       href: create-upgrade-delete/quota-exceeded-during-creation-upgrade.md
   - name: Upgrade operations
     items:
     - name: AADSTS7000222 - BadRequest or InvalidClientSecret error
       href: create-upgrade-delete/error-code-badrequest-or-invalidclientsecret.md
-    - name: Kubernetes 1.16 upgrades fail
-      href: create-upgrade-delete/upgrades-to-kubernetes-fail-using-node-labels.md
+    - name: DnsServiceIpOutOfServiceCidr error
+      href: create-upgrade-delete/error-code-dnsserviceIpoutofservicecidr.md
     - name: NodePoolMcVersionIncompatible error
       href: create-upgrade-delete/nodepoolmcversionincompatible-error.md
     - name: PublicIPCountLimitReached error
@@ -81,24 +81,16 @@
       href: create-upgrade-delete/aks-memory-saturation-after-upgrade.md
   - name: Delete operations
     items:
-    - name: CannotDeleteLoadBalancerWithPrivateLinkService error
+    - name: LB/PvtLinkSvcWithPvtEndptConn deletion error
       href: create-upgrade-delete/cannot-delete-load-balancer-private-link-service.md
-    - name: InUseNetworkSecurityGroupCannotBeDeleted error
+    - name: PublicIPAddr/InUseSubnet/NetSecGrp deletion error
       href: create-upgrade-delete/cannot-delete-ip-subnet-nsg.md
     - name: InUseRouteTableCannotBeDeleted error
       href: create-upgrade-delete/error-code-inuseroutetablecannotbedeleted.md
-    - name: InUseSubnetCannotBeDeleted error
-      href: create-upgrade-delete/cannot-delete-ip-subnet-nsg.md
     - name: LoadBalancerInUseByVirtualMachineScaleSet error
       href: create-upgrade-delete/load-balancer-or-nsg-in-use-by-vm-scale-set.md
     - name: NetworkSecurityGroupInUseByVirtualMachineScaleSet error
       href: create-upgrade-delete/load-balancer-or-nsg-in-use-by-vm-scale-set.md
-    - name: PrivateLinkServiceWithPrivateEndpointConnectionsCannotBeDeleted error
-      href: create-upgrade-delete/cannot-delete-load-balancer-private-link-service.md
-    - name: PublicIPAddressCannotBeDeleted error
-      href: create-upgrade-delete/cannot-delete-ip-subnet-nsg.md
-    - name: RequestDisallowedByPolicy error
-      href: create-upgrade-delete/error-code-requestdisallowedbypolicy-delete.md
     - name: SubscriptionRequestsThrottled error
       href: create-upgrade-delete/error-code-toomanyrequestsreceived-subscriptionrequeststhrottled.md
     - name: TooManyRequestsReceived error
@@ -158,6 +150,11 @@
     - name: InvalidLoadBalancerProfileAllocatedOutboundPorts error
       href: create-upgrade-delete/error-code-invalidloadbalancerprofileallocatedoutboundports.md
 
+- name: Load balancer and Ingress controller
+  items:
+  - name: Create an unmanaged ingress controller
+    href: load-bal-ingress-c/create-unmanaged-ingress-controller.md
+
 - name: Troubleshoot Kubernetes control plane
   items:
   - name: Troubleshoot API server and etcd
@@ -165,6 +162,8 @@
 
 - name: Node/node pool availability and performance
   items:
+  - name: Improve container image pull performance in AKS
+    href: availability-performance/container-image-pull-performance.md
   - name: AKS cluster/node is in failed state
     href: availability-performance/cluster-node-virtual-machine-failed-state.md
   - name: Identify nodes and containers consuming high CPU
@@ -185,6 +184,8 @@
       href: availability-performance/node-not-ready-after-being-healthy.md
     - name: Node not ready but then recovers
       href: availability-performance/node-not-ready-then-recovers.md
+    - name: Troubleshoot node auto-repair errors
+      href: availability-performance/node-auto-repair-errors.md
 - name: Connectivity
   items:
   - name: Cannot connect to application hosted on AKS cluster
@@ -209,7 +210,7 @@
       href: connectivity/config-file-is-not-available-when-connecting.md
     - name: Tunnel connectivity issues
       href: connectivity/tunnel-connectivity-issues.md
-    - name: User can't get cluster resources
+    - name: Troubleshoot "Forbidden" error when trying to access AKS cluster resources
       href: connectivity/user-cannot-get-cluster-resources.md
     - name: Can't access the cluster API server using authorized IP ranges
       href: connectivity/cannot-access-cluster-api-server-using-authorized-ip-ranges.md
@@ -217,8 +218,6 @@
     items:
     - name: Basic network flow and troubleshooting
       href: connectivity/basic-troubleshooting-outbound-connections.md
-    - name: Network watch is stale after egress traffic restriction
-      href: connectivity/stale-watch-azure-ad-pod-identity-nmi-status-500.md
     - name: Restricting egress traffic causes errors
       href: connectivity/errors-arfter-restricting-egress-traffic.md
     - name: Troubleshoot SNAT port exhaustion on nodes
@@ -348,5 +347,22 @@
     href: extensions/troubleshoot-dapr-extension-installation-errors.md
   - name: Troubleshoot deployment failures of Azure Marketplace offers
     href: extensions/troubleshoot-failed-kubernetes-deployment-offer.md
-  - name: Troubleshoot the KEDA add-on
-    href: extensions/troubleshoot-kubernetes-event-driven-autoscaling-add-on.md
+  - name: KEDA add-on
+    items:
+    - name: Troubleshoot KEDA add-on
+      href: extensions/troubleshoot-kubernetes-event-driven-autoscaling-add-on.md
+    - name: Breaking changes in KEDA add-on 2.15 and 2.14
+      href: extensions/changes-in-kubernetes-event-driven-autoscaling-add-on-214-215.md
+  
+- name: Troubleshoot error codes
+  items:
+  - name: VMExtension error codes
+    items:
+    - name: VMExtensionError_CniDownloadTimeout error
+      href: error-codes/vmextensionerror-cnidownloadtimeout.md
+    - name: VMExtensionError_OutboundConnFail error
+      href: error-codes/vmextensionerror-outboundconnfail.md
+    - name: VMExtensionError_K8SAPIServerConnFail error
+      href: error-codes/vmextensionerror-k8sapiserverconnfail.md
+    - name: VMExtensionError_K8SAPIServerDNSLookupFail error
+      href: error-codes/vmextensionerror-k8sapiserverdnslookupfail.md

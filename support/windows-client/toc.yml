@@ -303,6 +303,10 @@ items:
       href: ./networking/configure-domain-suffix-search-list-domain-name-system-clients.md
     - name: DNS requests appear to be random
       href: ./networking/dns-requests-random-network-properties-change.md
+    - name: Troubleshoot DNS dynamic update issues
+      href: ./networking/troubleshooting-dns-dynamic-update-issues.md
+    - name: Troubleshoot DNS client name resolution issues
+      href: ./networking/troubleshoot-dns-client-resolution-issues.md
     - name: URI-encoding in UNC paths interpreted literally
       href: ./networking/url-encoding-unc-paths-not-url-decoded.md
   - name: Dynamic Host Configuration Protocol (DHCP)
@@ -859,6 +863,8 @@ items:
       href: ./shell-experience/x-app-titles-lower-right-corner.md
     - name: Black screen when unlocking a computer
       href: ./shell-experience/windows-7-black-screen-unlock-computer.md
+    - name: Blank icons on desktop, Start menu, and taskbar
+      href: ./shell-experience/application-shortcuts-show-blank-icons.md
     - name: Blank screen with no Start Menu
       href: ./shell-experience/windows-logon-process-failed-spawn-user-app.md
     - name: Fail to execute commands with RunOnce and RunOnceEx
@@ -927,6 +933,8 @@ items:
       href: ./shell-experience/recycle-bin-corrupted.md
     - name: Renaming a network folder fails
       href: ./shell-experience/renaming-a-network-folder-fails.md
+    - name: "Scenario guide: Black screen after you sign in to the system"
+      href: ./shell-experience/scenario-guide-black-screen-after-sign-in.md
     - name: Support of whitespace characters in file and folder names
       href: ./shell-experience/file-folder-name-whitespace-characters.md
   - name: Kiosk mode
@@ -1265,10 +1273,6 @@ items:
       href: ./installing-updates-features-roles/troubleshoot-windows-update-issues.md
     - name: How to downgrade from Windows 8
       href: ./installing-updates-features-roles/downgrade-from-windows-8.md
-    - name: How to get updates via Windows Update
-      href: ./installing-updates-features-roles/get-updates-through-windows-update.md    
-    - name: Install Service Packs and Hotfixes
-      href: ./installing-updates-features-roles/install-service-packs-hotfixes.md
     - name: Package Manager can install only the first package
       href: ./installing-updates-features-roles/package-manager-cannot-manage-two-more-packages.md
   - name: Issues installing Features on Demand (FoD)
@@ -1315,6 +1319,8 @@ items:
       href: ./installing-updates-features-roles/sfc-detects-opencl-dot-dll-corrupted.md
     - name: System Error 126 when you start TrustedInstaller
       href: ./installing-updates-features-roles/system-error-126-start-windows-modules-installer.md
+    - name: Troubleshoot Windows Update error 0x80072EFE
+      href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80072efe-with-cipher-suite-configuration.md
     - name: Windows Update common errors and mitigation
       href: ./installing-updates-features-roles/common-windows-update-errors.md
 - name: Windows Troubleshooters

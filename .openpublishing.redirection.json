@@ -8116,11 +8116,6 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "support/windows-server/deployment/error-2359302-installing-windows-updates.md",
-      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/error-2359302-installing-windows-updates",
-      "redirect_document_id": true
-    },
-    {
       "source_path": "support/windows-server/deployment/error-invalid-data-startup-installing-updates.md",
       "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/error-invalid-data-startup-installing-updates",
       "redirect_document_id": true
@@ -11152,7 +11147,7 @@
     },
     {
       "source_path": "support/windows-server/active-directory/lingering-objects-remain.md",
-      "redirect_url": "/previous-versions/troubleshoot/windows-server/lingering-objects-remain",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/manually-remove-lingering-objects",
       "redirect_document_id": false
     },
     {
@@ -11564,6 +11559,1061 @@
       "source_path": "support/power-platform/power-automate/desktop-flows/failed-to-deserialize-flow-error.md",
       "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/failed-to-deserialize-flow-error",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/install-service-packs-hotfixes.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/install-service-packs-hotfixes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/wsus-3-installation-package.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/wsus-3-installation-package",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/installing-updates-features-roles/get-updates-through-windows-update.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/get-updates-through-windows-update",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/installing-updates-features-roles/windows-server-2008-service-pack-2.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/windows-server-2008-service-pack-2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/file-shares-on-iscsi-devices-not-recreated.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/file-shares-on-iscsi-devices-not-recreated",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/iscsi-virtual-disk-size-limits-incorrect.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/iscsi-virtual-disk-size-limits-incorrect",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/iscsi-software-target-3dot3-limits.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/iscsi-software-target-3dot3-limits",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/turn-disk-write-caching-on-off.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/turn-disk-write-caching-on-off",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/add-pass-through-disk-to-high-available-vm.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/add-pass-through-disk-to-high-available-vm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/usb-device-not-recognized-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/usb-device-not-recognized-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/refs-volume-dpm-unresponsive.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/refs-volume-dpm-unresponsive",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/distributed-link-tracking-on-domain-controller.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/distributed-link-tracking-on-domain-controller",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/volume-show-up-as-raw.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/volume-show-up-as-raw",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/error-setup-unable-create-new-system-partition.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-setup-unable-create-new-system-partition",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/active-route-removed.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/active-route-removed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/error-an-item-with-the-same-key-has-already-been-added.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-an-item-with-the-same-key-has-already-been-added",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/system-state-backup-fails-invalid-imagepath.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/system-state-backup-fails-invalid-imagepath",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/system-state-backup-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/system-state-backup-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/server-backup-mmc-fails-open.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/server-backup-mmc-fails-open",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/cannot-configure-clustered-mount-points-shadow-copies.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cannot-configure-clustered-mount-points-shadow-copies",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/cannot-upgrade-clustered-server-operating-system.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cannot-upgrade-clustered-server-operating-system",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/windows-server-failover-clusters-service-packs-hotfixes.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/windows-server-failover-clusters-service-packs-hotfixes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/hotfixes-for-windows-server-2008-r2-server-cluster.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/hotfixes-for-windows-server-2008-r2-server-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/support-large-logical-unit-numbers.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/support-large-logical-unit-numbers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/configure-volume-mount-points-server-cluser.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/configure-volume-mount-points-server-cluser",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/create-file-shares-on-a-cluster.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/create-file-shares-on-a-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/enable-support-using-raid-controllers.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/enable-support-using-raid-controllers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/cannot-manage-cluster-with-failover-cluster-manager.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cannot-manage-cluster-with-failover-cluster-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/cluster-service-reserves-brings-disk.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cluster-service-reserves-brings-disk",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/duplicate-address-error-validate-failover-cluster.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/duplicate-address-error-validate-failover-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/scsi-3-persistent-reservation-test-fail.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/scsi-3-persistent-reservation-test-fail",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/validation-fails-run-disk-failover-test.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/validation-fails-run-disk-failover-test",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/not-see-cluster-disk-in-explorer-or-diskmgmt-failover.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/not-see-cluster-disk-in-explorer-or-diskmgmt-failover",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/cluster-validation-failure-error-80070005.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cluster-validation-failure-error-80070005",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/error-event-id-1289-create-cluster.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-event-id-1289-create-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/creating-failover-cluster-fails-error-0xc0000055.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/creating-failover-cluster-fails-error-0xc0000055",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/implications-using-slash-forcequorum-switch.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/implications-using-slash-forcequorum-switch",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/move-server-cluster-to-another-domain.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/move-server-cluster-to-another-domain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/provider-load-failure.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/provider-load-failure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/cluster-node-already-exists-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cluster-node-already-exists-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/guest-cluster-nodes-in-hyper-v-not-create-or-join.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/guest-cluster-nodes-in-hyper-v-not-create-or-join",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/cannot-join-a-node-into-a-cluster.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cannot-join-a-node-into-a-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/updates-for-windows-server-2008-r2-sp1-failover-cluster.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/updates-for-windows-server-2008-r2-sp1-failover-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/errors-windows-failover-cluster-run-as-guest.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/errors-windows-failover-cluster-run-as-guest",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/use-cluster-nodes-as-domain-controllers.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/use-cluster-nodes-as-domain-controllers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/issues-after-enabling-data-deduplication.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/issues-after-enabling-data-deduplication",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/error-file-server-resource-manager-could-not-load-wmi-objects.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-file-server-resource-manager-could-not-load-wmi-objects",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/fsrm-quota-usage-incorrect.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/fsrm-quota-usage-incorrect",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/file-services-hotfixes-in-windows-server-2008.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/file-services-hotfixes-in-windows-server-2008",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/not-enough-storage-process-this-command.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/not-enough-storage-process-this-command",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/windows-installations-disk-duplication.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/windows-installations-disk-duplication",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/error-10013-wsaeacces-is-returned.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/error-10013-wsaeacces-is-returned",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/directaccess-clients-connection-error-0x274d.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/directaccess-clients-connection-error-0x274d",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/virtualization/error-occurred-attempt-export-virtual-machine.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-occurred-attempt-export-virtual-machine",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/event-19050-32022-32032-32056-32315-32546-33680.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/event-19050-32022-32032-32056-32315-32546-33680",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/events-18210-3041-and-1-hyper-v-replica.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/events-18210-3041-and-1-hyper-v-replica",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/event-id-106-hyper-v-virtual-switch-bound-lbfo-team.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/event-id-106-hyper-v-virtual-switch-bound-lbfo-team",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/vm-not-reach-vlan-tagging-enabled-network.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/vm-not-reach-vlan-tagging-enabled-network",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/vmconnect-fail-to-connect-to-virtual-machine.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/vmconnect-fail-to-connect-to-virtual-machine",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/vds-basic-provider-event-id-1.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/vds-basic-provider-event-id-1",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/using-hyper-v-large-sector-drives.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/using-hyper-v-large-sector-drives",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/security-id-structure-invalid.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/security-id-structure-invalid",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/virtual-machines-slow-startup-shutdown.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/virtual-machines-slow-startup-shutdown",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/mouse-screen-resolution-issues.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/mouse-screen-resolution-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/importing-a-virtual-machine.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/importing-a-virtual-machine",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/hyper-v-vm-supported-file-locations.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/hyper-v-vm-supported-file-locations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/hyper-v-virtual-machine-doesnt-start.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/hyper-v-virtual-machine-doesnt-start",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/ghost-nic-built-vmware-templates.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/ghost-nic-built-vmware-templates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/dynamic-memory-allocation-virtual-machine-not-change.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/dynamic-memory-allocation-virtual-machine-not-change",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/hyper-v-storage-caching-layers-data-consistency-requirements.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/hyper-v-storage-caching-layers-data-consistency-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/error-0x80070005-export-vms.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-0x80070005-export-vms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/enabling-mpio-with-sas-decreases-performance.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/enabling-mpio-with-sas-decreases-performance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/namespace-not-queried-rpc-server-unavailable.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/namespace-not-queried-rpc-server-unavailable",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/virtualization/hyper-v-replication-suspended-system-shutdown.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/hyper-v-replication-suspended-system-shutdown",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/cant-import-virtual-machine.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cant-import-virtual-machine",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/event-7000-installing-hyper-v-role-windows-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/event-7000-installing-hyper-v-role-windows-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/updates-for-windows-server-2012-r2-hyper-v.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/updates-for-windows-server-2012-r2-hyper-v",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/hotfixes-updates-known-solutions.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/hotfixes-updates-known-solutions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/hyper-v-vmm-service-fails-event-id-14050.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/hyper-v-vmm-service-fails-event-id-14050",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/incompatible-version-errors-are-logged.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/incompatible-version-errors-are-logged",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/emulated-synthetic-hardware-specification.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/emulated-synthetic-hardware-specification",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/virtualization/event-id-4096.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/event-id-4096",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/active-directory/how-domain-controllers-are-located.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/troubleshoot-domain-controller-location-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/shell-experience/scenario-guide-infinite-black-screen-after-sign-in.md",
+      "redirect_url": "/troubleshoot/windows-client/shell-experience/scenario-guide-black-screen-after-sign-in",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/group-policy/create-central-store-domain-controller.md",
+      "redirect_url": "/troubleshoot/windows-client/group-policy/create-and-manage-central-store",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/how-to-install-dynamics-crm-with-the-minimum-required-permissions.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/how-to-install-dynamics-crm-with-the-minimum-required-permissions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/you-are-not-member-this-organization.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/you-are-not-member-this-organization",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-get-your-dynamics-365-environment.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/cannot-get-your-dynamics-365-environment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/installation-of-dynamics-crm-reporting-extensions-fails-to-locate-ssrs-instance.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/installation-of-dynamics-crm-reporting-extensions-fails-to-locate-ssrs-instance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/organization-database-updates-fail-during-import.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/organization-database-updates-fail-during-import",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-crm-outlook-is-disabled.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/dynamics-crm-outlook-is-disabled",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-accessing-dynamics-365-ifd.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-when-accessing-dynamics-365-ifd",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/crm-integration-azure-service-bus.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/crm-integration-azure-service-bus",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/new-button-disabled-you-add-new-user.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/new-button-disabled-you-add-new-user",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/unable-cast-object-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/unable-cast-object-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/upgrade-solutions-for-a-portals-deployment.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/upgrade-solutions-for-a-portals-deployment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-enabling-mailbox.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-when-enabling-mailbox",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/installation-of-windows-live-id-sign-in-assistant-failed-exit-code-1603.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/installation-of-windows-live-id-sign-in-assistant-failed-exit-code-1603",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-test-and-enable-user-mailbox.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-test-and-enable-user-mailbox",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/web-server-returned-securechannelfailure.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/web-server-returned-securechannelfailure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/errors-connecting-dynamics-crm-for-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/errors-connecting-dynamics-crm-for-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/365-integrations-other-products.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/365-integrations-other-products",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/email-router-fails-send-email.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/email-router-fails-send-email",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/the-specified-field-does-not-exist-in-dynamics-365-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/the-specified-field-does-not-exist-in-dynamics-365-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/integrated-authentication-fails-outlook-client.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/integrated-authentication-fails-outlook-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/portal-capabilities-dynamics-365-faq.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/portal-capabilities-dynamics-365-faq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/receiving-error-accessing-ws-metadata-exchange-failed-during-configuration.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/receiving-error-accessing-ws-metadata-exchange-failed-during-configuration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/you-are-signed-out-of-crm-online-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/you-are-signed-out-of-crm-online-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-crm-for-outlook-records-do-not-sync-or-missing-track-and-set-regarding.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/dynamics-crm-for-outlook-records-do-not-sync-or-missing-track-and-set-regarding",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-connect-dynamics-crm-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/cannot-connect-dynamics-crm-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/crm-users-do-not-sync-office-365.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/crm-users-do-not-sync-office-365",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/unable-log-into-planned-system-maintenance.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/unable-log-into-planned-system-maintenance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/no-search-results-regarding-lookup.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/no-search-results-regarding-lookup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-find-any-organization-on-the-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/cannot-find-any-organization-on-the-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error_message_0x8006fff-when-accessing-dynamics-365-in-add-ins-of-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error_message_0x8006fff-when-accessing-dynamics-365-in-add-ins-of-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/file-already-exists-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/file-already-exists-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/an-email-fails-be-created-with-duplicate.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/an-email-fails-be-created-with-duplicate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/changing-crm-online-instance-url-after-portal-deployment-causes-runtime-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/changing-crm-online-instance-url-after-portal-deployment-causes-runtime-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/client-side-scripts-no-longer-work.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/client-side-scripts-no-longer-work",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/invalidoutgoingmailboxemailaddress-error-in-mailbox-alert.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/invalidoutgoingmailboxemailaddress-error-in-mailbox-alert",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-use-dynamics-365-app-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-use-dynamics-365-app-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-connect-crm-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-when-connect-crm-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/an-email-fails-be-created.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/an-email-fails-be-created",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/email-fails-be-created-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/email-fails-be-created-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-search-outlook-dynamics-365-app.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-search-outlook-dynamics-365-app",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/exchange-email-address-is-currently-use.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/exchange-email-address-is-currently-use",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/generaloutgoingemailservererror.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/generaloutgoingemailservererror",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/warning-occurs-when-viewing-alerts-for-mailboxes.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/warning-occurs-when-viewing-alerts-for-mailboxes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/issue-when-adding-to-outlook-error-when-deploying-dynamics-365-app-for-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/issue-when-adding-to-outlook-error-when-deploying-dynamics-365-app-for-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/generaloutgoingemailservererror-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/generaloutgoingemailservererror-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-occurs-mailbox-record.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-occurs-mailbox-record",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/exchange-server-returned-203-error-in-mailbox-alert.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/exchange-server-returned-203-error-in-mailbox-alert",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/it-looks-like-the-app-is-not-installed-for-your-outlook-mailbox-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/it-looks-like-the-app-is-not-installed-for-your-outlook-mailbox-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/we-cannot-open-the-app.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/we-cannot-open-the-app",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-using-dynamics-365-app-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-when-using-dynamics-365-app-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-crm-online-outbound-phone-calls-default-to-lync.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/dynamics-crm-online-outbound-phone-calls-default-to-lync",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-access-dynamics-crm-app-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-access-dynamics-crm-app-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/another-configuration-wizard-is-already-running-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/another-configuration-wizard-is-already-running-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-you-access-app-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-you-access-app-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/relevance-search-not-working-as-expected-for-sandbox-instances.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/relevance-search-not-working-as-expected-for-sandbox-instances",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/a-blank-window-appears.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/a-blank-window-appears",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/server-address-url-is-not-valid.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/the-server-address-is-not-valid",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-365-on-premises-v9-0.md",
+      "redirect_url": "/dynamics365/customerengagement/on-premises/deploy/installing-on-premises-dynamics-365?view=op-9-1",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/operation-failed-because-you-are-offline.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/outlook-has-not-been-configured-with-an-account-yet-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/installing-product-updates-status-not-updated.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-access-dynamics-365-app-outlook.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/your-browser-is-currently-unsupported.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/web-server-returned-sendfailure-exception.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/you-do-not-have-license-to-use-this-app-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/lookup-fields-fail-to-save-or-provide-results-with-google-chrome-38.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/uci-dashboard-does-not-load.md",
+      "redirect_url": "/troubleshoot/dynamics-365/sales/welcome-sales",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-365-how-to-articles.md",
+      "redirect_url": "/troubleshoot/dynamics-365/sales/welcome-sales",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/business-process-flow-deletion-fails.md",
+      "redirect_url": "/dynamics365/sales/customize-business-process-flows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/troubleshoot-server-side-synchronization.md",
+      "redirect_url": "/power-platform/admin/troubleshooting-monitoring-server-side-synchronization which has more current info",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/sorry-something-went-wrong-while-initializing-the-app-error.md",
+      "redirect_url": "/troubleshoot/dynamics-365/sales/errors-when-opening-365-app-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/site-system-installation-account-used-for-db-connection.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/backup-and-storage/extend-data-volume.md",
+      "redirect_url": "/troubleshoot/windows-server/backup-and-storage/extend-shrink-data-volume",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/group-policy/fail-to-run-gpmc.md",
+      "redirect_url": "/troubleshoot/windows-server/group-policy/permissions-this-gpo-inconsistent",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/field-service/iot/change-time-series-insights-instance.md",
+      "redirect_url": "/dynamics365/field-service/cfs-visualizations-iot-hub",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/field-service/iot/edge-module-data-aggregated.md",
+      "redirect_url": "/dynamics365/field-service/cfs-visualizations-iot-hub",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/finance/tax/tcs-troubleshooting-failed-access-tax-service.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/welcome-finance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/certificates-and-public-key-infrastructure-pki/restrict-cryptographic-algorithms-protocols-schannel.md",
+      "redirect_url": "/windows-server/security/tls/tls-registry-settings?tabs=diffie-hellman#ciphers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/changes-to-mailbox-approval-in-dynamics-365.md",
+      "redirect_url": "/power-platform/admin/connect-exchange-online#approve-email",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/exchange-error-in-dynamics-365-mailbox-alert.md",
+      "redirect_url": "/power-platform/admin/monitor-email-processing-errors",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/mailboxnotenabledforrestapi-warning-occurs.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/mailboxnotenabledforrestapi-warning-occurs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/hresult-0x80004005-error-when-configuring-dynmics-crm-for-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/hresult-0x80004005-error-when-configuring-dynmics-crm-for-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/the-account-does-not-have-permission-to-impersonate-the-requested-user-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/the-account-does-not-have-permission-to-impersonate-the-requested-user-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/email-cannot-be-received-because-license-is-invalid-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/email-cannot-be-received-because-license-is-invalid-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/unknownincomingemailintegrationerror-2147220891.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/unknownincomingemailintegrationerror-2147220891",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/appointments-do-not-synchronize-to-exchange-or-outlook.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/appointments-do-not-synchronize-to-exchange-or-outlook",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-you-test-enable-a-mailbox.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-when-you-test-enable-a-mailbox",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-occurs-sending-email-for-mailbox.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-occurs-sending-email-for-mailbox",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/errorquotaexceeded-exchange-server-returned-403-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/errorquotaexceeded-exchange-server-returned-403-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/exception-when-using-server-side-sync.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/exception-when-using-server-side-sync",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/the-smtp-address-has-no-mailbox.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/the-smtp-address-has-no-mailbox",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/general-mailbox-access-error-occurred-while-receiving-email-through-mailbox-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/general-mailbox-access-error-occurred-while-receiving-email-through-mailbox-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/test-connection-fails-email-server.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/test-connection-fails-email-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/http-server-returned-forbidden-exception.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/http-server-returned-forbidden-exception",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-while-sending-the-email-message.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-while-sending-the-email-message",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-testing-enabling-mailbox.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-when-testing-enabling-mailbox",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/outgoingemailauthenticationerror-shows-in-mailbox-alert.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/outgoingemailauthenticationerror-shows-in-mailbox-alert",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/email-message-cannot-be-sent.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/email-message-cannot-be-sent",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/mailbox-fails-tested-enabled.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/mailbox-fails-tested-enabled",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/email-cannot-be-received-mailbox.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/email-cannot-be-received-mailbox",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/an-appointment-is-canceled-deleted.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/an-appointment-is-canceled-deleted",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-2147209462-logged-mailbox-record.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-2147209462-logged-mailbox-record",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/an-internal-dynamics-365-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/an-internal-dynamics-365-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/appointments-do-not-sync-to-exchange-for-some-users.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/appointments-do-not-sync-to-exchange-for-some-users",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-creating-an-incoming-email.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-when-creating-an-incoming-email",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/a-failure-occurred-crmsecurity.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/a-failure-occurred-crmsecurity",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/email-fails-to-create-with-norecipientmatch-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/email-fails-to-create-with-norecipientmatch-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/general-mailbox-access-error-occurred.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/general-mailbox-access-error-occurred",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/email-fails-to-create-with-nocorrelationmatch-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/email-fails-to-create-with-nocorrelationmatch-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/scheduling-conflict-saving-appointment.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/scheduling-conflict-saving-appointment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/errorsubmissionquotaexceeded-exception.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/errorsubmissionquotaexceeded-exception",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/mailbox-does-not-have-email-server-profile.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/mailbox-does-not-have-email-server-profile",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/dataverse/email-m365-integration/server-side-synchronization/emails-not-automatically-tracked-or-synchronized.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/emails-not-automatically-tracked-or-synchronized",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/dataverse/email-m365-integration/server-side-synchronization/error-code-8005e259.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-code-8005e259",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/dataverse/email-m365-integration/server-side-synchronization/error-code-8005e272.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-code-8005e272",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/dataverse/email-m365-integration/server-side-synchronization/error-code-8005e273.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-code-8005e273",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/dataverse/email-m365-integration/server-side-synchronization/error-code-8005e274.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-code-8005e274",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/dataverse/email-m365-integration/server-side-synchronization/error-code-8005e276.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-code-8005e276",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/dataverse/email-m365-integration/server-side-synchronization/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/tracked-to-dynamics-365-category-added.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/tracked-to-dynamics-365-category-added",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-send-email-as-another-user.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/cannot-send-email-as-another-user",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/certificates-and-public-key-infrastructure-pki/delete-enterprise-windows-certificate-authority.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/delete-enterprise-windows-certificate-authority",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-signing-dynamics-365.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-when-signing-dynamics-365",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/you-are-not-part-this-organization.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-when-signing-dynamics-365",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/no-ethernet-after-pad-install.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/group-policy/apply-group-policy-objects-terminal-services.md",
+      "redirect_url": "/troubleshoot/windows-server/group-policy/apply-group-policy-objects-rds",
+      "redirect_document_id": true
     }
   ]
 }

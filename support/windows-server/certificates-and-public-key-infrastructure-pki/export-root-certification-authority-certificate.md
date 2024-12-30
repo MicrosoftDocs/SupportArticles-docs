@@ -1,11 +1,10 @@
 ---
 title: Export Root Certification Authority Certificate
 description: describes how to export Root Certification Authority Certificate.
-ms.date: 12/26/2023
+ms.date: 10/22/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory Certificate Services (ADCS), csstroubleshoot
 ---
@@ -13,7 +12,7 @@ ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory
 
 This article describes how to export Root Certification Authority Certificate.
 
-_Applies to:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003, Windows Server 2022  
 _Original KB number:_ &nbsp; 555252
 
 ## Tips

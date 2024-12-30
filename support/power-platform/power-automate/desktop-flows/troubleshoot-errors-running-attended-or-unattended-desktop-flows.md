@@ -2,7 +2,7 @@
 title: Error code occurs when running an attended or unattended desktop flow
 description: Provides mitigation steps for the error codes that occur when running attended or unattended desktop flows.
 ms.reviewer: cefriant, kenseongtan, guco, johndund
-ms.date: 07/19/2024
+ms.date: 12/27/2024
 ms.custom: sap:Desktop flows\Unattended flow runtime errors
 ---
 # Error code occurs when running an attended or unattended desktop flow
@@ -13,20 +13,25 @@ _Applies to:_ &nbsp; Power Automate
 _Original KB number:_ &nbsp; 4555406
 
 > [!NOTE]
-> If the error code that you receive is not listed in the table, contact [Power Automate support](https://powerautomate.microsoft.com/support/).
+> If the error code that you receive is not listed in the table, contact [Power Automate support](https://www.microsoft.com/power-platform/products/power-automate/support/).
 
 |Error code|HTTP status code|Run mode|Mitigation steps|
 |---|---|---|---|
 |UnsupportedRpaScriptSchemaVersion|400|Attended</br>Unattended|The selected flow was issued by a later version of Power Automate for desktop. You'll need to install the latest version of Power Automate for desktop on your machine.|
 |InvalidUIFlowsCertificates|401|Attended</br>Unattended|You'll need to install the latest version of desktop flows on your machine as the security certificate of the desktop flows app has expired.|
 |WindowsIdentityIncorrect|401|Attended</br>Unattended|Check that you can sign in to the machine using the connection credentials. Below are supported format:</br>- domain\username -> domain account (domain and Microsoft Entra ID)</br>- username@domain... -> Microsoft Entra account</br>- username -> local account</br>- machine name\username -> local account</br>- local\username -> local account</br>- .\username -> local account|
-|NoUnlockedActiveSessionForAttended|400|Attended|Check that you're logged in with the correct user and that the session is unlocked on the machine. For more information about this error code, see [NoUnlockedActiveSessionForAttended](troubleshoot-desktop-flow-run-queue-errors.md#nounlockedactivesessionforattended).|
+|AttendedUserSessionNotActive<br>AttendedUserNotLoggedIn|400|Attended|Check that you're logged in with the correct user and that the session is unlocked on the machine. For more information about the error codes, see [AttendedUserSessionNotActive](troubleshoot-desktop-flow-run-queue-errors.md#attendedusersessionnotactive) and [AttendedUserNotLoggedIn](troubleshoot-desktop-flow-run-queue-errors.md#attendedusernotloggedin).|
 |SessionCreationError|400|Unattended|We couldn't create the session on the machine for an unknown reason. To solve this issue, see [Troubleshoot session creation error codes for an unattended desktop flow run](troubleshoot-session-creation-errrors.md#sessioncreationerror).|
 |SessionCreationErrorWithThirdPartyCredentialProvider|400|Unattended|To solve this issue, see [Troubleshoot session creation error codes for an unattended desktop flow run](troubleshoot-session-creation-errrors.md#sessioncreationerrorwiththirdpartycredentialprovider).|
 |SessionCreationWinLogonFailure|400|Unattended|We can't create a Windows session to run your unattended desktop flow. You need to restart your machine.|
 |SessionExistsForTheUserWhenUnattended|400|Unattended|Check that you aren't logged in with the same user (regardless of the state of the session) on the machine. For more information about this error code, see [SessionExistsForTheUserWhenUnattended](troubleshoot-desktop-flow-run-queue-errors.md#sessionexistsfortheuserwhenunattended).|
+|UnattendedUserSessionDisconnected|400|Unattended|For more information about this error code, see [UnattendedUserSessionDisconnected](troubleshoot-desktop-flow-run-queue-errors.md#unattendedusersessiondisconnected).|
+|UnattendedUserSessionLocked|400|Unattended|For more information about this error code, see [UnattendedUserSessionLocked](troubleshoot-desktop-flow-run-queue-errors.md#unattendedusersessionlocked).|
 |SessionNotFound|400|Unattended|The Windows session on the machine for the given run can't be found. This issue can occur in the following cases:<br>- The machine reboots during the run.<br>- You're using a virtual machine that was cloned after installing Power Automate. If it was cloned after the installation and was registered, delete your machine from the Power Automate portal and re-register the machine.|
 |TooManyActiveSessions|400|Unattended|Windows Server only.</br>You need to sign out at least one active session on the machine.|
+|SessionHasLoggedOff|400|Unattended|To solve this issue, see [SessionHasLoggedOff occurs during a desktop flow run connected with the cloud](session-has-logged-off-troubleshooting.md).|
+|SessionHasLoggedOffWithMaxIdleTime |400|Unattended|To solve this issue, see [SessionHasLoggedOffWithMaxIdleTime occurs during a desktop flow run](desktop-flow-max-session-duration-error.md).|
+|MaxRDSessionDurationReached|400|Unattended|To solve this issue, see [MaxRDSessionDurationReached occurs during a desktop flow run](desktop-flow-max-session-duration-error.md).|
 |ExistingRecordingSession|400|Local|Windows Server only.</br> Check that there's no other user connected to the machine launching a recording or a test playback.|
 |LocalPlaybackOrRecordingOngoing|429|All|Check that there's no recording nor test playback ongoing on the machine for the same user session.|
 |UnattendedUnsupportedWithOldConnection|403|Unattended|You need to create a new connection on the portal.|
@@ -42,6 +47,7 @@ _Original KB number:_ &nbsp; 4555406
 |ConnectionTimeout|404|Attended</br>Unattended|This request operation didn't receive a reply within the configured timeout.</br> Check that your machine is online and can communicate with the required Power Automate endpoints.|
 |EndpointDoNotExist|404|Attended</br>Unattended|The endpoint wasn't found.</br>Register your machine again and schedule new runs.|
 |GroupIsEmpty|400|Attended</br>Unattended|The machine group is empty.</br> Add machines to the group, then reschedule new runs.|
+|MSEntraMachineAlwaysPromptingForPassword|400|Unattended|For more information about this error code, see [An unattended desktop flow run fails with the MSEntraMachineAlwaysPromptingForPassword error](msentramachinealwayspromptingforpassword-error.md).|
 |NoCandidateMachine|400|Attended</br>Unattended|The run has exceeded the queue waiting time limit.</br> Consider allocating more machines or spreading desktop flow runs to optimize wait time in the queue.|
 |DesktopFlowsActionThrottled|429|Attended</br>Unattended|The desktop flow action failed because of throttling. This error code appears when too many desktop flows use the same connection. Check your connection usage and assign your desktop flows to multiple connections.|
 |DesktopFlowsActionTimeout|400|Attended</br>Unattended|The execution of the desktop flow action exceeded maximum duration.</br> Increase the time-out value that's set on the action or split the desktop flow into several shorter desktop flows.|
@@ -56,3 +62,4 @@ _Original KB number:_ &nbsp; 4555406
 |XrmMachineGroupNotFound|404|Attended</br>Unattended|This error occurs when the machine group has been deleted. Re-create the group and update the connection.|
 |SessionCreationInvalidCredentials|400|Unattended|This error occurs when the unattended session couldn't be created with the provided credentials. This issue might occur due to an incorrectly formatted username. For Microsoft Entra joined machines, ensure the username is in the `user@domain.com` format. For domain-joined machines, the username should be in the `domain\user` format.|
 |UIFlowServiceNoRdpPermissions|400|Unattended|This error occurs when the Power Automate service ([UIFlowService](/power-automate/desktop-flows/troubleshoot#change-the-on-premises-service-account)) running on your computer can't list the Windows sessions on the machine. </br> Add the user account that the service runs as (usually **NT SERVICE\UIFlowService**) to the "Remote Desktop Users" group on your machine.|
+|UnallowedTenantForConnectWithSignIn|403|Attended |This error occurs when using a [connect with sign-in](/power-automate/desktop-flows/desktop-flow-connections#connect-with-sign-in-for-attended-runs) connection on an Active Directory (AD) domain-joined machine without having added your tenant to the allowlist. </br> For more information, see ["UnallowedTenantForConnectWithSignIn" error in a Power Automate desktop flow](troubleshoot-unallowed-tenant-for-connect-with-sign-in.md).|

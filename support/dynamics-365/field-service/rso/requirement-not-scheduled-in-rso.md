@@ -4,7 +4,7 @@ description: Provides a resolution to solve the issues with unscheduled requirem
 ms.author: AnilMur
 author: anilmur
 ms.reviewer: mhart
-ms.date: 10/19/2023
+ms.date: 12/19/2024
 ms.custom: sap:Resource Scheduling Optimization
 ---
 # Requirements not scheduled in Resource Scheduling Optimization
@@ -45,3 +45,4 @@ There are various reasons why requirements might not be booked. Try the followin
 - Status: The **Status** of the resource requirement needs to be **Active**.
 - Related bookings: If a requirement already has a related booking record, the related booking status **Scheduling Method** needs to be set to **Ignore**.
 - Optimization engine effort level: Larger optimization requests require more time to optimize. Consider increasing the engine's effort level to give it more time to find a suitable assignment.
+- Location agnostic resources: A location agnostic resource can only have bookings for which the resource requirement is also set to location agnostic. Resource Scheduling Optimization treats that resource like a remote worker who is only scheduled for work that doesn't involve travel. Alternatively, you can [enable a resource to travel outside working hours](/dynamics365/field-service/rso-travel-outside-working-hours) to work around this constraint.

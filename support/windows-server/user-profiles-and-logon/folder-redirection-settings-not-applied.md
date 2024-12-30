@@ -5,7 +5,6 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, lindakup
 ms.custom: sap:User Logon and Profiles\Enterprise State Roaming (ESR) and Folder Redirection, csstroubleshoot
 ---

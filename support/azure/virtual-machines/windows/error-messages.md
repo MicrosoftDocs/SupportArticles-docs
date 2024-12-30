@@ -1,5 +1,5 @@
 ---
-title: Common VM error codes in Azure
+title: Common virtual machine error codes in Azure
 description: Understand some of the common error codes encountered when you provision and manage virtual machines in Azure
 services: virtual-machines
 documentationcenter: ''
@@ -9,7 +9,7 @@ tags: azure-resource-manager
 ms.service: azure-virtual-machines
 ms.topic: troubleshooting
 ms.workload: infrastructure
-ms.date: 05/22/2017
+ms.date: 09/02/2024
 ms.author: xujing
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
@@ -17,7 +17,7 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 
 **Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
-This article describes some of the most common error codes and messages you may encounter when you create or manage virtual machines (VMs) in Azure.
+This article describes some of the most common error codes and messages you might encounter when you create or manage virtual machines (VMs) in Azure.
 
 >[!NOTE]
 > You can leave comments on this page for feedback or through [Azure feedback](https://feedback.azure.com/forums/216843-virtual-machines) with #azerrormessage tag.
@@ -46,7 +46,7 @@ An error response always includes a status code and an error object. Each error 
 
 ## Common virtual machine management errors
 
-This section lists the common error messages you may encounter when managing VMs:
+This section lists the common error messages you might encounter when managing VMs:
 
 |  Error Code  |  Error Message  |  
 |  :------| :-------------|  
@@ -70,7 +70,8 @@ This section lists the common error messages you may encounter when managing VMs
 |  ConflictingUserInput  |  Source and destination resource groups are the same.  |
 |  ConflictingUserInput  |  Source and destination storage accounts for disk {0} are different.  |
 |  ContainerAlreadyOnLease  |  There is already a lease on the storage container holding the blob with URI {0}.  |
-|  CrossSubscriptionMoveWithKeyVaultResources  |  The Move resources request contains KeyVault resources which are referenced by one or more {0}s in the request. This is not supported currently in Cross subscription Move. Please check the error details for the KeyVault resource Ids.  |
+|  CrossSubscriptionMoveWithKeyVaultResources  |  The Move resources request contains KeyVault resources, which are referenced by one or more {0}s in the request. This isn't supported currently in Cross subscription Move. Check the error details for the KeyVault resource Ids.  |
+|  DataDisksForceDetached  |  One or more data disks were force detached from the VM {0}. [Redeploy](/rest/api/compute/virtual-machines/redeploy) for virtual machine scale sets with uniform orchestration. For others, [reapply](/rest/api/compute/virtual-machines/reapply). |
 |  DiagnosticsOperationInternalError  |  An internal error occurred while processing diagnostics profile of VM {0}.  |
 |  DiskBlobAlreadyInUseByAnotherDisk  |  Blob {0} is already in use by another disk belonging to VM '{1}'. You can examine the blob metadata for the disk reference information.  |
 |  DiskBlobNotFound  |  Unable to find VHD blob with URI {0} for disk '{1}'.  |

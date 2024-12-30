@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot high-CPU-usage issues in SQL Server
 description: This article provides a procedure to help you fix high-CPU-usage issues on a server that is running SQL Server.
-ms.date: 01/25/2024
+ms.date: 10/23/2024
 ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ms.topic: troubleshooting
 ms.reviewer: jopilov, v-jayaramanp, v-sidong
@@ -34,24 +34,28 @@ Use one of the following tools to check whether the SQL Server process is actual
   
 - You can use the following PowerShell script to collect the counter data over a 60-second span:
 
-    ```powershell
-    $serverName = $env:COMPUTERNAME
-    $Counters = @(
-        ("\\$serverName" + "\Process(sqlservr*)\% User Time"), ("\\$serverName" + "\Process(sqlservr*)\% Privileged Time")
-    )
-    Get-Counter -Counter $Counters -MaxSamples 30 | ForEach {
-        $_.CounterSamples | ForEach {
-            [pscustomobject]@{
-                TimeStamp = $_.TimeStamp
-                Path = $_.Path
-                Value = ([Math]::Round($_.CookedValue, 3))
-            }
-            Start-Sleep -s 2
-        }
-    }
-    ```
+  ```powershell
+  $serverName = $env:COMPUTERNAME
+  $Counters = @(
+      ("\\$serverName" + "\Process(sqlservr*)\% User Time"), ("\\$serverName" + "\Process(sqlservr*)\% Privileged Time")
+  )
+  Get-Counter -Counter $Counters -MaxSamples 30 | ForEach {
+      $_.CounterSamples | ForEach {
+          [pscustomobject]@{
+              TimeStamp = $_.TimeStamp
+              Path = $_.Path
+              Value = ([Math]::Round($_.CookedValue, 3))
+          }
+          Start-Sleep -s 2
+      }
+  }
+  ```
 
-If `% User Time` is consistently greater than 90 percent (% User Time is the sum of processor time on each processor, its maximum value is 100% * (no of CPUs)), the SQL Server process is causing high CPU usage. However, if `% Privileged time` is consistently greater than 90 percent, your antivirus software, other drivers, or another OS component on the computer is contributing to high CPU usage. You should work with your system administrator to analyze the root cause of this behavior.
+  If `% User Time` is consistently greater than 90 percent (% User Time is the sum of processor time on each processor, its maximum value is 100% * (no of CPUs)), the SQL Server process is causing high CPU usage. However, if `% Privileged time` is consistently greater than 90 percent, your antivirus software, other drivers, or another OS component on the computer is contributing to high CPU usage. You should work with your system administrator to analyze the root cause of this behavior.
+
+- [Performance Dashboard](/sql/relational-databases/performance/performance-dashboard): In SQL Server Management Studio, right click **\<SQLServerInstance\>** and select **Reports** > **Standard Reports** > **Performance Dashboard**.
+
+  The dashboard illustrates a graph titled **System CPU Utilization** with a bar chart. The darker color indicates the SQL Server engine CPU utilization, while the lighter color represents the overall operating system CPU utilization (see the legend on the graph for reference). Select the circular refresh button or <kbd>F5</kbd> to see the updated utilization.
 
 ## Step 2: Identify queries contributing to CPU usage
 
@@ -102,7 +106,7 @@ If SQL Server is still using excessive CPU capacity, go to the next step.
 
 ## Step 7: Disable heavy tracing
 
-Check for [SQL Trace](/sql/relational-databases/sql-trace/sql-trace) or XEvent tracing that affects the performance of SQL Server and causes high CPU usage. For example, using the following events may cause high CPU usage if you trace heavy SQL Server activity:
+Check for [SQL Trace](/sql/relational-databases/sql-trace/sql-trace) or XEvent tracing that affects the performance of SQL Server and causes high CPU usage. For example, using the following events might cause high CPU usage if you trace heavy SQL Server activity:
 
 - Query plan XML events (`query_plan_profile`, `query_post_compilation_showplan`, `query_post_execution_plan_profile`, `query_post_execution_showplan`, `query_pre_execution_showplan`)
 - Statement-level events (`sql_statement_completed`, `sql_statement_starting`, `sp_statement_starting`, `sp_statement_completed`)

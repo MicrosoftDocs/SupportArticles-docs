@@ -5,9 +5,8 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: ajayps, kaushika
-ms.custom: sap:Networking\Remote Access , csstroubleshoot
+ms.custom: sap:Networking\Remote Access, csstroubleshoot
 ---
 # DirectAccess clients can connect over Teredo but not through IP-HTTPS
 

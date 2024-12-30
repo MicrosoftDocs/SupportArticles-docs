@@ -1,33 +1,28 @@
 ---
 title: Use Cipher.exe to overwrite deleted data
-description: Describes how to use Cipher.exe to overwrite deleted data in Windows Server 2003.
-ms.date: 08/02/2024
+description: Describes how to use Cipher.exe to overwrite deleted data in Windows.
+ms.date: 11/11/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Encrypting File System (EFS), csstroubleshoot
 ---
-# Use Cipher.exe to overwrite deleted data in Windows Server 2003
+# Use Cipher.exe to overwrite deleted data in Windows
 
-This article describes how to use Cipher.exe to overwrite deleted data in Windows Server 2003.
+This article describes how to use Cipher.exe to overwrite deleted data in Windows.
 
-_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 814599
 
 ## Summary
 
-Administrators can use Cipher.exe to encrypt and decrypt data on drives that use the NTFS file system. They can also use it to view the encryption status of files and folders from a command prompt. The version of Cipher.exe that's included with Windows Server 2003 includes the ability to overwrite data that has been deleted so that it can't be recovered or accessed.
+Administrators can use Cipher.exe to encrypt and decrypt data on drives that use the NTFS file system. They can also use it to view the encryption status of files and folders from a command prompt. Cipher.exe has the ability to overwrite data that has been deleted so that it can't be recovered or accessed.
 
 When you delete files or folders, the data isn't initially removed from the hard disk. Instead, the space on the disk that was occupied by the deleted data is *deallocated*. After it's deallocated, the space is available to use when new data is written to the disk. Until the space is overwritten, you can recover the deleted data by using a low-level disk editor or data-recovery software.
 
-When you encrypt plain text files, Encrypting File System (EFS) makes a backup copy of the file. So the data isn't lost if an error occurs during the encryption process. After the encryption is complete, the backup copy is deleted. As with other deleted files, the data isn't removed until it has been overwritten. The Windows Server 2003 version of the Cipher utility is designed to prevent unauthorized recovery of such data.
+When you encrypt plain text files, Encrypting File System (EFS) makes a backup copy of the file. So the data isn't lost if an error occurs during the encryption process. After the encryption is complete, the backup copy is deleted. As with other deleted files, the data isn't removed until it has been overwritten. The version of the Cipher utility, on all currently supported versions of Windows, is designed to prevent unauthorized recovery of such data.
 
 ## Use the Cipher security tool to overwrite deleted data
-
-> [!NOTE]
-> The `cipher /w` command does not work for files that are smaller than 1 KB. Therefore, make sure that you check the file size to confirm whether is smaller than 1 KB. This issue is scheduled to be fixed in longhorn.
 
 To overwrite deleted data on a volume by using Cipher.exe, use the `/w` switch with the cipher command:
 

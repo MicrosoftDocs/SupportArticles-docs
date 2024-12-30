@@ -8,7 +8,6 @@ ms.collection: highpri
 ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 ms.reviewer: dansimp
 audience: itpro
-localization_priority: medium
 ---
 # Collect data using Network Monitor
 

@@ -8,15 +8,16 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.service: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 ms.custom: certificates-and-public-key-infrastructure-pki, csstroubleshoot
 keywords: 
 ---
-
 # Can't import an AES256-SHA256-encrypted PFX certificate
 
 This article provides a workaround for an issue in which you can't import a certificate that uses AES256-SHA256 encryption into certain versions of Windows or Windows Server.
+
+> [!NOTE]
+> Windows 11, Windows 2019, and later versions of Windows support AES256-SHA256 encrypted PFX files. Therefore, the issue outlined in this article does not apply to these versions of Windows.
 
 ## Symptoms
 

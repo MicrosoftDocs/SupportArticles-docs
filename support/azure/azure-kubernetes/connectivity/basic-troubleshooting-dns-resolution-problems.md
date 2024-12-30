@@ -219,7 +219,7 @@ A network traffic capture can help you understand how your AKS cluster is handli
 
 Many traffic-capturing tools are available to assist this process, including the following tools:
 
-- [Retina Capture](https://retina.sh/docs/captures/)
+- [Retina Capture](https://retina.sh/docs/Troubleshooting/capture)
 
 - [Dumpy](https://github.com/larryTheSlap/dumpy) - an open source traffic capture plug-in for Kubernetes
 
@@ -516,3 +516,4 @@ If these troubleshooting steps don't resolve the problem, repeat the troubleshoo
 [!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+

@@ -5,7 +5,6 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:Virtualization and Hyper-V\Snapshots, checkpoints, and differencing disks, csstroubleshoot
 keywords: differencing disks, avhdx, merge checkpoint, merge vhd

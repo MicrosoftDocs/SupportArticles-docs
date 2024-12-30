@@ -7,7 +7,6 @@ ms.author: kaushika
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:Windows Servicing, Updates and Features on Demand\Issues installing Server Roles, csstroubleshoot
 ---
