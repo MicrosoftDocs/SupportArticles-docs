@@ -120,7 +120,7 @@ $uri = 'https://graph.microsoft.com/v1.0/users?$filter=userType eq ''Guest''&$se
 
 # Pull Data
 $token = Get-AccessTokenCC
-Get-GraphQueryOutput -Uri $my_uri|out-file c:\\temp\\output.json
+Get-GraphQueryOutput -Uri $uri|out-file c:\\temp\\output.json
 
 ```
 
