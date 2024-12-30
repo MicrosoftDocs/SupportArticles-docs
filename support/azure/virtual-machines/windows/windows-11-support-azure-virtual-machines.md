@@ -25,6 +25,7 @@ This article provides details about the applicable processors for Microsoft Azur
 |A-Series|No|
 |A-Series v2|No|
 |B-Series|No|
+|Bsv2-Series|Yes|
 |DCv2-Series|Yes|
 |DCv3-Series|Yes|
 |D-Series|No|
