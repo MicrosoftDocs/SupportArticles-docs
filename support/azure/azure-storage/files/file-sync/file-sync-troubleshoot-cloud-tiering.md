@@ -182,7 +182,7 @@ If content doesn't exist for the error code, follow the general troubleshooting 
 |---------|-------------------|--------------|-------|-------------|
 | 0x80070079 | -2147942521 | ERROR_SEM_TIMEOUT | The file failed to recall due to an I/O timeout. This issue can occur for several reasons: server resource constraints, poor network connectivity, or an Azure storage issue (for example, throttling). | No action required. If the error persists for several hours, please open a support case. |
 | 0x80070036 | -2147024842 | ERROR_NETWORK_BUSY | The file failed to recall due to a network issue.  | If the error persists, check network connectivity to the Azure file share. |
-| 0x80c80037 | -2134376393 | ECS_E_SYNC_SHARE_NOT_FOUND | The file failed to recall because the server endpoint was deleted. | To resolve this issue, see [Tiered files aren't accessible on the server after deleting a server endpoint](?tabs=portal1%252cazure-portal#tiered-files-are-not-accessible-on-the-server-after-deleting-a-server-endpoint). |
+| 0x80c80037 | -2134376393 | ECS_E_SYNC_SHARE_NOT_FOUND | The file failed to recall because the server endpoint was deleted. | To resolve this issue, see [Tiered files aren't accessible on the server](?tabs=portal1%252cazure-portal#tiered-files-are-not-accessible-on-the-server). |
 | 0x80070005 | -2147024891 | ERROR_ACCESS_DENIED | The file failed to recall due to an access denied error. This issue can occur if the firewall and virtual network settings on the storage account are enabled and the server does not have access to the storage account. | To resolve this issue, add the Server IP address or virtual network by following the steps documented in the [Configure firewall and virtual network settings](/azure/storage/file-sync/file-sync-deployment-guide?tabs=azure-portal#optional-configure-firewall-and-virtual-network-settings) section in the deployment guide. |
 | 0x80c86002 | -2134351870 | ECS_E_AZURE_RESOURCE_NOT_FOUND | The file failed to recall because it's not accessible in the Azure file share. | To resolve this issue, verify the file exists in the Azure file share. If the file exists in the Azure file share, upgrade to the latest Azure File Sync [agent version](/azure/storage/file-sync/file-sync-release-notes#supported-versions). |
 | 0x80c8305f | -2134364065 | ECS_E_EXTERNAL_STORAGE_ACCOUNT_<br/>AUTHORIZATION_FAILED | The file failed to recall due to authorization failure to the storage account. | To resolve this issue, verify [Azure File Sync has access to the storage account](/azure/storage/file-sync/file-sync-troubleshoot-sync-errors?tabs=portal1,azure-portal#troubleshoot-rbac). |
@@ -245,7 +245,7 @@ If content doesn't exist for the error code, follow the general troubleshooting 
 | 0x80C80362 | -2134375582 | ECS_E_ITEM_PATH_COMPONENT_HAS_<br/>TRAILING_DOT | The file tiering or download failed because of a trailing dot in the path. | Rename the trailing dot in the folder or file name. |
 | 0x80c83096 | -2134364010 | ECS_E_MGMT_<br/>STORAGEACLSBYPASSNOTSET | This error occurs if the firewall and virtual network settings are enabled on the storage account and the **Allow trusted Microsoft services to access this storage account** exception isn't checked. | To resolve this issue, follow the steps in [Configure firewall and virtual network settings](/azure/storage/file-sync/file-sync-deployment-guide#optional-configure-firewall-and-virtual-network-settings). |
 
-## Tiered files are not accessible on the server after deleting a server endpoint
+## Tiered files are not accessible on the server
 
 Tiered files on a server will become inaccessible if the files aren't recalled prior to deleting a server endpoint or if tiered files were restored from on-premises (third-party) backup to the server endpoint location.
 
@@ -254,16 +254,7 @@ The following errors are logged if tiered files aren't accessible:
 - When syncing a file, error code -2147023890 (0x800703ee - ERROR_FILE_INVALID) or -2147942467 (0x80070043 - ERROR_BAD_NET_NAME) is logged in the *ItemResults* event log.
 - When recalling a file, error code -2147023890 (0x800703ee - ERROR_FILE_INVALID) or -2134376393 (0x80c80037 - ECS_E_SYNC_SHARE_NOT_FOUND) is logged in the *RecallResults* event log.
 
-If the tiered files aren't accessible due to deleting the server endpoint, restoring access to your tiered files is possible if the following conditions are met:
-
-- Server endpoint was deleted within the past 30 days.
-- Cloud endpoint wasn't deleted.
-- File share wasn't deleted.
-- Sync group wasn't deleted.
-
-If the conditions above are met, you can restore access to the files on the server by recreating the server endpoint at the same path on the server within the same sync group within 30 days.
-
-If the conditions above aren't met or the tiered files were restored from an on-premises (third-party) backup, restoring access isn't possible as these tiered files on the server are now orphaned. Follow these instructions to remove the orphaned tiered files.
+Follow the instructions in the sections below to remove the orphaned tiered files.
 
 > [!NOTE]
 >

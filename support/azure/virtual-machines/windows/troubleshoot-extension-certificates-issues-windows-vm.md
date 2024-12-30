@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot extension certificate issues on a Windows VM in Azure
 description: Learn how to troubleshoot issues that involve certificates on a Windows virtual machine (VM) that uses an extension in Azure.
-ms.date: 05/05/2023
+ms.date: 12/12/2024
 editor: v-jsitser
 ms.reviewer: kegregoi, axelg, scotro, v-leedennis
 ms.service: azure-virtual-machines
@@ -101,13 +101,13 @@ Follow these steps to update to a certificate that can be used successfully toge
 
 1. Trigger a new goal state for the guest agent by applying one of the following options:
 
-   - Run the following PowerShell script that contains the [Get-AzureRmVM](/powershell/module/azurerm.compute/get-azurermvm) and [Update-AzureRmVM](/powershell/module/azurerm.compute/update-azurermvm) commands:
+   - Run the following PowerShell commands:
 
      ```azurepowershell
      $rg = "<name-of-the-resource-group-containing-the-virtual-machine>"
      $vmName = "<name-of-the-virtual-machine>"
-     $vm = Get-AzureRmVM -ResourceGroupName $rg -Name $vmName  
-     Update-AzureRmVM -ResourceGroupName $rg -VM $vm  
+     $vm = Get-AzVM -ResourceGroupName $rg -Name $vmName  
+     Update-AzVM -ResourceGroupName $rg -VM $vm
      ```
 
    - Perform a "reapply" operation on your VM by following the instructions in the "Resolution" section of the [Virtual machine stuck in a failed state](vm-stuck-in-failed-state.md) article.
