@@ -18,7 +18,7 @@ The following error is logged in [the Alerts area](/power-platform/admin/monitor
 
 > An error occurred while creating the incoming email \<Email Subject> in Microsoft Dynamics 365 for the mailbox \<Mailbox Name>.
 
-If you select **View Details** in the alert, you'll see one of the followoing error codes:
+If you select **View Details** in the alert, you see one of the following error codes:
 
 > Email Server Error Code: InvalidSender
 
@@ -28,7 +28,7 @@ If you select **View Details** in the alert, you'll see one of the followoing er
 
 The **InvalidSender** error code indicates that server-side synchronization fails to track an email due to a missing valid email address in the **From** field.
 
-To sovle this issue:
+To solve this issue:
 
 1. Locate the corresponding email in the mailbox.
 2. Verify that there's a valid email address in the **From** field.
@@ -37,7 +37,7 @@ To sovle this issue:
 
 The **InvalidForwardMailItem** error code indicates that a Forward Mailbox receives the email. However, the Dynamics 365 mailbox forwarding the email to the Forward Mailbox doesn't correctly forward the email as an attachment, or that mailbox doesn't have the **Incoming Email** option set to **Forward Mailbox**.
 
-To sovle this issue:
+To solve this issue:
 
 1. Open the Dynamics 365 mailbox record that forwards the email to the Forward Mailbox.
 
