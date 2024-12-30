@@ -2,7 +2,7 @@
 title: A general mailbox access error occurred while receiving email
 description: Resolves the Socket returned exception TimedOut (0x80004005) error that occurs when you test and enable a mailbox in Microsoft Dynamics 365.
 ms.reviewer: 
-ms.date: 12/25/2024
+ms.date: 12/30/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # "A general mailbox access error occurred while receiving email" error when testing and enabling a mailbox
