@@ -25,7 +25,6 @@ This error typically occurs because the user or app doesn't have sufficient perm
 
 ## Troubleshooting Microsoft Graph API by using Postman
 
-The following example uses [app-only authentication](/entra/identity-platform/permissions-consent-overview#app-only-access-access-without-a-user) together with Entra ID in Postman.
 
 ### Step 1: Assign Microsoft Entra RBAC role to the app registration (Service Principal)
 
@@ -110,4 +109,4 @@ The following example uses [app-only authentication](/entra/identity-platform/pe
 1. You must also select **Grant admin consent for default directory** for the permissions. Select **Yes** to confirm that you want to grant admin consent.
 1. Send the PATCH request to disable a user. If the request is successful, you should receive a `204 No Content` response.
 
-[!INCLUDE [third-party-disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [third-party-disclaimer](../../../../includes/third-party-disclaimer.md)]
