@@ -5794,11 +5794,6 @@
       "source_path": "support/developer/webapps/iis/site-behavior-performance/page-cannot-displayed-when-you-connect-ssl.md",
       "redirect_url": "/troubleshoot/developer/webapps/iis/iis-welcome",
       "redirect_document_id": false
-    },
-    {
-      "source_path": "support/developer/webapps/iis/health-diagnostic-performance/troubleshoot-native-memory-leak-iis-7x-application-pool.md",
-      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/troubleshoot-native-memory-leak-iis-7x-application-pool",
-      "redirect_document_id": true
     }
   ]
 }
