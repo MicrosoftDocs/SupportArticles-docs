@@ -109,4 +109,4 @@ This error typically occurs because the user or app doesn't have sufficient perm
 1. You must also select **Grant admin consent for default directory** for the permissions. Select **Yes** to confirm that you want to grant admin consent.
 1. Send the PATCH request to disable a user. If the request is successful, you should receive a `204 No Content` response.
 
-[!INCLUDE [third-party-disclaimer](../../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [third-party-disclaimer](../../../includes/third-party-disclaimer.md)]
