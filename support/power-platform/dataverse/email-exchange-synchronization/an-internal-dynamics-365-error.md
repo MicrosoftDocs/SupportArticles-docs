@@ -2,7 +2,7 @@
 title: An internal Microsoft Dynamics 365 error
 description: Resolves an email server error UserPrivilegeError that occurs after selecting Test & Enable Mailbox on a mailbox record in Dynamics 365.
 ms.reviewer: 
-ms.date: 12/25/2024
+ms.date: 12/31/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # An internal Microsoft Dynamics 365 error occurred while synchronizing appointments, contacts, and tasks
@@ -41,6 +41,6 @@ To fix this issue, follow these steps:
 4. Select **Manage Roles** to see which security role(s) are assigned to this user.
 5. Navigate to **Settings** > **Security** > **Security Roles**.
 
-6. Open the roles found in step 4. See [PrivilegeDenied error occurs when using Server-Side Synchronization](https://support.microsoft.com/help/4015092) for a list of required privileges, and then verify that the user's security role contains these privileges.
+6. Open the roles found in step 4. See [PrivilegeDenied error occurs when using Server-Side Synchronization](/previous-versions/troubleshoot/dynamics/crm/privilegedenied-error-when-using-server-side-sync) for a list of required privileges, and then verify that the user's security role contains these privileges.
 
 7. After verifying that the user is the owner of the mailbox record and that their security role contains the required privileges, select **Test & Enable Mailbox** in the mailbox record again. If the test doesn't result in **Success**, review the message that appears in the **Alerts** section for further details.
