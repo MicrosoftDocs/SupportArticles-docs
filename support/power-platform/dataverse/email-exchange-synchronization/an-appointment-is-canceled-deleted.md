@@ -3,7 +3,7 @@ title: Appointment cancellation issue with server-side synchronization in Dynami
 description: Provides a solution to an issue where an appointment is canceled or deleted unexpectedly when using server-side synchronization.
 ms.author: dmartens
 author: DanaMartens
-ms.date: 12/26/2024
+ms.date: 12/31/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # An appointment is canceled or deleted unexpectedly during server-side synchronization
@@ -23,9 +23,9 @@ This issue can occur if the appointment no longer meets the conditions of the us
 
 ## Resolution
 
-To solve this issue, a configurable setting was introduced that allows you to modify this behavior. You can change the `DistinctPhysicalAndLogicalDeletesForExchangeSync` setting to **True** using one of the following tools:
+As an administrator, you can modify this behavior by changing the `DistinctPhysicalAndLogicalDeletesForExchangeSync` setting to **True** using one of the following tools:
 
-1. [Organization Settings Editor](https://github.com/seanmcne/OrgDbOrgSettings/releases)
+1. [Organization Settings Editor](https://github.com/seanmcne/OrgDbOrgSettings/releases). For more information about how to use the tool to edit the setting, see [Environment database settings](/power-platform/admin/environment-database-settings).
 2. [OrgDBOrgSettings tool for Microsoft Dynamics 365](https://support.microsoft.com/topic/orgdborgsettings-tool-for-microsoft-dynamics-crm-20a10f46-2a24-a156-7144-365d49b842ba)
 
 By updating this setting, you can manage how deletions are handled during synchronization and prevent unexpected cancellations of appointments.
