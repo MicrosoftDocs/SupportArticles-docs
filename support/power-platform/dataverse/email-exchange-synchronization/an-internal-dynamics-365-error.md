@@ -21,7 +21,7 @@ When you select [Test & Enable Mailbox](/power-platform/admin/connect-exchange-o
 
 ## Cause
 
-The error message with the "UserPrivilegeError" email server error code indicates that the user who owns this mailbox doesn't have sufficient privileges. Refer to [PrivilegeDenied error occurs when using Server-Side Synchronization](https://support.microsoft.com/help/4015092) for a list of required privileges.
+The error message with the "UserPrivilegeError" email server error code indicates that the user who owns this mailbox doesn't have sufficient privileges. Refer to [PrivilegeDenied error occurs when using Server-Side Synchronization](/previous-versions/troubleshoot/dynamics/crm/privilegedenied-error-when-using-server-side-sync) for a list of required privileges.
 
 > [!IMPORTANT]
 > Verify that the owner of the mailbox record matches the user. For example, if the mailbox belongs to Paul Cannon, ensure that the **Owner** value in the record is also Paul Cannon. If it shows a different user, that user might not have access to Paul Cannon's mailbox.
