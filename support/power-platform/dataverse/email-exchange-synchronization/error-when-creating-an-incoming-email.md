@@ -2,7 +2,7 @@
 title: Error when creating an incoming email
 description: Solves an InvalidSender or InvalidForwardMailItem error that occurs when creating an incoming email in Microsoft Dynamics 365.
 ms.reviewer: 
-ms.date: 12/30/2024
+ms.date: 12/31/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # "An error occurred while creating the incoming email" occurs in Microsoft Dynamics 365
