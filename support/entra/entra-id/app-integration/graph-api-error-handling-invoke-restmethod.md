@@ -1,6 +1,6 @@
 ---
 title: Handling errors in Microsoft Graph API requests with invoke-restmethod
-description: This article provides a code sample to generate handling errors that occur when you make requests to the Microsoft Graph API by using the Invoke-RestMethod cmdlet in PowerShell.
+description: This article provides a code sample to simulate a handling error that occurs when you make requests to the Microsoft Graph API by using the Invoke-RestMethod cmdlet in PowerShell.
 ms.date: 02/18/2024
 author: genlin
 ms.author: raheld
