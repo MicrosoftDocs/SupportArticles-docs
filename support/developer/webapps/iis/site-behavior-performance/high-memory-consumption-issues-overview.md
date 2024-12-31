@@ -1,11 +1,11 @@
 ---
-title: High Memory Consumption Issues Overview
-description: This article provides methods to capture data for managed memory leak.
-ms.date: 12/30/2024
+title: High Memory Consumption Issue Overview
+description: Provides information on how to troubleshoot high memory consumption issues in applications.
+ms.date: 12/31/2024
 ms.custom: sap:Site Site Behavior and Performance\High memory usage
 ms.reviewer: v-sidong
 ---
-# High memory consumption issues overview
+# Overview of high memory consumption issues 
 
 This article helps troubleshoot high memory consumption issues in applications.
 
@@ -19,36 +19,36 @@ This article helps troubleshoot high memory consumption issues in applications.
 
 > [!NOTE]
 >
-> - Avoid using Task Manager for collecting memory dumps. Specialized tools like DebugDiag and Procdump are more effective for ASP.NET applications as they understand managed code better and handle process bitness automatically.
+> - Avoid using Task Manager to collect memory dumps. Specialized tools like DebugDiag and Procdump are more effective for ASP.NET applications as they understand managed code better and handle process bitness automatically.
 > - Multiple attempts might be needed to get a useful set of memory dumps.
-> - Ensure you have sufficient disk space for memory dumps. Each dump will be approximately the size of the process at that time. For instance, if the process is 1GB, generating 3 dumps requires about 4GB of space.
+> - Ensure you have sufficient disk space for memory dumps. Each dump is approximately the size of the process at that time. For instance, if the process is 1 gigabytes (GB), generating three dumps requires about 4 GB of space.
 
-## Identifying the high memory usage
+## Identify high memory usage
 
-The simplest way to identify high memory usage is monitoring the **Private Bytes** counter, which indicates the amount of private committed memory used by the process. To use IIS Manager's Worker Process module for checking the **Private Bytes (KB)**, follow these steps:
+The simplest way to identify high memory usage is to monitor the **Private Bytes** counter, which indicates the amount of private committed memory used by the process. To check **Private Bytes (KB)** using the Worker Process module of Internet Information Services (IIS) Manager, follow these steps:
 
 1. Open **IIS Manager**.
 1. Select your server name (on the left).
 1. Double-click **Worker Processes**.
-1. Find the **w3wp.exe** process that's using lots of memory. The PID is shown next to it. You might need to refresh this view manually.
+1. Find the **w3wp.exe** process that is using lots of memory. The process ID (PID) is shown next to it. You might need to refresh this view manually.
 
-:::image type="content" source="media/data-capture-managed-memory-leak/worker-process.png" alt-text="A screenshot of Worker Process.":::
+   :::image type="content" source="media/data-capture-managed-memory-leak/worker-process.png" alt-text="Screenshot of Worker Process.":::
 
-## Symptoms for different scenarios
+## Symptoms of different scenarios
 
-Memory leaks generally result in a steady increase in memory usage, leading to crashes or performance declines:
+Memory leaks generally result in a steady increase in memory usage, leading to crashes or performance degradation:
 
 - **32-bit applications**: Might crash and throw an `OutOfMemory` exception when running out of memory, possibly without reporting errors before crashing.
-- **64-bit applications**: Due to the large address space of 64-bit applications, it's rare to fail when trying to allocate virtual memory. However, it can grow to have a very large virtual address space and cause excessive paging of physical memory, which affects applications and other applications that are competing for physical memory.
+- **64-bit applications**: Due to the large address space, 64-bit applications rarely fail when trying to allocate virtual memory. However, they can grow to have a very large virtual address space and cause excessive paging of physical memory, which affects the application and other applications that are competing for physical memory.
 
 |Scenario | Memory limit |More information|
 | --- | --- | --- |
-| 32-bit app on 32-bit Windows | 4 GB in total (2 GB in [user mode](/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode), 2 GB in [kernel mode](/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode))|If you use the **/LARGEADDRESSAWARE** flag in your 32-bit app and use the **/3GB** switch in the **boot.ini** file of the operating system during boot time, it makes the user mode memory 3 GB and kernel mode 1 GB. |
-| 32-bit app on 64-bit Windows | 4 GB in total (2 GB in [user mode](/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode), 2 GB in [kernel mode](/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode)) |If you use the **/LARGEADDRESSAWARE** flag in your 32-bit app, it makes the user mode memory 4 GB. Kernel doesn't use the 32-bit address space on 64-bit operating system. It just uses the required space from the 64-bit address space |
-| 64-bit app on 64-bit Windows | Supports up to 256 TB (128 TB in user mode, 128 TB in kernel mode) |NA|
-|64-bit application on 32-bit Windows |Invalid Scenario  |NA|
+| 32-bit applications on 32-bit Windows | 4 GB in total (2 GB in [user mode](/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode), 2 GB in [kernel mode](/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode))|If you use the **/LARGEADDRESSAWARE** flag in your 32-bit applications and the **/3GB** switch in the **boot.ini** file of the operating system during boot time, it makes the user mode memory 3 GB and the kernel mode 1 GB. |
+| 32-bit applications on 64-bit Windows | 4 GB in total (2 GB in [user mode](/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode), 2 GB in [kernel mode](/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode)) |If you use the **/LARGEADDRESSAWARE** flag in your 32-bit applications, it makes the user mode memory 4 GB. The kernel doesn't use the 32-bit address space on a 64-bit operating system. It uses only the required space from the 64-bit address space. |
+| 64-bit applications on 64-bit Windows | Supports up to 256 terabyte (TB) (128 TB in user mode, 128 TB in kernel mode) |NA|
+|64-bit applications on 32-bit Windows |Invalid scenario  |NA|
 
-High memory usage may not always indicate a leak; processes might recover if allocated memory is freed later.
+High memory usage doesn't always indicate a leak; processes might recover if the allocated memory is freed later.
 
 ## Validate if it's a managed or native memory leak
 
@@ -56,49 +56,49 @@ To set up Perfmon, follow these steps:
 
 1. Open **Performance Monitor** and select the **+** icon to add counters.
 
-   :::image type="content" source="media/high-memory-consumption-issues-overview/performance-monitor.png" alt-text="A screenshot of Performance Monitor.":::
+   :::image type="content" source="media/high-memory-consumption-issues-overview/performance-monitor.png" alt-text="Screenshot that highlights the plus icon in Performance Monitor." lightbox="media/high-memory-consumption-issues-overview/performance-monitor.png":::
 
-1. Select all the **.Net Clr Memory Counters (#Bytes in all heaps)** and the target process. Here is **w3wp** and select **Add**.
-1. Select **Private Bytes** and **Virtual Bytes** under **Process** counter, select the target process and Click Add (You can ignore the working set).
+1. Select **# Bytes in all Heaps** under the **.NET CLR Memory** counter, select the target process (here's **w3wp**), and then select **Add**.
+1. Select **Private Bytes** and **Virtual Bytes** under the **Process** counter, select the target process, and then select **Add** (you can ignore the working set).
 
-   :::image type="content" source="media/high-memory-consumption-issues-overview/add-counters-performance-monitor.png" alt-text="A screenshot of Add Counters in Performance Monitor.":::
+   :::image type="content" source="media/high-memory-consumption-issues-overview/add-counters-performance-monitor.png" alt-text="Screenshot of the Add Counters window.":::
 
 1. Select **OK** and reproduce the issue.
 
-You can monitor how the counters will vary depending on whether it's a managed or a native memory leak:
+Then, you can monitor how the counters vary depending on whether it's a managed or native memory leak.
 
 ### Indicators for managed and native memory leaks
 
-- **Managed Memory Leaks**: If the **Private Bytes** counter and the .NET bytes in all heaps counter are increasing at the same rate (the difference between the two remains constant), it indicates a managed memory leak.
+- **Managed memory leaks**: If the **Private Bytes** counter and the **# Bytes in all heaps Heaps** counter increase at the same rate (the difference between them remains constant), it indicates a managed memory leak.
 
-   :::image type="content" source="media/high-memory-consumption-issues-overview/managed-memory-leak-indicator.png" alt-text="A screenshot of managed memory leak indicator.":::
+   :::image type="content" source="media/high-memory-consumption-issues-overview/managed-memory-leak-indicator.png" alt-text="Screenshot showing how the counters change for a managed memory leak.":::
 
-  For more information, see [Data capture for managed memory leak](data-capture-managed-memory-leak.md).
+  For more information, see [Data capture for managed memory leaks](data-capture-managed-memory-leak.md).
 
-- **Native Memory Leaks**: If the **Private Bytes** counter is increasing but the .NET bytes in all heaps counter remains constant, it indicates a native memory leak.
+- **Native memory leaks**: If the **Private Bytes** counter increases but the **# Bytes in all heaps Heaps** counter remains constant, it indicates a native memory leak.
 
-   :::image type="content" source="media/high-memory-consumption-issues-overview/native-memory-leak-indicator.png" alt-text="A screenshot of native memory leak indicator.":::
+   :::image type="content" source="media/high-memory-consumption-issues-overview/native-memory-leak-indicator.png" alt-text="Screenshot showing how the counters change for a native memory leak.":::
 
 ## .NET Core applications
 
-If the app in question is .NET Core and hosted on IIS in-process mode, this above option for log collection applies as is. But if the app is hosted on IIS as out-of-proc mode then the action plan should be modified so that the dotnet process(dotnet.exe unless otherwise specified) is investigated instead of w3wp.exe. Same thing applies for self-hosted .NET Core applications.
+If the application in question is .NET Core and hosted on IIS in in-process mode, [the log collection options](data-capture-managed-memory-leak.md) apply as is. However, if the application is hosted on IIS in out-of-process mode, the action plan should be modified to investigate the dotnet process (**dotnet.exe** unless otherwise specified) instead of **w3wp.exe**. The same thing applies to self-hosted .NET Core applications.
 
 ## Troubleshooting example
 
-Consider you have an application hosted on an IIS server and you have high memory usage (The memory spikes up to around 7 GB by doing a stress test) when accessing a specific URL, follow these steps to diagnose:
+Assueme you have an application hosted on an IIS server and you have high memory usage (the memory spikes up to around 7 GB by doing a stress test) when accessing a specific URL. Follow these steps to diagnose:
 
-1. Check Performance Monitor by following the steps in [Validate if it's a managed or native memory leak](#validate-if-its-a-managed-or-native-memory-leak), you notice **Private Bytes** and **Bytes in all Heaps** remain constant which indicates it's a managed memory leak.
+1. Check Performance Monitor by following the steps in [Validate if it's a managed or native memory leak](#validate-if-its-a-managed-or-native-memory-leak). If you notice **Private Bytes** and **# Bytes in all Heaps** remain constant, it's a managed memory leak.
 1. Collect dump files by using DebugDiag.
 1. Open the dump files in [WinDbg](/windows-hardware/drivers/debugger/) and run the following commands based on your scenario.
 
     |Command|Usage|
     |---|---|
-    |`!dumpheap -stat`   |This command shows you all the objects on the managed heap and their statistics. You can use the different switches of `!dumpheap` to customize the output to focus on specific types of objects, sizes, or states, making it easier to analyze the managed heap and identify issues such as memory leaks. |
+    |`!dumpheap -stat`   |This command shows you all objects on the managed heap and their statistics. You can customize the output using the different switches of `!dumpheap` to focus on specific types of objects, sizes, or states, making it easier to analyze the managed heap and identify issues such as memory leaks. |
     |`!eeheap -gc` |This command can be used to get the managed heap size. |
-    |`!threads`  |This command helps check if there're any finalizer threads which displays all managed threads. |
-    |`!finalizequeue` |This command is used to dospaly all objects which are in finalize queue. |
+    |`!threads`  |This command helps check for any finalizer threads that display all managed threads. |
+    |`!finalizequeue` |This command is used to display all objects in the finalize queue. |
 
-1. Run `!dumpheap -stat`, you see that `system.char[]`, `system.Text.Stringbuilder`, and `BuggyBits.Models.Link` consume the most objects on the heap, with counts of 3,22,547, 3,22,408 and 3,20,031.
+1. Run `!dumpheap -stat`, and you see that `system.char[]`, `system.Text.Stringbuilder`, and `BuggyBits.Models.Link` consume the most objects on the heap, with counts of 3,22,547, 3,22,408, and 3,20,031.
 
     ```output
     7ff93da4a520      601       1,00,968 Microsoft.AspNetCore.Mvc.TagHelpers.ScriptTagHelper 
@@ -146,8 +146,8 @@ Consider you have an application hosted on an IIS server and you have high memor
     Total 17,82,793 objects, 6,98,09,63,784 bytes
     ```
 
-1. Dump out statistics for various size `char[]` to find out if there is a pattern (This is a trial-and-error process, so you have to try different sizes to figure out where the bulk of the strings are).
-1. Run the command `!dumpheap -mt 7ff93d333058` to list all the objects on the managed heap that have the specified method table (MT) address `7ff93d333058` (`System.Char[]`).
+1. Dump the statistics for various sizes of `char[]` to find out if there's a pattern (this is a trial-and-error process, so you have to try different sizes to determine where the bulk of the strings are).
+1. Run the command `!dumpheap -mt 7ff93d333058` to list all objects on the managed heap that have the specified method table (MT) address `7ff93d333058` (`System.Char[]`).
 
    ```output
    Address           MT                   Size  
@@ -191,7 +191,7 @@ Consider you have an application hosted on an IIS server and you have high memor
    017e077164c0     7ff93d333058         20,024  
    ```
 
-   You can see that most of them are of the same size. And you can see the following statistics:
+   You can see that most of them are the same size. And you can see the following statistics:
 
    ```output
    Statistics: 
@@ -200,7 +200,7 @@ Consider you have an application hosted on an IIS server and you have high memor
    Total 55,862 objects, 1,11,21,80,222 bytes 
    ```
 
-1. Dump out a few of them to find out what they contain.
+1. Dump a few of them to find out what they contain.
 
    ```output
    0:000> !do  017e9a469e08  
@@ -222,7 +222,7 @@ Consider you have an application hosted on an IIS server and you have high memor
    Fields: 
    ```
 
-1. Run `gcroot` on some of those address, you see there is a finalizer queue.
+1. Run `gcroot` on some of those addresses, and you see a finalizer queue.
 
    ```output
    0:000> !gcroot 017e9a469e08 
@@ -233,7 +233,7 @@ Consider you have an application hosted on an IIS server and you have high memor
           -> 017e9a469e08     System.Char[]
    ```
 
-1. Run `!threads` to list out all threads and show the state of those threads. You see there is one thread 42 having Finalizer.
+1. Run `!threads` to list all threads and show their states. You see thread 42 has a finalizer.
 
    ```output
    0:000> !threads 
@@ -296,7 +296,7 @@ Consider you have an application hosted on an IIS server and you have high memor
      49   67     94f8 0000018315D0A3E0    21220 Preemptive  0000000000000000:0000000000000000 0000017e06237220 0     Ukn  
    ```
 
-1. Dump out the thread 42 and check stack, you see `buggybits.models.link` calling out some `Thread.Sleep`.
+1. Dump thread 42 and check the stack. You see `buggybits.models.link` calling some `Thread.Sleep`.
 
     ```output
     0:042> k 
@@ -327,7 +327,7 @@ Consider you have an application hosted on an IIS server and you have high memor
     16 00000027`987ffd30 00000000`00000000     ntdll!RtlUserThreadStart+0x28
     ```
 
-1. Check the code, you can see that in `Link.cs`, there is explicit call to `Thread.sleep` which is causing high memory usage.
+1. Check the code, and you can see an explicit call to `Thread.sleep` in `Link.cs`, which is causing high memory usage.
 
    ```output
    // BuggyBits.Models.Link 
@@ -348,6 +348,6 @@ Consider you have an application hosted on an IIS server and you have high memor
 
 ## More information
 
-[Use Performance Monitor to find a user-mode memory leak](/windows-hardware/drivers/debugger/using-performance-monitor-to-find-a-user-mode-memory-leak)
+- [Use Performance Monitor to find a user-mode memory leak](/windows-hardware/drivers/debugger/using-performance-monitor-to-find-a-user-mode-memory-leak)
 
-[Data capture for managed memory leaks](data-capture-managed-memory-leak.md)
+- [Data capture for managed memory leaks](data-capture-managed-memory-leak.md)
