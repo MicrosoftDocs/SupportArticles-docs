@@ -49,7 +49,7 @@ To monitor **Private Bytes (KB)**, follow these steps:
 1. Open **IIS Manager**.
 1. Select your server name (on the left).
 1. Double-click **Worker Processes**.
-1. Check **Private Bytes (KB)**. Here is a sceenshot:
+1. Check **Private Bytes (KB)**. Here is a screenshot:
 
    :::image type="content" source="media/data-capture-managed-memory-leak/worker-process.png" alt-text="Screenshot of Worker Processes.":::
 
@@ -85,7 +85,7 @@ To validate if it's a managed or native memory leak, follow these steps:
 
 ## .NET Core applications
 
-If the application in question is .NET Core and hosted on IIS in in-process mode, the steps to caprute data in [Data capture for managed memory leaks](data-capture-managed-memory-leak.md) and [Troubleshoot native memory leak in an IIS 7.x application pool](troubleshoot-native-memory-leak-iis-7x-application-pool.md) also apply. However, if the application is hosted on IIS in out-of-process mode, the action plan should be modified to investigate the dotnet process (**dotnet.exe** unless otherwise specified) instead of **w3wp.exe**. The same thing applies to self-hosted .NET Core applications.
+If the application in question is .NET Core and hosted on IIS in in-process mode, the steps to capture data in [Data capture for managed memory leaks](data-capture-managed-memory-leak.md) and [Troubleshoot native memory leak in an IIS 7.x application pool](troubleshoot-native-memory-leak-iis-7x-application-pool.md) also apply. However, if the application is hosted on IIS in out-of-process mode, the action plan should be modified to investigate the dotnet process (**dotnet.exe** unless otherwise specified) instead of **w3wp.exe**. The same thing applies to self-hosted .NET Core applications.
 
 ## Troubleshooting example
 
