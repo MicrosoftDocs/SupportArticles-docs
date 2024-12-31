@@ -71,11 +71,11 @@ To validate if it's a managed or native memory leak, follow these steps:
 1. Select **OK** and reproduce the issue.
 1. To verify whether it's a managed or native memory leak, monitor the counters:
 
-   - If the **Private Bytes** counter and the **# Bytes in all heaps Heaps** counter increase at the same rate (the difference between them remains constant), it indicates a managed memory leak. For more information, see [Data capture for managed memory leaks](data-capture-managed-memory-leak.md).
+   - If the **Private Bytes** counter and the **# Bytes in all Heaps** counter increase at the same rate (the difference between them remains constant), it indicates a managed memory leak. For more information, see [Data capture for managed memory leaks](data-capture-managed-memory-leak.md).
 
      :::image type="content" source="media/high-memory-consumption-issues-overview/managed-memory-leak-indicator.png" alt-text="Screenshot showing how the counters change for a managed memory leak.":::
 
-   - If the **Private Bytes** counter increases but the **# Bytes in all heaps Heaps** counter remains constant, it indicates a native memory leak. For more information, see [Troubleshoot native memory leak in an IIS 7.x application pool](troubleshoot-native-memory-leak-iis-7x-application-pool.md).
+   - If the **Private Bytes** counter increases but the **# Bytes in all Heaps** counter remains constant, it indicates a native memory leak. For more information, see [Troubleshoot native memory leak in an IIS 7.x application pool](troubleshoot-native-memory-leak-iis-7x-application-pool.md).
 
      :::image type="content" source="media/high-memory-consumption-issues-overview/native-memory-leak-indicator.png" alt-text="Screenshot showing how the counters change for a native memory leak.":::
 
