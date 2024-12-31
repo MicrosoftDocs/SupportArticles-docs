@@ -53,7 +53,7 @@ To monitor **Private Bytes (KB)**, follow these steps:
 
    :::image type="content" source="media/data-capture-managed-memory-leak/worker-process.png" alt-text="Screenshot of Worker Processes.":::
 
-   If the value of **Private Bytes (KB)** for a **w3wp.exe** process (IIS worker process) reaches the memory limit as described in the [Memory limit for different scenarios](#memory-limit-for-different-scenarios), the **w3wp.exe** process has the high memory issue. **Process Id** and **Application Pool Name** are shown next to it. You might need to refresh this view manually.
+   If the value of **Private Bytes (KB)** for the **w3wp.exe** process (IIS worker process) reaches the memory limit as described in the [Memory limit for different scenarios](#memory-limit-for-different-scenarios), the **w3wp.exe** process has the high memory issue. **Process Id** and **Application Pool Name** are shown next to it. You might need to refresh this view manually.
 
 ## Validate if it's a managed or native memory leak
 
