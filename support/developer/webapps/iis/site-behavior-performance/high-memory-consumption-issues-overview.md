@@ -2,7 +2,7 @@
 title: High Memory Consumption Issue Overview
 description: Provides information on how to troubleshoot high memory consumption issues in applications.
 ms.date: 12/31/2024
-ms.custom: sap:Site Site Behavior and Performance\High memoryu sage
+ms.custom: sap:Site Behavior and Performance\High memory usage
 ms.reviewer: khgupta, v-sidong
 ---
 # Overview of high memory consumption issues 
