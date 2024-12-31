@@ -2,7 +2,7 @@
 title: Error occurred while synchronizing or receiving an email
 description: Fixes the 80040216, ServiceUnavailable, IncomingMailboxInternalCrmError, or ErrorInternalServerTransientError error during server-side synchronization in Dynamics 365.
 ms.reviewer: 
-ms.date: 12/26/2024
+ms.date: 12/31/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # An error occurs when receiving or synchronizing an email in a Microsoft Dynamics 365 mailbox
