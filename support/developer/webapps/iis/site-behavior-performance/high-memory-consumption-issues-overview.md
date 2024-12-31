@@ -296,7 +296,7 @@ Assume you have an application hosted on an IIS server and you experience high m
      49   67     94f8 0000018315D0A3E0    21220 Preemptive  0000000000000000:0000000000000000 0000017e06237220 0     Ukn  
    ```
 
-1. Dump thread 42 and check the stack, and then you see `buggybits.models.link` calling some `Thread.Sleep`:
+1. Dump thread 42 and check the stack, and then you see `buggybits.models.link` calling some [Thread.Sleep](/dotnet/api/system.threading.thread.sleep):
 
     ```output
     0:042> k 
@@ -327,7 +327,7 @@ Assume you have an application hosted on an IIS server and you experience high m
     16 00000027`987ffd30 00000000`00000000     ntdll!RtlUserThreadStart+0x28
     ```
 
-1. Check the following code snippet in the **Link.cs** file, and then you see that there is an explicit call to `Thread.sleep`, which is causing high memory usage.
+1. Check the following code snippet in the **Link.cs** file, and then you see that there is an explicit call to `Thread.Sleep`, which is causing high memory usage.
 
    ```C#
    // BuggyBits.Models.Link 
