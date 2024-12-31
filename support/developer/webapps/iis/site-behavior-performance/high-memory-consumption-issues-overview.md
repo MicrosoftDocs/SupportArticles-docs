@@ -81,7 +81,7 @@ To validate if it's a managed or native memory leak, follow these steps:
 
 ## .NET Core applications
 
-If the application in question is .NET Core and hosted on IIS in in-process mode, the steps to capture data in [Data capture for managed memory leaks](data-capture-managed-memory-leak.md) and [Troubleshoot native memory leak in an IIS 7.x application pool](troubleshoot-native-memory-leak-iis-7x-application-pool.md) also apply. However, if the application is hosted on IIS in out-of-process mode, the action plan should be modified to investigate the dotnet process (**dotnet.exe** unless otherwise specified) instead of **w3wp.exe**. The same thing applies to self-hosted .NET Core applications.
+If the application in question is .NET Core and hosted on IIS in in-process mode, the steps for log collection in [Creating a Debug Diagnostics 1.2 Rule](troubleshoot-native-memory-leak-iis-7x-application-pool.md##creating-a-debug-diagnostics-12-rule) also apply. However, if the application is hosted on IIS in out-of-process mode, the action plan should be modified to investigate the dotnet process (**dotnet.exe** unless otherwise specified) instead of **w3wp.exe**. The same thing applies to self-hosted .NET Core applications.
 
 ## Troubleshooting example
 
