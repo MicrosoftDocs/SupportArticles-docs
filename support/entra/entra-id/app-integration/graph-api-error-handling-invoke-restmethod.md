@@ -1,6 +1,6 @@
 ---
 title: Handling errors in Microsoft Graph API requests with invoke-restmethod
-description: This article provides code sample about handling errors when making requests to the Microsoft Graph API using the Invoke-RestMethod cmdlet in PowerShell.
+description: This article provides a code sample to generate handling errors that occur when you make requests to the Microsoft Graph API by using the Invoke-RestMethod cmdlet in PowerShell.
 ms.date: 02/18/2024
 author: genlin
 ms.author: raheld
@@ -12,19 +12,19 @@ ms.custom: sap:Microsoft Graph Users, Groups, and Entra APIs
 ---
 # Retry logics in Microsoft Graph API Requests with Invoke-RestMethod
 
-This article guides you through handling errors when making requests to the Microsoft Graph API using the `Invoke-RestMethod` cmdlet in PowerShell. Implementing robust error handling is highly recommended when interacting with Microsoft Graph.
+This article helps you to handle errors that occur when you make requests to the Microsoft Graph API by using the `Invoke-RestMethod` cmdlet in PowerShell. We recommend that you use robust error handling when you interact with Microsoft Graph.
 
 ## Prerequisites
 
 - An Azure app registration with a client secret
-- The App must have permission for Microsoft.Graph `user.read.all`. For more information, see [List users](/graph/api/user-get?view=graph-rest-1.0&tabs=http&preserve-view=true).
+- The `user.read.all` permission for Microsoft.Graph for the Azure app. For more information, see [List users](/graph/api/user-get?view=graph-rest-1.0&tabs=http&preserve-view=true).
 
 ## Code sample
 
-For demonstration purposes of the retry logic, the sample tries to query the `signInActivity` data for guest users. You will receive a 403 error, which is expected.
+To demonstrate the retry logic, this sample tries to query the `signInActivity` data for guest users. When you run this code, you can expect to receive a "403" error.
 
-- **Get-AccessTokenCC** This function requests an access token from Microsoft Entra ID (formerly Azure Active Directory), which can then be used to authenticate API requests to Microsoft Graph. You need to provides values for The `$clientSecret`, `$clientId`, and `$tenantId` of your Azure registration app.
-- **Get-GraphQueryOutput ($Uri)**  This function makes a request to the Microsoft Graph API to retrieve data and handles paging and retries if there is an error 403.
+- **Get-AccessTokenCC** This function requests an access token from Microsoft Entra ID (formerly Azure Active Directory). The token can be used to authenticate API requests to Microsoft Graph. You have to provide values for The `$clientSecret`, `$clientId`, and `$tenantId` of your Azure registration app.
+- **Get-GraphQueryOutput ($Uri)**  This function makes a request to the Microsoft Graph API to retrieve data. It also handles paging. The function retries the request if a "403" error is generated.
 
 ``` powershell
 Function Get-AccessTokenCC
@@ -68,7 +68,6 @@ Function Get-GraphQueryOutput ($Uri)
             $result=Invoke-RestMethod -Method Get -Uri $Uri -ContentType 'application/json' -Headers @{Authorization = "Bearer $token"}
            
             Write-Host $result
-
          
             if($query.'@odata.nextLink'){
                 # set the url to get the next page of records. For more information about paging, see https://docs.microsoft.com/graph/paging
@@ -107,7 +106,6 @@ Function Get-GraphQueryOutput ($Uri)
  
     $output = $allRecords | ConvertTo-Json
 
-
 if ($result.PSObject.Properties.Name -contains "value") {
     return $result.value
 } else {
@@ -124,12 +122,15 @@ Get-GraphQueryOutput -Uri $uri|out-file c:\\temp\\output.json
 
 ```
 
-## Capturing specific header
+## Capturing a specific header
 
-For advanced scenarios such as capturing specific header values like `Retry-After` during throttling responses (HTTP 429), use:
+For advanced scenarios, such as capturing specific header values such as `Retry-After` during throttling responses (HTTP 429), use:
 
 ```powershell
 $retryAfterValue = $_.Exception.Response.Headers["Retry-After"]
 ```
-To handle the 429 too many requests error, see [Microsoft Graph throttling guidance](/graph/throttling).
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+To handle the "429 - too many requests" error, see [Microsoft Graph throttling guidance](/graph/throttling).
+
+[!INCLUDE [Azure Help Support]
+
+(../../../includes/azure-help-support.md)]
