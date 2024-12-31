@@ -45,7 +45,7 @@ Memory leaks generally result in a steady increase in memory usage, leading to c
 | --- | --- | --- |
 | 32-bit applications on 32-bit Windows | 4 GB in total (2 GB in [user mode](/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode), 2 GB in [kernel mode](/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode))|If you use the **/LARGEADDRESSAWARE** flag in your 32-bit applications and the **/3GB** switch in the **boot.ini** file of the operating system during boot time, it makes the user mode memory 3 GB and the kernel mode 1 GB. |
 | 32-bit applications on 64-bit Windows | 4 GB in total (2 GB in [user mode](/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode), 2 GB in [kernel mode](/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode)) |If you use the **/LARGEADDRESSAWARE** flag in your 32-bit applications, it makes the user mode memory 4 GB. The kernel doesn't use the 32-bit address space on a 64-bit operating system. It uses only the required space from the 64-bit address space. |
-| 64-bit applications on 64-bit Windows | Supports up to 256 terabyte (TB) (128 TB in user mode, 128 TB in kernel mode) |NA|
+| 64-bit applications on 64-bit Windows | Supports up to 256 terabytes (TB) (128 TB in user mode, 128 TB in kernel mode) |NA|
 |64-bit applications on 32-bit Windows |Invalid scenario  |NA|
 
 High memory usage doesn't always indicate a leak; processes might recover if the allocated memory is freed later.
@@ -85,7 +85,7 @@ If the application in question is .NET Core and hosted on IIS in in-process 
 
 ## Troubleshooting example
 
-Assueme you have an application hosted on an IIS server and you have high memory usage (the memory spikes up to around 7 GB by doing a stress test) when accessing a specific URL. Follow these steps to diagnose:
+Assume you have an application hosted on an IIS server and you have high memory usage (the memory spikes up to around 7 GB by doing a stress test) when accessing a specific URL. Follow these steps to diagnose:
 
 1. Check Performance Monitor by following the steps in [Validate if it's a managed or native memory leak](#validate-if-its-a-managed-or-native-memory-leak). If you notice **Private Bytes** and **# Bytes in all Heaps** remain constant, it's a managed memory leak.
 1. Collect dump files by using DebugDiag.
@@ -98,7 +98,7 @@ Assueme you have an application hosted on an IIS server and you have high memory
     |`!threads`  |This command helps check for any finalizer threads that display all managed threads. |
     |`!finalizequeue` |This command is used to display all objects in the finalize queue. |
 
-1. Run `!dumpheap -stat`, and you see that `system.char[]`, `system.Text.Stringbuilder`, and `BuggyBits.Models.Link` consume the most objects on the heap, with counts of 3,22,547, 3,22,408, and 3,20,031.
+1. Run `!dumpheap -stat`. You can see that `system.char[]`, `system.Text.Stringbuilder`, and `BuggyBits.Models.Link` consume the most objects on the heap, with counts of 322,547, 322,408, and 320,031.
 
     ```output
     7ff93da4a520      601       1,00,968 Microsoft.AspNetCore.Mvc.TagHelpers.ScriptTagHelper 
