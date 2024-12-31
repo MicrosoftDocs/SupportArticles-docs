@@ -2,7 +2,7 @@
 title: Email fails to create with a NoCorrelationMatch sync error
 description: An email fails to be created with a NoCorrelationMatch sync error in Microsoft Dynamics 365.
 ms.reviewer: 
-ms.date: 12/27/2024
+ms.date: 12/31/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # An email fails to be created with a NoCorrelationMatch sync error in Microsoft Dynamics 365
@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4339713
 
 ## Symptoms
 
-When reviewing email messages analyzed for automatic promotion by Dynamics 365, you might receive an email message that fails to be created with a **NoCorrelationMatch** sync error.
+When reviewing email messages analyzed for automatic promotion by Dynamics 365, you notice an email message that fails to be created with a **NoCorrelationMatch** sync error.
 
 ## Cause
 
