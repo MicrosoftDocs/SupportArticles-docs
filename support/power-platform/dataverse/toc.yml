@@ -14,6 +14,10 @@
   items:
     - name: 401 Unauthorized exception when using Server-Side Synchronization
       href: email-exchange-synchronization/exception-when-using-server-side-sync.md
+    - name: An error occurred when receiving or synchronizing an email
+      href: email-exchange-synchronization/an-error-occurred-while-synchronizing-item.md
+    - name: An error occurred while creating the incoming email
+      href: email-exchange-synchronization/error-when-creating-an-incoming-email.md
     - name: '"A scheduling conflict was found when saving appointment" error'
       href: email-exchange-synchronization/scheduling-conflict-saving-appointment.md
     - name: An appointment is canceled or deleted during server-side synchronization
@@ -42,7 +46,7 @@
       href: email-exchange-synchronization/email-cannot-be-received-because-license-is-invalid-error.md
     - name: Email fails to be created with NoRecipientMatch
       href: email-exchange-synchronization/email-fails-to-create-with-norecipientmatch-error.md
-    - name: Email fails to create with NoCorrelationMatch sync
+    - name: Email fails to be created with NoCorrelationMatch
       href: email-exchange-synchronization/email-fails-to-create-with-nocorrelationmatch-error.md
     - name: Email server location or incoming email port is incorrect
       href: email-exchange-synchronization/email-cannot-be-received-mailbox.md
@@ -56,8 +60,6 @@
       href: email-exchange-synchronization/error-code-8005e274.md
     - name: Error code 8005E276
       href: email-exchange-synchronization/error-code-8005e276.md
-    - name: Error when creating the incoming email
-      href: email-exchange-synchronization/error-when-creating-an-incoming-email.md
     - name: Error while synchronizing appointments, contacts, and tasks
       href: email-exchange-synchronization/an-internal-dynamics-365-error.md
     - name: ErrorQuotaExceeded. Exchange.server returned 403 error
