@@ -43,7 +43,7 @@ To resolve the error, you must locate the specific error as part of the mailbox 
 1. Open the CRM instance you connected to Copilot for Sales.
 
     > [!NOTE]
-    > To get the CRM instance URL, go to the [**Home** tab](/microsoft-sales-copilot/personal-app#home-tab) in the Copilot for Sales personal app in [Outlook](microsoft-sales-copilot/personal-app#open-the-personal-app-in-outlook) or [Teams](/microsoft-sales-copilot/personal-app#open-the-personal-app-in-teams), and select the environment name shown at the upper-right corner.
+    > To get the CRM instance URL, go to the [**Home** tab](/microsoft-sales-copilot/personal-app#home-tab) in the Copilot for Sales personal app in [Outlook](/microsoft-sales-copilot/personal-app#open-the-personal-app-in-outlook) or [Teams](/microsoft-sales-copilot/personal-app#open-the-personal-app-in-teams), and select the environment name shown at the upper-right corner.
 
 2. Select **Settings** > **Personalization Settings**.
 
