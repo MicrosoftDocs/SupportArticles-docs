@@ -138,8 +138,8 @@ items:
       href: site-behavior-performance/high-memory-consumption-issues-overview.md
     - name: Data capture for managed memory leaks
       href: site-behavior-performance/data-capture-managed-memory-leak.md
-    - name: Troubleshoot native memory leak in an IIS 7.x application pool
-      href: health-diagnostic-performance/troubleshoot-native-memory-leak-iis-7x-application-pool.md
+    - name: Native memory leak in an IIS 7.x application pool
+      href: site-behavior-performance/troubleshoot-native-memory-leak-iis-7x-application-pool.md
   - name: HTTP error 404.2
     href: site-behavior-performance/http-error-402-webpage.md
   - name: HTTP error 500 when you use Response.BinaryWrite
