@@ -21,7 +21,7 @@ This article helps troubleshoot high memory consumption issues in different appl
 >
 > - Avoid using Task Manager to collect memory dumps. Specialized tools like DebugDiag and Procdump are more effective for ASP.NET applications as they understand managed code better and handle process bitness automatically.
 > - Multiple attempts might be needed to get a useful set of memory dumps.
-> - Ensure you have sufficient disk space for memory dumps. Each dump is approximately the size of the process at that time. For instance, if the process is 1 gigabytes (GB), generating three dumps requires about 4 GB of space.
+> - Ensure you have sufficient disk space for memory dumps. Each dump is approximately the size of the process at that time. For instance, if the process is 1 gigabyte (GB), generating three dumps requires about 4 GB of space.
 
 ## Memory limit for different scenarios
 
