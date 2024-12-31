@@ -11147,7 +11147,7 @@
     },
     {
       "source_path": "support/windows-server/active-directory/lingering-objects-remain.md",
-      "redirect_url": "/previous-versions/troubleshoot/windows-server/lingering-objects-remain",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/manually-remove-lingering-objects",
       "redirect_document_id": false
     },
     {

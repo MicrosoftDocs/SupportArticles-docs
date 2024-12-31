@@ -230,7 +230,10 @@
       href: mfa/unexpected-error-reset-pwd.md
     - name: Verify account error when resetting password
       href: mfa/cannot-verify-account-reset-pwd.md
-
+- name: Microsoft Graph Users, Groups, and Entra APIs
+  items: 
+   - name: Troubleshoot Authorization_RequestDenied error
+     href: app-integration/troubleshoot-authorization-requestdenied-graph-api.md
 - name: Microsoft Entra User Provisioning and Synchronization
   items:
   - name: User Sign-in or password Problems
