@@ -44,7 +44,7 @@
       href: email-exchange-synchronization/email-cannot-be-received-because-license-is-invalid-error.md
     - name: Email fails to be created with NoRecipientMatch
       href: email-exchange-synchronization/email-fails-to-create-with-norecipientmatch-error.md
-    - name: Email fails to create with NoCorrelationMatch sync
+    - name: Email fails to be created with NoCorrelationMatch
       href: email-exchange-synchronization/email-fails-to-create-with-nocorrelationmatch-error.md
     - name: Email server location or incoming email port is incorrect
       href: email-exchange-synchronization/email-cannot-be-received-mailbox.md
