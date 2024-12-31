@@ -10,16 +10,16 @@ ms.custom: sap:User Logon and Profiles\Service Account and Interactive User Logo
 ---
 # Cached user logon fails when LSASRV event 45058 indicates FIFO deletion of cached credential
 
-This article fixes a logon failure that occurs when logging on to a domain-joined Windows Vista or Windows 7 computer using cached credentials.
+This article fixes a logon failure that occurs when logging on to a domain-joined Windows computer using cached credentials.
 
-_Applies to:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; *Windows 10, Windows 11, Windows Server 2016, Windows Server 2019, Windows Server 2022, Windows Server 2025*  
 _Original KB number:_ &nbsp; 2555663
 
 ## Symptoms
 
-1. Users receive the following error when logging on to a domain-joined Windows Vista or Windows 7 computer using cached credentials:
+1. Users receive the following error when logging on to a domain-joined Windows computer using cached credentials:
 
-    > There are currently no logon servers available to service the logon request.
+> There are currently no logon servers available to service the logon request.
 
 2. LsaSrv Event 45058, logged in the System event log of a domain-joined workstation, indicates that the operating system has deleted the cached credential for the user specified in the event:
 
@@ -39,7 +39,7 @@ _Original KB number:_ &nbsp; 2555663
 
 The user logon error occurs when a user's cached credentials have been purged from the local computer by more recent domain user logons.
 
-Windows Vista and Windows 7 operating systems cache credentials for a finite number of user accounts (assuming cached credentials haven't been disabled).
+Windows operating systems cache credentials for a finite number of user accounts (assuming cached credentials haven't been disabled).
 
 Once the cached logon quota has been reached, the operating system will purge the oldest cached credential from the local computer so that the credentials for the next unique domain user successfully authenticated by a domain controller may be cached. The logging of the LsaSrv 45058 event indicates that the cached logon quota has been reached, triggering the deletion of the oldest user credential cached on the local machine.
 
@@ -72,6 +72,6 @@ Cached credentials can also be managed with group policy by configuring:
 
 Group Policy Setting path: Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\Security Options.
 
-Group Policy Setting: Interactive logon: Number of previous logons to cache (in case domain controller is not available)
+[Group Policy Setting: Interactive logon: Number of previous logons to cache (in case domain controller is not available)](/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/interactive-logon-number-of-previous-logons-to-cache-in-case-domain-controller-is-not-available)
 
 The workstation the user needs access to must have physical connectivity with the domain and the user must authenticate with a domain controller to cache their credentials again.
