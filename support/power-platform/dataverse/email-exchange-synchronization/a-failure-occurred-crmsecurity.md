@@ -2,7 +2,7 @@
 title: A failure occurred in CrmSecurity
 description: Provides a solution to an error that occurs when you select Approve Email on a mailbox record in Microsoft Dynamics 365.
 ms.reviewer: 
-ms.date: 12/25/2024
+ms.date: 12/31/2024
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # "A failure occurred in CrmSecurity" error when approving the email address of a mailbox record in Dynamics 365
