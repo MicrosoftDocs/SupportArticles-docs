@@ -14,6 +14,8 @@
   items:
     - name: 401 Unauthorized exception when using Server-Side Synchronization
       href: email-exchange-synchronization/exception-when-using-server-side-sync.md
+    - name: An error occurred when receiving or synchronizing an email
+      href: email-exchange-synchronization/an-error-occurred-while-synchronizing-item.md
     - name: An error occurred while creating the incoming email
       href: email-exchange-synchronization/error-when-creating-an-incoming-email.md
     - name: '"A scheduling conflict was found when saving appointment" error'
