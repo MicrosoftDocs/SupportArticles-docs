@@ -12,7 +12,7 @@ ms.custom: sap:Windows Security Technologies\Kerberos authentication, csstrouble
 
 This article provides help to solve an issue where users fail to access a resource and a System event log shows Kerberos event 4.
 
-_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; *Windows 10, Windows 11, Windows Server 2016, Windows Server 2019, Windows Server 2022, Windows Server 2025*  
 _Original KB number:_ &nbsp; 2706695
 
 ## Symptoms
@@ -33,7 +33,7 @@ To resolve this issue, the service principal name must be searched for and remov
 
 1. At an elevated command prompt and using Enterprise Administrator credentials, run the command `setspn -Q <SPN>`. This will return a computer name. SetSPN.exe is installed with the Active Directory Directory Services role or with RSAT.
 2. Remove the incorrectly registered SPN by going to the command prompt and running the command `setspn -D <SPN> <computername>`.
-3. Add the SPN to the correct account at the command prompt by running the command `setspn -A <SPN> <computername of computer which had the System event 4>`.
+1. Add the SPN to the correct account at the command prompt by running the command `setspn -S <SPN> <computername of computer which had the System event 4>`.
 
 ## More information
 
