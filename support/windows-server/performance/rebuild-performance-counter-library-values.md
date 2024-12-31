@@ -34,7 +34,7 @@ Extensible counter information is stored in both of the following locations:
 
 To rebuild the base performance counter libraries manually, follow these steps:
 
-1. Expand the *Perfc009.dat* file and the *Perfh009.dat* file. These files are located on the Windows Installation Disc. After mounting the Windows Installation Disc (.Wim file) by using Powershell cmdlet or by using the `Dism` command, the compressed files are found at `DriveLetter:\i386\perfc009.da_` and at `DriveLetter:\i386\perfh009.da_`. Replace the files that are in the `%Systemroot%\System32` folder.
+1. Expand the *Perfc009.dat* file and the *Perfh009.dat* file. These files are located on the Windows Installation Disc. After mounting the Windows Installation Disc (.wim) file by using PowerShell cmdlets or by using the `Dism` command, the compressed files are found at `DriveLetter:\i386\perfc009.da_` and at `DriveLetter:\i386\perfh009.da_`. Replace the files that are in the `%Systemroot%\System32` folder.
 
 2. Start Registry Editor, and then locate the following key in the registry:  
     `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Perflib`
