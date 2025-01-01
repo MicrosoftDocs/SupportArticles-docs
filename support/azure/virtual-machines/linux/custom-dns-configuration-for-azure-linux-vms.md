@@ -79,7 +79,7 @@ This article provides instructions to configure custom DNS servers and search do
 
     :::image type="content" source="./media/custom-dns-config-images/rhel-dns-6.png" alt-text="Screenshot showing the search domain.":::
 
-## [Ubuntu 20.04/22.04](#tab/Ubuntu)
+## [Ubuntu 20.04/22.04/24.04](#tab/Ubuntu)
 
 ### Configure DNS servers
 
@@ -87,30 +87,30 @@ This article provides instructions to configure custom DNS servers and search do
 
    :::image type="content" source="./media/custom-dns-config-images/ubuntu-dns-1.png" alt-text="Screenshot of default resolv.conf file in Ubuntu.":::
 
-2. Configure custom DNS servers at the Azure virtual network or network interface level. For more information, see [Steps to change DNS servers at virtual network/network interface level](/azure/virtual-network/manage-virtual-network#change-dns-servers).
+   Please note that, Starting from Ubuntu 20.04 version, `/etc/resolv.conf` file is a symbolic link of `/run/systemd/resolve/stub-resolv.conf` file. For more information, see [systemd-resolved](https://manpages.ubuntu.com/manpages/bionic/man8/systemd-resolved.service.8.html#:~:text=systemd%2Dresolved%20is%20a%20system,an%20LLMNR%20resolver%20and%20responder).
+
+3. Configure custom DNS servers at the Azure virtual network or network interface level. For more information, see [Steps to change DNS servers at virtual network/network interface level](/azure/virtual-network/manage-virtual-network#change-dns-servers).
 
     > [!NOTE]
     > In Azure, you can set custom DNS servers at the virtual network level or the network interface level. If you set custom DNS servers at the network interface level, this will override the the custom DNS servers configuration in the virtual network.
-3. Run the following command to apply the configuration of the custom DNS servers:
+4. Run the following command to apply the configuration of the custom DNS servers:
 
    ```bash
    sudo netplan apply
 
-4. Check the `/run/systemd/resolve/stub-resolv.conf` file. The file should contain the DNS servers that you configured in step 2.
-  
-    Starting is Ubuntu 20, `resolv.conf` file is a symbolic link of `/run/systemd/resolve/stub-resolv.conf` file. This makes sure that the updated DNS servers are reflected in **/run/systemd/resolve/resolv.conf** file. For more information, see [systemd-resolved](https://manpages.ubuntu.com/manpages/bionic/man8/systemd-resolved.service.8.html#:~:text=systemd%2Dresolved%20is%20a%20system,an%20LLMNR%20resolver%20and%20responder).
+5. Check the `/run/systemd/resolve/resolv.conf` file. The file should contain the DNS servers that you configured in step 2.
     
-   The following screenshot shows an example of `/run/systemd/resolve/stub-resolv.conf` after you configure custom DNS server.
+   The following screenshot shows an example of `/run/systemd/resolve/resolv.conf` after you configure custom DNS servers.
 
    :::image type="content" source="./media/custom-dns-config-images/ubuntu-dns-3.png" alt-text="Screenshot of non-stub Resolv.conf file after you make changes at portal level":::
 
-5. Run the following command to check whether the custom DNS servers are successfully added to the network interface:
+6. Run the following command to check whether the custom DNS servers are successfully added to the network interface:
 
    ```bash
    sudo resolvectl status
    ```
 
-   The following screenshot shows an example of the network interface after you configure the search domain:
+   The following screenshot shows an example of the network interface, using the custom DNS servers:
 
    :::image type="content" source="./media/custom-dns-config-images/ubuntu-dns-4.png" alt-text="Screenshot of resolvectl status command output.":::
 
