@@ -1,0 +1,3 @@
+After the first memory dump is created, you see confirmation in **Command Prompt**. By default, the memory dump is saved in the same location as **procdump.exe**.
+
+If you're using other Procdump options that rely on specific conditions to trigger a dump, keep an eye on the PID. If it changes, you need to stop the command and run it again with the new PID. Otherwise, no memory dumps will be generated.

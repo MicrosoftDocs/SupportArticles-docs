@@ -16,19 +16,18 @@ If the memory leak issue can be consistently reproduced whenever needed, use one
 
 ### Method 1: Using Procdump
 
-> [!NOTE]
-> If you're using **Procdump** for the first time, you need to accept the license agreement to use the tool.
+[!INCLUDE [Note when using Procdump](../../../../includes/note-using-procdump.md)]
 
-1. Download and install the [Procdump.exe](/sysinternals/downloads/procdump) tool on the server.
-1. Follow the steps in [Identify high memory usage](high-memory-consumption-issues-overview.md#identify-high-memory-usage) to find the Process ID (PID).
-1. Follow these steps to run Procdump:
+[!INCLUDE [Same steps when using Procdump](../../../../includes/same-steps-using-procdump.md)]
 
-   1. Run **Command Prompt** as an administrator.
-   1. In **Command Prompt**, navigate to the folder where **Procdump.exe** is saved.
-   1. Run the command `procdump.exe -s 30 -ma -n 3 <PID>`, replacing `<PID>` with the actual PID that you found in step 2.
+1. Run the command `procdump.exe -s 30 -ma -n 3 <PID>`.
 
-      - `-n`: This parameter is the number of memory dumps to collect.
-      - `-s`: This parameter is the interval (in seconds) between dumps.
+   [!INCLUDE [How to get actual PID](../../../../includes/how-get-pid.md)]
+
+   - `-n`: This parameter is the number of memory dumps to collect.
+   - `-s`: This parameter is the interval (in seconds) between dumps.
+
+[!INCLUDE [Run commoand again with new PID](../../../../includes/run-command-new-pid-procdump.md)]
 
 After the first memory dump is created, you see confirmation in **Command Prompt**. If you're using other Procdump options that rely on specific conditions to trigger a dump, keep an eye on the PID. If it changes, you need to stop the command and run it again with the new PID. Otherwise, no dumps will be captured.
 
@@ -57,12 +56,13 @@ After the first memory dump is created, you see confirmation in **Command Prompt
 
 If the memory leak issue is intermittent, automation is needed. To capture data, follow these steps:
 
-1. Download and install the [Procdump.exe](/sysinternals/downloads/procdump) tool on the server.
-1. Run **Command Prompt** as an administrator.
-1. In **Command Prompt**, navigate to the folder containing **procdump.exe**.
+[!INCLUDE [Note when using Procdump](../../../../includes/note-using-procdump.md)]
+
+[!INCLUDE [Same steps when using Procdump](../../../../includes/same-steps-using-procdump.md)]
+
 1. Run the command: `procdump.exe -s 30 -m <memoryConsumption> -ma -n 3 <PID>`.
 
-   Replace `PID` with the actual PID of the **w3wp.exe** process that is facing the high memory issue. For more information on how to get the PID, see steps in [Identify high memory usage](high-memory-consumption-issues-overview.md#identify-high-memory-usage).
+   [!INCLUDE [How to get actual PID](../../../../includes/how-get-pid.md)]
 
    - `-n`: This parameter is the number of memory dumps to collect.
    - `-m`: This parameter is the memory commit threshold (in MB) for creating dumps.
@@ -72,9 +72,7 @@ If the memory leak issue is intermittent, automation is needed. To capture data,
 
    For example, if the command is `procdump.exe -s 30 -m 5120 -ma -n 3 <PID>`, the process memory consumption must be >= 5,120 MB (5 GB) for at least 30 seconds to generate a dump. If the first dump is written but then memory drops to less than 5,120 MB, the second and third dumps won't be collected, and the memory must increase back to 5,120 MB or higher and remain so for 30 seconds for the second dump to be generated, and so on. So, `-s` here doesn't necessarily mean the interval between the dumps.
 
-After the first memory dump is created, you see confirmation in **Command Prompt**. By default, the memory dump is saved in the same location as **procdump.exe**.
-
-Keep monitoring the PID, as it might change over time. If it changes and you still run the old command with the old PID, no memory dumps will be generated. In such cases, you have to stop the command and run it again with the new PID.
+[!INCLUDE [Run commoand again with new PID](../../../../includes/run-command-new-pid-procdump.md)]
 
 ## More information
 

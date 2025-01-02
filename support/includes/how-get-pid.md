@@ -1,0 +1,1 @@
+Replace `<PID`> with the actual PID of the **w3wp.exe** process that is facing the high memory issue. For more information on how to get the PID, follow steps in [Identify high memory usage](high-memory-consumption-issues-overview.md#identify-high-memory-usage).
