@@ -15,31 +15,31 @@ This article provides solutions to the common nonce validation errors encountere
 
 Depending on the version of Open Web Interface for .NET (OWIN) being used, you may encounter one of the following error messages:
 
-- IDX21323: RequireNonce is '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'. OpenIdConnectProtocolValidationContext.Nonce was null, OpenIdConnectProtocol.ValidatedIdToken.Payload.Nonce was not null. The nonce cannot be validated. If you do not need to check the nonce, set OpenIdConnectProtocolValidator.RequireNonce to false.
+- `IDX21323: RequireNonce is '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'. OpenIdConnectProtocolValidationContext.Nonce was null, OpenIdConnectProtocol.ValidatedIdToken.Payload.Nonce was not null. The nonce cannot be validated. If you do not need to check the nonce, set OpenIdConnectProtocolValidator.RequireNonce to false.`
 
-- IDX10311: RequireNonce is 'true' (default) but validationContext.Nonce is null. A nonce cannot be validated. If you do not need to check the nonce, set OpenIdConnectProtocolValidator.RequireNonce to false.
+- `IDX10311: RequireNonce is 'true' (default) but validationContext.Nonce is null. A nonce cannot be validated. If you do not need to check the nonce, set OpenIdConnectProtocolValidator.RequireNonce to false.`
 
 ## Understanding nonce cookies
 
-The ASP.NET OIDC middleware uses a nonce cookie to prevent [replay attacks](/dotnet/framework/wcf/feature-details/replay-attacks). As mentioned in the error, the app throws the exception when it cannot find the nonce cookie in the authenticated request. Cookies are domain-based, meaning that once they are set for a specific domain, all subsequent requests to that domain will include these cookies until they expire or are deleted.
+The ASP.NET OIDC middleware uses a nonce cookie to prevent [replay attacks](/dotnet/framework/wcf/feature-details/replay-attacks). As mentioned in the error, the app throws the exception when it can't find the nonce cookie in the authenticated request. Cookies are domain-based, meaning that once they're set for a specific domain, all subsequent requests to that domain will include these cookies until they expire or are deleted.
 
 The following are Fiddler traces about how these cookies are set and used in a working flow:
 
-1. In frame 116, the browser sends a request to the OIDC app protected by Microsoft Entra ID. After receiving the request, the app detects that it is not authenticated and redirects it to  Microsoft Entra ID (`login.microsoftonline.com`) for authentication. Additionally, the app sets the `OpenIdConnect.nonce` cookie in the 302 redirect response.
+1. In frame 116, the browser sends a request to the OIDC app protected by Microsoft Entra ID. After receiving the request, the app detects that it isn't authenticated and redirects it to  Microsoft Entra ID (`login.microsoftonline.com`) for authentication. Additionally, the app sets the `OpenIdConnect.nonce` cookie in the 302 redirect response.
 
     :::image type="content" source="media/troubleshoot-validation-context-nonce-null-mvc/fiddler-trace-start-auth.png" alt-text="Screenshot of Frame 116 in Fiddler Trace." lightbox="media/troubleshoot-validation-context-nonce-null-mvc/fiddler-trace-start-auth.png":::
 
 2. After successful authentication (frame 120 – 228), Microsoft Entra ID redirects the request back to the web app (frame 229) with the authenticated ID token. The nonce cookie previously set for this domain is also included in the POST request. The OIDC middleware validates the authenticated token and the nonce cookie before it continues loading the page (via another redirect). At this point, the nonce cookie's purpose is complete, and the app invalidates it by setting the expiration attribute to expire.
 
-    :::image type="content" source="media/troubleshoot-validation-context-nonce-null-mvc/fiddler-trace-after-auth.png" alt-text="Screenshot of Frame 116 in Fiddler Trace." lightbox="media/troubleshoot-validation-context-nonce-null-mvc/fiddler-trace-after-auth.png":::
+    :::image type="content" source="media/troubleshoot-validation-context-nonce-null-mvc/fiddler-trace-after-auth.png" alt-text="Screenshot of Fiddler Trace Frames about authentication." lightbox="media/troubleshoot-validation-context-nonce-null-mvc/fiddler-trace-after-auth.png":::
 
 
 ## Solution
 
-### Cause 1: Multiple domains is used for the same website
+### Cause 1: Multiple domains are used for the same website
 
-The browser originally navigates to the app on domain A (frame 9 below), and the nonce cookie is set for this domain. Later, Microsoft Entra ID sends the authenticated token to domain B (frame 91). Since the redirection to domain B does not include the nonce cookie, the web app throws the `validationContext.Nonce is null` error.
-    :::image type="content" source="media/troubleshoot-validation-context-nonce-null-mvc/fiddler-trace-multiple-domains.png" alt-text="Screenshot of Frame 116 in Fiddler Trace." lightbox="media/troubleshoot-validation-context-nonce-null-mvc/fiddler-trace-multiple-domains.png":::
+The browser originally navigates to the app on domain A (frame 9 below), and the nonce cookie is set for this domain. Later, Microsoft Entra ID sends the authenticated token to domain B (frame 91). Since the redirection to domain B doesn't include the nonce cookie, the web app throws the `validationContext.Nonce is null` error.
+    :::image type="content" source="media/troubleshoot-validation-context-nonce-null-mvc/fiddler-trace-multiple-domains.png" alt-text="Screenshot of Fiddler Trace Frames about cause 1." lightbox="media/troubleshoot-validation-context-nonce-null-mvc/fiddler-trace-multiple-domains.png":::
 
 #### Solution
 
@@ -47,7 +47,7 @@ To resolve this issue, follow these steps:
 
 1. Redirect the request back to the same domain used originally after authentication. To control where Azure AD sent the authenticated request back to the app, set the `OpenIdConnectAuthentications.RedirectUri` property in the `ConfigureAuth` method.
 
-1. Configure the reply URL in App Registration, otherwise you may receive the following error: AADSTS50011: The reply url specified in the request does not match the reply urls configured for the app.
+1. Configure the reply URL in App Registration, otherwise you may receive the following error: AADSTS50011: The reply url specified in the request doesn't  match the reply urls configured for the app.
 
 ### Cause 2: Missing SameSite attributes
 
