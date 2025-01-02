@@ -20,9 +20,9 @@ If the memory leak issue can be consistently reproduced whenever needed, use one
 
 [!INCLUDE [Same steps when using Procdump](../../../../includes/same-steps-using-procdump.md)]  
 
-   `procdump.exe -s 30 -ma -n 3 <PID>`
+&nbsp;&nbsp;&nbsp;`procdump.exe -s 30 -ma -n 3 <PID>`
 
-   [!INCLUDE [How to get actual PID](../../../../includes/how-get-pid.md)]
+&nbsp;&nbsp;&nbsp;[!INCLUDE [How to get actual PID](../../../../includes/how-get-pid.md)]
 
    - `-n`: This parameter is the number of memory dumps to collect.
    - `-s`: This parameter is the interval (in seconds) between dumps.
@@ -51,9 +51,9 @@ If the memory leak issue is intermittent, automation is needed. To capture data,
 
 [!INCLUDE [Same steps when using Procdump](../../../../includes/same-steps-using-procdump.md)]  
 
-   `procdump.exe -s 30 -m <memoryConsumption> -ma -n 3 <PID>`.
+&nbsp;&nbsp;&nbsp;`procdump.exe -s 30 -m <memoryConsumption> -ma -n 3 <PID>`.
 
-   [!INCLUDE [How to get actual PID](../../../../includes/how-get-pid.md)]
+&nbsp;&nbsp;&nbsp;[!INCLUDE [How to get actual PID](../../../../includes/how-get-pid.md)]
 
    - `-n`: This parameter is the number of memory dumps to collect.
    - `-m`: This parameter is the memory commit threshold (in MB) for creating dumps.
