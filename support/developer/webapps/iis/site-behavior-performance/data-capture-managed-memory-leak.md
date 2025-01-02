@@ -20,18 +20,18 @@ If the memory leak issue can be consistently reproduced whenever needed, use one
 
 [!INCLUDE [Same steps when using Procdump](../../../../includes/same-steps-using-procdump.md)]  
 
-    `procdump.exe -s 30 -ma -n 3 <PID>`
+   `procdump.exe -s 30 -ma -n 3 <PID>`
 
-    [!INCLUDE [How to get actual PID](../../../../includes/how-get-pid.md)]
+   [!INCLUDE [How to get actual PID](../../../../includes/how-get-pid.md)]
 
-    - `-n`: This parameter is the number of memory dumps to collect.
-    - `-s`: This parameter is the interval (in seconds) between dumps.
+   - `-n`: This parameter is the number of memory dumps to collect.
+   - `-s`: This parameter is the interval (in seconds) between dumps.
 
 [!INCLUDE [Run commoand again with new PID](../../../../includes/run-command-new-pid-procdump.md)]
 
 ### Method 2: Using DebugDiag
 
-1. Download and install [Debug Diagnostic Tool v2 Update 3.2](https://www.microsoft.com/en-us/download/details.aspx?id=103453).
+1. Download and install [Debug Diagnostic Tool v2 Update 3.2](https://www.microsoft.com/download/details.aspx?id=103453).
 1. When a memory leak occurs, open **DebugDiag 2 Collection** from the **Start** menu:  
    :::image type="content" source="media/data-capture-managed-memory-leak/debugdiag-2-collection.png" alt-text="Screenshot of DebugDiag 2 Collection.":::
    > [!NOTE]
@@ -51,13 +51,13 @@ If the memory leak issue is intermittent, automation is needed. To capture data,
 
 [!INCLUDE [Same steps when using Procdump](../../../../includes/same-steps-using-procdump.md)]  
 
-    `procdump.exe -s 30 -m <memoryConsumption> -ma -n 3 <PID>`.
+   `procdump.exe -s 30 -m <memoryConsumption> -ma -n 3 <PID>`.
 
-    [!INCLUDE [How to get actual PID](../../../../includes/how-get-pid.md)]
+   [!INCLUDE [How to get actual PID](../../../../includes/how-get-pid.md)]
 
-    - `-n`: This parameter is the number of memory dumps to collect.
-    - `-m`: This parameter is the memory commit threshold (in MB) for creating dumps.
-    - `-s`: This parameter might have different meanings based on the other parameters in the `procdump` command.  
+   - `-n`: This parameter is the number of memory dumps to collect.
+   - `-m`: This parameter is the memory commit threshold (in MB) for creating dumps.
+   - `-s`: This parameter might have different meanings based on the other parameters in the `procdump` command.  
 
    When you use `-m` in the command, `-s` indicates the number of consecutive seconds during which **w3wp.exe**'s memory consumption is >= the threshold specified by `-m`.  
 
