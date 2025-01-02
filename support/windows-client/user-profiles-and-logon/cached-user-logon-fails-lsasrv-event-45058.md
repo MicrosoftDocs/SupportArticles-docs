@@ -1,7 +1,7 @@
 ---
 title: Cached user logon fails with LSASRV event 45058
-description: Fixes an issue that occurs when logging on to a domain-joined Windows Vista or Windows 7 computer using cached credentials.
-ms.date: 12/26/2023
+description: Fixes an issue that occurs when logging on to a domain-joined Windows computer using cached credentials.
+ms.date: 01/02/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -12,14 +12,14 @@ ms.custom: sap:User Logon and Profiles\Service Account and Interactive User Logo
 
 This article fixes a logon failure that occurs when logging on to a domain-joined Windows computer using cached credentials.
 
-_Applies to:_ &nbsp; *Windows 10, Windows 11, Windows Server 2016, Windows Server 2019, Windows Server 2022, Windows Server 2025*  
+_Applies to:_ &nbsp; Windows 10, Windows 11, Windows Server 2016, Windows Server 2019, Windows Server 2022, Windows Server 2025  
 _Original KB number:_ &nbsp; 2555663
 
 ## Symptoms
 
 1. Users receive the following error when logging on to a domain-joined Windows computer using cached credentials:
 
-> There are currently no logon servers available to service the logon request.
+   > There are currently no logon servers available to service the logon request.
 
 2. LsaSrv Event 45058, logged in the System event log of a domain-joined workstation, indicates that the operating system has deleted the cached credential for the user specified in the event:
 
