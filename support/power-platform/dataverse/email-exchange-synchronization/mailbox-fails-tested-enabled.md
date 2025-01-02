@@ -2,7 +2,7 @@
 title: Mailbox set up with Gmail fails to be tested and enabled
 description: This article provides a resolution for the problem that occurs when a Dynamics 365 mailbox is configured to use server-side synchronization with Gmail.
 ms.reviewer: 
-ms.date: 12/25/2024
+ms.date: 01/02/2025
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # Troubleshooting server-side synchronization with Gmail
@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 4493342
 
 ## Symptoms
 
-When a Dynamics 365 mailbox is configured to use [server-side synchronization](/power-platform/admin/server-side-synchronization) with Gmail, the mailbox might fail to be [tested and enabled](/power-platform/admin/connect-exchange-online#test-the-configuration-of-mailboxes) successfully or incoming emails aren't received in Dynamics 365.
+When you try to [test and enable](/power-platform/admin/connect-exchange-online#test-the-configuration-of-mailboxes) a mailbox that's configured to use [server-side synchronization with Gmail](/power-platform/admin/connect-gmail-oauth2), the test might fail, or the incoming emails might not be received in Dynamics 365.
 
 ## Cause 1：Incorrect port configuration
 
