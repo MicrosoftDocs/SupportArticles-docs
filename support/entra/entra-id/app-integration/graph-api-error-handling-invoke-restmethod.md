@@ -12,7 +12,7 @@ ms.custom: sap:Microsoft Graph Users, Groups, and Entra APIs
 ---
 # Retry logics in Microsoft Graph API Requests with Invoke-RestMethod
 
-This article helps you to handle errors that occur when you make requests to the Microsoft Graph API by using the `Invoke-RestMethod` cmdlet in PowerShell. We recommend that you use robust error handling when you interact with Microsoft Graph.
+This article explains how to handle errors when you use the ·Invoke-RestMethod· cmdlet to call Microsoft Graph APIs in PowerShell.
 
 ## Prerequisites
 
