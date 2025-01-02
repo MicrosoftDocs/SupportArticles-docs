@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 942061
 
 ## Symptoms
 
-You have a website that's hosted on IIS 7.0. When you try to access the site through a web browser, you receive an error message that resembles one of the following examples.
+You have a website that's hosted on IIS webserver that ships with Windows Server 2016 or later. When you try to access the site through a web browser, you receive an error message that resembles one of the following examples.
 
 - Error message 1
 
