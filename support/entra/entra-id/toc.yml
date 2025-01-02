@@ -58,10 +58,10 @@
         href: app-integration/unable-delete-app.md
       - name: Send notification details to Microsoft support
         href: app-integration/send-notification-details.md
-      - name: Troubleshooting infinite redirection between OIDC app and Entra ID
-        href: app-integration/troubleshoot-oidc-http-infinite-redirection.md
   - name: Troubleshoot sign-in to apps
     items:
+      - name: Troubleshooting infinite redirection between OIDC app and Entra ID
+        href: app-integration/troubleshoot-oidc-http-infinite-redirection.md
       - name: Error AADSTS220501 - Unable to download Certificate Revocation List
         href: app-integration/error-code-aadsts220501-unable-to-download-certificate-revocation-list.md
       - name: Error AADSTS50003 - certificate or key not configured
