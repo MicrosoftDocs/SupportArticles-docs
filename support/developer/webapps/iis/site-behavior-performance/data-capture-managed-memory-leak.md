@@ -20,12 +20,12 @@ If the memory leak issue can be consistently reproduced whenever needed, use one
 
 [!INCLUDE [Same steps when using Procdump](../../../../includes/same-steps-using-procdump.md)]  
 
-   `procdump.exe -s 30 -ma -n 3 <PID>`.
+    `procdump.exe -s 30 -ma -n 3 <PID>`
 
-   [!INCLUDE [How to get actual PID](../../../../includes/how-get-pid.md)]
+    [!INCLUDE [How to get actual PID](../../../../includes/how-get-pid.md)]
 
-   - `-n`: This parameter is the number of memory dumps to collect.
-   - `-s`: This parameter is the interval (in seconds) between dumps.
+    - `-n`: This parameter is the number of memory dumps to collect.
+    - `-s`: This parameter is the interval (in seconds) between dumps.
 
 [!INCLUDE [Run commoand again with new PID](../../../../includes/run-command-new-pid-procdump.md)]
 
@@ -51,13 +51,13 @@ If the memory leak issue is intermittent, automation is needed. To capture data,
 
 [!INCLUDE [Same steps when using Procdump](../../../../includes/same-steps-using-procdump.md)]  
 
-   `procdump.exe -s 30 -m <memoryConsumption> -ma -n 3 <PID>`.
+    `procdump.exe -s 30 -m <memoryConsumption> -ma -n 3 <PID>`.
 
-   [!INCLUDE [How to get actual PID](../../../../includes/how-get-pid.md)]
+    [!INCLUDE [How to get actual PID](../../../../includes/how-get-pid.md)]
 
-   - `-n`: This parameter is the number of memory dumps to collect.
-   - `-m`: This parameter is the memory commit threshold (in MB) for creating dumps.
-   - `-s`: This parameter might have different meanings based on the other parameters in the `procdump` command.  
+    - `-n`: This parameter is the number of memory dumps to collect.
+    - `-m`: This parameter is the memory commit threshold (in MB) for creating dumps.
+    - `-s`: This parameter might have different meanings based on the other parameters in the `procdump` command.  
 
    When you use `-m` in the command, `-s` indicates the number of consecutive seconds during which **w3wp.exe**'s memory consumption is >= the threshold specified by `-m`.  
 
