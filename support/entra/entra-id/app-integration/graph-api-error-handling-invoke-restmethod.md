@@ -23,7 +23,7 @@ This article provides a code sample that demonstrates how to handle errors and i
 
 To demonstrate the retry logic, this sample tries to query the `signInActivity` data for guest users. When you run this code, you can expect to receive a "403" error.
 
-- **Get-AccessTokenCC** This function requests an access token from Microsoft Entra ID (formerly Azure Active Directory). The token can be used to authenticate API requests to Microsoft Graph. You have to provide values for the `$clientSecret`, `$clientId`, and `$tenantId` variables of your Azure registration app.
+- **Get-AccessTokenCC** This function requests an access token from Microsoft Entra ID (formerly Azure Active Directory). The token will be used to authenticate API requests to Microsoft Graph. You have to provide values for the `$clientSecret`, `$clientId`, and `$tenantId` variables of your Azure registration app.
 - **Get-GraphQueryOutput ($Uri)**  This function makes a request to the Microsoft Graph API to retrieve data. It also handles paging. The function retries the request if a "403" error is generated.
 
 ``` powershell
