@@ -131,6 +131,5 @@ $retryAfterValue = $_.Exception.Response.Headers["Retry-After"]
 ```
 To handle the "429 - too many requests" error, see [Microsoft Graph throttling guidance](/graph/throttling).
 
-[!INCLUDE [Azure Help Support]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
-(../../../includes/azure-help-support.md)]
