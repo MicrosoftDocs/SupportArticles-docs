@@ -58,8 +58,6 @@
         href: app-integration/unable-delete-app.md
       - name: Send notification details to Microsoft support
         href: app-integration/send-notification-details.md
-      - name: Handling errors in Graph API requests with PowerShell
-        href: app-integration/graph-api-error-handling-invoke-restmethod.md
   - name: Troubleshoot sign-in to apps
     items:
       - name: Error AADSTS220501 - Unable to download Certificate Revocation List
@@ -234,6 +232,8 @@
       href: mfa/cannot-verify-account-reset-pwd.md
 - name: Microsoft Graph Users, Groups, and Entra APIs
   items: 
+   - name: Handling errors in Graph API requests with PowerShell
+     href: app-integration/graph-api-error-handling-invoke-restmethod.md
    - name: Troubleshoot Authorization_RequestDenied error
      href: app-integration/troubleshoot-authorization-requestdenied-graph-api.md
 - name: Microsoft Entra User Provisioning and Synchronization
