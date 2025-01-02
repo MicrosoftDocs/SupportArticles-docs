@@ -35,7 +35,7 @@ Decrease the number of Active Directory groups that the user is a member of.
 Increase the settings for the `MaxFieldLength` and the `MaxRequestBytes` registry entries on the server so that the user's request headers don't exceed these values. To determine the appropriate settings, use the following calculations:
 
 1. Calculate the size of the user's Kerberos token by using the formula described in the following article:  
-[Problems with Kerberos authentication when a user belongs to many groups](https://support.microsoft.com/kb/327825).
+[Problems with Kerberos authentication when a user belongs to many groups](https://learn.microsoft.com/en-us/troubleshoot/windows-server/windows-security/kerberos-authentication-problems-if-user-belongs-to-groups).
 
 2. Set the value of `MaxFieldLength` and `MaxRequestBytes` on the server to 4/3 * T bytes, where T is the user's token size in bytes. HTTP encodes the Kerberos token by using base64 encoding.
 
@@ -48,7 +48,7 @@ Depending on your application environment, you might also work around this probl
 
 By default, there is no `MaxFieldLength` registry entry. This entry specifies the maximum size limit of each HTTP request header. The `MaxRequestBytes` registry entry specifies the upper limit for the total size of the Request line and the headers. Typically, this registry entry is configured together with the `MaxRequestBytes` registry entry. If the `MaxRequestBytes` value is lower than the `MaxFieldLength` value, the `MaxFieldLength` value is adjusted. In large Active Directory environments, users may experience logon failures if the values for both these entries aren't set to a sufficiently high value.
 
-For IIS 6.0 and later, the `MaxFieldLength` and `MaxRequestBytes` registry keys are located at the following sub key:  
+For IIS versions shipped with Windows Server 2016 and later, the `MaxFieldLength` and `MaxRequestBytes` registry keys are located at the following sub key:  
 `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\HTTP\Parameters`
 
 Set the key values as shown in the following table:
@@ -68,12 +68,12 @@ Set the key values as shown in the following table:
 > [!IMPORTANT]
 > Changing these registry keys should be considered to be extremely dangerous. These keys allow larger HTTP packets to be sent to IIS. This, in turn, may cause Http.sys to use more memory. Therefore, such changes can increase the computer's vulnerability to malicious attacks.
 
-If `MaxFieldLength` is set to its maximum value of 64 KB, the `MaxTokenSize` registry value should be set to 3/4 * 64 = 48 KB. For more information about the `MaxTokenSize` setting, see [Problems with Kerberos authentication when a user belongs to many groups](https://support.microsoft.com/help/327825).
+If `MaxFieldLength` is set to its maximum value of 64 KB, the `MaxTokenSize` registry value should be set to 3/4 * 64 = 48 KB. For more information about the `MaxTokenSize` setting, see [Problems with Kerberos authentication when a user belongs to many groups](https://learn.microsoft.com/en-us/troubleshoot/windows-server/windows-security/kerberos-authentication-problems-if-user-belongs-to-groups).
 
 ## References
 
-- [Http.sys registry settings for IIS](https://support.microsoft.com/help/820129/http-sys-registry-settings-for-windows)  
+- [Http.sys registry settings for IIS](https://learn.microsoft.com/en-us/troubleshoot/developer/webapps/iis/iisadmin-service-inetinfo/httpsys-registry-windows)  
 
-- [Error logging in HTTP API](https://support.microsoft.com/help/820729/error-logging-in-http-apis)
+- [Error logging in HTTP API](https://learn.microsoft.com/en-us/windows/win32/http/error-logging-in-the-http-server-api)
 
-- [Problems with Kerberos authentication when a user belongs to many groups](https://support.microsoft.com/help/327825)
+- [Problems with Kerberos authentication when a user belongs to many groups](https://learn.microsoft.com/en-us/troubleshoot/windows-server/windows-security/kerberos-authentication-problems-if-user-belongs-to-groups)
