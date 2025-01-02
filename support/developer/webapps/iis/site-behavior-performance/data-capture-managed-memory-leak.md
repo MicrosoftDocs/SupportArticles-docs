@@ -20,7 +20,7 @@ If the memory leak issue can be consistently reproduced whenever needed, use one
 
 [!INCLUDE [Same steps when using Procdump](../../../../includes/same-steps-using-procdump.md)]  
 
-1. Run the command: `procdump.exe -s 30 -ma -n 3 <PID>`.
+4. Run the command: `procdump.exe -s 30 -ma -n 3 <PID>`.
 
    [!INCLUDE [How to get actual PID](../../../../includes/how-get-pid.md)]
 
@@ -51,7 +51,7 @@ If the memory leak issue is intermittent, automation is needed. To capture data,
 
 [!INCLUDE [Same steps when using Procdump](../../../../includes/same-steps-using-procdump.md)]  
 
-1. Run the command: `procdump.exe -s 30 -m <memoryConsumption> -ma -n 3 <PID>`.
+4. Run the command: `procdump.exe -s 30 -m <memoryConsumption> -ma -n 3 <PID>`.
 
    [!INCLUDE [How to get actual PID](../../../../includes/how-get-pid.md)]
 
