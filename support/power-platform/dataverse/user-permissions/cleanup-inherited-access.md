@@ -114,7 +114,7 @@ OData-Version: 4.0
 
 ---
 
-The `CreateAsyncJobToRevokeInheritedAccess` action creates a new asynchronous job named `RevokeInheritedAccess`. You can monitor the success of this job. For more information, see [monitoring system jobs](/power-platform/admin/manage-dataverse-auditing#monitoring-system-jobs) or [managing system jobs with code](/power-apps/developer/data-platform/asynchronous-service#managing-system-jobs).
+The `CreateAsyncJobToRevokeInheritedAccess` action creates a new asynchronous job named `RevokeInheritedAccess`. You can monitor the success of this job, but there isn't any way to preview the records that will be affected. For more information, see [monitoring system jobs](/power-platform/admin/manage-dataverse-auditing#monitoring-system-jobs) or [managing system jobs with code](/power-apps/developer/data-platform/asynchronous-service#managing-system-jobs).
 
 ### Reset inherited access
 
