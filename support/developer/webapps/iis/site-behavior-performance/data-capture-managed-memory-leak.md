@@ -19,8 +19,7 @@ If the memory leak issue can be consistently reproduced whenever needed, use one
 [!INCLUDE [Note when using Procdump](../../../../includes/note-using-procdump.md)]
 
 [!INCLUDE [Same steps when using Procdump](../../../../includes/same-steps-using-procdump.md)]
-
-1. Run the command `procdump.exe -s 30 -ma -n 3 <PID>`.
+4. Run the command `procdump.exe -s 30 -ma -n 3 <PID>`.
 
    [!INCLUDE [How to get actual PID](../../../../includes/how-get-pid.md)]
 
@@ -35,21 +34,14 @@ After the first memory dump is created, you see confirmation in **Command Prompt
 
 1. Download and install [Debug Diagnostic Tool v2 Update 3.2](https://www.microsoft.com/en-us/download/details.aspx?id=103453).
 1. When a memory leak occurs, open **DebugDiag 2 Collection** from the **Start** menu:
-
    :::image type="content" source="media/data-capture-managed-memory-leak/debugdiag-2-collection.png" alt-text="Screenshot of DebugDiag 2 Collection.":::
-
    > [!NOTE]
    > If you need to change the path where dumps are generated, select **Tools** > **Options And Settings** > **Manual Userdump Save Folder** to change it.
-
 1. Select the **Processes** tab.
 1. Locate the **w3wp** process with the **Process ID** column of the application in question.
-
    For more information on how to get the PID and the application pool name, follow the steps in [Identify high memory usage](high-memory-consumption-issues-overview.md#identify-high-memory-usage).
-
 1. Right-click the **w3wp** process, select **Create Userdump Series**, and set the following options (adjust the numbers as needed). Don't select **Save & Close**.
-
    :::image type="content" source="media/data-capture-managed-memory-leak/configure-userdump-series.png" alt-text="Screenshot of Configure UserDump Series.":::
-
 1. Once the memory consumption of **w3wp.exe** reaches the limit as described in the [Memory limit for different scenarios](high-memory-consumption-issues-overview.md#memory-limit-for-different-scenarios), select **Save & Close**.
 
 ## Memory leak issue is intermittent
@@ -59,8 +51,7 @@ If the memory leak issue is intermittent, automation is needed. To capture data,
 [!INCLUDE [Note when using Procdump](../../../../includes/note-using-procdump.md)]
 
 [!INCLUDE [Same steps when using Procdump](../../../../includes/same-steps-using-procdump.md)]
-
-1. Run the command: `procdump.exe -s 30 -m <memoryConsumption> -ma -n 3 <PID>`.
+4. Run the command: `procdump.exe -s 30 -m <memoryConsumption> -ma -n 3 <PID>`.
 
    [!INCLUDE [How to get actual PID](../../../../includes/how-get-pid.md)]
 
