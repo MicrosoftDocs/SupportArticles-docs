@@ -19,14 +19,15 @@ If the memory leak issue can be consistently reproduced whenever needed, use one
 [!INCLUDE [Note when using Procdump](../../../../includes/note-using-procdump.md)]
 
 [!INCLUDE [Same steps when using Procdump](../../../../includes/same-steps-using-procdump.md)]  
-4. Run the command:`procdump.exe -s 30 -ma -n 3 <PID>`.
+
+1. Run the command: `procdump.exe -s 30 -ma -n 3 <PID>`.
 
    [!INCLUDE [How to get actual PID](../../../../includes/how-get-pid.md)]
 
    - `-n`: This parameter is the number of memory dumps to collect.
    - `-s`: This parameter is the interval (in seconds) between dumps.
 
-[!INCLUDE [Run commoand again with new PID](../../../../includes/run-command-new-pid-procdump.md)]
+[!INCLUDE [Run command again with new PID](../../../../includes/run-command-new-pid-procdump.md)]
 
 ### Method 2: Using DebugDiag
 
@@ -50,7 +51,7 @@ If the memory leak issue is intermittent, automation is needed. To capture data,
 
 [!INCLUDE [Same steps when using Procdump](../../../../includes/same-steps-using-procdump.md)]  
 
-4. Run the command:`procdump.exe -s 30 -m <memoryConsumption> -ma -n 3 <PID>`.
+1. Run the command: `procdump.exe -s 30 -m <memoryConsumption> -ma -n 3 <PID>`.
 
    [!INCLUDE [How to get actual PID](../../../../includes/how-get-pid.md)]
 
@@ -62,7 +63,7 @@ If the memory leak issue is intermittent, automation is needed. To capture data,
 
    For example, if the command is `procdump.exe -s 30 -m 5120 -ma -n 3 <PID>`, the process memory consumption must be >= 5,120 MB (5 GB) for at least 30 seconds to generate a dump. If the first dump is written but then memory drops to less than 5,120 MB, the second and third dumps won't be collected, and the memory must increase back to 5,120 MB or higher and remain so for 30 seconds for the second dump to be generated, and so on. So, `-s` here doesn't necessarily mean the interval between the dumps.
 
-[!INCLUDE [Run commoand again with new PID](../../../../includes/run-command-new-pid-procdump.md)]
+[!INCLUDE [Run command again with new PID](../../../../includes/run-command-new-pid-procdump.md)]
 
 ## More information
 
