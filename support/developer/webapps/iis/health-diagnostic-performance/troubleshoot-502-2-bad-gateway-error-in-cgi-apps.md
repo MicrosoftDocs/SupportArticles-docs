@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot HTTP 502.2 Bad Gateway error in CGI applications
 description: Describes HTTP 502.2 Bad Gateway error in CGI applications and provides troubleshooting steps to resolve this issue.
-ms.date: 04/09/2012
+ms.date: 12/31/2024
 ms.author: haiyingyu
 author: HaiyingYu
 ms.reviewer: johnhart
@@ -9,13 +9,13 @@ ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, incl
 ---
 # Troubleshoot HTTP 502.2 Bad Gateway error in CGI applications
 
-_Applies to:_ &nbsp; Internet Information Services 6.0, Internet Information Services 7.0
+_Applies to:_ &nbsp; Internet Information Services
 
 This article describes HTTP 502.2 Bad Gateway error in Common Gateway Interface (CGI) applications and provides troubleshooting steps to resolve this issue.
 
 ## Symptom
 
-You have a Web site that is hosted on Internet Information Services (IIS) 7.0. When you visit the Web site in a Web browser, you may receive an error message that resembles the following:
+You have a Web site that is hosted on Internet Information Services (IIS). When you visit the Web site in a Web browser, you might receive an error message that resembles the following one:
 
 > Server Error in Application \<application name\>
 > HTTP Error 502.2 - Bad Gateway
@@ -24,13 +24,12 @@ You have a Web site that is hosted on Internet Information Services (IIS) 7.0. W
 
 ## Cause
 
-This problem occurs because the CGI process terminates unexpectedly before the CGI process sends a response back to IIS 7.0.
+This problem occurs because the CGI process terminates unexpectedly before the CGI process sends a response back to IIS.
 
 ## Tools
 
-- Tracing module on IIS 7.X
-- [Enterprise Tracing for Windows (ETW Tracing)](/windows-hardware/drivers/devtest/event-tracing-for-windows--etw-) on IIS 6.0
-- [Microsoft Network Monitor 3.4](https://www.microsoft.com/download/4865)
+- Tracing module on IIS
+- [Microsoft Network Monitor 3.4](https://www.microsoft.com/en-us/download/details.aspx?id=4865)
 
 ## Troubleshooting steps
 
@@ -50,7 +49,7 @@ HTTP: Content-Type =text/html
 HTTP: Server =Microsoft-IIS/6.0
 HTTP: Date =Tue, 23 Aug 2005 20:25:47 GMT
 HTTP: Data: Number of data bytes remaining = 232 (0x00E8)
-00000: 00 11 BC 3E 62 3C 00 0F 1F 6C 1F E1 08 00 45 00 ..¼>b<...l.á..E.
+00000: 00 11 BC 3E 62 3C 00 0F 1F 6C 1F E1 08 00 45 00 ..%>b<...l.á..E.
 00010: 01 9A EF 40 40 00 80 06 00 00 D8 A2 10 5C 0A C8 .šï@@.&euro;...Ø¢.\.È
 00020: 04 15 00 50 55 B1 AA C6 89 52 E7 D6 85 01 50 18 ...PU±ªÆ‰RçÖ….P.
 00030: 09 2F F9 67 00 00 48 54 54 50 2F 31 2E 31 20 35 ./ùg..HTTP/1.1 5
@@ -81,69 +80,6 @@ HTTP: Data: Number of data bytes remaining = 232 (0x00E8)
 
 Capture [FREB](troubleshoot-php-with-failed-request-tracing.md) log for the HTTP error message and locate which module is throwing this error message.
 
-Troubleshoot the CGI process executable file to determine why the CGI process terminates unexpectedly. You may have to generate a memory dump file of the CGI process when the access violation occurs.
+Troubleshoot the CGI process executable file to determine why the CGI process terminates unexpectedly. You might have to generate a memory dump file of the CGI process when the access violation occurs.
 
-This problem occurs when the CGI application does exactly what the error suggests: inserts invalid data into the HTTP Header value(s) that is sends to IIS as part of its response. In IIS 6 with Windows 2003 SP1 installed, you can use ETW Tracing to see what the CGI is returning.
-
-### Capture a Trace file using ETW Tracing
-
-1. Copy the ETWSetup.zip file to the IIS6 Server.
-1. Extract it on the server.
-1. Open the folder from the command prompt.
-1. Enter _iis6trace-start.cmd_ to start the tracing.
-1. Reproduce the issue.
-1. Enter _iis6trace-stop.cmd_ to stop the tracing.
-1. At this point, you should have an _iistrace\_etl.etl_ file in that folder.
-1. Zip up that file and send it to Microsoft Support Engineer.
-1. Support engineer can help you convert ETL file into XML.
-1. Here is an example trace file from this sort of CGI problem:
-
-The request to the CGI starts at line 391:
-
-```xml
-<ROW>
-<EventNumber>391</EventNumber> 
-<EventName>IISGeneral</EventName> 
-<EventTypeName>GENERAL_REQUEST_START</EventTypeName> 
-<Timestamp>2005-08-23 20:19:06</Timestamp> 
-<UserData>ContextId={00000000-0000-0000-4c06-0060000000ef}|SiteId=1|AppPoolId=DefaultAppPool|ConnId=-1224979097571031481|RawConnId=0|RequestURL=http://siteaddress:80/cgi-bin/htmlos.exe/00182.3.055317239900014075|RequestVerb=POST</UserData> 
-</ROW>
-```
-
-The request is processed by IIS, you see it's for a CGI, and it's passed along to the CGI. The CGI starts its processing at line 405:
-
-```xml
-<ROW>
-<EventNumber>405</EventNumber> 
-<EventName>IISCGI</EventName> 
-<EventTypeName>CGI_LAUNCH</EventTypeName> 
-<Timestamp>2005-08-23 20:19:07</Timestamp> 
-<UserData>ContextId={00000000-0000-0000-4c06-0060000000ef}|CommandLine="D:\Inetpub\cgi-bin\htmlos.exe" |ErrorCode=0x00000000|ProcessId=3136</UserData> 
-</ROW>
-```
-
-Line 441 shows the problem in the CGI:
-
-```xml
-<ROW>
-<EventNumber>441</EventNumber> 
-<EventName>IISCGI</EventName> 
-<EventTypeName>CGI_PREMATURE_TERMINATION</EventTypeName> 
-<Timestamp>2005-08-23 20:25:47</Timestamp> 
-<UserData>ContextId={00000000-0000-0000-4c06-0060000000ef}|Headers=</UserData> 
-</ROW>
-```
-
-For some reasons, the CGI application is ended prematurely. Notice the value of the headers entry. It's empty. This is why  the error is sent to the client that the CGI is sending a bad set of headers. It is in fact sending an empty list of headers.
-
-Line 446 shows the 502 that is sent to the client. It's actually a 502.2 (substatus of 2):
-
-```xml
-<ROW>
-<EventNumber>446</EventNumber> 
-<EventName>IISGeneral</EventName> 
-<EventTypeName>GENERAL_REQUEST_END</EventTypeName> 
-<Timestamp>2005-08-23 20:25:47</Timestamp> 
-<UserData>ContextId={00000000-0000-0000-4c06-0060000000ef}|BytesSent=370|BytesReceived=105906875|HttpStatus=502|HttpSubStatus=2</UserData> 
-</ROW>
-```
+This problem occurs when the CGI application does exactly what the error suggests, inserting invalid data into the HTTP header values that are sent to IIS as part of its response. 
