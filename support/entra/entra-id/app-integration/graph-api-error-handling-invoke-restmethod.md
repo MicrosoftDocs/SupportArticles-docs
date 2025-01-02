@@ -10,9 +10,9 @@ content_well_notification: AI-contribution
 ai-usage: ai-assisted
 ms.custom: sap:Microsoft Graph Users, Groups, and Entra APIs
 ---
-# Retry logics in Microsoft Graph API Requests with Invoke-RestMethod
+# Handling errors in Microsoft Graph API Requests with Invoke-RestMethod
 
-This article explains how to handle errors when you use the ·Invoke-RestMethod· cmdlet to call Microsoft Graph APIs in PowerShell.
+This article provides a code sample that demonstrates how to handle errors and implement retry logic when you make requests to the Microsoft Graph API by using the `Invoke-RestMethod` cmdlet in PowerShell.
 
 ## Prerequisites
 
