@@ -21,32 +21,33 @@ Depending on the version of Open Web Interface for .NET (OWIN) being used, you m
 
 ## Understanding nonce cookies
 
-The ASP.NET OIDC middleware uses a nonce cookie to prevent [replay attacks](/dotnet/framework/wcf/feature-details/replay-attacks). As mentioned in the error, the application throws the exception when it cannot find the nonce cookie in the authenticated request. Cookies are domain-based, meaning that once they are set for a specific domain, all subsequent requests to that domain will include these cookies until they expire or are deleted.
+The ASP.NET OIDC middleware uses a nonce cookie to prevent [replay attacks](/dotnet/framework/wcf/feature-details/replay-attacks). As mentioned in the error, the app throws the exception when it cannot find the nonce cookie in the authenticated request. Cookies are domain-based, meaning that once they are set for a specific domain, all subsequent requests to that domain will include these cookies until they expire or are deleted.
 
 The following are Fiddler traces about how these cookies are set and used in a working flow:
 
-1. In frame 116, the browser sends a request to the OIDC application protected by Microsoft Entra ID. After receiving the request, the application detects that it is not authenticated and redirects it to  Microsoft Entra ID (`login.microsoftonline.com`) for authentication. Additionally, the application sets the `OpenIdConnect.nonce` cookie in the 302 redirect response.
+1. In frame 116, the browser sends a request to the OIDC app protected by Microsoft Entra ID. After receiving the request, the app detects that it is not authenticated and redirects it to  Microsoft Entra ID (`login.microsoftonline.com`) for authentication. Additionally, the app sets the `OpenIdConnect.nonce` cookie in the 302 redirect response.
 
-    ![Screenshot of Frame 116 in Fiddler Trace.](./media//troubleshoot-validation-context-nonce-null-mvc/fiddler-trace-start-auth.png)
+    :::image type="content" source="media/troubleshoot-validation-context-nonce-null-mvc/fiddler-trace-start-auth.png" alt-text="Screenshot of Frame 116 in Fiddler Trace." lightbox="media/troubleshoot-validation-context-nonce-null-mvc/fiddler-trace-start-auth.png":::
 
-2. After successful authentication (frame 120 – 228), Microsoft Entra ID redirects the request back to the web application (frame 229) with the authenticated ID token. The nonce cookie previously set for this domain is also included in the POST request. The OIDC middleware validates the authenticated token and the nonce cookie before it continues loading the page (via another redirect). At this point, the nonce cookie's purpose is complete, and the application invalidates it by setting the expiration attribute to expire.
-    ![Screenshot of Frame 116 in Fiddler Trace.](./media//troubleshoot-validation-context-nonce-null-mvc/fiddler-trace-after-auth.png)
+2. After successful authentication (frame 120 – 228), Microsoft Entra ID redirects the request back to the web app (frame 229) with the authenticated ID token. The nonce cookie previously set for this domain is also included in the POST request. The OIDC middleware validates the authenticated token and the nonce cookie before it continues loading the page (via another redirect). At this point, the nonce cookie's purpose is complete, and the app invalidates it by setting the expiration attribute to expire.
+
+    :::image type="content" source="media/troubleshoot-validation-context-nonce-null-mvc/fiddler-trace-after-auth.png" alt-text="Screenshot of Frame 116 in Fiddler Trace." lightbox="media/troubleshoot-validation-context-nonce-null-mvc/fiddler-trace-after-auth.png":::
+
 
 ## Solution
 
 ### Cause 1: Multiple domains is used for the same website
 
-The browser originally navigates to the application on domain A (frame 9 below), and the nonce cookie is set for this domain. Later, Microsoft Entra ID sends the authenticated token to domain B (frame 91). Since the redirection to domain B does not include the nonce cookie, the web application throws the `validationContext.Nonce is null` error.
-
-![Screenshot of Frame 116 in Fiddler Trace.](./media//troubleshoot-validation-context-nonce-null-mvc/fiddler-trace-multiple-domains.png)
+The browser originally navigates to the app on domain A (frame 9 below), and the nonce cookie is set for this domain. Later, Microsoft Entra ID sends the authenticated token to domain B (frame 91). Since the redirection to domain B does not include the nonce cookie, the web app throws the `validationContext.Nonce is null` error.
+    :::image type="content" source="media/troubleshoot-validation-context-nonce-null-mvc/fiddler-trace-multiple-domains.png" alt-text="Screenshot of Frame 116 in Fiddler Trace." lightbox="media/troubleshoot-validation-context-nonce-null-mvc/fiddler-trace-multiple-domains.png":::
 
 #### Solution
 
 To resolve this issue, follow these steps:
 
-1. Redirect the request back to the same domain used originally after authentication. To control where Azure AD sent the authenticated request back to the application, set the `OpenIdConnectAuthentications.RedirectUri` property in the `ConfigureAuth` method.
+1. Redirect the request back to the same domain used originally after authentication. To control where Azure AD sent the authenticated request back to the app, set the `OpenIdConnectAuthentications.RedirectUri` property in the `ConfigureAuth` method.
 
-1. Configure the reply URL in App Registration, otherwise you may receive the following error: AADSTS50011: The reply url specified in the request does not match the reply urls configured for the application.
+1. Configure the reply URL in App Registration, otherwise you may receive the following error: AADSTS50011: The reply url specified in the request does not match the reply urls configured for the app.
 
 ### Cause 2: Missing SameSite attributes
 
@@ -63,14 +64,14 @@ For more information, see [SameSite cookies and the Open Web Interface for .NET]
 
 To make sure both of the above requirements are satisfied, follow these steps:
 
-1. Use the HTTPS protocol to navigate to the web application.
+1. Use the HTTPS protocol to navigate to the web app.
 1. Update .NET Framework and NuGet packages:
-    - For .NET Framework applications:  Upgrade .NET Framework to version 4.7.2+ and relevant NuGet packages (Microsoft.Owin.Security.OpenIdConnect, Microsoft.Owin) to version 4.1.0+.
-    - For .NET Core applications:
+    - For .NET Framework apps:  Upgrade .NET Framework to version 4.7.2+ and relevant NuGet packages (Microsoft.Owin.Security.OpenIdConnect, Microsoft.Owin) to version 4.1.0+.
+    - For .NET Core apps:
         - Version 2.x apps should use .NET Core 2.1+
         - Version 3.x apps should use .NET Core 3.1+
 
-Example configuration code snippet:
+Example configuration code for Startup.Auth.cs:
 
 ```csharp
 using System.Configuration;
