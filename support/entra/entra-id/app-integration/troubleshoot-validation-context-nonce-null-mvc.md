@@ -33,12 +33,12 @@ The following are Fiddler traces about how these cookies are set and used in a w
 
     :::image type="content" source="media/troubleshoot-validation-context-nonce-null-mvc/fiddler-trace-after-auth.png" alt-text="Screenshot of Fiddler Trace Frames about authentication." lightbox="media/troubleshoot-validation-context-nonce-null-mvc/fiddler-trace-after-auth.png":::
 
-
 ## Solution
 
 ### Cause 1: Multiple domains are used for the same website
 
 The browser originally navigates to the app on domain A (frame 9 below), and the nonce cookie is set for this domain. Later, Microsoft Entra ID sends the authenticated token to domain B (frame 91). Since the redirection to domain B doesn't include the nonce cookie, the web app throws the `validationContext.Nonce is null` error.
+
     :::image type="content" source="media/troubleshoot-validation-context-nonce-null-mvc/fiddler-trace-multiple-domains.png" alt-text="Screenshot of Fiddler Trace Frames about cause 1." lightbox="media/troubleshoot-validation-context-nonce-null-mvc/fiddler-trace-multiple-domains.png":::
 
 #### Solution
@@ -47,7 +47,7 @@ To resolve this issue, follow these steps:
 
 1. Redirect the request back to the same domain used originally after authentication. To control where Azure AD sent the authenticated request back to the app, set the `OpenIdConnectAuthentications.RedirectUri` property in the `ConfigureAuth` method.
 
-1. Configure the reply URL in App Registration, otherwise you may receive the following error: AADSTS50011: The reply url specified in the request doesn't  match the reply urls configured for the app.
+1. Configure the redirect URI (reply URL) in App Registration, otherwise you may receive the following error: AADSTS50011: The reply url specified in the request doesn't  match the reply urls configured for the app. For more information, see [Error AADSTS50011 with OpenID authentication](error-code-aadsts50011-redirect-uri-mismatch).
 
 ### Cause 2: Missing SameSite attributes
 
