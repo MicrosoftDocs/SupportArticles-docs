@@ -234,7 +234,7 @@
   items: 
    - name: Handling errors in Graph API requests with Invoke-RestMethod
      href: app-integration/graph-api-error-handling-invoke-restmethod.md
-   - name: Troubleshoot Authorization_RequestDenied error
+   - name: Troubleshoot Authorization RequestDenied error
      href: app-integration/troubleshoot-authorization-requestdenied-graph-api.md
 - name: Microsoft Entra User Provisioning and Synchronization
   items:
