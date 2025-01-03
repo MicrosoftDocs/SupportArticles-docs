@@ -94,7 +94,7 @@ If the application in question is .NET Core and hosted on IIS in in-process 
 Assume you have an application hosted on an IIS server and you experience high memory usage (the memory spikes up to around 7 GB by doing a stress test) when accessing a specific URL, follow these steps to diagnose the issue:
 
 1. Check Performance Monitor by following the steps in [Identify whether the memory leak is managed or native leak](#identify-whether-the-memory-leak-is-managed-or-native-leak). If you notice **Private Bytes** and **# Bytes in all Heaps** remain constant, it's a managed memory leak.
-1. Collect dump files by following the steps described in [Using DebugDiag](data-capture-managed-memory-leak#method-2-using-debugdiag).
+1. Collect dump files by following the steps described in [Using DebugDiag](data-capture-managed-memory-leak.md#method-2-using-debugdiag).
 1. Open the dump files in [WinDbg](/windows-hardware/drivers/debugger/) and run the following commands based on your scenario.
 
    |Command|Usage|

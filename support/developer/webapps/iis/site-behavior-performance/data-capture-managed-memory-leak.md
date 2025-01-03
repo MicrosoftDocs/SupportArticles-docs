@@ -8,9 +8,9 @@ ms.reviewer: khgupta, v-sidong
 
 # Data capture for managed memory leaks
 
-When dealing with [managed memory leaks in IIS](high-memory-consumption-issues-overview#validate-if-its-a-managed-or-native-memory-leak), it is crucial to capture relevant data that can help diagnose and resolve these leaks.
+When you [confirm that the type of memory leak](high-memory-consumption-issues-overview##identify-whether-the-memory-leak-is-managed-or-native-leak) is managed memory leaks, collect memory dumps of the process during the high memory usage event. These dumps can help you analyze and diagnose the cause of these leaks.
 
-This article outlines the steps to capture memory dumps associated with managed memory leaks, both for intermittent and consistently reproducible cases.
+This article outlines the steps to capture memory dumps associated with managed memory leaks, both for consistently reproducible and intermittent cases.
 
 ## Memory leak issue is easily replicable
 
