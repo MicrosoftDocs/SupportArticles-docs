@@ -1,12 +1,12 @@
 ---
-title: Troubleshooting admin consent issues in Microsoft Entra ID
-description: 
+title: Troubleshooting consent issues in Microsoft Entra ID
+description: Helps you troubleshoot and resolve consent issues in Microsoft Entra ID.
 ms.date: 01/02/2025
 ms.reviewer: willfid, v-weizhu
 ms.service: entra-id
 ms.custom: sap:App registrations
 ---
-# Troubleshooting admin consent issues in Microsoft Entra ID
+# Troubleshooting consent issues in Microsoft Entra ID
 
 This article provides guidance on troubleshooting admin consent issues in Microsoft Entra ID. It applies to OpenID Connect and OAuth2-based authentications.
 
@@ -23,14 +23,14 @@ When an application tries to sign-in or get an access token for a resource which
 - > AADSTS90094: An administrator of \<tenantDisplayName> has set a policy that prevents you from granting \<name of app> the permissions it is requesting. Contact an administrator of \<tenantDisplayName>, who can grant permissions to this app on your behalf. 
 - > AADSTS90008: The user or administrator has not consented to use the application with ID '162841d6-3c61-4676-a2c1-5a9c1e68ccf3'. This happened because application is misconfigured: it must require access to Windows Azure Active Directory by specifying at least 'Sign in and read user profile' permission
 
-There are many reasons why you might receive a message indicating that admin approval or admin consent is required. Consider the following high-level scenarios where the issue occurs:
+There are many reasons why you might receive a message indicating that admin approval or admin consent is required. Consider the following high-level scenarios:
 
-- The User.Read permission is missing.
+- The `User.Read` permission is missing.
 - User consent is disabled.
 - User assignment required is enabled.
-- A service principal doesn't exist in tenant for client app.
-- A service principal doesn't exist in tenant for resource.
-- The consent URL with `prompt=admin_consent` or `prompt=consent` is used.
+- A service principal doesn't exist in the tenant for the client app.
+- A service principal doesn't exist in the tenant for the resource.
+- The consent URL that specifies `prompt=admin_consent` or `prompt=consent` is used.
 - Scopes that have not been consented to yet are requested in a sign-in request.
 - The scope/permission requires admin consent.
 - User consent is blocked for risky apps.
@@ -58,7 +58,7 @@ A sign-in request should look like the following one:
 
     `https://{Aad-Instance}/{Tenant-Id}/oauth2/authorize?client_id={App-Id}&response_type=code&redirect_uri={redirect-uri}&resource={App-URI-Id}&scope={Scope}&prompt={Prompt}`
 
-- Azure AD V2 OAuth2 endpoint:
+- Microsoft identity platform endpoint:
 
     `https://{Aad-Instance}/{Tenant-Id}/oauth2/v2.0/authorize?client_id={App-Id}&response_type=code&redirect_uri={redirect-uri}& scope={Scope}&prompt={Prompt}`
 
