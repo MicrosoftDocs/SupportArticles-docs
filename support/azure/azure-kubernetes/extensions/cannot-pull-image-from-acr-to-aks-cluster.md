@@ -294,6 +294,10 @@ The host operating system (node OS) is incompatible with the image that's used f
 > &nbsp; desc = failed to pull and unpack image "\<acrname>.azurecr.io/\<repository:tag>": **no match for platform in manifest**: not found,\
 > ]
 
+And if you run ```azurecli az aks check-acr --resource-group <MyResourceGroup> --name <MyManagedCluster> --acr <myacr>.azurecr.io``` 
+you will receive this Error:
+>exec /canipull: exec format error
+
 This error can occur for an image that's pulled from any source, as long as the image is incompatible with the host OS. The error isn't limited to images that are pulled from the container registry.
 
 ### Solution: Configure the nodeSelector field correctly in your pod or deployment
