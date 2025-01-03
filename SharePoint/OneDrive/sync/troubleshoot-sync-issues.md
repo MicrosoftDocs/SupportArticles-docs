@@ -17,11 +17,11 @@ ms.date: 01/03/2025
 
 ## Summary
 
-This article is for anyone who can't sync OneDrive for work or school. You'll find detailed troubleshooting steps towards resolving the sync issues. The estimated time of completion is 5-10 minutes.
+This article is for anyone who can't sync OneDrive for work or school. You can find detailed troubleshooting steps towards resolving the sync issues. The estimated time of completion is 5-10 minutes.
 
 > [!NOTE]
 > To determine which OneDrive sync client you're using, see [Which OneDrive sync client am I using?](https://support.office.com/article/Which-OneDrive-sync-client-am-I-using-19246eae-8a51-490a-8d97-a645c151f2ba)  
-> If you are using OneDrive not OneDrive for work or school, and you encountered sync issue, you can look for the solutions in [Fix OneDrive sync problems](https://support.microsoft.com/office/0899b115-05f7-45ec-95b2-e4cc8c4670b2).
+> If you're using OneDrive not OneDrive for work or school, and you encountered sync issue, you can look for the solutions in [Fix OneDrive sync problems](https://support.microsoft.com/office/0899b115-05f7-45ec-95b2-e4cc8c4670b2).
 
 ## Update OneDrive for work or school to the current release
 
@@ -42,15 +42,15 @@ When a conflict is detected, you may see a sync error notification briefly. Afte
 
 :::image type="icon" source="media/troubleshoot-sync-issues/sync-error-icon.png":::
 
-To resolve the conflict, right-click or press and hold the OneDrive for work or school icon, and then choose **Resolve**. You will see the options available for your conflict.
+To resolve the conflict, right-click or press and hold the OneDrive for work or school icon, and then choose **Resolve**. You can see the options available for your conflict.
 
 If a conflict occurred with an Office file type, you should see the following options:
 
-- **Open to Resolve** opens the file in a coauthor view. First select **Save** to refresh the open copy with the new content. That will appear highlighted, so you can easily reconcile changes.
+- **Open to Resolve** opens the file in a coauthor view. First select **Save** to refresh the open copy with the new content. That appears highlighted, so you can easily reconcile changes.
 - **Save a Copy** lets you save a copy of your version outside the synced folder.
 - **Discard** discards your changes and fetches the new version from the server.
 
-In most cases, you will you'll choose **Open to Resolve**.
+In most cases, select **Open to Resolve**.
 
 If a conflict occurred with a non-Office file type, you should see the following options:
 
@@ -58,7 +58,7 @@ If a conflict occurred with a non-Office file type, you should see the following
 - **Save a Copy** lets you save a copy of your version outside the synced folder.
 - **Discard** discards your changes and fetches the new version from the server.
 
-In some cases, OneDrive for work or school may not mark conflicts in a non-Office file as an error, but instead save both versions locally. This results from editing conflicts. Editing conflicts with Office files are reported as sync problems and you can fix them as described above. But editing conflicts with other types of files are not reported as sync problems. Instead, OneDrive for work or school creates a new version of the file, and appends the device name to the file name. For example:
+In some cases, OneDrive for work or school may not mark conflicts in a non-Office file as an error, but instead save both versions locally. This situation results from editing conflicts. Editing conflicts with Office files are reported as sync problems and you can fix them as described above. But editing conflicts with other types of files are not reported as sync problems. Instead, OneDrive for work or school creates a new version of the file, and appends the device name to the file name. For example:
 
 :::image type="content" source="media/troubleshoot-sync-issues/new-version-of-file.png" alt-text="Screenshot of the new version of the example file.":::
 
@@ -69,9 +69,9 @@ When you see this happen, it's up to you to decide how to treat these file versi
 - Keep both versions of the file.
 
 > [!NOTE]
-> OneDrive for work or school will create up to 10 conflict versions for these types of files.
+> OneDrive for work or school creates up to 10 conflict versions for these types of files.
 
-Did this solve your problem?
+Did it solve your problem?
 
 - If yes, we're glad that your issue is resolved.
 - If no, see [Clear cached files](#clear-cached-files).
@@ -87,7 +87,7 @@ Try clearing cached files from Upload Center. To do this, follow these steps:
 3. Choose **Delete cached files**.
 4. Confirm by choosing **Delete cached information**.
 
-Did this solve your problem?
+Did it solve your problem?
 
 - If yes, we're glad that your issue is resolved.
 - If no, see [Stop and resync your libraries](#stop-and-resync-your-libraries).
@@ -108,7 +108,7 @@ When you stop syncing a folder, this simply disconnects the folder from the libr
 
 Sometimes the content you try to sync may not be supported. There are several restrictions on the number of items, size, and file names that might cause your sync to stop.
 
-[Read this article](https://support.microsoft.com/office/restrictions-and-limitations-when-you-sync-sharepoint-libraries-to-your-computer-through-onedrive-for-work-or-school-14fdf1b3-61e5-49cd-a9e1-a66588505b4e) to understand limits to the number of items that can be synchronized, size limits, character limits for files and folders, invalid characters and invalid file types. Make sure the files you are trying to sync do not fall into the restrictions or limitations stated in the article. The article also has an automated method for you to rename files and folders so that it will conform with the current requirements of the service.
+[Read this article](https://support.microsoft.com/office/restrictions-and-limitations-when-you-sync-sharepoint-libraries-to-your-computer-through-onedrive-for-work-or-school-14fdf1b3-61e5-49cd-a9e1-a66588505b4e) to understand limits to the number of items that can be synchronized, size limits, character limits for files and folders, invalid characters and invalid file types. Make sure the files you're trying to sync do not fall into the restrictions or limitations stated in the article. The article also has an automated method for you to rename files and folders so that it will conform with the current requirements of the service.
 
 ### Is the library configured to be available offline
 
@@ -121,7 +121,7 @@ A SharePoint administrator may prohibit syncing for a SharePoint site or library
 
 If you're not a SharePoint administrator, work with your SharePoint administrator to enable syncing of the site.
 
-If you are a site administrator, use the following steps to confirm the site is available for syncing.
+If you're a site administrator, use the following steps to confirm the site is available for syncing.
 
 1. Browse to the SharePoint site.
 2. Choose the **Settings** gear, then choose **Site Settings**.
@@ -129,7 +129,7 @@ If you are a site administrator, use the following steps to confirm the site is 
 4. In the **Offline Client Availability** section, choose **Yes**.
 5. Choose **OK**.
 
-If you are an administrator of the library, use the following steps to confirm the library is available for syncing.
+If you're an administrator of the library, use the following steps to confirm the library is available for syncing.
 
 1. Browse to the library.
 2. Choose the **Library** tab then choose **Library Settings**.
@@ -140,7 +140,7 @@ If you are an administrator of the library, use the following steps to confirm t
 5. In the **Offline Client Availability** section, choose **Yes**.
 6. Choose **OK**.
 
-Did this solve your problem?
+Did it solve your problem?
 
 - If yes, we're glad that your issue is resolved.
 - If no, see [Confirm or correct your credentials](#confirm-or-correct-your-credentials).
@@ -151,7 +151,7 @@ If you aren't signed in to the SharePoint Online site, you should log in and sel
 
 When you supply credentials, be sure to use the credentials associated with the library. In most cases, this will be your Microsoft 365 credentials.
 
-Did this solve your problem?
+Did it solve your problem?
 
 - If yes, we're glad that your issue is resolved.
 - If no, see [Review conflicts](#review-conflicts).
@@ -160,7 +160,7 @@ Did this solve your problem?
 
 Before you try uninstalling and reinstalling, try repairing OneDrive for work or school or Office. Repairing your Office installation can often resolve issues without the need to uninstall and reinstall. [Follow this article](https://support.microsoft.com/office/repair-an-office-application-7821d4b6-7c1d-4205-aa0e-a6b40c5bb88b) to learn how to repair Office programs.
 
-Did this solve your problem?
+Did it solve your problem?
 
 - If yes, we're glad that your issue is resolved.
 - If no, see [Uninstall and reinstall OneDrive for work or school](#uninstall-and-reinstall-onedrive-for-work-or-school).
@@ -172,7 +172,7 @@ If previous troubleshooting steps do not help, and other people can sync the lib
 > [!NOTE]
 > Resetting Internet Explorer removes all previous customizations of Internet Options. This process cannot be undone.
 
-Did this solve your problem?
+Did it solve your problem?
 
 - If yes, we're glad that your issue is resolved.
 - If no, see [Your issue was not resolved](#your-issue-was-not-resolved).
@@ -188,17 +188,17 @@ Sorry, but we cannot resolve this issue by using this guide. Here are some other
 
 The steps to uninstall and reinstall OneDrive for work or school depend on whether you installed the application through a setup program (MSI), or through Office Click-to-run. Read this article to learn how to tell [how Office or the OneDrive for work or school sync app was installed](https://support.microsoft.com/office/update-the-onedrive-for-work-or-school-sync-app-49771c73-e7ad-4d26-bff1-50bb12a83817).
 
-If you installed the OneDrive for work or school sync app through Office Click-to-run, do the following:
+If you installed the OneDrive for work or school sync app through Office Click-to-run, use the following options:
 
 - To uninstall Office, [follow these steps](https://support.microsoft.com/office/uninstall-office-from-a-pc-9dd49b83-264a-477a-8fcc-2fdf5dbf61d8).
 - To reinstall Office, [follow these steps](https://support.microsoft.com/office/download-and-install-or-reinstall-microsoft-365-or-office-2019-on-a-pc-or-mac-4414eaaf-0478-48be-9c42-23adc4716658).
 
-If you installed the OneDrive for work or school sync app through a setup program (MSI), do the following:
+If you installed the OneDrive for work or school sync app through a setup program (MSI), use the following options:
 
 - To uninstall the sync app from the Control Panel, [follow these steps](https://support.microsoft.com/office/f32a17ce-3336-40fe-9c38-6efb09f944b0).
 - To reinstall the sync app, [download and install OneDrive](https://www.microsoft.com/microsoft-365/onedrive/download).
 
-Did this solve your problem?
+Did it solve your problem?
 
 - If yes, we're glad that your issue is resolved.
 - If no, see [Reset Internet Explorer](#reset-internet-explorer).
