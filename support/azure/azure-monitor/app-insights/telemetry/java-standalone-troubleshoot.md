@@ -239,6 +239,31 @@ Java 8 has a known issue that's related to the JAR file signature verification o
 
 Alternatively, you can try the following experimental feature: [Startup time improvement for a limited number of CPU cores](https://github.com/microsoft/ApplicationInsights-Java/wiki/Start-up-time-improvement-with-a-limited-number-of-CPU-cores-(experimental)). If you experience any issues while using this feature, send us feedback.
 
+
+## Understand duplicated operation ID
+
+The application logic can result in the operation ID being reused by multiple telemetry data, as shown by [this example](/azure/azure-monitor/app/distributed-trace-data#example).
+
+The duplication may also come from incoming requests. To spot this second possibility:
+* Enable the capture of the trace parent headers in the  `applicationinsigths.json ` file
+```json
+{
+  "preview": {
+    "captureHttpServerHeaders": {
+      "requestHeaders": [
+        "traceparent"
+      ]
+    }
+  }
+}
+```
+* Enable the [self-diagnostics](/azure/azure-monitor/app/java-standalone-config#self-diagnostics) at the DEBUG level and restart the application.
+
+In the following log example, the operation id is not populated by Application Insights but from an incoming request:
+```
+{"ver":1,"name":"Request",...,"ai.operation.id":"4e757357805f4eb18705abd24326b550)","ai.operation.parentId":"973487efc3db7d03"},"data":{"baseType":"RequestData","baseData":{...,"properties":{"http.request.header.traceparent":"00-4e757357805f4eb18705abd24326b550-973487efc3db7d03-01", ...}}}}
+```
+
 [!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
 
 [!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
