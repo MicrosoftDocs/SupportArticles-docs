@@ -1,17 +1,15 @@
 ---
-title: High Memory Consumption Issue Overview
+title: Troubleshoot High Memory Usage in Applications
 description: Provides information on how to troubleshoot high memory consumption issues in applications.
 ms.date: 12/31/2024
 ms.custom: sap:Site Behavior and Performance\High memory usage
 ms.reviewer: khgupta, v-sidong
 ---
-# Overview of high memory consumption issues 
+# Overview of high memory consumption issues
 
-This article helps troubleshoot high memory consumption issues in different applications.
+This troubleshooting guide provides steps to diagnose and resolve high memory consumption issues in applications, focusing on scenarios involving memory leaks. It helps you understand typical symptoms, limits related to memory usage in different system configurations, and the tools required for effective diagnosis of the issue.
 
-## Data capture prerequisites
-
-### Tools required
+## Data capture tools
 
 - [Performance Monitor](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc749154(v%3dws.11))
 - [ProcDump](/sysinternals/downloads/procdump)
@@ -28,16 +26,16 @@ This article helps troubleshoot high memory consumption issues in different appl
 Memory leaks generally result in a steady increase in memory usage, leading to crashes or performance degradation:
 
 > [!NOTE]
-> High memory usage doesn't always indicate a leak; processes might recover if the allocated memory is freed later.
+> High memory usage doesn't always indicate a leak; processes might recover if the allocated memory is freed later. A memory leak is caused by a bug or bugs in the application, where allocations are never freed.
 
-- **32-bit applications**: 32-bit applications might crash and throw an `OutOfMemory` exception when running out of memory, possibly without reporting errors before crashing.
+- **32-bit applications**: 32-bit applications might crash and throw an `OutOfMemory` exception when running out of memory, possibly without reporting errors before crashing. They can behave unpredictably if memory allocation failures aren't handled properly in the application code.
 - **64-bit applications**: 64-bit applications rarely fail when trying to allocate virtual memory due to the large address space. However, they can grow to have a very large virtual address space and cause excessive paging of physical memory, which affects the application and other applications that are competing for physical memory.
 
 |Scenario | Memory limit |More information|
 | --- | --- | --- |
 | 32-bit applications on 32-bit Windows | 4 GB in total (2 GB in [user mode](/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode), 2 GB in [kernel mode](/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode))|If you use the **/LARGEADDRESSAWARE** flag in your 32-bit applications and the **/3GB** switch in the **boot.ini** file of the operating system during boot time, it makes the user mode memory 3 GB and the kernel mode 1 GB. |
 | 32-bit applications on 64-bit Windows | 4 GB in total (2 GB in [user mode](/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode), 2 GB in [kernel mode](/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode)) |If you use the **/LARGEADDRESSAWARE** flag in your 32-bit applications, it makes the user mode memory 4 GB. The kernel doesn't use the 32-bit address space on a 64-bit operating system. It uses only the required space from the 64-bit address space. |
-| 64-bit applications on 64-bit Windows | Supports up to 256 terabytes (TB) (128 TB in user mode, 128 TB in kernel mode) |NA|
+| 64-bit applications on 64-bit Windows | The theoretical memory limit 16 exabytes (EB). However, the actual memory limit is determined by the operating system and hardware capabilities. The practical limit on 64-bit Windows 10 is 256 terabytes (TB) (128 TB in user mode, 128 TB in kernel mode) |NA|
 |64-bit applications on 32-bit Windows |Invalid scenario  |NA|
 
 ## Identify high memory usage
@@ -55,40 +53,48 @@ To monitor **Private Bytes (KB)**, follow these steps:
 
    If the value of **Private Bytes (KB)** for the **w3wp.exe** process (IIS worker process) reaches the memory limit as described in the [Memory limit for different scenarios](#memory-limit-for-different-scenarios), the **w3wp.exe** process has the high memory issue. **Process Id** and **Application Pool Name** are shown next to it. You might need to refresh this view manually.
 
-## Validate if it's a managed or native memory leak
+## Identify whether the memory leak is managed or native leak
 
-To validate if it's a managed or native memory leak, follow these steps:
+Once you've confirmed that the **w3wp.exe** process is experiencing high memory usage, the next step is to identify whether it's managed or native memory leak. Follow these steps to identify the type of memory leak:
 
 1. Open **Performance Monitor** and select the **+** icon to add counters.
 
    :::image type="content" source="media/high-memory-consumption-issues-overview/performance-monitor.png" alt-text="Screenshot that highlights the plus icon in Performance Monitor." lightbox="media/high-memory-consumption-issues-overview/performance-monitor.png":::
 
-1. Select **# Bytes in all Heaps** under the **.NET CLR Memory** counter, select the target process (here's **w3wp**), and then select **Add**.
+1. Select **# Bytes in all Heaps** under the **.NET CLR Memory** counter, select the target process (here it's **w3wp**), and then select **Add**.
 1. Select **Private Bytes** and **Virtual Bytes** under the **Process** counter, select the target process, and then select **Add** (you can ignore the working set).
 
    :::image type="content" source="media/high-memory-consumption-issues-overview/add-counters-performance-monitor.png" alt-text="Screenshot of the Add Counters window.":::
 
-1. Select **OK** and reproduce the issue.
+1. Select **OK**.
+1. Reproduce the issue.
 1. To verify whether it's a managed or native memory leak, monitor the counters:
 
-   - If the **Private Bytes** counter and the **# Bytes in all Heaps** counter increase at the same rate (the difference between them remains constant), it indicates a managed memory leak. For more information, see [Data capture for managed memory leaks](data-capture-managed-memory-leak.md).
+   - **Managed memory leak**: If the **Private Bytes** counter and the **# Bytes in all Heaps** counter increase at the same rate (the difference between them remains constant), it indicates a managed memory leak.
 
      :::image type="content" source="media/high-memory-consumption-issues-overview/managed-memory-leak-indicator.png" alt-text="Screenshot showing how the counters change for a managed memory leak.":::
 
-   - If the **Private Bytes** counter increases but the **# Bytes in all Heaps** counter remains constant, it indicates a native memory leak. For more information, see [Troubleshoot native memory leak in an IIS 7.x application pool](troubleshoot-native-memory-leak-iis-7x-application-pool.md).
+   - **Native memory leak**: If the **Private Bytes** counter increases but the **# Bytes in all Heaps** counter remains constant, it indicates a native memory leak.
 
      :::image type="content" source="media/high-memory-consumption-issues-overview/native-memory-leak-indicator.png" alt-text="Screenshot showing how the counters change for a native memory leak.":::
 
+## Data collection
+
+Once you've confirmed the type of memory leak, the next step is to use tools to collect memory dumps of the process during the high memory usage event. These dumps can help you analyze and diagnose the cause of the issue.
+
+- To collect dumps for managed memory leak, see [Data capture for managed memory leaks](data-capture-managed-memory-leak.md).
+- To collect dumps for native memory leak, see [Troubleshoot native memory leak in an IIS 7.x application pool](troubleshoot-native-memory-leak-iis-7x-application-pool.md).
+
 ## .NET Core applications
 
-If the application in question is .NET Core and hosted on IIS in in-process mode, the steps for log collection in [Creating a Debug Diagnostics 1.2 Rule](troubleshoot-native-memory-leak-iis-7x-application-pool.md#creating-a-debug-diagnostics-12-rule) also apply. However, if the application is hosted on IIS in out-of-process mode, the action plan should be modified to investigate the dotnet process (**dotnet.exe** unless otherwise specified) instead of **w3wp.exe**. The same thing applies to self-hosted .NET Core applications.
+If the application in question is .NET Core and hosted on IIS in in-process mode, use the steps for data collection in [Data capture for managed memory leaks](data-capture-managed-memory-leak.md) and [Troubleshoot native memory leak in an IIS 7.x application pool](troubleshoot-native-memory-leak-iis-7x-application-pool.md). However, if the application is hosted on IIS in out-of-process mode, modify the actions to investigate the dotnet process (**dotnet.exe** unless otherwise specified) instead of **w3wp.exe**. The same thing applies to self-hosted .NET Core applications.
 
 ## Troubleshooting example
 
 Assume you have an application hosted on an IIS server and you experience high memory usage (the memory spikes up to around 7 GB by doing a stress test) when accessing a specific URL, follow these steps to diagnose the issue:
 
-1. Check Performance Monitor by following the steps in [Validate if it's a managed or native memory leak](#validate-if-its-a-managed-or-native-memory-leak). If you notice **Private Bytes** and **# Bytes in all Heaps** remain constant, it's a managed memory leak.
-1. Collect dump files by using [DebugDiag](https://www.microsoft.com/en-us/download/details.aspx?id=103453).
+1. Check Performance Monitor by following the steps in [Identify whether the memory leak is managed or native leak](#identify-whether-the-memory-leak-is-managed-or-native-leak). If you notice **Private Bytes** and **# Bytes in all Heaps** remain constant, it's a managed memory leak.
+1. Collect dump files by following the steps described in [Using DebugDiag](data-capture-managed-memory-leak#method-2-using-debugdiag).
 1. Open the dump files in [WinDbg](/windows-hardware/drivers/debugger/) and run the following commands based on your scenario.
 
    |Command|Usage|
@@ -345,6 +351,8 @@ Assume you have an application hosted on an IIS server and you experience high m
      return; 
    } 
    ```
+
+The above step-by-step approach can help you diagnose and address high memory usage issues.
 
 ## More information
 

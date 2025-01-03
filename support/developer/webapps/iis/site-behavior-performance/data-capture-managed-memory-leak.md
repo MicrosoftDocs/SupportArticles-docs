@@ -8,7 +8,9 @@ ms.reviewer: khgupta, v-sidong
 
 # Data capture for managed memory leaks
 
-This article provides methods to capture data for managed memory leaks that are easily replicable and intermittent.
+When dealing with [managed memory leaks in IIS](high-memory-consumption-issues-overview#validate-if-its-a-managed-or-native-memory-leak), it is crucial to capture relevant data that can help diagnose and resolve these leaks.
+
+This article outlines the steps to capture memory dumps associated with managed memory leaks, both for intermittent and consistently reproducible cases.
 
 ## Memory leak issue is easily replicable
 
@@ -43,9 +45,11 @@ If the memory leak issue can be consistently reproduced whenever needed, use one
    :::image type="content" source="media/data-capture-managed-memory-leak/configure-userdump-series.png" alt-text="Screenshot of Configure UserDump Series.":::
 1. Once the memory consumption of **w3wp.exe** reaches the limit as described in the [Memory limit for different scenarios](high-memory-consumption-issues-overview.md#memory-limit-for-different-scenarios), select **Save & Close**.
 
+   The dumps will start generating immediately.
+
 ## Memory leak issue is intermittent
 
-If the memory leak issue is intermittent, automation is needed. To capture data, follow these steps:
+If the memory leak issue is intermittent, you can automate the data capture process using the following steps:
 
 [!INCLUDE [Note when using Procdump](../../../../includes/note-using-procdump.md)]
 
