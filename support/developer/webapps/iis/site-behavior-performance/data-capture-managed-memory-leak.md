@@ -14,7 +14,7 @@ This article outlines the steps to capture memory dumps associated with managed 
 
 ## Memory leak issue is easily replicable
 
-If the memory leak issue can be consistently reproduced whenever needed, use one of the following methods to capture data:
+If the memory leak issue can be consistently reproduced whenever needed, use one of the following methods to capture data.
 
 ### Method 1: Using Procdump
 
@@ -35,15 +35,19 @@ If the memory leak issue can be consistently reproduced whenever needed, use one
 
 1. Download and install [Debug Diagnostic Tool v2 Update 3.2](https://www.microsoft.com/download/details.aspx?id=103453).
 1. When a memory leak occurs, open **DebugDiag 2 Collection** from the **Start** menu:  
+   
    :::image type="content" source="media/data-capture-managed-memory-leak/debugdiag-2-collection.png" alt-text="Screenshot of DebugDiag 2 Collection.":::
+
    > [!NOTE]
    > If you need to change the path where dumps are generated, select **Tools** > **Options And Settings** > **Manual Userdump Save Folder** to change it.
 1. Select the **Processes** tab.
 1. Locate the **w3wp** process with the **Process ID** column of the application in question.  
    [!INCLUDE [How to get actual PID](../../../../includes/how-get-pid.md)]
 1. Right-click the **w3wp** process, select **Create Userdump Series**, and set the following options (adjust the numbers as needed). Don't select **Save & Close**.  
+   
    :::image type="content" source="media/data-capture-managed-memory-leak/configure-userdump-series.png" alt-text="Screenshot of Configure UserDump Series.":::
-1. Once the memory consumption of **w3wp.exe** reaches the limit as described in the [Memory limit for different scenarios](high-memory-consumption-issues-overview.md#memory-limit-for-different-scenarios), select **Save & Close**.
+   
+1. Once the memory consumption of **w3wp.exe** reaches the limit as described in the [Memory limits for different scenarios](high-memory-consumption-issues-overview.md#memory-limits-for-different-scenarios), select **Save & Close**.
 
    The dumps will start generating immediately.
 
