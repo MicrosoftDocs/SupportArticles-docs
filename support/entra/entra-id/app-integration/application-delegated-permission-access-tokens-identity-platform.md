@@ -3,7 +3,7 @@ title: Application and delegated permission for access tokens
 description: Describes application and delegated permissions for access tokens in Microsoft identity platform.
 ms.reviewer: bachoang, v-weizhu
 ms.service: entra-id
-ms.date: 12/24/2024
+ms.date: 01/03/2025
 ms.custom: sap:App registrations
 ---
 # Application and delegated permissions for access tokens in Microsoft identity platform
@@ -20,7 +20,7 @@ Regardless of permission types, you must [add permissions in the API permissions
 * Select **Delegated permissions** if your application requires a user to sign in so that the access token can be issued for that sign-in.
 
 > [!NOTE]
-> When you select **Application permissions**, [admin consent](/azure/active-directory/manage-apps/configure-user-consent) must be granted for the permission to function correctly.
+> When you select **Application permissions**, admin consent must be granted for the permission to function correctly.
 
 ## Permission type tokens issued from OAuth2 authentication flows
 
