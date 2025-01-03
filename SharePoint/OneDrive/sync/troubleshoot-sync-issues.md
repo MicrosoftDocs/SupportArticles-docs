@@ -147,7 +147,7 @@ Did this solve your problem?
 
 ### Confirm or correct your credentials
 
-If you are not signed in to the SharePoint Online site, you should log in and select the **Keep me signed in** option to make sure the OneDrive for work or school synchronization process works well.
+If you aren't signed in to the SharePoint Online site, you should log in and select the **Keep me signed in** option to make sure the OneDrive for work or school synchronization process works well.
 
 When you supply credentials, be sure to use the credentials associated with the library. In most cases, this will be your Microsoft 365 credentials.
 
@@ -163,7 +163,7 @@ Before you try uninstalling and reinstalling, try repairing OneDrive for work or
 Did this solve your problem?
 
 - If yes, we're glad that your issue is resolved.
-- If no, see [Uninstall and reinstall OneDrive for work or school](#uninstall-and-reinstall-onedrive-for-business).
+- If no, see [Uninstall and reinstall OneDrive for work or school](#uninstall-and-reinstall-onedrive-for-work-or-school).
 
 ### Reset Internet Explorer
 
