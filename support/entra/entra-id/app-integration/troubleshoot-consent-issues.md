@@ -145,7 +145,7 @@ You might get one of the following behaviors/errors:
 
     In order for a client application to sign-in and get an access token for a resource, the resource must be assigned to the client application required API permissions. For example, for a client application to access Azure Key Vault.
 
-     :::image type="content" source="media/troubleshoot-consent-issues.md/azure-key-vault.png" alt-text="Screenshot that shows how to add Azure Key Vault to API permissions.":::
+     :::image type="content" source="media/troubleshoot-consent-issues/azure-key-vault.png" alt-text="Screenshot that shows how to add Azure Key Vault to API permissions.":::
 
     > [!NOTE]
     > Only the application owner can do this.
