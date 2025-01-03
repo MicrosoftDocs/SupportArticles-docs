@@ -81,7 +81,7 @@ The cause of these problems can range from file system corruption, underlying ha
 To identify the root cause of database consistency errors, consider these methods:
 
 - Check the Windows System Event Log for any system level, driver, or disk-related errors and work with your hardware manufacturer to resolve them.
-- Run any diagnostics provided by your hardware manufacturers for the computer and/or disk system. Most systems provide BIOS/UEFI built-in diagnostics for storage (hard drives), memory, CPUs, system boards, RAIDs, and multiple others. 
+- Run any diagnostics provided by your hardware manufacturers for the computer and/or disk system. Most systems provide BIOS/UEFI built-in diagnostics for storage (hard drives), memory, CPUs, system boards, RAID arrays, and multiple other components. 
 - Work with your hardware vendor or device manufacturer to make sure that:
   - The hardware devices and the configuration confirm to the [Microsoft SQL Server Database Engine Input/Output requirements](database-engine-input-output-requirements.md).
   - The device drivers and other supporting software components of all devices in the I/O path are updated.
