@@ -1,7 +1,7 @@
 ---
 title: Using Failed Request Tracing rules to troubleshoot Application Request Routing
 description: Describes the steps to enable Failed Request Tracing rules to debug failures and trace steps in Application Request Routing.
-ms.date: 07/02/2008
+ms.date: 01/03/2025
 ms.author: haiyingyu
 author: HaiyingYu
 ms.reviewer: johnhart, riande
@@ -11,7 +11,7 @@ ms.custom: sap:Health, Diagnostic, and Performance Features\Failed Request Traci
 
 _Applies to:_ &nbsp; Internet Information Services on Windows Server 2016 and later operating system versions
 
-Failed Request Tracing is a powerful tool for troubleshooting request-processing failures in the IIS (Internet Information Services) web-server that ships with Windows Server 2016 or later. This article provides steps to enable Failed Request Tracing rules to debug failures and trace steps in Application Request Routing. For more information about Failed Request Tracing rules, see [Troubleshoot failed requests using tracing in IIS](troubleshoot-failed-requests-using-tracing-in-iis-85.md).
+Failed Request Tracing is a powerful tool for troubleshooting request-processing failures in the Internet Information Services (IIS) web server that ships with Windows Server 2016 or later versions. This article provides steps to enable Failed Request Tracing rules to debug failures and trace steps in Application Request Routing. For more information about Failed Request Tracing rules, see [Troubleshoot failed requests using tracing in IIS](troubleshoot-failed-requests-using-tracing-in-iis-85.md).
 
 ## Goal
 
