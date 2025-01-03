@@ -1,7 +1,7 @@
 ---
 title: Fix mailbox errors in Dynamics 365
 description: Resolves an error that might occur when you try to save an email or a meeting to Dynamics 365 using the Microsoft Copilot for Sales for Outlook add-in.
-ms.date: 01/02/2025
+ms.date: 01/03/2025
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
