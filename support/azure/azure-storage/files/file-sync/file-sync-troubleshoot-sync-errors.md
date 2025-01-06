@@ -208,7 +208,7 @@ If a file or directory fails to sync due to an error, an event is logged in the 
 | 0x80041007 | -2147217401 | SYNC_E_ITEM_MUST_EXIST | An internal error occurred. | If the error persists for more than a day, create a support request. |
 | 0X80C80293 | -2134375789 | ECS_E_SYNC_INITIAL_SCAN_COMPLETED | The sync session failed because the initial enumeration was completed. The next session will cover the full namespace. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
 | 0X80C80342 | -2134375614 | ECS_E_SYNC_CUSTOM_METADATA_VERSION_NOT_SUPPORTED | The sync database has custom metadata with a version higher than the supported version. | Please upgrade the File Sync agent to the latest version. If the error persists after upgrading the agent, create a support request. |
-| 0x80c8604b | -2134351797 | ECS_E_AZURE_FILE_SHARE_FILE_NOT_FOUND | The specified Azure file wasn't found in the file share. This might occur if the file has been deleted and sync isn't aware of the change. | No action required. Sync will stop logging this error once change detection detects the file was deleted. |
+| 0x80c8604b | -2134351797 | ECS_E_AZURE_FILE_SHARE_FILE_NOT_FOUND | The specified Azure file wasn't found in the file share. This issue might occur if the file has been deleted and sync isn't aware of the change. | No action required. Sync will stop logging this error once change detection detects the file was deleted. |
 | 0x80c80201 | -2134375935 | ECS_E_SYNC_UNPROCESSABLE_ITEM_REPARSEPOINT | The sync failed due to the presence of a reparse point. | Remove the reparse point or replace it with regular file content before attempting the sync again. |
 
 ### Handling unsupported characters
@@ -630,7 +630,7 @@ This error can occur if there is a file system corruption on the NTFS volume whe
 | **Error string** | ERROR_REPARSE_TAG_INVALID |
 | **Remediation required** | Yes |
 
-This error occurs when files are copied between servers with different configurations, such as transferring files from a server with a file system filter driver or deduplication feature enabled to one where these features aren't present, resulting in unreadable files due to invalid reparse points. To resolve this error, delete the affected files or re-copy them as actual files, not as reparse points.
+This error occurs when files are copied between servers with different configurations. For example, transferring files from a server with a file system filter driver or deduplication feature enabled to one where these features aren't present can result in unreadable files due to invalid reparse points. To resolve this error, delete the affected files or re-copy them as actual files rather than reparse points.
 
 <a id="-2146762487"></a>**The server failed to establish a secure connection. The cloud service received an unexpected certificate.**  
 
