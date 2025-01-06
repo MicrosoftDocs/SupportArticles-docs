@@ -12,6 +12,8 @@ ms.custom: sap:Active Directory\Active Directory replication and topology, csstr
 
 This article helps manually remove [lingering objects](information-lingering-objects.md#summary) after you bring an outdated domain controller (DC) or global catalog server back online. In many cases, you can clean up lingering objects using the `repadmin /removelingeringobjects` command or tools like [Lingering Object Liquidator](lingering-object-liquidator-tool.md). However, these facilities don't work if you have [abandoned objects](https://support.microsoft.com/topic/attributes-that-contain-stale-or-bad-data-cause-exchange-offline-address-book-oab-generation-failures-and-event-ids-9126-9330-and-9339-together-with-stop-error-code-8004010e-occur-d505154b-f51f-6604-436b-e30fe4e486d9).
 
+_Original KB number:_ &nbsp; 314282
+
 When you bring a domain controller or global catalog server back online after it has been offline for a long time, any of the following issues might occur:
 
 - Email messages aren't delivered to a user whose user object was moved between domains. After you bring the outdated domain controller or global catalog server back online, both instances of the user object appear in the global catalog content. Both objects have the same email address, so email messages can't be delivered.
