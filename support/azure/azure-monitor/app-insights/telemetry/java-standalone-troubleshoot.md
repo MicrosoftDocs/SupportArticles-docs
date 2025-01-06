@@ -245,7 +245,7 @@ Alternatively, you can try the following experimental feature: [Startup time imp
 The application logic can result in the operation ID being reused by multiple telemetry data, as shown by [this example](/azure/azure-monitor/app/distributed-trace-data#example).
 
 The duplication may also come from incoming requests. To spot this second possibility:
-* Enable the capture of the trace parent headers in the  `applicationinsigths.json ` file
+* Enable the capture of the `traceparent` header in the  `applicationinsigths.json ` file
 ```json
 {
   "preview": {
