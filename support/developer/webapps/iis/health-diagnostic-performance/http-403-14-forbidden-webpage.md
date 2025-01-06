@@ -1,5 +1,5 @@
 ---
-title: HTTP Error 403.14 when you open IIS webpages
+title: HTTP Error 403.14 when You Open IIS Webpages
 description: Helps resolve the HTTP 403.14 The web server is configured to not list the contents of this directory error when you visit an Internet Information Services webpage.
 ms.date: 10/22/2024
 ms.reviewer: damatei

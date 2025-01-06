@@ -1,5 +1,5 @@
 ---
-title: HTTP status code overview
+title: HTTP Status Code Overview
 description: This article provides a list of the HTTP status codes in IIS.
 ms.date: 10/24/2024
 ms.custom: sap:Health, Diagnostic, and Performance Features\HTTP error logging
