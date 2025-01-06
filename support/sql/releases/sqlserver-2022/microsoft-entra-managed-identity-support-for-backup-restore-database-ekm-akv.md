@@ -49,7 +49,7 @@ To enable the managed identity support for EKM with AKV for SQL Server on Azure 
 1.	Assign the primary managed identity for the SQL Server on Azure VMs.
 2.	Create or use a key vault.   
 3.	Assign role-based access control (RBAC) roles for the primary managed identity to access the AKV.
-4.	Download the latest [SQL Server Connector for Microsoft Azure Key Vault](https://www.microsoft.com/download/details.aspx?id=45344). 
+4.	Download the latest [SQL Server Connector for Microsoft Azure Key Vault](https://www.microsoft.com/download/details.aspx?id=45344). The latest version of the SQL Server Connector is required to support the managed identity.
 5.	Run the T-SQL command `CREATE CREDENTIAL` with the `WITH IDENTITY = 'Managed Identity'` clause using the AKV path as a credential name.
 
 ```SQL
@@ -66,7 +66,7 @@ For more information, see [Managed Identity Support for Extensible Key Managemen
 > [!NOTE]
 > - [Trace flag 4675](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql), disabled by default, allows troubleshooting the server-level credential and can be used to confirm the primary managed identity that is assigned to the SQL Server instance. 
 > - The managed identity support doesn't introduce any T-SQL syntax or system view changes, since this functionality already exists for Azure SQL Managed Instance. 
-> - Managed identities aren't supported for the server-level credential on SQL Server on-premises. When accidentally used with backup or restore to Azure Storage, you see the error message "The primary managed identity is not set for the server and refers to the public documentation. "
+> - Managed identities aren't supported for the server-level credential on SQL Server on-premises. When accidentally used with backup or restore to Azure Storage or the EKM with AKV, you see the error message "The primary managed identity is not set for the server..." and are referred to the public documentation.
 
 ## About cumulative updates for SQL Server
 
