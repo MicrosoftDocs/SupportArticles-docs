@@ -257,7 +257,7 @@ The duplication may also come from incoming requests. To spot this second possib
   }
 }
 ```
-* Enable the [self-diagnostics](/azure/azure-monitor/app/java-standalone-config#self-diagnostics) at the DEBUG level and restart the application.
+* Enable [self-diagnostics](/azure/azure-monitor/app/java-standalone-config#self-diagnostics) at the DEBUG level and restart the application.
 
 In the following log example, the operation id is not populated by Application Insights but from an incoming request:
 ```
