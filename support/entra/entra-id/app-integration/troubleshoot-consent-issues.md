@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting consent issues in Microsoft Entra ID
 description: Helps you troubleshoot and resolve consent issues in Microsoft Entra ID.
-ms.date: 01/03/2025
+ms.date: 01/06/2025
 ms.reviewer: willfid, v-weizhu
 ms.service: entra-id
 ms.custom: sap:App registrations
@@ -22,6 +22,8 @@ When an application tries to sign-in or get an access token for a resource which
 - > AADSTS650056: Misconfigured application. This could be due to one of the following: The client has not listed any permissions for 'AAD Graph' in the requested permissions in the client's application registration. Or, The admin has not consented in the tenant. Or, Check the application identifier in the request to ensure it matches the configured client application identifier. Please contact your admin to fix the configuration or consent on behalf of the tenant.
 - > AADSTS90094: An administrator of \<tenantDisplayName> has set a policy that prevents you from granting \<name of app> the permissions it is requesting. Contact an administrator of \<tenantDisplayName>, who can grant permissions to this app on your behalf. 
 - > AADSTS90008: The user or administrator has not consented to use the application with ID '162841d6-3c61-4676-a2c1-5a9c1e68ccf3'. This happened because application is misconfigured: it must require access to Windows Azure Active Directory by specifying at least 'Sign in and read user profile' permission
+- > AADSTS900941: Administrator consent is required. App is considered risky. (AdminConsentRequiredDueToRiskyApp) This app may be risky. If you trust this app, ask your admin to grant you access.
+- > AADSTS900981: An admin consent request was received for a risky app. (AdminConsentRequestRiskyAppWarning) This app may be risky. Only continue if you trust this app.
 
 There are many reasons why you might receive a message indicating that admin approval or admin consent is required. Consider the following high-level scenarios:
 
