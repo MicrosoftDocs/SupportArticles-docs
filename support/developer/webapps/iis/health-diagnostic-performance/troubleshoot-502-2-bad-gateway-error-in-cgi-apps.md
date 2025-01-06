@@ -4,7 +4,7 @@ description: Describes HTTP 502.2 Bad Gateway error in CGI applications and prov
 ms.date: 12/31/2024
 ms.author: haiyingyu
 author: HaiyingYu
-ms.reviewer: johnhart
+ms.reviewer: johnhart, zixie
 ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
 ---
 # Troubleshoot HTTP 502.2 Bad Gateway error in CGI applications
