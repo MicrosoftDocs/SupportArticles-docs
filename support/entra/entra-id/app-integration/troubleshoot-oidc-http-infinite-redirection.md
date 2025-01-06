@@ -19,7 +19,7 @@ The issue specifically occurs when you browse the website by using the HTTP prot
 
 ## Cause
 
-The `.AspNet.Cookies` cookie that stores the access token isn't sent in HTTP requests because of its secure attribute.
+The `.AspNet.Cookies` cookie isn't sent in HTTP requests because of its secure attribute.
 
 ## Solution: Enforce HTTPS navigation
 
