@@ -60,8 +60,6 @@
         href: app-integration/send-notification-details.md
   - name: Troubleshoot sign-in to apps
     items:
-      - name: Troubleshooting infinite redirection between OIDC app and Entra ID
-        href: app-integration/troubleshoot-oidc-http-infinite-redirection.md
       - name: Error AADSTS220501 - Unable to download Certificate Revocation List
         href: app-integration/error-code-aadsts220501-unable-to-download-certificate-revocation-list.md
       - name: Error AADSTS50003 - certificate or key not configured
@@ -96,6 +94,8 @@
         href: app-integration/error-code-aadsts7000112-application-is-disabled.md
       - name: Troubleshoot signing in to SAML-based single sign-on configured apps
         href: app-integration/troubleshoot-sign-in-saml-based-apps.md
+      - name: Troubleshooting infinite redirection between OIDC app and Entra ID
+        href: app-integration/troubleshoot-oidc-http-infinite-redirection.md
       - name: User redirected to incorrect reply URL or localhost
         href: app-integration/reply-url-redirected-to-localhost.md
 
