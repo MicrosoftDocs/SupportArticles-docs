@@ -166,7 +166,7 @@ Register-AzStorageSyncServer -ResourceGroupName "<your-resource-group-name>" -St
 ```
 <a id="server-registration-missing-resource-groups"></a>**Server registration doesn't list all resource groups**
 
-If registering a server using *ServerRegistration.exe*, some resource groups are missing when you select the **Resource Group** drop-down.
+When registering a server using *ServerRegistration.exe*, some resource groups are missing when you select the **Resource Group** drop-down.
 
 This issue occurs due to a known issue that has been fixed in File Sync Agent v19.1. To resolve this issue, install the latest version of the agent.
 
