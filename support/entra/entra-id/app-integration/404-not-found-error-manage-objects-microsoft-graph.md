@@ -1,18 +1,18 @@
 ---
-title: 404 error when managing objects using Microsoft Graph
-description: Provides a solution to a 404 Not Found error when you try to manage a Microsoft Entra object that's just created using Microsoft Graph.
-ms.date: 12/27/2024
+title: 404 Not Found Error When Managing Objects Using Microsoft Graph
+description: Provides a solution to a 404 not found error when you try to manage a Microsoft Entra object that's just created using Microsoft Graph.
+ms.date: 01/06/2025
 ms.reviewer: kakapans, v-weizhu
 ms.service: entra-id
 ms.custom: sap:Problem with querying or provisioning resources
 ---
-# 404 Not Found error when managing objects using Microsoft Graph
+# 404 not found error when managing objects using Microsoft Graph
 
 This article provides a solution to a 404 Not Found error that occurs when you try to manage a Microsoft Entra object that's just created using Microsoft Graph.
 
 ## Symptoms
 
-Assume that you creates an object, such as a user, group, or application, in Microsoft Entra ID using Microsoft Graph. When trying to manage the object, such as get, update or patch it, shortly after its creation, you get a 404 Not Found error. 
+Assume that you create an object, such as a user, group, or application, in Microsoft Entra ID using Microsoft Graph. When trying to manage the object, such as get, update or patch it, shortly after its creation, you get a 404 Not Found error. 
 
 ## Cause
 
