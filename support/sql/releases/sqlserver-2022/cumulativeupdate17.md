@@ -80,21 +80,6 @@ The following update is available from the Microsoft Update Catalog:
 </details>
 
 <details>
-<summary><b>How to obtain or download this cumulative update package for Windows from Microsoft Update Catalog</b></summary>
-
-The following update is available from the Microsoft Update Catalog:
-
-- :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the cumulative update package for SQL Server 2022 CU16 now](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5048033)
-
-> [!NOTE]
->
-> - [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=sql%20server%202022) contains this SQL Server 2022 CU and previously released SQL Server 2022 CU releases.
-> - This CU is also available through Windows Server Update Services (WSUS).
-> - We recommend that you always install the latest cumulative update that is available.
-
-</details>
-
-<details>
 <summary><b>How to obtain or download the latest cumulative update package for Linux</b></summary>
 
 To update SQL Server 2022 on Linux to the latest CU, you must first have the [Cumulative Update repository configured](/sql/linux/sql-server-linux-setup#repositories). Then, update your SQL Server packages by using the appropriate platform-specific update command.
