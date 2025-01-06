@@ -247,15 +247,15 @@ Application logic can result in the operation ID being reused by multiple teleme
 The duplication may also come from incoming requests. To spot this second possibility:
 * Enable the capture of the `traceparent` header in the  `applicationinsigths.json ` file
 ```json
-{
-  "preview": {
-    "captureHttpServerHeaders": {
-      "requestHeaders": [
-        "traceparent"
-      ]
+  {
+    "preview": {
+      "captureHttpServerHeaders": {
+        "requestHeaders": [
+          "traceparent"
+        ]
+      }
     }
   }
-}
 ```
 * Enable [self-diagnostics](/azure/azure-monitor/app/java-standalone-config#self-diagnostics) at the DEBUG level and restart the application.
 
