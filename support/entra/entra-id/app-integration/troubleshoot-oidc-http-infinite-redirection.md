@@ -21,9 +21,7 @@ The issue specifically occurs when you browse the website by using the HTTP prot
 
 The `.AspNet.Cookies` cookie that stores the access token isn't sent in HTTP requests because of its secure attribute.
 
-## Solution
-
-### Recommended Fix: Enforce HTTPS navigation
+## Solution: Enforce HTTPS navigation
 
 To resolve the issue, enforce HTTPS navigation for the site. HTTPS is always recommended for sites that require authentication.
 
