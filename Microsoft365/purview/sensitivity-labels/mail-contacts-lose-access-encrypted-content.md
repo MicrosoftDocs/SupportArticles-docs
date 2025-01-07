@@ -8,6 +8,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Sensitivity Labels
   - CI 162121
   - CSSTroubleshoot
   - has-azure-ad-ps-ref

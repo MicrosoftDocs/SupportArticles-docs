@@ -14,6 +14,7 @@ search.appverid:
   - MOE150
   - MET150
 ms.custom: 
+  - sap:eDiscovery
   - CI 157398
   - seo-marvel-apr2020
   - CSSTroubleshoot
