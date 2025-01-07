@@ -26,7 +26,7 @@ This troubleshooting guide provides steps to diagnose and resolve high memory co
 Memory leaks generally result in a steady increase in memory usage, leading to crashes or performance degradation:
 
 > [!NOTE]
-> High memory usage doesn't always indicate a leak; processes might recover if the allocated memory is freed later. A memory leak is caused by one or more bugs in the application where allocations are never freed.
+> High memory usage doesn't always indicate a leak; processes might recover if the allocated memory is freed later. A memory leak is caused by one or more bugs in the application where allocations are never freed.
 
 - **32-bit applications**: 32-bit applications might crash and throw an `OutOfMemory` exception when running out of memory, possibly without reporting errors before crashing. They can behave unpredictably if memory allocation failures aren't handled properly in the application code.
 - **64-bit applications**: 64-bit applications rarely fail when trying to allocate virtual memory due to the large address space. However, they can grow to have a very large virtual address space and cause excessive paging of physical memory, which affects the application and other applications that are competing for physical memory.
@@ -35,7 +35,7 @@ Memory leaks generally result in a steady increase in memory usage, leading to c
 | --- | --- | --- |
 | 32-bit applications on 32-bit Windows | 4 GB in total (2 GB in [user mode](/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode), 2 GB in [kernel mode](/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode))|If you use the **/LARGEADDRESSAWARE** flag in your 32-bit applications and the **/3GB** switch in the **boot.ini** file of the operating system during boot time, it makes the user mode memory 3 GB and the kernel mode 1 GB. |
 | 32-bit applications on 64-bit Windows | 4 GB in total (2 GB in [user mode](/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode), 2 GB in [kernel mode](/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode)) |If you use the **/LARGEADDRESSAWARE** flag in your 32-bit applications, it makes the user mode memory 4 GB. The kernel doesn't use the 32-bit address space on a 64-bit operating system. It uses only the required space from the 64-bit address space. |
-| 64-bit applications on 64-bit Windows | The theoretical memory limit is 16 exabytes (EB). However, the actual memory limit is determined by the operating system and hardware capabilities. The practical limit on 64-bit Windows 10 is 256 terabytes (TB) (128 TB in user mode, 128 TB in kernel mode). |NA|
+| 64-bit applications on 64-bit Windows | 2^64 bytes = 16 Exabyte (EB) (~100 Crore GB). However, Windows10 x 64 supports 48 bits virtual address: 2^48 bytes = 256 TB (128 TB in [user mode](/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode), 128 TB in [kernel mode](/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode)).  |NA|
 |64-bit applications on 32-bit Windows |Invalid scenario  |NA|
 
 ## Identify high memory usage
@@ -87,7 +87,7 @@ Once you've confirmed the type of memory leak, the next step is to use tools to 
 
 ## .NET Core applications
 
-If the application in question is .NET Core and hosted on IIS in in-process mode, use the data collection steps in [Data capture for managed memory leaks](data-capture-managed-memory-leak.md) and [Troubleshoot native memory leak in an IIS 7.x application pool](troubleshoot-native-memory-leak-iis-7x-application-pool.md). However, if the application is hosted on IIS in out-of-process mode, modify the actions to investigate the dotnet process (**dotnet.exe** unless otherwise specified) instead of **w3wp.exe**. The same thing applies to self-hosted .NET Core applications.
+If the application in question is .NET Core and hosted on IIS in in-process mode, use the data collection steps in [Data capture for managed memory leaks](data-capture-managed-memory-leak.md) and [Troubleshoot native memory leak in an IIS 7.x application pool](troubleshoot-native-memory-leak-iis-7x-application-pool.md). However, if the application is hosted on IIS in out-of-process mode, modify the actions to investigate the dotnet process (**dotnet.exe** unless otherwise specified) instead of **w3wp.exe**. The same thing applies to self-hosted .NET Core applications.
 
 ## Troubleshooting example
 
@@ -95,16 +95,19 @@ Assume you have an application hosted on an IIS server and you experience high m
 
 1. Check Performance Monitor by following the steps in [Identify whether the memory leak is managed or native](#identify-whether-the-memory-leak-is-managed-or-native). If you notice **Private Bytes** and **# Bytes in all Heaps** remain constant, it's a managed memory leak.
 1. Collect dump files by following the steps described in [Using DebugDiag](data-capture-managed-memory-leak.md#method-2-using-debugdiag).
-1. Open the dump files in [WinDbg](/windows-hardware/drivers/debugger/) and run the following commands based on your scenario.
+1. Open the dump files in [WinDbg](/windows-hardware/drivers/debugger/). For high memory scenarios, you can use the following commands:
 
    |Command|Usage|
    |---|---|
-   |`!dumpheap -stat`   |This command shows you all objects on the managed heap and their statistics. You can customize the output using the different switches of `!dumpheap` to focus on specific types of objects, sizes, or states, making it easier to analyze the managed heap and identify issues such as memory leaks. |
+   |`!dumpheap -stat`   |This command shows you all objects on the managed heap and their statistics. You can customize the output using the different switches of `!dumpheap` to focus on specific types of objects, sizes, or states, making it easier to analyze the managed heap and identify issues such as memory leaks. |
    |`!eeheap -gc` |This command can be used to get the managed heap size. |
    |`!threads`  |This command helps check for any finalizer threads that display all managed threads. |
    |`!finalizequeue` |This command is used to display all objects in the finalize queue. |
 
 1. After running `!dumpheap -stat`, you see that `system.char[]`, `system.Text.Stringbuilder`, and `BuggyBits.Models.Link` consume the most objects on the heap, with counts of 322,547, 322,408, and 320,031.
+
+   > [!NOTE]
+   > `BuggyBits` is the sample application name used in this example. You might see your application name or other process name which might be consuming high objects.
 
     ```output
     7ff93da4a520      601       1,00,968 Microsoft.AspNetCore.Mvc.TagHelpers.ScriptTagHelper 
@@ -153,7 +156,7 @@ Assume you have an application hosted on an IIS server and you experience high m
     ```
 
 1. Dump the statistics for various sizes of `char[]` to find out if there's a pattern (this is a trial-and-error process, so you have to try different sizes to determine where the bulk of the strings are).
-1. Run the command `!dumpheap -mt 7ff93d333058` to list all objects on the managed heap that have the specified method table (MT) address `7ff93d333058` (`System.Char[]`).
+1. Run the command `!dumpheap -mt 7ff93d333058` to list all objects on the managed heap that have the specified method table (MT) address `7ff93d333058` for `System.Char[]`.
 
    ```output
    Address           MT                   Size  
@@ -228,7 +231,9 @@ Assume you have an application hosted on an IIS server and you experience high m
    Fields: 
    ```
 
-1. Run `gcroot` on some of those addresses, and you see a finalizer queue:
+1. Now, you need to know why they're not collected.
+
+   If you run `gcroot` on some of those addresses, and you see a finalizer queue:
 
    ```output
    0:000> !gcroot 017e9a469e08 
@@ -239,7 +244,9 @@ Assume you have an application hosted on an IIS server and you experience high m
           -> 017e9a469e08     System.Char[]
    ```
 
-1. Run `!threads` to list all threads and show their states. You see thread 42 has a finalizer:
+1. Check the finalizer thread to see what it's doing.
+
+   Run `!threads` to list all threads and show their states. You see thread 42 has a finalizer:
 
    ```output
    0:000> !threads 
@@ -335,6 +342,9 @@ Assume you have an application hosted on an IIS server and you experience high m
 
 1. Check the following code snippet in the **Link.cs** file, and you'll see that there's an explicit call to `Thread.Sleep`, which is causing high memory usage.
 
+   > [!NOTE]
+   > As mentioned earlier in the article, `BuggyBits` and the following code snippet are specific to the sample application used to create this example.Check your application code if you come across a similar scenario and found a specific method in your application that's causing high memory issue based on the dump analysis.
+
    ```C#
    // BuggyBits.Models.Link 
    // Flags = reuse slot, hide by signature 
@@ -351,8 +361,6 @@ Assume you have an application hosted on an IIS server and you experience high m
      return; 
    } 
    ```
-
-The preceding step-by-step approach can help you diagnose and address high memory usage issues.
 
 ## More information
 
