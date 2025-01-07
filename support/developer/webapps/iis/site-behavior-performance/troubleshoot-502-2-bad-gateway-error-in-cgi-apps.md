@@ -78,7 +78,7 @@ HTTP: Data: Number of data bytes remaining = 232 (0x00E8)
 001A0: 3E 3C 2F 68 74 6D 6C 3E ></html>
 ```
 
-Capture [FREB](troubleshoot-php-with-failed-request-tracing.md) log for the HTTP error message and locate which module is throwing this error message.
+Capture [FREB](../health-diagnostic-performance/troubleshoot-php-with-failed-request-tracing.md) log for the HTTP error message and locate which module is throwing this error message.
 
 Troubleshoot the CGI process executable file to determine why the CGI process terminates unexpectedly. You might have to generate a memory dump file of the CGI process when the access violation occurs.
 

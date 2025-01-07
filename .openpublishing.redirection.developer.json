@@ -5824,6 +5824,11 @@
       "source_path": "support/developer/webapps/iis/www-authentication-authorization/401-error-preauthentication-header.md",
       "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/401-error-preauthentication-header",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/webapps/iis/www-authentication-authorization/information-associated-iis-site-is-not-deleted.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-administration-management/information-associated-iis-site-is-not-deleted",
+      "redirect_document_id": true
     }
   ]
 }
