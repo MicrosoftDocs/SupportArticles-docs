@@ -98,6 +98,8 @@
         href: app-integration/troubleshoot-oidc-http-infinite-redirection.md
       - name: User redirected to incorrect reply URL or localhost
         href: app-integration/reply-url-redirected-to-localhost.md
+      - name: Nonce is null error in ASP.NET MVC with OpenID Connect
+        href: app-integration/troubleshoot-validation-context-nonce-null-mvc.md
 
 - name: Business To Consumer (B2C) Tenants
   items:
@@ -238,6 +240,8 @@
      href: app-integration/graph-api-error-handling-invoke-restmethod.md
    - name: Troubleshoot Authorization RequestDenied error
      href: app-integration/troubleshoot-authorization-requestdenied-graph-api.md
+   - name: 404 error when managing objects
+     href: app-integration/404-not-found-error-manage-objects-microsoft-graph.md
 - name: Microsoft Entra User Provisioning and Synchronization
   items:
   - name: User Sign-in or password Problems
@@ -374,3 +378,4 @@
       href: user-prov-sync/exclude-user-primary-group.md
     - name: Yellow exclamation mark in Office 2013
       href: user-prov-sync/yellow-exclamation-mark-office2013.md
+
