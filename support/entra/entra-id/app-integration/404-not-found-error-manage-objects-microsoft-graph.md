@@ -1,7 +1,7 @@
 ---
 title: 404 Error When Managing Objects Using Microsoft Graph
 description: Provides a solution to a 404 error when you try to manage a Microsoft Entra object that's just created using Microsoft Graph.
-ms.date: 01/06/2025
+ms.date: 01/07/2025
 ms.reviewer: kakapans, v-weizhu
 ms.service: entra-id
 ms.custom: sap:Problem with querying or provisioning resources
@@ -20,7 +20,7 @@ Assume that you create an object, such as a user, group, or application, in Micr
 
 As shown in the following diagram, when your application makes a request via Microsoft Graph to create a user in Microsoft Entra ID, the service begins the replication process and returns an object for that user, which includes the user's ID and other relevant data used in your request. If your application immediately attempts to update this user, it might connect with a replica that hasn't been updated with the new user object yet. Consequently, you receive a 404 error because the user isn't found on that replica.
 
- :::image type="content" source="media/404-not-found-error-manage-objects-microsoft-graph/404-error-diagram.png" alt-text="Diagram that explains the cause of the 404 error." border="false":::
+ :::image type="content" source="media/404-not-found-error-manage-objects-microsoft-graph/404-not-found-error-diagram.png" alt-text="Diagram that explains the cause of the 404 error.":::
 
 ## Solution
 
