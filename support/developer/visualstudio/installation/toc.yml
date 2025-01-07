@@ -58,8 +58,6 @@
     href: ./visual-studio-2022-online-installation-fails-code-1625.md
   - name: Visual Studio requires the April 2014 update
     href: ./version-visual-studio-requires-april-2014-update.md
-  - name: Visual Studio requires a newer version of Windows
-    href: ./visual-studio-requires-computer-newer-version-windows.md
   - name: Wait for setup to finish before trying again
     href: ./another-setup-already-running-wait-finish.md
   - name: Workarounds for Visual Studio 2022 on unsupported operating systems
