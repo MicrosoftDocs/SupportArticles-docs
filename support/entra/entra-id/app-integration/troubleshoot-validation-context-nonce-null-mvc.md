@@ -4,7 +4,7 @@ description: This article provides solutions to the common nonce validation erro
 ms.date: 01/02/2025
 ms.author: bachoang
 ms.service: entra-id
-ms.custom: sap:Development	Developing or Registering apps with Microsoft identity platform
+ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
 
 # "ValidationContext.Nonce is null" errors in ASP.NET MVC apps
