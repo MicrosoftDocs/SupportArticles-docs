@@ -1,7 +1,7 @@
 ---
 title: Linux VM doesn't boot due to incorrect HugePages configuration
 description: Provides a solution to Azure Linux VM boot issues due to incorrect HugePages configuration.
-ms.date: 12/23/2024
+ms.date: 1/7/2024
 ms.reviewer: msaenzbo, v-weizhu
 ms.service: azure-virtual-machines
 ms.custom: sap:My VM is not booting, linux-related-content
@@ -19,7 +19,7 @@ Incorrect HugePages configuration can cause boot issues in Linux Virtual Machine
 
 ## Symptoms
 
-The following issues can occurs due to incorrect HugePages configuration:
+The following issues can occur due to incorrect HugePages configuration:
 
 - After you migrate a Linux VM from on-premises to Azure, the VM doesn't boot properly.
 
@@ -34,7 +34,7 @@ When you review the serial console logs for various Linux VMs (Red Hat, Oracle, 
 - Dependency failures for local file systems and emergency mode.
 - Out of memory errors caused by the systemd-udevd service or other processes.
 - Failed to start various network and system services.
-- System hangs at login or boot.
+- System hung at login or boot.
 
 Here are some log examples:
 
@@ -235,12 +235,12 @@ Here are some log examples:
 
 This issue occurs because all available memory is reserved for HugePages, leaving insufficient free memory for the server to boot and execute processes.
 
-For example, if the HugePages configuration parameter `vm.nr_hugepages` is set to 65536 in the **/etc/sysctl.conf** file while the VM has only 16 GB of total memory, this configuration would consume 134,217,728 KB of memory, which exceeds VM memory, leading to an Out of Memory (OOM) condition.
+For example, if the HugePages configuration parameter `vm.nr_hugepages` is set to 65536 in the **/etc/sysctl.conf** file while the VM has only 16 GB of total memory, this configuration consumes 134,217,728 KB of memory, which exceeds VM memory, leading to an Out of Memory (OOM) condition.
 
 ## Resolution
 
 > [!IMPORTANT]
-> Review how much memory the VM has and How much HugePages are setup. Under some scenarios, for example, if the system needs 16 GB for HugePages and the VM only has 16 GB of RAM, it runs out of memory causing the VM not to boot. In this case, we recommend upgrading the VM size to at least 32 GB of RAM. For more information about how much HugePages a VM and database needs, see [Oracle Community](https://community.oracle.com/mosc/discussion/4516170/huge-pages).
+> Review how much memory the VM has and how much HugePages are set up. Under some scenarios, for example, if the system needs 16 GB for HugePages and the VM only has 16 GB of RAM, it runs out of memory causing the VM not to boot. In this case, we recommend upgrading the VM size to at least 32 GB of RAM. For more information about how much HugePages a VM and database needs, see [Oracle Community](https://community.oracle.com/mosc/discussion/4516170/huge-pages).
 
 To fix the issue, follow these steps:
 
@@ -248,9 +248,9 @@ To fix the issue, follow these steps:
 
     - [Boot the VM in single-user mode using the Azure Serial Console](serial-console-grub-single-user-mode.md) if the serial console is working.
     
-    - [Repair the Linux VM using the Azure VM repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md)
+    - [Repair the Linux VM using the Azure VM repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md).
     
-    - (Offline method) [Create a Rescue VM to fix VM boot issues manually](linux-virtual-machine-cannot-start-fstab-errors.md#use-manual-method)
+    - (Offline method) [Create a Rescue VM to fix VM boot issues manually](linux-virtual-machine-cannot-start-fstab-errors.md#use-manual-method).
 
 2. If you use the Azure VM repair commands or the offline method in step 1, follow the chroot process introduced in [Chroot environment in a Linux rescue VM](chroot-environment-linux.md).
 
