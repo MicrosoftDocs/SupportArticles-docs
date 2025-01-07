@@ -53,7 +53,7 @@ The resolve the issue, contact your Viva Glint admin.
 
 You receive the following error message in the dashboard:
 
-> You don’t have enough respondents to see your team's results, but you can still have a successful ACT Conversation.
+> You don't have enough respondents to see your team's results, but you can still have a successful ACT Conversation.
 
 This error occurs in one of the following situations:
 
@@ -67,38 +67,33 @@ To resolve the issue, select the appropriate solution for your situation:
 
 ## Incorrect team information
 
-Recent changes to your team aren’t shown in your Viva Glint dashboard. For example, new members have joined your team, but this change isn't reflected in the dashboard.
+Recent changes to your team aren't shown in your Viva Glint dashboard. For example, new members have joined your team, but this change isn't reflected in the dashboard.
 
 This issue occurs if employee data wasn't updated before a survey was launched.
 
 To resolve the issue, check whether the Viva Glint admin can update your results data.
 
-## Connection to Glint
-
-If you are repeatedly logged out of the Glint application or experience login issues, use this information to find a resolution.
-
-### Unable to connect to the Glint service
+## Unable to connect to the Glint service
 
 You receive the following error message:
 
 > Sorry, we are unable to connect to the Glint service. Please check your network connection and try again.
 
-This error might occur if an issue prevents matching your user principal name (UPN) and email between the Viva Glint app and Microsoft Entra ID.
+This error might occur if an issue prevents matching your user principal name (UPN) and email address between the Viva Glint app and Microsoft Entra ID. 
 
-To resolve the issue, ask your Viva Glint admin to update the data so that it matches across the two systems.
+To resolve the issue, ask your Viva Glint admin to update the data so that it matches across the two systems. 
 
-### Repeated logouts
+## Repeatedly signed out of Glint 
 
-If you're repeatedly logged out of Glint:
+If you're repeatedly signed out of Glint, try the following steps in order. If the issue persists after a step, continue to the next step. 
 
-- Reach out to your Microsoft Entra admin to confirm that your user principal name (UPN) and email between Glint and Entra match.
-- Confirm that you only have **one** active Glint session open in your internet browser. If you have multiple sessions, logout, close all browser tabs/windows, and start a new session.
-- Review [session timeout information](/viva/glint/setup/access-glint#session-timeout). Glint logs out a user after 30 total minutes of inactivity, with a prompt to continue the session after the first 20 minutes.
-- Check the Glint link that you have bookmarked and verify that it doesn't contain any extra text like "/config" or "/dashboard." Your bookmarked link should be one of the following, depending on your region:
-  
-  - US - [http://app.us1.glint.cloud.microsoft](http://app.us1.glint.cloud.microsoft)
-  - EU - [http://app.eu1.glint.cloud.microsoft](http://app.eu1.glint.cloud.microsoft)
+1. Contact your Microsoft Entra admin to verify that your UPN and email address match between Viva Glint and Microsoft Entra ID.
+1. Make sure that you have only **one** active Glint session open in your web browser. If you have multiple sessions, sign out of all sessions and close all browser tabs and windows. Then, start a new session. 
+1. Check whether you're signed out because of [inactivity timeout](/viva/glint/setup/access-glint#session-timeout). Glint automatically signs out users after 30 minutes of inactivity. It prompts users to continue their session after the first 20 minutes. 
+1. Check the Glint link that you have bookmarked and make sure that it doesn't contain any extra text, such as "/config" or "/dashboard."  Use one of the following links for your region: 
 
-- Check with your IT team to see if [idle session timeout](/microsoft-365/admin/manage/idle-session-timeout-web-apps) is enabled for your organization, which controls how long users can be inactive before being signed out of Microsoft 365 apps.
+   - US - [http://app.us1.glint.cloud.microsoft](http://app.us1.glint.cloud.microsoft)
+   - EU - [http://app.eu1.glint.cloud.microsoft](http://app.eu1.glint.cloud.microsoft)
+1. Contact your Microsoft Entra admin to determine whether [idle session timeout](/microsoft-365/admin/manage/idle-session-timeout-web-apps) is enabled for your organization. If it’s enabled, you must select to stay signed in when you receive a notification.  
 
-If you still experience logout issues after reviewing the items included here, reach out to your Viva Glint Admin to determine next steps with Microsoft 365 Support.
+If you still experience logout issues, contact your Viva Glint Admin for further assistance with Microsoft 365 Support.
