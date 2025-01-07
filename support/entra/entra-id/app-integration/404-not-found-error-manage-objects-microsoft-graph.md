@@ -20,7 +20,7 @@ The [Microsoft Entra ID architecture](/entra/architecture/architecture) ensures 
 
 As shown in the following diagram, when your application makes a request via Microsoft Graph to create a user in Microsoft Entra ID, the service begins the replication process and returns an object for that user, which includes the user's ID and other relevant data used in your request. If your application immediately tries to update this user, it might connect to a replica that hasn't yet been updated with the new user object. So, you receive a 404 error because the user isn't found on that replica.
 
- :::image type="content" source="media/404-not-found-error-manage-objects-microsoft-graph/404-not-found-error-diagram.png" alt-text="Diagram that explains the cause of the 404 error.":::
+ :::image type="content" source="media/404-not-found-error-manage-objects-microsoft-graph/404-not-found-error-diagram.png" alt-text="Diagram that explains the cause of the 404 error." border="false":::
 
 ## Solution
 
