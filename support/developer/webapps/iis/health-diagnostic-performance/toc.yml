@@ -45,10 +45,6 @@ items:
   href: troubleshoot-failed-requests-using-tracing-in-iis-85.md
 - name: Troubleshoot high CPU usage in an IIS app pool
   href: troubleshoot-high-cpu-in-iis-app-pool.md
-- name: Troubleshoot HTTP 400 errors in IIS
-  href: troubleshoot-http-400-errors-in-iis.md
-- name: Troubleshoot HTTP 502.2 Bad Gateway error in CGI apps
-  href: troubleshoot-502-2-bad-gateway-error-in-cgi-apps.md
 - name: Troubleshoot native memory leak in an IIS 7.x application pool
   href: troubleshoot-native-memory-leak-iis-7x-application-pool.md
 - name: Troubleshoot PHP errors with Failed Request Tracing

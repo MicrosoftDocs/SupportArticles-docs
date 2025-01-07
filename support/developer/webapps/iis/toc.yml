@@ -33,6 +33,8 @@ items:
   items:
   - name: Add an HTTP response header to a web site
     href: development/add-http-response-header-web-site.md
+  - name: Applications can't run in Integrated Pipeline mode
+    href: development/exception-integrated-pipeline-mode.md
   - name: Assign a private key to a new certificate
     href: development/assign-certificate-private-key.md
   - name: Child requests generate duplicate events
@@ -89,8 +91,6 @@ items:
     href: general/customize-iis-log-file-field-names.md
   - name: IIS Express isn't supported in production environment
     href: general/express-not-supported-production-environment.md
-  - name: Instances where HTTP.sys doesn't cache
-    href: general/instances-httpsys-not-cache.md
   - name: Can't access Web sites when security event log is full
     href: general/users-cannot-access-web-sites-when-log-full.md
 
@@ -114,8 +114,6 @@ items:
   items:
   - name: 0-byte file is returned
     href: site-behavior-performance/0-byte-file-compression-enabled.md
-  - name: Applications can't run in Integrated Pipeline mode
-    href: site-behavior-performance/exception-integrated-pipeline-mode.md
   - name: Authorization for requests to default document fails
     href: site-behavior-performance/authorization-fails-default-documents.md
   - name: Can't view websites over SSL
@@ -130,6 +128,10 @@ items:
     href: site-behavior-performance/event-115-connect-https-website.md
   - name: Fail to generate the certificate request
     href: site-behavior-performance/failed-generate-certificate-request.md
+  - name: HTTP error 401.1 with pre-authentication headers
+    href: site-behavior-performance/401-error-preauthentication-header.md
+  - name: HTTP error 500.0 when you visit a web site
+    href: site-behavior-performance/http-error-500-when-you-visit-web-site.md
   - name: FtpPutFile always returns success
     href: site-behavior-performance/ftpputfile-success-451-status.md
   - name: HTTP error 404.2
@@ -138,6 +140,10 @@ items:
     href: site-behavior-performance/http-500-response-binarywrite.md
   - name: Internet printing fails
     href: site-behavior-performance/internet-printing-fails.md
+  - name: Troubleshoot HTTP 400 errors in IIS
+    href: site-behavior-performance/troubleshoot-http-400-errors-in-iis.md
+  - name: Troubleshoot HTTP 502.2 Bad Gateway error in CGI apps
+    href: site-behavior-performance/troubleshoot-502-2-bad-gateway-error-in-cgi-apps.md
   - name: Worker Process takes much memory
     href: site-behavior-performance/work-process-takes-much-memory.md
 
@@ -155,14 +161,14 @@ items:
     href: www-administration-management/error-when-you-configure-32-bit-handlers.md
   - name: HTTP error 400 when you send requests
     href: www-administration-management/http-bad-request-response-kerberos.md
-  - name: HTTP error 500.0 when you visit a web site
-    href: www-administration-management/http-error-500-when-you-visit-web-site.md
   - name: HTTP status code
     href: www-administration-management/http-status-code.md
   - name: HTTPS connections fail and SSL bindings are deleted
     href: www-administration-management/https-connections-fail-ssl-bindings-deleted.md
   - name: IIS events are not displayed remotely
     href: www-administration-management/iis-events-not-display-remotely.md
+  - name: Information associated with IIS site isn't deleted
+    href: www-administration-management/information-associated-iis-site-is-not-deleted.md
   - name: Troubleshooting IIS 7.x installation problems
     href: www-administration-management/troubleshooting-iis-7x-installation-issues.md
 
@@ -192,16 +198,12 @@ items:
     href: www-authentication-authorization/error-install-certificate.md
   - name: Exporting configuration files fails
     href: www-authentication-authorization/configuration-files-cannot-exported.md
-  - name: HTTP error 401.1 with pre-authentication headers
-    href: www-authentication-authorization/401-error-preauthentication-header.md
   - name: HTTP error 403.7
     href: www-authentication-authorization/http-403-forbidden-open-webpage.md
   - name: IIS authenticates browser clients
     href: www-authentication-authorization/iis-authenticates-browser-client.md
   - name: IIS may reject requests with HTTP 403.7 or 403.16 errors
     href: www-authentication-authorization/errors-403-7-reject-client-certificate-rquest.md
-  - name: Information associated with IIS site isn't deleted
-    href: www-authentication-authorization/information-associated-iis-site-is-not-deleted.md
   - name: Impersonation fails when UAC is enabled
     href: www-authentication-authorization/impersonation-fails-uac-enabled.md
   - name: Kerberos double-hop authentication with Microsoft Edge
@@ -225,6 +227,8 @@ items:
   items:
   - name: Add and remove global modules at server and child levels 
     href: www-modules-features/add-remove-global-modules.md
+  - name: Instances where HTTP.sys doesn't cache
+    href: www-modules-features/instances-httpsys-not-cache.md
   - name: Request Restrictions can't set for a wildcard ISAPI
     href: www-modules-features/request-restrictions-not-set-isapi.md
   - name: Troubleshooting IIS Compression issues in IIS 6 or IIS 7.x
