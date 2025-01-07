@@ -17,7 +17,7 @@ Depending on the version of Open Web Interface for .NET (OWIN) that you use, you
 
 - IDX21323: RequireNonce is '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'. OpenIdConnectProtocolValidationContext.Nonce was null, OpenIdConnectProtocol.ValidatedIdToken.Payload.Nonce was not null. The nonce cannot be validated. If you do not need to check the nonce, set OpenIdConnectProtocolValidator.RequireNonce to false.
 
-- IDX10311: RequireNonce is 'true' (default) but validationContext.Nonce is null. A nonce cannot be validated. If you do not need to check the nonce, set OpenIdConnectProtocolValidator.RequireNonce to errorsfalse.
+- IDX10311: RequireNonce is 'true' (default) but validationContext.Nonce is null. A nonce cannot be validated. If you do not need to check the nonce, set OpenIdConnectProtocolValidator.RequireNonce to false.
 
 ## Understanding nonce cookies
 
@@ -29,7 +29,7 @@ The following Fiddler traces describe how these cookies are set and used in a wo
 
     :::image type="content" source="media/troubleshoot-validation-context-nonce-null-mvc/fiddler-trace-start-auth.png" alt-text="Screenshot of Frame 116 in Fiddler Trace." lightbox="media/troubleshoot-validation-context-nonce-null-mvc/fiddler-trace-start-auth.png":::
 
-- After successful authentication (Frame 120–228), Microsoft Entra ID redirects the request back to the web app (Frame 229) together with the authenticated ID token. The nonce cookie that was previously set for this domain is also included in the POST request. The OIDC middleware validates the authenticated token and the nonce cookie before it continues to load the page (through another redirect). At this point, the nonce cookie's purpose is finished, and the app invalidates it by setting the expiration attribute to expire.
+- After successful authentication (Frame 120-228), Microsoft Entra ID redirects the request back to the web app (Frame 229) together with the authenticated ID token. The nonce cookie that was previously set for this domain is also included in the POST request. The OIDC middleware validates the authenticated token and the nonce cookie before it continues to load the page (through another redirect). At this point, the nonce cookie's purpose is finished, and the app invalidates it by setting the expiration attribute to expire.
 
     :::image type="content" source="media/troubleshoot-validation-context-nonce-null-mvc/fiddler-trace-after-auth.png" alt-text="Screenshot of Fiddler Trace Frames related to authentication." lightbox="media/troubleshoot-validation-context-nonce-null-mvc/fiddler-trace-after-auth.png":::
 
