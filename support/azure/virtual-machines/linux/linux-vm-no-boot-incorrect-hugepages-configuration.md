@@ -1,7 +1,7 @@
 ---
 title: Linux VM Doesn't Boot Due to Incorrect HugePages Configuration
 description: Provides a solution to Azure Linux VM boot issues due to incorrect HugePages configuration.
-ms.date: 1/7/2024
+ms.date: 01/07/2025
 ms.reviewer: msaenzbo, v-weizhu
 ms.service: azure-virtual-machines
 ms.custom: sap:My VM is not booting, linux-related-content
