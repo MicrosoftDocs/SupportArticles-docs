@@ -18,15 +18,13 @@ This article provides guidance on troubleshooting, analysis, and resolution of t
 
 ## Prerequisites
 
-1. Make sure that the Pacemaker Cluster setup is correctly configured as documented in [SUSE - set up Pacemaker on SUSE Linux Enterprise Server in Azure ](/azure/sap/workloads/high-availability-guide-suse-pacemaker).
+1. Ensure that the Pacemaker Cluster setup is correctly configured by following the guidelines provided in [SUSE - set up Pacemaker on SUSE Linux Enterprise Server in Azure ](/azure/sap/workloads/high-availability-guide-suse-pacemaker).
 
-2. For a Microsoft Azure Pacemaker cluster that has Azure Fence Agent as STONITH device,this documentation is followed [SUSE - Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-suse-pacemaker?tabs=msi#use-an-azure-fence-agent-1).
+2. For a Microsoft Azure Pacemaker cluster using the Azure Fence Agent as the STONITH device, refer to the documentation [SUSE - Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-suse-pacemaker?tabs=msi#use-an-azure-fence-agent-1).
 
-3. For a Microsoft Azure Pacemaker cluster that has SBD (STONITH Block Device) storage protection as STONITH device, you can use either of the following options for the setup. For more information about these mechanisms, see:
-
+3. For a Microsoft Azure Pacemaker cluster utilizing SBD (STONITH Block Device) storage protection as the STONITH device, choose one of the following setup options. For detailed information on these mechanisms, see:
 - [SBD with an iscsi target server](/azure/sap/workloads/high-availability-guide-suse-pacemaker?tabs=msi#sbd-with-an-iscsi-target-server)
 - [SBD with an Azure shared disk](/azure/sap/workloads/high-availability-guide-suse-pacemaker?tabs=msi#sbd-with-an-azure-shared-disk)
-
 
 ### Scenario 1: Network Outage
 * The cluster nodes are experiencing `corosync` communication errors, resulting in continuous retransmissions due to an inability to establish communication between nodes. This issue triggers application timeouts, ultimately leading to node fencing and subsequent reboots.
@@ -97,10 +95,10 @@ When migrating a SUSE Pacemaker cluster from on-premises to Azure, unexpected re
 
 4. Performance and Latency Mismatches:
    * Inadequate VM Sizing: Migrated workloads may not align with the selected Azure VM(Virtual Machine) size, causing resource overutilization and triggering reboots.
-   * Disk I/O Mismatches: On-prem workloads with high IOPS(Input/output operations per second) demands must be paired with the appropriate Azure disk or storage performance tier.
+   * Disk I/O Mismatches: On-premises workloads with high IOPS(Input/output operations per second) demands must be paired with the appropriate Azure disk or storage performance tier.
 
 5. Security and Firewall Rules:
-   * Port Blockages: On-prem clusters often have open, internal communication, while Azure NSGs (Network Security Groups) or firewalls may block ports required for Pacemaker/Corosync communication.
+   * Port Blockages: On-premises clusters often have open, internal communication, while Azure NSGs (Network Security Groups) or firewalls may block ports required for Pacemaker/Corosync communication.
 
 
 ### Resolution:
