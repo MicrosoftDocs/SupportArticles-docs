@@ -5,7 +5,7 @@ author: msaenzbosupport
 ms.author: msaenzbo
 ms.reviewer: divargas-msft, pagienge, navpreetkaur, v-weizhu
 editor: v-jsitser
-ms.date: 10/24/2024
+ms.date: 01/08/2025
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ---
@@ -551,7 +551,7 @@ The following steps apply if the OS version is *RHEL 8.10* and the VM was create
 
 #### [RHEL 8.10 - RHEL-HA](#tab/rhe810-rhel-base-ha)
 
-1. Remove the releasever file if it exists.
+1. Remove the releasever file if it exists:
 
    ```bash
    sudo rm /etc/yum/vars/releasever
