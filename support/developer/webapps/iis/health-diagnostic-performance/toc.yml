@@ -13,8 +13,6 @@ items:
   href: hidden-static-files-http-404-access-denied.md
 - name: HTTP error 400 in the CLM portal
   href: clm-http-bad-request.md
-- name: HTTP error 403.14
-  href: http-403-14-forbidden-webpage.md
 - name: HTTP error 403.16
   href: http-403-forbidden-access-website.md
 - name: HTTP error 403.7
@@ -31,6 +29,8 @@ items:
   href: http-error-500-19-webpage.md
 - name: HTTP error 501 - Not Implemented
   href: http-error-501-not-implemented.md
+- name: HTTP status code
+  href: http-status-code.md
 - name: Logs contain dots instead of logging field value
   href: iis-logs-contain-dots.md
 - name: Pages can't be displayed

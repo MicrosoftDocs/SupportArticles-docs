@@ -130,6 +130,8 @@ items:
     href: site-behavior-performance/failed-generate-certificate-request.md
   - name: HTTP error 401.1 with pre-authentication headers
     href: site-behavior-performance/401-error-preauthentication-header.md
+  - name: HTTP error 403.14
+    href: site-behavior-performance/http-403-14-forbidden-webpage.md
   - name: HTTP error 500.0 when you visit a web site
     href: site-behavior-performance/http-error-500-when-you-visit-web-site.md
   - name: FtpPutFile always returns success
@@ -161,8 +163,6 @@ items:
     href: www-administration-management/error-when-you-configure-32-bit-handlers.md
   - name: HTTP error 400 when you send requests
     href: www-administration-management/http-bad-request-response-kerberos.md
-  - name: HTTP status code
-    href: www-administration-management/http-status-code.md
   - name: HTTPS connections fail and SSL bindings are deleted
     href: www-administration-management/https-connections-fail-ssl-bindings-deleted.md
   - name: IIS events are not displayed remotely
