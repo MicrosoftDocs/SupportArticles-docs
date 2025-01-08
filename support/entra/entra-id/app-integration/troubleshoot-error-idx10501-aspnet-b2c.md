@@ -9,7 +9,7 @@ ms.custom: sap:Microsoft Entra App Integration and Development
 
 # IDX10501 Error in ASP.NET Core with Azure B2C Custom Policy
 
-This guide will help you understand the cause of the IDX10501  error and provide a step-by-step solution to resolve it.
+This guide helps you understand the cause of the IDX10501 error and provide a step-by-step solution to resolve it.
 
 ## Symptoms
 When you [implement a custom policy](/azure/active-directory-b2c/enable-authentication-web-application-options#pass-the-azure-ad-b2c-policy-id) in an ASP.NET Core application that integrates with Azure Active Directory B2C (Azure AD B2C), you may encounter the following IDX10501 error:
@@ -18,15 +18,15 @@ When you [implement a custom policy](/azure/active-directory-b2c/enable-authenti
 
 ## Understanding the Error
 
-First, let’s understand why this error is being thrown when the custom policy redirects back to your app. In ASP.NET Core, whenever a user is authenticated and authorized, and there is a redirect back to the Web app that contains an ID Token.The ASP.NET Core middleware will try to validate this ID Token to make sure that the redirect is genuine. To validate the ID Token, the Middleware needs the public key of the signing certificate which was used to sign the ID Token. The Middleware gets this public key by querying AAD B2C. Specifically, there is a "metadata" endpoint in AAD B2C used by the Middleware which provides authentication information including any public keys for signing certificates.
+First, let’s understand why this error is being thrown when the custom policy redirects back to your app. In ASP.NET Core, whenever a user is authenticated and authorized, and there is a redirect back to the Web app that contains an ID Token.The ASP.NET Core middleware will try to validate this ID Token to make sure that the redirect is genuine. To validate the ID Token, the Middleware needs the public key of the signing certificate which was used to sign the ID Token. The Middleware gets this public key by querying Azure Active Directory B2C. Specifically, there is a "metadata" endpoint in Azure Active Directory B2C used by the Middleware which provides authentication information including any public keys for signing certificates.
 
-When you created your custom policy, you was required to create or upload a signing certificate. This signing certificate is different from that used for built-in user flows in AAD B2C. This means that the public keys accessible from the "metadata" endpoint for your AAD B2C will not contain the public key for your custom policy. The custom policy actually has it’s own metadata endpoint.
+When you created your custom policy, you were required to create or upload a signing certificate. This signing certificate is different from that used for built-in user flows in Azure Active Directory B2C. This means that the public keys accessible from the "metadata" endpoint for your Azure Active Directory B2C will not contain the public key for your custom policy. The custom policy actually has its own metadata endpoint.
 
 The endpoint which the Middleware uses is configured by Microsoft.Identity.Web and set at app startup. Since the metadata URL is already set, invoking a custom policy during runtime will result in a scenario where the Middleware is looking at the wrong metadata URL while validating the returning token.
 
 ## Solution
 
-To resolve this issue, you must configure configure the correct metadata endpoint for the additional Custom Policy. To do this, create a second authentication scheme to handle the custom policy. With this additional authentication scheme, we can set the correct metadata endpoint at startup. Below is a brief overview of the steps involved:
+To resolve this issue, you must configure the correct metadata endpoint for the additional Custom Policy. To do this, create a second authentication scheme to handle the custom policy. With this additional authentication scheme, we can set the correct metadata endpoint at startup. Below is a brief overview of the steps involved:
 
 1. Add an additional redirect URI to your App Registration.
 2. Configure an additional B2C authentication scheme in your app.
@@ -47,7 +47,7 @@ Before continuing, Ensure you have:
 
 ### Step 1: Add an Additional Redirect URI
 
-In your the App Registration, you need to add another redirect URI for the custom policy. The reason you cannot use the existing redirect URI in this case is that it could cause confusion for the Web App. We will set up two different authentication schemes, but when the B2C policy redirects back to the Web App, the Middleware will not know which authentication scheme to use. Thus, we need a separate redirect URI to clearly distinguish redirects from the existing and new authentication schemes.
+In the App Registration, you need to add another redirect URI for the custom policy. The reason you cannot use the existing redirect URI in this case is that it could cause confusion for the Web App. We will set up two different authentication schemes, but when the B2C policy redirects back to the Web App, the Middleware will not know which authentication scheme to use. Thus, we need a separate redirect URI to clearly distinguish redirects from the existing and new authentication schemes.
 
 1. Navigate to your app registration in the [Azure Portal](https://portal.azure.com).
 2. In the **Manage** section, select **Authentication**.
