@@ -8,7 +8,7 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 ms.reviewer: scotro, kageorge, jarrettr, v-leedennis
 editor: v-jsitser
 ms.topic: upgrade-and-migration-article
-ms.date: 03/25/2024
+ms.date: 01/08/2025
 ---
 # Windows 11 support on Azure virtual machines
 
@@ -25,6 +25,7 @@ This article provides details about the applicable processors for Microsoft Azur
 |A-Series|No|
 |A-Series v2|No|
 |B-Series|No|
+|Bsv2-Series|Yes|
 |DCv2-Series|Yes|
 |DCv3-Series|Yes|
 |D-Series|No|
