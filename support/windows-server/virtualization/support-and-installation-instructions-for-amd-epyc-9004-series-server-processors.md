@@ -2,7 +2,7 @@
 title: Support and installation instructions for AMD EPYC 9004 and 9005 series server processors
 description: Introduces the Windows Server operating system support statements and installation instructions for AMD EPYC 9004 and AMD EPYC 9005 series server processors.
 ms.topic: troubleshooting
-ms.date: 10/17/2024
+ms.date: 01/08/2025
 ms.reviewer: kaushika, jaysenb
 ms.custom: sap:Virtualization and Hyper-V\Installation and configuration of Hyper-V, csstroubleshoot
 ---
@@ -10,14 +10,13 @@ ms.custom: sap:Virtualization and Hyper-V\Installation and configuration of Hype
 
 This article introduces the Windows Server operating system support statements and installation instructions for systems with greater than 64 cores per CPU socket.
 
-_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019
-
 ## Windows Server support
 
 The following Windows Server releases are supported on AMD EPYC 9004 and AMD EPYC 9005 series processors.
 
 * Windows Server 2019
 * Windows Server 2022
+* Windows Server 2025
 
 ## AMD EPYC processor Ordering Part Number (OPN) support
 
@@ -70,3 +69,7 @@ On systems running Windows Server 2022 with the Hyper-V virtualization feature e
 The root partition will only enumerate the first 256 logical processors. This limitation is addressed in [KB5044281 (OS Build 20348.2762)](https://support.microsoft.com/topic/october-8-2024-kb5044281-os-build-20348-2762-e063059c-9122-4324-86e8-4f6f3383a20a).
 
 Attempting to boot to the Windows Server 2019 Recovery Environment (WinRE) may result in a blue screen error 0x5C HAL_INITIALIZATION_FAILED. The WinRE image must be updated to support configurations with greater than 64 cores per socket. To enable this support, apply the latest cumulative update for Server 2019 to the WinRE image. See [Add an update package to Windows RE](/windows-hardware/manufacture/desktop/add-update-to-winre?view=windows-11&preserve-view=true) for instructions.
+
+On systems running Windows Server 2025 with the Hyper-V hypervisor present, the memory dump creation process may fail. This problem may occur on all AMD EPYC server series processors. Download and install the Windows Server 2025 latest Cumulative Update package to resolve this problem. For more information, see [Windows Server 2025 update history](https://support.microsoft.com/topic/windows-server-2025-update-history-10f58da7-e57b-4a9d-9c16-9f1dcd72d7d7).
+
+This was first addressed in [KB5044284 (OS Build 26100.2033)](https://support.microsoft.com/topic/october-8-2024-kb5044284-os-build-26100-2033-db79fdac-94b8-4f2c-9273-bf40c6f8273d).
