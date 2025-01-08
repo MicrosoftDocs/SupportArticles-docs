@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot IDX10501 Error in ASP.NET Core with Azure B2C Custom Policy
+title: Troubleshoot IDX10501 Error in ASP.NET Core app with Azure B2C Custom Policy
 description: Provides guidance for troubleshooting IDX10501 Error in ASP.NET Core with Azure B2C.
 ms.date: 01/06/2025
 ms.author: markbukovich
@@ -7,7 +7,7 @@ ms.service: entra-id
 ms.custom: sap:Microsoft Entra App Integration and Development
 ---
 
-# IDX10501 Error in ASP.NET Core with Azure B2C Custom Policy
+# IDX10501 Error in ASP.NET Core app with Azure B2C Custom Policy
 
 This guide helps you understand the cause of the IDX10501 error and provide a step-by-step solution to resolve it.
 
