@@ -3,7 +3,7 @@ title: Resolve issues when accessing Viva Glint survey results
 description: Resolves some common issues that you might encounter when you try to view survey results for your team.
 manager: dcscontentpm
 ms.reviewer: aweixelman
-ms.date: 10/15/2024
+ms.date: 01/07/2025
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
@@ -45,7 +45,7 @@ To resolve the issue, ask your Glint admin for the missing permission.
 You receive the following welcome message, but you can't access any survey reports:
 
 > Welcome to Viva Glint  
-> To access the survey reports, ask your Glint admin to assign you the necessary role to access them.
+> To access the survey reports, contact your Glint admin to assign you the necessary role to access them.
 
 The resolve the issue, contact your Viva Glint admin.
 
@@ -71,7 +71,7 @@ Recent changes to your team aren't shown in your Viva Glint dashboard. For examp
 
 This issue occurs if employee data wasn't updated before a survey was launched.
 
-To resolve the issue, ask your Viva Glint admin to update your results data.
+To resolve the issue, check whether the Viva Glint admin can update your results data.
 
 ## Unable to connect to the Glint service
 
@@ -94,6 +94,6 @@ If you repeatedly get signed out of Glint, try the following steps in the given 
 
    - US - [http://app.us1.glint.cloud.microsoft](http://app.us1.glint.cloud.microsoft)
    - EU - [http://app.eu1.glint.cloud.microsoft](http://app.eu1.glint.cloud.microsoft)
-1. Contact your Microsoft Entra admin to determine whether [idle session timeout](/microsoft-365/admin/manage/idle-session-timeout-web-apps) is enabled for your organization. If it’s enabled, you must elect to stay signed in when you receive a notification.  
+1. Contact your Microsoft Entra admin to determine whether [idle session timeout](/microsoft-365/admin/manage/idle-session-timeout-web-apps) is enabled for your organization. If it's enabled, you must select to stay signed in when you receive a notification.  
 
 If you still experience logout issues, contact your Viva Glint admin for further assistance from Microsoft 365 Support.
