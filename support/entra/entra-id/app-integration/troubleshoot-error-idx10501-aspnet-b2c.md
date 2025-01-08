@@ -150,11 +150,11 @@ To find the metadata address, follow these steps:
 1. Select Custom policies, and then select the custom policy that you are using. In this article, It's **B2C_1A_DEMO_CHANGESIGNINNAME**.
 
     :::image type="content" source="media/troubleshoot-error-idx10501-aspnet-b2c/custom-policy.png" alt-text="Screenshot of checking custom-policy.":::
-1. The metadata address is the URL listed under **OpenId Connect Discovery Endpoint**. Copy this URL and paste it in for the value of the `options.MetadataAddress` variable.
+1. The metadata address is the URL listed under **OpenId Connect Discovery Endpoint**. Copy this URL and paste it as the value for the `options.MetadataAddress` variable.
 
 ### Step 3: Add Action to Controller
 
-In your controller, add an action to challenge the user with the Custom B2C Policy. In example code, the action is added to the Home Controller for the sake of simplicity. Add the following code to your controller and adjust the values and action name to meet your scenario. This code snippet can be found on line 40 of the `HomeController.cs` file in the `Controllers` folder in the Code sample:
+In your controller, implement an action to trigger the Custom B2C Policy challenge for the user. In code sample, the action is added to the Home Controller for the sake of simplicity. Add the following code to your controller and adjust the values and action name to meet your scenario. This code snippet can be found on line 40 of the `HomeController.cs` file in the `Controllers` folder in the Code sample:
 
 ```csharp
 [Authorize]
@@ -171,7 +171,7 @@ Ensure `<Your-Custom-Policy>` matches your specific policy name and `<CustomAuth
 
 ### Step 4: Implement Action in Layout
 
-Implement the action in the layout, so that the user can actually invoke the custom policy. In code sample, a button is added alongside existing B2C buttons based on the [tutorial](/azure/active-directory-b2c/enable-authentication-web-application).  For more information, see [ Add the UI elements](/azure/active-directory-b2c/enable-authentication-web-application?tabs=visual-studio#step-4-add-the-ui-elements)
+Implement the action in the layout, so that the user can actually invoke the custom policy. In code sample, the following snippet adds a button alongside existing B2C buttons based on the [tutorial](/azure/active-directory-b2c/enable-authentication-web-application). The snippet is added to line 13 of the `_LayoutPartial.cshtml` file in the `Views/Shared` folder. Note that the `asp-controller` property is set to `Home` to reference the Home Controller, and the `asp-action property` is set to `EditEmail` to reference the action created in the Home Controller. For more information, see [Add the UI elements](/azure/active-directory-b2c/enable-authentication-web-application?tabs=visual-studio#step-4-add-the-ui-elements).
 
 ```html
 <li class="navbar-btn">
@@ -180,7 +180,6 @@ Implement the action in the layout, so that the user can actually invoke the cus
     </form>
 </li>
 ```
-In the sample code, the snippet is added to line 13 of the `_LayoutPartial.cshtml` file in the `Views/Shared` folder. Note that the `asp-controller` property is set to `Home` to reference the Home Controller, and the `asp-action property` is set to `EditEmail` to reference the action created in the Home Controller.
 
 If you have an existing app that doesn’t use the partial layout and just want a quick link to test the custom policy, you can use the following tag to create a basic link. Be sure to replace the indicated values and reference the correct controller if you didn’t add your action to the Home Controller:
 
