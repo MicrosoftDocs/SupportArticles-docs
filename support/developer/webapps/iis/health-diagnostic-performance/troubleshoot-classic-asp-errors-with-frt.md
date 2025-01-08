@@ -4,7 +4,7 @@ description: Describes how to use Failed Request Tracing to troubleshoot Classic
 ms.date: 12/18/2024
 ms.author: haiyingyu
 author: HaiyingYu
-ms.reviewer: johnhart, robmcm, mszixie
+ms.reviewer: johnhart, robmcm, zixie
 
 ms.custom: sap:Health, Diagnostic, and Performance Features\Failed Request Tracing
 ---

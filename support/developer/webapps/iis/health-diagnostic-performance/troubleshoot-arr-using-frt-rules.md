@@ -4,7 +4,7 @@ description: Describes the steps to enable Failed Request Tracing rules to debug
 ms.date: 01/03/2025
 ms.author: haiyingyu
 author: HaiyingYu
-ms.reviewer: johnhart, riande
+ms.reviewer: johnhart, riande, paulboc
 ms.custom: sap:Health, Diagnostic, and Performance Features\Failed Request Tracing
 ---
 # Using Failed Request Tracing rules to troubleshoot Application Request Routing
