@@ -12664,6 +12664,10 @@
       "source_path": "support/dynamics-365/sales/errorinternalservertransienterror-error.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/an-error-occurred-while-synchronizing-item",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/1099s-arent-printing-vendor.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/email-exchange-synchronization/1099s-arent-printing"
     }
   ]
 }
