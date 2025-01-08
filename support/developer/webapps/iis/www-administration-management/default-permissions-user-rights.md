@@ -10,10 +10,10 @@ ms.topic: article
 
 This article describes the default permissions and user rights that are set on certain folders and files. These folders and files are installed with Microsoft Internet Information Services (IIS) on Windows Server 2016 or later operating system versions or their Windows client equivalents (Windows 10 or later versions).
 
-_Original product version:_ &nbsp; Internet Information Services 8.0  
+_Original product version:_ &nbsp; Internet Information Services  
 _Original KB number:_ &nbsp; 981949
 
-## Permission changes in IIS 6.0, IIS 7.0, and later versions
+## Permission changes in IIS on Windows Server 2016 or later versions
 
 In IIS on Windows Server 2016 and later versions, a built-in account named `IUSR` is used as the default identity that is used by the web server when Anonymous Authentication is enabled. This account replaces the `IUSR_MachineName` account from earlier versions of IIS that ship with Windows Server 2003. Additionally, a group that is named `IIS_IUSRS` is used as a container for all [application pool identities](/iis/manage/configuring-security/application-pool-identities). The `IIS_IUSRS` group replaces the `IIS_WPG` group from earlier versions of IIS. Because the IUSR account is a built-in account, the IUSR account no longer requires a password. The IUSR account resembles a network or local service account. 
 
