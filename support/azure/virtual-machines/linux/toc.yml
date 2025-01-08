@@ -286,6 +286,8 @@
       href: troubleshoot-pacemaker-services-suse.md
     - name: Troubleshoot SBD service failure in SUSE
       href: troubleshoot-sbd-issues-sles.md
+    - name: Troubleshoot Unexpected Node Reboots in SUSE Pacemaker Cluster
+      href: troubleshoot-unexpected-node-reboots-pacemaker-suse.md
       
       
 - name: Linux repositories
