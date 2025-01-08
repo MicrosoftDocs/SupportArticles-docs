@@ -4,6 +4,7 @@ description: This article describes how to use a Transact-SQL script and Windows
 ms.date: 01/07/2025
 ms.custom: sap:Database Backup and Restore
 ms.topic: how-to
+ms.reviewer: jopilov
 ---
 # Schedule and automate backups of SQL Server databases in SQL Server Express
 
@@ -14,7 +15,7 @@ _Original KB number:_ &nbsp; 2019698
 
 ## Summary
 
-SQL Server Express editions do not offer a way to schedule either jobs or maintenance plans because the SQL Server Agent component is not included in these [editions](/sql/sql-server/editions-and-components-of-sql-server-version-15). Therefore, you have to take a different approach to back up your databases when you use these editions.
+SQL Server Express editions don't offer a way to schedule either jobs or maintenance plans because the SQL Server Agent component isn't included in these [editions](/sql/sql-server/editions-and-components-of-sql-server-version-15). Therefore, you have to take a different approach to back up your databases when you use these editions.
 
 Currently SQL Server Express users can back up their databases by using one of the following methods:
 
@@ -35,7 +36,7 @@ This article describes how to use a Transact-SQL script together with Task Sched
 
 You have to follow these four steps to back up your SQL Server databases by using Windows Task Scheduler:
 
-### Step 1: Create stored procedure to Back up your databases
+### Step 1: Create stored procedure to back up your databases
 
 Connect to your SQL express instance and create sp_BackupDatabases stored procedure in your master database using the script at the following location:
 
@@ -43,7 +44,7 @@ Connect to your SQL express instance and create sp_BackupDatabases stored proced
 
 ### Step 2:  Download the SQLCMD client utility
 
-The `sqlcmd` utility lets you enter Transact-SQL statements, system procedures, and script files. In SQL Server 2014 and lower versions, the utility is shipped as part of the product. Starting with SQL Server 2016, `sqlcmd` utility is offered as a separate download. For more information, review [sqlcmd Utility](/sql/tools/sqlcmd-utility).
+The `sqlcmd` utility lets you enter Transact-SQL statements, system procedures, and script files. In SQL Server 2014 and lower versions, the utility is shipped as part of the product. Starting with SQL Server 2016, `sqlcmd` utility is offered as a separate download. For more information, review [sqlcmd Utility](/sql/tools/sqlcmd-utility).
 
 ### Step 3: Create a batch file using a text editor
 
@@ -54,20 +55,20 @@ In a text editor, create a batch file that is named *Sqlbackup.bat*, and then co
 - If you are using SQL authentication, ensure that access to the folder is restricted to authorized users as the passwords are stored in clear text.  
 
 > [!NOTE]
-> The folder for the `SQLCMD` executable is generally in the Path variables for the server after SQL Server is installed or after you install it as stand-alone tool. But if the Path variable does not list this folder, you can either add its location to the Path variable or specify the complete path to the utility.
+> The folder for the `SQLCMD` executable is generally in the Path variables for the server after SQL Server is installed or after you install it as stand-alone tool. But if the Path variable doesn't list this folder, you can either add its location to the Path variable or specify the complete path to the utility.
 
-#### Example 1: Full backups of all databases in the local named instance of SQLEXPRESS by using Windows Authentication.
+#### Example 1: Full backups of all databases in the local named instance of SQLEXPRESS by using Windows Authentication
 
-```console
+```cmd
  // Sqlbackup.bat
  sqlcmd -S .\SQLEXPRESS -E -Q "EXEC sp_BackupDatabases @backupLocation='D:\SQLBackups\', @backupType='F'"
 ```
 
-#### Example 2: Differential backups of all databases in the local named instance of SQLEXPRESS by using a SQLLogin and its password.
+#### Example 2: Differential backups of all databases in the local named instance of SQLEXPRESS by using a SQLLogin and its password
 
-```console
+```cmd
  // Sqlbackup.bat
-sqlcmd -U <YourSQLLogin> -P <StrongPassword> -S .\SQLEXPRESS -Q "EXEC sp_BackupDatabases  @backupLocation ='D:\SQLBackups', @BackupType='D'"
+sqlcmd -U <YourSQLLogin> -P <StrongPassword> -S .\SQLEXPRESS -Q "EXEC sp_BackupDatabases @backupLocation ='D:\SQLBackups', @BackupType='D'"
 ```
 
 > [!NOTE]
@@ -75,56 +76,58 @@ sqlcmd -U <YourSQLLogin> -P <StrongPassword> -S .\SQLEXPRESS -Q "EXEC sp_BackupD
 
 #### Example 3: Log backups of all databases in local named instance of SQLEXPRESS by using Windows Authentication
 
-```console
+```cmd
  // Sqlbackup.bat
  sqlcmd -S .\SQLEXPRESS -E -Q "EXEC sp_BackupDatabases @backupLocation='D:\SQLBackups\',@backupType='L'"
 ```
 
 #### Example 4: Full backups of the database USERDB in the local named instance of SQLEXPRESS by using Windows Authentication
 
-```console
+```cmd
  // Sqlbackup.bat
  sqlcmd -S .\SQLEXPRESS -E -Q "EXEC sp_BackupDatabases @backupLocation='D:\SQLBackups\', @databaseName='USERDB', @backupType='F'"
 ```
 
 Similarly, you can make a differential Backup of USERDB by pasting in 'D' for the **@backupType** parameter and a log Backup of USERDB by pasting in 'L' for the **@backupType** parameter.
 
-### Step 4:  Schedule a job by using Windows Task Scheduler to execute the batch file that you created in step 2
+### Step 4: Schedule a job by using Windows Task Scheduler to execute the batch file that you created in step 2
 
 Follow these steps:
 
-1. On the computer that is running SQL Server Express, click **Start**, then in the text box type *task Scheduler*.
+1. On the computer that is running SQL Server Express, select **Start** and type **Task Scheduler** in the text box.
 
-     :::image type="content" source="media/schedule-automate-backup-database/task-scheduler.png" alt-text="Screenshot of the Task Scheduler Desktop app option in the search bar of Start menu." border="false":::
-1. Under **Best match**, click **Task Scheduler** to launch it.
-1. In Task Scheduler, right-click on **Task Schedule Library** and click on **Create Basic task…**.
-1. Enter the name for the new task (for example: SQLBackup) and click **Next**. 
-1. Select **Daily** for the Task Trigger and click **Next**. 
-1. Set the recurrence to one day and click **Next**. 
-1. Select **Start a program** as the action and click **Next**. 
-1. Click **Browse**, click the batch file that you created in Step C, and then click **Open**.  
-1. Check the box Open the Properties dialog for this task when I click **Finish**. 
-1. In the General tab,
-   - Review the Security options and ensure the following for the user account running the task (listed under  When running the task, user the following user account:)
+   :::image type="content" source="media/schedule-automate-backup-database/task-scheduler.png" alt-text="Screenshot of the Task Scheduler Desktop app option in the search bar of Start menu." border="false":::
 
-        The account should have at least Read  and Execute permissions to launch sqlcmd utility. Additionally,
+1. Under **Best match**, select **Task Scheduler** to launch it.
+1. In **Task Scheduler**, right-click on **Task Scheduler (Local)** and select **Create Basic task…**.
+1. Enter the name for the new task (for example: **SQLBackup**) and select **Next**. 
+1. Select **Daily** for the Task Trigger and select **Next**. 
+1. Set the recurrence to one day and select **Next**. 
+1. Select **Start a program** as the action and select **Next**. 
+1. select **Browse**, select the batch file that you created in [Step 3](#step-3-create-a-batch-file-using-a-text-editor), and then select **Open**.  
+1. Check the box **Open the Properties dialog for this task when I click Finish**. 
+1. In the **General** tab,
 
-        - If using Windows authentication in the batch file, ensure the owner of the task permissions to do SQL Backups.
+   - Review the **Security options** and ensure the following for the user account running the task (listed under **When running the task, user the following user account:**)
 
-        - If using SQL authentication in the batch file, the SQL user should have the necessary permissions to do SQL Backups.
+     The account should have at least Read and Execute permissions to launch sqlcmd utility. Additionally,
 
-    - Adjust other settings according to your requirements.
+     - If using Windows authentication in the batch file, ensure the owner of the task permissions to do SQL Backups.
+
+     - If using SQL authentication in the batch file, the SQL user should have the necessary permissions to do SQL Backups.
+
+   - Adjust other settings according to your requirements.
 
 > [!TIP]
-> As a test, run the batch file from Step C from a command prompt that is started with the same user account that owns the task.
+> As a test, run the batch file from [Step 3](#step-3-create-a-batch-file-using-a-text-editor) from a command prompt that is started with the same user account that owns the task.
 
 ### Requirements
 
 Be aware of the following requirements when you use the procedure that is documented in this article:
 
-- The Task Scheduler service must be running at the time that the job is scheduled to run. We recommend that you set the startup type for this service as **Automatic**. This makes sure that the service will be running even on a restart.
+- The Task Scheduler service must be running at the time that the job is scheduled to run. We recommend that you set the startup type for this service as **Automatic**. This makes sure that the service will be running even on a restart.
 
-- You must create sufficient amount of space on the drive where the backups are written. We recommend that you clean old files in the Backup folder regularly to make sure that you do not run out of disk space. The script doesn't contain the logic to clean up old files.
+- You must create sufficient amount of space on the drive where the backups are written. We recommend that you clean old files in the Backup folder regularly to make sure that you don't run out of disk space. The script doesn't contain the logic to clean up old files.
 
 ## Additional references
 
