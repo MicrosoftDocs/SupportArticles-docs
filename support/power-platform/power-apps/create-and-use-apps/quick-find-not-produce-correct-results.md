@@ -4,8 +4,8 @@ description: Troubleshoots an issue where the Quick Find feature doesn't return 
 ms.reviewer: tapanm, moroch, dinusc
 ms.custom: sap:Using grids and lists in model-driven apps
 ms.date: 08/16/2024
-author: fikaradz
-ms.author: fikaradz
+author: shwetamurkute
+ms.author: smurkute
 ---
 # Quick Find doesn't return correct results in a model-driven app
 
