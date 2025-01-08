@@ -53,7 +53,8 @@ In the App Registration, you need to add another redirect URI for the custom pol
 2. In the **Manage** section, select **Authentication**.
 3. In the **Redirect URIs** section, select **Add URI**.
 4. Add a new redirect URI. In this article, the new redirect URI is `https://localhost:44321/signin-oidc-editemail`.
-    :::image type="content" source="media/troubleshoot-error-idx10501-aspnet-b2c/add-redirect-uri.png" alt-text="Screenshot of adding Redirect URIs." lightbox="media/troubleshoot-error-idx10501-aspnet-b2c/add-redirect-uri.png":::
+
+  :::image type="content" source="media/troubleshoot-error-idx10501-aspnet-b2c/add-redirect-uri.png" alt-text="Screenshot of adding Redirect URIs." lightbox="media/troubleshoot-error-idx10501-aspnet-b2c/add-redirect-uri.png":::
 
 > [!NOTE]
 > Each custom policy requires its own redirect URI. For example, if you're adding two custom policies, you will need to create two authentication scheme and two redirect URIs.
