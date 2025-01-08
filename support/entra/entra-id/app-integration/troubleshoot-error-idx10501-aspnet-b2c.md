@@ -18,9 +18,9 @@ When you [implement a custom policy](/azure/active-directory-b2c/enable-authenti
 
 ## Understanding the Error
 
-First, let’s understand why this error is being thrown when the custom policy redirects back to your app. In ASP.NET Core, whenever a user is authenticated and authorized, and there is a redirect back to the Web app that contains an ID Token.The ASP.NET Core middleware will try to validate this ID Token to make sure that the redirect is genuine. To validate the ID Token, the Middleware needs the public key of the signing certificate which was used to sign the ID Token. The Middleware gets this public key by querying Azure Active Directory B2C. Specifically, there is a "metadata" endpoint in Azure Active Directory B2C used by the Middleware which provides authentication information including any public keys for signing certificates.
+First, let’s understand why this error is being thrown when the custom policy redirects back to your app. In ASP.NET Core, whenever a user is authenticated and authorized, and there's a redirect back to the Web app that contains an ID Token. ASP.NET Core middleware will try to validate this ID Token to make sure that the redirect is genuine. To validate the ID Token, the Middleware needs the public key of the signing certificate which was used to sign the ID Token. The Middleware gets this public key by querying Azure Active Directory B2C. Specifically, there's a "metadata" endpoint in Azure Active Directory B2C used by the Middleware which provides authentication information including any public keys for signing certificates.
 
-When you created your custom policy, you were required to create or upload a signing certificate. This signing certificate is different from that used for built-in user flows in Azure Active Directory B2C. This means that the public keys accessible from the "metadata" endpoint for your Azure Active Directory B2C will not contain the public key for your custom policy. The custom policy actually has its own metadata endpoint.
+When you created your custom policy, you were required to create or upload a signing certificate. This signing certificate is different from that used for built-in user flows in Azure Active Directory B2C. This means that the public keys accessible from the "metadata" endpoint for your Azure Active Directory B2C won't contain the public key for your custom policy. The custom policy actually has its own metadata endpoint.
 
 The endpoint which the Middleware uses is configured by Microsoft.Identity.Web and set at app startup. Since the metadata URL is already set, invoking a custom policy during runtime will result in a scenario where the Middleware is looking at the wrong metadata URL while validating the returning token.
 
@@ -47,7 +47,7 @@ Before continuing, Ensure you have:
 
 ### Step 1: Add an Additional Redirect URI
 
-In the App Registration, you need to add another redirect URI for the custom policy. The reason you cannot use the existing redirect URI in this case is that it could cause confusion for the Web App. We will set up two different authentication schemes, but when the B2C policy redirects back to the Web App, the Middleware will not know which authentication scheme to use. Thus, we need a separate redirect URI to clearly distinguish redirects from the existing and new authentication schemes.
+In the App Registration, you need to add another redirect URI for the custom policy. The reason you can't use the existing redirect URI in this case is that it could cause confusion for the Web App. We'll set up two different authentication schemes, but when the B2C policy redirects back to the Web App, the Middleware won't know which authentication scheme to use. Thus, we need a separate redirect URI to clearly distinguish redirects from the existing and new authentication schemes.
 
 1. Navigate to your app registration in the [Azure Portal](https://portal.azure.com).
 2. In the **Manage** section, select **Authentication**.
@@ -138,15 +138,16 @@ services.Configure<OpenIdConnectOptions>("<Arbitrary-name-for-Auth-Scheme>", opt
 
 #### How to get the Metadata address for Custom Policy
 
-It is important to get the Metadata address. This will be used by the middleware to get the information necessary to validate ID Tokens returned by the Custom Policy. 
+It's important to get the Metadata address. This will be used by the middleware to get the information necessary to validate ID Tokens returned by the Custom Policy. 
 
 To find the metadata address, follow these steps:
 
 1. Log in to the Azure B2C portal. 
 2. In **Policies** section, select **Identity Experience Framework**.
-    :::image type="content" source="media/troubleshoot-error-idx10501-aspnet-b2c/find-identity-exp-fr.png" alt-text="Screenshot of adding Redirect URIs.":::
-3. Select Custom policies, and then select the custom policy that you are using. In this article, it is **B2C_1A_DEMO_CHANGESIGNINNAME**.
-4. The metadata address is the URL listed under **OpenId Connect Discovery Endpoint**. Copy this URL and paste it in for the value of the `options.MetadataAddress` variable.
+    :::image type="content" source="media/troubleshoot-error-idx10501-aspnet-b2c/find-identity-exp-fr.png" alt-text="Screenshot of the Identity Experience Framework button.":::
+3. Select Custom policies, and then select the custom policy that you are using. In this article, It's **B2C_1A_DEMO_CHANGESIGNINNAME**.
+    :::image type="content" source="media/troubleshoot-error-idx10501-aspnet-b2c/custom-policy.png" alt-text="Screenshot of checking custom-policy.":::
+1. The metadata address is the URL listed under **OpenId Connect Discovery Endpoint**. Copy this URL and paste it in for the value of the `options.MetadataAddress` variable.
 
 ### Step 3: Add Action to Controller
 
@@ -167,7 +168,7 @@ Ensure `<Your-Custom-Policy>` matches your specific policy name and `<CustomAuth
 
 ### Step 4: Implement Action in Layout
 
-Implement the action in the layout, so that the user can actually invoke the custom policy. In code sample, a button is added alongside existing B2C buttons based on the [tutorial](https://learn.microsoft.com/en-us/azure/active-directory-b2c/enable-authentication-web-application).  For more information, see [ Add the UI elements](/azure/active-directory-b2c/enable-authentication-web-application?tabs=visual-studio#step-4-add-the-ui-elements)
+Implement the action in the layout, so that the user can actually invoke the custom policy. In code sample, a button is added alongside existing B2C buttons based on the [tutorial](/azure/active-directory-b2c/enable-authentication-web-application).  For more information, see [ Add the UI elements](/azure/active-directory-b2c/enable-authentication-web-application?tabs=visual-studio#step-4-add-the-ui-elements)
 
 ```html
 <li class="navbar-btn">
