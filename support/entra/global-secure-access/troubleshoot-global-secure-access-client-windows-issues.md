@@ -35,7 +35,9 @@ If you experience a failure when you try to install the Global Secure Access cli
 
 If you experience issues when you try to upgrade a client, try to first uninstall the earlier client version, and then restart the device before you try again to install.
 
-## For troubleshooting issues in the Global Secure Access client after the installation is successful, you can use the following self-service diagnostic tools:
+## Self-Service diagnostic tools for post-installation issues
+
+Use the following self-service diagnostic tools to troubleshoot issues in the Global Secure Access client after successful installation:
 
 - [**Troubleshoot the Global Secure Access client: advanced diagnostics**](/entra/global-secure-access/troubleshoot-global-secure-access-client-advanced-diagnostics)
 - [**Troubleshoot the Global Secure Access client: Health check tab**](/entra/global-secure-access/troubleshoot-global-secure-access-client-diagnostics-health-check)
