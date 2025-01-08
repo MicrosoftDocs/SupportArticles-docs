@@ -1,8 +1,9 @@
 ---
 title: Troubleshoot blocking issues caused by compile locks
 description: This article describes how to troubleshoot and resolve blocking issues caused by compile locks.
-ms.date: 01/02/2025
+ms.date: 01/08/2025
 ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
+ms.reviewer: josephv
 ---
 # Troubleshoot blocking issues caused by compile locks
 
@@ -83,11 +84,11 @@ The solution is to drop and create the procedure by using the same letter case a
 
 ### Stored procedure is invoked as a Language event  
 
-If you try to execute a stored procedure as a Language Event instead of as an RPC, SQL Server must parse and compile the language event query, determine that the query is trying to execute the particular procedure, and then try to find a plan in cache for that procedure. To avoid this situation in which SQL Server must parse and compile the language event, make sure that the query is sent to SQL Server as an RPC. For example in .NET code, you would use SqlCommand.CommandType.StoredProcedure to  ensure an RPC event.
+If you try to execute a stored procedure as a Language Event instead of as an RPC, SQL Server must parse and compile the language event query, determine that the query is trying to execute the particular procedure, and then try to find a plan in cache for that procedure. To avoid this situation in which SQL Server must parse and compile the language event, make sure that the query is sent to SQL Server as an RPC. For example, in .NET code, you would use `SqlCommand.CommandType.StoredProcedure` to ensure an RPC event.
 
 ### Stored procedure or sp_executesql uses a string parameter greater than 8 KB
 
-If you call a stored procedure or sp_executesql and pass a string parameter with a size larger than 8 KB, then SQL Server uses a binary large objects (BLOB) data type to store the parameter. As a result the query plan for this execution isn't persisted in plan cache. Therefore each and every execution of the stored procedure or sp_executesql has to acquire a compile lock to compile a new plan. This plan is discarded the moment execution completes. For more information, see the note in [Execution plan caching and reuse](/sql/relational-databases/query-processing-architecture-guide) regarding string literals larger than 8 KB in size. To avoid the compile lock in this scenario, reduce the size of the parameter to less than 8 KB.
+If you call a stored procedure or [sp_executesql](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql) and pass a string parameter with a size larger than 8 KB, SQL Server uses a binary large objects (BLOB) data type to store the parameter. As a result, the query plan for this execution isn't persisted in plan cache. Therefore, each and every execution of the stored procedure or `sp_executesql` has to acquire a compile lock to compile a new plan. This plan is discarded when execution completes. For more information, see the note in [Execution plan caching and reuse](/sql/relational-databases/query-processing-architecture-guide) regarding string literals larger than 8 KB in size. To avoid the compile lock in this scenario, reduce the size of the parameter to less than 8 KB.
 
 ## References
 
