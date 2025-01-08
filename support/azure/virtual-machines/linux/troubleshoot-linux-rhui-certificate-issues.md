@@ -405,7 +405,7 @@ The images from the following offers that were created *after* December 2019 are
 
 The following steps apply if the OS version is *RHEL 7.9* and the VM was created by using the `RHEL-SAP-HA` offer image.
 
-1. Remove the releasever file if it exist.
+1. Remove the releasever file if it exists.
 
    ```bash
    sudo rm /etc/yum/vars/releasever
@@ -465,7 +465,7 @@ The following steps apply if the OS version is *earlier than the latest version 
 
 The following steps apply if the OS version is *RHEL 8.10* supported by SAP and the VM was created by using the `RHEL-SAP-APPS` offer image.
 
-1. Remove the releasever file if it exist.
+1. Remove the releasever file if it exists.
 
    ```bash
    sudo rm /etc/yum/vars/releasever
@@ -509,7 +509,7 @@ The following steps apply if the OS version is *earlier than the latest version 
 
 The following steps apply if the OS version is *RHEL 8.10* and the VM was created by using the `RHEL-SAP-HA` offer image.
 
-1. Remove the releasever file if it exist.
+1. Remove the releasever file if it exists.
 
    ```bash
    sudo rm /etc/yum/vars/releasever
@@ -557,7 +557,7 @@ The following steps apply if the OS version is *RHEL 8.10* and the VM was create
    sudo rm /etc/yum/vars/releasever
    ```
    
-2. Remove the client `rhui-azure-rhel8-ha` package by running the 'dnf remove' command:
+2. Remove the client `rhui-azure-rhel8-ha` package by running the `dnf remove` command:
 
    ```bash
    sudo dnf remove rhui-azure-rhel8-ha
