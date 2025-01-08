@@ -114,7 +114,7 @@ Another feature that's named "Collect a Memory dump" is useful in this scenario 
 
 #### Collect a memory dump feature
 
-To understand the configuration of the Collect a Memory dump feature, see [Collect memory dump app services](https://appserviceblog.com/collect-memory-dump-app-services/). This approach requires manual intervention. The following screenshot shows the **Collect a Memory dump** page.
+This approach requires manual intervention. The following screenshot shows the **Collect a Memory dump** page.
 
 :::image type="content" source="./media/capture-memory-dumps-app-service/collect-memory-dump.png" alt-text="Azure portal screenshot of the 'Collect a Memory dump' page in Diagnostic Tools." lightbox="./media/capture-memory-dumps-app-service/collect-memory-dump.png":::
 
