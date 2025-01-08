@@ -993,7 +993,7 @@
   - name: Payables Management
     items:
     - name: 1099s aren't printing for Vendor in Payables Managements
-      href: 1099s-arent-printing.md
+      href: 1099s-arent-printing-vendor.md
     - name: A batch is held in the Posting, Receiving status
       href: a-batch-is-held-in-the-several-statuses.md
     - name: A fully applied document is still in open status
