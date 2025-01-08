@@ -102,7 +102,7 @@ The [auto-heal](/azure/app-service/overview-diagnostics#auto-healing) (request d
 
 - [Announcing the New Auto Healing Experience in App Service Diagnostics](https://azure.github.io/AppService/2018/09/10/Announcing-the-New-Auto-Healing-Experience-in-App-Service-Diagnostics.html) 
 
-- [Announcing Auto Heal for Linux](https://azure.github.io/AppService/2021/04/21/Announcing-Autoheal-for-Azure-App-Service-Linux.html).
+- [Announcing Auto Heal for Linux](https://azure.github.io/AppService/2021/04/21/Announcing-Autoheal-for-Azure-App-Service-Linux.html)
 
 - [Collect and automate diagnostic actions with Azure App Services](https://devblogs.microsoft.com/premier-developer/collect-and-automate-diagnostic-actions-with-azure-app-services/)
 
