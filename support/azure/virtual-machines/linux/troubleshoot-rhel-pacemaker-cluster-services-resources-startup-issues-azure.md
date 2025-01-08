@@ -19,7 +19,7 @@ This article outlines the most common causes of RHEL pacemaker cluster resources
 
 ## Scenario 1: Unable to start cluster service due to quorum
 
-### Symptom 1
+### Symptom
 
 - Cluster node fails to join cluster after cluster restart.
 - Nodes are reported as `UNCLEAN (offline)`
@@ -59,7 +59,7 @@ Jun 16 11:17:53 node-0 pacemaker-controld[509433]: error: Corosync quorum is not
 
 The **votequorum** service is a component of the corosync project. To prevent split-brain scenarios, this service can be optionally loaded into a corosync cluster's nodes. Each system in the cluster is given a certain number of votes to achieve this quorum. Ensuring that cluster actions can only occur when the majority of votes are cast. Either every node must have the service loaded, or none at all. The outcomes are uncertain if it loaded into a subset of cluster nodes.
 
-The following corosync.conf extract will enables **votequorum** service within corosync:
+The following `corosync.conf` extract will enables **votequorum** service within corosync:
 
 ```output
        quorum {
@@ -71,7 +71,7 @@ The following corosync.conf extract will enables **votequorum** service within c
 
 ### Resolution
 
-1. As a precaution take a full backup or snapshot before making any changes. Refer this document to know more about Azure VM backup [An overview of Azure VM backup](https://learn.microsoft.com/en-us/azure/backup/backup-azure-vms-introduction).
+1. As a precaution take a full backup or snapshot before making any changes. Refer this document to know more about [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
 
 2. Check for missing quorum stanza in `/etc/corosync/corosync.conf`. Compare the existing `corosync.conf` with any of the available backup present under `/etc/corosync/`.
    
@@ -143,9 +143,9 @@ sudo pcs cluster sync
 sudo pcs cluster reload corosync
 ```
 
-## Scenario 2:  Issue with VIP resource
+## Scenario 2:  Issue with cluster VIP resource
 
-### Symptom 1
+### Symptom
 
 Virtual IP resource (`IPaddr2` resource) failed to start or stop in pacemaker.
 The messages can be identified under `/var/log/pacemaker.log` as shown:
@@ -161,7 +161,7 @@ The error can also be observed while running `sudo pcs status`:
 sudo pcs status
 ```
 ```output
-vip_HN1_03_start_0 on node-1.heartbeat.example.com 'unknown error' (1): call=20, status=complete, exit-reason='[findif] failed', last-rc-change='Mon Jan 11 13:24:32 2016', queued=0ms, exec=39ms
+vip_HN1_03_start_0 on node-1 'unknown error' (1): call=30, status=complete, exit-reason='[findif] failed', last-rc-change='Thu Jan 07 17:25:52 2025', queued=0ms, exec=57ms
 ```
 
 ### Cause
@@ -209,9 +209,9 @@ sudo ip -o -f inet route list match 172.17.10.10/24 scope link
 
 If route that matches the `VIP` isn't in the default routing table, then one can specify the `NIC` name in pacemaker resource, so that it can be configured bypassing the check:
 
-1. As a precaution take a full backup or snapshot before making any changes. Refer this document to know more about Azure VM backup [An overview of Azure VM backup](https://learn.microsoft.com/en-us/azure/backup/backup-azure-vms-introduction).
+1. As a precaution take a full backup or snapshot before making any changes. Refer this document to know more about [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
 
-2. Put the cluster under `maintenance-mode`.
+2. Put the cluster under maintenance-mode.
    
 ```bash
 sudo pcs property set maintenance-mode=true
@@ -335,7 +335,7 @@ SAP HANA resource can't be start by pacemaker when there are `SYN` failures betw
 > [!Important]
 > Steps 2,3 & 4 are to be performed using SAP administrator account as these steps involve using SAP System ID to stop, start and re-enable replication manually.
 
-1. As a precaution take a full backup or snapshot before making any changes. Refer this document to know more about Azure VM backup [An overview of Azure VM backup](https://learn.microsoft.com/en-us/azure/backup/backup-azure-vms-introduction).
+1. As a precaution take a full backup or snapshot before making any changes. Refer this document to know more about [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
 
 2. Put the cluster under maintenance-mode.
 
@@ -442,7 +442,7 @@ SAP HANA resource can't be start by pacemaker when there are `SYN` failures betw
  node-1   PROMOTED    1693237652  online     logreplay node-0 4:P:master1:master:worker:master 150   SITEA syncmem PRIM       2.00.046.00.1581325702 node-1
  ```
 
-7. Exit out of the SAP Admin account and remove the cluster out of `maintenance-mode`.
+7. Exit out of the SAP Admin account and remove the cluster out of maintenance-mode.
 
    ```bash
    sudo pcs property set maintenance-mode=false
@@ -514,7 +514,7 @@ Failed Resource Actions:
 > [!Note]
 > These steps ( 1 to 5 ) should be performed by SAP admin.
 
-1. As a precaution take a full backup or snapshot before making any changes. Refer this document to know more about Azure VM backup [An overview of Azure VM backup](https://learn.microsoft.com/en-us/azure/backup/backup-azure-vms-introduction).
+1. As a precaution take a full backup or snapshot before making any changes. Refer this document to know more about [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
   
 2. Put the cluster under maintenance-mode.
 
@@ -610,7 +610,8 @@ For more details refer this RedHat Article [SAPHana Resource Start Failure with 
 
 ## Scenario 4: Issue with ASCS and ERS resource.
 
-### Symptom 1
+### Symptom
+
 ASCS and ERS instances aren't able to start under cluster control. The following errors can be seen from `/var/log/messages`.
 
 ```output
@@ -627,7 +628,7 @@ Due to incorrect `InstanceName` and `START_PROFILE`, attributes SAP instance (AS
 > [!Note]
 > This resolution is applicable when your `InstanceName` and `START_PROFILE` are individual.
 
-1. As a precaution take a full backup or snapshot before making any changes. Refer this document to know more about Azure VM backup [An overview of Azure VM backup](https://learn.microsoft.com/en-us/azure/backup/backup-azure-vms-introduction).
+1. As a precaution take a full backup or snapshot before making any changes. Refer this document to know more about [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
   
 2. Put the cluster under maintenance-mode.
 
