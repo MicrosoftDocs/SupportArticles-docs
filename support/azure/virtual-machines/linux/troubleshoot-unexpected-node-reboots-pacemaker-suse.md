@@ -1,9 +1,9 @@
 ---
 title: Troubleshoot Unexpected Node Reboots in Azure SUSE Pacemaker Cluster
 description: This article provides troubleshooting steps for resolving unexpected node reboots in SUSE Linux Pacemaker Clusters
-author: lariasjaen
+author: rnirek
 ms.author: rnirek
-ms.reviewer: divargas, rnirek
+ms.reviewer: divargas, rnirek, lariasjaen
 ms.topic: troubleshooting
 ms.date: 1/8/2025
 ms.service: azure-virtual-machines
@@ -30,13 +30,17 @@ This article provides guidance on troubleshooting, analysis, and resolution of t
 * The cluster nodes are experiencing `corosync` communication errors, resulting in continuous retransmissions due to an inability to establish communication between nodes. This issue triggers application timeouts, ultimately leading to node fencing and subsequent reboots.
 * Additionally, services dependent on network connectivity, such as `waagent`, generate communication-related error messages in the logs, further indicating network-related disruptions.
 
-Following message can be observed in `/var/log/messages`:
+Following  messages can be observed in `/var/log/messages`:
 
 ```output
-2021-07-29 05:08:03  [node name] corosync: message repeated 156 times: [   [TOTEM ] Retransmit List: 1be7]
-2021-07-29 05:09:07  [node name] corosync: [TOTEM ] Retransmit List: 1bef
-2021-07-29 05:12:20  [node name] corosync: [TOTEM ] Retransmit List: 1c01
-2021-07-29 05:12:20  [node name] corosync: [TOTEM ] Retransmit List: 1c01
+Aug 21 01:48:00 node  01 corosync[19389]:  [TOTEM ] Token has not been received in 30000 ms
+Aug 21 01:48:00 node  01 corosync[19389]:  [TOTEM ] A processor failed, forming new configuration: token timed out (40000ms), waiting 48000ms for consensus. 
+```
+```output
+Aug 21 01:47:27 node  02 corosync[15241]:  [KNET  ] link: host: 2 link: 0 is down
+Aug 21 01:47:27 node  02 corosync[15241]:  [KNET  ] host: host: 2 (passive) best link: 0 (pri: 1)
+Aug 21 01:47:27 node  02 corosync[15241]:  [KNET  ] host: host: 2 has no active links
+Aug 21 01:47:31 node  02 corosync[15241]:  [TOTEM ] Token has not been received in 30000 ms
 ```
 
 #### Cause:
@@ -58,25 +62,25 @@ Unexpected reboots in an Azure SUSE Pacemaker cluster often occur due to misconf
 2. Missing/Incorrect Resource Constraints:
    Poorly set constraints can cause resources to be redistributed unnecessarily, leading to node overload and, reboots. Misaligned resource dependency configurations can cause nodes to go into a fail/reboot loop.
 
-3.  Cluster Threshold and Timeout Misconfigurations:
+3. Cluster Threshold and Timeout Misconfigurations:
     * `failure-timeout`, `migration-threshold`, or `monitor-timeout` values may result in nodes being prematurely rebooted.
     * Heartbeat Timeout Settings: Incorrect `corosync` timeout settings for heartbeat intervals can cause nodes to assume each other are offline, triggering unnecessary reboots.
 
-4. Lack of Proper Health Checks
+4. Lack of Proper Health Checks:
     Insufficient Monitoring of Critical Resources: Not setting proper health-check intervals for critical services like SAP HANA can cause resource or node failures.
 
-5. Resource Agent Misconfiguration
+5. Resource Agent Misconfiguration:
    * Custom Resource Agents Misaligned with Cluster: Resource agents that don't adhere to Pacemaker standards can create unpredictable behavior, including node reboots.
    * Wrong Resource Start/Stop Parameters: Improperly tuned start/stop parameters in cluster configuration may lead to nodes rebooting during resource recovery.
 
-6. Corosync Configuration Issues
+6. Corosync Configuration Issues:
    * Unoptimized Network Settings: Incorrect multicast/unicast configuration can lead to heartbeat communication failures. Mismatched `ring0` and `ring1` network configurations cause split-brain scenarios and node fencing.
    * Token Timeout Mismatches: Token timeout values not aligned with the environment’s latency can trigger node isolation and reboots.
 
 ### Resolution:
 It's necessary to follow the proper guidelines outlined for setting up a [SUSE Pacemaker Cluster](#prerequisites). Additionally, ensure that appropriate resources are allocated for applications such as SAP HANA or SAP NetWeaver, as specified in our Microsoft documentation.
 
-### Scenario 3: Migration from on-premises to Azure
+### Scenario 3: Migration from On-premises to Azure
 
 #### Cause
 
@@ -106,20 +110,13 @@ It's necessary to follow the proper guidelines outlined for setting up a [SUSE P
 
 ### Scenario 4: `HANA_CALL` timeout after 60 seconds
 
-The Azure SUSE Pacemaker Cluster is running SAP HANA(High-performance ANalytic Application) as application and experiences unexpected reboot on one of the nodes or both the nodes in the Pacemaker Cluster. Reviewing the  `/var/log/messages` or  `/var/log/pacemaker.log`,  the node reboot is due to `HANA_CALL` time out. 
-Example from `/var/log/messages`:
+The Azure SUSE Pacemaker Cluster is running SAP HANA(High-performance ANalytic Application) as application and experiences unexpected reboot on one of the nodes or both the nodes in the Pacemaker Cluster. Reviewing the  `/var/log/messages` or  `/var/log/pacemaker.log`,  the node reboot is due to `HANA_CALL` time out as shown:
 
 ```output
-2023-01-13T11:04:03.788922+09:00 hostname SAPHana(rsc_SAPHana_SID_HDB00)[44016]: WARNING: RA: HANA_CALL timed out after 10 seconds running command 'HDB version'
-2023-01-13T11:04:20.388990+09:00 hostname SAPHanaTopology(rsc_SAPHanaTopology_SID_HDB00)[43281]: WARNING: RA: HANA_CALL timed out after 60 seconds running command 'hdbnsutil -sr_stateConfiguration --sapcontrol=1'
-2023-01-13T11:05:14.715528+09:00 hostname SAPHana(rsc_SAPHana_SID_HDB00)[44016]: WARNING: RA: HANA_CALL timed out after 60 seconds running command 'hdbnsutil -sr_state'
-2023-01-13T11:05:24.440091+09:00 hostname SAPHanaTopology(rsc_SAPHanaTopology_A1P_HDB00)[43281]: WARNING: RA: HANA_CALL timed out after 60 seconds running command 'hdbnsutil -sr_stateConfiguration --sapcontrol=1'
-2023-01-13T11:06:26.132815+09:00 hostname SAPHana(rsc_SAPHana_SID_HDB00)[44016]: WARNING: RA: HANA_CALL timed out after 60 seconds running command 'hdbnsutil -sr_state'
-2023-01-13T11:06:28.500448+09:00 hostname SAPHanaTopology(rsc_SAPHanaTopology_SID_HDB00)[43281]: WARNING: RA: HANA_CALL timed out after 60 seconds running command 'hdbnsutil -sr_stateConfiguration --sapcontrol=1'
-2023-01-13T11:07:32.547155+09:00 hostname SAPHanaTopology(rsc_SAPHanaTopology_SID_HDB00)[43281]: WARNING: RA: HANA_CALL timed out after 60 seconds running command 'HDBSettings.sh getParameter.py --key=global.ini/system_replication/actual_mode --key=global.ini/system_replication/mode --key=global.ini/system_replication/site_name --key=global.ini/system_replication/site_id --sapcontrol=1'
-2023-01-13T11:07:39.636239+09:00 hostname SAPHana(rsc_SAPHana_SID_HDB00)[44016]: WARNING: RA: HANA_CALL timed out after 60 seconds running command 'hdbnsutil -sr_state'
-2023-01-13T11:08:36.814532+09:00 hostname SAPHanaTopology(rsc_SAPHanaTopology_SID_HDB00)[43281]: WARNING: RA: HANA_CALL timed out after 60 seconds running command 'hdbnsutil -sr_stateHostMapping --sapcontrol=1'
-2023-01-13T11:08:56.120394+09:00 hostname SAPHana(rsc_SAPHana_SID_HDB00)[44016]: WARNING: RA: HANA_CALL timed out after 60 seconds running command 'HDBSettings.sh getParameter.py --key=global.ini/system_replication/actual_mode --key=global.ini/system_replication/mode --sapcontrol=1'
+2024-06-04T09:25:37.772406+00:00 node01 SAPHanaTopology(rsc_SAPHanaTopology_H00_HDB02)[99440]: WARNING: RA: HANA_CALL timed out after 60 seconds running command 'hdbnsutil -sr_stateConfiguration --sapcontrol=1'
+2024-06-04T09:25:38.711650+00:00 node01 SAPHana(rsc_SAPHana_H00_HDB02)[99475]: WARNING: RA: HANA_CALL timed out after 60 seconds running command 'hdbnsutil -sr_stateConfiguration'
+2024-06-04T09:25:38.724146+00:00 node01 SAPHana(rsc_SAPHana_H00_HDB02)[99475]: ERROR: ACT: check_for_primary:  we didn't expect node_status to be: <>
+2024-06-04T09:25:38.736748+00:00 node01 SAPHana(rsc_SAPHana_H00_HDB02)[99475]: ERROR: ACT: check_for_primary:  we didn't expect node_status to be: DUMP <00000000  0a                                                |.|#01200000001>
 ```
 
 #### Cause:
@@ -130,15 +127,20 @@ To identify the root cause of the issue, it's essential to review the [OS perfor
 Particular attention should be given to memory pressure and storage devices, their configuration, especially if HANA is hosted on Network File System (NFS), Azure NetApp Files (ANF), or Azure Files. 
 Once external factors, such as platform or network outages, are ruled out, it's recommended to engage the application vendor for trace call analysis and log review.
 
-### Scenario 5:`sapstartsrv` isn't running for instance `XXXX-ASCS` or `XXXX-ERS`
+### Scenario 5: `ASCS/ERS` timeout in SAP Netweaver Clusters
 
-The Azure SUSE Pacemaker Cluster is running SAP Netweaver ASCS/ERS as application and experiences unexpected reboot on one of the nodes or both the nodes in the Pacemaker Cluster. Reviewing the  `/var/log/messages` or  `/var/log/pacemaker.log`,  the node reboot is due to ``SAPInstance`` time out. 
-Example from `/var/log/messages`:
+The Azure SUSE Pacemaker Cluster is running SAP Netweaver ASCS/ERS as application and experiences unexpected reboot on one of the nodes or both the nodes in the Pacemaker Cluster. Following messages can be observed  in `/var/log/messages` :
+
 ```output
-node01 pacemaker-execd[5807]:  warning: rsc_sapinst_HA1_SCS01_stop_0     process (PID 28237) timed out
-node01 pacemaker-execd[5807]:  warning: rsc_sapinst_HA1_SCS01_stop_0[29105] timed out after 600000ms
-node01 pacemaker-controld[5809]: notice: Requesting fencing (reboot) of node node01
-node01 pacemaker-fenced[5808]: notice: Requesting that node02 perform 'reboot' action targeting node01
+2024-11-09T07:36:42.037589-05:00 node  01 SAPInstance(RSC_SAP_ERS10)[8689]: ERROR: SAP instance service enrepserver is not running with status GRAY !
+2024-11-09T07:36:42.044583-05:00 node  01 pacemaker-controld[2596]: notice: Result of monitor operation for RSC_SAP_ERS10 on node01: not running 
+```
+
+```output
+2024-11-09T07:39:42.789404-05:00 node01 SAPInstance(RSC_SAP_ASCS00)[16393]: ERROR: SAP Instance CP2-ASCS00 start failed: #01109.11.2024 07:39:42#012WaitforStarted#012FAIL: process msg_server MessageServer not running
+2024-11-09T07:39:420.796280-05:00 node01 pacemaker-execd[2404]: notice: RSC_SAP_ASCS00 start (call 78, PID 16393) exited with status 7 (execution time 23.488s)
+2024-11-09T07:39:42.828845-05:00 node  01 pacemaker-schedulerd[2406]: warning: Unexpected result (not running) was recorded for start of RSC_SAP_ASCS00 on node01 at Nov  9 07:39:42 2024 
+2024-11-09T07:39:42.828955-05:00 node  01 pacemaker-schedulerd[2406]: warning: Unexpected result (not running) was recorded for start of RSC_SAP_ASCS00 on node01 at Nov  9 07:39:42 2024 
 ```
 
 #### Cause:
