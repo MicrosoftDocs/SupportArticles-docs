@@ -52,7 +52,7 @@ In the App Registration, you need to add another redirect URI for the custom pol
 1. Navigate to your app registration in the [Azure Portal](https://portal.azure.com).
 2. In the **Manage** section, select **Authentication**.
 3. In the **Redirect URIs** section, select **Add URI**.
-4. Add a new redirect URI. In this article, the new redirect URI is `https://localhost:44321/signin-oidc-editemail`.
+4. Add a new redirect URI. In this case, the new redirect URI is `https://localhost:44321/signin-oidc-editemail`.
 
   :::image type="content" source="media/troubleshoot-error-idx10501-aspnet-b2c/add-redirect-uri.png" alt-text="Screenshot of adding Redirect URIs." lightbox="media/troubleshoot-error-idx10501-aspnet-b2c/add-redirect-uri.png":::
 
@@ -147,7 +147,7 @@ To find the metadata address, follow these steps:
 2. In **Policies** section, select **Identity Experience Framework**.
 
     :::image type="content" source="media/troubleshoot-error-idx10501-aspnet-b2c/find-identity-exp-fr.png" alt-text="Screenshot of the Identity Experience Framework button.":::
-1. Select Custom policies, and then select the custom policy that you are using. In this article, It's **B2C_1A_DEMO_CHANGESIGNINNAME**.
+1. Select Custom policies, and then select the custom policy that you are using. In this case, It's **B2C_1A_DEMO_CHANGESIGNINNAME**.
 
     :::image type="content" source="media/troubleshoot-error-idx10501-aspnet-b2c/custom-policy.png" alt-text="Screenshot of checking custom-policy.":::
 1. The metadata address is the URL listed under **OpenId Connect Discovery Endpoint**. Copy this URL and paste it as the value for the `options.MetadataAddress` variable.
