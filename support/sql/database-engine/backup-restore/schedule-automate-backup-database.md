@@ -36,13 +36,13 @@ This article describes how to use a Transact-SQL script together with Task Sched
 
 You have to follow these four steps to back up your SQL Server databases by using Windows Task Scheduler:
 
-### Step 1: Create stored procedure to back up your databases
+### Step 1: Create a stored procedure to back up your databases
 
 Connect to your SQL express instance and create sp_BackupDatabases stored procedure in your master database using the script at the following location:
 
 [SQL_Express_Backups](https://raw.githubusercontent.com/microsoft/mssql-support/master/sample-scripts/backup_restore/SQL_Express_Backups.sql)
 
-### Step 2:  Download the SQLCMD client utility
+### Step 2: Download the SQLCMD client utility
 
 The `sqlcmd` utility lets you enter Transact-SQL statements, system procedures, and script files. In SQL Server 2014 and lower versions, the utility is shipped as part of the product. Starting with SQL Server 2016, `sqlcmd` utility is offered as a separate download. For more information, review [sqlcmd Utility](/sql/tools/sqlcmd-utility).
 
@@ -74,7 +74,7 @@ sqlcmd -U <YourSQLLogin> -P <StrongPassword> -S .\SQLEXPRESS -Q "EXEC sp_BackupD
 > [!NOTE]
 > The SQLLogin should have at least the Backup Operator role in SQL Server.
 
-#### Example 3: Log backups of all databases in local named instance of SQLEXPRESS by using Windows Authentication
+#### Example 3: Log backups of all databases in the local named instance of SQLEXPRESS by using Windows Authentication
 
 ```cmd
  // Sqlbackup.bat
@@ -96,25 +96,25 @@ Follow these steps:
 
 1. On the computer that is running SQL Server Express, select **Start** and type **Task Scheduler** in the text box.
 
-   :::image type="content" source="media/schedule-automate-backup-database/task-scheduler.png" alt-text="Screenshot of the Task Scheduler Desktop app option in the search bar of Start menu." border="false":::
+   :::image type="content" source="media/schedule-automate-backup-database/task-scheduler.png" alt-text="Screenshot of the Task Scheduler Desktop app option in the search bar of the Start menu." border="false":::
 
 1. Under **Best match**, select **Task Scheduler** to launch it.
-1. In **Task Scheduler**, right-click on **Task Scheduler (Local)** and select **Create Basic task…**.
-1. Enter the name for the new task (for example: **SQLBackup**) and select **Next**. 
+1. In **Task Scheduler**, right-click **Task Scheduler (Local)** and select **Create Basic task**.
+1. Enter the name for the new task (for example, **SQLBackup**) and select **Next**. 
 1. Select **Daily** for the Task Trigger and select **Next**. 
 1. Set the recurrence to one day and select **Next**. 
 1. Select **Start a program** as the action and select **Next**. 
-1. select **Browse**, select the batch file that you created in [Step 3](#step-3-create-a-batch-file-using-a-text-editor), and then select **Open**.  
-1. Check the box **Open the Properties dialog for this task when I click Finish**. 
-1. In the **General** tab,
+1. Select **Browse**, select the batch file that you created in [Step 3](#step-3-create-a-batch-file-using-a-text-editor), and then select **Open**.  
+1. Select the **Open the Properties dialog for this task when I click Finish** checkbox. 
+1. In the **General** tab:
 
    - Review the **Security options** and ensure the following for the user account running the task (listed under **When running the task, user the following user account:**)
 
-     The account should have at least Read and Execute permissions to launch sqlcmd utility. Additionally,
+     The account should have at least Read and Execute permissions to launch the `sqlcmd` utility. Additionally,
 
-     - If using Windows authentication in the batch file, ensure the owner of the task permissions to do SQL Backups.
+     - If using Windows Authentication in the batch file, ensure the task owner has permission to do SQL backups.
 
-     - If using SQL authentication in the batch file, the SQL user should have the necessary permissions to do SQL Backups.
+     - If using SQL Authentication in the batch file, the SQL user should have the necessary permissions to do SQL backups.
 
    - Adjust other settings according to your requirements.
 
@@ -127,7 +127,7 @@ Be aware of the following requirements when you use the procedure that is docume
 
 - The Task Scheduler service must be running at the time that the job is scheduled to run. We recommend that you set the startup type for this service as **Automatic**. This makes sure that the service will be running even on a restart.
 
-- You must create sufficient amount of space on the drive where the backups are written. We recommend that you clean old files in the Backup folder regularly to make sure that you don't run out of disk space. The script doesn't contain the logic to clean up old files.
+- You must create sufficient space on the drive where the backups are written. We recommend that you clean old files in the **Backup** folder regularly to make sure that you don't run out of disk space. The script doesn't contain the logic to clean up old files.
 
 ## Additional references
 
