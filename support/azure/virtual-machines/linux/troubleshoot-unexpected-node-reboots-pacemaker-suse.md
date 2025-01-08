@@ -22,7 +22,7 @@ This article provides guidance on troubleshooting, analysis, and resolution of t
 
 2. For a Microsoft Azure Pacemaker cluster that has Azure Fence Agent as STONITH device, make sure following documentation is followed [SUSE - Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-suse-pacemaker?tabs=msi#use-an-azure-fence-agent-1).
 
-3. For a Microsoft Azure Pacemaker cluster that has SBD storage protection as STONITH device, you can use either of the following options for the setup. For more information about these mechanisms, see:
+3. For a Microsoft Azure Pacemaker cluster that has SBD (STONITH Block Device) storage protection as STONITH device, you can use either of the following options for the setup. For more information about these mechanisms, see:
 
 - [SBD with an iscsi target server](/azure/sap/workloads/high-availability-guide-suse-pacemaker?tabs=msi#sbd-with-an-iscsi-target-server)
 - [SBD with an Azure shared disk](/azure/sap/workloads/high-availability-guide-suse-pacemaker?tabs=msi#sbd-with-an-azure-shared-disk)
@@ -96,16 +96,15 @@ When migrating a SUSE Pacemaker cluster from on-premises to Azure, unexpected re
    Azure's cloud metadata services must be correctly handled; otherwise, resource detection or startup processes can fail.
 
 4. Performance and Latency Mismatches:
-   * Inadequate VM Sizing: Migrated workloads may not align with the selected Azure VM size, causing resource overutilization and triggering reboots.
-   * Disk I/O Mismatches: On-prem workloads with high IOPS demands must be paired with the appropriate Azure disk or storage performance tier.
+   * Inadequate VM Sizing: Migrated workloads may not align with the selected Azure VM(Virtual Machine) size, causing resource overutilization and triggering reboots.
+   * Disk I/O Mismatches: On-prem workloads with high IOPS(Input/output operations per second) demands must be paired with the appropriate Azure disk or storage performance tier.
 
 5. Security and Firewall Rules:
    * Port Blockages: On-prem clusters often have open, internal communication, while Azure NSGs (Network Security Groups) or firewalls may block ports required for Pacemaker/Corosync communication.
 
 
 ### Resolution:
-It is necessary that proper guidelines are followed as mentioned for setting [SUSE Pacemaker Cluster](#prerequisites) and proper resources are are applied for application such as SAP HANA or SAP Netweaver as mentioned in our MS documentation. By addressing these common misconfigurations and thoroughly testing the setup in Azure before going live, you can minimize the risk of unexpected reboots and ensure a smooth migration of your SUSE Pacemaker cluster.
-
+It is necessary to follow the proper guidelines outlined for setting up a [SUSE Pacemaker Cluster](#prerequisites).Additionally, ensure that appropriate resources are allocated for applications such as SAP HANA or SAP NetWeaver, as specified in our Microsoft documentation.
 
 ### Scenario 4: `HANA_CALL` timed out after 60 seconds
 
@@ -131,7 +130,7 @@ The SAP HANA time-out messages are commonly considered internal application time
 #### Resolution:
 To identify the root cause of the issue, it is essential to review the [OS performance](collect-performance-metrics-from-a-linux-system.md). 
 Particular attention should be given to memory pressure and storage devices, their configuration, especially if HANA is hosted on Network File System (NFS), Azure NetApp Files (ANF), or Azure Files. 
-Once external factors, such as platform or network outages, have been ruled out, it is recommended to engage the application vendor and/or owners for trace call analysis and log review.
+Once external factors, such as platform or network outages, are ruled out, it is recommended to engage the application vendor for trace call analysis and log review.
 
 ### Scenario 5:`sapstartsrv` isn't running for instance `XXXX-ASCS` or `XXXX-ERS`
 
@@ -150,7 +149,7 @@ The `ASCS/ERS` resource is considered the application for SAP Netweaver clusters
 #### Resolution:
 To identify the root cause of the issue, it is essential to review the [OS performance](collect-performance-metrics-from-a-linux-system.md). 
 Particular attention should be given to memory pressure and storage devices, their configuration especially if SAP Netweaver is hosted on Network File System (NFS), Azure NetApp Files (ANF), or Azure Files. 
-Once external factors, such as platform or network outages, have been ruled out, it is recommended to engage the application vendor and/or owners for trace call analysis and log review.
+Once external factors, such as platform or network outages, are ruled out, it is recommended to engage the application vendor  for trace call analysis and log review.
 
 ## Next steps
 For additional help, open a support request by using the following instructions. When you submit your request, attach [supportconfig](https://documentation.suse.com/smart/systems-management/html/supportconfig/index.html) and [hb_report](https://www.suse.com/support/kb/doc/?id=000019142) logs for troubleshooting.
