@@ -42,7 +42,7 @@ Following message can be observed in `/var/log/messages`:
 ```
 
 #### Cause:
-It's observed that the unexpected node reboot is observed due to Network Maintenance activity or an outage. For confirmation, the timestamp can be matched by reviewing the [Azure Maintenance Notification](azure/virtual-machines/maintenance-notifications) in Azure Portal. For more information about Azure Scheduled Events, see [Azure Metadata Service: Scheduled Events for Linux VMs](/azure/virtual-machines/linux/scheduled-events).
+It's observed that the unexpected node reboot is observed due to Network Maintenance activity or an outage. For confirmation, the timestamp can be matched by reviewing the [Azure Maintenance Notification](azure/virtual-machines/linux/maintenance-notifications) in Azure Portal. For more information about Azure Scheduled Events, see [Azure Metadata Service: Scheduled Events for Linux VMs](/azure/virtual-machines/linux/scheduled-events).
 
 #### Resolution:
 If the unexpected reboot timestamp aligns with a maintenance activity, the analysis confirms that the cluster was impacted by either platform or network maintenance. For further assistance or additional queries, you can open a support request by following these [instructions](#next-steps).
