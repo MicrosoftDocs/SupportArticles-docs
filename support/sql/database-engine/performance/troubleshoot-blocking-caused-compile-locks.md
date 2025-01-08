@@ -3,7 +3,7 @@ title: Troubleshoot blocking issues caused by compile locks
 description: This article describes how to troubleshoot and resolve blocking issues caused by compile locks.
 ms.date: 01/08/2025
 ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
-ms.reviewer: josephv
+ms.reviewer: jopilov
 ---
 # Troubleshoot blocking issues caused by compile locks
 
