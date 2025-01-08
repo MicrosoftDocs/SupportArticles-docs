@@ -50,7 +50,7 @@
   - name: Developing or Registering apps
     items:
       - name: IDX10501 Error in ASP.NET Core with Azure B2C Custom Policy
-        href: app-integration/troubleshoot-error-idx10501-aspnet-b2c
+        href: app-integration/troubleshoot-error-idx10501-aspnet-b2c.md
 
   - name: Troubleshoot adding apps
     href: app-integration/troubleshoot-adding-apps.md
