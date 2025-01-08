@@ -5832,12 +5832,12 @@
     },
     {
       "source_path": "support/developer/webapps/iis/www-administration-management/http-status-code.md",
-      "redirect_url": "/troubleshoot/developer/webapps/iis/health-diagnostic-performance/information-associated-iis-site-is-not-deleted",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/health-diagnostic-performance/http-status-code",
       "redirect_document_id": true
     },
     {
       "source_path": "support/developer/webapps/iis/health-diagnostic-performance/http-403-14-forbidden-webpage.md",
-      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/information-associated-iis-site-is-not-deleted",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/http-403-14-forbidden-webpage",
       "redirect_document_id": true
     }
   ]
