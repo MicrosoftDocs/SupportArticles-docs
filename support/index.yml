@@ -46,7 +46,7 @@ productDirectory:
   - title: Host Integration Server
     imageSrc: "media/hub-landing/his.jpeg"
     summary: Troubleshooting articles for Host Integration Server
-    url: developer/host-integration-server/welcome-host-integration-server.yml
+    url: developer/host-integration-server/data-integration/configure-data-sources.md
 
   - title: Internet Information Services
     imageSrc: "media/hub-landing/iis.jpg"

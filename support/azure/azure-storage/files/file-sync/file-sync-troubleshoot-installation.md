@@ -4,7 +4,7 @@ description: Troubleshoot common issues with installing the Azure File Sync agen
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 09/06/2024
+ms.date: 01/03/2025
 ms.author: kendownie
 ms.custom: sap:File Sync
 ---
@@ -164,6 +164,12 @@ You can also work around this issue by using the following PowerShell commands t
 Connect-AzAccount -Subscription "<guid>" -Tenant "<guid>"
 Register-AzStorageSyncServer -ResourceGroupName "<your-resource-group-name>" -StorageSyncServiceName "<your-storage-sync-service-name>"
 ```
+<a id="server-registration-missing-resource-groups"></a>**Server registration doesn't list all resource groups**
+
+When registering a server using *ServerRegistration.exe*, some resource groups are missing when you select the **Resource Group** drop-down.
+
+This issue occurs due to a known issue that has been fixed in File Sync Agent v19.1. To resolve this issue, install the latest version of the agent.
+
 <a id="server-already-registered"></a>**Server Registration displays the following message: "This server is already registered"**
 
 :::image type="content" source="media/file-sync-troubleshoot-installation/server-already-registered-error.png" alt-text="Screenshot that shows the Server Registration dialog box with the 'server is already registered' error message.":::

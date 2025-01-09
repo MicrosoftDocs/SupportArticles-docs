@@ -4,8 +4,8 @@ description: Provides troubleshooting steps for an issue where some columns don'
 ms.reviewer: tapanm, moroch, dinusc
 ms.custom: sap:Using grids and lists in model-driven apps
 ms.date: 08/16/2024
-author: fikaradz
-ms.author: fikaradz
+author: shwetamurkute
+ms.author: smurkute
 ---
 # Some columns don't contain data in a model-driven app
 
