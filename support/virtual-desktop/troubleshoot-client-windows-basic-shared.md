@@ -72,7 +72,7 @@ There are a few basic troubleshooting steps you can try if you're having issues 
 
 1. Try to connect to your dev box from the Dev Box developer portal. For more information, see [Connect to a dev box](/azure/dev-box/quickstart-create-dev-box#connect-to-a-dev-box).
 
-1. Make sure you're using the latest version of the Remote Desktop client. By default, the client automatically updates when a new version is available. To check for updates manually, see [Update the client](/azure/virtual-desktop/client-features-windows?toc=%2Fazure%2Fdev-box%2Ftoc.json#update-the-client).
+1. Make sure you're using the latest version of the Remote Desktop client. By default, the client automatically updates when a new version is available. To check for updates manually, see [Update the client](/azure/virtual-desktop/client-features-windows#update-the-client).
 
 1. If the connection fails frequently or you notice performance issues, check the status of the connection. You can find connection information in the connection bar, by selecting the signal icon:
 
