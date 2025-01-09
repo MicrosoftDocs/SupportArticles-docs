@@ -5,7 +5,7 @@ author: mohak006
 ms.author: mohak
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Windows (Guest OS)
-ms.reviewer: scotro, kageorge, jarrettr, v-leedennis
+ms.reviewer: scotro, kageorge, jarrettr, yutorigo, v-leedennis
 editor: v-jsitser
 ms.topic: upgrade-and-migration-article
 ms.date: 03/25/2024
