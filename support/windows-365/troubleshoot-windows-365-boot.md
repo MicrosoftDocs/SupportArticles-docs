@@ -45,7 +45,7 @@ If the user can't access the Cloud PC from the Windows 365 Boot physical device,
    - In the card for the Cloud PC you want to set as default, select the ellipses (...) > Settings.
    - In the **Integrated experiences** tab, under **Boot to this Cloud PC**, select **Connect while signed into device**.
    - Select **Save**.
-3. If you can sign into the Cloud PC from the app or web, and a default Cloud PC has been set, then there's an issue with the Windows 365 Boot physical device. In this case, confirm that the physical device is correctly configured and has the requisite software versions. For more information, see [Windows 365 Boot physical device requirements](windows-365-boot-physical-device-requirements.md).
+3. If you can sign into the Cloud PC from the app or web, and a default Cloud PC has been set, then there's an issue with the Windows 365 Boot physical device. In this case, confirm that the physical device is correctly configured and has the requisite software versions. For more information, see [Windows 365 Boot physical device requirements](/windows-365/enterprise/windows-365-boot-physical-device-requirements).
 4. Admins can try to manually click on **Device sync** to get the policies delivered faster on the device. Users can try to restart the device.
 
 
@@ -132,4 +132,4 @@ You can find the Correlation ID in the interstitial screen displayed during a fi
 <!-- ########################## -->
 ## Next steps
 
-[Learn about Windows 365 Boot](windows-365-boot-overview.md).
+[Learn about Windows 365 Boot](/windows-365/enterprise/windows-365-boot-overview).

@@ -91,10 +91,10 @@ Or you can ask your email service provider for help with configuring their email
 
 ## Virtual Private Network support<!--38270291-->
 
-Because of the many Virtual Private Network (VPN) solutions available, Microsoft can't confirm which services work with Windows 365 Business. If you need more information, consult with your VPN provider. For organizations that have advanced networking needs, Windows 365 Enterprise is recommended. For more information, see [Network requirements](../enterprise/requirements-network.md).
+Because of the many Virtual Private Network (VPN) solutions available, Microsoft can't confirm which services work with Windows 365 Business. If you need more information, consult with your VPN provider. For organizations that have advanced networking needs, Windows 365 Enterprise is recommended. For more information, see [Network requirements](/windows-365/business/../enterprise/requirements-network).
 
-[!INCLUDE [Missing start menu and taskbar when using iPad and the Remote Desktop app to access a Cloud PC](../includes/known-issues.md)]
+[!INCLUDE [Missing start menu and taskbar when using iPad and the Remote Desktop app to access a Cloud PC](/windows-365/business/../includes/known-issues)]
 
 ## Next steps
 
-[Troubleshoot Windows 365 Business Cloud PC setup issues](troubleshoot-windows-365-business.md)
+[Troubleshoot Windows 365 Business Cloud PC setup issues](/windows-365/business/troubleshoot-windows-365-business)

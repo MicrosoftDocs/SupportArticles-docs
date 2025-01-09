@@ -31,7 +31,7 @@ ms.collection:
 
 # Windows 365 Boot known issues
 
-This page lists recent known issues with [Windows 365 Boot](windows-365-boot-overview.md).
+This page lists recent known issues with [Windows 365 Boot](/windows-365/enterprise/windows-365-boot-overview).
 
 ## Wi-fi connectivity
 
@@ -60,7 +60,7 @@ Windows 365 Boot isn't currently supported in Kiosk mode on Windows.
 
 ## Restricted access to physical device
 
-Windows 365 Boot doesn't completely restrict the user from accessing the physical device. For more information, see [Restrict user access to Windows 365 Boot physical device](windows-365-boot-restrict-user-access-physical-device.md).
+Windows 365 Boot doesn't completely restrict the user from accessing the physical device. For more information, see [Restrict user access to Windows 365 Boot physical device](/windows-365/enterprise/windows-365-boot-restrict-user-access-physical-device).
 
 ## Other sign-in options besides username/password are displayed on the sign-in screen
 
@@ -84,7 +84,7 @@ If it's set, exclude your Windows 365 Boot devices from the policy.
 
 Windows 365 Boot uses “clean” Windows 11 devices that don't have preconfigured applications or policies assigned to the device.  
 
-**Troubleshooting steps**: Reset the device to a clean state. For more information, see [Windows 365 Boot physical device requirements](windows-365-boot-physical-device-requirements.md).
+**Troubleshooting steps**: Reset the device to a clean state. For more information, see [Windows 365 Boot physical device requirements](/windows-365/enterprise/windows-365-boot-physical-device-requirements).
 
 ## Single sign-on users see a dialog to allow remote desktop connection during the connection attempt
 
@@ -106,7 +106,7 @@ This known issue is under investigation.
 
 ## Microsoft Teams calls have poor performance
 
-**Troubleshooting steps**: Make sure Teams optimizations are used as explained in [Microsoft Teams on Cloud PC](teams-on-cloud-pc.md).
+**Troubleshooting steps**: Make sure Teams optimizations are used as explained in [Microsoft Teams on Cloud PC](/windows-365/enterprise/teams-on-cloud-pc).
 
 ## Camera access is denied in Cloud PC
 
@@ -123,7 +123,7 @@ Camera permissions must be granted to the Azure Virtual Desktop (HostApp) applic
 
 Users are currently blocked from accessing most features on their Windows 365 Boot physical devices. However, to assist with troubleshooting, some features aren't blocked.
 
-**Troubleshooting steps**: To learn how to restrict user access to the physical device, see [Restrict user access to Windows 365 Boot physical device](windows-365-boot-restrict-user-access-physical-device.md).
+**Troubleshooting steps**: To learn how to restrict user access to the physical device, see [Restrict user access to Windows 365 Boot physical device](/windows-365/enterprise/windows-365-boot-restrict-user-access-physical-device).
 
 ## Users are disconnected from Cloud PC after being idle for too long
 
@@ -150,7 +150,7 @@ If you see this dialog, select **Yes** to connect.
 
 Windows 365 Boot is configured by using the [CloudDesktop CSP](/windows/client-management/mdm/policy-csp-clouddesktop#boottocloudmode).
 
-**Troubleshooting steps**: If you configured your device for Windows 365 Boot using the [Windows 365 Boot Guided Scenario](windows-365-boot-guide.md):
+**Troubleshooting steps**: If you configured your device for Windows 365 Boot using the [Windows 365 Boot Guided Scenario](/windows-365/enterprise/windows-365-boot-guide):
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Configuration profiles**.
 2. Search for the Device configuration profile that contains “Windows 365 Boot Device Configuration Policy” in its name.
@@ -158,13 +158,13 @@ Windows 365 Boot is configured by using the [CloudDesktop CSP](/windows/client-m
 4. Select **Device assignment status** and make sure that the configuration policy was successfully applied to it.
 5. If the check-in status isn't successful, see [Troubleshooting policies and profiles in Microsoft Intune](/troubleshoot/mem/intune/device-configuration/troubleshoot-policies-in-microsoft-intune).
 
-If the problem persists, reinstall the physical device's operating system as explained in [Windows 365 Boot physical device requirements](windows-365-boot-physical-device-requirements.md).
+If the problem persists, reinstall the physical device's operating system as explained in [Windows 365 Boot physical device requirements](/windows-365/enterprise/windows-365-boot-physical-device-requirements).
 
 ## User sees local PC desktop when responding to authentication dialogs
 
 Windows 365 Boot is configured through the [Windowslogon CSP](/windows/client-management/mdm/policy-csp-windowslogon#overrideshellprogram).
 
-**Troubleshooting steps**: If you configured your device for Windows 365 Boot using the [Windows 365 Boot Guided Scenario](windows-365-boot-guide.md):
+**Troubleshooting steps**: If you configured your device for Windows 365 Boot using the [Windows 365 Boot Guided Scenario](/windows-365/enterprise/windows-365-boot-guide):
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Configuration profiles**.
 2. Search for the Device configuration profile that contains “Windows 365 Boot Device Configuration Policy” in its name.
@@ -172,7 +172,7 @@ Windows 365 Boot is configured through the [Windowslogon CSP](/windows/client-ma
 4. Select **Device assignment status** and make sure that the configuration policy was successfully applied to it.
 5. If the check-in status isn't successful, see [Troubleshooting policies and profiles in Microsoft Intune](/troubleshoot/mem/intune/device-configuration/troubleshoot-policies-in-microsoft-intune).
 
-If the problem persists, reinstall the physical device's operating system as explained in [Windows 365 Boot physical device requirements](windows-365-boot-physical-device-requirements.md).
+If the problem persists, reinstall the physical device's operating system as explained in [Windows 365 Boot physical device requirements](/windows-365/enterprise/windows-365-boot-physical-device-requirements).
 
 ## Error message: Windows 365 can't connect to the resources it uses to run properly
 
@@ -182,7 +182,7 @@ For more information, see [Troubleshoot Cloud PC connection errors](/windows-365
 
 ## Error message: Something is preventing you from using the Windows 365 app” error message
 
-**Troubleshooting steps**: See [Troubleshoot Windows 365 Boot](troubleshoot-windows-365-boot.md).
+**Troubleshooting steps**: See [Troubleshoot Windows 365 Boot](/windows-365/enterprise/troubleshoot-windows-365-boot).
 
 ## User can't connect to their Cloud PC and continues to wait at the transition screen
 
@@ -258,4 +258,4 @@ If the user has a local setting screen (like Local Bluetooth settings) open on t
 <!-- ########################## -->
 ## Next steps
 
-[Troubleshoot Windows 365 Boot](troubleshoot-windows-365-boot.md).
+[Troubleshoot Windows 365 Boot](/windows-365/enterprise/troubleshoot-windows-365-boot).

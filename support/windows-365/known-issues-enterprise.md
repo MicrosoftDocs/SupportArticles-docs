@@ -46,7 +46,7 @@ Watermarking support is configured on session hosts and enforced by the Remote D
 
 For more information, see [Administrative template for Azure Virtual Desktop](/azure/virtual-desktop/administrative-template?tabs=intune#configure-the-administrative-template).
 
-[!INCLUDE [Missing start menu and taskbar when using iPad and the Remote Desktop app to access a Cloud PC](../includes/known-issues.md)]
+[!INCLUDE [Missing start menu and taskbar when using iPad and the Remote Desktop app to access a Cloud PC](/windows-365/enterprise/../includes/known-issues)]
 
 ## In-place Windows upgrade may change computer name
 
@@ -82,7 +82,7 @@ The following device compliance settings may report as **Not Compliant** when be
 
 **Troubleshooting steps to enable secure boot on the Cloud PC**:
 
-1. [Reprovision](reprovision-cloud-pc.md) the specific Cloud PC.
+1. [Reprovision](/windows-365/enterprise/reprovision-cloud-pc) the specific Cloud PC.
 
 **Troubleshooting steps to remove not compliant settings**:
 
@@ -279,4 +279,4 @@ When a user is connected to a Frontline Cloud PC, the connect button in Windows 
 
 ## Next steps
 
-[Troubleshoot Windows 365 Enterprise Cloud PC](troubleshooting.md)
+[Troubleshoot Windows 365 Enterprise Cloud PC](/windows-365/enterprise/troubleshooting)

@@ -89,7 +89,7 @@ Also, visit the Azure portal and view Policies. Make sure that there are no poli
 
 ## Azure virtual network readiness
 
-When creating an ANC, we block the use of any vNet located in an unsupported region. For a list of supported regions, see [Requirements](requirements.md).  
+When creating an ANC, we block the use of any vNet located in an unsupported region. For a list of supported regions, see [Requirements](/windows-365/enterprise/requirements).  
 
 If this check fails, make sure that the vNet provided is in a region in the supported region list.
 
@@ -146,4 +146,4 @@ Also, make sure that the permissions aren't granted as [classic subscription adm
 <!-- ########################## -->
 ## Next steps
 
-[Learn about the ANC health checks](health-checks.md).
+[Learn about the ANC health checks](/windows-365/enterprise/health-checks).

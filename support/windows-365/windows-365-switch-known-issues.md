@@ -31,7 +31,7 @@ ms.collection:
 
 # Windows 365 Switch known issues
 
-This page lists recent known issues with [Windows 365 Switch](windows-365-switch-overview.md).
+This page lists recent known issues with [Windows 365 Switch](/windows-365/enterprise/windows-365-switch-overview).
 
 ## Support for only one Cloud PC
 
@@ -89,4 +89,4 @@ Uninstall and reinstall the Azure Virtual Desktop (HostApp) app from the [Micros
 <!-- ########################## -->
 ## Next steps
 
-[Troubleshooting](troubleshooting.md)
+[Troubleshooting](/windows-365/enterprise/troubleshooting)

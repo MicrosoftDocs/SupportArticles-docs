@@ -58,7 +58,7 @@ If you only manage the user's physical device through Group Policy or you don't 
 
 **Potential cause #2**: [Per-user multi-factor authentication](/azure/active-directory/authentication/howto-mfa-userstates) is turned on for the user account. Because it blocks sign-in, per-user multi-factor authentication isn't supported for users connecting to Microsoft Entra joined Cloud PCs.
 
-**Possible solution**: [Remove per-user multi-factor authentication](/azure/active-directory/devices/howto-vm-sign-in-azure-ad-windows#mfa-sign-in-method-required) for all users connecting to Cloud PCs. Then, [set a Microsoft Entra Conditional Access policy](set-conditional-access-policies.md) and assign it to the appropriate users.
+**Possible solution**: [Remove per-user multi-factor authentication](/azure/active-directory/devices/howto-vm-sign-in-azure-ad-windows#mfa-sign-in-method-required) for all users connecting to Cloud PCs. Then, [set a Microsoft Entra Conditional Access policy](/windows-365/enterprise/set-conditional-access-policies) and assign it to the appropriate users.
 
 ## Specific connection errors
 
@@ -151,4 +151,4 @@ If users encounter intermittent connection issues, consider the following:
 
 ## Next steps
 
-[Review other troubleshooting steps](troubleshooting.md)
+[Review other troubleshooting steps](/windows-365/enterprise/troubleshooting)

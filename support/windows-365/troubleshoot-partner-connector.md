@@ -62,7 +62,7 @@ While troubleshooting errors, make sure that the following steps were successful
 
 After you find the root cause, remove the assigned license from the partner console and then add the license back in. This removal should trigger a reinstallation of the partner agent.
 
-If no other solution works, you can [reprovision](reprovision-cloud-pc.md) the Cloud PC to reattempt the enablement. Reprovisioning deletes the Cloud PC and create a brand new one. All data on the original Cloud PC will be lost. Therefore, reprovisioning should be the last resort to resolve the issue.
+If no other solution works, you can [reprovision](/windows-365/enterprise/reprovision-cloud-pc) the Cloud PC to reattempt the enablement. Reprovisioning deletes the Cloud PC and create a brand new one. All data on the original Cloud PC will be lost. Therefore, reprovisioning should be the last resort to resolve the issue.
 
 ## Troubleshoot connection issues
 
@@ -74,7 +74,7 @@ When the partner protocol is turned on, the Windows 365 remoting protocol remain
 
 You can turn on the RDP protocol so users can sign in with RDP to test the Cloud PC connectivity. You can do either of the following to turn on the RDP protocol:
 
-- [Make a user a local admin](assign-users-as-local-admin.md) on the Cloud PC.
+- [Make a user a local admin](/windows-365/enterprise/assign-users-as-local-admin) on the Cloud PC.
 - [Add the user to the Direct Access Users group on the Cloud PC](/windows/client-management/mdm/policy-csp-localusersandgroups?WT.mc_id=Portal-fx).
 
 After taking either of these steps,  you might have to reboot the Cloud PC for the group membership updates to take effect. Afterwards, the user can connect by using either RDP or the partner protocol.
@@ -84,6 +84,6 @@ You can now test the connectivity by using RDP, and raise a support case with th
 <!-- ########################## -->
 ## Next steps
 
-[Learn about Citrix HDX Plus for Windows 365](set-up-citrix.md).
-[Learn about HP Anyware for Windows 365](hp-anyware-set-up.md).
-[Learn about Omnissa Horizon for Windows 365](set-up-omnissa-horizon.md).
+[Learn about Citrix HDX Plus for Windows 365](/windows-365/enterprise/set-up-citrix).
+[Learn about HP Anyware for Windows 365](/windows-365/enterprise/hp-anyware-set-up).
+[Learn about Omnissa Horizon for Windows 365](/windows-365/enterprise/set-up-omnissa-horizon).
