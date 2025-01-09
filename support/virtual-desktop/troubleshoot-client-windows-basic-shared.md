@@ -23,7 +23,7 @@ This article provides some simple troubleshooting steps to try first for issues 
 ::: zone-end
 
 ::: zone pivot="dev-box"
-This article provides some simple troubleshooting steps to try first for issues you might encounter when using the [Remote Desktop client for Windows](../dev-box/tutorial-connect-to-dev-box-with-remote-desktop-app.md) to connect to Dev Box.
+This article provides some simple troubleshooting steps to try first for issues you might encounter when using the [Remote Desktop client for Windows](/azure/virtual-desktop/../dev-box/tutorial-connect-to-dev-box-with-remote-desktop-app) to connect to Dev Box.
 ::: zone-end
 
 ## Basic troubleshooting
@@ -33,7 +33,7 @@ There are a few basic troubleshooting steps you can try if you're having issues 
 
 1. Make sure you're connected to the internet.
 
-1. Try to connect to your desktops or applications from the Azure Virtual Desktop web client. For more information, see [Connect to Azure Virtual Desktop with the Remote Desktop web client](users/connect-web.md).
+1. Try to connect to your desktops or applications from the Azure Virtual Desktop web client. For more information, see [Connect to Azure Virtual Desktop with the Remote Desktop web client](/azure/virtual-desktop/users/connect-web).
 
 1. Make sure you're using the latest version of the Remote Desktop client. By default, the client automatically updates when a new version is available. To check for updates manually, see [Update the client](./users/client-features-windows.md#update-the-client).
 
@@ -80,7 +80,7 @@ There are a few basic troubleshooting steps you can try if you're having issues 
 
 1. Restart your dev box from the Dev Box developer portal.
 
-1. If none of the previous steps resolved your issue, you can use the *Troubleshoot & repair* tool in the developer portal to diagnose and repair some common dev box connectivity issues. To learn how to use the Troubleshoot & repair tool, see [Troubleshoot and resolve dev box remote desktop connectivity issues](../dev-box/how-to-troubleshoot-repair-dev-box.md).
+1. If none of the previous steps resolved your issue, you can use the *Troubleshoot & repair* tool in the developer portal to diagnose and repair some common dev box connectivity issues. To learn how to use the Troubleshoot & repair tool, see [Troubleshoot and resolve dev box remote desktop connectivity issues](/azure/virtual-desktop/../dev-box/how-to-troubleshoot-repair-dev-box).
 ::: zone-end
 
 ## Reset password
@@ -112,7 +112,7 @@ To reset user data from the client:
 ## Issue isn't listed here
 
 ::: zone pivot="azure-virtual-desktop"
-If your issue isn't listed here, ask your Azure Virtual Desktop administrator for support, or see [Troubleshoot the Remote Desktop client for Windows when connecting to Azure Virtual Desktop](troubleshoot-client-windows.md) for further troubleshooting steps.
+If your issue isn't listed here, ask your Azure Virtual Desktop administrator for support, or see [Troubleshoot the Remote Desktop client for Windows when connecting to Azure Virtual Desktop](/azure/virtual-desktop/troubleshoot-client-windows) for further troubleshooting steps.
 ::: zone-end
 
 ::: zone pivot="windows-365"

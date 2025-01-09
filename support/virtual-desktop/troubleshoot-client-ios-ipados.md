@@ -33,10 +33,10 @@ If you're having issues signing in due to a cached token that has expired, do th
 
 1. Under **AVD Security Tokens**, toggle **Delete on App Launch** to **On**.
 
-1. Try to subscribe to a workspace again. For more information, see [Connect to Azure Virtual Desktop with the Remote Desktop client for iOS and iPadOS](users/connect-ios-ipados.md).
+1. Try to subscribe to a workspace again. For more information, see [Connect to Azure Virtual Desktop with the Remote Desktop client for iOS and iPadOS](/azure/virtual-desktop/users/connect-ios-ipados).
 
 1. Toggle **Delete on App Launch** to **Off** once you can connect again.
 
 ## Issue isn't listed here
 
-If your issue isn't listed here, see [Troubleshooting overview, feedback, and support for Azure Virtual Desktop](troubleshoot-set-up-overview.md) for information about how to open an Azure support case for Azure Virtual Desktop.
+If your issue isn't listed here, see [Troubleshooting overview, feedback, and support for Azure Virtual Desktop](/azure/virtual-desktop/troubleshoot-set-up-overview) for information about how to open an Azure support case for Azure Virtual Desktop.

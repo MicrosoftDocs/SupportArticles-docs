@@ -21,7 +21,7 @@ In this section you'll find troubleshooting guidance for general issues with the
 
 ### Web client stops responding or disconnects
 
-If the Remote Desktop Web client stops responding or keeps disconnecting, try closing and reopening the browser. If it continues, try connecting using another browser or a one of the other [Remote Desktop clients](users/remote-desktop-clients-overview.md). You can also try clearing your browsing data. For Microsoft Edge, see [Microsoft Edge, browsing data, and privacy
+If the Remote Desktop Web client stops responding or keeps disconnecting, try closing and reopening the browser. If it continues, try connecting using another browser or a one of the other [Remote Desktop clients](/azure/virtual-desktop/users/remote-desktop-clients-overview). You can also try clearing your browsing data. For Microsoft Edge, see [Microsoft Edge, browsing data, and privacy
 ](https://support.microsoft.com/windows/microsoft-edge-browsing-data-and-privacy-bb8174ba-9d73-dcf2-9b4a-c582b4e640dd).
 
 ### Web client out of memory
@@ -59,4 +59,4 @@ In this section you'll find troubleshooting guidance for authentication and iden
 
 ## Issue isn't listed here
 
-If your issue isn't listed here, see [Troubleshooting overview, feedback, and support for Azure Virtual Desktop](troubleshoot-set-up-overview.md) for information about how to open an Azure support case for Azure Virtual Desktop.
+If your issue isn't listed here, see [Troubleshooting overview, feedback, and support for Azure Virtual Desktop](/azure/virtual-desktop/troubleshoot-set-up-overview) for information about how to open an Azure support case for Azure Virtual Desktop.

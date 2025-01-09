@@ -20,7 +20,7 @@ This article presents known issues and solutions for common problems in Azure Vi
 
 If the configuration workbook isn't working properly to automate setup, you can use these resources to set up your environment manually:
 
-- To manually enable diagnostics or access the Log Analytics workspace, see [Send Azure Virtual Desktop diagnostics to Log Analytics](diagnostics-log-analytics.md).
+- To manually enable diagnostics or access the Log Analytics workspace, see [Send Azure Virtual Desktop diagnostics to Log Analytics](/azure/virtual-desktop/diagnostics-log-analytics).
 - To install the Azure Monitor Agent extension on a session host manually, see [Azure Monitor Agent virtual machine extension for Windows](/azure/azure-monitor/agents/azure-monitor-agent-manage#installation-options).
 - To set up a new Log Analytics workspace, see [Create a Log Analytics workspace in the Azure portal](/azure/azure-monitor/logs/quick-create-workspace).
 - To validate the Data Collection Rules in use, see [View data collection rules](/azure/azure-monitor/essentials/data-collection-rule-view).
@@ -29,7 +29,7 @@ If the configuration workbook isn't working properly to automate setup, you can 
 
 If your data isn't displaying properly, check the following common solutions:
 
-- First, make sure you've set up correctly with the configuration workbook as described in [Use Azure Virtual Desktop Insights to monitor your deployment](insights.md). If you're missing any counters or events, the data associated with them won't appear in the Azure portal.
+- First, make sure you've set up correctly with the configuration workbook as described in [Use Azure Virtual Desktop Insights to monitor your deployment](/azure/virtual-desktop/insights). If you're missing any counters or events, the data associated with them won't appear in the Azure portal.
 - Check your access permissions & contact the resource owners to request missing permissions; anyone monitoring Azure Virtual Desktop requires the following permissions:
     - Read-access to the Azure resource groups that hold your Azure Virtual Desktop resources
     - Read-access to the subscription's resource groups that hold your Azure Virtual Desktop session hosts 
@@ -45,7 +45,7 @@ If you're not missing any information but your data still isn't displaying prope
 
 If the configuration workbook isn't working properly to automate setup, you can use these resources to set up your environment manually:
 
-- To manually enable diagnostics or access the Log Analytics workspace, see [Send Azure Virtual Desktop diagnostics to Log Analytics](diagnostics-log-analytics.md).
+- To manually enable diagnostics or access the Log Analytics workspace, see [Send Azure Virtual Desktop diagnostics to Log Analytics](/azure/virtual-desktop/diagnostics-log-analytics).
 - To install the Log Analytics extension on a session host manually, see [Log Analytics virtual machine extension for Windows](/azure/virtual-machines/extensions/oms-windows).
 - To set up a new Log Analytics workspace, see [Create a Log Analytics workspace in the Azure portal](/azure/azure-monitor/logs/quick-create-workspace).
 - To add, remove, or edit performance counters, see [Configuring performance counters](/azure/azure-monitor/agents/data-sources-performance-counters).
@@ -55,7 +55,7 @@ If the configuration workbook isn't working properly to automate setup, you can 
 
 If your data isn't displaying properly, check the following common solutions:
 
-- First, make sure you've set up correctly with the configuration workbook as described in [Use Azure Virtual Desktop Insights to monitor your deployment](insights.md). If you're missing any counters or events, the data associated with them won't appear in the Azure portal.
+- First, make sure you've set up correctly with the configuration workbook as described in [Use Azure Virtual Desktop Insights to monitor your deployment](/azure/virtual-desktop/insights). If you're missing any counters or events, the data associated with them won't appear in the Azure portal.
 - Check your access permissions and contact the resource owners to request missing permissions. Anyone monitoring Azure Virtual Desktop requires the following permissions:
     - Read-access to the Azure resource groups that hold your Azure Virtual Desktop resources
     - Read-access to the subscription's resource groups that hold your Azure Virtual Desktop session hosts 
@@ -77,7 +77,7 @@ By design, custom Workbook templates will not automatically adopt updates from t
 
 ## I can't interpret the data
 
-Learn more about data terms at the [Azure Virtual Desktop Insights glossary](insights-glossary.md).
+Learn more about data terms at the [Azure Virtual Desktop Insights glossary](/azure/virtual-desktop/insights-glossary).
 
 # [Azure Monitor Agent](#tab/monitor)
 
@@ -85,7 +85,7 @@ Learn more about data terms at the [Azure Virtual Desktop Insights glossary](ins
 
 If this article doesn't have the data point you need to resolve an issue, you can send us feedback at the following places:
 
-- To learn how to leave feedback, see [Troubleshooting overview, feedback, and support for Azure Virtual Desktop](troubleshoot-set-up-overview.md).
+- To learn how to leave feedback, see [Troubleshooting overview, feedback, and support for Azure Virtual Desktop](/azure/virtual-desktop/troubleshoot-set-up-overview).
 - You can also leave feedback for Azure Virtual Desktop at the [Azure Virtual Desktop feedback hub](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app).
 
 # [Log Analytics agent](#tab/analytics)
@@ -99,7 +99,7 @@ If you want to monitor more Performance counters or Windows Event Logs, you can 
 
 Can't find a data point to help diagnose an issue? Send us feedback!
 
-- To learn how to leave feedback, see [Troubleshooting overview, feedback, and support for Azure Virtual Desktop](troubleshoot-set-up-overview.md).
+- To learn how to leave feedback, see [Troubleshooting overview, feedback, and support for Azure Virtual Desktop](/azure/virtual-desktop/troubleshoot-set-up-overview).
 - You can also leave feedback for Azure Virtual Desktop at the [Azure Virtual Desktop feedback hub](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app).
 
 ---
@@ -118,6 +118,6 @@ The following are issues and limitations we're aware of and working to fix:
 
 ## Next steps
 
-- To get started, see [Use Azure Virtual Desktop Insights to monitor your deployment](insights.md).
-- To estimate, measure, and manage your data storage costs, see [Estimate Azure Monitor costs](insights-costs.md).
-- Check out our [glossary](insights-glossary.md) to learn more about terms and concepts related to Azure Virtual Desktop Insights.
+- To get started, see [Use Azure Virtual Desktop Insights to monitor your deployment](/azure/virtual-desktop/insights).
+- To estimate, measure, and manage your data storage costs, see [Estimate Azure Monitor costs](/azure/virtual-desktop/insights-costs).
+- Check out our [glossary](/azure/virtual-desktop/insights-glossary) to learn more about terms and concepts related to Azure Virtual Desktop Insights.

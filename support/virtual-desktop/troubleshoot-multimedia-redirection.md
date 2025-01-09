@@ -78,6 +78,6 @@ If a web page isn't working as expected with multimedia redirection, you can col
 
 ## Next steps
 
-For more information about this feature and how it works, see [What is multimedia redirection for Azure Virtual Desktop?](multimedia-redirection-video-playback-calls.md).
+For more information about this feature and how it works, see [What is multimedia redirection for Azure Virtual Desktop?](/azure/virtual-desktop/multimedia-redirection-video-playback-calls).
 
-To learn how to use this feature, see [Multimedia redirection for Azure Virtual Desktop](multimedia-redirection.md).
+To learn how to use this feature, see [Multimedia redirection for Azure Virtual Desktop](/azure/virtual-desktop/multimedia-redirection).

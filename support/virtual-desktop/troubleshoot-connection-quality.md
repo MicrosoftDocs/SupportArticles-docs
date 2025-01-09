@@ -33,16 +33,16 @@ To reduce round trip time:
 
 ## Optimize VM latency by reviewing Azure network round-trip latency statistics
 
-Round-trip time (RTT) latency from the client's network to the Azure region that contains the host pools should be less than 150 ms. To see which locations have the best latency, look up your desired location in [Azure network round-trip latency statistics](../networking/azure-network-latency.md). To optimize for network performance, we recommend you create session hosts in the Azure region closest to your users. We recommend you review the statistics every two to three months to make sure the optimal location hasn't changed as Azure Virtual Desktop rolls out to new areas.
+Round-trip time (RTT) latency from the client's network to the Azure region that contains the host pools should be less than 150 ms. To see which locations have the best latency, look up your desired location in [Azure network round-trip latency statistics](/azure/virtual-desktop/../networking/azure-network-latency). To optimize for network performance, we recommend you create session hosts in the Azure region closest to your users. We recommend you review the statistics every two to three months to make sure the optimal location hasn't changed as Azure Virtual Desktop rolls out to new areas.
 
 ## My connection data isn't going to Azure Log Analytics
 
 If your **Connection Network Data Logs**  aren't going to Azure Log Analytics every two minutes, you'll need to check the following things:
 
-- Make sure you've [configured the diagnostic settings correctly](diagnostics-log-analytics.md).
+- Make sure you've [configured the diagnostic settings correctly](/azure/virtual-desktop/diagnostics-log-analytics).
 - Make sure you've configured the VM correctly.
 - Make sure you're actively using the session. Sessions that aren't actively used won't send data to Azure Log Analytics as frequently.
 
 ## Next steps
 
-For more information about how to diagnose connection quality, see [Connection quality in Azure Virtual Desktop](connection-latency.md).
+For more information about how to diagnose connection quality, see [Connection quality in Azure Virtual Desktop](/azure/virtual-desktop/connection-latency).

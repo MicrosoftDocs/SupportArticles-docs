@@ -65,7 +65,7 @@ To fix this issue, you can either delete all resource groups with the existing p
 
 This issue happens when the quickstart won't accept the new username you enter into the field.
 
-This error message appears because Azure doesn't allow certain words in usernames for public endpoints. For a full list of blocked words, see [Resolve reserved resource name errors](../azure-resource-manager/templates/error-reserved-resource-name.md).
+This error message appears because Azure doesn't allow certain words in usernames for public endpoints. For a full list of blocked words, see [Resolve reserved resource name errors](/azure/virtual-desktop/../azure-resource-manager/templates/error-reserved-resource-name).
 
 To resolve this issue, either try a new word or add letters to the blocked word to make it unique. For example, if the word "admin" is blocked, try using "AVDadmin" instead.
 
@@ -73,7 +73,7 @@ To resolve this issue, either try a new word or add letters to the blocked word 
 
 This error message appears when entering a password that is either too long or too short to meet the character length requirement. Azure password length and complexity requirements even apply to fields that you later use in Windows, which has less strict requirements.
 
-To resolve this issue, make sure you use an account that follows [Microsoft's password guidelines](https://www.microsoft.com/research/publication/password-guidance) or uses [Microsoft Entra Password Protection](../active-directory/authentication/concept-password-ban-bad.md).
+To resolve this issue, make sure you use an account that follows [Microsoft's password guidelines](https://www.microsoft.com/research/publication/password-guidance) or uses [Microsoft Entra Password Protection](/azure/virtual-desktop/../active-directory/authentication/concept-password-ban-bad).
 
 ## Error messages for easy-button-prerequisite-user-setup-linked-template
 
@@ -215,4 +215,4 @@ To resolve this issue:
 
 ## Next steps
 
-Learn more about the quickstart at [Deploy Azure Virtual Desktop with the quickstart](quickstart.md).
+Learn more about the quickstart at [Deploy Azure Virtual Desktop with the quickstart](/azure/virtual-desktop/quickstart).

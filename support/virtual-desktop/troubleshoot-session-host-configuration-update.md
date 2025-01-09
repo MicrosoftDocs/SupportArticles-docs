@@ -22,7 +22,7 @@ Here are some example failures:
 
 - **VM availability**: the combination of VM SKU name, region, availability zone, and subscription isn't available. Some of the errors that can result include `VmSkuNotAvailableInRegion`, `VmSkuNotAvailableInRegionDueToRestriction`, and `AvailabilityZoneNotAvailable`. You need to review the availability of VM sizes and availability zones for your chosen region and subscription quota and provide a supported combination. Use the PowerShell cmdlet [`Get-AzComputeResourceSku`](/powershell/module/az.compute/get-azcomputeresourcesku) to identify the restrictions for a given combination of a VM SKU and region.
 
-- **Parameter compatibility**: the combination of VM SKU, disk, image, and virtual network isn't compatible. Some of the errors that can result include `ComputeSkuIncompatibleWithImageHyperVGeneration`, `ImageDiskTypeIncompatible`, `VnetLocationIncompatible`. Review the [prerequisites for Azure Virtual Desktop](prerequisites.md) to ensure the provided parameters meet the requirements for session host creation.
+- **Parameter compatibility**: the combination of VM SKU, disk, image, and virtual network isn't compatible. Some of the errors that can result include `ComputeSkuIncompatibleWithImageHyperVGeneration`, `ImageDiskTypeIncompatible`, `VnetLocationIncompatible`. Review the [prerequisites for Azure Virtual Desktop](/azure/virtual-desktop/prerequisites) to ensure the provided parameters meet the requirements for session host creation.
 
 If the session host configuration fails to create when creating a host pool, you aren't able to create a session host configuration for this host pool using the Azure portal. You can use PowerShell to create the session host configuration using the `New-AzWvdSessionHostConfiguration` cmdlet. Alternatively, you can delete the host pool and recreate it.
 
@@ -37,7 +37,7 @@ We only support adding session hosts to a host pool with a session host configur
 - ARM template deployment can succeed even if domain join fails, resulting in unhealthy session hosts.
 - Domain join failure diagnostics are available in the Azure portal on the session host details by viewing the JSON for session host health.
 
-For domain join failures and other issues when session hosts are added to the host pool, you can follow the guidance for [troubleshooting session hosts](troubleshoot-vm-configuration.md).
+For domain join failures and other issues when session hosts are added to the host pool, you can follow the guidance for [troubleshooting session hosts](/azure/virtual-desktop/troubleshoot-vm-configuration).
 
 ## Failed updates
 
@@ -93,4 +93,4 @@ You can pass incompatible parameters to the `New-AzWvdSessionHostConfiguration` 
 
 ## Next steps
 
-- [Example diagnostic queries for session host update in Azure Virtual Desktop](session-host-update-diagnostics.md)
+- [Example diagnostic queries for session host update in Azure Virtual Desktop](/azure/virtual-desktop/session-host-update-diagnostics)

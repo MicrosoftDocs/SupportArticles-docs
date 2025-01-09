@@ -63,7 +63,7 @@ If you see the error **Account switch detected**, you need to refresh the Micros
 
 1. If you have multiple entries when searching for `https://www.wvd.microsoft.com`, repeat these steps for each entry.
 
-1. Try to subscribe to a workspace again. For more information, see [Connect to Azure Virtual Desktop with the Remote Desktop client for macOS](users/connect-macos.md).
+1. Try to subscribe to a workspace again. For more information, see [Connect to Azure Virtual Desktop with the Remote Desktop client for macOS](/azure/virtual-desktop/users/connect-macos).
 
 ## Display
 
@@ -75,4 +75,4 @@ Using multiple monitors in certain topologies can cause issues such as blank scr
 
 ## Issue isn't listed here
 
-If your issue isn't listed here, see [Troubleshooting overview, feedback, and support for Azure Virtual Desktop](troubleshoot-set-up-overview.md) for information about how to open an Azure support case for Azure Virtual Desktop.
+If your issue isn't listed here, see [Troubleshooting overview, feedback, and support for Azure Virtual Desktop](/azure/virtual-desktop/troubleshoot-set-up-overview) for information about how to open an Azure support case for Azure Virtual Desktop.

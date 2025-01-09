@@ -61,6 +61,6 @@ To contact Microsoft Teams support, go to the [Microsoft 365 admin center](/micr
 
 ## Next steps
 
-Learn more about how to set up Teams on Azure Virtual Desktop at [Use Microsoft Teams on Azure Virtual Desktop](teams-on-avd.md).
+Learn more about how to set up Teams on Azure Virtual Desktop at [Use Microsoft Teams on Azure Virtual Desktop](/azure/virtual-desktop/teams-on-avd).
 
-Learn more about the WebRTC Redirector Service for Teams on Azure Virtual Desktop at [What's new in the WebRTC Redirector Service](whats-new-webrtc.md).
+Learn more about the WebRTC Redirector Service for Teams on Azure Virtual Desktop at [What's new in the WebRTC Redirector Service](/azure/virtual-desktop/whats-new-webrtc).

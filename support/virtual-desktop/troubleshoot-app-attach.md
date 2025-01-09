@@ -76,4 +76,4 @@ To validate that your session hosts have the necessary access to a file share co
 
 ## Next steps
 
-[Test MSIX packages with app attach or MSIX app attach](app-attach-test-msix-packages.md).
+[Test MSIX packages with app attach or MSIX app attach](/azure/virtual-desktop/app-attach-test-msix-packages).

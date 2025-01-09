@@ -53,4 +53,4 @@ If your storage account needs additional permissions, you may not have assigned 
 
 ## Next steps
 
-If you need to refresh your memory about the Azure Files setup process, see [Set up FSLogix Profile Container with Azure Files and Active Directory Domain Services or Microsoft Entra Domain Services](fslogix-profile-container-configure-azure-files-active-directory.md).
+If you need to refresh your memory about the Azure Files setup process, see [Set up FSLogix Profile Container with Azure Files and Active Directory Domain Services or Microsoft Entra Domain Services](/azure/virtual-desktop/fslogix-profile-container-configure-azure-files-active-directory).

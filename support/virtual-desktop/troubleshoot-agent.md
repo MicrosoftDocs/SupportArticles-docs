@@ -117,19 +117,19 @@ To resolve this issue, check that you can reach the two endpoints referred to as
    > [!div class="mx-imgBorder"]
    > ![Screenshot of unsuccessful loaded broker global access](media/unsuccessful-broker-global.png)
 
-   You must unblock the required endpoints and then repeat steps 4 to 7. For more information, see [Required URL List](safe-url-list.md).
+   You must unblock the required endpoints and then repeat steps 4 to 7. For more information, see [Required URL List](/azure/virtual-desktop/safe-url-list).
 
 1. If following the previous steps doesn't resolve your issue, make sure that you don't have any group policies with ciphers that block the agent to broker connection. Azure Virtual Desktop uses the same TLS 1.2 ciphers as [Azure Front Door](../frontdoor/concept-end-to-end-tls.md#supported-cipher-suites). For more information, see [Connection Security](network-connectivity.md#connection-security).
 
 ## Error: 3703
 
-On your session host VM, go to **Event Viewer** > **Windows Logs** > **Application**. If you see an event with ID 3703 with **RD Gateway Url: is not accessible** in the description, the agent is unable to reach the gateway URLs. To successfully connect to your session host, you must allow network traffic to the URLs from the [Required URL List](safe-url-list.md). Also, make sure your firewall or proxy settings don't block these URLs. Unblocking these URLs is required to use Azure Virtual Desktop.
+On your session host VM, go to **Event Viewer** > **Windows Logs** > **Application**. If you see an event with ID 3703 with **RD Gateway Url: is not accessible** in the description, the agent is unable to reach the gateway URLs. To successfully connect to your session host, you must allow network traffic to the URLs from the [Required URL List](/azure/virtual-desktop/safe-url-list). Also, make sure your firewall or proxy settings don't block these URLs. Unblocking these URLs is required to use Azure Virtual Desktop.
 
-To resolve this issue, verify whether you can access the required URLs by running the [Required URL Check tool](required-url-check-tool.md). If you're using Azure Firewall, see [Use Azure Firewall to protect Azure Virtual Desktop deployments.](../firewall/protect-azure-virtual-desktop.md) and [Azure Firewall DNS settings](../firewall/dns-settings.md) for more information on how to configure it for Azure Virtual Desktop.
+To resolve this issue, verify whether you can access the required URLs by running the [Required URL Check tool](/azure/virtual-desktop/required-url-check-tool). If you're using Azure Firewall, see [Use Azure Firewall to protect Azure Virtual Desktop deployments.](/azure/virtual-desktop/../firewall/protect-azure-virtual-desktop) and [Azure Firewall DNS settings](/azure/virtual-desktop/../firewall/dns-settings) for more information on how to configure it for Azure Virtual Desktop.
 
 ## Error: 3019
 
-On your session host VM, go to **Event Viewer** > **Windows Logs** > **Application**. If you see an event with ID 3019, then the agent can't reach the web socket transport URLs. To successfully connect to your session host and allow network traffic to bypass these restrictions, you must unblock the URLs listed in the [Required URL list](safe-url-list.md). Work with your networking team to make sure your firewall, proxy, and DNS settings aren't blocking these URLs. You can also check your network trace logs to identify where the Azure Virtual Desktop service is being blocked. If you open a Microsoft Support case for this particular issue, make sure to attach your network trace logs to the request.
+On your session host VM, go to **Event Viewer** > **Windows Logs** > **Application**. If you see an event with ID 3019, then the agent can't reach the web socket transport URLs. To successfully connect to your session host and allow network traffic to bypass these restrictions, you must unblock the URLs listed in the [Required URL list](/azure/virtual-desktop/safe-url-list). Work with your networking team to make sure your firewall, proxy, and DNS settings aren't blocking these URLs. You can also check your network trace logs to identify where the Azure Virtual Desktop service is being blocked. If you open a Microsoft Support case for this particular issue, make sure to attach your network trace logs to the request.
 
 ## Error: InstallationHealthCheckFailedException
 
@@ -285,7 +285,7 @@ There are several health checks that can cause your session host VMs to be stuck
 
 ### UrlsAccessibleCheck
 
-If the session host doesn't pass the *UrlsAccessibleCheck* health check, you'll need to identify which [required URL](safe-url-list.md) your deployment is currently blocking. Once you know which URL is blocked, identify which setting is blocking that URL and remove it.
+If the session host doesn't pass the *UrlsAccessibleCheck* health check, you'll need to identify which [required URL](/azure/virtual-desktop/safe-url-list) your deployment is currently blocking. Once you know which URL is blocked, identify which setting is blocking that URL and remove it.
 
 There are two reasons why the service is blocking a required URL:
 
@@ -338,7 +338,7 @@ To resolve this issue, either:
 
 The side-by-side stack is only supported by Windows Enterprise or Windows Server SKUs, which means that operating systems like Pro VM aren't. If you don't have an Enterprise or Server SKU, the stack installs on your VM but isn't activated, so it won't appear when you run **qwinsta** in your command line.
 
-To resolve this issue, [create session host VMs](expand-existing-host-pool.md) using a [supported operating system](prerequisites.md#operating-systems-and-licenses).
+To resolve this issue, [create session host VMs](/azure/virtual-desktop/expand-existing-host-pool) using a [supported operating system](prerequisites.md#operating-systems-and-licenses).
 
 ## Error: NAME_ALREADY_REGISTERED
 
@@ -513,12 +513,12 @@ To resolve this issue, you'll need to remove the key:
 
 If the issue continues, create a support case and include detailed information about the problem you're having and any actions you've taken to try to resolve it. The following list includes other resources you can use to troubleshoot issues in your Azure Virtual Desktop deployment.
 
-- For an overview on troubleshooting Azure Virtual Desktop and the escalation tracks, see [Troubleshooting overview, feedback, and support](troubleshoot-set-up-overview.md).
-- To troubleshoot issues while creating a host pool in an Azure Virtual Desktop environment, see [Environment and host pool creation](troubleshoot-set-up-issues.md).
-- To troubleshoot issues while configuring a virtual machine (VM) in Azure Virtual Desktop, see [Session host virtual machine configuration](troubleshoot-vm-configuration.md).
-- To troubleshoot issues with Azure Virtual Desktop client connections, see [Azure Virtual Desktop service connections](troubleshoot-service-connection.md).
-- To troubleshoot issues when using PowerShell with Azure Virtual Desktop, see [Azure Virtual Desktop PowerShell](troubleshoot-powershell.md).
-- To learn more about the service, see [Azure Virtual Desktop environment](environment-setup.md).
-- To go through a troubleshoot tutorial, see [Tutorial: Troubleshoot Resource Manager template deployments](../azure-resource-manager/templates/template-tutorial-troubleshoot.md).
+- For an overview on troubleshooting Azure Virtual Desktop and the escalation tracks, see [Troubleshooting overview, feedback, and support](/azure/virtual-desktop/troubleshoot-set-up-overview).
+- To troubleshoot issues while creating a host pool in an Azure Virtual Desktop environment, see [Environment and host pool creation](/azure/virtual-desktop/troubleshoot-set-up-issues).
+- To troubleshoot issues while configuring a virtual machine (VM) in Azure Virtual Desktop, see [Session host virtual machine configuration](/azure/virtual-desktop/troubleshoot-vm-configuration).
+- To troubleshoot issues with Azure Virtual Desktop client connections, see [Azure Virtual Desktop service connections](/azure/virtual-desktop/troubleshoot-service-connection).
+- To troubleshoot issues when using PowerShell with Azure Virtual Desktop, see [Azure Virtual Desktop PowerShell](/azure/virtual-desktop/troubleshoot-powershell).
+- To learn more about the service, see [Azure Virtual Desktop environment](/azure/virtual-desktop/environment-setup).
+- To go through a troubleshoot tutorial, see [Tutorial: Troubleshoot Resource Manager template deployments](/azure/virtual-desktop/../azure-resource-manager/templates/template-tutorial-troubleshoot).
 - To learn about auditing actions, see [Audit operations with Resource Manager](/azure/azure-monitor/essentials/activity-log).
-- To learn about actions to determine the errors during deployment, see [View deployment operations](../azure-resource-manager/templates/deployment-history.md).
+- To learn about actions to determine the errors during deployment, see [View deployment operations](/azure/virtual-desktop/../azure-resource-manager/templates/deployment-history).
