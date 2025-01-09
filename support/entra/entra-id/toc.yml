@@ -242,6 +242,8 @@
      href: app-integration/troubleshoot-authorization-requestdenied-graph-api.md
    - name: 404 error when managing objects
      href: app-integration/404-not-found-error-manage-objects-microsoft-graph.md
+   - name: Use managed identities to call Graph APIs in VB.Net and C#
+     href: users-groups-entra-apis/call-graph-api-using-managed-dentities.md
 - name: Microsoft Entra User Provisioning and Synchronization
   items:
   - name: User Sign-in or password Problems
