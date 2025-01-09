@@ -15,7 +15,7 @@ ms.date: 09/25/2024
 > Select a button at the top of this article to choose which product you're connecting to and see the relevant documentation.
 
 ::: zone pivot="azure-virtual-desktop"
-This article provides some simple troubleshooting steps to try first for issues you might encounter when using the [Remote Desktop client for Windows](users/connect-windows.md?toc=%2Fazure%2Fvirtual-desktop%2Ftoc.json) to connect to Azure Virtual Desktop.
+This article provides some simple troubleshooting steps to try first for issues you might encounter when using the [Remote Desktop client for Windows](/azure/virtual-desktop/users/connect-windows?toc=%2Fazure%2Fvirtual-desktop%2Ftoc.json) to connect to Azure Virtual Desktop.
 ::: zone-end
 
 ::: zone pivot="windows-365"
@@ -35,7 +35,7 @@ There are a few basic troubleshooting steps you can try if you're having issues 
 
 1. Try to connect to your desktops or applications from the Azure Virtual Desktop web client. For more information, see [Connect to Azure Virtual Desktop with the Remote Desktop web client](/azure/virtual-desktop/users/connect-web).
 
-1. Make sure you're using the latest version of the Remote Desktop client. By default, the client automatically updates when a new version is available. To check for updates manually, see [Update the client](./users/client-features-windows.md#update-the-client).
+1. Make sure you're using the latest version of the Remote Desktop client. By default, the client automatically updates when a new version is available. To check for updates manually, see [Update the client](/azure/virtual-desktop/users/client-features-windows#update-the-client).
 
 1. If the connection fails frequently or you notice performance issues, check the status of the connection. You can find connection information in the connection bar, by selecting the signal icon:
 
@@ -52,7 +52,7 @@ There are a few basic troubleshooting steps you can try if you're having issues 
 
 1. Try to connect to your Cloud PC from the Windows 365 web client. For more information, see [Access a Cloud PC](/windows-365/end-user-access-cloud-pc#home-page).
 
-1. Make sure you're using the latest version of the Remote Desktop client. By default, the client automatically updates when a new version is available. To check for updates manually, see [Update the client](./users/client-features-windows.md?context=%2Fwindows-365%2Fcontext%2Fpr-context#update-the-client).
+1. Make sure you're using the latest version of the Remote Desktop client. By default, the client automatically updates when a new version is available. To check for updates manually, see [Update the client](/azure/virtual-desktop/users/client-features-windows#update-the-client).
 
 1. If the connection fails frequently or you notice performance issues, check the status of the connection. You can find connection information in the connection bar, by selecting the signal icon:
 
@@ -68,11 +68,11 @@ There are a few basic troubleshooting steps you can try if you're having issues 
 
 1. Make sure you're connected to the internet.
 
-1. Make sure your dev box is running. For more information, see [Shutdown, restart or start a dev box](../dev-box/how-to-create-dev-boxes-developer-portal.md#shut-down-restart-or-start-a-dev-box).
+1. Make sure your dev box is running. For more information, see [Shutdown, restart or start a dev box](/azure/dev-box/how-to-create-dev-boxes-developer-portal#shut-down-restart-or-start-a-dev-box).
 
-1. Try to connect to your dev box from the Dev Box developer portal. For more information, see [Connect to a dev box](../dev-box/quickstart-create-dev-box.md#connect-to-a-dev-box).
+1. Try to connect to your dev box from the Dev Box developer portal. For more information, see [Connect to a dev box](/azure/dev-box/quickstart-create-dev-box#connect-to-a-dev-box).
 
-1. Make sure you're using the latest version of the Remote Desktop client. By default, the client automatically updates when a new version is available. To check for updates manually, see [Update the client](./users/client-features-windows.md?toc=%2Fazure%2Fdev-box%2Ftoc.json#update-the-client).
+1. Make sure you're using the latest version of the Remote Desktop client. By default, the client automatically updates when a new version is available. To check for updates manually, see [Update the client](/azure/virtual-desktop/client-features-windows#update-the-client).
 
 1. If the connection fails frequently or you notice performance issues, check the status of the connection. You can find connection information in the connection bar, by selecting the signal icon:
 

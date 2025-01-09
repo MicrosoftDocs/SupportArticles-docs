@@ -9,7 +9,7 @@ ms.author: daknappe
 
 # Troubleshoot the Remote Desktop client for iOS and iPadOS when connecting to Azure Virtual Desktop
 
-This article describes issues you may experience with the [Remote Desktop client for iOS and iPadOS](users/connect-ios-ipados.md?toc=%2Fazure%2Fvirtual-desktop%2Ftoc.json) when connecting to Azure Virtual Desktop and how to fix them.
+This article describes issues you may experience with the [Remote Desktop client for iOS and iPadOS](/azure/virtual-desktop/users/connect-remote-desktop-client?toc=%2Fazure%2Fvirtual-desktop%2Ftoc.json) when connecting to Azure Virtual Desktop and how to fix them.
 
 ## General
 

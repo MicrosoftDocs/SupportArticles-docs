@@ -51,7 +51,7 @@ On your session host VM, go to **Event Viewer** > **Windows Logs** > **Applicati
 
 To resolve this issue:
 
-1. Create a new registration key by following the steps in [Generate a registration key](add-session-hosts-host-pool.md#generate-a-registration-key).
+1. Create a new registration key by following the steps in [Generate a registration key](/azure/virtual-desktop/add-session-hosts-host-pool#generate-a-registration-key).
 
 1. Open a PowerShell prompt as an administrator and run the following commands to add the new registration key to the registry. Replace `<RegistrationToken>` with the new registration token you generated.
 
@@ -119,7 +119,7 @@ To resolve this issue, check that you can reach the two endpoints referred to as
 
    You must unblock the required endpoints and then repeat steps 4 to 7. For more information, see [Required URL List](/azure/virtual-desktop/safe-url-list).
 
-1. If following the previous steps doesn't resolve your issue, make sure that you don't have any group policies with ciphers that block the agent to broker connection. Azure Virtual Desktop uses the same TLS 1.2 ciphers as [Azure Front Door](../frontdoor/concept-end-to-end-tls.md#supported-cipher-suites). For more information, see [Connection Security](network-connectivity.md#connection-security).
+1. If following the previous steps doesn't resolve your issue, make sure that you don't have any group policies with ciphers that block the agent to broker connection. Azure Virtual Desktop uses the same TLS 1.2 ciphers as [Azure Front Door](/azure/frontdoor/concept-end-to-end-tls#supported-cipher-suites). For more information, see [Connection Security](/azure/virtual-desktop/network-connectivity#connection-security).
 
 ## Error: 3703
 
@@ -162,7 +162,7 @@ To resolve this issue:
 
 1. Make sure [your VM has a valid registration token](#error-invalid_registration_token-or-expired_machine_token).
 
-1. Make sure [the VM registration token hasn't expired](./faq.yml).
+1. Make sure [the VM registration token hasn't expired](/azure/virtual-desktop/faq).
 
 ## Error: InstallMsiException
 
@@ -277,7 +277,7 @@ To resolve this issue, first reinstall the side-by-side stack:
 
 ## Error: Session hosts are stuck in Unavailable state
 
-If your session host VMs are stuck in the Unavailable state, your VM didn't pass one of the health checks listed in [Health check](troubleshoot-statuses-checks.md#health-check). You must resolve the issue that's causing the VM to not pass the health check.
+If your session host VMs are stuck in the Unavailable state, your VM didn't pass one of the health checks listed in [Health check](/azure/virtual-desktop/troubleshoot-statuses-checks#health-check). You must resolve the issue that's causing the VM to not pass the health check.
 
 ## Error: Session hosts are stuck in the Needs Assistance state
 
@@ -338,7 +338,7 @@ To resolve this issue, either:
 
 The side-by-side stack is only supported by Windows Enterprise or Windows Server SKUs, which means that operating systems like Pro VM aren't. If you don't have an Enterprise or Server SKU, the stack installs on your VM but isn't activated, so it won't appear when you run **qwinsta** in your command line.
 
-To resolve this issue, [create session host VMs](/azure/virtual-desktop/expand-existing-host-pool) using a [supported operating system](prerequisites.md#operating-systems-and-licenses).
+To resolve this issue, [create session host VMs](/azure/virtual-desktop/expand-existing-host-pool) using a [supported operating system](/azure/virtual-desktop/prerequisites#operating-systems-and-licenses).
 
 ## Error: NAME_ALREADY_REGISTERED
 
@@ -348,7 +348,7 @@ To resolve this issue:
 
 1. Follow the steps in the [Remove the session host from the host pool](#step-2-remove-the-session-host-from-the-host-pool) section.
 
-1. [Create another VM](expand-existing-host-pool.md#add-virtual-machines-with-the-azure-portal). Make sure to choose a unique name for this VM.
+1. [Create another VM](/azure/virtual-desktop/expand-existing-host-pool#add-virtual-machines-with-the-azure-portal). Make sure to choose a unique name for this VM.
 
 1. Go to the [Azure portal](https://portal.azure.com) and open the **Overview** page for the host pool your VM was in. 
 
@@ -454,7 +454,7 @@ You must generate a new registration key that is used to re-register your sessio
 
 ### Step 4: Reinstall the agent and boot loader
 
-Reinstalling the latest version of the agent and boot loader also automatically installs the side-by-side stack and Geneva monitoring agent. To reinstall the agent and boot loader, follow these steps. This is the latest downloadable version of the Azure Virtual Desktop Agent in [non-validation environments](terminology.md#validation-environment). For more information about the rollout of new versions of the agent, see [What's new in the Azure Virtual Desktop Agent](whats-new-agent.md#latest-available-versions).
+Reinstalling the latest version of the agent and boot loader also automatically installs the side-by-side stack and Geneva monitoring agent. To reinstall the agent and boot loader, follow these steps. This is the latest downloadable version of the Azure Virtual Desktop Agent in [non-validation environments](/azure/virtual-desktop/terminology#validation-environment). For more information about the rollout of new versions of the agent, see [What's new in the Azure Virtual Desktop Agent](/azure/virtual-desktop/whats-new-agent#latest-available-versions).
 
 1. Sign in to your session host VM as an administrator and run the agent installer and bootloader for your session host VM:
    

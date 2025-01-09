@@ -47,7 +47,7 @@ The Remote Desktop WebRTC Redirector Service isn't pre-installed on the followin
 - Windows 11 Enterprise multi-session + Microsoft 365 Apps Version 23H2 (build 22631.3593).
 - Windows 11 Enterprise multi-session + Microsoft 365 Apps Version 22H2 (build 22621.3593).
 
-To resolve the issue, either redeploy session hosts using the latest marketplace image where the WebRTC Redirector Service is pre-installed, or install it separately. You can find the download link and steps at [Install the Remote Desktop WebRTC Redirector Service](teams-on-avd.md#install-the-remote-desktop-webrtc-redirector-service).
+To resolve the issue, either redeploy session hosts using the latest marketplace image where the WebRTC Redirector Service is pre-installed, or install it separately. You can find the download link and steps at [Install the Remote Desktop WebRTC Redirector Service](/azure/virtual-desktop/teams-on-avd#install-the-remote-desktop-webrtc-redirector-service).
 
 ## Collect Teams logs
 

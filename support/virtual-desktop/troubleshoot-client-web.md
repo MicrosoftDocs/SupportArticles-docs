@@ -9,7 +9,7 @@ ms.author: daknappe
 
 # Troubleshoot the Remote Desktop Web client when connecting to Azure Virtual Desktop
 
-This article describes issues you may experience with the [Remote Desktop Web client](users/connect-web.md?toc=%2Fazure%2Fvirtual-desktop%2Ftoc.json) when connecting to Azure Virtual Desktop and how to fix them.
+This article describes issues you may experience with the [Remote Desktop Web client](/azure/virtual-desktop/users/connect-web?toc=%2Fazure%2Fvirtual-desktop%2Ftoc.json) when connecting to Azure Virtual Desktop and how to fix them.
 
 ## General
 
@@ -49,7 +49,7 @@ The URL for the Remote Desktop Web client is [https://client.wvd.microsoft.com/a
 If neither of these work you most likely have a problem with your network connection. Contact your network admin for help.
 
 > [!TIP]
-> For the URLs of other Azure environments, such as Azure for US Government and Azure operated by 21Vianet, see [Connect to Azure Virtual Desktop with the Remote Desktop Web client](users/connect-web.md#access-your-resources).
+> For the URLs of other Azure environments, such as Azure for US Government and Azure operated by 21Vianet, see [Connect to Azure Virtual Desktop with the Remote Desktop Web client](/azure/virtual-desktop/users/connect-web#access-your-resources).
 
 ## Authentication and identity
 

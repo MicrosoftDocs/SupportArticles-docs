@@ -9,7 +9,7 @@ ms.author: daknappe
 
 # Troubleshoot the Remote Desktop client for Android and Chrome OS when connecting to Azure Virtual Desktop
 
-This article describes issues you may experience with the [Remote Desktop client for Android and Chrome OS](users/connect-android-chrome-os.md?toc=%2Fazure%2Fvirtual-desktop%2Ftoc.json) when connecting to Azure Virtual Desktop and how to fix them.
+This article describes issues you may experience with the [Remote Desktop client for Android and Chrome OS](/azure/virtual-desktop/users/connect-remote-desktop-client?toc=%2Fazure%2Fvirtual-desktop%2Ftoc.json) when connecting to Azure Virtual Desktop and how to fix them.
 
 ## General
 
