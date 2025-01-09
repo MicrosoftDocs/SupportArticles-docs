@@ -60,13 +60,13 @@ Follow these instructions if you're having issues joining virtual machines (VMs)
 
 **Cause 2:** When using Microsoft Entra Domain Services, the virtual network doesn't have its DNS server settings updated to point to the managed domain controllers.
 
-**Fix 2:** To update the DNS settings for the virtual network containing Microsoft Entra Domain Services, see [Update DNS settings for the Azure virtual network](../active-directory-domain-services/tutorial-create-instance.md#update-dns-settings-for-the-azure-virtual-network).
+**Fix 2:** To update the DNS settings for the virtual network containing Microsoft Entra Domain Services, see [Update DNS settings for the Azure virtual network](/azure/active-directory-domain-services/tutorial-create-instance#update-dns-settings-for-the-azure-virtual-network).
 
 **Cause 3:** The network interface's DNS server settings don't point to the appropriate DNS server on the virtual network.
 
 **Fix 3:** Take one of the following actions to resolve, following the steps in [Change DNS servers].
-- Change the network interface's DNS server settings to **Custom** with the steps from [Change DNS servers](../virtual-network/virtual-network-network-interface.md#change-dns-servers) and specify the private IP addresses of the DNS servers on the virtual network.
-- Change the network interface's DNS server settings to **Inherit from virtual network** with the steps from [Change DNS servers](../virtual-network/virtual-network-network-interface.md#change-dns-servers), then change the virtual network's DNS server settings with the steps from [Change DNS servers](../virtual-network/manage-virtual-network.yml#change-dns-servers).
+- Change the network interface's DNS server settings to **Custom** with the steps from [Change DNS servers](/azure/virtual-network/virtual-network-network-interface#change-dns-servers) and specify the private IP addresses of the DNS servers on the virtual network.
+- Change the network interface's DNS server settings to **Inherit from virtual network** with the steps from [Change DNS servers](/azure/virtual-network/virtual-network-network-interface#change-dns-servers), then change the virtual network's DNS server settings with the steps from [Change DNS servers](/azure/virtual-network/manage-virtual-network#change-dns-servers).
 
 ### Error: Computer account reuse is blocked in an Active Directory domain
 
@@ -121,7 +121,7 @@ When the Azure Virtual Desktop Agent is first installed on session host VMs (eit
 ### Error: The status filed in Get-AzWvdSessionHost cmdlet shows status as Unavailable
 
 > [!div class="mx-imgBorder"]
-> ![Get-AzWvdSessionHost cmdlet shows status as Unavailable.](media/23b8e5f525bb4e24494ab7f159fa6b62.png)
+> ![Get-AzWvdSessionHost cmdlet shows status as Unavailable.](media/troubleshoot-vm-configuration/23b8e5f525bb4e24494ab7f159fa6b62.png)
 
 **Cause:** The agent isn't able to update itself to a new version.
 
@@ -193,9 +193,9 @@ If you're having issues with the Azure Virtual Desktop side-by-side stack, type 
 The output of **qwinsta** will list **rdp-sxs** in the output if the side-by-side stack is installed and enabled.
 
 > [!div class="mx-imgBorder"]
-> ![Side-by-side stack installed or enabled with qwinsta listed as rdp-sxs in the output.](media/23b8e5f525bb4e24494ab7f159fa6b62.png)
+> ![Side-by-side stack installed or enabled with qwinsta listed as rdp-sxs in the output.](media/troubleshoot-vm-configuration/23b8e5f525bb4e24494ab7f159fa6b62.png)
 
-Examine the registry entries listed below and confirm that their values match. If registry keys are missing or values are mismatched, make sure you're running [a supported operating system](troubleshoot-agent.md#error-operating-a-pro-vm-or-other-unsupported-os). If you are, follow the instructions in [Register session hosts to a host pool](add-session-hosts-host-pool.md#register-session-hosts-to-a-host-pool) for how to reinstall the side-by-side stack.
+Examine the registry entries listed below and confirm that their values match. If registry keys are missing or values are mismatched, make sure you're running [a supported operating system](troubleshoot-agent.md#error-operating-a-pro-vm-or-other-unsupported-os). If you are, follow the instructions in [Register session hosts to a host pool](/azure/virtual-desktop/add-session-hosts-host-pool#register-session-hosts-to-a-host-pool) for how to reinstall the side-by-side stack.
 
 ```registry
     HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal
@@ -208,14 +208,14 @@ Examine the registry entries listed below and confirm that their values match. I
 ### Error: O_REVERSE_CONNECT_STACK_FAILURE
 
 > [!div class="mx-imgBorder"]
-> ![O_REVERSE_CONNECT_STACK_FAILURE error code.](media/23b8e5f525bb4e24494ab7f159fa6b62.png)
+> ![O_REVERSE_CONNECT_STACK_FAILURE error code.](media/troubleshoot-vm-configuration/23b8e5f525bb4e24494ab7f159fa6b62.png)
 
 **Cause:** The side-by-side stack isn't installed on the session host VM.
 
 **Fix:** Follow these instructions to install the side-by-side stack on the session host VM.
 
 1. Use Remote Desktop Protocol (RDP) to get directly into the session host VM as local administrator.
-2. Install the side-by-side stack by following the steps to [Register session hosts to a host pool](add-session-hosts-host-pool.md#register-session-hosts-to-a-host-pool).
+2. Install the side-by-side stack by following the steps to [Register session hosts to a host pool](/azure/virtual-desktop/add-session-hosts-host-pool#register-session-hosts-to-a-host-pool).
 
 ## How to fix an Azure Virtual Desktop side-by-side stack that malfunctions
 
@@ -225,7 +225,7 @@ There are known circumstances that can cause the side-by-side stack to malfuncti
 - Auto update to Windows 10 Enhanced Versatile Disc (EVD)
 - Missing the Remote Desktop Session Host (RDSH) role
 
-The instructions in this section can help you uninstall the Azure Virtual Desktop side-by-side stack. Once you uninstall the side-by-side stack, follow the steps to [Register session hosts to a host pool](add-session-hosts-host-pool.md#register-session-hosts-to-a-host-pool) to reinstall the side-by-side stack.
+The instructions in this section can help you uninstall the Azure Virtual Desktop side-by-side stack. Once you uninstall the side-by-side stack, follow the steps to [Register session hosts to a host pool](/azure/virtual-desktop/add-session-hosts-host-pool#register-session-hosts-to-a-host-pool) to reinstall the side-by-side stack.
 
 The VM used to run remediation must be on the same subnet and domain as the VM with the malfunctioning side-by-side stack.
 
@@ -250,7 +250,7 @@ Follow these instructions to run remediation from the same subnet and domain:
    ```
 
    > [!div class="mx-imgBorder"]
-   > ![Administrator command prompt](media/AdministratorCommandPrompt.png)
+   > ![Administrator command prompt](media/troubleshoot-vm-configuration/AdministratorCommandPrompt.png)
 
 1. Run the following command, which will list Microsoft components installed on the VM with the malfunctioning side-by-side stack.
 
@@ -266,7 +266,7 @@ Follow these instructions to run remediation from the same subnet and domain:
 
 1. Uninstall all products that start with **Remote Desktop**.
 
-1. After all Azure Virtual Desktop components have been uninstalled, restart the VM that had the malfunctioning side-by-side stack (either with Azure portal or from the PsExec tool). You can then reinstall the side-by-side stack by following the steps to [Register session hosts to a host pool](add-session-hosts-host-pool.md#register-session-hosts-to-a-host-pool).
+1. After all Azure Virtual Desktop components have been uninstalled, restart the VM that had the malfunctioning side-by-side stack (either with Azure portal or from the PsExec tool). You can then reinstall the side-by-side stack by following the steps to [Register session hosts to a host pool](/azure/virtual-desktop/add-session-hosts-host-pool#register-session-hosts-to-a-host-pool).
 
 ## Remote Desktop licensing mode isn't configured
 
@@ -296,7 +296,7 @@ To check which version of Windows 10 Enterprise multi-session you have:
 4. Check the number next to "Version." The number should be either "1809" or "1903," as shown in the following image.
 
     > [!div class="mx-imgBorder"]
-    > ![A screenshot of the Windows specifications window. The version number is highlighted in blue.](media/windows-specifications.png)
+    > ![A screenshot of the Windows specifications window. The version number is highlighted in blue.](media/troubleshoot-vm-configuration/windows-specifications.png)
 
 Now that you know your version number, skip ahead to the relevant section.
 

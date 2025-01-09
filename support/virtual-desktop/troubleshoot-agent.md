@@ -162,7 +162,7 @@ To resolve this issue:
 
 1. Make sure [your VM has a valid registration token](#error-invalid_registration_token-or-expired_machine_token).
 
-1. Make sure [the VM registration token hasn't expired](./faq.yml).
+1. Make sure [the VM registration token hasn't expired](/azure/virtual-desktop/faq).
 
 ## Error: InstallMsiException
 

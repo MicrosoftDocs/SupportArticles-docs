@@ -39,7 +39,7 @@ Here are the current known issues and limitations for multimedia redirection:
 
 ### Known issues for call redirection
 
-- Call redirection only works for WebRTC-based audio calls on the sites listed in [Call redirection](multimedia-redirection-video-playback-calls.md#call-redirection).
+- Call redirection only works for WebRTC-based audio calls on the sites listed in [Call redirection](/azure/virtual-desktop/multimedia-redirection-video-playback-calls#call-redirection).
 
 - When you disconnect from a remote session, call redirection might stop working. You can make redirection start working again by refreshing the webpage.
 
@@ -52,7 +52,7 @@ Here are the current known issues and limitations for multimedia redirection:
   - [Multimedia redirection browser extension (Microsoft Edge)](https://microsoftedge.microsoft.com/addons/detail/wvd-multimedia-redirectio/joeclbldhdmoijbaagobkhlpfjglcihd)
   - [Multimedia browser extension (Google Chrome)](https://chrome.google.com/webstore/detail/wvd-multimedia-redirectio/lfmemoeeciijgkjkgbgikoonlkabmlno)
 
-- Installing the extension on host machines with the MSI installer prompts users to either accept the extension the first time they open the browser or display a warning or error message. If users deny this prompt, it can cause the extension to not load. To avoid this issue, install the extensions by [editing the group policy](multimedia-redirection.md#install-the-browser-extension-using-group-policy).
+- Installing the extension on host machines with the MSI installer prompts users to either accept the extension the first time they open the browser or display a warning or error message. If users deny this prompt, it can cause the extension to not load. To avoid this issue, install the extensions by [editing the group policy](/azure/virtual-desktop/multimedia-redirection#install-the-browser-extension-using-group-policy).
 
 - Sometimes the host and client version number disappears from the extension status message, which prevents the extension from loading on websites that support it. If you installed the extension correctly, this issue is because your host machine doesn't have the latest C++ Redistributable installed. To fix this issue, install the [latest supported Visual C++ Redistributable downloads](/cpp/windows/latest-supported-vc-redist).
 

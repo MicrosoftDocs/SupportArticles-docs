@@ -9,7 +9,7 @@ ms.author: daknappe
 
 # Troubleshoot the Remote Desktop client for macOS when connecting to Azure Virtual Desktop
 
-This article describes issues you may experience with the [Remote Desktop client for macOS](users/connect-macos.md?toc=%2Fazure%2Fvirtual-desktop%2Ftoc.json) when connecting to Azure Virtual Desktop and how to fix them.
+This article describes issues you may experience with the [Remote Desktop client for macOS](/azure/virtual-desktop/users/connect-macos?toc=%2Fazure%2Fvirtual-desktop%2Ftoc.json) when connecting to Azure Virtual Desktop and how to fix them.
 
 ## General
 
@@ -45,7 +45,7 @@ In this section you'll find troubleshooting guidance for authentication and iden
 
 If you see the error **Account switch detected**, you need to refresh the Microsoft Entra token. To refresh the Microsoft Entra token, do the following:
 
-1. Delete any workspaces from the Remote Desktop client. For more information, see [Edit, refresh, or delete a workspace](users/client-features-macos.md#edit-refresh-or-delete-a-workspace).
+1. Delete any workspaces from the Remote Desktop client. For more information, see [Edit, refresh, or delete a workspace](/azure/virtual-desktop/users/client-features-macos#edit-refresh-or-delete-a-workspace).
 
 1. Open the **Keychain Access** app on your device.
 
@@ -71,7 +71,7 @@ In this section you'll find troubleshooting guidance for display issues with the
 
 ### Blank screen or cursor skipping when using multiple monitors
 
-Using multiple monitors in certain topologies can cause issues such as blank screens or the cursor skipping. Often this is a result of customized display configurations that create edge cases for the client's graphics algorithm when Retina optimizations are turned on, we're aware of these issues and plan to resolve them in future updates. For now, if you encounter display issues such as these, use a different configuration or disabling Retina optimization. To disable Retina optimization, see [Display settings for each remote desktop](users/client-features-macos.md#display-settings-for-each-remote-desktop).
+Using multiple monitors in certain topologies can cause issues such as blank screens or the cursor skipping. Often this is a result of customized display configurations that create edge cases for the client's graphics algorithm when Retina optimizations are turned on, we're aware of these issues and plan to resolve them in future updates. For now, if you encounter display issues such as these, use a different configuration or disabling Retina optimization. To disable Retina optimization, see [Display settings for each remote desktop](/azure/virtual-desktop/users/client-features-macos#display-settings-for-each-remote-desktop).
 
 ## Issue isn't listed here
 
