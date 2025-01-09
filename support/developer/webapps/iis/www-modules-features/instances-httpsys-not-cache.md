@@ -3,6 +3,7 @@ title: Instances where HTTP.sys doesn't cache
 description: This article describes the instances that the HTTP.sys driver doesn't cache content.
 ms.date: 12/17/2024
 ms.custom: sap:WWW Modules and Features\Output Cache
+ms.reviewer: zixie
 ---
 # Instances in which HTTP.sys doesn't cache content
 

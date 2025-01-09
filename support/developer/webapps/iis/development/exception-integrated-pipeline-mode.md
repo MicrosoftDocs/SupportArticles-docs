@@ -3,7 +3,7 @@ title: Application can't run in Integrated Pipeline mode
 description: This article provides resolutions for the System.Web.HttpException that occurs when an application runs in Integrated Pipeline mode.
 ms.date: 12/16/2024
 ms.custom: sap:Development\Native HTTP modules
-ms.reviewer: rakkim, mlaing
+ms.reviewer: rakkim, mlaing, zixie
 ---
 # System.Web.HttpException in Internet Information Services
 

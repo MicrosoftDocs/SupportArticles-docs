@@ -1,33 +1,29 @@
 ---
 title: Default permissions and user rights in IIS
-description: This article describes the default permissions and user rights that are set on certain folders and files. These folders and files are installed in IIS 7.0 and later.
-ms.date: 04/01/2020
+description: This article describes the default permissions and user rights that are set on certain folders and files. These folders and files are installed in IIS.
+ms.date: 01/08/2025
 ms.custom: sap:WWW Administration and Management\General configuration settings
-ms.reviewer: mlaing
+ms.reviewer: mlaing, paulboc
 ms.topic: article
 ---
-# Default permissions and user rights for IIS 7.0 and later
+# Default permissions and user rights for IIS versions that ship with Windows Server 2016 or later versions
 
-This article describes the default permissions and user rights that are set on certain folders and files. These folders and files are installed with Microsoft Internet Information Services (IIS) 7.0 and later.
+This article describes the default permissions and user rights that are set on certain folders and files. These folders and files are installed with Microsoft Internet Information Services (IIS) on Windows Server 2016 or later operating system versions or their Windows client equivalents (Windows 10 or later versions).
 
-_Original product version:_ &nbsp; Internet Information Services 8.0  
+_Original product version:_ &nbsp; Internet Information Services  
 _Original KB number:_ &nbsp; 981949
 
-## Permission changes in IIS 6.0, IIS 7.0, and later versions
+## Permission changes in IIS on Windows Server 2016 or later versions
 
-In IIS 6.0, a local account (`IUSR_MachineName`) is created when IIS is installed. The `IUSR_MachineName` account is the default identity that is used by IIS when Anonymous authentication is enabled. Anonymous authentication is used by both the File Transfer Protocol (FTP) service and the HyperText Transfer Protocol (HTTP) service. IIS 6.0 also contains a group that is named `IIS_WPG`. The `IIS_WPG` group is used as a container for all Application Pool Identities.
+In IIS on Windows Server 2016 and later versions, a built-in account named `IUSR` is used as the default identity that is used by the web server when Anonymous Authentication is enabled. This account replaces the `IUSR_MachineName` account from earlier versions of IIS that ship with Windows Server 2003. Additionally, a group that is named `IIS_IUSRS` is used as a container for all [application pool identities](/iis/manage/configuring-security/application-pool-identities). The `IIS_IUSRS` group replaces the `IIS_WPG` group from earlier versions of IIS. Because the IUSR account is a built-in account, the IUSR account no longer requires a password. The IUSR account resembles a network or local service account. 
 
-In IIS 7.0 and later, a built-in account (IUSR) replaces the `IUSR_MachineName` account. Additionally, a group that is named `IIS_IUSRS` replaces the `IIS_WPG` group. Because the IUSR account is a built-in account, the IUSR account no longer requires a password. The IUSR account resembles a network or local service account. The `IUSR_MachineName` account is created and used only when the FTP 6 server that is included on the Windows Server 2008 DVD is installed. If the FTP 6 server isn't installed, the account isn't created.
+Beginning in IIS on Windows Server 2012, a new security feature [application pool identities](/iis/manage/configuring-security/application-pool-identities) is added. This feature allows you to run Application Pools under a unique account without creating and managing domain or local accounts. The name of the Application Pool account corresponds to the name of the Application Pool.
 
-Beginning in IIS 7.5, a new security feature is added that is called _Application Pool Identities_. This feature lets you run Application Pools under a unique account without having to create and manage domain or local accounts. The name of the Application Pool account corresponds to the name of the Application Pool.
-
-For more information about IIS 7.0 accounts and groups, visit [Understanding built-in user and group accounts in IIS 7](/iis/get-started/planning-for-security/understanding-built-in-user-and-group-accounts-in-iis).
-
-For more information about Application Pool Identities, visit [Application Pool Identities](/iis/manage/configuring-security/application-pool-identities).
+For more information about IIS accounts and groups, visit [Understanding built-in user and group accounts in IIS](/iis/get-started/planning-for-security/understanding-built-in-user-and-group-accounts-in-iis).
 
 ## Default NTFS file system permissions
 
-The tables in this section list the default New Technology File System (NTFS) permissions that are assigned to certain folders and files. These folders and files are installed together with IIS 7.0, IIS 7.5, IIS 8.0, IIS 8.5, and IIS 10.0.
+The tables in this section list the default New Technology File System (NTFS) permissions that are assigned to certain folders and files. These folders and files are installed together with IIS versions that ship with Windows Server 2016, Windows 10, or later versions.
 
 ### \inetpub
 
@@ -255,7 +251,7 @@ The tables in this section list the default New Technology File System (NTFS) pe
   
 ## Default registry permissions
 
-The tables in this section list the default registry permissions that are assigned when IIS 7.0, IIS 7.5, IIS 8.0, or IIS 8.5 is installed. When Read permissions are listed for users, the following permissions are included:
+The tables in this section list the default registry permissions that are assigned when IIS versions that ship with Windows Server 2016, Windows 10, or later versions. When Read permissions are listed for users, the following permissions are included:
 
 - Query Value
 - Enumerate Subkeys
@@ -375,7 +371,7 @@ The tables in this section list the default registry permissions that are assign
   
 ## Default Windows user rights assignments
 
-The table in this section lists the default local security policies and the users, the groups, or the users and groups that are assigned to the policy when IIS 7.0, IIS 7.5, IIS 8.0, or IIS 8.5 is installed.
+The table in this section lists the default local security policies and the users, the groups, or the users and groups that are assigned to the policy when IIS versions that ship with Windows Server 2016, Windows 10, or later versions are installed.
 
 ### Windows user rights that are assigned by local security policy
 
