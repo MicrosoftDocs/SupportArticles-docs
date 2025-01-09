@@ -55,5 +55,3 @@ items:
   href: ./troubleshoot-teams.md
 - name: Session host virtual machine configuration
   href: ./troubleshoot-vm-configuration.md
-- name: anchor
-  href: anchor.md
