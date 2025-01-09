@@ -1,4 +1,3 @@
----
 title: Troubleshoot sync health and errors in Azure File Sync
 description: Troubleshoot common issues with monitoring sync health and resolving sync errors in an Azure File Sync deployment.
 author: khdownie
@@ -278,6 +277,13 @@ No action required. Azure File Sync has a scheduled task (VssSyncScheduledTask) 
 | **HRESULT** | 0x80072ee2 |
 | **HRESULT (decimal)** | -2147012894 |
 | **Error string** | WININET_E_TIMEOUT |
+| **Remediation required** | Yes |
+
+| Error | Code |
+|-|-|
+| **HRESULT** | 0x80072EFE |
+| **HRESULT (decimal)** | -2147012866 |
+| **Error string** | WININET_E_CONNECTION_ABORTED |
 | **Remediation required** | Yes |
 
 This error can occur whenever the Azure File Sync service is inaccessible from the server. You can troubleshoot this error by working through the following steps:
