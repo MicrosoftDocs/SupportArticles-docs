@@ -1,10 +1,6 @@
 ---
 title: Troubleshoot IDX10501 Error in ASP.NET Core app with Azure B2C Custom Policy
-<<<<<<< HEAD
-description: Provides guidance for troubleshooting IDX10501 Error in ASP.NET app with Azure B2C.
-=======
 description: Provides guidance for troubleshooting IDX10501 Error in ASP.NET Core with Azure B2C.
->>>>>>> 3c78ab282bc49e2b4a10a2f8bd0bf604b80a431d
 ms.date: 01/06/2025
 ms.author: markbukovich
 ms.service: entra-id
