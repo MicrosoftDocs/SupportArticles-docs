@@ -69,7 +69,7 @@ For this example, the agent installation failed with error code -2147287035 (ERR
 
 <a id="agent-installation-gpo"></a>**Agent installation fails with error: ERROR_NO_SYSTEM_RESOURCES with Error Code 0x800705AA**
 
-The agent installaton failed due to insufficient system resources exist to complete the requested service. To resolve this issue, please free up memory and retry installaton.
+The agent installation failed due to insufficient system resources. To resolve this issue, please free up memory on the server and retry installation.
 
 
 <a id="agent-installation-gpo"></a>**Agent installation fails with error: Storage Sync Agent Setup Wizard ended prematurely because of an error**
