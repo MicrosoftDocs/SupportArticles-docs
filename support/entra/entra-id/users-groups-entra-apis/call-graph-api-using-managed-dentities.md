@@ -13,7 +13,7 @@ This article explains how to use managed identities to get access token, and the
 
 ## Configure permissions for managed identities
 
-To begin with, a User Assigned Managed Identity will have a service principal in the Enterprise applications blade, however, no app registration, which is where you normally go to assign and consent to permissions. A System Assigned Managed Identity does not have a service principal that is viewable in the Enterprise applications blade. To get permissions consented for Microsoft Graph on those identities, you will need to make an OAuth Permission Grant. The following PowerShell script will do just that.
+To begin with, a User Assigned Managed Identity will have a service principal in the Enterprise applications blade, however, no app registration, which is where you normally go to assign and consent to permissions. A System Assigned Managed Identity doesn't have a service principal that is viewable in the Enterprise applications blade. To get permissions consented for Microsoft Graph on those identities, you'll need to make an OAuth Permission Grant. The following PowerShell script will do just that.
 
 ```powershell
 # Your tenant id (in Azure Portal, under Azure Active Directory -> Overview )
@@ -69,12 +69,12 @@ foreach($permission in $Permissions)
 ```
 ## Get access token
 
-Once your permissions are on the service principal, you can then make a token request using that resource ( https://graph.microsoft.com ).
+Once your permissions are on the service principal, you can then make a token request from the resource: `https://graph.microsoft.com`.
 
 > [!NOTE]
-> Once you make a token request for a resource, you will get the same token for the next 24 hours, even if you make permission changes. You will need to wait for the current token to expire in order to get a token with any new permissions.
+> Once you make a token request for a resource, you'll get the same token for the next 24 hours, even if you make permission changes. you'll need to wait for the current token to expire in order to get a token with any new permissions.
 
-Once you have your permissions, it is a matter of changing the resource parameter in the code for the access token request like this ( c# first, then vb.net ):
+Once you have your permissions, it's a matter of changing the resource parameter in the code for the access token request such as the following:
 
 ```vbnet
 Dim at As AccessToken = credential.GetToken(New TokenRequestContext(New String() {"https://graph.microsoft.com"}))
@@ -85,7 +85,7 @@ AccessToken at = credential.GetToken(new TokenRequestContext(new string[] { "htt
 ```
 
 ## Call Graph APIs
-Now, this is just showing how to get an access token for a resource such as Microsoft Graph. However, when using the Graph service client in code, you do not need to specify the resource as the graph service client will be handling that for you. In the VB.Net code, you will need to add the Microsoft.Graph nuget package and then add the Imports Microsoft.Graph at the top of the code file.
+This example shows how to request an access token for a resource such as Microsoft Graph. When you use the Microsoft Graph service client in your code, you don't need to specify the resource explicitly, as the Microsoft Graph service client handles that automatically. In VB.Net, you'll need to add the `Microsoft.Graph` NuGet package and then add the `Imports Microsoft.Graph` at the top of the code file.
 
 ```vbnet
 
