@@ -107,11 +107,15 @@ For each bit, **0** means false and **1** means true. Refer to the following tab
 |Binary|0010 0000|0001 0000|0000 0001|0001 0001|
 |Hexadecimal|0x20|0x10|0x01|0x11|
 
-### Using the network properties GUI to disable IPv6 is not supported
-
 This registry value doesn't affect the state of the following check box. Even if the registry key is set to disable IPv6, the check box in the **Networking** tab for each interface can be selected. This is an expected behavior.
 
 :::image type="content" source="./media/configure-ipv6-in-windows/network-properties.svg" alt-text="The Internet Protocol Version 6 (TCP/IPv6) option in Network properties." border="false":::
+
+### It is NOT supported to unbind IPv6 from an interface
+- by unchecking 'Internet Protocol Version 6 (TCP/IPv6)' in the network properties GUI (see image above), or 
+- by using the PowerShell command `Disable-NetAdapterBinding -Name "MyAdapter" -ComponentID ms_tcpip[6] `
+  
+These settings don't disable IPv6 but unbind the IPv6 protocol from the network interface. 
 
 ## Reference
 
@@ -133,4 +137,4 @@ For more information about the related issues, see the articles below:
 Tools to help with network trace: [Microsoft Network Monitor 3.4 (archive)](https://www.microsoft.com/download/details.aspx?id=4865)
 
 > [!WARNING]
-> Netmon 3.4 isn't compatible with Windows Server 2012 or newer OS when LBFO NIC teaming is enabled. Use **Message Analyzer** instead.
+> Netmon 3.4 isn't compatible with Windows Server 2012 or newer OS when LBFO NIC teaming is enabled.
