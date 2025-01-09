@@ -1,7 +1,7 @@
 ---
 title: Schedule and automate backups of databases
 description: This article describes how to use a Transact-SQL script and Windows Task Scheduler to automate backups of SQL Server Express databases on a scheduled basis.
-ms.date: 01/07/2025
+ms.date: 01/09/2025
 ms.custom: sap:Database Backup and Restore
 ms.topic: how-to
 ms.reviewer: jopilov
@@ -38,7 +38,7 @@ You have to follow these four steps to back up your SQL Server databases by usin
 
 ### Step 1: Create a stored procedure to back up your databases
 
-Connect to your SQL express instance and create sp_BackupDatabases stored procedure in your master database using the script at the following location:
+Connect to your SQL express instance and create `sp_BackupDatabases` stored procedure in your master database using the script at the following location:
 
 [SQL_Express_Backups](https://raw.githubusercontent.com/microsoft/mssql-support/master/sample-scripts/backup_restore/SQL_Express_Backups.sql)
 
