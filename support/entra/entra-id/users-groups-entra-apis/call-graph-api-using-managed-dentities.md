@@ -69,12 +69,10 @@ foreach($permission in $Permissions)
 ```
 ## Get access token
 
-Once your permissions are on the service principal, make a token request from the resource: `https://graph.microsoft.com`.
+After the permissions are configured in the service principal, make a token request from the resource: `https://graph.microsoft.com`:
 
 > [!NOTE]
 > Once you make a token request for a resource, you'll get the same token for the next 24 hours, even if you make permission changes. you'll need to wait for the current token to expire in order to get a token with any new permissions.
-
-Once you have your permissions, it's a matter of changing the resource parameter in the code for the access token request such as the following:
 
 ```vbnet
 Dim at As AccessToken = credential.GetToken(New TokenRequestContext(New String() {"https://graph.microsoft.com"}))
@@ -87,6 +85,7 @@ AccessToken at = credential.GetToken(new TokenRequestContext(new string[] { "htt
 ## Call Graph APIs
 This example shows how to request an access token for a resource such as Microsoft Graph. When you use the Microsoft Graph service client in your code, you don't need to specify the resource explicitly, as the Microsoft Graph service client handles that automatically. In VB.Net, you'll need to add the `Microsoft.Graph` NuGet package and then add the `Imports Microsoft.Graph` at the top of the code file.
 
+### VB.Net
 ```vbnet
 
 
@@ -168,7 +167,9 @@ This example shows how to request an access token for a resource such as Microso
 
 
     End Sub
-Similar, the missing code snippets for the C# project:
+```
+
+### C#
 
 ```csharp
         static void Main(string[] args)
