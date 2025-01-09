@@ -67,6 +67,11 @@ MSI (s) (0C:C8) [12:23:40:994]: Note: 1: 2265 2:  3: -2147287035
 
 For this example, the agent installation failed with error code -2147287035 (ERROR_ACCESS_DENIED).
 
+<a id="agent-installation-gpo"></a>**Agent installation fails with error: ERROR_NO_SYSTEM_RESOURCES with Error Code 0x800705AA**
+
+The agent installation failed due to insufficient system resources. To resolve this issue, please free up memory on the server and retry installation.
+
+
 <a id="agent-installation-gpo"></a>**Agent installation fails with error: Storage Sync Agent Setup Wizard ended prematurely because of an error**
 
 In the agent installation log, the following error is logged:
