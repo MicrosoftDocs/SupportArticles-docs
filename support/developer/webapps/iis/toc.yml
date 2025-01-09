@@ -155,6 +155,8 @@ items:
     href: www-administration-management/configure-default-document-iis.md
   - name: Content types for HTTP compression
     href: www-administration-management/content-types-http-compression.md
+  - name: Default permissions and user rights
+    href: www-administration-management/default-permissions-user-rights.md
   - name: Diagnosing failures with remote administration
     href: www-administration-management/diagnosing-failures-with-remote-administration.md
   - name: Enable SSL for all customers
@@ -188,8 +190,6 @@ items:
     href: www-authentication-authorization/configure-intermediate-certificates.md
   - name: Configure Many-to-One client mappings
     href: www-authentication-authorization/configure-many-to-one-client-mappings.md
-  - name: Default permissions and user rights
-    href: www-authentication-authorization/default-permissions-user-rights.md
   - name: Diagnostic pages for Windows Integrated Authentication
     href: www-authentication-authorization/diagnostics-pages-windows-integrated-authentication.md
   - name: Digest authentication fails
