@@ -44,8 +44,8 @@ Statuses include:
 
 - **Running checks**: The health checks are currently running. The ANC list view automatically refreshes every five minutes. Wait for the checks to complete before attempting to assign it to a provisioning policy.
 - **Checks successful**: All health checks passed. The ANC is ready for use.
-- **Checks successful with warnings**: All critical health checks passed. However at least one noncritical check may have issues. An example of a check that may trigger this state is the Microsoft Entra hybrid join sync check. Microsoft Entra hybrid join sync can take up to 90 minutes. Therefore, we check much of the Microsoft Entra hybrid join sync service but can’t confirm that the device sync succeeded until later. Provisioning policies can use ANCs with this status.
-- **Checks failed**: One or more required checks failed. An ANC can’t be used if it's in a failed state. Resolve the underlying issue and Retry the health checks.
+- **Checks successful with warnings**: All critical health checks passed. However at least one noncritical check may have issues. An example of a check that may trigger this state is the Microsoft Entra hybrid join sync check. Microsoft Entra hybrid join sync can take up to 90 minutes. Therefore, we check much of the Microsoft Entra hybrid join sync service but can't confirm that the device sync succeeded until later. Provisioning policies can use ANCs with this status.
+- **Checks failed**: One or more required checks failed. An ANC can't be used if it's in a failed state. Resolve the underlying issue and Retry the health checks.
 - **Inactive**: The ANC is inactive and health checks are paused. Reactivate the ANC to restart the health checks. After the health checks are passed, the ANC is ready for use.
 
 ## Status error details
@@ -70,7 +70,7 @@ Every failed ANC or success with warning error state includes the technical deta
 - **Intune enrollment restrictions allow Windows enrollment**: Verify that Intune enrollment restrictions are configured to allow Windows enrollment.
 - **Localization language package readiness**: Verify that the operating system and Microsoft 365 language packages are reachable. Also verify that the localization package download link is reachable.
 - **UDP connection check**: Network configuration allows the use of UDP direct connection (STUN).
-- **Single sign-on configuration**: Determine if the network is properly configured for [single sign-on](identity-authentication.md#single-sign-on-sso) to Microsoft Entra hybrid joined Cloud PCs by ensuring a Kerberos Server object exists.
+- **Single sign-on configuration**: Determine if the network is properly configured for [single sign-on](/windows-365/enterprise/identity-authentication#single-sign-on-sso) to Microsoft Entra hybrid joined Cloud PCs by ensuring a Kerberos Server object exists.
 
 <!-- ########################## -->
 ## Next steps

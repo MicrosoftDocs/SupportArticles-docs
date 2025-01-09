@@ -46,7 +46,7 @@ The following errors can occur when connecting to a Cloud PC.
 
 **Possible solution**: Turn on PKU2U protocol requests on both the Cloud PC and the user's physical device:
 
-1. [Create a filter for all Cloud PCs](create-filter.md#create-a-filter-for-all-cloud-pcs).
+1. [Create a filter for all Cloud PCs](/windows-365/enterprise/create-filter#create-a-filter-for-all-cloud-pcs).
 2. Create a device configuration policy [using the settings catalog](/mem/intune/configuration/settings-catalog).
 3. On the **Configuration settings** page, search for and select **Network Security Allow PKU2U Authentication Requests** > **Allow**.
 ![Screenshot with the **Network Security Allow PKU2U Authentication Requests** set to **Allow**.](./media/connection-errors/allow-pku2u.png)
@@ -78,11 +78,11 @@ If you only manage the user's physical device through Group Policy or you don't 
 - Resource Locks
 - Blocks on required endpoints
 
-**Possible solution**: Review the settings and confirm that they aren’t interfering with connections.
+**Possible solution**: Review the settings and confirm that they aren't interfering with connections.
 
 ### The remote PC ended your session. If this keeps happening, contact your network administrator for assistance. Error code: 0x3
 
-**Potential cause**: This error can occur when the Cloud PC’s processor is over-utilized.
+**Potential cause**: This error can occur when the Cloud PC's processor is over-utilized.
 
 **Possible solution**: If the issue persists, sign in to [windows365.microsoft.com](https://windows365.microsoft.com) > select the cog icon next to the Cloud PC > **Restart**.
 
@@ -134,7 +134,7 @@ For more information, see [What is IP Address 168.63.129.16](/azure/virtual-netw
 
 ### Move the Cloud PC to a new organizational unit (OU) with no group policies
 
-Connection problems may be caused by settings delivered by group policies. To test this possible cause, you can move the Cloud PC to a separate OU that’s blocked from receiving group policies.
+Connection problems may be caused by settings delivered by group policies. To test this possible cause, you can move the Cloud PC to a separate OU that's blocked from receiving group policies.
 
 ### On-premises Group Policy Objects (GPO) may affect a Cloud PC's provisioning or behavior
 

@@ -45,9 +45,9 @@ To understand more about the SCP and learn how to configure it, see the [Microso
 
 **Suggested test**: Confirm with your identity team that the SCP exists for all target forests.
 
-## Azure network connection isn’t healthy
+## Azure network connection isn't healthy
 
-Cloud PC provisioning is blocked if the associated ANC isn’t healthy.
+Cloud PC provisioning is blocked if the associated ANC isn't healthy.
 
 The ANC refreshes every 6 hours. Provisioning will fail if the ANC refresh fails while provisioning is under way.
 
@@ -55,7 +55,7 @@ The ANC refreshes every 6 hours. Provisioning will fail if the ANC refresh fails
 
 ## Disk allocation error
 
-Windows 365 provisioned the Cloud PC but didn’t allocate the full OS storage according to what the user should have received based on their assigned Windows 365 license. As a result, the user can’t see or use the full storage that they were assigned.
+Windows 365 provisioned the Cloud PC but didn't allocate the full OS storage according to what the user should have received based on their assigned Windows 365 license. As a result, the user can't see or use the full storage that they were assigned.
 
 **Suggested test**: Retry provisioning.
 
@@ -75,9 +75,9 @@ JsonADDomainExtension is the Azure function used to perform this domain join. Ma
 
 ## Microsoft Entra hybrid join failed
 
-Windows 365 doesn’t perform any Microsoft Entra hybrid join function for the customer. Microsoft Entra hybrid join must be configured and healthy as a prerequisite for Cloud PC.
+Windows 365 doesn't perform any Microsoft Entra hybrid join function for the customer. Microsoft Entra hybrid join must be configured and healthy as a prerequisite for Cloud PC.
 
-If provisioning fails because of Microsoft Entra hybrid join, it’s likely because of an insufficient sync period configured in your AD Sync service. Make sure that Microsoft Entra Connect is configured to sync the AD computer objects every 30 minutes, and no more than 60 minutes. This step times out if the Microsoft Entra object doesn’t appear within 90 minutes.
+If provisioning fails because of Microsoft Entra hybrid join, it's likely because of an insufficient sync period configured in your AD Sync service. Make sure that Microsoft Entra Connect is configured to sync the AD computer objects every 30 minutes, and no more than 60 minutes. This step times out if the Microsoft Entra object doesn't appear within 90 minutes.
 
 Another factor to consider is your on-premises AD replication time. Make sure that the domain controller being used for Windows 365 is replicated fast enough to make it into Microsoft Entra ID within this five hour timeout window.
 
@@ -103,19 +103,19 @@ If Intune enrollment is failing, make sure that:
 
 ## License not found
 
-While a provisioning is in progress, someone removed the user’s Windows 365 license
+While a provisioning is in progress, someone removed the user's Windows 365 license
 
 **Suggested test**: Make sure that the user has a valid license associated.
 
 ## Local administrator permissions error
 
-Windows 365 provisioned the Cloud PC but didn’t grant the user local administrator permissions as defined by a User Settings policy. As a result, the user won’t isn't an administrator on their Cloud PC. So, they can’t make system-level changes or install apps on the system-level context.
+Windows 365 provisioned the Cloud PC but didn't grant the user local administrator permissions as defined by a User Settings policy. As a result, the user won't isn't an administrator on their Cloud PC. So, they can't make system-level changes or install apps on the system-level context.
 
 **Suggested test**: Retry provisioning or create a new User Settings policy.
 
 ## Microsoft Teams optimization error
 
-Windows 365 provisioned the Cloud PC. However, it didn’t configure the Cloud PC to use Microsoft Teams in the mode optimized for running on a remote VM. This optimization doesn't install Microsoft Teams and all components. It only sets the configuration that takes effect if you do install Microsoft Teams on the Cloud PC. If this optimization isn't set and Microsoft Teams is installed on this device, Microsoft Teams doesn't run in the optimized mode for remote connections.
+Windows 365 provisioned the Cloud PC. However, it didn't configure the Cloud PC to use Microsoft Teams in the mode optimized for running on a remote VM. This optimization doesn't install Microsoft Teams and all components. It only sets the configuration that takes effect if you do install Microsoft Teams on the Cloud PC. If this optimization isn't set and Microsoft Teams is installed on this device, Microsoft Teams doesn't run in the optimized mode for remote connections.
 
 **Suggested test**: Retry provisioning.
 
@@ -137,13 +137,13 @@ While a provisioning is in progress, someone deleted the provisioning policy.
 
 ## Request disallowed by policy
 
-Windows 365 uses the customer provided vNet to perform a vNic ingestion from the Cloud PC into the customer’s vNet. Sometimes an enterprise implements an Azure Policy to restrict certain Azure objects being created. Make sure that there are no Azure policies that may restrict Windows 365 from creating Azure objects on your behalf.
+Windows 365 uses the customer provided vNet to perform a vNic ingestion from the Cloud PC into the customer's vNet. Sometimes an enterprise implements an Azure Policy to restrict certain Azure objects being created. Make sure that there are no Azure policies that may restrict Windows 365 from creating Azure objects on your behalf.
 
 **Suggested test**: View **Policy** in the Azure portal and look for any policy events that would stop the Windows 365 service from provisioning the Cloud PC.
 
 ## Start Menu power icons error
 
-Windows 365 provisioned the Cloud PC but didn’t hide the shutdown and restart icons in the Start Menu. As a result, the user sees the shutdown and restart icons in the Start Menu. If the user ends their Cloud PC connection by selecting the shutdown icon, they may need to restart the Cloud PC from the Cloud PC portal before connecting again.
+Windows 365 provisioned the Cloud PC but didn't hide the shutdown and restart icons in the Start Menu. As a result, the user sees the shutdown and restart icons in the Start Menu. If the user ends their Cloud PC connection by selecting the shutdown icon, they may need to restart the Cloud PC from the Cloud PC portal before connecting again.
 
 **Suggested test**: Retry provisioning or create a device configuration policy to [hide the shut down button](/windows/client-management/mdm/policy-csp-start#start-hideshutdown) and to [hide the restart button](/windows/client-management/mdm/policy-csp-start#start-hiderestart).
 
@@ -153,7 +153,7 @@ If a specific region isn't listed in the Cloud PC provisioning user interface (U
 
 ## Time zone redirection error
 
-Windows 365 provisioned the Cloud PC but didn’t configure time zone redirection. As a result, the user doesn't see their local time reflected when connected to their Cloud PC. Instead, they see the standard UTC time.
+Windows 365 provisioned the Cloud PC but didn't configure time zone redirection. As a result, the user doesn't see their local time reflected when connected to their Cloud PC. Instead, they see the standard UTC time.
 
 **Suggested test**: Retry provisioning or create a Group Policy Object with the Allow time zone redirection group policy configured. To learn more about the policy, download the [Group Policy Settings Reference Spreadsheet](https://www.microsoft.com/download/101451).
 
@@ -165,11 +165,11 @@ While a provisioning is in progress, someone deleted the associated user.
 
 ## Windows reset error
 
-Windows 365 provisioned the Cloud PC but didn’t disable the built-in Windows reset option. As a result, the user can manually trigger the built-in Windows reset option under Settings. The Cloud PC will never successfully complete the reset, which makes the Cloud PC unusable.
+Windows 365 provisioned the Cloud PC but didn't disable the built-in Windows reset option. As a result, the user can manually trigger the built-in Windows reset option under Settings. The Cloud PC will never successfully complete the reset, which makes the Cloud PC unusable.
 
 **Suggested test**: Retry provisioning.
 
-## Blocking High Risk Ports: One or more high risk ports couldn’t be disabled
+## Blocking High Risk Ports: One or more high risk ports couldn't be disabled
 
 Windows 365 provisioned the Cloud PC but was unable to block all high-risk ports based on Microsoft security standards. Windows 365 disables high risk ports used for the management of resources or unsecure/unencrypted data transmission and shouldn't be exposed to the internet by default.
 
@@ -186,7 +186,7 @@ If you are seeing this error, some factors to consider are:
 
 ## Other provisioning failures
 
-If you encounter other provisioning errors not covered above, make sure all the [required endpoints](requirements-network.md?tabs=enterprise%2Cent#allow-network-connectivity) are allowed on the VNet used for your ANC and any gateway device.
+If you encounter other provisioning errors not covered above, make sure all the [required endpoints](/windows-365/enterprise/requirements-network?tabs=enterprise%2Cent#allow-network-connectivity) are allowed on the VNet used for your ANC and any gateway device.
 
 <!-- ########################## -->
 ## Next steps

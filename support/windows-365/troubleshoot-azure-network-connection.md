@@ -35,7 +35,7 @@ The Azure network connection (ANC) periodically checks your environment to make 
 
 ## Active Directory domain join
 
-When a Cloud PC is provisioned, it’s automatically joined to the provided domain. To test the domain join process, a domain computer object is created in the defined Organizational Unit (OU) with a name similar to "CPC-Hth" every time Windows 365 health checks are run. These computer objects are disabled when the health check is complete. Active Directory domain join failure can occur for many reasons. If the domain join fails, make sure that:
+When a Cloud PC is provisioned, it's automatically joined to the provided domain. To test the domain join process, a domain computer object is created in the defined Organizational Unit (OU) with a name similar to "CPC-Hth" every time Windows 365 health checks are run. These computer objects are disabled when the health check is complete. Active Directory domain join failure can occur for many reasons. If the domain join fails, make sure that:
 
 - The domain join user has sufficient permissions to join the domain provided.  
 - The domain join user can write to the organizational unit (OU) provided.  
@@ -51,7 +51,7 @@ When a Cloud PC is provisioned, it’s automatically joined to the provided doma
 
 Before mobile device management (MDM) enrollment can take place during provisioning, a Microsoft Entra ID object must be present for the Cloud PC. This check is intended to make sure that your organizations computer accounts are syncing to Microsoft Entra ID in a timely manner.  
 
-Make sure that your Microsoft Entra computer objects appear in Microsoft Entra ID quickly. We suggest within 30 minutes, and no longer than 60 minutes. If the computer object doesn’t arrive in Microsoft Entra ID within 90 minutes, provisioning fails.  
+Make sure that your Microsoft Entra computer objects appear in Microsoft Entra ID quickly. We suggest within 30 minutes, and no longer than 60 minutes. If the computer object doesn't arrive in Microsoft Entra ID within 90 minutes, provisioning fails.  
 
 If provisioning fails, make sure that:
 
@@ -70,16 +70,16 @@ If this check fails, make sure that you:
 
 - Check the subnet in Azure Virtual Network. It should have enough address space available.  
 - Make sure there are enough address to handle three provisioning retries, each of which may hold onto the network addresses used for a few hours.  
-- Remove any unused vNICs. It’s best to use a dedicated subnet for Cloud PCs to make sure that no other services are consuming allocation of IP addresses.  
+- Remove any unused vNICs. It's best to use a dedicated subnet for Cloud PCs to make sure that no other services are consuming allocation of IP addresses.  
 - Expand the subnet to make more addresses available. This can't be completed if there are devices connected.
 
-During provisioning attempts, it’s important to consider any CanNotDelete locks that may be applied at the resource group level or above. If these locks are present, the network interfaces created in the process aren't automatically deleted. In they aren't automatically deleted, you must manually remove the vNICs before you can retry.
+During provisioning attempts, it's important to consider any CanNotDelete locks that may be applied at the resource group level or above. If these locks are present, the network interfaces created in the process aren't automatically deleted. In they aren't automatically deleted, you must manually remove the vNICs before you can retry.
 
-During provisioning attempts, it’s important to consider any existing locks at the resource group level or above. If these locks are present, the network interfaces created in the process won't be automatically deleted. In the event this occurs, you must manually remove the vNICs before you can retry.
+During provisioning attempts, it's important to consider any existing locks at the resource group level or above. If these locks are present, the network interfaces created in the process won't be automatically deleted. In the event this occurs, you must manually remove the vNICs before you can retry.
 
 ## Azure tenant readiness
 
-When checks are performed, we check that the provided Azure subscription is valid and healthy. If it's not valid and healthy, we’re unable to connect Cloud PCs back to your vNet during provisioning. Problems such as billing issues may cause subscriptions to become disabled.  
+When checks are performed, we check that the provided Azure subscription is valid and healthy. If it's not valid and healthy, we're unable to connect Cloud PCs back to your vNet during provisioning. Problems such as billing issues may cause subscriptions to become disabled.  
 
 Many organizations use Azure policies to make sure that resources are only provisioned into certain regions and services. You should make sure that any Azure policies consider the Cloud PC service and the supported regions.
 
@@ -109,7 +109,7 @@ Along with standard the DNS lookup on the supplied domain name, we also check fo
 
 During provisioning, Cloud PCs must connect to multiple Microsoft publicly available services. These services include Microsoft Intune, Microsoft Entra ID, and Azure Virtual Desktop.  
 
-You must make sure that all of the [required public endpoints](requirements-network.md#allow-network-connectivity) can be reached from the subnet used by Cloud PCs.
+You must make sure that all of the [required public endpoints](/windows-365/enterprise/requirements-network#allow-network-connectivity) can be reached from the subnet used by Cloud PCs.
 
 If this test fails, make sure that:
 

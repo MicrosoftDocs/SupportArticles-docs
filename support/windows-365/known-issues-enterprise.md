@@ -46,7 +46,7 @@ Watermarking support is configured on session hosts and enforced by the Remote D
 
 For more information, see [Administrative template for Azure Virtual Desktop](/azure/virtual-desktop/administrative-template?tabs=intune#configure-the-administrative-template).
 
-[!INCLUDE [Missing start menu and taskbar when using iPad and the Remote Desktop app to access a Cloud PC](/windows-365/enterprise/../includes/known-issues)]
+[!INCLUDE [Missing start menu and taskbar when using iPad and the Remote Desktop app to access a Cloud PC](includes/known-issues.md)]
 
 ## In-place Windows upgrade may change computer name
 
@@ -86,7 +86,7 @@ The following device compliance settings may report as **Not Compliant** when be
 
 **Troubleshooting steps to remove not compliant settings**:
 
-1. [Create a filter for all Cloud PCs](create-filter.md#create-a-filter-for-all-cloud-pcs).
+1. [Create a filter for all Cloud PCs](/windows-365/enterprise/create-filter#create-a-filter-for-all-cloud-pcs).
 2. For any existing device compliance policies that both evaluate to a Cloud PC and contain either of the **Not Compliant** settings, use this new filter to exclude Cloud PCs from the policy assignment.
 3. Create a new device compliance policy without either of the **Not Compliant** settings and use this new filter to include Cloud PCs for the policy assignment.
 
@@ -117,9 +117,9 @@ When single sign-on isn't used, users can see the Cloud PC lock screen and enter
 
 When using single sign-on, all authentication behavior (including supported credential types and sign-in frequency) is driven through Microsoft Entra ID.
 
-**Troubleshooting**: To enforce periodic reauthentication through Microsoft Entra ID, create a Conditional Access policy using the [sign-in frequency control](set-conditional-access-policies.md#configure-sign-in-frequency).
+**Troubleshooting**: To enforce periodic reauthentication through Microsoft Entra ID, create a Conditional Access policy using the [sign-in frequency control](/windows-365/enterprise/set-conditional-access-policies#configure-sign-in-frequency).
 
-## I don’t see the Cloud PC reports on the Intune admin center Devices > Overview page
+## I don't see the Cloud PC reports on the Intune admin center Devices > Overview page
 
 If you turned on the **Use Devices preview** setting in the Intune admin center, the **Cloud PC performance (preview)** tab, **Cloud PCs with connection quality issues** report, and **Cloud PCs with low utilization** report aren't on the **Overview** page.
 
@@ -132,7 +132,7 @@ If you turned on the **Use Devices preview** setting in the Intune admin center,
 - MSFT Attack Surface Reduction rules (for example, Manage attack surface reduction settings with endpoint security policies in Microsoft Intune | Microsoft Learn), or
 - Third party solutions that block the install language script execution during the post-provisioning process.  
 
-Cloud PCs provisioned after July 2022 don’t encounter this issue.
+Cloud PCs provisioned after July 2022 don't encounter this issue.
 
 **Troubleshooting steps**: Determine the root cause:
 
@@ -161,12 +161,12 @@ Some GCC High government customers whose resources are deployed to `microsoft.us
 
 **Possible cause**: The issue occurs when the web client or the Safari browser blocks third-party cookies. Third-party cookies are cookies set by a domain other than the one you're visiting.  
 
-For GCC High customers with resources deployed to `microsoft.us` environments, the `microsoft.us` cookies are considered third-party cookies by the web client or the Safari browser. This consideration is because the web client/Safari browser uses the Cloud PC’s domain name, which is different from `microsoft.us`, to determine the first-party domain. If the web client/Safari browser blocks third-party cookies, it prevents the `microsoft.us` cookies from:
+For GCC High customers with resources deployed to `microsoft.us` environments, the `microsoft.us` cookies are considered third-party cookies by the web client or the Safari browser. This consideration is because the web client/Safari browser uses the Cloud PC's domain name, which is different from `microsoft.us`, to determine the first-party domain. If the web client/Safari browser blocks third-party cookies, it prevents the `microsoft.us` cookies from:
 
 - being stored.
 - used for authentication and authorization.
 
-As a result, you can’t connect to your Cloud PC session.
+As a result, you can't connect to your Cloud PC session.
 
 **Troubleshooting steps**: Allow third-party cookies from `microsoft.us` in your:
 
@@ -192,9 +192,9 @@ Make sure that:
 
 Another option is to not require DMA for VBS because they're incompatible with each other.
 
-## Teams isn’t enforcing screen capture protection<!-- 49423094 -->
+## Teams isn't enforcing screen capture protection<!-- 49423094 -->
 
-When screen capture protection is enabled, Teams on Windows 365 Cloud PCs isn’t enforcing screen capture protection.
+When screen capture protection is enabled, Teams on Windows 365 Cloud PCs isn't enforcing screen capture protection.
 
 **Troubleshooting steps**:
 
@@ -230,7 +230,7 @@ Scope tags applied to custom images can't be edited or directly added by top-lev
 
 When scoped admins create custom images, those custom images are tagged with the same scope tags that are associated with the scoped admin.  
 
-For example, if an admin scoped with the scope tag “Scope Tag A” creates a custom image, the created custom image is automatically tagged with “Scope Tag A”.  
+For example, if an admin scoped with the scope tag "Scope Tag A" creates a custom image, the created custom image is automatically tagged with "Scope Tag A".  
 
 ## WebRTC Redirector Service missing from latest Windows 365 Cloud PC gallery images
 
@@ -243,7 +243,7 @@ This applies to the following gallery images:
 
 **Troubleshooting steps**
 
-For newly provisioned Cloud PCs, verify WebRTC is available. If it’s not, you can use either of the following options:
+For newly provisioned Cloud PCs, verify WebRTC is available. If it's not, you can use either of the following options:
 
 - To add the WebRTC Redirector Service app to the list of apps to install by default onto Cloud PCs, follow the steps: [Add Microsoft 365 Apps to Windows 10/11 devices with Microsoft Intune](/mem/intune/apps/apps-add-office365).
 
