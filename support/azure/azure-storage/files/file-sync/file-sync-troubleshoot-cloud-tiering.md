@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/7fb98b7c-12d7-4e6e-8f78-300973082ce9)![image](https://github.com/user-attachments/assets/b64a6e51-b31b-425e-b76e-12a70aa2dbf9)![image](https://github.com/user-attachments/assets/8d4416a9-c0d2-4c60-aca3-ab28fbe18f1c)---
+---
 title: Troubleshoot Azure File Sync cloud tiering
 description: Troubleshoot common issues with cloud tiering in an Azure File Sync deployment.
 author: khdownie
