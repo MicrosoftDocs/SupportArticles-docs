@@ -121,7 +121,7 @@ When the Azure Virtual Desktop Agent is first installed on session host VMs (eit
 ### Error: The status filed in Get-AzWvdSessionHost cmdlet shows status as Unavailable
 
 > [!div class="mx-imgBorder"]
-> ![Get-AzWvdSessionHost cmdlet shows status as Unavailable.](media/23b8e5f525bb4e24494ab7f159fa6b62.png)
+> ![Get-AzWvdSessionHost cmdlet shows status as Unavailable.](media/troubleshoot-vm-configuration/23b8e5f525bb4e24494ab7f159fa6b62.png)
 
 **Cause:** The agent isn't able to update itself to a new version.
 
@@ -193,7 +193,7 @@ If you're having issues with the Azure Virtual Desktop side-by-side stack, type 
 The output of **qwinsta** will list **rdp-sxs** in the output if the side-by-side stack is installed and enabled.
 
 > [!div class="mx-imgBorder"]
-> ![Side-by-side stack installed or enabled with qwinsta listed as rdp-sxs in the output.](media/23b8e5f525bb4e24494ab7f159fa6b62.png)
+> ![Side-by-side stack installed or enabled with qwinsta listed as rdp-sxs in the output.](media/troubleshoot-vm-configuration/23b8e5f525bb4e24494ab7f159fa6b62.png)
 
 Examine the registry entries listed below and confirm that their values match. If registry keys are missing or values are mismatched, make sure you're running [a supported operating system](troubleshoot-agent.md#error-operating-a-pro-vm-or-other-unsupported-os). If you are, follow the instructions in [Register session hosts to a host pool](add-session-hosts-host-pool.md#register-session-hosts-to-a-host-pool) for how to reinstall the side-by-side stack.
 
@@ -208,7 +208,7 @@ Examine the registry entries listed below and confirm that their values match. I
 ### Error: O_REVERSE_CONNECT_STACK_FAILURE
 
 > [!div class="mx-imgBorder"]
-> ![O_REVERSE_CONNECT_STACK_FAILURE error code.](media/23b8e5f525bb4e24494ab7f159fa6b62.png)
+> ![O_REVERSE_CONNECT_STACK_FAILURE error code.](media/troubleshoot-vm-configuration/23b8e5f525bb4e24494ab7f159fa6b62.png)
 
 **Cause:** The side-by-side stack isn't installed on the session host VM.
 
@@ -250,7 +250,7 @@ Follow these instructions to run remediation from the same subnet and domain:
    ```
 
    > [!div class="mx-imgBorder"]
-   > ![Administrator command prompt](media/AdministratorCommandPrompt.png)
+   > ![Administrator command prompt](media/troubleshoot-vm-configuration/AdministratorCommandPrompt.png)
 
 1. Run the following command, which will list Microsoft components installed on the VM with the malfunctioning side-by-side stack.
 
@@ -296,7 +296,7 @@ To check which version of Windows 10 Enterprise multi-session you have:
 4. Check the number next to "Version." The number should be either "1809" or "1903," as shown in the following image.
 
     > [!div class="mx-imgBorder"]
-    > ![A screenshot of the Windows specifications window. The version number is highlighted in blue.](media/windows-specifications.png)
+    > ![A screenshot of the Windows specifications window. The version number is highlighted in blue.](media/troubleshoot-vm-configuration/windows-specifications.png)
 
 Now that you know your version number, skip ahead to the relevant section.
 

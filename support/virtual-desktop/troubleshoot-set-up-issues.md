@@ -25,7 +25,7 @@ To use the Windows 10 Enterprise multi-session image, go to the Azure Marketplac
 ### Error: "Create a free account" appears when accessing the service
 
 > [!div class="mx-imgBorder"]
-> ![An image showing the Azure portal displaying the "Create a free account" message](media/create-new-account.png)
+> ![An image showing the Azure portal displaying the "Create a free account" message](media/troubleshoot-set-up-issues/create-new-account.png)
 
 **Cause**: There aren't active subscriptions in the account you signed in to Azure with, or the account doesn't have permissions to view the subscriptions.
 
@@ -69,7 +69,7 @@ Follow these instructions to troubleshoot unsuccessful deployments of Azure Reso
 ### Error: Your deployment failed….\<hostname>/joindomain
 
 > [!div class="mx-imgBorder"]
-> ![Your Deployment Failed screenshot.](media/failure-joindomain.png)
+> ![Your Deployment Failed screenshot.](media/troubleshoot-set-up-issues/failure-joindomain.png)
 
 Example of raw error:
 
@@ -111,7 +111,7 @@ To fix this, do the following things:
 ### Error: VMExtensionProvisioningError
 
 > [!div class="mx-imgBorder"]
-> ![Screenshot of Your Deployment Failed with terminal provisioning state failed.](media/failure-vmextensionprovisioning.png)
+> ![Screenshot of Your Deployment Failed with terminal provisioning state failed.](media/troubleshoot-set-up-issues/failure-vmextensionprovisioning.png)
 
 **Cause 1:** Transient error with the Azure Virtual Desktop environment.
 
@@ -122,7 +122,7 @@ To fix this, do the following things:
 ### Error: The Admin Username specified isn't allowed
 
 > [!div class="mx-imgBorder"]
-> ![Screenshot of your deployment failed in which an admin specified isn't allowed.](media/failure-username.png)
+> ![Screenshot of your deployment failed in which an admin specified isn't allowed.](media/troubleshoot-set-up-issues/failure-username.png)
 
 Example of raw error:
 
@@ -140,7 +140,7 @@ Example of raw error:
 ### Error: VM has reported a failure when processing extension
 
 > [!div class="mx-imgBorder"]
-> ![Screenshot of the resource operation completed with terminal provisioning state in Your Deployment Failed.](media/failure-processing.png)
+> ![Screenshot of the resource operation completed with terminal provisioning state in Your Deployment Failed.](media/troubleshoot-set-up-issues/failure-processing.png)
 
 Example of raw error:
 
@@ -160,7 +160,7 @@ Example of raw error:
 ### Error: DeploymentFailed – PowerShell DSC Configuration 'FirstSessionHost' completed with Error(s)
 
 > [!div class="mx-imgBorder"]
-> ![Screenshot of deployment fail with PowerShell DSC Configuration 'FirstSessionHost' completed with Error(s).](media/failure-dsc.png)
+> ![Screenshot of deployment fail with PowerShell DSC Configuration 'FirstSessionHost' completed with Error(s).](media/troubleshoot-set-up-issues/failure-dsc.png)
 
 Example of raw error:
 

@@ -104,18 +104,18 @@ To resolve this issue, check that you can reach the two endpoints referred to as
 1. If your network isn't blocking the connection to the broker, both pages should load successfully and show a message stating  **RD Broker is Healthy**, as shown in the following screenshots:
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot of successfully loaded broker uri access](media/broker-uri-web.png)
+   > ![Screenshot of successfully loaded broker uri access](media/troubleshoot-agent/broker-uri-web.png)
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot of successfully loaded broker global uri access](media/broker-global.png)
+   > ![Screenshot of successfully loaded broker global uri access](media/troubleshoot-agent/broker-global.png)
  
 1. If the network is blocking broker connection, the pages won't load, as shown in the following screenshot. 
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot of unsuccessful loaded broker access](media/unsuccessful-broker-uri.png)
+   > ![Screenshot of unsuccessful loaded broker access](media/troubleshoot-agent/unsuccessful-broker-uri.png)
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot of unsuccessful loaded broker global access](media/unsuccessful-broker-global.png)
+   > ![Screenshot of unsuccessful loaded broker global access](media/troubleshoot-agent/unsuccessful-broker-global.png)
 
    You must unblock the required endpoints and then repeat steps 4 to 7. For more information, see [Required URL List](/azure/virtual-desktop/safe-url-list).
 
@@ -175,7 +175,7 @@ To check whether group policy is blocking `msiexec.exe` from running:
 1. In the **Resultant Set of Policy** window that pops up, go to **Computer Configuration > Administrative Templates** > **Windows Components** > **Windows Installer** > **Turn off Windows Installer**. If the state is **Enabled**, work with your Active Directory team to allow `msiexec.exe` to run.
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot of Windows Installer policy in Resultant Set of Policy](media/gpo-policy.png)
+   > ![Screenshot of Windows Installer policy in Resultant Set of Policy](media/troubleshoot-agent/gpo-policy.png)
 
    > [!NOTE]
    > This list isn't a comprehensive list of policies, just the ones we're currently aware of.
@@ -202,7 +202,7 @@ To resolve this issue:
     - Find **fReverseConnectMode** and make sure its data value is **1**. Also make sure that **fEnableWinStation** is set to **1**.
 
        > [!div class="mx-imgBorder"]
-       > ![Screenshot of fReverseConnectMode](media/fenable-2.png)
+       > ![Screenshot of fReverseConnectMode](media/troubleshoot-agent/fenable-2.png)
 
     - If **fReverseConnectMode** isn't set to **1**, select **fReverseConnectMode** and enter **1** in its value field. 
     - If **fEnableWinStation** isn't set to **1**, select **fEnableWinStation** and enter **1** into its value field.
@@ -357,7 +357,7 @@ To resolve this issue:
 1. Wait for 5-10 minutes for the session host status to say **Available**.
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot of available session host](media/hostpool-portal.png)
+   > ![Screenshot of available session host](media/troubleshoot-agent/hostpool-portal.png)
 
 ## Your issue isn't listed here or wasn't resolved
 
@@ -396,7 +396,7 @@ Before reinstalling the agent, boot loader, and stack, you must uninstall any ex
    > When uninstalling **Remote Desktop Services SxS Network Stack**, you'll be prompted that *Remote Desktop Services* and *Remote Desktop Services UserMode Port Redirector* should be closed. If you're connected to the session host VM using RDP, select **Do not close applications** then select **OK**, otherwise your RDP connection won't work.
    > 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot showing prompt that Remote Desktop Services and Remote Desktop Services UserMode Port Redirector should be closed](media/uninstall-remote-desktop-services-sxs-network-stack.png)
+   > ![Screenshot showing prompt that Remote Desktop Services and Remote Desktop Services UserMode Port Redirector should be closed](media/troubleshoot-agent/uninstall-remote-desktop-services-sxs-network-stack.png)
 
    - Remote Desktop Agent Boot Loader
    - Remote Desktop Services Infrastructure Agent
@@ -407,7 +407,7 @@ Before reinstalling the agent, boot loader, and stack, you must uninstall any ex
    > You may see multiple instances of these programs. Make sure to remove all of them.
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot of uninstalling programs](media/uninstall-program.png)
+   > ![Screenshot of uninstalling programs](media/troubleshoot-agent/uninstall-program.png)
 
 ### Step 2: Remove the session host from the host pool
 
@@ -426,7 +426,7 @@ When you remove the session host from the host pool, the session host is no long
 1. Select **Remove**.  
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot of removing VM from host pool](media/remove-sh.png)
+   > ![Screenshot of removing VM from host pool](media/troubleshoot-agent/remove-sh.png)
 
 ### Step 3: Generate a new registration key for the VM
 
@@ -441,7 +441,7 @@ You must generate a new registration key that is used to re-register your sessio
 1. On the **Overview** blade, select **Registration key**.
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot of registration key in portal](media/reg-key.png)
+   > ![Screenshot of registration key in portal](media/troubleshoot-agent/reg-key.png)
 
 1. Open the **Registration key** tab and select **Generate new key**.
 
@@ -468,7 +468,7 @@ Reinstalling the latest version of the agent and boot loader also automatically 
 1. When the installer asks you for the registration token, paste the registration key from your clipboard.
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot of pasted registration token](media/pasted-agent-token.png)
+   > ![Screenshot of pasted registration token](media/troubleshoot-agent/pasted-agent-token.png)
 
 1. Run the boot loader installer.
 
@@ -485,7 +485,7 @@ Reinstalling the latest version of the agent and boot loader also automatically 
 1. You should now see the session host registered in the host pool with the status **Available**. 
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot of available session host](media/hostpool-portal.png)
+   > ![Screenshot of available session host](media/troubleshoot-agent/hostpool-portal.png)
 
 ## Remove DisableRegistryTools registry key
 
