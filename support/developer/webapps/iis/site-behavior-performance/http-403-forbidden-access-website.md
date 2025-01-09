@@ -1,20 +1,20 @@
 ---
 title: HTTP Error 403.16 when you access a website
-description: This article describes the problem where an HTTP 403.16 error occurs when you try to access a website that's hosted by IIS.
+description: This article describes the problem where an HTTP 403.16 error occurs when you try to access a website that's hosted on IIS.
 ms.date: 01/09/2025
 ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
 ms.reviewer: mlaing, paulboc
 ---
 # HTTP Error 403.16 when you try to access a website that's hosted on IIS
 
-This article helps you resolve the **HTTP 403.16 - Forbidden** error that occurs when you access a website that's hosted on Internet Information Services (IIS).
+This article helps you resolve the "HTTP 403.16 - Forbidden" error that occurs when you access a website that's hosted on Internet Information Services (IIS).
 
 _Original product version:_ &nbsp; Internet Information Services  
 _Original KB number:_ &nbsp; 942061
 
 ## Symptoms
 
-You have a website that's hosted on IIS web server that ships with Windows Server 2016 or later. When you try to access the site through a web browser, you receive an error message that resembles one of the following examples.
+You have a website hosted on the IIS web server that ships with Windows Server 2016 or later. When you try to access the site through a web browser, you receive an error message that resembles one of the following examples:
 
 - Error message 1
 
@@ -35,13 +35,9 @@ This problem occurs because the root certificate of the certification authority 
 > [!NOTE]
 > The root certificate of the certification authority is used to issue the client certificate.
 
-## Cause 2: Non-self-signed certificates are in Trusted Root Certification Authorities Certificate store
+### Resolution for cause 1
 
-There are one or more non-self-signed certificates in the Trusted Root Certification Authorities Certificate store. A non-self-signed certificate is any certificate for which the `Issued To` and `Issued By` values aren't an exact match.
-
-## Resolution for cause 1
-
-1. On the IIS Web server, select **Start**, type *mmc.exe* in the **Start Search** box, right-click mmc.exe, and then select **Run as administrator**.
+1. On the IIS Web server, select **Start**, type *mmc.exe* in the **Start Search** box, right-click **mmc.exe**, and then select **Run as administrator**.
 
     > [!NOTE]
     > If you are prompted for an administrator password or for a confirmation, type the password, or select **Continue**.
@@ -51,12 +47,16 @@ There are one or more non-self-signed certificates in the Trusted Root Certifica
 4. Select **Computer account**, and then select **Next**.
 5. Select **Local computer**, select **Finish**, and then select **Close**.
 6. To exit the wizard, select **OK**.
-7. Expand **Certificates**, expand **Trusted Root Certification Authorities**, right-click **Certificates**, point to **All Tasks**, and then select **Import**.
+7. Expand **Certificates** > **Trusted Root Certification Authorities**, right-click **Certificates**, point to **All Tasks**, and then select **Import**.
 8. In the Certificate Import Wizard, select **Next**.
 9. In the **File name** box, type the location of the root certificate of the certification authority, and then select **Next**.
-10. Select **Next**, and then select **Finish**.
+10. Select **Next** > **Finish**.
 
-## Resolution for cause 2
+## Cause 2: Non-self-signed certificates are in Trusted Root Certification Authorities Certificate store
+
+There are one or more non-self-signed certificates in the Trusted Root Certification Authorities Certificate store. A non-self-signed certificate is any certificate for which the `Issued To` and `Issued By` values aren't an exact match.
+
+### Resolution for cause 2
 
 Move any non-self-signed certificated out of the Trusted Root Certification Authorities Certificate store and into the Intermediate Certification Authorities Certificate store.
 
