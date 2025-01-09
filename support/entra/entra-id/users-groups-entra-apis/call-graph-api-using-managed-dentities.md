@@ -9,7 +9,7 @@ ms.custom: sap:Microsoft Graph Users, Groups, and Entra APIs
 
 # Use managed identities to call Microsoft Graph APIs in VB.Net and C#
 
-This article explains how to use managed identities to get access token, and then call Microsoft Graph APIs in both VB.Net and C#. 
+This article explains how to use managed identities to obtain access token, and then call Microsoft Graph APIs in both VB.Net and C#. 
 
 ## Configure permissions for managed identities
 
@@ -69,7 +69,7 @@ foreach($permission in $Permissions)
 ```
 ## Get access token
 
-Once your permissions are on the service principal, you can then make a token request from the resource: `https://graph.microsoft.com`.
+Once your permissions are on the service principal, make a token request from the resource: `https://graph.microsoft.com`.
 
 > [!NOTE]
 > Once you make a token request for a resource, you'll get the same token for the next 24 hours, even if you make permission changes. you'll need to wait for the current token to expire in order to get a token with any new permissions.
