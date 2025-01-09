@@ -115,7 +115,7 @@ This registry value doesn't affect the state of the following check box. Even if
 - by unchecking 'Internet Protocol Version 6 (TCP/IPv6)' in the network properties GUI (see image above), or 
 - by using the PowerShell command `Disable-NetAdapterBinding -Name "MyAdapter" -ComponentID ms_tcpip[6] `
   
-These settings don't disable IPv6 but unbind the IPv6 protocol from the network interface. Unbindig IPv6 from one or more interfaces might lead to connectivity issues that can only be resloved by reverting the change.
+These settings don't disable IPv6 but unbind the IPv6 protocol from the network interface. Unbindig IPv6 from one or more interfaces might lead to connectivity issues that can only be resolved by reverting the change.
 
 ## Reference
 
