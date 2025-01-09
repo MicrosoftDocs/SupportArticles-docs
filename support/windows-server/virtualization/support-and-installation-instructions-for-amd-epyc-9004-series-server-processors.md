@@ -10,6 +10,8 @@ ms.custom: sap:Virtualization and Hyper-V\Installation and configuration of Hype
 
 This article introduces the Windows Server operating system support statements and installation instructions for systems with greater than 64 cores per CPU socket.
 
+_Applies to:_ &nbsp; Windows Server 2025, Windows Server 2022, Windows Server 2019
+
 ## Windows Server support
 
 The following Windows Server releases are supported on AMD EPYC 9004 and AMD EPYC 9005 series processors.
