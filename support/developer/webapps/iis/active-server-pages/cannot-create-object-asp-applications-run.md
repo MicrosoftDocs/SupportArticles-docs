@@ -3,6 +3,7 @@ title: Can't create object when ASP applications run
 description: This article provides resolutions for the Cannot create object error that occurs when ASP applications run.
 ms.date: 12/17/2024
 ms.custom: sap:Active Server Pages\Debugging
+ms.reviewer: zixie
 ---
 # Can't create object when browsing ASP pages
 

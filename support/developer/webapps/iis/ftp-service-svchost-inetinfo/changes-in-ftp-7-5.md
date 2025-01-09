@@ -3,7 +3,7 @@ title: Changes in Microsoft FTP
 description: This article describes some of the changes that were introduced in Microsoft FTP 7.5 and later versions.
 ms.date: 12/18/2024
 ms.custom: sap:FTP Service and Svchost or Inetinfo Process Operation\Service configuration
-ms.reviewer: kaorif, mlaing, robmcm, dougste, mszixie
+ms.reviewer: kaorif, mlaing, robmcm, dougste, zixie
 ms.topic: article
 ---
 # Changes in Microsoft FTP
