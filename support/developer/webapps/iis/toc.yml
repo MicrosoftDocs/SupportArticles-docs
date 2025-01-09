@@ -132,6 +132,8 @@ items:
     href: site-behavior-performance/failed-generate-certificate-request.md
   - name: FtpPutFile always returns success
     href: site-behavior-performance/ftpputfile-success-451-status.md
+  - name: HTTP error 403.16
+    href: site-behavior-performance/http-403-forbidden-access-website.md
   - name: HTTP error 404.2
     href: site-behavior-performance/http-error-402-webpage.md
   - name: HTTP error 500 when you use Response.BinaryWrite

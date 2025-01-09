@@ -15,8 +15,6 @@ items:
   href: clm-http-bad-request.md
 - name: HTTP error 403.14
   href: http-403-14-forbidden-webpage.md
-- name: HTTP error 403.16
-  href: http-403-forbidden-access-website.md
 - name: HTTP error 403.7
   href: http-error-403-7-forbidden-web-app.md
 - name: HTTP error 404 file not found on a server
