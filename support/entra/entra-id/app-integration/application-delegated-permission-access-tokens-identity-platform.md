@@ -1,5 +1,5 @@
 ---
-title: Application and delegated permission for access tokens
+title: Application and delegated permissions for access tokens
 description: Describes application and delegated permissions for access tokens in Microsoft identity platform.
 ms.reviewer: bachoang, v-weizhu
 ms.service: entra-id
@@ -8,13 +8,13 @@ ms.custom: sap:App registrations
 ---
 # Application and delegated permissions for access tokens in Microsoft identity platform
 
-This article introduces the differences between application and delegated permissions for access tokens in Microsoft identity platform to help diagnosing issues when applications calling web APIs.
+This article introduces the differences between application and delegated permissions for access tokens in Microsoft identity platform to help diagnosing issues when applications call web APIs.
 
 ## Overview
 
 As described in [Overview of permissions and consent in the Microsoft identity platform](/entra/identity-platform/permissions-consent-overview) and [Glossary: Microsoft identity platform](/entra/identity-platform/developer-glossary), there are two types of permissions for an access token: delegated permission and application permission. Delegated permission is granted to a signed-in user, whereas application permission is granted directly to an application. The key difference is that delegated permission requires user sign-in, while application permission doesn't; instead, the application authenticates to Microsoft Entra ID using its own application identity (client ID and secret/assertion).
 
-Regardless of permission types, you must [add permissions in the API permissions pane](/entra/identity-platform/quickstart-configure-app-access-web-apis#add-permissions-to-access-your-web-api) on the Microsoft Entra **App registrations** page: 
+Regardless of permission types, you must [configure API permissions](/entra/identity-platform/quickstart-configure-app-access-web-apis#add-permissions-to-access-your-web-api) on the Microsoft Entra **App registrations** page: 
 
 * Select **Application permissions** if your application scenario doesn't need any user to sign in.
 * Select **Delegated permissions** if your application requires a user to sign in so that the access token can be issued for that sign-in.
