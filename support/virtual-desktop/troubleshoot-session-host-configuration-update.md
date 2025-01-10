@@ -16,7 +16,7 @@ Session host update in Azure Virtual Desktop enables you to easily update sessio
 
 ## Session host configuration failed to create when creating a host pool
 
-When a session host configuration is created, the parameters provided for the configuration are checked during extended validation. Validation can fail if the service concludes that it will be unable to successfully create session hosts with the provided parameters. As the Azure resources are stored in your subscription, they can be modified by other processes; session host creation can still fail when using the session host configuration even after this validation check is completed.
+When a session host configuration is created, the parameters provided for the configuration are checked during extended validation. Validation can fail if the service concludes that it is unable to successfully create session hosts with the provided parameters. As the Azure resources are stored in your subscription, they can be modified by other processes; session host creation can still fail when using the session host configuration even after this validation check is completed.
 
 Here are some example failures:
 
@@ -65,7 +65,7 @@ Once you identify the issue, you can either [retry the update, or cancel it and 
 
 ### An update failed to initiate
 
-When a session host update is initiated, the service validates whether it will be able to successfully complete the update. When a session host update fails prior to starting, the update ends and changes can be made to the session host configuration. As the Azure resources are stored in your subscription, they can be modified by other processes; session host creation can still fail using the session host configuration even after this validation check is completed.
+When a session host update is initiated, the service validates whether it is able to successfully complete the update. When a session host update fails prior to starting, the update ends and changes can be made to the session host configuration. As the Azure resources are stored in your subscription, they can be modified by other processes; session host creation can still fail to use the session host configuration even after this validation check is completed.
 
 Here are some example failures that prevent an update from starting:
 
@@ -77,7 +77,7 @@ Here are some example failures that prevent an update from starting:
 
 ### Failures during an update
 
-Session host update starts with an initial batch size of 1 to validate that the provided session host configuration will result in healthy session hosts. Failures that occur during the first validation batch are most often due to parameters within the session host configuration and are typically not resolved by retrying the update. Failures that occur after the validation batch are often intermittent and can be resolved by [retrying the update](/azure/virtual-desktop/session-host-update-configure#pause-resume-cancel-or-retry-an-update).
+Session host update starts with an initial batch size of 1 to validate that the provided session host configuration results in healthy session hosts. Failures that occur during the first validation batch are most often due to parameters within the session host configuration and are typically not resolved by retrying the update. Failures that occur after the validation batch are often intermittent and can be resolved by [retrying the update](/azure/virtual-desktop/session-host-update-configure#pause-resume-cancel-or-retry-an-update).
 
 Here are some example failures that can occur during an update:
 

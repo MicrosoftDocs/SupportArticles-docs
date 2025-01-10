@@ -23,7 +23,7 @@ If WebAuthn requests from the session aren't redirected to the local PC, check t
 
 If you've answered "yes" to both of the earlier questions but still don't see the option to use Windows Hello for Business or security keys when accessing Microsoft Entra resources, make sure you've enabled the FIDO2 security key method for the user account in Microsoft Entra ID. To enable this method, follow the directions in [Enable FIDO2 security key method](/azure/active-directory/authentication/howto-authentication-passwordless-security-key#enable-fido2-security-key-method).
 
-If a user signs in to the session host with a single-factor credential like username and password, then tries to access a Microsoft Entra resource that requires MFA, they may not be able to use Windows Hello for Business. The user should follow these instructions to authenticate properly:
+If a user signs in to the session host with a single-factor credential like username and password, then tries to access a Microsoft Entra resource that requires MFA, they might not be able to use Windows Hello for Business. The user should follow these instructions to authenticate properly:
 
 1. If the user isn't prompted for a user account, they should first sign out.
 1. On the **account selection** page, select **Use another account**.

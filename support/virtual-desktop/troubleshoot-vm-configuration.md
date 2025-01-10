@@ -36,7 +36,7 @@ Follow these instructions if you're having issues joining virtual machines (VMs)
 
 ### Error: Timeout waiting for user input
 
-**Cause:** The account used to complete the domain join may have multifactor authentication (MFA).
+**Cause:** The account used to complete the domain join might have multifactor authentication (MFA).
 
 **Fix:** Take one of the following actions to resolve.
 
@@ -54,9 +54,9 @@ Follow these instructions if you're having issues joining virtual machines (VMs)
 
 ### Error: Domain name doesn't resolve
 
-**Cause 1:** VMs are on a virtual network that's not associated with the virtual network (VNET) where the domain is located.
+**Cause 1:** VMs are on a virtual network that's not associated with the virtual network (virtual network) where the domain is located.
 
-**Fix 1:** Create VNET peering between the VNET where VMs were provisioned and the VNET where the domain controller (DC) is running. See [Create a virtual network peering - Resource Manager, different subscriptions](/azure/virtual-desktop/../virtual-network/create-peering-different-subscriptions).
+**Fix 1:** Create virtual network peering between the virtual network where VMs were provisioned and the virtual network where the domain controller (DC) is running. See [Create a virtual network peering - Resource Manager, different subscriptions](/azure/virtual-desktop/../virtual-network/create-peering-different-subscriptions).
 
 **Cause 2:** When using Microsoft Entra Domain Services, the virtual network doesn't have its DNS server settings updated to point to the managed domain controllers.
 
@@ -150,7 +150,7 @@ When the Azure Virtual Desktop Agent is first installed on session host VMs (eit
 
 **Fix 1:** Launch Task Manager and, if the Service Tab reports a stopped status for RDAgentBootLoader service, start the service.
 
-**Cause 2:** Port 443 may be closed.
+**Cause 2:** Port 443 might be closed.
 
 **Fix 2:** Follow these instructions to open port 443.
 

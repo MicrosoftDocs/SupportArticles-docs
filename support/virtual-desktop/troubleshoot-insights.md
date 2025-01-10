@@ -34,10 +34,10 @@ If your data isn't displaying properly, check the following common solutions:
     - Read-access to the Azure resource groups that hold your Azure Virtual Desktop resources
     - Read-access to the subscription's resource groups that hold your Azure Virtual Desktop session hosts 
     - Read-access to whichever Log Analytics workspaces you're using
-- You may need to open outgoing ports in your server's firewall to allow Azure Monitor to send data to the portal. To learn how to do this, see [Firewall requirements](/azure/azure-monitor/agents/azure-monitor-agent-data-collection-endpoint#firewall-requirements).
-- If you're not seeing data from recent activity, you may need to wait for 15 minutes and refresh the feed. Azure Monitor has a 15-minute latency period for populating log data. To learn more, see [Log data ingestion time in Azure Monitor](/azure/azure-monitor/logs/data-ingestion-time).
+- You might need to open outgoing ports in your server's firewall to allow Azure Monitor to send data to the portal. To learn how to do this, see [Firewall requirements](/azure/azure-monitor/agents/azure-monitor-agent-data-collection-endpoint#firewall-requirements).
+- If you're not seeing data from recent activity, you might need to wait for 15 minutes and refresh the feed. Azure Monitor has a 15-minute latency period for populating log data. To learn more, see [Log data ingestion time in Azure Monitor](/azure/azure-monitor/logs/data-ingestion-time).
 
-If you're not missing any information but your data still isn't displaying properly, there may be an issue in the query or the data sources. For more information, see [known issues and limitations](#known-issues-and-limitations). 
+If you're not missing any information but your data still isn't displaying properly, there might be an issue in the query or the data sources. For more information, see [known issues and limitations](#known-issues-and-limitations). 
 
 # [Log Analytics agent](#tab/analytics)
 
@@ -60,20 +60,20 @@ If your data isn't displaying properly, check the following common solutions:
     - Read-access to the Azure resource groups that hold your Azure Virtual Desktop resources
     - Read-access to the subscription's resource groups that hold your Azure Virtual Desktop session hosts 
     - Read-access to whichever Log Analytics workspaces you're using
-- You may need to open outgoing ports in your server's firewall to allow Azure Monitor and Log Analytics to send data to the portal. To learn how to do this, see the following articles:
+- You might need to open outgoing ports in your server's firewall to allow Azure Monitor and Log Analytics to send data to the portal. To learn how to do this, see the following articles:
       - [Azure Monitor Outgoing ports](/azure/azure-monitor/ip-addresses)
       - [Log Analytics Firewall Requirements](/azure/azure-monitor/agents/log-analytics-agent#firewall-requirements). 
-- Not seeing data from recent activity? You may want to wait for 15 minutes and refresh the feed. Azure Monitor has a 15-minute latency period for populating log data. To learn more, see [Log data ingestion time in Azure Monitor](/azure/azure-monitor/logs/data-ingestion-time).
+- Not seeing data from recent activity? You might want to wait for 15 minutes and refresh the feed. Azure Monitor has a 15-minute latency period for populating log data. To learn more, see [Log data ingestion time in Azure Monitor](/azure/azure-monitor/logs/data-ingestion-time).
 
-If you're not missing any information but your data still isn't displaying properly, there may be an issue in the query or the data sources. For more information, see [known issues and limitations](#known-issues-and-limitations). 
+If you're not missing any information but your data still isn't displaying properly, there might be an issue in the query or the data sources. For more information, see [known issues and limitations](#known-issues-and-limitations). 
 
 ---
 
 ## I want to customize Azure Virtual Desktop Insights
 
-Azure Virtual Desktop Insights uses Azure Monitor Workbooks. Workbooks lets you save a copy of the Azure Virtual Desktop workbook template and make your own customizations.
+Azure Virtual Desktop Insights uses Azure Monitor Workbooks. Workbooks let you save a copy of the Azure Virtual Desktop workbook template and make your own customizations.
 
-By design, custom Workbook templates will not automatically adopt updates from the products group. For more information, see [Troubleshooting workbook-based insights](/azure/azure-monitor/insights/troubleshoot-workbooks) and the [Workbooks overview](/azure/azure-monitor/visualize/workbooks-overview).
+By design, custom Workbook templates won't automatically adopt updates from the products group. For more information, see [Troubleshooting workbook-based insights](/azure/azure-monitor/insights/troubleshoot-workbooks) and the [Workbooks overview](/azure/azure-monitor/visualize/workbooks-overview).
 
 ## I can't interpret the data
 
@@ -111,9 +111,9 @@ The following are issues and limitations we're aware of and working to fix:
 - To save favorite settings, you have to save a custom template of the workbook. Custom templates won't automatically adopt updates from the product group.
 - The configuration workbook will sometimes show *query failed* errors when loading your selections. Refresh the query, reenter your selection if needed, and the error should resolve itself. 
 - Some error messages aren't phrased in a user-friendly way, and not all error messages are described in documentation.
-- The total sessions performance counter can over-count sessions by a small number and your total sessions may appear to go above your Max Sessions limit.
-- Available sessions count doesn't reflect scaling policies on the host pool. 	
-- Do you see contradicting or unexpected connection times? While rare, a connection's completion event can go missing and can impact some visuals and metrics.
+- The total sessions performance counter can over-count sessions by a small number and your total sessions might appear to go above your Max Sessions limit.
+- Available sessions count doesn't reflect scaling policies on the host pool.     
+- Do you see contradicting or unexpected connection times? While rare, a connection's completion event can go missing and can affect some visuals and metrics.
 - Time to connect includes the time it takes users to enter their credentials; this correlates to the experience but in some cases can show false peaks.
 
 ## Next steps

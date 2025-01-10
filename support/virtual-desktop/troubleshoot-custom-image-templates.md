@@ -15,12 +15,12 @@ Custom image templates in Azure Virtual Desktop enable you to easily create a cu
 
 Azure Image Builder uses Hashicorp Packer to create images. Packer outputs all log entries to a file called **customization.log**. By default this file is located in a resource group that Azure Image Builder created automatically with the naming convention `IT_<ResourceGroupName>_<TemplateName>_<GUID>`. You can override this naming by specifying your own name in the template creation phase.
 
-In this resource group is a storage account with a blob container called **packerlogs**. In the container is a folder named with a GUID in which you'll find the log file. Entries for built-in scripts you use to customize your image begin **Starting AVD AIB Customization: {Script name}: {Timestamp}**, to help you locate any errors related to the scripts.
+In this resource group is a storage account with a blob container called **packerlogs**. In the container is a folder named with a GUID in which you find the log file. Entries for built-in scripts you use to customize your image begin **Starting AVD AIB Customization: {Script name}: {Timestamp}**, to help you locate any errors related to the scripts.
 
 To learn how to interpret Azure Image Builder logs, see [Troubleshoot Azure VM Image Builder](/azure/virtual-machines/linux/image-builder-troubleshoot).
 
 > [!IMPORTANT]
-> Microsoft Support doesn't handle issues for any customer created scripts, or any scripts or templates copied from a Microsoft repository and modified. You are welcome to collaborate and improve these tools in our [GitHub repository](https://github.com/Azure/RDS-Templates/issues), where you can open an issue. For more information, see [Why do we not support customer or third party scripts?](https://techcommunity.microsoft.com/t5/ask-the-performance-team/help-my-powershell-script-isn-t-working-can-you-fix-it/ba-p/755797)
+> Microsoft Support doesn't handle issues for any customer created scripts, or any scripts or templates copied from a Microsoft repository and modified. You're welcome to collaborate and improve these tools in our [GitHub repository](https://github.com/Azure/RDS-Templates/issues), where you can open an issue. For more information, see [Why do we not support customer or third party scripts?](https://techcommunity.microsoft.com/t5/ask-the-performance-team/help-my-powershell-script-isn-t-working-can-you-fix-it/ba-p/755797)
 
 ## Resource group must be empty
 
@@ -42,7 +42,7 @@ If you receive the error message starting **PrivateLinkService Network Policy is
 
 ## Issues installing or enabling additional languages on Windows 10 images
 
-Additional languages can be added by custom image templates, which uses the [Install-Language PowerShell cmdlet](/powershell/module/languagepackmanagement/install-language). If you have issues installing or enabling additional languages on Windows 10 Enterprise and Windows 10 Enterprise multi-session images, ensure that:
+Additional languages can be added by custom image templates, which use the [Install-Language PowerShell cmdlet](/powershell/module/languagepackmanagement/install-language). If you have issues installing or enabling additional languages on Windows 10 Enterprise and Windows 10 Enterprise multi-session images, ensure that:
 
 - You haven't disabled installing language packs by group policy on your image. The policy setting can be found at the following locations:
 
@@ -58,4 +58,4 @@ When you create a custom image template in the Azure portal, you might not be ab
 
 ## Authorization error occurred during Azure Container Groups operation
 
-Custom image templates requires the `Microsoft.ContainerInstance` resource provider registered on your subscription due to the dependency on Azure Image Builder. If you receive the error `The client '<GUID>' with object id '<GUID>' does not have authorization to perform action 'Microsoft.ContainerInstance/register/action' over scope '/subscriptions/<subscription ID>' or the scope is invalid`, you need to register the `Microsoft.ContainerInstance` resource provider on your subscription. Once you register the resource provider, try the action again. For information on how you can check their registration status and how to register them if needed, see [Azure resource providers and types](/azure/virtual-desktop/../azure-resource-manager/management/resource-providers-and-types).
+Custom image templates require the `Microsoft.ContainerInstance` resource provider registered on your subscription due to the dependency on Azure Image Builder. If you receive the error `The client '<GUID>' with object id '<GUID>' does not have authorization to perform action 'Microsoft.ContainerInstance/register/action' over scope '/subscriptions/<subscription ID>' or the scope is invalid`, you need to register the `Microsoft.ContainerInstance` resource provider on your subscription. Once you register the resource provider, try the action again. For information on how you can check their registration status and how to register them if needed, see [Azure resource providers and types](/azure/virtual-desktop/../azure-resource-manager/management/resource-providers-and-types).

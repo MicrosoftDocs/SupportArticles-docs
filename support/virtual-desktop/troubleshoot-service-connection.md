@@ -18,7 +18,7 @@ You can give us feedback and discuss the Azure Virtual Desktop Service with the 
 
 ## User connects but nothing is displayed (no feed)
 
-A user can start Remote Desktop clients and is able to authenticate, however the user doesn't see any icons in the web discovery feed.
+A user can start Remote Desktop clients and is able to authenticate. However, the user doesn't see any icons in the web discovery feed.
 
 1. Confirm that the user reporting the issues has been assigned to application groups by using this command line:
 

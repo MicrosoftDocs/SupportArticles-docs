@@ -43,7 +43,7 @@ To resolve this issue, start the RDAgent boot loader:
 
 1. Select **Refresh**.
 
-1. If the service stops after you started and refreshed it, you may have a registration failure. For more information, see [INVALID_REGISTRATION_TOKEN or EXPIRED_MACHINE_TOKEN](#error-invalid_registration_token-or-expired_machine_token).
+1. If the service stops after you started and refreshed it, you might have a registration failure. For more information, see [INVALID_REGISTRATION_TOKEN or EXPIRED_MACHINE_TOKEN](#error-invalid_registration_token-or-expired_machine_token).
 
 ## Error: INVALID_REGISTRATION_TOKEN or EXPIRED_MACHINE_TOKEN
 
@@ -87,7 +87,7 @@ To resolve this issue:
 
 ## Error: Agent cannot connect to broker with INVALID_FORM
 
-On your session host VM, go to **Event Viewer** > **Windows Logs** > **Application**. If you see an event with ID 3277 with **INVALID_FORM** in the description, the agent can't connect to the broker or reach a particular endpoint. This issue may be because of certain firewall or DNS settings.
+On your session host VM, go to **Event Viewer** > **Windows Logs** > **Application**. If you see an event with ID 3277 with **INVALID_FORM** in the description, the agent can't connect to the broker or reach a particular endpoint. This issue might be because of certain firewall or DNS settings.
 
 To resolve this issue, check that you can reach the two endpoints referred to as *BrokerResourceIdURI* and *BrokerResourceIdURIGlobal*:
 
@@ -125,7 +125,7 @@ To resolve this issue, check that you can reach the two endpoints referred to as
 
 On your session host VM, go to **Event Viewer** > **Windows Logs** > **Application**. If you see an event with ID 3703 with **RD Gateway Url: is not accessible** in the description, the agent is unable to reach the gateway URLs. To successfully connect to your session host, you must allow network traffic to the URLs from the [Required URL List](/azure/virtual-desktop/safe-url-list). Also, make sure your firewall or proxy settings don't block these URLs. Unblocking these URLs is required to use Azure Virtual Desktop.
 
-To resolve this issue, verify whether you can access the required URLs by running the [Required URL Check tool](/azure/virtual-desktop/required-url-check-tool). If you're using Azure Firewall, see [Use Azure Firewall to protect Azure Virtual Desktop deployments.](/azure/virtual-desktop/../firewall/protect-azure-virtual-desktop) and [Azure Firewall DNS settings](/azure/virtual-desktop/../firewall/dns-settings) for more information on how to configure it for Azure Virtual Desktop.
+To resolve this issue, verify whether you can access the required URLs by running the [Required URL Check tool](/azure/virtual-desktop/required-url-check-tool). If you're using Azure Firewall, see [Use Azure Firewall to protect Azure Virtual Desktop deployments](/azure/virtual-desktop/../firewall/protect-azure-virtual-desktop) and [Azure Firewall DNS settings](/azure/virtual-desktop/../firewall/dns-settings) for more information on how to configure it for Azure Virtual Desktop.
 
 ## Error: 3019
 
@@ -145,10 +145,10 @@ To resolve this issue:
 
 On your session host VM, go to **Event Viewer** > **Windows Logs** > **Application**. If you see an event with ID 3277 with **ENDPOINT_NOT_FOUND** in the description, then the broker couldn't find an endpoint to establish a connection with. This connection issue can happen for one of the following reasons:
 
-- There aren't any session host VMs in your host pool.
+- There isn't any session host VMs in your host pool.
 - The session host VMs in your host pool aren't active.
 - All session host VMs in your host pool have exceeded the max session limit.
-- None of the VMs in your host pool have the agent service running on them.
+- None of the VMs in your host pool has the agent service running on them.
 
 To resolve this issue:
 
@@ -198,7 +198,7 @@ To resolve this issue:
 
 1. Go to **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations**.
 
-1. Under **WinStations** you may see several folders for different stack versions, select a folder that matches the version information you saw when running `qwinsta.exe` in a command prompt.
+1. Under **WinStations** you might see several folders for different stack versions, select a folder that matches the version information you saw when running `qwinsta.exe` in a command prompt.
     - Find **fReverseConnectMode** and make sure its data value is **1**. Also make sure that **fEnableWinStation** is set to **1**.
 
        > [!div class="mx-imgBorder"]
@@ -221,9 +221,9 @@ To resolve this issue:
 
 1. Go to **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\ClusterSettings**.
 
-1. Under **ClusterSettings**, find **SessionDirectoryListener** and make sure its data value is `rdp-sxs<version number`, where `<version number` matches the version information you saw when running `qwinsta.exe` in a command prompt .
+1. Under **ClusterSettings**, find **SessionDirectoryListener** and make sure its data value is `rdp-sxs<version number`, where `<version number` matches the version information you saw when running `qwinsta.exe` in a command prompt.
 
-2. If **SessionDirectoryListener** isn't set to `rdp-sxs<version number`, you'll need to follow the steps in the section [Your issue isn't listed here or wasn't resolved](#your-issue-isnt-listed-here-or-wasnt-resolved).
+2. If **SessionDirectoryListener** isn't set to `rdp-sxs<version number`, you need to follow the steps in the section [Your issue isn't listed here or wasn't resolved](#your-issue-isnt-listed-here-or-wasnt-resolved).
 
 ## Error: DownloadMsiException
 
@@ -236,7 +236,7 @@ To resolve this issue, make space on your disk by:
 
 ## Error: Agent fails to update with MissingMethodException
 
-On your session host VM, go to **Event Viewer** > **Windows Logs** > **Application**. If you see an event with ID 3389 with **MissingMethodException: Method not found** in the description, then the Azure Virtual Desktop agent didn't update successfully and reverted to an earlier version. This issue may be happening because the version number of the .NET framework currently installed on your VMs is lower than 4.7.2. To resolve this issue, you need to upgrade the .NET to version 4.7.2 or later by following the installation instructions in the [.NET Framework documentation](https://support.microsoft.com/topic/microsoft-net-framework-4-7-2-offline-installer-for-windows-05a72734-2127-a15d-50cf-daf56d5faec2).
+On your session host VM, go to **Event Viewer** > **Windows Logs** > **Application**. If you see an event with ID 3389 with **MissingMethodException: Method not found** in the description, then the Azure Virtual Desktop agent didn't update successfully and reverted to an earlier version. This issue might be happening because the version number of the .NET framework currently installed on your VMs is lower than 4.7.2. To resolve this issue, you need to upgrade the .NET to version 4.7.2 or later by following the installation instructions in the [.NET Framework documentation](https://support.microsoft.com/topic/microsoft-net-framework-4-7-2-offline-installer-for-windows-05a72734-2127-a15d-50cf-daf56d5faec2).
 
 ## Error: Session host VMs are stuck in Upgrading state
 
@@ -285,7 +285,7 @@ There are several health checks that can cause your session host VMs to be stuck
 
 ### UrlsAccessibleCheck
 
-If the session host doesn't pass the *UrlsAccessibleCheck* health check, you'll need to identify which [required URL](/azure/virtual-desktop/safe-url-list) your deployment is currently blocking. Once you know which URL is blocked, identify which setting is blocking that URL and remove it.
+If the session host doesn't pass the *UrlsAccessibleCheck* health check, you need to identify which [required URL](/azure/virtual-desktop/safe-url-list) your deployment is currently blocking. Once you know which URL is blocked, identify which setting is blocking that URL and remove it.
 
 There are two reasons why the service is blocking a required URL:
 
@@ -304,7 +304,7 @@ If your local hosts file is blocking the required URLs, make sure none of the re
 
 ### MetaDataServiceCheck
 
-If the session host doesn't pass the *MetaDataServiceCheck* health check, then the service can't access the IMDS endpoint. To resolve this issue, you'll need to do the following things:
+If the session host doesn't pass the *MetaDataServiceCheck* health check, then the service can't access the IMDS endpoint. To resolve this issue, you need to do the following things:
 
 - Reconfigure your networking, firewall, or proxy settings to unblock the IP address 169.254.169.254.
 - Make sure your HTTP clients bypass web proxies within the VM when querying IMDS. We recommend that you allow the required IP address in any firewall policies within the VM that deal with outbound network traffic direction.
@@ -317,17 +317,17 @@ netsh winhttp set proxy proxy-server="http=<customerwebproxyhere>" bypass-list="
 
 ### MonitoringAgentCheck
 
-If the session host doesn't pass the *MonitoringAgentCheck* health check, you'll need to check the *Remote Desktop Services Infrastructure Geneva Agent* and validate if it is functioning correctly on the session host:
+If the session host doesn't pass the *MonitoringAgentCheck* health check, you need to check the *Remote Desktop Services Infrastructure Geneva Agent* and validate if it's functioning correctly on the session host:
 
 1. Verify if the Remote Desktop Services Infrastructure Geneva Agent is installed on the session host. You can verify this in the list of installed programs on the session host. If you see multiple versions of this agent installed, uninstall older versions and only keep the latest version installed.
 
-1. If you don't find the Remote Desktop Services Infrastructure Geneva Agent installed on the session host, please review logs located under *C:\Program Files\Microsoft RDInfra\GenevaInstall.txt* and see if installation is failing due to an error.
+1. If you don't find the Remote Desktop Services Infrastructure Geneva Agent installed on the session host, review logs located under *C:\Program Files\Microsoft RDInfra\GenevaInstall.txt* and see if installation is failing due to an error.
 
-1. Verify if scheduled task *GenevaTask_\<version\>* is created. This scheduled task must be enabled and running. If it's not, please reinstall the agent using the `.msi` file named **Microsoft.RDInfra.Geneva.Installer-x64-\<version\>.msi**, which is available at **C:\Program Files\Microsoft RDInfra**.
+1. Verify if scheduled task *GenevaTask_\<version\>* is created. This scheduled task must be enabled and running. If it's not, reinstall the agent using the `.msi` file named **Microsoft.RDInfra.Geneva.Installer-x64-\<version\>.msi**, which is available at **C:\Program Files\Microsoft RDInfra**.
 
 ## Error: Connection not found: RDAgent does not have an active connection to the broker
 
-Your session host VMs may be at their connection limit and can't accept new connections.
+Your session host VMs might be at their connection limit and can't accept new connections.
 
 To resolve this issue, either:
 
@@ -393,7 +393,7 @@ Before reinstalling the agent, boot loader, and stack, you must uninstall any ex
 1. Uninstall the following programs, then restart your session host VM:
 
    > [!CAUTION]
-   > When uninstalling **Remote Desktop Services SxS Network Stack**, you'll be prompted that *Remote Desktop Services* and *Remote Desktop Services UserMode Port Redirector* should be closed. If you're connected to the session host VM using RDP, select **Do not close applications** then select **OK**, otherwise your RDP connection won't work.
+   > When uninstalling **Remote Desktop Services SxS Network Stack**, you're prompted that *Remote Desktop Services* and *Remote Desktop Services UserMode Port Redirector* should be closed. If you're connected to the session host VM using RDP, select **Do not close applications** then select **OK**, otherwise your RDP connection won't work.
    > 
    > [!div class="mx-imgBorder"]
    > ![Screenshot showing prompt that Remote Desktop Services and Remote Desktop Services UserMode Port Redirector should be closed](media/troubleshoot-agent/uninstall-remote-desktop-services-sxs-network-stack.png)
@@ -404,7 +404,7 @@ Before reinstalling the agent, boot loader, and stack, you must uninstall any ex
    - Remote Desktop Services SxS Network Stack
    
    > [!NOTE]
-   > You may see multiple instances of these programs. Make sure to remove all of them.
+   > You might see multiple instances of these programs. Make sure to remove all of them.
 
    > [!div class="mx-imgBorder"]
    > ![Screenshot of uninstalling programs](media/troubleshoot-agent/uninstall-program.png)
@@ -450,7 +450,7 @@ You must generate a new registration key that is used to re-register your sessio
   > [!NOTE]
   > The expiration date can be no less than an hour and no longer than 27 days from its generation time and date. Generate a registration key only for as long as you need.
 
-1. Copy the newly generated key to your clipboard or download the file. You'll need this key later.
+1. Copy the newly generated key to your clipboard or download the file. You need this key later.
 
 ### Step 4: Reinstall the agent and boot loader
 
@@ -463,7 +463,7 @@ Reinstalling the latest version of the agent and boot loader also automatically 
    - [Azure Virtual Desktop Agent Bootloader](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWrxrH)
 
    > [!TIP]
-   > For each of the the agent and boot loader installers you downloaded, you may need to unblock them. Right-click each file and select **Properties**, then select **Unblock**, and finally select **OK**.
+   > For each of the agent and boot loader installers you downloaded, you might need to unblock them. Right-click each file and select **Properties**, then select **Unblock**, and finally select **OK**.
 
 1. When the installer asks you for the registration token, paste the registration key from your clipboard.
 
@@ -489,7 +489,7 @@ Reinstalling the latest version of the agent and boot loader also automatically 
 
 ## Remove DisableRegistryTools registry key
 
-If you've performed all four steps but the agent still doesn't work, that may be because the DisableRegistryTools registry key is enabled in one of the following locations:
+If you've performed all four steps but the agent still doesn't work, which might be because the DisableRegistryTools registry key is enabled in one of the following locations:
 
 - HKU:\DEFAULT\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\DisableRegistryTools = 1 
 - HKU:\S-1-5-18\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\DisableRegistryTools = 1 
@@ -497,7 +497,7 @@ If you've performed all four steps but the agent still doesn't work, that may be
 
 This registry key prevents the agent from installing the side-by-side stack, which results in an installMSIException error. This error leads to the session hosts being stuck in an unavailable state.
 
-To resolve this issue, you'll need to remove the key:
+To resolve this issue, you need to remove the key:
 
 1. Remove the DisableRegistryTools key from the three previously listed locations.
 

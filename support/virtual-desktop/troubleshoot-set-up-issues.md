@@ -18,7 +18,7 @@ Visit the [Azure Virtual Desktop Tech Community](https://techcommunity.microsoft
 
 ## Acquiring the Windows 10 Enterprise multi-session image
 
-To use the Windows 10 Enterprise multi-session image, go to the Azure Marketplace, select **Get Started** > **Microsoft Windows 10** > and [Windows 10 Enterprise multi-session, Version 1809](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftwindowsdesktop.windows-10?tab=PlansAndPrice).
+To use the Windows 10 Enterprise multi-session image, go to Azure Marketplace, select **Get Started** > **Microsoft Windows 10** > and [Windows 10 Enterprise multi-session, Version 1809](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftwindowsdesktop.windows-10?tab=PlansAndPrice).
 
 ## Issues with using the Azure portal to create host pools
 
@@ -29,7 +29,7 @@ To use the Windows 10 Enterprise multi-session image, go to the Azure Marketplac
 
 **Cause**: There aren't active subscriptions in the account you signed in to Azure with, or the account doesn't have permissions to view the subscriptions.
 
-**Fix**: Sign in to the subscription where you'll deploy the session host virtual machines (VMs) with an account that has at least contributor-level access.
+**Fix**: Sign in to the subscription where you deploy the session host virtual machines (VMs) with an account that has at least contributor-level access.
 
 ### Error: "Exceeding quota limit"
 
@@ -39,15 +39,15 @@ If your operation goes over the quota limit, you can do one of the following thi
 
 - Open the link you see in the statusMessage field in a browser to submit a request to increase the quota for your Azure subscription for the specified VM SKU.
 
-### Error: Can't see user assignments in application groups.
+### Error: Can't see user assignments in application groups
 
-**Cause**: This error usually happens after you've moved the subscription from one Microsoft Entra tenant to another. If your old assignments are still tied to the previous Microsoft Entra tenant, the Azure portal will lose track of them.
+**Cause**: This error usually happens after you've moved the subscription from one Microsoft Entra tenant to another. If your old assignments are still tied to the previous Microsoft Entra tenant, the Azure portal loses track of them.
 
-**Fix**: You'll need to reassign users to application groups.
+**Fix**: You need to reassign users to application groups.
 
 ### I don't see the Azure region I want to use when selecting the location for my service objects
 
-**Cause**: Azure doesn't currently support that region for the Azure Virtual Desktop service. To learn about which geographies we support, check out [Data locations](/azure/virtual-desktop/data-locations). If Azure Virtual Desktop supports the location but it still doesn't appear when you're trying to select a location, that means your resource provider hasn't updated yet.
+**Cause**: Azure doesn't currently support that region for the Azure Virtual Desktop service. To learn about which geographies we support, check out [Data locations](/azure/virtual-desktop/data-locations). If Azure Virtual Desktop supports the location but it still doesn't appear when you're trying to select a location, which means your resource provider hasn't updated yet.
 
 **Fix**: To get the latest list of regions, re-register the resource provider:
 
@@ -83,18 +83,18 @@ Example of raw error:
 
 **Cause 1:** Credentials provided for joining VMs to the domain are incorrect.
 
-**Fix 1:** See the "Incorrect credentials" error for VMs are not joined to the domain in [Session host VM configuration](/azure/virtual-desktop/troubleshoot-vm-configuration).
+**Fix 1:** See the "Incorrect credentials" error for VMs aren't joined to the domain in [Session host VM configuration](/azure/virtual-desktop/troubleshoot-vm-configuration).
 
 **Cause 2:** Domain name doesn't resolve.
 
 **Fix 2:** See [Error: Domain name doesn't resolve](troubleshoot-vm-configuration.md#error-domain-name-doesnt-resolve) in [Session host VM configuration](/azure/virtual-desktop/troubleshoot-vm-configuration).
 
-**Cause 3:** Your virtual network (VNET) DNS configuration is set to **Default**.
+**Cause 3:** Your virtual network (virtual network) DNS configuration is set to **Default**.
 
 To fix this, do the following things:
 
 1. Open the Azure portal and go to the **Virtual networks** tab.
-2. Find your VNET, then select **DNS servers**.
+2. Find your virtual network, then select **DNS servers**.
 3. The DNS servers menu should appear on the right side of your screen. On that menu, select **Custom**.
 4. Make sure the DNS servers listed under Custom match your domain controller or Active Directory domain. If you don't see your DNS server, you can add it by entering its value into the **Add DNS server** field.
 
@@ -153,11 +153,11 @@ Example of raw error:
  One or more errors occurred. The SendConfigurationApply function did not succeed.\"." } ] … }
 ```
 
-**Cause:** PowerShell DSC extension was not able to get admin access on the VM.
+**Cause:** PowerShell DSC extension wasn't able to get admin access on the VM.
 
 **Fix:** Confirm username and password have administrative access on the virtual machine and run the Azure Resource Manager template again.
 
-### Error: DeploymentFailed – PowerShell DSC Configuration 'FirstSessionHost' completed with Error(s)
+### Error: DeploymentFailed - PowerShell DSC Configuration 'FirstSessionHost' completed with Errors
 
 > [!div class="mx-imgBorder"]
 > ![Screenshot of deployment fail with PowerShell DSC Configuration 'FirstSessionHost' completed with Error(s).](media/troubleshoot-set-up-issues/failure-dsc.png)
@@ -186,11 +186,11 @@ Example of raw error:
 
 ```
 
-**Cause:** PowerShell DSC extension was not able to get admin access on the VM.
+**Cause:** PowerShell DSC extension wasn't able to get admin access on the VM.
 
 **Fix:** Confirm username and password provided have administrative access on the virtual machine and run the Azure Resource Manager template again.
 
-### Error: DeploymentFailed – InvalidResourceReference
+### Error: DeploymentFailed - InvalidResourceReference
 
 Example of raw error:
 
@@ -213,11 +213,11 @@ the referenced resource exists, and that both resources are in the same
 region.\\\",\\r\\n\\\"details\\\": []\\r\\n }\\r\\n}\"\r\n }\r\n ]\r\n }\r\n ]\r\n }\r\n}"}]}
 ```
 
-**Cause:** Part of the resource group name is used for certain resources being created by the template. Due to the name matching existing resources, the template may select an existing resource from a different group.
+**Cause:** Part of the resource group name is used for certain resources being created by the template. Due to the name matching existing resources, the template might select an existing resource from a different group.
 
 **Fix:** When running the Azure Resource Manager template to deploy session host VMs, make the first two characters unique for your subscription resource group name.
 
-### Error: DeploymentFailed – InvalidResourceReference
+### Error: DeploymentFailed - InvalidResourceReference
 
 Example of raw error:
 
@@ -240,11 +240,11 @@ resources are in the same region.\\\",\\r\\n \\\"details\\\": []\\r\\n }\\r\\n}\
 }\r\n ]\r\n }\r\n ]\r\n }\r\n\
 ```
 
-**Cause:** This error is because the NIC created with the Azure Resource Manager template has the same name as another NIC already in the VNET.
+**Cause:** This error is because the NIC created with the Azure Resource Manager template has the same name as another NIC already in the virtual network.
 
 **Fix:** Use a different host prefix.
 
-### Error: DeploymentFailed – Error downloading
+### Error: DeploymentFailed - Error downloading
 
 Example of raw error:
 

@@ -18,7 +18,7 @@ Visit the [Azure Virtual Desktop Tech Community](https://techcommunity.microsoft
 
 ## PowerShell commands used during Azure Virtual Desktop setup
 
-This section lists PowerShell commands that are typically used while setting up Azure Virtual Desktop and provides ways to resolve issues that may occur while using them.
+This section lists PowerShell commands that are typically used while setting up Azure Virtual Desktop and provides ways to resolve issues that might occur while using them.
 
 ### Error: New-AzRoleAssignment: The provided information does not map to an AD object ID
 

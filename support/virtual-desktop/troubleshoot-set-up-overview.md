@@ -10,7 +10,7 @@ ms.custom: docs_inherited
 
 # Troubleshooting overview, feedback, and support for Azure Virtual Desktop
 
-This article provides an overview of the issues you may encounter when setting up an Azure Virtual Desktop environment and provides ways to resolve the issues.
+This article provides an overview of the issues you might encounter when setting up an Azure Virtual Desktop environment and provides ways to resolve the issues.
 
 ## Troubleshoot deployment and connection issues
 
@@ -20,21 +20,21 @@ This article provides an overview of the issues you may encounter when setting u
 
 To report issues or suggest features for Azure Virtual Desktop with Azure Resource Manager integration, visit the [Azure Virtual Desktop Tech Community](https://techcommunity.microsoft.com/t5/azure-virtual-desktop/bd-p/AzureVirtualDesktopForum). You can use the Tech Community to discuss best practices or suggest and vote for new features.
 
-When you make a post asking for help or propose a new feature, make sure you describe your topic in as much detail as possible. Detailed information can help other users answer your question or understand the feature you're proposing a vote for.
+When you make a post asking for help or propose a new feature, make sure you describe your scenario in as much detail as possible. Detailed information can help other users answer your question or understand the feature you're proposing a vote for.
 
 ## Help with application issues
 
-If you encounter issues with your applications running in Azure Virtual Desktop, App Assure is a service from Microsoft designed to help you resolve them at no additional cost. For more information, go to [App Assure](/microsoft-365/fasttrack/windows-and-other-services#app-assure).
+If you encounter issues with your applications running in Azure Virtual Desktop, App Assure is a service from Microsoft designed to help you resolve them at no extra cost. For more information, go to [App Assure](/microsoft-365/fasttrack/windows-and-other-services#app-assure).
 
 ## Escalation tracks
 
 Before doing anything else, make sure to check the [Azure status page](https://azure.status.microsoft/status) and [Azure Service Health](https://azure.microsoft.com/features/service-health/) to make sure your Azure service is running properly.
 
-Use the following table to identify and resolve issues you may encounter when setting up an environment using Remote Desktop client. Once your environment's set up, you can use our new [Diagnostics service]() to identify issues for common scenarios.
+Use the following table to identify and resolve issues you might encounter when setting up an environment using Remote Desktop client. Once your environment's set up, you can use our new [Diagnostics service]() to identify issues for common scenarios.
 
 | **Issue**                                                            | **Suggested Solution**  |
 |----------------------------------------------------------------------|-------------------------------------------------|
-| Session host pool Azure Virtual Network (VNET) and Express Route settings               | [Open an Azure support request](https://azure.microsoft.com/support/create-ticket/), then select the appropriate service (under the Networking category). |
+| Session host pool Azure Virtual Network (virtual network) and Express Route settings               | [Open an Azure support request](https://azure.microsoft.com/support/create-ticket/), then select the appropriate service (under the Networking category). |
 | Session host pool Virtual Machine (VM) creation when Azure Resource Manager templates provided with Azure Virtual Desktop aren't being used | [Open an Azure support request](https://azure.microsoft.com/support/create-ticket/), then select **Azure Virtual Desktop** for the service. <br> <br> For issues with the Azure Resource Manager templates that are provided with Azure Virtual Desktop, see Azure Resource Manager template errors section of [Host pool creation](/azure/virtual-desktop/troubleshoot-set-up-issues). |
 | Managing Azure Virtual Desktop session host environment from the Azure portal    | [Open an Azure support request](https://azure.microsoft.com/support/create-ticket/). <br> <br> For management issues when using Remote Desktop Services/Azure Virtual Desktop PowerShell, see [Azure Virtual Desktop PowerShell](/azure/virtual-desktop/troubleshoot-powershell) or [open an Azure support request](https://azure.microsoft.com/support/create-ticket/), select **Azure Virtual Desktop** for the service, select **Configuration and management** for the problem type, then select **Issues configuring environment using PowerShell** for the problem subtype. |
 | Managing Azure Virtual Desktop configuration tied to host pools and application groups (app groups)      | See [Azure Virtual Desktop PowerShell](/azure/virtual-desktop/troubleshoot-powershell), or [open an Azure support request](https://azure.microsoft.com/support/create-ticket/), select **Azure Virtual Desktop** for the service, then select the appropriate problem type.|
