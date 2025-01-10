@@ -164,7 +164,7 @@ The following screenshot is an example of the event deletion:
 
 ## Reference
 
-For more information, see [Configure auditing on configuration containers](https://learn.microsoft.com/en-us/defender-for-identity/deploy/configure-windows-event-collection#configure-auditing-on-the-configuration-container).
+For more information, see [Configure auditing on configuration containers](/defender-for-identity/deploy/configure-windows-event-collection#configure-auditing-on-the-configuration-container).
 
 ## Data collection
 
