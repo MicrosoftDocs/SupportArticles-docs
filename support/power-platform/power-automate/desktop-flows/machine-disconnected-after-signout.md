@@ -14,4 +14,8 @@ When you sign out of your Windows computer and you go to the Power Automate port
 
 ## Cause
 
-This may be caused by your proxy server. Please follow
+This may be caused by your proxy server. Some proxy servers require a user to be signed in to allow connectivity.
+
+## Resolution
+
+You can try to update the usre with which the Power Automate service (UIFlowService) runs as. To do this, please see this documentation: https://learn.microsoft.com/en-us/power-automate/desktop-flows/troubleshoot#change-the-on-premises-service-account
