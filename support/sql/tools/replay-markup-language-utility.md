@@ -17,9 +17,12 @@ _Original KB number:_ &nbsp; 944837
 
 RML Utilities is a set of diagnostic tools for troubleshooting and aiding performance issues in SQL Server. You can think of these tools as analogous to tools that assist medical technicians process X-Ray, MRI, CT Scan results. RML Utilities are used to process and visualize the performance diagnostic data collected by users. These tools are commonly used by SQL Server support engineers to process diagnostic traces in the course of troubleshooting a performance issue. Also RML Utils are frequently used by database developers and administrators to analyze their SQL Server query workload from their test and production environments and improve it. There are three utilities in the suite: ReadTrace, Reporter, and Ostress.
 
-- ReadTrace.exe uses as input [Extended Event](/sql/relational-databases/extended-events/extended-events) traces or [SQL Trace](/sql/relational-databases/sql-trace/sql-trace) traces that a user creates to diagnose a SQL Server issue or analyze workload performance. ReadTrace imports the traces into tables into a SQL Server database that the user points to. Think of ReadTrace as a transformation tool: takes binary `.XEL` or `.TRC` files and imports them into tables so they can more easily be analyzed via SQL queries. ReadTrace can also generate Replay Markup Language (.RML) files that can be used by Ostress for workload replay.
-- Reporter.exe is a report and visualization tool that connects to the user database that ReadTrace creates. Reporter runs SQL queries against the database and shows offline SSRS reports summaries of the original Extended Events or Profiler traces. For example, a report might show you which queries ran longest in a particular captured workload, which queries used most CPU and did most reads.
+- ReadTrace uses as input [Extended Event](/sql/relational-databases/extended-events/extended-events) traces or [SQL Trace](/sql/relational-databases/sql-trace/sql-trace) traces that a user creates to diagnose a SQL Server issue or analyze workload performance. ReadTrace imports the traces into tables into a SQL Server database that the user points to. Think of ReadTrace as a transformation tool: takes binary `.XEL` or `.TRC` files and imports them into tables so they can more easily be analyzed via SQL queries. ReadTrace can also generate Replay Markup Language (.RML) files that can be used by Ostress for workload replay.
+- Reporter is a report and visualization tool that connects to the user database that ReadTrace creates. Reporter runs SQL queries against the database and shows offline SSRS reports summaries of the original Extended Events or Profiler traces. For example, a report might show you which queries ran longest in a particular captured workload, which queries used most CPU and did most reads.
 - Ostress is a stress-testing simulation tool. Ostress.exe uses Extended Event or SQL Profiler diagnostic traces as input. It can also accept user-supplied queries as inputs. Ostress then replays those traces or queries against a SQL Server that the user chooses. The goal is to simulate a stress. For example, if you feed OStress a query `select * from table1` you can tell it to run 100 times on 50 connections simultaneously. In addition to individual queries, Ostress can use special Replay Markup Language (RML) files that ReadTrace has generated to perform the replay
+- OStress Replay Control Agent (ORCA) aides Ostress in simulating a stress test by replaying a workload from RML files. You don't interact wiht ORCA directly, but use Ostress.
+
+For a complete description of every tool and sample usage, see the RML Help file that's included in RML Utilities for SQL Server.
 
 ## How are RML Utilities useful?
 
@@ -36,6 +39,12 @@ After you capture a trace for an instance of SQL Server, you can use RML Utiliti
 - Update a stored procedure or a function
 - Update an index or create an index
 
+### Benefits of RML Utilities for SQL Server
+
+RML Utilities for SQL Server is useful if you want to simulate application testing when it's impractical or impossible to test by using the real application. In a test environment, it might be difficult to generate the same user load that exists in the production environment. You could use RML Utilities for SQL Server to replay a production workload in a test environment and assess the performance effect of any changes. For example, you could test an upgrade to SQL Server 2008 or the application of a SQL Server service pack. Additionally, you can use RML Utilities for SQL Server to analyze and compare various replay workloads. This kind of regression analysis would otherwise be a difficult process that you would have to do manually.
+
+The Help file contains a Quick Start topic. This topic includes a brief exercise that familiarizes you with every RML tool. To open the Help file, select **Start**, point to **All Programs**, point to **RML Utilities for SQL Server**, point to **Help**, and then select **RML Help**.
+
 ## Download location and version history
 
 You can examine the version history of RML Utilities in this table and download the tools from here.
@@ -46,12 +55,12 @@ You can examine the version history of RML Utilities in this table and download 
 |[09.04.0102](https://www.microsoft.com/download/details.aspx?id=104868)| Indicates the previous web release that's available from the Microsoft Download Center. It supports all released versions of SQL Server (SQL Server 2022, SQL Server 2019, SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, and SQL Server 2008).|
 |[9.04.0100](https://www.microsoft.com/download/details.aspx?id=103126)| Indicates a previous web release that's available from the Microsoft Download Center. It supports all released versions of SQL Server (SQL Server 2019, SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008, SQL Server 2005, and SQL Server 2000).|
 |[9.04.0098](https://www.microsoft.com/download/details.aspx?id=54090)| Indicates a previous web release package that is included with the Database Experimentation Assistant tool. It supports all released versions of SQL Server.|
-|9.04.0097| Indicates current release available from the SQL Nexus site that supports all released versions of SQL Server.|
-|9.04.0051| Is the previous web release that's available from the Microsoft Download Center that supports SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008, SQL Server 2005, and SQL Server 2000.|
-|9.04.0004| Is a previous web release that supports SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008, SQL Server 2005, and SQL Server 2000.|
-|9.01.0109| Is a  previous web release that supports SQL Server 2008 R2, SQL Server 2008, SQL Server 2005, and SQL Server 2000.|
-|9.00.0023| Is a previous web release that supports SQL Server 2005 and SQL Server 2000.|
-|8.10.0010| Is the initial web release that supports SQL Server 2000 and SQL Server 7.0.|
+|9.04.0097| A previous release available from the SQL Nexus site that supports all released versions of SQL Server.|
+|9.04.0051| A previous web release that's available from the Microsoft Download Center that supports SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008, SQL Server 2005, and SQL Server 2000.|
+|9.04.0004| A previous web release that supports SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008, SQL Server 2005, and SQL Server 2000.|
+|9.01.0109| A  previous web release that supports SQL Server 2008 R2, SQL Server 2008, SQL Server 2005, and SQL Server 2000.|
+|9.00.0023| A previous web release that supports SQL Server 2005 and SQL Server 2000|
+|8.10.0010| The initial web release that supports SQL Server 2000 and SQL Server 7.0|
   
 The current version of RML Utilities for SQL Server supersedes any earlier versions. You must uninstall any earlier version of RML Utilities for SQL Server before you install the current version. The current version of the tool suite contains important software updates, improved features (process *.trc* and *.xel* files) and reports, and performance and scalability improvements.
 
@@ -64,22 +73,6 @@ The current version of RML Utilities for SQL Server supersedes any earlier versi
 > [!NOTE]  
 > Microsoft provides RML Utilities for SQL Server as is. Microsoft Customer Support Services (CSS) doesn't provide support or updates for the suite. If you have a suggestion or you want to report a bug, you can use the e-mail address in the "Problems and Assistance" article in the Help file (_RML Help.pdf_). The Help file is included with the RML Utilities for SQL Server.
 
-## Benefits of RML Utilities for SQL Server
-
-RML Utilities for SQL Server is useful if you want to simulate application testing when it's impractical or impossible to test by using the real application. In a test environment, it might be difficult to generate the same user load that exists in the production environment. You could use RML Utilities for SQL Server to replay a production workload in a test environment and assess the performance effect of any changes. For example, you could test an upgrade to SQL Server 2008 or the application of a SQL Server service pack. Additionally, you can use RML Utilities for SQL Server to analyze and compare various replay workloads. This kind of regression analysis would otherwise be a difficult process that you would have to do manually.
-
-The Help file contains a Quick Start topic. This topic includes a brief exercise that familiarizes you with every RML tool. To open the Help file, select **Start**, point to **All Programs**, point to **RML Utilities for SQL Server**, point to **Help**, and then select **RML Help**.
-
-## Tools in RML Utilities for SQL Server
-
-RML Utilities for SQL Server contains the following tools:
-
-- ReadTrace
-- Reporter
-- OStress
-- OStress Replay Control Agent (ORCA)
-
-For a complete description of every tool and sample usage, see the RML Help file that's included in RML Utilities for SQL Server.
 
 ## Dependencies for RML Utilities for SQL Server
 
@@ -117,9 +110,9 @@ You have to make sure that the Report Viewer controls are available either in th
 
 1. You must download and install a ReporterViewer fix to allow links within the ReadTrace reports to work properly. To download the ReporterViewer fix, go to [Microsoft Visual Studio 2010 Service Pack 1 Report Viewer (KB2549864)](https://www.microsoft.com/en-us/download/details.aspx?id=27231).
 
-### Dependencies for Expander
+### Dependencies for Expander (optional)
 
-Make sure that the compression and decompression controls are available either in the same folder as *Expander.exe* or in the GAC. The DLLs that *Expander.exe* requires are as follows:
+In most cases Expander, that ReadTrace uses to process CAB/ZIP/RAR files is not utilized. But if you need to use this functionality for a particular compressed file type, make sure that the compression and decompression controls are available either in the same folder as *Expander.exe* or in the GAC. The DLLs that *Expander.exe* requires are as follows:
 
 - *BRICOLSOFTZipx64.dll*
 - *UnRar64.dll*
