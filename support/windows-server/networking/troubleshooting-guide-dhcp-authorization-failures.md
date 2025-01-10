@@ -168,11 +168,9 @@ For more information, see [Configure auditing on configuration containers](/defe
 
 ## Data collection
 
-Before contacting Microsoft support, you can gather information about your issue.
+Before contacting Microsoft support, you can gather information about your issue. 
 
-Follow the steps provided [here](../../windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss.md) to download and collect logs using TSS tool.
-
-Use this command for enabling log collection on the impacted computers.
+Follow the steps provided [here](../../windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss.md) to download and collect logs using TSS tool. And then use this command for enabling log collection on the impacted computers.
 
 ```powershell
 .\TSS.ps1 -Scenario NET_DHCPsrv
