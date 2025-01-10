@@ -11,7 +11,7 @@ appliesto:
 
 # KB5048038 - Cumulative Update 17 for SQL Server 2022
 
-_Release Date:_ &nbsp; January 09, 2025  
+_Release Date:_ &nbsp; January 16, 2025  
 _Version:_ &nbsp; 16.0.4175.1
 
 ## Summary

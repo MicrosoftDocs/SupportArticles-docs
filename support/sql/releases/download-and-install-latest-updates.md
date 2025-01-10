@@ -57,7 +57,7 @@ Each of the following links provides information for all of the applicable produ
 
 | Build number or version | Service pack | Update    | Knowledge Base number                                            | Release date       |
 |-------------------------|--------------|-----------|-------------------------------------------------------|--------------------|
-| 16.0.4175.1             | None         | CU17| [KB5048038](sqlserver-2022/cumulativeupdate17.md) | January 09, 2025    |
+| 16.0.4175.1             | None         | CU17| [KB5048038](sqlserver-2022/cumulativeupdate17.md) | January 16, 2025    |
 | 16.0.4165.4             | None         | CU16| [KB5048033](sqlserver-2022/cumulativeupdate16.md) | November 14, 2024    |
 | 16.0.4155.4             | None         | CU15 + GDR| [KB5046862](https://support.microsoft.com/help/5046862) | November 12, 2024    |
 | 16.0.1135.2             | None         | GDR       | [KB5046861](https://support.microsoft.com/help/5046861) | November 12, 2024    |
