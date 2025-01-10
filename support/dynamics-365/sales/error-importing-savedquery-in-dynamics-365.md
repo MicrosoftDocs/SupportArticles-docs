@@ -4,7 +4,6 @@ description: Error occurs when importing SavedQuery in Microsoft Dynamics 365. P
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
-ms.subservice: d365-sales-data -import
 ---
 # Error occurs when importing SavedQuery in Microsoft Dynamics 365
 

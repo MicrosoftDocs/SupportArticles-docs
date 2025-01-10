@@ -104,6 +104,11 @@ After installing or upgrading the Azure File Sync agent (v17.3 or later), you ma
   ```
 
 - ServerRegistration.exe or AfsUpdater.exe fails to open
+- Agent installation fails and installation log shows error code 0x80c84111 with message:
+
+  ```
+  Exception occurred while configuring MitigationRedirection policy. This could indicate that required windows updates not installed on the computer.
+  ```
 
 This issue occurs because the Azure File Sync agent has a dependency on a Windows security feature and updates for this security feature are not installed.
 

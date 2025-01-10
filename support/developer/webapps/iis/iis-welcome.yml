@@ -36,7 +36,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Default permissions and user rights
-            url: www-authentication-authorization/default-permissions-user-rights.md
+            url: www-administration-management/default-permissions-user-rights.md
           - text: Http.sys registry settings for Windows
             url: iisadmin-service-inetinfo/httpsys-registry-windows.md
 

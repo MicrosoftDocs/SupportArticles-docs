@@ -4,7 +4,6 @@ description: Provides a solution to an error that occurs when you access the Mic
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
-ms.subservice: d365-sales-client-outlook
 ---
 # Something went wrong during sign-in error message displays when you access the Microsoft Dynamics 365 App for Outlook
 

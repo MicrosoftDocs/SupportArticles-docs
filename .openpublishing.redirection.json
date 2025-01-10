@@ -11147,7 +11147,7 @@
     },
     {
       "source_path": "support/windows-server/active-directory/lingering-objects-remain.md",
-      "redirect_url": "/previous-versions/troubleshoot/windows-server/lingering-objects-remain",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/manually-remove-lingering-objects",
       "redirect_document_id": false
     },
     {
@@ -12596,6 +12596,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/dynamics-365/sales/exception-appears-server-side-sync.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/exception-appears-server-side-sync",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/dynamics-365/sales/error-when-signing-dynamics-365.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/error-when-signing-dynamics-365",
       "redirect_document_id": true
@@ -12611,9 +12616,54 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/dynamics-365/sales/unknownincomingemailintegrationerror.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/exception-appears-server-side-sync",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/unknownincomingemailintegrationerror-2147167669-shows-in-alert-in-mailbox.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/exception-appears-server-side-sync",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/unknownincomingemailintegrationerror-2147220192.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/exception-appears-server-side-sync",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/unknownincomingemailintegrationerror-2147220970-exception.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/exception-appears-server-side-sync",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/alert-appears-users-dynamics-365-mailbox-record.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/exception-appears-server-side-sync",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/windows-server/group-policy/apply-group-policy-objects-terminal-services.md",
       "redirect_url": "/troubleshoot/windows-server/group-policy/apply-group-policy-objects-rds",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/an-error-occurred-while-synchronizing-item.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/an-error-occurred-while-synchronizing-item",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/http-server-returned-serviceunavailable.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/an-error-occurred-while-synchronizing-item",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/incomingmailboxinternalcrmerror.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/an-error-occurred-while-synchronizing-item",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/errorinternalservertransienterror-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/an-error-occurred-while-synchronizing-item",
+      "redirect_document_id": false
     }
   ]
 }

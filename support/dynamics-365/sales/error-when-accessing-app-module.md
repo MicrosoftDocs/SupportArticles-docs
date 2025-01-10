@@ -4,7 +4,6 @@ description: Provides a solution to an error that occurs when you try to access 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
-ms.subservice: d365-sales-access
 ---
 # Error Code: 2147812097 Invalid License: This application requires a license and you don't have an appropriate license assigned
 

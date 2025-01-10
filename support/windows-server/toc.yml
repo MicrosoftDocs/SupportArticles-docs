@@ -207,8 +207,10 @@ items:
       href: ./active-directory/duplicate-active-directory-replication-connections.md
     - name: How to restrict RPC traffic to a specific port
       href: ./active-directory/restrict-ad-rpc-traffic-to-specific-port.md
-    - name: lingering objects in a Windows Server Active Directory forest
+    - name: Lingering objects in a Windows Server Active Directory forest
       href: ./active-directory/information-lingering-objects.md
+    - name: Lingering objects manual removal
+      href: ./active-directory/manually-remove-lingering-objects.md
     - name: Manually replicating data between domain controllers fails
       href: ./active-directory/target-principal-name-is-incorrect-when-replicating-data.md
     - name: Modify the default intra-site DC replication interval
@@ -1445,6 +1447,8 @@ items:
       href: ./networking/troubleshoot-dns-name-resolution.md
     - name: Troubleshoot DNS name resolution failures related to DNS forwarders
       href: ./networking/troubleshoot-dns-forwarders-related-failures.md
+    - name: Troubleshoot DNS scavenging issues
+      href: ./networking/troubleshoot-dns-scavenging-issues.md
     - name: Verify that SRV DNS records have been created
       href: ./networking/verify-srv-dns-records-have-been-created.md
     - name: WINS registration fails if a server points to itself for WINS name resolution

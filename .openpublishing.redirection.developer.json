@@ -5794,6 +5794,50 @@
       "source_path": "support/developer/webapps/iis/site-behavior-performance/page-cannot-displayed-when-you-connect-ssl.md",
       "redirect_url": "/troubleshoot/developer/webapps/iis/iis-welcome",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/webapps/iis/general/instances-httpsys-not-cache.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-modules-features/instances-httpsys-not-cache"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/health-diagnostic-performance/troubleshoot-502-2-bad-gateway-error-in-cgi-apps.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/troubleshoot-502-2-bad-gateway-error-in-cgi-apps"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/health-diagnostic-performance/troubleshoot-http-400-errors-in-iis.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/troubleshoot-http-400-errors-in-iis"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/site-behavior-performance/exception-integrated-pipeline-mode.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/development/exception-integrated-pipeline-mode"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/www-administration-management/http-error-500-when-you-visit-web-site.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/http-error-500-when-you-visit-web-site"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/www-authentication-authorization/401-error-preauthentication-header.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/401-error-preauthentication-header"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/www-authentication-authorization/information-associated-iis-site-is-not-deleted.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-administration-management/information-associated-iis-site-is-not-deleted"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/www-administration-management/http-status-code.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/health-diagnostic-performance/http-status-code"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/health-diagnostic-performance/http-403-14-forbidden-webpage.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/http-403-14-forbidden-webpage"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/www-authentication-authorization/default-permissions-user-rights.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-administration-management/default-permissions-user-rights"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/health-diagnostic-performance/http-403-forbidden-access-website.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/http-403-forbidden-access-website"
     }
   ]
 }

@@ -4,7 +4,6 @@ description: Fixes an issue in which you can't open Microsoft Dynamics 365 App f
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
-ms.subservice: d365-sales-client-outlook
 ---
 # "We are unable to show Dynamics 365 App for Outlook because current user role does not have required permissions" error occurs in Microsoft Dynamics 365 App for Outlook
 

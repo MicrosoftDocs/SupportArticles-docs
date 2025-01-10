@@ -4,6 +4,7 @@ description: This article introduces about using the Configuration Editor featur
 ms.date: 12/16/2024
 ms.custom: sap:WWW Authentication and Authorization\SSL and SSL Server certificates
 ms.topic: how-to
+ms.reviewer: zixie
 ---
 # Configuring Many-to-One client certificate mappings for IIS
 

@@ -3,7 +3,6 @@ title: Attachments not tracked after Defender for Office 365 is enabled
 description: This article resolves an issue where attachments aren't tracked to Microsoft Dynamics 365 after Microsoft Defender for Office 365 is enabled.
 ms.reviewer: dmartens, Chris.Davis
 ms.date: 03/06/2023
-ms.subservice: d365-sales-email-office-integration
 ---
 # Attachments aren't tracked to Microsoft Dynamics 365 after Microsoft Defender for Office 365 is enabled
 
