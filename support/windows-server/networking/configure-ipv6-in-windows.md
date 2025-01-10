@@ -26,7 +26,8 @@ _Original KB number:_ &nbsp; 929852
 It is common for IT administrators to disable IPv6 to troubleshoot networking-related issues such as name resolution issues.
 
 > [!IMPORTANT]
-> Internet Protocol version 6 (IPv6) is a mandatory part of Windows Vista and Windows Server 2008 and newer versions. We do not recommend that you disable IPv6 or its components. If you do, some Windows components may not function.
+> Internet Protocol version 6 (IPv6) is a mandatory part of Windows Vista and Windows Server 2008 and newer versions.
+> We do NOT recommend that you disable IPv6 or its components or unbind IPv6 from interfaces. If you do, some Windows components may not function.
 >
 > We recommend using **Prefer IPv4 over IPv6** in prefix policies instead of disabling IPV6.
 
@@ -111,11 +112,14 @@ This registry value doesn't affect the state of the following check box. Even if
 
 :::image type="content" source="./media/configure-ipv6-in-windows/network-properties.svg" alt-text="The Internet Protocol Version 6 (TCP/IPv6) option in Network properties." border="false":::
 
-### It is strongly NOT recommended to unbind IPv6 from an interface
+
+## Unbind IPv6 from an interface
+
+You can unbind IPv6 from a network interface by using the following methods:
 - by unchecking 'Internet Protocol Version 6 (TCP/IPv6)' in the network properties GUI (see image above), or 
 - by using the PowerShell command `Disable-NetAdapterBinding -Name "MyAdapter" -ComponentID ms_tcpip[6] `
   
-These settings don't disable IPv6 but unbind the IPv6 protocol from the network interface. Unbindig IPv6 from one or more interfaces might lead to connectivity issues that can only be resolved by reverting the change.
+This setting doesn't disable IPv6 but unbinds the IPv6 protocol from the network interface. Unbindig IPv6 from one or more interfaces might lead to connectivity issues that can only be resolved by reverting the change.
 
 ## Reference
 
