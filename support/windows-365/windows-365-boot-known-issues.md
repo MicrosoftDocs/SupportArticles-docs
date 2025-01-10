@@ -120,7 +120,7 @@ Camera permissions must be granted to the Azure Virtual Desktop (HostApp) applic
 1. [Remove Windows 365 Boot from the physical device](troubleshoot-windows-365-boot.md#remove-windows-365-boot-from-the-physical-device).
 2. On the physical device, open **Settings** > **Privacy & Security** > **Camera** > **Let apps access your camera**.
 3. Set **Azure Virtual Desktop (HostApp)** to **On**.
-4. [Add Windows 365 Boot back onto the physical device](troubleshoot-windows-365-boot.md#add-windows-365-boot-back-onto-the-physical-device).
+4. [Add Windows 365 Boot back onto the physical device](troubleshoot-windows-365-boot.md#add-windows-365-boot-back-to-the-physical-device).
 
 ## Users can still interact with physical device features like Settings, Task Manager, and Notifications
 
