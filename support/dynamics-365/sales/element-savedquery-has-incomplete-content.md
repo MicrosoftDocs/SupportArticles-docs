@@ -4,7 +4,6 @@ description: Provides a solution to an error that occurs when you try to import 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
-ms.subservice: d365-sales-custom-solutions
 ---
 # The element savedquery has incomplete content. List of possible elements expected: LocalizedNames error occurs when importing a Microsoft Dynamics 365 solution
 
