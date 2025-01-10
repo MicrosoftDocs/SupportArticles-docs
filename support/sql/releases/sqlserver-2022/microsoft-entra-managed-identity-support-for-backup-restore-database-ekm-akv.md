@@ -49,7 +49,7 @@ To enable the managed identity support for EKM with AKV for SQL Server on Azure 
 1.	Assign the primary managed identity for the SQL Server on Azure VMs.
 2.	Create or use a key vault.   
 3.	Assign role-based access control (RBAC) roles for the primary managed identity to access the AKV.
-4.	Download the latest [SQL Server Connector for Microsoft Azure Key Vault](https://www.microsoft.com/download/details.aspx?id=45344) (the **1.0.5.0** November 2024 or later versions). The latest version of the SQL Server Connector is required to support the managed identity.
+4.	Download the latest [SQL Server Connector for Microsoft Azure Key Vault](https://www.microsoft.com/download/details.aspx?id=45344) (the 1.0.5.0 (November 2024) or later versions). The latest version of the SQL Server Connector is required to support the managed identity.
 5.	Run the T-SQL command `CREATE CREDENTIAL` with the `WITH IDENTITY = 'Managed Identity'` clause using the AKV path as a credential name.
 
 ```SQL
