@@ -2151,6 +2151,8 @@ items:
       href: ./remote/honors-registry-size-limit-functionality-key-set.md
     - name: Remote Control prompts for user permission
       href: ./remote/remote-control-prompts-user-permission.md
+    - name: Remote Desktop can't connect to the remote computer
+      href: ./remote/remote-desktop-cannot-connect-remote-computer.md  
     - name: Remote Desktop Connection 6.1 client update
       href: ./remote/rdc-6dot1-client-update-terminal-services.md
     - name: Remote desktop connection is stuck
