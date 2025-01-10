@@ -42,7 +42,7 @@ Use the following self-service diagnostic tools to troubleshoot issues in the Gl
 - [**Troubleshoot the Global Secure Access client: advanced diagnostics**](/entra/global-secure-access/troubleshoot-global-secure-access-client-advanced-diagnostics)
 - [**Troubleshoot the Global Secure Access client: Health check tab**](/entra/global-secure-access/troubleshoot-global-secure-access-client-diagnostics-health-check)
 
-If the diagnostic tools can't fix the problem, [collect troubleshooting logs](/entra/global-secure-access/troubleshoot-global-secure-access-client-advanced-diagnostics?branch=main#advanced-log-collection-tab) and submit a support ticket with the logs included.
+If the diagnostic tools can't fix the issues, [collect troubleshooting logs](/entra/global-secure-access/troubleshoot-global-secure-access-client-advanced-diagnostics?branch=main#advanced-log-collection-tab), and then submit a support ticket with the logs.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
 
