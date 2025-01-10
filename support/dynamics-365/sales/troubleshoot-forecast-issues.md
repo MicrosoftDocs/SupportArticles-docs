@@ -5,7 +5,6 @@ author: sbmjais
 ms.author: shjais
 ms.reviewer: ladirohit, lavanyakr
 ms.date: 03/15/2024
-ms.subservice: d365-sales-sales
 ---
 # Troubleshoot issues with forecasting
 

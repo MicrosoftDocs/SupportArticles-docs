@@ -4,7 +4,6 @@ description: Provides a solution to an issue where Microsoft Dynamics 365 App fo
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
-ms.subservice: d365-sales-email-office-integration
 ---
 # Microsoft Dynamics 365 App for Outlook is missing from Microsoft Dynamics 365 navigation
 
