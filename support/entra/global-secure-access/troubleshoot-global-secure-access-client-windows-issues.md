@@ -42,22 +42,8 @@ Use the following self-service diagnostic tools to troubleshoot issues in the Gl
 - [**Troubleshoot the Global Secure Access client: advanced diagnostics**](/entra/global-secure-access/troubleshoot-global-secure-access-client-advanced-diagnostics)
 - [**Troubleshoot the Global Secure Access client: Health check tab**](/entra/global-secure-access/troubleshoot-global-secure-access-client-diagnostics-health-check)
 
+If the diagnostic tools can't fix the problem, [collect troubleshooting logs](/entra/global-secure-access/troubleshoot-global-secure-access-client-advanced-diagnostics?branch=main#advanced-log-collection-tab) and submit a support ticket with the logs included.
 
-### Review the event logs
-
-The Global Secure Access client has detailed event log support. To view the logs, follow these steps:
-
-1. Select **Start**, and search for and select **Event Viewer**.
-1. In the console tree of the Event Viewer window, expand **Application and Services logs** > **Microsoft** > **Windows** > **Microsoft Global Secure Access Client**.
-1. In the **Microsoft Global Secure Access Client** node, select the **Operational** log. Within this log, you can find events that belong to the following categories:
-
-   - Connection handling and errors
-   - Authentication handling and errors
-
-1. In the **Microsoft Global Secure Access Client** node, select the **Debug** log. This log contains events that belong to the following categories:
-
-   - Detailed traffic flow handling
-   - Traffic that is acquired or isn't acquired
 
 [!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
 
