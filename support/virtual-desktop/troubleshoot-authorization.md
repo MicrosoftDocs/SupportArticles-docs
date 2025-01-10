@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot Azure Files Virtual Desktop - Azure
-description: How to troubleshoot issues with Azure Files in Azure Virtual Desktop.
+title: Troubleshoot Azure Files authentication with Active Directory
+description: Helps troubleshoot issues related to Azure Files authentication with Active Directory.
 author: dknappettmsft
 ms.topic: troubleshooting
 ms.date: 08/19/2021
@@ -24,7 +24,7 @@ Here are the most common reasons users might come across issues:
 - Ignoring any warning messages that appear when creating the account in PowerShell. Ignoring warnings might cause the new account to have incorrectly configured settings. To fix this issue, you should delete the domain account that represents the storage account and try again.
 
 - The account is using an incorrect organizational unit (OU). To fix this issue, reenter the OU information with the following syntax:
-    
+
     ```powershell
     DC=ouname,DC=domainprefix,DC=topleveldomain
     ```
@@ -48,7 +48,6 @@ If your storage account doesn't automatically sync with Microsoft Entra ID after
 If your storage account needs additional permissions, you might not have assigned the required Azure role-based access control (RBAC) role to users or NTFS permissions. To fix this issue, make sure you've assigned one of these permissions to users who need to access the share:
 
 - The **Storage File Data SMB Share Contributor** RBAC permission.
-
 - The **Read & Execute** and **List folder content** NTFS permissions.
 
 ## Next steps
