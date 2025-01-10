@@ -1487,6 +1487,8 @@ items:
       href: ./networking/pxe-clients-not-start-dhcp-60-66-67-option.md
     - name: Troubleshoot problems on the DHCP client
       href: ./networking/troubleshoot-problems-dhcp-client.md
+    - name: Troubleshoot DHCP authorization failures
+      href: ./networking/troubleshooting-guide-dhcp-authorization-failures.md
     - name: Use Netsh utility to export and import DHCP scopes
       href: ./networking/netsh-utility-export-import-dhcp-scopes.md
   - name: FRS
