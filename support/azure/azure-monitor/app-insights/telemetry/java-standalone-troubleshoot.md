@@ -2,7 +2,7 @@
 title: Troubleshoot Azure Monitor Application Insights for Java
 description: This article presents troubleshooting information for the Java agent for Azure Monitor Application Insights.
 ms.topic: conceptual
-ms.date: 06/24/2024
+ms.date: 01/10/2025
 editor: v-jsitser
 ms.reviewer: aaronmax, jeanbisutti, trstalna, toddfous, heya, v-leedennis
 ms.service: azure-monitor
@@ -242,27 +242,28 @@ Alternatively, you can try the following experimental feature: [Startup time imp
 
 ## Understand duplicated operation ID
 
-Application logic can result in the operation ID being reused by multiple telemetry data, as shown by [this example](/azure/azure-monitor/app/distributed-trace-data#example).
+Application logic can result in the operation ID to be reused by multiple telemetry items, as shown in [this example](/azure/azure-monitor/app/distributed-trace-data#example). The duplication might also come from incoming requests. To identify this, use one of the following methods:
 
-The duplication may also come from incoming requests. To spot this second possibility:
-* Enable the capture of the `traceparent` header in the  `applicationinsigths.json ` file
-```json
-  {
-    "preview": {
-      "captureHttpServerHeaders": {
-        "requestHeaders": [
-          "traceparent"
-        ]
+* Enable the capture of the `traceparent` header in the **applicationinsigths.json** file as follows:
+
+    ```json
+      {
+        "preview": {
+          "captureHttpServerHeaders": {
+            "requestHeaders": [
+              "traceparent"
+            ]
+          }
+        }
       }
-    }
-  }
-```
-* Enable [self-diagnostics](/azure/azure-monitor/app/java-standalone-config#self-diagnostics) at the DEBUG level and restart the application.
+    ```
+* Enable [self-diagnostics](/azure/azure-monitor/app/java-standalone-config#self-diagnostics) at the DEBUG level and then restart the application.
 
-In the following log example, the operation id is not populated by Application Insights but from an incoming request:
-```
-{"ver":1,"name":"Request",...,"ai.operation.id":"4e757357805f4eb18705abd24326b550)","ai.operation.parentId":"973487efc3db7d03"},"data":{"baseType":"RequestData","baseData":{...,"properties":{"http.request.header.traceparent":"00-4e757357805f4eb18705abd24326b550-973487efc3db7d03-01", ...}}}}
-```
+    In the following log example, the operation ID comes from an incoming request, not Application Insights:
+
+    ```output
+    {"ver":1,"name":"Request",...,"ai.operation.id":"4e757357805f4eb18705abd24326b550)","ai.operation.parentId":"973487efc3db7d03"},"data":{"baseType":"RequestData","baseData":{...,"properties":{"http.request.header.traceparent":"00-4e757357805f4eb18705abd24326b550-973487efc3db7d03-01", ...}}}}
+    ```
 
 [!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
 
