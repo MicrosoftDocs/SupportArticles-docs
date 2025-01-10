@@ -4,7 +4,6 @@ description: When you import a solution in Microsoft Dynamics 365, you receive a
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
-ms.subservice: d365-sales-custom-solutions
 ---
 # Input string was not in a correct format error when importing a solution in Microsoft Dynamics 365
 
