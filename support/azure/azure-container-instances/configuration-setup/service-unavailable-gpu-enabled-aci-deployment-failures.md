@@ -3,7 +3,7 @@ title: Azure Container Instances fails to run GPU-enabled containers
 description: Provides solutions to GPU-enabled Azure container instance deployment failures.
 ms.date: 05/27/2024
 ms.reviewer: v-rekhanain, momajed, v-weizhu
-ms.service: container-instances
+ms.service: azure-container-instances
 ms.custom: sap:Configuration and Setup
 ---
 # GPU-enabled container deployment fails with "service unavailable" error

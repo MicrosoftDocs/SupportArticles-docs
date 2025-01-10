@@ -5,12 +5,14 @@ ms.date: 04/15/2024
 ms.author: divargas
 author: divargas-msft
 ms.reviewer: malachma
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ms.collection: linux
 ---
 
 # Configure multiple network interfaces in Azure Linux virtual machines
+
+**Applies to:** :heavy_check_mark: Linux VMs
 
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 

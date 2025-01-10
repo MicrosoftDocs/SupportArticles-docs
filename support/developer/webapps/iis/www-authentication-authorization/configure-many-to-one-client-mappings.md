@@ -1,30 +1,30 @@
 ---
 title: Configure Many-to-One client mappings
 description: This article introduces about using the Configuration Editor feature of IIS to configure Many-to-One client certificate mappings.
-ms.date: 04/02/2020
+ms.date: 12/16/2024
 ms.custom: sap:WWW Authentication and Authorization\SSL and SSL Server certificates
 ms.topic: how-to
-ms.subservice: www-authentication-authorization
+ms.reviewer: zixie
 ---
-# Configuring Many-to-One client certificate mappings for IIS 7.0 and 7.5
+# Configuring Many-to-One client certificate mappings for IIS
 
 This article introduces how to use the Configuration Editor feature in Microsoft Internet Information Services (IIS) to configure Many-to-One client certificate mappings.
 
-_Original product version:_ &nbsp; Internet Information Services 7.0, 7.5  
+_Original product version:_ &nbsp; Internet Information Services  
 _Original KB number:_ &nbsp; 2026113
 
 ## Introduction
 
 Many-to-One Client Certificate mapping is used by IIS to associate an end user to a Windows account when the client certificate is used for user authentication. The user's session is executed under the context of this mapped Windows account by IIS. To work as expected, you need to ensure the certificate-to-account mapping is configured correctly in IIS.
 
-In IIS 6.0, users had the option to configure Many-to-One client certificate mapping through the IIS Manager User Interface. In IIS 7.0 and 7.5, that interface doesn't exist for either One-to-One or Many-to-One mappings. This article talks about using the Configuration Editor feature of IIS to configure Many-to-One client certificate mappings.
+In the current version of IIS, the IIS Manager User Interface doesn't exist for either One-to-One or Many-to-One certificate mappings. This article talks about using the Configuration Editor feature of IIS to configure Many-to-One client certificate mappings.
 
 > [!NOTE]
 > For information about using the Configuration Editor to configure One-to-One client certificate mappings, see [Configuring One-to-One Client Certificate Mappings](/iis/manage/configuring-security/configuring-one-to-one-client-certificate-mappings).
 
-## IIS 7.0/7.5 schema
+## IIS schema
 
-This is the schema for the IIS Client Certificate Mapping authentication feature in IIS 7.0 and IIS 7.5:
+Here's the schema for the IIS Client Certificate Mapping authentication feature in IIS:
 
 ```xml
 <sectionSchema name="system.webServer/security/authentication/iisClientCertificateMappingAuthentication">
@@ -70,10 +70,6 @@ Here are the prerequisites needed for this walk-through:
 1. You have installed the IIS Client Certificate Mapping module on the IIS server.
 2. A web site is configured with a Hypertext Transfer Protocol Secure (HTTPS) binding that can accept Secure Sockets Layer (SSL) connections.
 3. You have a client certificate installed on the client.
-4. The [IIS 7 Administration Pack](https://www.iis.net/downloads/microsoft/administration-pack) is installed on the IIS 7.0 server.
-
-    > [!NOTE]
-    > Configuration Editor is shipped by default on IIS 7.5.
 
 ## Configure certificate mapping by Configuration Editor
 
@@ -82,11 +78,11 @@ Here are the prerequisites needed for this walk-through:
 
     :::image type="content" source="media/configure-many-to-one-client-mappings/open-features-view.png" alt-text="Select the Configuration Editor under Management in Features View.":::
 
-3. Go to `system.webServer/security/authentication/iisClientCertificateMappingAuthentication` in the drop-down box as shown below:
+3. Go to `system.webServer/security/authentication/iisClientCertificateMappingAuthentication` in the drop-down box as shown in the following image:
 
     :::image type="content" source="media/configure-many-to-one-client-mappings/iisclientcertificatemappingauthentication.png" alt-text="Select iisClientCertificateMappingAuthentication under authentication.":::
 
-    You will see a window to configure Many-to-One or One-to-One certificate mappings here. This is the UI provided through Configuration Editor from where you can set up all of the mapping configurations.
+    You'll see a window to configure Many-to-One or One-to-One certificate mappings here. The following UI is provided through Configuration Editor from where you can set up all of the mapping configurations.
 
     :::image type="content" source="media/configure-many-to-one-client-mappings/setup-configure-mapping.png" alt-text="Screenshot of the window that's used to set up all mapping configurations.":::
 
@@ -96,7 +92,7 @@ Here are the prerequisites needed for this walk-through:
     - Set **manyToOneCertificateMappingsEnabled** to **True**.
     - Select **manyToOneMappings** and select on the ellipsis button to launch a new window for configuring mappings.
 
-5. Under this new window, select to add a new item. You can modify the properties from within the window as shown below:
+5. Under this new window, select to add a new item. You can modify the properties within the window as shown in the following image:
 
     :::image type="content" source="media/configure-many-to-one-client-mappings/modify-properties.png" alt-text="Screenshot of the window that's used to modify properties for a new item.":::
 
@@ -110,9 +106,9 @@ Here are the prerequisites needed for this walk-through:
 
 In these example images, there are two entries for rules for mapping the certificate.
 
-First, there are the **Subject** and **Issuer** fields in the certificate.  Second, there is the **matchcriteria** property to map the certificate to the account **mydomain\testuser**.  
+First, there are the **Subject** and **Issuer** fields in the certificate. Second, there's the **matchcriteria** property to map the certificate to the account **mydomain\testuser**.  
 
-In the image below, the final mapping for a specific windows account is illustrated. As you can see, there are two entries for **rules** for this account.
+In the following image, the final mapping for a specific windows account is illustrated. As you can see, there are two entries for **rules** for this account.
 
 :::image type="content" source="media/configure-many-to-one-client-mappings/entry-for-rules.png" alt-text="Screenshot of an item that has two entries for rules.":::
 
@@ -120,7 +116,7 @@ Similarly, you can have other mappings for the accounts based on the fields **Is
 
 ## Configure certificate mapping by APPCMD.exe
 
-So far what has been illustrated is achieved using the Configuration Editor, which provides a graphical interface to easily set the configuration. You can achieve the same thing using `APPCMD.exe` commands, and in fact the Configuration Editor does the same thing in the background and adds these settings into the *ApplicationHost.config* file.
+So far what has been illustrated is achieved using the Configuration Editor, which provides a graphical interface to easily set the configuration. You can achieve the same thing using the `APPCMD.exe` commands, and in fact the Configuration Editor does the same thing in the background and adds these settings into the *ApplicationHost.config* file.
 
 Configuration Editor also gives you an option to run these commands manually, and it generates the scripts to achieve it from inside the UI itself:
 
@@ -128,7 +124,7 @@ Configuration Editor also gives you an option to run these commands manually, an
 
 :::image type="content" source="media/configure-many-to-one-client-mappings/script-dialog.png" alt-text="Run commands manually in the Script Dialog window.":::
 
-These are the code snippets to perform the same steps as above to configure the certificate mapping. They were generated using Configuration Editor's Script Generation feature.
+These code snippets perform the same steps to configure the certificate mapping. They were generated using Configuration Editor's **Generate Script** feature.
 
 ### AppCmd commands
 

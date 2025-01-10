@@ -5,7 +5,6 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, vimalsh, shijithk, kaushika, wcheng, jodav
 ms.custom: sap:Windows Setup, Upgrade and Deployment\Sysprep and imaging (PE, ADK, WDS), csstroubleshoot
 ---

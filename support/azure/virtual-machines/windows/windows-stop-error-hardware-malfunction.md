@@ -5,7 +5,7 @@ services: virtual-machines
 documentationcenter: ''
 author: mibufo
 tags: azure-resource-manager
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: na
@@ -13,8 +13,9 @@ ms.topic: troubleshooting
 ms.date: 06/13/2024
 ms.custom: sap:My VM is not booting
 ---
-
 # Windows stop error - Hardware malfunction
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article provides steps to resolve issues where Windows Server 2008 virtual machines crash with an error message that states that there was a hardware malfunction.
 

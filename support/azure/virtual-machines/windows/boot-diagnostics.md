@@ -5,7 +5,7 @@ services: virtual-machines
 author: genli
 manager: dcscontentpm
 tags: azure-resource-manager
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.topic: troubleshooting
 ms.date: 05/17/2022
 ms.author: genli
@@ -13,6 +13,8 @@ ms.custom: sap:My VM is not booting
 ---
 
 # How to use boot diagnostics to troubleshoot virtual machines in Azure
+
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
 There can be many reasons that a virtual machine enters a non-bootable state. To address issues with your virtual machines created using Resource Manager deployment model, you can use the following debugging features: Console Output and Screenshot support for Azure virtual machines.
 

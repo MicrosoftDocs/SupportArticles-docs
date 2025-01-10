@@ -6,7 +6,7 @@ author: AndreiBarbu95
 ms.author: andbar
 editor: v-jsitser
 ms.reviewer: cssakscic, tysonfms, v-rekhanain, v-weizhu, v-leedennis
-ms.service: container-instances
+ms.service: azure-container-instances
 ms.topic: best-practice
 ms.custom: sap:Management
 ---

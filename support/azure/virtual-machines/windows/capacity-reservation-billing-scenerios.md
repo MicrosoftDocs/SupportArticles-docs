@@ -3,14 +3,16 @@ title: Capacity Reservation billing scenarios
 description: This article discusses billing scenarios as they apply to a Capacity Reservation
 ms.date: 08/26/2021
 ms.reviewer: 
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.custom: sap:Cannot create a VM
 ---
 
 # Capacity Reservation billing scenarios
 
-This article discusses billing scenarios as they apply to a Capacity Reservation
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
+
+This article discusses billing scenarios as they apply to a Capacity Reservation.
 
 ## Billing for Capacity Reservation
 

@@ -2,7 +2,7 @@
 title: How to enable debug logging for the Azure Site Recovery in Hyper-V Site Protection
 description: Describes how to enable debug logging (also known as ETL tracing) for Microsoft Azure Site Recovery (ASR) in Hyper-V Site to Azure protection scenarios running on a Windows Server 2012 R2 Hyper-V server.
 ms.date: 03/05/2021
-ms.service: site-recovery
+ms.service: azure-site-recovery
 ms.author: genli
 author: genlin
 ms.reviewer: markstan
@@ -16,9 +16,6 @@ _Original KB number:_ &nbsp; 3033922
 ## Summary
 
 This article describes how to enable debug logging (also known as ETL tracing) for Microsoft Azure Site Recovery (ASR) in Hyper-V Site to Azure protection scenarios running on a Windows Server 2012 R2 Hyper-V server. You may use the steps in this article for ASR configured using the Setup Recovery Between an on-premises Hyper-V site and Azure option in the Azure Management Portal. ASR installations that use Microsoft System Center 2012 R2 Virtual Machine Manager (SC 2012 R2 VMM) should enable [VMM Debug Logging](https://support.microsoft.com/help/2913445) instead.
-
-> [!NOTE]
-> This functionality is enabled by default in the Support Diagnostic Package (SDP) for ASR in Hyper-V. The tool can be downloaded from this [link](https://aka.ms/asrhypervdiag).
 
 ## More information
 
@@ -87,3 +84,4 @@ To enable debug logging for the ASR Provider, use the following steps:
 For additional troubleshooting steps and help in interpreting error messages, see [this article](/azure/site-recovery/site-recovery-monitor-and-troubleshoot#reaching-out-for-microsoft-support).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+

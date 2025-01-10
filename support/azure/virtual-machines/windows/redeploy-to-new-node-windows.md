@@ -7,7 +7,7 @@ author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager,top-support-issue
 ms.custom: sap:Cannot connect to my VM, devx-track-azurepowershell, devx-track-azurecli
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
@@ -16,6 +16,8 @@ ms.date: 11/03/2021
 ms.author: genli
 ---
 # Redeploy Windows virtual machine to new Azure node
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 [!INCLUDE [Feedback](../../../includes/feedback.md)]
 

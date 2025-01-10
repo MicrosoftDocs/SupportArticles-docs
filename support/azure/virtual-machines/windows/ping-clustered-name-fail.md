@@ -3,12 +3,13 @@ title: Fail to ping a Clustered Name that runs on Azure IaaS VMs
 description: Discusses an issue in which you can't ping a Clustered Name that runs on Azure IaaS virtual machines. Provides a resolution.
 ms.date: 07/21/2020
 ms.reviewer: mariliu
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # Error when you try to ping a Clustered Name that runs on Azure IaaS VMs: Request timed out
 
-_Original product version:_ &nbsp; Load Balancer  
+**Applies to:** :heavy_check_mark: Windows VMs
+ 
 _Original KB number:_ &nbsp; 3190161
 
 ## Symptoms

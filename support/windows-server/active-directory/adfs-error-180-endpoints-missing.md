@@ -4,7 +4,6 @@ description: Describes a problem in Windows Server 2016 that causes AD FS featur
 ms.date: 12/26/2023
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: Brad.Held
 ms.custom: sap:Windows Security Technologies\Active Directory Federation Services (AD FS) non-Azure-O365 issues, csstroubleshoot
 ---

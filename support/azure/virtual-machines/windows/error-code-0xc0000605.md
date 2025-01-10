@@ -3,13 +3,14 @@ title: Winload.exe error code 0xc0000605 on an Azure VM
 description: Describes a Winload.exe error (0xc0000605) that occurs on an Azure virtual machine (VM).
 ms.date: 07/21/2020
 ms.reviewer: jarrettr
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.custom: sap:My VM is not booting
 ---
 # Winload.exe error code 0xc0000605 on an Azure VM
 
-_Original product version:_ &nbsp; Virtual Machine running Windows  
+**Applies to:** :heavy_check_mark: Windows VMs
+
 _Original KB number:_ &nbsp; 4010131
 
 ## Symptoms

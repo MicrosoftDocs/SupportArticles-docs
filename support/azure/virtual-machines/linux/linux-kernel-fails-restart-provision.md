@@ -3,18 +3,19 @@ title: An Azure virtual machine running an older Linux kernel fails to restart o
 description: Discusses that an Azure virtual machine that is running an older Linux kernel version fails to restart or be provisioned. Provides a resolution.
 ms.date: 04/15/2024
 ms.reviewer: 
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:Cannot start or stop my VM, linux-related-content
 ms.collection: linux
 ---
 # An Azure virtual machine running an older Linux kernel fails to restart or be provisioned
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
+_Original KB number:_ &nbsp; 4041171
+
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 This article provides a solution to an issue in which Azure virtual machine that is running an older Linux kernel version fails to restart or be provisioned.
-
-_Original product version:_ &nbsp; Virtual Machine running Linux  
-_Original KB number:_ &nbsp; 4041171
 
 ## Symptoms
 

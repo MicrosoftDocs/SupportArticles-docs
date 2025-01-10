@@ -3,10 +3,12 @@ title: Windows activation - duplicate Client Machine ID
 description: Provides a solution to a duplicate Client Machine ID issue that occurs when you use a self-hosted Key Management Services (KMS) server for Windows activation.
 ms.date: 01/04/2024
 ms.reviewer: cwhitley, v-naqviadil, v-weizhu
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:Cannot activate my Windows VM
 ---
 # Windows activation - duplicate Client Machine ID
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 We generally recommend using Azure Key Management Services (KMS) servers to activate Azure Windows virtual machines (VMs), even when Azure Hybrid Benefit is enabled. However, in specific cases, because network restrictions might prevent VMs from communicating with Azure KMS servers, you can use a self-hosted KMS server for activation. This article discusses an issue of duplicate Client Machine ID that occurs when you use a self-hosted KMS server for Windows activation, and provides a solution.
 

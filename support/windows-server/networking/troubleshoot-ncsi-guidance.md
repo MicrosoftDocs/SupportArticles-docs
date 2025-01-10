@@ -5,7 +5,6 @@ ms.date: 04/16/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, anupamk, asvaidya, hichauhan, v-lianna
 ms.custom: sap:Network Connectivity and File Sharing\NCSI, csstroubleshoot
 ---

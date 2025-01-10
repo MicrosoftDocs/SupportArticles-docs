@@ -4,10 +4,12 @@ description: Understand why VM availability might be reported inaccurately durin
 ms.date: 05/12/2023
 editor: v-jsitser
 ms.reviewer: macla, azurevmcptcic, v-leedennis
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:VM Performance
 ---
 # VM availability might be inaccurate during VM restarts
+
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
 This article discusses how VM availability might be reported inaccurately during a virtual machine (VM) restart that's issued by an authorized user or caused by a Guest OS crash. The inaccurate VM availability status might be published to the following Microsoft Azure resources:
 

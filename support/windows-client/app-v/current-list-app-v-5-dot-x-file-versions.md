@@ -5,9 +5,8 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, markstan
-ms.custom: sap:Application Virtualization\Clients\Installation And configuration , csstroubleshoot
+ms.custom: sap:Application Virtualization\Clients\Installation And configuration, csstroubleshoot
 ---
 # Current list of App-V 5.x file versions
 

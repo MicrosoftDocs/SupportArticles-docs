@@ -6,7 +6,7 @@ documentationCenter: ''
 author: genlin
 manager: dcscontentpm
 editor: v-jesits
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
@@ -15,8 +15,9 @@ ms.date: 11/20/2018
 ms.author: genli
 ms.custom: sap:Cannot connect to my VM
 ---
-
 # Cannot connect remotely to a VM because RDP port is not enabled in NSG
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article explains how to resolve a problem in which you cannot connect to an Azure Windows virtual machine (VM) because the Remote Desktop Protocol (RDP) port is not enabled in the network security group (NSG).
 

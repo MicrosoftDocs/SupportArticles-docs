@@ -5,12 +5,14 @@ author: divargas-msft
 ms.author: divargas
 ms.date: 04/15/2024
 ms.reviewer: jofrance
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:Cannot start or stop my VM, devx-track-azurecli, linux-related-content
 ms.collection: linux
 ms.topic: troubleshooting
 ---
 # Azure Linux virtual machine fails to boot after applying kernel changes
+
+**Applies to:** :heavy_check_mark: Linux VMs
 
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 

@@ -5,7 +5,6 @@ ms.date: 03/06/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, v-lianna
 ms.custom: sap:Network Connectivity and File Sharing\Dynamic Host Configuration Protocol (DHCP), csstroubleshoot
 ---
@@ -65,6 +64,46 @@ For DHCP clients, check the following devices and settings:
 - The correct network adapter driver is installed and updated.
 - The DHCP Client service is started and running. To check this, run the net start command, and look for DHCP Client.
 - There is no firewall blocking ports 67 and 68 UDP on the client computer.
+
+## Using network trace to troubleshoot DHCP
+
+Once you've confirmed the settings on both the DHCP client and server, you can use Wireshark to check whether the DHCP DORA process has completed successfully or if any packet drops are preventing DHCP clients from obtaining an IP address from the server.
+
+### Steps to collect a network trace
+
+To troubleshoot DHCP issues using network traces, follow these steps:
+
+1. Install [Wireshark](https://www.wireshark.org/download.html) on both the affected DHCP client and the DHCP server.
+2. Run Wireshark as administrator on both the client and server.
+3. Choose the network interface used for DHCP on both devices by double-clicking them in Wireshark.
+4. Start packet capture with Wireshark on both the client and server.
+5. Reproduce the issue. Trigger the DHCP issue (for example, run `ipconfig /renew` on the client). Wait for the failure scenario to occur.
+6. Stop the packet capture on both devices using the red button in Wireshark.
+
+   :::image type="content" source="./media/troubleshoot-dhcp-guidance/stop-wireshark-capture.png" alt-text="Stop Wireshark capture.":::
+
+7. Save the captured packets to a specified location by selecting **File** > **Save As**.
+8. Apply a DHCP filter to view DHCP transactions:
+   - On the client capture, apply a display filter for "dhcp".
+   - On the server capture, use the filter "dhcp.id == \<Transaction ID\>" to track the specific client transaction. You can get the transaction ID from the client-side capture and apply it in the filter on the server-side capture.
+
+     :::image type="content" source="./media/troubleshoot-dhcp-guidance/transaction-id-from-the-client-side-capture.png" alt-text="Transaction ID from the client-side capture.":::
+
+9. Analyze DHCP transactions:
+   - Check the client-side capture for all four DHCP packets (DISCOVER, OFFER, REQUEST, ACK). If all are present, the DORA process is likely successful.
+   - If any packets are missing (for example, only DISCOVER packets are visible), it indicates a potential drop.
+
+10. Identify network drops. Look for these indicators of network drops:
+    - Client capture shows DISCOVER packets, but server capture does not.
+    - Client capture shows DISCOVER packets and server shows OFFER sent, but no OFFER seen on client.
+    - Client capture shows DISCOVER, OFFER, and REQUEST, but server only shows DISCOVER and OFFER.
+    - Client capture shows DISCOVER, OFFER, and REQUEST, but server shows all four packets completed (DISCOVER, OFFER, REQUEST, ACK) with no ACK seen on client.
+
+11. After drops are confirmed, involve the network team to investigate and resolve the drop issue.
+
+These steps ensure thorough troubleshooting using Wireshark to pinpoint where DHCP communication breaks down, facilitating quicker resolution of DHCP configuration or network issues.
+
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 
 ## Data collection
 

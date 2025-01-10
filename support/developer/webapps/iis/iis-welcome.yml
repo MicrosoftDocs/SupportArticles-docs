@@ -7,8 +7,8 @@ metadata:
   description: Landing page for Internet Information Services troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: iis  #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
-  author: padmajayaraman  
-  ms.author:  v-jayaramanp
+  author: padmagit77  
+  ms.author: v-padmaj
   ms.date: 02/13/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
@@ -36,7 +36,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Default permissions and user rights
-            url: www-authentication-authorization/default-permissions-user-rights.md
+            url: www-administration-management/default-permissions-user-rights.md
           - text: Http.sys registry settings for Windows
             url: iisadmin-service-inetinfo/httpsys-registry-windows.md
 

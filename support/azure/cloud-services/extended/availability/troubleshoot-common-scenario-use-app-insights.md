@@ -5,7 +5,7 @@ ms.date: 04/01/2024
 ms.reviewer: patcatun
 author: JerryZhangMS
 ms.author: genli
-ms.service: cloud-services-extended-support
+ms.service: azure-cloud-services-extended-support
 ms.custom: sap:Service Availability and Performance
 ---
 
@@ -82,7 +82,7 @@ To add a custom log to your application, follow these steps:
 
     > [!NOTE]
     > - Technical support for instrumentation key-based global ingestion will end on March 31, 2025. It's recommended to use the connection string instead of connecting to Application Insights before that date. For more information, see [Transition to using connection strings for data ingestion by 31 March 2025](https://azure.microsoft.com/updates/technical-support-for-instrumentation-key-based-global-ingestion-in-application-insights-will-end-on-31-march-2025/).
-    > - When Application Insights is linked with a Cloud Service project, `APPINSIGHTS_INSTRUMENTATIONKEY` is automatically added. For more information, see [Troubleshoot Cloud Services app with Application Insights - features overview](/troubleshoot/azure/cloud-services/troubleshoot-with-app-insights-features-overview).
+    > - When Application Insights is linked with a Cloud Service project, `APPINSIGHTS_INSTRUMENTATIONKEY` is automatically added. For more information, see [Troubleshoot Cloud Services app with Application Insights - features overview](troubleshoot-with-app-insights-features-overview.md).
 
     Here's an example of the *.csdef* file:
 

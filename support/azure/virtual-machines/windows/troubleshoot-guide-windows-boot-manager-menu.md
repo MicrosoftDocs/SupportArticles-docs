@@ -6,7 +6,7 @@ documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: na
@@ -14,8 +14,9 @@ ms.topic: troubleshooting
 ms.date: 06/13/2024
 ms.custom: sap:My VM is not booting
 ---
-
 # Windows VM cannot boot due to Windows Boot Manager
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article provides steps to resolve issues where Windows Boot Manager prevents the booting of an Azure Virtual Machine (VM).
 

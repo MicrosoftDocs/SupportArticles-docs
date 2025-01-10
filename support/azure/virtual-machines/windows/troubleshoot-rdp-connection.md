@@ -7,15 +7,17 @@ author: genlin
 manager: dcscontentpm
 tags: top-support-issue,azure-service-management,azure-resource-manager
 ms.custom: sap:Cannot connect to my VM, devx-track-azurepowershell
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
-ms.date: 06/09/2023
+ms.date: 07/22/2024
 ms.author: genli
 ---
 # Troubleshoot Remote Desktop connections to an Azure virtual machine
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 [!INCLUDE [Feedback](../../../includes/feedback.md)]
 
@@ -49,8 +51,6 @@ You can troubleshoot VMs created using the Resource Manager deployment model by 
 
 * Azure portal - great if you need to quickly reset the RDP configuration or user credentials and you don't have the Azure tools installed.
 * Azure PowerShell - if you are comfortable with a PowerShell prompt, quickly reset the RDP configuration or user credentials using the Azure PowerShell cmdlets.
-
-You can also find steps on troubleshooting VMs created using the [Classic deployment model](#troubleshoot-vms-created-using-the-classic-deployment-model).
 
 <a id="fix-common-remote-desktop-errors"></a>
 
@@ -184,49 +184,6 @@ After each troubleshooting step, try connecting to your VM again. If you still c
     ```
 
 6. **Verify routing**. Use Network Watcher's [Next hop](/azure/network-watcher/diagnose-vm-network-routing-problem) capability to confirm that a route isn't preventing traffic from being routed to or from a virtual machine. You can also review effective routes to see all effective routes for a network interface. For more information, see [Using effective routes to troubleshoot VM traffic flow](/azure/virtual-network/diagnose-network-routing-problem).
-
-7. Ensure that any on-premises firewall, or firewall on your computer, allows outbound TCP 3389 traffic to Azure.
-
-If you are still encountering RDP issues, you can [open a support request](https://azure.microsoft.com/support/options/) or read [more detailed RDP troubleshooting concepts and steps](detailed-troubleshoot-rdp.md).
-
-## Troubleshoot VMs created using the Classic deployment model
-
-[!INCLUDE [classic-vm-deprecation](../../../includes/azure/classic-vm-deprecation.md)]
-
-After each troubleshooting step, try reconnecting to the VM.
-
-1. **Reset your RDP connection**. This troubleshooting step resets the RDP configuration when Remote Connections are disabled or Windows Firewall rules are blocking RDP, for example.
-
-    Select your VM in the Azure portal. Click the **...More** button, then click **Reset Remote Access**:
-
-    :::image type="content" source="media/troubleshoot-rdp-connection/classic-reset-rdp.png" alt-text="Screenshot of the Reset Remote Access option under the ...More button in the Overview tab." border="false":::
-2. **Verify Cloud Services endpoints**. This troubleshooting step verifies that you have endpoints in your Cloud Services to permit RDP traffic. The default port for RDP is TCP port 3389. A rule to permit RDP traffic may not be created automatically when you create your VM.
-
-   Select your VM in the Azure portal. Click the **Endpoints** button to view the endpoints currently configured for your VM. Verify that endpoints exist that allow RDP traffic on TCP port 3389.
-
-   The following example shows valid endpoints that permit RDP traffic:
-
-   :::image type="content" source="media/troubleshoot-rdp-connection/classic-verify-cloud-services-endpoints.png" alt-text="Screenshot of the endpoints details window of the Endpoint tab." border="false":::
-
-   If you do not have an endpoint that allows RDP traffic, [create a Cloud Services endpoint](/previous-versions/azure/virtual-machines/windows/classic/setup-endpoints). Allow TCP to private port 3389.
-3. **Review VM boot diagnostics**. This troubleshooting step reviews the VM console logs to determine if the VM is reporting an issue. Not all VMs have boot diagnostics enabled, so this troubleshooting step may be optional.
-
-    Specific troubleshooting steps are beyond the scope of this article, but may indicate a wider problem that is affecting RDP connectivity. For more information on reviewing the console logs and VM screenshot, see [Boot Diagnostics for VMs](https://azure.microsoft.com/blog/boot-diagnostics-for-virtual-machines-v2/).
-4. **Check the VM Resource Health**. This troubleshooting step verifies there are no known issues with the Azure platform that may impact connectivity to the VM.
-
-    Select your VM in the Azure portal. Scroll down the settings pane to the **Help** section near bottom of the list. Click the **Resource Health** button. A healthy VM reports as being **Available**:
-
-    :::image type="content" source="media/troubleshoot-rdp-connection/classic-check-resource-health.png" alt-text="Screenshot 2 of a healthy VM report the Classic deployment model, which shows There aren't any known Azure platform problems affecting this virtual machine." border="false":::
-5. **Reset user credentials**. This troubleshooting step resets the password on the local administrator account that you specify when you are unsure or have forgotten the credentials.  Once you have logged into the VM, you should reset the password for that user.
-
-    Select your VM in the Azure portal. Scroll down the settings pane to the **Help** section near bottom of the list. Click the **Reset password** button. Enter your username and a new password. Finally, click the **Save** button:
-
-    :::image type="content" source="media/troubleshoot-rdp-connection/classic-reset-password.png" alt-text="Screenshot of the setting window of Reset Password in Classic deployment model." border="false":::
-6. **Restart your VM**. This troubleshooting step can correct any underlying issues the VM itself is having.
-
-    Select your VM in the Azure portal and click the **Overview** tab. Click the **Restart** button:
-
-    :::image type="content" source="media/troubleshoot-rdp-connection/classic-restart-vm.png" alt-text="Screenshot of the Restart button in the Overview tab in Classic deployment model." border="false":::
 
 7. Ensure that any on-premises firewall, or firewall on your computer, allows outbound TCP 3389 traffic to Azure.
 

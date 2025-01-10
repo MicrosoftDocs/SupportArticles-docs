@@ -8,6 +8,8 @@
         href: data/data-ingestion/data-refresh-failed-skipped.md
       - name: '"Data source credentials are missing or invalid" error'
         href: data/data-ingestion/power-query-multi-factor-authentication.md
+      - name: '"Delta Lake ingestion job failed to get version" error'
+        href: data/data-ingestion/delta-lake-ingestion-failed.md
       - name: Power Query Text/CSV connector authentication fails
         href: data/data-ingestion/power-query-text-csv-connector-auth.md
       - name: Power Query data source refresh issues

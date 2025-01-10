@@ -26,17 +26,13 @@ items:
         tocHref: /troubleshoot/windows-hardware/drivers
         topicHref: /troubleshoot/windows-hardware/drivers/welcome-windowshardware
 
-    - name: Browsers
-      tocHref: /troubleshoot/developer/browsers/
-      topicHref: /troubleshoot/developer/browsers/welcome-browsers
-
     - name: .NET
       tocHref: /troubleshoot/developer/dotnet/
       topicHref: /troubleshoot/developer/dotnet/welcome-dotnet-landing
 
     - name: Host Integration Server
       tocHref: /troubleshoot/developer/host-integration-server/
-      topicHref: /troubleshoot/developer/host-integration-server/welcome-host-integration-server
+      topicHref: /troubleshoot/developer/host-integration-server/data-integration/configure-data-sources
 
     - name: Visual Studio
       tocHref: /troubleshoot/developer/visualstudio/
@@ -145,7 +141,7 @@ items:
         topicHref: /troubleshoot/azure/azure-storage/blobs/welcome-blob-storage
       - name: Data API builder
         tocHref: /troubleshoot/azure/data-api-builder/
-        topicHref: /troubleshoot/azure/data-api-builder/index.yml
+        topicHref: /troubleshoot/azure/data-api-builder
       - name: Files Storage
         tocHref: /troubleshoot/azure/azure-storage/files
         topicHref: /troubleshoot/azure/azure-storage/files/welcome-files-storage
@@ -176,16 +172,6 @@ items:
       - name: General
         tocHref: /troubleshoot/azure/general/
         topicHref: /troubleshoot/azure/general/welcome-general
-      - name: Entra
-        tocHref: /troubleshoot/azure/entra/
-        topicHref: /troubleshoot/azure/entra/welcome-entra
-        items:
-        - name: Entra ID
-          tocHref: /troubleshoot/azure/entra/entra-id/
-          topicHref: /troubleshoot/azure/entra/entra-id/welcome-entra-id
-        - name: Global Secure Access
-          tocHref: /troubleshoot/azure/entra/global-secure-access/
-          topicHref: /troubleshoot/azure/entra/global-secure-access/welcome-global-secure-access
       - name: Site Recovery
         tocHref: /troubleshoot/azure/site-recovery/
         topicHref: /troubleshoot/azure/site-recovery/welcome-site-recovery
@@ -198,6 +184,20 @@ items:
       - name: Virtual Machine Scale Sets
         tocHref: /troubleshoot/azure/virtual-machine-scale-sets/
         topicHref: /troubleshoot/azure/virtual-machine-scale-sets/welcome-virtual-machine-scale-sets
+      - name: Kubernetes Fleet Manager
+        tocHref: /troubleshoot/azure/kubernetes-fleet/
+        topicHref: /troubleshoot/azure/kubernetes-fleet/welcome-azure-kubernetes-fleet
+
+    - name: Entra
+      tocHref: /troubleshoot/entra/
+      topicHref: /troubleshoot/entra/welcome-entra
+      items:
+      - name: Entra ID
+        tocHref: /troubleshoot/entra/entra-id/
+        topicHref: /troubleshoot/entra/entra-id/welcome-entra-id
+      - name: Global Secure Access
+        tocHref: /troubleshoot/entra/global-secure-access/
+        topicHref: /troubleshoot/entra/global-secure-access/welcome-global-secure-access
 
     - name: Microsoft Dynamics 365
       tocHref: /troubleshoot/dynamics-365/
@@ -261,3 +261,4 @@ items:
     - name: Surface
       tocHref: /troubleshoot/devices/
       topicHref: /troubleshoot/devices/
+

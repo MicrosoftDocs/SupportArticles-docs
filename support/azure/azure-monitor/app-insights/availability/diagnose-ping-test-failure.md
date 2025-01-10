@@ -1,23 +1,18 @@
---- 
-title: Diagnose common problems that cause your ping tests to fail in Application Insights availability monitoring
-description: This article describes how to diagnose common issues that cause ping tests to fail in Application Insights availability monitoring.
-ms.date: 06/24/2024
+---
+title: Diagnose problems that cause availability tests to fail in Application Insights
+description: This article describes how to diagnose common issues that cause availability tests to fail in Application Insights.
+ms.date: 11/05/2024
 editor: v-jsitser
-ms.reviewer: aaronmax, v-leedennis
+ms.reviewer: aaronmax, cogoodson, matthofa, v-leedennis, v-weizhu
 ms.service: azure-monitor
 ms.custom: sap:Availability Tests
 ---
 
-# Diagnose ping test failure in Application Insights availability monitoring
+# Diagnose availability test failures in Application Insights 
 
-This article discusses how to access the Application Insights troubleshooting report. This report enables you to easily diagnose common problems that cause your ping tests to fail.  
+This article discusses how to access the Application Insights troubleshooting report. This report enables you to easily diagnose common problems that cause your availability tests to fail.  
 
 :::image type="content" source="./media/diagnose-ping-test-failure/availability-to-troubleshooter.gif" alt-text="Azure portal animation that shows how to view the end-to-end transaction details to find the troubleshooting report in Application Insights." lightbox="./media/diagnose-ping-test-failure/availability-to-troubleshooter.gif":::
-
-> [!NOTE]
-> Many webtest-related issues are caused by stale or outdated DNS records. As a first troubleshooting step, we recommend that you flush the DNS cache on your local computer.
->
-> In Windows, run the [ipconfig /flushdns](/windows-server/administration/windows-commands/ipconfig) command. For other operating systems, the equivalent command is different.
 
 ## View the Application Insights troubleshooting report
 
@@ -50,6 +45,8 @@ The following table lists the steps, error messages, and possible causes that yo
 | Redirect limit validation | This webpage has too many redirects. This loop will be terminated here since this request exceeded the limit for auto redirects. | Redirects are limited to 10 per test. |
 | Status code validation | `200 - OK` does not match the expected status `400 - BadRequest`. | The returned status code is counted as a success. The "200" code indicates that a normal web page was returned. |
 | Content validation | The required text '\<expected-response-text>' did not appear in the response. | <p>The string isn't an exact case-sensitive match in the response. For example, the string "Welcome!" must be a plain string, without wildcard characters (such as an asterisk). If your page content changes, you might have to update the string. Content match supports only English characters.</p> <p>Content match also fails if the response body is more than 1,000,000 bytes long. After the client reads that number of bytes, it stops reading the response body and drops the connection. Because of this behavior, the server experiences a `ClientConnectionFailure` exception, even if the client returns a success status code.</p> |
+|Missing test results in Azure portal|No specific error message is returned for this issue.   Test results are missing in the Azure portal when viewing the end-to-end transaction details of an availability test. |Non-UTF8 characters aren't supported for viewing web test results. Ensure there are no non-UTF8 characters in the response from the endpoint that's called using the availability test.|
+|Unsupported URL|This URL is not supported|<p>Availability tests only allow communicating over publicly available IP addresses and hostnames. This error might occur when you try to communicate with an internal IP address that isn't routable via the public internet.</p> <p>To resolve this error, ensure only public IP addresses are defined in your web test and that any DNS lookups your web test depends on return only valid publicly routable IP addresses.</p>|
 
 > [!NOTE]
 > If the connection reuse step is present, then the following steps won't be present:

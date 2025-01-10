@@ -6,7 +6,7 @@ documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.topic: article
 ms.tgt_pltfrm: vm
 ms.workload: infrastructure-services
@@ -16,6 +16,8 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 
 # Common errors within the Azure Serial Console
+
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
 There are a set of known errors within the Azure Serial Console. This is a list of those errors and mitigation steps for them.
 

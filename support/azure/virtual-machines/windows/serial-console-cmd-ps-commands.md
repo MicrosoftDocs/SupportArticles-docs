@@ -6,7 +6,7 @@ documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.topic: article
 ms.tgt_pltfrm: vm-windows
@@ -17,6 +17,8 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 
 # Windows Commands - CMD and PowerShell
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This section includes example commands for performing common tasks in scenarios where you may need to use SAC to access your Windows VM, such as when you need to troubleshoot RDP connection failures.
 

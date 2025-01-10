@@ -1,12 +1,14 @@
 ---
 title: Azure Windows VM deployment top issues
 description: Provides solutions to Azure Windows VM deployment top issues.
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.date: 06/04/2024
 ms.custom: sap:Cannot create a VM, H1Hack27Feb2017
 ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
 ---
 # Azure Windows VM deployment top issues
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 [!INCLUDE [support-disclaimer](../../../includes/azure/virtual-machines-windows-troubleshoot-deploy-vm-top.md)]
 

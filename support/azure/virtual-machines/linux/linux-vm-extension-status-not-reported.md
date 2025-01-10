@@ -3,16 +3,17 @@ title: Linux VM extension status isn't reported after Azure Linux Agent 2.2.19 u
 description: Discusses a problem in which the Linux VM extension status is not reported after an Azure Linux Agent update to version 2.2.19.
 ms.date: 07/21/2020
 ms.reviewer: danis, danis
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:VM Extensions not operating correctly, linux-related-content
 ms.collection: linux
 ---
 # Linux VM extension status isn't reported after Azure Linux Agent 2.2.19 update
 
-This article provides a solution to an issue in which the Linux VM extension status is not reported after an Azure Linux Agent update to version 2.2.19.
+**Applies to:** :heavy_check_mark: Linux VMs
 
-_Original product version:_ &nbsp; Virtual Machine running Linux  
 _Original KB number:_ &nbsp; 4077547
+
+This article provides a solution to an issue in which the Linux VM extension status is not reported after an Azure Linux Agent update to version 2.2.19.
 
 ## Symptoms
 

@@ -4,7 +4,6 @@ description: Provides a solution to an error that occurs when you try to import 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
-ms.subservice: d365-sales-custom-solutions
 ---
 # The file provided was not uploaded error occurs when importing a solution in Microsoft Dynamics 365
 

@@ -2,7 +2,7 @@
 title: How-to videos about Azure Virtual Desktop
 description: Watch these short videos to get up and running with Azure Virtual Desktop.
 ms.date: 11/26/2020
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.author: genli
 author: genlin
 ms.reviewer: 
@@ -10,7 +10,8 @@ ms.custom: sap:Issue with Azure Virtual Desktop
 ---
 # How-to videos about Azure Virtual Desktop
 
-_Original product version:_ &nbsp; Virtual Desktop  
+**Applies to:** :heavy_check_mark: Windows VMs
+
 _Original KB number:_ &nbsp; 4563049
 
 Watch these short videos to get up and running with Azure Virtual Desktop:

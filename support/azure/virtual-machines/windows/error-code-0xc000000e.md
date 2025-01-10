@@ -3,16 +3,17 @@ title: Winload.exe error code 0xc000000e on an Azure VM
 description: Fixes a Winload.exe error (0xc000000e) that occurs on an Azure virtual machine (VM).
 ms.date: 07/21/2020
 ms.reviewer: jarrettr
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.custom: sap:My VM is not booting
 ---
 # Winload.exe error code 0xc000000e on an Azure VM
 
-This article provides a solution to an issue where Azure VM doesn't start with error code 0xc000000e.
+**Applies to:** :heavy_check_mark: Windows VMs
 
-_Original product version:_ &nbsp; Virtual Machine running Windows  
 _Original KB number:_ &nbsp; 4010129
+
+This article provides a solution to an issue where Azure VM doesn't start with error code 0xc000000e.
 
 ## Symptoms
 

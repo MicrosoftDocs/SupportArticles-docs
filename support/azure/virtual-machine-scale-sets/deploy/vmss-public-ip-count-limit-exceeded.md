@@ -3,7 +3,7 @@ title: PublicIPCountLimitExceededByVMScaleSet error when you create virtual mach
 description: Describes how to file a support ticket for a Public IP quota increase.
 ms.date: 09/03/2021
 ms.reviewer: 
-ms.service: virtual-machine-scale-sets
+ms.service: azure-virtual-machine-scale-sets
 ms.custom: sap:Cannot create new scale set
 ---
 # PublicIPCountLimitExceededByVMScaleSet error when you create virtual machine scale set

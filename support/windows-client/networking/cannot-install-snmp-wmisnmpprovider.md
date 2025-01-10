@@ -5,7 +5,6 @@ ms.date: 03/05/2024
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, anupamk, thyog, jtrox
 ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 ---

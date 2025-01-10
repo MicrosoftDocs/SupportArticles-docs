@@ -7,17 +7,19 @@ author: genlin
 manager: dcscontentpm
 tags: ''
 ms.custom: sap:My VM is not booting, linux-related-content
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: linux
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.devlang: azurecli
-ms.date: 11/01/2018
+ms.date: 07/24/2024
 ms.author: genli
 ---
 
 # Troubleshoot Linux VM device name changes
+
+**Applies to:** :heavy_check_mark: Linux VMs
 
 This article explains why device names change after you restart a Linux VM or reattach the data disks. The article also provides solutions for this problem.
 
@@ -37,17 +39,15 @@ The problem occurs because device scanning in Linux is scheduled by the SCSI sub
 
 ## Solution
 
-To resolve this problem, use persistent naming. There are four ways to use persistent naming: by filesystem label, by UUID, by ID, or by path. We recommend using the filesystem label or UUID for Azure Linux VMs.
+To resolve this problem, use device names that are persistent across reboots. There are several ways to use persistent naming: by filesystem label, by UUID, or by derived device path. For Linux VMs that don't use Logical Volume Manager (LVM), we recommend using the filesystem's UUID or [links created using udev rules](#identify-disk-luns). For LVM-based filesystems, mounting using the volume group and logical volume name is also a valid approach, as the LVM objects remain consistent no matter how the physical volumes are ordered.
 
 Most distributions provide the `fstab` **nofail** or **nobootwait** parameters. These parameters enable a system to boot when the disk fails to mount at startup. Check your distribution documentation for more information about these parameters. For information on how to configure a Linux VM to use a UUID when you add a data disk, see [Connect to the Linux VM to mount the new disk](/azure/virtual-machines/linux/add-disk#format-and-mount-the-disk).
 
-When the Azure Linux agent is installed on a VM, the agent uses Udev rules to construct a set of symbolic links under the /dev/disk/azure path. Applications and scripts use Udev rules to identify disks that are attached to the VM, along with the disk type and disk LUNs.
-
-If you have already edited your fstab in such a way that your VM is not booting and you are unable to SSH to your VM, you can use the [VM Serial Console](./serial-console-linux.md) to enter [single user mode](./serial-console-grub-single-user-mode.md) and modify your fstab.
+If you have already edited your fstab in such a way that your VM doesn't boot and you're unable to SSH to your VM, you can use the [VM Serial Console](./serial-console-linux.md) to enter [single-user mode](./serial-console-grub-single-user-mode.md) and modify your fstab, or use [Azure Linux Auto Repair](./repair-linux-vm-using-alar.md#fstab) to automate the repair process.
 
 ### Identify disk LUNs
 
-Applications use LUNs to find all of the attached disks and to construct symbolic links. The Azure Linux agent includes Udev rules that set up symbolic links from a LUN to the devices:
+When the Azure Linux agent is installed on a VM, the agent uses udev rules to construct a set of symbolic links under the */dev/disk/azure* path, which correlate the Azure-defined LUN attachments to the traditional disk devices:
 
 ```console
 $ tree /dev/disk/azure

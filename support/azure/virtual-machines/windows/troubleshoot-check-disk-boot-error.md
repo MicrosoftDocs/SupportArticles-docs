@@ -6,7 +6,7 @@ services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
@@ -15,10 +15,11 @@ ms.date: 08/31/2018
 ms.author: genli
 ms.custom: sap:My VM is not booting
 ---
+# Windows shows "checking file system" when booting an Azure VM
 
-# Windows shows “checking file system” when booting an Azure VM
+**Applies to:** :heavy_check_mark: Windows VMs
 
-This article describes the “Checking file system” error that you may encounter when you boot a Windows Virtual Machine (VM) in Microsoft Azure.
+This article describes the "Checking file system" error that you may encounter when you boot a Windows Virtual Machine (VM) in Microsoft Azure.
 
 ## Symptom
 
@@ -39,13 +40,13 @@ If an NTFS error is found in the file system, Windows will check and repair the 
 Windows will boot normally after the Check Disk process is completed. If the VM is stuck in the Check Disk process, try to run the Check Disk on the VM offline:
 
 1. Take a snapshot of the OS disk of the affected VM as a backup. For more information, see [Snapshot a disk](/azure/virtual-machines/windows/snapshot-copy-managed-disk).
-2. [Attach the OS disk to a recovery VM](troubleshoot-recovery-disks-portal-windows.md).  
-3. On the recovery VM, run Check Disk on the attached OS disk. In the following sample, the driver letter of the attached OS disk is E:
+2. [Attach the OS disk to a repair VM](troubleshoot-recovery-disks-portal-windows.md).  
+3. On the repair VM, run Check Disk on the attached OS disk. In the following sample, the driver letter of the attached OS disk is E:
 
     ```console
     chkdsk E: /f
     ```
 
-4. After the Check Disk completes, detach the disk from the recovery VM, and then re-attach the disk to the affected VM as an OS disk. For more information, see [Troubleshoot a Windows VM by attaching the OS disk to a recovery VM](troubleshoot-recovery-disks-portal-windows.md).
+4. After the Check Disk completes, detach the disk from the repair VM, and then re-attach the disk to the affected VM as an OS disk. For more information, see [Troubleshoot a Windows VM by attaching the OS disk to a repair VM through the Azure portal](troubleshoot-recovery-disks-portal-windows.md).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

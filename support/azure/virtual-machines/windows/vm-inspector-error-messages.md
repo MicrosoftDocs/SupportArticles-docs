@@ -3,13 +3,14 @@ title: VM Inspector error messages and common solutions
 description: Review a reference table that describes the error codes for the VM Inspector for Azure virtual machines.
 ms.date: 06/06/2022
 ms.reviewer: mimckitt, v-leedennis
-ms.service: virtual-machines
-localization_priority: medium
+ms.service: azure-virtual-machines
 keywords:
 #Customer intent: As a customer, support agent, or third-party personnel with privileged access, I want to learn about VM Inspector error messages so that I can diagnose problems remotely on an Azure virtual machine.
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # VM Inspector error messages and solutions
+
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
 VM Inspector is a self-help diagnostic tool for remote users with privileged access. The tool is used on an Azure VM that runs Windows or Linux. When the Microsoft Azure VM Inspector tool discovers errors on an Azure virtual machine (VM), it returns specific error codes. The following table provides a comprehensive list of these error codes.
 

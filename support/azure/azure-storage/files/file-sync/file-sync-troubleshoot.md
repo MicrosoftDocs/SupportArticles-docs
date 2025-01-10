@@ -4,7 +4,7 @@ description: Troubleshoot common issues that you might encounter with Azure File
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 06/03/2024
+ms.date: 08/01/2024
 ms.author: kendownie
 ms.custom: sap:File Sync
 ---
@@ -22,6 +22,7 @@ Based on the issue you're experiencing, review the appropriate troubleshooting d
 |Cloud endpoint or server endpoint creation issues, or the registered server is offline|[Troubleshoot Azure File Sync sync group management](file-sync-troubleshoot-sync-group-management.md)|
 |Server endpoint has an error status, or files fail to sync|[Troubleshoot Azure File Sync sync health and errors](file-sync-troubleshoot-sync-errors.md)|
 |Files fail to tier or recall|[Troubleshoot Azure File Sync cloud tiering](file-sync-troubleshoot-cloud-tiering.md)|
+|Storage Sync Agent service (FileSyncSvc) fails to start|[Troubleshoot Azure File Sync](#storage-sync-agent-service-filesyncsvc-fails-to-start)|
 |High memory usage on the server|[Troubleshoot Azure File Sync](#high-memory-usage-on-the-server)|
 
 If you're unsure where to start, see [General troubleshooting first steps](#general-troubleshooting-first-steps).
@@ -32,7 +33,7 @@ If you're experiencing issues with Azure File Sync, start by completing the foll
 
 1. Check for any errors using the Azure portal or event logs on the server. For information about how to view the health of your Azure File Sync environment by using the Azure portal or event logs, see [Monitor Azure File Sync](/azure/storage/file-sync/file-sync-monitoring#storage-sync-service).
 2. Verify the Azure File Sync service is running on the server:
-    - Open the Services MMC snap-in and verify the Storage Sync Agent service (FileSyncSvc) is running.
+    - Open the Services MMC snap-in and verify the Storage Sync Agent service (FileSyncSvc) is running. If the service is not running and fails to start, see [Storage Sync Agent service (FileSyncSvc) fails to start](#storage-sync-agent-service-filesyncsvc-fails-to-start).
 3. Verify the Azure File Sync filter drivers (*StorageSync.sys* and *StorageSyncGuard.sys*) are running on the server:
     - At an elevated command prompt, run `fltmc`. Verify the *StorageSync.sys* and *StorageSyncGuard.sys* file system filter drivers are listed.
 4. Use the [Debug-StorageSyncServer cmdlet](#debug-storagesyncserver-cmdlet) on the server to check for common issues.
@@ -86,6 +87,36 @@ To run AFSDiag, perform the steps below:
 2. Reproduce the issue. When you finish, enter *D*.
 3. A .zip file that contains logs and trace files is saved to the output directory that you specified.
 
+## Storage Sync Agent service (FileSyncSvc) fails to start
+
+After installing or upgrading the Azure File Sync agent (v17.3 or later), you may experience one of the following symptoms:
+
+- The Storage Sync Agent service (FileSyncSvc) fails to start with the following error: 
+
+  ```
+  Error 0x80070057: The parameter is incorrect. 
+  ```
+
+- Registering a server using the Register-AzStorageSyncServer cmdlet fails with the following error: 
+
+  ```
+  Register-AzStorageSyncServer: Exception of type 'Commands.StorageSync.Interop.Exceptions.ServerRegistrationException' was thrown.
+  ```
+
+- ServerRegistration.exe or AfsUpdater.exe fails to open
+- Agent installation fails and installation log shows error code 0x80c84111 with message:
+
+  ```
+  Exception occurred while configuring MitigationRedirection policy. This could indicate that required windows updates not installed on the computer.
+  ```
+
+This issue occurs because the Azure File Sync agent has a dependency on a Windows security feature and updates for this security feature are not installed.
+
+To resolve this issue, verify your Windows Server has the following updates installed:
+- Windows Server 2012 R2: [KB5021653](https://support.microsoft.com/topic/kb5021653-out-of-band-update-for-windows-server-2012-r2-november-17-2022-8e6ec2e9-6373-46d7-95bc-852f992fd1ff)
+- Windows Server 2016: [KB5040562](https://support.microsoft.com/topic/kb5040562-servicing-stack-update-for-windows-10-version-1607-and-server-2016-july-9-2024-281c97b9-c566-417e-8406-a84efd30f70c)
+- Windows Server 2019: [KB5005112](https://support.microsoft.com/topic/kb5005112-servicing-stack-update-for-windows-10-version-1809-august-10-2021-df6a9e0d-8012-41f4-ae74-b79f1c1940b2) and [KB5040430](https://support.microsoft.com/topic/july-9-2024-kb5040430-os-build-17763-6054-0bb10c24-db8c-47eb-8fa9-9ebc06afa4e7)
+
 ## High memory usage on the server
 
 Azure File Sync uses Extensible Storage Engine (ESE) databases for sync and cloud tiering. The ESE databases can consume up to 80% of system memory to improve performance. To limit the amount of memory used by the ESE databases, you can configure the `MaxESEDbCachePercent` registry setting on the server.
@@ -97,7 +128,6 @@ REG ADD HKLM\Software\Microsoft\Azure\StorageSync /v MaxESEDbCachePercent /t REG
 ```
 
 Once the `MaxESEDbCachePercent` registry setting is created, restart the Storage Sync Agent (FileSyncSvc) service. 
-
 
 ## See also
 

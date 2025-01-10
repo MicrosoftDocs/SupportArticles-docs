@@ -4,7 +4,7 @@ description: Provides the troubleshoot steps for fixing Windows virtual machine 
 services: virtual-machines, azure-resource-manager
 author: genlin
 tags: top-support-issue, azure-resource-manager
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
@@ -14,6 +14,8 @@ ms.reviewer: cwhitley, jusilver, v-naqviadil, v-leedennis, v-weizhu
 ms.custom: sap:Cannot activate my Windows VM
 ---
 # Troubleshoot Azure Windows virtual machine activation problems
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 [!INCLUDE [Feedback](../../../includes/feedback.md)]
 

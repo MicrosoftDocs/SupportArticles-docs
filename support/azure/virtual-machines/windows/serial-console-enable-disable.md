@@ -6,16 +6,18 @@ documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.topic: article
 ms.tgt_pltfrm: vm
 ms.workload: infrastructure-services
-ms.date: 08/20/2019
+ms.date: 08/07/2024
 ms.author: genli
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 
 # Enable and disable the Azure Serial Console
+
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
 Just like any other resource, the Azure Serial Console can be enabled and disabled. Serial Console is enabled by default for all subscriptions in global Azure. Currently, disabling Serial Console will disable the service for your entire subscription. Disabling or re-enabling Serial Console for a subscription requires contributor-level access or above on the subscription.
 
@@ -39,7 +41,7 @@ To disable Serial Console for a subscription, use the following commands:
 ```azurecli-interactive
 $subscriptionId=$(az account show --output=json | jq -r .id)
 
-az resource invoke-action --action disableConsole --ids "/subscriptions/$subscriptionId/providers/Microsoft.SerialConsole/consoleServices/default" --api-version="2018-05-01"
+az resource invoke-action --action disableConsole --ids "/subscriptions/$subscriptionId/providers/Microsoft.SerialConsole/consoleServices/default" --api-version="2023-01-01"
 ```
 
 To enable Serial Console for a subscription, use the following commands:
@@ -47,7 +49,7 @@ To enable Serial Console for a subscription, use the following commands:
 ```azurecli-interactive
 $subscriptionId=$(az account show --output=json | jq -r .id)
 
-az resource invoke-action --action enableConsole --ids "/subscriptions/$subscriptionId/providers/Microsoft.SerialConsole/consoleServices/default" --api-version="2018-05-01"
+az resource invoke-action --action enableConsole --ids "/subscriptions/$subscriptionId/providers/Microsoft.SerialConsole/consoleServices/default" --api-version="2023-01-01"
 ```
 
 To get the current enabled/disabled status of Serial Console for a subscription, use the following commands:
@@ -55,7 +57,7 @@ To get the current enabled/disabled status of Serial Console for a subscription,
 ```azurecli-interactive
 $subscriptionId=$(az account show --output=json | jq -r .id)
 
-az resource show --ids "/subscriptions/$subscriptionId/providers/Microsoft.SerialConsole/consoleServices/default" --output=json --api-version="2018-05-01" | jq .properties
+az resource show --ids "/subscriptions/$subscriptionId/providers/Microsoft.SerialConsole/consoleServices/default" --output=json --api-version="2023-01-01" | jq .properties
 ```
 
 ### PowerShell
@@ -67,7 +69,7 @@ To disable Serial Console for a subscription, use the following commands:
 ```azurepowershell-interactive
 $subscription=(Get-AzContext).Subscription.Id
 
-Invoke-AzResourceAction -Action disableConsole -ResourceId /subscriptions/$subscription/providers/Microsoft.SerialConsole/consoleServices/default -ApiVersion 2018-05-01
+Invoke-AzResourceAction -Action disableConsole -ResourceId /subscriptions/$subscription/providers/Microsoft.SerialConsole/consoleServices/default -ApiVersion 2023-01-01
 ```
 
 To enable Serial Console for a subscription, use the following commands:
@@ -75,7 +77,7 @@ To enable Serial Console for a subscription, use the following commands:
 ```azurepowershell-interactive
 $subscription=(Get-AzContext).Subscription.Id
 
-Invoke-AzResourceAction -Action enableConsole -ResourceId /subscriptions/$subscription/providers/Microsoft.SerialConsole/consoleServices/default -ApiVersion 2018-05-01
+Invoke-AzResourceAction -Action enableConsole -ResourceId /subscriptions/$subscription/providers/Microsoft.SerialConsole/consoleServices/default -ApiVersion 2023-01-01
 ```
 
 ## Enabling least privilege access to Serial console using RBAC

@@ -2,15 +2,16 @@
 title: Root Cause Analysis of unexpected Azure virtual machine reboots
 description: Describes how to determine root causes of unexpected Azure virtual machine reboots.
 services: virtual-machines
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.workload: infrastructure-services
 ms.topic: how-to
 ms.date: 11/17/2023
 ms.reviewer: tagangwa, macla, v-weizhu
 ms.custom: sap:VM restarted or stopped unexpectedly
 ---
-
 # How to check Root Cause Analysis of unexpected Azure virtual machine reboots
+
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
 Azure provides methods to access detailed Root Cause Analysis (RCA) of unexpected reboots of Azure virtual machines (VMs) through the Azure portal. This article walks you through the steps to check RCA information in the Azure portal, ensuring that you can quickly identify and resolve the unexpected VM reboot issue.
 

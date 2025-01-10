@@ -2,7 +2,7 @@
 title: Sysprep will not run correctly on a Windows 10 device that has been MDM enrolled
 description: Provides tips for troubleshooting when Sysprep will not run correctly on a Windows 10 device that has been enrolled in mobile device management.
 author: helenclu
-ms.author: jchornbe
+ms.author: luche
 ms.reviewer: kaushika, jchornbe
 ms.date: 12/05/2023
 search.appverid: MET150

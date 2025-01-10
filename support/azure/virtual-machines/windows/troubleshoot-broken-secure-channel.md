@@ -6,7 +6,7 @@ documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: top-support-issue, azure-resource-manager
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
@@ -18,6 +18,8 @@ ms.custom: sap:Cannot connect to my VM
 ---
 
 # Troubleshoot a failed trust relationship in an Azure Windows VM
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article shows how to troubleshoot a failed trust relationship between the workstation and primary domain in an Azure Windows virtual machine (VM).
 

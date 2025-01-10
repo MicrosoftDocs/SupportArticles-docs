@@ -3,13 +3,14 @@ title: No Internet access from Azure Windows VM that has multiple IP addresses
 description: Fixes an issue in which Azure Windows virtual machines that have multiple IP addresses cannot connect to the Internet or Azure services.
 ms.date: 04/15/2022
 ms.reviewer: chadmat
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.custom: sap:Cannot connect to my VM
 ---
 # No Internet access from Azure Windows VM that has multiple IP addresses
 
-_Original product version:_ &nbsp; Virtual Machine running Windows  
+**Applies to:** :heavy_check_mark: Windows VMs
+
 _Original KB number:_ &nbsp; 4040882
 
 ## Symptoms

@@ -7,7 +7,7 @@ author: saimsh-msft
 manager: dcscontentpm
 tags: ''
 ms.custom: sap:My VM is not booting, linux-related-content
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: linux
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
@@ -17,6 +17,8 @@ ms.date: 04/15/2024
 ms.author: saimsh
 ---
 # Troubleshoot Linux VM boot issues due to fstab errors
+
+**Applies to:** :heavy_check_mark: Linux VMs
 
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 

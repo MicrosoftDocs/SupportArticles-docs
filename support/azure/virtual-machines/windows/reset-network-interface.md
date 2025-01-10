@@ -1,32 +1,39 @@
 ---
 title: How to reset network interface for Azure Windows VM
-description: Shows how to reset network interface for Azure Windows VM
+description: Shows how to reset network interface for Azure Windows VM.
 services: virtual-machines, azure-resource-manager
 author: genlin
 manager: dcscontentpm
 tags: top-support-issue, azure-resource-manager
 ms.custom: sap:Cannot connect to my VM, devx-track-azurepowershell
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
-ms.date: 06/05/2024
+ms.date: 09/19/2024
 ms.author: genli
 ---
 # How to reset network interface for Azure Windows VM
 
-This article shows how to reset the network interface for Azure Windows VM to resolve issues when you cannot connect to Microsoft Azure Windows Virtual Machine (VM) after:
+**Applies to:** :heavy_check_mark: Windows VMs
+
+This article shows how to reset the network interface for Azure Windows VM to resolve issues when you can't connect to Microsoft Azure Windows Virtual Machine (VM) after:
 
 * You disable the default Network Interface (NIC).
 * You manually set a static IP for the NIC.
 
+The following article also introduces how to view and change settings for a NIC, which might help you:
+
+[Create, change, or delete a network interface](/azure/virtual-network/virtual-network-network-interface)
+
 [!INCLUDE [support-disclaimer](../../../includes/support-disclaimer.md)]
 
-## Reset network interface
+## Reset the NIC using Azure portal, Azure PowerShell or Azure CLI
 
-### For VMs deployed in Resource Manager model
-#### Use Azure portal
+> [!NOTE]
+> We recommend using the [az vm repair reset-nic](/cli/azure/vm/repair#az-vm-repair-reset-nic) command to reset the NIC. To run this command, see the following "Azure CLI" tab.
 
+### [Portal](#tab/azure-portal)
 
 1. Go to the [Azure portal](https://ms.portal.azure.com).
 2. Select the affected Virtual Machine.
@@ -36,15 +43,15 @@ This article shows how to reset the network interface for Azure Windows VM to re
 
 4. Select **IP configurations**.
 5. Select the IP.
-6. If the **Private IP assignment**  is not  **Static**, change it to **Static**.
+6. If the **Private IP assignment**  isn't  **Static**, change it to **Static**.
 7. Change the **IP address** to another IP address that is available in the Subnet.
-8. The virtual machine will restart to initialize the new NIC to the system.
-9. Try to RDP to your machine. If successful, you can change the Private IP address back to the original if you would like. Otherwise, you can keep it.
+8. The virtual machine restarts to initialize the new NIC to the system.
+9. Try to use RDP to connect to your machine. If successful, you can change the Private IP address back to the original if you would like. Otherwise, you can keep it.
 
-#### Use Azure PowerShell
+### [Azure PowerShell](#tab/azure-powershell)
 
 1. Make sure that you have [the latest Azure PowerShell](/powershell/azure/) installed.
-2. Open an elevated Azure PowerShell session (Run as administrator). Run the following commands:
+2. Open an elevated Azure PowerShell session. Run the following commands:
 
     ```powershell
     #Set the variables 
@@ -77,9 +84,39 @@ This article shows how to reset the network interface for Azure Windows VM to re
 
     $nic | Set-AzNetworkInterface
     ```
+2. The virtual machine restarts to initialize the new NIC to the system.
+3. Try to use RDP to connect to your machine. If successful, you can change the Private IP address back to the original if you would like. Otherwise, you can keep it.
 
-2. The virtual machine will restart to initialize the new NIC to the system.
-3. Try to RDP to your machine. If successful, you can change the Private IP address back to the original if you would like. Otherwise, you can keep it.
+### [Azure CLI](#tab/azure-cli)
+
+1. Launch [Azure Cloud Shell](/azure/cloud-shell/overview) from the top navigation of the Azure portal. 
+2. Run the following commands:
+
+   ```azurecli-interactive
+   az vm repair reset-nic -g MyResourceGroup -n vmName --subscription subscriptionId --yes
+   ```
+
+    Or 
+   
+   ```azurecli-interactive
+   #Log in to the subscription  
+
+   az login 
+   
+   az account set --subscription 
+   
+   #Check whether the new IP address is available in the virtual network.
+   
+   az network vnet check-ip-address -g MyResourceGroup -n MyVnet --ip-address 10.0.0.4 
+   
+   #Add/Change static IP. This process won't change MAC address 
+   
+   az network nic ip-config update -g MyResourceGroup --nic-name MyNic -n MyIpConfig --private-ip-address 10.0.0.9 
+   ```
+
+3. Try to use RDP to connect to your machine. If successful, you can change the Private IP address back to the original if you would like. Otherwise, you can keep it.
+
+---
 
 ## Delete the unavailable NICs
 
@@ -97,5 +134,6 @@ After you can remote desktop to the machine, you must delete the old NICs to avo
     > Only uninstall the unavailable adapters that have the name "Microsoft Hyper-V Network Adapter". If you uninstall any of the other hidden adapters, it could cause additional issues.
 
 6. Now all unavailable adapters should be cleared of your system.
+
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

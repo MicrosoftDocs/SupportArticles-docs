@@ -5,7 +5,6 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, jdickson
 ms.custom: sap:Print, Fax, and Scan\Print Configuration or Management, csstroubleshoot
 ---

@@ -20,6 +20,8 @@
   href: ./fscanf-does-not-read-consecutive-line.md
 - name: Mark MFC ActiveX controls safe
   href: ./mark-mfc-activex-controls-as-safe.md
+- name: OnInitDialog isn't called when using V4 printer drivers
+  href: ./oninitdialog-not-called-v4-printer-drivers.md
 - name: Runtime packages for Desktop Bridge
   href: ./c-runtime-packages-desktop-bridge.md
 - name: The _CRTDBG_MAP_ALLOC macro doesn't work

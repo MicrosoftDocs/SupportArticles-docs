@@ -3,14 +3,16 @@ title: Windows 11 support on Azure virtual machines
 description: Find details about Windows 11 support on Azure virtual machines. Learn about the criteria for Windows 11 eligibility.
 author: mohak006
 ms.author: mohak
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Windows (Guest OS)
-ms.reviewer: scotro, kageorge, jarrettr, v-leedennis
+ms.reviewer: scotro, kageorge, jarrettr, yutorigo, v-leedennis
 editor: v-jsitser
 ms.topic: upgrade-and-migration-article
-ms.date: 03/25/2024
+ms.date: 01/08/2025
 ---
 # Windows 11 support on Azure virtual machines
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article provides details about the applicable processors for Microsoft Azure virtual machines (VMs) that meet the requirements for Windows 11 support. Many of the VM products that are offered in Azure are supported by more than one configuration of physical hardware. Therefore, the underlying hardware generations can vary. Older VM products (such as D\*v2 and D\*v3 series VMs) can be installed on hosts that run older CPUs (such as Intel Broadwell and Haswell) and don't support Windows 11.
 
@@ -23,6 +25,7 @@ This article provides details about the applicable processors for Microsoft Azur
 |A-Series|No|
 |A-Series v2|No|
 |B-Series|No|
+|Bsv2-Series|Yes|
 |DCv2-Series|Yes|
 |DCv3-Series|Yes|
 |D-Series|No|

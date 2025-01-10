@@ -7,7 +7,7 @@ author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: linux
 ms.topic: article
 ms.tgt_pltfrm: vm-linux
@@ -17,6 +17,8 @@ ms.author: genli
 ---
 
 # Use Serial Console to access GRUB and single-user mode
+
+**Applies to:** :heavy_check_mark: Linux VMs
 
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 

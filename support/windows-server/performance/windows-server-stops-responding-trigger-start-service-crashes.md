@@ -5,7 +5,6 @@ manager: dcscontentpm
 audience: itpro
 ms.date: 12/26/2023
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, jasone, v-lianna
 ms.custom: sap:System Performance\System Performance (slow, unresponsive, high CPU, resource leak), csstroubleshoot, ikb2lmc
 ---

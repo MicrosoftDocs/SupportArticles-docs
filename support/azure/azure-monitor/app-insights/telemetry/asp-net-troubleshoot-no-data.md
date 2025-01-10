@@ -233,7 +233,6 @@ Example scenario:
 
   If you can't find the matching strings, check to make sure that you're using the same sign-in credentials in Visual Studio that you're using to sign in to the portal.
 * In the [Azure portal](https://portal.azure.com), search for and select **Service Health**. If the map has some alert indications, wait until they've returned to health. Then close and reopen your Application Insights application pane.
-* Check [our status blog](https://techcommunity.microsoft.com/t5/azure-monitor-status/bg-p/AzureMonitorStatusBlog).
 * Did you write any code for the [server-side SDK](/azure/azure-monitor/app/api-custom-events-metrics) that might change the [connection string](/azure/azure-monitor/app/sdk-connection-string) in `TelemetryClient` instances or in `TelemetryContext`? Or did you write a [filter or sampling configuration](/azure/azure-monitor/app/api-filtering-sampling) that might be filtering out too much?
 * If you edited *ApplicationInsights.config*, carefully check the configuration of [\<TelemetryInitializers> and \<TelemetryProcessors> elements](/azure/azure-monitor/app/api-filtering-sampling). An incorrectly named type or parameter can cause the SDK to send no data.
 

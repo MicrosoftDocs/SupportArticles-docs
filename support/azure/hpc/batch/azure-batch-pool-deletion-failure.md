@@ -4,7 +4,7 @@ description: An Azure batch pool deletion failure occurs. You can review the sym
 ms.date: 10/19/2022
 editor: v-jsitser
 ms.reviewer: biny, v-leedennis
-ms.service: batch
+ms.service: azure-batch
 #Customer intent: As an Azure Batch user, I want to troubleshoot why a batch pool deletion attempt fails so that I can successfully continue to use the Azure Batch service after I delete a batch pool.
 ms.custom: sap:Azure Batch
 ---

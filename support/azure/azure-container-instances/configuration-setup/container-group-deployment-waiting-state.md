@@ -6,7 +6,7 @@ author: tysonfms
 ms.author: tysonfreeman
 editor: v-jsitser
 ms.reviewer: v-leedennis
-ms.service: container-instances
+ms.service: azure-container-instances
 ms.custom: sap:Configuration and Setup
 #Customer intent: As an Azure administrator, I want to learn how to resolve a container group deployment that's stuck in the "Waiting" state so that I can successfully deploy an image onto a container instance.
 ---

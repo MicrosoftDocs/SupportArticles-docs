@@ -7,9 +7,9 @@ metadata:
   description: Landing page for Dynamics 365 Sales troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: dynamics-365-sales  #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
-  author:   #Required; your GitHub user alias, with correct capitalization.
-  ms.author:  #Required; microsoft alias of author; optional team alias.
-  ms.date: 11/08/2023
+  author: ChristySu #Required; your GitHub user alias, with correct capitalization.
+  ms.author: christys #Required; microsoft alias of author; optional team alias.
+  ms.date: 10/18/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -60,6 +60,22 @@ landingContent:
             url: privilege-error-occurs-when-using-dynamics-365-app-for-outlook.md
           - text: Resolve an account does not have permission to impersonate requested user error
             url: the-account-does-not-have-permission-to-impersonate-the-requested-user-error.md
+
+ # Card
+  - title: LinkedIn Sales Navigator
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't view photos on custom contact and lead forms in Unified Interface
+            url: lisn-unable-view-photos-custom-contact-lead-forms.md
+          - text: Can't upgrade the LinkedInSalesNavigatorForUnifiedClient solution
+            url: lisn-unable-upgrade-lisn-solution.md
+          - text: Data validation fails when you enable LinkedIn updates
+            url: lisn-error-enabling-linkedin-updates.md
+          - text: LinkedIn Sales Navigator display widgets don't load properly
+            url: lisn-display-widgets-not-loading-properly.md
+          - text: LinkedInSalesNavigatorControlsForUnifiedClient isn't available in the organization
+            url: lisn-solution-not-available-configure-lisn.md    
 
  # Card
   - title: Sales Hub

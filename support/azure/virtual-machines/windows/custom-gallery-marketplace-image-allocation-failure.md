@@ -1,12 +1,14 @@
 ---
 title: Custom/gallery/marketplace image allocation failures
 description: Provides solutions to an allocation error when you deploy a custom/gallery/marketplace image.
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.date: 06/04/2024
 ms.custom: sap:Cannot create a VM, H1Hack27Feb2017
 ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
 ---
 # Allocation failures when deploying custom/gallery/marketplace images
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 An allocation error arises in situations when the new VM request is pinned to a cluster that either cannot support the VM size being requested, or does not have available free space to accommodate the request.
 

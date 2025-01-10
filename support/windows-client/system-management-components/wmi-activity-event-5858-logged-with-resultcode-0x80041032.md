@@ -5,7 +5,6 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, steved, cmyu, ssutari
 ms.custom: sap:System Management Components\WMI management and troubleshooting, csstroubleshoot
 ---

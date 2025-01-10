@@ -2,7 +2,7 @@
 title: Swap file isn't re-created after a Linux VM restarts
 description: Describes how to resolve the problem that prevents a swap file from being re-created after a restart of a Linux virtual machine.
 ms.date: 04/15/2024
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:Cannot start or stop my VM, linux-related-content
 ms.collection: linux
 ms.author: srijangupta
@@ -11,12 +11,13 @@ ms.reviewer: danis
 ---
 # Swap file isn't  re-created after a Linux VM restarts
 
+**Applies to:** :heavy_check_mark: Linux VMs
+
+_Original KB number:_ &nbsp; 4577868
+
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
 This article provides a resolution to an issue in which the swap file can't be re-created after a restart of a Linux virtual machine.
-
-_Original product version:_ &nbsp; Azure, Virtual Machine running Linux  
-_Original KB number:_ &nbsp; 4577868
 
 ## Symptoms
 

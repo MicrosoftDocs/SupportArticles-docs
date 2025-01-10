@@ -5,7 +5,6 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, Arrenc
 ms.custom: sap:Active Directory\DCPromo and the installation or removal of domain controllers, csstroubleshoot
 ---

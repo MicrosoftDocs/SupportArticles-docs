@@ -1,8 +1,8 @@
 --- 
 title: Troubleshoot problems with Azure Application Insights Profiler
 description: This article presents troubleshooting steps and information to help developers enable and use Application Insights Profiler.
-ms.date: 06/24/2024
-ms.reviewer: v-leedennis, aaronmax, cweining, v-jsitser, hannahhunter, ryankahng, v-weizhu
+ms.date: 11/21/2024
+ms.reviewer: v-leedennis, aaronmax, cweining, v-jsitser, hannahhunter, ryankahng, matthofa, v-weizhu
 ms.service: azure-monitor
 #Customer intent: As an Azure Application Insights user, I want to know how to troubleshoot various problems enabling or viewing Application Insights Profiler so I can use it effectively.  
 ms.custom: sap:Availability Tests
@@ -18,7 +18,7 @@ Currently, the only regions that require endpoint modifications are [Azure Gover
 |App setting    | US Government Cloud | China Cloud |
 |---------------|---------------------|-------------|
 |ApplicationInsightsProfilerEndpoint         | `https://profiler.monitor.azure.us`    | `https://profiler.monitor.azure.cn` |
-|ApplicationInsightsEndpoint | `https://dc.applicationinsights.us` | `https://dc.applicationinsights.azure.cn` |
+|ApplicationInsightsEndpoint | [URL for Azure Government](/azure/azure-government/compare-azure-government-global-azure#application-insights) | [URL for Azure China](/azure/china/resources-developer-guide#application-insights) |
 
 ## Make sure your app runs on right version
 
@@ -83,7 +83,7 @@ For Profiler to work properly, make sure the following things:
 
 - The ApplicationInsightsProfiler3 webjob is running. To check the webjob, follow these steps:
 
-   1. [Access the Kudu service](https://github.com/projectkudu/kudu/wiki/Accessing-the-kudu-service).
+   1. [Access the Kudu service](/azure/app-service/resources-kudu).
 
         In the Azure portal, go to your App Service. Select **Advanced Tools** from the left side menu and then select **Go**.
 

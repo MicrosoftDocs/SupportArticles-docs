@@ -3,11 +3,13 @@ title: Can't extend volume on a SQL Server-based standalone server virtual machi
 description: Troubleshoot an issue that prevents you from extending the volume on a SQL Server-based standalone server virtual machine that was deployed from Azure Marketplace.
 ms.reviewer: kirangowda, shasankp, glimoli, clandis, tatec, v-leedennis
 ms.date: 12/12/2022
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 
 # Can't extend the volume on a SQL Server-based standalone server virtual machine from Azure Marketplace
+
+**Applies to:** :heavy_check_mark: SQL Server VMs
 
 This article discusses how to troubleshoot an issue that prevents you from extending the volume on a Microsoft SQL Server-based standalone server virtual machine (VM) that's deployed from Azure Marketplace.
 

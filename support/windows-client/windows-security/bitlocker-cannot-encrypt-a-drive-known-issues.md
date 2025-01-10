@@ -8,7 +8,6 @@ ms.topic: troubleshooting
 ms.custom: sap:Windows Security Technologies\BitLocker, csstroubleshoot
 ms.reviewer: kaushika, v-tappelgate
 audience: itpro
-localization_priority: medium
 ---
 # BitLocker cannot encrypt a drive: known issues
 

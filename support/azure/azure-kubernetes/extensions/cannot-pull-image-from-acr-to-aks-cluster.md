@@ -1,7 +1,7 @@
 ---
 title: Can't pull images from Azure Container Registry to Kubernetes
 description: This article helps you troubleshoot the most common errors that you may encounter when pulling images from a container registry to an AKS cluster.
-ms.date: 02/12/2024
+ms.date: 11/01/2024
 author: genlin
 ms.author: genli
 ms.reviewer: chiragpa, andbar, v-weizhu, v-leedennis
@@ -23,6 +23,7 @@ This article assumes that you have an existing AKS cluster and an existing conta
 - If you need an AKS cluster, deploy one by using [the Azure CLI](/azure/aks/kubernetes-walkthrough) or [the Azure portal](/azure/aks/kubernetes-walkthrough-portal).
 
 - If you need an Azure Container Registry (ACR), create one by using [the Azure CLI](/azure/container-registry/container-registry-get-started-azure-cli) or [the Azure portal](/azure/container-registry/container-registry-get-started-portal).
+
 
 You also need Azure CLI version 2.0.59 or a later version to be installed and configured. Run [az version](/cli/azure/reference-index#az-version) to determine the version. If you have to install or upgrade, see [Install Azure CLI](/cli/azure/install-azure-cli).
 
@@ -99,7 +100,7 @@ Make sure that the secret of the service principal that's associated with the AK
 SP_ID=$(az aks show --resource-group <myResourceGroup> --name <myAKSCluster> \
     --query servicePrincipalProfile.clientId -o tsv)
 
-az ad sp credential list --id "$SP_ID" --query "[].endDate" -o tsv
+az ad app credential list --id "SP_ID" --query "[].endDateTime" --output tsv
 ```
 
 For more information, see [Check the expiration date of your service principal](/azure/aks/update-credentials#check-the-expiration-date-of-your-service-principal).
@@ -261,12 +262,12 @@ If the AKS cluster connects publicly to the container registry (NOT through a pr
 
       :::image type="content" source="./media/cannot-pull-image-from-acr-to-aks-cluster/add-aks-load-balancer-public-ip.png" alt-text="Screenshot about how to add AKS Load Balancer's public IP address to Address range":::
 
-## Cause 4: 443 timeout error
+## Cause 4: "i/o timeout error"
 
 > Failed to pull image "\<acrname>.azurecr.io/\<repository\:tag>": rpc error: code = Unknown desc = failed to pull and unpack image "\<acrname>.azurecr.io/\<repository\:tag>": failed to resolve reference "\<acrname>.azurecr.io/<repository\:tag>": failed to do request: Head "https://\<acrname>.azurecr.io/v2/\<repository>/manifests/v1": dial tcp \<acrprivateipaddress>:**443: i/o timeout**
 
 > [!NOTE]
-> The "443 timeout" error occurs only when you [connect privately to a container registry by using Azure Private Link](/azure/container-registry/container-registry-private-link).
+> The "i/o timeout" error occurs only when you [connect privately to a container registry by using Azure Private Link](/azure/container-registry/container-registry-private-link).
 
 ### Solution 1: Make sure virtual network peering is used
 

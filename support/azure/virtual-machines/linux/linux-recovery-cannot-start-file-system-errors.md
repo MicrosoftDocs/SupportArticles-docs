@@ -7,7 +7,7 @@ author: genlin
 manager: dcscontentpm
 tags: ''
 ms.custom: sap:My VM is not booting, linux-related-content
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: linux
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
@@ -17,6 +17,8 @@ ms.date: 07/19/2022
 ms.author: genli
 ---
 # Troubleshoot Linux virtual machine boot issues due to filesystem errors
+
+**Applies to:** :heavy_check_mark: Linux VMs
 
 This article provides guidance to troubleshoot Linux virtual machine (VM) boot issues caused by filesystem errors.
 

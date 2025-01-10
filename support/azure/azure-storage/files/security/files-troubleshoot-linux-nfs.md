@@ -3,7 +3,7 @@ title: Troubleshoot NFS file shares - Azure Files
 description: Troubleshoot issues with NFS Azure file shares.
 ms.service: azure-file-storage
 ms.custom: sap:Security, linux-related-content
-ms.date: 04/24/2024
+ms.date: 10/11/2024
 ms.reviewer: kendownie
 ---
 
@@ -46,7 +46,7 @@ Make sure you've disabled idmapping and that nothing is re-enabling it. Then per
     ```
 
 1. Mount the share back.
-1. If running rsync, run rsync with the `—numeric-ids` argument from a directory that doesn't have a bad directory or file name.
+1. If running rsync, run rsync with the `-numeric-ids` argument from a directory that doesn't have a bad directory or file name.
 
 ## Unable to create an NFS share
 
@@ -54,13 +54,12 @@ Make sure you've disabled idmapping and that nothing is re-enabling it. Then per
 
 NFS is only available on storage accounts with the following configuration:
 
-- Tier - Premium
-- Account Kind - FileStorage
-- Regions - [List of supported regions](/azure/storage/files/storage-files-how-to-create-nfs-shares?tabs=azure-portal#regional-availability)
+- Tier: Premium
+- Account Kind: FileStorage
 
 ### Solution
 
-Follow the instructions in [How to create an NFS share](/azure/storage/files/storage-files-how-to-create-nfs-shares).
+Follow the instructions in [Create an NFS file share](/azure/storage/files/storage-files-quick-create-use-linux).
 
 ## Can't connect to or mount an NFS Azure file share
 
@@ -68,7 +67,7 @@ Follow the instructions in [How to create an NFS share](/azure/storage/files/sto
 
 Unlike SMB, NFS doesn't have user-based authentication. The authentication for a share is based on your network security rule configuration. To ensure that clients only establish secure connections to your NFS share, you must use either the service endpoint or private endpoints. To access shares from on-premises in addition to private endpoints, you must set up a VPN or ExpressRoute connection. IPs added to the storage account's allowlist for the firewall are ignored. You must use one of the following methods to set up access to an NFS share:
 
-- [Service endpoint](/azure/storage/files/storage-files-networking-endpoints#restrict-public-endpoint-access)
+- [Service endpoint](/azure/storage/files/storage-files-networking-endpoints#restrict-access-to-the-public-endpoint-to-specific-virtual-networks)
   - Accessed by the public endpoint.
   - Only available in the same region.
   - You can't use VNet peering for share access.
@@ -210,6 +209,18 @@ To resolve this issue, use one of the following methods:
 - Set the module parameter by adding `options nfs enable_ino64=0` to  the */etc/modprobe.d/nfs.conf* file and rebooting the VM.
 
 You can also persist this kernel boot option in the *grub.conf* file. For more information, see the documentation for your Linux distribution.
+
+## Unable to change the ownership of files and directories
+
+### Cause
+
+Permissions on NFS file shares are enforced by the client OS rather than the Azure Files service. If the **Root Squash** setting is enabled on an NFS file share, the root user on the client system is treated as an anonymous (non-privileged) user for access control purposes. This means that even if you're logged in as root on the client system, you can't use the `chown` command to change the ownership of files and directories that you don't own.
+
+### Solution
+
+In the Azure portal, navigate to the file share and select **Properties**. Change the **Root Squash** setting to **No Root Squash**. For more information, see [Configure root squash for Azure Files](/azure/storage/files/nfs-root-squash).
+
+With **No Root Squash** enabled, the root user on the client system has the same privileges as the root user on the server system. You can now use `chown` to change the ownership of any file or directory in the share, regardless of the current owner. After you make the changes, you can re-enable **Root Squash** if necessary.
 
 ## Need help?
 

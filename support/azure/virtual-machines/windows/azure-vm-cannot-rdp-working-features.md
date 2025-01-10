@@ -3,12 +3,14 @@ title: Azure VM cannot RDP - working on features
 description: Troubleshoot Azure VM cannot RDP - working on features.
 ms.date: 06/13/2024
 ms.reviewer: trmaier, v-weizhu
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.custom: sap:My VM is not booting
 ---
 
 # Azure VM cannot RDP - working on features
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 ## Symptoms
 

@@ -7,12 +7,14 @@ author: genlin
 manager: dcscontentpm
 tags: top-support-issue
 ms.custom: sap:My VM is not booting, linux-related-content
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.topic: troubleshooting
 ms.date: 08/19/2021
 ms.author: tibasham
 ---
 # Resolve "Failed to start Switch Root" for an Azure Linux VM
+
+**Applies to:** :heavy_check_mark: Linux VMs
 
 This article shows how to resolve the error "Failed to start Switch Root" for an Azure Linux Virtual Machine (VM). This issue can occur when you update to the following GRUB package versions on Oracle 8 SP2:
 

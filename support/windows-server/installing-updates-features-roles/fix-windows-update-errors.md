@@ -1,12 +1,11 @@
 ---
 title: Fix Windows Update corruptions and installation failures
 description: Use the DISM tool to fix problems that prevent Windows Update from installing successfully.
-ms.date: 06/14/2024
+ms.date: 09/26/2024
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: high
-ms.reviewer: kaushika, chkeen, cgibson, jesko
+ms.reviewer: kaushika, chkeen, cgibson, jesko, warrenw, abjos
 ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update fails - installation stops with error, csstroubleshoot
 adobe-target: true
 ---
@@ -61,7 +60,7 @@ Check this page for [Windows Update troubleshooting scenarios](../../windows-cli
 
 To resolve Windows Update corruptions and address update installation failures, use the DISM tool. Then, install the Windows Update.
 
-1. Open an elevated command prompt. To do this, open the **Start** menu or **Start** screen, type _Command Prompt_, right-click **Command Prompt**, and then select **Run as administrator**. If you're prompted for an administrator password or for a confirmation, type the password, or select **Allow**.
+1. Open an elevated command prompt. To do this, open the **Start** menu, type _Command Prompt_, right-click **Command Prompt**, and then select **Run as administrator**. If you're prompted for an administrator password or for a confirmation, type the password, or select **Yes**.
 
 2. Type the following command, and then press Enter. It may take several minutes for the command operation to be completed.
 
@@ -77,7 +76,7 @@ To resolve Windows Update corruptions and address update installation failures, 
     ```
 
     > [!NOTE]
-    > Replace \<servername\> with the computer name of the computer you are using as a repair source. For more information about using the DISM tool to repair Windows, reference [Repair a Windows Image](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824869(v=win.10)). If the scan result is "The restore operation completed successfully", go to the next step. If not, try to fix errors found in the CBS log file.
+    > Replace \<servername\> with the computer name of the computer you are using as a repair source. The repair source computer must be running the same operating system version. For more information about using the DISM tool to repair Windows, reference [Repair a Windows Image](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824869(v=win.10)). If the scan result is "The restore operation completed successfully", go to the next step. If not, try to [analyze the CBS.log file](#step-1-analyze-the-cbslog-file) and fix errors.
 
 3. Type the `sfc /scannow` command and press Enter. It may take several minutes for the command operation to be completed.
 
@@ -108,48 +107,161 @@ The DISM tool creates a log file that captures any issues that the tool found or
 - _%SYSTEMROOT%\Logs\CBS\CBS.log_
 - _%SYSTEMROOT%\Logs\CBS\CBS.persist.log_
 
-## Fix corruptions found in CBS.log file
+## Advanced guide to fix CBS corruption manually using DISM utility
 
-To manually fix corruption errors that the DISM tool detects but can't fix, follow these steps:
+### Step 1: Analyze the CBS.log file
 
-1. Open _%SYSTEMROOT%\Logs\CBS\CBS.log_.
+After running the DISM commands, go to *%WinDir%\\Logs\\CBS\\CBS.log* to view the results. The log file provides a summary of the scan and details of any errors found.
 
-    > [!NOTE]
-    > _%SYSTEMROOT%_ is an environment variable that saves the folder in which Windows is installed. For example, generally, the _%SYSTEMROOT%_ folder is _C:\Windows_.
+Here's an example of the log summary:
 
-2. Identify the packages that the tool can't fix. For example, you may find the following information in the log file:
+```output
+Checking System Update Readiness.
+    (p)      CSI Payload Corrupt              (n)           amd64_microsoft-windows-a..modernappmanagement_31bf3856ad364e35_10.0.19045.3636_none_23b3b3ece690d77b\EnterpriseModernAppMgmtCSP.dll
+       (p)    CBS MUM Missing                         (n)                 Microsoft-Windows-Client-Features-Package~31bf3856ad364e35~amd64~~10.0.19045.4291
+       (p)    CSI Manifest Corrupt             (w)    (Fixed)       wow64_microsoft-windows-audio-mmecore-acm_31bf3856ad364e35_10.0.19045.1_none_a12b40f4b4c7b751
+    (p)      CSI Manifest Corrupt          (n)                    wow64_microsoft-windows-audio-volumecontrol_31bf3856ad364e35_10.0.19045.3636_none_4514b27cf12f35d5
+
+
+Summary:
+Operation: Detect and Repair 
+Operation result: 0x800f081f
+Last Successful Step: Remove staged packages completes.
+Total Detected Corruption: 2
+    CBS Manifest Corruption: 2
+    CBS Metadata Corruption: 0
+    CSI Manifest Corruption: 0
+    CSI Metadata Corruption: 0
+    CSI Payload Corruption: 0
+Total Repaired Corruption: 1
+    CBS Manifest Repaired: 1
+    CSI Manifest Repaired: 0
+    CSI Payload Repaired: 0
+    CSI Store Metadata refreshed: False
+Staged Packages:
+    CBS Staged packages: 0
+    CBS Staged packages removed: 0
+```
+
+> [!NOTE]
+> CSI Payload Corruption: This indicates that the payload file *EnterpriseModernAppMgmtCSP.dll* is corrupt.
+>
+> CBS MUM Missing: A required MUM file is missing from the package (*Microsoft-Windows-Client-Features-Package*).
+> 
+> CSI Manifest Corruption: There were two instances of manifest corruption. One was fixed (*wow64_microsoft-windows-audio-mmecore-acm*), and the other (*wow64_microsoft-windows-audio-volumecontrol*) remains corrupt.
+
+### Step 2: Download the missing files
+
+1. Identify the missing or corrupted files.
+
+    Review the *CBS.log* file to identify the missing or corrupted files. For example:
 
     ```output
-   Checking System Update Readiness.
-    (p)	CSI Payload Corrupt			(n)	    	amd64_microsoft-windows-a..modernappmanagement_31bf3856ad364e35_10.0.19041.3636_none_23b3b3ece690d77b\EnterpriseModernAppMgmtCSP.dll
-	(p)	CBS MUM Missing				(n)			Microsoft-Windows-Client-Features-Package~31bf3856ad364e35~amd64~~10.0.19041.4291
-	(p)	CSI Manifest Corrupt		(w)	(Fixed)	wow64_microsoft-windows-audio-mmecore-acm_31bf3856ad364e35_10.0.19041.1_none_a12b40f4b4c7b751
-    (p)	CSI Manifest Corrupt	    (n)			wow64_microsoft-windows-audio-volumecontrol_31bf3856ad364e35_10.0.19041.3636_none_4514b27cf12f35d5
-
-    Summary:
-    Operation: Detect and Repair
-    Operation result: 0x800f081f
-    Last Successful Step: Remove staged packages completes.
-    Total Detected Corruption:	4
-	CBS Manifest Corruption:	1
-	CBS Metadata Corruption:	0
-	CSI Manifest Corruption:	2
-	CSI Metadata Corruption:	0
-	CSI Payload Corruption:	1
-    Total Repaired Corruption:	1
-	CBS Manifest Repaired:	0
-	CSI Manifest Repaired:	1
-	CSI Payload Repaired:	0
-	CSI Store Metadata refreshed:	True
-    Staged Packages:
-	CBS Staged packages:	0
-	CBS Staged packages removed:	0
-    ...
+    (p) CSI Payload Corrupt (n) amd64_microsoft-windows-a..modernappmanagement_31bf3856ad364e35_10.0.19045.3636_none_23b3b3ece690d77b\EnterpriseModernAppMgmtCSP.dll
+    (p) CBS MUM Missing (n) Microsoft-Windows-Client-Features-Package~31bf3856ad364e35~amd64~~10.0.19045.4291
+    (p) CSI Manifest Corrupt (n) wow64_microsoft-windows-audio-volumecontrol_31bf3856ad364e35_10.0.19045.3636_none_4514b27cf12f35d5
     ```
 
-   - CSI Payload Corruption: This indicates that the payload file `EnterpriseModernAppMgmtCSP.dll` is corrupt.
-   - CBS MUM Missing: A required MUM file is missing from the `Microsoft-Windows-Client-Features-Package`.
-   - CSI Manifest Corruption: There were two instances of manifest corruption. One was fixed `(wow64_microsoft-windows-audio-mmecore-acm)`, and the other `(wow64_microsoft-windows-audio-volumecontrol)` remains corrupt.
+2. Determine the update containing the missing files.
+
+    From the log entries, identify the Update Build Revision (UBR) numbers within the file paths:
+
+    - In the *EnterpriseModernAppMgmtCSP.dll* file, the UBR number is `10.0.19045.3636`.
+    - In the `Microsoft-Windows-Client-Features-Package` package, the UBR number is `10.0.19045.4291`.
+
+3. Match the UBR number to the KB number:
+
+   1. Go to the [Windows update history page](/windows/release-health/release-information#windows-10-release-history) for your version (for example, Windows 10, version 22H2).
+   2. Match the UBR number (`3636` or `4291`) to the listed updates to find the KB number.
+
+   For example:
+
+    - UBR `3636` might correspond to KB5031445.
+    - UBR `4291` might correspond to KB5036892.
+
+4. Search for and download the update by the KB number:
+
+    1. Use the identified KB numbers to search for the updates in the [Microsoft Update Catalog](https://catalog.update.microsoft.com).
+    2. Download the updates associated with each KB number to restore the missing or corrupted files.
+
+### Step 3: Extract the .msu and .cab files
+
+To address the corrupted files identified in the *CBS.log* file, extract the missing files into a specific folder. Follow these steps to extract the `.msu` and `.cab` files by using the provided [PowerShell script](../support-tools/scripts-extract-msu-cab-files.md), and then copy the necessary files to the *C:\\temp\\Source* folder.
+
+1. Create the necessary folders.
+
+    Run the following command to create the *C:\\temp\\Source* folder if it doesn't exist:
+
+    ```console
+    mkdir C:\temp\Source
+    ```
+
+2. Use the instructions and script in [Scripts: Extract .msu and .cab files](../support-tools/scripts-extract-msu-cab-files.md) to extract the `.msu` files by providing the destination paths of the `.msu` files.
+
+### Step 4: Repair the corrupted files by using the source files
+
+1. Copy the correct versions of the corrupted files.
+
+    Copy the correct versions of all the corrupted files that belong to this update to the *C:\\temp\\Source* folder. For example, run the following command:
+
+    ```powershell
+    Copy-Item "C:\path\extractedFiles\corruptedfile.dll" -Destination "C:\temp\Source"
+    ```
+
+    Repeat this process for each corrupted file identified in the log until all the corrupted files are copied to the *C:\\temp\\Source* folder.
+
+2. Rerun the DISM command.
+
+    Open a command prompt as an administrator and run the following DISM command with the `/Source` option:
+
+    ```console
+    DISM /Online /Cleanup-Image /RestoreHealth /Source:C:\temp\Source\ /LimitAccess
+    ```
+
+### Step 5: Verify and confirm
+
+1. Rerun the DISM command.
+
+    Rerun the following DISM command to verify that the issues have been resolved:
+
+    ```console
+    DISM /Online /Cleanup-Image /ScanHealth
+    ```
+
+2. Check the *CBS.log* file.
+
+    Review the *CBS.log* file to ensure there are no remaining errors.
+
+### Example DISM command output
+
+The output of the DISM restore command provides crucial information about the corruption that was detected and repaired:
+
+```output
+Checking System Update Readiness.
+
+(p) CBS MUM Missing (n) Microsoft-Windows-Client-Features-Package~31bf3856ad364e35~amd64~~10.0.19045.4291
+Repair failed: Missing replacement mum/cat pair.
+(p) CBS MUM Missing (w) (Fixed) Microsoft-Windows-Client-Features-Package~31bf3856ad364e35~amd64~~10.0.19045.4412
+
+Summary:
+Operation: Detect and Repair 
+Operation result: 0x800f081f
+Last Successful Step: Remove staged packages completes.
+Total Detected Corruption: 2
+    CBS Manifest Corruption: 2
+    CBS Metadata Corruption: 0
+    CSI Manifest Corruption: 0
+    CSI Metadata Corruption: 0
+    CSI Payload Corruption: 0
+Total Repaired Corruption: 1
+    CBS Manifest Repaired: 1
+    CSI Manifest Repaired: 0
+    CSI Payload Repaired: 0
+    CSI Store Metadata refreshed: False
+Staged Packages:
+    CBS Staged packages: 0
+    CBS Staged packages removed: 0
+```
 
 ## Data collection
 

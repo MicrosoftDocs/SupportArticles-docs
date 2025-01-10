@@ -5,7 +5,7 @@ ms.date: 09/26/2022
 ms.reviewer: 
 author: genlin
 ms.author: genli
-ms.service: cloud-services
+ms.service: azure-cloud-services-classic
 ms.custom: sap:Development
 ---
 # AssemblyBinder role instance is throwing System.IO.IOException exception

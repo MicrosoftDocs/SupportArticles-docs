@@ -4,10 +4,12 @@ description: Understand how to react to a scenario in which the HealthResources 
 ms.date: 06/07/2023
 editor: v-jsitser
 ms.reviewer: macla, pudesira, v-leedennis
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:VM Performance
 ---
 # HealthResources table in Resource Graph has missing entries
+
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
 This article discusses the possibility of missing virtual machine (VM) availability status or health annotations in the HealthResources and HealthResourceChanges tables in Microsoft Azure Resource Graph. The article also discusses how to react if this scenario occurs.
 

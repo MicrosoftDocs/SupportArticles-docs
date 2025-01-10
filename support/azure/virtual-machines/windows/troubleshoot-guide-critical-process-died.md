@@ -7,16 +7,17 @@ author: genlin
 ms.author: genli
 manager: dcscontentpm
 tags: azure-resource-manager
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: na
 ms.topic: troubleshooting
-ms.date: 06/13/2024
+ms.date: 08/01/2024
 ms.custom: sap:My VM is not booting
 ---
-
 # Windows Stop Error - #0x000000EF "Critical Process Died"
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article provides steps to resolve issues where a critical process dies during boot in an Azure VM.
 
@@ -62,22 +63,24 @@ Usually, this is due to a critical system process failing during boot. You can r
 3. Next, use [step 5 of the VM Repair Commands](./repair-windows-vm-using-azure-virtual-machine-repair-commands.md#repair-process-example) to reassemble the VM and see if it boots.
 4. If the VM is still not booting, then continue to collect the memory dump file.
 
-### Collect the Memory Dump File
+### Collect the memory dump file
 
 If the issue persists after running SFC, analysis of a memory dump file will be required to determine the cause of the issue. To collect the memory dump file, follow these steps:
 
-### Attach the OS disk to a new Repair VM
+#### Step 1: Locate the dump file and submit a support ticket
 
-1. Use [steps 1-3 of the VM Repair Commands](./repair-windows-vm-using-azure-virtual-machine-repair-commands.md) to prepare a new Repair VM.
-2. Using Remote Desktop Connection connect to the Repair VM.
+[!INCLUDE [Collect OS Memory Dump File](../../../includes/azure/collect-os-memory-dump-file.md)]
 
-### Locate the dump file and submit a support ticket
+If you can't find the dump file, go to the next steps to enable the dump log and the serial console, and then reproduce the issue.
 
-3. On the repair VM, go to windows folder in the attached OS disk. If the driver letter that is assigned to the attached OS disk is *F*, you need to go to *F:\Windows*.
-4. Locate the *memory.dmp* file, and then [submit a support ticket](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) with the memory dump file.
+#### Step 2: Enable the dump log and the serial console
 
-   > [!NOTE]
-   > If you cannot find the dump file, complete the below steps to enable memory dump collection and Serial Console, then return to this section and repeat the steps in the task above to collect the memory dump file.
+[!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
+
+To enable the dump log and the serial console, follow these steps:
+
+[!INCLUDE [Enable Serial Console and Memory Dump Collection](../../../includes/azure/enable-serial-console-memory-dump-collection.md)]
+
 
 ### Recommended: Before you rebuild the VM, enable Serial Console and memory dump collection
 

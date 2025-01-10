@@ -7,7 +7,7 @@ author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: linux
 ms.topic: article
 ms.tgt_pltfrm: vm-linux
@@ -18,6 +18,8 @@ ms.author: genli
 
 
 # Use the Azure Serial Console for SysRq and NMI calls
+
+**Applies to:** :heavy_check_mark: Linux VMs
 
 ## System Request (SysRq)
 

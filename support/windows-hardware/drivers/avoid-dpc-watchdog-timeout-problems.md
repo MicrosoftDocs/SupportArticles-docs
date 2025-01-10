@@ -3,7 +3,6 @@ title: Avoiding DPC Watchdog timeout problems
 description: This article provides resolutions for the DPC Watchdog timeout problems in StorPort Miniports.
 ms.date: 09/04/2020
 ms.custom: sap:Storage Driver
-ms.subservice: storage-driver
 ---
 # Avoiding DPC Watchdog timeout problems in StorPort Miniports
 

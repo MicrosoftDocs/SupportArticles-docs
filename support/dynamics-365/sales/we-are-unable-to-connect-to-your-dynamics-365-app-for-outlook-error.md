@@ -4,7 +4,6 @@ description: When you try to use Microsoft Dynamics 365 App for Outlook, you rec
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
-ms.subservice: d365-sales-email-office-integration
 ---
 # We're unable to connect to your Microsoft Dynamics 365 server error when using Microsoft Dynamics 365 App for Outlook
 

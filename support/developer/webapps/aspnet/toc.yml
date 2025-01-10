@@ -113,8 +113,6 @@
     href: site-behavior-performance/request-timed-out-dataadapter.md
   - name: Debug mode in ASP.NET applications
     href: site-behavior-performance/debug-mode-applications.md
-  - name: Error-logging capabilities of HTTP APIs
-    href: site-behavior-performance/error-logging-http-apis.md
   - name: Exceptions cause applications to quit
     href: site-behavior-performance/exceptions-cause-apps-quit.md
   - name: FileNotFoundException when an application calls a web service

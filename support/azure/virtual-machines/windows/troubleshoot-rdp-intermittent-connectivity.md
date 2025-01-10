@@ -5,7 +5,7 @@ services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
@@ -14,8 +14,9 @@ ms.date: 10/24/2018
 ms.author: genli
 ms.custom: sap:Cannot connect to my VM
 ---
-
 # Remote Desktop disconnects frequently in Azure VM
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article explains how to troubleshoot frequent disconnections to an Azure virtual machine (VM) through Remote Desktop Protocol RDP).
 

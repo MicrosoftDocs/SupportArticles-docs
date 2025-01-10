@@ -2,10 +2,9 @@
 title: Troubleshoot common issues related to Azure Web App service deployments
 description: This article lists some common issues related to Azure Web App service deployments from Azure DevOps Services and provides steps to resolve or debug these issues.
 ms.date: 05/10/2023
-ms.custom: sap:Pipelines
+ms.custom: sap:Pipelines - Deploying applications to Azure services
 ms.reviewer: dmittal, cathmill, v-sidong
 ms.service: azure-devops
-ms.subservice: ts-pipelines
 ---
 # Azure Web App service deployments related issues
 

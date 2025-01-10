@@ -3,7 +3,7 @@ title: Out of memory error occurs in Linux Azure virtual machine
 description: This article helps you understand how to fix out of memory errors by adding swap space in Linux Azure virtual machines.
 ms.date: 10/27/2023
 ms.reviewer: azurevmlnxcic, v-denlee
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Windows (Guest OS), linux-related-content
 ms.collection: linux
 author: pagienge
@@ -11,10 +11,11 @@ ms.author: pagienge
 ---
 # Out of memory error occurs in Linux Azure virtual machine
 
-This article discusses a few scenarios in which a Microsoft Azure Virtual Machine (VM) that runs the Linux operating system (OS) runs out of memory (OOM). An OOM condition causes new memory allocation requests to fail, or it causes the [OOM Killer](https://linux-mm.org/OOM_Killer) process to be invoked. If it's configured to do this, the [kernel panics](../linux/linux-kernel-panic-troubleshooting.md), and a memory dump file is created.
+**Applies to:** :heavy_check_mark: Linux VMs
 
-*Original product version:* &nbsp; Virtual Machine running Linux  
 *Original KB number:* &nbsp; 4010058
+
+This article discusses a few scenarios in which a Microsoft Azure Virtual Machine (VM) that runs the Linux operating system (OS) runs out of memory (OOM). An OOM condition causes new memory allocation requests to fail, or it causes the [OOM Killer](https://linux-mm.org/OOM_Killer) process to be invoked. If it's configured to do this, the [kernel panics](../linux/linux-kernel-panic-troubleshooting.md), and a memory dump file is created.
 
 ## Symptoms
 

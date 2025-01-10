@@ -8,7 +8,6 @@ ms.collection: highpri
 ms.custom: sap:Windows Desktop and Shell Experience\Start Menu and Task Bar, csstroubleshoot
 ms.reviewer: kaushika,lizlong
 audience: itpro
-localization_priority: medium
 ---
 # Start menu troubleshooting guidance
 

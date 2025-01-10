@@ -1,8 +1,8 @@
 ---
 title: Common issues when you run or scale large AKS clusters FAQ
 description: Review common issues when you run or scale large AKS clusters. The article includes troubleshooting tips for resolving these issues.
-ms.date: 04/23/2024
-ms.reviewer: paahluwalia, v-leedennis, v-weizhu
+ms.date: 09/27/2024
+ms.reviewer: paahluwalia, mariochaves, v-leedennis, v-weizhu
 editor: v-jsitser
 ms.service: azure-kubernetes-service
 keywords:
@@ -75,7 +75,7 @@ In its default configuration, AKS surges during an upgrade by taking the followi
 
 For the max surge settings, a default value of one node means that AKS creates one new node before it drains the existing applications and replaces an earlier-versioned node. This extra node lets AKS minimize workload disruption.
 
-When you upgrade clusters that have a many nodes, it can take several hours to upgrade the entire cluster if you use the default value of `max-surge`. You can customize the `max-surge` property per node pool to enable a tradeoff between upgrade speed and upgrade disruption. By increasing the max surge value, you enable the upgrade process to finish sooner. However, a large value for max surge might also cause disruptions during the upgrade process.
+When you upgrade clusters that have many nodes, it can take several hours to upgrade the entire cluster if you use the default value of `max-surge`. You can customize the `max-surge` property per node pool to enable a tradeoff between upgrade speed and upgrade disruption. By increasing the max surge value, you enable the upgrade process to finish sooner. However, a large value for max surge might also cause disruptions during the upgrade process.
 
 Run the following command to increase or customize the max surge for an existing node pool:
 
@@ -83,6 +83,15 @@ Run the following command to increase or customize the max surge for an existing
 az aks nodepool update --resource-group MyResourceGroup --name mynodepool --cluster-name MyManagedCluster --max-surge 5
 ```
 
+It's also important to consider how your deployment settings might delay the completion of the upgrade or scale operation:
+
+- [SKU family B series VMs are not supported](/azure/aks/use-system-pools#system-and-user-node-pools) by AKS in the system nodepool and they can experience low performance during and after updates.
+- Check your deployment's PDB resource settings to ensure they are accurate for a successful upgrade. For more information, see [AKS workload best practices](/azure/architecture/operator-guides/aks/aks-upgrade-practices).
+
+> [!TIP]
+> To get more insights about this behavior, you can [view error details on the Activity Log page in the Azure portal](troubleshoot-aks-cluster-creation-issues.md#view-error-details-in-the-azure-portal) or review the [resource logs](/azure/aks/monitor-aks-reference#resource-logs) on your cluster.
+
+  
 ## My upgrade is reaching the quota (5,000 cluster) limit
 
 To resolve this issue, see [Increase regional vCPU quotas][Increase regional vCPU quotas].

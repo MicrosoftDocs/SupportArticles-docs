@@ -3,12 +3,14 @@ title: Troubleshoot Windows VM OS boot failure
 description: Explains why a Windows VM cannot boot and how to solve the problem.
 ms.date: 12/07/2020
 ms.reviewer: 
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.custom: sap:My VM is not booting
 ---
 
 # Troubleshoot Windows VM OS boot failure
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article explains why a Windows VM cannot boot and how to solve the problem.
 

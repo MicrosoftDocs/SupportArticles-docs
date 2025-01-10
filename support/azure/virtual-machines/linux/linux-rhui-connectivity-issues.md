@@ -5,16 +5,18 @@ author: msaenzbosupport
 ms.author: msaenzbo
 editor: v-jsitser
 ms.reviewer: azurevmlnxcic, divargas, v-leedennis
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:Cannot connect to my VM, linux-related-content
 ms.collection: linux
 ms.topic: troubleshooting-general
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
-ms.date: 03/19/2024
+ms.date: 10/18/2024
 ---
 
 # Troubleshoot Red Hat RHUI connectivity issues
+
+**Applies to:** :heavy_check_mark: Linux VMs
 
 Misconfigurations at the networking layer can cause common issues to occur in the Red Hat Update Infrastructure (RHUI). This article helps you identify and resolve some of these issues.
 
@@ -72,37 +74,62 @@ Do you use a network configuration (custom firewall or UDR configurations) to fu
 
 Azure makes available an RHUI repository validation script in GitHub. One of the many functions of the script is to validate the connectivity of the repository server and provide recommendations for a fix if it discovers a connectivity error. This Python script has the following features:
 
-- Runs `yum clean all` and `yum check-update` commands
+- Validates the RHUI client certificate.
+- Validates RHUI rpm consistency.
+- Does a consistency check between EUS, non-EUS repository configuration, and their requirements.
+- Validates connectivity to the RHUI repositories. Reports that repository connectivity is successful if no errors are observed.
+- Validates SSL connectivity to the RHUI repositories.
+- Focuses exclusively in the RHUI repositories.
+- Validates a found error by using the defined conditions and provides recommendations for a fix.
 
-- Captures the output and error from `yum check-update`
-
-- Reports that repository connectivity is successful if no errors are observed
-
-- Validates a found error by using the defined conditions and provides recommendations for a fix
-
-To get the script, see [RHUI_repo_validation_scripts](https://github.com/Azure/azure-support-scripts/tree/master/Linux_scripts/RHUI_repo_validation_scripts).
-
-#### Supported OS images
+#### Supported Red Hat images
 
 This version of the validation script currently supports only the following Red Hat VMs that are deployed from the Azure Marketplace image:
 
-- RHEL 6._x_
-- RHEL 7._x_
+- RHEL 7._x_ PAYG VMs
 - RHEL 8._x_ PAYG VMs
+- RHEL 9._x_ PAYG VMs
 
 #### How to run the validation script
 
 To run the validation script, enter the following shell commands on a Red Hat VM:
 
-```bash
-mkdir /tmp/rhui
-cd /tmp/rhui
-wget https://github.com/Azure/azure-support-scripts/archive/refs/heads/master.zip
-unzip master.zip 'azure-support-scripts-master/Linux_scripts/RHUI_repo_validation_scripts/*'
-rm -f master.zip
-cd azure-support-scripts-master/Linux_scripts/RHUI_repo_validation_scripts
-python repo_check.py  # Use "python3" instead of "python" for Python version 3.
-```
+#### [Red Hat 7.x](#tab/rhel7)
+
+1. If the virtual machine has internet access, execute the script from the VM using the following command:
+
+    ```bash
+    curl -sL https://raw.githubusercontent.com/Azure/azure-support-scripts/refs/heads/master/Linux_scripts/rhui-check/rhui-check.py | sudo python2 -
+    ```
+
+2. If the virtual machine doesn't have internet access, download the [RHUI check script](https://raw.githubusercontent.com/Azure/azure-support-scripts/refs/heads/master/Linux_scripts/rhui-check/rhui-check.py) and transfer it to the virtual machine, and then execute the following command:
+
+    ```bash
+    sudo python2 ./rhui-check.py 
+    ```
+
+  The script will generate a report that identifies any specific issues. The script output is also saved in `/var/log/rhuicheck.log` after execution. You can also inspect that log file separately.
+
+#### [Red Hat 8.x and 9.x](#tab/rhel89)
+
+1. If the virtual machine has internet access, execute the script directly from the VM using the following command:
+
+    ```bash
+    curl -sL https://raw.githubusercontent.com/Azure/azure-support-scripts/refs/heads/master/Linux_scripts/rhui-check/rhui-check.py | sudo python3 -
+    ```
+
+2. If the virtual machine doesn't have internet access, download the [RHUI check script](https://raw.githubusercontent.com/Azure/azure-support-scripts/refs/heads/master/Linux_scripts/rhui-check/rhui-check.py) and transfer it to the virtual machine, and then execute the following command:
+
+    ```bash
+    sudo python3 ./rhui-check.py 
+    ```
+
+  > [!IMPORTANT]
+  > Replace `python3` with `/usr/libexec/platform-python` if the `python3` command isn't found.
+  
+  The script will generate a report that identifies any specific issues. The script output is also saved in `/var/log/rhuicheck.log` after execution. You can also inspect that log file separately.
+
+---
 
 ## Cause
 
@@ -183,7 +210,7 @@ Internet communication goes through a customer proxy that affects communication 
 
 ### Solution 5: Fix the proxy configuration settings
 
-If a proxy server is configured in Microsoft Azure between the RHEL VM and RHUI, use the correct proxy configuration settings in the */etc/yum.conf* or */etc/dnf.conf* files, as shown in the following snippet:
+If a proxy server is configured in Microsoft Azure between the RHEL VM and RHUI, use the correct proxy configuration settings in the `/etc/yum.conf` or `/etc/dnf.conf` files, as shown in the following snippet:
 
 > [!IMPORTANT]
 > If the configured proxy server has a private IP address, make sure that it has connectivity within the Azure public address space.
@@ -195,7 +222,7 @@ proxy_password=password
 ```
 
 > [!IMPORTANT]
-> If no proxy server exists between the RHEL VM and RHUI, search for and remove any proxy configuration settings that are in the */etc/yum.conf* or */etc/dnf.conf* files.
+> If no proxy server exists between the RHEL VM and RHUI, search for and remove any proxy configuration settings that are in the `/etc/yum.conf` or `/etc/dnf.conf` files.
 
 [!INCLUDE [Third-party information disclaimer](../../../includes/third-party-disclaimer.md)]
 

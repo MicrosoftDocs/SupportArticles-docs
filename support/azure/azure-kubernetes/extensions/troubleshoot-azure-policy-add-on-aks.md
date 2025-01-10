@@ -1,13 +1,14 @@
 ---
 title: Troubleshoot the Azure Policy Add-on for AKS
 description: See an overview about the Azure Policy Add-on for Azure Kubernetes Service (AKS). View troubleshooting articles that address Azure Policy Add-on issues.
-ms.date: 06/19/2024
+ms.date: 08/07/2024
 author: mosbahmajed
 ms.author: momajed
 editor: v-jsitser
 ms.reviewer: cssakscic, v-rekhanain, v-leedennis
 ms.service: azure-kubernetes-service
 ms.topic: overview
+ms.custom: sap:Azure policy add-on
 #Customer intent: As an Azure Kubernetes user, I want to see what troubleshooting articles are available for the Azure Policy Add-on so that I fix various Azure Policy Add-on issues.
 ---
 # Troubleshoot the Azure Policy Add-on for Azure Kubernetes Service (AKS)

@@ -3,10 +3,12 @@ title: Troubleshoot performance issues on Virtual Machine Scale Set instances us
 description: Use Performance Diagnostics (PerfInsights) to troubleshoot performance issues on Linux or Windows Virtual Machine Scale Set instances.
 ms.date: 05/23/2024
 ms.reviewer: v-leedennis
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:VM Performance, linux-related-content
 ---
 # Troubleshoot performance issues on Virtual Machine Scale Set instances using Performance Diagnostics (PerfInsights)
+
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
 [Azure Virtual Machine Scale Sets](/azure/virtual-machine-scale-sets/overview) are groups of load-balanced VMs. This article explains how to use [Performance Diagnostics (PerfInsights)](performance-diagnostics.md) to troubleshoot performance issues on Virtual Machine Scale Set instances.
 

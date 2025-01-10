@@ -1,8 +1,8 @@
 ---
 title: Troubleshooting Microsoft Entra ID sign-in issues with POS
 description: Provides a resolution for Microsoft Entra ID (formerly Azure Active Directory (AAD)) sign-in issues when you use Point of Sale (POS) on Cloud Hosted Environments (CHE).
-author: raybennett-msft
-ms.author: bennettray
+author: aneesmsft
+ms.author: aneesa
 ms.date: 05/07/2024
 ms.custom: sap:Point of sale (POS)\Issues with Store Commerce app reliability
 #customer intent: As a developer, I want to resolve login issues with POS so that I can utilize POS on my CHE.

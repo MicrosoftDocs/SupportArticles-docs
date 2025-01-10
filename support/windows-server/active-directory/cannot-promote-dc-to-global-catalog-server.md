@@ -5,7 +5,6 @@ ms.date: 06/17/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate, v-lianna, sagiv
 ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---
@@ -113,7 +112,11 @@ If one of the following conditions is true, rebuild the affected domain:
 
 If NT Directory Services (NTDS) KCC event ID 1265 is logged in the Directory Services log, use that event to determine the cause of the replication failure for the same domain partition. Make sure that the network connectivity is good and that no required network ports are blocked. Required network ports are, for example, TCP 135 and ephemeral ports that are used by Remote Procedure Calls (RPCs). View the Domain Name System (DNS) records to make sure that the registered host and service location (SRV) records are all correctly registered. If there are incorrect records, clear them and register such records.
 
-Remove all stale metadata for any domain controllers and domains in the forest that are listed in the relevant event IDs. This is to make sure that the replication doesn't fail because of a non-existent domain controller or domain. For more information, see [Clean up Active Directory Domain Controller server metadata](/windows-server/identity/ad-ds/deploy/ad-ds-metadata-cleanup).
+Remove all stale metadata for any domain controllers and domains in the forest that are listed in the relevant event IDs. This is to make sure that the replication doesn't fail because of a non-existent domain controller or domain. 
+
+For more information, see:  
+[Clean up server metadata by using GUI tools](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816907(v=ws.10))  
+[Clean up Active Directory Domain Controller server metadata](/windows-server/identity/ad-ds/deploy/ad-ds-metadata-cleanup).
 
 After you have verified that the replication between domain controllers is working correctly, determine whether an orphaned domain object exists. You can use the Ntdsutil.exe utility to clear the orphaned domain object. If there's any orphaned domain controller object for that domain, also delete the domain controller object. For more information, see [How to remove orphaned domains from Active Directory](remove-orphaned-domains.md).
 
@@ -126,28 +129,20 @@ After you promote the domain controller to a global catalog server, the domain p
 The event description states that the computer is identified as a global catalog server. To confirm that the domain-naming master is a global catalog server, open a command prompt window, and then run the following command:
 
 ```console
-nltest /dsgetdc: <Domain_Name> /server: <Server_Name>
+nltest /dsgetdc:<Domain_Name> /server:<Server_Name>
 ```
 
 The output of this command should resemble the following example:
 
 ```output
 DC: \\<Server_Name>
-
 Address: \\<IP_Address>
-
 Dom Guid: <GUID>
-
 Dom Name: <Domain_Name>
-
 Forest Name: <Domain_Name.com>
-
 Dc Site Name: Default-First-Site-Name
-
 Our Site Name: Default-First-Site-Name
-
 Flags: PDC GC DS LDAP KDC TIMESERV WRITABLE DNS_FOREST CLOSE_SITE
-
 The command completed successfully
 ```
 

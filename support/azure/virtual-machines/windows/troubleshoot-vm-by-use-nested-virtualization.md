@@ -6,25 +6,32 @@ documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.topic: article
-ms.date: 11/28/2023
+ms.date: 11/11/2024
 ms.author: glimoli
-ms.reviewer: v-weizhu, v-six, ekpathak, glimoli
+ms.reviewer: v-weizhu, v-six, ekpathak, glimoli, kageorge, herensin
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # Troubleshoot a faulty Azure VM by using nested virtualization in Azure
 
-This article shows how to create a nested virtualization environment in Microsoft Azure, so you can mount the disk of the faulty VM on the Hyper-V host (Rescue VM) for troubleshooting purposes.
+**Applies to:** :heavy_check_mark: Windows VMs
 
-## Prerequisites
+This article shows how to create a nested virtualization environment in Microsoft Azure, so you can mount the disk of the faulty virtual machine (VM) on the Hyper-V host (Repair/Rescue VM) for troubleshooting purposes.
 
-In order to mount the faulty VM, the Rescue VM must use the same type of Storage Account (Standard or Premium) as the faulty VM.
+## Automatic process
 
-## Step 1: Create a Rescue VM and install Hyper-V role
+To troubleshoot a faulty VM with a nested virtualization environment, we strongly recommend using Azure VM repair commands. You can create a Repair VM with nested Hyper-V and repair the faulty VM offline automatically VM by using the [Azure VM repair commands](repair-windows-vm-using-azure-virtual-machine-repair-commands.md).
+
+## Manual process
+
+> [!NOTE]
+> Use this process only if Azure VM repair commands are unavailable or fail due to compatibility issues.
+
+### Step 1: Create a Rescue VM and install Hyper-V role
 
 1. Create a new Rescue VM:
 
@@ -32,9 +39,7 @@ In order to mount the faulty VM, the Rescue VM must use the same type of Storage
 
     - Size: Select a series that supports nested virtualization. For example: [Dv3](/azure/virtual-machines/dv3-dsv3-series) or [Dv4](/azure/virtual-machines/dv4-dsv4-series).
 
-    - Same location, Storage Account, and Resource Group as the faulty VM.
-
-    - Select the same storage type as the faulty VM (Standard or Premium).
+    - Same location as the faulty VM.
 
     - Image: Choose either a Generation 2 image or a Generation 1 image.
 
@@ -121,7 +126,7 @@ In order to mount the faulty VM, the Rescue VM must use the same type of Storage
 
 13. Allow the server to install the Hyper-V role. This takes a few minutes and the server will reboot automatically.
 
-## Step 2: Create the faulty VM on the Rescue VM's Hyper-V server
+### Step 2: Create the faulty VM on the Rescue VM's Hyper-V server
 
 1. [Create a snapshot disk](troubleshoot-recovery-disks-portal-windows.md#take-a-snapshot-of-the-os-disk) for the OS disk of the VM that has problem, and then attach the snapshot disk to the Rescue VM.
 
@@ -163,7 +168,7 @@ In order to mount the faulty VM, the Rescue VM must use the same type of Storage
 
 17. Now you can work on the VM as the on-premises VM. You could follow any troubleshooting steps you need.
 
-## Step 3: Replace the OS disk used by the faulty VM
+### Step 3: Replace the OS disk used by the faulty VM
 
 1. After you get the VM back online, shut down the VM in the Hyper-V manager.
 

@@ -5,7 +5,7 @@ services: virtual-machines
 author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
@@ -14,8 +14,9 @@ ms.date: 06/13/2024
 ms.author: genli
 ms.custom: sap:My VM is not booting
 ---
-
 # VM startup is stuck on "Getting Windows ready. Don't turn off your computer" in Azure
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article describes the "Getting ready" and "Getting Windows ready" screens that you may encounter when you start a Windows virtual machine (VM) in Microsoft Azure. It provides steps to help you collect data for a support ticket.
 

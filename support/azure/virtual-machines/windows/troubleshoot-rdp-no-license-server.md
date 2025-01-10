@@ -5,7 +5,7 @@ services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
@@ -14,8 +14,9 @@ ms.date: 10/23/2018
 ms.author: genli
 ms.custom: sap:Cannot connect to my VM
 ---
-
 # Remote Desktop license server isn't available when you connect to an Azure VM
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article helps resolve the issue when you can't connect to an Azure virtual machine (VM) because no Remote Desktop license server is available to provide a license.
 

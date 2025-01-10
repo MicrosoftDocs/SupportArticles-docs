@@ -5,7 +5,6 @@ ms.date: 02/22/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, v-naqviadil, v-lianna, cwhitley
 ms.custom: sap:Windows Activation\Windows activation issues, csstroubleshoot
 ---

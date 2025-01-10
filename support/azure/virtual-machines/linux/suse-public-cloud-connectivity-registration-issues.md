@@ -1,17 +1,19 @@
 ---
 title: Troubleshoot connectivity and registration for SUSE SLES VMs
 description: Troubleshoot scenarios in which an Azure VM that has a SUSE Linux Enterprise Server image can't connect to the SUSE Subscription Management Tool (SMT) repository.
-ms.date: 04/29/2023
+ms.date: 07/24/2024
 author: DennisLee-DennisLee
 ms.author: hokamath
-ms.reviewer: adelgadohell, mahuss, esanchezvela, scotro
+ms.reviewer: adelgadohell, mahuss, esanchezvela, scotro, v-weizhu
 editor: v-jsitser
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 keywords:
 #Customer intent: As a user who wants to set up an Azure virtual machine by using a SUSE Linux Enterprise Server image, I want establish an internet connection to the SUSE Subscription Management Tool repository so that I can successfully register the virtual machine.
 ---
 # Troubleshoot connectivity and registration issues for SUSE Linux Enterprise Server VMs
+
+**Applies to:** :heavy_check_mark: Linux VMs
 
 This article addresses a situation in which an Azure virtual machine (VM) is set up by using a SUSE Linux Enterprise Server (SLES) image, but the VM can't connect to the SUSE Subscription Management Tool (SMT) repository. The article describes some basic troubleshooting steps, and it outlines actions to take for specific scenarios (such as failures in Zypper, which is the SUSE command-line tool for managing packages). Linux specialists at Microsoft assembled this information based on support experience and documentation from SUSE.
 
@@ -26,6 +28,23 @@ It's important to read the output of each command for more clues. We recommend t
 - The [OpenSSL](https://www.openssl.org/source/) toolkit.
 - The [SUSEConnect](https://github.com/SUSE/connect) tool.
 - The [registercloudguest](https://github.com/SUSE-Enceladus/cloud-regionsrv-client/blob/master/man/man1/registercloudguest.1) tool.
+
+> [!Note]
+> If your SLES VM is behind a proxy server, we recommend reviewing the technical considerations described in [Accessing the Public Cloud Update Infrastructure via a Proxy](https://www.suse.com/c/accessing-the-public-cloud-update-infrastructure-via-a-proxy/).
+> For SLES VMs on Azure, the necessary actions include:
+> 1. Connecting to update servers from a SLES VM relies on hostname resolution, which can't be resolved by public DNS servers. Thus, some Linux/Unix proxy server implementations may need to manually place a record in */etc/hosts* on the proxy server side so that the name "smt-azure" can be resolved.
+>
+>    Here's an example record:
+>    
+>    `52.165.88.13 smt-azure.susecloud.net smt-azure`
+>
+>    The available IP addresses vary by Azure region. For more information, see the IP address list in [this smt XML file](https://susepubliccloudinfo.suse.com/v1/microsoft/servers/smt.xml).
+> 
+> 2. The IP addresses [168.63.129.16](/azure/virtual-network/what-is-ip-address-168-63-129-16) and 169.254.169.254 used by the [Instance Metadata Service (IMDS)](/azure/virtual-machines/instance-metadata-service) should bypass proxy access. These special IP addresses can't be accessed through a proxy server, and SLES VMs need information from IMDS to recognize the cloud environment they're running on and to find a proper SUSE update server.
+>
+>    For instance, the `NO_PROXY` variable in */etc/sysconfig/proxy* should be configured on SLES VMs like the following one:
+>
+>    `NO_PROXY="localhost, 127.0.0.1, 168.63.129.16, 169.254.169.254"  `
 
 ## Troubleshooting checklist
 

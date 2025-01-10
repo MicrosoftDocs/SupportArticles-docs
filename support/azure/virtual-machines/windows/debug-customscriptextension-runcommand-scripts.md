@@ -1,14 +1,16 @@
 ---
 title: Debug PowerShell scripts run by Custom Script Extension or Run Command
 description: Troubleshoot PowerShell script failures when you run them remotely on a virtual machine by using the Custom Script Extension or Run Command feature.
-ms.date: 03/15/2022
-ms.reviewer: clandis, v-leedennis
+ms.date: 10/23/2024
+ms.reviewer: clandis, kegregoi, v-leedennis, v-weizhu
 editor: v-jsitser
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Windows (Guest OS), devx-track-azurepowershell
 #Customer intent: As an Azure Virtual Machine customer, I want to find out why a PowerShell script that's run by using Custom Script Extension or Run Command has failed so I can debug it.
 ---
 # Debug PowerShell scripts run by Custom Script Extension or Run Command
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article discusses how to test and correct for a failure in a PowerShell script that uses the Custom Script Extension or Run Command feature.
 
@@ -119,76 +121,31 @@ wevtutil set-log "Microsoft-Windows-PowerShell/Operational" /ms:104857600
 
 ### Turn on process creation auditing
 
-Use the [auditpol set](/windows-server/administration/windows-commands/auditpol-set) command, [New-Item](/powershell/module/microsoft.powershell.management/new-item) cmdlet, and [New-ItemProperty](/powershell/module/microsoft.powershell.management/new-itemproperty) cmdlet to turn on process creation auditing:
+Use the following command to turn on process creation auditing:
 
-```powershell
-auditpol /set /category:"detailed tracking" /success:enable /subcategory:"Process Creation"
-
-$registryPath = @{
-    Path = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Audit'
-}
-New-Item @registryPath
-
-$forceDwordOne = @{
-    PropertyType = 'DWord'
-    Value = 1
-    Force = $True
-}
-New-ItemProperty @registryPath -Name 'ProcessCreationIncludeCmdLine_Enabled' @forceDwordOne
+```console
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Audit" /v "ProcessCreationIncludeCmdLine_Enabled" /t REG_DWORD /d 1 /f
 ```
 
 ### Turn on PowerShell transcription
 
-```powershell
-$registryPath = @{
-    Path = 'HKLM:\Software\Policies\Microsoft\Windows\PowerShell\Transcription'
-    Force = $True
-}
-New-Item @registryPath
-
-$dwordOne = @{
-    PropertyType = 'DWord'
-    Value = 1
-}
-New-ItemProperty @registryPath -Name 'EnableTranscripting' @dwordOne
-New-ItemProperty @registryPath -Name 'EnableInvocationHeader' @dwordOne
-New-ItemProperty @registryPath -Name 'OutputDirectory' -PropertyType 'String' -Value 'C:\Transcripts'
+```console
+reg add "HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\PowerShell\Transcription" /v "EnableTranscripting" /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\PowerShell\Transcription" /v "EnableInvocationHeader" /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\PowerShell\Transcription" /v "OutputDirectory" /t REG_SZ /d C:\Transcripts /f
 ```
 
 ### Turn on PowerShell module logging
 
-```powershell
-$moduleLoggingPath = @{
-    Path = 'HKLM:\Software\Policies\Microsoft\Windows\PowerShell\ModuleLogging'
-}
-New-Item @moduleLoggingPath
-
-$forceDwordOne = @{
-    PropertyType = 'DWord'
-    Value = 1
-    Force = $True
-}
-New-ItemProperty @moduleLoggingPath -Name 'EnableModuleLogging' @forceDwordOne
-
-$moduleNamesPath = 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\PowerShell\ModuleLogging\ModuleNames'
-New-Item -Path $moduleNamesPath
-New-ItemProperty -Path $moduleNamesPath -Name '*' -PropertyType String -Value '*'
+```console
+reg add "HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\PowerShell\ModuleLogging" /v "EnableModuleLogging" /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\PowerShell\ModuleLogging\ModuleNames" /v "*" /t REG_SZ /d *
 ```
 
 ### Turn on PowerShell script block logging
 
-```powershell
-$registryPath = @{
-    Path = 'HKLM:\Software\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging'
-}
-New-Item @registryPath
-
-$forceDwordOne = @{
-    PropertyType = 'DWord'
-    Value = 1
-    Force = $True
-}
-New-ItemProperty @registryPath -Name 'EnableScriptBlockLogging' @forceDwordOne
+```console
+reg add "HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging" /v "EnableScriptBlockLogging" /t REG_DWORD /d 1 /f
 ```
 
 ## Understand the output
@@ -292,65 +249,29 @@ To undo the changes that you made to enable the logging of PowerShell scripting 
 
 1. Turn off process creation auditing:
 
-    ```powershell
-    auditpol /set /category:"detailed tracking" /success:disable /subcategory:"Process Creation"
-    $commandSettings = @{
-        Path = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Audit'
-        Name = 'ProcessCreationIncludeCmdLine_Enabled'
-        PropertyType = 'DWord'
-        Value = 0
-        Force = $True
-    }
-    New-ItemProperty @commandSettings
+    ```console
+    reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Audit" /v "ProcessCreationIncludeCmdLine_Enabled" /t REG_DWORD /d 0 /f
     ```
 
 1. Turn off transcription:
 
-    ```powershell
-    $registryPath = @{
-        Path = 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\PowerShell\Transcription'
-    }
-    $forceDwordZero = @{
-        PropertyType = 'DWord'
-        Value = 0
-        Force = $True
-    }
-    New-ItemProperty @registryPath -Name 'EnableTranscripting' @forceDwordZero
-    New-ItemProperty @registryPath -Name 'EnableInvocationHeader' @forceDwordZero
-    Remove-ItemProperty @registryPath -Name 'OutputDirectory'
+    ```console
+    reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\PowerShell\Transcription" /v "EnableTranscripting" /t REG_DWORD /d 0 /f
+    reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\PowerShell\Transcription" /v "EnableInvocationHeader" /t REG_DWORD /d 0 /f
+    reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\PowerShell\Transcription" /v "OutputDirectory"
     ```
 
 1. Turn off module logging:
 
-    ```powershell
-    $moduleLoggingPath = @{
-        Path = 'HKLM:\Software\Policies\Microsoft\Windows\PowerShell\ModuleLogging'
-    }
-    $forceDwordZero = @{
-        PropertyType = 'DWord'
-        Value = 0
-        Force = $True
-    }
-    New-ItemProperty @moduleLoggingPath -Name 'EnableModuleLogging' @forceDwordZero
-
-    $moduleNamesPath = @{
-        Path = 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\PowerShell\ModuleLogging\ModuleNames'
-    }
-    Remove-ItemProperty @moduleNamesPath -Name '*'
+    ```console
+    reg add "HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\PowerShell\ModuleLogging" /v "EnableModuleLogging" /t REG_DWORD /d 0 /f
+    reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\PowerShell\ModuleLogging\ModuleNames" /v "*"
     ```
 
 1. Turn off script block logging:
 
-    ```powershell
-    $registryPath = @{
-        Path = 'HKLM:\Software\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging'
-    }
-    $forceDwordZero = @{
-        PropertyType = 'DWord'
-        Value = 0
-        Force = $True
-    }
-    New-ItemProperty @registryPath -Name 'EnableScriptBlockLogging' @forceDwordZero
+    ```console
+    reg add "HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging" /v "EnableScriptBlockLogging" /t REG_DWORD /d 0 /f
     ```
 
 1. Remove the transcription folder:
@@ -375,10 +296,10 @@ To undo the changes that you made to enable the logging of PowerShell scripting 
 
 ## Test Run Command logging on your VM
 
-Download the [Test-CustomScriptExtension.ps1](https://github.com/Azure/azure-support-scripts/blob/master/Images_Extensions/PowerShell/Test-CustomScriptExtension.ps1) test script to the current local directory. Then, run the script on your VM by using the [Invoke-AzVMRunCommand](/powershell/module/az.compute/invoke-azvmruncommand) cmdlet. Use the properties of your VM to replace the placeholders for the resource group name and VM name.
+Download the [Test-CustomScriptExtension.ps1](https://github.com/Azure/azure-support-scripts/blob/users/GitHubPolicyService/6294a303-e34d-4bad-b6cd-5ed54245f020/Images_Extensions/PowerShell/Test-CustomScriptExtension.ps1) test script to the current local directory. Then, run the script on your VM by using the [Invoke-AzVMRunCommand](/powershell/module/az.compute/invoke-azvmruncommand) cmdlet. Use the properties of your VM to replace the placeholders for the resource group name and VM name.
 
 ```azurepowershell
-$scriptUri = 'https://raw.githubusercontent.com/Azure/azure-support-scripts/master/Images_Extensions/PowerShell/Test-CustomScriptExtension.ps1'
+$scriptUri = 'https://raw.githubusercontent.com/Azure/azure-support-scripts/blob/users/GitHubPolicyService/6294a303-e34d-4bad-b6cd-5ed54245f020/Images_Extensions/PowerShell/Test-CustomScriptExtension.ps1'
 $localFileLocation = "$PWD\Test-CustomScriptExtension.ps1"
 (New-Object System.Net.WebClient).DownloadFile($scriptUri, $localFileLocation)
 
@@ -393,14 +314,14 @@ Invoke-AzVMRunCommand @commandSettings
 
 ## Test Custom Script Extension logging on your VM
 
-Run the test script [Test-CustomScriptExtension.ps1](https://github.com/Azure/azure-support-scripts/blob/master/Images_Extensions/PowerShell/Test-CustomScriptExtension.ps1) on your VM by using the [Set-AzVMCustomScriptExtension](/powershell/module/az.compute/set-azvmcustomscriptextension) cmdlet. Use the properties of your VM to replace the placeholders for the resource group name, VM name, and location.
+Run the test script [Test-CustomScriptExtension.ps1](https://github.com/Azure/azure-support-scripts/blob/users/GitHubPolicyService/6294a303-e34d-4bad-b6cd-5ed54245f020/Images_Extensions/PowerShell/Test-CustomScriptExtension.ps1) on your VM by using the [Set-AzVMCustomScriptExtension](/powershell/module/az.compute/set-azvmcustomscriptextension) cmdlet. Use the properties of your VM to replace the placeholders for the resource group name, VM name, and location.
 
 ```azurepowershell
 $commandSettings = @{
     ResourceGroupName = '<resource-group-name>'
     VMName = '<vm-name>'
     Name = 'CustomScriptExtension'
-    FileUri = 'https://raw.githubusercontent.com/Azure/azure-support-scripts/master/Images_Extensions/PowerShell/Test-CustomScriptExtension.ps1'
+    FileUri = 'https://raw.githubusercontent.com/Azure/azure-support-scripts/blob/users/GitHubPolicyService/6294a303-e34d-4bad-b6cd-5ed54245f020/Images_Extensions/PowerShell/Test-CustomScriptExtension.ps1'
     Run = 'Test-CustomScriptExtension.ps1'
     Location = '<azure-region-name-or-code>'
     ForceRerun = (Get-Date).Ticks
@@ -412,7 +333,7 @@ Alternatively, you can run that test script on your VM by using the [Set-AzVMExt
 
 ```azurepowershell
 $publicConfigSettings = @{
-    'fileUris' = @('https://raw.githubusercontent.com/Azure/azure-support-scripts/master/Images_Extensions/PowerShell/Test-CustomScriptExtension.ps1')
+    'fileUris' = @('https://raw.githubusercontent.com/Azure/azure-support-scripts/blob/users/GitHubPolicyService/6294a303-e34d-4bad-b6cd-5ed54245f020/Images_Extensions/PowerShell/Test-CustomScriptExtension.ps1')
     'commandToExecute' = 'powershell -File Test-CustomScriptExtension.ps1 -ExecutionPolicy Unrestricted'
 }
 $commandSettings = @{
@@ -515,3 +436,4 @@ Set-AzVMExtension @commandSettings
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-contact-disclaimer.md)]
+

@@ -3,13 +3,14 @@ title: Can't connect to a specialized Debian Linux VM that is migrated from VMwa
 description: Works around an issue in which you can't connect to a specialized Debian Linux virtual machine that is migrated from VMware to Azure.
 ms.date: 07/21/2020
 ms.reviewer: 
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:Cannot connect to my VM, linux-related-content
 ms.collection: linux
 ---
 # Can't connect to a specialized Debian Linux VM that is migrated from VMware to Azure
 
-_Original product version:_ &nbsp; Virtual Machine running Linux  
+**Applies to:** :heavy_check_mark: Linux VMs
+
 _Original KB number:_ &nbsp; 4056276
 
 ## Symptoms

@@ -2,21 +2,21 @@
 title: Install the Azure VM Agent in offline mode
 description: Learn how to install the Azure VM Agent in offline mode.
 services: virtual-machines
-documentationcenter: ''
-author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.topic: article
-ms.date: 05/24/2024
+ms.date: 10/15/2024
 ms.author: genli
-
 ms.custom: sap:VM Extensions not operating correctly
+ms.reviewer: kageorge, v-weizhu
 ---
 # Install the Azure Virtual Machine Agent in offline mode
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 The Azure Virtual Machine Agent (VM Agent) provides useful features, such as local administrator password reset and script pushing. This article shows you how to install the VM Agent for an offline Windows virtual machine (VM).
 
@@ -32,7 +32,7 @@ Use the following steps to install the VM Agent in offline mode.
 
 ### Step 1: Attach the OS disk of the VM to another VM as a data disk
 
-1. Take a snapshot for the OS disk of the affected VM, create a disk from the snapshot, and then attach the disk to a troubleshoot VM. For more information, see [Troubleshoot a Windows VM by attaching the OS disk to a recovery VM using the Azure portal](troubleshoot-recovery-disks-portal-windows.md). For the classic VM, delete the VM and keep the OS disk, and then attach the OS disk to the troubleshoot VM.
+1. Take a snapshot for the OS disk of the affected VM, create a disk from the snapshot, and then attach the disk to a troubleshoot VM. For more information, see [Troubleshoot a Windows VM by attaching the OS disk to a recovery VM using the Azure portal](troubleshoot-recovery-disks-portal-windows.md).
 
 2. Connect to the troubleshooter VM. Open **Computer management** > **Disk management**. Verify that the OS disk is online and that drive letters are assigned to the disk partitions.
 
@@ -86,7 +86,7 @@ Use the following steps to install the VM Agent in offline mode.
 
 8. Select **BROKENSYSTEM**. From the menu, select **File** > **Unload Hive**​.
 
-9. Detach the OS disk, and then [change the OS disk for the affected VM](troubleshoot-recovery-disks-portal-windows.md#swap-the-failed-vms-os-disk-with-the-repaired-disk). For the classic VM, create a new VM by using the repaired OS disk.
+9. Detach the OS disk, and then [change the OS disk for the affected VM](troubleshoot-recovery-disks-portal-windows.md#swap-the-failed-vms-os-disk-with-the-repaired-disk).
 
 10. Access the VM. Notice that the RdAgent is running and the logs are being generated.
 

@@ -3,13 +3,14 @@ title: Updates are included in Windows Server images from Azure Marketplace
 description: Discusses that updates are included in Windows Server images that are available on Azure Marketplace.
 ms.date: 07/21/2020
 ms.reviewer: 
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # Updates are included in Windows Server images from Azure Marketplace
 
-_Original product version:_ &nbsp; Windows Server 2019  
+**Applies to:** :heavy_check_mark: Windows VMs
+
 _Original KB number:_ &nbsp; 4046813
 
 ## Frequently asked questions

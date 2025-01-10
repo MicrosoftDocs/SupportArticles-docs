@@ -5,9 +5,8 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, aarthit, toklima
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Storage hardware , csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Storage hardware, csstroubleshoot
 ---
 # Event ID 158 is logged for identical disk GUIDs
 

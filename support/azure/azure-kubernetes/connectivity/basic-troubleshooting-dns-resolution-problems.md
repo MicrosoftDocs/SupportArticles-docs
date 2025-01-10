@@ -3,7 +3,7 @@ title: Basic troubleshooting of DNS resolution problems in AKS
 description: Learn how to create a troubleshooting workflow to fix DNS resolution problems in Azure Kubernetes Service (AKS).
 author: sturrent
 ms.author: seturren
-ms.date: 06/20/2024
+ms.date: 08/09/2024
 ms.reviewer: v-rekhanain, v-leedennis, josebl, v-weizhu
 editor: v-jsitser
 ms.service: azure-kubernetes-service
@@ -219,11 +219,11 @@ A network traffic capture can help you understand how your AKS cluster is handli
 
 Many traffic-capturing tools are available to assist this process, including the following tools:
 
-- [Retina Capture](https://retina.sh/docs/captures/)
+- [Retina Capture](https://retina.sh/docs/Troubleshooting/capture)
 
 - [Dumpy](https://github.com/larryTheSlap/dumpy) - an open source traffic capture plug-in for Kubernetes
 
-- [Inspektor Gadget](https://inspektor-gadget.io) - allows checking DNS problems in real time. For more information, see [Troubleshoot DNS failures across an AKS cluster in real time](troubleshoot-dns-failures-across-an-aks-cluster-in-real-time.md).
+- [Inspektor Gadget](https://go.microsoft.com/fwlink/?linkid=2260072) - allows checking DNS problems in real time. For more information, see [Troubleshoot DNS failures across an AKS cluster in real time](troubleshoot-dns-failures-across-an-aks-cluster-in-real-time.md).
 
 In this article, we use Dumpy as an example of how to collect DNS traffic captures from each CoreDNS pod and a client DNS pod (in this case, the `aks-test` pod).
 
@@ -238,10 +238,10 @@ kubectl dumpy capture pod aks-test -f "-i any port 53" --name dns-cap1-aks-test
 To collect captures for the CoreDNS pods, run the following Dumpy command:
 
 ```bash
-kubectl dumpy capture deploy coredns-<coredns-pod-name> \
+kubectl dumpy capture deploy coredns \
     -n kube-system \
     -f "-i any port 53" \
-    --name dns-cap1-coredns-<coredns-pod-name>
+    --name dns-cap1-coredns
 ```
 
 Ideally, you should be running captures while the problem reproduces. This requirement means that different captures might be running for different amounts of time, depending on how often you can reproduce the problem. To collect the captures, run the following commands:
@@ -255,7 +255,7 @@ kubectl dumpy export dns-cap1-coredns ./dns-captures -n kube-system
 To delete the Dumpy pods, run the following Dumpy command:
 
 ```bash
-kubectl dumpy delete dns-cap1-coredns-<coredns-pod-name> -n kube-system
+kubectl dumpy delete dns-cap1-coredns -n kube-system
 kubectl dumpy delete dns-cap1-aks-test
 ```
 
@@ -516,3 +516,4 @@ If these troubleshooting steps don't resolve the problem, repeat the troubleshoo
 [!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+

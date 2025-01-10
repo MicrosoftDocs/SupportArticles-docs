@@ -5,7 +5,7 @@ services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
@@ -15,8 +15,9 @@ ms.author: genli
 ms.reviewer: v-weizhu
 ms.custom: sap:My VM is not booting
 ---
-
 # Windows reboot loop on an Azure VM
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article describes the reboot loop you may experience on a Windows Virtual Machine (VM) in Microsoft Azure.
 

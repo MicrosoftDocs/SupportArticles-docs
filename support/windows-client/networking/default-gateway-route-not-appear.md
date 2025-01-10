@@ -5,9 +5,8 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:Networking\Remote Access , csstroubleshoot
+ms.custom: sap:Networking\Remote Access, csstroubleshoot
 ---
 # Default gateway route doesn't appear in the Routing Table after you re-add a Routing and Remote Access interface
 

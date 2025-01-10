@@ -1,12 +1,14 @@
 ---
 title: FAQs about Linux virtual machine deployment
 description: Answers frequently asked questions about Linux virtual machine deployment.
-ms.service: virtual-machines
-ms.date: 06/24/2024
+ms.service: azure-virtual-machines
+ms.date: 07/22/2024
 ms.custom: sap:Cannot create a VM, linux-related-content
 ms.reviewer: srijangupta, scotro, jarrettr
 ---
 # Linux virtual machine deployment FAQs
+
+**Applies to:** :heavy_check_mark: Linux VMs
 
 ## How do I activate my monthly credit for Visual studio Enterprise (BizSpark)
 
@@ -43,12 +45,6 @@ Choose a size that is supported on the availability set's cluster. It is recomme
 ## What Linux distributions/versions are supported on Azure?
 
 You can find the list at Linux on [Azure-Endorsed Distributions](/azure/virtual-machines/linux/endorsed-distros).
-
-## Can I add an existing Classic VM to an availability set?
-
-Yes. You can add an existing classic VM to a new or existing Availability Set. For more information see [Add an existing virtual machine to an availability set](/previous-versions/azure/virtual-machines/windows/classic/configure-availability-classic#addmachine).
-
-[!INCLUDE [classic-vm-deprecation](../../../includes/azure/classic-vm-deprecation.md)]
 
 ## Next steps
 

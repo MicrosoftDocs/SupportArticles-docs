@@ -7,10 +7,11 @@ author: anandhms
 manager: dcscontentpm
 editor: przlplx
 tags: ''
-ms.service: azure-monitor
+ms.service: azure-virtual-machines
 ms.workload: infrastructure-services
 ms.topic: troubleshooting
-ms.date: 05/11/2024
+ms.date: 01/09/2025
+ms.custom: sap:VM Performance
 ms.reviewer: guywild
 ms.author: anandh
 
@@ -19,10 +20,12 @@ ms.author: anandh
 
 # Troubleshoot performance issues on Azure virtual machines using Performance Diagnostics
 
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
+
 Use the Performance Diagnostics tool to identify and troubleshoot performance issues on your Azure virtual machine (VM) in one of two modes: 
 
-- **Continuous diagnostics (preview)** collects data at five-second intervals and reports actionable insights about high resource usage every five minutes. 
-- **On-demand diagnostics** helps you troubleshoot an ongoing performance issue with more in-depth data, insights, and recommendations based on data collected at a single point in time. 
+- **Continuous diagnostics (preview)** collects data at five-second intervals and reports actionable insights about high resource usage every five minutes. Continuous diagnostics (preview) is currently only supported on Windows.
+- **On-demand diagnostics** helps you troubleshoot an ongoing performance issue with more in-depth data, insights, and recommendations based on data collected at a single point in time. On-demand diagnostics is supported on both Windows and Linux.
 
 Performance Diagnostics stores all insights and reports in a storage account, which you can configure for short data retention to minimize costs. 
 
@@ -31,7 +34,7 @@ Run Performance Diagnostics directly from the Azure portal, where you can also r
 This article explains how to use Performance Diagnostics and what the continuous and on-demand modes offer. 
 
 > [!NOTE]
-> Continuous diagnostics (preview) is being rolled out gradually and is currently supported only on Windows. If the preview feature is available for your machines, you'll see the option to enable both on-demand and continuous diagnostics, as described in [Install and run Performance Diagnostics on your VM](#install-and-run-performance-diagnostics-on-your-vm).
+> Continuous diagnostics (preview) is currently supported only on Windows. On Windows VMs, you'll see the option to enable both on-demand and continuous diagnostics. On Linux VMs, you'll see the option to enable on-demand diagnostics. For more information, see [Install and run Performance Diagnostics on your VM](#install-and-run-performance-diagnostics-on-your-vm).
 
 ## Prerequisites
 
@@ -63,8 +66,6 @@ The following operating systems are currently supported for both on-demand and c
 
 ### Linux
 
-[!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
-
 The following distributions are currently supported for on-demand diagnostics:
 
 > [!NOTE]  
@@ -73,11 +74,10 @@ The following distributions are currently supported for on-demand diagnostics:
 | Distribution               | Version                                         |
 |----------------------------|-------------------------------------------------|
 | Oracle Linux Server        | 6.10 [`*`], 7.3, 7.5, 7.6, 7.7, 7.8, 7.9 |
-| CentOS                     | 6.5 [`*`], 7.6, 7.7, 7.8, 7.9 |
-| RHEL                       | 7.2, 7.5, 8.0 [`*`], 8.1, 8.2, 8.6, 8.8 |
-| Ubuntu                     | 14.04, 16.04, 18.04, 20.04, 22.04 |
-| Debian                     | 8, 9, 10, 11 [`*`] |
-| SLES                       | 12 SP4 [`*`], 12 SP5 [`*`], 15 [`*`], 15 SP1 [`*`], 15 SP2 [`*`], 15 SP4 [`*`] |
+| RHEL                       | 7.4, 7.5, 7.6, 7.7, 7.8, 7.9, 8.0 [`*`], 8.1, 8.2, 8.4, 8.5, 8.6, 8.7, 8.8, 8.9 |
+| Ubuntu                     | 16.04, 18.04, 20.04, 22.04 |
+| Debian                     | 9, 10, 11 [`*`] |
+| SLES                       | 12 SP5 [`*`], 15 SP1 [`*`], 15 SP2 [`*`], 15 SP3 [`*`], 15 SP4 [`*`], 15 SP5 [`*`], 15 SP6 [`*`] |
 | AlmaLinux                  | 8.4, 8.5 |
 | Azure Linux                | 2.0 |
 
@@ -171,7 +171,14 @@ Select the **Download report** button to download an HTML report that contains r
 
 ## View and manage storage account and stored data
 
-Performance Diagnostics stores all insights and reports in a storage account, which you can [configure for short data retention](/azure/storage/blobs/lifecycle-management-policy-configure) to minimize costs. 
+Performance Diagnostics stores all insights and reports in a storage account, which you can [configure for short data retention](/azure/storage/blobs/lifecycle-management-policy-configure) to minimize costs.
+
+To ensure Performance Diagnostics functions correctly, you must enable the **Allow storage account key access** setting for the storage account. To enable this setting, follow these steps:
+
+1. Navigate to your storage account. 
+2. In the storage account settings, locate the **Configuration** section.
+3. Find the **Allow storage account key access** option and set it to **Enabled**.
+4. Save your changes.
 
 You can use the same storage account for multiple VMs that use Performance Diagnostics. When you change the storage account, the old reports and insights aren't deleted. However, they'll no longer be displayed in the list of diagnostics reports.
 

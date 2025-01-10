@@ -2,7 +2,7 @@
 title: Vault registration fails in Azure Site Recovery with error
 description: Describes an error may occur if you are reinstalling the Azure Site Recovery provider and agent on a Hyper-V server that was previously registered to another vault.
 ms.date: 10/10/2020
-ms.service: site-recovery
+ms.service: azure-site-recovery
 ms.author: genli
 author: genlin
 ms.reviewer: markstan

@@ -3,15 +3,16 @@ title: How to upload existing on-premises Hyper-V domain controllers to Azure by
 description: Describes how to upload existing on-premises Hyper-V domain controllers to Azure by using Azure PowerShell.
 ms.date: 05/22/2020
 ms.reviewer: 
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:Cannot create a VM, devx-track-azurepowershell
 ---
 # How to upload existing on-premises Hyper-V domain controllers to Azure by using Azure PowerShell
 
-This article describes how to upload existing on-premises Hyper-V domain controllers to Microsoft Azure by using Azure PowerShell.
+**Applies to:** :heavy_check_mark: Windows VMs
 
-_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles)  
 _Original KB number:_ &nbsp; 2904015
+
+This article describes how to upload existing on-premises Hyper-V domain controllers to Microsoft Azure by using Azure PowerShell.
 
 On-premises domain controllers that are moved to Azure must have the following components:
 

@@ -5,7 +5,6 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, jeffwoo
 ms.custom: sap:Virtualization and Hyper-V\Virtual machine creation, csstroubleshoot
 ---
@@ -18,7 +17,7 @@ _Original KB number:_ &nbsp; 944987
 
 ## Summary
 
-Microsoft has established a joint support relationship for non-Microsoft hardware virtualization software that have validated that their virtualization product supports the current version or Windows Server, for example, Windows Server 2019, and previous versions as well:
+Microsoft has established a joint support relationship for non-Microsoft hardware virtualization software that has validated that their virtualization product supports the current version or Windows Server, for example, Windows Server 2019, and previous versions as well:
 
 - Canonical, Ltd
 - Citrix Systems, Inc.
@@ -28,7 +27,7 @@ Microsoft has established a joint support relationship for non-Microsoft hardwar
 - Virtuozzo International GmbH
 - VMware, Inc
 
-See [Server Virtualization](https://www.windowsservercatalog.com/results.aspx?&bCatID=1521&cpID=0&avc=0&ava=0&avq=0&OR=1&PGS=25) for the validated products from vendors that support Windows Server 2019 and earlier Windows Server versions.
+See [Server Virtualization](https://www.windowsservercatalog.com/svvp/product) for the validated products from vendors that support Windows Server 2019 and earlier Windows Server versions.
 
 ## More information
 

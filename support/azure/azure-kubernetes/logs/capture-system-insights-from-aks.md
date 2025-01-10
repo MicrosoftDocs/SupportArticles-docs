@@ -4,10 +4,10 @@ description:   Learn how to use Inspektor Gadget to capture useful information f
 author:        blanquicet
 ms.author:     josebl
 editor:        v-jsitser
-ms.reviewer:   cssakscic, v-leedennis
+ms.reviewer:   cssakscic, josebl, v-leedennis
 ms.service:    azure-kubernetes-service
 ms.topic:      how-to
-ms.date:       04/02/2024
+ms.date:       08/09/2024
 ms.custom: sap:Monitoring and Logging
 ---
 
@@ -48,7 +48,7 @@ aks-agentpool-97833681-vmss000001  my-ns          my-app   my-app         136505
 
 ## What is Inspektor Gadget?
 
-[Inspektor Gadget](https://aka.ms/ig-website) is a framework that's designed for building, packaging, deploying, and running tools that are dedicated to debugging and inspecting Linux and Kubernetes systems. These tools ("gadgets") are implemented as [eBPF](https://aka.ms/ebpf-website) programs. Their primary goal is to gather low-level kernel data to provide insights into specific system scenarios. The Inspektor Gadget framework manages the association of the collected data by using high-level references, such as Kubernetes resources. This integration makes sure that a seamless connection exists between low-level insights and their corresponding high-level context. The integration streamlines the troubleshooting process and the collection of relevant information.
+[Inspektor Gadget](https://go.microsoft.com/fwlink/?linkid=2260072) is a framework that's designed for building, packaging, deploying, and running tools that are dedicated to debugging and inspecting Linux and Kubernetes systems. These tools ("gadgets") are implemented as [eBPF](https://go.microsoft.com/fwlink/?linkid=2259866) programs. Their primary goal is to gather low-level kernel data to provide insights into specific system scenarios. The Inspektor Gadget framework manages the association of the collected data by using high-level references, such as Kubernetes resources. This integration makes sure that a seamless connection exists between low-level insights and their corresponding high-level context. The integration streamlines the troubleshooting process and the collection of relevant information.
 
 ## Gadgets
 
@@ -60,7 +60,8 @@ Inspektor Gadget provides a set of built-in tools that are designed to debug and
 
 The gadgets present the information that they collected by using different mechanisms. For instance, some gadgets can inform you about the system status at specific times. Other gadgets can report every time a given event occurs, or they can provide periodic updates.
 
-These are just a few examples. The [official documentation](https://aka.ms/ig-builtin-gadgets) provides detailed descriptions and examples of each gadget so that you can determine the most suitable gadget for your specific use case. However, if you find a use case that the existing gadgets don't currently cover, Inspektor Gadget offers flexibility. You can run scripts that are compatible with the eBPF tracing language [bpftrace](https://github.com/iovisor/bpftrace) by running the [script command](https://aka.ms/ig-builtin-gadgets-script). Or, you can run your own eBPF programs by running the [run command](https://aka.ms/ig-run-ebpf). Because the Inspektor Gadget framework handles the building, packaging, and deployment of your custom programs, it streamlines the process for your unique requirements. Also, it gathers high-level metadata to enrich the data that you collect in your program.
+
+These are just a few examples. The [official documentation](https://go.microsoft.com/fwlink/?linkid=2260507) provides detailed descriptions and examples of each gadget so that you can determine the most suitable gadget for your specific use case. However, if you find a use case that the existing gadgets don't currently cover, Inspektor Gadget allows you to run your own eBPF programs by using the [run command](https://go.microsoft.com/fwlink/?linkid=2259865). Because the Inspektor Gadget framework handles the building, packaging, and deployment of your custom programs, it streamlines the process for your unique requirements. Also, it gathers high-level metadata to enrich the data that you collect in your program.
 
 ## Use cases
 
@@ -68,10 +69,10 @@ To complement the demo that's presented at the beginning of this article, we com
 
 | Problem area | Symptoms | Troubleshooting |
 |--|--|--|
-| **Disk-intensive applications** | High memory or CPU usage, or inconsistent node readiness | An application might consistently engage in disk read/write operations, such as extensive logging. By using Inspektor Gadget, you can identify in real time which containers generate more [block I/O](https://aka.ms/ig-top-blockio). Or, more specifically, you can find the container that causes more reads and writes into a ⁠[file](https://aka.ms/ig-top-file). |
-| **"It's always DNS"** | High application latency, time-outs, or poor end-user experience | <p>By using Inspektor Gadget, you can [trace all the DNS](https://aka.ms/ig-trace-dns) queries and responses in the cluster. In particular, Inspektor Gadget provides the following information that helps you to determine whether the DNS is affecting your application's performance:</p> <ul> <li>Query success</li> <li>Whether the response contains an error</li> <li>The name server that's used for the lookup</li> <li>The query-response latency</li> </ul> |
-| **File system access** | Application misbehaves or can't function correctly | <p>The application might be unable to access specific configurations, logs, or other vital files in the file system. In such scenarios, Inspektor Gadget enables you to [trace all the opened files](https://aka.ms/ig-trace-open) inside pods to diagnose access issues. Whenever your application tries to open a file, you can discover the following information:</p> <ul> <li>The flags that are used to open the file (for example, [O_RDONLY, O_WRONLY, O_RDWR](https://linux.die.net/man/3/open), and so on)</li> <li>Whether the file opening attempt succeeds</li> <li>The returned error (if the file opening attempt fails)</li> </ul> <p>For instance, if the attempt to open the file fails because of error 2 ([ENOENT](https://man7.org/linux/man-pages/man3/errno.3.html)), the application is probably trying to open a file that doesn’t exist. This means that you might have a typo in the code, or the file is available in a different path.</p> |
-| **Remote code execution (RCE)** | Unauthorized code execution such as [cryptojacking](https://en.wikipedia.org/wiki/Cryptojacking) that's evident in high CPU usage during application idle periods | When attackers try to make this kind of attack on a system, they usually have to run the code by using `bash`. Inspektor Gadget enables you to [trace the creation of new processes](https://aka.ms/ig-trace-exec), particularly processes that involve critical commands such as `bash`. |
+| **Disk-intensive applications** | High memory or CPU usage, or inconsistent node readiness | An application might consistently engage in disk read/write operations, such as extensive logging. By using Inspektor Gadget, you can identify in real time which containers generate more [block I/O](https://go.microsoft.com/fwlink/?linkid=2260070). Or, more specifically, you can find the container that causes more reads and writes into a ⁠[file](https://go.microsoft.com/fwlink/?linkid=2260071). |
+| **"It's always DNS"** | High application latency, time-outs, or poor end-user experience | <p>By using Inspektor Gadget, you can [trace all the DNS](https://go.microsoft.com/fwlink/?linkid=2260317) queries and responses in the cluster. In particular, Inspektor Gadget provides the following information that helps you to determine whether the DNS is affecting your application's performance:</p> <ul> <li>Query success</li> <li>Whether the response contains an error</li> <li>The name server that's used for the lookup</li> <li>The query-response latency</li> </ul> |
+| **File system access** | Application misbehaves or can't function correctly | <p>The application might be unable to access specific configurations, logs, or other vital files in the file system. In such scenarios, Inspektor Gadget enables you to [trace all the opened files](https://go.microsoft.com/fwlink/?linkid=2260318) inside pods to diagnose access issues. Whenever your application tries to open a file, you can discover the following information:</p> <ul> <li>The flags that are used to open the file (for example, [O_RDONLY, O_WRONLY, O_RDWR](https://linux.die.net/man/3/open), and so on)</li> <li>Whether the file opening attempt succeeds</li> <li>The returned error (if the file opening attempt fails)</li> </ul> <p>For instance, if the attempt to open the file fails because of error 2 ([ENOENT](https://man7.org/linux/man-pages/man3/errno.3.html)), the application is probably trying to open a file that doesn’t exist. This means that you might have a typo in the code, or the file is available in a different path.</p> |
+| **Remote code execution (RCE)** | Unauthorized code execution such as [cryptojacking](https://en.wikipedia.org/wiki/Cryptojacking) that's evident in high CPU usage during application idle periods | When attackers try to make this kind of attack on a system, they usually have to run the code by using `bash`. Inspektor Gadget enables you to [trace the creation of new processes](https://go.microsoft.com/fwlink/?linkid=2260319), particularly processes that involve critical commands such as `bash`. |
 
 ## How to install Inspektor Gadget in an AKS cluster
 
@@ -90,7 +91,7 @@ This section outlines the steps for installing Inspektor Gadget in your AKS clus
 - Running the `kubectl gadget` plug-in to install Inspektor Gadget in the cluster
 
   > [!WARNING]
-  > Many mechanisms are available to deploy and use Inspektor Gadget. Each of these mechanisms is tailored to specific use cases and requirements. You can use the kubectl gadget plug-in to apply several of these mechanisms, but not all of them. For instance, deploying Inspektor Gadget by using the `kubectl gadget` plug-in depends on the availability of the Kubernetes API server. If you can’t depend on such a component because its availability might be occasionally compromised, we recommend that you avoid using the `kubectl gadget`deployment mechanism. For more information about this and other use cases, see the [Inspektor Gadget documentation](https://aka.ms/ig).
+  > Many mechanisms are available to deploy and use Inspektor Gadget. Each of these mechanisms is tailored to specific use cases and requirements. You can use the kubectl gadget plug-in to apply several of these mechanisms, but not all of them. For instance, deploying Inspektor Gadget by using the `kubectl gadget` plug-in depends on the availability of the Kubernetes API server. If you can’t depend on such a component because its availability might be occasionally compromised, we recommend that you avoid using the `kubectl gadget`deployment mechanism. For more information about this and other use cases, see the [Inspektor Gadget documentation](https://go.microsoft.com/fwlink/?linkid=2260072).
 
 #### Prerequisites
 
@@ -105,7 +106,7 @@ This section outlines the steps for installing Inspektor Gadget in your AKS clus
 We recommend that you use `krew` to install the `kubectl gadget` plug-in.
 
 > [!NOTE]
-> To install a specific release or compile it from the source, see [Install kubectl gadget](https://aka.ms/ig-install-kubernetes#installing-kubectl-gadget) on GitHub.
+> To install a specific release or compile it from the source, see [Install kubectl gadget](https://go.microsoft.com/fwlink/?linkid=2260075#installing-kubectl-gadget) on GitHub.
 
 ```bash
 kubectl krew install gadget
@@ -135,7 +136,7 @@ The following command deploys the [DaemonSet](https://kubernetes.io/docs/concept
 > - Deploy to specific nodes
 > - Deploy into a custom namespace
 >
-> To learn about these options, see the [Installing in the cluster](https://aka.ms/ig-install-kubernetes#installing-in-the-cluster) section of the official documentation.
+> To learn about these options, see the [Installing in the cluster](https://go.microsoft.com/fwlink/?linkid=2260075#installing-in-the-cluster) section of the official documentation.
 
 ```bash
 kubectl gadget deploy

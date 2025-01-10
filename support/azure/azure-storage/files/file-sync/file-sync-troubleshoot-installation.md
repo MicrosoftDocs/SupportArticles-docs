@@ -4,7 +4,7 @@ description: Troubleshoot common issues with installing the Azure File Sync agen
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 06/03/2024
+ms.date: 01/03/2025
 ms.author: kendownie
 ms.custom: sap:File Sync
 ---
@@ -13,6 +13,19 @@ ms.custom: sap:File Sync
 After deploying the Storage Sync Service, the next steps in deploying Azure File Sync are installing the Azure File Sync agent and registering Windows Server with the Storage Sync Service. This article is designed to help you troubleshoot and resolve issues that you might encounter during these steps.
 
 ## Agent installation
+
+<a id="agent-installation-restart"></a>**How to check if an Azure File Sync agent installation requires a restart**
+
+Installing an Azure File Sync agent might need a restart to finish. For example, Azure File Sync agent version 19.1.0.0 requires a restart on servers if updating from a version earlier than 18.2.0.0.
+
+If the agent is updated using the auto-upgrade feature, run the following PowerShell commands to check if a restart is required to complete the agent auto-upgrade:
+
+```powershell
+Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
+Get-StorageSyncServer
+```
+
+If the value for the `RebootNeeded` property is `True`, a restart is required.
 
 <a id="agent-update-hangs"></a>**Agent update does not complete**
 
@@ -53,6 +66,11 @@ MSI (s) (0C:C8) [12:23:40:994]: Note: 1: 2265 2:  3: -2147287035
 ```
 
 For this example, the agent installation failed with error code -2147287035 (ERROR_ACCESS_DENIED).
+
+<a id="agent-installation-gpo"></a>**Agent installation fails with error: ERROR_NO_SYSTEM_RESOURCES with Error Code 0x800705AA**
+
+The agent installation failed due to insufficient system resources. To resolve this issue, please free up memory on the server and retry installation.
+
 
 <a id="agent-installation-gpo"></a>**Agent installation fails with error: Storage Sync Agent Setup Wizard ended prematurely because of an error**
 
@@ -96,7 +114,7 @@ After creating a server endpoint on Windows Server 2012 R2, the following error 
 > drive letter:\ is not accessible.  
 > The parameter is incorrect.
 
-To resolve this issue, install [KB2919355](https://support.microsoft.com/help/2919355/windows-rt-8-1-windows-8-1-windows-server-2012-r2-update-april-2014) and restart the server. If this update won't install because a later update is already installed, go to **Windows Update**, install the latest updates for Windows Server 2012 R2 and restart the server.
+To resolve this issue, install [KB2919355](https://support.microsoft.com/help/2919355/windows-rt-8-1-windows-8-1-windows-server-2012-r2-update-april-2014) and restart the server. If this update can't install because a later update is already installed, go to **Windows Update**, install the latest updates for Windows Server 2012 R2 and restart the server.
 
 ## Server registration
 
@@ -119,6 +137,23 @@ To test the network connectivity on the server, run the following PowerShell com
 Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
 Debug-StorageSyncServer -TestNetworkConnectivity
 ```
+<a id="server-registration-catastrophic-error"></a>**Server registration using the `Register-AzStorageSyncServer` cmdlet fails with the error: Catastrophic failure (0x8000FFFF)**
+
+A server registration using the `Register-AzStorageSyncServer` cmdlet fails with the following error:
+
+> Catastrophic failure (0x8000FFFF (E_UNEXPECTED)) 'No system-assigned Managed Identity was found for this resource'
+ 
+This issue occurs when the Azure Files Sync agent is upgraded from version 17.x to 18.x and the `ServerType` registry value is set to an unexpected value.
+ 
+To resolve this issue, delete the `ServerType` registry value by running the following commands from an elevated command prompt:
+
+```console
+reg delete HKLM\SOFTWARE\Microsoft\Azure\StorageSync /v ServerType /f  
+net stop filesyncsvc  
+net start filesyncsvc  
+```
+
+Once the `ServerType` registry value is deleted, retry the server registration.
 
 <a id="server-registration-missing-subscriptions"></a>**Server Registration does not list all Azure Subscriptions**
 
@@ -134,11 +169,17 @@ You can also work around this issue by using the following PowerShell commands t
 Connect-AzAccount -Subscription "<guid>" -Tenant "<guid>"
 Register-AzStorageSyncServer -ResourceGroupName "<your-resource-group-name>" -StorageSyncServiceName "<your-storage-sync-service-name>"
 ```
+<a id="server-registration-missing-resource-groups"></a>**Server registration doesn't list all resource groups**
+
+When registering a server using *ServerRegistration.exe*, some resource groups are missing when you select the **Resource Group** drop-down.
+
+This issue occurs due to a known issue that has been fixed in File Sync Agent v19.1. To resolve this issue, install the latest version of the agent.
+
 <a id="server-already-registered"></a>**Server Registration displays the following message: "This server is already registered"**
 
 :::image type="content" source="media/file-sync-troubleshoot-installation/server-already-registered-error.png" alt-text="Screenshot that shows the Server Registration dialog box with the 'server is already registered' error message.":::
 
-This message appears if the server was previously registered with a Storage Sync Service. To unregister the server from the current Storage Sync Service and then register with a new Storage Sync Service, complete the steps that are described in [Unregister a server with Azure File Sync](/azure/storage/file-sync/file-sync-server-registration#unregister-the-server-with-storage-sync-service).
+This message with error code 0x80C80064 appears if the server was previously registered with a Storage Sync Service.  To unregister the server from the current Storage Sync Service and then register with a new Storage Sync Service, complete the steps that are described in [Unregister a server with Azure File Sync](/azure/storage/file-sync/file-sync-server-registration#unregister-the-server-with-storage-sync-service).
 
 If the server isn't listed under **Registered servers** in the Storage Sync Service, on the server that you want to unregister, run the following PowerShell commands:
 

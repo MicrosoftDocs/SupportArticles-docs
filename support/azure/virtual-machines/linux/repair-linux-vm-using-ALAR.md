@@ -8,16 +8,18 @@ manager: noambi
 editor: v-jsitser
 tags: virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.devlang: azurecli
-ms.date: 07/24/2023
+ms.date: 09/24/2024
 ms.author: malachma
 ---
 
 # Use Azure Linux Auto Repair (ALAR) to fix a Linux VM
+
+**Applies to:** :heavy_check_mark: Linux VMs
 
 The next time that you have to run a repair on your Azure Linux virtual machine (VM), you can automate the job by putting the Azure Linux Auto Repair (ALAR) scripts to work for you. You no longer have to run the job manually. These scripts simplify the recovery process and enable even inexperienced users to recover their Linux VM easily.
 
@@ -80,6 +82,9 @@ This action can be used to reinstall the required software to boot from a GEN2 V
 ### auditd
 
 If your VM shuts down immediately upon startup due to the audit daemon configuration, use this action. This action modifies the audit daemon configuration (in the */etc/audit/auditd.conf* file) by changing the `HALT` value configured for any `action` parameters to `SYSLOG`, which doesn't force the system to shut down. In a Logical Volume Manager (LVM) environment, if the logical volume that contains the audit logs is full and there's available space in the volume group, the logical volume will also be extended by 10% of the current size. However, if you're not using an LVM environment or there's no available space, only the configuration file is altered.
+
+> [!IMPORTANT]
+> This action will change the VM's security posture by altering the audit daemon configuration so that the VM shutdown issue can be resolved. Once the VM is running and accessible, you need to revert the audit daemon configuration to the original state. For this purpose, a backup of the *auditd.conf* file is created in */etc/audit* by the ALAR action.
 
 ## How to use ALAR
 

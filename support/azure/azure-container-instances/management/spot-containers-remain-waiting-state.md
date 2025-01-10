@@ -6,7 +6,7 @@ author: mosbahmajed
 ms.author: momajed
 editor: v-jsitser
 ms.reviewer: alaljase, v-rekhanain, v-leedennis
-ms.service: container-instances
+ms.service: azure-container-instances
 ms.custom: sap:Management
 ms.topic: troubleshooting-problem-resolution
 #customer intent: As a user of Azure Container Instances, I want resolve a scenario in which Spot containers remain in the Waiting state so that I can use Spot containers successfully.

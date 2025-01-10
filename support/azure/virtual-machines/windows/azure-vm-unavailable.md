@@ -4,12 +4,14 @@ description: Learn what it means when you receive an alert in Resource Health or
 ms.date: 08/03/2022
 ms.reviewer: v-leedennis
 editor: v-jsitser
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 keywords:
 #Customer intent: As an Azure virtual machine (VM) user, I want to understand why my VM becomes unavailable so that the situation doesn't block me from working effectively.
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # Azure virtual machine (VM) is unavailable for 15 minutes
+
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
 This article explains why you might receive an alert that states "VM is unavailable for 15 minutes" in either Resource Health or the activity log.
 

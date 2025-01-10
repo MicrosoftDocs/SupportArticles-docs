@@ -11,12 +11,14 @@ ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.devlang: azurecli
-ms.date: 01/11/2018
+ms.date: 07/22/2024
 ms.author: delhan
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ---
 
 # Use remote tools to troubleshoot Azure VM issues
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 When you troubleshoot issues on an Azure virtual machine (VM), you can connect to the VM by using the remote tools that are discussed in this article instead of using the Remote Desktop Protocol (RDP).
 
@@ -54,36 +56,6 @@ You can use the Custom Script Extension feature to run a custom script on the ta
   The extension injects the script only the first time that it's used. If you use this feature later, the extension recognizes that it was already used and doesn't upload the new script.
 
 Upload your script to a storage account, and generate its own container. Then, run the following script in Azure PowerShell on a computer that has connectivity to the VM.
-
-### For classic deployment model VMs
-
-[!INCLUDE [classic-vm-deprecation](../../../includes/azure/classic-vm-deprecation.md)]
-
-```powershell
-#Set up the basic variables.
-$subscriptionID = "<<SUBSCRIPTION ID>>" 
-$storageAccount = "<<STORAGE ACCOUNT>>" 
-$localScript = "<<FULL PATH OF THE PS1 FILE TO EXECUTE ON THE VM>>" 
-$blobName = "file.ps1" #Name you want for the blob in the storage.
-$vmName = "<<VM NAME>>" 
-$vmCloudService = "<<CLOUD SERVICE>>" #Resource group or cloud service where the VM is hosted. For example, for "demo305.cloudapp.net" the cloud service is going to be demo305.
-
-#Set up the Azure PowerShell module, and ensure the access to the subscription.
-Import-Module Azure
-Add-AzureAccount  #Ensure login with the account associated with the subscription ID.
-Get-AzureSubscription -SubscriptionId $subscriptionID | Select-AzureSubscription
-
-#Set up the access to the storage account, and upload the script.
-$storageKey = (Get-AzureStorageKey -StorageAccountName $storageAccount).Primary
-$context = New-AzureStorageContext -StorageAccountName $storageAccount -StorageAccountKey $storageKey
-$container = "cse" + (Get-Date -Format yyyyMMddhhmmss)<
-New-AzureStorageContainer -Name $container -Permission Off -Context $context
-Set-AzureStorageBlobContent -File $localScript -Container $container -Blob $blobName  -Context $context
-
-#Push the script into the VM.
-$vm = Get-AzureVM -ServiceName $vmCloudService -Name $vmName
-Set-AzureVMCustomScriptExtension "CustomScriptExtension" -VM $vm -StorageAccountName $storageAccount -StorageAccountKey $storagekey -ContainerName $container -FileName $blobName -Run $blobName | Update-AzureVM
-```
 
 ### For Azure Resource Manager VMs
 

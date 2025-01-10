@@ -5,7 +5,6 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:Windows Update for Business Reports\Missing data or incomplete report data, csstroubleshoot
 keywords: Windows Update for Business reports, WUBr, diagnostic data, telemetry

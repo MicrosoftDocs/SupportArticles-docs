@@ -4,7 +4,6 @@ description: This article describes how to enable schannel event logging in Wind
 ms.date: 12/11/2020
 ms.custom: sap:Health, Diagnostic, and Performance Features\Event logging
 ms.topic: how-to
-ms.subservice: health-diagnostic-performance
 ---
 # Enable Schannel event logging in Windows and Windows Server
 

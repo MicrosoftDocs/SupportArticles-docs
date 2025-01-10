@@ -5,7 +5,6 @@ author: sbmjais
 ms.author: shjais
 ms.reviewer: lavanyakr, aam, veparim
 ms.date: 03/12/2024
-ms.subservice: d365-sales-sales
 ---
 # Troubleshoot issues with emails
 

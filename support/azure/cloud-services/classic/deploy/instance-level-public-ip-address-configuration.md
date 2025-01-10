@@ -5,7 +5,7 @@ ms.date: 03/15/2023
 editor: v-jsitser
 ms.topic: how-to
 ms.reviewer: maheshallu, piw, v-frpan, v-leedennis
-ms.service: cloud-services
+ms.service: azure-cloud-services-classic
 ms.custom: sap:Deployment
 ---
 # Instance-level public IP address configuration in Cloud Services

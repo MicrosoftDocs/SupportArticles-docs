@@ -6,7 +6,7 @@ documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: virtual-machines
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
@@ -17,7 +17,9 @@ ms.author: genli
 ms.custom: sap:Cannot connect to my VM
 ---
 
-# Azure virtual machine error: “You must change your password before logging on the first time”
+# Azure virtual machine error: "You must change your password before logging on the first time"
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 ## Symptom
 

@@ -1,11 +1,10 @@
 ---
 title: Unable to request certificate with web enrollment
 description: Provides solutions to an issue where you fail to request a certificate by using web enrollment.
-ms.date: 12/26/2023
+ms.date: 11/06/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: akhleshs, kaushika
 ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Certificate Enrollment Technologies (Auto Enrollment, NDES, CWE, CEP, CES), csstroubleshoot
 ---
@@ -13,7 +12,7 @@ ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Certificate Enro
 
 This article provides solutions to an issue where you fail to request a certificate by using web enrollment.
 
-_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server (All supported versions)  
 _Original KB number:_ &nbsp; 2885758
 
 ## Symptoms

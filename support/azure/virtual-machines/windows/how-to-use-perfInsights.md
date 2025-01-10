@@ -6,7 +6,7 @@ documentationcenter: ''
 author: anandhms
 manager: dcscontentpm
 tags: ''
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
@@ -16,6 +16,8 @@ ms.author: genli
 ms.custom: sap:VM Performance
 ---
 #  Troubleshoot Windows virtual machine performance issues using the Performance Diagnostics (PerfInsights) CLI tool
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 The [Performance Diagnostics (PerfInsights) extension](https://aka.ms/perfinsightsdownload) is a self-help diagnostics tool that collects and analyzes diagnostic data, and provides a report to help troubleshoot Windows virtual machine (VM) performance problems in Azure. Use Performance Diagnostics to identify and troubleshoot performance issues in one of two modes: 
 

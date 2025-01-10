@@ -1,0 +1,16 @@
+- name: Docs
+  tocHref: /
+  topicHref: /index
+  items:
+
+  - name: Troubleshoot
+    tocHref: /azure/
+    topicHref: /troubleshoot/index
+    items:
+    - name: Azure
+      tocHref: /azure/storage/
+      topicHref: /troubleshoot/azure/index
+      items:
+      - name: Files Storage
+        tocHref: /azure/storage/files/
+        topicHref: /troubleshoot/azure/azure-storage/files/welcome-files-storage

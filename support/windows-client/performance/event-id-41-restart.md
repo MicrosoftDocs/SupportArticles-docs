@@ -4,10 +4,9 @@ description: Describes the circumstances that cause a computer to generate Event
 ms.date: 05/10/2024
 ms.topic: troubleshooting
 manager: dcscontentpm
-ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), errors, bug check or Blue Screen, unexpected reboot), csstroubleshooting, CI 111437
+ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshooting, CI 111437
 ms.reviewer: kaushika,dougeby
 audience: itpro
-localization_priority: medium
 ms.collection: highpri
 ---
 # Advanced troubleshooting for Event ID 41: "The system has rebooted without cleanly shutting down first"

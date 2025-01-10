@@ -6,7 +6,7 @@ documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
@@ -14,8 +14,9 @@ ms.topic: troubleshooting
 ms.date: 10/10/2023
 ms.custom: sap:My VM is not booting
 ---
-
 # OS start-up – Computer restarted unexpectedly or encountered an unexpected error
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article provides steps to resolve issues where the virtual machine (VM) experiences an unexpected restart or error while installing Windows.
 

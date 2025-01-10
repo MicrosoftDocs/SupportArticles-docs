@@ -5,7 +5,6 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: nbassett, kaushika
 ms.custom: sap:Backup, Recovery, Disk, and Storage\Data corruption and disk errors, csstroubleshoot
 ---
@@ -20,7 +19,7 @@ _Original KB number:_ &nbsp; 2806730
 
 ## Symptoms
 
-On a Windows Server 2012-based computer that is connected to a storage array such as Fibre Channel (FC) storage, the event ID 154 is logged in the system event log.
+On a Windows Server that is connected to a storage array such as Fibre Channel (FC) storage, the event ID 154 is logged in the system event log.
 
 ## Cause
 
@@ -38,7 +37,7 @@ To resolve this issue, contact the vendor of your adapter, switch, or array to d
 > [!WARNING]
 > Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft cannot guarantee that these problems can be solved. Modify the registry at your own risk.
 
-Disk Event 154 is a new system event in Windows Server 2012 that is intended to log cases in which an FC packet may have been dropped. The intention is to make these issues more discoverable. A dropped FC frame can have a large effect on user experience, because the time that the operating system will wait for an I/O operation to finish is based on the disk.sys **TimeOutValue** value, and the operating system may seem to be frozen or to hang while it waits for the I/O operation to finish. After the time-out value is reached, the disk/class layer will retry the I/O operation eight times. (Each attempt waits the full amount of the **TimeOutValue** value).
+Disk Event 154 is a new system event in Windows Server that is intended to log cases in which an FC packet may have been dropped. The intention is to make these issues more discoverable. A dropped FC frame can have a large effect on user experience, because the time that the operating system will wait for an I/O operation to finish is based on the disk.sys **TimeOutValue** value, and the operating system may seem to be frozen or to hang while it waits for the I/O operation to finish. After the time-out value is reached, the disk/class layer will retry the I/O operation eight times. (Each attempt waits the full amount of the **TimeOutValue** value).
 
 Currently, we recommend that you set the disk.sys **TimeOutValue** value as low as possible. (We recommend that you set it to a value no greater than 20 to 30 seconds). However, as with any change, the value that you use should be evaluated in a test environment before you implement that value in production.
 

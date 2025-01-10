@@ -2,7 +2,7 @@
 title: Azure storage account with firewall causes errors when executing Batch jobs
 description: Provides solutions for access issues when you execute Azure Batch jobs.
 ms.date: 09/20/2022
-ms.service: batch
+ms.service: azure-batch
 ms.reviewer: biny, v-weizhu
 ms.custom: sap:Azure Batch
 ---

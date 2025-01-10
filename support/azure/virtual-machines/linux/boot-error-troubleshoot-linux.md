@@ -5,7 +5,7 @@ services: virtual-machines
 documentationCenter: ''
 author: divargas-msft
 manager: dcscontentpm
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: linux
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-linux
@@ -15,6 +15,8 @@ ms.date: 03/10/2023
 ms.author: divargas
 ---
 # Troubleshoot Azure Linux virtual machine boot errors
+
+**Applies to:** :heavy_check_mark: Linux VMs
 
 This article consolidates the most common Linux operating system boot errors you may receive when you start a Linux virtual machine (VM) in Microsoft Azure.
 

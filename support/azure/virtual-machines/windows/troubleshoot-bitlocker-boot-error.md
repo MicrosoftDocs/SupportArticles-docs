@@ -5,7 +5,7 @@ services: virtual-machines
 author: genlin
 manager: dcscontentpm
 editor: v-jesits
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
@@ -16,7 +16,9 @@ ms.custom: sap:My VM is not booting, has-adal-ref, devx-track-azurepowershell
 ---
 # BitLocker boot errors on an Azure VM
 
- This article describes BitLocker errors that you may experience when you start a Windows virtual machine (VM) in Microsoft Azure.
+**Applies to:** :heavy_check_mark: Windows VMs
+
+This article describes BitLocker errors that you may experience when you start a Windows virtual machine (VM) in Microsoft Azure.
 
 ## Symptom
 

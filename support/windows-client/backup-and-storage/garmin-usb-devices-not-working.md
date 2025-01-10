@@ -5,9 +5,8 @@ ms.date: 04/08/2024
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, tiquinn, scottmca
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Storage hardware , csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Storage hardware, csstroubleshoot
 ---
 # Garmin USB devices don't work with Windows 10
 

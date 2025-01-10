@@ -1,14 +1,16 @@
 ---
 title: Azure VM cannot RDP - driver IRQL not less or equal
 description: Troubleshoot Azure VM cannot RDP - driver IRQL not less or equal.
-ms.date: 12/16/2020
+ms.date: 08/13/2024
 ms.reviewer: 
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.custom: sap:My VM is not booting
 ---
 
 # Azure VM cannot RDP - driver IRQL not less or equal
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 ## Symptoms
 
@@ -89,17 +91,11 @@ When you pull the screenshot of the virtual machine (VM), the operating system (
 
 2. If the above fix doesn't apply, then a memory dump analysis will be required.
 
-#### Collect the Memory Dump File
+#### Collect the memory dump file
 
 To resolve this problem, gather the memory dump file for the crash, and contact support with the memory dump file. To collect the dump file, follow these steps:
 
-1. Locate the dump file and submit a support ticket:
-
-   - On the repair VM, go to the Windows folder on the attached OS disk. If the driver letter that is assigned to the attached OS disk is `F`, then go to `F:\Windows`.
-   - Locate the `memory.dmp` file, and [submit a support ticket](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) with the memory dump file.
-   - If you are having trouble locating the memory.dmp file, you may wish to use [non-maskable interrupt (NMI) calls in serial console](/azure/virtual-machines/troubleshooting/serial-console-windows#use-the-serial-console-for-nmi-calls) instead.
-
-   Follow the guide to [generate a crash dump file using NMI calls](/windows/client-management/generate-kernel-or-complete-crash-dump).
+[!INCLUDE [Collect OS memory dump file ](../../../includes/azure/collect-os-memory-dump-file.md)]
 
 ### Rebuild the VM<a id="3"></a>
 

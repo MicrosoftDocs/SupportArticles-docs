@@ -2,7 +2,7 @@
 title: Error 400 or 401 when you set Dataverse virtual table visibility
 description: This article provides information about the error codes (400 and 401) that can occur when you set Microsoft Dataverse virtual table visibility for Tax calculation service in a Regulatory Configuration Service (RCS) enviromnment.
 author: hshi-ms
-ms.date: 04/30/2024
+ms.date: 11/21/2024
 ms.topic: troubleshooting
 ms.search.form: ERSolutionTable_RCSSetVirtualTableVisibility
 audience: Application User
@@ -11,7 +11,7 @@ ms.search.region: Global
 ms.author: hshi
 ms.search.validFrom: 2022-07-26
 ms.dyn365.ops.version: 10.0.30
-ms.custom: sap:Tax - indirect tax\Issues with tax calculation service
+ms.custom: sap:Tax - indirect tax\Issues with advanced tax calculation
 ---
 # Error 400 or 401 when you set Dataverse virtual table visibility
 
@@ -102,7 +102,7 @@ The 401 "Unauthorized" error occurs if the "Check connection" process for connec
 1. In the RCS environment, go to **Electronic reporting** \> **Connected applications** \> **Dataverse application record**.
 2. The **Application** field shows the URL of the database instance. Confirm that you can sign in to that Dataverse instance by using the same account that you use to sign in to the RCS environment.
 3. Confirm that the **Tenant** field is set to your account's tenant ID (for example, **d335a570-a05b-4bc5-8eb3-c42c65f9560d**) or tenant URL (for example, `taxserviceint.onmicrosoft.com`).
-3. Select **Check connection**. The process should be successful.
+4. Select **Check connection**. The process should be successful.
 
 > [!IMPORTANT]
 > If the "Check connection" process isn't successful, the Dataverse setup isn't correct. See [Enable master data lookup for tax calculation configuration](/dynamics365/finance/localizations/tax-service-set-up-environment-master-data-lookup), and make sure that steps 1, 2, and 3 are all done correctly.

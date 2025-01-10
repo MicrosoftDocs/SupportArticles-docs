@@ -7,7 +7,7 @@ author: mimckitt
 manager: dcscontentpm
 tags: azure-resource-manager
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: linux
 ms.topic: article
 ms.tgt_pltfrm: vm-linux
@@ -17,6 +17,8 @@ ms.author: mimckitt
 ---
 
 # Proactively ensuring you have access to GRUB and sysrq could save you lots of down time
+
+**Applies to:** :heavy_check_mark: Linux VMs
 
 Having access to the Serial Console and GRUB will improve recovery times of your IaaS Linux Virtual Machine in most cases. GRUB offers recovery options that otherwise would take longer to recover your VM.
 
@@ -67,10 +69,7 @@ Ensuring you have access to the Azure Serial Console and GRUB means that a passw
 
 - Azure Serial Console
 
-- Disk Swap – can be automated using either:
-
-  - [PowerShell Recovery Scripts](https://github.com/Azure/azure-support-scripts/tree/master/VMRecovery/ResourceManager)
-  - [bash Recovery Scripts](https://github.com/sribs/azure-support-scripts)
+- [Disk Swap](/azure/virtual-machines/windows/os-disk-swap)
 
 - Legacy Method
 
@@ -425,3 +424,4 @@ For more information on how to access single user mode, see [this doc](./serial-
 Learn more about [Azure Serial Console](./serial-console-linux.md)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+

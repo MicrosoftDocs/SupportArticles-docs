@@ -6,7 +6,7 @@ author: genlin
 manager: dcscontentpm
 tags: 
 ms.custom: sap:Cannot connect to my VM, linux-related-content
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: linux
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
@@ -14,7 +14,9 @@ ms.topic: troubleshooting
 ms.date: 12/30/2021
 ms.author: genli
 ---
-# Can’t SSH to Azure Linux VM because permissions are too open
+# Can't SSH to Azure Linux VM because permissions are too open
+
+**Applies to:** :heavy_check_mark: Linux VMs
 
 ## Symptoms
 

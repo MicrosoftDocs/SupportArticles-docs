@@ -5,7 +5,6 @@ ms.date: 08/14/2020
 ms.custom: sap:Client Connectivity
 ms.reviewer: achand, daleche, muthuk, sriramb, ronai, ans, leov
 ms.service: azure-devops
-ms.subservice: ts-client-connectivity
 ---
 # 'The server specified could not be reached' error when you try to connect through Release Management Client
 

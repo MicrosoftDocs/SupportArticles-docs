@@ -1,10 +1,10 @@
 ---
 title: Troubleshoot common issues involving the leapp upgrade process
-description: Learn how to resolve common troubleshooting issues that involve the leapp uograde process on Red Hat operating systems.
+description: Learn how to resolve common troubleshooting issues that involve the leapp upgrade process on Red Hat operating systems.
 author: msaenzbosupport
 ms.author: msaenzbo
 ms.reviewer: divargas
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: linux
 ms.topic: troubleshooting-general
 ms.workload: infrastructure-services
@@ -13,28 +13,32 @@ ms.date: 06/26/2024
 ---
 # Troubleshooting Red Hat OS upgrade issues
 
-Doing a major upgrade on Red Hat Enterprise Linux (RHEL) involves transitioning from one major version to another major version, such as from RHEL 7 to RHEL 8 or from RHEL 8 to RHEL 9. Major upgrades bring significant changes, including new features, enhancements, and improvements in security and performance. The process can be complex, but Red Hat provides tools and guidance to simplify and streamline the upgrade process. One primary tool that Red Hat provides for performing major upgrades is the leapp utility. The leapp utility is designed to automate the upgrade process of RHEL systems to the next major version. It performs checks, provides recommendations, and helps to resolve issues that arise during the upgrade. This article discusses how to troubleshoot common issues that occur when you use the leapp utility to do a major upgrade of a Red Hat operating system.
+**Applies to:** :heavy_check_mark: Linux VMs
+
+Doing a major upgrade on Red Hat Enterprise Linux (RHEL) involves transitioning from one major version to another major version, such as from RHEL 7 to RHEL 8 or from RHEL 8 to RHEL 9. Major upgrades bring significant changes, including new features, enhancements, and improvements in security and performance. The process can be complex, but Red Hat provides tools and guidance to simplify and streamline the upgrade process. 
+
+One example is the Leapp tool. The Leapp tool is designed to automate the upgrade process of RHEL systems to the next major version. It performs checks, provides recommendations, and helps to resolve any issues that occur during the upgrade. This article discusses how to troubleshoot common issues that occur when you use the Leapp tool during a major upgrade of a Red Hat operating system.
 
 > [!CAUTION]
-> Starting June 30, 2024, Red Hat Enterprise Linux 7 will reach the end of maintenance support 2 phase. The maintenance phase is followed by the Extended Life Phase. As Red Hat Enterprise Linux 7 transitions out of the Full/Maintenance Phases, you should upgrade to Red Hat Enterprise Linux 8 or 9. If you must stay on Red Hat Enterprise Linux 7, we recommend that you add the [Red Hat Enterprise Linux Extended Life Cycle Support (ELS) Add-On](/azure/virtual-machines/workloads/redhat/redhat-extended-lifecycle-support).
+>On June 30, 2024, Red Hat Enterprise Linux 7 reached the end of maintenance support 2 phase. The maintenance phase is followed by the Extended Life Phase. As Red Hat Enterprise Linux 7 transitions out of the Full and Maintenance phases, you should upgrade to Red Hat Enterprise Linux 8 or 9. If you must stay on Red Hat Enterprise Linux 7, we recommend that you add the [Red Hat Enterprise Linux Extended Life Cycle Support (ELS) Add-On](/azure/virtual-machines/workloads/redhat/redhat-extended-lifecycle-support).
 
-## Recommendations before you start the leapp pre-upgrade and upgrade process
+## Recommendations before you upgrade
 
-Before you begin the leapp pre-upgrade and upgrade process, make sure that you take the following actions:
+Before you begin the Leapp preupgrade and upgrade process, make sure that you take the following actions:
 
-- Make a backup of the virtual machine or a snapshot of the OS disk.
+- Make a backup of the virtual machine (VM) or a snapshot of the OS disk.
 
-- Clear enough space in */var/lib/leapp*. Having at least 2-5 GB of free space is a safe practice.
+- Clear enough space in `/var/lib/leapp` to accommodate the upgrade. A best practice is to have at least 2-5 GB of free space available.
 
 - Set up access to the serial console.
 
-Then you can start the leapp pre-upgrade and upgrade process through the serial console.
+After you complete these tasks, you can start the Leapp preupgrade and upgrade processes through the serial console.
 
 ## Inhibitor problems and errors
 
-*Inhibitor problems* are specific issues identified during the pre-upgrade assessment that prevent the upgrade from proceeding. These problems are critical and must be resolved before you can continue to the upgrade process. You have to eliminate inhibitor problems to maintain the system's stability and functionality during and after the upgrade.
+*Inhibitor problems* are specific issues that are identified during the preupgrade assessment that prevent the upgrade from proceeding. These issues are critical and must be resolved before you can move on to the upgrade. You have to eliminate inhibitor issues to maintain the system's stability and functionality during and after the upgrade.
 
-*Errors* refer to issues that can occur during the upgrade process that potentially cause interruptions or failures. These errors can arise at different stages, such as during the pre-upgrade checks or the actual execution of the upgrade.
+*Errors* refers to issues that can occur during the upgrade process that potentially cause interruptions or failures. These errors can occur at different stages, both during the preupgrade checks and during the actual upgrade.
 
 ### Common types of inhibitors
 
@@ -44,8 +48,8 @@ Then you can start the leapp pre-upgrade and upgrade process through the serial 
 | Incompatible hardware | Hardware components that are unsupported in the target version                                                               |
 | Configuration issues  | System configurations that are incompatible with the new version and require adjustments                                     |
 | Third-party software  | Non-Red Hat software that might interfere with the upgrade process                                                           |
-| File system layout    | Issues that involve the system's file system layout, such as partitioning schemes that are unsupported in the target version |
-| Networking changes    | Network configurations that need to be updated to align with the new version's networking stack                              |
+| File system layout    | Issues that involve the OS file system layout, such as partitioning schemes that are unsupported in the target version |
+| Networking changes    | Network configurations that have to be updated to align with the new version's networking stack                              |
 | Custom scripts        | Custom scripts or cron jobs that might be incompatible with the new version                                                  |
 
 ### Common types of errors
@@ -53,13 +57,13 @@ Then you can start the leapp pre-upgrade and upgrade process through the serial 
 | Error type            | Description                                                                        |
 |-----------------------|------------------------------------------------------------------------------------|
 | Installation failures | Errors that occur while you install packages during the upgrade                    |
-| Service failures      | Services that fail to start or stop correctly during the upgrade process           |
+| Service failures      | Services that don't start or stop correctly during the upgrade process           |
 | File system issues    | Problems that involve disk space, file corruption, or mount points                 |
 | Network issues        | Network connectivity problems that affect the download or installation of packages |
 
-### Find inhibitors or errors in the leapp report
+### Find inhibitors or errors in the Leapp report
 
-The leapp report is located at */var/log/leapp/leapp-report.txt*. Open the report and look for sections that are marked as inhibitors. These sections list issues that must be resolved.
+The Leapp report is located at `/var/log/leapp/leapp-report.txt`. Open the report and look for sections that are marked as inhibitors. These sections list issues that must be resolved.
 
 For each inhibitor, the report typically provides detailed remediation steps. These steps can include commands to run, packages to install, or configuration changes to make.
 
@@ -166,15 +170,15 @@ The following list contains common occurrences of output that describes an inhib
   ```
 
 > [!NOTE]
-> Examine the entire pre-upgrade report carefully, even if it doesn't list any inhibitors. The report provides recommended actions to take before upgrading, so that the system operates correctly afterward.
+> Examine the whole preupgrade report carefully, even if it doesn't list any inhibitors. The report provides recommended actions to take before you upgrade so that the system operates correctly afterward.
 
-After you fix all the inhibitors, run the pre-upgrade check again to ensure all issues are resolved.
+After you fix all the inhibitors, run the preupgrade check again to make sure that all issues are resolved.
 
-## Leapp pre-upgrade common issues
+## Leapp Preupgrade common issues
 
-### Pre-upgrade symptom 1: Corrupted or missing urllib3 library
+### Preupgrade symptom 1: Corrupted or missing urllib3 library
 
- A corrupted or missing *urllib3* library in Python causes the following error message:
+ A corrupted or missing *urllib3* library in Python generates the following error message:
 
 ```output
 Traceback (most recent call last):
@@ -203,7 +207,7 @@ Traceback (most recent call last):
 ImportError: No module named urllib3.exceptions
 ```
 
-#### Pre-upgrade solution 1: Reinstall the python-urllib3 package
+#### Preupgrade solution 1: Reinstall the python-urllib3 package
 
 Reinstall the *python-urllib3* package by running the following commands:
 
@@ -212,9 +216,9 @@ sudo mv /usr/lib/python2.7/site-packages/urllib3 /tmp/
 sudo yum reinstall python-urllib3
 ```
 
-### Pre-upgrade symptom 2: Connection timed out after 30,001 milliseconds
+### Preupgrade symptom 2: Connection timed out after 30,001 milliseconds
  
-A communication block to Red Hat Update Infrastructure (RHUI) IP addresses causes the following error message:
+A communication block to Red Hat Update Infrastructure (RHUI) IP addresses generates the following error message:
 
 ```output
 Risk Factor: high (error)
@@ -258,13 +262,13 @@ https://rhui4-1.microsoft.com/pulp/repos/content/dist/rhel/rhui/server/7/7Server
 https://rhui4-1.microsoft.com/pulp/repos/content/dist/rhel/rhui/server/7/7Server/x86_64/ansible/2/os/repodata/repomd.xml: [Errno 12] Timeout on https://rhui4-1.microsoft.com/pulp/repos/content/dist/rhel/rhui/server/7/7Server/x86_64/ansible/2/os/repodata/repomd.xml: (28, 'Connection timed out after 30001 milliseconds')
 ```
 
-#### Pre-upgrade solution 2: Allow RHUI connectivity
+#### Preupgrade solution 2: Allow RHUI connectivity
 
 Allow connectivity to RHUI. For more information, see [Linux RHUI connectivity issues](linux-rhui-connectivity-issues.md).
 
-### Pre-upgrade symptom 3: A subscription-manager command failed to execute
+### Preupgrade symptom 3: A subscription-manager command didn't run
 
-If you run the leapp upgrade that has Red Hat Subscription Manager on a pay-as-you-go (PayGo) image, you might encounter the following error message:
+If you run the Leapp upgrade that has Red Hat Subscription Manager on a pay-as-you-go (PayGo) image, you might receive the following error message:
 
 ```output
 [ERROR] Actor: scan_subscription_manager_info
@@ -275,13 +279,13 @@ Summary:
     Hint: Please ensure you have a valid RHEL subscription and your network is up. If you are using proxy for Red Hat subscription-manager, please make sure it is specified inside the /etc/rhsm/rhsm.conf file. Or use the --no-rhsm option when running leapp, if you do not want to use subscription-manager for the in-place upgrade and you want to deliver all target repositories by yourself or using RHUI on public cloud.
 ```
 
-#### Pre-upgrade solution 3: Bypass the subscription-manager utility
+#### preupgrade solution 3: Bypass the subscription-manager tool
 
- When using a PayGo image on Azure, you can't run the `subscription-manager` utility because the system is designed to use RHUI instead. You have to specify the `--no-rhsm` flag to bypass `subscription-manager` during the upgrade process.
+ When you use a PayGo image on Azure, you can't run the `subscription-manager` tool because the system is designed to use RHUI instead. You have to specify the `--no-rhsm` flag to bypass `subscription-manager` during the upgrade.
 
-### Pre-upgrade symptom 4: The leapp pre-upgrade fails to install RHEL 8 userspace packages ("execv() failed: No such file or directory")
+### preupgrade symptom 4: The Leapp preupgrade doesn't install RHEL 8 userspace packages ("execv() failed: No such file or directory")
 
-If you run the leapp pre-upgrade, you might encounter the following "Unable to install RHEL 8 userspace packages" error message:
+If you run the Leapp preupgrade, you might receive the following "Unable to install RHEL 8 userspace packages" error message:
 
 ```output
 Risk Factor: high
@@ -295,7 +299,7 @@ Host and machine ids are equal (35e06890bn8g56f798g8904356fsd5f8): refusing to l
 execv() failed: No such file or directory
 ```
 
-You might also encounter the following "Cannot obtain data about the DNF configuration" error message:
+You might also receive the following "Cannot obtain data about the DNF configuration" error message:
 
 ```output
 Risk Factor: high
@@ -304,7 +308,7 @@ Summary: {"stderr": "Failed to retrieve machine ID: No such file or directory\n"
 Key: b41a40f4129e340f05c6b14d1a850b626c4185d1
 ```
 
-#### Pre-upgrade solution 4: Install the dnf package
+#### preupgrade solution 4: Install the dnf package
 
 Make sure that the *dnf* package is installed and that no issues or corrupted files are associated with that package:
 
@@ -331,9 +335,9 @@ sudo rpm -Va dnf\* leapp\*
 .M.......  g /var/log/hawkey.log
 ```
 
-### Pre-upgrade symptom 5: /var/lib/leapp/el8userspace', '/bin/bash', '-c', 'su - -c update-ca-trust'] failed with exit code 1
+### preupgrade symptom 5: /var/lib/leapp/el8userspace', '/bin/bash', '-c', 'su - -c update-ca-trust'] failed with exit code 1
 
-If you run leapp pre-upgrade, you might encounter the following "Actor target_userspace_creator unexpectedly terminated" error message:
+If you run Leapp preupgrade, you might receive the following "Actor target_userspace_creator unexpectedly terminated" error message:
 
 ```output
 Factor: high error
@@ -346,26 +350,96 @@ line 1108, in _create_target_userspace    _prep_repository_accesscontext, target
 line 629, in _prep_repository_access    run['chroot', target_userspace, '/bin/bash', '-c', 'su - -c update-ca-trust']  File '/usr/lib/python2.7/site-packages/leapp/libraries/stdlib/__init__.py', line 192, in run    result=resultCalledProcessError: Command ['chroot', '/var/lib/leapp/el8userspace', '/bin/bash', '-c', 'su - -c update-ca-trust'] failed with exit code 1
 ```
 
-#### Pre-upgrade solution 5: Reinstall CA certificates and update the CA trust
+#### preupgrade solution 5: Reinstall CA certificates and update the CA trust
 
-There was a problem within the existing *ca-certificates* package that caused the `update-ca-trust` command to fail. To fix this issue, reinstall the *ca-certificates* package and run the `update-ca-trust` command:
+An issue occurred within the existing *ca-certificates* package that caused the `update-ca-trust` command to fail. To fix this issue, reinstall the *ca-certificates* package and run the `update-ca-trust` command:
 
 ```bash
 sudo yum reinstall ca-certificates
 sudo update-ca-trust
 ```
 
-After you resolve all the inhibitors, run the pre-upgrade again, and make sure that all issues are resolved.
+### preupgrade symptom 6: FileNotFoundError: [Errno 2] No such file or directory: '/etc/leapp/repos.d/system_upgrade/common/files/rhui/azure-XX/content-XX.crt'
+
+If you try to run `leapp preupgrade` on `RHEL` 8 for `SAP-HANA` or `SAPApps` that have the `leapp` tool version `lapp-rhui-azure-sap-1.0.0-14.el8.noarch`, or on base Red Hat images that have version `leapp-rhui-azure-1.0.0-14.el8.noarch`, the following error message is generated:
+
+```output
+====> * target_userspace_creator
+        Initializes a directory to be populated as a minimal environment to run binaries from the target system.
+Process Process-408:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.6/site-packages/leapp/repository/actor_definition.py", line 74, in _do_run
+    actor_instance.run(*args, **kwargs)
+  File "/usr/lib/python3.6/site-packages/leapp/actors/__init__.py", line 289, in run
+    self.process(*args)
+  File "/etc/leapp/repos.d/system_upgrade/common/actors/targetuserspacecreator/actor.py", line 58, in process
+    userspacegen.perform()
+  File "/usr/lib/python3.6/site-packages/leapp/utils/deprecation.py", line 42, in process_wrapper
+    return target_item(*args, **kwargs)
+  File "/etc/leapp/repos.d/system_upgrade/common/actors/targetuserspacecreator/libraries/userspacegen.py", line 774, in perform
+    target_repoids = _gather_target_repositories(context, indata, prod_cert_path)
+  File "/etc/leapp/repos.d/system_upgrade/common/actors/targetuserspacecreator/libraries/userspacegen.py", line 714, in _gather_target_repositories
+    rhui.copy_rhui_data(context, indata.rhui_info.provider)
+  File "/etc/leapp/repos.d/system_upgrade/common/libraries/rhui.py", line 259, in copy_rhui_data
+    context.copy_to(os.path.join(data_dir, path_[0]), path_[1])
+  File "/etc/leapp/repos.d/system_upgrade/common/libraries/mounting.py", line 232, in copy_to
+    shutil.copy2(src, self.full_path(dst))
+  File "/usr/lib64/python3.6/shutil.py", line 263, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/usr/lib64/python3.6/shutil.py", line 120, in copyfile
+    with open(src, 'rb') as fsrc:
+FileNotFoundError: [Errno 2] No such file or directory: '/etc/leapp/repos.d/system_upgrade/common/files/rhui/azure-sap-ha/content-sap-ha.crt'
+```
+
+SAP-HA images generate:
+
+```output
+FileNotFoundError: [Errno 2] No such file or directory:'/etc/leapp/repos.d/system_upgrade/common/files/rhui/azure-sap-ha/content-sap-ha.crt'
+```
+
+SAPApps images generate:
+
+```output
+FileNotFoundError: [Errno 2] No such file or directory:'/etc/leapp/repos.d/system_upgrade/common/files/rhui/azure-sap-apps/content-sapapps.crt'
+```
+
+Base images generate:
+
+```output
+FileNotFoundError: [Errno 2] No such file or directory: '/etc/leapp/repos.d/system_upgrade/common/files/rhui/azure/content.crt'
+```
+
+#### preupgrade solution 6
+
+The workaround for this issue is to downgrade the version of `leapp-rhui-azure-sap` to `leapp-rhui-azure-sap-1.0.0-10.el8.noarch` for SAP images, and the version of `leapp-rhui-azure` to `leapp-rhui-azure-1.0.0-10.el8.noarch` for Red Hat base images.
+
+SAP images:
+
+```bash
+sudo dnf downgrade leapp-rhui-azure-sap 
+```
+
+Base images:
+
+```bash
+sudo dnf downgrade leapp-rhui-azure
+```
+
+After you resolve all the inhibitors, run the preupgrade again, and make sure that all issues are resolved.
 
 ## Leapp upgrade common issues
 
-Continue to the leapp upgrade process after the pre-upgrade report shows no errors or inhibitors and everything is marked as resolved. The output is typically in green or yellow, indicating that it's safe to proceed with the leapp upgrade.
+After the preupgrade report shows no errors or inhibitors and everything is marked as resolved, continue to the Leapp upgrade. In this report, the output is typically shown in green or yellow, indicating that it's safe to run the Leapp upgrade.
 
-The following symptoms indicate some common errors that are reported during the leapp upgrade process.
+The following symptoms indicate some common errors that are reported during the Leapp upgrade process.
 
 ### Upgrade symptom 1: Not enough space available on /var/lib/leapp/scratch
 
-If you run the leapp upgrade, you might encounter the following "Not enough space available" error message:
+If you run the Leapp upgrade, you might receive the following "Not enough space available" error message:
 
 ```output
 2024-06-14 19:31:45.552155 [ERROR] Actor: dnf_dry_run
@@ -378,13 +452,17 @@ Summary:
 
 #### Upgrade solution 1: Extend the file system
 
-Extend the file system on which */var/lib/leapp* is mounted. Typically, the mounting is on */dev/mapper/rootvg-varlv*.
+Extend the file system on which `/var/lib/leapp` is mounted. Typically, the mounting is on */dev/mapper/rootvg-varlv*.
 
-Normally the output is shown in green or yellow, indicating that it's safe to proceed with the leapp upgrade.
+Typically, the output is shown in green or yellow, indicating that you can safely do the Leapp upgrade.
 
 ### Upgrade symptom 2: The openssl-libs-1:1.1.1k-12.el8_9.x86_64 conflicts with file from package openssl11-libs-1:1.1.1k-7.el7.x86_64
 
-Libraries that are provided by the *openssl11-libs* package from the Extra Packages for Enterprise Linux (EPEL) repository conflict with the *openssl* and *openssl-libs* packages for RHEL 8 that are provided by Red Hat, which is required for the in-place upgrade. In this situation, you experience the following error message:
+A conflict exists between libraries from the following sources:
+- The *openssl11-libs* package from the Extra Packages for Enterprise Linux (EPEL) repository
+- The *openssl* and *openssl-libs* packages for RHEL 8 that are provided by Red Hat (required for the in-place upgrade)
+
+In this situation, you receive the following error message:
 
 ```output
 Error: Transaction test error:
@@ -400,10 +478,10 @@ Error: Transaction test error:
 
 #### Upgrade solution 2: Remove the openssl11-\* package
 
-Verify whether the *openssl11-\** package was installed for a third-party vendor. If that package came from a third-party vendor, remove it, as shown in the following commands.
+Verify that the *openssl11-\** package was installed for a third-party vendor. If that package came from a third-party vendor, remove it, as shown in the following commands.
 
 > [!NOTE]
-> This conflict error message can occur when you have any other third-party package manager. In this example, the conflict was with openssl11.
+> This conflict error message might be generated if you use any other third-party package manager. In this example, the conflict was with openssl11.
 
 ```bash
 sudo yum list installed | grep -i openssl11
@@ -428,11 +506,11 @@ Removing for dependencies:
 ```
 
 > [!WARNING]
-> If other packages such as *nodejs* and *nodejs-libs* from the EPEL repository are removed because of the dependency issues that are shown in the previous output, back up the related configuration files and reinstall the same packages manually after the in-place upgrade.
+> If other packages, such as *nodejs* and *nodejs-libs* from the EPEL repository, are removed because of the dependency issues that are shown in the previous output, back up the related configuration files and reinstall the same packages manually after the in-place upgrade.
 
 ### Upgrade symptom 3: Problem with installed package ansible-2.9.27-1.el7ae.noarch and ansible-test-2.9.27-1.el7ae.noarch
 
-If you run the leapp upgrade, you might encounter the following "DNF execution failed with non zero exit code" error message:
+If you run the Leapp upgrade, you might receive the following "DNF execution failed with non zero exit code" error message:
 
 ```output
 Risk Factor: high (error)
@@ -442,7 +520,7 @@ Summary: {"hint": "If there was a problem reaching remote content (see stderr ou
 
 #### Upgrade solution 3: Remove Ansible packages
 
-Run the following command to remove ansible packages. The in-place upgrade is unsupported for systems that have any Ansible products. For more information, see [Upgrading_from_rhel_7_to_rhel_8](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/upgrading_from_rhel_7_to_rhel_8/index).
+The in-place upgrade is unsupported for systems that have any Ansible products. For more information, see [Upgrading_from_rhel_7_to_rhel_8](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/upgrading_from_rhel_7_to_rhel_8/index). To remove Ansible packages, run the following command:
 
 ```bash
 sudo yum remove ansible ansible-test
@@ -465,18 +543,20 @@ sudo cat /etc/ld.so.conf.d/openssl-1.1.1d.conf
 /usr/local/ssl/lib
 ```
 
-To resolve the conflict, remove or rename this file. Then, update the dynamic linker run-time bindings by running `ldconfig`. The `ldconfig` command updates the symlinks and rebuilds the cache, making sure that the newly installed library is correctly linked and available for use by other groups:
+To resolve the conflict, remove or rename this file. Then, update the dynamic linker run-time bindings by running `ldconfig`:
 
 ```bash
 sudo mv /etc/ld.so.conf.d/openssl-1.1.1d.conf /tmp
 sudo ldconfig
 ```
 
-This action makes sure that the system uses the correct versions of the OpenSSL and libk5crypto libraries. It also should fix the ImportError that's related to the undefined symbol `EVP_KDF_ctrl`.
+The `ldconfig` command updates the symlinks and rebuilds the cache to make sure that the newly installed library is correctly linked and available for use by other groups.
 
-### Upgrade symptom 5: Leapp upgrade is failing to mount a device during the upgrade
+This action makes sure that the system uses the correct versions of the OpenSSL and libk5crypto libraries. Additionally, this action should fix the ImportError that's related to the undefined symbol `EVP_KDF_ctrl`.
 
-If you run the leapp upgrade, you might encounter the following device mounting error message:
+### Upgrade symptom 5: Leapp upgrade doesn't mount a device during the upgrade
+
+If you run the Leapp upgrade, you might receive the following device mounting error message:
 
 ```output
 [    4.509104] upgrade[569]: Mounting /usr with -o defaults,ro
@@ -492,11 +572,11 @@ If you run the leapp upgrade, you might encounter the following device mounting 
 [   47.764584] upgrade[1155]:     self.run()
 ```
 
-#### Upgrade solution 5: Restore the virtual machine and remove the UUID
+#### Upgrade solution 5: Restore the VM and remove the UUID
 
 1. Restore the virtual machine (VM) from the snapshot or backup.
 
-1. Check whether the UUID that's shown in the error message exists on the VM. If the UUID exists, then comment it out or remove it from the */etc/fstab* file.
+1. Check whether the UUID from the error message exists on the VM. If the UUID exists, comment it out or remove it from the */etc/fstab* file.
 
    ```bash
    sudo blkid
@@ -506,29 +586,29 @@ If you run the leapp upgrade, you might encounter the following device mounting 
    sudo cat /etc/fstab
    ```
 
-1. Run the leapp upgrade command again.
+1. Run the Leapp upgrade command again.
 
 ### Upgrade symptom 6: Failed to mount n/a on /sys/fs/cgroup on RHEL 7.9
 
-If you run the leapp upgrade, you might encounter the following error "Failed to mount" message:
+If you run the Leapp upgrade, you might receive the following "Failed to mount" error message:
 
 ```output
 [ 4.815758]  upgrade[599]: Failed to mount n/a on /sys/fs/cgroup (MS_RDONLY|MS_NOSUID|MS_NODEV|MS_NOEXEC|MS_REMOUNT|MS_STRICTATIME "mode=755"): Invalid argument
 [ 4.812413]  kernel: cgroup2: Unknown parameter 'mode'
 ```
 
-The mounting failure is because version 2 of the control group (cgroup v2) is unsupported on RHEL 7. For more information, see [\[IPU 7>8\] Leapp fails with cgroup v2 that is unsupported](https://issues.redhat.com/browse/RHEL-24854).
+The mounting failure occurs because version 2 of the control group (cgroup v2) is unsupported on RHEL 7. For more information, see [\[IPU 7>8\] Leapp fails with cgroup v2 that is unsupported](https://issues.redhat.com/browse/RHEL-24854).
 
 #### Upgrade solution 6: Remove the systemd.unified_cgroup_hierarchy parameter
 
 1. Restore the VM from the snapshot or a backup.
 
-1. Before you run the leapp upgrade, verify whether the parameter `systemd.unified_cgroup_hierarchy=1` is located in */proc/cmdline* or */etc/default/grub*.
+1. Before you run the Leapp upgrade, verify whether the parameter `systemd.unified_cgroup_hierarchy=1` is located in */proc/cmdline* or */etc/default/grub*.
 
-1. If that parameter is in one of those files, remove the parameter from the file and run the leapp upgrade process again.
+1. If that parameter is in one of those files, remove the parameter from the file, and then run the Leapp upgrade process again.
 
 > [!IMPORTANT]
-> If the leapp upgrade is still failing without any apparent reason (such as when upgrading from version 7.9 to version 8.10 or from version 8.10 to version 9.4), don't upgrade to the latest version. Instead, try to upgrade to an intermediate version (such as from version 7.9 to version 8.8 or version 8.10 to version 9.2) by specifying the `--target x.y` flag. After the intermediate upgrade is successful, then you can try to upgrade to the latest release.
+> If the Leapp upgrade is still failing for no apparent reason (such as when upgrading from version 7.9 to version 8.10 or from version 8.10 to version 9.4), don't upgrade to the latest version. Instead, try to upgrade to an intermediate version (such as from version 7.9 to version 8.8 or version 8.10 to version 9.2) by specifying the `--target x.y` flag. After the intermediate upgrade is successful, you can try to upgrade to the latest release.
 
 ## Related content
 

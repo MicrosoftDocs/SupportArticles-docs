@@ -1,11 +1,10 @@
 ---
 title: Decommission a Windows enterprise CA
-description: Provides step-by-step instructions for removing a CA from Windows Server 2012 R2.
-ms.date: 12/26/2023
+description: Provides step-by-step instructions for removing a CA from Windows Server.
+ms.date: 09/03/2024
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, lanaef, alrad, ckinder
 ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory Certificate Services (ADCS), csstroubleshoot
 ---
@@ -56,7 +55,23 @@ By default, an enterprise CA does not store certificate requests. However, an ad
 
 1. To stop Certificate Services, select **Start**, select **Run**, type *cmd*, and then select **OK**.
 2. At the command prompt, type *certutil -shutdown*, and then press Enter.
-3. At the command prompt, type *certutil -getreg CA\CSP\Provider*, and then press Enter. Note the **Provider** value in the output. For example:
+3. At the command prompt, type *certutil -getreg DBDirectory*, and then press Enter. Note the **DBLogDirectory** value in the output. For example:
+
+   ```output
+   HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CertSvc\Configuration\DBDirectory:
+     DBDirectory REG_SZ = C:\Windows\system32\CertLog
+   CertUtil: -getreg command completed successfully.
+   ```
+
+4. At the command prompt, type *certutil -getreg DBLogDirectory*, and then press Enter. Note the **DBLogDirectory** value in the output. For example:
+
+   ```output
+   HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CertSvc\Configuration\DBLogDirectory:
+     DBLogDirectory REG_SZ = C:\Windows\system32\CertLog
+   CertUtil: -getreg command completed successfully.
+   ```
+
+5. At the command prompt, type *certutil -getreg CA\CSP\Provider*, and then press Enter. Note the **Provider** value in the output. For example:
 
    ```output
    HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CertSvc\Configuration\Fabrikam Root CA1 G2\csp:
@@ -95,14 +110,28 @@ By default, an enterprise CA does not store certificate requests. However, an ad
      NetMon  
      MS IIS DCOM ClientAdministratorS-1-5-21-842925246-1715567821-839522115-500
 
-4. Delete the private key that is associated with the CA. To do this, at a command prompt, type the following command, and then press Enter:
+6. Delete the private key that is associated with the CA. To do this, at a command prompt, type the following command, and then press Enter:
+
+   If the CA CSP value is **Microsoft Strong Cryptographic Provider**, or **Microsoft Enhanced Cryptographic Provider v1.0**, type the following command, and then press Enter.
+
+   ```console
+    certutil -delkey CertificateAuthorityName
+   ```
+
+   If the CA CSP value is **Microsoft Software Key Storage Provider**, type the following command, and then press Enter.  
+
+   ```console
+    certutil -CSP KSP -delkey CertificateAuthorityName
+    ```
+
+   If the CA CSP value is something else, type the following command, and then press Enter.
 
     ```console
-    certutil -delkey CertificateAuthorityName
+    certutil -CSP \<PROVIDER NAME\> -delkey CertificateAuthorityName
     ```
 
     > [!NOTE]
-    > If your CA name contains spaces, enclose the name in quotation marks.
+    > If your CA name contains spaces, enclose the name in quotation marks. If your CA has multiple keys you need to run the command above for each key.
 
     In this example, the certificate authority name is **Windows2000 Enterprise Root CA**. Therefore, the command line in this example is as follows:
 
@@ -110,8 +139,8 @@ By default, an enterprise CA does not store certificate requests. However, an ad
     certutil -delkey "Windows2000 Enterprise Root CA"
     ```
 
-5. List the key stores again to verify that the private key for your CA was deleted.
-6. After you delete the private key for your CA, uninstall Certificate Services. To do this, follow these steps, depending on the version of Windows Server that you are running.
+7. List the key stores again to verify that the private key for your CA was deleted.
+8. After you delete the private key for your CA, uninstall Certificate Services. To do this, follow these steps, depending on the version of Windows Server that you are running.
 
    If you are uninstalling an enterprise CA, membership in Enterprise Admins, or the equivalent, is the minimum that is required to complete this procedure. For more information, see [Implement Role-Based Administration](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732590(v=ws.11)).
 
@@ -121,7 +150,7 @@ By default, an enterprise CA does not store certificate requests. However, an ad
    2. Under **Roles Summary**, select **Remove Roles** to start the Remove Roles Wizard, and then select **Next**.
    3. Select to clear the **Active Directory Certificate Services** check box, and then select **Next**.
    4. On the **Confirm Removal Options** page, review the information, and then select **Remove**.
-   5. If Internet Information Services (IIS) is running and you are prompted to stop the service before you continue with the uninstall process, select **OK**.
+   5. If **Certification Authority Web Enrollment** role is configured and running and you are prompted to uninstall this role before you continue with the uninstall process, select **OK**, uninstall this role first then repeat steps above.
    6. After the Remove Roles Wizard is finished, restart the server. This completes the uninstall process.
 
    The procedure is slightly different if you have multiple Active Directory Certificate Services (AD CS) role services installed on a single server. To uninstall a CA but keep other AD CS role services, follow these steps.
@@ -254,13 +283,11 @@ To remove all Certification Services objects from Active Directory, follow these
 After you delete the CA objects, you have to delete the CA certificates that are published to the `NtAuthCertificates` object. Use either of the following commands to delete certificates from within the `NTAuthCertificates` store:
 
 ```console
-certutil -viewdelstore " ldap:///CN=NtAuthCertificates,CN=Public Key
-Services,...,DC=ForestRoot,DC=com?cACertificate?base?objectclass=certificationAuthority"
+certutil -viewdelstore "ldap:///CN=NtAuthCertificates,CN=Public Key Services,CN=Services,CN=Configuration,DC=ForestRoot,DC=com?cACertificate?base?objectclass=certificationAuthority"
 ```
 
 ```console
-certutil -viewdelstore " ldap:///CN=NtAuthCertificates,CN=Public Key
-Services,...,DC=ForestRoot,DC=com?cACertificate?base?objectclass=pKIEnrollmentService"
+certutil -viewdelstore "ldap:///CN=NtAuthCertificates,CN=Public Key Services,CN=Services,CN=Configuration,DC=ForestRoot,DC=com?cACertificate?base?objectclass=pKIEnrollmentService"
 ```
 
 > [!NOTE]
@@ -278,24 +305,15 @@ certutil -viewdelstore -? | findstr "CN=NTAuth"
 
 When Certification Services is uninstalled, the CA database is left intact so that the CA can be re-created on another server.
 
-To remove the CA database, delete the *%systemroot%\System32\Certlog* folder.
+To remove the CA database, delete the **Certlog** folder containing the database and log. This is stored by default in *%systemroot%\System32\Certlog* folder.  
+
+You can find the location of the database and logs folder from the [Step 5 - Uninstall Certificate Services from the server](#step-5---uninstall-certificate-services-from-the-server) section.
 
 ## Step 9 - Clean up domain controllers
 
 After the CA is uninstalled, the certificates that were issued to domain controllers must be removed.
 
-To remove certificates that were issued to the Windows Server 2000 domain controllers, use the Dsstore.exe utility from the Microsoft Windows 2000 Resource Kit.
-
-To remove certificates that have been issued to the Windows Server 2000 domain controllers, follow these steps:
-
-1. Select **Start**, select **Run**, type *cmd*, and then press ENTER.
-2. On a domain controller, type *dsstore -dcmon* at the command prompt, and then press ENTER.
-3. Type *3*, and then press ENTER. This action deletes all certificates on all domain controllers.
-
-    > [!NOTE]
-    > The Dsstore.exe utility will try to validate domain controller certificates that are issued to each domain controller. Certificates that do not validate are removed from their respective domain controller.
-
-To remove certificates that were issued to the Windows Server 2003 domain controllers, follow these steps.
+To remove certificates that were issued to the Windows Server 2003 and newer domain controllers, follow these steps.
 
 > [!IMPORTANT]
 > Do not use this procedure if you are using certificates that are based on version 1 domain controller templates.
@@ -305,17 +323,10 @@ To remove certificates that were issued to the Windows Server 2003 domain contro
 
     Certutil.exe tries to validate all the DC certificates that are issued to the domain controllers. Certificates that do not validate are removed.
 
-To force application of the security policy, follow these steps:
+To force application of the group policy, follow these steps:
 
 1. Select **Start**, select **Run**, type *cmd* in the **Open** box, and then press ENTER.
-2. At a command prompt, type the appropriate command for the corresponding version of the operating system, and then press ENTER:
-   - For Windows Server 2000:
-
-     ```console
-     secedit /refreshpolicy machine_policy /enforce
-     ```
-
-   - For Windows Server 2003:
+2. At a command prompt, type the following command, and then press ENTER:
 
      ```console
      gpupdate /force

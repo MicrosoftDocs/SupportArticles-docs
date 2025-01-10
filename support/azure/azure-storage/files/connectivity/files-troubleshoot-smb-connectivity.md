@@ -4,7 +4,7 @@ description: Troubleshoot problems connecting to and accessing SMB Azure file sh
 services: storage
 ms.service: azure-file-storage
 ms.custom: sap:Connectivity, devx-track-azurepowershell, linux-related-content
-ms.date: 04/28/2024
+ms.date: 09/12/2024
 ms.reviewer: kendownie, jarrettr, v-weizhu, v-six, hanagpal
 ---
 # Troubleshoot Azure Files connectivity and access issues (SMB)
@@ -58,17 +58,11 @@ Verify that virtual network and firewall rules are configured properly on the st
 
 #### Cause 3: Share-level permissions are incorrect when using identity-based authentication
 
-If users are accessing the Azure file share using Active Directory (AD) or Microsoft Entra Domain Services authentication, access to the file share fails with the "Access is denied" error if share-level permissions are incorrect.
+If users are accessing the Azure file share using identity-based authentication, access to the file share fails with the "Access is denied" error if share-level permissions are incorrect.
 
 #### Solution for cause 3
 
-Validate that permissions are configured correctly:
-
-- **Active Directory Domain Services (AD DS)** see [Assign share-level permissions](/azure/storage/files/storage-files-identity-ad-ds-assign-permissions).
-
-    Share-level permission assignments are supported for groups and users that have been synced from AD DS to Microsoft Entra ID using Microsoft Entra Connect Sync or Microsoft Entra Connect cloud sync. Confirm that groups and users being assigned share-level permissions aren't unsupported "cloud-only" groups.
-
-- **Microsoft Entra Domain Services** see [Assign share-level permissions](/azure/storage/files/storage-files-identity-auth-active-directory-domain-service-enable?tabs=azure-portal#assign-share-level-permissions).
+Validate that share-level permissions are configured correctly. See [Assign share-level permissions](/azure/storage/files/storage-files-identity-assign-share-level-permissions). Share-level permission assignments are supported for groups and users that have been synced from AD DS to Microsoft Entra ID using Microsoft Entra Connect Sync or Microsoft Entra Connect cloud sync. Confirm that groups and users being assigned share-level permissions aren't unsupported "cloud-only" groups.
 
 ### <a id="error53-67-87"></a>Error 53, Error 67, or Error 87 when you mount or unmount an Azure file share
 
@@ -143,7 +137,7 @@ Revert the `LmCompatibilityLevel` value to the default value of 3 in the followi
 
 ### <a id="error-0x800704b3"></a> Failed with error code 0x800704b3
 
-When you try to mount an Azure file share, you recieve the following error:
+When you try to mount an Azure file share, you receive the following error:
 
 > Error code: 0x800704b3  
 > Symbolic Name: ERROR_NO_NET_OR_BAD_PATH  
@@ -274,7 +268,23 @@ If virtual network (VNET) and firewall rules are configured on the storage accou
 
 ##### Solution for cause 2
 
-Verify that the VNET and firewall rules are configured properly on the storage account. To test if virtual networks or firewall rules are causing the issue, temporarily change the setting on the storage account to **Allow access from all networks**. To learn more, see [Configure Azure Storage firewalls and virtual networks](/azure/storage/common/storage-network-security).
+Verify that the VNET and firewall rules are configured properly on the storage account and the port 445 is allowlisted. To test if virtual networks or firewall rules cause the issue, you can temporarily change the setting on the storage account to **Allow access from all networks**. To learn more, see [Configure Azure Storage firewalls and virtual networks](/azure/storage/common/storage-network-security).
+
+##### Cause 3: SMB client is configured to use NTLMv1
+
+Azure Files only supports NTLMv2 and Kerberos for SMB file shares. Kernel 4.4 and later versions enable NTLMv2 by default and disable LANMAN. Under default configurations, NTLMv1 is kept as a negotiation only option. For more information, see your OS documentation.
+
+##### Solution for cause 3
+
+Ensure that SMB mount commands don't override the default NTLMv2 authentication via the `sec` option. The `sec` option should never use `ntlm` or `ntlmi` when connecting to SMB Azure file shares. If you set global options in */etc/samba/smb.conf*, ensure that you don't disable NTLMv2.
+
+##### Cause 4: Storage account key access is disabled or disallowed via a policy
+
+When storage account key access is disabled or disallowed for a storage account, SAS tokens and access keys won't work.
+
+##### Solution for cause 4
+
+Use identity-based authentication. The file share must be joined to an on-premises Active Directory Domain Servies (AD DS) or Microsoft Entra Domain Services domain, and the Linux client must be [configured to use Kerberos authentication](/azure/storage/files/storage-files-identity-auth-linux-kerberos-enable).
 
 #### <a id="error115"></a>"Mount error(115): Operation now in progress" when you mount Azure Files by using SMB 3.x
 

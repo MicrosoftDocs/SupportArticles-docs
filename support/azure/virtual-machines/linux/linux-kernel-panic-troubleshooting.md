@@ -4,13 +4,15 @@ description: Discusses multiple conditions that can lead to a kernel panic and p
 author: divargas-msft
 ms.author: adelgadohell
 ms.topic: troubleshooting
-ms.date: 03/06/2023
-ms.service: virtual-machines
+ms.date: 11/06/2024
+ms.service: azure-virtual-machines
 ms.custom: sap:My VM is not booting, linux-related-content
 ms.collection: linux
 ---
 
 # Kernel panic in Azure Linux VMs
+
+**Applies to:** :heavy_check_mark: Linux VMs
 
 This article discusses multiple conditions that can lead to a kernel panic and provides troubleshooting guidance.
 
@@ -51,6 +53,7 @@ Some of the most common kernel panic events:
 | **Kernel panic - not syncing: nmi watchdog** | The system received an NMI, and either kernel.panic_on_timeout or kernel.panic_on_oops was set (not the default values). |
 | **Kernel panic - not syncing: Fatal Machine check** | A machine check exception event has been raised for a fatal condition. |
 | **Kernel panic - not syncing: Attempted to kill init!** | The init process is the first process to be started and should never exit. |
+| **Kernel panic - not syncing: VFS: Unable to mount root fs on unknown-block(0,0)**| It's assumed that the kernel will use an initramfs to mount the rootfs. This error occurs when the kernel has no initramfs. |
 
 ## Scenario 1: Kernel panic occurs at boot time
 

@@ -4,7 +4,7 @@ description: Learn how to troubleshoot DNS failures across an AKS cluster in rea
 ms.reviewer: qasimsarfraz, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Connectivity
-ms.date: 06/12/2024
+ms.date: 08/09/2024
 ---
 # Troubleshoot DNS failures across an AKS cluster in real time
 
@@ -32,11 +32,11 @@ The following table outlines common symptoms that you might observe in an AKS cl
 - A tool to connect to the cluster, such as the Kubernetes command-line tool [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/).
 
     To install kubectl by using [Azure CLI](/cli/azure/install-azure-cli), run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
-- [Inspektor Gadget](https://www.inspektor-gadget.io/).
+- [Inspektor Gadget](https://go.microsoft.com/fwlink/?linkid=2260072).
 
     This tool is used in most troubleshooting steps covered in this article, so make sure to install it on the cluster. To install it on an AKS cluster, see [How to install Inspektor Gadget in an AKS cluster](../logs/capture-system-insights-from-aks.md#how-to-install-inspektor-gadget-in-an-aks-cluster).
 - Familiarity with [gadgets](../logs/capture-system-insights-from-aks.md#gadgets).
-- [Inspektor Gadget DNS gadget](https://www.inspektor-gadget.io/docs/v0.28.0/builtin-gadgets/trace/dns/).
+- [Inspektor Gadget DNS gadget](https://go.microsoft.com/fwlink/?linkid=2260317).
 
   It's used in all the following troubleshooting steps.
 
@@ -61,8 +61,8 @@ Here are the explanations of the command parameters:
 - `--filter qr:R`: Matches only DNS responses.
 - `--filter qtype:A`: Matches only IPv4 host addresses.
 - `--filter 'rcode:!No Error'`: Matches DNS responses that don't contain `No Error`. For more information, see `gopacket`
-  for [possible values of rcode](https://github.com/google/gopacket/blob/32ee38206866f44a74a6033ec26aeeb474506804/layers/dns.go#L151-L194)
-  or the [relevant RFC](https://github.com/google/gopacket/blob/32ee38206866f44a74a6033ec26aeeb474506804/layers/dns.go#L128-L148).
+  for [possible values of rcode](https://go.microsoft.com/fwlink/?linkid=2282201)
+  or the [relevant RFC](https://go.microsoft.com/fwlink/?linkid=2282202).
 
 Here are some causes of unsuccessful DNS responses:
 
@@ -124,7 +124,7 @@ You can use the `ID`, `RCODE`, and `LATENCY` values to determine the health of t
 - A DNS query (`QR=Q`) with an `ID` (for example, `b256`) has no matching response.
 - A DNS response (`QR=R`) has a high value under the `LATENCY` column (for example, `500.821223ms`).
 - A DNS response (`QR=R`) has an `RCODE` other than `No Error`, for example, "Server failure" and "Query refused." For more
-  information, see `gopacket` for [possible values of rcode](https://github.com/google/gopacket/blob/32ee38206866f44a74a6033ec26aeeb474506804/layers/dns.go#L151-L194).
+  information, see `gopacket` for [possible values of rcode](https://go.microsoft.com/fwlink/?linkid=2282201).
 
 ## Step 4: Verify DNS queries get responses in a timely manner
 

@@ -4,7 +4,7 @@ description: Describes an issue that occurs when you try to upgrade from an olde
 ms.date: 08/14/2020
 author: genlin
 ms.author: genli
-ms.service: site-recovery
+ms.service: azure-site-recovery
 ms.reviewer: saurse
 ms.custom: sap:I need help with Azure Backup
 ---

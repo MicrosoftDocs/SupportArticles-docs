@@ -1,12 +1,11 @@
 ---
 title: Troubleshoot live migration issues
 description: Provides information on solving the problem of live migration in windows server 2016.
-ms.date: 06/17/2024
+ms.date: 09/13/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
-ms.reviewer: adjudele, cpuckett, kaushika, shsadash
+ms.reviewer: adjudele, cpuckett, kaushika, shsadash, rblume
 ms.custom: sap:Clustering and High Availability\Hyper-V Clusters and VM Mobility (Migration), csstroubleshoot
 ---
 # Troubleshoot live migration issues
@@ -30,7 +29,7 @@ _Original KB number:_ &nbsp; 4558514
   Compare-VM -Name <vm_name> -DestinationHost <host_name>
   ```
 
-- Check whether any group policy object is preventing the migration from occurring. Verify that the following policy have at least the default settings.
+- Check whether any group policy object is preventing the migration from occurring. Verify that the following policy has at least the default settings.
   - Open *GPEDIT.MSC* and navigate to **Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment**.  
     Open **Create symbolic links** and check whether the following user accounts are listed:  
     - Administrators  
@@ -271,6 +270,22 @@ Here's how to fix this issue:
      PS C:\> Set-VMProcessor TestVM -CompatibilityForMigrationEnabled $true  
     ```
 
+#### Failed to live migrate a VM between nodes with different microcode (uCode) revisions
+
+**Description**
+
+VM live migration fails with the error messages:
+
+> VM cannot be moved to destination computer
+
+> HW on destination is not compatible with HW requirements of VM
+
+When a Hyper-V VM is created, processor features are exposed to guest VMs. At boot time, guest VM kernels make decisions based on the availability of these features. Migration of a VM that is booted on the new system with side channel mitigation features to an old system without side channel mitigation features can expose the customer to these side channel attacks, and is prevented.
+
+**Action**
+
+As a workaround at a cluster level, the best option is to live migrate VMs only from old to new microcode (uCode) revisions. Since VMs on the old hosts have software mitigations for side channel attacks enabled, they won't become vulnerable when moved to new hosts.
+
 #### Failed live migrate because "Virtual Machine Name" is using processor-specific features not supported on host "Node 1."
 
 **Description**
@@ -285,7 +300,7 @@ To allow for migration of this virtual machine to a server with a different proc
 
 Here's how to fix this issue:
 
-1. Check if the processor compatibility is flagged. Open the **Hyper-V Manager** console, select **Virtual Machine Settings** > **Processor** > **Processor Compatibility**.
+1. Check if the processor compatibility is flagged. Open the **Hyper-V Manager** console and select **Virtual Machine Settings** > **Processor** > **Processor Compatibility**.
 2. Make sure the BIOS of the host has the same settings.
 3. Make sure the **Spectre** or **Meltdown** patch exposes different features of the CPU. For more information, see [Protecting guest virtual machines from CVE-2017-5715 (branch target injection)](/virtualization/hyper-v-on-windows/CVE-2017-5715-and-hyper-v-vms).
 4. Run the [Get-SpeculationControlSettings](https://support.microsoft.com/help/4074629) cmdlet and check the results. It should be the same on all nodes.  
@@ -388,7 +403,7 @@ Here's how to fix this issue:
 
 1. Enable Kerberos Authentication for live migrations on both Hyper-V hosts. To do so, select **Hyper-V Settings**  > **Live Migrations** > **Advanced Features** > **Use Kerberos under Authentication Protocol**.
 2. Set Constrained Delegation for both Hyper-V hosts by following these steps:
-      1. Open **Active Directory Users and Computers**, find the Hyper-V host computer account. Open the **Properties** dialog, and select the **Delegation** tab.
+      1. Open **Active Directory Users and Computers** and find the Hyper-V host computer account. Open the **Properties** dialog, and select the **Delegation** tab.
       2. Select the **Trust this computer for delegation to specified services only** and **Use any authentication protocol** options.
       3. Select **Add**, and select the computer account of another Hyper-V host.
       4. Add **cifs** (required to migrate storage) and **Microsoft Virtual System Migration Service** (required to migrate virtual machine).
@@ -494,7 +509,7 @@ If the **cifs.oplocks.enable** option is set to **On**, the `qtree oplocks` cmdl
 Here's how to fix this issue:
 
 1. Replace the **NetApp** filer with a Windows 2016 based File server. Alternatively, update the **NetApp** file to the latest `Ontap` 9.*. version.
-2. Make sure that the Windows Server 2016 based Hyper-V nodes are updated with the latest cumulative update. Similar issues are resolved after you applying [CU Feb 2019](https://support.microsoft.com/help/4487044/) or a later version.  
+2. Make sure that the Windows Server 2016 based Hyper-V nodes are updated with the latest cumulative update. Similar issues are resolved after you apply [CU Feb 2019](https://support.microsoft.com/help/4487044/) or a later version.  
 
 #### Failed live migration of 'Virtual Machine VM1' at migration source 'CLU8N1' with error codes 80042001 and 8007000D
 
@@ -660,7 +675,7 @@ Wait to finish other live migrations or increase the number of simultaneous live
 
 **Resolution**
 
-To fix this issue, open the **Hyper-V Manager** console, click **Hyper-V Settings** > **Live Migrations** **>** **Simultaneous live migrations**.
+To fix this issue, open the **Hyper-V Manager** console and click **Hyper-V Settings** > **Live Migrations** **>** **Simultaneous live migrations**.
 > [!NOTE]
 > Consider host performance when changing this number.  
 

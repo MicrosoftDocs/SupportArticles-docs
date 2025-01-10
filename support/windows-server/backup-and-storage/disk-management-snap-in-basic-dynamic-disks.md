@@ -5,9 +5,8 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Partition and volume management , csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Partition and volume management, csstroubleshoot
 ---
 # How to use the Disk Management Snap-in to manage Basic and Dynamic Disks  
 

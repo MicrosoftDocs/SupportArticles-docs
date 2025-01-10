@@ -1,8 +1,8 @@
 ---
 title: Can't delete a guide in Dynamics 365 Guides
 description: Provides a resolution for an issue where you can't delete a guide because it's associated with another record in Dynamics 365 Guides.
-ms.author: davepinch
-author: davepinch
+author: prashantyvr
+ms.author: prashan
 ms.reviewer: v-wendysmith, mhart
 ms.date: 11/14/2023
 ms.custom: sap:Application Functionality

@@ -4,7 +4,6 @@ description: Works around an HTTP 400 error that the HTTP request header is too 
 ms.date: 05/14/2021
 ms.custom: sap:WWW Authentication and Authorization\Windows Authentication
 ms.reviewer: ivanpash
-ms.subservice: www-administration-management
 ---
 # HTTP 400 Bad Request (Request Header too long) responses to HTTP requests
 

@@ -1,11 +1,10 @@
 ---
 title: Reset domain controller's password with Netdom.exe
 description: This article explains how to use Netdom.exe to reset machine account passwords of a domain controller in Windows Server.
-ms.date: 12/26/2023
+ms.date: 11/06/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:Windows Security Technologies\Netlogon including Secure Channel and DC Locator issues, csstroubleshoot
 ---
@@ -21,7 +20,7 @@ Each Windows-based computer maintains a machine account password history that co
 
 This behavior also applies to replication between domain controllers of the same domain. If the domain controllers that aren't replicating reside in two different domains, look at the trust relationship more closely.
 
-You can't change the machine account password by using the Active Directory Users and Computers snap-in. But you can reset the password by using the Netdom.exe tool. The Netdom.exe tool is included in the Windows Support Tools for Windows Server 2003, in Windows Server 2008 R2, and in Windows Server 2008.
+You can't change the machine account password by using the Active Directory Users and Computers snap-in. But you can reset the password by using the Netdom.exe tool. The Netdom.exe tool is included in the Windows Support Tools for Windows Server 2003 and is integrated into later operating system versions.
 
 The Netdom.exe tool resets the account password on the computer locally (known as a *local secret*). It writes this change to the computer's computer account object on a Windows domain controller that's in the same domain. Simultaneously writing the new password to both places ensures that at least the two computers involved in the operation are synchronized. And starting Active Directory replication ensures that other domain controllers receive the change.
 
@@ -43,7 +42,7 @@ You must run the tool locally from the Windows-based computer whose password you
     > - After you restart and verify that the password has been successfully reset, you can restart the Kerberos Key Distribution Center (KDC) service and set its startup type back to Automatic. This forces the domain controller that has the incorrect computer account password to contact another domain controller for a Kerberos ticket.
     > - You may have to disable the Kerberos Key Distribution Center service on all domain controllers except one. If you can, don't disable the domain controller that has the global catalog, unless it is experiencing problems.
 
-3. Remove the Kerberos ticket cache on the domain controller where you receive the errors. You can do it by restarting the computer or by using the KLIST, Kerbtest, or KerbTray tools. KLIST is included in Windows Server 2008 and in Windows Server 2008 R2. For Windows Server 2003, KLIST is available as a free download in the Windows Server 2003 Resource Kit Tools.
+3. Remove the Kerberos ticket cache on the domain controller where you receive the errors. You can do it by restarting the computer or by using the KLIST, Kerbtest, or KerbTray tools. KLIST is included in Windows Server 2008 and later versions, KLIST is available as a free download in the Windows Server 2003 Resource Kit Tools.
 
 4. At a command prompt, type the following command:
 

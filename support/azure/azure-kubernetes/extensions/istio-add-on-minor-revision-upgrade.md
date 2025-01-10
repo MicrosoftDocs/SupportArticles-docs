@@ -7,7 +7,6 @@ ms.author: kochhars
 editor: v-jsitser
 ms.reviewer: fuyuanbie, shasb, nshankar, ddama, v-leedennis
 ms.service: azure-kubernetes-service
-ms.subservice: troubleshoot-extensions-add-ons
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot minor revision upgrades of the Istio add-on so that I can use the Istio service mesh successfully.
 ---
 # Istio service mesh add-on minor revision upgrade troubleshooting

@@ -5,12 +5,14 @@ ms.date: 05/09/2022
 author: mukeshnandams
 ms.author: genli
 ms.reviewer: mnanda, mahuss
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.custom: sap:VM Performance
 ---
 
 # Troubleshoot high memory issues on Azure Windows virtual machines
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 Performance issues occur in different operating systems or applications, and every issue requires a unique approach to troubleshoot. CPU, memory, networking, and input/output (I/O) are often key factors when performance issues occur. Each area generates different symptoms (sometimes simultaneously) and requires a different diagnostic approach and solution.
 

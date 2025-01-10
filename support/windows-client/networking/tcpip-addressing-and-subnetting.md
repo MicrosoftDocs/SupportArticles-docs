@@ -1,12 +1,11 @@
 ---
 title: TCP/IP addressing and subnetting
 description: A general introduction to the concepts of IP networks and subnetting.
-ms.date: 12/26/2023
+ms.date: 10/28/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, anrath
 ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 adobe-target: true
 ---
@@ -14,7 +13,7 @@ adobe-target: true
 
 This article is intended as a general introduction to the concepts of Internet Protocol (IP) networks and subnetting. A glossary is included at the end of article.
 
-_Applies to:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Supported versions of Windows Server and Windows Client  
 _Original KB number:_ &nbsp; 164015
 
 ## Summary
@@ -68,13 +67,13 @@ Almost all decimal subnet masks convert to binary numbers that are all ones on t
 | 255.255.255.192  | 1111111.11111111.1111111.11000000  |
 | 255.255.255.224  | 1111111.11111111.1111111.11100000  |
 
-Internet RFC 1878 (available from [InterNIC-Public Information Regarding Internet Domain Name Registration Services](https://www.internic.net)) describes the valid subnets and subnet masks that can be used on TCP/IP networks.
+Internet [RFC 1878](https://www.rfc-editor.org/rfc/rfc1878) describes the valid subnets and subnet masks that can be used on TCP/IP networks.
 
 ## Network classes
 
-Internet addresses are allocated by the [InterNIC](https://www.internic.net), the organization that administers the Internet. These IP addresses are divided into classes. The most common of them are classes A, B, and C. Classes D and E exist, but aren't used by end users. Each of the address classes has a different default subnet mask. You can identify the class of an IP address by looking at its first octet. Following are the ranges of Class A, B, and C Internet addresses, each with an example address:
+IP addresses are allocated by the [InterNIC](https://www.internic.net), the organization that administers the Internet. These IP addresses are divided into classes. The most common of them are classes A, B, and C. Classes D and E exist, but aren't used by end users. Each of the address classes has a different default subnet mask. You can identify the class of an IP address by looking at its first octet. Following are the ranges of Class A, B, and C IP addresses, each with an example address:
 
-- Class A networks use a default subnet mask of 255.0.0.0 and have 0-127 as their first octet. The address 10.52.36.11 is a class A address. Its first octet is 10, which is between 1 and 126, inclusive.
+- Class A networks use a default subnet mask of 255.0.0.0 and have 0-127 as their first octet. The address 10.52.36.11 is a class A address. Its first octet is 10, which is between 0 and 127, inclusive.
 
 - Class B networks use a default subnet mask of 255.255.0.0 and have 128-191 as their first octet. The address 172.16.52.63 is a class B address. Its first octet is 172, which is between 128 and 191, inclusive.
 
@@ -119,11 +118,23 @@ If the result of this process determines the destination to be a local host, the
 
 TCP/IP network problems are often caused by incorrect configuration of the three main entries in a computer's TCP/IP properties. By understanding how errors in TCP/IP configuration affect network operations, you can solve many common TCP/IP problems.
 
-Incorrect Subnet Mask: If a network uses a subnet mask other than the default mask for its address class, and a client is still configured with the default subnet mask for the address class, communication will fail to some nearby networks but not to distant ones. As an example, if you create four subnets (such as in the subnetting example) but use the incorrect subnet mask of 255.255.255.0 in your TCP/IP configuration, hosts won't be able to determine that some computers are on different subnets than their own. In this situation, packets destined for hosts on different physical networks that are part of the same Class C address won't be sent to a default gateway for delivery. A common symptom of this issue is when a computer can communicate with hosts that are on its local network and can talk to all remote networks except those networks that are nearby and have the same class A, B, or C address. To fix this problem, just enter the correct subnet mask in the TCP/IP configuration for that host.
+### Incorrect subnet mask
 
-Incorrect IP Address: If you put computers with IP addresses that should be on separate subnets on a local network with each other, they won't be able to communicate. They'll try to send packets to each other through a router that can't forward them correctly. A symptom of this problem is a computer that can talk to hosts on remote networks, but can't communicate with some or all computers on their local network. To correct this problem, make sure all computers on the same physical network have IP addresses on the same IP subnet. If you run out of IP addresses on a single network segment, there are solutions that go beyond the scope of this article.
+If a network uses a subnet mask other than the default mask for its address class, and a client is still configured with the default subnet mask for the address class, communication will fail to some nearby networks but not to distant ones. 
 
-Incorrect Default Gateway: A computer configured with an incorrect default gateway can communicate with hosts on its own network segment. But it will fail to communicate with hosts on some or all remote networks. A host can communicate with some remote networks but not others if the following conditions are true:
+As an example, if you create four subnets (such as in the subnetting example) but use the incorrect subnet mask of 255.255.255.0 in your TCP/IP configuration, hosts won't be able to determine that some computers are on different subnets than their own. In this situation, packets destined for hosts on different physical networks that are part of the same Class C address won't be sent to a default gateway for delivery. 
+
+A common symptom of this issue is when a computer can communicate with hosts that are on its local network and can talk to all remote networks except those networks that are nearby and have the same class A, B, or C address. To fix this problem, just enter the correct subnet mask in the TCP/IP configuration for that host.
+
+### Incorrect IP address
+
+If you put computers with IP addresses that should be on separate subnets on a local network with each other, they won't be able to communicate. They'll try to send packets to each other through a router that can't forward them correctly. A symptom of this problem is a computer that can talk to hosts on remote networks but can't communicate with some or all computers on their local network. 
+
+To correct this problem, make sure all computers on the same physical network have IP addresses on the same IP subnet. If you run out of IP addresses on a single network segment, there are solutions that go beyond the scope of this article.
+
+### Incorrect default gateway
+
+A computer configured with an incorrect default gateway can communicate with hosts on its own network segment. But it will fail to communicate with hosts on some or all remote networks. A host can communicate with some remote networks but not others if the following conditions are true:
 
 - A single physical network has more than one router.
 - The wrong router is configured as a default gateway.
@@ -172,3 +183,5 @@ It is recommended that a system administrator responsible for TCP/IP networks ha
 - TCP/IP--Used broadly, the set of protocols, standards, and utilities commonly used on the Internet and large networks.
 
 - Wide area network (WAN)--A large network that is a collection of smaller networks separated by routers. The Internet is an example of a large WAN.
+
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot SubscriptionPolicyCountExceeded exceptions in Azure
 description: Troubleshoot common errors related to SubscriptionPolicyCountExceeded exceptions when you deploy Azure Cloud Services (classic).
-ms.service: cloud-services
+ms.service: azure-cloud-services-classic
 ms.date: 09/26/2022
 ms.reviewer: chiragpa, v-leedennis
 articleID: 1eb5e3dd-a286-45d4-b653-7f87972b103e

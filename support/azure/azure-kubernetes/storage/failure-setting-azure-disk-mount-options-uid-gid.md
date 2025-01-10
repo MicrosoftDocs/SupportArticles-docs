@@ -1,8 +1,8 @@
 ---
 title: Can't set the uid and gid mounting options on an Azure disk
 description: Troubleshoot Kubernetes failures that are caused when you try to set the uid and GID mounting options on an Azure disk.
-ms.date: 05/25/2022
-ms.reviewer: chiragpa, nickoman, v-leedennis
+ms.date: 10/22/2024
+ms.reviewer: chiragpa, nickoman, wonkilee, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to be able to set the uid and gid mounting options on an Azure disk so that I can successfully use my Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Storage
@@ -13,7 +13,7 @@ This article discusses how to fix issues that occur on a Microsoft Azure Kuberne
 
 ## Symptoms
 
-If you try to set `uid` and `gid` to 999 in the `mountOptions` setting of the Azure disk's configuration file, you receive an error that resembles the following text:
+If you try to set `uid` and `gid` to 1000 in the `mountOptions` setting of the Azure disk's storage class configuration, you receive an error that resembles the following text:
 
 ```output
 Warning  FailedMount             63s                  kubelet, aks-nodepool1-29460110-0  MountVolume.MountDevice failed for volume "pvc-d783d0e4-85a1-11e9-8a90-369885447933" : azureDisk - mountDevice:FormatAndMount failed with mount failed: exit status 32

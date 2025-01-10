@@ -105,7 +105,7 @@ The following restrictions and limitations may affect the support policy of the 
 
   A3: Yes. As documented at the following SVVP website, products that have passed the SVVP requirements for the latest released version of Windows Server are considered supported on all earlier versions of Windows Server that are still supported per Lifecycle Matrix.
 
-  [Server Virtualization](https://www.windowsservercatalog.com/results.aspx?&bCatID=1521&cpID=0&avc=0&ava=0&avq=0&OR=1&PGS=25)
+  [Server Virtualization](https://www.windowsservercatalog.com/svvp/product)
 
   When running SQL Server on a guest operating system, the version of SQL Server must be supported on the version of the guest operating system, according to the requirements that are listed in the respective SQL Server product documentation.
 

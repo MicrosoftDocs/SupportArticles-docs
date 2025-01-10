@@ -6,17 +6,18 @@ documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: ''
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
-ms.date: 05/23/2024
+ms.date: 08/02/2024
 ms.author: genli
-
 ms.custom: sap:VM Performance
 ---
 # Azure Performance Diagnostics (PerfInsights) VM Extension for Windows
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 Azure Performance Diagnostics VM Extension helps collect performance diagnostic data from Windows VMs. The extension performs analysis, and provides a report of findings and recommendations to identify and resolve performance issues on the virtual machine. This extension installs a troubleshooting tool called [PerfInsights](./how-to-use-perfinsights.md).
 
@@ -260,8 +261,19 @@ You should also be able to download the zip file directly from the portal by sel
 * Extension deployment status (in the notification area) might show "Deployment in progress" even though the extension is successfully provisioned.
 
     This issue can be safely ignored, as long as the extension status indicates that the extension is successfully provisioned.
+  
 * You can address some issues during installation by using the extension logs. Extension execution output is logged to files found in the following directory:
 
     `C:\WindowsAzure\Logs\Plugins\Microsoft.Azure.Performance.Diagnostics.AzurePerformanceDiagnostics\<version>`
 
+* If you see the following errors in the Azure portal or Performance Diagnostics extension logs (*AzPerfDiagExtension.log* or *PerfInsights.log*), this usually means the HTTPS certificate chain is broken:
+
+    - > Provisioning Failed - message: Failed to upload the PerfInsights result to Azure storage account.
+
+    - > PerfInsights process exited with code 1700.
+
+    - > Could not establish trust relationship for the SSL/TLS secure channel. The remote certificate is invalid according to the validation procedure.
+
+     To resolve the errors, ensure that you don't have a Network Security Group (NSG) blocking access to the Certificate Authority URLs described in [this list](/azure/security/fundamentals/tls-certificate-changes#will-this-change-affect-me). Or ensure that you don't have any SSL inspection tool in your Network Virtual Appliance or firewall.
+  
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

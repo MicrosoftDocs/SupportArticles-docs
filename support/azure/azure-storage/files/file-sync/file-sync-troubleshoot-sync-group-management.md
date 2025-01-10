@@ -4,7 +4,7 @@ description: Troubleshoot common issues in managing Azure File Sync sync groups,
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 06/03/2024
+ms.date: 12/16/2024
 ms.author: kendownie
 ms.reviewer: v-weizhu
 ms.custom: sap:File Sync
@@ -19,7 +19,7 @@ A sync group defines the sync topology for a set of files. Endpoints within a sy
   
 This error can occur if the Azure File Sync service can't access the storage account due to Server Message Block (SMB) security settings. To enable Azure File Sync to access the storage account, the SMB security settings on the storage account must allow SMB 3.1.1 protocol version, NTLM v2 authentication and AES-128-GCM encryption. To check the SMB security settings on the storage account, see [SMB security settings](/azure/storage/files/files-smb-protocol#smb-security-settings).
 
-<a id="cloud-endpoint-mgmtforbidden"></a>**Cloud endpoint creation fails, with this error: "MgmtForbidden"**
+<a id="cloud-endpoint-mgmtforbidden"></a>**Cloud endpoint creation fails, with the error "MgmtForbidden" or "MgmtStorageAccountInaccessible"**
 
 This error occurs if the Azure File Sync service can't access the storage account.
 
@@ -100,7 +100,7 @@ This error occurs because Azure File Sync doesn't support server endpoints on vo
     compact /u /s
     ```
 
-<a id="-2134376345"></a>**Server endpoint creation fails, with this error: "MgmtServerJobFailed" (Error code: -2134376345 or 0x80C80067)**
+<a id="-2134376345"></a>**Server endpoint creation fails, with this error message: "The server endpoints per server limit has been reached" (Error code: -2134376345 or 0x80C80067)**
 
 This error occurs if the limit of server endpoints per server is reached. Azure File Sync currently supports up to 30 server endpoints per server. For more information, see
 [Azure File Sync scale targets](/azure/storage/files/storage-files-scale-targets?toc=/azure/storage/filesync/toc.json#azure-file-sync-scale-targets).

@@ -2,7 +2,7 @@
 title: Find-AzureRmResource fails or cannot be found after you update Azure modules
 description: Fixes an issue in which the Find-AzureRmResource cmdlet fails or cannot be found after you update Azure modules.
 ms.date: 08/14/2020
-ms.service: automation
+ms.service: azure-automation
 ms.author: genli
 author: genlin
 ms.reviewer: 

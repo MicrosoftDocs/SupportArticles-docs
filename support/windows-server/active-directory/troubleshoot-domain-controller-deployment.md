@@ -5,7 +5,6 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, iainfoulds, daveba, v-lianna
 ms.custom: sap:Active Directory\Domain or forest functional level updates, failures and Advisory, csstroubleshoot
 ms.assetid: 5ab76733-804d-4f30-bee6-cb672ad5075a

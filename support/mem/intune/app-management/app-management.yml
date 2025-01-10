@@ -8,6 +8,8 @@ metadata:
   description: Documentation for troubleshooting common issues with app management in Intune
   ms.service: microsoft-intune 
   ms.topic: landing-page
+  author: helenclu
+  ms.author: luche
   ms.date: 12/05/2023
 
 landingContent:

@@ -4,18 +4,20 @@ description: Provides troubleshooting guidance for GRUB rescue issues with Linux
 services: virtual-machines
 documentationcenter: ''
 author: divargas
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: linux
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.custom: sap:My VM is not booting, linux-related-content
 ms.topic: troubleshooting
-ms.date: 05/30/2024
+ms.date: 10/18/2024
 ms.author: divargas
 ms.reviewer: ekpathak, v-leedennis, v-weizhu
 ---
 
 # Linux virtual machine boots to GRUB rescue
+
+**Applies to:** :heavy_check_mark: Linux VMs
 
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
@@ -101,7 +103,7 @@ This error might be associated with one of the following issues:
 2. Reinstall GRUB and regenerate the corresponding GRUB configuration file by using one of the following commands:
 
 
-    * **RHEL/CentOS/Oracle 7.x/8.x Linux VMs without UEFI (BIOS based - Gen1)**
+    * **RHEL/CentOS/Oracle 7.x/8.x/9.x Linux VMs without UEFI (BIOS based - Gen1)**
 
         ```bash
         grub2-install /dev/sdX
@@ -109,7 +111,7 @@ This error might be associated with one of the following issues:
         sed -i 's/hd2/hd0/g' /boot/grub2/grub.cfg
         ```
 
-    * **RHEL/CentOS/Oracle 7.x/8.x Linux VMs with UEFI (Gen2)**
+    * **RHEL/CentOS/Oracle 7.x/8.x/9.x Linux VMs with UEFI (Gen2)**
 
         ```bash
         yum reinstall grub2-efi-x64 shim-x64
@@ -127,7 +129,7 @@ This error might be associated with one of the following issues:
         sed -i 's/hd2/hd0/g' /boot/grub2/grub.cfg
         ```
 
-    * **Ubuntu 18.04/20.04**
+    * **Ubuntu 20.04/22.04/24.04**
 
         ```bash
         grub-install /dev/sdX

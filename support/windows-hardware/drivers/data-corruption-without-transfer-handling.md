@@ -4,7 +4,6 @@ description: This article provides resolutions for the problem where data corrup
 ms.date: 09/02/2020
 ms.custom: sap:Storage Driver
 ms.reviewer: RonH
-ms.subservice: storage-driver
 ---
 # Data corruption without special handling of the transfer
 

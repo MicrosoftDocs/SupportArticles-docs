@@ -3,7 +3,7 @@ author: genlin
 description: This article helps you troubleshoot a problem in which you are unable to extend the OS volume on an Azure VM that has been encrypted with Azure Disk Encryption.
 ms.author: genli
 ms.date: 05/07/2021
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.topic: troubleshooting
 title: Cannot extend an encrypted OS volume in Windows
@@ -11,6 +11,8 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 
 # Cannot extend an encrypted OS volume in Windows
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article describes a problem that prevents you from easily extending the OS volume on some Azure VMs that have been encrypted with Azure Disk Encryption (ADE). It also describes a workaround that allows you extend the OS volume as needed.
 

@@ -2,10 +2,9 @@
 title: Test agent configuration fails
 description: This article provides resolutions for the error that occurs when you try to configure the test agent to talk to the controller service.
 ms.date: 08/17/2020
-ms.custom: sap:Test Plans
+ms.custom: sap:Manual and Automated Test and runs
 ms.reviewer: georgea
 ms.service: azure-devops
-ms.subservice: ts-test-plans
 ---
 # Test agent configuration fails when you try to configure the test agent
 

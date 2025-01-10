@@ -5,7 +5,7 @@ ms.date: 09/26/2022
 ms.reviewer: 
 author: genlin
 ms.author: genli
-ms.service: cloud-services
+ms.service: azure-cloud-services-classic
 ms.custom: sap:Development
 ---
 # ASP.NET SignalR application is not working in Azure cloud service

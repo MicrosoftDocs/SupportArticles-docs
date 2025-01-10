@@ -6,17 +6,18 @@ documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: ''
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.topic: troubleshooting
 ms.tgt_pltfrm: na
 ms.workload: infrastructure-services
-ms.date: 02/18/2024
+ms.date: 10/14/2024
 ms.author: genli
-ms.reviewer: yutorigo, v-weizhu
+ms.reviewer: yutorigo, sinhamanisha, v-weizhu
 ms.custom: sap:VM restarted or stopped unexpectedly
 ---
-
 # Understand a system reboot for Azure VM
+
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
 Azure virtual machines (VMs) might sometimes reboot for no apparent reason, without evidence of your having initiated the reboot operation. This article lists the actions and events that can cause VMs to reboot and provides insight into how to avoid unexpected reboot issues or reduce the impact of such issues.
 
@@ -57,7 +58,8 @@ However, some updates do require a reboot. In such cases, the VMs are shut down 
 To understand what Azure planned maintenance is and how it can affect the availability of your Linux VMs, see the articles listed here. The articles provide background about the Azure planned maintenance process and how to schedule planned maintenance to further reduce the impact.
 
 - [Planned maintenance for VMs in Azure](/azure/virtual-machines/maintenance-and-updates?bc=/azure/virtual-machines/windows/breadcrumb/toc.json&toc=/azure/virtual-machines/windows/toc.json)
-- [How to schedule planned maintenance on Azure VMs](/azure/virtual-machines/maintenance-and-updates?bc=/azure/virtual-machines/windows/breadcrumb/toc.json&toc=/azure/virtual-machines/windows/toc.json)
+- [How to schedule planned maintenance on Azure Windows VMs](/azure/virtual-machines/windows/scheduled-events)
+- [How to schedule planned maintenance on Azure Linux VMs](/azure/virtual-machines/linux/scheduled-events)
 
 ### Memory-preserving updates
 
@@ -100,9 +102,9 @@ Because some host server faults can be specific to that server, a repeated VM re
 
 ### Auto-recovery
 
-If the host server cannot reboot for any reason, the Azure platform initiates an auto-recovery action to take the faulty host server out of rotation for further investigation.
+The Azure platform is designed to handle host node issues with minimal impact on VM performance. When a host node encounters a problem, Azure first attempts the least disruptive recovery method, which is to reboot the host. If rebooting the host isn't possible or if the original issue is hardware-related, the platform service heals all VMs on the affected host to a healthy node. While rebooting a host generally has a lower impact, service healing VMs can be more complex and time-consuming, depending on the number of VMs, their deployment constraints, and local resource availability. Service healing is typically used as a last resort for hardware failures because it ensures that VMs continue to operate without significant downtime.
 
-All VMs on that host are automatically relocated to a different, healthy host server. Although this process typically completes within 15 minutes, the time needed for recovery may vary depending on several factors, including the size of the host memory and the recovery methods employed. To learn more about the auto-recovery process, see [Auto-recovery of VMs](https://azure.microsoft.com/blog/service-healing-auto-recovery-of-virtual-machines).
+If a host server can't reboot, Azure initiates an automatic recovery action to take the faulty host out of rotation for further investigation. During this auto-recovery process, all VMs on the host are automatically relocated to another healthy host server. While this process usually completes within 15 minutes, the recovery time can vary based on factors such as the host's memory size and the recovery methods used. For more details about how Azure handles these scenarios, see [Service Healing – Auto-recovery of Virtual Machines](https://azure.microsoft.com/blog/service-healing-auto-recovery-of-virtual-machines/).
 
 ### Unplanned maintenance
 
@@ -127,6 +129,6 @@ In rare circumstances, a widespread issue can affect multiple servers in an Azur
 
 ## Diagnose VM Restarts
 
-You can use the Diagnose and Solve blade on the VM blade to run additional diagnostics. This may uncover more specific reasons for your recent VM restart. If there is any Guest OS issue, please collect memory dump and contact support.
+You can use the Diagnose and Solve blade on the VM blade to run additional diagnostics. This may uncover more specific reasons for your recent VM restart. If there is any Guest OS issue, collect memory dump and contact support.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

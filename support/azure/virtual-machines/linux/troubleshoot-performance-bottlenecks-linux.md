@@ -3,12 +3,14 @@ title: Troubleshoot performance issues and isolate bottlenecks in Linux
 description: Troubleshoot CPU, memory, and disk input and output performance issues and isolate bottlenecks on Linux virtual machines in Azure.
 ms.date: 02/15/2024
 ms.reviewer: azurevmlnxcic, v-leedennis
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:VM Performance, linux-related-content
 author: msLinuxNinja
 ms.author: esflores
 ---
 # Troubleshoot performance issues and isolate bottlenecks in Linux
+
+**Applies to:** :heavy_check_mark: Linux VMs
 
 ## Performance issues and bottlenecks
 

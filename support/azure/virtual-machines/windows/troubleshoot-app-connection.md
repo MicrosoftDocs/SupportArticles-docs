@@ -8,16 +8,17 @@ manager: dcscontentpm
 tags: top-support-issue,azure-service-management,azure-resource-manager
 keywords: cannot start application, program won't open, listen port blocked, unable to start program, listen port blocked
 
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.topic: troubleshooting
 ms.date: 10/31/2018
 ms.author: genli
-
 ms.custom: sap:Cannot connect to my VM
 ---
 # Troubleshoot application connectivity issues on virtual machines in Azure
+
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
 There are various reasons when you cannot start or connect to an application running on an Azure virtual machine (VM). Reasons include the application not running or listening on the expected ports, the listening port blocked, or networking rules not correctly passing traffic to the application. This article describes a methodical approach to find and correct the problem.
 

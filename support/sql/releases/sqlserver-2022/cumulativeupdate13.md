@@ -1,8 +1,8 @@
 ---
 title: Cumulative update 13 for SQL Server 2022 (KB5036432)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 13 (KB5036432).
-ms.date: 05/23/2024
-ms.custom: evergreen, KB5036432
+ms.date: 08/19/2024
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5036432
 ms.reviewer: v-qianli2
 appliesto:
 - SQL Server 2022 on Windows
@@ -23,7 +23,9 @@ This article describes Cumulative Update package 13 (CU13) for Microsoft SQL Ser
 
 ## Known issues in this update
 
-There are no known issues in this cumulative update.
+### Patching error for secondary replicas in an availability group with databases enabled replication, CDC, or SSISDB
+
+[!INCLUDE [patching-error-2022](../includes/patching-error-2022.md)]
 
 ## Improvements and fixes included in this update
 
@@ -59,7 +61,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 
 The following update is available from the Microsoft Download Center:
 
-:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2022 now](https://www.microsoft.com/download/details.aspx?familyid=4fa9aa71-05f4-40ef-bc55-606ac00479b1)
+:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2022 now](https://www.microsoft.com/download/details.aspx?id=105013)
 
 > [!NOTE]
 >

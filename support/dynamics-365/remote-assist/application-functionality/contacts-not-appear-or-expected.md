@@ -1,8 +1,8 @@
 ---
 title: No contacts appear or aren't as expected in Dynamics 365 Remote Assist
 description: Resolves an issue where you can't see your contacts in Microsoft Dynamics 365 Remote Assist.
-ms.author: davepinch
-author: davepinch
+author: prashantyvr
+ms.author: prashan
 ms.date: 10/27/2023
 ms.reviewer: v-wendysmith, mhart
 ms.custom: sap:Dynamics 365 Remote Assist\Application Functionality, bap-template

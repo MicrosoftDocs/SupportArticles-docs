@@ -5,7 +5,7 @@ services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
@@ -15,6 +15,8 @@ ms.author: genli
 ms.custom: sap:Cannot connect to my VM
 ---
 # Cannot RDP to Azure Virtual Machines because the DHCP Client service is disabled
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article describes a problem in which you cannot remote desktop to Azure Windows Virtual Machines (VMs) after the DHCP Client service is disabled in the VM.
 

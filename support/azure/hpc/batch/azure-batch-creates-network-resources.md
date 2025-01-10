@@ -4,7 +4,7 @@ description: This article provides resources to help you identify the Azure Batc
 ms.date: 02/21/2024
 author: genlin
 ms.author: cabermu
-ms.service: batch
+ms.service: azure-batch
 ms.custom: sap:HPC Pack
 --- 
 

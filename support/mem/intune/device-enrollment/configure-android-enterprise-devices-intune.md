@@ -206,7 +206,7 @@ For more information, see [Set up enrollment of Android Enterprise work profile 
 
     :::image type="content" source="media/configure-android-enterprise-devices-intune/assign-email-profile-to-groups.png" alt-text="Assignments screen." lightbox="media/configure-android-enterprise-devices-intune/assign-email-profile-to-groups.png":::
 
-4. Configure [device-based conditional access](/intune/protect/conditional-access-intune-common-ways-use#device-based-conditional-access).
+4. Configure [device-based conditional access](/mem/intune/protect/conditional-access-intune-common-ways-use#device-based-conditional-access).
 
 For more information, see [Set up Conditional Access for Android work profile devices](/mem/intune/protect/conditional-access-exchange-create#to-set-up-conditional-access-for-android-work-profile-devices).
 

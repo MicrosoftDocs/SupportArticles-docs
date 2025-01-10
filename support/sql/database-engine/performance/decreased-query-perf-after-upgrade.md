@@ -54,7 +54,7 @@ To resolve the issue, try one of the following methods:
 - Use [database-scoped configuration](#database-level-set-scoped-configuration-or-compatibility-level) to force the legacy CE.
 
   This is a less preferred approach as it is a database-wide setting and applies to all queries against this database. Still, it's sometimes necessary when a targeted approach isn't feasible. It's certainly the easiest option to implement.
-- Use trace flag 9841 to force legacy CE globally. To do this, use [DBCC TRACEON](#server-level-use-trace-flag) or set the trace flag as a [start-up parameter](/sql/tools/configuration-manager/sql-server-properties-startup-parameters-tab#optional-parameters).
+- Use trace flag 9481 to force legacy CE globally. To do this, use [DBCC TRACEON](#server-level-use-trace-flag) or set the trace flag as a [start-up parameter](/sql/tools/configuration-manager/sql-server-properties-startup-parameters-tab#optional-parameters).
 
   This is the least-targeted approach and should only be used as a temporary mitigation when you're unable to apply any of the other options.
 

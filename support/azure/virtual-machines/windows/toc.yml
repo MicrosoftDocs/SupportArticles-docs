@@ -20,8 +20,6 @@
   items:
   - name: What Microsoft server software is supported in Azure virtual machines
     href: server-software-support.md
-  - name: What 32-bit operating systems are supported?
-    href: support-32-bit-operating-systems-virtual-machines.md
   - name: Windows 11 support on Azure Virtual Machines
     href: windows-11-support-azure-virtual-machines.md
   - name: Windows Server 2012 R2 Support on Azure
@@ -40,12 +38,41 @@
     items:
       - name: Windows Server 2003 Support on Azure
         href: run-win-server-2003.md
-      - name: Citrix services support policy
-        href: support-policy-citrix-services.md
   - name: Retirement of the hybrid use benefit images
     href: retirement-hybrid-use-benefit-images.md
   - name: Windows Server images updated to .NET Framework 4.7
     href: updates-included-windows-server-images.md
+  - name: What 32-bit operating systems are supported?
+    href: support-32-bit-operating-systems-virtual-machines.md
+  - name: Citrix services support policy
+    href: support-policy-citrix-services.md
+
+- name: Procedures to repair a Windows VM
+  items:
+  - name: Repair a VM with Nested Hyper-V
+    href: troubleshoot-vm-by-use-nested-virtualization.md
+  - name: Troubleshoot on the Azure portal
+    href: troubleshoot-recovery-disks-portal-windows.md
+  - name: Troubleshoot using PowerShell
+    href: troubleshoot-recovery-disks-windows.md
+  - name: Azure Virtual Machine repair
+    href: repair-windows-vm-using-azure-virtual-machine-repair-commands.md
+  - name: Unlocking disks for offline repair
+    href: unlock-encrypted-disk-offline.md
+  - name: Repair unmanaged disks offline
+    href: unmanaged-disk-offline-repair.md
+  - name: Collect an OS memory dump file for Azure support
+    href: collect-os-memory-dump-file.md
+  - name: Enable the serial console and memory dump collection
+    href: enable-serial-console-memory-dump-collection.md
+  - name: Fix registry hive corruption
+    href: virtual-machines-windows-fix-corrupted-hive.md
+  - name: Repair the boot configuration data
+    href: virtual-machines-windows-repair-boot-configuration-data.md
+  - name: Repair or replace corrupted or missing binary files
+    href: virtual-machines-windows-repair-replace-system-binary-file.md
+  - name: Verify that the Windows partition is active
+    href: verify-windows-partition-is-active.md
 
 - name: VM health
   items:
@@ -181,7 +208,7 @@
   items:
   - name: Boot diagnostics
     href: boot-diagnostics.md
-  - name: Specific Boot Errors - Windows
+  - name: Specific boot errors - Windows
     href: boot-error-troubleshoot.md
     items:
     - name: Blue screen errors
@@ -283,8 +310,6 @@
     items:
     - name: Understanding VM lifecycle and states
       href: /azure/virtual-machines/states-billing?context=/troubleshoot/azure/virtual-machines/windows/context/context
-    - name: Restarting or resizing a VM
-      href: restart-resize-error-troubleshooting.md
     - name: Troubleshoot Start/Stop VMs during off-hours (Azure Automation)
       href: /azure/automation/troubleshoot/start-stop-vm?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Start VM with last known good configuration
@@ -321,8 +346,6 @@
     href: disk-has-been-surprise-removed-event-id-157.md
   - name: Errors when deleting storage resources
     href: storage-resource-deletion-errors.md
-  - name: Errors when deleting classic storage resources
-    href: storage-classic-cannot-delete-storage-account-container-vhd.md
   - name: VHD is not supported when you create a VM in Azure
     href: vhd-not-supported-vm-azure.md
 
@@ -393,8 +416,6 @@
   items:
   - name: Allocation failures
     href: allocation-failure.md
-  - name: Classic allocation failures
-    href: allocation-failure-classic.md
 
 - name: VM planned maintenance
   items:
@@ -426,8 +447,6 @@
     href: uploaded-vhd-not-support.md
   - name: Image deployment and management
     items:
-    - name: Cloud-init-enabled VM takes a long time to start up
-      href: cloud-init-deployment-delay.md
     - name: Upload Hyper-V DC to Azure
       href: upload-existing-hyperv-dc-azure-ps.md
     - name: Troubleshoot Azure VM Image Builder
@@ -453,7 +472,7 @@
   - name: Can't enable Azure Disk Encryption
     href: extension-version-2.2-not-supported.md
 
-- name: Custom script extenions (CSE)
+- name: Custom script extensions (CSE)
   items:
   - name: Windows
     href: /azure/virtual-machines/extensions/custom-script-windows#troubleshoot-and-support?context=/troubleshoot/azure/virtual-machines/windows/context/context
@@ -500,21 +519,6 @@
 
 - name: Issue with Azure Virtual Desktop
   href: how-to-videos-windows-virtual-desktop.md
-
-- name: Repair a Windows VM
-  items:
-  - name: Repair a VM with Nested Hyper-V
-    href: troubleshoot-vm-by-use-nested-virtualization.md
-  - name: Troubleshoot on the Azure portal
-    href: troubleshoot-recovery-disks-portal-windows.md
-  - name: Troubleshoot using PowerShell
-    href: troubleshoot-recovery-disks-windows.md
-  - name: Azure Virtual Machine repair
-    href: repair-windows-vm-using-azure-virtual-machine-repair-commands.md
-  - name: Unlocking disks for offline repair
-    href: unlock-encrypted-disk-offline.md
-  - name: Repair unmanaged disks offline
-    href: unmanaged-disk-offline-repair.md
 
 - name: Common Azure VM errors and issues
   items:

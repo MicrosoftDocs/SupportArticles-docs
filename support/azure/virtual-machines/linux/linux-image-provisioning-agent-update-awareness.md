@@ -2,7 +2,7 @@
 title: Linux Image Provisioning Agent update awareness
 description: Provides the update awareness and frequently asked questions about Linux Image Provisioning Agent.
 ms.date: 10/10/2020
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:VM Extensions not operating correctly, linux-related-content
 ms.collection: linux
 ms.author: genli
@@ -11,7 +11,8 @@ ms.reviewer:
 ---
 # Linux Image Provisioning Agent update awareness
 
-_Original product version:_ &nbsp; Azure, Virtual Machine running Linux  
+**Applies to:** :heavy_check_mark: Linux VMs
+
 _Original KB number:_ &nbsp; 4538386
 
 ## Summary

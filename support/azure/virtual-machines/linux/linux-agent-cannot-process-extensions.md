@@ -3,16 +3,17 @@ title: Azure Linux VMs running Linux VM Agent 2.1.5 or 2.1.6 cannot process exte
 description: Resolves an issue in which Azure Linux VMs that are running Azure Linux VM Agent 2.1.5 or 2.1.6 cannot process extensions.
 ms.date: 07/21/2020
 ms.reviewer: danis, danis, scotro
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:VM Extensions not operating correctly, linux-related-content
 ms.collection: linux
 ---
 # Azure Linux VMs running Linux VM Agent 2.1.5 or 2.1.6 cannot process extensions
 
-This article provides information about resolving a problem in which Azure Linux VMs that are running Azure Linux VM Agent 2.1.5 or 2.1.6 cannot process extensions.
+**Applies to:** :heavy_check_mark: Linux VMs
 
-_Original product version:_ &nbsp; Virtual Machine running Linux  
 _Original KB number:_ &nbsp; 3200481
+
+This article provides information about resolving a problem in which Azure Linux VMs that are running Azure Linux VM Agent 2.1.5 or 2.1.6 cannot process extensions.
 
 ## Symptoms
 

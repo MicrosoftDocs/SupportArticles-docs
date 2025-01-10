@@ -3,16 +3,17 @@ title: Windows boot error 0xc0000221 on an Azure VM
 description: Fixes error 0xc0000221, which occurs when you try to boot an Azure virtual machine (VM).
 ms.date: 07/21/2020
 ms.reviewer: 
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.custom: sap:My VM is not booting
 ---
 # Windows boot error 0xc0000221 on an Azure VM
 
-This article provides a solution to an issue where Windows fails to start and generates error code 0xc0000221.
+**Applies to:** :heavy_check_mark: Windows VMs
 
-_Original product version:_ &nbsp; Virtual Machine running Windows  
 _Original KB number:_ &nbsp; 4010132
+
+This article provides a solution to an issue where Windows fails to start and generates error code 0xc0000221.
 
 ## Symptoms
 

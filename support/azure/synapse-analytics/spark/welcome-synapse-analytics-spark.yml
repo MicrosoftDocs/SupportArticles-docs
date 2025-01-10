@@ -7,7 +7,7 @@ metadata:
   title: Troubleshoot Azure Synapse Analytics Apache Spark Pool issues
   description: Documentation for troubleshooting common issues with Azure Synapse Analytics Apache Spark Pool. # Required; article description that is displayed in search results. < 160 chars.
   services: synapse-analytics
-  ms.service: synapse-analytics #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: azure-synapse-analytics
   ms.topic: landing-page # Required
   author: scott-epperly  #Required; your GitHub user alias, with correct capitalization.
   ms.author: scepperl #Required; microsoft alias of author; optional team alias.

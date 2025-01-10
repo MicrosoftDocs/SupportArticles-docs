@@ -5,7 +5,7 @@ ms.date: 04/01/2024
 ms.topic: how-to
 ms.reviewer: maheshallu, piw, v-weizhu
 ms.author: zhangjerry
-ms.service: cloud-services-extended-support
+ms.service: azure-cloud-services-extended-support
 ms.custom: sap:Service Availability and Performance
 author: JerryZhangMS
 ---

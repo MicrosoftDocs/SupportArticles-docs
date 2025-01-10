@@ -6,7 +6,7 @@ documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
@@ -19,6 +19,8 @@ ms.custom: sap:My VM is not booting
 --->
 
 # Windows stop error - Status No Memory
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article provides steps to resolve issues where Windows fails to start and displays the status or error code #0xC0000017, also known as "Status No Memory".
 

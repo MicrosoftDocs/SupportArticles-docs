@@ -6,7 +6,7 @@ documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: top-support-issue, azure-resource-manager
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
@@ -17,6 +17,8 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 
 # Support for 32-bit operating systems in Azure virtual machines
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 Microsoft Azure now allows users to bring in their 32-bit Windows operating systems over to Azure. Only Specialized VHDs are supported and Generalized images won't work in Azure. As some of these operating systems have already reached their end of life supportability agreement, Microsoft might not offer additional support for them. Support is also not offered for Linux-based, or Berkeley Software Distribution (BSD)-based operating systems that run on a Microsoft Azure virtual machine (VM).
 

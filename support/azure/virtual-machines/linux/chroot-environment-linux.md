@@ -5,7 +5,7 @@ services: virtual-machines
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: linux
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
@@ -16,6 +16,8 @@ ms.author: genli
 ---
 
 # Chroot environment in a Linux rescue VM
+
+**Applies to:** :heavy_check_mark: Linux VMs
 
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 

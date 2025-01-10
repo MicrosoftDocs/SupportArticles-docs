@@ -6,7 +6,7 @@ services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: linux
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-linux
@@ -17,6 +17,8 @@ ms.author: genli
 ---
 
 # Troubleshoot a Linux VM by attaching the OS disk to a recovery VM using the Azure portal
+
+**Applies to:** :heavy_check_mark: Linux VMs
 
 If your Linux virtual machine (VM) encounters a boot or disk error, you may need to perform troubleshooting steps on the virtual hard disk itself. A common example would be an invalid entry in `/etc/fstab` that prevents the VM from being able to boot successfully. This article details how to use the Azure portal to connect your virtual hard disk to another Linux VM to fix any errors, then re-create your original VM.
 
@@ -60,6 +62,17 @@ A snapshot is a full, read-only copy of a virtual hard drive (VHD). We recommend
 ## Create a disk from the snapshot
 
 To create a disk from the snapshot, follow these steps:
+
+## Use Azure portal
+
+1. In the Azure portal, go to the snapshot you want to use for creating a disk.
+2. On the **Overview** page, select **Create disk**.
+
+   :::image type="content" source="media/troubleshoot-recovery-disks-portal-linux/create-disk-from-snapshot.png" alt-text="Screenshot of the create disk button in Azure portal.":::
+
+3. Follow the instructions to complete the disk creation process.
+
+## Use Azure CLI
 
 1. Select **Cloud Shell** from the Azure portal.
 

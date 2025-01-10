@@ -1,16 +1,15 @@
 ---
 title: Digest authentication fails
 description: This article provides workarounds for the problem where digest authentication fails when a client sends a request through a proxy to a site IIS using digest authentication.
-ms.date: 04/07/2020
+ms.date: 12/17/2024
 ms.custom: sap:WWW Authentication and Authorization\Digest and advanced digest authentication
-ms.subservice: www-authentication-authorization
-ms.reviewer: atsushin, bariscag
+ms.reviewer: atsushin, bariscag, zixie
 ---
 # IIS digest doesn't permit pass-though authentication of proxy requests
 
 This article helps you resolve the problem where digest authentication fails when a client sends a request through a proxy to a site and Microsoft Internet Information Services (IIS) uses digest authentication.
 
-_Original product version:_ &nbsp; Internet Information Services 8.5, 8.0  
+_Original product version:_ &nbsp; Internet Information Services  
 _Original KB number:_ &nbsp; 3050055
 
 ## Symptoms
@@ -18,11 +17,11 @@ _Original KB number:_ &nbsp; 3050055
 Consider the following scenario:
 
 - IIS is configured to use digest authentication.
-- The server receives a request with the via HyperText Transfer Protocol(HTTP) header. (This occurs if the client request is rerouted through a proxy.)
+- The server receives a request with the `Via` HyperText Transfer Protocol (HTTP) header. (This behavior occurs if the client request is rerouted through a proxy.)
 - The resource requested is protected by digest authentication.
 - A child request is created in the IIS pipeline. For example, a request is sent for a directory's default document, and the URL that is sent has a slash (/) as the last character.
 
-In this scenario, digest authentication fails, and the server returns a 401 response.
+In this scenario, digest authentication fails and the server returns a 401 response.
 
 ## Cause
 

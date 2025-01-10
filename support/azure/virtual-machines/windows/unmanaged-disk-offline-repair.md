@@ -3,13 +3,14 @@ author: genlin
 description: This article describes how to attach an unmanaged disk to a repair VM for offline servicing.
 ms.author: genli
 ms.date: 05/17/2022
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Windows (Guest OS), devx-track-azurecli, devx-track-azurepowershell
 ms.topic: troubleshooting
 title: Attach an unmanaged disk to a VM for offline repair
 ---
-
 # Attach an unmanaged disk to a VM for offline repair
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 Some troubleshooting scenarios for Windows virtual machines (VMs), such as when a VM doesn't start, require you to repair its OS disk offline. This article describes how you can perform this kind of offline repair when the failed OS disk is unmanaged.
 

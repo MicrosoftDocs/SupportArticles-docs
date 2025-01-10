@@ -1,21 +1,14 @@
 ---
-title: Troubleshoot storage resource deletion errors on Linux VMs in Azure
-description: Learn how to troubleshoot problems on Linux VMs when deleting storage resources containing attached VHDs.
-keywords: 
-services: virtual-machines
-author: genlin
-manager: dcscontentpm
+title: Troubleshoot storage resource deletion errors on Azure VMs
+description: Learn how to troubleshoot problems on VMs when deleting storage resources containing attached VHDs.
 tags: top-support-issue,azure-service-management,azure-resource-manager
-ms.custom: sap:VM Admin - Windows (Guest OS), linux-related-content
-ms.service: virtual-machines
-ms.collection: linux
-ms.tgt_pltfrm: vm-linux
-ms.topic: troubleshooting
-ms.date: 11/01/2018
-ms.author: genli
+ms.custom: sap:VM Admin - Windows (Guest OS)
+ms.service: azure-virtual-machines
+ms.date: 07/16/2024
 ---
-
 # Troubleshoot storage resource deletion errors
+
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
 In certain scenarios, you may encounter one of the following errors occur while you are trying to delete an Azure storage account, container, or blob in an Azure Resource Manager deployment:
 

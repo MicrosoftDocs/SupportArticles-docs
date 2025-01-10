@@ -6,7 +6,7 @@ documentationcenter: ''
 author: divargas-msft
 tags: Linux chroot LVM
 ms.custom: sap:My VM is not booting, linux-related-content
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: linux
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-linux
@@ -15,6 +15,8 @@ ms.date: 03/10/2023
 ms.author: divargas
 ---
 # Troubleshoot Azure Linux VM when there's no access to Azure Serial Console and the disk layout uses Logical Volume Manager
+
+**Applies to:** :heavy_check_mark: Linux VMs
 
 This article provides a troubleshooting guide for an Azure Linux virtual machine (VM) where all the following conditions are presented:
 

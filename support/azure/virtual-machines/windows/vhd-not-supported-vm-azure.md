@@ -5,7 +5,7 @@ services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.topic: troubleshooting
 ms.tgt_pltfrm: na
 ms.workload: infrastructure
@@ -13,8 +13,9 @@ ms.date: 06/29/2020
 ms.author: genli
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
-
 # VHD is not supported when you create a virtual machine in Azure
+
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
 This article helps correct VHD errors when running Virtual Machine in Windows or Linux.
 

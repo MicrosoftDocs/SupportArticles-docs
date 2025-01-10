@@ -32,7 +32,6 @@ When you try to start or create an AKS cluster, you receive the following error 
 > "ExitCode": "52",
 >
 > "Output": "Fri Oct 15 10:06:00 UTC 2021,aks- nodepool1-36696444-vmss000000\\nConnection to mcr.microsoft.com 443 port [tcp/https]
-
 ## Cause
 
 The cluster nodes can't resolve the cluster's fully qualified domain name (FQDN) in Azure DNS. Run the following DNS lookup command on the failed cluster node to find DNS resolutions that are valid.
@@ -63,7 +62,6 @@ Also verify that your DNS server is configured correctly for your private cluste
 
 > [!NOTE]
 > Conditional Forwarding doesn't support subdomains.
-
 ## More information
 
 - [General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)

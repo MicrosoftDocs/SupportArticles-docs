@@ -5,7 +5,6 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:Clustering and High Availability\Node removed from the cluster, csstroubleshoot
 keywords: multi-site,multisite,cluster,disconnect,cross-subnet,stretched,vlan

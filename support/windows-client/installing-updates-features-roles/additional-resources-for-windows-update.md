@@ -8,7 +8,6 @@ ms.collection: highpri
 ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update configuration, settings and management, csstroubleshoot
 ms.reviewer: dougeby,aaroncz
 audience: itpro
-localization_priority: medium
 ---
 # Windows Update - additional resources
 

@@ -5,7 +5,6 @@ ms.date: 03/23/2020
 ms.custom: sap:FTP Service and Svchost or Inetinfo Process Operation\Service startup
 ms.reviewer: kevinz
 ms.topic: how-to
-ms.subservice: ftp-authentication-authorization
 ---
 # Use the FTP Utility in a typical session
 

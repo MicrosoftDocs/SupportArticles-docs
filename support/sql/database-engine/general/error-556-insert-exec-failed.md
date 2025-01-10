@@ -57,4 +57,4 @@ To work around this issue, follow these steps:
 
 ## Additional information
 
-Because of the changes that were made to Query Data Store in Microsoft SQL Server 2017, this problem doesn't occur in SQL Server 2017. This problem won't be fixed in SQL Server 2016.
+Because of the changes that were made to Query Data Store in Microsoft SQL Server 2017, this problem doesn't occur in SQL Server 2017.

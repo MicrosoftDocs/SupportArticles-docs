@@ -9,6 +9,9 @@ ms.custom: sap:Language or Compilers\C#
 
 This article introduces how to store custom information from a configuration file that you can retrieve later during run time by its associated application. It's helpful when you must define data that's associated with an application.
 
+> [!NOTE]
+> The code in this article is targeting .NET Framework 2.0 and later versions. To know which specific versions the `ConfigurationManager` class applies to, see the [Applies to](/dotnet/api/system.configuration.configurationmanager#applies-to) section.
+
 _Original product version:_ &nbsp; Visual C#  
 _Original KB number:_ &nbsp; 815786
 
@@ -87,7 +90,7 @@ To create a console application that reads the contents of an associated configu
     string sAttr;
     ```
 
-12. To retrieve a value for a specified key from the `<appSettings>` section of the configuration file, use the `Get` method of the `AppSettings` property of the `ConfigurationManager` class. The `ConfigurationManager` class is in the `System.Configuration` namespace. When the `AppSettings.Get` method receives a string input parameter that contains a key, the application retrieves the value that is associated with the key.
+12. To retrieve a value for a specified key from the `<appSettings>` section of the configuration file, use the `Get` method of the `AppSettings` property of the [ConfigurationManager](/dotnet/api/system.configuration.configurationmanager) class. The `ConfigurationManager` class is in the `System.Configuration` namespace. When the `AppSettings.Get` method receives a string input parameter that contains a key, the application retrieves the value that is associated with the key.
 
     The following code retrieves the value for the `Key0` attribute from the associated configuration file. The code then places this value in the `sAttr` string variable. If a key doesn't exist for this value, nothing is stored in `sAttr`.
 
@@ -150,9 +153,6 @@ namespace ConConfig
     }
 }
 ```
-
-> [!NOTE]
-> This code is targeting the .NET Framework 2.0. If you are using the .NET Framework 1.0 or the .NET Framework 1.1, change all instances of the `ConfigurationManager` class to `ConfigurationSettings`.
 
 ## Complete configuration file listing (ConConfig.exe.config)
 

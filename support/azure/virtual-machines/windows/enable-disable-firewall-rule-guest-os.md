@@ -6,7 +6,7 @@ documentationcenter: ''
 author: Deland-Han
 manager: dcscontentpm
 tags: ''
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.topic: troubleshooting
 ms.collection: windows
 ms.workload: infrastructure-services
@@ -19,6 +19,8 @@ ms.custom: sap:Cannot connect to my VM
 ---
 
 # Enable or disable a firewall rule on an Azure VM Guest OS
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article provides a reference for troubleshooting a situation in which you suspect that the guest operating system firewall is filtering partial traffic on a virtual machine (VM). This could be useful for the following reasons:
 

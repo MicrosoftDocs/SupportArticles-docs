@@ -5,7 +5,6 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, v-lianna
 ms.custom: sap:Clustering and High Availability\Node removed from the cluster, csstroubleshoot
 ---

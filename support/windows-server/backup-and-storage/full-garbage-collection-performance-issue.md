@@ -5,9 +5,8 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Deduplication , csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Deduplication, csstroubleshoot
 ---
 # Churn from Full Garbage Collection during deduplication can cause performance problems in Windows Server
 

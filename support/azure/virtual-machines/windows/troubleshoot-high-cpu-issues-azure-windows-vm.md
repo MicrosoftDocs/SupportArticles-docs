@@ -7,7 +7,7 @@ author: mnanda
 manager: dcscontentpm
 editor: v-jesits
 tags: azure-resource-manager
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
@@ -16,8 +16,9 @@ ms.date: 09/24/2020
 ms.author: mnanda
 ms.custom: sap:VM Performance
 ---
-
 # Troubleshoot high-CPU issues on Azure Windows virtual machines
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 ## Summary
 

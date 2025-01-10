@@ -7,16 +7,18 @@ author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager,top-support-issue
 ms.custom: sap:VM Admin - Linux (Guest OS), devx-track-azurecli, linux-related-content
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: linux
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure
-ms.date: 11/03/2021
+ms.date: 07/22/2024
 ms.author: genli
 ---
 
 # Redeploy Linux virtual machine to new Azure node
+
+**Applies to:** :heavy_check_mark: Linux VMs
 
 If you face difficulties troubleshooting SSH or application access to a Linux virtual machine (VM) in Azure, redeploying the VM may help. When you redeploy a VM, it moves the VM to a new node within the Azure infrastructure and then powers it back on. All your configuration options and associated resources are retained. This article shows you how to redeploy a VM using Azure CLI or the Azure portal.
 
@@ -31,18 +33,6 @@ Redeploy your VM with [az vm redeploy](/cli/azure/vm). The following example red
 
 ```azurecli
 az vm redeploy --resource-group myResourceGroup --name myVM 
-```
-
-## Use the Azure classic CLI
-
-[!INCLUDE [classic-vm-deprecation](../../../includes/azure/classic-vm-deprecation.md)]
-
-Install the [latest Azure classic CLI](/cli/azure/install-classic-cli) and log in to your Azure account. Make sure that you are in Resource Manager mode (`azure config mode arm`).
-
-The following example redeploys the VM named *myVM* in the resource group named *myResourceGroup*:
-
-```console
-azure vm redeploy --resource-group myResourceGroup --vm-name myVM 
 ```
 
 [!INCLUDE [virtual-machines-common-redeploy-to-new-node](../../../includes/azure/virtual-machines-common-redeploy-to-new-node.md)]

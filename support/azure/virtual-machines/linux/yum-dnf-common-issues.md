@@ -5,31 +5,94 @@ author: msaenzbosupport
 ms.author: msaenzbo
 editor: v-jsitser
 ms.reviewer: divargas, adelgadohell
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: linux
 ms.topic: troubleshooting-general
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.custom: linux-related-content
-ms.date: 07/02/2024
+ms.date: 10/16/2024
 #customer intent: As an Azure Linux VM administrator, I want troubleshoot issues in the yum and dnf tools so that I can successfully install or update applications on my VMs.
 ---
 # Troubleshoot common issues in the yum and dnf package management tools for Linux
 
-This article discusses common issues that you might encounter when you use `yum` and `dnf` package management tools to install or update applications on Azure virtual machines (VMs), and provides solutions to these issues.
+**Applies to:** :heavy_check_mark: Linux VMs
+
+This article discusses and resolves common issues that you might experience when you use `yum` and `dnf` package management tools to install or update applications on Microsoft Azure virtual machines (VMs).
 
 > [!CAUTION]
-> This article references CentOS, a Linux distribution that reached end of life (EOL). Please consider your use and planning accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
+> This article references CentOS, a Linux distribution that has reached its support end of life (EOL). Consider your use and planning accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
 
 ## Overview
 
 The [yum](http://yum.baseurl.org) command-line package management tool is used in Linux distributions that employ the RPM Package Manager. The tool name is an acronym for "Yellowdog Updater Modified" and was originally developed for Yellow Dog Linux. The `yum` tool has gained widespread usage, particularly in RPM-based distributions such as Red Hat Enterprise Linux (RHEL), CentOS, Oracle Linux, Mariner, and Fedora.
 
-The [dnf](https://rpm-software-management.github.io) command-line package management tool, or "Dandified Yum," is a modernized and enhanced package manager utility for RPM-based Linux distributions.
+The [dnf](https://rpm-software-management.github.io) command-line package management tool, or "Dandified Yum," is a modernized and enhanced package manager tool for RPM-based Linux distributions.
 
 ## Scenario 1: Repository access issue
 
-You encounter errors that apply to certificates or network connectivity.
+You experience errors that apply to certificates or network connectivity.
+
+### Run a validation script
+
+Azure provides the Red Hat Update Infrastructure (RHUI) repository check script on GitHub. This Python script includes the following features: 
+
+- Validates the RHUI client certificate.
+- Validates RHUI rpm consistency.
+- Checks consistency between Extended Update Support (EUS) and non-EUS repository configurations and their requirements.
+- Validates connectivity to the RHUI repositories.
+- Reports successful repository connectivity if no errors are detected.
+- Verifies SSL connectivity to the RHUI repositories.
+- Focuses exclusively on the RHUI repositories.
+- Verifies a found error by using the defined conditions and provides recommendations for a fix.
+
+#### Supported Red Hat images
+
+This version of the check script currently supports only the following Red Hat VMs that are deployed from the Azure Marketplace image:
+
+- RHEL 7._x_ PAYG VMs
+- RHEL 8._x_ PAYG VMs
+- RHEL 9._x_ PAYG VMs
+
+#### How to run the RHUI check script
+
+To run the check script, enter the following shell commands on a Red Hat VM:
+
+#### [Red Hat 7.x](#tab/rhel7)
+
+1. If the VM has internet access, run the script directly from the VM by using the following command:
+
+    ```bash
+    curl -sL https://raw.githubusercontent.com/Azure/azure-support-scripts/refs/heads/master/Linux_scripts/rhui-check/rhui-check.py | sudo python2 -
+    ```
+
+2. If the VM doesn't have direct internet access, download the script from the following URL: [RHUI check script](https://raw.githubusercontent.com/Azure/azure-support-scripts/refs/heads/master/Linux_scripts/rhui-check/rhui-check.py), transfer the script to the VM, and then run the following command:
+
+    ```bash
+    sudo python2 ./rhui-check.py 
+    ```
+3. The script generates a report that includes any issues that are found. The script output is also saved in `/var/log/rhuicheck.log` after you run it. 
+
+#### [Red Hat 8.x and 9.x](#tab/rhel89)
+
+1. If the VM has internet access, run the script directly from the VM by using the following command:
+
+    ```bash
+    curl -sL https://raw.githubusercontent.com/Azure/azure-support-scripts/refs/heads/master/Linux_scripts/rhui-check/rhui-check.py | sudo python3 -
+    ```
+
+2.  If the VM doesn't have direct internet access, download the script from the following URL: [RHUI check script](https://raw.githubusercontent.com/Azure/azure-support-scripts/refs/heads/master/Linux_scripts/rhui-check/rhui-check.py), transfer the script to the VM, and then run the following command:
+
+    ```bash
+    sudo python3 ./rhui-check.py 
+    ```
+    
+    > [!IMPORTANT]
+    > Replace python3 with `/usr/libexec/platform-python` in case the `python3` command is not found.
+
+3. The script generates a report that includes any issues that are found. The script output is also saved in `/var/log/rhuicheck.log` after you run it. 
+
+---
 
 ### Solution 1
 
@@ -81,7 +144,7 @@ When you encounter a dependency issue, start by identifying the specific combina
 
 #### Solution for symptom 2a: Delete the older package
 
-For symptom 2a, `yum` rejects a transaction and outputs an error message. An incompatibility between the `python2-leapp` package from an older release and the latest release causes the error.
+For Symptom 2a, `yum` rejects a transaction and returns an error message. The error is caused by nn incompatibility between the `python2-leapp` package from an older release and the latest release.
 
 To fix this error, you must remove the older package that causes the conflict (in this case, *python2-leapp-0.16.0-1.el7_9.noarch*) by running the following `yum remove` command:
 
@@ -93,7 +156,7 @@ Then, you can continue the update or installation of the required package.
 
 #### Solution for symptom 2b: Remove the package exclusion from the configuration file
 
-For symptom 2b, `yum` rejects a transaction and outputs an error message. An exclusion filter causes the error.
+For symptom 2b, `yum` rejects a transaction and returns an error message. An exclusion filter causes the error.
 
 To fix this error so that you can resume updating or installing the required package, make sure that the `systemd` package isn't excluded in either the */etc/yum.conf* or */etc/dnf.conf* configuration file. To check whether the `systemd` package exclusion is occurring, run a command such as the following `cat`/`grep` combination:
 
@@ -101,7 +164,7 @@ To fix this error so that you can resume updating or installing the required pac
 sudo cat /etc/yum.conf | grep -i exclude
 ```
 
-If the `systemd` package is being excluded, the following output appears:
+If the `systemd` package is excluded, the following output appears:
 
 ```output
 exclude=systemd
@@ -209,7 +272,7 @@ There are two possible solutions: Try to complete the transaction, or manually r
    sudo yum-complete-transaction
    ```
 
-   If the operation is successful without leaving any more duplicates, you can skip step 2.
+   If the operation is successful without leaving any more duplicates, go to step 2.
 
 2. If duplicates are present, resolve this transaction by specifying the `--cleanup-only` parameter in the `yum-complete-transaction` command:
 
@@ -237,7 +300,7 @@ There are two possible solutions: Try to complete the transaction, or manually r
 
 ##### [RHEL/Centos/Oracle Linux 7._x_](#tab/rhel7)
 
-1. Remove the duplicate packages manually by running the following commands. The `yum check` command might require a considerable amount of time, but obtaining its output is crucial for proceeding with these steps:
+1. Remove the duplicate packages manually by running the following commands. The `yum check` command might require a lot of time, but obtaining its output is crucial to proceed with these steps:
 
    ```bash
    sudo tar -cjf /tmp/rpm_dbbkp.tar.bz2 /var/lib/{rpm,yum}
@@ -277,7 +340,7 @@ There are two possible solutions: Try to complete the transaction, or manually r
 
 ## Scenario 5: Yum doesn't work and shows a '404 Not Found' error
 
-A "404 Not Found" error message in the `yum` output indicates that `yum` couldn't find the package or resource on the server. This issue typically occurs when `yum` tries to download or access a package from a repository, but the package file or metadata that's associated with it is missing or unavailable on the server. This scenario has various causes. Some of these are the following:
+A "404 Not Found" error message in the `yum` output indicates that `yum` couldn't find the package or resource on the server. This issue typically occurs if `yum` tries to download or access a package from a repository, but the package file or metadata that's associated with it is missing or unavailable on the server. This scenario has various causes, including the following:
 
 - The package or resource was removed from the repository.
 
@@ -362,9 +425,9 @@ If the error typically occurs because an incorrect value is used for */etc/yum/v
      > [!NOTE]
      > Support for RHEL7 EUS ended on August 30, 2021. We recommend that you no longer use EUS repositories in RHEL7.
      >
-     > RHEL 8._x_ versions for EUS are available. These versions include RHEL 8.1, 8.2, 8.4, 8.6, and 8.8.
+     > RHEL 8._x_ versions for EUS are available. These versions include RHEL 8.8, 8.6, 8.4, 8.2, and 8.1.
      >
-     > RHEL 9._x_ versions for EUS are available. Currently, these versions include RHEL 9.0 and 9.2.
+     > RHEL 9._x_ versions for EUS are available. Currently, these versions include RHEL 9.2 and 9.0.
      >
      > For more information about version availability, see [Red Hat Enterprise Linux Life Cycle](https://access.redhat.com/support/policy/updates/errata).
 
@@ -472,28 +535,28 @@ https://rhui4-1.microsoft.com/pulp/repos/content/dist/rhel/rhui/server/7/7Server
 
 1. Check whether a third-party curl package is installed on your VM: 
 
-```bash
-sudo rpm -qa | grep -i curl
-```
+   ```bash
+   sudo rpm -qa | grep -i curl
+   ```
+  
+   ```bash
+   rpm -q --queryformat '%{VENDOR}\n' curl libcurl
+   ```
+  
+    ```output
+    curl-7.73.0-2.0.cf.rhel7.x86_64 
+    libcurl-7.73.0-2.0.cf.rhel7.x86_64
+    libcurl-devel-7.73.0-2.0.cf.rhel7.x86_64 
+    ```
+  
+    ```output
+    city-fan.org repo http://www.city-fan.org/ftp/contrib/
+    ```
 
-```bash
-rpm -q --queryformat '%{VENDOR}\n' curl libcurl
-```
+    If any third-party package is installed, go to step 2.
 
-```output
-curl-7.73.0-2.0.cf.rhel7.x86_64 
-libcurl-7.73.0-2.0.cf.rhel7.x86_64
-libcurl-devel-7.73.0-2.0.cf.rhel7.x86_64 
-```
-
-```output
-city-fan.org repo http://www.city-fan.org/ftp/contrib/
-```
-
-If any third-party package is installed, go to step 2.
-
->[!IMPORTANT]
->The curl packages from third-party sources are provided with their own binaries and certificates that are not recognized by Red Hat. This incompatibility causes yum to encounter issues.
+    >[!IMPORTANT]
+    >The curl packages from third-party sources are provided together with their own binaries and certificates that are not recognized by Red Hat. This incompatibility causes yum to experience issues.
 
 2. Use either of the following methods to dowload the latest version of the `curl`, `libcurl`, and `libcurl-devel` packages that are provided for RHEL 7.9:
 

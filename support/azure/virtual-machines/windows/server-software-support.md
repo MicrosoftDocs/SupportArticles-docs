@@ -3,16 +3,17 @@ title: Microsoft server software support for Microsoft Azure Virtual Machines
 description: Discusses the support policy for Microsoft server software in a Microsoft Azure Virtual Machine environment.
 ms.date: 04/22/2024
 ms.reviewer: drewm, coreysa, v-weizhu
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # Microsoft server software support for Azure virtual machines
 
-This article discusses the support policy for running Microsoft server software in the Microsoft Azure Virtual Machine environment (infrastructure-as-a-service).
+**Applies to:** :heavy_check_mark: Windows VMs
 
-_Original product version:_ &nbsp; Virtual Machine running Windows, Cloud Services (Web roles/Worker roles)  
 _Original KB number:_ &nbsp; 2721672
+
+This article discusses the support policy for running Microsoft server software in the Microsoft Azure Virtual Machine environment (infrastructure-as-a-service).
 
 ## Summary
 

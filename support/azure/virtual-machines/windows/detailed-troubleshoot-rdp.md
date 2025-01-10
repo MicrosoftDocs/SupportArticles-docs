@@ -7,17 +7,19 @@ author: genlin
 manager: dcscontentpm
 tags: top-support-issue,azure-service-management,azure-resource-manager
 keywords: cannot connect to remote desktop, troubleshoot remote desktop, remote desktop cannot connect, remote desktop errors, remote desktop troubleshooting, remote desktop problems
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
-ms.date: 03/08/2024
+ms.date: 07/22/2024
 ms.author: genli
 
 ms.custom: sap:Cannot connect to my VM
 ---
 # Detailed troubleshooting steps for remote desktop connection issues to Windows VMs in Azure
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article provides detailed troubleshooting steps to diagnose and fix complex Remote Desktop errors for Windows-based Azure virtual machines.
 
@@ -53,9 +55,8 @@ The Remote Desktop client may not be able to reach the Remote Desktop service on
 
 * [Remote Desktop client computer](#source-1-remote-desktop-client-computer)
 * [Organization intranet edge device](#source-2-organization-intranet-edge-device)
-* [Cloud service endpoint and access control list (ACL)](#source-3-cloud-service-endpoint-and-acl)
-* [Network security groups](#source-4-network-security-groups)
-* [Windows-based Azure VM](#source-5-windows-based-azure-vm)
+* [Network security groups](#source-3-network-security-groups)
+* [Windows-based Azure VM](#source-4-windows-based-azure-vm)
 
 ## Source 1: Remote Desktop client computer
 
@@ -88,33 +89,13 @@ If you can create a Remote Desktop connection with a computer directly attached 
 
 Work with your network administrator to correct the settings of your organization intranet edge device to allow HTTPS-based Remote Desktop connections to the Internet.
 
-## Source 3: Cloud service endpoint and ACL
-
-[!INCLUDE [classic-vm-deprecation](../../../includes/azure/classic-vm-deprecation.md)]
-
-For VMs created using the Classic deployment model, verify that another Azure VM that is in the same cloud service or virtual network can make Remote Desktop connections to your Azure VM.
-
-:::image type="content" source="media/detailed-troubleshoot-rdp/cloud-service-endpoint-acl.png" alt-text="Diagram of the components in a RDP connection with one Azure V M highlighted and an arrow pointing to another Azure V M within the same cloud service indicating a connection.":::
-
-> [!NOTE]
-> For virtual machines created in Resource Manager, skip to [Source 4: Network Security Groups](#source-4-network-security-groups).
-
-If you do not have another virtual machine in the same cloud service or virtual network, create one. Follow the steps in [Create a virtual machine running Windows in Azure](/azure/virtual-machines/windows/quick-create-portal). Delete the test virtual machine after the test is completed.
-
-If you can connect via Remote Desktop to a virtual machine in the same cloud service or virtual network, check for these settings:
-
-* The endpoint configuration for Remote Desktop traffic on the target VM: The private TCP port of the endpoint must match the TCP port on which the VM's Remote Desktop service is listening (default is 3389).
-* The ACL for the Remote Desktop traffic endpoint on the target VM: ACLs allow you to specify allowed or denied incoming traffic from the Internet based on its source IP address. Misconfigured ACLs can prevent incoming Remote Desktop traffic to the endpoint. Check your ACLs to ensure that incoming traffic from your public IP addresses of your proxy or other edge server is allowed. For more information, see [What is a Network Access Control List (ACL)?](/previous-versions/azure/virtual-network/virtual-networks-acl)
-
-To check if the endpoint is the source of the problem, remove the current endpoint and create a new one, choosing a random port in the range 49152–65535 for the external port number. For more information, see [How to set up endpoints to a virtual machine](/previous-versions/azure/virtual-machines/windows/classic/setup-endpoints?toc=/azure/virtual-machines/windows/classic/toc.json).
-
-## Source 4: Network Security Groups
+## Source 3: Network Security Groups
 
 Network Security Groups allow more granular control of allowed inbound and outbound traffic. You can create rules spanning subnets and cloud services in an Azure virtual network.
 
 Use [IP flow verify](/azure/network-watcher/diagnose-vm-network-traffic-filtering-problem) to confirm if a rule in a Network Security Group is blocking traffic to or from a virtual machine. You can also review effective security group rules to ensure inbound "Allow" NSG rule exists and is prioritized for RDP port(default 3389). For more information, see [Using Effective Security Rules to troubleshoot VM traffic flow](/azure/virtual-network/diagnose-network-traffic-filter-problem).
 
-## Source 5: Windows-based Azure VM
+## Source 4: Windows-based Azure VM
 
 :::image type="content" source="media/detailed-troubleshoot-rdp/windows-based-azure-vm.png" alt-text="Diagram of the components in a RDP connection with an Azure V M highlighted within a cloud service and a message that it could be a possible source of issues.":::
 

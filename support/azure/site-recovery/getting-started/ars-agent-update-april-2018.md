@@ -4,7 +4,7 @@ description: Describes update and new features in Azure Recovery Services Agent 
 ms.date: 09/30/2020
 author: genlin
 ms.author: genli
-ms.service: site-recovery
+ms.service: azure-site-recovery
 ms.custom: sap:I need help getting started with Site Recovery
 ---
 # Mandatory update for Microsoft Azure Recovery Services Agent: April 2018

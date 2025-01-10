@@ -6,7 +6,7 @@ ms.author: tysonfreeman
 author: tysonfms
 editor: v-jsitser
 ms.reviewer: v-leedennis
-ms.service: container-instances
+ms.service: azure-container-instances
 ms.custom: sap:Management
 #customer intent: As a user of Azure Container Instances, I want to fix the display of memory usage metrics in the Azure portal so that it matches the memory usage values shown in the 'free' command for an individual container.
 ---

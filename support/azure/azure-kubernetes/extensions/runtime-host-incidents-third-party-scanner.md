@@ -1,13 +1,14 @@
 ---
 title: Third-party scanner detects run-time host incident
 description: Learn how to troubleshoot a scenario in which a third-party scanner (such as Prisma) detected a run-time host incident in Azure Kubernetes Service (AKS).
-ms.date: 05/13/2024
+ms.date: 08/07/2024
 author: mosbahmajed
 ms.author: momajed
 editor: v-jsitser
 ms.reviewer: cssakscic, v-rekhanain, v-leedennis
 ms.service: azure-kubernetes-service
 ms.topic: troubleshooting-problem-resolution
+ms.custom: sap:Extensions, Policies and Add-Ons
 #Customer intent: As an Azure Kubernetes user, I want to know why a third-party scanner (such as Prisma) detects a run-time host incident so that I can be assured that no untrusted sources have access to my Azure Kubernetes Service (AKS) cluster.
 ---
 # Third-party scanner detects run-time host incident

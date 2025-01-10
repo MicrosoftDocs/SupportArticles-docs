@@ -4,7 +4,6 @@ description: This article provides workarounds for the error that occurs when an
 ms.date: 01/29/2021
 ms.custom: sap:Other Driver
 ms.reviewer: jesweare
-ms.subservice: other-driver
 ---
 # Applications are unable to find a new scanning device after another device is disconnected
 

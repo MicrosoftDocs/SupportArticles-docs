@@ -3,13 +3,14 @@ author: genlin
 description: This article describes how to unlock an encrypted disk attached to a repair VM.
 ms.author: genli
 ms.date: 07/16/2021
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Windows (Guest OS), devx-track-azurepowershell
 ms.topic: troubleshooting
 title: Unlocking an encrypted disk for offline repair
 ---
-
 # Unlocking an encrypted disk for offline repair
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article describes how to unlock an encrypted OS disk on a separate virtual machine (called a repair VM) to enable offline remediation and troubleshooting on that disk.
 

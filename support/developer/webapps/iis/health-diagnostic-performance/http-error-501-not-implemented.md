@@ -4,7 +4,6 @@ description: This article discusses a by-design HTTP 501 error when you use an u
 ms.date: 07/17/2020
 ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
 ms.reviewer: robmcm
-ms.subservice: health-diagnostic-performance
 ---
 # HTTP/1.1 Error 501 - Not Implemented
 

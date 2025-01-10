@@ -5,9 +5,8 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, jgerend, v-lianna
-ms.custom: sap:Group Policy\Applocker or software restriction policies , csstroubleshoot
+ms.custom: sap:Group Policy\Applocker or software restriction policies, csstroubleshoot
 ---
 # Troubleshoot software restriction policies
 

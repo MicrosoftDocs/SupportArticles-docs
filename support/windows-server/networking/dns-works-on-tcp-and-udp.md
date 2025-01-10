@@ -5,16 +5,12 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, v-nirmsh
 ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 ---
 # DNS or other Services works on both TCP and UDP
 
 This article explains why some services use both the protocols TCP and UDP.
-
-_Applies to:_ &nbsp; Windows Server 2003  
-_Original KB number:_ &nbsp; 556000
 
 ## SUMMARY
 

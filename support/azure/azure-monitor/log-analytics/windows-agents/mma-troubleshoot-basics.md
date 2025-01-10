@@ -51,7 +51,7 @@ You can also query the version by running the following PowerShell cmdlet:
 1. Run the following query:
 
     ```PowerShell
-    Heartbeat | summarize arg_max(TimeGenerated, *) by Computer`
+    Heartbeat | summarize arg_max(TimeGenerated, *) by Computer
     ```
 
 1. Expand the query results, and then examine the **Version** column.

@@ -3,9 +3,8 @@ title: Troubleshooting problems related to subscription based service connection
 description: This article explains about common problems when creating subscription based service connections.
 ms.date: 05/19/2023
 ms.reviewer: cathmill, kirthishkt, v-jayaramanp
-ms.custom: sap:Pipelines
+ms.custom: sap:Pipelines - Service connection configuration and troubleshooting
 ms.service: azure-devops
-ms.subservice: ts-pipelines
 ---
 
 # Troubleshooting subscription related scenarios while creating service connections

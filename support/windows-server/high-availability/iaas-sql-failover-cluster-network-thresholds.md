@@ -1,21 +1,20 @@
 ---
 title: Tuning failover cluster network thresholds
-description: Introduces solutions for adjusting the threshold of failover cluster networks.
-ms.date: 12/26/2023
+description: Introduces solutions to adjust the thresholds of failover cluster network settings.
+ms.date: 10/09/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
-ms.reviewer: kaushika, v-lianna
+ms.reviewer: kaushika, v-lianna, jeffhugh
 ms.custom: sap:Clustering and High Availability\Setup and configuration of clustered services and applications, csstroubleshoot
 ---
-# IaaS with SQL Server - tuning failover cluster network thresholds
+# Tuning failover cluster network thresholds
 
-This article introduces solutions for adjusting the threshold of failover cluster networks.
+This article introduces solutions to adjust the thresholds of failover cluster network settings. Increasing the values of these settings might help reduce the cluster's sensitivity to transient network issues.
 
 ## Symptom
 
-When you run Windows failover cluster nodes in IaaS with a SQL Server Always On availability group, changing the cluster setting to a more relaxed monitoring state is recommended. Cluster settings out of the box are restrictive and could cause unneeded outages. The default settings are designed for highly tuned on premises networks and don't take into account the possibility of induced latency caused by a multitenant environment such as Microsoft Azure (IaaS).
+When you run Windows failover cluster nodes, changing the cluster setting to a more relaxed monitoring state is recommended. Cluster settings that are out of the box are restrictive and could cause unneeded outages. The default settings are designed for highly tuned on-premises networks and don't consider the possibility of induced latency caused by a multitenant environment such as Microsoft Azure (IaaS).
 
 Windows Server Failover Clustering is constantly monitoring the network connections and health of the nodes in a Windows Cluster. If a node is not reachable over the network, then recovery action is taken to recover and bring applications and services online on another node in the cluster. Latency in communication between cluster nodes can lead to the following error:
 
@@ -71,7 +70,7 @@ There are two settings that are used to configure the connectivity health of the
 
 **Threshold** - This defines the number of heartbeats, which are missed before the cluster takes recovery action. The threshold is a number of heartbeats. Within the same cluster, there can be different thresholds between nodes on the same subnet and between nodes that are on different subnets.
 
-By default Windows Server 2016 sets the **SameSubnetThreshold** to 10 and **SameSubnetDelay** to 1000 ms. For example, if connectivity monitoring fails for 10 seconds, the failover Threshold is reached resulting in the unreachable that node being removed from cluster membership. This results in the resources being moved to another available node on the cluster. Cluster errors will be reported, including cluster error 1135 (above) is reported.
+By default, Windows Server sets the **SameSubnetThreshold** to 10 and **SameSubnetDelay** to 1000 ms. For example, if connectivity monitoring fails for 10 seconds, the failover Threshold is reached resulting in the unreachable that node being removed from cluster membership. This results in the resources being moved to another available node on the cluster. Cluster errors will be reported, including cluster error 1135 (above) is reported.
 
 ## Resolution
 

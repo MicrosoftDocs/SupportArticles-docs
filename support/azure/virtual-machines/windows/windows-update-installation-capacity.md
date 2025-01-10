@@ -6,7 +6,7 @@ documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
@@ -15,8 +15,9 @@ ms.date: 06/13/2024
 ms.author: genli
 ms.custom: sap:My VM is not booting
 ---
-
 # Troubleshoot OS start up – Windows Update installation capacity
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article provides steps to resolve issues in an Azure virtual machine (VM) where Windows Update (KB) gets an error and becomes unresponsive.
 

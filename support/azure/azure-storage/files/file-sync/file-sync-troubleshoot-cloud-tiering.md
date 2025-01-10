@@ -4,9 +4,9 @@ description: Troubleshoot common issues with cloud tiering in an Azure File Sync
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 06/11/2024
+ms.date: 10/24/2024
 ms.author: kendownie
-ms.reviewer: v-weizhu
+ms.reviewer: vritikanaik, v-weizhu
 ms.custom: sap:File Sync
 ---
 # Troubleshoot Azure File Sync cloud tiering
@@ -103,6 +103,7 @@ If content doesn't exist for the error code, follow the general troubleshooting 
 | 0x800703e3 | -2147023901 | ERROR_OPERATION_ABORTED | The file failed to tier because it was recalled at the same time. | No action required. The file will be tiered when the recall completes and the file is no longer in use. |
 | 0x80c80264 | -2134375836 | ECS_E_GHOSTING_FILE_NOT_SYNCED | The file failed to tier because it hasn't synced to the Azure file share. | No action required. The file will tier once it has synced to the Azure file share. |
 | 0x80070001 | -2147942401 | ERROR_INVALID_FUNCTION | The file failed to tier because the cloud tiering filter driver (*storagesync.sys*) isn't running. | To resolve this issue, open an elevated command prompt and run the following command: `fltmc load storagesync`<br/>If the Azure File Sync filter driver fails to load when running the `fltmc` command, uninstall the Azure File Sync agent, restart the server, and reinstall the Azure File Sync agent. |
+| 0x80c86041 | -2134351807 | ECS_E_AFS_FILTER_NOT_LOADED | The file failed to tier because the cloud tiering filter driver (*storagesync.sys*) isn't running. | To resolve this issue, open an elevated command prompt and run the following command: `fltmc load storagesync`<br/>If the Azure File Sync filter driver fails to load when running the `fltmc` command, uninstall the Azure File Sync agent, restart the server, and reinstall the Azure File Sync agent. |
 | 0x80070070 | -2147024784 | ERROR_DISK_FULL | The file failed to tier due to insufficient disk space on the volume where the server endpoint is located. | To resolve this issue, free at least 100 MiB of disk space on the volume where the server endpoint is located. |
 | 0x80070490 | -2147023728 | ERROR_NOT_FOUND | The file failed to tier because it hasn't synced to the Azure file share. | No action required. The file will tier once it has synced to the Azure file share. |
 | 0x80c80262 | -2134375838 | ECS_E_GHOSTING_UNSUPPORTED_RP | The file failed to tier because it's an unsupported reparse point. | If the file is a Data Deduplication reparse point, follow the steps in the [planning guide](/azure/storage/file-sync/file-sync-planning#data-deduplication) to enable Data Deduplication support. Files with reparse points other than Data Deduplication aren't supported and won't be tiered.  |
@@ -182,12 +183,12 @@ If content doesn't exist for the error code, follow the general troubleshooting 
 |---------|-------------------|--------------|-------|-------------|
 | 0x80070079 | -2147942521 | ERROR_SEM_TIMEOUT | The file failed to recall due to an I/O timeout. This issue can occur for several reasons: server resource constraints, poor network connectivity, or an Azure storage issue (for example, throttling). | No action required. If the error persists for several hours, please open a support case. |
 | 0x80070036 | -2147024842 | ERROR_NETWORK_BUSY | The file failed to recall due to a network issue.  | If the error persists, check network connectivity to the Azure file share. |
-| 0x80c80037 | -2134376393 | ECS_E_SYNC_SHARE_NOT_FOUND | The file failed to recall because the server endpoint was deleted. | To resolve this issue, see [Tiered files aren't accessible on the server after deleting a server endpoint](?tabs=portal1%252cazure-portal#tiered-files-are-not-accessible-on-the-server-after-deleting-a-server-endpoint). |
+| 0x80c80037 | -2134376393 | ECS_E_SYNC_SHARE_NOT_FOUND | The file failed to recall because the server endpoint was deleted. | To resolve this issue, see [Tiered files aren't accessible on the server](?tabs=portal1%252cazure-portal#tiered-files-are-not-accessible-on-the-server). |
 | 0x80070005 | -2147024891 | ERROR_ACCESS_DENIED | The file failed to recall due to an access denied error. This issue can occur if the firewall and virtual network settings on the storage account are enabled and the server does not have access to the storage account. | To resolve this issue, add the Server IP address or virtual network by following the steps documented in the [Configure firewall and virtual network settings](/azure/storage/file-sync/file-sync-deployment-guide?tabs=azure-portal#optional-configure-firewall-and-virtual-network-settings) section in the deployment guide. |
 | 0x80c86002 | -2134351870 | ECS_E_AZURE_RESOURCE_NOT_FOUND | The file failed to recall because it's not accessible in the Azure file share. | To resolve this issue, verify the file exists in the Azure file share. If the file exists in the Azure file share, upgrade to the latest Azure File Sync [agent version](/azure/storage/file-sync/file-sync-release-notes#supported-versions). |
 | 0x80c8305f | -2134364065 | ECS_E_EXTERNAL_STORAGE_ACCOUNT_<br/>AUTHORIZATION_FAILED | The file failed to recall due to authorization failure to the storage account. | To resolve this issue, verify [Azure File Sync has access to the storage account](/azure/storage/file-sync/file-sync-troubleshoot-sync-errors?tabs=portal1,azure-portal#troubleshoot-rbac). |
 | 0x80c86030 | -2134351824 | ECS_E_AZURE_FILE_SHARE_NOT_FOUND | The file failed to recall because the Azure file share isn't accessible. | Verify the file share exists and is accessible. If the file share was deleted and recreated, perform the steps documented in the [Sync failed because the Azure file share was deleted and recreated](/azure/storage/file-sync/file-sync-troubleshoot-sync-errors?tabs=portal1,azure-portal#-2134375810) section to delete and recreate the sync group. |
-| 0x800705aa | -2147023446 | ERROR_NO_SYSTEM_RESOURCES | The file failed to recall due to insufficient system resources. | If the error persists, investigate which application or kernel-mode driver is exhausting system resources. |
+| 0x800705aa | -2147023446 | ERROR_NO_SYSTEM_RESOURCES | The file failed to recall due to insufficient system resources. <br/> Note: If the Azure File Sync agent version is 19 or later, and the Storage Sync Agent service (FileSyncSvc) isn't running, you will encounter an error when renaming files or folders within the server endpoint location.| Verify the Storage Sync Agent service (FileSyncSvc) is running. If FileSyncSvc is running and the error persists, investigate which application or kernel-mode driver is exhausting system resources. |
 | 0x8007000e | -2147024882 | ERROR_OUTOFMEMORY | The file failed to recall due to insufficient memory. | If the error persists, investigate which application or kernel-mode driver is causing the low memory condition. |
 | 0x80070070 | -2147024784 | ERROR_DISK_FULL | The file failed to recall due to insufficient disk space. | To resolve this issue, free up space on the volume by moving files to a different volume, increase the size of the volume, or force files to tier by using the `Invoke-StorageSyncCloudTiering` cmdlet. |
 | 0x80072f8f | -2147012721 | WININET_E_DECODING_FAILED | The file failed to recall because the server was unable to decode the response from the Azure File Sync service. | This error typically occurs if a network proxy is modifying the response from the Azure File Sync service. Please check your proxy configuration. |
@@ -245,7 +246,7 @@ If content doesn't exist for the error code, follow the general troubleshooting 
 | 0x80C80362 | -2134375582 | ECS_E_ITEM_PATH_COMPONENT_HAS_<br/>TRAILING_DOT | The file tiering or download failed because of a trailing dot in the path. | Rename the trailing dot in the folder or file name. |
 | 0x80c83096 | -2134364010 | ECS_E_MGMT_<br/>STORAGEACLSBYPASSNOTSET | This error occurs if the firewall and virtual network settings are enabled on the storage account and the **Allow trusted Microsoft services to access this storage account** exception isn't checked. | To resolve this issue, follow the steps in [Configure firewall and virtual network settings](/azure/storage/file-sync/file-sync-deployment-guide#optional-configure-firewall-and-virtual-network-settings). |
 
-## Tiered files are not accessible on the server after deleting a server endpoint
+## Tiered files are not accessible on the server
 
 Tiered files on a server will become inaccessible if the files aren't recalled prior to deleting a server endpoint or if tiered files were restored from on-premises (third-party) backup to the server endpoint location.
 
@@ -254,16 +255,7 @@ The following errors are logged if tiered files aren't accessible:
 - When syncing a file, error code -2147023890 (0x800703ee - ERROR_FILE_INVALID) or -2147942467 (0x80070043 - ERROR_BAD_NET_NAME) is logged in the *ItemResults* event log.
 - When recalling a file, error code -2147023890 (0x800703ee - ERROR_FILE_INVALID) or -2134376393 (0x80c80037 - ECS_E_SYNC_SHARE_NOT_FOUND) is logged in the *RecallResults* event log.
 
-If the tiered files aren't accessible due to deleting the server endpoint, restoring access to your tiered files is possible if the following conditions are met:
-
-- Server endpoint was deleted within the past 30 days.
-- Cloud endpoint wasn't deleted.
-- File share wasn't deleted.
-- Sync group wasn't deleted.
-
-If the conditions above are met, you can restore access to the files on the server by recreating the server endpoint at the same path on the server within the same sync group within 30 days.
-
-If the conditions above aren't met or the tiered files were restored from an on-premises (third-party) backup, restoring access isn't possible as these tiered files on the server are now orphaned. Follow these instructions to remove the orphaned tiered files.
+Follow the instructions in the sections below to remove the orphaned tiered files.
 
 > [!NOTE]
 >

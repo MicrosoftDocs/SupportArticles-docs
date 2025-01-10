@@ -1,8 +1,8 @@
 ---
 title: Configuration data isn't updated
 description: Fixes some configuration update issues in a System Center Operations Manager management group.
-ms.date: 04/15/2024
-ms.reviewer: RPesenko
+ms.date: 07/15/2024
+ms.reviewer: RPesenko, v-gjeronika
 ---
 # Configuration may not update in System Center Operations Manager
 
@@ -141,57 +141,149 @@ Setting the agent system clock time to match the management server system clock 
 4. The following query can be used to see what additional data has been submitted to the database with a timestamp in the future. The tables related to maintenance mode should have several rows, assuming there are agents currently in maintenance mode that's scheduled to end at some time. All other tables should have timestamps with the current time, or in the past.
 
    ```sql
-    /*                                                            */
+    /* */
+
     /* The following query will search all tables in the database */
-    /* for columns with datetime datatypes.  It will then return  */
-    /* the total number of rows in each table that have values    */
-    /* greater than the configured number of days from present.   */
-    /* Times are all in UTC format.  The default increment is     */
-    /* 3 days, but can be adjusted as needed.                     */
-    /*                                                            */
+
+    /* for columns with datetime datatypes. It will then return */
+
+    /* the total number of rows in each table that have values */
+
+    /* greater than the configured number of days from present. */
+
+    /* Times are all in UTC format. The default increment is */
+
+    /* 3 days, but can be adjusted as needed. */
+
+    /* */
+
+    -- Variable declarations
+
+    DECLARE @schemaname AS sysname;
+
     DECLARE @tabname AS sysname;
+
     DECLARE @colname AS sysname;
+
     DECLARE @fcontin AS tinyint;
+
     DECLARE @query AS nvarchar(max);
 
+    -- Temporary table to store the results
+
     CREATE TABLE #work
+
     (
-      TableName sysname,
-      ColumnName sysname,
-      NumRows int,
+
+    SchemaName sysname,
+
+    TableName sysname,
+
+    ColumnName sysname,
+
+    NumRows int
+
     );
 
-    DECLARE cur_meta CURSOR FOR
-      SELECT t.Name 'Table',
-             c.Name 'Column'
-      FROM sys.columns c
-      INNER JOIN sys.tables t ON c.object_id = t.object_id
-      INNER JOIN sys.types y ON c.system_type_id = y.system_type_id
-      WHERE y.Name = 'datetime';
+    -- Cursor to fetch schema, table, and column names with datetime type
 
-    /* Change the increment in the DATEADD(dd,3,GETUTCDATE()) function  */
-    /*  as needed from the default of +3 days from current time         */
+    DECLARE cur_meta CURSOR FOR
+
+    SELECT
+
+    s.name AS SchemaName,
+
+    t.name AS TableName,
+
+    c.name AS ColumnName
+
+    FROM
+
+    sys.columns c
+
+    INNER JOIN
+
+    sys.tables t ON c.object_id = t.object_id
+
+    INNER JOIN
+
+    sys.schemas s ON t.schema_id = s.schema_id
+
+    INNER JOIN
+
+    sys.types y ON c.system_type_id = y.system_type_id
+
+    WHERE
+
+    y.name IN ('datetime', 'date', 'datetime2', 'smalldatetime');
+
+    -- Open the cursor
+
     OPEN cur_meta;
+
+    -- Loop control variable
+
     SET @fcontin = 1;
+
+    -- Loop through the cursor
+
     WHILE (@fcontin > 0)
+
     BEGIN
-      FETCH cur_meta INTO @tabname, @colname;
-      IF (@@FETCH_STATUS < 0)
-         BREAK;
-      PRINT 'Table = '+ @tabname + ', Column = ' + @colname;
-      SET @query = 'SELECT ''' + @tabname
-                    + ''', ''' + @colname
-                    + ''', COUNT(*) FROM ' + QUOTENAME(@tabname)
-                    + ' WHERE ' + QUOTENAME(@colname) + ' > DATEADD(dd,3,GETUTCDATE())';
-      INSERT INTO #work
-      EXECUTE ( @query );
+
+    -- Fetch the next row
+
+    FETCH cur_meta INTO @schemaname, @tabname, @colname;
+
+    -- Exit loop if no more rows
+
+    IF (@@FETCH_STATUS < 0)
+
+    BREAK;
+
+    -- Debug print statement (can be commented out in production)
+
+    PRINT 'Schema = ' + @schemaname + ', Table = ' + @tabname + ', Column = ' + @colname;
+
+    /* Change the increment in the DATEADD(dd,3,GETUTCDATE()) function */
+
+    /* as needed from the default of +3 days from current time */
+
+    SET @query = 'IF EXISTS (SELECT 1 FROM ' + QUOTENAME(@schemaname) + '.' + QUOTENAME(@tabname) + ') '
+
+    + 'BEGIN '
+
+    + ' SELECT ''' + @schemaname + ''', ''' + @tabname + ''', ''' + @colname + ''', COUNT(*) '
+
+    + ' FROM ' + QUOTENAME(@schemaname) + '.' + QUOTENAME(@tabname)
+
+    + ' WHERE ' + QUOTENAME(@colname) + ' > DATEADD(dd,3,GETUTCDATE())'
+
+    + 'END';
+
+    -- Execute the query and insert results into the temporary table
+
+    INSERT INTO #work (SchemaName, TableName, ColumnName, NumRows)
+
+    EXECUTE sp_executesql @query;
+
     END
+
+    -- Close and deallocate the cursor
+
     CLOSE cur_meta;
+
     DEALLOCATE cur_meta;
 
+    -- Select results ordered by number of rows with future dates
+
     SELECT *
-      FROM #work
-      ORDER BY 3 DESC;
+
+    FROM #work
+
+    ORDER BY NumRows DESC;
+
+    -- Drop the temporary table
 
     DROP TABLE #work;
     ```

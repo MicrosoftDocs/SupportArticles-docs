@@ -5,9 +5,8 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:Windows Security Technologies\Security Templates , csstroubleshoot
+ms.custom: sap:Windows Security Technologies\Security Templates, csstroubleshoot
 ---
 # How to apply predefined security templates in Windows Server 2003
 

@@ -2,7 +2,7 @@
 title: Backing up, restoring, and cloning Microsoft Azure App Service
 description: Backing up, restoring, and cloning Microsoft Azure App Service
 ms.date: 06/23/2022
-ms.service: app-service
+ms.service: azure-app-service
 ms.author: shwagarwal
 author: ShwetaAgarwal-MS
 ms.reviewer: 

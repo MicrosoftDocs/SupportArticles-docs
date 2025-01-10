@@ -1,11 +1,10 @@
 ---
 title: Memory allocation errors can be caused by slow page file growth
 description: Describes an issue that causes memory allocation errors that can be caused by slow page file growth.
-ms.date: 12/26/2023
+ms.date: 11/25/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, davean, eddo, delhan
 ms.custom: sap:System Performance\System Configuration (page file, startup or running apps, error handling), csstroubleshoot
 ---
@@ -13,7 +12,7 @@ ms.custom: sap:System Performance\System Configuration (page file, startup or ru
 
 This article provides a workaround for errors that occur when applications frequently allocate memory.
 
-_Applies to:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10, Windows 11  
 _Original KB number:_ &nbsp; 4055223
 
 ## Symptoms

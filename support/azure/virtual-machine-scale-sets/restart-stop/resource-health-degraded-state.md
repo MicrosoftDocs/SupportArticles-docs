@@ -4,7 +4,7 @@ description: Explains the transient Degraded state that's displayed in Azure Vir
 ms.date: 04/07/2022
 author: genlin
 ms.author: genli
-ms.service: virtual-machine-scale-sets
+ms.service: azure-virtual-machine-scale-sets
 ms.reviewer: macla, pudesira
 ms.custom: sap:My instance was restarted or stopped unexpectedly
 ---

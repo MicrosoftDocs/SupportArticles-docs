@@ -5,17 +5,18 @@ services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
-ms.date: 06/13/2024
+ms.date: 08/01/2024
 ms.author: genli
 ms.custom: sap:My VM is not booting
 ---
-
 # Windows shows "CRITICAL SERVICE FAILED" on blue screen when booting an Azure VM
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article describes the "CRITICAL SERVICE FAILED" error that you may experience when you boot a Windows Virtual Machine (VM) in Microsoft Azure. It provides troubleshooting steps to help resolve the issues.
 
@@ -40,19 +41,19 @@ There are various causes for stop errors. The most common causes are:
 > [!TIP]
 > If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
-To resolve this problem, [contact support and submit a dump file](./troubleshoot-common-blue-screen-error.md#solution), which will help us diagnose the problem more quickly, or try the following self-help solution.
+To resolve this problem, gather the memory dump file and contact support with the file. To collect the dump file, follow these steps:
 
-### Attach the OS disk to a recovery VM
+### Step 1: Locate the dump file and submit a support ticket
 
-1. Take a snapshot of the OS disk of the affected VM as a backup. For more information, see [Snapshot a disk](/azure/virtual-machines/windows/snapshot-copy-managed-disk).
-2. [Attach the OS disk to a recovery VM](./troubleshoot-recovery-disks-portal-windows.md).
-3. Establish a remote desktop connection to the recovery VM.
+[!INCLUDE [Collect OS Memory Dump File](../../../includes/azure/collect-os-memory-dump-file.md)]
 
-### Enable dump logs and Serial Console
+If you can't find the dump file, go to the next steps to enable the dump log and the serial console, and then reproduce the issue.
 
-The dump log and [Serial Console](./serial-console-windows.md) will help us to do further troubleshooting.
+### Step 2: Enable the dump log and the serial console
 
-To enable dump logs and Serial Console, follow these steps:
+[!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
+
+To enable the dump log and the serial console, follow these steps:
 
 [!INCLUDE [Enable Serial Console and Memory Dump Collection](../../../includes/azure/enable-serial-console-memory-dump-collection.md)]
 

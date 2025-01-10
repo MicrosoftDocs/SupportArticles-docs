@@ -3,15 +3,16 @@ title: Uploaded VHD is not supported when you create a VM in Azure
 description: Resolves an issue in which you receive an error message (Disk is expected to have cookie value conectix) when you try to create a virtual machine using an uploaded VHD.
 ms.date: 07/21/2020
 ms.reviewer: 
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:Cannot create a VM
 ---
 # Uploaded VHD is not supported when you create a VM in Azure
 
-This article provides a solution to an issue in which you can't create a virtual machine using an uploaded VHD.
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
-_Original product version:_ &nbsp; Virtual Machine running Windows, Virtual Machine running Linux  
 _Original KB number:_ &nbsp; 4053292
+
+This article provides a solution to an issue in which you can't create a virtual machine using an uploaded VHD.
 
 ## Symptoms
 

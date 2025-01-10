@@ -5,12 +5,14 @@ author: divargas-msft
 ms.author: divargas
 ms.date: 04/15/2024
 ms.reviewer: jofrance
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:My VM is not booting, linux-related-content
 ms.collection: linux
 ms.topic: troubleshooting
 ---
 # Azure Linux virtual machine fails to boot after VFAT file system type is disabled
+
+**Applies to:** :heavy_check_mark: Linux VMs
 
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 

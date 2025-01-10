@@ -5,7 +5,6 @@ ms.date: 05/09/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
 ms.reviewer: kaushika, ANRATH, tfairman, v-lianna, jories
 ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot, ikb2lmc
 ---

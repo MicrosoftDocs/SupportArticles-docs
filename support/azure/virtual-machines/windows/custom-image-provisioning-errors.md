@@ -1,12 +1,14 @@
 ---
 title: Custom image provisioning errors
 description: Provides solutions to provisioning errors when you upload or capture a generalized VM image as a specialized VM image or vice versa.
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.date: 06/04/2024
 ms.custom: sap:Cannot create a VM, H1Hack27Feb2017
 ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
 ---
 # Provisioning errors when deploying custom images
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 Provisioning errors arise if you upload or capture a generalized VM image as a specialized VM image or vice versa. The former will cause a provisioning timeout error and the latter will cause a provisioning failure. To deploy your custom image without errors, you must ensure that the type of the image does not change during the capture process.
 

@@ -4,7 +4,6 @@ description: This article describes the problem where you can't stop the HTTP se
 ms.date: 02/27/2020
 ms.reviewer: bretb
 ms.custom: sap:Deployment and Migration\Web Deployment Agent service (msdepsvc)
-ms.subservice: iisadmin-service-inetinfo
 ---
 # HTTP services can't be stopped when the Microsoft Web Deployment Service is installed
 

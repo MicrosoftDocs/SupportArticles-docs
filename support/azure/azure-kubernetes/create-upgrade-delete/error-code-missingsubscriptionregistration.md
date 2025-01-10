@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the MissingSubscriptionRegistration error code
 description: Learn how to troubleshoot the MissingSubscriptionRegistration error when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 03/23/2022
+ms.date: 09/16/2024
 editor: v-jsitser
 ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis
 ms.service: azure-kubernetes-service

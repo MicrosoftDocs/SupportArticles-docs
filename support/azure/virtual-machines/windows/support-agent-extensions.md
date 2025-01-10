@@ -1,17 +1,18 @@
 ---
 title: Support for VM agent extensions in Microsoft Azure
 description: Discusses support policy for the VM agent for Microsoft Azure Virtual Machines and for VM agent extensions on IaaS for Microsoft Azure.
-ms.date: 07/21/2020
-ms.reviewer: 
-ms.service: virtual-machines
+ms.date: 09/04/2024
+ms.reviewer: samadara, sdhiraj, v-weizhu
+ms.service: azure-virtual-machines
 ms.custom: sap:VM Extensions not operating correctly
 ---
 # Support for VM agent extensions in Microsoft Azure
 
-This article discusses support policy for the VM agent for Microsoft Azure Virtual Machines and for VM agent extensions on infrastructure as a service (IaaS) for Microsoft Azure.
+**Applies to:** :heavy_check_mark: Windows VMs
 
-_Original product version:_ &nbsp; Virtual Machine running Windows  
 _Original KB number:_ &nbsp; 2965986
+
+This article discusses support policy for the VM agent for Microsoft Azure Virtual Machines and for VM agent extensions on infrastructure as a service (IaaS) for Microsoft Azure.
 
 Microsoft Support for VM agent extensions is limited to first-party extensions that are developed and published directly by Microsoft.
 Support is available to customers who purchased a valid [Azure support plan.](https://azure.microsoft.com/support/plans/)
@@ -48,6 +49,9 @@ The VM agent consists of three services that must be running:
 - Microsoft Azure Telemetry Service
 
 Make sure that these three services are running, and then check the extensions installation and startup.
+
+> [!NOTE]
+> Starting in version 2.7.41491.971 of Guest Agent, the Telemetry component is included in the Windows Azure Guest Agent service. Therefore, you might not see this Telemetry service listed in newly created VMs.
 
 Steps to verify the installation/startup error for the extensions:
 

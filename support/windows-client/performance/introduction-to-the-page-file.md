@@ -8,7 +8,6 @@ ms.collection: highpri
 ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshoot
 ms.reviewer: dansimp
 audience: itpro
-localization_priority: medium
 ---
 # Introduction to page files
 

@@ -3,7 +3,7 @@ title: File Explorer's navigation bar doesn't update when navigating shell names
 description: Describes a problem where File Explorer's navigation bar doesn't update when navigating folders in a shell namespace extension.
 ms.reviewer: davean, v-sidong
 ms.custom: sap:Desktop app UI development\Windows Shell API
-ms.date: 05/06/2024
+ms.date: 09/02/2024
 ---
 
 # File Explorer's navigation bar doesn't update when navigating shell namespace extension folders
@@ -16,15 +16,7 @@ After you install [KB 5031455](https://support.microsoft.com/topic/october-31-20
 
 ## Status
 
-Microsoft has confirmed this is a problem in Windows 11, version 22H2 and Windows 11, version 23H2.
-
-## Workaround
-
-Application developers can mitigate this issue by updating their shell namespace extensions to:
-
-1. Implement the [IExplorerPaneVisibility](/windows/win32/api/shobjidl_core/nn-shobjidl_core-iexplorerpanevisibility) interface and return `EPS_DEFAULT_ON` when [IExplorerPaneVisibility::GetPaneState](/windows/win32/api/shobjidl_core/nf-shobjidl_core-iexplorerpanevisibility-getpanestate) is called with `EP_Ribbon`.
-
-1. Implement the [IFolderView2](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifolderview2) interface and support [IFolderView::GetFolder](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifolderview-getfolder) to return an [IShellItem](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ishellitem) interface for the current folder.
+This issue is fixed in [KB5041587](https://support.microsoft.com/topic/august-27-2024-kb5041587-os-builds-22621-4112-and-22631-4112-preview-9706ea0e-6f72-430e-b08a-878963dafe08).
 
 ## More information
 

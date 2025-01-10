@@ -2,11 +2,13 @@
 title: Troubleshoot Linux virtual machine deployment issues
 description: Troubleshoot deployment issues when you create a new Linux virtual machine in Azure.
 ms.custom: sap:Cannot create a VM, linux-related-content
-ms.service: virtual-machines
-ms.date: 06/24/2024
+ms.service: azure-virtual-machines
+ms.date: 08/01/2024
 ms.reviewer: srijangupta, scotro, jarrettr
 ---
 # Troubleshoot issues when deploying Linux virtual machines
+
+**Applies to:** :heavy_check_mark: Linux VMs
 
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
@@ -124,7 +126,7 @@ When the VM is created for the first time, cloud-init will start up and try to m
 
 ## Common errors
 
-### UDF driver Blocklisted
+### Disabled UDF module
 
 **Error** In the serial log:
 
@@ -144,7 +146,7 @@ When the VM is created for the first time, cloud-init will start up and try to m
 
 **Cause**: The UDF driver is not loaded in the kernel, this is required for the VM to provision, see [image requirements](/azure/virtual-machines/linux/create-upload-generic).
 
-When a VM is first provisioned on Azure, the Azure host presents a 'provisioning cdrom iso disk' to the VM. This provisioning disk is usually presented to the VM through /dev/sr0. Within the provisioning disk, there is a provisioning manifest which contains a VM's provisioning information. The in-VM provisioning agent is expected to mount the provisioning disk, read the provisioning manifest, and provision the VM accordingly
+When a VM is first provisioned on Azure, the Azure host presents a 'provisioning cdrom iso disk' to the VM. This provisioning disk is usually presented to the VM through /dev/sr0. Within the provisioning disk, there is a provisioning manifest which contains a VM's provisioning information. The in-VM provisioning agent is expected to mount the provisioning disk, read the provisioning manifest, and provision the VM accordingly.
 
 Since the provisioning disk is a `cdrom iso disk`, the Linux UDF driver is required by the kernel in order to successfully mount this disk. This is referenced in Microsoft [documentation on Linux images](/azure/virtual-machines/linux/create-upload-generic). For this VM, logs indicate that the provisioning disk failed to mount, which caused VM provisioning to fail. The most likely reason is due to missing or blocked UDF drivers.
 

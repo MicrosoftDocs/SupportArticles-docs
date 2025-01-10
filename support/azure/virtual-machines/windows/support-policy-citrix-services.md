@@ -1,30 +1,27 @@
 ---
 title: Support policy for Citrix services on Azure
 description: Describes the Microsoft support policy that applies when you run Citrix services on Microsoft Azure. Also describes related Citrix support policies.
-ms.date: 07/21/2020
+ms.date: 12/12/2024
 ms.reviewer: 
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # Support policy for Citrix services on Azure
 
-This article describes the Microsoft support policy that applies when you run Citrix services on Microsoft Azure. It also describes related Citrix support policies.
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
-_Original product version:_ &nbsp; Virtual Machine running Citrix
 _Original KB number:_ &nbsp; 4017697
+
+This article describes the Microsoft support policy that applies when you run Citrix services on Microsoft Azure. It also describes related Citrix support policies.
 
 ## Frequently asked questions
 
 **Q: What is the support policy for using Citrix services on Azure?**
 
-Microsoft will provide support for Azure Platform and Services only. Support for Citrix Services will be provided directly by Citrix. For more information about Azure support, see [Azure support plans](https://azure.microsoft.com/support/plans/).
+Microsoft will provide support for Azure Platform and Services only. Support for Citrix Services will be provided directly by Citrix. For more information see:
 
-For more information about Citrix Support, see the following:
-
-- [XenDesktop Support](https://www.citrix.com/products/additional-products)
-- [XenApp Support](https://www.citrix.com/products/additional-products)
-- [Citrix ADC Support](https://support.citrix.com/plp/products/citrix_adc/tabs/popular-solutions)
-- [Citrix SD-WAN Support](https://support.citrix.com/plp/products/citrix_sd_wan/tabs/popular-solutions)
+- [Azure support plans](https://azure.microsoft.com/support/plans/)
+- [Citrix support](https://support.citrix.com/)
 
 Customers can initiate joint troubleshooting between Microsoft and Citrix if they are entitled to support from both companies.
 

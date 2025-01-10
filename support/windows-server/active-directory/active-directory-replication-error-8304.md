@@ -1,18 +1,16 @@
 ---
 title: Active Directory replication error 8304
 description: Provides a resolution for troubleshooting AD Replication error 8304, which is The maximum size on an object has been exceeded.
-ms.date: 12/26/2023
+ms.date: 08/07/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-localization_priority: medium
-ms.reviewer: kaushika, arrenc, johnbay, herbertm, joflore, v-lianna
+ms.reviewer: kaushika, arrenc, johnbay, herbertm, joflore, v-lianna, sagiv
 ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---
 # Active Directory replication error 8304: "The maximum size on an object has been exceeded"
 
 _Original KB number:_ &nbsp; 4533837  
-_Applies to:_ &nbsp; Supported versions of Windows Server
 
 ## Summary
 
@@ -136,6 +134,18 @@ Note this event may not quote the attribute that has the most data or values. It
 Error 8304 is logged when the domain controller tries to replicate an object that exceeds the maximum size.
 
 The most common cause is having a non-linked attribute with a big number of values. Because of the internal structure of the Active Directory database together with the Active Directory database record size of 8 KB, this limit of the values is about 1200-1300 values, depending on the population of other non-linked attributes.
+
+  
+> [!NOTE]
+> In a forest where all domain controllers are running Windows Server 2025 (preview) or later and both the forest and domain functional levels are set to Windows Server 2025 (preview) or later with the [Database 32k pages optional feature enabled](/windows-server/identity/ad-ds/enable-32k-pages-optional-feature?tabs=desktop), multi-valued attributes can now hold approximately 3,200 values. Therefore, the chances of encountering the problem are significantly reduced.
+>
+> For more information, see:  
+>
+> - [What's new in Windows Server 2025 (preview)](/windows-server/get-started/whats-new-windows-server-2025)   
+> - [Database 32k pages for Active Directory (preview)](/windows-server/identity/ad-ds/32k-pages-optional-feature)
+
+> [!Important]
+> Windows Server 2025 is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 On the source server, when you use a tool like LDP or run the `repadmin /showattr /allvalues /extended` command on the object, the output resembles the following:
 

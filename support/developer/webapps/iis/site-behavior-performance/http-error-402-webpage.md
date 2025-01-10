@@ -4,7 +4,6 @@ description: This article describes a problem where you might receive an error m
 ms.date: 03/31/2020
 ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
 ms.reviewer: cochen
-ms.subservice: site-behavior-performance
 ---
 # HTTP Error 404.2 when you visit a web page that is hosted on a computer that is running IIS 7.0
 

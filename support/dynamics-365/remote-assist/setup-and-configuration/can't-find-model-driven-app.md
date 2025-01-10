@@ -1,8 +1,8 @@
 ---
 title: Can't find the Dynamics 365 Remote Assist model-driven app
 description: Provides a resolution for an administrator to help find the Microsoft Dynamics 365 Remote Assist model-driven app.
-ms.author: davepinch
-author: davepinch
+author: prashantyvr
+ms.author: prashan
 ms.date: 10/27/2023
 ms.reviewer: v-wendysmith, mhart
 ms.custom: sap:Dynamics 365 Remote Assist\Setup and configuration, bap-template

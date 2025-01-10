@@ -3,12 +3,14 @@ title: FAQs for Azure Disks
 description: This article answers some frequently asked questions about Azure Managed Disks and Azure Premium SSD disks.
 ms.date: 08/24/2021
 ms.reviewer: 
-ms.service: virtual-machines
+ms.service: azure-virtual-machines
 ms.collection: windows
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 
 # FAQs for Azure Disks
+
+**Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
 This article answers frequently asked questions about Azure Managed Disks and Azure Premium SSD disks.
 
