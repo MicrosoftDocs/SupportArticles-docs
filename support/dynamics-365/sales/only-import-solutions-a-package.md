@@ -4,7 +4,6 @@ description: Provides a solution to the 80048068 error that occurs when you try 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
-ms.subservice: d365-sales-custom-solutions
 ---
 # You can only import solutions with a package version of 9.0 or earlier into this organization error occurs in Microsoft Dynamics 365
 

@@ -3,7 +3,6 @@ title: Microsoft Dynamics CRM Installations Updates and Documentation
 description: Microsoft Dynamics CRM Installations, Updates, and Documentation.
 ms.reviewer: 
 ms.date: 03/31/2021
-ms.subservice: d365-sales-server
 ---
 # Microsoft Dynamics CRM Installations, Updates, and Documentation
 

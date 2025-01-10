@@ -4,7 +4,6 @@ description: The solution installation or removal failed due to the installation
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
-ms.subservice: d365-sales-custom-solutions
 ---
 # "The solution installation or removal failed" when installing or removing a solution
 

@@ -4,7 +4,6 @@ description: Provides a solution to an error that occurs when you track an email
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
-ms.subservice: d365-sales-client-outlook
 ---
 # The given key was not present in the dictionary error occurs when you track an email in Microsoft Dynamics 365 for Outlook
 
