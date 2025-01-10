@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting consent issues in Microsoft Entra ID
 description: Helps you troubleshoot and resolve consent issues in Microsoft Entra ID.
-ms.date: 01/06/2025
+ms.date: 01/1/2025
 ms.reviewer: willfid, v-weizhu
 ms.service: entra-id
 ms.custom: sap:App registrations
@@ -28,8 +28,8 @@ When an application tries to sign-in or get an access token for a resource which
 There are many reasons why you might receive a message indicating that admin approval or admin consent is required. Consider the following high-level scenarios:
 
 - The `User.Read` permission is missing.
-- User consent is disabled.
-- User assignment required is enabled.
+- User consent is disabled on the tenant level.
+- User assignment required is enabled for the application.
 - A service principal doesn't exist in the tenant for the client app.
 - A service principal doesn't exist in the tenant for the resource.
 - A consent URL that specifies `prompt=admin_consent` or `prompt=consent` is requested.
