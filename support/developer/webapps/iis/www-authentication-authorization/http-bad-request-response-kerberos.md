@@ -34,8 +34,7 @@ Decrease the number of Active Directory groups that the user is a member of.
 
 Increase the settings for the `MaxFieldLength` and the `MaxRequestBytes` registry entries on the server so that the user's request headers don't exceed these values. To determine the appropriate settings, use the following calculations:
 
-1. Calculate the size of the user's Kerberos token by using the formula described in the following article:  
-[Problems with Kerberos authentication when a user belongs to many groups](../../../../windows-server/windows-security/kerberos-authentication-problems-if-user-belongs-to-groups.md).
+1. Calculate the size of the user's Kerberos token by using the formula described in [Problems with Kerberos authentication when a user belongs to many groups](../../../../windows-server/windows-security/kerberos-authentication-problems-if-user-belongs-to-groups.md).
 
 2. Set the value of `MaxFieldLength` and `MaxRequestBytes` on the server to 4/3 * T bytes, where T is the user's token size in bytes. HTTP encodes the Kerberos token by using base64 encoding.
 
@@ -48,7 +47,8 @@ Depending on your application environment, you might also work around this probl
 
 By default, there is no `MaxFieldLength` registry entry. This entry specifies the maximum size limit of each HTTP request header. The `MaxRequestBytes` registry entry specifies the upper limit for the total size of the Request line and the headers. Typically, this registry entry is configured together with the `MaxRequestBytes` registry entry. If the `MaxRequestBytes` value is lower than the `MaxFieldLength` value, the `MaxFieldLength` value is adjusted. In large Active Directory environments, users may experience logon failures if the values for both these entries aren't set to a sufficiently high value.
 
-For IIS versions shipped with Windows Server 2016 and later, the `MaxFieldLength` and `MaxRequestBytes` registry keys are located at the following sub key:  
+For IIS versions shipped with Windows Server 2016 and later, the `MaxFieldLength` and `MaxRequestBytes` registry keys are located in the following subkey:  
+
 `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\HTTP\Parameters`
 
 Set the key values as shown in the following table:
@@ -74,6 +74,6 @@ If `MaxFieldLength` is set to its maximum value of 64 KB, the `MaxTokenSize` reg
 
 - [Http.sys registry settings for IIS](../iisadmin-service-inetinfo/httpsys-registry-windows.md)  
 
-- [Error logging in HTTP API](/windows/win32/http/error-logging-in-the-http-server-api)
+- [Error logging in the HTTP server API](/windows/win32/http/error-logging-in-the-http-server-api)
 
 - [Problems with Kerberos authentication when a user belongs to many groups](../../../../windows-server/windows-security/kerberos-authentication-problems-if-user-belongs-to-groups.md)
