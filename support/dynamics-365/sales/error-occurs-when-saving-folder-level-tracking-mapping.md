@@ -4,7 +4,6 @@ description: An error occurs when trying to save a folder-level tracking mapping
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
-ms.subservice: d365-sales-custom-solutions
 ---
 # An error occurs when trying to save a folder-level tracking mapping in Microsoft Dynamics 365
 
