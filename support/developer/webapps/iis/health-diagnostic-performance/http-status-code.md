@@ -1,5 +1,5 @@
 ---
-title: HTTP status code overview
+title: HTTP Status Code Overview
 description: This article provides a list of the HTTP status codes in IIS.
 ms.date: 10/24/2024
 ms.custom: sap:Health, Diagnostic, and Performance Features\HTTP error logging
@@ -242,7 +242,7 @@ IIS defines the following HTTP status codes that indicate a more specific cause 
 
 | Code | Description | Notes |
 |---|---|---|
-| 500.0 | Module or ISAPI error occurred. | This HTTP status code may occur for many server-side reasons. For more information, see [HTTP Error 500.0 - Internal Server Error](./http-error-500-when-you-visit-web-site.md). |
+| 500.0 | Module or ISAPI error occurred. | This HTTP status code may occur for many server-side reasons. For more information, see [HTTP Error 500.0 - Internal Server Error](../site-behavior-performance/http-error-500-when-you-visit-web-site.md). |
 | 500.11 | Application is shutting down on the web server. | The request isn't processed because the destination application pool is shutting down. Wait for the worker process to finish shutting down, and then try the request again. If this problem persists, the web application may be experiencing problems that prevent the web application from shutting down correctly. |
 | 500.12 | Application is busy restarting on the web server. | The request isn't processed because the destination application pool is restarting. This HTTP status code should disappear when you refresh the page. If this HTTP status code appears again after you refresh the page, the problem may be caused by antivirus software that is scanning the Global.asa file. If this problem persists, the web application may be experiencing problems that prevent the web application from restarting correctly. |
 | 500.13 | Web server is too busy. | The request isn't processed because the server is too busy to accept any new incoming requests. Typically, this HTTP status code means that the number of incoming concurrent requests exceeds the number that the IIS web application can process. This problem may occur when the performance configuration settings are set too low, the hardware is insufficient, or a bottleneck occurs in the IIS web application. A common troubleshooting method is to generate a memory dump file of the IIS processes when the error is occurring and then to debug the memory dump file. |

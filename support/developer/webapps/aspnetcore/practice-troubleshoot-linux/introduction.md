@@ -3,7 +3,7 @@ title: Overview of ASP.NET Core on Linux troubleshooting
 description: This article provides an overview of how to troubleshoot ASP.NET Core applications on Linux and what you should consider before the troubleshooting.
 ms.date: 12/16/2024
 ms.custom: sap:General Development Questions, linux-related-content
-ms.reviewer: ramakoni, ahmetmb
+ms.reviewer: ramakoni, ahmetmb, zixie
 author: ahmetmithat
 ---
 # Overview of ASP.NET Core on Linux troubleshooting

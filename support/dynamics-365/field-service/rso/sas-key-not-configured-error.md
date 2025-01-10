@@ -4,7 +4,7 @@ description: Resolves an issue with misconfigured Azure resources in the Resourc
 ms.author: AnilMur
 author: anilmur
 ms.reviewer: mhart
-ms.date: 10/19/2023
+ms.date: 01/08/2025
 ms.custom: sap:Resource Scheduling Optimization
 ---
 # "SAS Key hasn't been configured" error in Resource Scheduling Optimization

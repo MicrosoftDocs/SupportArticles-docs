@@ -47,7 +47,7 @@ Don't use the ISAPI filter that registers for the `SF_NOTIFY_READ_RAW_DATA` noti
 
 Error message:
 
-> Server Error in Application "\<application name\>"  
+> Server Error in Application "\<applicationName\>"  
 HTTP Error 500.0 - Internal Server Error  
 HRESULT: 0x80070035  
 Description of HRESULT The page cannot be displayed because an internal server error has occurred.

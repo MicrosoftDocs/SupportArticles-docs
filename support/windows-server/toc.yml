@@ -1447,6 +1447,8 @@ items:
       href: ./networking/troubleshoot-dns-name-resolution.md
     - name: Troubleshoot DNS name resolution failures related to DNS forwarders
       href: ./networking/troubleshoot-dns-forwarders-related-failures.md
+    - name: Troubleshoot DNS scavenging issues
+      href: ./networking/troubleshoot-dns-scavenging-issues.md
     - name: Verify that SRV DNS records have been created
       href: ./networking/verify-srv-dns-records-have-been-created.md
     - name: WINS registration fails if a server points to itself for WINS name resolution

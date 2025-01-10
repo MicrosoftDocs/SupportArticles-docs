@@ -15,9 +15,4 @@
   - name: Change Enterprise SSO service account
     href: setup-configuration/change-enterprise-sso-service-account.md
 
-- name: Network integration (SNA gateway)
-  items:
-  - name: SNA LU6.2 Resync TP fails to start
-    href: network-integration/sna-lu6-2-resync-tp-fails-start.md
-
 
