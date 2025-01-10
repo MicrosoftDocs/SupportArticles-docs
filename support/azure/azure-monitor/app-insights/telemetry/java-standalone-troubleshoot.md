@@ -254,9 +254,9 @@ You can also try the [monitoring solutions for Java native](/azure/azure-monitor
 - With Quarkus, the Quarkus Opentelemetry Exporter for Microsoft Azure.
 
 
-## Understand duplicated operation ID
+## Understand duplicated operation IDs
 
-Application logic can result in the operation ID to be reused by multiple telemetry items, as shown in [this example](/azure/azure-monitor/app/distributed-trace-data#example). The duplication might also come from incoming requests. To identify this, use one of the following methods:
+Application logic can result in an operation ID being reused by multiple telemetry items, as shown in [this example](/azure/azure-monitor/app/distributed-trace-data#example). The duplication might also come from incoming requests. To identify this, use one of the following methods:
 
 * Enable the capture of the `traceparent` header in the **applicationinsigths.json** file as follows:
 
@@ -271,7 +271,7 @@ Application logic can result in the operation ID to be reused by multiple teleme
         }
       }
     ```
-* Enable [self-diagnostics](/azure/azure-monitor/app/java-standalone-config#self-diagnostics) at the DEBUG level and then restart the application.
+* Enable [self-diagnostics](/azure/azure-monitor/app/java-standalone-config#self-diagnostics) at the DEBUG level and restart the application.
 
     In the following log example, the operation ID comes from an incoming request, not Application Insights:
 
