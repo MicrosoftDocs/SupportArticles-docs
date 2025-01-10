@@ -1,8 +1,8 @@
 ---
 title: Error occurs when you open Configuration Manager
 description: This article provides workarounds for the problem that occurs when you open SQL Server Configuration Manager.
-ms.reviewer: yongzhe, randolphwest
-ms.date: 02/23/2023
+ms.reviewer: yongzhe, randolphwest, jopilov
+ms.date: 01/10/2025
 ms.custom: sap:SQL Server Management, Query and Data Tools
 ---
 # Error message when you open SQL Server Configuration Manager in SQL Server: Cannot connect to WMI provider. You do not have permission or the server is unreachable
