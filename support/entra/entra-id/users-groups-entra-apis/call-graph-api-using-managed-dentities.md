@@ -13,7 +13,7 @@ This article explains how to use managed identities to obtain access token, and 
 
 ## Configure permissions for managed identities
 
-To begin with, a User Assigned Managed Identity will have a service principal in the Enterprise applications blade, however, no app registration, which is where you normally go to assign and consent to permissions. A System Assigned Managed Identity doesn't have a service principal that is viewable in the Enterprise applications blade. To get permissions consented for Microsoft Graph on those identities, you'll need to make an OAuth Permission Grant. The following PowerShell script will do just that.
+All managed identities (User Assigned and System Assigned) will have a servicePrincipal that will show up in Enterprise Apps blade. To get permissions consented for Microsoft Graph on those identities, you'll need to make an OAuth Permission Grant. To do this, run the following PowerShell script:
 
 ```powershell
 # Your tenant id (in Azure Portal, under Azure Active Directory -> Overview )
