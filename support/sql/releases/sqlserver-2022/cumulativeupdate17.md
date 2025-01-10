@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 17 for SQL Server 2022 (KB5048038)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 17 (KB5048038).
-ms.date: 1/9/2025
+ms.date: 1/16/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5048038
 ms.reviewer: v-qianli2
 appliesto:
@@ -16,7 +16,7 @@ _Version:_ &nbsp; 16.0.4175.1
 
 ## Summary
 
-This article describes Cumulative Update package 17 (CU17) for Microsoft SQL Server 2022. This update contains 12 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 16 and it updates components in the following builds:
+This article describes Cumulative Update package 17 (CU17) for Microsoft SQL Server 2022. This update contains 13 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 16 and it updates components in the following builds:
 
 - SQL Server - Product version: **16.0.4175.1**, file version: **2022.160.4175.1**
 - Analysis Services - Product version: **16.0.43.239**, file version: **2022.160.43.239**
@@ -44,7 +44,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=3677980>[3677980](#3677980) </a> | [FIX: Scalar UDF Inlining issues in SQL Server 2022 and 2019 (KB4538581)](https://support.microsoft.com/help/4538581)| SQL Server Engine| Programmability | All|
 | <a id=3653362>[3653362](#3653362) </a> | Fixes a performance issue of the SUBSTRING function that you encounter when extensively using the function, such as building indexes on computed columns with expressions that involve calling SUBSTRING. | SQL Server Engine| Programmability | All|
 | <a id=3572259>[3572259](#3572259) </a> | Fixes error "The XML data type is damaged" thrown by the Replication Log Reader Agent when you update an XML column with XML compression enabled.| SQL Server Engine| Replication | Windows|
-| <a id=3445709>[3445709](#3445709) </a></br><a id=3686639>[3686639](#3686639) </a> | [Improvement: Microsoft Entra managed identity support for backup and restore database operations and for EKM with AKV in SQL Server on Azure VMs (KB5043526)](microsoft-entra-managed-identity-support-for-backup-restore-database-ekm-akv.md) | SQL Server Engine| Security Infrastructure | All|
+| <a id=3445709>[3445709](#3445709) </a></br><a id=3538141>[3538141](#3538141) </a></br><a id=3686639>[3686639](#3686639) </a> | [Improvement: Microsoft Entra managed identity support for backup and restore database operations and for EKM with AKV in SQL Server on Azure VMs (KB5043526)](microsoft-entra-managed-identity-support-for-backup-restore-database-ekm-akv.md) | SQL Server Engine| Security Infrastructure | All|
 | <a id=3514753>[3514753](#3514753) </a> | Fixes various assertion failures (for example, Location: sosmerge.cpp:2930; Expression: mrP->mrpgcnt > 0) that you might encounter when building an index in simple or bulk-logged recovery models with indirect checkpoints because of missing flushes of intermediate data pages.| SQL Server Engine| SQL OS| All|
 | <a id=3616559>[3616559](#3616559) </a> | Fixes a performance issue that you might encounter only when `sp_lock` is called frequently from multiple connections, which might cause a memory leak. The memory isn't cleaned up until you restart the SQL Server service. </br></br>**Note**: You need to turn on trace flag 15915.| SQL Server Engine| Transaction Services| All|
 
