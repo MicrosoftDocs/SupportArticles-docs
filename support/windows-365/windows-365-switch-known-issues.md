@@ -35,7 +35,7 @@ This page lists recent known issues with [Windows 365 Switch](/windows-365/enter
 
 ## Support for only one Cloud PC
 
-Currently, Windows 365 Switch only supports one Switch-enabled Cloud PC. The user is automatically signed into the first available Switch-supported Cloud PC from the list of Cloud PCs assigned to the user. Using Switch, the user can choose which Cloud PC to sign in to by selecting the ellipses (...) > choose the Cloud PC > **Add to Task view**. Only one Cloud PC can be added to Task view at a time. If you try to pin multiple Cloud PCs to the Task view, they're added in a stack fashion. For example, if you remove the first Cloud PC you added, the second one takes its place. Because only the first Cloud PC added is displayed in the Task view, it's not recommended to pin more than one Cloud PC to the Task view.
+Currently, Windows 365 Switch only supports one Switch-enabled Cloud PC. The user is automatically signed into the first available Switch-supported Cloud PC from the list of Cloud PCs assigned to the user. Using Switch, the user can choose which Cloud PC to sign in to by selecting the ellipses (...) > choose the Cloud PC > **Add to Task view**. Only one Cloud PC can be added to Task view at a time. If you try to pin multiple Cloud PCs to the Task view, they're added in a stack fashion. For example, if you remove the first Cloud PC you added, the second one takes its place. Because only the first Cloud PC added is displayed in the Task view, we don't recommend to pin more than one Cloud PC to the Task view.
 
 ## Remove or replace stale Cloud PC from task view
 
@@ -69,7 +69,7 @@ Let the disconnect complete and then launch a new connection using Task view.
 
 ## Navigation between sign in prompts and your Cloud PC
 
-After selecting a Cloud PC from the Task view, users might be prompted to sign in using their account credentials. In some builds of Windows, after providing the credentials, the user might not be returned to the Cloud PC connection.
+After you select a Cloud PC from the Task view, users might be prompted to sign in using their account credentials. In some builds of Windows, after providing the credentials, the user might not be returned to the Cloud PC connection.
 
 **Troubleshooting steps**:
 

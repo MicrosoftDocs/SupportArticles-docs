@@ -62,10 +62,10 @@ Every failed ANC or success with warning error state includes the technical deta
 - **Microsoft Entra device sync (warning)**: Device ID sync is enabled on the Microsoft Entra tenant, and the computer object is being synced within 90 minutes.
 - **Azure subnet IP address usage**: Sufficient IP addresses are available in the provided Azure subnet.
 - **Azure tenant readiness**: The defined Azure subscription is enabled and ready for use. No Azure policy restrictions are blocking Windows 365 resources from being created.
-- **Azure virtual network readiness**: The defined vNet is in a Windows 365 supported region.
+- **Azure virtual network readiness**: The defined virtual network is in a Windows 365 supported region.
 - **First party app permissions exist on Azure subscription**: Sufficient permissions exist on the Azure subscription.
 - **First party app permissions exist on Azure resource group**: Sufficient permissions exist on the Azure resource group.
-- **First party app permissions exist on Azure virtual network**: Sufficient permissions exist on the Azure vNet.
+- **First party app permissions exist on Azure virtual network**: Sufficient permissions exist on the Azure virtual network.
 - **Environment and configuration is ready**: Underlying infrastructure is ready for provisioning to succeed.
 - **Intune enrollment restrictions allow Windows enrollment**: Verify that Intune enrollment restrictions are configured to allow Windows enrollment.
 - **Localization language package readiness**: Verify that the operating system and Microsoft 365 language packages are reachable. Also verify that the localization package download link is reachable.

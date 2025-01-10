@@ -31,18 +31,18 @@ ms.collection:
 
 # Troubleshoot Windows 365 Business Cloud PC setup issues
 
-If your users get the “Setup failed” error, or if setup takes longer than 90 minutes after you assign them a license, use the steps in this article to resolve the issue.
+If your users get the "Setup failed" error, or if setup takes longer than 90 minutes after you assign them a license, use the steps in this article to resolve the issue.
 
 > [!IMPORTANT]
-> You must be a Global admin to do most of the tasks described in this article. If other admin roles can be used for a specific procedure, they are noted before the procedure. If you don’t have permission to log in to or access parts of the Azure portal, contact your IT admin. For more information about Azure rules, see [Microsoft Entra built-in roles](/azure/active-directory/roles/permissions-reference). To learn more about the Azure portal, see [Azure portal overview](/azure/azure-portal/azure-portal-overview).
+> You must be a Global admin to do most of the tasks described in this article. If other admin roles can be used for a specific procedure, they're noted before the procedure. If you don't have permission to sign in to or access parts of the Azure portal, contact your IT admin. For more information about Azure rules, see [Microsoft Entra built-in roles](/azure/active-directory/roles/permissions-reference). To learn more about the Azure portal, see [Azure portal overview](/azure/azure-portal/azure-portal-overview).
 
 
 ## Make sure MDM authority configuration is set up correctly
 
-It’s possible that the setup failure is caused by the MDM authority configuration in your environment. If so, you have two paths to follow, depending on whether you plan to use Microsoft Intune to manage the Cloud PCs.
+It's possible that the setup failure is caused by the MDM authority configuration in your environment. If so, you have two paths to follow, depending on whether you plan to use Microsoft Intune to manage the Cloud PCs.
 
 - If you use or plan to use Microsoft Intune for your Cloud PCs, follow the steps in [Path A: Make sure the Mobility (MDM and MAM) settings are correctly configured](#path-a-use-microsoft-intune-to-manage-your-cloud-pcs).
-- If you don’t plan to use Microsoft Intune to manage your Cloud PCs, follow steps in [Path B: Turn off automatic MDM enrollment](#path-b-turn-off-automatic-mdm-enrollment-and-intune-enrollment-in-organization-settings).
+- If you don't plan to use Microsoft Intune to manage your Cloud PCs, follow steps in [Path B: Turn off automatic MDM enrollment](#path-b-turn-off-automatic-mdm-enrollment-and-intune-enrollment-in-organization-settings).
 
 ### Path A. Use Microsoft Intune to manage your Cloud PCs
 
@@ -75,14 +75,14 @@ Users who are assigned a Cloud PC must have an Intune license assigned to them t
 
 ### Path B. Turn off automatic MDM enrollment and Intune enrollment in Organization Settings
 
-If you don’t plan to use Microsoft Intune for your Cloud PC management, you must turn off automatic MDM enrollment and uncheck Enroll new Cloud PCs in Microsoft Intune in Organization Settings.
+If you don't plan to use Microsoft Intune for your Cloud PC management, you must turn off automatic MDM enrollment and uncheck Enroll new Cloud PCs in Microsoft Intune in Organization Settings.
 
 > [!IMPORTANT]
-> If you’re not the MDM administrator, don’t use either of the following procedures without first consulting with your IT admin. Only follow these procedures if Cloud PCs aren’t being set up. Any configuration changes could impact your management environment. If you need help, [contact Intune support](/mem/get-support).
+> If you're not the MDM administrator, don't use either of the following procedures without first consulting with your IT admin. Only follow these procedures if Cloud PCs aren't being set up. Any configuration changes could impact your management environment. If you need help, [contact Intune support](/mem/get-support).
 
 <a name='use-the-azure-ad-portal-to-turn-off-automatic-intune-enrollment'></a>
 
-#### Use the Microsoft Entra portal to turn off automatic Intune enrollment
+#### Use the Microsoft Entra admin center to turn off automatic Intune enrollment
 
 1. In the Azure portal, go to the [Microsoft Entra Overview](https://go.microsoft.com/fwlink/p/?linkid=516942) page.
 2. In the left nav, under **Manage**, select **Mobility (MDM and MAM)**, then select **Microsoft Intune**.
@@ -94,11 +94,11 @@ If you don’t plan to use Microsoft Intune for your Cloud PC management, you mu
 
 1. In the [Windows 365 home page](https://windows365.microsoft.com), go to **Your organization's Cloud PCs", then select **Update organization settings**.
 2. On the right-hand side, scroll down to **Microsoft Intune** and unselect the **Enroll new Cloud PCs in Microsoft Intune** checkbox.
-3. Click Save at the bottom.
+3. Select Save at the bottom.
 
 ## Reset your Cloud PCs
 
-After you complete the troubleshooting steps in this article, your users must restart their Cloud PC setup. Tell all Cloud PC users who saw the “Setup failed” error to use the following steps to reset their Cloud PCs.
+After you complete the troubleshooting steps in this article, your users must restart their Cloud PC setup. Tell all Cloud PC users who saw the "Setup failed" error to use the following steps to reset their Cloud PCs.
 
-1. On the [Windows 365 home page](https://windows365.microsoft.com), select the gear icon for any Cloud PC that has the “Setup failed” status, then select **Reset**. This action restarts the setup process.
-2. After the reset, if the “Setup failed” error still displays, and you skipped [Make sure MDM authority configuration is set up correctly](#make-sure-mdm-authority-configuration-is-set-up-correctly), complete that step, then reset the CloudPC again. Otherwise, in the left nav, select **New support request** to open a support ticket.
+1. On the [Windows 365 home page](https://windows365.microsoft.com), select the gear icon for any Cloud PC that has the "Setup failed" status, then select **Reset**. This action restarts the setup process.
+2. After the reset, if the "Setup failed" error still displays, and you skipped [Make sure MDM authority configuration is set up correctly](#make-sure-mdm-authority-configuration-is-set-up-correctly), complete that step, then reset the CloudPC again. Otherwise, in the left nav, select **New support request** to open a support ticket.

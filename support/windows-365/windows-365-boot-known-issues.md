@@ -80,9 +80,9 @@ When the **Use security keys for sign-in** policy setting enabled, it can be con
 
 If it's set, exclude your Windows 365 Boot devices from the policy.
 
-## Local device has background apps and previous policy configurations that impact the user’s Windows 365 Boot experience
+## Local device has background apps and previous policy configurations that impact the user's Windows 365 Boot experience
 
-Windows 365 Boot uses “clean” Windows 11 devices that don't have preconfigured applications or policies assigned to the device.  
+Windows 365 Boot uses "clean" Windows 11 devices that don't have preconfigured applications or policies assigned to the device.  
 
 **Troubleshooting steps**: Reset the device to a clean state. For more information, see [Windows 365 Boot physical device requirements](/windows-365/enterprise/windows-365-boot-physical-device-requirements).
 
@@ -90,7 +90,7 @@ Windows 365 Boot uses “clean” Windows 11 devices that don't have preconfigur
 
 When using single sign-on, users are prompted to authenticate to Microsoft Entra ID and allow the Remote Desktop connection when launching a connection to a new Cloud PC. Microsoft Entra remembers up to 15 devices for 30 days before prompting again.
 
-**Troubleshooting steps**: If you see this dialog, select **Yes** to connect.
+**Troubleshooting steps**: If you see this dialog, select **Yes** to connect.
 
 ## User can't launch the web browser to sign-in to WI-FI network
 
@@ -110,7 +110,7 @@ This known issue is under investigation.
 
 ## Camera access is denied in Cloud PC
 
-Camera permissions must be granted to the Azure Virtual Desktop (HostApp) application to use your Windows 365 Boot configured device’s camera in Microsoft Teams.
+Camera permissions must be granted to the Azure Virtual Desktop (HostApp) application to use your Windows 365 Boot configured device's camera in Microsoft Teams.
 
 **Troubleshooting steps**:
 
@@ -129,7 +129,7 @@ Users are currently blocked from accessing most features on their Windows 365 Bo
 
  Windows 365 Boot physical devices might sign out users because of screen idle policies applied to the physical device or Cloud PC.
 
-**Troubleshooting steps**: Using an Intune device configuration profile, change or configure the [DeviceLock CSP policy (MaxInactivityTimeDeviceLock)](/windows/client-management/mdm/policy-csp-devicelock?WT.mc_id=Portal-fx#maxinactivitytimedevicelock). Make these changes for both the physical device and the Cloud PC.
+**Troubleshooting steps**: To use an Intune device configuration profile, change or configure the [DeviceLock CSP policy (MaxInactivityTimeDeviceLock)](/windows/client-management/mdm/policy-csp-devicelock?WT.mc_id=Portal-fx#maxinactivitytimedevicelock). Make these changes for both the physical device and the Cloud PC.
 
 ## Users see multiple authentication dialogs despite single sign-on being enabled
 
@@ -144,7 +144,7 @@ When using single sign-on, users are prompted to:
 
 Microsoft Entra remembers up to 15 devices for 30 days before prompting again.
 
-If you see this dialog, select **Yes** to connect.
+If you see this dialog, select **Yes** to connect.
 
 ## Users see a black screen after sign-on
 
@@ -153,8 +153,8 @@ Windows 365 Boot is configured by using the [CloudDesktop CSP](/windows/client-m
 **Troubleshooting steps**: If you configured your device for Windows 365 Boot using the [Windows 365 Boot Guided Scenario](/windows-365/enterprise/windows-365-boot-guide):
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Configuration profiles**.
-2. Search for the Device configuration profile that contains “Windows 365 Boot Device Configuration Policy” in its name.
-3. Make sure that the “Cloud Desktop” configuration is configured with the **Windows 365 Boot Mode** setting set to **Enable Windows 365 Boot Desktop**.
+2. Search for the Device configuration profile that contains "Windows 365 Boot Device Configuration Policy" in its name.
+3. Make sure that the "Cloud Desktop" configuration is configured with the **Windows 365 Boot Mode** setting set to **Enable Windows 365 Boot Desktop**.
 4. Select **Device assignment status** and make sure that the configuration policy was successfully applied to it.
 5. If the check-in status isn't successful, see [Troubleshooting policies and profiles in Microsoft Intune](/troubleshoot/mem/intune/device-configuration/troubleshoot-policies-in-microsoft-intune).
 
@@ -167,7 +167,7 @@ Windows 365 Boot is configured through the [Windowslogon CSP](/windows/client-ma
 **Troubleshooting steps**: If you configured your device for Windows 365 Boot using the [Windows 365 Boot Guided Scenario](/windows-365/enterprise/windows-365-boot-guide):
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Configuration profiles**.
-2. Search for the Device configuration profile that contains “Windows 365 Boot Device Configuration Policy” in its name.
+2. Search for the Device configuration profile that contains "Windows 365 Boot Device Configuration Policy" in its name.
 3. Make sure that the "Windows Logon" configuration is configured with the **Override Shell Program** setting set to **Apply Lightweight shell**.
 4. Select **Device assignment status** and make sure that the configuration policy was successfully applied to it.
 5. If the check-in status isn't successful, see [Troubleshooting policies and profiles in Microsoft Intune](/troubleshoot/mem/intune/device-configuration/troubleshoot-policies-in-microsoft-intune).
@@ -176,11 +176,11 @@ If the problem persists, reinstall the physical device's operating system as exp
 
 ## Error message: Windows 365 can't connect to the resources it uses to run properly
 
-**Troubleshooting steps**: Check your device’s network connection and try again. If you're using an Azure network connection (ANC) for your Cloud PC, check the ANC status as explained in [Azure network connection status](/windows-365/enterprise/health-checks#azure-network-connection-status).
+**Troubleshooting steps**: Check your device's network connection and try again. If you're using an Azure network connection (ANC) for your Cloud PC, check the ANC status as explained in [Azure network connection status](/windows-365/enterprise/health-checks#azure-network-connection-status).
 
 For more information, see [Troubleshoot Cloud PC connection errors](/windows-365/enterprise/connection-errors).
 
-## Error message: Something is preventing you from using the Windows 365 app” error message
+## Error message: Something is preventing you from using the Windows 365 app" error message
 
 **Troubleshooting steps**: See [Troubleshoot Windows 365 Boot](/windows-365/enterprise/troubleshoot-windows-365-boot).
 
@@ -206,14 +206,14 @@ This error can occur when a device is removed from and then re-enrolled in Windo
 
 **Troubleshooting steps**: Users should try logging in a second time on the device. In most instances, they should be able to connect to their Windows 365 Cloud PC. If they still see the error screen, contact Microsoft support with the displayed correlation ID.
 
-## Resources created by the Windows 365 Boot guided scenario are showing as “not applicable” in Intune
+## Resources created by the Windows 365 Boot guided scenario are showing as "not applicable" in Intune
 
 Resources created by the Windows 365 Boot guided scenario can be applied to both:
 
 - Microsoft Entra joined devices
 - Microsoft Entra hybrid joined devices in tenants where certain workloads were switched to Intune. For Microsoft Entra hybrid joined devices, Windows Update policies, device configuration, and client apps workloads must be switched to Intune.
 
-**Troubleshooting steps**: To determine if your device is Microsoft Entra hybrid joined, see [Using the Azure portal](/azure/active-directory/devices/howto-hybrid-join-verify#using-the-azure-portal). If your device is Microsoft Entra hybrid joined, see [Comanagement workloads](/mem/configmgr/comanage/workloads) to see what workloads are configured in your environment.
+**Troubleshooting steps**: To determine if your device is Microsoft Entra hybrid joined, see [Using the Azure portal](/azure/active-directory/devices/howto-hybrid-join-verify#using-the-azure-portal). If your device is Microsoft Entra hybrid joined, see [co-management workloads](/mem/configmgr/comanage/workloads) to see what workloads are configured in your environment.
 
 ## User can't reset their password on the Windows 365 Boot device
 

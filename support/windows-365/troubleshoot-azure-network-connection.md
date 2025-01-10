@@ -43,7 +43,7 @@ When a Cloud PC is provisioned, it's automatically joined to the provided domain
 - The subnet being used can reach a domain controller.
 - You test Add-Computer using the domain join credentials on a VM (virtual machine) connected to the Cloud PC vNet/subnet.
 - You troubleshoot domain join failures like any physical computer in your organization.
-- If you have a domain name that can be resolved on the internet (like contoso.com), make sure that your DNS servers are configured as internal. Also, make sure that they can resolve Active Directory domain DNS records and not your public domain name.  
+- If you have a domain name that can be resolved on the internet (like contoso.com), make sure that your Domain Name System (DNS) servers are configured as internal. Also, make sure that they can resolve Active Directory domain DNS records and not your public domain name.  
 
 <a name='azure-active-directory-device-sync'></a>
 
@@ -79,7 +79,7 @@ During provisioning attempts, it's important to consider any existing locks at t
 
 ## Azure tenant readiness
 
-When checks are performed, we check that the provided Azure subscription is valid and healthy. If it's not valid and healthy, we're unable to connect Cloud PCs back to your vNet during provisioning. Problems such as billing issues may cause subscriptions to become disabled.  
+When checks are performed, we check that the provided Azure subscription is valid and healthy. If it's not valid and healthy, we're unable to connect Cloud PCs back to your virtual network during provisioning. Problems such as billing issues may cause subscriptions to become disabled.  
 
 Many organizations use Azure policies to make sure that resources are only provisioned into certain regions and services. You should make sure that any Azure policies consider the Cloud PC service and the supported regions.
 
@@ -89,21 +89,21 @@ Also, visit the Azure portal and view Policies. Make sure that there are no poli
 
 ## Azure virtual network readiness
 
-When creating an ANC, we block the use of any vNet located in an unsupported region. For a list of supported regions, see [Requirements](/windows-365/enterprise/requirements).  
+When creating an ANC, we block the use of any virtual network located in an unsupported region. For a list of supported regions, see [Requirements](/windows-365/enterprise/requirements).  
 
-If this check fails, make sure that the vNet provided is in a region in the supported region list.
+If this check fails, make sure that the virtual network provided is in a region in the supported region list.
 
 ## DNS can resolve Active Directory domain
 
-For Windows 365 to successfully perform a domain join, the Cloud PCs attached to the vNet provided must be able to resolve internal DNS names.  
+For Windows 365 to successfully perform a domain join, the Cloud PCs attached to the virtual network provided must be able to resolve internal DNS names.  
 
 This test attempts to resolve the domain name provided. For example, contoso.com or contoso.local. If this test fails, make sure that:
 
-- The DNS servers in the Azure vNet are correctly configured to an internal DNS server that can successfully resolve the domain name.  
+- The DNS servers in the Azure virtual network are correctly configured to an internal DNS server that can successfully resolve the domain name.  
 - The subnet/vNet is routed correctly so that the Cloud PC can reach the DNS server provided.  
 - The Cloud PCs/virtual machines in the declared subnet can NSLOOKUP on the DNS server, and it responds with internal names.
 
-Along with standard the DNS lookup on the supplied domain name, we also check for the existence of _ldap._tcp.yourDomain.com records. This record indicates the DNS server provided is an Active Directory domain controller. The record is a reliable way to confirm that AD domain DNS is reachable. Make sure that these records are accessible through the vNet provided in your Azure network connection.
+Along with standard the DNS lookup on the supplied domain name, we also check for the existence of _ldap._tcp.yourDomain.com records. This record indicates the DNS server provided is an Active Directory domain controller. The record is a reliable way to confirm that AD domain DNS is reachable. Make sure that these records are accessible through the virtual network provided in your Azure network connection.
 
 ## Endpoint connectivity
 
@@ -129,7 +129,7 @@ We suggest you retry the checks if you encounter this error. If it persists, con
 
 ## First party app permissions
 
-When creating an ANC, the wizard grants a certain level of permissions on the resource group and subscription. These permissions let the service smoothly provision Cloud PCs.  
+When you create an ANC, the wizard grants a certain level of permissions on the resource group and subscription. These permissions let the service smoothly provision Cloud PCs.  
 
 Azure admins holding such permissions can view and modify these permissions.  
 
@@ -141,7 +141,7 @@ If any of these permissions are revoked, this check fails. Make sure that the fo
 
 The role assignment on the subscription is granted to the Cloud PC service principal.  
 
-Also, make sure that the permissions aren't granted as [classic subscription administrator roles](/azure/role-based-access-control/rbac-and-directory-admin-roles#classic-subscription-administrator-roles) or "Roles (Classic)". This role isn't sufficient. It must be one of the Azure role-based access control built-in roles as listed previously.
+Also, make sure that the permissions aren't granted as [classic subscription administrator roles](/azure/role-based-access-control/rbac-and-directory-admin-roles#classic-subscription-administrator-roles) or "Roles (Classic)." This role isn't sufficient. It must be one of the Azure role-based access control built-in roles as listed previously.
 
 <!-- ########################## -->
 ## Next steps

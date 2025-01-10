@@ -39,7 +39,7 @@ The following errors can occur during Cloud PC provisioning.
 
 The service connection point (SCP) is used by your Cloud PCs to discover your Microsoft Entra tenant information. You must configure your SCPs by using Microsoft Entra Connect for each forest you plan to join Cloud PCs to.
 
-If the SCP configuration doesn't exist, or can't be discovered by using the vNet declared, provisioning will fail.
+If the SCP configuration doesn't exist, or can't be discovered by using the virtual network declared, provisioning fails.
 
 To understand more about the SCP and learn how to configure it, see the [Microsoft Entra documentation](/azure/active-directory/devices/hybrid-azuread-join-managed-domains).
 
@@ -49,7 +49,7 @@ To understand more about the SCP and learn how to configure it, see the [Microso
 
 Cloud PC provisioning is blocked if the associated ANC isn't healthy.
 
-The ANC refreshes every 6 hours. Provisioning will fail if the ANC refresh fails while provisioning is under way.
+The ANC refreshes every 6 hours. Provisioning fails if the ANC refresh fails while provisioning is under way.
 
 **Suggested test**: Make sure that the ANC is healthy and retry the provisioning.
 
@@ -65,11 +65,11 @@ Windows 365 failed to join the Cloud PC to your on-premises Active Directory (AD
 
 - Makes sure that the AD domain, organizational unit (OU), and credentials in the associated Azure network connection (ANC) are correct.
 - Make sure that the domain join user has sufficient permissions to perform the domain join.
-- Make sure that the vNet and subnet can reach a domain controller correctly.
+- Make sure that the virtual network and subnet can reach a domain controller correctly.
 
 JsonADDomainExtension is the Azure function used to perform this domain join. Make sure that everything required for this domain join to be successful is in place.
 
-**Suggested test**: Attach an Azure VM to the configured vNet and perform a domain join using the credentials provided.
+**Suggested test**: Attach an Azure VM to the configured virtual network and perform a domain join using the credentials provided.
 
 <a name='hybrid-azure-ad-join-failed'></a>
 
@@ -94,7 +94,7 @@ Windows 365 performs a device-based MDM enrollment into Intune.
 
 If Intune enrollment is failing, make sure that:
 
-- All of the required Intune endpoints are available on the vNet of your Cloud PCs.
+- All of the required Intune endpoints are available on the virtual network of your Cloud PCs.
 - There are no MDM enrollment restrictions on the tenant. Windows corporate device enrollment is allowed in custom and default policies.
 - The Intune tenant is active and healthy.
 - If co-managing Cloud PCs with Intune and Configuration Manager, ensure that the Cloud PC OU isn't targeted for client push installation. Instead deploy the Configuration Manager agent from Intune. For more information, see Configuration Manager [client installation methods](/mem/configmgr/core/clients/deploy/plan/client-installation-methods#microsoft-intune-mdm-installation).
@@ -109,7 +109,7 @@ While a provisioning is in progress, someone removed the user's Windows 365 lice
 
 ## Local administrator permissions error
 
-Windows 365 provisioned the Cloud PC but didn't grant the user local administrator permissions as defined by a User Settings policy. As a result, the user won't isn't an administrator on their Cloud PC. So, they can't make system-level changes or install apps on the system-level context.
+Windows 365 provisioned the Cloud PC but didn't grant the user local administrator permissions as defined by a User Settings policy. As a result, the user won't be an administrator on their Cloud PC. So, they can't make system-level changes or install apps on the system-level context.
 
 **Suggested test**: Retry provisioning or create a new User Settings policy.
 
@@ -125,9 +125,9 @@ When providing a subnet to the ANC, make sure that there are more than sufficien
 
 Every Cloud PC provisioning process uses one of the IP addresses provided in the range.
 
-If a provisioning fails, it's retried a total of three times. Each time, a new vNic and IP address is allocated. These IP addresses will be released in a matter of hours, but this allocation can cause issues if the address space is too narrow.
+If a provisioning fails, it's retried a total of three times. Each time, a new vNic and IP address are allocated. These IP addresses are released in a matter of hours, but this allocation can cause issues if the address space is too narrow.
 
-**Suggested test**: Check the vNet for available IP addresses, and make sure that there are more than enough IPs available for the retry process to succeed.
+**Suggested test**: Check the virtual network for available IP addresses, and make sure that there are more than enough IPs available for the retry process to succeed.
 
 ## Provisioning policy not found
 
@@ -137,7 +137,7 @@ While a provisioning is in progress, someone deleted the provisioning policy.
 
 ## Request disallowed by policy
 
-Windows 365 uses the customer provided vNet to perform a vNic ingestion from the Cloud PC into the customer's vNet. Sometimes an enterprise implements an Azure Policy to restrict certain Azure objects being created. Make sure that there are no Azure policies that may restrict Windows 365 from creating Azure objects on your behalf.
+Windows 365 uses the customer provided virtual network to perform a vNic ingestion from the Cloud PC into the customer's virtual network. Sometimes an enterprise implements an Azure Policy to restrict certain Azure objects being created. Make sure that there are no Azure policies that may restrict Windows 365 from creating Azure objects on your behalf.
 
 **Suggested test**: View **Policy** in the Azure portal and look for any policy events that would stop the Windows 365 service from provisioning the Cloud PC.
 
@@ -173,20 +173,20 @@ Windows 365 provisioned the Cloud PC but didn't disable the built-in Windows res
 
 Windows 365 provisioned the Cloud PC but was unable to block all high-risk ports based on Microsoft security standards. Windows 365 disables high risk ports used for the management of resources or unsecure/unencrypted data transmission and shouldn't be exposed to the internet by default.
 
-If you are seeing this error, some factors to consider are:
+If you receive this error, some factors to consider are:
 
-- Sometimes an enterprise will implement an Intune group policy that enables one of these ports by default.  
+- Sometimes an enterprise implements an Intune group policy that enables one of these ports by default.  
 - Make sure that there are no Intune policies that may override Windows 365's default of disabling these high-risk ports.
 
 **Suggested test**: Try any of these solutions:
 
 - Retry provisioning.
 - If the device is Intune-enrolled, you can apply Intune policy to disable the ports.
-- The user can also disable the ports manually by adding a local firewall rule onto their device. For a list of high risk ports that are recommended for blocking, please see [Security admin rules in Azure Virtual Network Manager](/azure/virtual-network-manager/concept-security-admins#protect-high-risk-ports).
+- The user can also disable the ports manually by adding a local firewall rule onto their device. For a list of high risk ports that are recommended for blocking, see [Security admin rules in Azure Virtual Network Manager](/azure/virtual-network-manager/concept-security-admins#protect-high-risk-ports).
 
 ## Other provisioning failures
 
-If you encounter other provisioning errors not covered above, make sure all the [required endpoints](/windows-365/enterprise/requirements-network?tabs=enterprise%2Cent#allow-network-connectivity) are allowed on the VNet used for your ANC and any gateway device.
+If you encounter other provisioning errors not covered above, make sure all the [required endpoints](/windows-365/enterprise/requirements-network?tabs=enterprise%2Cent#allow-network-connectivity) are allowed on the virtual network used for your ANC and any gateway device.
 
 <!-- ########################## -->
 ## Next steps

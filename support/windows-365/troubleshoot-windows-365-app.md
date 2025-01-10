@@ -42,12 +42,12 @@ The Windows 365 app doesn't currently support:
 
 ## Can't connect to Cloud PC error
 
-You may get a **Can't connect to Cloud PC** error when you click on the **Connect** button.
+You might get a **Can't connect to Cloud PC** error when you select the **Connect** button.
 
 To fix this issue:
 
 1. Open Windows **Settings** > **Apps** > **Default apps**.
-2. Find the **AVD host app** and update the default app for .avd files.
+2. Find the **AVD host app** and update the default app for `.avd` files.
 3. Run this command to remove the old Remote Desktop Client cache that could cause this issue:
 
 ```reg delete "HKEY_CLASSES_ROOT\progF3672D4C2FFE4422A53C78C345774E2D" /f```
@@ -60,7 +60,7 @@ When the Remote Desktop Client is installed, you'll see a file type association 
 
 ## Change Cloud PC session from full screen to window mode  
 
-The Windows 365 app supports windowed mode to work more efficiently side-by-side with your local PC. To activate window mode, click on the window mode button in the connection bar.  
+The Windows 365 app supports windowed mode to work more efficiently side-by-side with your local PC. To activate window mode, select the window mode button in the connection bar.  
 
 ## Windows 365 app doesn't show any Cloud PCs
 

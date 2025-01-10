@@ -56,9 +56,9 @@ The following errors can occur when connecting to a Cloud PC.
 
 If you only manage the user's physical device through Group Policy or you don't manage the user's physical device, you (or the user) can manage this setting through the [allow PKU2U authentication requests to this computer to use online identities](/windows/security/threat-protection/security-policy-settings/network-security-allow-pku2u-authentication-requests-to-this-computer-to-use-online-identities) policy.
 
-**Potential cause #2**: [Per-user multi-factor authentication](/azure/active-directory/authentication/howto-mfa-userstates) is turned on for the user account. Because it blocks sign-in, per-user multi-factor authentication isn't supported for users connecting to Microsoft Entra joined Cloud PCs.
+**Potential cause #2**: [Per-user multifactor authentication](/azure/active-directory/authentication/howto-mfa-userstates) is turned on for the user account. Because it blocks sign-in, per-user multifactor authentication isn't supported for users connecting to Microsoft Entra joined Cloud PCs.
 
-**Possible solution**: [Remove per-user multi-factor authentication](/azure/active-directory/devices/howto-vm-sign-in-azure-ad-windows#mfa-sign-in-method-required) for all users connecting to Cloud PCs. Then, [set a Microsoft Entra Conditional Access policy](/windows-365/enterprise/set-conditional-access-policies) and assign it to the appropriate users.
+**Possible solution**: [Remove per-user multifactor authentication](/azure/active-directory/devices/howto-vm-sign-in-azure-ad-windows#mfa-sign-in-method-required) for all users connecting to Cloud PCs. Then, [set a Microsoft Entra Conditional Access policy](/windows-365/enterprise/set-conditional-access-policies) and assign it to the appropriate users.
 
 ## Specific connection errors
 
@@ -126,7 +126,7 @@ Some other possible causes for Cloud PC connection failures include:
 
 Windows 365 Cloud PCs require access to Azure communication channels.
 
-Make sure that IP address 168.63.129.16 is reachable through any security software installed on the Cloud PC or gateway devices used in the vNET connected to your ANC.
+Make sure that IP address 168.63.129.16 is reachable through any security software installed on the Cloud PC or gateway devices used in the virtual network connected to your ANC.
 
 For more information, see [What is IP Address 168.63.129.16](/azure/virtual-network/what-is-ip-address-168-63-129-16).
 

@@ -66,11 +66,11 @@ If no other solution works, you can [reprovision](/windows-365/enterprise/reprov
 
 ## Troubleshoot connection issues
 
-If you’re having connectivity issues with your partner-provisioned Cloud PC, you may want to test the default RDP-based connectivity. This process is a handy troubleshooting technique to determine if the issue is with the Cloud PC or the partner connectivity.
+If you're having connectivity issues with your partner-provisioned Cloud PC, you may want to test the default RDP-based connectivity. This process is a handy troubleshooting technique to determine if the issue is with the Cloud PC or the partner connectivity.
 
 ### Turn on the RDP protocol
 
-When the partner protocol is turned on, the Windows 365 remoting protocol remains enabled but inactive. This inactivity means that users trying to connect with the Windows 365 supported Remote Desktop clients (including the HTML5 browser) are blocked by default. Users can only connect by using the partner protocol. Users trying to connect with non-partner clients get a generic error message.
+When the partner protocol is turned on, the Windows 365 remoting protocol remains enabled but inactive. This inactivity means that users trying to connect with the Windows 365 supported Remote Desktop clients (including the HTML5 browser) are blocked by default. Users can only connect by using the partner protocol. Users trying to connect with nonpartner clients get a generic error message.
 
 You can turn on the RDP protocol so users can sign in with RDP to test the Cloud PC connectivity. You can do either of the following to turn on the RDP protocol:
 
