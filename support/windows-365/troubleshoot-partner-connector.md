@@ -65,7 +65,7 @@ While troubleshooting the error, make sure that the following steps are successf
       - Or, select **Generate support bundle** on the client side.
 - The Cloud PC is registered to the partner cloud tenant.
   - Check the Cloud PC registration status in the partner configuration console.
-  - If the Cloud PC is unregistered, check the **Application** sign-in in Windows Event Viewer (`eventvwr.msc`) for partner service errors and warnings.
+  - If the Cloud PC is unregistered, check the **Application** sign-in events in Windows Event Viewer (`eventvwr.msc`) for partner service errors and warnings.
 
 After you find the root cause, remove the assigned license from the partner console and then add the license back to trigger the reinstallation of the partner agent.
 
