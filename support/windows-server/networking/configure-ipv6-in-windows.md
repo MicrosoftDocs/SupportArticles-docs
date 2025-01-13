@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 929852
 
 It is common for IT administrators to disable IPv6 to troubleshoot networking-related issues such as name resolution issues.
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > Internet Protocol version 6 (IPv6) is a mandatory part of Windows Vista and Windows Server 2008 and newer versions.
 > We do NOT recommend that you disable IPv6 or its components or unbind IPv6 from interfaces. If you do, some Windows components may not function.
 >
@@ -33,13 +33,17 @@ It is common for IT administrators to disable IPv6 to troubleshoot networking-re
 
 ## Use registry key to configure IPv6
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
+
+> [!NOTE]
+> - You must restart your computer for these changes to take effect.
+> - Values other than 0 or 32 causes the Routing and Remote Access service to fail after this change takes effect.
 
 The IPv6 functionality can be configured by modifying the following registry key:
 
 **Location**: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters\`  
-**Name**: DisabledComponents  
+**Name**: `DisabledComponents`  
 **Type**: REG_DWORD  
 **Min Value**: 0x00 (default value)  
 **Max Value**: 0xFF (IPv6 disabled)
@@ -56,15 +60,7 @@ The IPv6 functionality can be configured by modifying the following registry key
 |Re-enable IPv6 on all tunnel interfaces|Binary xxx xxx0|
 |Re-enable IPv6 on nontunnel interfaces and on IPv6 tunnel interfaces|Binary xxx0 xxx0|
   
-> [!NOTE]
->
-> - Administrators must create an .admx file to expose the registry settings of below table in a Group Policy setting.
-> - You must restart your computer for these changes to take effect.
-> - Values other than 0 or 32 causes the Routing and Remote Access service to fail after this change takes effect.
-
-By default, the 6to4 tunneling protocol is enabled in Windows when an interface is assigned a public IPv4 address (Public IPv4 address means any IPv4 address that isn't in the ranges 10.0.0.0/8, 172.16.0.0/12, or 192.168.0.0/16). 6to4 automatically assigns an IPv6 address to the 6to4 tunneling interface for each address, and 6to4 dynamically registers these IPv6 addresses on the assigned DNS server. If this behavior isn't desired, we recommend disabling the IPv6 tunnel interfaces on the affected hosts.
-
-You can also follow these steps to modify the registry key:
+You can follow these steps to modify the registry key:
 
 1. Open an administrative **Command Prompt** window.
 2. Run the following command:
@@ -115,11 +111,30 @@ This registry value doesn't affect the state of the following check box. Even if
 
 ## Unbind IPv6 from an interface
 
+> [!CAUTION]  
+> We do not recommend unbinding IPv6 from an Ethernet or WiFi network adapter without a justifiable need. Windows is tested with, and some products and features expect, IPv6 to be bound and functional.
+> Unbinding IPv6 from a network adapter can result in an unsupported Windows configuration.  
+> When unbinding a protocol from a network adapter, we highly recommend using a WMI-based method, such as, `Disable-NetAdapterBinding`.
+
 You can unbind IPv6 from a network interface by using the following methods:
 - by unchecking 'Internet Protocol Version 6 (TCP/IPv6)' in the network properties GUI (see image above), or 
 - by using the PowerShell command `Disable-NetAdapterBinding -Name "MyAdapter" -ComponentID ms_tcpip[6] `
-  
-This setting doesn't disable IPv6 but unbinds the IPv6 protocol from the network interface. Unbindig IPv6 from one or more interfaces might lead to connectivity issues that can only be resolved by reverting the change.
+
+## IPv6 tunnel interfaces
+
+By default, the 6to4 tunneling protocol is enabled in Windows when an interface is assigned a public IPv4 address (Public IPv4 address means any IPv4 address that isn't in the ranges 10.0.0.0/8, 172.16.0.0/12, or 192.168.0.0/16). 6to4 automatically assigns an IPv6 address to the 6to4 tunneling interface for each address, and 6to4 dynamically registers these IPv6 addresses on the assigned DNS server.  
+If this behavior isn't desired, we recommend disabling the IPv6 tunnel interfaces on the affected hosts.
+
+You can disable the 6to4 tunneling protocol and other IPv6 transition Technologies by using the following methods:
+- by setting the `DisabledComponents` registry key to 0x01, or
+- by Group Policy:  
+*Computer Configuration\Administrative Templates\Network\TCPIP Settings\IPv6 Transition Technologies*  
+*Set 6to4 State* to *Disabled*  
+*Set ISATAP Sate* to *Disabled*  
+*Set Teredo State* to *Disabled*  
+
+> [!NOTE]  
+> ISATAP and Teredo are disabled by default in Windows.
 
 ## Reference
 
