@@ -3,7 +3,7 @@ title: Application and delegated permissions for access tokens
 description: Describes application and delegated permissions for access tokens in Microsoft identity platform.
 ms.reviewer: bachoang, v-weizhu
 ms.service: entra-id
-ms.date: 01/03/2025
+ms.date: 01/13/2025
 ms.custom: sap:App registrations
 ---
 # Application and delegated permissions for access tokens in Microsoft identity platform
@@ -58,19 +58,15 @@ For **delegated permission tokens**, the permissions are in the `scp` claim:
 
 Understanding what type of permissions an API supports is essential. Many errors such as 400, 401, 403, and 500 error occur when applications call different APIs (for example, Microsoft Graph and Power BI) with incorrect permission type tokens. For an API, different REST endpoints might require different types of permissions. You can refer to API endpoint documentations to check what permission type is supported. You also need to evaluate whether the authentication flow used in the application produces the desired permission tokens.
 
-### Example scenarios
+### Example scenario
 
-* [List trustFrameworkPolicies](/graph/api/trustframework-list-trustframeworkpolicies): Calling this REST endpoint requires a delegated permission token. An application permission token won't work.
+Power BI API: While Power BI supports both delegated permissions and application permissions, some tasks like viewing reports (requiring `Report.Read.All` permission) can only be performed with a delegated token. In the **Request App Registration** page, **Application permissions** only support two permissions: **Tenant.Read.All** and **Tenant.ReadWrite.All.**
 
-    :::image type="content" source="media/application-delegated-permission-access-tokens-identity-platform/list-trustframeworkpolicies-permissions-type.png" alt-text="Screenshot that shows supported/unsupported permission type.":::
+:::image type="content" source="media/application-delegated-permission-access-tokens-identity-platform/application-permissions-power-bi-api.png" alt-text="Screenshot that shows application permissions for Power BI API.":::
 
-* Power BI API: While Power BI supports both delegated permissions and application permissions, some tasks like viewing reports (requiring `Report.Read.All` permission) can only be performed with a delegated token. In the **Request App Registration** page, **Application permissions** only support two permissions: **Tenant.Read.All** and **Tenant.ReadWrite.All.**
+In contrast, **Delegated permissions** offer a richer feature set:
 
-    :::image type="content" source="media/application-delegated-permission-access-tokens-identity-platform/application-permissions-power-bi-api.png" alt-text="Screenshot that shows application permissions for Power BI API.":::
-
-     In contrast, **Delegated permissions** offer a richer feature set:
-
-    :::image type="content" source="media/application-delegated-permission-access-tokens-identity-platform/delegated-permissions-power-bi-api.png" alt-text="Screenshot that shows delegated permissions for Power BI API.":::
+:::image type="content" source="media/application-delegated-permission-access-tokens-identity-platform/delegated-permissions-power-bi-api.png" alt-text="Screenshot that shows delegated permissions for Power BI API.":::
 
 ## Troubleshoot issues when calling Microsoft Graph REST endpoints
 
