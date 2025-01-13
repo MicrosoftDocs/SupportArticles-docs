@@ -45,7 +45,7 @@ Aug 21 01:47:31 node  02 corosync[15241]:  [TOTEM ] Token has not been received 
 ```
 
 #### Cause
-It's noted that the unexpected node reboot is observed due to Network Maintenance activity or an outage. For confirmation, the timestamp can be matched by reviewing the [Azure Maintenance Notification](azure/virtual-machines/linux/maintenance-notifications) in Azure Portal. For more information about Azure Scheduled Events, see [Azure Metadata Service: Scheduled Events for Linux VMs](/azure/virtual-machines/linux/scheduled-events).
+It's noted that the unexpected node reboot is observed due to Network Maintenance activity or an outage. For confirmation, the timestamp can be matched by reviewing the [Azure Maintenance Notification](/azure/virtual-machines/linux/maintenance-notifications) in Azure Portal. For more information about Azure Scheduled Events, see [Azure Metadata Service: Scheduled Events for Linux VMs](/azure/virtual-machines/linux/scheduled-events).
 
 #### Resolution
 If the unexpected reboot timestamp aligns with a maintenance activity, the analysis confirms that the cluster was impacted by either platform or network maintenance. For further assistance or additional queries, you can open a support request by following these [instructions](#next-steps).
@@ -127,7 +127,7 @@ When migrating a SUSE Pacemaker cluster from on-premises to Azure, unexpected re
 4. Performance and latency mismatches:
     - Inadequate VM sizing: Migrated workloads may not align with the selected Azure VM(Virtual Machine) size, causing resource overutilization and triggering reboots.
     - Disk I/O mismatches: On-premises workloads with high IOPS(Input/output operations per second) demands must be paired with the appropriate Azure disk or storage performance tier.
-   Refer:[Collect performance metrics for a Linux VM](/azure/virtual-machines/linux/collect-performance-metrics-from-a-linux-system)
+   Refer:[Collect performance metrics for a Linux VM](/azure/virtual-machines/linux/collect-performance-metrics-from-a-linux-system.md)
 
 5. Security and Firewall Rules:
     - Port Blockages: On-premises clusters often have open, internal communication, while Azure NSGs (Network Security Groups) or firewalls may block ports required for Pacemaker/Corosync communication.
