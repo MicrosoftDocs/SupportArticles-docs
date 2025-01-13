@@ -121,7 +121,7 @@ When the Azure Virtual Desktop Agent is first installed on session host VMs (eit
 ### Error: The status filed in Get-AzWvdSessionHost cmdlet shows status as Unavailable
 
 > [!div class="mx-imgBorder"]
-> ![Get-AzWvdSessionHost cmdlet shows status as Unavailable.](media/troubleshoot-vm-configuration/23b8e5f525bb4e24494ab7f159fa6b62.png)
+> ![Get-AzWvdSessionHost cmdlet shows status as Unavailable.](media/troubleshoot-vm-configuration/administrator-command-prompt.png)
 
 **Cause:** The agent isn't able to update itself to a new version.
 
@@ -193,7 +193,7 @@ If you're having issues with the Azure Virtual Desktop side-by-side stack, type 
 The output of **qwinsta** will list **rdp-sxs** in the output if the side-by-side stack is installed and enabled.
 
 > [!div class="mx-imgBorder"]
-> ![Side-by-side stack installed or enabled with qwinsta listed as rdp-sxs in the output.](media/troubleshoot-vm-configuration/23b8e5f525bb4e24494ab7f159fa6b62.png)
+> ![Side-by-side stack installed or enabled with qwinsta listed as rdp-sxs in the output.](media/troubleshoot-vm-configuration/administrator-command-prompt.png)
 
 Examine the registry entries listed below and confirm that their values match. If registry keys are missing or values are mismatched, make sure you're running [a supported operating system](troubleshoot-agent.md#error-operating-a-pro-vm-or-other-unsupported-os). If you are, follow the instructions in [Register session hosts to a host pool](/azure/virtual-desktop/add-session-hosts-host-pool#register-session-hosts-to-a-host-pool) for how to reinstall the side-by-side stack.
 
@@ -208,7 +208,7 @@ Examine the registry entries listed below and confirm that their values match. I
 ### Error: O_REVERSE_CONNECT_STACK_FAILURE
 
 > [!div class="mx-imgBorder"]
-> ![O_REVERSE_CONNECT_STACK_FAILURE error code.](media/troubleshoot-vm-configuration/23b8e5f525bb4e24494ab7f159fa6b62.png)
+> ![O_REVERSE_CONNECT_STACK_FAILURE error code.](media/troubleshoot-vm-configuration/administrator-command-prompt.png)
 
 **Cause:** The side-by-side stack isn't installed on the session host VM.
 
@@ -250,7 +250,7 @@ Follow these instructions to run remediation from the same subnet and domain:
    ```
 
    > [!div class="mx-imgBorder"]
-   > ![Administrator command prompt](media/troubleshoot-vm-configuration/AdministratorCommandPrompt.png)
+   > ![Administrator command prompt](media/troubleshoot-vm-configuration/administrator-command-prompt.png)
 
 1. Run the following command, which will list Microsoft components installed on the VM with the malfunctioning side-by-side stack.
 
