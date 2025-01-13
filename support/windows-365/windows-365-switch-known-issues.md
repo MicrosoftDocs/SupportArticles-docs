@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 01/10/2025
+ms.date: 01/13/2025
 ms.topic: troubleshooting
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -48,11 +48,11 @@ If your Task view has a Cloud PC that you no longer have access to, you can remo
 
 ## Limited gestures
 
-Some gestures, such as three-finger gestures to change apps or four-finger gestures to bring up the Task view and show the desktop, are not supported in the Cloud PC. These gestures are triggered on the physical device instead. All other usual Windows 11 gestures are supported.
+Some gestures, such as three-finger gestures to change apps or four-finger gestures to bring up the Task view and show the desktop, aren't supported in the Cloud PC. These gestures are triggered on the physical device instead. All other usual Windows 11 gestures are supported.
 
 ## Bluetooth and hardware settings can't be managed from the Cloud PC
 
-Cloud PCs lack hardware components like Bluetooth adapters. Users can't change the settings from the Cloud PC Settings app or [quick settings](https://support.microsoft.com/windows/change-notification-and-quick-settings-in-windows-ddcbbcd4-0a02-f6e4-fe14-6766d850f294).
+Cloud PCs lack hardware components like Bluetooth adapters. Users can't change the settings from the Cloud PC **Settings** app or [quick settings](https://support.microsoft.com/windows/change-notification-and-quick-settings-in-windows-ddcbbcd4-0a02-f6e4-fe14-6766d850f294).
 
 **Troubleshooting steps**:
 
@@ -76,7 +76,7 @@ Select the **Task view** button for the Cloud PC again. The connection continues
 
 ## Local PC missing from Cloud PC task view bar
 
-If the local PC is missing from the Cloud PC's task view bar, the Azure Virtual Desktop (HostApp) might be out of date
+If the local PC is missing from the Cloud PC's task view bar, the Azure Virtual Desktop (HostApp) might be out of date.
 
 **Troubleshooting steps**:
 

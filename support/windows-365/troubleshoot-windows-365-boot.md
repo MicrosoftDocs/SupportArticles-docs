@@ -36,7 +36,7 @@ This article provides troubleshooting steps for the issues that occur when you s
 
 If the user can't access the Cloud PC from the Windows 365 Boot physical device, try these troubleshooting steps:
 
-1. Check to see if you can sign in to the Cloud PC from either:
+1. Check if you can sign in to the Cloud PC from either:
     - The browser at https://windows365.microsoft.com.
     - The Windows App on another (non-Windows 365 Boot) device.
 

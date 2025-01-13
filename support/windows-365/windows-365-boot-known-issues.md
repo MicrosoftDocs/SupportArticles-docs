@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 01/10/2025
+ms.date: 01/13/2025
 ms.topic: troubleshooting
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -48,12 +48,12 @@ The user isn't completely signed out after closing the laptop lid. When they ope
 
 ## Duplicate dialog boxes for some shortcut and sticky keys
 
-Duplicate dialog boxes might display for the physical device and the Cloud PC. This issue can occur for:
+Duplicate dialog boxes might be displayed for the physical device and the Cloud PC. This issue can occur for:
 
 - Some shortcut keys, like <kbd>Win</kbd>+<kbd>G</kbd> or sticky keys.
-- Enabling accessibility key settings, like High Contrast, Num Keys, or Toggle Key.
+- Enabling accessibility key settings, like High Contrast, Num Keys, or Toggle Keys.
 
-## Kiosk mode not supported
+## Windows 365 Boot isn't supported in Kiosk mode
 
 Windows 365 Boot isn't currently supported in Kiosk mode on Windows.
 
@@ -185,7 +185,7 @@ For more information, see [Troubleshoot Cloud PC connection errors](/windows-365
 
 ## Error message: Something is preventing you from using the Windows 365 app
 
-**Troubleshooting steps**: See [Troubleshoot Windows 365 Boot](/windows-365/enterprise/troubleshoot-windows-365-boot).
+**Troubleshooting steps**: For more information, see [Troubleshoot Windows 365 Boot](/windows-365/enterprise/troubleshoot-windows-365-boot).
 
 ## User can't connect to their Cloud PC and continues to wait at the transition screen
 
@@ -205,7 +205,7 @@ Windows 365 Boot requires users to have a Windows 365 Cloud PC provisioned for t
 
 ## An error screen occurs when users sign in to a device for the first time
 
-This error can occur when a device is removed from and then re-enrolled in Windows 365 Boot mode. The original registration hasn't completed uninstallation yet.
+This error screen occurs when a device is removed from and then re-enrolled in Windows 365 Boot mode. The original registration hasn't completed uninstallation yet.
 
 **Troubleshooting steps**: Users should try logging in a second time on the device. In most instances, they should be able to connect to their Windows 365 Cloud PC. If they still see the error screen, contact Microsoft support with the displayed correlation ID.
 

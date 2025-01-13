@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 01/10/2025
+ms.date: 01/13/2025
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
@@ -64,7 +64,7 @@ The Windows 365 app supports window mode to work more efficiently side-by-side w
 
 ## No Cloud PCs displayed in Windows 365 app
 
-If the Windows 365 app doesn’t show any Cloud PCs, you might sign in with the wrong user account. Ensure you sign in with an account enrolled with the Microsoft Entra account that has Cloud PCs provisioned.
+If the Windows 365 app doesn't show any Cloud PCs, you might sign in with the wrong user account. Ensure you sign in with an account enrolled with the Microsoft Entra account that has Cloud PCs provisioned.
 
 ## More information
 
