@@ -5,6 +5,7 @@ ms.topic: troubleshooting
 author: dknappettmsft
 ms.author: daknappe
 ms.date: 09/08/2023
+ms.custom: pcy:wincomm-user-experience
 ---
 # Troubleshoot custom image templates in Azure Virtual Desktop
 

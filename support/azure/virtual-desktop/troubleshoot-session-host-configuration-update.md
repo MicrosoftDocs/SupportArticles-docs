@@ -5,6 +5,7 @@ ms.topic: troubleshooting
 author: dknappettmsft
 ms.author: daknappe
 ms.date: 11/12/2024
+ms.custom: pcy:wincomm-user-experience
 ---
 
 # Troubleshoot session host configuration and session host update in Azure Virtual Desktop

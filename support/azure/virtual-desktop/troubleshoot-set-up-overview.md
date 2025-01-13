@@ -5,7 +5,7 @@ author: dknappettmsft
 ms.topic: troubleshooting
 ms.date: 10/14/2021
 ms.author: daknappe
-ms.custom: docs_inherited
+ms.custom: docs_inherited, pcy:wincomm-user-experience
 ---
 
 # Troubleshooting overview, feedback, and support for Azure Virtual Desktop

@@ -5,7 +5,7 @@ author: dknappettmsft
 ms.topic: troubleshooting
 ms.date: 11/14/2023
 ms.author: daknappe
-ms.custom: docs_inherited
+ms.custom: docs_inherited, pcy:wincomm-user-experience
 ---
 # Troubleshoot device redirections for Azure Virtual Desktop
 

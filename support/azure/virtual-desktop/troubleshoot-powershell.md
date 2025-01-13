@@ -5,7 +5,7 @@ author: dknappettmsft
 ms.topic: troubleshooting
 ms.date: 06/05/2020
 ms.author: daknappe
-ms.custom: devx-track-azurepowershell, docs_inherited
+ms.custom: devx-track-azurepowershell, docs_inherited, pcy:wincomm-user-experience
 ---
 # Troubleshoot Azure Virtual Desktop PowerShell
 

@@ -5,7 +5,7 @@ author: dknappettmsft
 ms.topic: troubleshooting
 ms.date: 09/26/2022
 ms.author: daknappe
-ms.custom: docs_inherited
+ms.custom: docs_inherited, pcy:wincomm-user-experience
 ---
 # Troubleshoot connection quality in Azure Virtual Desktop
 

@@ -5,7 +5,7 @@ author: dknappettmsft
 ms.topic: troubleshooting
 ms.date: 04/21/2023
 ms.author: daknappe
-ms.custom: docs_inherited
+ms.custom: docs_inherite, pcy:wincomm-user-experience
 ---
 
 # Troubleshoot common Azure Virtual Desktop Agent issues

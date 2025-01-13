@@ -5,6 +5,7 @@ author: dknappettmsft
 ms.topic: troubleshooting
 ms.date: 02/02/2023
 ms.author: daknappe
+ms.custom: pcy:wincomm-user-experience
 ---
 # Troubleshoot RDP Shortpath for public networks
 

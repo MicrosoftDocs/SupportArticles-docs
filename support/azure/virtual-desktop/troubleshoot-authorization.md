@@ -5,7 +5,7 @@ author: dknappettmsft
 ms.topic: troubleshooting
 ms.date: 08/19/2021
 ms.author: daknappe
-ms.custom: docs_inherited
+ms.custom: docs_inherited, pcy:wincomm-user-experience
 ---
 # Troubleshoot Azure Files authentication with Active Directory
 
