@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting consent issues in Microsoft Entra ID
 description: Helps you troubleshoot and resolve consent issues in Microsoft Entra ID.
-ms.date: 01/1/2025
+ms.date: 01/13/2025
 ms.reviewer: willfid, v-weizhu
 ms.service: entra-id
 ms.custom: sap:App registrations
@@ -58,11 +58,11 @@ To determine why the consent prompt appears, get the sign-in request and examine
 
 A sign-in request should look like the following one:
 
-- Microsoft Entra V1 OAuth2 endpoint:
+- V1 OAuth2 endpoint:
 
     `https://{Aad-Instance}/{Tenant-Id}/oauth2/authorize?client_id={App-Id}&response_type=code&redirect_uri={redirect-uri}&resource={App-URI-Id}&scope={Scope}&prompt={Prompt}`
 
-- Microsoft Entra V2 OAuth2 endpoint:
+- V2 OAuth2 endpoint:
 
     `https://{Aad-Instance}/{Tenant-Id}/oauth2/v2.0/authorize?client_id={App-Id}&response_type=code&redirect_uri={redirect-uri}& scope={Scope}&prompt={Prompt}`
 
