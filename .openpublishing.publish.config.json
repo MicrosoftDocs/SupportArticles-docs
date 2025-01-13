@@ -14,8 +14,7 @@
       ],
       "open_to_public_contributors": true,
       "type_mapping": {
-        "Conceptual": "Content",
-        "ZonePivotGroups": "Toc"
+        "Conceptual": "Content"
       },
       "template_folder": "_themes"
     }

@@ -49,8 +49,7 @@
       "searchScope": [
         "Troubleshoot"
       ],
-      "recommendations": true,
-      "zone_pivot_group_filename": "virtual-desktop/zone-pivot-groups.json"
+      "recommendations": true
     },
     "fileMetadata": {
       "uhfHeaderId": {
