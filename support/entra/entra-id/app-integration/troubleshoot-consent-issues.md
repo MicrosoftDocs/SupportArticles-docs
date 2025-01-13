@@ -68,14 +68,14 @@ A sign-in request should look like the following one:
 
 The following table provides an example of the parameters used in a sign-in request, which are referenced throughout the following troubleshooting steps:
 
-|Property|	Sign-in request portion|	Value|
+|Property|    Sign-in request portion|    Value|
 |---|---|---|
-|Aad-Instance|	`<Aad-Instance>`|	login.microsoftonline.com|
-|Tenant-ID|	`<Tenant-ID>` portion of the sign-in request|	common|
-|App-ID|	`<App-ID>` portion of the sign-in request|	1f92960d-1442-4cd2-8c76-d13c5dcb30bf|
-|Scope|	`<Scope>` portion of the sign-in request|	Openid+User.Read+Directory.Read.All|
-|App-URI-ID|	V1 endpoint: `<App-URI-ID>` portion of the sign-in request</br>   </br>V2 endpoint: For resources other than Microsoft Graph, this will be the portion before the scope name. For example, for `https://analysis.windows.net/powerbi/api/App.Read.All`, `App.Read.All` is the scope name, so the `App-URI-ID` is `https://analysis.windows.net/powerbi/api`.|	https://graph.microsoft.com|
-|Prompt|	`{Prompt}` portion of the sign-in request	 ||
+|Aad-Instance|    `<Aad-Instance>`|    login.microsoftonline.com|
+|Tenant-ID|    `<Tenant-ID>` portion of the sign-in request|    common|
+|App-ID|    `<App-ID>` portion of the sign-in request|    1f92960d-1442-4cd2-8c76-d13c5dcb30bf|
+|Scope|    `<Scope>` portion of the sign-in request|    Openid+User.Read+Directory.Read.All|
+|App-URI-ID|    V1 endpoint: `<App-URI-ID>` portion of the sign-in request</br>   </br>V2 endpoint: For resources other than Microsoft Graph, this will be the portion before the scope name. For example, for `https://analysis.windows.net/powerbi/api/App.Read.All`, `App.Read.All` is the scope name, so the `App-URI-ID` is `https://analysis.windows.net/powerbi/api`.|    https://graph.microsoft.com|
+|Prompt|    `{Prompt}` portion of the sign-in request     ||
 
 ### Step 2: Verify if you allow users to consent
 
@@ -143,7 +143,7 @@ You might encounter one of the following behaviors or errors:
 
     This error means the resource doesn't exist in your organization. To resolve this issue, use this consent URL: `https://login.microsoftonline.com/<Tenant-ID>/oauth2/authorize?response_type=code&client_id=<App-URI-ID>&prompt=admin_consent`
 
-- Error AADSTS650057: Invalid resource. The client has requested access to a resource which is not listed in the requested permissions in the client's application registration. Client app ID: <App-ID>({App-Display-Name}). Resource value from request: '<App-URI-ID>'. Resource app ID:{Resource-App-Id}. List of valid resources from app registration: 00000002-0000-0000-c000-000000000000
+- Error AADSTS650057: Invalid resource. The client has requested access to a resource which is not listed in the requested permissions in the client's application registration. Client app ID: \<App-ID>({App-Display-Name}). Resource value from request: '\<App-URI-ID>'. Resource app ID:{Resource-App-Id}. List of valid resources from app registration: 00000002-0000-0000-c000-000000000000
 
     In order for a client application to sign in and get an access token for a resource, the resource must be assigned the required API permissions that the client application requires, such as access to Azure Key Vault.
 
@@ -152,7 +152,7 @@ You might encounter one of the following behaviors or errors:
     > [!NOTE]
     > Only the application owner can do this operation.
 
-- Error AADSTS500011: The resource principal named '<App-URI-ID>' was not found in the tenant named '<Tenant-ID>'. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant. You might have sent your authentication request to the wrong tenant.
+- Error AADSTS500011: The resource principal named '\<App-URI-ID>' was not found in the tenant named '\<Tenant-ID>'. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant. You might have sent your authentication request to the wrong tenant.
 
     This error means that the specified `<App-URI-ID>` is invalid or only available as a single-tenant application. Otherwise, it means this resource can't be accessed by external organizations or doesn't exist.
 
