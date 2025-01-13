@@ -27,11 +27,19 @@ If you specify your own resource group for Azure Image Builder to use, then it n
 
 ## Script is unavailable
 
-If you see the message **Resource \<URI\> is unavailable. Please check the file exists, and that Image Builder can access it**, check the Uniform Resource Identifier (URI) for your script. This needs to be a publicly available location, such as GitHub or a web service.
+If you see the message:
+
+> Resource \<URI\> is unavailable. Please check the file exists, and that Image Builder can access it
+
+Check the Uniform Resource Identifier (URI) for your script. This needs to be a publicly available location, such as GitHub or a web service.
 
 ## Azure Compute Gallery VM image definition generation mismatch
 
-If you see the message **Validation failed: Error with Hyper-V Version validation (cross-generation for multiple Hyper-V Versions is not supported). The provided SIG: \<Resource ID\> has a different Hyper-V Generation \<version\> than source image \<version\>**, make sure that the generation of your source image is the same as the generation you specified for your Azure Compute Gallery VM image definition.
+If you see the message:
+
+> Validation failed: Error with Hyper-V Version validation (cross-generation for multiple Hyper-V Versions is not supported). The provided SIG: \<Resource ID\> has a different Hyper-V Generation \<version\> than source image \<version\>
+
+Make sure that the generation of your source image is the same as the generation you specified for your Azure Compute Gallery VM image definition.
 
 The generation for the source image is shown when you select the image you want to use. You can check the generation of the VM image definition in the Azure portal, Azure CLI using the [az sig image-definition list](/cli/azure/sig/image-definition#az-sig-image-definition-list) reference command, or PowerShell using the [Get-AzGalleryImageDefinition](/powershell/module/az.compute/get-azgalleryimagedefinition) cmdlet.
 
@@ -57,4 +65,8 @@ When you create a custom image template in the Azure portal, you might not be ab
 
 ## Authorization error occurred during Azure Container Groups operation
 
-Custom image templates require the `Microsoft.ContainerInstance` resource provider registered on your subscription due to the dependency on Azure Image Builder. If you receive the error **The client '\<GUID\>' with object id '\<GUID\>' does not have authorization to perform action 'Microsoft.ContainerInstance/register/action' over scope '/subscriptions/\<subscription ID\>' or the scope is invalid**, you need to register the `Microsoft.ContainerInstance` resource provider on your subscription. Once you register the resource provider, try the action again. For more information on how you can check their registration status and how to register them if needed, see [Azure resource providers and types](/azure/virtual-desktop/../azure-resource-manager/management/resource-providers-and-types).
+Custom image templates require the `Microsoft.ContainerInstance` resource provider registered on your subscription due to the dependency on Azure Image Builder. If you receive the error:
+
+> The client '\<GUID\>' with object id '\<GUID\>' does not have authorization to perform action 'Microsoft.ContainerInstance/register/action' over scope '/subscriptions/\<subscription ID\>' or the scope is invalid
+
+You need to register the `Microsoft.ContainerInstance` resource provider on your subscription. Once you register the resource provider, try the action again. For more information on how you can check their registration status and how to register them if needed, see [Azure resource providers and types](/azure/virtual-desktop/../azure-resource-manager/management/resource-providers-and-types).
