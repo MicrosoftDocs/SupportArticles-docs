@@ -41,6 +41,6 @@ If your **Connection Network Data Logs** aren't going to Azure Log Analytics eve
 - Make sure you've configured the VM correctly.
 - Make sure you're actively using the session. Sessions that aren't actively used won't send data to Azure Log Analytics as frequently.
 
-## More information
+## Next steps
 
 For more information about how to diagnose connection quality, see [Analyze connection quality in Azure Virtual Desktop](/azure/virtual-desktop/connection-latency).
