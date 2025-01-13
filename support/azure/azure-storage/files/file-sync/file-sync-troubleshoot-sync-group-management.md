@@ -4,7 +4,7 @@ description: Troubleshoot common issues in managing Azure File Sync sync groups,
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 12/16/2024
+ms.date: 01/13/2025
 ms.author: kendownie
 ms.reviewer: v-weizhu
 ms.custom: sap:File Sync
@@ -100,7 +100,7 @@ This error occurs because Azure File Sync doesn't support server endpoints on vo
     compact /u /s
     ```
 
-<a id="-2134376345"></a>**Server endpoint creation fails, with this error message: "The server endpoints per server limit has been reached" (Error code: -2134376345 or 0x80C80067)**
+<a id="-2134376345"></a>**Server endpoint creation fails with this error message: "The server endpoints per server limit has been reached" (Error code: -2134376345 or 0x80C80067)**
 
 This error occurs if the limit of server endpoints per server is reached. Azure File Sync currently supports up to 30 server endpoints per server. For more information, see
 [Azure File Sync scale targets](/azure/storage/files/storage-files-scale-targets?toc=/azure/storage/filesync/toc.json#azure-file-sync-scale-targets).
