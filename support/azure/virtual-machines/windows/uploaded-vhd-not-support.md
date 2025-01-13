@@ -48,7 +48,7 @@ For more information about how to create and upload a VHD for creating Azure VM
 
 If the problem continues to occur, this may indicate a corrupted VHD. In this situation, we recommend that you rebuild the VHD from scratch. For more information, see the following articles:
 
-- [About Windows VHD](/azure/virtual-machines/windows/about-disks-and-vhds#about-vhds)
-- [About Linux VHD](/azure/virtual-machines/linux/about-disks-and-vhds#about-vhds)
+- [About Windows VHD](/azure/virtual-machines/windows/prepare-for-upload-vhd-image)
+- [About Linux VHD](/azure/virtual-machines/linux/imaging)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
