@@ -19,23 +19,19 @@ During the post-installation phase of the DHCP role on a server, you encounter t
 > Authorizing DHCP server ….. Failed  
 > The authorization of DHCP server failed with Error Code: 20070. The DHCP service could not contact Active Directory.
 
-![Error message indicating DHCP authorization failure.](media/troubleshooting-guide-dhcp-authorization-failures/error-message-indicating-dhcp-authorization-failure.png)
-
 The DHCP console displays a downward red arrow on the IPv4 section, indicating that the server isn't authorized.
 
 ![DHCP console showing unauthorized status.](media/troubleshooting-guide-dhcp-authorization-failures/dhcp-console-showing-unauthorized-status.png)
 
 Event ID 1046 is logged in the System event logs, indicating that the DHCP server isn't authorized to lease out IP addresses:
 
-> The DHCP/BINL service on the local machine, belonging to the Windows Administrative domain &lt;domain_name&gt;, has determined that it is not authorized to start. It has stopped servicing clients.
+> The DHCP/BINL service on the local machine, belonging to the Windows Administrative domain &lt;domain&gt;, has determined that it is not authorized to start. It has stopped servicing clients.
 
 ![Event log indicating unauthorized status.](media/troubleshooting-guide-dhcp-authorization-failures/event-log-indicating-unauthorized-status.png)
 
 Manual attempts to authorize the DHCP server can also fail with the following error message:
 
 > The specified domain either does not exist or could be contacted.
-
-![Manual authorization failure message.](media/troubleshooting-guide-dhcp-authorization-failures/manual-authorization-failure-message.png)
 
 ## DHCP authorization flow
 
@@ -114,7 +110,11 @@ Additionally, you can capture Wireshark traces to identify packet drops between 
 
 2. Look for entries with the CNF tag (conflicting objects) with the server name. The CNF tag would be added under the attribute CN.
 
-   ![Image showing CNF tag example.](media/troubleshooting-guide-dhcp-authorization-failures/image-showing-cnf-tag-example.png)
+   For example:
+
+   |Attribute|Value|
+   |---|---|
+   |cn|&lt;fqdn&gt;CNF:ca69f501234|
 
 In this case, the CNF object (conflicting object) needs to be deleted. It is recommended to take AD backup and then delete this object. Once the object is deleted, you can reauthorize the DHCP server.
 
@@ -158,9 +158,22 @@ To find who deleted the entry from the DC for the DHCP server, we can enable aud
 
 9. When the issue reoccurs, export the security event logs on the DC to identify who deleted or modified the DHCP entry.
 
-The following screenshot is an example of the event deletion:
+See the following example of the event deletion:
 
-![Example event log showing deletion details.](media/troubleshooting-guide-dhcp-authorization-failures/example-event-log-showing-deletion-details.png)
+> A directory service object was deleted.
+>
+> Subject:  
+> &nbsp;&nbsp;&nbsp;&nbsp;Security ID: &lt;domain&gt;\administrator  
+> &nbsp;&nbsp;&nbsp;&nbsp;Account Name: Administrator  
+> &nbsp;&nbsp;&nbsp;&nbsp;Account Domain: &lt;domain&gt;  
+> &nbsp;&nbsp;&nbsp;&nbsp;Logon ID: 0x35D447
+>
+> Directory Service:  
+> &nbsp;&nbsp;&nbsp;&nbsp;Name: &lt;url&gt;  
+> &nbsp;&nbsp;&nbsp;&nbsp;Type: Active Directory Domain Services
+>
+> Object:  
+> &nbsp;&nbsp;&nbsp;&nbsp;DN: CN=&lt;fqdn&gt;,CN=NetServices,CN=Services,CN=Configuration,DC=&lt;domain&gt;,DC=com
 
 ## Reference
 
