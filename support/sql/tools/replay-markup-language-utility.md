@@ -1,7 +1,7 @@
 ---
 title: Replay Markup Language Utilities
 description: This article discusses a group of tools that are used by support professionals to troubleshoot SQL Server.
-ms.date: 01/10/2025
+ms.date: 01/13/2025
 ms.custom: sap:SQL Server Management, Query and Data Tools
 ms.reviewer: sureshka, jopilov, toddhayn, troymoen, v-jayaramanp
 ms.topic: article
@@ -13,14 +13,14 @@ This article discusses a group of tools that are used by support professionals t
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 944837
 
-## What is RML Utilities?
+## What are RML Utilities?
 
 RML Utilities is a set of diagnostic tools for troubleshooting and aiding performance issues in SQL Server. You can think of these tools as analogous to tools that assist medical technicians process X-Ray, MRI, CT Scan results. RML Utilities are used to process and visualize the performance diagnostic data collected by users. These tools are commonly used by SQL Server support engineers to process diagnostic traces in the course of troubleshooting a performance issue. Also RML Utils are frequently used by database developers and administrators to analyze their SQL Server query workload from their test and production environments and improve it. There are three utilities in the suite: ReadTrace, Reporter, and Ostress.
 
-- ReadTrace uses as input [Extended Event](/sql/relational-databases/extended-events/extended-events) traces or [SQL Trace](/sql/relational-databases/sql-trace/sql-trace) traces that a user creates to diagnose a SQL Server issue or analyze workload performance. ReadTrace imports the traces into tables into a SQL Server database that the user points to. Think of ReadTrace as a transformation tool: takes binary `.XEL` or `.TRC` files and imports them into tables so they can more easily be analyzed via SQL queries. ReadTrace can also generate Replay Markup Language (.RML) files that can be used by Ostress for workload replay.
-- Reporter is a report and visualization tool that connects to the user database that ReadTrace creates. Reporter runs SQL queries against the database and shows offline SSRS reports summaries of the original Extended Events or Profiler traces. For example, a report might show you which queries ran longest in a particular captured workload, which queries used most CPU and did most reads.
-- Ostress is a stress-testing simulation tool. Ostress.exe uses Extended Event or SQL Profiler diagnostic traces as input. It can also accept user-supplied queries as inputs. Ostress then replays those traces or queries against a SQL Server that the user chooses. The goal is to simulate a stress. For example, if you feed OStress a query `select * from table1` you can tell it to run 100 times on 50 connections simultaneously. In addition to individual queries, Ostress can use special Replay Markup Language (RML) files that ReadTrace has generated to perform the replay
-- OStress Replay Control Agent (ORCA) aides Ostress in simulating a stress test by replaying a workload from RML files. You don't interact wiht ORCA directly, but use Ostress.
+- **ReadTrace** uses as input [Extended Event](/sql/relational-databases/extended-events/extended-events) traces or [SQL Trace](/sql/relational-databases/sql-trace/sql-trace) traces that a user creates to diagnose a SQL Server issue or analyze workload performance. ReadTrace imports the traces into tables into a SQL Server database that the user points to. Think of ReadTrace as a transformation tool: takes binary `.XEL` or `.TRC` files and imports them into tables so they can more easily be analyzed via SQL queries. ReadTrace can also generate Replay Markup Language (.RML) files that can be used by Ostress for workload replay.
+- **Reporter** is a report and visualization tool that connects to the user database that ReadTrace creates. Reporter runs SQL queries against the database and shows offline SSRS reports summaries of the original Extended Events or Profiler traces. For example, a report might show you which queries ran longest in a particular captured workload, which queries used most CPU and did most reads.
+- **Ostress** is a stress-testing simulation tool. Ostress.exe uses Extended Event or SQL Profiler diagnostic traces as input. It can also accept user-supplied queries as inputs. Ostress then replays those traces or queries against a SQL Server that the user chooses. The goal is to simulate a stress. For example, if you feed to OStress a query `select * from table1`, you can instruct it to run the query 100 times on 50 connections simultaneously. In addition to individual queries, Ostress can use special Replay Markup Language (RML) files that ReadTrace has generated to perform the replay.
+- **OStress Replay Control Agent (ORCA)** aides Ostress in simulating a stress test by replaying a workload from RML files. You don't interact wiht ORCA directly, but use Ostress.
 
 For a complete description of every tool and sample usage, see the RML Help file that's included in RML Utilities for SQL Server.
 
@@ -35,9 +35,9 @@ You can use RML Utilities for SQL Server to do the following tasks:
 After you capture a trace for an instance of SQL Server, you can use RML Utilities for SQL Server to replay the trace file against another instance of SQL Server. If you also capture the trace during the replay, you can use RML Utilities for SQL Server to compare the new trace file to the original trace file. You can use this technique to test how SQL Server behaves after you apply changes. For example, you can use this technique to test how SQL Server behaves after you do the following tasks:
 
 - Install a SQL Server service pack
-- Install a SQL Server hotfix
+- Install a SQL Server Cumulative Update
 - Update a stored procedure or a function
-- Update an index or create an index
+- Update or create an index
 
 ### Benefits of RML Utilities for SQL Server
 
@@ -166,4 +166,4 @@ ostress.exe -E -dmaster -Q"select name from sys.databases" -n30 -r10
 
 ## Additional resources
 
-- [Troubleshooting and diagnostic tools for SQL Server on-premises and hybrid scenarios](/sql-support-troubleshooting-diagnostic-tools)
+- [Troubleshooting and diagnostic tools for SQL Server on-premises and hybrid scenarios](sql-support-troubleshooting-diagnostic-tools.md)
