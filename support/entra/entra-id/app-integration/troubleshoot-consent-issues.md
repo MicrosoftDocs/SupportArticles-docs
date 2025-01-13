@@ -60,11 +60,11 @@ A sign-in request should look like the following one:
 
 - V1 OAuth2 endpoint:
 
-    `https://<Aad-Instance>/<Tenant-ID>/oauth2/authorize?client_id=<App-ID>&response_type=code&redirect_uri={Redirect-URI}&resource=<App-URI-ID>&scope=<Scope>&prompt={Prompt}`
+    `https://<Aad-Instance>/<Tenant-ID>/oauth2/authorize?client_id=<App-ID>&response_type=code&redirect_uri={Redirect-URI}&resource=<App-URI-ID>&scope=<Scope>&prompt=<Prompt>`
 
 - V2 OAuth2 endpoint:
 
-    `https://<Aad-Instance>/<Tenant-ID>/oauth2/v2.0/authorize?client_id=<App-ID>&response_type=code&redirect_uri={Redirect-URI}& scope=<Scope>&prompt={Prompt}`
+    `https://<Aad-Instance>/<Tenant-ID>/oauth2/v2.0/authorize?client_id=<App-ID>&response_type=code&redirect_uri={Redirect-URI}& scope=<Scope>&prompt=<Prompt>`
 
 The following table provides an example of the parameters used in a sign-in request, which are referenced throughout the following troubleshooting steps:
 
@@ -75,7 +75,7 @@ The following table provides an example of the parameters used in a sign-in requ
 |App-ID|    `<App-ID>` portion of the sign-in request|    1f92960d-1442-4cd2-8c76-d13c5dcb30bf|
 |Scope|    `<Scope>` portion of the sign-in request|    Openid+User.Read+Directory.Read.All|
 |App-URI-ID|    V1 endpoint: `<App-URI-ID>` portion of the sign-in request</br>   </br>V2 endpoint: For resources other than Microsoft Graph, this will be the portion before the scope name. For example, for `https://analysis.windows.net/powerbi/api/App.Read.All`, `App.Read.All` is the scope name, so the `App-URI-ID` is `https://analysis.windows.net/powerbi/api`.|    https://graph.microsoft.com|
-|Prompt|    `{Prompt}` portion of the sign-in request     ||
+|Prompt|    `<Prompt>` portion of the sign-in request     ||
 
 ### Step 2: Verify if you allow users to consent
 
@@ -143,7 +143,7 @@ You might encounter one of the following behaviors or errors:
 
     This error means the resource doesn't exist in your organization. To resolve this issue, use this consent URL: `https://login.microsoftonline.com/<Tenant-ID>/oauth2/authorize?response_type=code&client_id=<App-URI-ID>&prompt=admin_consent`
 
-- Error AADSTS650057: Invalid resource. The client has requested access to a resource which is not listed in the requested permissions in the client's application registration. Client app ID: \<App-ID>({App-Display-Name}). Resource value from request: '\<App-URI-ID>'. Resource app ID:{Resource-App-Id}. List of valid resources from app registration: 00000002-0000-0000-c000-000000000000
+- Error AADSTS650057: Invalid resource. The client has requested access to a resource which is not listed in the requested permissions in the client's application registration. Client app ID: \<App-ID>(\<App-Display-Name>). Resource value from request: '\<App-URI-ID>'. Resource app ID:{Resource-App-ID}. List of valid resources from app registration: 00000002-0000-0000-c000-000000000000
 
     In order for a client application to sign in and get an access token for a resource, the resource must be assigned the required API permissions that the client application requires, such as access to Azure Key Vault.
 
@@ -208,7 +208,7 @@ In most cases, certain permissions that require consent haven't been consented. 
 
 ### Application registrations and enterprise applications
 
-In Microsoft Entra, there's an application model that consists of application objects (also called "application registrations") and service principal objects (also called "enterprise applications"). How their relationship works together based on the required permissions is set on the application object. For more information, see [Application and service principal objects in Microsoft Entra ID]](/entra/identity-platform/app-objects-and-service-principals).
+In Microsoft Entra, there's an application model that consists of application objects (also called "application registrations") and service principal objects (also called "enterprise applications"). How their relationship works together based on the required permissions is set on the application object. For more information, see [Application and service principal objects in Microsoft Entra ID](/entra/identity-platform/app-objects-and-service-principals).
 
 Simply adding permissions to an application registration doesn't consent to the permissions. To consent to permissions, you must assign permissions to the service principal.
 
