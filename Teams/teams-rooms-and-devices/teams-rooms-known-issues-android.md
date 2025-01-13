@@ -23,7 +23,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 11/08/2024
+ms.date: 01/13/2025
 ---
 # Known issues with Teams Rooms on Android
 
@@ -56,6 +56,7 @@ ms.date: 11/08/2024
 - If you're in a call with another user who is on a Teams Rooms device, you can't transfer the call. This is because the Teams Rooms app is designed to support only one call at a time.
 - If your organization has configured policies to block legacy authentication for the Teams Rooms app, then Teams Rooms on Android devices, (Teams Rooms on Windows devices) Teams displays, Teams panels, and Teams phones can't join Teams meetings.
 - If your organization has configured policies to block legacy authentication for the Teams Rooms app, then Teams Rooms on Android devices, Teams displays, Teams panels, and Teams phones can't join Teams meetings.
+- The meeting details that you export in the Microsoft Teams admin center includes the link speed of the Ethernet network interface that's used during the meeting. This display always shows the default value of 10 Mbps. However, this might not be accurate because Teams Rooms for Android devices can't fetch the exact value. The actual link speed might be faster than the default value.
 
 ## Support for third-party Teams devices
 
