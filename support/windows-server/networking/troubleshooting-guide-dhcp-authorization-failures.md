@@ -108,13 +108,9 @@ Additionally, you can capture Wireshark traces to identify packet drops between 
 
 1. Open *adsiedit.msc* and navigate to **Configuration** > **Services** > **NetServices**.
 
-2. Look for entries with the CNF tag (conflicting objects) with the server name. The CNF tag would be added under the attribute CN.
+2. Look for entries with the CNF tag (conflicting objects) with the server name. The CNF tag would be added under the attribute CN. For example:
 
-   For example:
-
-   |Attribute|Value|
-   |---|---|
-   |cn|&lt;fqdn&gt;CNF:ca69f501234|
+   > cn &nbsp; &nbsp; &lt;fqdn&gt;CNF:ca69f501234
 
 In this case, the CNF object (conflicting object) needs to be deleted. It is recommended to take AD backup and then delete this object. Once the object is deleted, you can reauthorize the DHCP server.
 
