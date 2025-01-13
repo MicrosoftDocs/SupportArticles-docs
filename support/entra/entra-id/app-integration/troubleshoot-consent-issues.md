@@ -60,11 +60,11 @@ A sign-in request should look like the following one:
 
 - V1 OAuth2 endpoint:
 
-    `https://<Aad-Instance>/<Tenant-ID>/oauth2/authorize?client_id=<App-ID>&response_type=code&redirect_uri={Redirect-URI}&resource=<App-URI-ID>&scope=<Scope>&prompt=<Prompt>`
+    `https://<Aad-Instance>/<Tenant-ID>/oauth2/authorize?client_id=<App-ID>&response_type=code&redirect_uri=<Redirect-URI>&resource=<App-URI-ID>&scope=<Scope>&prompt=<Prompt>`
 
 - V2 OAuth2 endpoint:
 
-    `https://<Aad-Instance>/<Tenant-ID>/oauth2/v2.0/authorize?client_id=<App-ID>&response_type=code&redirect_uri={Redirect-URI}& scope=<Scope>&prompt=<Prompt>`
+    `https://<Aad-Instance>/<Tenant-ID>/oauth2/v2.0/authorize?client_id=<App-ID>&response_type=code&redirect_uri=<Redirect-URI>& scope=<Scope>&prompt=<Prompt>`
 
 The following table provides an example of the parameters used in a sign-in request, which are referenced throughout the following troubleshooting steps:
 
@@ -143,7 +143,7 @@ You might encounter one of the following behaviors or errors:
 
     This error means the resource doesn't exist in your organization. To resolve this issue, use this consent URL: `https://login.microsoftonline.com/<Tenant-ID>/oauth2/authorize?response_type=code&client_id=<App-URI-ID>&prompt=admin_consent`
 
-- Error AADSTS650057: Invalid resource. The client has requested access to a resource which is not listed in the requested permissions in the client's application registration. Client app ID: \<App-ID>(\<App-Display-Name>). Resource value from request: '\<App-URI-ID>'. Resource app ID:{Resource-App-ID}. List of valid resources from app registration: 00000002-0000-0000-c000-000000000000
+- Error AADSTS650057: Invalid resource. The client has requested access to a resource which is not listed in the requested permissions in the client's application registration. Client app ID: \<App-ID>(\<App-Display-Name>). Resource value from request: '\<App-URI-ID>'. Resource app ID:\<Resource-App-ID>. List of valid resources from app registration: 00000002-0000-0000-c000-000000000000
 
     In order for a client application to sign in and get an access token for a resource, the resource must be assigned the required API permissions that the client application requires, such as access to Azure Key Vault.
 
@@ -216,7 +216,7 @@ Simply adding permissions to an application registration doesn't consent to the 
 
 There are two types of permissions in Microsoft Entra ID: delegated permissions and application permissions. Make sure you apply the correct permission configuration in the application registration and consent to that permission.
 
-For more information about permissions in Microsoft Entra ID, see the following pages：
+For more information about permissions in Microsoft Entra ID, see the following pages:
 
 - [Overview of permissions and consent in the Microsoft identity platform](/entra/identity-platform/permissions-consent-overview)
 - [Understanding the difference between application and delegated permissions from OAuth2 Authentication Flows](https://blogs.aaddevsup.xyz/2019/07/understanding-the-difference-between-application-and-delegated-permissions-from-oauth2-authentication-flows-perspective/)
