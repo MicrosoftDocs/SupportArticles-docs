@@ -9,11 +9,11 @@ ms.custom: sap:Microsoft Graph Users, Groups, and Entra APIs
 
 # Use managed identities to call Microsoft Graph APIs in VB.Net and C#
 
-This article explains how to use managed identities to obtain access token, and then call Microsoft Graph APIs in both VB.Net and C#. 
+This article explains how to use managed identities to obtain access tokens, and then call Microsoft Graph APIs in both VB.Net and C#. 
 
 ## Configure permissions for managed identities
 
-All managed identities (User Assigned or System Assigned) will have a service principal that appears in the Enterprise Apps blade. To get permissions consented for Microsoft Graph on those identities, you'll need to make an OAuth Permission Grant. To do this, run the following PowerShell script:
+All managed identities (User Assigned or System Assigned) will have a service principal that appears in the Enterprise Apps blade. To get permissions for Microsoft Graph on those identities, you must make an OAuth Permission Grant. To do this, run the following PowerShell script:
 
 ```powershell
 # Your tenant id (in Azure Portal, under Azure Active Directory -> Overview )
@@ -69,10 +69,10 @@ foreach($permission in $Permissions)
 ```
 ## Get access token
 
-After the permissions are configured in the service principal, make a token request from the resource: `https://graph.microsoft.com`:
+After the permissions are configured in the service principal, make a token request from the following resource: `https://graph.microsoft.com`.
 
 > [!NOTE]
-> Once you make a token request for a resource, you'll get the same token for the next 24 hours, even if you make permission changes. you'll need to wait for the current token to expire in order to get a token with any new permissions.
+> After you make a token request for a resource, you'll get the same token for the next 24 hours, even if you make permissions changes. In order to get a token together with any new permissions, you must wait for the current token to expire.
 
 ```vbnet
 Dim at As AccessToken = credential.GetToken(New TokenRequestContext(New String() {"https://graph.microsoft.com"}))
@@ -83,7 +83,7 @@ AccessToken at = credential.GetToken(new TokenRequestContext(new string[] { "htt
 ```
 
 ## Call Graph APIs
-This example shows how to request an access token for a resource such as Microsoft Graph. When you use the Microsoft Graph service client in your code, you don't need to specify the resource explicitly, as the Microsoft Graph service client handles that automatically. In VB.Net, you'll need to add the `Microsoft.Graph` NuGet package and then add the `Imports Microsoft.Graph` at the top of the code file.
+This example shows how to request an access token for a resource such as Microsoft Graph. When you use the Microsoft Graph service client in your code, you don't have to specify the resource explicitly because the Microsoft Graph service client handles that automatically. In VB.Net, you have to add the `Microsoft.Graph` NuGet package and then add the `Imports Microsoft.Graph` at the top of the code file.
 
 ### VB.Net
 ```vbnet
