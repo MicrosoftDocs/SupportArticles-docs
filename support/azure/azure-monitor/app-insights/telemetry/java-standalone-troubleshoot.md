@@ -256,7 +256,7 @@ You can also try the [monitoring solutions for Java native](/azure/azure-monitor
 
 ## Understand duplicated operation IDs
 
-Application logic can result in an operation ID being reused by multiple telemetry items, as shown in [this example](/azure/azure-monitor/app/distributed-trace-data#example). The duplication might also come from incoming requests. To identify this:
+Application logic can result in an operation ID being reused by multiple telemetry items, as shown in [this example](/azure/azure-monitor/app/distributed-trace-data#example). The duplication might also come from incoming requests. To identify this, do the following operations:
 
 * Enable the capture of the `traceparent` header in the **applicationinsigths.json** file as follows:
 
