@@ -49,6 +49,8 @@ items:
   href: troubleshoot-http-400-errors-in-iis.md
 - name: Troubleshoot HTTP 502.2 Bad Gateway error in CGI apps
   href: troubleshoot-502-2-bad-gateway-error-in-cgi-apps.md
+- name: Troubleshoot native memory leak in an IIS 7.x application pool
+  href: troubleshoot-native-memory-leak-iis-7x-application-pool.md
 - name: Troubleshoot PHP errors with Failed Request Tracing
   href: troubleshoot-php-with-failed-request-tracing.md
 - name: Troubleshoot IIS performance issues and application errors
