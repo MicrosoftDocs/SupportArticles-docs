@@ -5842,10 +5842,6 @@
     {
       "source_path": "support/developer/webapps/iis/www-administration-management/http-bad-request-response-kerberos.md",
       "redirect_url": "/troubleshoot/developer/webapps/iis/www-authentication-authorization/http-bad-request-response-kerberos"
-    },
-    {
-      "source_path": "support/developer/webapps/iis/health-diagnostic-performance/troubleshoot-native-memory-leak-iis-7x-application-pool.md",
-      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/troubleshoot-native-memory-leak-iis-7x-application-pool"
     }
   ]
 }
