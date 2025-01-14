@@ -30,7 +30,7 @@ There are several possible root causes, but the main ones are the RDP-TCP listen
 
 ## Verify if the error is related to the machine's state or performance
 
-First, check if the machine is running. If it has console access (for example, Integrated Lights Out (iLO) for physical machines, or Hyper-V console for virtual machines), test connecting to the machine through it. If successful, proceed to [verify if the error is related to the RDP-TCP listener](#verify-if-the-error-is-related-to-the-rdp-tcp-listener).
+First, check if the machine is running. If it's running and has console access (for example, Integrated Lights Out (iLO) for physical machines, or Hyper-V console for virtual machines), test connecting to the machine through it. If successful, proceed to [verify if the error is related to the RDP-TCP listener](#verify-if-the-error-is-related-to-the-rdp-tcp-listener).
 
 Contact Microsoft Support for further assistance in the following scenarios:
 
