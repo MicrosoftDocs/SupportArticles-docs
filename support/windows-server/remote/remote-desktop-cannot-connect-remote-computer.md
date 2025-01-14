@@ -1,7 +1,7 @@
 ---
 title: Remote Desktop Can't Connect to the Remote Computer
 description: Helps resolve the Remote Desktop can't connect to the remote computer related errors.
-ms.date: 01/10/2025
+ms.date: 01/14/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -16,7 +16,7 @@ When you use a direct Remote Desktop Protocol (RDP) connection to connect to a W
 
 - > Remote Desktop can't connect to the remote computer for one of these reasons:
   >
-  > 1\) remote access to the server is not enabled  
+  > 1\) Remote access to the server is not enabled  
   > 2\) The remote computer is turned off  
   > 3\) The remote computer is not available on the network
   >
@@ -30,7 +30,7 @@ There are several possible root causes, but the main ones are the RDP-TCP listen
 
 ## Verify if the error is related to the machine's state or performance
 
-First, check if the machine is running. If it has console access (for example, Integrated Lights Out (iLO) for physical machines, or Hyper-V console for virtual machines), test connecting to the machine through it. If successful, proceed to the [verify if the error is related to the RDP-TCP listener](#verify-if-the-error-is-related-to-the-rdp-tcp-listener).
+First, check if the machine is running. If it has console access (for example, Integrated Lights Out (iLO) for physical machines, or Hyper-V console for virtual machines), test connecting to the machine through it. If successful, proceed to [verify if the error is related to the RDP-TCP listener](#verify-if-the-error-is-related-to-the-rdp-tcp-listener).
 
 Contact Microsoft Support for further assistance in the following scenarios:
 
@@ -127,7 +127,7 @@ If the RDP-TCP listener is working, use the following steps to check if you can 
 
 If the error persists, the problem is with the server. Go to [verify machine's configurations and roles](#verify-machines-configurations-and-roles).
 
-If the error no longer occurs, it's probably related to the network and could be troubleshot further with the following steps.
+If the error no longer occurs, it's probably related to the network and might be troubleshot further with the following steps.
 
 > [!NOTE]
 > The preceding test is only possible on Windows Server machines and might not be available on all occasions (for example, Azure virtual machines).
@@ -233,8 +233,8 @@ Check if you can re-create the Remote Desktop self-signed certificate by followi
 2. In the **Certificates** folder under **Remote Desktop**, delete the RDP self-signed certificate.
 3. Restart the Remote Desktop Services service on the affected computer.
 4. Refresh the **Certificates** snap-in.
-5. If the RDP self-signed certificate hasn't been re-created, go to [An internal error occurred](internal-error-has-occurred-connecting-remote-machine.md#remote-desktop-self-signed-certificate).
-6. If the RDP self-signed certificate has been re-created, go to the next step.
+5. If the RDP self-signed certificate isn't re-created, go to [Remote Desktop self-signed certificate](internal-error-has-occurred-connecting-remote-machine.md#remote-desktop-self-signed-certificate).
+6. If the RDP self-signed certificate is re-created, go to the next step.
 
 ### Check Remote Desktop Services (RDS) roles
 
