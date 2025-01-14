@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting Consent Issues in Microsoft Entra ID
 description: Helps you troubleshoot and resolve consent issues in Microsoft Entra ID.
-ms.date: 01/13/2025
+ms.date: 01/14/2025
 ms.reviewer: willfid, v-weizhu
 ms.service: entra-id
 ms.custom: sap:App registrations
@@ -29,7 +29,7 @@ There are many reasons why you might receive a message indicating that admin app
 
 - The **User.Read** permission is missing.
 - User consent is disabled at the tenant level.
-- Required user assignment is enabled for the application.
+- User assignment is enabled for the application.
 - A service principal doesn't exist in the tenant for the client application.
 - A service principal doesn't exist in the tenant for the resource.
 - A consent URL that specifies `prompt=admin_consent` or `prompt=consent` is requested.
@@ -138,7 +138,7 @@ To check if a resource exists, try a request that looks like `https://<Aad-Insta
 
 You might encounter one of the following behaviors or errors:
 
-- You're allowed to sign in (this is the behavior you expect). In this case, go to the next step. In most cases, if you see the "code" parameter in the address bar, it means the authentication process was successful.
+- You're allowed to sign in (this is the behavior you expect). In this case, go to the next step. In most cases, if you see the `code` parameter in the address bar, it means the authentication process was successful.
 - Error AADSTS650052: The app needs access to a service that your organization has not subscribed to or enabled. Contact your IT Admin to review the configuration of your service subscriptions. 
 
     This error means the resource doesn't exist in your organization. To resolve this issue, use this consent URL: `https://login.microsoftonline.com/<Tenant-ID>/oauth2/authorize?response_type=code&client_id=<App-URI-ID>&prompt=admin_consent`
@@ -160,7 +160,7 @@ You might encounter one of the following behaviors or errors:
 
 ### Step 7: Verify if the prompt parameter is passed
 
-Sometimes, signing in to the application requires passing the `prompt` parameter of consent or admin_consent. Once the application obtains consent, make sure the `prompt` parameter isn't specified. Otherwise, users might always receive a consent error.
+Sometimes, signing in to the application requires passing the `prompt` parameter of `consent` or `admin_consent`. Once the application obtains consent, make sure the `prompt` parameter isn't specified. Otherwise, users might always receive a consent error.
 
 Your sign-in request might look like this:
 
