@@ -24,7 +24,7 @@ To use the Windows 10 Enterprise multi-session image, go to Azure Marketplace, s
 
 ### Error: "Create a free account" appears when accessing the service
 
-:::image type="content" source="media/troubleshoot-set-up-issues/create-new-account.png" alt-text="Screenshot showing the Azure portal displaying the "Create a free account" message.":::
+:::image type="content" source="media/troubleshoot-set-up-issues/create-new-account.png" alt-text="Screenshot showing the Azure portal displaying the 'Create a free account' message.":::
 
 #### Cause
 
