@@ -70,7 +70,7 @@ Once you've confirmed that the **w3wp.exe** process is experiencing high memory 
 1. Reproduce the issue.
 1. To verify whether it's a managed or native memory leak, monitor the counters:
 
-   - **Managed memory leak**: If the **Private Bytes** counter and the **# Bytes in all Heaps** counter increase at the same rate (the difference between them remains constant), it indicates a managed memory leak.
+   - **Managed memory leak**: If the **Private Bytes** counter and the **Virtual Bytes** counter increase at the same rate (the difference between them remains constant), it indicates a managed memory leak.
 
      :::image type="content" source="media/high-memory-consumption-issues-overview/managed-memory-leak-indicator.png" alt-text="Screenshot showing how the counters change for a managed memory leak.":::
 
@@ -87,13 +87,13 @@ Once you've confirmed the type of memory leak, the next step is to use tools to 
 
 ## .NET Core applications
 
-If the application in question is .NET Core and hosted on IIS in in-process mode, use the data collection steps in [Data capture for managed memory leaks](data-capture-managed-memory-leak.md) and [Troubleshoot native memory leak in an IIS 7.x application pool](troubleshoot-native-memory-leak-iis-7x-application-pool.md). However, if the application is hosted on IIS in out-of-process mode, modify the actions to investigate the dotnet process (**dotnet.exe** unless otherwise specified) instead of **w3wp.exe**. The same thing applies to self-hosted .NET Core applications.
+If the application in question is .NET Core and hosted on IIS in in-process mode, use the data collection steps in [Data capture for managed memory leaks](data-capture-managed-memory-leak.md). However, if the application is hosted on IIS in out-of-process mode, modify the actions to investigate the dotnet process (**dotnet.exe** unless otherwise specified) instead of **w3wp.exe**. The same thing applies to self-hosted .NET Core applications.
 
 ## Troubleshooting example
 
 Assume you have an application hosted on an IIS server and you experience high memory usage (the memory spikes up to around 7 GB by doing a stress test) when accessing a specific URL, follow these steps to diagnose the issue:
 
-1. Check Performance Monitor by following the steps in [Identify whether the memory leak is managed or native](#identify-whether-the-memory-leak-is-managed-or-native). If you notice **Private Bytes** and **# Bytes in all Heaps** remain constant, it's a managed memory leak.
+1. Check Performance Monitor by following the steps in [Identify whether the memory leak is managed or native](#identify-whether-the-memory-leak-is-managed-or-native). If you notice the difference between **Private Bytes** and **Virtual Bytes** remains constant, it's a managed memory leak.
 1. Collect dump files by following the steps described in [Using DebugDiag](data-capture-managed-memory-leak.md#method-2-using-debugdiag).
 1. Open the dump files in [WinDbg](/windows-hardware/drivers/debugger/). For high memory scenarios, you can use the following commands:
 
