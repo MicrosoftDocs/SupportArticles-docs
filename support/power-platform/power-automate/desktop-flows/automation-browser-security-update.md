@@ -2,7 +2,7 @@
 title: Automation Browser security update
 description: Provides security updates for the Automation Browser component in Microsoft Power Automate for desktop.
 ms.reviewer: nimoutzo
-ms.date: 14/01/2025
+ms.date: 01/14/2025
 ---
 # Provides security updates for the Automation Browser component in Microsoft Power Automate for desktop
 
