@@ -1,35 +1,32 @@
 ---
-title: Troubleshoot service connection Azure Virtual Desktop - Azure
-description: How to resolve issues while setting up service connections in an Azure Virtual Desktop tenant environment.
+title: Troubleshoot Azure Virtual Desktop service connection
+description: Helps resolve issues while setting up service connections in an Azure Virtual Desktop tenant environment.
 author: dknappettmsft
 ms.topic: troubleshooting
 ms.date: 10/15/2020
 ms.author: daknappe
 ms.custom: docs_inherited, pcy:wincomm-user-experience
 ---
-
 # Troubleshoot Azure Virtual Desktop service connections
 
-Use this article to resolve issues with Azure Virtual Desktop client connections.
+This article helps resolve issues with Azure Virtual Desktop service connections.
 
 ## Provide feedback
 
-You can give us feedback and discuss the Azure Virtual Desktop Service with the product team and other active community members at the [Azure Virtual Desktop Tech Community](https://techcommunity.microsoft.com/t5/azure-virtual-desktop/bd-p/AzureVirtualDesktopForum).
+You can give us feedback and discuss the Azure Virtual Desktop service with the product team and other active community members at the [Azure Virtual Desktop Tech Community](https://techcommunity.microsoft.com/t5/azure-virtual-desktop/bd-p/AzureVirtualDesktopForum).
 
 ## User connects but nothing is displayed (no feed)
 
 A user can start Remote Desktop clients and is able to authenticate. However, the user doesn't see any icons in the web discovery feed.
 
-1. Confirm that the user reporting the issues has been assigned to application groups by using this command line:
+1. Confirm that the user reporting the issues has been assigned to application groups by using the following cmdlet:
 
      ```powershell
      Get-AzRoleAssignment -SignInName <userupn>
      ```
 
 2. Confirm that the user is signing in with the correct credentials.
-
 3. If the web client is being used, confirm that there are no cached credentials issues.
-
 4. If the user is part of a Microsoft Entra user group, make sure the user group is a security group instead of a distribution group. Azure Virtual Desktop doesn't support Microsoft Entra distribution groups.
 
 ## User loses existing feed and no remote resource is displayed (no feed)
@@ -38,7 +35,7 @@ This error usually appears after a user moved their subscription from one Micros
 
 To resolve this, all you need to do is reassign the users to their application groups.
 
-This could also happen if a CSP Provider created the subscription and then transferred to the customer. To resolve this re-register the Resource Provider.
+This could also happen if a CSP Provider created the subscription and then transferred to the customer. To resolve this, re-register the Resource Provider.
 
 1. Sign in to the Azure portal.
 2. Go to **Subscription**, then select your subscription.
