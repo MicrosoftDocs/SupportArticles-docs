@@ -19,8 +19,8 @@ RML Utilities is a set of diagnostic tools for troubleshooting and aiding perfor
 
 - **ReadTrace** uses as input [Extended Event](/sql/relational-databases/extended-events/extended-events) traces or [SQL Trace](/sql/relational-databases/sql-trace/sql-trace) traces that a user creates to diagnose a SQL Server issue or analyze workload performance. ReadTrace imports the traces into tables into a SQL Server database that the user points to. Think of ReadTrace as a transformation tool: takes binary `.XEL` or `.TRC` files and imports them into tables so they can more easily be analyzed via SQL queries. ReadTrace can also generate Replay Markup Language (.RML) files that can be used by Ostress for workload replay.
 - **Reporter** is a report and visualization tool that connects to the user database that ReadTrace creates. Reporter runs SQL queries against the database and shows offline SSRS reports summaries of the original Extended Events or Profiler traces. For example, a report might show you which queries ran longest in a particular captured workload, which queries used most CPU and did most reads.
-- **Ostress** is a stress-testing simulation tool. Ostress.exe uses Extended Event or SQL Profiler diagnostic traces as input. It can also accept user-supplied queries as inputs. Ostress then replays those traces or queries against a SQL Server that the user chooses. The goal is to simulate a stress. For example, if you feed to OStress a query `select * from table1`, you can instruct it to run the query 100 times on 50 connections simultaneously. In addition to individual queries, Ostress can use special Replay Markup Language (RML) files that ReadTrace has generated to perform the replay.
-- **OStress Replay Control Agent (ORCA)** aides Ostress in simulating a stress test by replaying a workload from RML files. You don't interact wiht ORCA directly, but use Ostress.
+- **Ostress** is a stress-testing simulation tool. Ostress.exe uses Extended Event or SQL Profiler diagnostic traces as input. It can also accept user-supplied queries as inputs. Ostress then replays those traces or queries against a SQL Server that the user chooses. The goal is to simulate a stress. For example, if you feed to OStress a query `select * from table1`, you can instruct it to run the query 100 times on 50 connections simultaneously. In addition to individual queries, Ostress can use special Replay Markup Language (RML) files that ReadTrace generates to perform the replay.
+- **OStress Replay Control Agent (ORCA)** aides Ostress in simulating a stress test by replaying a workload from RML files. You don't interact with ORCA directly, but use Ostress.
 
 For a complete description of every tool and sample usage, see the RML Help file that's included in RML Utilities for SQL Server.
 
@@ -112,7 +112,7 @@ You have to make sure that the Report Viewer controls are available either in th
 
 ### Dependencies for Expander (optional)
 
-In most cases Expander, that ReadTrace uses to process CAB/ZIP/RAR files is not utilized. But if you need to use this functionality for a particular compressed file type, make sure that the compression and decompression controls are available either in the same folder as *Expander.exe* or in the GAC. The DLLs that *Expander.exe* requires are as follows:
+In most cases Expander, that ReadTrace uses to process CAB/ZIP/RAR files isn't utilized. But if you need to use this functionality for a particular compressed file type, make sure that the compression and decompression controls are available either in the same folder as *Expander.exe* or in the GAC. The DLLs that *Expander.exe* requires are as follows:
 
 - *BRICOLSOFTZipx64.dll*
 - *UnRar64.dll*
@@ -128,7 +128,7 @@ You can obtain these DLLs from the respective software packages of the vendors:
 
 ### Dependencies for ReadTrace and Ostress
 
-ReadTrace and Ostress use the ODBC and OLEDB drivers shipped as part of the [SQL Server Native Client](/sql/relational-databases/native-client/applications/installing-sql-server-native-client). Starting with the version **09.04.0103**, the RML Utilities suite isn't dependent on SQL Server Native client (SNAC) only. It can use the Microsoft ODBC or OLEDB drivers on the system where it's installed.
+ReadTrace and Ostress use the ODBC and OLEDB drivers shipped as part of the [SQL Server Native Client](/sql/relational-databases/native-client/applications/installing-sql-server-native-client). Starting with version **09.04.0103**, the RML Utilities suite isn't dependent on SQL Server Native client (SNAC) only. It can use the Microsoft ODBC or OLEDB drivers on the system where it's installed.
 
 If you plan to analyze Extended Event files (_*.xel_), make sure that [Visual C++ 2010 Redistributable](/cpp/windows/latest-supported-vc-redist) is installed on the system.
 
@@ -150,7 +150,7 @@ The following examples illustrate how to use some of the RML tools.
 
 Use *ReadTrace.exe* to import a series of Xevent files that are collected by using tools such as PSSDIAG/[SQLDiag.exe](/sql/tools/sqldiag-utility) or [SQL LogScout](https://github.com/microsoft/SQL_LogScout/releases). Use the `-I` parameter to point to the first *.xel* file that was collected in time, if multiple files are present. For all command-line switches, use `ReadTrace.exe /?`:
 
-```console
+```cmd
 ReadTrace.exe -Iserver_instance_20220211T1319480819_xevent_LogScout_target_0_132890707717540000.xel -oc:\temp\output -f -dPerfAnalysisDb -S.
 ```
 
@@ -158,9 +158,28 @@ ReadTrace.exe -Iserver_instance_20220211T1319480819_xevent_LogScout_target_0_132
 
 Use OStress to submit a query against a server that's running SQL Server by running 30 simultaneous connections and running the query 10 times on each connection. For all command-line switches, use `Ostress.exe /?`:
 
-```console
+```cmd
 ostress.exe -E -dmaster -Q"select name from sys.databases" -n30 -r10
 ```
+
+### Using ReadTrace and Ostress to generate and replay RML files
+
+To generate .RML files you can use a command like this:
+
+```cmd
+ReadTrace -I"D:\RMLReplayTest\ReplayTrace.trc" -o"D:\RMLReplayTest\RML" -S. -dReadTraceTestDb   
+```
+
+For more information on what events need to be captured in order to create a replay trace, see the **RML Help.docx** 
+
+To replay an RML file using Ostress, use a command like this:
+
+```cmd
+ostress.exe -S.\sql2022 -E -dAdventureWorks2022 -i"D:\RMLReplayTest\RML\SQL00069.rml" -o"D:\RMLReplayTest\RML\output"
+```
+
+You can replay all RML files by using "*.RML". For example: -i"D:\RMLReplayTest\RML\*.rml"
+
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-contact-disclaimer.md)]
 
