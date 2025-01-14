@@ -4,8 +4,8 @@ description: Provides a resolution for grid issues in model-driven apps in Micro
 ms.reviewer: tapanm, moroch, dinusc
 ms.custom: sap:Using grids and lists in model-driven apps
 ms.date: 10/10/2024
-author: fikaradz
-ms.author: fikaradz
+author: shwetamurkute
+ms.author: smurkute
 ---
 # Troubleshooting grid issues in Power Apps
 

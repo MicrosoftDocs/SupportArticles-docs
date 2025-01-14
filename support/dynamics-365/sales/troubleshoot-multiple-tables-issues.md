@@ -5,7 +5,6 @@ author: sbmjais
 ms.author: shjais
 ms.reviewer: lavanyakr
 ms.date: 09/25/2023
-ms.subservice: d365-sales-sales
 ---
 # Troubleshoot common issues with multiple tables
 

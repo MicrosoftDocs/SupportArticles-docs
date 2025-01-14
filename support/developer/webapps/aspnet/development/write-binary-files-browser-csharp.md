@@ -4,6 +4,7 @@ description: This article creates a sample page that demonstrates how to use C# 
 ms.date: 12/18/2024
 ms.custom: sap:General Development
 ms.topic: how-to
+ms.reviewer: zixie
 ---
 # Use ASP.NET and C# to write binary files to the browser
 

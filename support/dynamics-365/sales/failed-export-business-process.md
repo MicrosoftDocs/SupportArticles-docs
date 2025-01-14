@@ -4,7 +4,6 @@ description: Solution export blocked if it contains a business process flow but 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
-ms.subservice: d365-sales-custom-solutions
 ---
 # Invalid Export - Business Process Entity Missing
 

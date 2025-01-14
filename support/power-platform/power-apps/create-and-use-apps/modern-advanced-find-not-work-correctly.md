@@ -4,8 +4,8 @@ description: Troubleshoots issues where the Modern Advanced Find feature doesn't
 ms.reviewer: tapanm, moroch, dinusc
 ms.custom: sap:Using grids and lists in model-driven apps
 ms.date: 08/16/2024
-author: fikaradz
-ms.author: fikaradz
+author: shwetamurkute
+ms.author: smurkute
 ---
 # Modern Advanced Find doesn't work correctly in a model-driven app
 

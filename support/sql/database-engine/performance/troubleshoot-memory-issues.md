@@ -1,9 +1,9 @@
 ---
 title: Troubleshoot out of memory or low memory issues in SQL Server
 description: Provides troubleshooting steps to address out of memory or low memory issues in SQL Server.
-ms.date: 12/23/2024
+ms.date: 01/10/2025
 ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
-ms.reviewer: shaunbe
+ms.reviewer: shaunbe, jopilov
 author: pijocoder
 ms.author: jopilov
 ---
