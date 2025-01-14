@@ -1,9 +1,10 @@
 ---
 title: Troubleshoot Always On Availability Groups failover
 description: This article provides troubleshooting steps to help you determine why your availability group failed over. 
-ms.date: 04/17/2023
+ms.date: 01/13/2025
 ms.custom: sap:Always On Availability Groups (AG)
 ms.reviewer: cmathews, v-jayaramanp
+ms.author: cmathews
 ---
 
 # Troubleshoot Always On Availability Groups failover
@@ -78,28 +79,34 @@ get-clusterlog -Node sql19agn1 -UseLocalTime
 
 ### 3. Find the health event in the cluster log
 
-   Always On uses several health monitoring mechanisms to monitor availability group health. In addition to a Windows Cluster health event (in which Windows Cluster detects a health issue among the cluster nodes), Always On has four different kinds of health checks:
+Always On uses several health monitoring mechanisms to monitor availability group health. In addition to a Windows Cluster health event (in which Windows Cluster detects a health issue among the cluster nodes), Always On has four different kinds of health checks:
 
-   - The SQL Server service isn't running
-   - A SQL Server lease time-out
-   - A SQL Server health check time-out
-   - A SQL Server internal health issue
+- The SQL Server service isn't running
+- A SQL Server lease time-out
+- A SQL Server health check time-out
+- A SQL Server internal health issue
 
-   You can locate any of these Always On specific health events by searching the cluster log for the string, `[hadrag] Resource Alive result 0`. This string is saved in the cluster log when any of these events are detected. For example:
+You can locate any of these Always On specific health events by searching the cluster log for the string, `[hadrag] Resource Alive result 0`. This string is saved in the cluster log when any of these events are detected. For example:
 
-   ```output
-   00001334.00002ef4::2019/06/24-18:24:36.153 ERR [RES] SQL Server Availability Group : [hadrag] Resource Alive result 0.
-   ```
+```output
+00001334.00002ef4::2019/06/24-18:24:36.153 ERR [RES] SQL Server Availability Group : [hadrag] Resource Alive result 0.
+```
 
-   You can use a tool to find all the health events in the cluster log so that you can generate a summary report of Always On health problems. This can be useful to identify chronological trends and determine whether a particular kind of Always On health condition is recurring. The following screenshot shows how to use a text editor (NotePad++, in this case) to find all the lines in the cluster log that contain the `[hadrag] Resource Alive result 0` string:
+You can use a tool to find all the health events in the cluster log so that you can generate a summary report of Always On health problems. This can be useful to identify chronological trends and determine whether a particular kind of Always On health condition is recurring. The following screenshot shows how to use a text editor (NotePad++, in this case) to find all the lines in the cluster log that contain the `[hadrag] Resource Alive result 0` string:
 
-   :::image type="content" source="media/troubleshooting-availability-group-failover/locate-health-events-in-notepad-small.png" alt-text="Screenshot that shows tool to locate all the health events in the cluster log." lightbox="media/troubleshooting-availability-group-failover/locate-health-events-in-notepad-big.png":::
+:::image type="content" source="media/troubleshooting-availability-group-failover/locate-health-events-in-notepad-small.png" alt-text="Screenshot that shows tool to locate all the health events in the cluster log." lightbox="media/troubleshooting-availability-group-failover/locate-health-events-in-notepad-big.png":::
 
-## Determine the kind of health issue that triggered the failover
+## Identify and resolve the type of health issue that triggered the failover
 
-To determine the kind of health issues that you find in the cluster log of the primary replica, compare them to the issues that are described in the next few sections.
+To identify the health issues in the cluster log of the primary replica, compare them to the issues described in the following sections. Common reasons for AG failover include:
 
-### Cluster health event
+- Cluster health event
+- SQL Server service is down (an Always On health event)
+- Lease time-out (an Always On health event)
+- Health check time-out (an Always On health event)
+- SQL Server health (an Always On health event)
+
+### Cluster health events
 
 Microsoft Windows Cluster monitors the health of the member servers in the cluster. If a health problem is detected, a cluster member server might be removed from the cluster. Also, the cluster resources (including the availability group role that's hosted on the removed cluster member server) will be moved to the availability group failover partner replica if it's configured for automatic failover.
 
@@ -165,15 +172,21 @@ Check the Windows system event log and SQL Server error log for an unexpected SQ
 
 If SQL Server was shut down by a system shutdown or an administrative shutdown, you would see the following entry in the SQL Server error log:
 
-> 2023-03-10 09:38:46.73 spid9s SQL Server is terminating in response to a 'stop' request from Service Control Manager. This is an informational message only. No user action is required.
+```output
+2023-03-10 09:38:46.73 spid9s SQL Server is terminating in response to a 'stop' request from Service Control Manager. This is an informational message only. No user action is required.
+```
 
 The Windows system event log would show the following error entry:
 
-> Information 3/10/2023 9:41:06 AM Service Control Manager 7036 None The SQL Server (MSSQLSERVER) service entered the stopped state.
+```output
+Information 3/10/2023 9:41:06 AM Service Control Manager 7036 None The SQL Server (MSSQLSERVER) service entered the stopped state.
+```
 
 The Windows system event log shows the following error entry if SQL Server shuts down unexpectedly:
 
-> Error 3/10/2023 8:37:46 AM Service Control Manager 7034 None The SQL Server (MSSQLSERVER) service terminated unexpectedly. It has done this 1 time(s).
+```output
+Error 3/10/2023 8:37:46 AM Service Control Manager 7034 None The SQL Server (MSSQLSERVER) service terminated unexpectedly. It has done this 1 time(s).
+```
 
 Check the end of the SQL Server error log for clues. If the error log ends abruptly, this means that it was shut down by force. For instance, if SQL Server was terminated by using Task Manager, the SQL Server error report wouldn't reveal any information about any internal problems that might have caused the process to shut down.
 
