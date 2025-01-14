@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot connectivity issues in SQL Server
 description: Provides an overview of common connectivity issues in SQL Server and describes the tools to troubleshoot the issues.
-ms.date: 06/16/2022
+ms.date: 01/13/2025
 ms.custom: sap:Database Connectivity and Authentication
 author: HaiyingYu
 ms.author: haiyingyu
@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4009936
 There are various causes for connectivity issues in SQL Server. This article series helps you troubleshoot the most common SQL Server connectivity issues and describes the tools and methods you can use for troubleshooting.
 
 > [!NOTE]
-> If multiple SQL Server instances in your environment are impacted, or the issue is intermittent, it usually indicates Windows policy or networking issues. Although this series of articles provides guidance, it may not effectively troubleshoot some specific scenarios.
+> If multiple SQL Server instances in your environment are impacted, or the issue is intermittent, it usually indicates Windows policy or networking issues. 
 
 ## Preparation
 
@@ -28,9 +28,7 @@ Use the following list to navigate to the appropriate article page for detailed 
 
 - [Cannot generate SSPI context](cannot-generate-sspi-context-error.md)
 
-- [Login failed for user](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?context=/troubleshoot/sql/context/context)
-
-  Covers the following Login errors:
+- [Login failed for user](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?context=/troubleshoot/sql/context/context) which covers the following Login errors:
   - "Login failed for user 'NT AUTHORITY\ANONYMOUS LOGON'"
   - "Login failed for user '(null)'"
   - "Login failed for user (empty)"
@@ -45,29 +43,41 @@ Use the following list to navigate to the appropriate article page for detailed 
 
 - [The certificate chain was issued by an authority that is not trusted](../connect/error-message-when-you-connect.md)
 
-## Tools and methods that help you troubleshoot connectivity issues
+## Tools and methods to troubleshoot connectivity issues
 
 The following articles provide details for various tools and procedures to troubleshoot different connectivity errors:
 
-- [Configure firewalls to work with SQL Server](/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access?context=/troubleshoot/sql/context/context)
+### Configure Firewall to work with SQL Server
 
-  Describes how to configure Windows firewall for successful connections to instances.
+[Configure firewalls to work with SQL Server](/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access?context=/troubleshoot/sql/context/context) describes how to configure Windows Firewall for successful connections to instances.
 
-- [Test connections to SQL Server by using Universal Data Link (UDL) files](../connect/test-oledb-connectivity-use-udl-file.md)
-  
-  Describes how to test connections between SQL Server and clients using UDL files.
+### Test an OLEDB or ODBC connection to SQL Server
 
-- [Use PortQryUI tool with SQL Server](../connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md#named-instance-of-sql-server)
+- If you want to quickly test a connection from a client machine to a SQL Server, you can configure a UDL file. For more information, see [Test connections to SQL Server by using a Universal Data Link (UDL) file](../connect/test-oledb-connectivity-use-udl-file.md)
 
-  Describes how to use the PortQryUI tool (a graphical user interface (GUI) port scanner) to help troubleshoot connectivity issues.
+- You can also use the ODBC Data Sources (64-bit) or ODBC Data Sources (32-bit) Administrator to configure and test an ODBC connection to SQL Server. For more information, see [ODBC Data Source Administrator DSN options](/sql/connect/odbc/windows/odbc-administrator-dsn-creation#create-a-new-data-source-to-sql-server---screen-1)
 
-- [Check whether SQL Server is listening on dynamic or static ports](../connect/static-or-dynamic-port-config.md)
+### Discover if a port is blocked with PortQryUI
 
-  Provides steps to check whether SQL Server is listening on dynamic or static ports.
+You can use the PortQryUI tool (a graphical user interface (GUI) port scanner) to help troubleshoot connectivity issues. For more information, see [Use PortQryUI tool with SQL Server](using-portqrytool-sqlserver.md).
 
-- [Use Kerberos Configuration Manager to fix SPN issues](../connect/cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended)
+### Find which ports SQL Server listening on
 
-  Describes how to use Kerberos Configuration Manager to fix Service Principal Name (SPN) issues.
+The following article provides steps to identify which ports SQL Server is listening: [Check whether SQL Server is listening on dynamic or static ports](../connect/static-or-dynamic-port-config.md)
+
+### Get a detailed diagnostic report with SQLCheck
+
+Microsoft product support engineers frequently use, [SQLCheck](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLCHECK), a tool they built to diagnose causes for connection failures. You can follow the instructions to download and collect the SQLCheck report for in-depth analysis. 
+
+### Use Kerberos Configuration Manager
+
+To identify and resolve Service Principal Name (SPN) issues, you can use the Kerberos Configuration Manager. For more information, see 
+[Use Kerberos Configuration Manager to fix SPN issues](../connect/cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended)
+
+### Collect and analyze a network trace with SQLTrace and SQLNAUI
+
+In many cases, a network trace may be the most effective tool to investigate network failures. You can follow these steps to [Collect network traces on the client and server](intermittent-periodic-network-issue.md#collect-network-traces-on-the-client-and-server). Then, you can analyze the network trace using the [SQL Network Analyzer UI SQLNAUI](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLNAUI)
+
 
 ## See also
 
