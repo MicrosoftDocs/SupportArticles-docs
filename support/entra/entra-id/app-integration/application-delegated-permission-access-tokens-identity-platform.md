@@ -42,14 +42,23 @@ To determine whether an access token is a delegated or application permission to
 
 For application permission tokens, the permissions are in the `roles` claim:
 
- :::image type="content" source="media/application-delegated-permission-access-tokens-identity-platform/roles-claim.png" alt-text="Screenshot that shows the 'roles' claim.":::
+```json
+"oid": "<oid>"
+"roles": [
+    "User.Read.All"
+],
+"sub": "<sub>"
+```
 
 > [!NOTE]
 > The `scp` claim is absent in application permission tokens.
 
 For delegated permission tokens, the permissions are in the `scp` claim:
 
- :::image type="content" source="media/application-delegated-permission-access-tokens-identity-platform/scp-claim.png" alt-text="Screenshot that shows the 'scp' claim.":::
+```json
+"scp": "Directory.Read.All User.Read",
+"sub": "<sub>"
+```
 
 > [!NOTE]
 > The `roles` claim might still appear in a delegated permission token, but it lists the roles assigned to the user in the API app.
