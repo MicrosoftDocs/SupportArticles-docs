@@ -421,9 +421,9 @@ Reinstalling the latest version of the agent and boot loader also automatically 
 
 If you've performed all four steps but the agent still doesn't work, which might be because the `DisableRegistryTools` registry key is enabled in one of the following locations:
 
-- HKU:`\DEFAULT\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\DisableRegistryTools` = `1`
-- HKU:`\S-1-5-18\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\DisableRegistryTools` = `1`
-- HKCU:`\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\DisableRegistryTools` = `1`
+- HKU: `\DEFAULT\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\DisableRegistryTools` = `1`
+- HKU: `\S-1-5-18\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\DisableRegistryTools` = `1`
+- HKCU: `\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\DisableRegistryTools` = `1`
 
 This registry key prevents the agent from installing the side-by-side stack, which results in an installMSIException error. This error leads to the session hosts being stuck in an unavailable state.
 

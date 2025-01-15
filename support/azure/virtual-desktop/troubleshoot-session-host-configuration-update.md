@@ -91,7 +91,7 @@ Here are some example failures that can occur during an update:
 
   VM creation can fail for various reasons not specific to Azure Virtual Desktop, for example the exhaustion of subscription capacity, or issues with the provided image. You should review the error message provided to determine the appropriate remediation. Open a support case with Azure support if you need further assistance.
 
-- Agent installation, domain join, and session host health errors or timeout
+- Agent installation, domain join, and session host health errors or time-out
 
   Agent, domain join, and other session host health errors that occur in the first validation batch can often be resolved by reviewing guidance for addressing deployment and domain join failures for Azure Virtual Desktop, and by ensuring your image doesn't have the PowerShell DSC extension installed. If the extension is installed on the image, remove the folder **C:\\packages\\plugin** from the image. If the failure is intermittent, with some session hosts successfully updating and others encountering an error such as `AgentRegistrationFailureGeneric`, [retrying the update](/azure/virtual-desktop/session-host-update-configure#pause-resume-cancel-or-retry-an-update) can often resolve the issue.
 
