@@ -1,7 +1,7 @@
 ---
-title: Troubleshooting Consent Issues in Microsoft Entra ID
+title: Troubleshoot Consent Issues in Microsoft Entra ID
 description: Helps you troubleshoot and resolve consent issues in Microsoft Entra ID.
-ms.date: 01/14/2025
+ms.date: 01/15/2025
 ms.reviewer: willfid, v-weizhu
 ms.service: entra-id
 ms.custom: sap:App registrations
