@@ -6,7 +6,7 @@ ms.reviewer: willfid, v-weizhu
 ms.service: entra-id
 ms.custom: sap:App registrations
 ---
-# Troubleshooting consent issues in Microsoft Entra ID
+# Troubleshoot consent issues in Microsoft Entra ID
 
 This article provides guidance on troubleshooting consent issues in Microsoft Entra ID. It applies to OpenID Connect and OAuth2-based authentications.
 
