@@ -3,7 +3,7 @@ items:
   href: ./troubleshoot-windows-365-business.md
 - name: Known issues
   href: ./known-issues.md
-- name: Known issues
+- name: Known issues enterprise
   href: ./known-issues-enterprise.md
 - name: Azure network connections
   href: ./troubleshoot-azure-network-connection.md
