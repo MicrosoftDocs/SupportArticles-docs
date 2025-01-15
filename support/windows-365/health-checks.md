@@ -28,6 +28,7 @@ ms.collection:
 - M365-identity-device-management
 - tier2
 ---
+
 # Azure network connection health checks
 
 A unique feature of Windows 365 is the Azure network connection (ANC) health checks. The health checks are periodically run to make sure that:

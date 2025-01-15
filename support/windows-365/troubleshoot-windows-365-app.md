@@ -28,6 +28,7 @@ ms.collection:
 - M365-identity-device-management
 - tier2
 ---
+
 # Troubleshoot issues with the Windows 365 app
 
 This article helps you identify and solve issues with the [Windows 365 app](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0).
@@ -62,7 +63,7 @@ When a [Remote Desktop client is installed](/windows-365/end-user-access-cloud-p
 
 The Windows 365 app supports window mode to work more efficiently side-by-side with your local PC. To activate window mode, select the **Window mode** button on the connection bar.
 
-## No Cloud PCs displayed in Windows 365 app
+## No Cloud PCs are displayed in the Windows 365 app
 
 If the Windows 365 app doesn't show any Cloud PCs, you might sign in with the wrong user account. Ensure you sign in with an account enrolled with the Microsoft Entra account that has Cloud PCs provisioned.
 

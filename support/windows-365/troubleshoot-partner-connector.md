@@ -28,6 +28,7 @@ ms.collection:
 - M365-identity-device-management
 - tier2
 ---
+
 # Troubleshoot partner connectors in Windows 365
 
 This article provides some troubleshooting steps and possible solutions for the issues related to partner connectors in Windows 365.
@@ -50,22 +51,22 @@ While troubleshooting the error, make sure that the following steps are successf
   - The correct permissions are set for the partner third-party apps in Microsoft Entra ID.
   - The Microsoft Entra user is added and discoverable in the Partner Cloud console.
 - The partner agent is downloaded on the Cloud PC.
-  - The Cloud PC can access partner download URL.
+  - The Cloud PC can access partner download URLs.
   - No security policy blocks PowerShell or any app/agent installation as **System**.
 - The partner agent is installed.
   - Check **Apps & Features** to see if the partner agent is installed on the Cloud PC.
-  - Check Windows Event Viewer (`eventvwr.msc`) logs to make sure that the agent installation is executed.
+  - Check Windows Event Viewer (**eventvwr.msc**) logs to make sure that the agent installation is executed.
   - Check installation logs for any failures:
     - Citrix: **%TEMPsystemdrive%\Windows\Temp\Citrix\XenDesktop Installer**
     - Omnissa Horizon:
-      - For installation issues: **C:\Windows\Temp\Omnissa_Horizon_Agents_Installer_\**.log**
-      - Run this script for collecting the logs for post installation issues: `C:\Program Files\Omnissa\Horizon Agents\Horizon Agent\DCT\support.bat`
+      - For installation issues: **C:\Windows\Temp\Omnissa_Horizon_Agents_Installer_\**.log**.
+      - Run this script for collecting the logs for post-installation issues: `C:\Program Files\Omnissa\Horizon Agents\Horizon Agent\DCT\support.bat`.
     - HP Anyware:
-      - **C:\Teradici\provisioning.log**
+      - **C:\Teradici\provisioning.log**.
       - Or, select **Generate support bundle** on the client side.
 - The Cloud PC is registered to the partner cloud tenant.
   - Check the Cloud PC registration status in the partner configuration console.
-  - If the Cloud PC is unregistered, check the **Application** sign-in events in Windows Event Viewer (`eventvwr.msc`) for partner service errors and warnings.
+  - If the Cloud PC is unregistered, check the **Application** sign-in events in Windows Event Viewer (**eventvwr.msc**) for partner service errors and warnings.
 
 After you find the root cause, remove the assigned license from the partner console and then add the license back to trigger the reinstallation of the partner agent.
 
@@ -78,7 +79,7 @@ If you have connectivity issues with your partner-provisioned Cloud PC, test the
 
 ### Turn on the RDP protocol
 
-When the partner protocol is enabled, the Windows 365 remote protocol remains enabled but inactive. This inactivity means that users trying to connect to the Windows 365 supported Remote Desktop clients (including the HTML5 browser) are blocked by default. Users can only connect using the partner protocol. Users trying to connect to non-partner clients receive a generic error message.
+When the partner protocol is enabled, the Windows 365 remote protocol remains enabled but inactive. This inactivity means that users trying to connect to the Windows 365-supported Remote Desktop clients (including the HTML5 browser) are blocked by default. Users can only connect using the partner protocol. Users trying to connect to non-partner clients receive a generic error message.
 
 You can enable the RDP protocol so users can sign in with RDP to test the Cloud PC connectivity. You can enable the RDP protocol by:
 
@@ -91,6 +92,6 @@ You can now test the connectivity using RDP and raise a support case with the re
 
 ## More information
 
-- [Learn about Citrix HDX Plus for Windows 365](/windows-365/enterprise/set-up-citrix).
-- [Learn about HP Anyware for Windows 365](/windows-365/enterprise/hp-anyware-set-up).
-- [Learn about Omnissa Horizon for Windows 365](/windows-365/enterprise/set-up-omnissa-horizon).
+- [Learn about Citrix HDX Plus for Windows 365](/windows-365/enterprise/set-up-citrix)
+- [Learn about HP Anyware for Windows 365](/windows-365/enterprise/hp-anyware-set-up)
+- [Learn about Omnissa Horizon for Windows 365](/windows-365/enterprise/set-up-omnissa-horizon)
