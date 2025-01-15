@@ -46,13 +46,16 @@ Aug 21 01:47:31 node  02 corosync[15241]:  [TOTEM ] Token has not been received 
 ```
 
 ### Cause
-It's noted that the unexpected node reboot is observed due to Network Maintenance activity or an outage. For confirmation, the timestamp can be matched by reviewing the [Azure Maintenance Notification](/azure/virtual-machines/linux/maintenance-notifications) in Azure Portal. For more information about Azure Scheduled Events, see [Azure Metadata Service: Scheduled Events for Linux VMs](/azure/virtual-machines/linux/scheduled-events).
+The unexpected node reboot is noted as a result of a Network Maintenance activity or an outage. For confirmation, the timestamp can be matched by reviewing the [Azure Maintenance Notification](/azure/virtual-machines/linux/maintenance-notifications) in Azure Portal. For more information about Azure Scheduled Events, see [Azure Metadata Service: Scheduled Events for Linux VMs](/azure/virtual-machines/linux/scheduled-events).
 
 #### Resolution
-If the unexpected reboot timestamp aligns with a maintenance activity, the analysis confirms that the cluster was impacted by either platform or network maintenance. For further assistance or additional queries, you can open a support request by following these [instructions](#next-steps).
+If the unexpected reboot timestamp aligns with a maintenance activity, the analysis confirms that either platform or network maintenance impacted the cluster.
+
+For further assistance or other queries, you can open a support request by following these [instructions](#next-steps).
 
 ### Scenario 2: Cluster Misconfiguration
-The cluster nodes experience unexpected failover or node reboots and it's often observed due to cluster misconfiguration affecting the stability of Pacemaker Clusters. 
+The cluster nodes experience unexpected failovers or node reboots, often caused by cluster misconfigurations that affect the stability of Pacemaker Clusters.
+
 The cluster configuration can be reviewed by running the following command:
 ```bash
 sudo crm configure show
@@ -62,8 +65,8 @@ sudo crm configure show
 Unexpected reboots in an Azure SUSE Pacemaker cluster often occur due to misconfigurations:
 
 1. Incorrect STONITH configuration: 
-    - No STONITH or fencing fisconfigured: Not configuring STONITH properly can lead to nodes being marked as unhealthy and triggering unnecessary reboots.
-    - Wrong STONITH resource rettings: Incorrect parameters for Azure fencing agents like `fence_azure_arm` can cause nodes to reboot unexpectedly during failovers.
+    - No STONITH or fencing misconfigured: Not configuring STONITH properly can lead to nodes being marked as unhealthy and triggering unnecessary reboots.
+    - Wrong STONITH resource settings: Incorrect parameters for Azure fencing agents like `fence_azure_arm` can cause nodes to reboot unexpectedly during failovers.
     - Insufficient permissions: The Azure resource group or credentials used for fencing may lack required permissions, causing STONITH failures.
 
 2. Missing/Incorrect resource constraints:
@@ -106,9 +109,10 @@ Unexpected reboots in an Azure SUSE Pacemaker cluster often occur due to misconf
        crm configure property maintenance-mode=false
        ``` 
 ### Scenario 3: Migration from On-premises to Azure
-When migrating a SUSE Pacemaker cluster from on-premises to Azure, unexpected reboots can arise from specific misconfigurations or overlooked dependencies. Below are common mistakes in this category:
+When migrating a SUSE Pacemaker cluster from on-premises to Azure, unexpected reboots can arise from specific misconfigurations or overlooked dependencies. 
 
 ### Cause
+The following are common mistakes in this category:
 
 1. Incomplete or incorrect STONITH configuration:
     - No STONITH or fencing misfconfigured: Not configuring STONITH (Shoot-The-Other-Node-In-The-Head) properly can lead to nodes being marked as unhealthy and triggering unnecessary reboots.
@@ -183,7 +187,7 @@ The `ASCS/ERS` resource is considered the application for SAP Netweaver clusters
 #### Resolution
 - To identify the root cause of the issue, it's essential to review the [OS performance](collect-performance-metrics-from-a-linux-system.md). 
 - Particular attention should be given to memory pressure and storage devices, their configuration especially if SAP Netweaver is hosted on Network File System (NFS), Azure NetApp Files (ANF), or Azure Files. 
-- Once external factors, such as platform or network outages, are ruled out, it's recommended to engage the application vendor  for trace call analysis and log review.
+- Once external factors, such as platform or network outages, are ruled out, it's recommended to engage the application vendor for trace call analysis and log review.
 
 ## Next steps
 For additional help, open a support request by using the following instructions. When you submit your request, attach [supportconfig](https://documentation.suse.com/smart/systems-management/html/supportconfig/index.html) and [hb_report](https://www.suse.com/support/kb/doc/?id=000019142) logs for troubleshooting.
@@ -192,4 +196,4 @@ For additional help, open a support request by using the following instructions.
 
 [!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)
