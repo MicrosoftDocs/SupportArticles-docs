@@ -1,7 +1,7 @@
 ---
 title: Required fields are missing error in Copilot for Sales
 description: Resolves the Required ields are missing error that occurs when creating a contact or record in the Microsoft Copilot for Sales panel in Outlook.
-ms.date: 05/07/2024
+ms.date: 01/10/2025
 author: sbmjais
 ms.author: shjais
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings

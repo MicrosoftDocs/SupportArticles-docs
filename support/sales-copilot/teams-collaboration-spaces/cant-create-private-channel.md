@@ -1,7 +1,7 @@
 ---
 title: Can't create a private channel in Microsoft Teams
 description: Resolves an issue where you can't create a private channel in Microsoft Teams.
-ms.date: 01/10/2024
+ms.date: 01/10/2025
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
@@ -10,9 +10,6 @@ ms.custom: sap:Teams Collaboration Spaces\Collaboration Space Creation and acces
 # "Couldn't add channel" error when creating a private channel in Microsoft Teams
 
 This article helps you troubleshoot and resolve issues when you can't create a private channel in Microsoft Teams.
-
-> [!NOTE]
-> Microsoft Sales Copilot is rebranded as Microsoft Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
 
 ## Who is affected?
 

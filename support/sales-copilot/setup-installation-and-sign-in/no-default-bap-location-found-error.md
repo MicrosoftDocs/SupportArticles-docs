@@ -1,7 +1,7 @@
 ---
 title: No default BAP location found for this tenant error
 description: Resolves issues in Copilot for Sales when users can't use Microsoft Copilot for Sales due to missing a default environment.
-ms.date: 01/10/2024
+ms.date: 01/10/2025
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
@@ -10,9 +10,6 @@ ms.custom: sap:Setup, Installation and Sign-in\CRM Sign-In & Sign Out
 # "No default BAP location found for this tenant" error in Copilot for Sales
 
 This article helps you troubleshoot and resolve issues in Microsoft Copilot for Sales when users are unable to use Copilot for Sales due to missing a default environment.
-
-> [!NOTE]
-> Microsoft Sales Copilot is rebranded as Microsoft Copilot for Sales in January 2024. The screenshot in this article will be updated with the new name soon.
 
 ## Who is affected?
 | Requirement type |Description  |

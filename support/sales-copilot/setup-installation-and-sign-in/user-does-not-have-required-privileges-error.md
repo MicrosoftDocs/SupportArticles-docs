@@ -1,7 +1,7 @@
 ---
 title: User does not have required privileges to access the org error
 description: Resolves an error message that states the user doesn't have required privileges to access the organization when the Administration mode is enabled in Copilot for Sales.
-ms.date: 01/10/2024
+ms.date: 01/10/2025
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
@@ -10,9 +10,6 @@ ms.custom: sap:Setup, Installation and Sign-in\CRM Sign-In & Sign Out
 # "User does not have required privileges to access the org in Admin Only mode" error
 
 This article provides a resolution for an error message that occurs in Microsoft Copilot for Sales when the organization is in [Administration mode](/power-platform/admin/admin-mode).
-
-> [!NOTE]
-> Microsoft Sales Copilot is rebranded as Microsoft Copilot for Sales in January 2024. The screenshot in this article will be updated with the new name soon.
 
 ## Who is affected?
 

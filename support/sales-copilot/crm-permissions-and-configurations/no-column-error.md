@@ -1,7 +1,7 @@
 ---
 title: Salesforce CRM users can't see data in Copilot for Sales
 description: Resolves an issue where users are unable to see data in Microsoft Copilot for Sales.
-ms.date: 09/02/2024
+ms.date: 01/10/2025
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
@@ -10,9 +10,6 @@ ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 # Salesforce CRM users unable to see data in Copilot for Sales
 
 This article helps you troubleshoot and resolve an issue where users can't see data in Microsoft Copilot for Sales.
-
-> [!NOTE]
-> Microsoft Sales Copilot is rebranded as Microsoft Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
 
 ## Who is affected?
 

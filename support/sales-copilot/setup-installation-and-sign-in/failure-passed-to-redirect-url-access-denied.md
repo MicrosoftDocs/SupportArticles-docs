@@ -1,7 +1,7 @@
 ---
 title: Authentication issues when connecting to Salesforce CRM
 description: Resolves authentication issues when connecting to Salesforce CRM from Microsoft Copilot for Sales.
-ms.date: 01/10/2024
+ms.date: 01/10/2025
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
@@ -10,9 +10,6 @@ ms.custom: sap:Setup, Installation and Sign-in\CRM Sign-In & Sign Out
 # Authentication issues when connecting to Salesforce CRM
 
 This article helps you troubleshoot and resolve authentication issues when connecting to Salesforce CRM from the [Microsoft Copilot for Sales add-in for Outlook](/microsoft-sales-copilot/use-sales-copilot-outlook).
-
-> [!NOTE]
-> Microsoft Sales Copilot is rebranded as Microsoft Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
 
 ## Who is affected?
 
