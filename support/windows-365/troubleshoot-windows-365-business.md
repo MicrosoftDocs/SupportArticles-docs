@@ -44,7 +44,7 @@ Ensure that the MDM authority configuration is set up correctly. Depending on wh
 
 ### Path A: Use Microsoft Intune to manage your Cloud PCs
 
-If you already use Microsoft Intune, or plan to use it to manage your Windows 365 Cloud PCs, make sure that your **Mobility (MDM and MAM)** settings in Microsoft Entra ID are correctly configured.
+If you already use Microsoft Intune, or plan to use it to manage your Windows 365 Cloud PCs, make sure that your **Mobility (MDM and MAM)** settings in Microsoft Entra ID are correctly configured.
 
 1. In the Azure portal, go to the [Microsoft Entra Overview](https://go.microsoft.com/fwlink/p/?linkid=516942) page.
 2. In the left navigation pane, under **Manage**, select **Mobility (MDM and MAM)**, and then select **Microsoft Intune**.
@@ -73,7 +73,7 @@ Users who are assigned a Cloud PC must have an Intune license assigned to them t
 
 ### Path B: Turn off automatic MDM enrollment and Intune enrollment in Organization Settings
 
-If you don’t plan to use Microsoft Intune for your Cloud PC management, turn off automatic MDM enrollment and clear the **Enroll new Cloud PCs in Microsoft Intune** checkbox in **Organization Settings**.
+If you don't plan to use Microsoft Intune for your Cloud PC management, turn off automatic MDM enrollment and clear the **Enroll new Cloud PCs in Microsoft Intune** checkbox in **Organization Settings**.
 
 > [!IMPORTANT]
 > If you're not the MDM administrator, don't use either of the following procedures without first consulting with your IT administrator. Only follow these procedures if Cloud PCs aren't being set up. Any configuration changes could impact on your management environment. If you need help, [contact Intune support](/mem/get-support).

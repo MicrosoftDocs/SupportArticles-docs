@@ -8,7 +8,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 01/13/2025
-ms.topic: how-to
+ms.topic: troubleshooting
 ms.service: windows-365
 ms.subservice: windows-365-enterprise
 ms.localizationpriority: high
@@ -42,11 +42,11 @@ This article helps you identify and solve issues with the [Windows 365 app](http
 
 ## "Can't connect to Cloud PC" error
 
-When you select the **Connect** button to connect to your Cloud PC, you might receive a "Can't connect to Cloud PC" error.
+When you select the **Connect** button to connect to your Cloud PC, you might receive a "Can't connect to Cloud PC" error.
 
 To fix this issue:
 
-1. In the **Settings** app on your Windows device, select **Apps** > **Default apps**.
+1. In the **Settings** app on your Windows device, select **Apps** > **Default apps**.
 2. Find the **AVD host app** and update the default app for **.avd** files.
 3. Run the following command to clear the old Remote Desktop Client cache:
 
@@ -54,7 +54,7 @@ To fix this issue:
 
 ## The Windows 365 app asks to select a new default app
 
-When a [Remote Desktop client is installed](/windows-365/end-user-access-cloud-pc#install-the-microsoft-remote-desktop-app), you might see a file type association message after trying to connect to your Cloud PC. Make sure to select the **Azure Virtual Desktop (HostApp)** option to launch the Cloud PC session.
+When a [Remote Desktop client is installed](/windows-365/end-user-access-cloud-pc#install-the-microsoft-remote-desktop-app), you might see a file type association message after trying to connect to your Cloud PC. Make sure to select the **Azure Virtual Desktop (HostApp)** option to launch the Cloud PC session.
 
 :::image type="content" source="media/troubleshoot-windows-365-app/azure-virtual-desktop.png" alt-text="Screenshot that shows the Azure Virtual Desktop (HostApp) option that should be selected.":::
 

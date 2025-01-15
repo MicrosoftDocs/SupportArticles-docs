@@ -28,7 +28,6 @@ ms.collection:
 - M365-identity-device-management
 - tier2
 ---
-
 # Azure network connection health checks
 
 A unique feature of Windows 365 is the Azure network connection (ANC) health checks. The health checks are periodically run to make sure that:
@@ -72,7 +71,6 @@ Every failed ANC or success with a warning error state includes the technical de
 - **UDP connection check**: Network configuration allows the use of UDP direct connection (STUN).
 - **Single sign-on configuration**: Determine if the network is properly configured for [single sign-on](/windows-365/enterprise/identity-authentication#single-sign-on-sso) to Microsoft Entra hybrid joined Cloud PCs by ensuring a Kerberos Server object exists.
 
-<!-- ########################## -->
 ## Next steps
 
 [Learn more about Azure network connections](/windows-365/enterprise/azure-network-connections).

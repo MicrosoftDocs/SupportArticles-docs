@@ -143,7 +143,6 @@ The role assignment on the subscription is granted to the Cloud PC service princ
 
 Also, make sure that the permissions aren't granted as [classic subscription administrator roles](/azure/role-based-access-control/rbac-and-directory-admin-roles#classic-subscription-administrator-roles) or "Roles (Classic)." This role isn't sufficient. It must be one of the Azure role-based access control built-in roles as listed previously.
 
-<!-- ########################## -->
 ## Next steps
 
 [Learn about the ANC health checks](/windows-365/enterprise/health-checks).

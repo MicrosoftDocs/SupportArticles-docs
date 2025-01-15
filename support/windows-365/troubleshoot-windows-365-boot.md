@@ -37,14 +37,16 @@ This article provides troubleshooting steps for the issues that occur when you s
 If the user can't access the Cloud PC from the Windows 365 Boot physical device, try these troubleshooting steps:
 
 1. Check if you can sign in to the Cloud PC from either:
-    - The browser at https://windows365.microsoft.com.
+
+    - Navigate to [Windows 365](https://windows365.microsoft.com).
     - The Windows App on another (non-Windows 365 Boot) device.
 
 2. If a user has more than one Cloud PC, make sure they have selected a default Cloud PC to use each time they sign in. To set this default:
-   - Navigate to https://windows365.microsoft.com.
-   - In the card for the Cloud PC you want to set as default, select the ellipses (...) > **Settings**.
-   - In the **Integrated experiences** tab, under **Boot to this Cloud PC**, select **Connect while signed into device**.
-   - Select **Save**.
+
+   1. Navigate to [Windows 365](https://windows365.microsoft.com).
+   2. In the card for the Cloud PC you want to set as default, select the ellipses (...) > **Settings**.
+   3. In the **Integrated experiences** tab, under **Boot to this Cloud PC**, select **Connect while signed into device**.
+   4. Select **Save**.
 
 3. If you can sign in to the Cloud PC from the app or web, and a default Cloud PC has been set, then there's an issue with the Windows 365 Boot physical device. In this case, confirm that the physical device is correctly configured and has the requisite software versions. For more information, see [Windows 365 Boot physical device requirements](/windows-365/enterprise/windows-365-boot-physical-device-requirements).
 
@@ -66,7 +68,7 @@ Confirm that the physical device is correctly configured to run Windows 365 Boot
 Windows 365 Boot requires that the physical device runs specific versions of both Windows 365 and Azure Virtual Desktop (HostApp) apps. To check the installed versions, run the following PowerShell command as an administrator:
 
 ```azurepowershell
-Get-AppxPackage –AllUsers -name *MicrosoftCorporationII*
+Get-AppxPackage -AllUsers -name *MicrosoftCorporationII*
 ```
 
 This command shows all the Microsoft-maintained apps (like QuickAssist, Microsoft Family) on the physical device. To make sure Windows 365 Boot work correctly, confirm the following versions:

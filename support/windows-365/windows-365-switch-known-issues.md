@@ -40,7 +40,7 @@ Currently, Windows 365 Switch only supports one Switch-enabled Cloud PC. The use
 
 If your Task view has a Cloud PC that you no longer have access to, you can remove and replace it.
 
-**Troubleshooting steps**:
+### Troubleshooting steps
 
 1. Uninstall [Windows App](/windows-app/overview).
 2. Reinstall Windows App.
@@ -54,7 +54,7 @@ Some gestures, such as three-finger gestures to change apps or four-finger gestu
 
 Cloud PCs lack hardware components like Bluetooth adapters. Users can't change the settings from the Cloud PC **Settings** app or [quick settings](https://support.microsoft.com/windows/change-notification-and-quick-settings-in-windows-ddcbbcd4-0a02-f6e4-fe14-6766d850f294).
 
-**Troubleshooting steps**:
+### Troubleshooting steps
 
 Users must switch back to their physical device and change the settings in the **Settings** app.
 
@@ -62,7 +62,7 @@ Users must switch back to their physical device and change the settings in the *
 
 If the **Reconnect** option in the disconnect message dialog is used, reconnecting might not work as expected or might result in an unusable Cloud PC session.
 
-**Troubleshooting steps**:
+### Troubleshooting steps
 
 Let the disconnect complete and then launch a new connection using **Task view**.
 
@@ -70,7 +70,7 @@ Let the disconnect complete and then launch a new connection using **Task view**
 
 After selecting a Cloud PC from the Task view, users might be prompted to sign in using their account credentials. In some builds of Windows, after providing the credentials, users might not be returned to the Cloud PC connection.
 
-**Troubleshooting steps**:
+### Troubleshooting steps
 
 Select the **Task view** button for the Cloud PC again. The connection continues in the background. The user should be connected to their Cloud PC within a few minutes.
 
@@ -78,7 +78,7 @@ Select the **Task view** button for the Cloud PC again. The connection continues
 
 If the local PC is missing from the Cloud PC's task view bar, the Azure Virtual Desktop (HostApp) might be out of date.
 
-**Troubleshooting steps**:
+### Troubleshooting steps
 
 Uninstall and reinstall the Azure Virtual Desktop (HostApp) app from the [Microsoft Store](ms-windows-store://pdp/?productid=9NRNM1N926MN).
 

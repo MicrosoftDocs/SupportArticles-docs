@@ -28,7 +28,6 @@ ms.collection:
 - M365-identity-device-management
 - tier2
 ---
-
 # Known issues: Windows 365 Business
 
 The following items are known issues for Windows 365 Business.

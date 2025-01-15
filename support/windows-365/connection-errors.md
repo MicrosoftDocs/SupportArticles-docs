@@ -39,41 +39,55 @@ The following errors can occur when connecting to a Cloud PC.
 
 ### The logon attempt failed
 
-**Potential cause #1**: Either the Cloud PC or the user's physical device denied PKU2U protocol requests. The PKU2U protocol is only triggered in the following cases:
+### Potential cause 1
+
+Either the Cloud PC or the user's physical device denied PKU2U protocol requests. The PKU2U protocol is only triggered in the following cases:
 
 - The Cloud PC is Microsoft Entra joined.
 - The user is connecting from the Windows desktop client.
 - The user's physical device is Microsoft Entra registered, Microsoft Entra joined, or Microsoft Entra hybrid joined to the same organization as the Cloud PC.
 
-**Possible solution**: Turn on PKU2U protocol requests on both the Cloud PC and the user's physical device:
+### Possible solution
+
+Turn on PKU2U protocol requests on both the Cloud PC and the user's physical device:
 
 1. [Create a filter for all Cloud PCs](/windows-365/enterprise/create-filter#create-a-filter-for-all-cloud-pcs).
 2. Create a device configuration policy [using the settings catalog](/mem/intune/configuration/settings-catalog).
 3. On the **Configuration settings** page, search for and select **Network Security Allow PKU2U Authentication Requests** > **Allow**.
 
-    :::image type="content" source="./media/connection-errors/allow-pku2u.png" alt-text="Screenshot showing the Network Security Allow PKU2U Authentication Requests option set to Allow."::: 
+    :::image type="content" source="./media/connection-errors/allow-pku2u.png" alt-text="Screenshot showing the Network Security Allow PKU2U Authentication Requests option set to Allow.":::
 
-5. On the **Assignments** page, select **Add all devices** > **Edit filter** > **Include filtered devices in assignment**, and then select the filter you created for all Cloud PCs.
-6. On the **Assignments** page, also select a Microsoft Entra group containing the user or the user's physical device.
-7. Complete the creation of the device configuration policy.
+4. On the **Assignments** page, select **Add all devices** > **Edit filter** > **Include filtered devices in assignment**, and then select the filter you created for all Cloud PCs.
+5. On the **Assignments** page, also select a Microsoft Entra group containing the user or the user's physical device.
+6. Complete the creation of the device configuration policy.
 
 If you only manage the user's physical device through Group Policy or you don't manage the user's physical device, you (or the user) can manage this setting through the [Allow PKU2U authentication requests to this computer to use online identities](/windows/security/threat-protection/security-policy-settings/network-security-allow-pku2u-authentication-requests-to-this-computer-to-use-online-identities) policy.
 
-**Potential cause #2**: [Per-user multifactor authentication](/azure/active-directory/authentication/howto-mfa-userstates) is turned on for the user account. Because it blocks sign-in, per-user multifactor authentication isn't supported for users connecting to Microsoft Entra joined Cloud PCs.
+### Potential cause 2
 
-**Possible solution**: [Remove per-user multifactor authentication](/azure/active-directory/devices/howto-vm-sign-in-azure-ad-windows#mfa-sign-in-method-required) for all users connecting to Cloud PCs. Then, [set a Microsoft Entra Conditional Access policy](/windows-365/enterprise/set-conditional-access-policies) and assign it to the appropriate users.
+[Per-user multifactor authentication](/azure/active-directory/authentication/howto-mfa-userstates) is turned on for the user account. Because it blocks sign-in, per-user multifactor authentication isn't supported for users connecting to Microsoft Entra joined Cloud PCs.
+
+### Possible solution
+
+[Remove per-user multifactor authentication](/azure/active-directory/devices/howto-vm-sign-in-azure-ad-windows#mfa-sign-in-method-required) for all users connecting to Cloud PCs. Then, [set a Microsoft Entra Conditional Access policy](/windows-365/enterprise/set-conditional-access-policies) and assign it to the appropriate users.
 
 ## Specific connection errors
 
 ### We couldn't connect because there are currently no available resources
 
-**Potential cause**: There may be a resource issue on your Cloud PC.
+### Potential cause
 
-**Possible solution**: Sign in to [windows365.microsoft.com](https://windows365.microsoft.com), select the cog icon next to the Cloud PC, and then select **Restart**.
+There may be a resource issue on your Cloud PC.
+
+### Possible solution
+
+Sign in to [windows365.microsoft.com](https://windows365.microsoft.com), select the cog icon next to the Cloud PC, and then select **Restart**.
 
 ### We couldn't connect to the gateway because of an error. If this keeps happening, ask your admin or tech support for help.
 
-**Potential cause**: This error can be caused by network configuration settings, like:
+### Potential cause
+
+This error can be caused by network configuration settings, like:
 
 - Custom DNS settings
 - Network Virtual Appliance blocking
@@ -81,13 +95,19 @@ If you only manage the user's physical device through Group Policy or you don't 
 - Resource locks
 - Blocks on required endpoints
 
-**Possible solution**: Review the settings and confirm that they aren't interfering with connections.
+### Possible solution
+
+Review the settings and confirm that they aren't interfering with connections.
 
 ### The remote PC ended your session. If this keeps happening, contact your network administrator for assistance. Error code: 0x3
 
-**Potential cause**: This error can occur when the Cloud PC's processor is over-utilized.
+### Potential cause
 
-**Possible solution**: If the issue persists, sign in to [windows365.microsoft.com](https://windows365.microsoft.com), select the cog icon next to the Cloud PC, and then select **Restart**.
+This error can occur when the Cloud PC's processor is over-utilized.
+
+### Possible solution
+
+If the issue persists, sign in to [windows365.microsoft.com](https://windows365.microsoft.com), select the cog icon next to the Cloud PC, and then select **Restart**.
 
 ### Connection Attempt timed out, Please try again, or An error occurred while accessing this resource
 
@@ -113,17 +133,23 @@ Some other possible causes for Cloud PC connection failures include:
 
 ### Out-of-date third-party VPN client versions
 
-**Possible solution**: Update VPN clients to the most up-to-date versions.
+### Possible solution
+
+Update VPN clients to the most up-to-date versions.
 
 <a name='signing-in-to-the-cloud-pc-with-azure-active-directory-only-user-accounts'></a>
 
 ### Signing in to the Cloud PC with Microsoft Entra ID-only user accounts
 
-**Possible solution**: Windows 365 is currently a Microsoft Entra hybrid join device, requiring users to sign in with their on-premises Active Directory account.
+### Possible solution
+
+Windows 365 is currently a Microsoft Entra hybrid join device, requiring users to sign in with their on-premises Active Directory account.
 
 ### Using a client PC with Remote Credential Guard enabled
 
-**Possible solution**: Remote Credential Guard requires connectivity to the on-premises Active Directory Domain Controller on the client PC used to access the Cloud PC. This connection is only possible using a VPN solution. Using a KDC proxy isn't currently available for Windows 365.
+### Possible solution
+
+Remote Credential Guard requires connectivity to the on-premises Active Directory Domain Controller on the client PC used to access the Cloud PC. This connection is only possible using a VPN solution. Using a KDC proxy isn't currently available for Windows 365.
 
 ### Azure WireServer may be blocked
 
@@ -147,7 +173,7 @@ Settings delivered by group policies may cause connection problems. To test this
 
 If users encounter intermittent connection issues, consider the following: 
 
-**Possible solutions**
+### Possible solution
 
 - Make sure that SSL inspection/Termination is disabled for networks used by your Cloud PCs. For more information, see [Proxy server guidelines for Azure Virtual Desktop]( /azure/virtual-desktop/proxy-server-support).
 - When using third-party software web gateways, make sure forced tunnel exceptions are in place for critical Azure Virtual Desktop (AVD) traffic. For more information, see [Optimizing RDP Connectivity for Windows 365]( https://techcommunity.microsoft.com/discussions/windows365discussions/optimizing-rdp-connectivity-for-windows-365/3554327).
