@@ -109,7 +109,7 @@ Along with standard the DNS lookup on the supplied domain name, we also check fo
 
 During provisioning, Cloud PCs must connect to multiple Microsoft publicly available services. These services include Microsoft Intune, Microsoft Entra ID, and Azure Virtual Desktop.  
 
-You must make sure that all of the [required public endpoints](requirements-network.md#allow-network-connectivity) can be reached from the subnet used by Cloud PCs.
+You must make sure that all of the [required public endpoints](/windows-365/enterprise/requirements-network#allow-network-connectivity) can be reached from the subnet used by Cloud PCs.
 
 If this test fails, make sure that:
 
