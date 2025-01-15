@@ -31,7 +31,7 @@ The following is an entry from the *Machine.config* file:
 </httpModule>
 ```
 
-You can configure forms authentication by using the authentication configuration element. For instance, you have a login page. In the configuration file, you specify a URL to redirect unauthenticated requests to the login page. Then define valid credentials, either in the *Web.config* file or in a separate file. The following example shows a section from a configuration file that specifies a login page and authentication credentials for the `Authenticate` method. The passwords have been encrypted by using the [HashPasswordForStoringInConfigFile](/dotnet/api/system.web.security.formsauthentication.hashpasswordforstoringinconfigfile)method.
+You can configure forms authentication by using the authentication configuration element. For instance, you have a login page. In the configuration file, you specify a URL to redirect unauthenticated requests to the login page. Then define valid credentials, either in the *Web.config* file or in a separate file. The following example shows a section from a configuration file that specifies a login page and authentication credentials for the `Authenticate` method. The passwords have been encrypted by using the [HashPasswordForStoringInConfigFile](/dotnet/api/system.web.security.formsauthentication.hashpasswordforstoringinconfigfile) method.
 
 ```xml
 <authentication mode="Forms"> 
