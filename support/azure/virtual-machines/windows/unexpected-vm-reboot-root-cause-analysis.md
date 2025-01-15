@@ -17,6 +17,8 @@ Azure provides methods to access detailed Root Cause Analysis (RCA) of unexpecte
 
 ## Method 1: Check resource health
 
+Azure Resource Health is a vital service designed to monitor the health of individual Azure resources and provide actionable insights for troubleshooting issues. In cloud environments, where direct access to servers or infrastructure is not feasible, Resource Health plays a crucial role in minimizing troubleshooting efforts. Its primary goal is to help you quickly determine whether the root cause of a problem lies within your application or stems from an event within the Azure platform, thereby streamlining issue resolution and reducing downtime. You can use below steps to use resource health for understanifn the cause of unexpected VM reboot scenario.
+
 1. Navigate to the impacted VM in the Azure portal.
 2. Go to the **Help** section and then select **Resource health**.
 3. Check the health events for the unexpected VM reboot to get RCA information.
