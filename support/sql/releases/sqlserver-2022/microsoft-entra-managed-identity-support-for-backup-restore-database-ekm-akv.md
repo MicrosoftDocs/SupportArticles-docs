@@ -5,7 +5,7 @@ ms.date: 01/16/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5043526
 ms.reviewer: derekw, pcaronauger, v-qianli2
 appliesto:
-- SQL Server 2022 on Azure VM
+- SQL Server 2022 on Azure Windows VM
 ---
 # Improvement: Microsoft Entra managed identity support for backup and restore database operations and for EKM with AKV in SQL Server on Azure VMs
 
@@ -19,7 +19,7 @@ This problem is fixed in the following cumulative update for SQL Server on Azure
 
 [Cumulative Update 17 for SQL Server 2022](cumulativeupdate17.md)
 
-In the SQL Server 2022 CU17 and later versions, the Microsoft Entra managed identity authentication with SQL Server on Azure Windows VMs supports the server-level [credential]( /sql/t-sql/statements/create-credential-transact-sql#e-creating-a-credential-for-managed-identity) for database backup and restore operations to Azure Storage and for EKM with AKV.
+In the SQL Server 2022 CU17 and later versions, the Microsoft Entra managed identity authentication with SQL Server on Azure Windows only VMs supports the server-level [credential]( /sql/t-sql/statements/create-credential-transact-sql#e-creating-a-credential-for-managed-identity) for database backup and restore operations to Azure Storage and for EKM with AKV.
 
 To enable the managed identity support for backup or restore database operations for SQL Server on Azure VMs, the following steps are required:
 
