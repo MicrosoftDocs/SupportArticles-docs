@@ -52,7 +52,7 @@ The user isn't completely signed out after closing the laptop lid. When they ope
 Duplicate dialogs might be displayed for the physical device and the Cloud PC. This issue can occur for:
 
 - Some shortcut keys, like <kbd>Win</kbd>+<kbd>G</kbd> or sticky keys.
-- Enabling accessibility key settings, like High Contrast, Num Keys, or Toggle Keys.
+- Enabling accessibility key settings, like High contrast, Num keys, or Toggle keys.
 
 ## Windows 365 Boot isn't supported in Kiosk mode
 
