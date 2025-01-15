@@ -48,8 +48,8 @@ When you select the **Connect** button to connect to your Cloud PC, you might re
 To fix this issue:
 
 1. In the **Settings** app on your Windows device, select **Apps** > **Default apps**.
-2. Find the **AVD host app** and update the default app for **.avd** files.
-3. Run the following command to clear the old Remote Desktop Client cache:
+2. Find the **AVD host app** and update the default app for `.avd` files.
+3. Run the following command to clear the old Remote Desktop client cache:
 
    `reg delete "HKEY_CLASSES_ROOT\progF3672D4C2FFE4422A53C78C345774E2D" /f`
 
@@ -67,6 +67,6 @@ The Windows 365 app supports window mode to work more efficiently side-by-side w
 
 If the Windows 365 app doesn't show any Cloud PCs, you might sign in with the wrong user account. Ensure you sign in with an account enrolled with the Microsoft Entra account that has Cloud PCs provisioned.
 
-## More information
+## Next steps
 
-[Learn more about Windows 365 App](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0).
+For more information about Windows 365 app, see [Installing the Windows 365 app](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0).

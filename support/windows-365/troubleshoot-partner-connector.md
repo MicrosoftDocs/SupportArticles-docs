@@ -4,7 +4,7 @@ title: Troubleshoot partner connectors in Windows 365
 titleSuffix:
 description: Provides troubleshooting information to the issues related to partner connectors in Windows 365.
 keywords:
-author: ErikjeMS  
+author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 01/10/2025
@@ -57,12 +57,12 @@ While troubleshooting the error, make sure that the following steps are successf
   - Check **Apps & Features** to see if the partner agent is installed on the Cloud PC.
   - Check Windows Event Viewer (**eventvwr.msc**) logs to make sure that the agent installation is executed.
   - Check installation logs for any failures:
-    - Citrix: **%TEMPsystemdrive%\Windows\Temp\Citrix\XenDesktop Installer**
+    - Citrix: **%TEMPsystemdrive%\\Windows\\Temp\\Citrix\\XenDesktop Installer**
     - Omnissa Horizon:
-      - For installation issues: **C:\Windows\Temp\Omnissa_Horizon_Agents_Installer_\**.log**.
-      - Run this script for collecting the logs for post-installation issues: `C:\Program Files\Omnissa\Horizon Agents\Horizon Agent\DCT\support.bat`.
+      - For installation issues: **C:\\Windows\\Temp\\Omnissa_Horizon_Agents_Installer_\**.log**.
+      - Run this script for collecting the logs for post-installation issues: **C:\\Program Files\\Omnissa\\Horizon Agents\\Horizon Agent\\DCT\\support.bat**.
     - HP Anyware:
-      - **C:\Teradici\provisioning.log**.
+      - **C:\\Teradici\\provisioning.log**.
       - Or, select **Generate support bundle** on the client side.
 - The Cloud PC is registered to the partner cloud tenant.
   - Check the Cloud PC registration status in the partner configuration console.
@@ -77,21 +77,21 @@ After you find the root cause, remove the assigned license from the partner cons
 
 If you have connectivity issues with your partner-provisioned Cloud PC, test the default RDP-based connectivity to determine if the issue is with the Cloud PC or the partner connectivity.
 
-### Turn on the RDP protocol
+### Turn on the Remote Desktop Protocol (RDP) protocol
 
 When the partner protocol is enabled, the Windows 365 remote protocol remains enabled but inactive. This inactivity means that users trying to connect to the Windows 365-supported Remote Desktop clients (including the HTML5 browser) are blocked by default. Users can only connect using the partner protocol. Users trying to connect to non-partner clients receive a generic error message.
 
 You can enable the RDP protocol so users can sign in with RDP to test the Cloud PC connectivity. You can enable the RDP protocol by:
 
 - [Making a user a local administrator](/windows-365/enterprise/assign-users-as-local-admin) on the Cloud PC.
-- [Adding the user to the Direct Access Users group on the Cloud PC](/windows/client-management/mdm/policy-csp-localusersandgroups?WT.mc_id=Portal-fx).
+- [Adding the user to the Direct Access Users group on the Cloud PC](/windows/client-management/mdm/policy-csp-localusersandgroups).
 
 After taking either of these steps, you might need to restart the Cloud PC for the group membership updates to take effect. The user can then connect using either RDP or the partner protocol.
 
 You can now test the connectivity using RDP and raise a support case with the relevant support team if problems persist.
 
-## More information
+## Next steps
 
-- [Learn about Citrix HDX Plus for Windows 365](/windows-365/enterprise/set-up-citrix)
-- [Learn about HP Anyware for Windows 365](/windows-365/enterprise/hp-anyware-set-up)
-- [Learn about Omnissa Horizon for Windows 365](/windows-365/enterprise/set-up-omnissa-horizon)
+- For more information about Citrix HDX Plus for Windows 365, see [Set up Citrix HDX Plus for Windows 365 Enterprise](/windows-365/enterprise/set-up-citrix).
+- For more information about HP Anyware for Windows 365, see [Set up HP Anyware for Windows 365 Enterprise](/windows-365/enterprise/hp-anyware-set-up).
+- For more information about Omnissa Horizon for Windows 365, see [Set up Omnissa Horizon for Windows 365 Enterprise](/windows-365/enterprise/set-up-omnissa-horizon).

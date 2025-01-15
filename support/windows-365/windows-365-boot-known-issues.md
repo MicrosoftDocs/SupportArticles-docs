@@ -145,7 +145,7 @@ Windows 365 Boot physical devices might sign out users because of screen idle po
 
 ### Solution
 
-To use an Intune device configuration profile, change or configure the [DeviceLock CSP policy (MaxInactivityTimeDeviceLock)](/windows/client-management/mdm/policy-csp-devicelock?WT.mc_id=Portal-fx#maxinactivitytimedevicelock). Make these changes for both the physical device and the Cloud PC.
+To use an Intune device configuration profile, change or configure the [DeviceLock CSP policy (MaxInactivityTimeDeviceLock)](/windows/client-management/mdm/policy-csp-devicelock#maxinactivitytimedevicelock). Make these changes for both the physical device and the Cloud PC.
 
 ## Users see multiple authentication dialogs even if single sign-on is enabled
 
@@ -173,7 +173,7 @@ Windows 365 Boot is configured by using the [CloudDesktop CSP](/windows/client-m
 If you configured your device for Windows 365 Boot using the [Windows 365 Boot Guided Scenario](/windows-365/enterprise/windows-365-boot-guide):
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and select **Devices** > **Configuration profiles**.
-2. Search for the Device configuration profile that contains "Windows 365 Boot Device Configuration Policy" in its name.
+2. Search for the device configuration profile that contains "Windows 365 Boot Device Configuration Policy" in its name.
 3. Make sure that the "Cloud Desktop" configuration is configured with the **Windows 365 Boot Mode** setting set to **Enable Windows 365 Boot Desktop**.
 4. Select **Device assignment status** and make sure that the configuration policy was successfully applied to it.
 5. If the check-in status isn't successful, see [Troubleshooting policies and profiles in Microsoft Intune](/troubleshoot/mem/intune/device-configuration/troubleshoot-policies-in-microsoft-intune).
@@ -189,7 +189,7 @@ Windows 365 Boot is configured through the [Windowslogon CSP](/windows/client-ma
 If you configured your device for Windows 365 Boot using the [Windows 365 Boot Guided Scenario](/windows-365/enterprise/windows-365-boot-guide):
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select > **Devices** > **Configuration profiles**.
-2. Search for the Device configuration profile that contains "Windows 365 Boot Device Configuration Policy" in its name.
+2. Search for the device configuration profile that contains "Windows 365 Boot Device Configuration Policy" in its name.
 3. Make sure that the "Windows Logon" configuration is configured with the **Override Shell Program** setting set to **Apply Lightweight shell**.
 4. Select **Device assignment status** and make sure that the configuration policy was successfully applied to it.
 5. If the check-in status isn't successful, see [Troubleshooting policies and profiles in Microsoft Intune](/troubleshoot/mem/intune/device-configuration/troubleshoot-policies-in-microsoft-intune).
@@ -257,7 +257,7 @@ If the user needs to reset their password, it isn't possible on their Windows 36
 
 ### Solution
 
-Users should reset their password on another non-windows 365 Boot configured device.
+Users should reset their password on another non-Windows 365 Boot configured device.
 
 ## Error message: The Provider app couldn't be found
 
@@ -281,6 +281,7 @@ The end user can use one of these options:
 - Wait for the app to install on the physical device.
 - Contact the user's IT administrators and ask them to push the app to the device.
 - If you suspect the app is installed in the user scope, use the following steps:
+
     1. Contact the user's IT administrators to remove the device from Boot mode by removing it from the device group.
     2. Uninstall the provider app installed in the user scope.
     3. Put the device back into the Boot mode device group (the system scope apps should be delivered by Microsoft Intune if set up through a guided scenario).
@@ -295,6 +296,6 @@ If a user has a local setting screen (like Local Bluetooth settings) open on the
 
 If the user must share a local settings screen, use a different tool like Quick Assist.
 
-## More information
+## Next steps
 
-[Troubleshoot Windows 365 Boot](/windows-365/enterprise/troubleshoot-windows-365-boot).
+For more information, see [Troubleshoot Windows 365 Boot](/windows-365/enterprise/troubleshoot-windows-365-boot).

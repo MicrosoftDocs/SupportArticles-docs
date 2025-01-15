@@ -38,10 +38,10 @@ This article provides troubleshooting steps for the "Setup failed" error or the 
 
 ## Make sure the MDM authority configuration is set up correctly
 
-Ensure that the MDM authority configuration is set up correctly. Depending on whether you plan to use Microsoft Intune to manage the Cloud PCs, follow the appropriate path:
+Ensure that the mobile device management (MDM) authority configuration is set up correctly. Depending on whether you plan to use Microsoft Intune to manage the Cloud PCs, follow the appropriate path:
 
-- If you use or plan to use Microsoft Intune for your Cloud PCs, follow the steps in [Path A: Make sure the Mobility (MDM and MAM) settings are correctly configured](#path-a-use-microsoft-intune-to-manage-your-cloud-pcs).
-- If you don't plan to use Microsoft Intune to manage your Cloud PCs, follow the steps in [Path B: Turn off automatic MDM enrollment](#path-b-turn-off-automatic-mdm-enrollment-and-intune-enrollment-in-organization-settings).
+- If you use or plan to use Microsoft Intune for your Cloud PCs, follow the steps in [Path A: Use Microsoft Intune to manage your Cloud PCs](#path-a-use-microsoft-intune-to-manage-your-cloud-pcs).
+- If you don't plan to use Microsoft Intune to manage your Cloud PCs, follow the steps in [Path B: Turn off automatic MDM enrollment and Intune enrollment in Organization Settings](#path-b-turn-off-automatic-mdm-enrollment-and-intune-enrollment-in-organization-settings).
 
 ### Path A: Use Microsoft Intune to manage your Cloud PCs
 

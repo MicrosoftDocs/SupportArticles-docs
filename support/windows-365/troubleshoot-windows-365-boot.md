@@ -66,16 +66,16 @@ Confirm that the physical device is correctly configured to run Windows 365 Boot
 
 ## Physical device versions of Windows 365, Azure Virtual Desktop Apps, and Windows
 
-Windows 365 Boot requires that the physical device runs specific versions of both Windows 365 and Azure Virtual Desktop (HostApp) apps. To check the installed versions, run the following PowerShell command as an administrator:
+Windows 365 Boot requires that the physical device runs specific versions of both Windows 365 and Azure Virtual Desktop (HostApp) apps. To check the installed versions, run the following PowerShell cmdlet as an administrator:
 
 ```azurepowershell
 Get-AppxPackage -AllUsers -name *MicrosoftCorporationII*
 ```
 
-This command shows all the Microsoft-maintained apps (like QuickAssist and Microsoft Family) on the physical device. To make sure Windows 365 Boot works correctly, confirm the following versions:
+This cmdlet shows all the Microsoft-maintained apps (like QuickAssist and Microsoft Family) on the physical device. To make sure Windows 365 Boot works correctly, confirm the following versions:
 
 - Windows App version 2.0.285 or later.
-- Azure Virtual Desktop (HostApp) app version 1.2.4159. or later.
+- Azure Virtual Desktop (HostApp) app version 1.2.4159 or later.
 - The latest version of Windows 11.
 
 ## Remove and re-add Windows 365 Boot to the physical device
@@ -85,7 +85,7 @@ If you can't identify the source of the issue, try removing and re-adding Window
 ### Remove Windows 365 Boot from the physical device
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then select **Groups** > **All groups**.
-2. Select the group for your Windows 365 boot devices, and then select **Members**.
+2. Select the group for your Windows 365 Boot devices, and then select **Members**.
 3. Select the physical device, and then select **Remove** > **Yes**.
 4. Select **Devices** > **All devices**, select the physical device, and then select **Overview** > **Sync**.
 
@@ -94,7 +94,7 @@ It takes about 10 minutes for the removal to finish. After that, the physical de
 ### Add Windows 365 Boot back to the physical device
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then select **Groups** > **All groups**.
-2. Select the group for your Windows 365 boot devices, and then select **Members**.
+2. Select the group for your Windows 365 Boot devices, and then select **Members**.
 3. Select **Add members** and select the physical device.
 4. Wait about 10 minutes.
 5. Select **Devices** > **All devices**, select the physical device, and then select **Overview** > **Sync**.
@@ -109,8 +109,8 @@ If you still can't troubleshoot the problem, contact Microsoft support. To help 
 
 Collect Windows 365 and Microsoft Entra ID log information from the following locations:
 
-- **C:\Users\\\<username>\AppData\Local\Temp\DiagOutputDir\Windows365\Logs**  
-- **C:\Users\\\<username>\AppData\Local\Temp\DiagOutputDir\RdClientAutoTrace**
+- **C:\\Users\\\{username}\\AppData\\Local\\Temp\\DiagOutputDir\\Windows365\\Logs**  
+- **C:\\Users\\\{username}\\AppData\\Local\\Temp\\DiagOutputDir\\RdClientAutoTrace**
 
 Put these logs in a zip file and provide it to the Microsoft support team for further investigation.
 
@@ -132,6 +132,6 @@ You can find the Correlation ID in the interstitial screen displayed during a fi
 
 :::image type="content" source="media/troubleshoot-windows-365-boot/connection-issue.png" alt-text="Screenshot that shows the interstitial screen that contains the Correlation ID." border="false":::
 
-## More information
+## Next steps
 
-[Learn about Windows 365 Boot](/windows-365/enterprise/windows-365-boot-overview).
+For more information about Windows 365 Boot, see [What is Windows 365 Boot?](/windows-365/enterprise/windows-365-boot-overview).
