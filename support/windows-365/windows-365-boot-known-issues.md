@@ -31,7 +31,7 @@ ms.collection:
 
 # Windows 365 Boot known issues
 
-This article provides Solution for the recent known issues with [Windows 365 Boot](/windows-365/enterprise/windows-365-boot-overview).
+This article provides solutions to the recent known issues with [Windows 365 Boot](/windows-365/enterprise/windows-365-boot-overview).
 
 ## Wi-Fi connectivity
 
