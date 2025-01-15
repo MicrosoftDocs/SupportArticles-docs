@@ -1,9 +1,9 @@
 ---
 title: Troubleshoot Always On Availability Groups failover
 description: This article provides troubleshooting steps to help you determine why your availability group failed over. 
-ms.date: 01/13/2025
+ms.date: 01/15/2025
 ms.custom: sap:Always On Availability Groups (AG)
-ms.reviewer: cmathews, v-jayaramanp
+ms.reviewer: cmathews, v-jayaramanp, jopilov
 ms.author: cmathews
 ---
 
@@ -96,7 +96,7 @@ You can use a tool to find all the health events in the cluster log so that you 
 
 :::image type="content" source="media/troubleshooting-availability-group-failover/locate-health-events-in-notepad-small.png" alt-text="Screenshot that shows tool to locate all the health events in the cluster log." lightbox="media/troubleshooting-availability-group-failover/locate-health-events-in-notepad-big.png":::
 
-## Identify and resolve the type of health issue that triggered the failover
+## Identify and resolve the health issue that triggered the failover
 
 To identify the health issues in the cluster log of the primary replica, compare them to the issues described in the following sections. Common reasons for AG failover include:
 
