@@ -2151,8 +2151,6 @@ items:
       href: ./remote/honors-registry-size-limit-functionality-key-set.md
     - name: Remote Control prompts for user permission
       href: ./remote/remote-control-prompts-user-permission.md
-    - name: Remote Desktop can't connect to the remote computer
-      href: ./remote/remote-desktop-cannot-connect-remote-computer.md  
     - name: Remote Desktop Connection 6.1 client update
       href: ./remote/rdc-6dot1-client-update-terminal-services.md
     - name: Remote desktop connection is stuck
@@ -2253,7 +2251,7 @@ items:
       href: ./remote/troubleshooting-access-denied-and-user-not-authorized-rds-issues.md
     - name: '"Your session will be disconnected in 60 minutes" message when you connect to RDS'
       href: ./remote/your-session-will-be-disconnected-in-60-minutes.md
-  - name: Remote desktop sessions
+  - name: Session connectivity
     items:
     - name: 'Troubleshooting guidance: RDS session connectivity'
       href: ./remote/troubleshoot-rds-session-connectivity-guidance.md
@@ -2293,6 +2291,8 @@ items:
       href: ./remote/query-user-command-cannot-query-remotely.md
     - name: RDS client can't connect to RD Session Host server
       href: ./remote/rds-client-not-connect-to-rd-session-host-server.md
+    - name: Remote Desktop can't connect to the remote computer
+      href: ./remote/remote-desktop-cannot-connect-remote-computer.md
     - name: Remote Desktop client disconnects and can't reconnect to the same session
       href: ./remote/rdp-client-disconnects-cannot-reconnect-same-session.md
     - name: Remote Desktop Connection 6.0 prompts for credentials

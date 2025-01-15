@@ -1,7 +1,7 @@
 ---
 title: Remote Desktop Can't Connect to the Remote Computer
 description: Helps resolve the Remote Desktop can't connect to the remote computer related errors.
-ms.date: 01/14/2025
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -35,7 +35,7 @@ First, check if the machine is running. If it's running and has console access (
 Contact Microsoft Support for further assistance in the following scenarios:
 
 - You can't put the machine in a running state.
-- The machine is in a running state, but the web console access to the machine fails.
+- The machine is in a running state, but the console access to the machine fails.
 
 ## Verify if the error is related to the RDP-TCP listener
 
