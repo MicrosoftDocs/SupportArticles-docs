@@ -36,55 +36,54 @@ The following items are known issues for Windows 365 Enterprise.
 
 When you use Conditional Access, a user who signs in to a Cloud PC for the first time might trigger an impossible travel location alert.
 
-**Troubleshooting steps**: [Follow these steps to investigate risk](/entra/id-protection/howto-identity-protection-investigate-risk) to verify that the activity matches the expected behavior for the user, based on their physical location and the location of the Cloud PC.
+**Solution**: [Follow these steps to investigate risk](/entra/id-protection/howto-identity-protection-investigate-risk) and verify that the activity matches the expected behavior of the user, based on their physical location and the location of the Cloud PC.
 
 ## Watermarking support in Windows 365
 
 Watermarking support is configured on session hosts and enforced by the Remote Desktop client. The settings for Watermarking support can be configured via Group Policy (GPO) or the Intune Settings Catalog. The default for the QR code embedded content setting doesn't allow administrators to look up device information from leaked images for Cloud PCs.  
 
-**Troubleshooting steps**: Ensure that the QR code embedded content setting is configured to **Device ID** either in the GPO or in the Intune Settings Catalog for the Intune Configuration profile used to configure Watermarking support.
+**Solution**: Ensure that the QR code embedded content setting is configured to **Device ID** either in the GPO or the Intune Settings Catalog for the Intune Configuration profile used to configure Watermarking support.
 
 For more information, see [Administrative template for Azure Virtual Desktop](/azure/virtual-desktop/administrative-template?tabs=intune#configure-the-administrative-template).
 
-[!INCLUDE [Missing start menu and taskbar when using iPad and the Remote Desktop app to access a Cloud PC](includes/known-issues.md)]
+[!INCLUDE [Missing Start menu and taskbar when using iPad and the Remote Desktop app to access a Cloud PC](includes/known-issues.md)]
 
-## In-place Windows upgrade may change computer name
+## In-place Windows upgrade may change the computer name
 
 Upgrading an existing Cloud PC between release versions of Windows 10 to Windows 11 may cause the computer name to be changed to a name with a prefix of "pps" while leaving the Intune device name unchanged.
 
-**Troubleshooting steps**: Find and manage the Cloud PC in Microsoft Intune by using the unchanged Intune device name, either through the **Devices > All devices** list or the **Devices > Windows 365 > All Cloud PCs** list.
+**Solution**: Find and manage the Cloud PC in Microsoft Intune by using the unchanged Intune device name, either through the **Devices > All devices** list or the **Devices > Windows 365 > All Cloud PCs** list.
 
 ## Windows 365 provisioning fails<!--38483005-->
 
-Windows 365 provisioning failures may occur because both:
+Windows 365 provisioning failures may occur if both of the following conditions are met:
 
-- the Desired State Configuration (DSC) extension isn't signed and
-- the PowerShell Execution policy is set to **AllSigned** in the Group Policy Object (GPO)
+- The Desired State Configuration (DSC) extension isn't signed.
+- The PowerShell Execution policy is set to **AllSigned** in the GPO.
 
-**Troubleshooting steps**:
+**Solution**:
 
-1. Did the Azure network connection (ANC) fail with the following error: `"An internal error occurred. The virtual machine deployment timed out."`?
-2. If yes, review the related GPO. Is PowerShell Execution set to **AllSigned**?
-3. If it is, either remove the GPO or reset the PowerShell Execution to Unrestricted.
-4. Retry the ANC health check. If the check succeeds, retry provisioning.
+1. Check if the Azure network connection (ANC) fails with the error "An internal error occurred. The virtual machine deployment timed out." If yes, review the related GPO. 
+2. Check if the PowerShell Execution policy is set to **AllSigned**. If it is, either remove the GPO or reset the PowerShell Execution policy to **Unrestricted**.
+3. Retry the ANC health check. If the check succeeds, retry provisioning.
 
-## Cloud PC reports as not compliant for compliance policy
+## Cloud PC reports as not compliant with compliance policy
 
 The following device compliance settings report as **Not applicable** when being evaluated for a Cloud PC:
 
 - **Trusted Platform Module (TPM)**
-- **Require encryption of data storage on device.**
+- **Require encryption of data storage on device**
 
 The following device compliance settings may report as **Not Compliant** when being evaluated for a Cloud PC:
 
 - **Require BitLocker**
-- **Require Secure Boot to be enabled on the device.** Cloud PC support for [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) functionality is now available to all customers.
+- **Require Secure Boot to be enabled on the device**. Cloud PC support for the [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) functionality is now available to all customers.
 
-**Troubleshooting steps to enable secure boot on the Cloud PC**:
+**Solution**:
 
-1. [Reprovision](/windows-365/enterprise/reprovision-cloud-pc) the specific Cloud PC.
+To enable secure boot on the Cloud PC, see [Reprovision](/windows-365/enterprise/reprovision-cloud-pc) the specific Cloud PC.
 
-**Troubleshooting steps to remove not compliant settings**:
+To remove not compliant settings:
 
 1. [Create a filter for all Cloud PCs](/windows-365/enterprise/create-filter#create-a-filter-for-all-cloud-pcs).
 2. For any existing device compliance policies that both evaluate to a Cloud PC and contain either of the **Not Compliant** settings, use this new filter to exclude Cloud PCs from the policy assignment.
@@ -94,7 +93,7 @@ The following device compliance settings may report as **Not Compliant** when be
 
 When enabling single sign-on, a prompt appears to authenticate to Microsoft Entra ID and allow the Remote Desktop connection when launching a connection to a new Cloud PC. Microsoft Entra remembers up to 15 devices for 30 days before prompting again. If you see this dialog, select **Yes** to connect.
 
-To prevent this dialog from being shown, you can create a preconsented device group. Follow the instructions to [configure a target device group](/azure/virtual-desktop/configure-single-sign-on#configure-the-target-device-groups) to get started.
+To prevent this dialog from appearing, you can create a preconsented device group. Follow the instructions to [configure a target device group](/azure/virtual-desktop/configure-single-sign-on#configure-the-target-device-groups) to get started.
 
 <a name='single-sign-on-user-connections-are-being-denied-through-azure-ad-conditional-access---42317382--'></a>
 
@@ -102,14 +101,14 @@ To prevent this dialog from being shown, you can create a preconsented device gr
 
 **Possible cause**: To sign in through single sign-on, the remote desktop client requests an access token to the **Microsoft Remote Desktop** app in Microsoft Entra, which may be the cause of the failed connection.
 
-**Troubleshooting**: To [troubleshoot sign-in problems](/azure/active-directory/conditional-access/troubleshoot-conditional-access), follow the steps.
+**Troubleshooting steps**: Follow the steps in [troubleshoot sign-in problems](/azure/active-directory/conditional-access/troubleshoot-conditional-access).
 
 ## Single sign-on users are immediately disconnected when the Cloud PC locks
 
 When single sign-on isn't used, users can see the Cloud PC lock screen and enter credentials to unlock their Windows session. However, when single sign-on is used, the Cloud PC fully disconnects the session so that:
 
-1. Users can use passwordless authentication to unlock their Cloud PC.
-2. Conditional Access policies and multifactor authentication can be enforced when unlocking the Cloud PC.
+- Users can use passwordless authentication to unlock their Cloud PC.
+- Conditional Access policies and multifactor authentication can be enforced when unlocking the Cloud PC.
 
 <a name='single-sign-on-users-arent-asked-to-reauthenticate-to-azure-ad-when-connecting-from-an-unmanaged-device---35593334--'></a>
 
@@ -117,20 +116,20 @@ When single sign-on isn't used, users can see the Cloud PC lock screen and enter
 
 When you use single sign-on, all authentication behavior (including supported credential types and sign-in frequency) is driven through Microsoft Entra ID.
 
-**Troubleshooting**: To enforce periodic reauthentication through Microsoft Entra ID, create a Conditional Access policy using the [sign-in frequency control](/windows-365/enterprise/set-conditional-access-policies#configure-sign-in-frequency).
+**Solution**: To enforce periodic reauthentication through Microsoft Entra ID, create a Conditional Access policy using the [sign-in frequency control](/windows-365/enterprise/set-conditional-access-policies#configure-sign-in-frequency).
 
-## I don't see the Cloud PC reports on the Intune admin center Devices > Overview page
+## I don't see the Cloud PC reports on the Devices > Overview page in the Intune admin center
 
-If you turned on the **Use Devices preview** setting in the Intune admin center, the **Cloud PC performance (preview)** tab, **Cloud PCs with connection quality issues** report, and **Cloud PCs with low utilization** report aren't on the **Overview** page.
+If you turn on the **Use Devices preview** setting in the Intune admin center, the **Cloud PC performance (preview)** tab, **Cloud PCs with connection quality issues** report, and **Cloud PCs with low utilization** report aren't on the **Overview** page.
 
-**Troubleshooting steps**: Turn off the **Use Devices preview** toggle in the upper right corner of the **Devices** > **Overview** page.
+**Solution**: Turn off the **Use Devices preview** toggle in the upper-right corner of the **Devices** > **Overview** page.
 
 ## Cloud PC is stuck in a restart loop after a restore or resize action
 
 **Possible cause**: This issue might occur for Cloud PCs provisioned before July 2022 that use either:
 
-- Microsoft Attack Surface Reduction rules (for example, Manage attack surface reduction settings with endpoint security policies in Microsoft Intune | Microsoft Learn), or
-- Third party solutions that block the install language script execution during the post-provisioning process.  
+- Microsoft Attack Surface Reduction rules (for example, [Manage attack surface reduction settings with endpoint security policies in Microsoft Intune](/mem/intune/protect/endpoint-security-asr-policy)), or
+- Third-party solutions that block the install language script execution during the post-provisioning process.  
 
 Cloud PCs provisioned after July 2022 don't encounter this issue.
 
@@ -138,84 +137,84 @@ Cloud PCs provisioned after July 2022 don't encounter this issue.
 
 1. Search the Windows Event log. If the system shows the following reboot event (1074), continue to step 2.
 
-  ```
-  The process C:\WINDOWS\system32\wbem\wmiprvse.exe (<CPC Name>) has initiated the restart of computer <CPC Name> on behalf of user NT AUTHORITY\SYSTEM for the following reason: Application: Maintenance (Planned)
-  Reason Code: 0x80040001
-  Shutdown Type: restart
-  Comment: DSC is restarting the computer.
-  ```
+    ```output
+    The process C:\WINDOWS\system32\wbem\wmiprvse.exe (<CPC Name>) has initiated the restart of computer <CPC Name> on behalf of user NT AUTHORITY\SYSTEM for the following reason: Application: Maintenance (Planned)
+    Reason Code: 0x80040001
+    Shutdown Type: restart
+    Comment: DSC is restarting the computer.
+    ```
 
 2. Run `Get-DscConfigurationStatus` in an elevated command window. If the result shows a reboot pending for a job, continue to step 3.
 3. Run `Get-DscConfiguration` in an elevated command window. If the results show the DSC that installs the language, continue to the **Resolution** section.
 
-**Resolution**: To stop the restart loop, try either of these options:
+**Solution**: To stop the restart loop, try either of these options:
 
-- Remove the Azure Site Recovery policies, or switch policies to Audit mode, and then apply the new policies to the Cloud PC.
+- Remove the Azure Site Recovery policies or switch the policies to Audit mode, and then apply the new policies to the Cloud PC.
 - In an elevated command window, run the following command to reboot the job:
 
     `Remove-DSCConfiguration -Stage Pending,Current,Previous -Verbose`
 
 ## Cloud PC connection issues for GCC High government customers<!--47633105-->
 
-Some GCC High government customers whose resources are deployed to `microsoft.us`` environments may encounter issues connecting to their Cloud PC using web clients or the Safari browser.
+Some GCC High government customers whose resources are deployed to `microsoft.us` environments may encounter issues connecting to their Cloud PC using web clients or the Safari browser.
 
 **Possible cause**: The issue occurs when the web client or the Safari browser blocks third-party cookies. Third-party cookies are cookies set by a domain other than the one you're visiting.  
 
-For GCC High customers with resources deployed to `microsoft.us` environments, the `microsoft.us` cookies are considered third-party cookies by the web client or the Safari browser. This consideration is because the web client/Safari browser uses the Cloud PC's domain name, which is different from `microsoft.us`, to determine the first-party domain. If the web client/Safari browser blocks third-party cookies, it prevents the `microsoft.us` cookies from:
+For GCC High customers with resources deployed to `microsoft.us` environments, the `microsoft.us` cookies are considered third-party cookies by the web client or the Safari browser. This consideration is because the web client or Safari browser uses the Cloud PC's domain name, which is different from `microsoft.us`, to determine the first-party domain. If the web client or Safari browser blocks third-party cookies, it prevents the `microsoft.us` cookies from:
 
-- being stored.
-- used for authentication and authorization.
+- Being stored.
+- Used for authentication and authorization.
 
 As a result, you can't connect to your Cloud PC session.
 
-**Troubleshooting steps**: Allow third-party cookies from `microsoft.us` in your Web client settings, Safari browser settings, or Group Policy.
+**Solution**: Allow third-party cookies from `microsoft.us` in your Web client settings, Safari browser settings, or Group Policy.
 
-This change lets the web client/Safari browser store and use the `microsoft.us` cookies for connecting to your Cloud PC session.  
+This change lets the web client or Safari browser store and use the `microsoft.us` cookies to connect to your Cloud PC session.  
 
-## Windows Security reports Memory Integrity is off. Your device may be vulnerable.<!--48643259-->
+## Windows Security reports "Memory Integrity is off. Your device may be vulnerable." <!--48643259-->
 
-Windows Security reports *Memory Integrity is off. Your device may be vulnerable.*
+Windows Security reports "Memory Integrity is off. Your device may be vulnerable."
 
 In the Cloud PC's Windows Systems Information, you might also see that the Virtualization-based security (VBS) row shows **Enabled but not running**.
 
-This issue can be caused when nested virtualization is turned *ON*. When nested virtualization is turned on it requires a running nested hypervisor, which inhibits Direct Memory Access Protections. DMA protections are required when running VBS.
+This issue can be caused when nested virtualization is turned on. When nested virtualization is turned on, it requires a running nested hypervisor, which inhibits Direct Memory Access (DMA) protections. DMA protections are required when running VBS.
 
-**Troubleshooting steps**:
+**Solution**:
 
 Make sure that:
 
-- Nested virtualization turned *OFF* for the Cloud PC.
+- Nested virtualization was turned off for the Cloud PC.
 - Policies have VBS enabled with DMA protection.
 
 Another option is to not require DMA for VBS because they're incompatible with each other.
 
-## Teams isn't enforcing screen capture protection<!-- 49423094 -->
+## Microsoft Teams isn't enforcing screen capture protection<!-- 49423094 -->
 
-When screen capture protection is enabled, Teams on Windows 365 Cloud PCs isn't enforcing screen capture protection.
+When screen capture protection is enabled, Microsoft Teams on Windows 365 Cloud PCs isn't enforcing screen capture protection.
 
 **Troubleshooting steps**:
 
 - Confirm that the WebRTC version is up-to-date.
-- Confirm that the screen capture protection policy is configured correctly to have client and server selected:
+- Confirm that the screen capture protection policy is configured correctly to have the client and server selected:
 
-  1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration** > choose the policy.
-  2. Under  **Configuration settings**, make sure the following is chosen: **Windows Components** > **Remote Desktop Services** > **Remote Desktop Session Host** > **Azure Virtual Desktop**:
-      - **Enable screen capture protection** = Enable
-      - **Screen Capture Protection Options** = Block screen capture on client and server
+  1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration**, and then choose the policy.
+  2. Under  **Configuration settings**, select **Windows Components** > **Remote Desktop Services** > **Remote Desktop Session Host** > **Azure Virtual Desktop**, and then make sure the following is set:
+      - **Enable screen capture protection** = **Enable**
+      - **Screen Capture Protection Options** = **Block screen capture on client and server**
 
 ## Windows 365 scope tags and nested groups
 
 Windows 365 doesn't support nested security groups. If you apply a scope tag to the top of a nested security group, Cloud PCs in inner nested groups aren't assigned scope tags.
 
-**Troubleshooting steps**:
+**Solution**:
 
 Apply the scope tag individually to each group in the nested security group.
 
-## Windows 365 doesn't support editing of scope tags for individual Cloud PCs
+## Windows 365 doesn't support editing scope tags for individual Cloud PCs
 
-Windows 365 user interface and Graph API don't support editing of scope tags for individual Cloud PCs.
+The Windows 365 user interface and Graph API don't support the editing of scope tags for individual Cloud PCs.
 
-**Troubleshooting steps**:
+**Solution**:
 
 Edit scope tags for individual Cloud PCs on Intune's **All Devices** blade to sync the scope tag associations to the Windows 365 service.
 
@@ -223,15 +222,15 @@ Edit scope tags for individual Cloud PCs on Intune's **All Devices** blade to sy
 
 Scope tags applied to custom images can't be edited or directly added by top-level admins.
 
-**Troubleshooting steps**:
+**Solution**:
 
 When scoped admins create custom images, those custom images are tagged with the same scope tags that are associated with the scoped admin.  
 
 For example, if an admin scoped with the scope tag "Scope Tag A" creates a custom image, the created custom image is automatically tagged with "Scope Tag A."  
 
-## WebRTC Redirector Service missing from latest Windows 365 Cloud PC gallery images
+## WebRTC Redirector Service is missing from the latest Windows 365 Cloud PC gallery images
 
-The May 21, 2024 updates for Cloud PC gallery images are missing the WebRTC Redirector Service. Without this component, Teams media redirection doesn't work.
+The May 21, 2024 updates for Cloud PC gallery images lack the WebRTC Redirector Service. Without this component, Teams media redirection doesn't work.
 
 This applies to the following gallery images:
 
@@ -240,13 +239,13 @@ This applies to the following gallery images:
 
 **Troubleshooting steps**
 
-For newly provisioned Cloud PCs, verify WebRTC is available. If it's not, you can use either of the following options:
+For newly provisioned Cloud PCs, verify that WebRTC is available. If it's not, you can use either of the following options:
 
-- To add the WebRTC Redirector Service app to the list of apps to install by default onto Cloud PCs, follow the steps: [Add Microsoft 365 Apps to Windows 10/11 devices with Microsoft Intune](/mem/intune/apps/apps-add-office365).
+- To add the WebRTC Redirector Service app to the list of apps to install by default onto Cloud PCs, follow the steps in [Add Microsoft 365 Apps to Windows 10/11 devices with Microsoft Intune](/mem/intune/apps/apps-add-office365).
 
-- To add the WebRTC Redirector Service app to an individual Cloud PC, follow the steps: [install the Remote Desktop WebRTC Redirector Service](/azure/virtual-desktop/teams-on-avd#install-the-remote-desktop-webrtc-redirector-service). To get the most up-to-date installer, use this link: [https://aka.ms/msrdcwebrtcsvc/msi]( https://aka.ms/msrdcwebrtcsvc/msi).
+- To add the WebRTC Redirector Service app to an individual Cloud PC, follow the steps in [Install the Remote Desktop WebRTC Redirector Service](/azure/virtual-desktop/teams-on-avd#install-the-remote-desktop-webrtc-redirector-service). To get the most up-to-date installer, use this link: [https://aka.ms/msrdcwebrtcsvc/msi]( https://aka.ms/msrdcwebrtcsvc/msi).
 
-## Windows 365 Frontline
+## Windows 365 Frontline issues
 
 The following are issues for Windows 365 Frontline:
 
@@ -254,15 +253,15 @@ The following are issues for Windows 365 Frontline:
 
 For Frontline in shared mode Cloud PCs, the reprovision action won't begin unless a change has been made to the provisioning policy image.
 
-**Troubleshooting steps**
+**Workaround**
 
 You can reprovision all devices by removing the assignment group, saving the changes, and then adding the group assignment back to the policy. This workaround method ends the sessions for all active users.
 
 ### Frontline shared card displays in Windows App during Cloud PC provisioning
 
-When you provision the Frontline Cloud PC in shared mode for the first time, the Frontline shared card displays in Windows App with status **Ready to Connect** during Cloud PC are provisioning. Users can select to connect but receive a **Your connection failed** error.
+When you provision the Frontline Cloud PC in shared mode for the first time, the Frontline shared card displays in the Windows App with the status **Ready to Connect** during Cloud PC provisioning. Users can select to connect but receive a "Your connection failed" error.
 
-**Troubleshooting steps**
+**Solution**
 
 Users must close all dialogs before connecting to the Cloud PC.
 
@@ -272,7 +271,7 @@ When a user performs the **Reset** action on a Frontline Cloud PC in shared mode
 
 ### Users can select Connect while they're connected to a Frontline Cloud PC in shared mode
 
-When a user is connected to a Frontline Cloud PC, the connect button in Windows App remains blue and clickable. If the user selects connect, a new window opens and connects. The previous window remains open with a new connection notification dialog.
+When a user is connected to a Frontline Cloud PC, the connect button in the Windows App remains blue and clickable. If the user selects connect, a new window opens and connects. The previous window remains open with a new connection notification dialog.
 
 ## Next steps
 
