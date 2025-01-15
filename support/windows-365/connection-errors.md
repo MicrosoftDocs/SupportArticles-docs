@@ -51,7 +51,7 @@ The following errors can occur when connecting to a Cloud PC.
 2. Create a device configuration policy [using the settings catalog](/mem/intune/configuration/settings-catalog).
 3. On the **Configuration settings** page, search for and select **Network Security Allow PKU2U Authentication Requests** > **Allow**.
 
-    :::image type="content" source="/media/connection-errors/allow-pku2u.png " alt-text="Screenshot showing the Network Security Allow PKU2U Authentication Requests option set to Allow."::: 
+    :::image type="content" source="/media/connection-errors/allow-pku2u.png" alt-text="Screenshot showing the Network Security Allow PKU2U Authentication Requests option set to Allow."::: 
 
 5. On the **Assignments** page, select **Add all devices** > **Edit filter** > **Include filtered devices in assignment**, and then select the filter you created for all Cloud PCs.
 6. On the **Assignments** page, also select a Microsoft Entra group containing the user or the user's physical device.
