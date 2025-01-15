@@ -1,20 +1,20 @@
 ---
-title: Power Automate for desktop installation logs
+title: Power Automate for desktop logs
 description: Introduces the locations that contain Power Automate for desktop installation logs.
 ms.reviewer: quseleba, guco
 ms.date: 09/13/2024
 ms.custom: sap:Desktop flows\Working with Power Automate for desktop
 ---
-# Power Automate for desktop installation logs
+# Power Automate for desktop logs
 
-If your Power Automate for desktop installation fails, you can use the logs described in this article to diagnose and resolve issues. If you need to contact [Microsoft Support](https://www.microsoft.com/power-platform/products/power-automate/support) for assistance with installation issues, collect the following logs in a .zip file and include them in the support request to expedite the investigation.
+During the course of troubleshooting a problem with Power Automate for desktop with support, you may need to gather logs on the machine. These can be for a failed installation, for a problem running your desktop flows, or for a problem using Power Automate or the machine runtime application.
 
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 4555577
 
 ## Installer logs
 
-These logs can be found in the _%temp%_ folder of the user who performed the installation. You can find them by typing _%temp%_ in the address bar of File Explorer. The files of interest are:
+For a failed installation, please gather installer logs. These logs can be found in the _%temp%_ folder of the user who performed the installation. You can find them by typing _%temp%_ in the address bar of File Explorer. The files of interest are:
 
 - _Power Automate for desktop\_*.log_
 - _Power Automate for desktop\_\*\_\*\_MicrosoftFlowRPA.log_
@@ -29,12 +29,14 @@ If your installation encounters an error and displays the message "There's a pro
 
 :::image type="content" source="media/how-to-get-power-automate-desktop-installer-logs/installation-log-files.png" alt-text="Screenshot of the page that contains the installation log files link that you can use to export the installer logs.":::
 
-## Program data logs
+## Runtime or issues using the applications
 
-These are logs of the components installed on your machine. You can find them by typing the path _%programdata%\Microsoft\Power Automate\Logs_ in the address bar of File Explorer.
+Logs used to diagnose problems for Power Automate or the Machine Runtime application can be found in _%programdata%\Microsoft\Power Automate\Logs_.
 
 > [!NOTE]
 > You need administrator privileges to read or copy these files to another folder. After copying them to a different folder, non-administrator users can open them.
+
+If you have installed the machine runtime application, you can [use it to export logs automatically](https://learn.microsoft.com/en-us/power-automate/desktop-flows/troubleshoot#collect-machine-logs).
 
 ## Event Viewer logs
 
@@ -48,7 +50,3 @@ Follow these steps to view and save the logs:
 4. To save the filtered log file, select **Save Filtered Log File As** and save it as an event file.
 
 :::image type="content" source="media/how-to-get-power-automate-desktop-installer-logs/power-automate-event-viewer-logs.png" alt-text="Screenshot of an example error logged in the Event Viewer.":::
-
-## More information
-
-[Troubleshoot installation issues in Power Automate for desktop](power-automate-desktop-installation-issues.md)
