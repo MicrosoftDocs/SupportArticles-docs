@@ -56,6 +56,9 @@ _Original KB number:_ &nbsp; 307288
   1. Change the startup account of both the MSSQLSERVER and SQLServerAgent to use the local system account.
   1. Restart the server.
 
+    > [!NOTE]
+    > On a standalone computer, the NetLogon Service should be set for **manual** startup.
+
 - To fix the **Issue 3**, use the following workarounds:
 
   - Configure the SQL Server startup to **delayed start** for particular Windows servers, other Windows services such as NetLogon complete first and SQL Server starts without problems.
@@ -81,6 +84,3 @@ _Original KB number:_ &nbsp; 307288
   ```
   The first and third commands display the dependencies before and after the change. 
 
-## More information
-
-On a standalone computer, the NetLogon Service should be set for **manual** startup.
