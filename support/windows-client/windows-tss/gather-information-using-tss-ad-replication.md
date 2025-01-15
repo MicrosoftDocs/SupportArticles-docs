@@ -31,7 +31,7 @@ Refer to [Introduction to TroubleShootingScript toolset (TSS)](introduction-to-t
     ```
 
     ```powershell
-    .\TSS.ps1 -Scenario ADS_General -noProcmon -noPSR -noVideo
+    .\TSS.ps1 -Scenario ADS_Replication -noProcmon -noPSR -noVideo
     ```
 
 4. Enter *A* for "Yes to All" for the execution policy change.
@@ -39,4 +39,4 @@ Refer to [Introduction to TroubleShootingScript toolset (TSS)](introduction-to-t
 > [!NOTE]
 >
 > - The traces are stored in a compressed file in the *C:\\MS_DATA* folder. After a support case is created, this file can be uploaded to the secure workspace for analysis.
-> - If you've downloaded this tool previously, we recommend downloading the latest version. It doesn't automatically update when running `-Scenario ADS_General -noProcmon -noPSR -noVideo`.
+> - If you've downloaded this tool previously, we recommend downloading the latest version. It doesn't automatically update when running `-Scenario ADS_Replication -noProcmon -noPSR -noVideo`.
