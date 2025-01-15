@@ -100,7 +100,7 @@
         href: app-integration/reply-url-redirected-to-localhost.md
       - name: Nonce is null error in ASP.NET MVC with OpenID Connect
         href: app-integration/troubleshoot-validation-context-nonce-null-mvc.md
-  - name: Troubleshoot App Registrations
+  - name: Troubleshoot app registrations
     items:
       - name: Troubleshoot consent issues
         href: app-integration/troubleshoot-consent-issues.md
