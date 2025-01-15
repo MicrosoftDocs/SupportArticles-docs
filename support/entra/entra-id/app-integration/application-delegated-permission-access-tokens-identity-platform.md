@@ -57,7 +57,7 @@ For delegated permission tokens, the permissions are in the `scp` claim:
 
 ```json
 "scp": "Directory.Read.All User.Read",
-"sub": "<sub>"
+"sub": "<sub>",
 ```
 
 > [!NOTE]
