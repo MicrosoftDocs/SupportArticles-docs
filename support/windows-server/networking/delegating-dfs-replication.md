@@ -8,11 +8,11 @@ ms.topic: troubleshooting
 ms.reviewer: kaushika, mikelan
 ms.custom: sap:Network Connectivity and File Sharing\File Replication Technologies (FRS and DFSR), csstroubleshoot
 ---
-# Delegate DFS replication in Windows Server 2003 R2
+# Delegate DFS replication in Windows Server 
 
 This article describes how to directly modify the permissions on the configuration objects for each replication group.
 
-_Applies to:_ &nbsp; Windows Server 2003 R2  
+_Applies to:_ &nbsp; Windows Server 2003 R2, Windows Server 2008\2008R2, Windows Server 2012\2012R2, Windows Server 2016, Windows Server 2019, Windows Server 2022  
 _Original KB number:_ &nbsp; 911604
 
 ## Introduction
