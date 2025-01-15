@@ -1,6 +1,6 @@
 ---
 title: Microsoft Entra managed identity support for backup and restore database operations and for EKM with AKV in SQL Server on Azure VMs
-description: Adds the support of Microsoft Entra managed identity for backup and restore database operations and for EKM with AKV in SQL Server on Azure VMs.
+description: Adds the support of Microsoft Entra managed identity for backup and restore database operations and for EKM with AKV in SQL Server on Azure Windows VMs.
 ms.date: 01/16/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5043526
 ms.reviewer: derekw, pcaronauger, v-qianli2
@@ -21,9 +21,9 @@ This problem is fixed in the following cumulative update for SQL Server on Azure
 
 In the SQL Server 2022 CU17 and later versions, the Microsoft Entra managed identity authentication with SQL Server on Azure Windows only VMs supports the server-level [credential]( /sql/t-sql/statements/create-credential-transact-sql#e-creating-a-credential-for-managed-identity) for database backup and restore operations to Azure Storage and for EKM with AKV.
 
-To enable the managed identity support for backup or restore database operations for SQL Server on Azure VMs, the following steps are required:
+To enable the managed identity support for backup or restore database operations for SQL Server on Azure Windows VMs, the following steps are required:
 
-1.	Assign the primary managed identity for the SQL Server on Azure VMs.
+1.	Assign the primary managed identity for the SQL Server on Azure Windows VMs.
 2.	Create or use Azure Storage with a blob container.
 3.	Assign role-based access control (RBAC) roles for the primary managed identity to access the Azure Storage.
 4.	Run the T-SQL command `CREATE CREDENTIAL` with the `WITH IDENTITY = 'Managed Identity'`  clause using the Azure Storage URL as a credential name.
@@ -44,9 +44,9 @@ RESTORE DATABASE mydb1
 
 For more information, see [Backup and restore to URL using managed identities](/azure/azure-sql/virtual-machines/windows/backup-restore-to-url-using-managed-identities).
 
-To enable the managed identity support for EKM with AKV for SQL Server on Azure VMs, the following steps are required:
+To enable the managed identity support for EKM with AKV for SQL Server on Azure Windows VMs, the following steps are required:
 
-1.	Assign the primary managed identity for the SQL Server on Azure VMs.
+1.	Assign the primary managed identity for the SQL Server on Azure Windows VMs.
 2.	Create or use a key vault.   
 3.	Assign role-based access control (RBAC) roles for the primary managed identity to access the AKV.
 4.	Download the latest [SQL Server Connector for Microsoft Azure Key Vault](https://www.microsoft.com/download/details.aspx?id=45344) (the 1.0.5.0 (November 2024) or later versions). The latest version of the SQL Server Connector is required to support the managed identity.
