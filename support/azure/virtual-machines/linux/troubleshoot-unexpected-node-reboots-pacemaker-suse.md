@@ -163,7 +163,7 @@ The SAP HANA timeout messages are commonly considered internal application timeo
 #### Resolution
 - To identify the root cause of the issue, it's essential to review the [OS performance](collect-performance-metrics-from-a-linux-system.md). 
 - Particular attention should be given to memory pressure and storage devices, their configuration, especially if HANA is hosted on Network File System (NFS), Azure NetApp Files (ANF), or Azure Files. 
-- Once external factors, such as platform or network outages, are ruled out, it's recommended to engage the application vendor for trace call analysis and log review.
+- Once external factors, such as platform or network outages, are ruled out, engaging the application vendor for trace call analysis and log review is recommended.
 
 ### Scenario 5: `ASCS/ERS` timeout in SAP Netweaver Clusters
 
@@ -187,7 +187,7 @@ The `ASCS/ERS` resource is considered the application for SAP Netweaver clusters
 #### Resolution
 - To identify the root cause of the issue, it's essential to review the [OS performance](collect-performance-metrics-from-a-linux-system.md). 
 - Particular attention should be given to memory pressure and storage devices, their configuration especially if SAP Netweaver is hosted on Network File System (NFS), Azure NetApp Files (ANF), or Azure Files. 
-- Once external factors, such as platform or network outages, are ruled out, it's recommended to engage the application vendor for trace call analysis and log review.
+- Once external factors, such as platform or network outages, are ruled out, engaging the application vendor for trace call analysis and log review is recommended.
 
 ## Next steps
 For additional help, open a support request by using the following instructions. When you submit your request, attach [supportconfig](https://documentation.suse.com/smart/systems-management/html/supportconfig/index.html) and [hb_report](https://www.suse.com/support/kb/doc/?id=000019142) logs for troubleshooting.
