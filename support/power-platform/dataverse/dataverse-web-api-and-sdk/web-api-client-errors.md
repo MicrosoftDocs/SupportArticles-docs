@@ -277,7 +277,7 @@ These errors occur when Dataverse Web API receives requests with an invalid odat
 
 ### Symptoms
 
-When sending a request using `POST`, `PATCH`, or `PUT` and a `Prefer` request header that contains an invalid value:
+When sending a request using `POST`, `PATCH`, or `PUT` and a `Prefer` request header that contains an invalid value. In the following example the odata.include-annotations is incorrectly including back slashes '\' to escape the quote characters. 
 
 **Request**
 
