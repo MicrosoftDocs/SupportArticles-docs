@@ -64,14 +64,14 @@ You can examine the version history of RML Utilities in this table and download 
   
 The current version of RML Utilities for SQL Server supersedes any earlier versions. You must uninstall any earlier version of RML Utilities for SQL Server before you install the current version. The current version of the tool suite contains important software updates, improved features (process *.trc* and *.xel* files) and reports, and performance and scalability improvements.
 
-## Obtain the RML Utilities for SQL Server
+### Obtain the RML Utilities for SQL Server
 
 - RML Utilities for SQL Server is available for download from the [Microsoft Download Center](https://download.microsoft.com/download/a/a/d/aad67239-30df-403b-a7f1-976a4ac46403/RMLSetup.msi).
 
 - After you install the [Database Experimentation Assistant](https://www.microsoft.com/download/details.aspx?id=54090), you'll find the RML tools (`ReadTrace` and `OStress`) in the `C:\Program Files (x86)\Microsoft Corporation\Database Experimentation Assistant\Dependencies\X64\` folder.
 
 > [!NOTE]  
-> Microsoft provides RML Utilities for SQL Server as is. Microsoft Customer Support Services (CSS) doesn't provide support or updates for the suite. If you have a suggestion or you want to report a bug, you can use the e-mail address in the "Problems and Assistance" article in the Help file (**RML Help.pdf**). The Help file is included with the RML Utilities for SQL Server.
+> Microsoft provides RML Utilities for SQL Server as is. Microsoft Customer Support Services (CSS) doesn't provide support for the suite. If you have a suggestion or you want to report a bug, you can use the e-mail address in the "Problems and Assistance" article in the Help file (**RML Help.docx**). The Help file is included with the RML Utilities for SQL Server.
 
 
 ## Dependencies for RML Utilities for SQL Server
