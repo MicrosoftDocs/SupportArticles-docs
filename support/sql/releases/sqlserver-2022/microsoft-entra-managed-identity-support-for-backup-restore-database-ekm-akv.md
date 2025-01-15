@@ -5,7 +5,7 @@ ms.date: 01/16/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5043526
 ms.reviewer: derekw, pcaronauger, v-qianli2
 appliesto:
-- SQL Server 2022 on Azure Windows VM
+- SQL Server 2022 on Azure VM (Windows only)
 ---
 # Improvement: Microsoft Entra managed identity support for backup and restore database operations and for EKM with AKV in SQL Server on Azure VMs
 
