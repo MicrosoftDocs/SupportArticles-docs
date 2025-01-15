@@ -2,7 +2,7 @@
 title: Troubleshoot Azure Monitor Application Insights for Java
 description: This article presents troubleshooting information for the Java agent for Azure Monitor Application Insights.
 ms.topic: conceptual
-ms.date: 11/06/2024
+ms.date: 01/15/2025
 editor: v-jsitser
 ms.reviewer: aaronmax, jeanbisutti, trstalna, toddfous, heya, v-leedennis
 ms.service: azure-monitor
@@ -252,6 +252,32 @@ You can also try the [monitoring solutions for Java native](/azure/azure-monitor
 
 - With Spring Boot, the Microsoft distribution of the OpenTelemetry starter.
 - With Quarkus, the Quarkus Opentelemetry Exporter for Microsoft Azure.
+
+
+## Understand duplicated operation IDs
+
+Application logic can result in an operation ID being reused by multiple telemetry items, as shown in [this example](/azure/azure-monitor/app/distributed-trace-data#example). The duplication might also come from incoming requests. To identify this, do the following operations:
+
+* Enable the capture of the `traceparent` header in the **applicationinsigths.json** file as follows:
+
+    ```json
+      {
+        "preview": {
+          "captureHttpServerHeaders": {
+            "requestHeaders": [
+              "traceparent"
+            ]
+          }
+        }
+      }
+    ```
+* Enable [self-diagnostics](/azure/azure-monitor/app/java-standalone-config#self-diagnostics) at the DEBUG level and restart the application.
+
+    In the following log example, the operation ID comes from an incoming request, not Application Insights:
+
+    ```output
+    {"ver":1,"name":"Request",...,"ai.operation.id":"4e757357805f4eb18705abd24326b550)","ai.operation.parentId":"973487efc3db7d03"},"data":{"baseType":"RequestData","baseData":{...,"properties":{"http.request.header.traceparent":"00-4e757357805f4eb18705abd24326b550-973487efc3db7d03-01", ...}}}}
+    ```
 
 [!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
 
