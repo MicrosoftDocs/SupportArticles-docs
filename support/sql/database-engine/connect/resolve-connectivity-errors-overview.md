@@ -5,6 +5,7 @@ ms.date: 01/13/2025
 ms.custom: sap:Database Connectivity and Authentication
 author: HaiyingYu
 ms.author: haiyingyu
+ms.reviewer: jopilov
 ---
 # Troubleshoot connectivity issues in SQL Server
 
@@ -29,6 +30,7 @@ Use the following list to navigate to the appropriate article page for detailed 
 - [Cannot generate SSPI context](cannot-generate-sspi-context-error.md)
 
 - [Login failed for user](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?context=/troubleshoot/sql/context/context) which covers the following Login errors:
+
   - "Login failed for user 'NT AUTHORITY\ANONYMOUS LOGON'"
   - "Login failed for user '(null)'"
   - "Login failed for user (empty)"
@@ -45,17 +47,17 @@ Use the following list to navigate to the appropriate article page for detailed 
 
 ## Tools and methods to troubleshoot connectivity issues
 
-The following articles provide details for various tools and procedures to troubleshoot different connectivity errors:
+The following sections provide details for various tools and procedures to troubleshoot different connectivity errors:
 
-### Configure Firewall to work with SQL Server
+### Configure Windows Firewall to work with SQL Server
 
 [Configure firewalls to work with SQL Server](/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access?context=/troubleshoot/sql/context/context) describes how to configure Windows Firewall for successful connections to instances.
 
 ### Test an OLEDB or ODBC connection to SQL Server
 
-- If you want to quickly test a connection from a client machine to a SQL Server, you can configure a UDL file. For more information, see [Test connections to SQL Server by using a Universal Data Link (UDL) file](../connect/test-oledb-connectivity-use-udl-file.md)
+- If you want to quickly test a connection from a client machine to a SQL Server instance, you can configure a UDL file. For more information, see [Test connections to SQL Server by using a Universal Data Link (UDL) file](../connect/test-oledb-connectivity-use-udl-file.md).
 
-- You can also use the ODBC Data Sources (64-bit) or ODBC Data Sources (32-bit) Administrator to configure and test an ODBC connection to SQL Server. For more information, see [ODBC Data Source Administrator DSN options](/sql/connect/odbc/windows/odbc-administrator-dsn-creation#create-a-new-data-source-to-sql-server---screen-1)
+- You can also use the ODBC Data Sources (64-bit) or ODBC Data Sources (32-bit) Administrator to configure and test an ODBC connection to SQL Server. For more information, see [ODBC Data Source Administrator DSN options](/sql/connect/odbc/windows/odbc-administrator-dsn-creation#create-a-new-data-source-to-sql-server---screen-1).
 
 ### Discover if a port is blocked with PortQryUI
 
@@ -67,16 +69,16 @@ The following article provides steps to identify which ports SQL Server is liste
 
 ### Get a detailed diagnostic report with SQLCheck
 
-Microsoft product support engineers frequently use, [SQLCheck](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLCHECK), a tool they built to diagnose causes for connection failures. You can follow the instructions to download and collect the SQLCheck report for in-depth analysis. 
+Microsoft product support engineers frequently use [SQLCheck](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLCHECK), which is a tool they built to diagnose causes for connection failures. You can follow the [instructions](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLCHECK) to download and collect the SQLCheck report for in-depth analysis. 
 
 ### Use Kerberos Configuration Manager
 
 To identify and resolve Service Principal Name (SPN) issues, you can use the Kerberos Configuration Manager. For more information, see 
-[Use Kerberos Configuration Manager to fix SPN issues](../connect/cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended)
+[Use Kerberos Configuration Manager to fix SPN issues](../connect/cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
 
 ### Collect and analyze a network trace with SQLTrace and SQLNAUI
 
-In many cases, a network trace may be the most effective tool to investigate network failures. You can follow these steps to [Collect network traces on the client and server](intermittent-periodic-network-issue.md#collect-network-traces-on-the-client-and-server). Then, you can analyze the network trace using the [SQL Network Analyzer UI SQLNAUI](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLNAUI)
+In many cases, a network trace might be the most effective tool to investigate network failures. You can follow the steps in [Collect network traces on the client and server](intermittent-periodic-network-issue.md#collect-network-traces-on-the-client-and-server) to investigate failures. Then, you can analyze the network trace using the [SQL Network Analyzer UI SQLNAUI](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLNAUI).
 
 
 ## See also
