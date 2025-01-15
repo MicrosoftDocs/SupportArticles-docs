@@ -209,7 +209,7 @@ On your session host VM, go to **Event Viewer** > **Windows Logs** > **Applicati
 
 ## Error: Session host VMs are stuck in Upgrading state
 
-If the status listed for session hosts in your host pool always says **Unavailable** or **Upgrading**, the agent or stack didn't install successfully. 
+If the status listed for session hosts in your host pool always says **Unavailable** or **Upgrading**, the agent or stack didn't install successfully.
 
 To resolve this issue, first reinstall the side-by-side stack:
 

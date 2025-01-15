@@ -37,7 +37,7 @@ Make sure of the following things:
 - The user shouldn't be tied to business-to-consumer (B2C) or business-to-business (B2B) commerce.
 - The Azure Virtual Desktop environment should be tied to correct Microsoft Entra ID.
 
-### Error: New-AzRoleAssignment: "The client with object id does not have authorization to perform action over scope (code: AuthorizationFailed)"
+### Error: New-AzRoleAssignment: "The client with object ID does not have authorization to perform action over scope (code: AuthorizationFailed)"
 
 #### Cause 1
 
@@ -55,7 +55,7 @@ The account being used has Owner permissions but isn't part of the environment's
 
 A user with Active Directory permissions needs to execute the role assignment.
 
-### Error: New-AzWvdHostPool -- the location is not available for resource type
+### Error: New-AzWvdHostPool: The location is not available for resource type
 
 ```powershell
 New-AzWvdHostPool_CreateExpanded: The provided location 'southeastasia' is not available for resource type 'Microsoft.DesktopVirtualization/hostpools'. List of available regions for the resource type is 'eastus,eastus2,westus,westus2,northcentralus,southcentralus,westcentralus,centralus'.

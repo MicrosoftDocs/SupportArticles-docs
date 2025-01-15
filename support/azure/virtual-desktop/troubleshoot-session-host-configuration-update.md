@@ -16,7 +16,7 @@ Session host update in Azure Virtual Desktop enables you to easily update sessio
 
 ## Session host configuration failed to create when creating a host pool
 
-When a session host configuration is created, the parameters provided for the configuration are checked during extended validation. Validation can fail if the service concludes that it is unable to successfully create session hosts with the provided parameters. As the Azure resources are stored in your subscription, they can be modified by other processes. Session host creation can still fail when using the session host configuration even after this validation check is completed.
+When a session host configuration is created, the parameters provided for the configuration are checked during extended validation. Validation can fail if the service concludes that it's unable to successfully create session hosts with the provided parameters. As the Azure resources are stored in your subscription, they can be modified by other processes. Session host creation can still fail when using the session host configuration even after this validation check is completed.
 
 Here are some example failures:
 
@@ -65,13 +65,21 @@ Once you identify the issue, you can either [retry the update, or cancel it and 
 
 ### An update failed to initiate
 
-When a session host update is initiated, the service validates whether it is able to successfully complete the update. When a session host update fails prior to starting, the update ends and changes can be made to the session host configuration. As the Azure resources are stored in your subscription, they can be modified by other processes; session host creation can still fail to use the session host configuration even after this validation check is completed.
+When a session host update is initiated, the service validates whether it's able to successfully complete the update. When a session host update fails prior to starting, the update ends and changes can be made to the session host configuration. As the Azure resources are stored in your subscription, they can be modified by other processes; session host creation can still fail to use the session host configuration even after this validation check is completed.
 
 Here are some example failures that prevent an update from starting:
 
-- No session hosts to update: the error `HostpoolHasNoSessionHosts` is returned when there are no session hosts to update as part of the session host update. If you didn't make changes to the session host configuration prior to initiating an update, this error is returned.
-- Capacity issues: validation checks for sufficient capacity in your virtual network subnet and VM core quota. This check doesn't guarantee capacity during an update; creation of other resources outside of session host update can result in errors mid-update associated with capacity limits. Set your batch size to be within the remaining quota for your subscription.
-- Parameter consistency with current session hosts: session host update doesn't support changing the region, subscription, resource group, or domain join type for a session host. If the session host configuration contains properties in these fields that differ from the session hosts in the host pool, the update fails to start. You should remove the session hosts that are inconsistent with the configuration.
+- No session hosts to update
+
+  The error `HostpoolHasNoSessionHosts` is returned when there are no session hosts to update as part of the session host update. If you didn't make changes to the session host configuration prior to initiating an update, this error is returned.
+
+- Capacity issues
+
+  Validation checks for sufficient capacity in your virtual network subnet and VM core quota. This check doesn't guarantee capacity during an update; creation of other resources outside of session host update can result in errors mid-update associated with capacity limits. Set your batch size to be within the remaining quota for your subscription.
+
+- Parameter consistency with current session hosts
+
+  Session host update doesn't support changing the region, subscription, resource group, or domain join type for a session host. If the session host configuration contains properties in these fields that differ from the session hosts in the host pool, the update fails to start. You should remove the session hosts that are inconsistent with the configuration.
 
 ### Failures during an update
 
@@ -79,9 +87,17 @@ Session host update starts with an initial batch size of one to validate that th
 
 Here are some example failures that can occur during an update:
 
-- VM creation failures: VM creation can fail for various reasons not specific to Azure Virtual Desktop, for example the exhaustion of subscription capacity, or issues with the provided image. You should review the error message provided to determine the appropriate remediation. Open a support case with Azure support if you need further assistance.
-- Agent installation, domain join, and session host health errors or timeout: Agent, domain join, and other session host health errors that occur in the first validation batch can often be resolved by reviewing guidance for addressing deployment and domain join failures for Azure Virtual Desktop, and by ensuring your image doesn't have the PowerShell DSC extension installed. If the extension is installed on the image, remove the folder **C:\\packages\\plugin** from the image. If the failure is intermittent, with some session hosts successfully updating and others encountering an error such as `AgentRegistrationFailureGeneric`, [retrying the update](/azure/virtual-desktop/session-host-update-configure#pause-resume-cancel-or-retry-an-update) can often resolve the issue.
-- Resource modification and access errors: modifying resources that are impacted in the update can result in errors during an update. Some of the errors that can result include deletion of resources and resource groups, changes to permissions, changes to power state, and changes to drain mode. In addition, if your Azure resources are locked and/or Azure policy limits the Azure Virtual Desktop service from modifying your session hosts, the update fails. Review Azure activity logs if you encounter related errors. Open a support case with Azure support if you need further assistance.
+- VM creation failures
+
+  VM creation can fail for various reasons not specific to Azure Virtual Desktop, for example the exhaustion of subscription capacity, or issues with the provided image. You should review the error message provided to determine the appropriate remediation. Open a support case with Azure support if you need further assistance.
+
+- Agent installation, domain join, and session host health errors or timeout
+
+  Agent, domain join, and other session host health errors that occur in the first validation batch can often be resolved by reviewing guidance for addressing deployment and domain join failures for Azure Virtual Desktop, and by ensuring your image doesn't have the PowerShell DSC extension installed. If the extension is installed on the image, remove the folder **C:\\packages\\plugin** from the image. If the failure is intermittent, with some session hosts successfully updating and others encountering an error such as `AgentRegistrationFailureGeneric`, [retrying the update](/azure/virtual-desktop/session-host-update-configure#pause-resume-cancel-or-retry-an-update) can often resolve the issue.
+
+- Resource modification and access errors
+
+  Modifying resources that are impacted in the update can result in errors during an update. Some of the errors that can result include deletion of resources and resource groups, changes to permissions, changes to power state, and changes to drain mode. In addition, if your Azure resources are locked and/or Azure policy limits the Azure Virtual Desktop service from modifying your session hosts, the update fails. Review Azure activity logs if you encounter related errors. Open a support case with Azure support if you need further assistance.
 
 ## Incompatible parameters passed to New-AzWvdSessionHostConfiguration
 

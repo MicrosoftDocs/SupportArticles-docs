@@ -327,7 +327,7 @@ If the time limit expires, the following error message will appear:
 If you see either of these messages, it means the image doesn't have the latest Windows updates installed or you're setting the Remote Desktop licensing mode through group policy. Follow the steps in the next sections to check the group policy setting, identify the version of Windows 10 Enterprise multi-session, and install the corresponding update.
 
 > [!NOTE]
-> Azure Virtual Desktop only requires an Remote Desktop Services (RDS) client access license (CAL) when your host pool contains Windows Server session hosts. For more information on configuring an RDS CAL, see [License your RDS deployment with client access licenses](/windows-server/remote/remote-desktop-services/rds-client-access-license/).
+> Azure Virtual Desktop only requires a Remote Desktop Services (RDS) client access license (CAL) when your host pool contains Windows Server session hosts. For more information on configuring an RDS CAL, see [License your RDS deployment with client access licenses](/windows-server/remote/remote-desktop-services/rds-client-access-license/).
 
 ### Disable the Remote Desktop licensing mode group policy setting
 

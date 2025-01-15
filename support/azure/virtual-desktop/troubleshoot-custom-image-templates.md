@@ -20,7 +20,7 @@ In this resource group is a storage account with a blob container called **packe
 For more information about how to interpret Azure Image Builder logs, see [Troubleshoot Azure VM Image Builder](/azure/virtual-machines/linux/image-builder-troubleshoot).
 
 > [!IMPORTANT]
-> Microsoft Support doesn't handle issues for any customer created scripts, or any scripts or templates copied from a Microsoft repository and modified. You're welcome to collaborate and improve these tools in our [GitHub repository](https://github.com/Azure/RDS-Templates/issues), where you can open an issue. For more information, see [Why do we not support customer or third party scripts?](https://techcommunity.microsoft.com/t5/ask-the-performance-team/help-my-powershell-script-isn-t-working-can-you-fix-it/ba-p/755797)
+> Microsoft Support doesn't handle issues for any customer created scripts, or any scripts or templates copied from a Microsoft repository and modified. You're welcome to collaborate and improve these tools in our [GitHub repository](https://github.com/Azure/RDS-Templates/issues), where you can open an issue. For more information, see [Why do we not support customer or third-party scripts?](https://techcommunity.microsoft.com/t5/ask-the-performance-team/help-my-powershell-script-isn-t-working-can-you-fix-it/ba-p/755797)
 
 ## Resource group must be empty
 
@@ -44,13 +44,13 @@ Make sure that the generation of your source image is the same as the generation
 
 The generation for the source image is shown when you select the image you want to use. You can check the generation of the VM image definition in the Azure portal, Azure CLI using the [az sig image-definition list](/cli/azure/sig/image-definition#az-sig-image-definition-list) reference command, or PowerShell using the [Get-AzGalleryImageDefinition](/powershell/module/az.compute/get-azgalleryimagedefinition) cmdlet.
 
-## PrivateLinkService Network Policy is not disabled for the given subnet
+## PrivateLinkService Network Policy isn't disabled for the given subnet
 
 If you receive the error message starting **PrivateLinkService Network Policy is not disabled for the given subnet**, you need to disable the private service policy on the subnet. For more information, see [Disable private service policy on the subnet](/azure/virtual-machines/windows/image-builder-vnet#disable-private-service-policy-on-the-subnet).
 
-## Issues installing or enabling additional languages on Windows 10 images
+## Issues installing or enabling other languages on Windows 10 images
 
-Additional languages can be added by custom image templates, which use the [Install-Language PowerShell cmdlet](/powershell/module/languagepackmanagement/install-language). If you have issues installing or enabling additional languages on Windows 10 Enterprise and Windows 10 Enterprise multi-session images, ensure that:
+Other languages can be added by custom image templates, which use the [Install-Language PowerShell cmdlet](/powershell/module/languagepackmanagement/install-language). If you have issues installing or enabling other languages on Windows 10 Enterprise and Windows 10 Enterprise multi-session images, ensure that:
 
 - You haven't disabled installing language packs by group policy on your image. The policy setting can be found at the following locations:
 

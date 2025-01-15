@@ -38,7 +38,7 @@ For Transmission Control Protocol (TCP) connections, there are two different pat
 - From the session host to the gateway
 - From the gateway to the client
 
-However, for UDP connections, this difference is not applicable, as there is no gateway involved. The other distinction for TCP is that in many cases one of the endpoints, or maybe some infrastructure in the middle, generates a TCP Reset packet (RST control bit), which causes a hard shutdown of the TCP connection. This works because TCP RST (and also TCP FIN for graceful shutdown) is handled by the operating system and also some routers, but not the application. This means that if an application crashes, Windows notifies the peer that the TCP connection is gone, but no such mechanism exists for UDP.
+However, for UDP connections, this difference isn't applicable, as there's no gateway involved. The other distinction for TCP is that in many cases one of the endpoints, or maybe some infrastructure in the middle, generates a TCP Reset packet (RST control bit), which causes a hard shutdown of the TCP connection. This works because TCP RST (and also TCP FIN for graceful shutdown) is handled by the operating system and also some routers, but not the application. This means that if an application crashes, Windows notifies the peer that the TCP connection is gone, but no such mechanism exists for UDP.
 
 Most connection errors, such as **ConnectionFailedClientDisconnect** and **ConnectionFailedServerDisconnect**, are caused by TCP Reset packets, not a time-out. There's no way for the operating system or a router to signal anything with UDP, so the only way to know the peer is gone is by a time-out message.
 
@@ -46,8 +46,8 @@ Most connection errors, such as **ConnectionFailedClientDisconnect** and **Conne
 
 This error gets triggered if a specific packet doesn't get through, even though the connection isn't dead. The packet is resent up to 50 times, so it's unlikely but can happen in the following scenarios:
 
-- The connection is very fast and stable before it suddenly stops working. The time-out required until a packet is declared lost depends on the round-trip time (RTT) between the client and session host. If the RTT is very low, one side can try to resend a packet very frequently, so the time it takes to reach 50 tries can be less than the usual time-out value of 17 seconds.
-- The packet is very large. The maximum packet size that can be transmitted is limited. The size of the packet is probed, but it can fluctuate and sometimes shrink. If that happens, it's possible that the packet being sent is too large and will consistently fail.
+- The connection is fast and stable before it suddenly stops working. The time-out required until a packet is declared lost depends on the round-trip time (RTT) between the client and session host. If the RTT is low, one side can try to resend a packet frequently, so the time it takes to reach 50 tries can be less than the usual time-out value of 17 seconds.
+- The packet is large. The maximum packet size that can be transmitted is limited. The size of the packet is probed, but it can fluctuate and sometimes shrink. If that happens, it's possible that the packet being sent is too large and will consistently fail.
 
 ### ConnectionBrokenMissedHeartbeatThresholdExceeded
 
