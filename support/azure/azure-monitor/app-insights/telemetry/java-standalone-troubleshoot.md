@@ -2,7 +2,7 @@
 title: Troubleshoot Azure Monitor Application Insights for Java
 description: This article presents troubleshooting information for the Java agent for Azure Monitor Application Insights.
 ms.topic: conceptual
-ms.date: 01/10/2025
+ms.date: 01/15/2025
 editor: v-jsitser
 ms.reviewer: aaronmax, jeanbisutti, trstalna, toddfous, heya, v-leedennis
 ms.service: azure-monitor
