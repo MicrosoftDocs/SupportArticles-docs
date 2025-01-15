@@ -115,7 +115,9 @@ For lists of the ports that have to be open between the different RDS components
 
 - [RDS 2012: Which ports are used during deployment?](/archive/technet-wiki/16164.rds-2012-which-ports-are-used-during-deployment)
 
-- [Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements).
+- [Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements)
+
+["Your session will be disconnected in 60 minutes" message when you connect to RDS](/troubleshoot/windows-server/remote/your-session-will-be-disconnected-in-60-minutes)
 
 ## Check security policy setting - Access this computer from the network
 
