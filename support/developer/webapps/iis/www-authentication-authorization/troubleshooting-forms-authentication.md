@@ -31,18 +31,7 @@ The following is an entry from the *Machine.config* file:
 </httpModule>
 ```
 
-You can configure forms authentication by using the authentication configuration element. For instance, you have a login page. In the configuration file, you specify a URL to redirect unauthenticated requests to the login page. Then define valid credentials, either in the *Web.config* file or in a separate file. The following example shows a section from a configuration file that specifies a login page and authentication credentials for the `Authenticate` method. The passwords have been encrypted by using the `HashPasswordForStoringInConfigFile` method.
-
-```xml
-<authentication mode="Forms"> 
-     <forms name="MyAuthCookie" loginUrl="/Login.aspx">     
-       <credentials passwordFormat="SHA1">        
-         <user name="Kim" password="07B7F3EE06F278DB966BE960E7CBBD103DF30CA6" />         
-         <user name="John" password="BA56E5E0366D003E98EA1C7F04ABF8FCB3753889"/>         
-       </credentials>
-     </forms>
-</authentication>
-```
+You can configure forms authentication by using the authentication configuration element. For instance, you have a login page. In the configuration file, you specify a URL to redirect unauthenticated requests to the login page. 
 
 After successful authentication, the `FormsAuthenticationModule` module sets the value of the User property to a reference to the authenticated user. The following code example shows how to programmatically read the identity of the forms-authenticated user.
 
