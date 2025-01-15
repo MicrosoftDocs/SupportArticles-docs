@@ -107,6 +107,26 @@ You can check the RD Licensing configuration by using Server Manager and RD Lice
 
    :::image type="content" source="media/cannot-connect-rds-no-license-server/local-gp-specify-licensing-mode.png" alt-text="Specify the licensing mode for the Remote Desktop Session Host server in the Set the Remote Desktop licensing mode dialog box.":::
 
+## Check for blocked ports between the Remote Desktop Services servers
+
+Make sure that the required ports are open on the firewalls between the RD Session Host and the RD Licensing server.
+
+For lists of the ports that have to be open between the different RDS components, see the following articles:
+
+- [RDS 2012: Which ports are used during deployment?](/archive/technet-wiki/16164.rds-2012-which-ports-are-used-during-deployment)
+
+- [Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements).
+
+## Check security policy setting - Access this computer from the network
+
+Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment
+
+Access this computer from the network
+
+Assigning this right to Authenticated Users or Domain Computers or Session host computer account if Everyone is not assigned. 
+
+[Access this computer from the network - security policy setting](/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/access-this-computer-from-the-network#best-practices)
+
 ## Refresh the X509 Certificate registry keys
 
 > [!IMPORTANT]  
