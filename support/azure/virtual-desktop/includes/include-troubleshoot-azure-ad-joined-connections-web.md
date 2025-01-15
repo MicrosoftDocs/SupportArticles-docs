@@ -4,7 +4,6 @@ ms.author: daknappe
 ms.topic: include
 ms.date: 11/21/2022
 ---
-
 ### Sign in failed. Please check your username and password and try again
 
 If you come across the following error when using the web client:

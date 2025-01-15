@@ -4,7 +4,6 @@ ms.author: daknappe
 ms.topic: include
 ms.date: 11/21/2022
 ---
-
 ### The logon attempt failed
 
 If you come across an error saying **The logon attempt failed** on the Windows Security credential prompt, verify the following:
@@ -21,7 +20,7 @@ If you come across an error:
 
 You have Conditional Access policies restricting access. Follow the instructions in [Enforce Microsoft Entra multifactor authentication for Azure Virtual Desktop using Conditional Access](/azure/virtual-desktop/set-up-mfa#azure-ad-joined-session-host-vms) to enforce Microsoft Entra multifactor authentication for your Microsoft Entra joined VMs.
 
-### A specified logon session does not exist. It may already have been terminated.
+### A specified logon session does not exist. It may already have been terminated
 
 If you come across an error:
 
