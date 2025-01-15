@@ -100,9 +100,9 @@
         href: app-integration/reply-url-redirected-to-localhost.md
       - name: Nonce is null error in ASP.NET MVC with OpenID Connect
         href: app-integration/troubleshoot-validation-context-nonce-null-mvc.md
-  - name: App Registrations
+  - name: Troubleshoot App Registrations
     items:
-      - name: Troubleshooting consent issues
+      - name: Troubleshoot consent issues
         href: app-integration/troubleshoot-consent-issues.md
 
 - name: Business To Consumer (B2C) Tenants
