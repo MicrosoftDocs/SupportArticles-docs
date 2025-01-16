@@ -1,7 +1,7 @@
 ---
 title: Agent Service fails to start on standalone server
 description: Provides the resolutions for the problems where the SQL Server service and the SQL Server Agent Service may not start on a stand-alone server.
-ms.date: 01/15/2025
+ms.date: 01/16/2025
 ms.custom: sap:Startup, shutdown, restart issues (instance or database)
 ms.reviewer: jopilov
 ---
@@ -45,13 +45,13 @@ _Original KB number:_ &nbsp; 307288
 
 ## Cause
 
-**Issue 1** and **Issue 2** occur because the server is a standalone computer and the NetLogon service does not start on the server, hence no domain-wide logon authentications are possible.
+**Issue 1** and **Issue 2** occur because the server is a standalone computer and the NetLogon service does not start on the server. Hence, no domain-wide logon authentications are possible.
 
 **Issue 3** occurs because SQL Server services try to start before NetLogon service starts.
 
 ## Resolution
 
-- To fix the **Issue 1** and **Issue 2**, follow these steps:
+- To fix **Issue 1** and **Issue 2**, follow these steps:
 
   1. Change the startup account of both the MSSQLSERVER and SQLServerAgent to use the local system account.
   1. Restart the server.
@@ -59,17 +59,17 @@ _Original KB number:_ &nbsp; 307288
     > [!NOTE]
     > On a standalone computer, the NetLogon Service should be set for **manual** startup.
 
-- To fix the **Issue 3**, use the following workarounds:
+- To fix **Issue 3**, use the following workarounds:
 
-  - Configure the SQL Server startup to **delayed start** for particular Windows servers, other Windows services such as NetLogon complete first and SQL Server starts without problems.
+  - Configure the SQL Server startup to **delayed start** for particular Windows servers. Other Windows services such as NetLogon complete first and SQL Server starts without problems.
 
-  - Configure the SQL Server startup to **retry**, the startup can be completed on the second startup attempt.
+  - Configure the SQL Server startup to **retry**. The startup can be completed on the second startup attempt.
 
   - Change the Duplicate Address Detection (-DadTransmits) value to 1 for all network interfaces on the server. See command [Set-NetIPInterface](/powershell/module/nettcpip/set-netipinterface) for more information.
 
   - Change the **Recovery** options for SQL Server and SQL Server Agent services. Specify **Restart the service** as action for the failure options. You can perform this option from the Services applet of Administrative Tools using the familiar Service Control Manager interfaces.
 
-  If the **delayed start** option can't fix this **Issue 3**, add the following dependencies to the SQL Server service:
+  If the **delayed start** option can't fix **Issue 3**, add the following dependencies to the SQL Server service:
 
   - Ip helper service
   - Server Service
