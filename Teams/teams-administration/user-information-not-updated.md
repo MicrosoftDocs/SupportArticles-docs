@@ -17,7 +17,7 @@ appliesto:
   - New Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 01/08/2025
+ms.date: 01/16/2025
 ---
 
 # User information isn't updated in Teams
