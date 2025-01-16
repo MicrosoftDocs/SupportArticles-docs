@@ -1,17 +1,18 @@
 ---
-title: Automation Browser security update
+title: Automation Browser Security Updates
 description: Provides security updates for the Automation Browser component in Microsoft Power Automate for desktop.
 ms.reviewer: nimoutzo
-ms.date: 01/14/2025
+ms.date: 01/16/2025
+ms.custom: sap:Desktop flows\UI or browser automation
 ---
-# Provides security updates for the Automation Browser component in Microsoft Power Automate for desktop
+# Security updates for the Automation Browser component in Microsoft Power Automate for desktop
 
 ## Summary
 
-A potential security vulnerability is identified in Automation Browser component Power Automate for desktop.
+A potential security vulnerability is identified in the Automation Browser component in Power Automate for desktop.
 
 > [!IMPORTANT]
-> The issue affects only flows that use the "Automation Browser" option in "Launch new Internet Explorer" action.
+> The issue only affects flows that use the **Automation Browser** option in the **Launch new Internet Explorer** action.
 
 ## Mitigation
 
