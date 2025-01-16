@@ -74,6 +74,9 @@
         href: app-integration/error-code-aadsts530004-acceptcompliantdevice-setting-not-configured.md
       - name: Error AADSTS50057 - user account is disabled
         href: app-integration/error-code-aadsts50057-user-account-is-disabled.md
+      - name: AADSTS500011 - Resource Principal Not Found
+        href: ./app-integration/error-code-aadsts500011-resource-principal-not-found.md
+        displayName: AADSTS500011
       - name: Error AADSTS500571 - guest user account is disabled
         href: app-integration/error-code-aadsts500571-guest-user-account-is-disabled.md
       - name: Error AADSTS50105 - user not assigned a role
