@@ -317,15 +317,15 @@ Pacemaker can't start SAP HANA resource when there are `SYN` failures between pr
 ```bash
 sudo SAPHanaSR-showAttr
 ```
-```output  
+```output
  Global cib-time                 maintenance
- --------------------------------------------
+--------------------------------------------
  global Fri Aug 23 11:47:32 2024 false
-  
-  Hosts	clone_state	lpa_fh9_lpt	node_state	op_mode	        remoteHost  	  roles		            score	 site   srmode	sync_state	version         vhost
- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- node-0	DEMOTED		10		online		logreplay	node-1 	4:S:master1:master:worker:master	5	SITEA	syncmem	SOK	2.00.046.00.1581325702	node-0
- node-1	PROMOTED	1693237652	online		logreplay	node-0 	4:P:master1:master:worker:master	150	SITEA	syncmem	PRIM	2.00.046.00.1581325702	node-1
+
+Hosts	clone_state	lpa_fh9_lpt	node_state	op_mode	        remoteHost  	  roles		            score	 site   srmode	sync_state	version         vhost
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+node-0	DEMOTED		10		online		logreplay	node-1 	4:S:master1:master:worker:master	5	SITEA	syncmem	SOK	2.00.046.00.1581325702	node-0
+node-1	PROMOTED	1693237652	online		logreplay	node-0 	4:P:master1:master:worker:master	150	SITEA	syncmem	PRIM	2.00.046.00.1581325702	node-1
 ```
 
 #### Resolution
@@ -433,14 +433,14 @@ SAP HANA resource can't be start by pacemaker when there are `SYN` failures betw
    ```
    ```output
    Global cib-time                 maintenance
- --------------------------------------------
- global Mon Oct 14 10:25:51 2024 false
+   --------------------------------------------
+   global Mon Oct 14 10:25:51 2024 false
   
- Hosts    clone_state lpa_fh9_lpt node_state op_mode   remoteHost    roles                    score site  srmode  sync_state version                vhost
- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- node-0   DEMOTED     10          online     logreplay node-1 4:S:master1:master:worker:master 5     SITEA syncmem SOK        2.00.046.00.1581325702 node-0
- node-1   PROMOTED    1693237652  online     logreplay node-0 4:P:master1:master:worker:master 150   SITEA syncmem PRIM       2.00.046.00.1581325702 node-1
- ```
+   Hosts	clone_state	lpa_fh9_lpt	node_state	op_mode	        remoteHost  	  roles		            score	 site   srmode	sync_state	version         vhost
+   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   node-0	DEMOTED		10		online		logreplay	node-1 	4:S:master1:master:worker:master	5	SITEA	syncmem	SOK	2.00.046.00.1581325702	node-0
+   node-1	PROMOTED	1693237652	online		logreplay	node-0 	4:P:master1:master:worker:master	150	SITEA	syncmem	PRIM	2.00.046.00.1581325702	node-1
+```
 
 7. Exit out of the SAP Admin account and remove the cluster out of maintenance-mode.
 
