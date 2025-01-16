@@ -39,7 +39,7 @@ The **TLS 1.0**, **TLS 1.1**, and **3DES Cipher suite** services are being depre
 |--------------------------------------------------|------------------|---------------|
 | U.S. government instances                        | March 31, 2021   | **COMPLETED** |
 | Public instances                                 | January 31, 2022 | **COMPLETED** |
-| Microsoft Entra instances operated by 21Vianet in China | November 30, 2024        | **ONGOING**   |
+| Microsoft Entra instances operated by 21Vianet in China | January 31, 2025        | **ONGOING**   |
 
 ## TLS 1.3 support for Microsoft Entra services
 
