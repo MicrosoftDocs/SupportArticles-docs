@@ -18,7 +18,7 @@ The easiest way to get installer logs is to export them using the link provided 
 
 :::image type="content" source="media/how-to-get-power-automate-desktop-installer-logs/installation-log-files.png" alt-text="Screenshot of the page that contains the installation log files link that you can use to export the installer logs.":::
 
-If you need to get the installer files manually, they can be found _%temp%_ folder of the user who performed the installation. You can find them by typing _%temp%_ in the address bar of File Explorer. The files of interest are:
+If you need to get the installer files manually, they can be found in the _%temp%_ folder of the user who performed the installation. You can find them by typing _%temp%_ in the address bar of File Explorer. The files of interest are:
 
 - _Power Automate for desktop\_*.log_
 - _Power Automate for desktop\_\*\_\*\_MicrosoftFlowRPA.log_
