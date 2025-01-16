@@ -38,7 +38,7 @@ Check the Uniform Resource Identifier (URI) for your script. This needs to be a 
 
 If you see the message:
 
-> Validation failed: Error with Hyper-V Version validation (cross-generation for multiple Hyper-V Versions is not supported). The provided SIG: \<Resource ID\> has a different Hyper-V Generation \<version\> than source image \<version\>
+> Validation failed: Error with Hyper-V Version validation (cross-generation for multiple Hyper-V Versions is not supported). The provided SIG: \<Resource ID\> has a different Hyper-V Generation \<version\> than source image \<version\>.
 
 Make sure that the generation of your source image is the same as the generation you specified for your Azure Compute Gallery VM image definition.
 
@@ -68,6 +68,6 @@ When you create a custom image template in the Azure portal, you might not be ab
 
 Custom image templates require the `Microsoft.ContainerInstance` resource provider registered on your subscription due to the dependency on Azure Image Builder. If you receive the error:
 
-> The client '\<GUID\>' with object id '\<GUID\>' does not have authorization to perform action 'Microsoft.ContainerInstance/register/action' over scope '/subscriptions/\<subscription ID\>' or the scope is invalid
+> The client '\<GUID\>' with object id '\<GUID\>' does not have authorization to perform action 'Microsoft.ContainerInstance/register/action' over scope '/subscriptions/\<subscription ID\>' or the scope is invalid.
 
 You need to register the `Microsoft.ContainerInstance` resource provider on your subscription. Once you register the resource provider, try the action again. For more information on how to check their registration status and how to register them if needed, see [Azure resource providers and types](/azure/virtual-desktop/../azure-resource-manager/management/resource-providers-and-types).
