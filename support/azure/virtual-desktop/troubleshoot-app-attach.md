@@ -57,7 +57,7 @@ To validate that your session hosts have the necessary access to a file share co
       Mount-CimDiskImage -ImagePath \\fileshare\msix\MyApp.cim -DriveLetter Z:
       ```
 
-   If the MSIX image mounts successfully, your session hosts have the correct necessary access to the file share containing your MSIX images.
+   If the MSIX image mounts successfully, your session hosts have the correct access to the file share containing your MSIX images.
 
 5. Dismount the MSIX image by using one of the following examples.
 

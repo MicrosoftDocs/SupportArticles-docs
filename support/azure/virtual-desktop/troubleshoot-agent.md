@@ -114,20 +114,20 @@ To resolve this issue, verify whether you can access the required URLs by runnin
 
 ## Error: 3019
 
-On your session host VM, go to **Event Viewer** > **Windows Logs** > **Application**. If you see an event with ID 3019, then the agent can't reach the web socket transport URLs. To successfully connect to your session host and allow network traffic to bypass these restrictions, you must unblock the URLs listed in the [Required URL list](/azure/virtual-desktop/safe-url-list). Work with your networking team to make sure your firewall, proxy, and DNS settings aren't blocking these URLs. You can also check your network trace logs to identify where the Azure Virtual Desktop service is being blocked. If you open a Microsoft Support case for this particular issue, make sure to attach your network trace logs to the request.
+On your session host VM, go to **Event Viewer** > **Windows Logs** > **Application**. If you see an event with ID 3019, the agent can't reach the web socket transport URLs. To successfully connect to your session host and allow network traffic to bypass these restrictions, you must unblock the URLs listed in the [Required URL list](/azure/virtual-desktop/safe-url-list). Work with your networking team to make sure your firewall, proxy, and DNS settings aren't blocking these URLs. You can also check your network trace logs to identify where the Azure Virtual Desktop service is being blocked. If you open a Microsoft Support case for this particular issue, make sure to attach your network trace logs to the request.
 
 ## Error: InstallationHealthCheckFailedException
 
-On your session host VM, go to **Event Viewer** > **Windows Logs** > **Application**. If you see an event with ID 3277 with `InstallationHealthCheckFailedException` in the description, then the stack listener isn't working because the terminal server has toggled the registry key for the stack listener.
+On your session host VM, go to **Event Viewer** > **Windows Logs** > **Application**. If you see an event with ID 3277 with `InstallationHealthCheckFailedException` in the description, the stack listener isn't working because the terminal server has toggled the registry key for the stack listener.
 
 To resolve this issue:
 
 1. Check to see if [the stack listener is working](#error-stack-listener-isnt-working-on-a-windows-10-2004-session-host-vm).
-2. If the stack listener isn't working, [manually uninstall and reinstall the stack component](#error-session-host-vms-are-stuck-in-upgrading-state).
+2. If the stack listener isn't working, [manually uninstall and reinstall the stack component](#error-session-host-vms-are-stuck-in-the-upgrading-state).
 
 ## Error: ENDPOINT_NOT_FOUND
 
-On your session host VM, go to **Event Viewer** > **Windows Logs** > **Application**. If you see an event with ID 3277 with `ENDPOINT_NOT_FOUND` in the description, then the broker couldn't find an endpoint to establish a connection with. This connection issue can happen for one of the following reasons:
+On your session host VM, go to **Event Viewer** > **Windows Logs** > **Application**. If you see an event with ID 3277 with `ENDPOINT_NOT_FOUND` in the description, the broker couldn't find an endpoint to establish a connection with. This connection issue can happen for one of the following reasons:
 
 - There aren't any session host VMs in your host pool.
 - The session host VMs in your host pool aren't active.
@@ -205,7 +205,7 @@ To resolve this issue, make space on your disk by:
 
 ## Error: Agent fails to update with MissingMethodException
 
-On your session host VM, go to **Event Viewer** > **Windows Logs** > **Application**. If you see an event with ID 3389 with `MissingMethodException: Method not found` in the description, then the Azure Virtual Desktop agent didn't update successfully and reverted to an earlier version. This issue might happen because the version number of the .NET framework currently installed on your VMs is lower than 4.7.2. To resolve this issue, you need to upgrade the .NET to version 4.7.2 or later by following the installation instructions in the [.NET Framework documentation](https://support.microsoft.com/topic/microsoft-net-framework-4-7-2-offline-installer-for-windows-05a72734-2127-a15d-50cf-daf56d5faec2).
+On your session host VM, go to **Event Viewer** > **Windows Logs** > **Application**. If you see an event with ID 3389 with `MissingMethodException: Method not found` in the description, the Azure Virtual Desktop agent didn't update successfully and reverted to an earlier version. This issue might happen because the version number of the .NET framework currently installed on your VMs is lower than 4.7.2. To resolve this issue, you need to upgrade the .NET to version 4.7.2 or later by following the installation instructions in the [.NET Framework documentation](https://support.microsoft.com/topic/microsoft-net-framework-4-7-2-offline-installer-for-windows-05a72734-2127-a15d-50cf-daf56d5faec2).
 
 ## Error: Session host VMs are stuck in the Upgrading state
 
@@ -268,7 +268,7 @@ Name: `DataBasePath`
 
 ### MetaDataServiceCheck
 
-If the session host doesn't pass the **MetaDataServiceCheck** health check, then the service can't access the IMDS endpoint. To resolve this issue, you need to do the following things:
+If the session host doesn't pass the **MetaDataServiceCheck** health check, the service can't access the IMDS endpoint. To resolve this issue, you need to do the following things:
 
 - Reconfigure your networking, firewall, or proxy settings to unblock the IP address 169.254.169.254.
 - Make sure your HTTP clients bypass web proxies within the VM when querying IMDS. We recommend that you allow the required IP address in any firewall policies within the VM that deal with outbound network traffic direction.

@@ -19,7 +19,7 @@ In Azure Virtual Desktop, latency up to 150 ms shouldn't affect user experience 
 
 In addition, the Azure Virtual Desktop connection depends on the internet connection of the machine the user is using the service from. Users might lose connection or experience input delay in one of the following situations:
 
-- The user doesn't have a stable local internet connection and the latency is over 200 ms.
+- The user doesn't have a stable local internet connection, and the latency is over 200 ms.
 - The network is saturated or rate-limited.
 
 To reduce round trip time:
@@ -31,7 +31,7 @@ To reduce round trip time:
 
 ## Optimize VM latency by reviewing Azure network round-trip latency statistics
 
-Round-trip time (RTT) latency from the client's network to the Azure region that contains the host pools should be less than 150 ms. To see which locations have the best latency, look up your desired location in [Azure network round-trip latency statistics](/azure/virtual-desktop/../networking/azure-network-latency). To optimize for network performance, we recommend you create session hosts in the Azure region closest to your users. We recommend you review the statistics every two to three months to make sure the optimal location hasn't changed as Azure Virtual Desktop rolls out to new areas.
+Round-trip time (RTT) latency from the client's network to the Azure region that contains the host pools should be less than 150 ms. To see which locations have the best latency, look up your desired location in [Azure network round-trip latency statistics](/azure/virtual-desktop/../networking/azure-network-latency). To optimize for network performance, we recommend you create session hosts in the Azure region closest to your users. We also recommend you review the statistics every two to three months to make sure the optimal location hasn't changed as Azure Virtual Desktop rolls out to new areas.
 
 ## My connection data isn't going to Azure Log Analytics
 

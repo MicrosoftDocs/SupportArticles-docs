@@ -9,7 +9,7 @@ ms.custom: docs_inherited, pcy:wincomm-user-experience
 ---
 # Troubleshoot Azure Files authentication with Active Directory
 
-This article describes common issues related to Azure Files authentication with an Active Directory Domain Services (AD DS) domain or Microsoft Entra Domain Services managed domain, and suggestions for how to fix them.
+This article describes common issues related to Azure Files authentication with an Active Directory Domain Services (AD DS) domain or Microsoft Entra Domain Services managed domain, and offers suggestions on how to fix them.
 
 ## My group membership isn't working
 
@@ -41,7 +41,7 @@ Here are the most common reasons users might come across issues:
 
 ## My AD DS group won't sync to Microsoft Entra ID
 
-If your storage account doesn't automatically sync with Microsoft Entra ID after 30 minutes, you'll need to force the sync by using [this script](https://github.com/stgeorgi/msixappattach/blob/master/force%20AD%20DS%20to%20Azure%20AD%20sync/force%20sync.ps1).
+If your storage account doesn't automatically sync with Microsoft Entra ID after 30 minutes, you need to force the sync by using [this script](https://github.com/stgeorgi/msixappattach/blob/master/force%20AD%20DS%20to%20Azure%20AD%20sync/force%20sync.ps1).
 
 ## My storage account says it needs additional permissions
 
