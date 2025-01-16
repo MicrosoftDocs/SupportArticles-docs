@@ -24,7 +24,7 @@ This article helps you troubleshoot and resolve issues when users can't update C
 
 ## Symptoms
 
-When a user tries to update a CRM record from the [Copilot for Sales add-in for Outlook](/microsoft-sales-copilot/use-sales-copilot-outlook), the following error message is displayed:
+When a user tries to update a CRM record from the [Copilot for Sales add-in for Outlook](/microsoft-sales-copilot/open-app#access-copilot-for-sales-in-outlook), the following error message is displayed:
 
 > To update Salesforce, ask for edit access for this record.
 

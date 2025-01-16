@@ -27,7 +27,7 @@ This article helps you troubleshoot and resolve issues when an error message is 
 
 ## Symptoms
 
-After you sign in to Salesforce CRM through the [Copilot for Sales add-in for Outlook](/microsoft-sales-copilot/use-sales-copilot-outlook), the following error message is displayed:
+After you sign in to Salesforce CRM through the [Copilot for Sales add-in for Outlook](/microsoft-sales-copilot/open-app#access-copilot-for-sales-in-outlook), the following error message is displayed:
 
 > Request your CRM administrator permissions to access Salesforce using APIs
 

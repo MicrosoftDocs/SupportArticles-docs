@@ -1,7 +1,7 @@
 ---
 title: Can't save email to CRM due to invalid mailbox settings
 description: Resolves an error that occurs in Microsoft Copilot for Sales due to invalid mailbox settings in Microsoft Dynamics 365.
-ms.date: 01/10/2024
+ms.date: 01/10/2025
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
@@ -42,7 +42,7 @@ This error occurs when the user's mailbox is disabled or the mailbox is missing 
 1. Open the CRM instance you connected to Copilot for Sales.
 
     > [!NOTE]
-    > To get the CRM instance URL, select **Options** (**…**) in the upper-right corner of the **Copilot for Sales** pane. The URL is displayed under **Signed in to Dynamics 365**.
+    > To get the CRM instance URL, go to the [Home tab](/microsoft-sales-copilot/personal-app#home-tab) in the Copilot for Sales personal app in [Outlook](/microsoft-sales-copilot/personal-app#open-the-personal-app-in-outlook) or [Teams](/microsoft-sales-copilot/personal-app#open-the-personal-app-in-teams), and select the environment name in the upper-right corner.
 
 2. Select **Settings** > **Personalization Settings**.
 

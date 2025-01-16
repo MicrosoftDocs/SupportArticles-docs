@@ -32,7 +32,7 @@ The user doesn't have Copilot for Sales privileges granted by the **Sales Copilo
 
 ## Resolution
 
-To solve this issue, assign the user the [additional privileges required for Dynamics 365 customers](/microsoft-sales-copilot/install-viva-sales#additional-privileges-required-for-dynamics-365-customers).
+To solve this issue, assign the user the [additional privileges required for Dynamics 365 customers](/microsoft-sales-copilot/privileges#privileges-required-for-dynamics-365-customers).
 
 ## More information
 

@@ -9,7 +9,7 @@ ms.custom: sap:CRM Permissions and Configurations\CRM Permissions
 ---
 # "No access to Dynamics 365" error in Copilot for Sales
 
-This article helps you troubleshoot and resolve issues when users can't access Microsoft Dynamics 365 through the [Microsoft Copilot for Sales add-in for Outlook](/microsoft-sales-copilot/use-sales-copilot-outlook).
+This article helps you troubleshoot and resolve issues when users can't access Microsoft Dynamics 365 through the [Microsoft Copilot for Sales add-in for Outlook](/microsoft-sales-copilot/open-app#access-copilot-for-sales-in-outlook).
 
 > [!NOTE]
 > Microsoft Sales Copilot is rebranded as Microsoft Copilot for Sales in January 2024. The screenshot in this article will be updated with the new name soon.
