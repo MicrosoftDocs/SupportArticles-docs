@@ -3,7 +3,7 @@ title: Azure Virtual Desktop PowerShell
 description: Helps troubleshoot issues with PowerShell when you set up an Azure Virtual Desktop environment.
 author: dknappettmsft
 ms.topic: troubleshooting
-ms.date: 06/05/2020
+ms.date: 01/16/2025
 ms.author: daknappe
 ms.custom: devx-track-azurepowershell, docs_inherited, pcy:wincomm-user-experience
 ---
@@ -77,11 +77,11 @@ New-AzWvdApplicationGroup_CreateExpanded: ActivityId: e5fe6c1d-5f2c-4db9-817d-e4
 
 #### Cause
 
-There's a location mismatch. All host pools, application groups, and workspaces have a location to store service metadata. Any objects you create that are associated with each other must be in the same location. For example, if a host pool is in `eastus`, then you also need to create the application groups in `eastus`. If you create a workspace to register these application groups to, that workspace needs to be in `eastus` as well.
+There's a location mismatch. All host pools, application groups, and workspaces have a location to store service metadata. Any objects you create that are associated with each other must be in the same location. For example, if a host pool is in `eastus`, then you also need to create the application groups in `eastus`. If you create a workspace to register these application groups, that workspace needs to be in `eastus` as well.
 
 #### Resolution
 
-Retrieve the location the host pool was created in, then assign the application group you're creating to that same location.
+Retrieve the location where the host pool is created, and then assign the application group you're creating to that same location.
 
 ## Next steps
 
