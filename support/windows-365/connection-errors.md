@@ -28,7 +28,6 @@ ms.collection:
 - M365-identity-device-management
 - tier2
 ---
-
 # Troubleshoot Cloud PC connection errors
 
 The following errors can occur when connecting to a Cloud PC.
@@ -81,7 +80,7 @@ There may be a resource issue on your Cloud PC.
 
 ### Possible solution
 
-Sign in to [windows365.microsoft.com](https://windows365.microsoft.com), select the cog icon next to the Cloud PC, and then select **Restart**.
+Sign in to [Windows 365](https://windows365.microsoft.com), select the cog icon next to the Cloud PC, and then select **Restart**.
 
 ### We couldn't connect to the gateway because of an error. If this keeps happening, ask your admin or tech support for help.
 
@@ -107,23 +106,23 @@ This error can occur when the Cloud PC's processor is over-utilized.
 
 ### Possible solution
 
-If the issue persists, sign in to [windows365.microsoft.com](https://windows365.microsoft.com), select the cog icon next to the Cloud PC, and then select **Restart**.
+If the issue persists, sign in to [Windows 365](https://windows365.microsoft.com), select the cog icon next to the Cloud PC, and then select **Restart**.
 
 ### Connection Attempt timed out, Please try again, or An error occurred while accessing this resource
 
 If you encounter these errors, make sure that you don't have a configured Cloud Service Provider (CSP) or Group Policy Object (GPO) that blocks remote desktop connections.
 
-**Intune CSP policy**
+Intune CSP policy:
 
-Settings catalog: **Administrative Templates\Windows Components\Remote Desktop Services\Remote Desktop Session Host\Connections**
+  Settings catalog: **Administrative Templates\\Windows Components\\Remote Desktop Services\\Remote Desktop Session Host\\Connections**
 
-- **Allow users to connect remotely by using Remote Desktop Services**
+  **Allow users to connect remotely by using Remote Desktop Services**
 
-**GPO configuration path**
+GPO configuration path:
 
-**Computer Configuration\Windows Components\Remote Desktop Services\Remote Desktop Session Host\Connections** 
+  **Computer Configuration\\Windows Components\\Remote Desktop Services\\Remote Desktop Session Host\\Connections**
 
-- **Allow users to connect remotely by using Remote Desktop Services**
+  **Allow users to connect remotely by using Remote Desktop Services**
 
 If you continue to experience issues, run the **Inspect Connection** option within the Windows App or the **Troubleshoot** option under **Manage my Cloud PC** located under the three dots.
 
@@ -171,7 +170,7 @@ Settings delivered by group policies may cause connection problems. To test this
 
 ### Intermittent disconnections
 
-If users encounter intermittent connection issues, consider the following: 
+If users encounter intermittent connection issues, consider the following:
 
 ### Possible solution
 

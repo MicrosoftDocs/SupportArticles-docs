@@ -28,7 +28,6 @@ ms.collection:
 - M365-identity-device-management
 - tier2
 ---
-
 # Known issues: Windows 365 Business
 
 The following items are known issues for Windows 365 Business.
@@ -67,16 +66,14 @@ Users can manually set their internet search engine's location. For example, on 
 
 ## Microsoft Narrator screen reader not turned on
 
-When users sign in to their Cloud PCs from windows365.microsoft.com, the Microsoft Narrator screen reader isn't turned on.
+When users sign in to their Cloud PCs from [Windows 365](https://windows365.microsoft.com/), the Microsoft Narrator screen reader isn't turned on.
 
 ### Solution
 
 To turn on Narrator when accessing your Cloud PC from the web interface:
 
 1. Go to [Windows 365](https://windows365.microsoft.com/).
-
 2. Sign in to your Cloud PC.
-
 3. On your keyboard, press <kbd>Alt</kbd>+<kbd>F3</kbd>+<kbd>Ctrl</kbd>, and then press <kbd>Enter</kbd>.
 
 ## Sending outbound email messages using port 25 isn't supported

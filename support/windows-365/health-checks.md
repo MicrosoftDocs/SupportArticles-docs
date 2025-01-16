@@ -28,7 +28,6 @@ ms.collection:
 - M365-identity-device-management
 - tier2
 ---
-
 # Azure network connection health checks
 
 A unique feature of Windows 365 is the Azure network connection (ANC) health checks. The health checks are periodically run to make sure that:
@@ -50,9 +49,7 @@ Statuses include:
 
 ## Status error details
 
-Every failed ANC or success with a warning error state includes the technical details behind the failure. Select the **View details** link for each failed check to view more information on the failure. After you fix the underlying issue, retry the health check to rerun the tests. To retry the health check, you must:
-
-- Have the [Intune Administrator](/azure/active-directory/roles/permissions-reference#intune-administrator) or [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference) role.
+Every failed ANC or success with a warning error state includes the technical details behind the failure. Select the **View details** link for each failed check to view more information on the failure. After you fix the underlying issue, retry the health check to rerun the tests. To retry the health check, you must have the [Intune Administrator](/azure/active-directory/roles/permissions-reference#intune-administrator) or [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference) role.
 
 ## Supported checks
 
@@ -69,7 +66,7 @@ Every failed ANC or success with a warning error state includes the technical de
 - **Environment and configuration are ready**: The underlying infrastructure is ready for provisioning to succeed.
 - **Intune enrollment restrictions allow Windows enrollment**: Verify that Intune enrollment restrictions are configured to allow Windows enrollment.
 - **Localization language package readiness**: Verify that the operating system and Microsoft 365 language packages are reachable. Also, verify that the localization package download link is reachable.
-- **UDP connection check**: Network configuration allows the use of UDP direct connection (STUN).
+- **UDP connection check**: Network configuration allows the use of User Datagram Protocol (UDP) direct connection (STUN).
 - **Single sign-on configuration**: Determine if the network is properly configured for [single sign-on](/windows-365/enterprise/identity-authentication#single-sign-on-sso) to Microsoft Entra hybrid joined Cloud PCs by ensuring a Kerberos Server object exists.
 
 ## Next steps
