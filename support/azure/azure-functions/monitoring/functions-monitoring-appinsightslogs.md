@@ -39,10 +39,10 @@ The following table summarizes the configuration options available for each stac
 | Language stack | Where to configure custom logs |
 |-|-|
 | .NET (in-process model) | `host.json` |
-| .NET (isolated model) | Default (send custom logs to the Functions host): `host.json`<br/>To send logs directly to Application Insights, see: [Configure Application Insights in the HostBuilder](https://learn.microsoft.com/en-us/azure/azure-functions/dotnet-isolated-process-guide?tabs=hostbuilder%2Cwindows#application-insights)  |
+| .NET (isolated model) | Default (send custom logs to the Functions host): `host.json`<br/>To send logs directly to Application Insights, see: [Configure Application Insights in the HostBuilder](/azure/azure-functions/dotnet-isolated-process-guide#application-insights)  |
 | Node.JS | `host.json` |
 | Python | `host.json` |
-| Java | Default (send custom logs to the Functions host): `host.json`<br/>To send logs directly to Application Insights, see: [Configure the Application Insights Java agent](https://learn.microsoft.com/en-us/azure/azure-monitor/app/monitor-functions#distributed-tracing-for-java-applications) |
+| Java | Default (send custom logs to the Functions host): `host.json`<br/>To send logs directly to Application Insights, see: [Configure the Application Insights Java agent](/azure/azure-monitor/app/monitor-functions#distributed-tracing-for-java-applications) |
 | PowerShell | `host.json` |
 
 When you configure custom application logs to be sent directly, the host no longer emits them, and `host.json` no longer controls their behavior. Similarly, the options exposed by each stack apply only to custom logs, and they don't change the behavior of the other runtime logs described in this article. In this case, to control the behavior of all logs, you might need to make changes in both configurations.
