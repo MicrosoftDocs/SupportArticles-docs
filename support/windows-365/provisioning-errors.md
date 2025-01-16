@@ -28,7 +28,6 @@ ms.collection:
 - M365-identity-device-management
 - tier2
 ---
-
 # Troubleshoot provisioning errors
 
 The following errors can occur during Cloud PC provisioning.
@@ -73,7 +72,7 @@ Windows 365 failed to join the Cloud PC to your on-premises Active Directory (AD
 - Make sure that the domain join user has sufficient permissions to perform the domain join.
 - Make sure that the virtual network and subnet can reach a domain controller correctly.
 
-**JsonADDomainExtensio** is the Azure function used to perform this domain join. Make sure that everything required for this domain join to succeed is in place.
+`JsonADDomainExtension` is the Azure function used to perform this domain join. Make sure that everything required for this domain join to succeed is in place.
 
 ### Suggested solution
 

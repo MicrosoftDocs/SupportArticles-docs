@@ -27,7 +27,6 @@ ms.collection:
 - M365-identity-device-management
 - tier2
 ---
-
 # Known issues: Windows 365 Enterprise and Frontline
 
 The following items are known issues for Windows 365 Enterprise.
@@ -58,7 +57,7 @@ Upgrading an existing Cloud PC between release versions of Windows 10 to Windows
 
 ### Solution
 
-Find and manage the Cloud PC in Microsoft Intune by using the unchanged Intune device name, either through the **Devices > All devices** list or the **Devices > Windows 365 > All Cloud PCs** list.
+Find and manage the Cloud PC in Microsoft Intune by using the unchanged Intune device name, either through the **Devices** > **All devices** list or the **Devices** > **Windows 365** > **All Cloud PCs** list.
 
 ## Windows 365 provisioning fails<!--38483005-->
 
@@ -69,7 +68,7 @@ Windows 365 provisioning failures may occur if both of the following conditions 
 
 ### Solution
 
-1. Check if the Azure network connection (ANC) fails with the error "An internal error occurred. The virtual machine deployment timed out." If yes, review the related GPO. 
+1. Check if the Azure network connection (ANC) fails with the error "An internal error occurred. The virtual machine deployment timed out." If yes, review the related GPO.
 2. Check if the PowerShell Execution policy is set to **AllSigned**. If it is, either remove the GPO or reset the PowerShell Execution policy to **Unrestricted**.
 3. Retry the ANC health check. If the check succeeds, retry provisioning.
 
@@ -163,7 +162,7 @@ Determine the root cause:
     ```
 
 2. Run `Get-DscConfigurationStatus` in an elevated command window. If the result shows a reboot pending for a job, continue to step 3.
-3. Run `Get-DscConfiguration` in an elevated command window. If the results show the DSC that installs the language, continue to the **Resolution** section.
+3. Run `Get-DscConfiguration` in an elevated command window. If the results show the DSC that installs the language, continue to the next section.
 
 ### Solution
 
