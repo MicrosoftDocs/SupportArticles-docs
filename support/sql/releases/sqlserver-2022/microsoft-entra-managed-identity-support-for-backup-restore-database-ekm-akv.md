@@ -27,7 +27,7 @@ To enable the managed identity support for backup or restore database operations
 2.	Create or use Azure Storage with a blob container.
 3.	Assign role-based access control (RBAC) roles for the primary managed identity to access the Azure Storage.
 4.	Run the T-SQL command `CREATE CREDENTIAL` with the `WITH IDENTITY = 'Managed Identity'`  clause using the Azure Storage URL as a credential name.
-5.	Run the T-SQL command `BACKUP/RESTORE DATABASE` using the Azure Storage URL.
+5.	Run the T-SQL command `BACKUP DATABASE` or `RESTORE DATABASE` using the Azure Storage URL.
 
 ```SQL
 -- Create credential with managed identity and credential name set to
