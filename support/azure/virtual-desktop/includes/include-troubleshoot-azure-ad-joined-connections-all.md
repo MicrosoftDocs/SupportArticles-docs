@@ -8,16 +8,16 @@ ms.date: 11/21/2022
 
 If you come across an error saying:
 
-> Your account is configured to prevent you from using this device. For more information, contact your system administrator
+> Your account is configured to prevent you from using this device. For more information, contact your system administrator.
 
-Ensure the user account was given the [Virtual Machine User Login role](/entra/identity/devices/howto-vm-sign-in-azure-ad-windows#azure-role-not-assigned) on the VMs.
+Ensure the user account was given the [Virtual Machine User Login role](/entra/identity/devices/howto-vm-sign-in-azure-ad-windows#azure-role-not-assigned) on the virtual machines (VMs).
 
 ### The user name or password is incorrect
 
 If you can't sign in and keep receiving an error message that says your credentials are incorrect, first make sure you're using the right credentials. If you keep seeing error messages, check to make sure you've fulfilled the following requirements:
 
-- Have you assigned the Virtual Machine User Login role-based access control (RBAC) permission to the virtual machine (VM) or resource group for each user?
-- Does your Conditional Access policy exclude multifactor authentication requirements for the Azure Windows VM sign-in cloud application?
+- You have assigned the Virtual Machine User Login role-based access control (RBAC) permission to the VM or resource group for each user.
+- Your Conditional Access policy excludes multifactor authentication requirements for the Azure Windows VM sign-in cloud application.
 
 If you've answered no to either of those questions, you'll need to reconfigure your multifactor authentication. To reconfigure your multifactor authentication, follow the instructions in [Enforce Microsoft Entra multifactor authentication for Azure Virtual Desktop using Conditional Access](/azure/virtual-desktop/set-up-mfa#azure-ad-joined-session-host-vms).
 
