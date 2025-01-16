@@ -19,7 +19,7 @@ This article outlines the most common causes of RHEL pacemaker cluster resources
 
 ## Scenario 1: Unable to start cluster service due to quorum
 
-#### Symptom
+### Symptom
 
 - Cluster node fails to join cluster after cluster restart.
 - Nodes are reported as `UNCLEAN (offline)`
@@ -55,7 +55,7 @@ Check for the error: Corosync quorum is not configured in /var/log/messeges:
 Jun 16 11:17:53 node-0 pacemaker-controld[509433]: error: Corosync quorum is not configured
 ```
 
-#### Cause
+### Cause
 
 The **votequorum** service is a component of the corosync project. To prevent split-brain scenarios, this service can be optionally loaded into a corosync cluster's nodes. Each system in the cluster is given a certain number of votes to achieve this quorum. Ensuring that cluster actions can only occur when the majority of votes are cast. Either every node must have the service loaded, or none at all. The outcomes are uncertain if it loaded into a subset of cluster nodes.
 
@@ -69,7 +69,7 @@ The following `/etc/corosync/corosync.conf` extract will enables **votequorum** 
 
 **Votequorum** reads its configuration from `/etc/corosync/corosync.conf`. Some values can be changed at runtime and others are only read at corosync startup. It's important that those values are consistent across all the nodes participating in the cluster or votequorum behavior are unpredictable.
 
-#### Resolution
+### Resolution
 
 1. As a precaution take a full backup or snapshot before making any changes. Refer this document to know more about [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
 
@@ -145,7 +145,7 @@ sudo pcs cluster reload corosync
 
 ## Scenario 2: Issue with cluster VIP resource
 
-#### Symptom
+### Symptom
 
 Virtual IP resource (`IPaddr2` resource) failed to start or stop in pacemaker.
 The messages can be identified under `/var/log/pacemaker.log` as shown:
@@ -164,7 +164,7 @@ sudo pcs status
 vip_HN1_03_start_0 on node-1 'unknown error' (1): call=30, status=complete, exit-reason='[findif] failed', last-rc-change='Thu Jan 07 17:25:52 2025', queued=0ms, exec=57ms
 ```
 
-#### Cause
+### Cause
 
 1. To choose which network interface to launch the `IPAddr2` resource on, `IPaddr2` invokes the `findif()` function as defined in `/usr/lib/ocf/resource.d/heartbeat/IPaddr2` (belongs to the `resource-agents` package).
 
@@ -205,7 +205,7 @@ sudo ip -o -f inet route list match 172.17.10.10/24 scope link
 > [!Note]
 > Replace `172.17.10.10/24` and `ens6` accordingly.
 
-#### Resolution
+### Resolution
 
 If route that matches the `VIP` isn't in the default routing table, then one can specify the `NIC` name in pacemaker resource, so that it can be configured bypassing the check:
 
@@ -257,7 +257,7 @@ For more information about this scenario, you can see the following Red Hat arti
 
 ## Scenario 3: Issue with SAP HANA(High-performance ANalytic Appliance)
 
-#### Symptom 1: SAP HANA DB fails to start with unknown error
+### Symptom 1: SAP HANA DB fails to start with unknown error
 
 SAP HANA DB fails to start with `unknown error`.
 
@@ -451,7 +451,7 @@ SAP HANA resource can't be start by pacemaker when there are `SYN` failures betw
 8. Ensure the pacemaker cluster resources are running successfully.
 
 
-#### Symptom 2: SAP HANA failing to start due to replication failure
+### Symptom 2: SAP HANA failing to start due to replication failure
 
 SAP HANA Resource Reporting N (Standalone) mode experiences start failures with `hana_xxx_roles`.
 The cluster node's database resource is a primary or secondary. Standalone node mode with `hana_xxx_roles` reporting **N**.
@@ -572,7 +572,7 @@ sudo pcs resource cleanup <SAPHana resource name>
 
 For more information about this scenario, you can see the following Red Hat article: [SAPHana Resource Experiencing Start Failures with hana_xxx_roles Reporting N (Standalone)'](https://access.redhat.com/solutions/7062225).
 
-#### Symptom 3: SAP HANA resource failing to start due to hdbdaemon issues
+### Symptom 3: SAP HANA resource failing to start due to hdbdaemon issues
 
 SAP HANA Resource Start Failure with error message as shown:
 
@@ -612,7 +612,7 @@ For more information about this scenario, you can see the following Red Hat arti
 
 ## Scenario 4: Issue with ASCS and ERS resource.
 
-#### Symptom
+### Symptom
 
 ASCS and ERS instances aren't able to start under cluster control. The following errors can be seen from `/var/log/messages`.
 
@@ -621,11 +621,11 @@ Jun  9 23:29:16 nodeci SAPRh2_10[340480]: Unable to change to Directory /usr/sap
 Jun  9 23:29:16 nodeci SAPRH2_00[340486]: Unable to change to Directory /usr/sap/Rh2/ASCS00/work. (Error 2 No such file or directory) [ntservsserver.cpp 3845]
 ```
 
-#### Cause
+### Cause
 
 Due to incorrect `InstanceName` and `START_PROFILE`, attributes SAP instance (ASCS & ERS) failed to start under cluster control.
 
-#### Resolution
+### Resolution
 
 > [!Note]
 > This resolution is applicable when your `InstanceName` and `START_PROFILE` are individual.
