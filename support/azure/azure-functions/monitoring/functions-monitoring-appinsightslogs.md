@@ -1,8 +1,8 @@
 ---
 title: Application Insights logs are missing or incorrect
 description: Ths article helps you resolve issues related to missing or incorrect logs for Application Insights logs in Azure Functions.
-ms.date: 08/24/2023
-ms.reviewer: gasridha, v-jayaramanp
+ms.date: 01/16/2025
+ms.reviewer: gasridha, v-jayaramanp, agaltrai, jarrettr 
 ms.custom: sap:Monitoring using Application Insights, Metrics and Alerts
 ---
 
@@ -30,10 +30,9 @@ If the Application Insights logs are missing, or if the data appears to be parti
 
   **Recommendation**: The function app should be on version 4 and the runtime version should be at least 4.15.2*xx*. This is because, from this version onwards, you can track the log flows from Azure Functions to the Application Insights service. By monitoring the log flows, you can check for missing logs.
 
-
 ## Custom application logs
 
-By default, custom application logs you write are sent to the Functions host, which then sends them to Application Insights under the [Worker category](https://learn.microsoft.com/en-us/azure/azure-functions/configure-monitoring?tabs=v2#configure-categories). Some language stacks allow you to instead send the logs directly to Application Insights, which gives you full control over how logs you write are emitted. In this case, the logging pipeline changes from `worker -> Functions host -> Application Insights` to `worker -> Application Insights`.
+By default, custom application logs you write are sent to the Functions host, which then sends them to Application Insights under the [Worker category](/azure/azure-functions/configure-monitoring#configure-categories). However, some language stacks allow you to send the logs directly to Application Insights, which gives you full control over how logs you write are emitted. In this case, the logging pipeline changes from `worker > Functions host > Application Insights` to `worker > Application Insights`.
 
 The following table summarizes the configuration options available for each stack:
 
@@ -47,6 +46,7 @@ The following table summarizes the configuration options available for each stac
 | PowerShell | `host.json` |
 
 When you configure custom application logs to be sent directly, the host no longer emits them, and `host.json` no longer controls their behavior. Similarly, the options exposed by each stack apply only to custom logs, and they don't change the behavior of the other runtime logs described in this article. In this case, to control the behavior of all logs, you might need to make changes in both configurations.
+
 ## Logs are missing or partial
 
 Application Insights collects log, performance, and error data. [Sampling configuration](/azure/azure-functions/configure-monitoring#configure-sampling) is used to reduce the volume of telemetry. The Sampling feature is enabled by default with the settings shown in the following [host.json](/azure/azure-functions/functions-host-json#applicationinsights) example. Excluded types aren't sampled.
