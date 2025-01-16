@@ -877,6 +877,8 @@ items:
       href: ./shell-experience/issues-autoplay-disabled-group-policy.md
     - name: Notifications don't show in the action or notification center
       href: ./shell-experience/notifications-not-show-action-notification-center.md
+    - name: Taskbar calendar does not open
+      href: ./shell-experience/taskbar-calendar-does-not-open.md
     - name: UPX is displayed in the UI on managed device
       href: ./shell-experience/upx-displayed-in-UI-on-managed-device.md
   - name: DPI and Display Issues
