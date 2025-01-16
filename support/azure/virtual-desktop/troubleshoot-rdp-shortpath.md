@@ -11,9 +11,9 @@ ms.custom: pcy:wincomm-user-experience
 
 This article helps troubleshoot issues when using Remote Desktop Protocol (RDP) Shortpath for public networks.
 
-## Verify STUN/TURN server connectivity and NAT type
+## Verify STUN, TURN server connectivity and NAT type
 
-You can validate connectivity to the STUN/TURN endpoints and verify that basic User Datagram Protocol (UDP) functionality works by running the executable **avdnettest.exe**. Here's a [download link to the latest version of avdnettest.exe](https://raw.githubusercontent.com/Azure/RDS-Templates/master/AVD-TestShortpath/avdnettest.exe).
+You can validate connectivity to the STUN and TURN endpoints, and verify that basic User Datagram Protocol (UDP) functionality works by running the executable **avdnettest.exe**. Here's a [download link to the latest version of avdnettest.exe](https://raw.githubusercontent.com/Azure/RDS-Templates/master/AVD-TestShortpath/avdnettest.exe).
 
 You can run **avdnettest.exe** by double-clicking the file, or running it from the command line. The output looks similar to this if the connectivity is successful:
 
