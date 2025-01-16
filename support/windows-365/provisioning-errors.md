@@ -76,7 +76,7 @@ Windows 365 failed to join the Cloud PC to your on-premises Active Directory (AD
 
 ### Suggested solution
 
-Attach an Azure VM to the configured virtual network and perform a domain join using the credentials provided.
+Attach an Azure virtual machine (VM) to the configured virtual network and perform a domain join using the credentials provided.
 
 <a name='hybrid-azure-ad-join-failed'></a>
 
@@ -88,7 +88,7 @@ If provisioning fails because of Microsoft Entra hybrid join, it's likely becaus
 
 Another factor to consider is your on-premises AD replication time. Make sure that the domain controller being used for Windows 365 is replicated fast enough to make it into Microsoft Entra ID within this five-hour time-out window.
 
-If your organization uses Active Directory Federation Services (ADFS), this registration process is optimized and may result in Cloud PC provisioning being completed faster than a Microsoft Entra Connect sync might be.
+If your organization uses Active Directory Federation Services (ADFS), this registration process is optimized and might result in Cloud PC provisioning being completed faster than a Microsoft Entra Connect sync might be.
 
 ### Suggested solution
 
@@ -158,7 +158,7 @@ Make sure that the provisioning policy is available and assigned to the correct 
 
 ## Request disallowed by policy
 
-Windows 365 uses the customer-provided virtual network to perform a vNic ingestion from the Cloud PC into the customer's virtual network. Sometimes an enterprise implements an Azure Policy to restrict the creation of certain Azure objects. Make sure that there are no Azure policies that may restrict Windows 365 from creating Azure objects on your behalf.
+Windows 365 uses the customer-provided virtual network to perform a vNic ingestion from the Cloud PC into the customer's virtual network. Sometimes an enterprise implements an Azure Policy to restrict the creation of certain Azure objects. Make sure that there are no Azure policies that might restrict Windows 365 from creating Azure objects on your behalf.
 
 ### Suggested solution
 
@@ -166,7 +166,7 @@ View **Policy** in the Azure portal and look for any policy events stopping the 
 
 ## Start menu power icons error
 
-Windows 365 provisioned the Cloud PC but didn't hide the shutdown and restart icons in the Start menu. As a result, the user sees the shutdown and restart icons in the Start menu. If the user ends their Cloud PC connection by selecting the shutdown icon, they may need to restart the Cloud PC from the Cloud PC portal before connecting again.
+Windows 365 provisioned the Cloud PC but didn't hide the shutdown and restart icons in the Start menu. As a result, the user sees the shutdown and restart icons in the Start menu. If the user ends their Cloud PC connection by selecting the shutdown icon, they might need to restart the Cloud PC from the Cloud PC portal before connecting again.
 
 ### Suggested solution
 
@@ -207,7 +207,7 @@ Windows 365 provisioned the Cloud PC but was unable to block all high-risk ports
 If you receive this error, some factors to consider are:
 
 - Sometimes, an enterprise implements an Intune group policy that enables one of these ports by default.  
-- Make sure that there are no Intune policies that may override Windows 365's default of disabling these high-risk ports.
+- Make sure that there are no Intune policies that might override Windows 365's default of disabling these high-risk ports.
 
 ### Suggested solution
 

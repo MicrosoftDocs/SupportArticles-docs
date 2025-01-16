@@ -51,9 +51,9 @@ For more information, see [Administrative template for Azure Virtual Desktop](/a
 
 [!INCLUDE [Missing Start menu and taskbar when using iPad and the Remote Desktop app to access a Cloud PC](includes/known-issues.md)]
 
-## In-place Windows upgrade may change the computer name
+## In-place Windows upgrade might change the computer name
 
-Upgrading an existing Cloud PC between release versions of Windows 10 to Windows 11 may cause the computer name to be changed to a name with a prefix of "pps" while leaving the Intune device name unchanged.
+Upgrading an existing Cloud PC between release versions of Windows 10 to Windows 11 might cause the computer name to be changed to a name with a prefix of "pps" while leaving the Intune device name unchanged.
 
 ### Solution
 
@@ -61,7 +61,7 @@ Find and manage the Cloud PC in Microsoft Intune by using the unchanged Intune d
 
 ## Windows 365 provisioning fails<!--38483005-->
 
-Windows 365 provisioning failures may occur if both of the following conditions are met:
+Windows 365 provisioning failures might occur if both of the following conditions are met:
 
 - The Desired State Configuration (DSC) extension isn't signed.
 - The PowerShell Execution policy is set to **AllSigned** in the GPO.
@@ -79,7 +79,7 @@ The following device compliance settings report as **Not applicable** when being
 - **Trusted Platform Module (TPM)**
 - **Require encryption of data storage on device**
 
-The following device compliance settings may report as **Not Compliant** when being evaluated for a Cloud PC:
+The following device compliance settings might report as **Not Compliant** when being evaluated for a Cloud PC:
 
 - **Require BitLocker**
 - **Require Secure Boot to be enabled on the device**. Cloud PC support for the [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) functionality is now available to all customers.
@@ -96,7 +96,7 @@ To remove not compliant settings:
 
 ## Single sign-on users see a dialog to allow remote desktop connection during the connection attempt <!--42499792-->
 
-When enabling single sign-on, a prompt appears to authenticate to Microsoft Entra ID and allow the Remote Desktop connection when launching a connection to a new Cloud PC. Microsoft Entra remembers up to 15 devices for 30 days before prompting again. If you see this dialog, select **Yes** to connect.
+When you enable single sign-on, a prompt appears to authenticate to Microsoft Entra ID and allow the Remote Desktop connection when launching a connection to a new Cloud PC. Microsoft Entra remembers up to 15 devices for 30 days before prompting again. If you see this dialog, select **Yes** to connect.
 
 To prevent this dialog from appearing, you can create a preconsented device group. Follow the instructions to [configure a target device group](/azure/virtual-desktop/configure-single-sign-on#configure-the-target-device-groups) to get started.
 
@@ -106,7 +106,7 @@ To prevent this dialog from appearing, you can create a preconsented device grou
 
 ### Possible cause
 
-To sign in through single sign-on, the remote desktop client requests an access token to the **Microsoft Remote Desktop** app in Microsoft Entra, which may be the cause of the failed connection.
+To sign in through single sign-on, the remote desktop client requests an access token to the **Microsoft Remote Desktop** app in Microsoft Entra, which might be the cause of the failed connection.
 
 ### Troubleshooting steps
 
@@ -175,7 +175,7 @@ To stop the restart loop, try either of these options:
 
 ## Cloud PC connection issues for GCC High government customers<!--47633105-->
 
-Some GCC High government customers whose resources are deployed to `microsoft.us` environments may encounter issues connecting to their Cloud PC using web clients or the Safari browser.
+Some GCC High government customers whose resources are deployed to `microsoft.us` environments might encounter issues connecting to their Cloud PC using web clients or the Safari browser.
 
 ### Possible cause
 

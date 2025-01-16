@@ -76,7 +76,7 @@ If you only manage the user's physical device through Group Policy or you don't 
 
 ### Potential cause
 
-There may be a resource issue on your Cloud PC.
+There might be a resource issue on your Cloud PC.
 
 ### Possible solution
 
@@ -162,11 +162,11 @@ For more information, see [What is IP Address 168.63.129.16](/azure/virtual-netw
 
 ### Move the Cloud PC to a new organizational unit (OU) with no group policies
 
-Connection problems may be caused by settings delivered by group policies. To test this possible cause, you can move the Cloud PC to a separate OU that's blocked from receiving group policies.
+Connection problems might be caused by settings delivered by group policies. To test this possible cause, you can move the Cloud PC to a separate OU that's blocked from receiving group policies.
 
 ### On-premises GPO may affect a Cloud PC's provisioning or behavior
 
-Settings delivered by group policies may cause connection problems. To test this problem, you can move the Cloud PC to a separate OU that's blocked from receiving group policies.
+Settings delivered by group policies might cause connection problems. To test this problem, you can move the Cloud PC to a separate OU that's blocked from receiving group policies.
 
 ### Intermittent disconnections
 

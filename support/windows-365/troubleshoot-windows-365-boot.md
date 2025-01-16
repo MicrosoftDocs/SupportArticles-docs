@@ -78,9 +78,9 @@ This cmdlet shows all the Microsoft-maintained apps (like QuickAssist and Micros
 - Azure Virtual Desktop (HostApp) app version 1.2.4159 or later.
 - The latest version of Windows 11.
 
-## Remove and re-add Windows 365 Boot to the physical device
+## Remove and add Windows 365 Boot to the physical device again
 
-If you can't identify the source of the issue, try removing and re-adding Windows 365 Boot to the physical device.
+If you can't identify the source of the issue, try removing and adding Windows 365 Boot to the physical device again.
 
 ### Remove Windows 365 Boot from the physical device
 
@@ -128,7 +128,7 @@ You can find the Windows 365 Session ID in an error dialog. For example, a **Som
 
 ### Correlation ID
 
-You can find the Correlation ID in the interstitial screen displayed during a five-minute timeout.
+You can find the Correlation ID in the interstitial screen displayed during a five-minute time-out.
 
 :::image type="content" source="media/troubleshoot-windows-365-boot/connection-issue.png" alt-text="Screenshot that shows the interstitial screen that contains the Correlation ID." border="false":::
 

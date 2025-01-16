@@ -2,7 +2,7 @@
 # required metadata
 title: Troubleshoot issues with the Windows 365 app
 titleSuffix:
-description: Provides solutions, tips or best practices to resolve the issues with the Windows 365 app.
+description: Provides solutions, tips, or best practices to resolve the issues with the Windows 365 app.
 keywords:
 author: ErikjeMS
 ms.author: erikje

@@ -37,7 +37,7 @@ This article provides some troubleshooting steps and possible solutions for the 
 
 When you enable a partner connector ([Citrix HDX Plus](/windows-365/enterprise/set-up-citrix), [Omnissa Horizon](/windows-365/enterprise/set-up-omnissa-horizon), or [HP Anyware](/windows-365/enterprise/hp-anyware-set-up)) for a user, the partner agent is automatically installed on that user's Cloud PCs. The agent enables the corresponding third-party protocol.
 
-If the installation encounters an issue, an error message will appear in the **All Cloud PC** list, providing advice on how to troubleshoot the error.  
+If the installation encounters an issue, an error message appears in the **All Cloud PC** list, providing advice on how to troubleshoot the error.  
 
 Even though the installation fails, the user can still connect to their Cloud PC using Remote Desktop.
 

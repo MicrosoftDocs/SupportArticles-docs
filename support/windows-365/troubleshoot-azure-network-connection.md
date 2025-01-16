@@ -30,7 +30,7 @@ ms.collection:
 ---
 # Troubleshoot Azure network connections
 
-The Azure network connection (ANC) periodically checks your environment to make sure that all requirements are met and that it's in a healthy state. If any check fails, you can see error messages in the Microsoft Intune admin center. This guide contains some further instructions for troubleshooting issues that may cause checks to fail.
+The Azure network connection (ANC) periodically checks your environment to make sure that all requirements are met and that it's in a healthy state. If any check fails, you can see error messages in the Microsoft Intune admin center. This guide contains some further instructions for troubleshooting issues that might cause checks to fail.
 
 ## Active Directory domain join
 
@@ -61,24 +61,24 @@ If provisioning fails, make sure that:
 
 ## Azure subnet IP address range usage
 
-As part of the ANC setup, you're required to provide a subnet to which the Cloud PC will connect. For each Cloud PC, provisioning creates a virtual NIC and consumes an IP address from this subnet.
+As part of the ANC setup, you're required to provide a subnet to which the Cloud PC connects. For each Cloud PC, provisioning creates a virtual NIC and consumes an IP address from this subnet.
 
 Make sure that sufficient IP address allocation is available for the number of Cloud PCs you expect to provision. Also, plan enough address space for provisioning failures and potential disaster recovery.
 
 If this check fails, make sure that you:
 
 - Check the subnet in the Azure virtual network. It should have enough address space available.
-- Make sure there are enough addresses to handle three provisioning retries, each of which may hold onto the network addresses used for a few hours.
+- Make sure there are enough addresses to handle three provisioning retries, each of which might hold onto the network addresses used for a few hours.
 - Remove any unused virtual network interface cards (vNICs). It's best to use a dedicated subnet for Cloud PCs to make sure that no other services are consuming the allocation of IP addresses.
 - Expand the subnet to make more addresses available. This can't be completed if there are devices connected.
 
-During provisioning attempts, it's important to consider any CanNotDelete locks that may be applied at the resource group level or higher. If these locks are present, the network interfaces created in the process aren't automatically deleted. If they aren't automatically deleted, you must manually remove the vNICs before you can retry.
+During provisioning attempts, it's important to consider any CanNotDelete locks that might be applied at the resource group level or higher. If these locks are present, the network interfaces created in the process aren't automatically deleted. If they aren't automatically deleted, you must manually remove the vNICs before you can retry.
 
 During provisioning attempts, it's important to consider any existing locks at the resource group level or higher. If these locks are present, the network interfaces created in the process won't be automatically deleted. If the event occurs, you must manually remove the vNICs before you can retry.
 
 ## Azure tenant readiness
 
-When checks are performed, we check that the provided Azure subscription is valid and healthy. If it's not valid and healthy, we're unable to connect Cloud PCs back to your virtual network during provisioning. Problems such as billing issues may cause subscriptions to become disabled.
+When checks are performed, we check that the provided Azure subscription is valid and healthy. If it's not valid and healthy, we're unable to connect Cloud PCs back to your virtual network during provisioning. Problems such as billing issues might cause subscriptions to become disabled.
 
 Many organizations use Azure policies to make sure that resources are only provisioned into certain regions and services. You should make sure that any Azure policies consider the Cloud PC service and the supported regions.
 

@@ -69,7 +69,7 @@ Let the disconnect complete, and then launch a new connection using **Task view*
 
 ## Navigation between sign-in prompts and your Cloud PC
 
-After selecting a Cloud PC from the Task view, users might be prompted to sign in using their account credentials. In some builds of Windows, after providing the credentials, users might not be returned to the Cloud PC connection.
+After you select a Cloud PC from the Task view, users might be prompted to sign in using their account credentials. In some builds of Windows, after providing the credentials, users might not be returned to the Cloud PC connection.
 
 ### Solution
 
