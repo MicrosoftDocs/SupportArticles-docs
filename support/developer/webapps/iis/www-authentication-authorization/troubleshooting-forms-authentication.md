@@ -31,7 +31,7 @@ The following is an entry from the *Machine.config* file:
 </httpModule>
 ```
 
-You can configure forms authentication by using the authentication configuration element. For instance, you have a login page. In the configuration file, you specify a URL to redirect unauthenticated requests to the login page. 
+You can configure forms authentication by using the authentication configuration element, for example, setting a login page. In the configuration file, specify a URL to redirect unauthenticated requests to the login page. 
 
 After successful authentication, the `FormsAuthenticationModule` module sets the value of the User property to a reference to the authenticated user. The following code example shows how to programmatically read the identity of the forms-authenticated user.
 
