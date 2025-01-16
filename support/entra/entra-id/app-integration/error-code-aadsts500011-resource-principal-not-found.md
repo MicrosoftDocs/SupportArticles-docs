@@ -19,7 +19,7 @@ This article describes a problem in which a user receives the error message "AAD
 
 ## Symptoms
 
-The user receives the error `AADSTS500011` when trying to sign in to an application that has been integrated with Microsoft Entra ID.
+The user receives the error `AADSTS500011 - The resource principal named [resource URL] was not found in the tenant named [tenant ID]`, when trying to sign in to an application that has been integrated with Microsoft Entra ID.
 
 ## Cause
 
@@ -40,7 +40,7 @@ To resolve this issue, follow these steps:
 
    - Ensure that the application (resource principal) is registered correctly in your Microsoft Entra ID tenant.
       
-   - Go to the Azure Portal and navigate to Microsoft Entra > Enterprise Application.
+   - Go to the Azure Portal and navigate to Microsoft Entra ID > Enterprise applications.
       
    - Check if the application is listed and properly configured.
       
