@@ -31,11 +31,15 @@ Consider the following scenarios when using direct machine connectivity (not the
 - The connection to the machine is lost after some minutes (for example, 15 minutes).
 - The connection is re-established once a user logs back on to the machine.
 
+#### Scenario 3
+
+- When you sign out of your Windows computer and you go to the Power Automate portal, you see the machine status as disconnected.
+
 ## Cause
 
 Direct to machine connectivity uses Azure WCF relays to allow the Microsoft cloud to connect to on-premises machines and schedule desktop flow runs. The Power Automate Windows service that runs on-premises opens a relay listener that connects to the Azure cloud by opening web sockets.
 
-The most common cause of relay connectivity issues is the machine losing connection to the network. This can be caused by your machine not being powered on or losing network when no user is signed in to the machine for instance.
+The most common cause of relay connectivity issues is the machine losing connection to the network. This can be caused by your machine not being powered on or losing network when no user is signed in to the machine.
 
 The Power Automate service runs under its own Windows account (NT Service\UIFlowService by default) which must have access to the network and be able to connect to _*.servicebus.windows.net_ (for more information, see [network requirements](/power-automate/ip-address-configuration#desktop-flows-services-required-for-runtime).)
 
@@ -54,13 +58,16 @@ You can refer to [Proxy setup](https://support.microsoft.com/topic/power-automat
 
 2. Understand the topology of the network: what network devices does the traffic hop through before being handed off to the public internet: NAT, firewalls, proxies and so on. Get logs from these devices during impacted runs, and logs from the outermost network device attesting that the traffic to _*.servicebus.windows.net_ is handed off to the public internet.
 
-3. Get WCF logs from UI flow service. For more information, see the [Enable WCF tracing](#enable-wcf-tracing) section below.
+3. If your network traffic runs though a proxy, attempt to mitigate the issue by [changing the on-premises account](/power-automate/desktop-flows/troubleshoot#change-the-on-premises-service-account) with which the Power Automate service (UIFlowService) runs.
 
-4. Make sure your network configuration allows web socket traffic and long-running connections: a common pattern is proxies or other network devices killing connections after a set time.
+4. Get WCF logs from the Power Automate service (UIFlowService). For more information, see the [Enable WCF tracing](#enable-wcf-tracing) section below.
+
+5. Make sure your network configuration allows web socket traffic and long-running connections: a common pattern is proxies or other network devices killing connections after a set time.
 
 ## What information to include when opening a support ticket
 
 - Your network topology: what are the devices that traffic goes through. (see the step 2 in the section above)
+- Whether the Power Automate service (UIFlowService) on your machine is running as the default account ("NT SERVICE\UIFlowService") or if it has been changed to run as a different account
 - Logs from your network devices showing that the traffic is indeed handed off to the public internet. Include times of the issues and the time zones used by the logs.
 - WCF traces from the impacted machines. (see the [Enable WCF tracing](#enable-wcf-tracing) section below)
 - Desktop flow run IDs of impacted runs.
