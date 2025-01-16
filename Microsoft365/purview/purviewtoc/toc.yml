@@ -47,8 +47,12 @@
       href: ../audit-logs/useragent-property.md
   - name: Data Loss Prevention (DLP)
     items:
+    - name: Analyze endpoint DLP diagnostic logs
+      href: ../data-loss-prevention/analyze-endpoint-dlp-diagnostic-logs.md
     - name: Collect compliance diagnostics
       href: ../data-loss-prevention/collect-compliance-diagnostics.md
+    - name: Collect endpoint DLP diagnostic logs
+      href: ../data-loss-prevention/collect-endpoint-dlp-diagnostic-logs.md
     - name: Common scenarios for tips
       href: ../data-loss-prevention/data-loss-prevention-policy-tips.md
     - name: Data loss prevention not working
