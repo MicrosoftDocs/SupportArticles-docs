@@ -86,7 +86,7 @@ The following device compliance settings may report as **Not Compliant** when be
 
 **Troubleshooting steps to remove not compliant settings**:
 
-1. [Create a filter for all Cloud PCs](/windows-365/enterpris/create-filter#create-a-filter-for-all-cloud-pcs).
+1. [Create a filter for all Cloud PCs](/windows-365/enterprise/create-filter#create-a-filter-for-all-cloud-pcs).
 2. For any existing device compliance policies that both evaluate to a Cloud PC and contain either of the **Not Compliant** settings, use this new filter to exclude Cloud PCs from the policy assignment.
 3. Create a new device compliance policy without either of the **Not Compliant** settings and use this new filter to include Cloud PCs for the policy assignment.
 
@@ -117,7 +117,7 @@ When single sign-on isn't used, users can see the Cloud PC lock screen and enter
 
 When using single sign-on, all authentication behavior (including supported credential types and sign-in frequency) is driven through Microsoft Entra ID.
 
-**Troubleshooting**: To enforce periodic reauthentication through Microsoft Entra ID, create a Conditional Access policy using the [sign-in frequency control](/windows-365/enterpris/set-conditional-access-policies#configure-sign-in-frequency).
+**Troubleshooting**: To enforce periodic reauthentication through Microsoft Entra ID, create a Conditional Access policy using the [sign-in frequency control](/windows-365/enterprise/set-conditional-access-policies#configure-sign-in-frequency).
 
 ## I don’t see the Cloud PC reports on the Intune admin center Devices > Overview page
 
