@@ -82,9 +82,7 @@ The following update is available from the Microsoft Update Catalog:
 <details>
 <summary><b>How to obtain or download the latest cumulative update package for Linux</b></summary>
 
-To update SQL Server 2022 on Linux to the latest CU, you must first have the [Cumulative Update repository configured](/sql/linux/sql-server-linux-setup#repositories). Then, update your SQL Server packages by using the appropriate platform-specific update command.
-
-For installation instructions and direct links to the CU package downloads, see the [SQL Server 2022 Release Notes](/sql/linux/sql-server-linux-release-notes-2022).
+The cumulative update package isn't yet available for SQL Server 2022 on Linux. This article will be updated after the package is made available.
 
 </details>
 
