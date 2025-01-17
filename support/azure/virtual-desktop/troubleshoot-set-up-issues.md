@@ -24,7 +24,7 @@ To use the Windows 10 Enterprise multi-session image, go to Azure Marketplace, s
 
 ### Error: "Create a free account" appears when accessing the service
 
-:::image type="content" source="media/troubleshoot-set-up-issues/create-new-account.png" alt-text="Screenshot showing the Azure portal displaying the 'Create a free account' message.":::
+:::image type="content" source="media/troubleshoot-set-up-issues/create-new-account.png" alt-text="Screenshot of the Azure portal displaying the 'Create a free account' message.":::
 
 #### Cause
 
@@ -45,7 +45,7 @@ If your operation goes over the quota limit, you can do one of the following thi
 
 #### Cause
 
-This error usually happens after you've moved the subscription from one Microsoft Entra tenant to another. If your old assignments are still tied to the previous Microsoft Entra tenant, the Azure portal loses track of them.
+This error usually occurs after you move the subscription from one Microsoft Entra tenant to another. If your old assignments are still tied to the previous Microsoft Entra tenant, the Azure portal loses track of them.
 
 #### Resolution
 
@@ -55,7 +55,7 @@ You need to reassign users to application groups.
 
 #### Cause
 
-Azure doesn't currently support that region for the Azure Virtual Desktop service. For more information about which geographies we support, check out [Data locations](/azure/virtual-desktop/data-locations). If Azure Virtual Desktop supports the location but it still doesn't appear when you're trying to select a location, which means your resource provider hasn't updated yet.
+Azure doesn't currently support that region for the Azure Virtual Desktop service. For more information about which geographies we support, check out [Data locations](/azure/virtual-desktop/data-locations). If Azure Virtual Desktop supports the location but it still doesn't appear when you're trying to select a location, your resource provider hasn't updated yet.
 
 #### Resolution
 
@@ -63,7 +63,7 @@ To get the latest list of regions, re-register the resource provider:
 
 1. Go to **Subscriptions** and select the relevant subscription.
 2. Select **Resource Provider**.
-3. Select **Microsoft.DesktopVirtualization**, then select **Re-register** from the action menu.
+3. Select **Microsoft.DesktopVirtualization**, and then select **Re-register** from the action menu.
 
 When you re-register the resource provider, you won't see any specific UI feedback or update statuses. The re-registration process also won't interfere with your existing environments.
 
@@ -74,7 +74,7 @@ Follow these instructions to troubleshoot unsuccessful deployments of Azure Reso
 1. Review errors in the deployment using [View deployment operations with Azure Resource Manager](/azure/virtual-desktop/../azure-resource-manager/templates/deployment-history).
 2. If there are no errors in the deployment, review errors in the activity log using [View activity logs to audit actions on resources](/azure/azure-monitor/essentials/activity-log).
 3. Once the error is identified, use the error message and the resources in [Troubleshoot common Azure deployment errors with Azure Resource Manager](/azure/virtual-desktop/../azure-resource-manager/templates/common-deployment-errors) to address the issue.
-4. Delete any resources created during the previous deployment and retry deploying the template again.
+4. Delete any resources created during the previous deployment and retry deploying the template.
 
 ### Error: Your deployment failed….\<hostname>/joindomain
 
@@ -96,7 +96,7 @@ Credentials provided for joining VMs to the domain are incorrect.
 
 #### Resolution 1
 
-See the "Incorrect credentials" error for VMs aren't joined to the domain in [Session host VM configuration](/azure/virtual-desktop/troubleshoot-vm-configuration).
+See the "Incorrect credentials" error for VMs that aren't joined to the domain in [Session host VM configuration](/azure/virtual-desktop/troubleshoot-vm-configuration).
 
 #### Cause 2
 
@@ -112,10 +112,10 @@ Your virtual network (virtual network) DNS configuration is set to **Default**.
 
 #### Resolution 3
 
-To fix this, do the following things:
+To fix this issue, take the following steps:
 
 1. Open the Azure portal and go to the **Virtual networks** tab.
-2. Find your virtual network, then select **DNS servers**.
+2. Find your virtual network, and then select **DNS servers**.
 3. The DNS servers menu should appear on the right side of your screen. On that menu, select **Custom**.
 4. Make sure the DNS servers listed under **Custom** match your domain controller or Active Directory domain. If you don't see your DNS server, you can add it by entering its value into the **Add DNS server** field.
 
@@ -164,7 +164,7 @@ Example of raw error:
 
 #### Cause
 
-Password provided contains forbidden substrings (admin, administrator, root).
+The password provided contains forbidden substrings (admin, administrator, and root).
 
 #### Resolution
 
@@ -191,7 +191,7 @@ PowerShell DSC extension wasn't able to get admin access on the VM.
 
 #### Resolution
 
-Confirm username and password have administrative access on the virtual machine and run the Azure Resource Manager template again.
+Confirm the username and the password have administrative access on the virtual machine and run the Azure Resource Manager template again.
 
 ### Error: DeploymentFailed - PowerShell DSC Configuration 'FirstSessionHost' completed with errors
 
@@ -227,7 +227,7 @@ PowerShell DSC extension wasn't able to get admin access on the VM.
 
 #### Resolution
 
-Confirm username and password provided have administrative access on the virtual machine and run the Azure Resource Manager template again.
+Confirm the username and the password provided have administrative access on the virtual machine and run the Azure Resource Manager template again.
 
 ### Error: DeploymentFailed - InvalidResourceReference
 
@@ -285,7 +285,7 @@ resources are in the same region.\\\",\\r\\n \\\"details\\\": []\\r\\n }\\r\\n}\
 
 #### Cause
 
-This error is because the Network Interface Card (NIC) created with the Azure Resource Manager template has the same name as another NIC already in the virtual network.
+This error occurs because the Network Interface Card (NIC) created with the Azure Resource Manager template has the same name as another NIC already in the virtual network.
 
 #### Resolution
 
@@ -308,7 +308,7 @@ the VM.\\\"
 
 #### Cause
 
-This error is due to a static route, firewall rule, or Network Security Group (NSG) blocking the download of the zip file tied to the Azure Resource Manager template.
+This error occurs due to a static route, firewall rule, or Network Security Group (NSG) blocking the download of the zip file tied to the Azure Resource Manager template.
 
 #### Resolution
 
@@ -322,7 +322,7 @@ You need to delete the session host before you delete the VM.
 
 #### Resolution
 
-Put the session host in drain mode, sign out all users from the session host, then delete the host.
+Put the session host in drain mode, sign out all users from the session host, and then delete the host.
 
 ## Next steps
 
