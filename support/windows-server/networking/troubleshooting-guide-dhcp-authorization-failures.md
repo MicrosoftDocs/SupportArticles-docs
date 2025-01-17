@@ -1,7 +1,7 @@
 ---
-title: Guidance for troubleshooting DHCP authorization failures
+title: Guidance for Troubleshooting DHCP Authorization Failures
 description: Introduces general guidance for troubleshooting authorization failures related to DHCP.
-ms.date: 01/10/2025
+ms.date: 01/17/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -19,15 +19,15 @@ During the post-installation phase of the DHCP role on a server, you encounter t
 > Authorizing DHCP server ….. Failed  
 > The authorization of DHCP server failed with Error Code: 20070. The DHCP service could not contact Active Directory.
 
-The DHCP console displays a downward red arrow on the IPv4 section, indicating that the server isn't authorized.
+The DHCP console displays a left-pointing red arrow in the IPv4 section, indicating that the server isn't authorized.
 
-![DHCP console showing unauthorized status.](media/troubleshooting-guide-dhcp-authorization-failures/dhcp-console-showing-unauthorized-status.png)
+:::image type="content" source="media/troubleshooting-guide-dhcp-authorization-failures/dhcp-console-showing-unauthorized-status.png " alt-text="Screenshot of the DHCP console showing an unauthorized status.":::
 
-Event ID 1046 is logged in the System event logs, indicating that the DHCP server isn't authorized to lease out IP addresses:
+Event ID 1046 is logged in the System event logs, indicating that the DHCP server isn't authorized to lease IP addresses:
 
 > The DHCP/BINL service on the local machine, belonging to the Windows Administrative domain &lt;domain&gt;, has determined that it is not authorized to start. It has stopped servicing clients.
 
-![Event log indicating unauthorized status.](media/troubleshooting-guide-dhcp-authorization-failures/event-log-indicating-unauthorized-status.png)
+:::image type="content" source="media/troubleshooting-guide-dhcp-authorization-failures/event-log-indicating-unauthorized-status.png" alt-text="Screenshot of the event log indicating an unauthorized status.":::
 
 Manual attempts to authorize the DHCP server can also fail with the following error message:
 
@@ -35,38 +35,38 @@ Manual attempts to authorize the DHCP server can also fail with the following er
 
 ## DHCP authorization flow
 
-DHCP authorization ensures that only authorized servers can operate within an AD domain. This mechanism prevents unauthorized servers from distributing IP addresses, which could cause network conflicts and security issues.
+DHCP authorization ensures that only authorized servers can operate within an AD domain. This mechanism prevents unauthorized servers from distributing IP addresses, which can cause network conflicts and security issues.
 
-When a DHCP server is authorized, an entry is created in AD under the list of authorized servers. This behavior is accomplished through Lightweight Directory Access Protocol (LDAP) communications between the Domain Controller (DC) and the DHCP server. This list resides in the **Configuration** container of the AD schema.
+When a DHCP server is authorized, an entry is created in AD under the list of authorized servers. This behavior is accomplished through Lightweight Directory Access Protocol (LDAP) communications between the domain controller (DC) and the DHCP server. This list resides in the **Configuration** container of the AD schema.
 
-![Diagram about the entry created in AD.](media/troubleshooting-guide-dhcp-authorization-failures/diagram-about-the-entry-created-in-ad.png)
+:::image type="content" source=" media/troubleshooting-guide-dhcp-authorization-failures/entry-created-in-ad.png" alt-text="Screenshot showing the entry created in AD.":::
 
 The DHCP server validates its authorization status in Active Directory Domain Services (AD DS) every hour using LDAP. If the server's IP address isn't found in this list, the server deauthorizes itself.
 
-## Causes of authorization failure
+## Causes of authorization failures
 
-- **Permission Issues:** The account used to authorize the server doesn't have sufficient privileges.
-- **Missing Entries in AD:** The entry for the DHCP server might be deleted from AD's **Configuration** container.
-- **Connectivity Issues:** Network or firewall problems prevent communication between the DC and the DHCP server.
-- **AD Replication Problems:** Delays or issues can cause inconsistent entries, leading to duplicate or conflicting entries (for example, CNF objects) in AD's **Configuration** container. The DHCP server fails authorization with these entires.
+- **Permission issues: The account used to authorize the server doesn't have sufficient privileges.
+- Missing entries in AD: The entry for the DHCP server might be deleted from AD's **Configuration** container.
+- Connectivity Issues:** Network or firewall problems prevent communication between the DC and the DHCP server.
+- AD replication problems: Delays or issues can cause inconsistent entries, leading to duplicate or conflicting entries (for example, Conflict (CNF) objects) in AD's **Configuration** container. The DHCP server can't be authorized with these entries.
 
 ## Troubleshooting steps
 
-### Step 1: verify permissions
+### Step 1: Verify permissions
 
-Use an Enterprise Admin account to authorize the DHCP server. This account has sufficient permissions for making changes to AD.
+Use an Enterprise Administrator account to authorize the DHCP server. This account has sufficient permissions to make changes to AD.
 
-### Step 2: check authorization status
+### Step 2: Check the authorization status
 
-Run these commands to verify if the DHCP server's entry exists in AD's list of authorized servers:
+Run one of the following commands to verify if the DHCP server's entry exists in the list of authorized servers in AD:
 
-**PowerShell Command:**
+**PowerShell command:**
 
 ```powershell
 Get-DhcpServerInDC
 ```
 
-**Command Prompt Command:**
+**Command Prompt command:**
 
 ```cmd
 netsh dhcp show server
@@ -74,24 +74,24 @@ netsh dhcp show server
 
 Alternatively, use **ADSI Edit** to connect to the **Configuration** partition and verify if the server appears there:
 
-1. Open *adsiedit.msc* on the DC.
+1. Open **adsiedit.msc** on the DC.
 2. Connect to the **Configuration** container.
-3. Navigate through **Configuration** > **Services** > **NetServices**.
+3. Navigate to **Configuration** > **Services** > **NetServices**.
 4. Check if the DHCP server's name appears on the right pane.
 
-### Step 3: attempt manual authorization
+### Step 3: Try manual authorization
 
 If there's no existing entry for your server, follow these steps:
 
 1. Open **DHCP Management Console**.
-2. Right-click on your DHCP Server name.
+2. Right-click your DHCP server name.
 3. Select **Authorize**.
 
 If this fails, proceed further.
 
-### Step 4: verify connectivity
+### Step 4: Verify the connectivity
 
-Use the following tools to test the connectivity between the DHCP server and DC:
+Use the following tools to test the connectivity between the DHCP server and the DC:
 
 - **Ping** command for basic network connectivity checks between both servers.
 - **Test-NetConnection** command for TCP port 389 via PowerShell. For example:
@@ -100,39 +100,39 @@ Use the following tools to test the connectivity between the DHCP server and DC:
   Test-NetConnection -ComputerName <DC-IP> -Port 389
   ```
 
-Verify LDAP ports (TCP/UDP 389) are open and functional. Review firewalls settings to ensure these ports aren't blocked; resolve detected connectivity issues accordingly.
+Verify LDAP ports (TCP/UDP 389) are open and functional. Review firewall settings to ensure these ports aren't blocked. Resolve detected connectivity issues accordingly.
 
 Additionally, you can capture Wireshark traces to identify packet drops between the DC and the DHCP server.
 
-### Step 5: identify and resolve conflicting entries
+### Step 5: Identify and resolve conflicting entries
 
-1. Open *adsiedit.msc* and navigate to **Configuration** > **Services** > **NetServices**.
+1. Open **adsiedit.msc** and navigate to **Configuration** > **Services** > **NetServices**.
 
-2. Look for entries with the CNF tag (conflicting objects) with the server name. The CNF tag would be added under the attribute CN. For example:
+2. Look for entries with the CNF tag that include the server name. The CNF tag will be added under the attribute CN. For example:
 
    > cn &nbsp; &nbsp; &lt;fqdn&gt;CNF:ca69f501234
 
-In this case, the CNF object (conflicting object) needs to be deleted. It is recommended to take AD backup and then delete this object. Once the object is deleted, you can reauthorize the DHCP server.
+In this case, the CNF object needs to be deleted. We recommend that you take an AD backup and then delete this object. Once the object is deleted, you can reauthorize the DHCP server.
 
 ## Extra troubleshooting steps
 
-It could be possible that when you manually try to authorize the server, it works. Only for it fail again in couple days due to its entry being deleted in AD. In such cases, it would be important to understand why the entry keeps getting deleted in AD or who is deleting the entry from AD.
+When you manually try to authorize the server, it might work, but it fails again in a few days because its entry is deleted in AD. In such cases, it's important to understand why the entry keeps getting deleted in AD or who is deleting the entry from AD.
 
-To find who deleted the entry from the DC for the DHCP server, we can enable auditing on the DC which isn't enabled by default.  You can follow the steps in the article to enable logging.
+To find who deleted the entry from the DC for the DHCP server, you can enable auditing on the DC, which isn't enabled by default. Follow these steps to enable auditing:
 
-### Enabling auditing of active directory changes
+### Enable auditing of AD changes
 
-1. Open **Group Policy Management console** on the DC or run *gpmc.msc*.
+1. Open the **Group Policy Management console** on the DC or run **gpmc.msc**.
 
-2. Navigate to Domains > &lt;domain_name&gt; > Domain Controllers > **Default Domain Controller Policy**.
+2. Navigate to **Domains** > *Domain_Name* > **Domain Controllers** > **Default Domain Controller Policy**.
 
-3. Right-click and Edit the **Default Domain Controller Policy**.
+3. Right-click and edit the **Default Domain Controller Policy**.
 
 4. Navigate to: **Computer Configuration** > **Policies** > **Windows Settings** > **Advanced Audit Policy Configuration** > **Audit Policies** > **DS Access** > **Audit Directory Service Changes**. Enable **Success** and **Failure** attempts.
 
-### Setting up audits within Configuration containers
+### Set up auditing within the "Configuration" container
 
-1. Open *adsiedit.msc*.
+1. Open **adsiedit.msc**.
 
 2. Connect to the **Configuration** container.
 
@@ -144,42 +144,42 @@ To find who deleted the entry from the DC for the DHCP server, we can enable aud
 
 6. In the **Auditing** tab, select **Add**.
 
-7. Add the group **Everyone** and enable auditing for:
+7. Add the **Everyone** group and enable auditing for:
 
-   - Write All Properties
-   - Delete
-   - Delete Subtree
+   - **Write All Properties**
+   - **Delete**
+   - **Delete Subtree**
 
-8. Apply changes.
+8. Apply the changes.
 
-9. When the issue reoccurs, export the security event logs on the DC to identify who deleted or modified the DHCP entry.
+9. When the issue recurs, export the security event logs on the DC to identify who deleted or modified the DHCP entry.
 
-See the following example of the event deletion:
+See the following example of event deletion:
 
-> A directory service object was deleted.
->
-> Subject:  
-> &nbsp;&nbsp;&nbsp;&nbsp;Security ID: &lt;domain&gt;\administrator  
-> &nbsp;&nbsp;&nbsp;&nbsp;Account Name: Administrator  
-> &nbsp;&nbsp;&nbsp;&nbsp;Account Domain: &lt;domain&gt;  
-> &nbsp;&nbsp;&nbsp;&nbsp;Logon ID: 0x35D447
->
-> Directory Service:  
-> &nbsp;&nbsp;&nbsp;&nbsp;Name: &lt;url&gt;  
-> &nbsp;&nbsp;&nbsp;&nbsp;Type: Active Directory Domain Services
->
-> Object:  
-> &nbsp;&nbsp;&nbsp;&nbsp;DN: CN=&lt;fqdn&gt;,CN=NetServices,CN=Services,CN=Configuration,DC=&lt;domain&gt;,DC=com
+```output
+A directory service object was deleted.
 
-## Reference
+Subject:
+    Security ID: <domain>\administrator
+    Account Name: Administrator
+    Account Domain: <domain>
+    Logon ID: 0x35D447
 
-For more information, see [Configure auditing on configuration containers](/defender-for-identity/deploy/configure-windows-event-collection#configure-auditing-on-the-configuration-container).
+Directory Service:
+    Name: <url>
+    Type: Active Directory Domain Services
+
+Object:
+    DN: CN=<fqdn>,CN=NetServices,CN=Services,CN=Configuration,DC=<domain>,DC=com
+```
+
+For more information, see [Configure auditing on the configuration container](/defender-for-identity/deploy/configure-windows-event-collection#configure-auditing-on-the-configuration-container).
 
 ## Data collection
 
 Before contacting Microsoft support, you can gather information about your issue. 
 
-Follow the steps provided [here](../../windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss.md) to download and collect logs using TSS tool. And then use this command for enabling log collection on the impacted computers.
+Follow the steps provided in [Introduction to TroubleShootingScript toolset (TSS)](../../windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss.md) to download and collect logs using the TSS tool. Then, use this command to enable log collection on the impacted computer.
 
 ```powershell
 .\TSS.ps1 -Scenario NET_DHCPsrv
