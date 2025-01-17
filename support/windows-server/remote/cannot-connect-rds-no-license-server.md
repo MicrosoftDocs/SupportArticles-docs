@@ -11,7 +11,7 @@ keywords: RD Licensing server, RD CAL
 ---
 # Cannot connect to RDS because no RD Licensing servers are available
 
-This article helps you troubleshoot the "No licenses available" error in a deployment that includes an Remote Desktop Session Host (RDSH) server and a Remote Desktop Licensing server.
+This article helps you troubleshoot the "No licenses available" error in a deployment that includes a Remote Desktop Session Host (RDSH) server and a Remote Desktop Licensing server.
 
 ## Symptoms
 
@@ -44,7 +44,7 @@ These issue could be caused by the following user messages:
 
 In this case, [check the RD Licensing configuration](#check-the-rd-licensing-configuration).
 
-If the RD License Diagnoser lists other problems, such as "The RDP protocol component X.224 detected an error in the protocol stream and has disconnected the client", there may be a problem that affects the license certificates. Such problems tend to be associated with user messages, such as the following:
+If the RD License Diagnoser lists other problems, such as "The RDP protocol component X.224 detected an error in the protocol stream and has disconnected the client," there may be a problem that affects the license certificates. Such problems tend to be associated with user messages, such as the following:
 
 Because of a security error, the client could not connect to the Terminal server. After making sure that you are signed in to the network, try connecting to the server again.
 
@@ -122,14 +122,14 @@ For more information, see ["Your session will be disconnected in 60 minutes" mes
 
 Check the **Access this computer from the network** security policy setting under **Computer Configuration**\\**Windows Settings**\\**Security Settings**\\**Local Policies**\\**User Rights Assignment** in the Local Group Policy Editor.
 
-Assign this right to **Authenticated Users**, **Domain Computers** or Session Host computer account if **Everyone** isn't assigned. 
+Assign this right to **Authenticated Users**, **Domain Computers, or Session Host computer account if **Everyone** isn't assigned. 
 
 For more information, see [Access this computer from the network - security policy setting](/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/access-this-computer-from-the-network#best-practices).
 
 ## Refresh the X509 Certificate registry keys
 
 > [!IMPORTANT]  
-> Follow this section's instructions carefully. Serious problems can occur if the registry is modified incorrectly. Before you starty modifying the registry, [back up the registry](https://support.microsoft.com/help/322756) so you can restore it in case something goes wrong.
+> Follow this section's instructions carefully. Serious problems can occur if the registry is modified incorrectly. Before you start modifying the registry, [back up the registry](https://support.microsoft.com/help/322756) so you can restore it in case something goes wrong.
 
 To resolve this problem, back up and then remove the X509 Certificate registry keys, restart the computer, and then reactivate the RD Licensing server. Follow these steps.
 
@@ -138,7 +138,7 @@ To resolve this problem, back up and then remove the X509 Certificate registry k
 
 Here's how to reactivate the RD Licensing server:
 
-1. Open the Registry Editory and navigate to **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\\RCM**.
+1. Open the Registry Editor and navigate to **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\\RCM**.
 2. On the Registry menu, select **Export Registry File**.
 3. Enter **exported- Certificate** into the **File name** box, then select **Save**.
 4. Right-click each of the following values, select **Delete**, and then select **Yes** to verify the deletion:  
