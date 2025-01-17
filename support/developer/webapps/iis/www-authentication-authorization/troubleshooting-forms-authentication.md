@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting Forms Authentication
 description: This article helps you troubleshoot problems related to Forms Authentication.
-ms.date: 11/22/2023
+ms.date: 01/17/2025
 ms.reviewer: senyum, apurvajo, v-jayaramanp
 ms.topic: troubleshooting
 ms.custom: sap:WWW Authentication and Authorization\Forms authentication
@@ -21,9 +21,9 @@ Forms authentication lets you authenticate users by using your own code and then
 
 To use forms authentication, create a login page that collects credentials from the user and  includes code to authenticate the credentials. Typically, you configure the application to redirect requests to the login page when users try to access a protected resource, such as a page that requires authentication. If the user's credentials are valid, you can call methods of the `FormsAuthentication` class to redirect the request back to the originally requested resource with an appropriate authentication ticket (cookie). If you don't want the redirection, you can just get the forms authentication cookie or set it. On subsequent requests, your browser passes the authentication cookie with the request, which then bypasses the login page.
 
-By default, the `FormsAuthenticationModule` class is added in the *Machine.config* file. The `FormsAuthenticationModule` class manages the Forms Authentication process.
+By default, the `FormsAuthenticationModule` class is added in the **Machine.config** file. The `FormsAuthenticationModule` class manages the Forms Authentication process.
 
-The following is an entry from the *Machine.config* file:
+You can see the following entry in the **Machine.config** file:
 
 ```xml
 <httpModule> 
@@ -31,18 +31,7 @@ The following is an entry from the *Machine.config* file:
 </httpModule>
 ```
 
-You can configure forms authentication by using the authentication configuration element. For instance, you have a login page. In the configuration file, you specify a URL to redirect unauthenticated requests to the login page. Then define valid credentials, either in the *Web.config* file or in a separate file. The following example shows a section from a configuration file that specifies a login page and authentication credentials for the `Authenticate` method. The passwords have been encrypted by using the `HashPasswordForStoringInConfigFile` method.
-
-```xml
-<authentication mode="Forms"> 
-     <forms name="MyAuthCookie" loginUrl="/Login.aspx">     
-       <credentials passwordFormat="SHA1">        
-         <user name="Kim" password="07B7F3EE06F278DB966BE960E7CBBD103DF30CA6" />         
-         <user name="John" password="BA56E5E0366D003E98EA1C7F04ABF8FCB3753889"/>         
-       </credentials>
-     </forms>
-</authentication>
-```
+You can configure forms authentication by using the authentication configuration element, for example, setting a login page. In the configuration file, specify a URL to redirect unauthenticated requests to the login page. 
 
 After successful authentication, the `FormsAuthenticationModule` module sets the value of the User property to a reference to the authenticated user. The following code example shows how to programmatically read the identity of the forms-authenticated user.
 
@@ -187,13 +176,14 @@ When you see the request that reached the server, make sure that the server rece
 
 ### Troubleshooting scenario 5
 
-- If the scenario involves a web farm, then the machineKeys should be same across everywhere. Use the following machineKey to maintain the consistency on all the servers on the farm:
+- If the scenario involves a web farm, the machineKeys should be same across everywhere. Use the following machineKey to maintain the consistency on all the servers on the farm:
 
-    ```xml
-    <machineKey validationKey="[your key here]" decryptionKey="[your key here]" validation="SHA1" />
-    ```
+  ```xml
+  <machineKey validationKey="<yourKey>" decryptionKey="<yourKey>" validation="SHA1" />
+  ```
 
-    For more information on machine keys, see [Machine Key](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831711(v=ws.11)) and [Plan Application Security](https://learn.microsoft.com/en-us/iis/application-frameworks/scenario-build-an-aspnet-website-on-iis/planning-step-4-plan-application-security#44-machine-key-settings). To learn how to generate machine keys, see [Machine Key Settings](https://learn.microsoft.com/en-us/iis/application-frameworks/scenario-build-an-aspnet-website-on-iis/configuring-step-4-configure-application-security#44-machine-key-settings). 
+  For more information on machine keys, see [Machine Key](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831711(v=ws.11)) and [Plan Application Security](/iis/application-frameworks/scenario-build-an-aspnet-website-on-iis/planning-step-4-plan-application-security#44-machine-key-settings).
+  To learn how to generate machine keys, see [Machine Key Settings](/iis/application-frameworks/scenario-build-an-aspnet-website-on-iis/configuring-step-4-configure-application-security#44-machine-key-settings). 
 
 - Compare the timeout values for both forms that is authentication module and the session module on all of the web servers.
 - Compare the *System.Web.dll* version under Framework folder for ASP.NET 4 between all of the web servers in the farm. Forms authentication failed for the request. The reason is that the ticket supplied was invalid. This happens due to missing Reliability Update 1 for MS .NET framework 4 on one of the web server.
