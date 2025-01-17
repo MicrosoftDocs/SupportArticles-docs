@@ -4,7 +4,7 @@ description: Learn how to troubleshoot RDP Shortpath for public networks for Azu
 author: dknappettmsft
 ms.topic: troubleshooting
 ms.date: 02/02/2023
-ms.author: daknappe
+ms.reviewer: daknappe
 ---
 # Troubleshoot RDP Shortpath for public networks
 

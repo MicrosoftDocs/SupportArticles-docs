@@ -4,7 +4,7 @@ description: An overview for troubleshooting issues while setting up an Azure Vi
 author: dknappettmsft
 ms.topic: troubleshooting
 ms.date: 10/14/2021
-ms.author: daknappe
+ms.reviewer: daknappe
 ms.custom: docs_inherited
 ---
 

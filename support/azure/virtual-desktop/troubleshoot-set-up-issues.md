@@ -5,7 +5,7 @@ author: dknappettmsft
 ms.topic: troubleshooting
 ms.custom: references_regions, devx-track-arm-template, docs_inherited
 ms.date: 02/17/2021
-ms.author: daknappe
+ms.reviewer: daknappe
 ---
 
 # Troubleshoot host pool creation

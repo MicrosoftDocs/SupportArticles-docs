@@ -87,7 +87,7 @@
       "feedback_product_url": {
         "dynamics/gp/*.md": "https://experience.dynamics.com/ideas/categories/?forum=771cc5ac-c117-e811-8105-3863bb2e0320&forumName=Dynamics%20GP",
         "dynamics-365/customer-insights/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights",
-        "dynamics-365/business-central/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=e288ef32-82ed-e611-8101-5065f38b21f1&forumName=Dynamics%20365%20Business%20Central",        
+        "dynamics-365/business-central/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=e288ef32-82ed-e611-8101-5065f38b21f1&forumName=Dynamics%20365%20Business%20Central",
         "dynamics-365/finance/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=16691718-61e2-e611-8101-5065f38b21f1&forumName=Dynamics%20365%20Finance",
         "dynamics-365/commerce/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=fd509429-7e87-e711-8105-c4346bb5988c&forumName=Dynamics%20365%20Commerce",
         "dynamics-365/customer-service/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=b68e50a6-88d9-e811-a96b-000d3a1be7ad&forumName=Dynamics%20365%20Customer%20Service",
@@ -134,6 +134,7 @@
       },
       "author": {
         "**/*.md": "ChristySu",
+        "azure/virtual-desktop/**/*.md": "Deland-Han",
         "azure/**/*.md": "genlin",
         "entra/**/*.md": "genlin",
         "azure/devops/**/*.md": "HaiyingYu",
@@ -166,6 +167,7 @@
       },
       "ms.author": {
         "**/*.md": "christys",
+        "azure/virtual-desktop/**/*.md": "delhan",
         "azure/**/*.md": "genli",
         "entra/**/*.md": "genli",
         "azure/devops/**/*.md": "haiyingyu",

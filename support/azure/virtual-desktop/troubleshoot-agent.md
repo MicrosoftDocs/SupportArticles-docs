@@ -4,7 +4,7 @@ description: How to resolve common Azure Virtual Desktop Agent and connectivity 
 author: dknappettmsft
 ms.topic: troubleshooting
 ms.date: 04/21/2023
-ms.author: daknappe
+ms.reviewer: daknappe
 ms.custom: docs_inherited
 ---
 

@@ -4,7 +4,7 @@ description: How to troubleshoot issues with Azure Virtual Desktop Insights.
 author: dknappettmsft
 ms.topic: troubleshooting
 ms.date: 09/12/2023
-ms.author: daknappe
+ms.reviewer: daknappe
 ms.custom: docs_inherited
 ---
 # Troubleshoot Azure Virtual Desktop Insights

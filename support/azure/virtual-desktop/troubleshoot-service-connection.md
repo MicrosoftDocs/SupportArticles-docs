@@ -4,7 +4,7 @@ description: How to resolve issues while setting up service connections in an Az
 author: dknappettmsft
 ms.topic: troubleshooting
 ms.date: 10/15/2020
-ms.author: daknappe
+ms.reviewer: daknappe
 ms.custom: docs_inherited
 ---
 

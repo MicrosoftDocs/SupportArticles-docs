@@ -4,7 +4,7 @@ description: How to resolve issues when you're configuring Azure Virtual Desktop
 author: dknappettmsft
 ms.topic: troubleshooting
 ms.date: 05/11/2020
-ms.author: daknappe
+ms.reviewer: daknappe
 ms.custom: docs_inherited
 ---
 

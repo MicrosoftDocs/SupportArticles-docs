@@ -4,7 +4,7 @@ description: Learn how to troubleshoot app attach in Azure Virtual Desktop, wher
 author: dknappettmsft
 ms.topic: troubleshooting
 ms.date: 03/05/2024
-ms.author: daknappe
+ms.reviewer: daknappe
 ---
 
 # Troubleshoot app attach in Azure Virtual Desktop

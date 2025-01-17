@@ -4,7 +4,7 @@ description: Known issues and troubleshooting instructions for multimedia redire
 author: dknappettmsft
 ms.topic: troubleshooting
 ms.date: 06/27/2024
-ms.author: daknappe
+ms.reviewer: daknappe
 ms.custom: docs_inherited
 ---
 # Troubleshoot multimedia redirection for Azure Virtual Desktop

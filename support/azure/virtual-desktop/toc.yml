@@ -1,4 +1,6 @@
 items:
+- name: Troubleshoot Azure Virtual Desktop
+  href: ./welcome-virtual-desktop.yml
 - name: Azure Virtual Desktop Agent
   href: ./troubleshoot-agent.md
 - name: App attach

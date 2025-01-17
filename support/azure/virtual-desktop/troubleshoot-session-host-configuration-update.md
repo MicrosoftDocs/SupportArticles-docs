@@ -3,7 +3,7 @@ title: Troubleshoot session host configuration and session host update - Azure V
 description: Troubleshooting guidance to help with session host configuration and session host update.
 ms.topic: troubleshooting
 author: dknappettmsft
-ms.author: daknappe
+ms.reviewer: daknappe
 ms.date: 11/12/2024
 ---
 

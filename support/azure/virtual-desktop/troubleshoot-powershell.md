@@ -4,7 +4,7 @@ description: How to troubleshoot issues with PowerShell when you set up an Azure
 author: dknappettmsft
 ms.topic: troubleshooting
 ms.date: 06/05/2020
-ms.author: daknappe
+ms.reviewer: daknappe
 ms.custom: devx-track-azurepowershell, docs_inherited
 ---
 
