@@ -45,7 +45,7 @@ The DHCP server validates its authorization status in Active Directory Domain Se
 
 ## Causes of authorization failures
 
-- **Permission issues: The account used to authorize the server doesn't have sufficient privileges.
+- Permission issues: The account used to authorize the server doesn't have sufficient privileges.
 - Missing entries in AD: The entry for the DHCP server might be deleted from AD's **Configuration** container.
 - Connectivity Issues:** Network or firewall problems prevent communication between the DC and the DHCP server.
 - AD replication problems: Delays or issues can cause inconsistent entries, leading to duplicate or conflicting entries (for example, Conflict (CNF) objects) in AD's **Configuration** container. The DHCP server can't be authorized with these entries.
@@ -128,7 +128,7 @@ To find who deleted the entry from the DC for the DHCP server, you can enable au
 
 3. Right-click and edit the **Default Domain Controller Policy**.
 
-4. Navigate to: **Computer Configuration** > **Policies** > **Windows Settings** > **Advanced Audit Policy Configuration** > **Audit Policies** > **DS Access** > **Audit Directory Service Changes**. Enable **Success** and **Failure** attempts.
+4. Navigate to **Computer Configuration** > **Policies** > **Windows Settings** > **Advanced Audit Policy Configuration** > **Audit Policies** > **DS Access** > **Audit Directory Service Changes**. Enable **Success** and **Failure** attempts.
 
 ### Set up auditing within the "Configuration" container
 
