@@ -65,7 +65,7 @@ You can use the PortQryUI tool (a graphical user interface (GUI) port scanner) t
 
 ### Find which ports SQL Server listening on
 
-The following article provides steps to identify which ports SQL Server is listening on: [Check whether SQL Server is listening on dynamic or static ports](../connect/static-or-dynamic-port-config.md).
+This article [Check whether SQL Server is listening on dynamic or static ports](../connect/static-or-dynamic-port-config.md) provides steps to identify which ports SQL Server is listening on.
 
 ### Get a detailed diagnostic report with SQLCheck
 
