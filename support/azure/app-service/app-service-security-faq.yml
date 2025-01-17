@@ -1,7 +1,4 @@
 ### YamlMime:FAQ
-
-
-
 metadata:
   title: FAQs about App Service Security
   description: Describes common questions and answers about App Service Security
@@ -9,34 +6,18 @@ metadata:
   author: hepiet
   ms.topic: faq
 title: Frequently asked questions about App Service Security
-
 summary: >-
-
-
-
-
   - name: Common questions
 
   This article answers common questions about [App Service Security](/azure/app-service/overview-security). [INCLUDE
       - question: >-
-
-
         answer: >-
-
         answer: |
-
-
       - question: >-
-
           How do I know whether a specific CVE (common vulnerability) or known security issue applies to my Web App?
         answer: 
-
-
       - question: |
-
-
           If your question wasn’t answered and you still need assistance, have these answers where possible before submitting a request at [Azure support](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot). 
-
 
           If your question wasn’t answered and you still need support, have the number of the CVE you would like to check and report a vulnerability on [Microsoft Security Response Center](https://msrc.microsoft.com/) or submit a support request at [Azure support](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot).
       - question: |
@@ -49,8 +30,6 @@ summary: >-
           
         answer: >-
 
-
-
           For [Azure App Service Environment](/azure/app-service/environment/overview) (ASE) you can set your own ciphers through Azure Resource Explorer, refer to [Change TLS cipher suite order](/azure/app-service/environment/app-service-app-service-environment-custom-settings) for setting guidance.
 
           - Is the patch already applied in Azure or not.
@@ -61,7 +40,6 @@ summary: >-
           A cipher suite is a set of instructions that contains algorithms and protocols to help secure network connections between clients and servers. By default the front-end's OS would pick the most secure cipher suite that is supported by both the front-end and the client. However, if the client only supports weak cipher suites, then the front-end's OS would pick a weak cipher suite that they both support. To help you have a clearer understanding of Cipher suites, see[Demystifying Cipher Suites on Azure AppServices](https://techcommunity.microsoft.com/blog/appsonazureblog/demystifying-cipher-suites-on-azure-app-services/2656254).
         answer: >-
 
-
           Check [Azure App Service TLS overview](/azure/app-service/overview-tls) for more information.
       - question: How do I disable weak ciphers on Azure App Service?
         answer: |
@@ -70,20 +48,10 @@ summary: >-
 
         answer: >-
 
-
-
-
-
-
-
-
           You can also check our [FAQ on App Service cipher suites](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/faq-on-app-service-cipher-suites/ba-p/3881922).
       - question: How do I report a DDoS or Suspicious Activity?
         answer: |
           Microsoft can't take much direct action in this situation, as the permanent fix may be to implement a [WAF](/azure/web-application-firewall/ag/ag-overview) or deploy updated site code.
-
-
-
 
         answer:  >-
 
