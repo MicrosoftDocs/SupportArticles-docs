@@ -3,7 +3,7 @@ title: Data Capture for Managed Memory Leaks
 description: This article provides methods to capture data for managed memory leaks.
 ms.date: 12/30/2024
 ms.custom: sap:Site Behavior and Performance\High memory usage
-ms.reviewer: khgupta, v-sidong
+ms.reviewer: khgupta, v-sidong, mouradl, apkakh
 ---
 
 # Data capture for managed memory leaks
@@ -12,6 +12,8 @@ If your application is consuming high memory due to [managed memory leaks](high-
 collect memory dumps of the process during the high memory usage event. These dumps can help you analyze and diagnose the cause of these leaks.
 
 This article outlines the steps to capture memory dumps associated with managed memory leaks, both for consistently reproducible and intermittent cases.
+
+For more information on how to analyze memory dumps along with an example scenario, see [Troubleshooting example](high-memory-consumption-issues-overview.md#troubleshooting-example).
 
 ## Memory leak issue is easily replicable
 

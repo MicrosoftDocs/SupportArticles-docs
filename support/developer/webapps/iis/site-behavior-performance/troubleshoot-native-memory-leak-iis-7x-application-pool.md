@@ -218,3 +218,4 @@ By using Perfmon and DebugDiag, you can easily collect data that can be helpful 
 ## Other resources
 
 - [How to use the IIS Debug Diagnostics tool to troubleshoot a memory leak in an IIS process](https://support.microsoft.com/topic/how-to-use-the-debug-diagnostics-tool-to-troubleshoot-a-process-that-has-stopped-responding-in-iis-995db9a3-a3be-6d20-cf2f-c48101a64444)
+- [Overview of high memory consumption issues](high-memory-consumption-issues-overview.md)

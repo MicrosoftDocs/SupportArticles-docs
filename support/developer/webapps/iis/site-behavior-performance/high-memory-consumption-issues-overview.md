@@ -3,7 +3,7 @@ title: Troubleshoot High Memory Usage in Applications
 description: Provides information on how to troubleshoot high memory consumption issues in applications.
 ms.date: 12/31/2024
 ms.custom: sap:Site Behavior and Performance\High memory usage
-ms.reviewer: khgupta, v-sidong
+ms.reviewer: khgupta, v-sidong, mouradl, apkakh
 ---
 # Overview of high memory consumption issues
 
@@ -365,5 +365,5 @@ Assume you have an application hosted on an IIS server and you experience high m
 ## More information
 
 - [Use Performance Monitor to find a user-mode memory leak](/windows-hardware/drivers/debugger/using-performance-monitor-to-find-a-user-mode-memory-leak)
-
 - [Data capture for managed memory leaks](data-capture-managed-memory-leak.md)
+- [Troubleshoot native memory leak in an IIS 7.x application pool](troubleshoot-native-memory-leak-iis-7x-application-pool.md)
