@@ -1,17 +1,17 @@
 ---
 title: Cannot connect to RDS because no RD Licensing servers are available
 description: This article describes how to troubleshoot RDS connection errors that are related to Remote Desktop licensing.
-ms.date: 12/26/2023
+ms.date: 01/17/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, v-tappelgate
+ms.reviewer: kaushika, v-tappelgate, rafx
 ms.custom: sap:Remote Desktop Services and Terminal Services\Licensing for Remote Desktop Services (Terminal Services), csstroubleshoot
 keywords: RD Licensing server, RD CAL
 ---
 # Cannot connect to RDS because no RD Licensing servers are available
 
-This article help you troubleshoot the "No licenses available" error in a deployment that includes an Remote Desktop Session Host (RDSH) server and a Remote Desktop Licensing server.
+This article helps you troubleshoot the "No licenses available" error in a deployment that includes an Remote Desktop Session Host (RDSH) server and a Remote Desktop Licensing server.
 
 ## Symptoms
 
@@ -111,23 +111,20 @@ You can check the RD Licensing configuration by using Server Manager and RD Lice
 
 Make sure that the required ports are open on the firewalls between the RD Session Host and the RD Licensing server.
 
-For lists of the ports that have to be open between the different RDS components, see the following articles:
+For lists of the ports that have to be open between the different RDS components, see:
 
 - [RDS 2012: Which ports are used during deployment?](/archive/technet-wiki/16164.rds-2012-which-ports-are-used-during-deployment)
+- [Service overview and network port requirements for Windows](../networking/service-overview-and-network-port-requirements.md)
 
-- [Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements)
-
-["Your session will be disconnected in 60 minutes" message when you connect to RDS](/troubleshoot/windows-server/remote/your-session-will-be-disconnected-in-60-minutes)
+For more information, see ["Your session will be disconnected in 60 minutes" message when you connect to RDS](your-session-will-be-disconnected-in-60-minutes.md)
 
 ## Check security policy setting - Access this computer from the network
 
-Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment
+Check the **Access this computer from the network** security policy setting under **Computer Configuration**\\**Windows Settings**\\**Security Settings**\\**Local Policies**\\**User Rights Assignment** in the Local Group Policy Editor.
 
-Access this computer from the network
+Assign this right to **Authenticated Users**, **Domain Computers** or Session Host computer account if **Everyone** isn't assigned. 
 
-Assigning this right to Authenticated Users or Domain Computers or Session host computer account if Everyone is not assigned. 
-
-[Access this computer from the network - security policy setting](/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/access-this-computer-from-the-network#best-practices)
+For more information, see [Access this computer from the network - security policy setting](/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/access-this-computer-from-the-network#best-practices)
 
 ## Refresh the X509 Certificate registry keys
 
