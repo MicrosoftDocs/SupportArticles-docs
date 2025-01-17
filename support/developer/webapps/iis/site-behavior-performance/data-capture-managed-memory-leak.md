@@ -1,7 +1,7 @@
 ---
 title: Data Capture for Managed Memory Leaks
 description: This article provides methods to capture data for managed memory leaks.
-ms.date: 12/30/2024
+ms.date: 01/17/2025
 ms.custom: sap:Site Behavior and Performance\High memory usage
 ms.reviewer: khgupta, v-sidong, mouradl, apkakh
 ---

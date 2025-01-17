@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot High Memory Usage in Applications
 description: Provides information on how to troubleshoot high memory consumption issues in applications.
-ms.date: 12/31/2024
+ms.date: 01/17/2025
 ms.custom: sap:Site Behavior and Performance\High memory usage
 ms.reviewer: khgupta, v-sidong, mouradl, apkakh
 ---
