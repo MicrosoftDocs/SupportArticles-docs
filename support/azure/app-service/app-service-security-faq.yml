@@ -6,107 +6,18 @@ metadata:
   author: hepiet
   ms.topic: faq
 title: Frequently asked questions about App Service Security
-summary: >-
-  - name: Common questions
-
-  This article answers common questions about [App Service Security](/azure/app-service/overview-security). [INCLUDE
-      - question: >-
-        answer: >-
-        answer: |
-      - question: >-
-          How do I know whether a specific CVE (common vulnerability) or known security issue applies to my Web App?
-        answer: 
-      - question: |
-          If your question wasn’t answered and you still need assistance, have these answers where possible before submitting a request at [Azure support](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot). 
-
-          If your question wasn’t answered and you still need support, have the number of the CVE you would like to check and report a vulnerability on [Microsoft Security Response Center](https://msrc.microsoft.com/) or submit a support request at [Azure support](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot).
-      - question: |
-
-        answer: >-
-
-          If your question wasn't answered and you still need assistance, have these answers where possible before submitting a request at [Azure support](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot). 
+summary: |
+  This article answers common questions about [App Service Security](/azure/app-service/overview-security). 
+  sections:
+      - name:  FAQs
+        questions:
+          - question: |
+              How do I know whether a specific CVE (common vulnerability) or known security issue applies to my Web App?
+            answer: |
+              The Microsoft Security Response Center (MSRC) investigates all reports of security vulnerabilities affecting Microsoft products and services. MSRC provides the information at the [Security Update Guide](https://msrc.microsoft.com/update-guide/vulnerability) as part of the ongoing effort to help you manage security risks and help keep your systems protected.
+          - question: |
+              How do I know when a particular specific version of software or security patch will be installed at the Azure platform runtime?
+            answer: |
+              App Service is a platform with various underlying technologies like Windows, Linux, and web application frameworks. Updates are applied at a routine cadence for OS, host runtime, and Microsoft image repo.
           
-          You can check [OS and runtime patching in Azure App Service](/azure/app-service/overview-patch-os-runtime) to know more when updates are applied and [Guest OS patches](/azure/cloud-services/cloud-services-guestos-msrc-releases) to check the updates applied to the Azure Guest OS.
-          
-        answer: >-
-
-          For [Azure App Service Environment](/azure/app-service/environment/overview) (ASE) you can set your own ciphers through Azure Resource Explorer, refer to [Change TLS cipher suite order](/azure/app-service/environment/app-service-app-service-environment-custom-settings) for setting guidance.
-
-          - Is the patch already applied in Azure or not.
-      - question: Is TLS 1.3 supported on Azure App Service?
-        answer: |
-
-          For incoming requests to your web app, App Service supports TLS versions 1.0, 1.1, 1.2, and 1.3.
-          A cipher suite is a set of instructions that contains algorithms and protocols to help secure network connections between clients and servers. By default the front-end's OS would pick the most secure cipher suite that is supported by both the front-end and the client. However, if the client only supports weak cipher suites, then the front-end's OS would pick a weak cipher suite that they both support. To help you have a clearer understanding of Cipher suites, see[Demystifying Cipher Suites on Azure AppServices](https://techcommunity.microsoft.com/blog/appsonazureblog/demystifying-cipher-suites-on-azure-app-services/2656254).
-        answer: >-
-
-          Check [Azure App Service TLS overview](/azure/app-service/overview-tls) for more information.
-      - question: How do I disable weak ciphers on Azure App Service?
-        answer: |
-
-          A cipher suite is a set of instructions that contains algorithms and protocols to help secure network connections between clients and servers. By default the front-end’s OS would pick the most secure cipher suite that is supported by both the front-end and the client. However, if the client only supports weak cipher suites, then the front-end’s OS would pick a weak cipher suite that they both support. To help you have a clearer understanding of Cipher suites, see[Demystifying Cipher Suites on Azure AppServices](https://techcommunity.microsoft.com/blog/appsonazureblog/demystifying-cipher-suites-on-azure-app-services/2656254).
-
-        answer: >-
-
-          You can also check our [FAQ on App Service cipher suites](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/faq-on-app-service-cipher-suites/ba-p/3881922).
-      - question: How do I report a DDoS or Suspicious Activity?
-        answer: |
-          Microsoft can't take much direct action in this situation, as the permanent fix may be to implement a [WAF](/azure/web-application-firewall/ag/ag-overview) or deploy updated site code.
-
-        answer:  >-
-
-          [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview) is a DNS-based traffic load balancer that enables you to distribute traffic optimally to services across global Azure regions, while providing high availability and responsiveness. However, Traffic Manager doesn't provide protection against DDoS attacks.
-
-          You can use [Azure DDoS Protection](/azure/ddos-protection/ddos-protection-overview) to protect your Azure resources from Distributed Denial of Service (DDoS)
-          attacks. Backed by the Microsoft global network, DDoS Protection brings massive DDoS mitigation capacity to every Azure region. Scrub traffic at the Azure network edge before it can affect the availability of your service.
-      - question: I suspect my site is being hacked, what should I do?
-          
-
-          Microsoft secures and [frequently updates the hosting environment and infrastructure](/azure/app-service/overview-patch-os-runtime). If the site is hacked or defaced it's almost always because some aspect of the site itself is exploited, commonly an outdated package.
-          You can [restore a backup](/azure/app-service/manage-backup) or redeploy the site, but this isn't a long term fix if the security issue isn't fixed.
-
-          App Service doesn't prevent insecure apps from running. If the site is somehow vulnerable, the only permanent fix is to deploy updated site code. This is an action that you must do as Microsoft can't update the site code.
-        answer:  |
-
-
-
-          [Azure support](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot) can assist with reviewing the Web App's HTTP logs and deployment history, to identify when the unknown file was first accessed or what suspicious patterns appear in the logs.
-        answer: >-
-
-
-           - For Outbound IP blacklisted the only option to get dedicated Outbound IP addresses is to use [App Service Environment](/azure/app-service/environment/networking), apps running in the public multi-tenant service use outbound addresses from a shared address pool. You can try deploying your App in a different (resource group + location) for your application to be hosted in a different scale unit, [scaling your app between pricing tiers](/azure/app-service/manage-scale-up), this triggers the Outbound IPs to change or use [Azure's NAT Gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways) to assign a dedicated outbound IP to your resources. Refer to [How to fix outbound IPs for App Service using NAT Gateway](https://techcommunity.microsoft.com/blog/appsonazureblog/how-to-fix-outbound-ips-for-app-service/2320612).
-
-
-          You can [restore a backup](azure/app-service/manage-backup) or redeploy the site, but this isn't a long term fix if the security issue isn't fixed.
-      - question: My site is added to the blocklist, what should I do?
-        answer:  |
-
-          In a multitenant environment where customers share IP addresses, occasional instances of malicious content on certain sites can occur. This may result from either a security compromise or intentional actions. Regardless of the cause, such incidents can lead to shared IP addresses being added to various online blocklists. Unfortunately, when a shared IP is blocklisted, it often impacts legitimate sites using the same address.
-          
-           - For Inbound IP blacklisted, get a [static inbound IP](/azure/app-service/overview-inbound-outbound-ips) by securing your domain with IP based SSL. Another solution to this is to use Azure's services like  [Azure Application Gateway](/azure/application-gateway/configure-web-app) or [App Service Environment](/azure/app-service/environment/networking) (ASE) to have a dedicated inbound IP address.
-          
-           - For Outbound IP blacklisted the only option to get dedicated Outbound IP addresses is to use [App Service Environment](/azure/app-service/environment/networking), apps running in the public multi-tenant service use outbound addresses from a shared address pool. You can try deploying your App in a different (resource group + location) for your application to be hosted in a different scale unit, [scaling your app between pricing tiers](/azure/app-service/manage-scale-up), this triggers the Outbound IPs to change or use [Azure’s NAT Gateway](/azure/vpm-gateway/vpn-gateway-about-vpngateways) to assign a dedicated outbound IP to your resources. Refer to [How to fix outbound IPs for App Service using NAT Gateway](https://techcommunity.microsoft.com/blog/appsonazureblog/how-to-fix-outbound-ips-for-app-service/2320612).
-        answer: |
-
-
-
-           - For SMTP blacklisted note that Port 25 is primarily used for unauthenticated email delivery. Outbound connections from App Services over the public internet using port 25 aren't restricted, but using this design could result in outbound IPs being marked as spam and blocked. 
-           We recommend implementing an authenticated SMTP relay services to send email or to implement an App Service VNet Integration or host the App Service on an [App Service Environment](/azure/app-service/environment/networking) (ASE). Your outbound SMTP connection should be directed over the private network. Refer to [Troubleshoot outbound SMTP connectivity problems in Azure](/azure/virtual-network/troubleshoot-outbound-smtp-connectivity).
-          
-          Remember, if the IP is getting block listed frequently, it's important to investigate the root cause. This could be due to sending spam emails, hosting malicious content, or other security issues that need to be addressed.
-          
-          Engage [Microsoft Security Response Center](https://msrc.microsoft.com/report/) or [Azure support](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot). We'll review your block listing issue and determine the needed actions."
-  - name: Common Concerns
-    questions:
-      - question: Warnings or alerts provided by security-scans reports.
-        answer: |
-
-          There may be various concerns about the security scan results. Security scans are often run against a Web App URL as part of testing and compliance.  Confirm that the URL tested has DNS that resolves at a Web App, if it resolves elsewhere like an [Application Gateway](/azure/application-gateway/overview) this could be the place to make a change.
-
-          Some scan results could be a false positive, or others could be a genuine security issues that may require a consult with [Azure support](https://ms.portal.azure.com/#view/Microsoft_Azure_Support/HelpAndSupportBlade/~/overview?DMC=troubleshoot).
-
-          Certain changes are within your control such as networking or website configuration, other changes are only within Microsoft's control at the platform level.
-
-          [Azure support](https://ms.portal.azure.com/#view/Microsoft_Azure_Support/HelpAndSupportBlade/~/overview?DMC=troubleshoot) can assist by reviewing the full scan results, research to confirm if the result is true, and provide security feature options to you.
-
-          [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+              You can check [OS and runtime patching in Azure App Service](/azure/app-service/overview-patch-os-runtime) to know more when updates are applied and [Guest OS patches](/azure/cloud-services/cloud-services-guestos-msrc-releases) to check the updates applied to the Azure Guest OS.
