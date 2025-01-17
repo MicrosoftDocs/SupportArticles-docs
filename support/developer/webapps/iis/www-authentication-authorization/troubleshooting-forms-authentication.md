@@ -193,7 +193,7 @@ When you see the request that reached the server, make sure that the server rece
     <machineKey validationKey="[your key here]" decryptionKey="[your key here]" validation="SHA1" />
     ```
 
-    See [Appendix A: How to generate a \<machineKey> element](https://support.microsoft.com/en-us/topic/resolving-view-state-message-authentication-code-mac-errors-6c0e9fd3-f8a8-c953-8fbe-ce840446a9f3) for instructions on generating keys.
+    For more information on machine keys, see [Machine Key](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831711(v=ws.11)) and [Plan Application Security](https://learn.microsoft.com/en-us/iis/application-frameworks/scenario-build-an-aspnet-website-on-iis/planning-step-4-plan-application-security#44-machine-key-settings). To learn how to generate machine keys, see [Machine Key Settings](https://learn.microsoft.com/en-us/iis/application-frameworks/scenario-build-an-aspnet-website-on-iis/configuring-step-4-configure-application-security#44-machine-key-settings). 
 
 - Compare the timeout values for both forms that is authentication module and the session module on all of the web servers.
 - Compare the *System.Web.dll* version under Framework folder for ASP.NET 4 between all of the web servers in the farm. Forms authentication failed for the request. The reason is that the ticket supplied was invalid. This happens due to missing Reliability Update 1 for MS .NET framework 4 on one of the web server.
