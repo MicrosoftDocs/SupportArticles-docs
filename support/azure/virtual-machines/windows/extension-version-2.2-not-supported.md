@@ -26,7 +26,7 @@ To work around this problem, use one of the following methods.
 
 ### Method 1
 
-Revert to using the Microsoft Entra parameters in the syntax for [Set-AzVmDiskEncryptionExtension](/powershell/module/az.compute/set-azvmdiskencryptionextension).
+Revert to using the Microsoft Entra parameters in the syntax for [Set-AzVMDiskEncryptionExtension](/powershell/module/az.compute/set-azvmdiskencryptionextension).
 
 The parameters are the following:
 
