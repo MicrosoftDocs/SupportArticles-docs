@@ -55,13 +55,13 @@ An update can fail with the following status:
 | Update failed | The update failed while it was in progress. If you retry the update, it continues with the session host it stopped at previously. |
 | Session host rollback failed | If a session host fails to update, session host update tries to roll back the update on that session host. If the rollback fails and you retry the update, it continues with the session host it stopped at previously. |
 
-You can get any errors for an update by following the steps to [Monitor the progress of an update](session-host-update-configure.md?tabs=powershell#monitor-the-progress-of-an-update). When you use Azure PowerShell, the variable `$updateProgress` contains error details in the following properties:
+You can get any errors for an update by following the steps to [Monitor the progress of an update](/azure/virtual-desktop/session-host-update-configure?tabs=powershell#monitor-the-progress-of-an-update). When you use Azure PowerShell, the variable `$updateProgress` contains error details in the following properties:
 
 - `$updateProgress.PropertiesUpdateStatus`
 - `$updateProgress.UpdateProgressError`
 - `$updateProgress.UpdateProgressError.FaultText`
 
-Once you identify the issue, you can either [retry the update, or cancel it and schedule a new update](session-host-update-configure.md#pause-resume-cancel-or-retry-an-update).
+Once you identify the issue, you can either [retry the update, or cancel it and schedule a new update](/azure/virtual-desktop/session-host-update-configure#pause-resume-cancel-or-retry-an-update).
 
 ### An update failed to initiate
 
@@ -77,13 +77,13 @@ Here are some example failures that prevent an update from starting:
 
 ### Failures during an update
 
-Session host update starts with an initial batch size of 1 to validate that the provided session host configuration will result in healthy session hosts. Failures that occur during the first validation batch are most often due to parameters within the session host configuration and are typically not resolved by retrying the update. Failures that occur after the validation batch are often intermittent and can be resolved by [retrying the update](session-host-update-configure.md#pause-resume-cancel-or-retry-an-update).
+Session host update starts with an initial batch size of 1 to validate that the provided session host configuration will result in healthy session hosts. Failures that occur during the first validation batch are most often due to parameters within the session host configuration and are typically not resolved by retrying the update. Failures that occur after the validation batch are often intermittent and can be resolved by [retrying the update](/azure/virtual-desktop/session-host-update-configure#pause-resume-cancel-or-retry-an-update).
 
 Here are some example failures that can occur during an update:
 
 - **VM creation failures**: VM creation can fail for various reasons not specific to Azure Virtual Desktop, for example the exhaustion of subscription capacity, or issues with the provided image. You should review the error message provided to determine the appropriate remediation. Open a support case with Azure support if you need further assistance.
 
-- **Agent installation, domain join, and session host health errors or timeout**: Agent, domain join, and other session host health errors that occur in the first validation batch can often be resolved by reviewing guidance for addressing deployment and domain join failures for Azure Virtual Desktop, and by ensuring your image doesn't have the PowerShell DSC extension installed. If the extension is installed on the image, remove the folder `C:\packages\plugin` from the image. If the failure is intermittent, with some session hosts successfully updating and others encountering an error such as `AgentRegistrationFailureGeneric`, [retrying the update](session-host-update-configure.md#pause-resume-cancel-or-retry-an-update) can often resolve the issue.
+- **Agent installation, domain join, and session host health errors or timeout**: Agent, domain join, and other session host health errors that occur in the first validation batch can often be resolved by reviewing guidance for addressing deployment and domain join failures for Azure Virtual Desktop, and by ensuring your image doesn't have the PowerShell DSC extension installed. If the extension is installed on the image, remove the folder `C:\packages\plugin` from the image. If the failure is intermittent, with some session hosts successfully updating and others encountering an error such as `AgentRegistrationFailureGeneric`, [retrying the update](/azure/virtual-desktop/session-host-update-configure#pause-resume-cancel-or-retry-an-update) can often resolve the issue.
 
 - **Resource modification and access errors**: modifying resources that are impacted in the update can result in errors during an update. Some of the errors that can result include deletion of resources and resource groups, changes to permissions, changes to power state, and changes to drain mode. In addition, if your Azure resources are locked and/or Azure policy limits the Azure Virtual Desktop service from modifying your session hosts, the update fails. Review Azure activity logs if you encounter related errors. Open a support case with Azure support if you need further assistance.
 

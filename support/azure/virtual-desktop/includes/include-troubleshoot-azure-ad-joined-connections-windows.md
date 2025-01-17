@@ -19,4 +19,4 @@ If you come across an error saying **The sign-in method you're trying to use isn
 
 ### A specified logon session does not exist. It may already have been terminated.
 
-If you come across an error that says, **An authentication error occurred. A specified logon session does not exist. It may already have been terminated**, verify that you properly created and configured the Kerberos server object when [configuring single sign-on](../configure-single-sign-on.md).
+If you come across an error that says, **An authentication error occurred. A specified logon session does not exist. It may already have been terminated**, verify that you properly created and configured the Kerberos server object when [configuring single sign-on](/azure/virtual-desktop/configure-single-sign-on).
