@@ -4,7 +4,6 @@ description: Provides a solution to an issue where solution install fails becaus
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
-ms.subservice: d365-sales-custom-solutions
 ---
 # Solution install fails because of dependencies that don't exist in a CDS environment
 

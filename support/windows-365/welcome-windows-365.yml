@@ -1,0 +1,27 @@
+### YamlMime:Landing
+
+title: Windows 365 troubleshooting # < 60 chars
+summary: This library provides solutions enabling IT Pros to troubleshoot Windows 365 related issues. To bring you the most accurate content, this library is managed by a team that works directly with the Windows product group and support professionals.
+metadata:
+  title: Windows client troubleshooting documentation
+  description: Documentation for troubleshooting common issues with Windows 365. # Required; article description that is displayed in search results. < 160 chars.  
+  ms.topic: landing-page # Required
+  author: Deland-Han  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: delhan #Required; microsoft alias of author; optional team alias.
+  ms.date: 01/17/2025
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Troubleshooting
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Known issues
+            url: ./known-issues.md
+          - text: Known issues enterprise
+            url: ./known-issues-enterprise.md
+          - text: Connection errors
+            url: ./connection-errors.md

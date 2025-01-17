@@ -3,7 +3,7 @@ title: Digest authentication fails
 description: This article provides workarounds for the problem where digest authentication fails when a client sends a request through a proxy to a site IIS using digest authentication.
 ms.date: 12/17/2024
 ms.custom: sap:WWW Authentication and Authorization\Digest and advanced digest authentication
-ms.reviewer: atsushin, bariscag
+ms.reviewer: atsushin, bariscag, zixie
 ---
 # IIS digest doesn't permit pass-though authentication of proxy requests
 

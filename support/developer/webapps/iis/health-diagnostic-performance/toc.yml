@@ -13,10 +13,6 @@ items:
   href: hidden-static-files-http-404-access-denied.md
 - name: HTTP error 400 in the CLM portal
   href: clm-http-bad-request.md
-- name: HTTP error 403.14
-  href: http-403-14-forbidden-webpage.md
-- name: HTTP error 403.16
-  href: http-403-forbidden-access-website.md
 - name: HTTP error 403.7
   href: http-error-403-7-forbidden-web-app.md
 - name: HTTP error 404 file not found on a server
@@ -31,6 +27,8 @@ items:
   href: http-error-500-19-webpage.md
 - name: HTTP error 501 - Not Implemented
   href: http-error-501-not-implemented.md
+- name: HTTP status code
+  href: http-status-code.md
 - name: Logs contain dots instead of logging field value
   href: iis-logs-contain-dots.md
 - name: Pages can't be displayed
@@ -45,12 +43,6 @@ items:
   href: troubleshoot-failed-requests-using-tracing-in-iis-85.md
 - name: Troubleshoot high CPU usage in an IIS app pool
   href: troubleshoot-high-cpu-in-iis-app-pool.md
-- name: Troubleshoot HTTP 400 errors in IIS
-  href: troubleshoot-http-400-errors-in-iis.md
-- name: Troubleshoot HTTP 502.2 Bad Gateway error in CGI apps
-  href: troubleshoot-502-2-bad-gateway-error-in-cgi-apps.md
-- name: Troubleshoot native memory leak in an IIS 7.x application pool
-  href: troubleshoot-native-memory-leak-iis-7x-application-pool.md
 - name: Troubleshoot PHP errors with Failed Request Tracing
   href: troubleshoot-php-with-failed-request-tracing.md
 - name: Troubleshoot IIS performance issues and application errors

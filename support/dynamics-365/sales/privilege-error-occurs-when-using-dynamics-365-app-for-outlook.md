@@ -4,7 +4,6 @@ description: A privilege error occurs when attempting to use Microsoft Dynamics 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
-ms.subservice: d365-sales-email-office-integration
 ---
 # A privilege error occurs when attempting to use Microsoft Dynamics 365 App for Outlook
 

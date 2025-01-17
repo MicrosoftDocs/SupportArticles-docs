@@ -5,7 +5,7 @@ author: msaenzbosupport
 ms.author: msaenzbo
 ms.reviewer: divargas-msft, pagienge, navpreetkaur, v-weizhu
 editor: v-jsitser
-ms.date: 10/24/2024
+ms.date: 01/08/2025
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ---
@@ -405,7 +405,7 @@ The images from the following offers that were created *after* December 2019 are
 
 The following steps apply if the OS version is *RHEL 7.9* and the VM was created by using the `RHEL-SAP-HA` offer image.
 
-1. Remove the releasever file if it exist.
+1. Remove the releasever file if it exists.
 
    ```bash
    sudo rm /etc/yum/vars/releasever
@@ -455,7 +455,7 @@ The following steps apply if the OS version is *earlier than the latest version 
    sudo echo $(. /etc/os-release && echo $VERSION_ID) > /etc/dnf/vars/releasever
    ```
 
-3. Verify that the corresponding repositories are available and show no errors. To do this, run the `yum repolist` command:
+3. Verify that the corresponding repositories are available and show no errors. To do this, run the `dnf repolist` command:
 
    ```bash
    sudo dnf repolist all
@@ -465,7 +465,7 @@ The following steps apply if the OS version is *earlier than the latest version 
 
 The following steps apply if the OS version is *RHEL 8.10* supported by SAP and the VM was created by using the `RHEL-SAP-APPS` offer image.
 
-1. Remove the releasever file if it exist.
+1. Remove the releasever file if it exists.
 
    ```bash
    sudo rm /etc/yum/vars/releasever
@@ -477,7 +477,7 @@ The following steps apply if the OS version is *RHEL 8.10* supported by SAP and 
    sudo dnf --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel8-base-sapapps.config' install rhui-azure-rhel8-base-sap-apps
    ```
    
-3. Verify that the corresponding repositories are available and show no errors. To do this, run the `yum repolist` command:
+3. Verify that the corresponding repositories are available and show no errors. To do this, run the `dnf repolist` command:
 
    ```bash
    sudo dnf repolist all
@@ -499,7 +499,7 @@ The following steps apply if the OS version is *earlier than the latest version 
    sudo echo $(. /etc/os-release && echo $VERSION_ID) > /etc/dnf/vars/releasever
    ```
 
-3. Verify that the corresponding repositories are available and show no errors. To do this, run the `yum repolist` command:
+3. Verify that the corresponding repositories are available and show no errors. To do this, run the `dnf repolist` command:
 
    ```bash
    sudo dnf repolist all
@@ -509,7 +509,7 @@ The following steps apply if the OS version is *earlier than the latest version 
 
 The following steps apply if the OS version is *RHEL 8.10* and the VM was created by using the `RHEL-SAP-HA` offer image.
 
-1. Remove the releasever file if it exist.
+1. Remove the releasever file if it exists.
 
    ```bash
    sudo rm /etc/yum/vars/releasever
@@ -521,10 +521,10 @@ The following steps apply if the OS version is *RHEL 8.10* and the VM was create
    sudo dnf --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel8-base-sap-ha.config' install rhui-azure-rhel8-base-sap-ha
    ```
 
-4. Verify that the corresponding repositories are available and show no errors. To do this, run the `yum repolist` command:
+4. Verify that the corresponding repositories are available and show no errors. To do this, run the `dnf repolist` command:
 
    ```bash
-   sudo yum repolist all
+   sudo dnf repolist all
    ```
    
 
@@ -542,12 +542,38 @@ The following steps apply if the OS version is *RHEL 8.10* and the VM was create
    sudo echo $(. /etc/os-release && echo $VERSION_ID) > /etc/dnf/vars/releasever
    ```
 
-3. Verify that the corresponding repositories are available and show no errors. To do this, run the `yum repolist` command:
+3. Verify that the corresponding repositories are available and show no errors. To do this, run the `dnf repolist` command:
 
    ```bash
    sudo dnf repolist all
    ```
+  
 
+#### [RHEL 8.10 - RHEL-HA](#tab/rhe810-rhel-base-ha)
+
+1. Remove the releasever file if it exists:
+
+   ```bash
+   sudo rm /etc/yum/vars/releasever
+   ```
+   
+2. Remove the client `rhui-azure-rhel8-ha` package by running the `dnf remove` command:
+
+   ```bash
+   sudo dnf remove rhui-azure-rhel8-ha
+   ```
+   
+3. Install the `rhui-azure-rhel8-base-ha` package by running the [dnf](https://dnf.readthedocs.io/en/latest/command_ref.html) installation command:
+
+   ```bash
+   sudo dnf --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel8-base-ha.config' install rhui-azure-rhel8-base-ha
+   ```
+
+4. Verify that the corresponding repositories are available and show no errors. To do this, run the `dnf repolist` command:
+
+   ```bash
+   sudo dnf repolist all
+   ```
 ---
 
 > [!NOTE]

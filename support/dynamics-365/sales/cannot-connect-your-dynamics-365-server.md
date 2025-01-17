@@ -4,7 +4,6 @@ description: Provides a solution to an error that occurs when you use Microsoft 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
-ms.subservice: d365-sales-server
 ---
 # We're unable to connect to your Microsoft Dynamics 365 server Error occurs when using Microsoft Dynamics 365 App for Outlook
 

@@ -4,7 +4,6 @@ description: Provides resolutions for the issues that may occur when working wit
 author: sbmjais
 ms.author: shjais
 ms.date: 11/20/2023
-ms.subservice: d365-sales-sales
 ---
 # Troubleshoot issues with products
 

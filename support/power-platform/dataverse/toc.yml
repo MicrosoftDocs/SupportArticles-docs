@@ -14,6 +14,12 @@
   items:
     - name: 401 Unauthorized exception when using Server-Side Synchronization
       href: email-exchange-synchronization/exception-when-using-server-side-sync.md
+    - name: An error occurred when receiving or synchronizing an email
+      href: email-exchange-synchronization/an-error-occurred-while-synchronizing-item.md
+    - name: An error occurred while creating the incoming email
+      href: email-exchange-synchronization/error-when-creating-an-incoming-email.md
+    - name: '"A scheduling conflict was found when saving appointment" error'
+      href: email-exchange-synchronization/scheduling-conflict-saving-appointment.md
     - name: An appointment is canceled or deleted during server-side synchronization
       href: email-exchange-synchronization/an-appointment-is-canceled-deleted.md
     - name: A failure occurred in CrmSecurity when approving email address
@@ -40,10 +46,8 @@
       href: email-exchange-synchronization/email-cannot-be-received-because-license-is-invalid-error.md
     - name: Email fails to be created with NoRecipientMatch
       href: email-exchange-synchronization/email-fails-to-create-with-norecipientmatch-error.md
-    - name: Email fails to create with NoCorrelationMatch sync
+    - name: Email fails to be created with NoCorrelationMatch
       href: email-exchange-synchronization/email-fails-to-create-with-nocorrelationmatch-error.md
-    - name: Email message can't be sent because the mailbox is deactivated
-      href: email-exchange-synchronization/email-message-cannot-be-sent.md
     - name: Email server location or incoming email port is incorrect
       href: email-exchange-synchronization/email-cannot-be-received-mailbox.md
     - name: Error code 8005E259
@@ -56,25 +60,23 @@
       href: email-exchange-synchronization/error-code-8005e274.md
     - name: Error code 8005E276
       href: email-exchange-synchronization/error-code-8005e276.md
-    - name: Error when creating the incoming email
-      href: email-exchange-synchronization/error-when-creating-an-incoming-email.md
     - name: Error while synchronizing appointments, contacts, and tasks
       href: email-exchange-synchronization/an-internal-dynamics-365-error.md
     - name: ErrorQuotaExceeded. Exchange.server returned 403 error
       href: email-exchange-synchronization/errorquotaexceeded-exchange-server-returned-403-error.md
     - name: ErrorSubmissionQuotaExceeded exception in mailbox
       href: email-exchange-synchronization/errorsubmissionquotaexceeded-exception.md
-    - name: ExchangeSyncSchedulingConflictsError
-      href: email-exchange-synchronization/scheduling-conflict-saving-appointment.md
     - name: Http server returned Forbidden exception
       href: email-exchange-synchronization/http-server-returned-forbidden-exception.md
     - name: Incoming emails are unexpectedly synchronized
       href: email-exchange-synchronization/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data.md
+    - name: MailboxDisabled error when testing and enabling a mailbox
+      href: email-exchange-synchronization/email-message-cannot-be-sent.md
     - name: Mailbox user doesn't have sufficient permissions error
       href: email-exchange-synchronization/error-when-you-test-enable-a-mailbox.md
-    - name: Mailbox doesn't have an email server profile
+    - name: Mailbox doesn't have an email server profile or profile is inactive
       href: email-exchange-synchronization/mailbox-does-not-have-email-server-profile.md
-    - name: Mailbox fails to be tested and enabled
+    - name: Mailbox can't be tested and enabled when using server-side synchronization with Gmail
       href: email-exchange-synchronization/mailbox-fails-tested-enabled.md
     - name: OutgoingEmailAuthenticationError in mailbox alert
       href: email-exchange-synchronization/outgoingemailauthenticationerror-shows-in-mailbox-alert.md
@@ -84,15 +86,16 @@
       href: email-exchange-synchronization/test-connection-fails-email-server.md
     - name: '"The account does not have permission to impersonate the requested user" error'
       href: email-exchange-synchronization/the-account-does-not-have-permission-to-impersonate-the-requested-user-error.md
-    - name: The mailbox location could not be determined
+    - name: '"The mailbox location could not be determined" error'
       href: email-exchange-synchronization/error-when-testing-enabling-mailbox.md
     - name: '"The SMTP address has no mailbox associated with it" error'
       href: email-exchange-synchronization/the-smtp-address-has-no-mailbox.md
     - name: UnknownIncomingEmailIntegrationError -2147209462
       href: email-exchange-synchronization/error-2147209462-logged-mailbox-record.md
-    - name: unknownincomingemailintegrationerror -2147220891
     - name: UnknownIncomingEmailIntegrationError -2147220891 or Crm.80040265.ISV
       href: email-exchange-synchronization/unknownincomingemailintegrationerror-2147220891.md
+    - name: Other UnknownIncomingEmailIntegrationError errors
+      href: email-exchange-synchronization/exception-appears-server-side-sync.md
     - name: '"You cannot send email as the selected user" error'
       href: email-exchange-synchronization/cannot-send-email-as-another-user.md
 - name: Plug-in execution
