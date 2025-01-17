@@ -1,7 +1,7 @@
 ---
 title: Disable Transport Layer Security (TLS) 1.0 and 1.1 on MBAM servers and force the use of TLS 1.2
 description: Describes steps to disable TLS 1.0 and 1.1 on Microsoft BitLocker Administration and Monitoring (MBAM) servers and force the use of TLS 1.2.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

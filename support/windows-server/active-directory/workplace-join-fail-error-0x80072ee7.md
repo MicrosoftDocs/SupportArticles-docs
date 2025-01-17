@@ -1,7 +1,7 @@
 ---
 title: Error 0x80072EE7 when you perform Workplace Join
 description: Fixes an error 0x80072EE7 that occurs when users perform a Workplace Join.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

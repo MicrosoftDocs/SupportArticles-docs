@@ -1,7 +1,7 @@
 ---
 title: First sign-in fails with the universal unique identifier (UUID) type is not supported
 description: A user receives a UUID error message at the first logon of a Windows 8 or Windows 8.1 image. This issue occurs when the image was deployed by using System Center 2012 Configuration Manager or System Center 2012 R2 Configuration Manager.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

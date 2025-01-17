@@ -1,7 +1,7 @@
 ---
 title: AD and LDS diagnostic event logging
 description: This article discusses the level of Active Directory diagnostic event logging and provides solutions for configuring Active Directory diagnostic event logging.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

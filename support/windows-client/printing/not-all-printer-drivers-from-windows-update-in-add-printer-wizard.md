@@ -1,7 +1,7 @@
 ---
 title: Not all printer drivers from Windows Update appear in Add Printer wizard
 description: Works around an issue in which not all printer drivers that are downloaded from Windows Update are listed when in the Add Printer wizard.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

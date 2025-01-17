@@ -1,7 +1,7 @@
 ---
 title: Collect data using Network Monitor
 description: Learn how to run Network Monitor to collect data for troubleshooting TCP/IP connectivity.
-ms.date: 05/10/2024
+ms.date: 01/15/2025
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.collection: highpri

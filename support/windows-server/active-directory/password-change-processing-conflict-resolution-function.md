@@ -1,7 +1,7 @@
 ---
 title: Password change processing and conflict resolution functionality in Windows
 description: Describes a registry value that can be used by the administrator to control when the PDC is contacted, which can help reduce communication costs between sites and reduce load on the PDC.
-ms.date: 09/12/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

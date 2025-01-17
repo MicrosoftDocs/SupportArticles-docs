@@ -1,7 +1,7 @@
 ---
 title: Change Windows Active Directory and LDS user password through LDAP
 description: This article describes how to change a Windows Active Directory and LDS user password through LDAP.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 ms.custom: sap:Active Directory\Active Directory Lightweight Directory Services (AD LDS), csstroubleshoot
 ms.reviewer: RRANDALL, HerbertMauerer, v-jayaramanp
 ms.topic: how-to

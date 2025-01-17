@@ -1,7 +1,7 @@
 ---
 title: A newly promoted domain controller may fail to advertise after completion of DCpromo
 description: Describes an issue where a newly promoted domain controller fails to advertise after completion of DCpromo.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
