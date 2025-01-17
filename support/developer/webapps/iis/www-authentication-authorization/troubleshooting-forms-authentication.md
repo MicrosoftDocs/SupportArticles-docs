@@ -13,13 +13,13 @@ _Applies to:_ &nbsp; Internet Information Services
 
 Often, while using Forms Authentication in an ASP.NET web application, there's a need to troubleshoot a problem that occurs when a new or an ongoing request is intermittently redirected to the application's login page. You can debug this problem on Visual Studio IDE by attaching a debugger in a development environment. In production environments, however, the task becomes hectic and problematic. To troubleshoot a random problem like this one, you need to log information related to the problem so that you can narrow down the root cause.
 
-This article briefly discusses the concept of Forms Authentication. It also discusses about various scenarios about a user being redirected to the login page and how to capture data that's relevant to isolating the problem. Additionally, it also discusses about how to implement an `IHttpModule` interface to log the Forms Authentication information.
+This article briefly discusses the concept of Forms Authentication. It also discusses various scenarios about a user being redirected to the login page and how to capture data that's relevant to isolating the problem. Additionally, it also discusses how to implement an `IHttpModule` interface to log the Forms Authentication information.
 
 ## Overview of ASP.NET Forms Authentication
 
 Forms authentication lets you authenticate users by using your own code and then maintain an authentication token in a cookie or in the URL. Forms authentication participates in the ASP.NET page life cycle through the `FormsAuthenticationModule` class. You can access forms authentication information and capabilities using the `FormsAuthentication` class.
 
-To use forms authentication, create a login page that collects credentials from the user and  includes code to authenticate the credentials. Typically, you configure the application to redirect requests to the login page when users try to access a protected resource, such as a page that requires authentication. If the user's credentials are valid, you can call methods of the `FormsAuthentication` class to redirect the request back to the originally requested resource with an appropriate authentication ticket (cookie). If you don't want the redirection, you can just get the forms authentication cookie or set it. On subsequent requests, your browser passes the authentication cookie with the request, which then bypasses the login page.
+To use forms authentication, create a login page that collects credentials from the user and includes code to authenticate the credentials. Typically, you configure the application to redirect requests to the login page when users try to access a protected resource, such as a page that requires authentication. If the user's credentials are valid, you can call methods of the `FormsAuthentication` class to redirect the request back to the originally requested resource with an appropriate authentication ticket (cookie). If you don't want the redirection, you can just get the forms authentication cookie or set it. On subsequent requests, your browser passes the authentication cookie with the request, which then bypasses the login page.
 
 By default, the `FormsAuthenticationModule` class is added in the **Machine.config** file. The `FormsAuthenticationModule` class manages the Forms Authentication process.
 
@@ -109,7 +109,7 @@ You can determine if a request doesn't contain the cookie by enabling cookie log
 1. Make sure that the log format is W3C Extended Log file format.
 1. Select **Properties**.
 1. Select the **Advanced** tab, and then select **Extended Properties**.
-1. Under **Extended Properties**, select the **Cookie(cs(Cookie))** and the **Referer (cs(Referer))** checkboxes.
+1. Under **Extended Properties**, select **Cookie(cs(Cookie))** > **Referer (cs(Referer))**.
 
 After this problem occurs, determine which client had the problem and that client's IP address. Filter the IIS log on that client's IP address, and view the `<COOKIE>` column.
 
@@ -133,7 +133,7 @@ The forms authentication cookie can also be lost when the client's cookie limit 
 
 Launch Fiddler tool on the client machine, remove existing HTTP traces, access your application implementing forms authentication and try to login into the application and observe the HTTP traffic on Fiddler to see if there's an exchange of forms authentication cookie happening between the client and server. After you capture the traffic, double-click a request, and then select **Headers** to see the Set-Cookie header. If you trace a successful login, you will see the Set-Cookie header in the response of a successful login.
 
-By default, IE can store a maximum of 20 cookies for each domain. If a server in the domain sends more than 20 cookies to a client computer, the browser on the client computer automatically discards some old cookies.
+By default, Internet Explorer can store a maximum of 20 cookies for each domain. If a server in the domain sends more than 20 cookies to a client computer, the browser on the client computer automatically discards some old cookies.
 
 Each cookie consists of a single name-value pair. This pair may be followed by attribute-value pairs that are separated by semicolons. This limit has been increased to simplify the development and the hosting of Web applications on domains that must use many cookies. Installing update 937143 increases the number of cookies that Internet Explorer can store for each domain from 20 to 50. For more information, see [Internet Explorer and Microsoft Edge frequently asked questions (FAQ) for IT Pros](/internet-explorer/kb-support/ie-edge-faqs).
 
@@ -176,7 +176,7 @@ When you see the request that reached the server, make sure that the server rece
 
 ### Troubleshooting scenario 5
 
-- If the scenario involves a web farm, the machineKeys should be same across everywhere. Use the following machineKey to maintain the consistency on all the servers on the farm:
+- If the scenario involves a web farm, make sure that the configuration files on each server in the web farm have the same value for the validation key and decryption keys, which are used for hashing and decryption respectively. To maintain the consistency on all the servers on the farm, use the following machineKey:
 
   ```xml
   <machineKey validationKey="<yourKey>" decryptionKey="<yourKey>" validation="SHA1" />
