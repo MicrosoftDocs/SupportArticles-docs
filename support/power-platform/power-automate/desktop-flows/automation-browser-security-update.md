@@ -1,23 +1,22 @@
 ---
-title: Automation Browser Security Updates
-description: Provides security updates for the Automation Browser component in Microsoft Power Automate for desktop.
-ms.reviewer: nimoutzo
+title: Browser Automation Security Updates
+description: Provides security updates for the Browser automation component in Microsoft Power Automate for desktop.
+ms.reviewer: nimoutzo, iopanag
 ms.date: 01/16/2025
 ms.custom: sap:Desktop flows\UI or browser automation
 ---
-# Security updates for the Automation Browser component in Microsoft Power Automate for desktop
+# Security updates for the Browser automation component in Microsoft Power Automate for desktop
 
 ## Summary
 
-A potential security vulnerability is identified in the Automation Browser component in Power Automate for desktop.
-Using the **Launch Automation Browser** option in the action **Launch new Internet Explorer** could allow an attacker to execute
-arbitrary code on the affected system when the **Launch Automation Browser** navigates to a malicious URL or a compromised website. Microsoft has issued
-a [CVE for this case](https://msrc.microsoft.com/update-guide/en-US/advisory/CVE-2025-21187).
+A potential security vulnerability is identified in the [Browser automation](/power-automate/desktop-flows/actions-reference/webautomation) component in Power Automate for desktop.
+
+Using the **Launch Automation Browser** option in the [Launch new Internet Explorer](/power-automate/desktop-flows/actions-reference/webautomation#launchinternetexplorerbase) action could allow an attacker to execute arbitrary code on the affected system when the **Launch Automation Browser** navigates to a malicious URL or a compromised website. Microsoft has issued a [CVE for this issue](https://msrc.microsoft.com/update-guide/advisory/CVE-2025-21187).
 
 > [!IMPORTANT]
 > The issue only affects flows that use the **Launch Automation Browser** option in the **Launch new Internet Explorer** action.
 >
-> Flows that use **Launch Automation Browser** option with public or untrusted websites are the most vulnerable to this issue.
+> Flows that use the **Launch Automation Browser** option with public or untrusted websites are the most vulnerable to this issue.
 
 ## Mitigation
 
@@ -34,9 +33,7 @@ To mitigate the issue, update your Power Automate for desktop to the following p
 > Starting with release 2.52, all future versions will include the security fix.
 
 ## Impact of the patch
-In the updated versions, when the Automation Browser attempts to navigate to a URL that is potentially malicious,
-the Automation Browser will display a warning prompt dialog to the user with relevant details.
-The user can choose to continue or stop the navigation.
 
-If a flow is disrupted by this dialog and a navigation is considered legitimate,
-the URL can be added in the allow list in the Power Automate UI Automation settings file to avoid showing the dialog for said URL.
+In the updated versions, when the Browser automation attempts to navigate to a potentially malicious URL, it will display a warning prompt with relevant details. The user can choose to continue or stop the navigation.
+
+If a flow is disrupted by this dialog and a navigation is considered legitimate, the URL can be added to the allow list in the Power Automate UI Automation settings file to avoid showing the dialog for that URL.
