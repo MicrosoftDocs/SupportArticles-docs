@@ -1,7 +1,7 @@
 ---
 title: DNS Servers may fail to resolve queries for some top-level domains
 description: Provides a solution to an issue where DNS Servers may fail to resolve queries for names in certain top-level domains.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

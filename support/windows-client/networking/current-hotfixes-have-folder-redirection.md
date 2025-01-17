@@ -1,7 +1,7 @@
 ---
 title: Current hotfixes have folder redirection
 description: This article lists the hotfixes that are currently available for Windows 7 clients that are used in an Active Directory environment that makes use of data centralization, including folder redirection, offline files, and file server access.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot event ID 1020 on an SMB file server
 description: Explains how to troubleshoot event ID 1020 on an SMB file server.
-ms.date: 03/14/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

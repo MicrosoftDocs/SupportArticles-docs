@@ -2,7 +2,7 @@
 title: Your credentials could not be verified error when logging on to Windows with WHFB
 description: Introduces how to troubleshoot the Your credentials could not be verified error that occurs when you try to log on to Windows 10 or Windows 11.
 ms.topic: troubleshooting
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 ms.reviewer: kaushika
 ms.custom: sap:User Logon and Profiles\Service Account and Interactive User Logon Issues and Credential Providers, csstroubleshoot, ikb2lmc
 ---

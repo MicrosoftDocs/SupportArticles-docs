@@ -1,7 +1,7 @@
 ---
 title: Certificate Services doesn't start
 description: Provides a solution to an issue where Certificate Services (certsvc) doesn't start after upgrade to Microsoft Windows Server 2016.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

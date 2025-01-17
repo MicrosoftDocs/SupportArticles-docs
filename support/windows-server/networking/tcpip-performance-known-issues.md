@@ -1,7 +1,7 @@
 ---
 title: TCP/IP performance known issues
 description: Describes several TCP/IP performance known issues about slow throughput and underlying networks.
-ms.date: 10/08/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

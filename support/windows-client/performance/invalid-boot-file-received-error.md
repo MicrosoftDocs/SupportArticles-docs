@@ -1,7 +1,7 @@
 ---
 title: Fail to use PXE to boot clients from WDS
 description: Provides a solution to fix an error that occurs when you use PXE to boot a client computer from a Windows Deployment Services (WDS) server.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

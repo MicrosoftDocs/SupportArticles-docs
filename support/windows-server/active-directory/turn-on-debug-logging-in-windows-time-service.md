@@ -1,7 +1,7 @@
 ---
 title: Turn on debug logging in Windows Time Service
 description: Describes how to turn on debug logging for the Windows Time service
-ms.date: 10/15/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

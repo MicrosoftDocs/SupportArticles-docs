@@ -1,7 +1,7 @@
 ---
 title: How to enable network DTC access
 description: Describes the procedures that you follow to enable network Distributed Transaction Coordinator (DTC) access
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Extend or shrink a data volume
 description: Describes how to use the Diskpart.exe command prompt utility to extend a data volume in unallocated space. Also describes how to extend or shrink disk partitions.
-ms.date: 10/25/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

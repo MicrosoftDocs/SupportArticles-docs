@@ -1,7 +1,7 @@
 ---
 title: Warning ID 1058 (Security-SPP) after reboot on OEM systems
 description: Provides some information about Application Event Log Warning ID 1058(Security-SPP) which may be logged after reboot on OEM systems
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

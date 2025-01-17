@@ -1,7 +1,7 @@
 ---
 title: Event ID 46 when you start a computer
 description: This article describes an issue with Windows operating system, wherein System Event logs report Event ID 46 after a computer restart.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

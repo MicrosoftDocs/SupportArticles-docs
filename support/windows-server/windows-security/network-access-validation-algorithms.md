@@ -1,7 +1,7 @@
 ---
 title: Network access validation algorithms and examples for Windows
 description: Describes network access validation algorithms and examples.
-ms.date: 12/18/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

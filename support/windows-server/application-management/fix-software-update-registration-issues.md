@@ -1,7 +1,7 @@
 ---
 title: Fix software update registration issues
 description: Provides a solution to an issue that repairs or uninstalls for certain products may fail after you install software updates.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
