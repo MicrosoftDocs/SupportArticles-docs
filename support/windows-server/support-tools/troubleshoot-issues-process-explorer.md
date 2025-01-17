@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot issues using Process Explorer
 description: Helps troubleshoot issues using Process Explorer.
-ms.date: 04/23/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -3,8 +3,8 @@ title: Troubleshoot slow performance or low memory issues caused by memory grant
 description: Provides troubleshooting steps to identify and reduce memory grant memory consumption in SQL Server.
 author: pijocoder
 ms.author: jopilov
-ms.reviewer: pijocoder
-ms.date: 05/05/2023
+ms.reviewer: jopilov
+ms.date: 01/17/2025
 ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ---
 

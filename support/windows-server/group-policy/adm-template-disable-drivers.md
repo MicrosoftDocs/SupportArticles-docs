@@ -1,7 +1,7 @@
 ---
 title: Use Group Policy to disable USB, CD-ROM, Floppy Disk, and LS-120 drivers
 description: Describes an ADM template that allows an Administrator to disable the respective drivers of these devices.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

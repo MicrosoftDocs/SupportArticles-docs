@@ -1,7 +1,7 @@
 ---
 title: A high pitched noise is heard when using Bluetooth headphones
 description: Provides a solution to an issue where a high pitched noise is heard when using Bluetooth headphones.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

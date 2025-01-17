@@ -1,7 +1,7 @@
 ---
 title: Error code 0x800f0922 when installing Windows updates
 description: Helps resolve the 0x800f0922 (CBS_E_INSTALLERS_FAILED) error when installing Windows updates.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

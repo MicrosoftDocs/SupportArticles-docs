@@ -1,7 +1,7 @@
 ---
 title: Set up your small business network
 description: Explains how to set up the network for your small business.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

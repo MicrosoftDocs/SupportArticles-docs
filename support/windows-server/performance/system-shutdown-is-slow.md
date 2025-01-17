@@ -1,7 +1,7 @@
 ---
 title: System shutdown is slow
 description: Provides guidance to troubleshoot performance problems that occur when Windows shuts down.
-ms.date: 05/30/2024
+ms.date: 01/15/2025
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot performance problems in Windows
 description: Provides a scenario guide for troubleshooting performance problems in Windows.
-ms.date: 08/14/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

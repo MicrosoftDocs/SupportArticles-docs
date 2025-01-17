@@ -1,7 +1,7 @@
 ---
 title: Modify filtered properties of an object in ACL Editor
 description: Discusses how to change the list of attributes shown in ACL Editor for a specific object type.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

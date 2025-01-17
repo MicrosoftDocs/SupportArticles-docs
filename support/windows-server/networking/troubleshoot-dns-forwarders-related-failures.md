@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot DNS name resolution failures related to DNS forwarders
 description: Provides troubleshooting guides for DNS name resolution failures related to DNS forwarders.
-ms.date: 09/11/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot a guarded fabric
 description: Provides an overview of troubleshooting a guarded fabric.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

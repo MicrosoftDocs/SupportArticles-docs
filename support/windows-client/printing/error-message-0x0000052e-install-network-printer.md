@@ -1,7 +1,7 @@
 ---
 title: Error message when you try to install a network printer in Windows 7
 description: Provides a workaround to an error that occurs when you try to install a network printer in Windows 7.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Error occurs when adding an IPP printer
 description: Provides a solution to an error that occurs when you try to add an IPP printer over HTTPS.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
