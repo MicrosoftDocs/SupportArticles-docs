@@ -1,7 +1,7 @@
 ---
 title: Azure Virtual Desktop PowerShell - Azure
 description: How to troubleshoot issues with PowerShell when you set up an Azure Virtual Desktop environment.
-author: dknappettmsft
+
 ms.topic: troubleshooting
 ms.date: 06/05/2020
 ms.reviewer: daknappe

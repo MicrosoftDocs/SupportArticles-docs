@@ -2,7 +2,7 @@
 title: Troubleshoot custom image templates - Azure Virtual Desktop
 description: Troubleshoot custom image templates in Azure Virtual Desktop.
 ms.topic: troubleshooting
-author: dknappettmsft
+
 ms.reviewer: daknappe
 ms.date: 09/08/2023
 ---

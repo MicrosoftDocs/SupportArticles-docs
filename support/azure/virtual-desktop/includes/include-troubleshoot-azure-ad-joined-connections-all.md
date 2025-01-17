@@ -1,5 +1,5 @@
 ---
-author: dknappettmsft
+
 ms.reviewer: daknappe
 ms.topic: include
 ms.date: 11/21/2022
