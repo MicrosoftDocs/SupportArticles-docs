@@ -31,7 +31,7 @@ There was a typo made when the credentials were entered in the Azure Resource Ma
 
 #### Resolution
 
-Take one of the following actions to resolve.
+Take one of the following actions to resolve the issue:
 
 - Manually add the VMs to a domain.
 - Redeploy the template once credentials have been confirmed. See [Create a host pool with PowerShell](/azure/virtual-desktop/create-host-pools-powershell).
@@ -45,7 +45,7 @@ The account used to complete the domain join might have multifactor authenticati
 
 #### Resolution
 
-Take one of the following actions to resolve.
+Take one of the following actions to resolve the issue:
 
 - Temporarily remove MFA for the account.
 - Use a service account.
@@ -87,10 +87,10 @@ The network interface's DNS server settings don't point to the appropriate DNS s
 
 #### Resolution 3
 
-Take one of the following actions to resolve, following the steps in [Change DNS servers](/azure/virtual-network/virtual-network-network-interface#change-dns-servers).
+Take one of the following actions to resolve the issue by following the steps in [Change DNS servers](/azure/virtual-network/virtual-network-network-interface#change-dns-servers):
 
 - Change the network interface's DNS server settings to **Custom** with the steps from [Change DNS servers](/azure/virtual-network/virtual-network-network-interface#change-dns-servers) and specify the private IP addresses of the DNS servers on the virtual network.
-- Change the network interface's DNS server settings to **Inherit from virtual network** with the steps from [Change DNS servers](/azure/virtual-network/virtual-network-network-interface#change-dns-servers), then change the virtual network's DNS server settings with the steps from [Change DNS servers](/azure/virtual-network/manage-virtual-network#change-dns-servers).
+- Change the network interface's DNS server settings to **Inherit from virtual network** with the steps from [Change DNS servers](/azure/virtual-network/virtual-network-network-interface#change-dns-servers), and then change the virtual network's DNS server settings with the steps from [Change DNS servers](/azure/virtual-network/manage-virtual-network#change-dns-servers).
 
 ### Error: Computer account reuse is blocked in an Active Directory domain
 
@@ -100,11 +100,11 @@ You attempt to reuse a computer account (hostname), have applied Windows updates
 
 #### Resolution
 
-Take one of the following actions to resolve:
+Take one of the following actions to resolve the issue:
 
 - Use the same user account that was used to create the existing computer account object.
-- Use a user account that is a member of the **Domain Administrators** security group
-- Use a user account that is has the Group Policy setting **Domain controller: Allow computer account re-use during domain join** applied. This setting requires the installation of Windows updates released on or after March 14, 2023, on all member computers and domain controllers in the Active Directory domain.
+- Use a user account that is a member of the **Domain Administrators** security group.
+- Use a user account that has the Group Policy setting **Domain controller: Allow computer account re-use during domain join** applied. This setting requires the installation of Windows updates released on or after March 14, 2023, on all member computers and domain controllers in the Active Directory domain.
 
 For more information on the permissions changes for computer account reuse, see [KB5020276 - Netjoin: Domain join hardening changes](https://support.microsoft.com/en-us/topic/kb5020276-netjoin-domain-join-hardening-changes-2b65a0f3-1f4c-42ef-ac0f-1caaf421baf8).
 
@@ -116,7 +116,7 @@ Follow these instructions to confirm the components are installed and to check f
 
 1. Confirm that the two components are installed by checking in **Control Panel** > **Programs** > **Programs and Features**. If **Azure Virtual Desktop Agent** and **Azure Virtual Desktop Agent Boot Loader** aren't visible, they aren't installed on the VM.
 2. Open **File Explorer** and navigate to **C:\\Windows\\Temp\\ScriptLog.log**. If the file is missing, it indicates that the PowerShell Desired State Configuration (DSC) that installed the two components wasn't able to run in the security context provided.
-3. If the file **C:\\Windows\\Temp\\ScriptLog.log** is present, open it and check for error messages.
+3. If the file **C:\\Windows\\Temp\\ScriptLog.log** exists, open it and check for error messages.
 
 ### Error: Azure Virtual Desktop Agent and Azure Virtual Desktop Agent Boot Loader are missing. C:\\Windows\\Temp\\ScriptLog.log is also missing
 
@@ -151,8 +151,8 @@ PowerShell DSC was able to execute but couldn't connect to Azure Virtual Desktop
 Confirm the items in the following list.
 
 - Manually register the VMs with the Azure Virtual Desktop service.
-- Confirm account used for connecting to Azure Virtual Desktop has permissions on the Azure subscription or resource group to create host pools.
-- Confirm account doesn't have MFA.
+- Confirm the account used for connecting to Azure Virtual Desktop has permissions on the Azure subscription or resource group to create host pools.
+- Confirm the account doesn't have MFA.
 
 ## Azure Virtual Desktop Agent isn't registering with the Azure Virtual Desktop service
 
@@ -166,7 +166,7 @@ The agent isn't able to update itself to a new version.
 
 #### Resolution
 
-Follow these instructions to manually update the agent.
+Follow these instructions to manually update the agent:
 
 1. Download a new version of the agent on the session host VM.
 2. Launch Task Manager. In the **Service** tab, stop the **RDAgentBootLoader** service.
@@ -183,7 +183,7 @@ Registration token has expired.
 
 #### Resolution
 
-Follow these instructions to fix the agent registry error.
+Follow these instructions to fix the agent registry error:
 
 1. If there's already a registration token, remove it with `Remove-AzWvdRegistrationInfo`.
 2. Run the `New-AzWvdRegistrationInfo` cmdlet to generate a new token.
@@ -205,7 +205,7 @@ Port 443 might be closed.
 
 #### Resolution 2
 
-Follow these instructions to open port 443.
+Follow these instructions to open port 443:
 
 1. Confirm port 443 is open by downloading the PSPing tool from [Sysinternal tools](/sysinternals/downloads/psping/).
 2. Install PSPing on the session host VM where the agent is running.
@@ -235,7 +235,7 @@ Follow these instructions to open port 443.
 
 ## Troubleshoot issues with the Azure Virtual Desktop side-by-side stack
 
-There are three main ways the side-by-side stack gets installed or enabled on session host pool VMs:
+There are three main ways to install or enable the side-by-side stack on session host pool VMs:
 
 - With the Azure portal creation template
 - By being included and enabled on the master image
@@ -247,7 +247,7 @@ The output of `qwinsta` will list `rdp-sxs` in the output if the side-by-side st
 
 :::image type="content" source="media/troubleshoot-vm-configuration/administrator-command-prompt.png" alt-text="Screenshot of the side-by-side stack installed or enabled with qwinsta listed as rdp-sxs in the output.":::
 
-Examine the registry entries listed below and confirm that their values match. If registry keys are missing or values are mismatched, make sure you're running [a supported operating system](troubleshoot-agent.md#error-operating-a-pro-vm-or-other-unsupported-os). If you are, follow the instructions in [Register session hosts to a host pool](/azure/virtual-desktop/add-session-hosts-host-pool#register-session-hosts-to-a-host-pool) for how to reinstall the side-by-side stack.
+Examine the registry entries listed and confirm that their values match. If registry keys are missing or values are mismatched, make sure you're running [a supported operating system](troubleshoot-agent.md#error-operating-a-pro-vm-or-other-unsupported-os). If you are, follow the instructions in [Register session hosts to a host pool](/azure/virtual-desktop/add-session-hosts-host-pool#register-session-hosts-to-a-host-pool) for how to reinstall the side-by-side stack.
 
 - Location: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\rds-sxs`  
   Value name: `fEnableWinstation`  
@@ -265,7 +265,7 @@ The side-by-side stack isn't installed on the session host VM.
 
 #### Resolution
 
-Follow these instructions to install the side-by-side stack on the session host VM.
+Follow these instructions to install the side-by-side stack on the session host VM:
 
 1. Use Remote Desktop Protocol (RDP) to get directly into the session host VM as local administrator.
 2. Install the side-by-side stack by following the steps to [Register session hosts to a host pool](/azure/virtual-desktop/add-session-hosts-host-pool#register-session-hosts-to-a-host-pool).
@@ -286,14 +286,14 @@ Follow these instructions to run remediation from the same subnet and domain:
 
 1. Connect with standard Remote Desktop Protocol (RDP) to the VM from where fix will be applied.
 2. [Download and install PsExec](/sysinternals/downloads/psexec).
-3. Start a command prompt as local administrator, then navigate to folder where PsExec was unzipped.
-4. From the command prompt, use the following command, where `<VMname>` is the hostname name of the VM with the malfunctioning side-by-side stack. If this is the first time you have run PsExec, you'll also need to accept the PsExec License Agreement to continue by selecting **Agree**.
+3. Start a command prompt as local administrator, and then navigate to folder where PsExec was unzipped.
+4. From the command prompt, use the following command where `<VMname>` is the hostname name of the VM with the malfunctioning side-by-side stack. If this is the first time you have run PsExec, you'll also need to accept the PsExec License Agreement to continue by selecting **Agree**.
 
     ```console
     psexec.exe \\<VMname> cmd
     ```
 
-5. After the command prompt session opens on the VM with the malfunctioning side-by-side stack, run the following command and confirm that an entry named `rdp-sxs` is available. If not, a side-by-side stack isn't present on the VM so the issue isn't tied to the side-by-side stack.
+5. After the command prompt session opens on the VM with the malfunctioning side-by-side stack, run the following command and confirm that an entry named `rdp-sxs` is available. If not, a side-by-side stack doesn't exist on the VM so the issue isn't tied to the side-by-side stack.
 
    ```console
    qwinsta
