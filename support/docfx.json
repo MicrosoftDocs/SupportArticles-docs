@@ -134,7 +134,7 @@
       },
       "author": {
         "**/*.md": "ChristySu",
-        "azure/virtual-desktop/**/*.md": "Deland-Han",
+        "azure/virtual-desktop/**/*.*": "Deland-Han",
         "azure/**/*.md": "genlin",
         "entra/**/*.md": "genlin",
         "azure/devops/**/*.md": "HaiyingYu",
@@ -167,7 +167,7 @@
       },
       "ms.author": {
         "**/*.md": "christys",
-        "azure/virtual-desktop/**/*.md": "delhan",
+        "azure/virtual-desktop/**/*.*": "delhan",
         "azure/**/*.md": "genli",
         "entra/**/*.md": "genli",
         "azure/devops/**/*.md": "haiyingyu",
