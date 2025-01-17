@@ -26,7 +26,7 @@ To work around this problem, use one of the following methods.
 
 ### Method 1
 
-Revert to using the Microsoft Entra parameters in the syntax for [Set-AzureRmVmDiskEncryptionExtension](/powershell/module/azurerm.compute/set-azurermvmdiskencryptionextension?view=azurermps-6.2.0&preserve-view=true).
+Revert to using the Microsoft Entra parameters in the syntax for [Set-AzVmDiskEncryptionExtension](/powershell/module/az.compute/set-azvmdiskencryptionextension).
 
 The parameters are the following:
 
@@ -40,7 +40,7 @@ The parameters are the following:
 Opt in to the "UnifiedDiskEncryptionForVMs" feature for your subscription by running the following script before you try again to enable encryption:
 
 ```powershell
-Register-AzureRmProviderFeature -ProviderNamespace "Microsoft.Compute" -FeatureName "UnifiedDiskEncryptionForVMs" # Wait 10 minutes until state transitions to 'Registered' Register-AzureRmResourceProvider -ProviderNamespace Microsoft.Compute
+Register-AzProviderFeature -ProviderNamespace "Microsoft.Compute" -FeatureName "UnifiedDiskEncryptionForVMs" # Wait 10 minutes until state transitions to 'Registered' Register-AzResourceProvider -ProviderNamespace Microsoft.Compute
 ```
 
 ## More Information
@@ -50,18 +50,18 @@ Register-AzureRmProviderFeature -ProviderNamespace "Microsoft.Compute" -FeatureN
 Run the following script:
 
 ```
-Set-AzureRmVMDiskEncryptionExtension -ResourceGroupName $resourceGroupName -VMName $vmName -DiskEncryptionKeyVaultUrl $diskEncryptionKeyVaultUrl -DiskEncryptionKeyVaultId $keyVaultResourceId -KeyEncryptionKeyUrl $keyEncryptionKeyUrl -KeyEncryptionKeyVaultId $keyVaultResourceId -VolumeType 'All';
+Set-AzVMDiskEncryptionExtension -ResourceGroupName $resourceGroupName -VMName $vmName -DiskEncryptionKeyVaultUrl $diskEncryptionKeyVaultUrl -DiskEncryptionKeyVaultId $keyVaultResourceId -KeyEncryptionKeyUrl $keyEncryptionKeyUrl -KeyEncryptionKeyVaultId $keyVaultResourceId -VolumeType 'All';
 DEBUG: 10:47:22 AM - SetAzureDiskEncryptionExtensionCommand end processing.
-Set-AzureRmVMDiskEncryptionExtension : Azure Disk Encryption extension version '2.2' is not supported.
+Set-AzVMDiskEncryptionExtension : Azure Disk Encryption extension version '2.2' is not supported.
 ErrorCode: NotSupported
 ErrorMessage: Azure Disk Encryption extension version '2.2' is not supported.
 StatusCode: 409
 ReasonPhrase: Conflict
 OperationID : 2cb4ac35-e2a5-4cd4-84d9-3174663e0a46
 At line:1 char:1
-+ Set-AzureRmVMDiskEncryptionExtension -ResourceGroupName $resourceGrou ...
++ Set-AzVMDiskEncryptionExtension -ResourceGroupName $resourceGrou ...
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : CloseError: (:) [Set-AzureRmVMDiskEncryptionExtension], ComputeCloudException
+    + CategoryInfo          : CloseError: (:) [Set-AzVMDiskEncryptionExtension], ComputeCloudException
 ```
 
 ## Status
