@@ -36,8 +36,8 @@ Your AKS cluster Kubernetes version determines which KEDA version will be instal
      ```yaml
      triggers:
      - type: any-type
-     metadata:
-     metricName: "my-custom-name"
+       metadata:
+         metricName: "my-custom-name"
      ```
 
      Example by using KEDA 2.15 or 2.14
@@ -45,8 +45,8 @@ Your AKS cluster Kubernetes version determines which KEDA version will be instal
      ```yaml
      triggers:
      - type: any-type
-     name: "my-custom-name"
-     metadata:
+       name: "my-custom-name"
+       metadata:
      ```
 
 ## Frequently asked questions
