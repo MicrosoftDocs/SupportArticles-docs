@@ -1,8 +1,8 @@
 ---
 title: The certificate chain was issued by an authority that isn't trusted
 description: This article provides resolutions for the error that occurs when you upgrade SNAC applications.
-ms.date: 02/28/2023
-ms.reviewer: v-jayaramanp
+ms.date: 01/10/2025
+ms.reviewer: v-jayaramanp, jopilov
 ms.custom: sap:Database Connectivity and Authentication
 ---
 

@@ -105,7 +105,12 @@
         href: app-integration/reply-url-redirected-to-localhost.md
       - name: Nonce is null error in ASP.NET MVC with OpenID Connect
         href: app-integration/troubleshoot-validation-context-nonce-null-mvc.md
-
+  - name: Troubleshoot app registrations
+    items: 
+      - name: Application and delegated permissions for access tokens
+        href: app-integration/application-delegated-permission-access-tokens-identity-platform.md
+      - name: Troubleshoot consent issues
+        href: app-integration/troubleshoot-consent-issues.md
 - name: Business To Consumer (B2C) Tenants
   items:
   - name: Problem with app or API integration
@@ -247,6 +252,8 @@
      href: app-integration/troubleshoot-authorization-requestdenied-graph-api.md
    - name: 404 error when managing objects
      href: app-integration/404-not-found-error-manage-objects-microsoft-graph.md
+   - name: Use managed identities to call Graph APIs in VB.Net and C#
+     href: users-groups-entra-apis/call-graph-api-using-managed-dentities.md
 - name: Microsoft Entra User Provisioning and Synchronization
   items:
   - name: User Sign-in or password Problems

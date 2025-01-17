@@ -4,7 +4,6 @@ description: Provides a solution to the code 8004806B error that occurs when att
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
-ms.subservice: d365-sales-custom-solutions
 ---
 # The solution package you are importing was generated on Microsoft Dynamics 365 Online, it cannot be imported into on-premises or hosted versions of Microsoft Dynamics 365
 

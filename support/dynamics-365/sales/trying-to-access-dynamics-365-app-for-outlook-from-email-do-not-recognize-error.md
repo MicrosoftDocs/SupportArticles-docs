@@ -4,7 +4,6 @@ description: It looks like you're trying to access the Microsoft Dynamics 365 Ap
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
-ms.subservice: d365-sales-email-office-integration
 ---
 # Cannot access Microsoft Dynamics 365 App for Outlook due to email address is not recognized
 

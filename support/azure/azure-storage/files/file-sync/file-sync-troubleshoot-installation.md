@@ -4,7 +4,7 @@ description: Troubleshoot common issues with installing the Azure File Sync agen
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 01/03/2025
+ms.date: 01/13/2025
 ms.author: kendownie
 ms.custom: sap:File Sync
 ---
@@ -66,6 +66,11 @@ MSI (s) (0C:C8) [12:23:40:994]: Note: 1: 2265 2:  3: -2147287035
 ```
 
 For this example, the agent installation failed with error code -2147287035 (ERROR_ACCESS_DENIED).
+
+<a id="agent-installation-gpo"></a>**Agent installation fails with error ERROR_NO_SYSTEM_RESOURCES and error code 0x800705AA**
+
+The agent installation failed due to insufficient system resources. To resolve this issue, free up memory on the server and retry installation.
+
 
 <a id="agent-installation-gpo"></a>**Agent installation fails with error: Storage Sync Agent Setup Wizard ended prematurely because of an error**
 
@@ -174,7 +179,7 @@ This issue occurs due to a known issue that has been fixed in File Sync Agent v1
 
 :::image type="content" source="media/file-sync-troubleshoot-installation/server-already-registered-error.png" alt-text="Screenshot that shows the Server Registration dialog box with the 'server is already registered' error message.":::
 
-This message appears if the server was previously registered with a Storage Sync Service. To unregister the server from the current Storage Sync Service and then register with a new Storage Sync Service, complete the steps that are described in [Unregister a server with Azure File Sync](/azure/storage/file-sync/file-sync-server-registration#unregister-the-server-with-storage-sync-service).
+This message with error code 0x80C80064 appears if the server was previously registered with a Storage Sync Service.  To unregister the server from the current Storage Sync Service and then register with a new Storage Sync Service, complete the steps that are described in [Unregister a server with Azure File Sync](/azure/storage/file-sync/file-sync-server-registration#unregister-the-server-with-storage-sync-service).
 
 If the server isn't listed under **Registered servers** in the Storage Sync Service, on the server that you want to unregister, run the following PowerShell commands:
 

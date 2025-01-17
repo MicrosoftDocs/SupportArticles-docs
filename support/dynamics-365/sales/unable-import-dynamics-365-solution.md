@@ -4,7 +4,6 @@ description: Provides a solution to an issue where you can't import Dynamics 365
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
-ms.subservice: d365-sales-custom-solutions
 ---
 # Unable to import Dynamics 365 solution or install an app because of web resource size
 

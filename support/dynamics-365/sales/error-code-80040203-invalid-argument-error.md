@@ -4,7 +4,6 @@ description: Provides a solution to an error that occurs when you try to import 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
-ms.subservice: d365-sales-custom-solutions
 ---
 # Error code 80040203 (Invalid Argument) error occurs when you try to import a solution into Microsoft Dynamics 365
 
