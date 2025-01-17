@@ -122,7 +122,7 @@ For more information, see ["Your session will be disconnected in 60 minutes" mes
 
 Check the **Access this computer from the network** security policy setting under **Computer Configuration**\\**Windows Settings**\\**Security Settings**\\**Local Policies**\\**User Rights Assignment** in the Local Group Policy Editor.
 
-Assign this right to **Authenticated Users**, **Domain Computers, or Session Host computer account if **Everyone** isn't assigned. 
+Assign this right to **Authenticated Users**, **Domain Computers**, or Session Host computer account if **Everyone** isn't assigned. 
 
 For more information, see [Access this computer from the network - security policy setting](/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/access-this-computer-from-the-network#best-practices).
 
