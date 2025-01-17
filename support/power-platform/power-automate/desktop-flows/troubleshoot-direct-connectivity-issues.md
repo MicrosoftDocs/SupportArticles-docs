@@ -2,8 +2,8 @@
 title: Direct connectivity issues in Power Automate for desktop
 description: Provides more information about how to solve the direct connectivity issues in Power Automate for desktop.
 ms.reviewer: guco, madiazor, johndund, qliu
-ms.date: 11/21/2024
-ms.custom: sap:Desktop flows\Power Automate for desktop errors
+ms.date: 01/17/2025
+ms.custom: sap:Desktop flows
 ---
 # Direct connectivity issues in Power Automate for desktop
 
@@ -33,11 +33,11 @@ Consider the following scenarios when using direct machine connectivity (not the
 
 #### Scenario 3
 
-- When you sign out of your Windows computer and you go to the Power Automate portal, you see the machine status as disconnected.
+When you sign out of your Windows computer, the machine status in the Power Automate portal shows as disconnected.
 
 ## Cause
 
-Direct to machine connectivity uses Azure WCF relays to allow the Microsoft cloud to connect to on-premises machines and schedule desktop flow runs. The Power Automate Windows service that runs on-premises opens a relay listener that connects to the Azure cloud by opening web sockets.
+Direct to machine connectivity uses [Azure WCF relays](/azure/azure-relay/relay-what-is-it#wcf-relay) to allow the Microsoft cloud to connect to on-premises machines and schedule desktop flow runs. The Power Automate Windows service that runs on-premises opens a relay listener that connects to the Azure cloud by opening web sockets.
 
 The most common cause of relay connectivity issues is the machine losing connection to the network. This can be caused by your machine not being powered on or losing network when no user is signed in to the machine.
 
@@ -67,7 +67,7 @@ You can refer to [Proxy setup](https://support.microsoft.com/topic/power-automat
 ## What information to include when opening a support ticket
 
 - Your network topology: what are the devices that traffic goes through. (see the step 2 in the section above)
-- Whether the Power Automate service (UIFlowService) on your machine is running as the default account ("NT SERVICE\UIFlowService") or if it has been changed to run as a different account
+- Whether the Power Automate service (UIFlowService) on your machine is running as the default account (NT Service\UIFlowService) or if it has been changed to run as a different account.
 - Logs from your network devices showing that the traffic is indeed handed off to the public internet. Include times of the issues and the time zones used by the logs.
 - WCF traces from the impacted machines. (see the [Enable WCF tracing](#enable-wcf-tracing) section below)
 - Desktop flow run IDs of impacted runs.
