@@ -47,7 +47,7 @@ The DHCP server validates its authorization status in Active Directory Domain Se
 
 - Permission issues: The account used to authorize the server doesn't have sufficient privileges.
 - Missing entries in AD: The entry for the DHCP server might be deleted from AD's **Configuration** container.
-- Connectivity Issues: Network or firewall problems prevent communication between the DC and the DHCP server.
+- Connectivity issues: Network or firewall problems prevent communication between the DC and the DHCP server.
 - AD replication problems: Delays or issues can cause inconsistent entries, leading to duplicate or conflicting entries (for example, Conflict (CNF) objects) in AD's **Configuration** container. The DHCP server can't be authorized with these entries.
 
 ## Troubleshooting steps
