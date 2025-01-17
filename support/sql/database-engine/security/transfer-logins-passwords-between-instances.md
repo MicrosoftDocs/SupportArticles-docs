@@ -320,7 +320,7 @@ The steps in this article don't transfer the default database information for a 
 
 ### How to deal with different sort orders between the source and destination servers
 
-There might differences in sort orders between the source and destination servers, or they might the same. Here's how each scenario can be addressed:
+There might be differences in sort orders between the source and destination servers, or they might be the same. Here's how each scenario can be addressed:
 
 - **Case-insensitive server A and case-sensitive server B**: The sort order of server A might be case-insensitive, and the sort order of server B might be case-sensitive. In this case, users must type the passwords in all uppercase letters after you transfer the logins and the passwords to the instance on server B.
 - **Case-sensitive server A and case-insensitive server B:** The sort order of server A might be case-sensitive, and the sort order of server B might be case-insensitive. In this case, users can't log in by using the logins and the passwords that you transfer to the instance on server B unless one of the following conditions is true:
@@ -348,7 +348,7 @@ To manually resolve the issue, follow these steps:
 1. Examine the contents of the `sys.server_principals` view in the instance on server B.
 1. Address these error messages as appropriate.
 
-Starting in SQL Server 2005, the SID for a login is used to manage database-level access. Occasionally, a login might have different SIDs when mapped to users in different databases. This issue can occur if databases are manually combined from different servers. In such cases, the login can only access the database where the database principal's SID matches the SID in the `sys.server_principals` view. To resolve this issue, manually remove the database user with the mismatched SID using the [DROP USER](/sql/t-sql/statements/drop-user-transact-sql) statement. Then, add the user again with the `CREATE USER` statement and map it to the correct login (server principal).
+Starting with SQL Server 2005, the SID for a login is used to manage database-level access. Occasionally, a login might have different SIDs when mapped to users in different databases. This issue can occur if databases are manually combined from different servers. In such cases, the login can only access the database where the database principal's SID matches the SID in the `sys.server_principals` view. To resolve this issue, manually remove the database user with the mismatched SID using the [DROP USER](/sql/t-sql/statements/drop-user-transact-sql) statement. Then, add the user again with the `CREATE USER` statement and map it to the correct login (server principal).
 
 For more information and to distinguish servers from database principals, see [CREATE USER](/sql/t-sql/statements/create-user-transact-sql) and [CREATE LOGIN](/sql/t-sql/statements/create-login-transact-sql).
 
