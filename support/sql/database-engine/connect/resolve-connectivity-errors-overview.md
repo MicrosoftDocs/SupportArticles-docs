@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot connectivity issues in SQL Server
 description: Provides an overview of common connectivity issues in SQL Server and describes the tools to troubleshoot the issues.
-ms.date: 01/13/2025
+ms.date: 01/17/2025
 ms.custom: sap:Database Connectivity and Authentication
 author: HaiyingYu
 ms.author: haiyingyu
@@ -29,7 +29,7 @@ Use the following list to navigate to the appropriate article page for detailed 
 
 - [Cannot generate SSPI context](cannot-generate-sspi-context-error.md)
 
-- [Login failed for user](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?context=/troubleshoot/sql/context/context) which covers the following Login errors:
+- [Login failed for user](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?context=/troubleshoot/sql/context/context) which covers the following login errors:
 
   - "Login failed for user 'NT AUTHORITY\ANONYMOUS LOGON'"
   - "Login failed for user '(null)'"
@@ -65,11 +65,11 @@ You can use the PortQryUI tool (a graphical user interface (GUI) port scanner) t
 
 ### Find which ports SQL Server listening on
 
-The following article provides steps to identify which ports SQL Server is listening: [Check whether SQL Server is listening on dynamic or static ports](../connect/static-or-dynamic-port-config.md)
+The following article provides steps to identify which ports SQL Server is listening on: [Check whether SQL Server is listening on dynamic or static ports](../connect/static-or-dynamic-port-config.md).
 
 ### Get a detailed diagnostic report with SQLCheck
 
-Microsoft product support engineers frequently use [SQLCheck](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLCHECK), which is a tool they built to diagnose causes for connection failures. You can follow the [instructions](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLCHECK) to download and collect the SQLCheck report for in-depth analysis. 
+Microsoft product support engineers frequently use [SQLCheck](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLCHECK), which is a tool they built to diagnose causes of connection failures. You can follow the [instructions](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLCHECK) to download and collect the SQLCheck report for in-depth analysis. 
 
 ### Use Kerberos Configuration Manager
 
