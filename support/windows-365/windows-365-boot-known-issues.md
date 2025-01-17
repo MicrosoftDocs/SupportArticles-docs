@@ -156,7 +156,7 @@ Windows 365 Boot is configured by using the [CloudDesktop CSP](/windows/client-m
 2. Search for the Device configuration profile that contains “Windows 365 Boot Device Configuration Policy” in its name.
 3. Make sure that the “Cloud Desktop” configuration is configured with the **Windows 365 Boot Mode** setting set to **Enable Windows 365 Boot Desktop**.
 4. Select **Device assignment status** and make sure that the configuration policy was successfully applied to it.
-5. If the check-in status isn't successful, see [Troubleshooting policies and profiles in Microsoft Intune](/troubleshoot/mem/intune/device-configuration/troubleshoot-policies-in-microsoft-intune).
+5. If the check-in status isn't successful, see [Troubleshooting policies and profiles in Microsoft Intune](../mem/intune/device-configuration/troubleshoot-policies-in-microsoft-intune.md).
 
 If the problem persists, reinstall the physical device's operating system as explained in [Windows 365 Boot physical device requirements](/windows-365/enterprise/windows-365-boot-physical-device-requirements).
 
@@ -170,7 +170,7 @@ Windows 365 Boot is configured through the [Windowslogon CSP](/windows/client-ma
 2. Search for the Device configuration profile that contains “Windows 365 Boot Device Configuration Policy” in its name.
 3. Make sure that the "Windows Logon" configuration is configured with the **Override Shell Program** setting set to **Apply Lightweight shell**.
 4. Select **Device assignment status** and make sure that the configuration policy was successfully applied to it.
-5. If the check-in status isn't successful, see [Troubleshooting policies and profiles in Microsoft Intune](/troubleshoot/mem/intune/device-configuration/troubleshoot-policies-in-microsoft-intune).
+5. If the check-in status isn't successful, see [Troubleshooting policies and profiles in Microsoft Intune](../mem/intune/device-configuration/troubleshoot-policies-in-microsoft-intune.md).
 
 If the problem persists, reinstall the physical device's operating system as explained in [Windows 365 Boot physical device requirements](/windows-365/enterprise/windows-365-boot-physical-device-requirements).
 

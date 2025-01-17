@@ -49,7 +49,10 @@ The following table lists the release history for [!INCLUDE [sql-server-2022](..
 
 ## <a id="CU17"></a> CU 17 (January 2025)
 
-This is the Cumulative Update 17 (CU 17) release of [!INCLUDE [sql-server-2022](../../includes/versions/sql-server-2022.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 16.0.4175.1. For information about the fixes and improvements in this release, see the [Support article](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate17).
+This is the Cumulative Update 17 (CU 17) release of [!INCLUDE [sql-server-2022](../../includes/versions/sql-server-2022.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 16.0.4175.1. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2022/cumulativeupdate17.md).
+
+> [!IMPORTANT]  
+> The Microsoft Entra managed identity feature for SQL Server on Azure VM isn't supported on Linux. For more information, see [Improvement: Microsoft Entra managed identity support for backup and restore database operations and for EKM with AKV in SQL Server on Azure VMs](../sqlserver-2022/microsoft-entra-managed-identity-support-for-backup-restore-database-ekm-akv.md).
 
 ### Package details
 
