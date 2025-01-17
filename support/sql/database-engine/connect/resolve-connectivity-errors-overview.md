@@ -27,15 +27,15 @@ Use the following list to navigate to the appropriate article page for detailed 
 
 - [A network-related or instance-specific error occurred while establishing a connection to SQL Server](../connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md)
 
-- [Cannot generate SSPI context](cannot-generate-sspi-context-error.md)
+- [Can't generate SSPI context](cannot-generate-sspi-context-error.md)
 
 - [Login failed for user](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?context=/troubleshoot/sql/context/context) which covers the following login errors:
 
-  - "Login failed for user 'NT AUTHORITY\ANONYMOUS LOGON'"
-  - "Login failed for user '(null)'"
-  - "Login failed for user (empty)"
-  - "Login failed for user '\<username\>'"
-  - "Login failed for user '\<domain>\\\<username>'"
+  - > "Login failed for user 'NT AUTHORITY\ANONYMOUS LOGON'"
+  - > "Login failed for user '(null)'"
+  - > "Login failed for user (empty)"
+  - > "Login failed for user '\<username\>'"
+  - > "Login failed for user '\<domain>\\\<username>'"
 
 - [Timeout expired. The timeout period elapsed prior to completion of the operation or the server is not responding](../connect/timeout-expired-error.md)
 
