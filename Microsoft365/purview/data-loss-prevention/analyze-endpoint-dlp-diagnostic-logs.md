@@ -1,5 +1,5 @@
 ---
-title: Analyze endpoint DLP diagnostic logs
+title: Analyze Endpoint DLP Diagnostic Logs
 description: Discusses how to analyze the endpoint DLP diagnostic logs collected by the MDE Client Analyzer tool.
 author: cloud-writer
 ms.author: meerak
