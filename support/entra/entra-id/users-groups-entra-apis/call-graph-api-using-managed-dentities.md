@@ -9,7 +9,7 @@ ms.custom: sap:Microsoft Graph Users, Groups, and Entra APIs
 
 # Use managed identities to call Microsoft Graph APIs in VB.Net and C#
 
-This article explains how to use managed identities to obtain access tokens, and then call Microsoft Graph APIs in both VB.Net and C#. 
+This article explains how to use managed identities to obtain access tokens for calling Microsoft Graph APIs in both VB.Net and C#. 
 
 ## Configure permissions for managed identities
 
