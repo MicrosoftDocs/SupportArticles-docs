@@ -124,7 +124,7 @@ Check the **Access this computer from the network** security policy setting unde
 
 Assign this right to **Authenticated Users**, **Domain Computers** or Session Host computer account if **Everyone** isn't assigned. 
 
-For more information, see [Access this computer from the network - security policy setting](/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/access-this-computer-from-the-network#best-practices)
+For more information, see [Access this computer from the network - security policy setting](/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/access-this-computer-from-the-network#best-practices).
 
 ## Refresh the X509 Certificate registry keys
 
