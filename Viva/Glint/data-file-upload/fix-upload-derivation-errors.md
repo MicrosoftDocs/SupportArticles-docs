@@ -20,7 +20,7 @@ When you upload employee attribute data to Microsoft Viva Glint, you might recei
 
 Error message:
 
-> DERIVATION_ERROR: The date format is incorrectly configured for the following columns: (Hire Date). We're expecting \<date format, such as mm/dd/yyyy\>. For Microsoft Excel files, ensure that cells are in Text format.
+> DERIVATION_ERROR: The date format is incorrectly configured for the following columns: (Hire Date). We're expecting \<date format, such as mm/dd/yyyy\>. For Microsoft Excel files, make sure that cells are in Text format.
 
 This issue occurs because the date format in the file that you upload doesn't match the format that's specified when you set up attributes in Viva Glint.
 
@@ -50,9 +50,9 @@ To fix the issue, follow these steps:
 
 Error message:
 
-> DERIVATION_ERROR: Attribute headers in the uploaded file don't match your Viva Glint configuration. Ensure that all attribute header names match and are included in your file. Include columns Hire Date and Birth Year. These columns are used for deriving attributes Tenure, Age Group.
+> DERIVATION_ERROR: Attribute headers in the uploaded file don't match your Viva Glint configuration. Make sure that all attribute header names match and are included in your file. Include the **Hire Date** and **Birth Year** columns. These columns are used for deriving the Tenure and Age Group attributes.
 
-This issue is caused by a mismatch between the attribute header in the uploaded file and the attribute names that are specified in Viva Glint. Attribute headers must match the attribute names in Viva Glint exactly, including the case and spaces.
+This issue is caused by a mismatch between the attribute header in the uploaded file and the attribute names that are specified in Viva Glint. Attribute headers must match the attribute names in Viva Glint exactly, including the case and space characters.
 
 ### Resolution
 
