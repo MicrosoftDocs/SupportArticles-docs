@@ -32,7 +32,7 @@ To fix the issue, delete the extra column, and then upload the file again to Viv
 
 Error message:
 
-> MISSING_COLUMN: Missing required column '\<Attribute Name\>'. Add this column of data to your file and reupload.
+> MISSING_COLUMN: Missing required column '\<Attribute Name\>'. Add this column of data to your file, and then upload it again.
 
 This issue occurs if one or more of the following required columns are missing from the file that you upload:
 
