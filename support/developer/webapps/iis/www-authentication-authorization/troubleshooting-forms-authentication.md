@@ -61,12 +61,12 @@ After the request leaves the client, there are various layers that can affect th
 
 **Forms authentication ticket timed out**
 
-In ASP.NET 2.0 applications onwards, by default, the forms authentication time-out value has changed to be 30 minutes. This means that after 30 minutes of inactivity, you'll be prompted to log in again.
+In ASP.NET 2.0 applications onwards, by default, the forms authentication timeout value has changed to be 30 minutes. This means that after 30 minutes of inactivity, you'll be prompted to log in again.
 
 > [!NOTE]
-> When you access a website each time, the 30-minute window clock is reset. Only if it's idle there's a time-out.
+> When you access a website each time, the 30-minute window clock is reset. Only if it's idle there's a timeout.
 
-If you want to change the time-out value to be longer, you can easily change the time-out value in your local *web.config* file (the time-out value is in minutes):
+If you want to change the timeout value to be longer, you can easily change the timeout value in your local *web.config* file (the timeout value is in minutes):
 
 ```xml
 <system.web> 
@@ -78,9 +78,9 @@ If you want to change the time-out value to be longer, you can easily change the
 
 ### Scenario 4
 
-Form authentication can expire prior to the value of the time-out attribute defined in the configuration file.
+Form authentication can expire prior to the value of the timeout attribute defined in the configuration file.
 
-If the forms authentication ticket is manually generated, the time-out property of the ticket will override the value that's set in the configuration file. Therefore, if that value is less than the value in the configuration file, the forms authentication ticket will expire before the configuration file time-out attribute value and vice-versa. For example, let's assume that the `FORMS` time-out attribute is set to 30 in the *Web.config* file and the expiration value of the ticket is set to 20 minutes. In this case, the forms authentication ticket will expire after 20 minutes and then you have to log on again.
+If the forms authentication ticket is manually generated, the timeout property of the ticket will override the value that's set in the configuration file. Therefore, if that value is less than the value in the configuration file, the forms authentication ticket will expire before the configuration file timeout attribute value and vice-versa. For example, let's assume that the `FORMS` timeout attribute is set to 30 in the *Web.config* file and the expiration value of the ticket is set to 20 minutes. In this case, the forms authentication ticket will expire after 20 minutes and then you have to log on again.
 
 ```output
 Event code: 4005
@@ -186,7 +186,7 @@ When you see the request that reached the server, make sure that the server rece
 
   To learn how to generate machine keys, see [Machine Key Settings](/iis/application-frameworks/scenario-build-an-aspnet-website-on-iis/configuring-step-4-configure-application-security#44-machine-key-settings). 
 
-- Compare the time-out values for both forms, that is, the authentication module and the session module， on all of the web servers.
+- Compare the timeout values for both forms, that is, the authentication module and the session module， on all of the web servers.
 - Compare the **System.Web.dll** version under the Framework folder for ASP.NET 4 between all of the web servers in the farm. Forms authentication failed for the request. The reason is that the ticket supplied was invalid. This happens due to missing Reliability Update 1 for MS .NET Framework 4 on one of the web servers.
 - Install the Reliability Update 1 for the .NET Framework 4 kb2533523 on the server that was missing it and rebooted the server. The issue is fixed. For more information, see [Reliability Update 1 for the .NET Framework 4](https://support.microsoft.com/topic/reliability-update-1-for-the-net-framework-4-5a8de0be-f4a9-f89e-e40d-f59dd1e353e5).
 
