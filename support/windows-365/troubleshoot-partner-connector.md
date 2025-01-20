@@ -1,29 +1,12 @@
 ---
 # required metadata
 title: Troubleshoot partner connectors in Windows 365
-titleSuffix:
 description: Provides troubleshooting information to the issues related to partner connectors in Windows 365.
-keywords:
-author: ErikjeMS
-ms.author: erikje
-manager: dougeby
-ms.date: 01/10/2025
+manager: dcscontentpm
+ms.date: 01/20/2025
 ms.topic: troubleshooting
-ms.service: windows-365
-ms.subservice: windows-365-enterprise
-ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: aradinger
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure; get-started
+ms.reviewer: aradinger, erikje
+ms.custom: intune-azure, get-started
 ms.collection:
 - M365-identity-device-management
 - tier2

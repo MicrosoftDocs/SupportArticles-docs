@@ -1,29 +1,12 @@
 ---
 # required metadata
 title: Troubleshoot Azure network connections
-titleSuffix:
 description: Troubleshoot Azure network connections in Windows 365.
-keywords:
-author: ErikjeMS
-ms.author: erikje
-manager: dougeby
-ms.date: 08/22/2024
+manager: dcscontentpm
+ms.date: 01/20/2025
 ms.topic: troubleshooting
-ms.service: windows-365
-ms.subservice: windows-365-enterprise
-ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: ericor
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure; get-started
+ms.reviewer: ericor, erikje
+ms.custom: intune-azure, get-started
 ms.collection:
 - M365-identity-device-management
 - tier2

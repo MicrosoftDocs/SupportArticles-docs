@@ -1,29 +1,12 @@
 ---
 # required metadata
 title: Windows 365 Boot known issues
-titleSuffix:
 description: Learn about known issues with Windows 365 Boot, including workarounds and updated fixes.
-keywords:
-author: ErikjeMS  
-ms.author: erikje
-manager: dougeby
-ms.date: 01/13/2025
+manager: dcscontentpm
+ms.date: 01/20/2025
 ms.topic: troubleshooting
-ms.service: windows-365
-ms.subservice: windows-365-enterprise
-ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: elluthra
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure; get-started
+ms.reviewer: elluthra, erikje
+ms.custom: intune-azure, get-started
 ms.collection:
 - M365-identity-device-management
 - tier2

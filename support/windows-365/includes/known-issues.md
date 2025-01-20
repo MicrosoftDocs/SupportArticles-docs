@@ -1,11 +1,9 @@
 ---
 title: include file
 description: include file
-author: ErikjeMS
-ms.service: windows-365
 ms.topic: include
-ms.date: 07/14/2022
-ms.author: erikje
+ms.date: 01/20/2025
+ms.reviewer: erikje
 ms.custom: include file
 ---
 ## Missing Start menu and taskbar when using iPad and the Remote Desktop app to access a Cloud PC

@@ -1,29 +1,12 @@
 ---
 # required metadata
 title: Troubleshoot connection errors
-titleSuffix:
 description: Troubleshoot connection errors in Windows 365.
-keywords:
-author: ErikjeMS  
-ms.author: erikje
-manager: dougeby
-ms.date: 05/09/2023
-ms.topic: conceptual
-ms.service: windows-365
-ms.subservice: windows-365-enterprise
-ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: traceyadams
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure; get-started
+manager: dcscontentpm
+ms.date: 01/20/2025
+ms.topic: troubleshooting
+ms.reviewer: traceyadams, erikje
+ms.custom: intune-azure, get-started
 ms.collection:
 - M365-identity-device-management
 - tier2

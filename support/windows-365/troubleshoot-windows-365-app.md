@@ -1,29 +1,12 @@
 ---
 # required metadata
 title: Troubleshoot issues with the Windows 365 app
-titleSuffix:
 description: Provides solutions, tips, or best practices to resolve the issues with the Windows 365 app.
-keywords:
-author: ErikjeMS
-ms.author: erikje
-manager: dougeby
-ms.date: 01/13/2025
+manager: dcscontentpm
+ms.date: 01/20/2025
 ms.topic: troubleshooting
-ms.service: windows-365
-ms.subservice: windows-365-enterprise
-ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: chbrinkhoff
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure; get-started
+ms.reviewer: chbrinkhoff, erikje
+ms.custom: intune-azure, get-started
 ms.collection:
 - M365-identity-device-management
 - tier2

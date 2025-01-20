@@ -1,29 +1,11 @@
 ---
-# required metadata
 title: Azure network connection health checks in Windows 365
-titleSuffix:
 description: Learn about the health checks that are automatically run on Azure network connections.
-keywords:
-author: ErikjeMS
-ms.author: erikje
-manager: dougeby
-ms.date: 10/30/2024
-ms.topic: how-to
-ms.service: windows-365
-ms.subservice: windows-365-enterprise
-ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: mattsha
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure; get-started
+manager: dcscontentpm
+ms.date: 01/20/2025
+ms.topic: troubleshooting
+ms.reviewer: mattsha, erikje
+ms.custom: intune-azure, get-started
 ms.collection:
 - M365-identity-device-management
 - tier2

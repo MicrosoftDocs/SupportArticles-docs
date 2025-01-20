@@ -1,27 +1,10 @@
 ---
 title: Known issues for Windows 365 Enterprise and Frontline
 description: Learn about known issues for Windows 365 Enterprise.
-keywords:
-ms.author: erikje
-author: ErikjeMS
-manager: dougeby
-ms.date: 10/19/2024
-audience: Admin
+manager: dcscontentpm
+ms.date: 01/20/2025
 ms.topic: troubleshooting
-ms.service: windows-365
-ms.subservice: windows-365-enterprise
-ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: ivivano
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
+ms.reviewer: ivivano, erikje
 ms.custom: get-started
 ms.collection:
 - M365-identity-device-management

@@ -82,7 +82,8 @@
         "windows/win32/*.*": "MSDocsHeader-WinDevCenter",
         "windows-client/**.*": "MSDocsHeader-Windows",
         "windows-hardware/**.*": "MSDocsHeader-WinHW",
-        "windows-server/**.*": "MSDocsHeader-WindowsServer"
+        "windows-server/**.*": "MSDocsHeader-WindowsServer",
+        "windows-365/**.*": "MSDocsHeader-Windows365"
       },
       "feedback_product_url": {
         "dynamics/gp/*.md": "https://experience.dynamics.com/ideas/categories/?forum=771cc5ac-c117-e811-8105-3863bb2e0320&forumName=Dynamics%20GP",
@@ -103,6 +104,7 @@
         "power-platform/dataverse/**/*.md": "https://powerusers.microsoft.com/t5/Microsoft-Dataverse/bd-p/CDS_Apps",
         "windows-server/**/*.md": "https://techcommunity.microsoft.com/t5/windows-server-for-it-pro/bd-p/WindowsServer",
         "windows-client/**/*.md": "https://support.microsoft.com/windows/f59187f8-8739-22d6-ba93-f66612949332",
+        "windows-365/**/*.md": "https://feedbackportal.microsoft.com/feedback/forum/6ab53114-95ab-ec11-9840-000d3a1c7d74",
         "windows-hardware/**/*.md": "https://support.microsoft.com/windows/f59187f8-8739-22d6-ba93-f66612949332",
         "developer/dotnet/**/*.md": "https://developercommunity.visualstudio.com/dotnet/report",
         "developer/visualstudio/**/*.md": "https://developercommunity.visualstudio.com/VisualStudio",
@@ -146,6 +148,7 @@
         "windows-hardware/drivers/**/*.md": "HaiyingYu",
         "windows-client/**/*.md": "Deland-Han",
         "windows-server/**/*.md": "Deland-Han",
+        "windows-365/**/*.md": "Deland-Han",
         "mem/**/*.md": "helenclu",
         "system-center/**/*.md": "helenclu",
         "dynamics-365/customer-insights/**/*.md": "m-hartmann",
@@ -178,6 +181,7 @@
         "windows-hardware/drivers/**/*.md": "haiyingyu",
         "windows-client/**/*.md": "delhan",
         "windows-server/**/*.md": "delhan",
+        "windows-365/**/*.md": "delhan",
         "mem/**/*.md": "luche",
         "system-center/**/*.md": "luche",
         "dynamics-365/customer-insights/**/*.md": "mhart",
@@ -242,7 +246,8 @@
         "windows/win32/**/*.md": "windows-dev-apps",
         "windows-hardware/drivers/**/*.md": "windows-hardware-driver-quality",
         "windows-client/**/**.*": "windows-client",
-        "windows-server/**/**.*": "windows-server"
+        "windows-server/**/**.*": "windows-server",
+        "windows-365/**/**.*": "windows-365"
       },
       "titleSuffix": {
         "developer/dotnet/**/*.md": ".NET",
@@ -263,6 +268,7 @@
         "windows-hardware/drivers/**/*.md": "Hardware Developer",
         "windows-server/**/*.md": "Windows Server",
         "windows-client/**/*.md": "Windows Client",
+        "windows-365/**/*.md": "Windows 365",
         "mem/intune/**/*.md": "Intune",
         "mem/configmgr/**/*.md": "Configuration Manager",
         "system-center/dpm/**/*.md": "Data Protection Manager",
