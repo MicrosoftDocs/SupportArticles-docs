@@ -117,6 +117,10 @@ This error occurs if the server endpoint path contains orphaned tiered files. If
 
 This error occurs if the server is offline or doesn't have network connectivity. If the server is no longer available, unregister the server in the portal, which will delete the server endpoints. To delete the server endpoints, follow the steps that are described in [Unregister a server with Azure File Sync](/azure/storage/file-sync/file-sync-server-registration#unregister-the-server-with-storage-sync-service).
 
+<a id="-2134347720"></a>**Server endpoint deletion fails, with this error: "MgmtFileShareSnapshotCountExceeded" (Error code: -2134347720 or 0x80c87038)**
+
+The error occurs when the ShareSnapshotCount exceeds the limit. Azure Files Sync takes a snapshot of the Azure file share as a backup before creating the server endpoint. This snapshot can be used to restore the share to the state before the server endpoint was created. The snapshot is not removed automatically after the server endpoint is created, so you can delete it manually if you don't need it. You can find the snapshots created by Azure File Sync by looking at the snapshots for the Azure file share and checking for AzureFileSync in the Initiator column.
+
 ## Server endpoint health
 
 <a id="server-endpoint-provisioningfailed"></a>**Unable to open server endpoint properties page or update cloud tiering policy**
