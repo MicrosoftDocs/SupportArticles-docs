@@ -2,7 +2,7 @@
 title: Direct connectivity issues in Power Automate for desktop
 description: Provides more information about how to solve the direct connectivity issues in Power Automate for desktop.
 ms.reviewer: guco, madiazor, johndund, qliu
-ms.date: 01/17/2025
+ms.date: 01/20/2025
 ms.custom: sap:Desktop flows
 ---
 # Direct connectivity issues in Power Automate for desktop
@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 5016345
 
 ## Symptoms
 
-Consider the following scenarios when using direct machine connectivity (not the data gateway, which has been deprecated for desktop flows):
+Consider the following scenarios when using direct machine connectivity (not the data gateway, which is deprecated for desktop flows):
 
 #### Scenario 1
 
@@ -27,9 +27,9 @@ Consider the following scenarios when using direct machine connectivity (not the
 
 #### Scenario 2
 
-- Desktop flows run on a registered machine as long as a user session is running (attended runs) or even for some minutes after the last user has logged off (unattended runs).
+- Desktop flows run on a registered machine as long as a user session is running (attended runs) or even for some minutes after the last user signs out (unattended runs).
 - The connection to the machine is lost after some minutes (for example, 15 minutes).
-- The connection is re-established once a user logs back on to the machine.
+- The connection is re-established once a user signs back in to the machine.
 
 #### Scenario 3
 
