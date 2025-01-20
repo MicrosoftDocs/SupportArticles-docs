@@ -1,7 +1,7 @@
 ---
 title: Cannot connect to RDS because no RD Licensing servers are available
 description: This article describes how to troubleshoot RDS connection errors that are related to Remote Desktop licensing.
-ms.date: 01/17/2025
+ms.date: 01/20/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -44,7 +44,7 @@ These issue could be caused by the following user messages:
 
 In this case, [check the RD Licensing configuration](#check-the-rd-licensing-configuration).
 
-If the RD License Diagnoser lists other problems, such as "The RDP protocol component X.224 detected an error in the protocol stream and has disconnected the client," there may be a problem that affects the license certificates. Such problems tend to be associated with user messages, such as the following:
+If the RD License Diagnoser lists other problems, such as "The RDP protocol component X.224 detected an error in the protocol stream and has disconnected the client," there might be a problem that affects the license certificates. Such problems tend to be associated with user messages, such as the following:
 
 Because of a security error, the client could not connect to the Terminal server. After making sure that you are signed in to the network, try connecting to the server again.
 
@@ -129,7 +129,7 @@ For more information, see [Access this computer from the network - security poli
 ## Refresh the X509 Certificate registry keys
 
 > [!IMPORTANT]  
-> Follow this section's instructions carefully. Serious problems can occur if the registry is modified incorrectly. Before you start modifying the registry, [back up the registry](https://support.microsoft.com/help/322756) so you can restore it in case something goes wrong.
+> Follow this section's instructions carefully. Serious problems can occur if the registry is modified incorrectly. Before you start modifying the registry, [back up the registry](https://support.microsoft.com/help/322756) so that you can restore it in case something goes wrong.
 
 To resolve this problem, back up and then remove the X509 Certificate registry keys, restart the computer, and then reactivate the RD Licensing server. Follow these steps.
 
@@ -140,7 +140,7 @@ Here's how to reactivate the RD Licensing server:
 
 1. Open the Registry Editor and navigate to **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\\RCM**.
 2. On the Registry menu, select **Export Registry File**.
-3. Enter **exported- Certificate** into the **File name** box, then select **Save**.
+3. Enter **exported- Certificate** into the **File name** box, and then select **Save**.
 4. Right-click each of the following values, select **Delete**, and then select **Yes** to verify the deletion:  
    - **Certificate**
    - **X509 Certificate**
