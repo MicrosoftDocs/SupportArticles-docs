@@ -1,7 +1,7 @@
 ---
 title: Scripts to retrieve profile age
 description: Introduces a script to retrieve profile age.
-ms.date: 09/12/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Network provider settings are removed during an in-place upgrade to Windows 10
 description: Discusses an issue in which network provider settings are removed during an in-place upgrade to Windows 10. Provides workarounds.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

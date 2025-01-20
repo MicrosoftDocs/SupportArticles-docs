@@ -19,6 +19,9 @@ items:
       - name: Windows Client
         tocHref: /troubleshoot/windows-client/
         topicHref: /troubleshoot/windows-client/welcome-windows-client
+      - name: Windows 365
+        tocHref: /troubleshoot/windows-365/
+        topicHref: /troubleshoot/windows-365/welcome-windows-365
       - name: Application Developer
         tocHref: /troubleshoot/windows/win32
         topicHref: /troubleshoot/windows/win32/welcome-windowsdeveloper

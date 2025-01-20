@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting the installation of Windows features and roles
 description: Provides guidance to help troubleshoot issues when adding or removing roles and features in Windows.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm

@@ -132,10 +132,20 @@ items:
     href: site-behavior-performance/401-error-preauthentication-header.md
   - name: HTTP error 403.14
     href: site-behavior-performance/http-403-14-forbidden-webpage.md
+  - name: High memory usage
+    items:
+    - name: High memory consumption issue overview
+      href: site-behavior-performance/high-memory-consumption-issues-overview.md
+    - name: Data capture for managed memory leaks
+      href: site-behavior-performance/data-capture-managed-memory-leak.md
+    - name: Native memory leak in an IIS 7.x application pool
+      href: site-behavior-performance/troubleshoot-native-memory-leak-iis-7x-application-pool.md
   - name: HTTP error 500.0 when you visit a web site
     href: site-behavior-performance/http-error-500-when-you-visit-web-site.md
   - name: FtpPutFile always returns success
     href: site-behavior-performance/ftpputfile-success-451-status.md
+  - name: HTTP error 403.16
+    href: site-behavior-performance/http-403-forbidden-access-website.md
   - name: HTTP error 404.2
     href: site-behavior-performance/http-error-402-webpage.md
   - name: HTTP error 500 when you use Response.BinaryWrite
@@ -163,8 +173,6 @@ items:
     href: www-administration-management/enable-ssl-all-customers.md
   - name: Error when you configure 32-bit managed handlers
     href: www-administration-management/error-when-you-configure-32-bit-handlers.md
-  - name: HTTP error 400 when you send requests
-    href: www-administration-management/http-bad-request-response-kerberos.md
   - name: HTTPS connections fail and SSL bindings are deleted
     href: www-administration-management/https-connections-fail-ssl-bindings-deleted.md
   - name: IIS events are not displayed remotely
@@ -198,6 +206,8 @@ items:
     href: www-authentication-authorization/error-install-certificate.md
   - name: Exporting configuration files fails
     href: www-authentication-authorization/configuration-files-cannot-exported.md
+  - name: HTTP error 400 when you send requests
+    href: www-authentication-authorization/http-bad-request-response-kerberos.md
   - name: HTTP error 403.7
     href: www-authentication-authorization/http-403-forbidden-open-webpage.md
   - name: IIS authenticates browser clients

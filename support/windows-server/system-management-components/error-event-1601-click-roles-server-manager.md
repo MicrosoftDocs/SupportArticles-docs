@@ -1,7 +1,7 @@
 ---
 title: Error message when you select Roles in Server Manager on Windows Server
 description: Resolves the Windows Server problem in which selecting Roles in Server Manager generates an error message and Event 1601.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

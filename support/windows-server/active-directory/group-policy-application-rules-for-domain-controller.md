@@ -1,7 +1,7 @@
 ---
 title: Group policy application rules for domain controllers
 description: Describes group policy application rules for domain controllers.
-ms.date: 11/04/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

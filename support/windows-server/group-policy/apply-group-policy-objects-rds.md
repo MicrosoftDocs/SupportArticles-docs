@@ -1,7 +1,7 @@
 ---
 title: Group Policy objects to Remote Desktop Services
 description: Explains how to apply Group Policy objects to Remote Desktop Services servers without adversely affecting other servers on the network.
-ms.date: 12/09/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

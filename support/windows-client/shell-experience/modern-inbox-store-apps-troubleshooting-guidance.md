@@ -1,7 +1,7 @@
 ---
 title: Modern, Inbox, and Microsoft Store Apps troubleshooting guidance
 description: Provides guidance to troubleshoot Modern, Inbox, and Microsoft Store Apps.
-ms.date: 09/27/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

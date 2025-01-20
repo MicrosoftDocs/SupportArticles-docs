@@ -1,7 +1,7 @@
 ---
 title: Event IDs 13552 and 13555 are logged in the File Replication Service log on a Windows-based domain controller
 description: Resolves an issue in which the SYSVOL folder isn't replicated between domain controllers that are running Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, or Windows Server 2003.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

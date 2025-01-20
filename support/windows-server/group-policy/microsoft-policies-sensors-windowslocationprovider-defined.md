@@ -1,7 +1,7 @@
 ---
 title: Fail to edit a group policy
 description: Fixes an issue that triggers an error when the central store contains the .admx files from Windows 10.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

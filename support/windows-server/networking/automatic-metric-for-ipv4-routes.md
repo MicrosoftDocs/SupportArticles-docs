@@ -1,7 +1,7 @@
 ---
 title: The Automatic Metric feature for IPv4 routes
 description: Introduces the Automatic Metric feature in Windows for IPv4 routes.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

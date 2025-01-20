@@ -1,7 +1,7 @@
 ---
 title: reset the File Replication service staging folder to a different logical drive
 description: Describes how to reset the File Replication service (FRS) staging folder to a different logical drive or folder for existing FRS replica members.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

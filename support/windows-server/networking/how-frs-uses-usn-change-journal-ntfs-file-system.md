@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot journal_wrap errors on Sysvol and DFS replica sets
 description: Discusses how to troubleshoot journal_wrap errors on Sysvol and DFS replica sets.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

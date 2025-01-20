@@ -1,7 +1,7 @@
 ---
 title: Use GPOs to change default logon domain name
 description: Describes how to use Group Policy Objects (GPOs) to change default logon domain name.
-ms.date: 04/29/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

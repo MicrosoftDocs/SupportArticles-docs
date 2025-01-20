@@ -1,7 +1,7 @@
 ---
 title: Restore IIS and clean up Active Directory when you uninstall AD FS 2.0
 description: Explains how to restore IIS or clean up Active Directory when you uninstall Active Directory Federation Services 2.0.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

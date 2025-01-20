@@ -1,7 +1,7 @@
 ---
 title: Running Sysprep /generalize returns error
 description: Describes how to work around the issue that may occur if the Windows Software Licensing Rearm program has run more than three times in a single Windows image.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

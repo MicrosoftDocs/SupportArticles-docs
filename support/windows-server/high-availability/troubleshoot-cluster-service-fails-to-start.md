@@ -1,7 +1,7 @@
 ---
 title: Cluster service fails to start troubleshooting guidance
 description: Provides guidance for when a cluster service fails to start in a Windows-based failover cluster.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm

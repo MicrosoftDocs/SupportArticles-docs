@@ -1,7 +1,7 @@
 ---
 title: Event ID 5722 is logged
 description: Describes how to diagnose and resolve a problem where event 5722 appears in the system log of your domain controller.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
