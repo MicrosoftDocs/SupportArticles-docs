@@ -22,7 +22,7 @@ To report a vulnerability, see [Report an issue](https://msrc.microsoft.com/repo
 
 App Service is a platform with various underlying technologies like Windows, Linux, and web application frameworks. Updates are applied at a routine cadence for OS, host runtime, and Microsoft image repo. 
 
-- Check [this article](/azure/app-service/overview-patch-os-runtime) understand OS and runtime patching in Azure App Serviceregarding the OS or software in App Service.
+- Check [this article](/azure/app-service/overview-patch-os-runtime) understand OS and runtime patching in Azure App Service regarding the OS or software in App Service.
 - [Check Guest OS patches details](/azure/cloud-services/cloud-services-guestos-msrc-releases) to understand the updates applied to the Azure Guest OS.
 
 If you still need help, gather the following information before submitting a request to Azure Support:
