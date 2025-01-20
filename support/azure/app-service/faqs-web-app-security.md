@@ -10,20 +10,22 @@ ms.service: azure-app-service
 ---
 # Frequently asked questions about App Service security
 
-The Microsoft Security Response Center (MSRC) investigates all reports of security vulnerabilities that affect Microsoft products and services, and provides the information in the [Security Update Guide](https://msrc.microsoft.com/update-guide/vulnerability) as part of the ongoing effort to help you manage security risks and help keep your systems protected.
+The [Microsoft Security Response Center](https://msrc.microsoft.com/) (MSRC) investigates all reports of security vulnerabilities that affect Microsoft products and services, and provides the information in the [Security Update Guide](https://msrc.microsoft.com/update-guide/vulnerability) as part of the ongoing effort to help you manage security risks and help keep your systems protected.
 
-If your question isn't answered and you still need help, have the number of the CVE you would like to check and report a vulnerability on [Microsoft Security Response Center](https://msrc.microsoft.com/) or submit a support request at [Azure support](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot).
+If your question isn't answered, submit a [support request](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot) with the the number of the CVE. 
+
+To report a vulnerability, see [Report an issue](https://msrc.microsoft.com/report/vulnerability/new).
 
 ## FAQs
 
-### How do I know whether a specific CVE (common vulnerability) or known security issue applies to my Web App?
+### How do I know whether a specific CVE (common vulnerability) or known security issue applies to my web app?
 
-App Service is a platform with various underlying technologies like Windows, Linux, and web application frameworks. Updates are applied at a routine cadence for OS, host runtime, and Microsoft image repo.You can:
+App Service is a platform with various underlying technologies like Windows, Linux, and web application frameworks. Updates are applied at a routine cadence for OS, host runtime, and Microsoft image repo. 
 
 - Check [this article](/azure/app-service/overview-patch-os-runtime) understand OS and runtime patching in Azure App Serviceregarding the OS or software in App Service.
 - [Check Guest OS patches details](/azure/cloud-services/cloud-services-guestos-msrc-releases) to understand the updates applied to the Azure Guest OS.
 
-If your question wasn't answered and you still need help, gather the following information before submitting a request to Azure Support:
+If you still need help, gather the following information before submitting a request to Azure Support:
 
 - Specify the security patch you are inquiring about.
 - Confirm the security patch version deployed on Azure for the software.
@@ -39,7 +41,7 @@ A cipher suite is a set of instructions that contains algorithms and protocols t
 
 For [Azure App Service Environment (ASE)](/azure/app-service/environment/overview), you can set your own ciphers through Azure Resource Explorer. For detail steps, see[Change TLS cipher suite order](/azure/app-service/environment/app-service-app-service-environment-custom-settings#change-tls-cipher-suite-order).
 
-To disable Weak TLS cipher Suites for Web Apps on multitenant, see [Disabling Weaker TLS Cipher Suites for Web Apps on multitenant Premium App Service Plans](https://azure.github.io/AppService/2022/10/11/Public-preview-min-tls-cipher-suite.html).
+To disable Weak TLS cipher Suites for web apps on multitenant, see [Disabling Weaker TLS Cipher Suites for web apps on multitenant Premium App Service Plans](https://azure.github.io/AppService/2022/10/11/Public-preview-min-tls-cipher-suite.html).
 
 For more information, see [FAQ on App Service cipher suites](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/faq-on-app-service-cipher-suites/ba-p/3881922).
 
