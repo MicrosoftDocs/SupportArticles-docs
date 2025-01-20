@@ -18,7 +18,7 @@ If your question isn't answered and you still need help, have the number of the 
 
 ### How do I know whether a specific CVE (common vulnerability) or known security issue applies to my Web App?
 
-App Service is a platform with various underlying technologies like Windows, Linux and web application frameworks. Updates are applied at a routine cadence for OS, host runtime and Microsoft image repo.
+App Service is a platform with various underlying technologies like Windows, Linux, and web application frameworks. Updates are applied at a routine cadence for OS, host runtime, and Microsoft image repo.
 You can check OS and runtime patching in Azure App Service to know more when updates are applied and Guest OS patches to check the updates applied to the Azure Guest OS.
 If your question wasn't answered and you still need help, gather the following information before submitting a request to Azure Support:
 
@@ -36,7 +36,7 @@ A cipher suite is a set of instructions that contains algorithms and protocols t
 
 For [Azure App Service Environment (ASE)](/azure/app-service/environment/overview), you can set your own ciphers through Azure Resource Explorer. For detail steps, see[Change TLS cipher suite order](/azure/app-service/environment/app-service-app-service-environment-custom-settings#change-tls-cipher-suite-order).
 
-To disable Weak TLS cipher Suites for Web Apps on Multi-tenant, see [Disabling Weaker TLS Cipher Suites for Web Apps on Multi-tenant Premium App Service Plans](https://azure.github.io/AppService/2022/10/11/Public-preview-min-tls-cipher-suite.html).
+To disable Weak TLS cipher Suites for Web Apps on multitenant, see [Disabling Weaker TLS Cipher Suites for Web Apps on multitenant Premium App Service Plans](https://azure.github.io/AppService/2022/10/11/Public-preview-min-tls-cipher-suite.html).
 
 For more information, see [FAQ on App Service cipher suites](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/faq-on-app-service-cipher-suites/ba-p/3881922).
 
@@ -54,9 +54,9 @@ Microsoft secures and [frequently updates the hosting environment and infrastruc
 
 Azure App Service does not block insecure apps from running. If the website is vulnerable, you must fix the vulnerabilities in the website code and redeploy it to Azure App Service. 
 
-Azure support can assist with reviewing the web app's HTTP logs and deployment history to identify when the unknown file was first accessed or what suspicious patterns appear in the logs. We can also offer guidances for configuring security services like Web Application Firewall and Microsoft Defender for App Service. However, we cannot take direct action, as the permanent fix may involve implementing a Web Application Firewall or updating the existing codes.
+Azure support can assist with reviewing the web app's HTTP logs and deployment history to identify when the unknown file was first accessed or what suspicious patterns appear in the logs. We can also offer guidance for configuring security services like Web Application Firewall and Microsoft Defender for App Service. However, we cannot take direct action, as the permanent fix may involve implementing a Web Application Firewall or updating the existing codes.
 
-You can [restore a backup](/azure/app-service/manage-backup?tabs=portal#restore-a-backup) or re-deploy the site, but this is not a long term fix if the security issue is not fixed.
+You can [restore a backup](/azure/app-service/manage-backup?tabs=portal#restore-a-backup) or redeploy the site, but this is not a long term fix if the security issue is not fixed.
 
 ### My site has been added to the block list, what should I do?
 
