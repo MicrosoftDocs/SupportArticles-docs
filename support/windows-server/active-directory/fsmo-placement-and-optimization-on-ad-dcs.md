@@ -1,7 +1,7 @@
 ---
 title: Flexible Single-Master Operation (FSMO) placement and optimization on AD DCs
 description: Certain operations are optimally done on a single domain controller. Describes how Active Directory FSMO roles are positioned in both the forest and the domain for these operations.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

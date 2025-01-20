@@ -1,7 +1,7 @@
 ---
 title: Monitor powers off when computer is locked
 description: Describes a by-design behavior that computer monitor turns off after 1 minute when the computer is locked
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

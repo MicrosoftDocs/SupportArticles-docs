@@ -4,7 +4,6 @@ description: Provides a solution to the 8004801a error that occurs when you try 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
-ms.subservice: d365-sales-custom-solutions
 ---
 # The element Workflow has invalid child element ProcessTriggers error occurs when importing a Microsoft Dynamics 365 solution
 

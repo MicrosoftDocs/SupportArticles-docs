@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot DNS scavenging issues
 description: Describes how to troubleshoot DNS scavenging issues.
-ms.date: 09/11/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

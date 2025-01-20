@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot setting the entry point domain controller
 description: Learn how to troubleshoot issues related to the Set-DAEntryPointDC cmdlet.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

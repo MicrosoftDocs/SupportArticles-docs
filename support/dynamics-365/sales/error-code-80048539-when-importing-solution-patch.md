@@ -4,7 +4,6 @@ description: Error code 80048539 occurs when you try to import solution patch in
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
-ms.subservice: d365-sales-custom-solutions
 ---
 # Error code 80048539 occurs when trying to import solution patch in Microsoft Dynamics 365
 

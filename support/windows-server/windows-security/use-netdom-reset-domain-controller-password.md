@@ -1,7 +1,7 @@
 ---
 title: Reset domain controller's password with Netdom.exe
 description: This article explains how to use Netdom.exe to reset machine account passwords of a domain controller in Windows Server.
-ms.date: 11/06/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Mapped network drive is disconnected
 description: Describes a problem that occurs after you install or upgrade to Symantec AntiVirus 10.0 or to Symantec Client Security 3.0. Describes how to resolve the problem.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

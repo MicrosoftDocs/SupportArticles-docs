@@ -1,7 +1,7 @@
 ---
 title: Black screen after you sign in to the system
 description: Explains how to troubleshoot and collect data for the issue of a black screen after you sign in to the system.
-ms.date: 09/02/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

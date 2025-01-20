@@ -19,8 +19,6 @@ ms.author: genli
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-[!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
-
 [PerfInsights Linux](https://aka.ms/perfinsightslinuxdownload) is a self-help diagnostics tool that collects and analyzes the diagnostic data, and provides a report to help troubleshoot Linux virtual machine performance problems in Azure. PerfInsights can be run on supported virtual machines as a standalone tool, or directly from the portal by using [Performance Diagnostics for Azure virtual machines](../windows/performance-diagnostics.md).
 
 If you are experiencing performance problems with virtual machines, before contacting support, run this tool.
@@ -199,11 +197,10 @@ The following categories of rules are currently supported:
     | Distribution               | Version                                         |
     |----------------------------|-------------------------------------------------|
     | Oracle Linux Server        | 6.10 [`*`], 7.3, 7.5, 7.6, 7.7, 7.8, 7.9 |
-    | CentOS                     | 6.5 [`*`], 7.6, 7.7, 7.8, 7.9                                    |
-    | RHEL                       | 7.2, 7.5, 8.0 [`*`], 8.1, 8.2, 8.6, 8.8                               |
-    | Ubuntu                     | 14.04, 16.04, 18.04, 20.04, 22.04                               |
-    | Debian                     | 8, 9, 10, 11 [`*`]                                    |
-    | SLES                       | 12 SP4 [`*`], 12 SP5 [`*`], 15 [`*`], 15 SP1 [`*`], 15 SP2 [`*`], 15 SP4 [`*`]                                      |
+    | RHEL                       | 7.4, 7.5, 7.6, 7.7, 7.8, 7.9, 8.0 [`*`], 8.1, 8.2, 8.4, 8.5, 8.6, 8.7, 8.8, 8.9                               |
+    | Ubuntu                     | 16.04, 18.04, 20.04, 22.04                               |
+    | Debian                     | 9, 10, 11 [`*`]                                    |
+    | SLES                       | 12 SP5 [`*`], 15 SP1 [`*`], 15 SP2 [`*`], 15 SP3 [`*`], 15 SP4 [`*`], 15 SP5 [`*`], 15 SP6 [`*`]                                     |
     | AlmaLinux                  | 8.4, 8.5                                               |
     | Azure Linux               | 2.0                                                   |
 
@@ -216,8 +213,6 @@ The following categories of rules are currently supported:
 ### Known issues
 
 - RHEL 8 doesn't have Python installed by default because both Python 2 and Python 3.6 are available. To install Python 3.6, run the `yum install python3` command.
-
-- Guest Agent information collection may fail on CentOS 6.x.
 
 - PCI devices information is not collected on Debian based distributions.
 

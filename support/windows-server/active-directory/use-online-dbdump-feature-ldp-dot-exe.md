@@ -1,7 +1,7 @@
 ---
 title: Use the online dbdump feature in Ldp.exe
 description: Describes how to use the online dbdump feature of Active Directory.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

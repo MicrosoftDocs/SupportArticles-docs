@@ -1,7 +1,7 @@
 ---
 title: Scripts to inspect the content of the WMI repository
 description: Introduces a script to inspect the content of the WMI repository.
-ms.date: 10/08/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

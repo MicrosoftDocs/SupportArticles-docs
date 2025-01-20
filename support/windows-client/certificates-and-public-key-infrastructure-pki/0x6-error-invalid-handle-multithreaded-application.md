@@ -1,7 +1,7 @@
 ---
 title: 0x6 ERROR_INVALID_HANDLE error when a multithreaded application accesses a smart card
 description: Describes how to troubleshoot and fix the 0x6 ERROR_INVALID_HANDLE error, which occurs when a multithreaded application accesses a smart card.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

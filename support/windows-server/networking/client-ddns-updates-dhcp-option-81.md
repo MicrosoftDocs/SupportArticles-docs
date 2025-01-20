@@ -1,7 +1,7 @@
 ---
 title: Client machines don't send DDNS updates
 description: Helps resolve an issue in which Windows client machines don't send DDNS updates when the DHCP server stops sending Option 81 in REQ-ACK packets of a DHCP response.
-ms.date: 10/28/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

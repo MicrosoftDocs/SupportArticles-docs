@@ -1,7 +1,7 @@
 ---
 title: Use Cipher.exe to overwrite deleted data
 description: Describes how to use Cipher.exe to overwrite deleted data in Windows.
-ms.date: 11/11/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

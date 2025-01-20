@@ -1,7 +1,7 @@
 ---
 title: Users and groups can't be added to trusted forest
 description: Describes an error that occurs when you try to add a user or a group from a trusted forest into a local domain group of a domain in a trusting forest.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

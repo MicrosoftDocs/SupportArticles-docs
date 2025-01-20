@@ -1,7 +1,7 @@
 ---
 title: You cannot start the Active Directory Users and Computers tool because the server is not operational
 description: Provides a solution to an issue where you cannot start the Active Directory Users and Computers tool because the server is not operational.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

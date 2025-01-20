@@ -22,17 +22,15 @@ You may occasionally encounter limitations when you add new virtual machines (VM
 
 The following chart shows some common VM series you can mix in the same availability set.
 
-Series & Availability Set|Second VM|A|Av2|D|Dv2|Dv3|
+Series & Availability Set|Second VM|B-Series|D-Series v2|D-Series v3|D-Series v4|D-Series v5|
 |---|---|---|---|---|---|---|
 |First VM|||||||
-|A||OK|OK|OK|OK|OK|
-|Av2||OK|OK|OK|OK|OK|
-|D||OK|OK|OK|OK|OK|
-|Dv2||OK|OK|OK|OK|OK|
-|Dv3||OK|OK|OK|OK|OK|
+|B-Series||OK|OK|OK|OK|OK|
+|D-Series v2||OK|OK|OK|OK|OK|
+|D-Series v3||OK|OK|OK|OK|OK|
+|D-Series v4||OK|OK|OK|OK|OK|
+|D-Series v5||OK|OK|OK|OK|OK|
 
 All other series could not be in the same availability set because they require a specific hardware.
-
-A8/A9 VM size can't be mixed due to requirement on dedicated RDMA backend network.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

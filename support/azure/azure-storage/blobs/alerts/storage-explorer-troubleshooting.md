@@ -154,9 +154,13 @@ Having to reenter credentials is most likely the result of Conditional Access po
 
 To reduce the frequency of having to reenter credentials because of errors like the preceding ones, talk to your Microsoft Entra admin.
 
-### Conditional access policies
+### Other conditional access policy issues
 
-If you have conditional access policies that need to be satisfied for your account, make sure you're using the **Default Web Browser** value for the **Sign in with** setting. For information on that setting, see [Changing where sign-in happens](/azure/storage/common/storage-explorer-sign-in#changing-where-sign-in-happens).
+If you have other conditional access policies that need to be satisfied for your account, try using either the **Authentication Broker** or **Default Web Browser** value for the **Sign in with** setting. For information on that setting, see [Changing where sign-in happens](/azure/storage/common/storage-explorer-sign-in#changing-where-sign-in-happens).
+
+### Issues with authentication broker on Windows
+
+The Windows operating system uses the Web Account Manager (WAM) as its authentication broker. If you're using the **Authentication Broker** sign-in method on Windows and experience issues, see [this guide](/entra/msal/dotnet/advanced/exceptions/wam-errors) for steps to resolve common errors.
 
 ### Browser complains about HTTP redirect or insecure connection during sign-in
 
