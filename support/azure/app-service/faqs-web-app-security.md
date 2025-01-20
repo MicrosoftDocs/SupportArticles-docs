@@ -37,7 +37,7 @@ For incoming requests to your web app, App Service supports TLS versions 1.0, 1.
 
 ### How do I disable weak ciphers on Azure App Service?
 
-A cipher suite is a set of instructions that contains algorithms and protocols to help secure network connections between clients and servers. By default, the front-end’s OS would pick the most secure cipher suite that is supported by both the front-end and the client. However, if the client only supports weak cipher suites, then the front-end’s OS would pick a weak cipher suite that they both support. To help you have a clearer understanding of Cipher suites, see [Demystifying Cipher Suites on Azure App Services](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/demystifying-cipher-suites-on-azure-app-services/ba-p/2656254).
+A cipher suite is a set of instructions that contains algorithms and protocols to help secure network connections between clients and servers. The clients make a request to server with its list of cipher suites it supports, and the server (front-end of the web app) will pick the most secure one between intersection of the ones supported by both client and server. To help you have a clearer understanding of Cipher suites, see [Demystifying Cipher Suites on Azure App Services](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/demystifying-cipher-suites-on-azure-app-services/ba-p/2656254).
 
 For [Azure App Service Environment (ASE)](/azure/app-service/environment/overview), you can set your own ciphers through Azure Resource Explorer. For detail steps, see[Change TLS cipher suite order](/azure/app-service/environment/app-service-app-service-environment-custom-settings#change-tls-cipher-suite-order).
 
