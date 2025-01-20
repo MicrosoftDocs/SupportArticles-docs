@@ -160,9 +160,12 @@ items:
       - name: Synapse Analytics Workspace
         tocHref: /troubleshoot/azure/synapse-analytics/workspace
         topicHref: /troubleshoot/azure/synapse-analytics/workspace/welcome-synapse-analytics-workspace
+      - name: Virtual Desktop
+        tocHref: /troubleshoot/azure/virtual-desktop/
+        topicHref: /troubleshoot/azure/virtual-desktop/welcome-virtual-desktop
       - name: Virtual Network
         tocHref: /troubleshoot/azure/virtual-network/
-        topicHref: /troubleshoot/azure/virtual-network/welcome-virtual-network
+        topicHref: /troubleshoot/azure/virtual-network/welcome-virtual-network      
       - name: Cloud Services (classic)
         tocHref: /troubleshoot/azure/cloud-services/classic/
         topicHref: /troubleshoot/azure/cloud-services/classic/welcome-cloud-services-classic
