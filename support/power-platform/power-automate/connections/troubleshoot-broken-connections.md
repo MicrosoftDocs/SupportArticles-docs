@@ -1,115 +1,144 @@
 ---
-title: Reasons for broken connections
-description: Learn how to troubleshoot and resolve broken connections.
-services: connectors
-ms.service: power-platform
+title: Troubleshoot broken connections
+description: Learn how to troubleshoot and resolve connection problems and ensure a smoother experience with your applications and services in Microsoft Power Automate.
+ms.custom: sap:Connections
 ms.workload: connectors
 author: nravindra-msft
 ms.author: nravindra
 ms.reviewer: angieandrews
-ms.topic: how-to
 ms.date: 01/16/2025
 ---
-# Reasons for broken connections
+# Troubleshoot broken connections in Power Automate
 
-In this article, you will learn about the various reasons for broken connections and how to troubleshoot them effectively. We will cover common issues such as connection timeouts, Data Loss Prevention (DLP) blocks, invalid authenticated devices, and more. By understanding these reasons and following the provided troubleshooting steps, you can resolve connection problems and ensure a smoother experience with your applications and services.
+This article describes the following common issues about broken connections in Microsoft Power Automate and helps you troubleshoot and solve these issues.
 
-## Reason: Connection time out
+- [Connection times out](#connection-times-out)
+- [A DLP block occurs](#a-dlp-block-occurs)
+- [Invalid authenticated devices](#invalid-authenticated-devices)
+- [Inactivity for a long time](#inactivity-for-a-long-time)
+- [Connection issue related to attended mode](#connection-issue-related-to-attended-mode)
+- [Password modification by a user](#password-modification-by-a-user)
+- [Azure Active Directory (AAD) configuration is changed](#azure-active-directory-aad-configuration-is-changed)
+- [Connection owner account is deleted or disabled](#connection-owner-account-is-deleted-or-disabled)
+- [Tenant administrator disabled the application](#tenant-administrator-disabled-the-application)
 
-This occurs when a client (such as a web browser or an application) tries to establish a connection with a server, but the server does not respond within a specified time limit. This can happen for various reasons, such as the server being offline, network issues, or the server taking too long to process the request. When the connection times out, the client stops waiting for a response and terminates the connection attempt
+## Connection times out
 
-Possible error string seen by users </br>
-<i>-	“The user could not be authenticated as the grant is expired. The user must sign in again.”</i>
+This issue occurs when a client (such as a web browser or an application) tries to establish a connection with a server, but the server doesn't respond within a specified time limit. This can occur for various reasons, such as the server being offline, network issues, or the server taking too long to process the request. When the connection times out, the client stops waiting for a response and terminates the connection attempt.
 
-Troubleshoot </br>
-1.	Check your internet connection: Ensure that the internet connection is stable and working properly.<br>
-2.	Check the server status: Verify if the server you are trying to connect to is online and not experiencing any downtime.<br>
-3.	Try increasing the timeout limit: Sometimes, increasing the timeout limit will help in getting the connection from the servers.
+You might also receive the following error message:
 
-## Reason: DLP block
-Reason: DLP block 
-Data Loss Prevention (DLP) is a security measure that prevents sensitive information from being shared or transferred inappropriately. A DLP block occurs when a DLP policy detects that an action, such as sending an email or sharing a file, violates the organization's data protection rules. The DLP system then blocks the action to prevent potential data breaches or unauthorized access to sensitive information
+> The user could not be authenticated as the grant is expired. The user must sign in again.
 
-Possible error string seen by users
--	“Access has been blocked by Conditional Access policies. The access policy does not allow token issuance.”
--	“Device is not in required device state: domain_joined. Conditional Access policy requires a domain joined device, and the device is not domain joined.”
+### Troubleshooting steps
 
-Troubleshoot
-1.	Review DLP policies: Check the DLP policies configured in the organization to understand what actions are being blocked and why.
-2.	Consult with your admin: There might be a chance that the admin has blocked the particular connector or connection. It's a good idea to consult with them and discuss the issue to unblock it.
+1. Check your internet connection: Ensure that the internet connection is stable and working properly.
+2. Check the server status: Verify if the server you're trying to connect to is online and not experiencing any downtime.
+3. Try increasing the timeout limit: Sometimes, increasing the timeout limit can help in establishing a connection with the server.
 
-## Reason: Invalid authenticated devices 
-Reason: Invalid authenticated devices 
-This refers to a situation where a user tries to authenticate using a device for multi-factor authentication (MFA), but the device has been disabled. This issue is not related to Power Automate but rather to the tenant's configuration at the administrative level. 
+## A DLP block occurs
 
-Possible error string seen by users
--	“Device object was not found in the tenant 'b880eeca-f1fb-4c91-bff6-82e84350a6e6' directory.”
--	“Device is not in required device state: compliant. Conditional Access policy requires a compliant device, and the device is not compliant. The user must enroll their device with an approved MDM provider like Intune.”
--	"Device used during the authentication is disabled.”
--	“Application needs to enforce Intune protection policies.”
+[Data Loss Prevention (DLP)](/purview/dlp-learn-about-dlp) is a security measure that prevents sensitive information from being shared or transferred inappropriately. A DLP block occurs when a DLP policy detects that an action, such as sending an email or sharing a file, violates the organization's data protection rules. The DLP system then blocks the action to prevent potential data breaches or unauthorized access to sensitive information.
 
-Troubleshoot
-1.	Reach out to the tenant admin   to understand why the device was disabled and to resolve the issue
-2.	Try re-authorizing the connection
+When a DLP block occurs, you might also receive one of the following error messages:
 
-## Reason: Due to inactivity for a very long duration  
-Reason: Due to inactivity for a very long duration  
-This refers to a situation where a connection becomes invalid because it has not been used for a specified period. For example, the SharePoint connector requires usage at least once every 90 days to remain active. If the connection is not used within this period, it will expire. The suggested troubleshooting method is to either create a new connection or reauthorize the existing one. 
+> - Access has been blocked by Conditional Access policies. The access policy does not allow token issuance.
+> - Device is not in required device state: domain_joined. Conditional Access policy requires a domain joined device, and the device is not domain joined.
 
-Possible error string seen by users
--	 “The refresh token has expired due to inactivity. The token was issued on 2024-03-17T12:07:02.0086301Z and was inactive for 90.00:00:00.”
--	“The provided authorization code or refresh token has expired due to inactivity. Send a new interactive authorization request for this user and resource.”
+### Troubleshooting steps
 
-Troubleshoot
-1.	To troubleshoot, user must create a new connection or reauthorize the existing one.
+1. Review DLP policies: Check the DLP policies configured in the organization to understand what actions are being blocked and why.
+2. Consult with your administrator: There might be a chance that the administrator has blocked the particular connector or connection. It's a good idea to consult with them and discuss the issue to unblock it.
 
-## Reason: Connection issue related to attended mode
-Reason: Connection issue related to attended mode
+## Invalid authenticated devices
 
-This refers to problems that occur when a user tries to use features that require a license for unattended mode but does not have the necessary license. In attended mode, the user must be present and interact with the system, whereas unattended mode allows for fully automated processes without user interaction. If a user without the appropriate license attempts to use unattended mode, the connection will fail. 
-Learn more about Attended and unattended scenarios here: Attended and unattended scenarios for process automation - Power Automate | Microsoft Learn 
+This refers to a situation where a user tries to authenticate using a device for multi-factor authentication (MFA), but the device has been disabled. This issue isn't related to Power Automate but rather to the tenant's configuration at the administrative level.
 
-Troubleshoot
-1.	The user must have the correct license to interact with the system as required in attended mode.
+In this situation, you might also receive one of the following error messages:
 
-## Reason: Password modification by the user 
-Reason: Password modification by the user 
-This occurs when the account password you have added to create the connection is deleted or changed or expired. Since account verification is a crucial part of authentication whenever a connection is triggered, the connection will break if new password is not updated. To avoid this, use services like Microsoft Entra ID, learn more about it here
+> - Device object was not found in the tenant '\<TenantID>' directory.
+> - Device is not in required device state: compliant. Conditional Access policy requires a compliant device, and the device is not compliant. The user must enroll their device with an approved MDM provider like Intune.
+> - Device used during the authentication is disabled.
+> - Application needs to enforce Intune protection policies.
 
-Possible error string seen by users
--	“The provided grant has expired due to it being revoked, a fresh auth token is needed. The user might have changed or reset their password. The grant was issued on '2022-07-06T08:47:42.5388987Z' and the TokensValidFrom date (before which tokens are not valid) for this user is '2024-08-01T12:39:32.0000000Z'.”
+### Troubleshooting steps
 
-Troubleshoot
-1.	Every time user update your password, the existing connections with those passwords would become invalid, so user must create a new connection for each of those connectors or edit the existing connection 
+1. Contact the tenant administrator to understand why the device was disabled.
+2. Try re-authorizing the connection.
 
-## Reason: AAD configuration change
-Reason: AAD configuration change
-This refers to modifications made at the Azure Active Directory (AAD) level that affect user identities or access policies. These changes can include moving to a new location, altering user roles, or updating security settings. Such changes can invalidate existing tokens and require users to reauthenticate. 
+## Inactivity for a long time
 
-Possible error string seen by users
--	“Due to a configuration change made by your administrator, or because you moved to a new location, you must use multi-factor authentication to access '00000003-0000-0000-c000-000000000000'.”
+This refers to a situation where a connection becomes invalid because it hasno't been used for a specified period. For example, the SharePoint connector requires usage at least once every 90 days to remain active. If the connection isn't used within this period, it will expire.
 
-Troubleshoot
-1.	User must reach out to the tenant admin to understand the specific changes and reauthorize the connection if necessary
+In this situation, you might also receive one of the following error messages:
 
-## Reason: Connection owner account is deleted/disabled
-Reason: Connection owner account is deleted/disabled
-This refers to a situation where the account that created a connection is either removed or disabled in the directory. This results in the invalidation of the connection, affecting all users who shared the connection. 
+> - The refresh token has expired due to inactivity. The token was issued on \<DateTime> and was inactive for 90.00:00:00.
+> - The provided authorization code or refresh token has expired due to inactivity. Send a new interactive authorization request for this user and resource.
 
-Possible error string seen by users
--	“The user account {EUII Hidden} has been deleted from the 1a188ae6-a002-4149-8234-e47371d17cce directory. To sign into this application, the account must be added to the directory.”
--	" The user account is disabled.”
--	“The user account {EUII Hidden} does not exist in the 66dc1f77-2e0d-4d13-b961-7c2e63aa376b directory. To sign into this application, the account must be added to the directory.”
+### Troubleshooting steps
 
-Troubleshoot
-1.	To resolve this, another user with access can reauthorize the connection, thereby updating the ownership and restoring functionalities for all users. 
+To troubleshoot this issue, create a new connection or re-authorize the existing one.
 
-## Reason: Tenant admin disabled the app
-Reason: Tenant admin disabled the app
-This means that the administrator of the tenant has deactivated an application registered in Azure Active Directory (AAD). This action invalidates any service principal connections associated with the app, as the app can no longer issue tokens. To resolve this, the tenant admin needs to re-enable the app or create a new service principal connection. 
+## Connection issue related to attended mode
 
-Possible error string seen by users
--	“The service principal for resource '00000003-0000-0ff1-ce00-000000000000' is disabled. This indicate that a subscription within the tenant has lapsed, or that the administrator for this tenant has disabled the application, preventing tokens from being issued for it.”
+This refers to problems that occur when a user tries to use features that require a license for unattended mode but doesn't have the necessary license. In attended mode, the user must be present and interact with the system, whereas unattended mode allows for fully automated processes without user interaction. If a user without the appropriate license attempts to use unattended mode, the connection will fail.
 
-Troubleshoot
-1.	To resolve this, the tenant admin needs to re-enable the app or create a new service principal connection.
+[Learn more about attended and unattended scenarios for process automation](/power-automate/guidance/planning/attended-unattended).
+
+### Troubleshooting steps
+
+Ensure the user has the correct license to interact with the system as required in attended mode. For more information, see [Which Power Automate licenses do I need?](/power-platform/admin/power-automate-licensing/faqs#which-power-automate-licenses-do-i-need).
+
+## Password modification by a user
+
+This issue occurs when the account password used to create the connection is deleted, changed, or expired. Since account verification is a crucial part of authentication whenever a connection is triggered, the connection will break if new password isn't updated. To avoid this issue, use services like [Microsoft Entra ID](/entra/fundamentals/whatis).
+
+You might also receive the following error message:
+
+> The provided grant has expired due to it being revoked, a fresh auth token is needed. The user might have changed or reset their password. The grant was issued on '\<DateTime>' and the TokensValidFrom date (before which tokens are not valid) for this user is '\<DateTime>'.
+
+### Troubleshooting steps
+
+Every time a user updates their password, the existing connections with those passwords become invalid, so the user must create a new connection for each of those connectors or edit the existing connection.
+
+## Azure Active Directory (AAD) configuration is changed
+
+This refers to modifications made at the Azure Active Directory (AAD) level that affect user identities or access policies. These changes can include moving to a new location, altering user roles, or updating security settings. Such changes can invalidate existing tokens and require users to reauthenticate.
+
+You might also receive the following error message:
+
+> Due to a configuration change made by your administrator, or because you moved to a new location, you must use multi-factor authentication to access '00000003-0000-0000-c000-000000000000'.
+
+### Troubleshooting steps
+
+Contact the tenant administrator to understand the specific changes and reauthorize the connection if necessary.
+
+## Connection owner account is deleted or disabled
+
+This refers to a situation where the account that created a connection is either removed or disabled in the directory. As a result, the connection becomes invalid, affecting all users who shared it.
+
+In this situation, you might also receive one of the following error messages:
+
+- > The user account {EUII Hidden} has been deleted from the \<DirectoryID> directory. To sign into this application, the account must be added to the directory.
+- > The user account is disabled.
+- > The user account {EUII Hidden} does not exist in the \<DirectoryID> directory. To sign into this application, the account must be added to the directory.
+
+### Troubleshooting steps
+
+To resolve this, another user with access can reauthorize the connection, thereby updating the ownership and restoring functionalities for all users.
+
+## Tenant administrator disabled the application
+
+This means that the tenant administrator deactivates an application registered in Azure Active Directory (AAD). This action invalidates any service principal connections associated with the application, as it can no longer issue tokens.
+
+You might also receive the following error message:
+
+> The service principal for resource '\<ResourceID>' is disabled. This indicate that a subscription within the tenant has lapsed, or that the administrator for this tenant has disabled the application, preventing tokens from being issued for it.
+
+### Troubleshooting steps
+
+To resolve this issue, the tenant administrator needs to re-enable the application or create a new service principal connection.
+
+## More information
+
+[Manage connections in Power Automate](/power-automate/add-manage-connections)
