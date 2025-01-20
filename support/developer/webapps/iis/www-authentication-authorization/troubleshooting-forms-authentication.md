@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting Forms Authentication
 description: This article helps you troubleshoot problems related to Forms Authentication.
-ms.date: 01/17/2025
+ms.date: 01/20/2025
 ms.reviewer: senyum, apurvajo, v-jayaramanp
 ms.topic: troubleshooting
 ms.custom: sap:WWW Authentication and Authorization\Forms authentication
@@ -53,7 +53,7 @@ You log on to the website. At some point, the client sends a request to the serv
 
 ### Scenario 2
 
-The forms authentication cookie can also be lost when the client's cookie limit is exceeded. In Microsoft Internet Explorer, there is a limit of 20 cookies. Once the counter reaches 20, the previous 19 cookies are removed from the client's collection. If the ASPXAUTH cookie is removed, you are redirected to the login page when the next request is processed.
+The forms authentication cookie can also be lost when the client's cookie limit is exceeded. In Microsoft Internet Explorer, there's a limit of 20 cookies. Once the counter reaches 20, the previous 19 cookies are removed from the client's collection. If the ASPXAUTH cookie is removed, you're redirected to the login page when the next request is processed.
 
 ### Scenario 3
 
@@ -61,12 +61,12 @@ After the request leaves the client, there are various layers that can affect th
 
 **Forms authentication ticket timed out**
 
-In ASP.NET 2.0 applications onwards, by default, the forms authentication timeout value has changed to be 30 minutes. This means that after 30 minutes of inactivity, you will be prompted to log in again.
+In ASP.NET 2.0 applications onwards, by default, the forms authentication time-out value has changed to be 30 minutes. This means that after 30 minutes of inactivity, you'll be prompted to log in again.
 
 > [!NOTE]
-> When you access a website each time, the 30-minute window clock is reset. Only if it's idle there's a timeout.
+> When you access a website each time, the 30-minute window clock is reset. Only if it's idle there's a time-out.
 
-If you want to change the timeout value to be longer, you can easily change the timeout value in your local *web.config* file (the timeout value is in minutes):
+If you want to change the time-out value to be longer, you can easily change the time-out value in your local *web.config* file (the time-out value is in minutes):
 
 ```xml
 <system.web> 
@@ -78,9 +78,9 @@ If you want to change the timeout value to be longer, you can easily change the 
 
 ### Scenario 4
 
-Form authentication can expire prior to the value of the timeout attribute defined in the configuration file.
+Form authentication can expire prior to the value of the time-out attribute defined in the configuration file.
 
-If the forms authentication ticket is manually generated, the timeout property of the ticket will override the value that's set in the configuration file. Therefore, if that value is less than the value in the configuration file, the forms authentication ticket will expire before the configuration file timeout attribute value and vice-versa. For example, let's assume that the `FORMS` timeout attribute is set to 30 in the *Web.config* file and the expiration value of the ticket is set to 20 minutes. In this case, the forms authentication ticket will expire after 20 minutes and then you have to log on again.
+If the forms authentication ticket is manually generated, the time-out property of the ticket will override the value that's set in the configuration file. Therefore, if that value is less than the value in the configuration file, the forms authentication ticket will expire before the configuration file time-out attribute value and vice-versa. For example, let's assume that the `FORMS` time-out attribute is set to 30 in the *Web.config* file and the expiration value of the ticket is set to 20 minutes. In this case, the forms authentication ticket will expire after 20 minutes and then you have to log on again.
 
 ```output
 Event code: 4005
@@ -109,7 +109,7 @@ You can determine if a request doesn't contain the cookie by enabling cookie log
 1. Make sure that the log format is W3C Extended Log file format.
 1. Select **Properties**.
 1. Select the **Advanced** tab, and then select **Extended Properties**.
-1. Under **Extended Properties**, select **Cookie(cs(Cookie))** > **Referer (cs(Referer))**.
+1. Under **Extended Properties**, select the **Cookie(cs(Cookie))** and **Referer (cs(Referer))** checkboxes.
 
 After this problem occurs, determine which client had the problem and that client's IP address. Filter the IIS log on that client's IP address, and view the `<COOKIE>` column.
 
@@ -119,7 +119,7 @@ After this problem occurs, determine which client had the problem and that clien
 After you have the list of requests from a specific user, search for the requests to the login page. You would know they were redirected to this page, and you would want to see the requests before the redirection occurred. If you see something similar to the following, the client either didn't send the cookie or the cookie was removed on the network between the client and server.
 
 > [!NOTE]
-> The first request isn't likely to have a forms authentication cookie unless you are creating a persistent cookie. The IIS Log will only show the cookies that were received in the request. The first request to have the forms authentication cookie after a successful login attempt.
+> The first request isn't likely to have a forms authentication cookie unless you're creating a persistent cookie. The IIS Log will only show the cookies that were received in the request. The first request to have the forms authentication cookie after a successful login attempt.
 
 ### Troubleshooting scenario 2
 
@@ -129,9 +129,9 @@ Microsoft Internet Explorer complies with the following RFC 2109 recommended min
 - At least 4096 bytes per cookie (as measured by the size of the characters that comprise the cookie non-terminal in the syntax description of the Set-Cookie header).
 - At least 20 cookies per unique host or domain name.
 
-The forms authentication cookie can also be lost when the client's cookie limit is exceeded. In Microsoft Internet Explorer, there is a limit of 20 cookies. Once the counter reaches 20, the previous 19 cookies are removed from the client's collection. If the ASPXAUTH cookie is removed, you are redirected to the login page when the next request is processed. You can use Fiddler to see the HTTP request or response headers to see if you are receiving the cookie from the client. Download [Fiddler](http://fiddler2.com/fiddler2/).
+The forms authentication cookie can also be lost when the client's cookie limit is exceeded. In Microsoft Internet Explorer, there's a limit of 20 cookies. Once the counter reaches 20, the previous 19 cookies are removed from the client's collection. If the ASPXAUTH cookie is removed, you're redirected to the login page when the next request is processed. You can use Fiddler to see the HTTP request or response headers to see if you're receiving the cookie from the client. Download [Fiddler](http://fiddler2.com/fiddler2/).
 
-Launch Fiddler tool on the client machine, remove existing HTTP traces, access your application implementing forms authentication and try to login into the application and observe the HTTP traffic on Fiddler to see if there's an exchange of forms authentication cookie happening between the client and server. After you capture the traffic, double-click a request, and then select **Headers** to see the Set-Cookie header. If you trace a successful login, you will see the Set-Cookie header in the response of a successful login.
+Launch Fiddler tool on the client machine, remove existing HTTP traces, access your application implementing forms authentication and try to login into the application and observe the HTTP traffic on Fiddler to see if there's an exchange of forms authentication cookie happening between the client and server. After you capture the traffic, double-click a request, and then select **Headers** to see the Set-Cookie header. If you trace a successful login, you'll see the Set-Cookie header in the response of a successful login.
 
 By default, Internet Explorer can store a maximum of 20 cookies for each domain. If a server in the domain sends more than 20 cookies to a client computer, the browser on the client computer automatically discards some old cookies.
 
@@ -176,17 +176,18 @@ When you see the request that reached the server, make sure that the server rece
 
 ### Troubleshooting scenario 5
 
-- If the scenario involves a web farm, make sure that the configuration files on each server in the web farm have the same value for the validation key and decryption keys, which are used for hashing and decryption respectively. To maintain the consistency on all the servers on the farm, use the following machineKey:
+- If the scenario involves a web farm, make sure that the configuration files on each server in the web farm have the same value for the validation key and decryption keys, which are used for hashing and decryption, respectively. To maintain the consistency on all the servers in the farm, use the following machineKey:
 
   ```xml
   <machineKey validationKey="<yourKey>" decryptionKey="<yourKey>" validation="SHA1" />
   ```
 
   For more information on machine keys, see [Machine Key](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831711(v=ws.11)) and [Plan Application Security](/iis/application-frameworks/scenario-build-an-aspnet-website-on-iis/planning-step-4-plan-application-security#44-machine-key-settings).
+
   To learn how to generate machine keys, see [Machine Key Settings](/iis/application-frameworks/scenario-build-an-aspnet-website-on-iis/configuring-step-4-configure-application-security#44-machine-key-settings). 
 
-- Compare the timeout values for both forms that is authentication module and the session module on all of the web servers.
-- Compare the *System.Web.dll* version under Framework folder for ASP.NET 4 between all of the web servers in the farm. Forms authentication failed for the request. The reason is that the ticket supplied was invalid. This happens due to missing Reliability Update 1 for MS .NET framework 4 on one of the web server.
+- Compare the time-out values for both forms, that is, the authentication module and the session module， on all of the web servers.
+- Compare the **System.Web.dll** version under the Framework folder for ASP.NET 4 between all of the web servers in the farm. Forms authentication failed for the request. The reason is that the ticket supplied was invalid. This happens due to missing Reliability Update 1 for MS .NET Framework 4 on one of the web servers.
 - Install the Reliability Update 1 for the .NET Framework 4 kb2533523 on the server that was missing it and rebooted the server. The issue is fixed. For more information, see [Reliability Update 1 for the .NET Framework 4](https://support.microsoft.com/topic/reliability-update-1-for-the-net-framework-4-5a8de0be-f4a9-f89e-e40d-f59dd1e353e5).
 
 ### More information
