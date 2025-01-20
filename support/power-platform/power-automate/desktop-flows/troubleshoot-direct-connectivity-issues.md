@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 5016345
 
 ## Symptoms
 
-Consider the following scenarios when using direct machine connectivity (not the data gateway, which is deprecated for desktop flows):
+When attempting to run your desktop flows from a cloud flow or manage your desktop flow machines, you might encounter one of the following issues:
 
 #### Scenario 1
 
