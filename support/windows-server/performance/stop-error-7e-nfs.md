@@ -1,7 +1,7 @@
 ---
 title: Stop error 7E on a server that's running NFS
 description: Helps to fix the stop error 7E on a server that's running NFS.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -151,7 +151,7 @@ To find the metadata address, follow these steps:
 1. In **Policies** section, select **Identity Experience Framework**.
 
     :::image type="content" source="media/troubleshoot-error-idx10501-aspnet-b2c/find-identity-exp-fr.png" alt-text="Screenshot of the Identity Experience Framework button.":::
-1. Select Custom policies, and then select the custom policy that you're using. In this case, it's **B2C_1A_DEMO_CHANGESIGNINNAME**.
+1. Select **Custom policies**, and then select the custom policy that you're using. In this case, it's **B2C_1A_DEMO_CHANGESIGNINNAME**.
 
     :::image type="content" source="media/troubleshoot-error-idx10501-aspnet-b2c/custom-policy.png" alt-text="Screenshot of checking custom-policy.":::
 1. The metadata address is the URL that's listed under **OpenId Connect Discovery Endpoint**. Copy this URL, and paste it as the value for the `options.MetadataAddress` variable.

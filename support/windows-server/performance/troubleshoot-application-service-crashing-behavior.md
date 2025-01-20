@@ -1,7 +1,7 @@
 ---
 title: The application or service crashing behavior troubleshooting guidance
 description: Provides guidance on how to troubleshoot application or service crashing behaviors.
-ms.date: 08/27/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

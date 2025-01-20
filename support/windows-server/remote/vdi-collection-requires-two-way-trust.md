@@ -1,7 +1,7 @@
 ---
 title: VDI collection requires two-way trust
 description: Provides a solution to an error that occurs when you try to add DomainB\RD_USER_GROUP directly to VDI collection in DomainA.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

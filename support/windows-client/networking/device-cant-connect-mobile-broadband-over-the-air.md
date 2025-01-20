@@ -1,7 +1,7 @@
 ---
 title: cannot connect to mobile broadband
 description: Describes an issue that prevents your Windows 10-based device from connecting to mobile broadband. Occurs if an over-the-air update was applied directly to your modem. Resolutions are provided.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

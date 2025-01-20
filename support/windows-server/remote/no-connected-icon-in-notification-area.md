@@ -1,7 +1,7 @@
 ---
 title: No Connected icon when connecting to remote application
 description: Works around an issue where the Connected icon doesn't appear in the notification area when you connect to a remote application by using Remote Desktop Web Access.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

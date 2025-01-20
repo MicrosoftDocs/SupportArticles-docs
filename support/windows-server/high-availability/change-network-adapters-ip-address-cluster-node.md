@@ -1,7 +1,7 @@
 ---
 title: Changing the IP address of network adapters in cluster server
 description: Discusses how to change the IP address of network adapters in a cluster server.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

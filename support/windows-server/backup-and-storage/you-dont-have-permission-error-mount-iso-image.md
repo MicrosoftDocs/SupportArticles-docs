@@ -1,7 +1,7 @@
 ---
 title: You don't have permission error
 description: Helps to fix the error "You don't have permission" when you try to mount an ISO image.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

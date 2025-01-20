@@ -1,7 +1,7 @@
 ---
 title: You cannot link TextService in Eudcedit.exe
 description: Resolves an issue in which you cannot link TextService in Eudcedit.exe
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Identify and remediate MaxConcurrentApi issues that affect user authentication
 description: Summarizes a set of articles that discuss how to work around or resolve authentication failures and slowdowns when Windows servers are overloaded by authentication requests.
-ms.date: 06/07/2024
+ms.date: 01/15/2025
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

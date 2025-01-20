@@ -1,7 +1,7 @@
 ---
 title: Remote Desktop Protocol settings in Windows Server 2003 and in Windows XP
 description: Discusses the connection settings that are stored in the Default.rdp file on Windows Server 2003-based and Windows XP-based computers.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

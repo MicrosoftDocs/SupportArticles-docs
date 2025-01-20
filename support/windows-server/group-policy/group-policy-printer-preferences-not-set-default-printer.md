@@ -1,7 +1,7 @@
 ---
 title: Printer Preferences can't set default printer
 description: Works around an issue where Group Policy Printer Preferences fails to set the default printer.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

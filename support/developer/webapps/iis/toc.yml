@@ -132,6 +132,14 @@ items:
     href: site-behavior-performance/401-error-preauthentication-header.md
   - name: HTTP error 403.14
     href: site-behavior-performance/http-403-14-forbidden-webpage.md
+  - name: High memory usage
+    items:
+    - name: High memory consumption issue overview
+      href: site-behavior-performance/high-memory-consumption-issues-overview.md
+    - name: Data capture for managed memory leaks
+      href: site-behavior-performance/data-capture-managed-memory-leak.md
+    - name: Native memory leak in an IIS 7.x application pool
+      href: site-behavior-performance/troubleshoot-native-memory-leak-iis-7x-application-pool.md
   - name: HTTP error 500.0 when you visit a web site
     href: site-behavior-performance/http-error-500-when-you-visit-web-site.md
   - name: FtpPutFile always returns success

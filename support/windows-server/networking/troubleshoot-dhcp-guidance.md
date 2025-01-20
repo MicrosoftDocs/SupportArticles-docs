@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting DHCP
 description: Introduces general guidance for troubleshooting scenarios related to DHCP.
-ms.date: 03/06/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

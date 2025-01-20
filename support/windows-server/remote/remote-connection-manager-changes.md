@@ -1,7 +1,7 @@
 ---
 title: Changes to Remote Connection Manager (RCM)
 description: This article describes the changes that have been made to RCM in Windows Server 2016. It also explains how to enable RCM.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

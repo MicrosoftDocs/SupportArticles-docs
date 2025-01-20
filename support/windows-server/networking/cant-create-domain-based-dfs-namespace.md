@@ -1,7 +1,7 @@
 ---
 title: Can't create a domain-based DFS Namespace
 description: Describes how to resolve an issue in which you see an access denied error when you try to create a domain-based namespace.
-ms.date: 09/20/2024
+ms.date: 01/15/2025
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
