@@ -1,7 +1,7 @@
 ---
 title: System Error 126 when you start TrustedInstaller
 description: Fixes the System Error 126 that occurs when you start the Windows Modules Installer service.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

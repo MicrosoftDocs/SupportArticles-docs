@@ -1,7 +1,7 @@
 ---
 title: error WSAENOBUFS (10055)
 description: Describes how to resolve a problem that returns an error when you try to set up a connection on a TCP port greater than 5000.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

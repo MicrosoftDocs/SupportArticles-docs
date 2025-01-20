@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot AD FS issues
 description: Describes how to troubleshoot authentication issues that may arise for federated users in Microsoft Entra ID or Office 365. Provides a comprehensive list of symptoms and their solutions.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

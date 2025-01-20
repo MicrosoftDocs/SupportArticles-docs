@@ -1,7 +1,7 @@
 ---
 title: How to enable BitLocker device encryption on Windows 8 RT
 description: Describes the workflow to enable BitLocker device encryption on the local hard drive of a Windows Surface computer running the Windows 8 RT operating system.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

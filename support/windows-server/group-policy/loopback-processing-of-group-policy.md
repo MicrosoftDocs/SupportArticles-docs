@@ -1,7 +1,7 @@
 ---
 title: Loopback processing of Group Policy
 description: This article describes why you need to enable loopback processing for Group Policy.
-ms.date: 04/29/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

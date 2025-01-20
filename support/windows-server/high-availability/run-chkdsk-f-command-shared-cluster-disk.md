@@ -1,7 +1,7 @@
 ---
 title: Run chkdsk /f command on shared cluster disk
 description: Describes how to run the chkdsk /f command on a shared cluster disk.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

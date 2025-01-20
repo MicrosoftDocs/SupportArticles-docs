@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting virtual machine live migration
 description: Introduces general guidance for troubleshooting scenarios related to virtual machine live migration.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

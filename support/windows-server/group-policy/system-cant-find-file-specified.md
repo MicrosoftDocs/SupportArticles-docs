@@ -1,7 +1,7 @@
 ---
 title: Fail to use Adprep with /gpprep argument
 description: Discusses errors that occur when you use the Adprep tool together with the /gpprep argument.
-ms.date: 04/29/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: AD replication fails with error 8409
 description: AD replication fails with error 8409 after you restore or undelete AD objects in Windows Server 2016.
-ms.date: 05/21/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

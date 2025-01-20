@@ -1,7 +1,7 @@
 ---
 title: Authentication issues with ADSI WinNT provider
 description: Describes user authentication issues with Active Directory Service Interfaces (ADSI) WinNT provider.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

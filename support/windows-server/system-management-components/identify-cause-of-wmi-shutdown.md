@@ -1,7 +1,7 @@
 ---
 title: Identify the cause of unexpected WMI shutdowns
 description: Introduces how to identify the source of a Windows Management Instrumentation (WMI) request that shuts down a computer.
-ms.date: 07/23/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
