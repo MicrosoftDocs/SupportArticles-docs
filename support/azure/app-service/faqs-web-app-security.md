@@ -7,7 +7,7 @@ ms.topic: faq
 ms.date: 01/20/2025
 ms.author: genlin
 ms.service: azure-app-service
-
+---
 # Frequently asked questions about App Service security
 
 The Microsoft Security Response Center (MSRC) investigates all reports of security vulnerabilities that affect Microsoft products and services, and provides the information in the [Security Update Guide](https://msrc.microsoft.com/update-guide/vulnerability) as part of the ongoing effort to help you manage security risks and help keep your systems protected.
@@ -62,16 +62,16 @@ You can [restore a backup](/azure/app-service/manage-backup?tabs=portal#restore-
 
 If the IP address is frequently blocklisted, it's important to investigate the root cause. This may result from sending spam emails, hosting malicious content, or other security vulnerabilities that should be resolved.
 
-- **Inbound IP blacklisted**: To address an inbound IP blocklisting issue, request a [static inbound IP address](/azure/app-service/overview-inbound-outbound-ips#get-a-static-inbound-ip) by securing your domain with IP-based SSL. Alternatively, you can use Azure services such as [Azure Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/overview) or [App Service Environment](https://learn.microsoft.com/en-us/azure/app-service/environment/networking) (ASE) to gain a dedicated inbound IP address.  
+- **Inbound IP blocklisted**: To address an inbound IP blocklisting issue, request a [static inbound IP address](/azure/app-service/overview-inbound-outbound-ips#get-a-static-inbound-ip) by securing your domain with IP-based SSL. Alternatively, you can use Azure services such as [Azure Application Gateway](/azure/application-gateway/overview) or [App Service Environment](/azure/app-service/environment/networking) (ASE) to gain a dedicated inbound IP address.  
 
-- **Outbound IP blacklisted**: The only way to request dedicated outbound IP addresses is to use an App Service Environment. Apps running in Azure share outbound addresses from a common pool.  
+- **Outbound IP blocklisted**: The only way to request dedicated outbound IP addresses is to use an App Service Environment. Apps running in Azure share outbound addresses from a common pool.  
     - You can deploy your app in a different (resource group + location) to host the application in a new scale unit. [Scaling your app between pricing tiers](/azure/app-service/manage-scale-up#scale-up-your-pricing-tier) will also trigger a change in outbound IP addresses.  
     - Alternatively, use [Azure's NAT Gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways) to assign dedicated outbound IP addresses to your resources.  
     - For more information, see [How to fix outbound IPs for App Service using NAT Gateway](https://techcommunity.microsoft.com/blog/appsonazureblog/how-to-fix-outbound-ips-for-app-service/2320612).  
 
-- **SMTP blacklisted**: The port 25 is mainly used for unauthenticated email delivery. Outbound connections from App Services to the public internet using port 25 are not restricted. However, using this design could result in outbound IP addresses being flagged as spam and blocklisted.  
+- **SMTP blocklisted**: The port 25 is mainly used for unauthenticated email delivery. Outbound connections from App Services to the public internet using port 25 are not restricted. However, using this design could result in outbound IP addresses being flagged as spam and blocklisted.  
     - We recommend using authenticated SMTP relay services to send email or implementing App Service VNet Integration.  
-    - Alternatively, host the App Service in an [App Service Environment (ASE)](https://learn.microsoft.com/en-us/azure/app-service/environment/networking) to route outbound SMTP connections over a private network.  
+    - Alternatively, host the App Service in an [App Service Environment (ASE)](/azure/app-service/environment/networking) to route outbound SMTP connections over a private network.  
     - For details, refer to [Troubleshoot outbound SMTP connectivity problems in Azure](/azure/virtual-network/troubleshoot-outbound-smtp-connectivity).  
 
 ### Why am I receiving warnings or alerts for my web app in security scan reports
