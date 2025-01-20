@@ -61,12 +61,12 @@ After the request leaves the client, there are various layers that can affect th
 
 **Forms authentication ticket timed out**
 
-In ASP.NET 2.0 applications onwards, by default, the forms authentication timeout value has changed to be 30 minutes. This means that after 30 minutes of inactivity, you'll be prompted to log in again.
+In ASP.NET 2.0 applications onwards, by default, the forms authentication `timeout` value has changed to be 30 minutes. This means that after 30 minutes of inactivity, you'll be prompted to log in again.
 
 > [!NOTE]
-> When you access a website each time, the 30-minute window clock is reset. Only if it's idle there's a timeout.
+> When you access a website each time, the 30-minute window clock is reset. Only if it's idle there's a time-out.
 
-If you want to change the timeout value to be longer, you can easily change the timeout value in your local *web.config* file (the timeout value is in minutes):
+If you want to change the `timeout` value to be longer, you can easily change the `timeout` value in your local *web.config* file (the `timeout` value is in minutes):
 
 ```xml
 <system.web> 
@@ -78,9 +78,9 @@ If you want to change the timeout value to be longer, you can easily change the 
 
 ### Scenario 4
 
-Form authentication can expire prior to the value of the timeout attribute defined in the configuration file.
+Form authentication can expire prior to the value of the `timeout` attribute defined in the configuration file.
 
-If the forms authentication ticket is manually generated, the timeout property of the ticket will override the value that's set in the configuration file. Therefore, if that value is less than the value in the configuration file, the forms authentication ticket will expire before the configuration file timeout attribute value and vice-versa. For example, let's assume that the `FORMS` timeout attribute is set to 30 in the *Web.config* file and the expiration value of the ticket is set to 20 minutes. In this case, the forms authentication ticket will expire after 20 minutes and then you have to log on again.
+If the forms authentication ticket is manually generated, the `timeout` property of the ticket overrides the value that's set in the configuration file. Therefore, if that value is less than the value in the configuration file, the forms authentication ticket expires before the configuration file `timeout` attribute value and vice-versa. For example, let's assume that the `FORMS` timeout attribute is set to 30 in the *Web.config* file and the expiration value of the ticket is set to 20 minutes. In this case, the forms authentication ticket expires after 20 minutes and then you have to log on again.
 
 ```output
 Event code: 4005
@@ -114,7 +114,7 @@ You can determine if a request doesn't contain the cookie by enabling cookie log
 After this problem occurs, determine which client had the problem and that client's IP address. Filter the IIS log on that client's IP address, and view the `<COOKIE>` column.
 
 > [!NOTE]
-> Use Log Parser to parse the IIS Logs. Download [Log Parser](https://www.microsoft.com/en-in/download/details.aspx?id=24659).
+> Use [Log Parser](https://www.microsoft.com/download/details.aspx?id=24659) to parse the IIS Logs.
 
 After you have the list of requests from a specific user, search for the requests to the login page. You would know they were redirected to this page, and you would want to see the requests before the redirection occurred. If you see something similar to the following, the client either didn't send the cookie or the cookie was removed on the network between the client and server.
 
@@ -126,7 +126,7 @@ After you have the list of requests from a specific user, search for the request
 Microsoft Internet Explorer complies with the following RFC 2109 recommended minimum limitations:
 
 - At least 300 cookies.
-- At least 4096 bytes per cookie (as measured by the size of the characters that comprise the cookie non-terminal in the syntax description of the Set-Cookie header).
+- At least 4,096 bytes per cookie (as measured by the size of the characters that comprise the cookie non-terminal in the syntax description of the Set-Cookie header).
 - At least 20 cookies per unique host or domain name.
 
 The forms authentication cookie can also be lost when the client's cookie limit is exceeded. In Microsoft Internet Explorer, there's a limit of 20 cookies. Once the counter reaches 20, the previous 19 cookies are removed from the client's collection. If the ASPXAUTH cookie is removed, you're redirected to the login page when the next request is processed. You can use Fiddler to see the HTTP request or response headers to see if you're receiving the cookie from the client. Download [Fiddler](http://fiddler2.com/fiddler2/).
@@ -186,7 +186,7 @@ When you see the request that reached the server, make sure that the server rece
 
   To learn how to generate machine keys, see [Machine Key Settings](/iis/application-frameworks/scenario-build-an-aspnet-website-on-iis/configuring-step-4-configure-application-security#44-machine-key-settings). 
 
-- Compare the timeout values for both forms, that is, the authentication module and the session module， on all of the web servers.
+- Compare the `timeout` values for both forms, that is, the authentication module and the session module， on all of the web servers.
 - Compare the **System.Web.dll** version under the Framework folder for ASP.NET 4 between all of the web servers in the farm. Forms authentication failed for the request. The reason is that the ticket supplied was invalid. This happens due to missing Reliability Update 1 for MS .NET Framework 4 on one of the web servers.
 - Install the Reliability Update 1 for the .NET Framework 4 kb2533523 on the server that was missing it and rebooted the server. The issue is fixed. For more information, see [Reliability Update 1 for the .NET Framework 4](https://support.microsoft.com/topic/reliability-update-1-for-the-net-framework-4-5a8de0be-f4a9-f89e-e40d-f59dd1e353e5).
 
