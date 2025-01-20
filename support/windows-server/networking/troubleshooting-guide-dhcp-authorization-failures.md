@@ -19,7 +19,7 @@ During the post-installation phase of the DHCP role on a server, you encounter t
 > Authorizing DHCP server ….. Failed  
 > The authorization of DHCP server failed with Error Code: 20070. The DHCP service could not contact Active Directory.
 
-The DHCP console displays a left-pointing red arrow in the IPv4 section, indicating that the server isn't authorized.
+The DHCP console displays a downward red arrow in the IPv4 section, indicating that the server isn't authorized.
 
 :::image type="content" source="media/troubleshooting-guide-dhcp-authorization-failures/dhcp-console-showing-unauthorized-status.png " alt-text="Screenshot of the DHCP console showing an unauthorized status.":::
 
@@ -112,7 +112,7 @@ Additionally, you can capture Wireshark traces to identify packet drops between 
 
    > cn &nbsp; &nbsp; &lt;fqdn&gt;CNF:ca69f501234
 
-In this case, the CNF object needs to be deleted. We recommend that you take an AD backup and then delete this object. Once the object is deleted, you can reauthorize the DHCP server.
+In this case, the CNF object (conflicting object) needs to be deleted. We recommend that you take an AD backup and then delete this object. Once the object is deleted, you can reauthorize the DHCP server.
 
 ## Extra troubleshooting steps
 
