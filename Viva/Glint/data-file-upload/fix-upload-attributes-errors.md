@@ -3,7 +3,7 @@ title: Resolve file upload errors related to attributes
 description: Fix errors that occur when you upload employee attribute data to Microsoft Viva Glint. These errors are related to attributes.
 manager: dcscontentpm
 ms.reviewer: aweixelman
-ms.date: 06/21/2024
+ms.date: 01/19/2025
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
@@ -32,7 +32,7 @@ To fix the issue, delete the extra column, and then upload the file again to Viv
 
 Error message:
 
-> MISSING_COLUMN: Missing required column '\<Attribute Name\>'. Add this column of data to your file, and then upload it again.
+> MISSING_COLUMN: Missing required column '\<Attribute Name\>'. Add this column of data to your file and reupload.
 
 This issue occurs if one or more of the following required columns are missing from the file that you upload:
 
