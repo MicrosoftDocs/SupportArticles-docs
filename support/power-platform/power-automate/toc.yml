@@ -46,6 +46,16 @@
       href: dataverse-cds/cds-user-cannot-access-power-automate-business-process-flows-on-demand-workflows.md
 - name: Desktop flows
   items:
+    - name: PAD UI Automation
+      items:
+        - name: Desktop Automation
+          items:
+            - name: Cannot find UI element
+              href: desktop-automation/cannot-find-ui-element.md
+        - name: Web Automation
+          items:
+            - name: Article1
+              href: web-automation/article1.md
     - name: A desktop application crashes due to UI automation
       href: desktop-flows/desktop-application-crashes-ui-automation.md
     - name: '"Could not read the application certificate" error when creating a connection'
