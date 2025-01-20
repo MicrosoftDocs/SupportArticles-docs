@@ -1,7 +1,7 @@
 ---
 title: Change the Volume Licensing product key
 description: Describes how to change the product key for a Volume Licensing installation of Windows XP.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

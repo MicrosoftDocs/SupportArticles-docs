@@ -1,7 +1,7 @@
 ---
 title: How to disable and re-enable hibernation
 description: Explains how to turn off the hibernation feature in Windows.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

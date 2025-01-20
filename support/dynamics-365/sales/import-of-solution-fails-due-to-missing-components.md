@@ -4,7 +4,6 @@ description: Import of solution fails due to missing components. Provides a reso
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
-ms.subservice: d365-sales-custom-solutions
 ---
 # Import of solution fails due to missing components
 

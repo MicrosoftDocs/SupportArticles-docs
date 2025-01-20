@@ -1,7 +1,7 @@
 ---
 title: Error 0x00000709 when you use CNAME record
 description: An issue occurs when clients try to connect to printers by using a CNAME record in the UNC path.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

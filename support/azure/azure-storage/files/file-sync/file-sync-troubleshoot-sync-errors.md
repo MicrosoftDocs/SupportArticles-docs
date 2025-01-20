@@ -280,6 +280,13 @@ No action required. Azure File Sync has a scheduled task (VssSyncScheduledTask) 
 | **Error string** | WININET_E_TIMEOUT |
 | **Remediation required** | Yes |
 
+| Error | Code |
+|-|-|
+| **HRESULT** | 0x80072EFE |
+| **HRESULT (decimal)** | -2147012866 |
+| **Error string** | WININET_E_CONNECTION_ABORTED |
+| **Remediation required** | Yes |
+
 This error can occur whenever the Azure File Sync service is inaccessible from the server. You can troubleshoot this error by working through the following steps:
 
 1. Verify the Windows service *FileSyncSvc.exe* is not blocked by your firewall.

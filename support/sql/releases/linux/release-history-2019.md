@@ -4,7 +4,7 @@ description: This article contains the release history for SQL Server 2019 runni
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 12/12/2024
+ms.date: 01/16/2025
 appliesto:
   - SQL Server 2019
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, linux-related-content
@@ -65,7 +65,7 @@ The following table lists the release history for [!INCLUDE [sql-server-2019](..
 
 ## <a id="CU30"></a> CU 30 (December 2024)
 
-This is the Cumulative Update 30 (CU 30) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4415.2. For information about the fixes and improvements in this release, see the [Support article](/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate30).
+This is the Cumulative Update 30 (CU 30) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4415.2. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2019/cumulativeupdate30.md).
 
 ### Package details
 

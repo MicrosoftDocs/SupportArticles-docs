@@ -1,7 +1,7 @@
 ---
 title: Broken trust relationship between domain-joined device and its domain
 description: Introduces how to troubleshoot secure channel issues that cause a broken trust relationship between a domain-joined device and its domain.
-ms.date: 10/24/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -38,7 +38,7 @@ The following PowerShell script downloads and runs the latest version of the Azu
 
 > [!NOTE]
 > - To run the tests in Linux, from computers that have no Internet access, or from a containerized environment, see [SQL connectivity checker on GitHub](https://github.com/Azure/SQL-Connectivity-Checker).
-> - For more PowerShell commands, see [Available PowerShell commands](/powershell/module/azurerm.sql#sql).
+> - For more PowerShell commands, see [Available PowerShell commands](/powershell/module/az.sql#sql).
 
 1. Open Windows PowerShell ISE (in **Administrator** mode if possible).
    > [!NOTE]

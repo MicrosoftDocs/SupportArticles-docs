@@ -1,7 +1,7 @@
 ---
 title: LDAP and Kerberos Server not respond to UDP requests or reset TCP sessions
 description: Fixes an issue where TCP sessions created to the server ports 88, 464, 389 and 3268 are reset. Sessions using Secure Sockets Layer or Transport Layer Security on ports 636 and 3269 are also affected.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

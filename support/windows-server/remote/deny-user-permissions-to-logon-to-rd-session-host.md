@@ -1,7 +1,7 @@
 ---
 title: Deny user or group logon via RDP
 description: Helps solve an issue where the Deny this user permissions to logon to a Remote Desktop Session Host Server feature behaves differently in different versions of Windows Server.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

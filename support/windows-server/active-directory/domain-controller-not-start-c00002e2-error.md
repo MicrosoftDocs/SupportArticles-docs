@@ -1,7 +1,7 @@
 ---
 title: c00002e2 error occurs
 description: Helps to fix the error c00002e2 or "Choose an option" when Domain controller does not start.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -4,7 +4,6 @@ description: Describes an error that occurs when you try to open the Dynamics 36
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
-ms.subservice: d365-sales-client-outlook
 ---
 # We can't load this app because your email account isn't configured with Dynamics 365 server-side sync for incoming email error occurs in Microsoft Dynamics 365 App for Outlook
 

@@ -1,7 +1,7 @@
 ---
 title: Event 142 time service stopped advertising
 description: Provides a resolution for event 142 that the time service has stopped advertising as a time source.
-ms.date: 03/20/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

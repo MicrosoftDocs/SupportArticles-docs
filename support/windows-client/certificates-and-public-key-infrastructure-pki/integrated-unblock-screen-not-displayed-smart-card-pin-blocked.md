@@ -1,7 +1,7 @@
 ---
 title: Integrated Unblock screen not displayed when smart card PIN is blocked
 description: Provides several methods to resolve the issue which Integrated Unblock screen is not displayed when smart card PIN is blocked.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

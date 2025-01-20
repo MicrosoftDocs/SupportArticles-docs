@@ -1,10 +1,10 @@
 ---
 title: Determine the version and edition of SQL Server Database Engine
 description: This article describes the procedures to determine the version and edition of SQL Server Database Engine that is running.
-ms.date: 09/10/2024
+ms.date: 01/10/2025
 ms.topic: how-to
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall
-ms.reviewer: v-six
+ms.reviewer: v-six, jopilov
 ---
 
 <!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.

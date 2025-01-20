@@ -1,7 +1,7 @@
 ---
 title: Use Adminpak to remotely administer computers
 description: Discusses how to remotely administer computers that are running Windows Server 2003, Windows XP, or Windows 2000 by using the Administration Tools Pack.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

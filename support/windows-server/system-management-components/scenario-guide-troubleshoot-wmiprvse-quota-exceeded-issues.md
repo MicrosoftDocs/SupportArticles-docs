@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot WmiPrvse.exe quota exceeded issues
 description: Helps troubleshoot the WmiPrvse.exe process quota exceeded issues, and describes how to gather additional information.
-ms.date: 11/26/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

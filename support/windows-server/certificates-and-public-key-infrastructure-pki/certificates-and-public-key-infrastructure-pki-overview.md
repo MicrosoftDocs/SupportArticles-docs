@@ -1,7 +1,7 @@
 ---
 title: Certificates and Public Key Infrastructure (PKI)
 description: Overview of Certificates and Public Key Infrastructure (PKI) troubleshooting articles for Windows Server.
-ms.date: 03/15/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

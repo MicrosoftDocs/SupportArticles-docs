@@ -3,7 +3,6 @@ title: Troubleshoot item level Server-Side Synchronization issues with Dynamics 
 description: This article introduces how to troubleshoot item level Server-Side Synchronization issues with Microsoft Dynamics 365.
 ms.reviewer: 
 ms.date: 03/31/2021
-ms.subservice: d365-sales-email-office-integration
 ---
 # Troubleshoot item level Server-Side Synchronization issues with Microsoft Dynamics 365
 

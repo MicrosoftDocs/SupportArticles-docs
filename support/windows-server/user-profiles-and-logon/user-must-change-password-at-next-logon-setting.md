@@ -1,7 +1,7 @@
 ---
 title: Not Able to Change Password
 description: Provides some information about the issue that user may not be able to change their password, if you configure the 'User Must Change Password at Next Logon' setting.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

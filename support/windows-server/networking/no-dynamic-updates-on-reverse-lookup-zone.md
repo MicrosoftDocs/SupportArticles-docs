@@ -1,7 +1,7 @@
 ---
 title: No dynamic update on classless reverse lookup zone
 description: Dynamic update does not work with classless in - addr.arpa zones. If you need to dynamically update PTR resource records, do not use classless zones.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

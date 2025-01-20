@@ -1,7 +1,7 @@
 ---
 title: Decommission a Windows enterprise CA
 description: Provides step-by-step instructions for removing a CA from Windows Server.
-ms.date: 09/03/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

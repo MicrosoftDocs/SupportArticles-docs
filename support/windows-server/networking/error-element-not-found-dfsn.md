@@ -1,7 +1,7 @@
 ---
 title: Element not found error with DFS Namespaces
 description: Helps resolve the error - The namespace cannot be queried. Element not found.
-ms.date: 09/25/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

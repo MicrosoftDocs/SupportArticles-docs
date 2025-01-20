@@ -1,7 +1,7 @@
 ---
 title: Using Group Policy Objects to hide specified drives
 description: Provides some information about using Group Policy Objects to hide specified drives.
-ms.date: 04/09/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
