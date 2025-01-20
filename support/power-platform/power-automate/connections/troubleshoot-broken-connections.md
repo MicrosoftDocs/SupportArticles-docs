@@ -24,7 +24,7 @@ This article describes the following common issues about broken connections in M
 
 ## Connection times out
 
-This issue occurs when a client (such as a web browser or an application) tries to establish a connection with a server, but the server doesn't respond within a specified time limit. This can occur for various reasons, such as the server being offline, network issues, or the server taking too long to process the request. When the connection times out, the client stops waiting for a response and terminates the connection attempt.
+This issue occurs when a client (such as a web browser or an application) tries to establish a connection with a server, but the server doesn't respond within a specified time limit. This can occur for several reasons, such as the server being offline, network issues, or the server taking too long to process the request. When the connection times out, the client stops waiting for a response and terminates the connection attempt.
 
 You might also receive the following error message:
 
@@ -48,11 +48,11 @@ When a DLP block occurs, you might also receive one of the following error messa
 ### Troubleshooting steps
 
 1. Review DLP policies: Check the DLP policies configured in the organization to understand what actions are being blocked and why.
-2. Consult with your administrator: There might be a chance that the administrator has blocked the particular connector or connection. It's a good idea to consult with them and discuss the issue to unblock it.
+2. Consult with your administrator: There might be a chance that the administrator blocked the connector or connection. It's a good idea to consult with them and discuss the issue to unblock it.
 
 ## Invalid authenticated devices
 
-This refers to a situation where a user tries to authenticate using a device for multi-factor authentication (MFA), but the device has been disabled. This issue isn't related to Power Automate but rather to the tenant's configuration at the administrative level.
+This refers to a situation where a user tries to authenticate using a device for multi-factor authentication (MFA), but the device is disabled. This issue isn't related to Power Automate but rather to the tenant's configuration at the administrative level.
 
 In this situation, you might also receive one of the following error messages:
 
@@ -68,7 +68,7 @@ In this situation, you might also receive one of the following error messages:
 
 ## Inactivity for a long time
 
-This refers to a situation where a connection becomes invalid because it hasno't been used for a specified period. For example, the SharePoint connector requires usage at least once every 90 days to remain active. If the connection isn't used within this period, it will expire.
+This refers to a situation where a connection becomes invalid because it hasn't been used for a specified period. For example, the SharePoint connector requires usage at least once every 90 days to remain active. If the connection isn't used within this period, it will expire.
 
 In this situation, you might also receive one of the following error messages:
 
@@ -87,11 +87,11 @@ This refers to problems that occur when a user tries to use features that requir
 
 ### Troubleshooting steps
 
-Ensure the user has the correct license to interact with the system as required in attended mode. For more information, see [Which Power Automate licenses do I need?](/power-platform/admin/power-automate-licensing/faqs#which-power-automate-licenses-do-i-need).
+Ensure the user has the correct license to interact with the system as required in attended mode. For more information, see [Which Power Automate licenses do I need?](/power-platform/admin/power-automate-licensing/faqs#which-power-automate-licenses-do-i-need)
 
 ## Password modification by a user
 
-This issue occurs when the account password used to create the connection is deleted, changed, or expired. Since account verification is a crucial part of authentication whenever a connection is triggered, the connection will break if new password isn't updated. To avoid this issue, use services like [Microsoft Entra ID](/entra/fundamentals/whatis).
+This issue occurs when the account password used to create the connection is deleted, changed, or expired. Since account verification is a crucial part of authentication whenever a connection is triggered, the connection will break if the new password isn't updated. To avoid this issue, use services like [Microsoft Entra ID](/entra/fundamentals/whatis).
 
 You might also receive the following error message:
 
@@ -115,7 +115,7 @@ Contact the tenant administrator to understand the specific changes and reauthor
 
 ## Connection owner account is deleted or disabled
 
-This refers to a situation where the account that created a connection is either removed or disabled in the directory. As a result, the connection becomes invalid, affecting all users who shared it.
+This refers to a situation where the account that created a connection is either removed or disabled in the directory. As a result, the connection becomes invalid, affecting all users who share it.
 
 In this situation, you might also receive one of the following error messages:
 
