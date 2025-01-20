@@ -5,7 +5,7 @@ services: app-service
 author: hepiet
 ms.topic: faq
 ms.date: 01/20/2025
-ms.author: genlin
+ms.author: hepiet
 ms.service: azure-app-service
 ---
 # Frequently asked questions about App Service security
@@ -18,8 +18,11 @@ If your question isn't answered and you still need help, have the number of the 
 
 ### How do I know whether a specific CVE (common vulnerability) or known security issue applies to my Web App?
 
-App Service is a platform with various underlying technologies like Windows, Linux, and web application frameworks. Updates are applied at a routine cadence for OS, host runtime, and Microsoft image repo.
-You can check OS and runtime patching in Azure App Service to know more when updates are applied and Guest OS patches to check the updates applied to the Azure Guest OS.
+App Service is a platform with various underlying technologies like Windows, Linux, and web application frameworks. Updates are applied at a routine cadence for OS, host runtime, and Microsoft image repo.You can:
+
+- Check [this article](/azure/app-service/overview-patch-os-runtime) understand OS and runtime patching in Azure App Serviceregarding the OS or software in App Service.
+- [Check Guest OS patches details](/azure/cloud-services/cloud-services-guestos-msrc-releases) to understand the updates applied to the Azure Guest OS.
+
 If your question wasn't answered and you still need help, gather the following information before submitting a request to Azure Support:
 
 - Specify the security patch you are inquiring about.
