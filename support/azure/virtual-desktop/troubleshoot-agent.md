@@ -61,7 +61,7 @@ To resolve this issue:
    Restart-Service RDAgentBootLoader
    ```
 
-4. Run the following cmdlets to verify that `IsRegistered` is set to **1** and `RegistrationToken` is blank.
+4. Run the following cmdlets to verify that `IsRegistered` is set to `1` and `RegistrationToken` is blank.
 
    ```powershell
    Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\RDInfraAgent" -Name IsRegistered | FL IsRegistered
