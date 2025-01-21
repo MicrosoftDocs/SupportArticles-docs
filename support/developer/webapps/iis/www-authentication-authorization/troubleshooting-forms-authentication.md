@@ -179,7 +179,7 @@ When you see the request that reached the server, make sure that the server rece
 - If the scenario involves a web farm, then the machineKeys should be same across everywhere. Use the following machineKey to maintain the consistency on all the servers on the farm:
 
     ```xml
-    <machineKey validationKey="87AC8F432C8DB844A4EFD024301AC1AB5808BEE9D1870689B63794D33EE3B55CDB315BB480721A107187561F388C6BEF5B623BF31E2E725FC3F3F71A32BA5DFC" decryptionKey="E001A307CCC8B1ADEA2C55B1246CDCFE8579576997FF92E7" validation="SHA1" />
+    <machineKey validationKey="<Machine Key>" decryptionKey="<Decryption Key>" validation="SHA1" />
     ```
 
 - Compare the timeout values for both forms that is authentication module and the session module on all of the web servers.
