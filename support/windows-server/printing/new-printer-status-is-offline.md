@@ -1,7 +1,7 @@
 ---
 title: The new printer status is Offline
 description: Provides a solution to an issue where the new printer status is Offline after you delete a print queue and then restart a Windows-based computer.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

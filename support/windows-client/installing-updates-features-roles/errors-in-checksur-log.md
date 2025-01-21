@@ -1,7 +1,7 @@
 ---
 title: Fix errors found in CheckSUR.log
 description: Describes how to fix errors that are logged by the System Update Readiness tool (CheckSUR) but remain unresolved.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

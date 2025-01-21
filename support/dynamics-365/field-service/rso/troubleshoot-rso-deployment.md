@@ -4,7 +4,7 @@ description: Resolves issues with deployments of the Resource Scheduling Optimiz
 ms.author: AnilMur
 author: anilmur
 ms.reviewer: mhart
-ms.date: 10/19/2023
+ms.date: 01/08/2025
 ms.custom: sap:Resource Scheduling Optimization
 ---
 # Troubleshoot issues with Resource Scheduling Optimization add-in deployments

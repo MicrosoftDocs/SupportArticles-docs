@@ -156,8 +156,6 @@
       href: dynamics-crm-installations-updates-and-documentation.md
 - name: Email and Office Integration
   items:
-    - name: Alert appears in the user's mailbox record
-      href: alert-appears-users-dynamics-365-mailbox-record.md
     - name: App for Outlook didn't load completely
       href: dynamics-365-app-outlook-did-not-load.md
     - name: App for Outlook is missing
@@ -170,24 +168,16 @@
       href: trying-to-access-dynamics-365-app-for-outlook-from-email-do-not-recognize-error.md
     - name: Can't connect to Exchange message
       href: cannot-connect-to-exchange-message-when-using-dynamics-365-app-for-outlook.md
-    - name: Crm.80040216. An unexpected error occurred
-      href: an-error-occurred-while-synchronizing-item.md
     - name: Email or appointment tracked by App for Outlook shows as Track pending
       href: emails-tracked-by-dynamics-365-app-for-outlook-show-track-pending.md
     - name: Error in App for Outlook
       href: error-when-opening-365-app-outlook.md
     - name: Error when accessing CRM App for Outlook
       href: error-when-accessing-crm-app-outlook.md
-    - name: ErrorInternalServerTransientError error in mailbox
-      href: errorinternalservertransienterror-error.md
-    - name: Http server returned ServiceUnavailable exception warning level message
-      href: http-server-returned-serviceunavailable.md
     - name: IncomingEmailRejected error when installing App for Outlook
       href: error-incomingemailrejected-install-dynamics-365-app-outlook.md
     - name: IncomingEmailS2SApprovalNeeded error when installing App for Outlook
       href: error-install-dynamics-365-app-outlook.md
-    - name: IncomingMailboxInternalCrmError
-      href: incomingmailboxinternalcrmerror.md
     - name: Installation of Windows Live ID Sign-in Assistant failed
       href: installation-of-windows-live-id-sign-in-assistant-failed-exit-code-1603.md
     - name: Item level Server-Side Synchronization issues
@@ -198,16 +188,6 @@
       href: error-when-using-365-app-outlook.md
     - name: The view is not available when opening an email
       href: the-view-is-not-available-error-when-opening-emails.md
-    - name: UnknownIncomingEmailIntegrationError -2147167669
-      href: unknownincomingemailintegrationerror-2147167669-shows-in-alert-in-mailbox.md
-    - name: UnknownIncomingEmailIntegrationError -2147220192
-      href: unknownincomingemailintegrationerror-2147220192.md
-    - name: UnknownIncomingEmailIntegrationError -2147220956
-      href: exception-appears-server-side-sync.md
-    - name: UnknownIncomingEmailIntegrationError -2147220970
-      href: unknownincomingemailintegrationerror-2147220970-exception.md
-    - name: UnknownIncomingEmailIntegrationError in Dynamics 365 mailbox
-      href: unknownincomingemailintegrationerror.md
     - name: We're unable to connect to your server
       href: we-are-unable-to-connect-to-your-dynamics-365-app-for-outlook-error.md
     - name: You don't have permission to access this app

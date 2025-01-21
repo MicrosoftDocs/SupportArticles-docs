@@ -1,7 +1,7 @@
 ---
 title: Error 0x80070005 (Access denied) when you activate Windows
 description: Describes how to fix Windows activation error 0x80070005 (access denied).
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

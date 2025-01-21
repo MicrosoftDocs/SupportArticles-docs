@@ -1,7 +1,7 @@
 ---
 title: Can't delete a recovery checkpoint for a virtual machine in DPM
 description: Describes an issue that blocks you from deleting a recovery checkpoint for a virtual machine in System Center 2012 Data Protection Manager. A resolution is provided.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

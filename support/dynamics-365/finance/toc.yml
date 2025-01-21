@@ -8,6 +8,8 @@
   items:
     - name: Business performance analytics self-help
       href: business-performance-analytics/business-performance-analytics-self-help-overview.md
+    - name: Data quality error ERR00015
+      href: business-performance-analytics/data-quality-err00015.md
     - name: Decimal auto rounding ERR00012
       href: business-performance-analytics/decimal-auto-rounding-err00012.md
     - name: Decimal limit exceeded ERR00011 
@@ -32,6 +34,12 @@
       href: business-performance-analytics/missing-budget-transaction-header-err00007.md
     - name: Missing foreign key reference ERR00008
       href: business-performance-analytics/missing-foreign-key-err0008.md
+    - name: Output table is empty ERR00016
+      href: business-performance-analytics/empty-entities-err00016.md
+    - name: Null join violation ERR00014
+      href: business-performance-analytics/ledger-join-err00014.md
+    - name: Null check violation ERR00013 
+      href: business-performance-analytics/budget-check-err00013.md
 - name: Cash and bank management
   items:
     - name: Troubleshoot issues with transactions that can't be settled

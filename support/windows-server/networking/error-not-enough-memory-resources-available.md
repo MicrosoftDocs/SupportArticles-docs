@@ -1,7 +1,7 @@
 ---
 title: Not enough memory resources are available to process this command error
 description: Helps resolve the error - The namespace cannot be queried. Not enough memory resources are available to process this command.
-ms.date: 09/27/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

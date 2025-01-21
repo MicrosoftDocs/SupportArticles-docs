@@ -4,7 +4,7 @@ description: Troubleshoot common issues that you might encounter with Azure File
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 08/01/2024
+ms.date: 01/13/2025
 ms.author: kendownie
 ms.custom: sap:File Sync
 ---
@@ -97,13 +97,18 @@ After installing or upgrading the Azure File Sync agent (v17.3 or later), you ma
   Error 0x80070057: The parameter is incorrect. 
   ```
 
-- Registering a server using the Register-AzStorageSyncServer cmdlet fails with the following error: 
+- Registering a server using the `Register-AzStorageSyncServer` cmdlet fails with the following error: 
 
   ```
   Register-AzStorageSyncServer: Exception of type 'Commands.StorageSync.Interop.Exceptions.ServerRegistrationException' was thrown.
   ```
 
 - ServerRegistration.exe or AfsUpdater.exe fails to open
+- Agent installation fails. The installation log shows the error code 0x80c84111 with the following message:
+
+  ```output
+  Exception occurred while configuring MitigationRedirection policy. This could indicate that required windows updates not installed on the computer.
+  ```
 
 This issue occurs because the Azure File Sync agent has a dependency on a Windows security feature and updates for this security feature are not installed.
 

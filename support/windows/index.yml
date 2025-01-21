@@ -20,6 +20,11 @@ productDirectory:
     imageSrc: "../media/hub-landing/windows-logo.png"
     summary: Troubleshooting articles for Windows clients
     url: ../windows-client/welcome-windows-client.yml
+
+  - title: Windows 365
+    imageSrc: "../media/hub-landing/windows-logo.png"
+    summary: Troubleshooting articles for Windows 365
+    url: ../windows-365/welcome-windows-365.yml
     
   - title:  Application Developer
     imageSrc: "../media/hub-landing/windows-logo.png"

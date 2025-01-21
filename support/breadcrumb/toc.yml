@@ -19,6 +19,9 @@ items:
       - name: Windows Client
         tocHref: /troubleshoot/windows-client/
         topicHref: /troubleshoot/windows-client/welcome-windows-client
+      - name: Windows 365
+        tocHref: /troubleshoot/windows-365/
+        topicHref: /troubleshoot/windows-365/welcome-windows-365
       - name: Application Developer
         tocHref: /troubleshoot/windows/win32
         topicHref: /troubleshoot/windows/win32/welcome-windowsdeveloper
@@ -32,7 +35,7 @@ items:
 
     - name: Host Integration Server
       tocHref: /troubleshoot/developer/host-integration-server/
-      topicHref: /troubleshoot/developer/host-integration-server/welcome-host-integration-server
+      topicHref: /troubleshoot/developer/host-integration-server/data-integration/configure-data-sources
 
     - name: Visual Studio
       tocHref: /troubleshoot/developer/visualstudio/
@@ -157,9 +160,12 @@ items:
       - name: Synapse Analytics Workspace
         tocHref: /troubleshoot/azure/synapse-analytics/workspace
         topicHref: /troubleshoot/azure/synapse-analytics/workspace/welcome-synapse-analytics-workspace
+      - name: Virtual Desktop
+        tocHref: /troubleshoot/azure/virtual-desktop/
+        topicHref: /troubleshoot/azure/virtual-desktop/welcome-virtual-desktop
       - name: Virtual Network
         tocHref: /troubleshoot/azure/virtual-network/
-        topicHref: /troubleshoot/azure/virtual-network/welcome-virtual-network
+        topicHref: /troubleshoot/azure/virtual-network/welcome-virtual-network      
       - name: Cloud Services (classic)
         tocHref: /troubleshoot/azure/cloud-services/classic/
         topicHref: /troubleshoot/azure/cloud-services/classic/welcome-cloud-services-classic

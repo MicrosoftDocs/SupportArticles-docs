@@ -1,7 +1,7 @@
 ---
 title: TCP/IP Properties dialog box displays the default IP address
 description: Describes a problem in which the TCP/IP properties revert to the default settings after you manually configure a static IP address in Windows Server.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

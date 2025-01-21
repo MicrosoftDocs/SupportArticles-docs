@@ -1,7 +1,7 @@
 ---
 title: How to install and configure a VPN server in Windows Server 2003
 description: Describes how to install and configure a virtual private network server in Windows Server 2003.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot guarded hosts
 description: Provides resolutions to common problems encountered when deploying or operating a guarded Hyper-V host in your guarded fabric.
-ms.date: 09/05/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot a STOP 0xC000021A error in Windows XP or Windows Server 2003
 description: This article presents advanced troubleshooting steps for the STOP 0xC000021A error.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

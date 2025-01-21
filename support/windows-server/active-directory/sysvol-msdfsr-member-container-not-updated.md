@@ -1,7 +1,7 @@
 ---
 title: DC rename doesn't rename all AD DFSR `SYSVOL` objects
 description: Fixes an issue where the `SYSVOL` msDFSR-Member container used by DFS Replication isn't updated.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Data collection for troubleshooting secure channel issues
 description: Describes the data you need to collect to troubleshoot secure channel issues.
-ms.date: 10/24/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

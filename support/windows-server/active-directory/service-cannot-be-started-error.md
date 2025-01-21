@@ -1,7 +1,7 @@
 ---
 title: AD DS configuration operations fail
 description: Describes an issue in which you receive a domain controller configuration error in Windows Server 2012.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
