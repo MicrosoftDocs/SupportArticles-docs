@@ -29,11 +29,11 @@ The _Power Automate for desktop\_*.log_ file contains the general reason for the
 
 ## On-premises product logs
 
-For issues with using Power Automate to create flows, the [Power Automate machine runtime application](/power-automate/desktop-flows/manage-machines#register-a-new-machine) to register or configure your machine, or during cloud runtime, you might need to collect on-premises logs.
+For issues with using Power Automate to create flows, use the [Power Automate machine runtime application to register](/power-automate/desktop-flows/manage-machines#register-a-new-machine) or configure your machine, or during the cloud runtime, you might need to collect on-premises logs.
 
-The easiest way to do this is by using the Power Automate machine-runtime application. If you have the application installed, you can [use it to export logs automatically](/power-automate/desktop-flows/troubleshoot#collect-machine-logs).
+The easiest way to do this is to use the Power Automate machine runtime application. If you have the application installed, you can [use it to export logs automatically](/power-automate/desktop-flows/troubleshoot#collect-machine-logs).
 
-If you need to collect on-premises logs manually, they can be found in the _%programdata%\Microsoft\Power Automate\Logs_.
+If you need to collect on-premises logs manually, they can be found in _%programdata%\Microsoft\Power Automate\Logs_.
 
 > [!NOTE]
 > You need administrator privileges to read or copy these files to another folder. After copying them to a different folder, non-administrator users can open them.
@@ -45,7 +45,7 @@ Event Viewer application logs are helpful when an application crashes or a Windo
 Follow these steps to view and save the logs:
 
 1. Open the Windows Event Viewer.
-2. Go to **Windows Logs** > **Application**, look for an error with the source corresponding to the application that experienced the problem.
+2. Go to **Windows Logs** > **Application**, and look for an error with the source corresponding to the application that experienced the problem.
 3. Use the **Filter Current Log** menu to filter by **Event level** or **Logged** time (such as the last hour) if needed.
 4. To save the filtered log file, select **Save Filtered Log File As** and save it as an event file.
 
