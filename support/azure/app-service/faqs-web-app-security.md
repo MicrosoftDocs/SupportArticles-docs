@@ -83,6 +83,6 @@ If the IP address is frequently blocklisted, it's important to investigate the r
 
 Security scans are typically run against a web app URL. Make sure that the tested URL resolves to the intended web app. If it resolves elsewhere, such as an application gateway, you can expect to receive inaccurate scan results.
 
-Some scan results could be false positives even as others indicate a genuine security issue that might require a consultation with Azure support. Certain changes are within your control, such as networking or website configuration, but other changes are within only Microsoft's control at the platform level.
+Some scan results could be false positives even as others indicate a genuine security issue that might require a consultation with Azure support. Certain changes are within your control, such as networking or website configuration. Other changes at the platform level can be controlled only by Microsoft.
 
 Azure support can assist you by reviewing the full scan results, confirming the results, and providing security feature options to you.
