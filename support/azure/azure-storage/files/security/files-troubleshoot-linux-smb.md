@@ -24,17 +24,19 @@ This article lists common issues that can occur when using SMB Azure file shares
 
 ## Run diagnostics
 
+Diagnostics tools can be helpful for ensuring that clients have the correct prerequisites and for collecting debug information on field issues that can be hard to reproduce.
+
+### Use AzFileDiagnostics
+
 You can use [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Linux) to automate symptom detection and ensure that the Linux client has the correct prerequisites. It helps set up your environment to get optimal performance.
 
 ### Use the Always-On Diagnostics tool
 
-You can also use the Always-On Diagnostics tool (AOD) to collect logs on SMB and NFSv4 Linux clients. The daemon runs in the background as a system service and can be configured to detect anomalies in a variety of sources such as dmesg logs, debug data, and error and latency metrics. It can capture data from tcpdump, nfsstat, mountstsat, and other sources, along with the system's CPU and memory usage. AOD can be useful for collecting debug information on field issues that can be hard to reproduce.
+You can also use the Always-On Diagnostics (AOD) tool to collect logs on SMB and NFSv4 Linux clients. The daemon runs in the background as a system service and can be configured to detect anomalies in a variety of sources such as dmesg logs, debug data, and error and latency metrics. It can capture data from tcpdump, nfsstat, mountstsat, and other sources, along with the system's CPU and memory usage.
 
 AOD is currently compatible with systems running SUSE Linux Enterprise Server 15 (SLES15) and Red Hat Enterprise Linux 8 (RHEL8). Follow the appropriate installation steps.
 
 #### [SLES](#tab/SLES)
-
-#### Install AOD on SLES15
 
 Follow these instructions to install the Always-On Diagnostics tool on SUSE Linux Enterprise Server 15.
 
@@ -64,8 +66,6 @@ sudo zypper install aod
 ```
 
 #### [RHEL](#tab/RHEL)
-
-#### Install AOD on RHEL8
 
 Follow these instructions to install the Always-On Diagnostics tool on Red Hat Enterprise Linux 8.
 
