@@ -45,13 +45,13 @@ HTTP/1.1 404 Not Found
 
 ### Cause
 
-This error occurs when you use the incorrect name for a resource. That resource might be the name of an entity set, a function or an action. These resource names are case sensitive. In the preceding example, there is an entity set called `accounts`, but not one named `Account`.
+This error occurs when you use the incorrect name for a resource. That resource might be the name of an entity set, a function, or an action. These resource names are case sensitive. In the preceding example, there's an entity set called `accounts`, but not one named `Account`.
 
 If the resource is an action defined as a [custom process action](/power-apps/developer/data-platform/workflow-custom-actions), this error can also happen if the custom process action is inactive.
 
 ### How to avoid
 
-- If the resource is an entity type, query the Web API [Service document](/power-apps/developer/data-platform/webapi/web-api-service-documents#service-document) which will provide a list of all the known entity set names.
+- If the resource is an entity type, query the Web API [Service document](/power-apps/developer/data-platform/webapi/web-api-service-documents#service-document) which provides a list of all the known entity set names.
 - If the resource is a function or action, verify that the name you use exists in the [CSDL $metadata document](/power-apps/developer/data-platform/webapi/web-api-service-documents#csdl-metadata-document).
 - If the action doesn't exist in the [CSDL $metadata document](/power-apps/developer/data-platform/webapi/web-api-service-documents#csdl-metadata-document), it might be an inactive [custom process action](/power-apps/developer/data-platform/workflow-custom-actions). You should verify that it's active.
 
@@ -82,7 +82,7 @@ HTTP/1.1 400 Bad Request
 
 This error occurs when you use the incorrect name for a property. Property names are case sensitive.
 
-In the preceding example, there is a property called `name`, but not one named `Name`.
+In the preceding example, there's a property called `name`, but not one named `Name`.
 
 ### How to avoid
 
@@ -113,11 +113,11 @@ HTTP/1.1 404 Not Found
 
 ### Cause
 
-This error occurs when the incorrect HTTP method is applied to a function or action. In this case, <xref:Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function> requires the use of `GET` but `POST` was used.
+This error occurs when the incorrect HTTP method is applied to a function or action. In this case, [WhoAmI Function](xref:Microsoft.Dynamics.CRM.WhoAmI) requires the use of `GET` but `POST` was used.
 
 ### How to avoid
 
-Be aware of what kind of OData operation you are using and the correct HTTP method to use. For more information, see:
+Be aware of what kind of OData operation you're using and the correct HTTP method to use. For more information, see:
 
 - [Web API Actions](/power-apps/developer/data-platform/webapi/web-api-actions)
 - [Use Web API actions](/power-apps/developer/data-platform/webapi/use-web-api-actions)
@@ -177,7 +177,7 @@ This error occurs when an invalid navigation property name is sent with a reques
 **Request**
 
 ```http
-POST [Organization URI]/api/data/v9.0/contacts HTTP/1.1
+POST [Organization URI]/api/data/v9.2/contacts HTTP/1.1
 
 {
   "firstname":"test",
@@ -205,9 +205,9 @@ HTTP/1.1 400 Bad Request
 
 #### Cause
 
-This error occurs because there is no single-valued navigation property in the contact entity type named `parentcustomerid`. For more information, see [contact EntityType > Single-valued navigation properties](/power-apps/developer/data-platform/webapi/reference/contact#single-valued-navigation-properties).
+This error occurs because there's no single-valued navigation property in the contact entity type named `parentcustomerid`. For more information, see [contact EntityType > Single-valued navigation properties](/power-apps/developer/data-platform/webapi/reference/contact#single-valued-navigation-properties).
 
-`parentcustomerid` is the logical name of a lookup column in the contact table. All lookups are represented by single-valued navigation properties in OData. The names of the lookup properties don't always match the corresponding single-valued navigation property name.
+`parentcustomerid` is the logical name of a lookup column in the contact table. All lookups have one or more single-valued navigation properties in OData. The names of the lookup properties don't always match the corresponding single-valued navigation property name.
 
 In this case, the `parentcustomerid` column is a customer lookup type, a kind of [multi-table lookup](/power-apps/developer/data-platform/webapi/web-api-navigation-properties#multi-table-lookups) that might link to either the account or contact tables. To support this customer lookup, there are two separate relationships and each has a different single-valued navigation property. The correct single-valued navigation property in this case is `parentcustomerid_account`.
 
@@ -253,15 +253,15 @@ at System.Web.OData.Formatter.ODataMediaTypeFormatter.ReadFromStream(Type type, 
 
 #### Cause
 
-This deserialization error is caused by the use of line endings other than [CRLF](https://developer.mozilla.org/docs/Glossary/CRLF) in the batch request body.
+The use of line endings other than [CRLF](https://developer.mozilla.org/docs/Glossary/CRLF) in the batch request body causes this deserialization error.
 
-Depending on the editor you use, these non-printing characters can be difficult to see . If you use [Notepad++](https://notepad-plus-plus.org/), you can use the **Show all characters** option to make these characters visible.
+Depending on the editor you use, these nonprinting characters can be difficult to see. If you use [Notepad++](https://notepad-plus-plus.org/), you can use the **Show all characters** option to make these characters visible.
 
-This payload will work:
+This payload works:
 
 :::image type="content" source="media/web-api-client-errors/batch-request-body-with-crlf-endings-for-all-lines.png" alt-text="Screenshot that shows a batch request body with CRLF endings for all lines.":::
 
-This payload will fail because the last line doesn't end with `CRLF`.
+This payload fails because the last line doesn't end with `CRLF`.
 
 :::image type="content" source="media/web-api-client-errors/batch-request-body-with-crlf-missing-last-line.png" alt-text="Screenshot that shows a batch request body with CRLF missing on the last line.":::
 
@@ -273,16 +273,16 @@ Ensure all line endings in the `$batch` request body are `CRLF`. If you can't us
 
 ## Invalid OData Annotation values inside Prefer request header value
 
-These errors occur when Dataverse Web API receives requests with an invalid odata.include-annotations value inside the Prefer request header values.
+These errors occur when Dataverse Web API receives requests with an invalid odata.include-annotations value inside the `Prefer` request header values.
 
 ### Symptoms
 
-When sending a request using `POST`, `PATCH`, or `PUT` and a `Prefer` request header that contains an invalid value. In the following example the odata.include-annotations is incorrectly including back slashes '\\' to escape the quote characters. 
+This error occurs when you send a request using `POST`, `PATCH`, or `PUT` Http methods and a `Prefer` request header that contains an invalid value. In the following example, the `odata.include-annotations` value is incorrectly including back slashes '`\`' to escape the quote characters.
 
 **Request**
 
 ```http
-POST [Organization URI]/api/data/v9.0/contacts HTTP/1.1
+POST [Organization URI]/api/data/v9.2/contacts HTTP/1.1
 
 Prefer: odata.include-annotations=\"*\"
 
@@ -309,11 +309,11 @@ HTTP/1.1 400 Bad Request
 
 ```
 
-This is the same error you would get when sending a request using `GET` with an improperly formatted odata.include-annotations value.
+You get the same error when sending a request using `GET` with an improperly formatted `odata.include-annotations` value.
 
 ### Cause
 
-To provide more secure service, we have fixed an issue that allowed invalid `Prefer` request header values to be processed without being validated first. This error will occur starting with Dataverse version `9.2.2412.3` which began deployment in January of 2025 and will deployed to all regions in February of 2025.
+To provide a more secure service, we fixed an issue that allowed invalid `Prefer` request header values to be processed when using `POST`, `PATCH`, or `PUT` without being validated first. Now, validation occurs regardless of the HTTP method. This error will occur starting with Dataverse version `9.2.2412.3` which began deployment in January of 2025 and will be deployed to all regions in February of 2025.
 
 ### How to avoid
 
