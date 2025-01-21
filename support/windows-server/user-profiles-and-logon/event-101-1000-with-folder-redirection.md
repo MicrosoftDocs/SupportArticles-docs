@@ -1,7 +1,7 @@
 ---
 title: Can't set up Folder Redirection with Group Policy
 description: Resolves an issue where you fail to set up Folder Redirection component of Group Policy.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

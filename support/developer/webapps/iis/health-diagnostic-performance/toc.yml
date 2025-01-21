@@ -43,8 +43,6 @@ items:
   href: troubleshoot-failed-requests-using-tracing-in-iis-85.md
 - name: Troubleshoot high CPU usage in an IIS app pool
   href: troubleshoot-high-cpu-in-iis-app-pool.md
-- name: Troubleshoot native memory leak in an IIS 7.x application pool
-  href: troubleshoot-native-memory-leak-iis-7x-application-pool.md
 - name: Troubleshoot PHP errors with Failed Request Tracing
   href: troubleshoot-php-with-failed-request-tracing.md
 - name: Troubleshoot IIS performance issues and application errors

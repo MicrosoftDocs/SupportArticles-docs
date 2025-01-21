@@ -1,7 +1,7 @@
 ---
 title: Event ID 10 is logged
 description: Discusses a problem in which an event ID 10 message is logged in the Application log after you install Windows Vista SP1. Provides a workaround.
-ms.date: 06/04/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

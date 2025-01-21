@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Windows Update error 0x80072EFE with cipher suite configuration
 description: This article introduces how to troubleshoot Windows Update error 0x80072EFE by updating the cipher suite configuration.
-ms.date: 09/12/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

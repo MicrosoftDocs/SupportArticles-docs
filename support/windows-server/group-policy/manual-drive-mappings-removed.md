@@ -1,7 +1,7 @@
 ---
 title: Manual drive mappings are removed
 description: Provides a solution to an issue where manual drive mappings are removed after drive maps are deployed through Group Policy Preferences.
-ms.date: 04/29/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

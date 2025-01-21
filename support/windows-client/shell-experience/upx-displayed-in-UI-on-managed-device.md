@@ -1,7 +1,7 @@
 ---
 title: Upgrade and Privacy Experience (UPX) is displayed in the UI on managed Windows 10 device
 description: Fixes an issue in which UPX is displayed in the UI on managed Windows 10 device.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

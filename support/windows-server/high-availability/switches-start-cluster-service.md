@@ -1,7 +1,7 @@
 ---
 title: Cluster service startup options
 description: List all the available switches that can be used as startup parameters to start the Cluster service.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

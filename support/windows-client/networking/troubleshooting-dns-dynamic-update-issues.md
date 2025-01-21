@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting DNS dynamic update issues
 description: Introduces the troubleshooting suggestions for DNS dynamic update issues.
-ms.date: 10/22/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

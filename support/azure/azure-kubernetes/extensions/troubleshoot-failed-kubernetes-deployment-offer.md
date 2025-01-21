@@ -132,7 +132,7 @@ You can use the Azure CLI commands that are described in the [Azure CLI legal te
 
 #### [PowerShell](#tab/PowerShell)
 
-To accept the legal terms through PowerShell, run the cmdlets that are described in the [PowerShell legal terms](/powershell/module/azurerm.marketplaceordering).
+To accept the legal terms through PowerShell, run the cmdlets that are described in the [PowerShell legal terms](/powershell/module/az.marketplaceordering).
 
 ---
 

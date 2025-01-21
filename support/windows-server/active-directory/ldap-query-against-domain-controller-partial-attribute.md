@@ -1,7 +1,7 @@
 ---
 title: When you run an LDAP query against a Windows Server 2008-based domain controller, you obtain a partial attribute list
 description: Describes a by-design behavior where LDAP queries against a domain controller return partial attribute list.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

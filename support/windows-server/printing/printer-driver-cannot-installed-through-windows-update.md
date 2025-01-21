@@ -1,7 +1,7 @@
 ---
 title: A printer driver cannot be installed through Windows Update in Windows Server
 description: Discusses an issue in which a printer drive cannot be installed from Windows Update in Windows Server 2016 and Windows Server 2019. Provides a workaround.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

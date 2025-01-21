@@ -1,7 +1,7 @@
 ---
 title: Some SIDs don't resolve into friendly names
 description: Some security identifiers that you see in access control lists or Security Audit reports don't resolve into friendly names. These might be Capability SIDs.
-ms.date: 11/11/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

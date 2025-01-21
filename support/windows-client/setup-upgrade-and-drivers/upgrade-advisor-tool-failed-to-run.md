@@ -1,7 +1,7 @@
 ---
 title: Upgrade Advisor tool failed to run
 description: Provides a solution to an error that occurs when you run the Windows 7 Upgrade Advisor tool on a system.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: When you use the Volume Shadow Copy Service on computers that run many I/O operations, disk volumes take longer to go online
 description: Describes a workaround for an issue in which disk volumes take more time to go online after you enable the Volume Shadow Copy Service on the volumes
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

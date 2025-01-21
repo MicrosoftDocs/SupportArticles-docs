@@ -1,7 +1,7 @@
 ---
 title: 802.1x user authentication fails when an RDS connection comes in
 description: Fix an issue that occurs when end user uses remote desktop connection to log on to a 802.1x secured Windows 7, Windows 8 or Windows 10 machine that is configured user authentication only.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

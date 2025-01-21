@@ -1,7 +1,7 @@
 ---
 title: Windows Update blocked because of drive reassignment
 description: Works around a problem in which Windows Update is blocked for Windows 10 customers because of a drive reassignment that is caused by an attached device.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

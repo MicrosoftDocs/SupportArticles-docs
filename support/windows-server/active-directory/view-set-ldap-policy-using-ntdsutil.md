@@ -1,7 +1,7 @@
 ---
 title: View and set Lightweight Directory Access Protocol (LDAP) policy with Ntdsutil
 description: The article describes the most important LDAP query policy limits.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

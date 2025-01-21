@@ -1,7 +1,7 @@
 ---
 title: Scripts to compile all registered MOF files
 description: Provides a script to compile all registered Managed Object Format (MOF) files.
-ms.date: 06/24/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

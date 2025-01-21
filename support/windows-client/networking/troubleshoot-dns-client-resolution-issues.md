@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot DNS Client Name Resolution Issues
 description: Helps troubleshoot DNS client name resolution issues.
-ms.date: 11/22/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

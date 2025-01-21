@@ -1,7 +1,7 @@
 ---
 title: Errors when you run WinRM commands
 description: Describes the errors that are triggered when you run various WinRM commands to verify local computer functionality in a Windows Remote Management environment.
-ms.date: 10/22/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
