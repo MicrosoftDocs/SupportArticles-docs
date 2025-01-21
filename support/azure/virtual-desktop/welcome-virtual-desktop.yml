@@ -20,9 +20,9 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Troubleshoot Azure Virtual Desktop Agent Issues
+          - text: Troubleshoot agent common issues
             url: troubleshoot-agent.md
           - text: Troubleshoot app attach
             url: troubleshoot-app-attach.md
-          - text: Troubleshoot Azure Virtual Desktop connection quality
+          - text: Troubleshoot connection quality issues
             url: troubleshoot-connection-quality.md

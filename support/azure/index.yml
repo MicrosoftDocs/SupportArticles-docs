@@ -115,7 +115,7 @@ productDirectory:
     - url: site-recovery/welcome-site-recovery.yml
       text: Troubleshooting articles for Site Recovery
   - title: Azure Virtual Desktop
-    imageSrc: "https://learn.microsoft.com/static/ui/media/product/azure/virtual-desktop.svg"
+    imageSrc: "https://static.docs.com/ui/media/product/azure/virtual-desktop.svg"
     links:
     - url: virtual-desktop/welcome-virtual-desktop.yml
       text: Troubleshoot common Azure Virtual Desktop issues
