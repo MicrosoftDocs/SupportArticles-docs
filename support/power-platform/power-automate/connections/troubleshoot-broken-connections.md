@@ -6,7 +6,8 @@ ms.workload: connectors
 author: nravindra-msft
 ms.author: nravindra
 ms.reviewer: angieandrews
-ms.date: 01/21/2025
+ms.date: 01/21/2025
+
 ---
 # Troubleshoot broken connections in Power Automate
 
@@ -20,7 +21,7 @@ This article describes the following common issues about broken connections in M
 - [Password modification by a user](#password-modification-by-a-user)
 - [Azure Active Directory (AAD) configuration is changed](#azure-active-directory-aad-configuration-is-changed)
 - [Connection owner account is deleted or disabled](#connection-owner-account-is-deleted-or-disabled)
-- [Tenant administrator disabled the application](#tenant-administrator-disabled-the-application)
+- [Tenant administrator disables the application](#tenant-administrator-disables-the-application)
 
 ## Connection times out
 
@@ -34,7 +35,7 @@ You might also receive the following error message:
 
 1. Check your internet connection: Ensure that the internet connection is stable and working properly.
 2. Check the server status: Verify if the server you're trying to connect to is online and not experiencing any downtime.
-3. Try increasing the time-out limit: Sometimes, increasing the time-out limit can help in establishing a connection with the server.
+3. Try increasing the time-out limit: Sometimes, increasing the time-out limit can help in establishing a connection with the server.
 
 ## A DLP block occurs
 
@@ -48,11 +49,11 @@ When a DLP block occurs, you might also receive one of the following error messa
 ### Troubleshooting steps
 
 1. Review DLP policies: Check the DLP policies configured in the organization to understand what actions are being blocked and why.
-2. Consult with your administrator: The administrator might block the connector or connection. It's a good idea to consult with your administrator and discuss the issue to unblock it.
+2. Consult with your administrator: The administrator might block the connector or connection. It's a good idea to consult with your administrator and discuss the issue to unblock it.
 
 ## Invalid authenticated devices
 
-This refers to a situation where a user tries to authenticate using a device for multi-factor authentication (MFA), but the device is disabled. This issue isn't related to Power Automate but to the tenant's configuration at the administrative level.
+This refers to a situation where a user tries to authenticate using a device for multi-factor authentication (MFA), but the device is disabled. This issue isn't related to Power Automate but to the tenant's configuration at the administrative level.
 
 In this situation, you might also receive one of the following error messages:
 
@@ -68,7 +69,7 @@ In this situation, you might also receive one of the following error messages:
 
 ## Inactivity for a long time
 
-This refers to a situation where a connection becomes invalid because it hasn't been used for a specified period. For example, the SharePoint connector requires usage at least once every 90 days to remain active. If the connection isn't used within this period, it expires.
+This refers to a situation where a connection becomes invalid because it hasn't been used for a specified period. For example, the SharePoint connector requires usage at least once every 90 days to remain active. If the connection isn't used within this period, it expires.
 
 In this situation, you might also receive one of the following error messages:
 
@@ -81,7 +82,7 @@ To troubleshoot this issue, create a new connection or re-authorize the existing
 
 ## Connection issue related to attended mode
 
-This refers to problems that occur when a user tries to use features that require a license for unattended mode but doesn't have the necessary license. In attended mode, the user must be present and interact with the system, whereas unattended mode allows for fully automated processes without user interaction. If a user without the appropriate license attempts to use unattended mode, the connection fails.
+This refers to problems that occur when a user tries to use features that require a license for unattended mode but doesn't have the necessary license. In attended mode, the user must be present and interact with the system, whereas unattended mode allows for fully automated processes without user interaction. If a user without the appropriate license attempts to use unattended mode, the connection fails.
 
 [Learn more about attended and unattended scenarios for process automation](/power-automate/guidance/planning/attended-unattended).
 
@@ -91,7 +92,7 @@ Ensure the user has the correct license to interact with the system as required 
 
 ## Password modification by a user
 
-This issue occurs when the account password used to create the connection is deleted, changed, or expired. Since account verification is a crucial part of authentication whenever a connection is triggered, the connection breaks if the new password isn't updated. To avoid this issue, use services like [Microsoft Entra ID](/entra/fundamentals/whatis).
+This issue occurs when the account password used to create the connection is deleted, changed, or expired. Since account verification is a crucial part of authentication whenever a connection is triggered, the connection breaks if the new password isn't updated. To avoid this issue, use services like [Microsoft Entra ID](/entra/fundamentals/whatis).
 
 You might also receive the following error message:
 
@@ -99,11 +100,11 @@ You might also receive the following error message:
 
 ### Troubleshooting steps
 
-Every time a user updates the password, the existing connection with the password becomes invalid, so the user must create a new connection for each of those connectors or edit the existing connection.
+Every time a user updates the password, the existing connection with the password becomes invalid, so the user must create a new connection for each of those connectors or edit the existing connection.
 
 ## Azure Active Directory (AAD) configuration is changed
 
-This refers to modifications made at the Azure Active Directory (AAD) level that affect user identities or access policies. These changes include moving to a new location, altering user roles, or updating security settings. Such changes might invalidate existing tokens and require users to reauthenticate.
+This refers to modifications made at the Azure Active Directory (AAD) level that affect user identities or access policies. These changes include moving to a new location, altering user roles, or updating security settings. Such changes might invalidate existing tokens and require users to reauthenticate.
 
 You might also receive the following error message:
 
@@ -125,9 +126,9 @@ In this situation, you might also receive one of the following error messages:
 
 ### Troubleshooting steps
 
-To resolve this issue, another user with access can reauthorize the connection, thereby updating the ownership and restoring functionalities for all users.
+To resolve this issue, another user with access can reauthorize the connection, thereby updating the ownership and restoring functionalities for all users.
 
-## Tenant administrator disables the application
+## Tenant administrator disables the application
 
 This means that the tenant administrator deactivates an application registered in Azure Active Directory (AAD). This action invalidates any service principal connections associated with the application, as it can no longer issue tokens.
 
@@ -137,7 +138,7 @@ You might also receive the following error message:
 
 ### Troubleshooting steps
 
-To resolve this issue, the tenant administrator needs to reenable the application or create a new service principal connection.
+To resolve this issue, the tenant administrator needs to reenable the application or create a new service principal connection.
 
 ## More information
 
