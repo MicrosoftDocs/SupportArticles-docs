@@ -1,7 +1,7 @@
 ---
 title: Run a Remote Desktop Connection session
 description: Describes Microsoft support for running a Remote Desktop Connection session within another Remote Desktop Connection session.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

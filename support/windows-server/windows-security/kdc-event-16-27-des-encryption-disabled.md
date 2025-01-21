@@ -1,7 +1,7 @@
 ---
 title: KDC event ID 16 or 27 is logged if DES for Kerberos is disabled
 description: Describes how to enable DES encryption for Kerberos authentication in Windows 7 and in Windows Server 2008 R2.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

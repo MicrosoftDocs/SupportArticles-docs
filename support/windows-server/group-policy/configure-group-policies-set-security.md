@@ -1,7 +1,7 @@
 ---
 title: Configure Group Policies to Set Security
 description: Describes how to configure Group Policies to Set Security for System Services.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

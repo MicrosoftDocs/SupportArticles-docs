@@ -1,7 +1,7 @@
 ---
 title: Grant users rights to manage services
 description: Describes how to grant users rights to manage services.
-ms.date: 11/08/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

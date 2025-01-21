@@ -4,7 +4,6 @@ description: Provides a solution to an error that occurs when importing or delet
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
-ms.subservice: d365-sales-custom-solutions
 ---
 # Permission error "80040220" when importing or deleting solution in Microsoft Dynamics 365
 

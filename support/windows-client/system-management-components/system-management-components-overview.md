@@ -1,7 +1,7 @@
 ---
 title: System Management Components overview
 description: Overview of System Management Components troubleshooting articles for Windows clients.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

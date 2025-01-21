@@ -1,7 +1,7 @@
 ---
 title: An incorrect IP address is returned
 description: Describes an issue in which an incorrect IP address is returned when you ping a server by using its NetBIOS name.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: AD Replication error 1908
 description: Provides a resolution for troubleshooting AD Replication error 1908, which is Could not find the domain controller for this domain.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

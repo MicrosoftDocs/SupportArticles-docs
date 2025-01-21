@@ -1,7 +1,7 @@
 ---
 title: Configure an authoritative time
 description: Explains how to configure the Windows Time service in Windows Server. Provides information about troubleshooting and Windows Time service synchronization.
-ms.date: 09/06/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

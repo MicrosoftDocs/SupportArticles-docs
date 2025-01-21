@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting SMB
 description: Introduces general guidance for troubleshooting scenarios that are related to SMB.
-ms.date: 03/13/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

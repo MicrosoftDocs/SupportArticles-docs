@@ -1,7 +1,7 @@
 ---
 title: Use Ntdsutil to find and clean up
 description: Discusses how to use Ntdsutil to find and clean up duplicate security identifiers.
-ms.date: 05/21/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

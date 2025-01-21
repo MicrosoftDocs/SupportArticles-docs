@@ -1,7 +1,7 @@
 ---
 title: Stop error 0x109:CRITICAL_STRUCTURE_CORRUPTION on a VMware virtual machine
 description: describes how to fix Stop error 0x109:CRITICAL_STRUCTURE_CORRUPTION on a VMware virtual machine
-ms.date: 11/13/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

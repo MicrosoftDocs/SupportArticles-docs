@@ -4,7 +4,6 @@ description: Button in command bar doesn't appear after grid item selection in M
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
-ms.subservice: d365-sales-custom-solutions
 ---
 # Button in command bar does not appear after grid item selection in Microsoft Dynamics CRM Online
 

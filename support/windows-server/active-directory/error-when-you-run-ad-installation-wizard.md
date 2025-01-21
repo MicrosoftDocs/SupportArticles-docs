@@ -1,7 +1,7 @@
 ---
 title: Error when you run AD Installation Wizard
 description: Describes an issue that may occur if you run the Adprep.exe command-line tool from the wrong Windows Server 2003 installation CD.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
