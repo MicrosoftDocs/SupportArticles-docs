@@ -9,7 +9,7 @@ ms.custom: sap:Desktop flows\UI or browser automation
 
 ## Summary
 
-A potential security vulnerability is identified in the [Browser automation](/power-automate/desktop-flows/actions-reference/webautomation) component in Power Automate for desktop.
+A potential security vulnerability is identified in the [Browser automation](/power-automate/desktop-flows/actions-reference/webautomation) component in Power Automate for desktop in versions 2.51 and earlier.
 
 The **Launch Automation Browser** option in the [Launch new Internet Explorer](/power-automate/desktop-flows/actions-reference/webautomation#launchinternetexplorerbase) action may navigate to a potentially malicious URL or compromised website, thereby allowing an attacker to execute arbitrary code on the affected system. Microsoft has issued a [CVE for this issue](https://msrc.microsoft.com/update-guide/advisory/CVE-2025-21187).
 
