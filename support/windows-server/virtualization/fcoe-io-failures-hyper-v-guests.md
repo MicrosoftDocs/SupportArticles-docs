@@ -1,7 +1,7 @@
 ---
 title: FCoE IO failures on Hyper-V guests
 description: FCoE IO failures on Hyper-V guests for Windows Server 2016.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Support for the leap second
 description: Summarizes Microsoft support for the leap second.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

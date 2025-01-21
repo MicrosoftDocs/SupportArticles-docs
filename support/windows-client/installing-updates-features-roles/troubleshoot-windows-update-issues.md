@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting Windows Update issues
 description: Learn how to troubleshoot scenarios related to Windows Updates
-ms.date: 08/13/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

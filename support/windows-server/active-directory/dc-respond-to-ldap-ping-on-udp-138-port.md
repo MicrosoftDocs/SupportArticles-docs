@@ -1,7 +1,7 @@
 ---
 title: Make DCs to reply to LDAP Ping on UDP 138 port
 description: Provides the methods to make domain controllers to reply to LDAP Ping.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

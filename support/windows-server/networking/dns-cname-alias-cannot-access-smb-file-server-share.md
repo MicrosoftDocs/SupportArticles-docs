@@ -1,7 +1,7 @@
 ---
 title: Can't access SMB file server through DNS CNAME
 description: Describes an issue in which you can't access SMB file server share by using the DNS CNAME. Provides a resolution.
-ms.date: 09/12/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

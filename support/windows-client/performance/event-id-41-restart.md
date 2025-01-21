@@ -1,7 +1,7 @@
 ---
 title: Event ID 41 The system has rebooted without cleanly shutting down first
 description: Describes the circumstances that cause a computer to generate Event ID 41, and provides guidance for troubleshooting the issue.
-ms.date: 05/10/2024
+ms.date: 01/15/2025
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshooting, CI 111437

@@ -6,7 +6,7 @@ manager: dcscontentpm
 audience: itpro
 ms.custom: sap:System Performance\Startup or Pre-logon Reliability (crash, errors, bug check or Blue Screen), csstroubleshoot
 ms.topic: troubleshooting
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 ---
 # Use LiveRE to troubleshoot Windows startup problems
 

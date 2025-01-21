@@ -1,7 +1,7 @@
 ---
 title: A disk partition that was created immediately before power failure or system crash can't be formatted or used
 description: Describes a problem in which you're unable to properly format or use a disk partition that was created immediately before a system crash or power failure.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

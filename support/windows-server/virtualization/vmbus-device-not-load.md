@@ -1,7 +1,7 @@
 ---
 title: VMBus device doesn't load
 description: Describes an issue in which the VMBus device doesn't load on a virtual machine.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

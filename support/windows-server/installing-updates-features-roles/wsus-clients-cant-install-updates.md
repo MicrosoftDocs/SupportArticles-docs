@@ -1,7 +1,7 @@
 ---
 title: WSUS clients can't install updates when Symantec Endpoint Protection is installed on the same Web site with WSUS
 description: Provides a solution to an issue where Windows Server Update Services (WSUS) clients can't install updates when Symantec Endpoint Protection is installed on the same Web site.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

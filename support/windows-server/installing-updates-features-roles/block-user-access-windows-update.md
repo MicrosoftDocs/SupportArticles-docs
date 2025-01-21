@@ -1,7 +1,7 @@
 ---
 title: How to block user access to Windows Update on Windows Server 2016
 description: Describes how administrators can block user access to WU settings on Windows Server 2016.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

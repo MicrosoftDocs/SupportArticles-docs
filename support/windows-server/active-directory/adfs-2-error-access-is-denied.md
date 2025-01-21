@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot AD FS 2.0 error (Access is denied)
 description: This article contains step-by-step instructions to troubleshoot claims rules problems.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

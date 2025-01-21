@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting high CPU usage
 description: Introduces general guidance for troubleshooting scenarios in which you experience high CPU usage.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
