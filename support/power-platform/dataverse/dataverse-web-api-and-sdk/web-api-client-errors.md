@@ -273,7 +273,7 @@ Ensure all line endings in the `$batch` request body are `CRLF`. If you can't us
 
 ## Invalid OData Annotation values inside Prefer request header value
 
-These errors occur when Dataverse Web API receives requests with an invalid odata.include-annotations value inside the `Prefer` request header values.
+These errors occur when Dataverse Web API receives requests with an invalid `odata.include-annotations` value inside the `Prefer` request header values.
 
 ### Symptoms
 
