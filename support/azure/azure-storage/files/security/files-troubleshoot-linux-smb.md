@@ -11,8 +11,6 @@ ms.reviewer: kendownie, v-weizhu
 
 This article lists common issues that can occur when using SMB Azure file shares with Linux clients. It also provides possible causes and resolutions for these problems.
 
-You can use [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Linux) to automate symptom detection and ensure that the Linux client has the correct prerequisites. It helps set up your environment to get optimal performance. You can also find this information in the [Azure file shares troubleshooter](https://support.microsoft.com/help/4022301/troubleshooter-for-azure-files-shares).
-
 > [!IMPORTANT]
 > This article only applies to SMB shares. For details on NFS shares, see [Troubleshoot NFS Azure file shares](/azure/storage/files/files-troubleshoot-linux-nfs).
 
@@ -23,6 +21,80 @@ You can use [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-sam
 | Standard file shares (GPv2), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
 | Standard file shares (GPv2), GRS/GZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
 | Premium file shares (FileStorage), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
+
+## Run diagnostics
+
+You can use [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Linux) to automate symptom detection and ensure that the Linux client has the correct prerequisites. It helps set up your environment to get optimal performance.
+
+### Use the Always-On Diagnostics tool
+
+You can also use the Always-On Diagnostics tool (AOD) to collect logs on SMB and NFSv4 Linux clients. The daemon runs in the background as a system service and can be configured to detect anomalies in a variety of sources such as dmesg logs, debug data, and error and latency metrics. It can capture data from tcpdump, nfsstat, mountstsat, and other sources, along with the system's CPU and memory usage. AOD can be useful for collecting debug information on field issues that can be hard to reproduce.
+
+AOD is currently compatible with systems running SUSE Linux Enterprise Server 15 (SLES15) and Red Hat Enterprise Linux 8 (RHEL8). Follow the appropriate installation steps.
+
+#### [SLES](#tab/SLES)
+
+#### Install AOD on SLES15
+
+Follow these instructions to install the Always-On Diagnostics tool on SUSE Linux Enterprise Server 15.
+
+1. Add the Microsoft repo. You might need to add the Microsoft repository key to your list of trusted keys.
+
+```
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo zypper addrepo --check --refresh --name 'Microsoft' https://packages.microsoft.com/sles/15/prod microsoft
+```
+
+2. Refresh the repositories.
+
+```
+sudo zypper refresh
+```
+
+3. Check if the repo has been added and the aod package is available for installation.
+
+```
+zypper search aod
+```
+
+4. Install the package.
+
+```
+sudo zypper install aod
+```
+
+#### [RHEL](#tab/RHEL)
+
+#### Install AOD on RHEL8
+
+Follow these instructions to install the Always-On Diagnostics tool on Red Hat Enterprise Linux 8.
+
+1. Download the repo config package.
+   
+```
+curl -ssl -O https://packages.microsoft.com/config/rhel/8/packages-microsoft-prod.rpm
+```
+
+2. Install the repo config package.
+   
+```
+sudo rpm -i packages-microsoft-prod.rpm
+```
+
+3. Delete the repo config package after installing and updating the package index files.
+
+```
+rm packages-microsoft-prod.rpm
+sudo dnf update
+```
+
+4. Install the package.
+
+```
+sudo dnf install aod
+```
+
+---
 
 ## <a id="timestampslost"></a>Time stamps were lost when copying files
 
