@@ -23,7 +23,7 @@ When using an external monitor with your Windows 11 device, you can control its 
 
 ## Troubleshoot the calendar not open issue
 
-If you have disabled the notification center in Windows 11, the calendar doesn't extend when you select the taskbar calendar. This behavior is by design because the calendar in Windows 11 is part of the notification center.
+If you have disabled the Notifications and Action Center in Windows 11, the calendar doesn't extend when you select the taskbar calendar. This behavior is by design because the calendar in Windows 11 is part of the Notifications and Action Center.
 
 > [!NOTE]
 > Removing the Notifications and Action Center is different from turning off notifications. If you turn off notifications, the Notifications and Action Center will still function. The taskbar calendar pops up upon selecting it.
