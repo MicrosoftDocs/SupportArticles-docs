@@ -29,7 +29,7 @@ The _Power Automate for desktop\_*.log_ file contains the general reason for the
 
 ## On-premises product logs
 
-For issues with using Power Automate to create flows, use the [Power Automate machine runtime application to register](/power-automate/desktop-flows/manage-machines#register-a-new-machine) or configure your machine, or during the cloud runtime, you might need to collect on-premises logs.
+For issues with using Power Automate to create flows, [use the Power Automate machine runtime application to register](/power-automate/desktop-flows/manage-machines#register-a-new-machine) or configure your machine, or during the cloud runtime, you might need to collect on-premises logs.
 
 The easiest way to do this is to use the Power Automate machine runtime application. If you have the application installed, you can [use it to export logs automatically](/power-automate/desktop-flows/troubleshoot#collect-machine-logs).
 
