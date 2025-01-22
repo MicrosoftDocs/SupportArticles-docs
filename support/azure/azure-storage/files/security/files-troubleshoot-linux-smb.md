@@ -3,7 +3,7 @@ title: Troubleshoot Azure Files issues in Linux (SMB)
 description: Troubleshooting Azure Files issues in Linux. See general issues related to SMB Azure file shares when you connect from Linux clients and possible resolutions.
 ms.service: azure-file-storage
 ms.custom: sap:Security, linux-related-content
-ms.date: 08/20/2024
+ms.date: 01/22/2025
 ms.reviewer: kendownie, v-weizhu
 ---
 
@@ -24,7 +24,7 @@ This article lists common issues that can occur when using SMB Azure file shares
 
 ## Run diagnostics
 
-Diagnostics tools can be helpful for ensuring that clients have the correct prerequisites and for collecting debug information on field issues that can be hard to reproduce.
+Diagnostics tools can help ensure that clients have the correct prerequisites and collect debug information on field issues that can be hard to reproduce.
 
 ### Use AzFileDiagnostics
 
@@ -32,13 +32,13 @@ You can use [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-sam
 
 ### Use the Always-On Diagnostics tool
 
-You can also use the Always-On Diagnostics (AOD) tool to collect logs on SMB and NFSv4 Linux clients. The daemon runs in the background as a system service and can be configured to detect anomalies in various sources such as dmesg logs, debug data, error metrics, and latency metrics. It can capture data from tcpdump, nfsstat, mountstsat, and other sources, along with the system's CPU and memory usage.
+You can also use the Always-On Diagnostics (AOD) tool to collect logs on SMB and NFSv4 Linux clients. The daemon runs in the background as a system service and can be configured to detect anomalies in various sources, such as dmesg logs, debug data, error metrics, and latency metrics. It can capture data from tcpdump, nfsstat, mountstsat, and other sources, along with the system's CPU and memory usage.
 
 The Always-On Diagnostics tool is currently compatible with systems running SUSE Linux Enterprise Server 15 (SLES 15) and Red Hat Enterprise Linux 8 (RHEL 8). Follow the installation steps that correspond to your operating system:
 
 #### [SLES](#tab/SLES)
 
-In SUSE Linux Enterprise Server 15, follow these instructions to install the Always-On Diagnostics tool:
+In SLES 15, follow these instructions to install the Always-On Diagnostics tool:
 
 1. Add the Microsoft repo. You might need to add the Microsoft repository key to your list of trusted keys.
 
@@ -67,7 +67,7 @@ In SUSE Linux Enterprise Server 15, follow these instructions to install the Alw
 
 #### [RHEL](#tab/RHEL)
 
-In Red Hat Enterprise Linux 8, follow these instructions to install the Always-On Diagnostics tool:
+In RHEL 8, follow these instructions to install the Always-On Diagnostics tool:
 
 1. Download the repo config package.
 
