@@ -278,7 +278,7 @@
     - name: Troubleshoot SBD service failure in RHEL
       href: troubleshoot-sbd-issues-rhel.md
     - name: Troubleshoot pacemaker cluster services and resources startup issues
-      href: troubleshoot-rhel-pacemaker-cluster-services-resources-startup-issues-azure.md
+      href: troubleshoot-rhel-pacemaker-cluster-services-resources-startup-issues.md
   - name: SLES
     items:
     - name: Troubleshoot Azure fence agent startup issues in SUSE
