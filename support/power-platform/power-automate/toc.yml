@@ -54,8 +54,8 @@
               href: desktop-automation/cannot-find-ui-element.md
         - name: Web Automation
           items:
-            - name: Article1
-              href: web-automation/article1.md
+            - name: Web Automation fails when Machine Runtime and MSIX PAD versions are not synced
+              href: web-automation/machine-runtime-msix-errors.md
     - name: A desktop application crashes due to UI automation
       href: desktop-flows/desktop-application-crashes-ui-automation.md
     - name: '"Could not read the application certificate" error when creating a connection'

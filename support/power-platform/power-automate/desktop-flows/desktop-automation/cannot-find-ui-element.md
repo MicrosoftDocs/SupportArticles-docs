@@ -79,4 +79,4 @@ actions, and optical character recognition (OCR).
 
 ## Resources
 
-- [UI automation action fails with "Failed to get UI element" or "Failed to get window" error](https://learn.microsoft.com/troubleshoot/power-platform/power-automate/ui-automation-action-fails-errors)
+- [UI automation action fails with "Failed to get UI element" or "Failed to get window" error](/power-automate/ui-automation-action-fails-errors)

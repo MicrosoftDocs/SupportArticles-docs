@@ -39,7 +39,7 @@ Any web automation action under the the Browser Automation group.
 
 ## Root Cause
 
-In case the PAD MSIX installation has different version than that of machine runtime, the Message Host running from browser is the one from MSIX installation which is a different version from the one Machine runtime expects. 
+In case the PAD MSIX installation has different version than that of machine runtime, the Message Host running from browser is the one from MSIX installation which is a different version from the one Machine runtime expects.
 
  This case makes the flow fail with "Negotiation failed" error.
 
