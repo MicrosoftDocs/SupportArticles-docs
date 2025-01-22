@@ -123,7 +123,8 @@
         "azure/site-recovery/**/*.md": "https://feedback.azure.com/d365community/forum/3ccca344-2d25-ec11-b6e6-000d3a4f0f84",
         "azure/synapse-analytics/**/*.md": "https://feedback.azure.com/d365community/forum/9b9ba8e4-0825-ec11-b6e6-000d3a4f07b8",
         "azure/cosmos-db/**/*.md": "https://feedback.azure.com/d365community/forum/3002b3be-0d25-ec11-b6e6-000d3a4f0858",
-        "azure/general/*.md": "https://learn.microsoft.com/answers/tags/133/azure"
+        "azure/general/*.md": "https://learn.microsoft.com/answers/tags/133/azure",
+        "azure/virtual-desktop/**/*.md": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/idb-p/AzureVirtualDesktop"
       },
       "layout": {
         "**/index.yml": "LandingPage"
@@ -209,6 +210,7 @@
         "azure/azure-functions/**/*.md": "azure-functions",
         "azure/synapse-analytics/**/*.md": "azure-synapse-analytics",
         "azure/cosmos-db/**/*.md": "azure-cosmos-db",
+        "azure/virtual-desktop/**/*.md": "azure-virtual-desktop",
         "power-platform/power-apps/**/**.*": "powerapps",
         "power-platform/power-pages/**/**.*": "power-pages",
         "power-platform/power-automate/**/*.md": "power-automate",
@@ -286,6 +288,7 @@
         "azure/devops/*.md": "Azure DevOps",
         "azure/synapse-analytics/**/*.md": "Azure Synapse Analytics",
         "azure/cosmos-db/**/*.md": "Azure Cosmos DB",
+        "azure/virtual-desktop/**/*.md": "Azure Virtual Desktop",
         "dynamics-365/business-central/**/*.md": "Dynamics 365 Business Central",
         "dynamics-365/customer-insights/**/*.md": "Dynamics 365 Customer Insights",
         "dynamics-365/customer-service/**/*.md": "Dynamics 365 Customer Service",

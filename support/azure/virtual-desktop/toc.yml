@@ -1,37 +1,37 @@
 items:
 - name: Troubleshoot Azure Virtual Desktop
   href: ./welcome-virtual-desktop.yml
-- name: Azure Virtual Desktop Agent
-  href: ./troubleshoot-agent.md
-- name: App attach
-  href: ./troubleshoot-app-attach.md
-- name: Azure Files authorization
-  href: ./troubleshoot-authorization.md
-- name: Connections to Microsoft Entra joined VMs
-  href: ./troubleshoot-azure-ad-connections.md
 - name: Connection quality issues
   href: ./troubleshoot-connection-quality.md
-- name: Custom image templates
-  href: ./troubleshoot-custom-image-templates.md
-- name: Device redirections
-  href: ./troubleshoot-device-redirections.md
-- name: Azure Virtual Desktop Insights
-  href: ./troubleshoot-insights.md
 - name: Management issues
   href: ./troubleshoot-management-issues.md
-- name: Multimedia redirection
-  href: ./troubleshoot-multimedia-redirection.md
-- name: Azure Virtual Desktop PowerShell
+- name: Troubleshoot agent common issues
+  href: ./troubleshoot-agent.md
+- name: Troubleshoot app attach
+  href: ./troubleshoot-app-attach.md
+- name: Troubleshoot Azure Files authorization
+  href: ./troubleshoot-authorization.md
+- name: Troubleshoot Azure Virtual Desktop Insights
+  href: ./troubleshoot-insights.md
+- name: Troubleshoot Azure Virtual Desktop PowerShell
   href: ./troubleshoot-powershell.md
-- name: RDP Shortpath
-  href: ./troubleshoot-rdp-shortpath.md
-- name: Service connections
-  href: ./troubleshoot-service-connection.md
-- name: Session host update
-  href: ./troubleshoot-session-host-configuration-update.md
-- name: Host pool creation
+- name: Troubleshoot connections to Microsoft Entra joined VMs
+  href: ./troubleshoot-azure-ad-connections.md
+- name: Troubleshoot custom image templates
+  href: ./troubleshoot-custom-image-templates.md
+- name: Troubleshoot device redirections
+  href: ./troubleshoot-device-redirections.md
+- name: Troubleshoot host pool creation
   href: ./troubleshoot-set-up-issues.md
-- name: Troubleshooting overview, feedback, and support
+- name: Troubleshoot multimedia redirection
+  href: ./troubleshoot-multimedia-redirection.md
+- name: Troubleshoot overview, feedback, and support
   href: ./troubleshoot-set-up-overview.md
-- name: Session host virtual machine configuration
+- name: Troubleshoot RDP Shortpath
+  href: ./troubleshoot-rdp-shortpath.md
+- name: Troubleshoot service connections
+  href: ./troubleshoot-service-connection.md
+- name: Troubleshoot session host configuration and update
+  href: ./troubleshoot-session-host-configuration-update.md
+- name: Troubleshoot session host virtual machine configuration
   href: ./troubleshoot-vm-configuration.md

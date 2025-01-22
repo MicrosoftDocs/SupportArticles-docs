@@ -3,7 +3,7 @@ title: Troubleshoot NFS file shares - Azure Files
 description: Troubleshoot issues with NFS Azure file shares.
 ms.service: azure-file-storage
 ms.custom: sap:Security, linux-related-content
-ms.date: 10/11/2024
+ms.date: 01/21/2025
 ms.reviewer: kendownie
 ---
 
@@ -23,6 +23,76 @@ This article lists common issues related to NFS Azure file shares and provides p
 | Standard file shares (GPv2), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot-linux-nfs/no-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot-linux-nfs/no-icon.png" border="false"::: |
 | Standard file shares (GPv2), GRS/GZRS | :::image type="icon" source="media/files-troubleshoot-linux-nfs/no-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot-linux-nfs/no-icon.png" border="false"::: |
 | Premium file shares (FileStorage), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot-linux-nfs/no-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot-linux-nfs/yes-icon.png" border="false":::|
+
+## Use the Always-On Diagnostics tool
+
+You can use the Always-On Diagnostics (AOD) tool to collect logs on NFSv4 and SMB Linux clients. The daemon runs in the background as a system service and can be configured to detect anomalies in a variety of sources such as dmesg logs, debug data, and error and latency metrics. It can capture data from tcpdump, nfsstat, mountstsat, and other sources, along with the system's CPU and memory usage. The tool can be useful for collecting debug information on field issues that can be hard to reproduce.
+
+AOD is currently compatible with systems running SUSE Linux Enterprise Server 15 (SLES15) and Red Hat Enterprise Linux 8 (RHEL8). Follow the appropriate installation steps.
+
+### [RHEL](#tab/RHEL)
+
+Follow these instructions to install the Always-On Diagnostics tool on Red Hat Enterprise Linux 8.
+
+1. Download the repo config package.
+   
+```
+curl -ssl -O https://packages.microsoft.com/config/rhel/8/packages-microsoft-prod.rpm
+```
+
+2. Install the repo config package.
+   
+```
+sudo rpm -i packages-microsoft-prod.rpm
+```
+
+3. Delete the repo config package after installing and updating the package index files.
+
+```
+rm packages-microsoft-prod.rpm
+sudo dnf update
+```
+
+4. Install the package.
+
+```
+sudo dnf install aod
+```
+
+### [SLES](#tab/SLES)
+
+Follow these instructions to install the Always-On Diagnostics tool on SUSE Linux Enterprise Server 15.
+
+1. Add the Microsoft repo. You might need to add the Microsoft repository key to your list of trusted keys.
+
+```
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo zypper addrepo --check --refresh --name 'Microsoft' https://packages.microsoft.com/sles/15/prod microsoft
+```
+
+2. Refresh the repositories.
+
+```
+sudo zypper refresh
+```
+
+3. Check if the repo has been added and the aod package is available for installation.
+
+```
+zypper search aod
+```
+
+4. Install the package.
+
+```
+sudo zypper install aod
+```
+
+### [Ubuntu](#tab/Ubuntu)
+
+The Always-On Diagnostics tool is not yet available for Ubuntu.
+
+---
 
 ## chgrp "filename" failed: Invalid argument (22)
 
