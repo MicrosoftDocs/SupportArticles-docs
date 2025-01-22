@@ -2077,6 +2077,8 @@ items:
       href: ./remote/limit-connections-terminal-server.md
     - name: Log files for troubleshooting RDS issues
       href: ./remote/log-files-to-troubleshoot-rds-issues.md
+    - name: Ports that are used by RDS
+      href: ./remote/ports-used-by-rds.md
     - name: RDS fails to install with error 0x800706D9
       href: ./remote/rds-role-fail-to-install.md
     - name: Recommended updates for RDS in Windows Server 2012 R2
@@ -2148,9 +2150,7 @@ items:
     - name: Local Policy not permit to Log On Interactively
       href: ./remote/local-policy-not-permit-log-on-interactively.md
     - name: New user fails to log on through RDP
-      href: ./remote/not-enough-storage-available-to-process-command.md
-    - name: Ports that are used by RDS
-      href: ./remote/ports-used-by-rds.md
+      href: ./remote/not-enough-storage-available-to-process-command.md    
     - name: Registry Size Limit (RSL) functionality is still be honored
       href: ./remote/honors-registry-size-limit-functionality-key-set.md
     - name: Remote Control prompts for user permission
