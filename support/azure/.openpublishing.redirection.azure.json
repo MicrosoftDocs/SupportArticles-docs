@@ -668,7 +668,7 @@
       {
         "source_path": "virtual-machines/linux/linux-kernel-fails-restart-provision.md",
         "redirect_url": "/troubleshoot/azure/virtual-machines/linux/welcome-virtual-machines-linux",
-        "redirect_document_id": true
+        "redirect_document_id": false
       },
       {
         "source_path": "active-directory/adal-authenticate-android-devices-fail.md",
