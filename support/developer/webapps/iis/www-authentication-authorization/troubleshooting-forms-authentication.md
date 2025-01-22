@@ -71,7 +71,7 @@ If you want to change the `timeout` value to be longer, you can easily change th
 ```xml
 <system.web> 
  <authentication mode="Forms">     
-   <forms timeout="50000000"/>                 
+   <forms timeout="120"/>                 
  </authentication>
 </system.web>
 ```
