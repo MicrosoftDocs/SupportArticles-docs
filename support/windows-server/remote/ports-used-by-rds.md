@@ -16,8 +16,8 @@ The information and taxonomy is broken down by role service and component, and l
 
 ## From Client to RD Resource
 
-- TCP 443 (HTTPS) Required if RDWeb is deployed.
-- TCP and UDP 3389: Standard RDP port. Can be configured on host and client to a different port number.
+- TCP 443 (HTTPS) Required if RDWeb is deployed.
+- TCP and UDP 3389: Standard RDP port. Can be configured on host and client to a different port number.
 
 ## Remote Desktop Connection Broker (RDCB)
 
@@ -33,22 +33,22 @@ The information and taxonomy is broken down by role service and component, and l
 
 ### Inbound external internet based traffic from RD Clients to the Gateway
 
-- TCP 443: HTTP (includes RPC over HTTP) over SSL. The port is configurable using RD Gateway Management console.
-- UDP 3391: RDP over UDP. The port is configurable using RD Gateway Management console.
+- TCP 443: HTTP (includes RPC over HTTP) over SSL. The port is configurable using RD Gateway Management console.
+- UDP 3391: RDP over UDP. The port is configurable using RD Gateway Management console.
 
   > [!NOTE]
-  > Firewalls that have directional UDP analysis, such as TMG, require UDP "Send Receive" configured.
+  > Firewalls that have directional UDP analysis, such as TMG, require UDP "Send Receive" configured.
 
-### Internal traffic between the Gateway and the required User AD, Resource AD, DNS, NPS and so on
+### Internal traffic between the Gateway and the required User AD, Resource AD, DNS, NPS and so on
 
 - TCP 88: Kerberos for user authentication
 - TCP 135: RPC Endpoint Mapper
 - TCP 135: Port that NTDS RPC services listens on AD
-- TCP and UDP 389: LDAP for user authentication
+- TCP and UDP 389: LDAP for user authentication
 - TCP and UDP 53: Internal resource name resolution, DNS
-- TCP and UDP 389: If using LDAP for Certificate Revocation List (CRL)  
-- TCP 80: If using HTTP for CRL
-- TCP 21: If using FTP for CRL
+- TCP and UDP 389: If using LDAP for Certificate Revocation List (CRL)  
+- TCP 80: If using HTTP for CRL
+- TCP 21: If using FTP for CRL
 - UDP 1812 and 1813: If NPS Server is being used.
 - TCP 5985: WMI and PowerShell Remoting for administration
 
