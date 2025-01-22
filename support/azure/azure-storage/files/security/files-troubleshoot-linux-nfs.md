@@ -26,71 +26,71 @@ This article lists common issues related to NFS Azure file shares and provides p
 
 ## Use the Always-On Diagnostics tool
 
-You can use the Always-On Diagnostics (AOD) tool to collect logs on NFSv4 and SMB Linux clients. The daemon runs in the background as a system service and can be configured to detect anomalies in a variety of sources such as dmesg logs, debug data, and error and latency metrics. It can capture data from tcpdump, nfsstat, mountstsat, and other sources, along with the system's CPU and memory usage. The tool can be useful for collecting debug information on field issues that can be hard to reproduce.
+You can use the Always-On Diagnostics (AOD) tool to collect logs on NFSv4 and SMB Linux clients. The daemon runs in the background as a system service and can be configured to detect anomalies in various sources such as dmesg logs, debug data, error metrics, and latency metrics. It can capture data from tcpdump, nfsstat, mountstsat, and other sources, along with the system's CPU and memory usage. The tool is valuable for collecting debug information on field issues that are difficult to reproduce.
 
-AOD is currently compatible with systems running SUSE Linux Enterprise Server 15 (SLES15) and Red Hat Enterprise Linux 8 (RHEL8). Follow the appropriate installation steps.
+The Always-On Diagnostics tool is currently compatible with systems running SUSE Linux Enterprise Server 15 (SLES 15) and Red Hat Enterprise Linux 8 (RHEL 8). Follow the installation steps that correspond to your operating system:
 
 ### [RHEL](#tab/RHEL)
 
-Follow these instructions to install the Always-On Diagnostics tool on Red Hat Enterprise Linux 8.
+In Red Hat Enterprise Linux 8, follow these instructions to install the Always-On Diagnostics tool:
 
 1. Download the repo config package.
-   
-```
-curl -ssl -O https://packages.microsoft.com/config/rhel/8/packages-microsoft-prod.rpm
-```
+
+    ```bash
+    curl -ssl -O https://packages.microsoft.com/config/rhel/8/packages-microsoft-prod.rpm
+    ```
 
 2. Install the repo config package.
-   
-```
-sudo rpm -i packages-microsoft-prod.rpm
-```
+
+    ```bash
+    sudo rpm -i packages-microsoft-prod.rpm
+    ```
 
 3. Delete the repo config package after installing and updating the package index files.
 
-```
-rm packages-microsoft-prod.rpm
-sudo dnf update
-```
+    ```bash
+    rm packages-microsoft-prod.rpm
+    sudo dnf update
+    ```
 
 4. Install the package.
 
-```
-sudo dnf install aod
-```
+    ```bash
+    sudo dnf install aod
+    ```
 
 ### [SLES](#tab/SLES)
 
-Follow these instructions to install the Always-On Diagnostics tool on SUSE Linux Enterprise Server 15.
+In SUSE Linux Enterprise Server 15, follow these instructions to install the Always-On Diagnostics tool:
 
 1. Add the Microsoft repo. You might need to add the Microsoft repository key to your list of trusted keys.
 
-```
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo zypper addrepo --check --refresh --name 'Microsoft' https://packages.microsoft.com/sles/15/prod microsoft
-```
+    ```bash
+    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+    sudo zypper addrepo --check --refresh --name 'Microsoft' https://packages.microsoft.com/sles/15/prod microsoft
+    ```
 
 2. Refresh the repositories.
 
-```
-sudo zypper refresh
-```
+    ```bash
+    sudo zypper refresh
+    ```
 
-3. Check if the repo has been added and the aod package is available for installation.
+3. Check if the repo has been added and the `aod` package is available for installation.
 
-```
-zypper search aod
-```
+    ```bash
+    zypper search aod
+    ```
 
 4. Install the package.
 
-```
-sudo zypper install aod
-```
+    ```bash
+    sudo zypper install aod
+    ```
 
 ### [Ubuntu](#tab/Ubuntu)
 
-The Always-On Diagnostics tool is not yet available for Ubuntu.
+The Always-On Diagnostics tool is currently not available for Ubuntu.
 
 ---
 
@@ -303,5 +303,7 @@ If you still need help, [contact support](https://portal.azure.com/?#blade/Micro
 - [Troubleshoot Azure Files connectivity (SMB)](../connectivity/files-troubleshoot-smb-connectivity.md)
 - [Troubleshoot Azure Files authentication and authorization (SMB)](files-troubleshoot-linux-nfs.md)
 - [Troubleshoot Azure Files general SMB issues on Linux](files-troubleshoot-linux-smb.md)
+
+[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
 
 [!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
