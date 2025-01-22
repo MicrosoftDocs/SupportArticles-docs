@@ -9,9 +9,11 @@ author: amitrou
 # Cannot find UI element
 
 ## Symptoms
-- Error generates at runtime because UI element cannot be found
+
+Error generates at runtime because UI element cannot be found
 
 ## Detection
+
 - Click failed (failed to get UI element)
 - Failed to press button (button wasn't found)
 - Failed to write in textbox (textbox wasn't found)
@@ -24,6 +26,7 @@ All the errors can occur also with internal message 'Window wasn't found' when W
 Example: Click failed (failed to get window).
 
 Also in Windows actions, the following error may occur when Window UI element is not found.
+
 - Window wasn't found
 
 ## Causes
@@ -55,10 +58,12 @@ Power Automate for desktop can automatically fix cases with dynamic selectors wi
 ### Modify selectors manually
 
 ### Action failed (failed to get window)
+
 - Ensure the parent screen of the UI element is available on the machine. If not, the error message will indicate "Failed to get window."
 - Moreover, the "Failed to get window" error may be generated in case the selector of the parent screen is invalid. To fix this  issue, see the following instructions.
 
 ### Other scenarios
+
 - Ensure the UI element is available on the respective screen or webpage.
 - Capture the UI element again as a new UI element object and populate the erroneous action with the new UI element.
 - Navigate to the selector builder and add a new selector using the Selector with recapture option.
@@ -69,8 +74,9 @@ Power Automate for desktop can automatically fix cases with dynamic selectors wi
   - Capture the exact same UI element.
   - Compare the two selectors and observe if there are any differences. You can perform the comparison in Notepad.
   - Edit the selector (one of them) manually using the operands or editing the values of the attributes.
-- Use alternative approaches for interacting with the element on the screen. You can use image automation, mouse and keyboard 
+- Use alternative approaches for interacting with the element on the screen. You can use image automation, mouse and keyboard
 actions, and optical character recognition (OCR).
 
 ## Resources
+
 - [UI automation action fails with "Failed to get UI element" or "Failed to get window" error](https://learn.microsoft.com/troubleshoot/power-platform/power-automate/ui-automation-action-fails-errors)
