@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot RHEL(RedHat Enterprise Linux) pacemaker cluster services and resources startup issues Azure
+title: Troubleshoot RHEL pacemaker cluster services and resources startup issues Azure
 description: Provides troubleshooting guidance for issues related to cluster resources or services in RHEL(RedHat Enterprise Linux) Pacemaker cluster
 ms.reviewer: rnirek,srsakthi
 ms.author: skarthikeyan
@@ -11,11 +11,11 @@ ms.collection: linux
 ms.custom: sap:Issue with Pacemaker clustering, and fencing
 ---
 
-# Troubleshoot issues related to cluster resources or services in RHEL(RedHat Enterprise Linux) Pacemaker Cluster Azure
+# Troubleshoot pacemaker cluster services and resources startup issues
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-This article outlines the most common causes of RHEL pacemaker cluster resources or services startup problems along with guidance on how to identify and resolve them.
+This article outlines the most common causes of RedHat Enterprise Linux (RHEL) pacemaker cluster resources or services startup problems along with guidance on how to identify and resolve them.
 
 ## Scenario 1: Unable to start cluster service due to quorum
 
