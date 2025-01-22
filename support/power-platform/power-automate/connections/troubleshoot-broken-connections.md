@@ -1,17 +1,17 @@
 ---
 title: Troubleshoot broken connections
-description: Learn how to troubleshoot and resolve connection problems and ensure a smoother experience with your applications and services in Microsoft Power Automate.
+description: Learn how to troubleshoot and resolve connection problems and ensure a smoother experience with your applications and services in Microsoft Power Platform.
 ms.custom: sap:Connections
 ms.workload: connectors
 author: nravindra-msft
 ms.author: nravindra
 ms.reviewer: angieandrews
-ms.date: 01/21/2025
+ms.date: 01/22/2025
 
 ---
-# Troubleshoot broken connections in Power Automate
+# Troubleshoot broken connections in Microsoft Power Platform
 
-This article describes the following common issues about broken connections in Microsoft Power Automate and helps you troubleshoot and solve these issues.
+There are various reasons why [connection](/power-automate/add-manage-connections) problems might occur in Microsoft Power Platform. This article describes some of the common reasons and helps you troubleshoot and solve these issues.
 
 - [Connection times out](#connection-times-out)
 - [A DLP block occurs](#a-dlp-block-occurs)
@@ -49,7 +49,7 @@ When a DLP block occurs, you might also receive one of the following error messa
 ### Troubleshooting steps
 
 1. Review DLP policies: Check the DLP policies configured in the organization to understand what actions are being blocked and why.
-2. Consult with your administrator: The administrator might block the connector or connection. It's a good idea to consult with your administrator and discuss the issue to unblock it.
+2. Consult with your administrator: If they've blocked the connector or connection, consult with them about unblocking it.
 
 ## Invalid authenticated devices
 
@@ -71,6 +71,8 @@ In this situation, you might also receive one of the following error messages:
 
 This refers to a situation where a connection becomes invalid because it hasn't been used for a specified period. For example, the SharePoint connector requires usage at least once every 90 days to remain active. If the connection isn't used within this period, it expires.
 
+For more information, see [Refresh tokens in the Microsoft identity platform](/entra/identity-platform/refresh-tokens).
+
 In this situation, you might also receive one of the following error messages:
 
 > - The refresh token has expired due to inactivity. The token was issued on \<DateTime> and was inactive for 90.00:00:00.
@@ -78,7 +80,7 @@ In this situation, you might also receive one of the following error messages:
 
 ### Troubleshooting steps
 
-To troubleshoot this issue, create a new connection or re-authorize the existing one.
+Create a new connection or re-authorize the existing one.
 
 ## Connection issue related to attended mode
 
@@ -88,11 +90,11 @@ This refers to problems that occur when a user tries to use features that requir
 
 ### Troubleshooting steps
 
-Ensure the user has the correct license to interact with the system as required in attended mode. For more information, see [Which Power Automate licenses do I need?](/power-platform/admin/power-automate-licensing/faqs#which-power-automate-licenses-do-i-need)
+Ensure the user has the correct license to interact with the system as required in unattended mode. For more information, see [Which Power Automate licenses do I need?](/power-platform/admin/power-automate-licensing/faqs#which-power-automate-licenses-do-i-need)
 
 ## Password modification by a user
 
-This issue occurs when the account password used to create the connection is deleted, changed, or expired. Since account verification is a crucial part of authentication whenever a connection is triggered, the connection breaks if the new password isn't updated. To avoid this issue, use services like [Microsoft Entra ID](/entra/fundamentals/whatis).
+This issue occurs when the account password used to create the connection is deleted, changed, or expired. Since account verification is a crucial part of authentication whenever a connection is triggered, the connection breaks if the new password isn't updated.
 
 You might also receive the following error message:
 
@@ -100,7 +102,7 @@ You might also receive the following error message:
 
 ### Troubleshooting steps
 
-Every time a user updates the password, the existing connection with the password becomes invalid, so the user must create a new connection for each of those connectors or edit the existing connection.
+Every time a user updates the password, the existing connection with the password becomes invalid, so the user must create a new connection for each of those connectors or edit the existing connection. To avoid this issue, use services like [Microsoft Entra ID](/entra/fundamentals/whatis).
 
 ## Azure Active Directory (AAD) configuration is changed
 
@@ -130,7 +132,7 @@ To resolve this issue, another user with access can reauthorize the connection, 
 
 ## Tenant administrator disables the application
 
-This means that the tenant administrator deactivates an application registered in Azure Active Directory (AAD). This action invalidates any service principal connections associated with the application, as it can no longer issue tokens.
+This refers to a situation where the tenant administrator has deactivated an application registered in Azure Active Directory (AAD). This action invalidates any service principal connections associated with the application, as it can no longer issue tokens.
 
 You might also receive the following error message:
 
@@ -142,4 +144,5 @@ To resolve this issue, the tenant administrator needs to reenable the applicatio
 
 ## More information
 
-[Manage connections in Power Automate](/power-automate/add-manage-connections)
+- [Manage connections in Power Automate](/power-automate/add-manage-connections)
+- [Create a connection with a service principal](/power-automate/desktop-flows/alm/alm-connection)
