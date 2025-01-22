@@ -5,13 +5,13 @@ ms.reviewer: rnirek,srsakthi
 ms.author: skarthikeyan
 author: skarthikeyan
 ms.topic: troubleshooting
-ms.date: 01/06/2024
+ms.date: 01/22/2025
 ms.service: azure-virtual-machines
 ms.collection: linux
 ms.custom: sap:Issue with Pacemaker clustering, and fencing
 ---
 
-# Troubleshoot pacemaker cluster services and resources startup issues
+# Troubleshoot startup issues for Pacemaker Cluster services and resources
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
