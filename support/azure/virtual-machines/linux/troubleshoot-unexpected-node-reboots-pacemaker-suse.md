@@ -46,10 +46,10 @@ Aug 21 01:47:27 node  02 corosync[15241]:  [KNET  ] host: host: 2 has no active 
 Aug 21 01:47:31 node  02 corosync[15241]:  [TOTEM ] Token has not been received in 30000 ms
 ```
 
-### Cause
+### Cause for scenario 1
 The unexpected node reboot is noted as a result of a Network Maintenance activity or an outage. For confirmation, the timestamp can be matched by reviewing the [Azure Maintenance Notification](/azure/virtual-machines/linux/maintenance-notifications) in Azure Portal. For more information about Azure Scheduled Events, see [Azure Metadata Service: Scheduled Events for Linux VMs](/azure/virtual-machines/linux/scheduled-events).
 
-### Resolution
+### Resolution for scenario 1
 If the unexpected reboot timestamp aligns with a maintenance activity, the analysis confirms that either platform or network maintenance impacted the cluster.
 
 For further assistance or other queries, you can open a support request by following these [instructions](#next-steps).
@@ -62,7 +62,7 @@ The cluster configuration can be reviewed by running the following command:
 sudo crm configure show
 ```
 
-## Cause
+### Cause for scenario 2
 Unexpected reboots in an Azure SUSE Pacemaker cluster often occur due to misconfigurations:
 
 1. Incorrect STONITH configuration: 
@@ -92,7 +92,7 @@ Unexpected reboots in an Azure SUSE Pacemaker cluster often occur due to misconf
       sudo cat /etc/corosync/corosync.conf
       ```
 
-### Resolution
+### Resolution for scenario 2
 - It's necessary to follow the proper guidelines outlined for setting up a [SUSE Pacemaker Cluster](#prerequisites). Additionally, ensure that appropriate resources are allocated for applications such as [SAP HANA](/azure/sap/workloads/sap-hana-high-availability) or [SAP NetWeaver](/azure/sap/workloads/high-availability-guide-suse), as specified in our Microsoft documentation.
 - Steps to make necessary changes to the cluster configuration: 
     1. Stop the application on both the nodes. 
@@ -112,7 +112,7 @@ Unexpected reboots in an Azure SUSE Pacemaker cluster often occur due to misconf
 ## Scenario 3: Migration from On-premises to Azure
 When migrating a SUSE Pacemaker cluster from on-premises to Azure, unexpected reboots can arise from specific misconfigurations or overlooked dependencies. 
 
-### Cause
+### Cause for scenario 3
 The following are common mistakes in this category:
 
 1. Incomplete or incorrect STONITH configuration:
@@ -144,8 +144,9 @@ The following are common mistakes in this category:
    For more information, see [Network security group test](/azure/virtual-machines/network-security-group-test)
 
 
-### Resolution
-- It's necessary to follow the proper guidelines outlined for setting up a [SUSE Pacemaker Cluster](#prerequisites). Additionally, ensure that appropriate resources are allocated for applications such as [SAP HANA](/azure/sap/workloads/sap-hana-high-availability) or [SAP NetWeaver](/azure/sap/workloads/high-availability-guide-suse), as specified in our Microsoft documentation.
+### Resolution for scenario 3
+
+Follow the guidelines outlined to set up a [SUSE Pacemaker Cluster](#prerequisites). Additionally, ensure that appropriate resources are allocated for applications such as [SAP HANA](/azure/sap/workloads/sap-hana-high-availability) or [SAP NetWeaver](/azure/sap/workloads/high-availability-guide-suse), as specified in our Microsoft documentation.
 
 ## Scenario 4: `HANA_CALL` timeout after 60 seconds
 
@@ -158,10 +159,10 @@ The Azure SUSE Pacemaker Cluster is running SAP HANA as application and experien
 2024-06-04T09:25:38.736748+00:00 node01 SAPHana(rsc_SAPHana_H00_HDB02)[99475]: ERROR: ACT: check_for_primary:  we didn't expect node_status to be: DUMP <00000000  0a                                                |.|#01200000001>
 ```
 
-### Cause
+### Cause for scenario 4
 The SAP HANA timeout messages are commonly considered internal application timeouts, and the SAP vendor should be engaged.
 
-### Resolution
+### Resolution for scenario 4
 - To identify the root cause of the issue, it's essential to review the [OS performance](collect-performance-metrics-from-a-linux-system.md). 
 - Particular attention should be given to memory pressure and storage devices, their configuration, especially if HANA is hosted on Network File System (NFS), Azure NetApp Files (ANF), or Azure Files. 
 - Once external factors, such as platform or network outages, are ruled out, engaging the application vendor for trace call analysis and log review is recommended.
@@ -182,10 +183,10 @@ The Azure SUSE Pacemaker Cluster is running SAP Netweaver ASCS/ERS as applicatio
 2024-11-09T07:39:42.828955-05:00 node  01 pacemaker-schedulerd[2406]: warning: Unexpected result (not running) was recorded for start of RSC_SAP_ASCS00 on node01 at Nov  9 07:39:42 2024 
 ```
 
-### Cause
+### Cause for scenario 5
 The `ASCS/ERS` resource is considered the application for SAP Netweaver clusters. When the corresponding cluster monitoring resource times out, it triggers a failover process.
 
-### Resolution
+### Resolution scenario 5
 - To identify the root cause of the issue, it's essential to review the [OS performance](collect-performance-metrics-from-a-linux-system.md). 
 - Particular attention should be given to memory pressure and storage devices, their configuration especially if SAP Netweaver is hosted on Network File System (NFS), Azure NetApp Files (ANF), or Azure Files. 
 - Once external factors, such as platform or network outages, are ruled out, engaging the application vendor for trace call analysis and log review is recommended.
