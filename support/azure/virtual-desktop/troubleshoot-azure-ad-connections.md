@@ -1,18 +1,17 @@
 ---
-title: Troubleshoot connections to Microsoft Entra joined VMs -  Azure Virtual Desktop
-description: How to resolve issues when connecting to Microsoft Entra joined VMs in Azure Virtual Desktop.
-
+title: Troubleshoot connections to Microsoft Entra joined VMs
+description: Helps resolve issues when connecting to Microsoft Entra joined VMs in Azure Virtual Desktop.
 ms.topic: troubleshooting
-ms.date: 08/24/2022
+ms.date: 01/21/2025
 ms.reviewer: daknappe
-ms.custom: docs_inherited
+ms.custom: docs_inherited, pcy:wincomm-user-experience
 ---
 # Troubleshoot connections to Microsoft Entra joined VMs
 
->[!IMPORTANT]
->This content applies to Azure Virtual Desktop with Azure Resource Manager Azure Virtual Desktop objects.
+> [!IMPORTANT]
+> This content applies to Azure Virtual Desktop with Azure Resource Manager Azure Virtual Desktop objects.
 
-Use this article to resolve issues with connections to Microsoft Entra joined session host VMs in Azure Virtual Desktop.
+This article helps resolve issues with connections to Microsoft Entra joined session host VMs in Azure Virtual Desktop.
 
 ## All clients
 
@@ -36,9 +35,9 @@ Visit the [Azure Virtual Desktop Tech Community](https://techcommunity.microsoft
 
 ## Next steps
 
-- For an overview on troubleshooting Azure Virtual Desktop and the escalation tracks, see [Troubleshooting overview, feedback, and support](/azure/virtual-desktop/troubleshoot-set-up-overview).
-- To troubleshoot issues while creating an Azure Virtual Desktop environment and host pool in an Azure Virtual Desktop environment, see [Environment and host pool creation](/azure/virtual-desktop/troubleshoot-set-up-issues).
-- To troubleshoot issues while configuring a virtual machine (VM) in Azure Virtual Desktop, see [Session host virtual machine configuration](/azure/virtual-desktop/troubleshoot-vm-configuration).
+- For an overview of troubleshooting Azure Virtual Desktop and the escalation tracks, see [Troubleshooting overview, feedback, and support](/azure/virtual-desktop/troubleshoot-set-up-overview).
+- To troubleshoot issues while creating an Azure Virtual Desktop environment and host pool in an Azure Virtual Desktop environment, see [Troubleshoot host pool creation](/azure/virtual-desktop/troubleshoot-set-up-issues).
+- To troubleshoot issues while configuring a virtual machine (VM) in Azure Virtual Desktop, see [Troubleshoot session host virtual machine configuration](/azure/virtual-desktop/troubleshoot-vm-configuration).
 - To troubleshoot issues related to the Azure Virtual Desktop agent or session connectivity, see [Troubleshoot common Azure Virtual Desktop Agent issues](/azure/virtual-desktop/troubleshoot-agent).
-- To troubleshoot issues when using PowerShell with Azure Virtual Desktop, see [Azure Virtual Desktop PowerShell](/azure/virtual-desktop/troubleshoot-powershell).
-- To go through a troubleshoot tutorial, see [Tutorial: Troubleshoot Resource Manager template deployments](/azure/virtual-desktop/../azure-resource-manager/templates/template-tutorial-troubleshoot).
+- To troubleshoot issues when using PowerShell with Azure Virtual Desktop, see [Troubleshoot Azure Virtual Desktop PowerShell](/azure/virtual-desktop/troubleshoot-powershell).
+- To go through a troubleshooting tutorial, see [Quickstart: Troubleshoot ARM template JSON deployments](/azure/virtual-desktop/../azure-resource-manager/templates/template-tutorial-troubleshoot).
