@@ -271,12 +271,12 @@ sudo pcs status --full
 * Node node-0 (1):
     + hana_XXX_clone_state              : PROMOTED  
     + hana_XXX_sync_state               : PRIM      
-    + hana_XXX_roles                    : 2:P:master1:master:worker:replica
+    + hana_XXX_roles                    : 2:P:master1:master:worker:slave
 
 * Node node-1 (2):
     + hana_XXX_clone_state              : WAITING4PRIM  
     + hana_XX_sync_state                : SFAIL      
-    + hana_XXX_roles                    : 2:S:master1:master:worker:replica
+    + hana_XXX_roles                    : 2:S:master1:master:worker:slave
 ```
 
 3. The cluster's status is shown as follows when we execute `sudo pcs status`:
@@ -295,9 +295,9 @@ sudo pcs status
      rsc_st_azure	(stonith:fence_azure_arm):	Started node-1
      Clone Set: cln_SAPHanaTopology [rsc_SAPHanaTopology]
          Started: [ node-0 node-1 ]
-     Master/replica Set: msl_SAPHana [rsc_SAPHana]
+     Master/Slave Set: msl_SAPHana [rsc_SAPHana]
          Master: [ node-1 ]
-         Replica:  [ node-0 ]
+         Slave:  [ node-0 ]
      Resource Group: g_ip_HN1_HBD00
          vip_HN1_HBD00	(ocf::heartbeat:IPaddr2):	Started node-0 
          nc_HN1_HBD00	(ocf::heartbeat:azure-lb):	Started node-0 
