@@ -57,9 +57,9 @@ Jun 16 11:17:53 node-0 pacemaker-controld[509433]: error: Corosync quorum is not
 
 ### Cause of scenario 1
 
-The **votequorum** service is a component of the corosync project. To prevent split-brain scenarios, this service can be optionally loaded into a corosync cluster's nodes. Each system in the cluster is given a certain number of votes to achieve this quorum. Ensuring that cluster actions can only occur when the majority of votes are cast. Either every node must have the service loaded, or none at all. The outcomes are uncertain if it loaded into a subset of cluster nodes.
+The **VoteQuorum** service is a component of the corosync project. To prevent split-brain scenarios, this service can be optionally loaded into a corosync cluster's nodes. Each system in the cluster is given a certain number of votes to achieve this quorum. Ensuring that cluster actions can only occur when the majority of votes are cast. Either every node must have the service loaded, or none at all. The outcomes are uncertain if it loaded into a subset of cluster nodes.
 
-The following `/etc/corosync/corosync.conf` extract will enables **votequorum** service within corosync:
+The following `/etc/corosync/corosync.conf` extract will enable **VoteQuorum** service within corosync:
 
 ```output
        quorum {
@@ -67,11 +67,11 @@ The following `/etc/corosync/corosync.conf` extract will enables **votequorum** 
        }
 ```
 
-**Votequorum** reads its configuration from `/etc/corosync/corosync.conf`. Some values can be changed at runtime and others are only read at corosync startup. It's important that those values are consistent across all the nodes participating in the cluster or votequorum behavior are unpredictable.
+**VoteQuorum** reads its configuration from `/etc/corosync/corosync.conf`. Some values can be changed at runtime and others are only read at corosync startup. It's important that those values are consistent across all the nodes participating in the cluster or vote quorum behavior are unpredictable.
 
 ### Resolution of scenario 1
 
-1. As a precaution take a full backup or snapshot before making any changes. Refer this document to know more about [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
+1. As a precaution takes a full backup or snapshot before making any changes. Refer this document to know more about [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
 
 2. Check for missing quorum stanza in `/etc/corosync/corosync.conf`. Compare the existing `corosync.conf` with any of the available backup present under `/etc/corosync/`.
    
@@ -209,7 +209,7 @@ sudo ip -o -f inet route list match 172.17.10.10/24 scope link
 
 If route that matches the `VIP` isn't in the default routing table, then one can specify the `NIC` name in pacemaker resource, so that it can be configured bypassing the check:
 
-1. As a precaution take a full backup or snapshot before making any changes. Refer this document to know more about [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
+1. As a precaution takes a full backup or snapshot before making any changes. Refer this document to know more about [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
 
 2. Put the cluster under maintenance-mode.
    
@@ -255,7 +255,7 @@ Warning: This command is deprecated and will be removed. Please use 'pcs resourc
 
 For more information about this scenario, you can see the following Red Hat article: ["ERROR: [findif] failed" shown in Pacemaker'](https://access.redhat.com/solutions/2119711).
 
-## Scenario 3: Issue with SAP HANA(High-performance ANalytic Appliance)
+## Scenario 3: Issue with SAP HANA(High-performance Analytic Appliance)
 
 ### Scenario 3 Symptom 1: SAP HANA DB fails to start with unknown error
 
@@ -335,7 +335,7 @@ SAP HANA resource can't be start by pacemaker when there are `SYN` failures betw
 > [!Important]
 > Steps 2,3 & 4 are to be performed using SAP administrator account as these steps involve using SAP System ID to stop, start and re-enable replication manually.
 
-1. As a precaution take a full backup or snapshot before making any changes. Refer this document to know more about [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
+1. As a precaution takes a full backup or snapshot before making any changes. Refer this document to know more about [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
 
 2. Put the cluster under maintenance-mode.
 
@@ -426,7 +426,7 @@ SAP HANA resource can't be start by pacemaker when there are `SYN` failures betw
      site name: node-0
    ```
 
-6. The SAP HANA system replication can also be vertified using following command:
+6. The SAP HANA system replication can also be verified using following command:
 
    ```bash
    sudo SAPHanaSR-showAttr
@@ -514,7 +514,7 @@ Failed Resource Actions:
 > [!Note]
 > These steps ( 1 to 5 ) should be performed by SAP admin.
 
-1. As a precaution take a full backup or snapshot before making any changes. Refer this document to know more about [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
+1. As a precaution takes a full backup or snapshot before making any changes. Refer this document to know more about [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
   
 2. Put the cluster under maintenance-mode.
 
@@ -630,7 +630,7 @@ Due to incorrect `InstanceName` and `START_PROFILE`, attributes SAP instance (AS
 > [!Note]
 > This resolution is applicable when your `InstanceName` and `START_PROFILE` are individual.
 
-1. As a precaution take a full backup or snapshot before making any changes. Refer this document to know more about [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
+1. As a precaution takes a full backup or snapshot before making any changes. Refer this document to know more about [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
   
 2. Put the cluster under maintenance-mode.
 
@@ -672,7 +672,7 @@ sudo pcs property set maintenance-mode=false
 
 ## Next Steps
 
-For further help, open a support request by using the following instructions. When you submit your request, attach [sosreport](https://access.redhat.com/solutions/3592) from all the nodes in the cluster for troubleshooting.
+For further help, open a support request by using the following instructions. When you submit your request, attach [SOS report](https://access.redhat.com/solutions/3592) from all the nodes in the cluster for troubleshooting.
 
 
 
