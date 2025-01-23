@@ -15,7 +15,7 @@ When specifying the 'From' filter in Retrieve email messages action in Outlook, 
 
 ## Cause
 
-In some cases the email addresses of Exchange users have a x500 format (_something like: /o=<organization-name>/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/cn=<mailbox>_) instead of the known mail format (_person@email.com_). In those cases when using the Retrieve email messages action in Outlook the 'From' filter will not work since filtering will be performed with the x500 format email. 
+In some cases the email addresses of Exchange users have a x500 format (_something like: /o\=<organization-name\>/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/cn=\<mailbox\>_) instead of the known mail format (_person@email.com_). In those cases when using the Retrieve email messages action in Outlook the 'From' filter will not work since filtering will be performed with the x500 format email.
 
 You can retrieve the x500 format email using the 'Exchange powershell' using the below cmdlet:
 Get-Mailbox -Identity username | ft legacyExchangeDN.
