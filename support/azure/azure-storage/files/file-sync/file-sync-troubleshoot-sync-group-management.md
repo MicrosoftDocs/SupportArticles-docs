@@ -123,7 +123,7 @@ This error occurs if the server is offline or doesn't have network connectivity.
 
 <a id="-2134347720"></a>**Server endpoint deletion fails, with this error: "MgmtFileShareSnapshotCountExceeded" (Error code: -2134347720 or 0x80c87038)**
 
-The error occurs when the File Share Snapshot Count exceeds the limit. Azure Files Sync takes a snapshot of the Azure file share as a backup before creating the server endpoint. This snapshot can be used to restore the share to the state before the server endpoint was created. The snapshot isn't removed automatically after the server endpoint is created. You can delete it manually if it's no longer needed. To identify snapshots created by Azure File Sync, examine the snapshots of the Azure file share and look for "AzureFileSync" in the Initiator column.
+The error occurs when the File Share Snapshot Count exceeds the limit. Azure File Sync takes a snapshot of the Azure file share as a backup before creating the server endpoint. This snapshot can be used to restore the share to the state before the server endpoint is created. The snapshot isn't removed automatically after the server endpoint is created. You can delete it manually if it's no longer needed. To identify snapshots created by Azure File Sync, examine the snapshots of the Azure file share and look for "AzureFileSync" in the Initiator column.
 
 ## Server endpoint health
 
