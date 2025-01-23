@@ -4,9 +4,9 @@ description: Troubleshoot common issues in managing Azure File Sync sync groups,
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 01/13/2025
+ms.date: 01/23/2025
 ms.author: kendownie
-ms.reviewer: v-weizhu
+ms.reviewer: v-weizhu, vritikanaik
 ms.custom: sap:File Sync
 ---
 # Troubleshoot Azure File Sync sync group management
@@ -83,7 +83,7 @@ This error occurs if the server endpoint path is on the system volume and cloud 
 
 This error occurs if the server endpoint path specified isn't valid. Verify the server endpoint path specified is a locally attached NTFS volume. Note, Azure File Sync doesn't support mapped drives as a server endpoint path.
 
-<a id="-2147024894"></a>**Server endpoint creation fails, with this error: "MgmtServerJobFailed" (Error code: -2147024875 or 0x80070015)**
+<a id="-2147024875"></a>**Server endpoint creation fails, with this error: "MgmtServerJobFailed" (Error code: -2147024875 or 0x80070015)**
 
 This error occurs if the server endpoint path specified isn't valid. Verify the server endpoint path specified is a locally attached NTFS volume. Note, Azure File Sync doesn't support mapped drives as a server endpoint path.
 
@@ -123,7 +123,7 @@ This error occurs if the server is offline or doesn't have network connectivity.
 
 <a id="-2134347720"></a>**Server endpoint deletion fails, with this error: "MgmtFileShareSnapshotCountExceeded" (Error code: -2134347720 or 0x80c87038)**
 
-The error occurs when the ShareSnapshotCount exceeds the limit. Azure Files Sync takes a snapshot of the Azure file share as a backup before creating the server endpoint. This snapshot can be used to restore the share to the state before the server endpoint was created. The snapshot is not removed automatically after the server endpoint is created, so you can delete it manually if you don't need it. You can find the snapshots created by Azure File Sync by looking at the snapshots for the Azure file share and checking for AzureFileSync in the Initiator column.
+The error occurs when the File Share Snapshot Count exceeds the limit. Azure Files Sync takes a snapshot of the Azure file share as a backup before creating the server endpoint. This snapshot can be used to restore the share to the state before the server endpoint was created. The snapshot isn't removed automatically after the server endpoint is created. You can delete it manually if it's no longer needed. To identify snapshots created by Azure File Sync, examine the snapshots of the Azure file share and look for "AzureFileSync" in the Initiator column.
 
 ## Server endpoint health
 
