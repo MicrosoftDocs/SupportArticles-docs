@@ -1,11 +1,11 @@
 ---
-title: Web Automation actions fail when Machine Runtime and MSIX PAD versions are not synced
+title: Web Automation actions fail when Machine Runtime and MSIX PAD versions are't synced
 description: Solves web automation errors when Machine Runtime and MSIX PAD versions are different
 ms.custom: sap:Desktop flows\UI or Browser automation issues
 ms.date: 01/20/2025
 ---
 
-# Web Automation actions fail when Machine Runtime and MSIX PAD versions are not synced
+# Web Automation actions fail when Machine Runtime and MSIX PAD versions are't synced
 
 ## Symptoms
 
@@ -25,12 +25,12 @@ In PAD MSIX installation, when any Web Automation action under the Browser Autom
 
 #### Actions
 
-Any web automation action under the the Browser Automation group.
+Any web automation action under the Browser Automation group.
 
 ## Detection
 
 1. Install MSIX PAD latest
-2. Install Machine Runtime from installer a version prior (eg. non QFE)
+2. Install Machine Runtime from installer a version prior (for example, non QFE)
 3. Create a flow on PAD to automate a web page with Extension based browser
 4. Save the flow
 5. Run it from cloud
