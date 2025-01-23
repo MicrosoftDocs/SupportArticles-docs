@@ -4,10 +4,10 @@ description: Troubleshoot common issues with monitoring sync health and resolvin
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 01/03/2025
+ms.date: 01/23/2025
 ms.author: kendownie
 ms.custom: sap:File Sync, devx-track-azurepowershell
-ms.reviewer: v-weizhu
+ms.reviewer: v-weizhu, vritikanaik
 ---
 # Troubleshoot Azure File Sync sync health and errors
 
@@ -210,7 +210,7 @@ If a file or directory fails to sync due to an error, an event is logged in the 
 | 0X80C80342 | -2134375614 | ECS_E_SYNC_CUSTOM_METADATA_VERSION_NOT_SUPPORTED | The sync database has custom metadata with a version higher than the supported version. | Please upgrade the File Sync agent to the latest version. If the error persists after upgrading the agent, create a support request. |
 | 0x80c8604b | -2134351797 | ECS_E_AZURE_FILE_SHARE_FILE_NOT_FOUND | The specified Azure file wasn't found in the file share. This issue might occur if the file has been deleted and sync isn't aware of the change. | No action required. Sync will stop logging this error once change detection detects the file was deleted. |
 | 0x80c80201 | -2134375935 | ECS_E_SYNC_UNPROCESSABLE_ITEM_REPARSEPOINT | The sync failed due to the presence of a reparse point. | Remove the reparse point or replace it with regular file content before attempting the sync again. |
-| 0x80c80362 | -2134375582 | ECS_E_ITEM_PATH_COMPONENT_HAS_TRAILING_DOT | The item failed to sync because one of its path component has trailing dot(s). | Rename the item removing any trailing dot(s) that exist in the path. |
+| 0x80c80362 | -2134375582 | ECS_E_ITEM_PATH_COMPONENT_HAS_TRAILING_DOT | The item failed to sync because one of its path components has trailing dots. | Rename the item by removing any trailing dots that appear in the path. |
 | 0x80c8024e | -2134375858 | ECS_E_SYNC_ITEM_SKIP_CONSTRAINT_CONFLICT_NOT_ALLOWED | This error indicates a constraint conflict that was detected but was unable to be reported. The item will be skipped. | If the error persists, create a support request. |
 
 ### Handling unsupported characters
