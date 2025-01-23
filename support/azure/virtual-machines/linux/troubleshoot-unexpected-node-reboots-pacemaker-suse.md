@@ -11,11 +11,11 @@ ms.collection: linux
 ms.custom: sap:Issue with Pacemaker cluster, and fencing
 ---
 
-# Troubleshooting unexpected node estarts in Azure Linux SUSE Pacemaker Cluster Nodes
+# Troubleshooting unexpected node restarts in Azure Linux SUSE Pacemaker Cluster nodes
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-This article provides guidance on troubleshooting, analysis, and resolution of the most common frequent scenarios for unexpected node restarts in SUSE Pacemaker Clusters.
+This article provides guidance for troubleshooting, analysis, and resolution of the most common scenarios for unexpected node restarts in SUSE Pacemaker Clusters.
 
 ## Prerequisites
 
