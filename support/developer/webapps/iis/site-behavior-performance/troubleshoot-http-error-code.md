@@ -85,21 +85,25 @@ For more information, capture and examine [Failed Request Trace (FREB) logs](#st
 
   [Collect memory dumps for a first-chance exception, when it occurs - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/iis-support-blog/collect-memory-dumps-for-a-first-chance-exception-when-it-occurs/ba-p/2276128)
 
-  Use the DebugDiag 2 Analysis tool (part of the [DebugDiag](https://www.microsoft.com/download/details.aspx?id=58210&msockid=145197b7d1fa6877376482b2d0bf6961) suite) with the CrashHangAnalysis rule on the dumps collected to generate a report which can be used to review the call stack and identify the root cause.
+  Use the DebugDiag 2 Analysis tool (part of the [DebugDiag](https://www.microsoft.com/download/details.aspx?id=58210&msockid=145197b7d1fa6877376482b2d0bf6961) suite) with the **CrashHangAnalysis** rule on the dumps collected to generate a report which can be used to review the call stack and identify the root cause.
 
-To generate a report using DebugDiag Analysis Tool, follow these steps:
+  To generate a report using the DebugDiag Analysis tool, follow these steps:
 
-1. Open DebugDiag 2 Analysis
-1. Select **Add Data Files** and add the **.dmp** file(s).
-1. Select the **Crash/Hang Analyzers** and **Performance Analyzers** scripts and select **Start Analysis**.
+  1. Open DebugDiag 2 Analysis.
+  1. Select **Add Data Files** and add the **.dmp** file(s).
+  1. Select **CrashHangAnalysis** and **PerfAnalysis** and select **Start Analysis**.
 
-When finished, a report (**.mht**) will be created in **C:\Program Files\DebugDiag\Reports** and displayed in Internet Explorer with the results and recommendations.
+  When finished, a report (**.mht**) will be created in **C:\Program Files\DebugDiag\Reports** and displayed in Internet Explorer with the results and recommendations.
 
-If using custom DLLs, the Symbol path (**Tools menu** > **Options and Settings** > **Symbol Search Path**) to the custom PDB files can be added.
+  If using custom DLLs, you can specify the Symbol Search Path to the custom PDB files by following these steps:
+
+  1. Open the DebugDiag 2 Collection tool.
+  1. Select **Tools** > **Options And Settings...** > **Folders And Search Paths**.
+  1. Under **Symbol Search Path For Debugging**, select **Browse...** to set the path.
 
 - Exceeding ASP.NET ExecutionTimeout
 
-  For 500 errors due to exceeding ASP.NET ExecutionTimeout, capture PerfView and dumps to identify any delays.
+  For 500 errors due to exceeding ASP.NET ExecutionTimeout, [capture PerfView trace and dumps](#steps-to-capture-perfview-trace-and-dumps) to identify any delays.
 
 ### ASP.NET Core: 500 errors
 
@@ -184,7 +188,7 @@ You can find 503 errors in either IIS Logs or HTTPERR logs. Any `sc-substatus` i
 
 For more information, see:
 
-- [503 - Service unavailable](/health-diagnostic-performance/http-status-code#503---service-unavailable).
+- [503 - Service unavailable](../health-diagnostic-performance/http-status-code.md#503---service-unavailable).
 - [Error Logging in the HTTP Server API](/windows/win32/http/error-logging-in-the-http-server-api#kinds-of-errors-that-the-http-api-logs)
 
 Also refer to the following article which highlights a known issue that can cause 503 errors:
