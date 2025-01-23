@@ -51,11 +51,33 @@
         - name: Desktop Automation
           items:
             - name: Cannot find UI element
-              href: desktop-flows/desktop-automation/cannot-find-ui-element.md
+              href: desktop-flows/pad-ui-automation/desktop-automation/cannot-find-ui-element.md
         - name: Web Automation
           items:
             - name: Web Automation fails when Machine Runtime and MSIX PAD versions are not synced
-              href: desktop-flows/web-automation/machine-runtime-msix-errors.md
+              href: desktop-flows//pad-ui-automation/web-automation/machine-runtime-msix-errors.md
+        - name: Java Automation
+          items:
+            - name: Troubleshooting Java automation in PAD
+              href: desktop-flows/pad-ui-automation/java_automation/troubleshooting-java-pad.md
+        - name: Sap Automation
+          items:
+            - name: Error when launching SAP
+              href: desktop-flows/pad-ui-automation/web-automation/scripting-permissions-launch-sap.md
+        - name: Rdp/Citrix
+          items:
+            - name: Error is shown when hovering on Remote App-Desktop
+              href: desktop-flows/pad-ui-automation/rdp-automation/rdp-no-highlight.md
+    - name: Office
+      items:
+        - name: Excel
+          items:
+            - name: Launch Excel Action failures
+              href: desktop-flows/office/excel/launch-excel-action-failures.md
+        - name: Outlook
+          items:
+            - name: Outlook retrieve emails filtering issues
+              href: desktop-flows/office/outlook/retrieve-emails-filtering.md
     - name: A desktop application crashes due to UI automation
       href: desktop-flows/desktop-application-crashes-ui-automation.md
     - name: '"Could not read the application certificate" error when creating a connection'
