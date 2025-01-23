@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot broken connections
+title: Troubleshoot Broken Connections
 description: Learn how to troubleshoot and resolve connection problems and ensure a smoother experience with your applications and services in Microsoft Power Platform.
 ms.custom: sap:Connections
 ms.workload: connectors
