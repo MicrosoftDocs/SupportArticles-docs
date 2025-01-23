@@ -34,7 +34,7 @@
       href: connections/client-request-aborted-failed-fetch.md
     - name: Missing on-premises data gateway
       href: connections/check-if-gateway-is-the-right-region.md
-    - name: Troubleshoot broken connections in Power Automate
+    - name: Troubleshoot broken connections
       href: connections/troubleshoot-broken-connections.md 
     - name: Troubleshoot Flow Connections
       href: connections/troubleshooting-flow-connections.md

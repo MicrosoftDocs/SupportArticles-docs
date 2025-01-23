@@ -6,7 +6,7 @@ ms.workload: connectors
 author: nravindra-msft
 ms.author: nravindra
 ms.reviewer: angieandrews
-ms.date: 01/22/2025
+ms.date: 01/23/2025
 
 ---
 # Troubleshoot broken connections in Microsoft Power Platform
@@ -19,7 +19,7 @@ There are various reasons why [connection](/power-automate/add-manage-connection
 - [Inactivity for a long time](#inactivity-for-a-long-time)
 - [Connection issue related to attended mode](#connection-issue-related-to-attended-mode)
 - [Password modification by a user](#password-modification-by-a-user)
-- [Azure Active Directory (AAD) configuration is changed](#azure-active-directory-aad-configuration-is-changed)
+- [Microsoft Entra ID configuration is changed](#microsoft-entra-id-configuration-is-changed)
 - [Connection owner account is deleted or disabled](#connection-owner-account-is-deleted-or-disabled)
 - [Tenant administrator disables the application](#tenant-administrator-disables-the-application)
 
@@ -104,9 +104,9 @@ You might also receive the following error message:
 
 Every time a user updates the password, the existing connection with the password becomes invalid, so the user must create a new connection for each of those connectors or edit the existing connection. To avoid this issue, use services like [Microsoft Entra ID](/entra/fundamentals/whatis).
 
-## Azure Active Directory (AAD) configuration is changed
+## Microsoft Entra ID configuration is changed
 
-This refers to modifications made at the Azure Active Directory (AAD) level that affect user identities or access policies. These changes include moving to a new location, altering user roles, or updating security settings. Such changes might invalidate existing tokens and require users to reauthenticate.
+This refers to modifications made at the Microsoft Entra ID (formerly Azure Active Directory) level that affect user identities or access policies. These changes include moving to a new location, altering user roles, or updating security settings. Such changes might invalidate existing tokens and require users to reauthenticate.
 
 You might also receive the following error message:
 
@@ -132,7 +132,7 @@ To resolve this issue, another user with access can reauthorize the connection, 
 
 ## Tenant administrator disables the application
 
-This refers to a situation where the tenant administrator has deactivated an application registered in Azure Active Directory (AAD). This action invalidates any service principal connections associated with the application, as it can no longer issue tokens.
+This refers to a situation where the tenant administrator has deactivated an application registered in Microsoft Entra ID (formerly Azure Active Directory). This action invalidates any service principal connections associated with the application, as it can no longer issue tokens.
 
 You might also receive the following error message:
 
