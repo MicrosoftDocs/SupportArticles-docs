@@ -2,7 +2,7 @@
 title: Browser Automation Security Updates
 description: Provides security updates for the Browser automation component in Microsoft Power Automate for desktop.
 ms.reviewer: nimoutzo, iopanag
-ms.date: 01/16/2025
+ms.date: 01/23/2025
 ms.custom: sap:Desktop flows\UI or browser automation
 ---
 # Security updates for the Browser automation component in Microsoft Power Automate for desktop
@@ -34,17 +34,19 @@ To mitigate the issue, update your Power Automate for desktop to the following p
 
 ## Impact of the patch
 
-In the updated versions, when the Browser automation attempts to navigate to a potentially malicious URL, it will display a warning prompt with relevant details. The user can choose to continue or stop the navigation.
+In the updated versions, when the Browser automation attempts to navigate to a potentially malicious URL, it will display a warning dialog with relevant details. The user can choose to continue or stop the navigation.
 
-If a flow is disrupted by this dialog and a navigation is considered legitimate, you can mitigate this by disabling warning dialogs for specific categories of URLs by adding their protocols to the allow list in the UI Automation configuration file. You can find instructions on how to create the file [here](/power-automate/desktop-flows/desktop-application-crashes-ui-automation#how-to-create-the-configuration-file). The key to add in this case is `AutomationBrowser.ProtocolAllowList` and the value is the protocols that you want to allow comma separated. For example:
+If a flow is disrupted by this dialog and a navigation is considered legitimate, you can mitigate the issue by disabling warning dialogs for specific categories of URLs by adding their protocols to the allow list in the [UI Automation configuration file](desktop-application-crashes-ui-automation.md#how-to-create-the-configuration-file). The key to add in this case is `AutomationBrowser.ProtocolAllowList` and the value is the protocols that you want to allow comma-separated. For example:
+
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <configuration>
-	<appSettings>
-		<!-- Other configurations -->
+    <appSettings>
+        <!-- Other configurations -->
 
-		<add key="AutomationBrowser.ProtocolAllowList" value="http,https" />
-	</appSettings>
+        <add key="AutomationBrowser.ProtocolAllowList" value="http,https" />
+    </appSettings>
 </configuration>
 ```
-With the above, if a navigation to a URL would cause the dialog to appear and the URL uses the `http` or `https` protocols, the dialog will be suppressed.
+
+With this configuration, if a navigation to a URL would cause the dialog to appear and the URL uses the `http` or `https` protocols, the dialog will be suppressed.
