@@ -3,8 +3,6 @@ title: Web Automation actions fail when Machine Runtime and MSIX PAD versions ar
 description: Solves web automation errors when Machine Runtime and MSIX PAD versions are different
 ms.custom: sap:Desktop flows\UI or Browser automation issues
 ms.date: 01/20/2025
-ms.author: amitrou 
-author: amitrou
 ---
 
 # Web Automation actions fail when Machine Runtime and MSIX PAD versions are not synced

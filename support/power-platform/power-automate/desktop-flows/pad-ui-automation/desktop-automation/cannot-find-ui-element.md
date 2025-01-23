@@ -3,8 +3,6 @@ title: Cannot find UI element
 description: Solves a runtime error when UI element cannot be found
 ms.custom: sap:Desktop flows\UI or Browser automation issues
 ms.date: 01/20/2025
-ms.author: amitrou 
-author: amitrou
 ---
 # Cannot find UI element
 

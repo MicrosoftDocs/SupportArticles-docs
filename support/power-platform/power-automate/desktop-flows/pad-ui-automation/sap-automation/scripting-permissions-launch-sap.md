@@ -3,8 +3,6 @@ title: Error when launching SAP
 description: Solves errors in lauch sap action
 ms.custom: sap:Desktop flows\UI or Browser automation issues
 ms.date: 01/22/2025
-ms.author: amitrou 
-author: amitrou
 ---
 
 # Error when launching SAP

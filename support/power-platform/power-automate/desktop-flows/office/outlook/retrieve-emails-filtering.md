@@ -3,8 +3,6 @@ title: Outlook retrieve emails filtering issues
 description: Solves issues regarding the filtering email messages in outlook
 ms.custom: sap:Desktop flows\UI or Browser automation issues
 ms.date: 01/22/2025
-ms.author: amitrou 
-author: amitrou
 ---
 
 # Outlook retrieve emails filtering issues

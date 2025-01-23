@@ -3,13 +3,11 @@ title: Launch Excel Action failures
 description: Solves various issues regarding the launch excel action.
 ms.custom: sap:Desktop flows\UI or Browser automation issues
 ms.date: 01/22/2025
-ms.author: amitrou 
-author: amitrou
 ---
 
-# Launch Excel Action failures
+# Launch Excel action failures
 
-## Symptom(s)
+## Symptoms
 
 Launching an excel document could lead to errors containing the below information:
 
@@ -22,12 +20,12 @@ Launching an excel document could lead to errors containing the below informatio
 
 ## Detection
 
-- The above issues could occur when launching an excel document, either a blank or an existing file.
+The above issues could occur when launching an excel document, either a blank or an existing file.
 
 ## Cause
 
-1. Either office apps (or just Excel) are not properly installed, Power automate desktop is not properly installed or the excel file is synchronized with onedrive drive.
-2. Excel application is not installed on the machine.
+1. Either office apps (or just Excel) aren't properly installed, Power Automate desktop isn't properly installed or the excel file is synchronized with OneDrive drive.
+2. Excel application isn't installed on the machine.
 3. The document is located in a restricted path, or pad doesn't have permission to launch and access the document.
 4. The excel application is locked and no other process can access it.
 5. Incompatible version of excel.
@@ -35,7 +33,7 @@ Launching an excel document could lead to errors containing the below informatio
 
 ## Resolution
 
-1. Manually unistall and re-install pad. If it doesn't work, manually unistall and re-install excel.
+1. Manually unistall and reinstall pad. If it doesn't work, manually unistall and reinstall excel.
 2. Install excel on the machine.
 3. Move the file into a directory where pad has access.
 4. Terminate all opened excel processes and restart pad

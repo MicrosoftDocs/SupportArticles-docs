@@ -3,8 +3,6 @@ title: Troubleshooting Java automation in PAD
 description: Solves java automation issues with PAD
 ms.custom: sap:Desktop flows\UI or Browser automation issues
 ms.date: 01/22/2025
-ms.author: amitrou 
-author: amitrou
 ---
 
 # Troubleshooting Java automation in PAD

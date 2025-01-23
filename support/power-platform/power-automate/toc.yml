@@ -72,7 +72,7 @@
       items:
         - name: Excel
           items:
-            - name: Launch Excel Action failures
+            - name: Launch Excel action failures
               href: desktop-flows/office/excel/launch-excel-action-failures.md
         - name: Outlook
           items:
