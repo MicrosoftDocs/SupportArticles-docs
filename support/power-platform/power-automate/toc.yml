@@ -68,6 +68,16 @@
           items:
             - name: Error is shown when hovering on Remote App-Desktop
               href: desktop-flows/pad-ui-automation/rdp-automation/rdp-no-highlight.md
+    - name: Office
+      items:
+        - name: Excel
+          items:
+            - name: Launch Excel Action failures
+              href: desktop-flows/office/excel/launch-excel-action-failures.md
+        - name: Outlook
+          items:
+            - name: Outlook retrieve emails filtering issues
+              href: desktop-flows/office/outlook/retrieve-emails-filtering.md
     - name: A desktop application crashes due to UI automation
       href: desktop-flows/desktop-application-crashes-ui-automation.md
     - name: '"Could not read the application certificate" error when creating a connection'
