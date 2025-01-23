@@ -49,4 +49,4 @@ If this dialog disrupts a flow and the navigation is considered legitimate, you 
 </configuration>
 ```
 
-With this configuration, if navigating to a URL causes the dialog to appear and the URL uses the `http` or `https` protocols, the dialog will be suppressed.
+With this configuration, if navigating to a URL causes the dialog to appear and the URL uses the `http` or `https` protocol, the dialog will be suppressed.
