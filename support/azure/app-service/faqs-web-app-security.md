@@ -14,7 +14,7 @@ This article provides answers to common questions about Azure App Service securi
 
 ## FAQs
 
-### How do I know whether a specific CVE (common vulnerability) or known security issue applies to my web app?
+### How do I know whether a specific CVE (Common Vulnerabilities and Exposures) or known security issue applies to my web app?
 
 [Microsoft Security Response Center](https://msrc.microsoft.com/) (MSRC) investigates all reports of security vulnerabilities that affect Microsoft products and services. MSRC provides this information in the [Security Update Guide](https://msrc.microsoft.com/update-guide/vulnerability) as part of an ongoing effort to help you manage security risks and keep your systems protected.
 
