@@ -3,7 +3,7 @@ title: Azure Files performance troubleshooting guide
 description: Troubleshoot performance issues with Azure file shares and discover potential causes and associated workarounds for these problems.
 ms.service: azure-file-storage
 ms.custom: sap:Performance, linux-related-content
-ms.date: 05/21/2024
+ms.date: 01/23/2025
 ms.reviewer: kendownie, v-weizhu
 #Customer intent: As a system admin, I want to troubleshoot performance issues with Azure file shares to improve performance for applications and users.
 ---
@@ -265,11 +265,9 @@ Lack of support for directory leases.
 
 ## Slow enumeration of files and folders
 
-### Cause
+This problem can occur if there isn't enough cache or memory on the client machine for large directories.
 
-This problem can occur if there isn't enough cache on the client machine for large directories.
-
-### Solution
+## [Windows](#tab/windows)
 
 To resolve this problem, adjust the `DirectoryCacheEntrySizeMax` registry value to allow caching of larger directory listings in the client machine:
 
@@ -278,6 +276,12 @@ To resolve this problem, adjust the `DirectoryCacheEntrySizeMax` registry value 
 - Value type: DWORD
 
 For example, you can set it to `0x100000` and see if performance improves.
+
+## [Linux](#tab/linux)
+
+The amount of memory available influences the number of inode hash buckets the system has, which impacts/improves enumeration performance for large directories. You can modify the number of hash buckets the system has to reduce the hash collisions that can occur during large enumeration workloads. For instructions, see [Increase the number of hash buckets](/azure/storage/files/nfs-large-directories#increase-the-number-of-hash-buckets).
+
+---
 
 ## Slow file copying to and from Azure file shares
 
