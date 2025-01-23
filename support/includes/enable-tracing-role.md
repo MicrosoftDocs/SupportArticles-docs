@@ -1,0 +1,4 @@
+1. Open Server Manager, select **Manage** > **Add Roles and Features**.
+1. In the **Add Roles and Features** wizard, select **Next** until you reach the **Server Roles** page.
+1. Expand **Web Server (IIS)** > **Web Server** > **Health and Diagnostics**, and check the **Tracing** checkbox.
+1. Select **Next** for the subsequent steps and then select **Install**.
