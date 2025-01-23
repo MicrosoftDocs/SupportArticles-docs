@@ -292,7 +292,7 @@ To capture a PerfView trace and dumps, follow the steps in the following section
    > [!NOTE]
    > Replace `<PID of W3WP.exe>` with the actual PID of the **W3WP.exe** process you found in step 4.
 
-    - You can specify a path at the end of the command to store the dumps in a specific location.
-    - This command will capture 3 sets of dumps at 10-second intervals.
+   - You can specify a path at the end of the command to store the dumps in a specific location.
+   - This command will capture 3 sets of dumps at 10-second intervals.
 
 1. Once the dumps are collected by procdump, stop PerfView by selecting **Stop collection**, or wait for 2.5 minutes for it to stop automatically. Allow PerfView to merge the collected data, which may take some time. And it will generate a **Perfview.etl.zip** file. If you get prompt for symbols, select **Use Microsoft Symbol Servers**.
