@@ -33,7 +33,7 @@ The above issues could occur when launching an excel document, either a blank or
 
 ## Resolution
 
-1. Manually unistall and reinstall pad. If it doesn't work, manually unistall and reinstall excel.
+1. Manually uninstall and reinstall pad. If it doesn't work, manually uninstall and reinstall excel.
 2. Install excel on the machine.
 3. Move the file into a directory where pad has access.
 4. Terminate all opened excel processes and restart pad
