@@ -88,7 +88,7 @@
       "feedback_product_url": {
         "dynamics/gp/*.md": "https://experience.dynamics.com/ideas/categories/?forum=771cc5ac-c117-e811-8105-3863bb2e0320&forumName=Dynamics%20GP",
         "dynamics-365/customer-insights/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights",
-        "dynamics-365/business-central/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=e288ef32-82ed-e611-8101-5065f38b21f1&forumName=Dynamics%20365%20Business%20Central",        
+        "dynamics-365/business-central/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=e288ef32-82ed-e611-8101-5065f38b21f1&forumName=Dynamics%20365%20Business%20Central",
         "dynamics-365/finance/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=16691718-61e2-e611-8101-5065f38b21f1&forumName=Dynamics%20365%20Finance",
         "dynamics-365/commerce/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=fd509429-7e87-e711-8105-c4346bb5988c&forumName=Dynamics%20365%20Commerce",
         "dynamics-365/customer-service/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=b68e50a6-88d9-e811-a96b-000d3a1be7ad&forumName=Dynamics%20365%20Customer%20Service",
@@ -123,7 +123,8 @@
         "azure/site-recovery/**/*.md": "https://feedback.azure.com/d365community/forum/3ccca344-2d25-ec11-b6e6-000d3a4f0f84",
         "azure/synapse-analytics/**/*.md": "https://feedback.azure.com/d365community/forum/9b9ba8e4-0825-ec11-b6e6-000d3a4f07b8",
         "azure/cosmos-db/**/*.md": "https://feedback.azure.com/d365community/forum/3002b3be-0d25-ec11-b6e6-000d3a4f0858",
-        "azure/general/*.md": "https://learn.microsoft.com/answers/tags/133/azure"
+        "azure/general/*.md": "https://learn.microsoft.com/answers/tags/133/azure",
+        "azure/virtual-desktop/**/*.md": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/idb-p/AzureVirtualDesktop"
       },
       "layout": {
         "**/index.yml": "LandingPage"
@@ -136,6 +137,7 @@
       },
       "author": {
         "**/*.md": "ChristySu",
+        "azure/virtual-desktop/**/*.*": "Deland-Han",
         "azure/**/*.md": "genlin",
         "entra/**/*.md": "genlin",
         "azure/devops/**/*.md": "HaiyingYu",
@@ -169,6 +171,7 @@
       },
       "ms.author": {
         "**/*.md": "christys",
+        "azure/virtual-desktop/**/*.*": "delhan",
         "azure/**/*.md": "genli",
         "entra/**/*.md": "genli",
         "azure/devops/**/*.md": "haiyingyu",
@@ -207,6 +210,7 @@
         "azure/azure-functions/**/*.md": "azure-functions",
         "azure/synapse-analytics/**/*.md": "azure-synapse-analytics",
         "azure/cosmos-db/**/*.md": "azure-cosmos-db",
+        "azure/virtual-desktop/**/*.md": "azure-virtual-desktop",
         "power-platform/power-apps/**/**.*": "powerapps",
         "power-platform/power-pages/**/**.*": "power-pages",
         "power-platform/power-automate/**/*.md": "power-automate",
@@ -284,6 +288,7 @@
         "azure/devops/*.md": "Azure DevOps",
         "azure/synapse-analytics/**/*.md": "Azure Synapse Analytics",
         "azure/cosmos-db/**/*.md": "Azure Cosmos DB",
+        "azure/virtual-desktop/**/*.md": "Azure Virtual Desktop",
         "dynamics-365/business-central/**/*.md": "Dynamics 365 Business Central",
         "dynamics-365/customer-insights/**/*.md": "Dynamics 365 Customer Insights",
         "dynamics-365/customer-service/**/*.md": "Dynamics 365 Customer Service",
