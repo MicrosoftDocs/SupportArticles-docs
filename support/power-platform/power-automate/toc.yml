@@ -59,11 +59,11 @@
         - name: Java Automation
           items:
             - name: Troubleshooting Java automation in PAD
-              href: desktop-flows/pad-ui-automation/java_automation/troubleshooting-java-pad.md
+              href: desktop-flows/pad-ui-automation/java-automation/troubleshooting-java-pad.md
         - name: Sap Automation
           items:
             - name: Error when launching SAP
-              href: desktop-flows/pad-ui-automation/web-automation/scripting-permissions-launch-sap.md
+              href: desktop-flows/pad-ui-automation/sap-automation/scripting-permissions-launch-sap.md
         - name: Rdp/Citrix
           items:
             - name: Error is shown when hovering on Remote App-Desktop
