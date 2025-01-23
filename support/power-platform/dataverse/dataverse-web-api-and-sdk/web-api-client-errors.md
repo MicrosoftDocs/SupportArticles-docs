@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Web API client errors
 description: Provides resolutions for the common client errors that occur when you use the Dataverse Web API.
-ms.date: 06/12/2024
+ms.date: 01/23/2024
 ms.custom: sap:Dataverse Web API and SDK\Odata endpoint errors
 author: divkamath
 ms.author: dikamath
@@ -113,7 +113,7 @@ HTTP/1.1 404 Not Found
 
 ### Cause
 
-This error occurs when the incorrect HTTP method is applied to a function or action. In this case, [WhoAmI Function](xref:Microsoft.Dynamics.CRM.WhoAmI) requires the use of `GET` but `POST` was used.
+This error occurs when the incorrect HTTP method is applied to a function or action. In this case, the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI) requires the use of `GET` but `POST` was used.
 
 ### How to avoid
 
@@ -271,13 +271,11 @@ In this case, just adding a carriage return at the end of the last line is enoug
 
 Ensure all line endings in the `$batch` request body are `CRLF`. If you can't use `CRLF`, add two non-`CRLF` line endings at the end of the batch request body to resolve this deserialization error. For more information, see [Batch requests](/power-apps/developer/data-platform/webapi/execute-batch-operations-using-web-api#batch-requests).
 
-## Invalid OData Annotation values inside Prefer request header value
-
-These errors occur when Dataverse Web API receives requests with an invalid `odata.include-annotations` value inside the `Prefer` request header values.
+## Error identified on the 'odata.include-annotations' value inside the 'Prefer' header
 
 ### Symptoms
 
-This error occurs when you send a request using `POST`, `PATCH`, or `PUT` Http methods and a `Prefer` request header that contains an invalid value. In the following example, the `odata.include-annotations` value is incorrectly including back slashes '`\`' to escape the quote characters.
+The error occurs when the [Dataverse Web API](/power-apps/developer/data-platform/webapi/overview) receives a request with an invalid `odata.include-annotations` value in the `Prefer` request header value. This issue occurs when the request is sent using the `POST`, `PATCH`, `PUT` or `GET` HTTP methods with a `Prefer` request header that contains an invalid or improperly formatted value. For example, the `odata.include-annotations` value incorrectly includes backslashes '`\`' to escape the quote characters.
 
 **Request**
 
@@ -290,10 +288,7 @@ Prefer: odata.include-annotations=\"*\"
   "firstname":"test",
   "lastname":"contact"
 }
-
 ```
-
-You get the following error when you submit a `POST`, `PATCH`, or `PUT` request.
 
 **Response**
 
@@ -306,18 +301,15 @@ HTTP/1.1 400 Bad Request
   See exception message for more details 'An error occurred when parsing the HTTP header 'Prefer'. The header value 'odata.include-annotations=\\\"*\\\"' is incorrect at position '26' because the escape character '\\' is not inside a quoted-string.'.",
   "ErrorCode": "0x80097303"
 }
-
 ```
-
-You get the same error when sending a request using `GET` with an improperly formatted `odata.include-annotations` value.
 
 ### Cause
 
-To provide a more secure service, we fixed an issue that allowed invalid `Prefer` request header values to be processed when using `POST`, `PATCH`, or `PUT` without being validated first. Now, validation occurs regardless of the HTTP method. This error will occur starting with Dataverse version `9.2.2412.3` which began deployment in January of 2025 and will be deployed to all regions in February of 2025.
+To provide a more secure service, we have fixed an issue where invalid `Prefer` request header values were processed without validation when using the `POST`, `PATCH`, or `PUT` HTTP methods. Now, validation is enforced for all HTTP methods. This error will occur starting with Dataverse version 9.2.2412.3 that began deployment in January 2025 and will be deployed to all regions by February 2025.
 
 ### How to avoid
 
-Review the guidance about how to properly set [Prefer Headers in the Dataverse Web API documentation](/power-apps/developer/data-platform/webapi/compose-http-requests-handle-errors#prefer-headers).
+Review the guidance about how to properly set [Prefer headers in the Dataverse Web API](/power-apps/developer/data-platform/webapi/compose-http-requests-handle-errors#prefer-headers).
 
 ## See also
 
