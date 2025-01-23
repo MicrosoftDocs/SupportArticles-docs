@@ -3,8 +3,6 @@ title: Error is shown when hovering on Remote App-Desktop
 description: Solves PAD rdp agent start up issues
 ms.custom: sap:Desktop flows\UI or Browser automation issues
 ms.date: 01/22/2025
-ms.author: amitrou 
-author: amitrou
 ---
 
 # No element is highlighted or Error is shown when hovering on Remote App-Desktop
