@@ -152,6 +152,8 @@
       href: desktop-flows/session-has-logged-off-troubleshooting.md
     - name: 'Security update for "connect with sign-in" connections on AD domain-joined machines'
       href: desktop-flows/connect-with-sign-in-security-update.md
+    - name: Security update for the browser automation component
+      href: desktop-flows/automation-browser-security-update.md  
     - name: Some actions appear to be missing or aren't visible
       href: desktop-flows/actions-not-available.md
     - name: Set drop-down list value in window/on web page action fails
