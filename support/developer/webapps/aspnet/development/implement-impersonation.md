@@ -42,7 +42,7 @@ To impersonate the Internet Information Services (IIS) authenticating user on ev
 To impersonate a specific user for all the requests on all pages of an ASP.NET application, you can specify the `userName` and `password` attributes in the `<identity>` tag of the Web.config file for that application. For example:
 
 ```xml
-<identity impersonate="true" userName="accountname" password="password" />
+<identity impersonate="true" userName="<accountname>" password=<$CREDENTIAL_PLACEHOLDER$>  />
 ```
 
 > [!NOTE]
