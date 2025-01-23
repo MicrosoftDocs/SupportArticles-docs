@@ -1,22 +1,22 @@
 ---
-title: Browser Automation Security Updates
-description: Provides security updates for the Browser automation component in Microsoft Power Automate for desktop.
+title: Browser Automation Security Update
+description: Provides security updates for the browser automation component in Microsoft Power Automate for desktop.
 ms.reviewer: nimoutzo, iopanag
 ms.date: 01/23/2025
 ms.custom: sap:Desktop flows\UI or browser automation
 ---
-# Security updates for the Browser automation component in Microsoft Power Automate for desktop
+# Security update for the browser automation component in Microsoft Power Automate for desktop
 
 ## Summary
 
-A potential security vulnerability is identified in the [Browser automation](/power-automate/desktop-flows/actions-reference/webautomation) component in Power Automate for desktop in versions 2.51 and earlier.
+A potential security vulnerability is identified in the [browser automation](/power-automate/desktop-flows/actions-reference/webautomation) component in Power Automate for desktop versions 2.51 and earlier.
 
-The **Launch Automation Browser** option in the [Launch new Internet Explorer](/power-automate/desktop-flows/actions-reference/webautomation#launchinternetexplorerbase) action may navigate to a potentially malicious URL or compromised website, thereby allowing an attacker to execute arbitrary code on the affected system. Microsoft has issued a [CVE for this issue](https://msrc.microsoft.com/update-guide/advisory/CVE-2025-21187).
+The **Launch automation browser** option in the [Launch new Internet Explorer](/power-automate/desktop-flows/actions-reference/webautomation#launchinternetexplorerbase) action might navigate to a potentially malicious URL or compromised website, thus allowing an attacker to execute arbitrary code on the affected system. Microsoft has issued a [CVE for this issue](https://msrc.microsoft.com/update-guide/advisory/CVE-2025-21187).
 
 > [!IMPORTANT]
-> The issue only affects flows that use the **Launch Automation Browser** option in the **Launch new Internet Explorer** action.
+> The issue affects only flows that use the **Launch automation browser** option in the **Launch new Internet Explorer** action.
 >
-> Flows that use the **Launch Automation Browser** option with public or untrusted websites are the most vulnerable to this issue.
+> Flows that use the **Launch automation browser** option for public or untrusted websites are most vulnerable to this issue.
 
 ## Mitigation
 
@@ -34,9 +34,9 @@ To mitigate the issue, update your Power Automate for desktop to the following p
 
 ## Impact of the patch
 
-In the updated versions, when the Browser automation attempts to navigate to a potentially malicious URL, it will display a warning dialog with relevant details. The user can choose to continue or stop the navigation.
+In the updated versions, when browser automation attempts to navigate to a potentially malicious URL, it will display a warning dialog with relevant details. The user can choose to continue or stop the navigation.
 
-If a flow is disrupted by this dialog and a navigation is considered legitimate, you can mitigate the issue by disabling warning dialogs for specific categories of URLs by adding their protocols to the allow list in the [UI Automation configuration file](desktop-application-crashes-ui-automation.md#how-to-create-the-configuration-file). The key to add in this case is `AutomationBrowser.ProtocolAllowList` and the value is the protocols that you want to allow comma-separated. For example:
+If this dialog disrupts a flow and the navigation is considered legitimate, you can mitigate the issue by disabling the warning dialog for specific categories of URLs by adding their protocols to the allowlist in the [UI Automation configuration file](desktop-application-crashes-ui-automation.md#how-to-create-the-configuration-file). The key to add in this case is `AutomationBrowser.ProtocolAllowList`, and the value is the protocols that you want to allow, separated by commas. For example:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -49,4 +49,4 @@ If a flow is disrupted by this dialog and a navigation is considered legitimate,
 </configuration>
 ```
 
-With this configuration, if a navigation to a URL would cause the dialog to appear and the URL uses the `http` or `https` protocols, the dialog will be suppressed.
+With this configuration, if navigating to a URL causes the dialog to appear and the URL uses the `http` or `https` protocols, the dialog will be suppressed.
