@@ -29,7 +29,7 @@ App Service is a platform that has various underlying technologies, such as Wind
 - Check [this article](/azure/app-service/overview-patch-os-runtime) to understand OS and runtime updating in Azure App Service regarding the OS or software in App Service.
 - Check [Guest OS update details](/azure/cloud-services/cloud-services-guestos-msrc-releases) to understand the updates that are applied to the Azure Guest OS.
 
-If you still need help, gather the following information before you submit a request to [Azure support:
+If you still need help, gather the following information before you submit a request to [Azure support](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot):
 
 - Specify the security update that you're inquiring about.
 - Verify the security update version of the software that's deployed on Azure.
