@@ -10,22 +10,26 @@ ms.service: azure-app-service
 ---
 # Frequently asked questions about App Service security
 
-[Microsoft Security Response Center](https://msrc.microsoft.com/) (MSRC) investigates all reports of security vulnerabilities that affect Microsoft products and services. MSRC provides this information in the [Security Update Guide](https://msrc.microsoft.com/update-guide/vulnerability) as part of an ongoing effort to help you manage security risks and keep your systems protected.
-
-If your question isn't answered here, submit a [support request](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot) that includes the number of the Common Vulnerabilities and Exposures bulletin (CVE). 
-
-To report a vulnerability, see [Report an issue](https://msrc.microsoft.com/report/vulnerability/new).
+This article provides answers to common questions about Azure App Service security.
 
 ## FAQs
 
-### How do I know whether a specific CVE or known security issue applies to my web app?
+### How do I know whether a specific CVE (common vulnerability) or known security issue applies to my Web App?
+
+[Microsoft Security Response Center](https://msrc.microsoft.com/) (MSRC) investigates all reports of security vulnerabilities that affect Microsoft products and services. MSRC provides this information in the [Security Update Guide](https://msrc.microsoft.com/update-guide/vulnerability) as part of an ongoing effort to help you manage security risks and keep your systems protected.
+
+If your question isn't answered and you still need help, submit a [support request](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot) that includes the number of the CVE. 
+
+To report a vulnerability, see [Report an issue](https://msrc.microsoft.com/report/vulnerability/new).
+
+### How do I know when a particular specific version of software or security patch will arrive at the Azure platform runtime?
 
 App Service is a platform that has various underlying technologies, such as Windows, Linux, and web application frameworks. Updates are applied at a routine cadence for OS, host runtime, and Microsoft image repo.
 
 - Check [this article](/azure/app-service/overview-patch-os-runtime) to understand OS and runtime updating in Azure App Service regarding the OS or software in App Service.
 - Check [Guest OS update details](/azure/cloud-services/cloud-services-guestos-msrc-releases) to understand the updates that are applied to the Azure Guest OS.
 
-If you still need help, gather the following information before you submit a request to Azure support:
+If you still need help, gather the following information before you submit a request to [Azure support:
 
 - Specify the security update that you're inquiring about.
 - Verify the security update version of the software that's deployed on Azure.
