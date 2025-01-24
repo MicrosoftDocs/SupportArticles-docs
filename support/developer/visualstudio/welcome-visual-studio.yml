@@ -26,7 +26,7 @@ landingContent:
           - text: Uninstall third-party applications
             url: ./installation/secondary-installer-third-party-app.md
           - text: OS requirements for Visual Studio 2022
-            url: ./general/visual-studio-2022-unsupported-operating-systems.md
+            url: ./installation/visual-studio-2022-unsupported-operating-systems.md
           - text: Resolve common setup errors
             url: ./installation/issues-workarounds-visual-studio-setup.md
   - title: Language or Compilers

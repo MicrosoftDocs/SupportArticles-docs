@@ -36,6 +36,10 @@
   href: ./project-build/toc.yml
 - name: Team Explorer/Version control
   items:
+  - name: Alternate credentials don't work for Online accounts
+    href: ./version-control/alternate-credentials-stop-working.md
+  - name: Can't switch between organizational accounts
+    href: ./version-control/cannot-switch-accounts.md
   - name: Excel or Project can't connect to Team Foundation Server
     href: ./version-control/excel-project-cannot-connect-tfs-2010.md
   - name: Solution Platform drop-down list isn't visible
@@ -54,19 +58,13 @@
     href: ./third-party/jdk-installation-fails.md
 - name: Tools and utilities
   items:
-  - name: Can't start Windows Simulator
-    href: ./tools-utilities/cannot-start-windows-simulator.md
   - name: Can't use Custom Report Items in SSDT
     href: ./tools-utilities/cannot-use-custom-report-items-ssdt.md
-  - name: NuGet-based Package Manager is missing
-    href: ./tools-utilities/nuget-based-package-manager-missing.md
-  - name: Troubleshoot XAML Hot Reload
-    href: ./tools-utilities/xaml-hot-reload-troubleshooting.md
   - name: Troubleshoot Office solution security
     href: ./tools-utilities/troubleshooting-office-solution-security.md
   - name: Troubleshoot Office solution deployment
     href: ./tools-utilities/troubleshooting-office-solution-deployment.md
+  - name: Troubleshoot specific errors in ClickOnce deployments
+    href: ./tools-utilities/troubleshoot-clickonce-deployments.md
   - name: Troubleshoot issues in Office solutions
     href: ./tools-utilities/troubleshooting-errors-in-office-solutions.md
-  - name: Troubleshoot references to WCF or WCF Data Services
-    href: ./tools-utilities/troubleshooting-service-references.md
