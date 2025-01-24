@@ -4,7 +4,7 @@ description: Resolves the incorrect booking timestamp created when the booking s
 ms.author: andreo
 author: Andrea-Orimoto
 ms.reviewer: mhart
-ms.date: 12/21/2023
+ms.date: 01/24/2025
 ms.custom: sap:Mobile application
 ---
 # Booking timestamp is created with an incorrect time in the Field Service mobile app
@@ -23,7 +23,7 @@ Here are some ways to resolve scenarios that result in incorrect timestamps.
 
   To solve this issue, add the **Offline Timestamp** field back to the form.
 
-- The default booking [JavaScript library on a booking form](/dynamics365/field-service/field-service-customize-scripts#form-libraries is disabled or removed).
+- The default booking [JavaScript library on a booking form](/dynamics365/field-service/field-service-customize-scripts#form-libraries) is disabled or removed.
 
   To solve this issue, ensure the default scripts and events are enabled.
 
