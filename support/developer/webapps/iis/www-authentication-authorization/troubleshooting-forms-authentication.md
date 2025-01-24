@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting Forms Authentication
 description: This article helps you troubleshoot problems related to Forms Authentication.
-ms.date: 01/20/2025
+ms.date: 01/24/2025
 ms.reviewer: senyum, apurvajo, v-jayaramanp
 ms.topic: troubleshooting
 ms.custom: sap:WWW Authentication and Authorization\Forms authentication
