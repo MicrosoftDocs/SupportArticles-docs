@@ -44,7 +44,7 @@ Connectivity issues in Azure Synapse Studio are typically caused by configuratio
 - Investigate issues related to security and permissions:
 
   - [Workspaces, data, and pipelines](/azure/synapse-analytics/sql/access-control)
-  - [Managed identities](https://learn.microsoft.com/azure/synapse-analytics/synapse-service-identity)
+  - [Managed identities](/azure/synapse-analytics/synapse-service-identity)
   - [Database access](/azure/azure-sql/database/logins-create-manage?toc=%2Fazure%2Fsynapse-analytics%2Ftoc.json&bc=%2Fazure%2Fsynapse-analytics%2Fbreadcrumb%2Ftoc.json)
 
 ## Failed to load one or more resources due to a forbidden issue with error code 403
