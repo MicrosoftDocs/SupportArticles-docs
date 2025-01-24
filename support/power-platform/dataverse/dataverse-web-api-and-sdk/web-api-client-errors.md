@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Web API client errors
 description: Provides resolutions for the common client errors that occur when you use the Dataverse Web API.
-ms.date: 01/23/2024
+ms.date: 01/24/2024
 ms.custom: sap:Dataverse Web API and SDK\Odata endpoint errors
 author: divkamath
 ms.author: dikamath
@@ -113,7 +113,7 @@ HTTP/1.1 404 Not Found
 
 ### Cause
 
-This error occurs when the incorrect HTTP method is applied to a function or action. In this case, the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI) requires the use of `GET` but `POST` was used.
+This error occurs when the incorrect HTTP method is applied to a function or action. In this case, the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI) requires the use of `GET` but `POST` is used.
 
 ### How to avoid
 
@@ -205,7 +205,7 @@ HTTP/1.1 400 Bad Request
 
 #### Cause
 
-This error occurs because there's no single-valued navigation property in the contact entity type named `parentcustomerid`. For more information, see [contact EntityType > Single-valued navigation properties](/power-apps/developer/data-platform/webapi/reference/contact#single-valued-navigation-properties).
+This error occurs because there's no single-valued navigation property in the contact entity type named `parentcustomerid`. For more information, see [Single-valued navigation properties](/power-apps/developer/data-platform/webapi/reference/contact#single-valued-navigation-properties).
 
 `parentcustomerid` is the logical name of a lookup column in the contact table. All lookups have one or more single-valued navigation properties in OData. The names of the lookup properties don't always match the corresponding single-valued navigation property name.
 
@@ -275,9 +275,9 @@ Ensure all line endings in the `$batch` request body are `CRLF`. If you can't us
 
 ### Symptoms
 
-The error occurs when the [Dataverse Web API](/power-apps/developer/data-platform/webapi/overview) receives a request with an invalid `odata.include-annotations` value in the `Prefer` request header value. This issue occurs when the request is sent using the `POST`, `PATCH`, `PUT` or `GET` HTTP methods with a `Prefer` request header that contains an invalid or improperly formatted value. 
+The error occurs when the [Dataverse Web API](/power-apps/developer/data-platform/webapi/overview) receives a request with an invalid `odata.include-annotations` value in the `Prefer` request header value. This issue occurs when the request is sent using the `POST`, `PATCH`, `PUT`, or `GET` HTTP methods with a `Prefer` request header that contains an invalid or improperly formatted value. 
 
-In the following example, the `odata.include-annotations` value incorrectly includes backslashes '`\`' to escape the quote characters.
+In the following example, the `odata.include-annotations` value incorrectly includes backslashes (\) to escape the quote characters.
 
 **Request**
 
@@ -307,7 +307,7 @@ HTTP/1.1 400 Bad Request
 
 ### Cause
 
-To provide a more secure service, we have fixed an issue where invalid `Prefer` request header values were processed without validation when using the `POST`, `PATCH`, or `PUT` HTTP methods. Now, validation is enforced for all HTTP methods. This error will occur starting with Dataverse version 9.2.2412.3 that began deployment in January 2025 and will be deployed to all regions by February 2025.
+To provide a more secure service, we fix an issue where invalid `Prefer` request header values are processed without validation when using the `POST`, `PATCH`, or `PUT` HTTP methods. Now, validation is enforced for all HTTP methods. This error occurs starting with Dataverse version 9.2.2412.3 that begins deployment in January 2025 and will be deployed to all regions by February 2025.
 
 ### How to avoid
 
