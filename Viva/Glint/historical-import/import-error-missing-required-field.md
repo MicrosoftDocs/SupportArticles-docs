@@ -26,12 +26,13 @@ Here is an example:
 
 ## Cause
 
-This issue occurs because the .csv file that's imported into Viva Glint isn't encoded correctly.
+This issue occurs because the .csv file that's imported into Viva Glint is missing one of the required fields for your Raw Score File. 
 
 ## Resolution
 
 To fix the issue, follow these steps:
 
-1. Open the .csv file in a text editor, such as Notepad++ or Sublime.
-1. Resave the file in UTF-8 encoding. (Don't save the file in UTF-8 with BOM encoding.)
-1. Import the file again.
+1. If the data file has a .csv extension, use the [Text Import Wizard](https://support.microsoft.com/office/text-import-wizard-c5b02af6-fda1-4440-899f-f78bafe41857) to import the data into Excel by preserving the data in the original format.
+2. Review required columns for historical import [Raw Score Files](/viva/glint/setup/import-historical-response-data#raw-score-file).
+3. Update column headers and columns to match requirements.
+4. Save the edited file as .csv with UTF-8 encoding (with or without BOM), and then upload the file again.
