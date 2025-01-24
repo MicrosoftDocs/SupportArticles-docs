@@ -3,7 +3,7 @@ title: How to uninstall Manufacturing if installed accidentally
 description: Describes how to uninstall Manufacturing in Microsoft Dynamics GP if Manufacturing is installed accidentally.
 ms.reviewer: theley, beckyber
 ms.topic: how-to
-ms.date: 03/20/2024
+ms.date: 1/24/2025
 ms.custom: sap:Manufacturing Series
 ---
 # How to uninstall Manufacturing in Microsoft Dynamics GP if Manufacturing is installed accidentally
@@ -21,7 +21,7 @@ _Original KB number:_ &nbsp; 950742
 
 To uninstall Manufacturing, follow these steps:
 
-1. Insert Microsoft Dynamics GP 10.0 CD 1 into the CD drive.
+1. Use the installation wizard to [add or remove features from your Dynamics GP installation](https://learn.microsoft.com/en-us/dynamics-gp/installation/installing-additional-components#adding-or-removing-additional-features).
 2. In the **What do you want to do** list, select **Change Existing Installation**.
 3. On the **Program Maintenance** page, select **Add/Remove Features**.
 4. On the **Select Features** page, select **Entire feature will not be available** in the **Manufacturing** field.
@@ -42,10 +42,8 @@ To uninstall Manufacturing, follow these steps:
 
     1. Follow the appropriate step:
 
-       - If you are using Microsoft SQL Server 2005, start SQL Server Management Studio. To do this, select **Start**, point to **Programs**, point to **Microsoft SQL Server 2005**, and then select **SQL Server Management Studio**.
-       - If you are using Microsoft SQL Server 2000, start SQL Query Analyzer. To do this, select **Start**, point to **Programs**, point to **Microsoft SQL Server**, and then select **Query Analyzer**.
-       - If you are using Microsoft SQL Server 2000 Desktop Engine (also known as MSDE 2000), start the Support Administrator Console. To do this, select **Start**, point to **Programs**, point to **Microsoft Administrator Console**, and then select **Support Administrator Console**.
-
+       - Start SQL Server Management Studio. To do this, select **Start**, point to **Programs**, point to **Microsoft SQL Server**, and then select **SQL Server Management Studio**.
+       
     2. Run the following statement against each company database in which Manufacturing is installed.
 
         ```console
