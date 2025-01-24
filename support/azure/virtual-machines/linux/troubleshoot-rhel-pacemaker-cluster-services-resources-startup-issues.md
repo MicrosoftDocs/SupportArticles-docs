@@ -19,7 +19,7 @@ This article discusses the most common causes of startup issues in RedHat Enterp
 
 ## Scenario 1: Can't start cluster service because of quorum
 
-###  Symptoms
+### Symptom
 
 - Cluster node don't join a cluster after a cluster restart
 - Nodes are reported as `UNCLEAN (offline)`
@@ -145,7 +145,7 @@ sudo pcs cluster reload corosync
 
 ## Scenario 2: Issue in cluster VIP resource
 
-### Symptoms
+### Symptom
 
 A virtual IP resource (`IPaddr2` resource) didn't start or stop in Pacemaker.
 
@@ -329,7 +329,7 @@ node-0	DEMOTED		10		online		logreplay	node-1 	4:S:master1:master:worker:master	5
 node-1	PROMOTED	1693237652	online		logreplay	node-0 	4:P:master1:master:worker:master	150	SITEA	syncmem	PRIM	2.00.046.00.1581325702	node-1
 ```
 
-## Resolution 1
+### Resolution 1
 
 The SAP HANA resource can't be started by Pacemaker if there are `SYN` failures between the primary and secondary cluster nodes. To mitigate this issue, you must manually enable `SYN` between the primary and secondary nodes.
 
@@ -613,7 +613,7 @@ For more information about this scenario, see the following Red Hat article: [SA
 
 ## Scenario 4: Issue that affect the ASCS and ERS resources
 
-### Symptoms
+### Symptom
 
 ASCS and ERS instances can't start under cluster control. The `/var/log/messages` log indicates The following errors:
 
