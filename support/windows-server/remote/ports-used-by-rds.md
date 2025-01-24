@@ -39,7 +39,7 @@ The information and taxonomy are broken down by role, service, and component, an
   > [!NOTE]
   > Firewalls that have directional UDP analysis, such as TMG, require UDP "Send Receive" to be configured.
 
-### Internal traffic between the Gateway and the required User AD, Resource AD, DNS, NPS and so on
+### Internal traffic between the Gateway and the required user AD, resource AD, DNS, NPS, and so on
 
 - TCP 88: Used by Kerberos for user authentication.
 - TCP 135: Used by the Remote Procedure Call (RPC) Endpoint Mapper. It's the port on which the NTDS RPC services listen on Active Directory (AD).
@@ -62,14 +62,14 @@ The information and taxonomy are broken down by role, service, and component, an
 If RD Web Access is on a perimeter network, configure the following ports:
 
 - TCP: \<WMI Fixed Port\>
-- TCP 5504: Used for connections to RDCB for centralized publishing。
-- TCP 5985: Used by WMI and PowerShell Remoting for administration。
+- TCP 5504: Used for connections to RDCB for centralized publishing.
+- TCP 5985: Used by WMI and PowerShell Remoting for administration.
 
 ## Remote Desktop Session Host
 
 - RD License Server: RPC ports.
-- TCP 389 and 636: Used for AD communication。
-- TCP 5985: Used by WMI and PowerShell Remoting for administration。
+- TCP 389 and 636: Used for AD communication.
+- TCP 5985: Used by WMI and PowerShell Remoting for administration.
 
 ## Remote Desktop Virtualization Host
 
@@ -97,6 +97,6 @@ For more information, see [How to configure RPC dynamic port allocation to work 
 
 - UDP 137: Used for NetBIOS name resolution.
 - UDP 138: Used by the NetBIOS Datagram Service.
-- UDP and TCP 389: Used by LDAP that is used with per-user CALs against AD.
+- UDP and TCP 389: Used by LDAP with per-user Client Access Licenses (CALs) in AD.
 
 From a proxy standpoint, the registry key `HKLM\Software\Microsoft\TermServLicensing\lrwiz\Params` shows the Microsoft service that the RD License Server communicates with.
