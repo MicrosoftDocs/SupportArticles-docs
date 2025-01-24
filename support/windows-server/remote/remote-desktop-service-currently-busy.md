@@ -8,7 +8,6 @@ ms.topic: troubleshooting
 ms.reviewer: kaushika, rklemen, v-lianna
 ms.custom: sap:Remote Desktop Services and Terminal Services\Session connectivity, csstroubleshoot
 ---
-
 # User receives "Remote Desktop Service is currently busy" message on connecting
 
 This article introduces how to troubleshoot the "Remote Desktop Service is currently busy" message.
