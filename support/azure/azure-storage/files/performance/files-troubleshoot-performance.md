@@ -279,7 +279,7 @@ For example, you can set it to `0x100000` and see if performance improves.
 
 ## [Linux](#tab/linux)
 
-The amount of memory available influences the number of inode hash buckets the system has, which impacts/improves enumeration performance for large directories. You can modify the number of hash buckets the system has to reduce the hash collisions that can occur during large enumeration workloads. For instructions, see [Increase the number of hash buckets](/azure/storage/files/nfs-large-directories#increase-the-number-of-hash-buckets).
+The amount of memory available influences the number of inode hash buckets the system has, which affects and improves enumeration performance for large directories. You can modify the number of inode hash buckets the system has to reduce the hash collisions that can occur during large enumeration workloads. For instructions, see [Increase the number of hash buckets](/azure/storage/files/nfs-large-directories#increase-the-number-of-hash-buckets).
 
 ---
 
