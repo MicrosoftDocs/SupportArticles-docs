@@ -79,12 +79,17 @@ Extract it to the RDP client system (source) and RDP server (target)
 
 Launch a PowerShell prompt on both systems and run the following commands, respectively:
 
-**RDP Client:**
-*.\TSS.ps1 -Scenario UEX_RDSCli*
+RDP Client:
 
-**RDP ****Server****(s)****:**
+```console
+.\TSS.ps1 -Scenario UEX_RDSCli
+```
 
+RDP Server(s):
+
+```console
 *.\TSS.ps1 -Scenario UEX_RDSSrv*
+```
 
 Wait for the message that states to “Reproduce the issue now”
 
