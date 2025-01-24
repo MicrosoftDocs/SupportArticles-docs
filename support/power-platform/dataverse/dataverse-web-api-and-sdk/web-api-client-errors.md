@@ -277,7 +277,7 @@ Ensure all line endings in the `$batch` request body are `CRLF`. If you can't us
 
 The error occurs when the [Dataverse Web API](/power-apps/developer/data-platform/webapi/overview) receives a request with an invalid `odata.include-annotations` value in the `Prefer` request header value. This issue occurs when the request is sent using the `POST`, `PATCH`, `PUT`, or `GET` HTTP methods with a `Prefer` request header that contains an invalid or improperly formatted value. 
 
-In the following example, the `odata.include-annotations` value incorrectly includes backslashes (\) to escape the quote characters.
+In the following example, the `odata.include-annotations` value incorrectly includes backslashes (\\) to escape the quote characters.
 
 **Request**
 
