@@ -1,5 +1,5 @@
 ---
-title: Can't set up a new profile by using Exchange Autodiscover for Online mailbox
+title: Outlook can't set up a new profile by using Exchange Autodiscover for an Exchange Online mailbox in Microsoft 365
 description: Describes an issue that blocks Outlook from setting up a new profile by using Exchange Autodiscover for an Exchange Online mailbox in Microsoft 365. Resolutions are provided.
 author: cloud-writer
 ms.author: meerak
@@ -15,18 +15,18 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
-ms.date: 03/14/2024
-ms.reviewer: v-six
+ms.date: 01/25/2025
+ms.reviewer: gbratton
 ---
 # Outlook can't set up a new profile by using Exchange Autodiscover for an Exchange Online mailbox in Microsoft 365
 
-## Problem
+## Symptoms
 
 When you try to set up a new mail account for Microsoft 365 by using the Add New Account Wizard in Microsoft Outlook, your Outlook profile isn't automatically set up. Additionally, you receive the following error message when Outlook tries to set up the server settings for your profile:  
 
 > An encrypted connection to your mail services is not available
 
-When you test by using the Microsoft Remote Connectivity Analyzer, the following error message may be returned:  
+When you test by using the Microsoft Remote Connectivity Analyzer, the following error message might be returned:  
 
 > Autodiscover cannot process the given e-mail address. Only mailboxes and contacts are allowed.
 
@@ -42,7 +42,7 @@ This problem occurs for one of the following reasons:
 > [!NOTE]
 > This article discusses Outlook 2016, Outlook 2013, and Exchange Online. For help in connecting to Exchange Online from a mobile device, see [Set up and use Microsoft 365 on your phone or tablet](https://office.microsoft.com/redir/ha102818686.aspx). For help in connecting Outlook to a third-party service, contact your third-party mail provider.
 
-## Solution
+## Resolution
 
 ### Recommended method
 
@@ -50,9 +50,9 @@ This problem occurs for one of the following reasons:
 
 [!INCLUDE [Microsoft Support and Recovery Assistant note](../../../includes/sara-note-new-outlook.md)]
 
-Use the [I need help setting up my Microsoft 365 email in Outlook](https://aka.ms/SaRA-OutlookSetupProfile) **diagnostic** in the Support and Recovery Assistant (SaRA). Click **Run** when you are prompted by your browser.
+Use the [Classic Outlook profile setup troubleshooter](https://support.microsoft.com/en-us/windows/classic-outlook-troubleshooters-086e3d66-5404-4034-9cc5-545909dcc166) in the Get Help app.
 
-This diagnostic does automated checks and returns possible solutions for you to use to try to fix any detected issues.
+This troubleshooter performs automated checks and returns possible solutions to fix any detected issues.
 
 ### Additional methods
 
@@ -71,8 +71,7 @@ For more information about how to set up Outlook for Microsoft 365, see the foll
 - [Set up email in Outlook (for Windows)](https://support.office.com/article/set-up-email-in-outlook-for-windows-6e27792a-9267-4aa4-8bb6-c84ef146101b?correlationid=623124d7-72bd-424b-9797-c596ad4d18bf)
 - [Set up an email account in Outlook 2016 for Mac](https://support.office.com/article/set-up-an-email-account-in-outlook-2016-for-mac-86bd232e-0422-49b5-9b60-d1c5f1109f40)
 
-> [!NOTE]
-> If this method doesn't resolve the problem, go to Method 3.
+If this method doesn't resolve the problem, go to Method 3.
 
 #### Method 3: Make sure that the Autodiscover CNAME record is set up correctly
 
@@ -133,13 +132,5 @@ This method is supported and works for customers who may not plan to have their 
 ## More information
 
 Microsoft doesn't support manually setting up a profile in Outlook for connectivity to mailboxes in Exchange Online in Microsoft 365. However, we can help you complete other tasks, such as setting up DNS and Autodiscover records (as discussed in Method 2). This lets you set up your account through the supported methods.
-
-## References
-
-Go to [Microsoft Support and Recovery Assistant for Microsoft 365](https://aka.ms/outlookconnectivity) to solve this problem.
-
-For more information, see the following Microsoft Knowledge Base articles:
-
-- [2555008](https://support.microsoft.com/help/2555008) How to troubleshoot free/busy issues in a hybrid deployment of on-premises Exchange Server and Exchange Online in Microsoft 365
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
