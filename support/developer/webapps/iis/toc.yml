@@ -63,6 +63,13 @@ items:
   - name: Web Deploy error codes
     href: deployment-migration/web-deploy-error-codes.md
 
+- name: FTP administration and management
+  items:
+  - name: Error when you create an FTP site
+    href: ftp-administration-management/error-create-ftp-site.md
+  - name: Status codes in IIS 7.0 and later versions
+    href: ftp-administration-management/ftp-status-codes-iis-7-and-later-versions.md
+
 - name: FTP authentication and authorization
   items:
   - name: Authorization rules aren't inherited
@@ -71,13 +78,6 @@ items:
     href: ftp-authentication-authorization/ftp-download-session-fails.md
   - name: Error 530 when you browse anonymous sites
     href: ftp-authentication-authorization/error-530-anonymous-ftp-sites.md
-
-- name: FTP administration and management
-  items:
-  - name: Error when you create an FTP site
-    href: ftp-service-svchost-inetinfo/error-create-ftp-site.md
-  - name: Status codes in IIS 7.0 and later versions
-    href: ftp-service-svchost-inetinfo/ftp-status-codes-iis-7-and-later-versions.md
 
 - name: FTP service and Svchost or Inetinfo process operation
   items:
