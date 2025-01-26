@@ -73,7 +73,7 @@ The following `/etc/corosync/corosync.conf` extract enables **VoteQuorum** servi
 
 1. As a precaution, make a full backup or take a snapshot before you make any changes. For more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
 
-2. Check for missing quorum stanza in `/etc/corosync/corosync.conf`. Compare the existing `corosync.conf` with any backup that's available in `/etc/corosync/`.
+2. Check for missing quorum section in `/etc/corosync/corosync.conf`. Compare the existing `corosync.conf` with any backup that's available in `/etc/corosync/`.
    
 3. Put the cluster into maintenance mode:
 
@@ -167,7 +167,7 @@ vip_HN1_03_start_0 on node-1 'unknown error' (1): call=30, status=complete, exit
 
 ### Cause
 
-1. To choose which network adapter (or `NIC`: Network Interface Card) to start the `IPAddr2` resource on, `IPaddr2` invokes the `findif()` function, as defined in `/usr/lib/ocf/resource.d/heartbeat/IPaddr2` (belongs to the `resource-agents` package).
+1. To choose which network adapter (NIC) to start the `IPAddr2` resource on, `IPaddr2` invokes the `findif()` function, as defined in `/usr/lib/ocf/resource.d/heartbeat/IPaddr2` that is contained in the `resource-agents` package.
 
 2. The correct network adapter is determined by the options that are set on the `IPAddr2` resource, such as `ip` (required), `cidr_netmask`, and `broadcast`.
 
@@ -329,7 +329,7 @@ node-0	DEMOTED		10		online		logreplay	node-1 	4:S:master1:master:worker:master	5
 node-1	PROMOTED	1693237652	online		logreplay	node-0 	4:P:master1:master:worker:master	150	SITEA	syncmem	PRIM	2.00.046.00.1581325702	node-1
 ```
 
-### Resolution 1
+### Workaround 1
 
 The SAP HANA resource can't be started by Pacemaker if there are `SYN` failures between the primary and secondary cluster nodes. To mitigate this issue, you must manually enable `SYN` between the primary and secondary nodes.
 
@@ -403,7 +403,7 @@ The SAP HANA resource can't be started by Pacemaker if there are `SYN` failures 
 
 5. After you enable replication, check the system replication status by using the SAP system administrator account. In this situation, the user admin account is `hn1adm`.
 
-   On the primary node, check the overall system replication status: `ACTIVE`.
+   On the primary node, verify that the overall system replication status is `ACTIVE`.
 
    If the database nodes are still not synchronized, the SAP administrator should troubleshoot the issue by reviewing the SAP logs to make sure that the database nodes are correctly synchronized:
 
@@ -457,7 +457,8 @@ The SAP HANA resource can't be started by Pacemaker if there are `SYN` failures 
 
 SAP HANA Resource Reporting N (Standalone) mode experiences start failures with `hana_xxx_roles`.
 The cluster node database resource is a primary or secondary. Standalone node mode with `hana_xxx_roles` reporting **N**.
-The `node attributes` status is shown as follows when we execute `sudo pcs status --full`:
+
+When you run the `sudo pcs status --full` command, the `node attributes` status is shown as follows:
 
 ```bash
 sudo pcs status --full
@@ -492,6 +493,7 @@ Node Attributes:
 ```
 
 The Migration summary reporting `INF` fail-count with failed SAP HANA resource action reporting start failures due to "not running".
+
 ```bash
 sudo pcs status
 ```
@@ -624,12 +626,12 @@ Jun  9 23:29:16 nodeci SAPRH2_00[340486]: Unable to change to Directory /usr/sap
 
 ### Cause
 
-Because of incorrect `InstanceName` and `START_PROFILE` attributes, the SAP instances, ASCS and ERS, didn't start under cluster control. 
+Because of incorrect `InstanceName` and `START_PROFILE` attributes, the SAP instances such as ASCS and ERS, didn't start under cluster control. 
 
 ### Resolution
 
 > [!Note]
-> This resolution is applicable if `InstanceName` and `START_PROFILE` are individual attributes.
+> This resolution is applicable if `InstanceName` and `START_PROFILE` are separate files.
 
 1. As a precaution, make a full backup or take a snapshot before you make any changes. For more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
   
