@@ -17,14 +17,14 @@ This article describes a problem in which a user receives the error "AADSTS50001
 
 ## Symptoms
 
-When a user try to to sign in to an application that has been integrated with Microsoft Entra ID, the error `AADSTS500011 - The resource principal named [resource URL] was not found in the tenant named [tenant ID]` is received.
+When a user tries to to sign in to an application that uses Microsoft Entra ID authentication, the error `AADSTS500011 - The resource principal named [resource URL] was not found in the tenant named [tenant ID]` is received.
 
 ## Cause
 
-This error occurs when the resource principal (the application or service) is not found in the tenant. This can happen if:
+This error occurs when the resource principal (the application or service) is not found in the tenant. It occurs if:
 
-- The resource application has not been provisioned by the administrator in the tenant.
-- The resource application has not been consented to by any user in the tenant.
+- The resource application isn't provisioned by the administrator in the tenant.
+- The resource application isn't consented to by any user in the tenant.
 - The resource URL is not configured correctly.
 - The tenant ID is not correct.
 
@@ -36,18 +36,18 @@ To resolve this issue, follow these steps:
 
    - Ensure that the application (resource principal) is registered correctly in your Microsoft Entra ID tenant.
       
-   - Go to the Azure Portal and navigate to Microsoft Entra ID > Enterprise applications.
+   - Go to the Azure portal and navigate to Microsoft Entra ID > Enterprise applications.
       
    - Check if the application is listed and properly configured.
       
 1. **Consent to the Application**:
    - Ensure that the resource application has been consented to by an administrator or a user in the tenant.
       
-   - Go to the Azure Portal and navigate to Microsoft Entra > Enterprise applications.
+   - Go to the Azure ortal and navigate to Microsoft Entra > Enterprise applications.
    - Find the application and ensure that it has the necessary permissions and consent.
 
 1. **Check resource URL**:
-   - Verify if the resource URL that shows in error message matches the resource application you've provisioned in your tenant ID.
+   - Verify if the resource URL that shows in error message matches the resource application that you provisioned in your tenant ID.
       
    - Ensure that the authentication request is sent using the correct resource URL.
       
