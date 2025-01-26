@@ -1,36 +1,32 @@
 ---
-# Required metadata
-# For more information, see https://review.learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata?branch=main
-# For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
 
 title: Error AADSTS500011 - Resource Principal Not Found
-description: Describes a problem in which a user receives the error AADSTS500011 when trying to sign-in
-author:      custorod # GitHub alias
+description: Describes a problem in which a user receives the error AADSTS500011 when trying to sign in to Microsoft Entra ID.
+author: custorod
 ms.author: custorod
 ms.service: entra-id
 ms.topic: troubleshooting-problem-resolution
-ms.date:     01/16/2025
+ms.date: 01/16/2025
 ms.subservice: authentication
+ms.custom: sap:Issues Signing In to Applications
 ---
 
 # AADSTS500011 - Resource Principal Not Found
 
-This article describes a problem in which a user receives the error message "AADSTS500011 - The resource principal named [resource URL] was not found in the tenant named [tenant ID]."
+This article describes a problem in which a user receives the error "AADSTS500011" when trying to sign in to Microsoft Entra ID.
 
 ## Symptoms
 
-The user receives the error `AADSTS500011 - The resource principal named [resource URL] was not found in the tenant named [tenant ID]`, when trying to sign in to an application that has been integrated with Microsoft Entra ID.
+When a user try to to sign in to an application that has been integrated with Microsoft Entra ID, the error `AADSTS500011 - The resource principal named [resource URL] was not found in the tenant named [tenant ID]` is received.
 
 ## Cause
 
 This error occurs when the resource principal (the application or service) is not found in the tenant. This can happen if:
-1. The resource application has not been provisioned by the administrator in the tenant.
 
-1. The resource application has not been consented to by any user in the tenant.
-
-1. The [resource URL] is not correct.
-
-1. The [tenant ID] is not correct.
+- The resource application has not been provisioned by the administrator in the tenant.
+- The resource application has not been consented to by any user in the tenant.
+- The resource URL is not configured correctly.
+- The tenant ID is not correct.
 
 ## Resolution
 
@@ -50,13 +46,13 @@ To resolve this issue, follow these steps:
    - Go to the Azure Portal and navigate to Microsoft Entra > Enterprise applications.
    - Find the application and ensure that it has the necessary permissions and consent.
 
-1. **Check [resource URL]**:
-   - Verify if the error message’s [Resource URL] matches the resource application you've provisioned in your tenant ID.
+1. **Check resource URL**:
+   - Verify if the resource URL that shows in error message matches the resource application you've provisioned in your tenant ID.
       
-   - Ensure that the authentication request is sent using the correct [resource URL].
+   - Ensure that the authentication request is sent using the correct resource URL.
       
-1. **Check [tenant ID]**:
-   - Verify if the error message’s [tenant ID] is the same as your tenant ID.
+1. **Check tenant ID**:
+   - Verify if the tenant ID that shows in the error message is the same as your tenant ID.
       
    - Ensure that the authentication request is sent to the correct Microsoft Entra ID tenant.
       
@@ -65,3 +61,5 @@ To resolve this issue, follow these steps:
 For a full list of authentication and authorization error codes, see [Microsoft Entra authentication and authorization error codes](/azure/active-directory/develop/reference-error-codes).
 
 To investigate individual errors, go to [https://login.microsoftonline.com/error](https://login.microsoftonline.com/error).
+
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)] 
