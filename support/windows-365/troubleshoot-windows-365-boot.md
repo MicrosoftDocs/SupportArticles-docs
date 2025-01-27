@@ -72,7 +72,7 @@ If you can't identify the source of the issue, try removing and adding Windows 3
 3. Select the physical device, and then select **Remove** > **Yes**.
 4. Select **Devices** > **All devices**, select the physical device, and then select **Overview** > **Sync**.
 
-It takes about 10 minutes for the removal to finish. After that, the physical device will no longer be set up for Windows 365 Boot.
+It takes up to 8 hours for Intune to complete policy removal. After that, the physical device will no longer be set up for Windows 365 Boot.
 
 ### Add Windows 365 Boot back to the physical device
 
