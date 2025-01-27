@@ -7,7 +7,7 @@
     - name: Refresh URL isn't displayed for custom connectors
       href: connections/custom-connectors-not-show-refresh-url.md
     - name: Troubleshoot broken connections
-      href: /power-automate/connections/troubleshoot-broken-connections.md?context=/troubleshoot/power-platform/power-apps/context/context
+      href: ../power-automate/connections/troubleshoot-broken-connections.md?context=/troubleshoot/power-platform/power-apps/context/context
     - name: Troubleshoot Power Query
       href: connections/troubleshoot-power-query-issues.md
 - name: Create and use apps
