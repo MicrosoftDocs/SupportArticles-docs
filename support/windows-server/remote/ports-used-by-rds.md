@@ -42,7 +42,8 @@ The information and taxonomy are broken down by role, service, and component, an
 ### Internal traffic between the Gateway and the required user AD, resource AD, DNS, NPS, and so on
 
 - TCP 88: Used by Kerberos for user authentication.
-- TCP 135: Used by the Remote Procedure Call (RPC) Endpoint Mapper. It's the port on which the NTDS RPC services listen on Active Directory (AD).
+- TCP 135: Used by the RPC Endpoint Mapper.
+- TCP 135: Port that NTDS RPC services listens on AD.
 - TCP and UDP 389: Used by the Lightweight Directory Access Protocol (LDAP) for user authentication. It's required when using LDAP for Certificate Revocation Lists (CRLs).
 - TCP and UDP 53: Used by the Domain Name System (DNS) for internal resource name resolution.
 - TCP 80: Required when using HTTP for CRLs.
