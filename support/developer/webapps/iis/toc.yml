@@ -154,7 +154,7 @@ items:
     href: site-behavior-performance/internet-printing-fails.md
   - name: Runtime errors and exceptions
     items:
-    - name: Troubleshoot HTTP errors in IIS
+    - name: Troubleshoot 4xx and 5xx HTTP errors
       href: site-behavior-performance/troubleshoot-http-error-code.md
   - name: Troubleshoot HTTP 400 errors in IIS
     href: site-behavior-performance/troubleshoot-http-400-errors-in-iis.md
