@@ -121,7 +121,7 @@ Note down what was the user account used to reproduce this connection.
 
 Follow the steps described on the following article:
 
-[Generate a kernel or complete crash dump](https://learn.microsoft.com/en-us/troubleshoot/windows-client/performance/generate-a-kernel-or-complete-crash-dump)
+[Generate a kernel or complete crash dump](../../windows-client/performance/generate-a-kernel-or-complete-crash-dump.md)
 
 ### Possible additional data
 
