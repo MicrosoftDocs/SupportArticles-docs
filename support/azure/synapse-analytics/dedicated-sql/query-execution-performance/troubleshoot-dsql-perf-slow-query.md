@@ -304,6 +304,7 @@ Have your statistics up-to-date to ensure that the query optimizer generates an 
 
 **Mitigations**
 
+[Check statistics accuracy on a dedicated SQL pool](https://learn.microsoft.com/troubleshoot/azure/synapse-analytics/dedicated-sql/query-execution-performance/dsql-perf-stats-accuracy)
 [Create/Update statistics](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics).
 
 <br/>
@@ -359,7 +360,7 @@ In-flight data skew is a variant of the [data skew (stored)](#data-skew-stored) 
 
 **Mitigations**
 
-- Make sure that statistics are [created and up-to-date](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics).
+- Ensure that statistics are [created and up-to-date](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics). You can verify the accuracy of statistics by following the steps outlined in [Check statistics accuracy on a dedicated SQL pool](https://learn.microsoft.com/troubleshoot/azure/synapse-analytics/dedicated-sql/query-execution-performance/dsql-perf-stats-accuracy)
 - Change the order of your `GROUP BY` columns to lead with a higher-cardinality column.
 - Create multi-column statistics if joins cover multiple columns.
 - Add query hint `OPTION(FORCE_ORDER)` to your query.
@@ -425,7 +426,9 @@ Unhealthy CCIs contribute to increased IO, CPU, and memory allocation, which, in
 
 Outdated statistics can cause the generation of an unoptimized distributed plan, which involves more data movement than necessary. Unnecessary data movement increases the workload not only on your data at rest but also on the `tempdb`. Because IO is a shared resource across all queries, performance impacts can be felt by the entire workload.
 
-To remedy this situation, ensure all [statistics are up-to-date](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics), and a maintenance plan is in place to keep them updated for user workloads.
+The optimizer relies on statistics to estimate the number of rows that will be returned by a query, allowing it to choose the most plan, best move operation to perform (i.e, Shuffle Move Operation, Broad Cast Move Operation) to align the data during the join condiation (Depends on the table distribution type). For example, if the actual number of rows for a given table is 60 million, and the estimated number of rows is 1000 (At control node level), the optimizer may choose a Broadcast move operation. This is because the cost is perceived to be lower compared to a Shuffle Move, given the optimizer's assumption that the table contains only 1000 rows. However, once the actual execution begins, the engine will move 60 million rows as part of the execution using a Broadcast move, which can be an expensive operation considering both the data size and not just the row count. Consequently, if the data size is substantial, it might lead to performance issues for the query itself and other quries (e.g., High CPU usage which will lead to overall performacne issues, concurrency issues as the queries will take longer time execute while you have new incoming queries,..etc).
+
+To remedy this situation, ensure all [statistics are up-to-date](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics), and a maintenance plan is in place to keep them updated for user workloads. You can verify the accuracy of statistics by following the steps outlined in [Check statistics accuracy on a dedicated SQL pool](https://learn.microsoft.com/troubleshoot/azure/synapse-analytics/dedicated-sql/query-execution-performance/dsql-perf-stats-accuracy)
 
 **Heavy IO workloads**
 
