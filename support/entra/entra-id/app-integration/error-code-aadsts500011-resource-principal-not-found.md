@@ -1,7 +1,7 @@
 ---
 
 title: Error AADSTS500011 - Resource Principal Not Found
-description: Describes a problem in which a user receives the error AADSTS500011 when trying to sign in to Microsoft Entra ID.
+description: Describes a problem in which a user experiences an AADSTS500011 error when trying to sign in to Microsoft Entra ID.
 author: custorod
 ms.author: custorod
 ms.service: entra-id
@@ -13,15 +13,17 @@ ms.custom: sap:Issues Signing In to Applications
 
 # AADSTS500011 - Resource Principal Not Found
 
-This article describes a problem in which a user receives the error "AADSTS500011" when trying to sign in to Microsoft Entra ID.
+This article describes a problem in which users experiences an "AADSTS500011" error when they try to sign in to Microsoft Entra ID.
 
 ## Symptoms
 
-When a user tries to to sign in to an application that uses Microsoft Entra ID authentication, the error `AADSTS500011 - The resource principal named [resource URL] was not found in the tenant named [tenant ID]` is received.
+When users try to sign in to an application that uses Microsoft Entra ID authentication, they receive the following error message:
+
+> `AADSTS500011 - The resource principal named [resource URL] was not found in the tenant named [tenant ID]`
 
 ## Cause
 
-This error occurs when the resource principal (the application or service) is not found in the tenant. It occurs if:
+This issue occurs if the resource principal (the application or service) is not found in the tenant. This issue occurs if:
 
 - The resource application isn't provisioned by the administrator in the tenant.
 - The resource application isn't consented to by any user in the tenant.
@@ -32,29 +34,24 @@ This error occurs when the resource principal (the application or service) is no
 
 To resolve this issue, follow these steps:
 
-1. **Verify Resource Application Provisioning**: 
+1. **Verify resource application provisioning**: 
 
-   - Ensure that the application (resource principal) is registered correctly in your Microsoft Entra ID tenant.
+   - Make sure that the application (resource principal) is registered correctly in your Microsoft Entra ID tenant.
+   - Go to the Azure portal, and navigate to Microsoft Entra ID > Enterprise applications.
+   - Check whether the application is listed and correctly configured.
       
-   - Go to the Azure portal and navigate to Microsoft Entra ID > Enterprise applications.
-      
-   - Check if the application is listed and properly configured.
-      
-1. **Consent to the Application**:
-   - Ensure that the resource application has been consented to by an administrator or a user in the tenant.
-      
-   - Go to the Azure ortal and navigate to Microsoft Entra > Enterprise applications.
-   - Find the application and ensure that it has the necessary permissions and consent.
+1. **Consent to application**:
+   - Make sure that the resource application has been consented to by an administrator or a user in the tenant.
+   - Go to the Azure portal, and navigate to Microsoft Entra > Enterprise applications.
+   - Find the application, and make sure that it has the necessary permissions and consent.
 
 1. **Check resource URL**:
-   - Verify if the resource URL that shows in error message matches the resource application that you provisioned in your tenant ID.
-      
-   - Ensure that the authentication request is sent using the correct resource URL.
+   - Verify that the resource URL that appears in the error message matches the resource application that you provisioned in your tenant ID.
+   - Make sure that the authentication request is sent by using the correct resource URL.
       
 1. **Check tenant ID**:
-   - Verify if the tenant ID that shows in the error message is the same as your tenant ID.
-      
-   - Ensure that the authentication request is sent to the correct Microsoft Entra ID tenant.
+   - Verify that the tenant ID that appears in the error message is the same as your tenant ID.
+   - Make sure that the authentication request is sent to the correct Microsoft Entra ID tenant.
       
 ## More information
 
