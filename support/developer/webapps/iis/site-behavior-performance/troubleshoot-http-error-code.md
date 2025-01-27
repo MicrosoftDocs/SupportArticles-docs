@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot HTTP Errors in IIS
 description: Provides troubleshooting steps for resolving 4xx and 5xx HTTP status code errors in Internet Information Services (IIS).
-ms.date: 01/09/2025
+ms.date: 01/27/2025
 ms.reviewer: khgupta, v-sidong
 ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
 ---
@@ -37,13 +37,13 @@ If you find errors in the HTTPERR logs, note the reason (`s-reason`) and see [Ty
 
 ### 500 errors in classic ASP
 
-If any error occurs in classic ASP, check the error code or error message in the `cs-uri-query` query of the IIS logs.
+If a 500 error occurs in classic ASP, check the error code or error message in the `cs-uri-query` query of the IIS logs.
 
 For more information, capture and examine [Failed Request Trace (FREB) logs](#steps-to-capture-freb-logs) for the 500 errors.
 
 ### 500 errors in general IIS
 
-If any error occurs in general IIS, examine the IIS logs, note `sc-status` and `sc-substatus`, and look for the status code in [HTTP status code overview](../health-diagnostic-performance/http-status-code.md#5xx---server-error) for more information on the failure. Enable detailed error messages if feasible to get more details.
+If a 500 error occurs in general IIS, examine the IIS logs, note `sc-status` and `sc-substatus`, and look for the status code in [HTTP status code overview](../health-diagnostic-performance/http-status-code.md#5xx---server-error) for more information on the failure. Enable detailed error messages if feasible to get more details.
 
 To enable detailed error messages, follow these steps:
 
@@ -71,7 +71,7 @@ For more information, capture and examine [Failed Request Trace (FREB) logs](#st
 
 ### 500 errors in ASP.NET
 
-If any error occurs in ASP.NET, use the following methods to identify the cause of the error and resolve it:
+If a 500 error occurs in ASP.NET, use the following methods to identify the cause of the error and resolve it:
 
 - Check the Application Event Logs.
 
@@ -105,7 +105,7 @@ If any error occurs in ASP.NET, use the following methods to identify the cause 
 
 ### 500 errors in ASP.NET Core
 
-If any error occurs in ASP.NET Core, use the following methods to identify the cause of the error and resolve it:
+If a 500 error occurs in ASP.NET Core, use the following methods to identify the cause of the error and resolve it:
 
 - Check the Application Event Logs.
 
@@ -136,7 +136,7 @@ If any error occurs in ASP.NET Core, use the following methods to identify the c
 
 - Enable the ASP.NET Core Module `stdout` log.
 
-  To enable and view stdout logs, follow these steps:
+  To enable and view `stdout` logs, follow these steps:
 
   1. Navigate to the site's deployment folder on the hosting system.
   1. If the **logs** folder isn't present, create the folder. For instructions on how to enable MSBuild to create the **logs** folder in the deployment automatically, see [ASP.NET Core directory structure](/aspnet/core/host-and-deploy/directory-structure).
@@ -180,7 +180,7 @@ If any error occurs in ASP.NET Core, use the following methods to identify the c
 
 ### 502 errors in ARR
 
-Follow the instructions in [Troubleshooting 502 errors in ARR](../application-request-routing/troubleshooting-502-errors-in-arr.md).
+If a 502 error occurs in Application Request Routing (ARR), follow the instructions in [Troubleshooting 502 errors in ARR](../application-request-routing/troubleshooting-502-errors-in-arr.md).
 
 ### 503 errors
 
@@ -249,11 +249,13 @@ Once the **Tracing** role service is installed, follow these steps to capture FR
 
 To capture a PerfView trace and dumps, follow the steps in the following sections.
 
-#### Before the issue occurs
+#### Configure PerfView and Procdump before the issue
+
+Before the issue occurs, follow these steps to configure PerfView and Procdump for data collection:
 
 1. Download [Procdump](/sysinternals/downloads/procdump). It's a lightweight executable file that doesn't require installation and automates dump collection.
 1. Extract the **procdump.exe** file to a particular folder on the server.
-1. Download the [PerfView](https://github.com/microsoft/perfview/releases) tool on the server. It's a profiler tool that captures ETW events (no installation required).
+1. Download the [PerfView](https://github.com/microsoft/perfview/releases) tool on the server. It's a profiler tool that captures Event Tracing for Windows (ETW) events (no installation required).
 1. For PerfView to provide useful information, add **Tracing** as a **Role Service** for IIS. Without **Tracing** enabled, an ETW trace will only include **HTTP.sys** information. If you aren't sure whether the **Tracing** role service is installed, follow these steps:
 
    [!INCLUDE [Note when using Procdump](../../../../includes/enable-tracing-role.md)]
@@ -274,9 +276,11 @@ To capture a PerfView trace and dumps, follow the steps in the following section
    > [!NOTE]
    > Don't miss the asterisk (`*`) at the beginning.
 
-#### During the time of issue
+#### Collect data during the issue
 
-1. Select the **Start Collection** button in PerfView with the configuration settings you previously set up.
+During the time of the issue, follow these steps to collect data:
+
+1. Select the **Start Collection** button in PerfView with the configuration settings you set up in the [Configure PerfView and Procdump before the issue](#configure-perfview-and-procdump-before-the-issue) section.
 1. Open Internet Information Services (IIS) Manager.
 1. Select your server name (on the left).
 1. Double-click **Worker Processes** to see the **Process Id** of the services. For example:
