@@ -43,11 +43,11 @@ On AudioCodes SBCs, you can disable support for multiple SIP 18x messages by cha
 
 **SBC Early Media** > **Remote Multiple 18x**
 
-This way, only the first SIP 18x message is forwarded, and any subsequent messages are ignored until the call is answered or ended. Forwarding only the first SIP 180 Ringing message helps avoid issues with SIP 183 Session Progress. For more information, refer to the [manual](https://techdocs.audiocodes.com/session-border-controller-sbc/mediant-software-sbc/user-manual/version-740/content/um/Interworking%20SIP%20Early%20Media.htm#:~:text=%E2%96%A0-,Multiple%2018x,-%3A%20The%20device) or contact Audiocodes support.
+This way, only the first SIP 18x message is forwarded, and any subsequent messages are ignored until the call is answered or ended. Forwarding only the first SIP 180 Ringing message helps avoid issues with SIP 183 Session Progress. For more information, see the [manual](https://techdocs.audiocodes.com/session-border-controller-sbc/mediant-software-sbc/user-manual/version-740/content/um/Interworking%20SIP%20Early%20Media.htm#:~:text=%E2%96%A0-,Multiple%2018x,-%3A%20The%20device) or contact Audiocodes support.
 
 #### Metaswitch SBC
 
-On Metaswitch SBCs, it's recommended to remove the SDP from the SIP 183 Session Progress message and change it to SIP 180 Ringing. For more details, refer to the [documentation](https://manuals.metaswitch.com/Perimeta/V5.5/MicrosoftTeamsIntegrationGuide/Source/Perimeta/References/MicrosoftTeamsIntegrationSignalingConfigurationForTeams.html#:~:text=profile%20DR_Teams%0A%20%20%20%20%20%20%20%20activate-,Configuration%20for%20pre%2DIMS%20deployments%20with%20a%20Class%205%20softswitch,-This%20configuration%20sets) or contact Metaswitch support.
+On Metaswitch SBCs, it's recommended to remove the SDP from the SIP 183 Session Progress message and change it to SIP 180 Ringing. For more details, see the [documentation](https://manuals.metaswitch.com/Perimeta/V5.5/MicrosoftTeamsIntegrationGuide/Source/Perimeta/References/MicrosoftTeamsIntegrationSignalingConfigurationForTeams.html#:~:text=profile%20DR_Teams%0A%20%20%20%20%20%20%20%20activate-,Configuration%20for%20pre%2DIMS%20deployments%20with%20a%20Class%205%20softswitch,-This%20configuration%20sets) or contact Metaswitch support.
 
 #### Other SBCs
 
@@ -108,11 +108,11 @@ For example, include the plus (+) sign as an optional character by using the fol
 
 ## Delay when answering PSTN calls in Teams or no audio for the first few seconds
 
-These issues are usually caused by multiple SIP re-invites between the SBC and the Microsoft SIP Proxy before the call is successfully established. This is particularly common in scenarios involving media bypass or Local Media Optimization, which require several re-invites by design. If these re-invites occur in the wrong order or take longer to process, it can cause audio delays. A common reason for these re-invites is the SBC doesn't offer the appropriate media IP in the original invite. For example, in a Local Media Optimization setup, the SBC sends an SDP message with an internal IP while the user is external, a re-invite is required to provide the correct external media IP.
+These issues are usually caused by multiple SIP reinvites between the SBC and the Microsoft SIP Proxy before the call is successfully established. This is particularly common in scenarios involving media bypass or Local Media Optimization, which require several reinvites by design. If these reinvites occur in the wrong order or take longer to process, it can cause audio delays. A common reason for these reinvites is the SBC doesn't offer the appropriate media IP in the original invite. For example, in a Local Media Optimization setup, the SBC sends an SDP message with an internal IP while the user is external, a reinvite is required to provide the correct external media IP.
 
 ### Resolution
 
-To fix these issues, update your SBC configuration and make sure that the SBC offers the most likely media IP by default to minimize the number of re-invites. For example, if most calls are expected from internal users, configure the SBC to offer an internal IP initially. For detailed instructions on SBC configuration, refer to the documentation specific to your SBC model.
+To fix these issues, update your SBC configuration and make sure that the SBC offers the most likely media IP by default to minimize the number of reinvites. For example, if most calls are expected from internal users, configure the SBC to offer an internal IP initially. For detailed instructions on SBC configuration, refer to the documentation specific to your SBC model.
 
 ## Call drops after a certain amount of time
 
@@ -131,7 +131,7 @@ To fix this issue, update your SBC and network configuration to allow traffic to
 
 ### Call drops after approximately 10 to 20 seconds
 
-If a call drops after about 10 to 20 seconds and there is no audio, it's usually caused by a media-related issue. For example, the ICE connectivity check fails, or no media is received during this time.
+If a call drops after about 10 to 20 seconds and there's no audio, it's usually caused by a media-related issue. For example, the ICE connectivity check fails, or no media is received during this time.
 
 #### Resolution
 
@@ -139,18 +139,18 @@ To fix this issue, check whether correct ICE candidates are included in the SDP 
 
 ### Call works correctly and drops after several minutes without error
 
-This issue is usually caused by the session timer or session refresh mechanism that's specified in the `SESSION-EXPIRES` header of the SIP INVITE message. For example, the following `SESSION-EXPIRES` header specifies that the call will end after 1,800 seconds (30 minutes) unless the user agent client, which is the party that sends the SIP INVITE message, sends a re-invite to refresh the session before the timer expires.
+This issue is usually caused by the session timer or session refresh mechanism that's specified in the `SESSION-EXPIRES` header of the SIP INVITE message. For example, the following `SESSION-EXPIRES` header specifies that the call will end after 1,800 seconds (30 minutes) unless the user agent client, which is the party that sends the SIP INVITE message, sends a reinvite to refresh the session before the timer expires.
 
 `SESSION-EXPIRES : 1800;refresher=uac`
 
 > [!NOTE]
 >
-> - Re-invites are usually sent at half the time specified by the session timer.
-> - If the refresher value is `uas` in the header, the party that receives the SIP INVITE message is responsible for sending the re-invite to refresh the session.
+> - Reinvites are usually sent at half the time specified by the session timer.
+> - If the refresher value is `uas` in the header, the party that receives the SIP INVITE message is responsible for sending the reinvite to refresh the session.
 
 #### Resolution
 
-To fix this issue, check and update your Direct Routing configuration to make sure that the responsible party correctly sends a re-invite message before the session timer expires.
+To fix this issue, check and update your Direct Routing configuration to make sure that the responsible party correctly sends a reinvite message before the session timer expires.
 
 > [!NOTE]
 > Session timer issues might also occur in other parts of the call, such as the PSTN. In this case, the SBC receives a SIP BYE message from the PSTN, and the message is then sent to the SIP proxy, causing the call to end.
