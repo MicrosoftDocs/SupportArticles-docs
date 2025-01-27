@@ -4,7 +4,7 @@ description: Resolves common issues with publishing a mobile offline profile in 
 ms.author: andreo
 author: Andrea-Orimoto
 ms.reviewer: mhart
-ms.date: 12/21/2023
+ms.date: 01/27/2025
 ms.custom: sap:Mobile application\Offline data sync - Other
 ---
 # Troubleshoot issues with publishing a mobile offline profile

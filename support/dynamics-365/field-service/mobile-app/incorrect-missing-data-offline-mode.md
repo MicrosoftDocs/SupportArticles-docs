@@ -4,7 +4,7 @@ description: Resolves a common issue with missing data in the mobile offline pro
 ms.author: andreo
 author: Andrea-Orimoto
 ms.reviewer: mhart
-ms.date: 12/21/2023
+ms.date: 01/27/2025
 ms.custom: sap:Mobile application\Offline data sync - Other
 ---
 # "Incorrect or missing data in offline mode" error
