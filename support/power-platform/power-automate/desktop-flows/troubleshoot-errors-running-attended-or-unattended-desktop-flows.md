@@ -34,7 +34,7 @@ _Original KB number:_ &nbsp; 4555406
 |MaxRDSessionDurationReached|400|Unattended|To solve this issue, see [MaxRDSessionDurationReached occurs during a desktop flow run](desktop-flow-max-session-duration-error.md).|
 |ExistingRecordingSession|400|Local|Windows Server only.</br> Check that there's no other user connected to the machine launching a recording or a test playback.|
 |LocalPlaybackOrRecordingOngoing|429|All|Check that there's no recording nor test playback ongoing on the machine for the same user session.|
-|UnattendedUnsupportedWithOldConnezction|403|Unattended|You need to create a new connection on the portal.|
+|UnattendedUnsupportedWithOldConnection|403|Unattended|You need to create a new connection on the portal.|
 |RDPIsNotEnabled|400|Unattended|You need to enable Remote Desktop on the machine.|
 |UIFlowAlreadyRunning|429|Attended</br>Unattended|A desktop flow is already running on the machine. You need to wait for its completion. For more information about this error code, see [UIFlowAlreadyRunning](troubleshoot-desktop-flow-run-queue-errors.md#uiflowalreadyrunning).|
 |AadLogonFailure|400|Unattended|You need to disable Network Level Authentication (NLA) on the machine if you want to use Microsoft Entra credentials.|
