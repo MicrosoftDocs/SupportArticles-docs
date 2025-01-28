@@ -1,8 +1,8 @@
 ---
 title: Validations have been restarted in the background because of inconsistent validation data error
 description: Provides a resolution for an issue where synchronous save event limitation causes an error message in Dynamics 365 Field Service forms.
-ms.author: andreo
-author: Andrea-Orimoto
+ms.author: jobaker
+author: JonBaker007
 ms.reviewer: mhart
 ms.date: 01/27/2025
 ms.custom: sap:Mobile application\Can't save data

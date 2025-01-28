@@ -1,8 +1,8 @@
 ---
 title: Booking timestamp is created with incorrect time
 description: Resolves the incorrect booking timestamp created when the booking status is updated in the Dynamics 365 Field Service mobile app.
-ms.author: andreo
-author: Andrea-Orimoto
+ms.author: jobaker
+author: JonBaker007
 ms.reviewer: mhart
 ms.date: 01/27/2025
 ms.custom: sap:Mobile application
