@@ -48,7 +48,7 @@
       href: dataverse-cds/cds-user-cannot-access-power-automate-business-process-flows-on-demand-workflows.md
 - name: Desktop flows
   items:
-    - name: PAD UI Automation
+    - name: PAD UI automation
       items:
         - name: UI automation
           items:
