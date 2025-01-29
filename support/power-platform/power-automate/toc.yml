@@ -70,11 +70,11 @@
           items:
             - name: Web Automation fails when Machine Runtime and MSIX PAD versions are not synced
               href: desktop-flows//pad-ui-automation/browser-automation/machine-runtime-msix-errors.md
-        - name: SAP automation
-          items:
-            - name: Error when launching SAP
-              href: desktop-flows/pad-ui-automation/sap-automation/scripting-permissions-launch-sap.md
-    - name: Office
+    - name: SAP actions
+      items:
+        - name: Error when launching SAP
+          href: desktop-flows/sap-actions/scripting-permissions-launch-sap.md
+    - name: Office actions
       items:
         - name: Excel
           items:
