@@ -24,3 +24,7 @@ To use Java Automation using Power Automate for desktop (PAD), one or more of th
 1. Open the Configure Java.
 1. Then try capture a button from the General Tab. For example the button "About". Make sure that the highlighter highlights the correct element.
 1. Create a desktop flow that runs the "Click element in Window" action and verify that the element was clicked.
+
+## Resources
+
+[Automate Java applications](https://learn.microsoft.com/power-automate/desktop-flows/how-to/java)

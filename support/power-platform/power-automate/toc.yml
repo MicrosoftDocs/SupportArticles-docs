@@ -50,26 +50,30 @@
   items:
     - name: PAD UI Automation
       items:
-        - name: Desktop Automation
+        - name: UI automation
           items:
             - name: Cannot find UI element
-              href: desktop-flows/pad-ui-automation/desktop-automation/cannot-find-ui-element.md
-        - name: Web Automation
+              href: desktop-flows/pad-ui-automation/ui-automation/cannot-find-ui-element.md
+        - name: UI automation in Java
+          items:
+            - name: Troubleshooting Java automation in PAD 
+              href: desktop-flows/pad-ui-automation/ui-java-automation/troubleshooting-java-pad.md
+        - name: UI automation in SAP
+          items:
+            - name: SAP UI element click issue
+              href: desktop-flows/pad-ui-automation/ui-sap-automation/sap-click-element-dpi.md
+        - name: UI automation in virtual desktops (RDP/Citrix)
+          items:
+            - name: Error is shown when hovering on Remote App-Desktop
+              href: desktop-flows/pad-ui-automation/ui-rdp-automation/rdp-no-highlight.md
+        - name: Browser automation
           items:
             - name: Web Automation fails when Machine Runtime and MSIX PAD versions are not synced
-              href: desktop-flows//pad-ui-automation/web-automation/machine-runtime-msix-errors.md
-        - name: Java Automation
-          items:
-            - name: Troubleshooting Java automation in PAD
-              href: desktop-flows/pad-ui-automation/java-automation/troubleshooting-java-pad.md
-        - name: Sap Automation
+              href: desktop-flows//pad-ui-automation/browser-automation/machine-runtime-msix-errors.md
+        - name: SAP automation
           items:
             - name: Error when launching SAP
               href: desktop-flows/pad-ui-automation/sap-automation/scripting-permissions-launch-sap.md
-        - name: Rdp/Citrix
-          items:
-            - name: Error is shown when hovering on Remote App-Desktop
-              href: desktop-flows/pad-ui-automation/rdp-automation/rdp-no-highlight.md
     - name: Office
       items:
         - name: Excel
