@@ -51,5 +51,13 @@ To create a simple report to help troubleshoot report issues, follow these steps
  - Reporting parameters: Company, Reporting date and report name.
  - Details about the incorrect amount and what the expected value is.
    
+### Check the data mart state
+To check the state of your data mart, follow these steps:
+1. Go to **Report designer**, go to **Tools** > **Integration status**.
+2. Check that the **Status** is not **Failed** and the **Last Runtime** date is after you created your data. Usually, you'll track the General Ledger transactions to **Fact map**. Occasionally, due to system load and data volume, this can take longer. You may need to wait more than one hour for larger data changes to complete integration into data mart.
+3. To check more detailed statistics, go to **Tools** > **Reset data mart**. DO NOT reset the data mart.
+If there are transactions with 6 or more attempts, this could be *stuck* data due to integrity issues. Having amounts here doesn’t mean you have missing data on your report, but it can be a source of missing data. Work with Microsoft support to determine the cause of the stuck data.
+4. If there are any **Misaligned main account** categories, reports based on account categories could report incorrect amounts.
+
 
    
