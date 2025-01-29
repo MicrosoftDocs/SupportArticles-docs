@@ -42,4 +42,14 @@ To create a simple report to help troubleshoot report issues, follow these steps
  - Remove all modifiers for the column. 
 7. This should display a report with a single cell of data.
 8. Verify the report is working as expected.
-9. If the issue still exists, contact support. 
+9. From there, you can add one modification at a time if your issue include specific design requirements.
+   a.	For example: currency filter, attribute filter, YTD, or BB.
+10.	If the issue still exists, contact support and provide the following:
+ - Exported .tdbx files of your simplified report and your original report.
+ - Screenshots of the simplified report build block designs (row & column).
+ - Excel export of your report output.
+ - Reporting parameters: Company, Reporting date and report name.
+ - Details about the incorrect amount and what the expected value is.
+   
+
+   
