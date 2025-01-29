@@ -27,4 +27,4 @@ To use Java Automation using Power Automate for desktop (PAD), one or more of th
 
 ## Resources
 
-[Automate Java applications](https://learn.microsoft.com/power-automate/desktop-flows/how-to/java)
+[Automate Java applications](/power-automate/desktop-flows/how-to/java)
