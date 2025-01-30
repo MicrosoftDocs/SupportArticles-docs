@@ -16,7 +16,7 @@ _Version:_ &nbsp; 15.0.4365.2
 
 ## Summary
 
-This article describes Cumulative Update package 26 (CU26) for Microsoft SQL Server 2019. This update contains 24 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 25, and it updates components in the following builds:
+This article describes Cumulative Update package 26 (CU26) for Microsoft SQL Server 2019. This update contains 23 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 25, and it updates components in the following builds:
 
 - SQL Server - Product version: **15.0.4365.2**, file version: **2019.150.4365.2**
 - Analysis Services - Product version: **15.0.35.45**, file version: **2018.150.35.45**
@@ -33,11 +33,11 @@ SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plan
 
 Microsoft is working on a fix for this issue and it will be available in a future CU.
 
-### Issue two: Error 1204 when applying the fix of Bug 2830668
+### Issue two: Possibility of error 1204 due to disabled lock escalation
 
-SQL Server 2019 CU26 introduced the fix of [Bug 2830668](#2830668) that might disable lock escalation, which causes error 1204 "The instance of the SQL Server Database Engine cannot obtain a LOCK resource at this time."
+SQL Server 2019 CU26 introduced a regression that can disable lock escalation, which causes error 1204 "The instance of the SQL Server Database Engine cannot obtain a LOCK resource at this time."
 
-To work around this issue, you can uninstall the CU26 or install the next [CU27](cumulativeupdate27.md). Microsoft is working on the original latch time-out issue and the fix will be available in a future CU.
+To work around this issue, you can uninstall the CU26 or install the [CU28](cumulativeupdate28.md).
 
 ## Improvements and fixes included in this update
 
@@ -55,7 +55,6 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=2893029>[2893029](#2893029) </a> | Fixes an issue in which the global primary or forwarder in a distributed availability group can't connect to the listener of the other availability group for a while after the local availability group fails over between replicas in multi-subnet configurations. | SQL Server Engine | High Availability and Disaster Recovery | Windows |
 | <a id=2937599>[2937599](#2937599) </a> | Fixes an issue in which the `sp_server_diagnostics` stored procedure doesn't respond to the Always On availability group (AG) resource DLL within the `HealthCheckTimeout` when the I/O takes a long time, which causes unnecessary restart and failover. For example, when the `sp_server_diagnostics` stored procedure is waiting for the `PREEMPTIVE_OS_GETFINALFILEPATHBYHANDLE` wait type. </br></br>**Note**: To apply this fix, you need to turn on trace flag 16301, which is off by default. Tracing is added for this event regardless of the trace flag.| SQL Server Engine | High Availability and Disaster Recovery | All |
 | <a id=2920065>[2920065](#2920065) </a> | Fixes an issue in which an unreliable network connection causes an unsuccessful status during backup to a network share, which causes the SQL Server instance to stop responding.| SQL Server Engine | Linux | Linux |
-| <a id=2830668>[2830668](#2830668) </a> | Fixes a latch time-out issue that you encounter when fetching the next value for sequence objects, which is due to self-deadlock during lock escalation. | SQL Server Engine | Metadata| All |
 | <a id=2984804>[2984804](#2984804) </a> | Fixes an issue in the lock manager that might cause random access violations and dumps on secondary replicas when the primary replica has 16 or more processors, and the secondary replicas have less than 16 processors.| SQL Server Engine | Metadata| All |
 | <a id=2936214>[2936214](#2936214) </a> </br><a id=2936218>[2936218](#2936218) </a> </br><a id=2941530>[2941530](#2941530) </a> </br><a id=2950263>[2950263](#2950263) </a> | [FIX: Scalar UDF Inlining issues in SQL Server 2022 and 2019 (KB4538581)](https://support.microsoft.com/help/4538581)| SQL Server Engine | Programmability | All |
 | <a id=2950261>[2950261](#2950261) </a> | Fixes the following SQL Server assertion failure: </br></br>Error: 17065, Severity: 16, State: 1. </br>Server Assertion: File: \<FileName>, line = \<LineNumber> Failed Assertion = 'false' Invalid comparison due to NO COLLATION.| SQL Server Engine | Programmability | All |
