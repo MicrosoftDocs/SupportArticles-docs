@@ -38,7 +38,7 @@ sections:
       - question: |
           My memory is limited to 2 GB on a new Windows Server VM
         answer: |
-          You need to activate your Windows Server VM to access all the available memory.
+          Windows activation has a major role on quantity of hardware recognized in terms of RAM/Processor. If the Windows VM is not activated properly, you need to finish activation for the Windows Guest OS.
           
 additionalContent: |
   ## More information
