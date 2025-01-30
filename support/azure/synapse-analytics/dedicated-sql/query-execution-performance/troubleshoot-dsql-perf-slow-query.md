@@ -30,7 +30,7 @@ Follow the steps to troubleshoot the issue or execute the steps in the notebook 
 >
 > To save troubleshooting time, make sure that the statistics are [created and up-to-date](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics) and [rebuild  clustered columnstore indexes in the dedicated SQL pool](dsql-perf-cci-health.md).
 
-<a id="#step-1-identify-the-request_id-aka-qid"></a>
+<a id="step-1-identify-the-request_id-aka-qid"></a>
 
 ## Step 1: Identify the request_id (also known as QID)
 
@@ -328,8 +328,7 @@ Have your statistics up-to-date to ensure that the query optimizer generates an 
 
 **Mitigations**
 
-[Check statistics accuracy on a dedicated SQL pool](https://learn.microsoft.com/troubleshoot/azure/synapse-analytics/dedicated-sql/query-execution-performance/dsql-perf-stats-accuracy)
-[Create/Update statistics](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics).
+First, [check statistics accuracy on a dedicated SQL pool](dsql-perf-stats-accuracy.md). If necessary, [create or update statistics](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics).
 
 <br/>
 </details>
@@ -384,7 +383,7 @@ In-flight data skew is a variant of the [data skew (stored)](#data-skew-stored) 
 
 **Mitigations**
 
-- Ensure that statistics are [created and up-to-date](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics). You can verify the accuracy of statistics by following the steps outlined in [Check statistics accuracy on a dedicated SQL pool](https://learn.microsoft.com/troubleshoot/azure/synapse-analytics/dedicated-sql/query-execution-performance/dsql-perf-stats-accuracy)
+- Ensure that statistics are [created and up-to-date](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics). You can verify the accuracy of statistics by following the steps outlined in [Check statistics accuracy on a dedicated SQL pool](dsql-perf-stats-accuracy.md).
 - Change the order of your `GROUP BY` columns to lead with a higher-cardinality column.
 - Create multi-column statistics if joins cover multiple columns.
 - Add query hint `OPTION(FORCE_ORDER)` to your query.
@@ -455,7 +454,7 @@ The optimizer relies on statistics to estimate the number of rows that will be r
 
 For example, if the actual number of rows for a given table is 60 million, and the estimated number of rows is 1,000 (at control node level), the optimizer might choose a Broadcast move operation. This is because the cost is perceived to be lower compared to a Shuffle Move, given the optimizer's assumption that the table contains only 1,000 rows. However, once the actual execution begins, the engine will move 60 million rows as part of the execution using a Broadcast move, which can be an expensive operation considering both the data size and row count. Consequently, if the data size is substantial, it might lead to performance issues for the query itself and other queries, resulting in high CPU usage.
 
-To remedy this situation, ensure all [statistics are up-to-date](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics), and a maintenance plan is in place to keep them updated for user workloads. You can verify the accuracy of statistics by following the steps outlined in [Check statistics accuracy on a dedicated SQL pool](https://learn.microsoft.com/troubleshoot/azure/synapse-analytics/dedicated-sql/query-execution-performance/dsql-perf-stats-accuracy)
+To remedy this situation, ensure all [statistics are up-to-date](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics), and a maintenance plan is in place to keep them updated for user workloads. You can verify the accuracy of statistics by following the steps outlined in [Check statistics accuracy on a dedicated SQL pool](dsql-perf-stats-accuracy.md).
 
 **Heavy IO workloads**
 
