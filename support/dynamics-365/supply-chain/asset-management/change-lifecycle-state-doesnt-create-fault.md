@@ -4,24 +4,26 @@ description: Provides fault registration steps to ensure you receive the expecte
 author: sorenbacker2
 ms.author: sorenba
 ms.reviewer: kamaybac
-ms.date: 01/25/2025
+ms.date: 01/30/2025
 ms.custom: sap:Asset management\Issues with asset management
 ---
 # Changing work order lifecycle state doesn't generate fault cause or fault remedy error
 
-This article provides a resolution for an issue where a fault cause or fault remedy error isn't shown when you change a work order lifecycle state in Microsoft Dynamics 365 Supply Chain Management.
+This article provides the setup steps to ensure that the expected fault cause or fault remedy error is generated when you change a work order lifecycle state in Microsoft Dynamics 365 Supply Chain Management.
 
 ## Symptoms  
 
-When you change a [work order lifecycle state](/dynamics365/supply-chain/asset-management/setup-for-work-orders/work-order-lifecycle-states) that's set up to validate [fault causes](/dynamics365/supply-chain/asset-management/setup-for-work-orders/fault-management#create-fault-causes) and [fault remedies](/dynamics365/supply-chain/asset-management/setup-for-work-orders/fault-management#create-fault-remedies), no error occurs for a fault cause or fault remedy. This allows the lifecycle state change despite the validation setup.
+When you change a [work order lifecycle state](/dynamics365/supply-chain/asset-management/setup-for-work-orders/work-order-lifecycle-states) that's set up to validate [fault causes](/dynamics365/supply-chain/asset-management/setup-for-work-orders/fault-management#create-fault-causes) and [fault remedies](/dynamics365/supply-chain/asset-management/setup-for-work-orders/fault-management#create-fault-remedies), the error you expect to be generated doesn't occur for a fault cause or fault remedy. This allows the lifecycle state change despite the validation setup.
 
 ## Cause
 
-The fault causes and fault remedies can't be validated because they don't have a [fault registration](#fault-registration).
+A likely cause for the expected error to not be generated is that the fault cause and fault remedy couldn't be validated because they don't have a [fault registration](#create-a-fault-registration).
 
 ## Resolution
 
-### Prerequisites
+To ensure the expected error is generated, take the following steps to set up lifecycle states and work order types, and create a fault registration.
+
+### Set up lifecycle states and work order types
 
 1. Set up the lifecycle state to enable the validation of fault causes and fault remedies:
 
@@ -35,7 +37,7 @@ The fault causes and fault remedies can't be validated because they don't have a
    1. Select the work order type in question and then select **Edit**.
    1. Under the **General** FastTab, set the **Fault cause** and **Fault remedy** options and other related options to **Yes** in the **Mandatory** section.
 
-### Fault registration
+### Create a fault registration
 
 To make sure you receive the expected error message, follow these steps to create a fault registration:
 
@@ -51,7 +53,7 @@ To make sure you receive the expected error message, follow these steps to creat
 
 6. In the Action Pane, go to the **Lifecycle state** group and select **Update work order state**.
 
-7. In the **Update work order state** window, select the **Lifecycle state** that has the validation setup (see [prerequisites](#prerequisites)). For simplicity, assume the **Lifecycle state** is **Released**. Then, select **OK**.
+7. In the **Update work order state** window, select the **Lifecycle state** that has the validation setup (see [Set up lifecycle states and work order types](#set-up-lifecycle-states-and-work-order-types)). For simplicity, assume the **Lifecycle state** is **Released**. Then, select **OK**.
 
 8. Select the **Action Centre/notification bell** in the upper-right corner, and then select **Message details**. The **Message details** shows "The fault cause for symptom X on asset Y is missing. Update has been cancelled." Close the **Message details** window. In the upper-right corner of the work order, the **Lifecycle state** is still shown as **New**.
 
@@ -63,7 +65,7 @@ To make sure you receive the expected error message, follow these steps to creat
 
 12. In the Action Pane, go to the **Lifecycle state** group and select **Update work order state**.
 
-13. In the **Update work order state** window, select the **Lifecycle state** that has the validation setup (see [prerequisites](#prerequisites)). For simplicity, assume the **Lifecycle state** is **Released**. Then, select **OK**.
+13. In the **Update work order state** window, select the **Lifecycle state** that has the validation setup (see [Set up lifecycle states and work order types](#set-up-lifecycle-states-and-work-order-types)). For simplicity, assume the **Lifecycle state** is **Released**. Then, select **OK**.
 
 14. Select the **Action Centre/notification bell** in the upper-right corner, and then select the new **Message details** (mentioned in step 8). The **Message details** shows "Fault remedy for cause Z on symptom X on asset Y is missing. Update has been cancelled." Close the **Message details** window. In the upper-right corner of the work order, the **Lifecycle state** is still shown as **New**.
 
@@ -75,6 +77,6 @@ To make sure you receive the expected error message, follow these steps to creat
 
 18. In the Action Pane, go to the **Lifecycle state** group and select **Update work order state**.
 
-19. In the **Update work order state** window, select the **Lifecycle state** that has the validation setup (see [prerequisites](#prerequisites)). For simplicity, assume it's **Lifecycle state** is **Released**. Then, select **OK**.
+19. In the **Update work order state** window, select the **Lifecycle state** that has the validation setup (see [Set up lifecycle states and work order types](#set-up-lifecycle-states-and-work-order-types)). For simplicity, assume it's **Lifecycle state** is **Released**. Then, select **OK**.
 
 20. Select the **Action Centre/notification bell** in the upper-right corner. The first two attempts to update the work order state result in error messages and no update of the **Lifecycle state**. In this third attempt, no error message is generated, and the **Lifecycle state** is correctly updated to **Released**.
