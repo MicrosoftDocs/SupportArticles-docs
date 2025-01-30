@@ -2,7 +2,7 @@
 title: Error code occurs when running an attended or unattended desktop flow
 description: Provides mitigation steps for the error codes that occur when running attended or unattended desktop flows.
 ms.reviewer: cefriant, kenseongtan, guco, johndund
-ms.date: 01/15/2024
+ms.date: 01/30/2025
 ms.custom: sap:Desktop flows\Unattended flow runtime errors
 ---
 # Error code occurs when running an attended or unattended desktop flow
@@ -28,7 +28,7 @@ _Original KB number:_ &nbsp; 4555406
 |UnattendedUserSessionDisconnected|400|Unattended|For more information about this error code, see [UnattendedUserSessionDisconnected](troubleshoot-desktop-flow-run-queue-errors.md#unattendedusersessiondisconnected).|
 |UnattendedUserSessionLocked|400|Unattended|For more information about this error code, see [UnattendedUserSessionLocked](troubleshoot-desktop-flow-run-queue-errors.md#unattendedusersessionlocked).|
 |SessionNotFound|400|Unattended|The Windows session on the machine for the given run can't be found. This issue can occur in the following cases:<br>- The machine reboots during the run.<br>- You're using a virtual machine that was cloned after installing Power Automate. If it was cloned after the installation and was registered, delete your machine from the Power Automate portal and re-register the machine.|
-|SessionNotFoundAfterCreation|400|Unattended|The Windows session on the machine for the given run can't be found after the session was created. This issue can occur if the Power Automate service does not have the rights to enumerate remote sessions. Please check that the account running the Power Automate service (UIFlowService) is in the "Remote Desktop Users" group and not removed by GPO.|
+|SessionNotFoundAfterCreation|400|Unattended|The Windows session on the machine for the given run can't be found after the session is created. This issue can occur if the Power Automate service ([UIFlowService](/power-automate/desktop-flows/troubleshoot#change-the-on-premises-service-account)) doesn't have the rights to enumerate remote sessions. To solve this issue, ensure the account running the Power Automate service (UIFlowService) is in the "Remote Desktop Users" group and not removed by Group Policy Object (GPO).|
 |TooManyActiveSessions|400|Unattended|Windows Server only.</br>You need to sign out at least one active session on the machine.|
 |SessionHasLoggedOff|400|Unattended|To solve this issue, see [SessionHasLoggedOff occurs during a desktop flow run connected with the cloud](session-has-logged-off-troubleshooting.md).|
 |SessionHasLoggedOffWithMaxIdleTime |400|Unattended|To solve this issue, see [SessionHasLoggedOffWithMaxIdleTime occurs during a desktop flow run](desktop-flow-max-session-duration-error.md).|
