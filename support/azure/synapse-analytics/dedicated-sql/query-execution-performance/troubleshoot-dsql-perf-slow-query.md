@@ -1,11 +1,12 @@
 ---
-title: Troubleshoot slow queries on a dedicated SQL pool
-description: Describes the troubleshooting steps and mitigations for the common performance issues of queries run on an Azure Synapse Analytics dedicated SQL pool. 
-ms.date: 28/01/2025
-author: scott-epperly
-ms.author: haiyingyu
-ms.reviewer: scepperl
-ms.custom: sap:Query Execution and Performance
+title: Troubleshoot Slow Queries on a Dedicated SQL Pool
+description: Describes the troubleshooting steps and mitigations for the common performance issues of queries run on an Azure Synapse Analytics dedicated SQL pool.
+author: dialmoth
+ms.author: dialmoth
+ms.reviewer: goventur, wiassaf
+ms.date: 01/30/2025
+ms.custom:
+  - "sap:Query Execution and Performance"
 ---
 
 # Troubleshoot a slow query on a dedicated SQL Pool
@@ -27,22 +28,30 @@ Follow the steps to troubleshoot the issue or execute the steps in the notebook 
 > - Outdated statistics
 > - Unhealthy clustered columnstore indexes (CCIs)
 >
-> To save troubleshooting time, make sure that the statistics are [created and up-to-date](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics) and [CCIs have been rebuilt](dsql-perf-cci-health.md).
+> To save troubleshooting time, make sure that the statistics are [created and up-to-date](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics) and [rebuild  clustered columnstore indexes in the dedicated SQL pool](dsql-perf-cci-health.md).
 
-## Step 1: Identify the request_id (aka QID)
+<a id="#step-1-identify-the-request_id-aka-qid"></a>
+
+## Step 1: Identify the request_id (also known as QID)
 
 The `request_id` of the slow query is required to research potential reasons for a slow query. Use the following script as a starting point for identifying the query you want to troubleshoot. Once the slow query is identified, note down the `request_id` value.
+
+First, monitor active queries. This query is ordered by newest rows first.
 
 ```sql
 -- Monitor active queries
 SELECT *
 FROM sys.dm_pdw_exec_requests
-WHERE [status] NOT IN ('Completed','Failed','Cancelled')
-AND session_id <> session_id()
+WHERE [status] NOT IN ('Completed', 'Failed', 'Cancelled')
+      AND session_id <> session_id()
 -- AND [label] = '<YourLabel>'
 -- AND resource_allocation_percentage is not NULL
 ORDER BY submit_time DESC;
+```
 
+Then, find the active queries that have the longest run time, starting with the longest-running queries.
+
+```sql
 -- Find top 10 longest running queries
 SELECT TOP 10 *
 FROM sys.dm_pdw_exec_requests
@@ -53,23 +62,24 @@ To better target the slow queries, use the following tips when you run the scrip
 
 - Sort by either `submit_time DESC` or `total_elapsed_time DESC` to have the longest-running queries present at the top of the result set.
 - Use `OPTION(LABEL='<YourLabel>')` in your queries and then filter the `label` column to identify them.
-- Consider filtering out any QIDs that don't have a value for `resource_allocation_percentage` when you know the target statement is contained in a batch.
-
-  **Note:** Be cautious with this filter as it may also filter out some queries that are being blocked by other sessions.
+- Consider filtering out any QIDs that don't have a value for `resource_allocation_percentage` when you know the target statement is contained in a batch. Be cautious with this filter as it might also filter out some queries that are being blocked by other sessions.
 
 ## Step 2: Determine where the query is taking time
 
-Run the following script to find the step that may cause the performance issue of the query. Update the variables in the script with the values described in the following table. Change the `@ShowActiveOnly` value to 0 to get the full picture of the distributed plan. Take note of the `StepIndex`, `Phase`, and `Description` values of the slow step identified from the result set.
+Run the following script to find the step that might cause the performance issue of the query. Update the variables in the script with the values described in the following table. Change the `@ShowActiveOnly` value to 0 to get the full picture of the distributed plan. Take note of the `StepIndex`, `Phase`, and `Description` values of the slow step identified from the result set.
 
 | Parameter | Description |
-| -- | ---- |
+| --- | ---- |
 | `@QID` | The `request_id` value obtained in [Step 1](#step-1-identify-the-request_id-aka-qid) |
-| `@ShowActiveOnly` | 0 - Show all steps for the query<br/>1 - Show only the currently active step |
+| `@ShowActiveOnly` | `0` - Show all steps for the query<br/>`1` - Show only the currently active step |
 
 ```sql
-DECLARE @QID VARCHAR(16) = '<request_id>', @ShowActiveOnly BIT = 1; 
+DECLARE @QID AS VARCHAR (16) = '<request_id>', @ShowActiveOnly AS BIT = 1;
 -- Retrieve session_id of QID
-DECLARE @session_id VARCHAR(16) = (SELECT session_id FROM sys.dm_pdw_exec_requests WHERE request_id = @QID);
+
+DECLARE @session_id AS VARCHAR (16) = (SELECT session_id
+                                       FROM sys.dm_pdw_exec_requests
+                                       WHERE request_id = @QID);
 -- Blocked by Compilation or Resource Allocation (Concurrency)
 SELECT @session_id AS session_id, @QID AS request_id, -1 AS [StepIndex], 'Compilation' AS [Phase],
    'Blocked waiting on '
@@ -83,51 +93,65 @@ SELECT @session_id AS session_id, @QID AS request_id, -1 AS [StepIndex], 'Compil
    NULL AS [Status], NULL AS [EstimatedRowCount], NULL AS [ActualRowCount], NULL AS [TSQL]
 FROM sys.dm_pdw_waits waiting
 WHERE waiting.session_id = @session_id
-   AND ([type] LIKE 'Shared-%' OR
-      [type] in ('ConcurrencyResourceType', 'UserConcurrencyResourceType', 'CompilationConcurrencyResourceType'))
-   AND [state] = 'Queued'
-GROUP BY session_id 
+      AND ([type] LIKE 'Shared-%'
+           OR [type] IN ('ConcurrencyResourceType', 'UserConcurrencyResourceType', 'CompilationConcurrencyResourceType'))
+      AND [state] = 'Queued'
+GROUP BY session_id
 -- Blocked by another query
 UNION ALL
-SELECT @session_id AS session_id, @QID AS request_id, -1 AS [StepIndex], 'Compilation' AS [Phase],
-   'Blocked by ' + blocking.session_id + ':' + blocking.request_id + ' when requesting ' + waiting.type + ' on '
-   + QUOTENAME(waiting.object_type) + waiting.object_name AS [Description],
-   waiting.request_time AS [StartTime], GETDATE() AS [EndTime],
-   DATEDIFF(ms, waiting.request_time, GETDATE())/1000.0 AS [Duration],
-   NULL AS [Status], NULL AS [EstimatedRowCount], NULL AS [ActualRowCount],
-   COALESCE(blocking_exec_request.command, blocking_exec_request.command2) AS [TSQL]
-FROM sys.dm_pdw_waits waiting
-   INNER JOIN sys.dm_pdw_waits blocking
-      ON waiting.object_type = blocking.object_type
-      AND waiting.object_name = blocking.object_name
-   INNER JOIN sys.dm_pdw_exec_requests blocking_exec_request
-      ON blocking.request_id = blocking_exec_request.request_id
-WHERE waiting.session_id = @session_id AND waiting.state = 'Queued'
-   AND blocking.state = 'Granted' AND waiting.type != 'Shared' 
+SELECT @session_id AS session_id,
+       @QID AS request_id,
+       -1 AS [StepIndex],
+       'Compilation' AS [Phase],
+       'Blocked by ' + blocking.session_id + ':' + blocking.request_id + ' when requesting ' + waiting.type + ' on ' + QUOTENAME(waiting.object_type) + waiting.object_name AS [Description],
+       waiting.request_time AS [StartTime],
+       GETDATE() AS [EndTime],
+       DATEDIFF(ms, waiting.request_time, GETDATE()) / 1000.0 AS [Duration],
+       NULL AS [Status],
+       NULL AS [EstimatedRowCount],
+       NULL AS [ActualRowCount],
+       COALESCE (blocking_exec_request.command, blocking_exec_request.command2) AS [TSQL]
+FROM sys.dm_pdw_waits AS waiting
+     INNER JOIN
+     sys.dm_pdw_waits AS blocking
+     ON waiting.object_type = blocking.object_type
+        AND waiting.object_name = blocking.object_name
+     INNER JOIN
+     sys.dm_pdw_exec_requests AS blocking_exec_request
+     ON blocking.request_id = blocking_exec_request.request_id
+WHERE waiting.session_id = @session_id
+      AND waiting.state = 'Queued'
+      AND blocking.state = 'Granted'
+      AND waiting.type != 'Shared'
 -- Request Steps
 UNION ALL
-SELECT @session_id AS session_id, @QID AS request_id, step_index AS [StepIndex],
-       'Execution' AS [Phase], operation_type + ' (' + location_type + ')' AS [Description],
-       start_time AS [StartTime], end_time AS [EndTime],
-       total_elapsed_time/1000.0 AS [Duration], [status] AS [Status],
+SELECT @session_id AS session_id,
+       @QID AS request_id,
+       step_index AS [StepIndex],
+       'Execution' AS [Phase],
+       operation_type + ' (' + location_type + ')' AS [Description],
+       start_time AS [StartTime],
+       end_time AS [EndTime],
+       total_elapsed_time / 1000.0 AS [Duration],
+       [status] AS [Status],
        CASE WHEN estimated_rows > -1 THEN estimated_rows END AS [EstimatedRowCount],
        CASE WHEN row_count > -1 THEN row_count END AS [ActualRowCount],
        command AS [TSQL]
 FROM sys.dm_pdw_request_steps
 WHERE request_id = @QID
-   AND [status] = CASE @ShowActiveOnly WHEN 1 THEN 'Running' ELSE [status] END
+      AND [status] = CASE @ShowActiveOnly WHEN 1 THEN 'Running' ELSE [status] END
 ORDER BY StepIndex;
 ```
 
 ## Step 3: Review step details
 
-Run the following script to review the details of the step identified in the previous step. Update the variables in the script with the values described in the following table. Change the `@ShowActiveOnly` value to 0 to compare all distribution timings. Take note of the `wait_type` value for the distribution that may cause the performance issue.
+Run the following script to review the details of the step identified in the previous step. Update the variables in the script with the values described in the following table. Change the `@ShowActiveOnly` value to 0 to compare all distribution timings. Take note of the `wait_type` value for the distribution that might cause the performance issue.
 
 | Parameter | Description |
 | -- | ---- |
 | `@QID` | The `request_id` value obtained in [Step 1](#step-1-identify-the-request_id-aka-qid) |
 | `@StepIndex` | The `StepIndex` value identified in [Step 2](#step-2-determine-where-the-query-is-taking-time) |
-| `@ShowActiveOnly` | 0 - Show all distributions for the given `StepIndex` value<br/>1 - Show only the currently active distributions for the given `StepIndex` value |
+| `@ShowActiveOnly` | `0` - Show all distributions for the given `StepIndex` value<br/>`1` - Show only the currently active distributions for the given `StepIndex` value |
 
 ```sql
 DECLARE @QID VARCHAR(16) = '<request_id>', @StepIndex INT = <StepIndex>, @ShowActiveOnly BIT = 1;
@@ -219,7 +243,7 @@ Being blocked for resource allocation means that your query is waiting to execut
 
 <details><summary id="complex-query-or-older-join-syntax"><b>Complex query or older JOIN syntax</b></summary>
 
-You may encounter a situation where the default query optimizer methods are proven ineffective as the compilation phase takes a long time. It may occur if the query:
+You might encounter a situation where the default query optimizer methods are proven ineffective as the compilation phase takes a long time. It might occur if the query:
 
 - Involves a high number of joins and/or subqueries (complex query).
 - Utilizes joiners in the `FROM` clause (not ANSI-92 style joins).
@@ -236,7 +260,7 @@ Though these scenarios are atypical, you have options to attempt to override the
 
 <details><summary id="long-running-drop-table-or-truncate-table"><b>Long-running DROP TABLE or TRUNCATE TABLE</b></summary>
 
-For execution time efficiencies, the `DROP TABLE` and `TRUNCATE TABLE` statements will defer storage cleanup to a background process. However, if your workload performs a high number of `DROP`/`TRUNCATE TABLE` statements in a short time frame, it's possible that metadata becomes crowded and causes subsequent `DROP`/`TRUNCATE TABLE` statements to execute slowly.
+For execution time efficiencies, the `DROP TABLE` and `TRUNCATE TABLE` statements defer storage cleanup to a background process. However, if your workload performs a high number of `DROP`/`TRUNCATE TABLE` statements in a short time frame, it's possible that metadata becomes crowded and causes subsequent `DROP`/`TRUNCATE TABLE` statements to execute slowly.
 
 **Mitigations**
 
@@ -269,7 +293,7 @@ If the first execution of query consistently requires statistics to be created, 
 
 <details><summary id="auto-create-statistics-timeouts"><b>Auto-create statistics timeouts</b></summary>
 
-The [automatic create statistics option](/azure/synapse-analytics/sql/develop-tables-statistics#automatic-creation-of-statistics), `AUTO_CREATE_STATISTICS` is `ON` by default to help ensure the query optimizer can make good distributed plan decisions. The auto-creation of statistics occurs in response to a SELECT statement and has a 5-minute threshold to complete.  If the size of data and/or the number of statistics to be created require longer than the 5-minute threshold, the auto-creation of statistics will be abandoned so that the query can continue execution.  The failure to create the statistics can negatively impact the query optimizer's ability to generate an efficient distributed execution plan, resulting in poor query performance.
+The [automatic create statistics option](/azure/synapse-analytics/sql/develop-tables-statistics#automatic-creation-of-statistics), `AUTO_CREATE_STATISTICS` is `ON` by default to help ensure the query optimizer can make good distributed plan decisions. The auto-creation of statistics occurs in response to a SELECT statement and has a 5-minute threshold to complete. If the size of data and/or the number of statistics to be created require longer than the 5-minute threshold, the auto-creation of statistics will be abandoned so that the query can continue execution. The failure to create the statistics can negatively affect the query optimizer's ability to generate an efficient distributed execution plan, resulting in poor query performance.
 
 **Mitigations**
 
@@ -289,7 +313,7 @@ Manually [create the statistics](/azure/synapse-analytics/sql/develop-tables-sta
    | 1. The `Description` value indicates `HadoopBroadcastOperation`, `HadoopRoundRobinOperation` or `HadoopShuffleOperation`. <br/> 2. The `total_elapsed_time` value of a given `step_index` is inconsistent between executions. | [Ad hoc external table queries](#ad-hoc-external-table-queries) |
 
 - Check the `total_elapsed_time` value obtained in [Step 3](#step-3-review-step-details). If it's significantly higher in a few distributions in a given step, follow the these steps:
-   
+
    1. Check the data distribution for every table referenced in the `TSQL` field for associated `step_id` by running the following command against each:
 
        ```sql
@@ -334,7 +358,7 @@ Rebuild the tables to correct the related table columns that don't have identica
 
 <details><summary id="ad-hoc-external-table-queries"><b>Ad hoc external table queries</b></summary>
 
-Queries against external tables are designed with the intention of bulk loading data into the dedicated SQL pool. Ad hoc queries against external tables may suffer variable durations due to external factors, such as concurrent storage container activities.
+Queries against external tables are designed with the intention of bulk loading data into the dedicated SQL pool. Ad hoc queries against external tables might suffer variable durations due to external factors, such as concurrent storage container activities.
 
 **Mitigations**
 
@@ -401,6 +425,7 @@ If the issue persists, then:
 1. Open <output_file_name>.txt in a text editor. Locate and copy paste the distribution-level execution plans (lines that begin with `<ShowPlanXML>`) from the longest-running step identified in [Step 2](#step-2-determine-where-the-query-is-taking-time) into separate text files with a _.sqlplan_ extension.
 
     **Note:** Each step of the distributed plan will typically have recorded 60 distribution-level execution plans. Make sure that you're preparing and comparing execution plans from the same distributed plan step.
+
 1. The [Step 3](#step-3-review-step-details) query frequently reveals a few distributions that take much longer than others. In [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms), compare the distribution-level execution plans (from the _.sqlplan_ files created) of a long-running distribution to a fast-running distribution to analyze potential causes for differences.
 
 </details>
@@ -426,13 +451,15 @@ Unhealthy CCIs contribute to increased IO, CPU, and memory allocation, which, in
 
 Outdated statistics can cause the generation of an unoptimized distributed plan, which involves more data movement than necessary. Unnecessary data movement increases the workload not only on your data at rest but also on the `tempdb`. Because IO is a shared resource across all queries, performance impacts can be felt by the entire workload.
 
-The optimizer relies on statistics to estimate the number of rows that will be returned by a query, allowing it to choose the most plan, best move operation to perform (i.e, Shuffle Move Operation, Broad Cast Move Operation) to align the data during the join condiation (Depends on the table distribution type). For example, if the actual number of rows for a given table is 60 million, and the estimated number of rows is 1000 (At control node level), the optimizer may choose a Broadcast move operation. This is because the cost is perceived to be lower compared to a Shuffle Move, given the optimizer's assumption that the table contains only 1000 rows. However, once the actual execution begins, the engine will move 60 million rows as part of the execution using a Broadcast move, which can be an expensive operation considering both the data size and not just the row count. Consequently, if the data size is substantial, it might lead to performance issues for the query itself and other quries (e.g., High CPU usage which will lead to overall performacne issues, concurrency issues as the queries will take longer time execute while you have new incoming queries,..etc).
+The optimizer relies on statistics to estimate the number of rows that will be returned by a query. Statistics allow the query optimizer to choose the most efficient plan, or the best move operation to perform (for example, a Shuffle Move Operation or Broad Cast Move Operation) to align the data during the join condition. The best join condition depends on the table distribution type. 
+
+For example, if the actual number of rows for a given table is 60 million, and the estimated number of rows is 1,000 (at control node level), the optimizer might choose a Broadcast move operation. This is because the cost is perceived to be lower compared to a Shuffle Move, given the optimizer's assumption that the table contains only 1,000 rows. However, once the actual execution begins, the engine will move 60 million rows as part of the execution using a Broadcast move, which can be an expensive operation considering both the data size and row count. Consequently, if the data size is substantial, it might lead to performance issues for the query itself and other queries, resulting in high CPU usage.
 
 To remedy this situation, ensure all [statistics are up-to-date](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics), and a maintenance plan is in place to keep them updated for user workloads. You can verify the accuracy of statistics by following the steps outlined in [Check statistics accuracy on a dedicated SQL pool](https://learn.microsoft.com/troubleshoot/azure/synapse-analytics/dedicated-sql/query-execution-performance/dsql-perf-stats-accuracy)
 
 **Heavy IO workloads**
 
-Your overall workload may be reading large amounts of data. Synapse dedicated SQL pools scale resources in accordance with the DWU. In order to achieve better performance, consider either or both:
+Your overall workload might be reading large amounts of data. Synapse dedicated SQL pools scale resources in accordance with the DWU. In order to achieve better performance, consider either or both:
 
 - Utilizing a larger [resource class](/azure/synapse-analytics/sql-data-warehouse/resource-classes-for-workload-management) for your queries.
 - [Increase compute resources](/azure/synapse-analytics/sql-data-warehouse/quickstart-scale-compute-portal).
@@ -456,7 +483,7 @@ Your overall workload may be reading large amounts of data. Synapse dedicated SQ
 If the issue occurs during a `RETURN` operation in [Step 2](#step-2-determine-where-the-query-is-taking-time),
 
 - Reduce the number of concurrent parallel processes.
-- Scale out the most impacted process to another client.
+- Scale out the most affected process to another client.
 
 For all other data movement operations, it's probable that the network issues appear to be internal to the dedicated SQL pool. To attempt to quickly mitigate this issue, follow these steps:
 
