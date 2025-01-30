@@ -1,9 +1,9 @@
 ---
 title: Troubleshoot common query execution errors on an Azure Synapse dedicated SQL pool
 description: Provides a reference of the most common errors and recommendations for query execution on an Azure Synapse dedicated SQL pool.
-ms.date: 07/04/2023
+ms.date: 28/01/2025
 author: scott-epperly
-ms.author: scepperl
+ms.author: scepperl,dialmoth
 ms.reviewer: goventur
 ms.custom: sap:Query Execution and Performance
 ---
@@ -55,4 +55,5 @@ Use the following guidance to troubleshoot common failures, errors, and exceptio
 ## Resources
 
 * Query the DMV [sys.dm_pdw_errors](/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql) for errors
-* [Troubleshoot dedicated SQL pool (formerly SQL DW) in Azure Synapse Analytics](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-troubleshoot/)
+* [Troubleshoot dedicated SQL pool (formerly SQL DW) in Azure Synapse Analytics](https://learn.microsoft.com/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-troubleshoot)
+* [Troubleshoot a slow query on a dedicated SQL Pool](https://learn.microsoft.com/troubleshoot/azure/synapse-analytics/dedicated-sql/query-execution-performance/troubleshoot-dsql-perf-slow-query)
