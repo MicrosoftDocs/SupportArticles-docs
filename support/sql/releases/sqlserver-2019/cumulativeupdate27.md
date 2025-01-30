@@ -16,7 +16,7 @@ _Version:_ &nbsp; 15.0.4375.4
 
 ## Summary
 
-This article describes Cumulative Update package 27 (CU27) for Microsoft SQL Server 2019. This update contains 14 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 26, and it updates components in the following builds:
+This article describes Cumulative Update package 27 (CU27) for Microsoft SQL Server 2019. This update contains 13 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 26, and it updates components in the following builds:
 
 - SQL Server - Product version: **15.0.4375.4**, file version: **2019.150.4375.4**
 - Analysis Services - Product version: **15.0.35.45**, file version: **2018.150.35.45**
@@ -43,6 +43,12 @@ Microsoft is working on a fix for this issue and it will be available in a futur
 
 [!INCLUDE [patching-error-2019](../includes/patching-error-2019.md)]
 
+### Issue four: Possibility of error 1204 due to disabled lock escalation
+
+SQL Server 2019 CU26 introduced a regression that can disable lock escalation, which causes error 1204 "The instance of the SQL Server Database Engine cannot obtain a LOCK resource at this time."
+
+To work around this issue, you can uninstall the CU26 or install the [CU28](cumulativeupdate28.md).
+
 ## Improvements and fixes included in this update
 
 A downloadable Excel workbook that contains a summary list of builds, together with their current support lifecycle, is available. The Excel file also contains detailed fix lists for SQL Server 2022, SQL Server 2019, and SQL Server 2017. [Select to download this Excel file now](https://aka.ms/sqlserverbuilds).
@@ -62,7 +68,6 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=3088136>[3088136](#3088136) </a> | Fixes an assertion dump issue (Location: hadrlogcapture.cpp:\<LineNumber>; Expression: m_pFsManager->GetEnqueuedBlockId () < capturedLogBlockId \|\| capturedLogBlockId == m_pDbPartner->GetFirstLogBlockIdToCapture ()) that you encounter when there are FILESTREAM transactions in an Always On availability group (AG). | SQL Server Engine | High Availability and Disaster Recovery | All|
 | <a id=3157054>[3157054](#3157054) </a> | Adds performance monitor counters to the cluster log report when the health check timeout is reported. | SQL Server Engine | High Availability and Disaster Recovery | Windows|
 | <a id=3207518>[3207518](#3207518) </a> | [FIX: Memory exceeds the configured limits that are specified by memory.memorylimitmb in SQL Server (KB5042369)](../sqlserver-2022/memory-exceed-configured-limits-memory-memorylimitmb.md) | SQL Server Engine | Linux | Linux|
-| <a id=3282395>[3282395](#3282395) </a> | Fixes the following error 1204 that you encounter when lock escalation doesn't occur if you apply the fix of [Bug 2830668](cumulativeupdate26.md#2830668): </br></br>SQL Server Database Engine cannot obtain a LOCK resource at this time. | SQL Server Engine | Metadata | All |
 | <a id=2955030>[2955030](#2955030) </a> | Fixes an assertion failure (Location: sosmemobj.cpp:2744; Expression: pvb->FInUse()) in `CVariableInfo::PviRelease` that you encounter when you use UTF-8 collations and the `WITH RESULT SETS` clause. | SQL Server Engine | Programmability | All|
 | <a id=2962248>[2962248](#2962248) </a> | Fixes an issue in which change tracking auto cleanup consumes CPU in cycles every 30 minutes even if change tracking isn't enabled on any databases. </br></br>**Note**: After applying the fix, if you see some rows in `sys.syscommittab` or `dbo.MSchange_tracking_history` tables in databases where change tracking is disabled, you need to re-enable and then disable change tracking on these databases. This will clean all tracking data. For more information, see [Enable and Disable Change Tracking](/sql/relational-databases/track-changes/enable-and-disable-change-tracking-sql-server).| SQL Server Engine | Replication | All|
 | <a id=3015695>[3015695](#3015695) </a> | Fixes the following error that you encounter when running `sys.sp_flush_CT_internal_table_on_demand` in a SQL Server instance that has the Case-sensitive (_CS) collation option: </br></br>Msg 137, Level 15, State 2, Procedure sp_ManualCTCleanup, Line \<LineNumber> [Batch Start Line 3] </br>Must declare the scalar variable "@TableName". </br>Msg 137, Level 15, State 2, Procedure sp_ManualCTCleanup, Line \<LineNumber> [Batch Start Line 3] </br>Must declare the scalar variable "@TableName". </br>Total rows deleted: (null). </br>Total rows deleted: (null). | SQL Server Engine | Replication | All|
