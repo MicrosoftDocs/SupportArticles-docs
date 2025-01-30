@@ -50,18 +50,18 @@ To create a report to troubleshoot report issues, follow these steps:
       - No wildcard or ranges.
       - No modifiers or calculations to start.
 6. In the column definition, include a single **DESC** and **FD** column for a specific period.
-     - Fiscal year: 2025 (specific year)
-     - Period: 11 (specific period)
-     - Periods covered: PERIODIC
-     - Remove all modifiers for the column.
-7. This should display a report with a single cell of data.
-8. Verify the report is working as expected.
-9. Add one modification at a time if your issue includes specific design requirements. For example: currency filter, attribute filter, year-to-date, or beginning balances.
-10.	If the issue still exists, contact support and provide the following information:
-     - Export the .tdbx files of the simplified and original reports.
-     - Screenshots of the simplified report build block designs including rows and columns.
-     - Excel export of the report output.
-     - Reporting parameters: **Company**, **Reporting date**, and **Report name**.
-     - Details about the incorrect amount and what the expected value is.
+      - Fiscal year: 2025 (specific year)
+      - Period: 11 (specific period)
+      - Periods covered: PERIODIC
+      - Remove all modifiers for the column.
+8. This should display a report with a single cell of data.
+9. Verify the report is working as expected.
+10. Add one modification at a time if your issue includes specific design requirements. For example: currency filter, attribute filter, year-to-date, or beginning balances.
+11.	If the issue still exists, contact support and provide the following information:
+      - Export the .tdbx files of the simplified and original reports.
+      - Screenshots of the simplified report build block designs including rows and columns.
+      - Excel export of the report output.
+      - Reporting parameters: **Company**, **Reporting date**, and **Report name**.
+      - Details about the incorrect amount and what the expected value is.
 
    
