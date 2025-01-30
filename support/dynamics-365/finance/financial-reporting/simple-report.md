@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Troubleshoot report design and data issues
+title: Troubleshoot report design and data issues 
 description: Describes how to create a report to analyze data issues that can occur in Microsoft Dynamics 365 Finance reports.
 author: aprilolson
 ms.date: 01/29/2025
