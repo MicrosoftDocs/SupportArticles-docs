@@ -58,10 +58,10 @@ To create a report to troubleshoot report issues, follow these steps:
 8. Verify the report is working as expected.
 9. Add one modification at a time if your issue includes specific design requirements. For example: currency filter, attribute filter, year-to-date, or beginning balances.
 10.	If the issue still exists, contact support and provide the following information:
- - Export the .tdbx files of the simplified and original reports.
- - Screenshots of the simplified report build block designs including rows and columns.
- - Excel export of the report output.
- - Reporting parameters: **Company**, **Reporting date**, and **Report name**.
- - Details about the incorrect amount and what the expected value is.
+     - Export the .tdbx files of the simplified and original reports.
+     - Screenshots of the simplified report build block designs including rows and columns.
+     - Excel export of the report output.
+     - Reporting parameters: **Company**, **Reporting date**, and **Report name**.
+     - Details about the incorrect amount and what the expected value is.
 
    
