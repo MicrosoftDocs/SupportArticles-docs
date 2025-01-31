@@ -3,7 +3,7 @@ title: General Power Apps troubleshooting strategies
 description: Learn about general strategies to narrow down the cause of app errors.
 author: tahoon
 ms.reviewer: tapanm, lanced
-ms.date: 04/04/2024
+ms.date: 01/31/2025
 ms.author: tahoon
 ms.custom: sap:App Creation (Canvas App)
 search.audienceType: 
@@ -49,25 +49,11 @@ If your issue isn't listed, see [Next steps](#next-steps) later in this article.
 
 ## Performance troubleshooting
 
-For issues with **performance**, you can use profiling tools like [Monitor](/power-apps/maker/monitor-overview) and [Performance insights](/power-apps/maker/common/performance-insights-overview) to help you debug and diagnose problems.
+For performance issues, you can use profiling tools like [Monitor](/power-apps/maker/monitor-overview) and [Performance insights](/power-apps/maker/common/performance-insights-overview) to debug and diagnose problems.
 
 ### Canvas apps
 
-For an overview of how to create a performant canvas app, see the [Overview of creating performant apps](/power-apps/maker/canvas-apps/create-performant-apps-overview).
-
-For more information and guidance on creating performant apps, see:
-
-- [Small data payloads](/power-apps/maker/canvas-apps/small-data-payloads)
-- [Optimized data query patterns](/power-apps/maker/canvas-apps/optimized-query-data-patterns)
-- [Speed up app or page load](/power-apps/maker/canvas-apps/fast-app-page-load)
-- [Fast calculations](/power-apps/maker/canvas-apps/efficient-calculations)
-
-For information on debugging canvas apps and performance issues, see:
-
-- [Understand canvas app execution phases and performance monitoring](/power-apps/maker/canvas-apps/execution-phases-data-flow)
-- [Creating performant apps](/power-apps/maker/canvas-apps/create-performant-apps-overview)
-- [Common canvas app performance issues and resolutions](/power-apps/maker/canvas-apps/common-performance-issue-resolutions)
-- [Debugging canvas apps with Monitor](/power-apps/maker/monitor-canvasapps)
+For more information, see [Power Apps canvas app troubleshooting performance issues](troubleshoot-perf-table.md).
 
 ### Model-driven apps
 
