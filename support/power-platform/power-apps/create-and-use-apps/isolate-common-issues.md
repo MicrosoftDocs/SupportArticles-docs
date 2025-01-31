@@ -54,7 +54,7 @@ If your issue isn't listed, see [Next steps](#next-steps) later in this article.
 
 ### Canvas apps
 
-For more information, see [Troubleshoot Power Apps canvas app performance issues](troubleshoot-perf-table.md).
+For more information, see [Troubleshoot Power Apps canvas app performance issues](~/power-platform/power-apps/canvas-app-performance/troubleshoot-perf-table.md).
 
 ### Model-driven apps
 
