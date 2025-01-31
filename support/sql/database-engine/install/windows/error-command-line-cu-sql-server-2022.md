@@ -1,6 +1,6 @@
 ---
 title: Unable to find an entry point error when updating SQL Server 2022
-description: This article documents an issue where applying a SQL Server 2022 Cumulative Update (CU) from the commmand line generates an error message.
+description: This article documents an issue where applying a SQL Server 2022 Cumulative Update (CU) from the command line generates an error message.
 ms.date: 01/31/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ms.reviewer: brcarrig  
