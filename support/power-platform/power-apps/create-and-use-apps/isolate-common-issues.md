@@ -49,7 +49,18 @@ If your issue isn't listed, see [Next steps](#next-steps) later in this article.
 
 ## Performance troubleshooting
 
-For more information, see [Troubleshoot Power Apps performance issues](troubleshoot-perf-table.md).
+> [!TIP]
+> For performance issues, you can use profiling tools like [Monitor](/power-apps/maker/monitor-overview) and [Performance insights](/power-apps/maker/common/performance-insights-overview) to debug and diagnose problems.
+
+### Canvas apps
+
+For more information, see [Troubleshoot Power Apps canvas app performance issues](troubleshoot-perf-table.md).
+
+### Model-driven apps
+
+For model-driven apps, verify if [forms are designed for performance](/power-apps/maker/model-driven-apps/design-performant-forms).
+
+For more information on debugging model-driven apps and performance issues, see [Debugging model-driven apps with Monitor](/power-apps/maker/monitor-modelapps).
 
 ## General troubleshooting strategies
 

@@ -1,5 +1,9 @@
 - name: Power Apps Troubleshooting
   href: welcome-power-apps.yml
+- name: Canvas App Performance
+  items:
+    - name: Troubleshoot Power Apps canvas app performance issues
+      href: canvas-app-performance/troubleshoot-perf-table.md
 - name: Connections
   items:
     - name: Best practices when updating a flow
