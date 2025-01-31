@@ -4,7 +4,7 @@ description: Improves camera quality in the Dynamics 365 Field Service mobile ap
 ms.author: jobaker
 author: JonBaker007
 ms.reviewer: mhart
-ms.date: 01/27/2025
+ms.date: 01/31/2025
 ms.custom: sap:Mobile application\Issues with performance
 ---
 # Camera pictures are blurry or not focused in the Field Service mobile app
