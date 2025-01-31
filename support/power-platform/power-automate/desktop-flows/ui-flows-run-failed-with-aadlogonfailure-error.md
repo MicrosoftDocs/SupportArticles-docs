@@ -1,13 +1,13 @@
 ---
-title: Desktop flows run failed with AadLogonFailure
-description: Provides a resolution for an issue where desktop flows run failed with the AadLogonFailure error code. 
+title: Desktop flows run failed with MSEntraLogonFailure
+description: Provides a resolution for an issue where desktop flows run failed with the MSEntraLogonFailure error code. 
 ms.reviewer: fredg, johndund
 author: QuentinSele
 ms.author: quseleba
-ms.date: 11/20/2023
+ms.date: 01/31/2025
 ms.custom: sap:Desktop flows\Power Automate for desktop errors
 ---
-# Desktop flows run failed with the AadLogonFailure error code
+# Desktop flows run failed with the MSEntraLogonFailure error code
 
 This article provides a resolution to solve the unattended desktop flows run failure issue.
 
@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 4555446
 
 ## Symptoms
 
-Your unattended desktop flows run failed with the error code **AadLogonFailure**.
+Your unattended desktop flows run failed with the error code **MSEntraLogonFailure**.
 
 ## Cause
 
