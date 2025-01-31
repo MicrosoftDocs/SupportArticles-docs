@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot Power Apps Canvas App Performance Issues
-description: Troubleshoot common performance issues with likely causes and recommendations in a Power Apps canvas app.
+title: Troubleshoot Power Apps Performance Issues
+description: Troubleshoot common performance issues in Power Apps.
 author: lancedMicrosoft
 ms.custom: sap:App Creation (Canvas App)
 ms.reviewer: lanced, aartigoyle
@@ -13,10 +13,12 @@ search.app:
 contributors:
   - aartigoyle
 ---
-# Troubleshoot Power Apps canvas app performance issues
+# Troubleshoot Power Apps performance issues
 
 > [!TIP]
 > For performance issues, you can use profiling tools like [Monitor](/power-apps/maker/monitor-overview) and [Performance insights](/power-apps/maker/common/performance-insights-overview) to debug and diagnose problems.
+
+## Canvas apps
 
 The following table outlines common issues you might encounter while using a Power Apps canvas app with likely causes and recommendations. High-level issues are linked to more detailed documentation through their associated causes and recommendations. Some recommendations might appear multiple times, as the root cause can manifest in various symptoms.
 
@@ -28,7 +30,7 @@ The following table outlines common issues you might encounter while using a Pow
 | Inefficient calculations | - Complex formulas<br> - Repeated calculations <br>    |- [Optimize formulas](/power-apps/maker/canvas-apps/efficient-calculations#calculations) <br> - [Split up long formulas](/power-apps/maker/canvas-apps/working-with-large-apps#split-up-long-formulas)|
 | Overall slow app performance | - Inefficient data retrieval<br> - Excessive controls<br> - Complex formulas<br>  - App is too large | - [Optimize data sources](/power-apps/maker/canvas-apps/optimized-query-data-patterns) <br>  - Reduce control count <br> - [Optimize formulas](/power-apps/maker/canvas-apps/fast-app-page-load#avoid-directly-populating-a-collection-with-large-amounts-of-data) <br> - [Use collections for small, frequently used data](/power-apps/maker/canvas-apps/fast-app-page-load#avoid-directly-populating-a-collection-with-large-amounts-of-data) <br> - [Split up App](/power-apps/maker/canvas-apps/working-with-large-apps#partition-the-app) |
 
-## More information
+### More information
 
 For an overview of how to create a performant canvas app, see the [Overview of creating performant apps](/power-apps/maker/canvas-apps/create-performant-apps-overview).
 
@@ -39,9 +41,15 @@ For more information and guidance on creating performant apps, see:
 - [Speed up app or page load](/power-apps/maker/canvas-apps/fast-app-page-load)
 - [Fast calculations](/power-apps/maker/canvas-apps/efficient-calculations)
 
-For information on debugging canvas apps and performance issues, see:
+For more information on debugging canvas apps and performance issues, see:
 
 - [Understand canvas app execution phases and performance monitoring](/power-apps/maker/canvas-apps/execution-phases-data-flow)
 - [Creating performant apps](/power-apps/maker/canvas-apps/create-performant-apps-overview)
 - [Common canvas app performance issues and resolutions](/power-apps/maker/canvas-apps/common-performance-issue-resolutions)
 - [Debugging canvas apps with Monitor](/power-apps/maker/monitor-canvasapps)
+
+## Model-driven apps
+
+For model-driven apps, verify if [forms are designed for performance](/power-apps/maker/model-driven-apps/design-performant-forms).
+
+For more information on debugging model-driven apps and performance issues, see [Debugging model-driven apps with Monitor](/power-apps/maker/monitor-modelapps).
