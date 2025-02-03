@@ -443,7 +443,7 @@ The SAP HANA resource can't be started by Pacemaker if there are `SYN` failures 
    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
    node-0	DEMOTED		10		online		logreplay	node-1 	4:S:master1:master:worker:master	5	SITEA	syncmem	SOK	2.00.046.00.1581325702	node-0
    node-1	PROMOTED	1693237652	online		logreplay	node-0 	4:P:master1:master:worker:master	150	SITEA	syncmem	PRIM	2.00.046.00.1581325702	node-1
-```
+   ```
 
 7. Exit the SAP Admin account, and then remove the cluster from maintenance mode:
 
@@ -456,7 +456,7 @@ The SAP HANA resource can't be started by Pacemaker if there are `SYN` failures 
 ### Scenario 3, Symptom 2: SAP HANA doesn't start because of replication failure
 
 SAP HANA Resource Reporting N (Standalone) mode experiences start failures with `hana_xxx_roles`.
-The cluster node database resource is a primary or secondary. Standalone node mode with `hana_xxx_roles` reporting **N**.
+The database resource is neither primary nor secondary on any node. Standalone node mode with `hana_xxx_roles` reporting **N**.
 
 When you run the `sudo pcs status --full` command, the `node attributes` status is shown as follows:
 
