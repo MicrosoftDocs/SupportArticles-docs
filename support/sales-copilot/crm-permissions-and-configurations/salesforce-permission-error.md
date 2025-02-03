@@ -1,7 +1,7 @@
 ---
 title: Salesforce CRM users can't view, edit, or save data in Copilot for Sales
 description: Resolves an issue where users are unable to view, edit, or save data in Microsoft Copilot for Sales.
-ms.date: 01/10/2025
+ms.date: 05/07/2024
 author: sbmjais
 ms.author: shjais
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings

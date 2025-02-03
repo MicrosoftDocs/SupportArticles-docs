@@ -1,7 +1,7 @@
 ---
 title: Authentication issues when connecting to Salesforce CRM
 description: Resolves authentication issues when connecting to Salesforce CRM from Microsoft Copilot for Sales.
-ms.date: 01/10/2025
+ms.date: 02/03/2025
 author: sbmjais
 ms.author: shjais
 manager: shujoshi

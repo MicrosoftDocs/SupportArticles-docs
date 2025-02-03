@@ -1,7 +1,7 @@
 ---
 title: Can't sign in to Salesforce due to blocked Salesforce connector
 description: Resolves an error message that occurs in Copilot for Sales when you can't sign in to Salesforce due to a blocked Salesforce connector.
-ms.date: 01/10/2025
+ms.date: 02/03/2025
 author: sbmjais
 ms.author: shjais
 ms.custom: sap:Setup, Installation and Sign-in\CRM Sign-In & Sign Out

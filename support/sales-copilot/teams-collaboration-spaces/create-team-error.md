@@ -1,7 +1,7 @@
 ---
 title: Microsoft Copilot for Sales team creation error ContainsBlockedWord
 description: Resolves an error that occurs when creating a team for an account or opportunity in Microsoft Copilot for Sales due to naming policy restrictions.
-ms.date: 01/10/2025
+ms.date: 02/03/2025
 author: sbmjais
 ms.author: shjais
 ms.custom:
