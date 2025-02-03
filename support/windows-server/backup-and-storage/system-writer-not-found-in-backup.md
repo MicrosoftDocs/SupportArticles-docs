@@ -61,7 +61,7 @@ icacls %windir%\winsxs\temp\PendingRenames /grant BUILTIN\Users:(RX)
 Takeown /f %windir%\winsxs\filemaps\* /a  
 icacls %windir%\winsxs\filemaps\*.* /grant "NT AUTHORITY\SYSTEM:(RX)"
 icacls %windir%\winsxs\filemaps\*.* /grant "NT Service\trustedinstaller:(F)"
-icacls %windir%\winsxs\filemaps\*.* /grant BUILTIN\Users:(RX)
+icacls %windir%\winsxs\filemaps\*.* /grant "BUILTIN\Users:(RX)"
 net stop cryptsvc
 net start cryptsvc
 ```
