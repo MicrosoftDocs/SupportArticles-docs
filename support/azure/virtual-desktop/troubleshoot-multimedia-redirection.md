@@ -2,7 +2,7 @@
 title: Troubleshoot multimedia redirection on Azure Virtual Desktop
 description: Known issues and troubleshooting instructions for multimedia redirection for Azure Virtual Desktop.
 ms.topic: troubleshooting
-ms.date: 01/21/2025
+ms.date: 02/03/2025
 ms.reviewer: daknappe
 ms.custom: docs_inherited, pcy:wincomm-user-experience
 ---
