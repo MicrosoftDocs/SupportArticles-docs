@@ -2,7 +2,7 @@
   href: welcome-power-apps.yml
 - name: Canvas App Performance
   items:
-    - name: Troubleshoot Power Apps canvas app performance issues
+    - name: Troubleshoot canvas app performance issues
       href: canvas-app-performance/troubleshoot-perf-table.md
 - name: Connections
   items:
