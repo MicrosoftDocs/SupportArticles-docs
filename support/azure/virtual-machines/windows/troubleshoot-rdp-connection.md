@@ -25,6 +25,7 @@ The Remote Desktop Protocol (RDP) connection to your Windows-based Azure virtual
 
 > [!IMPORTANT]
 > **Faster answers. Smarter solutions.** Take advantage of resource-specific **diagnostics**, with interactive step-by-step workflows, and detailed troubleshooting guides tailored to your Azure Windows VM connectivity issue. Go to the [Azure portal](https://portal.azure.com), click the **Help(?)** icon, and provide your problem and resource details to quickly get back on track.
+> :::image type="content" source="media/troubleshoot-rdp-connection/connectivity-diagnostics-azure-portal-tool.png" alt-text="Screenshot of the Connectivity Diagnostics tool in Azure portal." border="true":::
 
 ## Troubleshooting steps
 
