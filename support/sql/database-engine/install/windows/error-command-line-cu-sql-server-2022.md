@@ -25,7 +25,7 @@ In this scenario, an exception occurs in the setup console during the update pro
 
 ## Cause
 
-When the **setup.exe** runs on an OS version where the [GetNumaNodeProcessorMask2 API](https://learn.microsoft.com/en-us/windows/win32/api/systemtopologyapi/nf-systemtopologyapi-getnumanodeprocessormask2) is unavailable, an exception appears in the setup console.
+When the **setup.exe** runs on an OS version where the [GetNumaNodeProcessorMask2 API](https://learn.microsoft.com/windows/win32/api/systemtopologyapi/nf-systemtopologyapi-getnumanodeprocessormask2) is unavailable, an exception appears in the setup console.
 
 ## Resolution
 
