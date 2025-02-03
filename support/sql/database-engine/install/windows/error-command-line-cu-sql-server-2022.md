@@ -33,4 +33,4 @@ No resolution is necessary as the exception does not affect the setup behavior o
 
 ## More information
 
-This exception is only visible in the setup console when running **setup.exe** from the command line.
+This exception is only visible in the setup console when running **setup.exe** from the command line and applies to only CU15 and above.
