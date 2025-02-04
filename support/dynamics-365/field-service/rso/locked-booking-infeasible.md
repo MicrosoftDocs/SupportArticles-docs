@@ -28,15 +28,15 @@ The tracing data points in the message help you identify what went wrong. The vi
     - Invalid promised time window
     - Invalid travel time
 
-  - **ResourceBreakTimeWindowFilter**. A locked booking conflicts with a [scheduled break time](dynamics365/field-service/set-work-hours-resource).
+  - **ResourceBreakTimeWindowFilter**. A locked booking conflicts with a [scheduled break time](/dynamics365/field-service/set-up-bookable-resources#add-work-hours).
 
 - The eligibility check failed with constraint.
 
-  - **MeetsRequiredSkills**. A locked booking has an invalid match of the [resource skill characteristics](dynamics365/field-service/set-up-characteristics).
+  - **MeetsRequiredSkills**. A locked booking has an invalid match of the [resource skill characteristics](/dynamics365/field-service/set-up-characteristics).
 
   - **MeetsRequiredRoles**. A locked booking has an invalid [resource role match](/training/modules/configure-bookable-resources-urs-dynamics-field-service/).
 
-  - **MeetsResourcePreferences**. A locked booking has an invalid [“must choose from” or “restricted” resource](dynamics365/field-service/resource-preferences).
+  - **MeetsResourcePreferences**. A locked booking has an invalid ['must choose from' or 'restricted' resource](/dynamics365/field-service/resource-preferences).
 
 ## Resolution
 
