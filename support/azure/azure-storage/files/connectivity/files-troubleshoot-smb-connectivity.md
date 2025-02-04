@@ -4,7 +4,7 @@ description: Troubleshoot problems connecting to and accessing SMB Azure file sh
 services: storage
 ms.service: azure-file-storage
 ms.custom: sap:Connectivity, devx-track-azurepowershell, linux-related-content
-ms.date: 01/30/2025
+ms.date: 02/04/2025
 ms.reviewer: kendownie, jarrettr, v-weizhu, v-six, hanagpal
 ---
 # Troubleshoot Azure Files connectivity and access issues (SMB)
@@ -266,7 +266,7 @@ To learn more, see [Prerequisites for mounting an Azure file share with Linux an
 
 ##### Cause 2: Virtual network or firewall rules are enabled on the storage account, or port 445 is blocked
 
-If virtual network (VNET) and firewall rules are configured on the storage account, network traffic will be denied access unless the client IP address or virtual network is allowed access. In addition, if your company or ISP is blocking port 445 outbound, you won't be able to mount the share.
+If virtual network (VNET) and firewall rules are configured on the storage account, network traffic will be denied access unless the client IP address or virtual network is allowed access. In addition, if your company or ISP blocks port 445 outbound, you won't be able to mount the share.
 
 ##### Solution for cause 2
 
