@@ -18,7 +18,7 @@ contributors:
 > [!TIP]
 > For performance issues, you can use profiling tools like [Monitor](/power-apps/maker/monitor-overview) and [Performance insights](/power-apps/maker/common/performance-insights-overview) to debug and diagnose problems.
 
-The following table outlines common issues you might encounter while using a Power Apps canvas app with likely causes and recommendations. High-level issues are linked to more detailed documentation through their associated causes and recommendations. Some recommendations might appear multiple times, as the root cause can manifest in various symptoms.
+The following table outlines common performance issues you might encounter while using a canvas app along with likely causes and recommendations. High-level issues are linked to more detailed documentation through their associated causes and recommendations. Some recommendations might appear multiple times, as the root cause can manifest in various symptoms.
 
 | Problem / Symptom   | Likely cause  | Recommendations |
 | ---|---|---|
