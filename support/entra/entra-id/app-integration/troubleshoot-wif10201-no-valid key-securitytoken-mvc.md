@@ -9,7 +9,7 @@ ms.date: 02/05/2025
 ms.custom: sap:Issues Signing In to Applications
 ---
 
-201: No valid key mapping found for securityToken in ASP.NET application
+# WIF10201: No valid key mapping found for securityToken in ASP.NET application
 
 This article provides guidance for troubleshooting an authentication issue in an ASP.NET MVC application that uses both [WS-Federation](https://github.com/Azure-Samples/active-directory-dotnet-webapp-wsfederation) OWIN middleware and [Windows Identity Foundation](../../../windows-server/user-profiles-and-logon/windows-identity-foundation.md) (WIF) to authenticate to Microsoft Entra ID.
 
