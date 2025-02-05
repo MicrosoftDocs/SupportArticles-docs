@@ -37,12 +37,12 @@ To resolve this issue, follow these steps:
 1. **Verify resource application provisioning**: 
 
    - Make sure that the application (resource principal) is registered correctly in your Microsoft Entra ID tenant.
-   - Go to the Azure portal, and navigate to Microsoft Entra ID > Enterprise applications.
+   - Go to the [Azure portal](https://portal.azure.com), and navigate to Microsoft Entra ID > Enterprise applications.
    - Check whether the application is listed and correctly configured.
       
 1. **Consent to application**:
    - Make sure that the resource application has been consented to by an administrator or a user in the tenant.
-   - Go to the Azure portal, and navigate to Microsoft Entra > Enterprise applications.
+   - Go to the [Azure portal](https://portal.azure.com), and navigate to Microsoft Entra > Enterprise applications.
    - Find the application, and make sure that it has the necessary permissions and consent.
 
 1. **Check resource URL**:
