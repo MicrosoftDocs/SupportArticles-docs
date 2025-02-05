@@ -300,5 +300,5 @@ During the time of the issue, follow these steps to collect data:
 
 ## More information
 
-- [4xx - Client error](../health-diagnostic-performance/http-status-code.md#4xx---client-error)
-- [5xx - Server error](../health-diagnostic-performance/http-status-code.md#5xx---server-error)
+- [4xx status codes - Client error](../health-diagnostic-performance/http-status-code.md#4xx---client-error)
+- [5xx status codes - Server error](../health-diagnostic-performance/http-status-code.md#5xx---server-error)
