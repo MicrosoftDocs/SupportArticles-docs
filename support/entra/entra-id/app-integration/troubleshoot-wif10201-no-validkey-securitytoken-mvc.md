@@ -48,7 +48,7 @@ System.IdentityModel.Tokens.ValidatingIssuerNameRegistry">
 
 The error WIF10201 occurs when none of these certificate thumbprints match the one used by Entra ID to sign the token.
 
-The Entra ID uses a [signing key rollover mechanism](entra/identity-platform/signing-key-rollover), which updates the certificate used to sign authentication tokens periodically. This key rollover causes the initial certificate thumbprints configured in the web.config file to become invalid, hence leading to the error.
+The Entra ID uses a [signing key rollover mechanism](/entra/identity-platform/signing-key-rollover), which updates the certificate used to sign authentication tokens periodically. This key rollover causes the initial certificate thumbprints configured in the web.config file to become invalid, hence leading to the error.
 
 ### Solution
 
