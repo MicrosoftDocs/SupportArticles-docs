@@ -19,12 +19,12 @@ The ASP.NET MVC application was working previously. However, the following error
 
 ```dotnecli
 Error Details:
-Server Error in ‘/’ Application.
-WIF10201: No valid key mapping found for securityToken: ‘System.IdentityModel.Tokens.X509SecurityToken’ and issuer: ‘https://sts.windows.net/<Directory ID>/’.
+Server Error in '/' Application.
+WIF10201: No valid key mapping found for securityToken: ‘System.IdentityModel.Tokens.X509SecurityToken' and issuer: 'https://sts.windows.net/<Directory ID>/'.
 
 Description: An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code.
 
-Exception Details: System.IdentityModel.Tokens.SecurityTokenValidationException: WIF10201: No valid key mapping found for securityToken: ‘System.IdentityModel.Tokens.X509SecurityToken’ and issuer: ‘https://sts.windows.net/<Directory ID>/’.
+Exception Details: System.IdentityModel.Tokens.SecurityTokenValidationException: WIF10201: No valid key mapping found for securityToken: 'System.IdentityModel.Tokens.X509SecurityToken' and issuer: 'https://sts.windows.net/<Directory ID>/'.
 ```
 
 ## Cause
