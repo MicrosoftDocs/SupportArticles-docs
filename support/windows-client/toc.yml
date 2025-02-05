@@ -1117,6 +1117,8 @@ items:
       href: ./user-profiles-and-logon/event-id-300-windows-hello-successfully-created-in-windows-10.md
     - name: Windows Hello errors during PIN creation in Windows 10
       href: ./user-profiles-and-logon/windows-hello-errors-during-pin-creation-in-windows-10.md
+    - name: Troubleshoot certificate issue when using Windows Hello for Business
+      href: ./user-profiles-and-logon/troubleshoot-certificate-issue-when-using-windows-hello-for-business.md
 - name: Virtualization
   items:
   - name: Virtualization
