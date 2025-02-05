@@ -179,7 +179,7 @@ To diagnose this scenario, check the state of the installed `cloud-regionsrv-cli
     cloud-regionsrv-client-plugin-azure-1.0.1-6.43.1.noarch
     ```
 
-The main client package should be at least version `10._x_`.  
+The main client package should be at least version `10.x`.  
 
 As shown in the example, if you retry the manual re-registration or use the repocheck in [Step 1](#step1), the following output is displayed in `/var/log/cloudregister`:
 
@@ -623,7 +623,7 @@ For more information, see [incompatible-changes-ahead-for-public-cloud-sdks](htt
 
 To work around the issue, set the VM to use the default Python version 3.6: 
 
-1. Point the Python version to `3.6._x_`:
+1. Point the Python version to `3.6.x`:
 
     ```bash
     sudo unlink /usr/bin/python3
