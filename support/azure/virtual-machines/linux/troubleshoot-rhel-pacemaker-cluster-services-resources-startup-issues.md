@@ -71,7 +71,7 @@ quorum {
 
 ### Resolution for scenario 1
 
-1. As a precaution, make a full backup or take a snapshot before you make any changes. For more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
+1.Before making any changes, back up your data or take a snapshot. For more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
 
 2. Check for missing quorum section in `/etc/corosync/corosync.conf`. Compare the existing `corosync.conf` with any backup that's available in `/etc/corosync/`.
    
@@ -208,7 +208,7 @@ vip_HN1_03_start_0 on node-1 'unknown error' (1): call=30, status=complete, exit
 
 If a route that matches the `VIP` isn't in the default routing table, you can specify the `NIC` name in the Pacemaker resource so that it can be configured to bypass the check:
 
-1. As a precaution, make a full backup or take a snapshot before you make any changes. For more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
+1. Before making any changes, back up your data or take a snapshot. For more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
 
 2. Put the cluster into maintenance mode:
    
@@ -334,7 +334,7 @@ The SAP HANA resource can't be started by Pacemaker if there are `SYN` failures 
 > [!Important]
 > Steps 2, 3, and 4 must be performed by using a SAP administrator account. This is because these steps use a SAP System ID to stop, start, and re-enable replication manually.
 
-1. As a precaution, make a full backup or take a snapshot before you make any changes. For more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
+1. Before making any changes, back up your data or take a snapshot. For more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
 
 2. Put the cluster into maintenance mode:
 
@@ -512,7 +512,7 @@ This issue frequently occurs if the database is modified (manually stopped or st
 > [!Note]
 > Steps 1 through 5 should be performed by an SAP administrator.
 
-1. As a precaution, make a full backup or take a snapshot before you make any changes. For more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
+1. Before making any changes, back up your data or take a snapshot. For more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
   
 2. Put the cluster into maintenance mode:
 
@@ -620,7 +620,7 @@ Because of incorrect `InstanceName` and `START_PROFILE` attributes, the SAP inst
 > [!Note]
 > This resolution is applicable if `InstanceName` and `START_PROFILE` are separate files.
 
-1. As a precaution, make a full backup or take a snapshot before you make any changes. For more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
+1. Before making any changes, back up your data or take a snapshot. For more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
   
 2. Put the cluster into maintenance mode:
 
