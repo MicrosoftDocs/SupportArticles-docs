@@ -4,7 +4,7 @@ description: Troubleshoot common performance issues in Power Apps canvas app.
 author: lancedMicrosoft
 ms.custom: sap:Canvas App Performance
 ms.reviewer: lanced, aartigoyle
-ms.date: 01/31/2025
+ms.date: 02/05/2025
 ms.author: lanced
 search.audienceType: 
   - maker 
@@ -26,7 +26,7 @@ The following table outlines common performance issues you might encounter while
 | Large data payloads    | - Retrieving unnecessary data<br> - Large data sets <br>    |- [Use small data payloads](/power-apps/maker/canvas-apps/small-data-payloads)<br>- [Use delegation](/power-apps/maker/canvas-apps/small-data-payloads#use-delegation) <br> - [Prefilter data at source](/power-apps/maker/canvas-apps/optimized-query-data-patterns#use-server-side-views) <br> - [Limit data retrieval](/power-apps/maker/canvas-apps/small-data-payloads#suggestions) |
 | Inefficient data queries | - Nondelegable queries<br> - Complex data operations <br>    |- [Use delegation](/power-apps/maker/canvas-apps/small-data-payloads#use-delegation) <br> - [Optimize query patterns](/power-apps/maker/canvas-apps/optimized-query-data-patterns) |
 | Inefficient calculations | - Complex formulas<br> - Repeated calculations <br>    |- [Optimize formulas](/power-apps/maker/canvas-apps/efficient-calculations#calculations) <br> - [Split up long formulas](/power-apps/maker/canvas-apps/working-with-large-apps#split-up-long-formulas)|
-| Overall slow app performance | - Inefficient data retrieval<br> - Many cross-screen references<br> - Complex formulas<br>  - App is too large | - [Optimize data sources](/power-apps/maker/canvas-apps/optimized-query-data-patterns) <br> - [Optimize formulas](/power-apps/maker/canvas-apps/fast-app-page-load#avoid-directly-populating-a-collection-with-large-amounts-of-data) <br> - [Use collections for small, frequently used data](/power-apps/maker/canvas-apps/fast-app-page-load#avoid-directly-populating-a-collection-with-large-amounts-of-data) <br> - [Split up App](/power-apps/maker/canvas-apps/working-with-large-apps#partition-the-app) |
+| Overall slow app performance | - Inefficient data retrieval<br> - Many cross-screen references<br> - Complex formulas<br>  - App is too large | - [Optimize data sources](/power-apps/maker/canvas-apps/optimized-query-data-patterns) <br> - [Optimize formulas](/power-apps/maker/canvas-apps/efficient-calculations#calculations) <br> - [Use collections for small, frequently used data](/power-apps/maker/canvas-apps/fast-app-page-load#avoid-directly-populating-a-collection-with-large-amounts-of-data) <br> - [Split up App](/power-apps/maker/canvas-apps/working-with-large-apps#partition-the-app) |
 
 ## More information
 
@@ -45,3 +45,5 @@ For more information on debugging canvas apps and performance issues, see:
 - [Creating performant apps](/power-apps/maker/canvas-apps/create-performant-apps-overview)
 - [Common canvas app performance issues and resolutions](/power-apps/maker/canvas-apps/common-performance-issue-resolutions)
 - [Debugging canvas apps with Monitor](/power-apps/maker/monitor-canvasapps)
+
+For issues with functionality or performance issues with model-driven apps, see [Power Apps troubleshooting strategies](~/power-platform/power-apps/create-and-use-apps/isolate-common-issues.md).
