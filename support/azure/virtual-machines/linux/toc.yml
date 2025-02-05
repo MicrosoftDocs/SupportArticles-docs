@@ -195,8 +195,6 @@
     href: kernel-related-boot-issues.md
   - name: Fail to access Generation 2 Linux VM
     href: unable-access-g2-linux-vm-reboot.md
-  - name: Fail to restart or be provisioned
-    href: linux-kernel-fails-restart-provision.md
     
 - name: VM restarts or stops unexpectedly
   items:
@@ -278,6 +276,8 @@
       href: troubleshoot-azure-fence-agent-rhel.md
     - name: Troubleshoot SBD service failure in RHEL
       href: troubleshoot-sbd-issues-rhel.md
+    - name: Troubleshoot pacemaker cluster services and resources startup issues
+      href: troubleshoot-rhel-pacemaker-cluster-services-resources-startup-issues.md
   - name: SLES
     items:
     - name: Troubleshoot Azure fence agent startup issues in SUSE

@@ -6,6 +6,8 @@
     href: ./capture-memory-dumps-app-service.md
   - name: Create or delete web apps FAQs
     href: ./create-delete-resources-faq.yml
+  - name: App service security FAQs
+    href: faqs-web-app-security.md
   - name: Availability, performance, and application FAQs
     href: web-apps-performance-faqs.md
   - name: App Service Compliance with PCI Standards 3.0 and 3.1

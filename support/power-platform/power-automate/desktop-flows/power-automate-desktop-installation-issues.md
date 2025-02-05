@@ -2,7 +2,7 @@
 title: Installation issues in Power Automate for desktop
 description: Helps troubleshoot stallation issues in Power Automate for desktop.
 ms.reviewer: guco, johndund
-ms.date: 09/12/2024
+ms.date: 01/20/2025
 ms.custom: sap:Desktop flows\Installation issues
 ---
 # Troubleshoot installation issues in Power Automate for desktop
@@ -29,7 +29,7 @@ For a complete list of prerequisites, see [Prerequisites and limitations](/power
 
 ## Gather diagnostic information
 
-Installation logs can provide useful details about the installation and help you diagnose and fix issues. For more information about where to find the logs, see [Power Automate for desktop installation logs](how-to-get-power-automate-desktop-installer-logs.md).
+Installation logs can provide useful details about the installation and help you diagnose and fix issues. For more information about where to find the logs, see [Power Automate for desktop installation logs](how-to-get-power-automate-desktop-installer-logs.md#installer-logs).
 
 ## Known issues and workarounds
 

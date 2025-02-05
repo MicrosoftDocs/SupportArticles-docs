@@ -3,15 +3,13 @@ title: Troubleshoot Azure Files issues in Linux (SMB)
 description: Troubleshooting Azure Files issues in Linux. See general issues related to SMB Azure file shares when you connect from Linux clients and possible resolutions.
 ms.service: azure-file-storage
 ms.custom: sap:Security, linux-related-content
-ms.date: 08/20/2024
+ms.date: 01/22/2025
 ms.reviewer: kendownie, v-weizhu
 ---
 
 # Troubleshoot Azure Files issues in Linux (SMB)
 
 This article lists common issues that can occur when using SMB Azure file shares with Linux clients. It also provides possible causes and resolutions for these problems.
-
-You can use [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Linux) to automate symptom detection and ensure that the Linux client has the correct prerequisites. It helps set up your environment to get optimal performance. You can also find this information in the [Azure file shares troubleshooter](https://support.microsoft.com/help/4022301/troubleshooter-for-azure-files-shares).
 
 > [!IMPORTANT]
 > This article only applies to SMB shares. For details on NFS shares, see [Troubleshoot NFS Azure file shares](/azure/storage/files/files-troubleshoot-linux-nfs).
@@ -23,6 +21,80 @@ You can use [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-sam
 | Standard file shares (GPv2), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
 | Standard file shares (GPv2), GRS/GZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
 | Premium file shares (FileStorage), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
+
+## Run diagnostics
+
+Diagnostics tools can help ensure that clients have the correct prerequisites and collect debug information on field issues that can be hard to reproduce.
+
+### Use AzFileDiagnostics
+
+You can use [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Linux) to automate symptom detection and ensure that the Linux client has the correct prerequisites. It helps set up your environment to get optimal performance.
+
+### Use the Always-On Diagnostics tool
+
+You can also use the Always-On Diagnostics (AOD) tool to collect logs on SMB and NFSv4 Linux clients. The daemon runs in the background as a system service and can be configured to detect anomalies in various sources, such as dmesg logs, debug data, error metrics, and latency metrics. It can capture data from tcpdump, nfsstat, mountstsat, and other sources, along with the system's CPU and memory usage.
+
+The Always-On Diagnostics tool is currently compatible with systems running SUSE Linux Enterprise Server 15 (SLES 15) and Red Hat Enterprise Linux 8 (RHEL 8). Follow the installation steps that correspond to your operating system:
+
+#### [SLES](#tab/SLES)
+
+In SLES 15, follow these instructions to install the Always-On Diagnostics tool:
+
+1. Add the Microsoft repo. You might need to add the Microsoft repository key to your list of trusted keys.
+
+    ```bash
+    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+    sudo zypper addrepo --check --refresh --name 'Microsoft' https://packages.microsoft.com/sles/15/prod microsoft
+    ```
+
+2. Refresh the repositories.
+
+    ```bash
+    sudo zypper refresh
+    ```
+
+3. Check if the repo has been added and the `aod` package is available for installation.
+
+    ```bash
+    zypper search aod
+    ```
+
+4. Install the package.
+
+    ```bash
+    sudo zypper install aod
+    ```
+
+#### [RHEL](#tab/RHEL)
+
+In RHEL 8, follow these instructions to install the Always-On Diagnostics tool:
+
+1. Download the repo config package.
+
+    ```bash
+    curl -ssl -O https://packages.microsoft.com/config/rhel/8/packages-microsoft-prod.rpm
+    ```
+
+2. Install the repo config package.
+
+    ```bash
+    sudo rpm -i packages-microsoft-prod.rpm
+    ```
+
+3. Delete the repo config package after installing and updating the package index files.
+
+    ```bash
+    rm packages-microsoft-prod.rpm
+    sudo dnf update
+    ```
+
+4. Install the package.
+
+    ```bash
+    sudo dnf install aod
+    ```
+
+---
 
 ## <a id="timestampslost"></a>Time stamps were lost when copying files
 

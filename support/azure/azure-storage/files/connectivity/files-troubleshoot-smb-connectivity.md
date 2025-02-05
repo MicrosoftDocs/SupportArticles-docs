@@ -4,7 +4,7 @@ description: Troubleshoot problems connecting to and accessing SMB Azure file sh
 services: storage
 ms.service: azure-file-storage
 ms.custom: sap:Connectivity, devx-track-azurepowershell, linux-related-content
-ms.date: 09/12/2024
+ms.date: 02/04/2025
 ms.reviewer: kendownie, jarrettr, v-weizhu, v-six, hanagpal
 ---
 # Troubleshoot Azure Files connectivity and access issues (SMB)
@@ -106,7 +106,7 @@ SourceAddress    : <your-ip-address>
 TcpTestSucceeded : True
 ```
 
-> [!Note]  
+> [!NOTE]
 > This command returns the current IP address of the storage account. This IP address is not guaranteed to remain the same, and may change at any time. Don't hardcode this IP address into any scripts, or into a firewall configuration.
 
 #### Solutions for cause 1
@@ -231,6 +231,8 @@ Make sure port 445 is open and [check DNS resolution and connectivity to your fi
 
 ### [Linux](#tab/linux)
 
+Linux clients can use [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Linux) to automate symptom detection and ensure that they have the correct prerequisites.
+
 Common causes for this problem are:
 
 - You're using a Linux distribution with an outdated SMB client. See [Use Azure Files with Linux](/azure/storage/files/storage-how-to-use-files-linux) for more information on common Linux distributions available in Azure that have compatible clients.
@@ -262,17 +264,17 @@ To learn more, see [Prerequisites for mounting an Azure file share with Linux an
 1. Connect from a client that supports SMB encryption or connect from a virtual machine in the same datacenter as the Azure storage account that's used for the Azure file share.
 2. Verify the [Secure transfer required](/azure/storage/common/storage-require-secure-transfer) setting is disabled on the storage account if the client doesn't support SMB encryption.
 
-##### Cause 2: Virtual network or firewall rules are enabled on the storage account
+##### Cause 2: Virtual network or firewall rules are enabled on the storage account, or port 445 is blocked
 
-If virtual network (VNET) and firewall rules are configured on the storage account, network traffic will be denied access unless the client IP address or virtual network is allowed access.
+If virtual network (VNET) and firewall rules are configured on the storage account, network traffic will be denied access unless the client IP address or virtual network is allowed access. In addition, if your company or ISP blocks port 445 outbound, you won't be able to mount the share.
 
 ##### Solution for cause 2
 
-Verify that the VNET and firewall rules are configured properly on the storage account and the port 445 is allowlisted. To test if virtual networks or firewall rules cause the issue, you can temporarily change the setting on the storage account to **Allow access from all networks**. To learn more, see [Configure Azure Storage firewalls and virtual networks](/azure/storage/common/storage-network-security).
+Verify that the VNET and firewall rules are configured properly on the storage account, and that port 445 is allowlisted. To test if virtual networks or firewall rules cause the issue, you can temporarily change the setting on the storage account to **Allow access from all networks**. To learn more, see [Configure Azure Storage firewalls and virtual networks](/azure/storage/common/storage-network-security).
 
 ##### Cause 3: SMB client is configured to use NTLMv1
 
-Azure Files only supports NTLMv2 and Kerberos for SMB file shares. Kernel 4.4 and later versions enable NTLMv2 by default and disable LANMAN. Under default configurations, NTLMv1 is kept as a negotiation only option. For more information, see your OS documentation.
+Azure Files only supports NTLMv2 (storage account key only) and Kerberos authentication for SMB file shares. NTLMv1 isn't supported. Kernel 3.3 and later versions default to NTLMv2 unless overridden with the `sec` mount option. Kernel 4.4 and later versions enable NTLMv2 by default and disable LANMAN. Under default configurations, NTLMv1 is kept as a negotiation only option. For more information, see your OS documentation.
 
 ##### Solution for cause 3
 
@@ -284,7 +286,7 @@ When storage account key access is disabled or disallowed for a storage account,
 
 ##### Solution for cause 4
 
-Use identity-based authentication. The file share must be joined to an on-premises Active Directory Domain Servies (AD DS) or Microsoft Entra Domain Services domain, and the Linux client must be [configured to use Kerberos authentication](/azure/storage/files/storage-files-identity-auth-linux-kerberos-enable).
+Use identity-based authentication instead. See [Enable Active Directory authentication over SMB for Linux clients accessing Azure Files](/azure/storage/files/storage-files-identity-auth-linux-kerberos-enable) for prerequisites and instructions.
 
 #### <a id="error115"></a>"Mount error(115): Operation now in progress" when you mount Azure Files by using SMB 3.x
 
@@ -492,6 +494,8 @@ $leaseClient.Break() | Out-Null
 
 ## [Linux](#tab/linux)
 
+Linux clients can use [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Linux) to automate symptom detection and ensure that they have the correct prerequisites.
+
 In Linux, you might see the following issues.
 
 ### Open handles on files or directories
@@ -588,6 +592,8 @@ Don't keep a large number of handles cached. Close handles, and then retry. Use 
 If you're using Azure file shares to store profile containers or disk images for a large-scale virtual desktop deployment or other workloads that open handles on files, directories, and/or the root directory, you might reach the upper [scale limits](/azure/storage/files/storage-files-scale-targets) for concurrent open handles. In this case, use an additional Azure file share and distribute the containers or images between the shares.
 
 ## [Linux](#tab/linux)
+
+Linux clients can use [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Linux) to automate symptom detection and ensure that they have the correct prerequisites.
 
 ### <a id="permissiondenied"></a>"[permission denied] Disk quota exceeded" when you try to open a file
 
