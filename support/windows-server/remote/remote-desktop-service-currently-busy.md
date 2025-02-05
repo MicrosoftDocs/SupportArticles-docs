@@ -91,7 +91,7 @@ Even if we identify a certain process or service that consumes too much memory, 
    On RDP server:
 
    ```console
-   *.\TSS.ps1 -Scenario UEX_RDSSrv*
+   .\TSS.ps1 -Scenario UEX_RDSSrv
    ```
 
 4. Wait for the message that states to **Reproduce the issue now**.
