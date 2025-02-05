@@ -17,7 +17,7 @@ This article provides guidance for troubleshooting an authentication issue in an
 
 The ASP.NET MVC application was working previously. However, the following error is now occurring without any changes to the application.
 
-```dotnecli
+```
 Error Details:
 Server Error in '/' Application.
 WIF10201: No valid key mapping found for securityToken: ‘System.IdentityModel.Tokens.X509SecurityToken' and issuer: 'https://sts.windows.net/<Directory ID>/'.
@@ -29,9 +29,9 @@ Exception Details: System.IdentityModel.Tokens.SecurityTokenValidationException:
 
 ## Cause
 
-Windows Identity Foundation uses the certificate thumbprint(s) in the web.config file (shown below) to verify the signature of the token returned from THE Entra ID upon successful sign in.
+Windows Identity Foundation uses the certificate thumbprint(s) in the web.config file as shown below to verify the signature of the token returned by the Entra ID upon a successful sign-in.
 
-```
+```web.config
 <issuerNameRegistry type="System.IdentityModel.Tokens.ValidatingIssuerNameRegistry, 
 System.IdentityModel.Tokens.ValidatingIssuerNameRegistry">
 <authority name="https://sts.windows.net/<Directory ID>/">
@@ -51,6 +51,6 @@ The error WIF10201 occurs when none of these certificate thumbprints match the o
 
 The Entra ID uses a [signing key rollover mechanism](/entra/identity-platform/signing-key-rollover), which updates the certificate used to sign authentication tokens periodically. This key rollover causes the initial certificate thumbprints configured in the web.config file to become invalid, hence leading to the error.
 
-### Solution
+## Solution
 
-You can either update the certificate thumbprints in the web.config file manually or automate the process through code. For more information, see [Best practices for keys metadata caching and validation](/entra/identity-platform/signing-key-rollover#best-practices-for-keys-metadata-caching-and-validation)
+You can either update the certificate thumbprints in the web.config file manually or automate the process through code. For more information, see [Best practices for keys metadata caching and validation](/entra/identity-platform/signing-key-rollover#best-practices-for-keys-metadata-caching-and-validation).
