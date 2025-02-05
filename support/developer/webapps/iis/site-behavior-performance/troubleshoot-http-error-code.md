@@ -7,11 +7,11 @@ ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, incl
 ---
 # Troubleshoot 4xx and 5xx HTTP errors
 
-This article provides troubleshooting steps for resolving [4xx](#identify-4xx-errors) and [5xx](#identify-5xx-errors) HTTP status code errors in Internet Information Services (IIS). These errors can indicate issues on the client or server side. The guidance will help you identify the cause of these errors and resolve them effectively.
+This article provides troubleshooting steps for resolving [4xx](#identify-4xx-errors) and [5xx](#identify-5xx-errors) HTTP status code errors in Internet Information Services (IIS). 4*xx* status codes indicate an issue on the client side, while 5*xx* status codes indicate an issue on the server side. The guidance will help you identify the cause of these errors and resolve them effectively.
 
 ## Identify 4xx errors
 
-The 4*xx* HTTP status codes indicate that an error occurred due to a client-side issue. For example, For example, the client browser might have requested a page that doesn't exist, or the client browser might not have provided valid authentication information.
+The 4*xx* HTTP status codes indicate that an error occurred due to a client-side issue. For example, the client browser might have requested a page that doesn't exist, or the client browser might not have provided valid authentication information.
 
 To identify 4*xx* errors, examine the [IIS logs](#examine-the-iis-logs) and the [HTTPERR logs](#examine-the-httperr-logs):
 
@@ -43,7 +43,7 @@ For more information, capture and examine [Failed Request Trace (FREB) logs](#st
 
 ### 500 errors in general IIS
 
-If a 500 error occurs in general IIS, examine the IIS logs, note `sc-status` and `sc-substatus`, and look for the status code in [HTTP status code overview](../health-diagnostic-performance/http-status-code.md#5xx---server-error) for more information on the failure. 
+If a 500 error occurs in general IIS, examine the IIS logs, note the status code (`sc-status`) and substatus code (`sc-substatus`) and see [HTTP status code overview](../health-diagnostic-performance/http-status-code.md#5xx---server-error) for more information on the failure. 
 
 Enable detailed error messages if feasible to get more details. To enable detailed error messages, follow these steps:
 
@@ -71,7 +71,7 @@ For more information, capture and examine [Failed Request Trace (FREB) logs](#st
 
 ### 500 errors in ASP.NET
 
-If a 500 error occurs in ASP.NET, use the following methods to identify the cause of the error and resolve it:
+If a 500 error occurs in ASP.NET, use the following methods to identify the root cause of the error:
 
 - Check the Application Event Logs.
 
@@ -101,13 +101,13 @@ If a 500 error occurs in ASP.NET, use the following methods to identify the caus
   1. Select **Tools** > **Options And Settings** > **Folders And Search Paths**.
   1. Under **Symbol Search Path For Debugging**, select **Browse** to set the path.
 
-- Exceed the ASP.NET ExecutionTimeout.
+- Capture Perfview trace to identify ExecutionTimeout issues.
 
   For 500 errors due to exceeding the ASP.NET ExecutionTimeout, [capture a PerfView trace and dumps](#steps-to-capture-a-perfview-trace-and-dumps) to identify any delays.
 
 ### 500 errors in ASP.NET Core
 
-If a 500 error occurs in ASP.NET Core, use the following methods to identify the cause of the error and resolve it:
+If a 500 error occurs in ASP.NET Core, use the following methods to identify the root cause of the error:
 
 - Check the Application Event Logs.
 
@@ -181,7 +181,7 @@ If a 502 error occurs in Application Request Routing (ARR), follow the instructi
 
 ### 503 errors
 
-You can find 503 errors in either the IIS Logs or the HTTPERR logs. Any `sc-substatus` in the IIS logs or `s-reason` in the HTTPERR logs can provide some hints.
+If you encounter 503 errors, the substatus code (`sc-substatus`) in the [IIS logs](#examine-the-iis-logs) or `s-reason` in the [HTTPERR logs](#examine-the-httperr-logs) can provide some hints.
 
 For more information, see:
 
