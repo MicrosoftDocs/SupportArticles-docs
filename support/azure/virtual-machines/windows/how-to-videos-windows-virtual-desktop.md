@@ -18,34 +18,34 @@ Watch these short videos to get up and running with Azure Virtual Desktop:
 
 **How to Create Managed Image**
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4vtmW]
+> [!VIDEO 4f9192b3-be4d-4091-8230-d7ccb2cdd5b0]
 
 **How to Create Host-Pool from Managed Image**
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4vCw4]
+> [!VIDEO c20ed545-c941-4d26-8b29-d1a5da1f6377]
 
 **How to Expand Host-Pool via Azure**
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4vtn5]
+> [!VIDEO 2f52e17b-5cb5-4da7-89f2-eb3ae4bc618b]
 
 **Preliminary checks to deploy Azure Virtual Desktop with Gallery Image**
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4wkv7]
+> [!VIDEO ef9cce33-badd-44d6-824b-59fd2bfb72b3]
 
 **How to Customize Feed Name and RemoteApp Display Name**  
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4vtn2]
+> [!VIDEO b69ef2ca-6a17-4ea5-9b04-30828018395e]
 
 **Publishing a Remote App**
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4vtmV]
+> [!VIDEO 9fdbc214-1a6e-423f-b081-a2def0a07e7e]
 
 **How to Manage User Session Through PowerShell**  
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4vJYL]
+> [!VIDEO 9a63a721-d19e-47ff-84d7-feb137980f4b]
 
 **Connectivity Issues "No Resource Available"**
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4vUnV]
+> [!VIDEO c741a9f2-1472-4c89-95db-8a98a989aa23]
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
