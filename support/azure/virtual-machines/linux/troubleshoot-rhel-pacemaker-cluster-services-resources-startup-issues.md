@@ -455,8 +455,7 @@ The SAP HANA resource can't be started by Pacemaker if there are `SYN` failures 
 
 ### Scenario 3, Symptom 2: SAP HANA doesn't start because of replication failure
 
-SAP HANA Resource Reporting N (Standalone) mode experiences start failures with `hana_xxx_roles`.
-The database resource is neither primary nor secondary on any node. Standalone node mode with `hana_xxx_roles` reporting **N**.
+The SAP HANA resource experiences startup failures, and its `hana_xxx_roles` attribute shows `1:N:master1::worker:`. The `N` status indicates that the resource is out of sync and running in standalone mode. The database resource is neither primary nor secondary on any node.
 
 When you run the `sudo pcs status --full` command, the `node attributes` status is shown as follows:
 
