@@ -111,8 +111,6 @@ If a 500 error occurs in ASP.NET Core, use the following methods to identify the
 
 - Check the Application Event Logs.
 
-  To access the Application Event Logs, follow these steps:
-
   [!INCLUDE [Access the Application Event Logs](../../../../includes/access-application-event-logs.md)]
 
 - Enable the [Developer Exception Page](/aspnet/core/fundamentals/error-handling#developer-exception-page).
