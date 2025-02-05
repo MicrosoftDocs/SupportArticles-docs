@@ -21,9 +21,9 @@ This article discusses the most common causes of startup issues in RedHat Enterp
 
 ### Symptom for scenario 1
 
-- Cluster node doesn't join a cluster after a cluster restart
-- Nodes are reported as `UNCLEAN (offline)`
-- Current DC is reported as `NONE`
+- Cluster node doesn't join a cluster after a cluster restart.
+- Nodes are reported as `UNCLEAN (offline)`.
+- Current DC is reported as `NONE`.
 
   ```bash
   sudo pcs status
@@ -59,7 +59,7 @@ This article discusses the most common causes of startup issues in RedHat Enterp
 
 The **VoteQuorum** service is a component of the corosync project. To prevent split-brain scenarios, this service can be optionally loaded into a corosync cluster's nodes. Every system in the cluster is given a certain number of votes to achieve this quorum. This makes sure that cluster actions can occur only if most votes are cast. Either every node or no node must have the service loaded. The outcomes are uncertain if the service is loaded into a subset of cluster nodes.
 
-The following `/etc/corosync/corosync.conf` extract enables **VoteQuorum** service within corosync:
+The following `/etc/corosync/corosync.conf` setting enables **VoteQuorum** service within corosync:
 
 ```output
 quorum {
@@ -71,7 +71,7 @@ quorum {
 
 ### Resolution for scenario 1
 
-1.Before you make any changes, ensure you have a backup or snapshot. For more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
+1. Before you make any changes, ensure you have a backup or snapshot. For more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
 
 2. Check for missing quorum section in `/etc/corosync/corosync.conf`. Compare the existing `corosync.conf` with any backup that's available in `/etc/corosync/`.
    
