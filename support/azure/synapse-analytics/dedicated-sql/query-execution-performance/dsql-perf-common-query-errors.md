@@ -3,10 +3,10 @@ title: Troubleshoot Common Query Execution Errors on an Azure Synapse Dedicated 
 description: Provides a reference of the most common errors and recommendations for query execution on an Azure Synapse dedicated SQL pool.
 author: dialmoth
 ms.author: dialmoth
-ms.reviewer: goventur, wiassaf
-ms.date: 01/30/2025
+ms.reviewer: goventur, wiassaf, dialmoth
+ms.date: 02/05/2025
 ms.custom:
-  - "sap:Query Execution and Performance"
+  - sap:Query Execution and Performance
 ---
 
 # Troubleshoot common query errors

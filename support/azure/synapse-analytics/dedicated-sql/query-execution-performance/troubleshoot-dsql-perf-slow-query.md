@@ -3,13 +3,13 @@ title: Troubleshoot Slow Queries on a Dedicated SQL Pool
 description: Describes the troubleshooting steps and mitigations for the common performance issues of queries run on an Azure Synapse Analytics dedicated SQL pool.
 author: dialmoth
 ms.author: dialmoth
-ms.reviewer: goventur, wiassaf
-ms.date: 01/30/2025
+ms.reviewer: goventur, wiassaf, dialmoth
+ms.date: 02/05/2025
 ms.custom:
-  - "sap:Query Execution and Performance"
+  - sap:Query Execution and Performance
 ---
 
-# Troubleshoot a slow query on a dedicated SQL Pool
+# Troubleshoot a slow query on a dedicated SQL pool
 
 _Applies to:_ &nbsp; Azure Synapse Analytics
 
@@ -28,7 +28,7 @@ Follow the steps to troubleshoot the issue or execute the steps in the notebook 
 > - Outdated statistics
 > - Unhealthy clustered columnstore indexes (CCIs)
 >
-> To save troubleshooting time, make sure that the statistics are [created and up-to-date](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics) and [rebuild  clustered columnstore indexes in the dedicated SQL pool](dsql-perf-cci-health.md).
+> To save troubleshooting time, make sure that the statistics are [created and up-to-date](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics) and [rebuild clustered columnstore indexes in the dedicated SQL pool](dsql-perf-cci-health.md).
 
 <a id="step-1-identify-the-request_id-aka-qid"></a>
 
@@ -66,12 +66,12 @@ To better target the slow queries, use the following tips when you run the scrip
 
 ## Step 2: Determine where the query is taking time
 
-Run the following script to find the step that might cause the performance issue of the query. Update the variables in the script with the values described in the following table. Change the `@ShowActiveOnly` value to 0 to get the full picture of the distributed plan. Take note of the `StepIndex`, `Phase`, and `Description` values of the slow step identified from the result set.
+Run the following script to find the step that might cause the performance issue of the query. Update the variables in the script with the values described in the following table. Change the `@ShowActiveOnly` value to `0` to get the full picture of the distributed plan. Take note of the `StepIndex`, `Phase`, and `Description` values of the slow step identified from the result set.
 
 | Parameter | Description |
 | --- | ---- |
-| `@QID` | The `request_id` value obtained in [Step 1](#step-1-identify-the-request_id-aka-qid) |
-| `@ShowActiveOnly` | `0` - Show all steps for the query<br/>`1` - Show only the currently active step |
+| `@QID` | The `request_id` value is obtained in [Step 1](#step-1-identify-the-request_id-aka-qid). |
+| `@ShowActiveOnly` | Setting the value to `0` shows all steps for the query.<br/>Setting the value to `1` shows only the currently active step. |
 
 ```sql
 DECLARE @QID AS VARCHAR (16) = '<request_id>', @ShowActiveOnly AS BIT = 1;
@@ -145,13 +145,13 @@ ORDER BY StepIndex;
 
 ## Step 3: Review step details
 
-Run the following script to review the details of the step identified in the previous step. Update the variables in the script with the values described in the following table. Change the `@ShowActiveOnly` value to 0 to compare all distribution timings. Take note of the `wait_type` value for the distribution that might cause the performance issue.
+Run the following script to review the details of the step identified in the previous step. Update the variables in the script with the values described in the following table. Change the `@ShowActiveOnly` value to `0` to compare all distribution timings. Take note of the `wait_type` value for the distribution that might cause the performance issue.
 
 | Parameter | Description |
 | -- | ---- |
-| `@QID` | The `request_id` value obtained in [Step 1](#step-1-identify-the-request_id-aka-qid) |
-| `@StepIndex` | The `StepIndex` value identified in [Step 2](#step-2-determine-where-the-query-is-taking-time) |
-| `@ShowActiveOnly` | `0` - Show all distributions for the given `StepIndex` value<br/>`1` - Show only the currently active distributions for the given `StepIndex` value |
+| `@QID` | The `request_id` value is obtained in [Step 1](#step-1-identify-the-request_id-aka-qid). |
+| `@StepIndex` | The `StepIndex` value is identified in [Step 2](#step-2-determine-where-the-query-is-taking-time). |
+| `@ShowActiveOnly` | Setting the value to `0` shows all distributions for the given `StepIndex` value.<br/>Setting the value to `1` shows only the currently active distributions for the given `StepIndex` value. |
 
 ```sql
 DECLARE @QID VARCHAR(16) = '<request_id>', @StepIndex INT = <StepIndex>, @ShowActiveOnly BIT = 1;
@@ -450,9 +450,9 @@ Unhealthy CCIs contribute to increased IO, CPU, and memory allocation, which, in
 
 Outdated statistics can cause the generation of an unoptimized distributed plan, which involves more data movement than necessary. Unnecessary data movement increases the workload not only on your data at rest but also on the `tempdb`. Because IO is a shared resource across all queries, performance impacts can be felt by the entire workload.
 
-The optimizer relies on statistics to estimate the number of rows that will be returned by a query. Statistics allow the query optimizer to choose the most efficient plan, or the best move operation to perform (for example, a Shuffle Move Operation or Broad Cast Move Operation) to align the data during the join condition. The best join condition depends on the table distribution type. 
+The optimizer relies on statistics to estimate the number of rows that will be returned by a query. Statistics allow the query optimizer to choose the most efficient plan or perform the best move operation (for example, a Shuffle Move Operation or Broad Cast Move Operation) to align the data during the join condition. The best join condition depends on the table distribution type. 
 
-For example, if the actual number of rows for a given table is 60 million, and the estimated number of rows is 1,000 (at control node level), the optimizer might choose a Broadcast move operation. This is because the cost is perceived to be lower compared to a Shuffle Move, given the optimizer's assumption that the table contains only 1,000 rows. However, once the actual execution begins, the engine will move 60 million rows as part of the execution using a Broadcast move, which can be an expensive operation considering both the data size and row count. Consequently, if the data size is substantial, it might lead to performance issues for the query itself and other queries, resulting in high CPU usage.
+For example, if the actual number of rows for a given table is 60 million and the estimated number of rows is 1,000 (at control node level), the optimizer might choose a Broadcast move operation. This behavior is because the cost is perceived to be lower compared to a Shuffle Move, given the optimizer's assumption that the table contains only 1,000 rows. However, once the actual execution begins, the engine will move 60 million rows as part of the execution using a Broadcast move, which can be an expensive operation considering both the data size and row count. Consequently, if the data size is substantial, it might lead to performance issues for the query itself and other queries, resulting in high CPU usage.
 
 To remedy this situation, ensure all [statistics are up-to-date](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics), and a maintenance plan is in place to keep them updated for user workloads. You can verify the accuracy of statistics by following the steps outlined in [Check statistics accuracy on a dedicated SQL pool](dsql-perf-stats-accuracy.md).
 
