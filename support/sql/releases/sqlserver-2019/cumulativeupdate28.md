@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 28 for SQL Server 2019 (KB5039747)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 28 (KB5039747).
-ms.date: 10/11/2024
+ms.date: 01/29/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5039747
 ms.reviewer: v-qianli2
 appliesto:
@@ -79,7 +79,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=3285766>[3285766](#3285766) </a> | Fixes an issue in which the SQL Server Launchpad service can't shut down properly when certain errors occur during startup.| SQL Server Engine | Extensibility | Windows|
 | <a id=3323675>[3323675](#3323675) </a> | Fixes a latch time-out issue that you encounter when fetching the next value for sequence objects, which is due to self-deadlock during lock escalation. | SQL Server Engine | Metadata| All|
 | <a id=2830668>[2830668](#2830668) </a> | Fixes a latch time-out issue that you encounter when fetching the next value for sequence objects, which is due to self-deadlock during lock escalation. | SQL Server Engine | Metadata| All |
-| <a id=3282395>[3282395](#3282395) </a> | Fixes the following error 1204 due to unintentionally disabled lock escalation regression introduced in [CU26](cumulativeupdate26.md).: </br></br>SQL Server Database Engine cannot obtain a LOCK resource at this time. | SQL Server Engine | Metadata | All |
+| <a id=3282395>[3282395](#3282395) </a> | Fixes the following error 1204 due to unintentionally disabled lock escalation regression introduced in [CU26](cumulativeupdate26.md): </br></br>SQL Server Database Engine cannot obtain a LOCK resource at this time. | SQL Server Engine | Metadata | All |
 | <a id=3296380>[3296380](#3296380) </a> | Fixes an issue in which PolyBase throws the following error at service startup if the SQL Server instance is configured to listen on multiple TCP ports: </br></br>System.ArgumentException: Unable to parse port, instance = '\<InstanceName>', text = '\<Text>'| SQL Server Engine | PolyBase| All|
 | <a id=3312936>[3312936](#3312936) </a> | Fixes a non-yielding scheduler dump issue that you might encounter when forcing a query plan in the Query Store (QDS). | SQL Server Engine | Query Optimizer | All|
 | <a id=3312950>[3312950](#3312950) </a> | Fixes an issue in which error 18752 occurs and transactional replication stops working when you use a heavy workload in combination with availability groups and after a failover occurs. </br></br>Error message: </br></br>Only one Log Reader Agent or log-related procedure (sp_repldone, sp_replcmds, and sp_replshowcmds) can connect to a database at a time. If you executed a log-related procedure, drop the connection with session ID \<SessionID> over which the procedure was executed or execute sp_replflush over that connection before starting the Log Reader Agent or executing another log-related procedure. | SQL Server Engine | Replication | Windows|
