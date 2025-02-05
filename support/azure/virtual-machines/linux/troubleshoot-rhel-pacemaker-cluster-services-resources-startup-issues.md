@@ -21,7 +21,7 @@ This article discusses the most common causes of startup issues in RedHat Enterp
 
 ### Symptom for scenario 1
 
-- Cluster node don't join a cluster after a cluster restart
+- Cluster node does't join a cluster after a cluster restart
 - Nodes are reported as `UNCLEAN (offline)`
 - Current DC is reported as `NONE`
 
@@ -57,7 +57,7 @@ This article discusses the most common causes of startup issues in RedHat Enterp
 
 ### Cause for scenario 1
 
-The **VoteQuorum** service is a component of the corosync project. To prevent split-brain scenarios, this service can be optionally loaded into a corosync cluster's nodes. Every system in the cluster is given a certain number of votes to achieve this quorum. This makes sure that cluster actions can occur only if a majority of votes are cast. Either every node or no node must have the service loaded. The outcomes are uncertain if the service is loaded into a subset of cluster nodes.
+The **VoteQuorum** service is a component of the corosync project. To prevent split-brain scenarios, this service can be optionally loaded into a corosync cluster's nodes. Every system in the cluster is given a certain number of votes to achieve this quorum. This makes sure that cluster actions can occur only if most votes are cast. Either every node or no node must have the service loaded. The outcomes are uncertain if the service is loaded into a subset of cluster nodes.
 
 The following `/etc/corosync/corosync.conf` extract enables **VoteQuorum** service within corosync:
 
@@ -334,7 +334,7 @@ The SAP HANA resource can't be started by Pacemaker if there are `SYN` failures 
 > [!Important]
 > Steps 2, 3, and 4 must be performed by using a SAP administrator account. This is because these steps use a SAP System ID to stop, start, and re-enable replication manually.
 
-1. As a precaution, make a full backup or take a snapshot before you make any changes. FOr more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
+1. As a precaution, make a full backup or take a snapshot before you make any changes. For more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
 
 2. Put the cluster into maintenance mode:
 
@@ -598,11 +598,9 @@ Jun  7 02:25:09 node-0 pacemaker-attrd[8568]: notice: Setting last-failure-SAPHa
 
 ### Resolution for scenario 3, symptom 3
 
-The output shows that there are no traces found other than the reason that 'hbddaemon' didn't start. After evaluating the output, SAP vendor support should study the application logs further to understand why the SAP application didn't start.
+See the following Red Hat article: [SAPHana Resource Start Failure with Error 'FAIL: process hdbdaemon HDB Daemon not running'](https://access.redhat.com/solutions/7058526).
 
-For more information about this scenario, see the following Red Hat article: [SAPHana Resource Start Failure with Error 'FAIL: process hdbdaemon HDB Daemon not running'](https://access.redhat.com/solutions/7058526).
-
-## Scenario 4: Issue that affect the ASCS and ERS resources
+## Scenario 4: Issue that affects the ASCS and ERS resources
 
 ### Symptom for scenario 4
 
