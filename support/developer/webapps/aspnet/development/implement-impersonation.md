@@ -1,7 +1,7 @@
 ---
 title: Impersonation in ASP.NET applications
 description: This article introduces how to implement impersonation by modifying Web.config and running a particular section of code.
-ms.date: 03/26/2020
+ms.date: 02/05/2025
 ms.custom: sap:General Development
 ms.reviewer: jallen
 ms.topic: how-to
@@ -39,10 +39,10 @@ To impersonate the Internet Information Services (IIS) authenticating user on ev
 
 ## Impersonate a specific user for all requests of an ASP.NET application
 
-To impersonate a specific user for all the requests on all pages of an ASP.NET application, you can specify the `userName` and `password` attributes in the `<identity>` tag of the Web.config file for that application. For example:
+To impersonate a specific user for all the requests on all pages of an ASP.NET application, you can specify the `userName` and `password` attributes in the `<identity>` tag of the **Web.config** file for that application. For example:
 
 ```xml
-<identity impersonate="true" userName="accountname" password="password" />
+<identity impersonate="true" userName="<accountName>" password="<credentialPlaceholder>"/>
 ```
 
 > [!NOTE]
