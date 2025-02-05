@@ -486,7 +486,7 @@ When you run the `sudo pcs status --full` command, the `node attributes` status 
       * master-SAPHana_XXX_00		        : 150
   ```
 
-This Migration summary indicates that the SAP HANA resource (SAPHana_XXX_00) failed to start on both nodes (node-0 and node-1). The fail count is set to 100000 (infinity). 
+This Migration summary indicates that the SAP HANA resource (SAPHana_XXX_00) failed to start on both nodes (node-0 and node-1). The fail count is set to 1000000 (infinity). 
 
   ```bash
   sudo pcs status
