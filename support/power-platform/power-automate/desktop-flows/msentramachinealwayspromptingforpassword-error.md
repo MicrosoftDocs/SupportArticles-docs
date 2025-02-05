@@ -4,7 +4,7 @@ description: Solves an error that occurs when you run an unattended desktop flow
 ms.author: moelaabo
 ms.reviewer: guco, alarnaud
 ms.custom: sap:Desktop flows\Unattended flow runtime errors
-ms.date: 12/09/2024
+ms.date: 02/05/2025
 ---
 # An unattended desktop flow run fails with the MSEntraMachineAlwaysPromptingForPassword error
 
@@ -29,28 +29,32 @@ Your unattended desktop flow run fails with the "MSEntraMachineAlwaysPromptingFo
 
 Power Automate for desktop can't validate your Microsoft Entra ID (formerly Azure Active Directory) credentials on the machine. This issue is typically caused by a group policy setting on your machine.
 
-## Resolution
-There are 3 possible paths to mitigate this issue
+## Resolution 1: Use Microsoft Entra authentication for Remote Desktop with a user certificate
 
-### Option 1:  Use MSEntra Authentication for Remote Desktop - with a user certificate ###
-This option requires PAD 2.50 or above. It is best to use in case no MFA exception can be granted to the desktop flow connection account.
+This resolution requires Power Automate for desktop version 2.50 or later.
 
-See [Certificate Base Authenticiation](https://learn.microsoft.com/power-automate/desktop-flows/configure-certificate-based-auth)
+It's best to use this resolution when no [multifactor authentication (MFA) exception](~/power-automate/administration/conditional-access-and-multi-factor-authentication-in-flow#details) can be granted to the desktop flow connection account.
 
-### Option 2: Use MSEntra Authentication for Remote Desktop - with a user/password ###
-This option requires PAD 2.49 or above. This option can be faster to setup in case an MFA Exception can be granted to the desktop flow connection account.
+For more information, see [Configure certificate-based authentication (preview)](/power-automate/desktop-flows/configure-certificate-based-auth).
 
-1. Force MSEntra authentication in PAD via registry key (use regedit, admin required)
-   
-|Registry Path|Registry Key| DWORD-32 Value|
-|-------------|------------|---------------|
-|Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Power Automate Desktop\Service|UseRdsAadAuthentication|1|
+## Resolution 2: Use Microsoft Entra authentication for Remote Desktop with a user/password
 
-2. Configure [Hiding consent prompt for the target devices](https://learn.microsoft.com/power-automate/desktop-flows/run-unattended-desktop-flows#admin-consent-for-unattended-runs-using-cba-or-sign-in-credentials-with-nla-preview) 
-3. Restart the Power Automate service
-4. Use a MSEntraID connection with user/password credentials. An MFA Exception is required for this account.
+This resolution requires Power Automate for desktop version 2.49 or later. It can be faster to set up with the following steps if an MFA exception can be granted to the desktop flow connection account.
 
-### Option 3: Disable fPromptForPassword
+1. Open the Registry Editor (regedit) with administrative privileges. Navigate to the following registry path, create a new DWORD-32 value with the name `UseRdsAadAuthentication`, and then set the value of `UseRdsAadAuthentication` to **1**.
+
+    |Registry path|Registry key| DWORD-32 value|
+    |-------------|------------|---------------|
+    |Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Power Automate Desktop\Service|`UseRdsAadAuthentication`|**1**|
+
+2. [Hide the consent prompt dialog for a target device group](/power-automate/desktop-flows/run-unattended-desktop-flows#admin-consent-for-unattended-runs-using-cba-or-sign-in-credentials-with-nla-preview).
+
+3. Restart the Power Automate service.
+
+4. Use a Microsoft Entra ID connection with user/password credentials. Note that an MFA exception is required for this account.
+
+## Resolution 3: Disable fPromptForPassword
+
 To solve this issue, check the group policy setting on your machine.
 
 1. Press the Windows key+<kbd>R</kbd> to open the **Run** dialog.
