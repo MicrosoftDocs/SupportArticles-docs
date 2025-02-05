@@ -238,6 +238,13 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 
    :::image type="content" source="media/wrap-issues/provisioning-profile-secret-tag.png" alt-text="Screenshot that shows how to create a tag for iOS Provisioning Profile Secret." lightbox="media/wrap-issues/provisioning-profile-secret-tag.png":::
 
+## Issue 7 - Wrap App login is failing
+1. Verify if the user has access to the application. For more details, [refer to this link](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/share-app)
+2. If access is confirmed, check the App's Azure conditional policies. Admin access is required to review these policies. [More information](https://learn.microsoft.com/en-us/entra/identity/monitoring-health/how-to-view-applied-conditional-access-policies?tabs=microsoft-entra-admin-center#how-to-view-conditional-access-policies)
+3. To troubleshoot sign-in errors, copy the correlation ID from the mobile screen where the sign-in is failing and use the [following link](https://learn.microsoft.com/en-us/entra/identity/monitoring-health/howto-troubleshoot-sign-in-errors) to understand the error and the failing policies: 
+
+
+
 ## Other issues in wrap for Power Apps
 
 For all other issues, or if your issue persists after following these steps, see [Next steps](#next-steps) later in this article to report the issue through a support request. You need to provide a repro video, screenshots, or both, and a session ID that can be get in the following ways:
