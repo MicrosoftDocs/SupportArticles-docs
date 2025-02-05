@@ -1,7 +1,7 @@
 ---
 title: You don't have permission for this when opening Copilot for Sales
 description: Resolves the You don't have permission for this error that occurs in Microsoft 365 Copilot for Sales when a user tries to open the app.
-ms.date: 02/03/2025
+ms.date: 02/05/2025
 author: sbmjais
 ms.author: shjais
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings

@@ -1,7 +1,7 @@
 ---
 title: Missing privileges in Dynamics 365
 description: Resolves the missing privileges error that occurs when signing in to Microsoft Copilot for Sales.
-ms.date: 01/10/2025
+ms.date: 02/05/2025
 author: sbmjais
 ms.author: shjais
 manager: shujoshi

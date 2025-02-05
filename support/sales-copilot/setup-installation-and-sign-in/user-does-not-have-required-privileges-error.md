@@ -1,7 +1,7 @@
 ---
 title: User does not have required privileges to access the org error
 description: Resolves an error message that states the user doesn't have required privileges to access the organization when the Administration mode is enabled in Copilot for Sales.
-ms.date: 01/10/2025
+ms.date: 02/05/2025
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
