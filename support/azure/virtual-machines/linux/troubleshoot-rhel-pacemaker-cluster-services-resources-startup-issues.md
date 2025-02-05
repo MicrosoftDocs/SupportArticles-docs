@@ -21,7 +21,7 @@ This article discusses the most common causes of startup issues in RedHat Enterp
 
 ### Symptom for scenario 1
 
-- Cluster node does't join a cluster after a cluster restart
+- Cluster node doesn't join a cluster after a cluster restart
 - Nodes are reported as `UNCLEAN (offline)`
 - Current DC is reported as `NONE`
 
@@ -71,7 +71,7 @@ quorum {
 
 ### Resolution for scenario 1
 
-1.Before making any changes, back up your data or take a snapshot. For more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
+1.Before you make any changes, ensure you have a backup or snapshot. For more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
 
 2. Check for missing quorum section in `/etc/corosync/corosync.conf`. Compare the existing `corosync.conf` with any backup that's available in `/etc/corosync/`.
    
@@ -208,7 +208,7 @@ vip_HN1_03_start_0 on node-1 'unknown error' (1): call=30, status=complete, exit
 
 If a route that matches the `VIP` isn't in the default routing table, you can specify the `NIC` name in the Pacemaker resource so that it can be configured to bypass the check:
 
-1. Before making any changes, back up your data or take a snapshot. For more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
+1. Before you make any changes, ensure you have a backup or snapshot. For more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
 
 2. Put the cluster into maintenance mode:
    
@@ -334,7 +334,7 @@ The SAP HANA resource can't be started by Pacemaker if there are `SYN` failures 
 > [!Important]
 > Steps 2, 3, and 4 must be performed by using a SAP administrator account. This is because these steps use a SAP System ID to stop, start, and re-enable replication manually.
 
-1. Before making any changes, back up your data or take a snapshot. For more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
+1. Before you make any changes, ensure you have a backup or snapshot. For more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
 
 2. Put the cluster into maintenance mode:
 
@@ -486,7 +486,7 @@ When you run the `sudo pcs status --full` command, the `node attributes` status 
       * master-SAPHana_XXX_00		        : 150
   ```
 
-This Migration summary indicates that the SAP HANA resource (SAPHana_XXX_00) failed to start on both nodes (node-0 and node-1). The fail count is set to 1000000 (INF,infinity). 
+This Migration summary indicates that the SAP HANA resource (SAPHana_XXX_00) failed to start on both nodes (node-0 and node-1). The fail count is set to 100000 (infinity). 
 
   ```bash
   sudo pcs status
@@ -512,7 +512,7 @@ This issue frequently occurs if the database is modified (manually stopped or st
 > [!Note]
 > Steps 1 through 5 should be performed by an SAP administrator.
 
-1. Before making any changes, back up your data or take a snapshot. For more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
+1. Before you make any changes, ensure you have a backup or snapshot. For more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
   
 2. Put the cluster into maintenance mode:
 
@@ -620,7 +620,7 @@ Because of incorrect `InstanceName` and `START_PROFILE` attributes, the SAP inst
 > [!Note]
 > This resolution is applicable if `InstanceName` and `START_PROFILE` are separate files.
 
-1. Before making any changes, back up your data or take a snapshot. For more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
+1. Before you make any changes, ensure you have a backup or snapshot. For more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
   
 2. Put the cluster into maintenance mode:
 
