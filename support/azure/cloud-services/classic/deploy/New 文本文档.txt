@@ -1,0 +1,42 @@
+---  
+title: Troubleshoot Microsoft Azure Cloud Service (classic) VIP swap failures  123
+description: Troubleshoot cloud service VIP swap failures (VipS123wapNotAllowedAsRollingUpgradeIsInProgress exceptions) in Azure Cloud Service (classic).  
+ms.service: azure-cloud-services-classic  
+ms.date: 09/26/2024  
+ms.reviewer: chiragpa, v-leedennis  
+ms.custom: sap:Deployment  
+---  
+ 
+
+## AADSTS50070
+The request failed with the following exception: AADSTS50070: Signout failed. The request specified session indexes '_cbxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx00' which did not match the existing session(s).
+
+Issue :-
+when we customers have two SAML sessions active , SAMLResponce1 (with SessionIndex="_cb4xxxxxx-xxxx-xxxx-xxxx-bxxxxxxxxxxx) and SAML Response 2 ( with SessionIndex="_d69xxxx-xxxx-xxxx-xxxx-bxxxxxxxxxx) and when the user logout and logout request contains the ( SessionIndex="_cb4xxxx-xxxx-xxxx-xxxx-bxxxxxxxxxxx ) , log out fails with the error AADSTS50070: Signout failed. The request specified session indexes '_cbxxxxx-xxxx-xxxx-xxxx-bxxxxxxxxxxx ' which did not match the existing session(s).
+
+Solution: -
+
+This is not a problem with ESTS. There seems to be a browser and an app problem.
+
+Example SessionIndex in SAML response
+====================================
+
+Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/storeId "><AttributeValue>1</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/StoreName"><AttributeValue>Masked</AttributeValue></Attribute></AttributeStatement><AuthnStatement AuthnInstant="2022-04-06T07:30:07.182Z" SessionIndex="_cbxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx "><AuthnContext><AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:classes:Password</AuthnContextClassRef></AuthnContext></AuthnStatement></Assertion></samlp:Response>
+
+User might have got another token and this time the SAML response is below
+
+Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/storeId "><AttributeValue>1</AttributeValue></Attribute><Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/StoreName"><AttributeValue>Masked</AttributeValue></Attribute></AttributeStatement><AuthnStatement AuthnInstant="2022-04-06T07:30:07.182Z" SessionIndex="_d6xxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx "><AuthnContext><AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:classes:Password</AuthnContextClassRef></AuthnContext></AuthnStatement></Assertion></samlp:Response>
+
+The SessionIndex value must be used again when the user logs out.
+
+Example Logout
+===========
+
+SAML Logout Request:
+
+<saml2p:LogoutRequest Destination="https://login.microsoftonline.com/TenantGuid/saml2 " ID="_6e25867b-4629-40aa-8a2a-0e345050faf4" IssueInstant="2022-04-06T07:30:16.268Z" NotOnOrAfter="2022-04-06T07:35:16.268Z" Version="2.0" xmlns:saml2p="urn:oasis:names:tc:SAML:2.0:protocol"><saml2:Issuer Format="urn:oasis:names:tc:SAML:2.0:nameid-format:entity" xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion">Masked </saml2:Issuer><saml2:NameID Format="urn:oasis:names:tc:SAML:2.0:nameid-format:persistent" xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion">Test.Return1@domainname.com</saml2:NameID>saml2p:SessionIndex _cbxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx </saml2p:SessionIndex></saml2p:LogoutRequest>
+
+Log out fails with error AADSTS50070
+
+The SAML session index is continuously updated when an application requests new tokens. There are no two session indexes that server maintains , but just one. SP must send the latest session index when signing out users. If SP sends previous or old Session Index then we gave the above stated error. Issue would be with browser just didn’t send the correct or latest cookies or it sent old cookies , customer or app developer needs to figure out .
+
