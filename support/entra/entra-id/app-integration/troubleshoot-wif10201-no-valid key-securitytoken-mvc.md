@@ -8,15 +8,15 @@ ms.topic: troubleshooting-general
 ms.date: 02/05/2025
 ms.custom: sap:Issues Signing In to Applications
 ---
-# WIF10201: No valid key mapping found for securityToken in ASP.NET MVC application
+# WIF10201: No valid key mapping found for securityToken in ASP.NET application
 
 This article provides guidance for troubleshooting an authentication issue in an ASP.NET MVC application that uses both [WS-Federation](https://github.com/Azure-Samples/active-directory-dotnet-webapp-wsfederation) OWIN middleware and [Windows Identity Foundation](../../../windows-server/user-profiles-and-logon/windows-identity-foundation.md) (WIF) to authenticate to Microsoft Entra ID.
 
 ## Symptom
 
-The ASP.NET MVC application was working previously; however, the following error is now occurring without any changes to the application.
+The ASP.NET MVC application was working previously. However, the following error is now occurring without any changes to the application.
 
-```dotnetcli
+```dotnecli
 Error Details:
 Server Error in ‘/’ Application.
 WIF10201: No valid key mapping found for securityToken: ‘System.IdentityModel.Tokens.X509SecurityToken’ and issuer: ‘https://sts.windows.net/<Directory ID>/’.
@@ -26,7 +26,7 @@ Description: An unhandled exception occurred during the execution of the current
 Exception Details: System.IdentityModel.Tokens.SecurityTokenValidationException: WIF10201: No valid key mapping found for securityToken: ‘System.IdentityModel.Tokens.X509SecurityToken’ and issuer: ‘https://sts.windows.net/<Directory ID>/’.
 ```
 
-## Cause 
+## Cause
 
 Windows Identity Foundation uses the certificate thumbprint(s) in the web.config file (shown below) to verify the signature of the token returned from THE Entra ID upon successful sign in.
 
