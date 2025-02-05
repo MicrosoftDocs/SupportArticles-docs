@@ -1,7 +1,7 @@
 ---
 title: Windows Server with Sysmon installed stops responding on startup when applying Group Policy
 description: Helps resolve an issue in which Windows Server that has Sysmon installed stops responding on startup when applying Group Policy.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

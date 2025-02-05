@@ -1,7 +1,7 @@
 ---
 title: Server Error in Reports Application error when you click Reports tab in MBAM
 description: This article fixes an error when you click the Reports tab in MBAM.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

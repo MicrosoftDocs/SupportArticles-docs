@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot native memory leak in an IIS 7.x application pool
 description: This article describes memory leak in an IIS application pool and helps identify the cause of issue.
-ms.date: 04/09/2012
+ms.date: 01/17/2025
 ms.custom: sap:Site Behavior and Performance\High memory usage
 ms.reviewer: johnhart, hulopesv, v-sidong
 ---
@@ -19,9 +19,9 @@ When the memory leak in an IIS application pool occurs, increasing physical memo
 
 | Process | Windows | Addressable memory (with a large address-aware process) | Practical limit for virtual bytes | Practical limit for private bytes |
 | --- | --- | --- | --- | --- |
-| 32-bit | 32-bit | 2 GB | 1400 MB | 800 MB |
-| 32-bit | 32-bit with /3GB | 3 GB | 2400 MB | 1800 MB |
-| 32-bit | 64-bit | 4 GB | 3400 MB | 2800 MB |
+| 32-bit | 32-bit | 2 GB | 1,400 MB | 800 MB |
+| 32-bit | 32-bit with /3GB | 3 GB | 2,400 MB | 1,800 MB |
+| 32-bit | 64-bit | 4 GB | 3,400 MB | 2,800 MB |
 | 64-bit | 64-bit | 8 TB | Not applicable | Not applicable |
 
 ## Scenario
@@ -62,7 +62,7 @@ Performance Monitor (Perfmon) data can be viewed in real-time or it can be colle
 1. Select **Next**.
 1. Select the **Add** button.
 1. Expand **Process** from the list of counters.
-1. Select **Private Bytes**, **Virtual Bytes** and **Working Set** from the **Thread** object.
+1. Select **Private Bytes**, **Virtual Bytes**, and **Working Set** from the **Thread** object.
 1. Select \<ALL instances\> from the list of instances.
 1. Select **Add**.
 1. Expand **Memory** from the list of counters.
@@ -87,7 +87,7 @@ The most important information to figure out which function caused the memory le
 gflags -i w3wp.exe +ust
 ```
 
-The command doesn't enable stack tracing for a process that is already running. Therefore, for processes that you can't restart (for example, services, lsass, winlogon), you must restart your test computer.
+The command doesn't enable stack tracing for a process that is already running. Therefore, for processes that you can't restart (for example, services, lsass, Winlogon), you must restart your test computer.
 
 Use the following commands to verify what settings have been set for a specific process:
 
@@ -102,7 +102,7 @@ When you run DebugDiag, it displays the **Select Rule Type** dialog. Follow thes
 1. Select **Configure**.
 1. Set the rule as shown in the following image:
 
-    You can adjust these values if needed, but be careful not to specify a small number of MB in order to generate the tons of dump files. Generate a userdump when private bytes reach 800 MB and each additional 100 MB thereafter. Generate a userdump when virtual bytes reach 1024 MB and each additional 200 MB thereafter.
+    You can adjust these values if needed, but be careful not to specify a small number of MB in order to generate the tons of dump files. Generate a userdump when private bytes reach 800 MB and each additional 100 MB thereafter. Generate a userdump when virtual bytes reach 1,024 MB and each additional 200 MB thereafter.
 
     :::image type="content" source="media/troubleshooting-native-memory-leak-in-an-iis-7x-application-pool/configure-user-dumps-leak-rule.png" alt-text="Screenshot of the Configure user dumps for Leak Rule dialog box. All options are checked." lightbox="media/troubleshooting-native-memory-leak-in-an-iis-7x-application-pool/configure-user-dumps-leak-rule.png":::
 
@@ -218,3 +218,4 @@ By using Perfmon and DebugDiag, you can easily collect data that can be helpful 
 ## Other resources
 
 - [How to use the IIS Debug Diagnostics tool to troubleshoot a memory leak in an IIS process](https://support.microsoft.com/topic/how-to-use-the-debug-diagnostics-tool-to-troubleshoot-a-process-that-has-stopped-responding-in-iis-995db9a3-a3be-6d20-cf2f-c48101a64444)
+- [Overview of high memory consumption issues](high-memory-consumption-issues-overview.md)

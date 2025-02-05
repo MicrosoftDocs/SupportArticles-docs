@@ -1,7 +1,7 @@
 ---
 title: Prevent KCC from creating replication topology
 description: Describes how to disable the Knowledge Consistency Checker functions that generate replication topology information for Active Directory Domain Services.
-ms.date: 5/22/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

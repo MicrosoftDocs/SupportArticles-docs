@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot issues with accounts used by failover clusters
 description: Provides troubleshooting guidance for issues with accounts used by failover clusters.
-ms.date: 01/10/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

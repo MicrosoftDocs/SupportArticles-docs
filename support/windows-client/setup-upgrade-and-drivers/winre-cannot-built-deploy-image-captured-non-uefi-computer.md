@@ -1,7 +1,7 @@
 ---
 title: WinRE can't be built after you deploy a Windows 8.1 image
 description: Describes an issue in which you can't deploy a Windows 8.1-based image to a UEFI computer when the image was captured from a non-UEFI computer.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

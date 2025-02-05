@@ -1,7 +1,7 @@
 ---
 title: Find the name of Enterprise Root CA server
 description: Helps you to find name of the Enterprise Root Certificate Authority (CA) server.
-ms.date: 10/12/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

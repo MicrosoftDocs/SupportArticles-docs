@@ -1,0 +1,27 @@
+items:
+- name: Windows 365
+  href: ./welcome-windows-365.yml
+- name: Azure network connection health checklist
+  href: ./health-checks.md
+- name: Connection errors
+  href: ./connection-errors.md
+- name: Known issues with Windows 365 Business
+  href: ./known-issues.md
+- name: Known issues with Windows 365 Enterprise and Frontline
+  href: ./known-issues-enterprise.md
+- name: Provisioning errors
+  href: ./provisioning-errors.md
+- name: Troubleshoot Azure network connections
+  href: ./troubleshoot-azure-network-connection.md
+- name: Troubleshoot partner connectors
+  href: ./troubleshoot-partner-connector.md
+- name: Troubleshoot Windows 365 app
+  href: ./troubleshoot-windows-365-app.md
+- name: Troubleshoot Windows 365 Boot
+  href: ./troubleshoot-windows-365-boot.md
+- name: Windows 365 Boot known issues
+  href: ./windows-365-boot-known-issues.md
+- name: Windows 365 setup issues
+  href: ./troubleshoot-windows-365-business.md
+- name: Windows 365 Switch known issues
+  href: ./windows-365-switch-known-issues.md

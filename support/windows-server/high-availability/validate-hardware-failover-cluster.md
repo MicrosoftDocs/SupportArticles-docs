@@ -1,7 +1,7 @@
 ---
 title: Validate hardware for a failover cluster
 description: Helps validate hardware for a failover cluster.
-ms.date: 11/03/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

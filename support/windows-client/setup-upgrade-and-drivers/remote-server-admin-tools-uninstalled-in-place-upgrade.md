@@ -1,7 +1,7 @@
 ---
 title: Windows 10 RSAT uninstalled by in-place upgrade
 description: Describes an issue in which Windows 10 Remote Server Admin Tools (RSAT) is uninstalled during an in-place upgrade.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

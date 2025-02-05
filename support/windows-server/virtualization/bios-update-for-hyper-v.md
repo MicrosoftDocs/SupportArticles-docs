@@ -1,7 +1,7 @@
 ---
 title: Issues when starting VM or installing Hyper-V
 description: This article describes an issue where BIOS update is required before installing Hyper-V role or start virtual machines on Windows Server 2012 and Windows 8.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

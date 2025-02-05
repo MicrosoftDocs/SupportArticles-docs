@@ -1,7 +1,7 @@
 ---
 title: Group Policy settings show as Extra Registry Settings
 description: Describes a registry setting that can be configured to allow the Group Policy Editor to use local Administrative Template files (ADMX/ADML) instead of the Central Store.
-ms.date: 10/23/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

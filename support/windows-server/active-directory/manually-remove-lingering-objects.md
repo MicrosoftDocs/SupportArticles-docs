@@ -1,7 +1,7 @@
 ---
 title: Manually Remove Lingering Objects on Outdated Replication Partners
 description: Helps with manual removal of lingering objects after you bring an outdated domain controller (DC) or global catalog server back online.
-ms.date: 12/24/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

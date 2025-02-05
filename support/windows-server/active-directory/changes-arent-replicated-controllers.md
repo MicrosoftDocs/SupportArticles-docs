@@ -1,7 +1,7 @@
 ---
 title: Changes aren't replicated to destination domain controllers
 description: Describes an issue that occurs in a Windows Server 2003 environment, where changes that are made to security groups or distribution groups aren‘t replicated to destination domain controllers when you use link value replication. Resolution is provided.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

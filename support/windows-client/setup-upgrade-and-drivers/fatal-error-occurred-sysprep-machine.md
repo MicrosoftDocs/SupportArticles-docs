@@ -1,7 +1,7 @@
 ---
 title: A fatal error occurred while trying to sysprep the machine
 description: Helps resolve the fatal error occurred while trying to sysprep the machine when you use the Sysprep tool.
-ms.date: 06/26/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

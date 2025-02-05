@@ -1,7 +1,7 @@
 ---
 title: DFSR no longer replicates files
 description: Discusses an issue where the DFS Replication service doesn't replicate files after restoring a virtualized server's snapshot.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

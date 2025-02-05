@@ -3,7 +3,7 @@ title: User State Migration Tool (USMT) common issues
 description: Describes the resolutions for the common issues that you might see when you run the User State Migration Tool (USMT) 10.0 tools.
 ms.reviewer: frankroj
 manager: dcscontentpm
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 ms.topic: troubleshooting
 ms.custom: sap:Windows Setup, Upgrade and Deployment\User State Migration Tool (USMT), csstroubleshoot
 audience: itpro

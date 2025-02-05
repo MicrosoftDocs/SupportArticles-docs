@@ -1,7 +1,7 @@
 ---
 title: List of updates
 description: Lists the Microsoft Knowledge Base articles that describe the fixes and updates that are included in Windows Server 2003 Service Pack 2.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: All members of a group may not be returned
 description: Describes a problem that may occur where the Active Directory Service Interfaces WinNT provider does not return all members of a group. This problem occurs when you try to enumerate a local group or a domain local group.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
