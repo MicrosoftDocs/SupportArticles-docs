@@ -171,20 +171,20 @@ vip_HN1_03_start_0 on node-1 'unknown error' (1): call=30, status=complete, exit
 
 2. The correct network adapter is determined by the options that are set on the `IPAddr2` resource, such as `ip` (required), `cidr_netmask`, and `broadcast`.
 
-  For example:
+    For example:
 
-  Check the `IPaddr2` settings:
+    Check the `IPaddr2` settings:
 
-  ```bash
-  sudo pcs resource show vip_HN1_03
-  ```
-  ```output
-  Resource: vip_HN1_03 (class=ocf provider=heartbeat type=IPaddr2)
-  Attributes: ip=172.17.10.10 cidr_netmask=24 nic=ens6
-  Operations: start interval=0s timeout=20s (vip_HN1_03-start-timeout-20s)
-              stop interval=0s timeout=20s (vip_HN1_03-stop-timeout-20s)
-              monitor interval=10s timeout=20s (vip_HN1_03-monitor-interval-10s)
-  ```
+    ```bash
+    sudo pcs resource show vip_HN1_03
+    ```
+    ```output
+    Resource: vip_HN1_03 (class=ocf provider=heartbeat type=IPaddr2)
+    Attributes: ip=172.17.10.10 cidr_netmask=24 nic=ens6
+    Operations: start interval=0s timeout=20s (vip_HN1_03-start-timeout-20s)
+                stop interval=0s timeout=20s (vip_HN1_03-stop-timeout-20s)
+                monitor interval=10s timeout=20s (vip_HN1_03-monitor-interval-10s)
+    ```
 
 3. Try to determine the `NIC` information manually. In this example, based on the IP address and netmask, we can successfully find `ens6` from the route table:
 
@@ -313,19 +313,19 @@ SAP HANA DB doesn't start, and it returns an `unknown error` error message.
 
 Pacemaker can't start the SAP HANA resource if there are `SYN` failures between the primary and secondary nodes:
 
-    ```bash
-    sudo SAPHanaSR-showAttr
-    ```
-    ```output
-    Global cib-time                 maintenance
-    --------------------------------------------
-    global Fri Aug 23 11:47:32 2024 false
+```bash
+sudo SAPHanaSR-showAttr
+```
+```output
+Global cib-time                 maintenance
+--------------------------------------------
+global Fri Aug 23 11:47:32 2024 false
 
-    Hosts	clone_state	lpa_fh9_lpt	node_state	op_mode	        remoteHost  	  roles		            score	 site   srmode	sync_state	version         vhost
-    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    node-0	DEMOTED		10		online		logreplay	node-1 	4:S:master1:master:worker:master	5	SITEA	syncmem	SOK	2.00.046.00.1581325702	node-0
-    node-1	PROMOTED	1693237652	online		logreplay	node-0 	4:P:master1:master:worker:master	150	SITEA	syncmem	PRIM	2.00.046.00.1581325702	node-1
-    ```
+Hosts	clone_state	lpa_fh9_lpt	node_state	op_mode	        remoteHost  	  roles		            score	 site   srmode	sync_state	version         vhost
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+node-0	DEMOTED		10		online		logreplay	node-1 	4:S:master1:master:worker:master	5	SITEA	syncmem	SOK	2.00.046.00.1581325702	node-0
+node-1	PROMOTED	1693237652	online		logreplay	node-0 	4:P:master1:master:worker:master	150	SITEA	syncmem	PRIM	2.00.046.00.1581325702	node-1
+```
 
 ### Workaround for scenario 3, symptom 1
 
@@ -486,7 +486,7 @@ When you run the `sudo pcs status --full` command, the `node attributes` status 
       * master-SAPHana_XXX_00		        : 150
   ```
 
-The Migration summary reporting `INF` fail-count with failed SAP HANA resource action reporting start failures due to "not running".
+This Migration summary indicates that the SAP HANA resource (SAPHana_XXX_00) failed to start on both nodes (node-0 and node-1). The fail count is set to 1000000 (INF,infinity). 
 
   ```bash
   sudo pcs status
