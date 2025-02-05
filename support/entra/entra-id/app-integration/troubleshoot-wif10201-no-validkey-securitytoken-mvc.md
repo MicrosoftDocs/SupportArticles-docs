@@ -1,5 +1,5 @@
 ---
-title: ASP.NET MVC application error WIF10201: No valid key mapping found for securityToken
+title: ASP.NET MVC application error WIF10201 No valid key mapping found for securityToken
 description: This article provides guidance for troubleshooting the the error "WIF10201- No valid key mapping found for securityToken".
 author: genlin
 ms.author: bachoang
@@ -8,6 +8,7 @@ ms.topic: troubleshooting-general
 ms.date: 02/05/2025
 ms.custom: sap:Issues Signing In to Applications
 ---
+
 # WIF10201: No valid key mapping found for securityToken in ASP.NET application
 
 This article provides guidance for troubleshooting an authentication issue in an ASP.NET MVC application that uses both [WS-Federation](https://github.com/Azure-Samples/active-directory-dotnet-webapp-wsfederation) OWIN middleware and [Windows Identity Foundation](../../../windows-server/user-profiles-and-logon/windows-identity-foundation.md) (WIF) to authenticate to Microsoft Entra ID.
@@ -18,12 +19,12 @@ The ASP.NET MVC application was working previously. However, the following error
 
 ```dotnecli
 Error Details:
-Server Error in ‘/’ Application.
-WIF10201: No valid key mapping found for securityToken: ‘System.IdentityModel.Tokens.X509SecurityToken’ and issuer: ‘https://sts.windows.net/<Directory ID>/’.
+Server Error in '/' Application.
+WIF10201: No valid key mapping found for securityToken: ‘System.IdentityModel.Tokens.X509SecurityToken' and issuer: 'https://sts.windows.net/<Directory ID>/'.
 
 Description: An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code.
 
-Exception Details: System.IdentityModel.Tokens.SecurityTokenValidationException: WIF10201: No valid key mapping found for securityToken: ‘System.IdentityModel.Tokens.X509SecurityToken’ and issuer: ‘https://sts.windows.net/<Directory ID>/’.
+Exception Details: System.IdentityModel.Tokens.SecurityTokenValidationException: WIF10201: No valid key mapping found for securityToken: 'System.IdentityModel.Tokens.X509SecurityToken' and issuer: 'https://sts.windows.net/<Directory ID>/'.
 ```
 
 ## Cause
@@ -52,4 +53,4 @@ The Entra ID uses a [signing key rollover mechanism](/entra/identity-platform/si
 
 ### Solution
 
-You can either update the certificate thumbprints in the web.config file manually  or automate the process through code. For more information, see [Best practices for keys metadata caching and validation](/entra/identity-platform/signing-key-rollover#best-practices-for-keys-metadata-caching-and-validation)
+You can either update the certificate thumbprints in the web.config file manually or automate the process through code. For more information, see [Best practices for keys metadata caching and validation](/entra/identity-platform/signing-key-rollover#best-practices-for-keys-metadata-caching-and-validation)
