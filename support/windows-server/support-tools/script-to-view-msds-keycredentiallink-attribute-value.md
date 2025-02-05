@@ -1,9 +1,16 @@
+---
+title: Script to view the certificate information in the msDS-KeyCredentialLink attribute
+description: This article introduces a script to view the certificate information in the msDS-KeyCredentialLink attribute from AD user objects.
+ms.date: 02/14/2025
+manager: dcscontentpm
+audience: itpro
+ms.topic: troubleshooting
+ms.reviewer: takondo
+ms.custom: sap:User Logon and Profiles\User profiles, csstroubleshoot
+---
+# Script to view the certificate information in the msDS-KeyCredentialLink attribute from Active Directory user objects
 
-
-
-# Script to view the certificate information in the msDS-KeyCredentialLink attribute from AD user objects
-
-The msDS-KeyCredentialLink attribute can be viewed in PowerShell. However, the value is in binary format which is not easily readable. In order to assist troubleshooting, this script will
+The msDS-KeyCredentialLink attribute can be viewed in PowerShell. However, the value is in binary format which is unreadable. This script helps you do the following things:
 
 1. Enumerate all users in Active Directory with a non-null value in msDS-KeyCredentialLink.
 2. Extract the bcrypt-sha256 key ID hash of each certificate saved in the msDS-KeyCredentialLink and save it to a file.
@@ -13,11 +20,13 @@ You can then use the information saved to check whether the expected values are 
 ## Script
 
 > [!IMPORTANT]
-> This sample script is not supported under any Microsoft standard support program or service.
+> This sample script isn't supported under any Microsoft standard support program or service.
 >
 > The sample script is provided AS IS without warranty of any kind. Microsoft further disclaims all implied warranties including, without limitation, any implied warranties of merchantability or of fitness for a particular purpose.
 >
 > The entire risk arising out of the use or performance of the sample scripts and documentation remains with you. In no event shall Microsoft, its authors, or anyone else involved in the creation, production, or delivery of the scripts be liable for any damages whatsoever (including, without limitation, damages for loss of business profits, business interruption, loss of business information, or other pecuniary loss) arising out of the use of or inability to use the sample scripts or documentation, even if Microsoft has been advised of the possibility of such damages.
+
+After you run the script, the results are saved in the file *C:\temp\KeyCredentialLink-report.txt*.
 
 ```powershell
 $outputfile = "C:\temp\KeyCredentialLink-report.txt"
@@ -96,9 +105,9 @@ foreach ($user in (Get-ADUser -LDAPFilter '(msDS-KeyCredentialLink=*)' -Properti
 }
 ```
 
-## Script sample output
+## Script sample output and analysis
 
-Here is a sample output of the script:
+Here's a sample output of the script:
 
 ```output
 User: user1@contoso.com
@@ -120,14 +129,14 @@ KeyCredialLink Entries:
 
 Each KeyCredentialLink entry represents a certificate. The output contains the following information:
 
-- Source – The source of the certificate. This can either be from Entra ID or on-prem Active Directory
-- Usage – Defined usage of the certificate. This can be NGC (WHfB), FIDO, or FEK (File Encryption Key)
-- DeviceID – ID of the computer where the certificate was created. This is the Device ID in Entra ID, and objectGUID in Active Directory.
-- KeyID - The bcrypt-sha256 key ID hash of the certificate.
+- Source: The source of the certificate. This information can either be from Microsoft Entra ID or on-premises Active Directory
+- Usage: Defined usage of the certificate. This information can be NGC (WHfB), FIDO, or FEK (File Encryption Key)
+- DeviceID: ID of the computer where the certificate was created. This information is the Device ID in Microsoft Entra ID, and objectGUID in Active Directory.
+- KeyID: The bcrypt-sha256 key ID hash of the certificate.
 
-The matching certificate should be found in the user's Personal certificate store on the computer with the matching DeviceID. To find the certificate being used on the client, you can run “certutil -v -user -store my” from a PowerShell or Command prompt to dump detailed certificate information from the user's Personal store. Here, you should find a self-signed certificate where the subject and issuer are the same and is in the form of “CN=<User SID>/login.windows.net/<Tenant ID>/<user UPN>”. Once you find this certificate, check the bcrypt-sha256 key ID hash. This hash value is expected to match one of the entries in the msDS-KeyCredentialLink attribute certificates.
+The matching certificate should be found in the user's Personal certificate store on the computer with the matching DeviceID. To find the certificate being used on the client, you can run `certutil -v -user -store my` from a PowerShell or Command prompt to dump detailed certificate information from the user's Personal store. In this example, you should find a self-signed certificate where the subject and issuer are the same and is in the form of `CN=<User SID>/login.windows.net/<Tenant ID>/<user UPN>`. Once you find this certificate, check the bcrypt-sha256 key ID hash. This hash value is expected to match one of the entries in the msDS-KeyCredentialLink attribute certificates.
 
-Here is an excerpt from user2@contoso.com's certificate store.
+Here's an excerpt from user2@contoso.com's certificate store.
 
 ```output
 > certutil -v -user -store my
