@@ -34,7 +34,7 @@ Clients can connect to Remote Desktop Services, but they display a balloon messa
 
 ## Cause
 
-These issue could be caused by the following user messages:
+These issues could be caused by the following user messages:
 
 - The remote session was disconnected because there are no Remote Desktop client access licenses available for this computer.
 - The remote session was disconnected because there are no Remote Desktop License Servers available to provide a license.
