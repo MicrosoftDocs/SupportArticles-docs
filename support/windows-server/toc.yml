@@ -3119,6 +3119,8 @@ items:
       href: ./support-tools/scripts-to-retrieve-profile-age.md
     - name: Scripts to retrieve profile age and optionally delete aged copies
       href: ./support-tools/scripts-retrieve-profile-age-delete-aged-copies.md
+    - name: Script to view the certificate information in the msDS-KeyCredentialLink attribute
+      href: ./support-tools/script-to-view-msds-keycredentiallink-attribute-value.md
   - name: TroubleShootingScript toolset (TSS)
     items:
     - name: Introduction to TroubleShootingScript toolset (TSS)
