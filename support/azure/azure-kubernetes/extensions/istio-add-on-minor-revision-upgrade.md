@@ -8,7 +8,6 @@ editor: v-jsitser
 ms.reviewer: fuyuanbie, shasb, nshankar, ddama, v-leedennis, v-weizhu
 ms.custom: sap:Extensions, Policies and Add-Ons
 ms.service: azure-kubernetes-service
-ms.custom: sap:Extensions, Policies and Add-Ons
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot minor revision upgrades of the Istio add-on so that I can use the Istio service mesh successfully.
 ---
 # Istio service mesh add-on minor revision upgrade troubleshooting
