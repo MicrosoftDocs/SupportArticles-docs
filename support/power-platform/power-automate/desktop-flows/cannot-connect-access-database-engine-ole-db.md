@@ -26,7 +26,7 @@ Consider the following scenario in Microsoft Power Automate for desktop:
 
 This error message occurs because the appropriate 64-bit driver isn't installed on your machine. Kindly note that Power Automate for desktop is based on 64-bit architecture and thus is only compatible to 64-bit database drivers.
 
-## Resolution
+## Workaround
 
 Verify that you have 64-bit Access Database driver installed on your machine by going to ODBC Data Source Administrator (64-bit) application on windows and then the **Drivers** tab. If you don't see "Microsoft Access Driver" in the list, you need to download and install the 64-bit version from [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).
 
