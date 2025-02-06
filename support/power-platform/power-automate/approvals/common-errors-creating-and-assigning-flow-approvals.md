@@ -169,7 +169,7 @@ The user that originally created the Approvals connection used by the flow is no
 
 > Cannot wait on this approval in its current state.
 
-By the time the "Wait for an approval" action executed, the approval had already been completed. Only active approvals can be waited upon by this action.
+By the time the "Wait for an approval" action was executed, the approval had already expired or been abandoned. Only active approvals can be waited upon by this action.
 
 ### InvalidApprovalCustomOptions
 
