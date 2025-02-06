@@ -22,6 +22,16 @@ The direct input is encrypted using the local machine's DPAPI. This means that t
 
 This scenario is documented when placing the cursor over the info icon if any of the direct input options is selected:
 
+:::image type="content" source="media/error-expression-could-not-be-evaluated/encrypted-tooltip.png" alt-text="Tooltip of encrypted text input.":::
+
+Example of direct password input option:
+
+:::image type="content" source="media/error-expression-could-not-be-evaluated/direct-password-input.png" alt-text="Direct password input option.":::
+
+Example of direct encrypted text input option:
+
+:::image type="content" source="media/error-expression-could-not-be-evaluated/direct-encrypted-text-input.png" alt-text="Direct encrypted text input option.":::
+
 ## Resolution
 
 To run the flow in a different machine, modify the flow to use sensitive variables.
