@@ -1,11 +1,11 @@
 ---
 title: Cannot connect to RDS because no RD Licensing servers are available
 description: This article describes how to troubleshoot RDS connection errors that are related to Remote Desktop licensing.
-ms.date: 01/20/2025
+ms.date: 02/06/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, v-tappelgate, rafx
+ms.reviewer: kaushika, v-tappelgate, rafx, warrenw
 ms.custom: sap:Remote Desktop Services and Terminal Services\Licensing for Remote Desktop Services (Terminal Services), csstroubleshoot
 keywords: RD Licensing server, RD CAL
 ---
@@ -17,29 +17,18 @@ This article helps you troubleshoot the "No licenses available" error in a deplo
 
 Clients cannot connect to Remote Desktop Services, and they display messages that resemble the following:
 
-```output
-The remote session was disconnected because there are no Remote Desktop License Servers available to provide a license.
-```
+> The remote session was disconnected because there are no Remote Desktop License Servers available to provide a license.
 
-```output
-Access was denied because of a security error.
-```
+> Access was denied because of a security error.
 
 Sign in to the RD Session Host as a domain administrator and open the RD License Diagnoser. Look for messages like the following:
 
-```output
-The grace period for the Remote Desktop Session Host server has expired, but the RD Session Host server hasn't been configured with any license servers. Connections to the RD Session Host server will be denied unless a license server is configured for the RD Session Host server.
-```
+> The grace period for the Remote Desktop Session Host server has expired, but the RD Session Host server hasn't been configured with any license servers. Connections to the RD Session Host server will be denied unless a license server is configured for the RD Session Host server.
 
-```output
-License server <computer name> is not available. This could be caused by network connectivity problems, the Remote Desktop Licensing service is stopped on the license server, or RD Licensing isn't available.
-```
+> License server \<computer name\> is not available. This could be caused by network connectivity problems, the Remote Desktop Licensing service is stopped on the license server, or RD Licensing isn't available.
 
-```output
-Remote Desktop licensing mode is not configured. 
+> Remote Desktop licensing mode is not configured.  
 Remote Desktop Services will stop working because this computer is past its licensing grace period. On the RD Connection Broker server, use Server Manager to specify the Remote Desktop licensing mode. 
-```
-
 
 ## Cause
 
