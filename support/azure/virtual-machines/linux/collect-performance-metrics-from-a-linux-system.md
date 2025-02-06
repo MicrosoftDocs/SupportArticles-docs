@@ -11,11 +11,13 @@ ms.topic: troubleshooting-general
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.custom: sap:VM Performance
-ms.date: 07/31/2024
+ms.date: 02/06/2025
 
 ---
 
 # Collect performance metrics for a Linux VM
+
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://go.microsoft.com/fwlink/?linkid=2303209)
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
@@ -107,7 +109,7 @@ mpstat -P ALL 1 2
 ```azurecli-interactive
 output=$(az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts 'mpstat -P ALL 1 2')
 value=$(echo "$output" | jq -r '.value[0].message')
-extracted=$(echo "$value" | awk '/\[stdout\]/,/\[stderr\]/' | sed '/\[stdout\]/d' | sed '/\[stderr\]/d')
+extracted=$(echo "$value" | awk '/[stdout]/,/[stderr]/' | sed '/[stdout]/d' | sed '/[stderr]/d')
 echo "$extracted"
 ```
 
@@ -199,7 +201,7 @@ vmstat -w 1 5
 ```azurecli-interactive
 output=$(az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts 'vmstat -w 1 5')
 value=$(echo "$output" | jq -r '.value[0].message')
-extracted=$(echo "$value" | awk '/\[stdout\]/,/\[stderr\]/' | sed '/\[stdout\]/d' | sed '/\[stderr\]/d')
+extracted=$(echo "$value" | awk '/[stdout]/,/[stderr]/' | sed '/[stdout]/d' | sed '/[stderr]/d')
 echo "$extracted"
 ```
 
@@ -308,7 +310,7 @@ uptime
 ```azurecli-interactive
 output=$(az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts 'uptime')
 value=$(echo "$output" | jq -r '.value[0].message')
-extracted=$(echo "$value" | awk '/\[stdout\]/,/\[stderr\]/' | sed '/\[stdout\]/d' | sed '/\[stderr\]/d')
+extracted=$(echo "$value" | awk '/[stdout]/,/[stderr]/' | sed '/[stdout]/d' | sed '/[stderr]/d')
 echo "$extracted"
 ```
 
@@ -353,7 +355,7 @@ free -h
 ```azurecli-interactive
 output=$(az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts 'free -h')
 value=$(echo "$output" | jq -r '.value[0].message')
-extracted=$(echo "$value" | awk '/\[stdout\]/,/\[stderr\]/' | sed '/\[stdout\]/d' | sed '/\[stderr\]/d')
+extracted=$(echo "$value" | awk '/[stdout]/,/[stderr]/' | sed '/[stdout]/d' | sed '/[stderr]/d')
 echo "$extracted"
 ```
 
@@ -390,7 +392,7 @@ swapon -s
 ```azurecli-interactive
 output=$(az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts 'swapon -s')
 value=$(echo "$output" | jq -r '.value[0].message')
-extracted=$(echo "$value" | awk '/\[stdout\]/,/\[stderr\]/' | sed '/\[stdout\]/d' | sed '/\[stderr\]/d')
+extracted=$(echo "$value" | awk '/[stdout]/,/[stderr]/' | sed '/[stdout]/d' | sed '/[stderr]/d')
 echo "$extracted"
 ```
 
@@ -433,7 +435,7 @@ iostat -dxtm 1 5
 ```azurecli-interactive
 output=$(az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts 'iostat -dxtm 1 5')
 value=$(echo "$output" | jq -r '.value[0].message')
-extracted=$(echo "$value" | awk '/\[stdout\]/,/\[stderr\]/' | sed '/\[stdout\]/d' | sed '/\[stderr\]/d')
+extracted=$(echo "$value" | awk '/[stdout]/,/[stderr]/' | sed '/[stdout]/d' | sed '/[stderr]/d')
 echo "$extracted"
 ```
 ---
@@ -495,7 +497,7 @@ lsblk
 ```azurecli-interactive
 output=$(az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts 'lsblk')
 value=$(echo "$output" | jq -r '.value[0].message')
-extracted=$(echo "$value" | awk '/\[stdout\]/,/\[stderr\]/' | sed '/\[stdout\]/d' | sed '/\[stderr\]/d')
+extracted=$(echo "$value" | awk '/[stdout]/,/[stderr]/' | sed '/[stdout]/d' | sed '/[stderr]/d')
 echo "$extracted"
 ```
 
@@ -557,7 +559,7 @@ pidstat 1 2
 ```azurecli-interactive
 output=$(az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts 'pidstat 1 2')
 value=$(echo "$output" | jq -r '.value[0].message')
-extracted=$(echo "$value" | awk '/\[stdout\]/,/\[stderr\]/' | sed '/\[stdout\]/d' | sed '/\[stderr\]/d')
+extracted=$(echo "$value" | awk '/[stdout]/,/[stderr]/' | sed '/[stdout]/d' | sed '/[stderr]/d')
 echo "$extracted"
 ```
 
@@ -607,7 +609,7 @@ pidstat -r 1 2
 ```azurecli-interactive
 output=$(az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts 'pidstat -r 1 2')
 value=$(echo "$output" | jq -r '.value[0].message')
-extracted=$(echo "$value" | awk '/\[stdout\]/,/\[stderr\]/' | sed '/\[stdout\]/d' | sed '/\[stderr\]/d')
+extracted=$(echo "$value" | awk '/[stdout]/,/[stderr]/' | sed '/[stdout]/d' | sed '/[stderr]/d')
 echo "$extracted"
 ```
 
@@ -664,7 +666,7 @@ pidstat -d 1 2
 ```azurecli-interactive
 output=$(az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts 'pidstat -d 1 2')
 value=$(echo "$output" | jq -r '.value[0].message')
-extracted=$(echo "$value" | awk '/\[stdout\]/,/\[stderr\]/' | sed '/\[stdout\]/d' | sed '/\[stderr\]/d')
+extracted=$(echo "$value" | awk '/[stdout]/,/[stderr]/' | sed '/[stdout]/d' | sed '/[stderr]/d')
 echo "$extracted"
 ```
 
@@ -718,7 +720,7 @@ ps aux --sort=-%cpu | head -10
 ```azurecli-interactive
 output=$(az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts 'ps aux --sort=-%cpu | head -10')
 value=$(echo "$output" | jq -r '.value[0].message')
-extracted=$(echo "$value" | awk '/\[stdout\]/,/\[stderr\]/' | sed '/\[stdout\]/d' | sed '/\[stderr\]/d')
+extracted=$(echo "$value" | awk '/[stdout]/,/[stderr]/' | sed '/[stdout]/d' | sed '/[stderr]/d')
 echo "$extracted"
 ```
 
@@ -750,7 +752,7 @@ ps aux --sort=-%mem| head -10
 ```azurecli-interactive
 output=$(az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts 'ps aux --sort=-%mem| head -10')
 value=$(echo "$output" | jq -r '.value[0].message')
-extracted=$(echo "$value" | awk '/\[stdout\]/,/\[stderr\]/' | sed '/\[stdout\]/d' | sed '/\[stderr\]/d')
+extracted=$(echo "$value" | awk '/[stdout]/,/[stderr]/' | sed '/[stdout]/d' | sed '/[stderr]/d')
 echo "$extracted"
 ```
 
@@ -788,7 +790,7 @@ This script saves the output of the commands in a file located in the same direc
 ```azurecli-interactive
 output=$(az vm run-command invoke --resource-group $MY_RESOURCE_GROUP_NAME --name $MY_VM_NAME --command-id RunShellScript --scripts 'mpstat -P ALL 1 2 && vmstat -w 1 5 && uptime && free -h && swapon && iostat -dxtm 1 1 && lsblk && ls -l /dev/disk/azure && pidstat 1 1 -h --human && pidstat -r 1 1 -h --human && pidstat -d 1 1 -h --human && ps aux --sort=-%cpu | head -20 && ps aux --sort=-%mem | head -20')
 value=$(echo "$output" | jq -r '.value[0].message')
-extracted=$(echo "$value" | awk '/\[stdout\]/,/\[stderr\]/' | sed '/\[stdout\]/d' | sed '/\[stderr\]/d')
+extracted=$(echo "$value" | awk '/[stdout]/,/[stderr]/' | sed '/[stdout]/d' | sed '/[stderr]/d')
 echo "$extracted" 
 ```
 
