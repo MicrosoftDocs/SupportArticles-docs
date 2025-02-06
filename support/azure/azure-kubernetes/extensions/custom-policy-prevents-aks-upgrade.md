@@ -8,6 +8,7 @@ editor: v-jsitser
 ms.reviewer: cssakscic, v-rekhanain, v-leedennis
 ms.service: azure-kubernetes-service
 ms.topic: troubleshooting-problem-resolution
+ms.custom: sap:Extensions, Policies and Add-Ons
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot why a Kubernetes upgrade fails when I'm using an Azure custom policy so that I can use the Azure Policy Add-on for an upgraded Azure Kubernetes Service cluster successfully.
 ---
 # AKS upgrade fails when using an Azure custom policy
