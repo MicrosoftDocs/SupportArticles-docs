@@ -1,7 +1,7 @@
 ---
 title: Issues that affect inbound Direct Routing calls
 description: Describe issues that affect inbound calls when you use Direct Routing and provide resolutions.
-ms.date: 01/27/2025
+ms.date: 02/06/2025
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
