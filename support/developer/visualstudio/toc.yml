@@ -12,8 +12,6 @@
     href: ./extensibility/troubleshooting-vspackages.md
   - name: Troubleshoot brokered services
     href: ./extensibility/how-to-troubleshoot-brokered-services.md
-- name: General
-  href: ./general/toc.yml
 - name: Installation
   href: ./installation/toc.yml
 - name: Integrated Development Environment (IDE)
