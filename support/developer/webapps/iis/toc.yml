@@ -101,8 +101,6 @@ items:
 
 - name: Site behavior and performance
   items:
-  - name: 0-byte file is returned
-    href: site-behavior-performance/0-byte-file-compression-enabled.md
   - name: Access is denied when you call web services
     href: site-behavior-performance/access-denied-call-web-service.md
   - name: Authorization for requests to default document fails
@@ -249,6 +247,8 @@ items:
 
 - name: WWW modules and features
   items:
+  - name: 0-byte file is returned
+    href: www-modules-features/0-byte-file-compression-enabled.md
   - name: Configure the default document in IIS
     href: www-modules-features/configure-default-document-iis.md
   - name: Error when you configure 32-bit managed handlers
