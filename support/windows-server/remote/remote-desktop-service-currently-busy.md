@@ -18,12 +18,12 @@ To begin troubleshooting, an important test is to access the affected computer b
 
 It isn't expected to receive the "Remote Desktop Service is currently busy" error message during the test because we aren't using RDP. The test helps us find whether we have other types of issue during the logon. For example, a different error message, a slow logon or any other type of abnormal behavior.
 
-If any other issue is found, the "Remote Desktop Service is currently busy" error message might be caused by issue. We strongly suggest addressing the issue before troubleshooting RDP.
+If you encounter any other issues while logging in via the console, such as different error messages or unexpected behaviors, it likely indicates that the "Remote Desktop Service is currently busy" error is caused by another underlying issue on the system. We strongly recommend addressing the underlying issue before troubleshooting RDP.
 
 > [!NOTE]
 > In case we're using Hyper-V console to access the computer, make sure to use **Basic session** to do the test. This is because **Enhanced session** relies on RDP and we might receive the same "Remote Desktop Service is currently busy" message.
 >
-> If we find the issue occurs when using console, and confirmed that the issue isn't RDP related, some of the troubleshooting steps in this article such as RDP server memory issue might still be help to troubleshoot the overall system performance issues.
+> If we find the issue occurs when using console, and confirmed that the issue isn't RDP related, some of the troubleshooting steps in this article such as RDP server memory issue might still be helpful to troubleshoot the overall system performance issues.
 
 ## RDP server memory issue
 
