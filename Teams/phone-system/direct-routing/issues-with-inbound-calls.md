@@ -33,7 +33,7 @@ However, some caller devices and carriers stop generating the ring tone locally 
 
 ### Resolution
 
-To fix the issue, you need to update the SBC configuration to handle multiple SIP 18x messages.  
+To fix the issue, you need to update the Session Border Controller (SBC) configuration to handle multiple SIP 18x messages.  
 
 Most SBCs offer one of the following mitigation options:
 
@@ -44,7 +44,7 @@ For instructions to update the SIP manipulation rules in your SBC, refer to the 
 
 ## Multiple notifications about missed calls
 
-When Teams receives a call and rejects it because the user is busy or doesn't want to accept the call at that time, the PSTN carrier or SBC might retry the call multiple times. Teams interprets each of the re-tried calls as separate calls and displays multiple missed call notifications.
+When Teams receives a call and rejects it because the user is busy or doesn't want to accept the call at that time, the PSTN carrier or SBC might retry the call multiple times. Teams interprets each of the retried calls as separate calls and displays multiple missed call notifications.
 
 This issue occurs because different communication standards such as RFC 4497 standard and NICC standard ND1017:2006/07 map the same SIP response code to different Q.850 cause codes.
 
@@ -79,7 +79,7 @@ To increase the reliability of a caller's phone number not being marked as spam,
 
 ## Incoming calls aren't blocked as expected
 
-You've configured Teams to block calls from caller IDs that satisfy pre-defined specific criteria. However, you continue to receive calls from such phone numbers.  
+You configure Teams to block calls from caller IDs that satisfy predefined specific criteria. However, you continue to receive calls from such phone numbers.  
 
 This issue is usually caused by a mismatch between the caller ID format that's expected by the expression that's used to screen incoming calls and the format of the caller ID in the `From` header of the SIP message.
 
@@ -93,7 +93,7 @@ To fix this issue, update the expression that's used to check incoming calls by 
 
 When Teams receives a call from a PSTN endpoint, there's either a delay in answering the call or there’s no audio for a few seconds after Teams answers the call.  
 
-These issues are usually caused by multiple SIP re-invites that are sent between the SBC and the SIP Proxy before the call is connected successfully. This is particularly common in scenarios that involve media bypass or Local Media Optimization, which require several re-invites by design. In addition to these re-invites, if there's a situation such as when the SBC doesn't offer the appropriate media IP in the original invite, then it needs to send a re-invite with the correct information. If the re-invite from the SBC is received by the SIP Proxy in the wrong order or at the wrong time (which will cause a race condition), it can take longer to be negotiated and that can cause audio delays.
+These issues are usually caused by multiple SIP reinvites that are sent between the SBC and the SIP Proxy before the call is connected successfully. This is particularly common in scenarios that involve media bypass or Local Media Optimization, which require several reinvites by design. In addition to these reinvites, if there's a situation such as when the SBC doesn't offer the appropriate media IP in the original invite, then it needs to send a reinvite with the correct information. If the reinvite from the SBC is received by the SIP Proxy in the wrong order or at the wrong time (which may cause a race condition), it can take longer to be negotiated and that can cause audio delays.
 
 ### Resolution
 
@@ -101,7 +101,7 @@ To fix these issues, update your SBC configuration and make sure that it offers 
 
 ## Calls drop after a specific duration
 
-In Teams, calls that are in progress as well as incoming calls that are still trying to connect can drop for various reasons.
+In Teams, calls that are in progress and incoming calls that are still trying to connect can drop for various reasons.
 
 Based on the length of time after which a call drops, try the resolutions that work for your scenario.
 
@@ -109,7 +109,7 @@ Based on the length of time after which a call drops, try the resolutions that w
 
 This issue is usually caused by poor connectivity or a communication issue between the SBC and the SIP proxy. For example:
 
-- TThe SBC might not receive the SIP 100 Trying message because the message is blocked by a firewall or not sent because of network issues.
+- The SBC might not receive the SIP 100 Trying message because the message is blocked by a firewall or not sent because of network issues.
 - The SBC receives the SIP message but doesn't acknowledge it by sending a SIP ACK message.
 
 #### Resolution
@@ -128,7 +128,7 @@ To fix this issue, make sure that the correct ICE candidates are included in the
 
 ### Calls drop after several minutes
 
-An ongoing Teams call might drop without an error code after connecting and proceeding between 10 and 60 minutes. This scenario might occur if there's an issue with the session timer or session refresh mechanism that's specified in the `SESSION-EXPIRES` header of the SIP INVITE message. The call is scheduled to end after the time that's specified in the SESSION-EXPIRES header unless a re-invite is sent to refresh the session before the time ends.
+An ongoing call might drop without an error code after connecting and proceeding between 10 and 60 minutes. This scenario might occur if there's an issue with the session timer or session refresh mechanism that's specified in the `SESSION-EXPIRES` header of the SIP INVITE message. The call is scheduled to end after the time that's specified in the SESSION-EXPIRES header unless a reinvite is sent to refresh the session before the time ends.
 
 In the following example, the `SESSION-EXPIRES` header specifies that the call will end after 1,800 seconds (30 minutes):
 
