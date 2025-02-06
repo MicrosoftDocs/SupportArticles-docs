@@ -28,7 +28,7 @@ Follow the steps to troubleshoot the issue or execute the steps in the notebook 
 > - Outdated statistics
 > - Unhealthy clustered columnstore indexes (CCIs)
 >
-> To save troubleshooting time, make sure that the statistics are [created and up-to-date](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics) and [rebuild clustered columnstore indexes in the dedicated SQL pool](dsql-perf-cci-health.md).
+> To save troubleshooting time, make sure that the statistics are [created and up-to-date](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics), and [rebuild clustered columnstore indexes in the dedicated SQL pool](dsql-perf-cci-health.md).
 
 <a id="step-1-identify-the-request_id-aka-qid"></a>
 
@@ -36,7 +36,7 @@ Follow the steps to troubleshoot the issue or execute the steps in the notebook 
 
 The `request_id` of the slow query is required to research potential reasons for a slow query. Use the following script as a starting point for identifying the query you want to troubleshoot. Once the slow query is identified, note down the `request_id` value.
 
-First, monitor active queries. This query is ordered by newest rows first.
+First, monitor the active queries. This query is ordered by the newest rows first.
 
 ```sql
 -- Monitor active queries
@@ -328,7 +328,7 @@ Have your statistics up-to-date to ensure that the query optimizer generates an 
 
 **Mitigations**
 
-First, [check statistics accuracy on a dedicated SQL pool](dsql-perf-stats-accuracy.md). If necessary, [create or update statistics](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics).
+First, [check the accuracy of the statistics on a dedicated SQL pool](dsql-perf-stats-accuracy.md). If necessary, [create or update the statistics](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics).
 
 <br/>
 </details>
@@ -383,7 +383,7 @@ In-flight data skew is a variant of the [data skew (stored)](#data-skew-stored) 
 
 **Mitigations**
 
-- Ensure that statistics are [created and up-to-date](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics). You can verify the accuracy of statistics by following the steps outlined in [Check statistics accuracy on a dedicated SQL pool](dsql-perf-stats-accuracy.md).
+- Ensure that statistics are [created and up-to-date](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics). You can verify their accuracy by following the steps outlined in [Check statistics accuracy on a dedicated SQL pool](dsql-perf-stats-accuracy.md).
 - Change the order of your `GROUP BY` columns to lead with a higher-cardinality column.
 - Create multi-column statistics if joins cover multiple columns.
 - Add query hint `OPTION(FORCE_ORDER)` to your query.
@@ -452,9 +452,9 @@ Outdated statistics can cause the generation of an unoptimized distributed plan,
 
 The optimizer relies on statistics to estimate the number of rows that will be returned by a query. Statistics allow the query optimizer to choose the most efficient plan or perform the best move operation (for example, a Shuffle Move Operation or Broad Cast Move Operation) to align the data during the join condition. The best join condition depends on the table distribution type. 
 
-For example, if the actual number of rows for a given table is 60 million and the estimated number of rows is 1,000 (at control node level), the optimizer might choose a Broadcast move operation. This behavior is because the cost is perceived to be lower compared to a Shuffle Move, given the optimizer's assumption that the table contains only 1,000 rows. However, once the actual execution begins, the engine will move 60 million rows as part of the execution using a Broadcast move, which can be an expensive operation considering both the data size and row count. Consequently, if the data size is substantial, it might lead to performance issues for the query itself and other queries, resulting in high CPU usage.
+For example, if the actual number of rows for a given table is 60 million and the estimated number of rows is 1,000 (at the control node level), the optimizer might choose a Broadcast move operation. This behavior is because the cost is perceived to be lower compared to a Shuffle Move, given the optimizer's assumption that the table contains only 1,000 rows. However, once the actual execution begins, the engine will move 60 million rows as part of the execution using a Broadcast move, which can be an expensive operation considering both the data size and row count. Consequently, if the data size is substantial, it might lead to performance issues for the query itself and other queries, resulting in high CPU usage.
 
-To remedy this situation, ensure all [statistics are up-to-date](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics), and a maintenance plan is in place to keep them updated for user workloads. You can verify the accuracy of statistics by following the steps outlined in [Check statistics accuracy on a dedicated SQL pool](dsql-perf-stats-accuracy.md).
+To remedy this situation, ensure all [statistics are up-to-date](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics) and a maintenance plan is in place to keep them updated for user workloads. You can verify the accuracy of the statistics by following the steps outlined in [Check statistics accuracy on a dedicated SQL pool](dsql-perf-stats-accuracy.md).
 
 **Heavy IO workloads**
 
