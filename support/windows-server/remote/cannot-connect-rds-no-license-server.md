@@ -27,6 +27,8 @@ Sign in to the RD Session Host as a domain administrator and open the RD License
 
 > License server \<computer name\> is not available. This could be caused by network connectivity problems, the Remote Desktop Licensing service is stopped on the license server, or RD Licensing isn't available.
 
+Clients can connect to Remote Desktop Services, but receive a balloon message that resembles the following:
+
 > Remote Desktop licensing mode is not configured.  
   Remote Desktop Services will stop working because this computer is past its licensing grace period. On the RD Connection Broker server, use Server Manager to specify the Remote Desktop licensing mode. 
 
