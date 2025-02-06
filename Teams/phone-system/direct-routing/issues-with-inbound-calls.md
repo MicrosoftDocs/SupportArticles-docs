@@ -19,140 +19,129 @@ ms.reviewer: mikebis
 
 # Issues that affect inbound Direct Routing calls
 
-You might experience various issues with inbound Direct Routing calls. This article describes some common issues and provides resolutions that you can try.
+You might experience issues when you receive Public Switched Telephone Network (PSTN) calls through Direct Routing. This article describes some of these issues and provides resolutions that you can try.
 
-## No ringback tone when calling a Teams user by using PSTN
+## No ringback tone when Teams receives a call from a PSTN endpoint
 
-This issue is caused by inconsistent behavior of Public Switched Telephone Network (PSTN) carriers or devices when handling early media.
+This issue occurs in the following scenario:  
 
-When Teams clients receive a call, they first send a SIP 180 Ringing message. Some Teams clients then engage in media negotiation and send a media (SDP) offer. In this scenario, the SIP proxy converts the SIP 180 message with SDP offer to a SIP 183 Session Progress message with SDP offer.
+When a Microsoft Teams client receives a call, it first sends a SIP 180 Ringing message and follows that with a SIP 183 Session Progress message with media offer (SDP).  
 
-According to RFC 3261 and RFC 3960 standards, a SIP 180 Ringing message prompts the user agent (the device that initiates the call) to generate the ringing tone locally. And a SIP 183 Session Progress message with SDP offer indicates that early media (the ringing tone) might originate from the destination, which is the Teams client in this scenario.
+According to RFC 3261 and RFC 3960 standards, when the endpoint used by the caller receives a SIP 180 Ringing message, it must generate the ring tone locally. If the caller's device receives a SIP 183 Session Progress message with SDP, it allows the destination (the Teams client in this scenario) to play audio or a ring tone, also known as early media.  
 
-When the user agent receives a SIP 183 message, some PSTN carriers or devices might expect to start receiving media from the destination and stop generating local ringing tones. This behavior causes the ringback tone to not play.
-
-### Resolution
-
-To fix this issue, update the SIP manipulation rules on your Session Border Controller (SBC) to change how SIP 183 messages are handled.
-
-Here are some examples of how to solve the issue for the most common SBCs.
-
-#### Audiocodes SBC
-
-On AudioCodes SBCs, you can disable support for multiple SIP 18x messages by changing the following setting to **Not Supported**:
-
-**SBC Early Media** > **Remote Multiple 18x**
-
-This way, only the first SIP 18x message is forwarded, and any subsequent messages are ignored until the call is answered or ended. Forwarding only the first SIP 180 Ringing message helps avoid issues with SIP 183 Session Progress. For more information, see the [manual](https://techdocs.audiocodes.com/session-border-controller-sbc/mediant-software-sbc/user-manual/version-740/content/um/Interworking%20SIP%20Early%20Media.htm#:~:text=%E2%96%A0-,Multiple%2018x,-%3A%20The%20device) or contact Audiocodes support.
-
-#### Metaswitch SBC
-
-On Metaswitch SBCs, it's recommended to remove the SDP from the SIP 183 Session Progress message and change it to SIP 180 Ringing. For more details, see the [documentation](https://manuals.metaswitch.com/Perimeta/V5.5/MicrosoftTeamsIntegrationGuide/Source/Perimeta/References/MicrosoftTeamsIntegrationSignalingConfigurationForTeams.html#:~:text=profile%20DR_Teams%0A%20%20%20%20%20%20%20%20activate-,Configuration%20for%20pre%2DIMS%20deployments%20with%20a%20Class%205%20softswitch,-This%20configuration%20sets) or contact Metaswitch support.
-
-#### Other SBCs
-
-For most other SBCs, similar solutions can be implemented. Either disable forwarding SIP 183 Session Progress messages, or transform SIP 183 messages to SIP 180 and remove the SDP.
-
-For detailed instructions on SIP manipulation rules configuration, refer to the documentation specific to your SBC model or contact your SBC vendor.
-
-## Rejected calls keep ringing or multiple missed call notifications for a single call
-
-This issue is caused by differences in the mapping of SIP response codes to Q.850 cause codes. Direct Routing uses the NICC standard ND1017:2006/07 to map SIP codes to Q.850 cause codes, instead of another commonly used standard RFC 4497.
-
-For example, NICC maps SIP response code 486 to Q.850 cause code 34, while RFC 4497 maps SIP 486 to Q.850 cause code 17.  In this case, some PSTN providers interpret the end reason differently and retry calls. As a result, Microsoft treats these calls as multiple calls and shows multiple missed call notifications.
+However, some caller devices and carriers stop generating the ring tone locally when they receive a SIP 183 Session Progress message, even though they should continue to do so until the actual media packets are received.
 
 ### Resolution
 
-To fix this issue, follow these steps:
+To fix the issue, you need to update the SBC configuration to handle multiple SIP 18x messages.  
 
-1. Update SIP manipulation rules on your SBC. Either remove the Q.850 cause code corresponding to SIP 486, or change the Q.850 cause code to 17. For detailed instructions on SIP manipulation rules configuration, refer to the documentation specific to your SBC model or contact your SBC vendor.
-2. If the issue persists, it may be caused by the SBC, some network devices in the communication path, or your PSTN provider retrying the call on a SIP 4xx response code. Such behavior isn't recommended.
+Most SBCs offer one of the following mitigation options:
 
-   To fix this behavior, use one of the following options:
+- Forward only the first SIP 18x message and ignore subsequent messages until the call is answered or ended. This option is offered by AudioCodes SBCs for example.
+- Remove the SDP information from the SIP 183 Session Progress message and change it to an SIP 180 Ringing message. This option is offered by Metaswitch SBCs for example.
 
-   - Review your SBC configuration and make sure that it doesn't retry calls on SIP 4xx response codes.
-   - Review your network device configuration and make sure that it doesn't retry calls on SIP 4xx response codes.
-   - Contact your PSTN provider to check and update their configuration to avoid retrying calls on SIP 4xx response codes.
+For instructions to update the SIP manipulation rules in your SBC, refer to the documentation that's specific to your SBC model and contact your SBC vendor for other recommended options.
 
-## Incorrect caller ID displayed for inbound calls
+## Multiple notifications about missed calls
 
-Typically, the caller ID is taken from the `From` header in the SIP INVITE message. However, some PSTN providers use the `P-Asserted-Identity` header instead. In this case, if the information in the `From` and `P-Asserted-Identity` headers doesn't match and the SBC doesn't rewrite the `From` header with the information from the `P-Asserted-Identity` header, then incorrect caller ID is displayed.
+When Teams receives a call and rejects it because the user is busy or doesn't want to accept the call at that time, the PSTN carrier or SBC might retry the call multiple times. Teams interprets each of the re-tried calls as separate calls and displays multiple missed call notifications.
+
+This issue occurs because different communication standards such as RFC 4497 standard and NICC standard ND1017:2006/07 map the same SIP response code to different Q.850 cause codes.
+
+For example, RFC 4497 maps SIP response code 486 to Q.850 cause code 34 while ND1017:2006/07, which Direct Routing uses, maps it to Q.850 cause code 17. Because of this difference, the PSTN providers which use the RFC 4497 standard interpret the reason for Teams rejecting the call incorrectly and retry the call multiple times.
+
+### Resolution
+
+To fix the issue, update the SIP manipulation rules in your SBC to either remove the Q.850 cause code that’s mapped to SIP response code 486, or change the cause code from 34 to 17. Refer to the documentation that's specific to your SBC model for instructions to update the SIP manipulation rules.  
+
+If updating the rules doesn't fix the issue, then it's likely that either the SBC, a network device in the communication path, or your PSTN provider is retrying the call after receiving a SIP 4xx response code. This behavior isn't recommended. In this situation, update the configuration of the SBC, the network devices, or contact the PSTN provider to update their configuration to ensure that they don't retry a call after they receive a SIP 4xx response to end the call.
+
+## Incorrect caller ID (CLI) is displayed for inbound calls
+
+When Teams receives a call, it displays the caller's number that is specified in the `From` header in the SIP INVITE message. However, some PSTN providers might use the `P-Asserted-Identity` header to store the caller's number instead of the `From` header. In this situation, the information displayed to the Teams user is incorrect.
+
+### Resolution
+
+To fix this issue, check whether your PSTN provider uses the `P-Asserted-Identity` header. If so, configure your SBC to rewrite the content of the `From` header with the information from the `P-Asserted-Identity` header.
+
+Refer to the documentation that's specific to your SBC model for instructions to rewrite the From header.
 
 > [!NOTE]
-> If the displayed caller ID is 266696687, it's because the `From` header contains "Anonymous", which is converted to a number.
+> If the `From` header contains "Anonymous" as its information, Teams sometimes converts it to a number and displays *266696687* instead.
 
-## Resolution
+## Incoming calls are marked incorrectly as "Spam Likely"
 
-To fix this issue, check whether your PSTN provider uses the `P-Asserted-Identity` header. If so, configure your SBC to rewrite the `From` header with the information from the `P-Asserted-Identity` header. For detailed instructions on SBC configuration, refer to the documentation specific to your SBC model or contact your SBC vendor.
+When [spam filtering for calls](/microsoftteams/configure-call-spam-filtering) is enabled, the caller IDs of all incoming calls are checked and assigned a spam score. If the score for a caller ID is higher than a specific threshold, Teams displays a notification that the call might be spam.
 
-## Incoming calls are marked as "Spam Likely"
+### Resolution
 
-This behavior is expected when [spam filtering for calls](/microsoftteams/configure-call-spam-filtering) is enabled.
-
-To avoid a phone number being marked as spam, make sure that the number is in E.164 format.
+To increase the reliability of a caller's phone number not being marked as spam, make sure that it's provided in the E.164 format.
 
 ## Incoming calls aren't blocked as expected
 
-The issue is usually caused by a mismatch between the regular expression that's used for call blocking and the format of the caller's number that's displayed in Teams or the `From` header in the SIP message. For example:
+You've configured Teams to block calls from caller IDs that satisfy pre-defined specific criteria. However, you continue to receive calls from such phone numbers.  
 
-- The number appears in international format, including an international prefix, while the regular expression expects a national format.
-- Presence or absence of a leading plus (+) sign that doesn't match between the expression and the number format.
+This issue is usually caused by a mismatch between the caller ID format that's expected by the expression that's used to screen incoming calls and the format of the caller ID in the `From` header of the SIP message.
 
-### Resolution
-
-To fix this issue, update and test the regular expression to cover various number formats, especially if you use both Direct Routing and Calling Plans where numbers are presented differently.
-
-For example, include the plus (+) sign as an optional character by using the following pattern:
-
-\\+?  
-
-## Delay when answering PSTN calls in Teams or no audio for the first few seconds
-
-These issues are usually caused by multiple SIP reinvites between the SBC and the Microsoft SIP Proxy before the call is successfully established. This is particularly common in scenarios involving media bypass or Local Media Optimization, which require several reinvites by design. If these reinvites occur in the wrong order or take longer to process, it can cause audio delays. A common reason for these reinvites is the SBC doesn't offer the appropriate media IP in the original invite. For example, in a Local Media Optimization setup, the SBC sends an SDP message with an internal IP while the user is external, a reinvite is required to provide the correct external media IP.
+For example, the caller ID might be specified in an international format, including a leading plus (+) sign and an international prefix, while the expression only checks for numbers that are specified in the national format. The situation might also be reversed.  
 
 ### Resolution
 
-To fix these issues, update your SBC configuration and make sure that the SBC offers the most likely media IP by default to minimize the number of reinvites. For example, if most calls are expected from internal users, configure the SBC to offer an internal IP initially. For detailed instructions on SBC configuration, refer to the documentation specific to your SBC model.
+To fix this issue, update the expression that's used to check incoming calls by adding the plus (+) sign as an optional character. This updated expression covers multiple caller ID formats and is especially useful if you use both Direct Routing and Calling Plans in which numbers are presented in different formats.
 
-## Call drops after a certain amount of time
+## Delay when answering PSTN calls in Teams
 
-This issue can occur for various reasons, depending on how long the call stays connected before it drops.
+When Teams receives a call from a PSTN endpoint, there's either a delay in answering the call or there’s no audio for a few seconds after Teams answers the call.  
 
-### Call drops after approximately four seconds
+These issues are usually caused by multiple SIP re-invites that are sent between the SBC and the SIP Proxy before the call is connected successfully. This is particularly common in scenarios that involve media bypass or Local Media Optimization, which require several re-invites by design. In addition to these re-invites, if there's a situation such as when the SBC doesn't offer the appropriate media IP in the original invite, then it needs to send a re-invite with the correct information. If the re-invite from the SBC is received by the SIP Proxy in the wrong order or at the wrong time (which will cause a race condition), it can take longer to be negotiated and that can cause audio delays.
 
-This issue is usually caused by connectivity or communication issues between the SBC and the SIP proxy. For example:
+### Resolution
 
-- The SBC doesn't receive the SIP message because of firewall or other network issues.
-- The SBC receives the SIP message but doesn't respond with a SIP ACK message.
+To fix these issues, update your SBC configuration and make sure that it offers the most likely media IP by default to minimize the number of reinvites. For example, if most calls are expected from internal users, configure the SBC to offer an internal IP first. For detailed instructions on SBC configuration, refer to the documentation that's specific to your SBC model.
+
+## Calls drop after a specific duration
+
+In Teams, calls that are in progress as well as incoming calls that are still trying to connect can drop for various reasons.
+
+Based on the length of time after which a call drops, try the resolutions that work for your scenario.
+
+### Calls drop after about four seconds
+
+This issue is usually caused by poor connectivity or a communication issue between the SBC and the SIP proxy. For example:
+
+- TThe SBC might not receive the SIP 100 Trying message because the message is blocked by a firewall or not sent because of network issues.
+- The SBC receives the SIP message but doesn't acknowledge it by sending a SIP ACK message.
 
 #### Resolution
 
-To fix this issue, update your SBC and network configuration to allow traffic to and from specific IP address ranges that are used by Microsoft for [SIP signaling](/microsoftteams/direct-routing-plan#sip-signaling-fqdns). In addition, make sure that the SBC sends messages according to standard SIP flows. For detailed instructions on SBC configuration, refer to the documentation specific to your SBC model.
+To fix this issue, update your SBC and network configuration to allow traffic to and from all IP address ranges that the Direct Routing feature uses for [SIP signaling](/microsoftteams/direct-routing-plan#sip-signaling-fqdns). In addition, make sure that the SBC sends messages according to the standard process that's used to communicate SIP signals.
 
-### Call drops after approximately 10 to 20 seconds
+For detailed instructions on SBC configuration, refer to the documentation that's specific to your SBC model.
 
-If a call drops after about 10 to 20 seconds and there's no audio, it's usually caused by a media-related issue. For example, the ICE connectivity check fails, or no media is received during this time.
+### Calls drop after approximately 10 to 20 seconds
+
+If an incoming call drops between 10 and 20 seconds of trying to connect, and there's no audio, the reason might be that either no media information was received in that timeframe, or the Interactive Connectivity Establishment (ICE) connectivity checks failed, and Teams dropped the call.
 
 #### Resolution
 
-To fix this issue, check whether correct ICE candidates are included in the SDP message from the SBC. If necessary, update the network configuration to correctly handle ICE candidates requests and responses, and media traffic. For detailed instructions on SBC configuration, refer to the documentation specific to your SBC model.
+To fix this issue, make sure that the correct ICE candidates are included in the SDP message from the SBC. Also update the network and firewall configurations as appropriate to make sure that they can handle the requests and responses from ICE candidates.
 
-### Call works correctly and drops after several minutes without error
+### Calls drop after several minutes
 
-This issue is usually caused by the session timer or session refresh mechanism that's specified in the `SESSION-EXPIRES` header of the SIP INVITE message. For example, the following `SESSION-EXPIRES` header specifies that the call will end after 1,800 seconds (30 minutes) unless the user agent client, which is the party that sends the SIP INVITE message, sends a reinvite to refresh the session before the timer expires.
+An ongoing Teams call might drop without an error code after connecting and proceeding between 10 and 60 minutes. This scenario might occur if there's an issue with the session timer or session refresh mechanism that's specified in the `SESSION-EXPIRES` header of the SIP INVITE message. The call is scheduled to end after the time that's specified in the SESSION-EXPIRES header unless a re-invite is sent to refresh the session before the time ends.
+
+In the following example, the `SESSION-EXPIRES` header specifies that the call will end after 1,800 seconds (30 minutes):
 
 `SESSION-EXPIRES : 1800;refresher=uac`
 
 > [!NOTE]
 >
-> - Reinvites are usually sent at half the time specified by the session timer.
-> - If the refresher value is `uas` in the header, the party that receives the SIP INVITE message is responsible for sending the reinvite to refresh the session.
+> - Reinvites are usually sent at the halfway point of the time that's specified by the session timer.
+> - If the value of the `refresher` parameter in the header is `uac`, the party that sends the SIP INVITE message is responsible for sending the reinvite to refresh the session.
+> - If the value of the `refresher` parameter in the header is `uas`, the party that receives the SIP INVITE message is responsible for sending the reinvite to refresh the session.
 
 #### Resolution
 
-To fix this issue, check and update your Direct Routing configuration to make sure that the responsible party correctly sends a reinvite message before the session timer expires.
+To fix this issue, update your SBC configuration to make sure that the correct party sends a reinvite message at the appropriate time before the session timer expires.
 
-> [!NOTE]
-> Session timer issues might also occur in other parts of the call, such as the PSTN. In this case, the SBC receives a SIP BYE message from the PSTN, and the message is then sent to the SIP proxy, causing the call to end.
->
-> To fix this issue in such cases, determine the source of the SIP BYE message and resolve the issue at the source.
+Session timer issues might also occur in other parts of the call, such as a PSTN carrier in the communication path. If the call fails at a PSTN carrier, it sends a SIP BYE message to the SBC. This message is then sent to the SIP proxy which ends the call. To fix this issue, determine the source of the SIP BYE message and resolve the issue at the source.
