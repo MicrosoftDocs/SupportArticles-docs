@@ -1,0 +1,18 @@
+# Purchase Order Line Deletion Restriction
+
+## Symptoms
+Users are unable to delete purchase order lines under specific conditions.
+
+## Causes:
+A design change was introduced in version 10.0.33 to prevent potential data corruption. This change restricts users from deleting purchase order lines if any of the following conditions are met:
+
+The purchase order is currently or was previously confirmed, and
+Either of the following applies:
+1. The purchase order is budget-controlled.
+2. Encumbrance accounting is enabled.
+
+## Resolution
+This restriction was implemented to safeguard data integrity by preventing the deletion of purchase order lines in these scenarios.
+
+## Workaround
+If there is a need to remove a purchase order line, the recommended approach is to first cancel the line and then finalize it.
