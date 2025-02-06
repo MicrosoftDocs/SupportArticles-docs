@@ -23,7 +23,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 01/30/2025
+ms.date: 02/05/2025
 ---
 # Known issues with Teams Rooms on Android
 
@@ -40,7 +40,7 @@ ms.date: 01/30/2025
 
 | Issue  |  Description | Workaround |
 | --- | --- | --- |
-|Unable to pair a display on Teams Rooms on Android devices|You're not able to pair the console with the front-of-room display and lose functionality.|Restart the console to fix the pairing issue.<br/><br/>If a restart doesn't help, report the issue by using your device. In the Teams Rooms for Android app, navigate to **Help**, and select **Report a problem**. |
+|Unable to pair a display on Teams Rooms on Android devices|Teams Rooms on Android devices that are running version 1449/1.0.96.2024110701 or version 1449/1.0.96.2025010301 of the Teams Rooms app might experience an intermittent issue with pairing the console with the front-of-room display.|Restart the console to fix the pairing issue.|
 
 ## Issues with Teams phones
 
