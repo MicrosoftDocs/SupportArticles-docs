@@ -4,7 +4,7 @@ description: This article discusses how to run as a nonroot user in containers b
 ms.date: 04/15/2024
 ms.reviewer: chiragpa, andbar, haitch, v-leedennis
 ms.service: azure-kubernetes-service
-ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
+ms.custom: sap:Extensions, Policies and Add-Ons
 ---
 # Security best practice: Don't run as root in containers
 
