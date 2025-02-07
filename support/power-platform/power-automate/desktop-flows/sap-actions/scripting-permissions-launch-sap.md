@@ -16,3 +16,7 @@ Launch SAP Fails with the following error:
 ## Solution
 
  The user might not have the scripting permision on SAP. Check and enable the scripting for the users that need to use the SAP actions.
+
+## Resources
+
+[Prerequisites for automating SAP GUI-based workloads - Power Automate | Microsoft Learn](/power-automate/guidance/rpa-sap-playbook/prerequisites#sap-gui-scripting-configuration)

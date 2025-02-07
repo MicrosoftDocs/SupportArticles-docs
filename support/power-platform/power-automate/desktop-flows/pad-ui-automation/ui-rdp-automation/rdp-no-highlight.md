@@ -9,7 +9,12 @@ ms.date: 01/22/2025
 
 ## Symptoms
 
-When hovering over a Citrix/RDP window/app, no element is highlighted or an Error Popup is show about enabling the agent.
+When hovering the mouse cursor over a UI/web element of an application/web page inside a Citrix/RDP window:
+
+1. The element is not highlighted.
+2. An error popup is shown about enabling the agent.
+
+:::image type="content" source="media/rdp-no-highlight/agent_not_running.png" alt-text="Power automate agent for virtual desktops is not running.":::
 
 ## Causes
 

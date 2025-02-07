@@ -21,5 +21,10 @@ Alternatively you could look in %LocalAppData%\Microsoft\Outlook there they shou
 
 ## Workaround
 
-- Use other actions for email operations such as Exchange or Office 365 Outlook
-- Perform the filtering by using a for each loop to iterate the returned messages
+- Use other actions for email operations such as:
+  1. [Exchange Server actions](/power-automate/desktop-flows/actions-reference/exchange).
+  2. [Office 365 Outlook actions](/connectors/office365/#get-emails-(v3)).
+  
+- Perform the filtering by using a for each loop to iterate the returned messages. An example is shown below:
+
+  :::image type="content" source="media/retrieve-emails-filtering/loop_emails_filter.png" alt-text="Retrieve emails using a loop.":::
