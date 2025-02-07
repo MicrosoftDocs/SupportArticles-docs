@@ -35,9 +35,13 @@ This resolution requires Power Automate for desktop version 2.50 or later.
 
 This resolution must be used when no [multifactor authentication (MFA) exception](~/power-automate/administration/conditional-access-and-multi-factor-authentication-in-flow#details) can be granted to the desktop flow connection account.
 
+For steps on how to setup Microsoft Entra certificate based authentication for Power Automate, see [Configure certificate-based authentication (preview)](/power-automate/desktop-flows/configure-certificate-based-auth).
 For steps on how to setup Microsoft Entra certificate based authentication for Power Automate, see [Configure certificate-based authentication (preview)](/power-automate/desktop-flows/configure-certificate-based-auth).
+
+
 
-## Resolution 2: Use Microsoft Entra authentication for Remote Desktop with a user/password
+
+This resolution requires Power Automate for desktop version 2.49 or later. If you don't have MFA enabled for the account used by the desktop flows connection, you can setup Microsoft Entra authentication using a username and password instead.
 
 This resolution requires Power Automate for desktop version 2.49 or later. It can be faster to set up with the following steps if an MFA exception can be granted to the desktop flow connection account.
 
