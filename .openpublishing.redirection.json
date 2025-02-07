@@ -12662,8 +12662,7 @@
     },
     {
       "source_path": "support/dynamics/gp/integration-manager-log-file-does-not-print.md",
-      "redirect_url": "/dynamics-gp/installation/developer-tools",
-      "redirect_document_id": false
+      "redirect_url": "/dynamics-gp/installation/developer-tools"
     }
   ]
 }
