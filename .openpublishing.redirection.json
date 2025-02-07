@@ -12659,6 +12659,11 @@
       "source_path": "support/dynamics-365/sales/errorinternalservertransienterror-error.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/an-error-occurred-while-synchronizing-item",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/integration-manager-log-file-does-not-print.md",
+      "redirect_url": "/dynamics-gp/installation/developer-tools",
+      "redirect_document_id": false
     }
   ]
 }
