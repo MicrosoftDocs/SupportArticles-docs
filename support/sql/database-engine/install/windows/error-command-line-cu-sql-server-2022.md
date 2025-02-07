@@ -29,8 +29,10 @@ When the **setup.exe** runs on an OS version where the [GetNumaNodeProcessorMask
 
 ## Resolution
 
-No resolution steps are necessary as the exception does not affect the setup behavior or success of the update. 
+No resolution steps are necessary as the exception does not affect the setup behavior or success of the update. The error message can be safely ignored.
 
 ## More information
 
 This exception is only visible in the setup console when running **setup.exe** from the command line and applies to only CU15 and above.
+
+This article lists the Microsoft SQL Server 2022 builds that were released after the release of [SQL Server 2022](/support/sql/releases/sqlserver-2022/build-versions.md).
