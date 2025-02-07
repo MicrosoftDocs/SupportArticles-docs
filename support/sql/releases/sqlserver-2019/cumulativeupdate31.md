@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 31 for SQL Server 2019 (KB5049296)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 31 (KB5049296).
-ms.date: 2/13/2025
+ms.date: 02/13/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5049296
 ms.reviewer: v-qianli2
 appliesto:
@@ -52,7 +52,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=3739570>[3739570](#3739570) </a> | Fixes an issue in which the second article might not have updates correctly replicated if accelerated database recovery (ADR) is enabled on the database using replication with two articles for a single table. | SQL Server Engine| Replication | Windows|
 | <a id=3801166>[3801166](#3801166) </a> | Fixes an issue in which the manual change tracking cleanup stored procedure incorrectly sets the invalid cleanup version to negative when the `TableName` parameter isn't passed.| SQL Server Engine| Replication | All|
 | <a id=3221735>[3221735](#3221735) </a> | Fixes an issue in which updating permissions on the newly added column fails if you previously denied permissions on an existing column. | SQL Server Engine| Security Infrastructure | All|
-| <a id=3800645>[3800645](#3800645) </a> | Data Quality Services (DQS) is only supported in SQL Server Enterprise and Developer editions. Before the fix, the operation is completed successfully when you try to install DQS in the Standard or Web edition. Moreover, this DQS will automatically be selected for installation when setting up a Windows Server Failover Cluster. Once installed, this DQS can’t be configured. After applying this fix, SQL Server Setup won’t allow DQS to be installed in SQL Server Standard or Web edition.</br></br>**Note**: This fix applies to new installations only. For more information, see [Installing Updates from the Command Prompt](/sql/database-engine/install-windows/installing-updates-from-the-command-prompt). | SQL Setup| Patching| Windows|
+| <a id=3800645>[3800645](#3800645) </a> | Data Quality Services (DQS) is only supported in SQL Server Enterprise and Developer editions. Before the fix, the operation is completed successfully when you try to install DQS in the Standard or Web edition. Moreover, this DQS will automatically be selected for installation when setting up a Windows Server Failover Cluster. Once installed, this DQS can't be configured. After applying this fix, SQL Server Setup won't allow DQS to be installed in SQL Server Standard or Web edition.</br></br>**Note**: This fix applies to new installations only. For more information, see [Installing Updates from the Command Prompt](/sql/database-engine/install-windows/installing-updates-from-the-command-prompt). | SQL Setup| Patching| Windows|
 
 ## How to obtain or download this or the latest cumulative update package
 
