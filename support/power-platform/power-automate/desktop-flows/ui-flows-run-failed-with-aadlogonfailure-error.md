@@ -1,7 +1,7 @@
 ---
 title: Desktop flows run failed with MSEntraLogonFailure
 description: Provides a resolution for an issue where desktop flows run failed with the MSEntraLogonFailure error code. 
-ms.reviewer: fredg, johndund
+ms.reviewer: fredg, johndund, alarnaud
 author: QuentinSele
 ms.author: quseleba
 ms.date: 01/31/2025
@@ -22,7 +22,11 @@ Your unattended desktop flows run failed with the error code **MSEntraLogonFailu
 
 Desktop flows failed to validate your Microsoft Entra credentials on the machine.
 
-## Resolution
+## Resolution (PAD 2.49 or above)
+
+You need to [configure Microsoft Entra authentication for Remote Desktop](/power-automate/desktop-flows/run-unattended-desktop-flows#admin-consent-for-unattended-runs-using-cba-or-sign-in-credentials-with-nla-preview).
+
+## Resolution (PAD 2.48 or below)
 
 You need to disable Network Level Authentication (NLA) on the machine.
 
