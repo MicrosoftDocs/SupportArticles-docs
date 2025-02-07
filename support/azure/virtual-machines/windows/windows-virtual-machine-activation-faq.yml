@@ -38,7 +38,7 @@ sections:
       - question: |
           My memory is limited to 2 GB on a new Windows Server VM
         answer: |
-          Windows activation plays a major role in determining the amount of hardware recognized in terms of RAM/processor. If the Windows VM isn't activated properly, you must complete the activation for the Windows guest OS.
+          Windows activation has a significant impact on the amount of hardware recognized in terms of RAM/processor. If the Windows VM isn't activated properly, you must complete the activation for the Windows guest OS.
           
 additionalContent: |
   ## More information
