@@ -1,7 +1,7 @@
 ---
 title: Issues that affect inbound Direct Routing calls
 description: Describe issues that affect inbound calls when you use Direct Routing and provide resolutions.
-ms.date: 02/06/2025
+ms.date: 02/07/2025
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
@@ -38,7 +38,7 @@ To fix the issue, you must update the Session Border Controller (SBC) configurat
 Most SBCs offer one of the following mitigation options:
 
 - Forward only the first SIP 18x message and ignore subsequent messages until the call is answered or ended. This option is offered by AudioCodes SBCs, for example.
-- Remove the SDP information from the SIP 183 Session Progress message, and then change the SDP information to an SIP 180 Ringing message. This option is offered by Metaswitch SBCs, for example.
+- Remove the SDP information from the SIP 183 Session Progress message, and then change the message to an SIP 180 Ringing message. This option is offered by Metaswitch SBCs, for example.
 
 For instructions to update the SIP manipulation rules in your SBC, refer to the documentation that's specific to your SBC model, and contact your SBC vendor for other recommended options.
 
@@ -48,7 +48,7 @@ When Teams receives a call and rejects it because the user is busy or doesn't wa
 
 This issue occurs because different communication standards, such as RFC 4497 standard and NICC standard ND1017:2006/07, map the same SIP response code to different Q.850 cause codes.
 
-For example, RFC 4497 maps SIP response code 486 to Q.850 cause code 34, and ND1017:2006/07 (which Direct Routing uses) maps Code 486 to Q.850 cause code 17. Because of this difference, the PSTN providers that use the RFC 4497 standard interpret the reason that Teams rejected the call incorrectly. Therefore, the PSTN providers retry the call multiple times.
+For example, RFC 4497 maps SIP response code 486 to Q.850 cause code 34, and ND1017:2006/07 (which Direct Routing uses) maps code 486 to Q.850 cause code 17. Because of this difference, the PSTN providers that use the RFC 4497 standard interpret the reason that Teams rejected the call incorrectly. Therefore, the PSTN providers retry the call multiple times.
 
 ### Resolution
 
@@ -109,7 +109,7 @@ Based on the length of time after which a call drops, try the resolutions that w
 
 This issue is usually caused by poor connectivity or a communication issue that exists between the SBC and the SIP proxy. For example:
 
-- The SBC might not receive the SIP 100 Trying message because the message is blocked by a firewall or is not sent because of network issues.
+- The SBC might not receive the SIP 100 Trying message because the message is blocked by a firewall or isn't sent because of network issues.
 - The SBC receives the SIP message but doesn't acknowledge it by sending a SIP ACK message.
 
 #### Resolution
