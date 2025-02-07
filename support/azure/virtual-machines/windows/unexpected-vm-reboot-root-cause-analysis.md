@@ -5,7 +5,7 @@ services: virtual-machines
 ms.service: azure-virtual-machines
 ms.workload: infrastructure-services
 ms.topic: how-to
-ms.date: 11/17/2023
+ms.date: 02/07/2025
 ms.reviewer: tagangwa, macla, v-weizhu
 ms.custom: sap:VM restarted or stopped unexpectedly
 ---
@@ -17,7 +17,7 @@ Azure provides methods to access detailed Root Cause Analysis (RCA) of unexpecte
 
 ## Method 1: Check resource health
 
-Azure Resource Health is a vital service designed to monitor the health of individual Azure resources and provide actionable insights for troubleshooting issues. In cloud environments, where direct access to servers or infrastructure is not feasible, Resource Health plays a crucial role in minimizing troubleshooting efforts. Its primary goal is to help you quickly determine whether the root cause of a problem lies within your application or stems from an event within the Azure platform, thereby streamlining issue resolution and reducing downtime. You can use below steps to use resource health for understanifn the cause of unexpected VM reboot scenario.
+Azure Resource Health monitors the health of Azure resources and provides insights for troubleshooting. In cloud environments where direct access to server or infrastructure is impossible, Resource Health is important for reducing troubleshooting efforts. Its main purpose is to help quickly identify if the root cause of a problem is within your application or due to an event within the Azure platform, thus making issue resolution more efficient and minimizing downtime. To understand the cause of an unexpected VM reboot scenario using Resource Health, follow these steps:
 
 1. Navigate to the impacted VM in the Azure portal.
 2. Go to the **Help** section and then select **Resource health**.
