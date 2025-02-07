@@ -368,4 +368,4 @@
       href: error-codes/vmextensionerror-k8sapiserverdnslookupfail.md
     - name: VMExtensionError_K8SAPIServerDNSLookupFail error
   - name: UnsatisfiablePDB error
-    href: error-codes/unsatisfiablepdb.md
+    href: error-codes/unsatisfiablepdb-error.md
