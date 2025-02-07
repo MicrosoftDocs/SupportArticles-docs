@@ -37,8 +37,7 @@ This resolution must be used when no [multifactor authentication (MFA) exception
 
 
 ## Resolution 2: Use Microsoft Entra authentication for Remote Desktop with a user/password
-
-
+## Resolution 2: Use Microsoft Entra authentication for Remote Desktop with a user/password
 
 
 This resolution requires Power Automate for desktop version 2.49 or later. It can be faster to set up with the following steps if an MFA exception can be granted to the desktop flow connection account.
