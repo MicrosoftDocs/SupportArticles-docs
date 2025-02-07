@@ -34,14 +34,21 @@ The **806 - ZtdDeviceAlreadyAssigned** and **808 - ZtdDeviceAssignedToOtherTenan
 
 ## Solution
 
-To fix the issue, confirm whether the device record exists in Microsoft Store for Business:
+To fix the issue, confirm whether the device record exists in Microsoft Intune
 
-1. Sign in to [Microsoft Store for Business](https://businessstore.microsoft.com/).
-1. Select **Manage**, and then select **Devices**.
-1. Locate the device. If the device record exists, select the device, and then select **Remove devices**.
-1. Return to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then reimport the CSV file.
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-If the device record doesn't exist in Microsoft Store for Business or Intune, you might require assistance from Microsoft Support to remove the device record. In this case, collect the following information, and then create a service request by following the steps in [How to get support in Microsoft Intune admin center](/mem/intune/fundamentals/get-support):
+1. In the **Home** screen, select **Devices** in the left hand pane.
+
+1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
+
+1. In the **Windows | Windows devices** screen, under **Device onboarding**, select **Enrollment**.
+
+1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Devices**.
+
+1. In the **Windows Autopilot devices** screen, select the devices that need deletion, and then select **Delete** in the toolbar. The deletion process can take a few minutes to complete.
+
+If the device record doesn't exist in Microsoft Intune, you might require assistance from Microsoft Support to remove the device record. In this case, collect the following information, and then create a service request by following the steps in [How to get support in Microsoft Intune admin center](/mem/intune/fundamentals/get-support):
 
 - **Device CSV**: A copy of the device CSV file that generates the error.
 - **Proof of ownership**: Typically, this is a bill of sale or an invoice in PDF format.
