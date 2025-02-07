@@ -154,8 +154,6 @@
     href: initialization-errors-when-removing-or-installing-integration-manager.md
   - name: Input string was not in a correct format
     href: input-string-was-not-a-correct-format.md
-  - name: Integration Manager log file doesn't print
-    href: integration-manager-log-file-does-not-print.md
   - name: Integration performance decreases after an upgrade
     href: integration-performance-decreases-use-sql-source-file.md
   - name: Invalid Unit Cost when doing PA Timesheet integration
