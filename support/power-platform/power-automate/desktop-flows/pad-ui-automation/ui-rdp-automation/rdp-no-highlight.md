@@ -9,10 +9,10 @@ ms.date: 01/22/2025
 
 ## Symptoms
 
-When hovering the mouse cursor over a UI/web element of an application/web page inside a Citrix/RDP window:
+Given that the UI element picker is opened, when hovering the mouse cursor over a UI/web element of an application/web page inside a Citrix/RDP window:
 
 1. The element is not highlighted.
-2. An error popup is shown about enabling the agent.
+2. An error popup is shown about enabling the Power Automate agent for virtual desktops.
 
 :::image type="content" source="media/rdp-no-highlight/agent_not_running.png" alt-text="Power automate agent for virtual desktops is not running.":::
 
