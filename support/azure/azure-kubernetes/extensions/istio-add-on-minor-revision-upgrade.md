@@ -1,7 +1,7 @@
 ---
 title: Istio service mesh add-on minor revision upgrade troubleshooting
 description: Learn how to do minor revision upgrade troubleshooting on the Istio service mesh add-on for Azure Kubernetes Service (AKS).
-ms.date: 02/03/2025
+ms.date: 02/07/2025
 author: SanyaKochhar
 ms.author: kochhars
 editor: v-jsitser
