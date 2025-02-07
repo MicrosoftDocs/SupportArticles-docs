@@ -165,6 +165,8 @@
         href: ./phone-system/direct-routing/diagnose-direct-routing-issues.md
       - name: Issues with call transfers
         href: ./phone-system/direct-routing/issues-with-call-transfers.md
+      - name: Issues with inbound calls
+        href: ./phone-system/direct-routing/issues-with-inbound-calls.md
       - name: Issues with LMO
         href: ./phone-system/direct-routing/issues-with-lmo.md
       - name: Issues with outbound calls
