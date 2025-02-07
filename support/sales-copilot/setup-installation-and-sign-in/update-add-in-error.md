@@ -1,7 +1,7 @@
 ---
 title: Add-in update error in Copilot for Sales for Outlook
 description: Resolves an error message that repeatedly prompts users to update Microsoft Copilot for Sales add-in for Microsoft Outlook.
-ms.date: 06/24/2024
+ms.date: 02/05/2025
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
@@ -27,7 +27,7 @@ This article helps you troubleshoot and resolve an error message that repeatedly
 
 ## Symptoms
 
-When you open the [Copilot for Sales pane in Microsoft Outlook](/microsoft-sales-copilot/use-sales-copilot-outlook#open-sales-copilot), the following error message is displayed:
+When you open the [Copilot for Sales pane in Microsoft Outlook](/microsoft-sales-copilot/open-app#access-copilot-for-sales-in-outlook), the following error message is displayed:
 
 > **Add-in error:** An update to this add-in is available that requires your review and confirmation to install.
 
@@ -69,7 +69,7 @@ The first step is to identify if the Copilot for Sales Outlook add-in is admin-m
 
     1. If the **Update** button is available, select it and follow the prompts to update the add-in.
 
-    1. If the **Update** button isn't available, go to the **Configuration** tab, select **Copilot for Sales for Microsoft Outlook**, and then select **Remove**. Once done, reinstall the Copilot for Sales add-in for Microsoft Outlook. For more information, see [Install Copilot for Sales](/microsoft-sales-copilot/install-viva-sales).
+    1. If the **Update** button isn't available, go to the **Configuration** tab, select **Copilot for Sales for Microsoft Outlook**, and then select **Remove**. Once done, reinstall the Copilot for Sales add-in for Microsoft Outlook. For more information, see [Install Copilot for Sales](/microsoft-sales-copilot/install-viva-sales#admin-deployed-installation).
 
 5. If the add-in isn't listed under the **Admin-managed** section, uninstall the add-in from the **My add-ins** section, and reinstall it.
 
