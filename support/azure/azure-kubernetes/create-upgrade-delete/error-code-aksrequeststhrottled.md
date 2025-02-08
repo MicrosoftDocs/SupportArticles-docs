@@ -32,7 +32,7 @@ Resource provider throttling is independent of ARM throttling and is tailored to
 
 ## Cause
 
-Azure Kubernetes Service requests are being throttled. For information about how AKS work, and the specific limits per hour, see [Throttling limits on AKS resource provider APIs](/azure/aks/quotas-skus-regions#throttling-limits-on-aks-resource-provider-apis).
+Azure Kubernetes Service requests are being throttled. For information about how AKS limits work, and the specific limits per hour, see [Throttling limits on AKS resource provider APIs](/azure/aks/quotas-skus-regions#throttling-limits-on-aks-resource-provider-apis).
 
 ## Solution: Modify your access patterns
 
