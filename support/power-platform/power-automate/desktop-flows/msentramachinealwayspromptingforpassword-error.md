@@ -35,7 +35,7 @@ This resolution requires Power Automate for desktop version 2.50 or later and mu
 
 For steps on how to set up Microsoft Entra certificate based authentication for Power Automate, see [Configure certificate-based authentication (preview)](/power-automate/desktop-flows/configure-certificate-based-auth).
 
-## Resolution 2: Use Microsoft Entra authentication for Remote Desktop with a user/password
+## Resolution 2: Use Microsoft Entra authentication for Remote Desktop with a username and password
 
 This resolution requires Power Automate for desktop version 2.49 or later. If you don't have MFA enabled for the account used by the desktop flows connection, you can set up Microsoft Entra authentication using a username and password instead.
 
@@ -49,7 +49,7 @@ This resolution requires Power Automate for desktop version 2.49 or later. If yo
 
 3. Restart the Power Automate service.
 
-4. Use a Microsoft Entra ID connection with user/password credentials. Note that an MFA exception is required for this account.
+4. Use a Microsoft Entra ID connection with username and password credentials. Note that an MFA exception is required for this account.
 
 ## Resolution 3: Disable fPromptForPassword
 
