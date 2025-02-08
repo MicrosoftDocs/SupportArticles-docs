@@ -55,7 +55,7 @@ Take note of the following fields:
 
 ## Data collection 
 
-The first thing you need to do is to understand whether you need a memory dump. Windows has a feature called [Windows Error Reporting](https://learn.microsoft.com/troubleshoot/windows-client/system-management-components/windows-error-reporting-diagnostics-enablement-guidance) (WER) that collects information automatically for you. 
+The first thing you need to do is to understand whether you need a memory dump. Windows has a feature called [Windows Error Reporting](../../../../windows-client/system-management-components/windows-error-reporting-diagnostics-enablement-guidance.md) (WER) that collects information automatically for you. 
 
 - If you find information in the event logs regarding WER, continue reading.
 - If not, jump to the [How to collect a crash dump](#how-to-collect-a-crash-dump) section. 
@@ -106,12 +106,12 @@ ProcDump is a lighter way to take a memory dump of a process. Below is not an ex
 1. With the PID value in hand and the exception that you have found in the [Identify a process crash](#identify-a-process-crash) section, type the following command in the administrative **Command Prompt** window: 
 
    ```cmd
-   procdump -ma -e 1 -f "<exceptionType>" PID
+   procdump -ma -e 1 -f "<typeOfException>" PID
    ```
 
    - `-ma`: This flag specifies that a full memory dump should be captured.
    - `-e 1`: This flag indicates that the dump should be captured on the first occurrence of an exception.
-   - `-f "<exceptionType>"`: This flag specifies that the tool should filter for the <exceptionType> type of exception.
+   - `-f "<typeOfException>"`: This flag specifies that the tool should filter for the <typeOfException> type of exception.
    - `PID`: This is the Process ID of the application you want to monitor.
 
    If the error code is `C00000FD`, and you haven't been able to take a memory dump, proceed with the following steps: 
@@ -142,9 +142,8 @@ If you don't have them, follow these steps to set up WER:
 1. Open the Windows Registry Editor (**regedit.exe**) and locate the key **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting\LocalDumps**. If this key isn't available, create it. 
 1. In the key from **Step 2**, create the following values: 
 
-||||
-|-|-|-|
 |Name|Type|Value to enter |
+|-|-|-|
 |DumpFolder|Expandable String Value (REG_EXPAND_SZ) |Path to a location where you want the files to (For example: **D:\Dumps**) <br>**Note**: Make sure that the drive you use isn't a system drive, and it has sufficient space to hold a memory dump of your application. |
 |DumpCount|DWORD (REG_DWORD) |3 |
 |DumpType|DWORD (REG_DWORD)|2 (Using this value can generate a full dump.)|
@@ -192,4 +191,4 @@ When looking at the report, you need to investigate the failing call stack, and 
 This exception is generated from your application, and as such the best way forward is to run the memory dump through the report and identify the call stack that is returning the error. 
 
 :::image type="content" source="media/process-termination-crash/net-second-hand-exception-summary.png" alt-text="Screenshot of .net second hand exception summary.":::
-:::image type="content" source="media/process-termination-crash/net-second-hand-exception-report-detail.png" alt-text="Screenshot of .net second hand exception summary.":::
+:::image type="content" source="media/process-termination-crash/net-second-hand-exception-report-detail.png" alt-text="Screenshot of .net second hand exception report detail.":::
