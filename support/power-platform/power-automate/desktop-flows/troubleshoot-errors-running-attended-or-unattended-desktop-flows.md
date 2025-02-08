@@ -1,8 +1,8 @@
 ---
 title: Error code occurs when running an attended or unattended desktop flow
 description: Provides mitigation steps for the error codes that occur when running attended or unattended desktop flows.
-ms.reviewer: cefriant, kenseongtan, guco, johndund
-ms.date: 02/06/2025
+ms.reviewer: cefriant, kenseongtan, guco, johndund, alarnaud
+ms.date: 02/08/2025
 ms.custom: sap:Desktop flows\Unattended flow runtime errors
 ---
 # Error code occurs when running an attended or unattended desktop flow
@@ -37,7 +37,7 @@ _Original KB number:_ &nbsp; 4555406
 |UnattendedUnsupportedWithOldConnection|403|Unattended|You need to create a new connection on the portal.|
 |RDPIsNotEnabled|400|Unattended|You need to enable Remote Desktop on the machine.|
 |UIFlowAlreadyRunning|429|Attended</br>Unattended|A desktop flow is already running on the machine. You need to wait for its completion. For more information about this error code, see [UIFlowAlreadyRunning](troubleshoot-desktop-flow-run-queue-errors.md#uiflowalreadyrunning).|
-|MSEntraLogonFailure|400|Unattended|You need to [configure Microsoft Entra authentication for Remote Desktop](/power-automate/desktop-flows/run-unattended-desktop-flows#admin-consent-for-unattended-runs-using-cba-or-sign-in-credentials-with-nla-preview). The other option is to [disable Network Level Authentication (NLA) on the machine](ui-flows-run-failed-with-aadlogonfailure-error.md#resolution) if you want to use Microsoft Entra credentials.|
+|MSEntraLogonFailure|400|Unattended|To resolve this issue, see [Desktop flows run failed with the MSEntraLogonFailure error code](ui-flows-run-failed-with-aadlogonfailure-error.md).|
 |Win10AlreadyHasActiveSession|400|Unattended|Windows 10 only. You need to sign out from the active session on the machine.|
 |UIFlowAgentNotAvailable|400|Attended</br>Unattended|You need to confirm that the service uiflowservice is up and running on your machine. If you have the following error when trying to start uiflowservice, see [Desktop flows failure](https://support.microsoft.com/help/4564550/):</br>**Windows could not start the UIFlowService service on Local Computer. Error 1069: The service did not start due to a logon failure**|
 |UnableToCallCrlEndpoint|400|Attended</br>Unattended|You need to ensure the revocation list for the certificates can be checked. Ensure that the CRL services aren't blocked on the target machine. The services that must be contacted are listed in this article: [Limits for automated, scheduled, and instant flows](/power-automate/limits-and-config#ui-flows-required-services)|
