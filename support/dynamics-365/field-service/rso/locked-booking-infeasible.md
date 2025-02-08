@@ -4,16 +4,16 @@ description: Resolves issues with booking locks in the Resource Scheduling Optim
 ms.author: AnilMur
 author: anilmur
 ms.reviewer: mhart
-ms.date: 02/07/2025
+ms.date: 02/08/2025
 ms.custom: sap:Resource Scheduling Optimization
 ---
 # Locked booking is infeasible in Resource Scheduling Optimization
 
-This article presents possible causes and a resolution for the "Locked booking is infeasible" error that occurs in the [Resource Scheduling Optimization add-in](/dynamics365/field-service/rso-overview) for Microsoft Dynamics 365 Field Service.
+This article helps you resolve the "Locked booking is infeasible" error that occurs in the [Resource Scheduling Optimization add-in](/dynamics365/field-service/rso-overview) for Microsoft Dynamics 365 Field Service.
 
 ## Symptoms
 
-If a locked booking can't respect all defined constraints, the optimization request continues, but skips over the identified resources that have violations. The following error message occurs:
+When a [locked booking](/dynamics365/field-service/booking-lock-options) can't respect all defined constraints, the Resource Scheduling Optimization request continues, but skips over the identified resources that have violations. You may encounter the following error message:
 
 > System failed to optimize some records. Inner error(s): Locked booking is infeasible, reason: Violation. Tracing data points: RequirementId, RequirementName, BookingId, BookingName, ScheduledTimeWindow, FullTimeWindow, ArrivalTime, Lock Type
 
@@ -21,18 +21,20 @@ If a locked booking can't respect all defined constraints, the optimization requ
 
 The tracing data points in the error message help you identify what went wrong. The violation types include:
 
-- A locked booking can't fulfill the _Lock Booking Time Window_ or _Resource Break Time Window_ filter. The scenarios inlcude:
+- Time window violations:
 
   - The locked booking is outside of resource working hours.
-  - Invalid promised time window.
-  - Invalid travel time.
-  - Conflicts with a [scheduled break time](/dynamics365/field-service/set-up-bookable-resources#add-work-hours).
+  - Promised time window is invalid.
+  - Travel time is invalid.
+  - The locked booking conflicts with a [scheduled break time](/dynamics365/field-service/set-up-bookable-resources#add-work-hours).
 
-- The eligibility check fails with a [constraint](/dynamics365/field-service/rso-optimization-goal#understand-constraints):
+- Eligibility check failures:
 
   - **Meets Required Skills**. A locked booking has an invalid match of the [resource skill characteristics](/dynamics365/field-service/set-up-characteristics).
   - **Meets Required Roles**. A locked booking has an invalid [resource role match](/training/modules/configure-bookable-resources-urs-dynamics-field-service/).
   - **Meets Resource Preferences**. A locked booking has an invalid ['must choose from' or 'restricted' resource](/dynamics365/field-service/resource-preferences).
+
+  For more information, see [Resource Scheduling Optimization constraints](/dynamics365/field-service/rso-optimization-goal#understand-constraints).
 
 ## Resolution
 
