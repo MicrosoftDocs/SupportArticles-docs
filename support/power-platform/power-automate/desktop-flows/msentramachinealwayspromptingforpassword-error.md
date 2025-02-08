@@ -31,7 +31,7 @@ Power Automate for desktop can't validate your Microsoft Entra ID (formerly Azur
 
 ## Resolution 1: Use Microsoft Entra authentication for Remote Desktop with a user certificate
 
-This resolution requires Power Automate for desktop version 2.50 or later and must be used when no [multifactor authentication (MFA) exception](~/power-automate/administration/conditional-access-and-multi-factor-authentication-in-flow.md#details) can be granted to the desktop flow connection account.
+This resolution requires Power Automate for desktop version 2.50 or later and must be used when no [multifactor authentication (MFA) exception](~/power-platform/power-automate/administration/conditional-access-and-multi-factor-authentication-in-flow.md#details) can be granted to the desktop flow connection account.
 
 For steps on how to set up Microsoft Entra certificate based authentication for Power Automate, see [Configure certificate-based authentication (preview)](/power-automate/desktop-flows/configure-certificate-based-auth).
 
