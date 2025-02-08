@@ -30,7 +30,7 @@ If you encounter any other issues while logging in via the console, such as diff
 
 To troubleshoot this issue further, first try to restart the target computer.
 
-If restarting the computer temporarily solves the issue, but the issue reoccurs later, its might indicate a memory leak or other types of leaks, such as session leaks or token leaks.
+If restarting the computer temporarily solves the issue, but the issue reoccurs later, it might indicate a memory leak or other types of leaks, such as session leaks or token leaks.
 
 A potential workaround without restarting the whole system is to restart the Remote Desktop Services (RDS) service. If it solves the issue, it might indicate an issue with the service. You need to verify whether the service consumes an unusual or abnormal amount of memory.
 
