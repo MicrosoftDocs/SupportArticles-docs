@@ -26,7 +26,7 @@ This article provides detailed troubleshooting steps to diagnose and fix complex
 > [!IMPORTANT]
 > To eliminate the more common Remote Desktop errors, make sure to read [the basic troubleshooting article for Remote Desktop](troubleshoot-rdp-connection.md) before proceeding.
 
-You may encounter a Remote Desktop error message that does not resemble any of the specific error messages covered in [the basic Remote Desktop troubleshooting guide](troubleshoot-rdp-connection.md). Follow these steps to determine why the Remote Desktop (RDP) client is unable to connect to the RDP service on the Azure VM. <a href="https://portal.azure.com/" target="_blank" rel="noopener noreferrer">Link</a>
+You may encounter a Remote Desktop error message that does not resemble any of the specific error messages covered in [the basic Remote Desktop troubleshooting guide](troubleshoot-rdp-connection.md). Follow these steps to determine why the Remote Desktop (RDP) client is unable to connect to the RDP service on the Azure VM.
 
 ## Components of a Remote Desktop connection
 
