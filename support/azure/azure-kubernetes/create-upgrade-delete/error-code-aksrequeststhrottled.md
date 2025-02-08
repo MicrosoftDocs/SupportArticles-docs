@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the Throttled error code (429)
 description: Learn how to troubleshoot the Throttled error (status 429) when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 07/02/2025
+ms.date: 7/2/2025
 editor: jovieir
 ms.reviewer: jovieir
 ms.service: azure-kubernetes-service
