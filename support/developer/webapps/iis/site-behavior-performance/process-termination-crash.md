@@ -102,7 +102,7 @@ ProcDump is a lighter way to take a memory dump of a process. Below is not an ex
 1. Follow these steps to get PID:
    1. Open **IIS Manager**.
    1. Select your server name (on the left).
-   1. Double-click **Worker Processes**. Take note of the PID value for the worker process that you want to troubleshoot. 
+   1. Double click **Worker Processes**. Take note of the PID value for the worker process that you want to troubleshoot. 
 1. With the PID value in hand and the exception that you have found in the [Identify a process crash](#identify-a-process-crash) section, type the following command in the administrative **Command Prompt** window: 
 
    ```cmd
@@ -111,7 +111,7 @@ ProcDump is a lighter way to take a memory dump of a process. Below is not an ex
 
    - `-ma`: This flag specifies that a full memory dump should be captured.
    - `-e 1`: This flag indicates that the dump should be captured on the first occurrence of an exception.
-   - `-f "<typeOfException>"`: This flag specifies that the tool should filter for the <typeOfException> type of exception.
+   - `-f "<typeOfException>"`: This flag specifies that the tool should filter for the `<typeOfException>` type of exception.
    - `PID`: This is the Process ID of the application you want to monitor.
 
    If the error code is `C00000FD`, and you haven't been able to take a memory dump, proceed with the following steps: 
