@@ -110,7 +110,7 @@
       href: desktop-flows/environment-load-fails-insufficient-permissions-after-2-46.md
     - name: Error communicating with the emulator using Micro Focus Reflection Desktop
       href: desktop-flows/error-communicating-with-the-emulator.md
-    - name: '"Expression couldn't be evaluated" error when using direct encrypted text'
+    - name: Expression couldn't be evaluated error when using direct encrypted text
       href: desktop-flows/error-expression-could-not-be-evaluated.md
     - name: Errors when running desktop flows including Excel actions
       href: desktop-flows/troubleshoot-excel-errors.md
