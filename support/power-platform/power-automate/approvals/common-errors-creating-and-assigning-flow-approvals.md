@@ -2,7 +2,7 @@
 title: Common errors creating and assigning flow approvals
 description: Common Power Automate approval errors and potential resolutions.
 ms.reviewer: hamenon, mansong
-ms.date: 08/20/2024
+ms.date: 02/08/2025
 ms.custom: sap:Approvals\Approval action failing
 ---
 # Common errors creating and assigning flow approvals
@@ -169,7 +169,7 @@ The user that originally created the Approvals connection used by the flow is no
 
 > Cannot wait on this approval in its current state.
 
-By the time the "Wait for an approval" action was executed, the approval had already expired or been abandoned. Only active approvals can be waited upon by this action.
+By the time the **Wait for an approval** action was executed, the approval had already expired or been abandoned. Only active approvals can be waited upon by this action.
 
 ### InvalidApprovalCustomOptions
 
