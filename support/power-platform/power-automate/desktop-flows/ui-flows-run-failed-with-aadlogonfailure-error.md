@@ -1,13 +1,13 @@
 ---
-title: Desktop flows run failed with AadLogonFailure
-description: Provides a resolution for an issue where desktop flows run failed with the AadLogonFailure error code. 
-ms.reviewer: fredg, johndund
+title: Desktop flows run failed with MSEntraLogonFailure
+description: Provides a resolution for an issue where desktop flows run failed with the MSEntraLogonFailure error code. 
+ms.reviewer: fredg, johndund, alarnaud
 author: QuentinSele
 ms.author: quseleba
-ms.date: 11/20/2023
+ms.date: 02/08/2025
 ms.custom: sap:Desktop flows\Power Automate for desktop errors
 ---
-# Desktop flows run failed with the AadLogonFailure error code
+# Desktop flows run failed with the MSEntraLogonFailure error code
 
 This article provides a resolution to solve the unattended desktop flows run failure issue.
 
@@ -16,13 +16,17 @@ _Original KB number:_ &nbsp; 4555446
 
 ## Symptoms
 
-Your unattended desktop flows run failed with the error code **AadLogonFailure**.
+Your unattended desktop flows run failed with the error code **MSEntraLogonFailure**.
 
 ## Cause
 
 Desktop flows failed to validate your Microsoft Entra credentials on the machine.
 
-## Resolution
+## Resolution for Power Automate for desktop version 2.49 or later
+
+You need to [configure Microsoft Entra authentication for Remote Desktop](/power-automate/desktop-flows/run-unattended-desktop-flows#admin-consent-for-unattended-runs-using-cba-or-sign-in-credentials-with-nla-preview).
+
+## Resolution for Power Automate for desktop version 2.48 or earlier
 
 You need to disable Network Level Authentication (NLA) on the machine.
 
