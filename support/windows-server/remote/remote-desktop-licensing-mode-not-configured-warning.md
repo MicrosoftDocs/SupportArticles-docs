@@ -82,21 +82,22 @@ To check the licensing configuration by using Registry Editor, open Registry Edi
 
 If you use Group Policy to manage RDS, check the following subkey and entries:
 
-    - `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services`
 
-        - `LicenseServers` (string value)
-        - `LicensingMode` (DWORD value)
+  - `LicenseServers` (string value)
+  - `LicensingMode` (DWORD value)
 
 If you use the Remote Desktop Services console in Server Manager, check the following subkeys and entries:
 
-    - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\RCM\Licensing Core`
-        - `LicensingMode` (DWORD value)
-    - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TermService\Parameters\LicenseServers\SpecifiedLicenseServers
-        - `SpecifiedLicenseServers` (multi-string value)
+- `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\RCM\Licensing Core`
+  - `LicensingMode` (DWORD value)
+- `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TermService\Parameters\LicenseServers\SpecifiedLicenseServers`
+  - `SpecifiedLicenseServers` (multi-string value)
 
-        > [!NOTE]
-        > This entry exists only if you used the Remote Desktop Services console to configure licensing.
-        For more information about `LicensingMode`, see [LicensingMode](/windows-hardware/customize/desktop/unattend/microsoft-windows-terminalservices-remoteconnectionmanager-licensingmode#values).
+    > [!NOTE]
+    > This entry exists only if you used the Remote Desktop Services console to configure licensing.
+
+For more information about `LicensingMode`, see [LicensingMode](/windows-hardware/customize/desktop/unattend/microsoft-windows-terminalservices-remoteconnectionmanager-licensingmode#values).
 
 ## Check for blocked ports between the Remote Desktop Services servers
 
