@@ -2317,7 +2317,7 @@ items:
       href: ./remote/terminal-server-users-home-directory-not-set-correctly.md
     - name: User can't authenticate or must authenticate twice
       href: ./remote/cannot-authenticate-must-authenticate-twice.md
-    - name: User receives "Remote Desktop Service is currently busy" message
+    - name: '"Remote Desktop Service is currently busy" message'
       href: ./remote/remote-desktop-service-currently-busy.md
   - name: Virtual Desktop Infrastructure (VDI)
     items:
