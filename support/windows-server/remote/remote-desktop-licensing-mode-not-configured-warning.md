@@ -8,7 +8,7 @@ ms.topic: troubleshooting
 ms.reviewer: kaushika, v-lianna
 ms.custom: sap:Remote Desktop Services and Terminal Services\Licensing for Remote Desktop Services (Terminal Services), csstroubleshoot
 ---
-# Remote Desktop licensing mode is not configured warning when you connect to a RD Session Host
+# Remote Desktop licensing mode is not configured warning when you connect to an RD Session Host
 
 This article helps you troubleshoot a licensing warning message when you connect to a Remote Desktop (RD) Session Host.
 
@@ -26,13 +26,13 @@ When you use the Remote Desktop Web portal (RD Web portal) or a direct remote de
 
 ## The licensing mode isn't properly configured or the RD Session Host can't communicate with the RD license server
 
-By default, a newly created RD Session Host has a grace period of 120 days. If the licensing mode isn't properly configured in the RDS deployment, or if the RD Session Host can't communicate with the RD license server, you receive one of the pop-up messages each time you log in.
+By default, a newly created RD Session Host has a grace period of 120 days. If the licensing mode isn't properly configured in the RDS deployment, or if the RD Session Host can't communicate with the RD license server, you receive one of the pop-up messages each time you sign in.
 
 > [!NOTE]
 > The pop-up message isn't always a sign of a problem. In the following scenarios, you receive the message even if all the settings are as expected:
 >
-> - When you connect with a local account and the licensing mode is set to **Per User**.
-> - When you connect with an administrative session.
+> - Connecting with a local account and the licensing mode is set to **Per User**
+> - Connecting with an administrative session
 
 ## Check the RD Licensing configuration
 
@@ -65,7 +65,7 @@ To check the licensing configuration by using Server Manager, follow these steps
 
 To check the licensing configuration by using Group Policy, follow these steps:
 
-1. Depending on whether you want to configure Group Policy centrally from your domain or locally on each session host, do one of the following:
+1. Depending on whether you want to configure Group Policy centrally from your domain or locally on each session host, perform one of the following operations:
 
     - If you manage Group Policy at the domain level, open the Group Policy Management Console (GPMC), right-click the Group Policy Object (GPO) that targets your RD Session Hosts, and then select **Edit**. This operation opens the Group Policy Editor.
     - If you manage Group Policy at the server level, open the Local Group Policy Editor on the RD Session Host.
