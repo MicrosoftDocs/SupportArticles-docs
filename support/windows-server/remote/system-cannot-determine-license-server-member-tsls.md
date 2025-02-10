@@ -44,9 +44,9 @@ Review the members of the **Terminal Server License Servers** group by using the
 
 If you have confirmed that the connectivity is well established with a domain controller in your network, and the issue still persists, you might have security restrictions enforced on your domain controller. These restrictions control which users can enumerate users and groups in Active Directory (AD).
 
-In this case, you're encountering security restrictions that were introduced in Windows Server 2016 and subsequently added to all other Windows operating systems through an update. These restrictions limit the client's ability to make remote SAM calls to the local SAM database and Active Directory.
+In this case, you're encountering security restrictions that were introduced in Windows Server 2016 and later added to all other Windows operating systems through an update. These restrictions limit the client's ability to make remote SAM calls to the local SAM database and Active Directory.
 
-For more information about this security settings, see the [Network access: Restrict clients allowed to make remote calls to SAM](/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls) security policy setting.
+For more information about this security setting, see the [Network access: Restrict clients allowed to make remote calls to SAM](/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls) security policy setting.
 
 This policy, when enabled, affects the license server verification of its membership in the TSLS domain group, if the license server isn't part of the allowed users to make remote calls to AD.
 
@@ -54,26 +54,27 @@ By default, the **Network access: Restrict clients allowed to make remote calls 
 
 If the policy setting is left blank after being defined, the policy isn't enforced.
 
-To verify if you're encountering these restrictions, check one of the following:
+To verify if you're encountering these restrictions, check one of the following points:
 
 - On the logon domain controller (DC) for the Remote Desktop License Server, check if the following registry key is present:
 
     `HKLM\System\CurrentControlSet\Control\Lsa\RestrictRemoteSAM`
 
-    If this key is present, this means the DC is configured with the SAM restrictions policy.
+    If this key is present, which means the DC is configured with the SAM restrictions policy.
+
 - Check if the following Group Policy Object is present and applied on the DC:
 
     **Computer Configuration** > **Windows Settings** > **Security Settings** > **Local Policies** > **Security Options** > **Network access: Restrict clients allowed to make remote calls to SAM**
 
 > [!NOTE]
-> This behavior is expected when restricting SAM calls to the DC. However, it has no impact on the RDS Licensing functionality in terms of issuing client access licenses (CALs) and maintaining connectivity with its peers in the RDS farm.
+> This behavior is expected when restricting SAM calls to the DC. However, it has no effect on the RDS Licensing functionality in terms of issuing client access licenses (CALs) and maintaining connectivity with its peers in the RDS farm.
 
 To verify if the Remote Desktop license server is affected by this policy, see [related events](/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls#related-events) on the domain controller.
 
 To allow the Remote Desktop license server to make remote SAM calls to Active Directory, use Group Policy to add the Remote Desktop license server computer account to the list of allowed accounts under this policy: **Network access: Restrict clients allowed to make remote calls to SAM**.
 
 > [!NOTE]
-> Restarts aren't required to enable, disable or modify the **Network access: Restrict clients allowed to make remote calls to SAM** security policy setting, including audit only mode. Changes become effective without a device restart when they're saved locally or distributed through Group Policy.
+> Restarts aren't required to enable, disable, or modify the **Network access: Restrict clients allowed to make remote calls to SAM** security policy setting, including audit only mode. Changes become effective without a device restart when they're saved locally or distributed through Group Policy.
 
 ## Contact Microsoft Support
 
