@@ -12,7 +12,7 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Licensing for Remot
 
 This article helps you troubleshoot a licensing warning message when you connect to a Remote Desktop (RD) Session Host.
 
-When you use the Remote Desktop Web portal (RD Web portal) or a direct remote desktop protocol (RDP) connection to access a Remote Desktop Services (RDS) deployment, you receive one of the Windows RDS balloon reminder that resembles the following:
+When you use the Remote Desktop Web portal (RD Web portal) or a direct remote desktop protocol (RDP) connection to access a Remote Desktop Services (RDS) deployment, you receive one of the Windows RDS balloon reminder that resembles the following examples:
 
 - When the RD Session Host is still under the grace period:
 
