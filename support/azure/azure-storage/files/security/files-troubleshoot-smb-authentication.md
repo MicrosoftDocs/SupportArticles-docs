@@ -3,7 +3,7 @@ title: Troubleshoot Azure Files identity-based authentication and authorization 
 description: Troubleshoot problems using identity-based authentication to connect to SMB Azure file shares and see possible resolutions.
 ms.service: azure-file-storage
 ms.custom: sap:Security, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
-ms.date: 11/15/2024
+ms.date: 02/10/2025
 ms.reviewer: kendownie, v-surmaini, v-weizhu
 ---
 # Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
@@ -75,9 +75,17 @@ First, make sure that you've followed the steps to [enable Azure Files AD DS Aut
 
 Second, try [mounting Azure file share with storage account key](/azure/storage/files/storage-how-to-use-files-windows). If the share fails to mount, download [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Windows) to help you validate the client running environment. AzFileDiagnostics can detect incompatible client configurations that might cause access failure for Azure Files, give prescriptive guidance on self-fix, and collect the diagnostics traces.
 
-Third, you can run the `Debug-AzStorageAccountAuth` cmdlet to conduct a set of basic checks on your AD configuration with the logged-on AD user. This cmdlet is supported on [AzFilesHybrid v0.1.2+ version](https://github.com/Azure-Samples/azure-files-samples/releases). You need to run this cmdlet with an AD user that has owner permission on the target storage account.
+Third, you can run the `Debug-AzStorageAccountAuth` cmdlet to conduct a set of basic checks on your AD configuration with the logged-on AD user. This cmdlet is supported on [AzFilesHybrid v0.1.2+ version](https://github.com/Azure-Samples/azure-files-samples/releases). 
 
-```PowerShell
+Sign in to Azure PowerShell interactively as an AD user that has owner permission on the target storage account:
+
+```azurepowershell-interactive
+Connect-AzAccount
+```
+
+Then run the debug cmdlet:
+
+```azurepowershell-interactive
 $ResourceGroupName = "<resource-group-name-here>"
 $StorageAccountName = "<storage-account-name-here>"
 
@@ -132,6 +140,7 @@ Debug-AzStorageAccountAuth `
     -FilePath $FilePath `
     -Verbose
 ```
+
 ## Unable to mount Azure file shares with Microsoft Entra Kerberos
 
 ### Self diagnostics steps
@@ -140,7 +149,15 @@ First, make sure that you've followed the steps to [enable Microsoft Entra Kerbe
 
 Second, you can run the `Debug-AzStorageAccountAuth` cmdlet to perform a set of basic checks. This cmdlet is supported for storage accounts configured for Microsoft Entra Kerberos authentication, on [AzFilesHybrid v0.3.0+ version](https://github.com/Azure-Samples/azure-files-samples/releases).
 
-```PowerShell
+Sign in to Azure PowerShell interactively as an AD user that has owner permission on the target storage account:
+
+```azurepowershell-interactive
+Connect-AzAccount
+```
+
+Then run the debug cmdlet:
+
+```azurepowershell-interactive
 $ResourceGroupName = "<resource-group-name-here>"
 $StorageAccountName = "<storage-account-name-here>"
 
