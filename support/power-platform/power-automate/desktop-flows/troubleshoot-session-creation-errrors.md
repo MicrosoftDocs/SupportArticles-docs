@@ -3,7 +3,7 @@ title: Session creation error codes in unattended desktop flow runs
 description: Solves error codes related to session creation during unattended desktop flow runs in Power Automate.
 author: johndund 
 ms.author: johndund 
-ms.date: 02/08/2025
+ms.date: 02/10/2025
 ms.reviewer: madiazor, guco, fredg 
 ms.custom: sap:Desktop flows\Unattended flow runtime errors
 ---
@@ -53,7 +53,6 @@ To solve the issue:
 - Ensure that you can remote desktop to the machine from another machine on your network. If you're using Windows Server, you can try to remote desktop to "localhost" from the local machine itself when logged in as another account. If these actions fail, see [General Remote Desktop connection troubleshooting](../../../windows-server/remote/rdp-error-general-troubleshooting.md).
 - If you have a legal notice enabled for login, work with your system administrator to try disabling it. To see if the legal notice is activated, open Registry Editor and go to `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System`. If `legalnoticecaption` or `legalnoticetext` isn't empty, work with your system administrator to disable the legal notice.
 - Ensure that no third-party software is installed that might affect login or interfere with creating a remote desktop connection.
-- If you use a domain account (DOMAIN\user) to connect, connectivity issues with the domain controller might prevent the session from opening correctly. Work with your system administrator to examine connectivity logs.
-- If you're on a Microsoft Entra joined or Entra hybrid joined device, try using a UPN (`user@domain.com`). To see if you can use a UPN, go to **Start** > **Run**, and run the [dsregcmd /status](/entra/identity/devices/troubleshoot-device-dsregcmd) command. If you see `AzureAdJoined: YES` under `Device State`, try changing the user specified in the connection to the `user@domain.com` format.
+- If you use a domain account (DOMAIN\user) to connect, connectivity issues with the domain controller might prevent the session from opening correctly. Work with your system administrator to examine connectivity logs. If you're on a Microsoft Entra joined or Entra hybrid joined device, try using a UPN (`user@domain.com`). To see if you can use a UPN, go to **Start** > **Run**, and run the [dsregcmd /status](/entra/identity/devices/troubleshoot-device-dsregcmd) command. If you see `AzureAdJoined: YES` under `Device State`, try changing the user specified in the connection to the `user@domain.com` format.
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
