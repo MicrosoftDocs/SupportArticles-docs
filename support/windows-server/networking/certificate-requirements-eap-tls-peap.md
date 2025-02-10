@@ -34,7 +34,8 @@ With either EAP-TLS or PEAP with EAP-TLS, the server accepts the client's authen
 - The user or the computer certificate on the client chains to a trusted root CA.
 - The user or the computer certificate on the client includes the **Client Authentication** purpose.
 - The user or the computer certificate doesn't fail any one of the checks that are performed by the CryptoAPI certificate store. And the certificate passes requirements in the remote access policy.
-- The user or the computer certificate doesn't fail any one of the certificate OID checks that are specified in the Network Policy Server (NPS) remote access policy.
+- The user or the computer certificate doesn't fail any one of the certificates OID checks that are specified in the Network Policy Server (NPS) remote access policy.
+
 - The 802.1X client doesn't use registry-based certificates that are either smart-card certificates or certificates that are protected with a password.
 - The Subject Alternative Name (SubjectAltName) extension in the certificate contains the user principal name (UPN) of the user.
 - When clients use EAP-TLS or PEAP with EAP-TLS authentication, a list of all the installed certificates is displayed in the Certificates snap-in, with the following exceptions:
@@ -63,7 +64,7 @@ You can configure clients to validate server certificates by using the **Validat
 - If the client is configured to trust a server certificate with a specific name, the user is prompted to decide about trusting a certificate with a different name. If the user rejects the certificate, authentication fails. If the user accepts the certificate, the certificate is added to the local computer trusted root certificate store.
 
 > [!NOTE]
-> With PEAP or with EAP-TLS authentication, servers display a list of all the installed certificates in the Certificates snap-in. However, the certificates that contain the **Server Authentication** purpose in EKU extensions are not displayed.
+> With PEAP or with EAP-TLS authentication, servers display a list of all the installed certificates in the Certificates snap-in. However, the certificates that don't contain the **Server Authentication** purpose in EKU extensions are not displayed.
 
 ## More information
 
