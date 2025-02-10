@@ -2251,6 +2251,8 @@ items:
       href: ./remote/terminal-server-license-for-deployment.md
     - name: Terminal Server licensing
       href: ./remote/terminal-server-licensing.md
+    - name: The system cannot determine if the license server is member of TSLS Group
+      href: ./remote/system-cannot-determine-license-server-member-tsls.md     
     - name: Troubleshooting access denied and user not authorized issues in RDS
       href: ./remote/troubleshooting-access-denied-and-user-not-authorized-rds-issues.md
     - name: '"Your session will be disconnected in 60 minutes" message when you connect to RDS'
