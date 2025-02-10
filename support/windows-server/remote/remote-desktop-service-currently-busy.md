@@ -111,7 +111,7 @@ Note down the user account used to reproduce this connection.
 
 #### Capture dumps in a hypervisor or VM scenario
 
-- Take a snapshot of the VM with the **Complete memory dump** option selected, if the hypervisor provides this option, when taking the dump (as described earlier).
+- Take a snapshot of the VM with the "full memory" option selected, if the hypervisor provides this option, when taking the dump (as described earlier).
 - Convert the snapshot to a complete memory dump.
 
 > [!NOTE]
