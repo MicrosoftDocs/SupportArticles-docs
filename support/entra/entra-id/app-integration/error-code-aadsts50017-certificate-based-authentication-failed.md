@@ -84,7 +84,7 @@ You can verify the policy Object Identifiers (OIDs) for consistency and validity
 
 If any of the certificates are missing Certificate Policies extensions, it is necessary to reissue the Certification Authority (CA) certificate or end user certificate with the appropriate Certificate Policies extensions embedded.  
 
-For more details about **policy extension and other supported extensions**, please refer to the following article:
+For more details about [policy extension and other supported extensions](/windows/win32/seccertenroll/supported-extensions), please refer to the following article:
 
 ## AADSTS error code reference
 
