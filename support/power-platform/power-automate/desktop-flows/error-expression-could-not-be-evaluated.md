@@ -4,7 +4,7 @@ description: Provides a resolution for the Expression couldn't be evaluated erro
 ms.reviewer: iomavrid
 author: yiannismavridis
 ms.author: iomavrid
-ms.date: 02/08/2025
+ms.date: 02/11/2025
 ms.custom: sap:Desktop flows\Power Automate for desktop errors
 ---
 # "Expression couldn't be evaluated" error when using encrypted text
@@ -15,7 +15,7 @@ _Applies to:_ &nbsp; Power Automate
 
 ## Symptoms
 
-When you run a desktop flow on a different machine, you receive the following error message:
+A desktop flow with an action that uses direct input generates the following error when run on a machine different than the one where the flow was created:
 
 > Failed with error: Expression couldn't be evaluated
 
@@ -31,7 +31,7 @@ This issue occurs when the desktop flow includes an action that uses a direct in
 
 ## Cause
 
-The error occurs because the direct input is encrypted using the local machine's [Data Protection API (DPAPI)](/dotnet/standard/security/how-to-use-data-protection). This means the input can't be decrypted when the flow is run on another machine.
+The error occurs because direct inputs are encrypted using the local machine's [Data Protection API (DPAPI)](/dotnet/standard/security/how-to-use-data-protection) and can't be decrypted when the flow is run on another machine.
 
 This limitation is highlighted when you hover over the info icon if any of the direct input options is selected.
 
