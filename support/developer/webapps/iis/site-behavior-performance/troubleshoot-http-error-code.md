@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot 4xx and 5xx HTTP Errors in IIS
 description: Provides troubleshooting steps for resolving 4xx and 5xx HTTP status code errors in Internet Information Services (IIS).
-ms.date: 01/27/2025
+ms.date: 02/11/2025
 ms.reviewer: khgupta, v-sidong
 ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
 ---
@@ -215,7 +215,6 @@ Once the **Tracing** role service is installed, follow these steps to capture FR
 
    :::image type="content" source="media/troubleshoot-http-error-code/default-web-site-home.png" alt-text="Screenshot of the Default Web Site Home.":::
 
-1. Select **Finish**.
 1. In the **Actions** pane, select **Add**.
 1. In the **Add Failed Request Tracing Rule** wizard, on the **Specify Content to Trace** page, select **All content** > **Next**.
 
@@ -226,8 +225,6 @@ Once the **Tracing** role service is installed, follow these steps to capture FR
    :::image type="content" source="media/troubleshoot-http-error-code/define-trace-conditions.png" alt-text="Screenshot of the Define Trace Conditions page.":::
 
 1. On the **Select Trace Providers** page, under **Providers**, select all the checkboxes. Under **Areas**, make sure all the checkboxes are selected for each provider. Under **Verbosity**, select **Verbose**. Select **Finish**.
-
-   :::image type="content" source="media/troubleshoot-http-error-code/select-trace-providers.png" alt-text="Screenshot of the Select Trace Providers page in the Add Failed Tracing Rule dialog.":::
 
 1. Enable **Failed Request Tracing** for the site and configure the Log File Directory:
 
