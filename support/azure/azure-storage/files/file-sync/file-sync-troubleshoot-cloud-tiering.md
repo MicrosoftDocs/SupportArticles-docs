@@ -4,7 +4,7 @@ description: Troubleshoot common issues with cloud tiering in an Azure File Sync
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 01/13/2025
+ms.date: 02/04/2025
 ms.author: kendownie
 ms.reviewer: vritikanaik, v-weizhu
 ms.custom: sap:File Sync
@@ -102,7 +102,7 @@ If content doesn't exist for the error code, follow the general troubleshooting 
 | 0x80c83007 | -2134364153 | ECS_E_STORAGE_ERROR | The file failed to tier due to an Azure storage issue. | If the error persists, open a support request. |
 | 0x800703e3 | -2147023901 | ERROR_OPERATION_ABORTED | The file failed to tier because it was recalled at the same time. | No action required. The file will be tiered when the recall completes and the file is no longer in use. |
 | 0x80c80264 | -2134375836 | ECS_E_GHOSTING_FILE_NOT_SYNCED | The file failed to tier because it hasn't synced to the Azure file share. | No action required. The file will tier once it has synced to the Azure file share. |
-| 0x80070001 | -2147942401 | ERROR_INVALID_FUNCTION | The file failed to tier because the cloud tiering filter driver (*storagesync.sys*) isn't running. | To resolve this issue, open an elevated command prompt and run the following command: `fltmc load storagesync`<br/>If the Azure File Sync filter driver fails to load when running the `fltmc` command, uninstall the Azure File Sync agent, restart the server, and reinstall the Azure File Sync agent. |
+| 0x80070001 | -2147024895 | ERROR_INVALID_FUNCTION | The file failed to tier because the cloud tiering filter driver (*storagesync.sys*) isn't running or because the file has a .sid extension. | Security identifier (.sid) files can't be read by the storage sync service, so they can't be tiered to the cloud. If the file doesn't have a .sid extension, you can resolve this issue by opening an elevated command prompt and running the following command: `fltmc load storagesync`<br/>If the Azure File Sync filter driver fails to load when running the `fltmc` command, uninstall the Azure File Sync agent, restart the server, and reinstall the Azure File Sync agent. |
 | 0x80c86041 | -2134351807 | ECS_E_AFS_FILTER_NOT_LOADED | The file failed to tier because the cloud tiering filter driver (*storagesync.sys*) isn't running. | To resolve this issue, open an elevated command prompt and run this command `fltmc load storagesync`. <br/>If the Azure File Sync filter driver fails to load when running the `fltmc` command, uninstall the Azure File Sync agent, restart the server, and reinstall the Azure File Sync agent. |
 | 0x80070070 | -2147024784 | ERROR_DISK_FULL | The file failed to tier due to insufficient disk space on the volume where the server endpoint is located. | To resolve this issue, free at least 100 MiB of disk space on the volume where the server endpoint is located. |
 | 0x80070490 | -2147023728 | ERROR_NOT_FOUND | The file failed to tier because it hasn't synced to the Azure file share. | No action required. The file will tier once it has synced to the Azure file share. |

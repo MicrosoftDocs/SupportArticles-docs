@@ -12,7 +12,7 @@ ms.workload: infrastructure-services
 ms.topic: troubleshooting
 ms.date: 01/09/2025
 ms.custom: sap:VM Performance
-ms.reviewer: guywild
+ms.reviewer: guywild, poharjan
 ms.author: anandh
 
 # Customer intent: As a VM administrator or a DevOps engineer, I want to analyze and troubleshoot performance issues on my Azure virtual machine so that I can resolve these issues myself or share Performance Diagnostics information with Microsoft Support.
@@ -76,12 +76,12 @@ The following distributions are currently supported for on-demand diagnostics.
 
 | Distribution               | Version                                         |
 |----------------------------|-------------------------------------------------|
-| Oracle Linux Server        | 6.10 [`*`], 7.3, 7.5, 7.6, 7.7, 7.8, 7.9 |
-| RHEL                       | 7.4, 7.5, 7.6, 7.7, 7.8, 7.9, 8.0 [`*`], 8.1, 8.2, 8.4, 8.5, 8.6, 8.7, 8.8, 8.9 |
-| Ubuntu                     | 16.04, 18.04, 20.04, 22.04 |
-| Debian                     | 9, 10, 11 [`*`] |
+| Oracle Linux Server        | 6.10 [`*`], 7.3, 7.5, 7.6, 7.7, 7.8, 7.9, 9.0, 9.1, 9.2, 9.3, 9.4 |
+| RHEL                       | 7.4, 7.5, 7.6, 7.7, 7.8, 7.9, 8.0 [`*`], 8.1, 8.2, 8.4, 8.5, 8.6, 8.7, 8.8, 8.9, 9.0, 9.1, 9.2, 9.3, 9.4 |
+| Ubuntu                     | 16.04, 18.04, 20.04, 22.04, 24.04 |
+| Debian                     | 9, 10, 11 [`*`], 12 |
 | SLES                       | 12 SP5 [`*`], 15 SP1 [`*`], 15 SP2 [`*`], 15 SP3 [`*`], 15 SP4 [`*`], 15 SP5 [`*`], 15 SP6 [`*`] |
-| AlmaLinux                  | 8.4, 8.5 |
+| AlmaLinux                  | 8.4, 8.5, 9 |
 | Azure Linux                | 2.0 |
 
 > [!NOTE]

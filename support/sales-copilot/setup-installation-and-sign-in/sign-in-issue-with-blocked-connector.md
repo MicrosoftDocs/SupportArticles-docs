@@ -1,7 +1,7 @@
 ---
 title: Can't sign in to Salesforce due to blocked Salesforce connector
 description: Resolves an error message that occurs in Copilot for Sales when you can't sign in to Salesforce due to a blocked Salesforce connector.
-ms.date: 01/25/2024
+ms.date: 02/05/2025
 author: sbmjais
 ms.author: shjais
 ms.custom: sap:Setup, Installation and Sign-in\CRM Sign-In & Sign Out
@@ -9,9 +9,6 @@ ms.custom: sap:Setup, Installation and Sign-in\CRM Sign-In & Sign Out
 # Can't sign in to Salesforce due to blocked Salesforce connector
 
 This article helps you troubleshoot and resolve an error that occurs in Microsoft Copilot for Sales when you can't sign in to Salesforce due to a blocked Salesforce connector.
-
-> [!NOTE]
-> Microsoft Sales Copilot is rebranded as Microsoft Copilot for Sales in January 2024. The screenshot in this article will be updated with the new name soon.
 
 ## Who is affected?
 
