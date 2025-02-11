@@ -6052,10 +6052,6 @@
       "redirect_url": "/troubleshoot/developer/webapps/aspnet/security/applicationpoolidentity-write-app-data"
     },
     {
-      "source_path": "support/developer/webapps/iis/application-request-routing/troubleshooting-502-errors-in-arr.md",
-      "redirect_url": "/troubleshoot/developer/webapps/iis/active-server-pages/troubleshooting-502-errors-in-arr"
-    },
-    {
       "source_path": "support/developer/webapps/iis/development/add-http-response-header-web-site.md",
       "redirect_url": "/troubleshoot/developer/webapps/iis/www-administration-management/add-http-response-header-web-site"
     },
