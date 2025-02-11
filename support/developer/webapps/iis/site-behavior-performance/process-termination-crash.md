@@ -13,43 +13,41 @@ This article helps you identify a process termination (more commonly referred to
 
 To identify that there is a process crash, follow these steps: 
 
-1. On the affected server, select <kbd>Win</kbd> + <kbd>R</kbd> on your keyboard to open the **Run** dialog box.
+1. On the affected server, select <kbd>Win</kbd>+<kbd>R</kbd> on your keyboard to open the **Run** dialog.
 1. Type **eventvwr** and select <kbd>Enter</kbd> to open the Event Viewer application.
 1. In Event Viewer, on the left-hand side, expand the **Windows Logs** folder, and then select the **System** event log. 
-1. In the **System** event log, you can choose to filter the log so that it shows you only the Windows Process Activation Service (WAS) source logs. The event will be of type **Warning**, and the **Event ID** is **5011**. 
-1. If there is any event with the above characteristics, you have a process crash. The wording for the event will be like `A process serving application pool <name of the application pool> suffered a fatal communication error with the Windows Process Activation Service. The process id was '<id of process>'. The data field contains the error number.`.
+1. In the **System** event log, you can choose to filter the log so that it shows you only the Windows Process Activation Service (WAS) source logs. The event is of type **Warning**, and the **Event ID** is **5011**. 
+1. If there is any event with the proceding characteristics, you have a process crash. The wording for the event is like `A process serving application pool <name of the application pool> suffered a fatal communication error with the Windows Process Activation Service. The process id was '<id of process>'. The data field contains the error number.`.
 
-Key points that you need to recover from the steps above: 
+Key points that you need to recover from those steps: 
 
 - Application pool name 
 - Timestamp of the event (note down the time zone in which your computer is)  
 
 > [!NOTE]
-> - The above steps don't assist in identifying what type of crash happened, but only that a crash happened, and when.
+> - The steps don't assist in identifying what type of crash happened, but only that a crash happened, and when.
 > - If your application pool holds more than one application in it, one of those applications might be the culprit for the crash. We recommend that you separate each application into its own application pool so that you can then limit the impact to just one application. 
 
 ## Identify the cause of the crash
 
 After you confirm there is a crash, follow these steps to determine what caused the application to crash: 
 
-1. On the affected server, select <kbd>Win</kbd> + <kbd>R</kbd> on your keyboard to open the **Run** dialog box.
+1. On the affected server, select <kbd>Win</kbd>+<kbd>R</kbd> on your keyboard to open the **Run** dialog.
 1. Type **eventvwr** and select <kbd>Enter</kbd> to open the Event Viewer application.
 1. In Event Viewer, on the left-hand side, expand on the **Windows Logs** folder, and then select the **Application** event log. 
-1. In the **Application** event log, you can locate events that has **Source** labeled as **Application Error**. The event will be of type **Error** and the **Event ID** will be **1000**. 
+1. In the **Application** event log, you can locate events that has **Source** labeled as **Application Error**. The event is of type **Error** and the **Event ID** is **1000**. 
 
-From the information collected above, you have an idea of what might have caused the crash. let us go into detail on the error.
+From the information collected, you have an idea of what might have caused the crash.
 
 Take note of the following fields: 
 
-- **Faulting application** - Considering that you're using this in the context of IIS, you will want to see **w3wp.exe** as the faulting application as this is the IIS Worker Process. 
+- **Faulting application** - Considering that you're using this in the context of IIS, you want to see **w3wp.exe** as the faulting application as this is the IIS Worker Process. 
 - **Faulting module name** - It's possible that you might see Microsoft DLL's present but often they're not the culprits of the crash. 
-- **Exception code**
-
-  The exception code will give an insight into what the error could be. Common codes include: 
+- **Exception code** - The exception code gives an insight into what the error could be. Common codes include:
 
   |Exception code|Description|
   |-|-|
-  |0xC0000005|This code, also known as Access Violation (You might see native DLLs, such as **ntdll.dll** or **msvcrt.dll** in the error message), indicates that the application tried to access a forbidden memory location. |
+  |0xC0000005|This code, also known as Access Violation (you might see native DLLs, such as **ntdll.dll** or **msvcrt.dll** in the error message), indicates that the application tried to access a forbidden memory location. |
   |0xe0434352|This code indicates an unhandled second chance Common Language Runtime (CLR) exception. It means that a .NET exception occurred somewhere in the application's code. <br><br>If you encounter the exception, look for any events from the source .NET Runtime and with ID 1026. <br><br>If you find any events from the .NET Runtime source, take note of the details in the **General** tab of the event, the **Description**, and the **Exception Info** fields (the latter holds both the exception and a call stack). |
   |0xC00000fd|This code indicates that your code has suffered a stack overflow. If this is the error you see, something in the application code is going into a situation of infinite recursion (also known as infinite loop).|
 
@@ -67,19 +65,19 @@ To collect a crash dump, you can use tools like [Debug Diagnostic Tool](#debug-d
 #### Debug Diagnostic Tool
 
 1. Download and install [Debug Diag](https://www.microsoft.com/download/details.aspx?id=103453&msockid=145197b7d1fa6877376482b2d0bf6961) (short for Debug Diagnostic Tool).
-1. Open the Debug Diag 2 Collection application and select **Add Rule...** > **Crash** > **Next**. 
+1. Open the Debug Diag 2 Collection application and select **Add Rule** > **Crash** > **Next**. 
 1. Select **A specific IIS web application pool** > **Next**. 
 
    > [!NOTE]
    > You should avoid using any other of the available options (consider them as a last resort only). 
 
-1. Select the application pool (you can get the application pool name in **step 5** from the [Identify a process crash](#identify-a-process-crash) section) that is crashing and select **Next**.
+1. Select the application pool (you can get the application pool name in step 5 from the [Identify a process crash](#identify-a-process-crash) section) that is crashing and select **Next**.
 1. In the **Advanced Configuration (Optional)** window, select **Breakpoints** under **Advanced Settings**. Don't change any other option in this window (keep them at their default values). 
-1. In the **Configure Breakpoints** window, select **Add Breakpoint...**. 
-1. Select the first line that reads **Ntdll!ZwTerminateProcess**. Then select **Full Userdump** in the **Action Type** dropdown and set a value between 3 and 5 in the **Action Limit** field. Once done, click **OK**. 
-1. At this stage, you have successfully created a trigger for when the dumps will get generated. Select **Save and Close** . 
+1. In the **Configure Breakpoints** window, select **Add Breakpoint**. 
+1. Select the first line that reads **Ntdll!ZwTerminateProcess**. Then, select **Full Userdump** in the **Action Type** dropdown and set a value between 3 and 5 in the **Action Limit** field. Once done, click **OK**. 
+1. At this stage, you have successfully created a trigger for when the dumps get generated. Select **Save and Close** . 
 1. You are back at the **Advanced Configuration (Optional)** window. Select **Next** to move to the next step in the wizard. 
-1. In the **Select Dump Location And Rule Name (Optional)** window, you must modify the path to where the dumps will be written. Once done, select **Next**.
+1. In the **Select Dump Location And Rule Name (Optional)** window, you must modify the path to where the dumps are written. Once done, select **Next**.
 
    :::image type="content" source="media/process-termination-crash/select-dump-location-and-rule-name.png" alt-text="Screenshot of the Select Dump Location And Rule Name (Optional) window.":::
 
@@ -90,15 +88,15 @@ To collect a crash dump, you can use tools like [Debug Diagnostic Tool](#debug-d
 1. Keep the default of **Activate the rule now** and select **Finish** when ready. 
 1. Reproduce the issue and monitor the **Userdump Count** column. When the memory dumps are generated, you can go ahead and deactivate the rule.
 
-   :::image type="content" source="media/process-termination-crash/userdump-count-column.png" alt-text="Screenshot of Userdump Count column.":::
+   :::image type="content" source="media/process-termination-crash/userdump-count-column.png" alt-text="Screenshot of the Userdump Count column.":::
 
 #### ProcDump
 
-ProcDump is a lighter way to take a memory dump of a process. Below is not an extensive list of ways you can use ProcDump to take memory dumps, and we will be focusing solely on taking crash dumps. 
+ProcDump is a simpler way to take a memory dump of a process. Below is not an extensive list of ways you can use ProcDump to take memory dumps, and we will be focusing solely on taking crash dumps. 
 
 1. Download [ProcDump](/sysinternals/downloads/procdump). 
 1. Extract Procdump to a folder within the affected server. Make sure that the folder is in a drive other than the system drive to avoid any impact on the system drive. 
-1. Open the **Command Prompt** window as an administrator, and set that prompt's working directory to the directory in **step 2**.
+1. Open the **Command Prompt** window as an administrator, and set that prompt's working directory to the directory in step 2.
 1. Follow these steps to get PID:
    1. Open **IIS Manager**.
    1. Select your server name (on the left).
@@ -114,7 +112,7 @@ ProcDump is a lighter way to take a memory dump of a process. Below is not an ex
    - `-f "<typeOfException>"`: This flag specifies that the tool should filter for the `<typeOfException>` type of exception.
    - `PID`: This is the Process ID of the application you want to monitor.
 
-   If the error code is `C00000FD`, and you haven't been able to take a memory dump, proceed with the following steps: 
+   If the error code is `C00000FD`, and you aren't able to take a memory dump, proceed with the following steps: 
 
 1. Run the following command:
 
@@ -158,7 +156,7 @@ To perform the analysis for the crash, follow these steps:
 1. In the file chooser dialog, select the dump file you want to analyze.
 1. Once you upload the desired file, select **Start Analysis**.
 
-Once the analysis is complete, you will see a file with an **MHT** extension loaded in the browser (the following example is from a dump on Notepad to display the final aspect of the analysis report.
+Once the analysis is complete, you see a file with an **MHT** extension loaded in the browser. The following example is from a dump on Notepad to display the final aspect of the analysis report.
 
 :::image type="content" source="media/process-termination-crash/debugdiag-analysis-report.png" alt-text="Screenshot of DebugDiag Analysis Report.":::
 
@@ -171,24 +169,27 @@ This error usually means that your code is performing a loop of sorts and callin
 Here is an example of a stack overflow error: 
 
 :::image type="content" source="media/process-termination-crash/stack-overflow-error-summary.png" alt-text="Screenshot of a stack overflow error summary.":::
+
 :::image type="content" source="media/process-termination-crash/stack-overflow-error-report-detail.png" alt-text="Screenshot of a stack overflow error report detail.":::
 
-When looking at the report, you need to look out for groups of functions/methods that seem repeated. From there, attempt to correlate those functions with your code. 
+When looking at the report, you need to look out for groups of functions or methods that seem repeated. From there, attempt to correlate those functions with your code. 
 
 ### 0xC0000005 
 
 This error usually means a component of your application tried to perform an invalid access of memory, resulting in an access violation. 
 
-You will see the following summary and the report detail: 
+You see the following summary and the report detail: 
 
 :::image type="content" source="media/process-termination-crash/access-violation-summary.png" alt-text="Screenshot of a access violation summary.":::
+
 :::image type="content" source="media/process-termination-crash/access-violation-report-detail.png" alt-text="Screenshot of a access violation report detail.":::
 
 When looking at the report, you need to investigate the failing call stack, and should you be able to identify your code from the presented call stack. 
 
 ### 0xe0434352
 
-This exception is generated from your application, and as such the best way forward is to run the memory dump through the report and identify the call stack that is returning the error. 
+This exception is generated from your application, so the best way forward is to run the memory dump through the report and identify the call stack that is returning the error. 
 
 :::image type="content" source="media/process-termination-crash/net-second-hand-exception-summary.png" alt-text="Screenshot of .net second hand exception summary.":::
+
 :::image type="content" source="media/process-termination-crash/net-second-hand-exception-report-detail.png" alt-text="Screenshot of .net second hand exception report detail.":::
