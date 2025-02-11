@@ -6,7 +6,7 @@ metadata:
   title: Dynamics 365 Guides troubleshooting
   description: Landing page for Dynamics 365 Guides troubleshooting articles.
   ms.topic: landing-page
-  ms.service: guides
+  ms.service: dynamics-365-guides
   author: ChristySu
   ms.author: christys
   ms.reviewer: v-wendysmith, mhart

@@ -8,6 +8,7 @@ editor: v-jsitser
 ms.reviewer: cssakscic, v-rekhanain, v-leedennis
 ms.service: azure-kubernetes-service
 ms.topic: how-to
+ms.custom: sap:Extensions, Policies and Add-Ons
 #Customer intent: As an Azure Kubernetes user, I want to learn how to retain privileged mode while I add capabilities so that I increase security when I use the Azure Policy Add-on for Azure Kubernetes Service.
 ---
 # Retain privileged mode while adding capabilities

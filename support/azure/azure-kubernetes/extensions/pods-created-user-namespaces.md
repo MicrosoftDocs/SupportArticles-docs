@@ -8,6 +8,7 @@ editor: v-jsitser
 ms.reviewer: cssakscic, v-rekhanain, v-leedennis
 ms.service: azure-kubernetes-service
 ms.topic: troubleshooting-problem-resolution
+ms.custom: sap:Extensions, Policies and Add-Ons
 #Customer intent: As an Azure Kubernetes user, I want to learn why pods can be created in user namespaces so that I can be assured that there isn't a security risk to my Azure Kubernetes Service (AKS) cluster.
 ---
 # Pods are created in the user namespaces
