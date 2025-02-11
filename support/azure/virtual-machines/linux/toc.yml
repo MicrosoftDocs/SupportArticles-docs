@@ -350,7 +350,7 @@
   - name: Unlock the encrypted disk for offline repair
     href: unlock-encrypted-linux-disk-offline-repair.md
   - name: How to display encryption settings with Resource Explorer
-    href: /azure/virtual-machines/linux/how-to-display-encryption-settings-with-azure-resource-explorer.md
+    href: how-to-display-encryption-settings-with-azure-resource-explorer.md
   - name: FAQ
     href: /azure/virtual-machines/linux/disk-encryption-faq?context=/troubleshoot/azure/virtual-machines/linux/context/context
 
