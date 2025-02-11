@@ -40,5 +40,5 @@ The tracing data points in the error message help you identify what went wrong. 
 
 To solve the issue, update the booking settings and then rerun the Resource Scheduling Optimization:
 
-1. Adjust the settings to resolve the identified violation. For example, update the [booking lock options](/dynamics365/field-service/booking-lock-options#booking-lock-options), or adjust the [Resource Scheduling Optimization constraints]((/dynamics365/field-service/rso-optimization-goal#understand-constraints)).
+1. Adjust the settings to resolve the identified violation. For example, update the [booking lock options](/dynamics365/field-service/booking-lock-options#booking-lock-options), or adjust the [Resource Scheduling Optimization constraints](/dynamics365/field-service/rso-optimization-goal#understand-constraints).
 1. Save the changes and [run the Resource Scheduling Optimization process](/dynamics365/field-service/rso-run-optimization) again.
