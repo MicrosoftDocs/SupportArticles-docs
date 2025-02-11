@@ -4,7 +4,7 @@ description: Resolves issues with booking locks in the Resource Scheduling Optim
 ms.author: AnilMur
 author: anilmur
 ms.reviewer: mhart
-ms.date: 02/08/2025
+ms.date: 02/11/2025
 ms.custom: sap:Resource Scheduling Optimization
 ---
 # Locked booking is infeasible in Resource Scheduling Optimization
@@ -40,6 +40,5 @@ The tracing data points in the error message help you identify what went wrong. 
 
 To solve the issue, update the booking settings and then rerun the Resource Scheduling Optimization:
 
-1. Navigate to **Resource Scheduling** > **Settings** > **Administration** > **Scheduling Parameter** > **Resource Scheduling Optimization**.
-1. Adjust the settings to resolve the identified violation. For example, update the time window, adjust resource skills, and so on.
-1. Save the changes and [run the optimization process](/dynamics365/field-service/rso-run-optimization) again.
+1. Adjust the settings to resolve the identified violation. For example, update the [booking lock options](/dynamics365/field-service/booking-lock-options#booking-lock-options), or adjust the [Resource Scheduling Optimization constraints]((/dynamics365/field-service/rso-optimization-goal#understand-constraints)).
+1. Save the changes and [run the Resource Scheduling Optimization process](/dynamics365/field-service/rso-run-optimization) again.
