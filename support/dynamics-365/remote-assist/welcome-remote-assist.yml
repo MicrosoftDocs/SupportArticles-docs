@@ -6,7 +6,7 @@ metadata:
   title: Dynamics 365 Remote Assist troubleshooting
   description: Landing page for Dynamics 365 Remote Assist troubleshooting articles.
   ms.topic: landing-page
-  ms.service: remote-assist
+  ms.service: dynamics-365-remote-assist
   author: ChristySu
   ms.author: christys
   ms.reviewer: v-wendysmith, mhart

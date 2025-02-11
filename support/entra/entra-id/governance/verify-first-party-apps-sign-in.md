@@ -119,6 +119,7 @@ The following table lists some, but not all, first-party Microsoft applications.
 |Microsoft Exchange ProtectedServiceHost|51be292c-a17e-4f17-9a7e-4b661fb16dd2|
 |Microsoft Exchange REST API Based Powershell|fb78d390-0c51-40cd-8e17-fdbfab77341b|
 |Microsoft Exchange Web Services|47629505-c2b6-4a80-adb1-9b3a3d233b7b|
+|Microsoft Exchange Message Tracking Service|6326e366-9d6d-4c70-b22a-34c7ea72d73d|
 |Microsoft Forms|c9a559d2-7aab-4f13-a6ed-e7e9c52aec87|
 |Microsoft Graph|00000003-0000-0000-c000-000000000000|
 |Microsoft Intune Web Company Portal|74bcdadc-2fdc-4bb3-8459-76d06952a0e9|
@@ -127,6 +128,7 @@ The following table lists some, but not all, first-party Microsoft applications.
 |Microsoft Office 365 Portal|00000006-0000-0ff1-ce00-000000000000|
 |Microsoft Office Web Apps Service|67e3df25-268a-4324-a550-0de1c7f97287|
 |Microsoft Online Syndication Partner Portal|d176f6e7-38e5-40c9-8a78-3998aab820e7|
+|Microsoft Outlook|5d661950-3475-41cd-a2c3-d671a3162bc1|
 |Microsoft password reset service|93625bc8-bfe2-437a-97e0-3d0060024faa|
 |Microsoft Power BI|871c010f-5e61-4fb1-83ac-98610a7e9110|
 |Microsoft Storefronts|28b567f6-162c-4f54-99a0-6887f387bbcc|
@@ -178,6 +180,7 @@ The following table lists some, but not all, first-party Microsoft applications.
 |Transcript Ingestion|97cb1f73-50df-47d1-8fb0-0271f2728514|
 |Universal Store Native Client|268761a2-03f3-40df-8a8b-c3db24145b6b|
 |Viva Engage (formerly Yammer)|00000005-0000-0ff1-ce00-000000000000|
+|Viva Insights|fe93bfe1-7947-460a-a5e0-7a5906b51360|
 |WeveEngine|3c896ded-22c5-450f-91f6-3d1ef0848f6e|
 |Windows Azure Active Directory|00000002-0000-0000-c000-000000000000|
 |Windows Azure Security Resource Provider|8edd93e1-2103-40b4-bd70-6e34e586362d|
