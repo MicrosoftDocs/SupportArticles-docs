@@ -307,6 +307,8 @@
     items:
     - name: Audio issues when using Teams on macOS
       href: ./teams-on-mac/teams-audio-issue-mac.md
+    - name: Can't sign in to Teams for Mac after macOS upgrade
+      href: ./teams-on-mac/teams-sign-in-issues-after-os-upgrade.md
     - name: Incorrect presence status in Teams for Mac
       href: ./teams-on-mac/incorrect-presence-status-teams-for-mac.md
     - name: Teams-specific notification sound reverts to macOS notification sound
