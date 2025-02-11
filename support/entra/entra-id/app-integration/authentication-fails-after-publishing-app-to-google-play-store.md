@@ -18,9 +18,9 @@ Consider the following scenario:
 - The app has been built and executed, and passed all QA testing.
 - You publish the app on Google Play Store. 
 
-After users install the app, authentication doesn't work.
+After users install the app, authentication doesn't work when signing in to the app.
 
-If authentication error messages are shown to users or if users send error messages to your team, you may encounter an error message like the following text:
+If you expose authentication error messages to users or if you let them send error messages to your team, you may encounter an error message like the following text:
 
 > The redirect URI in the configuration file doesn't match with the one generated with the package name and signature hash. Please verify the uri in the config file and your app registration in Azure portal.
 
