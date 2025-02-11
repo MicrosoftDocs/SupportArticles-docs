@@ -55,7 +55,7 @@ To make sure you receive the expected error message, follow these steps to creat
 
 7. In the **Update work order state** window, select the **Lifecycle state** that has the validation setup (see [Set up lifecycle states and work order types](#set-up-lifecycle-states-and-work-order-types)). For simplicity, assume the **Lifecycle state** is **Released**. Then, select **OK**.
 
-8. Select the **Action Centre/notification bell** in the upper-right corner, and then select **Message details**. The **Message details** show, "The fault cause for symptom X on asset Y is missing. Update has been cancelled." Close the **Message details** window. In the upper-right corner of the work order, the **Lifecycle state** is still shown as **New**.
+8. Select the **Action Centre/notification bell** in the upper-right corner, and then select **Message details**. The **Message details** window shows "The fault cause for symptom X on asset Y is missing. Update has been cancelled." Close the **Message details** window. In the upper-right corner of the work order, the **Lifecycle state** is still shown as **New**.
 
 9. In the Action Pane of the work order, go to the **Asset** group and select **Asset fault**.
 
@@ -67,7 +67,7 @@ To make sure you receive the expected error message, follow these steps to creat
 
 13. In the **Update work order state** window, select the **Lifecycle state** that has the validation setup (see [Set up lifecycle states and work order types](#set-up-lifecycle-states-and-work-order-types)). For simplicity, assume the **Lifecycle state** is **Released**. Then, select **OK**.
 
-14. Select the **Action Centre/notification bell** in the upper-right corner, and then select the new **Message details** (mentioned in step 8). The **Message details** show, "Fault remedy for cause Z on symptom X on asset Y is missing. Update has been cancelled." Close the **Message details** window. In the upper-right corner of the work order, the **Lifecycle state** is still shown as **New**.
+14. Select the **Action Centre/notification bell** in the upper-right corner, and then select the new **Message details** (mentioned in step 8). The **Message details** window shows "Fault remedy for cause Z on symptom X on asset Y is missing. Update has been cancelled." Close the **Message details** window. In the upper-right corner of the work order, the **Lifecycle state** is still shown as **New**.
 
 15. In the Action Pane of the work order, go to the **Asset** group and select **Asset fault**.
 
