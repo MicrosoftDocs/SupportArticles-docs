@@ -65,6 +65,8 @@ It’s possible to check that information by navigating through the details of t
 
 The AADSTS50017 error may also occur if any certificates in the chain are missing valid extension identifiers, such as certificate policy extensions. 
 
+## Solution :
+
 2.1) Validate the Certificate Policies extensions for all certificates within the certificate chain, including user certificates, intermediate Certification Authority (CA) certificates, and the root CA certificate. Ensure that the Certificate Policies extension and its Object Identifiers (OIDs) are consistent and valid across the entire chain. 
 
 
