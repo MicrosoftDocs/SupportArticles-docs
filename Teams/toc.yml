@@ -6,7 +6,9 @@
     - name: '"FAILED_TO_AUTO_DISCOVER_DOMAIN" error in admin center'
       href: ./teams-administration/failed-to-auto-discover-domain-error-teams-admin-center.md
     - name: "\"We couldn't add member\" error when adding users"
-      href: ./teams-administration/couldnt-add-member-error.md 
+      href: ./teams-administration/couldnt-add-member-error.md
+    - name: Can't access Teams Premium features
+      href: ./teams-administration/cannot-access-teams-premium-features.md
     - name: Clear the Teams client cache
       href: ./teams-administration/clear-teams-cache.md
     - name: Disable SharePoint News notifications in Teams
