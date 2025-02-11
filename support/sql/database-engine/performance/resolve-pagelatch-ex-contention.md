@@ -4,7 +4,7 @@ description: This article describes how to resolve last-page insert PAGELATCH_EX
 ms.author: jopilov
 author: PiJoCoder
 ms.reviewer: jopilov
-ms.date: 06/15/2023
+ms.date: 02/11/2025
 ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ---
 # Resolve last-page insert PAGELATCH_EX contention in SQL Server
@@ -85,7 +85,7 @@ You can choose one of following two options to resolve the problem.
 > [!div class="nextstepaction"]
 > [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/mssql-support/master/sample-scripts/DOCs-to-Notebooks/T-shooting_PagelatchEX_LastPageInsert.ipynb)
 
-### Option 2: Follow the steps manually
+### Option 2: Follow these steps manually
 
 To resolve this contention, the overall strategy is to prevent all concurrent INSERT operations from accessing the same database page. Instead, make each INSERT operation access a different page and increase concurrency. Therefore, any of the following methods that organize the data by a column other than the sequential column achieves this goal.
 
@@ -184,7 +184,7 @@ END
 
 You can use one of the following methods to resolve the issue. Choose the one that best fits your circumstances.
 
-##### Method 1: Use OPTIMIZE_FOR_SEQUENTIAL_KEY index option (SQL Server 2019 only)
+##### Method 1: Use OPTIMIZE_FOR_SEQUENTIAL_KEY index option (SQL Server 2019 and later versions)
 
 In SQL Server 2019, a new index option (`OPTIMIZE_FOR_SEQUENTIAL_KEY`) was added that can help resolve this issue without using any of the following methods. See [Behind the Scenes on OPTIMIZE_FOR_SEQUENTIAL_KEY](https://techcommunity.microsoft.com/t5/SQL-Server/Behind-the-Scenes-on-OPTIMIZE-FOR-SEQUENTIAL-KEY/ba-p/806888) for more information.
 
