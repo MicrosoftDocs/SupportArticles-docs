@@ -14,7 +14,7 @@ ms.subservice: authentication
 ---
 # Error AADSTS50017 - Validation of Given Certificate for Certificate-Based Authentication Failed
 
-This article discusses scenarios where the AADSTS50017 error occurs when a user accesses an application or resource with Certificate Based Authentication (CBA).
+This article discusses scenarios where the AADSTS50017 error occurs when a user accesses an application or resource with certificate-based authentication (CBA).
 
 ## Symptoms
 
