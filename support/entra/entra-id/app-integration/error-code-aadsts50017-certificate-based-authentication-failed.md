@@ -14,7 +14,7 @@ ms.subservice: authentication
 ---
 # Error AADSTS50017 - Validation of Given Certificate for Certificate-Based Authentication Failed
 
-This article discusses scenarios where the AADSTS50017 error occurs when a user accesses an application or resource with Certificate Based Authentication (CBA).
+This article discusses scenarios where the AADSTS50017 error occurs when a user accesses an application or resource with certificate-based authentication (CBA).
 
 ## Symptoms
 
@@ -30,7 +30,7 @@ When a  user tries to access an application or resource with Certificate-Based a
 
 2. If you have a non-root Issuing CA (intermediate CA), both intermediate and root CA certificates must be uploaded to the Entra ID CA trusted store. 
 
-3. In Public Key Infrastructure (PKI), the certificate chain validation process ensures the integrity and authenticity of the certificate chain. Two key identifiers play a crucial role: 
+3. In Public Key Infrastructure (PKI), the certificate chain validation process ensures the integrity and authenticity of the certificate chain. Below two key identifiers play a crucial role: 
 
 **Subject Key Identifier (SKI):** The **SKI** provides a unique identifier for the public key held by the certificate.  
  **Authority Key Identifier (AKI):** The **AKI** is used to identify the certificate authority (CA) that issued the certificate. 
@@ -38,6 +38,9 @@ When a  user tries to access an application or resource with Certificate-Based a
 **1.1)**  Check the SKI of the user’s certificate and confirm if the AKI matches any of the intermediate or root CAs it was uploaded to the trusted store.  
 
 It’s possible to check that information by navigating through the details of the user’s certificate and uploaded issuing CAs, as shown on the next pictures:  
+
+![Screenshot of Certificate chain.](media/error-code-aadsts50017-certificate-based-authentication-failed/pic4.png)
+
 
 1. **Root CA Certificate:** 
     - Has its own SKI.
@@ -51,7 +54,7 @@ It’s possible to check that information by navigating through the details of t
     - Multiple intermediate CAs can exist. 
     - Issues the Intermediate certificates (when applicable). 
 
-3. **End-Entity (User) Certificate:**
+3. **End-Entity (User or Client) Certificate:**
     - Has its own SKI 
     - AKI points to the Issuing CA’s SKI. 
 
@@ -77,9 +80,11 @@ You can verify the policy Object Identifiers (OIDs) for consistency and validity
 
 
 
+![Screenshot-certificate-policies.](media/error-code-aadsts50017-certificate-based-authentication-failed/final-image-to-upload.png)
+
 If any of the certificates are missing Certificate Policies extensions, it is necessary to reissue the Certification Authority (CA) certificate or end user certificate with the appropriate Certificate Policies extensions embedded.  
 
-For more details about **policy extension and other supported extensions**, please refer to the following article:
+For more details about [policy extension and other supported extensions](/windows/win32/seccertenroll/supported-extensions), please refer to the following article:
 
 ## AADSTS error code reference
 
