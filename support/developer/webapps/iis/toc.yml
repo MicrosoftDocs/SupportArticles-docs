@@ -21,8 +21,6 @@ items:
     href: active-server-pages/run-sql-server-stored-procedures-asp-page.md
   - name: Set locale ID per the browser's language
     href: active-server-pages/set-asp-locale-id-browser-language.md
-  - name: Troubleshooting 502 errors in ARR
-    href: active-server-pages/troubleshooting-502-errors-in-arr.md
   - name: VBScript type mismatch error
     href: active-server-pages/vbscript-type-mismatch-error.md
   - name: XMLHttpRequest setRequestHeader method and Cookies
@@ -34,6 +32,8 @@ items:
     href: application-request-routing/affinity-not-honored-ssl-common-names-arr.md
   - name: Troubleshooting cache items in ARR version 2.0 or later
     href: application-request-routing/troubleshooting-cache-items-arr-v2-or-later.md
+  - name: Troubleshooting 502 errors in ARR
+    href: active-server-pages/troubleshooting-502-errors-in-arr.md
 
 - name: Development
   items:
