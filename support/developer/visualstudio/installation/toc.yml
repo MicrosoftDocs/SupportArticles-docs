@@ -26,8 +26,6 @@
     href: ./installer-fails-perform-repair-update.md
   - name: Install Windows SDK 7.1 in Silent Mode
     href: ./install-windows-sdk-silent-mode.md
-  - name: Known issues when you install Release Management
-    href: ./release-management-installation-issues.md
   - name: License key is invalid when installing Visual Studio
     href: ./installation-vs-2022-license-key-shows-invalid.md
   - name: Network or proxy errors
@@ -61,7 +59,7 @@
   - name: Wait for setup to finish before trying again
     href: ./another-setup-already-running-wait-finish.md
   - name: Workarounds for Visual Studio 2022 on unsupported operating systems
-    href: ../general/visual-studio-2022-unsupported-operating-systems.md
+    href: ./visual-studio-2022-unsupported-operating-systems.md
   - name: Windows Program Compatibility mode is on
     href: ./windows-program-compatibility-mode-on.md
   - name: Windows Installer may display inaccurate progress
@@ -80,6 +78,14 @@
     href: ./warnings-untrusted-certificate.md
   - name: We recommend you close Visual Studio now before setup continues
     href: ./we-recommend-you-close-visual-studio.md
+- name: Other
+  items:
+  - name: Can't find Visual Studio 2015 on the Start menu
+    href: ./not-finding-start-menu-visual-studio.md
+  - name: Known issues when you install Release Management
+    href: ./release-management-installation-issues.md
+  - name: The trial will expire after you sign in to the IDE
+    href: ./sign-into-ide-trial-expire.md
 - name: Servicing updates and service packs
   items:
   - name: Can't install VS Admin updates through SCCM and WSUS
