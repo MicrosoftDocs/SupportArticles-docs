@@ -83,7 +83,7 @@ Third, you can run the `Debug-AzStorageAccountAuth` cmdlet to conduct a set of b
     Connect-AzAccount
     ```
 
-2. Run the debug cmdlet:
+2. Run the `Debug-AzStorageAccountAuth` cmdlet:
 
     ```azurepowershell-interactive
     $ResourceGroupName = "<resource-group-name-here>"
@@ -155,7 +155,7 @@ Second, you can run the `Debug-AzStorageAccountAuth` cmdlet to perform a set of 
     Connect-AzAccount
     ```
 
-2. Run the debug cmdlet:
+2. Run the `Debug-AzStorageAccountAuth` cmdlet:
 
     ```azurepowershell-interactive
     $ResourceGroupName = "<resource-group-name-here>"
