@@ -46,8 +46,8 @@ As part of the checks that it performs, the connectivity test verifies the follo
 - Does the user account have a valid Teams Premium license?
 - Have the appropriate services been enabled for Teams Premium features?
 
-> [!NOTE]  
-> The Microsoft Remote Connectivity Analyzer tool isn't available for the GCC and GCC High Microsoft 365 Government environments.  
+> [!NOTE]
+> The Microsoft Remote Connectivity Analyzer tool isn't available for the GCC and GCC High Microsoft 365 Government environments.
 
 To run the connectivity test, follow these steps:  
 
