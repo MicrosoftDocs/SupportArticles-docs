@@ -23,7 +23,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 11/08/2024
+ms.date: 02/05/2025
 ---
 # Known issues with Teams Rooms on Android
 
@@ -35,6 +35,12 @@ ms.date: 11/08/2024
 | --- | --- | --- |
 |Teams Rooms on Android devices experience a delay with signing in after a user signs out.|You sign out of a Teams Rooms on Android device either manually or from the Microsoft Teams admin center. When you try to sign in again immediately, there's a delay. This delay is because the authentication code takes 15 minutes or longer to refresh after a device signs out.<br/><br/>This issue occurs on all Teams on Android devices, including those devices that are running version 5.0.6061.0 of the Company portal app.|Restart the affected device to force the code to refresh.|
 |Unable to open a whiteboard on Android touch displays and all-in-one devices.|On Teams Rooms for Android touch displays and all-in-one devices, you're unable to start a whiteboard session outside of a meeting by selecting the **Whiteboard** option.<br/><br/>This issue occurs on devices that are running on tenants which are more than two years old.|To resolve this issue, contact Microsoft Support.|
+
+## Issues with Teams Rooms on Android devices
+
+| Issue  |  Description | Workaround |
+| --- | --- | --- |
+|Unable to pair a display on Teams Rooms on Android devices|Teams Rooms on Android devices that are running version 1449/1.0.96.2024110701 or version 1449/1.0.96.2025010301 of the Teams Rooms app might experience an intermittent issue with pairing the console with the front-of-room display.|Restart the console to fix the pairing issue.|
 
 ## Issues with Teams phones
 
@@ -56,6 +62,7 @@ ms.date: 11/08/2024
 - If you're in a call with another user who is on a Teams Rooms device, you can't transfer the call. This is because the Teams Rooms app is designed to support only one call at a time.
 - If your organization has configured policies to block legacy authentication for the Teams Rooms app, then Teams Rooms on Android devices, (Teams Rooms on Windows devices) Teams displays, Teams panels, and Teams phones can't join Teams meetings.
 - If your organization has configured policies to block legacy authentication for the Teams Rooms app, then Teams Rooms on Android devices, Teams displays, Teams panels, and Teams phones can't join Teams meetings.
+- The meeting details that you export in the Microsoft Teams admin center includes the link speed of the Ethernet network interface that's used during the meeting. This display always shows the default value of 10 Mbps. However, this might not be accurate because Teams Rooms for Android devices can't fetch the exact value. The actual link speed might be faster than the default value.
 
 ## Support for third-party Teams devices
 
