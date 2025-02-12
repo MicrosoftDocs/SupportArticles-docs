@@ -17,7 +17,7 @@ Server Message Block (SMB) is the default Windows network file system feature an
 > [!NOTE]
 > [SMB signing](https://techcommunity.microsoft.com/t5/storage-at-microsoft/configure-smb-signing-with-confidence/ba-p/2418102) and [SMB encryption](/windows-server/storage/file-server/smb-security) are known to slow down SMB transfers. The amount of the performance loss depends greatly on the capabilities of the hardware involved. The primary factors are the count and speed of the CPU cores, and how much CPU time is dedicated to other workloads. 
 > 
-> [SMB signing is required](https://aka.ms/SmbSigningRequired) by default starting with Windows 11, version 24H2 and Windows Server 2025. We don't recommend turning off the SMB client and server signing requirement, as they provide significant protection against spoofing, tampering, and relay attacks.
+> Starting with Windows 11, version 24H2 and Windows Server 2025, [SMB signing is required](https://aka.ms/SmbSigningRequired) by default. We don't recommend turning off the SMB client and server signing requirement, as they provide significant protection against spoofing, tampering, and relay attacks.
 
 The following steps can be used to analyze, troubleshoot, and resolve common issues with slow SMB transfers.
 
@@ -30,8 +30,8 @@ The following steps can be used to analyze, troubleshoot, and resolve common iss
 - Try an unbuffered I/O copy for files larger than 1 GB by using the `robocopy /J` command from Command Prompt or PowerShell.
 - Enable and use [SMB compression](/windows-server/storage/file-server/smb-compression).
 
-  - This greatly reduces transfer time and bandwidth utilization for large files containing significant whitespace, such as virtual machine disks (`.vhd`, `.vhdx`, `.vmdk`, `.ovf`), `.iso`, and `.dmp` files.
-  - Non-compressible data, like archive (`.zip`, `.7z`, and `.rar`), video (`.mp4`, `.mkv`), and audio (`.mp3`, `.flac`) files won't see significant performance improvements with SMB compression.
+  - This greatly reduces transfer time and bandwidth utilization for large files containing significant whitespace, such as virtual machine disks (`.vhd`, `.vhdx`, `.vmdk`, and `.ovf`), `.iso`, and `.dmp` files.
+  - Non-compressible data, like archive (`.zip`, `.7z`, and `.rar`), video (`.mp4` and `.mkv`), and audio (`.mp3` and `.flac`) files won't see significant performance improvements with SMB compression.
   - SMB compression is available starting with Windows 11 and Windows Server 2022.
 
 - SMB speeds can be limited by storage performance.
