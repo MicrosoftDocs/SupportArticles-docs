@@ -57,4 +57,3 @@ To run the connectivity test, follow these steps:
 1. Select the checkbox to accept the terms of agreement, and then select **Perform Test**. 
 
 After the test is finished, the screen displays details about the checks that were performed and whether the test succeeded, failed, or was successful but displayed warnings. Select the provided links for more information about the warnings and failures and the methods to resolve them.
-11
