@@ -45,6 +45,7 @@ To run the troubleshooter, follow these steps:
 
    > [!div class="nextstepaction"]
    > [Microsoft 365 activation troubleshooter](https://aka.ms/SaRA-OfficeActivation-sarahome)
+   
    If you receive a pop-up window that displays "This site is trying to open Get Help.", select **Open**.
 1. Follow the instructions in the Get Help app to run the troubleshooter.
 
