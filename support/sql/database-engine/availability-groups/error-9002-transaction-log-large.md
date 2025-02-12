@@ -1,9 +1,9 @@
 ---
 title: Error 9002 when transaction log is large
 description: This article describes troubleshooting steps that may help resolve problems that occur when the transaction log becomes large or runs out of space in SQL Server.
-ms.date: 07/22/2020
+ms.date: 02/12/2025
 ms.custom: sap:Always On Availability Groups (AG)
-ms.reviewer: ramakoni, amamun
+ms.reviewer: ramakoni, amamun, jopilov
 ---
 # Error 9002: The transaction log for database is full due to AVAILABILITY_REPLICA error message in SQL Server
 
