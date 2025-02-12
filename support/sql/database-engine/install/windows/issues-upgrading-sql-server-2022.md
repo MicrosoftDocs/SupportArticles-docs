@@ -1,7 +1,7 @@
 ---
 title: Issues when upgrading to SQL Server 2022
 description: Provides workarounds for some of the most common issues when performing an upgrade to SQL Server 2022.
-ms.date: 07/24/2023
+ms.date: 02/12/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ms.reviewer: joriel, jopilov, prmadhes, v-sidong
 ms.author: prmadhes

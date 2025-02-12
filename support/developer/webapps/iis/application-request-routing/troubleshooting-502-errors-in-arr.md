@@ -4,7 +4,7 @@ description: This article provides resolutions for the IIS Failed Request Tracin
 ms.date: 11/22/2023
 ms.reviewer: riande, rimarr, v-jayaramanp
 ms.topic: troubleshooting
-ms.custom: sap:Active Server Pages\Application
+ms.custom: sap:Application Request and Routing (ARR)
 ---
 
 # Troubleshooting 502 errors in ARR

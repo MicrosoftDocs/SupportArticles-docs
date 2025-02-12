@@ -1,10 +1,10 @@
 ---
 title: Determine version information of SQL Server components and client tools
 description: This article describe the procedures to determine the version information of SQL Server components and client tools.
-ms.date: 10/15/2022
+ms.date: 02/12/2025
 ms.topic: how-to
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall
-ms.reviewer: v-six
+ms.reviewer: v-six, jopilov
 ---
 
 <!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
