@@ -4,7 +4,7 @@ description: This article describes how to resolve last-page insert PAGELATCH_EX
 ms.author: jopilov
 author: PiJoCoder
 ms.reviewer: jopilov
-ms.date: 02/11/2025
+ms.date: 02/12/2025
 ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ---
 # Resolve last-page insert PAGELATCH_EX contention in SQL Server
