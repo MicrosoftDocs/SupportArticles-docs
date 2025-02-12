@@ -16,16 +16,16 @@ To identify that there is a process crash, follow these steps:
 1. On the affected server, select <kbd>Win</kbd>+<kbd>R</kbd> on your keyboard to open the **Run** dialog.
 1. Type **eventvwr** and select <kbd>Enter</kbd> to open the Event Viewer application.
 1. In Event Viewer, on the left-hand side, expand the **Windows Logs** folder, and then select the **System** event log. 
-1. In the **System** event log, you can choose to filter the log so that it shows you only the Windows Process Activation Service (WAS) source logs. The event is of type **Warning**, and the **Event ID** is **5011**. 
+1. In the **System** event log, you can choose to filter the log so that it shows you only the Windows Process Activation Service (WAS) source logs. The event type is **Warning**, and the **Event ID** is **5011**. 
 1. If there is any event with the proceding characteristics, you have a process crash. The wording for the event is like `A process serving application pool <name of the application pool> suffered a fatal communication error with the Windows Process Activation Service. The process id was '<id of process>'. The data field contains the error number.`.
 
-Key points that you need to recover from those steps: 
+Key points that you need to recover from these steps: 
 
 - Application pool name 
 - Timestamp of the event (note down the time zone in which your computer is)  
 
 > [!NOTE]
-> - The steps don't assist in identifying what type of crash happened, but only that a crash happened, and when.
+> - These steps don't help identify what type of crash happened, but when a crash happened.
 > - If your application pool holds more than one application in it, one of those applications might be the culprit for the crash. We recommend that you separate each application into its own application pool so that you can then limit the impact to just one application. 
 
 ## Identify the cause of the crash
@@ -34,15 +34,15 @@ After you confirm there is a crash, follow these steps to determine what caused 
 
 1. On the affected server, select <kbd>Win</kbd>+<kbd>R</kbd> on your keyboard to open the **Run** dialog.
 1. Type **eventvwr** and select <kbd>Enter</kbd> to open the Event Viewer application.
-1. In Event Viewer, on the left-hand side, expand on the **Windows Logs** folder, and then select the **Application** event log. 
-1. In the **Application** event log, you can locate events that has **Source** labeled as **Application Error**. The event is of type **Error** and the **Event ID** is **1000**. 
+1. In Event Viewer, on the left-hand side, expand the **Windows Logs** folder, and then select the **Application** event log. 
+1. In the **Application** event log, you can locate events that has **Source** labeled as **Application Error**. The event type is **Error** and the **Event ID** is **1000**. 
 
 From the information collected, you have an idea of what might have caused the crash.
 
 Take note of the following fields: 
 
 - **Faulting application** - Considering that you're using this in the context of IIS, you want to see **w3wp.exe** as the faulting application as this is the IIS Worker Process. 
-- **Faulting module name** - It's possible that you might see Microsoft DLL's present but often they're not the culprits of the crash. 
+- **Faulting module name** - It's possible that you might see the presence of Microsoft Dynamic Link Libraries (DLLs), but they are usually not the culprit for crashes.
 - **Exception code** - The exception code gives an insight into what the error could be. Common codes include:
 
   |Exception code|Description|
@@ -71,11 +71,11 @@ To collect a crash dump, you can use tools like [Debug Diagnostic Tool](#debug-d
    > [!NOTE]
    > You should avoid using any other of the available options (consider them as a last resort only). 
 
-1. Select the application pool (you can get the application pool name in step 5 from the [Identify a process crash](#identify-a-process-crash) section) that is crashing and select **Next**.
-1. In the **Advanced Configuration (Optional)** window, select **Breakpoints** under **Advanced Settings**. Don't change any other option in this window (keep them at their default values). 
+1. Select the application pool (you can get the application pool name in step 5 from the [Identify a process crash](#identify-a-process-crash) section) that crashes and select **Next**.
+1. In the **Advanced Configuration (Optional)** window, select **Breakpoints** under **Advanced Settings**. Don't change any other options in this window and keep them at their default values. 
 1. In the **Configure Breakpoints** window, select **Add Breakpoint**. 
 1. Select the first line that reads **Ntdll!ZwTerminateProcess**. Then, select **Full Userdump** in the **Action Type** dropdown and set a value between 3 and 5 in the **Action Limit** field. Once done, click **OK**. 
-1. At this stage, you have successfully created a trigger for when the dumps get generated. Select **Save and Close** . 
+1. At this stage, you have successfully created a trigger for when the dumps are generated. Select **Save and Close** . 
 1. You are back at the **Advanced Configuration (Optional)** window. Select **Next** to move to the next step in the wizard. 
 1. In the **Select Dump Location And Rule Name (Optional)** window, you must modify the path to where the dumps are written. Once done, select **Next**.
 
@@ -92,7 +92,7 @@ To collect a crash dump, you can use tools like [Debug Diagnostic Tool](#debug-d
 
 #### ProcDump
 
-ProcDump is a simpler way to take a memory dump of a process. Below is not an extensive list of ways you can use ProcDump to take memory dumps, and we will be focusing solely on taking crash dumps. 
+ProcDump is a simpler way to take a memory dump of a process. To take crash dumps using ProcDump, follow these steps: 
 
 1. Download [ProcDump](/sysinternals/downloads/procdump). 
 1. Extract Procdump to a folder within the affected server. Make sure that the folder is in a drive other than the system drive to avoid any impact on the system drive. 
@@ -114,7 +114,7 @@ ProcDump is a simpler way to take a memory dump of a process. Below is not an ex
 
    If the error code is `C00000FD`, and you aren't able to take a memory dump, proceed with the following steps: 
 
-1. Run the following command:
+   1. Run the following command:
 
    The drive in the following command is just an example, and you should strive to ensure that the dumps don't get written to a system drive. 
 
@@ -122,8 +122,8 @@ ProcDump is a simpler way to take a memory dump of a process. Below is not an ex
    Procdump -ma -i Z:\Dumps 
    ```
 
-1. Reproduce the issue while you monitor the folder for dumps. 
-1. As soon as you have a dump for the **w3wp** process you're targeting, run the following command to uninstall procdump as the postmortem debugger. 
+   1. Reproduce the issue while you monitor the folder for dumps. 
+   1. As soon as you have a dump for the **w3wp** process you're targeting, run the following command to uninstall procdump as the postmortem debugger. 
 
    ```cmd
    Procdump -u 
@@ -133,12 +133,12 @@ ProcDump is a simpler way to take a memory dump of a process. Below is not an ex
 
 Windows Error Reporting is a built-in facility in Windows, whose sole purpose is to enable users to notify Microsoft of application faults, kernel faults, unresponsive applications, and other application specific problem. 
 
-If you have Windows Error Reporting events in the Event Viewer, check the directories mentioned in the Windows Error Reporting event, and located an **mdmp** or an **hdmp** file. If you have them, open a support ticket, and upload them. 
+If you have Windows Error Reporting events in the Event Viewer, check the directories mentioned in the Windows Error Reporting event, and locate an **mdmp** or an **hdmp** file. If you have them, open a support ticket, and upload them. 
 
 If you don't have them, follow these steps to set up WER: 
 
 1. Open the Windows Registry Editor (**regedit.exe**) and locate the key **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting\LocalDumps**. If this key isn't available, create it. 
-1. In the key from **Step 2**, create the following values: 
+1. In the key from step 1, create the following values: 
 
 |Name|Type|Value to enter |
 |-|-|-|
