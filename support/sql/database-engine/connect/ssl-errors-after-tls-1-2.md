@@ -4,7 +4,6 @@ description: This article provides information about the SSL errors that you mig
 ms.date: 02/12/2025
 ms.custom: sap:Database Connectivity and Authentication
 author: Malcolm-Stewart
-ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ---
 
