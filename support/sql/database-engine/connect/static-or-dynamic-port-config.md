@@ -1,8 +1,8 @@
 ---
 title: How to check SQL Server dynamic versus static ports
 description: Check if an instance of the SQL Server database engine listens on a dynamic versus a static port using the SQL Server Configuration Manager.
-ms.date: 02/23/2022
-ms.reviewer: v-jayaramanp
+ms.date: 02/12/2025
+ms.reviewer: jopilov
 ms.custom: sap:Database Connectivity and Authentication
 ---
 
