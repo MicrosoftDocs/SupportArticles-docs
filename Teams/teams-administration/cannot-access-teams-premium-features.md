@@ -1,7 +1,7 @@
 ---
 title: Can't Access Teams Premium Features 
 manager: dcscontentpm
-ms.date: 12/03/2024
+ms.date: 02/11/2025
 ms.topic: troubleshooting
 search.appverid:
   - SPO160
@@ -12,7 +12,7 @@ ms.custom:
   - sap:Teams Admin
   - CI 3540
   - CSSTroubleshoot
-ms.reviewer: salarson
+ms.reviewer: cafarric
 description: Resolves issues that occur when users try to access Microsoft Teams Premium features in the Teams app.
 ---
 
@@ -23,8 +23,8 @@ description: Resolves issues that occur when users try to access Microsoft Teams
 Users who have a valid license for Microsoft Teams Premium features might experience any of the following issues when they try to access the features:  
 
 - The features don't appear in the Teams app.
-- The features aren't available immediately after a license is purchased and assigned.
-- The features aren't available for use.
+- The features aren't available immediately after a license is purchased and assigned, but they become available after a delay of up to 24 hours.
+- The features are never available for use.
 
 ## Cause
 
@@ -57,3 +57,4 @@ To run the connectivity test, follow these steps:
 1. Select the checkbox to accept the terms of agreement, and then select **Perform Test**. 
 
 After the test is finished, the screen displays details about the checks that were performed and whether the test succeeded, failed, or was successful but displayed warnings. Select the provided links for more information about the warnings and failures and the methods to resolve them.
+11
