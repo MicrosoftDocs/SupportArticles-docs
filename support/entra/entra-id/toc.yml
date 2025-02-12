@@ -94,7 +94,7 @@
       - name: Error AADSTS750054 - SAML request or response not present
         href: app-integration/error-code-AADSTS750054-saml-request-not-present.md
       - name: Error AADSTS700003 - Device object was not found in the tenant directory
-        href: app-integration/error-code-aadsts700003-device-object-not-foundmd
+        href: app-integration/error-code-aadsts700003-device-object-not-found.md
       - name: Error AADSTS7000110 - request is ambiguous, multiple application identifiers found
         href: app-integration/error-code-aadsts7000110-request-is-ambiguous.md
       - name: Error AADSTS7000112 - application is disabled
