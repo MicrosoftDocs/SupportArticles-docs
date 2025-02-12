@@ -49,7 +49,7 @@ To fix the issue, confirm whether the device record exists in Microsoft Intune
     > [!NOTE]
     > The deletion process might take a few minutes to complete.
 
-If the device record doesn't exist in Microsoft Intune, you might require assistance from Microsoft Support to remove the device record. In this case, collect the following information, and then create a service request by following the steps in [How to get support in the Microsoft Intune admin center](/mem/intune/fundamentals/get-support):
+If the device record doesn't exist in Microsoft Intune, you might require assistance from Microsoft Support to remove the device record. In this case, collect the following information, and then create a service request by following the steps in [How to get support in the Microsoft Intune admin center](/mem/intune/fundamentals/get-support).
 
 - **Device CSV**: A copy of the device CSV file that generates the error.
 - **Proof of ownership**: Typically, this is a bill of sale or an invoice in PDF format.
