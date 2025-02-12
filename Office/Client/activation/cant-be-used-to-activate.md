@@ -36,7 +36,7 @@ Try the following troubleshooting methods to solve the problem.
 <details>
 <summary><b>Update Microsoft 365</b></summary>
 
-It is recommended that Microsoft 365 be configured to install updates automatically. To check for updates, open an Office app (such as Word), select **File**, and then select **Account**.
+It's recommended that Microsoft 365 be configured to install updates automatically. To check for updates, open an Office app (such as Word), select **File**, and then select **Account**.
 Select **Update options**, and then select **Update now**.
 <br/><br/>
 </details>
@@ -66,7 +66,7 @@ After the troubleshooter completes, it displays the results and provides additio
 1.	Select your name and profile picture or icon at the top.
 1.	Select **Sign out**.
 1.	Select **Sign in**.
-1.	Make sure you are signed in with your **Work or School** account, not your personal Microsoft account.
+1.	Make sure that you're signed in by using your **Work or School** account, not your personal Microsoft account.
 1.	Try activating Microsoft 365 again.
 <br/><br/>
 </details>
@@ -76,9 +76,9 @@ After the troubleshooter completes, it displays the results and provides additio
 
 Go to https://portal.office.com/account to check which Office version and edition you have available.  
   
-If no Office version is shown, you don’t have an Office license assigned to the account you are signed in with. If you are signed in with your Work or School account, and don’t have a license assigned, contact your Microsoft 365 Administrator to get a license assigned. [How do I find my Microsoft 365 admin?](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b)  
+If no Office version is shown, you don't have an Office license assigned to the account you're signed in with. If you're signed in with your Work or School account, and don't have a license assigned, contact your Microsoft 365 Administrator to get a license assigned. [How do I find my Microsoft 365 admin?](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b)  
   
-If you have Microsoft 365 for Business Basic, you won’t have any Office applications to install. You can use Office Online apps at https://office.com.
+If you have Microsoft 365 for Business Basic, you won't have any Office applications to install. You can use Office Online apps at https://office.com.
   
 Make sure that the version listed (32-bit or 64-bit) matches your version of Windows. To check what version of Windows you have installed, go to **Start** > **Settings** (gear icon) > **System** > **About**, and check the **System type**.  
   
@@ -101,6 +101,6 @@ See [Reset activation state for Microsoft 365 Apps for enterprise](/office/troub
 </details>
 
 <details>
-<summary><b>Check Shared Computer Activation (SCA)</b></summary>
+<summary><b>Check Shared Computer Activation</b></summary>
 
-If you’re using SCA, see [Microsoft 365 Apps Shared Computer Activation issues](./shared-computer-activation.md).
+If you're using Shared Computer Activation (SCA), see [Microsoft 365 Apps Shared Computer Activation issues](./shared-computer-activation.md).
