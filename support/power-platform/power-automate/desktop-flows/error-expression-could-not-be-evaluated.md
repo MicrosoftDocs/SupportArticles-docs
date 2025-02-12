@@ -9,7 +9,7 @@ ms.custom: sap:Desktop flows\Power Automate for desktop errors
 ---
 # "Expression couldn't be evaluated" error when using encrypted text
 
-This article provides a resolution to the "Expression couldn't be evaluated" error that occurs when you use direct encrypted text in Power Automate for desktop.
+This article helps you resolve the "Expression couldn't be evaluated" error that occurs when you run a desktop flow with an action that uses direct input.
 
 _Applies to:_ &nbsp; Power Automate  
 
@@ -19,7 +19,7 @@ A desktop flow with an action that uses direct input generates the following err
 
 > Failed with error: Expression couldn't be evaluated
 
-This issue occurs when the desktop flow includes an action that uses a direct input option. For example,
+For example,
 
 - The **Direct password input** option:
 
