@@ -6,7 +6,6 @@ ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 01/22/2025
 reviewer: sericks
-ms.subservice: admin
 ms.author: aorth
 search.audienceType: 
   - admin
