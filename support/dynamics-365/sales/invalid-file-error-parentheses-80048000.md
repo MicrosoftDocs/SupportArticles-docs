@@ -4,7 +4,6 @@ description: Provides a solution to the 80048000 error that occurs when attempti
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
-ms.subservice: d365-sales-custom-solutions
 ---
 # Invalid file error (80048000) when importing solution in Microsoft Dynamics 365
 

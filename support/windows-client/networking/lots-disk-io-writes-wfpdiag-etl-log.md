@@ -1,7 +1,7 @@
 ---
 title: Port Scanning Prevention Filter behavior in Windows
 description: Describes the functionality of the Port Scanning Prevention Filter in Windows Server 2008 and later versions of Windows. Includes a workaround for by-design behavior that generates lots of disk I/O when there's activity in the wfpdiag.etl log.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

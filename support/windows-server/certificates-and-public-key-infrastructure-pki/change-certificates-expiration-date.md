@@ -1,7 +1,7 @@
 ---
 title: Change expiration date of certificates
 description: Describes how to change the validity period of a certificate that is issued by Certificate Authority (CA).
-ms.date: 10/10/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,8 +1,9 @@
 ---
 title: Errors occur when you use Web Deploy
 description: This article provides resolutions for the unexpected error that occurs when you perform Web Deploy operations remotely through IIS Manager and use WMSVC.
-ms.date: 04/01/2020
+ms.date: 12/16/2024
 ms.custom: sap:Deployment and Migration\Windows Management Service (WMSVC)
+ms.reviewer: zixie
 ---
 # Errors when you use the Web Deployment tool as a delegated user over a remote IIS manager connection
 
@@ -13,7 +14,7 @@ _Original KB number:_ &nbsp; 2023855
 
 ## Symptoms
 
-When you perform Web Deploy operations remotely through IIS Manager and are using the Web Management Service (WMSVC), you may receive an error message that's similar to the following example:
+When you perform Web Deploy operations remotely through IIS Manager and use the Web Management Service (WMSVC), you might receive the following error message:
 
 > An error occurred when the request was processed on the remote computer.  
 > Attempted to perform an unauthorized operation.
@@ -24,12 +25,12 @@ The problem occurs because the user hasn't been granted permissions to perform t
 
 ## Resolution
 
-The resolution will vary depending on the message returned and the provider specified. Consult the following resources for instrumentation to assist in diagnosing the problem:
+The resolution varies depending on the message returned and the provider specified. Consult the following resources for instrumentation to help diagnose the problem:
 
 - [Configuring Web Management Service Logging and Tracing](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461173(v=ws.10))
-- [Process Monitor v3.53](/sysinternals/downloads/procmon) can assist with File System access issues.
+- [Process Monitor](/sysinternals/downloads/procmon) can assist with File System access issues.
 
-Below are some of the common issues that may be met in this scenario:  
+The following common issues might be met in this scenario:  
 
 ## 401 unauthorized when connecting to a Web site
 
@@ -39,14 +40,14 @@ Below are some of the common issues that may be met in this scenario:
 
 ## Server error when importing or exporting an application
 
-**Possible causes**: This error comes from the Web Deployment Handler and is usually a problem with the deployment rules. Since the user has connected successfully, it is not an issue with WMSVC. A deployment rule has a typo, the user perform deployment may not be authorized, or the RunAs identity may not have required access permissions.
+**Possible causes**: This error comes from the Web Deployment Handler and is usually a problem with the deployment rules. Since the user has connected successfully, it isn't an issue with WMSVC. A deployment rule has a typo, the user perform deployment might not be authorized, or the RunAs identity might not have required access permissions.
 
 **Resolution**: [Configuring Web Management Service Logging and Tracing](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461173(v=ws.10)) and review the logs to identify the failure.
 
 - Look for entries in the logs that contain failures such as:
 
     > Details: No rule was found that could authorize user server1\siteowner, provider appPoolConfig, operation Read, path DefaultAppPool. In this case, the provider appPoolConfig isn't authorized and the user tried to use a provider for which the user didn't have permissions.
-- Another common error is if the RunAs user that is being used to create applications doesn't have proper access to configuration. In this case, Process Monitor is a useful tool for determining where an access denied error may be coming from.
+- Another common error is if the RunAs user that is being used to create applications doesn't have proper access to configuration. In this case, Process Monitor is a useful tool for determining where an access denied error might be coming from.
 
 ## References
 

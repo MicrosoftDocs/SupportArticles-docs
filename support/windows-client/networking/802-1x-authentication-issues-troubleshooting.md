@@ -1,7 +1,7 @@
 ---
 title: 802.1X authentication issues troubleshooting
 description: Troubleshoot authentication flow by learning how 802.1X Authentication works for wired and wireless clients.
-ms.date: 05/10/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.collection: highpri

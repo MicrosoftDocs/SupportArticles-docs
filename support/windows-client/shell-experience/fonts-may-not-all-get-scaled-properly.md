@@ -1,7 +1,7 @@
 ---
 title: Fonts may not all get scaled properly when you change DPI setting
 description: Provides a solution to an issue that the fonts may not all get scaled properly when changing the DPI setting on Windows 7.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

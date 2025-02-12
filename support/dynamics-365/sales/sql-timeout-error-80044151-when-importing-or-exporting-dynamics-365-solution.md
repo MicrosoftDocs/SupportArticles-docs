@@ -4,7 +4,6 @@ description: SQL timeout error (80044151) occurs when importing or exporting a M
 ms.reviewer:   
 ms.topic: troubleshooting
 ms.date: 03/31/2021
-ms.subservice: d365-sales-custom-solutions
 ---
 # SQL timeout error (80044151) when importing or exporting a Microsoft Dynamics 365 solution
 

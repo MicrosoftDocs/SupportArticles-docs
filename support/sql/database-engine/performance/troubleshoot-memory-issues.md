@@ -1,9 +1,9 @@
 ---
 title: Troubleshoot out of memory or low memory issues in SQL Server
 description: Provides troubleshooting steps to address out of memory or low memory issues in SQL Server.
-ms.date: 04/14/2023
+ms.date: 01/10/2025
 ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
-ms.reviewer: shaunbe
+ms.reviewer: shaunbe, jopilov
 author: pijocoder
 ms.author: jopilov
 ---
@@ -30,6 +30,7 @@ There are common errors that indicate low memory in SQL Server. Examples of erro
 - 9695 or 9696: Failure to allocate memory for Service Broker operations.
 - 17131 or [17132](/sql/relational-databases/errors-events/mssqlserver-17132-database-engine-error): Server startup failure due to insufficient memory.
 - [17890](/sql/relational-databases/errors-events/mssqlserver-17890-database-engine-error): Failure to allocate memory due to SQL memory being paged out by the OS.
+- [18053](/sql/relational-databases/errors-events/mssqlserver-18053-database-engine-error): The error is printed in terse mode because there was error during formatting. Tracing, ETW, notifications etc are skipped. 
 - 22986 or 22987: Change data capture failures due to insufficient memory.
 - 25601: Xevent engine is out of memory.
 - 26053: SQL network interfaces fail to initialize due to insufficient memory.

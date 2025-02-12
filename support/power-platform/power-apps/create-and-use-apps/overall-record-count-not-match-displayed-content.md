@@ -4,8 +4,8 @@ description: Troubleshoots an issue where the overall record count doesn't match
 ms.reviewer: tapanm, moroch, dinusc
 ms.custom: sap:Using grids and lists in model-driven apps
 ms.date: 08/16/2024
-author: fikaradz
-ms.author: fikaradz
+author: shwetamurkute
+ms.author: smurkute
 ---
 # The overall record count doesn't match the displayed content in a model-driven app
 

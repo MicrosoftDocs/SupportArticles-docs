@@ -1,7 +1,7 @@
 ---
 title: Incorrect custom domain in Salesforce
 description: Resolves an error that occurs when you enter an incorrect custom domain while signing in to Salesforce CRM.
-ms.date: 01/10/2024
+ms.date: 02/05/2025
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
@@ -10,9 +10,6 @@ ms.custom: sap:Setup, Installation and Sign-in\CRM Sign-In & Sign Out
 # An incorrect custom domain is entered when signing in to Salesforce
 
 This article helps you troubleshoot and resolve issues when users enter an incorrect custom domain while signing in to Salesforce CRM.
-
-> [!NOTE]
-> Microsoft Sales Copilot is rebranded as Microsoft Copilot for Sales in January 2024. The screenshot in this article will be updated with the new name soon.
 
 ## Who is affected?
 

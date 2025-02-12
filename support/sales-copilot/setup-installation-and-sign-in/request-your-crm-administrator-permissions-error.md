@@ -1,7 +1,7 @@
 ---
 title: Error after connecting and signing in to Salesforce CRM
 description: Resolves an error message that occurs after connecting and signing in to Salesforce CRM in Microsoft Copilot for Sales.
-ms.date: 01/10/2024
+ms.date: 02/05/2025
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
@@ -27,7 +27,7 @@ This article helps you troubleshoot and resolve issues when an error message is 
 
 ## Symptoms
 
-After you sign in to Salesforce CRM through the [Copilot for Sales add-in for Outlook](/microsoft-sales-copilot/use-sales-copilot-outlook), the following error message is displayed:
+After you sign in to Salesforce CRM through the [Copilot for Sales add-in for Outlook](/microsoft-sales-copilot/open-app#access-copilot-for-sales-in-outlook), the following error message is displayed:
 
 > Request your CRM administrator permissions to access Salesforce using APIs
 

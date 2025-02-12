@@ -4,9 +4,9 @@ description: Troubleshoot common issues in managing Azure File Sync sync groups,
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 12/16/2024
+ms.date: 01/23/2025
 ms.author: kendownie
-ms.reviewer: v-weizhu
+ms.reviewer: v-weizhu, vritikanaik
 ms.custom: sap:File Sync
 ---
 # Troubleshoot Azure File Sync sync group management
@@ -83,6 +83,10 @@ This error occurs if the server endpoint path is on the system volume and cloud 
 
 This error occurs if the server endpoint path specified isn't valid. Verify the server endpoint path specified is a locally attached NTFS volume. Note, Azure File Sync doesn't support mapped drives as a server endpoint path.
 
+<a id="-2147024875"></a>**Server endpoint creation fails, with this error: "MgmtServerJobFailed" (Error code: -2147024875 or 0x80070015)**
+
+This error occurs if the server endpoint path specified isn't valid. Verify the server endpoint path specified is a locally attached NTFS volume. Note, Azure File Sync doesn't support mapped drives as a server endpoint path.
+
 <a id="-2134375640"></a>**Server endpoint creation fails, with this error: "MgmtServerJobFailed" (Error code: -2134375640 or 0x80c80328)**
   
 This error occurs if the server endpoint path specified isn't an NTFS volume. Verify the server endpoint path specified is a locally attached NTFS volume. Note, Azure File Sync doesn't support mapped drives as a server endpoint path.
@@ -100,7 +104,7 @@ This error occurs because Azure File Sync doesn't support server endpoints on vo
     compact /u /s
     ```
 
-<a id="-2134376345"></a>**Server endpoint creation fails, with this error: "MgmtServerJobFailed" (Error code: -2134376345 or 0x80C80067)**
+<a id="-2134376345"></a>**Server endpoint creation fails with this error message: "The server endpoints per server limit has been reached" (Error code: -2134376345 or 0x80C80067)**
 
 This error occurs if the limit of server endpoints per server is reached. Azure File Sync currently supports up to 30 server endpoints per server. For more information, see
 [Azure File Sync scale targets](/azure/storage/files/storage-files-scale-targets?toc=/azure/storage/filesync/toc.json#azure-file-sync-scale-targets).
@@ -116,6 +120,10 @@ This error occurs if the server endpoint path contains orphaned tiered files. If
 <a id="-2134347757"></a>**Server endpoint deletion fails, with this error: "MgmtServerJobExpired" (Error code: -2134347757 or 0x80c87013)**
 
 This error occurs if the server is offline or doesn't have network connectivity. If the server is no longer available, unregister the server in the portal, which will delete the server endpoints. To delete the server endpoints, follow the steps that are described in [Unregister a server with Azure File Sync](/azure/storage/file-sync/file-sync-server-registration#unregister-the-server-with-storage-sync-service).
+
+<a id="-2134347720"></a>**Server endpoint deletion fails, with this error: "MgmtFileShareSnapshotCountExceeded" (Error code: -2134347720 or 0x80c87038)**
+
+The error occurs when the File Share Snapshot Count exceeds the limit. Azure File Sync takes a snapshot of the Azure file share as a backup before creating the server endpoint. This snapshot can be used to restore the share to the state before the server endpoint is created. The snapshot isn't removed automatically after the server endpoint is created. You can delete it manually if it's no longer needed. To identify snapshots created by Azure File Sync, examine the snapshots of the Azure file share and look for "AzureFileSync" in the Initiator column.
 
 ## Server endpoint health
 

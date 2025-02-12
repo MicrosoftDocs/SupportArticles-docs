@@ -5784,6 +5784,476 @@
       "source_path": "support/developer/visualstudio/installation/known-issues-visual-studio-2012-update.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/welcome-visual-studio",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/webapps/iis/site-behavior-performance/default-maximum-stack-size-thread.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/iis-welcome",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/webapps/iis/site-behavior-performance/page-cannot-displayed-when-you-connect-ssl.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/iis-welcome",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/webapps/iis/general/instances-httpsys-not-cache.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-modules-features/instances-httpsys-not-cache"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/health-diagnostic-performance/troubleshoot-502-2-bad-gateway-error-in-cgi-apps.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/troubleshoot-502-2-bad-gateway-error-in-cgi-apps"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/health-diagnostic-performance/troubleshoot-http-400-errors-in-iis.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/troubleshoot-http-400-errors-in-iis"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/site-behavior-performance/exception-integrated-pipeline-mode.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/development/exception-integrated-pipeline-mode"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/www-administration-management/http-error-500-when-you-visit-web-site.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/http-error-500-when-you-visit-web-site"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/www-authentication-authorization/401-error-preauthentication-header.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/401-error-preauthentication-header"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/www-authentication-authorization/information-associated-iis-site-is-not-deleted.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-administration-management/information-associated-iis-site-is-not-deleted"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/www-administration-management/http-status-code.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/health-diagnostic-performance/http-status-code"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/health-diagnostic-performance/http-403-14-forbidden-webpage.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/http-403-14-forbidden-webpage"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/www-authentication-authorization/default-permissions-user-rights.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-administration-management/default-permissions-user-rights"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/health-diagnostic-performance/http-403-forbidden-access-website.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/http-403-forbidden-access-website"
+    },    
+    {
+      "source_path": "support/developer/webapps/iis/www-administration-management/http-bad-request-response-kerberos.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-authentication-authorization/http-bad-request-response-kerberos"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/health-diagnostic-performance/troubleshoot-native-memory-leak-iis-7x-application-pool.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/troubleshoot-native-memory-leak-iis-7x-application-pool"
+    },    
+    {
+      "source_path": "support/developer/dotnet/framework/general/manifest-definitions-do-not-match-reference.md",
+      "redirect_url": "/troubleshoot/developer/dotnet/framework/installation/manifest-definitions-do-not-match-reference"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/applications-crash-at-startup.md",
+      "redirect_url": "/troubleshoot/developer/dotnet/framework/installation/applications-crash-at-startup"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/patching-framework-fails.md",
+      "redirect_url": "/troubleshoot/developer/dotnet/framework/installation/patching-framework-fails"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/install-pfx-file-using-x509certificate.md",
+      "redirect_url": "/troubleshoot/developer/dotnet/framework/installation/install-pfx-file-using-x509certificate"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/cannot-run-programs-after-upgrade.md",
+      "redirect_url": "/troubleshoot/developer/dotnet/framework/installation/cannot-run-programs-after-upgrade"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/determine-dotnet-versions-service-pack-levels.md",
+      "redirect_url": "/troubleshoot/developer/dotnet/framework/installation/determine-dotnet-versions-service-pack-levels"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/publishing-clickonce-fails.md",
+      "redirect_url": "/troubleshoot/developer/dotnet/framework/installation/publishing-clickonce-fails"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/new-japanese-era-updates.md",
+      "redirect_url": "/troubleshoot/developer/dotnet/framework/installation/new-japanese-era-updates"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/repair-installation.md",
+      "redirect_url": "/troubleshoot/developer/dotnet/framework/installation/repair-installation"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/wcf-extensions-concurrent-request-run-sequentially.md",
+      "redirect_url": "/troubleshoot/developer/dotnet/wcf/wcf-extensions-concurrent-request-run-sequentially"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/wcf-net-tcp-service-stop-response.md",
+      "redirect_url": "/troubleshoot/developer/dotnet/wcf/wcf-net-tcp-service-stop-response"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/call-script-control-run-method.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/cpp/language-compilers/call-script-control-run-method"
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/use-string-arrays.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/cpp/language-compilers/use-string-arrays"
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/_stat-family-cannot-support-symbolic-directory-link.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/cpp/libraries/_stat-family-cannot-support-symbolic-directory-link"
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/alternate-credentials-stop-working.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/version-control/alternate-credentials-stop-working"
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/cannot-find-resource-named-error.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/ide/cannot-find-resource-named-error"
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/cannot-sign-in-javascript-disabled.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/ide/cannot-sign-in-javascript-disabled"
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/not-transform-license-file-to-binary-resource.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/project-build/not-transform-license-file-to-binary-resource"
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/resource-editor-cannot-save-file.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/project-build/resource-editor-cannot-save-file"
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/visual-studio-2022-unsupported-operating-systems.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/installation/visual-studio-2022-unsupported-operating-systems"
+    },
+    {
+      "source_path": "support/developer/visualstudio/ide/cannot-switch-accounts.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/version-control/cannot-switch-accounts"
+    },
+    {
+      "source_path": "support/developer/visualstudio/ide/troubleshoot-clickonce-deployments.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/tools-utilities/troubleshoot-clickonce-deployments"
+    },
+    {
+      "source_path": "support/developer/visualstudio/tools-utilities/cannot-start-windows-simulator.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/ide/cannot-start-windows-simulator"
+    },
+    {
+      "source_path": "support/developer/visualstudio/tools-utilities/nuget-based-package-manager-missing.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/project-build/nuget-based-package-manager-missing"
+    },
+    {
+      "source_path": "support/developer/visualstudio/tools-utilities/xaml-hot-reload-troubleshooting.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/ide/xaml-hot-reload-troubleshooting"
+    },
+    {
+      "source_path": "support/developer/visualstudio/tools-utilities/troubleshooting-service-references.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/ide/troubleshooting-service-references"
+    },
+    {
+      "source_path": "support/developer/webapps/aspnet/active-server-pages/format-datetime-values-xml-dataset.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/format-datetime-values-xml-dataset"
+    },
+    {
+      "source_path": "support/developer/webapps/aspnet/health-diagnostic-performance/create-web-config.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/performance/create-web-config"
+    },
+    {
+      "source_path": "support/developer/webapps/aspnet/health-diagnostic-performance/iis-and-aspnet-diagnostic.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/performance/iis-and-aspnet-diagnostic"
+    },
+    {
+      "source_path": "support/developer/webapps/aspnet/health-diagnostic-performance/performance-call-web-service.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/performance/performance-call-web-service"
+    },
+    {
+      "source_path": "support/developer/webapps/aspnet/health-diagnostic-performance/troubleshoot-outofmemoryexception.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/performance/troubleshoot-outofmemoryexception"
+    },
+    {
+      "source_path": "support/developer/webapps/aspnet/health-diagnostic-performance/troubleshooting-view-state-is-invalid-error.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/performance/troubleshooting-view-state-is-invalid-error"
+    },
+    {
+      "source_path": "support/developer/webapps/aspnet/iisadmin-service-process/disable-documentation-protocol.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/configuration/disable-documentation-protocol"
+    },
+    {
+      "source_path": "support/developer/webapps/aspnet/site-behavior-performance/application-fail-ssl-web.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/performance/application-fail-ssl-web"
+    },
+    {
+      "source_path": "support/developer/webapps/aspnet/site-behavior-performance/error-executing-child-request.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/performance/error-executing-child-request"
+    },
+    {
+      "source_path": "support/developer/webapps/aspnet/site-behavior-performance/system-security-securityexception.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/performance/system-security-securityexception"
+    },
+    {
+      "source_path": "support/developer/webapps/aspnet/site-behavior-performance/request-timed-out-dataadapter.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/performance/request-timed-out-dataadapter"
+    },
+    {
+      "source_path": "support/developer/webapps/aspnet/site-behavior-performance/debug-mode-applications.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/performance/debug-mode-applications"
+    },
+    {
+      "source_path": "support/developer/webapps/aspnet/site-behavior-performance/exceptions-cause-apps-quit.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/performance/exceptions-cause-apps-quit"
+    },
+    {
+      "source_path": "support/developer/webapps/aspnet/site-behavior-performance/filenotfindexception-call-web-service.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/performance/filenotfindexception-call-web-service"
+    },
+    {
+      "source_path": "support/developer/webapps/aspnet/site-behavior-performance/state-server-event-1072-1076.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/performance/state-server-event-1072-1076"
+    },
+    {
+      "source_path": "support/developer/webapps/aspnet/site-behavior-performance/high-memory-level.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/performance/high-memory-level"
+    },
+    {
+      "source_path": "support/developer/webapps/aspnet/site-behavior-performance/system-threading-threadabortexception.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/performance/system-threading-threadabortexception"
+    },
+    {
+      "source_path": "support/developer/webapps/aspnet/site-behavior-performance/uninstallation-wow64-support-component-fails.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/performance/uninstallation-wow64-support-component-fails"
+    },
+    {
+      "source_path": "support/developer/webapps/aspnet/www-administration-management/exclude-folders-antivirus-scanning.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/configuration/exclude-folders-antivirus-scanning"
+    },
+    {
+      "source_path": "support/developer/webapps/aspnet/www-administration-management/back-up-configuration-files.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/configuration/back-up-configuration-files"
+    },
+    {
+      "source_path": "support/developer/webapps/aspnet/www-administration-management/install-aspnet-45-windows-8-server-2012.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/configuration/install-aspnet-45-windows-8-server-2012"
+    },
+    {
+      "source_path": "support/developer/webapps/aspnet/www-administration-management/restrict-users-access-web-resource.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/configuration/restrict-users-access-web-resource"
+    },
+    {
+      "source_path": "support/developer/webapps/aspnet/www-authentication-authorization/authorization-permissions.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/security/authorization-permissions"
+    },
+    {
+      "source_path": "support/developer/webapps/aspnet/www-authentication-authorization/troubleshoot-permissions-security-issues.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/security/troubleshoot-permissions-security-issues"
+    },
+    {
+      "source_path": "support/developer/webapps/aspnet/www-authentication-authorization/applicationpoolidentity-write-app-data.md",
+      "redirect_url": "/troubleshoot/developer/webapps/aspnet/security/applicationpoolidentity-write-app-data"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/development/add-http-response-header-web-site.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-administration-management/add-http-response-header-web-site"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/development/assign-certificate-private-key.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-authentication-authorization/assign-certificate-private-key"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/development/duplicate-aspnet-events.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/health-diagnostic-performance/duplicate-aspnet-events"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/development/upload-to-webdav-directory-fails.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-modules-features/upload-to-webdav-directory-fails"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/development/403-6-forbidden-error.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/403-6-forbidden-error"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/ftp-authentication-authorization/how-to-use-ftp-utility.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/ftp-service-svchost-inetinfo/how-to-use-ftp-utility"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/ftp-service-svchost-inetinfo/ftp-download-session-fails.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/ftp-authentication-authorization/ftp-download-session-fails"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/ftp-service-svchost-inetinfo/error-create-ftp-site.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/ftp-administration-management/error-create-ftp-site"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/ftp-service-svchost-inetinfo/ftp-status-codes-iis-7-and-later-versions.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/ftp-administration-management/ftp-status-codes-iis-7-and-later-versions"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/general/asp-support-windows.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/active-server-pages/asp-support-windows"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/general/use-registry-keys.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-administration-management/use-registry-keys"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/general/customize-iis-log-file-field-names.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/health-diagnostic-performance/customize-iis-log-file-field-names"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/general/users-cannot-access-web-sites-when-log-full.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/health-diagnostic-performance/users-cannot-access-web-sites-when-log-full"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/health-diagnostic-performance/data-collection-strategies.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/data-collection-strategies"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/health-diagnostic-performance/hidden-static-files-http-404-access-denied.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/hidden-static-files-http-404-access-denied"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/health-diagnostic-performance/clm-http-bad-request.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/clm-http-bad-request"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/health-diagnostic-performance/http-error-403-7-forbidden-web-app.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/http-error-403-7-forbidden-web-app"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/health-diagnostic-performance/troubleshoot-404-file-not-found-error.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/troubleshoot-404-file-not-found-error"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/health-diagnostic-performance/http-404-13-website.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/http-404-13-website"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/health-diagnostic-performance/error-message-you-visit-web-site.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/error-message-you-visit-web-site"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/health-diagnostic-performance/http-error-405-website.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/http-error-405-website"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/health-diagnostic-performance/http-error-500-19-webpage.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/http-error-500-19-webpage"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/health-diagnostic-performance/http-error-501-not-implemented.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/http-error-501-not-implemented"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/health-diagnostic-performance/cannot-access-site-using-https.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-authentication-authorization/cannot-access-site-using-https"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/health-diagnostic-performance/troubleshoot-high-cpu-in-iis-app-pool.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/troubleshoot-high-cpu-in-iis-app-pool"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/iisadmin-service-inetinfo/using-iisreset-restart-iis-result-error.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-administration-management/using-iisreset-restart-iis-result-error"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/iisadmin-service-inetinfo/http-service-fail-stopped.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/deployment-migration/http-service-fail-stopped"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/iisadmin-service-inetinfo/httpsys-registry-windows.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/health-diagnostic-performance/httpsys-registry-windows"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/iisadmin-service-inetinfo/processor-affinity-not-work.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/health-diagnostic-performance/processor-affinity-not-work"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/iisadmin-service-inetinfo/ssl-multiple-web-sites-shared-configuration.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-authentication-authorization/ssl-multiple-web-sites-shared-configuration"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/site-behavior-performance/0-byte-file-compression-enabled.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-modules-features/0-byte-file-compression-enabled"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/site-behavior-performance/cannot-view-website-using-ssl.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-authentication-authorization/cannot-view-website-using-ssl"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/site-behavior-performance/calling-postcompletion-cause-crash.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/development/calling-postcompletion-cause-crash"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/site-behavior-performance/server-execution-fail-call-mts-com-asp.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/active-server-pages/server-execution-fail-call-mts-com-asp"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/site-behavior-performance/event-handles-leaked.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/active-server-pages/event-handles-leaked"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/site-behavior-performance/event-115-connect-https-website.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-administration-management/event-115-connect-https-website"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/site-behavior-performance/failed-generate-certificate-request.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/iisadmin-service-inetinfo/failed-generate-certificate-request"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/www-administration-management/configure-default-document-iis.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-modules-features/configure-default-document-iis"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/www-administration-management/enable-ssl-all-customers.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-authentication-authorization/enable-ssl-all-customers"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/www-administration-management/error-when-you-configure-32-bit-handlers.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-modules-features/error-when-you-configure-32-bit-handlers"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/www-administration-management/https-connections-fail-ssl-bindings-deleted.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-authentication-authorization/https-connections-fail-ssl-bindings-deleted"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/www-administration-management/iis-events-not-display-remotely.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/health-diagnostic-performance/iis-events-not-display-remotely"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/www-authentication-authorization/access-denied-call-web-service.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/access-denied-call-web-service"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/www-authentication-authorization/0x80090016-change-application-pool-identity.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/deployment-migration/0x80090016-change-application-pool-identity"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/www-authentication-authorization/configure-w3svc-wsfc.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-administration-management/configure-w3svc-wsfc"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/www-authentication-authorization/configuration-files-cannot-exported.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-administration-management/configuration-files-cannot-exported"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/www-authentication-authorization/http-403-forbidden-open-webpage.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/site-behavior-performance/http-403-forbidden-open-webpage"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/www-authentication-authorization/shared-configuration-require-same-version.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-administration-management/shared-configuration-require-same-version"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/www-authentication-authorization/shutdowntimelimit-not-apply-to-wcf.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/was-service-svchost-process-operation/shutdowntimelimit-not-apply-to-wcf"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/www-authentication-authorization/understanding-identities.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/was-service-svchost-process-operation/understanding-identities"
+    },
+    {
+      "source_path": "support/developer/webapps/iis/www-modules-features/add-remove-global-modules.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/www-administration-management/add-remove-global-modules"
     }
   ]
 }

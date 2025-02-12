@@ -1,7 +1,7 @@
 ---
 title: Windows Connection Manager disconnects WLAN
 description: This article describes an issue in which the WLAN is disconnected if a VPN connection is established.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

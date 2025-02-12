@@ -1,7 +1,7 @@
 ---
 title: Use GP to control access to web sites
 description: Helps you to use Windows Group Policy to control access to web sites.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

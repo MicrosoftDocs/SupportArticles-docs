@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot multiple records being registered with the same IP address
 description: Describes how to configure DNS scavenging and the DHCP lease duration to prevent multiple records with the same IP address.
-ms.date: 09/11/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

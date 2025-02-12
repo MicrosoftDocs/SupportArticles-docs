@@ -1,0 +1,28 @@
+### YamlMime:Landing
+
+title: Azure Virtual Desktop troubleshooting documentation
+summary: Welcome to Azure Virtual Desktop troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Azure Virtual Desktop. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+
+metadata:
+  title: Troubleshoot common issues with Azure Virtual Desktop
+  description: Documentation for troubleshooting common issues with Azure Virtual Desktop. # Required; article description that is displayed in search results. < 160 chars.
+  ms.topic: landing-page # Required
+  
+  ms.reviewer: delhan #Required; microsoft alias of author; optional team alias.
+  ms.date: 01/17/2025
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Virtual Desktop
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot agent common issues
+            url: troubleshoot-agent.md
+          - text: Troubleshoot app attach
+            url: troubleshoot-app-attach.md
+          - text: Troubleshoot connection quality issues
+            url: troubleshoot-connection-quality.md

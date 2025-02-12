@@ -3,7 +3,7 @@ title: Troubleshoot Azure Files identity-based authentication and authorization 
 description: Troubleshoot problems using identity-based authentication to connect to SMB Azure file shares and see possible resolutions.
 ms.service: azure-file-storage
 ms.custom: sap:Security, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
-ms.date: 11/15/2024
+ms.date: 02/11/2025
 ms.reviewer: kendownie, v-surmaini, v-weizhu
 ---
 # Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
@@ -75,17 +75,25 @@ First, make sure that you've followed the steps to [enable Azure Files AD DS Aut
 
 Second, try [mounting Azure file share with storage account key](/azure/storage/files/storage-how-to-use-files-windows). If the share fails to mount, download [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Windows) to help you validate the client running environment. AzFileDiagnostics can detect incompatible client configurations that might cause access failure for Azure Files, give prescriptive guidance on self-fix, and collect the diagnostics traces.
 
-Third, you can run the `Debug-AzStorageAccountAuth` cmdlet to conduct a set of basic checks on your AD configuration with the logged-on AD user. This cmdlet is supported on [AzFilesHybrid v0.1.2+ version](https://github.com/Azure-Samples/azure-files-samples/releases). You need to run this cmdlet with an AD user that has owner permission on the target storage account.
+Third, you can run the `Debug-AzStorageAccountAuth` cmdlet to conduct a set of basic checks on your AD configuration with the logged-on AD user. This cmdlet is supported on [AzFilesHybrid v0.1.2+ version](https://github.com/Azure-Samples/azure-files-samples/releases). 
 
-```PowerShell
-$ResourceGroupName = "<resource-group-name-here>"
-$StorageAccountName = "<storage-account-name-here>"
+1. Sign in to Azure PowerShell interactively as an AD user that has owner permission on the target storage account:
 
-Debug-AzStorageAccountAuth `
-    -StorageAccountName $StorageAccountName `
-    -ResourceGroupName $ResourceGroupName `
-    -Verbose
-```
+    ```azurepowershell-interactive
+    Connect-AzAccount
+    ```
+
+2. Run the `Debug-AzStorageAccountAuth` cmdlet:
+
+    ```azurepowershell-interactive
+    $ResourceGroupName = "<resource-group-name-here>"
+    $StorageAccountName = "<storage-account-name-here>"
+
+    Debug-AzStorageAccountAuth `
+        -StorageAccountName $StorageAccountName `
+        -ResourceGroupName $ResourceGroupName `
+        -Verbose
+    ```
 
 The cmdlet performs these checks in sequence and provides guidance for failures:
 
@@ -97,9 +105,13 @@ The cmdlet performs these checks in sequence and provides guidance for failures:
 6. `CheckAadUserHasSid`: Check if the logged on AD user is synced to Microsoft Entra ID. If you want to look up whether a specific AD user is synchronized to Microsoft Entra ID, you can specify the `-UserName` and `-Domain` in the input parameters. For a given Microsoft Entra user, it checks its SID. To run this check, you must provide the `-ObjectId` parameter, along with the object ID of the Microsoft Entra user.
 7. `CheckGetKerberosTicket`: Attempt to get a Kerberos ticket to connect to the storage account. If there isn't a valid Kerberos token, run the `klist get cifs/storage-account-name.file.core.windows.net` cmdlet and examine the error code to determine the cause of the ticket retrieval failure.
 8. `CheckStorageAccountDomainJoined`: Check if the AD authentication is enabled and the account's AD properties are populated. If not, [enable AD DS authentication on Azure Files](/azure/storage/files/storage-files-identity-ad-ds-enable).
-9. `CheckUserRbacAssignment`: Check if the AD identity has the proper RBAC role assignment to provide share-level permissions to access Azure Files. If not, [configure the share-level permission](/azure/storage/files/storage-files-identity-assign-share-level-permissions). (Supported on AzFilesHybrid v0.2.3+ version)
-10. `CheckUserFileAccess`: Check if the AD identity has the proper directory/file permission (Windows ACLs) to access Azure Files. If not, [configure the directory/file level permission](/azure/storage/files/storage-files-identity-configure-file-level-permissions). To run this check, you must provide the `-FilePath` parameter, along with the path of the mounted file that you want to debug the access to. (Supported on AzFilesHybrid v0.2.3+ version)
-11. `CheckAadKerberosRegistryKeyIsOff`: Check if the Microsoft Entra Kerberos registry key is off. If the key is on, run `reg add HKLM\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Parameters /v CloudKerberosTicketRetrievalEnabled /t REG_DWORD /d 0` from an elevated command prompt to turn it off, and then reboot your machine. (Supported on AzFilesHybrid v0.2.9+ version)
+9. `CheckUserRbacAssignment`: Check if the AD identity has the proper RBAC role assignment to provide share-level permissions to access Azure Files. If not, [configure the share-level permission](/azure/storage/files/storage-files-identity-assign-share-level-permissions). (Supported on AzFilesHybrid v0.2.3+)
+10. `CheckUserFileAccess`: Check if the AD identity has the proper directory/file permission (Windows ACLs) to access Azure Files. If not, [configure the directory/file level permission](/azure/storage/files/storage-files-identity-configure-file-level-permissions). To run this check, you must provide the `-FilePath` parameter, along with the path of the mounted file that you want to debug the access to. (Supported on AzFilesHybrid v0.2.3+)
+11. `CheckKerberosTicketEncryption`: Check if the storage account is configured to accept the encryption type used by the Kerberos ticket. (Supported on AzFilesHybrid v0.2.5+)
+12. `CheckChannelEncryption`: Check if the storage account is configured to accept the SMB channel encryption type used by the client. (Supported on AzFilesHybrid v0.2.5+)
+13. `CheckDomainLineOfSight`: Check if the client has unimpeded network connectivity to the domain controller. (Supported on AzFilesHybrid v0.2.5+)
+14. `CheckDefaultSharePermission`:  Check if the [default share-level permission](/azure/storage/files/storage-files-identity-assign-share-level-permissions#share-level-permissions-for-all-authenticated-identities) is configured. (Supported on AzFilesHybrid v0.2.5+)
+15. `CheckAadKerberosRegistryKeyIsOff`: Check if the Microsoft Entra Kerberos registry key is off. If the key is on, run `reg add HKLM\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Parameters /v CloudKerberosTicketRetrievalEnabled /t REG_DWORD /d 0` from an elevated command prompt to turn it off, and then reboot your machine. (Supported on AzFilesHybrid v0.2.9+)
 
 If you just want to run a subselection of the previous checks, you can use the `-Filter` parameter, along with a comma-separated list of checks to run. For example, to run all checks related to share-level permissions (RBAC), use the following PowerShell cmdlets:
 
@@ -128,6 +140,7 @@ Debug-AzStorageAccountAuth `
     -FilePath $FilePath `
     -Verbose
 ```
+
 ## Unable to mount Azure file shares with Microsoft Entra Kerberos
 
 ### Self diagnostics steps
@@ -136,12 +149,20 @@ First, make sure that you've followed the steps to [enable Microsoft Entra Kerbe
 
 Second, you can run the `Debug-AzStorageAccountAuth` cmdlet to perform a set of basic checks. This cmdlet is supported for storage accounts configured for Microsoft Entra Kerberos authentication, on [AzFilesHybrid v0.3.0+ version](https://github.com/Azure-Samples/azure-files-samples/releases).
 
-```PowerShell
-$ResourceGroupName = "<resource-group-name-here>"
-$StorageAccountName = "<storage-account-name-here>"
+1. Sign in to Azure PowerShell interactively as an AD user that has owner permission on the target storage account:
 
-Debug-AzStorageAccountAuth -StorageAccountName $StorageAccountName -ResourceGroupName $ResourceGroupName -Verbose
-```
+    ```azurepowershell-interactive
+    Connect-AzAccount
+    ```
+
+2. Run the `Debug-AzStorageAccountAuth` cmdlet:
+
+    ```azurepowershell-interactive
+    $ResourceGroupName = "<resource-group-name-here>"
+    $StorageAccountName = "<storage-account-name-here>"
+
+    Debug-AzStorageAccountAuth -StorageAccountName $StorageAccountName -ResourceGroupName $ResourceGroupName -Verbose
+    ```
 
 The cmdlet performs these checks in sequence and provides guidance for failures:
 

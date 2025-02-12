@@ -8,7 +8,7 @@ editor: v-jsitser
 ms.reviewer: cssakscic, v-rekhanain, v-leedennis
 ms.service: azure-kubernetes-service
 ms.topic: overview
-ms.custom: sap:Azure policy add-on
+ms.custom: sap:Extensions, Policies and Add-Ons
 #Customer intent: As an Azure Kubernetes user, I want to see what troubleshooting articles are available for the Azure Policy Add-on so that I fix various Azure Policy Add-on issues.
 ---
 # Troubleshoot the Azure Policy Add-on for Azure Kubernetes Service (AKS)

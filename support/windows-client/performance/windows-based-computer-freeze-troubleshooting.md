@@ -1,7 +1,7 @@
 ---
 title: Windows-based computer freeze troubleshooting
 description: Learn how to troubleshoot computer freeze issues on Windows-based computers and servers. Also, you can learn how to diagnose, identify, and fix these issues.
-ms.date: 05/10/2024
+ms.date: 01/15/2025
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.collection: highpri

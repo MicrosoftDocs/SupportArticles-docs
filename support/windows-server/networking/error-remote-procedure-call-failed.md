@@ -1,7 +1,7 @@
 ---
 title: The remote procedure call failed error
 description: Helps resolve the error - The namespace cannot be queried. The remote procedure call failed.
-ms.date: 09/25/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

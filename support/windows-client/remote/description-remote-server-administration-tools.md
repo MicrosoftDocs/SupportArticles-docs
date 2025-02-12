@@ -1,7 +1,7 @@
 ---
 title: Description of Remote Server Administration Tools
 description: Describes the tools that are available for installation as part of Remote Server Administration Tools
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -34,6 +34,8 @@
       href: connections/client-request-aborted-failed-fetch.md
     - name: Missing on-premises data gateway
       href: connections/check-if-gateway-is-the-right-region.md
+    - name: Troubleshoot broken connections
+      href: connections/troubleshoot-broken-connections.md 
     - name: Troubleshoot Flow Connections
       href: connections/troubleshooting-flow-connections.md
     - name: Troubleshoot Flow Custom Connectors
@@ -102,6 +104,8 @@
       href: desktop-flows/ui-flows-run-failed-with-aadlogonfailure-error.md
     - name: Desktop flow fails with the SessionCreationTimeout error code
       href: desktop-flows/sessioncreationtimeout-error-code.md
+    - name: '"ExpiredDesktopFlowConnection" error when using or testing a desktop flow connection'
+      href: desktop-flows/troubleshoot-expired-desktop-flow-connection.md
     - name: Environment load fails with insufficient permissions in the v2 schema
       href: desktop-flows/environment-load-fails-insufficient-permissions-after-2-46.md
     - name: Error communicating with the emulator using Micro Focus Reflection Desktop
@@ -148,6 +152,8 @@
       href: desktop-flows/session-has-logged-off-troubleshooting.md
     - name: 'Security update for "connect with sign-in" connections on AD domain-joined machines'
       href: desktop-flows/connect-with-sign-in-security-update.md
+    - name: Security update for the browser automation component
+      href: desktop-flows/automation-browser-security-update.md  
     - name: Some actions appear to be missing or aren't visible
       href: desktop-flows/actions-not-available.md
     - name: Set drop-down list value in window/on web page action fails
@@ -172,6 +178,8 @@
       href: desktop-flows/temporary-profile-error-machine-registration.md
     - name: 'UnallowedTenantForConnectWithSignIn or connection errors when using "connect with sign-in"'
       href: desktop-flows/troubleshoot-unallowed-tenant-for-connect-with-sign-in.md
+    - name: Your machine doesn't appear when creating a desktop flow connection 
+      href: desktop-flows/machine-not-shown-in-list.md
     - name: Unattended desktop flow fails with MSEntraMachineAlwaysPromptingForPassword
       href: desktop-flows/msentramachinealwayspromptingforpassword-error.md
 - name: Flow creation

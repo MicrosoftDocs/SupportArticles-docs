@@ -2,7 +2,7 @@
 title: Active Directory authentication fails with klist error 0x8009030e
 description: Describes several Active Directory authentication issues and how to fix them.
 ms.topic: troubleshooting
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 ms.custom: sap:Windows Security Technologies\Kerberos authentication, csstroubleshoot, ikb2lmc
 ms.reviewer: kaushika
 ---

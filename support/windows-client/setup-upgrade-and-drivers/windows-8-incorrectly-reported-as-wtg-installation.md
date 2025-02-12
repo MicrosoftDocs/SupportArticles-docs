@@ -1,7 +1,7 @@
 ---
 title: Multiple operations fail if Windows 8 is improperly identified as a Windows To Go installation
 description: Discusses issues that occur when Windows 8 is improperly identified as a Windows To Go installation.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

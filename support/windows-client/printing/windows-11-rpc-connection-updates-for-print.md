@@ -2,7 +2,7 @@
 title: Windows 11 RPC connection updates for print
 description: Introduce the Windows 11 RPC connection updates for print and the recommended configurations.
 ms.topic: troubleshooting
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 ms.custom: sap:Print, Fax, and Scan\Print Configuration or Management, csstroubleshoot
 ---
 # RPC connection updates for print in Windows 11

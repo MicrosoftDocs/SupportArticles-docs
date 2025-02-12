@@ -2,9 +2,9 @@
 title: Unattended Desktop Flow Run Fails with MSEntraMachineAlwaysPromptingForPassword
 description: Solves an error that occurs when you run an unattended desktop flow in Microsoft Power Automate for desktop.
 ms.author: moelaabo
-ms.reviewer: guco, alarnaud
+ms.reviewer: guco, alarnaud, johndund
 ms.custom: sap:Desktop flows\Unattended flow runtime errors
-ms.date: 12/09/2024
+ms.date: 02/11/2025
 ---
 # An unattended desktop flow run fails with the MSEntraMachineAlwaysPromptingForPassword error
 
@@ -29,7 +29,29 @@ Your unattended desktop flow run fails with the "MSEntraMachineAlwaysPromptingFo
 
 Power Automate for desktop can't validate your Microsoft Entra ID (formerly Azure Active Directory) credentials on the machine. This issue is typically caused by a group policy setting on your machine.
 
-## Resolution
+## Resolution 1: Use Microsoft Entra authentication for Remote Desktop with a user certificate
+
+This resolution requires Power Automate for desktop version 2.50 or later and must be used when no [multifactor authentication (MFA) exception](~/power-platform/power-automate/administration/conditional-access-and-multi-factor-authentication-in-flow.md#details) can be granted to the desktop flow connection account.
+
+For steps on how to set up Microsoft Entra certificate based authentication for Power Automate, see [Configure certificate-based authentication (preview)](/power-automate/desktop-flows/configure-certificate-based-auth).
+
+## Resolution 2: Use Microsoft Entra authentication for Remote Desktop with a username and password
+
+This resolution requires Power Automate for desktop version 2.49 or later. If you don't have MFA enabled for the account used by the desktop flows connection, you can set up Microsoft Entra authentication using a username and password instead.
+
+1. Open the Registry Editor (regedit) with administrative privileges. Navigate to the following registry path, create a new DWORD-32 value with the name `UseRdsAadAuthentication`, and then set the value of `UseRdsAadAuthentication` to **1**.
+
+    |Registry path|Registry key| DWORD-32 value|
+    |-------------|------------|---------------|
+    |Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Power Automate Desktop\Service|`UseRdsAadAuthentication`|**1**|
+
+2. [Hide the consent prompt dialog for a target device group](/power-automate/desktop-flows/run-unattended-desktop-flows#admin-consent-for-unattended-runs-using-cba-or-sign-in-credentials-with-nla-preview).
+
+3. Restart the Power Automate service.
+
+4. Use a Microsoft Entra ID connection with username and password credentials. Note that an MFA exception is required for this account.
+
+## Resolution 3: Disable fPromptForPassword
 
 To solve this issue, check the group policy setting on your machine.
 
