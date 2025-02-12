@@ -52,7 +52,7 @@
       - name: IDX10501 Error in ASP.NET Core with Azure B2C Custom Policy
         href: app-integration/troubleshoot-error-idx10501-aspnet-b2c.md
       - name: Authentication doesn't work after Android app is published to Google Play Store
-        href: app-integration/authentication-fails-after-publishing-app-to-google-play-store.md
+        href: app-integration/android-app-authentication-fails-after-published-to-google-play-store.md
 
   - name: Troubleshoot adding apps
     href: app-integration/troubleshoot-adding-apps.md
