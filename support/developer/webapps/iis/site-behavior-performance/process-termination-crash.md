@@ -141,13 +141,13 @@ If you don't have them, follow these steps to set up WER:
 1. Open the Windows Registry Editor (**regedit.exe**) and locate the key **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting\LocalDumps**. If this key isn't available, create it. 
 1. In the key from step 1, create the following values: 
 
-|Name|Type|Value to enter |
-|-|-|-|
-|DumpFolder|Expandable String Value (REG_EXPAND_SZ) |Path to a location where you want the files to (For example: **D:\Dumps**) <br>**Note**: Make sure that the drive you use isn't a system drive, and it has sufficient space to hold a memory dump of your application. |
-|DumpCount|DWORD (REG_DWORD) |3 |
-|DumpType|DWORD (REG_DWORD)|2 (Using this value can generate a full dump.)|
+   |Name|Type|Value to enter |
+   |-|-|-|
+   |DumpFolder|Expandable String Value (REG_EXPAND_SZ) |Path to a location where you want the files to (For example: **D:\Dumps**) <br>**Note**: Make sure that the drive you use isn't a system drive, and it has sufficient space to hold a memory dump of your application. |
+   |DumpCount|DWORD (REG_DWORD) |**3** |
+   |DumpType|DWORD (REG_DWORD)|**2** (Using this value can generate a full dump.)|
 
-For more on the possible values, see [Collecting User-Mode Dumps](/windows/win32/wer/collecting-user-mode-dumps).
+   For more on the possible values, see [Collecting User-Mode Dumps](/windows/win32/wer/collecting-user-mode-dumps).
 
 ## How to perform data analysis 
 
