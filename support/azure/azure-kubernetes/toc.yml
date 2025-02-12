@@ -369,3 +369,5 @@
     - name: VMExtensionError_K8SAPIServerDNSLookupFail error
   - name: UnsatisfiablePDB error
     href: error-codes/unsatisfiablepdb-error.md
+  - name: ERR_VHD_FILE_NOT_FOUND error
+    href: error-codes/err-vhd-file-not-found.md
