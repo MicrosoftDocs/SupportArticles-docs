@@ -101,10 +101,10 @@ Unexpected restarts in an Azure SUSE Pacemaker cluster often occur because of mi
        sudo pcs property set maintenance-mode=false
        ``` 
 
-> **Note:**  
+> [!IMPORTANT]
 > When troubleshooting unexpected node restarts or failures, it's crucial to assess the impact of security tools installed on the system. These tools may interfere with cluster operations by blocking essential processes or modifying system files, potentially causing instability, unexpected timeouts, or node reboots.  
 >  
-> To mitigate such risks, it is recommended to disable security tools on systems running a Pacemaker cluster or ensure that appropriate exclusions are configured to prevent conflicts with the cluster and its associated applications.
+> To mitigate such risks, it's recommended to disable security tools on systems running a Pacemaker cluster or ensure that appropriate exclusions are configured to prevent conflicts with the cluster and its associated applications.
 
 ## Scenario 3: Migration from on-premises to Azure
 When you migrate a SUSE Pacemaker cluster from on-premises to Azure, unexpected restarts can occur because of specific misconfigurations or overlooked dependencies. 
