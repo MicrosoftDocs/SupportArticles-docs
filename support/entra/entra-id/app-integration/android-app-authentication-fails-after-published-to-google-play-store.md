@@ -3,7 +3,7 @@ title: Android app authentication fails after published to Google Play Store
 description: Provides a solution to an authentication failure with an Android app that's published to Google Play Store.
 ms.reviewer: markbukovich, v-weizhu
 ms.service: entra-id
-ms.date: 02/10/2025
+ms.date: 02/12/2025
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
 # Authentication failed after Android app is published to Google Play Store
@@ -44,26 +44,43 @@ The public signature hash of an application installed via Google Play differs fr
 
 To resolve this issue, do the following things:
 
-- Find out the new signature hash resulting from Google Play Installation.
+- Get the new signature hash with the MSAL Package Inspector tool or from the Google Play Console .
 - Add a new redirect URI to the App Registration in the Azure portal with the new signature hash.
 - Update the MSAL configuration within the application code to use the new redirect URI and signature hash.
 
 ### Find the new signature hash
 
-You can get the new signature hash by using MSAL Package Inspector tool or from the Google Play Console.
+You can get the new signature hash by using the MSAL Package Inspector tool or from the Google Play Console.
 
 To install and use the MSAL Package Inspector, see
 https://blogs.aaddevsup.xyz/2022/03/package-inspector-for-msal-android-native-guide/.
 
 To get the signature hash from the Google Play Console, follow these steps:
 
-1. Go to the Console and sign in with your Google Developer account.
+1. Go to the Google Play Console and sign in with your Google Developer account.
 2. Once you are in the Google Play Console, select the app you works on.
 3. On the left navigation, under the **Release** category, expand **Setup** and select **App Integrity**.
 4. Select the **App signing**tab. You will see the **fingerprint** of the app signing key in three different variations. 
-5. Copy the **SHA-1 certificate fingerprint** and paste it into the following PowerShell script as the value of the $Thumbprint variable. 
-6. Run the script to obtain the base64 encoded fingerprint that MSAL needs.
+5. Copy the **SHA-1 certificate fingerprint** and paste it into the following PowerShell script as the value of the `$Thumbprint` variable. 
+6. Run the following script to obtain the base64 encoded fingerprint that MSAL needs:
 
+    ```powershell
+    $Thumbprint = "paste your fingerprint here"
+    $Thumbprint = $Thumbprint.Replace(":", "")
+
+    $Bytes = [byte[]]::new($Thumbprint.Length / 2)
+
+    For($i=0; $i -lt $Thumbprint.Length; $i+=2){
+        $Bytes[$i/2] = [convert]::ToByte($Thumbprint.Substring($i, 2), 16)
+    }
+
+    $hashedString =[Convert]::ToBase64String($Bytes)
+
+    Write-Host $hashedString
+    ```
+
+ :::image type="content" source="media/android-app-authentication-fails-after-published-to-google-play-store/google-play-console-app-signing.png" alt-text="Screenshot that shows how to get the signature hash from Google Play Console.":::
+ 
 ### Add a new redirect URI to the App Registration in the Azure portal with the new signature hash
 
 > [NOTE]
@@ -71,10 +88,14 @@ To get the signature hash from the Google Play Console, follow these steps:
 
 1. Sign in to the Azure portal and navigate to the App registrations page.
 2. Select the app registration for your Android app.
-3. Under Manage, select **Authentication** on the left navigation.
-4. Select **Add a platform**.
-5. Select **Android**.
+3. Under **Manage**, select **Authentication**.
+4. Under Platform configurations, select **Add a platform**.
+5. Under **Configure platforms**, select **Android**.
+
+    :::image type="content" source="media/android-app-authentication-fails-after-published-to-google-play-store/app-reg-platform-config.png" alt-text="Screenshot that shows how to configure Android platform.":::
 6. Enter the package name of your Android app and the new signature hash in the indicated fields and then select **Configure**. 
+
+    :::image type="content" source="media/android-app-authentication-fails-after-published-to-google-play-store/app-registrations-configure-android-app.png" alt-text="Screenshot that shows how to configure an Android app.":::
 
     > [!NOTE]
     > It's fine to use the same package name in multiple Android Redirect URIs as long as the signature hash is different.
@@ -87,9 +108,47 @@ Update the MSAL configuration and Android Manifest files in the application code
 
     Only change the redirect URI. Copy and paste it directly from the Azure portal. In the Azure portal, the signature hash portion of the redirect URI is HTTP encoded. It should remain HTTP encoded.
 
+    ```json
+    {
+        "client_id": "<Client ID>",
+        "authorization_user_agent": "DEFAULT",
+        "redirect_uri": "<Redirect URI>"
+        "broker_redirect_uri_registered": true,
+        "authorities": [
+            {
+                "types": "AAD",
+                "audience": {
+                    "type": "AzureADMyOrg",
+                    "tenant_id": "<Tenant ID>"
+                }
+            }
+        ],
+        "logging":{
+            "log_level": "VERBOSE",
+            "logcat_enabled": true
+        }
+    }
+    ```
+
 - Android Manifest file:
 
     Only change the `android:path` property in the `com.microsoft.identity.client.BrowserTabActivity` activity. Paste the signature hash as the value for this property.
+
+    ```xml
+    <activity
+        android:name="com.microsoft.identity.client.BrowserTabActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data
+                android:schema="msauth"
+                android:host="com.example.azureauthsso1"
+                android:path="android_path" />
+        </intent-filter>
+    </activity>
+    ```
+
 
     > [!NOTE]
     > - Make sure to include the forward slash at the front of the signature hash.
