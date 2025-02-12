@@ -26,31 +26,31 @@ To show an image for entities that don't have an **EntityImage** by default, you
 
 **To create an image field for the entity**
 
-  1.	Go to **Settings** > **Customizations** > **Customize the System**.
+  1.    Go to **Settings** > **Customizations** > **Customize the System**.
 
-  2.	In the solution explorer, under **Components**, expand **Entities**, and then select the entity. In this example, we're selecting the **Appointment** entity.
+  2.    In the solution explorer, under **Components**, expand **Entities**, and then select the entity. In this example, we're selecting the **Appointment** entity.
 
   > [!div class="mx-imgBorder"]
   > ![Open the Appointment entity.](media/ts-wordtemplate-select-appointment-entity.png "Open the Appointment entity")
 
-  3.	In the **Appointment** entity, select **Fields**, and then select **New**.
+  3.    In the **Appointment** entity, select **Fields**, and then select **New**.
 
   > [!div class="mx-imgBorder"]
   > ![Add a new field.](media/ts-wordtemplate-select-new-field.png "Add a new field")
     
-  4.	In the new field form, enter **Entity Image** for the **Display Name**, enter **EntityImage** for the **Name**, and for **Data Type**, select **Image**.
+  4.    In the new field form, enter **Entity Image** for the **Display Name**, enter **EntityImage** for the **Name**, and for **Data Type**, select **Image**.
 
   > [!div class="mx-imgBorder"]
   > ![Add EntityImage as a new field.](media/ts-wordtemplate-add-image-entity.png "Add EntityImage as a new field") 
 
-  5.	Save and close the form. 
+  5.    Save and close the form. 
 
-  6.	Verify that the new field has been added by selecting the entity name. In this example, we've added **Entity Image** as a value for the **Primary Image** field for the **Appointment** entity.
+  6.    Verify that the new field has been added by selecting the entity name. In this example, we've added **Entity Image** as a value for the **Primary Image** field for the **Appointment** entity.
 
   > [!div class="mx-imgBorder"]
   > ![Entity Image is added to the Primary Image field for the Appointment entity.](media/ts-wordtemplate-primary-image-entity-added.png "Entity Image is added to the Primary Image field for the Appointment entity")
 
-  7.	Publish the customizations.
+  7.    Publish the customizations.
 
 **To upload the entity image to the record**
 
@@ -114,7 +114,7 @@ Here's an example of what happens when you export a document that contains unsup
 
 ### See also
 
-[Use Word templates to create standardized documents](using-word-templates-dynamics-365.md)
+[Use Word templates to create standardized documents](/power-platform/admin/using-word-templates-dynamics-365)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

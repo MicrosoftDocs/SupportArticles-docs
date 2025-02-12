@@ -325,7 +325,7 @@ These columns appear empty for mailboxes whose email addresses were previously a
   
 ### See also
 
-[Server-side synchronization](/power-platform/admin/admin/server-side-synchronization) <br />
+[Server-side synchronization](/power-platform/admin/server-side-synchronization) <br />
 [Test connection to Exchange Server (on-premises)](/power-platform/admin/test-connection-exchange-server-onpremises) <br />
 [Best practices and things to know about server-side synchronization](/power-platform/admin/best-practices-server-side-synchronization)  <br /> 
 [{Hidden Gem}Understanding Server Side sync Performance Dashboard](https://dynamicsofdynamicscrm.wordpress.com/2015/07/27/hidden-gemunderstanding-server-side-sync-performance-dashboard/)   
