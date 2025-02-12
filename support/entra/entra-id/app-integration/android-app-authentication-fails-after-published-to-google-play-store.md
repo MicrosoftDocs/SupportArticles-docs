@@ -8,7 +8,7 @@ ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
 # Authentication failed after Android app is published to Google Play Store
 
-This article provides a solution to an authentication failure that occurs after users install an Android app that's published to Google Play Store.
+This article provides a solution to an authentication failure that occurs during signing in after users install an Android app that's published to Google Play Store.
 
 ## Symptoms
 
@@ -16,7 +16,7 @@ Consider the following scenario:
 
 - You have successfully implemented Microsoft Entra Authentication in your Android app with the Microsoft Authentication Library.
 - The app has been built and executed, and passed all QA testing.
-- You publish the app on Google Play Store. 
+- You publish the app to Google Play Store. 
 
 After users install the app, authentication doesn't work when signing in to the app.
 
@@ -44,16 +44,15 @@ The public signature hash of an application installed via Google Play differs fr
 
 To resolve this issue, do the following things:
 
-- Get the new signature hash with the MSAL Package Inspector tool or from the Google Play Console .
-- Add a new redirect URI to the App Registration in the Azure portal with the new signature hash.
-- Update the MSAL configuration within the application code to use the new redirect URI and signature hash.
+- [Get the new signature hash with the MSAL Package Inspector tool or from the Google Play Console](#get-the-new-signature-hash-with-the-msal-package-inspector-tool-or-from-the-google-play-console).
+- [Add a new redirect URI to the App Registration in the Azure portal with the new signature hash](#add-a-new-redirect-uri-to-the-app-registration-in-the-azure-portal-with-the-new-signature-hash).
+- [Update the MSAL configuration within the application code to use the new redirect URI and signature hash](#update-the-msal-configuration-within-the-application-code-to-use-the-new-redirect-uri-and-signature-hash).
 
-### Find the new signature hash
+### Get the new signature hash with the MSAL Package Inspector tool or from the Google Play Console
 
 You can get the new signature hash by using the MSAL Package Inspector tool or from the Google Play Console.
 
-To install and use the MSAL Package Inspector, see
-https://blogs.aaddevsup.xyz/2022/03/package-inspector-for-msal-android-native-guide/.
+To install and use the MSAL Package Inspector, see [Package Inspector for MSAL Android Native Guide](https://blogs.aaddevsup.xyz/2022/03/package-inspector-for-msal-android-native-guide/).
 
 To get the signature hash from the Google Play Console, follow these steps:
 
@@ -61,7 +60,7 @@ To get the signature hash from the Google Play Console, follow these steps:
 2. Once you are in the Google Play Console, select the app you works on.
 3. On the left navigation, under the **Release** category, expand **Setup** and select **App Integrity**.
 4. Select the **App signing**tab. You will see the **fingerprint** of the app signing key in three different variations. 
-5. Copy the **SHA-1 certificate fingerprint** and paste it into the following PowerShell script as the value of the `$Thumbprint` variable. 
+5. Copy the **SHA-1 certificate fingerprint** and paste it into the PowerShell script in step 6 as the value of the `$Thumbprint` variable. 
 6. Run the following script to obtain the base64 encoded fingerprint that MSAL needs:
 
     ```powershell
@@ -93,12 +92,13 @@ To get the signature hash from the Google Play Console, follow these steps:
 5. Under **Configure platforms**, select **Android**.
 
     :::image type="content" source="media/android-app-authentication-fails-after-published-to-google-play-store/app-reg-platform-config.png" alt-text="Screenshot that shows how to configure Android platform.":::
-6. Enter the package name of your Android app and the new signature hash in the indicated fields and then select **Configure**. 
+6. Enter the package name of your Android app. Also generate and enter the signature hash.
 
     :::image type="content" source="media/android-app-authentication-fails-after-published-to-google-play-store/app-registrations-configure-android-app.png" alt-text="Screenshot that shows how to configure an Android app.":::
 
     > [!NOTE]
     > It's fine to use the same package name in multiple Android Redirect URIs as long as the signature hash is different.
+7. Select **Configure** to complete the platform configuration. 
 
 ### Update the MSAL Configuration within the application code to use the new redirect URI and signature hash
 
