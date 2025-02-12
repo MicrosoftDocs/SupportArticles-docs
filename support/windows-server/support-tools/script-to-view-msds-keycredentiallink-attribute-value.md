@@ -1,5 +1,5 @@
 ---
-title: Script to view the certificate information in the msDS-KeyCredentialLink attribute
+title: Scripts to View the Certificate Information in the msDS-KeyCredentialLink Attribute
 description: This article introduces a script to view the certificate information in the msDS-KeyCredentialLink attribute from AD user objects.
 ms.date: 02/14/2025
 manager: dcscontentpm
@@ -8,25 +8,20 @@ ms.topic: troubleshooting
 ms.reviewer: takondo
 ms.custom: sap:User Logon and Profiles\User profiles, csstroubleshoot
 ---
-# Script to view the certificate information in the msDS-KeyCredentialLink attribute from Active Directory user objects
+# Scripts: View the certificate information in the msDS-KeyCredentialLink attribute from AD user objects
 
-The msDS-KeyCredentialLink attribute can be viewed in PowerShell. However, the value is in binary format which is unreadable. This script helps you do the following things:
+The **msDS-KeyCredentialLink** attribute can be viewed in PowerShell. However, the value is in binary format and can't be read. This script helps you do the following things:
 
-1. Enumerate all users in Active Directory with a non-null value in msDS-KeyCredentialLink.
-2. Extract the bcrypt-sha256 key ID hash of each certificate saved in the msDS-KeyCredentialLink and save it to a file.
+- Enumerate all users in Active Directory (AD) that have a non-null value in **msDS-KeyCredentialLink**.
+- Extract the bcrypt-sha256 key ID hash of each certificate saved in **msDS-KeyCredentialLink** and save it to a file.
 
-You can then use the information saved to check whether the expected values are in the user's msDS-KeyCredentialLink attribute.
+You can then use the saved information to check whether the expected values are in the user's **msDS-KeyCredentialLink** attribute.
 
 ## Script
 
-> [!IMPORTANT]
-> This sample script isn't supported under any Microsoft standard support program or service.
->
-> The sample script is provided AS IS without warranty of any kind. Microsoft further disclaims all implied warranties including, without limitation, any implied warranties of merchantability or of fitness for a particular purpose.
->
-> The entire risk arising out of the use or performance of the sample scripts and documentation remains with you. In no event shall Microsoft, its authors, or anyone else involved in the creation, production, or delivery of the scripts be liable for any damages whatsoever (including, without limitation, damages for loss of business profits, business interruption, loss of business information, or other pecuniary loss) arising out of the use of or inability to use the sample scripts or documentation, even if Microsoft has been advised of the possibility of such damages.
+[!INCLUDE [Script disclaimer](../../includes/script-disclaimer.md)]
 
-After you run the script, the results are saved in the file *C:\temp\KeyCredentialLink-report.txt*.
+After you run the script, the results are saved in the file **C:\temp\KeyCredentialLink-report.txt**.
 
 ```powershell
 $outputfile = "C:\temp\KeyCredentialLink-report.txt"
@@ -127,16 +122,16 @@ KeyCredialLink Entries:
    Entra |NGC  |c8fcc7a6-8f3f-4ec7-a90b-49c6988ba3a4|32EF67B902CB498710F0091F5B10B6A4A2F05D621B748B8150E08FA3048F227F
 ```
 
-Each KeyCredentialLink entry represents a certificate. The output contains the following information:
+Each `KeyCredentialLink` entry represents a certificate. The output contains the following information:
 
-- Source: The source of the certificate. This information can either be from Microsoft Entra ID or on-premises Active Directory
-- Usage: Defined usage of the certificate. This information can be NGC (WHfB), FIDO, or FEK (File Encryption Key)
-- DeviceID: ID of the computer where the certificate was created. This information is the Device ID in Microsoft Entra ID, and objectGUID in Active Directory.
-- KeyID: The bcrypt-sha256 key ID hash of the certificate.
+- `Source`: The source of the certificate. This information can either be from Microsoft Entra ID or on-premises AD.
+- `Usage`: The defined usage of the certificate. This information can be NGC (WHfB), FIDO, or FEK (File Encryption Key).
+- `DeviceID`: The ID of the computer where the certificate was created. This information is the Device ID in Microsoft Entra ID and the objectGUID in AD.
+- `KeyID`: The bcrypt-sha256 key ID hash of the certificate.
 
-The matching certificate should be found in the user's Personal certificate store on the computer with the matching DeviceID. To find the certificate being used on the client, you can run `certutil -v -user -store my` from a PowerShell or Command prompt to dump detailed certificate information from the user's Personal store. In this example, you should find a self-signed certificate where the subject and issuer are the same and is in the form of `CN=<User SID>/login.windows.net/<Tenant ID>/<user UPN>`. Once you find this certificate, check the bcrypt-sha256 key ID hash. This hash value is expected to match one of the entries in the msDS-KeyCredentialLink attribute certificates.
+The matching certificate should be found in the user's personal certificate store on the computer with the matching `DeviceID`. To find the certificate being used on the client, you can run `certutil -v -user -store my` from a PowerShell or command prompt to dump detailed certificate information from the user's personal store. In this example, you should find a self-signed certificate where the subject and issuer are the same and in the form of `CN=<User SID>/login.windows.net/<Tenant ID>/<user UPN>`. Once you find this certificate, check the bcrypt-sha256 key ID hash. This hash value should match one of the entries in the **msDS-KeyCredentialLink** attribute.
 
-Here's an excerpt from user2@contoso.com's certificate store.
+Here's an excerpt from user2@contoso.com's certificate store:
 
 ```output
 > certutil -v -user -store my
@@ -172,4 +167,4 @@ Key Id Hash(bcrypt-sha256): 32ef67b902cb…
 
 ## Reference
 
-[[MS-ADTS]: Key Credential Link Structures | Microsoft Learn](/openspecs/windows_protocols/ms-adts/de61eb56-b75f-4743-b8af-e9be154b47af)
+[Key Credential Link Structures](/openspecs/windows_protocols/ms-adts/de61eb56-b75f-4743-b8af-e9be154b47af)
