@@ -39,6 +39,7 @@ The [Microsoft 365 activation troubleshooter](https://aka.ms/SaRA-OfficeActivati
 
 > [!NOTE]
 > To run the Microsoft 365 activation troubleshooter, make sure that you're using the same Windows device where Microsoft 365 is installed. In addition, make sure that your device is running Windows 10 or later.
+
 To run the troubleshooter, follow these steps:
 
 1. Select the following button to start the troubleshooter.
