@@ -146,6 +146,11 @@ Follow the proper guidelines to set up a [RHEL Pacemaker Cluster](#prerequisites
 * In a two node cluster configuration, both nodes kill each other, and stay offline until manual intervention.
 * The stonith device `python-user` triggers the shut down instruction for both nodes.
 
+> **Note:**  
+> When troubleshooting unexpected node restarts or failures, it's crucial to assess the impact of security tools installed on the system. These tools may interfere with cluster operations by blocking essential processes or modifying system files, potentially causing instability, unexpected timeouts, or node reboots.  
+>  
+> To mitigate such risks, it is recommended to disable security tools on systems running a Pacemaker cluster or ensure that appropriate exclusions are configured to prevent conflicts with the cluster and its associated applications.
+
 #### Cause for scenario 4
 When there's  an outage, like a Platform/Network interruption as discussed in [Scenario 1](#scenario-1-network-outage), both nodes attempt to write to the STONITH device to fence each other since they lose totem.Normally, the stonith device takes the instruction from the first node that's available, to write on it in order to shut down the other node. If both nodes are allowed to write to the stonith device, they end up killing each other.
 
