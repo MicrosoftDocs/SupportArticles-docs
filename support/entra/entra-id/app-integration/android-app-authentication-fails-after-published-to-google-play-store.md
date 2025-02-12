@@ -45,7 +45,7 @@ The public signature hash of an application installed via Google Play differs fr
 To resolve this issue, do the following things:
 
 - [Get the new signature hash with the MSAL Package Inspector tool or from the Google Play Console](#get-the-new-signature-hash-with-the-msal-package-inspector-tool-or-from-the-google-play-console).
-- [Add a new redirect URI to the App Registration in the Azure portal with the new signature hash](#add-a-new-redirect-uri-to-the-app-registration-in-the-azure-portal-with-the-new-signature-hash).
+- [Add a new redirect URI to the app registration in the Azure portal with the new signature hash](#add-a-new-redirect-uri-to-the-app-registration-in-the-azure-portal-with-the-new-signature-hash).
 - [Update the MSAL configuration within the application code to use the new redirect URI and signature hash](#update-the-msal-configuration-within-the-application-code-to-use-the-new-redirect-uri-and-signature-hash).
 
 ### Get the new signature hash with the MSAL Package Inspector tool or from the Google Play Console
@@ -59,7 +59,7 @@ To get the signature hash from the Google Play Console, follow these steps:
 1. Go to the Google Play Console and sign in with your Google Developer account.
 2. Once you are in the Google Play Console, select the app you works on.
 3. On the left navigation, under the **Release** category, expand **Setup** and select **App Integrity**.
-4. Select the **App signing**tab. You will see the **fingerprint** of the app signing key in three different variations. 
+4. Select the **App signing** tab. You will see the fingerprint of the app signing key in three different variations. 
 5. Copy the **SHA-1 certificate fingerprint** and paste it into the PowerShell script in step 6 as the value of the `$Thumbprint` variable. 
 6. Run the following script to obtain the base64 encoded fingerprint that MSAL needs:
 
@@ -80,15 +80,15 @@ To get the signature hash from the Google Play Console, follow these steps:
 
  :::image type="content" source="media/android-app-authentication-fails-after-published-to-google-play-store/google-play-console-app-signing.png" alt-text="Screenshot that shows how to get the signature hash from Google Play Console.":::
  
-### Add a new redirect URI to the App Registration in the Azure portal with the new signature hash
+### Add a new redirect URI to the app registration in the Azure portal with the new signature hash
 
-> [NOTE]
-> We recommend adding a new redirect URI rather than modifying the existing one. Your app registration can contain many redirect URIs. Additionally, modifying the existing redirect URI might result in problems with the development version of your app. This could cause issues during troubleshooting, developing updates, amd so on.
+> [!NOTE]
+> We recommend adding a new redirect URI rather than modifying the existing one. Your app registration can contain many redirect URIs. Additionally, modifying the existing redirect URI might result in problems with the development version of your app. This could cause issues during troubleshooting, developing updates, and so on.
 
-1. Sign in to the Azure portal and navigate to the App registrations page.
+1. Sign in to the Azure portal and navigate to the **App registrations** page.
 2. Select the app registration for your Android app.
 3. Under **Manage**, select **Authentication**.
-4. Under Platform configurations, select **Add a platform**.
+4. Under **Platform configurations**, select **Add a platform**.
 5. Under **Configure platforms**, select **Android**.
 
     :::image type="content" source="media/android-app-authentication-fails-after-published-to-google-play-store/app-reg-platform-config.png" alt-text="Screenshot that shows how to configure Android platform.":::
@@ -100,9 +100,9 @@ To get the signature hash from the Google Play Console, follow these steps:
     > It's fine to use the same package name in multiple Android Redirect URIs as long as the signature hash is different.
 7. Select **Configure** to complete the platform configuration. 
 
-### Update the MSAL Configuration within the application code to use the new redirect URI and signature hash
+### Update the MSAL configuration within the application code to use the new redirect URI and signature hash
 
-Update the MSAL configuration and Android Manifest files in the application code.
+Update the MSAL configuration file and Android Manifest file in the application code.
 
 - MSAL configuration file:
 
