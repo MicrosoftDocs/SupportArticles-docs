@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot missing environments
-description: "Learn how to update a record’s owner, an Owning Business Unit, or both an Owner and Owning Business Unit because the record changes ownership."
+description: "Learn how to update a record's owner, an Owning Business Unit, or both an Owner and Owning Business Unit because the record changes ownership."
 ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 12/03/2024
@@ -16,7 +16,7 @@ contributors:
 
 # Troubleshoot missing environments
 
-It’s not uncommon for an administrator or a maker to expect to find an environment in the environment list and discover that one or more environments is “missing” from the list. This can occur in the Power Platform admin center, in the Power Apps maker portal, or in the Power Automate portal. Each of these experiences has different requirements for inclusion of environments in the list. The set of environments a given user will see in the list in the context of each of these experiences will vary. 
+It's not uncommon for an administrator or a maker to expect to find an environment in the environment list and discover that one or more environments is "missing" from the list. This can occur in the Power Platform admin center, in the Power Apps maker portal, or in the Power Automate portal. Each of these experiences has different requirements for inclusion of environments in the list. The set of environments a given user will see in the list in the context of each of these experiences will vary. 
 
 This document describes the criteria for environment inclusion in each product experience and provides guidance on how to troubleshoot. 
 
@@ -24,7 +24,7 @@ This document describes the criteria for environment inclusion in each product e
 
 To troubleshoot an environment missing issue, three pieces of information are required: 
 
-1. Which environment does the user expect to see in the list that they aren’t seeing? This can be specified by the environment identifier (typically a GUID), the environment display name, or the Dataverse instance URL (if the environment has a Dataverse database). 
+1. Which environment does the user expect to see in the list that they aren't seeing? This can be specified by the environment identifier (typically a GUID), the environment display name, or the Dataverse instance URL (if the environment has a Dataverse database). 
 
 2. Which user is experiencing the problem? Since role assignments vary from user to user, the identity of the user experiencing the problem is required information. This can be given by the Microsoft Entra object ID or by the UPN of the user. 
 
@@ -42,7 +42,7 @@ This table lays out the unique requirements that must be met for an environment 
 |Power Automate portal environment list      | The Power Automate portal includes environments in which the user has any built-in security role plus any environments in which the user is a co-owner of one or more flows.         |
 
 > [!NOTE]
-> PowerShell for [Power Platform Administrators](powerapps-powershell.md#power-apps-cmdlets-for-administrators), CLI ([pac admin list](../developer/cli/reference/admin.md#pac-admin-list)), and related administration APIs and tooling use the same inclusion rules as the Power Platform admin center. 
+> PowerShell for [Power Platform Administrators](/power-platform/admin/powerapps-powershell#power-apps-cmdlets-for-administrators), CLI ([pac admin list](/power-platform/developer/cli/reference/admin#pac-admin-list)), and related administration APIs and tooling use the same inclusion rules as the Power Platform admin center. 
 
 ## Troubleshooting steps 
 
@@ -60,40 +60,40 @@ To ensure the admin center loads quickly for tenants with many environments, the
 
 ### Check if the environment has been deleted 
 
-If users that are members of the tenant-level administrator directory roles aren't able to see the environment in the admin center, then you should first check whether the environment has been deleted. If it was recently deleted, an administrator can initiate a [recover environment](recover-environment.md) operation. 
+If users that are members of the tenant-level administrator directory roles aren't able to see the environment in the admin center, then you should first check whether the environment has been deleted. If it was recently deleted, an administrator can initiate a [recover environment](/power-platform/admin/recover-environment) operation. 
 
-If the environment hasn't been deleted and still doesn’t show up in the admin center for users that are Power Platform admins, then you may need to create a [support request](get-help-support.md) for further diagnostics and remediation steps. Be sure to provide the three key pieces of information as noted in the [Prerequisites section](#prerequisites) above.  
+If the environment hasn't been deleted and still doesn't show up in the admin center for users that are Power Platform admins, then you may need to create a [support request](/power-platform/admin/get-help-support) for further diagnostics and remediation steps. Be sure to provide the three key pieces of information as noted in the [Prerequisites section](#prerequisites) above.  
 
 ### Check role assignments of the user 
 
-The most common reason for environments to not show up in the list is a missing [role assignment](assign-security-roles.md). Compare the roles assigned to the user with the requirements in the [Requirements table](#requirements-for-access-by-product-experience) above. 
+The most common reason for environments to not show up in the list is a missing [role assignment](/power-platform/admin/assign-security-roles). Compare the roles assigned to the user with the requirements in the [Requirements table](#requirements-for-access-by-product-experience) above. 
 
-In Dataverse environments, the role may be assigned directly to the user or indirectly via an assignment of the role to a [Microsoft Entra group team](manage-teams.md). 
+In Dataverse environments, the role may be assigned directly to the user or indirectly via an assignment of the role to a [Microsoft Entra group team](/power-platform/admin/manage-teams). 
 
 > [!NOTE]
 > Role assignments made via Dataverse owner teams will not cause an environment to be included in the environment list. Do not attempt to use owner teams for this purpose. 
 
 ### Run user access diagnostics 
 
-This step only applies to environments with a Dataverse database. Many of the same issues that can cause a user to have issues accessing an environment at runtime can also cause the environment to be missing for the user in the admin center and/or other experiences. Powerful [user access diagnostics](troubleshooting-user-needs-read-write-access-organization.md) are available in the admin center. It's strongly suggested to use this feature to check for and to remediate common issues that might prevent a user from having access to an environment. 
+This step only applies to environments with a Dataverse database. Many of the same issues that can cause a user to have issues accessing an environment at runtime can also cause the environment to be missing for the user in the admin center and/or other experiences. Powerful [user access diagnostics](/power-platform/admin/troubleshooting-user-needs-read-write-access-organization) are available in the admin center. It's strongly suggested to use this feature to check for and to remediate common issues that might prevent a user from having access to an environment. 
 
 Common issues that may be identified by this step include: 
 
-1. The user is [not a member of the environment security group](troubleshooting-user-needs-read-write-access-organization.md). 
-2. The user is missing from the environment, or the user record in Dataverse is out of sync with Microsoft Entra ID, and so the user may need to be [explicitly added by an administrator](add-users-to-environment.md). 
+1. The user is [not a member of the environment security group](/power-platform/admin/troubleshooting-user-needs-read-write-access-organization). 
+2. The user is missing from the environment, or the user record in Dataverse is out of sync with Microsoft Entra ID, and so the user may need to be [explicitly added by an administrator](/power-platform/admin/add-users-to-environment). 
 
 ## Special notes about developer, trial, and support environment types 
 
 This section only applies to developer, trial, and support environments with a Dataverse database.
 
-Power Platform administrators have administrative access to all environments in the tenant in the Power Platform admin center. However, the developer, trial, and support environment types have special user sync behavior such that only the initial user is added to the SystemUsers table in Dataverse. This may mean that further administrators need to be [explicitly added to the environment](add-users-to-environment.md) in order for them to have complete access to all administrative functions. A common example is using management connectors to access the environment. 
+Power Platform administrators have administrative access to all environments in the tenant in the Power Platform admin center. However, the developer, trial, and support environment types have special user sync behavior such that only the initial user is added to the SystemUsers table in Dataverse. This may mean that further administrators need to be [explicitly added to the environment](/power-platform/admin/add-users-to-environment) in order for them to have complete access to all administrative functions. A common example is using management connectors to access the environment. 
 
 ## Getting help 
 
-After following this guide and confirming role assignments for the user, if the environment is still not showing up in the list, you may need to create a [support request](get-help-support.md) for further diagnostics and remediation steps. Be sure to provide the three key pieces of information as noted in the prerequisites section above.  
+After following this guide and confirming role assignments for the user, if the environment is still not showing up in the list, you may need to create a [support request](/power-platform/admin/get-help-support) for further diagnostics and remediation steps. Be sure to provide the three key pieces of information as noted in the prerequisites section above.  
 
 
 
 
 
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

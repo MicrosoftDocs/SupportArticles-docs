@@ -12,7 +12,7 @@ search.audienceType:
 ---
 # Troubleshooting conditional access authentication
 
-This article outlines how to address warning messages related to conditional access authentication improvements for [Manage your documents using SharePoint](manage-documents-using-sharepoint.md). These warning messages will rollout soon notifying which users will be affected. 
+This article outlines how to address warning messages related to conditional access authentication improvements for [Manage your documents using SharePoint](/power-platform/admin/manage-documents-using-sharepoint). These warning messages will rollout soon notifying which users will be affected. 
 
 With security improvements in SharePoint integration authentication, you need to keep SharePoint Online and Dataverse conditional access aligned to avoid issues. These sections outline how to review and align conditional access.
 
@@ -88,10 +88,10 @@ When message shown is AADSTS530003, the access is related to a device. First use
 
 ### SharePoint Document Grid warning AADSTS500011
 
-When message shown is AADSTS500011, the SharePoint on-premises integration isn't configured correctly. The configuration steps in [Configure server-based authentication with SharePoint on-premises](configure-server-based-authentication-sharepoint-on-premises.md) need to be reviewed carefully to maintain access. 
+When message shown is AADSTS500011, the SharePoint on-premises integration isn't configured correctly. The configuration steps in [Configure server-based authentication with SharePoint on-premises](/power-platform/admin/configure-server-based-authentication-sharepoint-on-premises) need to be reviewed carefully to maintain access. 
 
 > [!NOTE]
-> First check configurations steps for [SharePoint Server SPN in Microsoft Entra Domain Services](configure-server-based-authentication-sharepoint-on-premises.md#update-the-sharepoint-server-spn-in-microsoft-entra-domain-services) steps 3, 4, and 5.
+> First check configurations steps for [SharePoint Server SPN in Microsoft Entra Domain Services](/power-platform/admin/configure-server-based-authentication-sharepoint-on-premises#update-the-sharepoint-server-spn-in-microsoft-entra-domain-services) steps 3, 4, and 5.
 
 ## Authentication isn't enabled correctly
 

@@ -13,7 +13,7 @@ search.audienceType:
 ---
 # Data Integrator error management and troubleshooting
 
-The Data Integrator is a point-to-point integration service used to integrate data from multiple sources--for example, finance and operations apps, Dynamics 365 Sales, Salesforce, and Microsoft SQL (Preview)--into Microsoft Dataverse. It also supports integrating data into finance and operations apps and Dynamics 365 Sales. The [Integrate data into Dataverse](data-integrator.md) topic provides detailed step-by-step instructions to help you set up projects for process-based integration scenarios like Prospect to Cash, Field Service, and Project Service integrations. 
+The Data Integrator is a point-to-point integration service used to integrate data from multiple sources--for example, finance and operations apps, Dynamics 365 Sales, Salesforce, and Microsoft SQL (Preview)--into Microsoft Dataverse. It also supports integrating data into finance and operations apps and Dynamics 365 Sales. The [Integrate data into Dataverse](/power-platform/admin/data-integrator) topic provides detailed step-by-step instructions to help you set up projects for process-based integration scenarios like Prospect to Cash, Field Service, and Project Service integrations. 
 
 While we are constantly evolving and driving fixes into the platform based on customer feedback, we understand there is a need to provide guidance when you run into issues. This topic walks you through error management and troubleshooting some of these issues.
 
@@ -125,7 +125,7 @@ If you are unable to see your connections or environments in the drop-down while
    > [!div class="mx-imgBorder"] 
    > ![Connections issue.](media/ConnectionsIssue.png "Connections issue")
 
-* **Environment**: If you don’t see your environments in the drop-down, ensure that the account you used to create the connections has the appropriate access to the entity. A good way to test this is by creating a *flow* (using Microsoft Power Automate). 
+* **Environment**: If you don't see your environments in the drop-down, ensure that the account you used to create the connections has the appropriate access to the entity. A good way to test this is by creating a *flow* (using Microsoft Power Automate). 
 
   Here is an example of creating a simple flow to test your connection to finance and operations apps:
 
@@ -207,4 +207,4 @@ Additionally, you can open the job history of the project and drill through the 
 
 
 
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

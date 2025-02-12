@@ -21,9 +21,9 @@ To access an environment, a user must meet the following criteria:
 1. Be enabled for sign-in in Microsoft Entra ID.
 2. Have a valid license that has a Dynamics 365 or Microsoft Power Platform recognized service plan, or the environment must have active per-app plans.
 3. Be a member of the environment's Microsoft Entra group (if one has been associated with the environment).
-4. Have at least one Dataverse security role assigned directly to them or to a [group team](manage-group-teams.md) they're a member of.
+4. Have at least one Dataverse security role assigned directly to them or to a [group team](/power-platform/admin/manage-group-teams) they're a member of.
 
-A user's level of access within the environment and to the resources (apps and data) in the environment is determined by the privileges defined in the security roles assigned to that user. Their access mode being [Administrative](create-users.md#create-an-administrative-user-account) or [Read-Write](create-users.md#create-a-read-write-user-account) also determines their level of access within an environment.
+A user's level of access within the environment and to the resources (apps and data) in the environment is determined by the privileges defined in the security roles assigned to that user. Their access mode being [Administrative](/power-platform/admin/create-users#create-an-administrative-user-account) or [Read-Write](/power-platform/admin/create-users#create-a-read-write-user-account) also determines their level of access within an environment.
 
 ## User diagnostics
 
@@ -51,27 +51,27 @@ The following issues are documented below. If you don't see your issue:
 
 ### Diagnostic tool for user permissions in the Power Platform admin center
 
-Several factors influence user access in an environment. To help administrators with diagnosing user access to an environment and reasons for access or no access, the new “Run diagnostics” feature in the Power Platform admin center provides basic access diagnostics for individual users in the environment. The feature helps to detect potential causes to user sign-in and other issues and suggests potential mitigations. See [User diagnostics](#user-diagnostics).
+Several factors influence user access in an environment. To help administrators with diagnosing user access to an environment and reasons for access or no access, the new "Run diagnostics" feature in the Power Platform admin center provides basic access diagnostics for individual users in the environment. The feature helps to detect potential causes to user sign-in and other issues and suggests potential mitigations. See [User diagnostics](#user-diagnostics).
 
 ### Dataverse security roles to users
 
 When an error screen stating the user has no roles is encountered, a system administrator needs to assign roles to the user. Roles can be assigned directly to the user, or to a group team that the user is a part of. For information on how to assign Dataverse security roles to a user, see:
-[Assign a security role to a user](assign-security-roles.md).
+[Assign a security role to a user](/power-platform/admin/assign-security-roles).
 
 ### Troubleshoot record visibility issues
 
-See [How access to a record is determined](how-record-access-determined.md).
+See [How access to a record is determined](/power-platform/admin/how-record-access-determined).
 
 ### Troubleshoot license and membership issues
 
-1. Verify if a license has been assigned to the user and assign one if not already. See: [Add a license to a user account](assign-licenses.md).
-2. Once a license is assigned, it may take some time for the license change to sync to the environment. To trigger a sync for this user, the system administrator for the environment can read the user to the environment. See: [Add users to an environment that has a Dataverse database](add-users-to-environment.md#add-users-to-an-environment-that-has-a-dataverse-database).
+1. Verify if a license has been assigned to the user and assign one if not already. See: [Add a license to a user account](/power-platform/admin/assign-licenses).
+2. Once a license is assigned, it may take some time for the license change to sync to the environment. To trigger a sync for this user, the system administrator for the environment can read the user to the environment. See: [Add users to an environment that has a Dataverse database](/power-platform/admin/add-users-to-environment#add-users-to-an-environment-that-has-a-dataverse-database).
 
 ### Troubleshoot access issues
 
-1. As a system administrator of the environment, verify that the environment is associated with any Microsoft Entra group. See: [Associate a security group with an environment](control-user-access.md#associate-a-security-group-with-an-environment).
-2. Ensure the user with the access issue is a member of the group associated with the environment. See: [Create a security group and add members to the security group](control-user-access.md#create-a-security-group-and-add-members-to-the-security-group).
-3. Once user membership in the environment’s group is updated, it may take some time for the change to sync to the environment. To trigger a sync for this user, the system administrator for the environment can read the user to the environment. See: [Add users to an environment that has a Dataverse database](add-users-to-environment.md#add-users-to-an-environment-that-has-a-dataverse-database).
+1. As a system administrator of the environment, verify that the environment is associated with any Microsoft Entra group. See: [Associate a security group with an environment](/power-platform/admin/control-user-access#associate-a-security-group-with-an-environment).
+2. Ensure the user with the access issue is a member of the group associated with the environment. See: [Create a security group and add members to the security group](/power-platform/admin/control-user-access#create-a-security-group-and-add-members-to-the-security-group).
+3. Once user membership in the environment's group is updated, it may take some time for the change to sync to the environment. To trigger a sync for this user, the system administrator for the environment can read the user to the environment. See: [Add users to an environment that has a Dataverse database](/power-platform/admin/add-users-to-environment#add-users-to-an-environment-that-has-a-dataverse-database).
 
 ### Troubleshoot permission issues
 
@@ -125,9 +125,9 @@ There are multiple ways to do this:
 
 2. **User impersonation call**: Impersonation call triggers a JIT sync for the user. See [How to impersonate a user](/powerapps/developer/common-data-service/webapi/impersonate-another-user-web-api#how-to-impersonate-a-user).
 
-3. **Add users** in the Power Platform admin center: Admins can add or refresh users. See [Add users to an environment](add-users-to-environment.md).
+3. **Add users** in the Power Platform admin center: Admins can add or refresh users. See [Add users to an environment](/power-platform/admin/add-users-to-environment).
 
-4. **PowerShell cmdlets**: See [PowerShell support for Power Apps](./powerapps-powershell.md#power-apps-cmdlets-for-administrators).
+4. **PowerShell cmdlets**: See [PowerShell support for Power Apps](/power-platform/admin/powerapps-powershell#power-apps-cmdlets-for-administrators).
 
 5. **Connectors**: See [Power Platform for Admins](/connectors/powerplatformforadmins/#force-sync-user).
 
@@ -137,4 +137,4 @@ There are multiple ways to do this:
 
 The check for the presence of security roles assigned to a user only checks for roles directly assigned to the user and can't currently check for roles inherited through group team memberships.
 
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

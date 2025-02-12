@@ -43,7 +43,7 @@ SharePoint document locations are records in model-driven apps, such as Dynamics
 
 To store documents for records, the document libraries or folders must be in place. If model-driven apps are unable to create the document libraries and folders automatically, you can manually create these in SharePoint. After you create the document libraries and folders in SharePoint, you must create document location records in model-driven apps to point to these SharePoint document libraries and folders.
 
-Learn more in [Create or edit document location records](./create-edit-document-location-records.md).
+Learn more in [Create or edit document location records](/power-platform/admin/create-edit-document-location-records).
 
 ## "File not found" error when using multiple SharePoint sites
 
@@ -67,7 +67,7 @@ Points to consider:
 
 -  The SharePoint site for which the Document Management Settings wizard is last run becomes the default site. You can reset the default site if required by running the Document Management Settings wizard again for that particular site.
 
-For more information, see [Create or edit document location records](./create-edit-document-location-records.md).
+For more information, see [Create or edit document location records](/power-platform/admin/create-edit-document-location-records).
 
 ## SharePoint enforces resource throttling with 5000 or more documents
 A document library with 5000 or more documents might experience resource throttling. Users may experience the following behavior with document management and OneNote integration:
@@ -94,7 +94,7 @@ In order to add a date to a OneNote document, you can open the OneNote document 
 
 :::image type="content" source="media/date_onenote_documents.png" alt-text="Double-click the date field.":::
 
-## SharePoint Document table doesn’t display inputs when you create a flow
+## SharePoint Document table doesn't display inputs when you create a flow
 
 When you create a Power Automate flow trigger on the Dataverse SharePoint Documents table (named Documents in Power Automate), no data from the table is passed to the flow editor. The flow inputs appear as an empty array.
 
@@ -143,8 +143,8 @@ In 2015, [we announced the deprecation of the list component]( https://cloudblog
 
 If you're using the list component, you must move your document management to use server-based authentication.
 
--	For Power Apps and Dynamics 365 apps, see [Switch from the list component or change the SharePoint deployment](switching-list-component-changing-deployment.md).
--	For Dynamics 365 Customer Engagement (on-premises), see [Switching from the list component or changing the deployment](/dynamics365/customerengagement/on-premises/admin/switching-list-component-changing-deployment?view=op-9-0&preserve-view=true).
+-    For Power Apps and Dynamics 365 apps, see [Switch from the list component or change the SharePoint deployment](/power-platform/admin/switching-list-component-changing-deployment).
+-    For Dynamics 365 Customer Engagement (on-premises), see [Switching from the list component or changing the deployment](/dynamics365/customerengagement/on-premises/admin/switching-list-component-changing-deployment?view=op-9-0&preserve-view=true).
 
 ### Error message "An error has occurred while loading documents" when filtering by Name column
 
@@ -181,4 +181,4 @@ In March 2025, support for connecting to the Dataverse virtual table `sharepoint
 [Troubleshoot SharePoint integration](troubleshoot-set-up-sharepoint-online.md)
 
 
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

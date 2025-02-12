@@ -117,4 +117,4 @@ Here's an example of what happens when you export a document that contains unsup
 [Use Word templates to create standardized documents](using-word-templates-dynamics-365.md)
 
 
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]

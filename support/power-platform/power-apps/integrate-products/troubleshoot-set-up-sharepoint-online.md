@@ -36,7 +36,7 @@ If **Documents** is missing from entities such as account, use the following to 
    4. Complete the wizard.
    5. Verify the **Documents** button appears.
 
-For more information, see [Enable SharePoint document management for specific entities](enable-sharepoint-document-management-specific-entities.md).
+For more information, see [Enable SharePoint document management for specific entities](/power-platform/admin/enable-sharepoint-document-management-specific-entities).
 
 ## Malformed FetchXML or LayoutXML - validate and fix
 
@@ -285,29 +285,29 @@ If FetchXML or LayoutXML are malformed, use the following to restore.
 
 ## Validate and fix SharePoint site URLs
 
-In customer engagement apps (such as Dynamics 365 Sales and Customer Service), [!INCLUDE[pn_SharePoint_short](../includes/pn-sharepoint-short.md)] site and document location records contain links to site collections, site, document libraries, and folders in [!INCLUDE[pn_SharePoint_short](../includes/pn-sharepoint-short.md)]. These site and document location records are associated with records so that the documents for records can be stored in [!INCLUDE[pn_SharePoint_short](../includes/pn-sharepoint-short.md)].  
+In customer engagement apps (such as Dynamics 365 Sales and Customer Service), [!INCLUDE[pn_SharePoint_short](../../includes/pn-sharepoint-short.md)] site and document location records contain links to site collections, site, document libraries, and folders in [!INCLUDE[pn_SharePoint_short](../../includes/pn-sharepoint-short.md)]. These site and document location records are associated with records so that the documents for records can be stored in [!INCLUDE[pn_SharePoint_short](../../includes/pn-sharepoint-short.md)].  
   
- When the links between customer engagement apps and [!INCLUDE[pn_SharePoint_short](../includes/pn-sharepoint-short.md)] break, you must validate and fix the links so that the records continue to point to the correct document libraries and folders for managing the documents.  
+ When the links between customer engagement apps and [!INCLUDE[pn_SharePoint_short](../../includes/pn-sharepoint-short.md)] break, you must validate and fix the links so that the records continue to point to the correct document libraries and folders for managing the documents.  
   
-1. [!INCLUDE[proc_permissions_system_admin](../includes/proc-permissions-system-admin.md)]  
+1. [!INCLUDE[proc_permissions_system_admin](../../includes/proc-permissions-system-admin.md)]  
   
     Check your security role  
   
-   - [!INCLUDE[proc_check_your_security_role](../includes/proc-check-your-security-role.md)]  
+   - [!INCLUDE[proc_check_your_security_role](../../includes/proc-check-your-security-role.md)]  
   
-   - [!INCLUDE[proc_dont_have_correct_permissions](../includes/proc-dont-have-correct-permissions.md)]  
+   - [!INCLUDE[proc_dont_have_correct_permissions](../../includes/proc-dont-have-correct-permissions.md)]  
   
 2. Find and fix the URLs. To do this, follow these steps.  
   
-   1. [!INCLUDE[proc_settings_doc_mgmt](../includes/proc-settings-doc-mgmt.md)]  
+   1. [!INCLUDE[proc_settings_doc_mgmt](../../includes/proc-settings-doc-mgmt.md)]  
   
-   2. Click **[!INCLUDE[pn_SharePoint_short](../includes/pn-sharepoint-short.md)] Sites**.  
+   2. Click **[!INCLUDE[pn_SharePoint_short](../../includes/pn-sharepoint-short.md)] Sites**.  
   
    3. Select the site URLs that you want to validate, and then click or tap **Validate**.  
   
 3. Customer engagement apps validate all the selected site URLs and their immediate subordinate site and document library URLs. It then displays the results in **Validating Sites**.  
   
-4. To fix a URL, open the site record, and enter the correct URL. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Create or edit site records](edit-existing-sharepoint-site-records.md).  
+4. To fix a URL, open the site record, and enter the correct URL. [!INCLUDE[proc_more_information](../../includes/proc-more-information.md)] [Create or edit site records](/power-platform/admin/edit-existing-sharepoint-site-records).  
   
 5. Click **Save & Close**.  
 
@@ -328,4 +328,4 @@ This error message can occur when the SharePoint site that is configured with do
 [Troubleshooting server-based authentication](troubleshooting-server-based-authentication.md) 
 
 
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+[!INCLUDE[footer-include](../../includes/footer-banner.md)]
