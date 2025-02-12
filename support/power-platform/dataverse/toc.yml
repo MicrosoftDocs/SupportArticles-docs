@@ -23,7 +23,7 @@
     - name: Troubleshoot user access issues for different environments
       href: environment-app-access/troubleshooting-user-needs-read-write-access-organization.md
     - name: Troubleshoot missing environments
-      href: environment-app-access/troubleshooting-missing-environments.md  
+      href: environment-app-access/troubleshoot-missing-environments.md  
 - name: Email and Exchange Synchronization
   items:
     - name: 401 Unauthorized exception when using Server-Side Synchronization
