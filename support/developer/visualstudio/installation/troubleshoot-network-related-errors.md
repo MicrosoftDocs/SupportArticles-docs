@@ -36,6 +36,9 @@ To resolve this issue, try these steps:
 
 Visual Studio should pick up the proxy setting from Windows. However, you can set a specific proxy server in the following way.
 
+ - For Visual Studio 2022 follow steps 1, 2, and 3
+ - For Visual Studio 2019 follow steps 1 and 2
+
 1. Find **devenv.exe.config** (the configuration file of **devenv.exe**) in:
 
     - Visual Studio 2019: **%ProgramFiles%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE** or **%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE**.
