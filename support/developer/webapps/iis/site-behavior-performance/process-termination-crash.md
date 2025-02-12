@@ -111,7 +111,7 @@ ProcDump is a simpler way to take a memory dump of a process. To take crash dump
    - `-e 1`: This flag indicates that the dump should be captured on the first occurrence of an exception.
    - `-f "<typeOfException>"`: This flag specifies that the tool should filter for the `<typeOfException>` type of exception.
    - `PID`: This is the Process ID of the application you want to monitor.
-
+   - `-f "<typeOfException>"`: This flag specifies that the tool should filter for the `<typeOfException>` type of exception.
    If the error code is `C00000FD`, and you aren't able to take a memory dump, proceed with the following steps: 
 
    1. Run the following command:
