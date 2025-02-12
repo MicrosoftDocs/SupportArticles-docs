@@ -9,7 +9,6 @@ applies_to:
   - PowerApps
 ms.assetid: 
 author: adrianorth
-ms.subservice: admin
 ms.author: aorth
 ms.reviewer: sericks
 ms.suite: 

@@ -5,7 +5,6 @@ author: udaykirang
 ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 10/27/2022
-ms.subservice: admin
 ms.author: udag
 search.audienceType: 
   - admin

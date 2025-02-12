@@ -10,7 +10,6 @@ applies_to:
   - PowerApps
 ms.assetid: 
 author: Mattp123
-ms.subservice: admin
 ms.author: matp
 ms.reviewer: v-iapr
 ms.suite: 
@@ -81,7 +80,7 @@ Error message displayed for missing document library:
 
 ### Reason
 
-This error typically occurs when the SharePoint document library was created for the record. Because of some changes in SharePoint, the document library doesn’t exist anymore. This can happen because the document library was deleted or moved to a different SharePoint site.
+This error typically occurs when the SharePoint document library was created for the record. Because of some changes in SharePoint, the document library doesn't exist anymore. This can happen because the document library was deleted or moved to a different SharePoint site.
 
 ### Mitigation steps for missing document library
 
@@ -169,17 +168,17 @@ Error message displayed for missing folder:
 
 ### Reason
 
-This error typically occurs when the SharePoint folder was created for the record. Because of a change in SharePoint, the folder doesn’t exist anymore. This can happen because the folder for this record was either renamed, deleted, or moved to different location.
+This error typically occurs when the SharePoint folder was created for the record. Because of a change in SharePoint, the folder doesn't exist anymore. This can happen because the folder for this record was either renamed, deleted, or moved to different location.
 
 ### Mitigation steps for missing folder
 
 1.  The error message shows the name of the folder which is missing. It also shows the path where the folder was expected on the SharePoint site. Navigate to this path in SharePoint.
 
-2.	Create a new folder on SharePoint with the name the same as the folder name provided in error message.
+2.    Create a new folder on SharePoint with the name the same as the folder name provided in error message.
 
-3.	Once complete, verify that folder is now present on the SharePoint site in the path shown in the error message.
+3.    Once complete, verify that folder is now present on the SharePoint site in the path shown in the error message.
 
-4.	Launch the application and repeat the operation that produced the error.
+4.    Launch the application and repeat the operation that produced the error.
 
 
 ### See also
