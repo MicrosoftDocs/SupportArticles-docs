@@ -51,6 +51,8 @@ items:
   items:
   - name: Inconsistent results in MKL computations
     href: machine-learning/inconsistent-results-mkl-computations-missing-variable.md
+  - name: SQL Server Launchpad service fails to start
+    href: machine-learning/sql-server-launchpad-fail-start.md
 
 - name: Queries, stored procedures, views, functions, triggers (T-SQL)
   items:
