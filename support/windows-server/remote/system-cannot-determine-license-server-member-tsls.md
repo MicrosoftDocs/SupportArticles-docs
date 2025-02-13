@@ -5,7 +5,7 @@ ms.date: 02/13/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, v-lianna
+ms.reviewer: kaushika, mamash, v-lianna
 ms.custom: sap:Remote Desktop Services and Terminal Services\Licensing for Remote Desktop Services (Terminal Services), csstroubleshoot
 ---
 # The system cannot determine if the license server is member of TSLS Group on Active Directory Domain Services (AD DS)
