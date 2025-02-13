@@ -1,6 +1,15 @@
-﻿<!-- TOC location: Learn / Troubleshoot / Microsoft Dynamics 365 / Dynamics 365 Supply Chain Management / Asset Management -->
+---
+title: Asset ID isn't editable even when Number sequence is set to Manual
+description: Provides a workaround for editing Asset ID in Microsoft Dynamics 365 Supply Chain Management.
+author: sorenbacker2
+ms.author: sorenba
+ms.reviewer: christys
+ms.date: 02/13/2025
+ms.custom: 
+---
+<!-- TOC location: Learn / Troubleshoot / Microsoft Dynamics 365 / Dynamics 365 Supply Chain Management / Asset Management -->
 
-# Asset ID is not editable on Asset list page even when Number sequence is set to Manual
+# Asset ID isn't editable even when Number sequence is set to Manual
 
 ## Symptoms  
   
