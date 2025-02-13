@@ -1,6 +1,6 @@
 ---
 title: Error AADSTS700003 - Device object was not found in the tenant '{tenantName}' directory
-description: Provides a solution to an issue where users experience the AADSTS700003 error when they try to sign in to an Azure application that can be used with Microsoft Entra ID.
+description: Provides a solution to an issue where you experience the AADSTS700003 error when you try to sign in to an Azure application that can be used with Microsoft Entra ID.
 ms.service: entra-id
 ms.date: 02/12/2025
 ms.reviewer: jutakata, willfid, bachoang, joaos, modawud, v-weizhu
@@ -9,11 +9,11 @@ ms.custom: sap:Issues Signing In to Applications
 
 # Error AADSTS700003 - Device object was not found in the tenant '{tenantName}' directory
 
-This article discusses how to resolve the "AADSTS700003" error that occurs when a user tries to sign in to an application that's integrated into Microsoft Entra ID.
+This article discusses how to resolve the "AADSTS700003" error that occurs when you try to sign in to an application that's integrated into Microsoft Entra ID.
 
 ## Symptoms
 
-When users try to sign in to an application that's integrated into Microsoft Entra ID, they receive an "AADSTS700003" error with one of the following error messages:
+When your try to sign in to an application that's integrated into Microsoft Entra ID, you receive an "AADSTS700003" error with one of the following error messages:
 
 > Device object was not found in the tenant '{tenantName}' directory.
 
@@ -23,13 +23,13 @@ Or
 
 ## Cause
 
-This issues occurs because the device object is deleted on the user's home tenant. When a device is deleted, the "Delete device" activity type is recorded in [Microsoft Entra audit log](/entra/identity/monitoring-health/concept-audit-logs). In Microsoft Entra ID, there are three ways to register or join user devices:
+This issues occurs because the device object is deleted on your home tenant. When a device is deleted, the "Delete device" activity type is recorded in [Microsoft Entra audit log](/entra/identity/monitoring-health/concept-audit-logs). In Microsoft Entra ID, there are three ways to register or join user devices:
 
 - Microsoft Entra registered
 - Microsoft Entra joined
 - Microsoft Entra hybrid joined
 
-Device registration or join creates a [device identity](/entra/identity/devices/overview). This device identity is used in scenarios such as [device-based Conditional Access policies](/entra/identity/conditional-access/concept-conditional-access-grant) and [Mobile Device Management with the Microsoft Intune](/mem/endpoint-manager-overview). When users get the AADSTS700003 error, the device object isn't found in the tenant.
+Device registration or join creates a [device identity](/entra/identity/devices/overview). This device identity is used in scenarios such as [device-based Conditional Access policies](/entra/identity/conditional-access/concept-conditional-access-grant) and [Mobile Device Management with the Microsoft Intune](/mem/endpoint-manager-overview). When you get the AADSTS700003 error, the device object isn't found in the tenant.
 
 ## Solution
 
