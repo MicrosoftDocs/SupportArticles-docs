@@ -1,11 +1,11 @@
 ---
-title: Remote Desktop licensing mode is not configured warning
+title: Remote Desktop Licensing Mode Is Not Configured Warning
 description: Helps you troubleshoot a licensing warning message when you connect to a Remote Desktop (RD) Session Host.
 ms.date: 02/13/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, v-lianna
+ms.reviewer: kaushika, pedromatos, v-lianna
 ms.custom: sap:Remote Desktop Services and Terminal Services\Licensing for Remote Desktop Services (Terminal Services), csstroubleshoot
 ---
 # Remote Desktop licensing mode is not configured warning when you connect to an RD Session Host
