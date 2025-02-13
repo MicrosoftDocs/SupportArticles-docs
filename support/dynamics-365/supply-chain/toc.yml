@@ -1,5 +1,9 @@
 - name: Dynamics 365 Supply Chain Management
   href: welcome-supply-chain.yml
+- name: Asset management
+  items:
+    - name: Changing work order lifecycle state doesn't generate fault cause or fault remedy error
+      href: asset-management/change-lifecycle-state-doesnt-create-fault.md
 - name: Inventory costing and closing
   items:
     - name: An update conflict occurs when the inventory valuation method is either standard cost or moving average
