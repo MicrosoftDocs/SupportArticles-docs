@@ -1,0 +1,47 @@
+---
+title: Purchase Order Stuck in Review Due to Quantity Update Error
+description: Provides a resolution for the issue that a purchase order receipt doesn't include all charges.
+author: Shubham
+ms.custom: sap:Purchase order procurement and sourcing\Issues with purchase orders
+---
+# A purchase order tuck in Review Due to Quantity Update Error
+
+## Symptoms
+
+A purchase order (PO) is stuck in review due to an error stating:
+Update has been canceled. Quantity cannot be reduced because the remaining update quantity changes sign.
+
+### Cause
+
+This error in Dynamics 365 occurs when there is an issue with quantity adjustments, preventing the PO from progressing in the workflow.
+
+## Resolution
+
+Here are steps to resolve the issue:
+
+##Verify Quantity Fields
+
+Ensure that the quantities are correctly specified and that adjustments do not result in negative values.
+
+##Update Purchase Order Lines
+
+Navigate to the purchase order lines and manually update the quantities.
+Go to Procurement and Sourcing, select the problematic PO, and update the lines accordingly.
+
+##Recalculate Remainders
+
+Use the recalculation functions to update the status and remainders.
+Select the purchase order line and use the Recalculate deliver remainder or Recalculate invoice remainder options.
+
+##Workflow Resubmission
+
+If the issue persists, recall the workflow, make necessary adjustments, and resubmit it.
+
+## Additional Steps:
+
+Procurement and Sourcing > Periodic Task > Clean up > Correct purchase order manually
+
+In the correct company, select the affected purchase order and execute the following action: Reset modified.
+This process runs at the line level. If unblocking the full order, execute the action for each line individually.
+The modified field in the form's grid will indicate which lines have been reset.
+After completing these steps, the workflow should be unblocked, allowing the user to proceed.
