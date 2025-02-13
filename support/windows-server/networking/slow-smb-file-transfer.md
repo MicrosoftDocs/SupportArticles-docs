@@ -1,7 +1,7 @@
 ---
 title: Slow SMB files transfer speed
 description: Learn how to resolve transfer performance issues with SMB files by using the provided troubleshooting steps.
-ms.date: 02/12/2025
+ms.date: 02/13/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -154,6 +154,16 @@ You should verify that the Office and SMB binaries are up-to-date, and then test
    Set-SmbServerConfiguration -EnableLeasing $false
    ```
 
+   Alternatively, to disable leasing on a per-share basis in Windows Server 2019 and later versions, run the following cmdlet:
+
+   > [!IMPORTANT]
+   > We recommend testing with `LeasingMode` set to `Shared` first. This allows some leasing while disabling the portions that typically cause slowness. Use `None` only as a final option.
+
+   ```powershell
+   Set-SmbShare -Name <ShareName> -LeasingMode [Shared|None]
+   ```
+
 2. This works immediately on a new SMB client connection. There's no need to restart the SMB server or client machines. 
 
 To avoid this issue, you can also replicate the file to a local file server. For more information, see [saving Office documents to a network server is slow when using EFS](/office/troubleshoot/office/saving-file-to-network-server-slow).
+t
