@@ -1,11 +1,11 @@
 ---
-title: Troubleshoot Process Termination Crash
+title: Troubleshoot a Process Crash
 description: This article helps identify a process crash and provides methods to collect and analyze data for the crash.
 ms.date: 02/13/2025
 ms.custom: sap:Site Behavior and Performance\Process termination (crash)
 ms.reviewer: khgupta, v-sidong
 ---
-# Troubleshoot process termination crash
+# Troubleshoot a process crash
 
 This article helps you identify a process termination (more commonly referred to as a process crash) and provides methods to collect and analyze data for the crash.
 
