@@ -1,7 +1,7 @@
 ---
 title: Retrieve Certificate to Troubleshoot Windows Hello for Business Logon Failures
 description: This article introduces a solution to retrieve certificate information from Active Directory.
-ms.date: 02/14/2025
+ms.date: 02/13/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -14,7 +14,7 @@ This article introduces how to troubleshoot Windows Hello for Business (WHfB) lo
 
 ## Scenario
 
-After deploying WHfB to a hybrid key trust environment, you encounter one of the following issues:
+After deploying WHfB to a key trust hybrid environment, you encounter one of the following issues:
 
 - Users can't log on to a hybrid joined device by using WHfB.
 - Single sign-on (SSO) to on-premises resources fails after logging on to a Microsoft Entra ID joined device by using WHfB.

@@ -1,7 +1,7 @@
 ---
 title: Scripts to View the Certificate Information in the msDS-KeyCredentialLink Attribute
 description: This article introduces a script to view the certificate information in the msDS-KeyCredentialLink attribute from AD user objects.
-ms.date: 02/14/2025
+ms.date: 02/13/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
