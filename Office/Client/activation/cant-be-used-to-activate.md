@@ -44,7 +44,7 @@ Select **Update options**, and then select **Update now**.
 <details>
 <summary><b>Run the Microsoft 365 sign-in troubleshooter in Get Help</b></summary>
 
-The [Microsoft 365 sign-in troubleshooter](https://aka.ms/SaRA-OfficeSignIn-sarahome) helps resolve Microsoft 365 sign-in issues.
+The [Microsoft 365 sign-in troubleshooter](https://aka.ms/SaRA-OfficeSignIn-sarahome) helps you to resolve Microsoft 365 sign-in issues.
 
 To run the troubleshooter, follow these steps:
 
@@ -53,10 +53,10 @@ To run the troubleshooter, follow these steps:
    > [!div class="nextstepaction"]
    > [Microsoft 365 sign-in troubleshooter](https://aka.ms/SaRA-OfficeSignIn-sarahome)
 
-   If you receive a pop-up window that displays "This site is trying to open Get Help.", select **Open**.
+   If you receive a pop-up window that displays "This site is trying to open Get Help", select **Open**.
 1. Follow the instructions in the Get Help app to run the troubleshooter.
 
-After the troubleshooter completes, it displays the results and provides additional information about how to resolve the issue.
+After the troubleshooter finishes, it displays the results and provides additional information about how to resolve the issue.
 </details>
 
 <details>
