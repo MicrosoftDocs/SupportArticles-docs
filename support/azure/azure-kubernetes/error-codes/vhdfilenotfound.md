@@ -18,7 +18,7 @@ When you try to create an AKS cluster, you receive the following error message:
 
 > VMExtensionProvisioningError: VM has reported a failure when processing extension 'vmssCSE'.
 >
-> Error message: "Enable failed: failed to execute command: command terminated with exit status=124
+> Error message: "Enable failed: failed to execute command: command terminated with exit status=65
 
 ## Cause
 
