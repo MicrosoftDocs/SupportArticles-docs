@@ -1,44 +1,61 @@
 ---
-title: Error is shown when hovering on Remote App-Desktop
+title: No Element Highlighted or Error when Hovering UI or Web Element
 description: Solves PAD rdp agent startup issues
-ms.custom: sap:Desktop flows\UI or Browser automation issues
-ms.date: 01/22/2025
+ms.reviewer: amitrou
+ms.author: nimoutzo
+author: NikosMoutzourakis
+ms.custom: sap:Desktop flows\UI or browser automation
+ms.date: 02/13/2025
 ---
+# No element is highlighted or an error occurs when hovering on Remote App-Desktop
 
-# No element is highlighted or Error is shown when hovering on Remote App-Desktop
+This article solves the issue encountered when using the UI element picker in Citrix or RDP environments.
 
 ## Symptoms
 
-Given that the UI element picker is opened, when hovering the mouse cursor over a UI/web element of an application/web page inside a Citrix/RDP window:
+When the [UI element picker](/power-automate/desktop-flows/ui-elements#ui-elements-types) is opened, and you hover the mouse cursor over a UI or web element of an application or webpage inside a Citrix or RDP window, you might see:
 
-1. The element is not highlighted.
-2. An error popup is shown about enabling the Power Automate agent for virtual desktops.
+1. The element isn't highlighted.
+2. An error message about enabling the [Power Automate agent for virtual desktops](/power-automate/desktop-flows/virtual-desktops#install-the-power-automate-agent-for-virtual-desktops).
 
 :::image type="content" source="media/rdp-no-highlight/agent_not_running.png" alt-text="Power automate agent for virtual desktops is not running.":::
 
-## Causes
+## Cause
 
-The communication with the remote agent components cannot happen.
+The communication with the remote agent components doesn't work.
 
 ## Resolution
 
-1. Make sure the Power Automate Citrix/RDP plugin is registered. While the Citrix/RDP app/desktop is up, Run the troubleshooter (From Power Automate Menus -> Help -> Troubleshooter) and select "UI Automation" button. It should show the diagnostics for the communication. If an error occurs in the Citrix/RDP section, you can expand it for further details and possible fix.
-2. If the troubleshooter reports that the remote agent is **not running**:  
-   - Make sure the agent is running on the other side (inside the  Citrix/RDP session). This check can be performed while the Citrix/RDP app/desktop is up and check the tray icon for the agent icon. If the icon exists, hover over it to make sure it's still running. If it's still running, right click it to open the menu and select "Status". The agent status will be shown and the possible reason for the error.
+1. Ensure the Power Automate Citrix or RDP plugin is registered.
+
+   1. While the virtual desktop platform (Citrix Desktop, Citrix Virtual Apps, Remote Desktop app or a remote desktop with Windows RDP communication) is active, run the [troubleshooter](/power-automate/desktop-flows/troubleshooter) by navigating to **Help** > **Troubleshooter** in Power Automate.
+
+      > [!TIP]
+      > The troubleshooter can be manually opened via the console and the flow designer, through the dedicated menu under Help > Troubleshooter. It can also be opened via the process file PAD.Troubleshooter.exe, found in the installation folder of Power Automate for desktop.
+
+   1. Run the **Troubleshoot UI/Web automation issues** to view diagnostics for the communication. If there's an error in the Citrix or RDP section, expand it for more details and solutions.
+
+2. If the troubleshooter indicates that the remote agent isn't running, check if the agent is running in the Citrix or RDP sessions.
+
+   Check the tray icon for the agent icon when the virtual desktop platform is active. If the icon exists, hover over it to confirm it's still running. If it is, right-click the tray icon to open the menu, and select **Status**. The agent's status and the reason for the error will be displayed.
 
    :::image type="content" source="media/rdp-no-highlight/agent_disconnected_icon.png" alt-text="Power automate agent for virtual desktops is disconnected.":::
 
-3. If you verified that the agent **is indeed not running**, then if the user is using Citrix, then they have to make sure that the agent is installed on every Citrix Server.
+3. If the agent is confirmed not running, and Citrix is in use, ensure that the agent is installed on every Citrix Server.
 
-4. If the agent is running, then check the tray icon of the agent and check its status as described below:
-   - **"A device on the system is not functioning"**: The Citrix plugin isn't loaded on the host system. While the Citrix/RDP desktop/app is up, run the troubleshooter and check the Citrix/RDP errors on the UI Automation section.
-   - **"Citrix Virtual Channel policy enabled"**: The "Virtual channel Allow list" policy on Citrix is enabled or Default. If it isn't ***Disabled**, the agent can't communicate. They need to contact their administrators and disable this policy. Leaving it "Default" the issue persists. Make sure the Citrix machines are restarted after policy is applied.
-   - **Citrix VDA version < 2407:** The "Virtual channel Allow list" policy on Citrix is enabled or Default. If it is not **Disabled**, the agent can't communicate. They need to contact their administrators and disable this policy. Leaving it "Default" the issue persists. Make sure the Citrix machines are restarted after policy is applied.
-   - **Citrix VDA Version >= 2407:** A different policy must be set. The older "Virtual channel Allow list" can be left to default. The new policy name is "Virtual channel allow list for DVC" and the values needed to be added are:
+4. If the agent is running, check the following conditions based on the agent's tray icon status:
 
-       ```
-       C:\Program Files (x86)\Power Automate agent for virtual desktops\PAD.RDP.ControlAgent.exe,Microsoft.Flow.RPA.Desktop.UIAutomation.RDP.DVC.Plugin,PAD\CONTROL  
-       C:\Users\*\AppData\Local\Microsoft\Power Automate Desktop\RDP Automation Agents\*\PAD.RDP.AutomationAgent.exe,Microsoft.Flow.RPA.Desktop.UIAutomation.RDP.DVC.Plugin,PAD\UIA
-       ```
-        Make sure the Citrix machines are restarted after policy is applied.
+   - **A device on the system is not functioning**: The Citrix plugin isn't loaded on the host system. Run the troubleshooter while the virtual desktop platform is active and check errors in the **UI Automation** section.
+   - **Citrix Virtual Channel policy enabled**: The "Virtual channel Allow list" policy on Citrix is set to **Enabled** or **Default**. If it isn't **Disabled**, communication issues will persist. Contact administrators to disable this policy and ensure Citrix machines are restarted after applying the policy.
+   - **Citrix VDA version < 2407**: The "Virtual channel Allow list" policy on Citrix is set to **Enabled** or **Default**. If it isn't **Disabled**, communication issues will persist. Contact administrators to disable this policy and ensure Citrix machines are restarted after applying the policy.
+   - **Citrix VDA Version >= 2407**: A different policy must be set. The older "Virtual channel Allow list" can remain default. Set the new policy "Virtual channel allow list for DVC" with the following values:
 
+      `C:\Program Files (x86)\Power Automate agent for virtual desktops\PAD.RDP.ControlAgent.exe,Microsoft.Flow.RPA.Desktop.UIAutomation.RDP.DVC.Plugin,PAD\CONTROL`
+  
+      `C:\Users\*\AppData\Local\Microsoft\Power Automate Desktop\RDP Automation Agents\*\PAD.RDP.AutomationAgent.exe,Microsoft.Flow.RPA.Desktop.UIAutomation.RDP.DVC.Plugin,PAD\UIA`
+
+      Ensure Citrix machines are restarted after applying the policy.
+
+## More information
+
+[Automate on virtual desktops](/power-automate/desktop-flows/virtual-desktops)

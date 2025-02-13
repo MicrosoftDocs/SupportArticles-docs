@@ -1,23 +1,33 @@
 ---
-title: SAP UI element click issue
-description: Solves issues with sap element click
-ms.custom: sap:Desktop flows\UI or Browser automation issues
-ms.date: 01/29/2025
+title: SAP UI element click issue 
+description: Solves an issue where clicking on an SAP UI element fails in Power Automate for desktop.
+ms.reviewer: amitrou
+ms.author: nimoutzo
+author: NikosMoutzourakis
+ms.custom: sap:Desktop flows\SAP automation
+ms.date: 02/13/2025
 ---
-# SAP UI element click issue
+# Clicking on an SAP UI element fails
+
+This article solves an issue where clicking on an SAP UI element fails due to the application not being DPI aware in Power Automate for desktop.
 
 ## Symptoms
 
-The mouse moves and seems like it finds the elements but it's not over the correct element causing the action to fail.
+When you try to [click on an SAP UI element](/power-automate/desktop-flows/actions-reference/sap#clicksapguielement), the mouse cursor moves and appears to locate the element. However, the cursor isn't positioned over the correct element, causing the click action to fail.
 
 ## Cause
 
-This behavior is because the SAP application is not DPI aware. So, when the user captures an element in a different machine that the one the flow is run, and the two machines have different resolution then, the flow will fail (Same behavior has been notices on machines with multiple screens).
+This issue occurs because the SAP application isn't dots per inch (DPI) aware. When the user captures an element on a machine that's different from the one where the flow is run, and the two machines have different screen resolutions, the flow fails. This behavior can also occur on machines with multiple screens.
 
 ## Resolution
 
-Go to SAP settings > Visual design > Theme settings and check the Multi-monitor scaling awareness option. This option is not available in all the themes.
+1. In the SAP application, go to **SAP settings** > **Visual Design** > **Theme Settings** and enable the **Multi-monitor scaling awareness** option.
 
-:::image type="content" source="media/sap-click-element-dpi/mutli-monitor.png" alt-text="Multi-monitor scaling awareness.":::
+   > [!NOTE]
+   > This option isn't available in all the themes.
 
-Also, on windows go to System > Display and set the Scale to 100%.
+   :::image type="content" source="media/sap-click-element-dpi/mutli-monitor-scaling-awareness.png" alt-text="The Multi monitor scaling awareness option shown in SAP Theme Settings.":::
+
+2. On Windows, go to **System** > **Display** and set the **Scale** to 100%.
+
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]

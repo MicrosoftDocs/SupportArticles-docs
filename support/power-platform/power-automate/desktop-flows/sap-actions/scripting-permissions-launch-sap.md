@@ -1,22 +1,28 @@
 ---
-title: Error when launching SAP
-description: Solves errors in lauch sap action
-ms.custom: sap:Desktop flows\UI or Browser automation issues
-ms.date: 01/22/2025
+title: The server threw an exception when opening SAP
+description: Solves an error that occurs when a user tries to open the SAP application automated by Power Automate for desktop.
+ms.reviewer: amitrou
+ms.author: nimoutzo
+author: NikosMoutzourakis
+ms.custom: sap:Desktop flows\SAP automation
+ms.date: 02/13/2025
 ---
+# The server threw an exception when opening SAP
 
-# Error when launching SAP
+This artilce helps you resolve the error that occurs when a user tries to open the SAP application automated by Power Automate for desktop.
 
-## Case
+## Symptoms
 
-Launch SAP Fails with the following error:
+When a user tries to open the SAP application, they receive the following error message:
 
-`The server threw an exception. (Exception from HRESULT: 0x80010105 (RPC_E_SERVERFAULT)): Microsoft.PowerPlatform.PowerAutomate.Desktop.Actions.SDK.ActionException: Action failed. ---> System.Runtime.InteropServices.COMException: The server threw an exception. (Exception from HRESULT: 0x80010105 (RPC_E_SERVERFAULT))`
+> The server threw an exception. (Exception from HRESULT: 0x80010105 (RPC_E_SERVERFAULT)): Microsoft.PowerPlatform.PowerAutomate.Desktop.Actions.SDK.ActionException: Action failed. ---> System.Runtime.InteropServices.COMException: The server threw an exception. (Exception from HRESULT: 0x80010105 (RPC_E_SERVERFAULT))
 
-## Solution
+## Cause
 
- The user might not have the scripting permision on SAP. Check and enable the scripting for the users that need to use the SAP actions.
+This issue occurs because the user might not have the scripting permission to use SAP actions.
 
-## Resources
+## Resolution
 
-[Prerequisites for automating SAP GUI-based workloads - Power Automate | Microsoft Learn](/power-automate/guidance/rpa-sap-playbook/prerequisites#sap-gui-scripting-configuration)
+To solve the issue, [check and enable the SAP scripting](/power-automate/guidance/rpa-sap-playbook/prerequisites#sap-gui-scripting-configuration) for the user who needs to use the SAP actions.
+
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]

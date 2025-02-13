@@ -50,14 +50,6 @@
   items:
     - name: PAD UI automation
       items:
-        - name: UI automation
-          items:
-            - name: Cannot find UI element
-              href: desktop-flows/pad-ui-automation/ui-automation/cannot-find-ui-element.md
-        - name: UI automation in Java
-          items:
-            - name: Troubleshooting Java automation in PAD 
-              href: desktop-flows/pad-ui-automation/ui-java-automation/troubleshooting-java-pad.md
         - name: UI automation in SAP
           items:
             - name: SAP UI element click issue
