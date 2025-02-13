@@ -166,4 +166,3 @@ You should verify that the Office and SMB binaries are up-to-date, and then test
 2. This works immediately on a new SMB client connection. There's no need to restart the SMB server or client machines. 
 
 To avoid this issue, you can also replicate the file to a local file server. For more information, see [saving Office documents to a network server is slow when using EFS](/office/troubleshoot/office/saving-file-to-network-server-slow).
-t
