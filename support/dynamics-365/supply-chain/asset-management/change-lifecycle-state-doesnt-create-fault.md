@@ -4,7 +4,7 @@ description: Provides fault registration steps to ensure you receive the expecte
 author: sorenbacker2
 ms.author: sorenba
 ms.reviewer: kamaybac
-ms.date: 02/11/2025
+ms.date: 02/13/2025
 ms.custom: sap:Asset management\Issues with asset management
 ---
 # Changing a work order lifecycle state doesn't generate a fault cause or fault remedy error
