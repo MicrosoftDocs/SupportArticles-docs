@@ -152,9 +152,7 @@ items:
   - name: HTTP error 500 when you use Response.BinaryWrite
     href: site-behavior-performance/http-500-response-binarywrite.md
   - name: Internet printing fails
-    href: site-behavior-performance/internet-printing-fails.md
-  - name: Process termination crash 
-    href: site-behavior-performance/process-termination-crash.md 
+    href: site-behavior-performance/internet-printing-fails.md 
   - name: Runtime errors and exceptions
     items:
     - name: Troubleshoot 4xx and 5xx HTTP errors
@@ -165,6 +163,8 @@ items:
     href: site-behavior-performance/troubleshoot-http-400-errors-in-iis.md
   - name: Troubleshoot HTTP 502.2 Bad Gateway error in CGI apps
     href: site-behavior-performance/troubleshoot-502-2-bad-gateway-error-in-cgi-apps.md
+  - name: Troubleshoot process termination crash 
+    href: site-behavior-performance/process-termination-crash.md
   - name: Worker Process takes much memory
     href: site-behavior-performance/work-process-takes-much-memory.md
 

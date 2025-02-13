@@ -1,11 +1,11 @@
 ---
-title: Process Termination Crash
+title: Troubleshoot Process Termination Crash
 description: This article helps identify a process crash and provides methods to collect and analyze data for the crash.
-ms.date: 02/12/2025
+ms.date: 02/13/2025
 ms.custom: sap:Site Behavior and Performance\Process termination (crash)
 ms.reviewer: khgupta, v-sidong
 ---
-# Process termination crash
+# Troubleshoot process termination crash
 
 This article helps you identify a process termination (more commonly referred to as a process crash) and provides methods to collect and analyze data for the crash.
 
@@ -17,9 +17,10 @@ To identify that there is a process crash, follow these steps:
 1. Type **eventvwr** and select <kbd>Enter</kbd> to open the Event Viewer application.
 1. In Event Viewer, on the left-hand side, expand the **Windows Logs** folder, and then select the **System** event log. 
 1. In the **System** event log, you can choose to filter the log so that it shows you only the Windows Process Activation Service (WAS) source logs. The event type is **Warning**, and the **Event ID** is **5011**. 
-1. If there is any event with the preceding characteristics, you have a process crash. The wording for the event is like `A process serving application pool <name of the application pool> suffered a fatal communication error with the Windows Process Activation Service. The process id was '<id of process>'. The data field contains the error number.`.
 
-Key points that you need to recover from these steps: 
+If there is any event with the preceding characteristics, it indicates a process crash. The wording for the event is like `A process serving application pool <name of the application pool> suffered a fatal communication error with the Windows Process Activation Service. The process id was '<id of process>'. The data field contains the error number.`.
+
+Key points that you need to collect from these steps: 
 
 - Application pool name 
 - Timestamp of the event (note down the time zone in which your computer is)  
@@ -41,8 +42,8 @@ From the information collected, you have an idea of what might have caused the c
 
 Take note of the following fields: 
 
-- **Faulting application** - Considering that you're using this in the context of IIS, you want to see **w3wp.exe** as the faulting application as this is the IIS Worker Process. 
-- **Faulting module name** - It's possible that you might see the presence of Microsoft Dynamic Link Libraries (DLLs), but they are usually not the culprit for crashes.
+- **Faulting application** - In the context of IIS, the faulting application you want to look for is **w3wp.exe** as this is the IIS Worker Process. 
+- **Faulting module name** - When a crash occurs, the faulting module name might be Microsoft Dynamic Link Libraries (DLLs). However, they're usually not the root cause of the crash.
 - **Exception code** - The exception code gives an insight into what the error could be. Common codes include:
 
   |Exception code|Description|
@@ -71,7 +72,7 @@ To collect a crash dump, you can use tools like [Debug Diagnostic Tool](#debug-d
    > [!NOTE]
    > You should avoid using any other of the available options (consider them as a last resort only). 
 
-1. Select the application pool (you can get the application pool name in step 5 from the [Identify a process crash](#identify-a-process-crash) section) that crashes and select **Next**.
+1. Select the crashing application pool (you can get the application pool name in the [Identify a process crash](#identify-a-process-crash) section) and select **Next**.
 1. In the **Advanced Configuration (Optional)** window, select **Breakpoints** under **Advanced Settings**. Don't change any other options in this window and keep them at their default values. 
 1. In the **Configure Breakpoints** window, select **Add Breakpoint**. 
 1. Select the first line that reads **Ntdll!ZwTerminateProcess**. Then, select **Full Userdump** in the **Action Type** dropdown and set a value between 3 and 5 in the **Action Limit** field. Once done, click **OK**. 
@@ -111,24 +112,26 @@ ProcDump is a simpler way to take a memory dump of a process. To take crash dump
    - `-e 1`: This flag indicates that the dump should be captured on the first occurrence of an exception.
    - `-f "<typeOfException>"`: This flag specifies that the tool should filter for the `<typeOfException>` type of exception.
    - `PID`: This is the Process ID of the application you want to monitor.
-   - `-f "<typeOfException>"`: This flag specifies that the tool should filter for the `<typeOfException>` type of exception.
    
-   If the error code is `C00000FD`, and you aren't able to take a memory dump, proceed with the following steps: 
+If the error code is `C00000FD`, and you aren't able to take a memory dump, follow these steps: 
 
-   1. Run the following command:
+1. Download [ProcDump](/sysinternals/downloads/procdump). 
+1. Extract Procdump to a folder within the affected server. Make sure that the folder is in a drive other than the system drive to avoid any impact on the system drive. 
+1. Open the **Command Prompt** window as an administrator, and set that prompt's working directory to the directory in step 2.
+1. Run the following command to configure ProcDump to automatically save memory dumps to a specified directory:
 
-      The drive in the following command is just an example, and you should strive to ensure that the dumps don't get written to a system drive. 
+   The drive in the following command is just an example, and you should strive to ensure that the dumps don't get written to a system drive. 
 
-      ```cmd
-      Procdump -ma -i Z:\Dumps 
-      ```
+   ```cmd
+   Procdump -ma -i Z:\Dumps 
+   ```
 
-   1. Reproduce the issue while you monitor the folder for dumps. 
-   1. As soon as you have a dump for the **w3wp** process you're targeting, run the following command to uninstall procdump as the postmortem debugger. 
+1. Reproduce the issue while you monitor the folder for dumps. 
+1. As soon as you have a dump for the **w3wp** process you're targeting, run the following command to uninstall procdump as the postmortem debugger. 
 
-      ```cmd
-      Procdump -u 
-      ```
+    ```cmd
+    Procdump -u 
+    ```
 
 #### Windows Error Reporting
 
@@ -153,6 +156,7 @@ If you don't have them, follow these steps to set up WER:
 
 To perform the analysis for the crash, follow these steps:
 
+1. Download and install [Debug Diag](https://www.microsoft.com/download/details.aspx?id=103453&msockid=145197b7d1fa6877376482b2d0bf6961) (short for Debug Diagnostic Tool).
 1. Open DebugDiag2 Analysis and select **Add Data Files**.
 1. In the file chooser dialog, select the dump file you want to analyze.
 1. Once you upload the desired file, select **Start Analysis**.
