@@ -22,9 +22,10 @@ Microsoft Viva Glint survey programs enable your organization to collect data an
 
 After you sign in, you might occasionally encounter issues, such as unexpected connection or maintenance messages, when you try to view results for your team. This article lists some common issues and the steps to resolve them.
 
-Note that, to successfully access Viva Glint, users must:
-- Exist in Entra with a Member Type of "Member" (not "Guest"). Learn more about how Microsoft 365 Global Administrators or Entra admins can [set up access to Viva Glint with Microsoft Entra ID](/viva/glint/setup/access-with-azure-ad).
-- Exist in the Viva Glint app with an "ACTIVE" employee status and membership to the Active Employees role.
+To successfully access Viva Glint, your user account must meet the following requirements:
+
+- It must exist in Microsoft Entra with the user type set to **Member**. For more information on how administrators can set up access, see [set up access to Viva Glint with Microsoft Entra ID](/viva/glint/setup/access-with-azure-ad).
+- It must exist in the Viva Glint app. Additionally, it must be a member of the **Active Employees** role, and the employee status must be **ACTIVE**.
 
 ## No access to live surveys
 
