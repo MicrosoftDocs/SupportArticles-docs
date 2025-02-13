@@ -4,7 +4,7 @@ description: Provides a resolution for the Expression couldn't be evaluated erro
 ms.reviewer: iomavrid
 author: yiannismavridis
 ms.author: iomavrid
-ms.date: 02/11/2025
+ms.date: 02/13/2025
 ms.custom: sap:Desktop flows\Power Automate for desktop errors
 ---
 # "Expression couldn't be evaluated" error when using encrypted text
