@@ -52,6 +52,9 @@ For more information about configuring Group Policy for WSUS clients, see [Confi
 
 ## Check for issues relating to BITS
 
+> [!NOTE]
+> [Windows Update Delivery Optimization](/windows/deployment/do/waas-delivery-optimization) allows clients to download updates from Microsoft Update or a WSUS server in Windows 10, Windows 11, and server operating systems newer than Windows Server 2016. For more information, see [common issues with Delivery Optimization](/windows/deployment/do/delivery-optimization-troubleshoot) and [a comprehensive list of all Delivery Optimization settings](/windows/deployment/do/waas-delivery-optimization-reference).
+
 Background Intelligent Transfer Service (BITS) is the service used by WSUS to download updates from Microsoft Update to the main WSUS server, and from WSUS servers to their clients. Some download issues may be caused by problems with BITS on the server or client computers. When you troubleshoot download problems, you should ensure that BITS is running properly on all affected computers.
 
 The BITS service must run under the **LocalSystem** account by default. To configure the service to run under the correct account, follow these steps:

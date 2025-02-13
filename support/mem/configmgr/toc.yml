@@ -371,8 +371,6 @@ items:
           href: update-management/different-software-updates-results-displayed.md
         - name: Errors when servicing a server group
           href: update-management/errors-servicing-server-group.md
-        - name: Error 0x800f0831 installing updates
-          href: update-management/error-0x800f0831-installing-update.md
         - name: .NET Framework 4.7.2 updates fail to sync
           href: update-management/dotnet-framework-updates-fail-to-sync.md
         - name: Updates aren't downloaded when an ADR runs
