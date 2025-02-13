@@ -17,7 +17,7 @@ To identify that there is a process crash, follow these steps:
 1. Type **eventvwr** and select <kbd>Enter</kbd> to open the Event Viewer application.
 1. In Event Viewer, on the left-hand side, expand the **Windows Logs** folder, and then select the **System** event log. 
 1. In the **System** event log, you can choose to filter the log so that it shows you only the Windows Process Activation Service (WAS) source logs. The event type is **Warning**, and the **Event ID** is **5011**. 
-1. If there is any event with the proceding characteristics, you have a process crash. The wording for the event is like `A process serving application pool <name of the application pool> suffered a fatal communication error with the Windows Process Activation Service. The process id was '<id of process>'. The data field contains the error number.`.
+1. If there is any event with the preceding characteristics, you have a process crash. The wording for the event is like `A process serving application pool <name of the application pool> suffered a fatal communication error with the Windows Process Activation Service. The process id was '<id of process>'. The data field contains the error number.`.
 
 Key points that you need to recover from these steps: 
 
