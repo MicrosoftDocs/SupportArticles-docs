@@ -1,7 +1,7 @@
 ---
 title: Remote Desktop licensing mode is not configured warning
 description: Helps you troubleshoot a licensing warning message when you connect to a Remote Desktop (RD) Session Host.
-ms.date: 02/10/2025
+ms.date: 02/13/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -12,7 +12,7 @@ ms.custom: sap:Remote Desktop Services and Terminal Services\Licensing for Remot
 
 This article helps you troubleshoot a licensing warning message when you connect to a Remote Desktop (RD) Session Host.
 
-When you use the Remote Desktop Web portal (RD Web portal) or a direct remote desktop protocol (RDP) connection to access a Remote Desktop Services (RDS) deployment, you receive one of the following Windows RDS balloon reminders:
+When you use the Remote Desktop Web portal (RD Web portal) or a direct remote desktop protocol (RDP) connection to access a Remote Desktop Services (RDS) deployment, you receive one of the following Windows RDS Balloon Reminder messages:
 
 - When the RD Session Host is still under the grace period:
 
@@ -26,10 +26,10 @@ When you use the Remote Desktop Web portal (RD Web portal) or a direct remote de
 
 ## The licensing mode isn't properly configured or the RD Session Host can't communicate with the RD license server
 
-By default, a newly created RD Session Host has a grace period of 120 days. If the licensing mode isn't properly configured in the RDS deployment, or if the RD Session Host can't communicate with the RD license server, you receive one of the pop-up messages each time you sign in.
+By default, a newly created RD Session Host has a grace period of 120 days. If the licensing mode isn't properly configured in the RDS deployment, or if the RD Session Host can't communicate with the RD license server, you receive one of the preceding pop-up messages each time you sign in.
 
 > [!NOTE]
-> The pop-up message isn't always a sign of a problem. In the following scenarios, you receive the message even if all the settings are as expected:
+> The pop-up message doesn't always indicate a problem. In the following scenarios, you receive the message even if all the settings are as expected:
 >
 > - Connecting with a local account and the licensing mode is set to **Per User**
 > - Connecting with an administrative session
