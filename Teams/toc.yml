@@ -6,7 +6,9 @@
     - name: '"FAILED_TO_AUTO_DISCOVER_DOMAIN" error in admin center'
       href: ./teams-administration/failed-to-auto-discover-domain-error-teams-admin-center.md
     - name: "\"We couldn't add member\" error when adding users"
-      href: ./teams-administration/couldnt-add-member-error.md 
+      href: ./teams-administration/couldnt-add-member-error.md
+    - name: Can't access Teams Premium features
+      href: ./teams-administration/cannot-access-teams-premium-features.md
     - name: Clear the Teams client cache
       href: ./teams-administration/clear-teams-cache.md
     - name: Disable SharePoint News notifications in Teams
@@ -305,6 +307,8 @@
     items:
     - name: Audio issues when using Teams on macOS
       href: ./teams-on-mac/teams-audio-issue-mac.md
+    - name: Can't sign in to Teams for Mac after macOS upgrade
+      href: ./teams-on-mac/teams-sign-in-issues-after-os-upgrade.md
     - name: Incorrect presence status in Teams for Mac
       href: ./teams-on-mac/incorrect-presence-status-teams-for-mac.md
     - name: Teams-specific notification sound reverts to macOS notification sound

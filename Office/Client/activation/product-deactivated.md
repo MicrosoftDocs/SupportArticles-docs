@@ -17,7 +17,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
-ms.date: 06/06/2024
+ms.date: 02/11/2025
 ---
 
 # Microsoft 365 Apps activation error: “Product deactivated"
@@ -58,16 +58,28 @@ If you have a different edition or version installed on your device, run the SaR
 <details>
 <summary><b>Reset Microsoft 365 activation state</b></summary>
 
-Run the [Microsoft Support and Recovery Assistant (SaRA) to reset the Microsoft 365 activation state](https://aka.ms/SaRA-OfficeActivation-Reset).
-
-For manual steps or more information, see [Reset Microsoft 365 Apps for enterprise activation state]( /office/troubleshoot/activation/reset-office-365-proplus-activation-state).
+See [Reset activation state for Microsoft 365 Apps for enterprise](/office/troubleshoot/activation/reset-office-365-proplus-activation-state).
 <br/><br/>
 </details>
 
 <details>
-<summary><b>Run the SaRA activation troubleshooter</b></summary>
+<summary><b>Run the Microsoft 365 activation troubleshooter in Get Help</b></summary>
 
-Run the [SaRA activation troubleshooter](https://aka.ms/SARA-OfficeActivation-Alchemy), and select the **Office** option. When prompted, select the option that best describes your situation.
+The [Microsoft 365 activation troubleshooter](https://aka.ms/SaRA-OfficeActivation-sarahome) helps resolve Microsoft 365 subscription activation issues.
 
+> [!NOTE]
+> To run the Microsoft 365 activation troubleshooter, make sure that you're using the same Windows device where Microsoft 365 is installed. In addition, make sure that your device is running Windows 10 or later.
+
+To run the troubleshooter, follow these steps:
+
+1. Select the following button to start the troubleshooter.
+
+   > [!div class="nextstepaction"]
+   > [Microsoft 365 activation troubleshooter](https://aka.ms/SaRA-OfficeActivation-sarahome)
+
+   If you receive a pop-up window that displays "This site is trying to open Get Help.", select **Open**.
+1. Follow the instructions in the Get Help app to run the troubleshooter.
+
+After the troubleshooter completes, it displays the results and provides additional information about how to resolve the issue.
 <br/><br/>
 </details>
