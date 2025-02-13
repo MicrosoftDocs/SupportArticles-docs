@@ -22,7 +22,7 @@ You're running a Windows 11 machine with SQL Server installed with the [SQL Serv
 
 ## Cause
 
-Windows update [KB5044284 (OS Build 26100.2033)](https://support.microsoft.com/topic/october-8-2024-kb5044284-os-build-26100-2033-6baf4a06-9763-4d9b-ba8a-f25ba6ed477b) changed the behavior of the Windows API [CreateAppContainerProfile](/windows/win32/api/userenv/nf-userenv-createappcontainerprofile) that is called by the Launchpad service. This change caused the API to return an error and ultimately caused the Launchpad service to fail.
+Windows update [KB5044284 (OS Build 26100.2033)](https://support.microsoft.com/topic/october-8-2024-kb5044284-os-build-26100-2033-6baf4a06-9763-4d9b-ba8a-f25ba6ed477b) changed the behavior of the Windows API [CreateAppContainerProfile](/windows/win32/api/userenv/nf-userenv-createappcontainerprofile) that is called by the Launchpad service. This change causes the API to return an error, ultimately leading to the failure of the Launchpad service.
 
 ## Resolution
 
