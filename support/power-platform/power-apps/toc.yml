@@ -96,12 +96,12 @@
           href: create-and-use-apps/cookies-pop-up-blocker-error.md
         - name: No response with back button
           href: create-and-use-apps/no-navigation-when-selecting-button.md
-- name: Integrate other products in model-driven apps/Sharepoint integration
+- name: Integrate other products in model-driven apps
   items:
-    - name: Known issues with document management
-      href: integrate-products/doc-management-known-issues.md
     - name: Troubleshooting Word templates
       href: integrate-products/troubleshoot-word-templates-dynamics-365.md
+    - name: Known issues with document management
+      href: integrate-products/doc-management-known-issues.md
     - name: Troubleshooting server-based authentication
       href: integrate-products/troubleshooting-server-based-authentication.md
     - name: Troubleshooting conditional access authentication
