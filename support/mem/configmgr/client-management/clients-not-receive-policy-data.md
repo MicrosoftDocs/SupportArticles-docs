@@ -1,7 +1,7 @@
 ---
 title: ConfigMgr clients don't receive policy data
 description: Fixes an issue that occurs if a recovery that's made from a central administration site doesn't reset session IDs in SQL Server.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 ms.reviewer: kaushika
 ms.custom: sap:Client Operations\Client Policy
 ---

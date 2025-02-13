@@ -2251,6 +2251,8 @@ items:
       href: ./remote/terminal-server-license-for-deployment.md
     - name: Terminal Server licensing
       href: ./remote/terminal-server-licensing.md
+    - name: The system cannot determine if the license server is member of TSLS Group
+      href: ./remote/system-cannot-determine-license-server-member-tsls.md
     - name: Troubleshooting access denied and user not authorized issues in RDS
       href: ./remote/troubleshooting-access-denied-and-user-not-authorized-rds-issues.md
     - name: '"Your session will be disconnected in 60 minutes" message when you connect to RDS'
@@ -3119,6 +3121,8 @@ items:
       href: ./support-tools/scripts-to-retrieve-profile-age.md
     - name: Scripts to retrieve profile age and optionally delete aged copies
       href: ./support-tools/scripts-retrieve-profile-age-delete-aged-copies.md
+    - name: Scripts to view the certificate information in the msDS-KeyCredentialLink attribute
+      href: ./support-tools/script-to-view-msds-keycredentiallink-attribute-value.md
   - name: TroubleShootingScript toolset (TSS)
     items:
     - name: Introduction to TroubleShootingScript toolset (TSS)
