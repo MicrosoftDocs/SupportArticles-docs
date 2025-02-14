@@ -51,7 +51,7 @@ To create a minimal report to troubleshoot report issues, follow these steps:
 
 1. Simplify the report as much as possible. The goal is to get to a single number.
 2. Remove any [reporting tree](/dynamics365/fin-ops-core/fin-ops/analytics/financial-reporting-tree-definitions) and dimension set.
-3. Set the **Detail level** to **financial**, **account**, and **transaction**.
+3. Set the **Detail level** to **Financial**, **Account**, and **Transaction**. For more information, see [Report definitions](/dynamics365/fin-ops-core/fin-ops/analytics/design-financial-report-definitions).
 4. Remove other special options.
 
 5. In the [row definition](/dynamics365/fin-ops-core/fin-ops/analytics/row-definitions-financial-reporting), include a single row with a single account or dimension combination.
@@ -67,9 +67,13 @@ To create a minimal report to troubleshoot report issues, follow these steps:
 7. This should display a report with a single cell of data.
 8. Verify the report is working as expected.
 9. If your issue includes specific design requirements, such as currency filter, attribute filter, year-to-date, or beginning balances, add these modifications one at a time.
-10. If the issue still exists, contact Microsoft support and provide the following information:
+10. If the issue still exists, contact [Microsoft support](/power-platform/admin/get-help-support) and provide the following information:
       - [The .tdbx exported files](/dynamics365/finance/general-ledger/view-financial-reports#export-a-financial-report) of the simplified and original reports.
       - Screenshots of the simplified report build block designs including rows and columns.
       - Excel export of the report output.
       - Reporting parameters: **Company**, **Reporting date**, and **Report name**.
       - Details about the incorrect amount and what the expected value is.
+
+## More information
+
+[Best practices for optimizing financial reports](/dynamics365/finance/general-ledger/fin-reports-best)
