@@ -5,7 +5,7 @@ ms.reviewer: amitrou
 ms.author: nimoutzo
 author: NikosMoutzourakis
 ms.custom: sap:Desktop flows\SAP automation
-ms.date: 02/13/2025
+ms.date: 02/14/2025
 ---
 # Clicking on an SAP UI element fails
 
@@ -30,4 +30,4 @@ This issue occurs because the SAP application isn't dots per inch (DPI) aware. W
 
 2. On Windows, go to **System** > **Display** and set the **Scale** to 100%.
 
-[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../../../includes/third-party-disclaimer.md)]
