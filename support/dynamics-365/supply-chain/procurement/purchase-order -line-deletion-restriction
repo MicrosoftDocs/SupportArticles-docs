@@ -24,3 +24,8 @@ This restriction was implemented to safeguard data integrity by preventing the d
 
 ## Workaround
 If there is a need to remove a purchase order line, the recommended approach is to first cancel the line and then finalize it.
+
+To cancel the whole quantity on a PO line, user should cancel the delivery remainder quantity on the line. The line will then be updated to Canceled status.
+
+Related information to cancel PO:
+https://learn.microsoft.com/en-us/dynamics365/supply-chain/procurement/purchase-order-approval-confirmation#canceling-purchase-orders
