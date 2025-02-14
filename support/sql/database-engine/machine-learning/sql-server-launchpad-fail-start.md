@@ -1,7 +1,7 @@
 ---
 title: SQL Server Launchpad Service Fails to Start
 description: Resolves a problem where the SQL Server Launchpad service fails to start after installing Windows update KB5044284 (OS Build 26100.2033) or a later version.
-ms.date: 02/13/2025
+ms.date: 02/14/2025
 ms.custom: sap:Machine Learning Services (in database)
 ms.reviewer: jaferebe, v-sidong
 ---
@@ -26,4 +26,4 @@ Windows update [KB5044284 (OS Build 26100.2033)](https://support.microsoft.com/t
 
 ## Resolution
 
-Microsoft is actively working on a fix. In the meantime, if you use the Launchpad service, revert to Windows update [KB5043080 (OS Build 26100.1742)](https://support.microsoft.com/topic/september-10-2024-kb5043080-os-build-26100-1742-407666c8-6b6d-4561-a982-abce4e7c2efb) or an earlier version. 
+Microsoft is actively working on a fix. In the meantime, if you use the Launchpad service, [revert](https://support.microsoft.com/windows/how-to-uninstall-a-windows-update-c77b8f9b-e4dc-4e9f-a803-fdec12e59fb0) to Windows update [KB5043080 (OS Build 26100.1742)](https://support.microsoft.com/topic/september-10-2024-kb5043080-os-build-26100-1742-407666c8-6b6d-4561-a982-abce4e7c2efb) or an earlier version. 
