@@ -23,7 +23,7 @@ When you create a virtual machine (VM), start any stopped (deallocated) VMs, or 
 >
 > **Error message**: "Allocation failed. We do not have sufficient capacity for the requested VM size in this region. Read more about improving likelihood of allocation success at https:\//aka.ms/allocation-guidance"
 >
-> **Alternative recommendation**: When you receive an alternative recommendation, it means that the VM size you requested is not currently available in the selected region or zone. To increase your chances of successfully allocating a virtual machine, you can select one of the alternative options. Simply apply the changes to your VM input selection or [resize](/azure/virtual-machines/sizes/resize-vm?tabs=portal) the currently existing VM with the desired option and try to start or create the VM again
+> **Alternative recommendation**: When you receive an alternative recommendation, it means that the VM size you requested is not currently available in the selected region or zone. To increase your chances of successfully allocating a virtual machine, you can select one of the alternative options. Simply apply the changes to your VM input selection or [resize](/azure/virtual-machines/sizes/resize-vm) the currently existing VM with the desired option and try to start or create the VM again
 >
 > Example:
 >
@@ -83,7 +83,7 @@ To work around this issue, use one of the following methods:
 
 - For a new VM deployment, if it can be part of a different availability set, create the VM in a different availability set (in the same region or zone). This new VM can then be added to the same virtual network.
 
-- Consider resizing the VM to a different size that might have more availability in the region or zone. To ensure that the VM sizes are supported in your availability set, use [availability sets - List Available Sizes - REST API](https://learn.microsoft.com/troubleshoot/azure/virtual-machines/windows/virtual-machines-availability-set-supportability).
+- Consider resizing the VM to a different size that might have more availability in the region or zone. To ensure that the VM sizes are supported in your availability set, use [availability sets - List Available Sizes - REST API](/troubleshoot/azure/virtual-machines/windows/virtual-machines-availability-set-supportability).
 
 - Stop (deallocate) all VMs in the same availability set, then start all applicable VMs in a batch to allow the allocation from all available clusters, rather than just the cluster where the availability set is currently allocated.
   
@@ -146,7 +146,7 @@ To work around this issue, use one of the following methods:
       For more information, see the following articles:
 
        - [Create a snapshot of a virtual hard disk](/azure/virtual-machines/snapshot-copy-managed-disk)
-       - [Create a VM from a snapshot](https://learn.microsoft.com/azure/virtual-machines/scripts/create-vm-from-snapshot)
+       - [Create a VM from a snapshot](/azure/virtual-machines/scripts/create-vm-from-snapshot)
 
    - Migrate or create the VM in a different region. For more information, see [Move Azure VMs across regions](/azure/resource-mover/tutorial-move-region-virtual-machines).
 
@@ -187,7 +187,7 @@ To work around this issue, use one of the following methods:
       For more information, see the following articles:
 
        - [Create a snapshot of a virtual hard disk](/azure/virtual-machines/snapshot-copy-managed-disk)
-       - [Create a VM from a snapshot](https://learn.microsoft.com/azure/virtual-machines/scripts/create-vm-from-snapshot)
+       - [Create a VM from a snapshot](/azure/virtual-machines/scripts/create-vm-from-snapshot)
 
    - Migrate or create the VM in a different region. For more information, see [Move Azure VMs across regions](/azure/resource-mover/tutorial-move-region-virtual-machines).
 
