@@ -30,4 +30,4 @@ This issue occurs because the SAP application isn't dots per inch (DPI) aware. W
 
 2. On Windows, go to **System** > **Display** and set the **Scale** to 100%.
 
-[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]

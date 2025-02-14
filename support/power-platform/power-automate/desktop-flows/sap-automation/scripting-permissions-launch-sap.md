@@ -25,4 +25,4 @@ This issue occurs because the user might not have the scripting permission to us
 
 To solve the issue, [check and enable the SAP scripting](/power-automate/guidance/rpa-sap-playbook/prerequisites#sap-gui-scripting-configuration) for the user who needs to use the SAP actions.
 
-[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
