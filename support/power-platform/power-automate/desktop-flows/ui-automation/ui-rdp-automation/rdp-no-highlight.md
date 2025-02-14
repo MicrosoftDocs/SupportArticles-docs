@@ -7,13 +7,13 @@ author: NikosMoutzourakis
 ms.custom: sap:Desktop flows\UI or browser automation
 ms.date: 02/13/2025
 ---
-# No element is highlighted or an error occurs when hovering on Remote App-Desktop
+# No element is highlighted or an error occurs when hovering over a UI or web element
 
 This article solves the issue encountered when using the UI element picker in Citrix or RDP environments.
 
 ## Symptoms
 
-When the [UI element picker](/power-automate/desktop-flows/ui-elements#ui-elements-types) is opened, and you hover the mouse cursor over a UI or web element of an application or webpage inside a Citrix or RDP window, you might see:
+When you hover the mouse cursor over a UI or web element of an application or webpage inside a Citrix or RDP window with the [UI element picker](/power-automate/desktop-flows/ui-elements#ui-elements-types) enabled, you might see:
 
 1. The element isn't highlighted.
 2. An error message about enabling the [Power Automate agent for virtual desktops](/power-automate/desktop-flows/virtual-desktops#install-the-power-automate-agent-for-virtual-desktops).
