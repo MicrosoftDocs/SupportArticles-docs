@@ -3,7 +3,7 @@ title: Resolve issues when accessing Viva Glint survey results
 description: Resolves some common issues that you might encounter when you try to view survey results for your team.
 manager: dcscontentpm
 ms.reviewer: aweixelman
-ms.date: 01/07/2025
+ms.date: 02/13/2025
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
@@ -20,12 +20,12 @@ Microsoft Viva Glint survey programs enable your organization to collect data an
 - US - [http://app.us1.glint.cloud.microsoft](http://app.us1.glint.cloud.microsoft)
 - EU - [http://app.eu1.glint.cloud.microsoft](http://app.eu1.glint.cloud.microsoft)
 
-After you sign in, you might occasionally encounter issues, such as unexpected connection or maintenance messages, when you try to view results for your team. This article lists some common issues and the steps to resolve them.
+After you sign in, you might occasionally encounter such issues as unexpected connection or maintenance messages, when you try to view results for your team. This article lists some common issues and the steps to resolve them.
 
 To successfully access Viva Glint, your user account must meet the following requirements:
 
-- It must exist in Microsoft Entra with the user type set to **Member**. For more information on how administrators can set up access, see [set up access to Viva Glint with Microsoft Entra ID](/viva/glint/setup/access-with-azure-ad).
-- It must exist in the Viva Glint app. Additionally, it must be a member of the **Active Employees** role, and the employee status must be **ACTIVE**.
+- It must exist in Microsoft Entra and have the user type set to **Member**. For more information about how administrators can set up access, see [set up access to Viva Glint with Microsoft Entra ID](/viva/glint/setup/access-with-azure-ad).
+- It must exist in the Viva Glint app, be a member of the **Active Employees** role, and have the employee status set to **ACTIVE**.
 
 ## No access to live surveys
 
