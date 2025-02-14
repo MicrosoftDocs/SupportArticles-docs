@@ -9,6 +9,8 @@ ms.date: 02/14/2025
 ---
 # Web Automation action fails when machine runtime and MSIX versions are different
 
+This article provides a workaround to the "Negotiation failed" error that occurs when a web automation action fails to run in Power Automate for desktop.
+
 ## Symptoms
 
 When a web automation action is triggered from a cloud flow, the action fails with the following error:
@@ -29,7 +31,7 @@ When a web automation action is triggered from a cloud flow, the action fails wi
 
 ## Cause
 
-If the Power Automate for desktop MSIX installation has a different version than the machine runtime application, the Message Host running from the browser is from the MSIX installation, which is a different version from what the machine runtime application expects. This discrepancy causes the flow to fail with a "Negotiation failed" error.
+If the Power Automate for desktop MSIX installation has a different version than the machine runtime application, the Message Host running from the browser is from the MSIX installation, which is a different version than what the machine runtime application expects. This discrepancy causes the flow to fail with a "Negotiation failed" error.
 
 ## Workaround
 

@@ -1,5 +1,5 @@
 ---
-title: SAP UI element click issue 
+title: SAP UI Element Click Issue 
 description: Solves an issue where clicking on an SAP UI element fails in Power Automate for desktop.
 ms.reviewer: amitrou
 ms.author: nimoutzo
@@ -17,14 +17,14 @@ When you try to [click on an SAP UI element](/power-automate/desktop-flows/actio
 
 ## Cause
 
-This issue occurs because the SAP application isn't dots per inch (DPI) aware. When the user captures an element on a machine that's different from the one where the flow is run, and the two machines have different screen resolutions, the flow fails. This behavior can also occur on machines with multiple screens.
+This issue occurs because the SAP application isn't dots per inch (DPI) aware. When the user captures an element on a machine that's different from the one where the flow is run, and the two machines have different screen resolutions, the flow might fail. This behavior can also occur on machines with multiple screens.
 
 ## Resolution
 
 1. In the SAP application, go to **SAP settings** > **Visual Design** > **Theme Settings** and enable the **Multi-monitor scaling awareness** option.
 
    > [!NOTE]
-   > This option isn't available in all the themes.
+   > This option isn't available in all themes.
 
    :::image type="content" source="media/sap-click-element-dpi/mutli-monitor-scaling-awareness.png" alt-text="The Multi monitor scaling awareness option shown in SAP Theme Settings.":::
 

@@ -5,11 +5,11 @@ ms.reviewer: amitrou
 ms.author: nimoutzo
 author: NikosMoutzourakis
 ms.custom: sap:Desktop flows\SAP automation
-ms.date: 02/13/2025
+ms.date: 02/14/2025
 ---
 # The server threw an exception when opening SAP
 
-This artilce helps you resolve the error that occurs when a user tries to open the SAP application automated by Power Automate for desktop.
+This article helps you resolve the error that occurs when a user tries to open the SAP application automated by Power Automate for desktop.
 
 ## Symptoms
 
@@ -19,7 +19,7 @@ When a user tries to open the SAP application, they receive the following error 
 
 ## Cause
 
-This issue occurs because the user might not have the scripting permission to use SAP actions.
+This issue occurs because the user might not have the scripting permission to use the SAP actions.
 
 ## Resolution
 

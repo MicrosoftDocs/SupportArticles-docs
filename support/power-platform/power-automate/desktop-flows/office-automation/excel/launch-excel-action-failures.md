@@ -9,7 +9,7 @@ ms.date: 02/14/2025
 ---
 # An error occurs when opening an Excel file in Power Automate for desktop
 
-This article helps to solve the error that occurs when you try to open a blank or existing Excel file in Power Automate for desktop.
+This article helps solve the error that occurs when you try to open a blank or existing Excel file in Power Automate for desktop.
 
 ## "Exception from HRESULT: 0x800xxxxx" error
 
@@ -41,7 +41,7 @@ To solve this issue, [install Excel](https://support.microsoft.com/office/downlo
 
 ### Cause
 
-The document is located in a restricted path, or Power Automate for desktop doesn't have permission to open and access the document.
+The document is located in a restricted file path, or Power Automate for desktop doesn't have permission to open and access the document.
 
 ### Resolution
 
@@ -57,7 +57,7 @@ The Excel application is locked and no other process can access it.
 
 ### Resolution
 
-Terminate all opened excel processes and restart Power Automate for desktop.
+Terminate all opened Excel processes and restart Power Automate for desktop.
 
 ## "80040154 Class not registered" error
 

@@ -1,15 +1,15 @@
 ---
-title: No Element Highlighted or Error when Hovering UI or Web Element
-description: Solves PAD rdp agent startup issues
+title: No Element Highlighted or Error when Hovering over UI or Web Element
+description: Solves an issue that occurs when you hover the mouse cursor over a UI or web element of an application or webpage in Power Automate for desktop.
 ms.reviewer: amitrou
 ms.author: nimoutzo
 author: NikosMoutzourakis
 ms.custom: sap:Desktop flows\UI or browser automation
-ms.date: 02/13/2025
+ms.date: 02/14/2025
 ---
 # No element is highlighted or an error occurs when hovering over a UI or web element
 
-This article solves the issue encountered when using the UI element picker in Citrix or RDP environments.
+This article solves the issue encountered when using the UI element picker in Citrix or RDP environments in Power Automate for desktop.
 
 ## Symptoms
 
@@ -18,7 +18,10 @@ When you hover the mouse cursor over a UI or web element of an application or we
 1. The element isn't highlighted.
 2. An error message about enabling the [Power Automate agent for virtual desktops](/power-automate/desktop-flows/virtual-desktops#install-the-power-automate-agent-for-virtual-desktops).
 
-:::image type="content" source="media/rdp-no-highlight/agent_not_running.png" alt-text="Power automate agent for virtual desktops is not running.":::
+   > Enable UI automation in virtual desktop  
+   > To automate using UI elements on vritual desktops, ensure the Power Automate agent for virtual desktops is installed and runing on the remote machine.
+
+   :::image type="content" source="media/rdp-no-highlight/agent-not-running.png" alt-text="Screenshot of the Enable UI automation in virtual desktop error.":::
 
 ## Cause
 
@@ -39,7 +42,7 @@ The communication with the remote agent components doesn't work.
 
    Check the tray icon for the agent icon when the virtual desktop platform is active. If the icon exists, hover over it to confirm it's still running. If it is, right-click the tray icon to open the menu, and select **Status**. The agent's status and the reason for the error will be displayed.
 
-   :::image type="content" source="media/rdp-no-highlight/agent_disconnected_icon.png" alt-text="Power automate agent for virtual desktops is disconnected.":::
+   :::image type="content" source="media/rdp-no-highlight/agent-disconnected-icon.png" alt-text="The agent icon shows Power automate agent for virtual desktops is disconnected.":::
 
 3. If the agent is confirmed not running, and Citrix is in use, ensure that the agent is installed on every Citrix Server.
 
@@ -48,7 +51,7 @@ The communication with the remote agent components doesn't work.
    - **A device on the system is not functioning**: The Citrix plugin isn't loaded on the host system. Run the troubleshooter while the virtual desktop platform is active and check errors in the **UI Automation** section.
    - **Citrix Virtual Channel policy enabled**: The "Virtual channel Allow list" policy on Citrix is set to **Enabled** or **Default**. If it isn't **Disabled**, communication issues will persist. Contact administrators to disable this policy and ensure Citrix machines are restarted after applying the policy.
    - **Citrix VDA version < 2407**: The "Virtual channel Allow list" policy on Citrix is set to **Enabled** or **Default**. If it isn't **Disabled**, communication issues will persist. Contact administrators to disable this policy and ensure Citrix machines are restarted after applying the policy.
-   - **Citrix VDA Version >= 2407**: A different policy must be set. The older "Virtual channel Allow list" can remain default. Set the new policy "Virtual channel allow list for DVC" with the following values:
+   - **Citrix VDA Version >= 2407**: A different policy must be set. The older "Virtual channel Allow list" can remain at default. Set the new policy "Virtual channel allow list for DVC" with the following values:
 
       `C:\Program Files (x86)\Power Automate agent for virtual desktops\PAD.RDP.ControlAgent.exe,Microsoft.Flow.RPA.Desktop.UIAutomation.RDP.DVC.Plugin,PAD\CONTROL`
   
