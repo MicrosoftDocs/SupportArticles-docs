@@ -91,9 +91,7 @@ If these events are found, Start isn't activated correctly. Each event will have
 
 ## Application getting crashed
   
-If the application is installed for the user, but doesn't work, check if the process responsible for displaying the Start menu is running for the user.
-
-From PowerShell:
+If the application is installed for the user, but doesn't work, check if the process responsible for displaying the Start menu is running for the user by running the following PowerShell cmdlet.
 
 ```powershell
 get-Process StartMenuExperienceHost -IncludeUserName 
@@ -141,7 +139,7 @@ The following logs can be used to troubleshoot related issues:
 - [gpresult](/windows-server/administration/windows-commands/gpresult)
 - [MDM report](/windows/client-management/mdm-collect-logs)
 
-## Other things to consider
+## Additional considerations
 
 ### Check whether the system a clean install or upgrade
 
@@ -150,7 +148,7 @@ The following logs can be used to troubleshoot related issues:
   - If that file doesn't exist, the system is a clean install.
 - Upgrade issues can be found by running `test-path "$env:windir\panther\miglog.xml"`
 
-### Resources for troubleshooting further
+### Resources for further troubleshooting
 
 The following tools and logs can be useful when troubleshooting issues related to the Start menu.
 
