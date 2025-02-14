@@ -31,10 +31,6 @@ To successfully access Viva Glint, your user account must meet the following req
 
 Viva Glint has two levels of reporting access. Live access is usually restricted to admins, while phased access is recommended for managers and Human Resources Business Partners (HRBPs). As a manager, you can access only phased surveys. For more information, see [Grant live versus phased access in Viva Glint reporting](/viva/glint/setup/live-versus-phased-access).
 
-## No access because of monthly maintenance
-
-Viva Glint undergoes [monthly maintenance](/viva/glint/setup/monthly-release-dates) to release new features, enhancements, and fixes. If you receive a maintenance message when you try to view your results, wait one day, and then access your dashboard again.
-
 ## No Viva Glint access
 
 When you try to sign in to Viva Glint, you receive the following error message:
