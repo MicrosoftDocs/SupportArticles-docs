@@ -15,8 +15,8 @@ This article discusses how to resolve the "AADSTS700003" error that occurs when 
 
 When your try to sign in to an application that's integrated into Microsoft Entra ID, you receive an "AADSTS700003" error with one of the following error messages:
 
-- Device object was not found in the tenant '\<TenantName\>' directory.
-- Your organization has deleted this device.
+- > Device object was not found in the tenant '\<TenantName\>' directory.
+- > Your organization has deleted this device.
 
 ## Cause
 
