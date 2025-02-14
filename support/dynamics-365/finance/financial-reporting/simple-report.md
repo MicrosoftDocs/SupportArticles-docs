@@ -41,9 +41,9 @@ To check the state of your data mart, follow these steps:
 
 3. To check more detailed statistics, go to **Tools** > **Reset data mart**, but don't reset the data mart.
 
-   If there are transactions with six or more attempts, there could be data integrity issues. Having amounts here doesn't mean data is missing from your report, but it can be a source of missing data. Work with Microsoft support to determine the cause of the stuck data.
+   If there are transactions with six or more attempts, there might be data integrity issues. Having amounts here doesn't mean data is missing from your report, but it can be a source of missing data. Work with Microsoft support to determine the cause of the stuck data.
 
-4. If there are [Misaligned main account categories](/dynamics365/fin-ops-core/dev-itpro/analytics/reset-financial-reporting-datamart-after-restore#misaligned-main-account-categories), reports based on account categories could report incorrect amounts.
+4. If there are [Misaligned main account categories](/dynamics365/fin-ops-core/dev-itpro/analytics/reset-financial-reporting-datamart-after-restore#misaligned-main-account-categories), reports based on account categories might report incorrect amounts.
 
 ## Create a minimal report
 
@@ -68,7 +68,7 @@ To create a minimal report to troubleshoot report issues, follow these steps:
 8. Verify the report is working as expected.
 9. If your issue includes specific design requirements, such as currency filter, attribute filter, year-to-date, or beginning balances, add these modifications one at a time.
 10. If the issue still exists, contact Microsoft support and provide the following information:
-      - [Export the .tdbx files](/dynamics365/finance/general-ledger/view-financial-reports#export-a-financial-report) of the simplified and original reports.
+      - [The .tdbx exported files](/dynamics365/finance/general-ledger/view-financial-reports#export-a-financial-report) of the simplified and original reports.
       - Screenshots of the simplified report build block designs including rows and columns.
       - Excel export of the report output.
       - Reporting parameters: **Company**, **Reporting date**, and **Report name**.
