@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, tode, tonyga
-ms.custom: sap:Network Connectivity and File Sharing\Web Application Proxy (WAP) role service, csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\web application proxy (wap) role service
+- pcy:WinComm Networking
 ---
 # Using authenticated proxy servers together with Windows 8
 
