@@ -36,4 +36,4 @@ No resolution steps are necessary as the exception doesn't affect the setup beha
 
 This exception is only visible in the setup console when running **setup.exe** from the command line and only applies to CU15 and later.
 
-This article lists the Microsoft SQL Server 2022 builds that were released after the release of [SQL Server 2022](../../../releases/sqlserver-2022/build-versions.md).
+For information on all cumulative updates released after the release of SQL Server 2022, see [SQL Server 2022 build versions](../../../releases/sqlserver-2022/build-versions.md).
