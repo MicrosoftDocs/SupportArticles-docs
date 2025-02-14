@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot network or proxy errors
 description: Find solutions for network- or proxy-related errors that you might encounter when you install, update, or use Visual Studio behind a firewall or a proxy server.
-ms.date: 12/09/2024
+ms.date: 02/14/2025
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: meghaanand, chrmann, jagbal
@@ -36,8 +36,8 @@ To resolve this issue, try these steps:
 
 Visual Studio should pick up the proxy setting from Windows. However, you can set a specific proxy server in the following way.
 
- - For Visual Studio 2022 follow steps 1, 2, and 3
- - For Visual Studio 2019 follow steps 1 and 2
+- For Visual Studio 2022, follow steps 1, 2, and 3.
+- For Visual Studio 2019, follow steps 1 and 2.
 
 1. Find **devenv.exe.config** (the configuration file of **devenv.exe**) in:
 
