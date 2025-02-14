@@ -4,7 +4,7 @@
 title: Troubleshoot Report Design and Data Issues 
 description: Describes how to create a report to analyze data issues that occur in Microsoft Dynamics 365 Finance reports.
 author: aprilolson
-ms.date: 02/05/2025
+ms.date: 02/14/2025
 
 # optional metadata
 
@@ -25,19 +25,19 @@ ms.custom: sap:Financial reporting and management reporter\Issues with report de
 ---
 # Troubleshoot report design and data issues
 
-A practical way to troubleshoot report design or missing data issues effectively is to simplify the process and control variables. Focusing on a specific scope is often more manageable than diagnosing an entire report. Start by creating the smallest possible reproduction of the issue and make changes one at a time. In some cases, manually recreating a report or starting over with the design helps uncover design flaws or process bugs.
+A practical way to troubleshoot design or missing data issues in [financial reporting](/dynamics365/fin-ops-core/fin-ops/analytics/financial-reporting-intro) is to simplify the process and control variables. Focusing on a specific scope is often more manageable than diagnosing an entire report. Start by creating the smallest possible reproduction of the issue and make changes one at a time to help isolate the problem. In some cases, manually recreating a report or starting over with the design can help uncover design flaws or process bugs.
 
-To troubleshoot report issues, confirm that following:
+To troubleshoot report issues:
 
-- Check that your data mart integration is current and healthy.
-- Create a minimal report to troubleshoot the issue.  
+- [Check that your data mart integration is current and healthy.](#check-the-data-mart-state)
+- [Create a minimal report.](#create-a-minimal-report)
 
 ## Check the data mart state
 
 To check the state of your data mart, follow these steps:
 
 1. In **Report designer**, go to **Tools** > **Integration status**.
-2. Check that the **Status** isn't **Failed** and the **Last Runtime** date is after you created your data. Usually, the General Ledger transactions are tracked to **Fact map**. Occasionally, due to system load and data volume, data mart integration can take longer. You might need to wait more than one hour for larger data changes to complete integration into data mart.
+2. Check that the **Status** isn't **Failed** and the **Last Runtime** date is after the creation of your data. Usually, the General Ledger transactions are tracked to **Fact map**. Occasionally, due to system load and data volume, data mart integration can take longer. You might need to wait more than one hour for larger data changes to complete integration into data mart.
 
 3. To check more detailed statistics, go to **Tools** > **Reset data mart**, but don't reset the data mart.
 
@@ -45,9 +45,9 @@ To check the state of your data mart, follow these steps:
 
 4. If there are [Misaligned main account categories](/dynamics365/fin-ops-core/dev-itpro/analytics/reset-financial-reporting-datamart-after-restore#misaligned-main-account-categories), reports based on account categories could report incorrect amounts.
 
-## Create a report for troubleshooting
+## Create a minimal report
 
-To create a report to troubleshoot report issues, follow these steps:
+To create a minimal report to troubleshoot report issues, follow these steps:
 
 1. Simplify the report as much as possible. The goal is to get to a single number.
 2. Remove any [reporting tree](/dynamics365/fin-ops-core/fin-ops/analytics/financial-reporting-tree-definitions) and dimension set.
@@ -66,7 +66,7 @@ To create a report to troubleshoot report issues, follow these steps:
 
 7. This should display a report with a single cell of data.
 8. Verify the report is working as expected.
-9. Add one modification at a time if your issue includes specific design requirements. For example, currency filter, attribute filter, year-to-date, or beginning balances.
+9. If your issue includes specific design requirements, such as currency filter, attribute filter, year-to-date, or beginning balances, add these modifications one at a time.
 10. If the issue still exists, contact Microsoft support and provide the following information:
       - [Export the .tdbx files](/dynamics365/finance/general-ledger/view-financial-reports#export-a-financial-report) of the simplified and original reports.
       - Screenshots of the simplified report build block designs including rows and columns.
