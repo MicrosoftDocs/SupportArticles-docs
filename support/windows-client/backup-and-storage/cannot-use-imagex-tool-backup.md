@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, scottmca
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Configuring and using Windows Backup or other recovery, csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\configuring and using windows backup or other recovery
+- pcy:WinComm Storage High Avail
 ---
 # You can't use the ImageX.exe tool as a backup tool
 

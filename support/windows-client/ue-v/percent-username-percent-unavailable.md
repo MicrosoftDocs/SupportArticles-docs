@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, winciccore, Philip.Demaree
-ms.custom: sap:UEV\Agent\Other, csstroubleshoot
+ms.custom:
+- sap:uev\agent\other
+- pcy:WinComm User Experience
 ---
 # %username% is unavailable in Windows that has OneDrive for Business installed
 

@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Security Technologies\BitLocker, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\bitlocker
+- pcy:WinComm Devices Deploy
 ---
 # "TPM is ready for use, with reduced functionality" message when the BIOS is in legacy mode with TPM 2.0
 

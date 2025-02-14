@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:System Performance\System Performance (slow, unresponsive, high CPU, resource leak), csstroubleshoot
+ms.custom:
+- sap:system performance\system performance (slow,unresponsive,high cpu,resource leak)
+- pcy:WinComm Performance
 ---
 # Troubleshooting slow file copying in Windows
 

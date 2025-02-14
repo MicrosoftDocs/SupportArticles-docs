@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, paudina, mingcheh, caroul, v-jesits, v-tea, tlavoy
-ms.custom: sap:Windows Device and Driver Management\System driver installation or update, csstroubleshoot
+ms.custom:
+- sap:windows device and driver management\system driver installation or update
+- pcy:WinComm Devices Deploy
 ---
 # Cannot install the May 2019 update of Windows 10 on computers that run certain versions of AMD RAID drivers
 

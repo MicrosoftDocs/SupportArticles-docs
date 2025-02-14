@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: aaroncz, kaushika
-ms.custom: sap:Windows Security Technologies\BitLocker, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\bitlocker
+- pcy:WinComm Devices Deploy
 ---
 # TPM is in reduced functionality mode after successful deployment of Windows 10
 

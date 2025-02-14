@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:System Performance\System Configuration (page file, startup or running apps, error handling), Fix, csstroubleshoot
+ms.custom:
+- sap:system performance\system configuration (page file,startup or running apps,error handling),fix
+- pcy:WinComm Performance
 ---
 # Command prompt and PowerShell don't open after in-place upgrade of Windows 10 S
 

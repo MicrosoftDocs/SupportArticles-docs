@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, austinm
-ms.custom: sap:System Management Components\WinRM, including event forwarding and collections, csstroubleshoot
+ms.custom:
+- sap:system management components\winrm,including event forwarding and collections
+- pcy:WinComm User Experience
 ---
 # How to configure WINRM for HTTPS
 

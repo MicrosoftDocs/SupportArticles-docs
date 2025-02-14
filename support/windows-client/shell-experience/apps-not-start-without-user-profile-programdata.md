@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Desktop and Shell Experience\Modern, Inbox and Microsoft Store Apps, csstroubleshoot
+ms.custom:
+- sap:windows desktop and shell experience\modern,inbox and microsoft store apps
+- pcy:WinComm User Experience
 ---
 # Microsoft Store Apps fail to start if the user profiles or the ProgramData directory are moved from their default location
 

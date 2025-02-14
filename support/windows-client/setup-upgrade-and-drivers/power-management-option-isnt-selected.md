@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Setup, Upgrade and Deployment\Power management, csstroubleshoot
+ms.custom:
+- sap:windows setup,upgrade and deployment\power management
+- pcy:WinComm Devices Deploy
 ---
 # The Allow the computer to turn off this device to save power option doesn't remain selected after you restart Windows Vista
 

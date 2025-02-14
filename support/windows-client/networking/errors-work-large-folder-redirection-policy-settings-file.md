@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: herbertm, kaushika
-ms.custom: sap:Network Connectivity and File Sharing\Offline Files and Folders (CSC), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\offline files and folders (csc)
+- pcy:WinComm Networking
 ---
 # Errors when you have a large "Folder Redirection" policy settings file in Windows
 

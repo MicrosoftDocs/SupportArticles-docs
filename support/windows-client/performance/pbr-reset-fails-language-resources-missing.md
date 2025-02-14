@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Desktop and Shell Experience\Language Packs, Multilingual User Interface (MUI) and Input (IME), csstroubleshoot
+ms.custom:
+- sap:windows desktop and shell experience\language packs,multilingual user interface (mui) and input (ime)
+- pcy:WinComm User Experience
 ---
 
 # Push-button reset fails because language resources are missing

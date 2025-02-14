@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-jesits
-ms.custom: sap:Print, Fax, and Scan\Print Performance - failures, crashes, not responsive, csstroubleshoot
+ms.custom:
+- sap:print,fax,and scan\print performance - failures,crashes,not responsive
+- pcy:WinComm User Experience
 ---
 # PNG images don't print correctly in Word 2010 after the system display scaling setting is changed in Windows 7
 

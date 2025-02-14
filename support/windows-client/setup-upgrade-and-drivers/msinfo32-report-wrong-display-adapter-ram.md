@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Device and Driver Management\Peripherals driver installation or update, csstroubleshoot
+ms.custom:
+- sap:windows device and driver management\peripherals driver installation or update
+- pcy:WinComm Devices Deploy
 ---
 # Msinfo32.exe reports an unexpected value for the Display Adapter RAM when the graphics adapter has 2 GB or more of dedicated video memory
 

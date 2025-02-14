@@ -6,7 +6,9 @@ manager: dcscontentpm
 ms.reviewer: kaushika, v-tappelgate
 ms.collection: Windows Security Technologies\BitLocker
 ms.topic: troubleshooting
-ms.custom: sap:Windows Security Technologies\BitLocker, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\bitlocker
+- pcy:WinComm Devices Deploy
 audience: itpro
 ---
 # BitLocker Network Unlock: known issues

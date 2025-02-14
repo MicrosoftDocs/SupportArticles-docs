@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:System Management Components\Task Scheduler, csstroubleshoot
+ms.custom:
+- sap:system management components\task scheduler
+- pcy:WinComm User Experience
 ---
 # Task scheduler task only runs in the background after you use sysprep to create master image
 

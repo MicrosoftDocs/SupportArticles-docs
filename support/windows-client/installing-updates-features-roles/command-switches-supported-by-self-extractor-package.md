@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update fails - installation rolls back, csstroubleshoot
+ms.custom:
+- sap:windows servicing,updates and features on demand\windows update fails - installation rolls back
+- pcy:WinComm Devices Deploy
 ---
 # Command-line switches supported by a software installation package, an update package, or a hotfix package created with Microsoft Self-Extractor
 
