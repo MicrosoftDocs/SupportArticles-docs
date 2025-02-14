@@ -13,11 +13,11 @@ audience: itpro
 
 _Applies to:_ &nbsp; Windows 10
 
-Categories of Issues with Start Menu:
+Categories of issues with the Start menu:
 
-- Issues related to Deployment or Installation.  
-- Application getting Terminated or Crashed.  
-- Issues related to Start Menu customization or other Policy/CSP.  
+- Issues related to deployment or installation
+- Application getting terminated or crashed
+- Issues related to the Start menu customization or other policy/configuration service provider (CSP)
 - Other issues
 
 ## Basic troubleshooting
@@ -26,55 +26,61 @@ When troubleshooting Start issues (and for the most part, all other Windows apps
 
 - Is the system running the latest Feature and Cumulative Monthly update?
 - Did the issue start immediately after an update? Ways to check:
-  - PowerShell: [System.Environment]::OSVersion.Version
-  - CMD: winver
-- Were there any recent changes to registry Keys or folders? 
-- Where there any recent changes related to GPO /MDM Policies? 
-  - Group policy settings that restrict access or permissions to folders or registry keys can impact Start menu performance.
+  - PowerShell: `[System.Environment]::OSVersion.Version`
+  - Command Prompt: `winver`
+- Were there any recent changes to registry keys or folders?
+- Were there any recent changes related to GPO/MDM policies?
+  - Group policy settings that restrict access or permissions to folders or registry keys can impact the Start menu performance.
   - Some Group Policies intended for older Operating System can cause issues with the Start menu.
-  - Untested Start Menu customizations can lead to unexpected behaviour, though typically not complete Start failures.
+  - Untested Start menu customizations can lead to unexpected behaviour, though typically not complete Start failures.
 
-## Issues related to Deployment or Installation
+## Issues related to deployment or installation
 
-When troubleshooting basic Start issues (and for the most part, all other Windows apps), there are a few things to check if they aren't working as expected. For issues where the Start menu or subcomponent isn't working, you can do some quick tests to narrow down where the issue may reside. 
+When troubleshooting basic Start issues (and for the most part, all other Windows apps), there are a few things to check if they aren't working as expected. For issues where the Start menu or subcomponent isn't working, you can do some quick tests to narrow down where the issue may reside.
   
-Check if Start Menu is installed:  
+### Check if the Start menu is installed
 
-To see if an individual user has the Start Menu package installed, use the following cmdlet in a non-elevated Windows PowerShell prompt:
+To see if an individual user has the Start menu package installed, use the following cmdlet in a non-elevated Windows PowerShell prompt:
 
 ```powershell
 Get-AppxPackage -Name Microsoft.Windows.StartMenuExperienceHost
 ```
 
-If it's registered, the output looks like the following:
+If it's registered, the output looks like:
 
-If you receive no response to the Get-AppxPackage cmdlet, you can still use the Add-AppxPackage cmdlet by using the family name or the path to the AppxManifest.xml file.
-This is possible because although this user doesn't have the package registered, other users might. This means that the package will still exist on the machine.
-To check this, add -AllUsers to the same Get-AppxPackage cmdlet we used earlier in an elevated PowerShell prompt:
+:::image type="content" source="media/troubleshoot-start-menu-errors/get-appxpackage-output.png" alt-text="Screenshot of the Get-AppxPackage output showing an individual user has the Start menu package installed.:::
+
+If you receive no response to the `Get-AppxPackage` cmdlet, you can still use the `Add-AppxPackage` cmdlet by using the family name or the path to the **AppxManifest.xml** file. This is possible because although this user doesn't have the package registered, other users might. This means that the package will still exist on the machine.
+
+To check this, add `-AllUsers` to the same `Get-AppxPackage` cmdlet that is used earlier in an elevated PowerShell prompt:
 
 ```powershell
 Get-AppxPackage *StartMenu* -AllUsers 
 ```
 
 If there's a successful return of the app details, it means that the package exists.
-The following cmdlet can be used to register the start menu if the package exists on the machine.  
-Be sure not to use the elevated PowerShell prompt unless you wish to register the app to the administrator instead of the user.
+
+The following cmdlet can be used to register the Start menu if the package exists on the machine.
+
+> [!NOTE]
+> Be sure to use the Add-AppxPackage cmdlet from a non-elevated prompt, or the package will be registered to the administrator instead of the user.
 
 ```powershell
 Add-AppxPackage -Path "C:\Windows\SystemApps\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\AppxManifest.xml" -Register –DisableDevelopmentMode
 ```
 
-Note: Be sure to use the Add-AppxPackage cmdlet from a non-elevated prompt, or the package will be registered to the admin instead of the user.
-Note: On older SKUs (version 1809 and prior) Appx package for Start Menu is different, check if Microsoft.Windows.ShellExperienceHost is registered for those SKUs.  
-  
-Warning: If StartMenuExperienceHost isn't installed for any user, then the fastest resolution is to revert to a known good configuration. This can be rolling back the update, resetting the PC to defaults or restoring from backup. No method is supported to install Start Appx files. The results are often problematic and unreliable.
-  
-The following Event Logs can be used to troubleshoot issues related to this.  
+> [!NOTE]
+> On older stock keeping units (SKUs) (Windows 10, version 1809 and prior), the Appx package for Start menu is different, check if **Microsoft.Windows.ShellExperienceHost** is registered for those SKUs.
 
-For deployment related issues: Microsoft-Windows-AppXDeployment*  
-For Appx Activation related issues: Microsoft-Windows-TWinUI/Operational
+> [!WARNING]
+> If **StartMenuExperienceHost** isn't installed for any user, then the quickest resolution is to revert to a known good configuration. This can be rolling back the update, resetting the PC to defaults or restoring from backup. No method is supported to install Start Appx files. The results are often problematic and unreliable.
 
-For issues related to activation search for the following keywords in Microsoft-Windows-TWinUI/Operational for Microsoft.Windows.StartMenuExperienceHost or Microsoft.Windows.ShellExperienceHost depending on the OS version you are troubleshooting.
+The following event logs can be used to troubleshoot related issues:  
+
+- For deployment related issues: **Microsoft-Windows-AppXDeployment\***
+- For Appx activation related issues: **Microsoft-Windows-TWinUI/Operational**
+
+For issues related to the activation, search for the following keywords in **Microsoft-Windows-TWinUI/Operational** for **Microsoft.Windows.StartMenuExperienceHost** or **Microsoft.Windows.ShellExperienceHost** depending on the OS version you are troubleshooting.
 
 - "Package was not found"
 - "Invalid value for registry"
@@ -83,49 +89,57 @@ For issues related to activation search for the following keywords in Microsoft-
 
 If these events are found, Start isn't activated correctly. Each event will have more detail in the description and should be investigated further. Event messages can vary.
 
-## Application getting Crashed
+## Application getting crashed
   
-If the application is installed for the user but does not work, please check if the process responsible for displaying the start menu is running for the user.  
+If the application is installed for the user, but doesn't work, check if the process responsible for displaying the Start menu is running for the user.  
 
-From Powershell  
+From PowerShell:
 
+```powershell
 get-Process StartMenuExperienceHost -IncludeUserName 
+```
 
-Note: If there are multiple users logged into the machine, each user should have a StartMenuExperienceHost process in their session.  
-Note: On older SKUs (version 1809 and prior) Appx package for Start Menu is different, check if ShellExperienceHost.exe is running.
+> [!NOTE]
+> If there're multiple users logged into the machine, each user should have a **StartMenuExperienceHost** process in their session.
+>  
+> On older SKUs (Windows 10, version 1809 and prior), the Appx package for Start menu is different, check if **ShellExperienceHost.exe** is running.
 
-If it's installed but not running for the user, test booting into safe mode or use MSCONFIG to eliminate third-party or additional drivers and applications.
+If the application is installed but not running for the user, test booting into the safe mode or use 'msconfig' to eliminate third-party or additional drivers and applications.
 
-To check if the application is getting crashed, please refer to Application Event Log, and look for Event ID 1000, 1001 for StartMenuExperienceHost.exe
+To check if the application is getting crashed, refer to the application event log, and look for Event ID 1000, 1001 for **StartMenuExperienceHost.exe**.
 
 The following tools can be used to troubleshoot these behaviours:
 
-1. Windows Error Reporting to Generate Crash Dump.  
-2. Procdump to generate Crash Dump.  
-3. Procmon to investigate if the failures are related to permission or similar problems.  
+1. Windows Error Reporting (WER) to generate crash dumps.  
+2. [ProcDump](/sysinternals/downloads/procdump) to generate crash dumps.  
+3. [Procmon](/sysinternals/downloads/procmon) to investigate if the failures are related to permission or similar problems.  
 
-Note: Refer this article to learn more about Application Crash Events: The application or service crashing behavior troubleshooting guidance - Windows Server | Microsoft Learn
-and this article to learn about a using Procmon to troubleshoot failure at application start up: Troubleshoot Apps failing to start using Process Monitor - Windows Client | Microsoft Learn
+For more information about application crash events, see [The application or service crashing behavior troubleshooting guidance](../../windows-server/performance/troubleshoot-application-service-crashing-behavior.md).
 
-Tip: Check for crashes that may be related to Start (explorer.exe, Search, ShellExperiencehost etc.)
+For more information about using Procmon to troubleshoot failure at application start up, see [Troubleshoot Apps failing to start using Process Monitor](troubleshoot-apps-start-failure-use-process-monitor.md).
 
-The following Event Logs can be used to troubleshoot issues related to this.  
-For deployment related issues: Application
-For Appx Activation related issues: Microsoft-Windows-TWinUI/Operational
+> [!TIP]
+> Check for crashes that might be related to Start (for example, **explorer.exe**, Search, **ShellExperiencehost.exe**)
+
+The following event logs can be used to troubleshoot related issues:
   
-Issues related to Start Menu customization or other Policy / CSP  
+- For deployment related issues: **Application**
+- For Appx activation related issues: **Microsoft-Windows-TWinUI/Operational**
   
-These issues are generally related to configuration and customization to Start Menu and related components. For example, issues related to Start Layout, Start Menu Lockdown etc.  
-Please refer these articles to get configuration and available Policies and CSPs related to Start Menu:  
-
-- Start policy settings | Microsoft Learn
-- Customize The Start Layout For Managed Windows Devices | Microsoft Learn
+## Issues related to the Start menu customization or other policy/CSP  
   
-The following Logs can be used to troubleshoot issues related to this.
+These issues are generally related to configuration and customization to the Start menu and related components. For example, issues related to Start layout, Start menu lockdown.
+  
+See the following articles to get configuration and available policies and CSPs related to the Start menu:  
 
-- For issues related to start layout: Microsoft-Windows-ShellCommon-StartLayoutPopulation*  
-- gpresult
-- MDM Report
+- [Start menu policy settings](/windows/configuration/start/policy-settings)
+- [Customize the Start layout](/windows/configuration/start/layout)
+  
+The following logs can be used to troubleshoot related issues:
+
+- For issues related to Start layout: **Microsoft-Windows-ShellCommon-StartLayoutPopulation\***  
+- [Gpresult](/windows-server/administration/windows-commands/gpresult)
+- [MDM report](/windows/client-management/mdm-collect-logs)
 
 ## Other things to consider
 
@@ -136,14 +150,14 @@ The following Logs can be used to troubleshoot issues related to this.
   - If that file doesn't exist, the system is a clean install.
 - Upgrade issues can be found by running `test-path "$env:windir\panther\miglog.xml"`
 
-Resources for troubleshooting further
+### Resources for troubleshooting further
 
-The following tools and logs can be useful when troubleshooting issues related to Start Menu.
+The following tools and logs can be useful when troubleshooting issues related to the Start menu.
 
-Event Logs
+Event logs:
 
-- System Event log
-- Application Event log
+- System event log
+- Application event log
 - Microsoft/Windows/Shell-Core*
 - Microsoft-Windows-TWinUI*
 - Microsoft/Windows/AppReadiness*
@@ -152,19 +166,18 @@ Event Logs
 - Microsoft-Windows-ShellCommon-StartLayoutPopulation*
 - Microsoft-Windows-CloudStore*
 
-The following logs when application is crashing
+Logs when the application is crashing:
 
-- Check for crashes that may be related to Start (explorer.exe, taskbar, and so on) Application log event 1000, 1001.
-- Check WER reports
-- C:\ProgramData\Microsoft\Windows\WER\ReportArchive\
-- C:\ProgramData\Microsoft\Windows\WER\ReportQueue\
-
+- Check for crashes that might be related to Start (**explorer.exe**, taskbar, and so on) application log Event ID 1000 and 1001.
+- Check WER reports:
+  - **C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportArchive\\**
+  - **C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportQueue\\**
 - If there is a component of Start that is consistently crashing, capture a dump that can be reviewed by Microsoft Support.
-- Procdump to generate Crash Dump.  
+- [ProcDump](/sysinternals/downloads/procdump) to generate crash dump.  
 
-Other useful tools to troubleshoot Start Menu issues
+Other useful tools to troubleshoot Start menu issues:
 
-Procmon to investigate if the failures are related to permission or similar problems.  
+[Procmon](/sysinternals/downloads/procmon) to investigate if the failures are related to permission or similar problems.  
 
 ## Common errors and mitigation
 
