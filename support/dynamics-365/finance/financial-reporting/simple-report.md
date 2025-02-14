@@ -41,7 +41,7 @@ To check the state of your data mart, follow these steps:
 
 3. To check more detailed statistics, go to **Tools** > **Reset data mart**, but don't reset the data mart.
 
-   If there are transactions with six or more attempts, there might be data integrity issues. Having amounts here doesn't mean data is missing from your report, but it can be a source of missing data. Work with Microsoft support to determine the cause of the stuck data.
+   If there are transactions with six or more attempts, there might be data integrity issues. It doesn't mean data is missing from your report, but it can be a source of missing data. Work with [Microsoft support](/power-platform/admin/get-help-support) to determine the cause of the stuck data.
 
 4. If there are [Misaligned main account categories](/dynamics365/fin-ops-core/dev-itpro/analytics/reset-financial-reporting-datamart-after-restore#misaligned-main-account-categories), reports based on account categories might report incorrect amounts.
 
@@ -51,7 +51,7 @@ To create a minimal report to troubleshoot report issues, follow these steps:
 
 1. Simplify the report as much as possible. The goal is to get to a single number.
 2. Remove any [reporting tree](/dynamics365/fin-ops-core/fin-ops/analytics/financial-reporting-tree-definitions) and dimension set.
-3. Set the **Detail level** to **Financial**, **Account**, and **Transaction**.
+3. Set the **Detail level** to **financial**, **account**, and **transaction**.
 4. Remove other special options.
 
 5. In the [row definition](/dynamics365/fin-ops-core/fin-ops/analytics/row-definitions-financial-reporting), include a single row with a single account or dimension combination.
