@@ -5,7 +5,7 @@ author: helenclu
 ms.reviewer: PramodBalusu
 ms.author: luche
 manager: dcscontentpm
-ms.date: 12/17/2023
+ms.date: 02/14/2025
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
@@ -29,7 +29,8 @@ This article describes how to exclude or remove a website from a retention polic
 > - Changes to the retention policy might take up to 24 hours to take effect.  
 
 If the retention policy applies to all sites, you can exclude a site from the retention policy, but not remove it. If the retention policy applies to selected sites, you can remove the site, but not exclude it.
-If a site is removed from a retention policy, it's still subject to a 30-day retention grace period. Excluding a site from a retention policy bypasses this 30-day grace period.
+
+When you remove a site from a retention policy, the site remains subject to a [30-day retention grace period](/purview/retention?tabs=table-overriden#releasing-a-policy-for-retention). However, excluding a site from a retention policy bypasses this 30-day grace period.
 
 ## Edit the retention policy
 
