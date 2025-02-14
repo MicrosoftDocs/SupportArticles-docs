@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, vimalsh, shijithk, kaushika, wcheng, jodav
-ms.custom: sap:Windows Setup, Upgrade and Deployment\Sysprep and imaging (PE, ADK, WDS), csstroubleshoot
+ms.custom:
+- sap:windows setup,upgrade and deployment\sysprep and imaging (pe,adk,wds)
+- pcy:WinComm Devices Deploy
 ---
 # Sysprep fails after you remove or update Microsoft Store apps that include built-in Windows images
 

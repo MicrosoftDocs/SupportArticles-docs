@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Network Connectivity and File Sharing\IP Address Management (IPAM), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\ip address management (ipam)
+- pcy:WinComm Networking
 ---
 # Intranet site is identified as an Internet site when you use an FQDN or an IP address
 

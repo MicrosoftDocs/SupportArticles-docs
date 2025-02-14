@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot, linux-related-content
+ms.custom:
+- sap:windows setup,upgrade and deployment\installing or upgrading windows",,"linux-related-content"]
+- pcy:WinComm Devices Deploy
 ---
 # DISM /Apply-Image command fails with error code 5 (ERROR_ACCESS_DENIED)
 

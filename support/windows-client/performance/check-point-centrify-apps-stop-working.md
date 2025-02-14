@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:System Performance\App, Process, Service Reliability (crash, errors), csstroubleshoot
+ms.custom:
+- sap:system performance\app,process,service reliability (crash,errors)
+- pcy:WinComm Performance
 ---
 # Check Point and Centrify applications stop working after the January 2017 Quality Update is installed
 

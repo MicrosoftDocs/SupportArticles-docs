@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: winciccore, kaushika, rafern
-ms.custom: sap:Windows Desktop and Shell Experience\Windows Search, csstroubleshoot
+ms.custom:
+- sap:windows desktop and shell experience\windows search
+- pcy:WinComm User Experience
 adobe-target: true
 ---
 # Troubleshoot Windows Search performance

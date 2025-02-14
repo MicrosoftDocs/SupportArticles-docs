@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, pfreitas
-ms.custom: sap:Application Virtualization\Sequencing\Package conversion, csstroubleshoot
+ms.custom:
+- sap:application virtualization\sequencing\package conversion
+- pcy:WinComm User Experience
 ---
 # Adding a package version in Microsoft Application Virtualization returns error 0x8007012F
 

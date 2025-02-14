@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, takondo, mitsuchi, jamesxia
-ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Smart card logon, csstroubleshoot
+ms.custom:
+- sap:certificates and public key infrastructure (pki)\smart card logon
+- pcy:WinComm Directory Services
 ---
 # Integrated Unblock screen not displayed when smart card PIN is blocked
 
