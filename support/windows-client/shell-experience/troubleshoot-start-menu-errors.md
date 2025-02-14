@@ -34,7 +34,7 @@ When you troubleshoot Start issues (and for the most part, all other Windows app
   - Some Group Policies intended for older Operating System can cause issues with the Start menu.
   - Untested Start menu customizations can lead to unexpected behavior, though typically not complete Start failures.
 
-## Issues related to deployment or installation
+## Issues with deployment or installation
 
 When you troubleshoot basic Start issues (and for the most part, all other Windows apps), there are a few things to check if they aren't working as expected. For issues where the Start menu or subcomponent isn't working, you can do some quick tests to narrow down where the issue may reside.
   
@@ -89,7 +89,7 @@ For issues related to the activation, search for the following keywords in **Mic
 
 If these events are found, Start isn't activated correctly. Each event will have more detail in the description and should be investigated further. Event messages can vary.
 
-## Application getting crashed
+## Issues with application crashes
   
 If the application is installed for the user, but doesn't work, check if the process responsible for displaying the Start menu is running for the user by running the following PowerShell cmdlet.
 
@@ -124,7 +124,7 @@ The following event logs can be used to troubleshoot related issues:
 - For deployment related issues: **Application**
 - For AppX activation related issues: **Microsoft-Windows-TWinUI/Operational**
   
-## Issues related to the Start menu customization or other policy/CSP
+## Issues with the Start menu customization or other policy/CSP
   
 These issues are related to configuration and customization to the Start menu and related components. For example, issues related to Start layout, Start menu lockdown.
   
