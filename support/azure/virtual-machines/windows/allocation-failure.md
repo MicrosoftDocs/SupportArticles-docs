@@ -8,7 +8,7 @@ manager: dcscontentpm
 tags: top-support-issue,azure-resource-manager,azure-service-management
 ms.service: azure-virtual-machines
 ms.topic: troubleshooting
-ms.date: 02/14/2025
+ms.date: 02/17/2025
 ms.author: genli
 ms.reviewer: clmendes
 ms.custom: sap:Received an Allocation Failure
@@ -23,14 +23,13 @@ When you create a virtual machine (VM), start any stopped (deallocated) VMs, or 
 >
 > **Error message**: "Allocation failed. We do not have sufficient capacity for the requested VM size in this region. Read more about improving likelihood of allocation success at https:\//aka.ms/allocation-guidance"
 >
-> **Alternative recommendation**: When you receive an alternative recommendation, it means that the VM size you requested is not currently available in the selected region or zone. To increase your chances of successfully allocating a virtual machine, you can select one of the alternative options. Simply apply the changes to your VM input selection or [resize](/azure/virtual-machines/sizes/resize-vm) the currently existing VM with the desired option and try to start or create the VM again
->
-> Example:
->
-> "Try one of these alternative options to improve the chance of allocation success:
->
->  - Alternative VM sizes for the same zone and region: Standard_A2_v2, Standard_A2m_v2, or Standard_D2a_v4
->  - Alternative zones for the same VM size and region: (1 and 3)"  
+
+Alternative recommendation: When you receive an alternative recommendation, it means that the VM size you requested is not currently available in the selected region or zone. To increase your chances of successfully allocating a virtual machine, you can select one of the alternative options. Simply apply the changes to your VM input selection or [resize](/azure/virtual-machines/sizes/resize-vm) the currently existing VM with the desired option and try to start or create the VM again
+
+For example, try one of these alternative options to improve the chance of allocation success:
+
+- Alternative VM sizes for the same zone and region: Standard_A2_v2, Standard_A2m_v2, or Standard_D2a_v4
+- Alternative zones for the same VM size and region: Zone 1 and 3
 
 > [!NOTE]
 > If you are troubleshooting a virtual machine scale set (VMSS), the process is the same as a standard VM. To resolve the issue, you should follow the directions in this article.
