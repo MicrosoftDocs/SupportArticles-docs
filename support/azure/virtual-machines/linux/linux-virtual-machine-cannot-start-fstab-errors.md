@@ -95,32 +95,17 @@ If the VM serial console access is not available, an alternative solution is to 
 
 #### Use Azure Linux Auto Repair (ALAR)
 
-Azure Linux Auto Repair (ALAR) scripts is a part of VM repair extension described in [Repair a Linux VM by using the Azure Virtual Machine repair commands](./repair-linux-vm-using-azure-virtual-machine-repair-commands.md). ALAR covers automation of multiple repair scenarios including `/etc/fstab` issues.
+Azure Linux Auto Repair (ALAR) scripts is a part of VM repair extension described in [Use Azure Linux Auto Repair (ALAR) to fix a Linux VM](./repair-linux-vm-using-alar.md). ALAR covers automation of multiple repair scenarios including `/etc/fstab` issues.
 
-The ALAR scripts use the repair extension `run` command and its `--run-id` option. The script-id for the automated recovery is: **linux-alar2**. Implement the following steps to automate fstab errors via offline ALAR approach:
-
-```azurecli-interactive
-az vm repair create --verbose -g centos7 -n cent7 --repair-username rescue --repair-password 'password!234' --copy-disk-name  repairdiskcopy
- ```
+The ALAR scripts use the repair extension `repair-button` to fix fstab issues by specifying `--button-command fstab`. This parameter triggers the automated recovery. Implement the following steps to automate fstab errors via the offline ALAR approach:
 
 ```azurecli-interactive
-az vm repair run --verbose -g centos7 -n cent7 --run-id linux-alar2 --parameters fstab --run-on-repair
- ```
-
-```azurecli-interactive
-az vm repair restore --verbose -g centos7 -n cent7
- ``` 
+az vm repair repair-button --button-command fstab --verbose rgtest --name vmtest
+```
 
 > [!Note] 
-   >The resource group name "centos7, vm name "cent7", and --copy-disk-name "repairdiskcopy" are examples and the values need to change accordingly.
-
-   >The fstab repair script will take a backup of the original file and strip off any lines in the /etc/fstab file which are not needed to boot a system. After successful start of the OS, edit the fstab again and correct any errors which didn’t allow a reboot of the system before. 
-
-Alternatively, once a repair vm is created, the changes can also be implemented by manually logging into the repair vm, mounting the attached copy of OS disk and making changes to its fstab file. Follow the steps here: 
- * Create a repair VM using the `az vm repair create` command.
- * In order to mount and chroot to the filesystems of the attached OS disk in a rescue VM, follow the detailed [chroot instructions](./chroot-environment-linux.md).
- * Next, follow the same [fstab troubleshooting steps](#fstab-troubleshooting-steps) as above.
- * Once the changes are applied, `az vm repair restore` command can be used to perform automatic OS disk swap with the original VM. 
+>The resource group name "rgtest and vm name "vmtest", are examples and the values need to change accordingly.
+>The fstab repair script will take a backup of the original file and strip off any lines in the /etc/fstab file which are not needed to boot a system. After successful start of the OS, edit the fstab again and correct any errors which didn’t allow a reboot of the system before. 
 
 #### Use Manual Method
 
