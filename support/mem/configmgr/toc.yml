@@ -41,18 +41,10 @@ items:
       href: client-installation/install-configmgr-client-error-1603.md
     - name: Client installation error 1603
       href: client-installation/client-installation-error-1603.md
-    - name: Client installation fails when BITS isn't installed
-      href: client-installation/client-installation-fails-without-bits.md
-    - name: Client piloting package fails after a site expansion
-      href: client-installation/client-piloting-package-fails-after-site-expansion.md
-    - name: Clients reinstall every five hours
-      href: client-installation/configmgr-clients-reinstall-every-five-hours.md
     - name: Conversion failed when upgrading to version 1810
       href: client-installation/conversion-failed-upgrade-version-1810.md
     - name: Error 80041002 when installing client agent
       href: client-installation/client-agent-installation-error-80041002.md
-    - name: Mac client enrollment fails
-      href: client-installation/mac-client-enrollment-fails.md
     - name: Mac client registration fails
       href: client-installation/mac-client-registration-fails.md
     - name: PolicyAgentInstanceProvider warnings during client installation
@@ -121,8 +113,6 @@ items:
       items:
         - name: A deployment property change isn't saved
           href: content-management/deployment-property-change-not-saved.md
-        - name: Anonymous Authentication of SMS_DP_SMSPKG$ reset to Disabled
-          href: content-management/anonymous-authentication-disabled.md
         - name: App-V applications can't be streamed from a DP
           href: content-management/app-v-apps-not-streamed-from-dp.md
         - name: Boot image distribution to a PXE enabled DP fails
@@ -317,8 +307,6 @@ items:
           href: setup-migrate-backup-recovery/enable-mfa-for-sms-provider-calls.md
         - name: HTTP Error 500.19
           href: setup-migrate-backup-recovery/management-points-stop-responding.md
-        - name: Management points fail with HTTP 500 errors
-          href: setup-migrate-backup-recovery/management-points-fail-http-500-errors.md
         - name: Service connection point doesn't download updates
           href: setup-migrate-backup-recovery/service-connection-point-not-download-updates.md
         - name: Troubleshoot state message processing performance issues
@@ -375,8 +363,6 @@ items:
           href: update-management/error-0x800f0831-installing-update.md
         - name: .NET Framework 4.7.2 updates fail to sync
           href: update-management/dotnet-framework-updates-fail-to-sync.md
-        - name: Updates aren't downloaded when an ADR runs
-          href: update-management/adr-updates-download-failure.md
     - name: State messaging
       href: update-management/state-messaging-description.md
     - name: Understand software update management
@@ -445,7 +431,5 @@ items:
           href: update-management/wsus-automatic-maintenance.md
         - name: WSUS maintenance guide
           href: update-management/wsus-maintenance-guide.md
-        - name: WSUS sync fails in Windows Server 2008 R2
-          href: update-management/wsus-not-sync-with-certificate-error-800B0109.md
         - name: WSUS synchronization fails with SoapException
           href: update-management/wsus-synchronization-fails-with-soapexception.md
