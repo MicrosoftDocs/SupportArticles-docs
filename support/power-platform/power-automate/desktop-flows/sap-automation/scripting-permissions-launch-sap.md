@@ -5,7 +5,7 @@ ms.reviewer: amitrou
 ms.author: nimoutzo
 author: NikosMoutzourakis
 ms.custom: sap:Desktop flows\SAP automation
-ms.date: 02/14/2025
+ms.date: 02/17/2025
 ---
 # The server threw an exception when opening SAP
 
@@ -19,10 +19,14 @@ When a user tries to open the SAP application, they receive the following error 
 
 ## Cause
 
-This issue occurs because the user might not have the scripting permission to use the SAP actions.
+This issue can occur if the user doesn't have scripting permissions to use the SAP actions.
 
 ## Resolution
 
 To solve the issue, [check and enable the SAP scripting](/power-automate/guidance/rpa-sap-playbook/prerequisites#sap-gui-scripting-configuration) for the user who needs to use the SAP actions.
+
+## More information
+
+[Introduction to SAP GUI–based RPA in Power Automate Desktop](/power-automate/guidance/rpa-sap-playbook/introduction)
 
 [!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]

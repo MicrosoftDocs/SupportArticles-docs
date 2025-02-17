@@ -5,19 +5,19 @@ ms.custom: sap:Desktop flows\Office automation
 ms.reviewer: amitrou
 ms.author: nimoutzo
 author: NikosMoutzourakis
-ms.date: 02/14/2025
+ms.date: 02/17/2025
 ---
 # The Retrieve email messages from Outlook action doesn't work as expected
 
-This article solves an issue where the **Retrieve email messages from Outlook** action doesn't return any results in Microsoft Power Automate.
+This article solves an issue where the [Retrieve email messages from Outlook](/power-automate/desktop-flows/actions-reference/outlook) action doesn't return any results in Microsoft Power Automate.
 
 ## Symptoms
 
-When you use the "From" filter in the **Retrieve email messages from Outlook** action in Power Automate, no results are returned.
+When you use the **From contains** filter in the **Retrieve email messages from Outlook** action in Power Automate, no results are returned.
 
 ## Cause
 
-In some cases, the email addresses of Exchange users are in an X500 format (for example, /o\=<organization-name\>/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/cn=\<mailbox\>) instead of the standard mail format (`person@email.com`). When you use the **Retrieve email messages from Outlook** action in Power Automate, the "From" filter doesn't work because the filtering is performed with the X500 format email.
+In some cases, the email addresses of Exchange users are in an X500 format (for example, /o\=<organization-name\>/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/cn=\<mailbox\>) instead of the standard mail format (`person@email.com`). When you use the **Retrieve email messages from Outlook** action in Power Automate, the **From contains** filter might not work if the filtering is performed with the X500 format email.
 
 You can retrieve the X500 format email using the Exchange PowerShell cmdlet:
 
