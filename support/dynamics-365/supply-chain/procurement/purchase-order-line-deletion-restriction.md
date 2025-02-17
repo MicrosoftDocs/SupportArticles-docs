@@ -13,7 +13,7 @@ This article provides a workaround for the restrictions on deleting purchase ord
 
 You can't delete a purchase order line if the purchase order is currently or was previously confirmed and either of the following settings is applied:
 
-- The purchase order is budget-controlled.
+- The purchase order is [budget-controlled](/dynamics365/supply-chain/procurement/tasks/create-purchase-order-governed-by-budget).
 - Encumbrance accounting is enabled.
 
 ## Cause
@@ -24,4 +24,11 @@ A design change was introduced in Dynamics 365 Supply Chain Management version 1
 
 If you need to remove a purchase order line, the recommended approach is to first [cancel](/dynamics365/supply-chain/procurement/purchase-order-approval-confirmation#canceling-purchase-orders) the line and then finalize it.
 
-To cancel the whole quantity on a purchase order line, you should cancel the delivery remainder quantity on the line. The line will then be updated to **Canceled** status.
+To cancel the whole quantity on a purchase order line,
+
+1. Open the purchase oder, select the purchase oder line that you want to cancel the delivery remainder quantity on.
+1. Select **Update line** > **Deliver remainder** > **Cancel quantity**. The line will then be updated to **Canceled** status.
+
+## More information
+
+[Approve and confirm purchase orders](/dynamics365/supply-chain/procurement/purchase-order-approval-confirmation)
