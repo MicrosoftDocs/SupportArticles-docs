@@ -86,11 +86,15 @@ If you use Group Policy to manage RDS, check the following subkey and entries:
 
   - `LicenseServers` (string value)
   - `LicensingMode` (DWORD value)
+    - `4`: **Per User**
+    - `2`: **Per Device**
 
 If you use the Remote Desktop Services console in Server Manager, check the following subkeys and entries:
 
 - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\RCM\Licensing Core`
   - `LicensingMode` (DWORD value)
+    - `4`: **Per User**
+    - `2`: **Per Device**
 - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TermService\Parameters\LicenseServers\SpecifiedLicenseServers`
   - `SpecifiedLicenseServers` (multi-string value)
 
