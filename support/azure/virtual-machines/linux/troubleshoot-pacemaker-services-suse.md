@@ -79,7 +79,7 @@ If a node tries to rejoin the cluster after it's fenced but before the `msgwait`
 
 Notice that if the `SBD_DELAY_START` setting is used, and the SBD `msgwait` value is very high, other potential issues might occur. For more information, see [Settings for long timeout in SBD_DELAY_START](https://www.suse.com/support/kb/doc/?id=000019356).
 
-### Resolution 1 for scenario 2
+### Resolution A for scenario 2
 
 1. Put the cluster into maintenance-mode:
 
@@ -117,7 +117,8 @@ Notice that if the `SBD_DELAY_START` setting is used, and the SBD `msgwait` valu
    sudo systemctl restart Pacemaker
    ```
 
-### Resolution 2 for scenario 2
+### Resolution B for scenario 2
+
 Tweak the SDB device `msgwait` time-out setting to be shorter than the time that's required for the SBD fencing action to finish and the `sbd.service` to be restored after a restart. Edit the `watchdog` parameter to be 50 percent of new `msgwait` time-out value. This is a process of optimization that must be tuned on a system-by-system basis.
 
 ## Scenario 3: Issue occurs in azure-events agent resource
@@ -234,9 +235,9 @@ pacemaker-execd[xxx]:  notice: finished - rsc: rsc_SAPHANA_DB01 action:start cal
 pacemaker-controld[xxx]:  error: Result of start operation for rsc_SAPHANA_DB01 on xxx: Timed Out
 ```
 
-### Scenario 4, Cause 1
+### Cause for Scenario 4, Symptom 1
 
-### Scenario 4, Resolution 1
+### Resolution for Scenario 4, Symptom 1
 
 To resolve the issue, extend both the start and stop `timeout` parameters for the HANA DB resource, `rsc_SAPHANA_DB01`, as recommended in the SUSE KB article, [HANA DB resource failed to start](https://www.suse.com/support/kb/doc/?id=000020948).
 
@@ -317,7 +318,7 @@ The following text shows the `sudo crm status` output when this issue occurs:
     * rsc_SAPHana_P40_HDB00_start_0 on node-2 'not running' (7): call=55, status=complete, exitreason='',
         last-rc-change='Fri Jun 10 00:33:41 2024', queued=0ms, exec=3093ms
 ```
-### Scenario 4,  Cause 2
+### Cause for Scenario 4, Symptom 2 
 
 Pacemaker can't start the SAP HANA resource if `SYN failures` exist between the primary and secondary nodes.
 
@@ -348,7 +349,7 @@ roles                            score site  srmode  sync_state version         
  node-2 PROMOTED    1693237652  online     logreplay node-1 4:P:master1:master:worker:master 150   DC2 syncmem PRIM       2.00.046.00.1581325702 node-2 
 ```
 
-### Scenario 4, Workaround 2
+### Workaround for Scenario 4, Symptom 2 
 
 Pacemaker can't start the SAP HANA resource if `SYN failures` exist between the primary and secondary cluster nodes. To mitigate this issue, manually enable `SYN` between the primary and secondary nodes.
  
