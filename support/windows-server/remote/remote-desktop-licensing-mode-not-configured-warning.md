@@ -5,7 +5,7 @@ ms.date: 02/13/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, pedromatos, v-lianna
+ms.reviewer: kaushika, pedromatos, timnewton, v-lianna
 ms.custom: sap:Remote Desktop Services and Terminal Services\Licensing for Remote Desktop Services (Terminal Services), csstroubleshoot
 ---
 # Remote Desktop licensing mode is not configured warning when you connect to an RD Session Host
@@ -86,15 +86,15 @@ If you use Group Policy to manage RDS, check the following subkey and entries:
 
   - `LicenseServers` (string value)
   - `LicensingMode` (DWORD value)
-    - `4`: **Per User**
     - `2`: **Per Device**
+    - `4`: **Per User**
 
 If you use the Remote Desktop Services console in Server Manager, check the following subkeys and entries:
 
 - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\RCM\Licensing Core`
   - `LicensingMode` (DWORD value)
-    - `4`: **Per User**
     - `2`: **Per Device**
+    - `4`: **Per User**
 - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TermService\Parameters\LicenseServers\SpecifiedLicenseServers`
   - `SpecifiedLicenseServers` (multi-string value)
 
