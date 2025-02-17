@@ -1,13 +1,13 @@
 ---
 title: Troubleshoot startup issues in a SUSE Pacemaker cluster
 description: Provides troubleshooting guidance for Pacemaker services that don't start
-ms.reviewer: rnirek,rmuneer
+ms.reviewer: rnirek,rmuneer,srsakthi
 ms.topic: troubleshooting
 ms.date: 07/24/2024
 ms.service: azure-virtual-machines
 ms.collection: linux
 ms.custom: sap:Issue with Pacemaker clustering, and fencing
-ms.author: rnirek,srsakthi
+ms.author: rnirek
 author: rnirek
 ---
 
