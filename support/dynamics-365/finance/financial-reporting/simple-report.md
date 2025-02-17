@@ -4,7 +4,7 @@
 title: Troubleshoot Report Design and Data Issues 
 description: Describes how to create a report to analyze data issues that occur in Microsoft Dynamics 365 Finance reports.
 author: aprilolson
-ms.date: 02/14/2025
+ms.date: 02/17/2025
 
 # optional metadata
 
