@@ -228,12 +228,12 @@ Reduce the number of instances of the requested VM size, and then retry the depl
 
 The servers in Azure datacenters are partitioned into clusters. Normally, an allocation request is attempted in multiple clusters, but it's possible that certain constraints (such as VM size, Ultra SSD, and proximity placement groups) from the allocation request force the Azure platform to attempt the request in only one cluster. Diagram 1 below illustrates the case of a normal allocation that is attempted in multiple clusters.
 
-:::image type="content" source="media/virtual-machines-common-allocation-failure/how-allocation-works.svg" alt-text="Diagram 1 shows allocation attempted in multiple clusters and Diagram 2 shows allocation pinned to one cluster." lightbox="media/virtual-machines-common-allocation-failure/how-allocation-works.svg":::
+:::image type="content" source="media/virtual-machines-common-allocation-failure/how-allocation-works.png" alt-text="Diagram 1 shows allocation attempted in multiple clusters." lightbox="media/virtual-machines-common-allocation-failure/how-allocation-works.png":::
 
 ### Why allocation failures happen
 
 When an allocation has a high number of restrictions, there's a higher chance of failing to find free resources since the available resource pool is smaller. Furthermore, if your allocation request is restricted, such as when using proximity placement groups but the type of resource you requested isn’t supported by the set of clusters and nearby ones, your request will fail even if the cluster has free resources. The following Diagram 2 illustrates the case where an allocation fails because the candidate clusters associated with the proximity placement group don't have free resources. Diagram 3 illustrates the case where an allocation fails because the candidate clusters associated with the  proximity placement group don’t support the requested VM size, even though the clusters have free resources.
 
-:::image type="content" source="media/virtual-machines-common-allocation-failure/allocation-failures-ppg.svg" alt-text="Diagram 3 shows allocation failed at pinned cluster: No free resource available and Diagram 4 shows allocation failed at pinned cluster: Size not supported." lightbox="media/virtual-machines-common-allocation-failure/allocation-failures-ppg.svg":::
+:::image type="content" source="media/virtual-machines-common-allocation-failure/allocation-failures-ppg.png" alt-text="Diagram 2 shows allocation failed with no free resource available and Diagram 3 shows allocation failed with size not supported." lightbox="media/virtual-machines-common-allocation-failure/allocation-failures-ppg.png":::
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
