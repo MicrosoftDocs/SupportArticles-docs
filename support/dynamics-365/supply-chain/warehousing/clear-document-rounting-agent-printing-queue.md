@@ -1,7 +1,7 @@
 ---
 title: Many Printing Jobs are Queued in Document Routing Agent
 description: Provides resolutions on how to clear the printing queue within the Document Routing Agent (DRA) in Microsoft Dynamics 365 Supply Chain Management.
-author: Mirza Abdic'
+author: Mirza Abdic
 ms.date: 02/17/2025
 # ms.search.form:
 audience: Application User
