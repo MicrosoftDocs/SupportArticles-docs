@@ -17,7 +17,7 @@ Categories of issues with the Start menu:
 
 - Issues related to deployment or installation
 - Application termination or crash
-- Issues related to the Start menu customization or other policies/configuration service provider (CSPs)
+- Issues related to the Start menu customization or other policies/configuration service providers (CSPs)
 - Other issues
 
 ## Basic troubleshooting
@@ -211,19 +211,19 @@ To work around the issue, follow these steps:
 1. Download the [scripts](https://cesdiagtools.blob.core.windows.net/windows/FixUserShellFolderPermissions.zip) to fix the issue when it happens, though the scripts can't
 prevent the issue from re-occurring.
 
-2. Open a PowerShell prompt under the affected user identity, and run the following command:
+2. Open a PowerShell prompt under the affected user identity, and run the following cmdlet:
 
     ```PowerShell
     .\FixUserShellFolderPermissions.ps1
     ```
 
-  - If the script can't access the registry key because the registry permissions are wiped out, open an elevated PowerShell prompt and run the following command:
+  - If the script can't access the registry key because the registry permissions are wiped out, open an elevated PowerShell prompt and run the following cmdlet:
 
     ```powershell
     FixUserShellFolderPermissions.ps1 -allprofiles
     ```
 
-  - If an application doesn't work, you might need to register the shell packages by running the following command as the affected user:
+  - If an application doesn't work, you might need to register the shell packages by running the following cmdlet as the affected user:
 
     ```powershell
     FixUserShellFolderPermissions.ps1 -register
