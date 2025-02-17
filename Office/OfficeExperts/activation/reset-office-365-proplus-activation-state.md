@@ -47,10 +47,10 @@ The [Enterprise version of the Assistant](https://aka.ms/SaRA_EnterpriseVersion)
 
 ## Method: Run the Microsoft 365 activation troubleshooter in Get Help
 
-The [Microsoft 365 activation troubleshooter](https://aka.ms/SaRA-OfficeActivation-sarahome) helps resolve Microsoft 365 subscription activation issues.
+The [Microsoft 365 activation troubleshooter](https://aka.ms/SaRA-OfficeActivation-sarahome) helps you to resolve Microsoft 365 subscription activation issues.
 
 > [!NOTE]
-> To run the Microsoft 365 activation troubleshooter, make sure that you're using the same Windows device where Microsoft 365 is installed. In addition, make sure that your device is running Windows 10 or later.
+> To run the Microsoft 365 activation troubleshooter, make sure that you're using the same Windows device that Microsoft 365 is installed on. Additionally, make sure that your device is running Windows 10 or a later version.
 
 To run the troubleshooter, follow these steps:
 
@@ -62,7 +62,7 @@ To run the troubleshooter, follow these steps:
    If you receive a pop-up window that displays "This site is trying to open Get Help.", select **Open**.
 1. Follow the instructions in the Get Help app to run the troubleshooter.
 
-After the troubleshooter completes, it displays the results and provides additional information about how to resolve the issue.
+After the troubleshooter finishes, it displays the results and provides additional information about how to resolve the issue.
 
 <h2 id="method2">Method: Use scripts to automate the cleanup process</h2>
 
