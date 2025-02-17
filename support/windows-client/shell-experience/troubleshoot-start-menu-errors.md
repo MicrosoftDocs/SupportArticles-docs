@@ -213,19 +213,19 @@ prevent the issue from re-occurring.
 
 2. Open a PowerShell prompt under the affected user identity, and run the following command:
 
-```PowerShell
-.\FixUserShellFolderPermissions.ps1
-```
+    ```PowerShell
+    .\FixUserShellFolderPermissions.ps1
+    ```
 
-- If the script can't access the registry key because the registry permissions are wiped out, open an elevated PowerShell prompt and run the following command:
+  - If the script can't access the registry key because the registry permissions are wiped out, open an elevated PowerShell prompt and run the following command:
 
-  - ```powershell
+    ```powershell
     FixUserShellFolderPermissions.ps1 -allprofiles
     ```
 
-- If an application doesn't work, you might need to register the shell packages by running the following command as the affected user:
+  - If an application doesn't work, you might need to register the shell packages by running the following command as the affected user:
 
-  - ```powershell
+    ```powershell
     FixUserShellFolderPermissions.ps1 -register
     ```
 
@@ -317,7 +317,7 @@ This issue has been fixed for Windows 10, version 1709 in [KB 4089848](https://s
 There are two main reasons for this issue:
 
 - Incorrect format: Editing the xml file incorrectly by adding an extra space or spaces, entering a bad character, or saving in the wrong format.
-  - To tell if the format is incorrect, check for "Event ID: 22" in the "_Applications and Services\\Microsoft\\Windows\\ShellCommon-StartLayoutPopulation\\Operational_" log.
+  - To tell if the format is incorrect, check for "Event ID: 22" in the "__Applications and Services\\Microsoft\\Windows\\ShellCommon-StartLayoutPopulation\\Operational__" log.
   - Event ID 22 is logged when the xml is malformed, meaning the specified file simply isn't valid xml.
   - When you edit the xml file, it should be saved in UTF-8 format.
 
@@ -326,7 +326,7 @@ There are two main reasons for this issue:
   - For example: The following error occurred while parsing a layout xml file:
     > The attribute 'LayoutCustomizationRestrictiontype' on the element '{http://schemas.microsoft.com/Start/2014/LayoutModification}DefaultLayoutOverride' is not defined in the DTD/Schema.
 
-XML files can and should be tested locally on a Hyper-V or other virtual machine before deployment or application by Group Policy
+XML files can and should be tested locally on a Hyper-V or other virtual machine before deployment or application by Group Policy.
 
 ### Symptom: Start menu no longer works after a PC is refreshed using F12 during startup
 
@@ -361,7 +361,7 @@ There are two different Start menu issues in Windows 10:
 - Administrator configured tiles in the start layout fail to roam.
 - User-initiated changes to the start layout aren't roamed.
 
-Specifically, behaviors include
+Specifically, behaviors include:
 
 - Applications (apps or icons) pinned to the Start menu are missing.
 - Entire tile window disappears.
@@ -432,7 +432,9 @@ There are steps you can take to fix the icons, first is to confirm that is the i
 1. The App or Apps work fine when you select the tiles.
 2. The tiles are blank, have a generic placeholder icon, have the wrong or strange title information.
 3. The app is missing, but listed as installed via PowerShell and works if you launch via URI.
-   - Example: `windows-feedback://`
+
+    Example: `windows-feedback://`
+    
 4. In some cases, Start can be blank, and Action Center and Cortana don't launch.
 
 > [!NOTE]
