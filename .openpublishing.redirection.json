@@ -6916,11 +6916,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "support/azure/virtual-desktop/welcome-virtual-desktop.yml",
-      "redirect_url": "/azure/virtual-desktop",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "support/windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tss.md",
       "redirect_url": "/troubleshoot/windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss",
       "redirect_document_id": true
@@ -12664,6 +12659,42 @@
       "source_path": "support/dynamics-365/sales/errorinternalservertransienterror-error.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/email-exchange-synchronization/an-error-occurred-while-synchronizing-item",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/integration-manager-log-file-does-not-print.md",
+      "redirect_url": "/dynamics-gp/installation/developer-tools"
+    },
+    {
+      "source_path": "support/mem/configmgr/client-installation/client-installation-fails-without-bits.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/client-installation-fails-without-bits"
+    },
+    {
+      "source_path": "support/mem/configmgr/client-installation/client-piloting-package-fails-after-site-expansion.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/client-piloting-package-fails-after-site-expansion"
+    },
+    {
+      "source_path": "support/mem/configmgr/client-installation/configmgr-clients-reinstall-every-five-hours.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/configmgr-clients-reinstall-every-five-hours"
+    },
+    {
+      "source_path": "support/mem/configmgr/client-installation/mac-client-enrollment-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/mac-client-enrollment-fails"
+    },
+    {
+      "source_path": "support/mem/configmgr/content-management/anonymous-authentication-disabled.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/anonymous-authentication-disabled"
+    },
+    {
+      "source_path": "support/mem/configmgr/setup-migrate-backup-recovery/management-points-fail-http-500-errors.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/management-points-fail-http-500-errors"
+    },
+    {
+      "source_path": "support/mem/configmgr/update-management/adr-updates-download-failure.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/adr-updates-download-failure"
+    },
+    {
+      "source_path": "support/mem/configmgr/update-management/wsus-not-sync-with-certificate-error-800b0109.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/wsus-not-sync-with-certificate-error-800b0109"
     }
   ]
 }

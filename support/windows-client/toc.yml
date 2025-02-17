@@ -877,6 +877,8 @@ items:
       href: ./shell-experience/issues-autoplay-disabled-group-policy.md
     - name: Notifications don't show in the action or notification center
       href: ./shell-experience/notifications-not-show-action-notification-center.md
+    - name: Taskbar calendar doesn't open
+      href: ./shell-experience/taskbar-calendar-does-not-open.md
     - name: UPX is displayed in the UI on managed device
       href: ./shell-experience/upx-displayed-in-UI-on-managed-device.md
   - name: DPI and Display Issues
@@ -1115,6 +1117,8 @@ items:
       href: ./user-profiles-and-logon/event-id-300-windows-hello-successfully-created-in-windows-10.md
     - name: Windows Hello errors during PIN creation in Windows 10
       href: ./user-profiles-and-logon/windows-hello-errors-during-pin-creation-in-windows-10.md
+    - name: Retrieve certificate to troubleshoot Windows Hello for Business logon failures
+      href: ./user-profiles-and-logon/retrieve-certificate-to-troubleshoot-windows-hello-for-business.md
 - name: Virtualization
   items:
   - name: Virtualization

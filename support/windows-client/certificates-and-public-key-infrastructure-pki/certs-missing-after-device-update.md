@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-tappelgate
-ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Certificate Chaining and Revocation, csstroubleshoot
+ms.custom:
+- sap:certificates and public key infrastructure (pki)\certificate chaining and revocation
+- pcy:WinComm Directory Services
 keywords: managed devices, certificates, WSUS, MECM, Windows Update
 ---
 

@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:System Performance\Slow logon, csstroubleshoot
+ms.custom:
+- sap:system performance\slow logon
+- pcy:WinComm Performance
 ---
 # Slow logon with a blank screen in Windows
 

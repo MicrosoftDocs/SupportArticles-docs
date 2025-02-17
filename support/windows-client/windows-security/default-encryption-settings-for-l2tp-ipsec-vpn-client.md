@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, MASOUDH
-ms.custom: sap:Windows Security Technologies\Internet Protocol security (IPSec), csstroubleshoot
+ms.custom:
+- sap:windows security technologies\internet protocol security (ipsec)
+- pcy:WinComm Networking
 ---
 # Default encryption settings for the Microsoft L2TP/IPSec VPN Client
 

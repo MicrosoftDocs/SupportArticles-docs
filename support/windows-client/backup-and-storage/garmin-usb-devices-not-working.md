@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, tiquinn, scottmca
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Storage hardware, csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\storage hardware
+- pcy:WinComm Storage High Avail
 ---
 # Garmin USB devices don't work with Windows 10
 

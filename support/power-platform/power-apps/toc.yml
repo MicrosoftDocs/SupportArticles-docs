@@ -1,11 +1,17 @@
 - name: Power Apps Troubleshooting
   href: welcome-power-apps.yml
+- name: Canvas App Performance
+  items:
+    - name: Troubleshoot canvas app performance issues
+      href: canvas-app-performance/troubleshoot-perf-table.md
 - name: Connections
   items:
     - name: Best practices when updating a flow
       href: connections/best-practices-when-updating-a-flow.md
     - name: Refresh URL isn't displayed for custom connectors
       href: connections/custom-connectors-not-show-refresh-url.md
+    - name: Troubleshoot broken connections
+      href: ../power-automate/connections/troubleshoot-broken-connections.md?context=/troubleshoot/power-platform/power-apps/context/context
     - name: Troubleshoot Power Query
       href: connections/troubleshoot-power-query-issues.md
 - name: Create and use apps

@@ -5,7 +5,9 @@ ms.reviewer: frankroj
 manager: dcscontentpm
 ms.date: 01/15/2025
 ms.topic: troubleshooting
-ms.custom: sap:Windows Setup, Upgrade and Deployment\User State Migration Tool (USMT), csstroubleshoot
+ms.custom:
+- sap:windows setup,upgrade and deployment\user state migration tool (usmt)
+- pcy:WinComm Devices Deploy
 audience: itpro
 ---
 

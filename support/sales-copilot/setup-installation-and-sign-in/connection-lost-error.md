@@ -1,7 +1,7 @@
 ---
 title: Connection lost due to an expired or invalid session or a bad OAuth token
 description: Resolves the Connection lost error in Copilot for Sales when you're logged out due to an expired or invalid session or a bad OAuth token.
-ms.date: 01/10/2024
+ms.date: 02/05/2025
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
@@ -46,7 +46,7 @@ The Salesforce session has reached its expiration time, or the session has becom
 To solve this issue, perform one of these steps:
 
 - Select **Sign in again** in the error message, and then sign in to Salesforce again.
-- [Sign out of Copilot for Sales](/microsoft-sales-copilot/sign-out-sales-copilot) and then sign in to Salesforce again.
+- [Sign out of Copilot for Sales](/microsoft-sales-copilot/more-options#sign-out-of-copilot-for-sales) and then sign in to Salesforce again.
 
 ## More information
 

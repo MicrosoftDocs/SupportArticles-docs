@@ -1,7 +1,7 @@
 ---
 title: Configure IPv6 for advanced users
 description: Provides step-by-step guidance for how to use the Windows registry to disable IPv6 or certain IPv6 components in Windows.
-ms.date: 01/15/2025
+ms.date: 1/20/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -23,17 +23,24 @@ _Original KB number:_ &nbsp; 929852
 
 ## Summary
 
-It is common for IT administrators to disable IPv6 to troubleshoot networking-related issues such as name resolution issues.
+It's common for IT administrators to disable IPv6 to troubleshoot networking-related issues such as name resolution issues.
 
 > [!IMPORTANT]
-> Internet Protocol version 6 (IPv6) is a mandatory part of Windows Vista and Windows Server 2008 and newer versions. We do not recommend that you disable IPv6 or its components. If you do, some Windows components may not function.
+> Internet Protocol version 6 (IPv6) is a mandatory part of Windows Vista and Windows Server 2008 and newer versions.
+>
+> We don't recommend that you disable IPv6 or IPv6 components or unbind IPv6 from interfaces. If you do, some Windows components might not function.
 >
 > We recommend using **Prefer IPv4 over IPv6** in prefix policies instead of disabling IPV6.
 
 ## Use registry key to configure IPv6
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
+
+> [!NOTE]
+>
+> - You must restart your computer for these changes to take effect.
+> - Values other than 0 or 32 causes the Routing and Remote Access service to fail after this change takes effect.
 
 The IPv6 functionality can be configured by modifying the following registry key:
 
@@ -55,15 +62,7 @@ The IPv6 functionality can be configured by modifying the following registry key
 |Re-enable IPv6 on all tunnel interfaces|Binary xxx xxx0|
 |Re-enable IPv6 on nontunnel interfaces and on IPv6 tunnel interfaces|Binary xxx0 xxx0|
   
-> [!NOTE]
->
-> - Administrators must create an .admx file to expose the registry settings of below table in a Group Policy setting.
-> - You must restart your computer for these changes to take effect.
-> - Values other than 0 or 32 causes the Routing and Remote Access service to fail after this change takes effect.
-
-By default, the 6to4 tunneling protocol is enabled in Windows when an interface is assigned a public IPv4 address (Public IPv4 address means any IPv4 address that isn't in the ranges 10.0.0.0/8, 172.16.0.0/12, or 192.168.0.0/16). 6to4 automatically assigns an IPv6 address to the 6to4 tunneling interface for each address, and 6to4 dynamically registers these IPv6 addresses on the assigned DNS server. If this behavior isn't desired, we recommend disabling the IPv6 tunnel interfaces on the affected hosts.
-
-You can also follow these steps to modify the registry key:
+You can follow these steps to modify the registry key:
 
 1. Open an administrative **Command Prompt** window.
 2. Run the following command:
@@ -107,11 +106,42 @@ For each bit, **0** means false and **1** means true. Refer to the following tab
 |Binary|0010 0000|0001 0000|0000 0001|0001 0001|
 |Hexadecimal|0x20|0x10|0x01|0x11|
 
-### Using the network properties GUI to disable IPv6 is not supported
-
 This registry value doesn't affect the state of the following check box. Even if the registry key is set to disable IPv6, the check box in the **Networking** tab for each interface can be selected. This is an expected behavior.
 
 :::image type="content" source="./media/configure-ipv6-in-windows/network-properties.svg" alt-text="The Internet Protocol Version 6 (TCP/IPv6) option in Network properties." border="false":::
+
+## Unbind IPv6 from an interface
+
+> [!CAUTION]  
+> We don't recommend unbinding IPv6 from an Ethernet or WiFi network adapter without a justifiable need. Windows is tested with, and some products and features expect, IPv6 to be bound and functional.
+>
+> Unbinding IPv6 from a network adapter can result in an unsupported Windows configuration.
+>
+> When unbinding a protocol from a network adapter, we highly recommend using a WMI-based method, such as, `Disable-NetAdapterBinding`.
+
+You can unbind IPv6 from a network interface by using one of the following methods:
+
+- Unselect **Internet Protocol Version 6 (TCP/IPv6)** in the network properties GUI. See the previous screenshot.
+- Run the PowerShell command `Disable-NetAdapterBinding -Name "<MyAdapter>" -ComponentID ms_tcpip[6]`
+
+## IPv6 tunnel interfaces
+
+By default, the 6to4 tunneling protocol is enabled in Windows when an interface is assigned a public IPv4 address (Public IPv4 address means any IPv4 address that isn't in the ranges 10.0.0.0/8, 172.16.0.0/12, or 192.168.0.0/16). 6to4 automatically assigns an IPv6 address to the 6to4 tunneling interface for each address, and 6to4 dynamically registers these IPv6 addresses on the assigned DNS server.
+
+If this behavior isn't desired, we recommend disabling the IPv6 tunnel interfaces on the affected hosts.
+
+You can disable the 6to4 tunneling protocol and other IPv6 transition Technologies by using one of the following methods:
+
+- Set the `DisabledComponents` registry key to 0x01.
+- Set the following Group Policy:  
+  **Computer Configuration**\\**Administrative Templates**\\**Network**\\**TCPIP Settings**\\**IPv6 Transition Technologies**
+
+  - Set **6to4 State** to **Disabled**  
+  - Set **ISATAP Sate** to **Disabled**  
+  - Set **Teredo State** to **Disabled**  
+
+> [!NOTE]  
+> ISATAP and Teredo are disabled by default in Windows.
 
 ## Reference
 
@@ -125,7 +155,7 @@ For more information about the related issues, see the articles below:
 
 - Example 1: On Domain Controllers, you might run into where LDAP over UDP 389 will stop working.
   See [How to use Portqry to troubleshoot Active Directory connectivity issues](use-portqry-verify-active-directory-tcp-ip-connectivity.md)
-- Example 2: Exchange Server 2010, you might run into problems where Exchange will stop working.
+- Example 2: Exchange Server 2010, you might run into problems where Exchange stops working.
   See [Arguments against disabling IPv6](/archive/blogs/netro/arguments-against-disabling-ipv6) and [Disabling IPv6 And Exchange – Going All The Way](https://blog.rmilne.ca/2014/10/29/disabling-ipv6-and-exchange-going-all-the-way/).
 - Example 3: Failover Clusters
   See [What is a Microsoft Failover Cluster Virtual Adapter anyway?](/archive/blogs/askcore/what-is-a-microsoft-failover-cluster-virtual-adapter-anyway) and [Failover Clustering and IPv6 in Windows Server 2012 R2](https://techcommunity.microsoft.com/t5/failover-clustering/bg-p/FailoverClustering).
@@ -133,4 +163,4 @@ For more information about the related issues, see the articles below:
 Tools to help with network trace: [Microsoft Network Monitor 3.4 (archive)](https://www.microsoft.com/download/details.aspx?id=4865)
 
 > [!WARNING]
-> Netmon 3.4 isn't compatible with Windows Server 2012 or newer OS when LBFO NIC teaming is enabled. Use **Message Analyzer** instead.
+> Netmon 3.4 isn't compatible with Windows Server 2012 or newer OS when LBFO NIC teaming is enabled.

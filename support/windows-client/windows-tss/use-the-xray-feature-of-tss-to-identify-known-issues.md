@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: tdimli, ronsto, ravikiran.s, gipauli, warrenw
-ms.custom: sap:Support Tools\Xray, csstroubleshoot
+ms.custom:
+- sap:support tools\xray
+- pcy:WinComm Directory Services
 ---
 # Identify known issues by using the xray feature of TSS
 
