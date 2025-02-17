@@ -7,7 +7,7 @@ ms.date: 07/24/2024
 ms.service: azure-virtual-machines
 ms.collection: linux
 ms.custom: sap:Issue with Pacemaker clustering, and fencing
-ms.author: rnirek
+ms.author: rnirek,srsakthi
 author: rnirek
 ---
 
