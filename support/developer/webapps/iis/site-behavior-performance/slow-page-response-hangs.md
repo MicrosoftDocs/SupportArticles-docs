@@ -60,7 +60,7 @@ Here is a list of useful data to collect for a slow page response or hang situat
 
 ### Why to collect  
 
-This section describe various tools to collect data for for diagnosing and troubleshooting slow page response and hang issues in Internet Information Services (IIS).
+This section describe various tools to collect data for diagnosing and troubleshooting slow page response and hang issues in Internet Information Services (IIS).
 
 #### IIS Log Catcher 
 
@@ -68,7 +68,7 @@ IIS Log Catcher collects a variety of historical logs and configuration data at 
 
 ##### Configuration files 
 
-**Applicationhost.config** and **Web.config** are also collected as part of the IIS Log Catcher data. These files are useful for understanding the configuration of IIS and the individual web applications on the server.
+**applicationhost.config** and **web.config** are also collected as part of the IIS Log Catcher data. These files are useful for understanding the configuration of IIS and the individual web applications on the server.
 
 ##### IIS web logs (W3SVC logs)
 
@@ -116,15 +116,15 @@ Download the [IIS Log Catcher](https://github.com/NL-Cristi/LogCatcher) tool and
 
 ##### Configuration files
 
-If the configuration files aren't collected as part of the IIS Log Catcher data, they will need to be collected manually. The **applicationhost.config** file is located at **c:\\windows\\system32\\inetsrv\\config\\**. The **web.config** files are located at the root directory of each application. For example, the root of the Default Web Site's application is **c:\\inetpub\\wwwroot**. Root directories might be anywhere on the file system. Refer to **applicationHost.config** for the **site** and **physicalPath** or review the settings in the IIS Manager. 
+If the configuration files aren't collected as part of the IIS Log Catcher data, they will need to be collected manually. The **applicationhost.config** file is located at **c:\\windows\\system32\\inetsrv\\config\\**. The **web.config** files are in the root directory of each application. For example, the root of the Default Web Site's application is **c:\\inetpub\\wwwroot**. Root directories might be anywhere on the file system. Refer to **applicationhost.config** for the **site** and **physicalPath** or review the settings in the IIS Manager. 
 
 ##### IIS web logs (W3SVC logs)  
 
-If the web logs aren't collected as part of the IIS Log Catcher data, they will need to be collected manually. By default, these logs are located in **c:\\inetpub\\logs\\logfiles**.  Each site has its own directory named **W3SVC#** where the **#** is the **SiteID**. However, the log location is customizable, you might need to review the **applicationHost.config** for the **logFile** and directory or review the settings in the IIS Manager. 
+If the web logs aren't collected as part of the IIS Log Catcher data, they will need to be collected manually. By default, these logs are in **c:\\inetpub\\logs\\logfiles**.  Each site has its own directory named **W3SVC#** where the **#** is the **SiteID**. However, the log location is customizable, you might need to review **applicationhost.config** for the **logFile** and directory or review the settings in the IIS Manager. 
 
 ##### Windows system, application and security event logs 
 
-If the event logs aren't collected as part of the IIS Log Catcher data, they will need to be collected manually. Collect event logs directly from the Event Viewer. Save them as **.evtx** files and view them in Event Viewer on your own server. 
+If the event logs aren't collected as part of the IIS Log Catcher data, collect them manually. Collect event logs directly from the Event Viewer. Save them as **.evtx** files and view them in Event Viewer on your own server. 
 
 #### Fiddler tool trace or HAR trace 
 
@@ -290,18 +290,19 @@ If you know how to reproduce the slowness, do so and select **Save & Close** whe
 
 #### Trigger memory dumps from the FREB rule using ProcDump.exe 
 
-Using **ProcDump.exe** to trigger memory dumps based on FREB rules is particularly useful when you can't install additional applications like Debug Diagnostic Tool on the server.
+When you can't install applications, such as Debug Diagnostics Tool, on the server, configuring FREB to trigger memory dumps using **ProcDump.exe** is particularly useful. Follow these steps to configure FREB to run a custom action, like **ProcDump.exe**, to generate memory dumps when a rule is met.
 
-We will configure FREBs such that when the rule is met, a custom action (**Procdump.exe** in this case) will run to generate the memory dumps. Here are the steps: 
+1. Configure FREB based on request time value:
 
-1. Configure FREBs on the appropriate request time value following the aforementioned guidelines in this TSG. You can select "Need to configure FREBs?" step at the bottom of this page for steps, but make sure to set time taken rule instead of status code. 
+   Configure FREBs on the appropriate request time value by following the steps in [Time trigger amount](#time-trigger-amount). Make sure to set a time-taken rule instead of a status code. For detailed steps on configuring FREBs, see [](troubleshoot-http-error-code.)
 
    > [!NOTE]
-   > For second and third steps below, This reference provides in addition alternatives ways using the config file directly or appcmd, however, change the customActionParams to `-accepteula -ma %1% C:\myDumps -n 3 -s XXX`. Change the dump spacing as needed using `-s` in seconds). 
+   > For second and third steps below, This reference provides in addition alternatives ways using the config file directly or appcmd, however, change the **customActionParams** to `-accepteula -ma %1% C:\myDumps -n 3 -s XXX`. Change the dump spacing as needed using `-s` in seconds). 
 
 1. Follow these steps to enable custom actions: 
 
-   From the Server Level (select the server name on the left side of the screen, just above Application Pools). Double click **Configuration Editor** icon, then navigate to applicationHost/sites section then select the **…** (ellipsis) button as shown in the following screenshot: 
+   Select the server name on the left side of the screen).
+   Double click the **Configuration Editor** icon, navigate to the **applicationhost/sites** section, and then select the **…** (ellipsis) button as shown in the following screenshot: 
 
 1. Then, select the site you have already added the Failed Tracing Rule for, and set **customActionsEnabled** to **True**. 
 
@@ -419,4 +420,4 @@ It's simpler and more understandable to only run one type of analysis rule at a 
 > [!NOTE]
 > If a more detailed analysis is needed, [WinDbg](/windows-hardware/drivers/debuggercmds/windbg-overview) can be used to review dumps.
 
-[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)] 
+[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)] 
