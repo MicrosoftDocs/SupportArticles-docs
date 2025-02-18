@@ -28,7 +28,7 @@ File sharing only needs to be managed if you're using Hyper-V with Docker. If yo
 
 ## Problems with paths on Windows containers
 
-You may get a variety of file I/O errors that arise from attempts to use Linux-specific paths on a Windows container. If this occurs, check the environment variable VSCT_WslDaemon. If set, this causes Linux-specific paths to be used for some paths, which doesn't work on Windows containers. This environment variable should always be unset if you're using Windows containers.
+You may get a variety of file I/O errors that arise from attempts to use Linux-specific paths on a Windows container. If this occurs, check the environment variable VSCT_WslDaemon. If set, Visual Studio attempts use Windows Subsystem for Linux (WSL) paths to refer to the windows files for creating volumes. This is necessary for Docker in WSL, but doesn't work with Docker Desktop on Windows. This environment variable should always be unset if you're using Windows containers.
 
 ## Unable to start debugging
 
