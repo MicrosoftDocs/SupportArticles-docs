@@ -151,10 +151,10 @@ Follow the proper guidelines to set up a [RHEL Pacemaker Cluster](#prerequisites
 * The stonith device `python-user` triggers the shutdown instruction for both nodes.
 
 
-#### Cause for scenario 4
+### Cause for scenario 4
 When there's  an outage, like a Platform/Network interruption as discussed in [Scenario 1](#scenario-1-network-outage), both nodes attempt to write to the STONITH device to fence each other since they lose totem. Normally, the stonith device takes the instruction from the first node that's available, to write on it in order to shutdown the other node. If both nodes are allowed to write to the stonith device, they end up killing each other.
 
-#### Resolution for scenario 4
+### Resolution for scenario 4
 It is recommended to use `priority-fencing-delay`  parameter, so only one VM should be acknowledged by the STONITH device. 
 
 Check the installed Pacemaker version using the following command:
