@@ -166,7 +166,7 @@ The generated FREB logs triggered by some status code rule will provide a view o
 
 However, FREB logs triggered by a specific time taken value rule (for example, 20 seconds) will only show that information up to that value, meaning, anything that this request goes through beyond this time won't be available in the log. 
 
-If the response is receivable after some delay like 30 seconds for example, you can check the status code of the received response (by checking browser developer tools, assuming the client can be a browser, or from IIS logs), and then configure FREBs on that status code (select the **Need to configure FREBs?** step at the bottom of this page for steps). Now, view the generated FREBs to understand which module is causing the slowness (if you aren't familiar with how to interpret FREBs, section **Interpreting a FREB tracing log** in this link could help). For example, if you find out that some third-party module is causing the slowness, it will be up to that third-party to investigate the problem. However, if the slowness is reported to be from customer code, you need memory dumps for further investigation. 
+If the response is receivable after some delay like 30 seconds for example, you can check the status code of the received response (by checking browser developer tools, assuming the client can be a browser, or from IIS logs), and then [configure FREBs](troubleshoot-http-error-code.md#steps-to-capture-freb-logs) on that status code. Now, view the generated FREBs to understand which module is causing the slowness (if you aren't familiar with how to interpret FREBs, section **Interpreting a FREB tracing log** in this link could help). For example, if you find out that some third-party module is causing the slowness, it will be up to that third-party to investigate the problem. However, if the slowness is reported to be from customer code, you need memory dumps for further investigation. 
 
 If no response is received at all (complete hang) or received after a very long time, you can configure FREBs instead on a specific time taken rule, and then proceed as mentioned above. The time value specified should be problematic, meaning, if customer knows that it's normal and expected for a response to take 10 seconds, you will be interested only in the time beyond these 10 seconds, hence would configure FREBs on 20 or 30 seconds or some other number. 
 
@@ -174,7 +174,7 @@ If no response is received at all (complete hang) or received after a very long 
 
 It would be a waste to wait for a week or a month for an issue to occur to take FREBs alone to discover that you actually need memory dumps for further investigation, and then wait another such time to generate these memory dumps. Instead, it's better to generate memory dumps during the first occurrence of the issue. 
 
-When slowness is in seconds: If requests normally take milliseconds and when the issue happens they take 1 or a couple of seconds, and customer would like to investigate that, you will be limited in what you can do to help. Generating memory dumps for such slow periods might not be practical. Debuggers will add overhead which might contribute to the slowness to some degree and hence the original slowness and the overhead will overlap, and generating multiple memory dumps within a request lifetime might not be possible to begin with. Instead, ETW trace using Perfview could be collected, and still you might be very limited in investigation if the time turns out to be not concentrated in a specific operation rather is too distributed. Do check IIS Logs as if you do notice very slow requests in addition, you might want to discuss with customer troubleshooting that instead. If solving these very slow requests automatically solves the couple of seconds slowness too, it will be great. For Perfview steps, select the **Need to trace with Perfview?** step at the bottom of this page. 
+When slowness is in seconds: If requests normally take milliseconds and when the issue happens they take 1 or a couple of seconds, and customer would like to investigate that, you will be limited in what you can do to help. Generating memory dumps for such slow periods might not be practical. Debuggers will add overhead which might contribute to the slowness to some degree and hence the original slowness and the overhead will overlap, and generating multiple memory dumps within a request lifetime might not be possible to begin with. Instead, ETW trace using Perfview could be collected, and still you might be very limited in investigation if the time turns out to be not concentrated in a specific operation rather is too distributed. Do check IIS Logs as if you do notice very slow requests in addition, you might want to discuss with customer troubleshooting that instead. If solving these very slow requests automatically solves the couple of seconds slowness too, it will be great. For Perfview steps, see [Steps to capture a PerfView trace and dumps](troubleshoot-http-error-code.md#steps-to-capture-a-perfview-trace-and-dumps). 
 
 ##### Detailed steps for collecting FREB logs 
 
@@ -288,42 +288,38 @@ To take the memory dumps manually, see [Method 2: Using DebugDiag](data-capture-
 
 If you know how to reproduce the slowness, do so and select **Save & Close** when the requests are slow. If you don't know how to reproduce the slowness and it occurs quickly and frequently, wait for the slowness to begin before selecting **Save & Close**. Dumps will begin collecting as soon as **Save & Close** is selected. 
 
-#### Trigger memory dumps from the FREB rule using ProcDump.exe 
+#### Configure FREB to trigger memory dumps using ProcDump.exe
 
-When you can't install applications, such as Debug Diagnostics Tool, on the server, configuring FREB to trigger memory dumps using **ProcDump.exe** is particularly useful. Follow these steps to configure FREB to run a custom action, like **ProcDump.exe**, to generate memory dumps when a rule is met.
+This section provides step-by-step instructions on how to configure Failed Request Tracing Rules (FREB) to trigger memory dumps using **ProcDump.exe**. This approach is particularly useful when you can't install certain applications like Debug Diag on the server.
+
+Follow these steps to configure FREB to run a custom action, like **ProcDump.exe**, to generate memory dumps when specific rules are met.
 
 1. Configure FREB based on request time value:
 
-   Configure FREBs on the appropriate request time value by following the steps in [Time trigger amount](#time-trigger-amount). Make sure to set a time-taken rule instead of a status code. For detailed steps on configuring FREBs, see [](troubleshoot-http-error-code.)
+   Configure FREBs on the appropriate request time value by following the steps in [Time trigger amount](#time-trigger-amount). Make sure to set a time-taken rule instead of a status code. For detailed steps on configuring FREBs, see [Steps to capture FREB logs](troubleshoot-http-error-code.md#steps-to-capture-freb-logs).
 
    > [!NOTE]
-   > For second and third steps below, This reference provides in addition alternatives ways using the config file directly or appcmd, however, change the **customActionParams** to `-accepteula -ma %1% C:\myDumps -n 3 -s XXX`. Change the dump spacing as needed using `-s` in seconds). 
+   > For the following second and third steps, This reference provides in addition alternatives ways using the config file directly or appcmd, however, change the **customActionParams** to `-accepteula -ma %1% C:\myDumps -n 3 -s XXX`. Change the dump spacing as needed using `-s` in seconds). 
 
 1. Follow these steps to enable custom actions: 
 
-   Select the server name on the left side of the screen).
-   Double click the **Configuration Editor** icon, navigate to the **applicationhost/sites** section, and then select the **…** (ellipsis) button as shown in the following screenshot: 
+   1. Select the server name on the left side of the screen).
+   1. Double click the **Configuration Editor** icon.
+   1. Navigate to the **applicationHost/sites** section, and then select the **…** (ellipsis) button.
+   1. Select the site for which you have already added the Failed Tracing Rule.
+   1. Set **customActionsEnabled** to **True**.
+   1. Download [ProcDump](/sysinternals/downloads/procdump) and copy the executable to the **C:\\procDump** path. Create a directory named **myDumps** under the **C:\\** drive.
 
-1. Then, select the site you have already added the Failed Tracing Rule for, and set **customActionsEnabled** to **True**. 
+      > [!WARNING]
+      > You have to place the ProcDump tool in a folder path that doesn't contain whitespaces, otherwise it's impossible to execute ProcDump via FREB. For example, **C:\procDump** is a good path folder while **C:\Process Dump** isn't. 
 
-Now, to be able to generate a dump via a FREB rule, you need to download ProcDump, and copy the executable under the **C:\procDump** path (Preferably) and create a directory called myDumps under **C:\\** drive as well.  
+1. Specify the custom action for ProcDump:
 
-> [!WARNING]
-> You have to place the ProcDump tool in a folder path that does not contain whitespaces, otherwise it will be impossible to execute ProcDump via FREB. For example, **C:\procDump** is a good path folder while **C:\Process Dump** isn't. 
+   1. Specify the action at either the server or site level.
+   1. Select the **Add** link under the **Action** pane and fill in the properties as shown in the following screenshot:
 
-Thirdly: Indicating the specific action we need, which is for Procdump to generate the memory dumps: 
-
-You can do this action either on the Server Level or Site Level, as shown in below figure.
-Select the **…** button on figure below.
-Select the **Add** link under the **Action** pane, and fill the following properties: 
-
-CustomActionExe is the executable that will launch when the FREB rule is met. Point to the path of the executable as shown above. 
-
-customActionParams corresponds to the parameters passed to the executable (note that the `%1%` parameter will be used by IIS to pass in the PID of the worker process to the procdump executable) 
-
-The dumps will be generated in the folder **C:\myDumps**. Set this to `-accepteula -ma %1% C:\myDumps -n 3`.
-
-This command will generate 3 consecutive dumps, spaced by 10 seconds. If you need to change the spacing, add `-s` followed by the number of seconds. 
+      - **CustomActionExe**: Set the value to the path of the ProcDump executable. It's the executable that will launch when the FREB rule is met.
+      - **customActionParams** Set the value to `-accepteula -ma %1% C:\myDumps -n 3`. This command will generate 3 consecutive dumps, spaced by 10 seconds. If you need to change the spacing, add `-s` followed by the number of seconds. 
 
 ## Data analysis 
 
