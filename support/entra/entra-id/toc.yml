@@ -77,9 +77,8 @@
         href: app-integration/error-code-AADSTS50020-user-account-identity-provider-does-not-exist.md
       - name: Error AADSTS530004 - AcceptCompliantDevice setting isn't configured
         href: app-integration/error-code-aadsts530004-acceptcompliantdevice-setting-not-configured.md
-      - name: Error AADSTS50017 - Validation of Given Certificate for Certificate-Based
-          Authentication Failed
-        href: ./app-integration/error-code-aadsts50017-certificate-based-authentication-failed.md
+      - name: Error AADSTS50017 - Validation of given certificate for certificate-based authentication failed
+        href: app-integration/error-code-aadsts50017-certificate-based-authentication-failed.md
       - name: Error AADSTS50057 - user account is disabled
         href: app-integration/error-code-aadsts50057-user-account-is-disabled.md
       - name: Error AADSTS500571 - guest user account is disabled

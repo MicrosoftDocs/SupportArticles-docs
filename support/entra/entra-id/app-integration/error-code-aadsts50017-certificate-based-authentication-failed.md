@@ -1,98 +1,67 @@
 ---
-# Required metadata
-# For more information, see https://review.learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata?branch=main
-# For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
-
-title: 'AADSTS50017: Validation of Given Certificate for Certificate-Based Authentication Failed '
-description: 'AADSTS50017: Validation of Given Certificate for Certificate-Based Authentication Failed '
-author:      Laks1 # GitHub alias
-ms.author:   laks # Microsoft alias
+title: Error AADSTS50017 - Validation of Given Certificate for Certificate-Based Authentication Failed
+description: Provides solutions to the Microsoft Entra authentication AADSTS50017 error that occurs when you access an application or resource with certificate-based authentication (CBA).
+ms.reviewer: laks, joaos, willfid, v-weizhu
 ms.service: entra-id
-ms.topic: troubleshooting-problem-resolution
-ms.date:     02/10/2025
-ms.subservice: authentication
+ms.date: 02/18/2025
+ms.custom: sap:Issues Signing In to Applications
 ---
-# Error AADSTS50017 - Validation of Given Certificate for Certificate-Based Authentication Failed
+# Error AADSTS50017 - Validation of given certificate for certificate-based authentication failed
 
-This article discusses scenarios where the AADSTS50017 error occurs when a user accesses an application or resource with certificate-based authentication (CBA).
+This article provides solutions to the Microsoft Entra authentication AADSTS50017 error that occurs when you access an application or resource with certificate-based authentication (CBA).
 
 ## Symptoms
 
-When a  user tries to access an application or resource with Certificate-Based authentication ( CBA)  the sign-in process fails, and the following error message is displayed:
+When you try to access an application or resource with CBA, the sign-in process fails and the following error message is displayed:
 
 > AADSTS50017: Validation of given certificate for certificate based authentication failed.
 
-## Scenario 1: Certificate chain failures due to missing CA Certificates in store or validation failures with SKI and AKI Values 
+## Cause 1: Certificate chain failures or validation failures
 
-## Solution :
+The AADSTS50017 error might occur because of the following problems:
 
-1. Check if issuing certificate was correctly uploaded to the trusted certificates list. A certificate chain consists of multiple certificates linked together. The end-user’s certificate can be issued by a root CA, or by a non-root CA (a.k.a. intermediate CA).
+- Certificate chain failures due to missing certificate authority (CA) certificates in store.
+- Validation failures with Subject Key Identifier (SKI) and Authority Key Identifier (AKI) values.
 
-2. If you have a non-root Issuing CA (intermediate CA), both intermediate and root CA certificates must be uploaded to the Entra ID CA trusted store. 
+     In Public Key Infrastructure (PKI), the certificate chain validation process ensures the integrity and authenticity of the certificate chain. The SKI and AKI play crucial roles in this process. The SKI provides a unique identifier for the public key held by the certificate. The AKI is used to identify the CA that issues the certificate. 
 
-3. In Public Key Infrastructure (PKI), the certificate chain validation process ensures the integrity and authenticity of the certificate chain. Below two key identifiers play a crucial role: 
+To resolve this issue, follow these steps:
 
-**Subject Key Identifier (SKI):** The **SKI** provides a unique identifier for the public key held by the certificate.  
- **Authority Key Identifier (AKI):** The **AKI** is used to identify the certificate authority (CA) that issued the certificate. 
+1. Check if issuing certificate is correctly uploaded to the trusted certificate list.
 
-**1.1)**  Check the SKI of the user’s certificate and confirm if the AKI matches any of the intermediate or root CAs it was uploaded to the trusted store.  
+    A certificate chain consists of multiple certificates linked together. The end-user's certificate can be issued by a root CA or a non-root CA (intermediate CA). If you have a non-root issuing CA (intermediate CA), both intermediate and root CA certificates must be uploaded to the Microsoft Entra CA trusted store.
 
-It’s possible to check that information by navigating through the details of the user’s certificate and uploaded issuing CAs, as shown on the next pictures:  
+2. Check the SKI value of your certificate and confirm if the AKI value matches any intermediate or root CA certificate that's uploaded to the trusted store.
 
-![Screenshot of Certificate chain.](media/error-code-aadsts50017-certificate-based-authentication-failed/pic4.png)
+    If there is no match, your certificate or the missing CA certificate should be changed accordingly. To do this, [configure certificate authorities by using the Microsoft Entra admin center](/entra/identity/authentication/how-to-certificate-based-authentication#configure-certificate-authorities-by-using-the-microsoft-entra-admin-center).
 
+    To get the SKI and AKI values, check the details of your certificate and uploaded issuing CA certificates.
 
-1. **Root CA Certificate:** 
-    - Has its own SKI.
-    - Issues the Intermediate certificates (when applicable).
-    - The Root Certificate will not contain the Authority Key Identifier (AKI) field 
+     :::image type="content" source="media/error-code-aadsts50017-certificate-based-authentication-failed/certificate-chain.png" alt-text="Screenshot that shows a certificate chain." lightbox="media/error-code-aadsts50017-certificate-based-authentication-failed/certificate-chain.png":::
 
-2. **Issuing or intermediate CA Certificate (when applicable):**
-    - AKI points to the Root CA’s SKI. 
-    - Has its own SKI that will match the AKI on the user’s certificate. 
-    - Issues the user’s Certificate. 
-    - Multiple intermediate CAs can exist. 
-    - Issues the Intermediate certificates (when applicable). 
+    |Certificate type|Characteristic|
+    |---|---|
+    |Root CA certificate|It has its own SKI. It can issue the intermediate certificates when applicable. It doesn't contain the AKI field.|
+    |Issuing or intermediate CA certificate (when applicable)|Its AKI points to the Root CA certificate's SKI. It has its own SKI that matches the AKI on a user certificate. It can issue user certificates, and issue intermediate certificates when applicable. Multiple intermediate CA certificates can exist.|
+    |End-Entity (User or Client) certificate|It has its own SKI. Its AKI points to the issuing CA certificate's SKI.|
 
-3. **End-Entity (User or Client) Certificate:**
-    - Has its own SKI 
-    - AKI points to the Issuing CA’s SKI. 
+## Cause 2: Invalid certificates
 
-**1.2)** If there is no match, the missing CA certificates or the user’s certificate should be changed accordingly. Details under [Configure Certification Authorities using the Microsoft Entra Admin Center ](/entra/identity/authentication/how-to-certificate-based-authentication#configure-certification-authorities-using-the-microsoft-entra-admin-center).
+If any certificates in the certificate chain are missing valid extension identifiers, such as certificate policy extensions, the AADSTS50017 error might occur.
 
+To resolve this error, validate the certificate policy extensions for all certificates within the certificate chain, including user certificates, intermediate CA certificates, and the root CA certificate. Ensure that the certificate policy extension and its Object Identifiers (OIDs) are consistent and valid across the entire chain.
 
-## Scenario 2: Invalid CAs Where the Issuer Does Not Carry Valid Extension Identifiers. 
+To verify the policy OIDs for consistency and validity, retrieve the relevant certificates in chain and validate them as shown below: 
 
-The AADSTS50017 error may also occur if any certificates in the chain are missing valid extension identifiers, such as certificate policy extensions. 
-
-## Solution :
-
-2.1) Validate the Certificate Policies extensions for all certificates within the certificate chain, including user certificates, intermediate Certification Authority (CA) certificates, and the root CA certificate. Ensure that the Certificate Policies extension and its Object Identifiers (OIDs) are consistent and valid across the entire chain. 
+:::image type="content" source="media/error-code-aadsts50017-certificate-based-authentication-failed/certificate-policies.png" alt-text="Screenshot that shows certificate policies." lightbox="media/error-code-aadsts50017-certificate-based-authentication-failed/certificate-policies.png":::
 
 
+If any certificates are missing certificate policy extensions, reissue the CA certificate or end user certificate with the appropriate certificate policy extensions embedded.  
 
-You can verify the policy Object Identifiers (OIDs) for consistency and validity by retrieving the relevant certificates in chain and validating them as shown below:  
-
-
-
-
-
-
-
-
-
-
-![Screenshot-certificate-policies.](media/error-code-aadsts50017-certificate-based-authentication-failed/final-image-to-upload.png)
-
-If any of the certificates are missing Certificate Policies extensions, it is necessary to reissue the Certification Authority (CA) certificate or end user certificate with the appropriate Certificate Policies extensions embedded.  
-
-For more details about [policy extension and other supported extensions](/windows/win32/seccertenroll/supported-extensions), please refer to the following article:
+For more information about policy extension and other supported extensions, see [Supported Extensions](/windows/win32/seccertenroll/supported-extensions).
 
 ## AADSTS error code reference
 
 For a full list of authentication and authorization error codes, see [Microsoft Entra authentication and authorization error codes](/entra/identity-platform/reference-error-codes). To investigate individual errors, search at https://login.microsoftonline.com/error.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
-
-```
-
