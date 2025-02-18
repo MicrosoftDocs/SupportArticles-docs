@@ -15,12 +15,12 @@ ms.custom: sap:Issue with Pacemaker cluster, and fencing
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-This article provides guidance for troubleshooting, analysis, and resolution of the most common scenarios for unexpected node restarts in RHEL Pacemaker Clusters.
+This article provides guidance for troubleshooting, analysis, and resolution of the most common scenarios for unexpected node restarts in RHEL (RedHat Enterprise Linux) Pacemaker Clusters.
 
 ## Prerequisites
 
 - Make sure that the Pacemaker Cluster setup is correctly configured by following the guidelines that are provided in [Set up Pacemaker on Red Hat Enterprise Linux in Azure](/azure/sap/workloads/high-availability-guide-rhel-pacemaker).
-- For a Microsoft Azure Pacemaker cluster that uses the Azure Fence Agent as the STONITH (Shoot-The-Other-Node-In-The-Head) device, refer to the documentation that's provided in [SUSE - Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-suse-pacemaker?tabs=msi#use-an-azure-fence-agent-1).
+- For a Microsoft Azure Pacemaker cluster that uses the Azure Fence Agent as the STONITH (Shoot-The-Other-Node-In-The-Head) device, refer to the documentation [RHEL - Create Azure Fence agent STONITH device (/azure/sap/workloads/high-availability-guide-rhel-pacemaker#azure-fence-agent-configuration).
 - For a Microsoft Azure Pacemaker cluster that uses SBD (STONITH Block Device) storage protection as the STONITH device, choose one of the following setup options (see the articles for detailed information):
    - [SBD with an iSCSI target server](/azure/sap/workloads/high-availability-guide-rhel-pacemaker#sbd-with-an-iscsi-target-server)
    - [SBD with an Azure shared disk](/azure/sap/workloads/high-availability-guide-rhel-pacemaker#sbd-with-an-azure-shared-disk)
@@ -55,7 +55,7 @@ For further assistance or other queries, you can open a support request by follo
 ## Scenario 2: Cluster Misconfiguration
 The cluster nodes experience unexpected failovers or node restarts. These are often caused by cluster misconfigurations that affect the stability of Pacemaker Clusters.
 
-To review rhe cluster configuration, run the following command:
+To review the cluster configuration, run the following command:
 ```bash
 sudo pcs configure show
 ```
@@ -113,7 +113,7 @@ When you migrate a SUSE Pacemaker cluster from on-premises to Azure, unexpected 
 The following are common mistakes in this category:
 
 - Incomplete or incorrect STONITH configuration:
-    - No STONITH or fencing misfconfigured: Not configuring STONITH (Shoot-The-Other-Node-In-The-Head) correctly can cause nodes to be marked as unhealthy and trigger unnecessary restarts.
+    - No STONITH or fencing misfconfigured: Not configuring STONITH correctly can cause nodes to be marked as unhealthy and trigger unnecessary restarts.
     - Wrong STONITH resource settings: Incorrect parameters for Azure fencing agents such as `fence_azure_arm` can cause nodes to restart unexpectedly during failovers.
     - Insufficient permissions: The Azure resource group or credentials that are used for fencing might lack required permissions and cause STONITH failures. Key Azure-specific parameters, such as subscription ID, resource group, or VM(Virtual Machine) names, must be correctly configured in the fencing agent. Omissions here can cause fencing failures and unexpected restarts.
     
@@ -148,11 +148,11 @@ Follow the proper guidelines to set up a [RHEL Pacemaker Cluster](#prerequisites
 ## Scenario 4: Both cluster nodes are killed after a failover event on RHEL 8 
 * The Pacemaker cluster faces an outage, and proceeds to trigger a failover event.
 * In a two node cluster configuration, both nodes kill each other, and stay offline until manual intervention.
-* The stonith device `python-user` triggers the shut down instruction for both nodes.
+* The stonith device `python-user` triggers the shutdown instruction for both nodes.
 
 
 #### Cause for scenario 4
-When there's  an outage, like a Platform/Network interruption as discussed in [Scenario 1](#scenario-1-network-outage), both nodes attempt to write to the STONITH device to fence each other since they lose totem.Normally, the stonith device takes the instruction from the first node that's available, to write on it in order to shut down the other node. If both nodes are allowed to write to the stonith device, they end up killing each other.
+When there's  an outage, like a Platform/Network interruption as discussed in [Scenario 1](#scenario-1-network-outage), both nodes attempt to write to the STONITH device to fence each other since they lose totem. Normally, the stonith device takes the instruction from the first node that's available, to write on it in order to shutdown the other node. If both nodes are allowed to write to the stonith device, they end up killing each other.
 
 #### Resolution for scenario 4
 It is recommended to use `priority-fencing-delay`  parameter, so only one VM should be acknowledged by the STONITH device. 
