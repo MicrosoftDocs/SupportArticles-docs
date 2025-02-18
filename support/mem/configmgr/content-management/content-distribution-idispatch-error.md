@@ -1,7 +1,7 @@
 ---
 title: IDispatch error for content distribution
 description: Describes an issue in which content distribution to Configuration Manager distribution points fails with IDispatch error because of missing IIS components.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 ms.custom: sap:Content Management\Distribution Point Installation, Upgrade or Configuration
 ms.reviewer: kaushika
 ---
