@@ -55,7 +55,6 @@ To verify the policy OIDs for consistency and validity, retrieve the relevant ce
 
 :::image type="content" source="media/error-code-aadsts50017-certificate-based-authentication-failed/certificate-policies.png" alt-text="Screenshot that shows certificate policies." lightbox="media/error-code-aadsts50017-certificate-based-authentication-failed/certificate-policies.png":::
 
-
 If any certificates are missing certificate policy extensions, reissue the CA certificate or end user certificate with the appropriate certificate policy extensions embedded.  
 
 For more information about policy extension and other supported extensions, see [Supported Extensions](/windows/win32/seccertenroll/supported-extensions).
