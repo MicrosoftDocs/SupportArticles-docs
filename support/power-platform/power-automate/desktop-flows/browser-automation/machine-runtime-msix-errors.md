@@ -5,34 +5,32 @@ ms.custom: sap:Desktop flows\UI or browser automation
 ms.reviewer: amitrou
 ms.author: nimoutzo
 author: NikosMoutzourakis
-ms.date: 02/14/2025
+ms.date: 02/18/2025
 ---
-# Web Automation action fails when machine runtime and MSIX versions are different
+# Web Automation action fails when machine runtime and Microsoft Store (MSIX) versions are different
 
 This article provides a workaround to the "Negotiation failed" error that occurs when a web automation action fails to run in Power Automate for desktop.
 
 ## Symptoms
 
-When a web automation action is triggered from a cloud flow, the action fails with the following error:
+Consider the following scenario:
+
+- You installed [Power Automate for desktop from Microsoft Store (MSIX)](/power-automate/desktop-flows/install#install-power-automate-from-microsoft-store).
+- You installed the machine runtime using an older version of the [MSI installer](/power-automate/desktop-flows/install#install-power-automate-using-the-msi-installer).
+- You created a flow in Power Automate for desktop to automate a web page with an [extension-based browser](/power-automate/desktop-flows/install-browser-extensions) and run the flow from the cloud.
+
+In this scenario, the web automation action fails with the following error:
 
 > Negotiation failed
 
-|Applies to|Modes|Actions|
-|---|---|---|
-|- Power Automate for desktop installed from Microsoft Store (MSIX) version 2.37 or a later. </br> - Both the MSIX and MSI versions of the application are installed on the same machine.|- Unattended </br> - Attended| Any web automation action under the [Browser Automation group](/power-automate/desktop-flows/automation-web).|
-
-## Verifying issue
-
-1. [Install the latest version of Power Automate for desktop from Microsoft Store (MSIX)](/power-automate/desktop-flows/install#install-power-automate-from-microsoft-store).
-2. Install the machine runtime application using an older version of the installer, specifically one that's not a Quick Fix Engineering (QFE) version.
-3. Create a flow in Power Automate for desktop to automate a web page with an [extension-based browser](/power-automate/desktop-flows/install-browser-extensions).
-4. Save the flow.
-5. Run the flow from the cloud.
+This issue applies when running any web automation action under the [Browser Automation group](/power-automate/desktop-flows/automation-web) in either unattended or attended mode.
 
 ## Cause
 
-If the Power Automate for desktop MSIX installation has a different version than the machine runtime application, the Message Host running from the browser is from the MSIX installation, which is a different version than what the machine runtime application expects. This discrepancy causes the flow to fail with a "Negotiation failed" error.
+When the Power Automate for desktop MSIX installation is a different version than the machine runtime application, the Message Host running from the browser, which is from the MSIX installation, is a different version than what the machine runtime expects. This discrepancy causes the flow to fail with a "Negotiation failed" error.
 
 ## Workaround
 
-Ensure that the versions of the machine runtime application and the MSIX installation are the same.
+We don't recommend having both MSI and MSIX versions of Power Automate on the same machine. If you do, uninstall one version or ensure that the versions of the machine runtime application and the MSIX installation are the same.
+
+For more information on Power Automate for desktop versions, see [Released versions for Power Automate for desktop](/power-platform/released-versions/power-automate-desktop).
