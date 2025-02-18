@@ -2,7 +2,7 @@
 title: Many Printing Jobs are Queued in Document Routing Agent
 description: Provides resolutions on how to clear the printing queue within the Document Routing Agent (DRA) in Microsoft Dynamics 365 Supply Chain Management.
 author: Mirzaab
-ms.date: 02/17/2025
+ms.date: 02/18/2025
 # ms.search.form:
 audience: Application User
 ms.reviewer: kamaybac, ivanma
@@ -22,7 +22,7 @@ You might notice that many printing jobs are queued in the [Document Routing Age
 
 ## Solution 1 - Clean up printing queue for one printer
 
-Starting from PU23, you can manually clear the printing queue for a specific printer by deleting it from the **System network printers** page. This action removes all pending documents for that printer. Follow these steps to delete and re-register the printer from the DRA client:
+Starting from [Dynamics 365 for Finance and Operations platform update 23](/dynamics365/fin-ops-core/dev-itpro/get-started/whats-new-platform-update-23#manage-access-to-network-printers-across-legal-entities), you can manually clear the printing queue for a specific printer by deleting it from the **System network printers** page. This action removes all pending documents for that printer. Follow these steps to delete and re-register the printer from the DRA client:
 
 1. Navigate to the **Manage Network Printers** page by selecting **Organization administration** > **Setup** > **Network printers**.
 2. Expand the **Options** menu and select the **System network printers** button in the **Preview** section.
