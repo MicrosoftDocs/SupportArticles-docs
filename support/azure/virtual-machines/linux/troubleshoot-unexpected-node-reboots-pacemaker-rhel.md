@@ -26,8 +26,8 @@ This article provides guidance for troubleshooting, analysis, and resolution of 
    - [SBD with an Azure shared disk](/azure/sap/workloads/high-availability-guide-rhel-pacemaker#sbd-with-an-azure-shared-disk)
 
 ## Scenario 1: Network Outage
-- The cluster nodes are experiencing `corosync` communication errors. This causes continuous retransmissions because of an inability to establish communication between nodes. This issue triggers application time-outs, ultimately causing node fencing and subsequent restarts.
-- Additionally, services that are dependent on network connectivity, such as `waagent`, generate communication-related error messages in the logs. This further indicates network-related disruptions.
+- The cluster nodes are experiencing `corosync` communication errors. This causes continuous retransmissions because of an inability to establish communication between nodes. This issue triggers application timeouts, ultimately causing node fencing and subsequent restarts.
+- Additionally, services that are dependent on network connectivity, such as `waagent`, generate communication related error messages in the logs. This further indicates network related disruptions.
 
 The following messages are logged in the `/var/log/messages` log:
 
@@ -44,7 +44,7 @@ Aug 21 01:47:27 node  02 corosync[15241]:  [KNET  ] host: host: 2 has no active 
 Aug 21 01:47:31 node  02 corosync[15241]:  [TOTEM ] Token has not been received in 30000 ms
 ```
 
-#### Cause for scenario 1
+### Cause for scenario 1
 An unexpected node restart occurs because of a Network Maintenance activity or an outage. For confirmation, you can match the timestamp by reviewing the [Azure Maintenance Notification](/azure/virtual-machines/linux/maintenance-notifications) in the Azure portal. For more information about Azure Scheduled Events, see [Azure Metadata Service: Scheduled Events for Linux VMs](/azure/virtual-machines/linux/scheduled-events).
 
 ### Resolution for scenario 1
@@ -60,7 +60,6 @@ To review the cluster configuration, run the following command:
 sudo pcs configure show
 ```
 
-### Cause:
 ### Cause for scenario 2
 Unexpected restarts in an Azure SUSE Pacemaker cluster often occur because of misconfigurations:
 
@@ -77,7 +76,7 @@ Unexpected restarts in an Azure SUSE Pacemaker cluster often occur because of mi
     - Heartbeat Timeout Settings: Incorrect `corosync` time-out settings for heartbeat intervals can cause nodes to assume each other are offline, triggering unnecessary restarts.
 
 - Lack of proper health checks:
-    Not setting correct health-check intervals for critical services such as SAP HANA (High-performance ANalytic Application) can cause resource or node failures.
+    Not setting correct health check intervals for critical services such as SAP HANA (High-performance ANalytic Application) can cause resource or node failures.
 
 - Resource agent misconfiguration:
     - Custom resource agents misaligned with cluster: Resource agents that don't adhere to Pacemaker standards can create unpredictable behavior, including node restarts.
@@ -150,21 +149,40 @@ Follow the proper guidelines to set up a [RHEL Pacemaker Cluster](#prerequisites
 * In a two node cluster configuration, both nodes kill each other, and stay offline until manual intervention.
 * The stonith device `python-user` triggers the shutdown instruction for both nodes.
 
-
 ### Cause for scenario 4
-When there's  an outage, like a Platform/Network interruption as discussed in [Scenario 1](#scenario-1-network-outage), both nodes attempt to write to the STONITH device to fence each other since they lose totem. Normally, the stonith device takes the instruction from the first node that's available, to write on it in order to shutdown the other node. If both nodes are allowed to write to the stonith device, they end up killing each other.
+When there's an outage, like a Platform/Network interruption as discussed in [Scenario 1](#scenario-1-network-outage), both nodes attempt to write to the STONITH device to fence each other since they lose totem. Normally, the stonith device takes the instruction from the first node that's available, to write on it in order to shutdown the other node. If both nodes are allowed to write to the stonith device, they end up killing each other.
 
 ### Resolution for scenario 4
-It is recommended to use `priority-fencing-delay`  parameter, so only one VM should be acknowledged by the STONITH device. 
-
-Check the installed Pacemaker version using the following command:
-
-```bash
-sudo rpm -qa | grep pacemaker
-```
+It's recommended to use `priority-fencing-delay` parameter, so only one VM should be acknowledged by the STONITH device. 
 
 > [!NOTE]
-> If the binaries installed are lower than `2.0.4-6.el8`, then add the parameter `pcmk_delay_max`, but if the version is higher, use `priority-fencing-delay` instead.
+> If the Pacmekaer version is less than `2.0.4-6.el8`, then add the parameter `pcmk_delay_max`, but if the version is higher, use `priority-fencing-delay` instead.
+   Check the installed Pacemaker version using the following command:
+    ```bash
+    sudo rpm -qa | grep pacemaker
+    ```
+
+1. Set the cluster under maintenance-mode.
+
+    ```bash
+    sudo pcs property set maintenance-mode=true
+    ```
+
+2. Edit the cluster configuration.
+
+   ```bash
+    sudo pcs configure edit 
+   ```
+3. Set the `priority-fencing-delay` parameter in the cluster configuration.
+
+    ```bash
+    sudo pcs property set priority-fencing-delay=15s
+    ```
+4.  Save the changes and remove the cluster out of maintenance-mode. 
+
+    ```bash
+    sudo pcs property set maintenance-mode=false
+    ```
 
 For more information refer to [SUSE - Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-suse-pacemaker?tabs=msi#use-an-azure-fence-agent-1).
 
@@ -180,7 +198,7 @@ The Azure RHEL Pacemaker Cluster is running SAP HANA as an application, and it e
 2024-06-04T09:25:38.736748+00:00 node01 SAPHana(rsc_SAPHana_H00_HDB02)[99475]: ERROR: ACT: check_for_primary:  we didn't expect node_status to be: DUMP <00000000  0a                                                |.|#01200000001>
 ```
 ### Cause for scenario 5
-The SAP HANA time-out messages are commonly considered internal application time-outs. Therefore, the SAP vendor should be engaged.
+The SAP HANA time-out messages are commonly considered internal application timeouts. Therefore, the SAP vendor should be engaged.
 
 ### Resolution for scenario 5
 - To identify the root cause of the issue, review the [OS performance](collect-performance-metrics-from-a-linux-system.md). 
