@@ -31,14 +31,14 @@ Starting from PU23, you can manually clear the printing queue for a specific pri
 5. [Re-register the same printer from the DRA client](/dynamics365/fin-ops-core/dev-itpro/analytics/install-document-routing-agent#register-network-printers), and try to print some documents.
 
    > [!NOTE]
-   > Except for the first document, the rest should be printed responsively. The first document might be slow due to a one-time 3-minute cache refresh interval after a new printer is registered.
-
-   - If the same printer name is used again, there is no need to set up the document routing again.
-   - if a new printer name is used, then you must set up the document routing with the new printer name for all relevant work order types.
+   >
+   > - Except for the first document, the rest should be printed responsively. The first document might be slow due to a one-time 3-minute cache refresh interval after a new printer is registered.
+   > - If the same printer name is used again, there is no need to set up the document routing again.
+   > - If a new printer name is used, you should set up the document routing with the new printer name for all relevant work order types. For more information, see [Set up license plate label routing](/dynamics365/supply-chain/warehousing/print-license-plate-labels-using-label-layouts#routing).
 
 ## Solution 2 - Clean up printing queue and job status for all printers
 
-Use the [Document routing history cleanup](/dynamics365/fin-ops-core/dev-itpro/analytics/install-document-routing-agent#adjust-the-document-routing-history-cleanup-batch-job) batch job to delete all the document routing jobs older than 7 days (168 hours). By default, this batch job runs daily and is first created when a document is sent to the DRA.
+The [Document routing history cleanup](/dynamics365/fin-ops-core/dev-itpro/analytics/install-document-routing-agent#adjust-the-document-routing-history-cleanup-batch-job) batch job can be used to delete all the document routing jobs older than 7 days (168 hours). By default, this batch job runs daily and is first created when a document is sent to the DRA.
 
 Follow these steps to use the **Document routing history cleanup** batch job:
 
