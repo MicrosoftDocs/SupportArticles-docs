@@ -23,7 +23,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 02/05/2025
+ms.date: 02/18/2025
 ---
 # Known issues with Teams Rooms on Android
 
@@ -36,12 +36,6 @@ ms.date: 02/05/2025
 |Teams Rooms on Android devices experience a delay with signing in after a user signs out.|You sign out of a Teams Rooms on Android device either manually or from the Microsoft Teams admin center. When you try to sign in again immediately, there's a delay. This delay is because the authentication code takes 15 minutes or longer to refresh after a device signs out.<br/><br/>This issue occurs on all Teams on Android devices, including those devices that are running version 5.0.6061.0 of the Company portal app.|Restart the affected device to force the code to refresh.|
 |Unable to open a whiteboard on Android touch displays and all-in-one devices.|On Teams Rooms for Android touch displays and all-in-one devices, you're unable to start a whiteboard session outside of a meeting by selecting the **Whiteboard** option.<br/><br/>This issue occurs on devices that are running on tenants which are more than two years old.|To resolve this issue, contact Microsoft Support.|
 
-## Issues with Teams Rooms on Android devices
-
-| Issue  |  Description | Workaround |
-| --- | --- | --- |
-|Unable to pair a display on Teams Rooms on Android devices|Teams Rooms on Android devices that are running version 1449/1.0.96.2024110701 or version 1449/1.0.96.2025010301 of the Teams Rooms app might experience an intermittent issue with pairing the console with the front-of-room display.|Restart the console to fix the pairing issue.|
-
 ## Issues with Teams phones
 
 | Issue  |  Description | Workaround |
@@ -51,6 +45,7 @@ ms.date: 02/05/2025
 |Signed out of Teams on Android devices | Teams Rooms on Android, Teams phone devices, Teams panels, and Teams displays are signed out of Teams automatically. | Follow the instructions provided in [Signed out of Teams on Android devices](./signed-out-of-teams-android-devices.md).|
 |Can't resume a call after using **Consult first** option on Teams phones | After using the **Consult first** option in the **Transfer** menu when you select the **Resume** option to resume the call, the call fails. | End the call made by using the **Consult first** option and then resume the original call.|
 |Calls on long hold in GCC High tenants drop intermittently|On GCC High tenants that are running 2022 update #4A (Teams app version 1449/1.0.94.2022110803), when a user puts a call on long hold the call drops in some instances. This issue doesn't occur on other clouds.|No workaround is available at this time.|
+|Unable to assign speed dial to line keys on a sidecar|When you assign speed dial contacts to line keys on the sidecar that's connected to a touch phone device, they don't work.|No workaround is available for the speed dial contacts that you assigned by using the sidecar. However the speed dial contacts that you had already set up, as well as shared line delegates and other groups are automatically pinned on the sidecar.|
 
 ## Limitations
 
@@ -63,6 +58,7 @@ ms.date: 02/05/2025
 - If your organization has configured policies to block legacy authentication for the Teams Rooms app, then Teams Rooms on Android devices, (Teams Rooms on Windows devices) Teams displays, Teams panels, and Teams phones can't join Teams meetings.
 - If your organization has configured policies to block legacy authentication for the Teams Rooms app, then Teams Rooms on Android devices, Teams displays, Teams panels, and Teams phones can't join Teams meetings.
 - The meeting details that you export in the Microsoft Teams admin center includes the link speed of the Ethernet network interface that's used during the meeting. This display always shows the default value of 10 Mbps. However, this might not be accurate because Teams Rooms for Android devices can't fetch the exact value. The actual link speed might be faster than the default value.
+- Incoming videos in large gallery view on Teams Rooms on Android devices are duplicated and might be blurry at times.
 
 ## Support for third-party Teams devices
 
