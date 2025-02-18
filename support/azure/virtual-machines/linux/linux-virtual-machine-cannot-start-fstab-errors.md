@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Linux VM boot issues due to fstab errors | Microsoft Learn
-description: Explains why Linux VM cannot start and how to solve the problem.
+description: Explains why Linux VM cant start and how to solve the problem.
 services: virtual-machines
 documentationcenter: ''
 author: saimsh-msft
@@ -58,7 +58,7 @@ There are 2 ways to resolve the issue:
 ### Repair the VM Online
 #### Use the serial console
 1. Connect to [the serial console](./serial-console-linux.md) of the VM from Azure portal.
-2. Manual access to single user mode is required to reconfigure fstab. The steps can vary based on the type of Linux OS in use and access to the root account. Follow [single user mode](serial-console-grub-single-user-mode.md) documentation to access single user mode for each supported Linux partner images.
+2. Manual access to single user mode is required to reconfigure fstab. The steps can vary based on the type of Linux OS in use and access to the root account. Follow [single user mode](serial-console-grub-single-user-mode.md) documentation to access single user mode for each supported Linux partner image.
 
 ##### Fstab troubleshooting steps
 1. Once the vm has booted into single user mode. Use your favorite text editor to open the fstab file.
@@ -66,10 +66,10 @@ There are 2 ways to resolve the issue:
    ```
    vi /etc/fstab
    ```
-2. Review the listed filesystems in `/etc/fstab`. Each line in the fstab file indicates a filesystem that is mounted when the VM starts. For more information about the syntax of the fstab file, run the `man fstab` command. To troubleshoot a boot failure, review the entry for the filesystem that failed to mount. It is a good practice to review each line to ensure that it is correct in both structure and content.  Few points to consider to correctly administer an fstab file are as follows:
+2. Review the listed filesystems in `/etc/fstab`. Each line in the fstab file indicates a filesystem that is mounted when the VM starts. For more information about the syntax of the fstab file, run the `man fstab` command. To troubleshoot a boot failure, review the entry for the filesystem that failed to mount. It's a good practice to review each line to ensure that it's correct in both structure and content.  Few points to consider to correctly administer a fstab file are as follows:
 
-   * Fields on each line are separated by tabs or spaces. Blank lines are ignored. Lines that have a number sign (#) as the first character are comments. Commented lines can remain in the fstab file, but they won't be processed. We recommend that you comment fstab lines that you are unsure about instead of removing the lines.
-   * Mount the data disks on Azure VMs by using the UUID of the file system partition.To determine the UUID of the file system, run the `blkid` command. For more information about the syntax, run the `man blkid` command. Example of UUID entry in fstab file:
+   * Fields on each line are separated by tabs or spaces. Blank lines are ignored. Lines that have a number sign (#) as the first character are comments. Commented lines can remain in the fstab file, but they won't be processed. We recommend that you comment fstab lines that you're unsure about instead of removing the lines.
+   * Mount the data disks on Azure VMs by using the UUID of the file system partition. To determine the UUID of the file system, run the `blkid` command. For more information about the syntax, run the `man blkid` command. Example of UUID entry in fstab file:
 
       ```bash
       UUID=<UUID number here>  /data      xfs    defaults,nofail 0  0
@@ -91,11 +91,11 @@ There are 2 ways to resolve the issue:
 
 ### Repair the VM offline
 
-If the VM serial console access is not available, an alternative solution is to repair the vm offline. There are two ways to take an offline approach: 
+If the VM serial console access isn't available, an alternative solution is to repair the vm offline. There are two ways to take an offline approach: 
 
 #### Use Azure Linux Auto Repair (ALAR)
 
-Azure Linux Auto Repair (ALAR) scripts is a part of VM repair extension described in [Use Azure Linux Auto Repair (ALAR) to fix a Linux VM](./repair-linux-vm-using-alar.md). ALAR covers automation of multiple repair scenarios including `/etc/fstab` issues.
+Azure Linux Auto Repair (ALAR) scripts are a part of VM repair extension described in [Use Azure Linux Auto Repair (ALAR) to fix a Linux VM](./repair-linux-vm-using-alar.md). ALAR covers automation of multiple repair scenarios including `/etc/fstab` issues.
 
 The ALAR scripts use the repair extension `repair-button` to fix fstab issues by specifying `--button-command fstab`. This parameter triggers the automated recovery. Implement the following steps to automate fstab errors via the offline ALAR approach:
 
@@ -105,13 +105,13 @@ az vm repair repair-button --button-command fstab --verbose rgtest --name vmtest
 
 >[!NOTE]
 >The resource group name `rgtest` and VM name `vmtest` shown in these examples are placeholders and must be updated accordingly. 
->The Repair VM script, in conjunction with the ALAR script, will temporarily create a Resource Group, a repair VM, and a copy of the OS disk from the affected VM. It backs up the original `/etc/fstab` file and modifies it—either by stripping out or commenting out data file system entries that are not required for booting the system. 
+>The Repair VM script, in conjunction with the ALAR script, will temporarily create a Resource Group, a repair VM, and a copy of the OS disk from the affected VM. It backs up the original `/etc/fstab` file and modifies it—either by stripping out or commenting out data file system entries that aren't required for booting the system. 
 >After the OS starts successfully, review and edit the `/etc/fstab` file to correct any errors that may have prevented a proper reboot. Finally, the Resource Group containing the repair VM will be automatically deleted by the `repair-button` script.
 
 
 #### Use Manual Method
 
-If both serial console and ALAR approach is not possible or fails , the repair has to be performed manually. Follow the steps here to manually attach the OS disk to a recovery VM and swap the OS disk back to the original VM:
+If both serial console and ALAR approach isn't possible or fails , the repair has to be performed manually. Follow the steps here to manually attach the OS disk to a recovery VM and swap the OS disk back to the original VM:
 * [Attach the OS disk to a recovery VM using the Azure portal](./troubleshoot-recovery-disks-portal-linux.md)
 * [Attach the OS disk to a recovery VM using Azure CLI](./troubleshoot-recovery-disks-linux.md)
 
