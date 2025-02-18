@@ -21,7 +21,7 @@ Before you start troubleshooting, it's best to verify that everything is configu
 
 - Verify that auto-enrollment is enabled for all users who will enroll the devices in Intune. For more information, see [Microsoft Entra ID and Microsoft Intune: Automatic MDM enrollment in the new Portal](/windows/client-management/mdm/azure-ad-and-microsoft-intune-automatic-mdm-enrollment-in-the-new-portal).
 
-  :::image type="content" source="media/troubleshoot-windows-auto-enrollment/verify-auto-enrollment.png" alt-text="Screenshot shows options to verify auto-enrollment." lightbox="media/troubleshoot-windows-auto-enrollment/verify-auto-enrollment.png"::::::
+  :::image type="content" source="media/troubleshoot-windows-auto-enrollment/verify-auto-enrollment.png" alt-text="Screenshot shows options to verify auto-enrollment." lightbox="media/troubleshoot-windows-auto-enrollment/verify-auto-enrollment.png":::
 
   - Verify that **MDM user scope** is set to **All** to allow all users to enroll a device in Intune.
   - Verify that **MAM User scope** is set to **None**. Otherwise, this setting will have precedence over the MDM scope and cause issues.
