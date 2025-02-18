@@ -6254,6 +6254,10 @@
     {
       "source_path": "support/developer/webapps/iis/www-modules-features/add-remove-global-modules.md",
       "redirect_url": "/troubleshoot/developer/webapps/iis/www-administration-management/add-remove-global-modules"
+    },
+    {
+      "source_path": "support/mem/configmgr/update-management/error-0x800f0831-installing-update.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/error-0x800f0831-installing-update"
     }
   ]
 }

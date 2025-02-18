@@ -82,7 +82,7 @@ To resolve this issue, follow these steps on the client computer that has the pr
 1. Make sure that the workstation service is running.
 1. Make sure that **client for Microsoft networking** is selected in the network connection properties.  
 
-   :::image type="content" source="media/troubleshooting-slow-file-copying-in-windows/client-microsoft-networks.png" alt-text="Screenshot of the Local Area Connection Properties dialog, in which the Client for Microsoft Networks item is selected." border="false"::::
+   :::image type="content" source="media/troubleshooting-slow-file-copying-in-windows/client-microsoft-networks.png" alt-text="Screenshot of the Local Area Connection Properties dialog, in which the Client for Microsoft Networks item is selected." border="false":::
 
 ## Server-side troubleshooting
 
@@ -103,5 +103,3 @@ How to determine the referral DFS server to which the clients are connecting:
 2. On the **DFS** tab, check the referral list. The current DFS server is marked as active. In the following example, the client is connecting to the server HAOMS1. 
  
    :::image type="content" source="media/troubleshooting-slow-file-copying-in-windows/referral-list.png" alt-text="Screenshot of the DFS tab in the shared folder properties window on a client computer, which shows the UNC path in Referral list.":::
-
-
