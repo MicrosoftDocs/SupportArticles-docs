@@ -103,9 +103,11 @@ The ALAR scripts use the repair extension `repair-button` to fix fstab issues by
 az vm repair repair-button --button-command fstab --verbose rgtest --name vmtest
 ```
 
-> [!Note] 
->The resource group name "rgtest and vm name "vmtest", are examples and the values need to change accordingly.
->The fstab repair script will take a backup of the original file and strip off any lines in the /etc/fstab file which are not needed to boot a system. After successful start of the OS, edit the fstab again and correct any errors which didn’t allow a reboot of the system before. 
+>[!NOTE]
+>The resource group name "rgtest" and VM name "vmtest" shown in these examples are placeholders and must be updated accordingly. 
+>The Repair VM script, in conjunction with the ALAR script, will temporarily create a Resource Group, a repair VM, and a copy of the OS disk from the affected VM. It backs up the original /etc/fstab file and modifies it—either by stripping out or commenting out data file system entries that are not required for booting the system. 
+>After the OS starts successfully, review and edit the /etc/fstab file to correct any errors that may have prevented a proper reboot. Finally, the Resource Group containing the repair VM will be automatically deleted by the repair-button script.
+
 
 #### Use Manual Method
 
