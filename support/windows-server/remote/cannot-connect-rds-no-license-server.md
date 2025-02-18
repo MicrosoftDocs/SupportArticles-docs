@@ -1,7 +1,7 @@
 ---
 title: Cannot connect to RDS because no RD Licensing servers are available
 description: This article describes how to troubleshoot RDS connection errors that are related to Remote Desktop licensing.
-ms.date: 02/08/2025
+ms.date: 02/13/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -168,23 +168,21 @@ The **RD Licensing Diagnoser Information** section shows more information about 
 
 The following table shows which RDS CAL and RD Session Host versions are compatible with one another.
 
-| |RDS 2008 R2 and earlier CAL |RDS 2012 CAL |RDS 2016 CAL |RDS 2019 CAL |
-| --- | --- | --- | --- | --- |
-|**2008, 2008 R2 session host** |Yes |Yes |Yes |Yes |
-|**2012 session host** |No |Yes |Yes |Yes |
-|**2012 R2 session host** |No |Yes |Yes |Yes |
-|**2016 session host** |No |No |Yes |Yes |
-|**2019 session host** |No |No |No |Yes |
+|Session host version|RDS 2016 CAL|RDS 2019 CAL|RDS 2022 CAL|RDS 2025 CAL|
+| -------- | -------- | -------- | -------- | -------- |
+|Windows Server 2016 session host|Yes|Yes|Yes|Yes|
+|Windows Server 2019 session host|No|Yes|Yes|Yes|
+|Windows Server 2022 session host|No|No|Yes|Yes|
+|Windows Server 2025 session host|No|No|No|Yes|
 
 The following table shows which RDS CAL and license server versions are compatible with one another.
 
-| |RDS 2008 R2 and earlier CAL |RDS 2012 CAL |RDS 2016 CAL |RDS 2019 CAL |
-| --- | --- | --- | --- | --- |
-|**2008, 2008 R2 license server** |Yes |No |No |No |
-|**2012 license server** |Yes |Yes |No |No |
-|**2012 R2 license server** |Yes |Yes |No |No |
-|**2016 license server** |Yes |Yes |Yes |No |
-|**2019 license server** |Yes |Yes |Yes |Yes |
+|License server version|RDS 2016 CAL|RDS 2019 CAL|RDS 2022 CAL|RDS 2025 CAL|
+| -------- | -------- | -------- | -------- | -------- |
+|Windows Server 2016 license server|Yes|No|No|No|
+|Windows Server 2019 license server|Yes|Yes|No|No|
+|Windows Server 2022 license server|Yes|Yes|Yes|No|
+|Windows Server 2025 license server|Yes|Yes|Yes|Yes|
 
 For more information, see [RDS CAL version compatibility](/windows-server/remote/remote-desktop-services/rds-client-access-license#rds-cal-version-compatibility).
 

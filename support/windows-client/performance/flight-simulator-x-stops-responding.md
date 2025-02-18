@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:System Performance\App, Process, Service Performance (slow, unresponsive), csstroubleshoot
+ms.custom:
+- sap:system performance\app,process,service performance (slow,unresponsive)
+- pcy:WinComm Performance
 ---
 # Flight Simulator X stops responding (hangs) on the loading screen
 

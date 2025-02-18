@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, themar, degranit
-ms.custom: sap:System Performance\Startup or Pre-logon Reliability (crash, errors, bug check or Blue Screen), csstroubleshoot
+ms.custom:
+- sap:system performance\startup or pre-logon reliability (crash,errors,bug check or blue screen)
+- pcy:WinComm Performance
 ---
 # Can't start Windows 11 in S mode from a recovery drive
 

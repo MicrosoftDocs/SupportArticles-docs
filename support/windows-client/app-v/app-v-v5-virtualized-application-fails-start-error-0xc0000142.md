@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, gautama
-ms.custom: sap:Application Virtualization\Clients\Application does not load or run, csstroubleshoot
+ms.custom:
+- sap:application virtualization\clients\application does not load or run
+- pcy:WinComm User Experience
 ---
 # An App-V v5 virtualized application fails to start with error 0xc0000142
 

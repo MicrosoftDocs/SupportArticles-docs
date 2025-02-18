@@ -2251,6 +2251,8 @@ items:
       href: ./remote/terminal-server-license-for-deployment.md
     - name: Terminal Server licensing
       href: ./remote/terminal-server-licensing.md
+    - name: The system cannot determine if the license server is member of TSLS Group
+      href: ./remote/system-cannot-determine-license-server-member-tsls.md
     - name: Troubleshooting access denied and user not authorized issues in RDS
       href: ./remote/troubleshooting-access-denied-and-user-not-authorized-rds-issues.md
     - name: '"Your session will be disconnected in 60 minutes" message when you connect to RDS'
@@ -2317,7 +2319,7 @@ items:
       href: ./remote/terminal-server-users-home-directory-not-set-correctly.md
     - name: User can't authenticate or must authenticate twice
       href: ./remote/cannot-authenticate-must-authenticate-twice.md
-    - name: User receives "Remote Desktop Service is currently busy" message
+    - name: '"Remote Desktop Service is currently busy" message'
       href: ./remote/remote-desktop-service-currently-busy.md
   - name: Virtual Desktop Infrastructure (VDI)
     items:
@@ -3059,6 +3061,8 @@ items:
       href: ./installing-updates-features-roles/system-file-checker.md
     - name: Error 0x800705aa when Windows Update fails
       href: ./installing-updates-features-roles/error-0x800705aa-windows-update-fails.md
+    - name: Error 0x800f0831 when installing Windows updates
+      href: ./installing-updates-features-roles/error-0x800f0831-installing-update.md
     - name: Error 0x800f0922 when installing Windows updates
       href: ./installing-updates-features-roles/error-0x800f0922-installing-windows-updates.md
     - name: Error C0190003 after installing updates
@@ -3119,6 +3123,8 @@ items:
       href: ./support-tools/scripts-to-retrieve-profile-age.md
     - name: Scripts to retrieve profile age and optionally delete aged copies
       href: ./support-tools/scripts-retrieve-profile-age-delete-aged-copies.md
+    - name: Scripts to view the certificate information in the msDS-KeyCredentialLink attribute
+      href: ./support-tools/script-to-view-msds-keycredentiallink-attribute-value.md
   - name: TroubleShootingScript toolset (TSS)
     items:
     - name: Introduction to TroubleShootingScript toolset (TSS)

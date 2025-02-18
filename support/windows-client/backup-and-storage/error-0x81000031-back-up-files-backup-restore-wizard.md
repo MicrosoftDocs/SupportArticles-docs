@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: adityah, kaushika
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Configuring and using Windows Backup or other recovery, csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\configuring and using windows backup or other recovery
+- pcy:WinComm Storage High Avail
 ---
 # Error code 0x81000031 occurs when you try to back up files by using the Backup and Restore Wizard on a Windows 7-based computer
 

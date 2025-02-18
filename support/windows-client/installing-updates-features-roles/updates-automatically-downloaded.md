@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-rezhou
-ms.custom: sap:Windows Servicing, Updates and Features on Demand\Clients missing updates, not offered, fail to download, csstroubleshoot
+ms.custom:
+- sap:windows servicing,updates and features on demand\clients missing updates,not offered,fail to download
+- pcy:WinComm Devices Deploy
 ---
 # Windows Update automatically downloads and installs updates when you connect to the Internet for the first time
 

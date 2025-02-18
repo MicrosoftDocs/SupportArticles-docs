@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, rblume
-ms.custom: sap:Windows Security Technologies\BitLocker, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\bitlocker
+- pcy:WinComm Devices Deploy
 ---
 # Windows 10 BitLocker Recovery auto-shutdown in UEFI mode
 

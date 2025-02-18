@@ -1,7 +1,7 @@
 ---
 title: Signed drivers are displayed as unsigned
 description: Fixes an issue in which signed drivers imported into Configuration Manager are listed as unsigned.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 ms.reviewer: kaushika, frankroj
 ms.custom: sap:Operating Systems Deployment (OSD)\Driver Management and Installation
 ---

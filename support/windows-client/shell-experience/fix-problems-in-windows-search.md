@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-tappelgate, rafern
-ms.custom: sap:Windows Desktop and Shell Experience\Windows Search, csstroubleshoot
+ms.custom:
+- sap:windows desktop and shell experience\windows search
+- pcy:WinComm User Experience
 ---
 # Fix problems in Windows Search
 

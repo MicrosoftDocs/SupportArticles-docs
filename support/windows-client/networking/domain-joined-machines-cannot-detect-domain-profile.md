@@ -4,7 +4,9 @@ description: Helps troubleshoot a scenario where a domain-joined machine can't d
 ms.date: 01/15/2025
 ms.topic: troubleshooting
 manager: dcscontentpm
-ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
+- pcy:WinComm Networking
 ms.reviewer: kaushika, warrenw, shpune, v-lianna
 audience: itpro
 ---

@@ -5,7 +5,9 @@ ms.date: 01/15/2025
 manager: dcscontentpm
 ms.collection: Windows Security Technologies\BitLocker
 ms.topic: troubleshooting
-ms.custom: sap:Windows Security Technologies\BitLocker, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\bitlocker
+- pcy:WinComm Devices Deploy
 ms.reviewer: kaushika, v-tappelgate
 audience: itpro
 ---

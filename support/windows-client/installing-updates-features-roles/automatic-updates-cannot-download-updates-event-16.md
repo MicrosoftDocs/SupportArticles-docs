@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, drewel
-ms.custom: sap:Windows Servicing, Updates and Features on Demand\Clients missing updates, not offered, fail to download, csstroubleshoot
+ms.custom:
+- sap:windows servicing,updates and features on demand\clients missing updates,not offered,fail to download
+- pcy:WinComm Devices Deploy
 ---
 # Automatic Updates can't download updates and event ID 16 is logged
 

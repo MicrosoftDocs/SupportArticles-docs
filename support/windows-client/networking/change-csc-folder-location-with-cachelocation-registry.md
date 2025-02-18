@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-dehaas, waltere, lseri
-ms.custom: sap:Network Connectivity and File Sharing\Offline Files and Folders (CSC), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\offline files and folders (csc)
+- pcy:WinComm Networking
 ---
 # How to change the location of the CSC folder by configuring the CacheLocation registry value in Windows
 

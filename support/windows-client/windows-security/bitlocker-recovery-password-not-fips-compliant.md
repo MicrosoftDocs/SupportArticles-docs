@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: scottvan, cochen, kaushika
-ms.custom: sap:Windows Security Technologies\BitLocker, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\bitlocker
+- pcy:WinComm Devices Deploy
 ---
 # The recovery password for Windows BitLocker isn't available when FIPS compliant policy is set in Windows
 

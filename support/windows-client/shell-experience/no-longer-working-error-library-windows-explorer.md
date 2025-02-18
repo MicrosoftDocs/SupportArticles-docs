@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Desktop and Shell Experience\File Explorer (app only, folders, Quick Access, File Explorer search), csstroubleshoot
+ms.custom:
+- sap:windows desktop and shell experience\file explorer (app only,folders,quick access,file explorer search)
+- pcy:WinComm User Experience
 ---
 # Opening a Library in Windows Explorer gives error that it is no longer working
 

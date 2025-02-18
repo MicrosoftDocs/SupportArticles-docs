@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Group Policy\Problems applying Group Policy, csstroubleshoot
+ms.custom:
+- sap:group policy\problems applying group policy
+- pcy:WinComm Directory Services
 ---
 # Group Policy Screensaver setting isn't working in Windows
 

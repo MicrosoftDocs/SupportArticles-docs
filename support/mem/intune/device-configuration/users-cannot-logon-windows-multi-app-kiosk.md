@@ -1,7 +1,7 @@
 ---
 title: Users can't log on to Windows 10 computers with multi-app kiosk profile assigned
 description: Explains why a user can't log on to a Microsoft Entra joined Windows 10 computer if a multi-app kiosk profile is assigned.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 search.appverid: MET150
 ms.custom: sap:Configure Devices - Windows\Kiosk
 ms.reviewer: kaushika, joelste, intunecic, mobazzar

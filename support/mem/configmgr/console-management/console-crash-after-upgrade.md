@@ -1,7 +1,7 @@
 ---
 title: Console crashes after upgrading to version 2107
 description: The Configuration Manager console crashes after you update to Configuration Manager current branch, version 2107.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 ms.reviewer: kaushika, payur
 author: helenclu
 ms.author: luche
