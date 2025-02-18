@@ -157,10 +157,10 @@ It's recommended to use `priority-fencing-delay` parameter, so only one VM shoul
 
 > [!NOTE]
 > If the Pacmekaer version is less than `2.0.4-6.el8`, then add the parameter `pcmk_delay_max`, but if the version is higher, use `priority-fencing-delay` instead.
-   Check the installed Pacemaker version using the following command:
-    ```bash
-    sudo rpm -qa | grep pacemaker
-    ```
+> Check the installed Pacemaker version using the following command:
+> ```bash
+> sudo rpm -qa | grep pacemaker
+> ```
 
 1. Set the cluster under maintenance-mode.
 
