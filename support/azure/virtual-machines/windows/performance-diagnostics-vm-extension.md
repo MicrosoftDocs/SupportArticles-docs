@@ -96,7 +96,7 @@ Specify the authentication type in the JSON file. If no authentication type is s
 | resourceId | /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName} | The unique identifier of a VM. |
 | storageAccountName | mystorageaccount | The name of the storage account to store the diagnostics logs and results. |
 | storageAccountKey | lDuVvxuZB28NNP…hAiRF3voADxLBTcc== | The key for the storage account. |
-|authenticationType|`systemmanagedidentity`|The authentication type used to connect to the storage account. Valid values are `systemmanagedidentity`, `usermanagedidentity`, and `storagekeys`.|
+|authenticationType|systemmanagedidentity|The authentication type used to connect to the storage account. Valid values are `systemmanagedidentity`, `usermanagedidentity`, and `storagekeys`.|
 |managedIdentityClientId|f81d4afe-7ced-11d0-a765-00a0c91c6bf6|The client ID of the user-managed identity to be used for authenticating to the storage account.|
 
 ## Install the extension
@@ -245,7 +245,7 @@ Azure virtual machine extensions can be deployed with Azure Resource Manager tem
 
 Use the `Set-AzVMExtension` command to deploy Azure Performance Diagnostics VM Extension to an existing virtual machine:
 
-- System managed identity
+- System-assigned managed identity
 
   ```powershell
   $PublicSettings = @{ "storageAccountName"="mystorageaccount";"performanceScenario"="basic"; "enableContinuousDiagnostics" : $False;"traceDurationInSeconds"=300;"perfCounterTrace"="p";"networkTrace"="";"xperfTrace"="";"storPortTrace"="";"srNumber"="";"requestTimeUtc"="2024-10-20T22:08:53.736Z";"resourceId"="VMResourceId" }
@@ -254,7 +254,7 @@ Use the `Set-AzVMExtension` command to deploy Azure Performance Diagnostics VM E
   Set-AzVMExtension -ExtensionName "AzurePerformanceDiagnostics" -ResourceGroupName "myResourceGroup" -VMName "myVM" -Publisher "Microsoft.Azure.Performance.Diagnostics" -ExtensionType "AzurePerformanceDiagnostics" -TypeHandlerVersion 1.0 -Settings $PublicSettings -ProtectedSettings $ProtectedSettings -Location WestUS
   ```
 
-- User managed identity
+- User-assigned managed identity
 
   ```powershell
   $PublicSettings = @{ "storageAccountName"="mystorageaccount";"performanceScenario"="basic"; "enableContinuousDiagnostics" : $False;"traceDurationInSeconds"=300;"perfCounterTrace"="p";"networkTrace"="";"xperfTrace"="";"storPortTrace"="";"srNumber"="";"requestTimeUtc"="2024-10-20T22:08:53.736Z";"resourceId"="VMResourceId" }
@@ -263,7 +263,7 @@ Use the `Set-AzVMExtension` command to deploy Azure Performance Diagnostics VM E
   Set-AzVMExtension -ExtensionName "AzurePerformanceDiagnostics" -ResourceGroupName "myResourceGroup" -VMName "myVM" -Publisher "Microsoft.Azure.Performance.Diagnostics" -ExtensionType "AzurePerformanceDiagnostics" -TypeHandlerVersion 1.0 -Settings $PublicSettings -ProtectedSettings $ProtectedSettings -Location WestUS
   ```
 
-- Storage keys
+- Storage account access keys
 
   ```powershell
   $PublicSettings = @{ "storageAccountName"="mystorageaccount";"performanceScenario"="basic"; "enableContinuousDiagnostics" : $False;"traceDurationInSeconds"=300;"perfCounterTrace"="p";"networkTrace"="";"xperfTrace"="";"storPortTrace"="";"srNumber"="";"requestTimeUtc"="2024-10-20T22:08:53.736Z";"resourceId"="VMResourceId" }
