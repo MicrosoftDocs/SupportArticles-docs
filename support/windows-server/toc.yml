@@ -3061,6 +3061,8 @@ items:
       href: ./installing-updates-features-roles/system-file-checker.md
     - name: Error 0x800705aa when Windows Update fails
       href: ./installing-updates-features-roles/error-0x800705aa-windows-update-fails.md
+    - name: Error 0x800f0831 when installing Windows updates
+      href: ./installing-updates-features-roles/error-0x800f0831-installing-update.md
     - name: Error 0x800f0922 when installing Windows updates
       href: ./installing-updates-features-roles/error-0x800f0922-installing-windows-updates.md
     - name: Error C0190003 after installing updates
