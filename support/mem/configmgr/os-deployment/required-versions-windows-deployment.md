@@ -1,7 +1,7 @@
 ---
 title: Which ConfigMgr version to deploy a particular Windows version
 description: Provides an overview of the versions of Configuration Manager that correspond to particular versions of Windows in a Windows installation scenario.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 ms.reviewer: kaushika, kimmar
 ms.custom: sap:Operating Systems Deployment (OSD)\Other
 ---
