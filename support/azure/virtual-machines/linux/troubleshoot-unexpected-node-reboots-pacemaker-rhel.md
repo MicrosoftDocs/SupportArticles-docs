@@ -179,7 +179,14 @@ The Azure RHEL Pacemaker Cluster is running SAP HANA as an application, and it e
 2024-06-04T09:25:38.724146+00:00 node01 SAPHana(rsc_SAPHana_H00_HDB02)[99475]: ERROR: ACT: check_for_primary:  we didn't expect node_status to be: <>
 2024-06-04T09:25:38.736748+00:00 node01 SAPHana(rsc_SAPHana_H00_HDB02)[99475]: ERROR: ACT: check_for_primary:  we didn't expect node_status to be: DUMP <00000000  0a                                                |.|#01200000001>
 ```
+### Cause for scenario 5
+The SAP HANA time-out messages are commonly considered internal application time-outs. Therefore, the SAP vendor should be engaged.
 
+### Resolution for scenario 5
+- To identify the root cause of the issue, review the [OS performance](collect-performance-metrics-from-a-linux-system.md). 
+- You should pay particular attention to memory pressure and storage devices and their configuration. This is especially true if HANA is hosted on Network File System (NFS), Azure NetApp Files (ANF), or Azure Files. 
+- After you rule out external factors, such as platform or network outages, we recommend that you contact the application vendor for trace call analysis and log review.
+- 
 ## Scenario 6: `ASCS/ERS` time-out in SAP Netweaver clusters
 
 The Azure SUSE Pacemaker Cluster is running SAP Netweaver ASCS/ERS as an application, and it experiences unexpected restarts on one of the nodes or both nodes in the Pacemaker Cluster. The following messages are logged in the `/var/log/messages` log:
@@ -199,7 +206,7 @@ The Azure SUSE Pacemaker Cluster is running SAP Netweaver ASCS/ERS as an applica
 ### Cause for scenario 6
 The `ASCS/ERS` resource is considered to be the application for SAP Netweaver clusters. When the corresponding cluster monitoring resource times out, it triggers a failover process.
 
-### Resolution scenario 6
+### Resolution for scenario 6
 - To identify the root cause of the issue, we recommend that you review the [OS performance](collect-performance-metrics-from-a-linux-system.md). 
 - You should pay particular attention to memory pressure and storage devices and their configuration. This is especially true if SAP Netweaver is hosted on Network File System (NFS), Azure NetApp Files (ANF), or Azure Files. 
 - After you rule out external factors, such as platform or network outages, we recommend that you engage the application vendor for trace call analysis and log review.
