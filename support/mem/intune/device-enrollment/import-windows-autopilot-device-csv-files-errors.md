@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot error 806 or 808 when importing Windows Autopilot CSV files
 description: Describes an issue in which you receive the ZtdDeviceAlreadyAssigned (806) or ZtdDeviceAssignedToOtherTenant (808) error message when you import Windows Autopilot device CSV files in Microsoft Intune.
-ms.date: 02/14/2025
+ms.date: 02/11/2025
 search.appverid: MET150
 ms.custom: sap:Autopilot\Advisory
 ms.reviewer: kaushika, scottmca

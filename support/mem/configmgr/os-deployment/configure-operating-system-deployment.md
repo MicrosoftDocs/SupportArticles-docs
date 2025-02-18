@@ -1,7 +1,7 @@
 ---
 title: Configure operating system deployment
 description: Describes the step-by-step process for configuring System Center 2012 Configuration Manager to capture, deploy and install an existing Windows image.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 ms.reviewer: kaushika, jarrettr
 ms.custom: sap:Operating Systems Deployment (OSD)\PXE
 ---

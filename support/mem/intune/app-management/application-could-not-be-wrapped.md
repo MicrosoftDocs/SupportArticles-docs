@@ -1,7 +1,7 @@
 ---
 title: Android application could not be wrapped - Intune error
 description: Troubleshooting the error message when you try to wrap an LOB app by using the Microsoft Intune App Wrapping Tool for Android.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 search.appverid: MET150
 ms.custom: sap:Develop and Customize - Android\Intune App SDK
 ms.reviewer: kaushika

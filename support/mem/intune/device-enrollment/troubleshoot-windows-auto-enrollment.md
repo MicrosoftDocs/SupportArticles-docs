@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Windows 10 Group Policy auto-enrollment in Microsoft Intune
 description: Learn how to troubleshoot auto-enrollment.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 ms.reviewer: kaushika, jchombe
 search.appverid: MET150
 ms.custom: sap:Enroll Device - Windows\AutoEnrollment

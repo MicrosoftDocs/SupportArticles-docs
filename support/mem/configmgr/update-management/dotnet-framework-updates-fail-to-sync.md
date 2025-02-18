@@ -1,7 +1,7 @@
 ---
 title: .NET Framework 4.7.2 updates fail to sync
 description: Address an issue in which August 2019 .NET 4.7.2 updates fail to synchronize in Configuration Manager.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 ms.custom: sap:Software Update Management (SUM)\Software Update Synchronization
 ms.reviewer: kaushika, umaikhan, sccmcsscontent
 ---

@@ -1,7 +1,7 @@
 ---
 title: Can't import drivers into Configuration Manager
 description: Fixes an issue that prevents administrators from importing drivers into Configuration Manager. The problem concerns a newer signing method that isn't supported without first installing this hotfix.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 ms.reviewer: kaushika, frankroj
 ms.custom: sap:Operating Systems Deployment (OSD)\Driver Management and Installation
 ---

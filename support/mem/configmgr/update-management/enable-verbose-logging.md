@@ -1,7 +1,7 @@
 ---
 title: Enable verbose logging and configure SQL Server Profiler
 description: Describes how to enable verbose logging and configure SQL Server Profiler for troubleshooting issue in Configuration Manager.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 ms.reviewer: kaushika
 ms.custom: sap:Site Server and Roles\Site and Component Status Monitoring
 ---

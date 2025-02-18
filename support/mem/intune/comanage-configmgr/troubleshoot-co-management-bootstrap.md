@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Configuration Management bootstrap with modern provisioning
 description: Helps you understand and troubleshoot issues that you may encounter when you set up co-management by taking path 2 - Bootstrap the Configuration Manager client with modern provisioning.
-ms.date: 09/09/2024
+ms.date: 02/11/2025
 search.appverid: MET150
 ms.custom: sap:Co-management with System Center Configuration Manager\Prepare Windows 10 devices for co-management
 ms.reviewer: kaushika, luche, aaronmiller

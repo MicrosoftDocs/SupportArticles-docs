@@ -1,7 +1,7 @@
 ---
 title: Upgrade Readiness data is downloaded continuously
 description: Describes an issue in which Upgrade Readiness data is downloaded continuously in Configuration Manager, and the download interval becomes 0 minutes.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 ms.reviewer: kaushika
 ms.custom: sap:Client Installation, Registration and Assignment\Client Upgrade
 ---
