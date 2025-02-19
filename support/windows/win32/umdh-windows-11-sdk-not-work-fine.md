@@ -1,11 +1,11 @@
 ---
-title: UMDH in Windows 11 SDK doesn't work fine
+title: UMDH in Windows 11 SDK Doesn't Work Fine
 description: Provides a workaround for an issue where umdh.exe in Windows 11 SDK doesn't work fine.
-ms.date: 02/18/2025
+ms.date: 02/19/2025
 ms.reviewer: hirotoh, v-sidong
 ms.custom: sap:Component Development\COM, DCOM, and COM+ Programming and Runtime
 ---
-# UMDH in Windows 11 SDK doesn't work fine
+# UMDH in Windows 11 SDK doesn't work properly
 
 ## Symptoms
 
