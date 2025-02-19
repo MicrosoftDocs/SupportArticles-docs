@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you try to use the
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
+ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
 # Sorry, the authentication was not successful error occurs in Microsoft Dynamics 365 App for Outlook
 
@@ -75,4 +76,4 @@ If the issue occurs in Outlook Web Access, open the settings for your browser to
 > [!NOTE]
 > Some browsers allow you to block 3rd party cookies but add specific URLs to a list of allowed sites.
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
