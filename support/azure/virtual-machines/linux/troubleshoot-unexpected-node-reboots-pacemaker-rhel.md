@@ -153,7 +153,7 @@ Follow the proper guidelines to set up a [RHEL Pacemaker Cluster](#prerequisites
 When there's an outage, like a Platform/Network interruption as discussed in [Scenario 1](#scenario-1-network-outage), both nodes attempt to write to the STONITH device to fence each other since they lose totem. Normally, the stonith device takes the instruction from the first node that's available, to write on it in order to shutdown the other node. If both nodes are allowed to write to the stonith device, they end up killing each other.
 
 ### Resolution for scenario 4
-It's recommended to use `priority-fencing-delay` parameter, so only one VM should be acknowledged by the STONITH device. 
+It's recommended to use `priority-fencing-delay` or `pcmk_delay_max` parameter, so only one VM should be acknowledged by the STONITH device. 
 
 
 1. Set the cluster under maintenance-mode.
