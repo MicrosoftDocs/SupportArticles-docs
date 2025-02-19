@@ -3,6 +3,7 @@ title: Troubleshoot Dynamics 365 App for Outlook
 description: Troubleshooting Dynamics 365 App for Outlook.
 ms.reviewer: 
 ms.date: 03/31/2021
+ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
 # Troubleshooting Microsoft Dynamics 365 App for Outlook
 

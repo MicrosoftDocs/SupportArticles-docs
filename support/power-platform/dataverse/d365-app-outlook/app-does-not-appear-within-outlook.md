@@ -4,6 +4,7 @@ description: Provides a solution to an issue where the app doesn't appear within
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 01/31/2023
+ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
 # Microsoft Dynamics 365 App for Outlook doesn't appear within Outlook
 

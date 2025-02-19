@@ -4,6 +4,7 @@ description: You may receive this organization has already been configured this 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
+ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
 # This organization has already been configured error when connecting Microsoft Dynamics CRM for Office Outlook
 

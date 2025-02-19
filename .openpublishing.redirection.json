@@ -12695,6 +12695,66 @@
     {
       "source_path": "support/mem/configmgr/update-management/wsus-not-sync-with-certificate-error-800b0109.md",
       "redirect_url": "/previous-versions/troubleshoot/configmgr/wsus-not-sync-with-certificate-error-800b0109"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/app-does-not-appear-within-outlook.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/app-does-not-appear-within-outlook"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/current-user-role-not-have-required-permissions.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/current-user-role-not-have-required-permissions"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/errors-when-opening-365-app-outlook.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/errors-when-opening-365-app-outlook"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-installing-crm-2016-outlook.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/error-when-installing-crm-2016-outlook"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/experience-without-server-side-synchronization.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/experience-without-server-side-synchronization"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/new-forms-formatted-incorrectly.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/new-forms-formatted-incorrectly"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/something-went-wrong-during-sign.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/something-went-wrong-during-sign"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/something-went-wrong-during-sign-in.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/something-went-wrong-during-sign-in"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/the-authentication-was-not-successful.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/the-authentication-was-not-successful"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/the-given-key-was-not-present-in-dictionary.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/the-given-key-was-not-present-in-dictionary"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/this-organization-has-already-been-configured-error-when-connecting.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/this-organization-has-already-been-configured-error-when-connecting"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/track-set-regarding-options-miss.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/track-set-regarding-options-miss"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/troubleshoot-dynamics-365-app-outlook.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/troubleshoot-dynamics-365-app-outlook"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/we-cannot-load-this-app.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/we-cannot-load-this-app"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/your-device-is-currently-unsupported.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/your-device-is-currently-unsupported"
     }
   ]
 }
