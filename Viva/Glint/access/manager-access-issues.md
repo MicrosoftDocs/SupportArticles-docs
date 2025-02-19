@@ -66,23 +66,14 @@ To resolve the issue, select the appropriate solution for your situation:
 - If the number of respondents is below the confidentiality threshold, select **View Guide for Smaller Teams**, and then follow the guidelines. If your organization has enabled [Broader Team Insights (BTI)](/viva/glint/reports/broader-team-insights), you can view the summary of your manager's results.
 - If you lack access to a data segment, ask your Viva Glint admin for the required access.
 
-## Incorrect team information
+## Incorrect team information or broken trend
 
-Recent changes to your team aren't shown in your Viva Glint dashboard. For example, new members have joined your team, but this change isn't reflected in the dashboard.
+When accessing reports, you may see incorrect team information or a break in trend for some attributes. These issues can be caused by:
 
-This issue occurs if employee data wasn't updated before a survey was launched.
+- Recent changes to your team that aren't shown in your Viva Glint dashboard because new data wasn't uploaded before a survey launched. For example, new members have joined your team, but this change isn't reflected in the dashboard.
+- A change in an attribute value that breaks trend for scores in reports. For example, if your organization relabeled a department from "HR" to "Human Resources," scores don't trend after the change even though the department remains the same.
 
-To resolve the issue, check whether the Viva Glint admin can update your results data.
-
-## Unable to connect to the Glint service
-
-You receive the following error message:
-
-> Sorry, we are unable to connect to the Glint service. Please check your network connection and try again.
-
-This error might occur if an issue prevents matching your user principal name (UPN) and email address between the Viva Glint app and Microsoft Entra ID. 
-
-To resolve the issue, ask your Viva Glint admin to update the data so that it matches across both systems. 
+To resolve the issue, check whether the Viva Glint admin can [update your results data](/viva/glint/setup/update-glint-reporting-data) or [grant/update custom access](/viva/glint/setup/custom-user-role) to view new and old values. 
 
 ## Repeatedly signed out of Viva Glint 
 
