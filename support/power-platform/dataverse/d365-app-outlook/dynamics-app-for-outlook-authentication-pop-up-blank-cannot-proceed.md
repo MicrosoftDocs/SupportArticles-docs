@@ -1,58 +1,66 @@
 ---
-title: Dynamics App for Outlook authentication pop-up is blank and unable to proceed
+title: Dynamics 365 App for Outlook Authentication pop-up is blank
 description: Provides a resolution for the issue that occurs when you try to sign in to Dynamics 365 App for Outlook.
-ms.reviewer: 
+ms.reviewer: mkelan
+ms.author: smurkute
+author: shwetamurkute
 ms.date: 02/19/2025
 ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
-# Dynamics App for Outlook authentication pop-up is blank and unable to proceed
+# Dynamics 365 App for Outlook authentication pop-up is blank and unable to proceed
+
+The article solves an issue where you can't sign in to Dynamics 365 App for Outlook successfully due to a blank authentication pop-up.
 
 ## Symptoms
 
-When opening D365 app for outlook, it asks to allow the authentication pop-up to open. Upon allowing it, the pop-up opens but its blank. You don’t have the option to choose the account to authenticate and login.
+When you open the [Dynamics 365 App for Outlook](/dynamics365/outlook-app/overview), it prompts you to allow an authentication pop-up. However, the pop-up appears blank, preventing you from selecting an account to authenticate and sign in.
 
 ## Cause
 
-This was caused by a recent regression that has been mitigated since. However users who have previously signed in will continue to see this issue until they have cleared their session and login again.
+This issue is due to a recent regression that has been mitigated. However, users who have previously signed in might still experience this issue until they clear their session and sign in again.
 
 ## Resolution
 
-Use the below steps to clear the cache/cookies and do a fresh login.
+> [!NOTE]
+>
+> - If you're using Outlook on the web (OWA) or classic Outlook desktop app on Windows, follow the steps 1-3 to solve ths issue.  
+> - If you're using [the new Outlook for Windows](/office/switch-to-new-outlook-for-windows-f5fb9e26-af7c-4976-9274-61c6428344e7) or Outlook on Mac, you should first [open the Developer Tools](#additional-instructions-for-the-new-outlook-for-windows-and-outlook-on-mac-users), and then follow the steps 1 to 3 to resolve the issue.
 
-For Outlook web access or Classic Outlook desktop app on windows, follow the below steps. If you are using new outlook or Outlook on MAC, you will not be able to open the dev tools by right clicking. Look for instructions down below to open the dev tools and then follow the Steps 1 through 3 to mitigate the issue.
+### Step 1: Clear local storage and session storage from the add-in
 
-### Step 1: Clear Local Storage and Session Storage from Add-in Dev Tools
-
-1. Open **Outlook Desktop App** or **Outlook Web (OWA)**.
+1. Open classic Outlook desktop app or Outlook on the web (OWA).
 2. Open the **Dynamics 365 App for Outlook**.
 3. Right-click anywhere inside the add-in and select **Inspect**.
 4. The **Developer Tools** window will open.
-5. Click on the **Application** tab.
-6. Under **Storage**, click on **Local Storage** and delete all stored data.
-7. Click on **Session Storage** and delete all stored data.
+5. Select the **Application** tab.
+6. Under **Storage**, select **Local Storage** and delete all stored data.
+7. Select **Session Storage** and delete all stored data.
 8. Close the **Developer Tools** window.
 
-### Step 2: Clear Local Storage and Session Storage from the Login Popup Window
+### Step 2: Clear local storage and session storage from the authentication window
 
-1. Relaunch the **Dynamics 365 App for Outlook**.
+1. Re-open the **Dynamics 365 App for Outlook**.
 2. If the authentication window appears, right-click inside it and select **Inspect**.
-3. The Developer Tools window will open.
-4. Click on the Application tab.
-5. Under Storage, click on Local Storage and delete all stored data.
-6. Click on Session Storage and delete all stored data.
-7. Close the authentication popup.
+3. The **Developer Tools** window will open.
+4. Select the **Application** tab.
+5. Under **Storage**, select **Local Storage** and delete all stored data.
+6. Select **Session Storage** and delete all stored data.
+7. Close the authentication window.
 
-### Step 3: Relaunch the Add-in and Complete Authorization
+### Step 3: Re-open the add-in and complete authorization
 
-1. Close and reopen **Outlook**.
+1. Close and re-open Outlook.
 2. Open the **Dynamics 365 App for Outlook**.
-3. If prompted, log in with your credentials.
+3. If prompted, sign in with your credentials.
 4. Complete the authentication process.
 
-If you are using the new outlook, to open devtools,
+### Additional instructions for the new Outlook for Windows and Outlook on Mac users
 
-1. Close the outlook. Open task manager and confirm outlook is fully closed.
-2. Press WIN+R and run “olk.exe –devtools” command. This will open outlook with devtools.
-3. Perform the Steps 1-3 listed in the above section,
+- For the new Outlook for Windows:
 
-If you are on MAC device, follow the instructions on [Debug Office Add-ins on a Mac - Office Add-ins](/office/dev/add-ins/testing/debug-office-add-ins-on-ipad-and-mac#debugging-with-safari-web-inspector-on-a-mac) to turn on developer tools.
+  1. Ensure Outlook is fully closed in Task Manager.
+  2. Select <kbd>WIN</kbd>+<kbd>R</kbd> and then run the `olk.exe –devtools` command to open Outlook with the Developer Tools.
+
+- For Outlook on Mac:
+
+  To open the Developer Tools, see [Debug Office Add-ins on a Mac - Office Add-ins](/office/dev/add-ins/testing/debug-office-add-ins-on-ipad-and-mac#debugging-with-safari-web-inspector-on-a-mac).
