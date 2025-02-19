@@ -5,7 +5,7 @@ ms.reviewer: amitrou
 ms.author: nimoutzo
 author: NikosMoutzourakis
 ms.custom: sap:Desktop flows\Office automation
-ms.date: 02/14/2025
+ms.date: 02/19/2025
 ---
 # An error occurs when opening an Excel file in Power Automate for desktop
 
@@ -66,11 +66,11 @@ Terminate all opened Excel processes and restart Power Automate for desktop.
 
 ### Cause
 
-This issue occurs due to the version of Excel being earlier than 2013.
+This issue can occur if you're using an older version of Excel, such as 2013 or earlier.
 
 ### Resolution
 
-To solve this issue, [install](https://support.microsoft.com/office/download-install-or-reinstall-microsoft-365-office-2024-or-office-2021-on-a-pc-or-mac-4414eaaf-0478-48be-9c42-23adc4716658) or [upgrade](https://support.microsoft.com/office/how-do-i-upgrade-office-ee68f6cf-422f-464a-82ec-385f65391350) to Excel 2013 or a later version.
+Ensure you have Excel 2013 or a later version installed on your machine.
 
 ## "System.OutOfMemoryException: Out of memory" error
 
