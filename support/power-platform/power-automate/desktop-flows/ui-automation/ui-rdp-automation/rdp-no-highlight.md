@@ -54,13 +54,13 @@ The communication with the remote agent components doesn't work.
 
    - **Citrix Virtual Channel policy enabled**: The "Virtual channel Allow list" policy on Citrix is set to **Enabled** or **Default**.
 
-     To resolve communication issues, work with your administrator to set the policy to **Disabled** and ensure Citrix machines are restarted after applying the policy.
+     The default setting for this policy is **Enabled** or **Default**. However, if this policy isn't disabled, the Power Automate agent can't communicate with Power Automate for desktop. To resolve communication issues, work with your Citrix administrator to set the policy to **Disabled** and ensure Citrix machines are restarted after applying the policy.
 
    - **Citrix VDA version < 2407**: The "Virtual channel Allow list" policy on Citrix is set to **Enabled** or **Default**.
 
-     To resolve communication issues, work with your administrator to set the policy to **Disabled** and ensure Citrix machines are restarted after applying the policy.
+     The default setting for this policy is **Enabled** or **Default**. However, if this policy isn't disabled, the Power Automate agent can't communicate with Power Automate for desktop. To resolve communication issues, work with your Citrix administrator to set the policy to **Disabled** and ensure Citrix machines are restarted after applying the policy.
 
-   - **Citrix VDA Version >= 2407**: The older "Virtual channel Allow list" can remain at default but a different policy must be set.
+   - **Citrix VDA Version >= 2407**: The older "Virtual channel Allow list" can remain at **Default** but a different policy must be set.
 
      Set the policy "Virtual channel allow list for DVC" with the following values:
 
