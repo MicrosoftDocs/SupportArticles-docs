@@ -20,7 +20,7 @@ This article provides guidance for troubleshooting, analysis, and resolution of 
 ## Prerequisites
 
 - Make sure that the Pacemaker Cluster setup is correctly configured by following the guidelines that are provided in [Set up Pacemaker on Red Hat Enterprise Linux in Azure](/azure/sap/workloads/high-availability-guide-rhel-pacemaker).
-- For a Microsoft Azure Pacemaker cluster that uses the Azure Fence Agent as the STONITH (Shoot-The-Other-Node-In-The-Head) device, refer to the documentation [RHEL - Create Azure Fence agent STONITH device (/azure/sap/workloads/high-availability-guide-rhel-pacemaker#azure-fence-agent-configuration).
+- For a Microsoft Azure Pacemaker cluster that uses the Azure Fence Agent as the STONITH (Shoot-The-Other-Node-In-The-Head) device, refer to the documentation [RHEL - Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-rhel-pacemaker#azure-fence-agent-configuration).
 - For a Microsoft Azure Pacemaker cluster that uses SBD (STONITH Block Device) storage protection as the STONITH device, choose one of the following setup options (see the articles for detailed information):
    - [SBD with an iSCSI target server](/azure/sap/workloads/high-availability-guide-rhel-pacemaker#sbd-with-an-iscsi-target-server)
    - [SBD with an Azure shared disk](/azure/sap/workloads/high-availability-guide-rhel-pacemaker#sbd-with-an-azure-shared-disk)
