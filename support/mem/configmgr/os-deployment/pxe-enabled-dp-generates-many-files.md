@@ -1,7 +1,7 @@
 ---
 title: A PXE distribution point generates many files
 description: A PXE enabled distribution point creates many files if it uses a self-signed certificate. Provides a resolution.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 ms.reviewer: kaushika, erinwi, jchornbe, mansee
 ms.custom: sap:Operating Systems Deployment (OSD)\PXE
 ---

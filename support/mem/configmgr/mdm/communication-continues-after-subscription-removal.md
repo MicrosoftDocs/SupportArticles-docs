@@ -1,7 +1,7 @@
 ---
 title: CloudUserSync continues after Intune subscription is removed
 description: Describes an issue that occurs when you remove the Intune subscription in Configuration Manager current branch versions 1602 and 1606. In this situation, communication with the Intune service is not stopped as expected. 
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 ms.reviewer: kaushika, jarnold, delhan, cmkbreview
 ms.custom: sap:Cloud Services\Co-management
 ---

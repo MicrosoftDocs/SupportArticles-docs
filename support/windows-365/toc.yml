@@ -21,7 +21,7 @@ items:
   href: ./troubleshoot-windows-365-boot.md
 - name: Windows 365 Boot known issues
   href: ./windows-365-boot-known-issues.md
-- name: Troubleshoot Windows 365 Enterprise Cloud PCs grace period issue
+- name: Troubleshoot Windows 365 Enterprise Cloud PC grace period issues
   href: ./troubleshoot-windows-365-enterprise-cloud-pcs-grace-period-issue.md
 - name: Windows 365 setup issues
   href: ./troubleshoot-windows-365-business.md

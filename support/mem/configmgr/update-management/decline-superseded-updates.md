@@ -1,7 +1,7 @@
 ---
 title: Decline superseded updates in Windows Server Update Services (WSUS)
 description: Provides a PowerShell script to decline superseded updates in WSUS.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 ms.reviewer: kaushika, jarrettr, v-six
 ms.custom: sap:Software Update Management (SUM)\WSUS Database Maintenance
 ---

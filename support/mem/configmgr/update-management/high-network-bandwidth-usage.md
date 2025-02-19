@@ -1,7 +1,7 @@
 ---
 title: High network bandwidth usage
 description: Unexpectedly high network bandwidth consumption occurs when clients scan for updates from the local Windows Server Update Services server.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 ms.reviewer: kaushika, rshastri, wesk, lamosley, v-jeffbo, jarrettr, yvetteo, brianhun
 ms.custom: sap:Software Update Management (SUM)\Software Update Scanning
 ---
@@ -88,4 +88,3 @@ The following Windows updates use newer versions of CompatTelRunner.exe and Appr
 |Windows 10, version 1703| [June 21, 2018-KB4284830 (OS Build 15063.1182)](https://support.microsoft.com/help/4284830) |
 |Windows 10, version 1607| [June 21, 2018-KB4284833 (OS Build 14393.2339)](https://support.microsoft.com/help/4284833) |
 |Windows 8.1| [Compatibility update for keeping Windows up-to-date in Windows 8.1](https://support.microsoft.com/help/2976978) |
-  

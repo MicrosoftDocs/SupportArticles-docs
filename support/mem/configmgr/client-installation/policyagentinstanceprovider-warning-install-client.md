@@ -1,7 +1,7 @@
 ---
 title: Warnings logged installing the Configuration Manager client
 description: Describes a problem in which many warning messages for PolicyAgentInstanceProvider are logged in the Application log when you install the Configuration Manager client.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 ms.reviewer: kaushika, brshaw, keiththo, prakask, ErinWi
 ms.custom: sap:Client Installation, Registration and Assignment\Client Installation
 ---

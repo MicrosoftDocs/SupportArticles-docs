@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Clustering and High Availability\Nested Virtualization, csstroubleshoot
+ms.custom:
+- sap:clustering and high availability\nested virtualization
+- pcy:WinComm Storage High Avail
 ---
 # How to retrieve data from a Windows XP Mode virtual machine on Windows 8 or Windows 10
 

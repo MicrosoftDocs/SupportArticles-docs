@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-tappelgate, lumenahe
-ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install Windows Updates, csstroubleshoot
+ms.custom:
+- sap:installing windows updates,features,or roles\failure to install windows updates
+- pcy:WinComm Devices Deploy
 ---
 
 # Windows Update troubleshooting guidance

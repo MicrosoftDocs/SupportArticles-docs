@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting Intune and Configuration Manager co-management workloads
 description: Helps you understand and troubleshoot issues that you may encounter when you configure workloads in an Intune and Configuration Manager co-management environment.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 search.appverid: MET150
 ms.custom: sap:Co-management with System Center Configuration Manager\Switch Configuration Manager workloads to Intune
 ms.reviewer: kaushika, luche

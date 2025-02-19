@@ -5,7 +5,9 @@ ms.date: 01/15/2025
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.collection: highpri
-ms.custom: sap:Windows Desktop and Shell Experience\Start Menu and Task Bar, csstroubleshoot
+ms.custom:
+- sap:windows desktop and shell experience\start menu and task bar
+- pcy:WinComm User Experience
 ms.reviewer: kaushika,lizlong
 audience: itpro
 ---

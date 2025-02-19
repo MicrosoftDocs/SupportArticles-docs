@@ -6279,6 +6279,10 @@
         "source_path": "azure-kubernetes/connectivity/stale-watch-azure-ad-pod-identity-nmi-status-500.md",
         "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-monitor/app-insights/availability/profiler-troubleshooting.md",
+        "redirect_url": "/azure/azure-monitor/profiler/profiler-troubleshooting"
       }
   ]
 }

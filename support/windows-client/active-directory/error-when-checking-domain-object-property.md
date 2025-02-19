@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, rolandw, uspand, amaltsev
-ms.custom: sap:Active Directory\Schema Updates, csstroubleshoot
+ms.custom:
+- sap:active directory\schema updates
+- pcy:WinComm Directory Services
 ---
 # Error when you check domain object properties by using RSAT in Windows 10: msDS-ExpirePasswordsOnSmartCardOnlyAccounts not exist
 

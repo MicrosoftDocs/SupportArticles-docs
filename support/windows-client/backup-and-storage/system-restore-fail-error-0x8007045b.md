@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Backup, Recovery, Disk, and Storage\System Restore, csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\system restore
+- pcy:WinComm Storage High Avail
 ---
 # System Restore may fail with error code 0x8007045b if there is encrypted content in the restore point
 

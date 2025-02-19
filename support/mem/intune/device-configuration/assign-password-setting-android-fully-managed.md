@@ -4,7 +4,7 @@ description: Describes different behavior when a device restrictions profile tha
 author: helenclu
 ms.author: luche
 ms.reviewer: kaushika, anziob, frcohen
-ms.date: 12/05/2024
+ms.date: 02/11/2025
 search.appverid: MET150
 ms.custom: sap:Configure Devices - Android\Device restrictions
 ---

@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, markstan
-ms.custom: sap:Application Virtualization\Clients\Installation And configuration, csstroubleshoot
+ms.custom:
+- sap:application virtualization\clients\installation and configuration
+- pcy:WinComm User Experience
 ---
 # Current list of App-V 5.x file versions
 

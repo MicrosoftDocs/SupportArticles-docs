@@ -53,6 +53,9 @@
         href: app-integration/troubleshoot-error-idx10501-aspnet-b2c.md
       - name: Authentication doesn't work after Android app is published to Google Play Store
         href: app-integration/android-app-authentication-fails-after-published-to-google-play-store.md
+      - name: WIF10201 No valid key mapping found
+        href: app-integration/troubleshoot-wif10201-no-validkey-securitytoken-mvc.md
+
 
   - name: Troubleshoot adding apps
     href: app-integration/troubleshoot-adding-apps.md

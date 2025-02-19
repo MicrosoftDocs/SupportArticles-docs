@@ -63,6 +63,8 @@
 
 - name: Resource Scheduling Optimization add-in
   items: 
+    - name: Locked booking is infeasible
+      href: rso/locked-booking-infeasible.md
     - name: Optimization request fails to modify some bookings
       href: rso/system-failed-modify-bookings-error.md
     - name: '"Object reference not set to an instance of an object" error'

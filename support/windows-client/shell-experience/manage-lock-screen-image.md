@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, warrenw, justintu
-ms.custom: sap:Windows Desktop and Shell Experience\Lock Screen or Screensaver, csstroubleshoot
+ms.custom:
+- sap:windows desktop and shell experience\lock screen or screensaver
+- pcy:WinComm User Experience
 ---
 # How to Manage the Lock Screen Image on Windows 8 and Windows Server 2012
 
