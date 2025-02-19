@@ -5,11 +5,11 @@ ms.reviewer: amitrou
 ms.author: nimoutzo
 author: NikosMoutzourakis
 ms.custom: sap:Desktop flows\SAP automation
-ms.date: 02/18/2025
+ms.date: 02/19/2025
 ---
 # Clicking on an SAP UI element fails
 
-This article helps you resolve issues with UI automation actions such as clicking on SAP UI element that that occur due to the application not being fully DPI aware.
+This article helps you resolve issues with UI automation actions such as clicking on an SAP UI element that occur due to the application not being fully DPI aware.
 
 ## Symptoms
 
