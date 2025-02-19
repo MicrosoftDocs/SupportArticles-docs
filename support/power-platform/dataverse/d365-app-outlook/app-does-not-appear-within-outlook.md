@@ -54,7 +54,7 @@ Dynamics 365 App for Outlook is an Outlook Add-in. Some email types such as encr
 Access Dynamics 365 as a user with the System Administrator role. Navigate to **Settings**, and then select Dynamics 365 App for Outlook. Select the user in the list and then select **Add App To Outlook**.
 
 > [!NOTE]
-> It may take up to 15 minutes to complete. If the user doesn't appear in this list, see [A user does not appear in the All Eligible Users list within the Dynamics 365 App for Outlook area](a-user-disappears-all-eligible-users.md).
+> It may take up to 15 minutes to complete. If the user doesn't appear in this list, see [A user does not appear in the All Eligible Users list within the Dynamics 365 App for Outlook area](../../../dynamics-365/sales/a-user-disappears-all-eligible-users.md).
 
 After the status shows as **Added to Outlook**, close and reopen Outlook.
 

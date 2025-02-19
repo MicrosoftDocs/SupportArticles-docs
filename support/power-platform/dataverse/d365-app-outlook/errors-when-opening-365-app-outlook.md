@@ -82,4 +82,4 @@ If you're unable to resolve the issue and need help from Microsoft, include the 
 1. User Impact  
     Indicate if the issue occurs for all users, or only certain users such as only users with a certain security role or only users with a certain version of Outlook.
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]

@@ -76,4 +76,4 @@ If the issue occurs in Outlook Web Access, open the settings for your browser to
 > [!NOTE]
 > Some browsers allow you to block 3rd party cookies but add specific URLs to a list of allowed sites.
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
