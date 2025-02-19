@@ -7,7 +7,7 @@ author: NikosMoutzourakis
 ms.custom: sap:Desktop flows\UI or browser automation
 ms.date: 02/19/2025
 ---
-# No element is highlighted or an error occurs when hovering over a UI or web element
+# UI element not highlighted or an error occurs when hovering over a UI or web element
 
 This article helps you resolve issues you may encounter when using the UI element picker in virtual desktops, such as Citrix or RDP environments.
 
@@ -50,7 +50,7 @@ The communication with the remote agent components doesn't work.
 
    - **A device on the system is not functioning**: The Citrix plugin isn't loaded on the host system.
 
-     To troubleshoot the issue, run the troubleshooter tool in Power Automate while the virtual desktop platform is active and check for errors in the **UI Automation** section.
+     To troubleshoot the issue, run the [troubleshooter](/power-automate/desktop-flows/troubleshooter) while the virtual desktop platform is active and check for errors in the **UI Automation** section.
 
    - **Citrix Virtual Channel policy enabled**: The "Virtual channel Allow list" policy on Citrix is set to **Enabled** or **Default**.
 
