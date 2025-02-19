@@ -181,7 +181,7 @@ It's recommended to use `priority-fencing-delay` or `pcmk_delay_max` parameter, 
  sudo pcs property set maintenance-mode=false
  ```
 
-For more information refer to [SUSE - Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-suse-pacemaker?tabs=msi#use-an-azure-fence-agent-1).
+For more information refer to [RHEL - Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-rhel-pacemaker#azure-fence-agent-configuration).
 
 
 ## Scenario 5: `HANA_CALL` timeout after 60 seconds
