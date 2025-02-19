@@ -1,23 +1,16 @@
 ---
 title: SSL/TLS communication problems after you install KB 931125
 description: Provides a solution to SSL/TLS communication problems that occur after you install KB 931125.
-ms.date: 03/24/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, tode, arrenc
-ms.custom: sap:secure-channel-issues, csstroubleshoot
-ms.technology: windows-server-security
+ms.custom: sap:Windows Security Technologies\Netlogon including Secure Channel and DC Locator issues, csstroubleshoot
 ---
 # SSL/TLS communication problems after you install KB 931125
 
 This article provides a solution to SSL/TLS communication problems that occur after you install KB 931125.
-
-_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1,  Windows Server 2012 R2
 
 _Original KB number:_ &nbsp; 2801679
 

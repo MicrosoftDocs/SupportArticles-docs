@@ -1,23 +1,19 @@
 ---
 title: Troubleshooting slow file copying in Windows
 description: Troubleshoots the issue that file copy is slow.
-ms.date: 09/08/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:slow-performance, csstroubleshoot
-ms.technology: windows-client-performance
+ms.custom:
+- sap:system performance\system performance (slow,unresponsive,high cpu,resource leak)
+- pcy:WinComm Performance
 ---
 # Troubleshooting slow file copying in Windows
 
 This article helps administrators to diagnose and resolve the issue of slow file copy in your organization.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 10118
 
 ## Determine the cause of the issue
@@ -86,7 +82,7 @@ To resolve this issue, follow these steps on the client computer that has the pr
 1. Make sure that the workstation service is running.
 1. Make sure that **client for Microsoft networking** is selected in the network connection properties.  
 
-   :::image type="content" source="media/troubleshooting-slow-file-copying-in-windows/client-microsoft-networks.png" alt-text="Screenshot of the Local Area Connection Properties dialog, in which the Client for Microsoft Networks item is selected." border="false"::::
+   :::image type="content" source="media/troubleshooting-slow-file-copying-in-windows/client-microsoft-networks.png" alt-text="Screenshot of the Local Area Connection Properties dialog, in which the Client for Microsoft Networks item is selected." border="false":::
 
 ## Server-side troubleshooting
 
@@ -107,5 +103,3 @@ How to determine the referral DFS server to which the clients are connecting:
 2. On the **DFS** tab, check the referral list. The current DFS server is marked as active. In the following example, the client is connecting to the server HAOMS1. 
  
    :::image type="content" source="media/troubleshooting-slow-file-copying-in-windows/referral-list.png" alt-text="Screenshot of the DFS tab in the shared folder properties window on a client computer, which shows the UNC path in Referral list.":::
-
-

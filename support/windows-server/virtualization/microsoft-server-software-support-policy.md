@@ -1,23 +1,17 @@
 ---
 title: Server software and supported virtualization environments
 description: Discusses the support policy for running Microsoft server software in the supported virtualization environments.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:virtual-machine-creation, csstroubleshoot
-ms.technology: hyper-v
+ms.custom: sap:Virtualization and Hyper-V\Virtual machine creation, csstroubleshoot
 ---
 # Microsoft server software and supported virtualization environments
 
 This article discusses the support policy for running Microsoft server software in the following supported virtualization environments.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008  
 _Original KB number:_ &nbsp; 957006
 
 ## Introduction
@@ -53,7 +47,7 @@ Microsoft Application Virtualization 4.5 and later versions such as Management S
 
 Microsoft BizTalk Server 2009, BizTalk Server 2006 R2, BizTalk Server 2006, and BizTalk Server 2004 are fully supported when they're installed on a supported operating system that is running on Windows Server 2008 Hyper-V.
 
-For more information, see [Microsoft BizTalk Server supportability on a virtual machine](/troubleshoot/biztalk/biztalk-server-supportability-on-vm).
+For more information, see [Microsoft BizTalk Server supportability on a virtual machine](../../developer/biztalk/setup-config/biztalk-server-supportability-on-vm.md).
 
 ### Microsoft Commerce Server
 

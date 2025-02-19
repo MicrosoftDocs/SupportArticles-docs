@@ -1,9 +1,10 @@
 ---
 title: Use ActiveX Data Object with VBA
 description: Describes how to use ActiveX Data Object (ADO) with VBA on a window in Microsoft Dynamics GP and Microsoft Business Solutions - Great Plains.
-ms.reviewer: kvogel
+ms.reviewer: theley, kvogel
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # How to use ActiveX Data Object (ADO) with VBA on a window with Microsoft Dynamics GP and with Microsoft Business Solutions - Great Plains 8.0
 

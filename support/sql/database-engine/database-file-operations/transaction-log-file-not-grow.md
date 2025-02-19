@@ -2,7 +2,7 @@
 title: Transaction log file doesn't grow
 description: This article provides resolutions for the problem where the SQL Server database transaction log file doesn't grow by the configured file growth value.
 ms.date: 07/23/2020
-ms.custom: sap:Administration and management
+ms.custom: sap:File, Filegroup, Database Operations or Corruption
 ms.reviewer: SureshKa
 ---
 # The SQL Server database transaction log file doesn't grow by the configured file growth value

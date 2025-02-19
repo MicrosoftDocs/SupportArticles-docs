@@ -1,8 +1,8 @@
 ---
 title: Cumulative update 7 for SQL Server 2019 (KB4570012)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 7 (KB4570012).
-ms.date: 06/30/2023
-ms.custom: KB4570012
+ms.date: 07/26/2024
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB4570012
 ms.reviewer: v-cuichen
 appliesto:
 - SQL Server 2019 on Windows
@@ -38,7 +38,7 @@ More details will be made available in the [SQL Release Blog](https://techcommun
 A downloadable Excel workbook that contains a summary list of builds, together with their current support lifecycle, is available. The Excel file also contains detailed fix lists for SQL Server 2019 and SQL Server 2017. [Select to download this Excel file now](https://aka.ms/sqlserverbuilds).
 
 > [!NOTE]
-> Individual entries in the following table can be referenced directly through a bookmark. If you select any bug reference ID in the table, a bookmark tag is added to the URL by using the "#NNNNNNN" format. You can then share this URL with others so that they can jump directly to the desired fix in the table.
+> Individual entries in the following table can be referenced directly through a bookmark. If you select any bug reference ID in the table, a bookmark tag is added to the URL by using the "#NNNNNNNN" format. You can then share this URL with others so that they can jump directly to the desired fix in the table.
 
 For more information about the bugs that are fixed and enhancements that are included in this cumulative update, see the following Microsoft Knowledge Base articles.
 
@@ -84,7 +84,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="13607158">[13607158](#13607158)</a> | This update fixes an issue with `sys.dm_db_stats_histogram` not showing `NULL` value histogram step. | SQL Server Engine | Query Optimizer | All |
 | <a id="13598911">[13598911](#13598911)</a> | [FIX: Upgrade script may fail if you use an Always On high availability group as a secondary replica in SQL Server 2016 and 2019 (KB4563115)](https://support.microsoft.com/help/4563115) | SQL Server Engine | Replication | Windows |
 | <a id="13607134">[13607134](#13607134)</a> | [FIX: Transactional replication publications can support URL type device to initialize subscriptions from backups in Azure Blob Storage in SQL Server 2017 (KB4569425)](https://support.microsoft.com/help/4569425) | SQL Server Engine | Replication | Windows |
-| <a id="13636909">[13636909](#13636909)</a> | [FIX: Couldn't disable "change data capture" if any column is encrypted by "Always Encrypted" feature of SQL Server (KB4034376)](https://support.microsoft.com/help/4034376) | SQL Server Engine | Replication | All |
+| <a id="13636909">[13636909](#13636909)</a> | [FIX: Can't disable "change data capture" if any column is encrypted by "Always Encrypted" feature in SQL Server (KB4034376)](https://support.microsoft.com/help/4034376) | SQL Server Engine | Replication | All |
 | <a id="13598905">[13598905](#13598905)</a> | When a replication error such as deadlock occurs, random ID is inserted in `MSRepl_Errors` table while it should be just incremented by 1 from the previous ID value. This cumulative update (CU) fixes the issue and the `MSRepl_Errors` will insert entries with row ID incremented by 1 instead of using some random value. | SQL Server Engine | Replication | Windows |
 | <a id="13598909">[13598909](#13598909)</a> | [FIX: Full-Text search auto crawl stops when AG goes offline in SQL Server (KB4511771)](https://support.microsoft.com/help/4511771) | SQL Server Engine | Search | Windows |
 | <a id="13635355">[13635355](#13635355)</a> | [FIX: Error occurs when using DBCC operations while TDE key change happens in SQL Server 2019 (KB4578395)](https://support.microsoft.com/help/4578395) | SQL Server Engine | Security Infrastructure | All |
@@ -924,8 +924,8 @@ Beginning in Microsoft SQL Server 2017, the Analysis Services build version numb
 - Each new CU contains all the fixes that were included with the previous CU for the installed version of SQL Server.
 - SQL Server CUs are certified to the same levels as service packs, and should be installed at the same level of confidence.
 - We recommend ongoing, proactive installation of CUs as they become available according to these guidelines:
-- Historical data shows that a significant number of support cases involve an issue that has already been addressed in a released CU.
-- CUs may contain added value over and above hotfixes. This includes supportability, manageability, and reliability updates.
+  - Historical data shows that a significant number of support cases involve an issue that has already been addressed in a released CU.
+  - CUs may contain added value over and above hotfixes. This includes supportability, manageability, and reliability updates.
 - We recommend that you test SQL Server CUs before you deploy them to production environments.
 
 </details>
@@ -995,7 +995,7 @@ To uninstall this CU on Linux, you must roll back the package to the previous ve
 
 ## References
 
-- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/)
+- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism)
 - [SQL Server Service Packs are no longer supported starting from SQL Server 2017](https://support.microsoft.com/topic/fd405dee-cae7-b40f-db14-01e3e4951169)
 - [Determine which version and edition of SQL Server Database Engine is running](../find-my-sql-version.md)
 - [Servicing models for SQL Server](../../general/servicing-models-sql-server.md)

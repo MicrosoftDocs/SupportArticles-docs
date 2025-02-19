@@ -5,6 +5,7 @@ ms.date: 10/14/2021
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: tglee
+ms.custom: sap:Integrated Development Environment (IDE)\Other
 ---
 # Visual Studio unrecoverable process error
 

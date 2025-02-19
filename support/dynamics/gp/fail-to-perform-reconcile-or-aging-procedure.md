@@ -1,9 +1,10 @@
 ---
 title: Error when you perform Reconcile procedure or Aging procedure in Receivables Management in Microsoft Dynamics GP
 description: Error message when you perform the Reconcile procedure or the Aging procedure in Receivables Management in Microsoft Dynamics GP.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # Error message when you perform the Reconcile procedure or the Aging procedure in Receivables Management in Microsoft Dynamics GP: "Unhandled script exception, value of range, exception class script out of range"
 

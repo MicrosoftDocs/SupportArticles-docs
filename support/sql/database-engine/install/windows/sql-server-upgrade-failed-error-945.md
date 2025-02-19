@@ -2,7 +2,7 @@
 title: SQL Server upgrade fails with error code 945 if SSISDB is configured with AG
 description: This article resolves an issue in which a cumulative update or service pack for SQL Server reports error 945 when you run database upgrade scripts.
 ms.date: 08/17/2023
-ms.custom: sap:Installation, Patching and Upgrade
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ms.reviewer: jopilov, v-jayaramanp
 ---
 

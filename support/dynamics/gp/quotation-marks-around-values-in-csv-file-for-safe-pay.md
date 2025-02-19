@@ -1,9 +1,10 @@
 ---
 title: Quotation marks around values in .csv file for Safe Pay
 description: Quotation marks are appearing around each value in a field in the Safe Pay file generated as a comma-delimited (.csv) file. The bank wants only numerical values between the commas and the quotation marks removed.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # Quotation marks appear around values in .csv file for Safe Pay in Microsoft Dynamics GP
 

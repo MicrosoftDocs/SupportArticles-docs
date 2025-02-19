@@ -1,23 +1,17 @@
 ---
 title: Error the RPC server is unavailable
 description: Provides a resolution for the issue that the system cannot log you on, due to error the RPC server is unavailable.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:user-logon-fails, csstroubleshoot
-ms.technology: windows-server-user-profiles
+ms.custom: sap:User Logon and Profiles\Service Account and Interactive User Logon Issues and Credential Providers, csstroubleshoot
 ---
 # The system can't log you on with the following error: The RPC server is unavailable 
 
 This article provides a resolution for the issue that the system cannot log you on, due to the following error: The RPC server is unavailable.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 555839
 
 This article was written by [Yuval Sinay](https://mvp.microsoft.com/en-US/PublicProfile/7674?fullName=Yuval%20Sinay), Microsoft MVP

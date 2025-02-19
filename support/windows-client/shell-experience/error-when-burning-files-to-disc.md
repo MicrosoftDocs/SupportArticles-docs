@@ -1,17 +1,14 @@
 ---
 title: Error when burning files to disc
 description: Provides a resolution to an error that occurs when burning files to disc
-ms.date: 09/14/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, match
-ms.custom: sap:file-explorer/windows-explorer, csstroubleshoot
-ms.technology: windows-client-shell-experience
+ms.custom:
+- sap:windows desktop and shell experience\file explorer (app only,folders,quick access,file explorer search)
+- pcy:WinComm User Experience
 ---
 # You may receive an error when burning files to disc
 

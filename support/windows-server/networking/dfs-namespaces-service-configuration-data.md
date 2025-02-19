@@ -1,23 +1,17 @@
 ---
 title: DFS Namespaces service and configuration
 description: Provides information about the Distributed File System (DFS) Namespaces service to help you create a new namespace.
-ms.date: 11/21/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, davfish, clandis
-ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
-ms.technology: networking
+ms.custom: sap:Network Connectivity and File Sharing\DFS Namespace (Not Replication), csstroubleshoot
 ---
 # About the DFS Namespaces service and its configuration data
 
 This article provides some information about the DFS Namespaces service and its configuration data.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 977511
 
 ## Summary

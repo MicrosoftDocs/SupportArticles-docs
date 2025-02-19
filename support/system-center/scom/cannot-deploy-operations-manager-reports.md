@@ -1,7 +1,7 @@
 ---
 title: Operations Manager reports fail to deploy
 description: Describes an issue in which a DeploymentException error occurs when you deploy Operations Manager reports together with SQL Server Reporting Services.
-ms.date: 10/10/2022
+ms.date: 04/15/2024
 ms.custom: sap:Reporting server installation
 ---
 # Operations Manager reports fail to deploy
@@ -28,7 +28,7 @@ User:          N/A
 Computer:      \<FQDN>  
 Description:  
 Failed to deploy reporting component to the SQL Server Reporting Services server. The operation will be retried.
-Exception 'DeploymentException': Failed to deploy reports for management pack with version dependent id '\<ID>'. System.Web.Services.Protocols.SoapException: <mark>**Uploading or saving files with .CustomConfiguration extension is not allowed.**</mark> Contact your administrator if you have any questions. --->  
+Exception 'DeploymentException': Failed to deploy reports for management pack with version dependent id '\<ID>'. System.Web.Services.Protocols.SoapException: **Uploading or saving files with .CustomConfiguration extension is not allowed.** Contact your administrator if you have any questions. --->  
 Microsoft.ReportingServices.Diagnostics.Utilities.ResourceFileFormatNotAllowedException: Uploading or saving files with .CustomConfiguration extension is not allowed. Contact your administrator if you have any questions.  
    at Microsoft.ReportingServices.Library.ReportingService2005Impl.CreateResource(String Resource, String Parent, Boolean Overwrite, Byte[] Contents, String MimeType, Property[] Properties, Guid batchId)  
    at Microsoft.ReportingServices.WebServer.ReportingService2005.CreateResource(String Resource, String Parent, Boolean Overwrite, Byte[] Contents, String MimeType, Property[] Properties)  

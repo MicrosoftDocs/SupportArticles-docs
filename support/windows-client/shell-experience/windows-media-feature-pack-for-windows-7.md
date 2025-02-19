@@ -1,17 +1,14 @@
 ---
 title: Windows Media Feature Pack for Windows 7 N and for Windows 7 KN
 description: Describes the Windows Media Feature Pack for Windows 7 N and for Windows 7 KN.
-ms.date: 10/22/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:windows-media-player, csstroubleshoot
-ms.technology: windows-client-shell-experience
+ms.custom:
+- sap:windows desktop and shell experience\media issues with in-box apps (windows media player,groove,movies and tv)
+- pcy:WinComm User Experience
 ---
 # Description of the Windows Media Feature Pack for Windows 7 N and for Windows 7 KN
 

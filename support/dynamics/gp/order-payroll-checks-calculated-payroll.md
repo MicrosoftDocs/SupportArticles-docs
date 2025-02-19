@@ -1,8 +1,9 @@
 ---
 title: The order in which payroll checks are calculated in Payroll
 description: This article describes the order in which payroll checks are calculated in Payroll in Microsoft Dynamics GP.
-ms.reviewer: v-amflo
-ms.date: 03/31/2021
+ms.reviewer: theley, v-amflo
+ms.date: 03/20/2024
+ms.custom: sap:Payroll
 ---
 # Description of the order in which payroll checks are calculated in Payroll in Microsoft Dynamics GP
 

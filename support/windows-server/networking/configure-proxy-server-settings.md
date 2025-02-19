@@ -1,23 +1,17 @@
 ---
 title: Configure proxy server settings
 description: Describes how to configure proxy server settings in Windows.
-ms.date: 10/27/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: networking
+ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 ---
 # Configure proxy server settings in Windows
 
 Several methods are available to configure Windows to use a proxy server to connect to the Internet. The method that will work the best for you depends on the kinds of apps that you're using.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2777643
 
 > [!NOTE]

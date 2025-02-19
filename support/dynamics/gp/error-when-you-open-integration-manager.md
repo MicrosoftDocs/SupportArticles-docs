@@ -1,9 +1,10 @@
 ---
 title: Error when you open Integration Manager
 description: Provides a solution to an error that occurs when you open Integration Manager or when you run an integration in Integration Manager.
-ms.reviewer: kvogel
+ms.reviewer: theley, kvogel
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Error message displays when you open Integration Manager or when you run an integration in Integration Manager
 

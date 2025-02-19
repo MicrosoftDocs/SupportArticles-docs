@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot agent connectivity issues
 description: Troubleshoot issues that Operations Manager agents have problem connecting to the management server in System Center 2012 Operations Manager and later versions.
-ms.date: 08/22/2020
+ms.date: 04/15/2024
 ---
 # Troubleshoot agent connectivity issues in Operations Manager
 

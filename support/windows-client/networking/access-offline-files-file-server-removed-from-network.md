@@ -1,17 +1,14 @@
 ---
 title: Can access offline files even though the file server is removed from the network
 description: Describes a problem in which you can still access offline files on a Windows Vista-based or Windows 7-based client computer even though the file server is removed from the network. Provides a resolution.
-ms.date: 10/09/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: markusr, cochen, kaushika
-ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
-ms.technology: windows-client-networking
+ms.custom:
+- sap:network connectivity and file sharing\access to file shares (smb)
+- pcy:WinComm Networking
 ---
 # You can still access offline files even though the file server is removed from the network on a Windows 7-based client computer
 

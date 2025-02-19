@@ -1,8 +1,8 @@
 ---
 title: Adding a highly available cluster error 444
 description: Fixes an issue in which you can't add a System Center 2012 Virtual Machine Manager highly available cluster and receive error 444.
-ms.date: 04/29/2020
-ms.reviewer: jeffpatt, alvinm
+ms.date: 04/09/2024
+ms.reviewer: wenca, jeffpatt, alvinm
 ---
 # Error 444 when adding a System Center 2012 Virtual Machine Manager highly available cluster
 

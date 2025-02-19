@@ -2,7 +2,7 @@
 title: Error when you run the Sqlmaint Utility
 description: This article provides a resolution for the problem that occurs when you run the Sqlmaint Utility after you upgrade from SQL Server 2000 SP4 to SQL Server 2008 or a later version.
 ms.date: 09/25/2020
-ms.custom: sap:Other tools
+ms.custom: sap:SQL Server Management, Query and Data Tools
 ms.reviewer: jamestod
 ---
 # Error when you try to run the Sqlmaint Utility after you upgrade to SQL Server 2008 or a later version

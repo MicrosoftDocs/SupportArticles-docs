@@ -1,23 +1,17 @@
 ---
 title: Fix software update registration issues
 description: Provides a solution to an issue that repairs or uninstalls for certain products may fail after you install software updates.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:msi, csstroubleshoot
-ms.technology: windows-server-application-compatibility
+ms.custom: sap:Application Technologies and Compatibility\MSI and MSIX, csstroubleshoot
 ---
 # How to fix MSI software update registration corruption issues
 
 This article provides a solution to an issue that repairs or uninstalls for certain products may fail after you install software updates.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 971187
 
 ## Symptoms

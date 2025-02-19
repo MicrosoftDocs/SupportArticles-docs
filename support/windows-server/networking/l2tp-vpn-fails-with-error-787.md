@@ -1,23 +1,17 @@
 ---
 title: L2TP VPN fails with error 787
 description: L2TP VPN fails with 787 because of RRAS choosing the wrong certificate.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:remote-access, csstroubleshoot
-ms.technology: networking
+ms.custom: sap:Network Connectivity and File Sharing\Remote access (VPN, RRAS, CMAK and AOVPN), csstroubleshoot
 ---
 # L2TP VPN fails with error 787
 
 This article provides help to fix the error 787 that occurs when a L2TP VPN connection to a Remote Access server fails.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2855053
 
 ## Symptoms

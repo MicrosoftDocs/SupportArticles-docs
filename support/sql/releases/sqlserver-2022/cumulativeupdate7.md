@@ -1,8 +1,8 @@
 ---
 title: Cumulative update 7 for SQL Server 2022 (KB5028743)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 7 (KB5028743).
-ms.date: 08/10/2023
-ms.custom: KB5028743
+ms.date: 07/26/2024
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5028743
 ms.reviewer: v-qianli2
 appliesto:
 - SQL Server 2022 on Windows
@@ -63,7 +63,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 
 The following update is available from the Microsoft Download Center:
 
-:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2022 now](https://www.microsoft.com/download/details.aspx?familyid=4fa9aa71-05f4-40ef-bc55-606ac00479b1)
+:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2022 now](https://www.microsoft.com/download/details.aspx?id=105013)
 
 > [!NOTE]
 >
@@ -570,7 +570,7 @@ To uninstall this CU on Linux, you must roll back the package to the previous ve
 
 ## References
 
-- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/)
+- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism)
 - [SQL Server Service Packs are no longer supported starting from SQL Server 2017](https://support.microsoft.com/topic/fd405dee-cae7-b40f-db14-01e3e4951169)
 - [Determine which version and edition of SQL Server Database Engine is running](../find-my-sql-version.md)
 - [Servicing models for SQL Server](../../general/servicing-models-sql-server.md)

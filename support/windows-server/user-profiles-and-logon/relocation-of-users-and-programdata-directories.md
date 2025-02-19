@@ -1,17 +1,12 @@
 ---
 title: Upgrade to Windows versions that is before Windows 10 is blocked if Users and ProgramData directories are changed
 description: Describes information about the policy changes for relocation of the Users directory and ProgramData directory to a drive other than the %systemdrive% in Windows.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:user-profiles, csstroubleshoot
-ms.technology: windows-server-user-profiles
+ms.custom: sap:User Logon and Profiles\User profiles, csstroubleshoot
 ---
 # Upgrade to Windows versions that is before Windows 10 is blocked if Users and ProgramData directories are changed
 
@@ -21,7 +16,6 @@ By changing the default location of the *User* directories or *ProgramData* fold
 
 Beginning with Windows 10, upgrades are supported even if user profiles are redirected to another drive. For example, if you are using Windows 8.1 with ProfilesDirectory set to D:\\, you can still upgrade to Windows 10.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016, Windows 8.1, Windows Server 2012 R2, Windows 7  
 _Original KB number:_ &nbsp; 949977
 
 ## More information

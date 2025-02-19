@@ -1,23 +1,17 @@
 ---
 title: Continue dialog box for folder access in Windows Explorer when user only has access with elevated token
 description: Describes an issue in which your user ID is added to the ACL list for a directory that you don't have permissions, and you receive an access denied message when accessing a folder which you don't have read permissions with Windows Explorer.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, davemid, kbsec
-ms.custom: sap:permissions-access-control-and-auditing, csstroubleshoot
-ms.technology: windows-server-security
+ms.custom: sap:Windows Security Technologies\AD Object Permissions, access control, delegation, AdminSDHolder and auditing, csstroubleshoot
 ---
 # When you select Continue for folder access in Windows Explorer, your user account is added to the ACL for the folder
 
 This article provides a solution to an issue when you select **Continue** to gain access to a file system folder for which you don't have Read permissions.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 950934
 
 ## Introduction

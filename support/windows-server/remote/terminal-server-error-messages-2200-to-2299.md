@@ -1,23 +1,17 @@
 ---
 title: Terminal Server error messages 2200 to 2299
 description: Describes Terminal Server error messages 2200 to 2299.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: willgloy, kaushika
-ms.custom: sap:administration, csstroubleshoot
-ms.technology: windows-server-rds
+ms.custom: sap:Remote Desktop Services and Terminal Services\Deployment, configuration, and management of Remote Desktop Services infrastructure, csstroubleshoot
 ---
 # Terminal Server error messages: 2200 to 2299
 
 This article describes Terminal Server error messages 2200 to 2299.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 186555
 
 ## Error 2200

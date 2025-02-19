@@ -2,7 +2,7 @@
 title: Blocked a frame with origin when using Unified Interface apps
 description: Works around the Blocked a frame with origin error when you use Unified Interface apps in Google Chrome or Android.
 ms.reviewer: xianc
-ms.topic: troubleshooting
+ms.custom: sap:Running model-driven app forms
 ms.date: 08/09/2021
 author: xianc0908
 ms.author: xianc

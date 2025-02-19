@@ -1,8 +1,9 @@
 ---
 title: BMR backup fails in DPM or Azure Backup Server
 description: Describes an issue in which BMR backup fails because of high I/O latency if it uses Microsoft Azure Backup Server or System Center Data Protection Manager.
-ms.date: 07/23/2020
+ms.date: 04/08/2024
 ms.custom: sap:System Center 2016 Data Protection Manager
+ms.reviewer: Mjacquet
 ---
 # BMR backup fails in Data Protection Manager or Azure Backup Server
 
@@ -120,5 +121,3 @@ When you use BMR backup, make sure that the following prerequisites are met:
 - The latest update for DPM or Azure Backup Server is installed.
 
 - The replica size is set correctly. For more information, see [How to increase DPM 2016 replica when using Modern Backup Storage (MBS)](https://techcommunity.microsoft.com/t5/system-center-blog/how-to-increase-dpm-2016-replica-when-using-modern-backup/ba-p/351818).
-
-- The [July 16, 2018-KB4345418 (OS Build 14393.2368)](https://support.microsoft.com/help/4345418) update or a later update is installed for ReFS.

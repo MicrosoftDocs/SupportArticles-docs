@@ -1,23 +1,17 @@
 ---
 title: administrative shares are missing
 description: Provides an explanation of various symptoms that can occur when the IPC$, ADMIN$, or C$ shares are missing on your computer, and provides steps to resolve the issue.
-ms.date: 11/16/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, msadoff
-ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
-ms.technology: networking
+ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB), csstroubleshoot
 ---
 # Overview of problems that may occur when administrative shares are missing
 
 This article provides a resolution for the problems that may occur when administrative shares are missing.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 842715
 
 ## Summary

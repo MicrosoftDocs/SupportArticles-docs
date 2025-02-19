@@ -3,7 +3,7 @@ title: Secure applications built on .NET Framework
 description: Describes important considerations for securing applications that are built on the .NET Framework.
 ms.date: 05/06/2020
 ms.topic: how-to
-ms.technology: dotnet-general
+ms.custom: sap:Common Language Runtime (CLR)
 ---
 # Secure applications that are built on the .NET Framework
 

@@ -1,23 +1,17 @@
 ---
 title: Add a user to Services RDP permissions
 description: Describes three methods to add users or groups to Terminal Services Remote Desktop Protocol (RDP) permissions.
-ms.date: 01/17/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, SPAT, slight
-ms.custom: sap:administration, csstroubleshoot
-ms.technology: windows-server-rds
+ms.custom: sap:Remote Desktop Services and Terminal Services\Deployment, configuration, and management of Remote Desktop Services infrastructure, csstroubleshoot
 ---
 # How to add a user to RDP permissions by using WMI
 
 This article describes three methods to add users or groups to Remote Desktop Protocol (RDP) permissions.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 290720
 
 ## Summary

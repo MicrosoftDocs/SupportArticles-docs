@@ -2,7 +2,7 @@
 title: Use _crtBreakAlloc to debug a memory allocation
 description: This article describes how to use _crtBreakAlloc to debug a memory allocation.
 ms.date: 10/27/2020
-ms.custom: sap:C and C++ Libraries
+ms.custom: sap:C and C++ Libraries\C and C++ runtime libraries and Standard Template Library (STL)
 ms.topic: how-to
 ---
 # Use _crtBreakAlloc to debug a memory allocation

@@ -1,23 +1,17 @@
 ---
 title: Net Commands for Operating Systems
 description: Provides some information about Net Commands on Operating Systems.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: networking
+ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 ---
 # Net Commands On Operating Systems
 
 This article provides some information about Net Commands on Operating Systems.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 556003
 
 This article was written by [Nirmal Sharma](https://mvp.microsoft.com/en-US/PublicProfile/33635?fullName=Nirmal%20K%20Sharma%20%28Ratawa%29), Microsoft MVP.

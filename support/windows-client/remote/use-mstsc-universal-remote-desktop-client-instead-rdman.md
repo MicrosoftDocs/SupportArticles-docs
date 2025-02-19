@@ -1,17 +1,14 @@
 ---
 title: Use MSTSC or universal Remote Desktop client instead of RDMan in Windows 10
 description: Discusses why you should use Remote Desktop Connection or universal Remote Desktop client instead of RDMan in Windows 10.
-ms.date: 02/09/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, jomukher, v-jesits
-ms.custom: sap:connecting-to-a-session-or-desktop, csstroubleshoot
-ms.technology: windows-client-rds
+ms.custom:
+- sap:remote desktop services and terminal services\web access (includes remoteapp and desktop connections)
+- pcy:WinComm User Experience
 ---
 # Use Remote Desktop Connection or universal Remote Desktop client instead of RDMan in Windows 10
 

@@ -2,8 +2,9 @@
 title: Add Display Calc Work Records shortcut in Canadian Payroll for Dynamics GP
 description: How to add the Display Calc Work Records shortcut in Canadian Payroll for Microsoft Dynamics GP.
 ms.topic: how-to
-ms.reviewer: cwaswick
-ms.date: 03/31/2021
+ms.reviewer: theley, cwaswick
+ms.date: 03/20/2024
+ms.custom: sap:Payroll
 ---
 # How to add the "Display Calc Work Records" shortcut in Canadian Payroll for Microsoft Dynamics GP
 

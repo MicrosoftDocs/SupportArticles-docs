@@ -2,7 +2,7 @@
 title: Create databases or change disk file locations
 description: This article describes how to create databases or change disk file locations on a shared cluster drive on which SQL Server was not originally installed.
 ms.date: 10/30/2020
-ms.custom: sap:Failover Clusters
+ms.custom: sap:Always On Failover Cluster Instance (FCI)
 ms.reviewer: MICHWE
 ms.topic: how-to
 ---

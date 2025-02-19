@@ -5,6 +5,7 @@ ms.date: 04/24/2019
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: mikejo
+ms.custom: sap:Debuggers and Analyzers\Visual Studio Debugger
 ---
 
 # Troubleshooting and known issues for snapshot debugging in Visual Studio

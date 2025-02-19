@@ -1,23 +1,17 @@
 ---
 title: Slow performance when you print
 description: Describes an issue on a failover cluster in which cluster nodes may stop responding temporarily.
-ms.date: 04/20/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:errors-and-troubleshooting-general-issues, csstroubleshoot
-ms.technology: windows-server-printing
+ms.custom: sap:Print, Fax, and Scan\Print Performance - failures, crashes, not responsive, csstroubleshoot
 ---
 # Slow performance when you try to print, when you open the printer properties, or when you open the printer preferences
 
 This article provides a solution to an issue where you experience slow performance when you try to print, or open printer properties/preferences.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 979394
 
 ## Symptoms

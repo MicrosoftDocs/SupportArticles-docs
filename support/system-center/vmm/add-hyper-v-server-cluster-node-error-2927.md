@@ -1,8 +1,8 @@
 ---
 title: Error 2927 adding a Hyper-V server or cluster node
 description: Fixes an issue in which you receive error 2927 when you add a Hyper-V server or a Hyper-V cluster node on a Virtual Machine Manager server.
-ms.date: 09/11/2020
-ms.reviewer: jchornbe
+ms.date: 04/09/2024
+ms.reviewer: wenca, jchornbe
 ---
 # Error 2927 when you add a Hyper-V server or a Hyper-V cluster node in VMM
 
@@ -63,7 +63,9 @@ To check whether WinRM is configured correctly, follow these steps:
 
 2. Increase the default value for the WinRM time-out. To do this, open an elevated command prompt on the Hyper-V host, and then execute the following commands:
 
-   1. ```console
+   1. Set the maximum timeout in milliseconds to 1,800,000:
+
+      ```console
       winrm set winrm/config @{MaxTimeoutms = "1800000"}
       ```
 
@@ -79,15 +81,16 @@ To check whether WinRM is configured correctly, follow these steps:
       winrm set winrm/config/Service @{MaxConcurrentOperationsPerUser="400"}
       ```
 
-   3. ```console
-      net stop winrm
-      ```
+   3. Restart the WinRM service:
 
-   4. ```console
+      ```console
+      net stop winrm
       net start winrm
       ```
 
-   5. ```console
+   4. Start the VMM agent:
+
+      ```console
       net start vmmagent
       ```
 

@@ -1,8 +1,9 @@
 ---
 title: Different types of inventory items in Microsoft Dynamics GP
 description: Information about the different types of inventory items in Microsoft Dynamics GP.
-ms.reviewer:
-ms.date: 03/31/2021
+ms.reviewer: theley
+ms.date: 03/20/2024
+ms.custom: sap:Distribution - Inventory
 ---
 # Information about the different types of inventory items in Microsoft Dynamics GP
 

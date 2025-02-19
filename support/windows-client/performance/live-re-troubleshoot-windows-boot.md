@@ -1,17 +1,14 @@
 ---
 title: Advanced troubleshooting Windows startup problems with LiveRE tool
 description: Learn to troubleshoot by using the LiveRE tool when Windows does't start.
-author: Deland-Han
-ms.author: delhan
 ms.reviewer: visohra, kaushika
 manager: dcscontentpm
 audience: itpro
-ms.prod: windows-client
-ms.technology: windows-client-performance
-ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
+ms.custom:
+- sap:system performance\startup or pre-logon reliability (crash,errors,bug check or blue screen)
+- pcy:WinComm Performance
 ms.topic: troubleshooting
-ms.date: 10/30/2021
-localization_priority: medium
+ms.date: 01/15/2025
 ---
 # Use LiveRE to troubleshoot Windows startup problems
 

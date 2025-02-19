@@ -1,9 +1,9 @@
 ---
 title: Intune Company Portal apps don't appear as Available
 description: Fixes an issue in which applications aren't displayed as Available in the Intune Company Portal app on a Windows 10 device.
-ms.date: 05/11/2020
+ms.date: 02/11/2025
 search.appverid: MET150
-ms.custom: sap:App management
+ms.custom: sap:AppDeployment - Android\Advisory
 ms.reviewer: kaushika
 ---
 # Applications don't appear as Available in the Intune Company Portal app on Windows 10

@@ -1,23 +1,17 @@
 ---
 title: Netlogon event ID 5719 or Group Policy event 1129
 description: Event ID 5719 or Group Policy event 1129 is logged if you have a Gigabit network adapter installed on a Windows-based compute. Provides a resolution.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, herbertm, v-jomcc
-ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
-ms.technology: windows-server-group-policy
+ms.custom: sap:Group Policy\Problems Applying Group Policy, csstroubleshoot
 ---
 # Netlogon event ID 5719 or Group Policy event 1129 is logged when you start a domain member
 
 This article solves the Netlogon event ID 5719 or Group Policy event 1129 that's logged when you start a domain member.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 938449
 
 ## Symptoms

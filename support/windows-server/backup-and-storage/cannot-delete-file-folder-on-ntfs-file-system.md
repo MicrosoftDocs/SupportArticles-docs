@@ -1,23 +1,17 @@
 ---
 title: Can't delete files on NTFS file system
 description: Describes why you can't delete a file or folder on an NTS file system volume. Provides resolutions for each of the possible causes.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:data-corruption-and-disk-errors, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Data corruption and disk errors, csstroubleshoot
 ---
 # You can't delete a file or a folder on an NTFS file system volume
 
 This article describes why can't delete a file or a folder on an NTFS file system volume. It also provides help to solve this issue.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 320081
 
 > [!NOTE]

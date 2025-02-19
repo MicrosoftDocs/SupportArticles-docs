@@ -1,8 +1,8 @@
 ---
 title: VMM reports a Needs Attention host status
 description: fix an issue in which Virtual Machine Manager may report a Needs Attention status after you rebuild the Windows Management Instrumentation repository for a host.
-ms.date: 07/09/2020
-ms.reviewer: markstan
+ms.date: 04/09/2024
+ms.reviewer: wenca, markstan
 ---
 # Needs Attention host status after you rebuild the WMI repository
 

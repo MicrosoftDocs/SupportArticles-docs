@@ -1,7 +1,7 @@
 ---
 title: Remove duplicate Management pack aliases
 description: This article describes the procedure to remove duplicate management pack aliases before upgrading to System Center Operations Manager 2019 UR4.
-ms.date: 03/30/2023
+ms.date: 04/15/2024
 ms.prod-support-area-path: 
 ---
 # Remove duplicate Management pack aliases

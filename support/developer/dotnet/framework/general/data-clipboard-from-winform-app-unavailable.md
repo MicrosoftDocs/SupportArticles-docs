@@ -2,7 +2,7 @@
 title: Data on clipboard from Windows Forms app unavailable
 description: This article provides information about resolving a problem where the data placed on clipboard from Windows Forms Application is unavailable.
 ms.date: 05/11/2020
-ms.technology: dotnet-general
+ms.custom: sap:Class Library Namespaces
 ---
 # Data placed on clipboard from Windows Forms Application is unavailable
 

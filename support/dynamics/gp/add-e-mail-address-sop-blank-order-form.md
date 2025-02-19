@@ -1,9 +1,10 @@
 ---
 title: Add e-mail address to SOP Blank Order Form
 description: Describes how to add the customer e-mail address to the SOP Blank Order Form report or to the SOP Blank Invoice Form report in Microsoft Dynamics GP.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Distribution - Sales Order Processing
 ---
 # How to add the customer e-mail address to the SOP Blank Order Form report or to the SOP Blank Invoice Form report in Microsoft Dynamics GP
 

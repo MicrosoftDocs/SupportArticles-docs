@@ -1,17 +1,14 @@
 ---
 title: Fail to paste password into credential dialog box
 description: Provides help to fix a File system error that occurs when you paste password into a credential dialog box.
-ms.date: 09/08/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, v-jeffbo, travisa
-ms.custom: sap:kerberos-authentication, csstroubleshoot
-ms.technology: windows-client-security
+ms.custom:
+- sap:windows security technologies\kerberos authentication
+- pcy:WinComm Directory Services
 ---
 # "File system error" when pasting password into credential dialog box in Windows 10
 

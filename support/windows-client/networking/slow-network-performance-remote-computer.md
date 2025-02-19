@@ -1,17 +1,14 @@
 ---
 title: Slow network performance on remote network computer
 description: Fixes a slow network performance issue that can occur when you open a file that is located in a shared folder on a remote network computer.
-ms.date: 09/08/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
-ms.technology: windows-client-networking
+ms.custom:
+- sap:network connectivity and file sharing\access to file shares (smb)
+- pcy:WinComm Networking
 ---
 # Slow network performance when you open a file that is located in a shared folder on a remote network computer
 

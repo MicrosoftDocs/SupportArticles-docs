@@ -1,23 +1,19 @@
 ---
 title: NMI_HARDWARE_FAILURE error
 description: This article discusses a by-design behavior where NMI_HARDWARE_FAILURE error occurs when an NMI is triggered.
-ms.date: 09/08/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
-ms.technology: windows-client-performance
+ms.custom:
+- sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot)
+- pcy:WinComm Performance
 ---
 # NMI_HARDWARE_FAILURE error when an NMI is triggered on Windows
 
 This article discusses a by-design behavior where the NMI_HARDWARE_FAILURE error occurs when a Non-Maskable Interrupt (NMI) is triggered.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2750146
 
 ## Symptoms

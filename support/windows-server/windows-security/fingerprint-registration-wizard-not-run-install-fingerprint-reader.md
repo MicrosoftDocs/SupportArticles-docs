@@ -1,23 +1,17 @@
 ---
 title: Fingerprint Registration Wizard doesn't run
 description: Describes an issue in which the Fingerprint Registration Wizard doesn't run after you install the Microsoft Fingerprint Reader and the Microsoft DigitalPersona Password Manager software and then restart the computer.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: v-jomcc, kaushika
-ms.custom: sap:kerberos-authentication, csstroubleshoot
-ms.technology: windows-server-security
+ms.custom: sap:Windows Security Technologies\Kerberos authentication, csstroubleshoot
 ---
 # Fingerprint Registration Wizard doesn't run after you install Fingerprint Reader and DigitalPersona Password Manager software and restart the computer
 
 This article provides a solution to an issue in which the Fingerprint Registration Wizard doesn't run after you install the Microsoft Fingerprint Reader and the Microsoft DigitalPersona Password Manager software and then restart the computer.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 909129
 
 ## Symptoms

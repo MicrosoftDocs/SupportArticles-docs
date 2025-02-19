@@ -2,7 +2,7 @@
 title: SQLDescribeCol returns the wrong column length
 description: This article provides resolutions for the problem that the SQLDescribeCol command returns the wrong column length and data type in a complex union query that has parameters.
 ms.date: 09/25/2020
-ms.custom: sap:MDAC and ADO
+ms.custom: sap:Database Connectivity and Authentication
 ms.reviewer: sunilbs, ramakoni
 ---
 # SQLDescribeCol returns the wrong column length and data type in a complex union query that has parameters

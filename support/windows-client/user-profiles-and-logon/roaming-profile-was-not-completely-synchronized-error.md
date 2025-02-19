@@ -1,17 +1,14 @@
 ---
 title: Error (Roaming profile was not completely synchronized) and logon, logoff delays in Windows 10, version 1803
 description: Fixes a problem in which you receive errors or experience logon/logoff delays when you use roaming user profiles.
-ms.date: 12/07/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:user-profiles, csstroubleshoot
-ms.technology: windows-client-user-profiles
+ms.custom:
+- sap:user logon and profiles\user profiles
+- pcy:WinComm Directory Services
 ---
 # Error (Roaming profile was not completely synchronized) and logon, logoff delays in Windows 10, version 1803
 

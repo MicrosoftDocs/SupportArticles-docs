@@ -1,13 +1,20 @@
 ---
 title: Known issues with Microsoft Intune
 description: Learn about known issues with Microsoft Intune, including workarounds and updated fixes.
-ms.date: 09/16/2022
+ms.date: 02/11/2025
 search.appverid: MET150
-ms.reviewer: kaushika
+ms.reviewer: kaushika, madakeva, annovich, jerryabo
+ms.custom: sap:Set Up Intune\Set up administrators and manage roles
 ---
 # Known issues
 
 This page lists recent known issues with Microsoft Intune. For a list of weekly feature announcements, see [What's new in Microsoft Intune](/mem/intune/fundamentals/whats-new) in the Intune product documentation. Visit the [Intune Customer Success blog](https://techcommunity.microsoft.com/t5/intune-customer-success/bg-p/IntuneCustomerSuccess) for posts about best practices, support tips, and other tutorials, and a backlog of past known issues.
+
+## Azure enterprise applications aren't displayed in the Company Portal for Windows or the Intune Company Portal website
+
+- **Status:** Active
+
+Microsoft is investigating this issue and will update this article when more information becomes available.
 
 ## Remediation message doesn't list all valid builds in Company Portal for Windows 10/11
 
@@ -24,7 +31,7 @@ For more information about this known issue, see our blog [Remediation message d
 
 - **Status:** Active
 
-There is a known issue (originally posted on the Service Health Dashboard as IT393575) where occasionally a macOS device becomes unenrolled after performing an enrollment due to an issue with the headers being sent to the client MDM agent. This issue is specific to a very limited number of macOS devices with the Microsoft Intune management extension; the majority of macOS devices enroll as expected. To fix this issue, re-enroll the device. In a future service release, we plan to make an architectural change to fully resolve the issue.
+There's a known issue (originally posted on the Service Health Dashboard as IT393575) where, occasionally, the enrollment of a macOS device fails or the device might become unenrolled because the MDM agent mishandles failed MDM certificate installations. When this issue occurs and the MDM agent doesn't receive the expected headers, the client automatically removes its MDM enrollment profile. To fix this issue, you have to re-enroll the device.
 
 ## Android 12 clipboard data toast notification
 
@@ -159,12 +166,14 @@ We are aware of an issue when [enrolling and iOS devices with Apple Configurator
 
 There are issues with certificate-based authentication when using the Pulse Secure VPN client for iOS, version 7.0 and Check Point Capsule Connect version 1.600 for iOS. Specifically, both VPN clients may report that the certificate is missing from the device, even when the certificate has been properly delivered. These issues impact Intune in addition to other Enterprise Mobility Management providers. For more information and workarounds, see [Known issue: Certificate-based authentication issue with Pulse Secure 7.0.0 for iOS and Check Point Capsule Connect versions 1.600 for iOS](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-certificate-based-authentication-issue-with-pulse/ba-p/280162) on the Intune Customer Success blog.
 
-## "Rename device" setting disabled for hybrid Azure AD joined Windows devices
+<a name='rename-device-setting-disabled-for-hybrid-azure-ad-joined-windows-devices'></a>
+
+## "Rename device" setting disabled for Microsoft Entra hybrid joined Windows devices
 
 - **Status:** Feature disabled
 - **Blog post:** [Known issue with "Rename device" setting for Windows 10 devices in the Intune console](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-with-rename-device-setting-for-windows-10-devices-in/ba-p/390868)
 
-In the Intune admin center, we've disabled the "Rename device setting" for Windows devices that are hybrid Azure AD joined. This is to prevent device single sign-on errors that might occur after a user changes their password. Device renaming is available for co-managed devices that are Azure AD joined. For details, see [Known issue with "Rename device" setting for Windows 10 devices in the Intune console](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-with-rename-device-setting-for-windows-10-devices-in/ba-p/390868) on the Intune Customer Success blog.
+In the Intune admin center, we've disabled the "Rename device setting" for Windows devices that are Microsoft Entra hybrid joined. This is to prevent device single sign-on errors that might occur after a user changes their password. Device renaming is available for co-managed devices that are Microsoft Entra joined. For details, see [Known issue with "Rename device" setting for Windows 10 devices in the Intune console](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-with-rename-device-setting-for-windows-10-devices-in/ba-p/390868) on the Intune Customer Success blog.
 
 ## iOS/iPadOS or macOS device unenrollment through management profile deletion may not be reflected in Microsoft Intune
 

@@ -1,23 +1,17 @@
 ---
 title: Use Dumpchk.exe to check memory dump file
 description: Describes how to check a memory dump file by using Dumpchk.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
-ms.technology: windows-server-performance
+ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshoot
 ---
 # Use Dumpchk.exe to check a memory dump file
 
 This article describes how to check a memory dump file by using Dumpchk.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 156280
 
 > [!NOTE]

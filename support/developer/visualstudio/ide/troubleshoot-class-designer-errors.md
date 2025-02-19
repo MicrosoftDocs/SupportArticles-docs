@@ -18,6 +18,7 @@ f1_keywords:
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: tglee
+ms.custom: sap:Integrated Development Environment (IDE)\Designers (WPF, WinForms, XAML, etc.)
 ---
 # Class Designer errors
 

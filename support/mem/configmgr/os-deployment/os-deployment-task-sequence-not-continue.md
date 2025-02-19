@@ -1,8 +1,8 @@
 ---
 title: An OS deployment task sequence doesn't continue
 description: Describes an issue in which a task sequence doesn't continue after Windows Setup or the in-place upgrade finishes if an OEM product key is used during Windows deployment.
-ms.date: 05/25/2020
-ms.custom: sap:Task sequence tasks
+ms.date: 02/11/2025
+ms.custom: sap:Operating Systems Deployment (OSD)\Operating System In-place Upgrade Deployments
 ms.reviewer: kaushika, frankroj, Jowiswel
 ---
 # An OSD task sequence doesn't continue after Windows Setup or an in-place upgrade finishes
@@ -86,4 +86,4 @@ The OEM product key can also be obtained automatically by Windows Setup from the
 > MOUPG ProductKey: Product EditionID = Professional  
 > MOUPG ProductKey: Product InstallChannel = OEM  
 > MOUPG ProductKey: Eula = C:\\$WINDOWS.~BT\Sources\Panther\\\<file>.tmp  
-> MOUPG ProductKey: Valid product key found = [TRUE].  
+> MOUPG ProductKey: Valid product key found = [TRUE].

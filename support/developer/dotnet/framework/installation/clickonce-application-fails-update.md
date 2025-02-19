@@ -1,10 +1,9 @@
 ---
 title: ClickOnce application fails to update
 description: ClickOnce depends on a file and registry cache to keep track of the present installed applications.
-ms.date: 05/06/2020
-ms.custom: sap:Installation
-ms.reviewer: nikolam
-ms.technology: dotnet-installation
+ms.date: 04/15/2024
+ms.custom: sap:Installation and Deployment
+ms.reviewer: nikolam, jagbal
 ---
 # ClickOnce applications fail to update
 

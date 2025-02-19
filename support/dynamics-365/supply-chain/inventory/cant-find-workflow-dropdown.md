@@ -2,7 +2,7 @@
 title: You can't find the "Workflow" drop-down dialog box for inventory journals
 description: Provides resolutions for the issue that you can't find the Workflow drop-down dialog box on the journal page, or related workflow operations aren't available.
 author: sherry-zheng
-ms.date: 05/31/2021
+ms.date: 05/16/2024
 ms.topic: troubleshooting
 ms.search.form: 
 audience: Application User
@@ -11,6 +11,7 @@ ms.search.region: Global
 ms.author: chuzheng
 ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.16
+ms.custom: sap:Inventory management\Issues with the inventory journal
 ---
 
 # You can't find the "Workflow" drop-down dialog box for inventory journals

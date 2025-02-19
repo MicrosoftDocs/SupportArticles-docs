@@ -1,23 +1,17 @@
 ---
 title: Understanding Remote Desktop Protocol (RDP)
 description: This article introduces the Remote Desktop Protocol (RDP).
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, willgloy
-ms.custom: sap:administration, csstroubleshoot
-ms.technology: windows-server-rds
+ms.custom: sap:Remote Desktop Services and Terminal Services\Deployment, configuration, and management of Remote Desktop Services infrastructure, csstroubleshoot
 ---
 # Understanding the Remote Desktop Protocol (RDP)
 
 This article describes the Remote Desktop Protocol (RDP) that's used for communication between the Terminal Server and the Terminal Server Client. RDP is encapsulated and encrypted within TCP.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 186607
 
 ## Summary

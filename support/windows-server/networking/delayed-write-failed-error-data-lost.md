@@ -1,23 +1,17 @@
 ---
 title: Delayed Write Failed error
 description: Helps to fix the error message "Delayed Write Failed" which states that your data has been lost.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
-ms.technology: networking
+ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB), csstroubleshoot
 ---
 # If you receive a "Delayed Write Failed" error message, it states that your data has been lost
 
 This article helps to fix the error message "Delayed Write Failed" which states that your data has been lost.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2021074
 
 ## Symptoms

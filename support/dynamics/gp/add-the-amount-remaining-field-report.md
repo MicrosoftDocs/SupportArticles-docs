@@ -1,9 +1,10 @@
 ---
 title: Add the Amount Remaining field to report
 description: How to add the Amount Remaining field to the RM Statement on Blank Paper report in Microsoft Dynamics GP.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # How to add the Amount Remaining field to the "RM Statement on Blank Paper" report in Microsoft Dynamics GP
 

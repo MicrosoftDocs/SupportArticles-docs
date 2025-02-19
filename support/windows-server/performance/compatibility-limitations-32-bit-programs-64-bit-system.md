@@ -1,23 +1,17 @@
 ---
 title: Overview of the compatibility considerations for 32-bit programs on 64-bit versions of Windows
 description: Discusses the compatibility considerations and limitations for 32-bit programs that are running on 64-bit versions of Windows .
-ms.date: 04/12/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:applications, csstroubleshoot
-ms.technology: windows-server-performance
+ms.custom: sap:System Performance\System Configuration (page file, startup or running apps, error handling), csstroubleshoot
 ---
 # Overview of the compatibility considerations for 32-bit programs on 64-bit versions of Windows
 
 This article discusses the compatibility considerations and limitations for 32-bit programs that are running on 64-bit versions of Windows.
 
-_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 896456
 
 ## Summary

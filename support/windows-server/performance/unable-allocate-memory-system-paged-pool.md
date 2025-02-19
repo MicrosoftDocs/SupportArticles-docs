@@ -1,23 +1,17 @@
 ---
 title: unable to allocate memory
 description: Provides a resolution for the issue that it is unable to allocate memory from the system paged pool.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, mohak, weiwan
-ms.custom: sap:performance-monitoring-tools, csstroubleshoot
-ms.technology: windows-server-performance
+ms.custom: sap:System Performance\Performance tools (Task Manager, Perfmon, WSRM, and WPA), csstroubleshoot
 ---
 # Unable to allocate memory from the system paged pool
 
 This article provides a resolution for the issue that it is unable to allocate memory from the system paged pool.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 312362
 
 ## Symptoms

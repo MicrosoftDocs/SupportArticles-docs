@@ -2,7 +2,7 @@
 title: Join containment assumption in the New Cardinality Estimator degrades query performance
 description: This article helps you resolve performance problems that occur in SQL Server 2014 and later versions when you compile your queries using the new cardinality estimator.
 ms.date: 08/12/2022
-ms.custom: sap:Performance
+ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ---
 # Join containment assumption in the New Cardinality Estimator degrades query performance
 

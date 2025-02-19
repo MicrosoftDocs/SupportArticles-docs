@@ -1,8 +1,9 @@
 ---
 title: Information about the eConnect Fixed Assets adapter
 description: This article describes information about the eConnect Fixed Assets adapter in Integration Manager for Microsoft Dynamics GP.
-ms.reviewer: 
-ms.date: 03/31/2021
+ms.reviewer: theley
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Information about the eConnect Fixed Assets adapter in Integration Manager for Microsoft Dynamics GP
 

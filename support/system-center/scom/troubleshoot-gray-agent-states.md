@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot gray agent states
 description: Describes how to troubleshoot problems in which an agent, a management server, or a gateway is unavailable or grayed out in System Center Operations Manager.
-ms.date: 06/22/2020
+ms.date: 04/15/2024
 ms.reviewer: manojpa, adoyle, jochan
 ---
 # Troubleshoot gray agent states in System Center Operations Manager

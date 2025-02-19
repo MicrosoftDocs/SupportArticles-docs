@@ -1,8 +1,9 @@
 ---
 title: Software updates maintenance
 description: Describes the maintenance processes for software updates in Configuration Manager.
-ms.date: 06/04/2020
+ms.date: 02/11/2025
 ms.reviewer: kaushika
+ms.custom: sap:Software Update Management (SUM)\WSUS Database Maintenance
 ---
 # Software updates maintenance in Configuration Manager
 

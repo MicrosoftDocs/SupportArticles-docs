@@ -7,9 +7,9 @@ metadata:
   description: Landing page for Power Apps troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: powerapps #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
-  author: #Required; your GitHub user alias, with correct capitalization.
-  ms.author: #Required; microsoft alias of author; optional team alias.
-  ms.date: 03/31/2021
+  ms.date: 01/27/2025
+  author: ChristySu #Required; your GitHub user alias, with correct capitalization.
+  ms.author: christys #Required; microsoft alias of author; optional team alias.
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -22,17 +22,25 @@ landingContent:
           - text: Best practices when updating a flow
             url: connections/best-practices-when-updating-a-flow.md
           - text: Common issues and resolutions for Power Apps
-            url: isolate-and-troubleshoot-common-issues/common-issues-and-resolutions.md
+            url: create-and-use-apps/common-issues-and-resolutions.md
           - text: General Power Apps debugging strategies
-            url: isolate-and-troubleshoot-common-issues/isolate-common-issues.md
+            url: create-and-use-apps/isolate-common-issues.md
           - text: Isolate issues in canvas apps
-            url: isolate-and-troubleshoot-common-issues/isolate-canvas-app-issues.md
+            url: create-and-use-apps/isolate-canvas-app-issues.md
           - text: Isolate issues in model-driven app
-            url: isolate-and-troubleshoot-common-issues/isolate-model-app-issues.md
+            url: create-and-use-apps/isolate-model-app-issues.md
           - text: Troubleshoot startup issues for Power Apps
-            url: isolate-and-troubleshoot-common-issues/troubleshooting-startup-issues.md
+            url: sign-in/troubleshooting-startup-issues.md
           - text: Troubleshoot Power Query issues
-            url: isolate-and-troubleshoot-common-issues/troubleshoot-power-query-issues.md
+            url: connections/troubleshoot-power-query-issues.md
+
+   # Card
+  - title: Connections
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot broken connections
+            url: ../power-automate/connections/troubleshoot-broken-connections.md?context=/troubleshoot/power-platform/power-apps/context/context      
 
   # Card
   - title: Create and use apps
@@ -41,6 +49,8 @@ landingContent:
         links:
           - text: Troubleshoot ribbon issues
             url: create-and-use-apps/ribbon-issues.md
+          - text: Troubleshoot grid issues
+            url: create-and-use-apps/grid-issues.md
           - text: Regenerate ribbon metadata
             url: create-and-use-apps/regenerate-ribbon-metadata.md
 

@@ -1,17 +1,14 @@
 ---
 title: How to troubleshoot publishing server refresh failures in App-V v5
 description: Describes how to troubleshoot publishing server refresh failures in App-V v5.
-ms.date: 12/04/2020
-author: Deland-Han
-ms.author: delhan 
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, jeffpatt
-ms.custom: sap:publishing-server-issue, csstroubleshoot
-ms.technology: windows-client-application-virtualization-app-v
+ms.custom:
+- sap:application virtualization\server issues\publishing server issue
+- pcy:WinComm User Experience
 ---
 # How to troubleshoot publishing server refresh failures in App-V v5
 

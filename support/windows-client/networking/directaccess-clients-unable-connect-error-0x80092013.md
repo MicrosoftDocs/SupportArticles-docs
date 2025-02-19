@@ -1,23 +1,19 @@
 ---
 title: DirectAccess clients can't connect with IP-HTTPS
 description: DirectAccess clients may not be able to connect to DirectAccess Server by using Internet Protocol over Secure Hypertext Transfer Protocol (IP-HTTPS) connections because the revocation check fails.
-ms.date: 09/08/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, ajayps
-ms.custom: sap:remote-access, csstroubleshoot
-ms.technology: windows-client-networking
+ms.custom:
+- sap:network connectivity and file sharing\remote access (directaccess)
+- pcy:WinComm Networking
 ---
 # DirectAccess clients may be unable to connect with error 0x80092013
 
 This article provides help to solve an issue where DirectAccess clients aren't able to connect to DirectAccess Server by using Internet Protocol over Secure Hypertext Transfer Protocol (IP-HTTPS) connections.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2980672
 
 ## Symptoms

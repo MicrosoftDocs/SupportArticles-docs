@@ -1,15 +1,14 @@
 ---
 title: The Linux directories, users, and package managers
 description: This article describes the Linux special directories, elevated users, and how to use the package managers.
-ms.date: 03/08/2021
-ms.prod: aspnet-core
-ms.reviewer: ramakoni, ahmetmb
-ms.technology: aspnetcore-practice-troubleshoot-linux
+ms.date: 12/16/2024
+ms.custom: sap:General Development Questions, linux-related-content
+ms.reviewer: ramakoni, ahmetmb, zixie
 author: ahmetmithat
 ---
 # Part 1.2 - Basic operations on Linux
 
-_Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1, .NET 5  
+_Applies to:_ &nbsp; .NET on Linux  
 
 **Goal of this part**
 
@@ -29,14 +28,14 @@ For this training, it's not necessary to dive deeply into how to manage Linux. H
 |/etc|Contains the configuration files for the local system and applications. For example, you'll create some configuration files in the */etc/system* directory to enable the ASP.NET Core application to be started automatically by the system.|
 |/home|Contains each user's home directory. For example, */home/\<username\>*.|
 |/tmp|Temporary directory to store temporary files that are created by the system and applications.|
-|/usr|Stores shareable files including executables, libraries, and documents. For example, .NET Core runtime and SDKs are installed in the */usr/share/dotnet/* directory.|
+|/usr|Stores shareable files including executables, libraries, and documents. For example, .NET runtime and SDKs are installed in the */usr/share/dotnet/* directory.|
 |/var|Stores variable data files. For example, Apache stores the root web site's content in the /var/www/html directory, and the log files in the */var/log/apache2/* directory. Although it's not necessary, you'll publish your web applications in this directory.|
 ||
 
 > [!NOTE]
 > Linux is case-sensitive. Therefore, */home* and */Home* are different directories, and filename and Filename are different files.
 
-When you first connect to your Linux virtual machine, you'll start at your root directory. This will be */home/\<username\>*.
+When you first connect to your Linux virtual machine, you'll start at your root directory. This directory will be */home/\<username\>*.
 
 The root directory shortcut is **~** (tilde). You can use the `cd ~` command at any time to return to the home directory.
 
@@ -54,7 +53,7 @@ This example doesn't include listing the directory contents. However, a later st
 
 The superuser is the most privileged user account. It has root (unrestricted) access to all files and folders, and complete control over the operation of the computer. The system administrator uses this account for system maintenance.
 
-On UNIX-like systems, the conventional name of the superuser is "root". The root user can do tasks that are otherwise restricted for standard users, including the following:
+On UNIX-like systems, the conventional name of the superuser is "root". The root user can do tasks that are otherwise restricted for standard users, including the following ones:
 
 - Changing system directories
 - Changing user privileges
@@ -77,7 +76,7 @@ Run the following command:
 echo hello world > /etc/helloworld.txt
 ```
 
-The `echo` command writes all the text that follows it to the output. The angle bracket (`>`) tells the system to send the output to the */etc/helloworld.txt* file instead of the console. This is similar to how Windows works.
+The `echo` command writes all the text that follows it to the output. The angle bracket (`>`) tells the system to send the output to the */etc/helloworld.txt* file instead of the console. This behavior is similar to how Windows works.
 
 > [!NOTE]
 > Linux is case-sensitive: *Helloworld.txt*, *helloworld.txt* and *helloworld.Txt* are different files.
@@ -90,7 +89,7 @@ When you run this command, you receive a **permission denied** error message.
 
 The operation fails because the */etc* folder is special folder that a standard user can't change. Verify the user by running the `id` command.
 
-:::image type="content" source="./media/1-2-linux-special-directories-users-package-managers/id-command.png" alt-text="Screenshot of id command." border="false":::
+:::image type="content" source="./media/1-2-linux-special-directories-users-package-managers/id-command.png" alt-text="Screenshot of I D command." border="false":::
 
 To become the root account user, run the `sudo su` command.
 
@@ -109,7 +108,7 @@ Now, run the same command one more time:
 echo hello world > /etc/helloworld.txt
 ```
 
-This time, you don't receive any error message. But is the file created? To verify this, run the following command:
+This time, you don't receive any error message. To verify if the file is created, run the following command:
 
 ```bash
 ll /etc/hello*
@@ -139,7 +138,7 @@ For example, if you run `restart` while you're not elevated to superuser status,
 
 :::image type="content" source="./media/1-2-linux-special-directories-users-package-managers/restart-command.png" alt-text="Screenshot of restart command." border="false":::
 
-To run this command as a superuser instead, you can either change the session context to root (by running `sudo su`) or add the "sudo" prefix, as follows:
+To run this command as a superuser instead, you can either change the session context to root (by running `sudo su`) or add the `sudo` prefix, as follows:
 
 ```bash
 sudo reboot
@@ -155,13 +154,13 @@ Package managers are used to install, upgrade, and remove applications in Linux.
 
 This tutorial assumes that you're running the [Ubuntu package management system](https://ubuntu.com/server/docs/package-management). This system is derived from the same system that's used by the Debian GNU/Linux distribution. Therefore, we can use APT to install the software.
 
-Depending on your Linux choice, you may have to use other tools. For example, you can use yum to install or uninstall software if you're running Red Hat.
+Depending on your Linux choice, you might have to use other tools. For example, you can use yum to install or uninstall software if you're running Red Hat.
 
 ## Upgrade the package manager database
 
 APT works on a database of available packages. We recommend that you update the package managers, and then upgrade the packages after a fresh installation.
 
-To update the package database on Ubuntu, run `sudo apt update`. Notice that the `sudo` prefix is entered before the `apt` command. By doing this, you run the `apt` command as a root user without actually changing the session context to that of the root user.
+To update the package database on Ubuntu, run `sudo apt update`. Notice that the `sudo` prefix is entered before the `apt` command. By doing so, you run the `apt` command as a root user without actually changing the session context to that of the root user.
 
 :::image type="content" source="./media/1-2-linux-special-directories-users-package-managers/sudo-apt-update-command.png" alt-text="Screenshot of sudo apt update command." border="false":::
 
@@ -196,7 +195,7 @@ To verify that you have the correct package, run `apt show` to see the package d
 
 After you determine that the package that you found is the one that you want, you must make sure that it's not already installed on the destination server.
 
-To do this, use the `apt list --installed` command to list the installed applications on the virtual machine. You can also add the [grep](https://www.howtogeek.com/496056/how-to-use-the-grep-command-on-linux/) command to filter the results to show only the applications that contain `apache2`.
+To do so, use the `apt list --installed` command to list the installed applications on the virtual machine. You can also add the [grep](https://www.howtogeek.com/496056/how-to-use-the-grep-command-on-linux/) command to filter the results to show only the applications that contain `apache2`.
 
 > [!NOTE]
 > The `grep` command searches a given term in a file. It's a very powerful tool because it provides several options, such as searching by using regex or a string, inverting the search results, ignoring the case sensitivity, searching by using multiple search terms, and recursive search support.
@@ -232,15 +231,15 @@ Although you have installed Apache 2, you actually have to use Nginx. Therefore,
 
 Installing a package (in this case, Apache 2) is reversible. You can remove the package if you determine that you don't need it. You have two command options to remove packages:
 
-- `apt remove`: This command removes the binaries but not the configuration file. This is useful if you intend to reinstall the package and want to retain the same configuration.
+- `apt remove`: This command removes the binaries but not the configuration file. It's useful if you intend to reinstall the package and want to retain the same configuration.
 
 - `apt purge`: This command removes the binaries and the configuration file.
 
-Remove the package by using `apt remove` as a root user to see the result. To do this, run `sudo apt remove apache2`. When you're prompted to confirm the removal, type *Y*, and then press **Enter**.
+Remove the package by using `apt remove` as a root user to see the result. To do so, run `sudo apt remove apache2`. When you're prompted to confirm the removal, type *Y*, and then press **Enter**.
 
 :::image type="content" source="./media/1-2-linux-special-directories-users-package-managers/sudo-apt-remove-apache2-command.png" alt-text="Screenshot of sudo apt remove apache2 command." border="false":::
 
-The command output tells you the following:
+The command output tells you the following information:
 
 - APT detected that there are packages that were automatically installed and won't be required anymore.
 - APT removed only the `apache2` package, and it recommends that you run `sudo apt autoremove` to remove the associated packages.
@@ -259,7 +258,7 @@ List the installed packages one more time. Now, you should see no apache2-relate
 
 This procedure isn't finished. Remember that the difference between `apt remove` and `apt purge` is whether the configuration file is removed. In this exercise, you didn't remove it. So where is it?
 
-Finding the file doesn't involve package managers. Instead, you'll run a standard search for files in Linux. There are several ways to do this. One of the most common search commands is `find`. However, this command is also confusing to use, so we won't discuss it here. Instead, we'll use `whereis`.
+Finding the file doesn't involve package managers. Instead, you'll run a standard search for files in Linux. There are several ways to do so. One of the most common search commands is `find`. However, this command is also confusing to use, so we won't discuss it here. Instead, we'll use `whereis`.
 
 > [!NOTE]
 > Linux is very well documented. Nearly every command has a useful help page available. Use the [man](https://www.geeksforgeeks.org/man-command-in-linux-with-examples/) and [info](https://www.geeksforgeeks.org/info-command-in-linux-with-examples/) commands to show the Help pages in Linux. For example, to learn more on your own about the `find` command, run `man find` or `info find`.
@@ -284,6 +283,6 @@ As final step, run the `apt purge` command to see its effect. You can run a purg
 
 ## Next steps
 
-[Part 1.3 - Install .NET Core in Linux](1-3-install-dotnet-core-linux.md)
+[Part 1.3 - Install .NET in Linux](1-3-install-dotnet-core-linux.md)
 
 [!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]

@@ -3,7 +3,7 @@ title: System.Net SDP package information
 description: Outlines the SDP for System.Net trace.
 ms.date: 05/11/2020
 ms.reviewer: pphadke
-ms.technology: dotnet-general
+ms.custom: sap:Class Library Namespaces
 ---
 # System.Net SDP package information
 

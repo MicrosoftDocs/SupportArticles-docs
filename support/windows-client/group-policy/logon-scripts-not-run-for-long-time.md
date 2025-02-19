@@ -1,23 +1,20 @@
 ---
 title: Logon scripts don't run for five minutes
 description: Provides a solution to an issue where logon scripts don't run for five minutes after a user logs on to a Windows 8.1-based computer.
-ms.date: 10/14/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, ajayps
-ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
-ms.technology: windows-client-group-policy
+ms.custom:
+- sap:group policy\group policy management (gpmc or gpedit)
+- pcy:WinComm Directory Services
 ---
 # Logon scripts don't run for five minutes after a user logs on to a Windows 8.1-based computer
 
 This article provides a solution to an issue where logon scripts don't run for five minutes after a user logs on to a Windows 8.1-based computer.
 
-_Applies to:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows client (All supported versions)  
 _Original KB number:_ &nbsp; 2895815
 
 ## Symptoms

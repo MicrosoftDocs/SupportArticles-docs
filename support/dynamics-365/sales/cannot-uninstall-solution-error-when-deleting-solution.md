@@ -4,7 +4,6 @@ description: You may receive an error that states Cannot Uninstall Solution when
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
-ms.subservice: d365-sales-custom-solutions
 ---
 # "Cannot Uninstall Solution" error occurs in Microsoft Dynamics 365
 

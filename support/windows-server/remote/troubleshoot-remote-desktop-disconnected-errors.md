@@ -1,17 +1,12 @@
 ---
 title: Troubleshoot Remote desktop disconnected errors
 description: Provides troubleshooting information for Remote desktop disconnected errors.
-ms.date: 05/16/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:connecting-to-a-session-or-desktop, csstroubleshoot
-ms.technology: windows-server-rds
+ms.custom: sap:Remote Desktop Services and Terminal Services\Web access (includes RemoteApp and desktop connections), csstroubleshoot
 adobe-target: true
 ---
 
@@ -22,7 +17,6 @@ adobe-target: true
 
 This article helps you understand the most common settings that are used to establish a Remote Desktop session in an enterprise environment, and provides troubleshooting information for Remote desktop disconnected errors.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2477176
 
 > [!NOTE]

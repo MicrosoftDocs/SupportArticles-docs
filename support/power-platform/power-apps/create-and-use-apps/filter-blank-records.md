@@ -5,6 +5,7 @@ author: lancedmicrosoft
 ms.reviewer: tapanm
 ms.date: 06/24/2022
 ms.author: lanced
+ms.custom: sap:Running Canvas App
 search.audienceType: 
   - maker
 search.app: 
@@ -31,7 +32,7 @@ Use a formula pattern as follows:
 Filter(datasource, IfError(<query predicate>, false))
 ```
 
-### See also
+## See also
 
 - [Get started with formulas in canvas apps](/power-apps/maker/canvas-apps/working-with-formulas)
 - [Formula reference for Power Apps](/power-platform/power-fx/formula-reference)

@@ -8,6 +8,7 @@ dev_langs:
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: johnhart
+ms.custom: sap:Tools and Utilities\Microsoft Office dev tools
 ---
 # Troubleshoot Office solution security
 

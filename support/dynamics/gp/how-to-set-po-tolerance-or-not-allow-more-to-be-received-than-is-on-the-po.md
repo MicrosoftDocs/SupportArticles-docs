@@ -1,8 +1,9 @@
 ---
 title: How to set PO tolerance or not allow more to be received
 description: How to set a PO tolerance or not allow more to be received than is on the PO in Microsoft Dynamics GP.
-ms.reviewer: cwaswick
-ms.date: 03/31/2021
+ms.reviewer: theley, cwaswick
+ms.date: 03/20/2024
+ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # How to set a PO tolerance or not allow more to be received than is on the PO in Microsoft Dynamics GP
 

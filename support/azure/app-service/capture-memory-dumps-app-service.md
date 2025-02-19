@@ -1,13 +1,13 @@
 ---
 title: Capture memory dumps on the Azure App Service platform
 description: There are many features for capturing memory dumps on Azure App Service Web Apps. This article makes recommendations about which feature to use based on the scenario.
-ms.date: 06/21/2023
+ms.date: 06/03/2024
 author: benperk
 ms.author: benperk
 editor: v-jsitser
 ms.topic: how-to
 ms.reviewer: kamils, v-leedennis
-ms.service: app-service
+ms.service: azure-app-service
 ---
 # Capture memory dumps on the Azure App Service platform
 
@@ -100,7 +100,9 @@ In the following sections, we discuss each of these debugging features in more d
 
 The [auto-heal](/azure/app-service/overview-diagnostics#auto-healing) (request duration) feature is useful for capturing a memory dump if the response is taking longer than expected to finish. You can see the link to **Auto-Heal** in the **Diagnostic Tools** tile in the previous screenshot. Select that link to go directly to the feature, or select the **Diagnostic Tools** tile to review all the available tools on the **Diagnostic Tools** page. For information about how to configure this feature, see the following articles:
 
-- [App Services auto heal](https://appserviceblog.com/app-services-auto-heal/)
+- [Announcing the New Auto Healing Experience in App Service Diagnostics](https://azure.github.io/AppService/2018/09/10/Announcing-the-New-Auto-Healing-Experience-in-App-Service-Diagnostics.html) 
+
+- [Announcing Auto Heal for Linux](https://azure.github.io/AppService/2021/04/21/Announcing-Autoheal-for-Azure-App-Service-Linux.html)
 
 - [Collect and automate diagnostic actions with Azure App Services](https://devblogs.microsoft.com/premier-developer/collect-and-automate-diagnostic-actions-with-azure-app-services/)
 
@@ -112,11 +114,11 @@ Another feature that's named "Collect a Memory dump" is useful in this scenario 
 
 #### Collect a memory dump feature
 
-To understand the configuration of the Collect a Memory dump feature, see [Collect memory dump app services](https://appserviceblog.com/collect-memory-dump-app-services/). This approach requires manual intervention. The following screenshot shows the **Collect a Memory dump** page.
+This approach requires manual intervention. The following screenshot shows the **Collect a Memory dump** page.
 
 :::image type="content" source="./media/capture-memory-dumps-app-service/collect-memory-dump.png" alt-text="Azure portal screenshot of the 'Collect a Memory dump' page in Diagnostic Tools." lightbox="./media/capture-memory-dumps-app-service/collect-memory-dump.png":::
 
-To use the feature, select a storage account in which to store the memory dump. Then, select which server instance you want to collect the memory dump from. If you have more than a single instance, make sure that the issue that you're debugging is occurring on that instance. Also, this configuration restarts your application. Notice that a restart might not be optimal on a production application that's in operation.
+To use the feature, select a storage account in which to store the memory dump. Then, select which server instance you want to collect the memory dump from. If you have more than a single instance, make sure that the issue that you're debugging is occurring on that instance. Notice that a restart might not be optimal on a production application that's in operation.
 
 #### Crash Monitoring feature
 

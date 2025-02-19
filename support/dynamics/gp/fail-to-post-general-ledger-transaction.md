@@ -1,9 +1,10 @@
 ---
 title: Error when you post a general ledger transaction 
 description: Provides a solution to an error that occurs when you try to post a general ledger transaction.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # Error when you try to post a general ledger transaction: "The Rate Type ID is not associated with the currency ID for this transaction"
 

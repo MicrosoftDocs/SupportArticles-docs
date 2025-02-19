@@ -1,23 +1,19 @@
 ---
 title: Change default MTU size settings for PPP or VPN connections
 description: Describes how to edit the registry to change the default maximum transmission unit (MTU) size settings for Point-to-Point Protocol (PPP) connections or for virtual private network (VPN) connections.
-ms.date: 12/03/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, tode
-ms.custom: sap:remote-access, csstroubleshoot
-ms.technology: windows-client-networking
+ms.custom:
+- sap:network connectivity and file sharing\remote access (vpn,rras,cmak and aovpn)
+- pcy:WinComm Networking
 ---
 # Change the default maximum transmission unit (MTU) size settings for PPP connections or for VPN connections
 
 This article describes how to edit the registry to change the default maximum transmission unit (MTU) size settings for Point-to-Point Protocol (PPP) connections or for virtual private network (VPN) connections.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 826159
 
 ## Summary

@@ -1,23 +1,17 @@
 ---
 title: Error message when you run an old scheduled task or a newly created scheduled task on a Windows Server 2003 Service Pack 2-based domain controller
 description: Describes the problem in which you cannot run an old scheduled task or a newly created scheduled task on a Windows Server 2003 Service Pack 2-based domain controller. A resolution is provided.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, v-sanair
-ms.custom: sap:task-scheduler, csstroubleshoot
-ms.technology: windows-server-system-management-components
+ms.custom: sap:System Management Components\Task Scheduler, csstroubleshoot
 ---
 # Error message when you run an old scheduled task or a newly created scheduled task on a domain controller: "0x8007000d: The data is invalid"
 
 This article provides the resolution for the error message "0x8007000d: The data is invalid" when you run an old scheduled task or newly created scheduled task on a domain controller.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 958837
 
 ## Symptoms

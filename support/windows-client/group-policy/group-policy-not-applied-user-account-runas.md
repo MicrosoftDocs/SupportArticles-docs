@@ -1,23 +1,20 @@
 ---
 title: Group Policy is not applied to a user account for RunAs.exe or "Run as different user"
 description: Provides some information for the issue where group Policy is not applied to a user account for RunAs.exe or "Run as different user"
-ms.date: 09/21/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
-ms.technology: windows-client-group-policy
+ms.custom:
+- sap:group policy\problems applying group policy
+- pcy:WinComm Directory Services
 ---
 # Group Policy is not applied to a user account for RunAs.exe or "Run as different user"
 
 This article provides some information for the issue where Group Policy is not applied to a user account for RunAs.exe or "Run as different user".
 
-_Applies to:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows client (All supported versions)  
 _Original KB number:_ &nbsp; 4569309
 
 ## Summary

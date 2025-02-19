@@ -2,7 +2,7 @@
 title: Error when you install SQL Server 2008 R2
 description: This article provides a resolution for various errors that occur when you try to install SQL Server 2008 R2.
 ms.date: 10/22/2020
-ms.custom: sap:Database Engine
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ---
 # Error message when you try to install SQL Server 2008 R2
 

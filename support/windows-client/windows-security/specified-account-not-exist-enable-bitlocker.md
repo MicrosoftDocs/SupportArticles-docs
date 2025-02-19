@@ -1,17 +1,14 @@
 ---
 title: The specified account does not exist when you try to enable BitLocker
 description: Provides a resolution for the issue that the Specified Account does not exist when you try to enable BitLocker
-ms.date: 09/21/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, manojse, dereka
-ms.custom: sap:bitlocker, csstroubleshoot
-ms.technology: windows-client-security
+ms.custom:
+- sap:windows security technologies\bitlocker
+- pcy:WinComm Devices Deploy
 ---
 # Error when you enable BitLocker: The specified account does not exist
 

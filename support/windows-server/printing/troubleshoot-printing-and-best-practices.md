@@ -1,17 +1,14 @@
 ---
 title: Troubleshoot printing and best practices
 description: Overview of printing troubleshooting and best practices.
-ms.date: 10/12/2021
+ms.date: 01/15/2025
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:errors-and-troubleshooting-general-issues, csstroubleshoot
-ms.technology: windows-server-printing
+ms.custom: sap:Print, Fax, and Scan\Print Performance - failures, crashes, not responsive, csstroubleshoot
 ---
 # Troubleshoot printing problem and printing best practices
 

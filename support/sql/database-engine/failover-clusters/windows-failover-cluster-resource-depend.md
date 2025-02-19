@@ -2,7 +2,7 @@
 title: Windows Failover cluster resource dependencies
 description: This article describes the default resource dependencies in SQL Server and the restrictions on these dependencies.
 ms.date: 07/22/2020
-ms.custom: sap:High Availability and Disaster Recovery features
+ms.custom: sap:Always On Failover Cluster Instance (FCI)
 ms.reviewer: ramakoni
 ---
 

@@ -3,6 +3,7 @@ title: Create, delete, or restore Azure function app resources
 description: Describes some common issues and solutions for creating, deleting, or restoring Azure function apps.
 ms.date: 08/24/2023
 ms.reviewer: gasridha, v-sidong
+ms.custom: sap:Creating or Deleting Function Apps
 ---
 # Resolve issues when creating, deleting, or restoring Azure function apps
 
@@ -47,7 +48,7 @@ Review hosting plan (Consumption, Premium, Dedicated) offerings like virtual net
 
 ### Resolve the error "This region has quota of 0 instances for your subscription. Try selecting different region or SKU"
 
-If you're consistently experiencing resource creation issues in a particular region, try to create the resource in a geographically paired region if your business allows it. For example, *West US 2* and *West Central US* are paired regions. *East Asia (Hong Kong)* and *Southeast Asia (Singapore)* are also paired regions.
+If you're consistently experiencing resource creation issues in a particular region, try to create the resource in a geographically paired region if your business allows it. For example, *West US 2* and *West Central US* are paired regions. *East Asia (Hong Kong SAR)* and *Southeast Asia (Singapore)* are also paired regions.
 
 For more information, see:
 

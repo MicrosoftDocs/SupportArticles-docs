@@ -4,7 +4,6 @@ description: Provides a solution to the code 80040216 error that occurs when you
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
-ms.subservice: d365-sales-custom-solutions
 ---
 # Unexpected error (80040216) when importing solution in Microsoft Dynamics 365
 

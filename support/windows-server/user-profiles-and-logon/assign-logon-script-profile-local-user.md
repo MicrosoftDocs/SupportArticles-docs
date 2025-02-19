@@ -1,23 +1,17 @@
 ---
 title: Assign a logon script to a profile
 description: Describes how to assign a logon script to a profile for a local user.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:user-profiles, csstroubleshoot
-ms.technology: windows-server-user-profiles
+ms.custom: sap:User Logon and Profiles\User profiles, csstroubleshoot
 ---
 # How to assign a logon script to a profile for a local user
 
 This article describes how to assign a logon script to a profile for a local user.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 324803
 
 ## Summary

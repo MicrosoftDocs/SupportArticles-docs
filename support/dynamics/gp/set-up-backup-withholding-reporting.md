@@ -1,9 +1,10 @@
 ---
 title: Set up backup withholding for reporting
 description: Describes the setup steps and the processes for backup withholding for 1099 miscellaneous vendors in Microsoft Dynamics GP.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # How to set up backup withholding for 1099 reporting for miscellaneous vendors in Microsoft Dynamics GP
 

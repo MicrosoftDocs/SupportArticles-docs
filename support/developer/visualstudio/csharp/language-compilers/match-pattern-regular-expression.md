@@ -4,6 +4,7 @@ description: This article describes how to create and use regular expressions to
 ms.date: 04/22/2020
 ms.reviewer: felipeme, broder
 ms.topic: how-to
+ms.custom: sap:Language or Compilers\C#
 ---
 # Match a pattern by using Visual C# and regular expressions
 

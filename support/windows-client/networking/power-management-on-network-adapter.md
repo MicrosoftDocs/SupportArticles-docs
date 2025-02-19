@@ -1,17 +1,14 @@
 ---
 title: Power management setting on a network adapter
 description: This article talks about the power management setting on a network adapter. Provides resolutions to disable the network adapter power management on a single computer.
-ms.date: 06/29/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, scottmca, partset, pachary
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: windows-client-networking
+ms.custom:
+- sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
+- pcy:WinComm Networking
 ---
 # Information about power management setting on a network adapter
 

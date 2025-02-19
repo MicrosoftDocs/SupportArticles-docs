@@ -1,18 +1,17 @@
 ---
 title: Default tax group and cash discount aren't filled in from the invoice account
 description: Introduces a by-design behavior where a default tax group and a default cash discount aren't filled in from the invoice account.
-author: GalynaFedorova
-ms.date: 05/31/2021
-ms.topic: troubleshooting
+author: Henrikan
+ms.date: 05/16/2024
 ms.search.form: PurchTable, PurchTablePart
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: gfedorova
+ms.author: henrikan
 ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.13
+ms.custom: sap:Purchase order procurement and sourcing\Issues with purchase orders
 ---
-
 # Default tax group and cash discount aren't filled in from the invoice account
 
 ## Symptoms

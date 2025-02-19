@@ -1,15 +1,15 @@
 ### YamlMime:Landing
 
-title: Microsoft Dynamics 365 Sales troubleshooting # < 60 chars
-summary: Welcome to Microsoft Dynamics 365 Sales troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Microsoft Dynamics 365 Sales. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+title: Dynamics 365 Sales troubleshooting # < 60 chars
+summary: Welcome to Dynamics 365 Sales troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Dynamics 365 Sales. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
 metadata:
-  title: Microsoft Dynamics 365 Sales troubleshooting
-  description: Landing page for Microsoft Dynamics 365 Sales troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
+  title: Dynamics 365 Sales troubleshooting
+  description: Landing page for Dynamics 365 Sales troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: dynamics-365-sales  #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
-  author:   #Required; your GitHub user alias, with correct capitalization.
-  ms.author:  #Required; microsoft alias of author; optional team alias.
-  ms.date: 01/31/2023
+  author: ChristySu #Required; your GitHub user alias, with correct capitalization.
+  ms.author: christys #Required; microsoft alias of author; optional team alias.
+  ms.date: 10/18/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -62,6 +62,22 @@ landingContent:
             url: the-account-does-not-have-permission-to-impersonate-the-requested-user-error.md
 
  # Card
+  - title: LinkedIn Sales Navigator
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't view photos on custom contact and lead forms in Unified Interface
+            url: lisn-unable-view-photos-custom-contact-lead-forms.md
+          - text: Can't upgrade the LinkedInSalesNavigatorForUnifiedClient solution
+            url: lisn-unable-upgrade-lisn-solution.md
+          - text: Data validation fails when you enable LinkedIn updates
+            url: lisn-error-enabling-linkedin-updates.md
+          - text: LinkedIn Sales Navigator display widgets don't load properly
+            url: lisn-display-widgets-not-loading-properly.md
+          - text: LinkedInSalesNavigatorControlsForUnifiedClient isn't available in the organization
+            url: lisn-solution-not-available-configure-lisn.md    
+
+ # Card
   - title: Sales Hub
     linkLists:
       - linkListType: how-to-guide
@@ -72,6 +88,32 @@ landingContent:
             url: troubleshoot-lead-form-auto-generated-contact-company-fields.md
           - text: Troubleshoot issues with table views
             url: troubleshoot-table-views-issues.md
+
+ # Card
+  - title: Teams Integration
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't enable Teams dialer
+            url: cannot-enable-dialer.md
+          - text: Customers can't hear a seller 
+            url: seller-voice-unheard-by-other-customer.md
+          - text: Duplicate phone calls in Sales accelerator
+            url: duplicate-phone-calls.md
+          - text: Fail to call through contact, account, or lead records
+            url: fail-to-call-through-contact-account-lead.md
+          - text: Seller can't hear customers
+            url: cannot-hear-other-customer.md
+          - text: Seller can't make phone calls to PSTN
+            url: cannot-make-phone-calls-to-pstn.md
+          - text: Troubleshoot Microsoft Teams chat integration with Dynamics 365
+            url: troubleshoot-dynamics365-embedcollab-issues.md
+          - text: Teams dialer basic troubleshooting
+            url: dialer-basic-troubleshooting.md
+          - text: Teams dialer isn't visible in custom app
+            url: dialer-not-available-in-custom-app.md
+          - text: Teams dialer isn't visible in the Sales Hub
+            url: dialer-not-visible-in-sales.md
 
 # Card
   - title: Documentation and training

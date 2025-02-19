@@ -1,23 +1,17 @@
 ---
 title: Communication issues when RD Connection Broker connects to SQL Server
 description: Fixes an issue in which Remote Desktop Connection Broker does not work correctly in Windows Server 2012 R2.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, robertvi
-ms.custom: sap:load-balancing-and-connection-broker, csstroubleshoot
-ms.technology: windows-server-rds
+ms.custom: sap:Remote Desktop Services and Terminal Services\Connection Broker and load balancing, csstroubleshoot
 ---
 # Communication issues occur when Remote Desktop Connection Broker connects to SQL Server in Windows Server 2012 R2
 
 This article provides a solution to an issue in which Remote Desktop Connection Broker does not work correctly in Windows Server 2012 R2.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3020474
 
 ## Symptoms
@@ -60,7 +54,3 @@ The Remote Desktop Connection Broker (RD Connection Broker) has to enable the UD
 ## Resolution
 
 To resolve this issue, add a WFP rule to enable the RD Connection Broker service to use UDP port 1434.
-
-## More information
-
-Check out [how to add a WFP rule to enable the RD Connection Broker to use UDP port 1434](https://gallery.technet.microsoft.com/add-a-wfp-exception-for-9c719d6a).

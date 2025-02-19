@@ -2,7 +2,7 @@
 title: Instructions in FIPS 140-2-compliant mode
 description: This article describes FIPS 140-2 and how to use SQL Server 2008 in the FIPS 140-2-compliant mode.
 ms.date: 11/11/2020
-ms.custom: sap:Security Issues
+ms.custom: sap:Security, Encryption, Auditing, Authorization
 ---
 # Instructions for using SQL Server 2008 in FIPS 140-2-compliant mode
 

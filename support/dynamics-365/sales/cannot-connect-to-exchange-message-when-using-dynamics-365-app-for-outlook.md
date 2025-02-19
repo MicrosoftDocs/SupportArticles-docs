@@ -4,7 +4,6 @@ description: When you use Microsoft Dynamics 365 App for Outlook, you receive a 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
-ms.subservice: d365-sales-email-office-integration
 ---
 # Can't connect to Exchange message appears when using Microsoft Dynamics 365 App for Outlook
 
@@ -37,8 +36,8 @@ This typically occurs when using a Microsoft Exchange on-premises mailbox and ma
     Get-WebServicesVirtualDirectory | FL server,*auth
     ```
 
-3. Verify the results returned show that **OAuthAthentication** is set to **True**.
-4. If `OAuthAthentication` is set to **False**, a command such as the following needs to be run:
+3. Verify the results returned show that **OAuthAuthentication** is set to **True**.
+4. If `OAuthAuthentication` is set to **False**, a command such as the following needs to be run:
 
     ```powershell
     Set-WebServicesVirtualDirectory -Identity "EWS (Default Web Site)" -OAuthAuthentication $true

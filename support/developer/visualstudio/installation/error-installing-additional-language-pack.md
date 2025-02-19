@@ -5,6 +5,7 @@ ms.date: 04/27/2022
 author: jasonchlus
 ms.author: jasonchlus
 ms.reviewer: terry.g.lee
+ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ---
 
 # Error message for installing an additional language pack
@@ -25,4 +26,3 @@ To resolve this error, follow these steps:
 1. Open the **Programs** > **Programs and Features** item.
 1. Look for **Microsoft Visual Studio** in the list of programs.
 1. Make sure that the version that you're trying to install isn't already installed or partially installed.
-

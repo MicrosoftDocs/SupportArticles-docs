@@ -1,23 +1,17 @@
 ---
 title: Programs that use the QueryPerformanceCounter function may perform poorly
 description: Describes a problem that occurs on 32-bit computers and x64-based computers that have the AMD Cool'n'Quiet technology enabled in the BIOS. Provides a resolution.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika,joscon
-ms.custom: sap:performance-monitoring-tools, csstroubleshoot
-ms.technology: windows-server-performance
+ms.custom: sap:System Performance\Performance tools (Task Manager, Perfmon, WSRM, and WPA), csstroubleshoot
 ---
 # Programs that use the QueryPerformanceCounter function may perform poorly
 
 This article provides a resolution to an issue that occurs on 32-bit computers and x64-based computers that have the AMD Cool'n'Quiet technology enabled in the BIOS.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 895980
 
 ## Symptoms

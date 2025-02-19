@@ -2,7 +2,7 @@
 title: Create a SQL Server Database programmatically
 description: This article describes how to create a SQL Server Database programmatically by using ADO.NET and Visual C# .NET.
 ms.date: 10/26/2020
-ms.custom: sap:Language or Compilers
+ms.custom: sap:Language or Compilers\C#
 ms.reviewer: malcolms
 ms.topic: how-to
 ---

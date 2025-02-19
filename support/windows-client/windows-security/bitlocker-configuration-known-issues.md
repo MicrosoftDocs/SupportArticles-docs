@@ -1,16 +1,15 @@
 ---
 title: 'BitLocker configuration: known issues'
 description: Describes common issues that involve your BitLocker configuration and BitLocker's general functionality, and provides guidance for addressing those issues.
-ms.date: 11/21/2022
-ms.reviewer: kaushika, v-tappelgate
-ms.technology: windows-client-security
-ms.prod: windows-client
+ms.date: 01/15/2025
+ms.reviewer: kaushika, v-tappelgate, artemp
 manager: dcscontentpm
 ms.collection: Windows Security Technologies\BitLocker
 ms.topic: troubleshooting
-ms.custom: sap:bitlocker, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\bitlocker
+- pcy:WinComm Devices Deploy
 audience: itpro
-localization_priority: medium
 ---
 # BitLocker configuration: known issues
 
@@ -48,7 +47,7 @@ Several other areas of BitLocker were improved in versions of Windows released a
   - Windows PowerShell
   - Windows Management Interface (WMI)
 
-- **Integration with Azure Active Directory** (Azure AD) -  BitLocker can store recovery information in Azure AD to make it easier to recover.
+- **Integration with Microsoft Entra ID** (Microsoft Entra ID) -  BitLocker can store recovery information in Microsoft Entra ID to make it easier to recover.
 
 - **[Direct memory access (DMA) Port Protection](/windows/security/information-protection/kernel-dma-protection-for-thunderbolt)** - By using MDM policies to manage BitLocker, a device's DMA ports can be blocked which secures the device during its startup.
 
@@ -58,7 +57,7 @@ Several other areas of BitLocker were improved in versions of Windows released a
 
 - **Support for classes of HDD/SSD hybrid disks** - BitLocker can encrypt a disk that uses a small SSD as a non-volatile cache in front of the HDD, such as Intel Rapid Storage Technology.
 
-## Hyper-V Gen 2 VM: Can't access the volume after BitLocker encryption
+## Hyper-V generation 2 VM: Can't access the volume after BitLocker encryption
 
 Consider the following scenario:
 
@@ -76,11 +75,11 @@ Consider the following scenario:
 
       > **You need to format the disk in \<*drive_letter:*> drive before you can use it**
 
-### Cause of not being able to access the volume after BitLocker encryption on a Hyper-V Gen 2 VM
+### Cause of not being able to access the volume after BitLocker encryption on a Hyper-V generation 2 VM
 
 This issue occurs because the third-party filter driver *Stcvsm.sys* (from StorageCraft) is installed on the VM.
 
-### Resolution for not being able to access the volume after BitLocker encryption on a Hyper-V Gen 2 VM
+### Resolution for not being able to access the volume after BitLocker encryption on a Hyper-V generation 2 VM
 
 To resolve this issue, remove the third-party software.
 

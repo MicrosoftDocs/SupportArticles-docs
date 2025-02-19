@@ -1,23 +1,19 @@
 ---
 title: Overview of FAT, HPFS, and NTFS File Systems
 description: Describes the differences between File Allocation Table (FAT), High Performance File System (HPFS), and NT File System (NTFS) under Windows NT, and their advantages and disadvantages.
-ms.date: 12/07/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, markm
-ms.custom: sap:partition-and-volume-management, csstroubleshoot
-ms.technology: windows-client-backup-and-storage
+ms.custom:
+- sap:backup,recovery,disk,and storage\partition and volume management
+- pcy:WinComm Storage High Avail
 ---
 # Overview of FAT, HPFS, and NTFS File Systems
 
 This article explains the differences between File Allocation Table (FAT), High Performance File System (HPFS), and NT File System (NTFS) under Windows NT, and their advantages and disadvantages.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 100108
 
 > [!NOTE]

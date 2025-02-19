@@ -3,7 +3,7 @@ title: SQL Server agent crashes when you try to start it
 description: This article discusses the issues experienced by SQL Server agent service when you create multiple jobs in your SQL Server instance.
 ms.date: 11/08/2022
 ms.reviewer: ramakoni1, v-jayaramanp
-ms.custom: sap:Administration and Management
+ms.custom: sap:Startup, shutdown, restart issues (instance or database)
 ---
 
 # SQL Server agent crashes when you try to start it

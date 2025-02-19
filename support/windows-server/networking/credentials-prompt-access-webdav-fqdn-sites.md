@@ -1,23 +1,17 @@
 ---
 title: Prompt for credentials when you access WebDav-based FQDN sites in Windows
 description: Describes a problem in which you are prompted to enter your credentials when you access an FQDN site on a Windows Vista, Windows 7, or Windows 10-based client computer that has no proxy configured. Provides a resolution.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, tonyga, stevenxu, kishore
-ms.custom: sap:webwindows-client-and-webdav, csstroubleshoot
-ms.technology: networking
+ms.custom: sap:Network Connectivity and File Sharing\WebClient and WebDAV, csstroubleshoot
 ---
 # Prompt for credentials when you access WebDav-based FQDN sites in Windows
 
 This article provides a solution to an issue where you are prompted to enter your credentials when you access Web Distributed Authoring and Versioning (WebDav)-based fully qualified domain names (FQDN) sites in Windows.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 943280
 
 ## Symptoms

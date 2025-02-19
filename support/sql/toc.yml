@@ -27,18 +27,18 @@ items:
 - name: Database Client Programming
   href: connect/toc.yml
 
-- name: General Troubleshooting Information
-  href: general/toc.yml
-
 - name: Integration Services (SSIS)
   href: integration-services/toc.yml
 
 - name: Master Data Services
   items:
+  - name: Issues when modifying entities, attributes, users, or groups  
+    href: master-data-services/performance-improvement-mds.md
   - name: MDS entity-based staging may fail
     href: master-data-services/mds-entity-based-staging-fail.md
   - name: MDS Validate Version command fails
     href: master-data-services/mds-validate-version-command-fails.md
+
 - name: Parallel Data Warehouse (APS)
   items:
   - name: Detect skew on distribution key values

@@ -1,17 +1,14 @@
 ---
 title: URL-encoded UNC paths not URL-decoded in Windows 10, version 1803 and later versions
 description: In Windows 10, version 1803, and later versions of Windows URL-encoded UNC paths are no longer URL-decoded.
-ms.date: 12/04/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, tonyga, ajayps, v-jeffbo
-ms.custom: sap:dns, csstroubleshoot
-ms.technology: windows-client-networking
+ms.custom:
+- sap:network connectivity and file sharing\dns
+- pcy:WinComm Networking
 ---
 # URI-encoding in UNC paths interpreted literally in Windows 10, version 1803 and later
 

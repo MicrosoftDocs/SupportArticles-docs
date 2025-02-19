@@ -1,23 +1,17 @@
 ---
 title: Interactive logon isn't allowed
 description: Provides a solution to an error that occurs when Domain Controller does not allow interactive logon.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, paulhut, nedpyle
-ms.custom: sap:user-logon-fails, csstroubleshoot
-ms.technology: windows-server-user-profiles
+ms.custom: sap:User Logon and Profiles\Service Account and Interactive User Logon Issues and Credential Providers, csstroubleshoot
 ---
 # Domain Controller doesn't allow interactive logon, shows an error: The security database on the server does not have a computer account for this workstation trust relationship
 
 This article provides a solution to an error that occurs when Domain Controller does not allow interactive logon.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2015518
 
 ## Symptoms

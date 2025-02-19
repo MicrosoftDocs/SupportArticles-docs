@@ -1,13 +1,13 @@
 ---
 title: Orchestrator integration packs stop working
 description: Describes an issue in which System Center Orchestrator integration packs don't work together with TLS 1.2 connections.
-ms.date: 08/04/2020
+ms.date: 06/26/2024
 ---
 # System Center Orchestrator integration packs stop working if TLS 1.2 is used
 
 This article helps you fix an issue where Orchestrator integration packs stop working if TLS 1.2 protocol is used for connections.
 
-_Original product version:_ &nbsp; System Center Orchestrator version 1807, System Center Orchestrator version 1801, System Center 2016 Orchestrator  
+_Applies to:_ &nbsp; All versions of Orchestrator  
 _Original KB number:_ &nbsp; 4494803
 
 ## Symptoms

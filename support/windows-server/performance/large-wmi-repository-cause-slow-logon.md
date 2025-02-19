@@ -1,23 +1,17 @@
 ---
 title: Large WMI repository causes slow logon
 description: Provides help to solve slow logon process that occurs when users log on to the Remote Desktop servers.
-ms.date: 05/16/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, Ajayps, v-jesits
-ms.custom: sap:boot-is-slow, csstroubleshoot
-ms.technology: windows-server-performance
+ms.custom: sap:System Performance\Startup or Pre-logon Performance (slow, unresponsive, spinning circle, blank screen), csstroubleshoot
 ---
 # Unexpectedly slow logon caused by large WMI repository in Windows or Windows Server
 
 This article provides help to solve slow logon process that occurs when users log on to the Remote Desktop servers.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2020286
 
 ## Symptoms

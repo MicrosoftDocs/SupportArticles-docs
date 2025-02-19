@@ -1,8 +1,9 @@
 ---
 title: How payments that have zero are treated
 description: Describes that remittances are printed for payments that have amounts of zero in Payables Management.
-ms.reviewer:
-ms.date: 03/31/2021
+ms.reviewer: theley
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # How payments that have amounts of zero are treated in Payables Management in Microsoft Dynamics GP
 

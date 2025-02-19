@@ -1,17 +1,14 @@
 ---
 title: Redirecting the user's Documents folder to their home directory fails when Grant the user exclusive rights to Documents is selected
 description: Fixes an issue where you can't redirect the user's Documents folder to their home directory.
-ms.date: 09/07/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kimnich, kaushika
-ms.custom: sap:folder-redirection-and-offline-files-and-folders-csc, csstroubleshoot
-ms.technology: windows-client-networking
+ms.custom:
+- sap:network connectivity and file sharing\offline files and folders (csc)
+- pcy:WinComm Networking
 ---
 # Redirecting the user's Documents folder to their home directory fails when Grant the user exclusive rights to Documents is selected
 

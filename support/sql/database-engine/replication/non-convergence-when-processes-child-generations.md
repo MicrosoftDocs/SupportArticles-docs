@@ -2,7 +2,7 @@
 title: Non-convergence when SQL Server processes child generations
 description: This article provides workarounds for the Non-convergence problem that occurs when SQL Server processes child and parent generations in separate generation batches.
 ms.date: 01/20/2021
-ms.custom: sap:Replication, change tracking, change data capture
+ms.custom: sap:Replication, Change Tracking, Change Data Capture, Synapse Link
 ---
 # Non-convergence when SQL Server processes child and parent generations in separate generation batches
 

@@ -5,6 +5,7 @@ ms.date: 04/07/2022
 author: jasonchlus
 ms.author: jasonchlus
 ms.reviewer: terry.g.lee
+ms.custom: sap:Installation\Other
 ---
 
 # You sign in to the IDE, but it still tells you that the trial will expire

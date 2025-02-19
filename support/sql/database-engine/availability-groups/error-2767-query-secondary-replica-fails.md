@@ -3,6 +3,7 @@ title: Error 2767 when query against the secondary replica fails
 description: Works around an issue that a query on the secondary replica fails with error 2767 - Could not locate statistics when offloading read-only workloads to a secondary replica.
 ms.date: 12/29/2022
 ms.reviewer:  
+ms.custom: sap:Always On Availability Groups (AG)
 ---
 
 # Error 2767 "Could not locate statistics" when query against the secondary replica fails

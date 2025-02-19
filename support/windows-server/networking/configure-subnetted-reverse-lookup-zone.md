@@ -1,29 +1,23 @@
 ---
-title: configure a subnetted reverse lookup zone
+title: Configure a subnetted reverse lookup zone
 description: Describes how to configure a subnetted reverse lookup zone.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, drewba
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: networking
+ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 ---
 # How to configure a subnetted reverse lookup zone
 
 This article describes how to configure a subnetted reverse lookup zone.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 174419
 
 ## Summary
 
 >[!NOTE]
->Creating delegated subnetted reverse lookup zones is not a trivial task. It is important to understand how DNS zones work before attempting to create subnetted reverse lookup zones. There are numerous notes throughout this document to which you should pay close attention. It is recommended that you first attempt these procedures in a test environment before deploying them on a live network because of the ease with which mistakes can occur during configuration.
+>Creating delegated subnetted reverse lookup zones is not a trivial task. It is important to understand how Domain Name System (DNS) zones work before attempting to create subnetted reverse lookup zones. There are numerous notes throughout this document to which you should pay close attention. It is recommended that you first attempt these procedures in a test environment before deploying them on a live network because of the ease with which mistakes can occur during configuration.
 
 The rapid growth of the Internet community created the need to subnetwork full IP networks into smaller portions. In a subnetted environment, DNS servers can easily delegate authority of forward lookup zones because they are independent of the underlying subnetted infrastructure. However, because of the inverse structure of reverse lookup zones and their strict reliance on the specific subnet structure, delegation of these zones requires special considerations. The Internet Engineering Task Force (IETF) has created RFC 2317, "Classless IN-ADDR.ARPA Delegation," which discusses these considerations.
 
@@ -107,155 +101,41 @@ Here is the example we will use of an ISP who has taken a Class C range and subn
  |128-26
  |192-26
 
-### The parent walkthrough for Windows 2000 and Windows Server 2003 environments
+### The parent walkthrough for Windows DNS Server environments
 
-Launch the DNS MMC (Microsoft Management Console). Under view, change from standard view to advanced. Highlight Reverse Lookup Zones, right-click, and select new zone. Select Zone Type of Active Directory Integrated or Standard Primary, click next. Type in either the non-subnetted network ID (for example, 192.168.100) or the reverse lookup zone name (for example, 100.168.192.in-addr.arpa) for the non-subnetted class C address, click next. If you selected standard primary, you can either create a new zone file or if there is an existing zone file, you can place it in the %systemroot%\winnt\system32\dns directory and the server will read it from that directory. Once the primary parent zone is created, right-click on the newly created zone, and select new delegation. Add the naming convention you choose as the parent for the delegated child zone, for example, 64-26. Be sure to communicate that naming convention to the administrator of the child domain. See examples. Add the CNAME (ALIAS) RR (resource records) for the devices within each of the subnets. For example:  
+1. Launch the DNS snap-in in Microsoft Management Console (MMC).
+2. Under **View**, change from standard view to **Advanced**.
+3. Right-click **Reverse Lookup Zones**, and select **New Zone**.
+4. Select **Zone Type** of Active Directory Integrated or Standard Primary, click **Next**.
+5. Type in either the non-subnetted network ID (for example, 192.168.100) or the reverse lookup zone name (for example, 100.168.192.in-addr.arpa) for the non-subnetted class C address, select **Next**.
+6. If you selected standard primary, you can either create a new zone file or if there is an existing zone file, you can place it in the %systemroot%\system32\dns directory and the server will read it from that directory.
+7. Once the primary parent zone is created, right-click the newly created zone, and select **New delegation**. Add the naming convention you choose as the parent for the delegated child zone, for example, 64-26. Be sure to communicate that naming convention to the administrator of the child domain. See examples.
+8. Add the CNAME (ALIAS) RR (resource records) for the devices within each of the subnets. For example:
 
-65 CNAME 65.64-26.100.168.192.in-addr.arpa.
-> [!NOTE]
-> Dynamic updates for subnetted reverse lookups do not work in Windows 2000. The records will need to be added manually. Using "Create Associated PTR record" checkbox will not work for the subnetted reverse lookup zone when "A" (host) record is created through GUI.
+   `65 CNAME 65.64-26.100.168.192.in-addr.arpa.`
 
-### The parent walkthrough for Windows NT 4.0 environments
+   > [!NOTE]
+   > Dynamic updates for subnetted reverse lookups do not work. The records will need to be added manually. Using "Create Associated PTR record" checkbox will not work for the subnetted reverse lookup zone when "A" (host) record is created through GUI.
 
-> [!NOTE]
-> The Microsoft DNS Manager can be used to set up the reverse lookup zone for that name server, as well as the subnetted reverse lookup zone or zones. After the in-addr.arpa zone and the subnetted in-addr.arpa zone(s) are created, the files will need to be manually edited to include the NS, CNAME, and PTR records in each zone file.
+### The child walkthrough for Windows DNS Server environments
 
-> [!NOTE]
-> Several prerequisites are assumed in this example. It is assumed that the Microsoft DNS server has been installed and that the TCP/IP properties (IP Address, Subnet Mask, Default Gateway, and so on) have been configured correctly.
+1. Launch the DNS snap-in in Microsoft Management Console (MMC).
+2. Under **View**, change from standard view to **Advanced**.
+3. Right-click **Reverse Lookup Zones**, and select **New Zone**.
+4. Select the **Zone Type**: either **Active Directory-Integrated** or **Standard Primary**, and select **Next**.
+5. Select the option for the **Reverse Lookup Zone Name**. Enter the name of the reverse lookup zone, for example, `64-26.100.168.192.in-addr.arpa` for the subnetted Class C address. Make sure to follow the naming convention supplied by the administrator of the parent domain. Select **Next**.
+6. If you selected **Standard Primary**, you can either:
+   - Create a new zone file, or
+   - Use an existing zone file by placing it in the `%systemroot%\system32\dns` directory, where the server reads it from.
+7. Manually add your PTR (pointer) records to the reverse lookup zone. For example:  
+   `65 PTR host65.msn.com`
+8. If needed, configure the child DNS server (hosting the delegated zone) to forward requests to the parent DNS servers. This allows the child DNS servers to resolve records in zones hosted by the parent DNS servers.
 
-1. Apply the latest Microsoft Windows NT Service Pack.
-2. Restart your computer when prompted.
-3. Click Start, select Programs, select Administrative Tools, and then click DNS Manager.
-4. On the DNS menu, click New Server, type the IP address or host name of your DNS server, and then click OK.
-5. Create the non-subnetted reverse lookup zone using the following steps:
-      1. Click your DNS server, and then click New Zone on the DNS menu.
-      2. Click the Primary radio button in the Creating New Zone dialog box, and then click Next.
-      3. Type 100.168.192.in-addr.arpa in the Zone Name text box, and then press TAB.
-      4. The Zone File text box should automatically be populated with 100.168.192.in-addr.arpa.dns.
-      5. Click Finish.
-6. When you have finished creating the zones, stop the DNS Server using either of the following methods:
-   - Click Start, point to Settings, click Control Panel, and then double-click the Services icon. Select Microsoft DNS Server in the Service list and click Stop.
-   - Type the following command at a command prompt and press Enter:  
-    `NET STOP DNS`
+### Reverse Lookup Zone Configuration
 
-    > [!NOTE]
-    > It is important to stop the DNS service before editing the Zone files or you may lose manually recorded information.
-7. With a text editor, open the non-subnetted reverse lookup zone file that you have created. We now need to add an NS record that will delegate a subnet to the child DNS server. Add the following to the end of the file:
+If the Reverse Lookup Zone isn't an Active Directory-integrated zone (file-based zone), you can open the zone file located at %systemroot%\system32\dns\*Zonename.in-addr.arpa*. The file appears as shown in the following example:
 
-    >; Begin Delegation comments  
-    ;  
-    \<subnet>\<syntax>\<subnet mask bit count> NS \<Child DNS server name>  
-    ; End delegation  
-
-    Our example will look like this:
-
-    >; Begin Delegation sub-zone: 64-26.100.168.192.in-addr.arpa.  
-    ;  
-    64-26 `NSNS1.msn.com`.  
-    ; End delegation  
-
-8. It is now necessary to create a CNAME record for each address in the delegated subnetted range. Our example looks like this:
-
-     65 CNAME 65.64-26.100.168.192.in-addr.arpa.  
-     66 CNAME 66.64-26.100.168.192.in-addr.arpa.  
-     67 CNAME 67.64-26.100.168.192.in-addr.arpa.  
-     68 CNAME 68.64-26.100.168.192.in-addr.arpa.  
-     69 CNAME 69.64-26.100.168.192.in-addr.arpa.  
-     ...  
-     126 CNAME 126.64-26.100.168.192.in-addr.arpa.  
-
-    > [!NOTE]
-    > The ellipse, "...", indicates the unique IP addresses and hosts between 67 and 126. Ellipses are not valid in the file.
-9. By repeating steps 7 and 8, you may delegate any additional subnetted zones.
-10. After the NS and CNAME records have been entered, save and exit the file.
-11. Start the DNS server using one of the following methods:  
-
-    - Click Start, point to Settings, click Control Panel, and then double-click the Services icon. Select Microsoft DNS Server in the Service list and click Start.
-    - Type the following command at a command prompt and press Enter:  
-    `NET START DNS`
-
-### The child walkthrough for Windows 2000 and Windows Server 2003 environments
-
-1. Launch the DNS MMC (Microsoft Management Console).
-2. Under view, change from standard view to advanced.
-3. Highlight Reverse Lookup Zones, right click, and select new zone.
-4. Select Zone Type of Active Directory Integrated or Standard Primary, click next.
-5. Select the option for the "Reverse lookup zone name". Type in the name of the reverse lookup zone, for example, 64-26.100.168.192.in-addr.arpa for the subnetted class C address. Be sure to use the naming convention supplied by the administrator of the parent domain, click next.
-6. If you selected standard primary, you can either create a new zone file or if there is an existing zone file, you can place it in the %systemroot%\winnt\system32\dns directory and the server will read it from that directory.
-7. Manually add your PTR (pointer records) as you would any reverse lookup zone.
-
-    For example:  
-    65 PTR `host65.msn.com`
-
-8. You may have to configure the child DNS server(s), which are hosting the delegated zone, to forward to the parent DNS servers. This process enables the child DNS servers to resolve records in the zones hosted by the parent DNS servers.
-
-### The child walkthrough for Windows NT 4.0 environments
-
-1. Apply the latest Microsoft Windows NT Service Pack.
-2. Restart your computer when prompted.
-3. Click Start, select Programs, select Administrative Tools, and then click DNS Manager.
-4. On the DNS menu, click New Server, type the IP address or host name of your DNS server, and then click OK.
-5. Create a subnetted reverse lookup zone using the following steps:  
-
-    1. Click your DNS server, and then click New Zone on the DNS menu.
-    2. Click the Primary radio button in the Creating New Zone dialog box, and then click Next.
-    3. Depending on the syntax chosen at the Parent, select one of pairs listed below. For our example, we'll type "64-26.100.168.192.in-addr.arpa" (without the quotation marks) in the Zone Name text box, and then press Tab.  
-
-        >Zone Name: 64-26.100.168.192.in-addr.arpa
-         Zone File: 64-26.100.168.192.in-addr.arpa.dns or
-        >
-        >Zone Name: 64/26.100.168.192.in-addr.arpa
-         Zone File: 64.26.100.168.192.in-addr.arpa.dns or
-        >
-        >Zone Name: 64.26.100.168.192.in-addr.arpa
-         Zone file: 64.26.100.168.192.in-addr.arpa.dns or
-        >
-        >Zone Name: 64.100.168.192.in-addr.arpa
-         Zone file: 64.100.168.192.in-addr.arpa.dns or
-        >
-        >Zone Name: Subnet64.100.168.192.in-addr.arpa
-         Zone file: Subnet64.100.168.192.in-addr.arpa.dns or
-
-        > [!NOTE]
-        > Microsoft DNS Administrator will automatically populate the File Name field when creating zones. If you use the "/" syntax, please be sure to change the filename and replace the "/" character because the underlying file system will not allow a "/" in the file name. Simply substitute the slash character in the filename with another character such as the one suggested in the second example above (64.26.100.168.192.in-addr.arpa.dns).
-    4. The Zone File text box should automatically be populated with 64-26.100.168.192.in-addr.arpa.dns.
-    5. Click Finish.
-    6. Repeat steps a through e, for any additional subnets to being delegated to you.
-6. When you have finished creating the zones, stop the DNS server using either of the following methods:  
-
-   - Click Start, select Settings, click Control Panel, and then double-click the Services icon. Select Microsoft DNS Server in the Service list and click Stop.
-   - Type the following command at a command prompt and press Enter:  
-    `NET STOP DNS`
-
-    > [!NOTE]
-    > It is important to stop the DNS service before editing the Zone files or you may lose manually recorded information.
-7. Open the subnetted reverse lookup zone file using a text editor. It is now necessary to create the PTR records for each address in the delegated subnetted range. Add the following to the end of the file:  
-
-    >65 PTR `host65.msn.com.`  
-     66 PTR `host66.msn.com.`  
-     67 PTR `host67.msn.com.`  
-     ...  
-     126 PTR `host126.msn.com.`  
-
-    > [!NOTE]
-    > The ellipse, "...", indicates the unique IP addresses and hosts between 67 and 126. Ellipses are not valid in the file.
-8. After the PTR records have been entered, save and exit the file.
-9. Restart the DNS server using one of the following methods:
-   - Click Start, point to Settings, click Control Panel, and then double-click the Services icon. Select Microsoft DNS Server in the Service list and click Start.
-   - Type the following command at a command prompt and press Enter:
-    `NET START DNS`
-
-10. Hosts on the Internet should now be able to perform a reverse lookup for IP addresses in the delegated reverse lookup zone. One last series of steps is required in order for hosts that use the Customer Site DNS to be able to perform the reverse lookups correctly. It is necessary that a copy of the non-subnetted zone be present on the child domain DNS server. The easiest way to do it is to become a secondary zone to the ISP. Create the secondary zone using the following steps:  
-
-    1. Click your DNS server, and then click New Zone on the DNS menu.
-    2. Click the Secondary radio button in the Creating New Zone dialog box.
-    3. For Zone: enter 100.168.192.in-addr.arpa and for Server: enter the \<Parent DNS server IP>. For our example, it is 192.168.43.8. Click Next.
-    4. For Zone Name: enter 100.168.192.in-addr.arpa and for Zone File: enter 100.168.192.in-addr.arpa.dns. Click Next.
-    5. In the IP Masters field, again enter the \<Parent DNS server IP>. For our example it is 192.168.43.8. Click Add, Click Next, and then Click Finish.  
-
-11. You may have to configure the child DNS server(s), which are hosting the delegated zone, to forward to the parent DNS servers. This process enables the child DNS servers to resolve records in the zones hosted by the parent DNS servers.
-
-### Sample zone files
+#### Sample zone files
 
 #### Parent subnetted reverse lookup zone file
 

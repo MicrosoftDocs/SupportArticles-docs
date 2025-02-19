@@ -5,7 +5,6 @@ author: sbmjais
 ms.author: shjais
 ms.topic: troubleshooting
 ms.date: 02/28/2022
-ms.subservice: d365-sales-sales
 ---
  
 # Troubleshoot issues with Dynamics 365 Sales Professional
@@ -47,7 +46,7 @@ There are several possible reasons for this error:
 
 - You aren't using the complete sign-up URL, but are using the reply URL present in the sign-up URL. For example, you're using `https://salesprotrial.dynamics.microsoft.com` instead of [https://signup.microsoft.com/Signup?sku=9c7bff7a-3715-4da7-88d3-07f57f8d0fb6&RU=https://salesprotrial.dynamics.microsoft.com](https://signup.microsoft.com/Signup?sku=9c7bff7a-3715-4da7-88d3-07f57f8d0fb6&RU=https://salesprotrial.dynamics.microsoft.com).
 
-- The Sales Professional trial license that's assigned to you as part of the sign-up process isn't synced with Azure Active Directory.
+- The Sales Professional trial license that's assigned to you as part of the sign-up process isn't synced with Microsoft Entra ID.
 
 ### Resolution
 

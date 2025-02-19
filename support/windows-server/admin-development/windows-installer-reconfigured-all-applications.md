@@ -1,23 +1,17 @@
 ---
 title: Windows Installer reconfigured all applications
 description: Fixes an error that indicates the Windows Installer reconfigured all installed applications.
-ms.date: 09/23/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:windows-management-instrumentation-wmi, csstroubleshoot
-ms.technology: windows-server-administration-management-development
+ms.custom: sap:System Management Components\WMI management and troubleshooting, csstroubleshoot
 ---
 # Event log message indicates that the Windows Installer reconfigured all installed applications
 
 This article helps fix slow system startup or slow login issues that occur when a group policy with a WMIFilter or installed application queries the `Win32_Product` class.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 974524
 
 ## Symptom

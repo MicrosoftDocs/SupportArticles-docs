@@ -1,17 +1,14 @@
 ---
 title: How to enable diagnostic logging for the Windows Security app
 description: Describes how to enable diagnostic logging for Windows Security
-ms.date: 09/14/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:windows-firewall-with-advanced-security-wfas, csstroubleshoot
-ms.technology: windows-client-security
+ms.custom:
+- sap:network connectivity and file sharing\windows firewall with advanced security (wfas)
+- pcy:WinComm Networking
 ---
 # How to enable diagnostic logging for the Windows Security app
 

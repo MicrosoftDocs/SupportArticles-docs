@@ -2,10 +2,9 @@
 title: Failure scenarios related to Azure Web App tasks
 description: Provides resolutions for some errors related to Azure Web App tasks.
 ms.date: 05/10/2023
-ms.custom: sap:Pipelines
+ms.custom: sap:Pipelines - Deploying applications to Azure services
 ms.reviewer: dmittal, cathmill, v-sidong
 ms.service: azure-devops
-ms.subservice: ts-pipelines
 ---
 # Failure scenarios related to Azure Web App tasks
 

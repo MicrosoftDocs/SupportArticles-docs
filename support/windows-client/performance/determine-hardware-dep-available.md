@@ -1,23 +1,19 @@
 ---
 title: Determine hardware DEP is available
 description: Describes the requirements for using hardware-enforced DEP. Also describes how to confirm that hardware DEP is working.
-ms.date: 09/27/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, chrisw, patste, mmill
-ms.custom: sap:performance-monitoring-tools, csstroubleshoot
-ms.technology: windows-client-performance
+ms.custom:
+- sap:system performance\performance tools (task manager,perfmon,wsrm,and wpa)
+- pcy:WinComm Performance
 ---
 # How to determine that hardware DEP is available and configured on your computer
 
 This article describes how to determine that hardware DEP is available and configured on your computer.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 912923
 
 ## Introduction

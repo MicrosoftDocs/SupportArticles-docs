@@ -2,8 +2,9 @@
 title: EFT for Payables Management bank groups corresponds to EFT format types
 description: This article describes the EFT for Payables Management format types in Microsoft Dynamics GP 10.0 and how they correspond to the bank groups in Microsoft Dynamics GP 9.0.
 ms.topic: how-to
-ms.reviewer: cwaswick
-ms.date: 03/31/2021
+ms.reviewer: theley, cwaswick
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # How EFT for Payables Management bank groups in Microsoft Dynamics GP 9.0 correspond to EFT format types in Microsoft Dynamics GP 10.0
 
@@ -82,4 +83,3 @@ The following table matches Microsoft Dynamics GP 9.0 bank groups to the corresp
 |Not available|US - NACHA-CCD+|
 |Not available|IS0 20022-Domestic, Low-Value|
 |Not available|User-Defined|
-  

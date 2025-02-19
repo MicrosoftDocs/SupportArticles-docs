@@ -1,23 +1,17 @@
 ---
 title: Slow boot and services start failure
 description: provides a workaround for an issue that causes slow boot and services fail to start.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, tode
-ms.custom: sap:boot-is-slow, csstroubleshoot
-ms.technology: windows-server-performance
+ms.custom: sap:System Performance\Startup or Pre-logon Performance (slow, unresponsive, spinning circle, blank screen), csstroubleshoot
 ---
 # Http <-> Crypto deadlock causes slow boot and service start failure on SSL-enabled
 
 This article provides a workaround for an issue that causes slow boot and services fail to start.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2004121
 
 ## Symptoms

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot application protection in DPM
 description: Describes how to troubleshoot issues that may occur in application protection in Data Protection Manager.
-ms.date: 07/27/2020
+ms.date: 04/08/2024
 ms.reviewer: mjacquet, jarrettr
 ---
 # Troubleshoot application protection in System Center Data Protection Manager

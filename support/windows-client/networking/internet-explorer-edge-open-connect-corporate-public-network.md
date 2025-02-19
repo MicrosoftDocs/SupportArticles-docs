@@ -1,23 +1,19 @@
 ---
 title: An Internet Explorer or Edge window opens when your computer connects to a corporate network or a public network
 description: When you connect a computer that's running Windows 8 or later to a network under certain conditions, you may see a sign-in page or the MSN Portal page.
-ms.date: 12/07/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, v-tea, v-jesits, dantes, arrenc
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: windows-client-networking
+ms.custom:
+- sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
+- pcy:WinComm Networking
 ---
 # An Internet Explorer or Edge window opens when your computer connects to a corporate network or a public network
 
 This article provides some information about the issue where an Internet Explorer or Edge window opens when your computer connects to a corporate network or a public network.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4494446
 
 ## Symptoms

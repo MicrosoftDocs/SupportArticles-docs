@@ -1,9 +1,10 @@
 ---
 title: Reports Dictionary must be upgraded
 description: Provides a solution to an error that occurs when you try to sign in to Microsoft Dynamics GP after you copy the reports.dic file to a shared location.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # "Reports Dictionary must be upgraded" Error message when you try to sign in to Microsoft Dynamics GP after you copy the reports.dic file to a shared location
 

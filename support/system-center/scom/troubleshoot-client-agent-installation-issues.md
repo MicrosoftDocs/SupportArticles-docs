@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot client agent installation issues
 description: Troubleshoot issues that the client agent of System Center 2012 Operations Manager (OpsMgr 2012 and OpsMgr 2012 R2) can't be installed.
-ms.date: 09/02/2020
+ms.date: 04/15/2024
 ---
 # Troubleshoot client agent installation issues in Operations Manager
 

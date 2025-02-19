@@ -3,6 +3,7 @@ title: Invalid entries passed to switch
 description: Provides a workaround for an issue where you receive an error message like invalid entries passed to /FilterFeatureSelectionTree or /InstallSelectableItems switch.
 ms.date: 05/20/2022
 ms.reviewer: v-sidong
+ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ---
 
 # Invalid entries passed to /FilterFeatureSelectionTree and /InstallSelectableItems switch

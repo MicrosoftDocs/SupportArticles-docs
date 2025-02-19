@@ -1,9 +1,10 @@
 ---
 title: Long integer out of range
 description: Provides a solution to an error that occurs when you print an edit list or post in Payables Management in Microsoft Dynamics GP.
-ms.reviewer: cwaswick, lmuelle
+ms.reviewer: theley, cwaswick, lmuelle
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # "Long integer out of range" Error when you print an edit list or post in Payables Management in Microsoft Dynamics GP
 

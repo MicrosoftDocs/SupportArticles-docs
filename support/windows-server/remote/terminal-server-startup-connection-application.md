@@ -1,23 +1,17 @@
 ---
 title: Terminal Server startup, connection, and application
 description: Describes the initialization process of a Terminal Server and describes what occurs when a user connects to the server and runs an application.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, willgloy
-ms.custom: sap:administration, csstroubleshoot
-ms.technology: windows-server-rds
+ms.custom: sap:Remote Desktop Services and Terminal Services\Deployment, configuration, and management of Remote Desktop Services infrastructure, csstroubleshoot
 ---
 # Terminal Server Walkthrough: Startup, Connection, and Application
 
 This article describes the initialization process of a Terminal Server and describes what occurs when a user connects to the server and runs an application.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 186572
 
 ## Windows Terminal Server Initialization

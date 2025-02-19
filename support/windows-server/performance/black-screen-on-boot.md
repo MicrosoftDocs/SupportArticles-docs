@@ -1,23 +1,17 @@
 ---
 title: Black screen on boot
 description: Provides a solution to an issue where restarting a Windows x86-based computer fails with black screen.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, mjacquet
-ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
-ms.technology: windows-server-performance
+ms.custom: <sap>System Performance\Startup or Pre-logon Reliability (crash, errors, bug check or Blue Screen)</sap>, csstroubleshoot
 ---
 # Black screen on boot
 
 This article provides a solution to an issue where restarting a Windows x86-based computer fails with black screen.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 155053
 
 ## Symptoms

@@ -1,15 +1,14 @@
 ---
 title: Group membership changes do not update over some VPN connections
 description: Describes a situation in which VPN users might experience resource access or configuration problems after their group membership changes.
-ms.date: 03/31/2021
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-ms.technology: windows-client-group-policy
-ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
-ms.reviewer: kaushika, v-tappelgate
-localization_priority: medium
+ms.custom:
+- sap:group policy\problems applying group policy
+- pcy:WinComm Directory Services
+ms.reviewer: kaushika, v-tappelgate, esolomou
 keywords: group policy, group membership
 ---
 
@@ -17,7 +16,7 @@ keywords: group policy, group membership
 
 This article describes a situation in which VPN users might experience resource access or configuration problems after their group membership changes.
 
-_Applies to:_ &nbsp; Windows 10, all SACs
+_Applies to:_ &nbsp; All supported versions of Windows Client
 
 ## Symptoms
 

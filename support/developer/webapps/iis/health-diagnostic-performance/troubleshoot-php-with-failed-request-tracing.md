@@ -5,6 +5,7 @@ ms.date: 11/15/2009
 ms.author: haiyingyu
 author: HaiyingYu
 ms.reviewer: johnhart, riande
+ms.custom: sap:Health, Diagnostic, and Performance Features\Failed Request Tracing
 ---
 # Troubleshoot PHP errors with Failed Request Tracing
 

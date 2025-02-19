@@ -1,9 +1,10 @@
 ---
 title: Description of how to use named printers
 description: Describes how to use named printers to enable printer destination selection and to enable various printer tasks in Microsoft Dynamics GP.
-ms.reviewer: kyouells
+ms.reviewer: theley, kyouells
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Description of how to use named printers to enable printer destination selection and to enable various printer tasks in Microsoft Dynamics GP
 

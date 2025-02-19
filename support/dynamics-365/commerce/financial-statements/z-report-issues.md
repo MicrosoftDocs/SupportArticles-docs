@@ -6,6 +6,7 @@ ms.author: josaw
 ms.reviewer: shajain, brstor
 ms.date: 09/01/2023
 ms.search.form: RetailStatements_Posting, RetailStatements_CustomerOrderCreation
+ms.custom: sap:Financial statements\Issues with statement posting
 ---
 # Issues with the data reconciliation of a Z report
 

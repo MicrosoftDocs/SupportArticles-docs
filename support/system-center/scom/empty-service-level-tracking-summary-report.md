@@ -1,7 +1,7 @@
 ---
 title: The Service Level Tracking Summary report is empty
 description: Fixes an issue in which a Service Level Tracking Summary report in Operations Manager is empty if you don't select Today for the TO date.
-ms.date: 09/02/2020
+ms.date: 04/15/2024
 ms.reviewer: mihsar
 ---
 # The Service Level Tracking Summary report may be empty if Today isn't selected for the TO date

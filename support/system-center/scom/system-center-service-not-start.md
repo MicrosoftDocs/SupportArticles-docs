@@ -1,7 +1,7 @@
 ---
 title: A service doesn't start after applying update 2677070
 description: Describes a problem in which the System Center Data Access service or the System Center Management Configuration service doesn't start with a time-out error.
-ms.date: 07/06/2020
+ms.date: 04/15/2024
 ms.reviewer: cwallen, adoyle
 ---
 # A System Center service may not start after applying the update 2677070

@@ -1,23 +1,17 @@
 ---
 title: Install RDS role service without Connection Broker
 description: Guidelines for installing the RDSH  and RD license server role services on a computer running Windows Server (DC or workgroup) without the RD Connection Broker role service.
-ms.date: 04/06/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:administration, csstroubleshoot
-ms.technology: windows-server-rds
+ms.custom: sap:Remote Desktop Services and Terminal Services\Deployment, configuration, and management of Remote Desktop Services infrastructure, csstroubleshoot
 ---
 # Install Remote Desktop Session Host role service in Windows Server without Connection Broker role service
 
 This article provides guidelines to install and configure the Remote Desktop Session Host role service on a computer that is running Windows Server 2019, Windows Server 2016, or Windows Server 2012 R2 without the Remote Desktop Connection Broker role service installed.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2833839
 
 ## Summary

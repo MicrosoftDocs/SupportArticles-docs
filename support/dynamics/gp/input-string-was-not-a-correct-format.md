@@ -1,9 +1,10 @@
 ---
 title: Input string was not in a correct format 
 description: Provides a solution to an error that occurs in Integration Manager for Microsoft Dynamics GP.
-ms.reviewer: grwill, dlanglie
+ms.reviewer: theley, grwill, dlanglie
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # "Input string was not in a correct format" Error message in Integration Manager for Microsoft Dynamics GP
 

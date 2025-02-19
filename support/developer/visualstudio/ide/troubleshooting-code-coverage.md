@@ -5,6 +5,7 @@ ms.date: 02/23/2022
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: mikejo
+ms.custom: sap:Integrated Development Environment (IDE)\Code Editor
 ---
 # Troubleshoot code coverage
 

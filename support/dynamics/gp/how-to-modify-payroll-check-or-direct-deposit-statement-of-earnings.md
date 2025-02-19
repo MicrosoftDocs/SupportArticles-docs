@@ -1,9 +1,10 @@
 ---
 title: How to modify Payroll Check or Direct Deposit Statement of Earnings to pull Attendance Balances from Human Resources
 description: How to modify the Payroll Check or Direct Deposit Statement of Earnings to pull Attendance Balances from Human Resources in Microsoft Dynamics GP.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Payroll
 ---
 # How to modify the Payroll Check or Direct Deposit Statement of Earnings to pull Attendance Balances from Human Resources in Microsoft Dynamics GP
 

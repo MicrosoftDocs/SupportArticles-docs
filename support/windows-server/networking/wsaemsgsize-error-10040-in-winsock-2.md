@@ -1,23 +1,17 @@
 ---
 title: WSAEMSGSIZE - Error 10040 in Winsock 2.0
 description: Describes how to fix WSAEMSGSIZE - Error 10040 in Winsock 2.0
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: networking
+ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 ---
 # WSAEMSGSIZE - Error 10040 in Winsock 2.0
 
 This article helps to fix WSAEMSGSIZE - Error 10040 in Winsock 2.0.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 225004
 
 ## Symptoms

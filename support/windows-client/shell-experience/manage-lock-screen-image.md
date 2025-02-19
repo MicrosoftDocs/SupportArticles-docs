@@ -1,23 +1,19 @@
 ---
 title: Manage lock screen image
 description: Describes how an administrator can manage the lock screen image.
-ms.date: 09/08/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, warrenw, justintu
-ms.custom: sap:lock-screen-or-screensaver, csstroubleshoot
-ms.technology: windows-client-shell-experience
+ms.custom:
+- sap:windows desktop and shell experience\lock screen or screensaver
+- pcy:WinComm User Experience
 ---
 # How to Manage the Lock Screen Image on Windows 8 and Windows Server 2012
 
 This article describes how an administrator can manage the lock screen image.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2787100
 
 ## Symptoms

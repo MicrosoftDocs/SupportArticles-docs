@@ -1,23 +1,17 @@
 ---
 title: Corrupted memory dump file is generated
 description: Resolves an issue where a corrupted memory dump file is generated when you try to obtain a full memory dump file from a virtual machine.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:cluster-node-is-hanging, csstroubleshoot
-ms.technology: windows-server-high-availability
+ms.custom: sap:Clustering and High Availability\Cannot bring a resource online, csstroubleshoot
 ---
 # Corrupted memory dump file when you try to obtain a full memory dump file from a virtual machine that is running in a cluster environment
 
 This article provides a solution to an issue where a corrupted memory dump file is generated when you try to obtain a full memory dump file from a virtual machine.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2913486
 
 ## Symptoms

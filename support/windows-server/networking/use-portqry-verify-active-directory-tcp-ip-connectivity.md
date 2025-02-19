@@ -1,23 +1,17 @@
 ---
 title: How to use PortQry to troubleshoot Active Directory connectivity issues
 description: Describes how to use the PortQry command-line utility to troubleshoot TCP/IP connectivity used by Windows components and features.
-ms.date: 11/09/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: networking
+ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 ---
 # How to use PortQry to troubleshoot Active Directory connectivity issues
 
 This article describes how to run PortQry to test network connectivity for any Windows component or scenario on any version of Windows.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 816103
 
 ## Introduction  

@@ -1,23 +1,17 @@
 ---
 title: Error "The Best Practices Analyzer scan has failed" when running Best Practice Analyzer
 description: Provides a resolution for the error "The Best Practices Analyzer scan has failed" when running Best Practice Analyzer
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:application-compatibility-toolkit-act, csstroubleshoot
-ms.technology: windows-server-application-compatibility
+ms.custom: sap:Application Technologies and Compatibility\Application Compatibility Toolkit (ACT), csstroubleshoot
 ---
 # Error "The Best Practices Analyzer scan has failed" when running Best Practice Analyzer 
 
 This article provides a resolution for the error "The Best Practices Analyzer scan has failed" when running Best Practice Analyzer.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2028818
 
 ## Symptoms

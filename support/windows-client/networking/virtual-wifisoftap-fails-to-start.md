@@ -1,17 +1,14 @@
 ---
 title: Virtual WiFi/SoftAP fails to start
 description: When you attempt to start Virtual WiFi/SoftAP, you may receive an error. This article provides a solution to this issue.
-ms.date: 09/16/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, nbassett
-ms.custom: sap:wireless-networking-and-802.1x-authentication, csstroubleshoot
-ms.technology: windows-client-networking
+ms.custom:
+- sap:network connectivity and file sharing\wireless (802.1x,bluetooth,miracast,mobile broadband)
+- pcy:WinComm Networking
 ---
 # Virtual WiFi/SoftAP fails to start with error: The hosted network couldn't be started
 

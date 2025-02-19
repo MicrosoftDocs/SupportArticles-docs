@@ -1,23 +1,17 @@
 ---
 title: Errors connecting to Device Manager remotely
 description: Fixes an issue where you can't connect remotely to Device Manager from a Windows-based computer.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:microsoft-management-console-mmc, csstroubleshoot
-ms.technology: windows-server-system-management-components
+ms.custom: sap:System Management Components\Microsoft Management Console (MMC), csstroubleshoot
 ---
 # Errors connecting to Windows Server 2008 R2 or Windows Server 2012 Device Manager remotely
 
 This article helps fix an issue where you can't connect remotely to Device Manager from a Windows-based computer.  
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1, Window 10 – all editions  
 _Original KB number:_ &nbsp; 2781106
 
 ## Symptoms

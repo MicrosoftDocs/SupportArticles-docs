@@ -1,23 +1,17 @@
 ---
 title: Virtual machines lose network connectivity
 description: Addresses an issue that occurs with Broadcom NetXtreme network adapters when you use them on a Hyper-V server.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: networking
+ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 ---
 # Virtual machines lose network connectivity when you use Broadcom NetXtreme 1-gigabit network adapters
 
 This article provides a solution to an issue where virtual machines lose network connectivity when you use Broadcom NetXtreme 1-gigabit network adapters.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2986895
 
 ## Symptoms

@@ -1,23 +1,17 @@
 ---
 title: NTFRS error event 13559 intermittently and replication stops
 description: Describes a problem where NTFRS runs into a fatal error communicating with the file system sporadically.
-ms.date: 12/10/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:frs, csstroubleshoot
-ms.technology: networking
+ms.custom: sap:Network Connectivity and File Sharing\File Replication Technologies (FRS and DFSR), csstroubleshoot
 ---
 # NTFRS error event 13559 intermittently and replication stops
 
 This article describes a problem where NTFRS runs into a fatal error communicating with the file system sporadically.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2768745
 
 ## Symptom

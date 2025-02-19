@@ -1,23 +1,17 @@
 ---
 title: Virtual machines enter paused state
 description: Provides a resolution for the issue that Virtual machines enter the paused state due to low disk free space.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, stevenxu
-ms.custom: sap:virtual-machine-state, csstroubleshoot
-ms.technology: hyper-v
+ms.custom: sap:Virtualization and Hyper-V\Virtual machine state, csstroubleshoot
 ---
 # Virtual machines enter the paused state due to low disk free space
 
 This article provides a resolution for the issue that Virtual machines enter the paused state due to low disk free space.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2486243
 
 ## Symptoms

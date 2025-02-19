@@ -2,7 +2,7 @@
 title: SQL Server upgrade fails with error 17182
 description: This article discusses error 17182 that causes a SQL Server upgrade to fail when it runs update database scripts.
 ms.date: 01/10/2023
-ms.custom: sap:Installation, Patching and Upgrade
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ms.reviewer: ramakoni, v-jayaramanp
 ---
 

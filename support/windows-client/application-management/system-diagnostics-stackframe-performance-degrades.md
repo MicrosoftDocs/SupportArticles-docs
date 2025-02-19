@@ -1,17 +1,14 @@
 ---
 title: Performance of System.Diagnostics.StackFrame decreases in Windows 10 and .NET Framework 4.7.1
 description: Fixes an issue that occurs after you upgrade to Windows 10 or .NET Framework 4.7.1 in which applications that use System.Diagnostics.StackFrame run much slower than before.
-ms.date: 04/11/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:.net-framework-installation, csstroubleshoot
-ms.technology: windows-client-application-compatibility
+ms.custom:
+- sap:application technologies and compatibility\.net framework installation
+- pcy:WinComm User Experience
 ---
 # Performance of System.Diagnostics.StackFrame decreases in Windows 10 and .NET Framework 4.7.1
 

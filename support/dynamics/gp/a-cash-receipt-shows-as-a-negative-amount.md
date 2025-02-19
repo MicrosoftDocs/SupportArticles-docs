@@ -1,9 +1,10 @@
 ---
 title: A cash receipt shows as a negative amount
 description: Provides a solution to an issue where a cash receipt showing as a negative amount in the Bank Deposit Entry window in Bank Reconciliation.
-ms.reviewer: cwasiwick
+ms.reviewer: theley, cwasiwick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Europe, Latin America, Africa, Asia, and Australia
 ---
 # Why is a cash receipt showing as a negative amount in the Bank Deposit Entry window in Bank Reconciliation?
 

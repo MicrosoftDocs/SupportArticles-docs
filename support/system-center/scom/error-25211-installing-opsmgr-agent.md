@@ -1,7 +1,7 @@
 ---
 title: Error 25211 installing the Operations Manager agent
 description: Fixes an issue in which you receive an Error 25211-The parameter is incorrect message when you try to install the Operations Manager agent on Windows Server 2008 SP2.
-ms.date: 06/22/2020
+ms.date: 04/15/2024
 ms.reviewer: danmul, michjohn, magoedte
 ---
 # Error 25211 when you try to install the System Center Operations Manager agent

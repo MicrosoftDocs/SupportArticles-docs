@@ -1,23 +1,17 @@
 ---
 title: Error while deleting key
 description: When you try to remove a registry key, you receive the Error while deleting key error message. Provides a resolution.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, v-parapa
-ms.custom: sap:slow-performance, csstroubleshoot
-ms.technology: windows-server-performance
+ms.custom: sap:System Performance\System Performance (slow, unresponsive, high CPU, resource leak), csstroubleshoot
 ---
 # Can't delete certain registry keys and Error while deleting key occurs
 
 This article provides a resolution to solve the **Error while deleting key** error that occurs when trying to remove certain registry keys.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2021860
 
 ## Symptoms

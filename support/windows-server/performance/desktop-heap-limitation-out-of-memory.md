@@ -1,23 +1,17 @@
 ---
 title: Desktop heap limitation causes out of memory error
 description: This article describes the desktop heap limitation, and provides a method to modify the desktop heap size.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:system-hang, csstroubleshoot
-ms.technology: windows-server-performance
+ms.custom: sap:System Performance\System Performance (slow, unresponsive, high CPU, resource leak), csstroubleshoot
 ---
 # You may receive an error "Out of Memory" because of the desktop heap limitation
 
 This article helps fix an "Out of Memory" error that occurs when you open many application windows in Windows.
 
-_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 947246
 
 ## Symptoms

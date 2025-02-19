@@ -4,6 +4,7 @@ description: Provides a resolution for a known issue about deploying an Agentscr
 ms.reviewer: nenellim
 ms.author: vamullap
 ms.date: 05/23/2023
+ms.custom: sap:Agent Scripts and Macros\Issue with loading agent scripts when the environment or session is not proper
 ---
 # Can't deploy a custom Agentscript solution in Omnichannel for Customer Service
 

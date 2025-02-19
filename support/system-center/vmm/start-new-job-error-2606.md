@@ -1,18 +1,19 @@
 ---
 title: Starting a new VMM job fails with error 2606
-description: Fixes an issue in which you can't start a new job in System Center 2012 Virtual Machine Manager (VMM) and receive error 2606.
-ms.date: 07/13/2020
+description: Fixes an issue in which you can't start a new job in System Center Virtual Machine Manager (VMM) and receive error 2606.
+ms.date: 04/09/2024
+ms.reviewer: wenca
 ---
-# Starting a new job in System Center 2012 Virtual Machine Manager fails with error 2606
+# Starting a new job in System Center Virtual Machine Manager fails with error 2606
 
-This article fixes an issue in which you can't start a new job in System Center 2012 Virtual Machine Manager (VMM) and receive error 2606.
+This article fixes an issue in which you can't start a new job in System Center Virtual Machine Manager (VMM) and receive error 2606.
 
-_Original product version:_ &nbsp; System Center 2012 Virtual Machine Manager  
+_Original product version:_ &nbsp; System Center Virtual Machine Manager  
 _Original KB number:_ &nbsp; 2795040
 
 ## Symptoms
 
-When starting a new job in System Center 2012 Virtual Machine Manager, the following error may be generated:
+When starting a new job in System Center Virtual Machine Manager, the following error may be generated:
 
 > Error (2606)  
 > Unable to perform the job because one or more of the selected objects are locked by another job.

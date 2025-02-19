@@ -1,0 +1,51 @@
+- name: Welcome
+  href: welcome-blob-storage.yml
+
+- name: Blob Storage and Azure Data Lake Store Gen2
+  items:
+  - name: Azure Storage data protection, backup, and recovery
+    href: recovery/data-protection-backup-recovery.md
+
+- name: Connectivity
+  items:
+  - name: Troubleshoot AzCopy issues
+    href: connectivity/storage-use-azcopy-troubleshoot.md
+  - name: Copy blobs between storage accounts with network restriction
+    href: connectivity/copy-blobs-between-storage-accounts-network-restriction.md
+  - name: Request body is too large error when write to file
+    href: connectivity/request-body-large.md
+  - name: Invalid blob or block content, or invalid block list
+    href: connectivity/invalid-blob-or-block-content-or-invalid-block-list.md
+
+- name: Authentication and Authorization
+  items:
+  - name: Sticky bit causes 403 authorization error
+    href: authentication/adls-gen2-sticky-bit-403-access-denied.md
+
+- name: Performance and Throughput
+  items:
+  - name: Troubleshoot high CPU or disk usage issues
+    href: performance/diagnose-high-cpu-disk-perfinsights.md
+
+- name: Monitoring, metrics and logs
+  items:
+  - name: Azure Monitor metrics and logs with Storage accounts
+    items:
+    - name: Troubleshoot availability issues
+      href: alerts/troubleshoot-storage-availability.md
+    - name: Troubleshoot client application errors
+      href: alerts/troubleshoot-storage-client-application-errors.md
+    - name: Troubleshoot performance issues
+      href: alerts/troubleshoot-storage-performance.md
+
+  - name: Storage Analytic metrics and logs (classic monitoring)
+    items:
+    - name: Monitor, diagnose, and troubleshoot
+      href: alerts/storage-monitoring-diagnosing-troubleshooting.md
+    - name: Troubleshoot latency issues
+      href: alerts/troubleshoot-latency-storage-analytics-logs.md
+
+  - name: Storage Explorer
+    items:
+    - name: Troubleshoot Storage Explorer
+      href: alerts/storage-explorer-troubleshooting.md

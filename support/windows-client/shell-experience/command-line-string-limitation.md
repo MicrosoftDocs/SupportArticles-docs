@@ -1,17 +1,14 @@
 ---
 title: Command prompt line string limitation
 description: This article describes about limiting the maximum string length at the command prompt, and provides solutions to fix the limitation.
-ms.date: 09/08/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, djanson
-ms.custom: sap:desktop-shell, csstroubleshoot
-ms.technology: windows-client-shell-experience
+ms.custom:
+- sap:windows desktop and shell experience\desktop (shell,explorer.exe init,themes,colors,icons,recycle bin)
+- pcy:WinComm User Experience
 ---
 # Command prompt (Cmd. exe) command-line string limitation
 

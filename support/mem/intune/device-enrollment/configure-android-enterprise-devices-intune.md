@@ -4,12 +4,10 @@ description: This guide describes how to configure Android enterprise devices in
 keywords:
 author: helenclu
 ms.author: luche
-ms.date: 03/04/2020
+ms.date: 02/11/2025
 ms.reviewer: kaushika, mandia
 search.appverid: MET150
-ms.custom: 
-- intune-azure
-- CI 114553
+ms.custom: sap:Enroll Devices - Android\Android  Enterprise - WorkProfile, intune-azure, CI 114553
 ---
 
 # End-to-end guide for configuring Android enterprise devices in Microsoft Intune 
@@ -208,7 +206,7 @@ For more information, see [Set up enrollment of Android Enterprise work profile 
 
     :::image type="content" source="media/configure-android-enterprise-devices-intune/assign-email-profile-to-groups.png" alt-text="Assignments screen." lightbox="media/configure-android-enterprise-devices-intune/assign-email-profile-to-groups.png":::
 
-4. Configure [device-based conditional access](/intune/protect/conditional-access-intune-common-ways-use#device-based-conditional-access).
+4. Configure [device-based conditional access](/mem/intune/protect/conditional-access-intune-common-ways-use#device-based-conditional-access).
 
 For more information, see [Set up Conditional Access for Android work profile devices](/mem/intune/protect/conditional-access-exchange-create#to-set-up-conditional-access-for-android-work-profile-devices).
 

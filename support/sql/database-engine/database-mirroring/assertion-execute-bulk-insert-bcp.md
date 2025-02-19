@@ -2,7 +2,7 @@
 title: Assertion when you execute Bulk Insert or BCP 
 description: This article provides a workaround for the problem that occurs when you try to execute a BULK INSERT or BCP operation.
 ms.date: 09/23/2022
-ms.custom: sap:Administration and Management
+ms.custom: sap:Database Mirroring (DBM)
 ms.reviewer: nathansc
 ---
 # SQL Server assertion error when you try to execute a Bulk Insert or BCP statement

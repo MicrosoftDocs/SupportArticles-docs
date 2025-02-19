@@ -2,7 +2,7 @@
 title: Manually re-create registry keys for cluster resources
 description: This article describes how to manually re-create the resource-specific registry keys for SQL Server cluster resources when you delete a resource from Cluster Administrator.
 ms.date: 07/22/2020
-ms.custom: sap:High Availability and Disaster Recovery features
+ms.custom: sap:Always On Failover Cluster Instance (FCI)
 ms.topic: how-to
 ---
 # Manually re-create the resource-specific registry keys for SQL Server cluster resources

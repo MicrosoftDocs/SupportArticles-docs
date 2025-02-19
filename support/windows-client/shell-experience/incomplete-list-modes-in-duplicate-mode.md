@@ -1,17 +1,14 @@
 ---
 title: List All Modes displays incomplete list of modes
 description: Provides a solution to an issue where the list of available modes is different than the list displayed in Windows 7 when you use multiple displays in duplicate mode in Windows 8.
-ms.date: 09/14/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, kimnich
-ms.custom: sap:dpi-and-display-issues, csstroubleshoot
-ms.technology: windows-client-shell-experience
+ms.custom:
+- sap:windows desktop and shell experience\dpi and display issues
+- pcy:WinComm User Experience
 ---
 # Windows 8: List All Modes in Advanced Display Settings in Control Panel displays incomplete list of modes when in Duplicate mode
 

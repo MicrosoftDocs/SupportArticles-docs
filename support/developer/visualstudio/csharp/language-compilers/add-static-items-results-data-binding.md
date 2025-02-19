@@ -4,6 +4,7 @@ description: This article describes how to add static items and results from dat
 ms.date: 04/22/2020
 ms.reviewer: josborne, earlb
 ms.topic: how-to
+ms.custom: sap:Language or Compilers\C#
 ---
 # Add static items and results by using Visual C# from data binding to a DropDownList control
 

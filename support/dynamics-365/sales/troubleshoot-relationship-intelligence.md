@@ -5,7 +5,6 @@ author: roraisin
 ms.author: roraisin
 ms.topic: troubleshooting
 ms.date: 03/28/2023
-ms.subservice: d365-sales-sales
 ---
 # Troubleshooting issues with relationship intelligence
 

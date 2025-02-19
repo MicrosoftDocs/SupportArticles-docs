@@ -1,23 +1,17 @@
 ---
 title: How to configure DNS dynamic updates in Windows Server
 description: Describes that  how to configure DNS dynamic updates in Windows Server and how to integrate DNS updates with DHCP.
-ms.date: 01/18/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, herbertm
-ms.custom: sap:dns, csstroubleshoot
-ms.technology: networking
+ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
 ---
 # How to configure DNS dynamic updates in Windows
 
 This article describes how to configure the DNS update functionality in Windows.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, Windows 10  
 _Original KB number:_ &nbsp; 816592
 
 ## Summary

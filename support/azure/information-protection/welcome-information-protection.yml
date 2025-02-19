@@ -1,0 +1,26 @@
+### YamlMime:Landing
+
+title: Troubleshoot common issues with Azure Information Protection
+summary: These articles explain how to determine, diagnose, and fix various issues that you might encounter when you use Azure Information Protection. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+
+metadata:
+  title: Troubleshoot common issues with Azure Information Protection
+  description: Documentation for troubleshooting common issues with Azure Information Protection. # Required; article description that is displayed in search results. < 160 chars.
+  services: azure
+  ms.service: information-protection #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: genlin  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: genli #Required; microsoft alias of author; optional team alias.
+  ms.date: 04/12/2024
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+# Card
+  - title: Azure Information Protection
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot Azure Information Protection policy issues
+            url: troubleshoot-aip-issues.md

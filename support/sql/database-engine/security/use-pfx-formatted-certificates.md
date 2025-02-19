@@ -2,7 +2,7 @@
 title: Use PFX-formatted certificates
 description: This article describes the Microsoft PVKConverter for SQL Server tool. This tool supports the conversion of a certificate that uses the PFX format into PVK/DER format.
 ms.date: 09/25/2020
-ms.custom: sap:Security Issues
+ms.custom: sap:Security, Encryption, Auditing, Authorization
 ms.reviewer: vencher
 ---
 # Use PFX-formatted certificates in SQL Server

@@ -1,17 +1,14 @@
 ---
 title: Supported Guest Operating Systems in Virtual PC
 description: Provides some information about supported Guest Operating Systems in Virtual PC
-ms.date: 09/21/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, benarm, kledman
-ms.custom: sap:virtual-machine-creation, csstroubleshoot
-ms.technology: windows-client-hyper-v
+ms.custom:
+- sap:virtualization and hyper-v\virtual machine creation
+- pcy:WinComm Storage High Avail
 ---
 # Supported Guest Operating Systems in Virtual PC
 

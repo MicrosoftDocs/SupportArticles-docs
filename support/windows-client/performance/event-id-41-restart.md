@@ -1,20 +1,14 @@
 ---
 title: Event ID 41 The system has rebooted without cleanly shutting down first
 description: Describes the circumstances that cause a computer to generate Event ID 41, and provides guidance for troubleshooting the issue.
-ms.date: 07/24/2023
-ms.prod: windows-client
+ms.date: 01/15/2025
 ms.topic: troubleshooting
-author: Teresa-Motiv
-ms.author: dougeby
 manager: dcscontentpm
-ms.technology: windows-client-performance
-ms.custom: 
-- CI 111437
-- csstroubleshooting
-- sap:blue-screen/bugcheck
-ms.reviewer: kaushika
+ms.custom:
+- sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot),csstroubleshooting,ci 111437"]
+- pcy:WinComm Performance
+ms.reviewer: kaushika,dougeby
 audience: itpro
-localization_priority: medium
 ms.collection: highpri
 ---
 # Advanced troubleshooting for Event ID 41: "The system has rebooted without cleanly shutting down first"
@@ -183,7 +177,7 @@ An event ID 41 is used to report that something unexpected happened that prevent
 - Message: The system has rebooted without cleanly shutting down first. This error could be caused if the system stopped responding, crashed, or lost power unexpectedly.
 
 > [!NOTE]
-> The time shown in the .evtx file is adjusted to your system’s time. Check the time zone of the server.
+> The time shown in the .evtx file is adjusted to your system's time. Check the time zone of the server.
 
 - Event ID 41: This event indicates that Windows restarted without a complete shutdown.
 - Event ID 1074: This event is logged when an application is responsible for the system shutdown or restart. It also indicates when a user restarted or shut down the system by using the **Start** menu or by pressing Ctrl+Alt+Del.

@@ -4,7 +4,6 @@ description: When you try to import a solution in Microsoft Dynamics 365, you ma
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
-ms.subservice: d365-sales-custom-solutions
 ---
 # "You cannot complete this action for this component" error when importing a solution
 

@@ -2,7 +2,7 @@
 title: Decreased query performance after upgrade from SQL Server 2012 or earlier to 2014 or later
 description: Provides troubleshooting steps for an issue where a query runs slower after upgrade from SQL Server 2012 or earlier versions to 2014 or later versions
 ms.date: 07/20/2022
-ms.custom: sap:Performance
+ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ms.topic: troubleshooting
 ms.reviewer: jopilov
 author: pijocoder
@@ -54,7 +54,7 @@ To resolve the issue, try one of the following methods:
 - Use [database-scoped configuration](#database-level-set-scoped-configuration-or-compatibility-level) to force the legacy CE.
 
   This is a less preferred approach as it is a database-wide setting and applies to all queries against this database. Still, it's sometimes necessary when a targeted approach isn't feasible. It's certainly the easiest option to implement.
-- Use trace flag 9841 to force legacy CE globally. To do this, use [DBCC TRACEON](#server-level-use-trace-flag) or set the trace flag as a [start-up parameter](/sql/tools/configuration-manager/sql-server-properties-startup-parameters-tab#optional-parameters).
+- Use trace flag 9481 to force legacy CE globally. To do this, use [DBCC TRACEON](#server-level-use-trace-flag) or set the trace flag as a [start-up parameter](/sql/tools/configuration-manager/sql-server-properties-startup-parameters-tab#optional-parameters).
 
   This is the least-targeted approach and should only be used as a temporary mitigation when you're unable to apply any of the other options.
 

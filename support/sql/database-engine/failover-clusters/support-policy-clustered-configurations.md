@@ -2,7 +2,7 @@
 title: Support policy for clustered configurations
 description: This article describes the Microsoft support policy for clustered configurations of SQL Server with Windows Server.
 ms.date: 04/27/2023
-ms.custom: sap:High Availability and Disaster Recovery Features
+ms.custom: sap:Always On Failover Cluster Instance (FCI)
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: UTTAMKP, jaferebe

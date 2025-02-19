@@ -11,7 +11,9 @@ metadata:
    title: Microsoft troubleshooting documentation | Microsoft Learn
    description: Find the documentation you need to troubleshoot issues and apply workarounds for the following commercial products from Microsoft.
    ms.topic: hub-page  
-   ms.date: 02/06/2020
+   ms.date: 07/18/2024
+   author: ChristySu
+   ms.author: christys
 
 
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
@@ -36,11 +38,6 @@ productDirectory:
     summary: Troubleshooting articles for Azure 
     url: azure/index.yml
 
-  - title: BizTalk Server
-    imageSrc: "media/hub-landing/biztalk.svg"
-    summary: Troubleshooting articles for BizTalk Server
-    url: developer/biztalk/welcome-biztalk-server.yml
-
   - title: Endpoint management
     imageSrc: "media/hub-landing/microsoft.png"
     summary: Troubleshooting articles for Endpoint management
@@ -49,7 +46,7 @@ productDirectory:
   - title: Host Integration Server
     imageSrc: "media/hub-landing/his.jpeg"
     summary: Troubleshooting articles for Host Integration Server
-    url: developer/host-integration-server/welcome-host-integration-server.yml
+    url: developer/host-integration-server/data-integration/configure-data-sources.md
 
   - title: Internet Information Services
     imageSrc: "media/hub-landing/iis.jpg"
@@ -61,20 +58,25 @@ productDirectory:
     summary: Troubleshooting articles for Microsoft 365
     url: /office/troubleshoot
 
-  - title: Microsoft Dynamics
+  - title: Microsoft Copilot for Sales
+    imageSrc: "media/hub-landing/sales-copilot.svg"
+    summary: Troubleshooting articles for Microsoft Copilot for Sales
+    url: sales-copilot/welcome-sales-copilot.yml
+
+  - title: Microsoft Dynamics GP
     imageSrc: "media/hub-landing/microsoft.png"
-    summary: Troubleshooting articles for Microsoft Dynamics
-    url: dynamics/index.yml
+    summary: Troubleshooting articles for Microsoft Dynamics GP
+    url: dynamics/gp/welcome-gp.yml
 
   - title: Microsoft Dynamics 365
     imageSrc: "media/hub-landing/dynamics-365.svg"
     summary: Troubleshooting articles for Microsoft Dynamics 365
     url: dynamics-365/index.yml
-      
-  - title: Microsoft Edge and Internet Explorer
-    imageSrc: "media/hub-landing/Edge.jpg"
-    summary: Troubleshooting articles for Microsoft Edge and Internet Explorer
-    url: developer/browsers/welcome-browsers.yml
+
+  - title: Microsoft Entra
+    imageSrc: "media/hub-landing/microsoft-entra.svg"
+    summary: Troubleshooting articles for Microsoft Entra
+    url: entra/welcome-entra.yml
 
   - title: Microsoft Power Platform
     imageSrc: "media/hub-landing/microsoft.png"

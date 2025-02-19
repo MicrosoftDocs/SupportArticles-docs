@@ -1,17 +1,14 @@
 ---
 title: Register OCX and DLL files as system globals
 description: Describes how to register OCX and DLL files as system globals.
-ms.date: 09/21/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, willgloy
-ms.custom: sap:1st-party-applications, csstroubleshoot
-ms.technology: windows-client-application-compatibility
+ms.custom:
+- sap:system performance\app,process,service reliability (crash,errors)
+- pcy:WinComm Performance
 ---
 # Register OCX and DLL files as system globals
 

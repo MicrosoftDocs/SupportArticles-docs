@@ -1,10 +1,11 @@
 ---
 title: Test OLE DB connectivity to SQL Server by using a UDL file
 description: Describes how to create a UDL file and use it to test OLE DB connectivity to SQL Server.
-ms.date: 11/27/2021
-ms.custom: sap:Connection issues
+ms.date: 01/17/2025
+ms.custom: sap:Database Connectivity and Authentication
 author: HaiyingYu
 ms.author: haiyingyu
+ms.reviewer: jopilov
 ---
 # Test OLE DB connectivity to SQL Server by using a UDL file
 

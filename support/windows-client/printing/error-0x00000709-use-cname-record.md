@@ -1,23 +1,19 @@
 ---
 title: Error 0x00000709 when you use CNAME record
 description: An issue occurs when clients try to connect to printers by using a CNAME record in the UNC path.
-ms.date: 05/16/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:management-and-configuration:-general-issues, csstroubleshoot
-ms.technology: windows-client-printing
+ms.custom:
+- sap:print,fax,and scan\print configuration or management
+- pcy:WinComm User Experience
 ---
 # Error 0x00000709 when you use a CNAME record for a print server in Windows Server 2008 R2: Operation could not be completed
 
 This article helps fix the error 0x00000709 (Operation could not be completed). The error occurs when you use a CNAME record for a print server.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2546625
 
 ## Symptoms

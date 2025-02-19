@@ -1,23 +1,17 @@
 ---
 title: Available updates for Terminal Services
 description: Lists the available updates for Terminal Services (Remote Desktop Services) in Windows Server 2008. Arranges the hotfixes and updates by component areas within Terminal Services.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, Davjoh
-ms.custom: sap:remote-desktop-sessions, csstroubleshoot
-ms.technology: windows-server-rds
+ms.custom: sap:Remote Desktop Services and Terminal Services\Session connectivity, csstroubleshoot
 ---
 # Available updates for Terminal Services (Remote Desktop Services) in Windows Server 2008
 
 This article summarizes the available hotfixes and updates for issues that can occur in Terminal Services for Windows Server 2008 environments.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2312539
 
 ## Summary

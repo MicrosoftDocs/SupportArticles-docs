@@ -2,9 +2,8 @@
 title: Copy core dump files to another machine
 description: This article describes how to copy core dump files from a Linux machine to another Windows VM.
 ms.date: 06/11/2021
-ms.prod: aspnet-core
+ms.custom: sap:General Development Questions, linux-related-content
 ms.reviewer: ramakoni, ahmetmb
-ms.technology: aspnetcore-practice-troubleshoot-linux
 author: ahmetmithat
 ---
 # Lab 4.1 Analyze core dump files after copying them to another machine
@@ -29,9 +28,6 @@ To address this problem, this lab series will cover the following options to ana
 The following exercises are based on a Windows 10-based VM that was used to host a docker container and WSL2 environments.
 
 In this first part of the lab, you'll be guided through the procedure of copying core dump files from a Linux VM to a Windows VM by using the `pscp` command. This lab will also address methods to copy files that aren't recommended.
-
-> [!NOTE]
-> If you don't want to deal with copying files from the Linux VM on which the core dump files were generated to the target Windows VM, or if you didn't follow the previous parts and don't have a core dump file, consider using the [sample core dump files](https://buggyambfiles.blob.core.windows.net/dumps/linux_coredumps.tar.gz), and skip this part.
 
 ## Copy a core dump file to your local VM
 
@@ -76,3 +72,4 @@ Following a successful transfer, you should have at least one core dump file on 
 ## Next steps
 
 [Lab 4.2 Analyze core dump files on another machine - Using WSL to open core dump files](lab-4-2-analyze-core-dumps-another-machine-wsl.md)
+

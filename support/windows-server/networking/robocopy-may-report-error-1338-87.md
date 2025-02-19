@@ -1,23 +1,17 @@
 ---
 title: Robocopy may report error 1338 or 87
 description: Provides a solution to error 1338 or error 87 that occurs when copying files and their associated file security from a CIFS file server.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, sgoad
-ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
-ms.technology: networking
+ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB), csstroubleshoot
 ---
 # Robocopy may report error 1338 (The security descriptor structure is invalid) or error 87 (The parameter is incorrect) when you copy data from CIFS file servers
 
 This article provides a solution to fix error 1338 or error 87 that occurs when you copy files and their associated file security from a CIFS file server.
 
-_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2459083
 
 ## Symptoms

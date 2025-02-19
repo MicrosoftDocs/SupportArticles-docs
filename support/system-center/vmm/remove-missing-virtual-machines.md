@@ -1,7 +1,8 @@
 ---
 title: Remove a virtual machine with the missing status
 description: Explains how to remove a virtual machine that has a status of Missing from the Virtual Machine Manager console.
-ms.date: 07/13/2020
+ms.date: 04/09/2024
+ms.reviewer: wenca
 ---
 # How to remove a missing virtual machine from the Virtual Machine Manager console
 

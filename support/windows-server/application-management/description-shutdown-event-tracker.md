@@ -1,23 +1,17 @@
 ---
 title: Description of Shutdown Event Tracker
 description: Describes the Shutdown Event Tracker.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, JEFFWADE, ScottMca
-ms.custom: sap:event-system, csstroubleshoot
-ms.technology: windows-server-application-compatibility
+ms.custom: sap:System Management Components\WinRM, including event forwarding and collections, csstroubleshoot
 ---
 # Description of the Shutdown Event Tracker
 
 This article describes the Shutdown Event Tracker.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 293814
 
 ## Summary

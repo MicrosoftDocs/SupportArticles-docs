@@ -2,7 +2,7 @@
 title: Inventory journal workflow conditions apply at the journal level, not line level
 description: Introduces a by-design behavior where inventory journal workflow conditions apply only at the journal level, not at the line level.
 author: sherry-zheng
-ms.date: 05/31/2021
+ms.date: 05/16/2024
 ms.topic: troubleshooting
 ms.search.form: 
 audience: Application User
@@ -11,6 +11,7 @@ ms.search.region: Global
 ms.author: chuzheng
 ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.16
+ms.custom: sap:Inventory management\Issues with the inventory journal
 ---
 
 # Inventory journal workflow conditions apply at the journal level, not line level

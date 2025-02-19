@@ -1,23 +1,17 @@
 ---
 title: Access is denied when using the "runas" command, Run as Administrator, or Run as a different user option
 description: Describes an issue where you can't use the "runas" command, "Run as Administrator" option, or the "Run as a different user" option. Provides some workarounds.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: nedpyle, kaushika
-ms.custom: sap:desktop-shell, csstroubleshoot
-ms.technology: windows-server-shell-experience
+ms.custom: sap:Windows Desktop and Shell Experience\Desktop (Shell, Explorer.exe init, themes, colors, icons, recycle bin), csstroubleshoot
 ---
 # Error when you use the runas command, the Run as Administrator option, or the Run as a different user option after you upgrade Windows Server: Access is denied
 
 This article provides some workarounds for an issue where you can't use the `runas` command, the **Run as Administrator** option, or the **Run as a different user** option after you upgrade Windows Server.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 977513
 
 ## Symptoms

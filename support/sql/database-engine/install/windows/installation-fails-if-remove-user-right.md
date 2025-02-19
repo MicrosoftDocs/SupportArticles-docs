@@ -1,12 +1,11 @@
 ---
 title: Installation fails after you remove user rights
 description: This article helps you resolve a problem that occurs when you install or upgrade Microsoft SQL Server after tightening security.
-ms.date: 03/17/2022
-ms.custom: sap:Database Engine
+ms.date: 02/12/2025
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 author: rielsql
 ms.author: joriel
-ms.reviewer: v-jayaramanp
-ms.topic: troubleshooting
+ms.reviewer: jopilov
 ---
 
 # SQL Server installation fails after default user rights are removed

@@ -3,7 +3,7 @@
 - name: Welcome
   href: developer/dotnet/welcome-dotnet-landing.yml
 - name: Welcome
-  href: developer/host-integration-server/welcome-host-integration-server.yml
+  href: developer/host-integration-server/data-integration/configure-data-sources.md
 - name: Welcome
   href: developer/visualstudio/welcome-visual-studio.yml
 - name: Welcome
@@ -21,11 +21,9 @@
 - name: System Center
   href: system-center/index.yml
 - name: Welcome
-  href: developer/biztalk/welcome-biztalk-server.yml
-- name: Welcome
-  href: developer/browsers/welcome-browsers.yml
-- name: Welcome
   href: azure/index.yml
+- name: Welcome
+  href: entra/welcome-entra.yml
 - name: Welcome
   href: sql/welcome-sql-server.yml
 - name: Welcome
@@ -33,4 +31,6 @@
 - name: Welcome
   href: power-platform/index.yml
 - name: Welcome
-  href: dynamics/index.yml
+  href: dynamics/gp/welcome-gp.yml
+- name: Welcome
+  href: sales-copilot/welcome-sales-copilot.yml

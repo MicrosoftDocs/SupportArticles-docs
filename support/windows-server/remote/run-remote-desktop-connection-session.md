@@ -1,23 +1,17 @@
 ---
 title: Run a Remote Desktop Connection session
 description: Describes Microsoft support for running a Remote Desktop Connection session within another Remote Desktop Connection session.
-ms.date: 11/03/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:connecting-to-a-session-or-desktop, csstroubleshoot
-ms.technology: windows-server-rds
+ms.custom: sap:Remote Desktop Services and Terminal Services\Session connectivity, csstroubleshoot
 ---
 # Running a Remote Desktop Connection session within another Remote Desktop Connection session is supported with Remote Desktop Protocol 8.0 for specific scenarios
 
 This article describes Microsoft support for Nesting Remote Desktop Connections.
 
-_Applies to:_ &nbsp; Windows 11 - all editions, Windows 10 - all editions, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, Windows Server 2022  
 _Original KB number:_ &nbsp; 2754550
 
 ## Summary

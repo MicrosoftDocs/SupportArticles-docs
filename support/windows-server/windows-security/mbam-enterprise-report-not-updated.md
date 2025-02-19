@@ -1,23 +1,17 @@
 ---
 title: MBAM Enterprise Reports aren't updated
 description: pProvides a solution to an issue where Microsoft BitLocker Administration and Monitoring (MBAM) Enterprise Reports aren't updated as expected.
-ms.date: 11/15/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: manojse, kaushika
-ms.custom: sap:bitlocker, csstroubleshoot
-ms.technology: windows-server-security
+ms.custom: sap:Windows Security Technologies\BitLocker, csstroubleshoot
 ---
 # MBAM Enterprise Reports aren't updated
 
 This article provides a solution to an issue where Microsoft BitLocker Administration and Monitoring (MBAM) Enterprise Reports aren't updated as expected.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2620269
 
 ## Symptoms

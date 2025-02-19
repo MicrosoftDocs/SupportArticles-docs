@@ -1,10 +1,11 @@
 ---
 title: Connectivity issues if the DigiCert Global Root G2 root certificate is not installed
 description: Fixes a connectivity issue in which the DigiCert Global Root G2 root certificate is not installed.
-ms.date: 10/22/2020
+ms.date: 02/11/2025
 author: helenclu
 ms.author: vinpa
 ms.reviewer: kaushika, vinpa
+ms.custom: sap:Site Server and Roles\Certificates (PKI)
 ---
 
 # Connectivity issues if the DigiCert Global Root G2 root certificate is not installed
@@ -27,13 +28,13 @@ You experience connectivity issues on a Microsoft Endpoint Configuration Manager
 This issue can occur if any of the following conditions are true:
 
 - The automatic root certificate mechanism is disabled.
-- The **DigiCert Global Root G2** root certificate isn’t installed.
-- The intermediate certificates aren’t installed in the **Intermediate Certification Authorities** store.
+- The **DigiCert Global Root G2** root certificate isn't installed.
+- The intermediate certificates aren't installed in the **Intermediate Certification Authorities** store.
 - Your environment allows outbound calls to only specific **Certificate Revocation List (CRL)** downloads or **Online Certificate Status Protocol (OCSP)** verification locations.
 
 ## Resolution
 
-Install the latest root certificates. The root certificates may not automatically install if you’re running a disconnected environment, or if the necessary internet endpoints are blocked.
+Install the latest root certificates. The root certificates may not automatically install if you're running a disconnected environment, or if the necessary internet endpoints are blocked.
 
 ### Disconnected environments
 
@@ -48,7 +49,7 @@ You can consider your environment to be disconnected if either of the following 
 - Direct access to Windows Update is blocked.
 - The auto update mechanism for both trusted and untrusted CTLs is disabled.
 
-For information about how to facilitate the distribution of trusted or untrusted certificates for disconnected environments, see [Configure Trusted Roots and Disallowed Certificates](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983%28v=ws.11%29).
+For information about how to facilitate the distribution of trusted or untrusted certificates for disconnected environments, see [Configure trusted roots and disallowed certificates in Windows](/windows-server/identity/ad-cs/configure-trusted-roots-disallowed-certificates).
 
 ### Internet endpoints
 
@@ -73,9 +74,9 @@ For more information about the **Windows Root Certificate Program** and the list
 
 Root certificate update mechanisms are available in different versions of Windows. This includes the automatic root update mechanisms.
 
- For more information about how to update the root certificate list in different versions of Windows, see [Configure Trusted Roots and Disallowed Certificates](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983%28v=ws.11%29?redirectedfrom=MSDN).
+ For more information about how to update the root certificate list in different versions of Windows, see [Configure trusted roots and disallowed certificates in Windows](/windows-server/identity/ad-cs/configure-trusted-roots-disallowed-certificates).
 
-By default, the automatic root update mechanism is enabled in different versions of Windows. However, if this mechanism is disabled, and  the service connection point server doesn’t have the **DigiCert Global Root G2** root certificate installed, connectivity issues with **Configuration Manager** cloud services may occur. The **Configuration Manager** on premises hierarchy may no longer be able to access the **Microsoft Configuration Manager** cloud services and other such resources.
+By default, the automatic root update mechanism is enabled in different versions of Windows. However, if this mechanism is disabled, and  the service connection point server doesn't have the **DigiCert Global Root G2** root certificate installed, connectivity issues with **Configuration Manager** cloud services may occur. The **Configuration Manager** on premises hierarchy may no longer be able to access the **Microsoft Configuration Manager** cloud services and other such resources.
 
  For more information, see [Azure TLS certificate changes](/azure/security/fundamentals/tls-certificate-changes) and [Azure IoT TLS: Changes are coming](https://techcommunity.microsoft.com/t5/internet-of-things/azure-iot-tls-changes-are-coming-and-why-you-should-care/ba-p/1658456).
 
@@ -84,4 +85,4 @@ By default, the automatic root update mechanism is enabled in different versions
 For additional information about connectivity requirements and troubleshooting for **Configuration Manager**, see the following items:
 
 - [Internet endpoint requirements for Configuration Manager](/mem/configmgr/core/plan-design/network/internet-endpoints)
-- [Troubleshooting update and servicing issues for Configuration Manager](/troubleshoot/mem/configmgr/understand-troubleshoot-updates-servicing)
+- [Troubleshooting update and servicing issues for Configuration Manager](understand-troubleshoot-updates-servicing.md)

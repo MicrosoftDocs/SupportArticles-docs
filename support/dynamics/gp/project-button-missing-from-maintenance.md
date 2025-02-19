@@ -1,9 +1,10 @@
 ---
 title: The Project button is missing from Maintenance window
 description: This article provides a resolution for the problem where the Project button is missing from the Employee Maintenance window, the Vendor Maintenance window, and the Customer Maintenance window in Microsoft Dynamics GP.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Project Accounting
 ---
 # The Project button is missing from the Employee Maintenance window, the Vendor Maintenance window, and the Customer Maintenance window in Microsoft Dynamics GP
 

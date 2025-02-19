@@ -1,24 +1,18 @@
 ---
 title: Service overview and network port requirements
 description: A roadmap of ports, protocols, and services that are required by Microsoft client and server operating systems, server-based applications, and their subcomponents to function in a segmented network.
-ms.date: 02/08/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: networking
+ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 adobe-target: true
 ---
 # Service overview and network port requirements for Windows
 
 This article discusses the required network ports, protocols, and services that are used by Microsoft client and server operating systems, server-based programs, and their subcomponents in the Microsoft Windows Server system. Administrators and support professionals may use this article as a roadmap to determine which ports and protocols Microsoft operating systems and programs require for network connectivity in a segmented network.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1903, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 832017
 
 > [!IMPORTANT]
@@ -184,9 +178,12 @@ System service name: **ClusSvc**
 |---|---|---|
 |Cluster Service|UDP and DTLS¹|3343|
 |Cluster Service|TCP|3343 (This port is required during a node join operation.)|
+|Cluster Service|ICMP|Echo port (This port is required during a node join operation from the **Add Node Wizard**.)|
+|Cluster Service|TCP|445 (This port is required during a node join operation from the **Add Node Wizard**.)|
 |RPC|TCP|135|
 |Cluster Administrator|UDP|137|
 |Randomly allocated high ports²|TCP|Random port number between 49152 and 65535|
+|WinRM|TCP|5985 (This port is required when deploying cloud witness.)|
   
 > [!NOTE]
 > Additionally, for successful validation on Windows Failover Clusters on 2008 and above, allow inbound and outbound traffic for ICMP4, ICMP6, and port 445/TCP for SMB.
@@ -938,8 +935,8 @@ System service name: **WinRM**
 
 |Application protocol|Protocol|Ports|
 |---|---|---|
-|WinRM 1.1 and earlier|TP|The default HTTP port is TCP 80, and the default HTTPS port is TCP 443.|
-|WinRM 2.0|TP|The default HTTP port is TCP 5985, and the default HTTPS port is TCP 5986.|
+|WinRM 1.1 and earlier|TCP|The default HTTP port is TCP 80, and the default HTTPS port is TCP 443.|
+|WinRM 2.0|TCP|The default HTTP port is TCP 5985, and the default HTTPS port is TCP 5986.|
   
 For more information, see [Installation and Configuration for Windows Remote Management](/windows/win32/winrm/installation-and-configuration-for-windows-remote-management).
 

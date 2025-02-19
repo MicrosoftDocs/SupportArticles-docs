@@ -1,9 +1,9 @@
 ---
 title: Configure data sources
 description: This article describes how to configure data sources for the Microsoft OLE DB Provider for DB2.
-ms.date: 10/13/2020
-ms.custom: sap:Data integration (DB2, host files)
-ms.reviewer: syedw
+ms.date: 05/07/2024
+ms.custom: sap:Data Integration (DB2, Host Files)
+ms.reviewer: syedw, jeremyr
 ms.topic: how-to
 ---
 # Configure data sources for the Microsoft OLE DB Provider for DB2

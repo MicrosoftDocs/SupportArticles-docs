@@ -1,23 +1,17 @@
 ---
 title: Description of Windows TCP features
 description: Describes the TCP features in Windows.
-ms.date: 03/24/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: networking
+ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 ---
 # Description of Windows TCP features
 
 This article describes the TCP features in Windows.
 
-_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 224829
 
 ## Summary
@@ -60,13 +54,11 @@ In previous versions of Windows NT, the window size for an Ethernet connection w
 To set the receive window size to a specific value, add the TcpWindowSize value to the registry subkey specific to your version of Windows. To do so, follow these steps:  
 
 1. Select **Start** > **Run**, type *`Regedit`*, and then select **OK**.
-2. Expand the registry subkey specific to your version of Windows:
-    - For Windows 2000, expand the following subkey:
-        `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces`
+1. Expand the registry subkey:
 
-    - For Windows Server 2003, expand the following subkey:
-        `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`  
-
+   - 
+   `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`  
+   
 3. On the **Edit** menu, point to **New**, and then select **DWORD Value**.
 4. Type *`TcpWindowSize`* in the **New Value** box, and then press Enter
 5. Select **Modify** on the **Edit** menu.

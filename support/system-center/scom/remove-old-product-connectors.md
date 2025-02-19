@@ -1,7 +1,7 @@
 ---
 title: Remove old product connectors from Operations Manager
 description: Describes how to remove an old product connector from System Center Operations Manager by using a PowerShell script.
-ms.date: 09/02/2020
+ms.date: 04/15/2024
 ---
 # How to remove old product connectors from Operations Manager
 

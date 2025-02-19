@@ -1,23 +1,19 @@
 ---
 title: Port Scanning Prevention Filter behavior in Windows
 description: Describes the functionality of the Port Scanning Prevention Filter in Windows Server 2008 and later versions of Windows. Includes a workaround for by-design behavior that generates lots of disk I/O when there's activity in the wfpdiag.etl log.
-ms.date: 09/14/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: windows-client-networking
+ms.custom:
+- sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
+- pcy:WinComm Networking
 ---
 # Port Scanning Prevention Filter behavior in Windows
 
 This article describes the functionality of the Port Scanning Prevention Filter in Windows Server 2008 and later versions of Windows. It also includes a workaround for the by-design behavior that generates lots of disk I/O when there's activity in the wfpdiag.etl log.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3044882
 
 ## Symptoms

@@ -1,23 +1,17 @@
 ---
 title: Remove entries from Remote Desktop Connection Computer
 description: Introduces how to remove entries from the Remote Desktop Connection Computer box.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, imranu
-ms.custom: sap:connecting-to-a-session-or-desktop, csstroubleshoot
-ms.technology: windows-server-rds
+ms.custom: sap:Remote Desktop Services and Terminal Services\Web access (includes RemoteApp and desktop connections), csstroubleshoot
 ---
 # How to remove entries from the Remote Desktop Connection Computer box
 
 This article describes how to remove entries from the **Remote Desktop Connection Computer** box.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 312169
 
 > [!IMPORTANT]

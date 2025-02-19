@@ -1,8 +1,9 @@
 ---
 title: Use content library explorer and transfer tool
 description: Describes how to use content library in Configuration Manager.
-ms.date: 03/30/2020
+ms.date: 02/11/2025
 ms.reviewer: kaushika
+ms.custom: sap:Content Management\Content Library
 ---
 # Content library in Configuration Manager
 

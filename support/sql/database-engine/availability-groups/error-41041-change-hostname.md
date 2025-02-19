@@ -2,7 +2,7 @@
 title: Always On availability groups check failed after changing the hostname
 description: This article provides workarounds for the issue that occurs after you change the hostname.
 ms.date: 10/13/2021
-ms.custom: sap:Availability Groups
+ms.custom: sap:Always On Availability Groups (AG)
 ms.reviewer: ramakoni, ericbu
 ---
 # Always On availability groups and replication issues after changing the hostname

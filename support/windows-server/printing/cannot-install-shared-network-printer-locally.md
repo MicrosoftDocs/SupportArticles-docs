@@ -1,23 +1,17 @@
 ---
 title: Error when you try to install a shared network printer
 description: Describes an issue in which you can't install a shared network printer locally on a Windows Server 2003-based or a Windows XP SP1-based computer.
-ms.date: 05/16/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: yongrhee, v-jomcc, kaushika
-ms.custom: sap:errors-and-troubleshooting-general-issues, csstroubleshoot
-ms.technology: windows-server-printing
+ms.custom: sap:Print, Fax, and Scan\Print Performance - failures, crashes, not responsive, csstroubleshoot
 ---
 # Error message when you try to install a shared network printer
 
 This article describes an issue where you can't install a shared network printer locally on a Windows Server or Windows-based computer.
 
-_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 888046
 
 ## Symptoms

@@ -1,23 +1,17 @@
 ---
 title: VM shutdown actions don't run
 description: Describes a problem that prevents virtual machine shutdown actions from running in Windows Server 2012 and Windows 8. Occurs when shutdowns are triggered by the OS because of a low battery condition.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, raackley
-ms.custom: sap:virtual-machine-state, csstroubleshoot
-ms.technology: hyper-v
+ms.custom: sap:Virtualization and Hyper-V\Virtual machine state, csstroubleshoot
 ---
 # VM shutdown actions don't run when a host shuts down because of a low battery
 
 This article helps solve a problem that prevents virtual machine shutdown actions from running.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3058418
 
 ## Symptoms

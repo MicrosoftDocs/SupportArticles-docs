@@ -1,7 +1,7 @@
 ---
 title: Antivirus exclusions (Operations Manager 2012, 2012 R2, and 2016)
 description: Describes some antivirus exclusions that relate to Operations Manager. These exclusions include process-based exclusions, directory-specific exclusions, and file name extension-specific exclusions.
-ms.date: 04/26/2023
+ms.date: 04/15/2024
 ms.reviewer: adoyle, adoyle, blakedrumm
 ---
 # Antivirus exclusions that relate to Operations Manager 2012, 2012 R2, and 2016

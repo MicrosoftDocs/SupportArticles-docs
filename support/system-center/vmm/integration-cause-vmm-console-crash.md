@@ -1,8 +1,8 @@
 ---
 title: VMM console crashes after enabling Operations Manager integration
 description: Fixes an issue where the Virtual Machine Manager console may crash after enabling Operations Manager integration.
-ms.date: 07/17/2020
-ms.reviewer: alvinm
+ms.date: 04/09/2024
+ms.reviewer: wenca, alvinm
 ---
 # The System Center 2012 Virtual Machine Manager console crashes after enabling Operations Manager integration
 

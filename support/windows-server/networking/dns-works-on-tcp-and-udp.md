@@ -1,24 +1,16 @@
 ---
 title: DNS works on both TCP and UDP
 description: Explains why some services use both the protocols TCP and UDP.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, v-nirmsh
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: networking
+ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 ---
 # DNS or other Services works on both TCP and UDP
 
 This article explains why some services use both the protocols TCP and UDP.
-
-_Applies to:_ &nbsp; Windows Server 2003  
-_Original KB number:_ &nbsp; 556000
 
 ## SUMMARY
 
