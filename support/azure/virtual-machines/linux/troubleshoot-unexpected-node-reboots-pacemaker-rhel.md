@@ -155,34 +155,31 @@ When there's an outage, like a Platform/Network interruption as discussed in [Sc
 ### Resolution for scenario 4
 It's recommended to use `priority-fencing-delay` parameter, so only one VM should be acknowledged by the STONITH device. 
 
-> [!NOTE]
-> If the Pacmekaer version is less than `2.0.4-6.el8`, then add the parameter `pcmk_delay_max`, but if the version is higher, use `priority-fencing-delay` instead.
-> Check the installed Pacemaker version using the following command:
-> ```bash
-> sudo rpm -qa | grep pacemaker
-> ```
 
 1. Set the cluster under maintenance-mode.
-
-    ```bash
-    sudo pcs property set maintenance-mode=true
-    ```
+ ```bash
+ sudo pcs property set maintenance-mode=true
+ ```
 
 2. Edit the cluster configuration.
+ ```bash
+  sudo pcs configure edit 
+ ```
 
-   ```bash
-    sudo pcs configure edit 
-   ```
-3. Set the `priority-fencing-delay` parameter in the cluster configuration.
+3. If the Pacemaker version is less than `2.0.4-6.el8`, then add the parameter `pcmk_delay_max`:
+ ```bash
+ sudo pcs property set pcmk_delay_max=15s
+ ```
 
-    ```bash
-    sudo pcs property set priority-fencing-delay=15s
-    ```
+* If the version is higher than `2.0.4-6.el8`, then use the parameter `priority-fencing-delay` instead:
+ ```bash
+ sudo pcs property set priority-fencing-delay=15s
+ ```
+
 4.  Save the changes and remove the cluster out of maintenance-mode. 
-
-    ```bash
-    sudo pcs property set maintenance-mode=false
-    ```
+ ```bash
+ sudo pcs property set maintenance-mode=false
+ ```
 
 For more information refer to [SUSE - Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-suse-pacemaker?tabs=msi#use-an-azure-fence-agent-1).
 
