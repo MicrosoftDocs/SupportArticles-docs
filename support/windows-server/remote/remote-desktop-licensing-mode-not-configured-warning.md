@@ -1,7 +1,7 @@
 ---
 title: Remote Desktop Licensing Mode Is Not Configured Warning
 description: Helps you troubleshoot a licensing warning message when you connect to a Remote Desktop (RD) Session Host.
-ms.date: 02/13/2025
+ms.date: 02/19/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
