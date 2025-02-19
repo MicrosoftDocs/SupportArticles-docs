@@ -104,9 +104,9 @@ az vm repair repair-button --button-command fstab --verbose rgtest --name vmtest
 ```
 
 > [!NOTE]
-> Replace the resource group name `rgtest` and VM name `vmtest` accordingly.
-> The Repair VM script, in conjunction with the ALAR script, will temporarily create a resource group, a repair VM, and a copy of the affected VM's OS disk. It backs up the original */etc/fstab* file and modifies it by removing or commenting out data file system entries that aren't required for booting the system.
-> After the OS starts successfully, review and edit the */etc/fstab* file to fix any errors that might have prevented a proper reboot. Finally, The `repair-button` script will automatically delete the resource group containing the repair VM.
+> - Replace the resource group name `rgtest` and VM name `vmtest` accordingly.
+> - The Repair VM script, in conjunction with the ALAR script, will temporarily create a resource group, a repair VM, and a copy of the affected VM's OS disk. It backs up the original */etc/fstab* file and modifies it by removing or commenting out data file system entries that aren't required for booting the system.
+> - After the OS starts successfully, review and edit the */etc/fstab* file to fix any errors that might have prevented a proper reboot. Finally, The `repair-button` script will automatically delete the resource group containing the repair VM.
 
 #### Use Manual Method
 
