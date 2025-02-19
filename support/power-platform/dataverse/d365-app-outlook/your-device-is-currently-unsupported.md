@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you select the Dyn
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
+ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
 # "Your device is currently unsupported" when accessing the Dynamics 365 App for Outlook
 

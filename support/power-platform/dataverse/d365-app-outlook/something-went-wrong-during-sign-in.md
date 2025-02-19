@@ -4,6 +4,7 @@ description: Fixes an issue in which you get the Something went wrong during sig
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
+ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
 # "Something went wrong during sign-in" error using Microsoft Dynamics 365 App for Outlook
 
