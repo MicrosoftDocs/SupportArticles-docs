@@ -13,7 +13,7 @@ ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.devlang: azurecli
-ms.date: 04/15/2024
+ms.date: 02/19/2025
 ms.author: saimsh
 ---
 # Troubleshoot Linux VM boot issues due to fstab errors
@@ -103,15 +103,14 @@ The ALAR scripts use the repair extension `repair-button` to fix fstab issues by
 az vm repair repair-button --button-command fstab --verbose rgtest --name vmtest
 ```
 
->[!NOTE]
->The resource group name `rgtest` and VM name `vmtest` shown in these examples are placeholders and must be updated accordingly. 
->The Repair VM script, in conjunction with the ALAR script, will temporarily create a Resource Group, a repair VM, and a copy of the OS disk from the affected VM. It backs up the original `/etc/fstab` file and modifies it—either by stripping out or commenting out data file system entries that aren't required for booting the system. 
->After the OS starts successfully, review and edit the `/etc/fstab` file to correct any errors that may have prevented a proper reboot. Finally, the Resource Group containing the repair VM will be automatically deleted by the `repair-button` script.
-
+> [!NOTE]
+> Replace the resource group name `rgtest` and VM name `vmtest` accordingly.
+> The Repair VM script, in conjunction with the ALAR script, will temporarily create a resource group, a repair VM, and a copy of the affected VM's OS disk. It backs up the original */etc/fstab* file and modifies it by removing or commenting out data file system entries that aren't required for booting the system.
+> After the OS starts successfully, review and edit the */etc/fstab* file to fix any errors that might have prevented a proper reboot. Finally, The `repair-button` script will automatically delete the resource group containing the repair VM.
 
 #### Use Manual Method
 
-If both serial console and ALAR approach isn't possible or fails , the repair has to be performed manually. Follow the steps here to manually attach the OS disk to a recovery VM and swap the OS disk back to the original VM:
+If both serial console and ALAR approach isn't possible or fails, the repair has to be performed manually. Follow the steps here to manually attach the OS disk to a recovery VM and swap the OS disk back to the original VM:
 * [Attach the OS disk to a recovery VM using the Azure portal](./troubleshoot-recovery-disks-portal-linux.md)
 * [Attach the OS disk to a recovery VM using Azure CLI](./troubleshoot-recovery-disks-linux.md)
 
