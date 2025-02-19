@@ -5,11 +5,11 @@ ms.reviewer: amitrou
 ms.author: nimoutzo
 author: NikosMoutzourakis
 ms.custom: sap:Desktop flows\UI or browser automation
-ms.date: 02/14/2025
+ms.date: 02/19/2025
 ---
 # No element is highlighted or an error occurs when hovering over a UI or web element
 
-This article solves the issue encountered when using the UI element picker in Citrix or RDP environments in Power Automate for desktop.
+This article helps you resolve issues you may encounter when using the UI element picker in virtual desktops, such as Citrix or RDP environments.
 
 ## Symptoms
 
@@ -48,10 +48,21 @@ The communication with the remote agent components doesn't work.
 
 4. If the agent is running, check the following conditions based on the agent's tray icon status:
 
-   - **A device on the system is not functioning**: The Citrix plugin isn't loaded on the host system. Run the troubleshooter while the virtual desktop platform is active and check errors in the **UI Automation** section.
-   - **Citrix Virtual Channel policy enabled**: The "Virtual channel Allow list" policy on Citrix is set to **Enabled** or **Default**. If it isn't **Disabled**, communication issues will persist. Contact administrators to disable this policy and ensure Citrix machines are restarted after applying the policy.
-   - **Citrix VDA version < 2407**: The "Virtual channel Allow list" policy on Citrix is set to **Enabled** or **Default**. If it isn't **Disabled**, communication issues will persist. Contact administrators to disable this policy and ensure Citrix machines are restarted after applying the policy.
-   - **Citrix VDA Version >= 2407**: A different policy must be set. The older "Virtual channel Allow list" can remain at default. Set the new policy "Virtual channel allow list for DVC" with the following values:
+   - **A device on the system is not functioning**: The Citrix plugin isn't loaded on the host system.
+
+     To troubleshoot the issue, run the troubleshooter tool in Power Automate while the virtual desktop platform is active and check for errors in the **UI Automation** section.
+
+   - **Citrix Virtual Channel policy enabled**: The "Virtual channel Allow list" policy on Citrix is set to **Enabled** or **Default**.
+
+     To resolve communication issues, work with your administrator to set the policy to **Disabled** and ensure Citrix machines are restarted after applying the policy.
+
+   - **Citrix VDA version < 2407**: The "Virtual channel Allow list" policy on Citrix is set to **Enabled** or **Default**.
+
+     To resolve communication issues, work with your administrator to set the policy to **Disabled** and ensure Citrix machines are restarted after applying the policy.
+
+   - **Citrix VDA Version >= 2407**: The older "Virtual channel Allow list" can remain at default but a different policy must be set.
+
+     Set the policy "Virtual channel allow list for DVC" with the following values:
 
       `C:\Program Files (x86)\Power Automate agent for virtual desktops\PAD.RDP.ControlAgent.exe,Microsoft.Flow.RPA.Desktop.UIAutomation.RDP.DVC.Plugin,PAD\CONTROL`
   

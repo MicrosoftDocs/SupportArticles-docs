@@ -5,11 +5,11 @@ ms.reviewer: amitrou
 ms.author: nimoutzo
 author: NikosMoutzourakis
 ms.custom: sap:Desktop flows\SAP automation
-ms.date: 02/14/2025
+ms.date: 02/18/2025
 ---
 # Clicking on an SAP UI element fails
 
-This article solves an issue where clicking on an SAP UI element fails due to the application not being DPI aware in Power Automate for desktop.
+This article helps you resolve issues with UI automation actions such as clicking on SAP UI element that that occur due to the application not being fully DPI aware.
 
 ## Symptoms
 
@@ -17,7 +17,7 @@ When you try to [click on an SAP UI element](/power-automate/desktop-flows/actio
 
 ## Cause
 
-This issue occurs because the SAP application isn't dots per inch (DPI) aware. When the user captures an element on a machine that's different from the one where the flow is run, and the two machines have different screen resolutions, the flow might fail. This behavior can also occur on machines with multiple screens.
+This issue occurs because the SAP application isn't fully dots per inch (DPI) aware and may not always scale properly on high-DPI displays. When the user captures an element on a machine that's different from the one where the flow is run, and the two machines have different screen resolutions, the flow might fail. This behavior can also occur on machines with multiple screens.
 
 ## Resolution
 
