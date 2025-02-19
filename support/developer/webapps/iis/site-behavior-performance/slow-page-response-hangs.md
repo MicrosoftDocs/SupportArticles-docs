@@ -5,7 +5,7 @@ ms.date: 02/17/2025
 ms.custom: sap:Site Behavior and Performance\Slow page response
 ms.reviewer: khgupta, v-sidong
 ---
-# Troubleshoot slow page response and hangs  
+# Troubleshoot slow page response and hangs
 
 _Applies to:_ &nbsp; Internet Information Services (IIS), ASP.NET, ASP.NET Core
 
@@ -17,56 +17,56 @@ Requests take a long time to process and hence response is slow, or response isn
 
 Page slowness and hangs might be accompanied by one or more of the following conditions. It's important to identify these conditions as to which condition will be the focus of troubleshooting. Decide which of these conditions most closely describes the issue you're troubleshooting, and follow the appropriate troubleshooting guide.  
 
-- Slowness or hang only, CPU and memory usage are normal 
+- Slowness or hang only, CPU and memory usage are normal
 
   [Troubleshoot slow page response and hangs]()
 
-- Slowness or hang accompanied by high CPU 
+- Slowness or hang accompanied by high CPU
 
   - Focus on slowness - [Troubleshoot slow page response and hangs]()
   - Focus on high CPU - [TSG for High CPU]() 
 
-- Slowness or hang accompanied by high memory 
+- Slowness or hang accompanied by high memory
 
   - Focus on slowness - [Troubleshoot slow page response and hangs]()
   - Focus on high memory - [TSG for High Memory]()
 
-- Slowness or hang accompanied by both high memory and high CPU 
+- Slowness or hang accompanied by both high memory and high CPU
 
   When all three conditions are present, use [TSG for high memory](). This is because usually high CPU in these cases is due to high memory, and when both memory and CPU are high, this would cause slowness.  
 
-- High CPU only 
+- High CPU only
 
   [TSG for high CPU]()
 
-- High memory only 
+- High memory only
 
-  [TSG for high memory]() 
+  [TSG for high memory]()
 
-## Data collection 
+## Data collection
 
-### What to collect 
+### What to collect
 
-Here is a list of useful data to collect for a slow page response or hang situation. Not all of these data is required for each issue, depending on the situation, some data might or might not need to be collected. Refer to the [Why to collect](#why-to-collect) section for more details. 
+Here is a list of useful data to collect for a slow page response or hang situation. Not all of these data is required for each issue, depending on the situation, some data might or might not need to be collected. Refer to the [Why to collect](#why-to-collect) section for more details.
 
-- [IIS Log Catcher data](#iis-log-catcher) 
+- [IIS Log Catcher data](#iis-log-catcher)
   - [IIS and ASP.NET configuration files](#configuration-files)  
-  - [IIS web logs (W3SVC logs)](#iis-web-logs-w3svc-logs) 
-  - [Event logs (system, application, and security)](#windows-system-application-and-security-event-logs) 
+  - [IIS web logs (W3SVC logs)](#iis-web-logs-w3svc-logs)
+  - [Event logs (system, application, and security)](#windows-system-application-and-security-event-logs)
 - [Fiddler trace or Microsoft Edge HAR trace](#fiddler-tool-trace-or-edge-har-trace)
 - [Failed Request Trace (FREB) logs](#failed-request-trace-freb-logs)
-- [Full user-mode process dumps](/windows-hardware/drivers/debugger/user-mode-dump-files#full-user-mode-dumps) 
-- [Additional data collections](#other-data) 
+- [Full user-mode process dumps](/windows-hardware/drivers/debugger/user-mode-dump-files#full-user-mode-dumps)
+- [Additional data collections](#other-data)
 
 ### Why to collect  
 
 This section describe various tools to collect data for diagnosing and troubleshooting slow page response and hang issues in Internet Information Services (IIS).
 
-#### IIS Log Catcher 
+#### IIS Log Catcher
 
-IIS Log Catcher collects a variety of historical logs and configuration data at one time, including the IIS web logs, which are particularly useful for diagnosing slow page response issues. It will also collect all the **.config** files, which can help to provide an understanding on the different web applications on the server and how they're configured. If FREB logging is already configured, FREB logs will also be included with IIS Log Catcher data. IIS Log Catcher also collects the system and application Event Logs. 
+IIS Log Catcher collects a variety of historical logs and configuration data at one time, including the IIS web logs, which are particularly useful for diagnosing slow page response issues. It will also collect all the **.config** files, which can help to provide an understanding on the different web applications on the server and how they're configured. If FREB logging is already configured, FREB logs will also be included with IIS Log Catcher data. IIS Log Catcher also collects the system and application Event Logs.
 
-##### Configuration files 
+##### Configuration files
 
 **applicationhost.config** and **web.config** are also collected as part of the IIS Log Catcher data. These files are useful for understanding the configuration of IIS and the individual web applications on the server.
 
@@ -74,59 +74,59 @@ IIS Log Catcher collects a variety of historical logs and configuration data at 
 
 Collect IIS logs from a time during which the slowness occurred. This can be helpful in confirming that time-taken field reflects the slowness. It can also help to narrow down the page or pages that are responding slowly.
 
-##### Windows system, application, and security Event Logs 
+##### Windows system, application, and security Event Logs
 
-Collected as part of the IIS Log Catcher data. While the event logs aren't typically used when troubleshooting slow page response and hangs, it's the best practice to go ahead and collect them as there might be a use for them later on in the troubleshooting. 
+Collected as part of the IIS Log Catcher data. While the event logs aren't typically used when troubleshooting slow page response and hangs, it's the best practice to go ahead and collect them as there might be a use for them later on in the troubleshooting.
 
-#### Fiddler tool trace or Edge HAR trace 
+#### Fiddler tool trace or Edge HAR trace
 
-The timeline view in these traces might be able to help you narrow down what page or pages in the web application are slow. This can aid in collecting FREB logs of only the pages which are slow (or the slowest pages). 
+The timeline view in these traces might be able to help you narrow down what page or pages in the web application are slow. This can aid in collecting FREB logs of only the pages which are slow (or the slowest pages).
 
-#### Failed Request Trace (FREB) logs 
+#### Failed Request Trace (FREB) logs
 
 FREB logs can help identify what IIS module takes the longest to process the request. It can identify the slowness in authentication or in the application code itself.  
 
-#### Full user-mode process dump 
+#### Full user-mode process dump
 
-A series of process dumps (2-4) taken during a time when requests are slow or hung might be able to tell you what method call in the application was slow. It could also point to delays in remote requests to remote web services or backend databases. 
+A series of process dumps (2-4) taken during a time when requests are slow or hung might be able to tell you what method call in the application was slow. It could also point to delays in remote requests to remote web services or backend databases.
 
 #### Other data  
 
 These following data options are only collected if needed:
 
-- PerfView traces 
+- PerfView traces
 
   PerfView can help isolate slow performance issues within the web application itself. PerfView traces are collected during a time of slowness. These traces show the individual methods or functions that are slow.  
 
-- Network trace 
+- Network trace
 
-  Network traces are helpful when tracking slow page response and hangs associated with network issues.   
+  Network traces are helpful when tracking slow page response and hangs associated with network issues.
 
-- Performance Monitor log 
+- Performance Monitor log
 
-  PerfMon Logging is helpful when tracking slow page response and hangs associated with high CPU or high memory usage.   
+  PerfMon Logging is helpful when tracking slow page response and hangs associated with high CPU or high memory usage.
 
 ### How to collect
   
 This section provides guidance on how to use various tools to collect data for diagnosing and troubleshooting slow page response and hang issues in IIS.
 
-#### IIS Log Catcher 
+#### IIS Log Catcher
 
 Download the [IIS Log Catcher](https://github.com/NL-Cristi/LogCatcher) tool and use it to collect data by following the [directions](https://github.com/NL-Cristi/LogCatcher/blob/master/Docs/RunFirstTime.md).
 
 ##### Configuration files
 
-If the configuration files aren't collected as part of the IIS Log Catcher data, they will need to be collected manually. The **applicationhost.config** file is located at **c:\\windows\\system32\\inetsrv\\config\\**. The **web.config** files are in the root directory of each application. For example, the root of the Default Web Site's application is **c:\\inetpub\\wwwroot**. Root directories might be anywhere on the file system. Refer to **applicationhost.config** for the **site** and **physicalPath** or review the settings in the IIS Manager. 
+If the configuration files aren't collected as part of the IIS Log Catcher data, they will need to be collected manually. The **applicationhost.config** file is located at **c:\\windows\\system32\\inetsrv\\config\\**. The **web.config** files are in the root directory of each application. For example, the root of the Default Web Site's application is **c:\\inetpub\\wwwroot**. Root directories might be anywhere on the file system. Refer to **applicationhost.config** for the **site** and **physicalPath** or review the settings in the IIS Manager.
 
-##### IIS web logs (W3SVC logs)  
+##### IIS web logs (W3SVC logs)
 
-If the web logs aren't collected as part of the IIS Log Catcher data, they will need to be collected manually. By default, these logs are in **c:\\inetpub\\logs\\logfiles**.  Each site has its own directory named **W3SVC#** where the **#** is the **SiteID**. However, the log location is customizable, you might need to review **applicationhost.config** for the **logFile** and directory or review the settings in the IIS Manager. 
+If the web logs aren't collected as part of the IIS Log Catcher data, they will need to be collected manually. By default, these logs are in **c:\\inetpub\\logs\\logfiles**.  Each site has its own directory named **W3SVC#** where the **#** is the **SiteID**. However, the log location is customizable, you might need to review **applicationhost.config** for the **logFile** and directory or review the settings in the IIS Manager.
 
-##### Windows system, application and security event logs 
+##### Windows system, application and security event logs
 
-If the event logs aren't collected as part of the IIS Log Catcher data, collect them manually. Collect event logs directly from the Event Viewer. Save them as **.evtx** files and view them in Event Viewer on your own server. 
+If the event logs aren't collected as part of the IIS Log Catcher data, collect them manually. Collect event logs directly from the Event Viewer. Save them as **.evtx** files and view them in Event Viewer on your own server.
 
-#### Fiddler tool trace or HAR trace 
+#### Fiddler tool trace or HAR trace
 
 [Fiddler Classic](https://www.telerik.com/fiddler/fiddler-classic) is a third-party browser extension that can act as a proxy for the Browser. Fiddler begins collecting data as soon as it's opened. To collect traces of SSL encrypted requests using Fiddler Classic, follow these steps:
 
@@ -143,7 +143,7 @@ HAR traces can be collected from Microsoft Edge or Chrome browsers directly. To 
 1. Reproduce the slowness issue.
 1. Select **Export HAR…** to save the trace as a **.HAR** file. **.HAR** files can be imported into Edge or Chrome for later review. 
 
-#### Failed Request Trace (FREB) logs 
+#### Failed Request Trace (FREB) logs
 
 Failed Request Tracing is an IIS module. It's available for use when the Tracing module is installed. Tracing can be installed from the Server Manager or by running the following PowerShell command:  
 
@@ -151,48 +151,48 @@ Failed Request Tracing is an IIS module. It's available for use when the Tracing
 Add-WindowsFeature -Name Web-Http-Tracing 
 ```
 
-Before [configuring a FREB Rule](../health-diagnostic-performance/troubleshoot-arr-using-frt-rules.md#step-1-configure-failed-request-tracing-rules), inspect the W3SVC logs to identify requests that take a long time to complete. Identify individual page requests that are slow using the `cs-uri-stem` and the `time-taken` fields. 
+Before [configuring a FREB Rule](../health-diagnostic-performance/troubleshoot-arr-using-frt-rules.md#step-1-configure-failed-request-tracing-rules), inspect the W3SVC logs to identify requests that take a long time to complete. Identify individual page requests that are slow using the `cs-uri-stem` and the `time-taken` fields.
 
-- If you can identify a few specific pages that are slow, create a FREB Rule for the specific page (or pages). If creating the rule for a specific page, don't use time taken in the FREB Rule. Instead, use the status code from the W3SVC log. 
+- If you can identify a few specific pages that are slow, create a FREB Rule for the specific page (or pages). If creating the rule for a specific page, don't use time taken in the FREB Rule. Instead, use the status code from the W3SVC log.
 
 - If you can't identify a specific page to create the FREB rule, you can instead use all content and specify a time taken in the FREB rule, this will give you logs of all requests that take more than the specified time to complete.
-                     
-> [!NOTE]
-> This method might give you false positives, also note that when creating FREB logs based on time taken, the log ends when the request reaches the specified time taken. If the specified time is too short, you won't be able to identify where the slowness is occurring. 
 
-##### The issue is ongoing or reproduced easily or intermittent but occurs very often 
+> [!NOTE]
+> This method might give you false positives, also note that when creating FREB logs based on time taken, the log ends when the request reaches the specified time taken. If the specified time is too short, you won't be able to identify where the slowness is occurring.
+
+##### The issue is ongoing or reproduced easily or intermittent but occurs very often
 
 The generated FREB logs triggered by some status code rule will provide a view of all modules that took place along the IIS pipeline throughout a request lifetime, along with the time each module took.
 
-However, FREB logs triggered by a specific time taken value rule (for example, 20 seconds) will only show that information up to that value, meaning, anything that this request goes through beyond this time won't be available in the log. 
+However, FREB logs triggered by a specific time taken value rule (for example, 20 seconds) will only show that information up to that value, meaning, anything that this request goes through beyond this time won't be available in the log.
 
-If the response is receivable after some delay like 30 seconds for example, you can check the status code of the received response (by checking browser developer tools, assuming the client can be a browser, or from IIS logs), and then [configure FREBs](troubleshoot-http-error-code.md#steps-to-capture-freb-logs) on that status code. Now, view the generated FREBs to understand which module is causing the slowness (if you aren't familiar with how to interpret FREBs, section **Interpreting a FREB tracing log** in this link could help). For example, if you find out that some third-party module is causing the slowness, it will be up to that third-party to investigate the problem. However, if the slowness is reported to be from customer code, you need memory dumps for further investigation. 
+If the response is receivable after some delay like 30 seconds for example, you can check the status code of the received response (by checking browser developer tools, assuming the client can be a browser, or from IIS logs), and then [configure FREBs](troubleshoot-http-error-code.md#steps-to-capture-freb-logs) on that status code. Now, view the generated FREBs to understand which module is causing the slowness (if you aren't familiar with how to interpret FREBs, section **Interpreting a FREB tracing log** in this link could help). For example, if you find out that some third-party module is causing the slowness, it will be up to that third-party to investigate the problem. However, if the slowness is reported to be from customer code, you need memory dumps for further investigation.
 
-If no response is received at all (complete hang) or received after a very long time, you can configure FREBs instead on a specific time taken rule, and then proceed as mentioned above. The time value specified should be problematic, meaning, if customer knows that it's normal and expected for a response to take 10 seconds, you will be interested only in the time beyond these 10 seconds, hence would configure FREBs on 20 or 30 seconds or some other number. 
+If no response is received at all (complete hang) or received after a very long time, you can configure FREBs instead on a specific time taken rule, and then proceed as mentioned above. The time value specified should be problematic, meaning, if customer knows that it's normal and expected for a response to take 10 seconds, you will be interested only in the time beyond these 10 seconds, hence would configure FREBs on 20 or 30 seconds or some other number.
 
-##### The issue is too intermittent or hard to reproduce 
+##### The issue is too intermittent or hard to reproduce
 
-It would be a waste to wait for a week or a month for an issue to occur to take FREBs alone to discover that you actually need memory dumps for further investigation, and then wait another such time to generate these memory dumps. Instead, it's better to generate memory dumps during the first occurrence of the issue. 
+It would be a waste to wait for a week or a month for an issue to occur to take FREBs alone to discover that you actually need memory dumps for further investigation, and then wait another such time to generate these memory dumps. Instead, it's better to generate memory dumps during the first occurrence of the issue.
 
-When slowness is in seconds: If requests normally take milliseconds and when the issue happens they take 1 or a couple of seconds, and customer would like to investigate that, you will be limited in what you can do to help. Generating memory dumps for such slow periods might not be practical. Debuggers will add overhead which might contribute to the slowness to some degree and hence the original slowness and the overhead will overlap, and generating multiple memory dumps within a request lifetime might not be possible to begin with. Instead, ETW trace using Perfview could be collected, and still you might be very limited in investigation if the time turns out to be not concentrated in a specific operation rather is too distributed. Do check IIS Logs as if you do notice very slow requests in addition, you might want to discuss with customer troubleshooting that instead. If solving these very slow requests automatically solves the couple of seconds slowness too, it will be great. For Perfview steps, see [Steps to capture a PerfView trace and dumps](troubleshoot-http-error-code.md#steps-to-capture-a-perfview-trace-and-dumps). 
+When slowness is in seconds: If requests normally take milliseconds and when the issue happens they take 1 or a couple of seconds, and customer would like to investigate that, you will be limited in what you can do to help. Generating memory dumps for such slow periods might not be practical. Debuggers will add overhead which might contribute to the slowness to some degree and hence the original slowness and the overhead will overlap, and generating multiple memory dumps within a request lifetime might not be possible to begin with. Instead, ETW trace using Perfview could be collected, and still you might be very limited in investigation if the time turns out to be not concentrated in a specific operation rather is too distributed. Do check IIS Logs as if you do notice very slow requests in addition, you might want to discuss with customer troubleshooting that instead. If solving these very slow requests automatically solves the couple of seconds slowness too, it will be great. For Perfview steps, see [Steps to capture a PerfView trace and dumps](troubleshoot-http-error-code.md#steps-to-capture-a-perfview-trace-and-dumps).
 
-##### Detailed steps for collecting FREB logs 
+##### Detailed steps for collecting FREB logs
 
 For more information on how to configure FREB logging, see [Using Failed Request Tracing rules to troubleshoot Application Request Routing](../health-diagnostic-performance/troubleshoot-arr-using-frt-rules.md).
 
-#### Full user-mode process dumps 
+#### Full user-mode process dumps
 
 ##### The issue can be reproduced
 
-If the issue can be reproduced or is currently occurring, you can capture several manual dumps of the worker process hosting the app pool. 
+If the issue can be reproduced or is currently occurring, you can capture several manual dumps of the worker process hosting the app pool.
 
 Try to space dumps about 30 seconds apart, but be mindful of the total slowness. If the total period of slowness is shorter (for example, 20-30 seconds total), space dumps closer together to fit at least 2 inside the slow period.
 
 Feel free to use and send [email template]().
 
-Optionally, ProcDump can be used, especially for cases where you can't install DebugDiag on the server or installation would require. 
+Optionally, ProcDump can be used, especially for cases where you can't install DebugDiag on the server or installation would require.
 
-If issue is more intermittent, consider capturing both FREB traces and dumps by using the [email template]() or if using ProcDump is easier, you can follow this article (of course, set up FREB for time taken rather than status code. 
+If issue is more intermittent, consider capturing both FREB traces and dumps by using the [email template]() or if using ProcDump is easier, you can follow this article (of course, set up FREB for time taken rather than status code.
 
 Use this [email template]() for setting up FREB.
 
@@ -222,7 +222,7 @@ Don't use Task Manager to collect dumps. Although sometimes the generated dumps 
 
 #### Time trigger amount
 
-To solve the issue, it's crucial to determine the appropriate time value that triggers the generation of memory dumps. 
+To solve the issue, it's crucial to determine the appropriate time value that triggers the generation of memory dumps.
 
 This involves understanding the response times from your Internet Information Services (IIS) logs during periods when the issue was present and when it wasn't.
 
@@ -255,10 +255,11 @@ To identify appropriate time trigger, follow these steps:
    If the slowest response time isn't frequently occurring, focus on the most common slow response time observed in the IIS logs.
 
 > [!NOTE]
-> - You might need multiple attempts to get a good set of memory dumps that are useful. 
-> - Make sure you have enough space on the drive you select for holding the generated memory dumps. Each memory dump will be the same size of the process at the time of generation. So, for example, if the size of the process was 1GB at the time of memory dump generation, then generating 3 dumps max would need 4 GB of space. 
+>
+> - You might need multiple attempts to get a good set of memory dumps that are useful.
+> - Make sure you have enough space on the drive you select for holding the generated memory dumps. Each memory dump will be the same size of the process at the time of generation. So, for example, if the size of the process was 1GB at the time of memory dump generation, then generating 3 dumps max would need 4 GB of space.
 
-#### Generate memory dumps manually using Debug Diag 
+#### Generate memory dumps manually using DebugDiag
 
 If the customer can trigger the slow request and hence knowns how much time to pause before starting the generation of memory dumps, follow these steps.
 
@@ -266,13 +267,13 @@ If the customer can't trigger the request (for example, the client is a mobile a
 
 1. Follow these steps to enable the Request Monitor:
 
-  1. Open Server Manager.
-  1. Select **Manage** in the top-right corner and select **Add Roles and Features** > **Next**.
-  1. In the **Add Roles and Features Wizard** window, select **Role-based or feature-based installation** > **Next**.
-  1. Choose the server you want to configure from the server pool.
-  1. In the **Select server roles** section, expand **Web Server (IIS)** > **Web Server** > **Health and Diagnostics**.
-  1. Under **Health and Diagnostics**, select the **Request Monitor** checkbox.
-  1. Select **Next** > **Next** > **Install** to enable the Request Monitor feature.
+   1. Open Server Manager.
+   1. Select **Manage** in the top-right corner and select **Add Roles and Features** > **Next**.
+   1. In the **Add Roles and Features Wizard** window, select **Role-based or feature-based installation** > **Next**.
+   1. Choose the server you want to configure from the server pool.
+   1. In the **Select server roles** section, expand **Web Server (IIS)** > **Web Server** > **Health and Diagnostics**.
+   1. Under **Health and Diagnostics**, select the **Request Monitor** checkbox.
+   1. Select **Next** > **Next** > **Install** to enable the Request Monitor feature.
 
   After the installation is complete, you might need to restart IIS. You can restart it by opening a command prompt and typing **iisreset.exe**.
 
@@ -280,17 +281,17 @@ If the customer can't trigger the request (for example, the client is a mobile a
 1. Double click **Worker Processes**.
 1. Double click the application pool in question and select the **Time Elapsed** column.
 
-For more information, see [Using RSCA to help you understand what your IIS server requests are doing](https://techcommunity.microsoft.com/blog/iis-support-blog/using-rsca-to-help-you-understand-what-your-iis-server-requests-are-doing/773904)).
+For more information, see [Using RSCA to help you understand what your IIS server requests are doing](https://techcommunity.microsoft.com/blog/iis-support-blog/using-rsca-to-help-you-understand-what-your-iis-server-requests-are-doing/773904).
 
-If the slowness is confirmed, you can take the memory dumps manually. However, this doesn't guarantee that the dumps will contain the same problematic request during its lifetime and hence multiple attempts might be needed if dumps are taken manually (even when automated, sometimes multiple attempts are needed). 
+If the slowness is confirmed, you can take the memory dumps manually. However, this doesn't guarantee that the dumps will contain the same problematic request during its lifetime and hence multiple attempts might be needed if dumps are taken manually (even when automated, sometimes multiple attempts are needed).
 
 To take the memory dumps manually, see [Method 2: Using DebugDiag](data-capture-managed-memory-leak.md#method-2-using-debugdiag).
 
-If you know how to reproduce the slowness, do so and select **Save & Close** when the requests are slow. If you don't know how to reproduce the slowness and it occurs quickly and frequently, wait for the slowness to begin before selecting **Save & Close**. Dumps will begin collecting as soon as **Save & Close** is selected. 
+If you know how to reproduce the slowness, do so and select **Save & Close** when the requests are slow. If you don't know how to reproduce the slowness and it occurs quickly and frequently, wait for the slowness to begin before selecting **Save & Close**. Dumps will begin collecting as soon as **Save & Close** is selected.
 
 #### Configure FREB to trigger memory dumps using ProcDump.exe
 
-This section provides step-by-step instructions on how to configure Failed Request Tracing Rules (FREB) to trigger memory dumps using **ProcDump.exe**. This approach is particularly useful when you can't install certain applications like Debug Diag on the server.
+This section provides step-by-step instructions on how to configure Failed Request Tracing Rules (FREB) to trigger memory dumps using **ProcDump.exe**. This approach is particularly useful when you can't install certain applications like DebugDiag on the server.
 
 Follow these steps to configure FREB to run a custom action, like **ProcDump.exe**, to generate memory dumps when specific rules are met.
 
@@ -299,9 +300,9 @@ Follow these steps to configure FREB to run a custom action, like **ProcDump.exe
    Configure FREBs on the appropriate request time value by following the steps in [Time trigger amount](#time-trigger-amount). Make sure to set a time-taken rule instead of a status code. For detailed steps on configuring FREBs, see [Steps to capture FREB logs](troubleshoot-http-error-code.md#steps-to-capture-freb-logs).
 
    > [!NOTE]
-   > For the following second and third steps, This reference provides in addition alternatives ways using the config file directly or appcmd, however, change the **customActionParams** to `-accepteula -ma %1% C:\myDumps -n 3 -s XXX`. Change the dump spacing as needed using `-s` in seconds). 
+   > For the following second and third steps, This reference provides in addition alternatives ways using the config file directly or appcmd, however, change the **customActionParams** to `-accepteula -ma %1% C:\myDumps -n 3 -s XXX`. Change the dump spacing as needed using `-s` in seconds.
 
-1. Follow these steps to enable custom actions: 
+1. Follow these steps to enable custom actions:
 
    1. Select the server name on the left side of the screen).
    1. Double click the **Configuration Editor** icon.
@@ -311,7 +312,7 @@ Follow these steps to configure FREB to run a custom action, like **ProcDump.exe
    1. Download [ProcDump](/sysinternals/downloads/procdump) and copy the executable to the **C:\\procDump** path. Create a directory named **myDumps** under the **C:\\** drive.
 
       > [!WARNING]
-      > You have to place the ProcDump tool in a folder path that doesn't contain whitespaces, otherwise it's impossible to execute ProcDump via FREB. For example, **C:\procDump** is a good path folder while **C:\Process Dump** isn't. 
+      > You have to place the ProcDump tool in a folder path that doesn't contain whitespaces, otherwise it's impossible to execute ProcDump via FREB. For example, **C:\procDump** is a good path folder while **C:\Process Dump** isn't.
 
 1. Specify the custom action for ProcDump:
 
@@ -319,39 +320,39 @@ Follow these steps to configure FREB to run a custom action, like **ProcDump.exe
    1. Select the **Add** link under the **Action** pane and fill in the properties as shown in the following screenshot:
 
       - **CustomActionExe**: Set the value to the path of the ProcDump executable. It's the executable that will launch when the FREB rule is met.
-      - **customActionParams** Set the value to `-accepteula -ma %1% C:\myDumps -n 3`. This command will generate 3 consecutive dumps, spaced by 10 seconds. If you need to change the spacing, add `-s` followed by the number of seconds. 
+      - **customActionParams** Set the value to `-accepteula -ma %1% C:\myDumps -n 3`. This command will generate 3 consecutive dumps, spaced by 10 seconds. If you need to change the spacing, add `-s` followed by the number of seconds.
 
-## Data analysis 
+## Data analysis
 
 This section provides guidance on how to use various tools to analyze data for diagnosing and troubleshooting slow page response and hang issues in IIS.
 
-### IIS web logs (W3SVC logs) 
+### IIS web logs (W3SVC logs)
 
-When analyzing W3SVC logs, there are a couple of goals. 
+When analyzing W3SVC logs, there are a couple of goals.
 
-- Verify that requests are executing slowly. Review the time-taken values to confirm how long requests are taking to execute. 
-- Identify which pages are executing slowly. In conjunction with time-taken, use the `cs-uri-stem` values to identify slow pages by name. 
+- Verify that requests are executing slowly. Review the time-taken values to confirm how long requests are taking to execute.
+- Identify which pages are executing slowly. In conjunction with time-taken, use the `cs-uri-stem` values to identify slow pages by name.
 
-The time-taken is logged in milliseconds. 1000 milliseconds = 1 second. When looking for requests that take more than 30 seconds to complete, look for time-taken values that are greater than 30,000 milliseconds. 
+The time-taken is logged in milliseconds. 1000 milliseconds = 1 second. When looking for requests that take more than 30 seconds to complete, look for time-taken values that are greater than 30,000 milliseconds.
 
-#### Helpful tools to analyze W3SVC logs 
+#### Helpful tools to analyze W3SVC logs
 
-There are two tools to analyze W3SVC Logs, Excel and Log Parser 2.2. 
+There are two tools to analyze W3SVC Logs, Excel and Log Parser 2.2.
 
 ##### Analyze a single W3SVC log using Excel
 
-To analyze a single W3SVC log using Excel, follow these steps: 
+To analyze a single W3SVC log using Excel, follow these steps:
 
-1. Open W3SVC logs in Excel.   
-1. Select and delete the top 3 rows (all should start with a **#** sign). Make sure to keep the row that begins with **#Fields**. 
-1. Select the column **A**. From the **Data** ribbon, select **Text to Columns**. 
-1. In **Convert Text to Columns Wizard**, select **Delimited** > **Next**. 
-1. In **Delimiters**, select the **Space** checkbox and clear any other checks, and then select **Finish**. 
-1. Select the cell **A1**, right click on it, and select **Delete** from the context menu. 
-1. When prompted, select **Shift cells left**. 
-1. Select row **1**. From the **Data** ribbon, select **Filter**. 
+1. Open W3SVC logs in Excel.
+1. Select and delete the top 3 rows (all should start with a **#** sign). Make sure to keep the row that begins with **#Fields**.
+1. Select the column **A**. From the **Data** ribbon, select **Text to Columns**.
+1. In **Convert Text to Columns Wizard**, select **Delimited** > **Next**.
+1. In **Delimiters**, select the **Space** checkbox and clear any other checks, and then select **Finish**.
+1. Select the cell **A1**, right click on it, and select **Delete** from the context menu.
+1. When prompted, select **Shift cells left**.
+1. Select row **1**. From the **Data** ribbon, select **Filter**.
 
-Now, you can use the filters for time-taken to identify all the request greater than the desired number of seconds. 
+Now, you can use the filters for time-taken to identify all the request greater than the desired number of seconds.
 
 ##### Analyze multiple W3SVC logs using Log Parser
 
@@ -363,57 +364,57 @@ To use Log Parser 2.2, follow these steps:
 1. Open Command Prompt and navigate to the Log Parser installation directory.
 1. Run queries in the **Command Prompt** window. Here are some query examples:
 
-   - Top Requested Pages 
+   - Top Requested Pages
 
       ```cmd
       "C:\Program Files (x86)\Log Parser 2.2\logparser.exe" -i:W3C -o:CSV "SELECT TOP 100 cs-uri-stem as URL-Requested, COUNT(*) AS Num-Requests, MAX(time-taken) As Max-Time-Taken, MIN(time-taken) As Min-Time-Taken, Avg(time-taken) As Average-Time-Taken FROM *.log GROUP BY URL-Requested ORDER By Num-Requests DESC" -q:ON > Top100Pages.csv 
       ```
 
-   - Slowest Pages 
+   - Slowest Pages
 
       ```cmd
       REM "C:\Program Files (x86)\Log Parser 2.2\logparser.exe" -i:W3C -o:CSV "SELECT TOP 25 cs-uri-stem as URL-Requested, COUNT(*) AS Num-Requests, MAX(time-taken) As Max-Time-Taken, MIN(time-taken) As Min-Time-Taken, Avg(time-taken) As Average-Time-Taken FROM *.log GROUP BY URL-Requested ORDER By Average-Time-Taken DESC" -q:ON > Slowest25Pages.csv 
       ```
 
-   - ALL Requests over 15 Seconds 
+   - ALL Requests over 15 Seconds
 
       ```cmd
       REM "C:\Program Files (x86)\Log Parser 2.2\logparser.exe" -i:W3C -o:W3C "SELECT * FROM *.log WHERE Time-Taken > 14999 ORDER BY Time-Taken DESC" -q:ON > LongRunningRequests.log 
       ```
 
-### Fiddler traces or HAR traces from Edge or Chrome 
+### Fiddler traces or HAR traces from Edge or Chrome
 
-[Fiddler Classic](https://www.telerik.com/fiddler/fiddler-classic) has a couple of options for viewing performance information. After collecting a trace in Fiddler, you review the **.SAZ** file in Fiddler. There are two relevant tabs in Fiddler. The first is the **Statistics** tab. Select multiple requests (or frames) in a trace, and the **Statistics** tab will provide some performance statistics in a simple summary page. 
+[Fiddler Classic](https://www.telerik.com/fiddler/fiddler-classic) has a couple of options for viewing performance information. After collecting a trace in Fiddler, you review the **.SAZ** file in Fiddler. There are two relevant tabs in Fiddler. The first is the **Statistics** tab. Select multiple requests (or frames) in a trace, and the **Statistics** tab will provide some performance statistics in a simple summary page.
 
-The second Fiddler tab for troubleshooting performance issues is the **Timeline** tab. Selecting the **Timeline** tab and multiple requests (or frames) in a trace, you will be presented with a bar graph depicting how long it took for the client to receive responses for each request. 
+The second Fiddler tab for troubleshooting performance issues is the **Timeline** tab. Selecting the **Timeline** tab and multiple requests (or frames) in a trace, you will be presented with a bar graph depicting how long it took for the client to receive responses for each request.
 
-F12 Developer Tools are built into both Edge and Chrome. In instances where it's not possible to install Fiddler Classic, these tools might already be available to the customer for troubleshooting. The F12 Developer Tools are similar to Fiddler as they provide a client-side view of requests being made. Developer Tools HAR files show a timeline across the top of the Network report which give a visual representation of the time the browser waited for individual requests. The HAR file also shows a **TIME** column to help identify slow requests. 
+F12 Developer Tools are built into both Edge and Chrome. In instances where it's not possible to install Fiddler Classic, these tools might already be available to the customer for troubleshooting. The F12 Developer Tools are similar to Fiddler as they provide a client-side view of requests being made. Developer Tools HAR files show a timeline across the top of the Network report which give a visual representation of the time the browser waited for individual requests. The HAR file also shows a **TIME** column to help identify slow requests.
 
 ### Failed Request Trace (FREB) logs
 
 FREB traces are **.xml** files, and formatted by the **.xsl** stylesheet in the FREB log directory. Use a tool like [FrebSbS](https://github.com/NL-Cristi/FrebSbS) to view these logs. For more information on how to read a FREB log, see [Reading a FREB log, a Failed Request Tracing: IIS request processing pipeline execution](https://techcommunity.microsoft.com/blog/iis-support-blog/reading-a-freb-log-a-failed-request-tracing-iis-request-processing-pipeline-exec/1349639).
 
-### Full memory dumps 
+### Full memory dumps
 
-The Debug Diag Analysis application can analyze dumps for either hangs or performance issues.   
+The DebugDiag 2 Analysis application can analyze dumps for either hangs or performance issues.
 
-To analyze a single dump in a hang situation, follow these steps: 
+To analyze a single dump in a hang situation, follow these steps:
 
-1. Use the **Add Data Files** button to load a dump into Debug Diag Analysis.  
-1. Select **CrashHangAnalysis**. 
-1. Select **Start Analysis**.   
-1. When Debug Diag completes its analysis, a report will open in Edge. 
+1. Use the **Add Data Files** button to load a dump into DebugDiag 2 Analysis.  
+1. Select **CrashHangAnalysis**.
+1. Select **Start Analysis**.
+1. When DebugDiag completes its analysis, a report will open in Edge.
 
-To analyze a series of dumps in a performance issue, follow these steps: 
+To analyze a series of dumps in a performance issue, follow these steps:
 
 1. Use the **Add Data Files** button to add multiple dumps of the same process  
-1. Select **PerfAnalysis**. 
-1. Select **Start Analysis**.   
-1. When Debug Diag completes its analysis, a report will open in Edge. 
+1. Select **PerfAnalysis**.
+1. Select **Start Analysis**.
+1. When DebugDiag completes its analysis, a report will open in Edge.
 
-It's simpler and more understandable to only run one type of analysis rule at a time. 
+It's simpler and more understandable to only run one type of analysis rule at a time.
 
 > [!NOTE]
-> If a more detailed analysis is needed, [WinDbg](/windows-hardware/drivers/debuggercmds/windbg-overview) can be used to review dumps.
+> If a more detailed analysis is needed, use [WinDbg](/windows-hardware/drivers/debuggercmds/windbg-overview) to review dumps.
 
-[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)] 
+[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
