@@ -24,7 +24,7 @@ This issue is due to a recent regression that has been mitigated. However, users
 > [!NOTE]
 >
 > - If you're using Outlook on the web (OWA) or classic Outlook desktop app on Windows, follow the steps 1-3 to solve ths issue.  
-> - If you're using [the new Outlook for Windows](/office/switch-to-new-outlook-for-windows-f5fb9e26-af7c-4976-9274-61c6428344e7) or Outlook on Mac, you should first [open the Developer Tools](#additional-instructions-for-the-new-outlook-for-windows-and-outlook-on-mac-users), and then follow the steps 1 to 3 to resolve the issue.
+> - If you're using [the new Outlook for Windows](https://support.microsoft.com/office/switch-to-new-outlook-for-windows-f5fb9e26-af7c-4976-9274-61c6428344e7) or Outlook on Mac, you should first [open the Developer Tools](#additional-instructions-for-the-new-outlook-for-windows-and-outlook-on-mac-users), and then follow the steps 1 to 3 to resolve the issue.
 
 ### Step 1: Clear local storage and session storage from the add-in
 
