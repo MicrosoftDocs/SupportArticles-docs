@@ -7,7 +7,7 @@ ms.custom: sap:Component Development\COM, DCOM, and COM+ Programming and Runtime
 ---
 # The UMDH tool generates warnings
 
-This article describes a known issue with the [User-Mode Dump Heap (UMDH)](/windows-hardware/drivers/debugger/umdh) tool that is installed with the [Debugging Tools for Windows](/windows-hardware/drivers/debugger/extra-tools). The issue affects the UMDH tool included in the Windows SDK for Windows 11, the Windows Driver Kit for Windows 11, and the standalone toolsets.
+This article describes a known issue with the [User-Mode Dump Heap (UMDH)](/windows-hardware/drivers/debugger/umdh) tool that is installed with the [Debugging Tools for Windows](/windows-hardware/drivers/debugger/debugger-download-tools). The issue affects the UMDH tool included in the Windows SDK for Windows 11, the Windows Driver Kit for Windows 11, and the standalone toolsets.
 
 ## Symptoms
 
