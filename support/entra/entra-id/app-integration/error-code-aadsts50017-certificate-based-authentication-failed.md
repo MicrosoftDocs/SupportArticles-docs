@@ -3,7 +3,7 @@ title: Error AADSTS50017 - Validation of Given Certificate for Certificate-Based
 description: Provides solutions to the Microsoft Entra authentication AADSTS50017 error that occurs when you access an application or resource with certificate-based authentication (CBA).
 ms.reviewer: laks, joaos, willfid, v-weizhu
 ms.service: entra-id
-ms.date: 02/18/2025
+ms.date: 02/20/2025
 ms.custom: sap:Issues Signing In to Applications
 ---
 # Error AADSTS50017 - Validation of given certificate for certificate-based authentication failed
@@ -37,7 +37,7 @@ To resolve this issue, follow these steps:
 
     To get the SKI and AKI values, check the details of your certificate and uploaded issuing CA certificates.
 
-     :::image type="content" source="media/error-code-aadsts50017-certificate-based-authentication-failed/certificate-chain.png" alt-text="Screenshot that shows a certificate chain." lightbox="media/error-code-aadsts50017-certificate-based-authentication-failed/certificate-chain.png":::
+     :::image type="content" source="media/error-code-aadsts50017-certificate-based-authentication-failed/certificate-chain-ski-aki-value.png" alt-text="Screenshot that shows a certificate chain." lightbox="media/error-code-aadsts50017-certificate-based-authentication-failed/certificate-chain-ski-aki-value.png":::
 
     |Certificate type|Characteristic|
     |---|---|
