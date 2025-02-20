@@ -1,6 +1,5 @@
 ---
 title: Dynamics 365 App for Outlook Authentication Pop-Up Is Blank
-
 description: Solves the issue that the authentication pop-up is blank and you can't sign in to Dynamics 365 App for Outlook.
 ms.reviewer: mkelan
 ms.author: smurkute
