@@ -33,18 +33,18 @@ Received response `https://InternalMP.contoso.com/SMS_MP/.sms_aut?MPLIST2&CM1` f
 
 ### Cause
 
-The CMG connection point requires a [client authentication certificate](/mem/configmgr/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_clientauth) to securely forward client requests to an HTTPS management point. If the client authentication certificate is missing, configured incorrectly, or invalid, status code 403 is returned. In scenarios in which the Management Point (MP) operates in enhanced HTTP mode with token-based authentication, the certificate isn't required but is always recommended.
+The CMG connection point requires a [server authentication certificate](/mem/configmgr/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_clientauth) to securely forward client requests to an HTTPS management point. If the server authentication certificate is missing, configured incorrectly, or invalid, status code 403 is returned. In scenarios in which the Management Point (MP) operates in enhanced HTTP mode with token-based authentication, the certificate isn't required but is always recommended.
 
 ### Resolution
 
-To fix this issue, generate a [client authentication certificate](/mem/configmgr/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_clientauth) for the CMG connection point.
+To fix this issue, generate a [server authentication certificate](/mem/configmgr/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_clientauth) for the CMG connection point.
 
 > [!NOTE]
 > In the certificate, computers must have a unique value in the **Subject Name** or **Subject Alternative Name** field.
 
-### How to verify CMG has a client certificate?
+### How to verify CMG has a server certificate?
 
-After you enable verbose logging, the **SMS_Cloud_ProxyConnector.log** file will show the list of available certificates on the server. To verify if a valid client authentication certificate to establish communication between the CMG connection point and the management point exist, check the number of certificates in the **Filtered cert count with client auth:** line. See the following log for an example:
+After you enable verbose logging, the **SMS_Cloud_ProxyConnector.log** file will show the list of available certificates on the server. To verify if a valid server authentication certificate to establish communication between the CMG connection point and the management point exist, check the number of certificates in the **Filtered cert count with client auth:** line. See the following log for an example:
 
 **SMS_Cloud_ProxyConnector.log**
 
@@ -145,7 +145,7 @@ If you're using a PKI server authentication certificate, follow these steps:
 
     Replace the `<CMGFQDN>` placeholder with your CMG public FQDN name.
 
-2. Make sure that the client has the certificate in the Trusted Root Certification Authorities certificate store locally. Otherwise, the client doesn't trust the CMG, even when using Microsoft Entra or token-based authentication. This modern authentication method is only available for the CMG to validate the client authentication, but not in the responses sent from the CMG to the client. When you use a third-party certificate for the authentication, the client is typically able to validate the public Root CA over the Internet.
+2. Make sure that the client has the certificate in the Trusted Root Certification Authorities certificate store locally. Otherwise, the client doesn't trust the CMG, even when using Microsoft Entra or token-based authentication. This modern authentication method is only available for the CMG to validate the server authentication, but not in the responses sent from the CMG to the client. When you use a third-party certificate for the authentication, the client is typically able to validate the public Root CA over the Internet.
 
 3. If the CRL isn't published on the Internet, make sure that the site doesn't enforce clients to validate the CRL and disable CRL checking for clients:
 
@@ -197,7 +197,7 @@ For further troubleshooting, of Client to CMG communication issues, we recommend
 
 - Check the IIS logs on the management point.
 
-    In the following sample log, the **403 7** response indicates that the client certificate can't be found:
+    In the following sample log, the **403 7** response indicates that the server certificate can't be found:
 
     > \<Date> \<Time> \<IP_address_of_MP> GET /SMS_MP/.sms_aut SITESIGNCERT 443 - \<IP_address_of_CMG_connectionpoint> SMS+CCM+5.0 - **403 7** 0 5573 11
 
