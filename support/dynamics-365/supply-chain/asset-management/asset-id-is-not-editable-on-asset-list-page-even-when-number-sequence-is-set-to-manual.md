@@ -1,26 +1,27 @@
----
-title: Asset ID isn't editable even when Number sequence is set to Manual
-description: Provides a workaround for editing Asset ID in Microsoft Dynamics 365 Supply Chain Management.
-author: sorenbacker2
-ms.author: sorenba
-ms.reviewer: christys
-ms.date: 02/13/2025
-ms.custom: 
----
-<!-- TOC location: Learn / Troubleshoot / Microsoft Dynamics 365 / Dynamics 365 Supply Chain Management / Asset Management -->
+---
+title: Asset ID Isn't Editable When Number Sequence Is Set To Manual
+description: Provides a workaround for editing Asset ID in Microsoft Dynamics 365 Supply Chain Management.
+author: sorenbacker2
+ms.author: sorenba
+ms.date: 02/20/2025
+ms.custom: sap:Asset management\Issues with asset management
+---
+# Asset ID isn't editable when number sequence is set to Manual
 
-# Asset ID isn't editable even when Number sequence is set to Manual
+This article provides a workaround for allowing the Asset ID to be edited in Microsoft Dynamics 365 Supply Chain Management.
 
-## Symptoms  
+## Symptoms
   
-A user uses the **Asset Management** page to create a new asset. The asset is created with an **Asset ID** value that the system generates based on the number sequence selected on the **Asset Management parameters** page. Later, the user wishes to edit the **Asset ID** value. However, this isn't possible even though the related number sequence has **Manual** set to *Yes* on the **Number sequences** details page.
+A user [creates a new asset](/dynamics365/supply-chain/asset-management/objects/create-objects-based-on-purchase-orders#select-asset-items) using the **Asset Management** page. The asset is created with an **Asset ID** value that the system generates based on the [number sequence](/dynamics365/supply-chain/asset-management/setup-for-objects/enterprise-asset-management-parameters#the-number-sequences-tab) selected on the **Asset management parameters** page. However, the **Asset ID** value can't be edited later, even though the related number sequence has **Manual** set to *Yes* on the **Number sequences** details page.
 
 ## Cause
 
-A user can't just edit an existing **Asset ID** because the **Asset ID** is the natural key for the **Assets**. We don't allow this to be edited as it can cause data corruption and unexpected behavior in the case of integrations.
+A user can't edit an existing **Asset ID** because the **Asset ID** is the natural key for the **Assets**. Editing it can cause data corruption and unexpected behavior in case of integrations.
 
-## Resolution
+## Workaround
 
-If you, regardless of the risk of data corruption, want to be able to edit the **Asset ID** anyway, you can extend the `init()` method on **EntAssetObjectTable** form, and allow edit on the field.
+To allow a user to edit the **Asset ID** on an existing asset despite the risk, extend the `init()` method on the **EntAssetObjectTable** form.
 
-This change will allow a user to edit the **Asset ID** on an existing asset.
+## More information
+
+[Set up number sequences on an individual basis](/dynamics365/fin-ops-core/fin-ops/organization-administration/tasks/set-up-number-sequences-individual-basis)
