@@ -7,7 +7,7 @@ ms.reviewer: kaushika, bmoran
 ---
 # Configuration Manager clients fail to communicate with CMG
 
-This article provides resolutions for common issues when Configuration Manager clients fail to communicate with a Cloud Management Gateway (CMG).
+This article provides solutions for common issues when Configuration Manager clients fail to communicate with a Cloud Management Gateway (CMG).
 
 _Original product version:_ &nbsp; Configuration Manager (current branch)  
 _Original KB number:_ &nbsp; 4503442, 4495265
@@ -37,14 +37,14 @@ The CMG connection point requires a [server authentication certificate](/mem/con
 
 ### Resolution
 
-To fix this issue, generate a [server authentication certificate](/mem/configmgr/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_clientauth) for the CMG connection point.
+To resolve this issue, generate a [server authentication certificate](/mem/configmgr/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_clientauth) for the CMG connection point.
 
 > [!NOTE]
 > In the certificate, computers must have a unique value in the **Subject Name** or **Subject Alternative Name** field.
 
-### How to verify CMG has a server certificate?
+### How to verify CMG has a server certificate
 
-After you enable verbose logging, the **SMS_Cloud_ProxyConnector.log** file will show the list of available certificates on the server. To verify if a valid server authentication certificate to establish communication between the CMG connection point and the management point exist, check the number of certificates in the **Filtered cert count with client auth:** line. See the following log for an example:
+After you enable verbose logging, the **SMS_Cloud_ProxyConnector.log** file will show the list of available certificates on the server. To verify if a valid server authentication certificate to establish communication between the CMG connection point and the management point exists, check the number of certificates in the **Filtered cert count with client auth:** line. See the following log for an example:
 
 **SMS_Cloud_ProxyConnector.log**
 
@@ -131,13 +131,13 @@ This issue occurs if one or more of the following conditions are true:
 
 - The client doesn't have the necessary PKI Root CA to validate the server authentication certificate.
 - The certificate presented to the client is incorrect.
-- The CRL that contains the certificate isn't published on the Internet and client is enforced to validate the CRL.
+- The CRL that contains the certificate isn't published on the Internet and the client is enforced to validate the CRL.
 
 ### Resolution
 
 If you're using a PKI server authentication certificate, follow these steps:
 
-1. Make sure that the certificate presented to client has the expected CMG name. If you're using third-party services that use certificate pining and modify the presented certificate, the clients can't validate the server certificate.
+1. Make sure that the certificate presented to the client has the expected CMG name. If you're using third-party services that use certificate pinning and modify the presented certificate, the clients can't validate the server certificate.
 
     To verify which certificate is presented, open the following URL in the web browser:
 
@@ -193,7 +193,7 @@ To renew the expired token, connect the client to the internal MP directly or re
 
 ## More information
 
-For further troubleshooting, of Client to CMG communication issues, we recommend next actions:
+For further troubleshooting, do the following actions:
 
 - Check the IIS logs on the management point.
 
