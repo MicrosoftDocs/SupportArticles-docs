@@ -2,8 +2,6 @@
 title: Linked server connectivity errors in SQL Server
 description: This article provides a resolution for consistent authentication errors that are related to linked server connectivity in SQL Server.
 ms.date: 03/26/2024
-author: Malcolm-Stewart
-ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Database Connectivity and Authentication
 ---
