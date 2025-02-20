@@ -22,10 +22,12 @@ When you try to connect to your container from the Azure portal, you receive the
 
 ## Cause
 
-Your firewall blocks access to port 19390. This port is required to connect to Container Instances from the Azure portal when container groups are deployed in virtual networks.
+Your firewall or corporate proxy blocks access to port 19390. This port is required to connect to Container Instances from the Azure portal when container groups are deployed in virtual networks.
 
 ## Solution
 
 Allow ingress to TCP port 19390 in your firewall. At a minimum, make sure that your firewall gives access to that port for all public client IP addresses that the Azure portal has to connect to.
+
+In some scenarios the corporate proxy will also block this port.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
