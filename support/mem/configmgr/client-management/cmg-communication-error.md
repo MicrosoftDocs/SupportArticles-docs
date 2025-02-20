@@ -12,7 +12,7 @@ This article provides resolutions for common issues when Configuration Manager c
 _Original product version:_ &nbsp; Configuration Manager (current branch)  
 _Original KB number:_ &nbsp; 4503442, 4495265
 
-## Error code 403 and CMGConnector_Clientcertificaterequired
+## Error code 403 (CMGConnector_Clientcertificaterequired)
 
 In the following log files, error messages that resemble the following are logged:
 
@@ -63,7 +63,7 @@ Filtered cert count with client auth: 0
 Maintaining connections...
 ```
 
-## Error code 403 and CMGConnector_Forbidden
+## Error code 403 (CMGConnector_Forbidden)
 
 In the following log file, error messages that resemble the following are logged:
 
@@ -94,7 +94,7 @@ There's a mismatch between the Internet Information Services (IIS) bindings and 
 
     - HTTPS: A valid public key infrastructure (PKI) server authentication certificate
 
-## ERROR_WINHTTP_SECURE_FAILURE
+## Error code 12175 (ERROR_WINHTTP_SECURE_FAILURE)
 
 In the following log file, an error message that resembles the following is logged:
 
@@ -162,7 +162,7 @@ If you're using a PKI server authentication certificate, follow these steps:
     > [!NOTE]
     > When installing clients from the Internet, make sure that the `/NoCRLCheck` parameter is included with the `CCMSetup` command.
 
-## Error code 401 and CMGService_Invalid_Token
+## Error code 401 (CMGService_Invalid_Token)
 
 The client hasn't communicated with the site (via CMG or MP) for over 30 days, or the `CCMSetup` command is attempting to use an expired token with the `/regtoken` parameter. In the following log files, error messages that resemble the following are logged:
 
@@ -191,7 +191,7 @@ This issue occurs because the token is expired or not properly added, renew, and
 
 To renew the expired token, connect the client to the internal MP directly or reinstall the client by using a new [Bulk registration token](/mem/configmgr/core/clients/deploy/deploy-clients-cmg-token#bulk-registration-token).
 
-## Additional information
+## More information
 
 For further troubleshooting, of Client to CMG communication issues, we recommend next actions:
 
