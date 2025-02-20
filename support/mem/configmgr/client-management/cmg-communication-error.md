@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4503442, 4495265
 
 ## Error code 403 (CMGConnector_Clientcertificaterequired)
 
-In the following log files, error messages that resemble the following are logged:
+In the following log files, error messages that resemble the following entries are logged:
 
 **LocationServices.log**
 
@@ -65,7 +65,7 @@ Maintaining connections...
 
 ## Error code 403 (CMGConnector_Forbidden)
 
-In the following log file, error messages that resemble the following are logged:
+In the following log file, error messages that resemble the following entries are logged:
 
 **LocationServices.log**
 
@@ -96,7 +96,7 @@ There's a mismatch between the Internet Information Services (IIS) bindings and 
 
 ## Error code 12175 (ERROR_WINHTTP_SECURE_FAILURE)
 
-In the following log file, an error message that resembles the following is logged:
+In the following log file, an error message that resembles the following entry is logged:
 
 **LocationServices.log**
 
@@ -137,15 +137,15 @@ This issue occurs if one or more of the following conditions are true:
 
 If you're using a PKI server authentication certificate, follow these steps:
 
-1. Make sure that the certificate presented to the client has the expected CMG name. If you're using third-party services that use certificate pinning and modify the presented certificate, the clients can't validate the server certificate.
+1. Make sure that the certificate presented to the client has the expected CMG name. If you're using non-Microsoft services that use certificate pinning and modify the presented certificate, the clients can't validate the server certificate.
 
     To verify which certificate is presented, open the following URL in the web browser:
 
     `https://<CMGFQDN>/CCM_Proxy_MutualAuth/ServiceMetadata`
 
-    Replace the `<CMGFQDN>` placeholder with your CMG public FQDN name.
+    Replace the `<CMGFQDN>` placeholder with your CMG public fully qualified domain name (FQDN) name.
 
-2. Make sure that the client has the certificate in the Trusted Root Certification Authorities certificate store locally. Otherwise, the client doesn't trust the CMG, even when using Microsoft Entra or token-based authentication. This modern authentication method is only available for the CMG to validate the server authentication, but not in the responses sent from the CMG to the client. When you use a third-party certificate for the authentication, the client is typically able to validate the public Root CA over the Internet.
+2. Make sure that the client has the certificate in the Trusted Root Certification Authorities certificate store locally. Otherwise, the client doesn't trust the CMG, even when using Microsoft Entra or token-based authentication. This modern authentication method is only available for the CMG to validate the server authentication, but not in the responses sent from the CMG to the client. When you use a non-Microsoft certificate for the authentication, the client is typically able to validate the public Root CA over the Internet.
 
 3. If the CRL isn't published on the Internet, make sure that the site doesn't enforce clients to validate the CRL and disable CRL checking for clients:
 
@@ -164,7 +164,7 @@ If you're using a PKI server authentication certificate, follow these steps:
 
 ## Error code 401 (CMGService_Invalid_Token)
 
-The client hasn't communicated with the site (via CMG or MP) for over 30 days, or the `CCMSetup` command is attempting to use an expired token with the `/regtoken` parameter. In the following log files, error messages that resemble the following are logged:
+The client hasn't communicated with the site (via CMG or MP) for more than 30 days, or the `CCMSetup` command is attempting to use an expired token with the `/regtoken` parameter. In the following log files, error messages that resemble the following entries are logged:
 
 **Ccmsetup.log**
 
