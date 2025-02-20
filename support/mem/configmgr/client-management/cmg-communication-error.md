@@ -94,7 +94,7 @@ There's a mismatch between the Internet Information Services (IIS) bindings and 
 
     - HTTPS: A valid public key infrastructure (PKI) server authentication certificate
 
-## Error code 12175 (ERROR_WINHTTP_SECURE_FAILURE)
+## Error code 0x2f8f (ERROR_WINHTTP_SECURE_FAILURE)
 
 In the following log file, an error message that resembles the following entry is logged:
 
