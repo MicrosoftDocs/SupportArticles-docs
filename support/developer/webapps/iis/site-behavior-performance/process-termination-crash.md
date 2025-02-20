@@ -58,7 +58,9 @@ Take note of the following fields:
 
 The first thing you need to do is to understand whether you need a memory dump. Windows has a feature called [Windows Error Reporting](../../../../windows-client/system-management-components/windows-error-reporting-diagnostics-enablement-guidance.md) (WER) that collects information automatically for you.
 
-- If you find information in the event logs regarding WER, continue reading.
+To determine if you need a memory dump, locate the event logs regarding WER and check if the information is sufficient to solve the issue.
+
+- If yes, you don't need a memory dump.
 - If not, jump to the [How to collect a crash dump](#how-to-collect-a-crash-dump) section.
 
 ### How to collect a crash dump
@@ -141,20 +143,25 @@ If the error code is `C00000FD`, and you aren't able to take a memory dump, foll
 
 Windows Error Reporting is a built-in facility in Windows designed to collect information on issues that Windows can detect, such as application faults, kernel faults, and unresponsive applications, and report this information to Microsoft.
 
-If you have Windows Error Reporting events in the Event Viewer, check the directories mentioned in the Windows Error Reporting event, and locate an **mdmp** or an **hdmp** file. If you have them, open a support ticket, and upload them.
+To take crash dumps using Windows Error Reporting, follow these steps:
 
-If you don't have them, follow these steps to set up WER:
+1. Open Event Viewer and look for Windows Error Reporting events.
+1. Check the directories mentioned in the Windows Error Reporting events.
+1. Locate files with the extension **.mdmp** (mini dump) or **.hdmp** (heap dump) in the mentioned directories.
 
-1. Open the Windows Registry Editor (**regedit.exe**) and locate the key **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting\LocalDumps**. If this key isn't available, create it.
-1. In the key from step 1, create the following values:
+   - If you have them, open a support ticket and upload them.
+   - If you don't have them, follow these steps to set up WER:
 
-   |Name|Type|Value to enter |
-   |-|-|-|
-   |DumpFolder|Expandable String Value (REG_EXPAND_SZ) |Path to a location where you want the files to (For example: **D:\Dumps**) <br>**Note**: Make sure that the drive you use isn't a system drive, and it has sufficient space to hold a memory dump of your application. |
-   |DumpCount|DWORD (REG_DWORD) |**3** |
-   |DumpType|DWORD (REG_DWORD)|**2** (Using this value can generate a full dump.)|
+     1. Open the Windows Registry Editor (**regedit.exe**) and locate the key **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting\LocalDumps**. If this key isn't available, create it.
+     1. In the key from step a, create the following values:
 
-   For more on the possible values, see [Collecting User-Mode Dumps](/windows/win32/wer/collecting-user-mode-dumps).
+        |Name|Type|Value to enter |
+        |-|-|-|
+        |DumpFolder|Expandable String Value (REG_EXPAND_SZ) |Path to a location where you want the files to (For example: **D:\Dumps**) <br>**Note**: Make sure that the drive you use isn't a system drive, and it has sufficient space to hold a memory dump of your application. |
+        |DumpCount|DWORD (REG_DWORD) |**3** |
+        |DumpType|DWORD (REG_DWORD)|**2** (Using this value can generate a full dump.)|
+
+        For more on the possible values, see [Collecting User-Mode Dumps](/windows/win32/wer/collecting-user-mode-dumps).
 
 ## How to perform data analysis
 
