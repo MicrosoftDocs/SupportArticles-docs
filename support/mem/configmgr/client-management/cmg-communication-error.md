@@ -92,7 +92,7 @@ There's a mismatch between the Internet Information Services (IIS) bindings and 
 
     - Enhanced HTTP: **SMS Role SSL certificate**
 
-    - HTTPS: A valid PKI server authentication certificate
+    - HTTPS: A valid public key infrastructure (PKI) server authentication certificate
 
 ## ERROR_WINHTTP_SECURE_FAILURE
 
