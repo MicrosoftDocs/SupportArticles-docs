@@ -3,9 +3,10 @@ title: "Troubleshooting Word templates | MicrosoftDocs"
 description: How to upload an image for entities that don't include the EntityImage field by default
 author: udaykirang
 ms.component: pa-admin
-ms.topic: conceptual
-ms.date: 10/27/2022
+ms.date: 02/20/2025
+ms.custom: sap:Power Apps\Integrating other products in model-driven apps\Document Templates in model-driven apps
 ms.author: udag
+ms.reviewer: adpellu, rashb
 search.audienceType: 
   - admin
 ---

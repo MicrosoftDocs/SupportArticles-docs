@@ -2,16 +2,14 @@
 title: "Troubleshooting SharePoint document management issues"
 description: "Learn how to troubleshoot document management issues based on error messages, including missing folders and documentation libraries."
 keywords: encrypt
-ms.date: 06/15/2020
-
-ms.custom: 
-ms.topic: article
+ms.date: 02/20/2025
+ms.reviewer: samarthg
+ms.custom: sap:Power Apps\Integrating other products in model-driven apps\Integrating SharePoint, OneDrive, or OneNote in model-driven apps 
 applies_to: 
   - PowerApps
 ms.assetid: 
 author: Mattp123
 ms.author: matp
-ms.reviewer: v-iapr
 ms.suite: 
 ms.tgt_pltfrm: 
 topic-status: Drafting
