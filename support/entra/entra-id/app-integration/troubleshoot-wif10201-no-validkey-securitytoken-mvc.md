@@ -1,6 +1,6 @@
 ---
 title: ASP.NET MVC Application Error WIF10201 No Valid Key Mapping Found for SecurityToken
-description: This article provides guidance for troubleshooting the error, "WIF10201- No valid key mapping found for securityToken."
+description: This article provides guidance for troubleshooting the error, WIF10201- No valid key mapping found for securityToken.
 author: genlin
 ms.author: bachoang
 ms.service: entra-id
@@ -53,4 +53,4 @@ The Entra ID uses a [signing key rollover mechanism](/entra/identity-platform/si
 
 ## Solution
 
-You can either manually update the certificate thumbprints that are in the Web.config file or automate the process through code. For more information, see [Best practices for keys metadata caching and validation](/entra/identity-platform/signing-key-rollover#best-practices-for-keys-metadata-caching-and-validation).
+You can either manually update the certificate thumbprints that are in the **Web.config** file or automate the process through code. For more information, see [Best practices for keys metadata caching and validation](/entra/identity-platform/signing-key-rollover#best-practices-for-keys-metadata-caching-and-validation).
