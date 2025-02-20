@@ -67,7 +67,9 @@ To collect a crash dump, you can use tools like [Debug Diagnostic Tool](#debug-d
 
 #### Debug Diagnostic Tool
 
-1. Download and install [Debug Diag](https://www.microsoft.com/download/details.aspx?id=103453&msockid=145197b7d1fa6877376482b2d0bf6961) (short for Debug Diagnostic Tool).
+To take crash dumps using Debug Diagnostic Tool, follow these steps:
+
+1. Download and install [Debug Diagnostic Tool](https://www.microsoft.com/download/details.aspx?id=103453&msockid=145197b7d1fa6877376482b2d0bf6961).
 1. Open the Debug Diag 2 Collection application and select **Add Rule** > **Crash** > **Next**.
 1. Select **A specific IIS web application pool** > **Next**.
 
