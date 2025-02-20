@@ -81,12 +81,17 @@ There's a mismatch between the Internet Information Services (IIS) bindings and 
 ### Resolution
 
 1. Open IIS Manager (`inetmgr`).
+
 1. In the **Connections** pane, expand the machine name, expand **Sites**, and then select **Default Web Site**.
+
 1. In the right pane, select **Bindings**.
+
 1. In the **Site Bindings** dialog box, select the 443 port binding, and then select **Edit**.
+
 1. In the **Edit Site Binding** dialog box, select the certificate accordingly:
 
     - Enhanced HTTP: SMS Role SSL certificate
+
     - HTTPS: PKI server authentication certificate
 
 ## ERROR_WINHTTP_SECURE_FAILURE
@@ -145,9 +150,13 @@ If you're using a PKI server authentication certificate, follow these steps:
 3. If the CRL isn't published on the Internet, make sure that the site doesn't enforce clients to validate the CRL and disable CRL checking for clients:
 
     1. In the Configuration Manager console, navigate to the **Administration** workspace.
+
     1. Expand **Site Configuration**, and then select the **Sites** node.
+
     1. Select the primary site to configure.
+
     1. In the ribbon, select **Properties**.
+
     1. On the **Communication Security** tab, clear the **Clients check the certificate revocation list (CRL) for site systems** checkbox.
 
     > [!NOTE]
