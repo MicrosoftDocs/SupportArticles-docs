@@ -3,18 +3,15 @@ title: Troubleshooting sync problems in audit logs
 description: Provides common causes for sync issues to help troubleshooting.
 author: pete-msft
 ms.component: pa-admin
-ms.topic: conceptual
-ms.date: 10/03/2024
-ms.subservice: guidance-toolkit
+ms.date: 02/20/2025
 ms.author: petrip
-ms.reviewer: sericks
+ms.reviewer: paulliew
+ms.custom: sap:Microsoft Dataverse\Auditing
 search.audienceType: 
   - admin
 contributors:
 - Grant-Archibald-MS
-  
 ---
-
 # Troubleshooting sync problems in audit logs
 
 ## API permissions

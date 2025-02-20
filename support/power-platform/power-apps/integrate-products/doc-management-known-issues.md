@@ -2,15 +2,14 @@
 title: Known issues with document management 
 description: Learn about known issues with document management.
 keywords: encrypt
-ms.date: 01/06/2025
-ms.custom: 
-ms.topic: article
+ms.date: 02/20/2025
+ms.reviewer: aorth
+ms.custom: sap:Power Apps\Integrating other products in model-driven apps\Integrating SharePoint, OneDrive, or OneNote in model-driven apps 
 applies_to: 
   - PowerApps
 ms.assetid: 
 author: adrianorth
 ms.author: aorth
-ms.reviewer: sericks
 ms.suite: 
 ms.tgt_pltfrm: 
 topic-status: Drafting

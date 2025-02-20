@@ -2,12 +2,11 @@
 title: Troubleshoot missing environments
 description: "Learn how to update a record's owner, an Owning Business Unit, or both an Owner and Owning Business Unit because the record changes ownership."
 ms.component: pa-admin
-ms.topic: conceptual
-ms.date: 12/03/2024
-ms.subservice: admin
+ms.date: 02/20/2025
+ms.custom: sap:Microsoft Dataverse\Environment and app access issues
 author: davidme-ms
 ms.author: davidme 
-ms.reviewer: sericks
+ms.reviewer: iyanni
 search.audienceType: 
   - admin
 contributors:
