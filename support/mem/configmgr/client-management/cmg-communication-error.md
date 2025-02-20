@@ -76,7 +76,7 @@ In the following log file, error messages that resemble the following are logged
 
 ### Cause
 
-There's a mismatch between the Internet Information Services (IIS) bindings and the management point in HTTP mode. If the management point is moved from HTTPS mode to enhanced HTTP mode, without cleaning the bindings, the Configuration Management client might not be able to configure an SMS Role SSL certificate, which is used in enhanced HTTP mode. In other situations, an incorrect certificate (expired or revoked) exists in the IIS bindings and needs to be cleaned.
+There's a mismatch between the Internet Information Services (IIS) bindings and the management point in HTTP mode. If the management point is moved from HTTPS mode to enhanced HTTP mode, without cleaning the bindings, the Configuration Management client might not be able to configure an **SMS Role SSL certificate**, which is used in enhanced HTTP mode. In other situations, an incorrect certificate (expired or revoked) exists in the IIS bindings and needs to be cleaned.
 
 ### Resolution
 
@@ -90,9 +90,9 @@ There's a mismatch between the Internet Information Services (IIS) bindings and 
 
 1. In the **Edit Site Binding** dialog box, select the certificate accordingly:
 
-    - Enhanced HTTP: SMS Role SSL certificate
+    - Enhanced HTTP: **SMS Role SSL certificate**
 
-    - HTTPS: PKI server authentication certificate
+    - HTTPS: A valid PKI server authentication certificate
 
 ## ERROR_WINHTTP_SECURE_FAILURE
 
@@ -201,6 +201,6 @@ For further troubleshooting, of Client to CMG communication issues, we recommend
 
     > \<Date> \<Time> \<IP_address_of_MP> GET /SMS_MP/.sms_aut SITESIGNCERT 443 - \<IP_address_of_CMG_connectionpoint> SMS+CCM+5.0 - **403 7** 0 5573 11
 
-- Enable verbose logging for the **SMS_Cloud_ProxyConnector.log** log file by setting the `VerboseLogging` registry entry value to **1** under the following registry key, and then restart the SMS_EXECUTIVE service.
+- Enable verbose logging for the **SMS_Cloud_ProxyConnector.log** log file by setting the `VerboseLogging` registry entry value to `1` under the following registry key, and then restart the SMS_EXECUTIVE service.
 
     `HKLM\SOFTWARE\MICROSOFT\SMS\SMS_CLOUD_PROXYCONNECTOR`
