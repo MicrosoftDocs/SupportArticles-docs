@@ -2,7 +2,7 @@
 title: State messaging in Configuration Manager
 description: Describes the state messaging system in Configuration Manager.
 ms.date: 02/11/2025
-ms.reviewer: kaushika, nacmasdpod, jarrettr
+ms.reviewer: kaushika, nacmasdpod, jarrettr, andad
 ms.custom: sap:Client Operations\State or Status Messages
 ---
 # Description of state messaging in Configuration Manager
