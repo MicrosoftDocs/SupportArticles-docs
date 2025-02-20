@@ -1,20 +1,20 @@
 ---
-title: Error 403 when Configuration Manager communicates with CMG
-description: Describes an issue in which Configuration Manager clients can't communicate with CMG, and they return a 403 error.
+title: Configuration Manager clients can't communicate with CMG
+description: Provides details about log files and solutions for common issues when Configuration Manager clients can't communicate with CMG.
 ms.date: 02/11/2025
 ms.custom: sap:Cloud Services\Cloud Management Gateway (CMG)
-ms.reviewer: kaushika
+ms.reviewer: kaushika, bmoran
 ---
-# The Configuration Manager clients fails to communicate with CMG
+# Configuration Manager clients fail to communicate with CMG
 
-This article provides details for several common issues and their solutions, where Client communication is failing when connected over CMG. Each scenario has the steps needed to identify and resolve the problem.
+This article provides resolutions for common issues when Configuration Manager clients fail to communicate with a Cloud Management Gateway (CMG).
 
 _Original product version:_ &nbsp; Configuration Manager (current branch)  
 _Original KB number:_ &nbsp; 4503442, 4495265
 
-## Error 403 and CMGConnector_Clientcertificaterequired
+## Error code 403 and CMGConnector_Clientcertificaterequired
 
-Configuration Manager clients can't communicate with the CMG. An error message that resembles the following is logged:
+In the following log files, error messages that resemble the following are logged:
 
 **LocationServices.log**
 
@@ -22,8 +22,6 @@ Configuration Manager clients can't communicate with the CMG. An error message t
 [CCMHTTP] ERROR: URL=https://cmgsccm.contoso.com/CCM_PROXY_MUTUALAUTH/3456/SMS_MP/.sms_aut?SITESIGNCERT, Port=443, Options=31, Code=0, Text=CCM_E_BAD_HTTP_STATUS_CODE  
 [CCMHTTP] ERROR INFO: StatusCode= 403 StatusText= CMGConnector_Clientcertificaterequired
 ```
-
-Error messages that resemble the following are logged:
 
 **SMS_Cloud_ProxyConnector.log**
 
@@ -35,7 +33,7 @@ Received response `https://InternalMP.contoso.com/SMS_MP/.sms_aut?MPLIST2&CM1` f
 
 ### Cause
 
-The CMG connection point requires a [client authentication certificate](/mem/configmgr/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_clientauth) to securely forward client requests to an **HTTPS** management point. If the client authentication certificate is missing, configured incorrectly, or invalid, status code 403 is returned. On scenarios where MP is using HTTPe mode and Token auth this certificate is not required, but always recommended.
+The CMG connection point requires a [client authentication certificate](/mem/configmgr/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_clientauth) to securely forward client requests to an HTTPS management point. If the client authentication certificate is missing, configured incorrectly, or invalid, status code 403 is returned. In scenarios in which the Management Point (MP) operates in enhanced HTTP mode with token-based authentication, the certificate isn't required but is always recommended.
 
 ### Resolution
 
@@ -44,53 +42,56 @@ To fix this issue, generate a [client authentication certificate](/mem/configmgr
 > [!NOTE]
 > In the certificate, computers must have a unique value in the **Subject Name** or **Subject Alternative Name** field.
 
-### How to verify CMG has Client Certificate?
+### How to verify CMG has a client certificate?
 
-**SMS_Cloud_ProxyConnector.log** in verbose mode will show the list of available certificates in the server, and if a valid client authentication certificate to establish communication between the CMG connection point and the management point exist, **Filtered cert count with client auth:**:
+After you enable verbose logging, the **SMS_Cloud_ProxyConnector.log** file will show the list of available certificates on the server. To verify if a valid client authentication certificate to establish communication between the CMG connection point and the management point exist, check the number of certificates in the **Filtered cert count with client auth:** line. See the following log for an example:
 
 **SMS_Cloud_ProxyConnector.log**
 
 ```output
-  > Filtered cert count with digital signature: 7  
-  > Not allowed cert: \<certificate>  
-  > Not allowed cert: \<certificate>  
-  > No private key cert: \<certificate>  
-  > Not allowed cert: \<certificate>  \
-  > Filtered cert count with allowed root CA: 3  
-  > Filtered cert count with private key: 3  
-  > Not client auth cert: \<certificate>  
-  > Not client auth cert: \<certificate>  
-  > Not client auth cert: \<certificate>  
-  > Filtered cert count with client auth: 0  
-  > Maintaining connections...
+Filtered cert count with digital signature: 7
+Not allowed cert: <certificate>
+Not allowed cert: <certificate>
+No private key cert: <certificate>
+Not allowed cert: <certificate>
+Filtered cert count with allowed root CA: 3
+Filtered cert count with private key: 3
+Not client auth cert: <certificate>
+Not client auth cert: <certificate>
+Not client auth cert: <certificate>
+Filtered cert count with client auth: 0
+Maintaining connections...
 ```
 
-## Error 403 and CMGConnector_*CMGConnector_Forbidden
+## Error code 403 and CMGConnector_Forbidden
 
-Configuration Manager clients can't communicate with the CMG. An error message that resembles the following is logged:
+In the following log file, error messages that resemble the following are logged:
 
 **LocationServices.log**
 
 ```output
 [CCMHTTP] ERROR: URL=https://cmgsccm.contoso.com/CCM_PROXY_MUTUALAUTH/3456/SMS_MP/.sms_aut?SITESIGNCERT, Port=443, Options=31, Code=0, Text=CCM_E_BAD_HTTP_STATUS_CODE  \
-[CCMHTTP] ERROR INFO: StatusCode= **403** StatusText= **CMGConnector_Forbidden**
+[CCMHTTP] ERROR INFO: StatusCode= 403 StatusText= CMGConnector_Forbidden
 ```
 
 ### Cause
 
-Usually there's a mismatch between IIS Binding and Management Point HTTP mode. If Management Point was moved from HTTPs to HTTPe, without cleaning the bindings, ConfigMgr might not being able to configure the needed *SMS SSL Role Certificate*, that is used when HTTPe mode is configured. In other situations, an incorrect certificate (expired, revoked etc) is kept in the bindings of IIS, and needs to be cleaned too.
+There's a mismatch between the Internet Information Services (IIS) bindings and the management point in HTTP mode. If the management point is moved from HTTPS mode to enhanced HTTP mode, without cleaning the bindings, the Configuration Management client might not be able to configure an SMS Role SSL certificate, which is used in enhanced HTTP mode. In other situations, an incorrect certificate (expired or revoked) exists in the IIS bindings and needs to be cleaned.
 
 ### Resolution
 
-Open **IIS Manager** (Press Windows + R to open the Run dialog box, type **inetmgr** and press Enter).
-Select the **Default Web Site** and in the right-hand Actions pane, click on Bindings. Select 443 and check what certificate is selected. Set the appropriated certificate for your scenario:
+1. Open IIS Manager (`inetmgr`).
+1. In the **Connections** pane, expand the machine name, expand **Sites**, and then select **Default Web Site**.
+1. In the right pane, select **Bindings**.
+1. In the **Site Bindings** dialog box, select the 443 port binding, and then select **Edit**.
+1. In the **Edit Site Binding** dialog box, select the certificate accordingly:
 
-- HTTPe: *SMS SSL Role Certificate*
-- HTTPs: Valid PKI Server Auth certificate
+    - Enhanced HTTP: SMS Role SSL certificate
+    - HTTPS: PKI server authentication certificate
 
-## Client can't communicate with CMG - Secure Failure
+## ERROR_WINHTTP_SECURE_FAILURE
 
-Configuration Manager clients can't communicate with the CMG. An error message that resembles the following is logged:
+In the following log file, an error message that resembles the following is logged:
 
 **LocationServices.log**
 
@@ -98,9 +99,7 @@ Configuration Manager clients can't communicate with the CMG. An error message t
 [CCMHTTP] ERROR: URL=https://CMG.CONTOSO.COM/CCM_Proxy_ServerAuth/72057594037928017/CCM_STS, Port=443, Options=63, Code=12175, Text=ERROR_WINHTTP_SECURE_FAILURE
 ```
 
-Addtional details would be as well logged before that error, as sample:
-
-**LocationServices.log**
+Before the error message, other events might also be logged:
 
 ```output
 [CCMHTTP] AsyncCallback():
@@ -110,45 +109,53 @@ Addtional details would be as well logged before that error, as sample:
 [CCMHTTP] : lpvStatusInformation is 0x9
 [CCMHTTP] : WINHTTP_CALLBACK_STATUS_FLAG_CERT_REV_FAILED is set
 [CCMHTTP] : WINHTTP_CALLBACK_STATUS_FLAG_INVALID_CA is set
+[CCMHTTP] : WINHTTP_CALLBACK_STATUS_FLAG_CERT_CN_INVALID is set
 ```
 
 > [!NOTE]
 >
-> - `WINHTTP_CALLBACK_STATUS_FLAG_CERT_REV_FAILED` indicates that the `/NoCRLCheck` parameter is missing from the command line, and the certificate revocation list (CRL) isn't published on the internet.
+> - `WINHTTP_CALLBACK_STATUS_FLAG_CERT_REV_FAILED` indicates that the `/NoCRLCheck` parameter is missing with the `CCMSetup` command, and the certificate revocation list (CRL) isn't published on the internet.
 >
-> - `WINHTTP_CALLBACK_STATUS_FLAG_INVALID_CA` indicates that the root certificate authority (CA) certificate required to validate the server authentication certificate for a Cloud Management Gateway (CMG) is missing.
+> - `WINHTTP_CALLBACK_STATUS_FLAG_INVALID_CA` indicates that the root certificate authority (CA) certificate required to validate the server authentication certificate for a CMG is missing.
 >
-> - `WINHTTP_CALLBACK_STATUS_FLAG_CERT_CN_INVALID` means that the host name in the certificate common name is incorrect.
+> - `WINHTTP_CALLBACK_STATUS_FLAG_CERT_CN_INVALID` indicates that the host name in the certificate common name is incorrect.
 
 ### Cause
 
-Client is not having the needed PKI Root CA to validate the CMG Server Auth Certificate, the CMG Certificate presented to client is not the correct one,and/or the CRL of the certificate is not published on internet, and client is enforced to validate CRL.
+This issue occurs if one or more of the following conditions are true:
+
+- The client doesn't have the necessary PKI Root CA to validate the server authentication certificate.
+- The certificate presented to the client is incorrect.
+- The CRL that contains the certificate isn't published on the Internet and client is enforced to validate the CRL.
 
 ### Resolution
 
-If you are using owned PKI certificate for CMG Server Auth:
+If you're using a PKI server authentication certificate, follow these steps:
 
-1. Ensure the certificate presented to client, has the expected CMG name. If you are using third party services that use certificate pining and modify the presented certificate, the clients wont be able to validate the CMG Server certificate.
+1. Make sure that the certificate presented to client has the expected CMG name. If you're using third-party services that use certificate pining and modify the presented certificate, the clients can't validate the server certificate.
 
-    You can verify which certificate is presented by running next query on your client's browser: `https://CMGFQDN/CCM_Proxy_MutualAuth/ServiceMetadata`. Replace the CMGFQDN with your CMG public FQDN name.
+    To verify which certificate is presented, open the following URL in the web browser:
 
-2. Ensure clients does has this certificate in Root CA trusted store locally. Otherwise client wont trust CMG, even when using AAD auth or Self Token. This modern auth method are only available for CMG to validate client auth, but not in the responses sent from CMG to Clients. When you use a third party certificate for CMG Server Auth certificate, the clients can usually being able to validate the public Root CA over internet.
+    `https://<CMGFQDN>/CCM_Proxy_MutualAuth/ServiceMetadata`
 
-3. If you are not publishing your PKI CMG Server Auth CRL on internet, you need to ensure your site is not enforcing clients to validate site systems CRL. Disable CRL Checking in ConfigMgr:
+    Replace the `<CMGFQDN>` placeholder with your CMG public FQDN name.
 
-    In the **Configuration Manager console**, go to the **Administration** workspace.
-    Expand **Site Configuration** and select Sites.
-    Select the primary site to configure.
-    In the ribbon, choose **Properties**.
-    Switch to the **Communication Security** tab.
-    Uncheck the option **"Clients check the certificate revocation list (CRL) for site systems"**
+2. Make sure that the client has the certificate in the Trusted Root Certification Authorities certificate store locally. Otherwise, the client doesn't trust the CMG, even when using Microsoft Entra or token-based authentication. This modern authentication method is only available for the CMG to validate the client authentication, but not in the responses sent from the CMG to the client. When you use a third-party certificate for the authentication, the client is typically able to validate the public Root CA over the Internet.
 
-> [!NOTE]
-> When installing clients from Internet, ensure `/nocrlcheck` parameter is included in `ccmsetup` command line.
+3. If the CRL isn't published on the Internet, make sure that the site doesn't enforce clients to validate the CRL and disable CRL checking for clients:
 
-## Error 401 PreAuth token is expired
+    1. In the Configuration Manager console, navigate to the **Administration** workspace.
+    1. Expand **Site Configuration**, and then select the **Sites** node.
+    1. Select the primary site to configure.
+    1. In the ribbon, select **Properties**.
+    1. On the **Communication Security** tab, clear the **Clients check the certificate revocation list (CRL) for site systems** checkbox.
 
-The client hasn't communicated with the site (via CMG or MP) for over 30 days, or the `CCMSetup.exe` command is attempting to use an expired token with the `/regtoken` parameter. See the following logs for examples:
+    > [!NOTE]
+    > When installing clients from the Internet, make sure that the `/NoCRLCheck` parameter is included with the `CCMSetup` command.
+
+## Error code 401 and PreAuth token validation failed
+
+The client hasn't communicated with the site (via CMG or MP) for over 30 days, or the `CCMSetup` command is attempting to use an expired token with the `/regtoken` parameter. In the following log files, error messages that resemble the following are logged:
 
 **Ccmsetup.log**
 
@@ -173,16 +180,18 @@ This issue occurs because the token is expired or not properly added, renew, and
 
 ### Resolution
 
-To renew the expired token, client needs to connect with internal MP directly (On-prem or via VPN) or client needs to be reinstalled using new [Bulk registration token](/mem/configmgr/core/clients/deploy/deploy-clients-cmg-token#bulk-registration-token)
+To renew the expired token, connect the client to the internal MP directly or reinstall the client by using a new [Bulk registration token](/mem/configmgr/core/clients/deploy/deploy-clients-cmg-token#bulk-registration-token).
 
 ## Additional information
 
 For further troubleshooting, of Client to CMG communication issues, we recommend next actions:
 
-- Check the Internet Information Services (IIS) logs on the management point for more information about the error.
+- Check the IIS logs on the management point.
 
-    In the following sample log, the **403 7** response means that the client certificate can't be found:
+    In the following sample log, the **403 7** response indicates that the client certificate can't be found:
 
     > \<Date> \<Time> \<IP_address_of_MP> GET /SMS_MP/.sms_aut SITESIGNCERT 443 - \<IP_address_of_CMG_connectionpoint> SMS+CCM+5.0 - **403 7** 0 5573 11
 
-- Enable verbose logging for `SMS_CLOUD_PROXYCONNECTOR` by setting the `VerboseLogging` registry value under `HKLM\SOFTWARE\MICROSOFT\SMS\SMS_CLOUD_PROXYCONNECTOR` to **1**, and then restart the SMS_EXECUTIVE service.
+- Enable verbose logging for the **SMS_Cloud_ProxyConnector.log** log file by setting the `VerboseLogging` registry entry value to **1** under the following registry key, and then restart the SMS_EXECUTIVE service.
+
+    `HKLM\SOFTWARE\MICROSOFT\SMS\SMS_CLOUD_PROXYCONNECTOR`
