@@ -5,7 +5,7 @@ ms.reviewer: amitrou
 ms.author: nimoutzo
 author: NikosMoutzourakis
 ms.custom: sap:Desktop flows\Office automation
-ms.date: 02/19/2025
+ms.date: 02/20/2025
 ---
 # An error occurs when opening an Excel file in Power Automate for desktop
 
@@ -21,7 +21,7 @@ This error can occur if Office apps (or just Excel) aren't properly installed, P
 
 ### Resolution
 
-- Manually [uninstall](/power-automate/desktop-flows/install#uninstall-power-automate) and [reinstall](/power-automate/desktop-flows/install) Power Automate for desktop. If it doesn't work, manually [uninstall](https://support.microsoft.com/office/uninstall-office-from-a-pc-9dd49b83-264a-477a-8fcc-2fdf5dbf61d8) and [reinstall](https://support.microsoft.com/office/download-install-or-reinstall-microsoft-365-office-2024-or-office-2021-on-a-pc-or-mac-4414eaaf-0478-48be-9c42-23adc4716658) Excel.
+- Manually [uninstall](/power-automate/desktop-flows/install#uninstall-power-automate) and [reinstall](/power-automate/desktop-flows/install) Power Automate for desktop. If it doesn't work, ensure you have Excel properly installed.
 - To work around the error caused by the synchronization with OneDrive, see [Using Excel files synchronized through OneDrive or SharePoint](/power-automate/desktop-flows/actions-reference/excel#using-excel-files-synchronized-through-onedrive-or-sharepoint).
 
 ## "Could not load file or assembly or one of its dependencies" error
@@ -34,7 +34,7 @@ The Excel application isn't installed on the machine.
 
 ### Resolution
 
-To solve this issue, [install Excel](https://support.microsoft.com/office/download-install-or-reinstall-microsoft-365-office-2024-or-office-2021-on-a-pc-or-mac-4414eaaf-0478-48be-9c42-23adc4716658) on the machine.
+Ensure you have Excel installed on the machine.
 
 ## "Access to the path 'C:\YourPath\YourFile.xlsx' is denied" error
 
