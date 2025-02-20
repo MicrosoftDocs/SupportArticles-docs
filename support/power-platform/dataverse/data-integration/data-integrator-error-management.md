@@ -1,13 +1,12 @@
 ---
 title: "Error management and troubleshooting for data integration projects"
 description: "Troubleshoot issues and manage errors when executing data integration projects using the Data Integrator service."
-ms.topic: conceptual
 ms.component: pa-admin
-ms.date: 11/19/2021
+ms.date: 02/20/2025
 author: NHelgren
-ms.subservice: admin
 ms.author: nhelgren
-ms.reviewer: sericks
+ms.reviewer: nhelgren
+ms.custom: sap:Microsoft Dataverse\Microsoft Dataverse miscellaneous
 search.audienceType: 
   - admin
 ---
