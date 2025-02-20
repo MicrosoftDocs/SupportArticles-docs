@@ -162,7 +162,7 @@ If you're using a PKI server authentication certificate, follow these steps:
     > [!NOTE]
     > When installing clients from the Internet, make sure that the `/NoCRLCheck` parameter is included with the `CCMSetup` command.
 
-## Error code 401 and PreAuth token validation failed
+## Error code 401 and CMGService_Invalid_Token
 
 The client hasn't communicated with the site (via CMG or MP) for over 30 days, or the `CCMSetup` command is attempting to use an expired token with the `/regtoken` parameter. In the following log files, error messages that resemble the following are logged:
 
