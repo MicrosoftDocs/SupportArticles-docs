@@ -89,7 +89,7 @@ To collect a crash dump, you can use tools like [Debug Diagnostic Tool](#debug-d
    > - Remember to check that the drive you pick has sufficient space to hold the memory dump for the process.
 
 1. Keep the default of **Activate the rule now** and select **Finish** when ready.
-1. Reproduce the issue and monitor the **Userdump Count** column. After the memory dumps are generated, you can go ahead and deactivate the rule.
+1. Reproduce the issue and monitor the **Userdump Count** column. After the memory dumps are generated, you can deactivate the rule.
 
    :::image type="content" source="media/process-termination-crash/userdump-count-column.png" alt-text="Screenshot of the Userdump Count column.":::
 
@@ -179,7 +179,7 @@ Here is an example of a stack overflow error:
 
 :::image type="content" source="media/process-termination-crash/stack-overflow-error-report-detail.png" alt-text="Screenshot of a stack overflow error report detail.":::
 
-When looking at the report, you need to look out for groups of functions or methods that seem repeated. From there, attempt to correlate those functions with your code.
+In the report, look for groups of functions or methods that seem to repeat. From there, attempt to correlate those functions with your code.
 
 ### 0xC0000005
 
