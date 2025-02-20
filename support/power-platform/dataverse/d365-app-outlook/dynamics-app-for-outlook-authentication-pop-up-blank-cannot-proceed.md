@@ -1,30 +1,30 @@
 ---
 title: Dynamics 365 App for Outlook Authentication pop-up is blank
-description: Provides a resolution for the issue that occurs when you try to sign in to Dynamics 365 App for Outlook.
+description: Solves the issue that the authentication pop-up is blank and you can't sign in to Dynamics 365 App for Outlook.
 ms.reviewer: mkelan
 ms.author: smurkute
 author: shwetamurkute
-ms.date: 02/19/2025
+ms.date: 02/20/2025
 ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
-# Dynamics 365 App for Outlook authentication pop-up is blank and unable to proceed
+# App for Outlook authentication pop-up is blank and unable to sign in
 
 The article solves an issue where you can't sign in to Dynamics 365 App for Outlook successfully due to a blank authentication pop-up.
 
 ## Symptoms
 
-When you open the [Dynamics 365 App for Outlook](/dynamics365/outlook-app/overview), it prompts you to allow an authentication pop-up. However, the pop-up appears blank, preventing you from selecting an account to authenticate and sign in.
+When you open the [Dynamics 365 App for Outlook](/dynamics365/outlook-app/overview), it prompts you to allow an authentication pop-up. After allowing, the pop-up opens. However, it is blank and prevents you from selecting an account to authenticate and sign in.
 
 ## Cause
 
-This issue is due to a recent regression that has been mitigated. However, users who have previously signed in might still experience this issue until they clear their session and sign in again.
+This behavior is due to a recent regression that has been mitigated. However, users who have previously signed in might still experience this issue until they clear their session and sign in again.
 
 ## Resolution
 
 > [!NOTE]
 >
 > - If you're using Outlook on the web (OWA) or classic Outlook desktop app on Windows, follow the steps 1-3 to solve ths issue.  
-> - If you're using [the new Outlook for Windows](https://support.microsoft.com/office/switch-to-new-outlook-for-windows-f5fb9e26-af7c-4976-9274-61c6428344e7) or Outlook on Mac, you should first [open the Developer Tools](#additional-instructions-for-the-new-outlook-for-windows-and-outlook-on-mac-users), and then follow the steps 1 to 3 to resolve the issue.
+> - If you're using [the new Outlook for Windows](https://support.microsoft.com/office/switch-to-new-outlook-for-windows-f5fb9e26-af7c-4976-9274-61c6428344e7) or Outlook on Mac, first follow the steps [here](#open-developer-tools-in-new-outlook-for-windows-and-outlook-on-mac) to open the Developer Tools and then follow the steps 1 to 3 to resolve the issue.
 
 ### Step 1: Clear local storage and session storage from the add-in
 
@@ -54,7 +54,7 @@ This issue is due to a recent regression that has been mitigated. However, users
 3. If prompted, sign in with your credentials.
 4. Complete the authentication process.
 
-### Additional instructions for the new Outlook for Windows and Outlook on Mac users
+### Open Developer Tools in new Outlook for Windows and Outlook on Mac
 
 - For the new Outlook for Windows:
 

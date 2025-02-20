@@ -20,7 +20,7 @@
       href: dataverse-web-api-and-sdk/web-api-client-errors.md
 - name: Dynamics 365 App for Outlook
   items:
-    - name: Authentication pop-up is blank and unable to proceed
+    - name: Authentication pop-up is blank and unable to sign in
       jref: d365-app-outlook/dynamics-app-for-outlook-authentication-pop-up-blank-cannot-proceed.md
     - name: App for Outlook doesn't appear within Outlook
       href: d365-app-outlook/app-does-not-appear-within-outlook.md
