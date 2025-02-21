@@ -68,7 +68,7 @@ This article describes how to troubleshoot the chroot environment in the rescue 
       > [!NOTE]
       > On newer Ubuntu images, there is only one partition for `/boot`. If you are recovering an older Ubuntu image, you can ignore errors when mounting `/dev/sdc16` to `/rescue/boot`, as long as there are files in `/rescue/boot` after completing these steps.
       >
-      > If an error occurs during mounting, it will be safe to ignore the error that occurs when unmounting `/rescue/boot` in the following step.
+      > If an error occurs during mounting, it will be safe to ignore the error that occurs when you unmount `/rescue/boot` in the following step.
 
    1. Troubleshoot the chroot environment.
 
