@@ -35,7 +35,7 @@ Microsoft is working on a fix for this issue and it will be available in a futur
 
 ### Issue two: Patching a read-scale availability group (Windows or Linux) causes the availability group on the patched replica to be removed
 
-If you use the read-scale availability group (AG) in SQL Server on Windows or Linux, it's recommended not to install this CU.
+If you use the read-scale availability group (AG) in SQL Server on Windows or Linux, you should **not** install this CU.
 
 This CU introduced [a fix to support AG names longer than 64 characters](#3548672). However, when the patch is installed on an instance that has the read-scale AG configured, the AG metadata is dropped. This issue affects read-scale AGs in both [Windows](/sql/database-engine/availability-groups/windows/read-scale-availability-groups) and [Linux](/sql/linux/sql-server-linux-availability-group-configure-rs), which means that the `CLUSTER_TYPE` of the AG is either `NONE` or `EXTERNAL`.
 
@@ -53,7 +53,7 @@ After the patch is installed, the metadata is removed and you must recreate the 
 
 You can use steps that are similar to following ones, but you need to update them for the given environment, including the `CLUSTER_TYPE`. The VM1 in the given example is the primary replica of the AG 'readscaleag', and VM2 is the secondary replica that has the patch applied but already uninstalled. When running the following script, both replicas VM1 and VM2 are running SQL Server 2019 CU30 and the AG metadata is missing on VM2.
 
-```SQL
+```sql
 --- YOU MUST EXECUTE THE FOLLOWING SCRIPT IN SQLCMD MODE
 :CONNECT VM1\SQL19
 
