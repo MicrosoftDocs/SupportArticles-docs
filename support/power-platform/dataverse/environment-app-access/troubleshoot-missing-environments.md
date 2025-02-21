@@ -6,7 +6,7 @@ ms.date: 02/20/2025
 ms.custom: sap:Microsoft Dataverse\Environment and app access issues
 author: davidme-ms
 ms.author: davidme 
-ms.reviewer: iyanni
+ms.reviewer: iyanni, sericks
 search.audienceType: 
   - admin
 contributors:

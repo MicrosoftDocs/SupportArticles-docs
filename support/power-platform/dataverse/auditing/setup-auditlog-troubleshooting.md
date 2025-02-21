@@ -5,7 +5,7 @@ author: pete-msft
 ms.component: pa-admin
 ms.date: 02/20/2025
 ms.author: petrip
-ms.reviewer: paulliew
+ms.reviewer: paulliew, sericks
 ms.custom: sap:Microsoft Dataverse\Auditing
 search.audienceType: 
   - admin

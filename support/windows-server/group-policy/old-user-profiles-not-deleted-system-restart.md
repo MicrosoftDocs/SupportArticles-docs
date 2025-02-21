@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, dennhu, rahugoyal, v-lianna
-ms.custom: sap:Group Policy\Problems Applying Group Policy, csstroubleshoot, ikb2lmc
+ms.custom:
+- sap:group policy\problems applying group policy
+- pcy:WinComm Directory Services
 ---
 # User profiles older than a specified number of days aren't deleted as expected on system restart
 

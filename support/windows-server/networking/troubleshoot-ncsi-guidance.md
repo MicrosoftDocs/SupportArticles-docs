@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, anupamk, asvaidya, hichauhan, v-lianna
-ms.custom: sap:Network Connectivity and File Sharing\NCSI, csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\ncsi
+- pcy:WinComm Networking
 ---
 # Network Connection Status Indicator (NCSI) troubleshooting guidance
 

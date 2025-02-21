@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, raackley
-ms.custom: sap:Virtualization and Hyper-V\Virtual machine state, csstroubleshoot
+ms.custom:
+- sap:virtualization and hyper-v\virtual machine state
+- pcy:WinComm Storage High Avail
 ---
 # VM shutdown actions don't run when a host shuts down because of a low battery
 

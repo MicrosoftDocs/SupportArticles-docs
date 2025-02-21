@@ -7,7 +7,9 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-tappelgate
 keywords: DDA,passthrough,pass-through,LUN,MPIO
-ms.custom: sap:Virtualization and Hyper-V\Storage configuration
+ms.custom:
+- sap:virtualization and hyper-v\storage configuration"]
+- pcy:WinComm Storage High Avail
 ---
 
 # Virtual machine LUNs disappear after you configure them as MPIO devices

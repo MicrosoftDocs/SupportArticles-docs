@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Remote Desktop Services and Terminal Services\Virtual Desktop Infrastructure (VDI), csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\virtual desktop infrastructure (vdi)
+- pcy:WinComm User Experience
 ---
 # Server 2012 VDI collection require two-way trust when adding user group of external domain
 

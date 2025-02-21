@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Performance (Congestion, Bandwidth, Latency, MTU, NOT SMB), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\tcp/ip performance (congestion,bandwidth,latency,mtu,not smb)
+- pcy:WinComm Networking
 ---
 # TCP/IP performance troubleshooting guidance
 

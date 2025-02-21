@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-tappelgate
-ms.custom: sap:Virtualization and Hyper-V\Snapshots, checkpoints, and differencing disks, csstroubleshoot
+ms.custom:
+- sap:virtualization and hyper-v\snapshots,checkpoints,and differencing disks
+- pcy:WinComm Storage High Avail
 keywords: differencing disks, avhdx, merge checkpoint, merge vhd
 ---
 

@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, tonyga, stevenxu, kishore
-ms.custom: sap:Network Connectivity and File Sharing\WebClient and WebDAV, csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\webclient and webdav
+- pcy:WinComm Networking
 ---
 # Prompt for credentials when you access WebDav-based FQDN sites in Windows
 

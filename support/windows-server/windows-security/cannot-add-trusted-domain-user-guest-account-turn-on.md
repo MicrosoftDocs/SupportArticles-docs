@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Security Technologies\Domain and forest trusts, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\domain and forest trusts
+- pcy:WinComm Directory Services
 ---
 # Error when you try to add a trusted domain user to a trusting domain in Windows Server 2003 or in Windows 2000: The server is not operational
 

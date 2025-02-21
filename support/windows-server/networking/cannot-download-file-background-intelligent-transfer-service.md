@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Network Connectivity and File Sharing\Background Intelligent Transfer Service (BITS), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\background intelligent transfer service (bits)
+- pcy:WinComm Networking
 ---
 # Error when you download a file by using the Background Intelligent Transfer Service: Content file download failed
 

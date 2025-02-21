@@ -3,7 +3,7 @@ title: Troubleshoot user access issues for different environments
 description: Discover how to execute diagnostic checks for user permissions in various environments, along with the requirements needed for access.
 author: sericks007
 ms.author: sericks
-ms.reviewer: paulliew
+ms.reviewer: paulliew, sericks
 ms.custom: sap:Microsoft Dataverse\Environment and app access issues
 ms.component: pa-admin
 ms.date: 02/20/2025

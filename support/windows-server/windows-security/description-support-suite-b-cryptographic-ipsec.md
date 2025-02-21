@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, clayse
-ms.custom: sap:Windows Security Technologies\Internet Protocol security (IPSec), csstroubleshoot
+ms.custom:
+- sap:windows security technologies\internet protocol security (ipsec)
+- pcy:WinComm Networking
 ---
 # Description of the support for Suite B cryptographic algorithms that was added to IPsec
 

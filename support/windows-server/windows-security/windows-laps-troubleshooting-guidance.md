@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, jsimmons, sandeo, mimanans, sdabbiru, deverett, raviks, v-lianna
-ms.custom: sap:Windows Local Admin Password Solution (LAPS), csstroubleshoot
+ms.custom:
+- sap:windows local admin password solution (laps)
+- pcy:WinComm Directory Services
 ---
 # Windows LAPS troubleshooting guidance
 

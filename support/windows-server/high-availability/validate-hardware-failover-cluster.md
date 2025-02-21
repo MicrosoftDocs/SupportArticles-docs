@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-lianna, jeffhugh
-ms.custom: sap:Clustering and High Availability\Errors when running the Validation Wizard, csstroubleshoot
+ms.custom:
+- sap:clustering and high availability\errors when running the validation wizard
+- pcy:WinComm Storage High Avail
 ---
 # Validate hardware for a failover cluster
 
