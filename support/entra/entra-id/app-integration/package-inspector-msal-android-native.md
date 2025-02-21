@@ -87,7 +87,7 @@ There are two methods to install Package Inspector:
 
 ### Issues when loading Package Inspector into Android Studio
 
-To resolve these issues, ensure you load the root package from the MSAL repository, not the package inspector. Make sure that the Android MSAL project you load into Android Studio is named `microsoft-authentication-library-for-android-dev` or whatever you have renamed the root directory on your system instead of `package-inspector`. For more information, see step 5 under [Option 2](#option-2-download-as-a-zip-file-and-open-in-android-studio) in the [Install Package Inspector](#install-package-inspector) section.
+To resolve these issues, ensure you load the root package from the MSAL repository, not the package inspector. Make sure that the Android MSAL project you load into Android Studio is named `microsoft-authentication-library-for-android-dev` or whatever you have renamed the root directory on your system instead of `package-inspector`. For more information, see step 5 under [Option 2](#option-2-download-android-msal-repository-and-open-it-in-android-studio) in the [Install Package Inspector](#install-package-inspector) section.
 
 ### Not all packages appear in Package Inspector
 
