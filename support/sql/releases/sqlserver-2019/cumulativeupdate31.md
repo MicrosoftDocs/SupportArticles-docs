@@ -35,7 +35,7 @@ Microsoft is working on a fix for this issue and it will be available in a futur
 
 ### Issue two: Patching a read-scale availability group (Windows or Linux) causes the availability group on the patched replica to be removed
 
-If you use the read-scale availability group (AG) in SQL Server on Windows or Linux, you should **not** install this CU.
+If you use the read-scale availability group (AG) feature in SQL Server on Windows or Linux, you should **not** install this CU.
 
 This CU introduced [a fix to support AG names longer than 64 characters](#3548672). However, when the patch is installed on an instance that has the read-scale AG configured, the AG metadata is dropped. This issue affects read-scale AGs in both [Windows](/sql/database-engine/availability-groups/windows/read-scale-availability-groups) and [Linux](/sql/linux/sql-server-linux-availability-group-configure-rs), which means that the `CLUSTER_TYPE` of the AG is either `NONE` or `EXTERNAL`.
 
@@ -51,29 +51,100 @@ After the patch is installed, the metadata is removed and you must re-create the
 
 #### Example
 
-You can use steps that are similar to the following ones, but you need to update them for the given environment, including the `CLUSTER_TYPE`. The VM1 in the given example is the primary replica of the AG 'readscaleag', and VM2 is the secondary replica that has the patch applied but already uninstalled. When running the following script, both replicas VM1 and VM2 are running SQL Server 2019 CU30 and the AG metadata is missing on VM2.
+You can use steps that are similar to the following ones, but you need to update them for the given environment, including the `CLUSTER_TYPE`. The VM1 in the given example is the primary replica of the AG 'readscaleag', and VM2 is the secondary replica that has the patch applied but already uninstalled. When running the following script, both replicas VM1 and VM2 are running SQL Server 2019 CU30 and the AG metadata is missing on VM2. To run this script, you must use [SQLCMD mode](https://learn.microsoft.com/en-us/sql/tools/sqlcmd/edit-sqlcmd-scripts-query-editor?view=sql-server-ver16#enable-sqlcmd-scripting-in-query-editor).
 
 ```sql
---- YOU MUST EXECUTE THE FOLLOWING SCRIPT IN SQLCMD MODE
-:CONNECT VM1\SQL19
+--You must run this query in SQLCMD mode
+:setvar PrimaryServer "VM1\SQL19"
+:setvar SecondaryServer "VM2\SQL19"
+:setvar AvailabilityGroupName "readscaleag"
+:setvar EndpointURL "TCP://VM2.Contoso.lab:5022"
+:setvar DatabaseName "testReadScaleAGDb"
+:setvar ClusterType "NONE"
 
-ALTER AVAILABILITY GROUP readscaleag REMOVE REPLICA ON 'VM2\SQL19';  
+-- Connect to primary server
+:CONNECT $(PrimaryServer)
 
-:CONNECT VM1\SQL19
-
-USE [master]
+-- Remove replica on secondary server
+ALTER AVAILABILITY GROUP $(AvailabilityGroupName) REMOVE REPLICA ON N'$(SecondaryServer)';
 GO
 
-ALTER AVAILABILITY GROUP [readscaleag]
-ADD REPLICA ON N'VM2\SQL19' WITH (ENDPOINT_URL = N'TCP://VM2.Contoso.lab:5022', FAILOVER_MODE = MANUAL, AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT, BACKUP_PRIORITY = 50, SECONDARY_ROLE(ALLOW_CONNECTIONS = NO));
+-- Connect to primary server again
+:CONNECT $(PrimaryServer)
+
+USE [master];
 GO
 
-:CONNECT VM2\SQL19
-ALTER AVAILABILITY GROUP [readscaleag] JOIN WITH (CLUSTER_TYPE = NONE);
+-- Add replica on secondary server
+ALTER AVAILABILITY GROUP $(AvailabilityGroupName)
+ADD REPLICA ON N'$(SecondaryServer)' WITH (
+    ENDPOINT_URL = N'$(EndpointURL)', 
+    FAILOVER_MODE = MANUAL, 
+    AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT, 
+    BACKUP_PRIORITY = 50, 
+    SECONDARY_ROLE(ALLOW_CONNECTIONS = NO)
+);
 GO
 
-:CONNECT VM2\SQL19
-ALTER DATABASE [testReadScaleAGDb] SET HADR AVAILABILITY GROUP = [readscaleag];
+-- Connect to secondary server
+:CONNECT $(SecondaryServer)
+
+-- Join availability group with cluster type none
+ALTER AVAILABILITY GROUP $(AvailabilityGroupName) JOIN WITH (CLUSTER_TYPE = N'$(ClusterType)');
+GO
+
+-- Connect to secondary server again
+:CONNECT $(SecondaryServer)
+
+-- Set database to availability group
+-- Wait for the replica to start communicating
+BEGIN TRY
+    DECLARE @conn BIT;
+    DECLARE @count INT;
+    DECLARE @replica_id UNIQUEIDENTIFIER;
+    DECLARE @group_id UNIQUEIDENTIFIER;
+    
+    SET @conn = 0;
+    SET @count = 30; -- wait for 5 minutes 
+
+    IF (SERVERPROPERTY('IsHadrEnabled') = 1)
+        AND (ISNULL((SELECT member_state 
+                     FROM master.sys.dm_hadr_cluster_members 
+                     WHERE UPPER(member_name COLLATE Latin1_General_CI_AS) = UPPER(CAST(SERVERPROPERTY('ComputerNamePhysicalNetBIOS') AS NVARCHAR(256)) COLLATE Latin1_General_CI_AS)), 0) <> 0)
+        AND (ISNULL((SELECT state 
+                     FROM master.sys.database_mirroring_endpoints), 1) = 0)
+    BEGIN
+        SELECT @group_id = ags.group_id 
+        FROM master.sys.availability_groups AS ags 
+        WHERE name = N'$(AvailabilityGroupName)';
+
+        SELECT @replica_id = replicas.replica_id 
+        FROM master.sys.availability_replicas AS replicas 
+        WHERE UPPER(replicas.replica_server_name COLLATE Latin1_General_CI_AS) = UPPER(@@SERVERNAME COLLATE Latin1_General_CI_AS) 
+          AND group_id = @group_id;
+
+        WHILE @conn <> 1 AND @count > 0
+        BEGIN
+            SET @conn = ISNULL((SELECT connected_state 
+                                FROM master.sys.dm_hadr_availability_replica_states AS states 
+                                WHERE states.replica_id = @replica_id), 1);
+            IF @conn = 1
+            BEGIN
+                -- exit loop when the replica is connected, or if the query cannot find the replica status
+                BREAK;
+            END
+
+            WAITFOR DELAY '00:00:10';
+            SET @count = @count - 1;
+        END
+    END
+END TRY
+BEGIN CATCH
+    -- If the wait loop fails, do not stop execution of the alter database statement
+END CATCH
+
+ALTER DATABASE $(DatabaseName) SET HADR AVAILABILITY GROUP = $(AvailabilityGroupName);
+GO
 GO
 ```
 
