@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, roumaago, v-lianna
-ms.custom: sap:Containers\Management of Containers, csstroubleshoot
+ms.custom:
+- sap:containers\management of containers
+- pcy:WinComm Storage High Avail
 ---
 # Application Programming Interface (API) call of performance counters is delayed inside a container
 

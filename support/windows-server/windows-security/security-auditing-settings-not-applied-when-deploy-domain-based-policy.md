@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, nedpyle
-ms.custom: sap:Windows Security Technologies\AD Object Permissions, access control, delegation, AdminSDHolder and auditing, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\ad object permissions,access control,delegation,adminsdholder and auditing
+- pcy:WinComm Directory Services
 ---
 # Security auditing settings are not applied to Windows Vista-based and Window Server 2008-based computers when you deploy a domain-based policy
 

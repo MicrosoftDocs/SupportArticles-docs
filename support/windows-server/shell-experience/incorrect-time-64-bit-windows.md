@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Desktop and Shell Experience\DST and Timezones, csstroubleshoot
+ms.custom:
+- sap:windows desktop and shell experience\dst and timezones
+- pcy:WinComm User Experience
 ---
 # Incorrect time displayed on 64-bit versions of Windows 7 or Windows Server 2008 R2 after in-place upgrade
 

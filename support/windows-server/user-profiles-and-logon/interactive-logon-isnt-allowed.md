@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, paulhut, nedpyle
-ms.custom: sap:User Logon and Profiles\Service Account and Interactive User Logon Issues and Credential Providers, csstroubleshoot
+ms.custom:
+- sap:user logon and profiles\service account and interactive user logon issues and credential providers
+- pcy:WinComm Directory Services
 ---
 # Domain Controller doesn't allow interactive logon, shows an error: The security database on the server does not have a computer account for this workstation trust relationship
 

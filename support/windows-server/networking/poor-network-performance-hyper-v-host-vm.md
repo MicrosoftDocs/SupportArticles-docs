@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Network Connectivity and File Sharing\Network Load Balancing (NLB), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\network load balancing (nlb)
+- pcy:WinComm Networking
 ---
 # Poor network performance on virtual machines on a Windows Server 2012 Hyper-V host if VMQ is enabled
 

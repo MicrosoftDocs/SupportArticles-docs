@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-parapa
-ms.custom: sap:System Performance\System Performance (slow, unresponsive, high CPU, resource leak), csstroubleshoot
+ms.custom:
+- sap:system performance\system performance (slow,unresponsive,high cpu,resource leak)
+- pcy:WinComm Performance
 ---
 # Can't delete certain registry keys and Error while deleting key occurs
 

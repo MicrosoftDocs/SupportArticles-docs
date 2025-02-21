@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\On-premises Active Directory domain join, csstroubleshoot
+ms.custom:
+- sap:active directory\on-premises active directory domain join
+- pcy:WinComm Directory Services
 ---
 # How to troubleshoot errors that occur when you join Windows-based computers to a domain
 

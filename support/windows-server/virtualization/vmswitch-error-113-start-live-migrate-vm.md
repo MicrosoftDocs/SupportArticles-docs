@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: Tode, kaushika
-ms.custom: sap:Virtualization and Hyper-V\Virtual switch manager (Vmswitch), csstroubleshoot
+ms.custom:
+- sap:virtualization and hyper-v\virtual switch manager (vmswitch)
+- pcy:WinComm Storage High Avail
 ---
 # VmSwitch Error 113 event is logged when you start or live migrate virtual machines
 

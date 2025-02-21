@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, mjacquet
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Partition and volume management, csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\partition and volume management
+- pcy:WinComm Storage High Avail
 ---
 # Best practices for using dynamic disks on Windows Server 2003-based computers
 

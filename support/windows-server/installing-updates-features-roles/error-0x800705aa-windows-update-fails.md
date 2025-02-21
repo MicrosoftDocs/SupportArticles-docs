@@ -6,7 +6,9 @@ audience: itpro
 ms.date: 01/15/2025
 ms.topic: troubleshooting
 ms.reviewer: kaushika, maeltedebay, v-lianna
-ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update fails - installation stops with error, csstroubleshoot, ikb2lmc
+ms.custom:
+- sap:windows servicing,updates and features on demand\windows update fails - installation stops with error
+- pcy:WinComm Devices Deploy
 ---
 # Error 0x800705aa when Windows Update fails
 

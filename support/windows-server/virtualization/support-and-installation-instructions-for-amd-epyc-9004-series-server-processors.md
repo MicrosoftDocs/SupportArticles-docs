@@ -4,7 +4,9 @@ description: Introduces the Windows Server operating system support statements a
 ms.topic: troubleshooting
 ms.date: 01/13/2025
 ms.reviewer: kaushika, jaysenb, scottmca
-ms.custom: sap:Virtualization and Hyper-V\Installation and configuration of Hyper-V, csstroubleshoot
+ms.custom:
+- sap:virtualization and hyper-v\installation and configuration of hyper-v
+- pcy:WinComm Storage High Avail
 ---
 # Windows Server support and installation instructions for the AMD EPYC 9004 and AMD EPYC 9005 series server processors
 

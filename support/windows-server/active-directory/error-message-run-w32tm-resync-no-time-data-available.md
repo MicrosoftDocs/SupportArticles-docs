@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, karanr
-ms.custom: sap:Active Directory\Windows Time Service configuration, accuracy, and synchronization, csstroubleshoot
+ms.custom:
+- sap:active directory\windows time service configuration,accuracy,and synchronization
+- pcy:WinComm Directory Services
 ---
 # "w32tm /resync" fails with "The computer didn't resync because no time data was available."
 

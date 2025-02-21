@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Remote Desktop Services and Terminal Services\Deployment, configuration, and management of Remote Desktop Services infrastructure, csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\deployment,configuration,and management of remote desktop services infrastructure
+- pcy:WinComm User Experience
 ---
 # Available updates for Remote Desktop Services (Terminal Services) in Windows Server 2008 R2 SP1
 

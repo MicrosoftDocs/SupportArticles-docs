@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Volume Shadow Copy Service (VSS), csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\volume shadow copy service (vss)
+- pcy:WinComm Storage High Avail
 ---
 # Windows Server backup may fail because of the SQL Server VSS writer
 

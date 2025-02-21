@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, shpune, rnitsch, 5x5dnd
-ms.custom: sap:Network Connectivity and File Sharing\Dynamic Host Configuration Protocol (DHCP), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\dynamic host configuration protocol (dhcp)
+- pcy:WinComm Networking
 ---
 # Troubleshooting guide: DHCP authorization failures
 

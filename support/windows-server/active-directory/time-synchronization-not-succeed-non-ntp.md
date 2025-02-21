@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\Windows Time Service configuration, accuracy, and synchronization, csstroubleshoot
+ms.custom:
+- sap:active directory\windows time service configuration,accuracy,and synchronization
+- pcy:WinComm Directory Services
 ---
 # Time synchronization may not succeed when you try to synchronize with a non-Windows NTP server  
 

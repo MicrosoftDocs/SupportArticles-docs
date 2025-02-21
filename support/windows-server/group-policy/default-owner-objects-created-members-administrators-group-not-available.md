@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: v-jomcc, kaushika
-ms.custom: sap:Group Policy\Problems Applying Group Policy, csstroubleshoot
+ms.custom:
+- sap:group policy\problems applying group policy
+- pcy:WinComm Directory Services
 ---
 # A Group Policy setting isn't available in the security policy settings list
 

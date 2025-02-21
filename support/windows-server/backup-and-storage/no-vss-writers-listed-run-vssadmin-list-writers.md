@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: jeffpatt, kaushika
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Configuring and using Windows Backup or other recovery, csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\configuring and using windows backup or other recovery
+- pcy:WinComm Storage High Avail
 ---
 # No VSS writers are listed when you run the vssadmin list writers command in Windows Server
 

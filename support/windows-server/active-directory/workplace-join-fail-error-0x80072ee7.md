@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, willfid, AAdcontent, rkiran
-ms.custom: sap:Windows Security Technologies\Active Directory Federation Services (AD FS) non-Azure-O365 issues, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\active directory federation services (ad fs) non-azure-o365 issues
+- pcy:WinComm Directory Services
 ---
 # "Workplace Join discovery failed" error with exit code 0x80072EE7
 

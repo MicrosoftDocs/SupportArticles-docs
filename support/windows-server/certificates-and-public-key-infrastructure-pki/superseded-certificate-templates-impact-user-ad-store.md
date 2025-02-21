@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory Certificate Services (ADCS), csstroubleshoot
+ms.custom:
+- sap:certificates and public key infrastructure (pki)\active directory certificate services (adcs)
+- pcy:WinComm Directory Services
 ---
 # Superseded Certificate Templates and impact on user's AD store
 

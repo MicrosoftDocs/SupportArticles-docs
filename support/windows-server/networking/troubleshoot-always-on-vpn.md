@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, inhenkel, v-tappelgate, v-lianna
-ms.custom: sap:Network Connectivity and File Sharing\Remote access (VPN, RRAS, CMAK and AOVPN), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\remote access (vpn,rras,cmak and aovpn)
+- pcy:WinComm Networking
 ms.assetid: 4d08164e-3cc8-44e5-a319-9671e1ac294a
 ---
 # Troubleshoot Always On VPN

@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, fmu
-ms.custom: sap:managing-internet-explorer-settings-through-group-policy, csstroubleshoot
+ms.custom:
+- sap:managing-internet-explorer-settings-through-group-policy
+- pcy:WinComm Directory Services
 ---
 # "Allow active content to run files on My Computer" Group Policy setting does not work as expected
 

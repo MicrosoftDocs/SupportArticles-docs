@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, stevepar
-ms.custom: sap:Windows Desktop and Shell Experience\File Explorer (app only, folders, Quick Access, File Explorer search), csstroubleshoot
+ms.custom:
+- sap:windows desktop and shell experience\file explorer (app only,folders,quick access,file explorer search)
+- pcy:WinComm User Experience
 ---
 # Increased CPU usage when you access a SQL Server FileTable share from Windows Explorer
 

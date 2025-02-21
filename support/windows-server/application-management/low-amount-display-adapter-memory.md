@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, joelch, waltere
-ms.custom: sap:Application Technologies and Compatibility\Application Compatibility Toolkit (ACT), csstroubleshoot
+ms.custom:
+- sap:application technologies and compatibility\application compatibility toolkit (act)
+- pcy:WinComm User Experience
 ---
 # Direct-X diagnostics tool may report an unexpected value for the display adapters memory
 

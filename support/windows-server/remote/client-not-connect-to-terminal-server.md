@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, mikeres
-ms.custom: sap:Remote Desktop Services and Terminal Services\Authentication, csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\authentication
+- pcy:WinComm User Experience
 ---
 # Because of a security error, the client could not connect to the Terminal server
 
