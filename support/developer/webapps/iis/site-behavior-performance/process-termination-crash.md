@@ -11,14 +11,14 @@ This article helps you identify a process termination (more commonly referred to
 
 ## Identify a process crash
 
-To identify that there is a process crash, follow these steps:
+To identify that there's a process crash, follow these steps:
 
-1. On the affected server, select <kbd>Win</kbd>+<kbd>R</kbd> on your keyboard to open the **Run** dialog.
+1. On the affected server, select <kbd>Win</kbd>+<kbd>R</kbd> on your keyboard to open the **Run** dialog box.
 1. Type **eventvwr** and select <kbd>Enter</kbd> to open the Event Viewer application.
 1. In Event Viewer, on the left-hand side, expand the **Windows Logs** folder, and then select the **System** event log.
 1. In the **System** event log, you can choose to filter the log so that it shows you only the Windows Process Activation Service (WAS) source logs. The event type is **Warning**, and the **Event ID** is **5011**.
 
-If there is any event with the preceding characteristics, it indicates a process crash. The wording for the event might look like the following one:
+If there's any event with the preceding characteristics, it indicates a process crash. The wording for the event might look like the following one:
 
 `A process serving application pool <name of the application pool> suffered a fatal communication error with the Windows Process Activation Service. The process id was '<id of process>'. The data field contains the error number.`.
 
@@ -34,11 +34,11 @@ Collect the following key points:
 
 ## Identify the cause of the crash
 
-After you confirm there is a crash, follow these steps to determine what caused the application to crash:
+After you confirm there's a crash, follow these steps to determine what caused the application to crash:
 
-1. On the affected server, select <kbd>Win</kbd>+<kbd>R</kbd> on your keyboard to open the **Run** dialog.
+1. On the affected server, select <kbd>Win</kbd>+<kbd>R</kbd> on your keyboard to open the **Run** dialog box.
 1. Type **eventvwr** and select <kbd>Enter</kbd> to open the Event Viewer application.
-1. In the **Application** event log, you can locate events that has **Source** labeled as **Application Error**. The event type is **Error** and the **Event ID** is **1000**.
+1. In the **Application** event log, you can locate events that have **Source** labeled as **Application Error**. The event type is **Error** and the **Event ID** is **1000**.
 
 From the information collected, you should get an idea of what might have caused the crash.
 
@@ -72,7 +72,7 @@ To collect a crash dump, you can use tools like [Debug Diagnostic Tool](#debug-d
 To take crash dumps using Debug Diagnostic Tool, follow these steps:
 
 1. Download and install [Debug Diagnostic Tool](https://www.microsoft.com/download/details.aspx?id=103453&msockid=145197b7d1fa6877376482b2d0bf6961).
-1. Open the Debug Diag 2 Collection application and select **Add Rule** > **Crash** > **Next**.
+1. Open the DebugDiag 2 Collection application and select **Add Rule** > **Crash** > **Next**.
 1. Select **A specific IIS web application pool** > **Next**.
 
    > [!NOTE]
@@ -81,9 +81,9 @@ To take crash dumps using Debug Diagnostic Tool, follow these steps:
 1. Select the crashing application pool (you can get the application pool name in the [Identify a process crash](#identify-a-process-crash) section) and select **Next**.
 1. In the **Advanced Configuration (Optional)** window, select **Breakpoints** under **Advanced Settings**. Don't change any other options in this window and keep them at their default values.
 1. In the **Configure Breakpoints** window, select **Add Breakpoint**.
-1. Select the first line that reads **Ntdll!ZwTerminateProcess**. Then, select **Full Userdump** in the **Action Type** dropdown and set a value between 3 and 5 in the **Action Limit** field. Once done, click **OK**.
+1. Select the first line that reads **Ntdll!ZwTerminateProcess**. Then, select **Full Userdump** in the **Action Type** dropdown and set a value between 3 and 5 in the **Action Limit** field. Once done, select **OK**.
 1. At this stage, you have successfully created a trigger for when the dumps are generated. Select **Save and Close**.
-1. You are back at the **Advanced Configuration (Optional)** window. Select **Next** to move to the next step in the wizard.
+1. In the **Advanced Configuration (Optional)** window, select **Next** to move to the next step in the wizard.
 1. In the **Select Dump Location And Rule Name (Optional)** window, specify the path where you want to save the dumps. Once done, select **Next**.  
 
    :::image type="content" source="media/process-termination-crash/select-dump-location-and-rule-name.png" alt-text="Screenshot of the Select Dump Location And Rule Name (Optional) window.":::
@@ -107,7 +107,7 @@ ProcDump is a simpler way to take a memory dump of a process. To take crash dump
 1. Follow these steps to get PID:
    1. Open **IIS Manager**.
    1. Select your server name (on the left).
-   1. Double click **Worker Processes**. Take note of the PID value for the worker process that you want to troubleshoot.
+   1. Double-click **Worker Processes**. Take note of the PID value for the worker process that you want to troubleshoot.
 1. With the PID value in hand and the exception that you have found in the [Identify a process crash](#identify-a-process-crash) section, type the following command in the administrative **Command Prompt** window:
 
    ```cmd
@@ -147,7 +147,7 @@ To take crash dumps using Windows Error Reporting, follow these steps:
 
 1. Open Event Viewer and look for Windows Error Reporting events.
 1. Check the directories mentioned in the Windows Error Reporting events.
-1. Locate files with the extension **.mdmp** (mini dump) or **.hdmp** (heap dump) in the mentioned directories.
+1. Locate files with the extension `.mdmp` (mini dump) or `.hdmp` (heap dump) in the mentioned directories.
 
    - If you have them, open a support ticket and upload them.
    - If you don't have them, follow these steps to set up WER:
@@ -167,12 +167,12 @@ To take crash dumps using Windows Error Reporting, follow these steps:
 
 To perform the analysis for the crash, follow these steps:
 
-1. Download and install [Debug Diag](https://www.microsoft.com/download/details.aspx?id=103453&msockid=145197b7d1fa6877376482b2d0bf6961) (short for Debug Diagnostic Tool).
+1. Download and install [DebugDiag](https://www.microsoft.com/download/details.aspx?id=103453) (short for Debug Diagnostic Tool).
 1. Open DebugDiag2 Analysis and select **Add Data Files**.
 1. In the file chooser dialog, select the dump file you want to analyze.
 1. Once you upload the desired file, select **Start Analysis**.
 
-Once the analysis is complete, you see a file with an **MHT** extension loaded in the browser. The following example is from a dump on Notepad to display the final aspect of the analysis report.
+Once the analysis is complete, you see a file with an `.mht` extension loaded in the browser. The following example is from a dump on Notepad to display the final aspect of the analysis report.
 
 :::image type="content" source="media/process-termination-crash/debugdiag-analysis-report.png" alt-text="Screenshot of DebugDiag Analysis Report.":::
 
@@ -182,7 +182,7 @@ Once the analysis is complete, you see a file with an **MHT** extension loaded i
 
 This error usually means that your code is performing a loop of sorts and calling the same function (or group of functions) until it exhausts the stack.
 
-Here is an example of a stack overflow error:
+Here's an example of a stack overflow error:
 
 :::image type="content" source="media/process-termination-crash/stack-overflow-error-summary.png" alt-text="Screenshot of a stack overflow error summary.":::
 
@@ -196,9 +196,9 @@ This error usually means a component of your application tried to perform an inv
 
 You see the following summary and the report detail:
 
-:::image type="content" source="media/process-termination-crash/access-violation-summary.png" alt-text="Screenshot of a access violation summary.":::
+:::image type="content" source="media/process-termination-crash/access-violation-summary.png" alt-text="Screenshot of an access violation summary.":::
 
-:::image type="content" source="media/process-termination-crash/access-violation-report-detail.png" alt-text="Screenshot of a access violation report detail.":::
+:::image type="content" source="media/process-termination-crash/access-violation-report-detail.png" alt-text="Screenshot of an access violation report detail.":::
 
 In the report, locate the failing call stack and identify your code within the presented call stack.
 
@@ -206,6 +206,6 @@ In the report, locate the failing call stack and identify your code within the p
 
 This exception is generated from your application, so the best way forward is to run the memory dump through the report and identify the call stack that is returning the error.
 
-:::image type="content" source="media/process-termination-crash/net-second-hand-exception-summary.png" alt-text="Screenshot of .net second hand exception summary.":::
+:::image type="content" source="media/process-termination-crash/net-second-hand-exception-summary.png" alt-text="Screenshot of .NET second hand exception summary.":::
 
-:::image type="content" source="media/process-termination-crash/net-second-hand-exception-report-detail.png" alt-text="Screenshot of .net second hand exception report detail.":::
+:::image type="content" source="media/process-termination-crash/net-second-hand-exception-report-detail.png" alt-text="Screenshot of .NET second hand exception report detail.":::
