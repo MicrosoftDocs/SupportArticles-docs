@@ -308,7 +308,7 @@ Remote Desktop Gateway
 
 Remote Desktop Virtualization Host  
 
-- [KB4013429](https://support.microsoft.com/help/4013429) Addressed an issue in which t he RD Virtualization Host role fails to install on nested VM.  
+- [KB4013429](https://support.microsoft.com/help/4013429) Addressed an issue in which the RD Virtualization Host role fails to install on nested VM.  
 
 Remote Desktop Web Access  
 

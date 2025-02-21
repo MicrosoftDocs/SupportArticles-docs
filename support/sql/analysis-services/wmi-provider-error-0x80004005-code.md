@@ -46,7 +46,7 @@ This issue occurs because when you set up the clustered instance of Analysis Ser
 
 To fix this issue, grant the SQL Server Analysis Services service SID the local policy user Log on as a service right.
 
-- For a default instance of SQL Server Analysis Services, t he name of the service SID is `NT SERVICE\MSSQLServerOLAPService`.
+- For a default instance of SQL Server Analysis Services, the name of the service SID is `NT SERVICE\MSSQLServerOLAPService`.
 - For a named instance, the name is `NT SERVICE\MSOLAP$\<instance name>`.
 
 To grant the **Log on as a service right** to the service SID, follow these steps:
