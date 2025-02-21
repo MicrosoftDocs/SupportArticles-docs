@@ -8,7 +8,7 @@ manager: dcscontentpm
 tags: top-support-issue,azure-resource-manager,azure-service-management
 ms.service: azure-virtual-machines
 ms.topic: troubleshooting
-ms.date: 02/17/2025
+ms.date: 02/21/2025
 ms.author: genli
 ms.reviewer: clmendes
 ms.custom: sap:Received an Allocation Failure
@@ -17,14 +17,14 @@ ms.custom: sap:Received an Allocation Failure
 
 **Applies to:** :heavy_check_mark: Linux VMs :heavy_check_mark: Windows VMs
 
-When you create a virtual machine (VM), start any stopped (deallocated) VMs, or resize a VM, Microsoft Azure allocates compute resources to your subscription. We are continually investing in additional infrastructure and features to make sure that we always have all VM types available to support customer demand. However, you may occasionally experience resource allocation failures because of unprecedented growth in demand for Azure services in specific regions. This problem can occur when you try to create, start, or resize VMs in a region while the VMs might display an error code and message like the following text:
+When you create a virtual machine (VM), start any stopped (deallocated) VMs, or resize a VM, Microsoft Azure allocates compute resources to your subscription. We are continually investing in additional infrastructure and features to make sure that we always have all VM types available to support customer demand. However, you might occasionally experience resource allocation failures because of unprecedented growth in demand for Azure services in specific regions. This problem can occur when you try to create, start, or resize VMs in a region while the VMs might display an error code and message like the following text:
 
 > **Error code**: AllocationFailed or ZonalAllocationFailed
 >
 > **Error message**: "Allocation failed. We do not have sufficient capacity for the requested VM size in this region. Read more about improving likelihood of allocation success at https:\//aka.ms/allocation-guidance"
 >
 
-Alternative recommendation: When you receive an alternative recommendation, it means that the VM size you requested is not currently available in the selected region or zone. To increase your chances of successfully allocating a virtual machine, you can select one of the alternative options. Simply apply the changes to your VM input selection or [resize](/azure/virtual-machines/sizes/resize-vm) the currently existing VM with the desired option and try to start or create the VM again
+Alternative recommendation: When you receive an alternative recommendation, it means that the VM size you requested is not currently available in the selected region or zone. To increase your chances of successfully allocating a virtual machine, you can select one of the alternative options. Simply apply the changes to your VM input selection or [resize](/azure/virtual-machines/sizes/resize-vm) the currently existing VM with the desired option and try to start or create the VM again.
 
 For example, try one of these alternative options to improve the chance of allocation success:
 
@@ -52,7 +52,7 @@ If you have a standalone VM in Azure, meaning it's not part of an availability s
 
 ### Workarounds
 
-To work around this issue, use one of the following method:
+To work around this issue, use one of the following methods:
 
 - Retry the allocation
 
@@ -68,7 +68,7 @@ To work around this issue, use one of the following method:
 ## Resize a VM, add VMs, or start partially stopped (deallocated) VMs, to an existing availability set
 
 > [!NOTE]
-> A VM can only be added to an availability set during creation. To add an existing VM to an availability set, or change a VM's availability set, the VM must be deleted and recreated. For more information, see [Change the availability set for a VM by using Azure PowerShell](/azure/virtual-machines/windows/change-availability-set).
+> A VM can only be added to an availability set during creation. To add an existing VM to an availability set, or change a VM's availability set, the VM must be deleted and re-created. For more information, see [Change the availability set for a VM by using Azure PowerShell](/azure/virtual-machines/windows/change-availability-set).
 
 ### Cause
 
@@ -84,7 +84,7 @@ To work around this issue, use one of the following methods:
 
 - Consider resizing the VM to a different size that might have more availability in the region or zone. To ensure that the VM sizes are supported in your availability set, use [availability sets - List Available Sizes - REST API](/troubleshoot/azure/virtual-machines/windows/virtual-machines-availability-set-supportability).
 
-- Stop (deallocate) all VMs in the same availability set, then start all applicable VMs in a batch to allow the allocation from all available clusters, rather than just the cluster where the availability set is currently allocated.
+- Stop (deallocate) all VMs in the same availability set, and then start all applicable VMs in a batch to allow the allocation from all available clusters, rather than just the cluster where the availability set is currently allocated.
   
   To stop all the VMs in the availability set, follow these steps:
 
@@ -138,9 +138,9 @@ To work around this issue, use one of the following methods:
 
 - Change the region or zone
 
-  If the current region or zone is experiencing high demand, try deploying or migrating the VMs to a different region or availability zone where their might be more capacity. The region or zone can be changed with the following methods:
+  If the current region or zone is experiencing high demand, try deploying or migrating the VMs to a different region or availability zone where there might be more capacity. The region or zone can be changed with the following methods:
   
-   - Create a new VM, using a copy of the OS disk, in a different zone or without the zonal constraint. Removing the zonal constraint will expand the allocation options to the entire region, rather than limiting them to a single zone.
+   - Create a new VM, using a copy of the OS disk, in a different zone or without the zonal constraint. Removing the zonal constraint expands the allocation options to the entire region, rather than limiting them to a single zone.
 
       For more information, see the following articles:
 
@@ -154,7 +154,7 @@ To work around this issue, use one of the following methods:
 
 ### Cause
 
-When the Azure Compute platform can't allocate a VM to meet the required constraints specified in the request, overconstrained allocation failures occur. These failures typically happens when specific requirements can’t be met within the available resources. They are often indicated by errors like `OverconstrainedZonalAllocationRequest` or `OverconstrainedAllocationRequest`.
+When the Azure Compute platform can't allocate a VM to meet the required constraints specified in the request, overconstrained allocation failures occur. These failures typically happen when specific requirements can’t be met within the available resources. They are often indicated by errors like `OverconstrainedZonalAllocationRequest` or `OverconstrainedAllocationRequest`.
 
 These constraints usually (but not always) include the following items:
 
@@ -179,9 +179,9 @@ To work around this issue, use one of the following methods:
 
 - Change the region or zone
 
-  If the current region or zone is experiencing high demand, try deploying or migrating the VMs to a different region or availability zone where their might be more capacity. The region or zone can be changed with the following methods:
+  If the current region or zone is experiencing high demand, try deploying or migrating the VMs to a different region or availability zone where there might be more capacity. The region or zone can be changed with the following methods:
   
-   - Create a new VM, using a copy of the OS disk, in a different zone or without the zonal constraint. Removing the zonal constraint will expand the allocation options to the entire region, rather than limiting them to a single zone.
+   - Create a new VM, using a copy of the OS disk, in a different zone or without the zonal constraint. Removing the zonal constraint expands the allocation options to the entire region, rather than limiting them to a single zone.
 
       For more information, see the following articles:
 
@@ -190,10 +190,10 @@ To work around this issue, use one of the following methods:
 
    - Migrate or create the VM in a different region. For more information, see [Move Azure VMs across regions](/azure/resource-mover/tutorial-move-region-virtual-machines).
 
-- Adjust constraints that could limit the allocation: There might be sufficient availability for the VM SKU in the zone, however, the defined constraints might prevent allocation. To increase the likelihood of successful allocation, consider adjusting the constraints by:
+- Adjust constraints that could limit the allocation: There might be sufficient availability for the VM SKU in the zone. However, the defined constraints might prevent allocation. To increase the likelihood of successful allocation, consider adjusting the constraints by:
   - Disabling accelerated networking.
   - Removing the VM from any proximity placement group.
-  - Remove any UltraSSD or PemiumSSDv2 disks.
+  - Removing any UltraSSD or PemiumSSDv2 disks.
 
 ## Allocation failures for VMs using proximity placement groups
 
@@ -201,7 +201,7 @@ Proximity Placement Groups ensure that resources are collocated within the same 
 
 ### Cause
 
-When you request to start or allocate the first VM in a proximity placement group, the data center is selected automatically. If the required VM size is unavailable in that data center, the request will fail. In scenarios with elastic workloads, where VM instances are added or removed dynamically, enforcing a proximity placement group constraint can lead to an allocation failure, indicating that the allocation request could not be completed.
+When you request to start or allocate the first VM in a proximity placement group, the data center is selected automatically. If the required VM size is unavailable in that data center, the request fails. In scenarios with elastic workloads where VM instances are added or removed dynamically, enforcing a proximity placement group constraint can lead to an allocation failure, indicating that the allocation request could not be completed.
 
 ### Workaround
 
@@ -209,7 +209,7 @@ Deallocate all VMs in the proximity placement group and try changing the order i
 
 ## Allocation failures for older VM sizes (Av1, Dv1, DSv1, D15v2, DS15v2, etc.)
 
-As we expand Azure infrastructure, we deploy newer-generation hardware that's designed to support the latest virtual machine types. Some of the older series VMs do not run on our latest generation infrastructure. For this reason, customers may occasionally experience allocation failures for these legacy SKUs. To avoid this problem, we encourage customers who are using legacy series virtual machines to consider moving to the equivalent newer VMs per the following recommendations. These VMs are optimized for the latest hardware and will let you take advantage of better pricing and performance.
+As we expand Azure infrastructure, we deploy newer-generation hardware that's designed to support the latest virtual machine types. Some of the older series VMs do not run on our latest generation infrastructure. For this reason, customers might occasionally experience allocation failures for these legacy SKUs. To avoid this problem, we encourage customers who are using legacy series virtual machines to consider moving to the equivalent newer VMs per the following recommendations. These VMs are optimized for the latest hardware and enable you to take advantage of better pricing and performance.
 
 |Legacy VM-series/size|Recommended newer VM-series/size|More information|
 |----------------------|----------------------------|--------------------|
@@ -226,14 +226,14 @@ Reduce the number of instances of the requested VM size, and then retry the depl
 
 ### How allocation works
 
-The servers in Azure datacenters are partitioned into clusters. Normally, an allocation request is attempted in multiple clusters, but it's possible that certain constraints (such as VM size, Ultra SSD, and proximity placement groups) from the allocation request force the Azure platform to attempt the request in only one cluster. Diagram 1 below illustrates the case of a normal allocation that is attempted in multiple clusters.
+The servers in Azure datacenters are partitioned into clusters. Normally, an allocation request is attempted in multiple clusters, but it's possible that certain constraints (such as VM size, Ultra SSD, and proximity placement groups) from the allocation request force the Azure platform to attempt the request in only one cluster. The following Diagram 1 illustrates the case of a normal allocation that's attempted in multiple clusters.
 
-:::image type="content" source="media/virtual-machines-common-allocation-failure/how-allocation-works.svg" alt-text="Diagram 1 shows allocation attempted in multiple clusters." lightbox="media/virtual-machines-common-allocation-failure/how-allocation-works.svg":::
+:::image type="content" source="media/virtual-machines-common-allocation-failure/how-allocation-works.svg" alt-text="Screenshot of Diagram 1 showing allocation attempted in multiple clusters." lightbox="media/virtual-machines-common-allocation-failure/how-allocation-works.svg":::
 
 ### Why allocation failures happen
 
-When an allocation has a high number of restrictions, there's a higher chance of failing to find free resources since the available resource pool is smaller. Furthermore, if your allocation request is restricted, such as when using proximity placement groups but the type of resource you requested isn’t supported by the set of clusters and nearby ones, your request will fail even if the cluster has free resources. The following Diagram 2 illustrates the case where an allocation fails because the candidate clusters associated with the proximity placement group don't have free resources. Diagram 3 illustrates the case where an allocation fails because the candidate clusters associated with the  proximity placement group don’t support the requested VM size, even though the clusters have free resources.
+When an allocation has a large number of restrictions, there's a higher chance of failing to find free resources since the available resource pool is smaller. Furthermore, if your allocation request is restricted, such as when using proximity placement groups but the type of resource you requested isn’t supported by the set of clusters and nearby ones, your request fails even if the cluster has free resources. The following Diagram 2 illustrates the case where an allocation fails because the candidate clusters associated with the proximity placement group don't have free resources. Diagram 3 illustrates the case where an allocation fails because the candidate clusters associated with the  proximity placement group don’t support the requested VM size, even though the clusters have free resources.
 
-:::image type="content" source="media/virtual-machines-common-allocation-failure/allocation-failures-ppg.svg" alt-text="Diagram 2 shows allocation failed with no free resource available and Diagram 3 shows allocation failed with size not supported." lightbox="media/virtual-machines-common-allocation-failure/allocation-failures-ppg.svg":::
+:::image type="content" source="media/virtual-machines-common-allocation-failure/allocation-failures-ppg.svg" alt-text="Screenshot of Diagram 2 showing allocation failed with no free resource available and Diagram 3 showing allocation failed with size not supported." lightbox="media/virtual-machines-common-allocation-failure/allocation-failures-ppg.svg":::
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
