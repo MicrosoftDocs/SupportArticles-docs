@@ -67,6 +67,10 @@
         href: app-integration/send-notification-details.md
   - name: Troubleshoot sign-in to apps
     items:
+                                 - name: Error code AADSTS50173 - The provided grant has expired due to it being
+                                     revoked
+                                   href: ./app-integration/error-code-aadsts50173-grant-expired-revoked.md
+                                   displayName: AADSTS50173 50173 FreshTokenNeeded
       - name: Error AADSTS220501 - Unable to download Certificate Revocation List
         href: app-integration/error-code-aadsts220501-unable-to-download-certificate-revocation-list.md
       - name: Error AADSTS50003 - certificate or key not configured
