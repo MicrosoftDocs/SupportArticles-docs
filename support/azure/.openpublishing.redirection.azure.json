@@ -6283,6 +6283,14 @@
       {
         "source_path": "azure-monitor/app-insights/availability/profiler-troubleshooting.md",
         "redirect_url": "/azure/azure-monitor/profiler/profiler-troubleshooting"
+      },
+      {
+        "source_path": "azure-monitor/app-insights/availability/code-optimizations-troubleshooting.md",
+        "redirect_url": "/azure/azure-monitor/insights/code-optimizations-troubleshoot"
+      },
+      {
+        "source_path": "azure-monitor/app-insights/debug/snapshot-debugger-troubleshoot.md",
+        "redirect_url": "/azure/azure-monitor/snapshot-debugger/snapshot-debugger-troubleshoot"
       }
   ]
 }
