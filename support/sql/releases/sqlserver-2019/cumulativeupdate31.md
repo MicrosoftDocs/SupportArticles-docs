@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 31 for SQL Server 2019 (KB5049296)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 31 (KB5049296).
-ms.date: 02/13/2025
+ms.date: 02/20/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5049296
 ms.reviewer: v-qianli2
 appliesto:
@@ -23,7 +23,7 @@ This article describes Cumulative Update package 31 (CU31) for Microsoft SQL Ser
 
 ## Known issues in this update
 
-### Access violation when session is reset
+### Issue one: Access violation when session is reset
 
 SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plans returned by the built-in SESSION_CONTEXT](https://support.microsoft.com/help/5008114). However, this fix might create access violation dump files when the SESSION is reset for reuse. To mitigate this issue and avoid incorrect results, you can disable the original fix, and also disable the parallelism for the built-in `SESSION_CONTEXT`. To do this, use the following trace flags:
 
@@ -31,7 +31,51 @@ SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plan
 
 - 9432 - This trace flag disables the fix that was introduced in SQL Server 2019 CU14.
 
-Microsoft is working on a fix for this issue and it will be available in a future CU.
+### Issue two: Patching read-scale availability group (Linux and Windows) causes Availability Group to be removed
+
+If you are using read-scale Availability Groups in either SQL on Windows or SQL on Linux, it is recommended to not install this patch (CU31).
+
+This cumulative update (SQL 2019 CU31) introduced [a fix to support longer Availability Group names longer than 64 characters](#3548672). However, when the patch is installed on an instance where a read-scale Availability Group is configured, the Availability Group metadata is dropped. This issue impacts both [read-scale Availability Groups in Windows](https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/read-scale-availability-groups) and [Linux](https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-availability-group-configure-rs); this means CLUSTER_TYPE of the Availability Group is either `NONE` or `EXTERNAL`.
+
+When the Availability Group is dropped after patching, you will see the following error message in the [SQL Server Error Log](https://learn.microsoft.com/en-us/sql/tools/configuration-manager/viewing-the-sql-server-error-log?view=sql-server-ver16) similar to below.
+
+```output
+2025-02-20 12:41:44.02 spid66s     Error: 19433, Severity: 16, State: 1.
+2025-02-20 12:41:44.02 spid66s     Always On: AG integrity check failed to find AG name to ID map entry with matching group ID for AG '<AGName>' (expected: '<AGName>'; found '<GUID Value>').
+2025-02-20 12:41:44.02 spid66s     Always On: The local replica of availability group '<AGName>' is being removed. The instance of SQL Server failed to validate the integrity of the availability group configuration in the Windows Server Failover Clustering (WSFC) store.  This is expected if the availability group has been removed from another instance of SQL Server. This is an informational message only. No user action is required.
+```
+
+After the patch is installed, the metadata is removed and you must recreate the AG on the patched replica. If there is a mismatched SQL version between replicas in the AG such as the primary being SQL 2019 CU30 and the secondary being SQL 2019 CU31, you cannot recreate the Availability Group on the replica with the missing metadata (the secondary). In order to re-add the AG, you must uninstall the patch on the secondary and readd the AG.
+
+#### Example
+
+You can use steps similar to below but will need to update for your given environment including the CLUSTER_TYPE. The given example has `VM1` is the primary AG replica that was never patched and is in the primary role in the AG `readscaleag`, and `VM2` was the secondary replica where the patch was applied and already uninstalled. At time of running the script below, both replicas `VM1` and `VM2` are running SQL 2019 CU30 and the AG metadata is missing on VM2.
+
+```SQL
+
+--- YOU MUST EXECUTE THE FOLLOWING SCRIPT IN SQLCMD MODE
+:CONNECT VM1\SQL19
+
+ALTER AVAILABILITY GROUP readscaleag REMOVE REPLICA ON 'VM2\SQL19';  
+
+
+:CONNECT VM1\SQL19
+
+USE [master]
+GO
+
+ALTER AVAILABILITY GROUP [readscaleag]
+ADD REPLICA ON N'VM2\SQL19' WITH (ENDPOINT_URL = N'TCP://VM2.Contoso.lab:5022', FAILOVER_MODE = MANUAL, AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT, BACKUP_PRIORITY = 50, SECONDARY_ROLE(ALLOW_CONNECTIONS = NO));
+GO
+
+:CONNECT VM2\sql19
+ALTER AVAILABILITY GROUP [readscaleag] JOIN WITH (CLUSTER_TYPE = NONE);
+GO
+
+:CONNECT VM2\sql19
+ALTER DATABASE [testReadScaleAGDb] SET HADR AVAILABILITY GROUP = [readscaleag];
+GO
+```
 
 ## Improvements and fixes included in this update
 
