@@ -5,7 +5,7 @@ ms.component: pa-admin
 ms.date: 02/20/2025
 author: rahulmital 
 ms.author: rahulmital 
-ms.reviewer: rahulmital
+ms.reviewer: rahulmital, sericks
 ms.custom: sap:Microsoft Dataverse\Email and Exchange Synchronization
 search.audienceType: 
   - admin

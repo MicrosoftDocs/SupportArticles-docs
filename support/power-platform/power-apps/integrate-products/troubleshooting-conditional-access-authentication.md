@@ -4,7 +4,7 @@ description: Learn how to troubleshoot issues related to conditional access auth
 author: adrianorth
 ms.component: pa-admin
 ms.date: 02/20/2025
-ms.reviewer: aorth
+ms.reviewer: aorth, sericks
 ms.custom: sap:Power Apps\Integrating other products in model-driven apps\Integrating SharePoint, OneDrive, or OneNote in model-driven apps 
 ms.author: aorth
 search.audienceType: 
