@@ -26,11 +26,11 @@ You receive the following error message when using or testing a [desktop flow co
 
 The contents of the connection are encrypted using its target group or machine certificate. If the certificate is renewed and the connection isn't used during this period, the connection will expire because the certificate required for decryption is outdated due to the renewal. A connection in this state can't be automatically recovered and must be manually updated.
 
-The certificate renewal process could also be hampered by running outdated versions of Power Automate for desktop.
+The certificate renewal process might also be hampered by running outdated versions of Power Automate for desktop.
 
 ## Resolution
 
-To resolve the issue,
+To resolve the issue:
 
 1. Make sure your machines are running up-to-date versions of Power Automate for desktop. For more information on the latest versions, see [Released versions for Power Automate for desktop](/power-platform/released-versions/power-automate-desktop).
 
