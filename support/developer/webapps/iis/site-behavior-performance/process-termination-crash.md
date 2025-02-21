@@ -89,8 +89,8 @@ To take crash dumps using Debug Diagnostic Tool, follow these steps:
    :::image type="content" source="media/process-termination-crash/select-dump-location-and-rule-name.png" alt-text="Screenshot of the Select Dump Location And Rule Name (Optional) window.":::
 
    > [!NOTE]
-   > - We recommend that you use a location on a drive other than the system drive to store your dumps.
-   > - Remember to check that the drive you pick has sufficient space to hold the memory dump for the process.
+   > - We recommend that you use a location on a drive to save the dumps other than the system drive.
+   > - Make sure that the drive has sufficient space to hold the memory dump for the process.
 
 1. Keep the default of **Activate the rule now** and select **Finish** when ready.
 1. Reproduce the issue and monitor the **Userdump Count** column. After the memory dumps are generated, you can deactivate the rule.
@@ -149,7 +149,7 @@ To take crash dumps using Windows Error Reporting, follow these steps:
 1. Check the directories mentioned in the Windows Error Reporting events.
 1. Locate files with the extension `.mdmp` (mini dump) or `.hdmp` (heap dump) in the mentioned directories.
 
-   - If you have them, open a support ticket and upload them.
+   - If you have these dump files, open a support ticket and upload them.
    - If you don't have them, follow these steps to set up WER:
 
      1. Open the Windows Registry Editor (**regedit.exe**) and locate the key **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting\LocalDumps**. If this key isn't available, create it.
