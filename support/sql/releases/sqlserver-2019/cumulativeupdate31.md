@@ -47,7 +47,7 @@ When the AG is dropped after patching, you will see the error message in the [SQ
 <DateTime>     Always On: The local replica of availability group '<AGName>' is being removed. The instance of SQL Server failed to validate the integrity of the availability group configuration in the Windows Server Failover Clustering (WSFC) store.  This is expected if the availability group has been removed from another instance of SQL Server. This is an informational message only. No user action is required.
 ```
 
-After the patch is installed, the metadata is removed and you must recreate the AG on the patched replica. If the AG replicas have mismatched SQL Server versions such as the primary replica is running SQL Server 2019 CU30 and the secondary replica is running SQL Server 2019 CU31, you can't recreate the AG on the replica with the missing metadata (the secondary replica). In order to re-add the AG, you must uninstall the patch on the secondary replica first and then re-add the AG.
+After the patch is installed, the metadata is removed and you must re-create the AG on the patched replica. If the AG replicas have mismatched SQL Server versions (for example, the primary replica is running SQL Server 2019 CU30 and the secondary replica is running SQL Server 2019 CU31), you can't re-create the AG on the replica with the missing metadata (the secondary replica). In order to add the AG again, you must uninstall the patch on the secondary replica first and then add the AG again.
 
 #### Example
 
