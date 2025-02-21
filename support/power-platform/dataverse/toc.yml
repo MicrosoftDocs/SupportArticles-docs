@@ -21,29 +21,29 @@
 - name: Dynamics 365 App for Outlook
   items:
     - name: App for Outlook didn't load completely
-      href: dynamics-365-app-outlook-did-not-load.md
+      href: d365-app-outlook/dynamics-365-app-outlook-did-not-load.md
     - name: App for Outlook doesn't appear within Outlook
       href: d365-app-outlook/app-does-not-appear-within-outlook.md
     - name: App for Outlook is missing
-      href: dynamics-365-app-for-outlook-is-missing.md
+      href: d365-app-outlook/dynamics-365-app-for-outlook-is-missing.md
     - name: Attachments aren't tracked after Microsoft Defender for Office 365 is enabled
-      href: attachments-not-tracked-to-dynamics-365-after-office-365-atp-is-enabled.md
+      href: d365-app-outlook/attachments-not-tracked-to-dynamics-365-after-office-365-atp-is-enabled.md
     - name: Authentication pop-up is blank and unable to sign in
       href: d365-app-outlook/dynamics-app-for-outlook-authentication-pop-up-blank-cannot-proceed.md
     - name: Buttons such as Track and Set Regarding are missing
-      href: buttons-such-as-track-and-set-regarding-are-missing.md
+      href: d365-app-outlook/buttons-such-as-track-and-set-regarding-are-missing.md
     - name: Can't access App for Outlook due to email address is not recognized
-      href: trying-to-access-dynamics-365-app-for-outlook-from-email-do-not-recognize-error.md
+      href: d365-app-outlook/trying-to-access-dynamics-365-app-for-outlook-from-email-do-not-recognize-error.md
     - name: Can't connect to Exchange message
-      href: cannot-connect-to-exchange-message-when-using-dynamics-365-app-for-outlook.md
+      href: d365-app-outlook/cannot-connect-to-exchange-message-when-using-dynamics-365-app-for-outlook.md
     - name: Can't load this app because email account isn't configured
       href: d365-app-outlook/we-cannot-load-this-app.md
     - name: Email or appointment tracked by App for Outlook shows as Track pending
-      href: emails-tracked-by-dynamics-365-app-for-outlook-show-track-pending.md
+      href: d365-app-outlook/emails-tracked-by-dynamics-365-app-for-outlook-show-track-pending.md
     - name: Error in App for Outlook
-      href: error-when-opening-365-app-outlook.md
+      href: d365-app-outlook/error-when-opening-365-app-outlook.md
     - name: Error when accessing CRM App for Outlook
-      href: error-when-accessing-crm-app-outlook.md
+      href: d365-app-outlook/error-when-accessing-crm-app-outlook.md
     - name: Error when installing CRM 2016 for Outlook
       href: d365-app-outlook/error-when-installing-crm-2016-outlook.md
     - name: Errors when opening App for Outlook
@@ -51,17 +51,17 @@
     - name: Experience without Server-Side Synchronization
       href: d365-app-outlook/experience-without-server-side-synchronization.md
     - name: IncomingEmailRejected error when installing App for Outlook
-      href: error-incomingemailrejected-install-dynamics-365-app-outlook.md
+      href: d365-app-outlook/error-incomingemailrejected-install-dynamics-365-app-outlook.md
     - name: IncomingEmailS2SApprovalNeeded error when installing App for Outlook
-      href: error-install-dynamics-365-app-outlook.md
+      href: d365-app-outlook/error-install-dynamics-365-app-outlook.md
     - name: Item level Server-Side Synchronization issues
-      href: troubleshoot-item-level-server-side-synchronization-issues.md
+      href: d365-app-outlook/troubleshoot-item-level-server-side-synchronization-issues.md
     - name: New Forms are formatted incorrectly or don't appear
       href: d365-app-outlook/new-forms-formatted-incorrectly.md
     - name: Privilege error when using App for Outlook
-      href: privilege-error-occurs-when-using-dynamics-365-app-for-outlook.md
+      href: d365-app-outlook/privilege-error-occurs-when-using-dynamics-365-app-for-outlook.md
     - name: Profile is disabled when using App for Outlook
-      href: error-when-using-365-app-outlook.md
+      href: d365-app-outlook/error-when-using-365-app-outlook.md
     - name: Something went wrong during sign-in when accessing App for Outlook
       href: d365-app-outlook/something-went-wrong-during-sign.md
     - name: Something went wrong during sign-in when using App for Outlook
@@ -71,7 +71,7 @@
     - name: The given key wasn't present in the dictionary
       href: d365-app-outlook/the-given-key-was-not-present-in-dictionary.md
     - name: The view is not available when opening an email
-      href: the-view-is-not-available-error-when-opening-emails.md
+      href: d365-app-outlook/the-view-is-not-available-error-when-opening-emails.md
     - name: This organization has already been configured
       href: d365-app-outlook/this-organization-has-already-been-configured-error-when-connecting.md
     - name: Track and Set Regarding options are missing
@@ -81,13 +81,13 @@
     - name: User role doesn't have required permissions
       href: d365-app-outlook/current-user-role-not-have-required-permissions.md
     - name: We're unable to connect to your server
-      href: we-are-unable-to-connect-to-your-dynamics-365-app-for-outlook-error.md
+      href: d365-app-outlook/we-are-unable-to-connect-to-your-dynamics-365-app-for-outlook-error.md
     - name: You don't have permission to access this app
-      href: you-do-not-have-permission-to-access-this-app-error-when-accessing-dynamics-365-app-for-outlook.md
+      href: d365-app-outlook/you-do-not-have-permission-to-access-this-app-error-when-accessing-dynamics-365-app-for-outlook.md
     - name: You don't have required role or privilege
-      href: you-do-not-have-required-role-privilege.md
+      href: d365-app-outlook/you-do-not-have-required-role-privilege.md
     - name: You don't have the required role or privilege to complete this action
-      href: you-do-not-have-the-required-role-or-privilege-to-complete-this-action-error.md
+      href: d365-app-outlook/you-do-not-have-the-required-role-or-privilege-to-complete-this-action-error.md
     - name: Your device is currently unsupported
       href: d365-app-outlook/your-device-is-currently-unsupported.md
 - name: Environment and app access issues
