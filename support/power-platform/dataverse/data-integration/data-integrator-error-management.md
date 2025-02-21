@@ -44,12 +44,12 @@ The admin dashboard provides a one-stop real-time view of all your project runs 
 Additionally, to view more details, you can drill through project executions via the admin dashboard by selecting individual bar charts.
 
 > [!div class="mx-imgBorder"] 
-> ![Dashboard drill down.](media/DashboardDrill-down.png "Screenshot of the dashboard drill down options that you can use to view more details.")
+> ![Screenshot of the dashboard drill down options that you can use to view more details.](media/DashboardDrill-down.png "Screenshot of the dashboard drill down options that you can use to view more details.")
 
 Now you can drill through individual errors.
 
 > [!div class="mx-imgBorder"] 
-> ![Dashboard drill down.](media/DashboardDrill-down2.png "Screenshot of the the individual errors shown on the Recent project runs page.")
+> ![Screenshot of the the individual errors shown on the Recent project runs page.](media/DashboardDrill-down2.png "Screenshot of the the individual errors shown on the Recent project runs page.")
 
 You can also view project execution details by selecting the individual projects on the project list page and viewing the historical executions and status on the **Execution history** tab.
 

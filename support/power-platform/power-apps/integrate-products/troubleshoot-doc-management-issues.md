@@ -59,12 +59,12 @@ Error message displayed for missing document library:
   *or*
 
   > [!div class="mx-imgBorder"]
-  > ![Error message in Unified Interface dialog.](media/error-in-unified-interface-dialog.png)
+  > ![The error message shown in Unified Interface dialog.](media/error-in-unified-interface-dialog.png)
 
 - Error message in the web client:
 
   > [!div class="mx-imgBorder"]
-  > ![Error message in web client.](media/error-in-web-client.png)
+  > ![The error message shown in web client.](media/error-in-web-client.png)
 
   *or*
 
@@ -93,7 +93,7 @@ This error typically occurs when the SharePoint document library was created for
 5.  The last step of wizard should have the status of document library as succeeded.
 
       > [!div class="mx-imgBorder"]
-      > ![Error message in web client.](media/doc-library-create-succeed.png)
+      > ![The error message displayed in web client.](media/doc-library-create-succeed.png)
 
 6.  Once complete, verify that document library is now present on the SharePoint site in the path shown in the error message.
 
@@ -152,7 +152,7 @@ Error message displayed for missing folder:
   - Error message in the web client:
 
     > [!div class="mx-imgBorder"]
-    > ![The error message displayed in web client.](media/folder-error2-in-web-client.png)
+    > ![The error shown in web client.](media/folder-error2-in-web-client.png)
 
     *or*
 
@@ -162,7 +162,7 @@ Error message displayed for missing folder:
     Log file:
 
     > [!div class="mx-imgBorder"]
-    > ![The error message shown in web client log file.](media/folder-error2-in-web-client-dialog-logfile.png)
+    > ![The error shown in web client log file.](media/folder-error2-in-web-client-dialog-logfile.png)
 
 ### Reason
 
