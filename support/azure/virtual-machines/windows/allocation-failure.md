@@ -190,7 +190,7 @@ To work around this issue, use one of the following methods:
 
    - Migrate or create the VM in a different region. For more information, see [Move Azure VMs across regions](/azure/resource-mover/tutorial-move-region-virtual-machines).
 
-- Adjust constraints that could limit the allocation: There might be sufficient availability for the VM SKU in the zone. However, the defined constraints might prevent allocation. To increase the likelihood of successful allocation, consider adjusting the constraints by:
+- Adjust constraints that might limit the allocation: There might be sufficient availability for the VM SKU in the zone. However, the defined constraints might prevent allocation. To increase the likelihood of successful allocation, consider adjusting the constraints by:
   - Disabling accelerated networking.
   - Removing the VM from any proximity placement group.
   - Removing any UltraSSD or PemiumSSDv2 disks.
@@ -201,7 +201,7 @@ Proximity Placement Groups ensure that resources are collocated within the same 
 
 ### Cause
 
-When you request to start or allocate the first VM in a proximity placement group, the data center is selected automatically. If the required VM size is unavailable in that data center, the request fails. In scenarios with elastic workloads where VM instances are added or removed dynamically, enforcing a proximity placement group constraint can lead to an allocation failure, indicating that the allocation request could not be completed.
+When you request to start or allocate the first VM in a proximity placement group, the data center is selected automatically. If the required VM size is unavailable in that data center, the request fails. In scenarios with elastic workloads where VM instances are added or removed dynamically, enforcing a proximity placement group constraint might lead to an allocation failure, indicating that the allocation request can't be completed.
 
 ### Workaround
 
@@ -232,7 +232,7 @@ The servers in Azure datacenters are partitioned into clusters. Normally, an all
 
 ### Why allocation failures happen
 
-When an allocation has a large number of restrictions, there's a higher chance of failing to find free resources since the available resource pool is smaller. Furthermore, if your allocation request is restricted, such as when using proximity placement groups but the type of resource you requested isn’t supported by the set of clusters and nearby ones, your request fails even if the cluster has free resources. The following Diagram 2 illustrates the case where an allocation fails because the candidate clusters associated with the proximity placement group don't have free resources. Diagram 3 illustrates the case where an allocation fails because the candidate clusters associated with the  proximity placement group don’t support the requested VM size, even though the clusters have free resources.
+When an allocation has a large number of restrictions, there's a higher chance of failing to find free resources since the available resource pool is smaller. Furthermore, if your allocation request is restricted (for example, when using proximity placement groups but the type of resource you requested isn’t supported by the set of clusters and nearby ones), your request fails even if the cluster has free resources. The following Diagram 2 illustrates the case where an allocation fails because the candidate clusters associated with the proximity placement group don't have free resources. Diagram 3 illustrates the case where an allocation fails because the candidate clusters associated with the  proximity placement group don’t support the requested VM size, even though the clusters have free resources.
 
 :::image type="content" source="media/virtual-machines-common-allocation-failure/allocation-failures-ppg.svg" alt-text="Screenshot of Diagram 2 showing allocation failed with no free resource available and Diagram 3 showing allocation failed with size not supported." lightbox="media/virtual-machines-common-allocation-failure/allocation-failures-ppg.svg":::
 
