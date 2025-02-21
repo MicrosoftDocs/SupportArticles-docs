@@ -51,7 +51,7 @@ After the patch is installed, the metadata is removed and you must re-create the
 
 #### Example
 
-You can use steps that are similar to following ones, but you need to update them for the given environment, including the `CLUSTER_TYPE`. The VM1 in the given example is the primary replica of the AG 'readscaleag', and VM2 is the secondary replica that has the patch applied but already uninstalled. When running the following script, both replicas VM1 and VM2 are running SQL Server 2019 CU30 and the AG metadata is missing on VM2.
+You can use steps that are similar to the following ones, but you need to update them for the given environment, including the `CLUSTER_TYPE`. The VM1 in the given example is the primary replica of the AG 'readscaleag', and VM2 is the secondary replica that has the patch applied but already uninstalled. When running the following script, both replicas VM1 and VM2 are running SQL Server 2019 CU30 and the AG metadata is missing on VM2.
 
 ```sql
 --- YOU MUST EXECUTE THE FOLLOWING SCRIPT IN SQLCMD MODE
