@@ -50,10 +50,10 @@ There are two methods to install Package Inspector:
 1. Open Android Studio and close any open projects.
 2. Select **Get From Version Control**.
 
-    :::image type="content" source="https://rubikcopilotchat.azurewebsites.net/blobimages/991342cf-513f-4844-8923-37065c451d32/7a705a68-d6b2-4df8-b632-fc828b142f6f.png" alt-text="Screenshot that shows the 'Get From Version Control' option in Android Studio" lightbox="https://rubikcopilotchat.azurewebsites.net/blobimages/991342cf-513f-4844-8923-37065c451d32/7a705a68-d6b2-4df8-b632-fc828b142f6f.png":::
+    :::image type="content" source="media/package-inspector-msal-android-native/get-from-version-control.png" alt-text="Screenshot that shows the 'Get From Version Control' option in Android Studio" lightbox="media/package-inspector-msal-android-native/get-from-version-control.png":::
 3. Ensure **Git** is selected at the top of the window, paste the repository URL `https://github.com/AzureAD/microsoft-authentication-library-for-android.git`, and select **Clone**.
 
-    :::image type="content" source="https://rubikcopilotchat.azurewebsites.net/blobimages/991342cf-513f-4844-8923-37065c451d32/63ea16d9-74d6-43fb-9965-76382e2442f6.png" alt-text="Screenshot that shows how to clone a Git repository in Android Studio" lightbox="https://rubikcopilotchat.azurewebsites.net/blobimages/991342cf-513f-4844-8923-37065c451d32/63ea16d9-74d6-43fb-9965-76382e2442f6.png":::
+    :::image type="content" source="media/package-inspector-msal-android-native/clone-msal-repository.png" alt-text="Screenshot that shows how to clone a Git repository in Android Studio" lightbox="media/package-inspector-msal-android-native/clone-msal-repository.png":::
 
 ### Option 2: Download as a zip file and open in Android Studio
 
@@ -62,10 +62,10 @@ There are two methods to install Package Inspector:
 3. Open Android Studio and close any open projects.
 4. Select **Open an Existing Project**.
 
-    :::image type="content" source="https://rubikcopilotchat.azurewebsites.net/blobimages/991342cf-513f-4844-8923-37065c451d32/c40bb5ff-38b6-45f4-ae7d-1eee54a441d0.png" alt-text="Screenshot that shows the 'Open an Existing Project' option in Android Studio" lightbox="https://rubikcopilotchat.azurewebsites.net/blobimages/991342cf-513f-4844-8923-37065c451d32/c40bb5ff-38b6-45f4-ae7d-1eee54a441d0.png":::
+    :::image type="content" source="media/package-inspector-msal-android-native/c40bb5ff-38b6-45f4-ae7d-1eee54a441d0.png" alt-text="Screenshot that shows the 'Open an Existing Project' option in Android Studio" lightbox="media/package-inspector-msal-android-native/c40bb5ff-38b6-45f4-ae7d-1eee54a441d0.png":::
 5. Select the root package **msal-android** for the Android MSAL repository. Then, select **OK**. 
 
-    :::image type="content" source="https://rubikcopilotchat.azurewebsites.net/blobimages/991342cf-513f-4844-8923-37065c451d32/8f4e6637-a29a-4605-9c96-e8674c9801d1.png" alt-text="Screenshot showing selecting the Root Package in Android Studio" lightbox="https://rubikcopilotchat.azurewebsites.net/blobimages/991342cf-513f-4844-8923-37065c451d32/8f4e6637-a29a-4605-9c96-e8674c9801d1.png":::
+    :::image type="content" source="media/package-inspector-msal-android-native/8f4e6637-a29a-4605-9c96-e8674c9801d1.png" alt-text="Screenshot showing selecting the Root Package in Android Studio" lightbox="media/package-inspector-msal-android-native/8f4e6637-a29a-4605-9c96-e8674c9801d1.png":::
 
     > [!NOTE]
     > - The default name of the root package is `microsoft-authentication-library-for-android-dev`, but you might have renamed it.
@@ -76,11 +76,11 @@ There are two methods to install Package Inspector:
 1. With the Android MSAL project open in Android Studio, connect the desired Android device. This can be a physical device connected to the computer's USB port an emulator booted from Android Studio's AVD manager. Ensure your device appears in the drop-down list at the top of Android Studio and select it.
 2. To the left of the device drop-down, there is another drop-down list. Select **package-inspector** from it.
 
-    :::image type="content" source="https://rubikcopilotchat.azurewebsites.net/blobimages/991342cf-513f-4844-8923-37065c451d32/b38c129a-9cfb-4901-85f6-da13cc592f36.png" alt-text="Screenshot that shows the selection of package-inspector in Android Studio" lightbox="https://rubikcopilotchat.azurewebsites.net/blobimages/991342cf-513f-4844-8923-37065c451d32/b38c129a-9cfb-4901-85f6-da13cc592f36.png":::
+    :::image type="content" source="media/package-inspector-msal-android-native/b38c129a-9cfb-4901-85f6-da13cc592f36.png" alt-text="Screenshot that shows the selection of package-inspector in Android Studio" lightbox="media/package-inspector-msal-android-native/b38c129a-9cfb-4901-85f6-da13cc592f36.png":::
 3. Select the green **play** button (indicated with a green circle on the right) to build, install, and run the package inspector on the selected device.
 4. Browse the list of packages in the Package Inspector app and select a package to view its signature hash. All accessible packages will appear in this list.
 
-    :::image type="content" source="https://rubikcopilotchat.azurewebsites.net/blobimages/991342cf-513f-4844-8923-37065c451d32/6adfe09a-5e98-4b7b-b2f3-2c83b60fff8f.png" alt-text="Screenshot that shows package selection in the Package Inspector app" lightbox="https://rubikcopilotchat.azurewebsites.net/blobimages/991342cf-513f-4844-8923-37065c451d32/6adfe09a-5e98-4b7b-b2f3-2c83b60fff8f.png":::
+    :::image type="content" source="media/package-inspector-msal-android-native/6adfe09a-5e98-4b7b-b2f3-2c83b60fff8f.png" alt-text="Screenshot that shows package selection in the Package Inspector app" lightbox="media/package-inspector-msal-android-native/6adfe09a-5e98-4b7b-b2f3-2c83b60fff8f.png":::
 
 ## Common issues
 
