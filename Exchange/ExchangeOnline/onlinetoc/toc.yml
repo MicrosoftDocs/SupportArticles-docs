@@ -467,8 +467,6 @@
           href: ../outlook-issues/cannot-set-up-profile-autodiscover.md
         - name: Can't add public folder permissions
           href: ../outlook-issues/one-or-more-users-cannot-be-added-to-the-folder-access-list-error.md
-        - name: Can't create a new user without Exchange Online license
-          href: ../outlook-issues/to-assign-a-license-that-contains-outlook-customer-manager-error.md
         - name: Can't find a user in the offline address book
           href: ../outlook-issues/cannot-find-user-in-offline-address-book.md
         - name: Can't view Outlook Delegates page
