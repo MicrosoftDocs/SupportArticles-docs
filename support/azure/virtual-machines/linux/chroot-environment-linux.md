@@ -23,7 +23,7 @@ ms.author: genli
 
 This article describes how to troubleshoot the chroot environment in the rescue virtual machine (VM) in Linux.
 
-## Ubuntu 16.x && Ubuntu 18.x && Ubuntu 20.04 && Ubuntu 22.04 && Ubuntu 24.04
+## Ubuntu
 
 1. Stop or deallocate the affected VM.
 1. Create a rescue VM of the same generation, same OS version, in same resource group and location using managed disk.
@@ -65,6 +65,9 @@ This article describes how to troubleshoot the chroot environment in the rescue 
       mount -o bind /run /rescue/run
       chroot /rescue
       ```
+      > [!NOTE]
+      > On newer Ubuntu images, there is only one partition for `/boot`. If you are recovering an older Ubuntu image, you can ignore errors when mounting `/dev/sdc16` to `/rescue/boot`, as long as there are files in `/rescue/boot` after completing these steps.
+      > If an error occurs during mounting, it will be safe to ignore the error that occurs when unmounting `/rescue/boot` in the following step.
 
    1. Troubleshoot the chroot environment.
 
@@ -86,7 +89,6 @@ This article describes how to troubleshoot the chroot environment in the rescue 
 
       > [!NOTE]
       > If you receive the error message "unable to unmount /rescue," add the `-l` option to the `umount` command, for example, `umount -l /rescue`.
-      > <br>The partition `/dev/sdc16` is uniquely present in Ubuntu 24.04. So this has to mounted before partition `/dev/sdc15`.
 
 1. Detach the disk from the rescue VM and perform a disk swap with the original VM.
 1. Start the original VM and check its connectivity.
