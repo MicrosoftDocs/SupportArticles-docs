@@ -46,7 +46,7 @@ Normally, the task should be in **Ready** status for it to be manually or automa
 If there're any errors while completing the task or if the task completes successfully but doesn't show an expected output, use the following methods to further narrow down the issue:
 
 - Change your action to a simplified script to determine if the issue is with the script or application.
-- [Enable transcripts](/powershell/module/microsoft.powershell.core/about/about_group_policy_settings?view=powershell-7.4#turn-on-powershell-transcription) to check for errors while running the PowerShell script. For batch script or others, add more output commands to trace the failure for a specific command.  
+- [Enable transcripts](/powershell/module/microsoft.powershell.core/about/about_group_policy_settings#turn-on-powershell-transcription) to check for errors while running the PowerShell script. For batch script or others, add more output commands to trace the failure for a specific command.  
 - Change the **Security options** to **Run only when user is logged on** to determine if the issue is with security context.
 
 ## Logs to be collected
