@@ -54,4 +54,4 @@ If there are any errors while completing the task or if the task completes succe
 If the preceding steps don't resolve the issue, and you consider reaching out to Microsoft Support for further assistance, gather the following information beforehand:
 
 - Task configuration (the exported `.xml` file)
-- Task Scheduler event log (**Event Viewer** > **Applications and Services Logs** > **Microsoft** > **Windows** > **TaskScheduler** > **Operational**).
+- Task Scheduler event log (**Event Viewer** > **Applications and Services Logs** > **Microsoft** > **Windows** > **TaskScheduler** > **Operational**)
