@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Desktop and Shell Experience\Start Menu and Task Bar, csstroubleshoot
+ms.custom:
+- sap:windows desktop and shell experience\start menu and task bar
+- pcy:WinComm User Experience
 ---
 # Error message: Task Manager has been disabled by your administrator
 

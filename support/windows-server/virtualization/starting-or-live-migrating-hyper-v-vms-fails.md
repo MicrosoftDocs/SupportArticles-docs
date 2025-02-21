@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, ctimon, kledman
-ms.custom: sap:Virtualization and Hyper-V\Migration, csstroubleshoot
+ms.custom:
+- sap:virtualization and hyper-v\migration
+- pcy:WinComm Storage High Avail
 ---
 # Starting or live migrating Hyper-V virtual machines may fail with error 0x80070569
 

@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-abhjoa, katpa
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Storage hardware, csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\storage hardware
+- pcy:WinComm Storage High Avail
 ---
 # Replicated Cluster Shared Volumes are offline after an Azure Stack HCI upgrade
 

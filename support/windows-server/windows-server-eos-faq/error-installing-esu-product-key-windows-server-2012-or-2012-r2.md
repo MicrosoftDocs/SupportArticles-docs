@@ -5,7 +5,9 @@ ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.custom: sap:Windows Eos\General Information, csstroubleshoot
+ms.custom:
+- sap:windows eos\general information
+- pcy:WinComm Devices Deploy
 ms.reviewer: kaushika, v-tappelgate
 keywords: Windows Server 2012 R2 ESU, Windows Server 2012 ESU, ESU, ESU product key
 ---

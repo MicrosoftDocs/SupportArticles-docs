@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, deepku
-ms.custom: sap:Remote Desktop Services and Terminal Services\Authentication, csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\authentication
+- pcy:WinComm User Experience
 ---
 # RDP connection to Remote Desktop server running Windows Server 2008 R2 may fail with message The Local Security Authority cannot be contacted
 

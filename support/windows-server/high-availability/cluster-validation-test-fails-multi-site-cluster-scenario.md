@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, robsim, cpuckett
-ms.custom: sap:Clustering and High Availability\Errors when running the Validation Wizard, csstroubleshoot
+ms.custom:
+- sap:clustering and high availability\errors when running the validation wizard
+- pcy:WinComm Storage High Avail
 ---
 # Cluster validation test on Active Directory configuration fails in a multi-site cluster scenario
 

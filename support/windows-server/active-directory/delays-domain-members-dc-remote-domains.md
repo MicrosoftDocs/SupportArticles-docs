@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\Schema Updates, csstroubleshoot
+ms.custom:
+- sap:active directory\schema updates
+- pcy:WinComm Directory Services
 ---
 # Delays when domain members are required to communicate to DCs on remote domains
 
