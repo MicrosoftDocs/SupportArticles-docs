@@ -1,6 +1,6 @@
 ---
 title: Cumulative update 31 for SQL Server 2019 (KB5049296)
-description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 31 (KB5049296).
+description: This article contains the summary, known issues, improvements, fixes, and other information for SQL Server 2019 cumulative update 31 (KB5049296).
 ms.date: 02/21/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5049296
 ms.reviewer: v-qianli2
@@ -37,7 +37,7 @@ If you use the read-scale availability group (AG) feature in SQL Server on Windo
 
 This CU introduced [a fix to support AG names longer than 64 characters](#3548672). However, when the patch is installed on an instance that has the read-scale AG configured, the AG metadata is dropped. This issue affects read-scale AGs in both [Windows](/sql/database-engine/availability-groups/windows/read-scale-availability-groups) and [Linux](/sql/linux/sql-server-linux-availability-group-configure-rs), which means that the `CLUSTER_TYPE` of the AG is either `NONE` or `EXTERNAL`.
 
-When the AG is dropped after patching, you will see the error message in the [SQL Server error log](/sql/tools/configuration-manager/viewing-the-sql-server-error-log) similar to the following one:
+When the AG is dropped after patching, you'll see the error message in the [SQL Server error log](/sql/tools/configuration-manager/viewing-the-sql-server-error-log) similar to the following one:
 
 ```output
 <DateTime>     Error: 19433, Severity: 16, State: 1.
@@ -49,7 +49,7 @@ After the patch is installed, the metadata is removed and you must re-create the
 
 #### Example
 
-You can use steps that are similar to the following ones, but you need to update them for the given environment, including the `CLUSTER_TYPE`. The VM1 in the given example is the primary replica of the AG 'readscaleag', and VM2 is the secondary replica that has the patch applied but already uninstalled. When running the following script, both replicas VM1 and VM2 are running SQL Server 2019 CU30 and the AG metadata is missing on VM2. To run this script, you must use [SQLCMD mode](https://learn.microsoft.com/en-us/sql/tools/sqlcmd/edit-sqlcmd-scripts-query-editor?view=sql-server-ver16#enable-sqlcmd-scripting-in-query-editor).
+You can use steps that are similar to the following ones, but you need to update them for the given environment, including the `CLUSTER_TYPE`. The VM1 in the given example is the primary replica of the AG 'readscaleag' and VM2 is the secondary replica that has the patch applied but already uninstalled. Before running the script, both replicas VM1 and VM2 are running SQL Server 2019 CU30 and the AG metadata is missing on VM2. To run this script, you must use [SQLCMD mode](https://learn.microsoft.com/sql/tools/sqlcmd/edit-sqlcmd-scripts-query-editor?view=sql-server-ver16#enable-sqlcmd-scripting-in-query-editor).
 
 ```sql
 --You must run this query in SQLCMD mode
