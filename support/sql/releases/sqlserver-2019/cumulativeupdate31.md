@@ -33,7 +33,7 @@ SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plan
 
 Microsoft is working on a fix for this issue and it will be available in a future CU.
 
-### Issue two: Patching a read-scale availability group (Linux and Windows) causes the availability group to be removed
+### Issue two: Patching a read-scale availability group (Linux and Windows) causes the availability group to be removed on patched replica
 
 If you use the read-scale availability group (AG) in either SQL Server on Windows or SQL Server on Linux, it's recommended to not install this CU.
 
@@ -47,11 +47,11 @@ When the AG is dropped after patching, you will see the error message in the [SQ
 <DateTime>     Always On: The local replica of availability group '<AGName>' is being removed. The instance of SQL Server failed to validate the integrity of the availability group configuration in the Windows Server Failover Clustering (WSFC) store.  This is expected if the availability group has been removed from another instance of SQL Server. This is an informational message only. No user action is required.
 ```
 
-After installing the patch, the metadata is removed and you must recreate the AG on the patched replica. If there is a mismatched SQL Server version between replicas in the AG such as the primary replica in SQL Server 2019 CU30 and the secondary replica in SQL Server 2019 CU31, you can't recreate the AG on the replica with the missing metadata (the secondary replica). In order to re-add the AG, you must uninstall the patch on the secondary replica and re-add the AG.
+After the patch is installed, the metadata is removed and you must recreate the AG on the patched replica. If the AG replicas have mismatched SQL versions such as the primary replica is running SQL Server 2019 CU30 and the secondary replica is running SQL Server 2019 CU31, you can't recreate the AG on the replica with the missing metadata (the secondary replica). In order to re-add the AG, you must uninstall the patch on the secondary replica first and then re-add the AG.
 
 #### Example
 
-You can use steps that are similar to following ones, but you need to update them for the given environment, including the `CLUSTER_TYPE`. The VM1 in the given example is the primary AG replica that has not been patched and is the primary role in the AG 'readscaleag', and VM2 is the secondary replica that has the patch applied but already uninstalled. When running the following script, both replicas VM1 and VM2 are running SQL Server 2019 CU30 and the AG metadata is missing on VM2.
+You can use steps that are similar to following ones, but you need to update them for the given environment, including the `CLUSTER_TYPE`. The VM1 in the given example is the primary replica for the AG 'readscaleag', and VM2 is the secondary replica that had the patch applied but already uninstalled. When running the following script, both replicas VM1 and VM2 are running SQL Server 2019 CU30 and the AG metadata is missing on VM2.
 
 ```SQL
 --- YOU MUST EXECUTE THE FOLLOWING SCRIPT IN SQLCMD MODE
