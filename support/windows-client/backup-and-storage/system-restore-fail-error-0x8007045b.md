@@ -1,12 +1,14 @@
 ---
 title: System Restore fails with error 0x8007045b
 description: Describes an issue that occurs when you try to restore a system back to a restore point after you accept enforced security.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Backup, Recovery, Disk, and Storage\System Restore, csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\system restore
+- pcy:WinComm Storage High Avail
 ---
 # System Restore may fail with error code 0x8007045b if there is encrypted content in the restore point
 

@@ -1,12 +1,14 @@
 ---
 title: Command-line switches for Microsoft software update packages
 description: Describes the consistent set of command-line switches that Microsoft is adopting for deploying packages that contain software updates.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: eriprice, kaushika
-ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update configuration, settings and management, csstroubleshoot
+ms.custom:
+- sap:windows servicing,updates and features on demand\windows update configuration,settings and management
+- pcy:WinComm Devices Deploy
 ---
 # Command-line switches for Microsoft software update packages
 

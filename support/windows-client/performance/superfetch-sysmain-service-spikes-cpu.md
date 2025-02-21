@@ -1,12 +1,14 @@
 ---
 title: SuperFetch(SysMain) service consumes CPU
 description: Works around an issue where the system experiences CPU spike for 1-2 minutes when a 64-bit application runs in the 64-bit version of Windows.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:System Performance\App, Process, Service Reliability (crash, errors), csstroubleshoot
+ms.custom:
+- sap:system performance\app,process,service reliability (crash,errors)
+- pcy:WinComm Performance
 ---
 # SuperFetch(SysMain) service spikes the CPU for 1-2 minutes when a 64-bit application is running in Windows
 

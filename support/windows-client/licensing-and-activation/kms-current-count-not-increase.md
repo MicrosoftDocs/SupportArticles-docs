@@ -1,12 +1,14 @@
 ---
 title: KMS current count doesn't increase
 description: Describes a problem where the number of clients in a Key Management Server (KMS) computer does not increase when you add new Windows Vista-based client computers to the network.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Activation\Windows activation issues, csstroubleshoot
+ms.custom:
+- sap:windows activation\windows activation issues
+- pcy:WinComm Devices Deploy
 ---
 # The KMS current count does not increase when you add new Windows Vista or Windows 7-based client computers to the network
 

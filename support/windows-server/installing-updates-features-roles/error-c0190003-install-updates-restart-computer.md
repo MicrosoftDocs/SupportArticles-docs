@@ -1,12 +1,14 @@
 ---
 title: Error C0190003 after you install updates in Windows Server 2012 R2
 description: Describes an issue that triggers an error when you restart a Windows Server 2012 R2-based computer after you install updates. A workaround is provided.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update fails - installation stops with error, csstroubleshoot
+ms.custom:
+- sap:windows servicing,updates and features on demand\windows update fails - installation stops with error
+- pcy:WinComm Devices Deploy
 ---
 # Error C0190003 after you install updates in Windows Server 2012 R2
 

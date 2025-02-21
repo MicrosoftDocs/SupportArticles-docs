@@ -1,12 +1,14 @@
 ---
 title: Troubleshoot intra-forest password migrations
 description: Discusses how to troubleshoot common problems associated with the inter-forest password migration operation.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, willgloy
-ms.custom: sap:Active Directory\Active Directory Migration Tool (ADMT), csstroubleshoot
+ms.custom:
+- sap:active directory\active directory migration tool (admt)
+- pcy:WinComm Directory Services
 ---
 # How to Troubleshoot Inter-Forest Password Migration with ADMTv2
 

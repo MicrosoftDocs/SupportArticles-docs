@@ -1,12 +1,14 @@
 ---
 title: Guidance for troubleshooting wireless technology issues
 description: Learn how to troubleshoot scenarios related to wireless technologies
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-tappelgate
-ms.custom: sap:Network Connectivity and File Sharing\Network Load Balancing (NLB), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\network load balancing (nlb)
+- pcy:WinComm Networking
 keywords: wireless connection, dropped connection, wireless authentication
 ---
 

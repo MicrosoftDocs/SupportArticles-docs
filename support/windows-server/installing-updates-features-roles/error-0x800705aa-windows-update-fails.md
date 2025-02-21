@@ -3,10 +3,12 @@ title: Windows Update fails with error 0x800705aa
 description: Helps resolve an issue in which Windows Update fails with error 0x800705aa.
 manager: dcscontentpm
 audience: itpro
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 ms.topic: troubleshooting
 ms.reviewer: kaushika, maeltedebay, v-lianna
-ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update fails - installation stops with error, csstroubleshoot, ikb2lmc
+ms.custom:
+- sap:windows servicing,updates and features on demand\windows update fails - installation stops with error
+- pcy:WinComm Devices Deploy
 ---
 # Error 0x800705aa when Windows Update fails
 

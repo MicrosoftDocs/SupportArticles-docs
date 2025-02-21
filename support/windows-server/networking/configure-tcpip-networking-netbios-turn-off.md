@@ -1,12 +1,14 @@
 ---
 title: Configure TCP/IP networking while NetBIOS is turned off on a server running Windows Server 2003
 description: Describes how to configure a computer running Windows Server 2003 with TCP/IP networking while NetBIOS is turned off.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
+- pcy:WinComm Networking
 ---
 # How to configure TCP/IP networking while NetBIOS is turned off on a server running Windows Server 2003
 

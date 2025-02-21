@@ -1,12 +1,14 @@
 ---
 title: Troubleshoot issues using Process Explorer
 description: Helps troubleshoot issues using Process Explorer.
-ms.date: 04/23/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-lianna
-ms.custom: sap:System Performance\Performance tools (Task Manager, Perfmon, WSRM, and WPA), csstroubleshoot
+ms.custom:
+- sap:system performance\performance tools (task manager,perfmon,wsrm,and wpa)
+- pcy:WinComm Performance
 ---
 # Troubleshoot issues using Process Explorer
 

@@ -1,12 +1,14 @@
 ---
 title: Scripts to retrieve profile age
 description: Introduces a script to retrieve profile age.
-ms.date: 09/12/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: garymu, herbertm
-ms.custom: sap:User Logon and Profiles\User profiles, csstroubleshoot
+ms.custom:
+- sap:user logon and profiles\user profiles
+- pcy:WinComm Directory Services
 ---
 # Scripts: Retrieve profile age
 

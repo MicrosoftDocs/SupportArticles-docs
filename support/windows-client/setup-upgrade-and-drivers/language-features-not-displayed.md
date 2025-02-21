@@ -1,12 +1,14 @@
 ---
 title: Language features not displayed to standard users
 description: Provides the information that language features aren't displayed to standard users starting from Windows 10, version 1809.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, kimberj, arrenc
-ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
+ms.custom:
+- sap:windows setup,upgrade and deployment\installing or upgrading windows
+- pcy:WinComm Devices Deploy
 ---
 # Language features aren't displayed in Windows 10
 

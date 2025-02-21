@@ -1,12 +1,14 @@
 ---
 title: Error 51 or 53 when you access shared resources
 description: Provides a solution to system error 51 or 53 that occurs when you access shared resources.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Network Connectivity and File Sharing\Remote access (VPN, RRAS, CMAK and AOVPN), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\remote access (vpn,rras,cmak and aovpn)
+- pcy:WinComm Networking
 ---
 # Error when you try to access shared resources on a computer: System error 53 has occurred or System error 51 has occurred
 

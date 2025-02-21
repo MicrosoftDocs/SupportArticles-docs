@@ -1,12 +1,14 @@
 ---
 title: ADFS 2.0 certificate error
 description: Discusses that a certificate-related change in AD FS 2.0 causes certificate, SSL, and trust errors and triggers an Event 133 error. Provides a resolution.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Security Technologies\Active Directory Federation Services (AD FS) non-Azure-O365 issues, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\active directory federation services (ad fs) non-azure-o365 issues
+- pcy:WinComm Directory Services
 ---
 # ADFS 2.0 certificate error: An error occurred during an attempt to build the certificate chain
 

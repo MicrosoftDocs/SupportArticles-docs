@@ -1,12 +1,14 @@
 ---
 title: MBAM fails to take ownership of TPM
 description: Describes an issue where an error occurs when MBAM tries to initialize TPM.
-ms.date: 03/08/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: manojse, yitzhaks, avicar, kaushika
-ms.custom: sap:Windows Security Technologies\BitLocker, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\bitlocker
+- pcy:WinComm Devices Deploy
 ---
 # MBAM fails to take ownership of TPM
 

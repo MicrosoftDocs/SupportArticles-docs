@@ -1,12 +1,14 @@
 ---
 title: Errors when applications try to connect to SQL Server in Windows
 description: Fixes an issue that occurs when an application tries to open a connection to a SQL Server.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: sureshka, arrenc, juburke, stacygr, jburchel, diassis, stefze, mastewa, ardenw, kaushika
-ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Transport Layer Security (TLS) or Schannel (SSL), csstroubleshoot
+ms.custom:
+- sap:certificates and public key infrastructure (pki)\transport layer security (tls) or schannel (ssl)
+- pcy:WinComm Directory Services
 ---
 # Applications experience forcibly closed TLS connection errors when connecting SQL Servers in Windows
 

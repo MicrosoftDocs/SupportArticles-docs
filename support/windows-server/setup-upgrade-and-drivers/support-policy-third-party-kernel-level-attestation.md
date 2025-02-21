@@ -1,12 +1,14 @@
 ---
 title: Support policy for third-party, kernel-level software
 description: Describes the support that Microsoft Support provides for Microsoft software products, when you run that product together with attestation-signed kernel-level drivers and any associated physical devices or applications.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, sandyar, cpuckett
-ms.custom: sap:Windows Device and Driver Management\Peripherals driver installation or update, csstroubleshoot
+ms.custom:
+- sap:windows device and driver management\peripherals driver installation or update
+- pcy:WinComm Devices Deploy
 ---
 # Support policy for third-party, kernel-level software that is signed using the attestation process in Windows
 

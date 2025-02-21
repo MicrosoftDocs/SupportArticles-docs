@@ -1,12 +1,14 @@
 ---
 title: Upgrade Advisor tool failed to run
 description: Provides a solution to an error that occurs when you run the Windows 7 Upgrade Advisor tool on a system.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
+ms.custom:
+- sap:windows setup,upgrade and deployment\installing or upgrading windows
+- pcy:WinComm Devices Deploy
 ---
 # Windows 7 Upgrade Advisor tool failed to run with error message "Windows 7 Upgrade Advisor was unable to reach the Microsoft server for compatibility information. Check your internet connection and try again later."
 

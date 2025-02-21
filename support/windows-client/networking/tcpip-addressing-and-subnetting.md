@@ -1,12 +1,14 @@
 ---
 title: TCP/IP addressing and subnetting
 description: A general introduction to the concepts of IP networks and subnetting.
-ms.date: 10/28/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, anrath
-ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
+- pcy:WinComm Networking
 adobe-target: true
 ---
 # Understand TCP/IP addressing and subnetting basics

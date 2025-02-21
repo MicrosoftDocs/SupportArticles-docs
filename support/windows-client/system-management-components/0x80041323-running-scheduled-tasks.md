@@ -1,12 +1,14 @@
 ---
 title: Error 0x80041323 when you run Scheduled tasks
 description: Provides a solution to fix the error 0x80041323 that occurs when you run high number of Scheduled tasks.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:System Management Components\Task Scheduler, csstroubleshoot
+ms.custom:
+- sap:system management components\task scheduler
+- pcy:WinComm User Experience
 ---
 # Error 0x80041323 when running high number of Scheduled tasks
 

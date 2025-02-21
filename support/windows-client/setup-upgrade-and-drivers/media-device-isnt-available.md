@@ -1,12 +1,14 @@
 ---
 title: Media device isn't available in the Devices charm
 description: Describes how to add non-certified devices as Play To endpoints on the Devices charm in Windows 8.1.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, vinbel, gfrost
-ms.custom: sap:Windows Device and Driver Management\Peripherals driver installation or update, csstroubleshoot
+ms.custom:
+- sap:windows device and driver management\peripherals driver installation or update
+- pcy:WinComm Devices Deploy
 ---
 # My media device isn't available in the Devices charm
 

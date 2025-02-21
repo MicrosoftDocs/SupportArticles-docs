@@ -1,12 +1,14 @@
 ---
 title: Msinfo32.exe reports wrong values for Adapter RAM
 description: Discusses an issue where Microsoft System Information (Msinfo32.exe) tool reports incorrect Adapter RAM values under Components > Display.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Device and Driver Management\Peripherals driver installation or update, csstroubleshoot
+ms.custom:
+- sap:windows device and driver management\peripherals driver installation or update
+- pcy:WinComm Devices Deploy
 ---
 # Msinfo32.exe reports an unexpected value for the Display Adapter RAM when the graphics adapter has 2 GB or more of dedicated video memory
 

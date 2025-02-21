@@ -207,8 +207,10 @@ items:
       href: ./active-directory/duplicate-active-directory-replication-connections.md
     - name: How to restrict RPC traffic to a specific port
       href: ./active-directory/restrict-ad-rpc-traffic-to-specific-port.md
-    - name: lingering objects in a Windows Server Active Directory forest
+    - name: Lingering objects in a Windows Server Active Directory forest
       href: ./active-directory/information-lingering-objects.md
+    - name: Lingering objects manual removal
+      href: ./active-directory/manually-remove-lingering-objects.md
     - name: Manually replicating data between domain controllers fails
       href: ./active-directory/target-principal-name-is-incorrect-when-replicating-data.md
     - name: Modify the default intra-site DC replication interval
@@ -1445,6 +1447,8 @@ items:
       href: ./networking/troubleshoot-dns-name-resolution.md
     - name: Troubleshoot DNS name resolution failures related to DNS forwarders
       href: ./networking/troubleshoot-dns-forwarders-related-failures.md
+    - name: Troubleshoot DNS scavenging issues
+      href: ./networking/troubleshoot-dns-scavenging-issues.md
     - name: Verify that SRV DNS records have been created
       href: ./networking/verify-srv-dns-records-have-been-created.md
     - name: WINS registration fails if a server points to itself for WINS name resolution
@@ -1483,6 +1487,8 @@ items:
       href: ./networking/pxe-clients-not-start-dhcp-60-66-67-option.md
     - name: Troubleshoot problems on the DHCP client
       href: ./networking/troubleshoot-problems-dhcp-client.md
+    - name: Troubleshoot DHCP authorization failures
+      href: ./networking/troubleshooting-guide-dhcp-authorization-failures.md
     - name: Use Netsh utility to export and import DHCP scopes
       href: ./networking/netsh-utility-export-import-dhcp-scopes.md
   - name: FRS
@@ -2071,6 +2077,8 @@ items:
       href: ./remote/limit-connections-terminal-server.md
     - name: Log files for troubleshooting RDS issues
       href: ./remote/log-files-to-troubleshoot-rds-issues.md
+    - name: Ports that are used by RDS
+      href: ./remote/ports-used-by-rds.md
     - name: RDS fails to install with error 0x800706D9
       href: ./remote/rds-role-fail-to-install.md
     - name: Recommended updates for RDS in Windows Server 2012 R2
@@ -2142,7 +2150,7 @@ items:
     - name: Local Policy not permit to Log On Interactively
       href: ./remote/local-policy-not-permit-log-on-interactively.md
     - name: New user fails to log on through RDP
-      href: ./remote/not-enough-storage-available-to-process-command.md
+      href: ./remote/not-enough-storage-available-to-process-command.md    
     - name: Registry Size Limit (RSL) functionality is still be honored
       href: ./remote/honors-registry-size-limit-functionality-key-set.md
     - name: Remote Control prompts for user permission
@@ -2231,6 +2239,8 @@ items:
       href: ./remote/license-attributes-not-updated-rdsh-server.md
     - name: '"Licenses are not available for this Remote Desktop" error in Licensing Diagnosis'
       href: ./remote/rdsh-administrator-on-get-error-licensing-diagnosis.md
+    - name: Remote Desktop licensing mode is not configured warning
+      href: ./remote/remote-desktop-licensing-mode-not-configured-warning.md
     - name: Remote Desktop Licensing Service doesn't start
       href: ./remote/remote-desktop-licensing-service-not-star.md
     - name: Remote session disconnected when using non-persistent VDI with per-user licensing
@@ -2243,11 +2253,13 @@ items:
       href: ./remote/terminal-server-license-for-deployment.md
     - name: Terminal Server licensing
       href: ./remote/terminal-server-licensing.md
+    - name: The system cannot determine if the license server is member of TSLS Group
+      href: ./remote/system-cannot-determine-license-server-member-tsls.md
     - name: Troubleshooting access denied and user not authorized issues in RDS
       href: ./remote/troubleshooting-access-denied-and-user-not-authorized-rds-issues.md
     - name: '"Your session will be disconnected in 60 minutes" message when you connect to RDS'
       href: ./remote/your-session-will-be-disconnected-in-60-minutes.md
-  - name: Remote desktop sessions
+  - name: Session connectivity
     items:
     - name: 'Troubleshooting guidance: RDS session connectivity'
       href: ./remote/troubleshoot-rds-session-connectivity-guidance.md
@@ -2287,6 +2299,8 @@ items:
       href: ./remote/query-user-command-cannot-query-remotely.md
     - name: RDS client can't connect to RD Session Host server
       href: ./remote/rds-client-not-connect-to-rd-session-host-server.md
+    - name: Remote Desktop can't connect to the remote computer
+      href: ./remote/remote-desktop-cannot-connect-remote-computer.md
     - name: Remote Desktop client disconnects and can't reconnect to the same session
       href: ./remote/rdp-client-disconnects-cannot-reconnect-same-session.md
     - name: Remote Desktop Connection 6.0 prompts for credentials
@@ -2307,7 +2321,7 @@ items:
       href: ./remote/terminal-server-users-home-directory-not-set-correctly.md
     - name: User can't authenticate or must authenticate twice
       href: ./remote/cannot-authenticate-must-authenticate-twice.md
-    - name: User receives "Remote Desktop Service is currently busy" message
+    - name: '"Remote Desktop Service is currently busy" message'
       href: ./remote/remote-desktop-service-currently-busy.md
   - name: Virtual Desktop Infrastructure (VDI)
     items:
@@ -3049,6 +3063,8 @@ items:
       href: ./installing-updates-features-roles/system-file-checker.md
     - name: Error 0x800705aa when Windows Update fails
       href: ./installing-updates-features-roles/error-0x800705aa-windows-update-fails.md
+    - name: Error 0x800f0831 when installing Windows updates
+      href: ./installing-updates-features-roles/error-0x800f0831-installing-update.md
     - name: Error 0x800f0922 when installing Windows updates
       href: ./installing-updates-features-roles/error-0x800f0922-installing-windows-updates.md
     - name: Error C0190003 after installing updates
@@ -3109,6 +3125,8 @@ items:
       href: ./support-tools/scripts-to-retrieve-profile-age.md
     - name: Scripts to retrieve profile age and optionally delete aged copies
       href: ./support-tools/scripts-retrieve-profile-age-delete-aged-copies.md
+    - name: Scripts to view the certificate information in the msDS-KeyCredentialLink attribute
+      href: ./support-tools/script-to-view-msds-keycredentiallink-attribute-value.md
   - name: TroubleShootingScript toolset (TSS)
     items:
     - name: Introduction to TroubleShootingScript toolset (TSS)

@@ -1,12 +1,14 @@
 ---
 title: Active Directory has a newer password value than client device
 description: Introduces a resolution for the scenario in which Active Directory has a newer pwdLastSet value than the client device.
-ms.date: 10/24/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, herbertm
-ms.custom: sap:Windows Security\Netlogon, secure channel, DC locator, csstroubleshoot
+ms.custom:
+- sap:windows security\netlogon,secure channel,dc locator
+- pcy:WinComm Directory Services
 ---
 # Active Directory has a newer password value than the client device
 

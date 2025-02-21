@@ -1,12 +1,14 @@
 ---
 title: Group Policy preparation isn't performed
 description: Describes an issue that occurs when you automatically prepare an existing domain for Windows Server 2012 by using Windows Server 2012 Server Manager or the Install-AddsDomainController Windows PowerShell cmdlet.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, nedpyle
-ms.custom: sap:Active Directory\DCPromo and the installation or removal of domain controllers, csstroubleshoot
+ms.custom:
+- sap:active directory\dcpromo and the installation or removal of domain controllers
+- pcy:WinComm Directory Services
 ---
 # Group Policy preparation isn't performed when you automatically prepare an existing domain for Windows Server 2012 R2
 

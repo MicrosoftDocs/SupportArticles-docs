@@ -1,12 +1,14 @@
 ---
 title: Error when you access a USB storage device
 description: Provides a solution to an error that occurs when you access a USB storage device after resuming from suspend.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Device and Driver Management\Peripherals driver installation or update, csstroubleshoot
+ms.custom:
+- sap:windows device and driver management\peripherals driver installation or update
+- pcy:WinComm Devices Deploy
 ---
 # Error message when you access a USB storage device after resuming from suspend
 

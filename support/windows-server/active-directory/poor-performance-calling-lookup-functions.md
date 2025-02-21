@@ -1,12 +1,14 @@
 ---
 title: How to disable the lookup of isolated names
 description: Provides a resolution to the poor performance when calling lookup functions to resolve names. Gives a method to disable the lookup of isolated names in trusted domain.
-ms.date: 12/26/2023
+ms.date: 02/06/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, herbertm, v-lianna
-ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
+ms.custom:
+- sap:active directory\user,computer,group,and object management
+- pcy:WinComm Directory Services
 ---
 # Poor performance when calling lookup functions to resolve names
 
@@ -16,7 +18,7 @@ When calling the **LookupAccountName** or **LsaLookupNames** function to resolve
 
 For example, poor performance might occur when using scripts or tools (such as *Cacls.exe*, *Xcacls.exe*, *icacls.exe*, *Dsacls.exe*, and *Subinacl.exe*) to call the functions to edit security settings.
 
-The problem may show up when you have many trusted domains or forests (applies to both external and forest trusts), and/or some of these domains or forests are offline or slow to respond.
+The problem may show up when you have many trusted domains or external forest trusts, and/or some of these domains or forests are offline or slow to respond.
 
 When the functions are called for an isolated name (the format is AccountName in contrast to domain\AccountName), a remote procedure call (RPC) is made to domain controllers on all trusted domains/forests. This issue might occur if the primary domain has many trust relationships with other domains/forests or if it's doing many lookups at a same time. For example, a script is configured to run at the startup of many clients, or many trusted domains/forests use the same script simultaneously.
 

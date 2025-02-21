@@ -1,13 +1,15 @@
 ---
 title: Applying Group Policy troubleshooting guidance
 description: Provides guidance to troubleshoot Group Policy.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.custom: sap:Group Policy\Problems Applying Group Policy, csstroubleshoot
+ms.custom:
+- sap:group policy\problems applying group policy
+- pcy:WinComm Directory Services
 ms.reviewer: kaushika
 ---
 # Applying Group Policy troubleshooting guidance

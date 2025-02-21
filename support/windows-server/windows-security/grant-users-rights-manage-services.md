@@ -1,12 +1,14 @@
 ---
 title: Grant users rights to manage services
 description: Describes how to grant users rights to manage services.
-ms.date: 11/08/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, jessev
-ms.custom: sap:Windows Security Technologies\AD Object Permissions, access control, delegation, AdminSDHolder and auditing, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\ad object permissions,access control,delegation,adminsdholder and auditing
+- pcy:WinComm Directory Services
 ---
 # How to grant users rights to manage services  
 

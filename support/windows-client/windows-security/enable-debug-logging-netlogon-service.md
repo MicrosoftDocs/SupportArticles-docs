@@ -1,12 +1,14 @@
 ---
 title: Enable debug logging for Netlogon service
 description: Describes how to enable logging of debug information of the Netlogon service.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Security Technologies\Legacy authentication (NTLM), csstroubleshoot
+ms.custom:
+- sap:windows security technologies\legacy authentication (ntlm)
+- pcy:WinComm Directory Services
 ---
 # Enabling debug logging for the Netlogon service
 

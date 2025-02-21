@@ -1,12 +1,14 @@
 ---
 title: Syskey.exe utility is no longer supported
 description: Syskey.exe utility is no longer supported in Windows 10, Windows Server 2016, and later versions.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\Active Directory backup, restore, or disaster recovery, csstroubleshoot
+ms.custom:
+- sap:active directory\active directory backup,restore,or disaster recovery
+- pcy:WinComm Directory Services
 ---
 # Syskey.exe utility is no longer supported in Windows 10, Windows Server 2016, and later versions
 

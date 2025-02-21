@@ -1,12 +1,14 @@
 ---
 title: NTDS replication warning IDs 1083 and 1061
 description: Describes an issue that occurs if a change that is made on the local domain controller is also made on the domain controller that holds the PDC operations master role. In this scenario, the domain controllers may replicate the changes at the same time.
-ms.date: 05/27/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, rolandw, herbertm
-ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
+ms.custom:
+- sap:active directory\active directory replication and topology
+- pcy:WinComm Directory Services
 ---
 # Description of NTDS replication warning IDs 1083 and 1061, and SAM error ID 12294 because of an Active Directory collision
 

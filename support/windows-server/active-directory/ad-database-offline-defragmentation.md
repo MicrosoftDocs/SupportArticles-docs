@@ -1,12 +1,14 @@
 ---
 title: Offline defragmentation of Active Directory database
 description: Describes how to How to perform offline defragmentation of the Active Directory database.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\Active Directory backup, restore, or disaster recovery, csstroubleshoot
+ms.custom:
+- sap:active directory\active directory backup,restore,or disaster recovery
+- pcy:WinComm Directory Services
 ---
 # Perform offline defragmentation of the Active Directory database
 

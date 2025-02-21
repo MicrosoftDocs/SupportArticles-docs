@@ -1,12 +1,14 @@
 ---
 title: Computer clock resets to a previous date and time
 description: Describes workarounds for an issue in which the computer clock resets to a past date and time.
-ms.date: 02/21/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-tappelgate
-ms.custom: sap:Active Directory\Windows Time Service configuration, accuracy, and synchronization, csstroubleshoot
+ms.custom:
+- sap:active directory\windows time service configuration,accuracy,and synchronization
+- pcy:WinComm Directory Services
 keywords: Windows Time service, w32time, clock skew, NTP
 ---
 

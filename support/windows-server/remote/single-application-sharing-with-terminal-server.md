@@ -1,12 +1,14 @@
 ---
 title: Single-application sharing with Terminal Server
 description: Describes how to set up a Terminal Server and Terminal Server Client for single-application sharing.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, willgloy
-ms.custom: sap:Remote Desktop Services and Terminal Services\Session connectivity, csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\session connectivity
+- pcy:WinComm User Experience
 ---
 # Single-application sharing with Terminal Server
 

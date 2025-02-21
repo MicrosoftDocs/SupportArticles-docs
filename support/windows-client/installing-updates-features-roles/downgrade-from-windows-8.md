@@ -1,12 +1,14 @@
 ---
 title: How to downgrade from Windows 8
 description: Describes the factors that determine whether you can downgrade Windows 8 to an earlier version of Windows.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, jennrowe
-ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install Windows Updates, csstroubleshoot
+ms.custom:
+- sap:installing windows updates,features,or roles\failure to install windows updates
+- pcy:WinComm Devices Deploy
 ---
 # How to downgrade from Windows 8
 

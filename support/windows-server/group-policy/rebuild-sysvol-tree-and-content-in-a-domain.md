@@ -1,12 +1,14 @@
 ---
 title: How to rebuild the SYSVOL tree and its content in a domain
 description: Describes how to use the Burflags registry value to rebuild each domain controller's copy of the system volume tree (SYSVOL) on all domain controllers in a common Active Directory domain.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Group Policy\Sysvol access or replication issues, csstroubleshoot
+ms.custom:
+- sap:group policy\sysvol access or replication issues
+- pcy:WinComm Directory Services
 ---
 # How to rebuild the SYSVOL tree and its content in a domain
 

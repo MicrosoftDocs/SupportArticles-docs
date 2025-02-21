@@ -1,12 +1,14 @@
 ---
 title: Setup fails on VM with error 0xE0000100
 description: Describes an issue in which you receive an error 0xE0000100 that occurs when Windows Server 2012 R2 setup fails on a virtual machine.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, luche
-ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
+ms.custom:
+- sap:windows setup,upgrade and deployment\installing or upgrading windows
+- pcy:WinComm Devices Deploy
 ---
 # Windows Server 2012 R2 setup may fail on a virtual machine that is configured to use the minimum required memory
 

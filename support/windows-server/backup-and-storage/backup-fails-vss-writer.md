@@ -1,12 +1,14 @@
 ---
 title: Backup fails because of VSS writer
 description: Provides a solution to an issue where Windows Server backup fails because of the SQL Server VSS writer.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Volume Shadow Copy Service (VSS), csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\volume shadow copy service (vss)
+- pcy:WinComm Storage High Avail
 ---
 # Windows Server backup may fail because of the SQL Server VSS writer
 

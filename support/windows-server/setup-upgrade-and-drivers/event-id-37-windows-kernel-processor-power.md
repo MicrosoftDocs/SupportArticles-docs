@@ -1,12 +1,14 @@
 ---
 title: Kernel processor power Event ID 37 after changing power policy
 description: Provides a solution to an issue where the Event ID 37 is logged in the System log after you change the power policy for a Windows Server 2016-based server.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Device and Driver Management\Peripherals driver installation or update, csstroubleshoot
+ms.custom:
+- sap:windows device and driver management\peripherals driver installation or update
+- pcy:WinComm Devices Deploy
 ---
 # Kernel processor power Event ID 37 after changing power policy in Windows Server 2016
 

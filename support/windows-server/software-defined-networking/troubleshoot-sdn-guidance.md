@@ -1,12 +1,14 @@
 ---
 title: Guidance for troubleshooting SDN
 description: Introduces general guidance for troubleshooting scenarios related to SDN.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Software Defined Networking\Internal Name Resolution for SDN, csstroubleshoot
+ms.custom:
+- sap:software defined networking\internal name resolution for sdn
+- pcy:WinComm Networking
 ---
 # SDN troubleshooting guidance
 

@@ -1,10 +1,12 @@
 ---
 title: Data collection for troubleshooting 802.1X authentication issues
 description: Use the steps in this article to collect data that can be used to troubleshoot 802.1X authentication issues.
-ms.date: 05/10/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 ms.topic: troubleshooting
-ms.custom: sap:Network Connectivity and File Sharing\Wireless (802.1x, Bluetooth, Miracast, Mobile Broadband), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\wireless (802.1x,bluetooth,miracast,mobile broadband)
+- pcy:WinComm Networking
 ms.reviewer: dansimp
 audience: itpro
 ---

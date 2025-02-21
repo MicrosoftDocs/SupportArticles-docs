@@ -1,12 +1,14 @@
 ---
 title: Userenv errors occur and events are logged
 description: Describes how to troubleshoot issues where computers on your network can't connect to the Group Policy objects in the Sysvol folders on your network domain controllers.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, msadoff
-ms.custom: sap:Group Policy\Problems Applying Group Policy, csstroubleshoot
+ms.custom:
+- sap:group policy\problems applying group policy
+- pcy:WinComm Directory Services
 ---
 # Userenv errors occur and events are logged after you apply Group Policy to computers that are running Windows Server 2003, Windows XP, or Windows 2000
 

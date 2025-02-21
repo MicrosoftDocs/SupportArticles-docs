@@ -1,12 +1,14 @@
 ---
 title: Hotfixes for File Services technologies
 description: This article lists the hotfixes that are currently available for users who have installed the File Services technologies on a Windows Server 2012-based computer or on a Windows Server 2012 R2-based computer.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: WalterE, cpuckett, kaushika
-ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\access to file shares (smb)
+- pcy:WinComm Networking
 ---
 # List of currently available hotfixes for the File Services technologies
 

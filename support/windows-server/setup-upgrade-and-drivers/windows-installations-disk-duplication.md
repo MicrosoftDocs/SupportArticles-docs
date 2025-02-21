@@ -1,12 +1,14 @@
 ---
 title: Disk duplication of Windows installations
 description: Describes the SID and supported methods for cloning or duplicating a Windows installation.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, scottmca
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Deduplication, csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\deduplication
+- pcy:WinComm Storage High Avail
 ---
 # The Microsoft policy for disk duplication of Windows installations
 

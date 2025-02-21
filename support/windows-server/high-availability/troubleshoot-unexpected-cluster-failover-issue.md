@@ -1,14 +1,16 @@
 ---
 title: Guidance for troubleshooting unexpected cluster failover
 description: Provides guidance to find the root cause of an unexpected failover in a Windows-based failover cluster.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Clustering and High Availability\Root cause of an unexpected failover, csstroubleshoot
+ms.custom:
+- sap:clustering and high availability\root cause of an unexpected failover
+- pcy:WinComm Storage High Avail
 ---
 # Unexpected cluster failover troubleshooting guidance
 

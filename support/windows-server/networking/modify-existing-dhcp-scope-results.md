@@ -1,12 +1,14 @@
 ---
 title: Fail to modify existing DHCP scope
 description: Provides solutions to an error that occurs when you modify an existing scope.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Network Connectivity and File Sharing\Dynamic Host Configuration Protocol (DHCP), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\dynamic host configuration protocol (dhcp)
+- pcy:WinComm Networking
 ---
 # Modifying an existing DHCP scope results in the error
 

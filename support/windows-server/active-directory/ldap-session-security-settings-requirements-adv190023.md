@@ -1,12 +1,14 @@
 ---
 title: LDAP session security settings and requirements after ADV190023
 description: Discusses LDAP session security settings and requirements after security advisory ADV190023 is installed.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: herbertm, wincicadsec, kaushika
-ms.custom: sap:Active Directory\LDAP configuration and interoperability, csstroubleshoot
+ms.custom:
+- sap:active directory\ldap configuration and interoperability
+- pcy:WinComm Directory Services
 ---
 # LDAP session security settings and requirements after ADV190023 is installed
 

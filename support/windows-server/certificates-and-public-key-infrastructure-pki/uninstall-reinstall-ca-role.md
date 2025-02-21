@@ -1,12 +1,14 @@
 ---
 title: How to reinstall CA role
 description: Describes how to uninstall and then reinstall the Certificate Authority (CA) role in Windows Server 2012 Essentials.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, AshishSu, luche, LavinK, v-jesits
-ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory Certificate Services (ADCS), csstroubleshoot
+ms.custom:
+- sap:certificates and public key infrastructure (pki)\active directory certificate services (adcs)
+- pcy:WinComm Directory Services
 ---
 # Reinstall the CA role in Windows Server 2012 Essentials
 

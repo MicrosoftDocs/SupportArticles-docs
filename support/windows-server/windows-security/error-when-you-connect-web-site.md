@@ -1,12 +1,14 @@
 ---
 title: Error 403 or 500 when you connect to a Web site
 description: Describes a problem that occurs if the user tries to connect to a computer that is running ISA Server 2004 SP2 and that requires Basic, RADIUS, or OWA Forms-Based authentication. A script is available to work around this issue.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-jomcc, jobarner
-ms.custom: sap:Windows Security Technologies\Legacy authentication (NTLM), csstroubleshoot
+ms.custom:
+- sap:windows security technologies\legacy authentication (ntlm)
+- pcy:WinComm Directory Services
 ---
 # Error code 403 or 500 when you connect to a Web site that is published by using ISA Server 2004 Service Pack 2
 

@@ -1,12 +1,14 @@
 ---
 title: How To Use the Recovery Console
 description: Describes how to use the Recovery Console on a computer that does not start.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:System Performance\Startup or Pre-logon Reliability (crash, errors, bug check or Blue Screen), csstroubleshoot
+ms.custom:
+- sap:system performance\startup or pre-logon reliability (crash,errors,bug check or blue screen)
+- pcy:WinComm Performance
 ---
 # How To Use the Recovery Console on a Computer That Does Not Start
 

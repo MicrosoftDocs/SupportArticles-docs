@@ -1,12 +1,14 @@
 ---
 title: Can't execute commands with RunOnce and RunOnceEx
 description: Fixes an issue where standard users can't execute a command set via RunOnce or RunOnceEx.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, klausu
-ms.custom: sap:Windows Desktop and Shell Experience\Desktop (Shell, Explorer.exe init, themes, colors, icons, recycle bin), csstroubleshoot
+ms.custom:
+- sap:windows desktop and shell experience\desktop (shell,explorer.exe init,themes,colors,icons,recycle bin)
+- pcy:WinComm User Experience
 ---
 # Standard user: RunOnce and RunOnceEx are not being executed
 

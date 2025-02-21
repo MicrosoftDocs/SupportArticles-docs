@@ -1,12 +1,14 @@
 ---
 title: How to enable Windows Vista user experience features on a computer that is running Windows Server 2008
 description: Describes how to configure Windows Server 2008 as a workstation computer.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Desktop and Shell Experience\Media issues with in-box apps (Windows Media Player, Groove, Movies and TV), csstroubleshoot
+ms.custom:
+- sap:windows desktop and shell experience\media issues with in-box apps (windows media player,groove,movies and tv)
+- pcy:WinComm User Experience
 ---
 # How to enable Windows Vista user experience features on a computer that is running Windows Server 2008
 

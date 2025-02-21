@@ -1,12 +1,14 @@
 ---
 title: Kernel memory dump files are generated
 description: This behavior occurs to help prevent kernel memory dump files from being written to a page file where the memory dump file is larger than the page file. Workaround is to modify the registry to enable this behavior.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, chwall
-ms.custom: sap:System Performance\Startup or Pre-logon Performance (slow, unresponsive, spinning circle, blank screen), csstroubleshoot
+ms.custom:
+- sap:system performance\startup or pre-logon performance (slow,unresponsive,spinning circle,blank screen)
+- pcy:WinComm Performance
 ---
 # Kernel memory dump files may not be generated on Windows Server 2008-based and Windows Vista SP1 or later based computers when physical memory is larger than the size of the page file
 

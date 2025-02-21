@@ -1,12 +1,14 @@
 ---
 title: Find a compatible printer driver for a computer running a 64-bit version of Windows
 description: Describes how to find a compatible printer driver for a computer running a 64-bit version of Windows. Useful if you require a driver for a printer that isn't supported on a computer running a 64-bit version of Windows.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Print, Fax, and Scan\Print Configuration or Management, csstroubleshoot
+ms.custom:
+- sap:print,fax,and scan\print configuration or management
+- pcy:WinComm User Experience
 ---
 # How to find a compatible printer driver for a computer that's running a 64-bit version of Windows
 

@@ -1,12 +1,14 @@
 ---
 title: Chinese (Simplified) input method doesn't work
 description: Address an issue in which Windows continues to type and display in English when a domain user uses the Chinese (Simplified) input method in Windows Server 2012.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
+ms.custom:
+- sap:windows setup,upgrade and deployment\installing or upgrading windows
+- pcy:WinComm Devices Deploy
 ---
 # Domain users can't type Chinese (Simplified) in Windows Server 2016
 

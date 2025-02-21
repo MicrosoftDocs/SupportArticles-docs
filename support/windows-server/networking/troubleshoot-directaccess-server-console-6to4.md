@@ -1,12 +1,14 @@
 ---
 title: Verify 6to4 adapter for DirectAccess server troubleshooting
 description: This article dicsusses how to verify 6to4 adapter for DirectAccess server troubleshooting.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Network Connectivity and File Sharing\Remote access (DirectAccess), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\remote access (directaccess)
+- pcy:WinComm Networking
 ---
 # Troubleshoot DirectAccess server console: 6to4
 

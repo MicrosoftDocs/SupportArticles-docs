@@ -1,12 +1,14 @@
 ---
 title: Holding Shift key while shutting down or logging off may not disable automatic logon
 description: Resolves an issue where you can't disable automatic logon by holding the Shift key while shutting down or logging off from a computer.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:User Logon and Profiles\Service Account and Interactive User Logon Issues and Credential Providers, csstroubleshoot
+ms.custom:
+- sap:user logon and profiles\service account and interactive user logon issues and credential providers
+- pcy:WinComm Directory Services
 ---
 # Holding Shift key while shutting down or logging off may not disable automatic logon
 

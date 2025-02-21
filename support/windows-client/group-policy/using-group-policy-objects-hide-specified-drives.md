@@ -1,12 +1,14 @@
 ---
 title: Using Group Policy Objects to hide specified drives
 description: Provides some information about using Group Policy Objects to hide specified drives.
-ms.date: 04/09/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, davidg
-ms.custom: sap:Group Policy\Managing removable devices (USB devices and flash drives) through Group Policy, csstroubleshoot
+ms.custom:
+- sap:group policy\managing removable devices (usb devices and flash drives) through group policy
+- pcy:WinComm Directory Services
 ---
 # Using Group Policy Objects to hide specified drives
 

@@ -1,12 +1,14 @@
 ---
 title: install the Microsoft Loopback Adapter
 description: This article describes how to install the Microsoft Loopback Adapter. You can use the DevCon utility to quickly install the Microsoft Loopback Adapter at a command prompt, or you can use the Hardware Wizard.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
+- pcy:WinComm Networking
 ---
 # How to install the Microsoft Loopback Adapter
 

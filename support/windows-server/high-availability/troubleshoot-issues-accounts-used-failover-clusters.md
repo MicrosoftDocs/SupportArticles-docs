@@ -1,12 +1,14 @@
 ---
 title: Troubleshoot issues with accounts used by failover clusters
 description: Provides troubleshooting guidance for issues with accounts used by failover clusters.
-ms.date: 01/10/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, jdeffenbaugh, v-lianna
-ms.custom: sap:Clustering and High Availability\Setup and configuration of clustered services and applications, csstroubleshoot
+ms.custom:
+- sap:clustering and high availability\setup and configuration of clustered services and applications
+- pcy:WinComm Storage High Avail
 ---
 # Troubleshoot issues with accounts used by failover clusters
 

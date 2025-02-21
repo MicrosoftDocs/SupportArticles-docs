@@ -1,12 +1,14 @@
 ---
 title: Information about devices from Riverbed Technology that are configured as RODCs
 description: Describes the information about devices from Riverbed Technology that are configured as RODCs.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, HerbertM, gregcamp, michikos, nedpyle
-ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
+ms.custom:
+- sap:active directory\user,computer,group,and object management
+- pcy:WinComm Directory Services
 ---
 # Information about devices from Riverbed Technology that are configured as RODCs
 

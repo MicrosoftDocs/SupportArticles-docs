@@ -1,14 +1,16 @@
 ---
 title: Guidance for troubleshooting the installation of Windows features and roles
 description: Provides guidance to help troubleshoot issues when adding or removing roles and features in Windows.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Servicing, Updates and Features on Demand\Issues installing Server Roles, csstroubleshoot
+ms.custom:
+- sap:windows servicing,updates and features on demand\issues installing server roles
+- pcy:WinComm Devices Deploy
 ---
 # Installing Windows features and roles troubleshooting guidance
 

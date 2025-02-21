@@ -1,12 +1,14 @@
 ---
 title: Troubleshoot Cluster service account
 description: Describes how to troubleshoot the Cluster service when it creates or modifies a computer object in Active Directory for a server cluster (virtual server).
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, stevemat, ELDENC
-ms.custom: sap:Clustering and High Availability\Cluster service fails to start, csstroubleshoot
+ms.custom:
+- sap:clustering and high availability\cluster service fails to start
+- pcy:WinComm Storage High Avail
 ---
 # How to troubleshoot the Cluster service account when it modifies computer objects
 

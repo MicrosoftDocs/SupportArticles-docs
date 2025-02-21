@@ -1,14 +1,16 @@
 ---
 title: Storage tests on a failover cluster might not discover all shared LUNs
 description: Provides a resolution for an issue in which the Validate a Configuration Wizard doesn't discover all shared LUNs for a cluster.
-ms.date: 03/20/2024
+ms.date: 01/15/2025
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-tappelgate
-ms.custom: sap:Clustering and High Availability\Errors when running the Validation Wizard, csstroubleshoot
+ms.custom:
+- sap:clustering and high availability\errors when running the validation wizard
+- pcy:WinComm Storage High Avail
 keywords: Windows failover cluster, SAN, shared LUNs, Validate a Configuration Wizard
 ---
 

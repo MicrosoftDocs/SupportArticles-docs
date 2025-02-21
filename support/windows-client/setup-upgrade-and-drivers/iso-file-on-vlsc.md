@@ -1,12 +1,14 @@
 ---
 title: Download and burn an ISO file from Volume Licensing Service Center (VLSC)
 description: Describes how to download an ISO file from the Microsoft Volume Licensing Service Center (VLSC).
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
+ms.custom:
+- sap:windows setup,upgrade and deployment\installing or upgrading windows
+- pcy:WinComm Devices Deploy
 ---
 # Download and burn an ISO file on the volume licensing site (VLSC)
 

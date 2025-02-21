@@ -1,12 +1,14 @@
 ---
 title: Remotely edit the registry
 description: Describes how to remotely edit the registry of a client computer from a host computer after you use Remote Recover to connect the host computer to the client computer.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:System Management Components\Microsoft Management Console (MMC), csstroubleshoot
+ms.custom:
+- sap:system management components\microsoft management console (mmc)
+- pcy:WinComm User Experience
 ---
 # How to remotely edit the registry of a client computer from a host computer after you use Remote Recover to connect the host computer to the client computer
 

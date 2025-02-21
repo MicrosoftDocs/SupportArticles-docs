@@ -1,12 +1,14 @@
 ---
 title: Information about Event ID 51
 description: This article describes the information about Event ID 51 that occurs when you write information to the physical disk.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Storage hardware, csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\storage hardware
+- pcy:WinComm Storage High Avail
 ---
 # Information about Event ID 51
 

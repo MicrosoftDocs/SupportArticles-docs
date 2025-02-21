@@ -1,12 +1,14 @@
 ---
 title: Error when you run AD Installation Wizard
 description: Describes an issue that may occur if you run the Adprep.exe command-line tool from the wrong Windows Server 2003 installation CD.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, fszita, v-jomcc
-ms.custom: sap:Active Directory\Schema Updates, csstroubleshoot
+ms.custom:
+- sap:active directory\schema updates
+- pcy:WinComm Directory Services
 ---
 # Error when you run the Active Directory Installation Wizard: The version of the Active Directory schema of the source forest is not compatible with the version of Active Directory on this computer
 

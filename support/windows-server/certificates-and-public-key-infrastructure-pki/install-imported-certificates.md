@@ -1,12 +1,14 @@
 ---
 title: Install imported certificates
 description: Describes how to import a Web site certificate into the certificate store of the local computer and assign the certificate to the Web site.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Certificate Enrollment Using MMC or Certificate Requests, csstroubleshoot
+ms.custom:
+- sap:certificates and public key infrastructure (pki)\certificate enrollment using mmc or certificate requests
+- pcy:WinComm Directory Services
 ---
 # How to install imported certificates on a Windows-based Web server
 

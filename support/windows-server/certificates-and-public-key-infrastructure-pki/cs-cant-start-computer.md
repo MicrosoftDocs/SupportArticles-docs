@@ -1,12 +1,14 @@
 ---
 title: CS can't start on a computer
 description: Explains how to troubleshoot an issue when the Certificate Services service doesn't start on a computer that is running Windows Server.
-ms.date: 10/10/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, shawnrab, v-jomcc, flbelea, jtierney
-ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory Certificate Services (ADCS), csstroubleshoot
+ms.custom:
+- sap:certificates and public key infrastructure (pki)\active directory certificate services (adcs)
+- pcy:WinComm Directory Services
 ---
 # Certificate Services may not start on a computer that is running Windows Server
 

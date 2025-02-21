@@ -1,12 +1,14 @@
 ---
 title: Backup fails when you create system image
 description: Resolves an issue where backup fails when you create a system image.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, willgloy
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Configuring and using Windows Backup or other recovery, csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\configuring and using windows backup or other recovery
+- pcy:WinComm Storage High Avail
 ---
 # Backup fails when you try to create a system image
 

@@ -1,12 +1,14 @@
 ---
 title: Troubleshoot networking issues for DirectAccess server troubleshooting
 description: This article discusses how to troubleshoot networking issues for DirectAccess server.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Network Connectivity and File Sharing\Remote access (DirectAccess), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\remote access (directaccess)
+- pcy:WinComm Networking
 ---
 # Troubleshoot DirectAccess Server console: Network and high availability
 

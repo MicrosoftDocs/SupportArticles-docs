@@ -1,12 +1,14 @@
 ---
 title: Troubleshoot Software Defined Networking (SDN)
 description: Provides links to contents about troubleshooting Software Defined Networking in Windows Server 2019 and 2016.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, grcusanz, anpaul, v-lianna
-ms.custom: sap:Software Defined Networking\Internal Name Resolution for SDN, csstroubleshoot
+ms.custom:
+- sap:software defined networking\internal name resolution for sdn
+- pcy:WinComm Networking
 ms.assetid: 427048db-bab6-49b1-9611-099bb547ec0e
 ---
 # Troubleshoot Software Defined Networking (SDN)

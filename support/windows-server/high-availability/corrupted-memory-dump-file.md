@@ -1,12 +1,14 @@
 ---
 title: Corrupted memory dump file is generated
 description: Resolves an issue where a corrupted memory dump file is generated when you try to obtain a full memory dump file from a virtual machine.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Clustering and High Availability\Cannot bring a resource online, csstroubleshoot
+ms.custom:
+- sap:clustering and high availability\cannot bring a resource online
+- pcy:WinComm Storage High Avail
 ---
 # Corrupted memory dump file when you try to obtain a full memory dump file from a virtual machine that is running in a cluster environment
 

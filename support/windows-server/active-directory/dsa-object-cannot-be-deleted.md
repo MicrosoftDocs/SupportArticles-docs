@@ -1,12 +1,14 @@
 ---
 title: Fail to delete orphaned NTDS Settings
 description: Resolves an issue where you fail to delete an orphaned NTDS Settings from Active Directory Sites and Services.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, RKWON
-ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
+ms.custom:
+- sap:active directory\user,computer,group,and object management
+- pcy:WinComm Directory Services
 ---
 # Error Message: DSA Object Cannot Be Deleted
 

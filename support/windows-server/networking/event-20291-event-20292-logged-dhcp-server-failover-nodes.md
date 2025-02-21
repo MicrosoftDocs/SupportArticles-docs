@@ -1,12 +1,14 @@
 ---
 title: Event IDs 20291 and 20292 are logged on DHCP server failover nodes
 description: Describes the issue in which Event ID 20291 and Event ID 20292 are logged many times on DHCP server failover nodes.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, rnitsch, markusr, v-lianna
-ms.custom: sap:Network Connectivity and File Sharing\Dynamic Host Configuration Protocol (DHCP), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\dynamic host configuration protocol (dhcp)
+- pcy:WinComm Networking
 ---
 # Event ID 20291 and Event ID 20292 are logged on DHCP server failover nodes
 

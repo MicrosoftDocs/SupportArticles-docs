@@ -1,12 +1,14 @@
 ---
 title: Previously released updates are reoffered
 description: Lists the previously released updates that will be reoffered for systems that were built by using media that contains the November 2014 update rollup for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Servicing, Updates and Features on Demand\Clients missing updates, not offered, fail to download, csstroubleshoot
+ms.custom:
+- sap:windows servicing,updates and features on demand\clients missing updates,not offered,fail to download
+- pcy:WinComm Devices Deploy
 ---
 # Previously released Windows updates are reoffered for some systems
 

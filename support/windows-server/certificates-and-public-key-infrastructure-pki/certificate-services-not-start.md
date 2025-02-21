@@ -1,12 +1,14 @@
 ---
 title: Certificate Services doesn't start
 description: Provides a solution to an issue where Certificate Services (certsvc) doesn't start after upgrade to Microsoft Windows Server 2016.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory Certificate Services (ADCS), csstroubleshoot
+ms.custom:
+- sap:certificates and public key infrastructure (pki)\active directory certificate services (adcs)
+- pcy:WinComm Directory Services
 ---
 # Certificate Services (certsvc) doesn't start after upgrade to Windows Server 2016
 

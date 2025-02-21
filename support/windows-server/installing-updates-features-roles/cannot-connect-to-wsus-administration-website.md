@@ -1,12 +1,14 @@
 ---
 title: Unable to connect to WSUS Administration Website
 description: Provides a solution to an issue where you're unable to connect to WSUS Administration website.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update configuration, settings and management, csstroubleshoot
+ms.custom:
+- sap:windows servicing,updates and features on demand\windows update configuration,settings and management
+- pcy:WinComm Devices Deploy
 ---
 # Unable to connect to WSUS Administration Website
 

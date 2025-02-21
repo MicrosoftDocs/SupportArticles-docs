@@ -1,12 +1,14 @@
 ---
 title: e2e Event IDs for Volsnap
 description: Lists the event IDs for Volsnap
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Volume Shadow Copy Service (VSS), csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\volume shadow copy service (vss)
+- pcy:WinComm Storage High Avail
 ---
 # e2e: Event IDs for Volsnap
 

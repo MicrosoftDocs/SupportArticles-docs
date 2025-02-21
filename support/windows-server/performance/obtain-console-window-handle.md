@@ -1,12 +1,14 @@
 ---
 title: Obtain a Console Window Handle
 description: Describes how to obtain a Console Window Handle (HWND).
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, kayda
-ms.custom: sap:System Performance\Performance tools (Task Manager, Perfmon, WSRM, and WPA), csstroubleshoot
+ms.custom:
+- sap:system performance\performance tools (task manager,perfmon,wsrm,and wpa)
+- pcy:WinComm Performance
 ---
 # How to obtain a Console Window Handle (HWND)
 

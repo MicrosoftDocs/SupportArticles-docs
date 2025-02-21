@@ -1,12 +1,14 @@
 ---
 title: Configure Distributed Transaction Coordinator (DTC) to work through a firewall
 description: Describes how to configure DTC to work through firewalls.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, jmeier, niklase, shaheera, jpierauc
-ms.custom: sap:Application Technologies and Compatibility\DTC startup, configuration, connectivity, and cluster, csstroubleshoot
+ms.custom:
+- sap:application technologies and compatibility\dtc startup,configuration,connectivity,and cluster
+- pcy:WinComm User Experience
 ---
 # Configure Microsoft Distributed Transaction Coordinator (DTC) to work through a firewall
 

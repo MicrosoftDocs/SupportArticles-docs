@@ -1,12 +1,14 @@
 ---
 title: DHCP Server is slow or fails to respond to DHCP requests if option 66 is wrongly configured
 description: Helps to resolve the issue in which the Dynamic Host Configuration Protocol (DHCP) server answers delayed or doesn't respond to DHCP requests, even though the request volume won't cause DHCP performance issues.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, rnitsch, markusr, v-lianna
-ms.custom: sap:Network Connectivity and File Sharing\Dynamic Host Configuration Protocol (DHCP), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\dynamic host configuration protocol (dhcp)
+- pcy:WinComm Networking
 ---
 # DHCP Server is slow or fails to respond to DHCP requests if option 66 Bootp Server Host Name is wrongly configured
 

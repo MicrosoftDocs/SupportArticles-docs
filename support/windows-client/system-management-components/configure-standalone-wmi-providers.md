@@ -1,13 +1,15 @@
 ---
 title: Use registry entries to configure standalone WMI providers
 description: Describes how to use registry entries to configure standalone WMI providers and resolve a WMIPrvSE.exe quota overflow error.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-tappelgate
 keywords: WMI standalone, quota overflow, wmiprvse.exe
-ms.custom: sap:System Management Components\WMI management and troubleshooting, csstroubleshoot
+ms.custom:
+- sap:system management components\wmi management and troubleshooting
+- pcy:WinComm User Experience
 ---
 
 # How to use registry entries to configure standalone WMI providers

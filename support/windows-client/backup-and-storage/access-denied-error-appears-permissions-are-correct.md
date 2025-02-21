@@ -1,12 +1,14 @@
 ---
 title: Access is denied error message appears when permissions are correct
 description: Provides a solution for access is denied error message when permissions are correct.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Partition and volume management, csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\partition and volume management
+- pcy:WinComm Storage High Avail
 ---
 # Access is denied error message appears when permissions are correct
 

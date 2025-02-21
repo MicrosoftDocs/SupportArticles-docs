@@ -1,12 +1,14 @@
 ---
 title: Enabling smart card logon
 description: Provides some guidelines for enabling smart card logon with third-party certification authorities.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, slight
-ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Smart card logon, csstroubleshoot
+ms.custom:
+- sap:certificates and public key infrastructure (pki)\smart card logon
+- pcy:WinComm Directory Services
 ---
 # Guidelines for enabling smart card logon with third-party certification authorities
 

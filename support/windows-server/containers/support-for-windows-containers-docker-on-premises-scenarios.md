@@ -1,12 +1,14 @@
 ---
 title: Support policy for Windows containers and Docker in on-premises scenarios
 description: Summary of the configurations that Microsoft supports for Windows containers when you use them in an on-premises Windows deployment.
-ms.date: 11/13/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Containers\Management Of Containers, csstroubleshoot
+ms.custom:
+- sap:containers\management of containers
+- pcy:WinComm Storage High Avail
 ---
 # Support policy for Windows Server containers in on-premises scenarios
 

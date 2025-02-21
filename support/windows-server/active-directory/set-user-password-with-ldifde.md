@@ -1,12 +1,14 @@
 ---
 title: Set a user's password with Ldifde
 description: Describes how to set a user's password by using the Ldifde tool.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, davidg, dhook
-ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
+ms.custom:
+- sap:active directory\user,computer,group,and object management
+- pcy:WinComm Directory Services
 ---
 # How to set a user's password with Ldifde
 

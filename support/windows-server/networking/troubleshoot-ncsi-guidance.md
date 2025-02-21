@@ -1,12 +1,14 @@
 ---
 title: Network Connection Status Indicator (NCSI) troubleshooting guidance
 description: Provides guidance to help troubleshoot NCSI issues.
-ms.date: 04/16/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, anupamk, asvaidya, hichauhan, v-lianna
-ms.custom: sap:Network Connectivity and File Sharing\NCSI, csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\ncsi
+- pcy:WinComm Networking
 ---
 # Network Connection Status Indicator (NCSI) troubleshooting guidance
 

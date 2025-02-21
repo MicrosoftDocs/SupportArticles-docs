@@ -1,12 +1,14 @@
 ---
 title: Guidance for troubleshooting Remote Access (VPN and AOVPN)
 description: Introduces general guidance for troubleshooting scenarios related to Remote Access (VPN and AOVPN).
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Network Connectivity and File Sharing\Remote access (VPN, RRAS, CMAK and AOVPN), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\remote access (vpn,rras,cmak and aovpn)
+- pcy:WinComm Networking
 ---
 # Remote Access (VPN and AOVPN) troubleshooting guidance
 

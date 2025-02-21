@@ -1,12 +1,14 @@
 ---
 title: Optimize domain controller location
 description: Explains how to optimize the location of a domain controller or global catalog that resides outside of a client's site. Provides steps for Windows 2000 and Windows Server 2003.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
+ms.custom:
+- sap:active directory\active directory replication and topology
+- pcy:WinComm Directory Services
 ---
 # How to optimize the location of a domain controller or global catalog that resides outside of a client's site
 

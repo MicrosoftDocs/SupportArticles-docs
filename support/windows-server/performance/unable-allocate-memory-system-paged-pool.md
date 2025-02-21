@@ -1,12 +1,14 @@
 ---
 title: unable to allocate memory
 description: Provides a resolution for the issue that it is unable to allocate memory from the system paged pool.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, mohak, weiwan
-ms.custom: sap:System Performance\Performance tools (Task Manager, Perfmon, WSRM, and WPA), csstroubleshoot
+ms.custom:
+- sap:system performance\performance tools (task manager,perfmon,wsrm,and wpa)
+- pcy:WinComm Performance
 ---
 # Unable to allocate memory from the system paged pool
 

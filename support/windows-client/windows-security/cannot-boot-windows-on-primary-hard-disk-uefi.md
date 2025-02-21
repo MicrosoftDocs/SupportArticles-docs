@@ -1,12 +1,14 @@
 ---
 title: Unable to boot if more than one EFI system partition is present
 description: Works around an issue where you can't boot Windows that was on the primary hard disk and may only have the option to boot to the new installation of Windows on the second hard disk.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:System Performance\Startup configuration (general, secure boot, UEFI), csstroubleshoot
+ms.custom:
+- sap:system performance\startup configuration (general,secure boot,uefi)
+- pcy:WinComm Performance
 ---
 # Unable to boot if more than one EFI system partition is present
 

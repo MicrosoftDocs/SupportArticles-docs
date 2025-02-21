@@ -1,12 +1,14 @@
 ---
 title: Deactivate or reactivate a license server
 description: How to deactivate or reactivate a license server by using Terminal Services Licensing
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Remote Desktop Services and Terminal Services\Licensing for Remote Desktop Services (Terminal Services), csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\licensing for remote desktop services (terminal services)
+- pcy:WinComm User Experience
 ---
 # Deactivate or reactivate a license server by using Terminal Services Licensing
 

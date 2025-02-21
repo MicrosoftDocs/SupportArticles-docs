@@ -1,12 +1,14 @@
 ---
 title: Active Directory replication error 8452
 description: Active Directory Replications test has failed with error status code (8452). Provides a resolution.
-ms.date: 05/22/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
+ms.custom:
+- sap:active directory\active directory replication and topology
+- pcy:WinComm Directory Services
 ---
 # The naming context is in the process of being removed or is not replicated from the specified server
 

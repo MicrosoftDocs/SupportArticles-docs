@@ -1,12 +1,14 @@
 ---
 title: Use authenticated proxy servers
 description: Describes problems that you may encounter when you use apps that connect to the Internet if you use an Internet proxy server that requires authentication.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, tode, tonyga
-ms.custom: sap:Network Connectivity and File Sharing\Web Application Proxy (WAP) role service, csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\web application proxy (wap) role service
+- pcy:WinComm Networking
 ---
 # Using authenticated proxy servers together with Windows 8
 

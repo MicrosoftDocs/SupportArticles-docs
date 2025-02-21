@@ -1,12 +1,14 @@
 ---
 title: DNS requests appear to be random after startup or after network properties change
 description: In certain circumstances, DNS client may send DNS name resolution requests that appear to be random
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\dns
+- pcy:WinComm Networking
 ---
 # DNS requests appear to be random after startup or network properties change
 

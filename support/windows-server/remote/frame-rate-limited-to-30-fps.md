@@ -1,12 +1,14 @@
 ---
 title: Frame rate is limited to 30 FPS in remote sessions
 description: Provides guidance for remote desktop protocols to change the frame rate limit in a remote session.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, shenry, yuqinwu
-ms.custom: sap:Remote Desktop Services and Terminal Services\Performance (audio and video) and RemoteFX, csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\performance (audio and video) and remotefx
+- pcy:WinComm User Experience
 ---
 # Frame rate is limited to 30 FPS in Windows-based remote sessions
 

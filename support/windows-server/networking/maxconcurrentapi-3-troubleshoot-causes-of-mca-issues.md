@@ -1,14 +1,16 @@
 ---
 title: Troubleshoot the underlying causes of an MCA issue
 description: Discusses how to determine the cause of an MCA issue.
-ms.date: 06/07/2024
+ms.date: 01/15/2025
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-tappelgate
-ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
+- pcy:WinComm Networking
 keywords: MaxConcurrentApi, MCA, authentication slowdown, authentication performance
 ---
 

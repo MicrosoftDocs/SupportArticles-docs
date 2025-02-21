@@ -1,12 +1,14 @@
 ---
 title: CBS.log file contains entries that some files aren't repaired after you successfully run the SFC utility
 description: Describes the issue in which the CBS.log file records entries when a static file changes. Because the static file isn't protected by the Windows Resource Protection feature, the feature reports the change in the CBS.log file.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kmcniel, kaushika
-ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update fails - installation stops with error, csstroubleshoot
+ms.custom:
+- sap:windows servicing,updates and features on demand\windows update fails - installation stops with error
+- pcy:WinComm Devices Deploy
 ---
 # The CBS.log file contains entries that some files aren't repaired even after you successfully run the SFC utility on a Windows Server based computer
 

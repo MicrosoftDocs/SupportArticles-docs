@@ -1,12 +1,14 @@
 ---
 title: UE-V registry settings
 description: Describes UE-V registry settings.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, jeffpatt
-ms.custom: sap:UEV\Agent\Other, csstroubleshoot
+ms.custom:
+- sap:uev\agent\other
+- pcy:WinComm User Experience
 ---
 # User Experience Virtualization (UE-V) registry settings
 

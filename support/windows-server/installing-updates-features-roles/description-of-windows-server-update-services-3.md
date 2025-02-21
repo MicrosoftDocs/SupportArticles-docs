@@ -1,12 +1,14 @@
 ---
 title: Description of the Windows Server Update Services 3.0 Service Pack 1 package
 description: Describes the Windows Server Update Services 3.0 Service Pack 1 package.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, edwardr, danalb, mandarg, oscarlee, davidhen, sudheer, sivsha, bmoore, cecils
-ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update configuration, settings and management, csstroubleshoot
+ms.custom:
+- sap:windows servicing,updates and features on demand\windows update configuration,settings and management
+- pcy:WinComm Devices Deploy
 ---
 # Description of the Windows Server Update Services 3.0 Service Pack 1 package
 

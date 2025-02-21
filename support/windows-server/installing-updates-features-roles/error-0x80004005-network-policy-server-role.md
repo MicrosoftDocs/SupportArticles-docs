@@ -1,12 +1,14 @@
 ---
 title: Fail to install Network Policy Server role
 description: Describes an issue in Windows Server 2008 R2 in which you cannot install the Network Policy Server role service and in which you cannot start the Network Policy Server service.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update fails - installation stops with error, csstroubleshoot
+ms.custom:
+- sap:windows servicing,updates and features on demand\windows update fails - installation stops with error
+- pcy:WinComm Devices Deploy
 ---
 # Error 0x80004005 when you try to install or start the Network Policy Server role service
 

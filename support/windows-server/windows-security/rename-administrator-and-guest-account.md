@@ -1,12 +1,14 @@
 ---
 title: Rename administrator and guest accounts
 description: Describes how to change the administrator account and guest account names by using Group Policy.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-lanac
-ms.custom: sap:Windows Security Technologies\Account lockouts, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\account lockouts
+- pcy:WinComm Directory Services
 ---
 # Rename the administrator and guest account in Windows Server 2003
 

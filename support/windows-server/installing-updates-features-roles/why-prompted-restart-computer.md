@@ -1,12 +1,14 @@
 ---
 title: Why may be prompted to restart computer
 description: Describes why you may be prompted to restart your computer when you install a Microsoft security update on a computer that is running a version of Microsoft Windows.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, rhensing
-ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update configuration, settings and management, csstroubleshoot
+ms.custom:
+- sap:windows servicing,updates and features on demand\windows update configuration,settings and management
+- pcy:WinComm Devices Deploy
 ---
 # Why you may be prompted to restart your computer after you install a security update on a Windows-based computer
 

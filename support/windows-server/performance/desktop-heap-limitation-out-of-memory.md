@@ -1,12 +1,14 @@
 ---
 title: Desktop heap limitation causes out of memory error
 description: This article describes the desktop heap limitation, and provides a method to modify the desktop heap size.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:System Performance\System Performance (slow, unresponsive, high CPU, resource leak), csstroubleshoot
+ms.custom:
+- sap:system performance\system performance (slow,unresponsive,high cpu,resource leak)
+- pcy:WinComm Performance
 ---
 # You may receive an error "Out of Memory" because of the desktop heap limitation
 

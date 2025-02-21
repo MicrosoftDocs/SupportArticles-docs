@@ -1,12 +1,14 @@
 ---
 title: Troubleshoot FRS and DFS
 description: Describes how to troubleshoot the File Replication Service and the Distributed File System
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Network Connectivity and File Sharing\File Replication Technologies (FRS and DFSR), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\file replication technologies (frs and dfsr)
+- pcy:WinComm Networking
 ---
 # Troubleshoot the File Replication Service and the Distributed File System
 

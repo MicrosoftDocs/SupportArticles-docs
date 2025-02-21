@@ -1,11 +1,13 @@
 ---
 title: TCP/IP port exhaustion troubleshooting
 description: Learn how to troubleshoot port exhaustion issues. Port exhaustion occurs when all the ports on a machine are used.
-ms.date: 10/11/2024
+ms.date: 01/15/2025
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.collection: highpri
-ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
+- pcy:WinComm Networking
 ms.reviewer: dansimp, shpune
 audience: itpro
 ---

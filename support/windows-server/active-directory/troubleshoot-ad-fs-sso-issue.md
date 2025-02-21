@@ -1,12 +1,14 @@
 ---
 title: ADFS SSO troubleshooting
 description: Introduce how to troubleshoot ADFS SSO issues.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Security Technologies\Active Directory Federation Services (AD FS) non-Azure-O365 issues, csstroubleshoot, has-azure-ad-ps-ref
+ms.custom:
+- sap:windows security technologies\active directory federation services (ad fs) non-azure-o365 issues",,"has-azure-ad-ps-ref"]
+- pcy:WinComm Directory Services
 ---
 # Troubleshoot SSO issues with Active Directory Federation Services (AD FS)
 

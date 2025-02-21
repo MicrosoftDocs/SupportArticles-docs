@@ -1,12 +1,14 @@
 ---
 title: Use Rsop.msc to gather computer policy
 description: Describes how to use the Resultant Set of Policy utility to gather only computer-specific policy information.
-ms.date: 04/29/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, TIMTHO
-ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstroubleshoot
+ms.custom:
+- sap:group policy\group policy management (gpmc or gpedit)
+- pcy:WinComm Directory Services
 ---
 # Use Resultant Set of Policy logging to gather computer policy information
 

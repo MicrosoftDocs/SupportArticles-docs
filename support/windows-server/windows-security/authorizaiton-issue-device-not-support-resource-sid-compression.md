@@ -1,12 +1,14 @@
 ---
 title: Resource SID Compression causes Authorization problems on devices
 description: Fixes an access denied error when accessing file shares hosted on devices that don't support Resource SID compression.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Security Technologies\Kerberos authentication, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\kerberos authentication
+- pcy:WinComm Directory Services
 ---
 # Resource SID Compression in Windows Server 2012 may cause Authorization problems on devices that don't support Resource SID compression
 

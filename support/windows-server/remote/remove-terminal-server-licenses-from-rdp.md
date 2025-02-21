@@ -1,12 +1,14 @@
 ---
 title: Remove Terminal Server licenses from a Remote Desktop Protocol (RDP) client
 description: Describes how to remove Terminal Server licenses from an RDP client.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Remote Desktop Services and Terminal Services\Licensing for Remote Desktop Services (Terminal Services), csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\licensing for remote desktop services (terminal services)
+- pcy:WinComm User Experience
 ---
 # Remove Terminal Server licenses from an RDP client
 

@@ -1,12 +1,14 @@
 ---
 title: Code 31 Microsoft Usbccid Smartcard Reader problem
 description: Provides a resolution for code 31 in Device Manager when Microsoft Usbccid Smartcard Reader is in a problem state.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, neilshen, v-lolang
-ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Smart card logon, csstroubleshoot
+ms.custom:
+- sap:certificates and public key infrastructure (pki)\smart card logon
+- pcy:WinComm Directory Services
 ---
 # Code 31 in Device Manager when Microsoft Usbccid Smartcard Reader is in a problem state
 

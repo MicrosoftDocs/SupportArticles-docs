@@ -1,12 +1,14 @@
 ---
 title: Default Core Parking behavior changes
 description: Describes the changes of the default behavior for Core Parking.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, match
-ms.custom: sap:Windows Device and Driver Management\Peripherals driver installation or update, csstroubleshoot
+ms.custom:
+- sap:windows device and driver management\peripherals driver installation or update
+- pcy:WinComm Devices Deploy
 ---
 # Windows Server 2012 R2 default Core Parking behavior changes
 

@@ -1,12 +1,14 @@
 ---
 title: Known issues for managing Group Policy clients
 description: Describes known issues that occur when you manage a Windows 10 Group Policy Client from a Windows Server 2012 R2 server.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
+ms.custom:
+- sap:active directory\user,computer,group,and object management
+- pcy:WinComm Directory Services
 ---
 # Known issues managing a Windows 10 Group Policy client in Windows Server 2012 R2
 

@@ -1,12 +1,14 @@
 ---
 title: User-based GPO settings aren't applied when signing in with shadow principals
 description: Helps resolve an issue in which user-based Group Policy Object (GPO) settings don't work with shadow principals.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, dennhu, tmaddala, v-lianna
-ms.custom: sap:Group Policy\Problems Applying Group Policy, csstroubleshoot, ikb2lmc
+ms.custom:
+- sap:group policy\problems applying group policy
+- pcy:WinComm Directory Services
 ---
 # User-based GPO settings aren't applied when signing in with shadow principals
 

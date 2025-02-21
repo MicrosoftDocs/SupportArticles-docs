@@ -1,12 +1,14 @@
 ---
 title: Support for booting from SAN
 description: Describes the supportability of having a Windows server boot from a Storage Area Network (SAN).
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:System Performance\Startup or Pre-logon Reliability (crash, errors, bug check or Blue Screen), csstroubleshoot
+ms.custom:
+- sap:system performance\startup or pre-logon reliability (crash,errors,bug check or blue screen)
+- pcy:WinComm Performance
 ---
 # Support for booting from a Storage Area Network (SAN)
 

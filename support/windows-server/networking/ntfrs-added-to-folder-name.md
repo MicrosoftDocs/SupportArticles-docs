@@ -1,12 +1,14 @@
 ---
 title: FRS adds _NTFRS_<xxxxxxxx> to folder names
 description: Helps fix an issue in which File Replication Service (FRS) adds "NTFRS_xxxxxxxx" to a folder name.
-ms.date: 03/06/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Network Connectivity and File Sharing\File Replication Technologies (FRS and DFSR), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\file replication technologies (frs and dfsr)
+- pcy:WinComm Networking
 ---
 # FRS appends "\_*NTFRS*\_\<xxxxxxxx>" to folder names
 

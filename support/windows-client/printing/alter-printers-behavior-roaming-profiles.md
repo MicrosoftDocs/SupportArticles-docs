@@ -1,12 +1,14 @@
 ---
 title: Alter printers that roam with roaming profiles
 description: Describes how to alter a behavior of printers that roams with roaming profiles.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, eugenev, austinm
-ms.custom: sap:Print, Fax, and Scan\Print Configuration or Management, csstroubleshoot
+ms.custom:
+- sap:print,fax,and scan\print configuration or management
+- pcy:WinComm User Experience
 ---
 # How to Alter Behavior of Printers That Roam with Roaming Profiles
 

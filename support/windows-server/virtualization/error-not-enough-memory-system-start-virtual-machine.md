@@ -1,12 +1,14 @@
 ---
 title: Virtual machine that's running on Windows Server 2012 R2 doesn't start
 description: Describes an issue that prevents a Windows Server 2012 R2-based virtual machine from running. Occurs even though Task Manager indicates that there's sufficient available memory. A workaround is provided.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Virtualization and Hyper-V\Virtual machine performance, csstroubleshoot
+ms.custom:
+- sap:virtualization and hyper-v\virtual machine performance
+- pcy:WinComm Storage High Avail
 ---
 # Virtual machine that's running on Windows Server 2012 R2 doesn't start
 

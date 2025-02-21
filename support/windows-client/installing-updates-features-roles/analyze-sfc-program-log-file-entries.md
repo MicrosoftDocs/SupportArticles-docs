@@ -1,12 +1,14 @@
 ---
 title: Analyze log file entries that SFC.exe generates
 description: Describes how to use the SFC.exe program to help diagnose problems that are caused by missing or damaged operating system files.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update fails - installation stops with error, csstroubleshoot
+ms.custom:
+- sap:windows servicing,updates and features on demand\windows update fails - installation stops with error
+- pcy:WinComm Devices Deploy
 ---
 # Analyze the log file entries that *SFC.exe* generates in Windows
 

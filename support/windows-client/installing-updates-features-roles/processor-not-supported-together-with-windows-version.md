@@ -1,12 +1,14 @@
 ---
 title: The processor is not supported together with the Windows version error
 description: Discusses issues in which you receive the processor is not supported together with the Windows version that you are currently using error or the 80240037 error code when you scan or download Windows updates.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-jesits
-ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update configuration, settings and management, csstroubleshoot
+ms.custom:
+- sap:windows servicing,updates and features on demand\windows update configuration,settings and management
+- pcy:WinComm Devices Deploy
 adobe-target: true
 ---
 

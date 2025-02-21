@@ -1,12 +1,14 @@
 ---
 title: Troubleshoot cluster issue with Event ID 1135
 description: Describes how to troubleshoot the Cluster Service Startup issue with Event ID 1135.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-lianna
-ms.custom: sap:Clustering and High Availability\Cluster service fails to start, csstroubleshoot
+ms.custom:
+- sap:clustering and high availability\cluster service fails to start
+- pcy:WinComm Storage High Avail
 ---
 # Troubleshoot cluster issue with Event ID 1135
 

@@ -1,12 +1,14 @@
 ---
 title: Error 0x800f0922 when the Multipath I/O (MPIO) feature installation fails
 description: Resolves an issue in which the Multipath I/O (MPIO) feature installation fails.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, sugan, vineetm
-ms.custom: sap:Windows Servicing, Updates and Features on Demand\Issues installing Features on Demand(FoD), csstroubleshoot
+ms.custom:
+- sap:windows servicing,updates and features on demand\issues installing features on demand(fod)
+- pcy:WinComm Devices Deploy
 ---
 # Error 0x800f0922 when the MPIO feature installation fails
 

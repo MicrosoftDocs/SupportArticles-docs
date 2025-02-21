@@ -1,12 +1,14 @@
 ---
 title: Secure Channel Problems Detected
 description: Provides a solution to detected secure channel problems.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Security Technologies\Netlogon including Secure Channel and DC Locator issues, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\netlogon including secure channel and dc locator issues
+- pcy:WinComm Directory Services
 ---
 # Secure channel problems detected
 

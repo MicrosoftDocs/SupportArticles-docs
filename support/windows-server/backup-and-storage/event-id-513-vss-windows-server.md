@@ -1,12 +1,14 @@
 ---
 title: Event ID 513 when running VSS in Windows Server
 description: Provides a workaround to Event ID 513 when running VSS in Windows Server.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-jesits, keyata
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Volume Shadow Copy Service (VSS), csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\volume shadow copy service (vss)
+- pcy:WinComm Storage High Avail
 ---
 # Event ID 513 when running VSS in Windows Server
 

@@ -1,12 +1,14 @@
 ---
 title: Suggested hotfixes for WMI issues
 description: Provides suggested hotfixes for Windows Management Intrumentation (WMI) related issue on Windows platforms.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:System Management Components\WMI management and troubleshooting, csstroubleshoot
+ms.custom:
+- sap:system management components\wmi management and troubleshooting
+- pcy:WinComm User Experience
 ---
 # Suggested hotfixes for WMI related issue on Windows platforms
 

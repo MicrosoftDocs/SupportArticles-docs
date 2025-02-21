@@ -1,12 +1,14 @@
 ---
 title: Event ID 1222 when you create failover cluster
 description: Resolves an issue in which event ID 1222 is generated in the System log when you create a Windows Server 2012 failover cluster.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: robsmi, kaushika, qianyu
-ms.custom: sap:Clustering and High Availability\Setup and configuration of clustered services and applications, csstroubleshoot
+ms.custom:
+- sap:clustering and high availability\setup and configuration of clustered services and applications
+- pcy:WinComm Storage High Avail
 ---
 # Event ID 1222 when you create a Windows Server 2012 failover cluster
 

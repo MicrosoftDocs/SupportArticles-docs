@@ -1,12 +1,14 @@
 ---
 title: How to rebuild or move an MSDTC installation for use with a SQL failover cluster
 description: Describes how to rebuild a broken MSDTC installation for use with a failover clustered SQL Server installation, and how to move the MSDTC clustered resource to a new group.
-ms.date: 11/20/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika,jdeffenbaugh
-ms.custom: sap:Application Technologies and Compatibility\DTC startup, configuration, connectivity, and cluster, csstroubleshoot
+ms.custom:
+- sap:application technologies and compatibility\dtc startup,configuration,connectivity,and cluster
+- pcy:WinComm User Experience
 ---
 # How to rebuild or move an MSDTC installation for use with a SQL failover cluster
 

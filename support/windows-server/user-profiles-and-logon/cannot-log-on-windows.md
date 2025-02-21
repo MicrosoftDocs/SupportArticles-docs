@@ -1,12 +1,14 @@
 ---
 title: Can't log on to Windows
 description: Describes an issue where you're prompted for user name and password repeatedly when logging on Windows.
-ms.date: 10/18/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, raonwubu
-ms.custom: sap:User Logon and Profiles\Service Account and Interactive User Logon Issues and Credential Providers, csstroubleshoot
+ms.custom:
+- sap:user logon and profiles\service account and interactive user logon issues and credential providers
+- pcy:WinComm Directory Services
 ---
 # Windows logs on and logs off immediately
 

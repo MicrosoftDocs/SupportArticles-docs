@@ -1,12 +1,14 @@
 ---
 title: This computer name is invalid error when you try to shadow a remote session in Windows Server 2012 R2
 description: Describes an issue that occurs when you try to remotely control a remote desktop session in a Virtual Desktop Infrastructure (VDI) collection. Provides a resolution.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: rkiran, jerrycif, kaushika
-ms.custom: sap:Remote Desktop Services and Terminal Services\Virtual Desktop Infrastructure (VDI), csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\virtual desktop infrastructure (vdi)
+- pcy:WinComm User Experience
 ---
 # Error message when you try to shadow a remote session in Windows Server 2012 R2: This computer name is invalid
 

@@ -666,6 +666,11 @@
         "redirect_document_id": true
       },
       {
+        "source_path": "virtual-machines/linux/linux-kernel-fails-restart-provision.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/welcome-virtual-machines-linux",
+        "redirect_document_id": false
+      },
+      {
         "source_path": "active-directory/adal-authenticate-android-devices-fail.md",
         "redirect_url": "/troubleshoot/azure/entra-id/mfa/adal-authenticate-android-devices-fail",
         "redirect_document_id": true
@@ -6274,6 +6279,18 @@
         "source_path": "azure-kubernetes/connectivity/stale-watch-azure-ad-pod-identity-nmi-status-500.md",
         "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-monitor/app-insights/availability/profiler-troubleshooting.md",
+        "redirect_url": "/azure/azure-monitor/profiler/profiler-troubleshooting"
+      },
+      {
+        "source_path": "azure-monitor/app-insights/availability/code-optimizations-troubleshooting.md",
+        "redirect_url": "/azure/azure-monitor/insights/code-optimizations-troubleshoot"
+      },
+      {
+        "source_path": "azure-monitor/app-insights/debug/snapshot-debugger-troubleshoot.md",
+        "redirect_url": "/azure/azure-monitor/snapshot-debugger/snapshot-debugger-troubleshoot"
       }
   ]
 }

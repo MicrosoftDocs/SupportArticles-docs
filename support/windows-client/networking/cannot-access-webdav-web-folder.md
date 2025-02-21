@@ -1,12 +1,14 @@
 ---
 title: Can't access WebDAV Web folder
 description: Describes how to edit the FileAttributesLimitInBytes registry entry so that you can access a Web folder that contains many files in Windows.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, waltere
-ms.custom: sap:Network Connectivity and File Sharing\WebClient and WebDAV, csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\webclient and webdav
+- pcy:WinComm Networking
 ---
 # You can't access a WebDAV Web folder from a Windows-based client computer
 

@@ -1,12 +1,14 @@
 ---
 title: Jet database errors and recovery steps
 description: Introduces Jet database error messages and troubleshooting steps.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-jeffbo
-ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
+ms.custom:
+- sap:active directory\active directory replication and topology
+- pcy:WinComm Directory Services
 ---
 # Troubleshoot Jet database errors and recovery steps
 

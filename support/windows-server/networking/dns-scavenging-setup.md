@@ -1,12 +1,14 @@
 ---
 title: Don't be afraid of DNS scavenging, just be patient
 description: Discusses how DNS scavenging is setup and gives an example of setting scavenging up on a pre-existing zone.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, anrath, joshj, v-lianna
-ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot, ikb2lmc
+ms.custom:
+- sap:network connectivity and file sharing\dns
+- pcy:WinComm Networking
 ---
 # DNS scavenging setup
 

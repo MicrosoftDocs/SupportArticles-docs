@@ -1,12 +1,14 @@
 ---
 title: Event ID 7000 or 7026 in System log
 description: Describes a problem in which event ID 7000 or event ID 7026 may be logged after you start a computer that's running Windows.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Device and Driver Management\Peripherals driver installation or update, csstroubleshoot
+ms.custom:
+- sap:windows device and driver management\peripherals driver installation or update
+- pcy:WinComm Devices Deploy
 ---
 # Event ID 7000 or 7026 is logged in the System log on a computer that's running Windows
 

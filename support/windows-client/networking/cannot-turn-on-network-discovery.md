@@ -1,12 +1,14 @@
 ---
 title: Can't turn on Network Discovery
 description: Describes an issue that changes to the Advanced sharing settings in **Network and Sharing Center** aren't saved. So you can't turn on Network Discovery.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, ahamad, vipekkan
-ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
+- pcy:WinComm Networking
 ---
 # You can't turn on Network Discovery in Network and Sharing Center
 

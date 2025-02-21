@@ -4,8 +4,8 @@ description: Troubleshoots an issue where a nested grid doesn't display data in 
 ms.reviewer: tapanm, moroch, dinusc
 ms.custom: sap:Using grids and lists in model-driven apps
 ms.date: 08/16/2024
-author: fikaradz
-ms.author: fikaradz
+author: shwetamurkute
+ms.author: smurkute
 ---
 # A nested grid doesn't display data in a Power Apps model-driven app
 

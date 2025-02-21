@@ -1,14 +1,16 @@
 ---
-title: An internal error has occurred 
+title: An internal error has occurred
 description: Helps troubleshoot An internal error has occurred error when connecting to a remote machine.
-ms.date: 03/01/2024
+ms.date: 01/15/2025
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-lianna
-ms.custom: sap:Remote Desktop Services and Terminal Services\Web access (includes RemoteApp and desktop connections), csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\web access (includes remoteapp and desktop connections)
+- pcy:WinComm User Experience
 ---
 # "An internal error has occurred" when connecting to a remote machine
 

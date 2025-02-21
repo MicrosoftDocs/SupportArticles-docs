@@ -1,12 +1,14 @@
 ---
 title: Parameter is incorrect
 description: Provides a solution to an error when you try to enable BitLocker if you don't have a separate active partition.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, joscon, manojse
-ms.custom: sap:Windows Security Technologies\BitLocker, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\bitlocker
+- pcy:WinComm Devices Deploy
 ---
 # Parameter is incorrect error message when you try to enable  BitLocker if you don't have a separate active partition in Windows Server 2008 Core and Windows 2008 R2 Core Edition
 

@@ -1,12 +1,14 @@
 ---
 title: Use Ocsetup.exe to install/remove optional components
 description: Describes the Windows optional component setup (Ocsetup.exe) tool.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-jomcc
-ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
+ms.custom:
+- sap:windows setup,upgrade and deployment\installing or upgrading windows
+- pcy:WinComm Devices Deploy
 ---
 # How to use the Ocsetup.exe tool to install or to remove Windows optional components in Windows Vista
 

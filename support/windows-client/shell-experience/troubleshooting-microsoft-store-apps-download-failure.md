@@ -1,11 +1,13 @@
 ---
 title: Troubleshoot Microsoft Store app download failures
 description: Provides guidance for troubleshooting Microsoft Store app download and update failures.
-ms.date: 08/15/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.custom: sap:Windows Desktop and Shell Experience\Modern, Inbox and Microsoft Store Apps, csstroubleshoot
+ms.custom:
+- sap:windows desktop and shell experience\modern,inbox and microsoft store apps
+- pcy:WinComm User Experience
 ms.reviewer: winciccore, warrenw
 ---
 # Troubleshoot Microsoft Store app download failures

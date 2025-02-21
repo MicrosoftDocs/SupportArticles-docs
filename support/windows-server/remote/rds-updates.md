@@ -1,12 +1,14 @@
 ---
 title: Recommended updates for RDS in Windows Server 2012 R2
 description: Describes the hotfixes and updates that are currently available for Remote Desktop Services in Windows Server 2012 R2.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, darank
-ms.custom: sap:Remote Desktop Services and Terminal Services\Deployment, configuration, and management of Remote Desktop Services infrastructure, csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\deployment,configuration,and management of remote desktop services infrastructure
+- pcy:WinComm User Experience
 ---
 # Recommended hotfixes and updates for Remote Desktop Services in Windows Server 2012 R2
 

@@ -1,12 +1,14 @@
 ---
 title: Information about Group Policy Preferences events
 description: Provides some information about Group Policy Preferences events.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Group Policy\Security filtering and item-level targeting, csstroubleshoot
+ms.custom:
+- sap:group policy\security filtering and item-level targeting
+- pcy:WinComm Directory Services
 ---
 # Information about Group Policy Preferences events
 

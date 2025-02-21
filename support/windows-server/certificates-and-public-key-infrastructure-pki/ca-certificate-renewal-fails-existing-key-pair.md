@@ -1,12 +1,14 @@
 ---
 title: CA certificate renewal fails when using a KSP provider
 description: Helps resolve an issue where the CA certificate renewal with the existing public and private key pair fails when using a KSP provider.
-ms.date: 09/30/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, flbelea, v-lianna
-ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory Certificate Services (ADCS), csstroubleshoot
+ms.custom:
+- sap:certificates and public key infrastructure (pki)\active directory certificate services (adcs)
+- pcy:WinComm Directory Services
 ---
 # CA certificate renewal with the existing public and private key pair fails when using a KSP provider
 

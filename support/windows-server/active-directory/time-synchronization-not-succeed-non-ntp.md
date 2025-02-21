@@ -1,12 +1,14 @@
 ---
 title: Time synchronization may not succeed
 description: Describes a problem that may occur when you try to use a non-Windows NTP time server as a time source. Provides steps to let you synchronize to the non-Windows NTP server.
-ms.date: 10/12/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\Windows Time Service configuration, accuracy, and synchronization, csstroubleshoot
+ms.custom:
+- sap:active directory\windows time service configuration,accuracy,and synchronization
+- pcy:WinComm Directory Services
 ---
 # Time synchronization may not succeed when you try to synchronize with a non-Windows NTP server  
 

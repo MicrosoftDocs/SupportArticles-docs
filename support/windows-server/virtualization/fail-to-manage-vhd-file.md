@@ -1,12 +1,14 @@
 ---
 title: Error when you manage a VHD file
 description: Provides a solution to an error that occurs when you create a virtual machine in Hyper-V Manager.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Virtualization and Hyper-V\Virtual machine creation, csstroubleshoot
+ms.custom:
+- sap:virtualization and hyper-v\virtual machine creation
+- pcy:WinComm Storage High Avail
 ---
 # Error when you manage a VHD file in Windows Server: "A Virtual Disk Provider for the specified file was not found"
 

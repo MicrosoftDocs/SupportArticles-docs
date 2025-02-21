@@ -1,12 +1,14 @@
 ---
 title: ERROR_INVALID_DATA error after installing Windows updates
 description: Helps resolve the ERROR_INVALID_DATA error at system startup after installing Windows updates.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, hamansoor, v-lianna
-ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update fails - installation stops with error, csstroubleshoot, ikb2lmc
+ms.custom:
+- sap:windows servicing,updates and features on demand\windows update fails - installation stops with error
+- pcy:WinComm Devices Deploy
 ---
 # ERROR_INVALID_DATA error at startup after installing updates
 

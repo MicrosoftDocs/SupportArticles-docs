@@ -1,12 +1,14 @@
 ---
 title: Troubleshoot AD replication error 8589
 description: Describes how to troubleshoot AD operations failure with Win32 error 8589.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, apurvash, justinha, justintu
-ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
+ms.custom:
+- sap:active directory\user,computer,group,and object management
+- pcy:WinComm Directory Services
 ---
 # Troubleshooting AD Replication error 8589: The DS cannot derive a service principal name (SPN)
 

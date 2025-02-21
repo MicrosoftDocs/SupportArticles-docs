@@ -1,12 +1,14 @@
 ---
 title: Error messages when a cluster group online
 description: Describes how to resolve the error messages when you try to bring a cluster group online after a cluster stops.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Clustering and High Availability\Cannot bring a resource online, csstroubleshoot
+ms.custom:
+- sap:clustering and high availability\cannot bring a resource online
+- pcy:WinComm Storage High Avail
 ---
 # Error messages occur if you try to bring a cluster group online after a cluster stops
 

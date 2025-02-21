@@ -1,12 +1,14 @@
 ---
 title: How to move a certification authority to another server
 description: Describes how to move a certification authority (CA) to a different server in Windows Server 2003 and in Windows 2000 Server.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, dhook
-ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory Certificate Services (ADCS), csstroubleshoot
+ms.custom:
+- sap:certificates and public key infrastructure (pki)\active directory certificate services (adcs)
+- pcy:WinComm Directory Services
 ---
 # How to move a certification authority to another server
 

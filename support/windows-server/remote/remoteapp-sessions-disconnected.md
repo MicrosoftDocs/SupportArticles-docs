@@ -1,12 +1,14 @@
 ---
 title: RemoteApp sessions are disconnected
 description: Resolves an issue where RemoteApp sessions are disconnected when all RemoteApp windows and user-launched notification area icons are closed.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Remote Desktop Services and Terminal Services\Web access (includes RemoteApp and desktop connections), csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\web access (includes remoteapp and desktop connections)
+- pcy:WinComm User Experience
 ---
 # RemoteApp sessions are disconnected when all RemoteApp windows and user-launched notification area icons are closed
 

@@ -1,12 +1,14 @@
 ---
 title: Disk Event ID 154
 description: Fixes event ID 154 that occurs on a computer that's connected to a storage array such as Fibre Channel (FC) storage.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: nbassett, kaushika
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Data corruption and disk errors, csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\data corruption and disk errors
+- pcy:WinComm Storage High Avail
 ---
 # Disk Event ID 154: The IO Operation failed due to a hardware error
 

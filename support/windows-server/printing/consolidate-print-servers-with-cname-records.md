@@ -1,12 +1,14 @@
 ---
 title: Consolidate print servers by using CNAME records
 description: Describes how to consolidate print servers in Windows Server 2003 with minimal effect on clients by using DNS Alias (CNAME) records. You can use this method if clients use DNS as a name resolution method.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Print, Fax, and Scan\Print Configuration or Management, csstroubleshoot
+ms.custom:
+- sap:print,fax,and scan\print configuration or management
+- pcy:WinComm User Experience
 ---
 # Consolidate print servers by using DNS alias (CNAME) records
 

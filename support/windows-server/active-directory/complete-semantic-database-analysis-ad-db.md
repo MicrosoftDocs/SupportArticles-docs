@@ -1,12 +1,14 @@
 ---
 title: How to complete a semantic database analysis for the Active Directory database by using Ntdsutil.exe
 description: This step-by-step article describes how to run the semantic checker on the Active Directory database.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\Active Directory Domain Controller specific boot failures, csstroubleshoot
+ms.custom:
+- sap:active directory\active directory domain controller specific boot failures
+- pcy:WinComm Directory Services
 ---
 # How to complete a semantic database analysis for the Active Directory database by using Ntdsutil.exe
 

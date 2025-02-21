@@ -1,12 +1,14 @@
 ---
 title: You may experience problems when you rename sites in the Active Directory forest
 description: Describes the problems that you may experience when you rename sites in the Active Directory forest.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
+ms.custom:
+- sap:active directory\active directory replication and topology
+- pcy:WinComm Directory Services
 ---
 # You may experience problems when you rename sites in the Active Directory forest
 

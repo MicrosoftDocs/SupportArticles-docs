@@ -1,12 +1,14 @@
 ---
 title: Remove this item if it is no longer applied option
 description: Describes the behavior of the Remove this item if it is no longer applied option in Group Policy preferences.
-ms.date: 04/29/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstroubleshoot
+ms.custom:
+- sap:group policy\group policy management (gpmc or gpedit)
+- pcy:WinComm Directory Services
 ---
 # "Remove this item if it is no longer applied" option behavior in Group Policy preferences
 

@@ -1,12 +1,14 @@
 ---
 title: Troubleshoot DirectAccess
 description: Provides information about troubleshooting DirectAccess deployments in Windows Server 2016.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, brianlic, jgerend, v-lianna
-ms.custom: sap:Network Connectivity and File Sharing\Remote access (DirectAccess), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\remote access (directaccess)
+- pcy:WinComm Networking
 ms.assetid: 61040e19-5960-4eb0-b612-d710627988f7
 ---
 # Troubleshoot DirectAccess

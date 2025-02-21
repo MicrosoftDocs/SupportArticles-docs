@@ -1,7 +1,7 @@
 ---
 title: Tenant attach components fail to connect to backend cloud service
 description: Provides a solution to an issue where Configuration Manager components for tenant attach fail to connect to the backend cloud service.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 ms.reviewer: kaushika, brianhun, umaikhan, v-weizhu
 ms.custom: sap:Cloud Services\Cloud Attach
 ---

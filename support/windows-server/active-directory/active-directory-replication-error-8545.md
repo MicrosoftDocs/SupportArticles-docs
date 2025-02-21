@@ -1,12 +1,14 @@
 ---
 title: Troubleshoot AD replication error 8545
 description: Describes an issue that causes Active Directory replication to fail for one or more partitions and trigger error 8545. This issue occurs in Windows Server 2012 and earlier. A resolution is provided.
-ms.date: 05/27/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
+ms.custom:
+- sap:active directory\active directory replication and topology
+- pcy:WinComm Directory Services
 ---
 # Active Directory replication error 8545: "Replication update could not be applied"
 

@@ -1,12 +1,14 @@
 ---
 title: VersionNT value for Windows 10 and Windows Server 2016
 description: Provides the VersionNT value for Windows 10 and Windows Server 2016.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Application Technologies and Compatibility\MSI and MSIX, csstroubleshoot
+ms.custom:
+- sap:application technologies and compatibility\msi and msix
+- pcy:WinComm User Experience
 ---
 # VersionNT value for Windows 10, Windows Server 2016, and Windows Server 2019
 

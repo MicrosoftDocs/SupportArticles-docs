@@ -1,12 +1,14 @@
 ---
 title: Language packs no longer available
 description: Discusses that previously installed language packs are no longer available after you upgrade from Windows 8 to Windows 8.1. Provides a resolution.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, warrenw, jerrycif, ianham
-ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
+ms.custom:
+- sap:windows setup,upgrade and deployment\installing or upgrading windows
+- pcy:WinComm Devices Deploy
 ---
 # Language packs are no longer available after upgrading
 

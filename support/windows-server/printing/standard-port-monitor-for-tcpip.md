@@ -1,12 +1,14 @@
 ---
 title: Standard port monitor for TCP/IP
 description: Describes how the standard port monitor works in Windows Server 2003 and compares it with the LPR port monitor.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-dgit
-ms.custom: sap:Print, Fax, and Scan\Print Configuration or Management, csstroubleshoot
+ms.custom:
+- sap:print,fax,and scan\print configuration or management
+- pcy:WinComm User Experience
 ---
 # The standard port monitor for TCP/IP
 

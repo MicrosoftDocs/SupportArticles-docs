@@ -1,12 +1,14 @@
 ---
 title: Fail to delete a record from a DNS zone
 description: Explains that zone information on a DNS server can't be deleted. You must set full control permissions for DnsAdmins security group.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\dns
+- pcy:WinComm Networking
 ---
 # Error when you try delete a record from a DNS zone: The record cannot be deleted
 

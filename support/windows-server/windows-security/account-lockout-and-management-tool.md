@@ -1,12 +1,14 @@
 ---
 title: Introduction to Account Lockout and Management Tools
 description: Introduces Account Lockout and Management Tools for Windows Server.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Security Technologies\Account lockouts, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\account lockouts
+- pcy:WinComm Directory Services
 ---
 # Introduction to Account Lockout and Management Tools
 

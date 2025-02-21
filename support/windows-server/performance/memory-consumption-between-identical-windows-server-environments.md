@@ -1,12 +1,14 @@
 ---
 title: Troubleshoot memory consumption between identical Windows Server environments
 description: Describes how to use Performance Monitor to measure and compare memory consumption between identical server environments.
-ms.date: 08/02/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika,5x5perf
-ms.custom: sap:System Performance\Performance tools (Task Manager, Perfmon, WSRM, and WPA), csstroubleshoot
+ms.custom:
+- sap:system performance\performance tools (task manager,perfmon,wsrm,and wpa)
+- pcy:WinComm Performance
 ---
 # Troubleshoot memory consumption between identical Windows Server environments
 

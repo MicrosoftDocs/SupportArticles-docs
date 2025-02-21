@@ -1,12 +1,14 @@
 ---
 title: Access computer after administrator account is disabled
 description: Describes how to access your computer by using the Administrator account after you disable the local Administrator account.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Security Technologies\Account lockouts, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\account lockouts
+- pcy:WinComm Directory Services
 ---
 # How to access the computer after you disable the administrator account
 

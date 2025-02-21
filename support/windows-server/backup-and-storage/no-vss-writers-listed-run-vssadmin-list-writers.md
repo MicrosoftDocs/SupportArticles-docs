@@ -1,12 +1,14 @@
 ---
 title: No VSS writers are listed when you run the vssadmin list writers command in Windows Server
 description: Fixes an issue where no VSS writers are listed when you run the "vssadmin list writers" command and events are logged.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: jeffpatt, kaushika
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Configuring and using Windows Backup or other recovery, csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\configuring and using windows backup or other recovery
+- pcy:WinComm Storage High Avail
 ---
 # No VSS writers are listed when you run the vssadmin list writers command in Windows Server
 

@@ -1,12 +1,14 @@
 ---
 title: Non-compliant USB 3.0 devices don't function
 description: Resolves an issue where some non-compliant USB 3.0 devices don't function when connected to USB 3.0 ports.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Device and Driver Management\Peripherals driver installation or update, csstroubleshoot
+ms.custom:
+- sap:windows device and driver management\peripherals driver installation or update
+- pcy:WinComm Devices Deploy
 ---
 # Some non-compliant USB 3.0 devices may not function when connected to USB 3.0 ports in Windows 8
 

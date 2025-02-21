@@ -1,12 +1,14 @@
 ---
 title: Configure Wi-Fi Sense and Paid Wi-Fi Services
 description: Discusses the methods to configure Wi-Fi Sense and Paid Wi-Fi Services on Windows 10 Version 1607 computers that are deployed in an enterprise.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Network Connectivity and File Sharing\Wireless (802.1x, Bluetooth, Miracast, Mobile Broadband), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\wireless (802.1x,bluetooth,miracast,mobile broadband)
+- pcy:WinComm Networking
 ---
 # How to configure Wi-Fi Sense and Paid Wi-Fi Services on Windows 10 in an enterprise
 

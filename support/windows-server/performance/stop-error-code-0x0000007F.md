@@ -1,12 +1,14 @@
 ---
 title: Stop error code 0x0000007F
 description: You receive a Stop error 0000007F (Error 0x7F, UNEXPECTED KERNEL MODE TRAP) error message, or your computer unexpectedly restarts.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, imranu
-ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshoot
+ms.custom:
+- sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot)
+- pcy:WinComm Performance
 ---
 # You receive a "Stop error code 0x0000007F (UNEXPECTED_KERNEL_MODE_TRAP)" error message, or your computer unexpectedly restarts
 

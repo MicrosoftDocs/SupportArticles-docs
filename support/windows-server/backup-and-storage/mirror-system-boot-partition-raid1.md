@@ -1,12 +1,14 @@
 ---
 title: Mirror the system and boot partition
 description: Describes how to mirror the system and boot partition (RAID1).
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Partition and volume management, csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\partition and volume management
+- pcy:WinComm Storage High Avail
 ---
 # How to mirror the system and boot partition (RAID1) 
 

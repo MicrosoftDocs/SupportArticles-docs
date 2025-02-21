@@ -1,12 +1,14 @@
 ---
 title: Can't install .NET Framework 3.5 on OEM Windows installation
 description: Works around an issue in which you cannot install the .NET Framework 3.5 on an OEM Windows installation. This issue occurs when you cannot access the public Internet.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, match, chadbee, v-miand3
-ms.custom: sap:Windows Servicing, Updates and Features on Demand\Issues installing Features on Demand(FoD), csstroubleshoot
+ms.custom:
+- sap:windows servicing,updates and features on demand\issues installing features on demand(fod)
+- pcy:WinComm Devices Deploy
 ---
 # Can't install the .NET Framework 3.5 without a public Internet environment on an OEM Windows installation
 

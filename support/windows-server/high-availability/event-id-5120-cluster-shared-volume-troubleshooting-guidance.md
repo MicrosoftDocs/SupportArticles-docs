@@ -1,13 +1,15 @@
 ---
 title: Event ID 5120 Cluster Shared Volume troubleshooting guidance
 description: Provides guidance for finding the root cause of Event 5120 Cluster Shared Volume.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.custom: sap:Clustering and High Availability\Cluster Shared Volume (CSV), csstroubleshoot
+ms.custom:
+- sap:clustering and high availability\cluster shared volume (csv)
+- pcy:WinComm Storage High Avail
 ms.reviewer: kaushika
 ---
 # Event ID 5120 Cluster Shared Volume troubleshooting guidance

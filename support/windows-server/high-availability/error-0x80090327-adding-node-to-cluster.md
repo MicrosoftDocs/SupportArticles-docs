@@ -1,12 +1,14 @@
 ---
 title: Error 0x80090327 when adding a node to a cluster
 description: Provides a solution to fix error 0x80090327 that occurs when you add a node to a cluster.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, vlvasque, shasankp, ansol, v-lianna
-ms.custom: sap:Clustering and High Availability\Initial Cluster Creation or Adding node, csstroubleshoot, ikb2lmc
+ms.custom:
+- sap:clustering and high availability\initial cluster creation or adding node
+- pcy:WinComm Storage High Avail
 ---
 # Error 0x80090327 when adding a node to a cluster
 

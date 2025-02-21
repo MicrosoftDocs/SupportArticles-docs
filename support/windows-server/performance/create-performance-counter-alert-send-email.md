@@ -1,12 +1,14 @@
 ---
 title: Create performance counter alert and send email
 description: Describes how to create performance counter alert and send email when the alert is triggered.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:System Performance\Performance tools (Task Manager, Perfmon, WSRM, and WPA), csstroubleshoot
+ms.custom:
+- sap:system performance\performance tools (task manager,perfmon,wsrm,and wpa)
+- pcy:WinComm Performance
 ---
 # Create performance counter alert and send email when the alert is triggered
 

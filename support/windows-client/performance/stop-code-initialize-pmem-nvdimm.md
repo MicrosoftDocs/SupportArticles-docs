@@ -1,12 +1,14 @@
 ---
 title: Stop code SYSTEM SERVICE EXCEPTION when initializing PMem or NVDIMM
 description: Provides a method to avoid the stop code SYSTEM SERVICE EXCEPTION when you try to initialize PMem or NVDIMM in Windows.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-anfiro, coma, shthomps, scolee
-ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshoot
+ms.custom:
+- sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot)
+- pcy:WinComm Performance
 ---
 # Stop code SYSTEM SERVICE EXCEPTION when initializing PMem or NVDIMM in Windows
 

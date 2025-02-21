@@ -1,12 +1,14 @@
 ---
 title: Windows Server printer redirection isn't working
 description: Discusses an issue in which the printer redirection isn't working and no event IDs occur.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Remote Desktop Services and Terminal Services\Printing (includes redirection), csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\printing (includes redirection)
+- pcy:WinComm User Experience
 ---
 # Windows Server printer redirection isn't working
 

@@ -1,12 +1,14 @@
 ---
 title: NTFRS error event 13559 intermittently and replication stops
 description: Describes a problem where NTFRS runs into a fatal error communicating with the file system sporadically.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Network Connectivity and File Sharing\File Replication Technologies (FRS and DFSR), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\file replication technologies (frs and dfsr)
+- pcy:WinComm Networking
 ---
 # NTFRS error event 13559 intermittently and replication stops
 

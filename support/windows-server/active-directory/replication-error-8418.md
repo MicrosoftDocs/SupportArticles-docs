@@ -1,12 +1,14 @@
 ---
 title: Troubleshooting replication error 8418
 description: Helps troubleshoot Active Directory replication error 8418.
-ms.date: 05/27/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
+ms.custom:
+- sap:active directory\active directory replication and topology
+- pcy:WinComm Directory Services
 ---
 # Troubleshooting AD Replication error 8418: The replication operation failed because of a schema mismatch between the servers involved
 

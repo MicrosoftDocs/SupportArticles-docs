@@ -1,12 +1,14 @@
 ---
 title: System logs events that specify Event ID 640
 description: Describes a situation in which system logs many instances of Event ID 640
-ms.date: 07/16/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, jeffhugh
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Data corruption and disk errors, csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\data corruption and disk errors
+- pcy:WinComm Storage High Avail
 ---
 # System logs multiple events that specify Event ID 640
 

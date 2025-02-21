@@ -1,12 +1,14 @@
 ---
 title: Internet firewalls prevent file sharing
 description: Explains that a firewall may keep you from searching or sharing files with other computers on a home network.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Network Connectivity and File Sharing\Windows Firewall with Advanced Security (WFAS), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\windows firewall with advanced security (wfas)
+- pcy:WinComm Networking
 ---
 # Internet firewalls can prevent browsing and file sharing
 

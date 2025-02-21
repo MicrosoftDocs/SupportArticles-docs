@@ -1,12 +1,14 @@
 ---
 title: Scripts to list all running WMI providers
 description: Provides a script to list all running WMI providers.
-ms.date: 06/25/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, gbrag, v-lianna
-ms.custom: sap:System Management Components\WMI management and troubleshooting, csstroubleshoot
+ms.custom:
+- sap:system management components\wmi management and troubleshooting
+- pcy:WinComm User Experience
 ---
 # Scripts: List all running WMI providers
 

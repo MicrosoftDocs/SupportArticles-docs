@@ -1,12 +1,14 @@
 ---
 title: Wireless devices disabled after Airplane mode is off
 description: Discusses that wireless devices are disabled after you turn off Airplane Mode in Windows 8.1 or Windows 8. Provides a workaround.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, takondo, match
-ms.custom: sap:Network Connectivity and File Sharing\Wireless (802.1x, Bluetooth, Miracast, Mobile Broadband), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\wireless (802.1x,bluetooth,miracast,mobile broadband)
+- pcy:WinComm Networking
 ---
 # Wireless devices are disabled after you turn off Airplane mode
 

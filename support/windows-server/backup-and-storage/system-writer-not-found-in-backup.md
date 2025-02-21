@@ -1,12 +1,14 @@
 ---
 title: System state backup fails
 description: Provides a solution to an issue where you fail to perform a system state backup by using Windows Server Backup.
-ms.date: 12/26/2023
+ms.date: 02/06/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-nirmsh
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Volume Shadow Copy Service (VSS), csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\volume shadow copy service (vss)
+- pcy:WinComm Storage High Avail
 ---
 # System state backup by using Windows Server Backup fails with error: System writer is not found in the backup
 
@@ -57,11 +59,11 @@ To resolve this issue, type the following commands from an elevated command prom
 Takeown /f %windir%\winsxs\temp\PendingRenames /a
 icacls %windir%\winsxs\temp\PendingRenames /grant "NT AUTHORITY\SYSTEM:(RX)"
 icacls %windir%\winsxs\temp\PendingRenames /grant "NT Service\trustedinstaller:(F)"
-icacls %windir%\winsxs\temp\PendingRenames /grant BUILTIN\Users:(RX)  
-Takeown /f %windir%\winsxs\filemaps\* /a  
+icacls %windir%\winsxs\temp\PendingRenames /grant "BUILTIN\Users:(RX)"
+Takeown /f %windir%\winsxs\filemaps\* /a
 icacls %windir%\winsxs\filemaps\*.* /grant "NT AUTHORITY\SYSTEM:(RX)"
 icacls %windir%\winsxs\filemaps\*.* /grant "NT Service\trustedinstaller:(F)"
-icacls %windir%\winsxs\filemaps\*.* /grant BUILTIN\Users:(RX)
+icacls %windir%\winsxs\filemaps\*.* /grant "BUILTIN\Users:(RX)"
 net stop cryptsvc
 net start cryptsvc
 ```

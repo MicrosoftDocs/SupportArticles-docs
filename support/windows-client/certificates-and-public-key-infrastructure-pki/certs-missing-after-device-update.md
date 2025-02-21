@@ -1,12 +1,14 @@
 ---
 title: Certificates are missing after you update a device to a newer version of Windows 10
 description: Works around an issue in which a device loses its system and user certificates after an update.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-tappelgate
-ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Certificate Chaining and Revocation, csstroubleshoot
+ms.custom:
+- sap:certificates and public key infrastructure (pki)\certificate chaining and revocation
+- pcy:WinComm Directory Services
 keywords: managed devices, certificates, WSUS, MECM, Windows Update
 ---
 

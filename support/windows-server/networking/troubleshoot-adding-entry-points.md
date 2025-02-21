@@ -1,12 +1,14 @@
 ---
 title: Troubleshoot adding entry points
 description: Learn how to troubleshoot issues related to the Add-DAEntryPoint command.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, brianlic, jgerend, v-lianna
-ms.custom: sap:Network Connectivity and File Sharing\Remote access (VPN, RRAS, CMAK and AOVPN), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\remote access (vpn,rras,cmak and aovpn)
+- pcy:WinComm Networking
 ms.assetid: dcc1037f-1a65-4497-99e6-0df9aef748a8
 ---
 # Troubleshoot adding entry points

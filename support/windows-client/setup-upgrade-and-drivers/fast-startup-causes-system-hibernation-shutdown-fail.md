@@ -1,12 +1,14 @@
 ---
 title: Fast startup causes hibernation or shutdown to fail in Windows 10 or Windows 8.1
 description: Provides help to solve an issue where the process fails when you try to shut down or hibernate the system on a computer.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Setup, Upgrade and Deployment\Power management, csstroubleshoot
+ms.custom:
+- sap:windows setup,upgrade and deployment\power management
+- pcy:WinComm Devices Deploy
 ---
 # Fast startup causes hibernation or shutdown to fail in Windows 10 or Windows 8.1
 

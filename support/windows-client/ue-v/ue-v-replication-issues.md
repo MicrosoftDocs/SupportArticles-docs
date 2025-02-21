@@ -1,12 +1,14 @@
 ---
 title: Troubleshoot UE-V replication issues
 description: Describes how to troubleshoot replication issues with Microsoft User Experience Virtualization (UE-V).
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, markstan
-ms.custom: sap:UEV\Agent\Other, csstroubleshoot
+ms.custom:
+- sap:uev\agent\other
+- pcy:WinComm User Experience
 ---
 # How to troubleshoot UE-V replication issues
 

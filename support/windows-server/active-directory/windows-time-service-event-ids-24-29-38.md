@@ -1,12 +1,14 @@
 ---
 title: You receive Windows Time Service event IDs 24, 29, and 38 on a virtualized domain controller that is running on a Windows Server 2008-based host server with Hyper-V
 description: Describes an issue in which you receive the Windows Time Service event IDs 24, 29, and 38 on a host server.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\Virtualized domain controller (errors and questions), csstroubleshoot
+ms.custom:
+- sap:active directory\virtualized domain controller (errors and questions)
+- pcy:WinComm Directory Services
 ---
 # You receive Windows Time Service event IDs 24, 29, and 38 on a virtualized domain controller
 

@@ -3,10 +3,12 @@ title: Windows Server stops responding when a service crashes with a failed rest
 description: Helps resolve an issue in which Windows Server stops responding during the sign-in process if a Trigger Start service crashes with a failed restart.
 manager: dcscontentpm
 audience: itpro
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 ms.topic: troubleshooting
 ms.reviewer: kaushika, jasone, v-lianna
-ms.custom: sap:System Performance\System Performance (slow, unresponsive, high CPU, resource leak), csstroubleshoot, ikb2lmc
+ms.custom:
+- sap:system performance\system performance (slow,unresponsive,high cpu,resource leak)
+- pcy:WinComm Performance
 ---
 # Windows Server stops responding when a Trigger Start service crashes with a failed restart
 

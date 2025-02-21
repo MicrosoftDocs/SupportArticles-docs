@@ -1,12 +1,14 @@
 ---
 title: Tuning failover cluster network thresholds
 description: Introduces solutions to adjust the thresholds of failover cluster network settings.
-ms.date: 10/09/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-lianna, jeffhugh
-ms.custom: sap:Clustering and High Availability\Setup and configuration of clustered services and applications, csstroubleshoot
+ms.custom:
+- sap:clustering and high availability\setup and configuration of clustered services and applications
+- pcy:WinComm Storage High Avail
 ---
 # Tuning failover cluster network thresholds
 

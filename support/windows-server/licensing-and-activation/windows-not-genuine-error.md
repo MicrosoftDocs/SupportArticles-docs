@@ -1,12 +1,14 @@
 ---
 title: Error 0x80070005 when you log on to computer
 description: Describes a problem in which you receive an error (Windows is not genuine. Your computer might not be running a counterfeit copy of Windows. 0x80070005) in Windows. Provides resolutions.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Activation\Windows activation issues, csstroubleshoot
+ms.custom:
+- sap:windows activation\windows activation issues
+- pcy:WinComm Devices Deploy
 ---
 # Windows is not genuine error
 

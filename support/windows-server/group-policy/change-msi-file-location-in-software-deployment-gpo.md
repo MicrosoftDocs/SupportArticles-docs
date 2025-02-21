@@ -1,12 +1,14 @@
 ---
 title: Change or set multiple locations for MSI package
 description: Describes how to change the MSI file location in the Software Deployment GPO and set the multiple UNC paths for the same MSI package.
-ms.date: 04/09/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, anshg
-ms.custom: sap:Group Policy\Deploying software through Group Policy, csstroubleshoot
+ms.custom:
+- sap:group policy\deploying software through group policy
+- pcy:WinComm Directory Services
 ---
 # How to change the MSI file location in the Software Deployment GPO (Multiple UNC paths for same package)
 

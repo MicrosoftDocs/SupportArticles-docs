@@ -1,12 +1,14 @@
 ---
 title: WDS server may not start
 description: Resolves an issue that occurs when you start the WDS server on a Windows 2008-based computer. The WDS server may not start, and an error message is logged in the System log.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
+ms.custom:
+- sap:windows setup,upgrade and deployment\installing or upgrading windows
+- pcy:WinComm Devices Deploy
 ---
 # The WDS server may not start, and an error is logged in the System log when you start the WDS server
 

@@ -1,12 +1,14 @@
 ---
 title: Fail to log on to a local administrator account
 description: Works around an issue that occurs after you log on to a local administrator domain account.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
+ms.custom:
+- sap:active directory\user,computer,group,and object management
+- pcy:WinComm Directory Services
 ---
 # You receive access denied errors after you log on to a local administrator domain account
 

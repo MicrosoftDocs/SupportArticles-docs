@@ -4,10 +4,10 @@ description: Troubleshoot common issues with monitoring sync health and resolvin
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 12/16/2024
+ms.date: 01/23/2025
 ms.author: kendownie
 ms.custom: sap:File Sync, devx-track-azurepowershell
-ms.reviewer: v-weizhu
+ms.reviewer: v-weizhu, vritikanaik
 ---
 # Troubleshoot Azure File Sync sync health and errors
 
@@ -171,11 +171,13 @@ If a file or directory fails to sync due to an error, an event is logged in the 
 | 0x80070043 | -2147942467 | ERROR_BAD_NET_NAME | The tiered file on the server isn't accessible. This issue occurs if the tiered file was not recalled prior to deleting a server endpoint. | To resolve this issue, see [Tiered files are not accessible on the server](file-sync-troubleshoot-cloud-tiering.md#tiered-files-are-not-accessible-on-the-server).|
 | 0x80c80207 | -2134375929 | ECS_E_SYNC_CONSTRAINT_CONFLICT | The file or directory change can't be synced yet because a dependent folder isn't yet synced. This item will sync after the dependent changes are synced. | Transient error. If the error persists for several days, create a support request. |
 | 0x80C8028A | -2134375798 | ECS_E_SYNC_CONSTRAINT_CONFLICT_ON_FAILED_DEPENDEE | The file or directory change can't be synced yet because a dependent folder isn't yet synced. This item will sync after the dependent changes are synced. | Transient error. If the error persists, use the *FileSyncErrorsReport.ps1* PowerShell script to determine why the dependent folder isn't yet synced. |
+| 0x80c80206 | -2134375930 | ECS_E_SYNC_ITEM_PROCESS_FAIL_RECOVERABLE | The file or directory change can't be synced yet because the item encountered a recoverable failure. | Transient error. If the error persists for several days, create a support request. |
 | 0x80c80284 | -2134375804 | ECS_E_SYNC_CONSTRAINT_CONFLICT_SESSION_FAILED | The file or directory change can't be synced yet because a dependent folder isn't yet synced and the sync session failed. This item will sync after the dependent changes are synced. | No action required. If the error persists, investigate the sync session failure. |
 | 0x8007007b | -2147024773 | ERROR_INVALID_NAME | The file or directory name is invalid. | Rename the file or directory in question. See [Handling unsupported characters](?tabs=portal1%252cazure-portal#handling-unsupported-characters) for more information. |
 | 0x80070459 | -2147023783 | ERROR_NO_UNICODE_TRANSLATION | The file or directory name has unsupported surrogate pair characters. | Rename the file or directory in question. See [Handling unsupported characters](?tabs=portal1%252cazure-portal#handling-unsupported-characters) for more information. |
 | 0x80c80255 | -2134375851 | ECS_E_XSMB_REST_INCOMPATIBILITY | The file or directory name is invalid. | Rename the file or directory in question. See [Handling unsupported characters](?tabs=portal1%252cazure-portal#handling-unsupported-characters) for more information. |
 | 0x80c80018 | -2134376424 | ECS_E_SYNC_FILE_IN_USE | The file can't be synced because it's in use. The file will be synced when it's no longer in use. | No action required. Azure File Sync creates a temporary VSS snapshot once a day on the server to sync files that have open handles. |
+| 0x80c86013 | -2134351853 | ECS_E_SYNC_CLOUD_FILE_IN_USE | The cloud file can't be synced because it's in use. This error occurs when an application holds an open handle to a file in the cloud, preventing sync operations from being performed until the application releases the handle. | Check the open file handles and close them if they're no longer needed. For more information, see [List Handles](/rest/api/storageservices/list-handles) and [Force Close Handles](/rest/api/storageservices/force-close-handles). |
 | 0x80c8031d | -2134375651 | ECS_E_CONCURRENCY_CHECK_FAILED | The file has changed, but the change hasn't yet been detected by sync. Sync will recover after this change is detected. | No action required. |
 | 0x80070002 | -2147024894 | ERROR_FILE_NOT_FOUND | The file was deleted and sync isn't aware of the change. | No action required. Sync will stop logging this error once change detection detects the file was deleted. |
 | 0x80070003 | -2147024893 | ERROR_PATH_NOT_FOUND | Deletion of a file or directory can't be synced because the item was already deleted in the destination and sync isn't aware of the change. | No action required. Sync will stop logging this error once change detection runs on the destination and sync detects the item was deleted. |
@@ -206,6 +208,10 @@ If a file or directory fails to sync due to an error, an event is logged in the 
 | 0x80041007 | -2147217401 | SYNC_E_ITEM_MUST_EXIST | An internal error occurred. | If the error persists for more than a day, create a support request. |
 | 0X80C80293 | -2134375789 | ECS_E_SYNC_INITIAL_SCAN_COMPLETED | The sync session failed because the initial enumeration was completed. The next session will cover the full namespace. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
 | 0X80C80342 | -2134375614 | ECS_E_SYNC_CUSTOM_METADATA_VERSION_NOT_SUPPORTED | The sync database has custom metadata with a version higher than the supported version. | Please upgrade the File Sync agent to the latest version. If the error persists after upgrading the agent, create a support request. |
+| 0x80c8604b | -2134351797 | ECS_E_AZURE_FILE_SHARE_FILE_NOT_FOUND | The specified Azure file wasn't found in the file share. This issue might occur if the file has been deleted and sync isn't aware of the change. | No action required. Sync will stop logging this error once change detection detects the file was deleted. |
+| 0x80c80201 | -2134375935 | ECS_E_SYNC_UNPROCESSABLE_ITEM_REPARSEPOINT | The sync failed due to the presence of a reparse point. | Remove the reparse point or replace it with regular file content before attempting the sync again. |
+| 0x80c80362 | -2134375582 | ECS_E_ITEM_PATH_COMPONENT_HAS_TRAILING_DOT | The item failed to sync because one of its path components has trailing dots. | Rename the item by removing any trailing dots that appear in the path. |
+| 0x80c8024e | -2134375858 | ECS_E_SYNC_ITEM_SKIP_CONSTRAINT_CONFLICT_NOT_ALLOWED | This error indicates a constraint conflict that was detected but was unable to be reported. The item will be skipped. | If the error persists, create a support request. |
 
 ### Handling unsupported characters
 
@@ -274,6 +280,13 @@ No action required. Azure File Sync has a scheduled task (VssSyncScheduledTask) 
 | **HRESULT** | 0x80072ee2 |
 | **HRESULT (decimal)** | -2147012894 |
 | **Error string** | WININET_E_TIMEOUT |
+| **Remediation required** | Yes |
+
+| Error | Code |
+|-|-|
+| **HRESULT** | 0x80072EFE |
+| **HRESULT (decimal)** | -2147012866 |
+| **Error string** | WININET_E_CONNECTION_ABORTED |
 | **Remediation required** | Yes |
 
 This error can occur whenever the Azure File Sync service is inaccessible from the server. You can troubleshoot this error by working through the following steps:
@@ -616,6 +629,17 @@ No action required. This error should automatically resolve. If the error persis
 | **Remediation required** | Yes |
 
 This error can occur if there is a file system corruption on the NTFS volume where the server endpoint is located. To resolve this error, run [chkdsk](/windows-server/administration/windows-commands/chkdsk?tabs=event-viewer) on the volume.
+
+<a id="-2147020503"></a>**Sync failed because the tag present in the reparse point buffer is invalid.**
+
+| Error | Code |
+|-|-|
+| **HRESULT** | 0x80071129 |
+| **HRESULT (decimal)** | -2147020503 |
+| **Error string** | ERROR_REPARSE_TAG_INVALID |
+| **Remediation required** | Yes |
+
+This error occurs when files are copied between servers with different configurations. For example, transferring files from a server with a file system filter driver or deduplication feature enabled to one where these features aren't present can result in unreadable files due to invalid reparse points. To resolve this error, delete the affected files or recopy them as actual files rather than reparse points.
 
 <a id="-2146762487"></a>**The server failed to establish a secure connection. The cloud service received an unexpected certificate.**  
 

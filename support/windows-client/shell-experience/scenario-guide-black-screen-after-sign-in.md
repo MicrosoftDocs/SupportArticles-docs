@@ -1,12 +1,14 @@
 ---
 title: Black screen after you sign in to the system
 description: Explains how to troubleshoot and collect data for the issue of a black screen after you sign in to the system.
-ms.date: 09/02/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, warrenw, rafern, holgerh, v-lianna
-ms.custom: sap:Windows Desktop and Shell Experience\Desktop (Shell, Explorer.exe init, themes, colors, icons, recycle bin), csstroubleshoot
+ms.custom:
+- sap:windows desktop and shell experience\desktop (shell,explorer.exe init,themes,colors,icons,recycle bin)
+- pcy:WinComm User Experience
 ---
 # Scenario guide: Black screen after you sign in to the system
 

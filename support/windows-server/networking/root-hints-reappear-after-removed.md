@@ -1,12 +1,14 @@
 ---
 title: Root hints reappear after removed
 description: When you delete the last root hint from a DNS server, one or more of the deleted root hints may reappear after about 15 minutes.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, Dpracht, v-tea
-ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\dns
+- pcy:WinComm Networking
 ---
 # Root hints reappear after they are removed
 

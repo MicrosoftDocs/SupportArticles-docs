@@ -1,12 +1,14 @@
 ---
 title: Use and troubleshoot CryptAcquireContext function
 description: Provides information about when to use specific flags when you call CryptAcquireContext and the reasons for using these flags.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Credential Roaming and Certificate-based authentication, csstroubleshoot
+ms.custom:
+- sap:certificates and public key infrastructure (pki)\credential roaming and certificate-based authentication
+- pcy:WinComm Directory Services
 ---
 # CryptAcquireContext() use and troubleshooting
 

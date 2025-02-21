@@ -1,12 +1,14 @@
 ---
 title: Slow boot and services start failure
 description: provides a workaround for an issue that causes slow boot and services fail to start.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, tode
-ms.custom: sap:System Performance\Startup or Pre-logon Performance (slow, unresponsive, spinning circle, blank screen), csstroubleshoot
+ms.custom:
+- sap:system performance\startup or pre-logon performance (slow,unresponsive,spinning circle,blank screen)
+- pcy:WinComm Performance
 ---
 # Http <-> Crypto deadlock causes slow boot and service start failure on SSL-enabled
 

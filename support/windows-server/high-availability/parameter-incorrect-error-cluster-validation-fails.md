@@ -1,12 +1,14 @@
 ---
 title: '"The parameter is incorrect" error and cluster validation fails against Validate Resource status'
 description: Helps to resolve an error "The parameter is incorrect" that occurs when cluster validation fails against the Validate Resource status
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Clustering and High Availability\Cannot bring a resource online, csstroubleshoot
+ms.custom:
+- sap:clustering and high availability\cannot bring a resource online
+- pcy:WinComm Storage High Avail
 ---
 # Error (The parameter is incorrect) and cluster validation fails against "Validate Resource" status
 

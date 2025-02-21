@@ -1,12 +1,14 @@
 ---
 title: Group policy application rules for domain controllers
 description: Describes group policy application rules for domain controllers.
-ms.date: 11/04/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, jseifert
-ms.custom: sap:Active Directory\DCPromo and the installation or removal of domain controllers, csstroubleshoot
+ms.custom:
+- sap:active directory\dcpromo and the installation or removal of domain controllers
+- pcy:WinComm Directory Services
 ---
 # Group Policy application rules for domain controllers
 

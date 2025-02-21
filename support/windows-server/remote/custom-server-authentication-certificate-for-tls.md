@@ -1,12 +1,14 @@
 ---
 title: Use custom certificate for TLS over RDS
 description: Describes how to for RDS to use a custom server authentication certificate for TLS.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, mjacquet
-ms.custom: sap:Remote Desktop Services and Terminal Services\Certificate management, csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\certificate management
+- pcy:WinComm User Experience
 ---
 # Force Remote Desktop Services in Windows 7 to use a custom server authentication certificate for TLS
 

@@ -1,12 +1,14 @@
 ---
 title: Group Policy objects to Remote Desktop Services
 description: Explains how to apply Group Policy objects to Remote Desktop Services servers without adversely affecting other servers on the network.
-ms.date: 12/09/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, shamilprem, santoshk, herbertm
-ms.custom: sap:Group Policy\Applocker or software restriction policies, csstroubleshoot
+ms.custom:
+- sap:group policy\applocker or software restriction policies
+- pcy:WinComm Directory Services
 ---
 # How to apply Group Policy objects to Remote Desktop Services servers
 

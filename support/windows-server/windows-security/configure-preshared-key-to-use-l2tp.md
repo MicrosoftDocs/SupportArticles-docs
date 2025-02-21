@@ -1,12 +1,14 @@
 ---
 title: Configure preshared key to use L2TP
 description: Discusses how to configure a preshared key for use with Layer 2 Tunneling Protocol (L2TP).
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Security Technologies\Netlogon including Secure Channel and DC Locator issues, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\netlogon including secure channel and dc locator issues
+- pcy:WinComm Directory Services
 ---
 # Configure a preshared key for use with Layer 2 Tunneling Protocol Connections in Windows Server 2003
 

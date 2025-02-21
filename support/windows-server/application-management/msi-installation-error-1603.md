@@ -1,12 +1,14 @@
 ---
 title: MSI installation error 1603
 description: Provides solutions to the error 1603 that occurs when you install a Windows Installer package.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Application Technologies and Compatibility\MSI and MSIX, csstroubleshoot
+ms.custom:
+- sap:application technologies and compatibility\msi and msix
+- pcy:WinComm User Experience
 ---
 # Error 1603 when you try to install a Windows Installer package: A fatal error occurred during installation
 

@@ -1,12 +1,14 @@
 ---
 title: Copying .EXE files may result in a sharing violation error - Folder In Use
 description: Provides a resolution to a sharing violation error when copying .exe files.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, raackley
-ms.custom: sap:System Performance\System Configuration (page file, startup or running apps, error handling), csstroubleshoot
+ms.custom:
+- sap:system performance\system configuration (page file,startup or running apps,error handling)
+- pcy:WinComm Performance
 ---
 # Copying .EXE files may result in a sharing violation error - Folder In Use
 

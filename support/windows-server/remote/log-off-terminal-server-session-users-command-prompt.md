@@ -1,12 +1,14 @@
 ---
 title: Log off all Remote Desktop Session Users
 description: Provides some information about how to log off all Remote Desktop Session Users from a Command Prompt.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Remote Desktop Services and Terminal Services\Session connectivity, csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\session connectivity
+- pcy:WinComm User Experience
 ---
 # How to Log off all Remote Desktop Session Users from a Command Prompt
 

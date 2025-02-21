@@ -1,12 +1,14 @@
 ---
 title: Version 3 (CNG) templates don't appear in certificate web enrollment
 description: Fixes an issue where the CNG or 2,008 templates don't appear in the Advanced Certificate Request template pulldown menu.
-ms.date: 10/12/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory Certificate Services (ADCS), csstroubleshoot
+ms.custom:
+- sap:certificates and public key infrastructure (pki)\active directory certificate services (adcs)
+- pcy:WinComm Directory Services
 ---
 # Version 3 (CNG) templates don't appear in Windows Server Certificate Services Web Enrollment
 

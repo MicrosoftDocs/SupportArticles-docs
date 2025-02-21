@@ -1,12 +1,14 @@
 ---
 title: Fail to run applications on Windows Server Core
 description: Provides a solution to an issue where you fail to run or install applications on a Windows Server computer running as a Server Core
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
+ms.custom:
+- sap:windows setup,upgrade and deployment\installing or upgrading windows
+- pcy:WinComm Devices Deploy
 ---
 # Message "Subsystem needed to support the image type is not present" error when installing or running applications on Server Core
 

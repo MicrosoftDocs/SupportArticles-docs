@@ -1,12 +1,14 @@
 ---
 title: Fail to use Adprep with /gpprep argument
 description: Discusses errors that occur when you use the Adprep tool together with the /gpprep argument.
-ms.date: 04/29/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, nedpyle
-ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstroubleshoot
+ms.custom:
+- sap:group policy\group policy management (gpmc or gpedit)
+- pcy:WinComm Directory Services
 ---
 # Adprep /gpprep error (The system cannot find the file specified), or tool crashes
 

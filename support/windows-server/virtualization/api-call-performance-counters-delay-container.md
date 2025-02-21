@@ -1,12 +1,14 @@
 ---
 title: API call to performance counters is delayed
 description: Fixes an issue in which API calls of performance counters are delayed 3 or 5 minutes inside a container.
-ms.date: 09/09/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, roumaago, v-lianna
-ms.custom: sap:Containers\Management of Containers, csstroubleshoot
+ms.custom:
+- sap:containers\management of containers
+- pcy:WinComm Storage High Avail
 ---
 # Application Programming Interface (API) call of performance counters is delayed inside a container
 

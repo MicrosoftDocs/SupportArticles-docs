@@ -1,12 +1,14 @@
 ---
 title: Slow performance when you print
 description: Describes an issue on a failover cluster in which cluster nodes may stop responding temporarily.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Print, Fax, and Scan\Print Performance - failures, crashes, not responsive, csstroubleshoot
+ms.custom:
+- sap:print,fax,and scan\print performance - failures,crashes,not responsive
+- pcy:WinComm User Experience
 ---
 # Slow performance when you try to print, when you open the printer properties, or when you open the printer preferences
 

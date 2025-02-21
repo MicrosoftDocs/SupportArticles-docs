@@ -30,7 +30,6 @@ When you try to start or create an AKS cluster, you receive the following error 
 > "ExitCode": "51",
 >
 > "Output": "Thu Oct 14 18:07:37 UTC 2021,aks-nodepool1-18315663-vmss000000\\nConnection to
-
 ## Cause
 
 Your cluster nodes can't connect to your cluster API server pod.

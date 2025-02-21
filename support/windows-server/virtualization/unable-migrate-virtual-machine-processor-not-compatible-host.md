@@ -1,12 +1,14 @@
 ---
 title: Unable to migrate virtual machine from one host to another
 description: Describes the errors that occur when you migrate a Virtual Machine (VM) from one Host to another from the SCVMM 2008 Console.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Virtualization and Hyper-V\Migration, csstroubleshoot
+ms.custom:
+- sap:virtualization and hyper-v\migration
+- pcy:WinComm Storage High Avail
 ---
 # Unable to migrate virtual machine from one host to another
 

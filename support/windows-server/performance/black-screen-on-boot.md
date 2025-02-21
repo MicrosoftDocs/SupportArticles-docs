@@ -1,12 +1,14 @@
 ---
 title: Black screen on boot
 description: Provides a solution to an issue where restarting a Windows x86-based computer fails with black screen.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, mjacquet
-ms.custom: <sap>System Performance\Startup or Pre-logon Reliability (crash, errors, bug check or Blue Screen)</sap>, csstroubleshoot
+ms.custom:
+- sap:system performance\startup or pre-logon reliability (crash,errors,bug check or blue screen)
+- pcy:WinComm Performance
 ---
 # Black screen on boot
 

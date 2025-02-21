@@ -1,12 +1,14 @@
 ---
 title: Troubleshoot errors that occur when you join Windows-based computers to a domain
 description: Troubleshooting guide for error messages that occurs when you join Windows-based computers to a domain.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\On-premises Active Directory domain join, csstroubleshoot
+ms.custom:
+- sap:active directory\on-premises active directory domain join
+- pcy:WinComm Directory Services
 ---
 # How to troubleshoot errors that occur when you join Windows-based computers to a domain
 

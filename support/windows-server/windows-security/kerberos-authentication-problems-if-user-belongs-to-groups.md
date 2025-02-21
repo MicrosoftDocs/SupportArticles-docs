@@ -1,12 +1,14 @@
 ---
 title: Kerberos authentication problems
 description: Describes an issue in which a user who has too many group memberships cannot authenticate successfully. Describes the factors that cause the behavior, and workarounds.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, herbertm, wincicadsec, mohak
-ms.custom: sap:Windows Security Technologies\Kerberos authentication, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\kerberos authentication
+- pcy:WinComm Directory Services
 ---
 # Problems with Kerberos authentication when a user belongs to many groups
 

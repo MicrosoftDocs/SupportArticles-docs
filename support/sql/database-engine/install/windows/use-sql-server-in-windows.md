@@ -1,9 +1,9 @@
 ---
 title: Version requirements for SQL Server in Windows operating system
 description: This article describes the version requirements for SQL Server in Windows operating system.
-ms.date: 11/25/2024
+ms.date: 01/10/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall
-ms.reviewer: randolphwest
+ms.reviewer: randolphwest, jopilov
 ---
 
 <!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.

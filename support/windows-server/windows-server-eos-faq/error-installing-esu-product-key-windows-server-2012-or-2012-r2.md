@@ -1,11 +1,13 @@
 ---
 title: Error when installing ESU product key for Windows Server 2012 R2 or Windows Server 2012
 description: Describes how to resolve errors that might occur when you install ESU product keys for Windows Server 2012 R2 or Windows Server 2012.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.custom: sap:Windows Eos\General Information, csstroubleshoot
+ms.custom:
+- sap:windows eos\general information
+- pcy:WinComm Devices Deploy
 ms.reviewer: kaushika, v-tappelgate
 keywords: Windows Server 2012 R2 ESU, Windows Server 2012 ESU, ESU, ESU product key
 ---

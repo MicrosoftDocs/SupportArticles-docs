@@ -1,12 +1,14 @@
 ---
 title: Error messages when you scan for updates
 description: Describes the download behavior of Windows Update Web site and the error messages that can occur.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Servicing, Updates and Features on Demand\Clients missing updates, not offered, fail to download, csstroubleshoot
+ms.custom:
+- sap:windows servicing,updates and features on demand\clients missing updates,not offered,fail to download
+- pcy:WinComm Devices Deploy
 ---
 # "Error: 0x8004005" or "Error: 0x800C0005" error messages when you scan for updates
 

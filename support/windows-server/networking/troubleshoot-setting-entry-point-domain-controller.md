@@ -1,12 +1,14 @@
 ---
 title: Troubleshoot setting the entry point domain controller
 description: Learn how to troubleshoot issues related to the Set-DAEntryPointDC cmdlet.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, brianlic, jgerend, v-lianna
-ms.custom: sap:Network Connectivity and File Sharing\Remote access (VPN, RRAS, CMAK and AOVPN), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\remote access (vpn,rras,cmak and aovpn)
+- pcy:WinComm Networking
 ms.assetid: b12dd0e8-1d80-4d4b-bb45-586f19d17ef0
 ---
 # Troubleshoot setting the entry point domain controller

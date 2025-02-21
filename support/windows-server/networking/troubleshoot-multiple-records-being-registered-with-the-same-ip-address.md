@@ -1,12 +1,14 @@
 ---
 title: Troubleshoot multiple records being registered with the same IP address
 description: Describes how to configure DNS scavenging and the DHCP lease duration to prevent multiple records with the same IP address.
-ms.date: 09/11/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: ahmorsy, 5x5net
-ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\dns
+- pcy:WinComm Networking
 ---
 # Multiple records with the same IP address due to DNS scavenging and the DHCP lease duration configurations
 

@@ -1,12 +1,14 @@
 ---
 title: NetUser/NetGroup APIs fail with ACCESS DENIED
 description: An ACCESS DENIED error occurs with down-level APIs of the NetUser or NetGroup class like NetUserGetInfo or NetGroupGetInfo.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, herbertm, josefh
-ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
+ms.custom:
+- sap:active directory\user,computer,group,and object management
+- pcy:WinComm Directory Services
 ---
 # Applications using NetUserGetInfo and similar APIs rely on read access to certain AD objects
 

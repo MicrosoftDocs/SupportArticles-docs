@@ -1,12 +1,14 @@
 ---
 title: Errors when unknown environment variable is used
 description: Describes an issue where Group Policy error events are logged when unknown environment variable is used. Provides a solution to this issue.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Group Policy\Problems Applying Group Policy, csstroubleshoot
+ms.custom:
+- sap:group policy\problems applying group policy
+- pcy:WinComm Directory Services
 ---
 # Group Policy error events logged when unknown environment variable is used
 

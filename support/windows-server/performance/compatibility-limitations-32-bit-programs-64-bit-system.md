@@ -1,12 +1,14 @@
 ---
 title: Overview of the compatibility considerations for 32-bit programs on 64-bit versions of Windows
 description: Discusses the compatibility considerations and limitations for 32-bit programs that are running on 64-bit versions of Windows .
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:System Performance\System Configuration (page file, startup or running apps, error handling), csstroubleshoot
+ms.custom:
+- sap:system performance\system configuration (page file,startup or running apps,error handling)
+- pcy:WinComm Performance
 ---
 # Overview of the compatibility considerations for 32-bit programs on 64-bit versions of Windows
 

@@ -1,12 +1,14 @@
 ---
 title: Changing ATA drive setting causes reboot loop
 description: Help fix the reboot loop issue that occurs when you change the ATA drive setting in System Bios.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:System Performance\Startup or Pre-logon Reliability (crash, errors, bug check or Blue Screen), csstroubleshoot
+ms.custom:
+- sap:system performance\startup or pre-logon reliability (crash,errors,bug check or blue screen)
+- pcy:WinComm Performance
 ---
 # Changing the ATA Drive setting in System Bios causes reboot loop
 

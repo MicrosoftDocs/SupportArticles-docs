@@ -1,12 +1,14 @@
 ---
 title: Permissions for this GPO are inconsistent
 description: Describes a permissions issue that occurs when you run Group Policy Management Console in a Windows Server domain. A resolution is provided.
-ms.date: 04/29/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, arrenc
-ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstroubleshoot
+ms.custom:
+- sap:group policy\group policy management (gpmc or gpedit)
+- pcy:WinComm Directory Services
 ---
 # "Permissions for this GPO in the SYSVOL folder are inconsistent with those in Active Directory" message when you run GPMC
 

@@ -1,12 +1,14 @@
 ---
 title: Display configuration reverts to
 description: Describes an issue in which Windows defaults to a different display configuration than expected when you plug an external monitor into a laptop. Provides a workaround.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, chadbee, philipd, kimnich
-ms.custom: sap:Windows Desktop and Shell Experience\DPI and Display Issues, csstroubleshoot
+ms.custom:
+- sap:windows desktop and shell experience\dpi and display issues
+- pcy:WinComm User Experience
 ---
 # Display configuration reverts to "Second screen only" after you resume from standby
 

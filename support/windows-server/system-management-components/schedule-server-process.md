@@ -1,12 +1,14 @@
 ---
 title: Schedule a server process in
 description: This article describes how to schedule a server process, provides a step-by-step resolution.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, markstan
-ms.custom: sap:System Management Components\Task Scheduler, csstroubleshoot
+ms.custom:
+- sap:system management components\task scheduler
+- pcy:WinComm User Experience
 ---
 # How to schedule a server process
 

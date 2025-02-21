@@ -1,12 +1,14 @@
 ---
 title: Administrator on RDSH gets error in Licensing Diagnosis-Licenses are not available for this Remote Desktop Session Host server
 description: Describes an issue where you get an error when you click Licensing Diagnosis.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: klausu, kaushika
-ms.custom: sap:Remote Desktop Services and Terminal Services\Licensing for Remote Desktop Services (Terminal Services), csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\licensing for remote desktop services (terminal services)
+- pcy:WinComm User Experience
 ---
 # Windows Server 2008 R2: Administrator on RDSH gets an error in Licensing Diagnosis: Licenses are not available for this Remote Desktop Session Host server
 

@@ -1,12 +1,14 @@
 ---
 title: Fail to attach PCI Express expansion chassis
 description: Provides workarounds for errors that occur when you attach a PCI Express expansion chassis to a computer.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-sanair
-ms.custom: sap:Windows Device and Driver Management\Peripherals driver installation or update, csstroubleshoot
+ms.custom:
+- sap:windows device and driver management\peripherals driver installation or update
+- pcy:WinComm Devices Deploy
 ---
 # Error message when you attach a PCI Express expansion chassis to a Windows-based computer: "Code 12" or "Code 31"
 

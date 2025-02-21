@@ -1,12 +1,14 @@
 ---
 title: Security auditing settings are not applied to Windows Vista-based and Window Server 2008-based computers when you deploy a domain-based policy
 description: Describes a scenario where security auditing settings are not applied to Windows Vista client computers in an Active Directory domain when you deploy a domain-based policy.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, nedpyle
-ms.custom: sap:Windows Security Technologies\AD Object Permissions, access control, delegation, AdminSDHolder and auditing, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\ad object permissions,access control,delegation,adminsdholder and auditing
+- pcy:WinComm Directory Services
 ---
 # Security auditing settings are not applied to Windows Vista-based and Window Server 2008-based computers when you deploy a domain-based policy
 

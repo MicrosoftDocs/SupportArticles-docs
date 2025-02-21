@@ -1,12 +1,14 @@
 ---
 title: Feature and performance optimization of Hyper-V Replica (HVR)
 description: This article describes the registry keys that apply to Hyper-V Replica feature
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, prvijay
-ms.custom: sap:Virtualization and Hyper-V\Hyper-V Replica (HVR), csstroubleshoot
+ms.custom:
+- sap:virtualization and hyper-v\hyper-v replica (hvr)
+- pcy:WinComm Storage High Avail
 ---
 # Feature and performance optimization of Hyper-V Replica (HVR)
 

@@ -1,12 +1,14 @@
 ---
 title: Using domain join UI to join a workgroup computer to an AD domain by specifying the target DNS domain name fails
 description: Provides a solution to an error that occurs when you use the domain join User Interface (UI) to join a Windows 7 or Windows Server 2008 R2 workgroup computer to an Active Directory domain by specifying the target DNS domain name.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\On-premises Active Directory domain join, csstroubleshoot
+ms.custom:
+- sap:active directory\on-premises active directory domain join
+- pcy:WinComm Directory Services
 ---
 # Windows 7 or Windows Server 2008 R2 domain join displays error (Changing the Primary Domain DNS name of this computer to "" failed....)
 

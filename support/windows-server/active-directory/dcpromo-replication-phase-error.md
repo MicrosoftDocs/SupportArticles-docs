@@ -1,12 +1,14 @@
 ---
 title: Internal error during replication phase of dcpromo
 description: Describes how to troubleshoot an internal error that you receive during the replication phase of the Active Directory Installation Wizard (Dcpromo)
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, jarrettr, arrenc
-ms.custom: sap:Active Directory\DCPromo and the installation or removal of domain controllers, csstroubleshoot
+ms.custom:
+- sap:active directory\dcpromo and the installation or removal of domain controllers
+- pcy:WinComm Directory Services
 ---
 # Troubleshoot an Internal error message during the replication phase of dcpromo
 

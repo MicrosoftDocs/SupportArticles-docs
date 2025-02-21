@@ -1,12 +1,14 @@
 ---
 title: Troubleshoot user profiles with events
 description: Discusses how to troubleshoot problems loading and unloading user profiles by using events and trace logs.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, jgerend, v-lianna
-ms.custom: sap:User Logon and Profiles\User profiles, csstroubleshoot
+ms.custom:
+- sap:user logon and profiles\user profiles
+- pcy:WinComm Directory Services
 ---
 # Troubleshoot user profiles with events
 

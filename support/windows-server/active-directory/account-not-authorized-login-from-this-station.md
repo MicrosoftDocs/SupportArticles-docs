@@ -1,12 +1,14 @@
 ---
 title: Account is not authorized to login
 description: Discusses an issue where an error occurs when you try to join a Windows 2000-based computer to a Microsoft Windows NT 4.0-based domain.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\On-premises Active Directory domain join, csstroubleshoot
+ms.custom:
+- sap:active directory\on-premises active directory domain join
+- pcy:WinComm Directory Services
 ---
 # Error message: The account is not authorized to login from this station
 

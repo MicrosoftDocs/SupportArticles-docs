@@ -5,8 +5,10 @@ audience: itpro
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.reviewer: hasokol,georgeri,gbock,jtierney,arrenc,roberg,kaushika
-ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Microsoft Trusted Root Certificate Program, csstroubleshoot
-ms.date: 12/26/2023
+ms.custom:
+- sap:certificates and public key infrastructure (pki)\microsoft trusted root certificate program
+- pcy:WinComm Directory Services
+ms.date: 01/15/2025
 ---
 # Removal of the U.S. Federal Common Policy CA certificate from the Microsoft trusted root
 

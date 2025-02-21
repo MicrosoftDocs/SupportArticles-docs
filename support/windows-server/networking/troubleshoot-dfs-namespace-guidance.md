@@ -1,12 +1,14 @@
 ---
 title: Guidance for troubleshooting DFS Namespace
 description: Introduces general guidance for troubleshooting scenarios related to DFS Namespace.
-ms.date: 09/27/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, albugn
-ms.custom: sap:Network Connectivity and File Sharing\DFS Namespace (Not Replication), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\dfs namespace (not replication)
+- pcy:WinComm Networking
 ---
 # DFS Namespace troubleshooting guidance
 

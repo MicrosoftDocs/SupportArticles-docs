@@ -1,12 +1,14 @@
 ---
 title: Troubleshoot issues where system shutdown stops responding
 description: Explains how to troubleshoot issues where a system shutdown doesn't complete and stops responding.
-ms.date: 06/07/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, warrenw, v-lianna
-ms.custom: sap:System Performance\Shutdown Performance (slow, unresponsive), csstroubleshoot
+ms.custom:
+- sap:system performance\shutdown performance (slow,unresponsive)
+- pcy:WinComm Performance
 ---
 # Scenario guide: Troubleshoot issues where system shutdown stops responding
 

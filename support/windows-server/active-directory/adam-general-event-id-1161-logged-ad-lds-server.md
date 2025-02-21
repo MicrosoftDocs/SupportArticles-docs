@@ -1,12 +1,14 @@
 ---
 title: ADAM general Event ID 1161 is logged on an AD LDS server
 description: Describes an issue in which ADAM General Event ID 1161 is logged on an AD LDS server
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\LDAP configuration and interoperability, csstroubleshoot
+ms.custom:
+- sap:active directory\ldap configuration and interoperability
+- pcy:WinComm Directory Services
 ---
 # ADAM general Event ID 1161 is logged on an AD LDS server
 

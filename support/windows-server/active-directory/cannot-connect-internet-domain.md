@@ -1,12 +1,14 @@
 ---
 title: Cannot connect to Internet or domain
 description: Resolves an issue in Windows Server 2003 where clients cannot join or log on to the domain.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: v-jomcc, kaushika, michvar, v-srisan
-ms.custom: sap:Active Directory\On-premises Active Directory domain join, csstroubleshoot
+ms.custom:
+- sap:active directory\on-premises active directory domain join
+- pcy:WinComm Directory Services
 ---
 # You cannot connect to the Internet, and you cannot join or log on to the domain if Windows Server 2003 SP1 is installed on the authenticating domain controller
 

@@ -1,12 +1,14 @@
 ---
 title: Windows Update blocked because of drive reassignment
 description: Works around a problem in which Windows Update is blocked for Windows 10 customers because of a drive reassignment that is caused by an attached device.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
+ms.custom:
+- sap:windows setup,upgrade and deployment\installing or upgrading windows
+- pcy:WinComm Devices Deploy
 ---
 # Error on a computer that has a USB device or SD card attached: This PC can't be upgraded to Windows 10
 

@@ -1,12 +1,14 @@
 ---
 title: Services do not automatically restart on a computer that uses NIC Teaming
 description: Resolves a problem in which services do not automatically restart on a computer that uses NIC Teaming.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, jiesun, janotay, v-jesits
-ms.custom: sap:Network Connectivity and File Sharing\Network Load Balancing (NLB), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\network load balancing (nlb)
+- pcy:WinComm Networking
 ---
 # Services do not automatically start after reboot of a computer that uses NIC teaming
 

@@ -1,12 +1,14 @@
 ---
 title: Guidance for troubleshooting TCP/IP performance
 description: Introduces general guidance for troubleshooting scenarios related to TCP/IP performance.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Performance (Congestion, Bandwidth, Latency, MTU, NOT SMB), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\tcp/ip performance (congestion,bandwidth,latency,mtu,not smb)
+- pcy:WinComm Networking
 ---
 # TCP/IP performance troubleshooting guidance
 

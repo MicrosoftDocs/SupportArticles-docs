@@ -1,12 +1,14 @@
 ---
 title: Restore user accounts and groups in AD
 description: Discusses how to recover from the accidental deletion of users and their group memberships in Active Directory.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, arrenc, v-jomcc
-ms.custom: sap:Active Directory\Active Directory backup, restore, or disaster recovery, csstroubleshoot
+ms.custom:
+- sap:active directory\active directory backup,restore,or disaster recovery
+- pcy:WinComm Directory Services
 ---
 # How to restore deleted user accounts and their group memberships in Active Directory
 

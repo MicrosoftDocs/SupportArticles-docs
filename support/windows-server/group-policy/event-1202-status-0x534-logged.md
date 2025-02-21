@@ -1,12 +1,14 @@
 ---
 title: Event 1202 with status 0x534 logged
 description: Provides a solution to an event logged on domain controllers after modifying security policy.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, arrenc
-ms.custom: sap:Group Policy\Problems Applying Group Policy, csstroubleshoot
+ms.custom:
+- sap:group policy\problems applying group policy
+- pcy:WinComm Directory Services
 ---
 # Event 1202 with status 0x534 logged on Windows Server 2008 R2 domain controllers after modifying security policy
 

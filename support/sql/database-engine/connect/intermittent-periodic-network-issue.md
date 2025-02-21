@@ -1,9 +1,9 @@
 ---
 title: Intermittent or periodic issues with connecting to SQL Server
 description: Troubleshoots intermittent or periodic network issues in SQL Server connectivity.
-ms.date: 03/25/2024
+ms.date: 02/12/2025
 ms.custom: sap:Database Connectivity and Authentication
-ms.reviewer: mastewa, prmadhes, jopilov, v-sidong
+ms.reviewer: prmadhes, jopilov, v-sidong
 ---
 # Troubleshoot intermittent or periodic issues with connecting to SQL Server
 

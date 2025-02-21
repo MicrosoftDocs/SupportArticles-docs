@@ -1,12 +1,14 @@
 ---
 title: Constrained delegation for CIFS fails with ACCESS_DENIED error
 description: Fixes an access denied error that occurs when you access a service that uses network shares on a middle-tier server.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Security Technologies\Kerberos authentication, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\kerberos authentication
+- pcy:WinComm Directory Services
 ---
 # Constrained delegation for CIFS fails with ACCESS_DENIED error
 

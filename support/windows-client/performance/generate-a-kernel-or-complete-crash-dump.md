@@ -1,11 +1,13 @@
 ---
 title: Generate a kernel or complete crash dump
 description: Learn how to generate a kernel or complete crash dump, and then use the output to troubleshoot several issues.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.collection: highpri
-ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshoot
+ms.custom:
+- sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot)
+- pcy:WinComm Performance
 ms.reviewer: willchen
 audience: itpro
 ---

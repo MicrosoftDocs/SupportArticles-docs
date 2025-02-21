@@ -1,12 +1,14 @@
 ---
 title: Change the location of CSC folder
 description: Microsoft doesn't support using the Cachemov.exe tool to move the offline files folder in Windows Vista onwards. This article describes an alternative method for moving the offline files folder. This method involves the CacheLocation registry value.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-dehaas, waltere, lseri
-ms.custom: sap:Network Connectivity and File Sharing\Offline Files and Folders (CSC), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\offline files and folders (csc)
+- pcy:WinComm Networking
 ---
 # How to change the location of the CSC folder by configuring the CacheLocation registry value in Windows
 

@@ -1,12 +1,14 @@
 ---
 title: Kernel event ID 2 when calling MSFT_NetLbfoTeamNic
 description: Describes an issue that triggers kernel event ID 2 when the MSFT_NetLbfoTeamNic class is called in Windows Server 2012 R2. A workaround is provided.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, steved
-ms.custom: sap:Network Connectivity and File Sharing\Windows NIC Teaming (Load Balance Failover), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\windows nic teaming (load balance failover)
+- pcy:WinComm Networking
 ---
 # Kernel event ID 2 is logged when the MSFT_NetLbfoTeamNic class is called in Windows Server 2012 R2
 

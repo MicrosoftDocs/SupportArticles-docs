@@ -1,12 +1,14 @@
 ---
 title: Decommission root server hosting domain-based DFS root
 description: Explains how to manually decommission a root server that hosts a domain-based DFS root in Windows Server 2003.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Network Connectivity and File Sharing\DFS Namespace (Not Replication), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\dfs namespace (not replication)
+- pcy:WinComm Networking
 ---
 # Manually decommission a root server that hosts a domain-based DFS root in Windows Server 2003
 

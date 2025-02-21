@@ -1,12 +1,14 @@
 ---
 title: In-place upgrade to Windows 10 problem
 description: Describes an issue where the upgrade hangs when you try to run an in-place upgrade to Windows 10 version 1607. This issue is resolved by installing a compatibility update.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, frankroj
-ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
+ms.custom:
+- sap:windows setup,upgrade and deployment\installing or upgrading windows
+- pcy:WinComm Devices Deploy
 ---
 # Updates fix in-place upgrade to Windows 10 problem
 

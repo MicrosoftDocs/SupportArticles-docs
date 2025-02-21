@@ -1,12 +1,14 @@
 ---
 title: A batch of Event ID 4780 are logged in the PDC
 description: Helps to resolve the issue in which you see a batch of Event ID 4780 logged in the primary domain controller (PDC) security event log.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, herbertm
-ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
+ms.custom:
+- sap:active directory\user,computer,group,and object management
+- pcy:WinComm Directory Services
 ---
 # A batch of Event ID 4780 are logged in the primary domain controller
 

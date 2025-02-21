@@ -1,12 +1,14 @@
 ---
 title: Fail to seize RID Master role with Ntdsutil
 description: Fixes an error that occurs when you seize the relative ID (RID) Master role with the Ntdsutil tool to a different domain controller.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\Active Directory (FSMO), csstroubleshoot
+ms.custom:
+- sap:active directory\active directory (fsmo)
+- pcy:WinComm Directory Services
 ---
 # Error Attempting to Seize RID Master Role with Ntdsutil
 

@@ -1,12 +1,14 @@
 ---
 title: 0x800700C1 not a valid Win32 application error when you create an AppLocker hash rule for a file in Windows
 description: Describes an issue in which you can't create an AppLocker hash rule for a file in Windows.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: danesc, kaushika
-ms.custom: sap:Windows Desktop and Shell Experience\Modern, Inbox and Microsoft Store Apps, csstroubleshoot
+ms.custom:
+- sap:windows desktop and shell experience\modern,inbox and microsoft store apps
+- pcy:WinComm User Experience
 ---
 # Error when you create an AppLocker hash rule for a file in Windows: 0x800700C1: not a valid Win32 application
 

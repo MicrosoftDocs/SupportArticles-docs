@@ -1,12 +1,14 @@
 ---
 title: Reserve a range of ephemeral ports
 description: Describes how to reserve a range of ephemeral ports on a computer.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
+- pcy:WinComm Networking
 ---
 # Reserve a range of ephemeral ports on a computer that is running Windows Server 2003 or Windows 2000 Server
 

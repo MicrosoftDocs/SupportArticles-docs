@@ -1,12 +1,14 @@
 ---
 title: Support for Active Directory over NAT
 description: Describes the support boundaries for Active Directory over NAT. Additionally, the scenario is not tested by Active Directory.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, khoffman
-ms.custom: sap:Active Directory\On-premises Active Directory domain join, csstroubleshoot
+ms.custom:
+- sap:active directory\on-premises active directory domain join
+- pcy:WinComm Directory Services
 ---
 # Description of support boundaries for Active Directory over NAT
 

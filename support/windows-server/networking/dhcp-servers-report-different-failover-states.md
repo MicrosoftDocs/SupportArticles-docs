@@ -1,12 +1,14 @@
 ---
 title: DHCP servers don't replicate lease information
 description: Resolves two issues that occur when you use DHCP failover in Windows Server 2012.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, joelch, waltere
-ms.custom: sap:Network Connectivity and File Sharing\Dynamic Host Configuration Protocol (DHCP), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\dynamic host configuration protocol (dhcp)
+- pcy:WinComm Networking
 ---
 # DHCP servers report different failover states or do not replicate lease information in a Windows Server 2012-based DHCP failover relationship
 

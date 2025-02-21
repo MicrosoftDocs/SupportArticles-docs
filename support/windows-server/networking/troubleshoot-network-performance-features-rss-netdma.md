@@ -1,12 +1,14 @@
 ---
 title: How to troubleshoot advanced network performance features such as RSS and NetDMA
 description: Some networking improvements that were first released in the Windows Server 2003 Scalable Networking Pack can cause slow or intermittent network performance if the network drivers that are being used are old or don't support the new features.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: whall, kaushika
-ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
+- pcy:WinComm Networking
 ---
 # How to troubleshoot advanced network performance features such as RSS and NetDMA
 

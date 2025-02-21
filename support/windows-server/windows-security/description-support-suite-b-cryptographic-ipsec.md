@@ -1,12 +1,14 @@
 ---
 title: Description of the support for Suite B cryptographic algorithms that was added to IPsec
 description: Describes the support for Suite B cryptographic algorithms that was added to IPsec. Also describes the IPsec policy configuration syntax that uses Suite B algorithms.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, clayse
-ms.custom: sap:Windows Security Technologies\Internet Protocol security (IPSec), csstroubleshoot
+ms.custom:
+- sap:windows security technologies\internet protocol security (ipsec)
+- pcy:WinComm Networking
 ---
 # Description of the support for Suite B cryptographic algorithms that was added to IPsec
 

@@ -1,12 +1,14 @@
 ---
 title: Activation failures around January 8, 2019, on volume-licensed Windows 7 Service Pack 1 KMS clients
 description: Provides a solution to an issue where users may receive the Windows Activation or (Windows is not genuine) notifications starting at or after 10:00 UTC, January 8, 2019.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, arrenc, chriti, demartin, mgorti, rpowell, shibird, sirkad, tichotej, wesk, wiaftrin
-ms.custom: sap:Windows Activation\Windows activation issues, csstroubleshoot
+ms.custom:
+- sap:windows activation\windows activation issues
+- pcy:WinComm Devices Deploy
 ---
 # Activation failures and (not genuine) notifications around January 8, 2019, on volume-licensed Windows 7 Service Pack 1 KMS clients
 

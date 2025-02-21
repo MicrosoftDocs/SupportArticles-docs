@@ -1,12 +1,14 @@
 ---
 title: Force synchronization for Distributed File System Replication (DFSR) replicated sysvol replication
 description: Describes how to restart DFSR on a server, either authoritatively or non-authoritative.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, nedpyle
-ms.custom: sap:Group Policy\Sysvol access or replication issues, csstroubleshoot
+ms.custom:
+- sap:group policy\sysvol access or replication issues
+- pcy:WinComm Directory Services
 ---
 # How to force authoritative and non-authoritative synchronization for DFSR-replicated sysvol replication
 

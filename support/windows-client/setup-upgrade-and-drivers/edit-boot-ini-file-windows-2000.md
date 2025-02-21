@@ -1,12 +1,14 @@
 ---
 title: How to edit the Boot.ini file in Windows 2000
 description: Describes steps to edit the Boot.ini file in a Windows 2000 environment.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: cbutch, kaushika
-ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
+ms.custom:
+- sap:windows setup,upgrade and deployment\installing or upgrading windows
+- pcy:WinComm Devices Deploy
 ---
 # How to edit the Boot.ini file in Windows 2000
 

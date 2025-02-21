@@ -1,12 +1,14 @@
 ---
 title: How the Regional and Language Options settings in Windows Server 2003 are applied
 description: Describes the user-specific and computer-wide settings in Regional and Language Options in Control Panel, the implications of configuring Regional and Language Options during Windows Setup, and the effects on Window Server 2003 Terminal Server.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: markreno, kaushika
-ms.custom: sap:Windows Desktop and Shell Experience\Language Packs, Multilingual User Interface (MUI) and Input (IME), csstroubleshoot
+ms.custom:
+- sap:windows desktop and shell experience\language packs,multilingual user interface (mui) and input (ime)
+- pcy:WinComm User Experience
 ---
 # How the Regional and Language Options settings in Windows Server 2003 are applied
 

@@ -1,12 +1,14 @@
 ---
 title: Find the name of Enterprise Root CA server
 description: Helps you to find name of the Enterprise Root Certificate Authority (CA) server.
-ms.date: 10/12/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory Certificate Services (ADCS), csstroubleshoot
+ms.custom:
+- sap:certificates and public key infrastructure (pki)\active directory certificate services (adcs)
+- pcy:WinComm Directory Services
 ---
 # How to find the name of the Enterprise Root Certificate Authority server
 

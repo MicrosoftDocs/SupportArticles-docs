@@ -1,12 +1,14 @@
 ---
 title: Use language ID to identify language pack
 description: Describes how to resolve the language ID to the name of the correct language pack to install.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, BOBQIN, herbertm
-ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
+ms.custom:
+- sap:windows setup,upgrade and deployment\installing or upgrading windows
+- pcy:WinComm Devices Deploy
 ---
 # Using language IDs to identify language packs for AD DS and AD LDS domain controllers
 

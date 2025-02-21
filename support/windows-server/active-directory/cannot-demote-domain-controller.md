@@ -1,12 +1,14 @@
 ---
 title: Error when you demote a domain controller
 description: Resolves an issue where demoting a domain controller by using the Active Directory Installation wizard (Dcpromo.exe) fails.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\DCPromo and the installation or removal of domain controllers, csstroubleshoot
+ms.custom:
+- sap:active directory\dcpromo and the installation or removal of domain controllers
+- pcy:WinComm Directory Services
 ---
 # Error message occurs when you demote a domain controller
 

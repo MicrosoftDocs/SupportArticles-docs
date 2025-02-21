@@ -1,12 +1,14 @@
 ---
 title: Virtual machines enter paused state
 description: Provides a resolution for the issue that Virtual machines enter the paused state due to low disk free space.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, stevenxu
-ms.custom: sap:Virtualization and Hyper-V\Virtual machine state, csstroubleshoot
+ms.custom:
+- sap:virtualization and hyper-v\virtual machine state
+- pcy:WinComm Storage High Avail
 ---
 # Virtual machines enter the paused state due to low disk free space
 

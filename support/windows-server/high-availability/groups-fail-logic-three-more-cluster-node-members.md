@@ -1,12 +1,14 @@
 ---
 title: Failover behavior on clusters of three or more nodes
 description: Describes the logic by which groups fail from one node to another when there are three or more cluster node members.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: stevemat, jeffwade, kaushika
-ms.custom: sap:Clustering and High Availability\Root cause of an unexpected failover, csstroubleshoot
+ms.custom:
+- sap:clustering and high availability\root cause of an unexpected failover
+- pcy:WinComm Storage High Avail
 ---
 # Failover behavior on clusters of three or more nodes
 

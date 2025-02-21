@@ -1,12 +1,14 @@
 ---
 title: Errors when you run WinRM commands
 description: Describes the errors that are triggered when you run various WinRM commands to verify local computer functionality in a Windows Remote Management environment.
-ms.date: 10/22/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:System Management Components\WinRM, including event forwarding and collections, csstroubleshoot
+ms.custom:
+- sap:system management components\winrm,including event forwarding and collections
+- pcy:WinComm User Experience
 ---
 # Errors when you run WinRM commands to check local functionality in a Windows Server
 

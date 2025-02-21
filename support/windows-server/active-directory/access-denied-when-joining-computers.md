@@ -1,12 +1,14 @@
 ---
 title: Access is denied when joining computers
 description: Provides a solution to an error message when non-administrator users who have been delegated control try to join computers to a domain.
-ms.date: 11/11/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-jomcc, davete, muagarwal
-ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
+ms.custom:
+- sap:active directory\user,computer,group,and object management
+- pcy:WinComm Directory Services
 ---
 # Error: Access is denied when non-administrator users who have been delegated control try to join computers to a domain
 

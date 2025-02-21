@@ -1,12 +1,14 @@
 ---
 title: Software Defined Data Center and Software Defined Networking
 description: Software Defined Data Center and Software Defined Networking
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, johnmar
-ms.custom: sap:Software Defined Networking\Internal Name Resolution for SDN, csstroubleshoot
+ms.custom:
+- sap:software defined networking\internal name resolution for sdn
+- pcy:WinComm Networking
 ---
 # Software Defined Data Center and Software Defined Networking in Windows Server
 

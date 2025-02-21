@@ -1,12 +1,14 @@
 ---
 title: Switch options for Boot.ini files
 description: Describes the switch options that you can use to modify Windows startup.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:System Performance\Startup or Pre-logon Reliability (crash, errors, bug check or Blue Screen), csstroubleshoot
+ms.custom:
+- sap:system performance\startup or pre-logon reliability (crash,errors,bug check or blue screen)
+- pcy:WinComm Performance
 ---
 # Available switch options for the Windows XP and the Windows Server 2003 Boot.ini files
 

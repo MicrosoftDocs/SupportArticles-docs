@@ -1,12 +1,14 @@
 ---
 title: How to detect and recover from a USN rollback in a Windows Server-based domain controller
 description: Explains how to recover if a domain controller is incorrectly rolled back by using an image-based installation of the operating system.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, arrenc
-ms.custom: sap:Active Directory\Active Directory backup, restore, or disaster recovery, csstroubleshoot
+ms.custom:
+- sap:active directory\active directory backup,restore,or disaster recovery
+- pcy:WinComm Directory Services
 ---
 # A Windows Server domain controller logs Directory Services event 2095 when it encounters a USN rollback
 

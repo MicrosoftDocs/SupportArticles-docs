@@ -18,7 +18,7 @@ This article discusses how to resolve the `AADSTS7000110` error that occurs when
 
 When you try to sign in to an Azure application that can be used together with Microsoft Entra ID, you receive the following `AADSTS7000110` error message:
 
-> Request is ambiguous, multiple application identifiers found.
+> Request is ambiguous, multiple application identifiers found. The client ID used to obtain the grant (e.g. refresh token or authorization code) might not match the client ID passed in this request or client credential.
 
 ## Cause
 

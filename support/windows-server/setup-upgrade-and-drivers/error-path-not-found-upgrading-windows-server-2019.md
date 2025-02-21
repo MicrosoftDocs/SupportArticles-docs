@@ -2,11 +2,13 @@
 title: ERROR_PATH_NOT_FOUND when upgrading to Windows Server 2019
 description: Helps resolve the ERROR_PATH_NOT_FOUND error when performing an in-place upgrade to Windows Server 2019.
 manager: dcscontentpm
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, hamansoor, v-lianna
-ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot, ikb2lmc
+ms.custom:
+- sap:windows setup,upgrade and deployment\installing or upgrading windows
+- pcy:WinComm Devices Deploy
 ---
 # ERROR_PATH_NOT_FOUND error when performing an in-place upgrade to Windows Server 2019
 

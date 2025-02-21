@@ -1,12 +1,14 @@
 ---
 title: User profile cannot be loaded with Event ID 1509
 description: Provides resolutions to fix the error User Profile Service failed the logon. User profile cannot be loaded.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:User Logon and Profiles\User profiles, csstroubleshoot
+ms.custom:
+- sap:user logon and profiles\user profiles
+- pcy:WinComm Directory Services
 ---
 # User profile cannot be loaded with Event ID 1509: DETAIL - The filename or extension is too long
 

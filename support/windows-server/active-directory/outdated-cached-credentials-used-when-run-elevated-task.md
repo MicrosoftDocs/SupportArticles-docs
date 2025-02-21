@@ -1,12 +1,14 @@
 ---
 title: Outdated cached credentials are used when you run an elevated task
 description: Helps to resolve the issue in which the outdated cached credentials are used when you run an elevated task.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, herbertm, v-lianna
-ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
+ms.custom:
+- sap:active directory\user,computer,group,and object management
+- pcy:WinComm Directory Services
 ---
 # Outdated cached credentials are used when you run an elevated task
 

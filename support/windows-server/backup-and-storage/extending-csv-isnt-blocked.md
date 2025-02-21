@@ -1,12 +1,14 @@
 ---
 title: Extending Cluster Shared Volume isn't blocked from a non-coordinator node
 description: Provides a solution to an issue where extending a Cluster Shared Volume by using Diskpart or PowerShell isn't blocked from a non-coordinator node.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, josefh
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Data corruption and disk errors, csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\data corruption and disk errors
+- pcy:WinComm Storage High Avail
 ---
 # Extending a CSV by using Diskpart or PowerShell isn't blocked from a non-coordinator node
 

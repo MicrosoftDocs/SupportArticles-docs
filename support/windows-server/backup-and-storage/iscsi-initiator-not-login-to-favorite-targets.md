@@ -1,12 +1,14 @@
 ---
 title: The iSCSI Initiator can't log in to Favorite Target
 description: Provides a solution to an issue where the Microsoft iSCSI Initiator fails to login to Favorite Targets.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, jtierney
-ms.custom: sap:Backup, Recovery, Disk, and Storage\ISCSI, csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\iscsi
+- pcy:WinComm Storage High Avail
 ---
 # The Microsoft iSCSI Initiator may fail to log in to Favorite Targets after the Initiator Name is changed in Windows
 

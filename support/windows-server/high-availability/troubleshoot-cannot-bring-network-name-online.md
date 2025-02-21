@@ -1,14 +1,16 @@
 ---
 title: Can't bring a network name online in a cluster
 description: Provides guidance for when a network name fails to come online in a Windows-based failover cluster
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Clustering and High Availability\Cannot bring a resource online, csstroubleshoot
+ms.custom:
+- sap:clustering and high availability\cannot bring a resource online
+- pcy:WinComm Storage High Avail
 ---
 # Can't bring a network name online in a failover cluster
 

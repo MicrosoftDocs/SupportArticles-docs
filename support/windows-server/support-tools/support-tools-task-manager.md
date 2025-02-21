@@ -1,14 +1,16 @@
 ---
 title: Troubleshoot processes by using Task Manager
 description: Describes the features of Task Manager and provides examples of how to apply those features when troubleshooting.
-ms.date: 04/29/2024
+ms.date: 01/15/2025
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-tappelgate
-ms.custom: sap:System Performance\Performance tools (Task Manager, Perfmon, WSRM, and WPA), csstroubleshoot
+ms.custom:
+- sap:system performance\performance tools (task manager,perfmon,wsrm,and wpa)
+- pcy:WinComm Performance
 keywords: Task Manager
 ---
 

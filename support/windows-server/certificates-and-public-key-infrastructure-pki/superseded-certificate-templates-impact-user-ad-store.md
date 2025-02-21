@@ -1,12 +1,14 @@
 ---
 title: Superseded Certificate Templates and impact on user's AD store
 description: Provides a resolution for the issue superseded Certificate Templates and impact on user's AD store
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory Certificate Services (ADCS), csstroubleshoot
+ms.custom:
+- sap:certificates and public key infrastructure (pki)\active directory certificate services (adcs)
+- pcy:WinComm Directory Services
 ---
 # Superseded Certificate Templates and impact on user's AD store
 

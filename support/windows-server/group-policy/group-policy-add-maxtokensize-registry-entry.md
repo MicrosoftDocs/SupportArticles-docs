@@ -1,12 +1,14 @@
 ---
 title: add MaxTokenSize registry entry
 description: Describes how to use Group Policy on a domain controller to add the MaxTokenSize registry entry to multiple computers.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, muhasa
-ms.custom: sap:Group Policy\Problems Applying Group Policy, csstroubleshoot
+ms.custom:
+- sap:group policy\problems applying group policy
+- pcy:WinComm Directory Services
 ---
 # How to use Group Policy to add the MaxTokenSize registry entry to multiple computers
 

@@ -1,12 +1,14 @@
 ---
 title: Add OEM PnP drivers to Windows installations
 description: Provides the steps to add OEM Plug and Play drivers to Windows installations.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
+ms.custom:
+- sap:windows setup,upgrade and deployment\installing or upgrading windows
+- pcy:WinComm Devices Deploy
 ---
 # Add OEM Plug and Play drivers to Windows installations
 

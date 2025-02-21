@@ -1,12 +1,14 @@
 ---
 title: Set different validity period for subordinate CA
 description: Describes how to set an enterprise subordinate certification authority (CA) to have a different certificate validity period than that of the parent CA.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory Certificate Services (ADCS), csstroubleshoot
+ms.custom:
+- sap:certificates and public key infrastructure (pki)\active directory certificate services (adcs)
+- pcy:WinComm Directory Services
 ---
 # How to Set an Enterprise Subordinate CA to Have a Different Certificate Validity Period than the Parent CA
 

@@ -1,12 +1,14 @@
 ---
 title: View registry keys with 64-bit versions of Windows
 description: Describes how to view the Windows registry by using 64-bit versions of Windows.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, MBIAS
-ms.custom: sap:System Performance\System Configuration (page file, startup or running apps, error handling), csstroubleshoot
+ms.custom:
+- sap:system performance\system configuration (page file,startup or running apps,error handling)
+- pcy:WinComm Performance
 ---
 # View the system registry by using 64-bit versions of Windows
 

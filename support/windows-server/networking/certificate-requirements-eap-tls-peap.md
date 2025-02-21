@@ -1,12 +1,14 @@
 ---
 title: Certificate requirements when you use EAP-TLS
 description: Discusses the requirements when you use Extensible Authentication Protocol (EAP) Transport Layer Security (TLS) or Protected Extensible Authentication Protocol (PEAP)-EAP-TLS in Windows Server.
-ms.date: 12/26/2023
+ms.date: 02/12/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, samyun
-ms.custom: sap:Network Connectivity and File Sharing\Network Load Balancing (NLB), csstroubleshoot
+ms.reviewer: kaushika, samyun, marcussa
+ms.custom:
+- sap:network connectivity and file sharing\network load balancing (nlb)
+- pcy:WinComm Networking
 ---
 # Certificate requirements when you use EAP-TLS or PEAP with EAP-TLS
 
@@ -63,7 +65,7 @@ You can configure clients to validate server certificates by using the **Validat
 - If the client is configured to trust a server certificate with a specific name, the user is prompted to decide about trusting a certificate with a different name. If the user rejects the certificate, authentication fails. If the user accepts the certificate, the certificate is added to the local computer trusted root certificate store.
 
 > [!NOTE]
-> With PEAP or with EAP-TLS authentication, servers display a list of all the installed certificates in the Certificates snap-in. However, the certificates that contain the **Server Authentication** purpose in EKU extensions are not displayed.
+> With PEAP or with EAP-TLS authentication, servers display a list of all the installed certificates in the Certificates snap-in. However, only the certificates that contain the **Server Authentication** purpose in EKU extensions are displayed.
 
 ## More information
 

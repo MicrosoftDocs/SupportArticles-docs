@@ -1,12 +1,14 @@
 ---
 title: Installing AD DS fails
 description: Provides a solution to an issue where installing Active Directory Domain Services fails.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, arrenc
-ms.custom: sap:Active Directory\DCPromo and the installation or removal of domain controllers, csstroubleshoot
+ms.custom:
+- sap:active directory\dcpromo and the installation or removal of domain controllers
+- pcy:WinComm Directory Services
 ---
 # Installing Active Directory Domain Services Fails with Error "The specified user already exists."
 

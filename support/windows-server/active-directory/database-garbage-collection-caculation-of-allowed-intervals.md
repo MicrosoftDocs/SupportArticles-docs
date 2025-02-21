@@ -1,12 +1,14 @@
 ---
 title: Database garbage collection process
 description: Describes the Active Directory database garbage collection process and calculation of allowed intervals.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\Active Directory Domain Controller specific boot failures, csstroubleshoot
+ms.custom:
+- sap:active directory\active directory domain controller specific boot failures
+- pcy:WinComm Directory Services
 ---
 # The Active Directory database garbage collection process and calculation of allowed intervals
 

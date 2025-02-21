@@ -1,7 +1,7 @@
 ---
 title: RemoteWipe CSP fails to execute on Windows 10 client
 description: Fixes an issue in which RemoteWipe fails to execute on Windows 10 client and an Event ID 400 error is generated.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 search.appverid: MET150
 ms.custom: sap:Device Actions\Remove devices
 ms.reviewer: kaushika

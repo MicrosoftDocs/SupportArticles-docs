@@ -1,12 +1,14 @@
 ---
 title: Some SIDs don't resolve into friendly names
 description: Some security identifiers that you see in access control lists or Security Audit reports don't resolve into friendly names. These might be Capability SIDs.
-ms.date: 11/11/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-tea, v-jesits, johnbay, jessev
-ms.custom: sap:Windows Security Technologies\AD Object Permissions, access control, delegation, AdminSDHolder and auditing, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\ad object permissions,access control,delegation,adminsdholder and auditing
+- pcy:WinComm Directory Services
 searchScope:
 - Troubleshoot
 - Windows Server
@@ -14,7 +16,7 @@ searchScope:
 ---
 # Some SIDs don't resolve into friendly names
 
-This article provides some information about the issue where some security identifiers (SIDS) don't resolve into friendly names.
+This article provides some information about the issue where some security identifiers (SIDs) don't resolve into friendly names.
 
 _Original KB number:_ &nbsp; 4502539
 
@@ -43,7 +45,7 @@ Windows 10, version 1809 uses more than 300 Capability SIDs.
 ## More information
 
 > [!Important]
-> Don't delete Capability SIDS from either the registry or file system permissions. Removing a Capability SID from file system permissions or registry permissions might cause a feature or application to function incorrectly. After you remove a Capability SID, you cannot use the UI to add it back.
+> Don't delete Capability SIDs from either the registry or file system permissions. Removing a Capability SID from file system permissions or registry permissions might cause a feature or application to function incorrectly. After you remove a Capability SID, you cannot use the UI to add it back.
 
 When you're troubleshooting an unresolved SID, make sure that it isn't a Capability SID. To get a list of all of the Capability SIDs, follow these steps:
 

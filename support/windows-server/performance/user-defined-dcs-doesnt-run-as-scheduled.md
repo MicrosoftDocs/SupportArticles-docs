@@ -1,12 +1,14 @@
 ---
 title: User-defined data collector set doesn't run as scheduled
 description: This article provides a workaround for an issue in which a user-defined data collector set that is configured to run on a schedule does not run.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-tappelgate
-ms.custom: sap:System Performance\Startup or Pre-logon Performance (slow, unresponsive, spinning circle, blank screen), csstroubleshoot
+ms.custom:
+- sap:system performance\startup or pre-logon performance (slow,unresponsive,spinning circle,blank screen)
+- pcy:WinComm Performance
 ---
 
 # User-defined data collector set doesn't run as scheduled

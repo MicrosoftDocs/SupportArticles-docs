@@ -1,12 +1,14 @@
 ---
 title: The device is not ready for use error
 description: Helps resolve the error - The namespace cannot be queried. The device is not ready for use.
-ms.date: 09/27/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, warrenw, v-lianna, albugn
-ms.custom: sap:Network Connectivity and File Sharing\DFS Namespace (Not Replication), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\dfs namespace (not replication)
+- pcy:WinComm Networking
 ---
 # Error "The namespace cannot be queried. The device is not ready for use" with DFS Namespaces
 

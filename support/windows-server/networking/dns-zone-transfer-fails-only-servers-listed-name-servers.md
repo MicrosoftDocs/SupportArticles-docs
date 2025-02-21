@@ -1,12 +1,14 @@
 ---
 title: DNS zone transfer fails when using Only to servers listed in the Name servers tab
 description: Helps resolve an issue in which DNS zone transfer fails when using the Only to servers listed in the Name servers tab setting.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, ANRATH, brianoakes, v-lianna
-ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot, ikb2lmc
+ms.custom:
+- sap:network connectivity and file sharing\dns
+- pcy:WinComm Networking
 ---
 # DNS zone transfer fails when using the "Only to servers listed in the Name servers tab" setting
 

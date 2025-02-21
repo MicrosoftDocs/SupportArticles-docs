@@ -1,12 +1,14 @@
 ---
 title: Default gateway route doesn't appear in Routing Table
 description: Provides a solution to an issue where default gateway route doesn't appear in the Routing Table.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Networking\Remote Access, csstroubleshoot
+ms.custom:
+- sap:networking\remote access
+- pcy:WinComm Networking
 ---
 # Default gateway route doesn't appear in the Routing Table after you re-add a Routing and Remote Access interface
 

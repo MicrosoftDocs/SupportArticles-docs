@@ -1,12 +1,14 @@
 ---
 title: How to do an in-place upgrade
 description: This article introduces how to do a repair/in-place upgrade of the existing installation for Windows.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
+ms.custom:
+- sap:windows setup,upgrade and deployment\installing or upgrading windows
+- pcy:WinComm Devices Deploy
 ---
 # How to do an in-place upgrade on Windows
 

@@ -1,12 +1,14 @@
 ---
 title: Manually rebuild performance counters
 description: Describes how to manually rebuild performance counters.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:System Performance\Performance tools (Task Manager, Perfmon, WSRM, and WPA), csstroubleshoot
+ms.custom:
+- sap:system performance\performance tools (task manager,perfmon,wsrm,and wpa)
+- pcy:WinComm Performance
 ---
 # Manually rebuild performance counters for Windows Server 2008 64 bit or Windows Server 2008 R2 systems
 

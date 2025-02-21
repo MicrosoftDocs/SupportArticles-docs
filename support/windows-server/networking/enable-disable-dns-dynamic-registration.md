@@ -1,12 +1,14 @@
 ---
 title: Enable or disable DNS updates
 description: Describes how to disable and enable dynamic registration with DNS servers in Windows.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, herbertm
-ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\dns
+- pcy:WinComm Networking
 ---
 # How to enable or disable DNS updates in Windows
 

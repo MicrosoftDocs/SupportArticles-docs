@@ -1,12 +1,14 @@
 ---
 title: Error when checking domain object property
 description: Describes an issue in which ADAC fails on the domain object property. A workaround is provided.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, rolandw, uspand, amaltsev
-ms.custom: sap:Active Directory\Schema Updates, csstroubleshoot
+ms.custom:
+- sap:active directory\schema updates
+- pcy:WinComm Directory Services
 ---
 # Error when you check domain object properties by using RSAT in Windows 10: msDS-ExpirePasswordsOnSmartCardOnlyAccounts not exist
 

@@ -1,12 +1,14 @@
 ---
 title: Scripts to inspect the content of the WMI repository
 description: Introduces a script to inspect the content of the WMI repository.
-ms.date: 10/08/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:System Management Components\WMI management and troubleshooting, csstroubleshoot
+ms.custom:
+- sap:system management components\wmi management and troubleshooting
+- pcy:WinComm User Experience
 ---
 # Scripts: Inspect the content of the WMI repository
 

@@ -1,12 +1,14 @@
 ---
 title: Can't refresh or reset PC after Automatic Repair fails in Windows 8
 description: Fixes an issue in which you can't refresh or reset your PC after Automatic Repair fails in Windows 8.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:System Performance\Startup or Pre-logon Reliability (crash, errors, bug check or Blue Screen), csstroubleshoot
+ms.custom:
+- sap:system performance\startup or pre-logon reliability (crash,errors,bug check or blue screen)
+- pcy:WinComm Performance
 ---
 # Unable to refresh or reset PC after Automatic Repair fails in Windows 8
 

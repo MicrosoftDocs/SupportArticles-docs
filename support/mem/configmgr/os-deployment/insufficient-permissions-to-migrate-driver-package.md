@@ -1,7 +1,7 @@
 ---
 title: Insufficient permissions to migrate a driver package
 description: Fixes an issue where you can't migrate a driver package due to missing privileges for the driver package source path.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 ms.reviewer: kaushika, marcoh, erinwi, jarrettr
 ms.custom: sap:Operating Systems Deployment (OSD)\Driver Management and Installation
 ---

@@ -1,12 +1,14 @@
 ---
 title: Local Security Authority can't contact
 description: Provides a solution to an error that occurs when you try to establish a remote desktop connection using RD client (mstsc.exe) to a Remote Desktop server.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, deepku
-ms.custom: sap:Remote Desktop Services and Terminal Services\Authentication, csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\authentication
+- pcy:WinComm User Experience
 ---
 # RDP connection to Remote Desktop server running Windows Server 2008 R2 may fail with message The Local Security Authority cannot be contacted
 

@@ -1,12 +1,14 @@
 ---
 title: Install and Configure a DHCP Server
 description: Describes how to install and configure a DHCP Server in a Workgroup.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, Johnf
-ms.custom: sap:Network Connectivity and File Sharing\Dynamic Host Configuration Protocol (DHCP), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\dynamic host configuration protocol (dhcp)
+- pcy:WinComm Networking
 ---
 # How To Install and Configure a DHCP Server in a Workgroup  
 

@@ -1,12 +1,14 @@
 ---
 title: KFSO doesn't work in external trust
 description: Describes a situation in which Kerberos Forest Search Order may not work in an external trust. In this situation, Kerberos authentication is not offered.
-ms.date: 05/21/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, jaml
-ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
+ms.custom:
+- sap:active directory\active directory replication and topology
+- pcy:WinComm Directory Services
 ---
 # Kerberos Forest Search Order may not work in an external trust and event ID 17 is returned
 

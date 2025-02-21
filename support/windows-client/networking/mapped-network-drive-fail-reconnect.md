@@ -1,12 +1,14 @@
 ---
 title: Mapped network drive may fail to reconnect in Windows 10, version 1809
 description: An article provides a workaround to resolve mapped network drives not working in Windows 10, version 1809.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-xuhuan, v-jesits
-ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\access to file shares (smb)
+- pcy:WinComm Networking
 ---
 # Mapped network drive may fail to reconnect in Windows 10, version 1809
 

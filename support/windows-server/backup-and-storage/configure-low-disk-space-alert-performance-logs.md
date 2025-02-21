@@ -1,12 +1,14 @@
 ---
 title: Configure a Low Disk Space Alert
 description: Describes how to configure a Low Disk Space Alert by using the Performance Logs and Alerts Feature.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Partition and volume management, csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\partition and volume management
+- pcy:WinComm Storage High Avail
 ---
 # Configure a Low Disk Space Alert by Using the Performance Logs and Alerts Feature
 

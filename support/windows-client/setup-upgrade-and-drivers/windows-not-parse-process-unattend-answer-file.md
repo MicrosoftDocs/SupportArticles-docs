@@ -1,12 +1,14 @@
 ---
 title: Fail to perform an in-place upgrade
 description: Describes behavior that occurs when you receive a "Windows could not parse or process the unattend answer file for pass [specialize]" error message when you perform an in-place upgrade. This behavior occurs on computers that are running Windows 7 or Windows Server 2008 R2.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, yuakib
-ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
+ms.custom:
+- sap:windows setup,upgrade and deployment\installing or upgrading windows
+- pcy:WinComm Devices Deploy
 ---
 # "Windows could not parse or process the unattend answer file for pass [specialize]" error message when you perform an in-place upgrade
 

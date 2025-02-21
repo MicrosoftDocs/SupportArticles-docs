@@ -1,12 +1,14 @@
 ---
 title: BitLocker could not be enabled when USB drive is not found
 description: Provides a resolution to an issue where BitLocker could not be enabled when USB drive is not found
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: manojse, kaushika, dereka
-ms.custom: sap:Windows Security Technologies\BitLocker, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\bitlocker
+- pcy:WinComm Devices Deploy
 ---
 # BitLocker could not be enabled when USB drive is not found
 

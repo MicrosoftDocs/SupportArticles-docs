@@ -1,12 +1,14 @@
 ---
 title: Recommended private heartbeat configuration on a cluster server
 description: Describes recommended configuration for the private adapter on a cluster server.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, ELDENC, dewitth
-ms.custom: sap:Clustering and High Availability\Setup and configuration of clustered services and applications, csstroubleshoot
+ms.custom:
+- sap:clustering and high availability\setup and configuration of clustered services and applications
+- pcy:WinComm Storage High Avail
 ---
 # Recommended private heartbeat configuration on a cluster server
 

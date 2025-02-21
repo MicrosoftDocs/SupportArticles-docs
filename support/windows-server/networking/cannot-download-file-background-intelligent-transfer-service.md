@@ -1,12 +1,14 @@
 ---
 title: Fail to download a file by using BITS
 description: Describes a problem that occurs if you're behind a proxy server or behind a firewall that doesn't support HTTP 1.1 range requests.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Network Connectivity and File Sharing\Background Intelligent Transfer Service (BITS), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\background intelligent transfer service (bits)
+- pcy:WinComm Networking
 ---
 # Error when you download a file by using the Background Intelligent Transfer Service: Content file download failed
 

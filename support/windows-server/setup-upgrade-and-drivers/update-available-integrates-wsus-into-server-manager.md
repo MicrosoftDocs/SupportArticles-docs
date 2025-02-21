@@ -1,12 +1,14 @@
 ---
 title: An update is available that integrates Windows Server Update Services (WSUS) 3.0 into Server Manager
 description: Fixes a problem in which you cannot use the Server Manager snap-in to install WSUS, or WSUS does not appear in the Server Manager snap-in
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
+ms.custom:
+- sap:windows setup,upgrade and deployment\installing or upgrading windows
+- pcy:WinComm Devices Deploy
 ---
 # An update is available that integrates Windows Server Update Services (WSUS) 3.0 into Server Manager
 

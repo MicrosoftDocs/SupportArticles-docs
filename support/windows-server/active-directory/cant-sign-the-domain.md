@@ -1,12 +1,14 @@
 ---
 title: Can't sign in to the domain
 description: Provides a solution to an issue where users can't sign in to the domain after password changes on a Remote Domain Controller.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, PATCH
-ms.custom: sap:Active Directory\Active Directory (FSMO), csstroubleshoot
+ms.custom:
+- sap:active directory\active directory (fsmo)
+- pcy:WinComm Directory Services
 ---
 # Users can't sign in to the domain after password changes on a Remote Domain Controller
 

@@ -1,12 +1,14 @@
 ---
 title: Windows Server 2019 Hyper-V host minroot behavior
 description: Describes behavior that's specific to the Windows Server 2019 Hyper-V host minroot configuration, and provides links to more information about this behavior.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-tappelgate
-ms.custom: sap:Virtualization and Hyper-V\Installation and configuration of Hyper-V, csstroubleshoot
+ms.custom:
+- sap:virtualization and hyper-v\installation and configuration of hyper-v
+- pcy:WinComm Storage High Avail
 keywords: Hyper-V, minroot, minimum root, CPPC, P-state
 ---
 

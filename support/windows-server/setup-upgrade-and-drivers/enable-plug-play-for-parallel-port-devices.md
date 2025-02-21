@@ -1,12 +1,14 @@
 ---
 title: Enable Plug and Play for parallel port devices
 description: Describes how to enable the Plug and Play feature on devices that use a parallel port device.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, IMRANU
-ms.custom: sap:Windows Device and Driver Management\Peripherals driver installation or update, csstroubleshoot
+ms.custom:
+- sap:windows device and driver management\peripherals driver installation or update
+- pcy:WinComm Devices Deploy
 ---
 # Enable Plug and Play detection for parallel port devices
 

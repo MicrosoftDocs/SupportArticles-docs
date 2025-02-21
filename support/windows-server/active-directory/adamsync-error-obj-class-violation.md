@@ -1,12 +1,14 @@
 ---
 title: OBJ_CLASS_VIOLATION error in Adamsync tool
 description: Describes how to troubleshoot a problem that occurs when you try to synchronize Active Directory objects to ADAM by using the Adamsync tool.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, clandis
-ms.custom: sap:Active Directory\Active Directory Lightweight Directory Services (AD LDS), csstroubleshoot
+ms.custom:
+- sap:active directory\active directory lightweight directory services (ad lds)
+- pcy:WinComm Directory Services
 ---
 # Troubleshoot an OBJ_CLASS_VIOLATION error in Adamsync
 

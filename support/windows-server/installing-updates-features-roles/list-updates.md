@@ -1,12 +1,14 @@
 ---
 title: List of updates
 description: Lists the Microsoft Knowledge Base articles that describe the fixes and updates that are included in Windows Server 2003 Service Pack 2.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, trined
-ms.custom: sap:Windows Servicing, Updates and Features on Demand\Clients missing updates, not offered, fail to download, csstroubleshoot
+ms.custom:
+- sap:windows servicing,updates and features on demand\clients missing updates,not offered,fail to download
+- pcy:WinComm Devices Deploy
 ---
 # List of updates in Windows Server 2003 Service Pack 2
 

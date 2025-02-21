@@ -1,12 +1,14 @@
 ---
 title: Active Directory installation fails
 description: Fixes an error that occurs when you start Active Directory installation.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, nedpyle
-ms.custom: sap:Active Directory\On-premises Active Directory domain join, csstroubleshoot
+ms.custom:
+- sap:active directory\on-premises active directory domain join
+- pcy:WinComm Directory Services
 ---
 # Active Directory installation stalls at the Creating the NTDS settings object stage
 

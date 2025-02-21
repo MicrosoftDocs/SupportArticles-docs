@@ -1,12 +1,14 @@
 ---
 title: The request is not supported error
 description: Helps resolve the error - Delegation information for the namespace cannot be queried. The request is not supported.
-ms.date: 09/27/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, warrenw, v-lianna, albugn
-ms.custom: sap:Network Connectivity and File Sharing\DFS Namespace (Not Replication), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\dfs namespace (not replication)
+- pcy:WinComm Networking
 ---
 # Error "Delegation information for the namespace cannot be queried. The request is not supported" with DFS Namespaces
 

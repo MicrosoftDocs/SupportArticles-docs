@@ -12,7 +12,7 @@ ms.collection: linux
 ms.topic: article
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure-services
-ms.date: 11/21/2024
+ms.date: 02/10/2025
 ms.author: mbifeld
 ---
 
@@ -116,7 +116,7 @@ Serial Console uses the storage account configured for boot diagnostics in its c
    | Australia | Australia Central, Australia Central 2, Australia East, Australia Southeast | 4.198.45.55, 4.200.251.224, 20.167.131.228, 20.53.52.250, 20.53.53.224, 20.53.55.174, 20.70.222.112, 20.70.222.113, 68.218.123.133 |
    | Brazil | Brazil South, Brazil Southeast | 20.206.0.192, 20.206.0.193, 20.206.0.194, 20.226.211.157, 108.140.5.172, 191.234.136.63, 191.238.77.232, 191.238.77.233 |
    | Canada | Canada Central, Canada East | 20.175.7.183, 20.48.201.78, 20.48.201.79, 20.220.7.246, 52.139.106.74, 52.139.106.75, 52.228.86.177, 52.242.40.90 |
-   | Canary (EUAP) | Canary | 20.45.242.18, 20.51.21.252 |
+   | Canary (EUAP) | US Central EUAP, US East 2 EUAP | 20.45.242.18, 20.45.242.19, 20.45.242.20, 20.47.232.186, 20.47.232.187, 20.51.21.252, 68.220.123.194, 168.61.232.59 |
    | China | China North 3, China East 3 | 163.228.102.122, 163.228.102.123, 52.131.192.182, 52.131.192.183, 159.27.255.76, 159.27.253.236, 163.228.102.122, 163.228.102.123, 52.131.192.182, 52.131.192.183 |
    | Europe | Europe North, Europe West | 4.210.131.60, 20.105.209.72, 20.105.209.73, 40.113.178.49, 52.146.137.65, 52.146.139.220, 52.146.139.221, 98.71.107.78 |
    | France | France Central, France South | 20.111.0.244, 40.80.103.247, 51.138.215.126, 51.138.215.127, 52.136.191.8, 52.136.191.9, 52.136.191.10, 98.66.128.35 |
@@ -195,6 +195,7 @@ Pressing **Enter** after the connection banner does not cause a sign-in prompt t
 Serial console text only takes up a portion of the screen size (often after using a text editor). | Serial consoles do not support negotiating about window size ([RFC 1073](https://www.ietf.org/rfc/rfc1073.txt)), which means that there will be no SIGWINCH signal sent to update screen size, and the VM will have no knowledge of your terminal's size. Install xterm or a similar utility to provide you with the `resize` command, and then run `resize`.
 Pasting long strings doesn't work. | The serial console limits the length of strings pasted into the terminal to 2048 characters to prevent overloading the serial port bandwidth.
 Erratic keyboard input in SLES BYOS images. Keyboard input is only sporadically recognized. | This is an issue with the Plymouth package. Plymouth should not be run in Azure as you don't need a splash screen, and Plymouth interferes with the platform's ability to use Serial Console. Remove Plymouth with `sudo zypper remove plymouth` and then reboot. Alternatively, modify the kernel line of your GRUB config by appending `plymouth.enable=0` to the end of the line. You can do this by [editing the boot entry at boot time](./serial-console-grub-single-user-mode.md#single-user-mode-in-suse-sles), or by editing the GRUB_CMDLINE_LINUX line in `/etc/default/grub`, rebuilding GRUB with `grub2-mkconfig -o /boot/grub2/grub.cfg`,  and then rebooting.
+Serial console and logs might not be available after live migration for VMs with Trusted Launch and Secure Boot enabled. | Serial console and logs will be available after the next reboot.
 
 ## Frequently asked questions
 

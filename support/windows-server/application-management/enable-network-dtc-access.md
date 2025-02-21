@@ -1,12 +1,14 @@
 ---
 title: How to enable network DTC access
 description: Describes the procedures that you follow to enable network Distributed Transaction Coordinator (DTC) access
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Application Technologies and Compatibility\DTC startup, configuration, connectivity, and cluster, csstroubleshoot
+ms.custom:
+- sap:application technologies and compatibility\dtc startup,configuration,connectivity,and cluster
+- pcy:WinComm User Experience
 ---
 # How to enable network DTC access
 

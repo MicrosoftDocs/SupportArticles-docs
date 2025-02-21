@@ -1,12 +1,14 @@
 ---
 title: Error code 0x800f0922 when installing Windows updates
 description: Helps resolve the 0x800f0922 (CBS_E_INSTALLERS_FAILED) error when installing Windows updates.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, ismael, v-lianna
-ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update fails - installation stops with error, csstroubleshoot, ikb2lmc
+ms.custom:
+- sap:windows servicing,updates and features on demand\windows update fails - installation stops with error
+- pcy:WinComm Devices Deploy
 ---
 # Error 0x800f0922 caused by corrupted scheduled task when installing Windows updates
 

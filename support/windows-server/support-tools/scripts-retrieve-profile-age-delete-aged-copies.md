@@ -1,12 +1,14 @@
 ---
 title: Scripts to retrieve profile age and optionally delete aged copies
 description: Provides a script to retrieve profile age and optionally delete aged copies.
-ms.date: 07/02/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, herbertm, v-lianna
-ms.custom: sap:User Logon and Profiles\User profiles, csstroubleshoot
+ms.custom:
+- sap:user logon and profiles\user profiles
+- pcy:WinComm Directory Services
 ---
 # Scripts: Retrieve profile age and optionally delete aged copies
 

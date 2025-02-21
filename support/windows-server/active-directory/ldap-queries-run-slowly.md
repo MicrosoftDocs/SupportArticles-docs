@@ -1,12 +1,14 @@
 ---
 title: Event ID 1644 when LDAP queries are run
 description: Works around a problem in which an LDAP query performs slowly on a Windows Server 2003 or newer server that uses an AD LDS or an ADAM directory service.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, herbertm
-ms.custom: sap:Active Directory\LDAP configuration and interoperability, csstroubleshoot
+ms.custom:
+- sap:active directory\ldap configuration and interoperability
+- pcy:WinComm Directory Services
 ---
 # LDAP queries are executed more slowly than expected in the AD or LDS/ADAM directory service and Event ID 1644 may be logged
 

@@ -1,12 +1,14 @@
 ---
 title: Description of the netmask ordering feature and the round robin feature
 description: Describes the netmask ordering feature and the round robin feature in Windows Server 2003 DNS. Describes how to use these features together. You can do this to randomize the results that are returned from a netmask ordered server.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\dns
+- pcy:WinComm Networking
 ---
 # Description of the netmask ordering feature and the round robin feature in Windows Server 2003 DNS
 

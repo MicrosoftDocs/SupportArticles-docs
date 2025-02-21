@@ -1,14 +1,16 @@
 ---
 title: Support policy and known issues for ADMT
 description: Learn Support policy and known issues for Active Directory Migration Tool.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: gipauli, arrenc, herbertm, clfish, kaushika
-ms.custom: sap:Active Directory\Active Directory Migration Tool (ADMT), csstroubleshoot
+ms.custom:
+- sap:active directory\active directory migration tool (admt)
+- pcy:WinComm Directory Services
 ---
 # Support policy and known issues for Active Directory Migration Tool
 

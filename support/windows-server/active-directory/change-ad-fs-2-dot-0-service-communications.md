@@ -1,12 +1,14 @@
 ---
 title: Change AD FS 2.0 service communications
 description: Contains the steps to change the Active Directory Federation Services 2.0 service communications certificate.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, roberg, willfid
-ms.custom: sap:Windows Security Technologies\Active Directory Federation Services (AD FS) non-Azure-O365 issues, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\active directory federation services (ad fs) non-azure-o365 issues
+- pcy:WinComm Directory Services
 ---
 # How to change the AD FS 2.0 service communications certificate after it expires
 

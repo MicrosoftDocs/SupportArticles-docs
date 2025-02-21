@@ -1,12 +1,14 @@
 ---
 title: Guidance for troubleshooting DHCP
 description: Introduces general guidance for troubleshooting scenarios related to DHCP.
-ms.date: 03/06/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-lianna
-ms.custom: sap:Network Connectivity and File Sharing\Dynamic Host Configuration Protocol (DHCP), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\dynamic host configuration protocol (dhcp)
+- pcy:WinComm Networking
 ---
 # DHCP troubleshooting guidance
 

@@ -1,12 +1,14 @@
 ---
 title: Troubleshoot DNS Client Name Resolution Issues
 description: Helps troubleshoot DNS client name resolution issues.
-ms.date: 11/22/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, moibrahi, warrenw, v-lianna
-ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\dns
+- pcy:WinComm Networking
 ---
 # Troubleshoot DNS client name resolution issues
 

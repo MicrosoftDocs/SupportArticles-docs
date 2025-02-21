@@ -1,12 +1,14 @@
 ---
 title: Error (This update is not applicable to your computer) when installing RSAT
 description: Provides a solution to an error that occurs when you install the Remote Server Administration Tools.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Servicing, Updates and Features on Demand\Issues installing Features on Demand(FoD), csstroubleshoot
+ms.custom:
+- sap:windows servicing,updates and features on demand\issues installing features on demand(fod)
+- pcy:WinComm Devices Deploy
 ---
 # Error message when installing RSAT: This update is not applicable to your computer
 

@@ -1,12 +1,14 @@
 ---
 title: Renewal of Enrollment Agent certificate fails
 description: Provides a solution to fix an issue where renewing Exchange Enrollment Agent (Offline request) certificate by using NDES fails.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Certificate Enrollment Technologies (Auto Enrollment, NDES, CWE, CEP, CES), csstroubleshoot
+ms.custom:
+- sap:certificates and public key infrastructure (pki)\certificate enrollment technologies (auto enrollment,ndes,cwe,cep,ces)
+- pcy:WinComm Directory Services
 ---
 # Renewal of "Enrollment Agent" certificate used by NDES may fail
 

@@ -1,12 +1,14 @@
 ---
 title: GetAddrInfo fails with WSAHOST_NOT_FOUND (11001) error when there was a previous call for the AF_INET6 family in Windows
 description: Address an issue in which you receive a WSAHOST_NOT_FOUND error when the GetAddrInfo is called after another call for the AF_INET6 family.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-jeffbo, kevidyke, ajayps
-ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\dns
+- pcy:WinComm Networking
 ---
 # GetAddrInfo fails with error 11001 when there was a previous call for the AF_INET6 family in Windows
 

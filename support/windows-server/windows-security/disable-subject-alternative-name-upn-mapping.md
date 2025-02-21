@@ -1,12 +1,14 @@
 ---
 title: How to disable the SAN for UPN mapping
 description: Describes how to disable the Subject Alternative Name for UPN mapping through Registry Editor.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, arrenc, clfish, jories, jtierney, stsyfuhs, waynmc, v-lianna
-ms.custom: sap:Windows Security Technologies\Kerberos authentication, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\kerberos authentication
+- pcy:WinComm Directory Services
 ---
 # How to disable the Subject Alternative Name for UPN mapping
 

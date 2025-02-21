@@ -1,12 +1,14 @@
 ---
 title: 'WUBr: Troubleshoot data transmission'
 description: Describes how to troubleshoot diagnostic data transmission issues in Windows Update for Business reports.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-tappelgate
-ms.custom: sap:Windows Update for Business Reports\Missing data or incomplete report data, csstroubleshoot
+ms.custom:
+- sap:windows update for business reports\missing data or incomplete report data
+- pcy:WinComm Devices Deploy
 keywords: Windows Update for Business reports, WUBr, diagnostic data, telemetry
 ---
 

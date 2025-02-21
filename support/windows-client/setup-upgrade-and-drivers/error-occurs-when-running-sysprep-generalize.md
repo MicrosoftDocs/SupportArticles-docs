@@ -1,12 +1,14 @@
 ---
 title: Running Sysprep /generalize returns error
 description: Describes how to work around the issue that may occur if the Windows Software Licensing Rearm program has run more than three times in a single Windows image.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
+ms.custom:
+- sap:windows setup,upgrade and deployment\installing or upgrading windows
+- pcy:WinComm Devices Deploy
 ---
 # A fatal error occurred while trying to Sysprep the machine error when running Sysprep /generalize
 

@@ -1,12 +1,14 @@
 ---
 title: Hard disk usage reaches 100 percent after the computer resumes from Sleep mode
 description: Fixes an issue in which a Windows 8.1-based computer stops responding and hard disk usage reaches 100 percent. This issue occurs after the computer resumes from Sleep mode.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, aarthit
-ms.custom: sap:Windows Setup, Upgrade and Deployment\Power management, csstroubleshoot
+ms.custom:
+- sap:windows setup,upgrade and deployment\power management
+- pcy:WinComm Devices Deploy
 ---
 # Hard disk usage reaches 100 percent after the computer resumes from Sleep mode
 

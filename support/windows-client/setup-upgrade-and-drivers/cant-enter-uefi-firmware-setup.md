@@ -1,12 +1,14 @@
 ---
 title: Can't enter UEFI firmware setup
 description: Provides a solution to an issue where you can't enter UEFI firmware setup when in native UEFI mode.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, match, jaysenb
-ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
+ms.custom:
+- sap:windows setup,upgrade and deployment\installing or upgrading windows
+- pcy:WinComm Devices Deploy
 ---
 # Can't enter UEFI firmware setup when in native UEFI mode in Windows 7 and Windows 8
 

@@ -1,12 +1,14 @@
 ---
 title: Managing the Teams Chat icon on Windows 11
 description: This article helps you to manage the Chat icon on Windows 11.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 author: kaushika-msft
 ms.author: kaushika
 ms.topic: troubleshooting
 ms.reviewer: warren-msft, kimberj, v-jayaramanp
-ms.custom: sap:Application Technologies and Compatibility\Windows Script Host (CScript or WScript), csstroubleshoot
+ms.custom:
+- sap:application technologies and compatibility\windows script host (cscript or wscript)
+- pcy:WinComm User Experience
 audience: itpro
 ---
 # Managing the Teams Chat icon on Windows 11

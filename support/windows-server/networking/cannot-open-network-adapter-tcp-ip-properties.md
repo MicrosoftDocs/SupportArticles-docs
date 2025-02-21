@@ -1,12 +1,14 @@
 ---
 title: Fail to open TCP/IP properties of network adapter
 description: Resolve an error that occurs when you open the TCP/IP properties of your network adapter.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, MASOUDH
-ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
+- pcy:WinComm Networking
 ---
 # Error message: In order to configure TCP/IP, you must install and enable a network adapter card
 

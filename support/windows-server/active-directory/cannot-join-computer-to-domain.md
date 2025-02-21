@@ -1,12 +1,14 @@
 ---
 title: Unable to join computers to a domain
 description: Provides a solution to an issue where users can't join a computer to an Active Directory domain.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\On-premises Active Directory domain join, csstroubleshoot
+ms.custom:
+- sap:active directory\on-premises active directory domain join
+- pcy:WinComm Directory Services
 ---
 # Unable to Join Windows Server 2008 R2 or Windows 7 Computer to Active Directory Domain
 

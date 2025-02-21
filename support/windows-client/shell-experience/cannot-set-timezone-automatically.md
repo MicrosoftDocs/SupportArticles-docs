@@ -1,12 +1,14 @@
 ---
 title: Can't set time zone automatically
 description: Provides several methods to resolve the issue in which you cannot set the time zone automatically.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, warrenw, hunterm, ronruz, aandrejs
-ms.custom: sap:Windows Desktop and Shell Experience\DST and Timezones, csstroubleshoot
+ms.custom:
+- sap:windows desktop and shell experience\dst and timezones
+- pcy:WinComm User Experience
 ---
 # Can't set time zone automatically in Windows 10
 

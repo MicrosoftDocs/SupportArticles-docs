@@ -1,12 +1,14 @@
 ---
 title: Can't set up Folder Redirection with Group Policy
 description: Resolves an issue where you fail to set up Folder Redirection component of Group Policy.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:User Logon and Profiles\Enterprise State Roaming (ESR) and Folder Redirection, csstroubleshoot
+ms.custom:
+- sap:user logon and profiles\enterprise state roaming (esr) and folder redirection
+- pcy:WinComm Directory Services
 ---
 # Event ID 101 and Event ID 1000 may be displayed when Folder Redirection is set up with Group Policy
 

@@ -1,12 +1,14 @@
 ---
 title: Relocate a SYSVOL tree
 description: Describes two options for moving the SYSVOL tree on your domain controller. You can use the Active Directory Installation Wizard, or you can edit the registry and manually move the SYSVOL tree.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\Active Directory backup, restore, or disaster recovery, csstroubleshoot
+ms.custom:
+- sap:active directory\active directory backup,restore,or disaster recovery
+- pcy:WinComm Directory Services
 ---
 # How to relocate a SYSVOL tree that uses FRS for replication
 

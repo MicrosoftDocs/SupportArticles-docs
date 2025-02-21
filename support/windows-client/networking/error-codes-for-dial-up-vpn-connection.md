@@ -1,12 +1,14 @@
 ---
 title: Error codes for dial-up or VPN connections
 description: Lists the error codes that you may receive when you make a dial-up connection or a VPN connection.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, tode
-ms.custom: sap:Network Connectivity and File Sharing\Remote access (VPN, RRAS, CMAK and AOVPN), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\remote access (vpn,rras,cmak and aovpn)
+- pcy:WinComm Networking
 ---
 # List of error codes for dial-up connections or VPN connections
 

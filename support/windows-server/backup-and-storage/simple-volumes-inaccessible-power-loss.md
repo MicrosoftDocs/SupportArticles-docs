@@ -1,12 +1,14 @@
 ---
 title: Simple volumes become inaccessible
 description: Provides a resolution for the issue that simple volumes may become inaccessible if a power loss occurs shortly after creation.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Partition and volume management, csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\partition and volume management
+- pcy:WinComm Storage High Avail
 ---
 # Simple volumes may become inaccessible if a power loss occurs shortly after creation
 

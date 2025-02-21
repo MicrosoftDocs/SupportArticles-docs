@@ -1,12 +1,14 @@
 ---
 title: Error or connection problems when you configure WINS addresses for a WINS server
 description: Provides a solution to problems that occur when you configure the Primary WINS address and Secondary WINS address of a WINS server.
-ms.date: 03/08/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, timball
-ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\access to file shares (smb)
+- pcy:WinComm Networking
 ---
 # Error or connection problems when you configure WINS addresses for a WINS server
 

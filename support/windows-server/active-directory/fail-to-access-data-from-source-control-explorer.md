@@ -1,12 +1,14 @@
 ---
 title: Can't access AD data from Source Control Explorer
 description: Provides a solution to solve an error that occurs when you access Active Directory information from Team Foundation Server Source Control Explorer.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
+ms.custom:
+- sap:active directory\user,computer,group,and object management
+- pcy:WinComm Directory Services
 ---
 # "Object reference not set to an instance of an object" while accessing Active Directory information from TFS Source Control Explorer
 

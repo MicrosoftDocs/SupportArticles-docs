@@ -1,12 +1,14 @@
 ---
 title: Microsoft Store Apps fail to start
 description: Event ID 5961 and event ID 1000 are logged when trying to start a Microsoft Store App. Provides a resolution.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, warrenw
-ms.custom: sap:Windows Desktop and Shell Experience\Modern, Inbox and Microsoft Store Apps, csstroubleshoot
+ms.custom:
+- sap:windows desktop and shell experience\modern,inbox and microsoft store apps
+- pcy:WinComm User Experience
 ---
 # Microsoft Store Apps fail to start if default registry or file permissions modified
 

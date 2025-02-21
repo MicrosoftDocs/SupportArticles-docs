@@ -1,12 +1,14 @@
 ---
 title: RDS fails to install with error 0x800706D9
 description: Provides a solution to an issue where Remote Desktop Services fails to install and you get the error code 0x800706D9.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Remote Desktop Services and Terminal Services\Deployment, configuration, and management of Remote Desktop Services infrastructure, csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\deployment,configuration,and management of remote desktop services infrastructure
+- pcy:WinComm User Experience
 ---
 # The Remote Desktop Services or Terminal Services Role fails to install when FireWall Service is set to disabled
 

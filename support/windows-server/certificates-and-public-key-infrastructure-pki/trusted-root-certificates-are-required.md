@@ -1,12 +1,14 @@
 ---
 title: Required trusted root certificates
 description: Lists the trusted root certificates that are required by Windows operating systems. These trusted root certificates are required for the operating system to run correctly.
-ms.date: 10/12/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory Certificate Services (ADCS), csstroubleshoot
+ms.custom:
+- sap:certificates and public key infrastructure (pki)\active directory certificate services (adcs)
+- pcy:WinComm Directory Services
 ---
 # Required trusted root certificates
 

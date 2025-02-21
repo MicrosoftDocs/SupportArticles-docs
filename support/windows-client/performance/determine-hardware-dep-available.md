@@ -1,12 +1,14 @@
 ---
 title: Determine hardware DEP is available
 description: Describes the requirements for using hardware-enforced DEP. Also describes how to confirm that hardware DEP is working.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, chrisw, patste, mmill
-ms.custom: sap:System Performance\Performance tools (Task Manager, Perfmon, WSRM, and WPA), csstroubleshoot
+ms.custom:
+- sap:system performance\performance tools (task manager,perfmon,wsrm,and wpa)
+- pcy:WinComm Performance
 ---
 # How to determine that hardware DEP is available and configured on your computer
 

@@ -1,12 +1,14 @@
 ---
 title: Clear TPM fails with error code 0x80290300
 description: Fixes the error code 0x80290300 that occurs when you clear TPM information.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:System Performance\Startup configuration (general, secure boot, UEFI), csstroubleshoot
+ms.custom:
+- sap:system performance\startup configuration (general,secure boot,uefi)
+- pcy:WinComm Performance
 ---
 # Clear TPM fails with error code: 0x80290300
 

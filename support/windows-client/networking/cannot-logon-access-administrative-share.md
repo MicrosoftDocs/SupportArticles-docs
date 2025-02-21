@@ -1,12 +1,14 @@
 ---
 title: Error when you access an administrative share on a Windows-based computer
 description: Describes a logon unsuccessful behavior when you try to access an administrative share on a Windows-based computer from another Windows-based computer that's a member of a workgroup.
-ms.date: 09/13/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\access to file shares (smb)
+- pcy:WinComm Networking
 ---
 # Error when you try to access an administrative share on a Windows-based computer from another Windows-based computer that's a member of a workgroup: Logon unsuccessful: Windows is unable to log you on
 

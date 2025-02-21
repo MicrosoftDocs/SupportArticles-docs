@@ -4,7 +4,7 @@ description: Provides debugging techniques for Azure Storage Explorer.
 services: storage
 ms.service: azure-storage
 ms.custom: sap:Alerts, Metrics, Logging and Monitoring, linux-related-content
-ms.date: 04/19/2024
+ms.date: 12/23/2024
 ms.reviewer: azurestocic, jarrettr, v-weizhu
 ---
 
@@ -154,9 +154,13 @@ Having to reenter credentials is most likely the result of Conditional Access po
 
 To reduce the frequency of having to reenter credentials because of errors like the preceding ones, talk to your Microsoft Entra admin.
 
-### Conditional access policies
+### Other conditional access policy issues
 
-If you have conditional access policies that need to be satisfied for your account, make sure you're using the **Default Web Browser** value for the **Sign in with** setting. For information on that setting, see [Changing where sign-in happens](/azure/storage/common/storage-explorer-sign-in#changing-where-sign-in-happens).
+If you have other conditional access policies that need to be satisfied for your account, try using either the **Authentication Broker** or **Default Web Browser** value for the **Sign in with** setting. For information on that setting, see [Changing where sign-in happens](/azure/storage/common/storage-explorer-sign-in#changing-where-sign-in-happens).
+
+### Issues with authentication broker on Windows
+
+The Windows operating system uses the Web Account Manager (WAM) as its authentication broker. If you're using the **Authentication Broker** sign-in method on Windows and experience issues, see [this guide](/entra/msal/dotnet/advanced/exceptions/wam-errors) for steps to resolve common errors.
 
 ### Browser complains about HTTP redirect or insecure connection during sign-in
 
@@ -613,7 +617,7 @@ When you report an issue to GitHub, you might be asked to gather certain logs to
 
 ### Storage Explorer logs
 
-Storage Explorer logs various things to its own application logs. You can easily get to these logs by selecting **Help** > **Open Logs Directory**. By default, Storage Explorer logs at a low level of verbosity. To change the verbosity level, go to **Settings** (the **gear** symbol on the left) > **Application** > **Logging** > **Log Level**. You can then set the log level as needed. For troubleshooting, the Trace log level is recommended as it's the most verbose level.
+Storage Explorer logs various things to its own application logs. You can easily get to these logs by selecting **Help** > **Open Logs Directory**. By default, Storage Explorer logs at a low level of verbosity. To change the verbosity level, go to **Settings** (the **gear** symbol on the left) > **Application** > **Logging** > **Log Level**. You can then set the log level as needed. For troubleshooting, the **Trace** log level is recommended as it's the most verbose level. After changing the log level, restart Storage Explorer and reproduce the issue you're having.
 
 Logs are split into folders for each session of Storage Explorer that you run. For whatever log files you need to share, place them in a zip archive, with files from different sessions in different folders.
 
@@ -636,11 +640,12 @@ Generally, you can follow these steps to gather the logs:
 
 ### AzCopy logs
 
-If you're having trouble transferring data, you might need to get the AzCopy logs. AzCopy logs can be found easily via two different methods:
+If you're having trouble transferring data, you might need to get the AzCopy logs. By default, AzCopy logs at a low level of verbosity. To change the verbosity level, go to **Settings** (the **gear** symbol on the left) > **Transfers** > **AzCopy** > **Log Level**. You can then set the log level as needed. For troubleshooting, the **Debug** log level is recommended as it's the most verbose level. After changing the log level, restart Storage Explorer and reproduce the issue you're having.
+
+AzCopy logs can be found easily via two different methods:
 
 - For failed transfers still in the Activity Log, select **Go to AzCopy Log File**.
 - For transfers that failed in the past, go to the AzCopy logs folder. This folder can be found at:
-
   - Windows: *C:\Users\\<your username\>\\.azcopy*
   - macOS: *~/.azcopy*
   - Linux: *~/.azcopy*

@@ -1,12 +1,14 @@
 ---
 title: Configure firewall for AD domain and trusts
 description: Describes the ports that are used when you configure a trust relationship between domains.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\Domain or forest functional level updates, failures and Advisory, csstroubleshoot
+ms.custom:
+- sap:active directory\domain or forest functional level updates,failures and advisory
+- pcy:WinComm Directory Services
 ---
 # How to configure a firewall for Active Directory domains and trusts
 

@@ -1,12 +1,14 @@
 ---
 title: WinStoreUI.admx conflict with Windows 10 ADMX file
 description: Discusses a WinStoreUI.admx conflict that occurs when Central Store is updated by using Windows 10 Version 1511 ADMX files. This problem is fixed in Windows 10 Version1511.
-ms.date: 04/29/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstroubleshoot
+ms.custom:
+- sap:group policy\group policy management (gpmc or gpedit)
+- pcy:WinComm Directory Services
 ---
 # WinStoreUI.admx conflict when Central Store is updated with Windows 10 Version 1511 ADMX files
 

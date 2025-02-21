@@ -1,12 +1,14 @@
 ---
 title: Event ID's with point and print restrictions
 description: Provides a resolution for Event ID's commonly associated with point and print restrictions.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Print, Fax, and Scan\Print Performance - failures, crashes, not responsive, csstroubleshoot
+ms.custom:
+- sap:print,fax,and scan\print performance - failures,crashes,not responsive
+- pcy:WinComm User Experience
 ---
 # Event ID's commonly associated with point and print restrictions
 

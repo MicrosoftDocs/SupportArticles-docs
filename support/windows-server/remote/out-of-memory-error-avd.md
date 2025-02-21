@@ -1,12 +1,14 @@
 ---
 title: Out of memory error when connecting to Azure Virtual Desktop
 description: Troubleshoot connection error when trying to connect to Azure Virtual Desktop with the web client.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, elluthra, helohr, femila, v-lianna
-ms.custom: sap:Remote Desktop Services and Terminal Services\Session connectivity, csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\session connectivity
+- pcy:WinComm User Experience
 ---
 # "Out of memory" error when connecting to Azure Virtual Desktop
 

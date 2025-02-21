@@ -1,12 +1,14 @@
 ---
 title: Usability limit for Volume Shadow Copy Service
 description: Provides a workaround for usability limit of Volume Shadow Copy Service (VSS).
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, folkertb
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Partition and volume management, csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\partition and volume management
+- pcy:WinComm Storage High Avail
 ---
 # Usability limit for Volume Shadow Copy Service (VSS)
 

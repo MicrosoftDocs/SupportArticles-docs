@@ -1,12 +1,14 @@
 ---
 title: Can't remove an RD Host from an RDS deployment
 description: Resolves an issue where you can't remove an RD Host that no longer exists in Active Directory from an RDS deployment.
-ms.date: 10/17/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, robertvi
-ms.custom: sap:Remote Desktop Services and Terminal Services\Session connectivity, csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\session connectivity
+- pcy:WinComm User Experience
 ---
 # Cannot remove an RD Host from an RDS deployment
 

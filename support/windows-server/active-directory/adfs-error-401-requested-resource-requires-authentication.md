@@ -1,12 +1,14 @@
 ---
 title: ADFS 2.0 error 401
 description: Discusses that you can't authenticate an account in AD FS 2.0, that you're prompted for credentials, and that event 111 is logged. Provides a resolution.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Security Technologies\Active Directory Federation Services (AD FS) non-Azure-O365 issues, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\active directory federation services (ad fs) non-azure-o365 issues
+- pcy:WinComm Directory Services
 ---
 # ADFS 2.0 error: 401 The requested resource requires user authentication
 

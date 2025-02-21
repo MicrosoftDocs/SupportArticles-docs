@@ -1,12 +1,14 @@
 ---
 title: User GPP Scheduled Task item fails to apply
 description: Provides a solution to an issue where User GPP Scheduled Task item fails to apply.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, akhleshs
-ms.custom: sap:Group Policy\Problems Applying Group Policy, csstroubleshoot
+ms.custom:
+- sap:group policy\problems applying group policy
+- pcy:WinComm Directory Services
 ---
 # User GPP Scheduled Task item fails to apply and logs event ID: 4098 with 0x80070005 Access is denied
 

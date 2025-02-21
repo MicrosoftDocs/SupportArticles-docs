@@ -1,12 +1,14 @@
 ---
 title: You cannot set page files on a partition that is larger than 2 terabytes
 description: Describes a problem that occurs when you try to set page files on a partition that is larger than 2 terabytes
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: adityah, kaushika
-ms.custom: sap:System Performance\App, Process, Service Performance (slow, unresponsive), csstroubleshoot
+ms.custom:
+- sap:system performance\app,process,service performance (slow,unresponsive)
+- pcy:WinComm Performance
 ---
 # You cannot set page files on a partition that is larger than 2 terabytes
 

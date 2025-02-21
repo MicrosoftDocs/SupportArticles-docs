@@ -1,12 +1,14 @@
 ---
 title: Terminal Server license for deployment
 description: Helps you understand and successfully deploy Terminal Services on computers that are running Microsoft Windows Server 2003.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Remote Desktop Services and Terminal Services\Licensing for Remote Desktop Services (Terminal Services), csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\licensing for remote desktop services (terminal services)
+- pcy:WinComm User Experience
 ---
 # Windows Server 2003 Terminal Server licensing issues and requirements for deployment
 

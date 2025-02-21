@@ -1,12 +1,14 @@
 ---
 title: Event ID 46 when you start a computer
 description: This article describes an issue with Windows operating system, wherein System Event logs report Event ID 46 after a computer restart.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, cachen
-ms.custom: sap:System Performance\Startup or Pre-logon Reliability (crash, errors, bug check or Blue Screen), csstroubleshoot
+ms.custom:
+- sap:system performance\startup or pre-logon reliability (crash,errors,bug check or blue screen)
+- pcy:WinComm Performance
 ---
 # Event ID 46 is logged when you start a computer
 

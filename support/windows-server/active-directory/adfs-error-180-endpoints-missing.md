@@ -1,11 +1,13 @@
 ---
 title: AD FS error 180 and endpoints missing
 description: Describes a problem in Windows Server 2016 that causes AD FS features to fail and that triggers an Event 180 error. Provides a scripted fix.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: Brad.Held
-ms.custom: sap:Windows Security Technologies\Active Directory Federation Services (AD FS) non-Azure-O365 issues, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\active directory federation services (ad fs) non-azure-o365 issues
+- pcy:WinComm Directory Services
 ---
 # Event ID 180 is logged and AD FS endpoints are missing in Windows Server 2016
 

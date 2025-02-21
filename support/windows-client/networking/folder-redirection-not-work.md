@@ -1,12 +1,14 @@
 ---
 title: Folder redirection doesn't work correctly
 description: Discusses a problem in which folder redirection does not work correctly after you restart a Windows Server 2008-based computer or a Windows Vista-based computer. A workaround is provided.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, philibla
-ms.custom: sap:Network Connectivity and File Sharing\Offline Files and Folders (CSC), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\offline files and folders (csc)
+- pcy:WinComm Networking
 ---
 # Folder redirection does not work correctly after you restart the computer
 

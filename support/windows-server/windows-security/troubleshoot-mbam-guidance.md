@@ -1,12 +1,14 @@
 ---
 title: Guidance for troubleshooting MBAM
 description: Introduces general guidance for troubleshooting scenarios related to MBAM.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Security Technologies\BitLocker, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\bitlocker
+- pcy:WinComm Devices Deploy
 ---
 # MBAM troubleshooting guidance
 

@@ -1,12 +1,14 @@
 ---
 title: Compatibility with user accounts ending with the dollar sign
 description: Starting in Windows 7/2008R2, there are potential compatibility issues with using domain user accounts ending with the dollar sign ($).  Managed service accounts are identified by ending in a dollar sign ($) and there can be confusion on a system when setting a service to run under an account that ends with the dollar sign ($).
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
+ms.custom:
+- sap:active directory\user,computer,group,and object management
+- pcy:WinComm Directory Services
 ---
 # Compatibility with user accounts ending with the dollar sign ($)
 

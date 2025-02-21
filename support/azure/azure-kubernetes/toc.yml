@@ -1,5 +1,6 @@
 - name: Welcome
   href: welcome-azure-kubernetes.yml
+
 - name: Create, Upgrade, Scale and Delete operations (cluster or nodepool)
   items:
   - name: Create operations
@@ -8,7 +9,7 @@
       href: create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md
     - name: CniDownloadTimeoutVMExtensionError error (41)
       href: create-upgrade-delete/error-code-cnidownloadtimeoutvmextensionerror.md
-    - name: ERR_VHD_FILE_NOT_FOUND error (124)
+    - name: ERR_VHD_FILE_NOT_FOUND error (65)
       href: create-upgrade-delete/error-code-vhdfilenotfound.md
     - name: InvalidParameter error
       href: create-upgrade-delete/error-code-invalidparameter.md
@@ -78,7 +79,6 @@
       href: create-upgrade-delete/upgrade-fails-because-of-nsg-rules.md
     - name: Memory saturation occurs in pods after cluster upgrade
       href: create-upgrade-delete/aks-memory-saturation-after-upgrade.md
-
   - name: Delete operations
     items:
     - name: LB/PvtLinkSvcWithPvtEndptConn deletion error
@@ -154,7 +154,7 @@
   items:
   - name: Create an unmanaged ingress controller
     href: load-bal-ingress-c/create-unmanaged-ingress-controller.md
-    
+
 - name: Troubleshoot Kubernetes control plane
   items:
   - name: Troubleshoot API server and etcd
@@ -353,3 +353,20 @@
       href: extensions/troubleshoot-kubernetes-event-driven-autoscaling-add-on.md
     - name: Breaking changes in KEDA add-on 2.15 and 2.14
       href: extensions/changes-in-kubernetes-event-driven-autoscaling-add-on-214-215.md
+  
+- name: Troubleshoot error codes
+  items:
+  - name: VMExtension error codes
+    items:
+    - name: VMExtensionError_CniDownloadTimeout error
+      href: error-codes/vmextensionerror-cnidownloadtimeout.md
+    - name: VMExtensionError_OutboundConnFail error
+      href: error-codes/vmextensionerror-outboundconnfail.md
+    - name: VMExtensionError_K8SAPIServerConnFail error
+      href: error-codes/vmextensionerror-k8sapiserverconnfail.md
+    - name: VMExtensionError_K8SAPIServerDNSLookupFail error
+      href: error-codes/vmextensionerror-k8sapiserverdnslookupfail.md
+  - name: UnsatisfiablePDB error
+    href: error-codes/unsatisfiablepdb-error.md
+  - name: ERR_VHD_FILE_NOT_FOUND error
+    href: error-codes/vhdfilenotfound.md

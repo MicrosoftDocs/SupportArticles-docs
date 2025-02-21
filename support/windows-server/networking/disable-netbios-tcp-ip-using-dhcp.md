@@ -1,12 +1,14 @@
 ---
 title: Disable NetBIOS over TCP/IP by using DHCP
 description: Describes how to disable NetBIOS over TCP/IP on the DHCP client by using DHCP server options.
-ms.date: 10/15/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, SKHALELI, abpathak, v-jomcc, MASOUDH
-ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
+- pcy:WinComm Networking
 ---
 # How to disable NetBIOS over TCP/IP by using DHCP server options
 

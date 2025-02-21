@@ -1,12 +1,14 @@
 ---
 title: DHCP client can't get a DHCP-assigned IP address
 description: Discusses an issue where a DHCP client can't get a DHCP-assigned IP address.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Network Connectivity and File Sharing\Dynamic Host Configuration Protocol (DHCP), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\dynamic host configuration protocol (dhcp)
+- pcy:WinComm Networking
 ---
 # DHCP client may fail to obtain a DHCP-assigned IP address
 

@@ -1,12 +1,14 @@
 ---
 title: Fail to run non-Windows guest on Hyper-V
 description: While running a non-Windows guest such as Linux on Hyper-V, the Hyper-V management console may display messages that indicate that the integration services for the non-Windows guest are degraded and no formal support will be provided unless the integration services are updated.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, abgupta
-ms.custom: sap:Virtualization and Hyper-V\Linux Integration Components, csstroubleshoot, linux-related-content
+ms.custom:
+- sap:virtualization and hyper-v\linux integration components",,"linux-related-content"]
+- pcy:WinComm Storage High Avail
 ---
 # Degraded integration services message for non-Windows guests
 

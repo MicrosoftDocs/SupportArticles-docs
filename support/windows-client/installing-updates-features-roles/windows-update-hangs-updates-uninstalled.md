@@ -1,12 +1,14 @@
 ---
 title: Windows Update hangs and updates are uninstalled
 description: Discusses that Windows Update hangs and newly installed updates are uninstalled after a system restart in Windows. Provides a workaround.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update fails - installation rolls back, csstroubleshoot
+ms.custom:
+- sap:windows servicing,updates and features on demand\windows update fails - installation rolls back
+- pcy:WinComm Devices Deploy
 ---
 # Windows Update hangs and new updates are uninstalled after a restart
 

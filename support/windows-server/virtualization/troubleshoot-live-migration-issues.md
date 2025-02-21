@@ -1,12 +1,14 @@
 ---
 title: Troubleshoot live migration issues
 description: Provides information on solving the problem of live migration in windows server 2016.
-ms.date: 09/13/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: adjudele, cpuckett, kaushika, shsadash, rblume
-ms.custom: sap:Clustering and High Availability\Hyper-V Clusters and VM Mobility (Migration), csstroubleshoot
+ms.custom:
+- sap:clustering and high availability\hyper-v clusters and vm mobility (migration)
+- pcy:WinComm Storage High Avail
 ---
 # Troubleshoot live migration issues
 

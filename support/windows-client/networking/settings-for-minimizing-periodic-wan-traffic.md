@@ -1,12 +1,14 @@
 ---
 title: Settings for minimizing periodic WAN traffic
 description: Describes the problem that occurs when a dial-on-demand link is activated by periodic WAN traffic. Includes suggested settings to help prevent or minimize this behavior.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, WalterE
-ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
+- pcy:WinComm Networking
 ---
 # Settings for minimizing periodic WAN traffic
 

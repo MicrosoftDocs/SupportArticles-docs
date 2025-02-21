@@ -1,12 +1,14 @@
 ---
 title: Error 0xCAA5001C Token broker operation failed
 description: Resolves an 0xCAA5001C error that occurs when you access Microsoft Store for Business on a Windows 10-based computer.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:User Logon and Profiles\Service Account and Interactive User Logon Issues and Credential Providers, csstroubleshoot
+ms.custom:
+- sap:user logon and profiles\service account and interactive user logon issues and credential providers
+- pcy:WinComm Directory Services
 ---
 # Event 1098: Error: 0xCAA5001C Token broker operation failed in Windows 10
 

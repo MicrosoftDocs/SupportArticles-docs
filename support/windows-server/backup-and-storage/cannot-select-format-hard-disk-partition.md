@@ -1,12 +1,14 @@
 ---
 title: Can't select or format hard disk partition
 description: Describes a problem that may occur when you try to install Windows.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, kimnle
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Partition and volume management, csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\partition and volume management
+- pcy:WinComm Storage High Avail
 ---
 # You cannot select or format a hard disk partition when you try to install Windows
 

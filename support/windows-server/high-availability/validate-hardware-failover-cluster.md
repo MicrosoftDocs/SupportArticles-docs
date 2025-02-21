@@ -1,12 +1,14 @@
 ---
 title: Validate hardware for a failover cluster
 description: Helps validate hardware for a failover cluster.
-ms.date: 11/03/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-lianna, jeffhugh
-ms.custom: sap:Clustering and High Availability\Errors when running the Validation Wizard, csstroubleshoot
+ms.custom:
+- sap:clustering and high availability\errors when running the validation wizard
+- pcy:WinComm Storage High Avail
 ---
 # Validate hardware for a failover cluster
 

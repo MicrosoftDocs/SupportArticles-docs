@@ -1,12 +1,14 @@
 ---
 title: System Error 126 when you start TrustedInstaller
 description: Fixes the System Error 126 that occurs when you start the Windows Modules Installer service.
-ms.date: 12/26/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update fails - installation stops with error, csstroubleshoot
+ms.custom:
+- sap:windows servicing,updates and features on demand\windows update fails - installation stops with error
+- pcy:WinComm Devices Deploy
 ---
 # System Error 126 when you start the Windows Modules Installer service (TrustedInstaller): The specific module could not be found
 

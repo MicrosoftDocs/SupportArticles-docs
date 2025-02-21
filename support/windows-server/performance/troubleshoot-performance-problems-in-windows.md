@@ -1,12 +1,14 @@
 ---
 title: Troubleshoot performance problems in Windows
 description: Provides a scenario guide for troubleshooting performance problems in Windows.
-ms.date: 08/14/2024
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, waltere
-ms.custom: sap:System Performance\System Performance (slow, unresponsive, high CPU, resource leak), csstroubleshoot
+ms.custom:
+- sap:system performance\system performance (slow,unresponsive,high cpu,resource leak)
+- pcy:WinComm Performance
 ---
 # Scenario guide: Troubleshoot performance problems in Windows
 
