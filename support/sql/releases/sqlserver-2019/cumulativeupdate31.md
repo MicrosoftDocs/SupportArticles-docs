@@ -31,8 +31,6 @@ SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plan
 
 - 9432 - This trace flag disables the fix that was introduced in SQL Server 2019 CU14.
 
-Microsoft is working on a fix for this issue and it will be available in a future CU.
-
 ### Issue two: Patching a read-scale availability group (Windows or Linux) causes the availability group on the patched replica to be removed
 
 If you use the read-scale availability group (AG) feature in SQL Server on Windows or Linux, you should **not** install this CU.
