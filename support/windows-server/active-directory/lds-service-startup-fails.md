@@ -14,7 +14,7 @@ ms.custom:
 
 This article provides a solution to an error that LDS service startup fails after you manually change msDS-Behavior-Version.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016  
+_Applies to:   All supported versions of Windows Server and Windows client_  
 _Original KB number:_ &nbsp; 4550446
 
 ## Symptom
@@ -53,79 +53,9 @@ Additionally, you receive the following error message:
 
 ## Cause
 
-Manually setting the **msDS-Behavior-Version** attribute value to **7** on LDS instances is not supported.
+Manually setting the **msDS-Behavior-Version** attribute value of LDS instances to **7** on Windows server with monthly update before the February 2025 update rollup is not supported.
 
 ## Resolution
 
-If the LDS instance contains only one server, you must restore the server from a backup to resolve the issue.
+Install February 2025 monthly update rollup or newer
 
-If there are multiple replica servers in that instance (for example, LDSServer1 and LDSServer2), and if one server has not yet been restarted, follow these steps:
-
-1. If the LDS server on which the service that does not start (for example, LDSServer1) holds the LDS Roles (for example, Schema and Domain Naming FSMO), seize the roles by running ntdsutil:
-
-    > C:\Windows\system32> **ntdsutil**  
-    ntdsutil: **roles**  
-    fsmo maintenance: **connections**  
-    server connections: **connect to server LDSServer2:50000( 50000 is the port number in that example)**  
-    Binding to LDSServer2:50000 ...  
-    Connected to LDSServer2:50000 using credentials of locally logged on user.  
-    server connections: **q**  
-    fsmo maintenance: **seize schema master**
-
-    :::image type="content" source="media/lds-service-startup-fails/role-seizure-confirmation-dialog.png" alt-text="A role seizure confirmation dialog displays.":::
-
-2. Connect to the configuration partition of the server that still runs the LDS instance (for example, LDSServer2), and then roll back the functionality level version by reverting the **msDS-Behavior-Version** attribute value.
-
-3. Run a metadata cleanup of the LDS server (LDSServer1) by using **dsmgmt**:
-
-    > C:\Windows\system32> **dsmgmt**  
-    dsmgmt: **metadata cleanup**  
-    metadata cleanup: **connections**  
-    server connections: **connect to server LDSServer2:50000 ( 50000 is the port number in that example)**  
-    Binding to LDSServer2:50000 ...
-    Connected to LDSServer2:50000 using credentials of locally logged on user.
-    server connections: **q**  
-    metadata cleanup: **select operation target**  
-    select operation target: **list naming contexts**  
-    Found 3 Naming Context(s)
-    0 - CN=Configuration,CN={6B7FEBF4-017B-4366-A8B8-3E5467888DEF}
-    1 - CN=Schema,CN=Configuration,CN={6B7FEBF4-017B-4366-A8B8-3E5467888DEF}
-     2 - DC=LDS,DC=COM
-    select operation target: **select naming context2 ( 2 stands for the domain naming context )**  
-    No current site
-    No current domain
-    No current server
-    Naming Context - DC=LDS,DC=COM
-    select operation target: **list sites**  
-    Found 4 site(s)
-    0 - CN=Default-First-Site-Name,CN=Sites,CN=Configuration,CN={6B7FEBF4-017B-4366-A8B8-3E5467888DEF}
-    1 - CN=Site1,CN=Sites,CN=Configuration,CN={6B7FEBF4-017B-4366-A8B8-3E5467888DEF}
-    2 - CN=Site2,CN=Sites,CN=Configuration,CN={6B7FEBF4-017B-4366-A8B8-3E5467888DEF}
-     3 - CN=Site3,CN=Sites,CN=Configuration,CN={6B7FEBF4-017B-4366-A8B8-3E5467888DEF}
-    select operation target: **select site3 (where 3 is the number of the site in which the server is located,** **matching output from previous step)**  
-    Site - CN=Site3,CN=Sites,CN=Configuration,CN={6B7FEBF4-017B-4366-A8B8-3E5467888DEF}
-    No current domain
-    No current server
-    Naming Context - DC=LDS,DC=COM
-    select operation target: **list servers in Site**  
-    Found 1 server(s)
-     0 - CN=LDSServer1,CN=Servers,CN=Site3,CN=Sites,CN=Configuration,CN={6B7FEBF4-017B-4366-A8B8-3E5467888DEF}
-    select operation target: **select Server0 (where 0 is the number of the server you wish to remove, matching output from previous step)**  
-    Site - CN=Site3,CN=Sites,CN=Configuration,CN={6B7FEBF4-017B-4366-A8B8-3E5467888DEF}
-    No current domain
-    Server - CN=LDSServer1,CN=Servers,CN=Site3,CN=Sites,CN=Configuration,CN={6B7FEBF4-017B-4366-A8B8-3E5467888DEF}
-    DSA object - CN=NTDS Settings,CN=LDSServer1,CN=Servers,CN=Site3,CN=Sites,CN=Configuration,CN={6B7FEBF4-017B-4366-A8B8-3E5467888DEF}
-    DNS host name - LDSServer1.CONTOSO.COM
-    Naming Context - DC=LDS,DC=COM
-    select operation target: **q**  
-    metadata cleanup: **remove selected server**
-
-    :::image type="content" source="media/lds-service-startup-fails/server-remove-confirmation-dialog.png" alt-text="Select Yes to remove the server object in the Server Remove Confirmation Dialog box.":::
-
-4. Log on to LDSServer1, and uninstall the instance:
-
-    :::image type="content" source="media/lds-service-startup-fails/uninstall-program.png" alt-text="Select the instance that you want to uninstall in Programs and features window.":::
-
-    :::image type="content" source="media/lds-service-startup-fails/select-skip-all.png" alt-text="Select Skip All in the Active Directory Lightweight Directory Services Removal Wizard.":::
-
-5. Run the Active Directory Lightweight Directory Services Setup (C:\Windows\ADAM\adaminstall.exe) on LDSServer1 to install a replica of the existing instance from LDSServer2.
