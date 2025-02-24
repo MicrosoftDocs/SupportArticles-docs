@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, abizerh, fszita, meerak
 ms.custom:
-- sap:windows security technologies\active directory federation services (ad fs) non-azure-o365 issues",,"has-azure-ad-ps-ref"]
+- sap:windows security technologies\active directory federation services (ad fs) non-azure-o365 issues
 - pcy:WinComm Directory Services
 ---
 # Troubleshoot AD FS issues in Microsoft Entra ID and Office 365

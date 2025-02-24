@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, pedromatos, timnewton, v-lianna
-ms.custom: sap:Remote Desktop Services and Terminal Services\Licensing for Remote Desktop Services (Terminal Services), csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\licensing for remote desktop services (terminal services)
+- pcy:WinComm User Experience
 ---
 # Remote Desktop licensing mode is not configured warning when you connect to an RD Session Host
 
