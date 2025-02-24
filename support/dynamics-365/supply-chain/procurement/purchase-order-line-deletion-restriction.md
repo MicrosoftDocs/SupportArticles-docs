@@ -26,7 +26,7 @@ If you need to remove a purchase order line, the recommended approach is to firs
 
 To cancel the whole quantity on a purchase order line:
 
-1. Open the purchase order, select the purchase order line that you want to cancel the delivery remainder quantity on.
+1. Open the purchase order and select the purchase order line that you want to cancel the delivery remainder quantity on.
 1. Select **Update line** > **Deliver remainder** > **Cancel quantity**. The line will then be updated to **Canceled** status.
 
 ## More information
