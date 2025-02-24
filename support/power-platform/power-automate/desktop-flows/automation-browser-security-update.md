@@ -31,7 +31,7 @@ To mitigate the issue, update your Power Automate for desktop to the following p
 - [2.52.66.25042](https://go.microsoft.com/fwlink/?linkid=2304734)
 
 > [!NOTE]
-> Starting with release 2.52, all future versions will include the security fix.
+> Starting with release 2.52.66.25042, all future versions will include the security fix.
 
 ## Impact of the patch
 
