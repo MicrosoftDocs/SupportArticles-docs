@@ -1,6 +1,6 @@
 ---
 title: Android App Authentication Fails After Being Published to Google Play Store
-description: Provides a solution to an authentication failure with an Android app that's published to the Google Play Store.
+description: Provides a solution to an authentication failure with an Android app published to the Google Play Store.
 ms.reviewer: markbukovich, v-weizhu
 ms.service: entra-id
 ms.date: 02/19/2025
@@ -8,7 +8,7 @@ ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
 # Authentication fails after an Android app is published to the Google Play Store
 
-This article provides a solution to an authentication failure that occurs during signing in after users install an Android app that's published to the Google Play Store.
+This article provides a solution to an authentication failure that occurs during signing in after users install an Android app published to the Google Play Store.
 
 ## Symptoms
 
@@ -56,7 +56,7 @@ To get the signature hash from the Google Play Console, follow these steps:
 
 1. Go to the Google Play Console and sign in with your Google Developer account.
 2. Once you're in the Google Play Console, select the affected app.
-3. On the left navigation, under the **Release** category, expand **Setup** and select **App Integrity**.
+3. On the left navigation, under the **Release** category, expand **Setup**, and select **App Integrity**.
 4. Select the **App signing** tab. You'll see the fingerprint of the app signing key in three different variations. 
 5. Copy the **SHA-1 certificate fingerprint** and paste it into the PowerShell script in step 6 as the value of the `$Thumbprint` variable. 
 6. Run the following script to obtain the base64 encoded fingerprint that MSAL needs:
