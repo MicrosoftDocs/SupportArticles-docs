@@ -3,7 +3,7 @@ title: Android App Authentication Fails After Being Published to Google Play Sto
 description: Provides a solution to an authentication failure with an Android app published to the Google Play Store.
 ms.reviewer: markbukovich, v-weizhu
 ms.service: entra-id
-ms.date: 02/19/2025
+ms.date: 02/24/2025
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
 # Authentication fails after an Android app is published to the Google Play Store
@@ -18,9 +18,9 @@ Consider the following scenario:
 - The app has been built and executed and has passed all QA testing.
 - You publish the app to the Google Play Store. 
 
-After users install the app, authentication doesn't work when signing in to the app.
+In this case, after users install the app, authentication doesn't work when signing in to the app.
 
-If you expose authentication error messages to users, or if you let them send error messages to your team, you may encounter an error message like the following text:
+If you expose authentication error messages to users, or if you let them send error messages to your team, you might encounter an error message like the following text:
 
 > The redirect URI in the configuration file doesn't match with the one generated with the package name and signature hash. Please verify the uri in the config file and your app registration in Azure portal.
 
