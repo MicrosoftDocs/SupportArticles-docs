@@ -94,7 +94,7 @@ This article describes how to troubleshoot the chroot environment on a rescue vi
 1. Detach the disk from the rescue VM, and then perform a disk swap with the original VM.
 1. Start the original VM, and check its connectivity.
 
-## RHEL/Centos/Oracle 6.x && Oracle 8.x && RHEL/Centos 7.x with RAW partitions
+## RHEL/Centos/Oracle 6._x_ && Oracle 8._x_ && RHEL/Centos 7._x_ with RAW partitions
 
 1. Stop or deallocate the affected VM.
 1. Create a rescue VM image of the same OS version in the same resource group (RSG) and location by using a managed disk.
@@ -158,7 +158,7 @@ This article describes how to troubleshoot the chroot environment on a rescue vi
 1. Detach the disk from the rescue VM, and then perform a disk swap with the original VM.
 1. Start the original VM, and check its connectivity.
 
-## RHEL/Centos 7.x & 8.X with LVM
+## RHEL/Centos 7._x_ & 8._x_ with LVM
 
 > [!NOTE]
 > If your original VM includes Logical Volume Manager (LVM) on the OS Disk, create the rescue VM by using the image with raw partitions on the OS Disk.
