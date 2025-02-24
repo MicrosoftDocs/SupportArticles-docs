@@ -1,12 +1,12 @@
 ---
 title: Troubleshoot Start menu errors
 description: Learn how to troubleshoot common Start menu errors in Windows 10. For example, learn to troubleshoot errors related to deployment, crashes, and performance.
-ms.date: 02/17/2025
+ms.date: 02/24/2025
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.collection: highpri
 ms.custom: sap:Windows Desktop and Shell Experience\Start Menu and Task Bar, csstroubleshoot
-ms.reviewer: kaushika,lizlong
+ms.reviewer: kaushika,lizlong, prechakr
 audience: itpro
 ---
 # Start menu troubleshooting guidance
@@ -91,7 +91,7 @@ If these events are found, Start isn't activated correctly. Each event will have
 
 ## Issues with application crashes
   
-If the application is installed for the user but doesn't work, check if the process responsible for displaying the Start menu is running for the user by running the following PowerShell cmdlet:
+If the application is installed for the user but doesn't work, check if the process responsible for displaying the Start menu is running for the user by running the following PowerShell cmdlet from an elevated PowerShell prompt:
 
 ```powershell
 get-Process StartMenuExperienceHost -IncludeUserName 
