@@ -1,7 +1,7 @@
 ---
 title: Can't create a message in Outlook for Android supported by Intune
 description: Fixes an issue in which creating email in Outlook mobile fails and returns a "This action is not allowed by your organization" error message.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 search.appverid: MET150
 ms.custom: sap:Application Protection - Android\Advisory
 ms.reviewer: kaushika, joelste, intunecic, waluja

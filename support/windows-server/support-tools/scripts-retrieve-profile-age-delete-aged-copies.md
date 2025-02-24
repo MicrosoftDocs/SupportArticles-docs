@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, herbertm, v-lianna
-ms.custom: sap:User Logon and Profiles\User profiles, csstroubleshoot
+ms.custom:
+- sap:user logon and profiles\user profiles
+- pcy:WinComm Directory Services
 ---
 # Scripts: Retrieve profile age and optionally delete aged copies
 

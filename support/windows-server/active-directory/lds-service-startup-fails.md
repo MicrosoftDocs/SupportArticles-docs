@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, sagiv, wincicadsec
-ms.custom: sap:Active Directory\LDAP configuration and interoperability, csstroubleshoot
+ms.custom:
+- sap:active directory\ldap configuration and interoperability
+- pcy:WinComm Directory Services
 ---
 # LDS service startup fails after you manually change msDS-Behavior-Version in Windows Server 2019 and 2016
 

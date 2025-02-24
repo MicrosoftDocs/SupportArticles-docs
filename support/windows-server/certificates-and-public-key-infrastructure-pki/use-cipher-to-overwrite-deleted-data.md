@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Encrypting File System (EFS), csstroubleshoot
+ms.custom:
+- sap:certificates and public key infrastructure (pki)\encrypting file system (efs)
+- pcy:WinComm Directory Services
 ---
 # Use Cipher.exe to overwrite deleted data in Windows
 

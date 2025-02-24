@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, aarthit
-ms.custom: sap:Windows Setup, Upgrade and Deployment\Power management, csstroubleshoot
+ms.custom:
+- sap:windows setup,upgrade and deployment\power management
+- pcy:WinComm Devices Deploy
 ---
 # Hard disk usage reaches 100 percent after the computer resumes from Sleep mode
 

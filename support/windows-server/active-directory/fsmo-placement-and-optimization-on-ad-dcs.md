@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, arrenc, larryli
-ms.custom: sap:Active Directory\DCPromo and the installation or removal of domain controllers, csstroubleshoot
+ms.custom:
+- sap:active directory\dcpromo and the installation or removal of domain controllers
+- pcy:WinComm Directory Services
 ---
 # FSMO placement and optimization on Active Directory domain controllers
 

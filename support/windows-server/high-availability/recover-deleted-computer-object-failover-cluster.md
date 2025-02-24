@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, ctimon, v-vincli, jeffhugh
-ms.custom: sap:Clustering and High Availability\Cannot bring a resource online, csstroubleshoot
+ms.custom:
+- sap:clustering and high availability\cannot bring a resource online
+- pcy:WinComm Storage High Avail
 ---
 # How to recover a deleted computer object that supports a Network Name resource in a failover cluster
 

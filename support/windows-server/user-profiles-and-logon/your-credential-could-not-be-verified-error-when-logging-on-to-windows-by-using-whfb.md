@@ -4,7 +4,9 @@ description: Introduces how to troubleshoot the Your credentials could not be ve
 ms.topic: troubleshooting
 ms.date: 01/15/2025
 ms.reviewer: kaushika
-ms.custom: sap:User Logon and Profiles\Service Account and Interactive User Logon Issues and Credential Providers, csstroubleshoot, ikb2lmc
+ms.custom:
+- sap:user logon and profiles\service account and interactive user logon issues and credential providers
+- pcy:WinComm Directory Services
 ---
 # "Your credentials could not be verified" error when logging on to Windows with Windows Hello for Business
 

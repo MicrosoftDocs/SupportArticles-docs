@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update configuration, settings and management, csstroubleshoot
+ms.custom:
+- sap:windows servicing,updates and features on demand\windows update configuration,settings and management
+- pcy:WinComm Devices Deploy
 ---
 # How to re-register Windows client/server in WSUS
 

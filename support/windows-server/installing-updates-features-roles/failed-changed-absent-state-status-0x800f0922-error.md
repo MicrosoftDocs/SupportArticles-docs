@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, luioan, v-lianna
-ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update fails - installation stops with error, csstroubleshoot, ikb2lmc
+ms.custom:
+- sap:windows servicing,updates and features on demand\windows update fails - installation stops with error
+- pcy:WinComm Devices Deploy
 ---
 # "Failed to be changed to the Absent state. Status: 0x800f0922" when installing updates in Windows Server 2019 
 

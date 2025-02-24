@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: adityah, kaushika
-ms.custom: sap:System Performance\App, Process, Service Performance (slow, unresponsive), csstroubleshoot
+ms.custom:
+- sap:system performance\app,process,service performance (slow,unresponsive)
+- pcy:WinComm Performance
 ---
 # You cannot set page files on a partition that is larger than 2 terabytes
 

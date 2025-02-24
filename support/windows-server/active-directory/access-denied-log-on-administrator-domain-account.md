@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
+ms.custom:
+- sap:active directory\user,computer,group,and object management
+- pcy:WinComm Directory Services
 ---
 # You receive access denied errors after you log on to a local administrator domain account
 

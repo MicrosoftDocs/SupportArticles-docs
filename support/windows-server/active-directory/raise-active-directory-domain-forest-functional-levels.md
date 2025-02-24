@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\Domain or forest functional level updates, failures and Advisory, csstroubleshoot
+ms.custom:
+- sap:active directory\domain or forest functional level updates,failures and advisory
+- pcy:WinComm Directory Services
 ---
 # How to raise Active Directory domain and forest functional levels
 

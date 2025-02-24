@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\LDAP configuration and interoperability, csstroubleshoot
+ms.custom:
+- sap:active directory\ldap configuration and interoperability
+- pcy:WinComm Directory Services
 ---
 # Enable LDAP over SSL with a third-party certification authority
 

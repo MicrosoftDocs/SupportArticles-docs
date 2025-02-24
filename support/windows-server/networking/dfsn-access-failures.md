@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, clandis, davfish
-ms.custom: sap:Network Connectivity and File Sharing\DFS Namespace (Not Replication), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\dfs namespace (not replication)
+- pcy:WinComm Networking
 ---
 # Troubleshoot Distributed File System Namespace access failures in Windows
 

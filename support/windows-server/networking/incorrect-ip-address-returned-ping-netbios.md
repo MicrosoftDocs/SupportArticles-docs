@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, danma
-ms.custom: sap:Network Connectivity and File Sharing\IP Address Management (IPAM), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\ip address management (ipam)
+- pcy:WinComm Networking
 ---
 # An incorrect IP address is returned when you ping a server by using its NetBIOS name  
 

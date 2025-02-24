@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, shijoy
-ms.custom: sap:User Logon and Profiles\User profiles, csstroubleshoot
+ms.custom:
+- sap:user logon and profiles\user profiles
+- pcy:WinComm Directory Services
 ---
 # Error "Invalid store path" during the LoadState process when you use the User State Migration Tool
 

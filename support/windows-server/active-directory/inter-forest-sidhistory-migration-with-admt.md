@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\Active Directory Migration Tool (ADMT), csstroubleshoot
+ms.custom:
+- sap:active directory\active directory migration tool (admt)
+- pcy:WinComm Directory Services
 ---
 # How to troubleshoot inter-forest sIDHistory migration with ADMTv2
 

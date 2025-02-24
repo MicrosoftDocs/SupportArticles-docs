@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, luche
-ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
+ms.custom:
+- sap:windows setup,upgrade and deployment\installing or upgrading windows
+- pcy:WinComm Devices Deploy
 ---
 # Windows Server 2012 R2 setup may fail on a virtual machine that is configured to use the minimum required memory
 

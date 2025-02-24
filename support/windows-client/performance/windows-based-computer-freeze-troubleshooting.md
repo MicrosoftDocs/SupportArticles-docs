@@ -5,7 +5,9 @@ ms.date: 01/15/2025
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.collection: highpri
-ms.custom: sap:System Performance\Startup or Pre-logon Reliability (crash, errors, bug check or Blue Screen), csstroubleshoot
+ms.custom:
+- sap:system performance\startup or pre-logon reliability (crash,errors,bug check or blue screen)
+- pcy:WinComm Performance
 ms.reviewer: dougeby, ntuttle,aaroncz
 audience: itpro
 ---

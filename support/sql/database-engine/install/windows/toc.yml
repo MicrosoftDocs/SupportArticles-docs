@@ -1,6 +1,8 @@
 items:
 - name: .Net Framework requirements for SQL Server
   href: understanding-dotnet-framework-requirements.md
+- name: Unable to find an entry point error when updating SQL Server 2022
+  href: error-command-line-cu-sql-server-2022.md
 - name: Attempted to perform an unauthorized operation error
   href: error-set-up-update-instances.md
 - name: Cannot install on Windows case-sensitive servers

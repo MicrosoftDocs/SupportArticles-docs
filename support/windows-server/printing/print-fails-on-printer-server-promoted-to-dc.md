@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, match
-ms.custom: sap:Print, Fax, and Scan\Print Performance - failures, crashes, not responsive, csstroubleshoot
+ms.custom:
+- sap:print,fax,and scan\print performance - failures,crashes,not responsive
+- pcy:WinComm User Experience
 ---
 # Not able to print with Type 4 or Type 3 XPS printer drivers after a Windows Server is promoted to a Domain Controller
 

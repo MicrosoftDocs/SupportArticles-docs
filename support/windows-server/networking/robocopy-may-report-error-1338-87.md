@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, sgoad
-ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\access to file shares (smb)
+- pcy:WinComm Networking
 ---
 # Robocopy may report error 1338 (The security descriptor structure is invalid) or error 87 (The parameter is incorrect) when you copy data from CIFS file servers
 

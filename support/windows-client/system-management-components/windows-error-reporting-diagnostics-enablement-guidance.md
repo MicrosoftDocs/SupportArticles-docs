@@ -5,7 +5,9 @@ ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.custom: sap:System Management Components\Windows Diagnostic Data Processor Configuration, csstroubleshoot
+ms.custom:
+- sap:system management components\windows diagnostic data processor configuration
+- pcy:WinComm User Experience
 ms.reviewer: kaushika, sangar, plingadevaru, v-lianna
 ---
 # Windows Error Reporting and Windows diagnostics enablement guidance

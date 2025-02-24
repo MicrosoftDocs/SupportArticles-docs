@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, jarrettr
-ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
+ms.custom:
+- sap:active directory\user,computer,group,and object management
+- pcy:WinComm Directory Services
 ---
 # Event ID 5722 is logged on your domain controller
 

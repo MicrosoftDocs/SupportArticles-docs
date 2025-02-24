@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: sgoad, nedpyle, tjung, kaushika
-ms.custom: sap:Application Technologies and Compatibility\DCOM service startup and permissions, csstroubleshoot
+ms.custom:
+- sap:application technologies and compatibility\dcom service startup and permissions
+- pcy:WinComm User Experience
 ---
 # USMT 4.0 migration from x86 to x64 results in corrupted COM+ components
 

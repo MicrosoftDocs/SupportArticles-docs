@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: yyan, v-sidong
-ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
+ms.custom:
+- sap:windows setup,upgrade and deployment\installing or upgrading windows
+- pcy:WinComm Devices Deploy
 ---
 
 # Chinese IME dictionaries shows "not ready yet" in Windows Server 2022

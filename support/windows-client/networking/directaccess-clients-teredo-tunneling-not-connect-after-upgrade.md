@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-jesits, minh
-ms.custom: sap:Network Connectivity and File Sharing\Remote access (DirectAccess), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\remote access (directaccess)
+- pcy:WinComm Networking
 ---
 # DirectAccess clients that use Teredo tunneling cannot connect after upgrade to Windows 10
 

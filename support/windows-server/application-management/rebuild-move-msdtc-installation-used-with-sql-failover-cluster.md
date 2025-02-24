@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika,jdeffenbaugh
-ms.custom: sap:Application Technologies and Compatibility\DTC startup, configuration, connectivity, and cluster, csstroubleshoot
+ms.custom:
+- sap:application technologies and compatibility\dtc startup,configuration,connectivity,and cluster
+- pcy:WinComm User Experience
 ---
 # How to rebuild or move an MSDTC installation for use with a SQL failover cluster
 

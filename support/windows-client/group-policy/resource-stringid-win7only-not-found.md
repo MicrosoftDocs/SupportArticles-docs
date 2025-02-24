@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, Warrenw, ajayps
-ms.custom: sap:Group Policy\Problems applying Group Policy, csstroubleshoot
+ms.custom:
+- sap:group policy\problems applying group policy
+- pcy:WinComm Directory Services
 ---
 # Error when you open gpedit.msc: Resource $(string id="Win7Only)' referenced in attribute displayName could not be found
 

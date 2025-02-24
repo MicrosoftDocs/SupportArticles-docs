@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Network Connectivity and File Sharing\DFS Namespace (Not Replication), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\dfs namespace (not replication)
+- pcy:WinComm Networking
 ---
 # Manually decommission a root server that hosts a domain-based DFS root in Windows Server 2003
 

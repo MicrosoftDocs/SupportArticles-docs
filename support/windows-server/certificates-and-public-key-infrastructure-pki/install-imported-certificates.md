@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Certificate Enrollment Using MMC or Certificate Requests, csstroubleshoot
+ms.custom:
+- sap:certificates and public key infrastructure (pki)\certificate enrollment using mmc or certificate requests
+- pcy:WinComm Directory Services
 ---
 # How to install imported certificates on a Windows-based Web server
 

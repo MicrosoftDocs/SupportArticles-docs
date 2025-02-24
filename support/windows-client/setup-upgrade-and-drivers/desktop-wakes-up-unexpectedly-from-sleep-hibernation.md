@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, steved
-ms.custom: sap:Windows Setup, Upgrade and Deployment\Power management, csstroubleshoot
+ms.custom:
+- sap:windows setup,upgrade and deployment\power management
+- pcy:WinComm Devices Deploy
 ---
 # Desktop wakes up unexpectedly from sleep or hibernation
 

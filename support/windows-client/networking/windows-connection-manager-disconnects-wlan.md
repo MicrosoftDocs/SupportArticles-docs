@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Networking\Remote Access, csstroubleshoot
+ms.custom:
+- sap:networking\remote access
+- pcy:WinComm Networking
 ---
 # Windows Connection Manager disconnects WLAN if a VPN connection is established
 

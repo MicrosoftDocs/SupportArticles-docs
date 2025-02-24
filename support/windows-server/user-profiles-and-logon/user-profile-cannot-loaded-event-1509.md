@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:User Logon and Profiles\User profiles, csstroubleshoot
+ms.custom:
+- sap:user logon and profiles\user profiles
+- pcy:WinComm Directory Services
 ---
 # User profile cannot be loaded with Event ID 1509: DETAIL - The filename or extension is too long
 

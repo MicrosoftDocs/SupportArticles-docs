@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, vlvasque, shasankp, ansol, v-lianna
-ms.custom: sap:Clustering and High Availability\Initial Cluster Creation or Adding node, csstroubleshoot, ikb2lmc
+ms.custom:
+- sap:clustering and high availability\initial cluster creation or adding node
+- pcy:WinComm Storage High Avail
 ---
 # Error 0x80090327 when adding a node to a cluster
 

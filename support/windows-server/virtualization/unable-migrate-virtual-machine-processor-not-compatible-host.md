@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Virtualization and Hyper-V\Migration, csstroubleshoot
+ms.custom:
+- sap:virtualization and hyper-v\migration
+- pcy:WinComm Storage High Avail
 ---
 # Unable to migrate virtual machine from one host to another
 

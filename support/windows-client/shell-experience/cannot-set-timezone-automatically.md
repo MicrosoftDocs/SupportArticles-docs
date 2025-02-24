@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, warrenw, hunterm, ronruz, aandrejs
-ms.custom: sap:Windows Desktop and Shell Experience\DST and Timezones, csstroubleshoot
+ms.custom:
+- sap:windows desktop and shell experience\dst and timezones
+- pcy:WinComm User Experience
 ---
 # Can't set time zone automatically in Windows 10
 

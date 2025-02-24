@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
+ms.custom:
+- sap:active directory\active directory replication and topology
+- pcy:WinComm Directory Services
 ---
 # Troubleshoot domain controller replication error 1727-The remote procedure call failed and did not execute
 

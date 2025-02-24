@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, dsmith
-ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\dns
+- pcy:WinComm Networking
 ---
 # DNS Server becomes an island when a domain controller points to itself for the _msdcs.ForestDnsName domain
 

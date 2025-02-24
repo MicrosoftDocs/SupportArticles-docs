@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, nedpyle
-ms.custom: sap:Group Policy\Sysvol access or replication issues, csstroubleshoot
+ms.custom:
+- sap:group policy\sysvol access or replication issues
+- pcy:WinComm Directory Services
 ---
 # How to force authoritative and non-authoritative synchronization for DFSR-replicated sysvol replication
 

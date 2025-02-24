@@ -1,7 +1,7 @@
 ---
 title: Useful logs and queries
 description: Describes how to some other useful logs and queries for advanced troubleshooting content distribution-related issues.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 ms.reviewer: kaushika
 ms.custom: sap:Content Management\Content Distribution to Distribution Points
 ---

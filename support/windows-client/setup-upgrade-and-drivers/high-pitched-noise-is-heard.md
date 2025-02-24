@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Device and Driver Management\Peripherals driver installation or update, csstroubleshoot
+ms.custom:
+- sap:windows device and driver management\peripherals driver installation or update
+- pcy:WinComm Devices Deploy
 ---
 # A high pitched noise is heard when using Bluetooth headphones in Windows 8
 

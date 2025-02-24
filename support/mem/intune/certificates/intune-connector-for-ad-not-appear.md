@@ -1,7 +1,7 @@
 ---
 title: Intune Connector for Active Directory installed but doesn't appear
 description: Describes an issue in which the Intune Connector for Active Directory is installed but doesn't appear in Intune, and you receive an error message.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 search.appverid: MET150
 ms.custom: sap:Configure Devices - Windows\SCEP Certificates
 ms.reviewer: kaushika

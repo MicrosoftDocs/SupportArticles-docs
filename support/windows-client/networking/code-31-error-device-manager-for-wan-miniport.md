@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Network Connectivity and File Sharing\Wireless (802.1x, Bluetooth, Miracast, Mobile Broadband), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\wireless (802.1x,bluetooth,miracast,mobile broadband)
+- pcy:WinComm Networking
 ---
 # Code 31 error in Device Manager for WAN Miniport (Network monitor) device in Windows
 

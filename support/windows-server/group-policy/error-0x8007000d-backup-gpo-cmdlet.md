@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: herbertm
-ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstroubleshoot
+ms.custom:
+- sap:group policy\group policy management (gpmc or gpedit)
+- pcy:WinComm Directory Services
 ---
 # Error 0x8007000D when running the Backup-GPO PowerShell CmdLet in Windows Server Core edition
 

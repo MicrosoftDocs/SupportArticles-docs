@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, mikeres
-ms.custom: sap:Windows Security Technologies\Account lockouts, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\account lockouts
+- pcy:WinComm Directory Services
 ---
 # How to use the EventCombMT utility to search event logs for account lockouts
 

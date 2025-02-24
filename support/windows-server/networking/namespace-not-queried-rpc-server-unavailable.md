@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, randt, warrenw, albugn
-ms.custom: sap:Network Connectivity and File Sharing\DFS Namespace (Not Replication), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\dfs namespace (not replication)
+- pcy:WinComm Networking
 ---
 # Error when you attempt to create a DFS Namespace: The namespace cannot be queried. The RPC server is unavailable
 

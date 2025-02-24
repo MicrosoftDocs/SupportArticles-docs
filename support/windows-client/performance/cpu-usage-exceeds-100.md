@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:System Performance\Performance tools (Task Manager, Perfmon, WSRM, and WPA), csstroubleshoot
+ms.custom:
+- sap:system performance\performance tools (task manager,perfmon,wsrm,and wpa)
+- pcy:WinComm Performance
 ---
 # CPU usage exceeds 100% in Task Manager and Performance Monitor if Intel Turbo Boost is active
 

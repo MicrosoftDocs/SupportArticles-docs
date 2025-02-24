@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, mghazai
-ms.custom: sap:Remote Desktop Services and Terminal Services\RemoteApp applications, csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\remoteapp applications
+- pcy:WinComm User Experience
 ---
 # An application does not start in a Windows Server Terminal Services RemoteApp session
 

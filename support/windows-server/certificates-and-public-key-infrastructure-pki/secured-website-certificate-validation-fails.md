@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Credential Roaming and Certificate-based authentication, csstroubleshoot
+ms.custom:
+- sap:certificates and public key infrastructure (pki)\credential roaming and certificate-based authentication
+- pcy:WinComm Directory Services
 ---
 # Certificate validation fails when a certificate has multiple trusted certification paths to root CAs
 

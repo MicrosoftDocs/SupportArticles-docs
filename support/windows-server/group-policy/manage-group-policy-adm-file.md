@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstroubleshoot
+ms.custom:
+- sap:group policy\group policy management (gpmc or gpedit)
+- pcy:WinComm Directory Services
 ---
 # Recommendations for managing Group Policy administrative template (.adm) files
 

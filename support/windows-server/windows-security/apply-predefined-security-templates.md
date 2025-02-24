@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Security Technologies\Security Templates, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\security templates
+- pcy:WinComm Directory Services
 ---
 # How to apply predefined security templates in Windows Server 2003
 

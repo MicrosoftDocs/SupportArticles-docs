@@ -8,7 +8,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Clustering and High Availability\Cannot bring a resource online, csstroubleshoot
+ms.custom:
+- sap:clustering and high availability\cannot bring a resource online
+- pcy:WinComm Storage High Avail
 ---
 # Can't bring a network name online in a failover cluster
 

@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, clandis, ioanc
-ms.custom: sap:Windows Security Technologies\Netlogon including Secure Channel and DC Locator issues, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\netlogon including secure channel and dc locator issues
+- pcy:WinComm Directory Services
 ---
 # A computer can't identify the network when the computer is running Windows Vista, Windows Server 2008, Windows 7, or Windows Server 2008 R2, and is a member of a child domain
 

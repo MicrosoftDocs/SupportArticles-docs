@@ -1,7 +1,7 @@
 ---
 title: The Intune discovered apps list seems to include personal apps
 description: Describes a behavior that the Microsoft Intune discovered apps list seems to show personal apps on Android work profile devices.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 search.appverid: MET150
 ms.custom: sap:Reporting\Intune reporting
 ms.reviewer: kaushika

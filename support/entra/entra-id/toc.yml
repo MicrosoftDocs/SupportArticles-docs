@@ -51,6 +51,8 @@
     items:
       - name: IDX10501 Error in ASP.NET Core with Azure B2C Custom Policy
         href: app-integration/troubleshoot-error-idx10501-aspnet-b2c.md
+      - name: WIF10201 No valid key mapping found
+        href: app-integration/troubleshoot-wif10201-no-validkey-securitytoken-mvc.md
 
   - name: Troubleshoot adding apps
     href: app-integration/troubleshoot-adding-apps.md
@@ -79,6 +81,9 @@
         href: app-integration/error-code-aadsts530004-acceptcompliantdevice-setting-not-configured.md
       - name: Error AADSTS50057 - user account is disabled
         href: app-integration/error-code-aadsts50057-user-account-is-disabled.md
+      - name: AADSTS500011 - Resource Principal Not Found
+        href: ./app-integration/error-code-aadsts500011-resource-principal-not-found.md
+        displayName: AADSTS500011
       - name: Error AADSTS500571 - guest user account is disabled
         href: app-integration/error-code-aadsts500571-guest-user-account-is-disabled.md
       - name: Error AADSTS50105 - user not assigned a role
@@ -93,6 +98,8 @@
         href: app-integration/error-code-AADSTS75005-not-a-valid-saml-request.md
       - name: Error AADSTS750054 - SAML request or response not present
         href: app-integration/error-code-AADSTS750054-saml-request-not-present.md
+      - name: Error AADSTS700003 - Device object was not found in the tenant directory
+        href: app-integration/error-code-aadsts700003-device-object-not-found.md
       - name: Error AADSTS7000110 - request is ambiguous, multiple application identifiers found
         href: app-integration/error-code-aadsts7000110-request-is-ambiguous.md
       - name: Error AADSTS7000112 - application is disabled

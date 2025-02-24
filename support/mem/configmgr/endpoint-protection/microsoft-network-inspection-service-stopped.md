@@ -1,7 +1,7 @@
 ---
 title: Microsoft Network Inspection service is stopped
 description: Describes a problem in which the Microsoft Network Inspection service may be stopped by Active Directory Group Policy.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 ms.reviewer: kaushika, ErinWi, prakask, keiththo, brshaw
 ms.custom: sap:Endpoint Protection\Antimalware Policies
 ---

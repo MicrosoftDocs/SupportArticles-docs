@@ -3,7 +3,7 @@ title: Manual and automatic WSUS database maintenance
 description: Describes steps and scripts to perform the maintenance of the Windows Server Update Services (WSUS) database manually or automatically.
 author: danschuh
 ms.author: daschuh
-ms.date: 10/17/2024
+ms.date: 02/11/2025
 ms.custom: sap:Software Update Management (SUM)\WSUS Database Maintenance
 ---
 # Maintain the Windows Server Update Services (WSUS) database manually or automatically

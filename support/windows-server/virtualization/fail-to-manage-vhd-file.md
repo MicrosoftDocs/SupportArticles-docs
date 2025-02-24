@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Virtualization and Hyper-V\Virtual machine creation, csstroubleshoot
+ms.custom:
+- sap:virtualization and hyper-v\virtual machine creation
+- pcy:WinComm Storage High Avail
 ---
 # Error when you manage a VHD file in Windows Server: "A Virtual Disk Provider for the specified file was not found"
 

@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\dns
+- pcy:WinComm Networking
 ---
 # Windows Server 2008 and Windows Server 2008 R2 DNS Servers may fail to resolve queries for some top-level domains
 

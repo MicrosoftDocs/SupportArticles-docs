@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: jarrettr, kaushika
-ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\dns
+- pcy:WinComm Networking
 ---
 # Microsoft Exchange compatibility with Single Label Domains, Disjointed Namespaces, and Discontiguous Namespaces
 

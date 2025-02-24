@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, jeffwoo
-ms.custom: sap:Virtualization and Hyper-V\Virtual machine creation, csstroubleshoot
+ms.custom:
+- sap:virtualization and hyper-v\virtual machine creation
+- pcy:WinComm Storage High Avail
 ---
 # Support partners for non-Microsoft hardware virtualization software
 

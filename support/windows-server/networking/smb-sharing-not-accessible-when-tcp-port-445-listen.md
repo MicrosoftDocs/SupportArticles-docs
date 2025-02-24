@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, dantes
-ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
+- pcy:WinComm Networking
 ---
 # SMB sharing is not accessible when TCP port 445 is listening in Windows Server
 

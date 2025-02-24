@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Group Policy\Sysvol access or replication issues, csstroubleshoot
+ms.custom:
+- sap:group policy\sysvol access or replication issues
+- pcy:WinComm Directory Services
 ---
 # DFSR SYSVOL fails to migrate or replicate, SYSVOL not shared, Event IDs 8028 or 6016
 

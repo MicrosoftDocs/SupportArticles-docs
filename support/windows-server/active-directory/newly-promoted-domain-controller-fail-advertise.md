@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\DCPromo and the installation or removal of domain controllers, csstroubleshoot
+ms.custom:
+- sap:active directory\dcpromo and the installation or removal of domain controllers
+- pcy:WinComm Directory Services
 ---
 # A newly promoted domain controller may fail to advertise after completion of DCpromo
 
