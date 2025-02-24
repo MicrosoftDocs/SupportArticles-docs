@@ -23,7 +23,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 02/20/2025
+ms.date: 02/24/2025
 ---
 # Known issues with Teams Rooms on Android
 
@@ -37,6 +37,12 @@ ms.date: 02/20/2025
 |Unable to open a whiteboard on Android touch displays and all-in-one devices.|On Teams Rooms for Android touch displays and all-in-one devices, you're unable to start a whiteboard session outside of a meeting by selecting the **Whiteboard** option.<br/><br/>This issue occurs on devices that are running on tenants which are more than two years old.|To resolve this issue, contact Microsoft Support.|
 |Signed out of Teams on Android devices | Teams Rooms on Android, Teams phone devices, Teams panels, and Teams displays are signed out of Teams automatically. | Follow the instructions provided in [Signed out of Teams on Android devices](./signed-out-of-teams-android-devices.md).|
 |Can't sign in after a firmware upgrade|After you upgrade to the latest firmware for your Teams on Android device, or update the version of the Company Portal app, you're unable to sign in to the device and see the following error message:<br/><br/><i>This device isn't enrolled in device administrator. Contact your admin</i>|Enable device administrator privileges for the device:<ol><li>In the Microsoft Intune portal, select **Devices** > **Android** > **Enrollment**.</li><li>Scroll to the **Android device administrator** section and select **Personal and corporate-owned devices with device administrator privileges**.</li><li>Select the checkbox **Use device administrator to manage devices.**</li></ol>|
+
+## Issues with Teams Rooms devices
+
+| Issue  |  Description | Workaround |
+| --- | --- | --- |
+|Unable to join some Webex meetings|When you select the **Join** button to join a Cisco Webex meeting from a Teams Rooms on Android device, you're not connected to the meeting and see the home screen on the device instead.|No workaround is available at this time. Cisco is investigating the issue.|
 
 ## Issues with Teams phones
 
