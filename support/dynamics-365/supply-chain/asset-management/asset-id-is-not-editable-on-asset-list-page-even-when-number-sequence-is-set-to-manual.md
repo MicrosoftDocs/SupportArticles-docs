@@ -20,8 +20,10 @@ A user can't edit an existing **Asset ID** because the **Asset ID** is the natur
 
 ## Workaround
 
-To allow a user to edit the **Asset ID** on an existing asset despite the risk, extend the `init()` method on the **EntAssetObjectTable** form.
+To allow a user to edit the Asset ID on an existing asset despite the risk, extend the EntAssetObjectTable form and change the property of the field. Use Chain of Command in order to change the control property through calling allowEdit() method of the control and passing false as an argument. Create an extension class and extend the form init() method where programmatically allowing edit on the field after the next() call. Find a detailed explanation of the approach here: https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/extensibility/method-wrapping-coc
 
+
+
 ## More information
 
 [Set up number sequences on an individual basis](/dynamics365/fin-ops-core/fin-ops/organization-administration/tasks/set-up-number-sequences-individual-basis)
