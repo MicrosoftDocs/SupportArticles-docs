@@ -26,8 +26,8 @@ Your firewall or corporate proxy blocks access to port 19390. This port is requi
 
 ## Solution
 
-Allow ingress to TCP port 19390 in your firewall. At a minimum, make sure that your firewall gives access to that port for all public client IP addresses that the Azure portal has to connect to.
+To resolve this error, allow ingress to TCP port 19390 in your firewall. At a minimum, make sure that your firewall gives access to that port for all public client IP addresses that the Azure portal has to connect to.
 
-In some scenarios, the corporate proxy will also block this port.
+In some scenarios where the corporate proxy blocks port 19390, allow this port for corporate proxy, and then verify the traffic by using the **Network** panel in the browser developer tools.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
