@@ -3,7 +3,7 @@ title: Error AADSTS50017 - Validation of Given Certificate for Certificate-Based
 description: Provides solutions to the Microsoft Entra authentication AADSTS50017 error that occurs when you access an application or resource with certificate-based authentication (CBA).
 ms.reviewer: laks, joaos, willfid, v-weizhu
 ms.service: entra-id
-ms.date: 02/20/2025
+ms.date: 02/24/2025
 ms.custom: sap:Issues Signing In to Applications
 ---
 # Error AADSTS50017 - Validation of given certificate for certificate-based authentication failed
@@ -29,7 +29,7 @@ To resolve this issue, follow these steps:
 
 1. Check if issuing certificate is correctly uploaded to the trusted certificate list.
 
-    A certificate chain consists of multiple certificates linked together. The end-user's certificate can be issued by a root CA or a non-root CA (intermediate CA). If you have a non-root issuing CA (intermediate CA), both intermediate and root CA certificates must be uploaded to the Microsoft Entra CA trusted store.
+    A certificate chain consists of multiple certificates linked together. The end user's certificate can be issued by a root CA or a non-root CA (intermediate CA). If you have a non-root issuing CA (intermediate CA), both intermediate and root CA certificates must be uploaded to the Microsoft Entra CA trusted store.
 
 2. Check the SKI value of your certificate and confirm if the AKI value matches any intermediate or root CA certificate that's uploaded to the trusted store.
 
@@ -51,7 +51,7 @@ If any certificates in the certificate chain are missing valid extension identif
 
 To resolve this error, validate the certificate policy extensions for all certificates within the certificate chain, including user certificates, intermediate CA certificates, and the root CA certificate. Ensure that the certificate policy extension and its Object Identifiers (OIDs) are consistent and valid across the entire chain.
 
-To verify the policy OIDs for consistency and validity, retrieve the relevant certificates in chain and validate them as shown below: 
+To verify the policy OIDs for consistency and validity, retrieve the relevant certificates in chain and validate them as follows: 
 
 :::image type="content" source="media/error-code-aadsts50017-certificate-based-authentication-failed/certificate-policies.png" alt-text="Screenshot that shows certificate policies." lightbox="media/error-code-aadsts50017-certificate-based-authentication-failed/certificate-policies.png":::
 
