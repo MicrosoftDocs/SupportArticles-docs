@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you try to open th
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
+ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
 # We can't load this app because your email account isn't configured with Dynamics 365 server-side sync for appointments, contacts, and tasks error occurs in Microsoft Dynamics 365 App for Outlook
 

@@ -4,6 +4,7 @@ description: You can't use Microsoft Dynamics 365 App for Outlook due to the err
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
+ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
 # You don't have the required role or privilege to complete this action error in Microsoft Dynamics 365 App for Outlook
 

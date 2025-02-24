@@ -4,6 +4,7 @@ description: It looks like you're trying to access the Microsoft Dynamics 365 Ap
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
+ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
 # Cannot access Microsoft Dynamics 365 App for Outlook due to email address is not recognized
 
