@@ -31,7 +31,7 @@ This problem might occur for any of the following reasons:
     WindowsAzureGuestAgent starting. Version 2.7.1198.802
     (See Workaround 2)
 
-- The automatic generation of the VM Health Report by the VM Guest Agent may fail. If this occurs, no SerialConsole.log file is created. This triggers th e error message that is mentioned in the "Symptoms" section. For example, this report isn't produced if there are unresolved SIDs reported as members in the virtual machine Local Administrators group. To search for such issues, examine the `C:\WindowsAzure\logs\TransparentInstaller.log` file.
+- The automatic generation of the VM Health Report by the VM Guest Agent may fail. If this occurs, no SerialConsole.log file is created. This triggers the error message that is mentioned in the "Symptoms" section. For example, this report isn't produced if there are unresolved SIDs reported as members in the virtual machine Local Administrators group. To search for such issues, examine the `C:\WindowsAzure\logs\TransparentInstaller.log` file.
 (See Workaround 3)
 
 ## Workaround
