@@ -659,6 +659,90 @@ Because of incorrect `InstanceName` and `START_PROFILE` attributes, the SAP inst
     sudo pcs property set maintenance-mode=false
     ```
 
+## Scenario 5: Fenced Node Fails to Rejoin Cluster
+
+### Symptom for scenario 5
+
+Once the fencing operation is complete, the affected node typically doesn't rejoin the pacemaker cluster, and both the pacemaker and corosync services remain stopped unless they are manually started to resume the cluster back online.
+
+### Cause for scenario 5
+
+After the node was fenced, rebooted, and restarted its cluster services, it subsequently received a message stating "We were allegedly just fenced", which caused it to shut down its pacemaker and corosync services and prevented the cluster from starting. Node1 initiated a STONITH action against node2, and at `03:27:23`, when the network issue was resolved, node2 rejoined the corosync membership. Consequently, a new two-node membership was established, as shown in `/var/log/messages` for node1.
+
+```bash
+Feb 20 03:26:56 node1 corosync[1722]:  [TOTEM ] A processor failed, forming new configuration.
+Feb 20 03:27:23 node1 corosync[1722]:  [TOTEM ] A new membership (1.116f4) was formed. Members left: 2
+Feb 20 03:27:24 node1 corosync[1722]:  [QUORUM] Members[1]: 1
+...
+Feb 20 03:27:24 node1 pacemaker-schedulerd[1739]: warning: Cluster node node2 will be fenced: peer is no longer part of the cluster
+...
+Feb 20 03:27:24 node1 pacemaker-fenced[1736]: notice: Delaying 'reboot' action targeting node2 using  for 20s
+Feb 20 03:27:25 node1 corosync[1722]:  [TOTEM ] A new membership (1.116f8) was formed. Members joined: 2
+Feb 20 03:27:25 node1 corosync[1722]:  [QUORUM] Members[2]: 1 2
+Feb 20 03:27:25 node1 corosync[1722]:  [MAIN  ] Completed service synchronization, ready to provide service.
+```
+
+node1 received confirmation that node2 had been successfully rebooted as shown in `/var/log/messages` for node2.
+
+```bash
+Feb 20 03:27:46 node1 pacemaker-fenced[1736]: notice: Operation 'reboot' [43895] (call 28 from pacemaker-controld.1740) targeting node2 using xvm2 returned 0 (OK)
+```
+
+To fully complete the STONITH action, the system needed to deliver the confirmation message to every node. Since node2 rejoined the group at `03:27:25` and no new membership excluding node2 had yet been formed due to the token and consensus timeouts not having expired, the confirmation message was delayed until node2 restarted its cluster services after boot. Upon receiving the message, node2 recognized that it had been fenced and consequently shut down its services as shown:
+
+`/var/log/messages' in node1:
+```bash
+Feb 20 03:29:02 node1 corosync[1722]:  [TOTEM ] A processor failed, forming new configuration.
+Feb 20 03:29:10 node1 corosync[1722]:  [TOTEM ] A new membership (1.116fc) was formed. Members joined: 2 left: 2
+Feb 20 03:29:10 node1 corosync[1722]:  [QUORUM] Members[2]: 1 2
+Feb 20 03:29:10 node1 pacemaker-fenced[1736]: notice: Operation 'reboot' targeting node2 by node1 for pacemaker-controld.1740@node1: OK
+Feb 20 03:29:10 node1 pacemaker-controld[1740]: notice: Peer node2 was terminated (reboot) by node1 on behalf of pacemaker-controld.1740: OK
+...
+Feb 20 03:29:11 node1 corosync[1722]:  [CFG   ] Node 2 was shut down by sysadmin
+Feb 20 03:29:11 node1 corosync[1722]:  [TOTEM ] A new membership (1.11700) was formed. Members left: 2
+Feb 20 03:29:11 node1 corosync[1722]:  [QUORUM] Members[1]: 1
+Feb 20 03:29:11 node1 corosync[1722]:  [MAIN  ] Completed service synchronization, ready to provide service.
+```
+
+`/var/log/messages' in node2:
+```bash
+Feb 20 03:29:11 [1155] node2 corosync notice  [TOTEM ] A new membership (1.116fc) was formed. Members joined: 1
+Feb 20 03:29:11 [1155] node2 corosync notice  [QUORUM] Members[2]: 1 2
+Feb 20 03:29:09 node2 pacemaker-controld  [1323] (tengine_stonith_notify)  crit: We were allegedly just fenced by node1 for node1!
+```
+
+### Resolution for scenario 5
+
+Configure a startup delay for the corosync service. This pause provides sufficient time for a new CPG membership to form and excluding the fenced node, so that the STONITH reboot process can complete by ensuring the completion message reaches all nodes in the membership.
+
+To achieve this,  executing the following commands:
+
+1. Put the cluster into maintenance mode:
+
+    ```bash
+    sudo pcs property set maintenance-mode=true
+    ```
+2. Create a systemd drop-in file on all the nodes in the cluster:
+
+- Edit the corosync file:
+  ```bash 
+   sudo systemctl edit corosync.service
+  ```
+- Add the following lines:
+  ```config
+  [Service]
+  ExecStartPre=/bin/sleep 60
+  ```
+- After saving and exiting the text editor, reload the systemd manager configuration with:
+  ```bash
+  sudo systemctl daemon-reload
+  ```
+3. Remove the cluster out of maintenance mode:
+  ```bash
+  sudo pcs property set maintenance-mode=false
+  ```
+For more information refer to [Fenced Node Fails to Rejoin Cluster Without Manual Intervention](https://access.redhat.com/solutions/5644441)
+
 ## Next steps
 
 For additional help, open a support request by using the following instructions. When you submit your request, attach the [SOS report](https://access.redhat.com/solutions/3592) from all the nodes in the cluster for troubleshooting.
