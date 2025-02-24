@@ -1,9 +1,9 @@
 ---
-title: Access denied error for PIM-managed accounts in SharePoint or OneDrive admin center
+title: Error when accessing SharePoint or OneDrive after role activation in PIM
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 12/17/2023
+ms.date: 02/24/2025
 audience: Admin
 ms.topic: troubleshooting
 search.appverid: 
@@ -12,43 +12,29 @@ search.appverid:
 appliesto: 
   - SharePoint Online
 ms.custom: 
-  - sap:Permissions\Errors
+  - sap:Sharing, Permissions, and Authorization\Access Denied
   - CI 119405
+  - CI 4072
   - CSSTroubleshoot
-ms.reviewer: prbalusu
-description: Describes a resolution to an access denied error received when you try to access PIM-managed accounts in SharePoint or OneDrive admin center.
+ms.reviewer: prbalusu; ilyal; meerak
+description: Provides a resolution to an Access denied error when you try to access SharePoint or OneDrive after activating a role.
 ---
 
-# Error (access denied) for PIM-managed user accounts in SharePoint or OneDrive admin center
+# Error when accessing SharePoint or OneDrive after role activation in PIM
 
 ## Symptoms
 
-You receive an "Access denied" error message or have an inconsistent experience when you try to access a user account that's managed by Privileged Identity Management ([PIM](/azure/active-directory/privileged-identity-management/pim-how-to-add-role-to-user?tabs=new)) in a SharePoint Online (SPO) or the OneDrive admin center.
+You receive an "Access denied" error message when you try to access SharePoint or OneDrive after you activate your SharePoint Administrator role assignment by using Microsoft Entra Privileged Identity Management (PIM).
 
 ## Cause
 
-Access to a user account isn't immediately available in SharePoint Online when you request that access by using PIM in Microsoft Entra ID. Access should be granted in SharePoint Online within a few hours. However, it may take longer.
+This issue might occur if you were provided just-in-time access to the SharePoint Administrator role by using [PIM for groups](/entra/id-governance/privileged-identity-management/concept-pim-for-groups). In this scenario, the role is assigned to a group, and you’re made eligible to activate membership to the group. If this method is used, permissions can take up to 24 hours to propagate. Therefore, you can expect to experience a delay before you can use SharePoint or OneDrive.
 
-## Workaround
+## Resolution
 
-The potential delay can vary. Therefore, we recommend that you provide account access by setting the PIM access period to 24 hours instead of setting it to a shorter duration.
- 
-Microsoft is researching this problem and will post more information in this article when the information becomes available.
+To make sure that you have access to SharePoint and OneDrive as soon as possible after you activate your role assignment, a Privileged Role Administrator should use one of the following methods that use [PIM for Microsoft Entra](/entra/id-governance/privileged-identity-management/pim-how-to-activate-role) roles:
 
-## More information
-
-### How PIM and SharePoint admin role works
-
-If an administrator enables the SharePoint Administrator role In Microsoft Entra ID by using PIM at 7 A.M. for four hours, PIM disables the role assignment at 11 A.M. The user then loses access to the SPO admin center.
-
-After the role is activated in PIM, it must be synchronized with SPO. This synchronization may take some time to finish. It means that the user won't have complete four-hour access. For example, if activation in PIM ends at 7 A.M. and SPO synchronization ends at 9 A.M., the user will have access for two hours only (assuming that the duration is four hours).
-
-Therefore, this problem is expected to occur if you try to access the SPO admin center immediately after you enable the role in PIM. The system requires some time to sync the changes from Microsoft Entra ID to SPO. Therefore, we recommend the 24-hour access window.
-
-
-For more information, see the following Knowledge Base articles:
-
-- [Roles you can't manage in Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-roles)
-- [Assign Microsoft Entra roles in Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-how-to-add-role-to-user?tabs=new)
+- [Make you eligible for the role](/entra/id-governance/privileged-identity-management/pim-how-to-add-role-to-user#assign-a-role) without using a group.
+- [Add you to a group](/entra/fundamentals/how-to-manage-groups#create-a-basic-group-and-add-members), and then make the group eligible for the role.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
