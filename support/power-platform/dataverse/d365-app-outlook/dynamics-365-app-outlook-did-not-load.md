@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when trying to use the 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
+ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
 # Dynamics 365 App for Outlook didn't load completely error occurs in Microsoft Dynamics 365 App for Outlook
 
