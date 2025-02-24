@@ -129,9 +129,7 @@ items:
       href: site-behavior-performance/access-denied-call-web-service.md
     - name: HTTP error 401.1 with pre-authentication headers
       href: site-behavior-performance/401-error-preauthentication-header.md
-    - name: HTTP error 404.2
-      href: site-behavior-performance/http-error-402-webpage.md
-    - name: HTTP error 403.6 when you open IIS webpage
+    - name: HTTP error 403.6 when you open an IIS webpage
       href: site-behavior-performance/403-6-forbidden-error.md
     - name: HTTP error 403.7 when you open an IIS webpage
       href: site-behavior-performance/http-403-forbidden-open-webpage.md
@@ -145,6 +143,8 @@ items:
       href: site-behavior-performance/troubleshoot-404-file-not-found-error.md
     - name: HTTP error 404 from IIS hidden static files
       href: site-behavior-performance/hidden-static-files-http-404-access-denied.md
+    - name: HTTP error 404.2
+      href: site-behavior-performance/http-error-402-webpage.md
     - name: HTTP error 404.13
       href: site-behavior-performance/http-404-13-website.md
     - name: HTTP error 404.13 Internet printing fails
