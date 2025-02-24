@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
 ms.custom:
-- sap:windows security technologies\active directory federation services (ad fs) non-azure-o365 issues",,"has-azure-ad-ps-ref"]
+- sap:windows security technologies\active directory federation services (ad fs) non-azure-o365 issues
 - pcy:WinComm Directory Services
 ---
 # Error when you run the Convert-MsolDomainToStandard cmdlet: Failed to connect to Active Directory Federation Services 2.0 on the local machine

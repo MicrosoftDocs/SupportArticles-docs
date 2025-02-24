@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, femila,helohr
 ms.custom:
-- sap:remote desktop services and terminal services\licensing for remote desktop services (terminal services)"]
+- sap:remote desktop services and terminal services\licensing for remote desktop services (terminal services)
 - pcy:WinComm User Experience
 ---
 
