@@ -1,11 +1,11 @@
 ---
 title: Error - Web socket is closed or could not be opened
 description: Learn how to resolve the (Web socket is closed or could not be opened) error. This error prevents you from connecting to your container from a virtual network.
-ms.date: 12/28/2023
+ms.date: 02/24/2025
 author: tysonfms
 ms.author: tysonfreeman
 editor: v-jsitser
-ms.reviewer: v-leedennis
+ms.reviewer: albarqaw, v-weizhu, v-leedennis
 ms.service: azure-container-instances
 ms.custom: sap:Connectivity
 #Customer intent: As an Azure administrator, I want to learn how to resolve the "Web socket is closed or could not be opened" error so that I can successfully deploy an image onto a container instance.
@@ -28,6 +28,6 @@ Your firewall or corporate proxy blocks access to port 19390. This port is requi
 
 Allow ingress to TCP port 19390 in your firewall. At a minimum, make sure that your firewall gives access to that port for all public client IP addresses that the Azure portal has to connect to.
 
-In some scenarios the corporate proxy will also block this port.
+In some scenarios, the corporate proxy will also block this port.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
