@@ -2,7 +2,7 @@
 title: Error AADSTS700003 - Device Object Was Not Found in the Tenant Directory
 description: Provides a solution to an issue where you experience the AADSTS700003 error when you try to sign in to an Azure application that can be used with Microsoft Entra ID.
 ms.service: entra-id
-ms.date: 02/21/2025
+ms.date: 02/24/2025
 ms.reviewer: jutakata, willfid, bachoang, joaos, modawud, v-weizhu
 ms.custom: sap:Issues Signing In to Applications
 ---
