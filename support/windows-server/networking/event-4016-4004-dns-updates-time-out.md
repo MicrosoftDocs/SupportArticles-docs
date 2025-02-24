@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, ANRATH, tfairman, v-lianna, jories
-ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot, ikb2lmc
+ms.custom:
+- sap:network connectivity and file sharing\dns
+- pcy:WinComm Networking
 ---
 # Event IDs 4016 and 4004 when DNS updates time out
 

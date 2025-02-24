@@ -1,7 +1,7 @@
 ---
 title: Can't distribute packages to a remote DP
 description: Describes an issue in which distributing packages to a remote DP fails because the Site System Installation Account for the remote DP is used to connect to the remote content library.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 ms.custom: sap:Content Management\Content Distribution to Distribution Points
 ms.reviewer: kaushika
 ---

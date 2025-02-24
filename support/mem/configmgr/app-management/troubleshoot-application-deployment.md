@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot tips for app deployments
 description: Tips for troubleshooting application deployment problems in Configuration Manager
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 ms.reviewer: kaushika
 ms.custom: sap:Application Management\Application Download
 ---

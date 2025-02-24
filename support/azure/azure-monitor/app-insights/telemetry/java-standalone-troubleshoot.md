@@ -2,7 +2,7 @@
 title: Troubleshoot Azure Monitor Application Insights for Java
 description: This article presents troubleshooting information for the Java agent for Azure Monitor Application Insights.
 ms.topic: conceptual
-ms.date: 01/15/2025
+ms.date: 02/20/2025
 editor: v-jsitser
 ms.reviewer: aaronmax, jeanbisutti, trstalna, toddfous, heya, v-leedennis
 ms.service: azure-monitor
@@ -258,14 +258,15 @@ You can also try the [monitoring solutions for Java native](/azure/azure-monitor
 
 Application logic can result in an operation ID being reused by multiple telemetry items, as shown in [this example](/azure/azure-monitor/app/distributed-trace-data#example). The duplication might also come from incoming requests. To identify this, do the following operations:
 
-* Enable the capture of the `traceparent` header in the **applicationinsigths.json** file as follows:
+* Enable the capture of the `traceparent` and `request-id` headers in the **applicationinsigths.json** file as follows:
 
     ```json
       {
         "preview": {
           "captureHttpServerHeaders": {
             "requestHeaders": [
-              "traceparent"
+              "traceparent",
+              "request-id"
             ]
           }
         }

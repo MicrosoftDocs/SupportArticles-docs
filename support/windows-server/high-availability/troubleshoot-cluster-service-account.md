@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, stevemat, ELDENC
-ms.custom: sap:Clustering and High Availability\Cluster service fails to start, csstroubleshoot
+ms.custom:
+- sap:clustering and high availability\cluster service fails to start
+- pcy:WinComm Storage High Avail
 ---
 # How to troubleshoot the Cluster service account when it modifies computer objects
 

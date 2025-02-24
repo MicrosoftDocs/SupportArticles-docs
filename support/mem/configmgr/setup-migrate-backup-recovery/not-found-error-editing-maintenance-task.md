@@ -1,7 +1,7 @@
 ---
 title: Can't edit the Update Application Catalog Tables maintenance task
 description: Fixes an issue that occurs when you try to edit the Update Application Catalog Tables maintenance task.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 ms.reviewer: kaushika
 ms.custom: sap:Site Server and Roles\Site Maintenance Tasks
 ---

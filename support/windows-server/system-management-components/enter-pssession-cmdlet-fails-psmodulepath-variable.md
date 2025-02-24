@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, Gbrag, jerrycif
-ms.custom: sap:System Management Components\PowerShell, csstroubleshoot
+ms.custom:
+- sap:system management components\powershell
+- pcy:WinComm User Experience
 ---
 # Enter-PSSession cmdlet fails when network path is specified in PSModulePath environment variable
 

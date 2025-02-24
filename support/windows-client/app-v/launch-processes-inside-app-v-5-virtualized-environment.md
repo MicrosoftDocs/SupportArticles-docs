@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Application Virtualization\Server issues\Administration, csstroubleshoot
+ms.custom:
+- sap:application virtualization\server issues\administration
+- pcy:WinComm User Experience
 ---
 # How to launch processes inside the App-V 5.0 virtualized environment
 

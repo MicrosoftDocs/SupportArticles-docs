@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, amjosh
-ms.custom: sap:Application Technologies and Compatibility\.Net Framework Installation, csstroubleshoot
+ms.custom:
+- sap:application technologies and compatibility\.net framework installation
+- pcy:WinComm User Experience
 adobe-target: true
 ---
 

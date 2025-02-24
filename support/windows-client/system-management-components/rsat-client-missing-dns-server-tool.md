@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:System Management Components\Server Manager, csstroubleshoot
+ms.custom:
+- sap:system management components\server manager
+- pcy:WinComm User Experience
 ---
 # DNS manager console is missing for RSAT client in Windows 10
 

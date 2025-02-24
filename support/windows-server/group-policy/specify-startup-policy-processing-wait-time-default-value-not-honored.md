@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, teterenc, dennhu, v-lianna
-ms.custom: sap:Group Policy\Problems Applying Group Policy, csstroubleshoot, ikb2lmc
+ms.custom:
+- sap:group policy\problems applying group policy
+- pcy:WinComm Directory Services
 ---
 # Group Policy fails to apply if default value of "Specify startup policy processing wait time" isn't honored
 

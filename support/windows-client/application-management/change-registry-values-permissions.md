@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Application Technologies and Compatibility\Windows Script Host (CScript or WScript), csstroubleshoot
+ms.custom:
+- sap:application technologies and compatibility\windows script host (cscript or wscript)
+- pcy:WinComm User Experience
 ---
 # How to change registry values or permissions from a command line or a script
 

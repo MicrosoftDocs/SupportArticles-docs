@@ -1,7 +1,7 @@
 ---
 title: A task sequence is slow with earlier client versions
 description: Describes an issue causing slow task sequences if the client in the media, or in the boot image, is earlier than the site version. Provides a resolution.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 ms.reviewer: kaushika, sccmcsscontent, rasiddiq
 ms.custom: sap:Operating Systems Deployment (OSD)\Boot Images
 ---

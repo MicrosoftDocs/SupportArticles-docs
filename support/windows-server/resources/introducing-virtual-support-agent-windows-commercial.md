@@ -6,7 +6,8 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: csstroubleshoot
+ms.custom:
+- pcy:WinComm User Experience
 ---
 # Introducing Virtual Support Agent for Windows Commercial
 

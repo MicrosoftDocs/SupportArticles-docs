@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Deduplication, csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\deduplication
+- pcy:WinComm Storage High Avail
 ---
 # Churn from Full Garbage Collection during deduplication can cause performance problems in Windows Server
 

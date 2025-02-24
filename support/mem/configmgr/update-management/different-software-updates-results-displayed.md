@@ -1,7 +1,7 @@
 ---
 title: Different results are displayed for software updates
 description: Discusses that different results are displayed for software updates when you use saved searches in non-English versions of Configuration Manager. Provides a workaround.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 ms.reviewer: kaushika,  ErinWi, prakask, keiththo
 ms.custom: sap:Software Update Management (SUM)\Software Update Point Installation or Configuration
 ---

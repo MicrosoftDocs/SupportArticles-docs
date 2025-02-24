@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, herbertm, v-lianna
-ms.custom: sap:Active Directory\Active Directory Lightweight Directory Services (AD LDS), csstroubleshoot
+ms.custom:
+- sap:active directory\active directory lightweight directory services (ad lds)
+- pcy:WinComm Directory Services
 ---
 # Problems that can occur with many Domain Controllers in Active Directory integrated DNS zones
 

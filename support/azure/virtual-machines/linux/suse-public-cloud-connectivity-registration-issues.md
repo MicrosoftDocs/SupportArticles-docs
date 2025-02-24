@@ -258,7 +258,7 @@ If instances aren't regularly updated, they can become incompatible with our upd
     sudo cd tmp
     sudo tar xvfz suse-public-registration.tgz
     sudo cd rpms
-    sudo zypper --force --no-refresh --no-remote --non-interactive install *.rpm
+    sudo zypper --no-refresh --no-remote --non-interactive install --force *.rpm
     ```
 
 8. Register the VM again:

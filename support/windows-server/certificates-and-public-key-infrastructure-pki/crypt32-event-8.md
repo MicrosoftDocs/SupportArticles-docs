@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Microsoft Trusted Root Certificate Program, csstroubleshoot
+ms.custom:
+- sap:certificates and public key infrastructure (pki)\microsoft trusted root certificate program
+- pcy:WinComm Directory Services
 ---
 # Crypt32 8 events continuously reported in Windows
 

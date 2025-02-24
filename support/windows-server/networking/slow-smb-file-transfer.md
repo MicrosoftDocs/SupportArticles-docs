@@ -1,12 +1,14 @@
 ---
 title: Slow SMB files transfer speed
 description: Learn how to resolve transfer performance issues with SMB files by using the provided troubleshooting steps.
-ms.date: 01/15/2025
+ms.date: 02/13/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-lianna, jakehr, nedpyle, cstrassn
-ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\access to file shares (smb)
+- pcy:WinComm Networking
 ---
 # Slow SMB files transfer speed
 
@@ -15,12 +17,9 @@ Server Message Block (SMB) is the default Windows network file system feature an
 ## Slow transfer
 
 > [!NOTE]
-> [SMB signing](https://techcommunity.microsoft.com/t5/storage-at-microsoft/configure-smb-signing-with-confidence/ba-p/2418102) and [SMB encryption](/windows-server/storage/file-server/smb-security) are known to slow down SMB transfers. The amount of the performance loss depends greatly on the capabilities of the hardware involved. The primary factors are the count and speed of the CPU core, and how much CPU time is dedicated to other workloads. 
+> [SMB signing](https://techcommunity.microsoft.com/t5/storage-at-microsoft/configure-smb-signing-with-confidence/ba-p/2418102) and [SMB encryption](/windows-server/storage/file-server/smb-security) are known to slow down SMB transfers. The amount of the performance loss depends greatly on the capabilities of the hardware involved. The primary factors are the count and speed of the CPU cores, and how much CPU time is dedicated to other workloads. 
 > 
-> [SMB signing will be required by default](https://aka.ms/SmbSigningRequired) in Windows 11, version 24H2 (preview) and Windows Server 2025 (preview). We don't recommend turning off the SMB client and server signing requirement, as they provide significant protection against spoofing, tampering, and relay attacks.
-
-> [!Important]
-> Windows 11, version 24H2 and Windows Server 2025 are in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+> Starting with Windows 11, version 24H2 and Windows Server 2025, [SMB signing is required](https://aka.ms/SmbSigningRequired) by default. We don't recommend turning off the SMB client and server signing requirement, as they provide significant protection against spoofing, tampering, and relay attacks.
 
 The following steps can be used to analyze, troubleshoot, and resolve common issues with slow SMB transfers.
 
@@ -30,11 +29,11 @@ The following steps can be used to analyze, troubleshoot, and resolve common iss
   - Robocopy is optimized for IT administrators to create high-performance local and remote file copy tasks.
   - File Explorer is convenient for basic use, but lacks the performance optimizations of robocopy that certain tasks require.
 
-- Try an unbuffered I/O copy for files larger than 1 GB by using the `robocopy /J` command from the command line.
+- Try an unbuffered I/O copy for files larger than 1 GB by using the `robocopy /J` command from Command Prompt or PowerShell.
 - Enable and use [SMB compression](/windows-server/storage/file-server/smb-compression).
 
-  - This greatly reduces transfer time and bandwidth utilization for large files containing significant whitespace, such as virtual machine disks, `.iso`, and `.dmp`.
-  - Non-compressible data, like archive files (`.zip`, `.7z`, and `.rar`), `.mp4` videos, and `.mp3` files won't see significant performance improvements with SMB compression.
+  - This greatly reduces transfer time and bandwidth utilization for large files containing significant whitespace, such as virtual machine disks (`.vhd`, `.vhdx`, `.vmdk`, and `.ovf`), `.iso`, and `.dmp` files.
+  - Non-compressible data, like archive (`.zip`, `.7z`, and `.rar`), video (`.mp4` and `.mkv`), and audio (`.mp3` and `.flac`) files won't see significant performance improvements with SMB compression.
   - SMB compression is available starting with Windows 11 and Windows Server 2022.
 
 - SMB speeds can be limited by storage performance.
@@ -62,7 +61,7 @@ The following steps can be used to analyze, troubleshoot, and resolve common iss
 
 - Transfers are slow only when using certain technologies or a [Scale-Out File Server (SOFS)](/windows-server/failover-clustering/sofs-overview).
 
-  - Some technologies, typically backup or database-based, require disk write-through to maintain data integrity.
+  - Some technologies, typically backups and databases, require disk write-through to maintain data integrity.
   - Windows SOFS requires write-through, as does SQL backups.
   - Disk write-through requires that the storage operation bypasses all storage caches and buffers and must be committed directly to the storage medium for the operation to complete.
   - In these cases, a storage system that lacks high write-through performance can't provide performant SMB transfers.
@@ -123,7 +122,7 @@ Network latency, SMB `create` commands, and antivirus programs contribute to a s
  
   - Robocopy is built into Windows, and the `/MT` parameter enables multi-threaded file copies.
   - Multi-threaded copies help by running many data transfers in parallel.
-    - While one or two files are being created, multiple files can be transferred.
+    - While one or two files are being created, the data of multiple files can be transferred.
     - This increases the amount of in-flight network data and minimizes pauses in the network data stream.
   - Writing to the console is another time-consuming operation, so redirecting the output to a log file speeds up the transfer job.
   - By default, `/MT` copies eight files at a time. It supports up to 128 copies at a time.
@@ -131,7 +130,7 @@ Network latency, SMB `create` commands, and antivirus programs contribute to a s
   - For more information about usage details, see [robocopy](/windows-server/administration/windows-commands/robocopy).
 
 - Use `AzCopy` when moving data to/from Azure. 
-  - [AzCopy](https://aka.ms/azcopy) has concurrency (multi-threading) capabilities and several [performance optimizations](/azure/storage/common/storage-use-azcopy-optimize).
+  - [AzCopy](https://aka.ms/azcopy) has concurrency (multi-threading) capabilities and several [performance optimizations](/azure/storage/common/storage-use-azcopy-optimize) for cloud workloads.
 
 - Use file compression.
    - Compress the small files into a large archive file (`.zip`, `.7z`, `.rar`, `.tar`, and `.gz`).
@@ -155,6 +154,15 @@ You should verify that the Office and SMB binaries are up-to-date, and then test
 
    ```powershell
    Set-SmbServerConfiguration -EnableLeasing $false
+   ```
+
+   Alternatively, to disable leasing on a per-share basis in Windows Server 2019 and later versions, run the following cmdlet:
+
+   > [!IMPORTANT]
+   > We recommend testing with `LeasingMode` set to `Shared` first. This allows some leasing while disabling the portions that typically cause slowness. Use `None` only as a final option.
+
+   ```powershell
+   Set-SmbShare -Name <ShareName> -LeasingMode [Shared|None]
    ```
 
 2. This works immediately on a new SMB client connection. There's no need to restart the SMB server or client machines. 

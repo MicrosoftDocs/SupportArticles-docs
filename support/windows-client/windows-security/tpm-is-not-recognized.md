@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, manojse, raverma, suhasm
-ms.custom: sap:System Performance\Startup configuration (general, secure boot, UEFI), csstroubleshoot
+ms.custom:
+- sap:system performance\startup configuration (general,secure boot,uefi)
+- pcy:WinComm Performance
 ---
 # A Trusted Platform Module (TPM) isn't recognized on some Windows 7 devices
 
