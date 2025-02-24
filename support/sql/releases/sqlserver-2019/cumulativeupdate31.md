@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 31 for SQL Server 2019 (KB5049296)
 description: This article contains the summary, known issues, improvements, fixes, and other information for SQL Server 2019 cumulative update 31 (KB5049296).
-ms.date: 02/21/2025
+ms.date: 02/24/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5049296
 ms.reviewer: v-qianli2
 appliesto:
@@ -49,10 +49,10 @@ After the patch is installed, the metadata is removed and you must re-create the
 
 #### Example
 
-You can use steps that are similar to the following ones, but you need to update them for the given environment, including the `CLUSTER_TYPE`. The VM1 in the given example is the primary replica of the AG 'readscaleag' and VM2 is the secondary replica that has the patch applied but already uninstalled. Before running the script, both replicas VM1 and VM2 are running SQL Server 2019 CU30 and the AG metadata is missing on VM2. To run this script use [SQLCMD mode](/sql/tools/sqlcmd/edit-sqlcmd-scripts-query-editor).
+You can use steps that are similar to the following ones, but you need to update them for the given environment, including the `CLUSTER_TYPE`. The VM1 in the given example is the primary replica of the AG 'readscaleag' and VM2 is the secondary replica that has the patch applied but already uninstalled. Before running the script, both replicas VM1 and VM2 are running SQL Server 2019 CU30 and the AG metadata is missing on VM2. To run this script, use [SQLCMD mode](/sql/tools/sqlcmd/edit-sqlcmd-scripts-query-editor).
 
 ```sql
---You must run this query in SQLCMD mode
+-- You must run this query in SQLCMD mode
 :setvar PrimaryServer "VM1\SQL19"
 :setvar SecondaryServer "VM2\SQL19"
 :setvar AvailabilityGroupName "readscaleag"
