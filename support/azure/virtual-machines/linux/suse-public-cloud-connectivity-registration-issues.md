@@ -247,11 +247,12 @@ If instances aren't regularly updated, they can become incompatible with our upd
     sudo zypper --no-refresh --no-remote --non-interactive install --force *.rpm
     ```
 
-8. Register the VM again:
+7. Register the VM again:
 
     ```bash
     sudo registercloudguest --force-new
     ```
+For more information, refer to (Cloud instance repos fail due to outdated packages)[https://www.suse.com/support/kb/doc/?id=000021552].
 
 ## Scenario 3: General registration issues
 
