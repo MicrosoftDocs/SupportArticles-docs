@@ -12835,6 +12835,42 @@
     {
       "source_path": "support/windows-server/performance/use-userdump-create-dump-file.md",
       "redirect_url": "/sysinternals/downloads/procdump"
+    },
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/troubleshoot-dynamics-365-app-outlook.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/error-when-accessing-crm-app-outlook.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/new-forms-formatted-incorrectly.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/error-when-using-365-app-outlook.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/your-device-is-currently-unsupported.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/this-organization-has-already-been-configured-error-when-connecting.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/you-do-not-have-permission-to-access-this-app-error-when-accessing-dynamics-365-app-for-outlook.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/the-given-key-was-not-present-in-dictionary.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/the-given-key-was-not-present-in-dictionary"
+    },
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/error-when-installing-crm-2016-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-when-installing-crm-2016-outlook"
     }
   ]
 }

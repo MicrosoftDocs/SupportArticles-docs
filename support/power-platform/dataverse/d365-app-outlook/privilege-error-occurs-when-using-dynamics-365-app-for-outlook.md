@@ -10,7 +10,7 @@ ms.custom: sap:Dynamics 365 App for Outlook Add-In
 
 This article provides a resolution for the issue that you may receive the **You don't have required privilege (prvReadOrganization)** error when trying to use the Microsoft Dynamics 365 App for Outlook.
 
-_Applies to:_ &nbsp; Microsoft Dynamics 365 Customer Engagement Online  
+_Applies to:_ &nbsp; Dynamics 365 App for Outlook  
 _Original KB number:_ &nbsp; 4563997
 
 ## Symptoms

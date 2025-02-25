@@ -10,7 +10,7 @@ ms.custom: sap:Dynamics 365 App for Outlook Add-In
 
 This article provides a resolution for the issue that the email or appointment that's tracked with Microsoft Dynamics 365 App for Outlook shows as Track pending.
 
-_Applies to:_ &nbsp; Microsoft Dynamics 365  
+_Applies to:_ &nbsp; Dynamics 365 App for Outlook  
 _Original KB number:_ &nbsp; 4345569
 
 ## Symptoms
