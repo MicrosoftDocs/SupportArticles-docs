@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Unexpected Node Reboots in Azure Linux RHEL Pacemaker Cluster
+title: Troubleshoot Unexpected Node Restarts in Azure Linux RHEL Pacemaker Cluster
 description: This article provides troubleshooting steps for resolving unexpected node restarts in RHEL Linux Pacemaker Clusters
 author: rnirek
 ms.author: rnirek
@@ -28,7 +28,7 @@ This article provides guidance for troubleshooting, analysis, and resolution of 
 ## Scenario 1: Network outage
 
 - The cluster nodes are experiencing `corosync` communication errors. This causes continuous retransmissions because of an inability to establish communication between nodes. This issue triggers application time-outs and ultimately causes node fencing and subsequent restarts.
-- Services that are dependent on network connectivity, such as `waagent`, generate communication-related error messages in the logs. This further indicates network-related disruptions.
+- Services that are dependent on network connectivity, such as `waagent`, generate communication-related error entries in the logs. These entries further indicate network-related disruptions.
 
 The following messages are logged in the `/var/log/messages` log:
 
@@ -57,7 +57,7 @@ For further assistance or other inquiries, you can open a support request by fol
 
 ## Scenario 2: Cluster misconfiguration
 
-The cluster nodes experience unexpected failovers or node restarts. These are often caused by cluster misconfigurations that affect the stability of Pacemaker Clusters.
+The cluster nodes experience unexpected failovers or node restarts. These issues often occur becuase of cluster misconfigurations that affect the stability of Pacemaker Clusters.
 
 To review the cluster configuration, run the following command:
 ```bash
@@ -69,19 +69,19 @@ sudo pcs configure show
 Unexpected restarts in an Azure SUSE Pacemaker cluster often occur because of misconfigurations:
 
 - Incorrect STONITH configuration: 
-    - No STONITH or fencing misconfigured: Not configuring STONITH correctly can cause nodes to be marked as unhealthy and trigger unnecessary restarts.
-    - Wrong STONITH resource settings: Incorrect parameters for Azure fencing agents, such as `fence_azure_arm`, can cause nodes to restart unexpectedly during failovers.
+    - No STONITH or fencing misconfigured: Not configuring STONITH correctly could cause nodes to be marked as unhealthy and trigger unnecessary restarts.
+    - Wrong STONITH resource settings: Incorrect parameters for Azure fencing agents, such as `fence_azure_arm`, could cause nodes to restart unexpectedly during failovers.
     - Insufficient permissions: The Azure resource group or credentials that are used for fencing might lack required permissions and cause STONITH failures.
 
 - Missing or incorrect resource constraints:
-   Poorly set constraints can cause resources to be redistributed unnecessarily. This can cause node overload and restarts. Misaligned resource dependency configurations can cause nodes to fail or go into a restart loop.
+   Poorly set constraints could cause resources to be redistributed unnecessarily. This situation, in turn, could cause node overload and restarts. Misaligned resource dependency configurations could cause nodes to fail or go into a restart loop.
 
 - Cluster threshold and time-out misconfigurations:
     - `failure-time-out`, `migration-threshold`, or `monitor-time-out` values might cause nodes to be prematurely restarted.
-    - Heartbeat Timeout Settings: Incorrect `corosync` time-out settings for heartbeat intervals can cause nodes to assume that the other nodes are offline. This can trigger unnecessary restarts.
+    - Heartbeat Timeout Settings: Incorrect `corosync` time-out settings for heartbeat intervals could cause nodes to assume that the other nodes are offline. This situation can trigger unnecessary restarts.
 
 - Lack of proper health checks:
-    Not setting correct health check intervals for critical services such as SAP HANA (High-performance ANalytic Application) can cause resource or node failures.
+    Not setting correct health check intervals for critical services such as SAP HANA (High-performance ANalytic Application) could cause resource or node failures.
 
 - Resource agent misconfiguration:
     - Custom resource agents misaligned with cluster: Resource agents that don't adhere to Pacemaker standards can create unpredictable behavior, including node restarts.
@@ -109,9 +109,9 @@ Unexpected restarts in an Azure SUSE Pacemaker cluster often occur because of mi
        ``` 
 
 > [!IMPORTANT]
-> When you troubleshoot unexpected node restarts or failures, it's crucial to assess the effect of security tools that are installed on the system. These tools might interfere with cluster operations by blocking essential processes or modifying system files. This could cause instability, unexpected time-outs, or node reboots.  
+> When you troubleshoot unexpected node restarts or failures, it's crucial to assess the effect of security tools that are installed on the system. These tools might interfere with cluster operations by blocking essential processes or modifying system files. This situation could cause instability, unexpected time-outs, or node restarts.  
 >  
-> To mitigate such risks, we recommend that you disable security tools on systems that are running a Pacemaker Cluster, or make sure that appropriate exclusions are configured to prevent conflicts with the cluster and its associated applications.
+> To mitigate such risks, we recommend that you disable security tools on systems that are running a Pacemaker Cluster. Alternatively, you can configure appropriate exclusions to prevent conflicts with the cluster and its associated applications.
 
 ## Scenario 3: Migration from on-premises to Azure
 
@@ -122,9 +122,9 @@ When you migrate a SUSE Pacemaker cluster from on-premises to Azure, unexpected 
 The following are common mistakes that are made in this category:
 
 - Incomplete or incorrect STONITH configuration:
-    - No STONITH or fencing misfconfigured: Not configuring STONITH correctly can cause nodes to be marked as unhealthy and trigger unnecessary restarts.
-    - Wrong STONITH resource settings: Incorrect parameters for Azure fencing agents such as `fence_azure_arm` can cause nodes to restart unexpectedly during failovers.
-    - Insufficient permissions: The Azure resource group or credentials that are used for fencing might lack required permissions and cause STONITH failures. Key Azure-specific parameters, such as subscription ID, resource group, or VM (Virtual Machine) names, must be correctly configured in the fencing agent. Omissions here can cause fencing failures and unexpected restarts.
+    - No STONITH or fencing misfconfigured: Not configuring STONITH correctly could cause nodes to be marked as unhealthy and trigger unnecessary restarts.
+    - Wrong STONITH resource settings: Incorrect parameters for Azure fencing agents such as `fence_azure_arm` could cause nodes to restart unexpectedly during failovers.
+    - Insufficient permissions: The Azure resource group or credentials that are used for fencing might lack required permissions and cause STONITH failures. Key Azure-specific parameters, such as subscription ID, resource group, or VM (Virtual Machine) names, must be correctly configured in the fencing agent. Omissions here could cause fencing failures and unexpected restarts.
     
    For more information, see [Troubleshoot Azure Fence Agent startup issues in RHEL](troubleshoot-azure-fence-agent-rhel.md) and [Troubleshoot SBD service failure in RHEL Pacemaker clusters](troubleshoot-sbd-issues-rhel.md)
 
@@ -161,7 +161,7 @@ The logs indicate that the STONITH device, `python-user`, triggers the shutdown 
 
 ### Cause of scenario 4
 
-During an outage, such as a platform or network interruption of the kind that's discussed in [Scenario 1](#scenario-1-network-outage), both nodes try to write to the STONITH device to fence the other because they lose the totem token. Typically, the STONITH device takes instruction from the first available node to write on it in order to shut down the other node. If both nodes are allowed to write to the STONITH device, they might terminate each other.
+During an outage, such as a platform or network interruption [see Scenario 1](#scenario-1-network-outage), both nodes try to write to the STONITH device to fence the other because they lose the totem token. Typically, the STONITH device takes instruction from the first available node to write on it in order to shut down the other node. If both nodes are allowed to write to the STONITH device, they might terminate each other.
 
 ### Resolution for scenario 4
 
@@ -247,7 +247,7 @@ The `ASCS/ERS` resource is considered to be the application for SAP Netweaver cl
 - After you rule out external factors, such as platform or network outages, we recommend that you engage the application vendor for trace call analysis and log review.
 
 ## Next steps
-For additional help, open a support request, and submit your request by attaching [sosreport](https://access.redhat.com/solutions/3592) logs for troubleshooting.
+For more help, open a support request, and submit your request by attaching [sosreport](https://access.redhat.com/solutions/3592) logs for troubleshooting.
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
