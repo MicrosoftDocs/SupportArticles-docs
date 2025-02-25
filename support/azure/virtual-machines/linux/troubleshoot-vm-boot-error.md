@@ -72,17 +72,21 @@ See the following sections for detailed errors, possible causes, and solutions.
 
 Azure Linux Auto Repair (ALAR) scripts are part of the VM repair extension described in [Use Azure Linux Auto Repair (ALAR) to fix a Linux VM](./repair-linux-vm-using-alar.md). ALAR covers the automation of multiple repair scenarios, including GRUB rescue issues.
 
-The ALAR scripts use the repair extension `repair-button` to fix GRUB issues by specifying `--button-command grubfix` for Generation 1 VMs, or `--button-command efifix` for Generation 2 VMs. This parameter triggers the automated recovery. Implement the following step to automate the fix of common GRUB errors that could be fixed by reinstalling GRUB and regenerating the corresponding configuration file:
+The ALAR scripts use the repair extension `repair-button` to fix GRUB issues by specifying `--button-command grubfix` for Generation 1 VMs, or `--button-command efifix` for Generation 2 VMs. This parameter triggers the automated recovery. Implement the following commands to automate the fix of common GRUB errors that could be fixed by reinstalling GRUB and regenerating the corresponding configuration file:
 
 * **Linux VMs without UEFI (BIOS based - Gen1):**
 
 ```azurecli-interactive
+az extension add -n vm-repair
+az extension update -n vm-repair
 az vm repair repair-button --button-command 'grubfix' --verbose $RGNAME --name $VMNAME
 ```
 
 * **Linux VMs with UEFI (Gen2):**
 
 ```azurecli-interactive
+az extension add -n vm-repair
+az extension update -n vm-repair
 az vm repair repair-button --button-command 'efifix' --verbose $RGNAME --name $VMNAME
 ```
 
