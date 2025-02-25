@@ -1,16 +1,16 @@
 ---
-title: ERR_VHD_FILE_NOT_FOUND when creating AKS clusters
-description: Learn how to troubleshoot the ERR_VHD_FILE_NOT_FOUND error (65) when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
+title: VMExtensionError_VHDFileNotFound when creating AKS clusters
+description: Learn how to troubleshoot the VMExtensionError_VHDFileNotFound error (65) when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.date: 10/14/2024
 editor: v-jsitser
 ms.reviewer: axelg, chiragpa, v-leedennis
 ms.service: azure-kubernetes-service
-#Customer intent: As an Azure Kubernetes user, I want to troubleshoot the ERR_VHD_FILE_NOT_FOUND error code (or error code OutboundConnFailVMExtensionError, error number 50 - or error code ERR_K8S_API_SERVER_CONN_FAIL, error number 51) so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
+#Customer intent: As an Azure Kubernetes user, I want to troubleshoot the VMExtensionError_VHDFileNotFound error code (or error code OutboundConnFailVMExtensionError, error number 50 - or error code ERR_K8S_API_SERVER_CONN_FAIL, error number 51) so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
-# ERR_VHD_FILE_NOT_FOUND error code (65) when deploying an AKS cluster
+# VMExtensionError_VHDFileNotFound error code (65) when deploying an AKS cluster
 
-This article discusses how to identify and resolve the `ERR_VHD_FILE_NOT_FOUND` error code (error code number 65) that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
+This article discusses how to identify and resolve the `VMExtensionError_VHDFileNotFound` error code (error code number 65) that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Symptoms
 
