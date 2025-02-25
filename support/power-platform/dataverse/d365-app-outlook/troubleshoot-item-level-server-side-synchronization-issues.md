@@ -9,7 +9,7 @@ ms.custom: sap:Dynamics 365 App for Outlook Add-In
 
 A new Server-Side Synchronization dashboard has been introduced that enables you to view item level failures for incoming email, outgoing email, and ACT (Appointments, Contacts, and Tasks) sync. This can help you troubleshoot issues such as why a specific email was not tracked automatically by Server-Side Synchronization.
 
-_Applies to:_ &nbsp; Microsoft Dynamics 365  
+_Applies to:_ &nbsp; Dynamics 365 App for Outlook  
 _Original KB number:_ &nbsp; 4468755
 
 ## Enabling the feature

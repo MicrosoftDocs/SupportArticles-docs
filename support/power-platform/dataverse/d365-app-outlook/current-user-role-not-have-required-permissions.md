@@ -10,7 +10,7 @@ ms.custom: sap:Dynamics 365 App for Outlook Add-In
 
 This article helps you fix an issue in which you can't open Microsoft Dynamics 365 App for Outlook if your Dynamics 365 security role doesn't have access to the app module.
 
-_Applies to:_ &nbsp; Microsoft Dynamics CRM Online  
+_Applies to:_ &nbsp; Dynamics 365 App for Outlook  
 _Original KB number:_ &nbsp; 4229661
 
 ## Symptoms
