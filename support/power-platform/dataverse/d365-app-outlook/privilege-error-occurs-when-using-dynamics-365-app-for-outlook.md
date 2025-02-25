@@ -2,8 +2,7 @@
 title: A privilege error when using Dynamics 365 App for Outlook
 description: A privilege error occurs when attempting to use Microsoft Dynamics 365 App for Outlook. Provides options to solve this issue.
 ms.reviewer: 
-ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 02/25/2025
 ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
 # A privilege error occurs when attempting to use Microsoft Dynamics 365 App for Outlook
