@@ -12,7 +12,7 @@ ms.custom:
 ---
 # LDS service startup fails after you manually change msDS-Behavior-Version in Windows Server
 
-This article provides a solution to an error that LDS service startup fails after you manually change the **msDS-Behavior-Version** attribute.
+This article provides a solution to an error that the LDS service startup fails after you manually change the **msDS-Behavior-Version** attribute.
 
 _Applies to:_ &nbsp; All supported versions of Windows Server and Windows Client  
 _Original KB number:_ &nbsp; 4550446
@@ -49,4 +49,4 @@ Additionally, you receive the following error message:
 
 :::image type="content" source="media/lds-service-startup-fails/error-message.png" alt-text="Error 0xc0000025 Windows could not start the L D S service on Local Computer.":::
 
-For Windows Server with monthly updates before the February 2025 update rollup installed, manually setting the **msDS-Behavior-Version** attribute value of LDS instances to **7** is not supported. To resolve the issue, install the February 2025 update rollup or a later version.
+For Windows Servers with monthly updates before the February 2025 update rollup installed, manually setting the **msDS-Behavior-Version** attribute value of LDS instances to **7** isn't supported. To resolve the issue, install the February 2025 update rollup or a later version.
