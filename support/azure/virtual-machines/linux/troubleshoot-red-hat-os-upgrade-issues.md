@@ -619,7 +619,7 @@ GRUB_DEFAULT=0
 Since `GRUB_DEFAULT=0` forces the system to always boot the first menu entry in GRUB, it skips the Leapp upgrade entry and continues booting into the existing RHEL 8.10 environment.
 
 
-### Upgrade solution: Modify GRUB to use the saved entry
+#### Upgrade solution: Modify GRUB to use the saved entry
 
 1. Change GRUB_DEFAULT=0 to GRUB_DEFAULT=saved:
 
