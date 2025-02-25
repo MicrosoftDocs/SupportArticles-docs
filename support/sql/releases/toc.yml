@@ -105,6 +105,10 @@ items:
   items:
   - name: SQL Server 2019 build versions
     href: sqlserver-2019/build-versions.md
+  - name: Cumulative Update 32
+    items:
+    - name: Cumulative Update 32 (KB5054833)
+      href: sqlserver-2019/cumulativeupdate32.md
   - name: Cumulative Update 31
     items:
     - name: Cumulative Update 31 (KB5049296)
