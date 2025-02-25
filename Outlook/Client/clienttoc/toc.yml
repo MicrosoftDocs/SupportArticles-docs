@@ -293,6 +293,8 @@
           href: ../installation/install-outlook-latest-updates.md
         - name: Leave a copy of the message on the server is missing
           href: ../installation/enable-leave-a-copy-of-the-message-on-the-server-outlook.md
+        - name: Map classic Outlook policies to new Outlook
+          href: ../installation/map-classic-outlook-policies-to-new-outlook.md
         - name: Planning considerations
           href: ../installation/plan-outlook-2016-deployment.md
         - name: Remove the Get and set up Outlook Mobile app on my phone option
