@@ -16,7 +16,7 @@ _Version:_ &nbsp; 15.0.4430.1
 
 ## Summary
 
-This article describes Cumulative Update package 32 (CU32) for Microsoft SQL Server 2019. This update contains 1 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 31, and it updates components in the following builds:
+This article describes Cumulative Update package 32 (CU32) for Microsoft SQL Server 2019. This update contains 1 [fix](#improvements-and-fixes-included-in-this-update) that was issued after the release of SQL Server 2019 Cumulative Update 31, and it updates components in the following builds:
 
 - SQL Server - Product version: **15.0.4430.1**, file version: **2019.150.4430.1**
 - Analysis Services - Product version: **15.0.35.51**, file version: **2018.150.35.51**
@@ -38,7 +38,7 @@ A downloadable Excel workbook that contains a summary list of builds, together w
 > [!NOTE]
 > Individual entries in the following table can be referenced directly through a bookmark. If you select any bug reference ID in the table, a bookmark tag is added to the URL by using the "#NNNNNNN" format. You can then share this URL with others so that they can jump directly to the desired fix in the table.
 
-For more information about the bugs that are fixed and enhancements that are included in this cumulative update, see the following Microsoft Knowledge Base articles.
+For more information about the bug that is fixed in this cumulative update, see the following Microsoft Knowledge Base article.
 
 | Bug reference| Description| Fix area | Component | Platform |
 |------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------|-------------------------------------------|----------|
