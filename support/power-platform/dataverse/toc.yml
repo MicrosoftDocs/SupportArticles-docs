@@ -64,8 +64,6 @@
       href: d365-app-outlook/the-view-is-not-available-error-when-opening-emails.md
     - name: Track and Set Regarding options are missing
       href: d365-app-outlook/track-set-regarding-options-miss.md
-    - name: User role doesn't have required permissions
-      href: d365-app-outlook/current-user-role-not-have-required-permissions.md
     - name: We're unable to connect to your server
       href: d365-app-outlook/we-are-unable-to-connect-to-your-dynamics-365-app-for-outlook-error.md
     - name: You don't have required role or privilege
