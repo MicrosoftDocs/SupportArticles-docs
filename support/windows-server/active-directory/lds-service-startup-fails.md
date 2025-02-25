@@ -49,4 +49,4 @@ Additionally, you receive the following error message:
 
 :::image type="content" source="media/lds-service-startup-fails/error-message.png" alt-text="Error 0xc0000025 Windows could not start the L D S service on Local Computer.":::
 
-For Windows Server with monthly updates before the February 2025 update rollup installed, manually setting the **msDS-Behavior-Version** attribute value of LDS instances to **7** is not supported. To resolve the issue, install the February 2025 update rollup or a later vesion.
+For Windows Server with monthly updates before the February 2025 update rollup installed, manually setting the **msDS-Behavior-Version** attribute value of LDS instances to **7** is not supported. To resolve the issue, install the February 2025 update rollup or a later version.
