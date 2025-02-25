@@ -289,9 +289,11 @@ If the message continues to appear after completing the above steps, or if you e
 
 If you can't remove an attached account or storage resource through the UI, you can manually delete all attached resources by deleting the following folders:
 
-- Windows: `%AppData%/StorageExplorer`
-- macOS: `~/Library/Application Support/StorageExplorer`
-- Linux: `~/.config/StorageExplorer`
+Platform | Folder path
+---------|------------
+Windows  | `%AppData%/StorageExplorer`
+macOS    | `~/Library/Application Support/StorageExplorer`
+Linux    | `~/.config/StorageExplorer`
 
 Close Storage Explorer before you delete these folders.
 
@@ -629,9 +631,11 @@ Logs are split into folders for each session of Storage Explorer that you run. F
 
 For issues related to sign-in or Storage Explorer's authentication library, you most likely need to gather authentication logs. Authentication logs are stored at:
 
-- Windows: *%LOCALAPPDATA%\Temp\servicehub\logs*
-- macOS: *~/.ServiceHub/logs*
-- Linux: *~/.ServiceHub/logs*
+Platform | Folder path
+---------|------------
+Windows  | `%LOCALAPPDATA%\Temp\servicehub\logs`
+macOS    | `~/.ServiceHub/logs`
+Linux    | `~/.ServiceHub/logs`
 
 Generally, you can follow these steps to gather the logs:
 
@@ -652,9 +656,12 @@ AzCopy logs can be found easily via two different methods:
 
 - For failed transfers still in the Activity Log, select **Go to AzCopy Log File**.
 - For transfers that failed in the past, go to the AzCopy logs folder. This folder can be found at:
-  - Windows: `C:\Users\\<your username\>\\.azcopy`
-  - macOS: `~/.azcopy`
-  - Linux: `~/.azcopy`
+
+  Platform | Folder path
+  ---------|------------
+  Windows  | `C:\Users\<your username>\.azcopy`
+  macOS    | `~/.azcopy`
+  Linux    | `~/.azcopy`
 
 ### Network logs
 
@@ -734,7 +741,7 @@ docker context ls
 To change your active context, use:
 
 ```bash
-docker context use <context_name>
+docker context use <context name>
 ```
 
 > [!NOTE]
