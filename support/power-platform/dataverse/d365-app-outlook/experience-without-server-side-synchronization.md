@@ -10,7 +10,7 @@ ms.custom: sap:Dynamics 365 App for Outlook Add-In
 
 This article describes an issue in which you receive a notification saying that Track and Set Regarding are currently disabled if Server-Side Synchronization is inactive in Microsoft Dynamics 365 App for Outlook.
 
-_Applies to:_ &nbsp; Microsoft Dynamics 365 Customer Engagement Online  
+_Applies to:_ &nbsp; Dynamics 365 App for Outlook  
 _Original KB number:_ &nbsp; 4508591
 
 When you use Dynamics 365 App for Outlook, you might see a notification that says:

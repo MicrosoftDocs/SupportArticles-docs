@@ -10,7 +10,7 @@ ms.custom: sap:Dynamics 365 App for Outlook Add-In
 
 This article helps you resolve the problem that occurs when you attempt to install Dynamics 365 App for Outlook, the Status column shows **Issue when adding to Outlook**.
 
-_Applies to:_ &nbsp; Microsoft Dynamics 365  
+_Applies to:_ &nbsp; Dynamics 365 App for Outlook  
 _Original KB number:_ &nbsp; 3211621  
 
 ## Symptoms
