@@ -690,7 +690,7 @@ The following commands are to be run on the recovery (rescue) VM that's temporar
 1. Detach the disk from the rescue VM, and then perform a disk swap with the original VM.
 1. Start the original VM, and check its connectivity.
 
-## SUSE-SLES 12 SP4, SUSE-SLES 12 SP4 For SAP && ## SUSE-SLES 15 SP1, SUSE-SLES 15 SP1 For SAP
+## SUSE-SLES 12 SP4, SUSE-SLES 12 SP4 For SAP, SUSE-SLES 15 SP1, SUSE-SLES 15 SP1 For SAP
 
 1. Stop or deallocate the affected VM.
 1. Create a rescue VM image of the same OS version in the same resource group (RSG) and location by using a managed disk.
