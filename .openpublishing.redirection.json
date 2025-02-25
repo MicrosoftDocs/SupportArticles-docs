@@ -12831,6 +12831,10 @@
     {
       "source_path": "support/dynamics-365/sales/you-do-not-have-the-required-role-or-privilege-to-complete-this-action-error.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/you-do-not-have-the-required-role-or-privilege-to-complete-this-action-error"
+    },
+    {
+      "source_path": "support/windows-server/performance/use-userdump-create-dump-file.md",
+      "redirect_url": "/sysinternals/downloads/procdump"
     }
   ]
 }
