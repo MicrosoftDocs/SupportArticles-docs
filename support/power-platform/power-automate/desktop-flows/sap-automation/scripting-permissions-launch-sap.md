@@ -1,15 +1,15 @@
 ---
-title: The server threw an exception when opening SAP
+title: The Server Threw an Exception When Opening SAP
 description: Solves an error that occurs when a user tries to open the SAP application automated by Power Automate for desktop.
 ms.reviewer: amitrou
 ms.author: nimoutzo
 author: NikosMoutzourakis
 ms.custom: sap:Desktop flows\SAP automation
-ms.date: 02/17/2025
+ms.date: 02/25/2025
 ---
 # The server threw an exception when opening SAP
 
-This article helps you resolve the error that occurs when a user tries to open the SAP application automated by Power Automate for desktop.
+This article helps you resolve an error that occurs when a user tries to open the SAP application automated by Power Automate for desktop.
 
 ## Symptoms
 

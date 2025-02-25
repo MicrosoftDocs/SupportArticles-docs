@@ -1,15 +1,15 @@
 ---
-title: Launch Excel Action failures
-description: Solves the errors related to the Launch Excel action in Power Automate for desktop.
+title: Launch Excel Action Failures
+description: Solves errors related to the Launch Excel action in Power Automate for desktop.
 ms.reviewer: amitrou
 ms.author: nimoutzo
 author: NikosMoutzourakis
 ms.custom: sap:Desktop flows\Office automation
-ms.date: 02/20/2025
+ms.date: 02/25/2025
 ---
-# An error occurs when opening an Excel file in Power Automate for desktop
+# Error occurs when opening an Excel file in Power Automate for desktop
 
-This article helps solve the error that occurs when you try to open a blank or existing Excel file in Power Automate for desktop.
+This article helps solve errors that occur when you try to open a blank or existing Excel file in Power Automate for desktop.
 
 ## "Exception from HRESULT: 0x800xxxxx" error
 
@@ -17,7 +17,11 @@ This article helps solve the error that occurs when you try to open a blank or e
 
 ### Cause
 
-This error can occur if Office apps (or just Excel) aren't properly installed, Power Automate for desktop isn't properly installed, or the Excel file is synchronized with OneDrive.
+This error can occur if:
+
+- Office apps (or just Excel) aren't properly installed.
+- Power Automate for desktop isn't properly installed.
+- The Excel file is synchronized with OneDrive.
 
 ### Resolution
 
@@ -54,7 +58,7 @@ Move the file to a directory where Power Automate for desktop has access.
 
 ### Cause
 
-The Excel application is locked and no other process can access it.
+The Excel application is locked, and no other process can access it.
 
 ### Resolution
 
@@ -62,11 +66,11 @@ Terminate all opened Excel processes and restart Power Automate for desktop.
 
 ## "80040154 Class not registered" error
 
-> System.Runtime.InteropServices.COMException: Retrieving the COM class factory for component with CLSID {00020819-0000-0000-C000-000000000046} failed due to the following error: 80040154 Class not registered (Exception from HRESULT: 0x80040154 (REGDB_E_CLASSNOTREG)).
+> System.Runtime.InteropServices.COMException: Retrieving the COM class factory for component with CLSID {*ID*} failed due to the following error: 80040154 Class not registered (Exception from HRESULT: 0x80040154 (REGDB_E_CLASSNOTREG)).
 
 ### Cause
 
-This issue can occur if you're using an older version of Excel, such as 2013 or earlier.
+This issue can occur if you're using an older version of Excel, such as Excel 2013 or earlier.
 
 ### Resolution
 
@@ -76,7 +80,7 @@ Ensure you have Excel 2013 or a later version installed on your machine.
 
 ### Cause
 
-The Excel application crashes due to insufficient memory, or memory utilization is high due to a specific extension running on Excel.
+The Excel application crashes due to insufficient memory or high memory utilization caused by a specific extension running on Excel.
 
 ### Resolution
 

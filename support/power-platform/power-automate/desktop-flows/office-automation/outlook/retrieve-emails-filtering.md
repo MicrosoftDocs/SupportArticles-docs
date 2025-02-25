@@ -1,13 +1,13 @@
 ---
-title: Retrieve Email Messages From Outlook doesn't Work
-description: Solves an issue related to the retrieve email messages from Outlook action in Microsoft Power Automate.
+title: Retrieve Email Messages from Outlook Doesn't Work
+description: Solves an issue related to the Retrieve email messages from Outlook action in Microsoft Power Automate.
 ms.custom: sap:Desktop flows\Office automation
 ms.reviewer: amitrou
 ms.author: nimoutzo
 author: NikosMoutzourakis
 ms.date: 02/19/2025
 ---
-# The Retrieve email messages from Outlook action doesn't work as expected
+# The "Retrieve email messages from Outlook" action doesn't work as expected
 
 This article solves an issue where the [Retrieve email messages from Outlook](/power-automate/desktop-flows/actions-reference/outlook) action doesn't return any results in Microsoft Power Automate.
 
@@ -27,20 +27,20 @@ You can retrieve the X500 format email using the Exchange PowerShell cmdlet:
 Get-Mailbox -Identity username | ft legacyExchangeDN.
 ```
 
-Alternatively, you could look in `%LocalAppData%\Microsoft\Outlook` for an XML file that contains a section called **LegacyDn**.
+Alternatively, you can look in `%LocalAppData%\Microsoft\Outlook` for an XML file that contains a section called **LegacyDn**.
 
 ## Workaround
 
-To work around this issue,
+To work around this issue:
 
-- Use other actions for email operations such as:
+- Use other actions for email operations, such as:
 
-  1. [Exchange Server actions](/power-automate/desktop-flows/actions-reference/exchange).
-  2. [Microsoft 365 Outlook actions](/connectors/office365/#get-emails-(v3)).
+  - [Exchange Server actions](/power-automate/desktop-flows/actions-reference/exchange).
+  - [Microsoft 365 Outlook actions](/connectors/office365/#get-emails-(v3)).
   
-- Perform the filtering by using a **For each** loop to iterate through the returned messages. For example,
+- Perform the filtering by using a **For each** loop to iterate through the returned messages. For example:
 
-  :::image type="content" source="media/retrieve-emails-filtering/loop-emails-filter.png" alt-text="An example of retrieving emails using a For each loop.":::
+  :::image type="content" source="media/retrieve-emails-filtering/loop-emails-filter.png" alt-text="Screenshot of an example of retrieving emails using a For each loop." lightbox="media/retrieve-emails-filtering/loop-emails-filter.png":::
 
 ## More information
 

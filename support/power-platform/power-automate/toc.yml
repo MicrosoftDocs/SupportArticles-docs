@@ -50,7 +50,7 @@
   items:
     - name: UI automation
       items:
-        - name: UI element highlight or hovering issues in virtual desktop
+        - name: UI element highlighting or hovering issues in virtual desktops
           href: desktop-flows/ui-automation/ui-rdp-automation/rdp-no-highlight.md
         - name: SAP UI element click issue
           href: desktop-flows/ui-automation/ui-sap-automation/sap-click-element-dpi.md
@@ -70,7 +70,7 @@
               href: desktop-flows/office-automation/excel/launch-excel-action-failures.md
         - name: Outlook
           items:
-            - name: The Retrieve email messages from Outlook action doesn't work as expected
+            - name: Retrieve email messages from Outlook doesn't work as expected
               href: desktop-flows/office-automation/outlook/retrieve-emails-filtering.md
     - name: A desktop application crashes due to UI automation
       href: desktop-flows/desktop-application-crashes-ui-automation.md
