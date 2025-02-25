@@ -20,13 +20,13 @@ This is expected behavior. You must manually trigger a sync.
 
 This is expected behavior. You can't turn off encryption: Google requires that the device be encrypted to create a work profile.
 
-### Can't add work profile
+### Can't create a work profile
 
-Although your device may meet Android Enterprise and OS version requirements for a personally-owned work profile, you may still experience this error if an existing profile is present on the device or if you are unable to create a work profile due to OEM restrictions.
+Although your device may meet the Android Enterprise and OS version requirements for a personally owned work profile, you may still experience this issue due to an existing profile on the device or OEM restrictions.
 
-To verify if an existing work profile is present on the device, open Settings > Passwords & Accounts > Work. If you are not expecting a work profile to be present, remove the work account, and attempt enrollment again. Note that the location of this setting may vary by device manufacturer.
+To check if the device has an existing work profile, go to **Settings** > **Passwords & accounts** > **Work**. If a work profile isn't expected, remove it and try enrolling again. The setting's location may vary depending on the device manufacture.
 
-To verify your device has the ability to create a sample work profile, install the Test DPC app from the Google Play Store and follow setup instructions. If Test DPC fails to create a work profile, contact your device manufacturer for more details on work profile support.
+To check if the device can create a sample work profile, install the [Test DPC](https://play.google.com/store/apps/details?id=com.afwsamples.testdpc) app from the Google Play Store and follow the setup instructions. If the Test DPC app fails to create a work profile, contact the device manufacturer for more details on work profile support.
 
 ## Remote actions
 
