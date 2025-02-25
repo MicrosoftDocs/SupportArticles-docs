@@ -52,17 +52,17 @@ The communication with the remote agent components doesn't work.
 
      To troubleshoot the issue, run the [troubleshooter](/power-automate/desktop-flows/troubleshooter) while the virtual desktop platform is active and check for errors in the **UI Automation** section.
 
-   - **Citrix Virtual Channel policy enabled**: The "Virtual channel Allow list" policy on Citrix is set to **Enabled** or **Default**.
+   - **Citrix Virtual Channel policy enabled**: The **Virtual channel allow list** policy on Citrix is set to **Enabled** or **Default**.
 
      The default setting for this policy is **Enabled** or **Default**. However, if this policy isn't disabled, the Power Automate agent can't communicate with Power Automate for desktop. To resolve communication issues, work with your Citrix administrator to set the policy to **Disabled** and ensure Citrix machines are restarted after applying the policy.
 
-   - **Citrix VDA version < 2407**: The "Virtual channel Allow list" policy on Citrix is set to **Enabled** or **Default**.
+   - **Citrix VDA version < 2407**: The **Virtual channel allow list** policy on Citrix is set to **Enabled** or **Default**.
 
      The default setting for this policy is **Enabled** or **Default**. However, if this policy isn't disabled, the Power Automate agent can't communicate with Power Automate for desktop. To resolve communication issues, work with your Citrix administrator to set the policy to **Disabled** and ensure Citrix machines are restarted after applying the policy.
 
-   - **Citrix VDA Version >= 2407**: The older "Virtual channel Allow list" can remain at **Default**, but a different policy must be set.
+   - **Citrix VDA Version >= 2407**: The older **Virtual channel allow list** policy can remain at **Default**, but a different policy must be set.
 
-     Set the "Virtual channel allow list for DVC" policy with the following values:
+     Set the **Virtual channel allow list for DVC** policy with the following values:
 
       - `C:\Program Files (x86)\Power Automate agent for virtual desktops\PAD.RDP.ControlAgent.exe,Microsoft.Flow.RPA.Desktop.UIAutomation.RDP.DVC.Plugin,PAD\CONTROL`
   
