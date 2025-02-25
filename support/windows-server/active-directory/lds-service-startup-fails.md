@@ -1,7 +1,7 @@
 ---
 title: LDS service startup fails
 description: Introduce the solution for LDS Service startup failure after you manually change msDS-Behavior-Version attribute.
-ms.date: 01/15/2025
+ms.date: 02/25/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -12,14 +12,12 @@ ms.custom:
 ---
 # LDS service startup fails after you manually change msDS-Behavior-Version in Windows Server 2019 and 2016
 
-This article provides a solution to an error that LDS service startup fails after you manually change msDS-Behavior-Version.
+This article provides a solution to an error that LDS service startup fails after you manually change the **msDS-Behavior-Version** attribute.
 
-_Applies to:   All supported versions of Windows Server and Windows client_  
+_Applies to:_ &nbsp; All supported versions of Windows Server and Windows Client
 _Original KB number:_ &nbsp; 4550446
 
-## Symptom
-
-In ADSI Edit, you change the **msDS-Behavior-Version** attribute of the Partitions container to **7** in order to raise the Active Directory (AD) Lightweight Directory Services (LDS) instance functional level to WIN2016.
+In ADSI Edit, you change the **msDS-Behavior-Version** attribute of the **Partitions** container to **7** in order to raise the Active Directory (AD) Lightweight Directory Services (LDS) instance functional level to **WIN2016**.
 
 :::image type="content" source="media/lds-service-startup-fails/attribute-editor.png" alt-text="Change the msDS-Behavior-Version attribute to 7.":::
 
@@ -51,11 +49,4 @@ Additionally, you receive the following error message:
 
 :::image type="content" source="media/lds-service-startup-fails/error-message.png" alt-text="Error 0xc0000025 Windows could not start the L D S service on Local Computer.":::
 
-## Cause
-
-Manually setting the **msDS-Behavior-Version** attribute value of LDS instances to **7** on Windows server with monthly update before the February 2025 update rollup is not supported.
-
-## Resolution
-
-Install February 2025 monthly update rollup or newer
-
+Manually setting the **msDS-Behavior-Version** attribute value of LDS instances to **7** in Windows Server with monthly updates before the [February 2025 update rollup](https://support.microsoft.com/topic/february-11-2025-kb5051987-os-build-26100-3194-6cc1a435-9c1a-42b8-8c4d-b34253784452) is not supported. To resolve the issue, install the February 2025 update rollup or a later vesion.
