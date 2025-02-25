@@ -20,15 +20,15 @@ This article provides guidance for troubleshooting, analysis, and resolution of 
 ## Prerequisites
 
 - Make sure that the Pacemaker Cluster setup is correctly configured by following the guidelines that are provided in [Set up Pacemaker on Red Hat Enterprise Linux in Azure](/azure/sap/workloads/high-availability-guide-rhel-pacemaker).
-- For a Microsoft Azure Pacemaker cluster that uses the Azure Fence Agent as the STONITH (Shoot-The-Other-Node-In-The-Head) device, refer to the documentation [RHEL - Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-rhel-pacemaker#azure-fence-agent-configuration).
+- For a Microsoft Azure Pacemaker Cluster that uses the Azure Fence Agent as the STONITH (Shoot-The-Other-Node-In-The-Head) device, refer to the [RHEL - Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-rhel-pacemaker#azure-fence-agent-configuration) documentation.
 - For a Microsoft Azure Pacemaker cluster that uses SBD (STONITH Block Device) storage protection as the STONITH device, choose one of the following setup options (see the articles for detailed information):
     - [SBD with an iSCSI target server](/azure/sap/workloads/high-availability-guide-rhel-pacemaker#sbd-with-an-iscsi-target-server)
     - [SBD with an Azure shared disk](/azure/sap/workloads/high-availability-guide-rhel-pacemaker#sbd-with-an-azure-shared-disk)
 
-## Scenario 1: Network Outage
+## Scenario 1: Network outage
 
-- The cluster nodes are experiencing `corosync` communication errors. This causes continuous retransmissions because of an inability to establish communication between nodes. This issue triggers application timeouts, ultimately causing node fencing and subsequent restarts.
-- Additionally, services that are dependent on network connectivity, such as `waagent`, generate communication related error messages in the logs. This further indicates network related disruptions.
+- The cluster nodes are experiencing `corosync` communication errors. This causes continuous retransmissions because of an inability to establish communication between nodes. This issue triggers application time-outs and ultimately causes node fencing and subsequent restarts.
+- Services that are dependent on network connectivity, such as `waagent`, generate communication-related error messages in the logs. This further indicates network-related disruptions.
 
 The following messages are logged in the `/var/log/messages` log:
 
@@ -45,17 +45,17 @@ Aug 21 01:47:27 node  02 corosync[15241]:  [KNET  ] host: host: 2 has no active 
 Aug 21 01:47:31 node  02 corosync[15241]:  [TOTEM ] Token has not been received in 30000 ms
 ```
 
-### Cause for scenario 1
+### Cause of scenario 1
 
-An unexpected node restart occurs because of a Network Maintenance activity or an outage. For confirmation, you can match the timestamp by reviewing the [Azure Maintenance Notification](/azure/virtual-machines/linux/maintenance-notifications) in the Azure portal. For more information about Azure Scheduled Events, see [Azure Metadata Service: Scheduled Events for Linux VMs](/azure/virtual-machines/linux/scheduled-events).
+An unexpected node restart occurs because of a network maintenance activity or an outage. For verification, you can match the timestamp by reviewing the [Azure Maintenance Notification](/azure/virtual-machines/linux/maintenance-notifications) in the Azure portal. For more information about Azure Scheduled Events, see [Azure Metadata Service: Scheduled Events for Linux VMs](/azure/virtual-machines/linux/scheduled-events).
 
 ### Resolution for scenario 1
 
 If the unexpected restart timestamp aligns with a maintenance activity, the analysis confirms that either platform or network maintenance affected the cluster.
 
-For further assistance or other queries, you can open a support request by following [these instructions](#next-steps).
+For further assistance or other inquiries, you can open a support request by following [these instructions](#next-steps).
 
-## Scenario 2: Cluster Misconfiguration
+## Scenario 2: Cluster misconfiguration
 
 The cluster nodes experience unexpected failovers or node restarts. These are often caused by cluster misconfigurations that affect the stability of Pacemaker Clusters.
 
@@ -64,7 +64,7 @@ To review the cluster configuration, run the following command:
 sudo pcs configure show
 ```
 
-### Cause for scenario 2
+### Cause of scenario 2
 
 Unexpected restarts in an Azure SUSE Pacemaker cluster often occur because of misconfigurations:
 
@@ -77,22 +77,22 @@ Unexpected restarts in an Azure SUSE Pacemaker cluster often occur because of mi
    Poorly set constraints can cause resources to be redistributed unnecessarily. This can cause node overload and restarts. Misaligned resource dependency configurations can cause nodes to fail or go into a restart loop.
 
 - Cluster threshold and time-out misconfigurations:
-    - `failure-time-out`, `migration-threshold`, or `monitor-time-out` values may cause nodes to be prematurely restarted.
-    - Heartbeat Timeout Settings: Incorrect `corosync` time-out settings for heartbeat intervals can cause nodes to assume each other are offline, triggering unnecessary restarts.
+    - `failure-time-out`, `migration-threshold`, or `monitor-time-out` values might cause nodes to be prematurely restarted.
+    - Heartbeat Timeout Settings: Incorrect `corosync` time-out settings for heartbeat intervals can cause nodes to assume that the other nodes are offline. This can trigger unnecessary restarts.
 
 - Lack of proper health checks:
     Not setting correct health check intervals for critical services such as SAP HANA (High-performance ANalytic Application) can cause resource or node failures.
 
 - Resource agent misconfiguration:
     - Custom resource agents misaligned with cluster: Resource agents that don't adhere to Pacemaker standards can create unpredictable behavior, including node restarts.
-    - Wrong resource start/stop parameters: Incorrectly tuned start/stop parameters in cluster configuration may cause nodes to restart during resource recovery.
+    - Wrong resource start/stop parameters: Incorrectly tuned start/stop parameters in cluster configuration might cause nodes to restart during resource recovery.
 
 ### Resolution for scenario 2
 
 - Follow the proper guidelines to set up a [RHEL Pacemaker Cluster](#prerequisites). Additionally, make sure that appropriate resources are allocated for applications such as [SAP HANA](/azure/sap/workloads/sap-hana-high-availability-rhel) or [SAP NetWeaver](/azure/sap/workloads/high-availability-guide-rhel), as specified in the Microsoft documentation.
 - Steps to make necessary changes to the cluster configuration: 
-    1. Stop the application on both the nodes. 
-    2. Put the cluster into maintenance-mode. 
+    1. Stop the application on both nodes. 
+    2. Put the cluster into maintenance-mode: 
 
        ```bash
        sudo pcs property set maintenance-mode=true 
@@ -103,28 +103,28 @@ Unexpected restarts in an Azure SUSE Pacemaker cluster often occur because of mi
        sudo pcs configure edit 
        ```
     4. Save the changes. 
-    5. Remove the cluster from maintenance-mode.
+    5. Remove the cluster from maintenance mode.
        ```bash
        sudo pcs property set maintenance-mode=false
        ``` 
 
 > [!IMPORTANT]
-> When troubleshooting unexpected node restarts or failures, it's crucial to assess the impact of security tools installed on the system. These tools may interfere with cluster operations by blocking essential processes or modifying system files, potentially causing instability, unexpected timeouts, or node reboots.  
+> When you troubleshoot unexpected node restarts or failures, it's crucial to assess the effect of security tools that are installed on the system. These tools might interfere with cluster operations by blocking essential processes or modifying system files. This could cause instability, unexpected time-outs, or node reboots.  
 >  
-> To mitigate such risks, it's recommended to disable security tools on systems running a Pacemaker cluster or ensure that appropriate exclusions are configured to prevent conflicts with the cluster and its associated applications.
+> To mitigate such risks, we recommend that you disable security tools on systems that are running a Pacemaker Cluster, or make sure that appropriate exclusions are configured to prevent conflicts with the cluster and its associated applications.
 
 ## Scenario 3: Migration from on-premises to Azure
 
 When you migrate a SUSE Pacemaker cluster from on-premises to Azure, unexpected restarts can occur because of specific misconfigurations or overlooked dependencies. 
 
-### Cause for scenario 3
+### Cause of scenario 3
 
-The following are common mistakes in this category:
+The following are common mistakes that are made in this category:
 
 - Incomplete or incorrect STONITH configuration:
     - No STONITH or fencing misfconfigured: Not configuring STONITH correctly can cause nodes to be marked as unhealthy and trigger unnecessary restarts.
     - Wrong STONITH resource settings: Incorrect parameters for Azure fencing agents such as `fence_azure_arm` can cause nodes to restart unexpectedly during failovers.
-    - Insufficient permissions: The Azure resource group or credentials that are used for fencing might lack required permissions and cause STONITH failures. Key Azure-specific parameters, such as subscription ID, resource group, or VM(Virtual Machine) names, must be correctly configured in the fencing agent. Omissions here can cause fencing failures and unexpected restarts.
+    - Insufficient permissions: The Azure resource group or credentials that are used for fencing might lack required permissions and cause STONITH failures. Key Azure-specific parameters, such as subscription ID, resource group, or VM (Virtual Machine) names, must be correctly configured in the fencing agent. Omissions here can cause fencing failures and unexpected restarts.
     
    For more information, see [Troubleshoot Azure Fence Agent startup issues in RHEL](troubleshoot-azure-fence-agent-rhel.md) and [Troubleshoot SBD service failure in RHEL Pacemaker clusters](troubleshoot-sbd-issues-rhel.md)
 
@@ -140,60 +140,58 @@ The following are common mistakes in this category:
 
 - Performance and latency mismatches:
     - Inadequate VM sizing: Migrated workloads might not align with the selected Azure VM size. This causes excessive resource use and triggers restarts.
-    - Disk I/O mismatches: On-premises workloads with high IOPS (Input/output operations per second) demands must be paired with the appropriate Azure disk or storage performance tier.
+    - Disk I/O mismatches: On-premises workloads that have high IOPS (Input/output operations per second) demands must be paired with the appropriate Azure disk or storage performance tier.
    
    For more information, see [Collect performance metrics for a Linux VM](collect-performance-metrics-from-a-linux-system.md)
 
-- Security and Firewall Rules:
+- Security and firewall rules:
     - Port Block: On-premises clusters often have open, internal communication. Additionally, Azure NSGs (Network Security Groups) or firewalls might block ports that are required for Pacemaker or Corosync communication.
    
    For more information, see [Network security group test](/azure/virtual-machines/network-security-group-test)
 
 ### Resolution for scenario 3
 
-Follow the proper guidelines to set up a [RHEL Pacemaker Cluster](#prerequisites). Additionally, make sure that appropriate resources are allocated for applications such as [SAP HANA](/azure/sap/workloads/sap-hana-high-availability) or [SAP NetWeaver](/azure/sap/workloads/high-availability-guide-suse), as specified in the Microsoft documentation.
+Follow the proper guidelines to set up an [RHEL Pacemaker Cluster](#prerequisites). Additionally, make sure that appropriate resources are allocated for applications such as [SAP HANA](/azure/sap/workloads/sap-hana-high-availability) or [SAP NetWeaver](/azure/sap/workloads/high-availability-guide-suse), as specified in the Microsoft documentation.
 
 ## Scenario 4: Both cluster nodes are terminated after a failover event on RHEL 8
 
-The Pacemaker cluster faces an outage, and proceeds to trigger a failover event. In a two node cluster configuration, both nodes are terminated, and stay offline until manual intervention.
+The Pacemaker Cluster anticipates an outage, and it proceeds to trigger a failover event. In a two-node cluster configuration, both nodes are terminated and stay offline until manual intervention can occur.
 
-The logs indicate that the STONITH device `python-user` triggers the shutdown instruction for both nodes.
+The logs indicate that the STONITH device, `python-user`, triggers the shutdown instruction for both nodes.
 
-### Cause for scenario 4
+### Cause of scenario 4
 
-During an outage, like a Platform or network interruption as discussed in [Scenario 1](#scenario-1-network-outage), both nodes attempt to write to the STONITH device to fence each other since they lose Totem Token. Normally, the STONITH device takes the instruction from the first node that's available, to write on it in order to shutdown the other node. If both nodes are allowed to write to the STONITH device, they end up killing each other.
-
-During an outage such as a platform or network interruption described in [Scenario 1](#scenario-1-network-outage), both nodes try to write to the STONITH device to fence each other because they lose Totem token. Typically, the STONITH device follows the first available node's instruction to shut down the other node. If both nodes are allowed to write to the STONITH device, they might shut each other down.
+During an outage, such as a platform or network interruption of the kind that's discussed in [Scenario 1](#scenario-1-network-outage), both nodes try to write to the STONITH device to fence the other because they lose the totem token. Typically, the STONITH device takes instruction from the first available node to write on it in order to shut down the other node. If both nodes are allowed to write to the STONITH device, they might terminate each other.
 
 ### Resolution for scenario 4
 
-It's recommended to use `priority-fencing-delay` or `pcmk_delay_max` parameter, so only one VM should be acknowledged by the STONITH device.
+We recommended that you use the `priority-fencing-delay` or `pcmk_delay_max` parameter so that only one VM is acknowledged by the STONITH device:
 
-1. Set the cluster under maintenance-mode.
+1. Set the cluster under maintenance-mode:
 
     ```bash
     sudo pcs property set maintenance-mode=true
     ```
 
-2. Edit the cluster configuration.
+2. Edit the cluster configuration:
 
     ```bash
     sudo pcs configure edit 
     ```
 
-3. If the Pacemaker version is less than `2.0.4-6.el8`, then add the parameter `pcmk_delay_max`:
+3. If the Pacemaker version is earlier than `2.0.4-6.el8`, add the `pcmk_delay_max` parameter:
 
     ```bash
     sudo pcs property set pcmk_delay_max=15s
     ```
 
-    If the version is higher than `2.0.4-6.el8`, then use the parameter `priority-fencing-delay` instead:
+    If the Pacemaker version is later than `2.0.4-6.el8`, use the `priority-fencing-delay` parameter instead:
 
     ```bash
     sudo pcs property set priority-fencing-delay=15s
     ```
 
-4. Save the changes and remove the cluster out of maintenance-mode.
+4. Save the changes, and remove the cluster from maintenance mode:
 
     ```bash
     sudo pcs property set maintenance-mode=false
@@ -201,7 +199,7 @@ It's recommended to use `priority-fencing-delay` or `pcmk_delay_max` parameter, 
 
 For more information, see [RHEL - Create Azure Fence agent STONITH device](/azure/sap/workloads/high-availability-guide-rhel-pacemaker#azure-fence-agent-configuration).
 
-## Scenario 5: `HANA_CALL` timeout after 60 seconds
+## Scenario 5: `HANA_CALL` time-out after 60 seconds
 
 The Azure RHEL Pacemaker Cluster is running SAP HANA as an application, and it experiences unexpected restarts on one of the nodes or both nodes in the Pacemaker Cluster. Per the `/var/log/messages` or  `/var/log/pacemaker.log` log entries, the node restart is caused by a `HANA_CALL` time-out, as follows:
 
@@ -212,9 +210,9 @@ The Azure RHEL Pacemaker Cluster is running SAP HANA as an application, and it e
 2024-06-04T09:25:38.736748+00:00 node01 SAPHana(rsc_SAPHana_H00_HDB02)[99475]: ERROR: ACT: check_for_primary:  we didn't expect node_status to be: DUMP <00000000  0a                                                |.|#01200000001>
 ```
 
-### Cause for scenario 5
+### Cause of scenario 5
 
-The SAP HANA time-out messages are commonly considered internal application timeouts. Therefore, the SAP vendor should be engaged.
+The SAP HANA time-out messages are commonly considered to be internal application time-outs. Therefore, the SAP vendor should be engaged.
 
 ### Resolution for scenario 5
 
@@ -238,7 +236,7 @@ The Azure SUSE Pacemaker Cluster is running SAP Netweaver ASCS/ERS as an applica
 2024-11-09T07:39:42.828955-05:00 node  01 pacemaker-schedulerd[2406]: warning: Unexpected result (not running) was recorded for start of RSC_SAP_ASCS00 on node01 at Nov  9 07:39:42 2024 
 ```
 
-### Cause for scenario 6
+### Cause of scenario 6
 
 The `ASCS/ERS` resource is considered to be the application for SAP Netweaver clusters. When the corresponding cluster monitoring resource times out, it triggers a failover process.
 
