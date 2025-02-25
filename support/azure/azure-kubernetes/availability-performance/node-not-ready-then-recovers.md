@@ -1,8 +1,8 @@
 ---
 title: Node not ready but then recovers
 description: Troubleshoot scenarios in which the status of an AKS cluster node is Node Not Ready, but then the node recovers.
-ms.date: 12/09/2024
-ms.reviewer: rissing, chiragpa, momajed, v-leedennis
+ms.date: 2/25/2024
+ms.reviewer: rissing, chiragpa, momajed, v-leedennis, novictor
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to prevent the Node Not Ready status for nodes that later recover so that I can avoid future errors within an AKS cluster.
 ms.custom: sap:Node/node pool availability and performance
@@ -22,11 +22,20 @@ There are several scenarios that could cause a "Not Ready" state to occur:
   - [Azure status](https://status.azure.com/)
   - Azure notifications (for any recent outages or maintenance periods)
 
+## Examples:
+Error: NodeNotReady  
+
+- This error indicates that the node is not ready. To resolve this, check the node's status using the command: kubectl describe node <node-name>.
+
 ## Resolution
 
 Check the API server availability by running the `kubectl get apiservices` command. Make sure that the readiness probe is correctly configured in the deployment YAML file.
 
 For further steps, see [Basic troubleshooting of Node Not Ready failures](node-not-ready-basic-troubleshooting.md).
+
+## Additional Troubleshooting Steps:
+ - Verify the node's network configuration to ensure there are no connectivity issues.
+ - Check the node's resource usage (CPU, memory, disk) to identify any resource constraints.
 
 ## Prevention
 
