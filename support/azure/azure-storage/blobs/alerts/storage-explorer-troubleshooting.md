@@ -216,7 +216,7 @@ If you continue to have issues after you do a reset, try these steps:
 macOS Keychain can sometimes enter a state that causes issues for the Storage Explorer authentication library. To get Keychain out of this state, follow these steps:
 
 1. Close Storage Explorer.
-1. Open Keychain by selecting <kbd>Command</kbd> + <kbd>Spacebar</kbd>, type *keychain*, and select <kbd>Enter</kbd>.
+1. Open Keychain by selecting <kbd>Command</kbd> + <kbd>Space</kbd>, type *keychain*, and select <kbd>Enter</kbd>.
 1. Select the **login** keychain.
 1. Select the **padlock** to lock the keychain. After the process is finished, the **padlock** appears locked. It might take a few seconds, depending on what apps you have open.
 
@@ -691,6 +691,125 @@ For some issues, you need to provide logs of the network calls made by Storage E
 1. If you definitely entered passwords into your browser while you collected the trace, but you don't find any entries when you use <kbd>Ctrl</kbd> + <kbd>F</kbd>, you don't want to change your passwords, or if the passwords you used are used for other accounts, skip sending us the .saz file.
 1. Save the trace again with a new name.
 1. Optional: Delete the original trace.
+
+## Storage Explorer can't find Azurite Docker containers
+
+If Storage Explorer can't find your Azurite Docker containers, follow these steps to troubleshoot the issue:
+
+### Verify Docker is installed
+
+Ensure that Docker is installed and running on your machine. You can verify this by running the following command in your terminal or command prompt:
+
+```bash
+docker --version
+```
+
+If Docker is not running, restart Docker services and try again.
+
+For Linux users, you may need to join the `docker` group. To do this, run the following commands:
+
+```bash
+sudo groupadd docker
+sudo usermod -aG docker $USER
+```
+
+Once you've added yourself to the `docker` group, restart your machine. See [Linux post-installation steps for Docker Engine](https://docs.docker.com/engine/install/linux-postinstall/) for more information.
+
+### Verify the Docker context
+
+Make sure you're using the correct Docker context that is managing your containers. You can check your current context by running:
+
+```bash
+docker context ls
+```
+To change your active context, use:
+
+```bash
+docker context use <context_name>
+```
+
+> [!NOTE]
+> For Linux snap users, Storage Explorer will only work with the `default` context. Other contexts, such as `desktop-linux`, are not visible to Storage Explorer.
+
+### Check Azurite container status
+
+Verify that your Azurite containers are running. You can check the status of your Docker containers by running:
+
+```bash
+docker container list --all
+```
+
+Ensure that your Azurite containers are listed and their status is "Up". If a container is not running, you can start it with:
+
+```bash
+docker start <container name>
+```
+
+### Verify Azurite ports
+
+Ensure that your Azurite containers port configurations are correct. You can check the ports by running:
+
+```bash
+docker inspect <container name>
+```
+
+Look for the `NetworkSettings.Ports` section in the output to verify the port mappings. For example, assuming an Azurite container's blob endpoint is configured to listen on port 10000, and that container port is mapped to the host machine's port 10010, then you should see an entry like this:
+
+```json
+"10000/tcp": [
+  {
+    "HostIp": "0.0.0.0",
+    "HostPort": "10010"
+  }
+]
+```
+
+### Verify you have the latest version of Storage Explorer installed
+
+Make sure you are using the [latest version of Storage Explorer](https://github.com/microsoft/AzureStorageExplorer/releases/latest). You can check for updates by going to **Help** > **Check for Updates**.
+
+For Linux snap users, make sure you have made the necessary connections. To do this, run the following commands:
+
+```bash
+snap connect storage-explorer:docker docker:docker-daemon
+snap connect storage-explorer:docker-executables docker:docker-executables
+```
+
+### Verify custom accounts are valid
+
+If you are using custom accounts, make sure the account names and keys are valid and correctly configured in Storage Explorer. You can verify the custom accounts in use by running:
+
+```bash
+docker exec <container name> printenv AZURITE_ACCOUNTS
+```
+
+### Check network settings
+
+Ensure that there are no network issues preventing Storage Explorer from connecting to the Azurite container. Verify that your firewall or antivirus software is not blocking the connection.
+
+### Restart Azurite container
+
+If the issue persists, try restarting the Azurite container:
+
+```bash
+docker restart <container name>
+```
+
+### Recreate Azurite container
+
+If none of the above steps resolve the issue, try recreating the Azurite container. For example:
+
+```bash
+docker stop <container name>
+docker rm <container name>
+docker run \
+  --name <container-name> \
+  -e AZURITE_ACCOUNTS="<custom account name>:<custom key>" \
+  -p <blob-host-port>:10000 \
+  -p <queue-host-port>:10001 \
+  -p <table-host-port>:10002 \
+  mcr.microsoft.com/azure-storage/azurite
+```
 
 ## Next steps
 
