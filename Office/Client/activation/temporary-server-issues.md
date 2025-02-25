@@ -148,7 +148,7 @@ To restore Edge’s default settings, use the following steps:
 <details>
 <summary><b>Uninstall Office apps and then reinstall</b></summary>
 
-[Run the SaRA package to uninstall Office](https://aka.ms/SaRA-OfficeUninstallFromPC). Restart the device, and install from https://portal.office.com/account to get the correct version.
+Run the [Microsoft 365 uninstall troubleshooter](https://aka.ms/SaRA-OfficeUninstallFromPC) to uninstall Office. Restart the device, and install from https://portal.office.com/account to get the correct version.
 <br/><br/>
 </details>
 

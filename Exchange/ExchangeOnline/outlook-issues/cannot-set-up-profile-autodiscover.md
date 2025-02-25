@@ -46,13 +46,11 @@ This problem occurs for one of the following reasons:
 
 ### Recommended method
 
-#### Method 1: Run Microsoft 365 Support and Recovery Assistant
+#### Method 1: Use the classic Outlook profile setup troubleshooter
 
-[!INCLUDE [Microsoft Support and Recovery Assistant note](../../../includes/sara-note-new-outlook.md)]
+Use the [classic Outlook profile setup troubleshooter](https://aka.ms/SaRA-OutlookSetupProfile-sarahome) in the Get Help app.
 
-Use the [Classic Outlook profile setup troubleshooter](https://support.microsoft.com/en-us/windows/classic-outlook-troubleshooters-086e3d66-5404-4034-9cc5-545909dcc166) in the Get Help app.
-
-This troubleshooter performs automated checks and returns possible solutions to fix any detected issues.
+This troubleshooter helps you configure your Microsoft 365 email in classic Outlook.
 
 ### Other methods
 

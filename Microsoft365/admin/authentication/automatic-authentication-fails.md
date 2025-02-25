@@ -37,10 +37,7 @@ The authentication issue occurs because of missing package information about eit
 ## Resolution
 
 > [!TIP]
-> To diagnose and automatically fix several common Office sign-in issues, you can download and run Microsoft Support and Recovery Assistant.
-> 
-> [!div class="nextstepaction"]
-> [Download the Assistant](https://aka.ms/SaRA-OfficeSignInScenario)
+> To diagnose and automatically fix several common Office sign-in issues, run the [Microsoft 365 Sign-in troubleshooter](https://aka.ms/SaRA-OfficeSignInScenario).
 
 To fix this issue, use PowerShell to reinstall the packages for Microsoft Entra WAM plugin (for organizational or work accounts) and Live ID (for personal accounts such as @outlook.com, @hotmail.com, and so on). To do this, follow these steps:
 

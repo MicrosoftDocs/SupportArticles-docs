@@ -89,7 +89,7 @@ If you have a different edition or version installed on your device, run the SaR
 <details>
 <summary><b>Uninstall Office apps and then reinstall</b></summary>
 
-[Run the SaRA package to uninstall Office](https://aka.ms/SaRA-OfficeUninstallFromPC). Restart the device, and install from https://portal.office.com/account to get the correct version.
+Run the [Microsoft 365 Uninstall troubleshooter](https://aka.ms/SaRA-OfficeUninstallFromPC) to uninstall Office. Restart the device, and install from https://portal.office.com/account to get the correct version.
 <br/><br/>
 </details>
 

@@ -30,14 +30,12 @@ You see any of the following issues when you check the presence status for a use
 
 ## Resolution
 
-### Use Microsoft Support and Recovery Assistant
+### Run the classic Teams user presence troubleshooter
 
-[!INCLUDE [Microsoft Support and Recovery Assistant note](../../includes/sara-note-new-teams.md)]
-
-To fix these issues, download and run the Assistant for automated troubleshooting steps and fixes.
+To fix these issues, run the [classic Teams user presence troubleshooter](https://aka.ms/SaRA-TeamsPresence-sarahome) for automated troubleshooting steps and fixes.
 
 > [!div class="nextstepaction"]
-> [Download the Assistant](https://aka.ms/SaRA-TeamsPresenceScenario)
+> [Classic Teams user presence troubleshooter](https://aka.ms/SaRA-TeamsPresenceScenario)
 
 ### Fix the issue manually
 

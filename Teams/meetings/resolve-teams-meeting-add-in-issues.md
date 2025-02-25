@@ -47,16 +47,11 @@ Use the following steps:
 
 After the diagnostic is finished, select the provided links to resolve the issues that are found.
 
-### Use Microsoft Support and Recovery Assistant
+### Run the classic Teams add-in for classic Outlook troubleshooter
 
-[!INCLUDE [Microsoft Support and Recovery Assistant note](../../includes/sara-note-new-teams.md)]
+If the policies are assigned correctly, but you still can't install the add-in, or if you're not an administrator, run the [classic Teams add-in for classic Outlook troubleshooter](https://aka.ms/SaRA-TeamsAddin-sarahome).
 
-If the policies are assigned correctly, but you still can't install the add-in, or if you're not an administrator, download and run Microsoft Support and Recovery Assistant. We recommend that you use the Assistant to perform automated troubleshooting steps and make the required fixes.
-
-> [!div class="nextstepaction"]
-> [Download the Assistant](https://aka.ms/SaRA-TeamsAddInScenario)
-
-### Use the Enterprise version of the Assistant
+### Use the Enterprise version of Microsoft Support and Recovery Assistant
 
 [!INCLUDE [Microsoft Support and Recovery Assistant note](../../includes/sara-note-new-teams.md)]
 

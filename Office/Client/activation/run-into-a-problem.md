@@ -76,14 +76,14 @@ If you have Microsoft 365 for Business Basic, you won’t have any Office applic
   
 Make sure that the version listed (32-bit or 64-bit) matches your version of Windows. To check what version of Windows you have installed, go to **Start** > **Settings** (gear icon) > **System** > **About**, and check the **System type**.
   
-If you have a different edition or version installed on your device, run the [SaRA package to uninstall Office](https://aka.ms/SaRA-officeUninstallFromPC). Restart the device, and install from https://portal.office.com/account to get the correct version.
+If you have a different edition or version installed on your device, run the [Microsoft 365 uninstall troubleshooter](https://aka.ms/SaRA-OfficeUninstallFromPC) to uninstall Office. Restart the device, and install from https://portal.office.com/account to get the correct version.
 <br/><br/>
 </details>
 
 <details>
 <summary><b>Uninstall Office apps and then reinstall</b></summary>
 
-[Run the SaRA package to uninstall Office](https://aka.ms/SaRA-OfficeUninstallFromPC). Restart the device, and install from https://portal.office.com/account to get the correct version.
+Run the [Microsoft 365 uninstall troubleshooter](https://aka.ms/SaRA-OfficeUninstallFromPC) to uninstall Office. Restart the device, and install from https://portal.office.com/account to get the correct version.
 <br/><br/>
 </details>
 
