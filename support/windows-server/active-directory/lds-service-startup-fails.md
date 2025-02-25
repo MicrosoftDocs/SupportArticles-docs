@@ -10,7 +10,7 @@ ms.custom:
 - sap:active directory\ldap configuration and interoperability
 - pcy:WinComm Directory Services
 ---
-# LDS service startup fails after you manually change msDS-Behavior-Version in Windows Server 2019 and 2016
+# LDS service startup fails after you manually change msDS-Behavior-Version in Windows Server
 
 This article provides a solution to an error that LDS service startup fails after you manually change the **msDS-Behavior-Version** attribute.
 
@@ -49,4 +49,4 @@ Additionally, you receive the following error message:
 
 :::image type="content" source="media/lds-service-startup-fails/error-message.png" alt-text="Error 0xc0000025 Windows could not start the L D S service on Local Computer.":::
 
-Manually setting the **msDS-Behavior-Version** attribute value of LDS instances to **7** in Windows Server with monthly updates before the [February 2025 update rollup](https://support.microsoft.com/topic/february-11-2025-kb5051987-os-build-26100-3194-6cc1a435-9c1a-42b8-8c4d-b34253784452) is not supported. To resolve the issue, install the February 2025 update rollup or a later vesion.
+For Windows Server with monthly updates before the February 2025 update rollup installed, manually setting the **msDS-Behavior-Version** attribute value of LDS instances to **7** is not supported. To resolve the issue, install the February 2025 update rollup or a later vesion.
