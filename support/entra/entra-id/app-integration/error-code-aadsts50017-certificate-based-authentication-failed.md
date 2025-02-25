@@ -3,7 +3,7 @@ title: Error AADSTS50017 - Validation of Given Certificate for Certificate-Based
 description: Provides solutions to the Microsoft Entra authentication AADSTS50017 error that occurs when you access an application or resource with certificate-based authentication (CBA).
 ms.reviewer: laks, joaos, willfid, v-weizhu
 ms.service: entra-id
-ms.date: 02/24/2025
+ms.date: 02/25/2025
 ms.custom: sap:Issues Signing In to Applications
 ---
 # Error AADSTS50017 - Validation of given certificate for certificate-based authentication failed
