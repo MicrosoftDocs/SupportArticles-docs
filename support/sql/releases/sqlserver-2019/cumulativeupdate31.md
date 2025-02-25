@@ -33,7 +33,7 @@ SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plan
 
 ### Issue two: Patching a read-scale availability group (Windows or Linux) causes the availability group on the patched replica to be removed
 
-If you use the read-scale availability group (AG) feature in SQL Server on Windows or Linux, you should **not** install this CU.
+If you use the read-scale availability group (AG) feature in SQL Server on Windows or Linux, do **not** install this CU.
 
 This CU introduced [a fix to support AG names longer than 64 characters](#3548672). However, when the patch is installed on an instance that has the read-scale AG configured, the AG metadata is dropped. This issue affects read-scale AGs in both [Windows](/sql/database-engine/availability-groups/windows/read-scale-availability-groups) and [Linux](/sql/linux/sql-server-linux-availability-group-configure-rs), which means that the `CLUSTER_TYPE` of the AG is either `NONE` or `EXTERNAL`.
 
