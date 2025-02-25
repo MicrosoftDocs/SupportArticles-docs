@@ -611,7 +611,7 @@ The mounting failure occurs because version 2 of the control group (cgroup v2) i
 
 If you run the Leapp upgrade from RHEL 8.10 to 9.4 or 9.5, the upgrade process might not continue after the required reboot. Instead, the VM boots back into RHEL 8.10 without loading the special upgrade initramfs.
 
-This issue may be caused by the following setting in /etc/default/grub:
+This issue may be caused by the following setting in `/etc/default/grub`:
 
 ```bash
 GRUB_DEFAULT=0
@@ -624,17 +624,23 @@ Since `GRUB_DEFAULT=0` forces the system to always boot the first menu entry in 
 1. Change GRUB_DEFAULT=0 to GRUB_DEFAULT=saved:
 
 > [!NOTE]
-> In this example, GRUB_DEFAULT is set to 0, but in your environment, it might be 1 or another number. Ensure you replace it accordingly in the sed command.
-
+> In this example, `GRUB_DEFAULT` is set to `0`, but in your environment, it might be `1` or another number. Ensure you replace it accordingly in the `sed` command.
 ```
 sudo sed -i 's/^GRUB_DEFAULT=0/GRUB_DEFAULT=saved/' /etc/default/grub
 ```
 2. Regenerate the GRUB configuration:
 
+GEN1
+
 ```bash
 sudo grub2-mkconfig -o /boot/grub2/grub.cfg
 ```
 
+GEN2:
+
+```bash
+grub2-mkconfig -o /boot/efi/EFI/redhat/grub.cfg
+```
 3. Reboot the VM thru the serial console.
 
 ```
