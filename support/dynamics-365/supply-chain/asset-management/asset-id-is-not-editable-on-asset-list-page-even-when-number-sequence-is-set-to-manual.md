@@ -3,7 +3,7 @@ title: Asset ID Isn't Editable When Number Sequence Is Set To Manual
 description: Provides a workaround for editing Asset ID in Microsoft Dynamics 365 Supply Chain Management.
 author: sorenbacker2
 ms.author: sorenba
-ms.date: 02/24/2025
+ms.date: 02/25/2025
 ms.custom: sap:Asset management\Issues with asset management
 ---
 # Asset ID isn't editable when number sequence is set to Manual
@@ -20,10 +20,10 @@ This behavior is by design. A user can't edit an existing **Asset ID** because t
 
 ## Workaround
 
-To allow a user to edit the **Asset ID** on an existing asset despite the risk, extend the `EntAssetObjectTable` form and change the property of the field.
+To allow a user to edit the **Asset ID** on an existing asset despite the risk of data corruption, a developer would need to extend the `EntAssetObjectTable` form and change the property of the field.
 
 1. Use Chain of Command (CoC) to change the control property through calling the `allowEdit()` method of the control and passing `false` as an argument.
-1. Create an extension class and extend the  `init()` form method where programmatically allowing edit on the field after the `next()` call.
+1. Create an extension class and extend the  `init()` form method to programmatically allow editing on the field after the `next()` call.
 
 For a detailed explanation of the approach, see [Class extension - Method wrapping and Chain of Command](/dynamics365/fin-ops-core/dev-itpro/extensibility/method-wrapping-coc).
 
