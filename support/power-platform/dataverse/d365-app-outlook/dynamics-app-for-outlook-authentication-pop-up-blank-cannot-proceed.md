@@ -11,6 +11,8 @@ ms.custom: sap:Dynamics 365 App for Outlook Add-In
 
 The article solves an issue where you can't sign in to Microsoft Dynamics 365 App for Outlook successfully due to a blank authentication pop-up.
 
+_Applies to:_ &nbsp; Dynamics 365 App for Outlook
+
 ## Symptoms
 
 When you open [Dynamics 365 App for Outlook](/dynamics365/outlook-app/overview), it prompts you to allow an authentication pop-up. After you allow it, the pop-up opens. However, it's blank and prevents you from selecting an account to authenticate and sign in.

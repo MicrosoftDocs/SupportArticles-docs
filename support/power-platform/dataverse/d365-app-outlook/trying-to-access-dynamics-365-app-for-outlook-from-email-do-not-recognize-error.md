@@ -10,7 +10,7 @@ ms.custom: sap:Dynamics 365 App for Outlook Add-In
 
 This article provides a resolution for the error **It looks like you're trying to access the Microsoft Dynamics 365 App for Outlook from an email address that we don't recognize** that may occur when you access the Microsoft Dynamics 365 App for Outlook.
 
-_Applies to:_ &nbsp; Microsoft Dynamics 365  
+_Applies to:_ &nbsp; Dynamics 365 App for Outlook  
 _Original KB number:_ &nbsp; 4010246
 
 ## Symptoms
