@@ -42,7 +42,7 @@ The communication with the remote agent components doesn't work.
 
    Check the tray icon for the agent icon when the virtual desktop platform is active. If the icon exists, hover over it to confirm it's still running. If it is, right-click the tray icon to open the menu and select **Status**. The agent's status and the reason for the error will be displayed.
 
-   :::image type="content" source="media/rdp-no-highlight/agent-disconnected-icon.png" alt-text="Screenshot of the agent icon showing the Power automate agent for virtual desktops is disconnected.":::
+   :::image type="content" source="media/rdp-no-highlight/agent-disconnected-icon.png" alt-text="Screenshot of the agent icon showing the Power Automate agent for virtual desktops is disconnected.":::
 
 3. If the agent is confirmed not running and Citrix is in use, ensure that the agent is installed on every Citrix server.
 
