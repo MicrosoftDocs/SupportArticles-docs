@@ -44,7 +44,7 @@
       href: d365-app-outlook/error-when-opening-365-app-outlook.md
     - name: Errors when opening App for Outlook
       href: d365-app-outlook/errors-when-opening-365-app-outlook.md
-    - name: Experience without Server-Side Synchronization
+    - name: '"Track and Set Regarding are currently disabled" notification'
       href: d365-app-outlook/experience-without-server-side-synchronization.md
     - name: IncomingEmailRejected error when installing App for Outlook
       href: d365-app-outlook/error-incomingemailrejected-install-dynamics-365-app-outlook.md
