@@ -10,7 +10,7 @@ ms.custom: sap:Dynamics 365 App for Outlook Add-In
 This article helps solve errors that occur when you try to use or open Microsoft Dynamics 365 App for Outlook.
 
 _Applies to:_ &nbsp; Dynamics 365 App for Outlook  
-_Original KB number:_ &nbsp; 4563997
+_Original KB number:_ &nbsp; 4563997, 4229661
 
 ## Symptom 1
 
