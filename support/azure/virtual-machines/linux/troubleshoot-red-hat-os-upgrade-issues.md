@@ -630,17 +630,18 @@ sudo sed -i 's/^GRUB_DEFAULT=0/GRUB_DEFAULT=saved/' /etc/default/grub
 ```
 2. Regenerate the GRUB configuration:
 
-GEN1
+**GEN 1:**
 
 ```bash
 sudo grub2-mkconfig -o /boot/grub2/grub.cfg
 ```
 
-GEN2:
+**GEN 2:**
 
 ```bash
 grub2-mkconfig -o /boot/efi/EFI/redhat/grub.cfg
 ```
+
 3. Reboot the VM thru the serial console.
 
 ```
