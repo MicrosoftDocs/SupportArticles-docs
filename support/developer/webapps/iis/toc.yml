@@ -165,6 +165,8 @@ items:
       href: site-behavior-performance/troubleshoot-502-2-bad-gateway-error-in-cgi-apps.md
   - name: Troubleshoot high CPU usage in an IIS app pool
     href: site-behavior-performance/troubleshoot-high-cpu-in-iis-app-pool.md
+  - name: Troubleshoot a process crash in an IIS app pool
+    href: site-behavior-performance/process-termination-crash.md
 
 - name: WAS Service and Svchost Process Operation
   items:

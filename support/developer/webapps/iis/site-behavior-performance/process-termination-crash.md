@@ -71,7 +71,7 @@ To collect a crash dump, you can use tools like [Debug Diagnostic Tool](#debug-d
 
 To take crash dumps using Debug Diagnostic Tool, follow these steps:
 
-1. Download and install [Debug Diagnostic Tool](https://www.microsoft.com/download/details.aspx?id=103453&msockid=145197b7d1fa6877376482b2d0bf6961).
+1. Download and install [Debug Diagnostic Tool](https://www.microsoft.com/download/details.aspx?id=103453).
 1. Open the DebugDiag 2 Collection application and select **Add Rule** > **Crash** > **Next**.
 1. Select **A specific IIS web application pool** > **Next**.
 
@@ -82,7 +82,13 @@ To take crash dumps using Debug Diagnostic Tool, follow these steps:
 1. In the **Advanced Configuration (Optional)** window, select **Breakpoints** under **Advanced Settings**. Don't change any other options in this window and keep them at their default values.
 1. In the **Configure Breakpoints** window, select **Add Breakpoint**.
 1. Select the first line that reads **Ntdll!ZwTerminateProcess**. Then, select **Full Userdump** in the **Action Type** dropdown and set a value between 3 and 5 in the **Action Limit** field. Once done, select **OK**.
+
+   :::image type="content" source="media/process-termination-crash/configure-breakpoint-action-limit.png" alt-text="Screenshot of the Configure Breakpoint window.":::
+
 1. At this stage, you have successfully created a trigger for when the dumps are generated. Select **Save and Close**.
+
+   :::image type="content" source="media/process-termination-crash/configure-breakpoint-save-close.png" alt-text="Screenshot of Save&Close in the Configure Breakpoint window.":::
+
 1. In the **Advanced Configuration (Optional)** window, select **Next** to move to the next step in the wizard.
 1. In the **Select Dump Location And Rule Name (Optional)** window, specify the path where you want to save the dumps. Once done, select **Next**.  
 
@@ -169,10 +175,10 @@ To perform the analysis for the crash, follow these steps:
 
 1. Download and install [DebugDiag](https://www.microsoft.com/download/details.aspx?id=103453) (short for Debug Diagnostic Tool).
 1. Open DebugDiag2 Analysis and select **Add Data Files**.
-1. In the file chooser dialog, select the dump file you want to analyze.
+1. In the file chooser dialog, it only lists dump files with a **\*.dmp** extension. Select the dump file you want to analyze.
 1. Once you upload the desired file, select **Start Analysis**.
 
-Once the analysis is complete, you see a file with an `.mht` extension loaded in the browser. The following example is from a dump on Notepad to display the final aspect of the analysis report.
+Once the analysis is complete, you see a file with an **.mht** extension loaded in the browser. The following example is from a dump on Notepad to display the final aspect of the analysis report.
 
 :::image type="content" source="media/process-termination-crash/debugdiag-analysis-report.png" alt-text="Screenshot of DebugDiag Analysis Report.":::
 
