@@ -201,7 +201,7 @@ If LIS/Hyper-V drivers are missing or not correctly loaded, the VM might not sta
 
 ## FAQ
 
-### If I'm experiencing some issue, such as connectivity, how can I make sure that the network driver, hv_netvsc, is working as expected after a fresh start or restart of the system?
+### If I'm experiencing some issues, such as connectivity, how can I make sure that the network driver, hv_netvsc, is working as expected after a fresh start or restart of the system?
 
 To confirm that the Hyper-V network driver (`hv_netvsc`) is active and functional, check the system logs and look for the following entry:
 
