@@ -6,7 +6,7 @@ ms.reviewer: willfid
 ms.service: entra-id
 ms.custom: sap:Microsoft Entra Connect Sync
 ---
-# How to troubleshoot password synchronization when using an Azure AD sync appliance
+# How to troubleshoot password synchronization when using Microsoft Entra Connect
 
 This article helps you troubleshoot common issues that you may encounter when you synchronize passwords from the on-premises environment to Microsoft Entra ID by using [Microsoft Entra Connect](/azure/active-directory/hybrid/whatis-azure-ad-connect).
 
@@ -21,9 +21,9 @@ Before you perform the troubleshooting steps, make sure that you have the [lates
 
 Additionally, make sure that directory synchronization is in a healthy state. For more information, see [Troubleshoot object synchronization with Microsoft Entra Connect Sync](/azure/active-directory/hybrid/tshoot-connect-objectsync).
 
-## Some users can't sign in to Office 365, Azure, or Microsoft Intune
+## Some users can't sign in to Microsoft 365, Microsoft Entra, or Microsoft Intune
 
-In this scenario, passwords of most users appear to be syncing. However, there are some users whose passwords appear not to sync. The following are scenarios in which a user can't sign in to a Microsoft cloud service, such as Office 365, Azure, or Intune.
+In this scenario, passwords of most users appear to be syncing. However, there are some users whose passwords appear not to sync. The following are scenarios in which a user can't sign in to a Microsoft cloud service, such as Microsoft 365, Entra, or Intune.
 
 ### Scenario 1: The "User must change password at next logon" check box is selected for the user's account
 
@@ -32,7 +32,8 @@ To resolve this issue, follow these steps:
 1. Take one of the following actions:
    - In the user account properties in Active Directory Users and Computers, clear the **User must change password at next logon** check box.
    - Have the user change their on-premises user account password.
-   - Enable the [ForcePasswordChangeOnLogOn](/azure/active-directory/hybrid/how-to-connect-password-hash-synchronization#synchronizing-temporary-passwords-and-force-password-change-on-next-logon) feature on the Microsoft Entra Connect server.
+   - Enable the [ForcePasswordChangeOnLogOn](/azure/active-directory/hybrid/how-to-connect-password-hash-synchronization#synchronizing-temporary-passwords-and-force-password-change-on-next-logon) feature in Microsoft Entra ID.
+      
 2. Wait a few minutes for the change to sync between the on-premises Active Directory Domain Services (AD DS) and Microsoft Entra ID.
 
 ### Scenario 2: The user changed their password in the cloud service portal
@@ -42,7 +43,7 @@ To resolve this issue, follow these steps:
 1. Have the user change their on-premises user account password.
 2. Wait a few minutes for the change to sync between the on-premises AD DS and Microsoft Entra ID.
 
-<a name='scenario-3-some-users-dont-appear-to-be-syncing-to-azure-ad'></a>
+<a name='scenario-3-some-users-dont-appear-to-be-syncing-to-azure-ad'></a>To change the password in the cloud service and have Microsoft Entra Connect update the respective on-premises user account password, you can implement [Password Writeback](/entra/identity/authentication/tutorial-enable-sspr-writeback).
 
 ### Scenario 3: Some users don't appear to be syncing to Microsoft Entra ID
 
@@ -52,38 +53,40 @@ To resolve this issue, use the IdFix DirSync Error Remediation Tool (IdFix) to h
 
 For more info about how to troubleshoot this issue, see [One or more objects don't sync when using the Azure Active Directory Sync tool](objects-dont-sync-ad-sync-tool.md)
 
-### Scenario 4: Users are moved between filtered and unfiltered scopes
+### Scenario 4: Users are moved between included and excluded sync scopes
 
 In this scenario, the user is moved to a scope that now allows the user to be synced. It could be when filtering is set up for domains, organizational units, or attributes.
 
-To resolve this issue, see the **How to perform a full password sync** section.
+To resolve this issue, see the **How to perform an initial sync** section.
 
 ### Scenario 5: Users can't sign in by using a new password but they can sign in by using their old password
 
-In this scenario, you're using the Azure AD Sync Service together with password synchronization. After you disable and then re-enable directory synchronization, users can't sign in by using a new password. However, their old password still works.
+In this scenario, you're using Microsoft Entra Connect together with password synchronization. After you disable directory synchronization or password synchronization, users can't sign in by using a new password. However, their old password still works.
 
-To resolve this issue, re-enable password synchronization. To do it, start the Azure AD sync appliance Configuration Wizard, and then continue through the screens until you see the option to enable password synchronization.
+To resolve this issue, re-enable directory synchronization and password synchronization. To do it, start Microsoft Entra Connect configuration wizard, select **Configure** and **Customize synchronization options**, then continue through the screens until you see the option to enable password synchronization.
 
 ### Scenario 6: Users can't sign in by using their password
 
-In this scenario, the password hash doesn't successfully sync to the Azure AD Sync Service. If the user account was created in Active Directory running on a version of Windows Server earlier than Windows Server 2003, the account doesn't have a password hash.
+In this scenario, the password hash doesn't successfully sync to Microsoft Entra ID. If the user account was created in on-premsises Active Directory running on a version of Windows Server earlier than Windows Server 2003, the account doesn't have a password hash.
 
 ## Directory synchronization is running but passwords of all users aren't synced
 
 In this scenario, passwords of all users appear not to sync. It usually occurs if one of the following conditions is true:
 
-- The **Synchronize now** check box wasn't selected.
-- You enabled password synchronization after directory sync already occurred.
+- The check box to **Start the synchronization process when configuration completes**, wasn't selected.
+
+- Entra Connect server is in Staging mode.
+
+- Password synchronization is disabled.
+
 - A full directory sync hasn't yet completed.
 
 > [!IMPORTANT]
 > Password sync will not start until a full directory sync has completed.
 
-To resolve this issue, first make sure that you enable password synchronization. To do it, start the Azure AD sync appliance Configuration Wizard, and then continue through the screens until you see the option to enable password synchronization.
+To resolve this issue, first make sure that you enable password synchronization. To do it, start Microsoft Entra Connect configuration wizard, select **Configure** and **Customize synchronization options**, then continue through the screens until you see the option to enable password synchronization.
 
-After password synchronization is enabled, you must do a full password sync. See How to perform a full password sync section.
-
-For more information, see [Troubleshoot password hash synchronization with Microsoft Entra Connect Sync](/azure/active-directory/hybrid/tshoot-connect-password-hash-synchronization#one-object-is-not-synchronizing-passwords-troubleshoot-by-using-the-troubleshooting-task).
+After password synchronization is enabled, you must wait for a full password sync to finish. Check the Windows [Event Viewer logs](/troubleshoot/entra/entra-id/user-prov-sync/troubleshoot-pwd-sync#event-id-messages-in-event-viewer) to monitor the password synchronization process.
 
 ## Troubleshoot one user whose password isn't synced
 
@@ -137,28 +140,28 @@ The following tables list event ID messages in the Application log that are rela
   
 ## More information
 
-### How to perform a full password sync
+### How to perform an initial sync
 
-To do a full password sync, follow these steps, as appropriate for the Azure AD Sync appliance that you're using.
+To do a full sync, follow these steps, as appropriate on the Microsoft Entra Connect that you're using.
 
-1. If you're using the Azure Active Directory Sync tool:
-
-   1. On the server where the tool is installed, open PowerShell, and then run the following command:
+1. On the server where Microsoft Entra Connect is installed, open PowerShell, and then run the following command:
 
       ```powershell
       Import-Module DirSync
       ```
-
-   2. Run the following commands:
-
+      
+2. Run the following commands:
+   
       ```powershell
       Set-FullPasswordSync
       ```
-
+      
       ```powershell
       Restart-Service FIMSynchronizationService -Force
       ```
+      
+### How to perform a full password sync
 
-2. If you're using the Azure AD Sync Service or Microsoft Entra Connect, run the script that's on this page: [Azure AD Sync: How to Use PowerShell to Trigger a Full Password Sync](/archive/technet-wiki/28433.azure-ad-sync-how-to-use-powershell-to-trigger-a-full-password-sync)
+To do a full password sync, run the script that's on this page: [Azure AD Sync: How to Use PowerShell to Trigger a Full Password Sync](/archive/technet-wiki/28433.azure-ad-sync-how-to-use-powershell-to-trigger-a-full-password-sync)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
