@@ -1,6 +1,6 @@
 ---
 title: Outlook not responding error or Outlook freezes
-description: Describes an issue that triggers an not responding error or Outlook freezes. Provides a resolution.
+description: Describes an issue that triggers a not responding error or Outlook freezes. Provides a resolution.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -25,7 +25,7 @@ ms.date: 02/25/2025
 
 ## Symptoms
 
-When you open a file or send an email message in Microsoft Outlook 2010 or later versions, Outlook freezes, or you receive the following error message:
+When you open a file or send an email message in Microsoft Outlook 2010 or later versions, Outlook freezes. Or, you receive the following error message:
 
 > Outlook not responding
 
@@ -33,14 +33,14 @@ When you open a file or send an email message in Microsoft Outlook 2010 or later
 
 This problem occurs for one or more of the following reasons:
 
-- You have not installed the latest updates.
+- You don't install the latest updates.
 - Outlook is in use by another process.
 - Outlook is loading external content, such as images in an email message.
 - A previously installed add-in is interfering with Outlook.
 - Your mailboxes are too large.
 - Your AppData folder is redirected to a network location.
 - You have to repair your Microsoft 365 programs.
-- Outlook data files have become corrupted or damaged.
+- Outlook data files are corrupted or damaged.
 - Your installed antivirus software is outdated, or it conflicts with Outlook.
 - Your user profile has become corrupted.
 - Another program conflicts with Outlook.
@@ -73,7 +73,7 @@ To resolve this problem, make sure that your computer meets the [Outlook 2016 sy
 
 ### Step 1 - Install the latest updates
 
-The Office installation on your computer might not be up to date. This might be because Windows Update isn't configured on your computer to automatically download and install recommended updates. By installing important, recommended, and optional updates, you can often correct problems by replacing out-of-date files and fixing vulnerabilities. To install the latest updates, select the link for your version of Windows, and then follow the steps in the article:
+The Office installation on your computer might not be up to date. The reason might be because Windows Update isn't configured on your computer to automatically download and install recommended updates. By installing important, recommended, and optional updates, you can often correct problems by replacing out-of-date files and fixing vulnerabilities. To install the latest updates, select the link for your version of Windows, and then follow the steps in the article:
 
 - [Install Windows updates in Windows 10](https://support.microsoft.com/hub/4338813/windows-help?os=windows-10)
 - [Windows Update FAQ for Windows 8.1](https://support.microsoft.com/hub/4338813/windows-help?os=windows-8.1)
@@ -83,9 +83,9 @@ The Office installation on your computer might not be up to date. This might be 
 
 Make sure that the latest updates for Outlook are installed. For more information, see [How to install the latest applicable updates for Microsoft Outlook (US English only)](/outlook/troubleshoot/installation/install-outlook-latest-updates).
 
-### Step 2 - Make sure that Outlook is not in use by another process
+### Step 2 - Make sure that Outlook isn't in use by another process
 
-Performance may be decreased if you use the Outlook AutoArchive feature or sync to Outlook with a mobile device. This is because these processes can use a large number of resources.
+Performance may be decreased if you use the Outlook AutoArchive feature or sync to Outlook with a mobile device. These processes can use a large number of resources.
 
 If Outlook is in use by another process, this information is displayed in the status bar at the bottom of the screen. If you try to perform other actions while Outlook is in use, Outlook may not respond. Let the task in process finish its job before you try another action.
 
@@ -93,7 +93,7 @@ If Outlook is in use by another process, this information is displayed in the st
 
 To resolve this issue, use one of the following methods:
 
-- Prevent Outlook to download external contents. To do this, go to **File** > **Options** > **Trust Center** > **Automatic Download**, select the following two options:
+- Prevent Outlook to download external contents. To do so, go to **File** > **Options** > **Trust Center** > **Automatic Download**, select the following two options:
   - Don't download pictures or other content automatically in HTML e-mail option.
   - Warn me before downloading content when editing, forwarding, or replying e-mail.
 - Avoid sending such an email with external source.
@@ -105,16 +105,16 @@ Although add-ins can enhance your user experience, they can occasionally interfe
 #### How to start Outlook without add-ins
 
 1. Do the following, as appropriate for your operating system:
-   - If you are running Windows 8, swipe in from the right edge of the screen, and then tap **Search**. (If you are using a mouse, point to the upper-right corner of the screen, move the mouse pointer down, and then select **Search**.) Type Run in the search box, and then tap or select **Run**.
-   - If you are running Windows 10, Windows 7 or Windows Vista, select **Start**.
-   - If you are running Windows XP, select **Start**, and then select **Run**.
+   - If you're running Windows 8, swipe in from the right edge of the screen, and then tap **Search**. (If you're using a mouse, point to the upper-right corner of the screen, move the mouse pointer down, and then select **Search**.) Type Run in the search box, and then tap or select **Run**.
+   - If you're running Windows 10, Windows 7 or Windows Vista, select **Start**.
+   - If you're running Windows XP, select **Start**, and then select **Run**.
 2. Type *Outlook.exe /safe*, and then select **OK**.
 3. If the problem is resolved, select **Options** on the **File** menu, and then select **Add-Ins**.
 4. Select **COM Add-ins**, and then select **Go**.
 5. Clear all the check boxes in the list, and then select **OK**.
 6. Restart Outlook.
 
-If the problem does not occur after you restart Outlook, one of the add-ins is likely the cause of the problem. Restore the add-ins one at a time until the problem does occur to determine which add-in is causing the problem.
+If the problem doesn't occur after you restart Outlook, one of the add-ins is likely the cause of the problem. Restore the add-ins one at a time until the problem does occur to determine which add-in is causing the problem.
 
 ### Step 5 - Check whether your mailbox is too large
 
@@ -129,7 +129,7 @@ We recommend that you move several items in your larger folders to separate fold
 3. In the **Select where to place the folder** list, select the location for the new folder.
 
     > [!NOTE]
-    > The new folder will become a subfolder of the folder you select.
+    > The new folder becomes a subfolder of the folder you select.
 
 4. Select **OK**.
 
@@ -144,7 +144,7 @@ Outlook stores certain data, such as email signatures and the spelling checker d
 #### How to disable redirection of the AppData directory
 
 1. Exit Outlook.
-2. Start Registry Editor. To do this, use one of the following procedures, as appropriate for your version of Windows:
+2. Start Registry Editor. To do so, use one of the following procedures, as appropriate for your version of Windows:
    - Windows 10 or Windows 8: Press Windows Key+R to open a Run dialog box. Type *regedit.exe* and then press **OK**.
    - Windows 7: Select **Start**, type *regedit.exe* in the search box, and then press Enter.
 3. In Registry Editor, locate and then select the following subkey:
@@ -166,8 +166,8 @@ You can automatically repair your Office program files to resolve such problems 
 #### How to automatically repair Office
 
 1. Exit any Microsoft Office programs that are running.
-2. Open Control Panel, and then open the **Add or Remove Programs** item (if you are running Windows XP) or **Programs and Features** (if you are running Windows 10, Windows 8, Windows 7, or Windows Vista).
-3. In the list of installed programs, right-click **Microsoft Office 2016**, **Microsoft Office 2013** or **Microsoft Office 2010**, and then select **Repair**.  
+2. Open Control Panel, and then open the **Add or Remove Programs** item (if you're running Windows XP) or **Programs and Features** (if you're running Windows 10, Windows 8, Windows 7, or Windows Vista).
+3. In the list of installed programs, right-click **Microsoft Office 2016**, **Microsoft Office 2013, or **Microsoft Office 2010**, and then select **Repair**.  
 
 ### Step 8 - Repair Outlook data files
 
@@ -175,11 +175,11 @@ When you install Outlook, an Inbox repair tool (scanpst.exe) is also installed o
 
 ### Step 9 - Check whether antivirus software is up-to-date or conflicts with Outlook
 
-If your antivirus software is not up-to-date, Outlook may not function correctly.
+If your antivirus software isn't up-to-date, Outlook may not function correctly.
 
 #### How to check whether antivirus software is up to date
 
-To keep up with new viruses as they are created, antivirus software vendors periodically provide updates that you can download from the Internet. Download the latest updates by visiting your antivirus software vendor's website.
+To keep up with new viruses as they're created, antivirus software vendors periodically provide updates that you can download from the Internet. Download the latest updates by visiting your antivirus software vendor's website.
 
 For a list of antivirus software vendors, see [Consumer antivirus software providers for Windows](https://support.microsoft.com/help/18900/consumer-antivirus-software-providers-for-windows#avtabs=win7).
 
@@ -188,7 +188,7 @@ For a list of antivirus software vendors, see [Consumer antivirus software provi
 If your antivirus software includes integration with Outlook, you may experience performance issues. You can disable all Outlook integration within the antivirus software. Or, you can disable any antivirus software add-ins that are installed in Outlook.
 
 > [!IMPORTANT]
-> When you change your antivirus settings, this may make your PC vulnerable to viral, fraudulent, or malicious attacks. We do not recommend that you try to change your antivirus settings. Use this workaround at your own risk.
+> When you change your antivirus settings, it may make your PC vulnerable to viral, fraudulent, or malicious attacks. We don't recommend that you try to change your antivirus settings. Use this workaround at your own risk.
 
 You may have to contact your antivirus software vendor to determine how to configure the software to exclude any integration with Outlook or to exclude scanning in Outlook.
 
@@ -214,7 +214,7 @@ To create a user profile, follow these steps:
 
 When you start Windows normally, several applications and services start automatically and then run in the background. These applications and services can interfere with Outlook. A Selective Startup or "clean boot" process can help you identify problems that are caused by application conflicts.
 
-If you use the Selective Startup option in System Configuration, you can turn services and startup programs on or off individually to check whether the problem occurs the next time that you start your computer. In System Configuration, if you select a check box, the related service or startup program runs when you restart the computer. If the check box is cleared, the service or startup program does not run when you restart the computer.
+If you use the Selective Startup option in System Configuration, you can turn services and startup programs on or off individually to check whether the problem occurs the next time that you start your computer. In System Configuration, if you select a check box, the related service or startup program runs when you restart the computer. If the check box is cleared, the service or startup program doesn't run when you restart the computer.
 
 Follow this procedure to use the process of elimination to identify the problem in Windows 10, Windows 8, Windows 7, or Windows Vista.
 
@@ -226,7 +226,7 @@ Follow this procedure to use the process of elimination to identify the problem 
 1. In Control Panel, select **System and Security**, select **Administrative Tools**, and then double-click **System Configuration**.
 
     > [!NOTE]
-    > If you are prompted for an administrator password or for confirmation, type the password or provide confirmation.
+    > If you're prompted for an administrator password or for confirmation, type the password or provide confirmation.
 2. Select the **General** tab, select **Selective startup**, and then clear the **Load system services** and the **Load startup items** check boxes.
 3. Select the **Load system services** check box, select **OK**, and then select **Restart**.
 4. If the problem reoccurs after you restart the computer, do one or both of the following tasks, as necessary.
@@ -266,7 +266,7 @@ To determine whether this problem is caused by a corrupted user profile, create 
 
 To create a user profile, you must first create a user account. When the new account is created, a profile is also created.
 
-1. Swipe in from the right edge of the screen, and then tap **Search**. (If you are using a mouse, point to the upper-right corner of the screen, move the mouse pointer down, and then select **Search**.) Type *Command Prompt* in the search box, right-click **Command Prompt**, and then select **Run as administrator**.
+1. Swipe in from the right edge of the screen, and then tap **Search**. (If you're using a mouse, point to the upper-right corner of the screen, move the mouse pointer down, and then select **Search**.) Type *Command Prompt* in the search box, right-click **Command Prompt**, and then select **Run as administrator**.
 
     > [!NOTE]
     > If you're prompted for an administrator password or for confirmation, type the password or provide confirmation.
@@ -275,13 +275,13 @@ To create a user profile, you must first create a user account. When the new acc
 #### Step 2 - Copy old files to the new user profile** After you create the profile, you can copy the files from the existing profile
 
 > [!NOTE]
-> You must have at least three user accounts on the computer to complete these steps. This includes the new account you just created.
+> You must have at least three user accounts on the computer to complete these steps. This includes the new account you created.
 
-1. Log on as a user other than the user that you just created or the user that you want to copy files from.
+1. Sign in as a user other than the user that you just created or the user that you want to copy files from.
 2. In Control Panel, select **Appearance and Personalization**, and then select **Folder Options**.
 3. Select the **View** tab, and then select **Show hidden files, folders, and drives**.
 4. Clear the **Hide protected operating system files** check box, select **Yes** to confirm, and then select **OK**.
-5. Open File Explorer. To do this, Swipe in from the right edge of the screen, and then tap **Search**. (If you are using a mouse, point to the upper-right corner of the screen, move the mouse pointer down, and then select **Search**.) Enter **File Explorer** in the search box, tap or select **Apps**, and then tap or select **File Explorer**. Type *Command Prompt* in the search box, right-click **Command Prompt**, and then select **Run as administrator**.
+5. Open File Explorer. To do this, Swipe in from the right edge of the screen, and then tap **Search**. (If you're using a mouse, point to the upper-right corner of the screen, move the mouse pointer down, and then select **Search**.) Enter **File Explorer** in the search box, tap or select **Apps**, and then tap or select **File Explorer**. Type *Command Prompt* in the search box, right-click **Command Prompt**, and then select **Run as administrator**.
 6. Locate the C:\Users\Old_Username folder, in which **C** is the drive that Windows is installed on, and **Old_Username** is the name of the profile that you want to copy files from.
 7. Select all the files and folders in this folder, except the following files:
    - Ntuser.dat
@@ -294,7 +294,7 @@ To create a user profile, you must first create a user account. When the new acc
 9. Locate the C:\Users\New_Username folder, in which **C** is the drive that Windows is installed on, and **New_Username** is the name of the user profile that you created earlier in this method.
 
 10. On the **Edit** menu, select **Paste**.
-11. Log off, and then log back on as the new user.
+11. Sign out, and then Sign back in as the new user.
 
 > [!NOTE]
 > If you have email messages in an email program, you must import your email messages and addresses to the new user profile before you delete the old profile. If everything is working correctly, you can now delete the old profile.

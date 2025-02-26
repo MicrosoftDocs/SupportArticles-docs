@@ -34,7 +34,7 @@ When you start Microsoft Outlook, switch folders, or synchronize email, you may 
 
 You have many shared folders or mailboxes, or both, open in Outlook. In the case with a shared calendar, modifications or additions can't be made until the program is finished syncing updates.
 
-The number of shared folders and mailboxes that you can have open without issues depends on several factors, including hardware, mailbox size, size of the shared folders or mailboxes, number of folders in a shared mailbox, item count in folders, and network speed. A computer that has slower hardware, a large mailbox, and slow network connection may not be able to open more than five shared folders or mailboxes. However, a faster computer that has a smaller mailbox and a fast network connection may be able to open 10 or more shared folders or mailboxes.
+The number of shared folders and mailboxes that you can have open without issues depend on several factors, including hardware, mailbox size, size of the shared folders or mailboxes, number of folders in a shared mailbox, item count in folders, and network speed. A computer that has slower hardware, a large mailbox, and slow network connection may not be able to open more than five shared folders or mailboxes. However, a faster computer that has a smaller mailbox and a fast network connection may be able to open 10 or more shared folders or mailboxes.
 
 ## Resolution
 
@@ -76,14 +76,14 @@ Run the Test E-mail AutoConfiguration tool to determine whether any automapped m
 6. When the test is complete, select the **XML** tab.
 7. Scroll down until you see the \<AlternativeMailbox> section, and then look for \<Type>Delegate\</Type> in the script, as shown in the following screenshot.
 
-   :::image type="content" source="media/slow-performance-if-having-many-shared-folder-or-mailboxes-open/test-e-mail-autoconfiguration-dialog.png" alt-text="Screenshot showing the Test E-mail AutoConfiguration dialog with an automapped mailbox." border="false":::
+   :::image type="content" source="media/slow-performance-if-having-many-shared-folder-or-mailboxes-open/test-e-mail-autoconfiguration-dialog.png" alt-text="Screenshot showing the Test E-mail Auto-Configuration dialog with an automapped mailbox." border="false":::
 
 To remove an automapped mailbox from Outlook, use one of the following options:
 
 1. Remove your Full Access permissions from the mailbox. It's a good option if you no longer require access to the shared mailbox.
 
    [Manage Full Access Permissions](/previous-versions/office/exchange-server-2010/bb676551(v=exchg.141))
-2. Remove AutoMapping for the shared mailbox. This is a good option if you must have access to the shared mailbox, but don't want it AutoMapped in Outlook automatically.
+2. Remove Auto-Mapping for the shared mailbox. It's a good option if you must have access to the shared mailbox, but don't want it Auto-Mapped in Outlook automatically.
 
    - [Disable Outlook Auto-Mapping with Full Access Mailboxes](/previous-versions/office/exchange-server-2010/hh529943(v=exchg.141))
    - [How to remove automapping for a shared mailbox in Outlook for Microsoft 365](/outlook/troubleshoot/profiles-and-accounts/remove-automapping-for-shared-mailbox)
@@ -101,7 +101,7 @@ To remove an automapped mailbox from Outlook, use one of the following options:
    :::image type="content" source="media/slow-performance-if-having-many-shared-folder-or-mailboxes-open/remove-shared-calendar-folder.png" alt-text="Screenshot showing how to remove a shared calendar folder." border="false":::
 
     > [!NOTE]
-    > Selecting **Delete Calendar** or **Delete Folder** on a Shared Calendar or Shared Folder does not delete the folder from the mailbox where it resides. This action removes the folder from your Outlook view Delete Folder only.
+    > Selecting **Delete Calendar** or **Delete Folder** on a Shared Calendar or Shared Folder doesn't delete the folder from the mailbox where it resides. This action removes the folder from your Outlook view Delete Folder only.
 
 Follow steps 2 through 4 for any remaining shared folders that you want to remove from Outlook.
 
