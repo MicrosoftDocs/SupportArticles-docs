@@ -102,7 +102,7 @@ If you're only using features that support the **use system proxy** setting, try
 If you have a copy of the self-signed certificates, you can instruct Storage Explorer to trust them:
 
 1. Obtain a Base-64 encoded X.509 (.cer) copy of the certificate.
-1. Go to **Edit** > **`SSL Certificates** > **Import Certificates**. Then use the file picker to find, select, and open the .cer file.
+1. Go to **Edit** > **SSL Certificates** > **Import Certificates**. Then use the file picker to find, select, and open the .cer file.
 
 This issue might also occur if there are multiple certificates (root and intermediate). To fix this error, you must import all certificates.
 
