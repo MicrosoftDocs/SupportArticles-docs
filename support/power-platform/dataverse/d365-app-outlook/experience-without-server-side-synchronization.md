@@ -30,14 +30,14 @@ To fix this issue, contact your administrator who can check the status of the se
 
 ## Cause 2 - Email address doesn't match the primary SMTP address
 
-Another cause is the email address in Dynamics 365 doesn't match the [primary SMTP address](/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies?view=exchserver-2019#email-address-templates) in Microsoft Exchange.
+Another cause is the email address in Dynamics 365 doesn't match the [primary SMTP address](/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies#email-address-templates) in Microsoft Exchange.
 
 ### Resolution
 
-To resolve this issue, [update the email address in Dynamics 365](dynamics365/outlook-addin/user-guide/outlook-email-address-should-same#change-the-email-address-in-dynamics-365-apps-to-match-the-outlook-address) to match the primary SMTP email address in Exchange.
+To resolve this issue, [update the email address in Dynamics 365](/dynamics365/outlook-addin/user-guide/outlook-email-address-should-same#change-the-email-address-in-dynamics-365-apps-to-match-the-outlook-address) to match the primary SMTP email address in Exchange.
 
 > [!TIP]
-> To find the primary SMTP email address in Exchange, navigate to the [properties of the mailbox](/exchange/recipients/user-mailboxes/user-mailboxes?view=exchserver-2019#change-user-mailbox-properties). The primary SMTP email address is displayed in bold.
+> To find the primary SMTP email address in Exchange, navigate to the [properties of the mailbox](/exchange/recipients/user-mailboxes/user-mailboxes#change-user-mailbox-properties). The primary SMTP email address is displayed in bold.
 
 ## More information
 
