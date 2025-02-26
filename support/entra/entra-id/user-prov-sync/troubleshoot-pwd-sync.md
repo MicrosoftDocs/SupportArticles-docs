@@ -144,22 +144,18 @@ The following tables list event ID messages in the Application log that are rela
 
 To do a full sync, follow these steps, as appropriate on the Microsoft Entra Connect that you're using.
 
-1. On the server where Microsoft Entra Connect is installed, open PowerShell, and then run the following command:
+1. On the server where Microsoft Entra Connect is installed, open PowerShell, and then import ADSync module:
 
-      ```powershell
-      Import-Module DirSync
-      ```
+```powershell
+   Import-Module ADSync
+```
       
-2. Run the following commands:
-   
-      ```powershell
-      Set-FullPasswordSync
-      ```
-      
-      ```powershell
-      Restart-Service FIMSynchronizationService -Force
-      ```
-      
+1. Run the following commands to start an initial sync cycle:
+
+```powershell
+Start-ADSyncSyncCycle -PolicyType Initial
+```
+
 ### How to perform a full password sync
 
 To do a full password sync, run the script that's on this page: [Azure AD Sync: How to Use PowerShell to Trigger a Full Password Sync](/archive/technet-wiki/28433.azure-ad-sync-how-to-use-powershell-to-trigger-a-full-password-sync)
