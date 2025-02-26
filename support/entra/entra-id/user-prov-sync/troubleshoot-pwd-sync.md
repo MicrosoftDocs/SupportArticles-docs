@@ -150,7 +150,7 @@ To do a full sync, follow these steps, as appropriate on the Microsoft Entra Con
    Import-Module ADSync
 ```
       
-1. Run the following commands to start an initial sync cycle:
+2. Run the following commands to start an initial sync cycle:
 
 ```powershell
 Start-ADSyncSyncCycle -PolicyType Initial
