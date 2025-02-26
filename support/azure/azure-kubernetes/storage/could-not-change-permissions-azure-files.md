@@ -19,6 +19,8 @@ When you run PostgreSQL on the Azure Files plug-in, you receive an error that re
 > initdb: could not change permissions of directory "/var/lib/postgresql/data": Operation not permitted
 >
 > fixing permissions on existing directory /var/lib/postgresql/data
+> 
+> Message: 'OSError while changing ownership of the log file. 'Arguments: PermissionError: [Errno 1] Operation not permitted
 
 ## Cause
 
