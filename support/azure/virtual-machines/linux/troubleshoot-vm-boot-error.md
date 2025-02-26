@@ -68,7 +68,7 @@ See the following sections for detailed errors, possible causes, and solutions.
 > [!NOTE]
 > In the commands mentioned in the following sections, replace `/dev/sdX` with the corresponding Operating System (OS) disk device.
 
-### <a id="offline-troubleshooting"></a> Reinstall GRUB and regenerate GRUB configuration file using Azure Linux Auto Repair
+### <a id="reinstall-grub-regenerate-grub-configuration-file-repairvm"></a> Reinstall GRUB and regenerate GRUB configuration file using Azure Linux Auto Repair
 
 Azure Linux Auto Repair (ALAR) scripts are part of the VM repair extension described in [Use Azure Linux Auto Repair (ALAR) to fix a Linux VM](./repair-linux-vm-using-alar.md). ALAR covers the automation of multiple repair scenarios, including GRUB rescue issues.
 
