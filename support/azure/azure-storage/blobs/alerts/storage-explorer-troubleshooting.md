@@ -151,9 +151,11 @@ Make sure you understand the [Sign in to Storage Explorer](/azure/storage/common
 
 Having to reenter credentials is most likely the result of Conditional Access policies set by your Microsoft Entra admin. When Storage Explorer asks you to reenter credentials from the account panel, you should see an **Error details** link. Select it to see why Storage Explorer is asking you to reenter credentials. Conditional Access policy errors that require reentering of credentials might look something like these:
 
-- "The refresh token has expired."
-- "You must use multifactor authentication to access."
-- "Your admin made a configuration change."
+> The refresh token has expired.
+
+> You must use multifactor authentication to access.
+
+> Your admin made a configuration change.
 
 To reduce the frequency of having to reenter credentials because of errors like the preceding ones, talk to your Microsoft Entra admin.
 
@@ -374,9 +376,13 @@ If you receive this error message, it's possible that you don't have the necessa
 
 If you do see the account keys, file an issue in GitHub so we can help you resolve the issue.
 
-## "Error occurred while adding new connection: TypeError: Cannot read property 'version' of undefined"
+## Adding custom connections results in a `TypeError`
 
-If you receive this error message when you try to add a custom connection, the connection data that are stored in the local credential manager might be corrupted. To work around this issue, try deleting and adding back your corrupted local connections:
+The connection data that are stored in the local credential manager might be corrupted if you receive the following error message when you try to add a custom connection:
+
+> Error occurred while adding new connection: TypeError: Cannot read property 'version' of undefined
+
+To work around this issue, try deleting and adding back your corrupted local connections:
 
 1. Start Storage Explorer. From the menu, go to **Help** > **Toggle Developer Tools**.
 1. In the opened window, on the **Application** tab, go to **Local Storage** > **file://** on the left side.
@@ -598,7 +604,7 @@ Many libraries needed by Storage Explorer might be missing in SLES environments.
 For Storage Explorer 1.7.0 or earlier versions, you might have to patch the version of .NET Core used by Storage Explorer:
 
 1. Go to the [NuGet](https://www.nuget.org/packages/StreamJsonRpc/1.5.43) page and download version 1.5.43 of StreamJsonRpc from the **Download package** link on the right side.
-1. After you download the package, change its file extension from .nupkg to .zip.
+1. After you download the package, change its file extension from `.nupkg` to `.zip`.
 1. Unzip the package.
 1. Open the `streamjsonrpc.1.5.43/lib/netstandard1.1` folder.
 1. Copy `StreamJsonRpc.dll` to the following locations in the Storage Explorer folder:
