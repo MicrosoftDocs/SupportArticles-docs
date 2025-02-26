@@ -10,7 +10,7 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.custom: sap:My VM is not booting, linux-related-content
 ms.topic: troubleshooting
-ms.date: 02/25/2025
+ms.date: 02/26/2025
 ms.author: divargas
 ms.reviewer: ekpathak, v-leedennis, v-weizhu
 ---
@@ -68,27 +68,27 @@ See the following sections for detailed errors, possible causes, and solutions.
 > [!NOTE]
 > In the commands mentioned in the following sections, replace `/dev/sdX` with the corresponding Operating System (OS) disk device.
 
-### <a id="offline-troubleshooting"></a> Reinstall GRUB and regenerate GRUB configuration file using Auto Repair (ALAR)
+### <a id="offline-troubleshooting"></a> Reinstall GRUB and regenerate GRUB configuration file using Azure Linux Auto Repair
 
 Azure Linux Auto Repair (ALAR) scripts are part of the VM repair extension described in [Use Azure Linux Auto Repair (ALAR) to fix a Linux VM](./repair-linux-vm-using-alar.md). ALAR covers the automation of multiple repair scenarios, including GRUB rescue issues.
 
-The ALAR scripts use the repair extension `repair-button` to fix GRUB issues by specifying `--button-command grubfix` for Generation 1 VMs, or `--button-command efifix` for Generation 2 VMs. This parameter triggers the automated recovery. Implement the following commands to automate the fix of common GRUB errors that could be fixed by reinstalling GRUB and regenerating the corresponding configuration file:
+The ALAR scripts use the repair extension `repair-button` to fix GRUB issues by specifying `--button-command grubfix` for Generation 1 VMs, or `--button-command efifix` for Generation 2 VMs. This parameter triggers the automated recovery. Implement the following commands to automate the fix of common GRUB errors by reinstalling GRUB and regenerating the corresponding configuration file:
 
 * **Linux VMs without UEFI (BIOS based - Gen1):**
 
-```azurecli-interactive
-az extension add -n vm-repair
-az extension update -n vm-repair
-az vm repair repair-button --button-command 'grubfix' --verbose $RGNAME --name $VMNAME
-```
+    ```azurecli-interactive
+    az extension add -n vm-repair
+    az extension update -n vm-repair
+    az vm repair repair-button --button-command 'grubfix' --verbose $RGNAME --name $VMNAME
+    ```
 
 * **Linux VMs with UEFI (Gen2):**
 
-```azurecli-interactive
-az extension add -n vm-repair
-az extension update -n vm-repair
-az vm repair repair-button --button-command 'efifix' --verbose $RGNAME --name $VMNAME
-```
+    ```azurecli-interactive
+    az extension add -n vm-repair
+    az extension update -n vm-repair
+    az vm repair repair-button --button-command 'efifix' --verbose $RGNAME --name $VMNAME
+    ```
 
 > [!IMPORTANT]
 > Replace the resource group name `$RGNAME` and VM name `$VMNAME` accordingly.
@@ -149,15 +149,17 @@ This error might be associated with one of the following issues:
 
   To resolve this issue, follow the steps in [Fix /boot file system corruption](#fix-boot-file-system-corruption).
 
-* GRUB boot loader is pointing to an invalid disk or partition.
+* GRUB boot loader points to an invalid disk or partition.
 
   To resolve this issue, [reinstall GRUB and regenerate GRUB configuration file](#reinstall-grub-regenerate-grub-configuration-file).
 
-* OS disk partition table issues caused by human error.
+* OS disk partition table issues caused by human errors.
 
-  To resolve such issues, follow the steps in [Error: No such partition](#no-such-partition) with recommendations to re-create the `/boot` partition if missing or created incorrectly.
+  To resolve such issues, follow the steps in [Error: No such partition](#no-such-partition) to re-create the `/boot` partition if missing or created incorrectly.
 
 ### <a id="fix-boot-file-system-corruption"></a>Fix /boot file system corruption
+
+To fix `/boot` file system corruption, follow these steps:
 
 1. Check whether a rescue/repair VM was created. If it wasn't created, follow step 1 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to create the VM.
 
@@ -338,7 +340,7 @@ If the `/boot` partition is missing, re-create it by following these steps:
     /dev/sdc1: UUID="<UUID>" TYPE="ext4"
     ```
 
-3. If the `/boot` file system isn't visible in `blkid` after you re-create the partition, this means that the /boot data no longer exists. You have to re-create the /boot file system (by using the same UUID and file system format that's in the `/etc/fstab` /boot entry), and then [restore its contents from a backup](/azure/backup/backup-azure-arm-restore-vms).
+3. If the `/boot` file system isn't visible in `blkid` after you re-create the partition, this means that the `/boot` data no longer exists. You have to re-create the `/boot` file system (by using the same UUID and file system format that's in the `/etc/fstab` `/boot` entry), and then [restore its contents from a backup](/azure/backup/backup-azure-arm-restore-vms).
 
 #### <a id="re-create-boot-partition-in-gpt-systems"></a>Re-create /boot partition in GPT systems
 
@@ -421,7 +423,7 @@ The following screenshot shows the error message:
 
 :::image type="content" source="./media/troubleshoot-vm-boot-error/grub-efi-get-secure-boot-not-found.jpg" alt-text="Screenshot of grub error 'grub_efi_get_secure_boot' not found.":::
 
-Linux kernel version `4.12.14`(that's used in SLES 12 SP5) doesn't support the [Secure Boot](/windows-hardware/design/device-experiences/oem-secure-boot) option. Therefore, if secure boot is enabled during the deployment of the VM (that is, the **Security type** field is set to [Trusted launch virtual machines](/azure/virtual-machines/trusted-launch)), the virtual machine generates the secure boot error through the console when you try to start by using this SUSE kernel version on a Gen2 VM image.
+Linux kernel version 4.12.14 (that's used in SLES 12 SP5) doesn't support the [Secure Boot](/windows-hardware/design/device-experiences/oem-secure-boot) option. Therefore, if secure boot is enabled during the deployment of the VM (that is, the **Security type** field is set to [Trusted launch virtual machines](/azure/virtual-machines/trusted-launch)), the virtual machine generates the secure boot error through the console when you try to start by using this SUSE kernel version on a Gen2 VM image.
 
 ### Solution
 
