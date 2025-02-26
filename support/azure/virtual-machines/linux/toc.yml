@@ -124,8 +124,8 @@
   items:
   - name: Can't restart after applying kernel changes
     href: kernel-related-boot-issues.md
-  - name: Troubleshooting LIS driver issues on Linux Virtual Machines
-    href: troubleshooting-lis-driver-issues-in-linux-virtual-machines.md 
+  - name: Linux VMs fail to boot due to Hyper-V driver issues
+    href: lis-driver-issues-linux-virtual-machines.md 
 
 - name: OS upgrades
   items:
