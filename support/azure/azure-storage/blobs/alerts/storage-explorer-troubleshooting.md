@@ -374,7 +374,7 @@ If you receive this error message, it's possible that you don't have the necessa
 
 If you do see the account keys, file an issue in GitHub so we can help you resolve the issue.
 
-## "Error occurred while adding new connection: TypeError: Can't read property 'version' of undefined"
+## "Error occurred while adding new connection: TypeError: Cannot read property 'version' of undefined"
 
 If you receive this error message when you try to add a custom connection, the connection data that are stored in the local credential manager might be corrupted. To work around this issue, try deleting and adding back your corrupted local connections:
 
