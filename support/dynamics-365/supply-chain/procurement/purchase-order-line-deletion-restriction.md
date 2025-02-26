@@ -3,7 +3,7 @@ title: Purchase Order Line Deletion Restriction
 description: Provides a workaround for the restriction on deleting purchase order lines under certain conditions in Dynamics 365 Supply Chain Management.
 ms.reviewer: shubhamshr
 ms.date: 02/25/2025
-ms.custom: sap:Purchase order procurement and sourcing\Issues with purchase orderss
+ms.custom: sap:Purchase order procurement and sourcing\Issues with purchase orders
 ---
 # Can't delete a purchase order line after it's confirmed
 

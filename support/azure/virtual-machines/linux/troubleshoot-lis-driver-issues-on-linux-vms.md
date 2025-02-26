@@ -1,15 +1,15 @@
 ---
-title: Linux VMs fail to boot due to Hyper-V driver issues
-description: Provides solutions to Azure Linux VM boot failures that occur because Hyper-V drivers are missing or disabled.
+title: Troubleshoot LIS/Hyper-V Driver Issues on Linux Virtual Machines
+description: Provides solutions to Azure Linux VM issues that occur because Hyper-V drivers are missing or disabled.
 ms.date: 02/26/2025
 ms.reviewer: divargas, msaenzbo, v-weizhu
 ms.custom: sap:My VM is not booting, linux-related-content
 ---
-# Azure Linux virtual machines fail to boot due to Hyper-V driver issues 
+# Troubleshoot LIS/Hyper-V driver issues on Linux virtual machines
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-When you run a Linux Virtual Machine (VM) on Azure, the Hyper-V drivers, also known as Linux Integration Services (LIS) drivers, are crucial for proper VM operations. These drivers allow the VM to communicate with the underlying Azure hypervisor. If these drivers are missing or not properly loaded, the VM might fail to boot. This article provides solutions to boot failures due to Hyper-V driver issues in Azure Linux VMs.
+When you run a Linux Virtual Machine (VM) on Azure, the Hyper-V drivers, also known as Linux Integration Services (LIS) drivers, are crucial for proper VM operations. These drivers allow the VM to communicate with the underlying Azure hypervisor. If these drivers are missing or not properly loaded, the VM might fail to boot. This article provides solutions to LIS/Hyper-V driver issues in Azure Linux VMs.
 
 ## Prerequisites
 
@@ -94,7 +94,7 @@ dracut:/#
 
 ## Cause
 
-Here are some reasons for VM boot failures:
+If LIS/Hyper-V drivers are missing or not correctly loaded, the VM might not start because of the following reasons:
 
 - Missing disk and network drivers
 
@@ -199,7 +199,9 @@ Here are some reasons for VM boot failures:
 
 4. Rebuild the initial RAM disk image for your affected kernel by following the steps in [Regenerate missing initramfs manually](kernel-related-boot-issues.md#missing-initramfs-manual).
 
-## Verify the network driver is functional after a fresh boot or reboot
+## FAQ
+
+### If I'm experiencing some issues, such as connectivity, how can I make sure that the network driver, hv_netvsc, is working as expected after a fresh start or restart of the system?
 
 To confirm that the Hyper-V network driver (`hv_netvsc`) is active and functional, check the system logs and look for the following entry:
 
