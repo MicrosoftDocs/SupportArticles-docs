@@ -2,8 +2,7 @@
 title: Errors when opening 365 App for Outlook
 description: Troubleshooting errors when attempting to open Dynamics 365 App for Outlook.
 ms.reviewer: 
-ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 02/26/2025
 ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
 # Troubleshooting errors when attempting to open Microsoft Dynamics 365 App for Outlook
