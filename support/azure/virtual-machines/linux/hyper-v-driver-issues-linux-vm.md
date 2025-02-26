@@ -154,17 +154,17 @@ Here are some reasons for VM boot failures:
 2. Mount the copy of the OS file systems in the repair VM by using [chroot](chroot-environment-linux.md).
 3. Once the chroot process is completed, verify if `hv_` drivers are missing on the current kernel:
 
-     - For RHEL-based images
+     - For RHEL-based images:
         
         ```bash
         lsinitrd /boot/initramfs-<kernel-version>.img | grep -i hv_
         ```
-    - For SLES-based images
+    - For SLES-based images:
     
        ```bash
        lsinitrd /boot/initrd-<versión-del-kernel> | grep -i hv_
        ```
-    - For Ubuntu/Debian-based images
+    - For Ubuntu/Debian-based images:
         
         ```bash
         lsinitrd /boot/initrd.img-$(uname -r)  | grep -i hv_
@@ -175,7 +175,7 @@ Here are some reasons for VM boot failures:
 
 3. Edit the */etc/dracut.conf* or */etc/initramfs-tools/modules* file, depending on your Linux distribution, and add the following line to the file:
 
-     - For RHEL/SLES-based images
+     - For RHEL/SLES-based images:
 
        ```bash
        vi /etc/dracut.conf
@@ -185,7 +185,7 @@ Here are some reasons for VM boot failures:
        add_drivers+=" hv_vmbus hv_netvsc hv_storvsc "
        ```
 
-     - For Ubuntu/Debian-based images
+     - For Ubuntu/Debian-based images:
 
        ```bash
        vi /etc/initramfs-tools/modules
@@ -197,11 +197,11 @@ Here are some reasons for VM boot failures:
        hv_storvsc
        ```
 
-4. Rebuild the initial RAM disk image for your affected kernel by [regenerating missing initramfs manually](kernel-related-boot-issues.md#missing-initramfs-manual).
+4. Rebuild the initial RAM disk image for your affected kernel by following the steps in [Regenerate missing initramfs manually](kernel-related-boot-issues.md#missing-initramfs-manual).
 
 ## Verify the network driver is functional after a fresh boot or reboot
 
-To confirm that the Hyper-V network driver (`hv_netvsc`) is active and functional, check the system logs for the following message:
+To confirm that the Hyper-V network driver (`hv_netvsc`) is active and functional, check the system logs and look for the following entry:
 
 ```output
 *hv\_vmbus: registering driver hv\_netvsc*
