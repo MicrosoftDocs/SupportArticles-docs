@@ -209,7 +209,7 @@ If you continue to have issues after you do a reset, try these steps:
 
 1. Open Storage Explorer.
 1. Remove all accounts and then close Storage Explorer.
-1. Delete the `.IdentityService` folder from your machine. On Windows, the folder is located at `%LOCALAPPDATA%`. For Mac and Linux, you can find the folder at the root of your user directory.
+1. Delete the `.IdentityService` folder from your machine. On Windows, the folder is located at `C:\Users\<username>\AppData\Local`. For Mac and Linux, you can find the folder at the root of your user directory.
 1. If you're running Mac or Linux, you also need to delete the `Microsoft.Developer.IdentityService` entry from your operating system's keystore. On the Mac, the keystore is the Gnome Keychain application. In Linux, the application is typically called *Keyring*, but the name might differ depending on your distribution.
 1. Restart Storage Explorer and try to sign in again.
 
@@ -269,7 +269,7 @@ If none of the preceding instructions apply to your sign-in issue or if they fai
 If you can't retrieve your subscriptions after you successfully sign in, try the following troubleshooting methods:
 
 - Verify that your account has access to the subscriptions you expect. You can verify your access by signing in to the portal for the Azure environment you're trying to use.
-- Make sure you sign in to the correct Azure environment (Azure, Azure China 21Vianet, Azure Germany, Azure US Government, or Custom Environment).
+- Make sure you sign in to the correct Azure environment (Azure, Azure China 21Vianet, Azure US Government, or Custom Environment).
 - Make sure you configured the Storage Explorer proxy correctly if you're behind a proxy server.
 - Remove and add back the account.
 - Check which error messages are being reported for the tenants that are failing if there's a "More information" or "Error details" link. If you aren't sure how to respond to the error messages, [open an issue in GitHub](https://github.com/Microsoft/AzureStorageExplorer/issues).
@@ -291,7 +291,7 @@ If you can't remove an attached account or storage resource through the UI, you 
 
 Platform | Folder path
 ---------|------------
-Windows  | `%AppData%/StorageExplorer`
+Windows  | `C:\Users\<username>\AppData\StorageExplorer`
 macOS    | `~/Library/Application Support/StorageExplorer`
 Linux    | `~/.config/StorageExplorer`
 
@@ -633,7 +633,7 @@ For issues related to sign-in or Storage Explorer's authentication library, you 
 
 Platform | Folder path
 ---------|------------
-Windows  | `%LOCALAPPDATA%\Temp\servicehub\logs`
+Windows  | `C:\Users\<username>\AppData\Local\Temp\servicehub\logs`
 macOS    | `~/.ServiceHub/logs`
 Linux    | `~/.ServiceHub/logs`
 
