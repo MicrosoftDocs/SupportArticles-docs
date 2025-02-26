@@ -2,7 +2,7 @@
 title: Browser Automation Security Update
 description: Provides security updates for the browser automation component in Microsoft Power Automate for desktop.
 ms.reviewer: nimoutzo, iopanag
-ms.date: 01/23/2025
+ms.date: 02/26/2025
 ms.custom: sap:Desktop flows\UI or browser automation
 ---
 # Security update for the browser automation component in Microsoft Power Automate for desktop
