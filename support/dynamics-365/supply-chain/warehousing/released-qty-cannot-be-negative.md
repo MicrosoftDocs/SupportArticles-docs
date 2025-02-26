@@ -74,3 +74,13 @@ Use the following procedure to process the load line as required and revert the 
 1. Open the relevant product to go to its **Released product details** page.
 1. On the Action Pane, on the **Product** tab, in the **Set up** group, select **Unit conversions**.
 1. Select the conversion between the units, and revert the adjustments that you made in the previous section.
+
+## Alternative resolution
+
+Use the following procedure to manually update *WHSSalesLine.ReleasedQty* (sales line released quantity), *WHSSalesLine.QtyLeftToLoad* (sales line quantity which is not on a load yet):
+
+1. Go to **Account receibvable** > **Orders** > **All sales orders**.
+1. Open the Sales Order that contains the Sales Line related to the Load, where the line cannot be deleted or updated.
+1. On the top right side of the **Sales order lines** grid, click on three dots and choose **Insert columns...** from the dropdown menu.
+1. Search for fields **Released quantity** and **Quantity left to load**, select them, and click **Update**.
+1. These fields will now appear in the **Sales Order Lines** grid and can be modified to reflect the quantity on the Load lines.
