@@ -2,8 +2,7 @@
 title: Dynamics 365 App for Outlook is missing
 description: Provides a solution to an issue where Microsoft Dynamics 365 App for Outlook is missing from Microsoft Dynamics 365 navigation.
 ms.reviewer: 
-ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 02/26/2025
 ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
 # Microsoft Dynamics 365 App for Outlook is missing from Microsoft Dynamics 365 navigation
