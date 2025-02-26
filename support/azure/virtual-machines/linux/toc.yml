@@ -125,7 +125,7 @@
   - name: Can't restart after applying kernel changes
     href: kernel-related-boot-issues.md
   - name: Troubleshoot LIS driver issues on Linux VMs
-    href: troubleshoot-lis-driver-issues-in-linux-vms.md
+    href: troubleshoot-lis-driver-issues-on-linux-vms.md
 
 - name: OS upgrades
   items:
