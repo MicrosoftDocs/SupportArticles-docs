@@ -13,21 +13,21 @@ When you run a Linux Virtual Machine (VM) on Azure, the Hyper-V drivers, also kn
 
 ## Prerequisites
 
-- Access to [Azure Command-Line Interface (CLI)](/cli/azure/).
+- Access to [Azure Command-Line Interface (CLI)](/cli/azure/)
 - Ability to create a repair/rescue VM
 - Serial console access
 - Familiarity with Linux commands and system administration
 
 ## Symptoms
 
-In one of the following scenarios, VMs might fail to boot due to missing Hyper-V drivers:
+In one of the following scenarios, Linux VMs might fail to boot because Hyper-V drivers are missing or disabled:
 
 - After you migrate a Linux VM from on-premises to Azure.
 
     When a VM is migrated to Azure from another hypervisor (such as VMware or Kernel-based Virtual Machine (KVM)), the necessary Hyper-V drivers `hv_vmbus`, `hv_storvsc`, `hv_netvsc`, and `hv_utils` might not be installed or enabled, preventing the VM from detecting storage and network devices.
 
-- When the Hyper-V drivers aren't included in the initramfs.
 - After you disable the Hyper-V drivers and reboot the VM.
+- When the Hyper-V drivers aren't included in the initramfs.
 
 When you review the serial console logs for various Linux VMs (Red Hat, Oracle, SUSE, or Ubuntu), the following issues are commonly observed:
 
@@ -42,7 +42,7 @@ When you review the serial console logs for various Linux VMs (Red Hat, Oracle, 
 | **Failure to Attach Azure Disks** | Azure managed disks might not be recognized or mounted correctly due to missing storage drivers. |
 | **Cloud-Init or Waagent Failures** | Azure provisioning tools (`cloud-init` or `waagent`) might fail to configure the VM properly. |
 
-Here are log examples:
+Here are log entry examples:
 
 - Output 1
 
