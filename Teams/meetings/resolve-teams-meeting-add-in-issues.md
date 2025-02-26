@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 09/27/2024
+ms.date: 02/25/2025
 ---
 
 # Resolve issues that affect the Teams Meeting add-in for classic Outlook
@@ -49,7 +49,22 @@ After the diagnostic is finished, select the provided links to resolve the issue
 
 ### Run the classic Teams add-in for classic Outlook troubleshooter
 
-If the policies are assigned correctly, but you still can't install the add-in, or if you're not an administrator, run the [classic Teams add-in for classic Outlook troubleshooter](https://aka.ms/SaRA-TeamsAddin-sarahome).
+If the policies are assigned correctly, but you still can't install the add-in, or if you're not an administrator, run the [classic Teams add-in for classic Outlook troubleshooter](https://aka.ms/SaRA-TeamsAddin-sarahome) in Get Help.
+
+> [!NOTE]
+> To run the troubleshooter, make sure that you're using the same Windows device that classic Outlook is installed on. Additionally, make sure that your device is running Windows 10 or a later version.
+
+To run the troubleshooter, follow these steps:
+
+1. Select the following button to start the troubleshooter.
+
+   > [!div class="nextstepaction"]
+   > [Classic Teams add-in for classic Outlook troubleshooter](https://aka.ms/SaRA-TeamsAddin-sarahome)
+
+   If you receive a pop-up window that displays "This site is trying to open Get Help.", select **Open**.
+1. Follow the instructions in the Get Help app to run the troubleshooter.
+
+After the troubleshooter finishes, it displays the results and provides additional information about how to resolve the issue.
 
 ### Use the Enterprise version of Microsoft Support and Recovery Assistant
 

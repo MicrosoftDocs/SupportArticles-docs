@@ -16,7 +16,7 @@ appliesto:
   - Microsoft Intune
   - Azure Backup
   - Microsoft 365
-ms.date: 10/20/2023
+ms.date: 02/25/2025
 ---
 
 # You can't sign in to Microsoft 365, Azure, or Intune
@@ -32,8 +32,8 @@ ms.date: 10/20/2023
 
 You can't sign in to Microsoft 365, Microsoft Azure, or Microsoft Intune. You might be trying to sign in by using a portal such as [https://login.microsoftonline.com](https://login.microsoftonline.com/). Or, you might be trying to sign in by using a non-browser–based app, such as one of the following apps:
 
-- Office apps, such as Outlook, Word, Excel, and PowerPoint
-- Office apps on mobile devices, such as Office Mobile, Teams, and Microsoft OneDrive for Business (formerly Microsoft SkyDrive Pro)
+- Microsoft 365 apps, such as Outlook, Word, Excel, and PowerPoint
+- Microsoft 365 apps on mobile devices, such as Microsoft 365 Mobile, Teams, and OneDrive
 - Azure Active Directory Sync
 - Azure Active Directory module for Windows PowerShell
 - Dynamics CRM
@@ -54,7 +54,7 @@ The following conditions might cause this issue:
 ## Resolution
 
 > [!TIP]
-> To diagnose and automatically fix several common Office sign-in issues, run the [Microsoft 365 Sign-in troubleshooter](https://aka.ms/SaRA-OfficeSignInScenario).
+> To diagnose and automatically fix several common Microsoft 365 sign-in issues, run the [Microsoft 365 Sign-in troubleshooter](https://aka.ms/SaRA-OfficeSignIn-sarahome).
 
 To resolve this issue, follow these steps.
 
@@ -68,7 +68,7 @@ To resolve this issue, follow these steps.
   
 #### You can sign in to the portal
 
-If you can sign in to the portal, but you can't sign in to a non-browser–based app, such as an Office app or an app on your mobile device to check email, follow these steps:
+If you can sign in to the portal, but you can't sign in to a non-browser–based app, such as a Microsoft 365 app or an app on your mobile device to check email, follow these steps:
 
 1. Work with your admin to make sure that you have the correct licenses applied to your account.
 2. If you're enabled for multi-factor authentication, make sure that you have set up app passwords. For more information about multi-factor authentication, see [Manage your settings for two-step verification](/azure/active-directory/user-help/multi-factor-authentication-end-user-manage-settings).

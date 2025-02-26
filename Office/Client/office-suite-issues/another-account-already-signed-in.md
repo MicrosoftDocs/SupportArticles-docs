@@ -15,7 +15,7 @@ ms.author: luche
 appliesto: 
   - Microsoft 365
   - Office 2013
-ms.date: 06/06/2024
+ms.date: 02/25/2025
 ---
 
 # "Sorry, another account from your organization is already signed in on this computer" in Office 2013
@@ -33,7 +33,7 @@ This behavior is expected. It occurs if another account is already signed in to 
 ## Resolution
 
 > [!TIP]
-> To diagnose and automatically fix several common Office sign-in issues, run the [Microsoft 365 sign-in troubleshooter](https://aka.ms/SaRA-OfficeSignInScenario).
+> To diagnose and automatically fix common Office sign-in issues, run the [Microsoft 365 sign-in troubleshooter](https://aka.ms/SaRA-OfficeSignIn-sarahome).
 
 Sign out of the first account that signed in, then restart that computer. If this solution does not resolve the issue, try the workaround below.
 

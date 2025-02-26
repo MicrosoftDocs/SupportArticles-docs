@@ -16,7 +16,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
-ms.date: 02/11/2025
+ms.date: 02/25/2025
 ---
 
 # Microsoft 365 Apps activation error: “Your organization has disabled this device”
@@ -68,9 +68,9 @@ After the duplicate device is removed , delete your BrokerPlugin data and then r
 `%LOCALAPPDATA%\Packages\Microsoft.Windows.CloudExperienceHost_cw5n1h2txyewy\AC\TokenBroker\Accounts`
 1.	Select all files and delete them.  
 1.	Restart the device.  
-1.	Run the [Microsoft 365 sign-in troubleshooter](https://aka.ms/SaRA-OfficeSignInScenario).  
+1.	Run the [Microsoft 365 sign-in troubleshooter](https://aka.ms/SaRA-OfficeSignIn-sarahome).  
 
-For manual troubleshooting for step 7, or for more information, see [Fix authentication issues in Office applications when you try to connect to a Microsoft 365 service](/microsoft-365/troubleshoot/authentication/automatic-authentication-fails).  
+For manual troubleshooting for step 7, or for more information, see [Fix authentication issues in Microsoft 365 applications when you try to connect to a Microsoft 365 service](/microsoft-365/troubleshoot/authentication/automatic-authentication-fails).  
 <br/><br/>
 </details>
 

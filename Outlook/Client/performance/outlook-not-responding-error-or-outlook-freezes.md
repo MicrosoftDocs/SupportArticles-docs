@@ -19,7 +19,7 @@ appliesto:
   - Outlook 2010 with Business Contact Manager
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 03/14/2024
+ms.date: 02/25/2025
 ---
 # Outlook not responding error or Outlook freezes when you open a file or send mail
 
@@ -39,19 +39,30 @@ This problem occurs for one or more of the following reasons:
 - A previously installed add-in is interfering with Outlook.
 - Your mailboxes are too large.
 - Your AppData folder is redirected to a network location.
-- You have to repair your Office programs.
+- You have to repair your Microsoft 365 programs.
 - Outlook data files have become corrupted or damaged.
 - Your installed antivirus software is outdated, or it conflicts with Outlook.
 - Your user profile has become corrupted.
 - Another program conflicts with Outlook.
 
+Many of these items can be automatically checked by the [classic Outlook advanced diagnostics troubleshooter](https://aka.ms/SaRA-OutlookAdvDiagExpExp-sarahome).
+
 > [!NOTE]
 >
-> - This issue may occur for one or more of the reasons in this section. To fix this issue, you may have to follow the troubleshooting steps in the Resolution section.
-> - Many of these items can be automatically checked by the classic Outlook advanced diagnostis troubleshooter. Note that Microsoft Support and Recovery Assistant scenarios aren't available for new Outlook for Windows. To start the automated checks, follow these steps:
->    1. Install the [Outlook Advanced Diagnostics](https://aka.ms/SaRA-OutlookAdvDiagnostics) tool.
->    1. Select **Run** when you are prompted by your browser.
->    1. In the report that's generated, review the items on the **Issues found** tab. For configuration details about Outlook, Windows, and your computer, review the settings on the **Detailed View** tab.
+> - The troubleshooter doesn't work with new Outlook for Windows.
+> - To run the troubleshooter, make sure that you're using the same Windows device that classic Outlook is installed on. Additionally, make sure that your device is running Windows 10 or a later version.
+
+To run the troubleshooter, follow these steps:
+
+1. Select the following button to start the troubleshooter.
+
+   > [!div class="nextstepaction"]
+   > [Classic Outlook advanced diagnostics troubleshooter](https://aka.ms/SaRA-OutlookAdvDiagExpExp-sarahome)
+
+   If you receive a pop-up window that displays "This site is trying to open Get Help.", select **Open**.
+1. Follow the instructions in the Get Help app to run the troubleshooter.
+
+After the troubleshooter finishes, it displays the results and provides additional information about how to resolve the issue.
 
 ## Resolution
 
@@ -62,7 +73,7 @@ To resolve this problem, make sure that your computer meets the [Outlook 2016 sy
 
 ### Step 1 - Install the latest updates
 
-The Office installation on your computer might not be up to date. This might be because Windows Update is not configured on your computer to automatically download and install recommended updates. By installing important, recommended, and optional updates, you can often correct problems by replacing out-of-date files and fixing vulnerabilities. To install the latest Office updates, click the link for your version of Windows, and then follow the steps in the article:
+The Office installation on your computer might not be up to date. This might be because Windows Update isn't configured on your computer to automatically download and install recommended updates. By installing important, recommended, and optional updates, you can often correct problems by replacing out-of-date files and fixing vulnerabilities. To install the latest updates, select the link for your version of Windows, and then follow the steps in the article:
 
 - [Install Windows updates in Windows 10](https://support.microsoft.com/hub/4338813/windows-help?os=windows-10)
 - [Windows Update FAQ for Windows 8.1](https://support.microsoft.com/hub/4338813/windows-help?os=windows-8.1)

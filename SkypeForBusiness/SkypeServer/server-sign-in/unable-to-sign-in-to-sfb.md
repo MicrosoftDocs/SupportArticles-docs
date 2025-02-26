@@ -11,7 +11,7 @@ search.appverid:
 ms.topic: troubleshooting
 ms.custom: 
   - CSSTroubleshoot
-ms.date: 04/17/2019
+ms.date: 02/25/2025
 appliesto: 
   - Skype for Business
 ---
@@ -20,13 +20,11 @@ appliesto:
 
 ## Overview
 
-Microsoft Skype for Business caches files locally on your computer. This may prevent you from being able to sign in to Skype for Business. 
+Microsoft Skype for Business caches files locally on your computer. This may prevent you from being able to sign in to Skype for Business.
 
 ## Resolution
 
-To delete cached sign in credentials, use the Skype for Business scenario in the [Microsoft Support and Recovery Assistant](https://diagnostics.office.com) (SaRA) tool or manually clear the cached information.
-
-To manually fix this issue, follow these steps.
+To delete cached sign in credentials, manually clear the cached information.
 
 ### Step 1: Delete your Skype for Business sign-in info
 
@@ -49,7 +47,7 @@ If the issue persists, continue to remove the cache.
 
 4. Delete the registry key with the name matching your sip address. For example: user@contoso.com.
 5. Start File Explorer and locate the Local application data folder:
-   
+
    - Skype for Business 2016: **%LocalAppData%\Microsoft\Office\16.0\Lync**
    - Lync 2013/Skype for Business 2015: **%LocalAppData%\Microsoft\Office\15.0\Lync**
 
