@@ -598,7 +598,7 @@ Many libraries needed by Storage Explorer might be missing in SLES environments.
 For Storage Explorer 1.7.0 or earlier versions, you might have to patch the version of .NET Core used by Storage Explorer:
 
 1. Go to the [NuGet](https://www.nuget.org/packages/StreamJsonRpc/1.5.43) page and download version 1.5.43 of StreamJsonRpc from the **Download package** link on the right side.
-1. After you download the package, change its file extension from.nupkg to .zip.
+1. After you download the package, change its file extension from .nupkg to .zip.
 1. Unzip the package.
 1. Open the `streamjsonrpc.1.5.43/lib/netstandard1.1` folder.
 1. Copy `StreamJsonRpc.dll` to the following locations in the Storage Explorer folder:
