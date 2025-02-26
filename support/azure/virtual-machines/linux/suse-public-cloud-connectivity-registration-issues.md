@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot connectivity and registration for SUSE SLES VMs
 description: Troubleshoot scenarios in which an Azure VM that has a SUSE Linux Enterprise Server image can't connect to the SUSE Subscription Management Tool (SMT) repository.
-ms.date: 02/04/2025
+ms.date: 02/26/2025
 author: rnirek
 ms.author: hokamath
 ms.reviewer: adelgadohell, mahuss, esanchezvela, scotro, v-weizhu, divargas
@@ -252,7 +252,7 @@ If instances aren't regularly updated, they can become incompatible with our upd
     ```bash
     sudo registercloudguest --force-new
     ```
-For more information, refer to (Cloud instance repos fail due to outdated packages)[https://www.suse.com/support/kb/doc/?id=000021552].
+For more information, see [Cloud instance repos fail due to outdated packages](https://www.suse.com/support/kb/doc/?id=000021552).
 
 ## Scenario 3: General registration issues
 
