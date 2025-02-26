@@ -669,7 +669,7 @@ Since `GRUB_DEFAULT=0` forces the system to always boot the first menu entry in 
     [    6.507621] upgrade[677]: starting upgrade hook
     [    6.531079] upgrade[677]: /bin/upgrade: line 20: /sysroot/var/tmp/system-upgrade.state: No such file or directory
     [    6.543603] upgrade[677]: Storage initialisation: Attempt 0 of 11. Wait 15 seconds.
-    [    6.608365] dracut-pre-pivot[703]: 6.605850 | /etc/multipath.conf does not exist, blacklisting all devices.
+    [    6.608365] dracut-pre-pivot[703]: 6.605850 | /etc/multipath.conf does not exist, blocklisting all devices.
     [    6.620246] dracut-pre-pivot[703]: 6.608599 | You can run "/sbin/mpathconf --enable" to create
     [    6.630208] dracut-pre-pivot[703]: 6.608921 | /etc/multipath.conf. See man mpathconf(8) for more details
     [  OK  ] Finished dracut pre-pivot and cleanup hook.
