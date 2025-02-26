@@ -24,8 +24,6 @@
       href: d365-app-outlook/dynamics-365-app-outlook-did-not-load.md
     - name: App for Outlook doesn't appear within Outlook
       href: d365-app-outlook/app-does-not-appear-within-outlook.md
-    - name: App for Outlook is missing
-      href: d365-app-outlook/dynamics-365-app-for-outlook-is-missing.md
     - name: Attachments aren't tracked after Microsoft Defender for Office 365 is enabled
       href: d365-app-outlook/attachments-not-tracked-to-dynamics-365-after-office-365-atp-is-enabled.md
     - name: Authentication pop-up is blank and unable to sign in
@@ -38,6 +36,8 @@
       href: d365-app-outlook/cannot-connect-to-exchange-message-when-using-dynamics-365-app-for-outlook.md
     - name: Can't load this app because email account isn't configured
       href: d365-app-outlook/we-cannot-load-this-app.md
+    - name: Dynamics 365 App for Outlook is missing from the navigation pane
+      href: d365-app-outlook/dynamics-365-app-for-outlook-is-missing.md
     - name: Email or appointment tracked by App for Outlook shows as Track pending
       href: d365-app-outlook/emails-tracked-by-dynamics-365-app-for-outlook-show-track-pending.md
     - name: Error in App for Outlook
