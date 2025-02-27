@@ -607,11 +607,11 @@ The mounting failure occurs because version 2 of the control group (cgroup v2) i
 
 1. If that parameter is in one of those files, remove the parameter from the file, and then run the Leapp upgrade process again.
 
-### Upgrade symptom 7: Leapp upgrade doesn't continue after reboot, VM boots into RHEL 8.10 instead
+### Upgrade symptom 7: Leapp upgrade doesn't continue after reboot, and VM boots into RHEL 8.10 instead
 
 If you run the Leapp upgrade from RHEL 8.10 to 9.4 or 9.5, the upgrade process might not continue after the required reboot. Instead, the VM boots back into RHEL 8.10 without loading the special upgrade initramfs.
 
-The following setting in `/etc/default/grub` may cause this issue:
+The following setting in `/etc/default/grub` might cause this issue:
 
 ```config
 GRUB_DEFAULT=0
@@ -625,7 +625,7 @@ Since `GRUB_DEFAULT=0` forces the system to always boot the first menu entry in 
 1. Change `GRUB_DEFAULT=0` to `GRUB_DEFAULT=saved`:
 
     > [!NOTE]
-    > In this example, `GRUB_DEFAULT` is set to 0, but in your environment, it might be 1 or another number. Ensure that you replace it accordingly in the `sed` command.
+    > In this example, `GRUB_DEFAULT` is set to `0`, but in your environment, it might be `1` or another number. Ensure that you replace it accordingly in the `sed` command.
 
 
     ```bash
@@ -652,7 +652,7 @@ Since `GRUB_DEFAULT=0` forces the system to always boot the first menu entry in 
     sudo reboot
     ```
 
-    After the reboot, if the fix is applied correctly, the VM will should into the Leapp upgrade initramfs, and you should see an output similar to the following lines in the serial console:
+    After the reboot, if the fix is applied correctly, the VM will go into the Leapp upgrade initramfs, and you should see an output similar to the following lines in the serial console:
 
     ```output
     [  OK  ] Reached target Remote File Systems.
@@ -677,7 +677,7 @@ Since `GRUB_DEFAULT=0` forces the system to always boot the first menu entry in 
     [   21.581296] upgrade[677]: Mounting /usr with -o defaults,ro
     ```
 
-    This output indicates that the Leapp upgrade process has continued successfully. After completion, the VM should boot into RHEL 9.X.
+    This output indicates that the Leapp upgrade process has continued successfully. After completion, the VM should boot into RHEL 9.*x*.
 
 > [!IMPORTANT]
 > If the Leapp upgrade still fails without an obvious reason (such as when upgrading from version 7.9 to version 8.10 or from version 8.10 to version 9.5), don't upgrade to the latest version. Instead, try to upgrade to an intermediate version (such as from version 7.9 to version 8.8 or version 8.10 to version 9.4) by specifying the `--target x.y` flag. After the intermediate upgrade is successful, you can try to upgrade to the latest release.
