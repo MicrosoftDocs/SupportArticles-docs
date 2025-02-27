@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot a Process Crash in an IIS Application Pool
 description: This article helps identify a process crash and provides methods to collect and analyze data for the crash.
-ms.date: 02/13/2025
+ms.date: 02/27/2025
 ms.custom: sap:Site Behavior and Performance\Process termination (crash)
 ms.reviewer: khgupta, v-sidong
 ---
@@ -56,7 +56,7 @@ Take note of the following fields:
 
 ## Data collection
 
-The first thing you need to do is to understand whether you need a memory dump. Windows has a feature called [Windows Error Reporting](../../../../windows-client/system-management-components/windows-error-reporting-diagnostics-enablement-guidance.md) (WER) that collects information automatically for you.
+The first thing you need to do is to understand whether you need a memory dump. Windows has a feature called [Windows Error Reporting](#windows-error-reporting) (WER) that collects information automatically for you.
 
 To determine if you need a memory dump, locate the event logs regarding WER and check if the information is sufficient to solve the issue.
 
@@ -79,7 +79,7 @@ To take crash dumps using Debug Diagnostic Tool, follow these steps:
    > You should avoid using any other of the available options (consider them as a last resort only).
 
 1. Select the crashing application pool (you can get the application pool name in the [Identify a process crash](#identify-a-process-crash) section) and select **Next**.
-1. In the **Advanced Configuration (Optional)** window, select **Breakpoints** under **Advanced Settings**. Don't change any other options in this window and keep them at their default values.
+1. Select **Breakpoints** under **Advanced Settings**. Don't change any other options in this window and keep them at their default values.
 1. In the **Configure Breakpoints** window, select **Add Breakpoint**.
 1. Select the first line that reads **Ntdll!ZwTerminateProcess**. Then, select **Full Userdump** in the **Action Type** dropdown and set a value between 3 and 5 in the **Action Limit** field. Once done, select **OK**.
 
