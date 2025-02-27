@@ -36,7 +36,7 @@ If you select **Show more**, you see the following error message:
 
 ## Cause
 
-The Dynamics 365 App for Outlook requires [server-side synchronization]((/power-platform/admin/set-up-server-side-synchronization-of-email-appointments-contacts-and-tasks)) to be enabled for your mailbox. This error occurs when your mailbox in Dynamics 365 isn't enabled for synchronization of appointments, contacts, tasks, or incoming emails using server-side synchronization.
+The Dynamics 365 App for Outlook requires [server-side synchronization](/power-platform/admin/set-up-server-side-synchronization-of-email-appointments-contacts-and-tasks) to be enabled for your mailbox. This error occurs when your mailbox in Dynamics 365 isn't enabled for synchronization of appointments, contacts, tasks, or incoming emails using server-side synchronization.
 
 > [!NOTE]
 > Your mailbox needs to have server-side synchronization configured correctly before the Dynamics 365 App for Outlook can be deployed to your mailbox. However, if the status of your mailbox in Dynamics 365 changes later to a failure status, you will receive this error until the mailbox is correctly configured and enabled again.
