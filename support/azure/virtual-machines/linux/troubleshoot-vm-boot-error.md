@@ -151,7 +151,7 @@ This error might be associated with one of the following issues:
 
 * GRUB boot loader points to an invalid disk or partition.
 
-  To resolve this issue, [reinstall GRUB and regenerate the GRUB configuration file-manually](#reinstall-grub-regenerate-the-grub-configuration-file-manually).
+  To resolve this issue, [reinstall GRUB and regenerate the GRUB configuration file-manually](#reinstall-grub-regenerate-grub-configuration-file).
 
 * OS disk partition table issues caused by human error.
 
@@ -179,7 +179,7 @@ To resolve this issue, follow these steps:
 
 2. Inspect the `/boot` file system contents and determine what's missing.
 
-3. If the GRUB configuration file is missing, [reinstall GRUB and regenerate the GRUB configuration file manually](#reinstall-grub-regenerate-the-grub-configuration-file-manually).
+3. If the GRUB configuration file is missing, [reinstall GRUB and regenerate the GRUB configuration file manually](#reinstall-grub-regenerate-grub-configuration-file).
 
 4. Verify that the file permissions in the `/boot` file system are OK. You can compare the permissions by using another VM that's running the same Linux version.
 
@@ -265,7 +265,7 @@ If the `/boot` partition is missing, re-create it by following these steps:
 
 3. If the partition table has **dos** as the partition table type, [re-create /boot partition in dos systems](#re-create-boot-partition-in-dos-systems). If the partition table has **GPT** as the partition table type, [re-create /boot partition in GPT systems](#re-create-boot-partition-in-gpt-systems).
 
-4. Make sure that the GRUB boot loader is installed by using the proper disk. You can follow the steps in [Reinstall GRUB and regenerate the GRUB configuration file manually](#reinstall-grub-regenerate-the-grub-configuration-file-manually) to get it installed and configured.
+4. Make sure that the GRUB boot loader is installed by using the proper disk. You can follow the steps in [Reinstall GRUB and regenerate the GRUB configuration file manually](#reinstall-grub-regenerate-grub-configuration-file) to get it installed and configured.
 
 5. Proceed with step 3 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to swap the OS disk.
 
@@ -467,7 +467,7 @@ To resolve this error, follow these steps:
     * [GRUB access in SUSE SLES](serial-console-grub-single-user-mode.md#grub-access-in-suse-sles)
     * [GRUB access in Oracle Linux](serial-console-grub-single-user-mode.md#grub-access-in-oracle-linux)
 
-3. [Reinstall GRUB and regenerate the GRUB configuration file manually](#reinstall-grub-regenerate-the-grub-configuration-file-manually).
+3. [Reinstall GRUB and regenerate the GRUB configuration file manually](#reinstall-grub-regenerate-grub-configuration-file).
 
     > [!NOTE]
     > If the missing file is `/boot/grub/menu.lst`, this error is for older OS versions (RHEL 6.x, Centos 6.x and Ubuntu 14.04). The commands will differ because GRUB version 1 is used in those systems instead. GRUB version 1 isn't covered in this article.
