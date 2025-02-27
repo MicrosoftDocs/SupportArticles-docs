@@ -31,8 +31,6 @@ SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plan
 
 - 9432 - This trace flag disables the fix that was introduced in SQL Server 2019 CU14.
 
-Microsoft is working on a fix for this issue and it will be available in a future CU.
-
 ## Improvements and fixes included in this update
 
 > [!IMPORTANT]

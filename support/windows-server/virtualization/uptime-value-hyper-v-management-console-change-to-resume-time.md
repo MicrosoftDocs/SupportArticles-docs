@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Virtualization and Hyper-V\Integration components, csstroubleshoot
+ms.custom:
+- sap:virtualization and hyper-v\integration components
+- pcy:WinComm Storage High Avail
 ---
 # The uptime value of the Hyper-V Management console changes to the resume time of the last pause
 

@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, yaimairi
-ms.custom: sap:Remote Desktop Services and Terminal Services\Web access (includes RemoteApp and desktop connections), csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\web access (includes remoteapp and desktop connections)
+- pcy:WinComm User Experience
 ---
 # Local computer behaves as if the Windows logo key is pressed after you switch from a Remote Desktop session
 

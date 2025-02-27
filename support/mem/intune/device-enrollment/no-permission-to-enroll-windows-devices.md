@@ -1,7 +1,7 @@
 ---
 title: You don't have permissions to enroll a Windows device in Intune
 description: Troubleshoot when you don't have the right privileges to enroll a Windows device in Microsoft Intune.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 search.appverid: MET150
 ms.custom: sap:Enroll Device - Windows\Advisory
 ms.reviewer: kaushika

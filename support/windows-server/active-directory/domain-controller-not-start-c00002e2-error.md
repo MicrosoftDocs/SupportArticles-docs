@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, nedpyle
-ms.custom: sap:Active Directory\Active Directory backup, restore, or disaster recovery, csstroubleshoot
+ms.custom:
+- sap:active directory\active directory backup,restore,or disaster recovery
+- pcy:WinComm Directory Services
 ---
 # Domain controller does not start, c00002e2 error occurs, or "Choose an option" is displayed
 

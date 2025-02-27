@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, joramos
-ms.custom: sap:Windows Security Technologies\Account lockouts, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\account lockouts
+- pcy:WinComm Directory Services
 ---
 # Administrator account password expiration behavior
 

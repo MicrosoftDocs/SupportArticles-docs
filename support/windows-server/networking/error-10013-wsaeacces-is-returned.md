@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, makotkat
-ms.custom: sap:Backup, Recovery, Disk, and Storage\File Server Resource Manager (FSRM), csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\file server resource manager (fsrm)
+- pcy:WinComm Storage High Avail
 ---
 # Error 10013 (WSAEACCES) is returned when a second bind to an excluded port fails in Windows
 

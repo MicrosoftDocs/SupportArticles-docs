@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Multipath IO (MPIO) and Storport, csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\multipath io (mpio) and storport
+- pcy:WinComm Storage High Avail
 ---
 # MPIO option not in Disk Management in Windows Server 2019
 

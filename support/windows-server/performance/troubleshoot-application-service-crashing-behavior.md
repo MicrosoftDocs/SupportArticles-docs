@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, warrenw, vjulio, holgerh, v-lianna
-ms.custom: sap:System Performance\App, Process, Service Performance (slow, unresponsive), csstroubleshoot
+ms.custom:
+- sap:system performance\app,process,service performance (slow,unresponsive)
+- pcy:WinComm Performance
 ---
 # The application or service crashing behavior troubleshooting guidance
 

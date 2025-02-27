@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, danma
-ms.custom: sap:Virtualization and Hyper-V\Storage configuration, csstroubleshoot
+ms.custom:
+- sap:virtualization and hyper-v\storage configuration
+- pcy:WinComm Storage High Avail
 ---
 # You receive an error message after you put the page file on another drive other than the drive C in a guest operating system
 

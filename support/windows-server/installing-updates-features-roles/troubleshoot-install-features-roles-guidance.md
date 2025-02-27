@@ -8,7 +8,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Servicing, Updates and Features on Demand\Issues installing Server Roles, csstroubleshoot
+ms.custom:
+- sap:windows servicing,updates and features on demand\issues installing server roles
+- pcy:WinComm Devices Deploy
 ---
 # Installing Windows features and roles troubleshooting guidance
 

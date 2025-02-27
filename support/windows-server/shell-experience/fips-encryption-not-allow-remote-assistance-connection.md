@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Remote Desktop Services and Terminal Services\Remote Assistance, csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\remote assistance
+- pcy:WinComm User Experience
 ---
 # Remote Assistance connection to Windows Server with FIPS encryption does not work
 

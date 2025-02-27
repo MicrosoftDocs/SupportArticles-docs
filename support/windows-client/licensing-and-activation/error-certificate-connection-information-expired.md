@@ -6,7 +6,9 @@ ms.date: 01/15/2025
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-nehaborkar, jasone, v-lianna
-ms.custom: sap:Windows Activation\Windows activation issues, csstroubleshoot, ikb2lmc
+ms.custom:
+- sap:windows activation\windows activation issues
+- pcy:WinComm Devices Deploy
 ---
 # Error "certificate in the connection information has expired" when accessing an AVD VM
 

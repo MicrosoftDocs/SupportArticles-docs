@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-jesits
-ms.custom: sap:Print, Fax, and Scan\Print Configuration or Management, csstroubleshoot
+ms.custom:
+- sap:print,fax,and scan\print configuration or management
+- pcy:WinComm User Experience
 ---
 # Print driver default settings are not inherited through "Point and Print" in Windows 10 Version 1709
 

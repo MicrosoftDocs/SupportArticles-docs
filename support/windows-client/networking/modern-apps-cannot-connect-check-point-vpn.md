@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: rnitsch, kaushika
-ms.custom: sap:Network Connectivity and File Sharing\Remote access (VPN, RRAS, CMAK and AOVPN), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\remote access (vpn,rras,cmak and aovpn)
+- pcy:WinComm Networking
 ---
 # Modern Apps can't connect when you use a Check Point VPN connection
 

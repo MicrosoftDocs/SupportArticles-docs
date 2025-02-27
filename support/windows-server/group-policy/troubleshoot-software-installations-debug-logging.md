@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, davidg
-ms.custom: sap:Group Policy\Deploying software through Group Policy, csstroubleshoot
+ms.custom:
+- sap:group policy\deploying software through group policy
+- pcy:WinComm Directory Services
 ---
 # How to troubleshoot software installations by using Windows application management debug logging
 

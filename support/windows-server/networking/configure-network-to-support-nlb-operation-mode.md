@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Network Connectivity and File Sharing\Network Load Balancing (NLB), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\network load balancing (nlb)
+- pcy:WinComm Networking
 ---
 # Configure network infrastructure to support the NLB operation mode
 

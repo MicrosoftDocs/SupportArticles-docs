@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Desktop and Shell Experience\Lock Screen or Screensaver, csstroubleshoot
+ms.custom:
+- sap:windows desktop and shell experience\lock screen or screensaver
+- pcy:WinComm User Experience
 ---
 # Monitor powers off after 1 minute when PC is locked
 

@@ -52,6 +52,8 @@
   items:
     - name: Troubleshoot issues opening Report Designer
       href: financial-reporting/issues-open-report-designer.md
+    - name: Troubleshoot report design and data issues
+      href: financial-reporting/simple-report.md  
     - name: Troubleshoot report designer issues with Event Viewer
       href: financial-reporting/troubleshoot-report-designer-with-event-viewer.md
     - name: '"Unable to Connect to the Financial reporting server" error'

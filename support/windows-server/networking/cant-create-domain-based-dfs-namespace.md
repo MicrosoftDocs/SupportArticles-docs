@@ -9,7 +9,9 @@ audience: itpro
 ms.topic: troubleshooting
 ms.service: windows-client
 ms.reviewer: kaushika, v-tappelgate, warrenw, albugn
-ms.custom: sap:Network Connectivity and File Sharing\DFS Namespace (Not Replication), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\dfs namespace (not replication)
+- pcy:WinComm Networking
 keywords: DFS Namespace
 ---
 

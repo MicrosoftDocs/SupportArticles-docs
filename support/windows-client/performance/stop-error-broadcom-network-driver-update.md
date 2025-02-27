@@ -6,7 +6,9 @@ ms.topic: troubleshooting
 audience: itpro
 manager: dcscontentpm
 ms.reviewer: kaushika,dougeby
-ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshooting, CI 113175
+ms.custom:
+- sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot)
+- pcy:WinComm Performance
 ---
 # Stop error occurs when you update the in-box Broadcom network adapter driver
 

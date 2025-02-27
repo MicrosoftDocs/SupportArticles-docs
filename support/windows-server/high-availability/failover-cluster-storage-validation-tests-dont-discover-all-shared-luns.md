@@ -8,7 +8,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-tappelgate
-ms.custom: sap:Clustering and High Availability\Errors when running the Validation Wizard, csstroubleshoot
+ms.custom:
+- sap:clustering and high availability\errors when running the validation wizard
+- pcy:WinComm Storage High Avail
 keywords: Windows failover cluster, SAN, shared LUNs, Validate a Configuration Wizard
 ---
 

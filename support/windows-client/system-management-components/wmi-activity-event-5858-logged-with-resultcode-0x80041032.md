@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, steved, cmyu, ssutari
-ms.custom: sap:System Management Components\WMI management and troubleshooting, csstroubleshoot
+ms.custom:
+- sap:system management components\wmi management and troubleshooting
+- pcy:WinComm User Experience
 ---
 # WMI-Activity Event 5858 logged frequently with ResultCode 0x80041032
 

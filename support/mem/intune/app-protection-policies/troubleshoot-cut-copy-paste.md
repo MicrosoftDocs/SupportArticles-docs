@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot restricting cut, copy, and paste between applications
 description: General steps to help troubleshoot restricting the cut, copy, and paste feature between applications.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 ms.reviewer: v-cshields, roblane
 search.appverid: MET150
 ms.custom: sap:Application Protection - Android\Data transfer to other apps

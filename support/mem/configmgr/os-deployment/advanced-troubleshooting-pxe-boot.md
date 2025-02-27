@@ -1,7 +1,7 @@
 ---
 title: Advanced troubleshooting for PXE boot issues
 description: Advance troubleshooting techniques to help administrators diagnose and resolve PXE boot failures in Configuration Manager.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 ms.custom: sap:Operating Systems Deployment (OSD)\PXE
 ms.reviewer: kaushika, frankroj
 ---

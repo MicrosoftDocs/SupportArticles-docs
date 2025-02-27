@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Desktop and Shell Experience\DPI and Display Issues, csstroubleshoot
+ms.custom:
+- sap:windows desktop and shell experience\dpi and display issues
+- pcy:WinComm User Experience
 ---
 # Some fonts may be scaled too large or too small when you change the DPI setting in Windows 7
 

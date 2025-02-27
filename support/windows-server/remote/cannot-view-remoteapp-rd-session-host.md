@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, nedpyle
-ms.custom: sap:Remote Desktop Services and Terminal Services\Web access (includes RemoteApp and desktop connections), csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\web access (includes remoteapp and desktop connections)
+- pcy:WinComm User Experience
 ---
 # You cannot view "RemoteApp" programs on an RD Session Host server by using RD Web Access
 

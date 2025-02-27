@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, milanmil, philh, herbertm
-ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory Certificate Services (ADCS), csstroubleshoot
+ms.custom:
+- sap:certificates and public key infrastructure (pki)\active directory certificate services (adcs)
+- pcy:WinComm Directory Services
 ---
 # Valid root CA certificates distributed using GPO might intermittently appear as untrusted
 

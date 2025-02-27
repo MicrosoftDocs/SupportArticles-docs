@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Servicing, Updates and Features on Demand\Issues installing Features on Demand(FoD), csstroubleshoot
+ms.custom:
+- sap:windows servicing,updates and features on demand\issues installing features on demand(fod)
+- pcy:WinComm Devices Deploy
 ---
 # Error message when installing RSAT: This update is not applicable to your computer
 

@@ -4,7 +4,7 @@ description: General troubleshooting guide for the Enrollment Status Page (ESP) 
 author: helenclu
 ms.author: luche
 ms.reviewer: kaushika, ybao
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 search.appverid: MET150
 ms.custom: sap:Autopilot\ESP - AccountSetup - Apps
 ---
@@ -256,4 +256,4 @@ ESP policy is set on a device at the time of enrollment. To disable the user ESP
   Description:  (enter a description)  
   OMA-URI:  ./Vendor/MSFT/DMClient/Provider/MS DM Server/FirstSyncStatus/SkipUserStatusPage  
   Data type:  Boolean  
-  Value:  True  
+  Value:  True

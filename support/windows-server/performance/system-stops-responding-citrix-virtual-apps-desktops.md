@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, jasone, v-lianna
-ms.custom: sap:System Performance\System Performance (slow, unresponsive, high CPU, resource leak), csstroubleshoot, ikb2lmc
+ms.custom:
+- sap:system performance\system performance (slow,unresponsive,high cpu,resource leak)
+- pcy:WinComm Performance
 ---
 # System stops responding when using Citrix Virtual Apps and Desktops
 

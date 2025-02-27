@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, eugenev, austinm
-ms.custom: sap:Print, Fax, and Scan\Print Configuration or Management, csstroubleshoot
+ms.custom:
+- sap:print,fax,and scan\print configuration or management
+- pcy:WinComm User Experience
 ---
 # How to Alter Behavior of Printers That Roam with Roaming Profiles
 

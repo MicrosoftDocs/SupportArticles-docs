@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, bobcombs, ajayps
-ms.custom: sap:Virtualization and Hyper-V\High availability virtual machines, csstroubleshoot
+ms.custom:
+- sap:virtualization and hyper-v\high availability virtual machines
+- pcy:WinComm Storage High Avail
 ---
 # Can't create a Hyper-V virtual switch on 64-bit versions of Windows 10
 

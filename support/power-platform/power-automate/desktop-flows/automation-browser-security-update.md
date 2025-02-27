@@ -2,7 +2,7 @@
 title: Browser Automation Security Update
 description: Provides security updates for the browser automation component in Microsoft Power Automate for desktop.
 ms.reviewer: nimoutzo, iopanag
-ms.date: 01/23/2025
+ms.date: 02/26/2025
 ms.custom: sap:Desktop flows\UI or browser automation
 ---
 # Security update for the browser automation component in Microsoft Power Automate for desktop
@@ -22,15 +22,16 @@ The **Launch automation browser** option in the [Launch new Internet Explorer](/
 
 To mitigate the issue, update your Power Automate for desktop to the following patched versions as soon as possible.
 
-- [2.46.184.25013](https://go.microsoft.com/fwlink/?linkid=2300767)
-- [2.47.126.25010](https://go.microsoft.com/fwlink/?linkid=2300573)
-- [2.48.164.25010](https://go.microsoft.com/fwlink/?linkid=2300574)
-- [2.49.182.25010](https://go.microsoft.com/fwlink/?linkid=2300662)
-- [2.50.139.25010](https://go.microsoft.com/fwlink/?linkid=2300768)
-- [2.51.349.24355](https://go.microsoft.com/fwlink/?linkid=2300789)
+- [2.46.185.25043](https://go.microsoft.com/fwlink/?linkid=2300767)
+- [2.47.127.25043](https://go.microsoft.com/fwlink/?linkid=2300573)
+- [2.48.165.25043](https://go.microsoft.com/fwlink/?linkid=2300574)
+- [2.49.183.25043](https://go.microsoft.com/fwlink/?linkid=2300662)
+- [2.50.140.25043](https://go.microsoft.com/fwlink/?linkid=2300768)
+- [2.51.367.25043](https://go.microsoft.com/fwlink/?linkid=2300789)
+- [2.52.66.25042](https://go.microsoft.com/fwlink/?linkid=2304734)
 
 > [!NOTE]
-> Starting with release 2.52, all future versions will include the security fix.
+> Starting with release 2.52.66.25042, all future versions will include the security fix.
 
 ## Impact of the patch
 

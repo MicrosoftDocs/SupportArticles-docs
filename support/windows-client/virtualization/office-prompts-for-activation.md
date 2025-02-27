@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Virtualization and Hyper-V\Configuration of virtual machine settings, csstroubleshoot
+ms.custom:
+- sap:virtualization and hyper-v\configuration of virtual machine settings
+- pcy:WinComm Storage High Avail
 ---
 # Office prompts for activation in Azure
 

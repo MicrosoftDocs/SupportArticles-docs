@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Network Connectivity and File Sharing\File Replication Technologies (FRS and DFSR), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\file replication technologies (frs and dfsr)
+- pcy:WinComm Networking
 ---
 # Recover from a DFSR database crash on designated primary member
 
