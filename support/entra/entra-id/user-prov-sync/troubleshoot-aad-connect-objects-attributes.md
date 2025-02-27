@@ -166,7 +166,7 @@ The best way to troubleshoot permissions is to use the "Effective Access" featur
 :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/advanced-security-settings.png" alt-text="Screenshot shows information under the Effective Access tab in Advanced Security Settings window.":::
 
 > [!important]
-> Troubleshooting AD permissions can be tricky because a change in ACLs does not take immediate effect. Always consider that such changes are subject to AD replication.
+> Troubleshooting AD permissions can be difficult because a change in ACLs does not take immediate effect. Always consider that such changes are subject to AD replication.
 >
 > For example:
 **Troubleshooting summary**
@@ -234,10 +234,10 @@ Troubleshooting summary
 
 Use the **Get-ADSyncConnector** cmdlet to retrieve the object types that are enabled on the Connector, as shown in the next image.
   
-```PowerShell
-$connectorName = "Contoso.com"
-(Get-ADSyncConnector | where Name -eq $connectorName).ObjectInclusionList`
-```
+  ```PowerShell
+  $connectorName = "Contoso.com"
+  (Get-ADSyncConnector | where Name -eq $connectorName).ObjectInclusionList`
+  ```
 
 The following list shows the object types that should be enabled by default (**publicFolder** object type is present only when the Mail Enabled Public Folder feature is enabled):
 
@@ -250,7 +250,10 @@ The following list shows the object types that should be enabled by default (**p
 
   To check for enabled attributes in ADDS Connector, use the Synchronization Manager, as shown in the next image, or run the following PowerShell cmdlet:
 
-  `(Get-ADSyncConnector | where Name -eq "Contoso.com").AttributeInclusionList`
+```PowerShell
+  $connectorName = "Contoso.com"
+  (Get-ADSyncConnector | where Name -eq $connectorName).AttributeInclusionList
+``` 
 
   :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/ad-connector-sync-manager.png" alt-text="Screenshot of AD Connector Synchronization Manager.":::
 
