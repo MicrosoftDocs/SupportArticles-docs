@@ -1,51 +1,48 @@
 ---
-# Required metadata
-# For more information, see https://review.learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata?branch=main
-# For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
-
 title: Error code AADSTS50173 - The provided grant has expired due to it being revoked
 description: Describes a problem and solution in which a user receives the error AADSTS50173 when trying to sign-in
-author:      custorod # GitHub alias
+author:      custorod
 ms.author: custorod
 ms.service: entra-id
 ms.topic: troubleshooting-problem-resolution
 ms.date:     02/21/2025
 ms.subservice: authentication
+ms.custom: sap:Issues Signing In to Applications
 ---
 
-# Error code AADSTS50173 - The provided grant has expired due to it being revoked
+# AADSTS50173 - The provided grant has expired due to it being revoked
 
 ## Symptoms
 
-When attempting to authenticate with Microsoft Entra ID, you may encounter the following error message:
+When users try to sign in to an application that uses Microsoft Entra ID authentication, they receive the following error message:
 
-```
-AADSTS50173: The provided grant has expired due to it being revoked, a fresh auth token is needed. The user might have changed or reset their password. The grant was issued on '{authTime}' and the TokensValidFrom date (before which tokens are not valid) for this user is '{validDate}'.
-```
+
+> `AADSTS50173: The provided grant has expired due to it being revoked, a fresh auth token is needed. The user might have changed or reset their password. The grant was issued on '{authTime}' and the TokensValidFrom date (before which tokens are not valid) for this user is '{validDate}'.`
+
 
 ## Cause
 
-This error occurs when the refresh token used for authentication has been revoked. This can happen due to several factors, including:
+This error occurs when the refresh token used for authentication has been revoked. This issue occurs if:
 
-- The user has changed or reset their password.
+- The user changed or reset their password.
 - The refresh token has expired.
 - The refresh token has been revoked by an administrator.
 
-For reference: 
-[Token Revocation in Microsoft Entra ID](/entra/identity-platform/refresh-tokens#token-revocation) 
-[Revoke user access in Microsoft Entra ID](/entra/identity/users/users-revoke-access) 
+For more information, see:
+
+- [Token Revocation in Microsoft Entra ID](/entra/identity-platform/refresh-tokens#token-revocation) 
+- [Revoke user access in Microsoft Entra ID](/entra/identity/users/users-revoke-access) 
 
 
 ## Resolution
 
 To resolve this issue, follow these steps:
 
-### Step 1: If you’re a user receiving this error 
+### For end users
 
-On the application being used, try to locate an option to re-authenticate and/or clear any cached token information. This can also be achieved by signing out and signing back in to the application (when applicable/available). 
+On the application being used, try to locate an option to re-authenticate and clear any cached token information. This can also be achieved by signing out and signing back in to the application (when applicable/available). 
 
-
-### Step 2: If you’re an application developer looking to address this error 
+### For application developers
 
 If the application is using [Microsoft Authentication Library (MSAL)](/entra/identity-platform/msal-overview), follow guidance regarding on how to [Handle errors and exceptions in MSAL](/entra/msal/dotnet/advanced/exceptions/msal-error-handling).
 
