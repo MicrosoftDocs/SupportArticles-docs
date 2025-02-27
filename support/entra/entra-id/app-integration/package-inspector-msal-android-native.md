@@ -3,7 +3,7 @@ title: Package Inspector for MSAL Android Native
 description: Introduces how to install and use the Package Inspector tool.
 ms.reviewer: markbukovich, v-weizhu
 ms.service: entra-id
-ms.date: 02/20/2025
+ms.date: 02/27/2025
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
 # Package Inspector for MSAL Android Native
@@ -54,7 +54,7 @@ There are two methods to install Package Inspector:
     :::image type="content" source="media/package-inspector-msal-android-native/get-from-version-control.png" alt-text="Screenshot that shows the 'Get From Version Control' option in Android Studio" lightbox="media/package-inspector-msal-android-native/get-from-version-control.png":::
 3. Ensure **Git** is selected at the top of the window, paste the Android MSAL repository URL `https://github.com/AzureAD/microsoft-authentication-library-for-android.git`, and then select **Clone**.
 
-    :::image type="content" source="media/package-inspector-msal-android-native/clone-msal-repository.png" alt-text="Screenshot that shows how to clone a Git repository in Android Studio" lightbox="media/package-inspector-msal-android-native/clone-msal-repository.png":::
+    :::image type="content" source="media/package-inspector-msal-android-native/clone-msal-repository.png" alt-text="Screenshot that shows how to clone a Git repository in Android Studio":::
 
 ### Option 2: Download Android MSAL repository and open it in Android Studio
 
@@ -63,10 +63,10 @@ There are two methods to install Package Inspector:
 3. Open Android Studio and close any open projects.
 4. Select **Open an Existing Project**.
 
-    :::image type="content" source="media/package-inspector-msal-android-native/open-existing-project-android-studio.png" alt-text="Screenshot that shows the 'Open an Existing Project' option in Android Studio" lightbox="media/package-inspector-msal-android-native/open-existing-project-android-studio.png":::
+    :::image type="content" source="media/package-inspector-msal-android-native/open-existing-project-android-studio.png" alt-text="Screenshot that shows the 'Open an Existing Project' option in Android Studio":::
 5. Select the root package **msal-android** for the Android MSAL repository. Then, select **OK**. 
 
-    :::image type="content" source="media/package-inspector-msal-android-native/select-root-package.png" alt-text="Screenshot showing selecting the root package in Android Studio" lightbox="media/package-inspector-msal-android-native/select-root-package.png":::
+    :::image type="content" source="media/package-inspector-msal-android-native/select-root-package.png" alt-text="Screenshot showing selecting the root package in Android Studio":::
 
     > [!NOTE]
     > - The default name of the root package is `microsoft-authentication-library-for-android-dev`. In this example, it's renamed `msal-android`.
@@ -78,10 +78,10 @@ There are two methods to install Package Inspector:
 2. On the left of the device drop-down list, there is another drop-down list. Select **package-inspector** from it.
 
     :::image type="content" source="media/package-inspector-msal-android-native/select-package-inspector.png" alt-text="Screenshot that shows the selection of package-inspector in Android Studio" lightbox="media/package-inspector-msal-android-native/select-package-inspector.png":::
-3. Select the green **play** button (indicated with a green circle on the right) to build, install, and run the package inspector on the selected device.
+3. Select the **play** button (indicated with a green circle on the right) to build, install, and run the package inspector on the selected device.
 4. Browse the list of packages in the Package Inspector app and select a package to view its signature hash. All accessible packages will appear in this list.
 
-    :::image type="content" source="media/package-inspector-msal-android-native/select-package-to-check-signature-hash.png" alt-text="Screenshot that shows package selection in the Package Inspector app" lightbox="media/package-inspector-msal-android-native/select-package-to-check-signature-hash.png":::
+    :::image type="content" source="media/package-inspector-msal-android-native/select-package-to-check-signature-hash.png" alt-text="Screenshot that shows package selection in the Package Inspector app":::
 
 ## Common issues
 
