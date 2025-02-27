@@ -9,7 +9,7 @@ ms.custom: sap:Operating Systems Deployment (OSD)\Task Sequence Step for Applyin
 
 ## Symptoms
 
-After you upgrade an operating system to Windows 11, version 24H2 by using a task sequence in Configuration Manager, the **Check online for updates from Microsoft Update** option is invisible and unavailable.
+After you upgrade an operating system to Windows 11, version 24H2 using a task sequence in Configuration Manager, the **Check online for updates from Microsoft Update** option becomes invisible and unavailable.
 
 ## Cause
 
@@ -20,7 +20,7 @@ Before the upgrade, the task sequence engine enables the following local group p
 > [!NOTE]
 > The group policy is located under **Local Computer Policy** > **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Windows Update** > **Manage updates offered from Windows Server Update Service**.
 
-After the upgrade is completed and the task sequence finishes, the task sequence then disables the group policy. This group policy is set via the following registry key:
+Once the upgrade is complete and the task sequence finishes, the task sequence disables the group policy. This group policy is controlled by the following registry key:
 
 - Registry key: `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate`
 - Value name: `DoNotConnectToWindowsUpdateInternetLocations`
@@ -32,4 +32,4 @@ However, when the registry value is set to `0`, the **Check online for updates f
 
 ## Resolution
 
-To fix this issue, set the state of the local group policy to **Not Configured** which removes the registry value (`DoNotConnectToWindowsUpdateInternetLocations`).
+To resolve this issue, change the state of the local group policy to **Not Configured**, which removes the registry value (`DoNotConnectToWindowsUpdateInternetLocations`).
