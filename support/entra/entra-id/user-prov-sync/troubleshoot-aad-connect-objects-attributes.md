@@ -538,23 +538,23 @@ Fortunately, the issues that affect these components usually generate an error i
 
 - **Mobile attribute with DirSyncOverrides**
 
-  When the Admin uses MSOnline or AzureAD PowerShell module, or if the user goes to the Office Portal and updates the **Mobile** attribute, the updated phone number will be overwritten in AzureAD despite the object being synced from on-premises AD (also known as **DirSyncEnabled**).
-
-  Together with this update, Microsoft Entra ID also sets a **DirSyncOverrides** on the object to flag that this user has the mobile phone number "overwritten" in Microsoft Entra ID. From this point on, any update to the mobile attribute that originates from on-premises will be ignored because this attribute will no longer be managed by on-premises AD.
-
-  For more information about the BypassDirSyncOverrides feature and how to restore synchronization of Mobile and otherMobile attributes from Microsoft Entra ID to on-premises Active Directory, see [How to use the BypassDirSyncOverrides feature of a Microsoft Entra tenant](/azure/active-directory/hybrid/how-to-bypassdirsyncoverrides).
+  When the Admin uses the legacy MSOnline or AzureAD PowerShell modules, or if the user goes to the Office Portal and updates the **Mobile** attribute, the updated phone number will be overwritten in Microsoft Entra ID despite the object being synced from on-premises AD (`onPremisesSyncEnabled=true`).
+  
+  Together with this update, Microsoft Entra ID also sets a DirSyncOverrides on the object to flag that this user has the mobile phone number "overwritten" in Microsoft Entra ID. From this point on, any update to the mobile attribute that originates from on-premises will be ignored because this attribute will no longer be managed by on-premises AD.
+  
+    For more information about the BypassDirSyncOverrides feature and how to restore synchronization of Mobile and otherMobile attributes from Microsoft Entra ID to on-premises Active Directory, see [How to use the BypassDirSyncOverrides feature of a Microsoft Entra tenant](/azure/active-directory/hybrid/how-to-bypassdirsyncoverrides).
 
 - **UserPrincipalName changes do not update in Microsoft Entra ID**
 
-   If the **UserPrincipalName** attribute is not updated in Microsoft Entra ID, while other attributes sync as expected, it's possible that a feature that's named [SynchronizeUpnForManagedUsers](/azure/active-directory/hybrid/how-to-connect-syncservice-features#synchronize-userprincipalname-updates) is not enabled on the tenant. This scenario occurs frequently.
-
-   Before this feature was added, any updates to the UPN that came from on-premises after the user was provisioned in Microsoft Entra ID and assigned a license were "silently" ignored. An admin would have to use MSOnline or Azure AD PowerShell to update the UPN directly in Microsoft Entra ID. After this feature is updated, any updates to UPN will flow to Microsoft Entra regardless of whether the user is licensed (managed).
-
-   > [!NOTE]
+   If the UserPrincipalName attribute is not updated in Microsoft Entra ID, while other attributes sync as expected, it's possible that a feature that's named [SynchronizeUpnForManagedUsers](/azure/active-directory/hybrid/how-to-connect-syncservice-features#synchronize-userprincipalname-updates) is not enabled on the tenant.
+  
+   Before this feature was added, any updates to the UPN that came from on-premises after the user was provisioned in Microsoft Entra ID and assigned a license were *silently* ignored. An admin would have to use the legacy MSOnline or AzureAD PowerShell to update the UPN directly in Microsoft Entra ID. After this feature is updated, any updates to UPN will flow to Microsoft Entra regardless of whether the user is licensed (managed).
+  
+     > [!NOTE]
    > After it's enabled, this feature cannot be disabled.
 
-   **UserPrincipalName** updates will work if the user is NOT licensed. However, without the [SynchronizeUpnForManagedUsers](/azure/active-directory/hybrid/how-to-connect-syncservice-features#synchronize-userprincipalname-updates) feature, **UserPrincipalName** changes after the user is provisioned and is assigned a licensed that will NOT be updated in Microsoft Entra ID. Notice that Microsoft does not disable this feature on behalf of the customer.
-
+   **UserPrincipalName** updates will work if the user is NOT licensed. However, without the [SynchronizeUpnForManagedUsers](/azure/active-directory/hybrid/how-to-connect-syncservice-features#synchronize-userprincipalname-updates) feature, UserPrincipalName changes after the user is provisioned and is assigned a licensed that will NOT be updated in Microsoft Entra ID. Notice that Microsoft does not disable this feature on behalf of customers.
+  
 - **Invalid characters and ProxyCalc internals**
 
    Issues that involve invalid characters that don't produce any sync error are more troublesome in **UserPrincipalName** and **ProxyAddresses** attributes because of the cascading effect in ProxyCalc processing that will **silently** discard the value synchronized from on-premises AD. This situation occurs as follows:
@@ -571,26 +571,29 @@ Fortunately, the issues that affect these components usually generate an error i
 
 - **ThumbnailPhoto attribute (KB4518417)**
 
-    There is a general misconception that after you sync **ThumbnailPhoto** from AD for the first time, you can no longer update it, which is only partly true.
-
-    Usually, the **ThumbnailPhoto** in Microsoft Entra ID is continually updated. However, an issue occurs if the updated picture is no longer retrieved from Microsoft Entra ID by the respective workload or partner (for example, EXO or SfBO). This issue causes the false impression that the picture was not synced from on-premises AD to Microsoft Entra ID.
-
-    Basic steps to troubleshoot ThumbnailPhoto
-
+    There is a general misconception that after you sync ThumbnailPhoto from AD for the first time, you can no longer update it, which is only partly true.
+  
+    Usually, the ThumbnailPhoto in Microsoft Entra ID is continually updated. However, an issue occurs if the updated picture is no longer retrieved from Microsoft Entra ID by the respective workload or partner (for example, EXO or SfBO). This issue causes the false impression that the picture was not synced from on-premises AD to Microsoft Entra ID.
+  
+    Basic steps to troubleshoot ThumbnailPhoto:
+  
    1. Make sure that the image is correctly stored in AD and doesn't exceed the size limit of 100 KB.
 
-   2. Check the image in the Accounts Portal or use **Get-AzureADUserThumbnailPhoto** because these methods read the **ThumbnailPhoto** directly from Microsoft Entra ID.
-
-   3. If the AD (or AzureAD) **thumbnailPhoto** has the correct image but is not correct on other online services, the following conditions might apply:
-
+  1. Check the image in the Accounts Portal or call [Get profilePhoto](/graph/api/profilephoto-get) via Graph.
+    
+  1. If the ADDS (or Entra ID) thumbnailPhoto has the correct image but it's not the correct image on other online services, the following conditions might apply:
+    
   - The user's mailbox contains an HD image and is not accepting low-resolution images from Microsoft Entra thumbnailPhoto. The solution is to directly update the user's mailbox image.
   - The user's mailbox image was updated correctly, but you're still seeing the original image. The solution is to wait at least six hours to see the updated image in the Office 365 User Portal or the Azure portal.
 
 ## Additional resources
 
 - [Troubleshooting Errors during synchronization](/azure/active-directory/hybrid/tshoot-connect-sync-errors)
+
 - [Troubleshoot object synchronization with Microsoft Entra Connect Sync](/azure/active-directory/hybrid/tshoot-connect-objectsync)
+
 - [Troubleshoot an object that is not synchronizing with Microsoft Entra ID](/azure/active-directory/hybrid/tshoot-connect-object-not-syncing)
+
 - [Microsoft Entra Connect Single Object Sync](/azure/active-directory/hybrid/how-to-connect-single-object-sync)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
