@@ -1,7 +1,7 @@
 ---
 title: Self-help diagnostics for Teams administrators
 manager: dcscontentpm
-ms.date: 12/03/2024
+ms.date: 02/27/2025
 audience: Admin|ITPro|Developer
 ms.topic: troubleshooting
 search.appverid:
@@ -96,7 +96,7 @@ The following tables list the diagnostics that are currently available in the Mi
 |Checks whether a user has the correct policies to enable the Teams Outlook add-in.|[Run Tests: Teams Add-in Missing in Outlook](https://aka.ms/TeamsAdd-inDiag)||[Resolve issues with Teams Meeting add-in for Outlook](../meetings/resolve-teams-meeting-add-in-issues.md)|
 |Checks whether the user is correctly configured to record a meeting in Teams.|[Run Tests: Meeting Recording](https://aka.ms/MeetingRecordingDiag)|[Teams Meeting Recording](https://testconnectivity.microsoft.com/tests/TeamsRecording/input)|[Teams cloud meeting recording](/microsoftteams/cloud-recording#meeting-recording-diagnostic-tools)<br/><br/>[Issues with meeting recordings](../meetings/troubleshoot-meeting-recording-issues.md)|
 |Checks whether a user account meets the requirements to schedule a Teams Meeting on behalf of a delegator.||[Teams Meeting Delegation](https://testconnectivity.microsoft.com/tests/TeamsMeetingDelegation/input)|[Resolve interaction issues between Teams and Exchange Server](../exchange-integration/teams-exchange-interaction-issue.md)|
-|Checks whether a user is properly configured to transcribe a meeting in Teams.|[Run Tests: Unable to transcribe a meeting in Teams](https://aka.ms/MeetingTranscribeDiag)|||
+|Checks whether a user account meets the requirements to transcribe a Teams meeting.|[Run Tests: Unable to transcribe a meeting in Teams](https://aka.ms/MeetingTranscribeDiag)||[Admins- Manage transcription and captions for Teams meetings](/microsoftteams/meeting-transcription-captions)|
 
 ### Presence
 
