@@ -44,20 +44,24 @@ Follow these steps as Office Add-ins are now using [Microsoft Edge WebView](http
 | Goole Chrome| [Clear cache & cookies in Goole Chrome](https://support.google.com/accounts/answer/32050) |
 
 > [!IMPORTANT]
-> Although other browsers might be installed on your computer, Outlook desktop always uses Internet Explorer to display web content, such as the content inside the Dynamics 365 App for Outlook. However, starting with Microsoft 365 version 16.0.11629, this is no longer the case. This means that Outlook desktop no longer relies solely on Internet Explorer for displaying web content and might use other browsers or web technologies instead.
+> Although other browsers might be installed on your computer, the Outlook desktop client always uses Internet Explorer to display web content, such as the content inside the Dynamics 365 App for Outlook. However, starting with Microsoft 365 version 16.0.11629, this is no longer the case. This means that Outlook desktop no longer relies solely on Internet Explorer for displaying web content and might use other browsers or web technologies instead.
 
 After clearing your browser cache, close all Internet Explorer and Outlook desktop windows. Ensure through Task Manager that no Internet Explorer processes are running.
 
-### Use the F12 chooser (not applicable for Windows 7)
+### Use the F12 IEchooser (not applicable for Windows 7)
 
-If this issue only appears in Outlook desktop and clearing the cache via Internet Options doesn't help, try clearing it via F12 chooser (not applicable for Windows 7):
+If this issue only appears in the Outlook desktop client and clearing the cache via Internet Options doesn't help, try clearing it via F12 IEchooser (not applicable for Windows 7):
 
-1. Open the Dynamics 365 App for Outlook in Outlook desktop.
-2. Open the **IEChooser.exe** in `%WindowsFolder%\System32\F12` (for example: `C:\Windows\System32\F12`).
-3. Select **Dynamics 365**.
+1. Open the Dynamics 365 App for Outlook in the Outlook desktop client.
+2. Open the **IEChooser.exe** located in `%WindowsFolder%\System32\F12` (for example: `C:\Windows\System32\F12`).
+3. In the **Choose target to debug** window, select **Dynamics 365**.
 4. Select the **Network** tab and then select the **Clear cache** button.
 
 After completing the steps above, reopen Outlook and the Dynamics 365 App for Outlook to check if the issue is resolved.
+
+#### More information
+
+[Debug a task pane add-in using the F12 tools](/office/dev/add-ins/testing/debug-add-ins-using-f12-tools-ie#debug-a-task-pane-add-in-using-the-f12-tools)
 
 ### For Mac users
 
