@@ -1,12 +1,11 @@
 ---
-title: Buttons such as Track and Set Regarding are missing
-description: Buttons such as Track and Set Regarding are missing in Microsoft Dynamics 365 App for Outlook. Provides a resolution.
+title: Track and Set Recording Icons are Missing
+description: Solves the issue that Track and Set Recording icons are missing in Microsoft Dynamics 365 App for Outlook.
 ms.reviewer: 
-ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 02/27/2025
 ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
-# Buttons such as Track and Set Regarding are missing in Microsoft Dynamics 365 App for Outlook
+# Track and Set Recording icons are missing in Microsoft Dynamics 365 App for Outlook
 
 This article provides a resolution for the issue that icons for buttons such as Track and Set Regarding are missing in Microsoft Dynamics 365 App for Outlook.
 
