@@ -32,33 +32,27 @@ For a better understanding of this article, first read the following prerequisit
 - [Troubleshoot an object that is not synchronizing with Microsoft Entra ID](/azure/active-directory/hybrid/tshoot-connect-object-not-syncing)
 - [Troubleshoot object synchronization with Microsoft Entra Connect Sync](/azure/active-directory/hybrid/tshoot-connect-objectsync)
 
-## Bad troubleshooting practices
+## Ineffective troubleshooting practices
 
-The DirSyncEnabled flag in Microsoft Entra ID controls whether the tenant is prepared to accept synchronization of objects from on-premises AD.
-We've seen many customers fall into the habit of disabling DirSync on the tenant while troubleshooting object or attribute synchronization issues. It's easy to turn off directory synchronization by running the following PowerShell cmdlet:
+The `onPremisesSyncEnabled` attribute in Microsoft Entra ID controls whether the tenant is prepared to accept synchronization of objects from on-premises AD DS.
+We've seen many customers fall into the habit of disabling DirSync on the tenant while troubleshooting object or attribute synchronization issues. It's easy to turn off directory synchronization by using Graph or PowerShell, however this process can be very disruptive.
 
-``` PowerShell
-Set-MsolDirSyncEnabled -EnableDirSync $false "Please DON'T and keep reading!"
-```
+Disabling DirSync at the tenant level, triggers a complex and lengthy backend operation to transfer the Source of Authority (SoA) from local Active Directory to Microsoft Entra ID and Exchange Online for all the synced objects on the tenant. This operation is necessary to convert each object from `onPremisesSyncEnabled=True` to cloud-only objects (`onPremisesSyncEnabled=<null>`), and clean up all the shadow properties that are synced from on-premises AD DS (for example, ShadowUserPrincipalName and ShadowProxyAddresses). Depending on the size of the tenant, this operation can take more than 72 hours. Also, it's not possible to predict when the operation will finish. Never use this method to troubleshoot a sync issue because this will cause additional harm and won't fix the root cause. You'll be blocked from enabling DirSync again until this disablement operation is complete. Also, after you re-enable DirSync, the Entra Connect server must match again all the on-premises objects with existent Microsoft Entra ID objects.
 
-[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
-
-However, this can be catastrophic because it triggers a complex and lengthy back-end operation to transfer SoA from local Active Directory to Microsoft Entra ID / Exchange Online for all the synced objects on the tenant. This operation is necessary to convert each object from DirSyncEnabled to cloud-only, and clean up all the shadow properties that are synced from on-premises AD (for example, ShadowUserPrincipalName and ShadowProxyAddresses). Depending on the size of the tenant, this operation can take more than 72 hours. Also, it's not possible to predict when the operation will finish. Never use this method to troubleshoot a sync issue because this will cause additional harm and won't fix the issue. You'll be blocked from enabling DirSync again until this disabling operation is complete. Also, after you re-enable DirSync, AADC must again match all the on-premises objects with existent Microsoft Entra objects. This process can be disruptive.
-
-The only scenarios in which this command is supported to disable DirSync are as follows:
+The only scenarios where it's supported to disable DirSync are:
 
 - You are decommissioning your on-premises synchronization server, and you want to continue managing your identities entirely from the cloud instead of from hybrid identities.
 - You have some synced objects in the tenant that you want to keep as cloud-only in Microsoft Entra ID and remove from on-premises AD permanently.
-- You are currently using a custom attribute as the SourceAnchor in AADC (for example, employeeId), and you are re-installing AADC to start using **ms-Ds-Consistency-Guid/ObjectGuid** as the new SourceAnchor attribute (or vice versa).
-- You have some scenarios that involve risky mailbox and tenant migration strategies.
+- You are currently using a custom attribute as the SourceAnchor in Entra Connect (for example, employeeId), and you are re-installing AADC to start using **ms-Ds-Consistency-Guid/ObjectGuid** as the new SourceAnchor attribute (or vice versa).
+- There are scenarios in your mailbox migration strategy that could lead to potential issues.
 
-In some situations, you might have to temporarily stop synchronization or manually control AADC sync cycles. For example, you might have to stop synchronization to be able to run one sync step at a time. However, instead of disabling DirSync, you can stop only the sync scheduler by running the following cmdlet:
+In some situations, you might have to temporarily stop synchronization or manually control Entra Connect sync cycles. For example, you might have to pause synchronization to be able to run one sync step at a time. Instead of disabling DirSync, you can just stop the sync scheduler by running the following cmdlet:
 
 ``` PowerShell
 Set-ADSyncScheduler -SyncCycleEnabled $false
 ```
 
-And when you're ready, manually start a sync cycle by running the following cmdlet:
+And when you're ready, restore the normal sync scheduler by running the following cmdlet:
 
 ``` PowerShell
 Start-ADSyncSyncCycle
