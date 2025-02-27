@@ -322,20 +322,28 @@ The synchronization between ADCS and MV occurs on the delta/full synchronization
 
 - **Export the object to XML**
 
-  For a more detailed analysis (or for offline analysis), you can collect all the database data that's related to the object by using the **Export-ADSyncObject** cmdlet. This exported information will help determine which rule is filtering out the object. In other words, which Inbound Scoping Filter in the Provisioning Sync Rules is preventing the object from being projected to the MV.
+  For a more detailed analysis (or for offline analysis), you can collect all the database data that's related to the object by using `Export-ADSyncToolsObjects` cmdlet. This exported information will help determine which rule is filtering out the object. In other words, which Inbound Scoping Filter in the Provisioning Sync Rules is preventing the object from being projected to the MV.
 
-  Here are some examples of **Export-ADsyncObject** syntax:
+  Here are some examples of `Export-ADSyncToolsObjects` syntax:
 
-  - `Import-Module "C:\Program Files\Microsoft Azure Active Directory Connect\Tools\AdSyncTools.psm1"`
-  - `Export-ADsyncObject -DistinguishedName 'CN=TestUser,OU=Sync,DC=Domain,DC=Contoso,DC=com' -ConnectorName 'Domain.Contoso.com'`
-  - `Export-ADsyncObject -ObjectId '{46EBDE97-7220-E911-80CB-000D3A3614C0}' -Source Metaverse -Verbose`
+```PowerShell
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+Install-Module ADSyncTools
+
+Import-Module ADSyncTools
+Export-ADSyncToolsObjects -DistinguishedName 'CN=TestUser,OU=Sync,DC=Contoso,DC=com' -ConnectorName 'Contoso.com' -ExportSerialized
+Export-ADSyncToolsObjects -ObjectId '{46EBDE97-7220-E911-80CB-000D3A3614C0}' -Source Metaverse -ExportSerialized
+```
+
+> [!TIP]
+> To read the exported data use `Import-Clixml <filename>.xml`
 
 #### Troubleshooting summary (objects)
 
 - Check the scoping filters on the "In From AD" inbound provisioning rules.
 - Create a preview of the object.
 - Run a full sync cycle.
-- Export the object data by using the **Export-ADSyncObject** script.
+- Export the object data by using the `Export-ADSyncToolsObjects` cmdlet.
 
 #### Troubleshooting ADCS > MV for attributes
 
@@ -369,10 +377,10 @@ The synchronization between ADCS and MV occurs on the delta/full synchronization
 
    If you can't determine why the sync rule missing in the ADCS object's lineage, run a preview by using **Generate Preview** and **Commit Preview** for a full synchronization of the object. If the attribute is updated in the MV and has a preview, then a full sync cycle should fix the issue for other objects in the same situation.
 
-5. **Export the object to XML**
+1. **Export the object to XML**
 
-   For a more detailed analysis or offline analysis, you can collect all the database data that's related to the object by using the **Export-ADSyncObject** script. This exported information can help you determine which sync rule or transformation rule missing on the object that's preventing the attribute from being projected to the MV (see the **Export-ADSyncObject** examples earlier in this article).
-
+   For a more detailed analysis or offline analysis, you can collect all the database data that's related to the object by using `Export-ADSyncToolsObjects` cmdlet. This exported information can help you determine which sync rule or transformation rule missing on the object that's preventing the attribute from being projected to the MV (see the `Export-ADSyncToolsObjects` examples earlier in this article).
+   
 #### Troubleshooting summary (for attributes)
 
 - Identify the correct sync rules and transformation rules responsible for flowing the attribute to the MV.
@@ -388,7 +396,7 @@ If you have to further debug the ADSync engine (also known as the MiiServer) in 
 
 - Synchronization Service Manager UI
 - Synchronization Rules Editor
-- Export-ADsyncObject script
+- Export-ADSyncToolsObjects cmdlet
 - Start-ADSyncSyncCycle -PolicyType Initial
 - ETW tracing SyncRulesPipeline (miiserver.exe.config)
 
@@ -428,22 +436,30 @@ The synchronization between MV and AADCS occurs in the delta/full synchronizatio
 
    Select **Preview** > **Generate Preview** > **Commit a Preview** to determine whether the object connects to AADCS. If so, then a full sync cycle should fix the issue for other objects in the same situation.
 
-4. **Export the object to XML**
+1. **Export the object to XML**
 
-   For a more detailed analysis or offline analysis, you can collect all the database data that's related to the object by using the **Export-ADSyncObject** script. This exported information, together with the (outbound) sync rules configuration, can help determine which rule is filtering out the object, and can determine which outbound scoping filter in the provisioning sync rules is preventing the object from connecting with the AADCS).
+   For a more detailed analysis or offline analysis, you can collect all the database data that's related to the object by using `Export-ADSyncToolsObjects` cmdlet. This exported information, together with the (outbound) sync rules configuration, can help determine which rule is filtering out the object, and can determine which outbound scoping filter in the provisioning sync rules is preventing the object from connecting with the AADCS).
+   
+   Here are some examples of `Export-ADSyncToolsObjects` syntax:
 
-   Here are some examples of **Export-ADsyncObject** syntax:
+```PowerShell
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+Install-Module ADSyncTools
 
-   - `Import-Module "C:\Program Files\Microsoft Azure Active Directory Connect\Tools\AdSyncTools.psm1"`
-   - `Export-ADsyncObject -ObjectId '{46EBDE97-7220-E911-80CB-000D3A3614C0}' -Source Metaverse -Verbose`
-   - `Export-ADsyncObject -DistinguishedName 'CN={2B4B574735713744676B53504C39424D4C72785247513D3D}' -ConnectorName 'Contoso.onmicrosoft.com - AAD'`
+Import-Module ADSyncTools
+Export-ADSyncToolsObjects -DistinguishedName 'CN=TestUser,OU=Sync,DC=Contoso,DC=com' -ConnectorName 'Contoso.com' -ExportSerialized
+Export-ADSyncToolsObjects -ObjectId '{46EBDE97-7220-E911-80CB-000D3A3614C0}' -Source Metaverse -ExportSerialized
+```
+
+> [!TIP]
+> To read the exported data use `Import-Clixml <filename>.xml`
 
 #### Troubleshooting summary for objects
 
 - Check the scoping filters on the "Out to Microsoft Entra ID" outbound provisioning rules.
 - Create a preview of the object.
 - Run a full sync cycle.
-- Export the object data by using the **Export-ADSyncObject** script.
+- Export the object data by using the `Export-ADSyncToolsObjects` cmdlet.
 
 #### Troubleshooting MV to AADCS for attributes
 
@@ -471,7 +487,7 @@ The synchronization between MV and AADCS occurs in the delta/full synchronizatio
 
 5. **Export the object to XML**
 
-   For a more detailed analysis or offline analysis, you can collect all the database data that's related to the object by using the "Export-ADSyncObject" script. This exported information, together with the (outbound) sync rules configuration, can help you determine which sync rule or transformation rule is missing from the object that's preventing the attribute from flowing to AADCS (see the "Export-ADSyncObject" examples earlier).
+   For a more detailed analysis or offline analysis, you can collect all the database data that's related to the object by using `Export-ADSyncToolsObjects` cmdlet. This exported information, together with the (outbound) sync rules configuration, can help you determine which sync rule or transformation rule is missing from the object that's preventing the attribute from flowing to AADCS (see the `Export-ADSyncToolsObjects` examples earlier).
 
 #### Troubleshooting summary for attributes
 
@@ -488,11 +504,11 @@ If you have to further debug the ADSync engine (also known as the MiiServer) in 
 
 - Synchronization Service Manager UI
 - Synchronization Rules Editor
-- Export-ADsyncObject script
+- Export-ADSyncObjects cmdlet
 - Start-ADSyncSyncCycle -PolicyType Initial
 - ETW tracing SyncRulesPipeline (miiserver.exe.config)
 
-## Step 4: Synchronization between AADCS and AzureAD
+## Step 4: Synchronization between AADCS and Entra ID
 
 :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/sync-aadcs-azuread.png" alt-text="Screenshot of the Sync flow chart between A A D C S and Microsoft Entra ID.":::
 
