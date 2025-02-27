@@ -27,7 +27,7 @@ productDirectory:
           text: Microsoft 365 Enterprise
         - url: ../admin/o365-admin-welcome.yml
           text: Microsoft 365 admin center
-        - url: ../compliance/microsoft-365-compliance-welcome.yml
+        - url: ../purview/microsoft-purview-welcome.yml
           text: Microsoft Purview
         - url: ../security/microsoft-365-security-welcome.yml
           text: Microsoft 365 Security
@@ -116,14 +116,6 @@ productDirectory:
           text: Microsoft Viva Pulse  
         - url: /viva/troubleshoot/viva-suite-administration/viva-suite-administration-welcome
           text: Microsoft Viva Suite Administration
-    # Card
-    - title: Endpoint management
-      imageSrc: /media/logos/logo-ms-social.png 
-      links:
-        - url: /troubleshoot/mem/configmgr/welcome-configuration-manager
-          text: Configuration Manager
-        - url: /troubleshoot/mem/intune/welcome-intune
-          text: Microsoft Intune
 
 # additionalContent section (optional)
 # Card with summary style

@@ -47,7 +47,7 @@ In this case, the device is having problems contacting the Office Licensing Serv
 
 ## Transition from subscription licensing or shared computer activation to device-based licensing
 
-If Microsoft 365 Apps are already installed and activated with user-based subscription licensing or shared computer activation, you will need to reset the license state on the device before it will transition over to device-based licensing. To reset the activation state, see [Reset Microsoft 365 Apps for enterprise activation state](/office/troubleshoot/activation/reset-office-365-proplus-activation-state).
+If Microsoft 365 Apps are already installed and activated with user-based subscription licensing or shared computer activation, you need to reset the license state on the device before it will transition over to device-based licensing. To reset the activation state, see [Reset activation state for Microsoft 365 Apps for enterprise](/office/troubleshoot/activation/reset-office-365-proplus-activation-state).
 
 Make sure the device has access to the internet or that your firewall isn't preventing access to the Office licensing service. For more information about firewall settings, see [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
 

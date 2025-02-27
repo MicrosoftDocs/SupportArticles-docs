@@ -1,9 +1,9 @@
 ---
-title: Resolve issues when accessing Viva Glint survey results as a manager
+title: Resolve issues when accessing Viva Glint survey results
 description: Resolves some common issues that you might encounter when you try to view survey results for your team.
 manager: dcscontentpm
 ms.reviewer: aweixelman
-ms.date: 10/15/2024
+ms.date: 02/13/2025
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
@@ -13,22 +13,23 @@ ms.custom:
   - CI 195105
 ---
 
-# Resolve issues when accessing Viva Glint survey results as a manager
+# Resolve issues when accessing Viva Glint survey results
 
-Microsoft Viva Glint survey programs enable your organization to collect data and listen to feedback about employee job satisfaction. To access your Viva Glint dashboard as a manager in your organization, sign in by using one of the following links based on the region of your organization:  
+Microsoft Viva Glint survey programs enable your organization to collect data and review feedback about employee job satisfaction. To access your Viva Glint dashboard as a leader or manager in your organization, sign in by using one of the following links, as appropriate for the region of your organization:  
 
 - US - [http://app.us1.glint.cloud.microsoft](http://app.us1.glint.cloud.microsoft)
 - EU - [http://app.eu1.glint.cloud.microsoft](http://app.eu1.glint.cloud.microsoft)
 
-After you sign in, you might occasionally encounter issues, such as unexpected connection or maintenance messages, when you try to view results for your team. This article lists some common issues and the steps to resolve them.
+After you sign in, you might occasionally encounter such issues as unexpected connection or maintenance messages, when you try to view results for your team. This article lists some common issues and the steps to resolve them.
+
+To successfully access Viva Glint, your user account must meet the following requirements:
+
+- It must exist in Microsoft Entra and have the user type set to **Member**. For more information about how administrators can set up access, see [set up access to Viva Glint with Microsoft Entra ID](/viva/glint/setup/access-with-azure-ad).
+- It must exist in the Viva Glint app, be a member of the **Active Employees** role, and have the employee status set to **ACTIVE**.
 
 ## No access to live surveys
 
 Viva Glint has two levels of reporting access. Live access is usually restricted to admins, while phased access is recommended for managers and Human Resources Business Partners (HRBPs). As a manager, you can access only phased surveys. For more information, see [Grant live versus phased access in Viva Glint reporting](/viva/glint/setup/live-versus-phased-access).
-
-## No access because of monthly maintenance
-
-Viva Glint undergoes [monthly maintenance](/viva/glint/setup/monthly-release-dates) to release new features, enhancements, and fixes. If you receive a maintenance message when you try to view your results, wait one day, and then access your dashboard again.
 
 ## No Viva Glint access
 
@@ -38,7 +39,7 @@ When you try to sign in to Viva Glint, you receive the following error message:
 
 You see this error message if you don't have permission to access the Viva Glint app.
 
-To resolve the issue, ask your Glint admin for permission to access the Viva Glint app.
+To resolve the issue, ask your Viva Glint admin for the missing permission.
 
 ## No access to survey reports
 
@@ -53,11 +54,11 @@ The resolve the issue, contact your Viva Glint admin.
 
 You receive the following error message in the dashboard:
 
-> You don’t have enough respondents to see your team's results, but you can still have a successful ACT Conversation.
+> You don't have enough respondents to see your team's results, but you can still have a successful ACT Conversation.
 
 This error occurs in one of the following situations:
 
-- The number of respondents is below the [confidentiality threshold](/viva/glint/setup/quick-guide-confidentiality) of five.
+- The number of respondents is below the [confidentiality threshold](/viva/glint/setup/quick-guide-confidentiality) of five people.
 - You don't have access to a data segment to view the results.
 
 To resolve the issue, select the appropriate solution for your situation:
@@ -67,18 +68,33 @@ To resolve the issue, select the appropriate solution for your situation:
 
 ## Incorrect team information
 
-Recent changes to your team aren’t shown in your Viva Glint dashboard. For example, new members have joined your team, but this change isn't reflected in the dashboard.
+Recent changes to your team aren't shown in your Viva Glint dashboard. For example, new members have joined your team, but this change isn't reflected in the dashboard.
 
 This issue occurs if employee data wasn't updated before a survey was launched.
 
 To resolve the issue, check whether the Viva Glint admin can update your results data.
 
-## No connection to the Glint service
+## Unable to connect to the Glint service
 
 You receive the following error message:
 
 > Sorry, we are unable to connect to the Glint service. Please check your network connection and try again.
 
-This error might occur if an issue prevents matching your information between the Viva Glint app and Microsoft Entra ID.
+This error might occur if an issue prevents matching your user principal name (UPN) and email address between the Viva Glint app and Microsoft Entra ID. 
 
-To resolve the issue, ask your Viva Glint admin to update the data so that it matches across the two systems.
+To resolve the issue, ask your Viva Glint admin to update the data so that it matches across both systems. 
+
+## Repeatedly signed out of Viva Glint 
+
+If you repeatedly get signed out of Viva Glint, try the following steps in the given order. If the issue persists after any step, continue to the next step. 
+
+1. Contact your Microsoft Entra admin to verify that your UPN and email address match between Viva Glint and Microsoft Entra ID.
+1. Make sure that you have only one active Viva Glint session open in your web browser. If you have multiple sessions, sign out of all sessions, and close all browser tabs and windows. Then, start a new session. 
+1. Check whether you're signed out because of [an inactivity timeout](/viva/glint/setup/access-glint#session-timeout). Viva Glint automatically signs out users after 30 minutes of inactivity. It prompts users to continue their session after the first 20 minutes. 
+1. Check the Glint link that you bookmarked to make sure that it doesn't contain any extra text, such as "/config" or "/dashboard."  Use one of the following links, as appropriate for your region: 
+
+   - US - [http://app.us1.glint.cloud.microsoft](http://app.us1.glint.cloud.microsoft)
+   - EU - [http://app.eu1.glint.cloud.microsoft](http://app.eu1.glint.cloud.microsoft)
+1. Contact your Microsoft Entra admin to determine whether [idle session timeout](/microsoft-365/admin/manage/idle-session-timeout-web-apps) is enabled for your organization. If it's enabled, you must select to stay signed in when you receive a notification.  
+
+If you still experience logout issues, contact your Viva Glint admin for further assistance from Microsoft 365 Support.

@@ -293,6 +293,8 @@
           href: ../installation/install-outlook-latest-updates.md
         - name: Leave a copy of the message on the server is missing
           href: ../installation/enable-leave-a-copy-of-the-message-on-the-server-outlook.md
+        - name: Map classic Outlook policies to new Outlook
+          href: ../installation/map-classic-outlook-policies-to-new-outlook.md
         - name: Planning considerations
           href: ../installation/plan-outlook-2016-deployment.md
         - name: Remove the Get and set up Outlook Mobile app on my phone option
@@ -465,6 +467,8 @@
           href: ../security/results-for-advanced-diagnostic-indicate-offline-scan-was-forced.md
         - name: Can't add sender's domain to Blocked Senders list
           href: ../security/no-shortcut-menu-command-to-add-senders-domain-to-blocked.md
+        - name: '"Conflicting or unsupported encryption" warning when sending an encrypted message'
+          href: ../security/outlook-warning-dialog-when-sending-smime-messages.md
         - name: DLP Policy Tip notifications are not displayed
           href: ../security/can't-display-dlp-policytip.md
         - name: DLP policy tips for PDF attachments aren't shown
