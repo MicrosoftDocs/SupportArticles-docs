@@ -25,7 +25,6 @@ After the upgrade is completed and the task sequence finishes, the task sequence
 `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\DoNotConnectToWindowsUpdateInternetLocations`
 
 - `1` = **Enabled**
-
 - `0` = **Disabled**
 
 However, when the registry value is set to `0`, the **Check online for updates from Microsoft Update** option is hidden in Windows 11, version 24H2.
