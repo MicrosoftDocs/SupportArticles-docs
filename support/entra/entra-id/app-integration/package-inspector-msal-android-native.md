@@ -79,6 +79,8 @@ There are two methods to install Package Inspector:
 
     :::image type="content" source="media/package-inspector-msal-android-native/select-package-inspector.png" alt-text="Screenshot that shows the selection of package-inspector in Android Studio" lightbox="media/package-inspector-msal-android-native/select-package-inspector.png":::
 3. Select the **play** button (indicated with a green circle on the right) to build, install, and run the package inspector on the selected device.
+
+    :::image type="content" source="media/package-inspector-msal-android-native/select-package-inspector.png" alt-text="Screenshot that shows the selection of package-inspector in Android Studio" lightbox="media/package-inspector-msal-android-native/select-play-button.png":::
 4. Browse the list of packages in the Package Inspector app and select a package to view its signature hash. All accessible packages will appear in this list.
 
     :::image type="content" source="media/package-inspector-msal-android-native/select-package-to-check-signature-hash.png" alt-text="Screenshot that shows package selection in the Package Inspector app":::
