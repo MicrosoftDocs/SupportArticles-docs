@@ -82,7 +82,7 @@ To work around this issue, use one of the following methods:
 
 - For a new VM deployment, if it can be part of a different availability set, create the VM in a different availability set (in the same region or zone). This new VM can then be added to the same virtual network.
 
-- Consider resizing the VM to a different size that might have more availability in the region or zone. To ensure that the VM sizes are supported in your availability set, use [availability sets - List Available Sizes - REST API](/troubleshoot/azure/virtual-machines/windows/virtual-machines-availability-set-supportability).
+- Consider resizing the VM to a different size that might have more availability in the region or zone. To ensure that the VM sizes are supported in your availability set, use [availability sets - List Available Sizes - REST API](virtual-machines-availability-set-supportability.md).
 
 - Stop (deallocate) all VMs in the same availability set, and then start all applicable VMs in a batch to allow the allocation from all available clusters, rather than just the cluster where the availability set is currently allocated.
   
@@ -110,7 +110,7 @@ To work around this issue, use one of the following methods:
 
 - Resize the VMs
 
-  Consider resizing the VM to a different size that might have more availability in the region or zone. To ensure that the VM sizes are supported in your Availability Set, use [Availability Sets - List Available Sizes - REST API](/troubleshoot/azure/virtual-machines/windows/virtual-machines-availability-set-supportability).
+  Consider resizing the VM to a different size that might have more availability in the region or zone. To ensure that the VM sizes are supported in your Availability Set, use [Availability Sets - List Available Sizes - REST API](virtual-machines-availability-set-supportability.md).
 
 - Change the region or zone
 
