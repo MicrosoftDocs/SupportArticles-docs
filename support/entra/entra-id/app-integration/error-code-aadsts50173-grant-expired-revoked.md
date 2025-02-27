@@ -16,7 +16,6 @@ ms.custom: sap:Issues Signing In to Applications
 
 When users try to sign in to an application that uses Microsoft Entra ID authentication, they receive the following error message:
 
-
 > `AADSTS50173: The provided grant has expired due to it being revoked, a fresh auth token is needed. The user might have changed or reset their password. The grant was issued on '{authTime}' and the TokensValidFrom date (before which tokens are not valid) for this user is '{validDate}'.`
 
 
@@ -24,9 +23,9 @@ When users try to sign in to an application that uses Microsoft Entra ID authent
 
 This error occurs when the refresh token used for authentication has been revoked. This issue occurs if:
 
-- The user changed or reset their password.
-- The refresh token has expired.
-- The refresh token has been revoked by an administrator.
+- The user changes or resets their password.
+- The refresh token expires.
+- An administrator revokes the refresh token.
 
 For more information, see:
 
@@ -40,13 +39,13 @@ To resolve this issue, follow these steps:
 
 ### For end users
 
-On the application being used, try to locate an option to re-authenticate and clear any cached token information. This can also be achieved by signing out and signing back in to the application (when applicable/available). 
+On the application being used, try to locate an option to reauthenticate and clear any cached token information. This can also be achieved by signing out and signing back in to the application (when applicable/available). 
 
 ### For application developers
 
 If the application is using [Microsoft Authentication Library (MSAL)](/entra/identity-platform/msal-overview), follow guidance regarding on how to [Handle errors and exceptions in MSAL](/entra/msal/dotnet/advanced/exceptions/msal-error-handling).
 
-If the application is not using [Microsoft Authentication Library (MSAL)](/entra/identity-platform/msal-overview), consult information about how to [Handle errors and exceptions in MSAL](/entra/msal/dotnet/advanced/exceptions/msal-error-handling) and try to implement a similar approach on the application. The goal is to request user to re-authenticate and obtain a fresh token.  
+If the application isn't using [Microsoft Authentication Library (MSAL)](/entra/identity-platform/msal-overview), consult information about how to [Handle errors and exceptions in MSAL](/entra/msal/dotnet/advanced/exceptions/msal-error-handling) and try to implement a similar approach on the application. The goal is to request user to re-authenticate and obtain a fresh token.  
 
 ## More Information
 
