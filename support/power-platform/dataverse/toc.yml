@@ -58,7 +58,7 @@
       href: d365-app-outlook/something-went-wrong-during-sign.md
     - name: Something went wrong during sign-in when using App for Outlook
       href: d365-app-outlook/something-went-wrong-during-sign-in.md
-    - name: The authentication was not successful
+    - name: '"The authentication was not successful error"'
       href: d365-app-outlook/the-authentication-was-not-successful.md
     - name: The view is not available when opening an email
       href: d365-app-outlook/the-view-is-not-available-error-when-opening-emails.md
