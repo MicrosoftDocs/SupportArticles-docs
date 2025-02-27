@@ -39,7 +39,7 @@ To resolve this issue, follow these steps:
 
 ### For end users
 
-On the application being used, try to locate an option to reauthenticate and clear any cached token information. This can also be achieved by signing out and signing back in to the application (when applicable/available). 
+On the application being used, try to locate an option to reauthenticate and/or clear any cached token information. This can also be achieved by signing out and signing back in to the application (when applicable/available). 
 
 ### For application developers
 
