@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot Android Enterprise device enrollment in Microsoft Intune
 description: Suggestions for troubleshooting some of the most common problems when you enroll Android devices in Intune.
-ms.date: 02/11/2025
-ms.reviewer: kaushika, joelste, v-six, esalter
+ms.date: 02/27/2025
+ms.reviewer: kaushika, joelste, v-six, esalter, alamparelli
 search.appverid: MET150
 ms.custom: sap:Enroll Devices - Android\Android  Enterprise - FullyManaged
 ---
