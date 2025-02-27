@@ -153,7 +153,7 @@ Add-WindowsFeature -Name Web-Http-Tracing
 
 Before [configuring a FREB Rule](../health-diagnostic-performance/troubleshoot-arr-using-frt-rules.md#step-1-configure-failed-request-tracing-rules), inspect the W3SVC logs to identify requests that take a long time to complete. Identify individual page requests that are slow using the `cs-uri-stem` and the `time-taken` fields.
 
-- If you can identify a few specific pages that are slow, create a FREB Rule for the specific page or pages. If creating the rule for a specific page, don't use time taken in the FREB Rule. Instead, use the status code from the W3SVC log.
+- If you can identify a few specific pages that are slow, create a FREB Rule for the specific page or pages. If creating the rule for a specific page, don't use time taken in the FREB Rule. Instead, use the status code from the W3SVC logs.
 
 - If you can't identify a specific page to create the FREB rule, you can use all content and specify a time taken in the FREB rule instead, which gives you logs of all requests that take more than the specified time to complete.
 
@@ -337,7 +337,7 @@ The time-taken is logged in milliseconds. 1000 milliseconds = 1 second. When loo
 
 #### Helpful tools to analyze W3SVC logs
 
-There are two tools to analyze W3SVC Logs, Excel and Log Parser 2.2.
+There are two tools to analyze W3SVC logs, Excel and Log Parser 2.2.
 
 ##### Analyze a single W3SVC log using Excel
 
