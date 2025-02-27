@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, shenry, yuqinwu
-ms.custom: sap:Remote Desktop Services and Terminal Services\Performance (audio and video) and RemoteFX, csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\performance (audio and video) and remotefx
+- pcy:WinComm User Experience
 ---
 # Frame rate is limited to 30 FPS in Windows-based remote sessions
 

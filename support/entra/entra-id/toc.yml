@@ -81,6 +81,8 @@
         href: app-integration/error-code-AADSTS50020-user-account-identity-provider-does-not-exist.md
       - name: Error AADSTS530004 - AcceptCompliantDevice setting isn't configured
         href: app-integration/error-code-aadsts530004-acceptcompliantdevice-setting-not-configured.md
+      - name: Error AADSTS50017 - Validation of given certificate for certificate-based authentication failed
+        href: app-integration/error-code-aadsts50017-certificate-based-authentication-failed.md
       - name: Error AADSTS50057 - user account is disabled
         href: app-integration/error-code-aadsts50057-user-account-is-disabled.md
       - name: AADSTS500011 - Resource Principal Not Found
@@ -100,6 +102,8 @@
         href: app-integration/error-code-AADSTS75005-not-a-valid-saml-request.md
       - name: Error AADSTS750054 - SAML request or response not present
         href: app-integration/error-code-AADSTS750054-saml-request-not-present.md
+      - name: Error AADSTS700003 - Device object was not found in the tenant directory
+        href: app-integration/error-code-aadsts700003-device-object-not-found.md
       - name: Error AADSTS7000110 - request is ambiguous, multiple application identifiers found
         href: app-integration/error-code-aadsts7000110-request-is-ambiguous.md
       - name: Error AADSTS7000112 - application is disabled

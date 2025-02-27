@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, toddmax, sagiv
-ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
+ms.custom:
+- sap:active directory\active directory replication and topology
+- pcy:WinComm Directory Services
 ---
 # Active Directory Replication Error 8451: "The replication operation encountered a database error"
 

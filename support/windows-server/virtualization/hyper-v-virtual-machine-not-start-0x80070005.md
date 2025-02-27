@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Virtualization and Hyper-V\Virtual machine performance, csstroubleshoot
+ms.custom:
+- sap:virtualization and hyper-v\virtual machine performance
+- pcy:WinComm Storage High Avail
 ---
 # Hyper-V virtual machine may not start, and you receive an error 0x80070005: General access denied error
 

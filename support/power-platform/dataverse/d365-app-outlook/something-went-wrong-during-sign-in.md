@@ -10,7 +10,7 @@ ms.custom: sap:Dynamics 365 App for Outlook Add-In
 
 This article helps you fix an issue in which you get the "Something went wrong during sign-in" error when using Microsoft Dynamics 365 App for Outlook.
 
-_Applies to:_ &nbsp; Microsoft Dynamics 365  
+_Applies to:_ &nbsp; Dynamics 365 App for Outlook  
 _Original KB number:_ &nbsp; 4035750
 
 ## Symptoms

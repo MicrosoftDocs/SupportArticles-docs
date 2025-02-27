@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Virtualization and Hyper-V\Integration components, csstroubleshoot
+ms.custom:
+- sap:virtualization and hyper-v\integration components
+- pcy:WinComm Storage High Avail
 ---
 # Hyper-V Time Synchronization doesn't correct the system clock in the virtual machine if it's more than five seconds ahead of the host clock
 

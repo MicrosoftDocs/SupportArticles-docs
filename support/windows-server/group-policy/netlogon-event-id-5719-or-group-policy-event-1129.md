@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, herbertm, v-jomcc
-ms.custom: sap:Group Policy\Problems Applying Group Policy, csstroubleshoot
+ms.custom:
+- sap:group policy\problems applying group policy
+- pcy:WinComm Directory Services
 ---
 # Netlogon event ID 5719 or Group Policy event 1129 is logged when you start a domain member
 

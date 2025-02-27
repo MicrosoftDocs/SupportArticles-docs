@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-tappelgate
-ms.custom: sap:Clustering and High Availability\Node removed from the cluster, csstroubleshoot
+ms.custom:
+- sap:clustering and high availability\node removed from the cluster
+- pcy:WinComm Storage High Avail
 keywords: multi-site,multisite,cluster,disconnect,cross-subnet,stretched,vlan
 ---
 # Cluster IP address resources fail on both nodes of a two-node, two-site cluster when one node disconnects from the public VLAN

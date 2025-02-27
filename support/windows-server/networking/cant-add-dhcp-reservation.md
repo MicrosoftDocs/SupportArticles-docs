@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, btoth, miodon, joelch
-ms.custom: sap:Network Connectivity and File Sharing\Dynamic Host Configuration Protocol (DHCP), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\dynamic host configuration protocol (dhcp)
+- pcy:WinComm Networking
 ---
 # You cannot add a DHCP reservation that is outside of the scope distribution range in Windows Server
 

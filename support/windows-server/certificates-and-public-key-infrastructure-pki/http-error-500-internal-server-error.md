@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: jkuehler, kaushika
-ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Certificate Enrollment Technologies (Auto Enrollment, NDES, CWE, CEP, CES), csstroubleshoot
+ms.custom:
+- sap:certificates and public key infrastructure (pki)\certificate enrollment technologies (auto enrollment,ndes,cwe,cep,ces)
+- pcy:WinComm Directory Services
 ---
 # Error message when generating NDES enrollment challenge password on an NDES server that is running Windows Server 2012: Http error 500.0 - internal server error
 

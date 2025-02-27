@@ -7,7 +7,9 @@ ms.author: kaushika
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.custom: sap:Clustering and High Availability\Cluster Shared Volume (CSV), csstroubleshoot
+ms.custom:
+- sap:clustering and high availability\cluster shared volume (csv)
+- pcy:WinComm Storage High Avail
 ms.reviewer: kaushika
 ---
 # Event ID 5120 Cluster Shared Volume troubleshooting guidance

@@ -4,12 +4,13 @@ description: This article provides a resolution for the problem that occurs when
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
+ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
 # IncomingEmailRejected error when attempting to install Dynamics 365 App for Outlook
 
 This article helps you resolve the problem that occurs when you attempt to install Dynamics 365 App for Outlook.
 
-_Applies to:_ &nbsp; Microsoft Dynamics 365  
+_Applies to:_ &nbsp; Dynamics 365 App for Outlook  
 _Original KB number:_ &nbsp; 3211627
 
 ## Symptoms

@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Group Policy\Problems Applying Group Policy, csstroubleshoot
+ms.custom:
+- sap:group policy\problems applying group policy
+- pcy:WinComm Directory Services
 ---
 # Some Group Policy areas are missing from the Group Policy Editor
 

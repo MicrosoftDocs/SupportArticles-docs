@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Virtualization and Hyper-V\Virtual machine performance, csstroubleshoot
+ms.custom:
+- sap:virtualization and hyper-v\virtual machine performance
+- pcy:WinComm Storage High Avail
 ---
 # Virtual machine that's running on Windows Server 2012 R2 doesn't start
 

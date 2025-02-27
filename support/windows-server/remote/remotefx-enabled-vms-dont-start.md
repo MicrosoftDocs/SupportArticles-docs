@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, rkiran, jarrettr, sabinn
-ms.custom: sap:Remote Desktop Services and Terminal Services\Performance (audio and video) and RemoteFX, csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\performance (audio and video) and remotefx
+- pcy:WinComm User Experience
 ---
 # New and existing RemoteFX-enabled VMs do not start on a DC that is running the Remote Desktop Virtualization Host service on Windows Server
 

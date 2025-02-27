@@ -8,7 +8,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: gipauli, arrenc, herbertm, clfish, kaushika
-ms.custom: sap:Active Directory\Active Directory Migration Tool (ADMT), csstroubleshoot
+ms.custom:
+- sap:active directory\active directory migration tool (admt)
+- pcy:WinComm Directory Services
 ---
 # Support policy and known issues for Active Directory Migration Tool
 

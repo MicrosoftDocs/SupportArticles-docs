@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, ROLANDW, oweindl
-ms.custom: sap:Active Directory\LDAP configuration and interoperability, csstroubleshoot
+ms.custom:
+- sap:active directory\ldap configuration and interoperability
+- pcy:WinComm Directory Services
 ---
 # How to use the online dbdump feature of Active Directory
 

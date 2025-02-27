@@ -21,21 +21,21 @@ ms.author: genli
 
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
-This article describes how to troubleshoot the chroot environment in the rescue virtual machine (VM) in Linux.
+This article describes how to troubleshoot the chroot environment on a rescue virtual machine (VM) in Linux.
 
-## Ubuntu 16.x && Ubuntu 18.x && Ubuntu 20.04
+## Ubuntu
 
 1. Stop or deallocate the affected VM.
-1. Create a rescue VM of the same generation, same OS version, in same resource group and location using managed disk.
-1. Use the Azure portal to take a snapshot of the affected virtual machine's OS disk.
+1. Create a rescue VM of the same generation and the same OS version in same resource group and location by using a managed disk.
+1. Use the Azure portal to take a snapshot of the affected VM's OS disk.
 1. Create a disk out of the snapshot of the OS disk, and attach it to the rescue VM.
-1. Once the disk has been created, troubleshoot the chroot environment in the rescue VM.
+1. After the disk is created, troubleshoot the chroot environment on the rescue VM.
 
    1. Access your VM as the root user by using the following command:
 
       `sudo su -`
 
-   1. Find the disk using `dmesg` (the method you use to discover your new disk may vary). The following example uses `dmesg` to filter on Small Computer Systems Interface (SCSI) disks:
+   1. Find the disk. The method that you use to discover your new disk may vary. We recommend that you use the `dmesg` command. The following example uses `dmesg` to filter on Small Computer Systems Interface (SCSI) disks:
 
       `dmesg | grep SCSI`
 
@@ -54,8 +54,10 @@ This article describes how to troubleshoot the chroot environment in the rescue 
       ```bash
       mkdir /rescue
       mount /dev/sdc1 /rescue
+      mount /dev/sdc16 /rescue/boot 
       mount /dev/sdc15 /rescue/boot/efi
       
+   
       mount -t proc /proc /rescue/proc
       mount -t sysfs /sys /rescue/sys
       mount -o bind /dev /rescue/dev
@@ -63,6 +65,10 @@ This article describes how to troubleshoot the chroot environment in the rescue 
       mount -o bind /run /rescue/run
       chroot /rescue
       ```
+      > [!NOTE]
+      > On newer Ubuntu images, there is only one partition for the `/boot` folder. If you are recovering an older Ubuntu image, you can ignore any errors that occur when you mount `/dev/sdc16` to `/rescue/boot`. However, make sure that there are files in `/rescue/boot` after you complete these steps.
+      >
+      > If an error does occur during mounting, you can safely ignore an error that may occur when you unmount `/rescue/boot` in the step 5e.
 
    1. Troubleshoot the chroot environment.
 
@@ -78,28 +84,29 @@ This article describes how to troubleshoot the chroot environment in the rescue 
       umount /rescue/run
       cd /
       umount /rescue/boot/efi
+      umount /rescue/boot
       umount /rescue
       ```
 
       > [!NOTE]
-      > If you receive the error message "unable to unmount /rescue," add the `-l` option to the `umount` command, for example, `umount -l /rescue`.
+      > If you receive an "unable to unmount /rescue" error message, add the `-l` option to the `umount` command. For example: `umount -l /rescue`.
 
-1. Detach the disk from the rescue VM and perform a disk swap with the original VM.
-1. Start the original VM and check its connectivity.
+1. Detach the disk from the rescue VM, and then perform a disk swap with the original VM.
+1. Start the original VM, and check its connectivity.
 
-## RHEL/Centos/Oracle 6.x && Oracle 8.x && RHEL/Centos 7.x with RAW Partitions
+## RHEL/Centos/Oracle 6._x_ , Oracle 8._x_ and RHEL/Centos 7._x_ with RAW partitions
 
 1. Stop or deallocate the affected VM.
-1. Create a rescue VM image of the same OS version in the same resource group (RSG) and location using a managed disk.
-1. Use the Azure portal to take a snapshot of the affected virtual machine's OS disk.
-1. Create a disk out of the snapshot of the OS disk, and attach it to the rescue VM.
-1. Once the disk has been created, troubleshoot the chroot environment in the rescue VM.
+1. Create a rescue VM image of the same OS version in the same resource group (RSG) and location by using a managed disk.
+1. Use the Azure portal to take a snapshot of the affected VM's OS disk.
+1. Create a disk out of the snapshot of the OS disk, and then attach it to the rescue VM.
+1. After the disk is created, troubleshoot the chroot environment on the rescue VM.
 
    1. Access your VM as the root user by using the following command:
 
       `sudo su -`
 
-   1. Find the disk using `dmesg` (the method you use to discover your new disk may vary). The following example uses `dmesg` to filter on SCSI disks:
+   1. Find the disk. The method that you use to discover your new disk may vary. We recommend that you use the `dmesg` command. The following example uses `dmesg` to filter on SCSI disks:
 
       `dmesg | grep SCSI`
 
@@ -146,12 +153,12 @@ This article describes how to troubleshoot the chroot environment in the rescue 
       ```
 
       > [!NOTE]
-      > If you receive the error message "unable to unmount /rescue," add the `-l` option to the `umount` command, for example, `umount -l /rescue`.
+      > If you receive an "unable to unmount /rescue" error message, add the `-l` option to the `umount` command. For example: `umount -l /rescue`.
 
-1. Detach the disk from the rescue VM and perform a disk swap with the original VM.
-1. Start the original VM and check its connectivity.
+1. Detach the disk from the rescue VM, and then perform a disk swap with the original VM.
+1. Start the original VM, and check its connectivity.
 
-## RHEL/Centos 7.x & 8.X with LVM
+## RHEL/Centos 7._x_ and 8._x_ with LVM
 
 > [!NOTE]
 > If your original VM includes Logical Volume Manager (LVM) on the OS Disk, create the rescue VM by using the image with raw partitions on the OS Disk.
@@ -166,7 +173,7 @@ This article describes how to troubleshoot the chroot environment in the rescue 
 
       `sudo su -`
 
-   1. Find the disk using `dmesg` (the method you use to discover your new disk may vary). The following example uses `dmesg` to filter on SCSI disks:
+   1. Find the disk. The method that you use to discover your new disk may vary. We recommend that5 you use the `dmesg` command. The following example uses `dmesg` to filter on SCSI disks:
 
       `dmesg | grep SCSI`
 
@@ -228,7 +235,7 @@ This article describes how to troubleshoot the chroot environment in the rescue 
       mount /dev/sdc1 /rescue/boot/efi
       ```
 
-      The */rescue/boot/* and */rescue/boot/efi* partitions may not always be located on */dev/sdc2* or */dev/sdc1*. If you encounter an error while trying to mount these partitions, check the */rescue/etc/fstab* file to determine the correct devices for the */boot* and */boot/efi* partitions from the broken OS disk. Then, run the `blkid` command and compare the Universal Unique Identifier (UUID) from the */rescue/etc/fstab* file with the output of the `blkid` command to determine the correct device for mounting */rescue/boot/* and */rescue/boot/efi* in the repair VM.
+      The */rescue/boot/* and */rescue/boot/efi* partitions may not always be located on */dev/sdc2* or */dev/sdc1*. If you encounter an error when you try to mount these partitions, check the */rescue/etc/fstab* file to determine the correct devices for the */boot* and */boot/efi* partitions from the broken OS disk. Then, run the `blkid` command and compare the Universal Unique Identifier (UUID) from the */rescue/etc/fstab* file to the output of the `blkid` command to determine the correct device for mounting */rescue/boot/* and */rescue/boot/efi* in the repair VM.
 
       The `mount /dev/mapper/rootvg-optlv /rescue/opt` command may fail if the *rootvg-optlv* volume group doesn't exist. In this case, you can bypass this command.
 
@@ -267,19 +274,19 @@ This article describes how to troubleshoot the chroot environment in the rescue 
       ```
 
       > [!NOTE]
-      > If you receive the error message "unable to unmount /rescue," add the `-l` option to the `umount` command, for example, `umount -l /rescue`.
+      > If you receive an "unable to unmount /rescue" error message, add the `-l` option to the `umount` command. For example: `umount -l /rescue`.
 
-1. Detach the disk from the rescue VM and perform a disk swap with the original VM.
-1. Start the original VM and check its connectivity.
+1. Detach the disk from the rescue VM, and then perform a disk swap with the original VM.
+1. Start the original VM, and check its connectivity.
 
 ### Using the same LVM image
 
 > [!NOTE]
-> If you need to deploy the rescue VM by using the same LVM image, you need to modify some aspects of the rescue VM with LVM.
+> If you have to deploy the rescue VM by using the same LVM image, you must modify some aspects of the rescue VM with LVM.
 
-The following commands are to be executed on the recovery/rescue VM that's temporarily created for the recovery operation.
+The following commands are to be run on the recovery (rescue) VM that's temporarily created for the recovery operation.
 
-1. Use the following command to check the status of the disks prior to attaching the disk you want to rescue:
+1. Use the following command to check the status of the disks before you attach the disk that you want to rescue:
 
    ```bash
    sudo lsblk -f
@@ -302,7 +309,7 @@ The following commands are to be executed on the recovery/rescue VM that's tempo
    └─sdb1            ext4              e72e7c2c-db27-4a73-a97e-01d63d21ccf8   /mnt
    ```
 
-2. Attach the disk you want to rescue as a data drive.
+2. Attach the disk that you want to rescue as a data drive.
 3. Check the disks again by using the following command:
 
    ```bash
@@ -470,7 +477,7 @@ The following commands are to be executed on the recovery/rescue VM that's tempo
    sudo mount -o bind /run /rescue/run
    ```
 
-   The */rescue/boot/* and */rescue/boot/efi* partitions may not always be located on */dev/sdc2* or */dev/sdc1*. If you encounter an error while trying to mount these partitions, check the */rescue/etc/fstab* file to determine the correct devices for the */boot* and */boot/efi* partitions from the broken OS disk. Then, run the `blkid` command and compare the UUID from the */rescue/etc/fstab* file with the output of the `blkid` command to determine the correct device for mounting */rescue/boot/* and */rescue/boot/efi* in the repair VM. Duplicated UUIDs may appear in the output. In this scenario, mount the partition that matches the device letter from step 5. In the example of this section, the correct partition you should mount is */dev/sdc*. The *dev/sda* represents the operating system currently in use and should be ignored.
+   The */rescue/boot/* and */rescue/boot/efi* partitions may not always be located on */dev/sdc2* or */dev/sdc1*. If you encounter an error whem you try to mount these partitions, check the */rescue/etc/fstab* file to determine the correct devices for the */boot* and */boot/efi* partitions from the broken OS disk. Then, run the `blkid` command and compare the UUID from the */rescue/etc/fstab* file to the output of the `blkid` command to determine the correct device for mounting */rescue/boot/* and */rescue/boot/efi* on the repair VM. Duplicated UUIDs may appear in the output. In this scenario, mount the partition that matches the device letter from step 5. In the example of this section, the correct partition that you should mount is */dev/sdc*. The *dev/sda* represents the operating system that's currently in use and should be ignored.
 
 10. Verify the mounts by using the following command:
 
@@ -512,7 +519,7 @@ The following commands are to be executed on the recovery/rescue VM that's tempo
     sudo chroot /rescue/
     ```
 
-12. Verify the mounts "inside" the chroot environment by using the following command:
+12. Verify the mounts that are "inside" the chroot environment by using the following command:
 
       ```bash
       sudo lsblk -f
@@ -547,7 +554,7 @@ The following commands are to be executed on the recovery/rescue VM that's tempo
       ```
       Now, *rescuemevg-rootlv* is the one mounted on */*.
 
-13. Rename the Volume Group (VG) to keep it consistent by using the following command. Renaming the VG keeps you from facing issues when regenerating the initrd and booting the disk again on the original VM.
+13. Rename the Volume Group (VG) to keep it consistent by using the following command. Renaming the VG helps you to avoid issues that might occur when you regenerate the initrd and restart the disk on the original VM.
 
     ```bash
     sudo vgrename rescuemevg rootvg
@@ -591,14 +598,14 @@ The following commands are to be executed on the recovery/rescue VM that's tempo
       └─rootvg-rootlv xfs               d8dc4d62-ada5-4952-a0d9-1bce6cb6f809   /
       ```
 
-15. Proceed with the required activities to rescue the OS. These activities may include regenerating initramfs or the GRUB configuration.
+15. Perform the required activities to rescue the OS. These activities may include regenerating initramfs or the GRUB configuration.
 16. Exit the chroot environment by using the following command:
 
       ```bash
       sudo exit
       ```
 
-17. Unmount and detach the data disk from the rescue VM and perform a disk swap with the original VM by using the following commands:
+17. Unmount and detach the data disk from the rescue VM, and then perform a disk swap with the original VM by using the following commands:
 
       ```bash
       umount /rescue/run/
@@ -616,21 +623,21 @@ The following commands are to be executed on the recovery/rescue VM that's tempo
       umount /rescue
       ```
 
-18. Start the original VM and verify its functionality.
+18. Start the original VM, and verify its functionality.
 
-## Oracle 7.x
+## Oracle 7._x_
 
 1. Stop or deallocate the affected VM.
-1. Create a rescue VM image of the same OS version, in the same resource group (RSG) and location using a managed disk.
-1. Use the Azure portal to take a snapshot of the affected virtual machine's OS disk.
+1. Create a rescue VM image of the same OS version in the same resource group (RSG) and location by using a managed disk.
+1. Use the Azure portal to take a snapshot of the affected VM's OS disk.
 1. Create a disk out of the snapshot of the OS disk, and attach it to the rescue VM.
-1. Once the disk has been created, troubleshoot the chroot environment in the rescue VM.
+1. After the disk is created, troubleshoot the chroot environment on the rescue VM.
 
    1. Access your VM as the root user by using the following command:
 
       `sudo su -`
 
-   1. Find the disk by using `dmesg` (the method you use to discover your new disk may vary). The following example uses `dmesg` to filter on SCSI disks:
+   1. Find the disk. The method that you use to discover your new disk may vary. We recommend that you use the `dmesg` command. The following example uses `dmesg` to filter on SCSI disks:
 
       `dmesg | grep SCSI`
 
@@ -678,15 +685,15 @@ The following commands are to be executed on the recovery/rescue VM that's tempo
       ```
 
       > [!NOTE]
-      > If you receive the error message "unable to unmount /rescue," add the `-l` option to the `umount` command, for example, `umount -l /rescue`.
+      > If you receive an "unable to unmount /rescue" error message, add the `-l` option to the `umount` command. For example: `umount -l /rescue`.
 
-1. Detach the disk from the rescue VM and perform a disk swap with the original VM.
-1. Start the original VM and check its connectivity.
+1. Detach the disk from the rescue VM, and then perform a disk swap with the original VM.
+1. Start the original VM, and check its connectivity.
 
-## SUSE-SLES 12 SP4, SUSE-SLES 12 SP4 For SAP && ## SUSE-SLES 15 SP1, SUSE-SLES 15 SP1 For SAP
+## SUSE-SLES 12 SP4, SUSE-SLES 12 SP4 For SAP, SUSE-SLES 15 SP1 and SUSE-SLES 15 SP1 For SAP
 
 1. Stop or deallocate the affected VM.
-1. Create a rescue VM image of the same OS version, in the same resource group (RSG) and location using a managed disk.
+1. Create a rescue VM image of the same OS version in the same resource group (RSG) and location by using a managed disk.
 1. Use the Azure portal to take a snapshot of the affected virtual machine's OS disk.
 1. Create a disk out of the snapshot of the OS disk, and attach it to the rescue VM.
 1. Once the disk has been created, troubleshoot the chroot environment in the rescue VM.
@@ -695,7 +702,7 @@ The following commands are to be executed on the recovery/rescue VM that's tempo
 
       `sudo su -`
 
-   1. Find the disk using `dmesg` (the method you use to discover your new disk may vary). The following example uses `dmesg` to filter on SCSI disks:
+   1. Find the disk. The method you use to discover your new disk may vary. We recommend that you use the `dmesg` command. The following example uses `dmesg` to filter on SCSI disks:
 
       `dmesg | grep SCSI`
 
@@ -745,11 +752,12 @@ The following commands are to be executed on the recovery/rescue VM that's tempo
       > [!NOTE]
       > If you receive the error message "unable to unmount /rescue," add the `-l` option to the `umount` command, for example, `umount -l /rescue`.
 
-1. Detach the disk from the rescue VM and perform a disk swap with the original VM.
-1. Start the original VM and check its connectivity.
+1. Detach the disk from the rescue VM, and then perform a disk swap with the original VM.
+1. Start the original VM, and check its connectivity.
 
 ## Next Steps
 
 - [Troubleshoot ssh connection](troubleshoot-ssh-connection.md)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+a

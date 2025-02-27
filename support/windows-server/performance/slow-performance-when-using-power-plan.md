@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, papant, deepku, aviarengo
-ms.custom: sap:System Performance\System Performance (slow, unresponsive, high CPU, resource leak), csstroubleshoot
+ms.custom:
+- sap:system performance\system performance (slow,unresponsive,high cpu,resource leak)
+- pcy:WinComm Performance
 ---
 # Slow performance on Windows Server when using the Balanced power plan
 

@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, match
-ms.custom: sap:Windows Activation\Windows activation issues, csstroubleshoot
+ms.custom:
+- sap:windows activation\windows activation issues
+- pcy:WinComm Devices Deploy
 ---
 # Application Event Log Warning ID 1058 (Security-SPP) may be logged after reboot on OEM systems
 

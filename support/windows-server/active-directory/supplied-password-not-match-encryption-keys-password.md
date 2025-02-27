@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, tonnyp
-ms.custom: sap:Active Directory\Active Directory Migration Tool (ADMT), csstroubleshoot
+ms.custom:
+- sap:active directory\active directory migration tool (admt)
+- pcy:WinComm Directory Services
 ---
 # ADMT 3.1 PES installation fails with error: The supplied password does not match this encryption key's password
 

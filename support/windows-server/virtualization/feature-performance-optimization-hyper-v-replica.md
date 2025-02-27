@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, prvijay
-ms.custom: sap:Virtualization and Hyper-V\Hyper-V Replica (HVR), csstroubleshoot
+ms.custom:
+- sap:virtualization and hyper-v\hyper-v replica (hvr)
+- pcy:WinComm Storage High Avail
 ---
 # Feature and performance optimization of Hyper-V Replica (HVR)
 

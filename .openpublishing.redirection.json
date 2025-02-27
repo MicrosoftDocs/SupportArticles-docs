@@ -12755,6 +12755,122 @@
     {
       "source_path": "support/dynamics-365/sales/your-device-is-currently-unsupported.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/your-device-is-currently-unsupported"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/attachments-not-tracked-to-dynamics-365-after-office-365-atp-is-enabled.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/attachments-not-tracked-to-dynamics-365-after-office-365-atp-is-enabled"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/buttons-such-as-track-and-set-regarding-are-missing.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/buttons-such-as-track-and-set-regarding-are-missing"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-connect-to-exchange-message-when-using-dynamics-365-app-for-outlook.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/cannot-connect-to-exchange-message-when-using-dynamics-365-app-for-outlook"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-365-app-for-outlook-is-missing.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/dynamics-365-app-for-outlook-is-missing"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-365-app-outlook-did-not-load.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/dynamics-365-app-outlook-did-not-load"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/emails-tracked-by-dynamics-365-app-for-outlook-show-track-pending.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/emails-tracked-by-dynamics-365-app-for-outlook-show-track-pending"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-incomingemailrejected-install-dynamics-365-app-outlook.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/error-incomingemailrejected-install-dynamics-365-app-outlook"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-install-dynamics-365-app-outlook.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/error-install-dynamics-365-app-outlook"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-accessing-crm-app-outlook.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/error-when-accessing-crm-app-outlook"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-opening-365-app-outlook.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/error-when-opening-365-app-outlook"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-using-365-app-outlook.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/error-when-using-365-app-outlook"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/privilege-error-occurs-when-using-dynamics-365-app-for-outlook.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/privilege-error-occurs-when-using-dynamics-365-app-for-outlook"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/the-view-is-not-available-error-when-opening-emails.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/the-view-is-not-available-error-when-opening-emails"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/troubleshoot-item-level-server-side-synchronization-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/troubleshoot-item-level-server-side-synchronization-issues"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/trying-to-access-dynamics-365-app-for-outlook-from-email-do-not-recognize-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/trying-to-access-dynamics-365-app-for-outlook-from-email-do-not-recognize-error"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/we-are-unable-to-connect-to-your-dynamics-365-app-for-outlook-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/we-are-unable-to-connect-to-your-dynamics-365-app-for-outlook-error"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/you-do-not-have-permission-to-access-this-app-error-when-accessing-dynamics-365-app-for-outlook.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/you-do-not-have-permission-to-access-this-app-error-when-accessing-dynamics-365-app-for-outlook"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/you-do-not-have-required-role-privilege.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/you-do-not-have-required-role-privilege"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/you-do-not-have-the-required-role-or-privilege-to-complete-this-action-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/you-do-not-have-the-required-role-or-privilege-to-complete-this-action-error"
+    },
+    {
+      "source_path": "support/windows-server/performance/use-userdump-create-dump-file.md",
+      "redirect_url": "/sysinternals/downloads/procdump"
+    },
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/troubleshoot-dynamics-365-app-outlook.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/error-when-accessing-crm-app-outlook.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/new-forms-formatted-incorrectly.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/error-when-using-365-app-outlook.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/your-device-is-currently-unsupported.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/this-organization-has-already-been-configured-error-when-connecting.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/you-do-not-have-permission-to-access-this-app-error-when-accessing-dynamics-365-app-for-outlook.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/the-given-key-was-not-present-in-dictionary.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/the-given-key-was-not-present-in-dictionary"
+    },
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/error-when-installing-crm-2016-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-when-installing-crm-2016-outlook"
     }
   ]
 }

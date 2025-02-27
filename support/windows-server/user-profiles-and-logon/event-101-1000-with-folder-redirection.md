@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:User Logon and Profiles\Enterprise State Roaming (ESR) and Folder Redirection, csstroubleshoot
+ms.custom:
+- sap:user logon and profiles\enterprise state roaming (esr) and folder redirection
+- pcy:WinComm Directory Services
 ---
 # Event ID 101 and Event ID 1000 may be displayed when Folder Redirection is set up with Group Policy
 

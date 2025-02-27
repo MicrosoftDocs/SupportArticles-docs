@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, herbertm
-ms.custom: sap:Active Directory\Active Directory (FSMO), csstroubleshoot
+ms.custom:
+- sap:active directory\active directory (fsmo)
+- pcy:WinComm Directory Services
 ---
 # Transfer or seize Operation Master roles in Active Directory Domain Services
 

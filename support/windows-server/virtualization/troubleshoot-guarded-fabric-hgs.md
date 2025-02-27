@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, dongill, inhenkel, v-lianna
-ms.custom: sap:Virtualization and Hyper-V\Shielded Virtual Machines, csstroubleshoot
+ms.custom:
+- sap:virtualization and hyper-v\shielded virtual machines
+- pcy:WinComm Storage High Avail
 ms.assetid: 424b8090-0692-49a6-9dc4-3c0e77d74b80
 ---
 # Troubleshoot the Host Guardian Service

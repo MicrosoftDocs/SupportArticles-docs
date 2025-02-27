@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, warrenw, arrenc
-ms.custom: sap:Active Directory\Domain or forest functional level updates, failures and Advisory, csstroubleshoot
+ms.custom:
+- sap:active directory\domain or forest functional level updates,failures and advisory
+- pcy:WinComm Directory Services
 ---
 # Domain controller promotion process shows the Windows Server Technical Preview option in the Domain and Forest functional level list
 

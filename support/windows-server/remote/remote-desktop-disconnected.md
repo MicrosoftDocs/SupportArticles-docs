@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, gavinl
-ms.custom: sap:Remote Desktop Services and Terminal Services\Web access (includes RemoteApp and desktop connections), csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\web access (includes remoteapp and desktop connections)
+- pcy:WinComm User Experience
 ---
 # Remote Desktop disconnected or can't connect to remote computer or Remote Desktop server (Terminal Server) that is running Windows Server 2003
 

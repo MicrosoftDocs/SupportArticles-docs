@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Group Policy\Security filtering and item-level targeting, csstroubleshoot
+ms.custom:
+- sap:group policy\security filtering and item-level targeting
+- pcy:WinComm Directory Services
 ---
 # Information about Group Policy Preferences events
 

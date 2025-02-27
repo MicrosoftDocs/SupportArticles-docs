@@ -8,7 +8,9 @@ metadata:
   manager: dcscontentpm
   audience: itpro
   ms.topic: faq  
-  ms.custom: sap:Windows Eos\General Information, csstroubleshoot
+  ms.custom:
+  - sap:windows eos\general information
+  - pcy:WinComm Devices Deploy
   ms.reviewer: kaushika, squin, suehar, v-jeffbo  
 title: End of support for Windows Server 2008 and Windows Server 2008 R2
 summary: |

@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Certificate Enrollment Using MMC or Certificate Requests, csstroubleshoot
+ms.custom:
+- sap:certificates and public key infrastructure (pki)\certificate enrollment using mmc or certificate requests
+- pcy:WinComm Directory Services
 ---
 # Clients can't authenticate with a server after you obtain a new certificate to replace an expired certificate on the server
 

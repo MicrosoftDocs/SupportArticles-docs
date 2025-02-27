@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Remote Desktop Services and Terminal Services\Application compatibility, csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\application compatibility
+- pcy:WinComm User Experience
 ---
 # Terminal Server registry settings for applications
 
