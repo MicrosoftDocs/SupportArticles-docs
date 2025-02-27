@@ -502,7 +502,8 @@ If you have to further debug the ADSync engine (also known as the MiiServer) in 
 
 ### Resources
 
-- Synchronization Service Manager UI
+- Synchronization Service Manager
+
 - Synchronization Rules Editor
 - Export-ADSyncObjects cmdlet
 - Start-ADSyncSyncCycle -PolicyType Initial
@@ -522,7 +523,8 @@ Multiple components and processes that are involved in importing and exporting d
 
 - Connectivity to the internet
 - Internal firewalls and ISP connectivity (for example, blocked network traffic)
-- The Microsoft Entra Gateway in front of DirSync Webservice (also known as the AdminWebService endpoint)
+- The Microsoft Entra Gateway in front of DirSync Webservice (also known as the AdminWebService)
+
 - The DirSync Webservice API
 - The Microsoft Entra Core directory service
 
