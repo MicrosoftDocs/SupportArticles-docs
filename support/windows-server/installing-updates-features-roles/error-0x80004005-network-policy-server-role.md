@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update fails - installation stops with error, csstroubleshoot
+ms.custom:
+- sap:windows servicing,updates and features on demand\windows update fails - installation stops with error
+- pcy:WinComm Devices Deploy
 ---
 # Error 0x80004005 when you try to install or start the Network Policy Server role service
 

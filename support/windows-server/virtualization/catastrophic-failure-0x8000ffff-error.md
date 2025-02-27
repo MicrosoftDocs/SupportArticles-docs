@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, shenry, liexgu
-ms.custom: sap:Virtualization and Hyper-V\Virtual machine performance, csstroubleshoot
+ms.custom:
+- sap:virtualization and hyper-v\virtual machine performance
+- pcy:WinComm Storage High Avail
 ---
 # Catastrophic failure (0x8000FFFF) error when you start a VM on a Windows Server 2012 R2-based Hyper-V server
 

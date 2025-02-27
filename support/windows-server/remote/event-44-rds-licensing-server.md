@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, robertvi, v-jesits
-ms.custom: sap:Remote Desktop Services and Terminal Services\Licensing for Remote Desktop Services (Terminal Services), csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\licensing for remote desktop services (terminal services)
+- pcy:WinComm User Experience
 ---
 # Event 44 on an RDS licensing server running Windows Server
 

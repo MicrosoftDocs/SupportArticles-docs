@@ -4,7 +4,9 @@ description: Introduces a workaround for an issue in which shadow copy volume is
 ms.topic: troubleshooting
 ms.date: 01/15/2025
 ms.reviewer: kaushika, cdascoli, bechinch, khoffman
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Volume Shadow Copy Service (VSS), csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\volume shadow copy service (vss)
+- pcy:WinComm Storage High Avail
 ---
 # Event ID 32 occurs, and shadow copies are unexpectedly deleted
 

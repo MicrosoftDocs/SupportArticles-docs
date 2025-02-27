@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, dennhu, tmaddala, v-lianna
-ms.custom: sap:Group Policy\Problems Applying Group Policy, csstroubleshoot, ikb2lmc
+ms.custom:
+- sap:group policy\problems applying group policy
+- pcy:WinComm Directory Services
 ---
 # User-based GPO settings aren't applied when signing in with shadow principals
 

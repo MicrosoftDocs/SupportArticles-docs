@@ -8,7 +8,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Print, Fax, and Scan\Print Performance - failures, crashes, not responsive, csstroubleshoot
+ms.custom:
+- sap:print,fax,and scan\print performance - failures,crashes,not responsive
+- pcy:WinComm User Experience
 ---
 # Troubleshoot printing problem and printing best practices
 

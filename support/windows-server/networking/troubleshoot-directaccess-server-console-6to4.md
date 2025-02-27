@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Network Connectivity and File Sharing\Remote access (DirectAccess), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\remote access (directaccess)
+- pcy:WinComm Networking
 ---
 # Troubleshoot DirectAccess server console: 6to4
 

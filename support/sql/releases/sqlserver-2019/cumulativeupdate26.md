@@ -31,8 +31,6 @@ SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plan
 
 - 9432 - This trace flag disables the fix that was introduced in SQL Server 2019 CU14.
 
-Microsoft is working on a fix for this issue and it will be available in a future CU.
-
 ### Issue two: Possibility of error 1204 due to disabled lock escalation
 
 SQL Server 2019 CU26 introduced a regression that can disable lock escalation, which causes error 1204 "The instance of the SQL Server Database Engine cannot obtain a LOCK resource at this time."

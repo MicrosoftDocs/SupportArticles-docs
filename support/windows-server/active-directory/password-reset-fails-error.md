@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, herbertm, nedpyle
-ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
+ms.custom:
+- sap:active directory\user,computer,group,and object management
+- pcy:WinComm Directory Services
 ---
 # Password Reset using Active Directory Users & Computers fails with error "The System cannot find the path specified"
 

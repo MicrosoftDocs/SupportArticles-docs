@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, herbertm
-ms.custom: sap:Windows Security\Netlogon, secure channel, DC locator, csstroubleshoot
+ms.custom:
+- sap:windows security\netlogon,secure channel,dc locator
+- pcy:WinComm Directory Services
 ---
 # Broken trust relationship between a domain-joined device and its domain due to secure channel issues
 

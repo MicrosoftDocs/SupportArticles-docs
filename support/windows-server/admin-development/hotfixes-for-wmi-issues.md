@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:System Management Components\WMI management and troubleshooting, csstroubleshoot
+ms.custom:
+- sap:system management components\wmi management and troubleshooting
+- pcy:WinComm User Experience
 ---
 # Suggested hotfixes for WMI related issue on Windows platforms
 

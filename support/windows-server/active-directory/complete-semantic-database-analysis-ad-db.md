@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\Active Directory Domain Controller specific boot failures, csstroubleshoot
+ms.custom:
+- sap:active directory\active directory domain controller specific boot failures
+- pcy:WinComm Directory Services
 ---
 # How to complete a semantic database analysis for the Active Directory database by using Ntdsutil.exe
 

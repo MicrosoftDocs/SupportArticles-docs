@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Security Technologies\Netlogon including Secure Channel and DC Locator issues, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\netlogon including secure channel and dc locator issues
+- pcy:WinComm Directory Services
 ---
 # Use Netdom.exe to reset machine account passwords of a Windows Server domain controller
 

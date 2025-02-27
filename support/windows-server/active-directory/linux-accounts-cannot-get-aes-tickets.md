@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-lianna
-ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot, linux-related-content
+ms.custom:
+- sap:active directory\user,computer,group,and object management
+- pcy:WinComm Directory Services
 ---
 # Linux accounts can't get AES-encrypted tickets in AD DS
 

@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:managing-internet-explorer-settings-through-group-policy, csstroubleshoot
+ms.custom:
+- sap:managing-internet-explorer-settings-through-group-policy
+- pcy:WinComm Directory Services
 ---
 # How to use Group Policy to control access to web sites
 

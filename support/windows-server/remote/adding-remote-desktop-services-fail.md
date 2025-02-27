@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, robertvi
-ms.custom: sap:Remote Desktop Services and Terminal Services\Deployment, configuration, and management of Remote Desktop Services infrastructure, csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\deployment,configuration,and management of remote desktop services infrastructure
+- pcy:WinComm User Experience
 ---
 # Adding Remote Desktop Services role may fail when Firewall Service is stopped
 

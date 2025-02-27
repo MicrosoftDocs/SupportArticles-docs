@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, match, chadbee, v-miand3
-ms.custom: sap:Windows Servicing, Updates and Features on Demand\Issues installing Features on Demand(FoD), csstroubleshoot
+ms.custom:
+- sap:windows servicing,updates and features on demand\issues installing features on demand(fod)
+- pcy:WinComm Devices Deploy
 ---
 # Can't install the .NET Framework 3.5 without a public Internet environment on an OEM Windows installation
 

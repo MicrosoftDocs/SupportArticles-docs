@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: arrenc, kaushika
-ms.custom: sap:Active Directory\DCPromo and the installation or removal of domain controllers, csstroubleshoot
+ms.custom:
+- sap:active directory\dcpromo and the installation or removal of domain controllers
+- pcy:WinComm Directory Services
 ---
 # Domain controllers do not demote gracefully when you use the Active Directory Installation Wizard to force demotion
 

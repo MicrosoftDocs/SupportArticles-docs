@@ -121,7 +121,7 @@ VMs might restart because of issues within the VM itself. The workload or role t
 
 ### Storage-related forced shutdowns
 
-VMs in Azure rely on virtual disks for operating system and data storage that is hosted on the Azure Storage infrastructure. Whenever the availability or connectivity between the VM and the associated virtual disks is affected for more than 120 seconds, the Azure platform performs a forced shutdown of the VMs to avoid data corruption. The VMs are automatically powered back on after storage connectivity has been restored. The duration of the shutdown can be as short as five minutes but can be significantly longer.
+VMs in Azure rely on virtual disks for operating system and data storage that is hosted on the Azure Storage infrastructure. Whenever the availability or connectivity between the VM and the associated virtual disks is affected for more than 180 seconds, the Azure platform performs a forced shutdown of the VMs to avoid data corruption. The VMs are automatically powered back on after storage connectivity has been restored. The duration of the shutdown can be as short as five minutes but can be significantly longer.
 
 ### Other incidents
 

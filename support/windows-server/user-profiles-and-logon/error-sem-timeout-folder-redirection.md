@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, tonnyp
-ms.custom: sap:User Logon and Profiles\Enterprise State Roaming (ESR) and Folder Redirection, csstroubleshoot
+ms.custom:
+- sap:user logon and profiles\enterprise state roaming (esr) and folder redirection
+- pcy:WinComm Directory Services
 ---
 # Folder Redirection fails with the error ERROR_SEM_TIMEOUT or the semaphore timeout period has expired
 

@@ -1,15 +1,83 @@
 - name: Microsoft Dataverse Troubleshooting
   href: welcome-dataverse.yml
+- name: Auditing
+  items:
+    - name: Troubleshooting sync problems in audit logs
+      href: auditing/setup-auditlog-troubleshooting.md  
 - name: Bulk deleting data
   items:
     - name: Bulk operation errors
       href: bulk-deleting-data/bulk-operation-errors.md
+- name: Data integration
+  items:
+    - name: Data Integrator error management and troubleshooting
+      href: data-integration/data-integrator-error-management.md
 - name: Dataverse Web API and SDK
   items:
     - name: Required fields are missing in Dataverse records
       href: dataverse-web-api-and-sdk/dataverse-records-missing-required-fields.md
     - name: Web API client errors
       href: dataverse-web-api-and-sdk/web-api-client-errors.md
+- name: Dynamics 365 App for Outlook
+  items:
+    - name: App for Outlook didn't load completely
+      href: d365-app-outlook/dynamics-365-app-outlook-did-not-load.md
+    - name: App for Outlook doesn't appear within Outlook
+      href: d365-app-outlook/app-does-not-appear-within-outlook.md
+    - name: App for Outlook is missing
+      href: d365-app-outlook/dynamics-365-app-for-outlook-is-missing.md
+    - name: Attachments aren't tracked after Microsoft Defender for Office 365 is enabled
+      href: d365-app-outlook/attachments-not-tracked-to-dynamics-365-after-office-365-atp-is-enabled.md
+    - name: Authentication pop-up is blank and unable to sign in
+      href: d365-app-outlook/dynamics-app-for-outlook-authentication-pop-up-blank-cannot-proceed.md
+    - name: Buttons such as Track and Set Regarding are missing
+      href: d365-app-outlook/buttons-such-as-track-and-set-regarding-are-missing.md
+    - name: Can't access App for Outlook due to email address is not recognized
+      href: d365-app-outlook/trying-to-access-dynamics-365-app-for-outlook-from-email-do-not-recognize-error.md
+    - name: Can't connect to Exchange message
+      href: d365-app-outlook/cannot-connect-to-exchange-message-when-using-dynamics-365-app-for-outlook.md
+    - name: Can't load this app because email account isn't configured
+      href: d365-app-outlook/we-cannot-load-this-app.md
+    - name: Email or appointment tracked by App for Outlook shows as Track pending
+      href: d365-app-outlook/emails-tracked-by-dynamics-365-app-for-outlook-show-track-pending.md
+    - name: Error in App for Outlook
+      href: d365-app-outlook/error-when-opening-365-app-outlook.md
+    - name: Errors when opening App for Outlook
+      href: d365-app-outlook/errors-when-opening-365-app-outlook.md
+    - name: Experience without Server-Side Synchronization
+      href: d365-app-outlook/experience-without-server-side-synchronization.md
+    - name: IncomingEmailRejected error when installing App for Outlook
+      href: d365-app-outlook/error-incomingemailrejected-install-dynamics-365-app-outlook.md
+    - name: IncomingEmailS2SApprovalNeeded error when installing App for Outlook
+      href: d365-app-outlook/error-install-dynamics-365-app-outlook.md
+    - name: Item level Server-Side Synchronization issues
+      href: d365-app-outlook/troubleshoot-item-level-server-side-synchronization-issues.md
+    - name: Privilege error when using App for Outlook
+      href: d365-app-outlook/privilege-error-occurs-when-using-dynamics-365-app-for-outlook.md
+    - name: Something went wrong during sign-in when accessing App for Outlook
+      href: d365-app-outlook/something-went-wrong-during-sign.md
+    - name: Something went wrong during sign-in when using App for Outlook
+      href: d365-app-outlook/something-went-wrong-during-sign-in.md
+    - name: The authentication was not successful
+      href: d365-app-outlook/the-authentication-was-not-successful.md
+    - name: The view is not available when opening an email
+      href: d365-app-outlook/the-view-is-not-available-error-when-opening-emails.md
+    - name: Track and Set Regarding options are missing
+      href: d365-app-outlook/track-set-regarding-options-miss.md
+    - name: User role doesn't have required permissions
+      href: d365-app-outlook/current-user-role-not-have-required-permissions.md
+    - name: We're unable to connect to your server
+      href: d365-app-outlook/we-are-unable-to-connect-to-your-dynamics-365-app-for-outlook-error.md
+    - name: You don't have required role or privilege
+      href: d365-app-outlook/you-do-not-have-required-role-privilege.md
+    - name: You don't have the required role or privilege to complete this action
+      href: d365-app-outlook/you-do-not-have-the-required-role-or-privilege-to-complete-this-action-error.md
+- name: Environment and app access issues
+  items:
+    - name: Troubleshoot user access issues for different environments
+      href: environment-app-access/troubleshooting-user-needs-read-write-access-organization.md
+    - name: Troubleshoot missing environments
+      href: environment-app-access/troubleshoot-missing-environments.md  
 - name: Email and Exchange Synchronization
   items:
     - name: 401 Unauthorized exception when using Server-Side Synchronization
@@ -80,6 +148,8 @@
       href: email-exchange-synchronization/mailbox-fails-tested-enabled.md
     - name: OutgoingEmailAuthenticationError in mailbox alert
       href: email-exchange-synchronization/outgoingemailauthenticationerror-shows-in-mailbox-alert.md
+    - name: Troubleshooting server-side synchronization 
+      href: email-exchange-synchronization/troubleshooting-monitoring-server-side-synchronization.md 
     - name: '"Tracked to Dynamics 365" category is added to a mailbox'
       href: email-exchange-synchronization/tracked-to-dynamics-365-category-added.md
     - name: Test Connection fails from Email Server Profile

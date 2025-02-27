@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: waltere, v-dehaas, kaushika
-ms.custom: sap:Network Connectivity and File Sharing\WINS, csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\wins
+- pcy:WinComm Networking
 ---
 # Troubleshooting WINS error event ID 4102, 4243, 4242, and 4286 messages
 

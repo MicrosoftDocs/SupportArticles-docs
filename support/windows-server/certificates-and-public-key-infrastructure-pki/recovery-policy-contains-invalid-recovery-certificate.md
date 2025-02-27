@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, Rajsin
-ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Encrypting File System (EFS), csstroubleshoot
+ms.custom:
+- sap:certificates and public key infrastructure (pki)\encrypting file system (efs)
+- pcy:WinComm Directory Services
 ---
 # Error when client computers encrypt a file in a Windows Server 2003 domain: Recovery policy configured for this system contains invalid recovery certificate
 

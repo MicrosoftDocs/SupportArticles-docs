@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Virtualization and Hyper-V\Virtual switch manager (Vmswitch), csstroubleshoot
+ms.custom:
+- sap:virtualization and hyper-v\virtual switch manager (vmswitch)
+- pcy:WinComm Storage High Avail
 ---
 # Creating V-switches within the hyper-V environment fails
 

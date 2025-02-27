@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, dongill, inhenkel, v-lianna
-ms.custom: sap:Virtualization and Hyper-V\Shielded Virtual Machines, csstroubleshoot
+ms.custom:
+- sap:virtualization and hyper-v\shielded virtual machines
+- pcy:WinComm Storage High Avail
 ms.assetid: 07691d5b-046c-45ea-8570-a0a85c3f2d22
 ---
 # Troubleshoot using the Guarded Fabric Diagnostic Tool

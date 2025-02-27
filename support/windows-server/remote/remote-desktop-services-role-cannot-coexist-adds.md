@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Remote Desktop Services and Terminal Services\Connection Broker and load balancing, csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\connection broker and load balancing
+- pcy:WinComm User Experience
 ---
 # Remote Desktop Services role cannot coexist with AD DS role
 

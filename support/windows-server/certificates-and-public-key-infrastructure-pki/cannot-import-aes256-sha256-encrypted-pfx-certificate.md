@@ -9,7 +9,9 @@ audience: itpro
 ms.topic: troubleshooting
 ms.service: windows-server
 ms.reviewer: kaushika, v-tappelgate
-ms.custom: certificates-and-public-key-infrastructure-pki, csstroubleshoot
+ms.custom:
+- sap:certificates-and-public-key-infrastructure-pki
+- pcy:WinComm Directory Services
 keywords: 
 ---
 # Can't import an AES256-SHA256-encrypted PFX certificate

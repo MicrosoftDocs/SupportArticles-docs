@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, DIASMITH
-ms.custom: sap:System Performance\Startup or Pre-logon Reliability (crash, errors, bug check or Blue Screen), csstroubleshoot
+ms.custom:
+- sap:system performance\startup or pre-logon reliability (crash,errors,bug check or blue screen)
+- pcy:WinComm Performance
 ---
 # The computer does not start after you change the active partition by using the Disk Management tool
 

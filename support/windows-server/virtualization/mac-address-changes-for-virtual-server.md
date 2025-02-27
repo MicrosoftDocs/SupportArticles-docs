@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, stevemat, davidg, johnmar
-ms.custom: sap:Virtualization and Hyper-V\High availability virtual machines, csstroubleshoot
+ms.custom:
+- sap:virtualization and hyper-v\high availability virtual machines
+- pcy:WinComm Storage High Avail
 ---
 # MAC address changes for virtual server during a failover with clustering
 

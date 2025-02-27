@@ -7,7 +7,9 @@ audience: itpro
 keywords: ad, security,KDC service, RODC, error 1450, handle invalid
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-tappelgate
-ms.custom: sap:Windows Security Technologies\Kerberos authentication, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\kerberos authentication
+- pcy:WinComm Directory Services
 ---
 
 # KDC service on an RODC can't start and generates error 1450

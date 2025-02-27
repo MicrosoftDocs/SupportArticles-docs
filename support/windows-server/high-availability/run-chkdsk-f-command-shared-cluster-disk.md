@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, stevemat, CTIMON
-ms.custom: sap:Clustering and High Availability\Root cause of an unexpected failover, csstroubleshoot
+ms.custom:
+- sap:clustering and high availability\root cause of an unexpected failover
+- pcy:WinComm Storage High Avail
 ---
 # Run the chkdsk /f command on a shared cluster disk
 

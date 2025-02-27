@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, leons, v-srisan
-ms.custom: sap:Virtualization and Hyper-V\Integration components, csstroubleshoot
+ms.custom:
+- sap:virtualization and hyper-v\integration components
+- pcy:WinComm Storage High Avail
 ---
 # The VMBus device doesn't load on a virtual machine that is running on a computer with Hyper-V installed
 

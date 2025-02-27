@@ -2,7 +2,7 @@
 title: Troubleshoot issues with Windows Server Update Services (WSUS) client agents
 description: Diagnose and resolve issues with the WSUS client agents.
 ms.date: 02/11/2025
-ms.reviewer: kaushika
+ms.reviewer: kaushika, andad
 ms.custom: sap:Client Operations\Client Health
 ---
 # Troubleshoot issues with WSUS client agents

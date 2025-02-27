@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\Active Directory (FSMO), csstroubleshoot
+ms.custom:
+- sap:active directory\active directory (fsmo)
+- pcy:WinComm Directory Services
 ---
 # Error Attempting to Seize RID Master Role with Ntdsutil
 

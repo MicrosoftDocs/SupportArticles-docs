@@ -1915,8 +1915,6 @@ items:
       href: ./performance/system-shutdown-is-slow.md
     - name: System shutdown stops responding
       href: ./performance/system-shutdown-stops-responding-issues.md
-    - name: Use Userdump.exe to create a dump file
-      href: ./performance/use-userdump-create-dump-file.md
   - name: Slow Performance
     items:
     - name: 'Troubleshooting guidance: High CPU usage'
@@ -2239,6 +2237,8 @@ items:
       href: ./remote/license-attributes-not-updated-rdsh-server.md
     - name: '"Licenses are not available for this Remote Desktop" error in Licensing Diagnosis'
       href: ./remote/rdsh-administrator-on-get-error-licensing-diagnosis.md
+    - name: Remote Desktop licensing mode is not configured warning
+      href: ./remote/remote-desktop-licensing-mode-not-configured-warning.md
     - name: Remote Desktop Licensing Service doesn't start
       href: ./remote/remote-desktop-licensing-service-not-star.md
     - name: Remote session disconnected when using non-persistent VDI with per-user licensing

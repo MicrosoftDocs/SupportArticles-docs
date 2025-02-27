@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, fszita, v-jomcc
-ms.custom: sap:Active Directory\Schema Updates, csstroubleshoot
+ms.custom:
+- sap:active directory\schema updates
+- pcy:WinComm Directory Services
 ---
 # Error when you run the Active Directory Installation Wizard: The version of the Active Directory schema of the source forest is not compatible with the version of Active Directory on this computer
 

@@ -128,6 +128,8 @@
       href: procurement/vendor-rebate-not-cumulated.md
     - name: A product receipt voucher number is consumed even when not generating a voucher
       href: procurement/voucher-number-consumed.md
+    - name: Can't delete a purchase order line after it's confirmed
+      href: procurement/purchase-order-line-deletion-restriction.md  
     - name: Can't add a line to a purchase requisition after requesting a change
       href: procurement/cant-add-line-to-purchase-requisition-after-change.md
     - name: Can't change the effective date for an approved vendor
@@ -302,6 +304,8 @@
       href: warehousing/load-weight-positive-numbers.md
     - name: Location profile disallows negative inventory, but negative on-hand is permitted
       href: warehousing/location-profile-set.md
+    - name: Many printing jobs are queued in the Document Routing Agent (DRA)
+      href: warehousing/clear-document-rounting-agent-printing-queue.md  
     - name: Multiple SKU option doesn't evaluate multiple location directive actions
       href: warehousing/evaluate-multiple-location-directive-actions.md
     - name: Mixed license plate receiving doesn't work for any disposition code but Credit

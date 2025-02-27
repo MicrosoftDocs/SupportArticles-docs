@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: rkiran, jerrycif, kaushika
-ms.custom: sap:Remote Desktop Services and Terminal Services\Virtual Desktop Infrastructure (VDI), csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\virtual desktop infrastructure (vdi)
+- pcy:WinComm User Experience
 ---
 # Error message when you try to shadow a remote session in Windows Server 2012 R2: This computer name is invalid
 
