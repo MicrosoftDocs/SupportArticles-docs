@@ -169,12 +169,7 @@ The best way to troubleshoot permissions is to use the "Effective Access" featur
 > Troubleshooting AD permissions can be tricky because a change in ACLs does not take immediate effect. Always consider that such changes are subject to AD replication.
 >
 > For example:
-
-> - Make sure that you are making the necessary changes directly to the closest domain controller (see the "Connectivity with AD" section):
-> - Wait for ADDS replications to occur.
-> - If possible, restart ADSync service to clear the cache.
-
-Troubleshooting summary
+**Troubleshooting summary**
 
 - Identify which domain controller is used.
 - Use preferred domain controllers to target the same domain controller.
@@ -184,10 +179,11 @@ Troubleshooting summary
 - Use the LDP tool to bind against the domain controller that has the ADCA, and try to read the failing object or attribute.
 - Temporarily add the ADCA to the Enterprise admins or Domain admins, and restart the ADSync service.
 
-**Important:** Do not use this as a solution.
+> [!WARNING]
+> Do not use this as a permanent solution for permissions issues. After determining the permissions issue, remove the ADCA from any highly privileged groups, and provide the required AD permissions directly to the ADCA.
 
-- After you verify the permissions issue, remove the ADCA from any highly privileged groups, and provide the required AD permissions directly to the ADCA.
-- Engage Directory Services or a network support team to help you troubleshoot the situation.
+> [!NOTE]
+> Engage Directory Services or a network support team to help you troubleshoot the situation.
 
 #### AD replications
 
@@ -230,22 +226,23 @@ Troubleshooting summary
 
 - **Attribute filtering with Microsoft Entra app and attribute filtering**
 
-  An easy-to-miss scenario for attributes not synchronizing is when Microsoft Entra Connect is configured with the [Microsoft Entra app and attribute filtering](/azure/active-directory/hybrid/how-to-connect-install-custom#azure-ad-app-and-attribute-filtering) feature. To check whether the feature is enabled, and for which attributes, take a **General Diagnostics Report**.
-
+  An easy-to-miss scenario for attributes not synchronizing is when Microsoft Entra Connect is configured with the [Microsoft Entra app and attribute filtering](/azure/active-directory/hybrid/how-to-connect-install-custom#azure-ad-app-and-attribute-filtering) feature. To check whether the feature is enabled, and for which attributes, get a **General Diagnostics Report** from the [Troubleshooting Task](/entra/identity/hybrid/connect/tshoot-connect-objectsync#troubleshooting-task), or run `(Get-ADSyncGlobalSettings).Parameters | where Name -eq 'Microsoft.OptionalFeature.FilterAAD' | select Name, Value` from PowerShell.
+  
 - **Object type excluded in ADDS Connector configuration**
 
   This situation does not occur as commonly for users and groups. However, if all the objects of a specific object type are missing in ADCS, it might be useful to examine which object types enabled in ADDS Connector configuration.
 
-  You can use the **Get-ADSyncConnector** cmdlet to retrieve the object types that are enabled on the Connector, as shown in the next image. The following are the object types that should be enabled by default:
+Use the **Get-ADSyncConnector** cmdlet to retrieve the object types that are enabled on the Connector, as shown in the next image.
+  
+```PowerShell
+$connectorName = "Contoso.com"
+(Get-ADSyncConnector | where Name -eq $connectorName).ObjectInclusionList`
+```
 
-  `(Get-ADSyncConnector | where Name -eq "Contoso.com").ObjectInclusionList`
+The following list shows the object types that should be enabled by default (**publicFolder** object type is present only when the Mail Enabled Public Folder feature is enabled):
 
-  The following are the object types that should be enabled by default:
+:::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/get-adsyncconnector-objects.png" alt-text="Screenshot show the Get-ADSyncConnector object types." border="false":::
 
-  :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/get-adsyncconnector-objects.png" alt-text="Screenshot show the Get-ADSyncConnector object types." border="false":::
-
-  > [!NOTE]
-  > The **publicFolder** object type is present only when the Mail Enabled Public Folder feature is enabled.
 
 - **Attribute excluded in ADCS**
 
@@ -257,7 +254,7 @@ Troubleshooting summary
 
   :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/ad-connector-sync-manager.png" alt-text="Screenshot of AD Connector Synchronization Manager.":::
 
-  > [!NOTE]
+  > [!IMPORTANT] 
   > Including or excluding object types or attributes in the Synchronization Service Manager is not supported.
 
 Troubleshooting summary
