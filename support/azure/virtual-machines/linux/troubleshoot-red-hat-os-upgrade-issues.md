@@ -652,7 +652,7 @@ Since `GRUB_DEFAULT=0` forces the system to always boot the first menu entry in 
     sudo reboot
     ```
 
-    After the reboot, if the fix is applied correctly, the VM will go into the Leapp upgrade initramfs, and you should see an output similar to the following lines in the serial console:
+    After the reboot, if the fix is applied correctly, the VM will boot into the Leapp upgrade initramfs, and you should see an output similar to the following lines in the serial console:
 
     ```output
     [  OK  ] Reached target Remote File Systems.
