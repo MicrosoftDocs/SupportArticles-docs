@@ -10,13 +10,14 @@ ms.custom: sap:Microsoft Entra Connect Sync, has-azure-ad-ps-ref
 
 # End-to-end troubleshooting of Microsoft Entra Connect objects and attributes
 
-This article is intended to establish a common practice for how to troubleshoot synchronization issues in Microsoft Entra ID. This method applies to situations in which an object or attribute doesn't synchronize to Azure Active AD and doesn't display any errors on the sync engine, in the Application viewer logs, or in the Microsoft Entra logs. It's easy to get lost in the details if there's no obvious error. However, by using best practices, you can isolate the issue and provide insights for Microsoft Support engineers.
+This article is intended to establish a common practice for how to troubleshoot synchronization issues in Microsoft Entra ID. 
+This method is used when an object or attribute fails to synchronize with Microsoft Entra ID directory, and no errors are shown in the sync engine, Application event viewer logs, or Microsoft Entra logs. It's easy to get lost in the details if there's no obvious error. However, by using best practices, you can isolate the issue and provide insights for Microsoft Support engineers.
 
 As you apply this troubleshooting method to your environment, over time, you'll be able to do the following steps:
 
 - Troubleshoot the sync engine logic from end to end.
 - Resolve synchronization issues more efficiently.
-- Identify issues more quickly by predicting the step in which they'll occur.
+- Identify issues more quickly by predicting the step in which they occur.
 - Identify the starting point for reviewing data.
 - Determine the optimal resolution.
 
@@ -26,7 +27,7 @@ The steps that are provided here start at the local Active Directory level and p
 
 ## Prerequisites
 
-For a better understanding of this article, first read the following prerequisite articles for a better understanding of how to search for an object in different sources (AD, AD CS, MV, and so on), and to understand how to check the connectors and lineage of an object.
+For a better understanding of this article, first read the following prerequisite articles for a better understanding of how to search for an object in different sources, and to understand how to check the connectors and lineage of an object.
 
 - [Microsoft Entra Connect: Accounts and permissions](/azure/active-directory/hybrid/reference-connect-accounts-permissions)
 - [Troubleshoot an object that is not synchronizing with Microsoft Entra ID](/azure/active-directory/hybrid/tshoot-connect-object-not-syncing)
@@ -35,11 +36,12 @@ For a better understanding of this article, first read the following prerequisit
 ## Ineffective troubleshooting practices
 
 The `onPremisesSyncEnabled` attribute in Microsoft Entra ID controls whether the tenant is prepared to accept synchronization of objects from on-premises AD DS.
-We've seen many customers fall into the habit of disabling DirSync on the tenant while troubleshooting object or attribute synchronization issues. It's easy to turn off directory synchronization by using Graph or PowerShell, however this process can be very disruptive.
+There's an habit of disabling DirSync on the tenant while troubleshooting object or attribute synchronization issues. It's easy to turn off directory synchronization by using Graph or PowerShell, however this process can be disruptive.
 
-Disabling DirSync at the tenant level, triggers a complex and lengthy backend operation to transfer the Source of Authority (SoA) from local Active Directory to Microsoft Entra ID and Exchange Online for all the synced objects on the tenant. This operation is necessary to convert each object from `onPremisesSyncEnabled=True` to cloud-only objects (`onPremisesSyncEnabled=<null>`), and clean up all the shadow properties that are synced from on-premises AD DS (for example, ShadowUserPrincipalName and ShadowProxyAddresses). Depending on the size of the tenant, this operation can take more than 72 hours. Also, it's not possible to predict when the operation will finish. Never use this method to troubleshoot a sync issue because this will cause additional harm and won't fix the root cause. You'll be blocked from enabling DirSync again until this disablement operation is complete. Also, after you re-enable DirSync, the Entra Connect server must match again all the on-premises objects with existent Microsoft Entra ID objects.
+Disabling DirSync at the tenant level, triggers a complex and lengthy backend operation to transfer the Source of Authority (SoA) from local Active Directory to Microsoft Entra ID and Exchange Online for all the synced objects on the tenant. This operation is necessary to convert each object from `onPremisesSyncEnabled=True` to cloud-only objects (`onPremisesSyncEnabled=<null>`), and clean up all the shadow properties that are synced from on-premises AD DS (for example, ShadowUserPrincipalName and ShadowProxyAddresses). Depending on the size of the tenant, this operation can take more than 72 hours. Also, it's not possible to predict when the operation finishes. 
+Never use this method to troubleshoot a sync issue because such operation can cause more harm and doesn't fix the root cause. You'll be blocked from enabling DirSync again until this disablement operation is complete. Also, after you re-enable DirSync, the Entra Connect server must match again all the on-premises objects with existent Microsoft Entra ID objects.
 
-The only scenarios where it's supported to disable DirSync are:
+The only scenarios where disabling DirSync is supported, are:
 
 - You are decommissioning your on-premises synchronization server, and you want to continue managing your identities entirely from the cloud instead of from hybrid identities.
 - You have some synced objects in the tenant that you want to keep as cloud-only in Microsoft Entra ID and remove from on-premises AD permanently.
@@ -87,7 +89,7 @@ Determine whether the object or attribute is present and consistent in ADCS. If 
 
 ### Description for Step 1
 
-Synchronization between ADDS and ADCS occurs at the import step, and is the moment when AADC reads from the source directory and stores data in the database. That is, when data is staged in the connector space. During a delta import from AD, AADC requests all the new changes that occurred after a given directory watermark. This call is initiated by AADC by using the Directory Services DirSync Control against the Active Directory Replication Service. This step provides the last watermark as the last successful AD import, and gives AD the point-in-time reference from when all the (delta) changes should be retrieved. A full import is different because AADC will import from AD all the data (in sync scope), and then mark as obsolete (and delete) all the objects that are still in ADCS but were not imported from AD. All the data between AD and AADC is transferred through LDAP and is encrypted by default.
+Synchronization between ADDS and ADCS occurs at the import step, and is the moment when AADC reads from the source directory and stores data in the database. That is, when data is staged in the connector space. During a delta import from AD, AADC requests all the new changes that occurred after a given directory watermark. This call is initiated by AADC by using the Directory Services DirSync Control against the Active Directory Replication Service. This step provides the last watermark as the last successful AD import, and gives AD the point-in-time reference from when all the (delta) changes should be retrieved. A full import is different because AADC imports from ADCS all the data in sync scope, and then marks as obsolete (and deletes) all the objects that are still in ADCS but were not imported from AD. All the data between AD and AADC is transferred through LDAP and is encrypted by default.
 
 :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/aadc-connection-options.png" alt-text="Screenshot of the A A D C connection options dialog." border="false":::
 
