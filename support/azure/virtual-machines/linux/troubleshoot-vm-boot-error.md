@@ -151,7 +151,7 @@ This error might be associated with one of the following issues:
 
 * GRUB boot loader points to an invalid disk or partition.
 
-  To resolve this issue, [reinstall GRUB and regenerate the GRUB configuration file-manually](#reinstall-grub-regenerate-grub-configuration-file).
+  To resolve this issue, [reinstall GRUB and regenerate the GRUB configuration file manually](#reinstall-grub-regenerate-grub-configuration-file).
 
 * OS disk partition table issues caused by human error.
 
