@@ -3,7 +3,7 @@ title: Resolve issues when accessing Viva Glint survey results
 description: Resolves some common issues that you might encounter when you try to view survey results for your team.
 manager: dcscontentpm
 ms.reviewer: aweixelman
-ms.date: 02/13/2025
+ms.date: 02/27/2025
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
@@ -68,10 +68,10 @@ To resolve the issue, select the appropriate solution for your situation:
 
 ## Incorrect team information or broken trend
 
-When accessing reports, you may see incorrect team information or a break in trend for some attributes. These issues can be caused by:
+When accessing reports, you may see incorrect team information or a break in trend for some attributes. These issues can occur for the following reasons:
 
 - Recent changes to your team that aren't shown in your Viva Glint dashboard because new data wasn't uploaded before a survey launched. For example, new members have joined your team, but this change isn't reflected in the dashboard.
-- A change in an attribute value that breaks trend for scores in reports. For example, if your organization relabeled a department from "HR" to "Human Resources," scores don't trend after the change even though the department remains the same.
+- A change in an attribute value that breaks the trend for scores in reports. For example, if your organization relabeled a department from "HR" to "Human Resources", scores don't trend after the change even though the department remains the same.
 
 To resolve the issue, check whether the Viva Glint admin can [update your results data](/viva/glint/setup/update-glint-reporting-data) or [grant/update custom access](/viva/glint/setup/custom-user-role) to view new and old values. 
 
