@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Microsoft Entra Connect objects and attributes
-description: Describes how to determine why an object is not syncing in Microsoft Entra ID.
+description: Describes how to determine why an object isn't syncing in Microsoft Entra ID.
 ms.date: 02/03/2021
 ms.reviewer: nualex
 editor: v-jesits
@@ -30,7 +30,7 @@ The steps that are provided here start at the local Active Directory level and p
 For a better understanding of this article, first read the following prerequisite articles for a better understanding of how to search for an object in different sources, and to understand how to check the connectors and lineage of an object.
 
 - [Microsoft Entra Connect: Accounts and permissions](/azure/active-directory/hybrid/reference-connect-accounts-permissions)
-- [Troubleshoot an object that is not synchronizing with Microsoft Entra ID](/azure/active-directory/hybrid/tshoot-connect-object-not-syncing)
+- [Troubleshoot an object that isn't synchronizing with Microsoft Entra ID](/azure/active-directory/hybrid/tshoot-connect-object-not-syncing)
 - [Troubleshoot object synchronization with Microsoft Entra Connect Sync](/azure/active-directory/hybrid/tshoot-connect-objectsync)
 
 ## Ineffective troubleshooting practices
@@ -39,13 +39,13 @@ The `onPremisesSyncEnabled` attribute in Microsoft Entra ID controls whether the
 There's an habit of disabling DirSync on the tenant while troubleshooting object or attribute synchronization issues. It's easy to turn off directory synchronization by using Graph or PowerShell, however this process can be disruptive.
 
 Disabling DirSync at the tenant level, triggers a complex and lengthy backend operation to transfer the Source of Authority (SoA) from local Active Directory to Microsoft Entra ID and Exchange Online for all the synced objects on the tenant. This operation is necessary to convert each object from `onPremisesSyncEnabled=True` to cloud-only objects (`onPremisesSyncEnabled=<null>`), and clean up all the shadow properties that are synced from on-premises AD DS (for example, ShadowUserPrincipalName and ShadowProxyAddresses). Depending on the size of the tenant, this operation can take more than 72 hours. Also, it's not possible to predict when the operation finishes. 
-Never use this method to troubleshoot a sync issue because such operation can cause more harm and doesn't fix the root cause. You'll be blocked from enabling DirSync again until this disablement operation is complete. Also, after you re-enable DirSync, the Entra Connect server must match again all the on-premises objects with existent Microsoft Entra ID objects.
+Never use this method to troubleshoot a sync issue because such operation can cause more harm and doesn't fix the root cause. You're blocked from enabling DirSync again until this disablement operation is complete. Also, after you re-enable DirSync, the Entra Connect server must match again all the on-premises objects with existent Microsoft Entra ID objects.
 
 The only scenarios where disabling DirSync is supported, are:
 
-- You are decommissioning your on-premises synchronization server, and you want to continue managing your identities entirely from the cloud instead of from hybrid identities.
+- You're decommissioning your on-premises synchronization server, and you want to continue managing your identities entirely from the cloud instead of from hybrid identities.
 - You have some synced objects in the tenant that you want to keep as cloud-only in Microsoft Entra ID and remove from on-premises AD permanently.
-- You are currently using a custom attribute as the SourceAnchor in Entra Connect (for example, employeeId), and you are re-installing AADC to start using **ms-Ds-Consistency-Guid/ObjectGuid** as the new SourceAnchor attribute (or vice versa).
+- You're currently using a custom attribute as the SourceAnchor in Entra Connect (for example, employeeId), and you're re-installing AADC to start using **ms-Ds-Consistency-Guid/ObjectGuid** as the new SourceAnchor attribute (or vice versa).
 - There are scenarios in your mailbox migration strategy that could lead to potential issues.
 
 In some situations, you might have to temporarily stop synchronization or manually control Entra Connect sync cycles. For example, you might have to pause synchronization to be able to run one sync step at a time. Instead of disabling DirSync, you can just stop the sync scheduler by running the following cmdlet:
@@ -89,13 +89,13 @@ Determine whether the object or attribute is present and consistent in ADCS. If 
 
 ### Description for Step 1
 
-Synchronization between ADDS and ADCS occurs at the import step, and is the moment when AADC reads from the source directory and stores data in the database. That is, when data is staged in the connector space. During a delta import from AD, AADC requests all the new changes that occurred after a given directory watermark. This call is initiated by AADC by using the Directory Services DirSync Control against the Active Directory Replication Service. This step provides the last watermark as the last successful AD import, and gives AD the point-in-time reference from when all the (delta) changes should be retrieved. A full import is different because AADC imports from ADCS all the data in sync scope, and then marks as obsolete (and deletes) all the objects that are still in ADCS but were not imported from AD. All the data between AD and AADC is transferred through LDAP and is encrypted by default.
+Synchronization between ADDS and ADCS occurs at the import step, and is the moment when AADC reads from the source directory and stores data in the database. That is, when data is staged in the connector space. During a delta import from AD, AADC requests all the new changes that occurred after a given directory watermark. This call is initiated by AADC by using the Directory Services DirSync Control against the Active Directory Replication Service. This step provides the last watermark as the last successful AD import, and gives AD the point-in-time reference from when all the (delta) changes should be retrieved. A full import is different because AADC imports from ADCS all the data in sync scope, and then marks as obsolete (and deletes) all the objects that are still in ADCS but weren't imported from AD. All the data between AD and AADC is transferred through LDAP and is encrypted by default.
 
 :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/aadc-connection-options.png" alt-text="Screenshot of the A A D C connection options dialog." border="false":::
 
-If the connection with AD is successful, but the object or attribute is not present in ADCS (assuming the domain or object is in sync scope), the issue most likely involves ADDS permissions. The ADCA requires ay least read permissions on the object in AD in order to import data to ADCS. By default, the MSOL account has explicit read/write permissions for all user, group, and computer properties. However, this situation might still be problematic if the following conditions are true:
+If the connection with AD is successful, but the object or attribute isn't present in ADCS (assuming the domain or object is in sync scope), the issue most likely involves ADDS permissions. The ADCA requires ay least read permissions on the object in AD in order to import data to ADCS. By default, the MSOL account has explicit read/write permissions for all user, group, and computer properties. However, this situation might still be problematic if the following conditions are true:
 
-- AADC uses a custom ADCA, but it was not provided sufficient permissions in AD.
+- AADC uses a custom ADCA, but it wasn't provided sufficient permissions in AD.
 - A parent OU has blocked inheritance, which prevents propagation of permissions from the root of the domain.
 - The object or attribute itself has blocked inheritance, which prevents propagation of permissions.
 - The object or attribute has an explicit Deny permission that prevents ADCA from reading it.
@@ -104,11 +104,11 @@ If the connection with AD is successful, but the object or attribute is not pres
 
 #### Connectivity with AD
 
-In the Synchronization Service Manager, the "Import from AD" step shows which domain controller is contacted under **Connection Status**. You will most likely see an error here when there is a connectivity issue that affects AD.
+In the Synchronization Service Manager, the "Import from AD" step shows which domain controller is contacted under **Connection Status**. You'll most likely see an error here when there is a connectivity issue that affects AD.
 
 :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/import-from-ad-connection-status.png" alt-text="Screenshot shows the Connection Status area in the Import from A D step.":::
 
-If you have to further troubleshoot connectivity for AD, especially if no errors surfaced in Microsoft Entra Connect server or if you are still in the process of installing the product, start by using the [ADConnectivityTool](/azure/active-directory/hybrid/how-to-connect-adconnectivitytools#adconnectivitytool-during-installation).
+If you have to further troubleshoot connectivity for AD, especially if no errors surfaced in Microsoft Entra Connect server or if you're still in the process of installing the product, start by using the [ADConnectivityTool](/azure/active-directory/hybrid/how-to-connect-adconnectivitytools#adconnectivitytool-during-installation).
 
 Connection issues to ADDS have the following causes:
 
@@ -136,7 +136,7 @@ After you troubleshoot AD connectivity, run the [Troubleshoot Object Synchroniza
 
 A lack of AD permissions can affect both directions of the synchronization:
 
-- When you import from ADDS to ADCS, a lack of permissions can cause AADC to skip objects or attributes so that AADC cannot get ADDS updates in the import stream. This error occurs because the ADCA does not have enough permissions to read the object.
+- When you import from ADDS to ADCS, a lack of permissions can cause AADC to skip objects or attributes so that AADC can't get ADDS updates in the import stream. This error occurs because the ADCA doesn't have enough permissions to read the object.
 - When you export from ADCS to ADDS, a lack of permissions generates a "permission-issue" export error.
 
 To check permissions, open the **Properties** window of an AD object, select **Security** > **Advanced**, and then examine the object's allow/deny ACLs by selecting the **Disable Inheritance** button (if inheritance is enabled). You can sort the column contents by **Type** to locate all the "deny" permissions. AD permissions can vary widely. However, by default, you might only see one "Deny ACL" for "Exchange Trusted Subsystem." Most permissions will be marked as **Allow**.
@@ -168,7 +168,7 @@ The best way to troubleshoot permissions is to use the "Effective Access" featur
 :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/advanced-security-settings.png" alt-text="Screenshot shows information under the Effective Access tab in Advanced Security Settings window.":::
 
 > [!important]
-> Troubleshooting AD permissions can be difficult because a change in ACLs does not take immediate effect. Always consider that such changes are subject to AD replication.
+> Troubleshooting AD permissions can be difficult because a change in ACLs doesn't take immediate effect. Always consider that such changes are subject to AD replication.
 >
 > For example:
 **Troubleshooting summary**
@@ -182,14 +182,14 @@ The best way to troubleshoot permissions is to use the "Effective Access" featur
 - Temporarily add the ADCA to the Enterprise admins or Domain admins, and restart the ADSync service.
 
 > [!WARNING]
-> Do not use this as a permanent solution for permissions issues. After determining the permissions issue, remove the ADCA from any highly privileged groups, and provide the required AD permissions directly to the ADCA.
+> Don't use this as a permanent solution for permissions issues. After determining the permissions issue, remove the ADCA from any highly privileged groups, and provide the required AD permissions directly to the ADCA.
 
 > [!NOTE]
 > Engage Directory Services or a network support team to help you troubleshoot the situation.
 
 #### AD replications
 
-This issue is less likely to affect Microsoft Entra Connect because it causes greater problems. However, when Microsoft Entra Connect is importing data from a domain controller by using delayed replication, it will not import the latest information from AD, which causes sync issues in which an object or attribute that was recently created or changed in AD does not sync to Microsoft Entra ID because it was not replicated to the domain controller that Microsoft Entra Connect is contacting. To verify that this is the issue, check the domain controller that AADC uses for import (see "Connectivity to AD"), and use the **AD Users and Computers** console to directly connect to this server (see **Change Domain Controller** in the next image). Then, verify that the data on this server corresponds to the latest data, and whether it is consistent with the respective ADCS data. At this stage, AADC will generate a greater load on the domain controller and networking layer.
+This issue is less likely to affect Microsoft Entra Connect because it causes greater problems. However, when Microsoft Entra Connect is importing data from a domain controller by using delayed replication, it will not import the latest information from AD, which causes sync issues in which an object or attribute that was recently created or changed in AD doesn't sync to Microsoft Entra ID because it wasn't replicated to the domain controller that Microsoft Entra Connect is contacting. To verify that this is the issue, check the domain controller that AADC uses for import (see "Connectivity to AD"), and use the **AD Users and Computers** console to directly connect to this server (see **Change Domain Controller** in the next image). Then, verify that the data on this server corresponds to the latest data, and whether it's consistent with the respective ADCS data. At this stage, AADC will generate a greater load on the domain controller and networking layer.
 
 :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/change-domain-controller.png" alt-text="Screenshot of the Change Domain Controller option of Active Directory.":::
 
@@ -197,19 +197,19 @@ Another approach is to use the RepAdmin tool to check the object's replication m
 
 - Attribute value from all domain controllers:
 
-  `repadmin /showattr * "DC=contoso,DC=com" /subtree /filter:"sAMAccountName=User01" /attrs:pwdLastSet,UserPrincipalName`
+  `RepAdmin /showattr * "DC=contoso,DC=com" /subtree /filter:"sAMAccountName=User01" /attrs:pwdLastSet,UserPrincipalName`
 
   :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/repadmin-showattr.png" alt-text="Screenshot of the RepAdmin tool using showattr.":::
 
 - Object metadata from all DCs:
 
-  `repadmin /showobjmeta * "CN=username,DC=contoso,DC=com" > username-ObjMeta.txt`
+  `RepAdmin /showobjmeta * "CN=username,DC=contoso,DC=com" > username-ObjMeta.txt`
 
   :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/repadmin-showobjmeta.png" alt-text="Screenshot of the RepAdmin tool with the showobjmeta command.":::
 
 - AD Replication Summary
 
-  `repadmin /replsummary`
+  `RepAdmin /replsummary`
 
   :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/repadmin-replsummary.png" alt-text="Screenshot of the RepAdmin tool using the replsummary command." border="false":::
 
@@ -232,7 +232,7 @@ Troubleshooting summary
   
 - **Object type excluded in ADDS Connector configuration**
 
-  This situation does not occur as commonly for users and groups. However, if all the objects of a specific object type are missing in ADCS, it might be useful to examine which object types enabled in ADDS Connector configuration.
+  This situation doesn't occur as commonly for users and groups. However, if all the objects of a specific object type are missing in ADCS, it might be useful to examine which object types enabled in ADDS Connector configuration.
 
 Use the **Get-ADSyncConnector** cmdlet to retrieve the object types that are enabled on the Connector, as shown in the next image.
   
@@ -260,7 +260,7 @@ The following list shows the object types that should be enabled by default (**p
   :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/ad-connector-sync-manager.png" alt-text="Screenshot of AD Connector Synchronization Manager.":::
 
   > [!IMPORTANT] 
-  > Including or excluding object types or attributes in the Synchronization Service Manager is not supported.
+  > Including or excluding object types or attributes in the Synchronization Service Manager isn't supported.
 
 Troubleshooting summary
 
@@ -300,7 +300,7 @@ The synchronization between ADCS and MV occurs on the delta/full synchronization
 
 - **Check the inbound sync rules for provisioning**
 
-  An object that is present in ADCS but missing in MV indicates that there were no scoping filters on any of the provisioning sync rules that applied to that object. Therefore, the object was not projected to MV. This issue might occur if there are disabled or customized sync rules.
+  An object that is present in ADCS but missing in MV indicates that there were no scoping filters on any of the provisioning sync rules that applied to that object. Therefore, the object wasn't projected to MV. This issue might occur if there are disabled or customized sync rules.
 
   To get a list of inbound provisioning sync rules, run the following command:
 
@@ -369,7 +369,7 @@ Export-ADSyncToolsObjects -ObjectId '{46EBDE97-7220-E911-80CB-000D3A3614C0}' -So
 
 3. **Check the scoping filters on the inbound sync rule**
 
-   If a sync rule is enabled but not present in the object's lineage, the object should be filtered out by the sync rule's scoping filter. By checking the sync rule's scoping filters, the data on the ADCS object, and whether the sync rule is enabled or disabled, you should be able to determine why that sync rule was not applied to the ADCS object.
+   If a sync rule is enabled but not present in the object's lineage, the object should be filtered out by the sync rule's scoping filter. By checking the sync rule's scoping filters, the data on the ADCS object, and whether the sync rule is enabled or disabled, you should be able to determine why that sync rule wasn't applied to the ADCS object.
 
    Here is an example of a common troublesome scoping filter from a sync rule responsible for synchronizing Exchange properties. If the object has a null value for **mailNickName**, then none of the Exchange attributes in the transformation rules will flow to Microsoft Entra ID.
 
@@ -418,7 +418,7 @@ The synchronization between MV and AADCS occurs in the delta/full synchronizatio
 
 1. **Check the outbound sync rules for provisioning**
 
-   An object that is present in MV but missing in AADCS indicates that there were no scoping filters on any of the provisioning sync rules that applied to that object. For example, see the "Out to Microsoft Entra ID" sync rules shown in the next image. Therefore, the object was not provisioned in AADCS. This error can occur if there are disabled or customized sync rules.
+   An object that is present in MV but missing in AADCS indicates that there were no scoping filters on any of the provisioning sync rules that applied to that object. For example, see the "Out to Microsoft Entra ID" sync rules shown in the next image. Therefore, the object wasn't provisioned in AADCS. This error can occur if there are disabled or customized sync rules.
 
    To get a list of inbound provisioning sync rules, run the following command:
 
@@ -546,16 +546,16 @@ Fortunately, the issues that affect these components usually generate an error i
   
     For more information about the BypassDirSyncOverrides feature and how to restore synchronization of Mobile and otherMobile attributes from Microsoft Entra ID to on-premises Active Directory, see [How to use the BypassDirSyncOverrides feature of a Microsoft Entra tenant](/azure/active-directory/hybrid/how-to-bypassdirsyncoverrides).
 
-- **UserPrincipalName changes do not update in Microsoft Entra ID**
+- **UserPrincipalName changes don't update in Microsoft Entra ID**
 
-   If the UserPrincipalName attribute is not updated in Microsoft Entra ID, while other attributes sync as expected, it's possible that a feature that's named [SynchronizeUpnForManagedUsers](/azure/active-directory/hybrid/how-to-connect-syncservice-features#synchronize-userprincipalname-updates) is not enabled on the tenant.
+   If the UserPrincipalName attribute isn't updated in Microsoft Entra ID, while other attributes sync as expected, it's possible that a feature that's named [SynchronizeUpnForManagedUsers](/azure/active-directory/hybrid/how-to-connect-syncservice-features#synchronize-userprincipalname-updates) isn't enabled on the tenant.
   
    Before this feature was added, any updates to the UPN that came from on-premises after the user was provisioned in Microsoft Entra ID and assigned a license were *silently* ignored. An admin would have to use the legacy MSOnline or AzureAD PowerShell to update the UPN directly in Microsoft Entra ID. After this feature is updated, any updates to UPN will flow to Microsoft Entra regardless of whether the user is licensed (managed).
   
      > [!NOTE]
-   > After it's enabled, this feature cannot be disabled.
+   > After it's enabled, this feature can't be disabled.
 
-   **UserPrincipalName** updates will work if the user is NOT licensed. However, without the [SynchronizeUpnForManagedUsers](/azure/active-directory/hybrid/how-to-connect-syncservice-features#synchronize-userprincipalname-updates) feature, UserPrincipalName changes after the user is provisioned and is assigned a licensed that will NOT be updated in Microsoft Entra ID. Notice that Microsoft does not disable this feature on behalf of customers.
+   **UserPrincipalName** updates will work if the user isn't licensed. However, without the [SynchronizeUpnForManagedUsers](/azure/active-directory/hybrid/how-to-connect-syncservice-features#synchronize-userprincipalname-updates) feature, UserPrincipalName changes after the user is provisioned and is assigned a licensed that will NOT be updated in Microsoft Entra ID. Notice that Microsoft doesn't disable this feature on behalf of customers.
   
 - **Invalid characters and ProxyCalc internals**
 
@@ -573,9 +573,9 @@ Fortunately, the issues that affect these components usually generate an error i
 
 - **ThumbnailPhoto attribute (KB4518417)**
 
-    There is a general misconception that after you sync ThumbnailPhoto from AD for the first time, you can no longer update it, which is only partly true.
+    There's a general misconception that after you sync ThumbnailPhoto from AD for the first time, you can no longer update it, which is only partly true.
   
-    Usually, the ThumbnailPhoto in Microsoft Entra ID is continually updated. However, an issue occurs if the updated picture is no longer retrieved from Microsoft Entra ID by the respective workload or partner (for example, EXO or SfBO). This issue causes the false impression that the picture was not synced from on-premises AD to Microsoft Entra ID.
+    Usually, the ThumbnailPhoto in Microsoft Entra ID is continually updated. However, an issue occurs if the updated picture is no longer retrieved from Microsoft Entra ID by the respective workload or partner (for example, EXO or SfBO). This issue causes the false impression that the picture wasn't synced from on-premises AD to Microsoft Entra ID.
   
     Basic steps to troubleshoot ThumbnailPhoto:
   
@@ -585,7 +585,7 @@ Fortunately, the issues that affect these components usually generate an error i
     
   1. If the ADDS (or Entra ID) thumbnailPhoto has the correct image but it's not the correct image on other online services, the following conditions might apply:
     
-  - The user's mailbox contains an HD image and is not accepting low-resolution images from Microsoft Entra thumbnailPhoto. The solution is to directly update the user's mailbox image.
+  - The user's mailbox contains an HD image and isn't accepting low-resolution images from Microsoft Entra thumbnailPhoto. The solution is to directly update the user's mailbox image.
   - The user's mailbox image was updated correctly, but you're still seeing the original image. The solution is to wait at least six hours to see the updated image in the Office 365 User Portal or the Azure portal.
 
 ## Additional resources
@@ -594,7 +594,7 @@ Fortunately, the issues that affect these components usually generate an error i
 
 - [Troubleshoot object synchronization with Microsoft Entra Connect Sync](/azure/active-directory/hybrid/tshoot-connect-objectsync)
 
-- [Troubleshoot an object that is not synchronizing with Microsoft Entra ID](/azure/active-directory/hybrid/tshoot-connect-object-not-syncing)
+- [Troubleshoot an object that isn't synchronizing with Microsoft Entra ID](/azure/active-directory/hybrid/tshoot-connect-object-not-syncing)
 
 - [Microsoft Entra Connect Single Object Sync](/azure/active-directory/hybrid/how-to-connect-single-object-sync)
 
