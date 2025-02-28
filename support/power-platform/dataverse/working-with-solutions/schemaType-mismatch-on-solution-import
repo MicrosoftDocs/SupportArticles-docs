@@ -1,5 +1,5 @@
 ---
-title: Environment schema mismatch during solution import in Power Apps
+title: Environment schema type mismatch during solution import in Power Apps
 description: Works around a warning about environment schema type mismatch that occurs when you import a solution in the target environment in Microsoft Power Apps.
 ms.reviewer: jdaly
 ms.date: 02/27/2025
@@ -9,7 +9,7 @@ ms.custom: sap:Working with Solutions\Environment schema type mistamch during so
 ---
 # Environment schema type mismatch warning during solution import
 
-This article provides a workaround for an issue about environment [schema type](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/organizationdetail?view=dataverse-latest#remarks) mistamch that occurs when you [import a solution](/powerapps/maker/data-platform/import-update-export-solutions) in Microsoft Power Apps. You can still proceed with the solution import but this will help to avoid component missing due to schema type mismatch.
+This article provides a workaround for an issue about source environment's [schema type](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/organizationdetail?view=dataverse-latest#remarks) higher than target environment's schema type that occurs when you [import a solution](/powerapps/maker/data-platform/import-update-export-solutions) in Microsoft Power Apps. You can still proceed with the solution import if there is no other error but this warning will help you to guide to avoid component missing due to schema type mismatch for future imports.
 
 _Applies to:_ &nbsp; Power Platform, Solutions
 
@@ -21,11 +21,12 @@ When you try to import a solution in [Power Apps](https://make.powerapps.com/?ut
 
 ## Cause
 
-The source environment where the solution is developed has a schema type which has more components than the target environment which has a schema type with lesser components. The solution might (or might not) take a dependency on a component which is present in source environment but is missing in the target environment.
+The source environment where the solution is developed has a higher schema type, which has more components than the target environment which has a lower schema type with lesser components. The solution might (or might not) take a dependency on a component which is present in source environment but is missing in the target environment and could result in missing dependencies.
+Full schemaType has more components than Standard. Standard has more components than Core.
 
 This warning ensures that the user understand the drawbacks of having source and development environment with different schema types. 
 
 ## Workaround
 
-To work around this issue, choose same schema type for both source environment and target environment. If you have different schema type for source and target environments, consider changing to new environments for development to match with production environment. 
+To work around this issue, choose same or lower schema type for source environment compared to target environment. If schema type of source environment is higher than target environments, consider changing changing source environment. 
 The warning does not confirms missing dependencies during solution import due to dependencies on component present in source environment, rather this warning guides customer to do best practice to setup source and target environment correctly for avoiding future risks of missing dependencies.
