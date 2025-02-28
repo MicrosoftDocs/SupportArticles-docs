@@ -36,8 +36,8 @@ To resolve this issue, take the following steps to revert the unit conversion ch
 > You must prevent other loads that include the item that caused the issue from being processed until the issue is fixed. Otherwise, the new conversions might be used for other loads that are already open.
 
 1. [Check the unit conversion that was used for the load line](#check-the-unit-conversion-that-was-used-for-the-load-line).
-2. [Check the current unit conversion for the item, and make adjustments](#check-the-current-unit-conversion-for-the-item-and-make-adjustments) that will enable the load line to be updated or deleted.
-3. [Update or delete the load line, and revert the unit conversion adjustments](#update-or-delete-the-load-line-and-revert-the-unit-conversion-adjustments).
+2. [Check the current unit conversion for the item and make adjustments that will enable the load line to be updated or deleted](#check-the-current-unit-conversion-for-the-item-and-make-adjustments).
+3. [Update or delete the load line and revert the unit conversion adjustments](#update-or-delete-the-load-line-and-revert-the-unit-conversion-adjustments).
 
 ### Check the unit conversion that was used for the load line
 
@@ -59,13 +59,13 @@ Follow these steps to review your product's unit conversion and make adjustments
 1. On the Action Pane, on the **Product** tab, in the **Set up** group, select **Unit conversions**.
 1. Select the conversion between the units, and make adjustments by using the conversion that you found in the previous section.
 
-### Update or delete the load line, and revert the unit conversion adjustments
+### Update or delete the load line and revert the unit conversion adjustments
 
 Follow these steps to process the load line as required and revert the unit conversions:
 
 1. Go to **Warehouse management** > **Loads** > **All loads**.
 1. Open the load that includes the load line that can't be deleted or updated.
-1. On the **Load lines** FastTab, select the load line and proceed with the necessary action (for example, delete the load line, or change its quantity.)
+1. On the **Load lines** FastTab, select the load line and proceed with the necessary actions (for example, delete the load line or change its quantity).
 1. Go to **Product information management** > **Products** > **Released products**.
 1. Open the relevant product to go to its **Released product details** page.
 1. On the Action Pane, on the **Product** tab, in the **Set up** group, select **Unit conversions**.
@@ -75,9 +75,9 @@ Follow these steps to process the load line as required and revert the unit conv
 
 If reverting unit conversions isn't feasible, follow these steps to manually update *WHSSalesLine.ReleasedQty* (the sales line released quantity) and *WHSSalesLine.QtyLeftToLoad* (the sales line quantity that isn't on a load yet):
 
-1. Go to **Account receibvable** > **Orders** > **All sales orders**.
-1. Open the sales order that contains the sales line related to the load, where the line can't be deleted or updated.
+1. Go to **Account receivable** > **Orders** > **All sales orders**.
+1. Open the sales order that contains the sales line related to the load where the line can't be deleted or updated.
 1. On the upper-right side of the **Sales order lines** grid, select the three dots and select **Insert columns** from the dropdown menu.
 1. Search for the **Released quantity** and **Quantity left to load** fields, select both, and then select **Update**.
 
-The fields will be shown in the **Sales order lines** grid and can be modified to reflect the quantity on the load lines.
+The fields will appear in the **Sales order lines** grid and can be modified to reflect the quantities on the load lines.
