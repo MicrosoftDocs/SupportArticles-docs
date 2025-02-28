@@ -3,7 +3,7 @@ title: Asset ID Isn't Editable When Number Sequence Is Set to Manual
 description: Provides a workaround for editing the Asset ID in Microsoft Dynamics 365 Supply Chain Management.
 author: sorenbacker2
 ms.author: sorenba
-ms.date: 02/27/2025
+ms.date: 02/28/2025
 ms.custom: sap:Asset management\Issues with asset management
 ---
 # Asset ID isn't editable when the number sequence is set to Manual
