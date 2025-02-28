@@ -1,0 +1,54 @@
+---
+title: Environment version mismatch during solution import in Power Apps
+description: Works around a warning about environment version mismatch that occurs when you import a solution in the target environment in Microsoft Power Apps.
+ms.reviewer: jdaly
+ms.date: 02/28/2025
+author: swatimadhukargit
+ms.author: swatim
+ms.custom: sap:Working with Solutions\Environment version mistamch during solution import
+---
+# Environment version mismatch warning during solution import
+
+This article provides a workaround for an issue about target environment's missing components due to lower Dataverse version than the source environment that occurs when you [import a solution](/powerapps/maker/data-platform/import-update-export-solutions) in Microsoft Power Apps. You can still proceed with the solution import if there is no other error but this warning will help you guide to avoid component missing due to dataverse version for future imports.
+
+_Applies to:_ &nbsp; Power Platform, Solutions
+
+## Symptoms
+
+When you try to import a solution in [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), you receive a warning like the following one:
+
+> This solution was exported from an environment with a more recent version[source environment Dataverse version] of Dataverse than the current environment which has version[target environment Dataverse version]. This can cause issues with missing dependencies.
+
+## Cause
+
+The source environment where the solution is developed has a higher dataverse version, which has more components than the target environment with lower dataverse version. The solution might (or might not) take a dependency on a component which is present in source environment but is missing in the target environment and could result in missing dependencies.
+
+This warning ensures that the user understand the drawbacks of having source environment in earlier released station of Dataverse compared to target environment
+
+## Workaround
+
+To work around this issue, choose environment in higher stations for development as source environment. If source environment is at lower station, there is a possibility of taking dependencies on components which is released to source environment but not to target environment yet. Always consider changing your source environment to be in a geo within station which is higher or equal to target environment. This will ensure that target environment to have components that is present in source environment.
+The warning does not confirms missing dependencies during solution import due to dependencies on component present in source environment, rather this warning guides customer to do best practice to setup source and target environment correctly for avoiding future risks of missing dependencies.
+
+The [dataverse version](https://learn.microsoft.com/en-us/dynamics365/released-versions/microsoft-dataverse#latest-version-availability) can be determined based on the region where the environment is present. 
+
+### Example
+
+The following example demostrates what happens when your source and target environment are in regions which has different dataverse version
+
+Example 1:
+| Environment | Region | Station |
+|-------------|--------|---------|
+| Source| Canada| Station 2|
+| Target| North America| Station 5|
+
+Here source environment is at lower station than target environment. This can result in source environment's dataverse version to be higher than target environment. Your solution can take dependencies on components present in source environment but not yet available in target environment, when imported to target environment this will cause missing dependencies. To avoid such conditions, consider keeping source enviornment has same or higher version than target environment.
+
+ Example 2:
+| Environment | Region | Station |
+|-------------|--------|---------|
+| Source| North America| Station 5|
+| Target| India| Station 2|
+
+Here source environment is at higher station than target environment. This will ensure source environment has same or lower version than target environment. Target environment will always have components present in source environment, and will never result in missing dependencies due to source environment having higher dataverse version with more components.
+                       
