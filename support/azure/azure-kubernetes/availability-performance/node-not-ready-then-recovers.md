@@ -25,7 +25,7 @@ There are several scenarios that could cause a "Not Ready" state to occur:
 ## Examples:
 Error: NodeNotReady  
 
-- This error indicates that the node is not ready. To resolve this, check the node's status using the command: kubectl describe node <node-name>.
+- This error indicates that the node is not ready. To resolve this, check the node's status using the command: kubectl describe node &lt;node-name&gt;.
 
 ## Resolution
 
@@ -35,7 +35,7 @@ For further steps, see [Basic troubleshooting of Node Not Ready failures](node-n
 
 ## Additional Troubleshooting Steps:
  - Verify the node's network configuration to ensure there are no connectivity issues.
- - Check the node's resource usage (CPU, memory, disk) to identify any resource constraints.
+ - Check the node's resource usage (CPU, memory, disk) to identify any resource constraints. For more informations see [Monitor your Kubernetes cluster performance with Container insights](https://learn.microsoft.com/en-us/azure/azure-monitor/containers/container-insights-analyze#view-performance-directly-from-a-cluster)
 
 ## Prevention
 
