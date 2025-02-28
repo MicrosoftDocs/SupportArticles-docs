@@ -2,6 +2,8 @@
   href: welcome-supply-chain.yml
 - name: Asset management
   items:
+    - name: Asset ID isn't editable when number sequence is set to Manual
+      href: asset-management/asset-id-not-editable-when-number-sequence-is-manual.md
     - name: Changing work order lifecycle state doesn't generate fault cause or fault remedy error
       href: asset-management/change-lifecycle-state-doesnt-create-fault.md
 - name: Inventory costing and closing
