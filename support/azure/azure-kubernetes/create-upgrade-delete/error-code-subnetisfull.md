@@ -45,6 +45,22 @@ Trying to update a subnet's Classless Inter-Domain Routing (CIDR) address space 
 
 4. Delete the original node pool by running the [az aks nodepool delete](/cli/azure/aks/nodepool#az-aks-nodepool-delete) command.
 
+
+## Best practices 
+
+To avoid subnet full issues in Azure Kubernetes Service (AKS), it's important to follow best practices related to subnet sizing, IP address management, and node pool strategies. Here are some key recommendations:
+
+1. Plan for future growth: When creating subnets, ensure they are large enough to accommodate future growth. It's recommended to reserve more IP addressess than currently needed to avoid running out of space as the cluster scales.
+
+2. Use larger Subnet CIDR: If possible, use a larger subnet CIDR to provide more IP addresses. This helps in accommodating more nodes and pods without running into IP exhaustion issues.
+
+3. Monitor IP usage: Regularly monitor the IP address usage whithin your subnets to identify potential issues before they become critical. Tools like Azure Monitor can help track IP address consumption.
+
+4. Optimize IP allocation: Ensure the IP addresses are allocated efficiently. Avoid reserving IP addresses unnecessarily and release any unused IP addresses to free up space.
+
+5. Use multiple node pools: Consider using multiple node pools with different subnets to distribute the IP address load. This can help mitigate the risk of running out of IP addresses in a single subnet.     
+
+
 ## More information
 
 - [General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)
