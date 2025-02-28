@@ -17,7 +17,7 @@ search.appverid: MET150
 ms.reviewer: willfid, gregmans, v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 01/30/2024
+ms.date: 02/27/2025
 ---
 # Outlook performance is slow in the Microsoft 365 environment
 
@@ -53,12 +53,26 @@ To fix this issue, follow these steps:
 
     If the issue persists, go to step 3.
 
-3. Try the following:
+3. Try the following methods:
 
-   - Select [Outlook Advanced Diagnostics](https://aka.ms/SaRA-OutlookAdvDiagnostics), and then select **Run** when you are prompted by your browser.
+   - Run the [Classic Outlook Advanced Diagnostics troubleshooter](https://aka.ms/SaRA-OutlookAdvDiagExpExp-sarahome) to create a detailed configuration report.
 
      > [!NOTE]
-     > This diagnostic creates detailed information about your Outlook configuration and provides solutions for any known issues that are detected. It also gives you the option to upload your results to Microsoft so that a Support engineer can review them before you make a Support call.
+     >
+     > - The troubleshooter doesn't work in new Outlook for Windows.
+     > - To run the troubleshooter, make sure that you're using the same Windows device that classic Outlook is installed on. Additionally, make sure that your device is running Windows 10 or a later version.
+
+     To run the troubleshooter, follow these steps:
+
+       1. Select the following button to start the troubleshooter.
+
+           > [!div class="nextstepaction"]
+           > [Classic Outlook Advanced Diagnostics troubleshooter](https://aka.ms/SaRA-OutlookAdvDiagExpExp-sarahome)
+
+           If you receive a pop-up window that displays "This site is trying to open Get Help.", select **Open**.
+       1. Follow the instructions in the Get Help app to run the troubleshooter.
+
+     After the troubleshooter finishes, it displays the results and provides additional information about how to resolve the issue.
 
    - Disable Skype for Business Online (formerly Lync Online) integration. If Outlook is integrated with Skype for Business Online in your Microsoft 365 environment, the integration may affect Outlook's performance. To disable Skype for Business Online integration with Outlook, follow these steps:
 

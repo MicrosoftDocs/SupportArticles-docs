@@ -11,7 +11,7 @@ appliesto:
 - Outlook 2016
 - Outlook 2013 
 - Microsoft Outlook 2010 
-- Microsoft Office Outlook 2007 
+- Microsoft Office Outlook 2007
 - Microsoft Office Outlook 2003 
 - Exchange Server 2010 Enterprise 
 - Exchange Server 2010 Standard 
@@ -22,7 +22,7 @@ search.appverid: MET150
 ms.reviewer: aruiz, randyto, v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 03/14/2024
+ms.date: 02/27/2025
 ---
 # Information about the Calendar Checking Tool for Outlook (CalCheck)
 
@@ -43,27 +43,25 @@ Because these calendar item fields may contain personal information or details, 
 
 ## Perform calendar checking
 
-To use CalCheck, the Outlook calendar must reside on a computer that is running Microsoft Exchange Server. The tool doesn't work with IMAP, POP3, or other non-Exchange email accounts.
+To use CalCheck, the Outlook calendar must reside on a computer that's running Microsoft Exchange Server. The tool doesn't work with IMAP, POP3, or other non-Exchange email accounts.
 
-### Method 1: Use Microsoft Support and Recovery Assistant
+### Method 1: Use the Classic Outlook Calendar Check troubleshooter
 
-[!INCLUDE [Microsoft Support and Recovery Assistant note](../../../includes/sara-note-new-outlook.md)]
+[!INCLUDE [Get Help troubleshooter note](../../../includes/sara-note-new-outlook.md)]
 
-The Assistant fully automates all the steps required to perform Outlook calendar checking and is available in two versions. Use the version that suits your requirements.
+The [Classic Outlook Calendar Check troubleshooter](https://aka.ms/SaRA-CalCheck-sarahome) scans your classic Outlook calendar to help identify and resolve issues.
 
-- The Enterprise (command-line) version
+To run the troubleshooter, follow these steps:
 
-  The [Enterprise version of the Assistant](https://aka.ms/SaRA_EnterpriseVersion) is a command line version that can be scripted, and is recommended to perform Outlook calender checking on multiple devices and devices that you can't access immediately.
-  
-  > [!div class="nextstepaction"]
-  > [Download the Enterprise version](https://aka.ms/SaRA_EnterpriseVersionFiles)
-  
-- The UI version
+1. Select the following button to start the troubleshooter.
 
-  The [UI version of the Assistant](https://aka.ms/SaRA_Home) is recommended if you need to perform Outlook calender checking on a single device, or on a small number of individual devices.
-  
-  > [!div class="nextstepaction"]
-  > [Download the UI version](https://aka.ms/sara-calcheck)
+   > [!div class="nextstepaction"]
+   > [Classic Outlook Calendar Check troubleshooter](https://aka.ms/SaRA-CalCheck-sarahome)
+
+   If you receive a pop-up window that displays "This site is trying to open Get Help", select **Open**.
+1. Follow the instructions in the Get Help app to run the troubleshooter.
+
+After the troubleshooter finishes, it displays the results and provides additional information about how to resolve the issue.
 
 ### Method 2: Manual installation
 

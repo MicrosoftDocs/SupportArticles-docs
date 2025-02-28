@@ -18,7 +18,7 @@ appliesto:
   - Microsoft Outlook 2010
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 03/14/2024
+ms.date: 02/27/2025
 ---
 # Outlook performance issues when you have many shared folders or mailboxes open
 
@@ -64,7 +64,7 @@ If you have a shared mailbox open in Outlook, it was either manually added under
 8. Select **Close** on the Account Settings window.
 
 > [!NOTE]
-> If the shared mailbox does not appear below **Open these additional mailboxes**, it is likely Automapped. To determine whether this is the case, and to remove the automapped mailbox from Outlook, follow these steps.
+> If the shared mailbox doesn't appear below **Open these additional mailboxes**, it's likely Automapped. To determine whether it's the case, and to remove the automapped mailbox from Outlook, follow these steps.
 
 Run the Test E-mail AutoConfiguration tool to determine whether any automapped mailboxes exist:
 
@@ -76,14 +76,14 @@ Run the Test E-mail AutoConfiguration tool to determine whether any automapped m
 6. When the test is complete, select the **XML** tab.
 7. Scroll down until you see the \<AlternativeMailbox> section, and then look for \<Type>Delegate\</Type> in the script, as shown in the following screenshot.
 
-   :::image type="content" source="media/slow-performance-if-having-many-shared-folder-or-mailboxes-open/test-e-mail-autoconfiguration-dialog.png" alt-text="Screenshot showing the Test E-mail AutoConfiguration dialog with an automapped mailbox." border="false":::
+   :::image type="content" source="media/slow-performance-if-having-many-shared-folder-or-mailboxes-open/test-e-mail-autoconfiguration-dialog.png" alt-text="Screenshot showing the Test E-mail Auto-Configuration dialog with an automapped mailbox." border="false":::
 
 To remove an automapped mailbox from Outlook, use one of the following options:
 
-1. Remove your Full Access permissions from the mailbox. This is a good option if you no longer require access to the shared mailbox.
+1. Remove your Full Access permissions from the mailbox. It's a good option if you no longer require access to the shared mailbox.
 
    [Manage Full Access Permissions](/previous-versions/office/exchange-server-2010/bb676551(v=exchg.141))
-2. Remove AutoMapping for the shared mailbox. This is a good option if you must have access to the shared mailbox, but don't want it AutoMapped in Outlook automatically.
+2. Remove Auto-Mapping for the shared mailbox. It's a good option if you must have access to the shared mailbox, but don't want it Auto-Mapped in Outlook automatically.
 
    - [Disable Outlook Auto-Mapping with Full Access Mailboxes](/previous-versions/office/exchange-server-2010/hh529943(v=exchg.141))
    - [How to remove automapping for a shared mailbox in Outlook for Microsoft 365](/outlook/troubleshoot/profiles-and-accounts/remove-automapping-for-shared-mailbox)
@@ -101,7 +101,7 @@ To remove an automapped mailbox from Outlook, use one of the following options:
    :::image type="content" source="media/slow-performance-if-having-many-shared-folder-or-mailboxes-open/remove-shared-calendar-folder.png" alt-text="Screenshot showing how to remove a shared calendar folder." border="false":::
 
     > [!NOTE]
-    > Selecting **Delete Calendar** or **Delete Folder** on a Shared Calendar or Shared Folder does not delete the folder from the mailbox where it resides. This action removes the folder from your Outlook view Delete Folder only.
+    > Selecting **Delete Calendar** or **Delete Folder** on a Shared Calendar or Shared Folder doesn't delete the folder from the mailbox where it resides. This action removes the folder from your Outlook view Delete Folder only.
 
 Follow steps 2 through 4 for any remaining shared folders that you want to remove from Outlook.
 
@@ -111,6 +111,21 @@ When you open a shared Inbox folder, it appears in Outlook only until you select
 
 ## More information
 
-Many of the items that are discussed in this article can be automatically checked by Microsoft Support and Recovery Assistant. Start the automated checks by running the [Outlook Advanced Diagnostics](https://aka.ms/SaRA-OutlookAdvDiagnostics) scenario. Select **Run** when you're prompted by your browser. In the report that's generated, review the items on the **Issues found** tab. For details about the Outlook, Windows, and computer configuration, review the settings on the **Detailed View** tab.
+Many of the items that are discussed in this article can be automatically checked by the [Classic Outlook Advanced Diagnostics troubleshooter](https://aka.ms/SaRA-OutlookAdvDiagExpExp-sarahome).
 
-[!INCLUDE [Microsoft Support and Recovery Assistant note](../../../includes/sara-note-new-outlook.md)]
+> [!NOTE]
+>
+> - The troubleshooter doesn't work in new Outlook for Windows.
+> - To run the troubleshooter, make sure that you're using the same Windows device that classic Outlook is installed on. Additionally, make sure that your device is running Windows 10 or a later version.
+
+To run the troubleshooter, follow these steps:
+
+1. Select the following button to start the troubleshooter.
+
+   > [!div class="nextstepaction"]
+   > [Classic Outlook Advanced Diagnostics troubleshooter](https://aka.ms/SaRA-OutlookAdvDiagExpExp-sarahome)
+
+   If you receive a pop-up window that displays "This site is trying to open Get Help.", select **Open**.
+1. Follow the instructions in the Get Help app to run the troubleshooter.
+
+After the troubleshooter finishes, it displays the results and provides additional information about how to resolve the issue.

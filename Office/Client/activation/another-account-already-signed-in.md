@@ -17,7 +17,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
-ms.date: 02/11/2025
+ms.date: 02/25/2025
 ---
 
 # Microsoft 365 apps activation error "Another account from your organization is already signed in on this computer"
@@ -76,7 +76,7 @@ If this error occurs when only one account is used, follow the steps that are ap
 <details>
 <summary><b>Update Microsoft 365</b></summary>
 
-It is recommended that Microsoft 365 be configured to install updates automatically. To check for updates, open an Office app (such as Word), select **File**, and then select **Account**.
+It's recommended that Microsoft 365 be configured to install updates automatically. To check for updates, open a Microsoft 365 app (such as Word), select **File**, and then select **Account**.
 Select **Update options**, and then select **Update now**.
 
 </details>
@@ -144,7 +144,7 @@ If the process isn't blocked, but you still can't activate Microsoft 365, delete
 `%LOCALAPPDATA%\Packages\Microsoft.Windows.CloudExperienceHost_cw5n1h2txyewy\AC\TokenBroker\Accounts`
 1. Select all files and delete them.
 1. Restart the device.
-1. Download and run [the SaRA package for sign in issues](https://aka.ms/SaRA-OfficeSignInScenario).
+1. Run the [Microsoft 365 sign-in troubleshooter](https://aka.ms/SaRA-OfficeSignIn-sarahome) in Get Help.
 
 For manual troubleshooting for step 7, or for more information, see [Fix authentication issues in Office applications when you try to connect to a Microsoft 365 service](/microsoft-365/troubleshoot/authentication/automatic-authentication-fails).
 
