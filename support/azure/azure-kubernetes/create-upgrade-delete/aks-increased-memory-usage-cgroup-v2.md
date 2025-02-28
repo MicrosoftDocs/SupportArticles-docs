@@ -34,7 +34,7 @@ This increase is caused by a change in memory accounting within version 2 of the
 
 - If you see a higher eviction rate on the pods, [use higher limits and requests for pods](/azure/aks/developer-best-practices-resource-management#define-pod-resource-requests-and-limits).
 
-- cgroup v2 uses a different API than cgroup v1.  there are any applications that directly access the cgroup file system, update them to newer versions that support cgroup v2. For example:
+- cgroup v2 uses a different API than cgroup v1. If there are any applications that directly access the cgroup file system, update them to newer versions that support cgroup v2. For example:
 
   - **Third-party monitoring and security agents**:
 
