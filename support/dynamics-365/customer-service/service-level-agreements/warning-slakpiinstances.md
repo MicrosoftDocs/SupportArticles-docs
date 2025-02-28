@@ -4,6 +4,7 @@ description: Provides a resolution for the issue where a warning message occurs 
 ms.reviewer: sdas, ankugupta
 ms.author: sdas
 ms.date: 05/23/2023
+ms.custom: sap:Service Level Agreements\SLA timer is running  even if the case is resolved
 ---
 # A warning message appears on the SLA KPI instances
 

@@ -2,7 +2,7 @@
 title: SQL Server upgrade fails with error 15173 when executing Update Database scripts
 description: This article discusses error 15173 or 15559 that causes a SQL Server upgrade to fail when it runs update database scripts.
 ms.date: 01/10/2023
-ms.custom: sap:Installation, Patching and Upgrade
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ms.reviewer: ramakoni, v-jayaramanp
 ---
 

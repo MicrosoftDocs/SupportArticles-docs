@@ -1,23 +1,19 @@
 ---
 title: DNS server logs event 7062
 description: Provides a solution to solve the DNS server logs event 7062.
-ms.date: 12/21/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:dns, csstroubleshoot
-ms.technology: networking
+ms.custom:
+- sap:network connectivity and file sharing\dns
+- pcy:WinComm Networking
 ---
 # DNS Server Logs Event 7062: "DNS Server Encountered a Packet Addressed to Itself"
 
 This article provides a solution to solve the DNS server logs event 7062.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 218814
 
 ## Symptoms

@@ -1,28 +1,25 @@
 ---
 title: Netsh utility to export and import DHCP scopes
 description: Describes how to use the Netsh utility to export and import DHCP scopes.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:dynamic-host-configuration-protocol-dhcp, csstroubleshoot
-ms.technology: networking
+ms.custom:
+- sap:network connectivity and file sharing\dynamic host configuration protocol (dhcp)
+- pcy:WinComm Networking
 ---
 # How to use the Netsh utility to export and import DHCP scopes
 
 This article describes how to use the Netsh utility to export and import DHCP scopes.
 
-_Applies to:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; All Windows Server versions  
 _Original KB number:_ &nbsp; 281626
 
 ## Summary
 
-The Netsh.exe utility in Windows Server 2003 contains two commands that are available for Dynamic Host Configuration Protocol (DHCP): export and import. You can use these commands to selectively export and import DHCP scopes.
+The Netsh.exe utility in Windows Server contains two commands that are available for Dynamic Host Configuration Protocol (DHCP): export and import. You can use these commands to selectively export and import DHCP scopes.
 
 ## More information
 

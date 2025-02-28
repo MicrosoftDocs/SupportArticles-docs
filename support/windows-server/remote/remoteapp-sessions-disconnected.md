@@ -1,23 +1,19 @@
 ---
 title: RemoteApp sessions are disconnected
 description: Resolves an issue where RemoteApp sessions are disconnected when all RemoteApp windows and user-launched notification area icons are closed.
-ms.date: 12/28/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:remoteapp-applications, csstroubleshoot
-ms.technology: windows-server-rds
+ms.custom:
+- sap:remote desktop services and terminal services\web access (includes remoteapp and desktop connections)
+- pcy:WinComm User Experience
 ---
 # RemoteApp sessions are disconnected when all RemoteApp windows and user-launched notification area icons are closed
 
 This article provides help to solve an issue where RemoteApp sessions are disconnected when all RemoteApp windows and user-launched notification area icons are closed.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2345390
 
 ## Summary

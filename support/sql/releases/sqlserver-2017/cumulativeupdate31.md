@@ -1,8 +1,8 @@
 ---
 title: Cumulative update 31 for SQL Server 2017 (KB5016884)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2017 cumulative update 31 (KB5016884).
-ms.date: 08/04/2023
-ms.custom: KB5016884
+ms.date: 07/26/2024
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5016884, linux-related-content
 appliesto:
 - SQL Server 2017 on Windows
 - SQL Server 2017 on Linux
@@ -18,7 +18,7 @@ _Version:_ &nbsp; 14.0.3456.2
 
 ## Summary
 
-This article describes Cumulative Update package 31 (CU31) for Microsoft SQL Server 2017. This update contains 20 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2017 Cumulative Update 30, and it updates components in the following builds:
+This article describes Cumulative Update package 31 (CU31) for Microsoft SQL Server 2017. This update contains 19 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2017 Cumulative Update 30, and it updates components in the following builds:
 
 - SQL Server - Product version: **14.0.3456.2**, file version: **2017.140.3456.2**
 - Analysis Services - Product version: **14.0.249.94**, file version: **2017.140.249.94**
@@ -126,7 +126,6 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=14810743>[14810743](#14810743) </a> | [FIX: Error 20598 after adding columns that have default constraints as part of the primary key for an existing table and configuring transactional replication (KB5018231)](https://support.microsoft.com/help/5018231) | SQL Server Engine | Replication | Windows |
 | <a id=14914142>[14914142](#14914142) </a> | Error 208 occurs when you use the`sp_changereplicationserverpasswords` stored procedure to change stored passwords for the Microsoft SQL Server login used by replication agents. Here's the error message: </br></br>Msg 208, Level 16, State 1, Procedure master.sys.sp_MSchangerepltablepasswords, Line \<LineNumber> [Batch Start Line 0] </br></br>Invalid object name 'MSreplservers'. | SQL Server Engine | Replication | Windows |
 | <a id=14962805>[14962805](#14962805) </a> | High CPU usage occurs when you enable change tracking on a large number of tables and do automatic or manual cleanup of the change tracking tables. | SQL Server Engine | Replication | Windows |
-| <a id=14931590>[14931590](#14931590) </a> | [Improvement: Add new Azure SQL Database service tier options to the Stretch Database feature (KB5018050)](https://support.microsoft.com/help/5018050) | SQL Server Engine | Stretch DB | Windows|
 
 ## How to obtain or download this or the latest cumulative update package
 
@@ -1164,4 +1163,3 @@ The third-party products that are discussed in this article are manufactured by 
 - [Servicing models for SQL Server](../../general/servicing-models-sql-server.md)
 - [Naming schema and Fix area descriptions for SQL Server software update packages](../../database-engine/install/windows/naming-schema-and-fix-area.md)
 - [Description of the standard terminology that is used to describe Microsoft software updates](../../../windows-client/deployment/standard-terminology-software-updates.md)
-

@@ -1,8 +1,8 @@
 ---
 title: Error 22042 deploying a service template
 description: Fixes an issue in which you receive error 22042 when you deploy a service template in System Center 2012 Virtual Machine Manager.
-ms.date: 04/29/2020
-ms.reviewer: alvinm
+ms.date: 04/09/2024
+ms.reviewer: wenca, alvinm
 ---
 # Deploying a service template in SCVMM 2012 using a Windows core VHD fails
 

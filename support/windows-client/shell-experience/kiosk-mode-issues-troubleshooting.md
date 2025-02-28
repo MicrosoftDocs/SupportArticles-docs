@@ -1,17 +1,14 @@
 ---
 title: Kiosk mode issues troubleshooting
 description: Learn how to troubleshoot single-app and multi-app kiosk configurations, as well as common problems like sign-in issues.
-ms.date: 08/25/2022
+ms.date: 01/15/2025
 manager: dcscontentpm
-ms.prod: windows-client
-author: lizgt2000
-ms.author: lizlong
 ms.topic: troubleshooting
-ms.technology: windows-client-shell-experience
-ms.custom: sap:kiosk-mode, csstroubleshoot
-ms.reviewer: sybruckm, aaroncz
+ms.custom:
+- sap:windows desktop and shell experience\kiosk mode
+- pcy:WinComm User Experience
+ms.reviewer: sybruckm, aaroncz, lizlong, paoloma
 audience: itpro
-localization_priority: medium
 ---
 # Troubleshoot kiosk mode issues
 
@@ -20,7 +17,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 ## Single-app kiosk issues
 
 > [!TIP]
-> We recommend that you [enable logging for kiosk issues](/windows/configuration/kiosk-prepare#enable-logging). For some failures, events are only captured once. If you enable logging after an issue occurs with your kiosk, the logs may not capture those one-time events. In that case, prepare a new kiosk environment (such as a [virtual machine (VM)](/windows/configuration/kiosk-prepare#testing-your-kiosk-in-a-virtual-machine-vm)), set up your kiosk account and configuration, and try to reproduce the problem.
+> We recommend that you [enable logging for kiosk issues](/windows/configuration/assigned-access/recommendations#troubleshooting-and-logs). For some failures, events are only captured once. If you enable logging after an issue occurs with your kiosk, the logs may not capture those one-time events.
 
 ### Sign-in issues
 
@@ -32,9 +29,6 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 Check the Event Viewer logs for auto logon issues under *Applications and Services Logs\\Microsoft\\Windows\\Authentication User Interface\\Operational*.
 
 ## Multi-app kiosk issues
-
-> [!NOTE]
-> Currently, multi-app kiosk is only supported on Windows 10. It's not supported on Windows 11.
 
 ### Unexpected results
 

@@ -1,17 +1,14 @@
 ---
 title: Available Remote Desktop Services updates in Windows Server 2016
 description: Introduce recommended hotfixes and updates for Remote Desktop Services in Windows Server 2016.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:administration, csstroubleshoot
-ms.technology: windows-server-rds
+ms.custom:
+- sap:remote desktop services and terminal services\deployment,configuration,and management of remote desktop services infrastructure
+- pcy:WinComm User Experience
 ---
 # Available Remote Desktop Services updates in Windows Server 2016
 
@@ -311,7 +308,7 @@ Remote Desktop Gateway
 
 Remote Desktop Virtualization Host  
 
-- [KB4013429](https://support.microsoft.com/help/4013429) Addressed an issue in which t he RD Virtualization Host role fails to install on nested VM.  
+- [KB4013429](https://support.microsoft.com/help/4013429) Addressed an issue in which the RD Virtualization Host role fails to install on nested VM.  
 
 Remote Desktop Web Access  
 

@@ -1,23 +1,19 @@
 ---
 title: Not all printer drivers from Windows Update appear in Add Printer wizard
 description: Works around an issue in which not all printer drivers that are downloaded from Windows Update are listed when in the Add Printer wizard.
-ms.date: 12/07/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:management-and-configuration-installing-print-drivers, csstroubleshoot
-ms.technology: windows-client-printing
+ms.custom:
+- sap:print,fax,and scan\print configuration or management
+- pcy:WinComm User Experience
 ---
 # Not all printer drivers downloaded from Windows Update are listed in Add Printer wizard
 
 This article provides a workaround for an issue in which not all printer drivers that are downloaded from Windows Update are listed in the Add Printer wizard.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4508350
 
 ## Symptoms

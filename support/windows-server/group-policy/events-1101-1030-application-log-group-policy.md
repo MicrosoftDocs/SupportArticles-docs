@@ -1,23 +1,19 @@
 ---
 title: Events 1101 and 1030 are logged in the Application log when applying Group Policy
 description: Describes a problem that may occur when the Group Policy engine does not have read permissions to the gPLink attribute and the gPOptions attribute of the parent OUs. In this situation, the Group Policy engine cannot apply Group Policy settings.
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, herbertm
-ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
-ms.technology: windows-server-group-policy
+ms.custom:
+- sap:group policy\problems applying group policy
+- pcy:WinComm Directory Services
 ---
 # Events 1101 and 1030 are logged in the Application log when applying Group Policy
 
 This article provides a resolution for the issue that Events 1101 and 1030 are logged in the Application log when applying Group Policy.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 909260
 
 ## Symptoms

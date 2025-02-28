@@ -2,7 +2,7 @@
 title: Non-component VSS backups fail on servers
 description: This article provides a workaround for the problem where non-component VSS backups such as Azure Site Recovery jobs fail on servers that host SQL Server instances with AUTO-CLOSE DBs.
 ms.date: 11/05/2020
-ms.custom: sap:Administration and Management
+ms.custom: sap:Database Backup and Restore
 ms.reviewer: rvuppula, gfourrat
 ---
 # Non-component VSS backups such as Azure Site Recovery jobs fail on servers hosting SQL Server instances with AUTO_CLOSE DBs

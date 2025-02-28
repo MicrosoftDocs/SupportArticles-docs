@@ -11,6 +11,7 @@ ms.search.region: Global
 ms.author: benebotg
 ms.search.validFrom: 2021-06-11
 ms.dyn365.ops.version: 10.0.18
+ms.custom: sap:Product information management
 ---
 
 # You can't delete a released product

@@ -1,23 +1,19 @@
 ---
 title: The given Key was not present in the dictionary
 description: Describes an issue that occurs when you run the Group Policy Modeling Wizard against a new Group Policy setting.
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
-ms.technology: windows-server-group-policy
+ms.custom:
+- sap:group policy\problems applying group policy
+- pcy:WinComm Directory Services
 ---
 # Group Policy error: "The given Key was not present in the dictionary"
 
 This article provides a solution to a Group Policy error (The given Key was not present in the dictionary) that occurs when you run the Group Policy Modeling Wizard against a new Group Policy setting.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2692409
 
 ## Symptoms

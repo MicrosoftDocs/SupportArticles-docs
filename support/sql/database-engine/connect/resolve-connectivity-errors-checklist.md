@@ -2,7 +2,7 @@
 title: Prerequisites and checklist for resolving connectivity errors
 description: Provides prerequisites and a checklist for troubleshooting SQL Server connectivity issues.
 ms.date: 05/25/2022
-ms.custom: sap:Connection issues
+ms.custom: sap:Database Connectivity and Authentication
 author: HaiyingYu
 ms.author: haiyingyu
 ---
@@ -21,14 +21,14 @@ To effectively troubleshoot connectivity issues, gather the following informatio
 - Collect and review SQL Server error logs for other error messages and exceptions.
 - If you have administrator access to the SQL Server computer, gather and review current computer settings and service accounts by using the following procedure:
 
-  1. Download the latest version of SQLCheck from the [Microsoft SQL Networking GitHub repository](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki).
+  1. Download the latest version of [SQLCHECK](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLCHECK).
 
   1. Unzip the downloaded file into a folder, for example, *C:\Temp*.
 
   1. Run the command prompt as an administrator to collect the data and save to a file. For example: `SQLCHECK > C:\Temp\server01.SQLCHECK.TXT`.
 
     > [!NOTE]
-    > If you're troubleshooting connectivity issues from a remote client or troubleshooting linked server queries, run the SQLCheck tool on all systems involved.
+    > If you're troubleshooting connectivity issues from a remote client or troubleshooting linked server queries, run the SQLCHECK tool on all systems involved.
 
 ## Quick checklist for troubleshooting connectivity issues
 
@@ -37,7 +37,7 @@ To effectively troubleshoot connectivity issues, gather the following informatio
 
 ### Option 1
 
-If you have access to the output of the SQLCheck tool mentioned in the [Recommended prerequisites](#recommended-prerequisites) section and review information in various sections in the output file (Computer, Client Security, and SQL Server), use the information to address the issues contributing to your problem. See the following examples:
+If you have access to the output of the SQLCHECK tool mentioned in the [Recommended prerequisites](#recommended-prerequisites) section and review information in various sections in the output file (Computer, Client Security, and SQL Server), use the information to address the issues contributing to your problem. See the following examples:
 
 |Section in the file |Text to search for |Potential action |Can help troubleshoot (examples) |
 |-|-|-|-|
@@ -51,7 +51,7 @@ If you have access to the output of the SQLCheck tool mentioned in the [Recommen
 
 ### Option 2
 
-If you aren't able to run SQLCheck on your SQL Server computer, you can check the following items before doing in-depth troubleshooting:
+If you aren't able to run SQLCHECK on your SQL Server computer, you can check the following items before doing in-depth troubleshooting:
 
 1. Make sure that SQL Server is started, and that you see the following message in the SQL Server error log:
 
@@ -133,7 +133,7 @@ If you aren't able to run SQLCheck on your SQL Server computer, you can check th
     sqlcmd -E -S $server_name -d $database_name -Q ("exec sp_helplogins '" + $server_principal + "'")
     ```
 
-1. If you're troubleshooting Kerberos related issues, you can use the scripts at [Determine If I Am Connected to SQL Server using Kerberos Authentication](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Determine-If-I-Am-Connected-to-SQL-Server-using-Kerberos-Authentication) to determine if Kerberos is properly configured on your SQL Servers.
+1. If you're troubleshooting Kerberos related issues, you can use the scripts at [How to determine if the authentication type is Kerberos](determine-the-authentication-type.md).
 
 ## Common connectivity issues
 

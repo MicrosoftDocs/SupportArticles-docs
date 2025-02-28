@@ -4,6 +4,7 @@ description: Lists the steps you can take to investigate a generic error display
 author: bstorie
 ms.author: brstor
 ms.date: 10/12/2023
+ms.custom: sap:Point of sale (POS)\Issues with Store Commerce app reliability
 ---
 # Troubleshoot generic errors displayed on the POS
 

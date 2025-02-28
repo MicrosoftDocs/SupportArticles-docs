@@ -2,7 +2,7 @@
 title: C2653/C2039 error when you reference STD functions
 description: Explains that when you try to reference a function from the STD C++ library header <cstdlib>, you may receive a C2653 or a C2039 compiler error message. A workaround is provided in this article.
 ms.date: 04/22/2020
-ms.custom: sap:C and C++ Libraries
+ms.custom: sap:C and C++ Libraries\C and C++ runtime libraries and Standard Template Library (STL)
 ms.reviewer: v-ingor
 ---
 # C2653 or C2039 error when you try to reference a function from the STD C++ library

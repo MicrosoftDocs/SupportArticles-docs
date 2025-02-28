@@ -6,6 +6,7 @@ f1_keywords:
 - vs.FrameworkTargetingErrors
 - MSBuild.ResolveAssemblyReference.FailedToResolveReferenceBecausePrimaryAssemblyInExclusionList
 ms.reviewer: ghogen, v-jayaramanp
+ms.custom: sap:Project - Build System\Build Issues
 ---
 
 # Troubleshoot .NET Framework targeting errors

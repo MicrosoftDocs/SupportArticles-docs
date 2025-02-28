@@ -1,17 +1,14 @@
 ---
 title: Troubleshoot Disk Management
 description: Describes how to diagnose and troubleshoot the most common issues you might see when using Disk Management for Windows and Windows Server.
-ms.date: 10/18/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, brianlic, jgerend, v-lianna
-ms.custom: sap:partition-and-volume-management, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
+ms.custom:
+- sap:backup,recovery,disk,and storage\partition and volume management
+- pcy:WinComm Storage High Avail
 ---
 # Troubleshoot Disk Management
 

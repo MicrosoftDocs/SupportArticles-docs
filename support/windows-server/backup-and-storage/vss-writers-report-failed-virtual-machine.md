@@ -1,23 +1,19 @@
 ---
 title: VSS writers report as failed on a virtual machine
 description: Provides some information about VSS writers report as failed on a virtual machine
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, taylorb
-ms.custom: sap:volume-shadow-copy-service-vss, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
+ms.custom:
+- sap:backup,recovery,disk,and storage\volume shadow copy service (vss)
+- pcy:WinComm Storage High Avail
 ---
 # VSS writers report as failed on a virtual machine
 
 This article provides some information about VSS writers report as failed on a virtual machine.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2952783
 
 ## Symptoms

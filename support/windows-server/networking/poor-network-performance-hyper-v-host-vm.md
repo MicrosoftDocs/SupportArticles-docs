@@ -1,23 +1,19 @@
 ---
 title: Poor network performance on virtual machines
 description: Describes an issue that may occur if you have a Windows Server 2012 Hyper-V host that uses a Broadcom network adapter. Provides a workaround.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:windows-nic-teaming-load-balance-failover, csstroubleshoot
-ms.technology: networking
+ms.custom:
+- sap:network connectivity and file sharing\network load balancing (nlb)
+- pcy:WinComm Networking
 ---
 # Poor network performance on virtual machines on a Windows Server 2012 Hyper-V host if VMQ is enabled
 
 This article provides a workaround for an issue that occurs if you have a Windows Server 2012 Hyper-V host that uses a Broadcom network adapter.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2902166
 
 ## Symptoms  

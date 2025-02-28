@@ -1,23 +1,19 @@
 ---
 title: TGS requests for krbtgt account fail
 description: Describes an issue that causes S4U Kerberos authentication to fail for a user in a trusted forest. Occurs when selective authentication is enabled on the forest trust and when an application calls LsalogonUser by using a Kerberos S4U client request.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, ntuttle
-ms.custom: sap:kerberos-authentication, csstroubleshoot
-ms.technology: windows-server-security
+ms.custom:
+- sap:windows security technologies\kerberos authentication
+- pcy:WinComm Directory Services
 ---
 # A TGS request for the krbtgt account fails with KDC_ERR_POLICY and an extended status of STATUS_AUTHENTICATION_FIREWALL_FAILED (0xC0000413)
 
 This article provides help to fix an issue that causes S4U Kerberos authentication to fail for a user in a trusted forest.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2959395
 
 ## Symptoms

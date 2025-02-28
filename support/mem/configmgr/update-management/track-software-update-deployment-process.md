@@ -1,8 +1,9 @@
 ---
 title: Track the software update deployment process
 description: Describes how to track the deployment of software updates in System Center 2012 Configuration Manager by using log files.
-ms.date: 05/25/2020
-ms.reviewer: kaushika
+ms.date: 02/11/2025
+ms.reviewer: kaushika, andad
+ms.custom: sap:Software Update Management (SUM)\Software Update Groups or Deployments
 ---
 # Track the software update deployment process in Configuration Manager
 

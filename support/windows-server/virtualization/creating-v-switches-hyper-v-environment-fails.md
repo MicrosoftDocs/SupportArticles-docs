@@ -1,23 +1,19 @@
 ---
 title: Creating V-switches within the hyper-V environment fails
 description: Provides workarounds for an issue where creating V-switches within the hyper-V environment fails.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:virtual-switch-manager-vmswitch, csstroubleshoot
-ms.technology: hyper-v
+ms.custom:
+- sap:virtualization and hyper-v\virtual switch manager (vmswitch)
+- pcy:WinComm Storage High Avail
 ---
 # Creating V-switches within the hyper-V environment fails
 
 This article provides workarounds for an issue where creating V-switches within the hyper-V environment fails.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2486812
 
 ## Symptoms
@@ -39,41 +35,20 @@ The network adapter has the protocol used by the Hyper-V virtual switch still bo
 > [!Note]
 > This issue is not currently known to be specific to a particular network adapter or hardware platform.
 
-## Workaround
+## Modify network bindings
 
-Two tools are provided by Microsoft to work around this problem.
+To work around this issue, modify network bindings by using the following steps:
 
-NVSPbind is a tool for modifying network binding from the command line. It is especially useful in Server Core environments with the Hyper-V role enabled. This tool is the least invasive and preferred method to work around the issue. This tool can be [downloaded from here](/samples/browse/).
+1. Produce a list of all the network adapters and their bindings. Find the problematic adapter and see if the vms_pp binding is enabled. Run the following cmdlet and note the name of the adapter.
 
-Instructions for using NVSPbind to resolve the issue:
+    ```powershell
+    Get-NetAdapterBinding -ComponentID "vms_pp"
+    ```
+  
+2. Disable the vms_pp binding by using the following cmdlet:
 
-1. **Command Prompt** > `nvspbind`
+    ```powershell
+    Disable-NetAdapterBinding -Name "<Adapter Name>" -ComponentID "vms_pp"
+    ```
 
-    This will produce a list of all the network adapters, as well as the bindings for each one. Find the adapter the error occurred on, and see if the vms_pp binding is enabled. In the sample output below, the friendly name of the adapter with the error is "Friendly NIC Name."
-    > {6B360F51-C6C4-4EA0-AFEF-E4D1056B498E}  
-    "pci\\ven_14e4&dev_1600&subsys_3015103c"  
-    "Friendly NIC Name"  
-    "Local Area Connection":  
-    disabled: ms_netbios (NetBIOS Interface)  
-    disabled: ms_server (File and Printer Sharing for Microsoft Networks)  
-    disabled: ms_pacer (QoS Packet Scheduler)  
-    disabled: ms_ndiscap (NDIS Capture LightWeight Filter)  
-    disabled: ms_wfplwf (WFP Lightweight Filter)  
-    disabled: ms_msclient (Client for Microsoft Networks)  
-    disabled: ms_tcpip6 (Internet Protocol Version 6 (TCP/IPv6))  
-    disabled: ms_netbt (WINS Client(TCP/IP) Protocol)  
-    disabled: ms_smb (Microsoft NetbiosSmb)  
-    disabled: ms_tcpip (Internet Protocol Version 4 (TCP/IPv4))  
-    disabled: ms_lltdio (Link-Layer Topology Discovery Mapper I/O Driver)  
-    disabled: ms_rspndr (Link-Layer Topology Discovery Responder)  
-    disabled: ms_pppoe (Point to Point Protocol Over Ethernet)  
-    disabled: ms_ndisuio (NDIS Usermode I/O Protocol)  
-    enabled: vms_pp (Microsoft Virtual Network Switch Protocol)
-
-2. To disable the vms_pp binding:
-
-    **Command Prompt** > `nvspbind /u "Friendly NIC Name"`
-
-Using NVSPscrub.js to resolve the issue:
-
-NVSPscrub.js (also [available from here](/samples/browse/)) is a tool for removing all Hyper-V Virtual Networking Configurations from the parent partition. This tool is more invasive, and will completely remove the configuration, as opposed to just the binding. It should be used only if NVSPbind is unsuccessful at resolving the issue.
+3. Take the first step again and confirm that the value of the `Enabled` property is `False`. This is to confirm that the binding has been removed.

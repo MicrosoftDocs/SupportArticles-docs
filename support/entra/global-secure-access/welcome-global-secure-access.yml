@@ -1,0 +1,25 @@
+### YamlMime:Landing
+
+title: Global Secure Access troubleshooting documentation # < 60 chars
+summary: Welcome to Global Secure Access troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Global Secure Access. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: Troubleshoot Global Secure Access issues
+  description: Documentation for troubleshooting common issues with Global Secure Access. # Required; article description that is displayed in search results. < 160 chars.
+  services: entra-id
+  ms.service: entra-id  #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: genlin  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: genli #Required; microsoft alias of author; optional team alias.
+  ms.date: 04/11/2024
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Global Secure Access
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot Global Secure Access client for Windows issues
+            url: troubleshoot-global-secure-access-client-windows-issues.md

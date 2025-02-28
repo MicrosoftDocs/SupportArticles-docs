@@ -3,7 +3,8 @@ title: Can't delete a managed solution consisting of an SLA-enabled entity
 description: Provides a resolution for the inability to delete a managed solution consisting of an SLA-enabled entity in Dynamics 365 Customer Service.
 ms.reviewer: sdas, ankugupta
 ms.author: sdas
-ms.date: 05/23/2023
+ms.date: 04/24/2024
+ms.custom: sap:Service Level Agreements
 ---
 # Can't delete a managed solution consisting of an SLA-enabled entity
 
@@ -42,4 +43,4 @@ To delete *Delta Field solution* in *Org2*, delete *Field solution* first.
 *Field solution* can be deleted because the entity associated with it —*Field work*— doesn't have SLA enabled. Deleting *Field solution* ensures that both the SLA configuration and the entity are deleted.
 
 > [!NOTE]
-> This workaround won't work for the out-of-the-box (OOB) entities because you can't delete OOB entities or managed solutions that have OOB entities associated with them.
+> This workaround won't work for the out-of-the-box entities because you can't delete out-of-the-box entities or managed solutions that have out-of-the-box entities associated with them.

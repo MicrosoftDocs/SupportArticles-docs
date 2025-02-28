@@ -3,7 +3,7 @@ title: Set drop-down list value in window/on web page action fails because the l
 description: Provides a resolution for an issue where the Set drop-down list value in window/on web page action fails because the list value can't be found in Microsoft Power Automate.
 ms.reviewer: nimoutzo
 ms.date: 08/22/2023
-ms.subservice: power-automate-desktop-flows
+ms.custom: sap:Desktop flows\Power Automate for desktop errors
 ---
 # The list value specified in the "Set drop-down list value in window/on web page" action can't be found at runtime
 

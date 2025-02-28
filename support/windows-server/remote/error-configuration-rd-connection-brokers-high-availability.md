@@ -1,15 +1,14 @@
 ---
 title: Error after completing configuration of the RD Connection Broker server for high availability
 description: Provides resolutions for the error that occur after completing configuration of the RD Connection Broker server for high availability.
-ms.date: 11/06/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, v-jenya, v-lianna
-ms.custom: sap:remote-desktop-services-terminal-services-licensing, csstroubleshoot
-ms.technology: windows-server-rds
+ms.custom:
+- sap:remote desktop services and terminal services\licensing for remote desktop services (terminal services)
+- pcy:WinComm User Experience
 ---
 # Error after completing configuration of the RD Connection Broker server for high availability
 

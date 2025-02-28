@@ -4,7 +4,6 @@ description: Provides a solution to action not available error when you select a
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
-ms.subservice: d365-sales-custom-solutions
 ---
 # "Action not available. To use this action, you must first select the old solution and then try again" message appears in Dynamics 365
 

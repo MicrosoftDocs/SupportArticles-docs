@@ -1,23 +1,19 @@
 ---
 title: DHCP client can't get a DHCP-assigned IP address
 description: Discusses an issue where a DHCP client can't get a DHCP-assigned IP address.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:dynamic-host-configuration-protocol-dhcp, csstroubleshoot
-ms.technology: networking
+ms.custom:
+- sap:network connectivity and file sharing\dynamic host configuration protocol (dhcp)
+- pcy:WinComm Networking
 ---
 # DHCP client may fail to obtain a DHCP-assigned IP address
 
 This article helps fix an issue where a DHCP client can't get a DHCP-assigned IP address.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 167014
 
 ## Symptoms

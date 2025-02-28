@@ -1,8 +1,8 @@
 ---
 title: Cumulative update 21 for SQL Server 2019 (KB5025808)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 21 (KB5025808).
-ms.date: 09/19/2023
-ms.custom: KB5025808
+ms.date: 07/26/2024
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5025808
 ms.reviewer: v-qianli2
 appliesto:
 - SQL Server 2019 on Windows
@@ -30,8 +30,6 @@ SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plan
 - 11042 - This trace flag disables the parallelism for the built-in `SESSION_CONTEXT`.
 
 - 9432 - This trace flag disables the fix that was introduced in SQL Server 2019 CU14.
-
-Microsoft is working on a fix for this issue and it will be available in a future CU.
 
 ### Issue two
 

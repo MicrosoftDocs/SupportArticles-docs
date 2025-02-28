@@ -1,23 +1,19 @@
 ---
 title: Permissions when you copy and move files
 description: Describes how Windows Explorer handles file and folder permissions in different situations.
-ms.date: 09/23/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:permissions-access-control-and-auditing, csstroubleshoot
-ms.technology: windows-client-security
+ms.custom:
+- sap:windows security technologies\ad object permissions,access control,delegation,adminsdholder and auditing
+- pcy:WinComm Directory Services
 ---
 # How permissions are handled when you copy and move files and folders
 
 This article describes how Windows Explorer handles file and folder permissions in different situations.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 310316
 
 ## Summary

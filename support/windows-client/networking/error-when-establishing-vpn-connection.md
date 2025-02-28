@@ -1,17 +1,14 @@
 ---
 title: Error when establishing a VPN connection
 description: Provides a solution to an Error 721 that occurs when try to establish a VPN connection through your Windows Server-based remote access server.
-ms.date: 09/18/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:remote-access, csstroubleshoot
-ms.technology: windows-client-networking
+ms.custom:
+- sap:network connectivity and file sharing\remote access (vpn,rras,cmak and aovpn)
+- pcy:WinComm Networking
 ---
 # You receive an "Error 721" error message when you try to establish a VPN connection through your Windows Server-based remote access server
 

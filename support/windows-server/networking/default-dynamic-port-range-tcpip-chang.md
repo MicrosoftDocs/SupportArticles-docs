@@ -1,17 +1,14 @@
 ---
 title: The default dynamic port range for TCP/IP has changed in Windows Vista and in Windows Server 2008
 description: Describes the changes to the default dynamic port range for TCP/IP in Windows Vista and in Windows Server 2008. Also describes commands that you can use to modify or show the dynamic port range for TCP/IP ports.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, dbansal
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: networking
+ms.custom:
+- sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
+- pcy:WinComm Networking
 ---
 # The default dynamic port range for TCP/IP has changed since Windows Vista and in Windows Server 2008
 
@@ -20,7 +17,6 @@ This article describes the changes to the default dynamic port range for TCP/IP 
 > [!Note]
 > Support for Windows Vista without any service packs installed ended on April 13, 2010. To continue receiving security updates for Windows, make sure that you are running Windows Vista with Service Pack 2 (SP2). For more information, go to the following Microsoft website: [Support is ending for some versions of Windows](https://windows.microsoft.com/windows/help/end-support-windows-xp-sp2-windows-vista-without-service-packs)
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 929851
 
 ## Introduction

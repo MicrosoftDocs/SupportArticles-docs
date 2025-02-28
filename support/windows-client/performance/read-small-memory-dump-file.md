@@ -1,17 +1,14 @@
 ---
 title: Read small memory dump files
 description: Describes how to examine the small memory dump files that are created by Windows if your computer fails.
-ms.date: 10/09/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
-ms.technology: windows-client-performance
+ms.custom:
+- sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot)
+- pcy:WinComm Performance
 adobe-target: true
 ---
 
@@ -23,6 +20,7 @@ adobe-target: true
 This article describes how to examine a small memory dump file. A small memory dump file can help you determine why your computer failed.
 
 _Applies to_ &nbsp; All supported versions of Windows Client and Windows Server  
+
 _Original KB number:_ &nbsp; 315263
 
 > [!NOTE]

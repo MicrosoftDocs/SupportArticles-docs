@@ -1,8 +1,8 @@
 ---
 title: Cumulative update 14 for SQL Server 2019 (KB5007182)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 14 (KB5007182).
-ms.date: 06/30/2023
-ms.custom: KB5007182
+ms.date: 07/26/2024
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5007182
 ms.reviewer: v-cuichen
 appliesto:
 - SQL Server 2019 on Windows
@@ -37,8 +37,6 @@ SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plan
 - 11042 - This trace flag disables the parallelism for the built-in `SESSION_CONTEXT`.
 
 - 9432 - This trace flag disables the fix that was introduced in SQL Server 2019 CU14.
-
-Microsoft is working on a fix for this issue and it will be available in a future CU.
 
 ## Improvements and fixes included in this update
 

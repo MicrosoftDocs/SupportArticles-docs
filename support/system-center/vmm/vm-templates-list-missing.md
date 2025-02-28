@@ -1,8 +1,8 @@
 ---
 title: VM templates list is missing on the WAP tenant site
 description: Describes an issue that prevents the list of VM templates on the Windows Azure Pack site from being displayed as expected. The workaround involves increasing the outgoing web request time-out setting in the TenantAPI web.config file.
-ms.date: 07/17/2020
-ms.reviewer: msadoff
+ms.date: 04/09/2024
+ms.reviewer: wenca, msadoff
 ---
 # VM templates list is missing on the Windows Azure Pack tenant site
 

@@ -2,7 +2,7 @@
 title: Can't connect remotely using TCP/IP
 description: This article provides resolutions for the problem where users are not able to connect remotely to SQL Server using TCP/IP protocol.
 ms.date: 09/25/2020
-ms.custom: sap:Connection issues
+ms.custom: sap:Database Connectivity and Authentication
 ---
 
 # Users may not be able to connect remotely to SQL Server using TCP/IP protocol

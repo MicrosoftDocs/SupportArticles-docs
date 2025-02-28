@@ -1,17 +1,14 @@
 ---
 title: Troubleshoot a multisite deployment
 description: Learn how to troubleshoot the most common errors that may occur when configuring a multisite Remote Access deployment.
-ms.date: 10/16/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, brianlic, jgerend, v-lianna
-ms.custom: sap:remote-access-multisite, csstroubleshoot
-ms.technology: networking
+ms.custom:
+- sap:network connectivity and file sharing\remote access (vpn,rras,cmak and aovpn)
+- pcy:WinComm Networking
 ms.assetid: f92b1335-ac4a-4501-a5ec-d1851e6f0fc7
 ---
 # Troubleshoot a multisite deployment

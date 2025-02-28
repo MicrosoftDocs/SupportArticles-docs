@@ -5,6 +5,7 @@ ms.date: 02/18/2022
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: andarno
+ms.custom: sap:Extensibility - Visual Studio SDK (VS SDK)\Extension and add-in development
 ---
 # Troubleshoot brokered services
 

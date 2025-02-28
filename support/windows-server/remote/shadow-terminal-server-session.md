@@ -1,23 +1,19 @@
 ---
 title: Shadow a Terminal Server session
 description: Describes how to shadow a Terminal Server session without a prompt for approval.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, SPAT, ELDENC
-ms.custom: sap:administration, csstroubleshoot
-ms.technology: windows-server-rds
+ms.custom:
+- sap:remote desktop services and terminal services\deployment,configuration,and management of remote desktop services infrastructure
+- pcy:WinComm User Experience
 ---
 # How to shadow a Terminal Server session without a prompt for approval
 
 This article describes how to shadow a Terminal Server session without a prompt for approval.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 292190
 
 ## Summary

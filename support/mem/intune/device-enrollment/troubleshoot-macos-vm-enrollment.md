@@ -1,9 +1,10 @@
 ---
 title: Troubleshooting macOS virtual machine enrollment in Intune
 description: Troubleshooting guidance to help resolve errors when you enroll macOS virutal machines in Microsoft Intune.
-ms.date: 09/30/2021
+ms.date: 02/11/2025
 search.appverid: MET150
 ms.reviewer: kaushika
+ms.custom: sap:Enroll Devices - macOS\Advisory
 ---
 
 # Troubleshoot macOS virtual machine enrollment in Microsoft Intune
@@ -34,4 +35,4 @@ First, check with your user to determine which of the issues affects their devic
     1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in with your administrative credentials.
     2. Choose **Devices** > **All devices**.  
     3. Find the device with the enrollment problem. Search by device name or MAC/HW Address to narrow your results.
-    4. Select the device > **Delete**. Delete all other entries associated with the device.  
+    4. Select the device > **Delete**. Delete all other entries associated with the device.

@@ -1,23 +1,19 @@
 ---
 title: Password policy changes aren't applied
 description: Provides a solution to an issue where the changes aren't applied as expected when you change the password policy.
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
-ms.technology: windows-server-group-policy
+ms.custom:
+- sap:group policy\problems applying group policy
+- pcy:WinComm Directory Services
 ---
 # Changes are not applied when you change the password policy
 
 This article helps solve an issue where the changes aren't applied as expected when you change the password policy.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 269236
 
 ## Symptoms

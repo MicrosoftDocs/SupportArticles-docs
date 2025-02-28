@@ -1,19 +1,20 @@
 ---
-title: Workflow 2.0 tables used with Microsoft Dynamics GP
-description: Workflow 2.0 tables used with Microsoft Dynamics GP 2013 R2 and higher versions.
-ms.reviewer: cwaswick
-ms.date: 03/31/2021
+title: Workflow tables used with Microsoft Dynamics GP
+description: Workflow tables used with Microsoft Dynamics GP.
+ms.reviewer: theley
+ms.date: 03/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
-# Workflow 2.0 tables used with Microsoft Dynamics GP
+# Workflow tables used with Microsoft Dynamics GP
 
-This article outlines the Workflow 2.0 tables used with Microsoft Dynamics GP 2013 R2 and higher versions.
+This article outlines the Workflow tables used with Microsoft Dynamics GP.
 
 _Applies to:_ &nbsp; Microsoft Dynamics GP  
 _Original KB number:_ &nbsp; 3091940
 
 ## Summary
 
-The workflow 2.0 tables are as follows:
+The workflow tables are as follows:
 
 WF00100 - Workflow Setup  
 WF00104 - Workflow User Security  
@@ -40,7 +41,7 @@ WFI10005 - Workflow Step Instance Users
 
 Below lists each table, what information it holds, and what information is written to the tables along the workflow process.
 
-By default, using Microsoft Dynamics GP 2015 R2 as an example, before Workflow 2.0 is set up at all, only these tables will have any records in them: By default, using Microsoft Dynamics GP 2015 R2 as an example, before Workflow 2.0 is set up at all, only these tables will have any records in them:
+By default, using Microsoft Dynamics GP 2015 R2 as an example, before Workflow is set up at all, only these tables will have any records in them:
 
 --WF100001 = One record for each of the 15 possible types of Workflow that are available. (This could be different depending on what features and version of Microsoft Dynamics GP you are on.)
 
@@ -74,7 +75,7 @@ After activating the Purchase Order Approval workflow type and saving changes:
 
 --WF100002 = record for the Purchase Order Approval workflow type gets updated to show the workflow is active for this company database.
 
-After submitting a purchase order for approval through Workflow 2.0 and verifying, the PO shows as pending approval from the approver we setup:
+After submitting a purchase order for approval through Workflow and verifying, the PO shows as pending approval from the approver we setup:
 
 --WF30100 = One record is created for the PO being submitted for approval (Workflow_Action = 1), who submitted the PO, the name of the workflow and the step, as well as due date the approver has to approve by.
 
@@ -127,7 +128,7 @@ The Workflow_Step_Status values for the WFI10003 table are:
 5- Recalled  
 6- Failed
 
-As you can see, all of the information for Workflow 2.0 is available, it's just found in multiple tables that you would need to link together to create, for example, a SQL View, that could then be used in a custom report pulling this type of information.
+As you can see, all of the information for Workflow is available, it's just found in multiple tables that you would need to link together to create, for example, a SQL View, that could then be used in a custom report pulling this type of information.
 
 For example, here's a quick example script that will give the workflow name, who the task is assigned to, the workflow step and workflow status, and the workflow originator. Using this example, you could potentially filter it to pull in the specific information you want for a customer report:
 

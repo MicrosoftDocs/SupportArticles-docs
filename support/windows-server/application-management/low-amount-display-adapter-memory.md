@@ -1,23 +1,19 @@
 ---
 title: DXDIAG reports low display adapters memory
 description: Describes an issue where Direct-X diagnostics tool (DXDIAG) reports an unexpected value for the display adapters memory.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, joelch, waltere
-ms.custom: sap:application-compatibility-toolkit-act, csstroubleshoot
-ms.technology: windows-server-application-compatibility
+ms.custom:
+- sap:application technologies and compatibility\application compatibility toolkit (act)
+- pcy:WinComm User Experience
 ---
 # Direct-X diagnostics tool may report an unexpected value for the display adapters memory
 
 This article describes an issue where Direct-X diagnostics tool (DXDIAG) reports an unexpected value for the display adapters memory.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2026022
 
 ## Symptoms

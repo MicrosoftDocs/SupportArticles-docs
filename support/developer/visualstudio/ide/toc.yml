@@ -2,10 +2,14 @@
   href: ./visual-studio-2013-startup-crashes.md
 - name: Can't dismiss developer license notifications
   href: ./developer-license-notification-not-dismiss.md
-- name: Can't switch between organizational accounts
-  href: ./cannot-switch-accounts.md
-- name: Overview of Visual Studio 2012 updates
-  href: ./visual-studio-2012-updates.md
+- name: Can't find resources in XAML or WPF designer
+  href: ./cannot-find-resource-named-error.md
+- name: Can't sign in when JavaScript is disabled
+  href: ./cannot-sign-in-javascript-disabled.md
+- name: Can't start Windows Simulator
+  href: ./cannot-start-windows-simulator.md
+- name: Issues when creating and deploying Azure resource groups
+  href: ./troubleshoot-create-deploy-resource-group.md
 - name: Performance and crashes issues
   href: ./performance-crash-issue.md
 - name: Release Management Client crashes 
@@ -20,8 +24,10 @@
   href: ./troubleshooting-code-coverage.md
 - name: Troubleshoot issues with IntelliSense code snippets
   href: ./troubleshooting-snippets.md
-- name: Troubleshoot specific errors in ClickOnce deployments
-  href: ./troubleshoot-clickonce-deployments.md
+- name: Troubleshoot references to WCF or WCF Data Services
+  href: ./troubleshooting-service-references.md
+- name: Troubleshoot XAML Hot Reload
+  href: ./xaml-hot-reload-troubleshooting.md
 - name: Visual Studio 2012 crashes with StarDict-3
   href: ./crash-with-stardict-3.md
 - name: Unrecoverable process error
@@ -30,5 +36,3 @@
   href: ./help-viewer-2-crashes.md
 - name: Application unresponsive due to low system memory
   href: ./visual-studio-unresponsive-resources-consuming-memory.md
-- name: Mouse wheel events don't work in Visual Basic 6.0 IDE
-  href: ../visual-basic/ide/mouse-wheel-events-do-not-work.md

@@ -2,8 +2,9 @@
 title: Determine whether the begin date and the end date are accurate for a project in Project Accounting
 description: Describes the windows that you can use in Project Accounting to verify that the begin date and the end date are accurate for a project.
 ms.topic: how-to
-ms.reviewer: marianv
-ms.date: 03/31/2021
+ms.reviewer: theley, marianv
+ms.date: 03/20/2024
+ms.custom: sap:Project Accounting
 ---
 # How to determine whether the begin date and the end date are accurate for a project in Project Accounting in Microsoft Dynamics GP
 

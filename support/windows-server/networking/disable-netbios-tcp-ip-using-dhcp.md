@@ -1,23 +1,19 @@
 ---
 title: Disable NetBIOS over TCP/IP by using DHCP
 description: Describes how to disable NetBIOS over TCP/IP on the DHCP client by using DHCP server options.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, SKHALELI, abpathak, v-jomcc, MASOUDH
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: networking
+ms.custom:
+- sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
+- pcy:WinComm Networking
 ---
 # How to disable NetBIOS over TCP/IP by using DHCP server options
 
 This article describes how to disable NetBIOS over TCP/IP on the DHCP client by using DHCP server options.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 313314
 
 ## Summary
@@ -28,7 +24,7 @@ The Windows Dynamic Host Configuration Protocol (DHCP) server provides a `Vendor
 
 To disable NetBIOS on the DHCP server, follow these steps:
 
-1. Select **Start**, point to **Programs**, point to **Administrative Tools**, and then select **DHCP**.
+1. Select **Start**, point to **Administrative Tools**, and then select **DHCP**.
 2. In the navigation pane, expand the **server_name**, expand **Scope**, right-click **Scope Options**, and then select **Configure Options**.
     > [!NOTE]
     > In this step, the **server_name** placeholder specifies the name of the DHCP server.
@@ -39,30 +35,18 @@ To disable NetBIOS on the DHCP server, follow these steps:
 
 ## Configure the DHCP client to enable the DHCP server to determine NetBIOS behavior
 
-- For Windows XP, Windows Server 2003, and Windows 2000
-
-    1. On the desktop, right-click **My Network Places**, and then select **Properties**.
-    2. Right-click **Local Area Connection**, and then select **Properties**.
-    3. In the **Components checked are used by this connection** list, double-click **Internet Protocol (TCP/IP)**, select **Advanced**, and then select the **WINS** tab.
-
-        > [!NOTE]
-        > In Windows XP and in Windows Server 2003, you must double-click **Internet Protocol (TCP/IP)** in the **This connection uses the following items** list.
-    4. Select **Use NetBIOS setting from the DHCP server**, and then select **OK** three times.
-
-- For Windows Vista
-
-    1. On the desktop, right-click **Network**, and then select **Properties**.
-    2. Under **Tasks**, select **Manage network connections**.
-    3. Right-click **Local Area Connection**, and then select **Properties**.
-    4. In the **This connection uses the following items** list, double-click **Internet Protocol Version 4 (TCP/IPv4)**, select **Advanced**, and then select the **WINS** tab.
-    5. Select **Use NetBIOS setting from the DHCP server**, and then select **OK** three times.
-
 - For Windows 7
 
     1. Select **Start**, and then select **Control Panel**.
     2. Under **Network and Internet**, select **View network status and tasks**.
-
     3. Select **Change adapter settings**.
     4. Right-click **Local Area Connection**, and then select **Properties**.
     5. In the **This connection uses the following items** list, double-click **Internet Protocol Version 4 (TCP/IPv4)**, select **Advanced**, and then select the **WINS** tab.
     6. Select **Use NetBIOS setting from the DHCP server**, and then select **OK** three times.
+
+- For Windows 10 and windows 11
+
+    1. Select **Start**, and then input **View Network Connections**
+    2. Right-click **Local Area Connection**, and then select **Properties**.
+    3. In the **This connection uses the following items** list, double-click **Internet Protocol Version 4 (TCP/IPv4)**, select **Advanced**, and then select the **WINS** tab.
+    4. Select **Use NetBIOS setting from the DHCP server**, and then select **OK** three times.

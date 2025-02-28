@@ -1,15 +1,14 @@
 ---
 title: Kerberos authentication troubleshooting guidance
 description: Provides guidance to troubleshoot Kerberos authentication issues.
-ms.date: 05/10/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-ms.technology: windows-server-security
-ms.custom:sap: kerberos-authentication, csstroubleshoot
-localization_priority: medium
-ms.reviewer: kaushika, raviks, v-lianna
+ms.custom:
+- sap:windows security technologies\kerberos authentication
+- pcy:WinComm Directory Services
+ms.reviewer: kaushika, raviks, v-lianna, jobesanc
 ---
 # Kerberos authentication troubleshooting guidance
 
@@ -18,7 +17,7 @@ This guide provides you with the fundamental concepts used when troubleshooting 
 ## Troubleshooting checklist
 
 - A Kerberos-related error is a symptom of another service failing. The Kerberos protocol relies on many services that must be available and functioning properly for any authentication to take place.
-- To determine whether a problem is occurring with Kerberos authentication, check the System event log for errors from any services (such as Kerberos, kdc, LsaSrv, or Netlogon) on the client, target server, or domain controller that provide authentication. If any such errors exist, there might be errors associated with the Kerberos protocol as well.
+- To determine whether a problem is occurring with Kerberos authentication, check the System event log for errors from any services by filtering it using the "source" (such as Kerberos, kdc, LsaSrv, or Netlogon) on the client, target server, or domain controller that provide authentication. If any such errors exist, there might be errors associated with the Kerberos protocol as well.
 - Failure audits on the target server's Security event log might show that the Kerberos protocol was being used when a logon failure occurred.
 - Before you inspect the Kerberos protocol, make sure that the following services or conditions are functioning properly:
 
@@ -54,11 +53,11 @@ There are three types of delegation using Kerberos:
 ### Most common Kerberos delegation troubleshooting
 
 - Service principal name missing or duplicated
-- Name resolution failures or incorrect responses (wrong IP addresses given for a server)
-- Large Kerberos tickets (MaxTokenSize) and environment not set up properly
+- Name resolution failures or incorrect responses (wrong IP addresses given for a server name)
+- Large Kerberos tickets size (MaxTokenSize) and environment not set up properly
 - Ports being blocked by firewalls or routers
 - Service account not given appropriate privileges (User Rights Assignment)
-- Front-end or back-end services not in the same domain and constrained delegation setup
+- Front-end or back-end services not in the same domain and constrained delegation setup (not RBCD)
 
 For more information, see:
 
@@ -73,7 +72,7 @@ Consider the following scenarios:
 - A client and server application like Microsoft Edge and Internet Information Services (IIS) server. The IIS server is configured with Windows Authentication (Negotiate).
 - A client and server application like an SMB client and SMB server. By default, the SMB server is configured with Negotiate Security Support Provider Interface (SSPI).
 
-A User opens Microsoft Edge and browses an internal website `http://webserver.contoso.com`. The website is configured with Negotiate, and this website prompts for authentication. After the user manually enters the username and password, the user gets authentication, and the website works as expected.
+A User opens Microsoft Edge and browses an internal website `http://webserver.contoso.com`. The website is configured with [Negotiate](/windows/win32/secauthn/microsoft-negotiate), and this website prompts for authentication. After the user manually enters the username and password, the user gets authentication, and the website works as expected.
 
 > [!NOTE]
 > This scenario is an example of a client and server. The troubleshooting technique is the same for any client and server configured with Integrated Windows authentication.

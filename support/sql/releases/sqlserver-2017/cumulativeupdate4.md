@@ -1,8 +1,8 @@
 ---
 title: Cumulative update 4 for SQL Server 2017 (KB4056498)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2017 cumulative update 4 (KB4056498).
-ms.date: 08/04/2023
-ms.custom: KB4056498
+ms.date: 07/26/2024
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB4056498, linux-related-content
 appliesto:
 - SQL Server 2017 on Windows
 - SQL Server 2017 on Linux

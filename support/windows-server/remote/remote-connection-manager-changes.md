@@ -1,17 +1,14 @@
 ---
 title: Changes to Remote Connection Manager (RCM)
 description: This article describes the changes that have been made to RCM in Windows Server 2016. It also explains how to enable RCM.
-ms.date: 12/07/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:remote-desktop-sessions, csstroubleshoot
-ms.technology: windows-server-rds
+ms.custom:
+- sap:remote desktop services and terminal services\session connectivity
+- pcy:WinComm User Experience
 ---
 # Changes to Remote Connection Manager in Windows Server 2016
 

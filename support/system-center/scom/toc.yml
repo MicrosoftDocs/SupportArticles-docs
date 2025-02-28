@@ -16,8 +16,6 @@
     href: error-25211-installing-opsmgr-agent.md
   - name: Error 80070520 when deploying agents
     href: deploy-operations-manager-agents-error-80070520.md
-  - name: Heartbeat alerts in maintenance mode
-    href: maintenance-mode-heartbeat-alerts.md
   - name: Microsoft Monitoring Agent service freezes during startup
     href: monitoring-agent-service-freezes-during-startup.md
   - name: Remove orphaned agents
@@ -36,40 +34,6 @@
     href: troubleshoot-sql-database-discovery.md
   - name: Troubleshoot UNIX/Linux agent discovery
     href: troubleshoot-unix-linux-agent-discovery.md
-- name: AVIcode
-  items:
-  - name: Can't edit AVIcode 5.7 templates after upgrade
-    href: import-avicode-templates-after-upgrade.md
-  - name: Configure Windows authentication
-    href: configure-windows-authentication.md
-  - name: The Path My Documents contains an invalid character
-    href: avicode-agent-installation-fails-with-invalid-character.md
-- name: BlueStripe
-  items:
-  - name: Activate a FactFinder management server license file
-    href: activate-factfinder-management-server-license-file.md
-  - name: BlueStripe Collector support by OS
-    href: minimum-bluestripe-collector-version-required.md
-  - name: BlueStripe management server firewall rules
-    href: bluestripe-management-server-firewall-rules.md
-  - name: Check the BlueStripe Collector status
-    href: check-bluestripe-collector-status.md
-  - name: Check the BlueStripe Collector version
-    href: check-bluestripe-collector-version.md
-  - name: Configure Windows authentication on a BlueStripe management server
-    href: configure-windows-authentication-on-bluestripe-management-server.md
-  - name: FactFinder heap space configuration
-    href: factfinder-heap-space-configuration.md
-  - name: Generate and export a Support Data package
-    href: generate-export-support-data-package.md
-  - name: Installation flags of BlueStripe Collector
-    href: bluestripe-collector-installation-flags.md
-  - name: Upgrade BlueStripe Collector
-    href: upgrade-bluestripe-collector.md
-  - name: Use a custom certificate
-    href: use-custom-certificate.md
-  - name: What's new in BlueStripe FactFinder 8.1
-    href: bluestripe-factfinder-new-functions.md
 - name: Management packs
   items:
   - name: A delay when you open dashboard views
@@ -80,22 +44,12 @@
     href: cannot-import-management-pack-with-dependencies.md
   - name: Can't open the Management Server view
     href: cannot-open-management-server.md
-  - name: Can't upgrade the Configuration Manager management pack
-    href: upgrade-configmgr-management-pack-error.md
-  - name: Configure SharePoint 2010 management pack
-    href: configure-sharepoint-2010-management-pack.md
   - name: Connection to EndPoint Service failed
     href: connection-to-endpoint-service-failed-error.md
-  - name: DNS management pack discovery fails with event 1155
-    href: dns-management-pack-discovery-fails.md
   - name: Domain controllers are unavailable or Not Monitored
     href: domain-controllers-unavailable.md
   - name: Event 26001 is logged regularly
     href: event-26001-logged-regularly.md
-  - name: Event ID 4625 when using Exchange 2010 management pack
-    href: event-id-4625-audit-failure.md
-  - name: Exchange 2010 management pack guidance
-    href: exchange-2010-management-pack-guidance.md
   - name: Regular expression support
     href: regular-expression-support.md
   - name: Remove duplicate Management pack aliases
@@ -208,10 +162,6 @@
     href: install-opsmgr-service-manager-consoles-on-same-server.md
   - name: Reporting Services installation fails
     href: reporting-services-installation-fails.md
-  - name: Setup cannot be completed
-    href: setup-not-completed-error.md
-  - name: Troubleshoot OMS onboarding issues
-    href: troubleshoot-oms-onboarding-issues.md
   - name: Unable to register to Advisor Service
     href: error-3000-unable-to-register-to-advisor-service.md
   - name: Use CA certificate on SCX agent

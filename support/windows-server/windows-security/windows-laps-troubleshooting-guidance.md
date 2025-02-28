@@ -1,15 +1,14 @@
 ---
 title: Windows LAPS troubleshooting guidance
 description: Provides troubleshooting guidance for Windows LAPS using Windows events.
-ms.date: 04/21/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, jsimmons, sandeo, mimanans, sdabbiru, deverett, raviks, v-lianna
-ms.custom: sap:windows-laps, csstroubleshoot
-ms.technology: windows-server-security
+ms.custom:
+- sap:windows local admin password solution (laps)
+- pcy:WinComm Directory Services
 ---
 # Windows LAPS troubleshooting guidance
 

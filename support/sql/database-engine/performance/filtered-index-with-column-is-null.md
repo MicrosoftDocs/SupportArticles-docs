@@ -2,7 +2,7 @@
 title: Filtered index with Column IS NULL isn't used
 description: This article provides resolution for the problem that occurs when you create the filtered index together with the Column IS NULL predicate expression in Microsoft SQL Server.
 ms.date: 09/14/2020
-ms.custom: sap:Database Design and Development
+ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ms.reviewer: fredep, ramakoni
 ---
 

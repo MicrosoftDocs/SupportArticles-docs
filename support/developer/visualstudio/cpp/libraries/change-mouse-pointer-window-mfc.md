@@ -2,7 +2,7 @@
 title: Change the mouse pointer for a window in MFC
 description: Explains that the window class identifies several characteristics of the windows that are based on the window class including the default mouse pointer. Describes three methods for changing the mouse pointer for a window in MFC by using Visual C++.
 ms.date: 04/22/2020
-ms.custom: sap:C and C++ Libraries
+ms.custom: sap:C and C++ Libraries\Microsoft Foundation Classes (MFC)
 ms.reviewer: anurags
 ms.topic: how-to
 ---

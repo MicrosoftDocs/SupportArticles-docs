@@ -5,7 +5,6 @@ ms.date: 08/14/2020
 ms.custom: sap:Client Connectivity
 ms.reviewer: achand, daleche, muthuk, sriramb, ronai, ans, leov
 ms.service: azure-devops
-ms.subservice: ts-client-connectivity
 ---
 # 'The server specified could not be reached' error when you try to connect through Release Management Client
 
@@ -36,6 +35,6 @@ To resolve this issue, follow these steps:
 
 ## References
 
-Check out [Known issues when you install Release Management for Visual Studio 2013](/troubleshoot/visualstudio/install/release-management-installation-issues).
+Check out [Known issues when you install Release Management for Visual Studio 2013](../../developer/visualstudio/installation/release-management-installation-issues.md).
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

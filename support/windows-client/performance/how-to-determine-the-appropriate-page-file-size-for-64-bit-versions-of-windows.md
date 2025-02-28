@@ -1,18 +1,15 @@
 ---
 title: How to determine the appropriate page file size for 64-bit versions of Windows
 description: Learn how to determine the appropriate page file size for 64-bit versions of Windows.
-ms.date: 08/23/2022
-ms.prod: windows-client
+ms.date: 01/15/2025
 ms.topic: troubleshooting
-author: Deland-Han
-ms.author: delhan
 ms.reviewer: dansimp
 manager: dcscontentpm
 ms.collection: highpri
-ms.technology: windows-client-performance
-ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
+ms.custom:
+- sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot)
+- pcy:WinComm Performance
 audience: itpro
-localization_priority: medium
 ---
 # How to determine the appropriate page file size for 64-bit versions of Windows
 

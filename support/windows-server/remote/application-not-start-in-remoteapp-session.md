@@ -1,23 +1,19 @@
 ---
 title: Application doesn't start in TS RemoteApp session
 description: Describes the issue in which you cannot run an application that relies on the Explorer.exe file in a TS RemoteApp session. Two workarounds are offered that use Group Policy settings and changes.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, mghazai
-ms.custom: sap:remoteapp-applications, csstroubleshoot
-ms.technology: windows-server-rds
+ms.custom:
+- sap:remote desktop services and terminal services\remoteapp applications
+- pcy:WinComm User Experience
 ---
 # An application does not start in a Windows Server Terminal Services RemoteApp session
 
 This article provides workarounds for an issue where you can't run an application that relies on the Explorer.exe file in a Terminal Services RemoteApp session.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 951048
 
 ## Symptoms

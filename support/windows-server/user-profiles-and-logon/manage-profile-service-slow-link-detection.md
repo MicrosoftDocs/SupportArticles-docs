@@ -1,23 +1,20 @@
 ---
 title: Managing Profile Service Slow Link Detection
 description: Describes how to optimize slow link detection in Windows and Windows Server.
-ms.date: 05/20/2022
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
-ms.custom: sap:user-profiles, csstroubleshoot
-ms.technology: windows-server-user-profiles
+ms.custom:
+- sap:user logon and profiles\user profiles
+- pcy:WinComm Directory Services
 keywords: ProfSvc
 ---
 
 # Managing User Profile Service slow link detection
 
 This article describes how to optimize slow link detection to effectively balance the quality of the bandwidth estimate against the amount of time spent calculating the estimate.
-
-_Applies to:_ &nbsp; Windows 11, Windows 10, Windows 8.1, Windows 8, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 ## Summary
 

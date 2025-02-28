@@ -4,6 +4,7 @@ description: Provides resolutions for the issue where the chat widget doesn't lo
 ms.reviewer: nenellim
 ms.author: yangao
 ms.date: 05/23/2023
+ms.custom: sap:Live chat Widget (LCW)\Unable to view chat widget on the webpage
 ---
 # Chat widget doesn't load on the portal
 

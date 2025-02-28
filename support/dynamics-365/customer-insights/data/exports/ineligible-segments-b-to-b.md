@@ -5,6 +5,7 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 ms.date: 09/25/2023
+ms.custom: sap:Segments, measures, insights\Segments
 ---
 # Segment not eligible for export for B-to-B audiences
 

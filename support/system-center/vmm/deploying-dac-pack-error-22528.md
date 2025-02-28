@@ -1,8 +1,8 @@
 ---
 title: Error 22528 when deploying a DAC pack
 description: Fixes an issue in which you receive error 22528 when deploying a data-tier application pack in System Center 2012 Virtual Machine Manager.
-ms.date: 04/29/2020
-ms.reviewer: alvinm
+ms.date: 04/09/2024
+ms.reviewer: wenca, alvinm
 ---
 # Deploying a DAC pack in System Center 2012 Virtual Machine Manager fails if using a named SQL instance
 

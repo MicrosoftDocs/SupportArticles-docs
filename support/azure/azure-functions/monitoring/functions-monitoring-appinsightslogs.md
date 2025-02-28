@@ -1,8 +1,9 @@
 ---
 title: Application Insights logs are missing or incorrect
 description: Ths article helps you resolve issues related to missing or incorrect logs for Application Insights logs in Azure Functions.
-ms.date: 08/24/2023
-ms.reviewer: gasridha, v-jayaramanp
+ms.date: 01/16/2025
+ms.reviewer: gasridha, v-jayaramanp, agaltrai, jarrettr 
+ms.custom: sap:Monitoring using Application Insights, Metrics and Alerts
 ---
 
 # Application Insights logs are missing or incorrect for Azure Functions apps
@@ -28,6 +29,23 @@ If the Application Insights logs are missing, or if the data appears to be parti
     - [Sampling](/azure/azure-functions/configure-monitoring#configure-sampling) is enabled for the Azure Functions telemetry (enabled by default).
 
   **Recommendation**: The function app should be on version 4 and the runtime version should be at least 4.15.2*xx*. This is because, from this version onwards, you can track the log flows from Azure Functions to the Application Insights service. By monitoring the log flows, you can check for missing logs.
+
+## Custom application logs
+
+By default, custom application logs you write are sent to the Functions host, which then sends them to Application Insights under the [Worker category](/azure/azure-functions/configure-monitoring#configure-categories). However, some language stacks allow you to send the logs directly to Application Insights, which gives you full control over how logs you write are emitted. In this case, the logging pipeline changes from `worker > Functions host > Application Insights` to `worker > Application Insights`.
+
+The following table summarizes the configuration options available for each stack:
+
+| Language stack | Where to configure custom logs |
+|-|-|
+| .NET (in-process model) | `host.json` |
+| .NET (isolated model) | Default (send custom logs to the Functions host): `host.json`<br/>To send logs directly to Application Insights, see [Configure Application Insights in the HostBuilder](/azure/azure-functions/dotnet-isolated-process-guide#application-insights).  |
+| Node.JS | `host.json` |
+| Python | `host.json` |
+| Java | Default (send custom logs to the Functions host): `host.json`<br/>To send logs directly to Application Insights, see [Configure the Application Insights Java agent](/azure/azure-monitor/app/monitor-functions#distributed-tracing-for-java-applications). |
+| PowerShell | `host.json` |
+
+When you configure custom application logs to be sent directly, the host no longer emits them, and `host.json` no longer controls their behavior. Similarly, the options exposed by each stack apply only to custom logs, and they don't change the behavior of the other runtime logs described in this article. In this case, to control the behavior of all logs, you might need to make changes in both configurations.
 
 ## Logs are missing or partial
 

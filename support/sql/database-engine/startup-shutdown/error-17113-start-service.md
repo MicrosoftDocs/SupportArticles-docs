@@ -5,6 +5,7 @@ ms.date: 12/17/2021
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: ramakoni
+ms.custom: sap:Startup, shutdown, restart issues (instance or database)
 ---
 
 # Service-specific error 17113 when you start SQL Server service

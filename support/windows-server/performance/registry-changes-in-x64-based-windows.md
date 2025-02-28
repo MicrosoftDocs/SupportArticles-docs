@@ -1,23 +1,19 @@
 ---
 title: Registry changes in x64-based versions of Windows
 description: Describes some of the important registry changes that have been made in the x64 Edition version of the Windows operating system.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, joeswart
-ms.custom: sap:applications, csstroubleshoot
-ms.technology: windows-server-performance
+ms.custom:
+- sap:system performance\system configuration (page file,startup or running apps,error handling)
+- pcy:WinComm Performance
 ---
 # Registry changes in x64-based versions of Windows
 
 This article describes some of the registry changes that have been made in x64-based versions of Microsoft Windows Server 2003 and Microsoft Windows XP Professional x64 Edition. It describes how the Windows x64 Edition operating system stores registry information for 32-bit programs and 64-bit programs. 
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 896459
 
 ## Summary

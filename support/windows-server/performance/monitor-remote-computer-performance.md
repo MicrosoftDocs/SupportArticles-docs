@@ -1,23 +1,19 @@
 ---
 title: Monitor performance of remote computers
 description: Describes how to use Performance Monitor and the Datalog.exe file to monitor performance of remote computers.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:performance-monitoring-tools, csstroubleshoot
-ms.technology: windows-server-performance
+ms.custom:
+- sap:system performance\performance tools (task manager,perfmon,wsrm,and wpa)
+- pcy:WinComm Performance
 ---
 # Monitor performance of a remote computer without logging on to it
 
 This article describes how to use Performance Monitor and the Datalog.exe file that is included with Microsoft Windows NT 4.0 Resource Kit to log data and generate alerts on a remote computer without having to log on to it.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 246758
 
 ## More information

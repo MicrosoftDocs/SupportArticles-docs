@@ -1,17 +1,14 @@
 ---
 title: Modern Apps can't connect when you use a Check Point VPN connection
 description: Discusses that Modern Apps can't connect to the Internet after you connect to the corporate network by using Check Point VPN software. Provides a workaround.
-ms.date: 05/10/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: rnitsch, kaushika
-ms.custom: sap:remote-access, csstroubleshoot
-ms.technology: windows-client-networking
+ms.custom:
+- sap:network connectivity and file sharing\remote access (vpn,rras,cmak and aovpn)
+- pcy:WinComm Networking
 ---
 # Modern Apps can't connect when you use a Check Point VPN connection
 

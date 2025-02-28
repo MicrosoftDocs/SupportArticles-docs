@@ -1,17 +1,14 @@
 ---
 title: Troubleshoot DNS server for DirectAccess server
 description: This article discusses how to troubleshoot DNS server issues for DirectAccess server.
-ms.date: 01/19/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:remote-access, csstroubleshoot
-ms.technology: networking
+ms.custom:
+- sap:network connectivity and file sharing\remote access (directaccess)
+- pcy:WinComm Networking
 ---
 # Troubleshoot DirectAccess Server console: DNS
 

@@ -1,19 +1,20 @@
 ---
-title: Troubleshoot Always On Availability Groups failover
+title: Troubleshoot failover of Always On Availability Groups 
 description: This article provides troubleshooting steps to help you determine why your availability group failed over. 
-ms.date: 04/17/2023
-ms.custom: sap:Availability Groups
-ms.reviewer: cmathews, v-jayaramanp
+ms.date: 01/17/2025
+ms.custom: sap:Always On Availability Groups (AG)
+ms.reviewer: cmathews, v-jayaramanp, jopilov
+ms.author: cmathews
 ---
 
-# Troubleshoot Always On Availability Groups failover
+# Troubleshoot failover of Always On Availability Groups
 
 > [!NOTE]
 > To automate the manual analysis described in this article, see [Use AGDiag to diagnose availability group health events](use-agdiag-diagnose-availability-group-health-events.md).
 
 This article provides troubleshooting steps to help you determine why your availability group failed over.
 
-## Symptoms and effects of Always On health issue or failover
+## Effects of Always On health issues or failover
 
 Always On implements robust health monitoring through different mechanisms to ensure the health of the Microsoft SQL Server instance that hosts the primary replica, the underlying cluster, and the system health. The production workload is momentarily interrupted when a Windows cluster or Always On health problem is identified.
 
@@ -78,32 +79,39 @@ get-clusterlog -Node sql19agn1 -UseLocalTime
 
 ### 3. Find the health event in the cluster log
 
-   Always On uses several health monitoring mechanisms to monitor availability group health. In addition to a Windows Cluster health event (in which Windows Cluster detects a health issue among the cluster nodes), Always On has four different kinds of health checks:
+Always On uses several health monitoring mechanisms to monitor availability group health. In addition to a Windows Cluster health event (in which Windows Cluster detects a health issue among the cluster nodes), Always On has four different kinds of health checks:
 
-   - The SQL Server service isn't running
-   - A SQL Server lease time-out
-   - A SQL Server health check time-out
-   - A SQL Server internal health issue
+- The SQL Server service isn't running
+- A SQL Server lease time-out
+- A SQL Server health check time-out
+- A SQL Server internal health issue
 
-   You can locate any of these Always On specific health events by searching the cluster log for the string, `[hadrag] Resource Alive result 0`. This string is saved in the cluster log when any of these events are detected. For example:
+You can locate any of these Always On specific health events by searching the cluster log for the string, `[hadrag] Resource Alive result 0`. This string is saved in the cluster log when any of these events are detected. For example:
 
-   ```output
-   00001334.00002ef4::2019/06/24-18:24:36.153 ERR [RES] SQL Server Availability Group : [hadrag] Resource Alive result 0.
-   ```
+```output
+00001334.00002ef4::2019/06/24-18:24:36.153 ERR [RES] SQL Server Availability Group : [hadrag] Resource Alive result 0.
+```
 
-   You can use a tool to find all the health events in the cluster log so that you can generate a summary report of Always On health problems. This can be useful to identify chronological trends and determine whether a particular kind of Always On health condition is recurring. The following screenshot shows how to use a text editor (NotePad++, in this case) to find all the lines in the cluster log that contain the `[hadrag] Resource Alive result 0` string:
+You can use a tool to find all the health events in the cluster log so that you can generate a summary report of Always On health problems. This can be useful to identify chronological trends and determine whether a particular Always On health condition is recurring. The following screenshot shows how to use a text editor (NotePad++, in this case) to find all the lines in the cluster log that contain the `[hadrag] Resource Alive result 0` string:
 
-   :::image type="content" source="media/troubleshooting-availability-group-failover/locate-health-events-in-notepad-small.png" alt-text="Screenshot that shows tool to locate all the health events in the cluster log." lightbox="media/troubleshooting-availability-group-failover/locate-health-events-in-notepad-big.png":::
+:::image type="content" source="media/troubleshooting-availability-group-failover/locate-health-events-in-notepad-small.png" alt-text="Screenshot that shows a tool to locate all the health events in the cluster log." lightbox="media/troubleshooting-availability-group-failover/locate-health-events-in-notepad-big.png":::
 
-## Determine the kind of health issue that triggered the failover
+## Identify and resolve the health issue that triggered the failover
 
-To determine the kind of health issues that you find in the cluster log of the primary replica, compare them to the issues that are described in the next few sections.
+To identify the health issues in the cluster log of the primary replica, compare them to the issues described in the following sections. Common reasons for AG failover include:
 
-### Cluster health event
+- Cluster health event
+- SQL Server service is down (an Always On health event)
+- Lease time-out (an Always On health event)
+- Health check time-out (an Always On health event)
+- SQL Server health (an Always On health event)
+
+### Cluster health events
 
 Microsoft Windows Cluster monitors the health of the member servers in the cluster. If a health problem is detected, a cluster member server might be removed from the cluster. Also, the cluster resources (including the availability group role that's hosted on the removed cluster member server) will be moved to the availability group failover partner replica if it's configured for automatic failover.
 
-#### Symptoms of Cluster health events
+#### <a name="symptoms-of-cluster-health-events"></a>Symptoms
+
 
 Here's an example of a cluster health event in the cluster log. To find it, you can search for `Lost quorum` or `Cluster service has terminated` because either might be present during the availability group role change or failover.
 
@@ -138,7 +146,7 @@ The errors in the Windows event log (Events 1135 and 1177) suggest that network 
 
 You can search the cluster log for evidence of a connection failure to the node. From the location in the cluster log where you found `Lost quorum`, search backwards for strings such as `Failed to connect to remote endpoint`, `unreachable`, and `is broken`.  
 
-#### Resolve a cluster health event
+#### <a name="resolve-a-cluster-health-event"></a>Resolution
 
 Make sure that cluster health monitoring is appropriate for the host environment. For more information about SQL Server Always On availability groups that are hosted in Microsoft Azure, see [Windows Server Failover Cluster overview - SQL Server on Azure VMs](/azure/azure-sql/virtual-machines/windows/hadr-windows-server-failover-cluster-overview?view=azuresql&preserve-view=true).
 
@@ -148,7 +156,7 @@ If it's necessary, consider contacting Microsoft Windows High Availability suppo
 
 Always On health monitoring can detect whether the SQL Server service that hosts the availability group primary replica is no longer running.
 
-#### Symptoms of SQL Server service shutdown
+#### <a name="symptoms-of-sql-server-service-shutdown"></a>Symptoms
 
 Here's a sample of the cluster log report for the availability group role 'ag' that indicates a failure because `QueryServiceStatusEx` returned a process ID `0`:
 
@@ -159,31 +167,41 @@ Here's a sample of the cluster log report for the availability group role 'ag' t
 00001898.0000185c::2023/02/27-13:27:41.121 WARN [RHS] Resource ag IsAlive has indicated failure.
 ```
 
-#### Diagnose and resolve SQL Service shutdown events
+#### Diagnose SQL Service shutdown events
 
 Check the Windows system event log and SQL Server error log for an unexpected SQL Server shutdown.
 
 If SQL Server was shut down by a system shutdown or an administrative shutdown, you would see the following entry in the SQL Server error log:
 
-> 2023-03-10 09:38:46.73 spid9s SQL Server is terminating in response to a 'stop' request from Service Control Manager. This is an informational message only. No user action is required.
+```output
+2023-03-10 09:38:46.73 spid9s SQL Server is terminating in response to a 'stop' request from Service Control Manager. This is an informational message only. No user action is required.
+```
 
 The Windows system event log would show the following error entry:
 
-> Information 3/10/2023 9:41:06 AM Service Control Manager 7036 None The SQL Server (MSSQLSERVER) service entered the stopped state.
+```output
+Information 3/10/2023 9:41:06 AM Service Control Manager 7036 None The SQL Server (MSSQLSERVER) service entered the stopped state.
+```
 
 The Windows system event log shows the following error entry if SQL Server shuts down unexpectedly:
 
-> Error 3/10/2023 8:37:46 AM Service Control Manager 7034 None The SQL Server (MSSQLSERVER) service terminated unexpectedly. It has done this 1 time(s).
+```output
+Error 3/10/2023 8:37:46 AM Service Control Manager 7034 None The SQL Server (MSSQLSERVER) service terminated unexpectedly. It has done this 1 time(s).
+```
 
 Check the end of the SQL Server error log for clues. If the error log ends abruptly, this means that it was shut down by force. For instance, if SQL Server was terminated by using Task Manager, the SQL Server error report wouldn't reveal any information about any internal problems that might have caused the process to shut down.
 
-If a SQL Server internal health issue caused SQL Server to terminate unexpectedly, there might be clues of a possible fatal exception (including a dump file diagnostic being generated) at the end of the SQL error log. Review the clues and take the necessary action. If you find a dump file, consider opening contacting Microsoft SQL Server support, and provide the SQL Server error log and dump file content for further investigation.
+#### <a name="resolution-of-sql-server-service-shutdown"></a>Resolution
+
+Ensure that authorized database and system administrators have access to the system to minimize unexpected terminations of the SQL Server service. After you examine the event logs, investigate why a service had to be terminated unexpectedly. 
+
+If a SQL Server internal health issue caused SQL Server to terminate unexpectedly, there might be clues of a possible fatal exception (including a memory dump diagnostic file being generated) at the end of the SQL error log. Review the clues and take the necessary action. If you find a dump file, consider contacting Microsoft SQL Server support, and provide the SQL Server error log and dump file content for further investigation.
 
 ### Lease time-out: An Always On health event
 
 Always On uses a "lease" mechanism to monitor the health of the computer on which SQL Server is installed. The default lease time-out is 20 seconds.
 
-#### Symptoms of Always On lease time-out events
+#### <a name="symptoms-of-always-on-lease-time-out-events"></a>Symptoms
 
 Here's a sample output of an Always On lease time-out from the cluster log. You can search these strings to locate a lease time-out in the cluster log.
 
@@ -201,13 +219,21 @@ For more information about lease time-out, see the [Lease Mechanism](/sql/databa
 
 There are two main issues that can trigger a lease time-out:
 
-- SQL Server dump file diagnostic: When SQL Server detects certain internal health events, such as an access violation, an assertion, or scheduler deadlock, it generates a diagnostic dump file (*.mdmp*) in the SQL Server *\LOG* folder.
+- SQL Server memory dump: When SQL Server detects certain internal health events, such as an access violation, an assertion, or scheduler deadlock, it generates a diagnostic dump file (*.mdmp*) in the SQL Server *\LOG* folder. The process of generating a memory dump suspends SQL Server execution for a brief period. In that period the lease mechanism can detect lack of service response and trigger action. For more information, see [Impact of dump generation](../../tools/use-sqldumper-generate-dump-file.md#impact-of-dump-generation). 
 
-- A system wide performance issue: A lease time-out doesn't necessarily indicate a SQL Server health issue. Instead, it could indicate a system-wide health issue that also affects the health of the SQL Server-based server. For more detailed troubleshooting steps, see [MSSQLSERVER_19407](/sql/relational-databases/errors-events/mssqlserver-19407-database-engine-error).
+- A system wide performance issue: A lease time-out doesn't necessarily indicate a SQL Server health issue. Instead, it could indicate a system-wide health issue that also affects the health of the SQL Server-based server.
+  - High CPU usage on the system (close to 100%).
+  - Out-of-memory conditions - low virtual memory and/or one of the processes is being paged out.
+  - WSFC going offline due to quorum loss
+  - VM throttling affecting performance and causing lease expiration.
+
+#### <a name="resolution-of-always-on-lease-time-out-events"></a>Resolution
+
+For detailed troubleshooting steps, see [MSSQLSERVER_19407](/sql/relational-databases/errors-events/mssqlserver-19407-database-engine-error). Here are the two most common issues:
 
 **1. SQL Server dump file diagnostic**
 
-SQL Server might detect an internal health issue such as an access violation, assertion, or deadlocked schedulers. In this situation, the program generates a mini dump file (*.mdmp*) in the SQL Server *\LOG* folder of the SQL Server process for diagnosis. The SQL Server process is frozen for several seconds while the mini dump file is written to disk. During this time, all threads within the SQL Server process are in a frozen state. This includes the lease thread that's monitored by Always On health monitoring. Therefore, Always On might detect a lease time-out.
+SQL Server might detect an internal health issue such as an access violation, assertion, or deadlocked schedulers. In this situation, the program generates a mini dump file (*.mdmp*) in the SQL Server *\LOG* folder of the SQL Server process for diagnosis. The SQL Server process is frozen for several seconds while the mini dump file is written to disk. During this time, all threads within the SQL Server process are in a frozen state, which includes the lease thread that's monitored by Always On health monitoring. Therefore, Always On might detect a lease time-out.
 
 ```output
 **Dump thread - spid = 0, EC = 0x0000000000000000
@@ -228,7 +254,7 @@ The lease between availability group 'ag' and the Windows Server Failover Cluste
 
 ```
 
-To resolve this issue, the dump file diagnostic must be investigated for the root cause. Consider contacting Microsoft SQL Server support to provide the SQL Server error log and dump file content for further investigation.
+To resolve this issue, the memory dump file diagnostic must be examined for the root cause. Consider contacting Microsoft SQL Server support to provide the SQL Server error log and dump file content for further investigation.
 
 **2. High CPU usage or other system performance issue**
 
@@ -259,6 +285,10 @@ You should also capture counters that report the same system resource usage, inc
    - `MSSQLServer:SQL Statistics::Batch Requests/sec`
 
 ### Health check time-out: An Always On health event
+
+Always On uses a health check mechanism to monitor the health of SQL Server and the ability for client applications to connect.
+
+#### <a name="symptoms-of-health-check-time-out"></a>Symptoms
 
 When an availability group replica transitions into the primary role, Always On health monitoring establishes a local ODBC connection to the SQL Server instance. While Always On is connected and monitoring, if SQL Server doesn't respond over the ODBC connection within the period that's set for the availability group's health check time-out (default is 30 seconds), then a health check time-out event is triggered. In this situation, the availability group transitions from the primary role to the Resolving role and initiates failover, if it's configured to do this.
 
@@ -351,9 +381,9 @@ Review the system event log for possible system clues that could be related to t
 
 ### SQL Server health: An Always On health event
 
-Always On monitors different kinds of SQL Server health events. While it hosts an availability group primary replica, SQL Server continuously runs `sp_server_diagnostics` that reports on SQL Server health by using different components. When any health problems are detected, `sp_server_diagnostics` reports an error for that particular component, and then sends the results back to the Always On health detection process. When an error is reported, the Availability Group role shows the failed state and possible failover if the availability group is configured to do this.
+Always On monitors different kinds of SQL Server health events. While it hosts an availability group primary replica, SQL Server continuously runs [sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) that reports on SQL Server health by using different components. When any health problems are detected, `sp_server_diagnostics` reports an error for that particular component, and then sends the results back to the Always On health detection process. When an error is reported, the Availability Group role shows the failed state and possible failover if the availability group is configured to do this.
 
-#### Symptoms of Always On SQL Server health events
+#### <a name="symptoms-of-always-on-sql-server-health-events"></a>Symptoms
 
 Here's an example of a SQL Server health issue as reported by `sp_server_diagnostics` in the cluster log. SQL Server reports an "error" state in the system component to Always On health monitoring, and the "contoso-ag" availability group is transitioned to a failed state.
 
@@ -370,7 +400,7 @@ WARN [RHS] Resource contoso-ag IsAlive has indicated failure.
 INFO [RCM] HandleMonitorReply: FAILURENOTIFICATION for 'contoso-ag', gen(0) result 1/0.
 ```
 
-#### Diagnose and resolve SQL Server health events
+#### Diagnose SQL Server health events
 
 The kind of health issue that's reported by SQL Server health should dictate the direction of the root cause analysis.
 
@@ -402,4 +432,16 @@ To identify the Always On specific health issue, follow these steps:
 
    Notice that the 'totalDumprequests=186' data indicates there have been too many dump file diagnostic events generated on this SQL Server. This is the reason that the system component reported an error state. When Always On health monitoring receives this error state, it triggers an availability group health event. You can also verify that no write access violations or orphan spinlocks have been detected from the data provided in the system component data.
 
-   If it's necessary, contact SQL Server support to open a support incident for further assistance in finding the root cause for these internal SQL Server health problems.
+#### <a name="resolution-of-always-on-sql-server-health-events"></a>Resolution
+
+Depending on the type of problem you discover, you must address it accordingly. As the [Configure a flexible automatic failover policy for an availability group - SQL Server Always On](/sql/database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy) article discusses, there could be various issues that lead to this. Examples include:
+
+- The SQL Server service is down.
+- Lease timeout.
+- The availability replica is in failed state.
+- Memory dumps generated by orphaned spinlocks, access violations, or too many memory dumps generated in a short period of time.
+- Persistent out-of-memory condition in the SQL Server internal resource pool.
+- Detection of Scheduler deadlock.
+- Detection of an unsolvable deadlock.
+
+If it's necessary, contact SQL Server support to open a support incident for further assistance in finding the root cause for these internal SQL Server health problems

@@ -1,17 +1,14 @@
 ---
 title: Events 407 and 408 are reported in the DNS server event log
 description: Provides a solution to an issue where you are unable to query a Windows 2000-based DNS server.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:dns, csstroubleshoot
-ms.technology: networking
+ms.custom:
+- sap:network connectivity and file sharing\dns
+- pcy:WinComm Networking
 ---
 # Events 407 and 408 are reported in the DNS server event log
 

@@ -2,7 +2,7 @@
 title: Backup operation in the backupset history table
 description: This article describes a "by design" behavior that occurs when you use VSS to back up files on a volume.
 ms.date: 09/25/2020
-ms.custom: sap:Administration and Management
+ms.custom: sap:Database Backup and Restore
 ms.reviewer: kfarlee
 ---
 # SQL Server records a backup operation in the backupset history table when you use VSS to back up files on a volume

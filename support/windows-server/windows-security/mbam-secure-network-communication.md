@@ -1,23 +1,19 @@
 ---
 title: MBAM and Secure Network Communication
 description: Discusses how to configure Microsoft's BitLocker Administration and Monitoring (MBAM) with Secure Network Communication.
-ms.date: 11/15/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: manojse, nacan, kaushika
-ms.custom: sap:bitlocker, csstroubleshoot
-ms.technology: windows-server-security
+ms.custom:
+- sap:windows security technologies\bitlocker
+- pcy:WinComm Devices Deploy
 ---
 # MBAM and Secure Network Communication
 
 This article discusses how to configure Microsoft's BitLocker Administration and Monitoring (MBAM) with Secure Network Communication.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 – all editions  
 _Original KB number:_ &nbsp; 2754259
 
 ## Summary

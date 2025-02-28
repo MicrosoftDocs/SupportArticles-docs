@@ -2,7 +2,7 @@
 title: Assembly cannot be migrated to SQL Server 2017 error
 description: This article describes the Assembly cannot be migrated to SQL Server 2017 error in compatibility check for Configuration Manager database.
 ms.date: 09/21/2022
-ms.custom: sap:Administration and Management
+ms.custom: sap:Database or Client application Development
 ---
 
 # "Assembly cannot be migrated to SQL Server 2017" error in compatibility check for Configuration Manager database

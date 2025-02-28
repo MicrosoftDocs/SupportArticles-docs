@@ -1,23 +1,19 @@
 ---
 title: Suggested hotfixes for WMI issues
 description: Provides suggested hotfixes for Windows Management Intrumentation (WMI) related issue on Windows platforms.
-ms.date: 05/16/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:windows-management-instrumentation-wmi, csstroubleshoot
-ms.technology: windows-server-administration-management-development
+ms.custom:
+- sap:system management components\wmi management and troubleshooting
+- pcy:WinComm User Experience
 ---
 # Suggested hotfixes for WMI related issue on Windows platforms
 
 This article provides suggested hotfixes for Windows Management Instrumentation (WMI) related issue on Windows platforms.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2591403
 
 ## Symptoms

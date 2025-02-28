@@ -1,23 +1,19 @@
 ---
 title: Stop error "DRIVER_IRQL_NOT_LESS_OR_EQUAL"
 description: Helps to fix the error "DRIVER_IRQL_NOT_LESS_OR_EQUAL" or "USER_MODE_HEALTH_MONITOR"
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
-ms.technology: windows-server-performance
+ms.custom:
+- sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot)
+- pcy:WinComm Performance
 ---
 # Stop error message: "DRIVER_IRQL_NOT_LESS_OR_EQUAL" or "USER_MODE_HEALTH_MONITOR"
 
 This article helps to fix the error "DRIVER_IRQL_NOT_LESS_OR_EQUAL" or "USER_MODE_HEALTH_MONITOR".
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2863960
 
 ## Symptoms

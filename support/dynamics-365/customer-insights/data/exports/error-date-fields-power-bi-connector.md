@@ -5,6 +5,7 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 ms.date: 09/25/2023
+ms.custom: sap:Export destinations or Outbound connectors\Microsoft connectors
 ---
 # Errors on date fields when loading entities in Power BI Desktop
 

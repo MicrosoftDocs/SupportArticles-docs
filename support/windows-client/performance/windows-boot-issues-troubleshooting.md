@@ -1,18 +1,15 @@
 ---
 title: Windows boot issues troubleshooting
 description: Learn to troubleshoot when Windows can't boot. This article includes advanced troubleshooting techniques intended for use by support agents and IT professionals.
-ms.date: 02/08/2023
-ms.prod: windows-client
-ms.technology: windows-client-performance
-author: aczechowski
-ms.author: aaroncz
+ms.date: 01/15/2025
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.collection: highpri
-ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
-ms.reviewer: dougeby
+ms.custom:
+- sap:system performance\startup or pre-logon reliability (crash,errors,bug check or blue screen)
+- pcy:WinComm Performance
+ms.reviewer: dougeby,aaroncz
 audience: itpro
-localization_priority: medium
 ---
 # Advanced troubleshooting for Windows boot problems
 

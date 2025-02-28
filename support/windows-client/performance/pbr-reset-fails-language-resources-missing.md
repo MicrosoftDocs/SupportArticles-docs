@@ -1,17 +1,14 @@
 ---
 title: Push-button reset fails because language resources are missing
 description: Fixes an issue in which Push-button reset fails because language resources are missing.
-ms.date: 09/21/2020
-author: Deland-Han
-ms.author: alexmuk
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 ms.reviewer: kaushika
-ms.custom: sap:servicing, csstroubleshoot
-ms.technology: windows-client-performance
-localization_priority: medium
+ms.custom:
+- sap:windows desktop and shell experience\language packs,multilingual user interface (mui) and input (ime)
+- pcy:WinComm User Experience
 ---
 
 # Push-button reset fails because language resources are missing

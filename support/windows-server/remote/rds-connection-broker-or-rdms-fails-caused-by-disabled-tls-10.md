@@ -1,23 +1,19 @@
 ---
 title: Remote Desktop service (RDS) Connection Broker or Remote Desktop Management service (RDMS) fails
 description: Addresses an issue in which RDS Connection Broker or RDMS fails after you disable Transport Layer Security (TLS) 1.0 in Windows Server.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, jerrycif
-ms.custom: sap:certificate-management, csstroubleshoot
-ms.technology: windows-server-rds
+ms.custom:
+- sap:remote desktop services and terminal services\certificate management
+- pcy:WinComm User Experience
 ---
 # RDS Connection Broker or RDMS fails after you disable TLS 1.0 in Windows Server
 
 This article provides methods to make sure Remote Desktop service (RDS) Connection Broker and Remote Desktop Management service (RDMS) can work as expected.
 
-_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4036954
 
 ## Symptoms

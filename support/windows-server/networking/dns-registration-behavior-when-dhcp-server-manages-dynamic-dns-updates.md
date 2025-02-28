@@ -1,15 +1,14 @@
 ---
 title: Unexpected DNS record registration behavior when the DHCP server manages dynamic DNS updates
 description: Describes a change in Windows 8.1 and later versions that might cause unexpected behavior if the DHCP server configuration is "Always dynamically update DNS records."
-ms.date: 02/14/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
-ms.custom: sap:dns, csstroubleshoot
-ms.technology: networking
+ms.custom:
+- sap:network connectivity and file sharing\dns
+- pcy:WinComm Networking
 keywords: DNS dynamic updates, DHCP option 81, client FQDN option, DHCP client
 ---
 

@@ -1,4 +1,6 @@
 items:
+- name: Can't reach this page in SSMS 19.1
+  href: cant-reach-this-page.md
 - name: Cannot toggle results pane
   href: cannot-toggle-results-pane.md
 - name: Error when you try to read error log

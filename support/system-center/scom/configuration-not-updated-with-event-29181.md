@@ -1,7 +1,7 @@
 ---
 title: Configuration isn't updated and event 29181
 description: Fixes an issue that repeatedly triggers event ID 29181 on a System Center Operations Manager server.
-ms.date: 06/23/2020
+ms.date: 04/15/2024
 ---
 # Configuration isn't updated and event ID 29181 is logged in System Center Operations Manager
 

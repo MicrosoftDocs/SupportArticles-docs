@@ -1,9 +1,10 @@
 ---
 title: Restart the upgrade of a company database
 description: Describes the steps to restart the upgrade of a company database that was restored from a backup.
-ms.reviewer: kyouells
+ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # How to restart the upgrade of a company database in Microsoft Dynamics GP
 
@@ -12,173 +13,7 @@ This article describes how to restart the upgrade of a company database to Micro
 _Applies to:_ &nbsp; Microsoft Dynamics GP  
 _Original KB number:_ &nbsp; 920900
 
-## Introduction
-
-> [!NOTE]
-> The method that this article describes does not apply when you upgrade to Microsoft Business Solutions - Great Plains 8.0 or to Microsoft Business Solutions - Great Plains 7.5.
-
-## More information
-
-> [!NOTE]
-> Before you upgrade a company database that was restored from a backup, we recommend that you create a backup of the DYNAMICS database.
-
-### Upgrade from Microsoft Business Solutions - Great Plains 8.0 or from Microsoft Business Solutions - Great Plains 7.5 to Microsoft Dynamics GP 9.0
-
-To restart the upgrade of a company database from Microsoft Business Solutions - Great Plains 8.0 or from Microsoft Business Solutions - Great Plains 7.5 to Microsoft Dynamics GP, follow these steps:
-
-1. Restore a backup of the company database that was made before the upgrade was done.
-2. Run the following script in Microsoft SQL Query Analyzer, in SQL Server Management Studio, or in the Support Administrator Console:
-
-    ```sql
-    use DYNAMICS
-    declare
-    @companyDBName as char(5),
-    @companyName as char(65),
-    @version as numeric(3,2),
-    @verMajor as int,
-    @verMinor as int,
-    @verOldMajor as int,
-    @verOldMinor as int,
-    @companyID as smallint 
-    set nocount on 
-    set @companyDBName = '<Company_Database_Name>' 
-    set @version = <insert earlier version here> 
-    
-    if (@version = 8.0 or @version = 8)
-    begin
-               set @verMajor = 8 
-               set @verMinor = 0 
-               set @verOldMajor = 7 
-               set @verOldMinor = 50
-    end
-    if (@version = 7.5)
-    begin
-               set @verMajor = 7
-               set @verMinor = 50
-               set @verOldMajor = 7
-               set @verOldMinor = 50
-    end
-    
-    set @companyID = (select CMPANYID from SY01500 where INTERID = @companyDBName)
-    
-    delete DB_Upgrade where PRODID <>0 and db_name = @companyDBName
-    
-    delete DU000020 where PRODID <>0 and companyID = @companyID
-    
-    update DB_Upgrade set db_verMajor = @verMajor, db_verMinor = @verMinor,
-    db_verOldMajor = @verOldMajor, db_verOldMinor = @verOldMinor, db_verBuild=0, db_verOldBuild=0, db_status = 0
-    where PRODID = 0 and db_name = @companyDBName
-    
-    set @companyName = (select CMPNYNAM from SY01500 where INTERID = @companyDBName)
-    
-    update DU000020 set versionMajor = @verMajor, versionMinor = @verMinor, versionBuild = 0 where companyID = @companyID and PRODID = 0
-    
-    delete DU000030 where companyID = @companyID
-    
-    delete duLCK
-    
-    set nocount off
-    ```
-
-    > [!NOTE]
-    > In this script, replace the following placeholders with the correct information, and then run the script:
-    >
-    > - Replace the *\<Company_Database_Name>* placeholder with the name of the company database. For example, if a company that is named Adventureworks has a database that is named TWO, type **TWO**.
-    > - Replace the *\<insert earlier version here>* placeholder with the version number to which you want to revert. If you are upgrading from Microsoft Business Solutions - Great Plains 8.0, type **8.0**. If you're upgrading from Microsoft Business Solutions - Great Plains 7.5, type **7.5**.
-
-3. Rename the current Dexsql.log file, and then start Microsoft Dynamics GP Utilities to restart the upgrade. If the update is still unsuccessful, contact Technical Support for Microsoft Dynamics at 888-477-7877.
-
-    > [!NOTE]
-    > If you contact Technical Support for Microsoft Dynamics, or if you visit the Technical Support for Microsoft Dynamics Web site, provide the Dexsql.log file for the update. Additionally, provide the results from the following script:
-
-    ```sql
-    SELECT b.fileOSName, a.fileNumber, a.PRODID, a.Status, a.errornum, a.errordes, c.CMPANYID, c.INTERID
-          FROM DYNAMICS.dbo.DU000030 a
-          JOIN
-          DYNAMICS.dbo.DU000010 b
-          ON a.fileNumber = b.fileNumber
-          AND a.PRODID = b.PRODID
-          JOIN
-          DYNAMICS.dbo.SY01500 c
-          ON a.companyID = c.CMPANYID
-          WHERE (a.Status <> 0 or a.errornum <> 0) and a.Status <>15
-    ```
-
-### Update from Microsoft Business Solutions - Great Plains 8.0 to Microsoft Dynamics GP 10.0
-
-To restart the upgrade of a company database from Microsoft Business Solutions - Great Plains 8.0 to Microsoft Dynamics GP 10.0, follow these steps:
-
-1. Restore a backup of the company database that was made before the upgrade was done.
-2. Run the following script in Microsoft SQL Query Analyzer, in SQL Server Management Studio, or in the Support Administrator Console:
-
-    ```sql
-    use DYNAMICS
-    declare
-    @companyDBName as char(5),
-    @version as numeric(3,2),
-    @verMajor as int,
-    @verMinor as int,
-    @verOldMajor as int,
-    @verOldMinor as int,
-    @verBuild as int,
-    @companyID as smallint 
-    set nocount on 
-    set @companyDBName = '<Company_Database_Name>' 
-    set @version = 8 
-    set @verBuild = 0
-    
-    if (@version = 8.0 or @version = 8)
-    begin
-               set @verMajor = 8 
-               set @verMinor = 0 
-               set @verBuild = 0
-               set @verOldMajor = 8 
-               set @verOldMinor = 0
-     
-    end
-    set @companyID = (select CMPANYID from SY01500 where INTERID = @companyDBName)
-    
-    delete DB_Upgrade where PRODID <>0 and db_name = @companyDBName
-    
-    
-    delete DU000020 where PRODID <>0 and companyID = @companyID
-    
-    update DB_Upgrade set db_verMajor = @verMajor, db_verMinor = @verMinor, db_verOldMajor = @verOldMajor, db_verOldMinor = @verOldMinor, db_verBuild=@verBuild, db_verOldBuild=@verBuild, db_status = 0
-    where PRODID = 0 and db_name = @companyDBName
-    
-    update DU000020 set versionMajor = @verMajor, versionMinor = @verMinor, versionBuild = @verBuild  where companyID = @companyID and PRODID = 0
-    
-    delete DU000030 where companyID = @companyID
-    
-    delete duLCK
-    
-    set nocount off
-    ```
-
-    > [!NOTE]
-    > In this script, replace the *\<Company_Database_Name>* placeholder with the name of the company database. For example, if a company that is named Adventureworks has a database that is named TWO, type **TWO**.
-
-3. Rename the current Dexsql.log file, and then start Microsoft Dynamics GP Utilities to restart the upgrade.
-
-If the update is still unsuccessful, contact Technical Support for Microsoft Dynamics at 888-477-7877.
-
-> [!NOTE]
-> If you contact Technical Support for Microsoft Dynamics, or if you visit the Technical Support for Microsoft Dynamics Web site, provide the Dexsql.log file for the update. Additionally, provide the results from the following script:
-
-```sql
-SELECT b.fileOSName, a.fileNumber, a.PRODID, a.Status, a.errornum, a.errordes, c.CMPANYID, c.INTERID
-      FROM DYNAMICS.dbo.DU000030 a
-      JOIN
-      DYNAMICS.dbo.DU000010 b
-      ON a.fileNumber = b.fileNumber
-      AND a.PRODID = b.PRODID
-      JOIN
-      DYNAMICS.dbo.SY01500 c
-      ON a.companyID = c.CMPANYID
-      WHERE (a.Status <> 0 or a.errornum <> 0) and a.Status <>15
-```
-
-### Update from Microsoft Dynamics GP 9.0, Microsoft Dynamics GP 10.0, or Microsoft Dynamics GP 2010 to Microsoft Dynamics GP 10.0, Microsoft Dynamics GP 2010 or Microsoft Dynamics GP 2013
+## Update from Microsoft Dynamics GP 9.0, Microsoft Dynamics GP 10.0, or Microsoft Dynamics GP 2010 to Microsoft Dynamics GP 10.0, Microsoft Dynamics GP 2010 or Microsoft Dynamics GP 2013
 
 To restart the upgrade of a company database from Microsoft Dynamics GP 9.0 to Microsoft Dynamics GP 10.0, follow these steps:
 
@@ -215,8 +50,10 @@ To restart the upgrade of a company database from Microsoft Dynamics GP 9.0 to M
 
       1. Select **Start**, and then select **Programs**.
       2. Point to **Microsoft SQL Server 2005** or **Microsoft SQL Server 2008**, and then select **SQL Server Management Studio**.
+
           > [!NOTE]
-          >The Connect to Server window opens.
+          > The Connect to Server window opens.
+
       3. In the **Server name** box, type the name of the instance of SQL Server.
       4. In the **Authentication** list, select **SQL Authentication**.
       5. In the **User name** box, type **sa**.
@@ -263,7 +100,7 @@ To restart the upgrade of a company database from Microsoft Dynamics GP 9.0 to M
 If the update is still unsuccessful, contact Technical Support for Microsoft Dynamics at 888-477-7877.
 
 > [!NOTE]
-> If you contact Technical Support for Microsoft Dynamics, or if you visit the Technical Support for Microsoft Dynamics Web site, provide the Dexsql.log file for the update. Additionally, provide the results from the following script:
+> If you contact Technical Support for Microsoft Dynamics, or if you visit the Technical Support for Microsoft Dynamics Web site, provide the Dexsql.log file for the update. Additionally, provide the results from the following script.
 
 ```sql
 SELECT b.fileOSName, a.fileNumber, a.PRODID, a.Status, a.errornum, a.errordes, c.CMPANYID, c.INTERID
@@ -280,4 +117,4 @@ SELECT b.fileOSName, a.fileNumber, a.PRODID, a.Status, a.errornum, a.errordes, c
 
 ## References
 
-For more information, see [How to create a Dexsql.log file to troubleshoot error messages in Microsoft Dynamics GP](https://support.microsoft.com/help/850996).
+For more information, see [How to create a Dexsql.log file to troubleshoot error messages in Microsoft Dynamics GP](create-a-dexsql-dot-log-file-troubleshoot.md).

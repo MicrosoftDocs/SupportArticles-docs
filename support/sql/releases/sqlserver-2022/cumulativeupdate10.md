@@ -1,8 +1,8 @@
 ---
 title: Cumulative update 10 for SQL Server 2022 (KB5031778)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 10 (KB5031778).
-ms.date: 11/16/2023
-ms.custom: KB5031778
+ms.date: 01/29/2024
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5031778
 ms.reviewer: v-qianli2
 appliesto:
 - SQL Server 2022 on Windows
@@ -23,7 +23,11 @@ This article describes Cumulative Update package 10 (CU10) for Microsoft SQL Ser
 
 ## Known issues in this update
 
-There are no known issues in this cumulative update.
+### Read-scale availability group not displayed in dm_hadr_database_replica_cluster_states
+
+SQL Server 2022 CU10 introduced [fix 2714261](#2714261), which causes an issue with `sys.dm_hadr_database_replica_cluster_states` for read-scale availability groups that results in the **Availability Databases** folder in SQL Server Management Studio (SSMS) not showing the databases in the availability group (AG). To mitigate this issue, roll back the patch to CU9.
+
+Microsoft is working on a fix for this issue and it will be available in a future CU.
 
 ## Improvements and fixes included in this update
 
@@ -42,7 +46,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=2645943>[2645943](#2645943) </a> | Fixes an issue in which running `sys.dm_db_xtp_transactions` might fail with the following error if a large number of transactions are in the In-Memory OLTP database engine: </br></br>Msg 701, Level 17, State 157, Line \<LineNumber> </br>There is insufficient system memory in resource pool 'default' to run this query. | SQL Server Engine | In-Memory OLTP| All|
 | <a id=2712771>[2712771](#2712771) </a> | Fixes an issue in which the exported delimited text file always uses a comma (',') as the field terminator when you use `CREATE EXTERNAL TABLE AS SELECT (CETAS)` to export data to a delimited text file, even if the `FIELD_TERMINATOR` character is specified in `CREATE EXTERNAL FILE FORMAT`. | SQL Server Engine | PolyBase| All|
 | <a id=2698036>[2698036](#2698036) </a> | The Log Reader Agent creates a dynamic linked server for the listener to verify the metadata when you configure a transactional publication on an Always On availability group (AG). This dynamic linked server is temporary and dropped after the verification. When the AG is deployed with replicas in different subnets, this dynamic linked server connection might time out as it tries to connect serially. After applying the fix, if the Log Reader Agent is configured to use the [MultiSubnetFailover](/sql/relational-databases/replication/agents/replication-log-reader-agent) parameter as `1`, the dynamic linked server is also created with the `MultiSubnetFailover` parameter as `1`, which allows connection to occur in parallel.| SQL Server Engine | Replication | Windows|
-| <a id=2695485>[2695485](#2695485) </a> | Fixes the following error that you encounter on the target instance when configuring a Service Broker communication with transport security and the certificate serial number length is greater than 16 bytes: </br></br>The certificate serial number size is 19. However, it must be no greater than 16 bytes in length. This occurred in the message with Conversation ID, Initiator: 1, and Message sequence number: 0.| SQL Server Engine | SQL Server Engine| All|
+| <a id=2695485>[2695485](#2695485) </a> | Fixes the following error that you encounter on the target instance when configuring a Service Broker communication with transport security and the certificate serial number length is greater than 16 bytes: </br></br>The certificate serial number size is 19, however it must be no greater than 16 bytes in length. This occurred in the message with Conversation ID, Initiator: 1, and Message sequence number: 0.| SQL Server Engine | SQL Server Engine| All|
 | <a id=2606378>[2606378](#2606378) </a> | Updates the errors 1101 and 1105 to explicitly reflect the fact that even `UNLIMITED` database files are limited to 16 TB. </br></br>Error message: </br></br>1101: Could not allocate a new page for database '\<DatabaseName>' because the '\<FilegroupName>' filegroup is full due to lack of storage space or database files reaching the maximum allowed size. Note that UNLIMITED files are still limited to 16TB. Create the necessary space by dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup. </br></br>1105: Could not allocate space for object '\<ObjectName>' in database '\<DatabaseName>' because the '\<FilegroupName>' filegroup is full due to lack of storage space or database files reaching the maximum allowed size. Note that UNLIMITED files are still limited to 16TB. Create the necessary space by dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup. | SQL Server Engine | Storage Management| All|
 | <a id=2726328>[2726328](#2726328) </a> | Fixes an assertion failure (Location: "cxrowset.cpp":2006; Expression: cstePrefix >= 1) that you encounter when updating statistics fails with the following error: </br></br>Msg 3624, Level 20, State 1, Line \<LineNumber> </br>A system assertion check has failed. Check the SQL Server error log for details. Typically, an assertion failure is caused by a software bug or data corruption. To check for database corruption, consider running DBCC CHECKDB. If you agreed to send dumps to Microsoft during setup, a mini dump will be sent to Microsoft. An update might be available from Microsoft in the latest Service Pack or in a Hotfix from Technical Support.| SQL Server Engine | Table Index Partition | All|
 
@@ -53,7 +57,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 
 The following update is available from the Microsoft Download Center:
 
-:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2022 now](https://www.microsoft.com/download/details.aspx?familyid=4fa9aa71-05f4-40ef-bc55-606ac00479b1)
+:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2022 now](https://www.microsoft.com/download/details.aspx?id=105013)
 
 > [!NOTE]
 >

@@ -1,7 +1,8 @@
 ---
 title: Reserved characters cause the VMM console to crash
 description: Fixes an issue in which System Center 2012 Virtual Machine Manager console crashes when you add a library that contains reserved characters.
-ms.date: 04/26/2020
+ms.date: 04/09/2024
+ms.reviewer: wenca
 ---
 # Adding a library that contains reserved characters to SCVMM 2012 causes the console to crash
 

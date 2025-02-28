@@ -1,15 +1,14 @@
 ---
 title: DNS server geo-location policy doesn't work as expected
 description: Describes an issue where DNS resolution policy doesn't produce the results that might be expected.
-ms.date: 02/08/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
-ms.custom: sap:dns, csstroubleshoot
-ms.technology: networking
+ms.custom:
+- sap:network connectivity and file sharing\dns
+- pcy:WinComm Networking
 keywords: resolution policy, default zone scope, zone scope, geo-location, DNS zone policy
 ---
 

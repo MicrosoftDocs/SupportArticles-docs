@@ -1,8 +1,8 @@
 ---
 title: Use ASP.NET forms-based authentication
 description: This article demonstrates how to implement forms-based authentication in ASP.NET applications by using a database to store the users.
-ms.date: 03/27/2020
-ms.custom: sap:Development
+ms.date: 07/25/2024
+ms.custom: sap:General Development
 ms.reviewer: ARTHURYA
 ms.topic: how-to
 ---
@@ -88,8 +88,8 @@ This section shows how to create a sample database to store the user name, passw
 ## Create a Logon.aspx page
 
 1. Add a new Web Form to the project named *Logon.aspx*.
-2. Open the Logon.aspx page in the editor, and switch to HTML view.
-3. Copy the following code, and use the **Paste as HTML** option on the **Edit** menu to insert the code between the `<form>` tags:
+1. Open the Logon.aspx page in the editor, and switch to HTML view.
+1. Copy the following code, and use the **Paste as HTML** option on the **Edit** menu to insert the code between the `<form>` tags:
 
     ```html
     <h3>
@@ -122,7 +122,10 @@ This section shows how to create a sample database to store the user name, passw
     ```
 
     This Web Form is used to present a logon form to users so that they can provide their user name and password to log on to the application.
-4. Switch to Design view, and save the page.
+
+   For more information, see [RequiredFieldValidator Class](/dotnet/api/system.web.ui.webcontrols.requiredfieldvalidator).
+
+1. Switch to Design view, and save the page.
 
 ## Code the event handler so that it validates the user credentials
 

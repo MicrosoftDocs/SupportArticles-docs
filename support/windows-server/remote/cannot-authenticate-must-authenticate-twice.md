@@ -1,17 +1,14 @@
 ---
 title: User can't authenticate or must authenticate twice
 description: Troubleshoot an issue in which user can't authenticate or must authenticate twice when starting a remote desktop connection.
-ms.date: 10/16/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, rklemen, v-lianna
-ms.custom: sap:remote-desktop-sessions, csstroubleshoot
-ms.technology: windows-server-rds
+ms.custom:
+- sap:remote desktop services and terminal services\session connectivity
+- pcy:WinComm User Experience
 ---
 # User can't authenticate or must authenticate twice
 

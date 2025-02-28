@@ -1,17 +1,14 @@
 ---
 title: Problems with deleting a node from active failover cluster membership
 description: Describes the problems encountered when removing nodes from active failover cluster membership.
-ms.date: 10/16/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, v-lianna
-ms.custom: sap:node-removed-from-the-cluster, csstroubleshoot
-ms.technology: windows-server-high-availability
+ms.custom:
+- sap:clustering and high availability\node removed from the cluster
+- pcy:WinComm Storage High Avail
 ---
 # Having a problem with nodes being removed from active failover cluster membership
 
@@ -27,7 +24,7 @@ This event is logged on all nodes in the Cluster except for the node that was re
 
 ## What caused the node to be marked down
 
-All nodes in a Windows 2008 or 2008 R2 failover cluster talk to each other over the networks that are set to allow cluster network communication on this network. The nodes send out heartbeat packets across these networks to all of the other nodes. These packets are supposed to be received by the other nodes and then a response is sent back. Each node in the Cluster has its own heartbeats that it's going to monitor to ensure the network is up and the other nodes are up. The following example should help clarify this behavior:
+All nodes in a Windows Server Failover Cluster talk to each other over the networks that are set to allow cluster network communication on this network. The nodes send out heartbeat packets across these networks to all of the other nodes. These packets are supposed to be received by the other nodes and then a response is sent back. Each node in the Cluster has its own heartbeats that it's going to monitor to ensure the network is up and the other nodes are up. The following example should help clarify this behavior:
 
 :::image type="content" source="media/problem-nodes-failover-cluster/nodes-talk-each-other.png" alt-text="Diagram of two nodes that are talking to each other.":::
 

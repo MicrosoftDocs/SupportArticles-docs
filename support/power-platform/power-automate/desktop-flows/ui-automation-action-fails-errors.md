@@ -3,7 +3,7 @@ title: Failed to get UI element or Failed to get window error
 description: Provides solutions to the error messages that you receive when a UI automation action fails in Power Automate.
 ms.reviewer: pefelesk, nimoutzo
 ms.date: 07/27/2023
-ms.subservice: power-automate-desktop-flows
+ms.custom: sap:Desktop flows\Power Automate for desktop errors
 ---
 # UI automation action fails with "Failed to get UI element" or "Failed to get window" error
 

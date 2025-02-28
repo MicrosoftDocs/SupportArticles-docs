@@ -1,23 +1,19 @@
 ---
 title: Dial-in is unavailable in MMC snap-in
 description: Works around an issue where the Dial-in tab is not available in the Active Directory Users and Computers MMC snap-in
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:1st-party-applications, csstroubleshoot
-ms.technology: windows-server-application-compatibility
+ms.custom:
+- sap:windows desktop and shell experience\modern,inbox and microsoft store apps
+- pcy:WinComm User Experience
 ---
 # The Dial-in tab is not available in the Active Directory Users and Computers MMC snap-in after you install Remote Server Administration Tools for Windows 7
 
 This article provides workarounds for an issue where the **Dial-in** tab is not available in the Active Directory Users and Computers MMC snap-in.
 
-_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 975448
 
 ## Symptoms

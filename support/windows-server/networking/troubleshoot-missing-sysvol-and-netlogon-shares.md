@@ -1,23 +1,19 @@
 ---
 title: Troubleshoot missing SYSVOL and Netlogon shares for Distributed File System (DFS) Replication
 description: Describes how to troubleshoot SYSVOL and Netlogon shares that are missing.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:dfsr, csstroubleshoot
-ms.technology: networking
+ms.custom:
+- sap:network connectivity and file sharing\file replication technologies (frs and dfsr)
+- pcy:WinComm Networking
 ---
 # How to troubleshoot missing SYSVOL and Netlogon shares
 
 This article provides the steps to troubleshoot the missing `SYSVOL` and `Netlogon` shares in Windows Server 2012 R2.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2958414
 
 ## Symptoms

@@ -1,23 +1,19 @@
 ---
 title: Obtain a Console Window Handle
 description: Describes how to obtain a Console Window Handle (HWND).
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, kayda
-ms.custom: sap:performance-monitoring-tools, csstroubleshoot
-ms.technology: windows-server-performance
+ms.custom:
+- sap:system performance\performance tools (task manager,perfmon,wsrm,and wpa)
+- pcy:WinComm Performance
 ---
 # How to obtain a Console Window Handle (HWND)
 
 This article describes how to obtain a Console Window Handle (HWND).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 124103
 
 ## Summary

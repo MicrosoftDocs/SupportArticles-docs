@@ -1,23 +1,19 @@
 ---
 title: Failover behavior on clusters of three or more nodes
 description: Describes the logic by which groups fail from one node to another when there are three or more cluster node members.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: stevemat, jeffwade, kaushika
-ms.custom: sap:root-cause-of-an-unexpected-failover, csstroubleshoot
-ms.technology: windows-server-high-availability
+ms.custom:
+- sap:clustering and high availability\root cause of an unexpected failover
+- pcy:WinComm Storage High Avail
 ---
 # Failover behavior on clusters of three or more nodes
 
 This article documents the logic by which groups fail from one node to another when there are three or more cluster node members.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 299631
 
 ## Summary

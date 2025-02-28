@@ -1,17 +1,14 @@
 ---
 title: How to connect clients to Terminal Services in Windows Server 2003
 description: Describes how to connect a Windows Server 2003-based terminal services client to a terminal server by using Remote Desktop Connection.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:connecting-to-a-session-or-desktop, csstroubleshoot
-ms.technology: windows-server-rds
+ms.custom:
+- sap:remote desktop services and terminal services\session connectivity
+- pcy:WinComm User Experience
 ---
 # How to connect clients to Terminal Services in Windows Server 2003
 

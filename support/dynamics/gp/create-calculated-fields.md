@@ -1,9 +1,10 @@
 ---
 title: Create calculated fields
 description: Describes how to create calculated fields so that you can filter Payables Management documents into aging buckets according to the document date.
-ms.reviewer: LMuelle
+ms.reviewer: theley, LMuelle
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # How to create calculated fields so that you can filter Payables Management documents into aging buckets according to the document date in Microsoft Dynamics GP
 

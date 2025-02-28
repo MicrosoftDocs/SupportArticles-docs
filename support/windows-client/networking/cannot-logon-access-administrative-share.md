@@ -1,33 +1,27 @@
 ---
-title: Error when you access an administrative share on a Windows Vista-based computer
-description: Describes a logon unsuccessful behavior when you try to access an administrative share on a Windows Vista-based computer from another Windows Vista-based computer that's a member of a workgroup.
-ms.date: 09/08/2020
-author: Deland-Han
-ms.author: delhan
+title: Error when you access an administrative share on a Windows-based computer
+description: Describes a logon unsuccessful behavior when you try to access an administrative share on a Windows-based computer from another Windows-based computer that's a member of a workgroup.
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
-ms.technology: windows-client-networking
+ms.custom:
+- sap:network connectivity and file sharing\access to file shares (smb)
+- pcy:WinComm Networking
 ---
-# Error when you try to access an administrative share on a Windows Vista-based computer from another Windows Vista-based computer that's a member of a workgroup: Logon unsuccessful: Windows is unable to log you on
+# Error when you try to access an administrative share on a Windows-based computer from another Windows-based computer that's a member of a workgroup: Logon unsuccessful: Windows is unable to log you on
 
-This article describes a logon unsuccessful behavior when you try to access an administrative share on a Windows Vista-based computer from another Windows Vista-based computer that's a member of a workgroup.
+This article describes a logon unsuccessful behavior when you try to access an administrative share on a Windows-based computer from another Windows-based computer that's a member of a workgroup.
 
-_Applies to:_ &nbsp; Windows Vista  
 _Original KB number:_ &nbsp; 947232
-
-Support for Windows Vista without any service packs installed ended on April 13, 2010. To continue receiving security updates for Windows, make sure you're running Windows Vista with Service Pack 2 (SP2). For more information, see this Microsoft web page: [Support is ending for some versions of Windows](https://windows.microsoft.com/windows/help/end-support-windows-xp-sp2-windows-vista-without-service-packs).
 
 ## Error message description
 
 Consider the following scenario:
 
-- You work on a Windows Vista-based computer that's a member of a workgroup.
-- From this computer, you try to access an administrative share that's located on another Windows Vista-based computer.
+- You work on a Windows-based computer that's a member of a workgroup.
+- From this computer, you try to access an administrative share that's located on another Windows-based computer.
 - The computer that you try to access is a member of a workgroup or a member of a domain. For example, you try to access the C$ administrative share.
 - When you're prompted for your user credentials, you provide the user credentials of an administrative user account on the destination computer.
 
@@ -44,13 +38,13 @@ If you try to map a network drive to the administrative share by using the Net U
 
 ## Cause
 
-By default, Windows Vista and newer versions of Windows prevent local accounts from accessing administrative shares through the network.
+By default, Windows prevents local accounts from accessing administrative shares through the network.
 
 ## Resolution
 
-To let users have access, we recommend that you create shares on the Windows Vista-based computer by using the appropriate permissions. If, for some reason, you can't apply this resolution, you might want to try the [workaround](#workaround).
+To let users have access, we recommend that you create shares on the Windows-based computer by using the appropriate permissions. If, for some reason, you can't apply this resolution, you might want to try the [workaround](#workaround).
 
-To share a folder on a Windows Vista-based computer that has file sharing enabled, follow these steps:
+To share a folder on a Windows-based computer that has file sharing enabled, follow these steps:
 
 1. Click **Start** > **Computer**.
 2. Locate the folder that you want to share.
@@ -101,10 +95,10 @@ This behavior is by design.
 
 ## More information
 
-When the destination Windows Vista-based computer and the computer from which you want to access the administrative share are on the same domain, you can access the share by using domain administrator credentials.
+When the destination Windows-based computer and the computer from which you want to access the administrative share are on the same domain, you can access the share by using domain administrator credentials.
 
-You can't access this administrative share if the destination Windows Vista-based computer is joined to a domain and you try to connect to it by using a computer that is joined to a workgroup. This is true even if you supply correct domain administrator credentials for the domain where the destination computer is located.
+You can't access this administrative share if the destination Windows-based computer is joined to a domain and you try to connect to it by using a computer that is joined to a workgroup. This is true even if you supply correct domain administrator credentials for the domain where the destination computer is located.
 
 For more information about how to share folders or printers in Windows Vista, visit the following Microsoft Web site:
 
-[File and Printer Sharing in Windows Vista](https://technet.microsoft.com/library/bb727037.aspx)
+[File and Printer Sharing in Windows Vista](/previous-versions/windows/it-pro/windows-vista/bb727037(v=technet.10))

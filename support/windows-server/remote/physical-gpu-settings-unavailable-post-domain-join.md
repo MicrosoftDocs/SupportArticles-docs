@@ -1,23 +1,19 @@
 ---
 title: Physical GPU settings are unavailable post domain join
 description: Describes how to solve the issue that Physical GPU settings are unavailable post domain join
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:performance-audio-and-video-and-remotefx, csstroubleshoot
-ms.technology: windows-server-rds
+ms.custom:
+- sap:remote desktop services and terminal services\performance (audio and video) and remotefx
+- pcy:WinComm User Experience
 ---
 # Physical GPU settings is unavailable post domain join
 
 This article provides a resolution for the issue that Physical GPU settings are unavailable post domain join.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2878821
 
 ## Symptoms

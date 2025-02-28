@@ -1,9 +1,10 @@
 ---
 title: Troubleshoot device enrollment in Intune
 description: Suggestions for troubleshooting device enrollment issues in Microsoft Intune.
-ms.date: 10/01/2021
-ms.reviewer: kaushika, damionw
+ms.date: 02/11/2025
+ms.reviewer: kaushika, damionw, jchornbe, roblane, annovich, jerryabo
 search.appverid: MET150
+ms.custom: sap:Enroll Device - Windows\Advisory
 ---
 # Troubleshooting device enrollment in Intune
 
@@ -18,6 +19,36 @@ Before you start troubleshooting, check to make sure that you've configured Intu
 - [Set up enrollment for macOS devices in Intune](/mem/intune/enrollment/macos-enroll)
 - [Set up enrollment for Windows devices in Intune](/mem/intune/enrollment/windows-enroll)
 - [Enroll Android devices in Intune](/mem/intune/enrollment/android-enroll) - No additional steps required
+
+## Run self-help diagnostics
+
+To help administrators successfully use Microsoft Intune, Microsoft has developed diagnostic scenarios that cover top support topics and the common tasks for which administrators request help with configuration. It's important to note that these diagnostics can't make changes to your tenant, but they do provide insight into known issues and instructions to fix them quickly.
+
+> [!NOTE]
+> These diagnostics aren't available for GCC High and DoD environments or Microsoft 365 operated by 21Vianet.
+
+### Run diagnostics
+
+As an administrator, navigate to the [Microsoft 365 admin center](https://aka.ms/admincenter). In the navigation pane, select **Show all** > **Support** > **Help & support**. Alternatively, select **Help & support** on the bottom right side of the page. After you briefly describe your issue (for example, "I need help enrolling Windows devices"), the system determines whether a diagnostic scenario matches your issue.
+
+For the user having a device that fails to enroll in Intune, type their email address and then select **Run tests**. After the diagnostic checks finish and a configuration issue is found, the system provides steps to resolve the issue.
+
+> [!NOTE]
+> If a diagnostic detects an issue and you implement a fix based on the results, consider rerunning the diagnostic to ensure the issue is completely resolved.
+
+### Scenarios covered by diagnostics
+
+> [!NOTE]
+> You have to run the diagnostics as an administrator.
+
+The following diagnostics are currently available for Intune enrollment issues. The diagnostics help identify the cause of the issue that a user-based device fails to enroll in Intune due to various failures.
+
+|Diagnostics|Links|
+|--|--|
+|Intune Windows enrollment|[Run Tests: Intune Windows enrollment](https://aka.ms/IntuneWindowsEnrollment)|
+|Intune iOS/iPadOS enrollment|[Run Tests: Intune iOS/iPadOS enrollment](https://aka.ms/IntuneiOSEnrolmentAlchemyDiag)|
+|Intune Android enrollment|[Run Tests: Intune Android enrollment](https://aka.ms/IntuneAndroidEnrolmentAlchemyDiag)|
+|Intune macOS enrollment|[Run Tests: Intune macOS enrollment](https://aka.ms/IntuneMacOSEnrolmentAlchemyDiag)|
 
 ### Collect basic information
 
@@ -132,6 +163,10 @@ A [rollup for AD FS 2.0](https://support.microsoft.com/help/2607496) works in co
 1. Confirm that the device isn't already enrolled with another MDM provider.
 1. Confirm that the device doesn't already have a management profile installed.
 1. For iOS/iPadOS devices, confirm that Safari is the default browser and that cookies are enabled. For Android devices, confirm that Chrome is the default browser and that cookies are enabled.
+
+## Expired certificates within the management profile
+
+The `IOSProfileSigning.manage.microsoft.com` certificate is required to install the management profile on iOS/iPadOS devices during the enrollment process. When the certificate is no longer needed after initial use, it remains on the devices due to the design of iOS/iPadOS. Enrolled devices will work as expected, while new enrollments will receive the same certificate but with a new date. Because of the platform design, some expired certificates that are unverified might appear, but this doesn't affect existing enrollments.
 
 ## IT admin needs to assign license for access
 

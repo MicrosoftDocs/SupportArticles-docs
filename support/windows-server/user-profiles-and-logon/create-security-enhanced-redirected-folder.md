@@ -1,23 +1,19 @@
 ---
 title: Create security-enhanced redirected folder
 description: Describes how to dynamically create security-enhanced redirected folders or home folders.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, CCLAY
-ms.custom: sap:user-profiles, csstroubleshoot
-ms.technology: windows-server-user-profiles
+ms.custom:
+- sap:user logon and profiles\user profiles
+- pcy:WinComm Directory Services
 ---
 # How to dynamically create security-enhanced redirected folders or home folders  
 
 This article describes how to dynamically create security-enhanced redirected folders or home folders.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 274443
 
 ## Summary

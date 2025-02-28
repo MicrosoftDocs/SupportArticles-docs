@@ -1,8 +1,9 @@
 ---
 title: Hardware inventory process fails
 description: Fixes an issue where the hardware inventory process in Configuration Manager fails and the SMSexec.exe process shows high sustained CPU utilization.
-ms.date: 08/12/2020
+ms.date: 02/11/2025
 ms.reviewer: kaushika
+ms.custom: sap:Site Server and Roles\Site Server Performance
 ---
 # Hardware inventory fails and the SMSexec.exe process shows high sustained CPU utilization
 

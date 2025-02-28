@@ -1,9 +1,10 @@
 ---
 title: Custom data fields for Electronic Funds Transfer (EFT) formats
 description: Introduces the custom data fields for Electronic Funds formats in Microsoft Dynamics GP.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # Custom data fields for Electronic Funds Transfer (EFT) formats in Microsoft Dynamics GP
 

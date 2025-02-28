@@ -5,6 +5,7 @@ author: josaw1
 ms.author: josaw
 ms.reviewer: rassadi, brstor
 ms.date: 09/01/2023
+ms.custom: sap:Site builder content management\Issues with site builder logins and permissions
 ---
 # Can't configure a security group for Commerce site builder during initial deployment
 

@@ -2,7 +2,7 @@
 title: Installation of SQL Server on a CSV disk fails
 description: Provides a workaround for permissions problem that occurs when you install SQL Server 2016 on a CSV disk.
 ms.date: 07/22/2020
-ms.custom: sap:High Availability and Disaster Recovery features
+ms.custom: sap:Always On Failover Cluster Instance (FCI)
 ms.reviewer: Mnilson, cmathews
 ---
 # Error occurs when you install SQL Server 2016 on a Cluster Shared Volume disk

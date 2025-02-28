@@ -1,8 +1,8 @@
 ---
 title: Cumulative Update 3 for SQL Server 2019 (KB4538853)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 3 (KB4538853).
-ms.date: 06/30/2023
-ms.custom: KB4538853
+ms.date: 07/26/2024
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB4538853
 ms.reviewer: v-qianli2
 appliesto:
 - SQL Server 2019 on Windows

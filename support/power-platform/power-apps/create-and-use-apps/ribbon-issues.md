@@ -3,6 +3,7 @@ title: Troubleshooting ribbon issues in Power Apps
 description: Provides a resolution for ribbon issues in Microsoft Power Apps.
 ms.reviewer: krgoldie, srihas, tahoon
 ms.date: 09/25/2023
+ms.custom: sap:Configuring model-driven app commands\Command is not shown or hidden as expected
 ---
 # Troubleshooting ribbon issues in Power Apps
 

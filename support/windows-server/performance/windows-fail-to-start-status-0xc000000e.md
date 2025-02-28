@@ -1,23 +1,19 @@
 ---
 title: Fail to restart Windows after full OS recovery
 description: Fixes a problem in which you receive an error message when you restart Windows Server 2008 R2 after a full OS recovery
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
-ms.technology: windows-server-performance
+ms.custom:
+- sap:system performance\startup or pre-logon reliability (crash,errors,bug check or blue screen)
+- pcy:WinComm Performance
 ---
 # Error message when you restart Windows Server after a full OS recovery: Windows failed to start. Status: 0xc000000e
 
 This article provides help to solve an error that occurs when you restart Microsoft Windows Server 2008 R2 after you perform a full OS recovery.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2261423
 
 ## Symptoms

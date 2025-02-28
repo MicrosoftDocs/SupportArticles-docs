@@ -1,8 +1,8 @@
 ---
 title: Cumulative update 4 for SQL Server 2016 SP2 (KB4464106)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2016 Service Pack 2 (SP2) cumulative update 4 (KB4464106).
-ms.date: 10/26/2023
-ms.custom: KB4464106
+ms.date: 07/26/2024
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB4464106
 appliesto:
 - SQL Server 2016 Developer
 - SQL Server 2016 Enterprise
@@ -54,7 +54,7 @@ This article describes Cumulative Update package 4 (CU4) (build number: **13.0.5
 | <a id="12357915">[12357915](#12357915)</a> | [FIX: Access violation occurs in compile code when you parse the forced plan in SQL Server 2016 (KB4465236)](https://support.microsoft.com/help/4465236) | SQL Engine |
 | <a id="12430193">[12430193](#12430193)</a> | [FIX: Assertion error occurs during restoration of TDE compressed backups in SQL Server 2016 (KB4469554)](https://support.microsoft.com/help/4469554) | SQL Engine |
 | <a id="12458043">[12458043](#12458043)</a> | [FIX: "ran out of memory" error when executing a query on a table that has a large full-text index in SQL Server 2016 (KB4465867)](https://support.microsoft.com/help/4465867) | SQL Engine |
-| <a id="12466220">[12466220](#12466220)</a> | [FIX: "9003 error, sev 20, state 1" error when a backup operation fails on a secondary replica that is running under asynchronous-commit mode (KB4458880)](https://support.microsoft.com/help/4458880) | SQL Engine |
+| <a id="12466220">[12466220](#12466220)</a> | [FIX: "9003 error, sev 20, state 1" error when a backup operation fails on a secondary replica that is running in asynchronous-commit mode (KB4458880)](https://support.microsoft.com/help/4458880) | SQL Engine |
 | <a id="12389928">[12389928](#12389928)</a> | FIX: Access violation occurs when you query data from a view created on a table with columnstore index in SQL Server 2016 (KB4467119) | SQL Engine |
 | <a id="12409272">[12409272](#12409272)</a> | FIX: The "`modification_counter`" in DMV `sys.dm_db_stats_properties` shows incorrect value when partitions are merged through `ALTER PARTITION` in SQL Server 2016 (KB4465443) | SQL Engine |
 | <a id="12321047">[12321047](#12321047)</a> | [FIX: Query operation freezes when you insert data into a clustered columnstore index in parallel in SQL Server data warehousing (KB4462481)](https://support.microsoft.com/help/4462481) | SQL performance |

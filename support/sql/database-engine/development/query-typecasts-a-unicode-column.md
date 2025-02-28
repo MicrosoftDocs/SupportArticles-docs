@@ -2,7 +2,7 @@
 title: Query that typecasts a Unicode column to a binary collation returns incorrect results
 description: This article provides workarounds for the problem that occurs when a statement contains an IN or OR clause that's defined for a Unicode column and contains 'collate' to typecast the Unicode column to another binary collation.
 ms.date: 09/07/2020
-ms.custom: sap:Database Design and Development
+ms.custom: sap:Database or Client application Development
 ---
 
 # SQL Server query that typecasts a Unicode column to a binary collation returns incorrect results

@@ -1,23 +1,19 @@
 ---
 title: Configure network infrastructure to support the NLB operation mode
 description: Describes how the different NLB operation modes affect network infrastructure, and the best ways in which the network can support each mode.
-ms.date: 02/02/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:network-load-balancing-nlb, csstroubleshoot
-ms.technology: networking
+ms.custom:
+- sap:network connectivity and file sharing\network load balancing (nlb)
+- pcy:WinComm Networking
 ---
 # Configure network infrastructure to support the NLB operation mode
 
 This article describes how the different Network Load Balancing (NLB) operation modes affect network infrastructure, and the best ways in which the network can support each mode.
 
-_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4494444
 
 ## Summary
@@ -174,3 +170,4 @@ For more information about how to deploy and maintain NLB, see the following res
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 [!INCLUDE [Third-party contact disclaimer](../../includes/third-party-contact-disclaimer.md)]
+

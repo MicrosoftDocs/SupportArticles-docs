@@ -1,9 +1,10 @@
 ---
 title: How to upgrade applications to use the GPConn.dll file or the GPConnNet.dll file in Microsoft Dynamics GP
 description: Describes how to upgrade applications to use the GPConn.dll file or the GPConnNet.dll file in Microsoft Dynamics. These files replace the Crypto.dll file that's used in earlier versions of Microsoft Great Plains.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # How to upgrade applications to use the GPConn.dll file or the GPConnNet.dll file in Microsoft Dynamics GP
 
@@ -28,4 +29,4 @@ You can open a Dexterity support incident to obtain help that's unavailable in t
 
 For more information about technical support options for Microsoft Business Solutions partners, customers, and ISVs, visit the following Microsoft Web site:
 
-[Microsoft Dynamics Technical Support](https://support.microsoft.com/topic/df1e1f22-fb0c-48d8-6105-81febfbb87bf)
+[Microsoft Dynamics Technical Support](/dynamics/s-e/crm/global_support_contacts_eng_187)

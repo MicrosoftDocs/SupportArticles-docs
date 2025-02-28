@@ -1,17 +1,14 @@
 ---
 title: SYSVOL DFSR migration fails after you in-place upgrade DC
 description: Address an issue in which SYSVOL DFSR migration fails after you in-place upgrade a domain controller to Windows Server 2019.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:dfsr, csstroubleshoot
-ms.technology: networking
+ms.custom:
+- sap:network connectivity and file sharing\file replication technologies (frs and dfsr)
+- pcy:WinComm Networking
 ---
 # SYSVOL DFSR migration fails after you in-place upgrade a domain controller to Windows Server 2019
 

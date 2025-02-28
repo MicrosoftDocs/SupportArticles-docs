@@ -2,7 +2,8 @@
 title: Troubleshoot Docker client errors on Windows
 description: Troubleshoot problems you encounter when using Visual Studio to create and deploy web apps to Docker on Windows by using Visual Studio.
 ms.devlang: dotnet
-ms.date: 10/12/2022
+ms.custom: sap:Integrated Development Environment (IDE)\Other, linux-related-content
+ms.date: 02/20/2025
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: ghogen
@@ -24,6 +25,10 @@ File sharing only needs to be managed if you're using Hyper-V with Docker. If yo
 
 > [!TIP]
 > Visual Studio prompts you when **Shared Drives** aren't configured.
+
+## Problems with paths on Windows containers
+
+When you use file paths that are specific to Linux on a Windows container, you might encounter various file input or output (I/O) errors. If so, check the value of the environment variable `VSCT_WslDaemon`. If the variable is set, Visual Studio attempts to use Windows Subsystem for Linux (WSL) paths to refer to the Windows files for creating volumes. This is necessary for Docker in WSL, but doesn't work with Docker Desktop on Windows. This environment variable should always be unset if you use Windows containers.
 
 ## Unable to start debugging
 

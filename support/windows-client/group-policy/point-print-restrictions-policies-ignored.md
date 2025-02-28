@@ -1,17 +1,14 @@
 ---
 title: Point and Print Restrictions policies are ignored in Windows
 description: Describes an issue that occurs when a standard user tries to install a network printer. Provides a resolution.
-ms.date: 04/14/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
-ms.technology: windows-client-group-policy
+ms.custom:
+- sap:group policy\problems applying group policy
+- pcy:WinComm Directory Services
 ---
 # Point and Print Restrictions policies are ignored in Windows
 

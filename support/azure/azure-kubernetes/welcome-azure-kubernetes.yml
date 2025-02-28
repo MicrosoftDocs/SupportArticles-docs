@@ -1,17 +1,17 @@
 ### YamlMime:Landing
 
-title: Azure Kubernetes Services troubleshooting documentation
-summary: Welcome to Azure Kubernetes Services troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Azure Kubernetes Services. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+title: Azure Kubernetes Service (AKS) troubleshooting documentation
+summary: Welcome to Azure Kubernetes Service troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Azure Kubernetes Service (AKS). In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
 
 metadata:
-  title: Troubleshoot Azure Kubernetes Services issues
-  description: Documentation for troubleshooting common issues with Azure Kubernetes Services. # Required; article description that is displayed in search results. < 160 chars.
+  title: Troubleshoot Azure Kubernetes Service (AKS) issues
+  description: Documentation for troubleshooting common issues with Azure Kubernetes Service (AKS). # Required; article description that is displayed in search results. < 160 chars.
   services: cloud-services
   ms.service: azure-kubernetes-service #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 09/08/2023
+  ms.date: 03/08/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -61,9 +61,7 @@ landingContent:
           - text: QuotaExceeded error
             url: ./error-code-quotaexceeded.md
           - text: SubnetIsFull error during an upgrade
-            url: ./error-code-subnetisfull-upgrade.md
-          - text: Kubernetes 1.16 upgrades fail using node labels
-            url: ./upgrades-to-kubernetes-fail-using-node-labels.md              
+            url: ./error-code-subnetisfull-upgrade.md           
           - text: Upgrade issues with Gen2 VMs on Windows AKS cluster
             url: ./nodepools-not-upgraded-to-gen2-during-node-image-upgrade.md
 
@@ -80,8 +78,6 @@ landingContent:
             url: ./load-balancer-or-nsg-in-use-by-vm-scale-set.md
           - text: PublicIPAddressCannotBeDeleted error
             url: ./cannot-delete-ip-subnet-nsg.md
-          - text: RequestDisallowedByPolicy error
-            url: ./error-code-requestdisallowedbypolicy-delete.md
           - text: TooManyRequestsReceived error
             url: ./error-code-toomanyrequestsreceived-subscriptionrequeststhrottled.md
 
@@ -94,6 +90,20 @@ landingContent:
             url: ./aks-at-scale-troubleshoot-guide.md
           - text: Failed to fix node group sizes
             url: ./cluster-autoscaler-fails-to-scale.md
+
+# Card
+  - title: Troubleshoot start operations
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Basic troubleshooting
+            url: troubleshoot-aks-cluster-start-issues.md
+          - text: K8SAPIServerConnFailVMExtensionError error (51)
+            url: error-code-k8sapiserverconnfailvmextensionerror.md
+          - text: K8SAPIServerDNSLookupFailVMExtensionError error (52)
+            url: error-code-k8sapiserverdnslookupfailvmextensionerror.md
+          - text: OutboundConnFailVMExtensionError error (50)
+            url: error-code-outboundconnfailvmextensionerror.md
 
 # Card
   - title: Troubleshoot node not ready
@@ -110,6 +120,8 @@ landingContent:
             url: ./node-not-ready-after-being-healthy.md
           - text: Node not ready but then recovers
             url: ./node-not-ready-then-recovers.md
+          - text: Troubleshoot node auto-repair errors
+            url: ./availability-performance/node-auto-repair-errors.md
 
  # Card
   - title: Cannot connect to application hosted on AKS cluster
@@ -148,12 +160,16 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Capture real-time system insights from cluster
+            url: ./capture-system-insights-from-aks.md
           - text: Capture TCP dump from Linux node
             url: ./capture-tcp-dump-linux-node-aks.md
           - text: Capture TCP dump from Windows node
             url: ./capture-tcp-dump-windows-node-aks.md
           - text: Capture TCP packets from pod
             url: ./packet-capture-pod-level.md
+          - text: Capture container dump from Windows node
+            url: logs/capture-container-dump-windows-node-aks.md
 
  # Card
   - title: Troubleshoot AKS cluster performance issues

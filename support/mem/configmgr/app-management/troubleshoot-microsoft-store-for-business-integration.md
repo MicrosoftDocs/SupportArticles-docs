@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot MSfB integration
 description: Provides suggestions and resolutions to troubleshoot some of the most common problems with Microsoft Store for Business and Education integration.
-ms.date: 10/10/2020
+ms.date: 02/11/2025
 ms.reviewer: kaushika
 ---
 # Troubleshoot the Microsoft Store for Business and Education integration with Configuration Manager

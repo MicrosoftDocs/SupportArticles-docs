@@ -1,15 +1,12 @@
 ---
 title: Hash of the file does not match when running signed PowerShell script
 description: This article provides resolutions for an issue where the execution of a signed PowerShell script fails with an error message.
-ms.date: 05/16/2023
-ms.reviewer: v-sidong
-ms.author: milanmil
-author: mrmilanmm
-ms.prod: windows-client
-ms.technology: windows-client-system-management-components
-ms.custom: Fix, csstroubleshoot
+ms.date: 01/15/2025
+ms.reviewer: v-sidong,milanmil
+ms.custom:
+- sap:system management components\powershell,fix
+- pcy:WinComm User Experience
 audience: itpro
-localization_priority: medium
 ---
 # Hash of the file does not match when running signed PowerShell script
 

@@ -1,10 +1,11 @@
 ---
 title: Troubleshoot entire SQL Server or database application that appears to be slow
 description: This article describes how to troubleshoot a situation where the entire SQL Server or operating system appears to be slow.
-ms.date: 10/30/2023
-ms.custom: sap:Performance
+ms.date: 01/17/2025
+ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 author: pijocoder
 ms.author: jopilov
+ms.reviewer: jopilov
 ---
 
 # Troubleshoot entire SQL Server or database application that appears to be slow
@@ -207,7 +208,7 @@ Follow these steps to troubleshoot these issues:
       * ********************************************
       ```
 
-1. If you locate one of these errors, identify which version Cumulative Update (CU) of SQL Server you are using. Check if there are any fixed issues in CUs shipped after your current CU. For the SQL Server fixes, see [Latest updates available for currently supported versions of SQL Server](/troubleshoot/sql/general/determine-version-edition-update-level#latest-updates-available-for-currently-supported-versions-of-sql-server). For a detailed fix list, you can download this [Excel file](https://aka.ms/sqlserverbuilds).
+1. If you locate one of these errors, identify which version Cumulative Update (CU) of SQL Server you are using. Check if there are any fixed issues in CUs shipped after your current CU. For the SQL Server fixes, see [Latest updates available for currently supported versions of SQL Server](../../releases/download-and-install-latest-updates.md#latest-updates-available-for-currently-supported-versions-of-sql-server). For a detailed fix list, you can download this [Excel file](https://aka.ms/sqlserverbuilds).
 
 1. Use [Troubleshooting SQL Server Scheduling and Yielding](https://techcommunity.microsoft.com/t5/sql-server-support-blog/troubleshooting-sql-server-scheduling-and-yielding/ba-p/319148) for more ideas.
 

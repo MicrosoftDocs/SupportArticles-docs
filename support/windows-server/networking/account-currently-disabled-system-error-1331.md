@@ -1,23 +1,19 @@
 ---
 title: System error 1331 when you connect to a share
 description: Helps fix the system error 1331 that occurs when you connect to a share.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
-ms.technology: networking
+ms.custom:
+- sap:network connectivity and file sharing\access to file shares (smb)
+- pcy:WinComm Networking
 ---
 # "Logon failure: account currently disabled" and "System error 1331" error messages
 
 This article provides a solution to the system error 1331 that occurs when you connect to a share.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 263936
 
 ## Symptoms

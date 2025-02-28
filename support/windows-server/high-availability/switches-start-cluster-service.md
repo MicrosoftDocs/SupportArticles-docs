@@ -1,23 +1,19 @@
 ---
 title: Cluster service startup options
 description: List all the available switches that can be used as startup parameters to start the Cluster service.
-ms.date: 03/24/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: eldenc, kaushika
-ms.custom: sap:cluster-service-fails-to-start, csstroubleshoot
-ms.technology: windows-server-high-availability
+ms.custom:
+- sap:clustering and high availability\cluster service fails to start
+- pcy:WinComm Storage High Avail
 ---
 # Cluster service startup options
 
 This article lists all the available switches that can be used as startup parameters to start the Cluster service.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 258078
 
 ## Summary

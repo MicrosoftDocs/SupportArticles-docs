@@ -34,17 +34,6 @@ items:
 - name: File, Filegroup, Database Operations, or Corruption
   href: database-file-operations/toc.yml
 
-- name: General Troubleshooting Information
-  items:
-    - name: Error 556 insert exec failed
-      href: general/error-556-insert-exec-failed.md
-    - name: Improvements in handling some data types and uncommon operations
-      href: general/sql-server-azure-sql-database-improvements.md
-    - name: Policy for untested .NET Framework assemblies
-      href: general/policy-untested-net-framework-assemblies.md
-    - name: Transaction log file grows for databases with In-Memory OLTP
-      href: general/transaction-log-file-grows-databases-in-memory-oltp.md
-
 - name: Installation, Patching, Upgrade, Uninstall
   href: install/windows/toc.yml
 
@@ -62,6 +51,17 @@ items:
   items:
   - name: Inconsistent results in MKL computations
     href: machine-learning/inconsistent-results-mkl-computations-missing-variable.md
+  - name: SQL Server Launchpad service fails to start
+    href: machine-learning/sql-server-launchpad-fail-start.md
+
+- name: Queries, stored procedures, views, functions, triggers (T-SQL)
+  items:
+  - name: Detours or similar techniques cause issues
+    href: general/issue-detours-similar-techniques.md
+  - name: Error 556 insert exec failed
+    href: general/error-556-insert-exec-failed.md
+  - name: Improvements in handling some data types and uncommon operations
+    href: general/sql-server-azure-sql-database-improvements.md
 
 - name: Replication, Change Tracking, Change Data Capture
   href: replication/toc.yml
@@ -125,7 +125,9 @@ items:
   - name: Decreased query performance after upgrade
     href: performance/decreased-query-perf-after-upgrade.md
   - name: High CPU or high memory grants with queries that use optimized nested loops
-    href: performance/decreased-perf-high-cpu-optimized-nested-loop.md   
+    href: performance/decreased-perf-high-cpu-optimized-nested-loop.md
+  - name: Performance degradation when common criteria compliance is enabled
+    href: performance/performance-degradation-ccc-enabled.md  
   - name: Performance degradation with new CE join containment assumption
     href: performance/cardinality-estimator-degrades-query-performance.md
   - name: Resolve last-page insert PAGELATCH_EX contention

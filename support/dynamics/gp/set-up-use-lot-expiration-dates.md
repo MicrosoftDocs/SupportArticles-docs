@@ -1,9 +1,10 @@
 ---
 title: Set up and use lot expiration dates
 description: Describes how to set up and use lot expiration dates in Microsoft Dynamics GP 10.0.
-ms.reviewer: ppeterso
+ms.reviewer: theley, ppeterso
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Distribution - Inventory
 ---
 # How to set up and use lot expiration dates in Microsoft Dynamics GP 10.0
 
@@ -136,7 +137,7 @@ This example uses Fabrikam, Inc., the sample company for Microsoft Dynamics GP 1
 5. In the **Item Number** list, select the item number you created in the Item Maintenance window.
 6. In the **Quantity** field, type **-5**.
 7. In the **Site ID** list, select **WAREHOUSE**.
-8. In the Lot Number Entry window, select **A** in th **e Lot Number** list, and then type 5 in the **Quantity Selected** field.
+8. In the Lot Number Entry window, select **A** in the **Lot Number** list, and then type 5 in the **Quantity Selected** field.
 9. Select **Insert**.
 10. When you receive the following message, type **TEST**, and then select **OK**:  
     Enter a password to use an expired lot.

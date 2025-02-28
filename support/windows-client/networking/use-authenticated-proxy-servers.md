@@ -1,23 +1,19 @@
 ---
 title: Use authenticated proxy servers
 description: Describes problems that you may encounter when you use apps that connect to the Internet if you use an Internet proxy server that requires authentication.
-ms.date: 09/10/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, tode, tonyga
-ms.custom: sap:web-application-proxy-wap-role-service, csstroubleshoot
-ms.technology: windows-client-networking
+ms.custom:
+- sap:network connectivity and file sharing\web application proxy (wap) role service
+- pcy:WinComm Networking
 ---
 # Using authenticated proxy servers together with Windows 8
 
 This article provides help to solve an issue that occurs when you use apps that connect to the Internet if you use an Internet proxy server that requires authentication.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2778122
 
 ## Symptoms

@@ -1,23 +1,19 @@
 ---
 title: Blank desktop after you log on
 description: Discusses an issue where you're presented with a blank screen with no Start Menu, shortcuts, or icons after logging on to a Windows computer.
-ms.date: 09/08/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:desktop-shell, csstroubleshoot
-ms.technology: windows-client-shell-experience
+ms.custom:
+- sap:windows desktop and shell experience\desktop (shell,explorer.exe init,themes,colors,icons,recycle bin)
+- pcy:WinComm User Experience
 ---
 # Blank desktop in Windows
 
 This article provides resolutions to an issue where you're presented with a blank screen with no Start Menu, shortcuts, or icons after logging on to a Windows computer.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 970879
 
 ## Symptoms

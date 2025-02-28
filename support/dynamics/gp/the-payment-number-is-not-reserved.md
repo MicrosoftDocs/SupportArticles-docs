@@ -1,9 +1,10 @@
 ---
 title: The payment number isn't reserved
 description: Provides a solution to an error that occurs when you post an invoice that has an attached deposit in Sales Order Processing in Microsoft Dynamics GP.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Distribution - Sales Order Processing
 ---
 # "The payment number is not reserved in Receivables Management" Error message when you post an invoice that has an attached deposit in Sales Order Processing
 
@@ -37,4 +38,4 @@ To resolve this problem, follow these steps:
 6. Verify.
 
     > [!NOTE]
-    > If the issue persists, delete the payment on the SOP invoice. Save and close the invoice. Then go back into it and re-enter the payment on it again. Now try to post it.  
+    > If the issue persists, delete the payment on the SOP invoice. Save and close the invoice. Then go back into it and re-enter the payment on it again. Now try to post it.

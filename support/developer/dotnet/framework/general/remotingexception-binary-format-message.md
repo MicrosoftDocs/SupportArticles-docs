@@ -3,7 +3,7 @@ title: RemotingException when using binary format
 description: Works around a problem in which a RemotingException exception occurs when .NET Remoting receives a binary formatted custom message.
 ms.date: 05/08/2020
 ms.reviewer: zhenlwa
-ms.technology: dotnet-general
+ms.custom: sap:Common Language Runtime (CLR)
 ---
 # RemotingException is thrown when .NET Remoting receives a binary formatted custom message
 

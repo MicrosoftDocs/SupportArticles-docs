@@ -1,23 +1,19 @@
 ---
 title: Errors when unknown environment variable is used
 description: Describes an issue where Group Policy error events are logged when unknown environment variable is used. Provides a solution to this issue.
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
-ms.technology: windows-server-group-policy
+ms.custom:
+- sap:group policy\problems applying group policy
+- pcy:WinComm Directory Services
 ---
 # Group Policy error events logged when unknown environment variable is used
 
 This article helps avoid Group Policy error events that are logged when unknown environment variable is used.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2003730
 
 ## Symptoms

@@ -1,18 +1,15 @@
 ---
 title: TCP/IP port exhaustion troubleshooting
 description: Learn how to troubleshoot port exhaustion issues. Port exhaustion occurs when all the ports on a machine are used.
-ms.date: 03/10/2023
-ms.prod: windows-client
+ms.date: 01/15/2025
 ms.topic: troubleshooting
-author: dansimp
-ms.author: dansimp
 manager: dcscontentpm
 ms.collection: highpri
-ms.technology: windows-client-networking
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.reviewer: dansimp
+ms.custom:
+- sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
+- pcy:WinComm Networking
+ms.reviewer: dansimp, shpune
 audience: itpro
-localization_priority: medium
 ---
 # Troubleshoot port exhaustion issues
 
@@ -22,8 +19,8 @@ TCP and UDP protocols work based on port numbers used for establishing connectio
 
 There are two types of ports:
 
-- Ephemeral ports, which are dynamic ports, are the set of ports that every machine by default will have them to make an outbound connection.
-- Well-known ports are the defined port for a particular application or service. For example, file server service is on port 445, HTTPS is 443, HTTP is 80, and RPC is 135. Custom application will also have their defined port numbers.
+- Ephemeral ports, which are dynamic ports, are the set of ports that every machine by default will have to make an outbound connection.
+- Well-known ports are the defined ports for a particular application or service. For example, file server service is on port 445, HTTPS is 443, HTTP is 80, and RPC is 135. Custom applications will also have their own defined port numbers.
 
 When a connection is being established with an application or service, client devices use an ephemeral port from the device to connect to a well-known port defined for that application or service. A browser on a client machine will use an ephemeral port to connect to `https://www.microsoft.com` on port 443.
 
@@ -117,18 +114,18 @@ If you suspect that the machine is in a state of port exhaustion:
 
 3. Collect a `netstat -anob` output from the server. The netstat output will show you a huge number of entries for TIME_WAIT state for a single PID.
 
-    :::image type="content" source="media/tcp-ip-port-exhaustion-troubleshooting/time-wait-state-entries.png" alt-text="Screenshot of netstate command output." border="false":::
+   :::image type="content" source="media/tcp-ip-port-exhaustion-troubleshooting/time-wait-state-entries.png" alt-text="Screenshot of netstate command output." border="false":::
 
     After a graceful closure or an abrupt closure of a session, after a period of 4 minutes (default), the port used by the process or application would be released back to the available pool. During this 4 minutes, the TCP connection state will be TIME_WAIT state. In a situation where you suspect port exhaustion, an application or process won't be able to release all the ports that it has consumed and will remain in the TIME_WAIT state.
 
     You might also see CLOSE_WAIT state connections in the same output; however, CLOSE_WAIT state is a state when one side of the TCP peer has no more data to send (FIN sent) but is able to receive data from the other end. This state doesn't necessarily indicate port exhaustion.
 
-    > [!NOTE]
-    > Having huge connections in TIME_WAIT state doesn't always indicate that the server is currently out of ports unless the first two points are verified. Having lot of TIME_WAIT connections does indicate that the process is creating lot of TCP connections and may eventually lead to port exhaustion.
-    >
-    > Netstat has been updated in Windows 10 with the addition of the `-Q` switch to show ports that have transitioned out of time wait as in the BOUND state.  An update for Windows 8.1 and Windows Server 2012 R2 has been released that contains this functionality. The PowerShell cmdlet `Get-NetTCPConnection` in Windows 10 also shows these BOUND ports.
-    >
-    > Until 10/2016, netstat was inaccurate. Fixes for netstat, back-ported to 2012 R2, allowed *Netstat.exe* and `Get-NetTcpConnection` to correctly report TCP or UDP port usage in Windows Server 2012 R2. See [Windows Server 2012 R2: Ephemeral ports hotfixes](https://support.microsoft.com/help/3123245/update-improves-port-exhaustion-identification-in-windows-server-2012) to learn more.
+   > [!NOTE]
+   > Having huge connections in TIME_WAIT state doesn't always indicate that the server is currently out of ports unless the first two points are verified. Having lot of TIME_WAIT connections does indicate that the process is creating lot of TCP connections and may eventually lead to port exhaustion.
+   > 
+   > Netstat has been updated in Windows 10 with the addition of the `-Q` switch to show ports that have transitioned out of time wait as in the BOUND state.  An update for Windows 8.1 and Windows Server 2012 R2 has been released that contains this functionality. The PowerShell cmdlet `Get-NetTCPConnection` in Windows 10 also shows these BOUND ports.
+   > 
+   > Until 10/2016, netstat was inaccurate. Fixes for netstat, back-ported to 2012 R2, allowed *Netstat.exe* and `Get-NetTcpConnection` to correctly report TCP or UDP port usage in Windows Server 2012 R2. See [Windows Server 2012 R2: Ephemeral ports hotfixes](https://support.microsoft.com/help/3123245/update-improves-port-exhaustion-identification-in-windows-server-2012) to learn more.
 
 4. Open a command prompt in admin mode and run the below command.
 

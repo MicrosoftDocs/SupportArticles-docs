@@ -1,17 +1,14 @@
 ---
 title: Office prompts for activation in Azure
 description: Describes an issue when Microsoft Office applications prompt for reactivation when they are installed on Windows-based virtual machines in Azure.
-ms.date: 09/17/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:configuration-of-virtual-machine-settings, csstroubleshoot
-ms.technology: windows-client-hyper-v
+ms.custom:
+- sap:virtualization and hyper-v\configuration of virtual machine settings
+- pcy:WinComm Storage High Avail
 ---
 # Office prompts for activation in Azure
 

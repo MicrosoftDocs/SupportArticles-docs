@@ -1,8 +1,8 @@
 ---
 title: Windows Server Update Services (WSUS) maintenance guide for Configuration Manager
 description: Describes the complete guide to WSUS maintenance for Configuration Manager environments.
-ms.date: 12/21/2020
-ms.custom: sap:Software update point configuration
+ms.date: 02/11/2025
+ms.custom: sap:Software Update Management (SUM)\WSUS Database Maintenance
 ms.reviewer: kaushika, mstewart, erice
 ---
 # The complete guide to WSUS and Configuration Manager SUP maintenance
@@ -17,6 +17,8 @@ _Original KB number:_ &nbsp; 4490644
 Questions are often along the lines of **How should I properly run this maintenance in a Configuration Manager environment**, or **How often should I run this maintenance**. It's not uncommon for conscientious Configuration Manager administrators to be unaware that WSUS maintenance should be run at all. Most of us just set up WSUS servers because it's a prerequisite for a software update point (SUP). Once the SUP is set up, we close the WSUS console and pretend it doesn't exist. Unfortunately, it can be problematic for Configuration Manager clients, and the overall performance of the WSUS/SUP server.
 
 With the understanding that this maintenance needs to be done, you're wondering what maintenance you need to do and how often you need to be doing it. The answer is that you should perform monthly maintenance. Maintenance is easy and doesn't take long for WSUS servers that have been well maintained from the start. However, if it has been some time since WSUS maintenance was done, the cleanup may be more difficult or time consuming the first time. It will be much easier or faster in subsequent months.
+
+For more information on concise steps and automatic scripts, see [Manual and automatic WSUS database maintenance](wsus-automatic-maintenance.md).
 
 ## Maintain WSUS while supporting Configuration Manager current branch version 1906 and later versions
 
@@ -515,4 +517,4 @@ The answer is that you probably could, but I wouldn't. If my coworker across the
 For more information about SUP maintenance in Configuration Manager, see the following articles:
 
 - [Software updates maintenance](/mem/configmgr/sum/deploy-use/software-updates-maintenance)
-- [Software updates maintenance in Configuration Manager](/troubleshoot/mem/configmgr/software-update-maintenance)
+- [Software updates maintenance in Configuration Manager](software-update-maintenance.md)

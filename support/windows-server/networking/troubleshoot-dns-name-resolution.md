@@ -1,23 +1,19 @@
 ---
 title: Troubleshoot DNS name resolution on the Internet
 description: Describes how to troubleshoot DNS name resolution on the Internet in Microsoft Windows Server.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:dns, csstroubleshoot
-ms.technology: networking
+ms.custom:
+- sap:network connectivity and file sharing\dns
+- pcy:WinComm Networking
 ---
 # Troubleshoot DNS name resolution on the Internet in Windows Server
 
 This article provides methods to troubleshoot Domain Name System (DNS) name resolution on the Internet in Microsoft Windows Server.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 816567
 
 ## Summary
@@ -76,7 +72,7 @@ To update root hints on a Windows Server DNS server that is configured as a doma
 >
 > `k.root-servers.net. 193.0.14.129`
 >
-> `l.root-servers.net. 198.32.64.12`
+> `l.root-servers.net. 199.7.83.42`
 >
 > `m.root-servers.net. 202.12.27.33`
 

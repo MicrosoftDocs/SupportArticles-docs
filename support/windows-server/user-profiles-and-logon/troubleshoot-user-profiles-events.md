@@ -1,23 +1,18 @@
 ---
 title: Troubleshoot user profiles with events
 description: Discusses how to troubleshoot problems loading and unloading user profiles by using events and trace logs.
-ms.date: 10/19/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, jgerend, v-lianna
-ms.custom: sap:user-profiles, csstroubleshoot
-ms.technology: windows-server-user-profiles
+ms.custom:
+- sap:user logon and profiles\user profiles
+- pcy:WinComm Directory Services
 ---
 # Troubleshoot user profiles with events
 
 This article discusses how to troubleshoot problems loading and unloading user profiles by using events and trace logs.
-
-_Applies to:_ &nbsp; Windows Server 2022, Windows 10, Windows 8, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012.
 
 The following sections describe how to use the three event logs that record user profile information.
 

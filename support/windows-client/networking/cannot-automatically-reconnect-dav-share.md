@@ -1,17 +1,14 @@
 ---
 title: Windows 7 can't automatically reconnect a DAV share when Basic Authentication is used
 description: Describe a by-design behavior where Windows 7 can't automatically reconnect a DAV share when Basic Authentication is used.
-ms.date: 09/07/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: waltere, kaushika,v-jesits
-ms.custom: sap:webclient-and-webdav, csstroubleshoot
-ms.technology: windows-client-networking
+ms.custom:
+- sap:network connectivity and file sharing\webclient and webdav
+- pcy:WinComm Networking
 ---
 # Windows 7 can't automatically reconnect a DAV share when Basic Authentication is used
 

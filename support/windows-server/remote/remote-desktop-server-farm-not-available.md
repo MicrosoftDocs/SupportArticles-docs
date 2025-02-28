@@ -1,23 +1,19 @@
 ---
 title: Remote Desktop Server farm is unavailable over DirectAccess
 description: Fixes an issue makes a Remote Desktop Server (RDS) farm unavailable in a Windows Server 2008 environment.
-ms.date: 05/16/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:load-balancing-and-connection-broker, csstroubleshoot
-ms.technology: windows-server-rds
+ms.custom:
+- sap:remote desktop services and terminal services\connection broker and load balancing
+- pcy:WinComm User Experience
 ---
 # Remote Desktop Server farm is unavailable over DirectAccess (single/multisite)
 
 This article helps fix an issue that makes a Remote Desktop Server (RDS) farm unavailable in a Windows Server 2008 environment.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3123137
 
 ## Symptoms

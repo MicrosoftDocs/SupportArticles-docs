@@ -2,7 +2,7 @@
 title: SQL Server upgrade fails with error code 574
 description: Troubleshoots and solves an issue where a Cumulative Update or Service Pack for SQL Server reports error 574 when executing database upgrade scripts.
 ms.date: 01/11/2023
-ms.custom: sap:Installation, Patching and Upgrade
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ms.reviewer: ramakoni, v-sidong
 ---
 

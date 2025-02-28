@@ -1,17 +1,14 @@
 ---
 title: Printers are grouped as one
 description: Provides a solution to an issue where printers installed using the same driver and port on Windows are grouped as one when viewed within Devices and Printers.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, jdickson
-ms.custom: sap:management-and-configuration:-installing-print-drivers, csstroubleshoot
-ms.technology: windows-server-printing
+ms.custom:
+- sap:print,fax,and scan\print configuration or management
+- pcy:WinComm User Experience
 ---
 # Printers installed using the same driver and port on Windows are grouped as one when viewed within Devices and Printers
 

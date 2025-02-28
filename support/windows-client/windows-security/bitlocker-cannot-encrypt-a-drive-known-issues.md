@@ -1,16 +1,15 @@
 ---
 title: 'BitLocker cannot encrypt a drive: known issues'
 description: Provides guidance for troubleshooting known issues that may prevent BitLocker Drive Encryption from encrypting a drive.
-ms.date: 11/21/2022
-ms.technology: windows-client-security
-ms.prod: windows-client
+ms.date: 01/15/2025
 manager: dcscontentpm
 ms.collection: Windows Security Technologies\BitLocker
 ms.topic: troubleshooting
-ms.custom: sap:bitlocker, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\bitlocker
+- pcy:WinComm Devices Deploy
 ms.reviewer: kaushika, v-tappelgate
 audience: itpro
-localization_priority: medium
 ---
 # BitLocker cannot encrypt a drive: known issues
 

@@ -4,6 +4,7 @@ description: Describes how to make a Visual C# class usable in a foreach stateme
 ms.date: 04/14/2020
 ms.reviewer: zakramer
 ms.topic: how-to
+ms.custom: sap:Language or Compilers\C#
 ---
 # Make a Visual C# class usable in a foreach statement  
 

@@ -1,23 +1,19 @@
 ---
 title: Audit use of NTLMv1 on a domain controller
 description: Steps to audit the usage of NTLMv1 on a Windows Server-based domain controller.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:legacy-authentication-ntlm, csstroubleshoot
-ms.technology: windows-server-security
+ms.custom:
+- sap:windows security technologies\legacy authentication (ntlm)
+- pcy:WinComm Directory Services
 ---
 # Audit use of NTLMv1 on a Windows Server-based domain controller
 
 This article introduces the steps to test any application that's using NT LAN Manager (NTLM) version 1 on a Microsoft Windows Server-based domain controller.
 
-_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4090105
 
 ## Summary

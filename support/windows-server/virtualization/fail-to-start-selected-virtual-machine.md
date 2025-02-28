@@ -1,23 +1,19 @@
 ---
 title: Fail to start selected virtual machine
 description: Provides a solution to an error that occurs while you try to  start the selected virtual machine.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:virtual-machine-will-not-boot, csstroubleshoot
-ms.technology: hyper-v
+ms.custom:
+- sap:virtualization and hyper-v\virtual machine performance
+- pcy:WinComm Storage High Avail
 ---
 # An error occurred while attempting to start the selected virtual machine
 
 This article provides a solution to an error that occurs while you try to  start the selected virtual machine.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2000800
 
 ## Symptoms

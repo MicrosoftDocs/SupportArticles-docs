@@ -1,15 +1,12 @@
 ---
 title: Gather information by using TSS for Active Directory replication issues
 description: Introduces how to gather information by using the TroubleShootingScript (TSS) toolset for Active Directory replication issues.
-ms.date: 07/13/2023
+ms.date: 01/21/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, warrenw, v-lianna
-ms.custom: sap:windows-tss-ds, csstroubleshoot
-ms.technology: windows-client-troubleshooter
+ms.custom: sap:Support Tools\TSS DS, csstroubleshoot
 ---
 # Gather information by using TSS for Active Directory replication issues
 
@@ -34,7 +31,7 @@ Refer to [Introduction to TroubleShootingScript toolset (TSS)](introduction-to-t
     ```
 
     ```powershell
-    .\TSS.ps1 -Scenario ADS_General -noProcmon -noPSR -noVideo
+    .\TSS.ps1 -Scenario ADS_Replication -noProcmon -noPSR -noVideo
     ```
 
 4. Enter *A* for "Yes to All" for the execution policy change.
@@ -42,4 +39,4 @@ Refer to [Introduction to TroubleShootingScript toolset (TSS)](introduction-to-t
 > [!NOTE]
 >
 > - The traces are stored in a compressed file in the *C:\\MS_DATA* folder. After a support case is created, this file can be uploaded to the secure workspace for analysis.
-> - If you've downloaded this tool previously, we recommend downloading the latest version. It doesn't automatically update when running `-Scenario ADS_General -noProcmon -noPSR -noVideo`.
+> - If you've downloaded this tool previously, we recommend downloading the latest version. It doesn't automatically update when running `-Scenario ADS_Replication -noProcmon -noPSR -noVideo`.

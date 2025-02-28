@@ -5,7 +5,6 @@ ms.date: 08/18/2020
 ms.custom: sap:Client Connectivity
 ms.reviewer: beccam
 ms.service: azure-devops
-ms.subservice: ts-client-connectivity
 ---
 # Team Foundation Server Office Integration add-in doesn't run
 

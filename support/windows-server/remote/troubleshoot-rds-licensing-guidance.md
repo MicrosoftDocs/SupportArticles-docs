@@ -1,17 +1,14 @@
 ---
 title: Guidance for troubleshooting RDS Licensing
 description: Introduces general guidance for troubleshooting scenarios related to RDS Licensing.
-ms.date: 05/16/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:remote-desktop-services-terminal-services-licensing, csstroubleshoot
-ms.technology: windows-server-rds
+ms.custom:
+- sap:remote desktop services and terminal services\licensing for remote desktop services (terminal services)
+- pcy:WinComm User Experience
 ---
 # RDS Licensing troubleshooting guidance
 
@@ -102,7 +99,7 @@ Registry values:
 - LicenseServers
 - LicensingMode
 
-> [!Notes]
+> [!Note]
 >
 > - This configuration will apply before the one that's mentioned in "Using GUI." This means that the "Using GUI" configuration will have no effect when a local policy is configured because the registry values will not be taken into account. In this situation, you can't use RDSM to configure the license servers and licensing mode.
 > - The gpedit.msc console that's started on the session host server does not appear in this configuration.

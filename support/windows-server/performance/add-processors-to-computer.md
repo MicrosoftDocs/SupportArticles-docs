@@ -1,23 +1,19 @@
 ---
 title: Add processors to a computer
 description: Describes how to add processors to a computer.
-ms.date: 03/24/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: joscon, kaushika
-ms.custom: sap:slow-performance, csstroubleshoot
-ms.technology: windows-server-performance
+ms.custom:
+- sap:system performance\startup or pre-logon performance (slow,unresponsive,spinning circle,blank screen)
+- pcy:WinComm Performance
 ---
 # How to add processors to a computer
 
 This article discusses how to add more processors to a computer.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 888729
 
 ## Supported processors

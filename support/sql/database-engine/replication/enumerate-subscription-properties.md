@@ -2,7 +2,7 @@
 title: Fail to enumerate subscription properties
 description: This article provides a workaround for the error that occurs when you try to enumerate the properties of the subscription on a subscriber instance in SQL Server Management Studio.
 ms.date: 08/05/2020
-ms.custom: sap:Replication, change tracking, change data capture
+ms.custom: sap:Replication, Change Tracking, Change Data Capture, Synapse Link
 ms.reviewer: lzhang, tzakir, akbarf, maarumug, ramakoni
 ---
 # Error when you enumerate the subscription properties in SQL Server 2016 or 2017

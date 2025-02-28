@@ -3,7 +3,7 @@ title: Power Automate for desktop console not showing any flows
 description: Provides a resolution for the issue that the Power Automate for desktop console doesn't show any desktop flows.
 ms.reviewer: pefelesk
 ms.date: 10/16/2023
-ms.subservice: power-automate-desktop-flows
+ms.custom: sap:Desktop flows\Working with Power Automate for desktop
 ---
 # Power Automate for desktop console doesn't show any desktop flows
 
@@ -30,4 +30,4 @@ The Power Automate for desktop console doesn't show any desktop flows in the **M
 
 ## Resolution and workaround
 
-To solve this issue, follow the steps described in [Proxy server related errors in Power Automate for desktop](proxy-error-console.md).
+To solve this issue, follow the steps described in [Proxy server related errors in Power Automate for desktop](/power-automate/desktop-flows/how-to/proxy-settings).

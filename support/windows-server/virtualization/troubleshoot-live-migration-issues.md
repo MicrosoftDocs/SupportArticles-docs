@@ -1,17 +1,14 @@
 ---
 title: Troubleshoot live migration issues
 description: Provides information on solving the problem of live migration in windows server 2016.
-ms.date: 08/16/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
-ms.reviewer: adjudele, cpuckett, kaushika
-ms.custom: sap:live-migration, csstroubleshoot
-ms.technology: hyper-v
+ms.reviewer: adjudele, cpuckett, kaushika, shsadash, rblume
+ms.custom:
+- sap:clustering and high availability\hyper-v clusters and vm mobility (migration)
+- pcy:WinComm Storage High Avail
 ---
 # Troubleshoot live migration issues
 
@@ -34,7 +31,7 @@ _Original KB number:_ &nbsp; 4558514
   Compare-VM -Name <vm_name> -DestinationHost <host_name>
   ```
 
-- Check whether any group policy object is preventing the migration from occurring. Verify that the following policy have at least the default settings.
+- Check whether any group policy object is preventing the migration from occurring. Verify that the following policy has at least the default settings.
   - Open *GPEDIT.MSC* and navigate to **Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment**.  
     Open **Create symbolic links** and check whether the following user accounts are listed:  
     - Administrators  
@@ -275,6 +272,22 @@ Here's how to fix this issue:
      PS C:\> Set-VMProcessor TestVM -CompatibilityForMigrationEnabled $true  
     ```
 
+#### Failed to live migrate a VM between nodes with different microcode (uCode) revisions
+
+**Description**
+
+VM live migration fails with the error messages:
+
+> VM cannot be moved to destination computer
+
+> HW on destination is not compatible with HW requirements of VM
+
+When a Hyper-V VM is created, processor features are exposed to guest VMs. At boot time, guest VM kernels make decisions based on the availability of these features. Migration of a VM that is booted on the new system with side channel mitigation features to an old system without side channel mitigation features can expose the customer to these side channel attacks, and is prevented.
+
+**Action**
+
+As a workaround at a cluster level, the best option is to live migrate VMs only from old to new microcode (uCode) revisions. Since VMs on the old hosts have software mitigations for side channel attacks enabled, they won't become vulnerable when moved to new hosts.
+
 #### Failed live migrate because "Virtual Machine Name" is using processor-specific features not supported on host "Node 1."
 
 **Description**
@@ -289,7 +302,7 @@ To allow for migration of this virtual machine to a server with a different proc
 
 Here's how to fix this issue:
 
-1. Check if the processor compatibility is flagged. Open the **Hyper-V Manager** console, select **Virtual Machine Settings** > **Processor** > **Processor Compatibility**.
+1. Check if the processor compatibility is flagged. Open the **Hyper-V Manager** console and select **Virtual Machine Settings** > **Processor** > **Processor Compatibility**.
 2. Make sure the BIOS of the host has the same settings.
 3. Make sure the **Spectre** or **Meltdown** patch exposes different features of the CPU. For more information, see [Protecting guest virtual machines from CVE-2017-5715 (branch target injection)](/virtualization/hyper-v-on-windows/CVE-2017-5715-and-hyper-v-vms).
 4. Run the [Get-SpeculationControlSettings](https://support.microsoft.com/help/4074629) cmdlet and check the results. It should be the same on all nodes.  
@@ -340,6 +353,22 @@ Check the available memory on the destination host.
 
 **Description**
 
+Live migration of "Virtual Machine vm1" failed.
+
+Windows Server 2019 might correctly display `SSBDHardwarePresent` as **True** when you run the following Windows PowerShell cmdlet:
+
+```powershell
+PS C:\> Get-SpeculationControlSettings
+```
+
+On certain processors that have CPU Extension Features set up, after you install the Hyper-V role, the same cmdlet might report `SSBDHardwarePresent` as **False**. Because the features differ between servers, Windows might block live migration.
+
+**Action**
+
+This behavior is a known issue and is resolved in Windows Server 2022. The workaround is to upgrade to Windows Server 2022.
+
+**Description**
+
 Virtual machine migration operation failed at migration Source. Failed to establish a connection with host computer name: No credentials are available in the security package 0x8009030E.
 
 **Action**
@@ -376,7 +405,7 @@ Here's how to fix this issue:
 
 1. Enable Kerberos Authentication for live migrations on both Hyper-V hosts. To do so, select **Hyper-V Settings**  > **Live Migrations** > **Advanced Features** > **Use Kerberos under Authentication Protocol**.
 2. Set Constrained Delegation for both Hyper-V hosts by following these steps:
-      1. Open **Active Directory Users and Computers**, find the Hyper-V host computer account. Open the **Properties** dialog, and select the **Delegation** tab.
+      1. Open **Active Directory Users and Computers** and find the Hyper-V host computer account. Open the **Properties** dialog, and select the **Delegation** tab.
       2. Select the **Trust this computer for delegation to specified services only** and **Use any authentication protocol** options.
       3. Select **Add**, and select the computer account of another Hyper-V host.
       4. Add **cifs** (required to migrate storage) and **Microsoft Virtual System Migration Service** (required to migrate virtual machine).
@@ -482,7 +511,7 @@ If the **cifs.oplocks.enable** option is set to **On**, the `qtree oplocks` cmdl
 Here's how to fix this issue:
 
 1. Replace the **NetApp** filer with a Windows 2016 based File server. Alternatively, update the **NetApp** file to the latest `Ontap` 9.*. version.
-2. Make sure that the Windows Server 2016 based Hyper-V nodes are updated with the latest cumulative update. Similar issues are resolved after you applying [CU Feb 2019](https://support.microsoft.com/help/4487044/) or a later version.  
+2. Make sure that the Windows Server 2016 based Hyper-V nodes are updated with the latest cumulative update. Similar issues are resolved after you apply [CU Feb 2019](https://support.microsoft.com/help/4487044/) or a later version.  
 
 #### Failed live migration of 'Virtual Machine VM1' at migration source 'CLU8N1' with error codes 80042001 and 8007000D
 
@@ -505,6 +534,55 @@ Under RS5, live migration through SMB of all the VMs to a specific node fails on
 **Resolution**
 
 Make sure there's a REG_SZ value ComputerName with the name of the computer in UPPERCASE.
+
+#### Failed to live migrate "Virtual Machine VM1" at migration source "Node1" with error code 0x800705B4
+
+**Description**
+
+After an unexpected shutdown of the Hyper-V node "Node2", live migration of "VM1" from the owner node "Node1" to the destination node "Node2" fails in a Windows Server 2019 (build 17763) Hyper-V cluster. The configuration version of "VM1" is 5.0.
+
+> "Live migration of 'Virtual Machine VM' failed. The virtual machine migration operation for 'VM1' failed at migration source 'Node1'. Failed to receive data for a Virtual Machine migration: This operation returned because the timeout period expired. (0x800705B4).  
+
+**Action**
+
+Check if any symbolic links are left on the destination node "Node2" where the unexpected shutdown occurred.
+
+If there are symbolic links of VMs left on the destination node, delete them.
+
+**Workaround**
+
+To work around this issue, use one of the following methods before a live migration:
+
+- Delete symbolic links on the destination node "Node2" by using quick migrations.
+
+  1. Run a quick migration from the owner node "Node1" to the destination node "Node2".
+  2. Run a quick migration from "Node2" to "Node1".
+
+- Upgrade the configuration version.   
+
+To use `.vmcx` files instead of `.xml` files for management, upgrade the virtual machine version. For more information, see [Upgrade virtual machine version in Hyper-V on Windows or Windows Server](/windows-server/virtualization/hyper-v/deploy/upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server).
+
+#### Failed to live migrate a VM across nodes in a cluster when connected to an internal or private virtual switch
+
+**Description**  
+
+You can't live migrate a VM across nodes in a cluster if that VM is connected to an internal or private virtual switch.
+
+> Live migration of \<VM Name\> failed. \<VM Name\> failed to live migrate to the destination \<Server Name\> because the destination has disconnected VM switch(s).
+
+**Action**  
+
+Check the **Protected network** option for the network adapter.
+
+**Workaround**  
+
+To work around this issue, clear the **Protected network** option of the VM for the internal or private network adapter before a live migration. You can use the following cmdlet:
+
+```powershell
+Set-VMNetworkAdapter -NotMonitoredInCluster $true
+```
+
+This will ignore the connectivity checks for that VM interface during a live migration.  
 
 ## Event ID 20413
 
@@ -599,7 +677,7 @@ Wait to finish other live migrations or increase the number of simultaneous live
 
 **Resolution**
 
-To fix this issue, open the **Hyper-V Manager** console, click **Hyper-V Settings** > **Live Migrations** **>** **Simultaneous live migrations**.
+To fix this issue, open the **Hyper-V Manager** console and click **Hyper-V Settings** > **Live Migrations** **>** **Simultaneous live migrations**.
 > [!NOTE]
 > Consider host performance when changing this number.  
 

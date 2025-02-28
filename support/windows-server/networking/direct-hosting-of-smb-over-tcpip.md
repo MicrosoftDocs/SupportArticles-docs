@@ -1,23 +1,19 @@
 ---
 title: Direct host Server Message Block (SMB) over TCP/IP
 description: Describes the direct hosting of SMB over TCP/IP.
-ms.date: 12/07/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: networking
+ms.custom:
+- sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
+- pcy:WinComm Networking
 ---
 # Direct host SMB over TCP/IP
 
 This article describes how to direct host Server Message Block (SMB) over TCP/IP.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 204279
 
 ## Summary

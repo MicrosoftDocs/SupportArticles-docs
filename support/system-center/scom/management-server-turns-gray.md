@@ -1,7 +1,7 @@
 ---
 title: A management server becomes gray
 description: Fixes an issue in which a management server turns gray after being removed from the All Management Servers resource pool in System Center 2012 Operations Manager.
-ms.date: 06/30/2020
+ms.date: 04/15/2024
 ---
 # Removing a server from the All Management Servers resource pool causes the server to become gray
 

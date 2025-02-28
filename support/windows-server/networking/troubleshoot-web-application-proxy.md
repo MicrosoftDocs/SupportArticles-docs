@@ -1,17 +1,14 @@
 ---
 title: Troubleshoot Web Application Proxy
 description: Provides troubleshooting information for Web Application Proxy including event explanations and solutions.
-ms.date: 10/16/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, kgremban, jgerend, v-lianna
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: networking
+ms.custom:
+- sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
+- pcy:WinComm Networking
 ms.assetid: a2fef55d-747b-4e20-8f21-5f8807e7ef87
 ---
 # Troubleshoot Web Application Proxy

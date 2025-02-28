@@ -2,7 +2,7 @@
 title: Release Management Client crashes
 description: This article describes a problem in which Release Management Client crashes. This triggers a MissingSatelliteAssemblyException exception. Also provide a resolution.
 ms.date: 04/27/2020
-ms.custom: sap:Integrated development environment (IDE)
+ms.custom: sap:Integrated Development Environment (IDE)\Other
 ms.reviewer: achand, daleche, muthuk, sriramb, ronai, leov
 ---
 # Release Management Client crashes and logs MissingSatelliteAssemblyException

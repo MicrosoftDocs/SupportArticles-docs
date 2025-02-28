@@ -2,7 +2,7 @@
 title: Recommended updates and configuration options
 description: This article includes a list of performance improvements and configuration options that are available for SQL Server 2012 and later versions.
 ms.date: 09/14/2020
-ms.custom: sap:Performance
+ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ms.reviewer: ramakoni, Sureshka
 ms.topic: how-to
 ---

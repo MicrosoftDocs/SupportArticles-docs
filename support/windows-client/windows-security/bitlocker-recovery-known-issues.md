@@ -1,18 +1,17 @@
 ---
 title: 'BitLocker recovery: known issues'
 description: Describes common issues that can occur that prevent BitLocker from behaving as expected when recovering a drive, or may cause BitLocker to start recovery unexpectedly. The article provides guidance for addressing those issues.
-ms.date: 11/21/2022
-ms.reviewer: kaushika, v-tappelgate
-ms.technology: windows-client-security
-ms.prod: windows-client
+ms.date: 01/15/2025
+ms.reviewer: kaushika, v-tappelgate, hirito, scottmca
 manager: dcscontentpm
 ms.collection:
 - Windows Security Technologies\BitLocker
 - highpri
 ms.topic: troubleshooting
-ms.custom: sap:bitlocker, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\bitlocker
+- pcy:WinComm Devices Deploy
 audience: itpro
-localization_priority: medium
 ---
 # BitLocker recovery: known issues
 
@@ -20,6 +19,8 @@ This article describes common issues that may prevent BitLocker from behaving as
 
 > [!NOTE]
 > In this article, "recovery password" refers to the 48-digit recovery password and "recovery key" refers to 32-digit recovery key. For more information, see [BitLocker key protectors](/windows/security/operating-system-security/data-protection/bitlocker/planning-guide#bitlocker-key-protectors).
+
+For more information about device encryption, see [BitLocker automatic device encryption hardware requirements](/windows-hardware/design/device-experiences/oem-bitlocker#bitlocker-automatic-device-encryption-hardware-requirements).
 
 ## Windows prompts for a non-existing BitLocker recovery password
 
@@ -29,9 +30,9 @@ Windows prompts for a BitLocker recovery password. However, a BitLocker recovery
 
 The BitLocker and Active Directory Domain Services (AD DS) FAQ address situations that may produce this symptom, and provides information about the procedure to resolve the issue:
 
-- [What if BitLocker is enabled on a computer before the computer has joined the domain?](/windows/security/information-protection/bitlocker/bitlocker-and-adds-faq#what-if-bitlocker-is-enabled-on-a-computer-before-the-computer-has-joined-the-domain-)
+- [What if BitLocker is enabled on a computer before the computer joins the domain?](/windows/security/operating-system-security/data-protection/bitlocker/faq#what-if-bitlocker-is-enabled-on-a-computer-before-the-computer-joins-the-domain-)
 
-- [What happens if the backup initially fails? Will BitLocker retry the backup?](/windows/security/information-protection/bitlocker/bitlocker-and-adds-faq)
+- [What happens if the backup initially fails? Will BitLocker retry it?](/windows/security/operating-system-security/data-protection/bitlocker/faq#what-happens-if-the-backup-initially-fails--will-bitlocker-retry-it-)
 
 ## The recovery password for a laptop wasn't backed up, and the laptop is locked
 
@@ -121,7 +122,7 @@ This issue occurs if the Surface device TPM is configured to use Platform Config
 - Secure boot is turned off.
 - PCR values have been explicitly defined, such as by group policy.
 
-Devices that support Connected Standby (also known as *InstantGO* or *Always On, Always Connected PCs*), including Surface devices, must use PCR 7 of the TPM. In its default configuration on such systems, BitLocker binds to PCR 7 and PCR 11 if PCR 7 and Secure Boot are correctly configured.  For more information, see the [BitLocker Group Policy Settings: About the Platform Configuration Register (PCR)](/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings#about-the-platform-configuration-register-pcr).
+Devices that support Connected Standby (also known as *InstantGO* or *Always On, Always Connected PCs*), including Surface devices, must use PCR 7 of the TPM. In its default configuration on such systems, BitLocker binds to PCR 7 and PCR 11 if PCR 7 and Secure Boot are correctly configured. 
 
 ### Resolution for after installing UEFI or TPM firmware updates on Surface, BitLocker prompts for the recovery password
 

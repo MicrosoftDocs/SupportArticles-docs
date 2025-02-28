@@ -2,7 +2,7 @@
 title: Permission error when you use a volume mount point
 description: This article provides a resolution for the problem that occurs when you assign a root folder of the volume mount point to the SQL Server system folders.
 ms.date: 11/04/2020
-ms.custom: sap:Installation, Patching and Upgrade
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ms.reviewer: mide
 ---
 # Permission error occurs when you use a volume mount point in SQL Server Setup

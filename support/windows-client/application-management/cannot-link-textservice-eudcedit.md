@@ -1,17 +1,14 @@
 ---
 title: You cannot link TextService in Eudcedit.exe
 description: Resolves an issue in which you cannot link TextService in Eudcedit.exe
-ms.date: 09/21/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, shfuruka, v-jesits
-ms.custom: sap:multilingual-user-interface-mui-and-input-method-editor-ime, csstroubleshoot
-ms.technology: windows-client-application-compatibility
+ms.custom:
+- sap:windows desktop and shell experience\language packs,multilingual user interface (mui) and input (ime)
+- pcy:WinComm User Experience
 ---
 # You cannot link TextService in Eudcedit.exe
 

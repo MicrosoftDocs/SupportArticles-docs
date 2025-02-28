@@ -1,17 +1,14 @@
 ---
 title: Remove node from active failover cluster membership
 description: Addresses the issue of finding nodes removed from active failover cluster membership.
-author: Deland-Han
-ms.author: delhan
-ms.date: 10/16/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, v-lianna
-ms.custom: sap:node-removed-from-the-cluster, csstroubleshoot
-ms.technology: windows-server-high-availability
+ms.custom:
+- sap:clustering and high availability\node removed from the cluster
+- pcy:WinComm Storage High Avail
 ---
 # Nodes being removed from failover cluster membership on VMware ESX
 

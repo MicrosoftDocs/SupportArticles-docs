@@ -1,23 +1,19 @@
 ---
 title: Enable or disable DNS updates
 description: Describes how to disable and enable dynamic registration with DNS servers in Windows.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, herbertm
-ms.custom: sap:dns, csstroubleshoot
-ms.technology: networking
+ms.custom:
+- sap:network connectivity and file sharing\dns
+- pcy:WinComm Networking
 ---
 # How to enable or disable DNS updates in Windows
 
 The article discusses how to disable DNS updates in Windows. By default, client computers have DNS updates enabled.
 
-_Applies to:_ &nbsp; Windows 10, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
 _Original KB number:_ &nbsp; 246804
 
 ## Summary

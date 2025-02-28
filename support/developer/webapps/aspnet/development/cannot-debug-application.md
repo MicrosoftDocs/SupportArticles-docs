@@ -2,7 +2,7 @@
 title: Cannot debug ASP.NET web applications
 description: This article provides resolutions for the problem that you can't debug an ASP.NET application in Microsoft Visual Studio .NET.
 ms.date: 04/07/2020
-ms.custom: sap:Development
+ms.custom: sap:General Development
 ---
 # Cannot debug ASP.NET web applications
 

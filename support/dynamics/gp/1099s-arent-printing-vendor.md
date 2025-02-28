@@ -1,9 +1,10 @@
 ---
 title: 1099s aren't printing for Vendor
 description: This article contains answers why 1099s may not print for a vendor and other frequently asked questions about 1099s in Payables Management in Microsoft Dynamics GP.
-ms.reviewer: cwaswick
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # 1099s aren't printing for Vendor (and other FAQ about 1099s) in Payables Managements for Microsoft Dynamics GP
 
@@ -48,20 +49,20 @@ A 1099 may not print for a vendor for the following reasons:
 
 ## Frequently Asked Questions
 
-Q1: How are 1099 values updated?
+**Q1: How are 1099 values updated?**
 
-A1:  The 1099 Details are updated according to when an invoice is paid out/applied. Consider the example below:
+A1: The 1099 Details are updated according to when an invoice is paid out/applied. Consider the example below:
 
-Scenario 1 - Invoice Date is 11/27/2012; Payment Date is 12/11/2012 - This invoice will be included in the 1099 for year 2012.
+Scenario 1 - Invoice Date is 11/27/2024; Payment Date is 12/11/2024 - This invoice will be included in the 1099 for year 2024.
 
-Scenario 2 - Invoice Date is 11/27/2012; Payment Date is 1/11/2013 - This invoice will be included in the 1099 for year 2013.
+Scenario 2 - Invoice Date is 11/27/2023; Payment Date is 1/11/2024 - This invoice will be included in the 1099 for year 2024.
 
-Scenario 3 - Invoice Date is 5/1/2012 and hasn't yet been paid out - This invoice won't appear on a 1099 until it's paid out.
+Scenario 3 - Invoice Date is 5/1/2024 and hasn't yet been paid out - This invoice won't appear on a 1099 until it's paid out.
 
 > [!NOTE]
 > The Historical Aged Trial Balance (HATB) Report will remove the invoice off the report based on the document date of the check that is applied to the invoice.
 
-Q2: How do you update 1099 amounts for vendors that weren't setup as 1099 vendors or that where switched half way through the year?
+**Q2: How do you update 1099 amounts for vendors that weren't setup as 1099 vendors or that where switched half way through the year?**
 
 A2: You can update vendors to be 1099able using any of the following methods:
 
@@ -69,17 +70,15 @@ A2: You can update vendors to be 1099able using any of the following methods:
 - **Method 2**: Use the 1099 Modifier that is included in Professional Services Tools Library (PSTL). This method will update all invoices entered for the calendar year if the vendor wasn't* previously marked as 1099able.
 - **Method 3**: Update 1099 Information window - Navigate to **Tools**, point to **Utilities**, point to **Purchasing** and select **Update 1099 Information**.
 
-    For Microsoft Dynamics GP 2010 and Microsoft Dynamics GP 10.0, the Update 1099 Information window can only be used if an incorrect tax type was used. It will only allow the vendor to be moved from one tax type to another.
+For Microsoft Dynamics GP 2013 and later, if you mark **Vendor and 1099 Transaction** radio button, you'll also have the option for **Not a 1099 Vendor** in the TO and FROM pick lists, which will allow for additional functionality to modify a vendor as 1099able retroactively for the year, or to unmark a vendor that shouldn't have been marked as 1099able for the year. This new functionality will change the 1099 status on the vendor going forward, and update the 1099 information with all the 1099 documents amounts for the year, and vice versa.
 
-    For Microsoft Dynamics GP 2013, if you mark **Vendor and 1099 Transaction** radio button, you'll also have the option for **Not a 1099 Vendor** in the TO and FROM pick lists, which will allow for additional functionality to modify a vendor as 1099able retroactively for the year, or to unmark a vendor that shouldn't have been marked as 1099able for the year. This new functionality will change the 1099 status on the vendor going forward, and update the 1099 information with all the 1099 documents amounts for the year, and vice versa.
+- **Method 4**: In Microsoft Dynamics GP, there are two new features that allow you to edit 1099 information per Transaction or per Vendor.
 
-- **Method 4**: In Microsoft Dynamics GP 2013, there are two new features that allow you to edit 1099 information per Transaction or per Vendor.
+  - Edit 1099 Transaction Information - Select **Transactions**, point to **Purchasing**, and select **Edit 1099 Transaction Information**. Only 1099 vendors are displayed in this window. The transaction information (with a 1099 amount) for the vendor selected will be displayed. For debit type documents (invoices), you can edit the Tax Type, Box Number, and 1099 Amount on open and history transactions. For credit type documents (credit memos, returns), you can only edit the Tax Type and 1099 Amount. Documents are displayed in the functional currency. Select the **Process** button to save the changes keyed, and print the *PM Update 1099 Trx Information Audit* report that lists the changes made.
 
-  - Edit 1099 Transaction Information - A new window has been added in Microsoft Dynamics GP 2013 where you can manually edit 1099 information per transaction. Select **Transactions**, point to **Purchasing**, and select **Edit 1099 Transaction Information**. Only 1099 vendors are displayed in this window. The transaction information (with a 1099 amount) for the vendor selected will be displayed. For debit type documents (invoices), you can edit the Tax Type, Box Number, and 1099 Amount on open and history transactions. For credit type documents (credit memos, returns), you can only edit the Tax Type and 1099 Amount. Documents are displayed in the functional currency. Select the **Process** button to save the changes keyed, and print the *PM Update 1099 Trx Information Audit* report that lists the changes made.
+  - Update 1099 Information per vendor - As already discussed in Method 3 above, in Microsoft Dynamics GP, by using the option for Not a 1099 Vendor in the TO and FROM fields as appropriate, you can mark a vendor (and transactions) as 1099able for the year that wasn't previously marked as 1099able, or remove the 1099 information for a vendor that was marked as 1099able in error for the year.
 
-  - Update 1099 Information per vendor - As already discussed in Method 3 above, in Microsoft Dynamics GP 2013, by using the new option for Not a 1099 Vendor in the TO and FROM fields as appropriate, you can mark a vendor (and transactions) as 1099able for the year that wasn't previously marked as 1099able, or remove the 1099 information for a vendor that was marked as 1099able in error for the year.
-
-Q3: What documents will update 1099 amounts?
+**Q3: What documents will update 1099 amounts?**
 
 A3: Below is how 1099 amounts are updated per document type:
 
@@ -91,7 +90,7 @@ A3: Below is how 1099 amounts are updated per document type:
 
 4. Voiding a check and causing the invoice to go back into open, the 1099 details window will be reduced by the amount of the check that was voided.
 
-Q4: What documents won't update the 1099 amount?
+**Q4: What documents won't update the 1099 amount?**
 
 A4: The scenarios won't update the 1099 amount:
 
@@ -107,7 +106,7 @@ A4: The scenarios won't update the 1099 amount:
 
 6. If a credit memo is keyed with a 1099 Amount and not yet applied.
 
-Q5: If I run a reconcile, what 1099 data will be changed?
+**Q5: If I run a reconcile, what 1099 data will be changed?**
 
 A5: If you run a reconcile, these fields will be corrected:
 

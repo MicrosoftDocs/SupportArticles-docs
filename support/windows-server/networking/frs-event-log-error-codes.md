@@ -1,23 +1,19 @@
 ---
 title: FRS event log error codes
 description: Introduces a list of events that are caused by File Replication Service (FRS). These events are displayed in the FRS log.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, Nedpyle
-ms.custom: sap:frs, csstroubleshoot
-ms.technology: networking
+ms.custom:
+- sap:network connectivity and file sharing\file replication technologies (frs and dfsr)
+- pcy:WinComm Networking
 ---
 # FRS event log error codes
 
 This article introduces the event log entries that the File Replication Service (FRS) generates.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 308406
 
 ## Event ID 13500, 13501, 13502, 13503, 13504, 13505, and 13506

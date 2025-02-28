@@ -5,6 +5,7 @@ author: josaw1
 ms.author: josaw
 ms.reviewer: brstor
 ms.date: 09/08/2023
+ms.custom: sap:Payments\Issues with refund transactions
 ---
 # Refundable charges are miscalculated based on the quantity returned
 

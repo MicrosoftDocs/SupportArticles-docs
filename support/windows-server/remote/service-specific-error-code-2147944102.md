@@ -1,23 +1,19 @@
 ---
 title: Error 2147944102 when you start BITS service
 description: Provides a solution to an error 2147944102 that occurs when you start the Background Intelligent Transfer Service (BITS) Service.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:administration, csstroubleshoot
-ms.technology: windows-server-rds
+ms.custom:
+- sap:remote desktop services and terminal services\deployment,configuration,and management of remote desktop services infrastructure
+- pcy:WinComm User Experience
 ---
 # "Service-Specific Error Code -2147944102" error message if you try to start the BITS service
 
 This article provides a solution to an error 2147944102 that occurs when you start the Background Intelligent Transfer Service (BITS) Service.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 326460
 
 ## Symptoms

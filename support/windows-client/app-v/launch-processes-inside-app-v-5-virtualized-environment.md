@@ -1,17 +1,14 @@
 ---
 title: How to launch processes inside the App-V 5.0 virtualized environment
 description: Describes how to launch processes inside the App-V 5.0 virtualized environment.
-ms.date: 12/07/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:administration, csstroubleshoot
-ms.technology: windows-client-application-virtualization-app-v
+ms.custom:
+- sap:application virtualization\server issues\administration
+- pcy:WinComm User Experience
 ---
 # How to launch processes inside the App-V 5.0 virtualized environment
 

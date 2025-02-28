@@ -1,11 +1,11 @@
 ---
 title: Sign-in error when signing in to Dynamics 365 Guides on a shared HoloLens device
 description: Resolves an error that occurs when you try to sign in to Dynamics 365 Guides on a shared HoloLens device.
-author: davepinch
-ms.author: davepinch
+author: prashantyvr
+ms.author: prashan
 ms.reviewer: v-wendysmith, mhart
 ms.date: 10/27/2023
-ms.custom: bap-template
+ms.custom: sap:Setup and configuration
 ---
 # Sign-in error when you sign in to Dynamics 365 Guides on a shared HoloLens device
 

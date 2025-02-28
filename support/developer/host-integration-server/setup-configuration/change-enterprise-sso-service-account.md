@@ -1,9 +1,10 @@
 ---
 title: Change Enterprise SSO service account
 description: This article introduces how to change the Enterprise Single Sign-On service account that is configured to run on the master secret server in HIS and BizTalk Server.
-ms.date: 05/11/2020
-ms.custom: sap:Setup and configuration
+ms.date: 05/07/2024
+ms.custom: sap:HIS Setup and Configuration
 ms.topic: how-to
+ms.reviewer: jeremyr
 ---
 # Change the Enterprise SSO service account that runs on the master secret server in HIS and BizTalk Server
 

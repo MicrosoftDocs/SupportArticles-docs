@@ -1,23 +1,19 @@
 ---
 title: Feature and performance optimization of Hyper-V Replica (HVR)
 description: This article describes the registry keys that apply to Hyper-V Replica feature
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, prvijay
-ms.custom: sap:hyper-v-replica, csstroubleshoot
-ms.technology: hyper-v
+ms.custom:
+- sap:virtualization and hyper-v\hyper-v replica (hvr)
+- pcy:WinComm Storage High Avail
 ---
 # Feature and performance optimization of Hyper-V Replica (HVR)
 
 This article describes the registry keys that apply to Hyper-V Replica feature.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2767928
 
 ## Summary

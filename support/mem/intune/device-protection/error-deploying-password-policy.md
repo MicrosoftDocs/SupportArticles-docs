@@ -1,9 +1,9 @@
 ---
 title: Error -2016281112 deploying password policy in Intune
 description: Describes error -2016281112 when you deploy a password policy in Microsoft Intune.
-ms.date: 12/20/2021
+ms.date: 02/11/2025
 search.appverid: MET150
-ms.custom: sap:Device protection
+ms.custom: sap:Configure Devices - Windows\Device restrictions
 ms.reviewer: kaushika
 ---
 # Error -2016281112 when you deploy password policy in Microsoft Intune
@@ -30,6 +30,7 @@ To fix the issue, direct the users to change their password.
 >
 > - On the Android platform, the user must accept the password change notification.
 > - On the Windows MDM desktop platform, the user must press CTRL+ALT+DEL and select **Change Password**, and then the new password rules will be enforced.
+> - Domain accounts are not evaluated locally for password policies that are set by Exchange ActiveSync (EAS) because it is assumed that the EAS policies and the domain account policies belong to the same account authority. These policies include complexity, length, expiration, and history settings. For more information, see [Password length and complexity supported by account types](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn282287(v=ws.11)#password-length-and-complexity-supported-by-account-types)
 
 ## More information
 

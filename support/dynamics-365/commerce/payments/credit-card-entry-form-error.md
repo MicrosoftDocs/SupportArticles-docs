@@ -5,6 +5,7 @@ author: josaw1
 ms.author: josaw
 ms.reviewer: rassadi, brstor
 ms.date: 09/01/2023
+ms.custom: sap:Payments\Issues with payment transactions
 ---
 # Credit card entry page shows an error at checkout
 

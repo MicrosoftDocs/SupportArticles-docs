@@ -1,8 +1,8 @@
 ---
 title: SQL Server 2017 build versions (KB4047329)
 description: This article lists cumulative update and GDR builds for SQL Server 2017.
-ms.date: 08/04/2023
-ms.custom: KB4047329
+ms.date: 11/12/2024
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB4047329
 appliesto:
 - SQL Server 2017
 ms.reviewer: v-six
@@ -52,6 +52,14 @@ This article lists the Microsoft SQL Server 2017 builds that were released after
 
 | Cumulative update name | SQL Server product version | SQL Server (sqlservr.exe) file version | Analysis Services product version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date |
 |------------|---------------|-------------------|--------------|------------------|---------------------------------------------------------|--------------------|
+| CU31 + GDR | 14.0.3485.1   | 2017.140.3485.1   | 14.0.249.106 | 2017.140.249.106 | [KB5046858](https://support.microsoft.com/help/5046858) | November 12, 2024   |
+| GDR        | 14.0.2070.1   | 2017.140.2070.1   | 14.0.6.471   | 2017.140.6.471   | [KB5046857](https://support.microsoft.com/help/5046857) | November 12, 2024   |
+| CU31 + GDR | 14.0.3480.1   | 2017.140.3480.1   | 14.0.249.106 | 2017.140.249.106 | [KB5046061](https://support.microsoft.com/help/5046061) | October 08, 2024   |
+| GDR        | 14.0.2065.1   | 2017.140.2065.1   | 14.0.6.471   | 2017.140.6.471   | [KB5046058](https://support.microsoft.com/help/5046058) | October 08, 2024   |
+| CU31 + GDR | 14.0.3475.1   | 2017.140.3475.1   | 14.0.249.106 | 2017.140.249.106 | [KB5042215](https://support.microsoft.com/help/5042215) | September 10, 2024   |
+| GDR        | 14.0.2060.1   | 2017.140.2060.1   | 14.0.6.471   | 2017.140.6.471   | [KB5042217](https://support.microsoft.com/help/5042217) | September 10, 2024   |
+| CU31 + GDR | 14.0.3471.2   | 2017.140.3471.2   | 14.0.249.106 | 2017.140.249.106 | [KB5040940](https://support.microsoft.com/help/5040940) | July 09, 2024   |
+| GDR        | 14.0.2056.2   | 2017.140.2056.2   | 14.0.6.471   | 2017.140.6.471   | [KB5040942](https://support.microsoft.com/help/5040942) | July 09, 2024   |
 | CU31 + GDR | 14.0.3465.1   | 2017.140.3465.1   | 14.0.249.106 | 2017.140.249.106 | [KB5029376](https://support.microsoft.com/help/5029376) | October 10, 2023   |
 | GDR        | 14.0.2052.1   | 2017.140.2052.1   | 14.0.6.471   | 2017.140.6.471   | [KB5029375](https://support.microsoft.com/help/5029375) | October 10, 2023   |
 | CU31 + GDR | 14.0.3460.9   | 2017.140.3460.9   | 14.0.249.106 | 2017.140.249.106 | [KB5021126](https://support.microsoft.com/help/5021126) | February 14, 2023  |

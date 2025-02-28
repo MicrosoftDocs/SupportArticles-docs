@@ -1,17 +1,14 @@
 ---
 title: Run programs automatically
 description: Describes how to use group policies in Windows 2000 to configure a program to run automatically when a user signs in.
-ms.date: 09/27/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:task-scheduler, csstroubleshoot
-ms.technology: windows-client-system-management-components
+ms.custom:
+- sap:system management components\task scheduler
+- pcy:WinComm User Experience
 ---
 # How to run programs automatically when a user logs on
 

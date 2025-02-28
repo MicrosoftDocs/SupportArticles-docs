@@ -1,23 +1,19 @@
 ---
 title: Security identifier could not be resolved error with a one-way trust
 description: Fixes an error (Security identifier could not be resolved) that occurs with a one-way trust.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:domain-and-forest-trusts, csstroubleshoot
-ms.technology: windows-server-security
+ms.custom:
+- sap:windows security technologies\domain and forest trusts
+- pcy:WinComm Directory Services
 ---
 # Error with a one-way trust in Windows Server 2012 R2: Security identifier could not be resolved
 
 This article provides help to fix an error "Security identifier could not be resolved" that occurs with a one-way trust.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3212982
 
 ## Symptoms

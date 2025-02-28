@@ -1,23 +1,19 @@
 ---
 title: Secure Channel Problems Detected
 description: Provides a solution to detected secure channel problems.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:secure-channel-issues, csstroubleshoot
-ms.technology: windows-server-security
+ms.custom:
+- sap:windows security technologies\netlogon including secure channel and dc locator issues
+- pcy:WinComm Directory Services
 ---
 # Secure channel problems detected
 
 This article provides a solution to detected secure channel problems.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2753702
 
 ## Symptoms

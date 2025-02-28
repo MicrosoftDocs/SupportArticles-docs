@@ -1,9 +1,10 @@
 ---
 title: How to get next document number for Receivables Management
 description: How to retrieve the next document number for Receivables Management documents when you use the Miscellaneous Routines Assembly in eConnect.
-ms.reviewer: kjohns
+ms.reviewer: theley, kjohns
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # How to retrieve the next document number for Receivables Management documents when using Miscellaneous Routines Assembly in eConnect
 

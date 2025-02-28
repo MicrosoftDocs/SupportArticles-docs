@@ -4,6 +4,7 @@ description: Provides a resolution for the issue where a conversation is stuck i
 ms.reviewer: nenellim
 ms.author: yangao
 ms.date: 05/23/2023
+ms.custom: sap:Conversation control
 ---
 # Conversation is stuck in the Wrap-up state
 

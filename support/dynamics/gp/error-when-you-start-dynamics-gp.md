@@ -1,9 +1,10 @@
 ---
 title: You are attempting to log in from a data source when you try to start Dynamics GP
 description: Discusses that you receive an error message after you install SQL Server Desktop Engine (also known as MSDE 2000), and then you try to start Microsoft Dynamics GP. Provides a resolution.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Error message when you try to start Microsoft Dynamics GP: "You are attempting to log in from a data source using a trusted connection"
 

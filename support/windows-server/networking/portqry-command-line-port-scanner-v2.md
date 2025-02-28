@@ -1,17 +1,14 @@
 ---
 title: Using the PortQry command-line tool
 description: Discusses the features and functionality available in PortQry Command Line Port Scanner version 2.0.
-ms.date: 08/01/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: networking
+ms.custom:
+- sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
+- pcy:WinComm Networking
 ---
 # Using the PortQry command-line tool
 

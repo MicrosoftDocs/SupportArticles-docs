@@ -1,9 +1,10 @@
 ---
 title: ADO Field is nothing
 description: Provides solutions to errors that occur when you preview the source query in Integration Manager for Microsoft Dynamics GP 10.0.
-ms.reviewer: kvogel, grwill
+ms.reviewer: theley, kvogel, grwill
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # "ADO Field is nothing" Error message when you run an integration or when you preview the source query in Integration Manager for Microsoft Dynamics GP 10.0
 

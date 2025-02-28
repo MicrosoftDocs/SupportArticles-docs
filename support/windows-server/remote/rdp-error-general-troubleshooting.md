@@ -1,17 +1,14 @@
 ---
 title: General Remote Desktop connection troubleshooting
 description: Troubleshoot "Class not registered" error with Remote Desktop connection.
-ms.date: 10/16/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, rklemen, v-lianna
-ms.custom: sap:connecting-to-a-session-or-desktop, csstroubleshoot
-ms.technology: windows-server-rds
+ms.custom:
+- sap:remote desktop services and terminal services\session connectivity
+- pcy:WinComm User Experience
 ---
 # General Remote Desktop connection troubleshooting
 
@@ -157,9 +154,6 @@ For this procedure, use a PowerShell instance that has administrative permission
 
 1. If you still can't connect, open the Certificates MMC snap-in. When you are prompted to select the certificate store to manage, select **Computer account**, and then select the affected computer.
 2. In the **Certificates** folder under **Remote Desktop**, delete the RDP self-signed certificate.
-
-    :::image type="content" source="media/rdp-error-general-troubleshooting/mmccert-delete.png" alt-text="Screenshot of the Remote Desktop certificates in the MMC Certificates snap-in.":::
-
 3. On the affected computer, restart the Remote Desktop Services service.
 4. Refresh the Certificates snap-in.
 5. If the RDP self-signed certificate has not been recreated, [check the permissions of the MachineKeys folder](#check-the-permissions-of-the-machinekeys-folder).

@@ -1,17 +1,14 @@
 ---
 title: Troubleshoot the Host Guardian Service
 description: Provides resolutions to common problems encountered when deploying or operating a Host Guardian Service (HGS) server in a guarded fabric.
-ms.date: 10/17/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, dongill, inhenkel, v-lianna
-ms.custom: sap:shielded-virtual-machines, csstroubleshoot
-ms.technology: hyper-v
+ms.custom:
+- sap:virtualization and hyper-v\shielded virtual machines
+- pcy:WinComm Storage High Avail
 ms.assetid: 424b8090-0692-49a6-9dc4-3c0e77d74b80
 ---
 # Troubleshoot the Host Guardian Service

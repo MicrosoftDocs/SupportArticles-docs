@@ -1,17 +1,14 @@
 ---
 title: Troubleshoot missing SYSVOL and NETLOGON shares on Windows domain controllers
 description: Describes troubleshooting steps to use on Windows 2000 domain controllers that are missing netlogon and sysvol shares.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, arrenc
-ms.custom: sap:sysvol-access-or-replication-issues, csstroubleshoot
-ms.technology: windows-server-group-policy
+ms.custom:
+- sap:group policy\sysvol access or replication issues
+- pcy:WinComm Directory Services
 ---
 # Troubleshoot missing SYSVOL and NETLOGON shares on Windows domain controllers
 

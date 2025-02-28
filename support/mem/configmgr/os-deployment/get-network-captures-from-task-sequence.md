@@ -1,8 +1,9 @@
 ---
 title: Get network captures from a task sequence
 description: Describes how to get network captures from a task sequence in Windows PE.
-ms.date: 06/09/2020
+ms.date: 02/11/2025
 ms.reviewer: kaushika, luche, bryxiao
+ms.custom: sap:Operating Systems Deployment (OSD)\User State Migration
 ---
 # How to get network captures from a task sequence in Windows PE
 

@@ -1,23 +1,19 @@
 ---
 title: Recovery process of a DFS namespace
 description: Describes the methods to recover a Distributed File System Namespace (DFSN)
-ms.date: 03/24/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
-ms.technology: networking
+ms.custom:
+- sap:network connectivity and file sharing\dfs namespace (not replication)
+- pcy:WinComm Networking
 ---
 # Recovery process of a DFS Namespace in Windows 2003 and 2008 Server
 
 This article describes the methods by which to recover a Distributed File System Namespace (DFSN) in Windows Server.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 969382
 
 ## Rapid publishing

@@ -1,23 +1,19 @@
 ---
 title: Use netsh advfirewall firewall context
 description: This article describes how to use the netsh advfirewall firewall context instead of the netsh firewall context to control Windows Firewall behavior.
-ms.date: 04/20/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:windows-firewall-with-advanced-security-wfas, csstroubleshoot
-ms.technology: networking
+ms.custom:
+- sap:network connectivity and file sharing\windows firewall with advanced security (wfas)
+- pcy:WinComm Networking
 ---
 # Use netsh advfirewall firewall instead of netsh firewall to control Windows Firewall behavior
 
 This article describes how to use the `netsh advfirewall` firewall context instead of the `netsh firewall` context to control Windows Firewall behavior.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 947709
 
 ## Summary

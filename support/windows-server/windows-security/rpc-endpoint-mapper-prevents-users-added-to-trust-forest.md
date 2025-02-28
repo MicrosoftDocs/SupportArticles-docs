@@ -1,23 +1,19 @@
 ---
 title: Users and groups can't be added to trusted forest
 description: Describes an error that occurs when you try to add a user or a group from a trusted forest into a local domain group of a domain in a trusting forest.
-ms.date: 11/10/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:domain-and-forest-trusts, csstroubleshoot
-ms.technology: windows-server-security
+ms.custom:
+- sap:windows security technologies\domain and forest trusts
+- pcy:WinComm Directory Services
 ---
 # RPC Endpoint Mapper client authentication prevents users and groups from being added to trusting forest
 
 This article helps fix an error that occurs when you try to add a user or a group from a trusted forest into a local domain group of a domain in a trusting forest.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3073942
 
 Enabling RPC Endpoint Mapper client authentication prevents security principals (that is, users and groups from trusted forests) from being added to a local domain group in the trusting forest. For information about other components and operations that are affected by enabling RPC Endpoint Mapper client authentication, see the following ASKDS blog post:  

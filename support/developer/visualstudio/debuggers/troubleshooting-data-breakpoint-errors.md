@@ -3,7 +3,7 @@ title: Troubleshooting .NET data breakpoints
 description: Provides explanations, solutions, and workarounds for Unable to set data breakpoint errors that occur when using Break when Value Changes (C# only).
 ms.date: 09/26/2023
 ms.reviewer: mikejo, khgupta, raviuppa, waan, v-sidong
-ms.custom: sap:Debuggers and analyzers
+ms.custom: sap:Debuggers and Analyzers\Visual Studio Debugger
 f1_keywords:
   - "vs.debug.error.unable_to_set_data_breakpoint"
 ---

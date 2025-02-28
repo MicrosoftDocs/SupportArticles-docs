@@ -1,23 +1,19 @@
 ---
 title: How to create a virtual directory on an existing Web site to a folder that resides on a remote computer
 description: Describes steps to create a virtual directory on an existing Web site to a folder that resides on a remote computer.
-ms.date: 03/24/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
-ms.technology: networking
+ms.custom:
+- sap:network connectivity and file sharing\access to file shares (smb)
+- pcy:WinComm Networking
 ---
 # How to create a virtual directory on an existing Web site to a folder that resides on a remote computer  
 
 This article describes how to create, test, and remove a virtual directory on an existing Web site to a folder that resides on a remote computer.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 308150
 
 A remote virtual directory is a directory that's not contained within the Web site's home directory but appears to client browsers as though it's within the home directory. A remote virtual directory has an alias that is mapped to a Universal Naming Convention (UNC) share location. A client appends the alias to the URL of the Web site to browse the Web content in that virtual directory. The following table illustrates these mappings:

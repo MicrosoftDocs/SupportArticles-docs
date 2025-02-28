@@ -1,9 +1,10 @@
 ---
 title: An error has occurred in the script on this page error when launching
 description: When you try to start Microsoft Dynamics GP, the error - An error has occurred in the script on this page occurs. Provides a resolution.
-ms.reviewer: sarahcud
+ms.reviewer: theley, sarahcud
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # "An error has occurred in the script on this page" script error when launching Microsoft Dynamics GP
 

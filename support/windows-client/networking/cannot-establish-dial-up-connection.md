@@ -1,17 +1,14 @@
 ---
 title: The PPP link control protocol was terminated error when you establish a dial-up connection
 description: Describes an issue where you can't establish a dial-up connection.
-ms.date: 10/09/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: masoudh, kaushika
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: windows-client-networking
+ms.custom:
+- sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
+- pcy:WinComm Networking
 ---
 # Error when you try to establish a dial-up connection: Error 734: The PPP link control protocol was terminated
 

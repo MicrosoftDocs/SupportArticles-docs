@@ -5,6 +5,7 @@ ms.date: 10/05/2023
 ms.author: haiyingyu
 author: HaiyingYu
 ms.reviewer: johnhart, riande,
+ms.custom: sap:Health, Diagnostic, and Performance Features\Failed Request Tracing
 ---
 # Troubleshoot failed requests using tracing in IIS 8.5
 

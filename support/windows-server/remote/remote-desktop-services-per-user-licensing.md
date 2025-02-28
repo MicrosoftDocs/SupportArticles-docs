@@ -1,17 +1,14 @@
 ---
 title: First connection to non-persistent VDI session fails when using per-user Remote Desktop licensing
 description: Troubleshooting the Remote Desktop License Servers unavailable error when trying to connect to a remote session using non-persistent VDI and per-user Remote Desktop licensing.
-ms.date: 05/15/2023
-author: Heidilohr
-ms.author: helohr
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
-ms.prod: windows-server
 ms.topic: troubleshooting
-localization_priority: medium
-ms.reviewer: kaushika, femila
-ms.custom: sap:remote-desktop-services-terminal-services-licensing
-ms.technology: windows-server-rds
+ms.reviewer: kaushika, femila,helohr
+ms.custom:
+- sap:remote desktop services and terminal services\licensing for remote desktop services (terminal services)
+- pcy:WinComm User Experience
 ---
 
 # The first connection to a non-persistent VDI session fails when using per-user Remote Desktop licensing

@@ -1,17 +1,14 @@
 ---
 title: Video doesn't play in Windows Media Player 11
 description: Describes error messages and other problems that occur in Windows Media Player when you try to play an audio file or a video file. A resolution is provided.
-ms.date: 09/22/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, bchee
-ms.custom: sap:windows-media-player, csstroubleshoot
-ms.technology: windows-client-shell-experience
+ms.custom:
+- sap:windows desktop and shell experience\media issues with in-box apps (windows media player,groove,movies and tv)
+- pcy:WinComm User Experience
 ---
 # You receive a codec error message, or audio plays but video doesn't play when you play media files in Windows Media Player 11
 

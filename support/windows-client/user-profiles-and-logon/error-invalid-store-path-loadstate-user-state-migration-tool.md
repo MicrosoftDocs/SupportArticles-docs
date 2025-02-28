@@ -1,17 +1,14 @@
 ---
 title: Error "Invalid store path" during the LoadState process when you use the User State Migration Tool
 description: Describes how to fix the error "Invalid store path" during the LoadState process when you use the User State Migration Tool
-ms.date: 09/14/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, shijoy
-ms.custom: sap:user-profiles, csstroubleshoot
-ms.technology: windows-client-user-profiles
+ms.custom:
+- sap:user logon and profiles\user profiles
+- pcy:WinComm Directory Services
 ---
 # Error "Invalid store path" during the LoadState process when you use the User State Migration Tool
 

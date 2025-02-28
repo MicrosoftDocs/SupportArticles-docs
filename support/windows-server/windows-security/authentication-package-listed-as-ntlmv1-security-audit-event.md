@@ -1,23 +1,19 @@
 ---
 title: Audit event shows authentication package as NTLMv1 instead of NTLMv2
 description: Discusses an issue where the authentication was actually using NTLMv2 but reporting NTLMv1 in the event log.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: herbertm, kaushika
-ms.custom: sap:legacy-authentication-ntlm, csstroubleshoot
-ms.technology: windows-server-security
+ms.custom:
+- sap:windows security technologies\legacy authentication (ntlm)
+- pcy:WinComm Directory Services
 ---
 # Audit event shows authentication package as NTLMv1 instead of NTLMv2
 
 This article discusses an issue where the authentication was actually using NTLMv2 but reporting NTLMv1 in the event log.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2701704
 
 ## Summary

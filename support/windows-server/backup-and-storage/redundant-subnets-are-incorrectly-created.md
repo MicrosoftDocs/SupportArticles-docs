@@ -1,17 +1,14 @@
 ---
 title: Redundant subnets are incorrectly created
 description: Discusses an issue in which redundant subnets are incorrectly created in an iSCSI IPv6 network.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, Roger.Blume, winciccore
-ms.custom: sap:iscsi, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
+ms.custom:
+- sap:backup,recovery,disk,and storage\iscsi
+- pcy:WinComm Storage High Avail
 ---
 # Redundant subnets are incorrectly created in an iSCSI IPv6 network
 

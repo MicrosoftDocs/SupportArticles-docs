@@ -1,7 +1,37 @@
-- name: Welcome
-  href: welcome-virtual-desktop.yml
-
-- name: Virtual Desktop Issues
-  items:
-  - name: Windows Virtual Desktop sign-in screen is blank
-    href: windows-virtual-desktop-blank-screen.md
+items:
+- name: Troubleshoot Azure Virtual Desktop
+  href: ./welcome-virtual-desktop.yml
+- name: Connection quality issues
+  href: ./troubleshoot-connection-quality.md
+- name: Management issues
+  href: ./troubleshoot-management-issues.md
+- name: Troubleshoot agent common issues
+  href: ./troubleshoot-agent.md
+- name: Troubleshoot app attach
+  href: ./troubleshoot-app-attach.md
+- name: Troubleshoot Azure Files authorization
+  href: ./troubleshoot-authorization.md
+- name: Troubleshoot Azure Virtual Desktop Insights
+  href: ./troubleshoot-insights.md
+- name: Troubleshoot Azure Virtual Desktop PowerShell
+  href: ./troubleshoot-powershell.md
+- name: Troubleshoot connections to Microsoft Entra joined VMs
+  href: ./troubleshoot-azure-ad-connections.md
+- name: Troubleshoot custom image templates
+  href: ./troubleshoot-custom-image-templates.md
+- name: Troubleshoot device redirections
+  href: ./troubleshoot-device-redirections.md
+- name: Troubleshoot host pool creation
+  href: ./troubleshoot-set-up-issues.md
+- name: Troubleshoot multimedia redirection
+  href: ./troubleshoot-multimedia-redirection.md
+- name: Troubleshoot overview, feedback, and support
+  href: ./troubleshoot-set-up-overview.md
+- name: Troubleshoot RDP Shortpath
+  href: ./troubleshoot-rdp-shortpath.md
+- name: Troubleshoot service connections
+  href: ./troubleshoot-service-connection.md
+- name: Troubleshoot session host configuration and update
+  href: ./troubleshoot-session-host-configuration-update.md
+- name: Troubleshoot session host virtual machine configuration
+  href: ./troubleshoot-vm-configuration.md

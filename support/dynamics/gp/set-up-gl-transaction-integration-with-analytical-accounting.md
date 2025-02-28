@@ -2,8 +2,9 @@
 title: Set up a GL Transaction Integration with Analytical Accounting in Dynamics GP
 description: This article provides a step-by-step example of how to set up a GL Transaction Integration with Analytical Accounting mappings in Integration Manager for Microsoft Dynamics GP.
 ms.topic: how-to
-ms.reviewer: grwill
-ms.date: 03/31/2021
+ms.reviewer: theley, grwill
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Steps to set up a GL Transaction Integration with Analytical Accounting in Microsoft Dynamics GP
 

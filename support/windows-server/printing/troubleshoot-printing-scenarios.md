@@ -1,17 +1,16 @@
 ---
 title: Troubleshooting scenarios for printing
 description: Advanced troubleshooting printing scenarios.
-ms.date: 05/16/2023
+ms.date: 01/15/2025
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:errors-and-troubleshooting-print-output-or-print-failures, csstroubleshoot
-ms.technology: windows-server-printing
+ms.custom:
+- sap:print,fax,and scan\print performance - failures,crashes,not responsive
+- pcy:WinComm User Experience
 ---
 # Troubleshooting scenarios for printing
 

@@ -1,17 +1,14 @@
 ---
 title: Network Load Balancing concept and notes
 description: describes the Network Load Balancing.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:network-load-balancing-nlb, csstroubleshoot
-ms.technology: networking
+ms.custom:
+- sap:network connectivity and file sharing\network load balancing (nlb)
+- pcy:WinComm Networking
 ---
 # Network Load Balancing - Concept and notes
 

@@ -1,8 +1,8 @@
 ---
 title: SQL Server Always On protection fails with error 0x80990F75
 description: Fixes an issue where you receive error 0x80990F75 when attempting to protect a SQL Server Always On Availability Group in Data Protection Manager.
-ms.date: 07/24/2020
-ms.reviewer: dpmtechreview
+ms.date: 04/08/2024
+ms.reviewer: Mjacquet, dpmtechreview
 ---
 # SQL Server 2012 Always On protection in DPM fails with Internal error 0x80990F75
 

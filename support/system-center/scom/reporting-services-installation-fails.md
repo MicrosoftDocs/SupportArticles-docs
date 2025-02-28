@@ -2,7 +2,7 @@
 title: Can't install Reporting Services in System Center Operations Manager
 description: Troubleshoot the error, Data Reader account provided is not same, which occurs when installing Reporting Services in System Center Operations Manager.
 ms.reviewer: blakedrumm, luisferreira, alexkre, jarrettr, msadoff
-ms.date: 09/26/2022
+ms.date: 04/15/2024
 ---
 # "Data Reader account provided is not same" error when installing Reporting Services
 

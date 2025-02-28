@@ -2,7 +2,7 @@
 title: Troubleshoot a query that shows different performance between two servers
 description: Provides troubleshooting steps for an issue where a query shows significantly different performance on two servers.
 ms.date: 06/10/2022
-ms.custom: sap:Performance
+ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ms.topic: troubleshooting
 ms.reviewer: shaunbe, haiyingyu
 author: pijocoder

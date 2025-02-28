@@ -2,7 +2,7 @@
 title: OutOfMemoryException in .NET Framework 4.6.1
 description: This article describes a problem that causes a managed application that targets the .NET Framework 4.6.1 to throw an out-of-memory exception from the CLR.
 ms.date: 05/06/2020
-ms.technology: dotnet-general
+ms.custom: sap:Common Language Runtime (CLR)
 ---
 # An out-of-memory exception in a managed application that's running on the 64-bit .NET Framework
 
@@ -68,5 +68,5 @@ To work around this issue, use one of the following setting methods:
 ## Information for IT users
 
 - This issue may also occur on other versions of the .NET Framework. However, the workaround is currently applicable only to the .NET Framework 4.6.1.
-- It's a rare issue that only affects large workloads that have a particular execution pattern. More than 99 percent of all workloads will ever experience this issue.
+- It's a rare issue that only affects large workloads that have a particular execution pattern. More than 99 percent of all workloads will never experience this issue.
 - After the application throws an `OutOfMemoryException`, the only recommended way to recover is to restart the application.

@@ -2,7 +2,7 @@
 title: Merge replication doesn't support topologies
 description: This article discusses alternatives to centralized subscriber topologies in SQL Server.
 ms.date: 07/22/2020
-ms.custom: sap:Replication, change tracking, change data capture
+ms.custom: sap:Replication, Change Tracking, Change Data Capture, Synapse Link
 ms.reviewer: hnunes, jmneto, jeanyd, lakshmij, holgerl, syele, gemason
 ---
 

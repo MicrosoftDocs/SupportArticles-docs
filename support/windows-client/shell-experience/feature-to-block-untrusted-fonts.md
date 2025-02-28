@@ -1,17 +1,14 @@
 ---
 title: The blocking untrusted fonts feature
 description: Describes a new feature that blocks untrusted fonts in Windows 10 Technical Preview.
-ms.date: 10/13/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, payalr, jerrycif
-ms.custom: sap:dpi-and-display-issues, csstroubleshoot
-ms.technology: windows-client-shell-experience
+ms.custom:
+- sap:windows desktop and shell experience\dpi and display issues
+- pcy:WinComm User Experience
 ---
 # Windows 10 Technical Preview adds a feature that blocks untrusted fonts
 

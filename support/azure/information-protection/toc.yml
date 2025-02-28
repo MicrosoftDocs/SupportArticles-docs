@@ -1,0 +1,4 @@
+- name: Welcome
+  href: welcome-information-protection.yml
+- name: Troubleshoot Azure Information Protection policy issues
+  href: troubleshoot-aip-issues.md

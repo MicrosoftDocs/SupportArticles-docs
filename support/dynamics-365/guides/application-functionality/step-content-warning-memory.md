@@ -1,11 +1,11 @@
 ---
 title: High step memory usage warning in the HoloLens app
 description: Learn how to resolve a problem when a high memory usage warning message displays when authoring in the HoloLens app.
-ms.author: davepinch
-author: davepinch
+author: prashantyvr
+ms.author: prashan
 ms.date: 10/27/2023
 ms.reviewer: v-wendysmith, mhart
-ms.custom: bap-template
+ms.custom: sap:Application Functionality
 ---
 # "High step memory usage" warning occurs in the HoloLens app
 

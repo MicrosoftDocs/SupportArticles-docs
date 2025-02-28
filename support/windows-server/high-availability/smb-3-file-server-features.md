@@ -1,34 +1,30 @@
 ---
-title: New SMB file server 3.0 features
-description: Describes new features in the next version of the Server Message Block (SMB) protocol, SMB 3.0. Windows Server introduced SMB 3.0.
-ms.date: 10/29/2021
-author: Deland-Han
-ms.author: delhan
+title: SMB file server 3.0 features
+description: Describes the features in version 3.0 of the Server Message Block (SMB) protocol.
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
-ms.reviewer: kaushika
-ms.custom: sap:cannot-failover-a-group, csstroubleshoot
-ms.technology: windows-server-high-availability
+ms.reviewer: kaushika, jeffhugh
+ms.custom:
+- sap:clustering and high availability\cannot failover a group
+- pcy:WinComm Storage High Avail
 ---
-# New SMB 3.0 features in the Windows Server file server
+# SMB 3.0 features in Windows Server file server
 
-This article describes new features of the Server Message Block (SMB) 3.0 protocol.
+This article describes the features of the Server Message Block (SMB) 3.0 protocol.
 
-_Applies to:_ &nbsp; Windows 8.1 - all editions, Windows Server 2012 R2 and later versions of Windows  
 _Original KB number:_ &nbsp; 2709568
 
 ## Summary
 
-Windows Server introduces new server message block (SMB) file server features. To take advantage of these new features, the SMB client and SMB server must support SMB 3.0.
+Windows Server 2012 introduced new SMB file server features. To take advantage of these features, the SMB client and SMB server must support SMB 3.0.
 
-The SMB 2.x protocol was introduced in Windows Server 2008 and in Windows Vista.
+The SMB 2.x protocol was introduced in Windows Server 2008 and Windows Vista.
 
-The SMB 3.0 protocol was introduced in Windows Server 2012 and in Windows 8.
+The SMB 3.0 protocol was introduced in Windows Server 2012 and Windows 8.
 
-## New SMB features introduced in the Windows file server
+## SMB 3.0 features in Windows file server
 
 - SMB Transparent Failover
 - SMB Scale Out
@@ -82,4 +78,4 @@ SMB PowerShell management cmdlets were introduced in Windows Server 2012 and in 
 
 ## References
 
-For more information about the common errors you may experience with SMB 3.0, see [/troubleshoot/windows-server/networking/error-messages-smb-connections](https://support.microsoft.com/help/2686098).
+For more information about the common errors you may experience with SMB 3.0, see [Error messages on SMB connections](https://support.microsoft.com/help/2686098).

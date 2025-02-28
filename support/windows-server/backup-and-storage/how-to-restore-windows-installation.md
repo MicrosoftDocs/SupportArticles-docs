@@ -1,23 +1,19 @@
 ---
 title: How to restore a Windows 7 installation
 description: Describes how to restore a Windows 7 installation.
-ms.date: 03/24/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, keithpe
-ms.custom: sap:system-restore-or-resetting-your-computer, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
+ms.custom:
+- sap:backup,recovery,disk,and storage\system restore
+- pcy:WinComm Storage High Avail
 ---
 # How to restore a Windows 7 installation
 
 This article describes how to create a system state backup on one computer and how to restore it to the same computer or to a different physical computer of the same make and model.
 
-_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 249694
 
 ## Summary

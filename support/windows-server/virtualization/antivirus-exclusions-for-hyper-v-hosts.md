@@ -1,23 +1,19 @@
 ---
 title: Recommended antivirus exclusions for Hyper-V hosts
 description: Describes the recommended antivirus exclusions for Hyper-V hosts. The purpose is for optimal operation of Hyper-V and the running virtual machines.
-ms.date: 08/16/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:installation-and-configuration-of-hyper-v, csstroubleshoot
-ms.technology: hyper-v
+ms.custom:
+- sap:virtualization and hyper-v\installation and configuration of hyper-v
+- pcy:WinComm Storage High Avail
 ---
 # Recommended antivirus exclusions for Hyper-V hosts
 
 This article describes the recommended antivirus exclusions for Hyper-V hosts for optimal operation.
 
-_Applies to:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3105657
 
 ## Summary

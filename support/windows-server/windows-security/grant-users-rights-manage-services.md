@@ -1,17 +1,14 @@
 ---
 title: Grant users rights to manage services
 description: Describes how to grant users rights to manage services.
-ms.date: 08/01/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
-ms.reviewer: kaushika
-ms.custom: sap:permissions-access-control-and-auditing, csstroubleshoot
-ms.technology: windows-server-security
+ms.reviewer: kaushika, jessev
+ms.custom:
+- sap:windows security technologies\ad object permissions,access control,delegation,adminsdholder and auditing
+- pcy:WinComm Directory Services
 ---
 # How to grant users rights to manage services  
 
@@ -30,7 +27,7 @@ You can use Group Policy to change permissions on system services. See [How To C
 
 To use security templates to change permissions on system services, create a security template following these steps:
 
-1. Select **Start**, search *mmc* and select it.
+1. Select **Start**, search *mmc.exe* and select it.
 2. On the **File** menu, click **Add/Remove Snap-in**.
 3. Select **Security Configuration and Analysis**, select **Add**, and then select **OK**.
 4. In the console tree, right-click **Security Configuration and Analysis**, and then select **Open Database**.

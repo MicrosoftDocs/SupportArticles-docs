@@ -1,23 +1,19 @@
 ---
 title: How to troubleshoot missing network connections icons in Windows Server 2003 and in Windows XP
 description: Describes how to troubleshoot missing network connections icons in Windows Server 2003 and in Windows XP.
-ms.date: 12/03/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, waltere
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: windows-client-networking
+ms.custom:
+- sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
+- pcy:WinComm Networking
 ---
 # How to troubleshoot missing network connections icons in Windows Server 2003 and in Windows XP
 
 This article describes how to troubleshoot missing network connections icons in Windows Server 2003 and in Windows XP.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 825826
 
 ## Introduction
@@ -280,4 +276,4 @@ To view Microsoft support options, visit the following Microsoft Web site: [Cont
 
 ## Prevention tips
 
-To prevent these problems in the future, try to keep your computer up-to-date. Always make sure that you have the most recent drivers installed on the computer. To do this, you can use Windows Update to install the latest drivers. For more information, visit the following Microsoft Web site: [https://update.microsoft.com](https://update.microsoft.com)
+To prevent these problems in the future, try to keep your computer up-to-date. Always make sure that you have the most recent drivers installed on the computer.

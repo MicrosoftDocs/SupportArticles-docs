@@ -1,17 +1,14 @@
 ---
 title: Stop error 0xE6 after repeatedly disabling and enabling a wireless device driver if DMAr is enabled
 description: Describes a memory leak that occurs when you stress test a wireless driver if DMAr is enabled.
-ms.date: 09/21/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, v-gale
-ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
-ms.technology: windows-client-performance
+ms.custom:
+- sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot)
+- pcy:WinComm Performance
 ---
 # Stop error 0xE6: DRIVER_VERIFIER_DMA_VIOLATION after repeatedly disabling and enabling a wireless device driver if DMAr is enabled
 

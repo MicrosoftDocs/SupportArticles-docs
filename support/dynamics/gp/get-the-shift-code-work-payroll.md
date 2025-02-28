@@ -1,9 +1,10 @@
 ---
 title: Get the Shift Code to work in Payroll
 description: Describes how to get the Shift Code to work in Payroll in Microsoft Dynamics GP.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Payroll
 ---
 # How to get the Shift Code to work in Payroll in Microsoft Dynamics GP
 

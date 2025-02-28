@@ -1,8 +1,9 @@
 ---
 title: ODBC tool displays both 32-bit and 64-bit
 description: This article provides workaround for the problem that occurs in the ODBC Data Source Administrator tool.
-ms.date: 12/07/2020
-ms.custom: sap:MDAC and ADO 
+ms.date: 01/17/2025
+ms.custom: sap:Database Connectivity and Authentication
+ms.reviewer: jopilov
 ---
 # ODBC Administrator tool displays both the 32-bit and the 64-bit user DSNs in a 64-bit version of Windows
 
@@ -15,8 +16,8 @@ _Original KB number:_ &nbsp; 942976
 
 A 64-bit version of the Microsoft Windows operating system includes the following versions of the ODBC Data Source Administrator tool (_Odbcad32.exe_):
 
-- The 32-bit version of the _Odbcad32.exe_ file is located in the `%systemdrive%\Windows\System32` folder.
-- The 64-bit version of the _Odbcad32.exe_ file is located in the `%systemdrive%\Windows\SysWoW64` folder.
+- The 32-bit version of the _Odbcad32.exe_ file is located in the `%systemdrive%\Windows\SysWoW64` folder.
+- The 64-bit version of the _Odbcad32.exe_ file is located in the `%systemdrive%\Windows\System32` folder.
 
 The _Odbcad32.exe_ file displays the following types of data source names (DSNs):
 

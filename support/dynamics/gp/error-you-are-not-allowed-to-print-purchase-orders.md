@@ -1,9 +1,10 @@
 ---
 title: You are not allowed to print Purchase Orders error when you print purchase orders in Microsoft Dynamics GP 9.0 
 description: Describes an error that occurs when you try to print purchase orders in Microsoft Dynamics GP 9.0.
-ms.reviewer: lmuelle, krasmuss
+ms.reviewer: theley, lmuelle, krasmuss
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # "You are not allowed to print Purchase Orders" error when you try to print purchase orders in Microsoft Dynamics GP 9.0
 

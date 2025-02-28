@@ -1,10 +1,11 @@
 ---
 title: Troubleshoot bookings from Resource Scheduling Optimization
-description: Resolves issues with bookings in the Resource Scheduling Optimization add-in for Dynamics 365 Field Service.
-ms.author: feiqiu
-author: feifeiqiu
+description: Resolves issues with bookings in the Resource Scheduling Optimization add-in for Microsoft Dynamics 365 Field Service.
+ms.author: AnilMur
+author: anilmur
 ms.reviewer: mhart
-ms.date: 10/19/2023
+ms.date: 12/19/2024
+ms.custom: sap:Resource Scheduling Optimization
 ---
 # Troubleshoot issues with bookings in Resource Scheduling Optimization
 
@@ -36,17 +37,21 @@ Booking status has a **Scheduling Method** field that dictates how Resource Sche
 
 ### Block Resource Scheduling Optimization from moving past bookings
 
+The [optimization range](/dynamics365/field-service/rso-optimization-scope#create-an-optimization-scop) is the time range during which bookings can be created, updated, or deleted. It defines the "output" side, but not the "input" side. The optimization range doesn't determine what bookings are included.
+
+To block changes to past bookings, consider the following options:
+
 - Set the booking status to **Don't Move**.
-- Remove the booking from the booking view.
+- Remove the booking from the booking view. To ensure that optimization runs, consider only future bookings that occur after a specific point. In the **Booking View** of optimization scope, you can select a value in the **On or After** field.
 - Lock the booking to a time or time range in the past.
-- Set a promised date from/to while enabling the time window constraint.
+- [Set a promised date from/to](/dynamics365/field-service/schedule-time-constraints#schedule-a-requirement-in-a-time-frame) while enabling the time window constraint.
 
 ### Bookings in simulation status
 
-If an exception or error happens when an optimization schedule is still running, you might see some overlap on the schedule board. Some bookings are created or updated from the latest run, while other bookings from the previous run failed to be deleted due to an issue. To avoid this issue, the optimization process uses transactional bookings in the *Simulation* status.
+If an exception or error occurs during an optimization schedule run, you might see some overlap on the [Schedule Board](/dynamics365/field-service/schedule-board-tab-settings#board-view-settings). Some bookings are created or updated from the latest run, while other bookings from the previous run failed to be deleted due to an issue. To avoid this issue, the optimization process uses transactional bookings in the *Simulation* status.
 
 During the optimization process, the create, update, and delete operations are visible. All new, updated, and to-be-deleted bookings are simulated. If the optimization run completes successfully, these simulated bookings become real bookings. During the optimization run, simulation status bookings are transparent and move around the schedule board. When the run completes, simulation bookings change to real bookings with a solid color.
 
 If an exception occurs and the optimization request fails, these simulation bookings remain in simulation status for troubleshooting purposes unless you manually delete them. Otherwise, a system job deletes them automatically every two weeks.
 
-You can hide simulation bookings by changing the schedule board settings. Select the gear icon on the top right, and then select the **Hide Canceled** option.
+You can hide simulation bookings by changing the [schedule board settings](/dynamics365/field-service/schedule-board-tab-settings#board-view-settings). Select the gear icon on the top right to open the **Scheduler settings**, and then disable the **Show canceled** option.

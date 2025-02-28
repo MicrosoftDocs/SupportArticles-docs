@@ -2,7 +2,7 @@
 title: Agent job may fail with error 65535, 782, or 7437
 description: This article provides a workaround for the problem where the SQL Agent job that executes a distributed query might fail with 65535, 782, or 7437 error messages.
 ms.date: 09/19/2022
-ms.custom: sap:Administration and Management
+ms.custom: sap:SQL Server Management, Query and Data Tools
 ms.reviewer: vencher, vasilp
 ---
 # SQL Agent job that executes a distributed query may fail with 65535, 782, or 7437 error messages

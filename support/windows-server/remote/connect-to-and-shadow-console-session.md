@@ -1,17 +1,14 @@
 ---
 title: Connect to console session with Terminal Services
 description: Describes how to use Windows Server 2003 Terminal Services to connect to and shadow a console session.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, CWEST
-ms.custom: sap:connecting-to-a-session-or-desktop, csstroubleshoot
-ms.technology: windows-server-rds
+ms.custom:
+- sap:remote desktop services and terminal services\web access (includes remoteapp and desktop connections)
+- pcy:WinComm User Experience
 ---
 # Connect to and shadow the console session with Windows Server 2003 Terminal Services
 

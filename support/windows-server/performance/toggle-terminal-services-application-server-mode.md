@@ -1,17 +1,14 @@
 ---
 title: Terminal Services Application Server mode
 description: Describes the issue when you toggle Terminal Services to Application Server mode, some programs may stop working.
-ms.date: 09/07/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
-ms.technology: windows-server-performance
+ms.custom:
+- sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot)
+- pcy:WinComm Performance
 ---
 # When you toggle Terminal Services to Application Server mode, some programs may stop working
 

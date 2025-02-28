@@ -1,17 +1,14 @@
 ---
 title: Can't associate a program with an extension
 description: You can't associate a program with an extension in Windows 7 because the program that you're pointing to isn't registered correctly.
-ms.date: 09/09/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, danma
-ms.custom: sap:file-associations, csstroubleshoot
-ms.technology: windows-client-shell-experience
+ms.custom:
+- sap:windows desktop and shell experience\file associations
+- pcy:WinComm User Experience
 ---
 # Sometimes you cannot associate a program with an extension in Windows 7
 

@@ -1,23 +1,19 @@
 ---
 title: Registry values for Process Control parameters
 description: Describes the parameters for the Process Control service components.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:applications, csstroubleshoot
-ms.technology: windows-server-performance
+ms.custom:
+- sap:system performance\system configuration (page file,startup or running apps,error handling)
+- pcy:WinComm Performance
 ---
 # Registry values for Process Control parameters
 
 This article describes the parameters for the Process Control service components.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 296930
 
 ## Summary

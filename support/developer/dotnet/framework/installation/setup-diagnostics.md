@@ -2,9 +2,8 @@
 title: .NET Framework setup diagnostics
 description: Describes the information that may be collected from a computer when you run the Installation Data Collection for Framework and Framework Security updates.
 ms.date: 05/11/2020
-ms.custom: sap:Installation
+ms.custom: sap:Installation and Deployment
 ms.reviewer: KelHo
-ms.technology: dotnet-installation
 ---
 # .NET Framework setup diagnostics
 

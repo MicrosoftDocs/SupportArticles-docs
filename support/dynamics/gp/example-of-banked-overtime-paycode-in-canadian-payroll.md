@@ -1,8 +1,9 @@
 ---
 title: Example of Banked Overtime Paycode in Canadian Payroll
 description: The article illustrates how to set up a banked overtime pay accrual in Canadian Payroll with the calculation based on Units in Microsoft Dynamics GP.
-ms.reviewer: cwaswick
-ms.date: 03/31/2021
+ms.reviewer: theley, cwaswick
+ms.date: 03/20/2024
+ms.custom: sap:Payroll
 ---
 # Example of Banked Overtime Paycode in Canadian Payroll
 

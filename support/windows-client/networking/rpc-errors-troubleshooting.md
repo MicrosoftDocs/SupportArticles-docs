@@ -1,28 +1,25 @@
 ---
 title: RPC error troubleshooting guidance
 description: Learn how to troubleshoot Remote Procedure Call (RPC) errors that occur during computer-to-computer communication. Such communication can involve Windows Management Instrumentation (WMI), SQL Server, Active Directory operations, or remote connections.
-ms.date: 03/10/2023
-ms.prod: windows-client
+ms.date: 01/15/2025
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.collection: highpri
-ms.technology: windows-client-networking
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.reviewer: kaushika, v-tappelgate
+ms.custom:
+- sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
+- pcy:WinComm Networking
+ms.reviewer: kaushika, v-tappelgate, moshalaby
 audience: itpro
-localization_priority: medium
 ---
 # Remote Procedure Call (RPC) errors troubleshooting guidance
 
-_Applies to:_ &nbsp; Windows Client
-
 You might encounter an "RPC server unavailable" error when you connect to Windows Management Instrumentation (WMI) or Microsoft SQL Server, during a Remote Procedure Call (RPC) session, or when you use various Microsoft Management Console (MMC) snap-ins. The following image shows an example of an RPC error.
 
-:::image type="content" source="media/rpc-errors-troubleshooting/rpc-error.png" alt-text="Screenshot of an error message stating that the following error occurred: the RPC server is unavailable." border="false":::
+:::image type="content" source="media/rpc-errors-troubleshooting/rpc-unavailable.png" alt-text="Screenshot of an error message showing the RPC server is unavailable." border="false":::
 
 This is a common networking error that requires some basic familiarity with the process to successfully troubleshoot. To begin, there are several important terms to understand:
 
-- **Endpoint mapper (EPM)**: A service that listens on the server and guides client apps to server apps by using port and UUID information.
+- **Endpoint mapper (EPM)**: A service that listens on the server and guides client apps to server apps by using port and UUID information. The service is a part of the RPC subsystem that resolves dynamic endpoints in response to client requests. In some cases, it dynamically assigns endpoints to servers.
 - **Tower**: Describes the RPC protocol to enable the client and server to negotiate a connection.
 - **Floors**: The layers of contents within a tower that contain specific data, such as ports, IP addresses, and identifiers.
 - **UUID**: A well-known GUID that identifies an RPC application. During troubleshooting, you can use the UUID to track the RPC conversations of a single type of application (among the many types that occur on a single computer at one time).
@@ -120,14 +117,14 @@ Portqry.exe -n <ServerIP> -e 135
 For example, consider the following command:
 
 ```console
-Portqry.exe -n 169.254.0.2 -e 135
+Portqry.exe -n 10.10.10.10 -e 135
 ```
 
 This command produces output that resembles the following excerpt:  
 
 ```output
 Querying target system called:
-169.254.0.2
+10.10.10.10
 Attempting to resolve IP address to a name...
 IP address resolved to RPCServer.contoso.com
 querying...
@@ -136,7 +133,7 @@ Using ephemeral source port
 Querying Endpoint Mapper Database...
 Server's response:
 UUID: d95afe70-a6d5-4259-822e-2c84da1ddb0d
-ncacn_ip_tcp:169.254.0.2[49664]
+ncacn_ip_tcp:10.10.10.10[49664]
 ```
 
 By examining this output, you can determine the following information:
@@ -236,7 +233,7 @@ These procedures use the [TroubleShootingScript (TSS)](../windows-troubleshooter
 1. Start traces on the problem computer by running the following cmdlet:
 
     ```powershell
-    TSS.ps1 -Scenario NET_RPC
+    .\TSS.ps1 -Scenario NET_RPC
     ```
 
 1. Respond to the EULA prompt.

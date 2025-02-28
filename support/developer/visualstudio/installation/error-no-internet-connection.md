@@ -5,6 +5,7 @@ ms.date: 05/05/2022
 author: jasonchlus
 ms.author: jasonchlus
 ms.reviewer: terry.g.lee
+ms.custom: sap:Installation\Offline Install
 ---
 
 # Error - No Internet connection detected on this machine

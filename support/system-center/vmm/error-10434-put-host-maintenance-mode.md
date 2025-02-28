@@ -1,8 +1,8 @@
 ---
 title: Error 10434 when putting a host into Maintenance Mode
 description: Describes an issue in which you receive a 10434 No suitable host is available for migrating the existing highly available virtual machines error.
-ms.date: 07/17/2020
-ms.reviewer: vladrai
+ms.date: 04/09/2024
+ms.reviewer: wenca, vladrai
 ---
 # Putting a VMM 2012 host with a third-party switch extension into Maintenance Mode fails with error 10434
 

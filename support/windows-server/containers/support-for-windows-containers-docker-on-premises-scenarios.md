@@ -1,17 +1,14 @@
 ---
 title: Support policy for Windows containers and Docker in on-premises scenarios
 description: Summary of the configurations that Microsoft supports for Windows containers when you use them in an on-premises Windows deployment.
-ms.date: 05/11/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:management-of-containers, csstroubleshoot
-ms.technology: windows-server-containers
+ms.custom:
+- sap:containers\management of containers
+- pcy:WinComm Storage High Avail
 ---
 # Support policy for Windows Server containers in on-premises scenarios
 
@@ -90,7 +87,7 @@ Microsoft supports containers on Windows 10 or Windows 11 Professional or Enterp
 
 Microsoft doesn't provide support for the following configurations on Windows 10 and Windows 11 Professional or Enterprise:
 
-- Docker Desktop. You can get support from the [Docker Community Forums](https://forums.docker.com/c/docker-desktop-for-windows) or from Docker support. For more information, see [Docker Desktop for Windows FAQ](https://docs.docker.com/desktop/faqs/).
+- Docker Desktop. You can get support from the [Docker Community Forums](https://forums.docker.com/tags/c/docker-desktop/48/windows) or from Docker support. For more information, see [Docker Desktop for Windows FAQ](https://docs.docker.com/desktop/).
 - Windows Server containers or Hyper-V containers with isolation on virtual machines that are hosted on a Windows 10 or Windows 11 Professional or Enterprise system. To use containers on a virtual machine, use Windows Server as the host.
 - Windows Server containers do work on Windows 10 or Windows 11 now but aren't fully supported.
 

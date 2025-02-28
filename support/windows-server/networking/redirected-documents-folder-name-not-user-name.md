@@ -1,17 +1,14 @@
 ---
 title: Name of redirected folder isn't user name
 description: Describes a behavior that occurs after you redirect the Documents folder of a Windows Vista-based or Windows 7-based computer to a network share. Describes how to work around this behavior.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
-ms.technology: networking
+ms.custom:
+- sap:network connectivity and file sharing\dfs namespace (not replication)
+- pcy:WinComm Networking
 ---
 # When you redirect the Documents folder on a Windows Vista-based or Windows 7-based computer to a network share, the folder name unexpectedly changes back to Documents
 

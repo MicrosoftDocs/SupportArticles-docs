@@ -1,23 +1,19 @@
 ---
 title: Service using gMSA account doesn't start
 description: Address an issue in which service cannot start and slow startup and user logon when the service is configured to use gMSA account on a Windows Server 2012 R2-based DC.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:boot-is-slow, csstroubleshoot
-ms.technology: windows-server-performance
+ms.custom:
+- sap:system performance\startup or pre-logon performance (slow,unresponsive,spinning circle,blank screen)
+- pcy:WinComm Performance
 ---
 # Service configured to use gMSA account on a Windows Server 2012 R2-based DC doesn't start
 
 This article provides workaround for an issue where service can't start when the service is configured to use gMSA account on a Windows Server 2012 R2-based domain controller (DC).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4294429
 
 ## Symptom

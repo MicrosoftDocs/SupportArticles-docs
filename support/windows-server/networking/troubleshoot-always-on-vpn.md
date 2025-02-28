@@ -1,24 +1,19 @@
 ---
 title: Troubleshoot Always On VPN
 description: Provides instructions for verifying and troubleshooting Always On VPN deployment in Windows Server 2016.
-ms.date: 10/16/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, inhenkel, v-tappelgate, v-lianna
-ms.custom: sap:vpn, csstroubleshoot
-ms.technology: networking
+ms.custom:
+- sap:network connectivity and file sharing\remote access (vpn,rras,cmak and aovpn)
+- pcy:WinComm Networking
 ms.assetid: 4d08164e-3cc8-44e5-a319-9671e1ac294a
 ---
 # Troubleshoot Always On VPN
 
 This article provides instructions for verifying and troubleshooting Always On VPN deployment.
-
-_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 If your Always On Virtual Private Network (VPN) setup isn't connecting clients to your internal network, you may have encountered one of the following issues:
 

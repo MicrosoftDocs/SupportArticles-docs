@@ -1,23 +1,19 @@
 ---
 title: No VSS writers are listed
 description: Provides a resolution for the issue that no VSS writers are listed when you run vssadmin list writers.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:volume-shadow-copy-service-vss, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
+ms.custom:
+- sap:backup,recovery,disk,and storage\volume shadow copy service (vss)
+- pcy:WinComm Storage High Avail
 ---
 # No VSS writers are listed when you run vssadmin list writers
 
 This article provides a resolution for the issue that no VSS writers are listed when you run vssadmin list writers.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2009533
 
 ## Symptoms

@@ -1,10 +1,10 @@
 ---
 title: Troubleshoot Configuration Management bootstrap with modern provisioning
 description: Helps you understand and troubleshoot issues that you may encounter when you set up co-management by taking path 2 - Bootstrap the Configuration Manager client with modern provisioning.
-ms.date: 04/16/2020
+ms.date: 02/11/2025
 search.appverid: MET150
-ms.custom: sap:Co-management with Configuration Manager
-ms.reviewer: kaushika, luche
+ms.custom: sap:Co-management with System Center Configuration Manager\Prepare Windows 10 devices for co-management
+ms.reviewer: kaushika, luche, aaronmiller
 ---
 # Troubleshoot co-management: Bootstrap with modern provisioning
 
@@ -156,14 +156,21 @@ Intune evaluates the Configuration Manager agent state based on the `ClientHealt
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\MDM`
 
-The following are possible values of `ClientHealthStatus`:
+The value found in `ClientHealthStatus` is a combination of multiple flags which include:
 
 - **1**: Client installed
 - **2**: Client registered
-- **5**: Client installed, but hasn't run Health Evaluation yet
-- **7**: Client healthy
+- **4**: Successful health evaluation
 - **8**: Client install or upgrade error
-- **16**: Communication error in management point
+- **16**: Communication error with a management point
+
+The following are common values of `ClientHealthStatus`:
+
+- **1**: Client installed, but hasn't registered
+- **3**: Client installed and registered, but hasn't reported a successful health evaluation yet
+- **5**: Client installed, not currently registered, and sent a successful health evaluation (previously)
+- **7**: Client healthy
+- **23**: Client was healthy but had a communication error with a management point
 
 If the `ClientHealthStatus` value is **7** (healthy), Intune considers the Configuration Manager client as healthy if the `ClientHealthLastSyncTime` is not older than 30 days.
 

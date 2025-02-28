@@ -1,23 +1,19 @@
 ---
 title: Remote Desktop Connection for credentials
 description: Describes a problem that you may experience after you install the Remote Desktop Connection 6.0 client update. Provides a workaround.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, xiangwu
-ms.custom: sap:remote-desktop-sessions, csstroubleshoot
-ms.technology: windows-server-rds
+ms.custom:
+- sap:remote desktop services and terminal services\session connectivity
+- pcy:WinComm User Experience
 ---
 # Remote Desktop Connection 6.0 prompts you for credentials before you establish a remote desktop connection
 
 This article provides a workaround for the issue that Remote Desktop Connection 6.0 prompts you for credentials, before you establish a remote desktop connection.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 941641
 
 ## Symptoms

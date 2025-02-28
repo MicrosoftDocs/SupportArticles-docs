@@ -1,9 +1,10 @@
 ---
 title: Long Integer out of range
 description: Provides a solution to an error that occurs when running the Reconcile to GL financial routine.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # Reconcile to GL utility throws "Long Integer out of range." error
 

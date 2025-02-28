@@ -1,9 +1,9 @@
 ---
 title: Troubleshoot configuration service provider (CSP) custom settings
 description: Troubleshooting guidance for CSP custom setting issues for Windows 10 computers enrolled in Intune.
-ms.date: 05/11/2020
+ms.date: 02/11/2025
 search.appverid: MET150
-ms.custom: sap:Device configuration
+ms.custom: sap:Configure Devices - Windows\Custom
 ms.reviewer: kaushika
 ---
 # Troubleshooting CSP custom settings for Windows 10 computers enrolled in Intune

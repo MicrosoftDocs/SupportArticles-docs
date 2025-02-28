@@ -1,23 +1,19 @@
 ---
 title: Windows registry for advanced users
 description: Describes the Windows registry and provides information about how to edit it.
-ms.date: 04/06/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:system-hang, csstroubleshoot
-ms.technology: windows-server-performance
+ms.custom:
+- sap:system performance\system performance (slow,unresponsive,high cpu,resource leak)
+- pcy:WinComm Performance
 ---
 # Windows registry information for advanced users
 
 This article describes the Windows registry and provides information about how to edit and back it up.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 256986
 
 ## Description of the registry
@@ -51,7 +47,7 @@ The following table lists the predefined keys that are used by the system. The m
 |HKEY_CURRENT_USER|Contains the root of the configuration information for the user who is currently logged on. The user's folders, screen colors, and Control Panel settings are stored here. This information is associated with the user's profile. This key is sometimes abbreviated as _HKCU_.|
 |HKEY_USERS|Contains all the actively loaded user profiles on the computer. HKEY_CURRENT_USER is a subkey of HKEY_USERS. HKEY_USERS is sometimes abbreviated as _HKU_.|
 |HKEY_LOCAL_MACHINE|Contains configuration information particular to the computer (for any user). This key is sometimes abbreviated as _HKLM_.|
-|HKEY_CLASSES_ROOT|Is a subkey of `HKEY_LOCAL_MACHINE\Software`. The information that is stored here makes sure that the correct program opens when you open a file by using Windows Explorer. This key is sometimes abbreviated as _HKCR_. Starting with Windows 2000, this information is stored under both the HKEY_LOCAL_MACHINE and HKEY_CURRENT_USER keys. The `HKEY_LOCAL_MACHINE\Software\Classes` key contains default settings that can apply to all users on the local computer. The `HKEY_CURRENT_USER\Software\Classes` key contains settings that override the default settings and apply only to the interactive user. The HKEY_CLASSES_ROOT key provides a view of the registry that merges the information from these two sources. HKEY_CLASSES_ROOT also provides this merged view for programs that are designed for earlier versions of Windows. To change the settings for the interactive user, changes must be made under `HKEY_CURRENT_USER\Software\Classes` instead of under HKEY_CLASSES_ROOT. To change the default settings, changes must be made under `HKEY_LOCAL_MACHINE\Software\Classes`. If you write keys to a key under HKEY_CLASSES_ROOT, the system stores the information under `HKEY_LOCAL_MACHINE\Software\Classes`. If you write values to a key under HKEY_CLASSES_ROOT, and the key already exists under `HKEY_CURRENT_USER\Software\Classes`, the system will store the information there instead of under `HKEY_LOCAL_MACHINE\Software\Classes`.|
+|HKEY_CLASSES_ROOT|Is a subkey of `HKEY_LOCAL_MACHINE\Software`. The information that is stored here makes sure that the correct program opens when you open a file by using Windows Explorer. This key is sometimes abbreviated as _HKCR_. Starting with Windows 2000, this information is stored under both the HKEY_LOCAL_MACHINE and HKEY_CURRENT_USER keys. The `HKEY_LOCAL_MACHINE\Software\Classes` key contains default settings that can apply to all users on the local computer. The `HKEY_CURRENT_USER\Software\Classes` key contains settings that override the default settings and apply only to the interactive user. The HKEY_CLASSES_ROOT key provides a view of the registry that merges the information from these two sources. HKEY_CLASSES_ROOT also provides this merged view for programs that are designed for earlier versions of Windows. To change the settings for the interactive user, changes must be made under `HKEY_CURRENT_USER\Software\Classes` instead of under HKEY_CLASSES_ROOT. To change the default settings, changes must be made under `HKEY_LOCAL_MACHINE\Software\Classes`. If you write values to a key under HKEY_CLASSES_ROOT, the system stores the information under `HKEY_LOCAL_MACHINE\Software\Classes`. If you write values to a key under HKEY_CLASSES_ROOT, and the key already exists under `HKEY_CURRENT_USER\Software\Classes`, the system will store the information there instead of under `HKEY_LOCAL_MACHINE\Software\Classes`.|
 |HKEY_CURRENT_CONFIG|Contains information about the hardware profile that is used by the local computer at system startup.|
 
 > [!NOTE]
@@ -173,6 +169,6 @@ For more information, visit the following Web sites:
 
 - [Inside the Registry](/previous-versions//cc750583(v=technet.10))
 
-The [Windows Server Catalog](https://www.windowsservercatalog.com/results.aspx?text=backup&bCatID=1282&OR=5&chtext=&cstext=&csttext=&chbtext=) of Tested Products is a reference for products that have been tested for Windows Server compatibility.
+The [Windows Server Catalog](https://www.windowsservercatalog.com/software ) of Tested Products is a reference for products that have been tested for Windows Server compatibility.
 
 Data Protection Manager (DPM) is a key member of the Microsoft System Center family of management products and is designed to help IT professionals manage their Windows environment. DPM is the new standard for Windows backup and recovery and delivers continuous data protection for Microsoft application and file servers that use seamlessly integrated disk and tape media. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows XP and Windows Vista](https://support.microsoft.com/help/322756).

@@ -1,17 +1,14 @@
 ---
 title: Errors when you back up VMs that belong to a guest cluster
 description: Address errors that occur when you try to back up VMs that belong to a guest cluster.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:backup-and-restore-of-virtual-machines, csstroubleshoot
-ms.technology: hyper-v
+ms.custom:
+- sap:virtualization and hyper-v\backup and restore of virtual machines
+- pcy:WinComm Storage High Avail
 ---
 # Errors when backing up VMs that belong to a guest cluster in Windows
 

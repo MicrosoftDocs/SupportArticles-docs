@@ -1,23 +1,19 @@
 ---
 title: Remote Desktop Licensing Service doesn't start
 description: Resolves an issue where Remote Desktop Licensing Service fails to start with event ID 623.
-ms.date: 05/16/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, AJAYPS, BHASKARR
-ms.custom: sap:remote-desktop-services-terminal-services-licensing, csstroubleshoot
-ms.technology: windows-server-rds
+ms.custom:
+- sap:remote desktop services and terminal services\licensing for remote desktop services (terminal services)
+- pcy:WinComm User Experience
 ---
 # Remote Desktop Licensing Service may not start and event ID 623 may be logged
 
 This article provides a solution to an issue where Remote Desktop Licensing Service fails to start with event ID 623.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3167312
 
 ## Symptoms

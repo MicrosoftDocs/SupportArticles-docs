@@ -1,23 +1,19 @@
 ---
 title: Folder Redirection settings aren't applied
 description: Provides a solution to an issue where folders aren't redirected after you configure Folder redirection.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, lindakup
-ms.custom: sap:folder-redirection, csstroubleshoot
-ms.technology: windows-server-user-profiles
+ms.custom:
+- sap:user logon and profiles\enterprise state roaming (esr) and folder redirection
+- pcy:WinComm Directory Services
 ---
 # Folder Redirection settings aren't applied
 
 This article provides a solution to an issue where folders aren't redirected after you configure Folder redirection.
 
-_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2811384
 
 ## Symptoms

@@ -1,23 +1,19 @@
 ---
 title: Stop 7F, 0x00000008 (double-fault) error
 description: Provides a solution to a STOP 0x0000007F, 0x00000008 error message on your computer because of a specific processor error.
-ms.date: 08/08/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
-ms.technology: windows-server-performance
+ms.custom:
+- sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot)
+- pcy:WinComm Performance
 ---
 # Stop 7F, 0x00000008 (double-fault) error occurs because of a single-bit error in the ESP register
 
-This article provides a solution to a STOP 0x0000007F, 0x00000008 error message on your computer because of a specific processor error. This error message may be displayed when a single-bit error occurs in the  Electric Service Provider (ESP) register of a processor that is running on the computer.
+This article provides a solution to a STOP 0x0000007F, 0x00000008 error message on your computer because of a specific processor error. This error message may be displayed when a single-bit error occurs in the ESP register of a processor that is running on the computer.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 842465
 
 ## Symptoms
@@ -91,8 +87,6 @@ Excessive room temperature, bad ventilation, or dust accumulation can cause elec
 Voltage that is higher or lower than specified, or that fluctuates, may cause processors and other electronic components to behave erratically. Incorrect or inconsistent main power voltage, an overloaded or improperly functioning power supply in the computer, or improperly functioning motherboard circuitry may cause incorrect or inconsistent voltage to be supplied to the processor. Contact the appropriate technicians to verify whether any one of these issues may be the cause of symptoms.
 
 ## More information
-
-For more information about STOP 0x0000007F errors, see [0x0000007F Stop error on a Windows-based computer](https://support.microsoft.com/help/137539).
 
 The ESP register is also known as the stack pointer register. A stack is a data structure in memory that is used to store information about the current state of the execution of a thread. A thread's stack is used to keep track of function calls in progress, of parameters that are passed to those functions, and of variables that are used by those functions. The value in the ESP register is expected to point to the current top of the stack. If the value in ESP is incorrect, it may point to incorrect information or to an invalid address. If the value in ESP points to an invalid address, a double-fault exception may occur.
 

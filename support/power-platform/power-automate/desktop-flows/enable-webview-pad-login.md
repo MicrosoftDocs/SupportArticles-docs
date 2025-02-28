@@ -3,7 +3,7 @@ title: Can't sign in with JavaScript error
 description: Provides a resolution for a login issue in Power Automate for desktop.
 ms.reviewer: pefelesk, nimoutzo, dipapa, iomavrid
 ms.date: 02/20/2023
-ms.subservice: power-automate-desktop-flows
+ms.custom: sap:Desktop flows\Cannot access Power Automate for desktop application
 ---
 # Can't sign in with a JavaScript error
 

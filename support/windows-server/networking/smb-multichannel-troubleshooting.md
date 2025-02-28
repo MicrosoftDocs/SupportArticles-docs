@@ -1,17 +1,14 @@
 ---
 title: SMB multichannel troubleshooting
 description: Introduces SMB Multichannel troubleshooting methods.
-ms.date: 10/19/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, v-lianna
-ms.custom: sap:smb, csstroubleshoot
-ms.technology: networking
+ms.custom:
+- sap:network connectivity and file sharing\access to file shares (smb)
+- pcy:WinComm Networking
 ---
 # SMB multichannel troubleshooting
 
