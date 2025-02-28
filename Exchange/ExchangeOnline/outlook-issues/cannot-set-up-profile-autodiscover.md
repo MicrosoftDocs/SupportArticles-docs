@@ -15,7 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
-ms.date: 01/25/2025
+ms.date: 02/27/2025
 ms.reviewer: gbratton
 ---
 # Outlook can't set up a new profile by using Exchange Autodiscover for an Exchange Online mailbox in Microsoft 365
@@ -46,13 +46,23 @@ This problem occurs for one of the following reasons:
 
 ### Recommended method
 
-#### Method 1: Run Microsoft 365 Support and Recovery Assistant
+#### Method 1: Run the Classic Outlook Profile Setup troubleshooter in Get Help
 
-[!INCLUDE [Microsoft Support and Recovery Assistant note](../../../includes/sara-note-new-outlook.md)]
+[!INCLUDE [Get Help troubleshooter note](../../../includes/sara-note-new-outlook.md)]
 
-Use the [Classic Outlook profile setup troubleshooter](https://support.microsoft.com/en-us/windows/classic-outlook-troubleshooters-086e3d66-5404-4034-9cc5-545909dcc166) in the Get Help app.
+The [Classic Outlook Profile Setup troubleshooter](https://aka.ms/SaRA-OutlookSetupProfile-sarahome) helps you configure your Microsoft 365 email in classic Outlook.
 
-This troubleshooter performs automated checks and returns possible solutions to fix any detected issues.
+To run the troubleshooter, follow these steps:
+
+1. Select the following button to start the troubleshooter.
+
+   > [!div class="nextstepaction"]
+   > [Classic Outlook Profile Setup troubleshooter](https://aka.ms/SaRA-OutlookSetupProfile-sarahome)
+
+   If you receive a pop-up window that displays "This site is trying to open Get Help", select **Open**.
+1. Follow the instructions in the Get Help app to run the troubleshooter.
+
+After the troubleshooter finishes, it displays the results and provides additional information about how to resolve the issue.
 
 ### Other methods
 
