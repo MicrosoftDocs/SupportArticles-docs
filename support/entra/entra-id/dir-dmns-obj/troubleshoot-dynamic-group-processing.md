@@ -23,6 +23,9 @@ These issues can be caused by:
 
 This article provides sample Entra ID PowerShell scripts to pause and resume dynamic group updates. Pausing dynamic group processing can stop rule processing and prevent unintended membership updates. Resuming dynamic group processing can restore normal group functionality.
 
+>[!IMPORTANT]
+> Processing times can vary due to the number of changes, group size, complexity of rules, and operator choice. Typically, changes are processed faster than 24 hours, but in rare instances, it may take longer. For more information on optimizing rule processing performance, see [Create more efficient rules.](https://learn.microsoft.com/entra/identity/users/groups-dynamic-rule-more-efficient)
+
 ## Download pause and resume dynamic group processing scripts
 
 To download the scripts, visit our [GitHub repository](https://github.com/barclayn/samples-dynamic-group/tree/main).
