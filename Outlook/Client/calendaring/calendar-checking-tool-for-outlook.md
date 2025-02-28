@@ -22,7 +22,7 @@ search.appverid: MET150
 ms.reviewer: aruiz, randyto, v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 02/25/2025
+ms.date: 02/27/2025
 ---
 # Information about the Calendar Checking Tool for Outlook (CalCheck)
 

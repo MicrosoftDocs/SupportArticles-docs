@@ -19,7 +19,7 @@ appliesto:
   - Outlook 2010 with Business Contact Manager
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 02/25/2025
+ms.date: 02/27/2025
 ---
 # Outlook not responding error or Outlook freezes when you open a file or send mail
 

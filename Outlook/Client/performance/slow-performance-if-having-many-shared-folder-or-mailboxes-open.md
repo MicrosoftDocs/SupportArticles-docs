@@ -18,7 +18,7 @@ appliesto:
   - Microsoft Outlook 2010
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 02/25/2025
+ms.date: 02/27/2025
 ---
 # Outlook performance issues when you have many shared folders or mailboxes open
 

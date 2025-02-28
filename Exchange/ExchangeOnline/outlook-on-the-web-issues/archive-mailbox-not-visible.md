@@ -22,7 +22,7 @@ appliesto:
   - Outlook on the web
   - New Outlook for Windows
 search.appverid: MET150
-ms.date: 02/25/2025
+ms.date: 02/27/2025
 ---
 
 # Archive mailbox doesn't appear in Outlook or Outlook on the web

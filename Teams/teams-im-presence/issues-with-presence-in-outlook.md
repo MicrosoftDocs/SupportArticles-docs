@@ -16,7 +16,7 @@ appliesto:
   - Outlook
 search.appverid: 
   - MET150
-ms.date: 02/25/2025
+ms.date: 02/27/2025
 ---
 # User presence status issues in Outlook
 

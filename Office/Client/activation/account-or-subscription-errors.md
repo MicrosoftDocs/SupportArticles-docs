@@ -17,7 +17,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
-ms.date: 02/11/2025
+ms.date: 02/27/2025
 ---
 
 # Account or subscription verification errors activating Microsoft 365 Apps
