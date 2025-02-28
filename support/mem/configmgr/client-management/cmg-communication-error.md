@@ -33,7 +33,7 @@ Received response `https://InternalMP.contoso.com/SMS_MP/.sms_aut?MPLIST2&CM1` f
 
 ### Cause
 
-The CMG connection point requires a [server authentication certificate](/mem/configmgr/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_clientauth) to securely forward client requests to an HTTPS management point. If the server authentication certificate is missing, misconfigured, or invalid, status code 403 is returned. In scenarios wh the Management Point (MP) operates in enhanced HTTP mode with token-based authentication, the certificate isn't required but is always recommended.
+The CMG connection point requires a [server authentication certificate](/mem/configmgr/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_clientauth) to securely forward client requests to an HTTPS management point. If the server authentication certificate is missing, misconfigured, or invalid, status code 403 is returned. In scenarios where the Management Point (MP) operates in enhanced HTTP mode with token-based authentication, the certificate isn't required but is always recommended.
 
 ### Resolution
 
