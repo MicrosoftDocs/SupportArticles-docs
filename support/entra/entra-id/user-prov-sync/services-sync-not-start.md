@@ -58,7 +58,7 @@ You can also try to find and fix the problem by scanning the Application and Sys
 
 ## Solution 3: Check the Microsoft Azure AD Sync (ADSync) service account
 
-If solutions 1 and 2 do not resolve the issue, verify the status of your custom ADSync service account. Ensure that the account is not expired or disabled, does not have "User must change password at next logon" enabled, and that its password is not expired. If the password has been changed, use the Services.msc console to update the ADSync service account password.
+If solutions 1 and 2 don't resolve the issue, verify the status of your custom ADSync service account. Ensure that the account isn't expired or disabled, doesn't have "User must change password at next logon" enabled, and that its password isn't expired. If the password was changed, use the Services.msc console to update the ADSync service account password.
 
 For information on other types of Windows service accounts, refer to [ADSync service account](/entra/identity/hybrid/connect/concept-adsync-service-account) documentation.
 
