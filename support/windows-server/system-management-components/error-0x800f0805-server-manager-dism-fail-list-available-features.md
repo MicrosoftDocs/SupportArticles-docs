@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, hamansoor, v-lianna
-ms.custom: sap:System Management Components\Server Manager, csstroubleshoot, ikb2lmc
+ms.custom:
+- sap:system management components\server manager
+- pcy:WinComm User Experience
 ---
 # Error 0x800f0805 when Server Manager and DISM fail to list the available features 
 

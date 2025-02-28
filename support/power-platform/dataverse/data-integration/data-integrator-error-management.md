@@ -1,25 +1,25 @@
 ---
 title: "Error management and troubleshooting for data integration projects"
 description: "Troubleshoot issues and manage errors when executing data integration projects using the Data Integrator service."
-ms.topic: conceptual
 ms.component: pa-admin
-ms.date: 11/19/2021
+ms.date: 02/20/2025
 author: NHelgren
-ms.subservice: admin
 ms.author: nhelgren
-ms.reviewer: sericks
+ms.reviewer: nhelgren, sericks
+ms.custom: sap:Microsoft Dataverse\Microsoft Dataverse miscellaneous
 search.audienceType: 
   - admin
 ---
 # Data Integrator error management and troubleshooting
 
-The Data Integrator is a point-to-point integration service used to integrate data from multiple sources--for example, finance and operations apps, Dynamics 365 Sales, Salesforce, and Microsoft SQL (Preview)--into Microsoft Dataverse. It also supports integrating data into finance and operations apps and Dynamics 365 Sales. The [Integrate data into Dataverse](/power-platform/admin/data-integrator) topic provides detailed step-by-step instructions to help you set up projects for process-based integration scenarios like Prospect to Cash, Field Service, and Project Service integrations. 
+The Data Integrator is a point-to-point integration service used to integrate data from multiple sources--for example, finance and operations apps, Dynamics 365 Sales, Salesforce, and Microsoft SQL (Preview)--into Microsoft Dataverse. It also supports integrating data into finance and operations apps and Dynamics 365 Sales. The [Integrate data into Dataverse](/power-platform/admin/data-integrator) topic provides detailed step-by-step instructions to help you set up projects for process-based integration scenarios like Prospect to Cash, Field Service, and Project Service integrations.
 
 While we are constantly evolving and driving fixes into the platform based on customer feedback, we understand there is a need to provide guidance when you run into issues. This topic walks you through error management and troubleshooting some of these issues.
 
 ## Supported regions
 
 The Data Integrator is supported for the following regions:
+
 - Asia
 - Australia
 - Canada
@@ -44,12 +44,12 @@ The admin dashboard provides a one-stop real-time view of all your project runs 
 Additionally, to view more details, you can drill through project executions via the admin dashboard by selecting individual bar charts.
 
 > [!div class="mx-imgBorder"] 
-> ![Dashboard drill down.](media/DashboardDrill-down.png "Dashboard drill down")
+> ![Screenshot of the dashboard drill down options that you can use to view more details.](media/DashboardDrill-down.png "Screenshot of the dashboard drill down options that you can use to view more details.")
 
 Now you can drill through individual errors.
 
 > [!div class="mx-imgBorder"] 
-> ![Dashboard drill down.](media/DashboardDrill-down2.png "Dashboard drill down")
+> ![Screenshot of the the individual errors shown on the Recent project runs page.](media/DashboardDrill-down2.png "Screenshot of the the individual errors shown on the Recent project runs page.")
 
 You can also view project execution details by selecting the individual projects on the project list page and viewing the historical executions and status on the **Execution history** tab.
 

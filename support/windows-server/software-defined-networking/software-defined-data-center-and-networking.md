@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, johnmar
-ms.custom: sap:Software Defined Networking\Internal Name Resolution for SDN, csstroubleshoot
+ms.custom:
+- sap:software defined networking\internal name resolution for sdn
+- pcy:WinComm Networking
 ---
 # Software Defined Data Center and Software Defined Networking in Windows Server
 

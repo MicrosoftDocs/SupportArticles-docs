@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\Virtualized domain controller (errors and questions), csstroubleshoot
+ms.custom:
+- sap:active directory\virtualized domain controller (errors and questions)
+- pcy:WinComm Directory Services
 ---
 # Things to consider when you host Active Directory domain controllers in virtual hosting environments
 

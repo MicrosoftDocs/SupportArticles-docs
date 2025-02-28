@@ -250,7 +250,7 @@ To fix the issue, follow these steps:
     
     - [Repair the Linux VM using the Azure VM repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md).
     
-    - (Offline method) [Create a Rescue VM to fix VM boot issues manually](linux-virtual-machine-cannot-start-fstab-errors.md#use-manual-method).
+    - (Offline method) [Create a Rescue VM to fix VM boot issues manually](linux-virtual-machine-cannot-start-fstab-errors.md#use-the-manual-method).
 
 2. If you use the Azure VM repair commands or the offline method in step 1, follow the chroot process introduced in [Chroot environment in a Linux rescue VM](chroot-environment-linux.md).
 

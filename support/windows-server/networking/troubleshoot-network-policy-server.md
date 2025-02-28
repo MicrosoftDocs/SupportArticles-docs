@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-tappelgate, hoz
-ms.custom: sap:Network Connectivity and File Sharing\RADIUS - Network Policy Server (NPS) or Internet Authentication Service (IAS), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\radius - network policy server (nps) or internet authentication service (ias)
+- pcy:WinComm Networking
 ---
 
 # Network Policy Server troubleshooting guidance

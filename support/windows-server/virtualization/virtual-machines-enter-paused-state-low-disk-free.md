@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, stevenxu
-ms.custom: sap:Virtualization and Hyper-V\Virtual machine state, csstroubleshoot
+ms.custom:
+- sap:virtualization and hyper-v\virtual machine state
+- pcy:WinComm Storage High Avail
 ---
 # Virtual machines enter the paused state due to low disk free space
 

@@ -4,12 +4,13 @@ description: You can't use Microsoft Dynamics 365 App for Outlook due to the err
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
+ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
 # You don't have the required role or privilege to complete this action error in Microsoft Dynamics 365 App for Outlook
 
 This article provides a resolution for the issue that you can't use the Microsoft Dynamics 365 App for Outlook due to the **You don't have the required role or privilege to complete this action** error.
 
-_Applies to:_ &nbsp; Microsoft Dynamics 365 Customer Engagement Online  
+_Applies to:_ &nbsp; Dynamics 365 App for Outlook  
 _Original KB number:_ &nbsp; 4557523
 
 ## Symptoms

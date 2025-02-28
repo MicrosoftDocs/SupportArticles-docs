@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, keithpe
-ms.custom: sap:Backup, Recovery, Disk, and Storage\System Restore, csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\system restore
+- pcy:WinComm Storage High Avail
 ---
 # How to restore a Windows 7 installation
 

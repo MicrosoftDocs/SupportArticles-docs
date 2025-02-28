@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, scottmca
-ms.custom: sap:Windows Setup, Upgrade and Deployment\Sysprep and imaging (Windows PE, ADK, WDS), csstroubleshoot
+ms.custom:
+- sap:windows setup,upgrade and deployment\sysprep and imaging (windows pe,adk,wds)
+- pcy:WinComm Devices Deploy
 ---
 # Multicast Deployment Fails from Windows Deployment Services
 

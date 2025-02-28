@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, jgerend, v-lianna
-ms.custom: sap:Group Policy\Applocker or software restriction policies, csstroubleshoot
+ms.custom:
+- sap:group policy\applocker or software restriction policies
+- pcy:WinComm Directory Services
 ---
 # Troubleshoot software restriction policies
 

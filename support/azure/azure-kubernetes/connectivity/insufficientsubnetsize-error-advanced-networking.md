@@ -1,7 +1,7 @@
 ---
 title: InsufficientSubnetSize error code
 description: Learn how to fix an InsufficientSubnetSize error that occurs when you deploy an Azure Kubernetes Service (AKS) cluster that uses advanced networking.
-ms.date: 11/29/2023
+ms.date: 02/20/2025
 author: jotavar
 ms.author: jotavar
 ms.reviewer: chiragpa, nickoman, v-leedennis

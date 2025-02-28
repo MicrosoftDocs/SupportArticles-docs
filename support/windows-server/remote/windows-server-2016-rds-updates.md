@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Remote Desktop Services and Terminal Services\Deployment, configuration, and management of Remote Desktop Services infrastructure, csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\deployment,configuration,and management of remote desktop services infrastructure
+- pcy:WinComm User Experience
 ---
 # Available Remote Desktop Services updates in Windows Server 2016
 
@@ -306,7 +308,7 @@ Remote Desktop Gateway
 
 Remote Desktop Virtualization Host  
 
-- [KB4013429](https://support.microsoft.com/help/4013429) Addressed an issue in which t he RD Virtualization Host role fails to install on nested VM.  
+- [KB4013429](https://support.microsoft.com/help/4013429) Addressed an issue in which the RD Virtualization Host role fails to install on nested VM.  
 
 Remote Desktop Web Access  
 
