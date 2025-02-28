@@ -34,7 +34,7 @@ When you start Microsoft Outlook, switch folders, or synchronize email, you may 
 
 You have many shared folders or mailboxes, or both, open in Outlook. In the case with a shared calendar, modifications or additions can't be made until the program is finished syncing updates.
 
-The number of shared folders and mailboxes that you can have open without issues depend on several factors, including hardware, mailbox size, size of the shared folders or mailboxes, number of folders in a shared mailbox, item count in folders, and network speed. A computer that has slower hardware, a large mailbox, and slow network connection may not be able to open more than five shared folders or mailboxes. However, a faster computer that has a smaller mailbox and a fast network connection may be able to open 10 or more shared folders or mailboxes.
+The number of shared folders and mailboxes that you can have open without issues depends on several factors, including hardware, mailbox size, size of the shared folders or mailboxes, number of folders in a shared mailbox, item count in folders, and network speed. A computer that has slower hardware, a large mailbox, and slow network connection may not be able to open more than five shared folders or mailboxes. However, a faster computer that has a smaller mailbox and a fast network connection may be able to open 10 or more shared folders or mailboxes.
 
 ## Resolution
 

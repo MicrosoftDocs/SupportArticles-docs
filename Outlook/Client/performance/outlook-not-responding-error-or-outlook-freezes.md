@@ -166,8 +166,8 @@ You can automatically repair your Office program files to resolve such problems 
 #### How to automatically repair Office
 
 1. Exit any Microsoft Office programs that are running.
-2. Open Control Panel, and then open the **Add or Remove Programs** item (if you're running Windows XP) or **Programs and Features** (if you're running Windows 10, Windows 8, Windows 7, or Windows Vista).
-3. In the list of installed programs, right-click **Microsoft Office 2016**, **Microsoft Office 2013, or **Microsoft Office 2010**, and then select **Repair**.  
+2. Open Control Panel, and then open **Programs and Features** (if you're running Windows 10, Windows 8, or Windows 7).
+3. In the list of installed programs, right-click **Microsoft Office 2016**, **Microsoft Office 2013**, or **Microsoft Office 2010**, and then select **Repair**.  
 
 ### Step 8 - Repair Outlook data files
 
@@ -294,7 +294,7 @@ To create a user profile, you must first create a user account. When the new acc
 9. Locate the C:\Users\New_Username folder, in which **C** is the drive that Windows is installed on, and **New_Username** is the name of the user profile that you created earlier in this method.
 
 10. On the **Edit** menu, select **Paste**.
-11. Sign out, and then Sign back in as the new user.
+11. Sign out, and then sign in as the new user.
 
 > [!NOTE]
 > If you have email messages in an email program, you must import your email messages and addresses to the new user profile before you delete the old profile. If everything is working correctly, you can now delete the old profile.
