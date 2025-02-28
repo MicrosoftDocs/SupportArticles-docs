@@ -63,10 +63,8 @@ items:
       href: client-management/clients-not-receive-policy-data.md
     - name: Cloud services
       items:
-        - name: WINHTTP_CALLBACK_STATUS_FLAG_CERT_CN_INVALID
-          href: client-management/cannot-download-content-from-cmg.md
         - name: Clients can't communicate with CMG
-          href: client-management/cmg-communication-error-403.md
+          href: client-management/cmg-communication-error.md
         - name: CMG creation fails after signing in Configuration Manager
           href: client-management/new-cmg-creation-fails-after-sign-in-configuration-manager.md  
         - name: Tenant attach components fail to connect to backend cloud service
