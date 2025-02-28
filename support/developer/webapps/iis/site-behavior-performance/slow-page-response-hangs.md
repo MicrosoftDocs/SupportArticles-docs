@@ -72,7 +72,7 @@ IIS Log Catcher collects a variety of historical logs and configuration data at 
 
 ##### IIS web logs (W3SVC logs)
 
-Collect IIS logs from a time during which the slowness occurs. This can be helpful in confirming that time-taken field reflects the slowness. It can also help to narrow down the page or pages that are responding slowly.
+Collect IIS logs from a time during which the slowness occurs. This can be helpful in confirming that the time-taken field reflects the slowness. It can also help to narrow down the page or pages that are responding slowly.
 
 ##### Windows system, application, and security Event Logs
 
@@ -120,7 +120,7 @@ If the configuration files aren't collected as part of the IIS Log Catcher data,
 
 ##### IIS web logs (W3SVC logs)
 
-If the web logs aren't collected as part of the IIS Log Catcher data, collect them manually. By default, these logs are in c:\inetpub\logs\logfiles. Each site has its own directory named **W3SVC#** where the **#** is the **SiteID**. However, the log location is customizable. You might need to review **applicationhost.config** for the **logFile** and directory or review the settings in the IIS Manager.
+If the web logs aren't collected as part of the IIS Log Catcher data, collect them manually. By default, these logs are in **c:\\inetpub\\logs\\logfiles**. Each site has its own directory named **W3SVC#** where the **#** is the **SiteID**. However, the log location is customizable. You might need to review **applicationhost.config** for the **logFile** and directory or review the settings in the IIS Manager.
 
 ##### Windows system, application and security event logs
 
@@ -417,4 +417,4 @@ It's simpler and more understandable to run only one type of analysis rule at a 
 > [!NOTE]
 > If a more detailed analysis is needed, use [WinDbg](/windows-hardware/drivers/debuggercmds/windbg-overview) to review dumps.
 
-[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)
+[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
