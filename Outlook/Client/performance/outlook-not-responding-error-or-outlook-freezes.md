@@ -45,11 +45,11 @@ This problem occurs for one or more of the following reasons:
 - Your user profile has become corrupted.
 - Another program conflicts with Outlook.
 
-Many of these items can be automatically checked by the [classic Outlook advanced diagnostics troubleshooter](https://aka.ms/SaRA-OutlookAdvDiagExpExp-sarahome).
+Many of these items can be automatically checked by the [Classic Outlook Advanced Diagnostics troubleshooter](https://aka.ms/SaRA-OutlookAdvDiagExpExp-sarahome).
 
 > [!NOTE]
 >
-> - The troubleshooter doesn't work with new Outlook for Windows.
+> - The troubleshooter doesn't work in new Outlook for Windows.
 > - To run the troubleshooter, make sure that you're using the same Windows device that classic Outlook is installed on. Additionally, make sure that your device is running Windows 10 or a later version.
 
 To run the troubleshooter, follow these steps:
@@ -57,7 +57,7 @@ To run the troubleshooter, follow these steps:
 1. Select the following button to start the troubleshooter.
 
    > [!div class="nextstepaction"]
-   > [Classic Outlook advanced diagnostics troubleshooter](https://aka.ms/SaRA-OutlookAdvDiagExpExp-sarahome)
+   > [Classic Outlook Advanced Diagnostics troubleshooter](https://aka.ms/SaRA-OutlookAdvDiagExpExp-sarahome)
 
    If you receive a pop-up window that displays "This site is trying to open Get Help.", select **Open**.
 1. Follow the instructions in the Get Help app to run the troubleshooter.

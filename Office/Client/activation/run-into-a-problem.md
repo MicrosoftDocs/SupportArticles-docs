@@ -76,24 +76,24 @@ If you have Microsoft 365 for Business Basic, you won’t have any Office applic
   
 Make sure that the version listed (32-bit or 64-bit) matches your version of Windows. To check what version of Windows you have installed, go to **Start** > **Settings** (gear icon) > **System** > **About**, and check the **System type**.
   
-If you have a different edition or version installed on your device, run the [Microsoft 365 uninstall troubleshooter](https://aka.ms/SaRA-OfficeUninstall-sarahome) to uninstall Office. Then, restart the device, and install from https://portal.office.com/account to get the correct version.
+If you have a different edition or version installed on your device, run the [Microsoft 365 Uninstall troubleshooter](https://aka.ms/SaRA-OfficeUninstall-sarahome) to uninstall Office. Then, restart the device, and install from https://portal.office.com/account to get the correct version.
 <br/><br/>
 </details>
 
 <details>
-<summary><b>Uninstall Microsoft 365 apps and then reinstall</b></summary>
+<summary><b>Uninstall and reinstall Microsoft 365 apps</b></summary>
 
-1. Run the [Microsoft 365 uninstall troubleshooter](https://aka.ms/SaRA-OfficeUninstall-sarahome) to uninstall Microsoft 365 or Office.
+1. Run the [Microsoft 365 Uninstall troubleshooter](https://aka.ms/SaRA-OfficeUninstall-sarahome) to uninstall Microsoft 365 or Office.
 
    > [!NOTE]
-   > To run the Microsoft 365 uninstall troubleshooter, make sure that you're using the same Windows device that Microsoft 365 or Office product is installed on. Additionally, make sure that your device is running Windows 10 or a later version.
+   > To run the Microsoft 365 Uninstall troubleshooter, make sure that you're using the same Windows device that Microsoft 365 or the Office product is installed on. Additionally, make sure that your device is running Windows 10 or a later version.
 
    To run the troubleshooter, follow these steps:
 
    1. Select the following button to start the troubleshooter.
 
       > [!div class="nextstepaction"]
-      > [Microsoft 365 uninstall troubleshooter](https://aka.ms/SaRA-OfficeUninstall-sarahome)
+      > [Microsoft 365 Uninstall troubleshooter](https://aka.ms/SaRA-OfficeUninstall-sarahome)
 
       If you receive a pop-up window that displays "This site is trying to open Get Help.", select **Open**.
    1. Follow the instructions in the Get Help app to run the troubleshooter.

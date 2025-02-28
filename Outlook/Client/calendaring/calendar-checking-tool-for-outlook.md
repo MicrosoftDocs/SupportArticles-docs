@@ -45,18 +45,18 @@ Because these calendar item fields may contain personal information or details, 
 
 To use CalCheck, the Outlook calendar must reside on a computer that's running Microsoft Exchange Server. The tool doesn't work with IMAP, POP3, or other non-Exchange email accounts.
 
-### Method 1: Use the classic Outlook calendar check troubleshooter
+### Method 1: Use the Classic Outlook Calendar Check troubleshooter
 
 [!INCLUDE [Get Help troubleshooter note](../../../includes/sara-note-new-outlook.md)]
 
-The [classic Outlook calendar check troubleshooter](https://aka.ms/SaRA-CalCheck-sarahome) scans your classic Outlook calendar to help identify and resolve issues.
+The [Classic Outlook Calendar Check troubleshooter](https://aka.ms/SaRA-CalCheck-sarahome) scans your classic Outlook calendar to help identify and resolve issues.
 
 To run the troubleshooter, follow these steps:
 
 1. Select the following button to start the troubleshooter.
 
    > [!div class="nextstepaction"]
-   > [Classic Outlook calendar check troubleshooter](https://aka.ms/SaRA-CalCheck-sarahome)
+   > [Classic Outlook Calendar Check troubleshooter](https://aka.ms/SaRA-CalCheck-sarahome)
 
    If you receive a pop-up window that displays "This site is trying to open Get Help", select **Open**.
 1. Follow the instructions in the Get Help app to run the troubleshooter.

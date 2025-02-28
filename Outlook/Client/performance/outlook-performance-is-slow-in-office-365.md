@@ -55,11 +55,11 @@ To fix this issue, follow these steps:
 
 3. Try the following methods:
 
-   - Run the [classic Outlook advanced diagnostis troubleshooter](https://aka.ms/SaRA-OutlookAdvDiagExpExp-sarahome) create a detailed configuration report.
+   - Run the [Classic Outlook Advanced Diagnostics troubleshooter](https://aka.ms/SaRA-OutlookAdvDiagExpExp-sarahome) to create a detailed configuration report.
 
      > [!NOTE]
      >
-     > - The troubleshooter doesn't work with new Outlook for Windows.
+     > - The troubleshooter doesn't work in new Outlook for Windows.
      > - To run the troubleshooter, make sure that you're using the same Windows device that classic Outlook is installed on. Additionally, make sure that your device is running Windows 10 or a later version.
 
      To run the troubleshooter, follow these steps:
@@ -67,7 +67,7 @@ To fix this issue, follow these steps:
        1. Select the following button to start the troubleshooter.
 
            > [!div class="nextstepaction"]
-           > [Classic Outlook advanced diagnostics troubleshooter](https://aka.ms/SaRA-OutlookAdvDiagExpExp-sarahome)
+           > [Classic Outlook Advanced Diagnostics troubleshooter](https://aka.ms/SaRA-OutlookAdvDiagExpExp-sarahome)
 
            If you receive a pop-up window that displays "This site is trying to open Get Help.", select **Open**.
        1. Follow the instructions in the Get Help app to run the troubleshooter.

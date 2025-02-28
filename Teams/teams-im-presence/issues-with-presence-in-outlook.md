@@ -30,16 +30,16 @@ You see any of the following issues when you check the presence status for a use
 
 ## Resolution
 
-### Run the classic Teams user presence troubleshooter in Get Help
+### Run the Classic Teams User Presence troubleshooter in Get Help
 
 [!INCLUDE [Get Help troubleshooter note](../../includes/sara-note-new-teams.md)]
 
-The [classic Teams user presence troubleshooter](https://aka.ms/SaRA-TeamsPresence-sarahome) helps you resolve inaccurate user presence status information displayed in classic Outlook.
+The [Classic Teams User Presence troubleshooter](https://aka.ms/SaRA-TeamsPresence-sarahome) helps you resolve inaccurate user presence status information that's displayed in classic Outlook.
 
 To run the troubleshooter, follow these steps:
 
 1. Start the Get Help app.
-1. In the **Search** bar, enter *Issues with Teams user presence in Outlook*.
+1. On the **Search** bar, enter *Issues with Teams user presence in Outlook*.
 1. Follow the instructions in the Get Help app to run the troubleshooter.
 
 After the troubleshooter finishes, it displays the results and provides additional information about how to resolve the issue.

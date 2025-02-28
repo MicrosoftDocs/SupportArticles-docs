@@ -46,18 +46,18 @@ This problem occurs for one of the following reasons:
 
 ### Recommended method
 
-#### Method 1: Run the classic Outlook profile setup troubleshooter in Get Help
+#### Method 1: Run the Classic Outlook Profile Setup troubleshooter in Get Help
 
 [!INCLUDE [Get Help troubleshooter note](../../../includes/sara-note-new-outlook.md)]
 
-The [classic Outlook profile setup troubleshooter](https://aka.ms/SaRA-OutlookSetupProfile-sarahome) helps you configure your Microsoft 365 email in classic Outlook.
+The [Classic Outlook Profile Setup troubleshooter](https://aka.ms/SaRA-OutlookSetupProfile-sarahome) helps you configure your Microsoft 365 email in classic Outlook.
 
 To run the troubleshooter, follow these steps:
 
 1. Select the following button to start the troubleshooter.
 
    > [!div class="nextstepaction"]
-   > [Classic Outlook profile setup troubleshooter](https://aka.ms/SaRA-OutlookSetupProfile-sarahome)
+   > [Classic Outlook Profile Setup troubleshooter](https://aka.ms/SaRA-OutlookSetupProfile-sarahome)
 
    If you receive a pop-up window that displays "This site is trying to open Get Help", select **Open**.
 1. Follow the instructions in the Get Help app to run the troubleshooter.

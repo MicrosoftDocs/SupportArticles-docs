@@ -47,11 +47,11 @@ To troubleshoot the issue, follow these steps:
 
    **Note**: [Don't assign Full Access permission on the mailbox through a security group](/outlook/troubleshoot/profiles-and-accounts/full-access-mailbox-not-automapped-outlook-profile) because Outlook won't automap the primary and archive mailboxes to the Outlook profile of each group member.
 
-4. Instruct the affected user to run the [classic Outlook advanced diagnostics troubleshooter](https://aka.ms/SaRA-OutlookAdvDiagExpExp-sarahome) to help diagnose the issue.
+4. Instruct the affected user to run the [Classic Outlook Advanced Diagnostics troubleshooter](https://aka.ms/SaRA-OutlookAdvDiagExpExp-sarahome) to help diagnose the issue.
 
     > [!NOTE]
     >
-    > - The troubleshooter doesn't work with new Outlook for Windows.
+    > - The troubleshooter doesn't work in new Outlook for Windows.
     > - To run the troubleshooter, make sure that the user is using the same Windows device that classic Outlook is installed on. Additionally, make sure that their device is running Windows 10 or a later version.
 
 ## Archive mailbox doesn't appear in new Outlook for Windows or Outlook on the web
