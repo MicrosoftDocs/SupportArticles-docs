@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Slow Page Response and Hangs 
 description: This article helps you troubleshoot slow page response and hang issues.
-ms.date: 02/27/2025
+ms.date: 02/28/2025
 ms.custom: sap:Site Behavior and Performance\Slow page response
 ms.reviewer: khgupta, v-sidong
 ---
@@ -72,7 +72,7 @@ IIS Log Catcher collects a variety of historical logs and configuration data at 
 
 ##### IIS web logs (W3SVC logs)
 
-Collect IIS logs from a time during which the slowness occurred. This can be helpful in confirming that time-taken field reflects the slowness. It can also help to narrow down the page or pages that are responding slowly.
+Collect IIS logs from a time during which the slowness occurs. This can be helpful in confirming that time-taken field reflects the slowness. It can also help to narrow down the page or pages that are responding slowly.
 
 ##### Windows system, application, and security Event Logs
 
@@ -80,7 +80,7 @@ Collected as part of the IIS Log Catcher data. Although the event logs aren't ty
 
 #### Fiddler tool trace or Edge HAR trace
 
-The timeline view in these traces might be able to help you narrow down what page or pages in the web application are slow. This helps collect FREB logs of only slow pages (or the slowest pages).
+The timeline view in these traces might be able to help you narrow down which page or pages in the web application are slow. This helps collect FREB logs of only slow pages (or the slowest pages).
 
 #### Failed Request Trace (FREB) logs
 
@@ -166,15 +166,15 @@ The generated FREB logs triggered by some status code rule provide a view of all
 
 However, FREB logs triggered by a specific time taken value rule (for example, 20 seconds) only show information up to that value, which means anything that this request goes through beyond this time won't be available in the log.
 
-If the response is receivable after some delay (for example, 30 seconds), you can check the status code of the received response (by checking browser developer tools, assuming the client can be a browser, or from IIS logs), and then [configure FREBs](troubleshoot-http-error-code.md#steps-to-capture-freb-logs) based on that status code. Now, view the generated FREBs to understand which module causies the slowness (if you aren't familiar with how to interpret FREBs, section **Interpreting a FREB tracing log** in this link helps). For example, if you find out that some third-party module causes the slowness, it is up to that third-party to investigate the problem. However, if the slowness is reported to be due to the customer code, memory dumps need further investigation.
+If the response is receivable after some delay (for example, 30 seconds), you can check the status code of the received response (by checking browser developer tools, assuming the client can be a browser, or from IIS logs), and then [configure FREBs](troubleshoot-http-error-code.md#steps-to-capture-freb-logs) based on that status code. Now, view the generated FREBs to understand which module causes the slowness (if you aren't familiar with how to interpret FREBs, section **Interpreting a FREB tracing log** in this link helps). For example, if you find out that some third-party module causes the slowness, it is up to that third-party to investigate the problem. However, if the slowness is reported to be due to the customer code, memory dumps need further investigation.
 
-If no response is received at all (complete hang) or received after a very long time, you can configure FREBs instead on a specific time taken rule, and then proceed as mentioned here. The time value specified should be problematic, which means if the customer knows that it's normal and expected for a response to take 10 seconds, you are only interested in the time beyond these 10 seconds. Therefore, you can configure FREBs to 20 or 30 seconds or some other number.
+If no response is received at all (complete hang) or received after a very long time, you can configure FREBs instead on a specific time taken rule, and then proceed as mentioned here. The time value specified should be problematic, which means if the customer knows that it's normal and expected for a response to take ten seconds, you are only interested in the time beyond these ten seconds. Therefore, you can configure FREBs to 20 or 30 seconds or some other number.
 
 ##### The issue is too intermittent or hard to reproduce
 
 It is a waste to wait a week or a month for an issue to occur, only to find out through FREBs that you actually need memory dumps for further investigation, and then wait for another such time to generate these memory dumps. Instead, it's better to generate memory dumps during the first occurrence of the issue.
 
-When requests that usually take milliseconds suddenly take a few seconds, it indicates a performance issue. It's difficult to investigate due to the small time difference. Generating memory dumps during such slow periods might not be practical. Debuggers add overhead, which might contribute to the slowness to some degree. Therefore, the original slowness and the overhead will overlap, and generating multiple memory dumps within a request lifetime might not be possible in the first place. You can use Perfview to collect ETW traces instead. However, you might still be very limited in investigation if the time is too distributed instead of being concentrated on a specific operation rather is too distributed. Check IIS Logs as if you notice very slow requests, and you might also want to discuss troubleshooting with the customer. If solving these very slow requests also automatically solves the slowness of several seconds, it is great. For Perfview steps, see [Steps to capture a PerfView trace and dumps](troubleshoot-http-error-code.md#steps-to-capture-a-perfview-trace-and-dumps).
+When requests that usually take milliseconds suddenly take a few seconds, it indicates a performance issue. It's difficult to investigate due to the small time difference. Generating memory dumps during such slow periods might not be practical. Debuggers add overhead, which might contribute to the slowness to some degree. Therefore, the original slowness and the overhead will overlap, and generating multiple memory dumps within a request lifetime might not be possible in the first place. You can use Perfview to collect ETW traces instead. However, you might still be very limited in investigation if the time is too distributed instead of being concentrated on a specific operation. Check IIS Logs as if you notice very slow requests, and you might also want to discuss troubleshooting with the customer. If solving these very slow requests also automatically solves the slowness of several seconds, it is great. For Perfview steps, see [Steps to capture a PerfView trace and dumps](troubleshoot-http-error-code.md#steps-to-capture-a-perfview-trace-and-dumps).
 
 ##### Detailed steps for collecting FREB logs
 
@@ -240,7 +240,7 @@ To identify appropriate time trigger, follow these steps:
 
    Aim to generate at least two consecutive memory dumps during the period when the slow request is active.
 
-   For instance, if it's typical for a response to take 10 seconds, focus on response times that exceed this duration. If an issue causes the response time to extend to 60 seconds or more, capture memory dumps at intervals such as 30, 40, and 50 seconds.
+   For instance, if it's typical for a response to take ten seconds, focus on response times that exceed this duration. If an issue causes the response time to extend to 60 seconds or more, capture memory dumps at intervals such as 30, 40, and 50 seconds.
 
 1. Avoid false positives:
 
@@ -257,7 +257,7 @@ To identify appropriate time trigger, follow these steps:
 > [!NOTE]
 >
 > - You might need multiple attempts to get a good set of memory dumps that are useful.
-> - Make sure you have enough space on the drive you select for holding the generated memory dumps. Each memory dump is the same size as the process at the time of generation. So, for example, if the size of the process is 1GB at the time of memory dump generation, then generating 3 dumps requires 4GB of space.
+> - Make sure you have enough space on the drive you select for holding the generated memory dumps. Each memory dump is the same size as the process at the time of generation. So, for example, if the size of the process is 1GB at the time of memory dump generation, then generating three dumps requires 4GB of space.
 
 #### Generate memory dumps manually using DebugDiag
 
@@ -320,7 +320,7 @@ Follow these steps to configure FREB to run a custom action, like **ProcDump.exe
    1. Select the **Add** link under the **Action** pane and fill in the properties as shown in the following screenshot:
 
       - **CustomActionExe**: Set the value to the path of the ProcDump executable. It's the executable that launches when the FREB rule is met.
-      - **customActionParams** Set the value to `-accepteula -ma %1% C:\myDumps -n 3`. This command generates 3 consecutive dumps, spaced by 10 seconds. If you need to change the spacing, add `-s` followed by the number of seconds.
+      - **customActionParams** Set the value to `-accepteula -ma %1% C:\myDumps -n 3`. This command generates three consecutive dumps, spaced by ten seconds. If you need to change the spacing, add `-s` followed by the number of seconds.
 
 ## Data analysis
 
@@ -344,7 +344,7 @@ There are two tools to analyze W3SVC logs, Excel and Log Parser 2.2.
 To analyze a single W3SVC log using Excel, follow these steps:
 
 1. Open W3SVC logs in Excel.
-1. Select and delete the top 3 rows (all should start with a **#** sign). Make sure to keep the row that begins with **#Fields**.
+1. Select and delete the top three rows (all should start with a **#** sign). Make sure to keep the row that begins with **#Fields**.
 1. Select the column **A**. From the **Data** ribbon, select **Text to Columns**.
 1. In **Convert Text to Columns Wizard**, select **Delimited** > **Next**.
 1. In **Delimiters**, select the **Space** checkbox and clear any other checks, and then select **Finish**.
@@ -417,4 +417,4 @@ It's simpler and more understandable to run only one type of analysis rule at a 
 > [!NOTE]
 > If a more detailed analysis is needed, use [WinDbg](/windows-hardware/drivers/debuggercmds/windbg-overview) to review dumps.
 
-[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)
