@@ -23,7 +23,7 @@ You experience one or more of the following symptoms:
 
 ## Cause
 
-This increase is caused by a change in memory accounting within version 2 of the Linux control group (`cgroup`) API. [Cgroup v2](https://kubernetes.io/docs/concepts/architecture/cgroups/) is now the default cgroup version for Kubernetes 1.25 on AKS.
+This increase is caused by a change in memory accounting within version 2 of the Linux control group (`cgroup`) API. [Cgroup v2](https://kubernetes.io/docs/concepts/architecture/cgroups/) is now the default `cgroup` version for Kubernetes 1.25 on AKS.
 
 > [!NOTE]  
 > This issue is distinct from the memory saturation in nodes that's caused by applications or frameworks that aren't aware of `cgroup` v2. For more information, see [Memory saturation occurs in pods after cluster upgrade to Kubernetes 1.25](./aks-memory-saturation-after-upgrade.md).
