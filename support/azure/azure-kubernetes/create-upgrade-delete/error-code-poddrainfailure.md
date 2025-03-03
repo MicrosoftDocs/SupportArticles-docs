@@ -30,7 +30,7 @@ An AKS cluster upgrade operation fails with one of the following error messages:
 
 ## Cause
 
-This error might occur if a pod is protected by the Pod Disruption Budget (PDB) policy. In this situation, the pod resists being drained and the upgrade operation after several attempts fails and the cluter/node pool fall in `Failed` state.
+This error might occur if a pod is protected by the Pod Disruption Budget (PDB) policy. In this situation, the pod resists being drained, and after several attempts, the upgrade operation fails, and the cluter/node pool falls into a `Failed` state.
 
 Check the PDB configuration: `ALLOWED DISRUPTIONS` value. The value should be `1` or greater. For more information, see [Plan for availability using pod disruption budgets](/azure/aks/operator-best-practices-scheduler#plan-for-availability-using-pod-disruption-budgets). For example, you can check the workload and its PDB as follows. You should observe the `ALLOWED DISRUPTION**` column doesn't allow any disruption. If the `ALLOWED DISRUPTIONS` value is `0`, the pods won't be evicted and node drain will fail during the upgrade process:
 
@@ -50,7 +50,7 @@ nginx-pdb   2               N/A               0                     24s
 
 ```
 
-You can also check for any entries in Kubernetes events using the command `kubectl get events | grep -i drain`. A similar output will show the information "Eviction blocked by Too Many Requests (usually a pdb)":
+You can also check for any entries in Kubernetes events using the command `kubectl get events | grep -i drain`. A similar output will show the message "Eviction blocked by Too Many Requests (usually a pdb)":
 
 ```console
 $ kubectl get events | grep -i drain
