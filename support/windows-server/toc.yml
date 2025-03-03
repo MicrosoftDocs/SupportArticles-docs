@@ -2317,6 +2317,8 @@ items:
       href: ./remote/terminal-server-commands-msg.md
     - name: Terminal Server User's Home Directory is not set correctly
       href: ./remote/terminal-server-users-home-directory-not-set-correctly.md
+    - name: Troubleshoot unexpected RDS session locks or disconnections
+      href: ./remote/troubleshoot-unexpected-rds-session-locks-or-disconnections.md
     - name: User can't authenticate or must authenticate twice
       href: ./remote/cannot-authenticate-must-authenticate-twice.md
     - name: '"Remote Desktop Service is currently busy" message'
