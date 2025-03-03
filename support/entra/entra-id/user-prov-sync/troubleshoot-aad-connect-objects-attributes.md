@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Microsoft Entra Connect objects and attributes
 description: Describes how to determine why an object isn't syncing in Microsoft Entra ID.
-ms.date: 02/03/2021
+ms.date: 03/03/2025
 ms.reviewer: nualex
 editor: v-jesits
 ms.service: entra-id
@@ -11,6 +11,7 @@ ms.custom: sap:Microsoft Entra Connect Sync, has-azure-ad-ps-ref
 # End-to-end troubleshooting of Microsoft Entra Connect objects and attributes
 
 This article is intended to establish a common practice for how to troubleshoot synchronization issues in Microsoft Entra ID. 
+
 This method is used when an object or attribute fails to synchronize with Microsoft Entra ID directory, and no errors are shown in the sync engine, Application event viewer logs, or Microsoft Entra logs. It's easy to get lost in the details if there's no obvious error. However, by using best practices, you can isolate the issue and provide insights for Microsoft Support engineers.
 
 As you apply this troubleshooting method to your environment, over time, you'll be able to do the following steps:
@@ -36,17 +37,19 @@ For a better understanding of this article, first read the following prerequisit
 ## Ineffective troubleshooting practices
 
 The `onPremisesSyncEnabled` attribute in Microsoft Entra ID controls whether the tenant is prepared to accept synchronization of objects from on-premises AD DS.
-There's an habit of disabling DirSync on the tenant while troubleshooting object or attribute synchronization issues. It's easy to turn off directory synchronization by using Graph or PowerShell, however this process can be disruptive.
 
-Disabling DirSync at the tenant level, triggers a complex and lengthy backend operation to transfer the Source of Authority (SoA) from local Active Directory to Microsoft Entra ID and Exchange Online for all the synced objects on the tenant. This operation is necessary to convert each object from `onPremisesSyncEnabled=True` to cloud-only objects (`onPremisesSyncEnabled=<null>`), and clean up all the shadow properties that are synced from on-premises AD DS (for example, ShadowUserPrincipalName and ShadowProxyAddresses). Depending on the size of the tenant, this operation can take more than 72 hours. Also, it's not possible to predict when the operation finishes. 
-Never use this method to troubleshoot a sync issue because such operation can cause more harm and doesn't fix the root cause. You're blocked from enabling DirSync again until this disablement operation is complete. Also, after you re-enable DirSync, the Entra Connect server must match again all the on-premises objects with existent Microsoft Entra ID objects.
+It is common to disable DirSync on the tenant while troubleshooting object or attribute synchronization issues. Directory synchronization can be turned off using Graph or PowerShell, however this process might cause disruptions.
 
-The only scenarios where disabling DirSync is supported, are:
+Disabling DirSync at the tenant level triggers a complex and lengthy backend operation to transfer the Source of Authority (SoA) from local Active Directory to Microsoft Entra ID and Exchange Online for all the synced objects on the tenant. This operation is necessary to convert each object from `onPremisesSyncEnabled=True` to cloud-only objects (`onPremisesSyncEnabled=<null>`), and clean up all the shadow properties that are synced from on-premises AD DS (for example, `ShadowUserPrincipalName` and `ShadowProxyAddresses`). This operation might take over 72 hours depending on the tenant's size, and its completion time can't be predicted.
+
+Don't use this method to troubleshoot a sync issue because such operation can cause more harm and doesn't fix the root issue. You can't enable DirSync again until this disablement operation is complete. After re-enabling DirSync, the Entra Connect server must match all on-premises objects with existing Microsoft Entra ID objects.
+
+Disabling DirSync is supported only in the following scenarios:
 
 - You're decommissioning your on-premises synchronization server, and you want to continue managing your identities entirely from the cloud instead of from hybrid identities.
 - You have some synced objects in the tenant that you want to keep as cloud-only in Microsoft Entra ID and remove from on-premises AD permanently.
 - You're currently using a custom attribute as the SourceAnchor in Entra Connect (for example, employeeId), and you're re-installing AADC to start using **ms-Ds-Consistency-Guid/ObjectGuid** as the new SourceAnchor attribute (or vice versa).
-- There are scenarios in your mailbox migration strategy that could lead to potential issues.
+- Certain scenarios within your mailbox migration strategy might result in potential issues.
 
 In some situations, you might have to temporarily stop synchronization or manually control Entra Connect sync cycles. For example, you might have to pause synchronization to be able to run one sync step at a time. Instead of disabling DirSync, you can just stop the sync scheduler by running the following cmdlet:
 
@@ -169,9 +172,8 @@ The best way to troubleshoot permissions is to use the "Effective Access" featur
 
 > [!important]
 > Troubleshooting AD permissions can be difficult because a change in ACLs doesn't take immediate effect. Always consider that such changes are subject to AD replication.
->
-> For example:
-**Troubleshooting summary**
+
+**Troubleshooting summary:**
 
 - Identify which domain controller is used.
 - Use preferred domain controllers to target the same domain controller.
@@ -182,7 +184,7 @@ The best way to troubleshoot permissions is to use the "Effective Access" featur
 - Temporarily add the ADCA to the Enterprise admins or Domain admins, and restart the ADSync service.
 
 > [!WARNING]
-> Don't use this as a permanent solution for permissions issues. After determining the permissions issue, remove the ADCA from any highly privileged groups, and provide the required AD permissions directly to the ADCA.
+> Don't use this as a permanent solution for permissions issues. After determining the permissions issue, remove the ADCA from any highly privileged groups, and grant the required AD permissions directly to the ADCA.
 
 > [!NOTE]
 > Engage Directory Services or a network support team to help you troubleshoot the situation.
@@ -234,14 +236,14 @@ Troubleshooting summary
 
   This situation doesn't occur as commonly for users and groups. However, if all the objects of a specific object type are missing in ADCS, it might be useful to examine which object types enabled in ADDS Connector configuration.
 
-Use the **Get-ADSyncConnector** cmdlet to retrieve the object types that are enabled on the Connector, as shown in the next image.
+Use the `Get-ADSyncConnector` cmdlet to retrieve the object types that are enabled on the Connector, as shown in the next image.
   
   ```PowerShell
   $connectorName = "Contoso.com"
   (Get-ADSyncConnector | where Name -eq $connectorName).ObjectInclusionList`
   ```
 
-The following list shows the object types that should be enabled by default (**publicFolder** object type is present only when the Mail Enabled Public Folder feature is enabled):
+The following list shows the object types that should be enabled by default (The `publicFolder` object type exists only when the Mail Enabled Public Folder feature is enabled.):
 
 :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/get-adsyncconnector-objects.png" alt-text="Screenshot show the Get-ADSyncConnector object types." border="false":::
 
@@ -252,17 +254,17 @@ The following list shows the object types that should be enabled by default (**p
 
   To check for enabled attributes in ADDS Connector, use the Synchronization Manager, as shown in the next image, or run the following PowerShell cmdlet:
 
-```PowerShell
+  ```PowerShell
   $connectorName = "Contoso.com"
   (Get-ADSyncConnector | where Name -eq $connectorName).AttributeInclusionList
-``` 
+  ``` 
 
   :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/ad-connector-sync-manager.png" alt-text="Screenshot of AD Connector Synchronization Manager.":::
 
   > [!IMPORTANT] 
   > Including or excluding object types or attributes in the Synchronization Service Manager isn't supported.
 
-Troubleshooting summary
+**Troubleshooting summary:**
 
 - Check the [Microsoft Entra app and attribute filtering](/azure/active-directory/hybrid/how-to-connect-install-custom#azure-ad-app-and-attribute-filtering) feature
 - Verify that the object type is included in ADCS.
@@ -310,35 +312,35 @@ The synchronization between ADCS and MV occurs on the delta/full synchronization
 
 - **Check the lineage of the ADCS object**
 
-  You can retrieve the failing object from the ADCS by searching on "DN or Anchor" in "Search Connector Space." On the **Lineage** tab, you will probably see that the object is a **Disconnector** (no links to MV), and the lineage is empty. Also, check whether the object has any errors, in case there is a sync error tab.
+    You can retrieve the failing object from the ADCS by searching on "DN or Anchor" in "Search Connector Space." On the **Lineage** tab, you will probably see that the object is a **Disconnector** (no links to MV), and the lineage is empty. Also, check whether the object has any errors, in case there is a sync error tab.
 
-  :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/connector-space-object-properties.png" alt-text="Screenshot of the Connector Space Object Properties in A D C S.":::
+    :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/connector-space-object-properties.png" alt-text="Screenshot of the Connector Space Object Properties in A D C S.":::
 
 - **Run a preview on the ADCS object**
 
-  Select **Preview** > **Generate Preview** > **Commit Preview** to see whether the object is projected to MV. If that's the case, then a full sync cycle should fix the issue for other objects in the same situation.
+    Select **Preview** > **Generate Preview** > **Commit Preview** to see whether the object is projected to MV. If that's the case, then a full sync cycle should fix the issue for other objects in the same situation.
 
-  :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/adcs-object-preview.png" alt-text="Screenshot of the A D C S object preview screen." border="false":::
+    :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/adcs-object-preview.png" alt-text="Screenshot of the A D C S object preview screen." border="false":::
 
-  :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/adcs-source-object-details.png" alt-text="Screenshot of the Source Object Details screen in A D C S.":::
+    :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/adcs-source-object-details.png" alt-text="Screenshot of the Source Object Details screen in A D C S.":::
 
 - **Export the object to XML**
 
-  For a more detailed analysis (or for offline analysis), you can collect all the database data that's related to the object by using `Export-ADSyncToolsObjects` cmdlet. This exported information will help determine which rule is filtering out the object. In other words, which Inbound Scoping Filter in the Provisioning Sync Rules is preventing the object from being projected to the MV.
+    For a more detailed analysis (or for offline analysis), you can collect all the database data that's related to the object by using `Export-ADSyncToolsObjects` cmdlet. This exported information will help determine which rule is filtering out the object. In other words, which Inbound Scoping Filter in the Provisioning Sync Rules is preventing the object from being projected to the MV.
 
-  Here are some examples of `Export-ADSyncToolsObjects` syntax:
+    Here are some examples of the `Export-ADSyncToolsObjects` syntax:
 
-```PowerShell
-[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-Install-Module ADSyncTools
+    ```PowerShell
+    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+    Install-Module ADSyncTools
 
-Import-Module ADSyncTools
-Export-ADSyncToolsObjects -DistinguishedName 'CN=TestUser,OU=Sync,DC=Contoso,DC=com' -ConnectorName 'Contoso.com' -ExportSerialized
-Export-ADSyncToolsObjects -ObjectId '{46EBDE97-7220-E911-80CB-000D3A3614C0}' -Source Metaverse -ExportSerialized
-```
+    Import-Module ADSyncTools
+    Export-ADSyncToolsObjects -DistinguishedName 'CN=TestUser,OU=Sync,DC=Contoso,DC=com' -ConnectorName 'Contoso.com' -ExportSerialized
+    Export-ADSyncToolsObjects -ObjectId '{46EBDE97-7220-E911-80CB-000D3A3614C0}' -Source Metaverse -ExportSerialized
+    ```
 
-> [!TIP]
-> To read the exported data use `Import-Clixml <filename>.xml`
+    > [!TIP]
+    > To read the exported data, use the `Import-Clixml <filename>.xml` cmdlet.
 
 #### Troubleshooting summary (objects)
 
@@ -526,7 +528,6 @@ Multiple components and processes that are involved in importing and exporting d
 - Connectivity to the internet
 - Internal firewalls and ISP connectivity (for example, blocked network traffic)
 - The Microsoft Entra Gateway in front of DirSync Webservice (also known as the AdminWebService)
-
 - The DirSync Webservice API
 - The Microsoft Entra Core directory service
 
@@ -540,20 +541,20 @@ Fortunately, the issues that affect these components usually generate an error i
 
 - **Mobile attribute with DirSyncOverrides**
 
-  When the Admin uses the legacy MSOnline or AzureAD PowerShell modules, or if the user goes to the Office Portal and updates the **Mobile** attribute, the updated phone number will be overwritten in Microsoft Entra ID despite the object being synced from on-premises AD (`onPremisesSyncEnabled=true`).
+  When the Admin uses the legacy MSOnline or AzureAD PowerShell modules, or if the user goes to the Office Portal and updates the `Mobile` attribute, the updated phone number will be overwritten in Microsoft Entra ID despite the object being synced from on-premises AD (`onPremisesSyncEnabled=true`).
   
-  Together with this update, Microsoft Entra ID also sets a DirSyncOverrides on the object to flag that this user has the mobile phone number "overwritten" in Microsoft Entra ID. From this point on, any update to the mobile attribute that originates from on-premises will be ignored because this attribute will no longer be managed by on-premises AD.
+  Together with this update, Microsoft Entra ID also sets a `DirSyncOverrides` on the object to flag that this user has the mobile phone number "overwritten" in Microsoft Entra ID. From this point on, any update to the mobile attribute that originates from on-premises will be ignored because this attribute will no longer be managed by on-premises AD.
   
-    For more information about the BypassDirSyncOverrides feature and how to restore synchronization of Mobile and otherMobile attributes from Microsoft Entra ID to on-premises Active Directory, see [How to use the BypassDirSyncOverrides feature of a Microsoft Entra tenant](/azure/active-directory/hybrid/how-to-bypassdirsyncoverrides).
+  For more information about the *BypassDirSyncOverrides* feature and how to restore synchronization of `Mobile` and `otherMobile` attributes from Microsoft Entra ID to on-premises Active Directory, see [How to use the BypassDirSyncOverrides feature of a Microsoft Entra tenant](/azure/active-directory/hybrid/how-to-bypassdirsyncoverrides).
 
 - **UserPrincipalName changes don't update in Microsoft Entra ID**
 
-   If the UserPrincipalName attribute isn't updated in Microsoft Entra ID, while other attributes sync as expected, it's possible that a feature that's named [SynchronizeUpnForManagedUsers](/azure/active-directory/hybrid/how-to-connect-syncservice-features#synchronize-userprincipalname-updates) isn't enabled on the tenant.
+    If the UserPrincipalName attribute isn't updated in Microsoft Entra ID, while other attributes synchronize as expected, it’s possible that a feature called [SynchronizeUpnForManagedUsers](/azure/active-directory/hybrid/how-to-connect-syncservice-features#synchronize-userprincipalname-updates) isn't enabled on the tenant.  
+   
+    Before this feature is added, any updates to the UPN from on-premises are *silently* ignored after the user is provisioned in Microsoft Entra ID and assigned a license. An admin must use the legacy MSOnline or AzureAD PowerShell to update the UPN directly in Microsoft Entra ID. After this feature is added, any updates to UPN will flow to Microsoft Entra regardless of whether the user is licensed (managed).  
   
-   Before this feature was added, any updates to the UPN that came from on-premises after the user was provisioned in Microsoft Entra ID and assigned a license were *silently* ignored. An admin would have to use the legacy MSOnline or AzureAD PowerShell to update the UPN directly in Microsoft Entra ID. After this feature is updated, any updates to UPN will flow to Microsoft Entra regardless of whether the user is licensed (managed).
-  
-     > [!NOTE]
-   > After it's enabled, this feature can't be disabled.
+    > [!NOTE]
+    > After it's enabled, this feature can't be disabled.
 
    **UserPrincipalName** updates will work if the user isn't licensed. However, without the [SynchronizeUpnForManagedUsers](/azure/active-directory/hybrid/how-to-connect-syncservice-features#synchronize-userprincipalname-updates) feature, UserPrincipalName changes after the user is provisioned and is assigned a licensed that will NOT be updated in Microsoft Entra ID. Notice that Microsoft doesn't disable this feature on behalf of customers.
   
