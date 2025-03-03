@@ -2,7 +2,7 @@
 title: Can't Track and Set Regarding in Dynamics 365 App for Outlook
 description: Solves the Track and Set Regarding are currently disabled notification that occurs when using Microsoft Dynamics 365 App for Outlook.
 ms.reviewer: 
-ms.date: 02/26/2025
+ms.date: 03/03/2025
 ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
 # "Track and Set Regarding are currently disabled" occurs in Dynamics 365 App for Outlook
@@ -30,7 +30,7 @@ To fix this issue, contact your administrator who can check the status of the se
 
 ## Cause 2 - Email address doesn't match the primary SMTP address
 
-Another cause is the email address in Dynamics 365 doesn't match the [primary SMTP address](/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies#email-address-templates) in Microsoft Exchange.
+Another cause is that the email address in Dynamics 365 doesn't match the [primary SMTP address](/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies#email-address-templates) in Microsoft Exchange.
 
 ### Resolution
 
@@ -41,4 +41,4 @@ To resolve this issue, [update the email address in Dynamics 365](/dynamics365/o
 
 ## More information
 
-[Test the configuration of mailboxes for server-side synchronization](/power-platform/admin/connect-exchange-online#test-the-configuration-of-mailboxes).
+[Test the configuration of mailboxes for server-side synchronization](/power-platform/admin/connect-exchange-online#test-the-configuration-of-mailboxes)
