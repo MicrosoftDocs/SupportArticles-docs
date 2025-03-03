@@ -17,17 +17,14 @@ This article describes how to check a memory dump file by using Dumpchk.
 _Original KB number:_ &nbsp; 156280
 
 > [!NOTE]
-> For a Microsoft Windows XP version of this article, see [315271](https://support.microsoft.com/help/315271).  
-
+> 
 ## Summary
 
 Dumpchk is a command-line utility you can use to verify that a memory dump file has been created correctly. Dumpchk does not require access to symbols.
 
-Dumpchk is located in the following locations:
+Dumpchk is part of the Windows Debugging Tools. Follow the instructions in this link to install the tool. 
 
-- Windows NT 4.0 CD-ROM: Support\Debug\\\<Platform>\Dumpchk.exe
-
-- Windows 2000 CD-ROM: Install the Support Tools by running Setup.exe from the Support\Tools folder on the CD-ROM. By default, Dumpchk.exe is installed to the Program Files\Support Tools folder.
+[https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/dumpchk](/windows-hardware/drivers/debugger/dumpchk)
 
 ## Dumpchk command-line switches
 
@@ -41,9 +38,7 @@ DUMPCHK [options] \<CrashDumpFile>
 
 - -v Specifies verbose mode.
 
-- -q Performs a quick test. Not available in the Windows 2000.
-
-Additional switches that are only available in Windows 2000 Dumpchk.exe version:
+- -q Performs a quick test. 
 
 - -c Do dump validation.
 
@@ -51,17 +46,20 @@ Additional switches that are only available in Windows 2000 Dumpchk.exe version:
 
 - -e Do dump exam.
 
-- -y \<Path> Set the symbol search path for dump exam.
+- -y <Path> Set the symbol search path for dump exam.
+
   - If the symbol search path is empty, the CD-ROM
   - is used for symbols.
+    
+- -b <Path> Set the image search path for dump exam.
 
-- -b \<Path> Set the image search path for dump exam.
-  - If the symbol search path is empty, \<SystemRoot>\system32
+  - If the symbol search path is empty, <SystemRoot>\system32
+    
   - is used for symbols.
+    
+- -k <File> Set the name of the kernel to File.
 
-- -k \<File> Set the name of the kernel to File.
-
-- -h \<File> Set the name of the hal to File.
+- -h <File> Set the name of the hal to File.
 
 Dumpchk displays some basic information from the memory dump file, then verifies all the virtual and physical addresses in the file. If any errors are found in the memory dump file, Dumpchk reports them. The following is an example of the output of a Dumpchk command:
 
