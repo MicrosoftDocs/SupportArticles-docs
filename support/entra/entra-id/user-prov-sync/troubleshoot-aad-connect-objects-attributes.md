@@ -12,7 +12,7 @@ ms.custom: sap:Microsoft Entra Connect Sync, has-azure-ad-ps-ref
 
 This article is intended to establish a common practice for how to troubleshoot synchronization issues in Microsoft Entra ID. 
 
-This method is used when an object or attribute fails to synchronize with Microsoft Entra ID directory, and no errors are shown in the sync engine, Application event viewer logs, or Microsoft Entra logs. It's easy to get lost in the details if there's no obvious error. However, by using best practices, you can isolate the issue and provide insights for Microsoft Support engineers.
+This method is used when an object or attribute fails to synchronize with the Microsoft Entra ID directory and no errors are shown in the sync engine, Application event viewer logs, or Microsoft Entra logs. It's easy to get lost in the details if there's no obvious error. However, by using best practices, you can isolate the issue and provide insights for Microsoft Support engineers.
 
 As you apply this troubleshooting method to your environment, over time, you'll be able to do the following steps:
 
@@ -38,11 +38,11 @@ For a better understanding of this article, first read the following prerequisit
 
 The `onPremisesSyncEnabled` attribute in Microsoft Entra ID controls whether the tenant is prepared to accept synchronization of objects from on-premises AD DS.
 
-It is common to disable DirSync on the tenant while troubleshooting object or attribute synchronization issues. Directory synchronization can be turned off using Graph or PowerShell, however this process might cause disruptions.
+It's common to disable DirSync on the tenant while troubleshooting object or attribute synchronization issues. Directory synchronization can be turned off using Graph or PowerShell. However, this process might cause disruptions.
 
-Disabling DirSync at the tenant level triggers a complex and lengthy backend operation to transfer the Source of Authority (SoA) from local Active Directory to Microsoft Entra ID and Exchange Online for all the synced objects on the tenant. This operation is necessary to convert each object from `onPremisesSyncEnabled=True` to cloud-only objects (`onPremisesSyncEnabled=<null>`), and clean up all the shadow properties that are synced from on-premises AD DS (for example, `ShadowUserPrincipalName` and `ShadowProxyAddresses`). This operation might take over 72 hours depending on the tenant's size, and its completion time can't be predicted.
+Disabling DirSync at the tenant level triggers a complex and lengthy backend operation to transfer the Source of Authority (SoA) from local Active Directory to Microsoft Entra ID and Exchange Online for all the synced objects on the tenant. This operation is necessary to convert each object from `onPremisesSyncEnabled=True` to a cloud-only object (`onPremisesSyncEnabled=<null>`), and clean up all the shadow properties that are synced from on-premises AD DS (for example, `ShadowUserPrincipalName` and `ShadowProxyAddresses`). Depending on the tenant's size, this operation might take over 72 hours, and its completion time can't be predicted.
 
-Don't use this method to troubleshoot a sync issue because such operation can cause more harm and doesn't fix the root issue. You can't enable DirSync again until this disablement operation is complete. After re-enabling DirSync, the Entra Connect server must match all on-premises objects with existing Microsoft Entra ID objects.
+Don't use this method to troubleshoot a sync issue because such an operation can cause more harm and doesn't fix the root issue. You can't enable DirSync again until this disabling operation is complete. After re-enabling DirSync, the Entra Connect server must match all on-premises objects with existing Microsoft Entra ID objects.
 
 Disabling DirSync is supported only in the following scenarios:
 
@@ -51,13 +51,13 @@ Disabling DirSync is supported only in the following scenarios:
 - You're currently using a custom attribute as the SourceAnchor in Entra Connect (for example, employeeId), and you're re-installing AADC to start using **ms-Ds-Consistency-Guid/ObjectGuid** as the new SourceAnchor attribute (or vice versa).
 - Certain scenarios within your mailbox migration strategy might result in potential issues.
 
-In some situations, you might have to temporarily stop synchronization or manually control Entra Connect sync cycles. For example, you might have to pause synchronization to be able to run one sync step at a time. Instead of disabling DirSync, you can just stop the sync scheduler by running the following cmdlet:
+In some situations, you might have to temporarily stop synchronization or manually control Entra Connect sync cycles. For example, you might have to pause synchronization to run one sync step at a time. Instead of disabling DirSync, you can just stop the sync scheduler by running the following cmdlet:
 
 ``` PowerShell
 Set-ADSyncScheduler -SyncCycleEnabled $false
 ```
 
-And when you're ready, restore the normal sync scheduler by running the following cmdlet:
+When you're ready, restore the normal sync scheduler by running the following cmdlet:
 
 ``` PowerShell
 Start-ADSyncSyncCycle
@@ -120,7 +120,7 @@ Connection issues to ADDS have the following causes:
 - A "no-start-ma" error, which occurs when there are name resolution issues (DNS) in AD.
 - Other problems that can be caused by name resolution issues, network routing problems, blocked network ports, high network packet fragmentation, no writable DCs available, and so on. In such cases, you will likely have to involve the Directory Services or networking support teams to help troubleshoot.
 
-Troubleshooting summary
+**Troubleshooting summary:**
 
 - Identify which domain controller is used.
 - Use preferred domain controllers to target the same domain controller.
@@ -184,7 +184,7 @@ The best way to troubleshoot permissions is to use the "Effective Access" featur
 - Temporarily add the ADCA to the Enterprise admins or Domain admins, and restart the ADSync service.
 
 > [!WARNING]
-> Don't use this as a permanent solution for permissions issues. After determining the permissions issue, remove the ADCA from any highly privileged groups, and grant the required AD permissions directly to the ADCA.
+> Don't use this as a permanent solution to permission issues. After determining the permission issue, remove the ADCA from any highly privileged groups, and grant the required AD permissions directly to the ADCA.
 
 > [!NOTE]
 > Engage Directory Services or a network support team to help you troubleshoot the situation.
@@ -215,7 +215,7 @@ Another approach is to use the RepAdmin tool to check the object's replication m
 
   :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/repadmin-replsummary.png" alt-text="Screenshot of the RepAdmin tool using the replsummary command." border="false":::
 
-Troubleshooting summary
+**Troubleshooting summary:**
 
 - Identify which domain controller is used.
 - Compare data between domain controllers.
@@ -245,7 +245,7 @@ Use the `Get-ADSyncConnector` cmdlet to retrieve the object types that are enabl
 
 The following list shows the object types that should be enabled by default (The `publicFolder` object type exists only when the Mail Enabled Public Folder feature is enabled.):
 
-:::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/get-adsyncconnector-objects.png" alt-text="Screenshot show the Get-ADSyncConnector object types." border="false":::
+:::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/get-adsyncconnector-objects.png" alt-text="Screenshot showing the Get-ADSyncConnector object types." border="false":::
 
 
 - **Attribute excluded in ADCS**
@@ -326,7 +326,7 @@ The synchronization between ADCS and MV occurs on the delta/full synchronization
 
 - **Export the object to XML**
 
-    For a more detailed analysis (or for offline analysis), you can collect all the database data that's related to the object by using `Export-ADSyncToolsObjects` cmdlet. This exported information will help determine which rule is filtering out the object. In other words, which Inbound Scoping Filter in the Provisioning Sync Rules is preventing the object from being projected to the MV.
+    For a more detailed analysis (or for offline analysis), you can collect all the database data that's related to the object by using the `Export-ADSyncToolsObjects` cmdlet. This exported information will help determine which rule is filtering out the object. In other words, which Inbound Scoping Filter in the Provisioning Sync Rules is preventing the object from being projected to the MV.
 
     Here are some examples of the `Export-ADSyncToolsObjects` syntax:
 
@@ -383,7 +383,7 @@ The synchronization between ADCS and MV occurs on the delta/full synchronization
 
 1. **Export the object to XML**
 
-   For a more detailed analysis or offline analysis, you can collect all the database data that's related to the object by using `Export-ADSyncToolsObjects` cmdlet. This exported information can help you determine which sync rule or transformation rule missing on the object that's preventing the attribute from being projected to the MV (see the `Export-ADSyncToolsObjects` examples earlier in this article).
+   For a more detailed analysis or offline analysis, you can collect all the database data that's related to the object by using `Export-ADSyncToolsObjects` cmdlet. This exported information can help you determine which sync rule or transformation rule is missing on the object that's preventing the attribute from being projected to the MV (see the `Export-ADSyncToolsObjects` examples earlier in this article).
    
 #### Troubleshooting summary (for attributes)
 
@@ -442,9 +442,9 @@ The synchronization between MV and AADCS occurs in the delta/full synchronizatio
 
 1. **Export the object to XML**
 
-   For a more detailed analysis or offline analysis, you can collect all the database data that's related to the object by using `Export-ADSyncToolsObjects` cmdlet. This exported information, together with the (outbound) sync rules configuration, can help determine which rule is filtering out the object, and can determine which outbound scoping filter in the provisioning sync rules is preventing the object from connecting with the AADCS).
+   For a more detailed analysis or offline analysis, you can collect all the database data that's related to the object by using `Export-ADSyncToolsObjects` cmdlet. This exported information, together with the (outbound) sync rules configuration, can help determine which rule is filtering out the object, and can determine which outbound scoping filter in the provisioning sync rules is preventing the object from connecting with the AADCS.
    
-   Here are some examples of `Export-ADSyncToolsObjects` syntax:
+   Here are some examples of the `Export-ADSyncToolsObjects` syntax:
 
 ```PowerShell
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
@@ -456,7 +456,7 @@ Export-ADSyncToolsObjects -ObjectId '{46EBDE97-7220-E911-80CB-000D3A3614C0}' -So
 ```
 
 > [!TIP]
-> To read the exported data use `Import-Clixml <filename>.xml`
+> To read the exported data, use `Import-Clixml <filename>.xml`
 
 #### Troubleshooting summary for objects
 
@@ -491,7 +491,7 @@ Export-ADSyncToolsObjects -ObjectId '{46EBDE97-7220-E911-80CB-000D3A3614C0}' -So
 
 5. **Export the object to XML**
 
-   For a more detailed analysis or offline analysis, you can collect all the database data that's related to the object by using `Export-ADSyncToolsObjects` cmdlet. This exported information, together with the (outbound) sync rules configuration, can help you determine which sync rule or transformation rule is missing from the object that's preventing the attribute from flowing to AADCS (see the `Export-ADSyncToolsObjects` examples earlier).
+   For a more detailed analysis or offline analysis, you can collect all the database data that's related to the object by using the `Export-ADSyncToolsObjects` cmdlet. This exported information, together with the (outbound) sync rules configuration, can help you determine which sync rule or transformation rule is missing from the object that's preventing the attribute from flowing to AADCS (see the `Export-ADSyncToolsObjects` examples earlier).
 
 #### Troubleshooting summary for attributes
 
@@ -527,7 +527,7 @@ Multiple components and processes that are involved in importing and exporting d
 
 - Connectivity to the internet
 - Internal firewalls and ISP connectivity (for example, blocked network traffic)
-- The Microsoft Entra Gateway in front of DirSync Webservice (also known as the AdminWebService)
+- The Microsoft Entra Gateway in front of DirSync Webservice (also known as AdminWebService)
 - The DirSync Webservice API
 - The Microsoft Entra Core directory service
 
@@ -549,14 +549,14 @@ Fortunately, the issues that affect these components usually generate an error i
 
 - **UserPrincipalName changes don't update in Microsoft Entra ID**
 
-    If the UserPrincipalName attribute isn't updated in Microsoft Entra ID, while other attributes synchronize as expected, it’s possible that a feature called [SynchronizeUpnForManagedUsers](/azure/active-directory/hybrid/how-to-connect-syncservice-features#synchronize-userprincipalname-updates) isn't enabled on the tenant.  
+    If the `UserPrincipalName` attribute isn't updated in Microsoft Entra ID, while other attributes synchronize as expected, it's possible that a feature called [SynchronizeUpnForManagedUsers](/azure/active-directory/hybrid/how-to-connect-syncservice-features#synchronize-userprincipalname-updates) isn't enabled on the tenant.  
    
     Before this feature is added, any updates to the UPN from on-premises are *silently* ignored after the user is provisioned in Microsoft Entra ID and assigned a license. An admin must use the legacy MSOnline or AzureAD PowerShell to update the UPN directly in Microsoft Entra ID. After this feature is added, any updates to UPN will flow to Microsoft Entra regardless of whether the user is licensed (managed).  
   
     > [!NOTE]
     > After it's enabled, this feature can't be disabled.
 
-   **UserPrincipalName** updates will work if the user isn't licensed. However, without the [SynchronizeUpnForManagedUsers](/azure/active-directory/hybrid/how-to-connect-syncservice-features#synchronize-userprincipalname-updates) feature, UserPrincipalName changes after the user is provisioned and is assigned a licensed that will NOT be updated in Microsoft Entra ID. Notice that Microsoft doesn't disable this feature on behalf of customers.
+   **UserPrincipalName** updates will work if the user isn't licensed. However, without the [SynchronizeUpnForManagedUsers](/azure/active-directory/hybrid/how-to-connect-syncservice-features#synchronize-userprincipalname-updates) feature, UserPrincipalName changes after the user is provisioned and is assigned a licensed that won't be updated in Microsoft Entra ID. Notice that Microsoft doesn't disable this feature on behalf of customers.
   
 - **Invalid characters and ProxyCalc internals**
 
@@ -591,7 +591,7 @@ Fortunately, the issues that affect these components usually generate an error i
 
 ## Additional resources
 
-- [Troubleshooting Errors during synchronization](/azure/active-directory/hybrid/tshoot-connect-sync-errors)
+- [Troubleshooting errors during synchronization](/azure/active-directory/hybrid/tshoot-connect-sync-errors)
 
 - [Troubleshoot object synchronization with Microsoft Entra Connect Sync](/azure/active-directory/hybrid/tshoot-connect-objectsync)
 
