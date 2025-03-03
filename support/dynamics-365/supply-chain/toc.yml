@@ -4,6 +4,8 @@
   items:
     - name: Changing work order lifecycle state doesn't generate fault cause or fault remedy error
       href: asset-management/change-lifecycle-state-doesnt-create-fault.md
+    - name: Can't create work orders based on your maintenance schedule
+      href: asset-management/conversion-of-maintenance-schedule-to-workorder-is-failing.md  
 - name: Inventory costing and closing
   items:
     - name: An update conflict occurs when the inventory valuation method is either standard cost or moving average
