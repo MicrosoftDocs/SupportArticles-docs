@@ -53,7 +53,7 @@ Here's a list of useful data to collect for a slow page response or hang situati
   - [IIS and ASP.NET configuration files](#configuration-files)  
   - [IIS web logs (W3SVC logs)](#iis-web-logs-w3svc-logs)
   - [Event logs (system, application, and security)](#windows-system-application-and-security-event-logs)
-- [Fiddler trace or Microsoft Edge HAR trace](#fiddler-tool-trace-or-edge-har-trace)
+- [Fiddler trace or Microsoft Edge HAR trace](#fiddler-tool-trace-or-microsoft-edge-har-trace)
 - [Failed Request Trace (FREB) logs](#failed-request-trace-freb-logs)
 - [Full user-mode process dumps](/windows-hardware/drivers/debugger/user-mode-dump-files#full-user-mode-dumps)
 - [Additional data collections](#other-data)
