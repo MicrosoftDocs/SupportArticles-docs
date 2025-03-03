@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot unexpected RDS session locks or disconnections
-description: Introduces how to configure RDS session timeouts to troubleshoot unexpected session locks or disconnections.
+description: Introduces how to configure RDS session time-outs to troubleshoot unexpected session locks or disconnections.
 ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
@@ -12,27 +12,27 @@ ms.custom:
 ---
 # Troubleshoot unexpected RDS session locks or disconnections
 
-A Remote Desktop Services (RDS) session can enter **locks** and **disconnects** status at regular intervals. This requires users to log in or reconnect to the session. This article introduces how to troubleshoot unexpected **locks** and **disconnects** time intervals.
+A Remote Desktop Services (RDS) session can enter **locks** and **disconnects** status at regular intervals. In this situation, the session requires users to sign in or reconnect to the session. This article introduces how to troubleshoot unexpected **locks** and **disconnects** time intervals.
 
 ## Introductions
 
 RDS can have the following status:
 
 - **active**: the user is currently connected and interacting with the system.
-- **idle**: the user is connected but has not interacted with the server for a specific period.
+- **idle**: the user is connected but hasn't interacted with the server for a specific period.
 - **locked**: users are redirected to the login screen, but their sessions remain active without any error message.
-- **disconnected**: The user's connection to the server has been severed, and then the RDP window typically closes with an error message. The session remains running on the server.
+- **disconnected**: The user's connection to the server has been severed, and then the RDP window typically closes with an error message. The session remains to run on the server.
 
 Disconnects occurring without a consistent timing pattern are more likely caused by **network issues** rather than configuration settings.
 
-## Verify if the session timeout is a disconnect
+## Verify if the session time-out is a disconnect
 
 On a Windows computer, when **MaxIdleTime** or **MaxConnectionTime** are configured, RDS sessions disconnect when conditions are met with distinct messages. Additional RDS session time limit policies determine the behavior after a session is disconnected.
 
 | Configuration             | Set time limit for active but idle RDS sessions                                                           | Set time limit for active RDS sessions                                                                                                         |
 | :------------------------ | :-------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
 | Registry (Type:REG_DWORD) | MaxIdleTime                                                                                               | MaxConnectionTime                                                                                                                              |
-| Message when disconnected | Your Remote Desktop Services session ended because the remote computer didn't receive any input from you. | The remote session ended because the total logon time limit was reached. This limit is set by the server administrator or by network policies. |
+| Message when disconnected | Your Remote Desktop Services session ended because the remote computer didn't receive any input from you. | The remote session ended because the total sign-in time limit was reached. This limit is set by the server administrator or by network policies. |
 
 You can use the following two methods to configure the above registry values.
 
@@ -45,7 +45,7 @@ Registry path: `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Ter
 > [!NOTE]
 >
 > - If users connect to the RDS Deployment through a Remote Desktop Gateway (RDGW), similar configuration can be done in **RDGW manager > Policies > Connection Authorization Policies > Timeouts tab**. Users that bypass the RDGW won't be affected.
-> - Session timeout will have a distinct disconnect message compared to the message caused by the **MaxConnectionTime** setting: **The connection has been disconnected because the session timeout limit was reached.**
+> - Session time-out has a distinct disconnect message compared to the message caused by the **MaxConnectionTime** setting: **The connection has been disconnected because the session timeout limit was reached.**
 
 ### Computer and User policies
 
@@ -57,14 +57,14 @@ Policy configurations are applied to the corresponding registry path:
 - Computer policy registry path: **HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services**
 - User policy registry path: **HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows NT\Terminal Services**
 
-## Verify if the session timeout is a Lock
+## Verify if the session time-out is a Lock
 
 On a Windows machine, there are two distinct forms of configuring a session lock:
 
 1. **Machine inactivity limit** policy.
 2. Configuring a **Screen saver**.
 
-If any of the above is configured, sessions will be locked when conditions are met.
+If any of the above settings is configured, sessions are locked when conditions are met.
 
 > [!IMPORTANT]
 >
@@ -73,7 +73,7 @@ If any of the above is configured, sessions will be locked when conditions are m
 
 ### Machine inactivity limit policy
 
-The policy can only be configured at the Computer level, with the value specified in seconds. The configuration policy path and the corresponding registry path where it will be applied are outlined below:
+The policy can only be configured at the Computer level, with the value specified in seconds. The following are the configuration policy path and the corresponding registry path:
 
 - Policy path: **Computer Configuration > Windows Settings > Security Settings > Local Policies > Security Options** - **Interactive logon: Machine inactivity limit**
 - Registry path: Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System - InactivityTimeoutSecs  
@@ -95,7 +95,7 @@ To configure on Screen Saver Settings:
 
 - open CMD and run following command to open the console: *control desk.cpl,,1*
 - Select from **Screen saver** dropdown box.
-- Define a timeout.
+- Define a time-out.
 - Select **On resume, display logon screen** checkbox.
 
 Values are written on registry path: `Computer\HKEY_CURRENT_USER\Control Panel\Desktop`
@@ -104,17 +104,17 @@ Values are written on registry path: `Computer\HKEY_CURRENT_USER\Control Panel\D
 
 Three below policies must be configured to enable Screen Saver: **Enable screen saver**, **Password protect the screen saver**, and **Screen saver timeout**.
 
-The configuration policies path and the corresponding registry path where it will be applied are outlined below:
+The following are the configuration policies path and the corresponding registry path:
 
 - Policy path: **User Configuration > Administrative Templates > Control Panel > Personalization**.
 - Registry path: `Computer\HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Control Panel\Desktop`.
 
 ## Contact Microsoft Support
 
-If the preceding steps cannot resolve the issue, collect data on the affected machine while replicating the issue. Download [TSS script](https://aka.ms/getTSS), and run the following command on an elevated Powershell:
+If the preceding steps can't resolve the issue, collect data on the affected machine while replicating the issue. Download [TSS script](https://aka.ms/getTSS), and run the following command on an elevated PowerShell:
 
 ```powershell
 .\TSS.ps1 -Scenario UEX_RDSsrv -start  -UEX_Logon
 ```
 
-For more information see [Gather information by using TSS for user experience-related issues](../../windows-client/windows-tss/gather-information-using-tss-user-experience.md).
+For more information, see [Gather information by using TSS for user experience-related issues](../../windows-client/windows-tss/gather-information-using-tss-user-experience.md).
