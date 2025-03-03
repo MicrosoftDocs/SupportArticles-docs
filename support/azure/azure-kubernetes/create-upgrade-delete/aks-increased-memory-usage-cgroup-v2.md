@@ -1,7 +1,7 @@
 ---
 title: Increased memory usage reported in Kubernetes 1.25 or later versions
 description: Resolve an increase in memory usage that's reported after you upgrade an Azure Kubernetes Service (AKS) cluster to Kubernetes 1.25.x.
-ms.date: 02/28/2025
+ms.date: 03/03/2025
 editor: momajed
 ms.reviewer: aritraghosh, cssakscic, v-leedennis
 ms.service: azure-kubernetes-service
