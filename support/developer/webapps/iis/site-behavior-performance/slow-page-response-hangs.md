@@ -74,7 +74,7 @@ IIS Log Catcher collects various historical logs and configuration data at one t
 
 Collect IIS logs from a time during which the slowness occurs. This can be helpful in confirming that the time-taken field reflects the slowness. It can also help to narrow down the page or pages that are responding slowly.
 
-##### Windows system, application, and security Event Logs
+##### Windows System, Application, and Security event logs
 
 Collected as part of the IIS Log Catcher data. Although the event logs aren't typically used when troubleshooting slow page response and hangs, it's the best practice to continue collecting them as they might be used later on in troubleshooting.
 
@@ -122,7 +122,7 @@ If the configuration files aren't collected as part of the IIS Log Catcher data,
 
 If the web logs aren't collected as part of the IIS Log Catcher data, collect them manually. By default, these logs are in **c:\\inetpub\\logs\\logfiles**. Each site has its own directory named **W3SVC#** where the **#** is the **SiteID**. However, the log location is customizable. You might need to review **applicationhost.config** for the **logFile** and directory or review the settings in the IIS Manager.
 
-##### Windows system, application, and security event logs
+##### Windows System, Application, and Security event logs
 
 If the event logs aren't collected as part of the IIS Log Catcher data, collect them manually. Collect event logs directly from the Event Viewer. Save them as `.evtx` files and view them in Event Viewer on your own server.
 
@@ -208,7 +208,7 @@ If the issue isn't easily reproduced, you can use FREB Rule to generate dumps ba
 
 ##### Deadlock detected hangs
 
-In a case where a hang correlates with **Deadlock detected** in Application Event Log, use this [email template]().
+In a case where a hang correlates with **Deadlock detected** in Application event logs, use this [email template]().
 
 If slowness is accompanied by high CPU, avoid collecting logs when CPU usage is extremely high (for example, >=95), as this might cause the server to hang or fail to collect logs due to insufficient CPU resources.
 
