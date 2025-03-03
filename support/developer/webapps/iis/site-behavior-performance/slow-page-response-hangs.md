@@ -19,29 +19,29 @@ Page slowness and hangs might be accompanied by one or more of the following con
 
 - Slowness or hang only, and CPU and memory usage are normal
 
-  [Troubleshoot slow page response and hangs]()
+  [Troubleshoot slow page response and hangs](slow-page-response-hangs.md)
 
 - Slowness or hang accompanied by high CPU
 
-  - Focus on slowness - [Troubleshoot slow page response and hangs]()
-  - Focus on high CPU - [TSG for High CPU]() 
+  - Focus on slowness - [Troubleshoot slow page response and hangs](slow-page-response-hangs.md)
+  - Focus on high CPU - [Troubleshooting High CPU in an IIS application pool](troubleshoot-high-cpu-in-iis-app-pool.md) 
 
 - Slowness or hang accompanied by high memory
 
-  - Focus on slowness - [Troubleshoot slow page response and hangs]()
-  - Focus on high memory - [TSG for High Memory]()
+  - Focus on slowness - [Troubleshoot slow page response and hangs](slow-page-response-hangs.md)
+  - Focus on high memory - [Overview of high memory consumption issues](high-memory-consumption-issues-overview.md)
 
 - Slowness or hang accompanied by both high memory and high CPU
 
-  When all three conditions are present, use [TSG for high memory](). This is because usually high CPU in these cases is due to high memory, and when both memory and CPU are high, this would cause slowness.  
+  When all three conditions are present, use [Overview of high memory consumption issues](high-memory-consumption-issues-overview.md). This is because usually high CPU in these cases is due to high memory, and when both memory and CPU are high, this would cause slowness.  
 
 - High CPU only
 
-  [TSG for high CPU]()
+  [Troubleshooting High CPU in an IIS application pool](troubleshoot-high-cpu-in-iis-app-pool.md)
 
 - High memory only
 
-  [TSG for high memory]()
+  [Overview of high memory consumption issues](high-memory-consumption-issues-overview.md)
 
 ## Data collection
 
@@ -56,7 +56,7 @@ Here's a list of useful data to collect for a slow page response or hang situati
 - [Fiddler trace or Microsoft Edge HAR trace](#fiddler-tool-trace-or-microsoft-edge-har-trace)
 - [Failed Request Trace (FREB) logs](#failed-request-trace-freb-logs)
 - [Full user-mode process dumps](/windows-hardware/drivers/debugger/user-mode-dump-files#full-user-mode-dumps)
-- [Additional data collections](#other-data)
+- [Other data](#other-data)
 
 ### Why to collect  
 
@@ -116,19 +116,19 @@ Download the [IIS Log Catcher](https://github.com/NL-Cristi/LogCatcher) tool and
 
 ##### Configuration files
 
-If the configuration files aren't collected as part of the IIS Log Catcher data, collect them manually. The **applicationhost.config** file is located at **c:\\windows\\system32\\inetsrv\\config\\**. The **web.config** files are in the root directory of each application. For example, the root of the Default Web Site's application is **c:\\inetpub\\wwwroot**. Root directories might be anywhere on the file system. Refer to **applicationhost.config** for the **site** and **physicalPath** or review the settings in the IIS Manager.
+If the IIS Log Catcher tool doesn't automatically collect the configuration files, you need to collect them manually. The **applicationhost.config** file is located at **c:\\windows\\system32\\inetsrv\\config\\**. The **web.config** files are in the root directory of each application. For example, for the Default Web Site's application, the **web.config** file is in **c:\\inetpub\\wwwroot**. The root directories for applications might be anywhere on the file system. To identify the root directory of a specific site, check the **applicationhost.config** file for the **site** and its **physicalPath** attribute or review the settings in the IIS Manager.
 
 ##### IIS web logs (W3SVC logs)
 
-If the web logs aren't collected as part of the IIS Log Catcher data, collect them manually. By default, these logs are in **c:\\inetpub\\logs\\logfiles**. Each site has its own directory named **W3SVC#** where the **#** is the **SiteID**. However, the log location is customizable. You might need to review **applicationhost.config** for the **logFile** and directory or review the settings in the IIS Manager.
+If the IIS Log Catcher tool doesn't automatically collect the web logs, you need to collect them manually. By default, these logs are in **c:\\inetpub\\logs\\logfiles**. Each site has its own directory named **W3SVC#** where the **#** is the **SiteID**. However, the log location is customizable. To find the custom log locations, you might need to review **applicationhost.config** for the **logFile** and directory or review the settings in the IIS Manager.
 
 ##### Windows System, Application, and Security event logs
 
-If the event logs aren't collected as part of the IIS Log Catcher data, collect them manually. Collect event logs directly from the Event Viewer. Save them as `.evtx` files and view them in Event Viewer on your own server.
+If the IIS Log Catcher tool doesn't automatically collect event logs, you need to collect them manually. Collect event logs directly from the Event Viewer. Save them as `.evtx` files and view them in Event Viewer on your own server.
 
 #### Fiddler tool trace or HAR trace
 
-[Fiddler Classic](https://www.telerik.com/fiddler/fiddler-classic) is a third-party browser extension that acts as a proxy for the Browser. Fiddler begins collecting data as soon as it's opened. To collect traces of SSL encrypted requests using Fiddler Classic, follow these steps:
+[Fiddler Classic](https://www.telerik.com/fiddler/fiddler-classic) is a third-party browser extension that acts as a proxy for your browser. Fiddler begins collecting data as soon as it's opened. To collect traces of SSL encrypted requests using Fiddler Classic, follow these steps:
 
 1. Download and install [Fiddler Classic](https://www.telerik.com/fiddler/fiddler-classic).
 1. Open Fiddler Classic, select **Tools** > **Options** > **HTTPS**, and select both the **Capture HTTPS CONNECTs** and **Decrypt HTTPS traffic** checkbox.
@@ -136,7 +136,7 @@ If the event logs aren't collected as part of the IIS Log Catcher data, collect 
 1. Reproduce the slowness while running Fiddler.
 1. Select **File** > **Save** > **All Sessions** to save all sessions as a `.saz` file.  
 
-HAR traces can be collected from Microsoft Edge or Chrome browsers directly. To collect HAR traces, follow these steps:
+Microsoft Edge or Chrome browsers can collect HAR traces directly. To collect HAR traces, follow these steps:
 
 1. Open your browser and select <kbd>F12</kbd> to open Developer Tools.
 1. Select **Network** > **Preserve log**.
@@ -166,7 +166,7 @@ The generated FREB logs triggered by some status code rule provide a view of all
 
 However, FREB logs triggered by a specific time taken value rule (for example, 20 seconds) only show information up to that value, which means anything that this request goes through beyond this time won't be available in the log.
 
-If the response is receivable after some delay (for example, 30 seconds), you can check the status code of the received response (by checking browser developer tools, assuming the client can be a browser, or from IIS logs), and then [configure FREBs](troubleshoot-http-error-code.md#steps-to-capture-freb-logs) based on that status code. Now, view the generated FREBs to understand which module causes the slowness (if you aren't familiar with how to interpret FREBs, section **Interpreting a FREB tracing log** in this link helps). For example, if you find out that some third-party module causes the slowness, it's up to that third-party to investigate the problem. However, if the slowness is reported to be due to the customer code, memory dumps need further investigation.
+If the response is receivable after some delay (for example, 30 seconds), you can check the status code of the received response (by checking browser developer tools, assuming the client can be a browser, or from IIS logs), and then [configure FREBs](troubleshoot-http-error-code.md#steps-to-capture-freb-logs) based on that status code. Now, view the generated FREBs to understand which module causes the slowness (if you aren't familiar with how to interpret FREBs, section [Interpreting a FREB tracing log]() in this link helps). For example, if you find out that some third-party module causes the slowness, it's up to that third-party to investigate the problem. However, if the slowness is reported to be due to the customer code, memory dumps need further investigation.
 
 If no response is received at all (complete hang) or received after a very long time, you can configure FREBs instead on a specific time taken rule, and then proceed as mentioned here. The time value specified should be problematic, which means if the customer knows that it's normal and expected for a response to take 10 seconds, you're only interested in the time beyond these 10 seconds. Therefore, you can configure FREBs to 20 or 30 seconds or some other number.
 
