@@ -11,7 +11,7 @@ ms.reviewer: mimart, v-weizhu, v-loeide, mbhargav
 This troubleshooting guide helps you diagnose and solve issues with dynamic groups in Microsoft Entra ID.
 
 >[!IMPORTANT]
-> Processing times can vary due to the number of changes, group size, complexity of rules, and operator choice. Typically, changes are processed faster than 24 hours, but in rare instances, it may take longer. For more information on optimizing rule processing performance, see [Create more efficient rules.](https://learn.microsoft.com/entra/identity/users/groups-dynamic-rule-more-efficient)
+> Processing times can vary due to the number of changes, group size, complexity of rules, and operator choice. Typically, changes are processed faster than 24 hours, but in rare instances, it may take longer. For more information on optimizing rule processing performance, see [Create more efficient rules.](/entra/identity/users/groups-dynamic-rule-more-efficient)
 
 ## Dynamic groups identification and management
 
