@@ -68,8 +68,6 @@
       href: d365-app-outlook/current-user-role-not-have-required-permissions.md
     - name: We're unable to connect to your server
       href: d365-app-outlook/we-are-unable-to-connect-to-your-dynamics-365-app-for-outlook-error.md
-    - name: You don't have required role or privilege
-      href: d365-app-outlook/you-do-not-have-required-role-privilege.md
     - name: You don't have the required role or privilege to complete this action
       href: d365-app-outlook/you-do-not-have-the-required-role-or-privilege-to-complete-this-action-error.md
 - name: Environment and app access issues
