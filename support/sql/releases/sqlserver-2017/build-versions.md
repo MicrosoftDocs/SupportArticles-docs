@@ -11,6 +11,12 @@ ms.reviewer: v-six
 
 This article lists the Microsoft SQL Server 2017 builds that were released after SQL Server 2017 was released.
 
+## SQL Server 2017 Azure Connect Pack builds
+
+| Cumulative update name | SQL Server product version | SQL Server (sqlservr.exe) file version | Analysis Services product version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date |
+|---------------|--------------|------------------|-------------|-----------------|------------------------------------|--------------------|
+| Azure Connect Pack | 14.0.3490.10  | 2017.140.3490.10  | 14.0.249.106 | 2017.140.249.106 | [KB5050533](azureconnect.md) | March 03, 2025 |
+
 ## SQL Server 2017 Cumulative Update (CU) builds
 
 | Cumulative update name | SQL Server product version | SQL Server (sqlservr.exe) file version | Analysis Services product version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date |
