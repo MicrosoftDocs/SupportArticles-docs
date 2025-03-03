@@ -109,7 +109,7 @@
       href: ../authentication/connection-issue-when-sign-in-office-2016.md
     - name: Deleted app passwords still work
       href: ../authentication/deleted-authentication-passwords-still-work.md
-    - name: Disabling ADAL or WAM not recommended for fixing Office sign-in or activation issues
+    - name: Disabling ADAL or WAM not recommended for fixing Microsoft 365 sign-in or activation issues
       href: ../administration/disabling-adal-wam-not-recommended.md
     - name: Error when federated users sign out
       href: ../authentication/problem-with-websites-security-error.md

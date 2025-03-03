@@ -1,8 +1,6 @@
 ---
 title: Authentication automatically fails in Microsoft 365 services
 description: Learn how to reinstall packages for ADAL and Live ID to troubleshoot authentication issues and Outlook issues that may go into the Need Password state.
-author: helenclu
-ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -18,14 +16,14 @@ appliesto:
   - PowerPoint for Microsoft 365
   - OneNote for Microsoft 365
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 02/25/2025
 ---
 
-# Fix authentication issues in Office applications when you try to connect to a Microsoft 365 service
+# Fix authentication issues in Microsoft 365 apps when you try to connect to a Microsoft 365 service
 
 ## Symptoms
 
-Authentication automatically fails in some Microsoft Office applications and Outlook may go into the "Need Password" state without any interaction. Additionally, when you make a Web Account Manager API call to [FindAllAccountsAsync](/uwp/api/windows.security.authentication.web.core.webauthenticationcoremanager.findallaccountsasync), you may see error code "-2147024809" in the Microsoft Entra logs or Office Client logs.
+Authentication automatically fails in some Microsoft 365 applications and Outlook may go into the "Need Password" state without any interaction. Additionally, when you make a Web Account Manager API call to [FindAllAccountsAsync](/uwp/api/windows.security.authentication.web.core.webauthenticationcoremanager.findallaccountsasync), you may see error code "-2147024809" in the Microsoft Entra logs or Microsoft 365 Client logs.
 
 > [!IMPORTANT]
 > This issue occurs only on computers that are running Windows 10, version 1703 or later, and Microsoft 365 version 1807 or later.
@@ -37,10 +35,7 @@ The authentication issue occurs because of missing package information about eit
 ## Resolution
 
 > [!TIP]
-> To diagnose and automatically fix several common Office sign-in issues, you can download and run Microsoft Support and Recovery Assistant.
-> 
-> [!div class="nextstepaction"]
-> [Download the Assistant](https://aka.ms/SaRA-OfficeSignInScenario)
+> To diagnose and automatically fix several common Microsoft 365 sign-in issues, run the [Microsoft 365 Sign-in troubleshooter](https://aka.ms/SaRA-OfficeSignIn-sarahome).
 
 To fix this issue, use PowerShell to reinstall the packages for Microsoft Entra WAM plugin (for organizational or work accounts) and Live ID (for personal accounts such as @outlook.com, @hotmail.com, and so on). To do this, follow these steps:
 
