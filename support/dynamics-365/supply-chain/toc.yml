@@ -384,3 +384,5 @@
       href: warehousing/shipment-cannot-be-confirmed-customer-is-on-hold-error.md
     - name: You can't confirm a shipment because load lines have quantity zero
       href: warehousing/load-line-quantity-is-zero.md
+    - name: The size of the request xml exceeds the maximum allowed value error in the Warehouse management mobile app
+      href: warehousing/the-size-of-the-request-xml-exceeds-the-maximum-allowed-value-error-in-the-warehouse-management-mobile-app.md
