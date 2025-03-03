@@ -304,10 +304,15 @@ Follow these steps to configure FREB to run a custom action, like **ProcDump.exe
 
 1. Follow these steps to enable custom actions:
 
-   1. Select the server name on the left side of the screen).
+   1. Open IIS Manager and select the server name on the left side of the screen.
    1. Double-click the **Configuration Editor** icon.
    1. Navigate to the **applicationHost/sites** section, and then select the **…** (ellipsis) button.
+
+      :::image type="content" source="media/slow-page-response-hangs/configuration-editor-applicationhost-sites.png" alt-text="Screenshot of Configuration Editor.":::
+
    1. Select the site to which you have already added the Failed Tracing Rule.
+
+      :::image type="content" source="media/slow-page-response-hangs/collection-editor-applicationhost-sites.png" alt-text="Screenshot of Collection Editor.":::
    1. Set **customActionsEnabled** to **True**.
    1. Download [ProcDump](/sysinternals/downloads/procdump) and copy the executable to the **C:\\procDump** path. Create a directory named **myDumps** under the **C:\\** drive.
 
@@ -316,8 +321,13 @@ Follow these steps to configure FREB to run a custom action, like **ProcDump.exe
 
 1. Specify the custom action for ProcDump:
 
-   1. Specify the action at either the server or site level.
+   1. Specify the action at either the server or site level and select the **…** button as shown in the following screenshot:
+
+      :::image type="content" source="media/slow-page-response-hangs/configuration-editor-webserver.png" alt-text="Screenshot of Configuration Editor at the server level.":::
+
    1. Select the **Add** link under the **Action** pane and fill in the properties as shown in the following screenshot:
+
+      :::image type="content" source="media/slow-page-response-hangs/collection-editor-webserver-tracing.png" alt-text="Screenshot of properties in Collection Editor.":::
 
       - **CustomActionExe**: Set the value to the path of the ProcDump executable. It's the executable that launches when the FREB rule is met.
       - **customActionParams** Set the value to `-accepteula -ma %1% C:\myDumps -n 3`. This command generates three consecutive dumps, spaced by ten seconds. If you need to change the spacing, add `-s` followed by the number of seconds.
