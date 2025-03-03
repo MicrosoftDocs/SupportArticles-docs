@@ -5,7 +5,7 @@ ms.reviewer: amitrou
 ms.author: nimoutzo
 author: NikosMoutzourakis
 ms.custom: sap:Desktop flows\UI or browser automation
-ms.date: 02/25/2025
+ms.date: 03/03/2025
 ---
 # UI element isn't highlighted or an error occurs when hovering over a UI or web element
 

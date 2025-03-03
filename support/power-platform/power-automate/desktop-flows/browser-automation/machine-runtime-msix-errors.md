@@ -5,7 +5,7 @@ ms.custom: sap:Desktop flows\UI or browser automation
 ms.reviewer: amitrou
 ms.author: nimoutzo
 author: NikosMoutzourakis
-ms.date: 02/25/2025
+ms.date: 03/03/2025
 ---
 # Web automation action fails when the machine runtime and Microsoft Store (MSIX) versions are different
 

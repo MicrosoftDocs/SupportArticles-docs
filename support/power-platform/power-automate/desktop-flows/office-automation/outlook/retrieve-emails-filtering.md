@@ -5,7 +5,7 @@ ms.custom: sap:Desktop flows\Office automation
 ms.reviewer: amitrou
 ms.author: nimoutzo
 author: NikosMoutzourakis
-ms.date: 02/19/2025
+ms.date: 03/03/2025
 ---
 # The "Retrieve email messages from Outlook" action doesn't work as expected
 
