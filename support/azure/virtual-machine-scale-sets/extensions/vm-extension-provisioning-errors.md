@@ -18,6 +18,9 @@ This article provides guidance on resolving **VMExtensionProvisioningError**, **
 > [!NOTE]
 > In the context of Virtual Machine Scale Sets, the "VM" in these errors messages refers to an instance within a specific Virtual Machine Scale Set.
 
+> [!NOTE]
+>In some circumstances Instance VM scalein for VMSS, virtual machine deployment will fail with the message "OSProvisioningTimedOut". Most of the time, the virtual machine should be started and the operating system running. The Guest Agent should often report status as well.This error appears usually when the Provisioning Agent or the Guest Agent can't send status back to CRP but the virtual machine has been created and the operating system started. The timeout set for CRP to wait for the VM Guest OS to send a healthy signal is 40 minutes, if the VM Deployed includes Extensions the timeout is extended to wait for 90 minutes. This time might change at any time.
+
 ## Symptoms
 
 You see **VMExtensionProvisioningError**, **VMExtensionHandlerNonTransientError**, or **VMExtensionProvisioningTimeout** errors, as in the following examples:
