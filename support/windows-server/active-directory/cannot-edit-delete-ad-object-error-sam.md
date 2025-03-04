@@ -76,7 +76,7 @@ repadmin -showobjmeta DC01 "CN=oldcomputer,OU=Disabled,OU=Workstations,DC=contos
 Here's the interpretation of the metadata:
 
 - The `sAMAccountType` and `objectCategory` attributes
-  - They're set once.
+  - They're usually set once.
   - The version is `2`, and they aren't set at this time. So they were removed during the object deletion, and weren't repopulated during the undeletion.
 - The `isDeleted` attribute
   - The version also shows `2`. This means the object was deleted and was undeleted by clearing the attribute.
@@ -128,7 +128,7 @@ For example:
 
 - Use the GUID-based syntax:
 
-    If the object name contains special characters, use Unicode for the LDIF file, or use the GUID-based syntax.
+    If the object name contains special characters, use Unicode for the LDIFDE import file, or use the GUID-based syntax.
 
     An object name can be expressed as`<guid=cf2b4aca-0e67-47d9-98aa-30a5fe30dc36>` in the GUID-based syntax.
 
