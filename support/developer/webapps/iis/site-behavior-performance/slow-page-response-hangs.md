@@ -377,11 +377,9 @@ When you analyze W3SVC logs, there are a couple of goals.
 
 The time-taken is logged in milliseconds. 1000 milliseconds = 1 second. When looking for requests that take more than 30 seconds to complete, look for time-taken values that are greater than 30,000 milliseconds.
 
-#### Helpful tools to analyze W3SVC logs
+There are two tools to analyze W3SVC logs, [Excel](#analyze-a-single-w3svc-log-using-excel) and [Log Parser 2.2](#analyze-multiple-w3svc-logs-using-log-parser).
 
-There are two tools to analyze W3SVC logs, Excel and Log Parser 2.2.
-
-##### Analyze a single W3SVC log using Excel
+#### Analyze a single W3SVC log using Excel
 
 To analyze a single W3SVC log using Excel, follow these steps:
 
@@ -396,7 +394,7 @@ To analyze a single W3SVC log using Excel, follow these steps:
 
 Now, you can use the filters for time-taken to identify all the requests greater than the desired number of seconds.
 
-##### Analyze multiple W3SVC logs using Log Parser
+#### Analyze multiple W3SVC logs using Log Parser
 
 If you have multiple logs to analyze or a single log file that is too large to be opened by Excel, consider using [Log Parser 2.2 (Microsoft Download Center)](https://www.microsoft.com/download/details.aspx?id=24659&lc=1033&msockid=1ba22fab7f2c669415273d557e9b670c). It's a powerful tool that allows you to run SQL styled queries to extract data from various types of log files, including W3SVC logs.
 
