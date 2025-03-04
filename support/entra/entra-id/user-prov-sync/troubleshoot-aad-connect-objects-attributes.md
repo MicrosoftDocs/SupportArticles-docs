@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot Microsoft Entra Connect objects and attributes
 description: Describes how to determine why an object isn't syncing in Microsoft Entra ID.
-ms.date: 03/03/2025
-ms.reviewer: nualex
+ms.date: 03/04/2025
+ms.reviewer: nualex, v-weizhu
 editor: v-jesits
 ms.service: entra-id
 ms.custom: sap:Microsoft Entra Connect Sync, has-azure-ad-ps-ref
