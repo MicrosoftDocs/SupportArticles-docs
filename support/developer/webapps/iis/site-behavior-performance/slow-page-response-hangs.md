@@ -116,15 +116,21 @@ Download the [IIS Log Catcher](https://github.com/NL-Cristi/LogCatcher) tool and
 
 ##### Configuration files
 
-If the IIS Log Catcher tool doesn't automatically collect the configuration files, you need to collect them manually. The **applicationhost.config** file is located at **c:\\windows\\system32\\inetsrv\\config\\**. The **web.config** files are in the root directory of each application. For example, for the Default Web Site's application, the **web.config** file is in **c:\\inetpub\\wwwroot**. The root directories for applications might be anywhere on the file system. To identify the root directory of a specific site, check the **applicationhost.config** file for the **site** and its **physicalPath** attribute or review the settings in the IIS Manager.
+If the IIS Log Catcher tool doesn't automatically collect the configuration files, you need to collect them manually.
+
+The **applicationhost.config** file is located at **c:\\windows\\system32\\inetsrv\\config\\**. The **web.config** files are in the root directory of each application. For example, for the Default Web Site's application, the **web.config** file is in **c:\\inetpub\\wwwroot**. The root directories for applications might be anywhere on the file system. To identify the root directory of a specific site, check the **applicationhost.config** file for the **site** and its **physicalPath** attribute or review the settings in the IIS Manager.
 
 ##### IIS web logs (W3SVC logs)
 
-If the IIS Log Catcher tool doesn't automatically collect the web logs, you need to collect them manually. By default, these logs are in **c:\\inetpub\\logs\\logfiles**. Each site has its own directory named **W3SVC#** where the **#** is the **SiteID**. However, the log location is customizable. To find the custom log locations, you might need to review **applicationhost.config** for the **logFile** and directory or review the settings in the IIS Manager.
+If the IIS Log Catcher tool doesn't automatically collect the web logs, you need to collect them manually.
+
+By default, these logs are in **c:\\inetpub\\logs\\logfiles**. Each site has its own directory named **W3SVC#** where the **#** is the **SiteID**. However, the log location is customizable. To find the custom log locations, you might need to review **applicationhost.config** for the **logFile** and directory or review the settings in the IIS Manager.
 
 ##### Windows System, Application, and Security event logs
 
-If the IIS Log Catcher tool doesn't automatically collect event logs, you need to collect them manually. Collect event logs directly from the Event Viewer. Save them as `.evtx` files and view them in Event Viewer on your own server.
+If the IIS Log Catcher tool doesn't automatically collect event logs, you need to collect them manually.
+
+Collect event logs directly from the Event Viewer. Save them as `.evtx` files and view them in Event Viewer on your own server.
 
 #### Fiddler tool trace or HAR trace
 
@@ -153,28 +159,54 @@ Add-WindowsFeature -Name Web-Http-Tracing
 
 Before [configuring a FREB Rule](../health-diagnostic-performance/troubleshoot-arr-using-frt-rules.md#step-1-configure-failed-request-tracing-rules), inspect the W3SVC logs to identify requests that take a long time to complete. Identify individual page requests that are slow using the `cs-uri-stem` and the `time-taken` fields.
 
-- If you can identify a few specific pages that are slow, create a FREB Rule for the specific page or pages. If creating the rule for a specific page, don't use time taken in the FREB Rule. Instead, use the status code from the W3SVC logs.
+- If you can identify a few specific pages that are slow, [create a FREB Rule](../health-diagnostic-performance/troubleshoot-arr-using-frt-rules.md#step-1-configure-failed-request-tracing-rules) for the specific page or pages. If creating the rule for a specific page, don't use time taken in the FREB Rule. Instead, use the status code from the W3SVC logs.
 
 - If you can't identify a specific page to create the FREB rule, you can use all content and specify a time taken in the FREB rule instead, which gives you logs of all requests that take more than the specified time to complete.
 
-> [!NOTE]
-> This method might give you false positives. Also note that when creating FREB logs based on time taken, the log ends when the request reaches the specified time taken. If the specified time is too short, you aren't able to identify where the slowness occurs.
+  > [!NOTE]
+  > This method might give you false positives. Also note that when creating FREB logs based on time taken, the log ends when the request reaches the specified time taken. If the specified time is too short, you aren't able to identify where the slowness occurs.
 
 ##### The issue is ongoing or reproduced easily or intermittently but occurs very often
 
-The generated FREB logs triggered by some status code rule provide a view of all modules that occur along the IIS pipeline throughout a request lifetime, along with the time each module takes.
+> [!NOTE]
+> FREB logs triggered by some status code rule provide a view of all modules that occur along the IIS pipeline throughout a request lifetime, along with the time each module takes.
+>
+> FREB logs triggered by a specific time taken value rule (for example, 20 seconds) only show information up to that value, which means anything that this request goes through beyond this time won't be available in the log.
 
-However, FREB logs triggered by a specific time taken value rule (for example, 20 seconds) only show information up to that value, which means anything that this request goes through beyond this time won't be available in the log.
+- If the response is receivable after some delay (for example, 30 seconds), follow these steps to diagnose the issue:
 
-If the response is receivable after some delay (for example, 30 seconds), you can check the status code of the received response (by checking browser developer tools, assuming the client can be a browser, or from IIS logs), and then [configure FREBs](troubleshoot-http-error-code.md#steps-to-capture-freb-logs) based on that status code. Now, view the generated FREBs to understand which module causes the slowness (if you aren't familiar with how to interpret FREBs, section [Interpreting a FREB tracing log]() in this link helps). For example, if you find out that some third-party module causes the slowness, it's up to that third-party to investigate the problem. However, if the slowness is reported to be due to the customer code, memory dumps need further investigation.
+  1. Check the status code of the received response.
+   
+     Use browser developer tools or IIS logs to determine the status code of the delayed response.
 
-If no response is received at all (complete hang) or received after a very long time, you can configure FREBs instead on a specific time taken rule, and then proceed as mentioned here. The time value specified should be problematic, which means if the customer knows that it's normal and expected for a response to take 10 seconds, you're only interested in the time beyond these 10 seconds. Therefore, you can configure FREBs to 20 or 30 seconds or some other number.
+  1. [Configure FREBs](troubleshoot-http-error-code.md#steps-to-capture-freb-logs) based on that status code.
+  1. View the generated FREBs to understand which module causes the slowness.
+
+     If you aren't familiar with how to interpret FREBs, section [Interpreting a FREB tracing log]() in this link helps.
+
+  If you find out that some third-party module causes the slowness, it's up to that third-party to investigate the problem. However, if the slowness is due to codes, you need to collect memory dumps for further investigation.
+
+- If no response is received at all (complete hang) or received after a very long time, follow these steps to diagnose the issue:
+
+  1.[Configure FREBs](troubleshoot-http-error-code.md#steps-to-capture-freb-logs) based on a specific time taken rule.
+
+    The time threshold you set for FREB logs should be beyond what is considered normal or acceptable. if you know that it's normal and expected for a response to take 10 seconds, configure FREBs to 20 seconds, 30 seconds, or some other number.
+
+  1.Proceed with the same analysis steps as mentioned previously.
 
 ##### The issue is too intermittent or hard to reproduce
 
-It's a waste to wait a week or a month for an issue to occur, only to find out through FREBs that you actually need memory dumps for further investigation, and then wait for another such time to generate these memory dumps. Instead, it's better to generate memory dumps during the first occurrence of the issue.
+If an issue is intermittent or hard to reproduce, waiting for it to happen again just to collect FREB logs can be inefficient. It might take weeks or months for the issue to reoccur, and if FREB logs are insufficient, you need to wait again to collect memory dumps. To avoid this delay, it's recommended to generate memory dumps during the first occurrence of the issue.
 
-When requests that usually take milliseconds suddenly take a few seconds, it indicates a performance issue. It's difficult to investigate due to the small time difference. Generating memory dumps during such slow periods might not be practical. Debuggers add overhead, which might contribute to the slowness to some degree. Therefore, the original slowness and the overhead will overlap, and generating multiple memory dumps within a request lifetime might not be possible in the first place. You can use PerfView to collect ETW traces instead. However, you might still be very limited in investigation if the time is too distributed instead of being concentrated on a specific operation. Check IIS Logs as if you notice very slow requests, and you might also want to discuss troubleshooting with the customer. If solving these very slow requests also automatically solves the slowness of several seconds, it's great. For PerfView steps, see [Steps to capture a PerfView trace and dumps](troubleshoot-http-error-code.md#steps-to-capture-a-perfview-trace-and-dumps).
+If requests normally take milliseconds but occasionally take 1 or a few seconds, investigating this slowness can be challenging. Generating memory dumps during such slow periods might not be practical because:
+
+- Debuggers add overhead, which might contribute to the slowness to some degree.
+- The original slowness and the overhead might overlap.
+- Generating multiple memory dumps within a request lifetime might not be possible in the first place.
+
+You can [use PerfView to collect ETW traces](troubleshoot-http-error-code.md#steps-to-capture-a-perfview-trace-and-dumps) instead. However, you might still be very limited in investigation if the time is too distributed instead of being concentrated on a specific operation.
+
+Always check IIS logs for very slow requests and troubleshoot them, as this might indirectly solve shorter slowness issues.
 
 ##### Detailed steps for collecting FREB logs
 
@@ -182,7 +214,7 @@ For more information on how to configure FREB logging, see [Using Failed Request
 
 #### Full user-mode process dumps
 
-##### The issue can be reproduced
+##### The issue can be reproduced at will
 
 If the issue can be reproduced or currently occurs, you can capture several manual dumps of the worker process hosting the app pool.
 
