@@ -188,11 +188,11 @@ Before [configuring a FREB Rule](../health-diagnostic-performance/troubleshoot-a
 
 - If no response is received at all (complete hang) or received after a very long time, follow these steps to diagnose the issue:
 
-  1.[Configure FREBs](troubleshoot-http-error-code.md#steps-to-capture-freb-logs) based on a specific time taken rule.
+  1. [Configure FREBs](troubleshoot-http-error-code.md#steps-to-capture-freb-logs) based on a specific time taken rule.
 
-    The time threshold you set for FREB logs should be beyond what is considered normal or acceptable. if you know that it's normal and expected for a response to take 10 seconds, configure FREBs to 20 seconds, 30 seconds, or some other number.
+     The time threshold you set for FREB logs should be beyond what is considered normal or acceptable. if you know that it's normal and expected for a response to take 10 seconds, configure FREBs to 20 seconds, 30 seconds, or some other number.
 
-  1.Proceed with the same analysis steps as mentioned previously.
+  1. Proceed with the same analysis steps as mentioned previously.
 
 ##### The issue is too intermittent or hard to reproduce
 
