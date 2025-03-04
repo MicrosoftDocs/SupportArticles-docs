@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot a Process Crash in an IIS Application Pool
 description: This article helps identify a process crash and provides methods to collect and analyze data for the crash.
-ms.date: 02/27/2025
+ms.date: 03/04/2025
 ms.custom: sap:Site Behavior and Performance\Process termination (crash)
 ms.reviewer: khgupta, v-sidong
 ---
@@ -56,18 +56,9 @@ Take note of the following fields:
 
 ## Data collection
 
-The first thing you need to do is to understand whether you need a memory dump. Windows has a feature called [Windows Error Reporting](#windows-error-reporting) (WER) that collects information automatically for you.
+To determine if you need a memory dump, start with the [Windows Error Reporting](#windows-error-reporting)(WER) feature that automatically collects information for you. Check the event logs related to WER to see if the information provided is sufficient to resolve the issue. If the information is sufficient, additional memory dumps aren't necessary. If it isn't, use the [Debug Diagnostic Tool](#debug-diagnostic-tool) or [ProcDump](#procdump) to collect crash dumps as described in the next section.
 
-To determine if you need a memory dump, locate the event logs regarding WER and check if the information is sufficient to solve the issue.
-
-- If yes, you don't need a memory dump.
-- If not, jump to the [How to collect a crash dump](#how-to-collect-a-crash-dump) section.
-
-### How to collect a crash dump
-
-To collect a crash dump, you can use tools like [Debug Diagnostic Tool](#debug-diagnostic-tool), [ProcDump](#procdump), or [WER](#windows-error-reporting).
-
-#### Debug Diagnostic Tool
+### Debug Diagnostic Tool
 
 To take crash dumps using Debug Diagnostic Tool, follow these steps:
 
@@ -103,7 +94,7 @@ To take crash dumps using Debug Diagnostic Tool, follow these steps:
 
    :::image type="content" source="media/process-termination-crash/userdump-count-column.png" alt-text="Screenshot of the Userdump Count column.":::
 
-#### ProcDump
+### ProcDump
 
 ProcDump is a simpler way to take a memory dump of a process. To take crash dumps using ProcDump, follow these steps:
 
@@ -145,7 +136,7 @@ If the error code is `C00000FD`, and you aren't able to take a memory dump, foll
     Procdump -u 
     ```
 
-#### Windows Error Reporting
+### Windows Error Reporting
 
 Windows Error Reporting is a built-in facility in Windows designed to collect information on issues that Windows can detect, such as application faults, kernel faults, and unresponsive applications, and report this information to Microsoft.
 
@@ -155,7 +146,7 @@ To take crash dumps using Windows Error Reporting, follow these steps:
 1. Check the directories mentioned in the Windows Error Reporting events.
 1. Locate files with the extension `.mdmp` (mini dump) or `.hdmp` (heap dump) in the mentioned directories.
 
-   - If you have these dump files, open a support ticket and upload them.
+   - If you have these dump files, provide them to Microsoft support if you create a support ticket.
    - If you don't have them, follow these steps to set up WER:
 
      1. Open the Windows Registry Editor (**regedit.exe**) and locate the key **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting\LocalDumps**. If this key isn't available, create it.
