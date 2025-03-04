@@ -96,15 +96,9 @@ To configure startup and recovery options (including the dump type), follow thes
 
 ## Tools for the various dump types
 
-You can load complete memory dumps and kernel memory dumps with standard symbolic debuggers, such as I386kd.exe. I386kd.exe is included with the Windows 2000 Support CD-ROM.
+You can load complete memory dumps and kernel memory dumps with the Windows Debugger. [https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/](/windows-hardware/drivers/debugger/)
 
-Load small memory dumps by using Dumpchk.exe. You can also use Dumpchk.exe to verify that a memory dump file has been created correctly.
-
-## Volume definitions
-
-- Boot volume: The volume that contains the Windows operating system and its support files. The boot volume can be, but doesn't have to be, the same as the system volume.
-
-- System volume: The volume that contains the hardware-specific files that you must have to load Windows. The system volume can be, but doesn't have to be, the same as the boot volume. The Boot.ini, `Ntdetect.com`, and Ntbootdd.sys files are examples of files that are located on the system volume.
+Load small memory dumps by using Dumpchk.exe. You can also use Dumpchk.exe to verify that a memory dump file has been created correctly. [https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/dumpchk](/windows-hardware/drivers/debugger/dumpchk)
 
 ## Registry values for startup and recovery
 
@@ -135,21 +129,7 @@ Additional registry values for CrashControl:
 
 For more information about how to configure your computer to generate a dump file for testing purposes, see [Windows feature lets you generate a memory dump file by using the keyboard](https://support.microsoft.com/help/244139).
 
-## Default dump type options
-
-- Windows 7 (All Editions): Kernel memory dump
-- Windows Server 2012 R2 (All Editions): Automatic memory.dmp
-
 ## Maximum paging file size
 
-Maximum paging file size is limited as follows:
+See: [https://learn.microsoft.com/en-us/troubleshoot/windows-client/performance/how-to-determine-the-appropriate-page-file-size-for-64-bit-versions-of-windows](/troubleshoot/windows-client/performance/how-to-determine-the-appropriate-page-file-size-for-64-bit-versions-of-windows)
 
-|Limit|x86|x64|IA-64|
-|---|---|---|---|
-|Maximum size of a paging file|4 gigabytes (non-PAE)<br/>16 terabytes (PAE)|16 terabytes|32 terabytes|
-|Maximum number of paging files|16|16|16|
-|Total paging file size|64 gigabytes (non-PAE)<br/>256 terabytes (PAE)|256 terabytes|512 terabytes|
-
-## Technical support for x64-based versions of Windows
-
-Your hardware manufacturer provides technical support and assistance for x64-based versions of Windows. Your hardware manufacturer provides support because an x64-based version of Windows was included with your hardware. Your hardware manufacturer might have customized the installation of Windows with unique components. Unique components might include specific device drivers or might include optional settings to maximize the performance of the hardware. Microsoft will provide reasonable-effort assistance if you need technical help with your x64-based version of Windows. However, you might have to contact your manufacturer directly. Your manufacturer is best qualified to support the software that your manufacturer installed on the hardware.
