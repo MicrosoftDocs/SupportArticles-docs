@@ -1,7 +1,8 @@
 ---
 title: Troubleshoot dynamic groups
 description: This article helps you diagnose and resolve issues with dynamic groups.
-ms.date: 08/27/2024
+ms.reviewer: yuhko, barclayn, v-weizhu
+ms.date: 03/04/2025
 ms.service: entra-id
 ms.custom: sap:Groups, has-azure-ad-ps-ref
 ms.reviewer: mimart, v-weizhu, v-loeide, mbhargav
@@ -10,8 +11,8 @@ ms.reviewer: mimart, v-weizhu, v-loeide, mbhargav
 
 This troubleshooting guide helps you diagnose and solve issues with dynamic groups in Microsoft Entra ID.
 
->[!IMPORTANT]
-> Typically dynamic membership groups changes are processed in a few hours but processing can take more than 24 hours depending on factors like tenant size, group size, number of attribute changes, rule complexity and operator choice (For example, use of CONTAINS, MATCH, or MemberOf)
+> [!IMPORTANT]
+> Dynamic membership group changes are usually processed within a few hours. However, processing may take more than 24 hours depending on various factors such as tenant size, group size, number of attribute changes, rule complexity, and operator choice (such as use of CONTAINS, MATCH, or MemberOf).
 
 ## Dynamic groups identification and management
 
