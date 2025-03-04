@@ -18,12 +18,7 @@ _Original KB number:_ &nbsp; 254649
 
 ## Summary
 
-You can configure the following operating systems to write debugging information:
-
-- Windows 7
-- Windows Server 2012 R2
-
-The debugging information can be written to different file formats (also known as memory dump files) when your computer stops unexpectedly because of a **Stop** error (also known as a _blue screen_, system crash, or bug check). You can also configure Windows not to write debugging information to a memory dump file.
+Debugging information can be written to different file formats (also known as memory dump files) when your computer stops unexpectedly because of a **Stop** error (also known as a _blue screen_, system crash, or bug check). You can also configure Windows not to write debugging information to a memory dump file.
 
 Windows can generate any one of the following memory dump file types:
 
@@ -42,12 +37,6 @@ If the following conditions are true, the previous file is overwritten.
 
 - A second problem occurs.
 - Another complete memory dump (or kernel memory dump) file is created.
-
-> [!NOTE]
->
-> - In Windows 7, the paging file can be on a partition that differs from the partition on which the operating system is installed.
-> - In Windows 7, you do not have to use the DedicatedDumpFile registry entry to put a paging file onto another partition.
-> - The **Complete memory dump** option is not available on computers that are running a 32-bit operating system and that have 2 gigabytes (GB) or more of RAM. For more information, see [Specify what happens when the system stops unexpectedly](/previous-versions/windows/it-pro/windows-server-2003/cc778968(v=ws.10)).
 
 ## Kernel memory dump
 
@@ -86,6 +75,10 @@ If the following conditions are true, the previous file is preserved.
 - A second small memory dump file is created.
 
 Each additional file is given a distinct name. The date is encoded in the file name. For example, Mini022900-01.dmp is the first memory dump generated on February 29, 2000. A list of all small memory dump files is kept in the `%SystemRoot%\Minidump` folder.
+
+## Automatic Memory Dump
+
+See this article for Automatic Memory dump information: [Automatic memory dump](/windows-hardware/drivers/debugger/automatic-memory-dump)
 
 ## Configure the dump type
 
