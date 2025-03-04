@@ -431,6 +431,8 @@ items:
       href: ./active-directory/fail-to-access-data-from-source-control-explorer.md
     - name: Can't add user or object to directory service
       href: ./active-directory/cannot-add-user-object-differ-by-diacritic-mark-character.md
+    - name: Can't edit or delete an AD object
+      href: ./active-directory/cannot-edit-delete-ad-object-error-sam.md      
     - name: Can't start Active Directory Users and Computers Tool
       href: ./active-directory/cannot-start-active-directory-users-and-computers-tool.md
     - name: Compatibility with user accounts ending with the dollar sign
