@@ -1,11 +1,11 @@
 ---
-title: Privilege or Permissions Error When Using Dynamics 365 App for Outlook
-description: Solvess the privilege or permissions error that occurs in Microsoft Dynamics 365 App for Outlook.
+title: Privilege or permission error when using Dynamics 365 App for Outlook
+description: Solves a privilege or permission error that occurs in Microsoft Dynamics 365 App for Outlook.
 ms.reviewer: 
 ms.date: 02/25/2025
 ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
-# A privilege or permissions error occurs in Microsoft Dynamics 365 App for Outlook
+# A privilege or permission error occurs in Microsoft Dynamics 365 App for Outlook
 
 This article helps solve errors that occur when you try to use or open Microsoft Dynamics 365 App for Outlook.
 
@@ -40,16 +40,18 @@ This error occurs if the Dynamics 365 security role doesn't have access to the a
 
 ## Resolution
 
+To solve these issues, use one of the following options.
+
 ### Option 1: Assign the "Dynamics 365 App for Outlook User" security role
 
-The [Dynamics 365 App for Outlook User](/dynamics365/outlook-app/deploy-dynamics-365-app-for-outlook#provide-security-role-access) security role can be assigned to users who need to use App for Outlook. This security role is available from build 9.1.0.4206 or later. This option ensures that the users have the basic privileges needed to access Dynamics 365 App for Outlook.
+The [Dynamics 365 App for Outlook User](/dynamics365/outlook-app/deploy-dynamics-365-app-for-outlook#provide-security-role-access) security role can be assigned to users who need to use Dynamics 365 App for Outlook. This security role is available from build 9.1.0.4206 or later. This option ensures that the users have the basic privileges needed to access Dynamics 365 App for Outlook.
 
 ### Option 2: Assign privileges to a custom security role
 
 If you prefer to customize a security role to include the required privileges, refer to the [More information](#more-information) section for a list of privileges required to use Dynamics 365 App for Outlook.
 
 > [!IMPORTANT]
-> Custom security roles don't have access to the Dynamics 365 app module by default. The steps provided in [Step 3: Provide security role access](/dynamics365/outlook-app/deploy-dynamics-365-app-for-outlook#provide-security-role-access) are also required.
+> Custom security roles don't have access to the Dynamics 365 app module by default. The steps provided in [Step 3: Provide security role access](/dynamics365/outlook-app/deploy-dynamics-365-app-for-outlook#step-3-provide-security-role-access) are also required.
 
 ## More information
 
