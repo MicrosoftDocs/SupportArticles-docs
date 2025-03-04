@@ -12879,6 +12879,10 @@
     {
       "source_path": "support/power-platform/dataverse/d365-app-outlook/error-when-installing-crm-2016-outlook.md",
       "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-when-installing-crm-2016-outlook"
+    },
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/something-went-wrong-during-sign-in.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/something-went-wrong-during-sign"
     }
   ]
 }

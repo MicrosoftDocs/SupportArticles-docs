@@ -54,10 +54,8 @@
       href: d365-app-outlook/troubleshoot-item-level-server-side-synchronization-issues.md
     - name: Privilege error when using App for Outlook
       href: d365-app-outlook/privilege-error-occurs-when-using-dynamics-365-app-for-outlook.md
-    - name: Something went wrong during sign-in when accessing App for Outlook
+    - name: '"Something went wrong during sign-in" error when accessing App for Outlook'
       href: d365-app-outlook/something-went-wrong-during-sign.md
-    - name: Something went wrong during sign-in when using App for Outlook
-      href: d365-app-outlook/something-went-wrong-during-sign-in.md
     - name: The authentication was not successful
       href: d365-app-outlook/the-authentication-was-not-successful.md
     - name: The view is not available when opening an email
