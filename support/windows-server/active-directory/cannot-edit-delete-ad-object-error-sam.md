@@ -1,6 +1,6 @@
 ---
 title: Can't edit or delete an AD object and receive errors
-description: Helps resolve the issue in which you can't edit or delete an Active Directory (AD) object and receive an error "attribute is owned by the Security Accounts Manager (SAM)" or "The specified account does not exist".
+description: Helps resolve the issue in which you can't edit or delete an Active Directory (AD) object and receive an error "attribute is owned by the Security Accounts Manager (SAM)" or "The specified account does not exist."
 ms.date: 03/04/2025
 manager: dcscontentpm
 audience: itpro
@@ -12,7 +12,7 @@ ms.custom:
 ---
 # Can't edit or delete an AD object and receive error "attribute is owned by the Security Accounts Manager (SAM)" or "The specified account does not exist"
 
-This article helps resolve the issue in which you can't edit or delete an Active Directory (AD) object and receive an error "attribute is owned by the Security Accounts Manager (SAM)" or "The specified account does not exist".
+This article helps resolve the issue in which you can't edit or delete an Active Directory (AD) object and receive an error "attribute is owned by the Security Accounts Manager (SAM)" or "The specified account does not exist."
 
 You have a user, Managed Service Account (MSA), Group Managed Service Account (gMSA), computer or group object that is in use. When you attempt to delete a security principal from AD, you receive the following Lightweight Directory Access Protocol (LDAP) error:
 
@@ -73,16 +73,16 @@ repadmin -showobjmeta DC01 "CN=oldcomputer,OU=Disabled,OU=Workstations,DC=contos
  312781 DC12\0ADEL:AF9F2C0D-6B9F-4e32-A94D-A3E235A31BF7  98364396 YYYY-09-16 13:01:55    2 isRecycled
 ```
 
-Here is the interpretation of the metadata:
+Here's the interpretation of the metadata:
 
 - The `sAMAccountType` and `objectCategory` attributes
-  - They're usually set once.
-  - The version is `2`, and they aren't set at this time. So they were removed during the object deletion, and were not re-populated during the undeletion.
+  - They're set once.
+  - The version is `2`, and they aren't set at this time. So they were removed during the object deletion, and weren't repopulated during the undeletion.
 - The `isDeleted` attribute
   - The version also shows `2`. This means the object was deleted and was undeleted by clearing the attribute.
   - If the object was revived using an authoritative restore, the version numbers for all attributes would be higher (the default version increase is 100000).
 - The `isRecycled` attribute
-  - It shows that at least at the time of the undeletion, Active Directory (AD) Recycle Bin was not enabled.
+  - It shows that at least at the time of the undeletion, Active Directory (AD) Recycle Bin wasn't enabled.
   - With AD Recycle Bin, the attribute would only be set on a recycled object.
 - Expected behaviors
   - If the undeletion worked as expected, the version of `sAMAccountType` and `objectCategory` would be an odd value (for example, `3`)
@@ -90,7 +90,7 @@ Here is the interpretation of the metadata:
 
 ## The sAMAccountType and objectCategory attributes aren't added to the object in an undeletion process
 
-The object was deleted and undeleted. Deleted objects don't have the `sAMAccountType` and `objectCategory` attributes. They are added to the object after the undeletion in the normal case. In the problem case, the process fails, leaving the object live without these key attributes.
+The object was deleted and undeleted. Deleted objects don't have the `sAMAccountType` and `objectCategory` attributes. They're added to the object after the undeletion in the normal case. In the problem case, the process fails, leaving the object live without these key attributes.
 
 ## Use the fixupObjectState attribute with LDIFDE to repair the object
 
@@ -102,7 +102,7 @@ The object was deleted and undeleted. Deleted objects don't have the `sAMAccount
 To resolve this issue,  use the new facility included in Windows Server 2025 to repair broken objects as specified in [[MS-ADTS]: fixupObjectState](/openspecs/windows_protocols/ms-adts/37294765-9e7d-41a1-aded-2d6f744eee8c).
 
 > [!NOTE]
-> There is also functionality to repair the `LastLogonTimeStamp` attribute. For more information, see [Will update link to the new article for this attribute].
+> There's also functionality to repair the `LastLogonTimeStamp` attribute. For more information, see [Will update link to the new article for this attribute].
 
 ### Step 1: Identify the object name and the globally unique identifier (GUID)
 
@@ -145,25 +145,25 @@ For example:
 
     Using the Base64 format, the import file updates the attributes individually:
 
-  - For the `sAMAccountType` attribute:
+    - For the `sAMAccountType` attribute:
 
-    ```output
-    DN:
-    Changetype:modify
-    add: fixupObjectState
-    fixupObjectState:: PGd1aWQ9Y2YyYjRhY2EtMGU2Ny00N2Q5LTk4YWEtMzBhNWZlMzBkYzM2PjpTYW1BY2NvdW50VHlwZQ==
-    -
-    ```
+      ```output
+      DN:
+      Changetype:modify
+      add: fixupObjectState
+      fixupObjectState:: PGd1aWQ9Y2YyYjRhY2EtMGU2Ny00N2Q5LTk4YWEtMzBhNWZlMzBkYzM2PjpTYW1BY2NvdW50VHlwZQ==
+      -
+      ```
 
-  - For the `objectCategory` attribute:
-
-    ```output
-    DN:
-    Changetype:modify
-    add: fixupObjectState
-    fixupObjectState:: PGd1aWQ9Y2YyYjRhY2EtMGU2Ny00N2Q5LTk4YWEtMzBhNWZlMzBkYzM2PjpPYmplY3RjYXRlZ29yeQ==
-    -
-    ```
+    - For the `objectCategory` attribute:
+  
+      ```output
+      DN:
+      Changetype:modify
+      add: fixupObjectState
+      fixupObjectState:: PGd1aWQ9Y2YyYjRhY2EtMGU2Ny00N2Q5LTk4YWEtMzBhNWZlMzBkYzM2PjpPYmplY3RjYXRlZ29yeQ==
+      -
+      ```
 
 ### Step 3: Repair the object with LDIFDE
 
