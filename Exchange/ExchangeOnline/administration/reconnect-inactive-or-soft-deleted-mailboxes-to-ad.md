@@ -1,94 +1,71 @@
 ---
-title: Reconnect inactive or soft-deleted mailboxes to AD
-description: Explains how to reconnect an on-premises AD account with an inactive mailbox when the account is brought back into the scope of Microsoft Entra Connect.
+title: Original Mailbox isn't Reconnected After Microsoft Entra Connect Resumes Syncing
+description: Discusses how to recover a user's mailbox data if their original mailbox isn't reconnected after Microsoft Entra Connect resumes syncing the user account.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom: 
+ms.custom:
   - sap:Administrator Tasks
   - Exchange Online
   - CSSTroubleshoot
-  - has-azure-ad-ps-ref
-ms.reviewer: kellybos, Nino Bilic, v-six
-appliesto: 
+  - CI 3946
+ms.reviewer: ninob, apascual, meerak, v-shorestris
+appliesto:
   - Exchange Online
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 03/04/2025
 ---
-# Inactive mailbox is not automatically reconnected to an on-premises Active Directory account
 
-_Original KB number:_ &nbsp; 4337973
+# Original mailbox isn't reconnected after Microsoft Entra Connect resumes syncing
+
+_Original KB number:_ &nbsp;4337973
 
 ## Symptoms
 
-When your on-premises Active Directory account is brought back into the scope of Microsoft Entra Connect, your inactive mailbox is not reconnected automatically in Exchange Online. Additionally, a newly provisioned mailbox is created in Exchange Online.
+Consider the following scenario in a hybrid Microsoft Exchange environment:
 
-> [!NOTE]
-> For Office 365 dedicated/ITAR customers, Microsoft Managed Services Service Provisioning Provider (MMSSPP) writes back the `msExchMailboxGUID` and `ExchangeGUID` attributes from the dedicated environment to a customer's on-premises Active Directory during the coexistence phase. Instead of a newly provisioned mailbox in Exchange Online, a mail-enabled user is created.
+- You [exclude](/entra/identity/hybrid/connect/how-to-connect-sync-configure-filtering) an on-premises user account to prevent Microsoft Entra Connect from syncing the account to Microsoft Entra ID.
+
+- Later, you remove the exclusion to let syncing resume.
+
+As expected, when the on-premises user account stopped syncing, the user lost access to their cloud mailbox. However, when syncing resumed, the user was assigned a new empty cloud mailbox instead of their original cloud mailbox.
 
 ## Cause
 
-After mailbox objects are removed from the scope of Microsoft Entra Connect, they remain in the Microsoft Entra ID Recycle Bin for 30 days. You have to take additional steps to reconnect an on-premises AD account with an inactive mailbox when the account is purged from the Recycle Bin.
+When Microsoft Entra Connect _stops_ syncing an on-premises user account to Microsoft Entra ID, the following actions occur:
 
-## Resolution
+- **User account in Microsoft Entra ID**: Microsoft Entra ID immediately soft deletes the user account and moves it to the deleted users list in the Microsoft 365 admin center and the Microsoft Entra admin center. If Microsoft Entra Connect doesn't resume syncing within 30 days, the user account is permanently deleted.
 
-To resolve this issue, use the following processes.
+- **Cloud mailbox**: Exchange Online immediately soft deletes the cloud mailbox that's associated with the soft deleted user account. Consequently, the mailbox is inaccessible to both the user and delegates. If Microsoft Entra Connect doesn't resume syncing within 30 days, one of the following actions occur:
 
-### Transfer the content from the original mailbox
+   - If the associated cloud mailbox has a hold applied, the mailbox changes to an [inactive mailbox](/purview/inactive-mailboxes-in-office-365). To check for an inactive mailbox, run the following cmdlet in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell):
 
-Restore the content from the inactive mailbox to the newly provisioned mailbox by using the [New-MailboxRestoreRequest](/powershell/module/exchange/new-mailboxrestorerequest?view=exchange-ps&preserve-view=true) cmdlet. This lets you continue to use the new mailbox and copy the original content.
+      ```PS
+      Get-Mailbox -IncludeInactiveMailbox -Identity <cloud mailbox identity> | FL IsInactiveMailbox
+      ```
 
-### Reconnect the original inactive mailbox
+   - If the associated cloud mailbox has no hold applied, it's permanently deleted and its contents are unrecoverable.
+
+When Microsoft Entra Connect _resumes_ syncing an on-premises user account whose associated user account in Microsoft Entra ID is permanently deleted, the following actions occur:
+
+- Microsoft Entra ID creates a new user account in Microsoft Entra ID.
+
+- Exchange Online provisions a new cloud mailbox for the new user account.
+
+This behavior is by design.
 
 > [!NOTE]
-> This process also works for soft-deleted mailboxes if they connect to a new on-premises AD account. The `SoftDeletedMailbox` parameter should be used to replace the `InactiveMailboxOnly` parameter.
+> If syncing of the on-premises user account resumes before permanent deletion of the user account in Microsoft Entra ID, the system restores both the original cloud mailbox and the original user account in Microsoft Entra ID.
 
-1. Run the following command to obtain inactive mailbox attributes from Exchange Online PowerShell:
+## Workaround
 
-    ```powershell
-    $InactiveMailbox = Get-Mailbox -InactiveMailboxOnly -Identity <identity of inactive mailbox>
-    ```
+To work around the issue, if the user's original cloud mailbox is an [inactive mailbox](/purview/inactive-mailboxes-in-office-365), retrieve the user's data by [restoring the contents of the inactive mailbox to the user's new cloud mailbox](/purview/restore-an-inactive-mailbox).
 
-2. Run the following command to temporarily associate the inactive mailbox with a cloud account:
+> [!TIP]
+> Alternatively, you can [recover an inactive mailbox](/purview/recover-an-inactive-mailbox) if both the following conditions are met:
+> - The original user account in Microsoft Entra ID is permanently deleted.
+> - Syncing of the on-premises user account hasn't resumed. Consequently, Microsoft Entra ID hasn't created a new user account, and Exchange Online hasn't provisioned a new cloud mailbox.
 
-   ```powershell
-   New-Mailbox -InactiveMailbox $InactiveMailbox.DistinguishedName -Name "<name of inactive mailbox>" -DisplayName "<DisplayName of inactive mailbox>" -MicrosoftOnlineServicesID <alias@*.onmicrosoft.com> -Password (ConvertTo-SecureString -String <PasswordString> -AsPlainText -Force) -ResetPasswordOnNextLogon $true
-   ```
-
-3. Connect with the Azure Active Directory PowerShell Module, and then run the following command to get the `ObjectGUID` attribute:
-
-    ```powershell
-     Get-ADUser -Identity <ADUser> -Properties "ObjectGUID"
-     ```
-
-4. Obtain the **`ImmutableID`** parameter value, which is the on-premises `ObjectGUID` attribute by default. You can convert `ObjectGUID` to `ImmutableID` by using the following command in Windows PowerShell:
-
-   ```powershell
-   [system.convert]::ToBase64String(([GUID]"<ObjectGUID>").tobytearray())
-   ```
-
-5. Set the `ImmutableID` parameter in Microsoft Entra ID:
-
-    ```powershell
-    Set-MsolUser -UserPrincipalName <UPN> -ImmutableId <ImmutableId>
-    ```
-
-    [!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
-
-6. Run a Microsoft Entra Connect delta sync. This brings the original Microsoft Entra account into the scope of Microsoft Entra Connect.
-
-8. Check the mailbox object, and verify that the primary SMTP address is updated from a temporary user principal name (UPN) value to the correct primary address.
-
-    > [!NOTE]
-    > The new mailbox is not enabled for Litigation Hold. Additionally, you receive the following warning message:  
-    > WARNING: The inactive mailbox has been recovered. To preserve data until you obtain a valid license, we have enabled Single Item Recovery for 30 days. Additionally we have also enabled Retention Hold for 30 days. Once a valid license has been assigned for this mailbox, you can choose to disable these settings and use Litigation or In-Place Hold instead to preserve data.
-
-9. Apply the Exchange Server license and appropriate hold settings to the new mailbox.
-
-## More information
-
-The steps in the Resolution section are adapted from the cloud mailbox instructions in [Restore an inactive mailbox in Microsoft 365](/microsoft-365/compliance/restore-an-inactive-mailbox).
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+If the user's original cloud mailbox had no hold applied and is permanently deleted, the mailbox content is unrecoverable. To prevent accidental or unintentional deletion of mailbox data, we strongly recommend that you apply a [retention policy](/microsoft-365/compliance/retention) or [place a hold](/purview/inactive-mailboxes-in-office-365#confirming-a-hold-is-applied-to-a-mailbox) on a cloud mailbox before its associated user account in Microsoft Entra ID is permanently deleted.
