@@ -31,7 +31,9 @@ There's no simple explanation for the cause of Stop errors (also known as blue s
 4. Make sure that you install the latest Windows updates, cumulative updates, and rollup updates.
 5. Make sure that the BIOS and firmware are up-to-date.
 6. Run any relevant hardware and memory tests.
-7. Run [Microsoft Safety Scanner](https://www.microsoft.com/security/scanner/en-us/default.aspx) or any other virus detection program that includes checks of the Master Boot Record for infections.
+1. Run a anti-Malware software scan such as Microsoft Defender:  [https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-offline](/defender-endpoint/microsoft-defender-offline)
+
+1. If the problem occurred after installing a new piece of software, remove the new software. If you cannot boot to normal mode you can try from Safe Mode - [https://support.microsoft.com/en-us/windows/windows-startup-settings-1af6ec8c-4d4a-4b23-adb7-e76eef0b847f](https://support.microsoft.com/windows/windows-startup-settings-1af6ec8c-4d4a-4b23-adb7-e76eef0b847f) Note: Some software cannot be removed from safe mode. 
 
 ## Common issues and solutions
 
@@ -154,13 +156,18 @@ The traces will be stored in a zip file in the *C:\\MS_DATA\\SDP_PERFSETUP\\* fo
 - [Advanced troubleshooting for Stop error or blue screen error issue](/windows/client-management/troubleshoot-stop-errors)
 
   - [Advanced troubleshooting steps](/windows/client-management/troubleshoot-stop-errors#advanced-troubleshooting-steps)
+    
   - [Advanced troubleshooting using Driver Verifier](/windows/client-management/troubleshoot-stop-errors#advanced-troubleshooting-using-driver-verifier)
-
+    
 - Page file settings
 
   - [Introduction to page files](/windows/client-management/introduction-page-file)
+    
   - [Determine the appropriate page file size](/windows/client-management/determine-appropriate-page-file-size)
-
+    
 - [Generate a kernel or complete crash dump](/windows/client-management/generate-kernel-or-complete-crash-dump)
+
 - [Configure system failure and recovery options in Windows](/windows/client-management/system-failure-recovery-options)
+
 - [Windows clients performance troubleshooting documentation](../../windows-client/performance/performance-overview.md)
+
