@@ -2,8 +2,7 @@
 title: Something went wrong during sign-in when accessing Dynamics 365 App for Outlook
 description: Provides a solution to an error that occurs when you access the Microsoft Dynamics 365 App for Outlook.
 ms.reviewer: 
-ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/04/2025
 ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
 # Something went wrong during sign-in error message displays when you access the Microsoft Dynamics 365 App for Outlook
