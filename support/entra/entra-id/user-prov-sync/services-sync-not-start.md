@@ -56,9 +56,9 @@ Make group policy changes if necessary so that the ADSync service account can lo
 
 You can also try to find and fix the problem by scanning the **Application** and **System** logs in Event Viewer for directory synchronization events. For more information, see [Troubleshoot other error messages](installation-configuration-wizard-errors.md#troubleshoot-other-error-messages).
 
-## Solution 3: Check the Microsoft Entra ID Sync synchronization service (ADSync) service account
+## Solution 3: Check the Microsoft Entra ID Sync (ADSync) service account
 
-If solutions 1 and 2 don't resolve the issue, verify the status of your custom ADSync service account. Ensure that the account isn't expired or disabled, it doesn't have **User must change password at next logon** enabled, and its password isn't expired. If the password was changed, use the Services.msc console to update the ADSync service account password.
+If solutions 1 and 2 don't resolve the issue, verify the status of your custom ADSync service account. Ensure that the account isn't expired or disabled, that the **User must change password at next logon** option isn't enabled, and that its password isn't expired. If the password was changed, use the **Services.msc** console to update the ADSync service account password.
 
 For more information about other types of Windows service accounts, see [ADSync service account](/entra/identity/hybrid/connect/concept-adsync-service-account).
 
