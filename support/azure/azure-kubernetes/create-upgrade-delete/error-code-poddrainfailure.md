@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot UpgradeFailed errors due to eviction failures caused by PDBs
 description: Learn how to troubleshoot UpgradeFailed errors due to eviction failures caused by Pod Disruption Budgets when you try to upgrade an Azure Kubernetes Service cluster.
-ms.date: 03/03/2025
+ms.date: 03/04/2025
 editor: v-jsitser
 ms.reviewer: chiragpa, ffidelis, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
@@ -32,7 +32,7 @@ An AKS cluster upgrade operation fails with one of the following error messages:
 
 This error might occur if a pod is protected by the Pod Disruption Budget (PDB) policy. In this situation, the pod resists being drained, and after several attempts, the upgrade operation fails, and the cluter/node pool falls into a `Failed` state.
 
-Check the PDB configuration: `ALLOWED DISRUPTIONS` value. The value should be `1` or greater. For more information, see [Plan for availability using pod disruption budgets](/azure/aks/operator-best-practices-scheduler#plan-for-availability-using-pod-disruption-budgets). For example, you can check the workload and its PDB as follows. You should observe the `ALLOWED DISRUPTION**` column doesn't allow any disruption. If the `ALLOWED DISRUPTIONS` value is `0`, the pods won't be evicted and node drain will fail during the upgrade process:
+Check the PDB configuration: `ALLOWED DISRUPTIONS` value. The value should be `1` or greater. For more information, see [Plan for availability using pod disruption budgets](/azure/aks/operator-best-practices-scheduler#plan-for-availability-using-pod-disruption-budgets). For example, you can check the workload and its PDB as follows. You should observe the `ALLOWED DISRUPTIONS` column doesn't allow any disruption. If the `ALLOWED DISRUPTIONS` value is `0`, the pods aren't evicted and node drain fails during the upgrade process:
 
 ```console
 $ kubectl get deployments.apps nginx
@@ -50,7 +50,7 @@ nginx-pdb   2               N/A               0                     24s
 
 ```
 
-You can also check for any entries in Kubernetes events using the command `kubectl get events | grep -i drain`. A similar output will show the message "Eviction blocked by Too Many Requests (usually a pdb)":
+You can also check for any entries in Kubernetes events using the command `kubectl get events | grep -i drain`. A similar output shows the message "Eviction blocked by Too Many Requests (usually a pdb)":
 
 ```console
 $ kubectl get events | grep -i drain
@@ -70,7 +70,7 @@ To resolve this issue, use one of the following solutions.
 ## Solution 1: Enable pods to drain
 
 1. Adjust the PDB to enable pod draining. Generally, The allowed disruption is controlled by the `Min Available / Max unavailable` or `Running pods / Replicas` parameter. You can modify the `Min Available / Max unavailable` parameter at the PDB level or increase the number of `Running pods / Replicas` to push the Allowed Disruption value to **1** or greater.
-2. Try again to upgrade the AKS cluster to the same version that you tried to upgrade to previously. This process will trigger a reconciliation.
+2. Try again to upgrade the AKS cluster to the same version that you tried to upgrade to previously. This process triggers a reconciliation.
 
    ```console
    $ az aks upgrade --name <aksName> --resource-group <resourceGroupName>
@@ -82,7 +82,7 @@ To resolve this issue, use one of the following solutions.
 ## Solution 2: Back up, delete, and redeploy the PDB
 
 1. Take a backup of the PDB(s) using the command `kubectl get pdb <pdb-name> -n <pdb-namespace> -o yaml > pdb-name-backup.yaml`, and then delete the PDB using the command `kubectl delete pdb <pdb-name> -n <pdb-namespace>`. After the new upgrade attempt is finished, you can redeploy the PDB just applying the backup file using the command `kubectl apply -f pdb-name-backup.yaml`.
-2. Try again to upgrade the AKS cluster to the same version that you tried to upgrade to previously. This process will trigger a reconciliation.
+2. Try again to upgrade the AKS cluster to the same version that you tried to upgrade to previously. This process triggers a reconciliation.
 
    ```console
    $ az aks upgrade --name <aksName> --resource-group <resourceGroupName>
@@ -96,11 +96,11 @@ To resolve this issue, use one of the following solutions.
 1. Delete the pods that can't be drained.
    
    > [!NOTE]
-   > If the pods were created by a Deployment or StatefulSet, they'll be controlled by a ReplicaSet. If that's the case, you might have to delete or scale the workload replicas to zero (0) of the Deployment or StatefulSet. Before you do that, we recommend that you make a backup: `kubectl get <deployment.apps -or- statefulset.apps> <name> -n <namespace> -o yaml > backup.yaml`.
+   > If the pods are created by a Deployment or StatefulSet, they'll be controlled by a ReplicaSet. If that's the case, you might have to delete or scale the workload replicas to zero (0) of the Deployment or StatefulSet. Before you do that, we recommend that you make a backup: `kubectl get <deployment.apps -or- statefulset.apps> <name> -n <namespace> -o yaml > backup.yaml`.
 
-2. To scale-down, you can use `kubectl scale --replicas=0 <deployment.apps -or- statefulset.apps> <name> -n <namespace>` before the reconciliation
+2. To scale down, you can use `kubectl scale --replicas=0 <deployment.apps -or- statefulset.apps> <name> -n <namespace>` before the reconciliation
 
-3. Try again to upgrade the AKS cluster to the same version that you tried to upgrade to previously. This process will trigger a reconciliation.
+3. Try again to upgrade the AKS cluster to the same version that you tried to upgrade to previously. This process triggers a reconciliation.
 
    ```console
    $ az aks upgrade --name <aksName> --resource-group <resourceGroupName>
