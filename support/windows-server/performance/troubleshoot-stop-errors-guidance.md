@@ -155,19 +155,14 @@ The traces will be stored in a zip file in the *C:\\MS_DATA\\SDP_PERFSETUP\\* fo
 
 - [Advanced troubleshooting for Stop error or blue screen error issue](/windows/client-management/troubleshoot-stop-errors)
 
-  - [Advanced troubleshooting steps](/windows/client-management/troubleshoot-stop-errors#advanced-troubleshooting-steps)
-    
+  - [Advanced troubleshooting steps](/windows/client-management/troubleshoot-stop-errors#advanced-troubleshooting-steps)    
   - [Advanced troubleshooting using Driver Verifier](/windows/client-management/troubleshoot-stop-errors#advanced-troubleshooting-using-driver-verifier)
-    
+
 - Page file settings
 
-  - [Introduction to page files](/windows/client-management/introduction-page-file)
-    
+  - [Introduction to page files](/windows/client-management/introduction-page-file)   
   - [Determine the appropriate page file size](/windows/client-management/determine-appropriate-page-file-size)
-    
+
 - [Generate a kernel or complete crash dump](/windows/client-management/generate-kernel-or-complete-crash-dump)
-
 - [Configure system failure and recovery options in Windows](/windows/client-management/system-failure-recovery-options)
-
 - [Windows clients performance troubleshooting documentation](../../windows-client/performance/performance-overview.md)
-
