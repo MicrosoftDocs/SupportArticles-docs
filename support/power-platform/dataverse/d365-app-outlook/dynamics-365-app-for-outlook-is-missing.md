@@ -1,8 +1,8 @@
 ---
-title: Dynamics 365 App for Outlook option is Missing from navigation
-description: Solves an issue where Microsoft Dynamics 365 App for Outlook is missing from Microsoft Dynamics 365 navigation pane.
+title: Dynamics 365 App for Outlook option is missing from navigation
+description: Solves an issue where Microsoft Dynamics 365 App for Outlook is missing from the Dynamics 365 navigation pane.
 ms.reviewer: 
-ms.date: 02/26/2025
+ms.date: 03/05/2025
 ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
 # Dynamics 365 App for Outlook is missing from the navigation pane
@@ -14,15 +14,15 @@ _Original KB number:_ &nbsp; 4339287
 
 ## Symptoms
 
-You can't find the **Dynamics 365 App for Outlook** option under the **Settings** in your Dynamics 365 organization.
+You can't find the **Dynamics 365 App for Outlook** option under **Settings** in your Dynamics 365 organization.
 
 ## Cause
 
-This issue occurs due to the customization to your navigation menu (site map). Such customization can be applied from a solution, or an administrator could have explicitly edited the site map XML, or used the site map designer to remove the option.
+This issue occurs due to the customization to your navigation menu (site map). Such customization can be applied from a solution, or an administrator could have explicitly edited the site map XML or used the site map designer to remove the option.
 
 ## Resolution
 
-You can add the **Dynamics 365 App for Outlook** option to the **Settings** by editing the site map within the [site map designer](/dynamics365/customerengagement/on-premises/customize/create-site-map-app):
+You can add the **Dynamics 365 App for Outlook** option to **Settings** by editing the site map within the [site map designer](/dynamics365/customerengagement/on-premises/customize/create-site-map-app):
 
 1. Access your Dynamics 365 organization as a user with the System Administrator or System Customer role.
 2. Navigate to **Settings** > **Customization**, and then select **Customize the System**.
@@ -34,17 +34,17 @@ You can add the **Dynamics 365 App for Outlook** option to the **Settings** by e
 
     **/tools/appsforcrm/AppForOutlookAdminSettings.aspx**
 
-8. In the **Title** field, type _Dynamics 365 App for Outlook_.
+8. In the **Title** field, type **Dynamics 365 App for Outlook**.
 
 9. For the **Icon** field, select the following option if it's available or select the default icon or any other icon:
 
     **/_imgs/area/crm_apps_16x16.png**
 
 10. Enter the **crmapp_outlook** value in the **ID** field.
-11. Select **Save** and then select **Publish**.
+11. Select **Save** > **Publish**.
 12. Close the site map designer.
 13. Within the **Solution** dialog, select **Publish All Customizations**.
-14. Sign out and sign back into the organization.
+14. Sign out and sign back in to the organization.
 
 ## More information
 
