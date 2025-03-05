@@ -119,12 +119,12 @@ For example:
     DN:
     Changetype:modify
     add: fixupObjectState
-    fixupObjectState: cn=brokenuser,ou=bad-users,dc=contoso,dc=com: sAMAccountType,objectCategory
+    fixupObjectState: cn=brokenuser,ou=bad-users,dc=contoso,dc=com: SamAccountType,Objectcategory
     -
     ```
 
     > [!NOTE]
-    > The line with only "-" and the empty line are required for a well-formed LDIFDE import file. This example requests to repair both Security Account Manager (SAM) relevant attributes.
+    > The line with only "-" and the empty line are required for a well-formed LDIFDE import file. This example requests to repair both SAM relevant attributes.
 
 - Use the GUID-based syntax:
 
@@ -132,7 +132,7 @@ For example:
 
     An object name can be expressed as`<guid=cf2b4aca-0e67-47d9-98aa-30a5fe30dc36>` in the GUID-based syntax.
 
-    So, the expression of `fixupObjectState: cn=brokenuser,ou=bad-users,dc=contoso,dc=com:objectCategory, sAMAccountType` becomes `fixupObjectState: <guid=cf2b4aca-0e67-47d9-98aa-30a5fe30dc36>:objectCategory, sAMAccountType`.
+    So, the expression of `fixupObjectState: cn=brokenuser,ou=bad-users,dc=contoso,dc=com:Objectcategory, SamAccountType` becomes `fixupObjectState: <guid=cf2b4aca-0e67-47d9-98aa-30a5fe30dc36>:Objectcategory, SamAccountType`.
 
     To use this syntax with the LDIFDE import file, the text after the first colon needs to be encoded in Base64 format because of the  greater-than (>) and less-than (<) signs:
 
