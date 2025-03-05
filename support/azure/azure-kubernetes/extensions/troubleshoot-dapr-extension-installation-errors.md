@@ -154,7 +154,7 @@ If you're still experiencing installation issues, [create a support request](htt
 If you're experiencing Dapr runtime security risks and regressions while using the extension, open an issue with the [Dapr open source project](https://github.com/dapr/dapr/issues/new/choose).
 
 > [!NOTE]
-> Learn more about [how Microsoft handles issues raised for the Dapr extension](/azure/aks/dapr-overview.md#issue-handling).
+> Learn more about [how Microsoft handles issues raised for the Dapr extension](/azure/aks/dapr-overview#issue-handling).
 
 You could also start a discussion in the Dapr project Discord:
 - [Dapr runtime](https://discord.com/channels/778680217417809931/778684372475707416)
