@@ -22,7 +22,7 @@ Although using `lastLogonTimestamp` has its limitations due to Kerberos S4U upda
 
 A domain controller (DC) might run with its system time set in the future. In this situation, if a user authenticates with the DC, the DC compares its local time with the time stored on the user account. Then, the DC updates the `lastLogonTimestamp`value as its current time is much newer.
 
-The time on the DC might be incorrect due to a problem with time synchronization from the virtual machine (VM) host, the Network Time Protocol (NTP) infrastructure or [Secure Time Seeding (STS)](https://techcommunity.microsoft.com/blog/askds/secure-time-seeding-on-dcs-a-note-from-the-field/4238810). The DC might also revert to the correct time quickly, so you might not catch the problem in your reporting.
+The time on the DC might be incorrect due to a problem with time synchronization from the virtual machine (VM) host, the Network Time Protocol (NTP) infrastructure, or [Secure Time Seeding (STS)](https://techcommunity.microsoft.com/blog/askds/secure-time-seeding-on-dcs-a-note-from-the-field/4238810). The DC might also revert to the correct time quickly, so you might not catch the problem in your reporting.
 
 As NTP prevents large time-offsets between DCs from being distributed across the domain, incorrect time-stamps might be kept local to one single DC. However, domain members follow their local DC' time, even when the DC detects a time skew during Kerberos requests. This is why Kerberos transactions still work in this situation.
 
@@ -37,7 +37,7 @@ For previous versions of Windows, the only approaches to resolve the issue are:
 In Windows Server 2025, there's a new facility to repair broken objects as specified in [[MS-ADTS]: fixupObjectState](/openspecs/windows_protocols/ms-adts/37294765-9e7d-41a1-aded-2d6f744eee8c).
 
 > [!NOTE]
-> There is functionality to correct missing `sAMAccountType` and `objectCategory` attributes. For more information, see [Will add link when new article releases].
+> There's functionality to correct missing `sAMAccountType` and `objectCategory` attributes. For more information, see [Will add link when new article releases].
 
 ### Step 1: Identify the object name and the globally unique identifier (GUID)
 
