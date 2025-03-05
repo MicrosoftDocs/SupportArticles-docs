@@ -143,7 +143,7 @@ For example:
     > [!NOTE]
     > The double colon tells LDIFDE that the attribute value is in Base64 format. You can use the [Base64 encoder](https://www.bing.com/search?q=site%3Amicrosoft.com%20base64%20encoder&qs=n&form=QBRE&sp=-1&lq=0&pq=site%3Amicrosoft.com%20base64%20encoder&sc=0-33&sk=&cvid=CE994D44ADFC432CA2D3784CEBB3D934&ghsh=0&ghacc=0&ghpl=) to encode the string directly on the web.
 
-    Using the Base64 format, the import file updates the attributes individually:
+    With the Base64 format used, the import file updates the attributes individually:
 
     - For the `sAMAccountType` attribute:
 
