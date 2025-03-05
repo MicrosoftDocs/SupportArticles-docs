@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot when the Intune Connector Setup Wizard ends prematurely
 description: Resolves an issue in which the Microsoft Intune Connector Setup Wizard ends prematurely when you install the Intune Certificate Connector (NDESConnectorSetup.exe).
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 search.appverid: MET150
 ms.custom: sap:Configure Devices - Windows\SCEP Certificates
 ms.reviewer: kaushika

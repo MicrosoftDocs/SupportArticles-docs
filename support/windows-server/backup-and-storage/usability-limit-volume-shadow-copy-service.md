@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, folkertb
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Partition and volume management, csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\partition and volume management
+- pcy:WinComm Storage High Avail
 ---
 # Usability limit for Volume Shadow Copy Service (VSS)
 

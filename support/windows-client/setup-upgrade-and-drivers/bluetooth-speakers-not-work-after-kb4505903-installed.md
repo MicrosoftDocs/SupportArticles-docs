@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Device and Driver Management\Peripherals driver installation or update, csstroubleshoot
+ms.custom:
+- sap:windows device and driver management\peripherals driver installation or update
+- pcy:WinComm Devices Deploy
 ---
 # Bluetooth speakers don't work after update 4505903 is installed in Windows 10, version 1903
 

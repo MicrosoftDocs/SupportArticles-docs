@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: adjudele, cpuckett, kaushika, shsadash, rblume
-ms.custom: sap:Clustering and High Availability\Hyper-V Clusters and VM Mobility (Migration), csstroubleshoot
+ms.custom:
+- sap:clustering and high availability\hyper-v clusters and vm mobility (migration)
+- pcy:WinComm Storage High Avail
 ---
 # Troubleshoot live migration issues
 

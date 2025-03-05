@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, ddobyns
-ms.custom: sap:Network Connectivity and File Sharing\Wireless (802.1x, Bluetooth, Miracast, Mobile Broadband), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\wireless (802.1x,bluetooth,miracast,mobile broadband)
+- pcy:WinComm Networking
 ---
 # OpenGL applications do not run on a Miracast wireless display in Windows 10
 

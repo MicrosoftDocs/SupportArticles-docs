@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\LDAP configuration and interoperability, csstroubleshoot
+ms.custom:
+- sap:active directory\ldap configuration and interoperability
+- pcy:WinComm Directory Services
 ---
 # LDAP and Kerberos Server may not respond to UDP requests or reset TCP sessions immediately after creation
 

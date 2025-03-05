@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, jeffpatt
-ms.custom: sap:UEV\Agent\Other, csstroubleshoot
+ms.custom:
+- sap:uev\agent\other
+- pcy:WinComm User Experience
 ---
 # User Experience Virtualization (UE-V) registry settings
 

@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, steved
-ms.custom: sap:Network Connectivity and File Sharing\Windows NIC Teaming (Load Balance Failover), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\windows nic teaming (load balance failover)
+- pcy:WinComm Networking
 ---
 # "Faulted Not Found" status for NIC team after you restart Windows from an iSCSI boot disk
 

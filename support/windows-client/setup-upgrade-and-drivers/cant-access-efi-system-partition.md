@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, chadbee, davidwin
-ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
+ms.custom:
+- sap:windows setup,upgrade and deployment\installing or upgrading windows
+- pcy:WinComm Devices Deploy
 ---
 # You can't access an EFI system partition with the Mountvol utility in a WinPE Environment
 

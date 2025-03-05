@@ -1,10 +1,10 @@
 ---
 title: Troubleshoot wrap issues in Power Apps
 description: Provides resolutions for issues related to the wrap feature in Power Apps.
-ms.reviewer: sitaramp
+ms.reviewer: sitaramp, koagarwa
 ms.author: arijitba
 author: arijitba
-ms.date: 03/04/2024
+ms.date: 02/11/2025
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done, sap:App Management\Wrap an app
 ---
 # Troubleshoot issues with the wrap feature in Power Apps
@@ -237,6 +237,14 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
    - The **Tag value** should correspond to the name you chose for your **Secret** when uploading the povisioning profile in the previous step. For example, if your **Secret** is named **iOSProvisioningProfileSecret**, then the value of the **Tag value** should also be **iOSProvisioningProfileSecret**.
 
    :::image type="content" source="media/wrap-issues/provisioning-profile-secret-tag.png" alt-text="Screenshot that shows how to create a tag for iOS Provisioning Profile Secret." lightbox="media/wrap-issues/provisioning-profile-secret-tag.png":::
+
+## Issue 7 - Wrap app sign-in fails
+
+1. Verify if the user has access to the application. For more information, see [Share a canvas app with your organization](/power-apps/maker/canvas-apps/share-app).
+
+2. If the user has access permissions, [review the app's Conditional Access policies in the Microsoft Entra admin center](/entra/identity/monitoring-health/how-to-view-applied-conditional-access-policies?tabs=microsoft-entra-admin-center#how-to-view-conditional-access-policies). Ensure you have a role that allows you to see both the sign-in logs and the Conditional Access policies.
+
+3. To explore the results and troubleshoot sign-in errors, copy the correlation ID from the mobile screen showing the failed sign-in and follow the guide in [How to troubleshoot Microsoft Entra sign-in errors](/entra/identity/monitoring-health/howto-troubleshoot-sign-in-errors).
 
 ## Other issues in wrap for Power Apps
 

@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\dns
+- pcy:WinComm Networking
 ---
 # DNS zones don't load and event ID 4000 and 4007 are logged
 

@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-lianna
-ms.custom: sap:Windows Activation\Windows activation issues, csstroubleshoot
+ms.custom:
+- sap:windows activation\windows activation issues
+- pcy:WinComm Devices Deploy
 ---
 # Troubleshoot Windows activation error codes
 
@@ -329,7 +331,7 @@ Request more activations to increase limit. If you require more activations, con
 
 When you encounter this error, you see this error message:
 
-> The activation server reported that teh Multiple Activation Key extension limit has been exceeded.
+> The activation server reported that the Multiple Activation Key extension limit has been exceeded.
 
 **Cause:**
 
@@ -484,7 +486,7 @@ To resolve this issue, activate the KMS host by using either [online or telephon
 
 When you encounter this error, you see this error message:
 
-> The Software Protection Service determined that teh specified Key Management Service cannot be read.
+> The Software Protection Service determined that the specified Key Management Service cannot be read.
 
 **Cause:**
 
@@ -526,7 +528,7 @@ To resolve this issue, get a new MAK or KMS key, install it on the system, then 
 
 When you encounter this error, you see this error message:
 
-> The Software Protection Service reported that teh non-genuine grace period expired.
+> The Software Protection Service reported that the non-genuine grace period expired.
 
 **Cause:**
 

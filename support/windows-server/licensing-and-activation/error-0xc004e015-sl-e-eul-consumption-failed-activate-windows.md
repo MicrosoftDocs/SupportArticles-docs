@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-naqviadil, v-lianna, cwhitley
-ms.custom: sap:Windows Activation\Windows activation issues, csstroubleshoot
+ms.custom:
+- sap:windows activation\windows activation issues
+- pcy:WinComm Devices Deploy
 ---
 # Error 0xC004E015 (SL_E_EUL_CONSUMPTION_FAILED) when you activate Windows
 

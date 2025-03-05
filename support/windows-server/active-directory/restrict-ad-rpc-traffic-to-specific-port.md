@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
+ms.custom:
+- sap:active directory\active directory replication and topology
+- pcy:WinComm Directory Services
 ---
 # How to restrict Active Directory RPC traffic to a specific port  
 

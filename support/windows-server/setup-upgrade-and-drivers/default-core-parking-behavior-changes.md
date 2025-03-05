@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, match
-ms.custom: sap:Windows Device and Driver Management\Peripherals driver installation or update, csstroubleshoot
+ms.custom:
+- sap:windows device and driver management\peripherals driver installation or update
+- pcy:WinComm Devices Deploy
 ---
 # Windows Server 2012 R2 default Core Parking behavior changes
 

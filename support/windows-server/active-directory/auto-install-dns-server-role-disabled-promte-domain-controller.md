@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: arrenc, kaushika
-ms.custom: sap:Active Directory\DCPromo and the installation or removal of domain controllers, csstroubleshoot
+ms.custom:
+- sap:active directory\dcpromo and the installation or removal of domain controllers
+- pcy:WinComm Directory Services
 ---
 # Unable to select DNS Server role when adding a domain controller into an existing Active Directory domain
 

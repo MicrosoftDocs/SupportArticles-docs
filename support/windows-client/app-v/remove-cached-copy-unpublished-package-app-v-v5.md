@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, gautama
-ms.custom: sap:Application Virtualization\Sequencing\Package conversion, csstroubleshoot
+ms.custom:
+- sap:application virtualization\sequencing\package conversion
+- pcy:WinComm User Experience
 ---
 # How to remove a cached copy of an unpublished package in Microsoft App-V v5
 

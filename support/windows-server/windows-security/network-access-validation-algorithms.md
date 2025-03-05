@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: tinab, kaushika
-ms.custom: sap:Windows Security Technologies\Legacy authentication (NTLM), csstroubleshoot
+ms.custom:
+- sap:windows security technologies\legacy authentication (ntlm)
+- pcy:WinComm Directory Services
 ---
 # Network access validation algorithms and examples for Windows
 

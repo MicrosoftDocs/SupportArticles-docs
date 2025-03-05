@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: WalterE, cpuckett, kaushika
-ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\access to file shares (smb)
+- pcy:WinComm Networking
 ---
 # List of currently available hotfixes for the File Services technologies
 

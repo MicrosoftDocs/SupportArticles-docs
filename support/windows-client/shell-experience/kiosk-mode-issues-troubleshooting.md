@@ -4,7 +4,9 @@ description: Learn how to troubleshoot single-app and multi-app kiosk configurat
 ms.date: 01/15/2025
 manager: dcscontentpm
 ms.topic: troubleshooting
-ms.custom: sap:Windows Desktop and Shell Experience\Kiosk Mode, csstroubleshoot
+ms.custom:
+- sap:windows desktop and shell experience\kiosk mode
+- pcy:WinComm User Experience
 ms.reviewer: sybruckm, aaroncz, lizlong, paoloma
 audience: itpro
 ---

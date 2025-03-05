@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:System Performance\App, Process, Service Reliability (crash, errors), csstroubleshoot
+ms.custom:
+- sap:system performance\app,process,service reliability (crash,errors)
+- pcy:WinComm Performance
 ---
 
 <!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.

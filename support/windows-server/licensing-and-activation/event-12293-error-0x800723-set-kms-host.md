@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Activation\Windows activation issues, csstroubleshoot
+ms.custom:
+- sap:windows activation\windows activation issues
+- pcy:WinComm Devices Deploy
 ---
 # Security Event 12293 with error 0x80072338 registering KMS host record
 

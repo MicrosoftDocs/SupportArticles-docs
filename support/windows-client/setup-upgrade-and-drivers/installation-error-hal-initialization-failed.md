@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, scottmca, ctimon
-ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
+ms.custom:
+- sap:windows setup,upgrade and deployment\installing or upgrading windows
+- pcy:WinComm Devices Deploy
 ---
 # Error HAL_INITIALIZATION_FAILED when you install Windows 8 or Windows Server 2012 on VMware VM
 

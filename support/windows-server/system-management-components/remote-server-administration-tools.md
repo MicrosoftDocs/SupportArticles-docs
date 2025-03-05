@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, jtrox
-ms.custom: sap:System Management Components\Server Manager, csstroubleshoot
+ms.custom:
+- sap:system management components\server manager
+- pcy:WinComm User Experience
 adobe-target: true
 ---
 

@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, mchamp, warrenw, v-lianna
-ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshoot
+ms.custom:
+- sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot)
+- pcy:WinComm Performance
 ---
 # Troubleshoot unexpected reboots using system event logs
 

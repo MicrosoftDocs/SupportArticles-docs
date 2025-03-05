@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Setup, Upgrade and Deployment\Power management, csstroubleshoot
+ms.custom:
+- sap:windows setup,upgrade and deployment\power management
+- pcy:WinComm Devices Deploy
 ---
 # Fast startup causes hibernation or shutdown to fail in Windows 10 or Windows 8.1
 

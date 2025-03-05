@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: gbrag
-ms.custom: sap:System Management Components\WMI management and troubleshooting, csstroubleshoot
+ms.custom:
+- sap:system management components\wmi management and troubleshooting
+- pcy:WinComm User Experience
 ---
 # How to identify the cause of an unexpected WMI shutdown
 

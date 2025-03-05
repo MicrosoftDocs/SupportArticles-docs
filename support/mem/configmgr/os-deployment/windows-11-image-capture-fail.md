@@ -1,7 +1,7 @@
 ---
 title: Capture media fails to capture Windows 11 image
 description: Describes some errors that occur when you capture a Windows 11 image by using capture media in Configuration Manager, and provides solutions.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 ms.reviewer: kaushika, sccmcsscontent, alpasc
 author: helenclu
 ms.author: luche

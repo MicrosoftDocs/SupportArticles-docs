@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Desktop and Shell Experience\DPI and Display Issues, csstroubleshoot
+ms.custom:
+- sap:windows desktop and shell experience\dpi and display issues
+- pcy:WinComm User Experience
 ---
 # Docking station external monitors not working when a Windows 10 version 1703-based portable computer is connected
 

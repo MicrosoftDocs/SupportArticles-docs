@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, akhleshs, sabinn
-ms.custom: sap:Remote Desktop Services and Terminal Services\Licensing for Remote Desktop Services (Terminal Services), csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\licensing for remote desktop services (terminal services)
+- pcy:WinComm User Experience
 ---
 # Best practices for setting up RDS licensing across Active Directory domains/forests or work groups
 

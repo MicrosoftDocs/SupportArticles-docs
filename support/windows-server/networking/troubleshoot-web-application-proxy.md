@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, kgremban, jgerend, v-lianna
-ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
+- pcy:WinComm Networking
 ms.assetid: a2fef55d-747b-4e20-8f21-5f8807e7ef87
 ---
 # Troubleshoot Web Application Proxy

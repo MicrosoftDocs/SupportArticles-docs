@@ -35,7 +35,7 @@
   - name: VM availability might be inaccurate during restart
     href: ../windows/inaccurate-vm-availability-during-vm-restart.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
 
-- name: Increase Quota Limits
+- name: Increase quota limits
   items:
   - name: Increase compute vCPU limits (Quota)
     items:
@@ -124,6 +124,9 @@
   items:
   - name: Can't restart after applying kernel changes
     href: kernel-related-boot-issues.md
+  - name: Troubleshoot LIS driver issues on Linux VMs
+    href: troubleshoot-lis-driver-issues-on-linux-vms.md
+
 - name: OS upgrades
   items:
   - name: Red Hat
@@ -181,7 +184,6 @@
     href: linux-no-boot-dracut.md
   - name: VM fails to boot due to incorrect HugePages configuration
     href: linux-vm-no-boot-incorrect-hugepages-configuration.md
-          
 
 - name: Cannot start or stop my VM
   items:
@@ -205,7 +207,7 @@
   - name: Root Cause Analysis of unexpected VM reboot
     href: ../windows/unexpected-vm-reboot-root-cause-analysis.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
 
-- name: Received an Allocation Failure
+- name: Received an allocation failure
   items:
   - name: Allocation failures
     href: ../windows/allocation-failure.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
@@ -240,7 +242,7 @@
     - name: Cloud-init-enabled VM takes a long time to start up
       href: cloud-init-deployment-delay.md
 
-- name: Disk Management
+- name: Disk management
   items:
   - name: Overview
     href: /azure/virtual-machines/managed-disks-overview?context=/troubleshoot/azure/virtual-machines/linux/context/context
@@ -278,6 +280,8 @@
       href: troubleshoot-sbd-issues-rhel.md
     - name: Troubleshoot pacemaker cluster services and resources startup issues
       href: troubleshoot-rhel-pacemaker-cluster-services-resources-startup-issues.md
+    - name: Troubleshoot unexpected node reboots issues in RHEL
+      href: troubleshoot-unexpected-node-reboots-pacemaker-rhel.md
   - name: SLES
     items:
     - name: Troubleshoot Azure fence agent startup issues in SUSE
@@ -286,6 +290,8 @@
       href: troubleshoot-pacemaker-services-suse.md
     - name: Troubleshoot SBD service failure in SUSE
       href: troubleshoot-sbd-issues-sles.md
+    - name: Troubleshoot unexpected node reboots issues in SUSE
+      href: troubleshoot-unexpected-node-reboots-pacemaker-suse.md
       
       
 - name: Linux repositories
@@ -347,8 +353,8 @@
     href: /azure/virtual-machines/linux/disk-encryption-troubleshooting?context=/troubleshoot/azure/virtual-machines/linux/context/context
   - name: Unlock the encrypted disk for offline repair
     href: unlock-encrypted-linux-disk-offline-repair.md
-  - name: How to display encription settings with resource explorer
-    href: /azure/virtual-machines/linux/how-to-display-encryption-settings-with-azure-resource-explorer.md
+  - name: How to display encryption settings on Azure Linux Virtual Machines
+    href: how-to-display-encryption-settings-with-azure-resource-explorer.md
   - name: FAQ
     href: /azure/virtual-machines/linux/disk-encryption-faq?context=/troubleshoot/azure/virtual-machines/linux/context/context
 
@@ -400,9 +406,9 @@
     - name: Issues with Python 3-enabled Linux systems
       href: /azure/virtual-machines/extensions/issues-using-vm-extensions-python-3?context=/troubleshoot/azure/virtual-machines/linux/context/context
 
-- name: Custom script extenions (CSE) for Linux
+- name: Custom script extensions (CSE) for Linux
   items:
-  - name: Previous command is re-run
+  - name: Previous command is rerun
     href: customscript-reruns-previous-command.md
   - name: Linux - version 2
     href: /azure/virtual-machines/extensions/custom-script-linux#troubleshooting?context=/troubleshoot/azure/virtual-machines/linux/context/context

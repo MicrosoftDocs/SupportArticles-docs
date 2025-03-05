@@ -1,8 +1,17 @@
-- name: Active Server Pages
-  items:
-  - name: Format DateTime and Date values in XML
-    href: active-server-pages/format-datetime-values-xml-dataset.md
 
+
+- name: Configuration
+  items:
+  - name: AppDomain isn't loaded
+    href: configuration/exclude-folders-antivirus-scanning.md
+  - name: Back up configuration files
+    href: configuration/back-up-configuration-files.md
+  - name: Disable documentation protocol for web services
+    href: configuration/disable-documentation-protocol.md
+  - name: Install and uninstall ASP.NET 4.5 in Windows 8
+    href: configuration/install-aspnet-45-windows-8-server-2012.md
+  - name: Restrict users from accessing to web resources
+    href: configuration/restrict-users-access-web-resource.md
 - name: Development
   items:
   - name: ASP.NET 2.0 and 3.5 don't work
@@ -31,6 +40,8 @@
     href: development/disable-debugging-application.md
   - name: Edit the web.config file
     href: development/edit-web-config.md
+  - name: Format DateTime and Date values in XML
+    href: development/format-datetime-values-xml-dataset.md
   - name: HTTP modules and handlers
     href: development/http-modules-handlers.md
   - name: Impersonation in web applications
@@ -83,65 +94,46 @@
     href: development/write-binary-files-browser-csharp.md
   - name: Write binary files to browser by Visual Basic
     href: development/write-binary-files-browser-vb.md
-- name: Health, diagnostic, and performance features
-  items:
-  - name: Create web.config for an application
-    href: health-diagnostic-performance/create-web-config.md
-  - name: Information diagnostic of IIS and ASP.NET
-    href: health-diagnostic-performance/iis-and-aspnet-diagnostic.md
-  - name: Performance issue when you make calls to web services
-    href: health-diagnostic-performance/performance-call-web-service.md
-  - name: Troubleshoot OutOfMemoryException
-    href: health-diagnostic-performance/troubleshoot-outofmemoryexception.md
-  - name: Troubleshoot the invalid viewstate issues
-    href: health-diagnostic-performance/troubleshooting-view-state-is-invalid-error.md
-
-- name: IISAdmin service and Inetinfo process operation
-  items:
-  - name: Disable documentation protocol for web services
-    href: iisadmin-service-process/disable-documentation-protocol.md
-
-- name: Site behavior and performance
+- name: Performance
   items:
   - name: Application Initialization module doesn't work
-    href: site-behavior-performance/application-fail-ssl-web.md
+    href: performance/application-fail-ssl-web.md
   - name: Can't transfer controls to pages
-    href: site-behavior-performance/error-executing-child-request.md
+    href: performance/error-executing-child-request.md
   - name: Can't use a virtual directory to host applications
-    href: site-behavior-performance/system-security-securityexception.md
+    href: performance/system-security-securityexception.md
   - name: Can't use DataAdapter in web applications
-    href: site-behavior-performance/request-timed-out-dataadapter.md
+    href: performance/request-timed-out-dataadapter.md
+  - name: Create web.config for an application
+    href: performance/create-web-config.md
   - name: Debug mode in ASP.NET applications
-    href: site-behavior-performance/debug-mode-applications.md
+    href: performance/debug-mode-applications.md
   - name: Exceptions cause applications to quit
-    href: site-behavior-performance/exceptions-cause-apps-quit.md
+    href: performance/exceptions-cause-apps-quit.md
   - name: FileNotFoundException when an application calls a web service
-    href: site-behavior-performance/filenotfindexception-call-web-service.md
+    href: performance/filenotfindexception-call-web-service.md
+  - name: Information diagnostic of IIS and ASP.NET
+    href: performance/iis-and-aspnet-diagnostic.md
+  - name: Performance issue when you make calls to web services
+    href: performance/performance-call-web-service.md
   - name: State servers log event ID 1072 or 1076
-    href: site-behavior-performance/state-server-event-1072-1076.md
+    href: performance/state-server-event-1072-1076.md
   - name: Things to check when high memory occurs
-    href: site-behavior-performance/high-memory-level.md
+    href: performance/high-memory-level.md
   - name: ThreadAbortException when you use Server.Transfer
-    href: site-behavior-performance/system-threading-threadabortexception.md
+    href: performance/system-threading-threadabortexception.md
+  - name: Troubleshoot OutOfMemoryException
+    href: performance/troubleshoot-outofmemoryexception.md
+  - name: Troubleshoot the invalid viewstate issues
+    href: performance/troubleshooting-view-state-is-invalid-error.md
   - name: Uninstallation of WoW64 Support component fails
-    href: site-behavior-performance/uninstallation-wow64-support-component-fails.md
+    href: performance/uninstallation-wow64-support-component-fails.md
 
-- name: WWW administration and management
-  items:
-  - name: AppDomain isn't loaded
-    href: www-administration-management/exclude-folders-antivirus-scanning.md
-  - name: Back up configuration files
-    href: www-administration-management/back-up-configuration-files.md
-  - name: Install and uninstall ASP.NET 4.5 in Windows 8
-    href: www-administration-management/install-aspnet-45-windows-8-server-2012.md
-  - name: Restrict users from accessing to web resources
-    href: www-administration-management/restrict-users-access-web-resource.md
-
-- name: WWW authentication and authorization
+- name: Security
   items:
   - name: Control authorization permissions
-    href: www-authentication-authorization/authorization-permissions.md
+    href: security/authorization-permissions.md
   - name: Troubleshoot permission and security issues
-    href: www-authentication-authorization/troubleshoot-permissions-security-issues.md
+    href: security/troubleshoot-permissions-security-issues.md
   - name: Web applications can't write data to App_Data
-    href: www-authentication-authorization/applicationpoolidentity-write-app-data.md
+    href: security/applicationpoolidentity-write-app-data.md

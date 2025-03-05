@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:System Performance\Startup or Pre-logon Reliability (crash, errors, bug check or Blue Screen), csstroubleshoot
+ms.custom:
+- sap:system performance\startup or pre-logon reliability (crash,errors,bug check or blue screen)
+- pcy:WinComm Performance
 ---
 # Error message when you restart Windows Server after a full OS recovery: Windows failed to start. Status: 0xc000000e
 

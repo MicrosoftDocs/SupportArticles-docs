@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:User Logon and Profiles\User profiles, csstroubleshoot
+ms.custom:
+- sap:user logon and profiles\user profiles
+- pcy:WinComm Directory Services
 ---
 # Upgrade to Windows versions that is before Windows 10 is blocked if Users and ProgramData directories are changed
 

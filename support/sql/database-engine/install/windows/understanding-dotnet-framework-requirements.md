@@ -1,9 +1,9 @@
 ---
 title: Understand the .NET Framework requirements
 description: This article introduces that the .NET Framework requirements for various SQL versions starting with SQL Server 2005.
-ms.date: 07/22/2020
+ms.date: 02/12/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall
-ms.reviewer: uttamkp, ramakoni
+ms.reviewer: uttamkp, ramakoni, jopilov
 ms.topic: article
 ---
 # Understand the .NET Framework requirements for various versions of SQL Server

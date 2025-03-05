@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: abgupta, kaushika
-ms.custom: sap:Virtualization and Hyper-V\Installation and configuration of Hyper-V, csstroubleshoot, linux-related-content
+ms.custom:
+- sap:virtualization and hyper-v\installation and configuration of hyper-v
+- pcy:WinComm Storage High Avail
 ---
 # Can't use kdump or kexec for Linux virtual machines on Hyper-V
 

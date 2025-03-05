@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Volume Shadow Copy Service (VSS), csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\volume shadow copy service (vss)
+- pcy:WinComm Storage High Avail
 ---
 # You may get VSS warnings in the Application Event log of SBS 2011 Standard
 

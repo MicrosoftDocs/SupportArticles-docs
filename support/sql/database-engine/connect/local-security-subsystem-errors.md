@@ -2,8 +2,6 @@
 title: Errors in the local security subsystem in SQL Server
 description: This article addresses SQL Server consistent authentication issues related to the local security subsystem.
 ms.date: 03/26/2024
-author: Malcolm-Stewart
-ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Database Connectivity and Authentication
 ---

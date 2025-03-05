@@ -6,7 +6,9 @@ ms.topic: troubleshooting
 ms.reviewer: dansimp
 manager: dcscontentpm
 ms.collection: highpri
-ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshoot
+ms.custom:
+- sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot)
+- pcy:WinComm Performance
 audience: itpro
 ---
 # How to determine the appropriate page file size for 64-bit versions of Windows

@@ -6,7 +6,9 @@ manager: dcscontentpm
 ms.reviewer: prsriva, aaroncz
 ms.collection: M365-identity-device-management
 ms.topic: troubleshooting
-ms.custom: sap:Windows Security Technologies\Biometric, Passwordless Authentication, SSO, and Windows Hello, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\biometric,passwordless authentication,sso,and windows hello
+- pcy:WinComm Directory Services
 audience: itpro
 ---
 # Event ID 300 - Windows Hello successfully created

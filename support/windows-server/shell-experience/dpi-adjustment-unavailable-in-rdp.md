@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, sashalon
-ms.custom: sap:Windows Desktop and Shell Experience\DPI and Display Issues, csstroubleshoot
+ms.custom:
+- sap:windows desktop and shell experience\dpi and display issues
+- pcy:WinComm User Experience
 ---
 # The DPI adjustment isn't available in a Remote Session (RDP)
 

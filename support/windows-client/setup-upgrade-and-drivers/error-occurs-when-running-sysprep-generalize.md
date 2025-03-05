@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
+ms.custom:
+- sap:windows setup,upgrade and deployment\installing or upgrading windows
+- pcy:WinComm Devices Deploy
 ---
 # A fatal error occurred while trying to Sysprep the machine error when running Sysprep /generalize
 

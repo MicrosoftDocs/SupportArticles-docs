@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, santoshc
-ms.custom: sap:Network Connectivity and File Sharing\Remote access (VPN, RRAS, CMAK and AOVPN), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\remote access (vpn,rras,cmak and aovpn)
+- pcy:WinComm Networking
 ---
 # "Error 633 - the modem (or other connecting device) is already in use" error message when you try to establish a VPN connection
 

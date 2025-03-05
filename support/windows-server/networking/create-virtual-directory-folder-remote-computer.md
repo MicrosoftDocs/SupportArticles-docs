@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\access to file shares (smb)
+- pcy:WinComm Networking
 ---
 # How to create a virtual directory on an existing Web site to a folder that resides on a remote computer  
 

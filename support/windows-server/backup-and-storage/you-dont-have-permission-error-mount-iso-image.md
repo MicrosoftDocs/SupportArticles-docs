@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, dewitth, ctimon
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Partition and volume management, csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\partition and volume management
+- pcy:WinComm Storage High Avail
 ---
 # "You don't have permission" error message when you try to mount an ISO image
 

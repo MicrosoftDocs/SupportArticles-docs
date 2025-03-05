@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: ccraig, wincicadsec, kaushika
-ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Smart card logon, csstroubleshoot
+ms.custom:
+- sap:certificates and public key infrastructure (pki)\smart card logon
+- pcy:WinComm Directory Services
 ---
 # Can't authenticate because of an incorrect PIV smart card driver update
 

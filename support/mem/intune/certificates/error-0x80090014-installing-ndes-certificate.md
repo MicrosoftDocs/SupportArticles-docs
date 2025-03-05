@@ -1,7 +1,7 @@
 ---
 title: Error 0x80090014 installing NDES certificate
 description: Gives the resolution for an issue where the NDES connector for Microsoft Intune fails to install because the NDES certificate isn't installed.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 search.appverid: MET150
 ms.custom: sap:Configure Devices - Windows\SCEP Certificates
 ms.reviewer: kaushika, jchornbe, joelste, anziob, luche

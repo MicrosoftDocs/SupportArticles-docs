@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Desktop and Shell Experience\Modern, Inbox and Microsoft Store Apps, csstroubleshoot
+ms.custom:
+- sap:windows desktop and shell experience\modern,inbox and microsoft store apps
+- pcy:WinComm User Experience
 ---
 # Microsoft-Windows-AppReadiness event ID 215 error after a user first logs on
 

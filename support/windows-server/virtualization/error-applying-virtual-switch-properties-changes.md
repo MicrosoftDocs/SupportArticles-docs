@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Virtualization and Hyper-V\Configuration of virtual machine settings, csstroubleshoot
+ms.custom:
+- sap:virtualization and hyper-v\configuration of virtual machine settings
+- pcy:WinComm Storage High Avail
 ---
 # You receive "Error applying virtual switch properties changes" error on a Windows Server 2019 (Build 17763)-based Hyper-V server
 

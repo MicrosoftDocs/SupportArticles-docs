@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-tappelgate
-ms.custom: sap:Active Directory\Windows Time Service configuration, accuracy, and synchronization, csstroubleshoot
+ms.custom:
+- sap:active directory\windows time service configuration,accuracy,and synchronization
+- pcy:WinComm Directory Services
 keywords: Windows Time service, w32time, clock skew, NTP
 ---
 

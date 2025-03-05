@@ -8,7 +8,9 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 ms.topic: troubleshooting
-ms.custom: sap:Windows Security Technologies\Biometric, Passwordless Authentication, SSO, and Windows Hello, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\biometric,passwordless authentication,sso,and windows hello
+- pcy:WinComm Directory Services
 audience: itpro
 ---
 # Windows Hello errors during PIN creation

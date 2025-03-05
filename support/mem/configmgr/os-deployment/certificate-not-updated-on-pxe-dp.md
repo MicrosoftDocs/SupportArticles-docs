@@ -1,7 +1,7 @@
 ---
 title: Certificate not updated on a PXE-enabled DP
 description: Fixes an issue in which a certificate isn't updated in the registry of a PXE-enabled distribution point if a PXE password is specified.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 ms.custom: sap:Operating Systems Deployment (OSD)\Other
 ms.reviewer: kaushika
 ---

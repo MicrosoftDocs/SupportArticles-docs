@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: heshamelkouha, kaushika, v-tappelgate
-ms.custom: sap:Remote Desktop Services and Terminal Services\Deployment, configuration, and management of Remote Desktop Services infrastructure, csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\deployment,configuration,and management of remote desktop services infrastructure
+- pcy:WinComm User Experience
 ---
 # Troubleshooting access denied and user not authorized issues in Microsoft Remote Desktop Services
 

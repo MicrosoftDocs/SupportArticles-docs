@@ -1,7 +1,7 @@
 ---
 title: 429 Too Many Requests errors
 description: Troubleshoot why you receive 429 Too Many Requests errors on your Kubernetes clusters.
-ms.date: 08/29/2023
+ms.date: 02/20/2025
 ms.reviewer: chiragpa, nickoman, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 keywords:

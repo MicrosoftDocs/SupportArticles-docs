@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, arrenc, sagiv
-ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
+ms.custom:
+- sap:active directory\active directory replication and topology
+- pcy:WinComm Directory Services
 ---
 # Active Directory replication event IDs 2108 and 1084 occur during inbound replication of Active Directory Domain Services
 

@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, hichauhan, v-lianna
-ms.custom: sap:Network Connectivity and File Sharing\Dynamic Host Configuration Protocol (DHCP), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\dynamic host configuration protocol (dhcp)
+- pcy:WinComm Networking
 ---
 # Client machines don't send DDNS updates when the DHCP server stops sending Option 81
 

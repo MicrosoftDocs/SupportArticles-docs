@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, yongrhee, ksarens, alexsc, niwelton
-ms.custom: sap:Windows Security Technologies\Windows Defender Application Guard, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\windows defender application guard
+- pcy:WinComm Directory Services
 ---
 # Lost internet connectivity using VPN in Windows Defender Exploit Guard - Network Protection
 

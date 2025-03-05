@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, nibinpm, arrenc,
-ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\dns
+- pcy:WinComm Networking
 ---
 # Troubleshoot DNS Event ID 4013 (The DNS server was unable to load AD-integrated DNS zones)
 

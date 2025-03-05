@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, warrenw, v-lianna, albugn
-ms.custom: sap:Network Connectivity and File Sharing\DFS Namespace (Not Replication), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\dfs namespace (not replication)
+- pcy:WinComm Networking
 ---
 # Error "The data is invalid" or "The namespace has no targets. This may be due to a corrupt or out of sync metadata" with DFS Namespaces
 

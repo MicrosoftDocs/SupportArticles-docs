@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, akshittu, maperric, v-lianna
-ms.custom: sap:Virtualization and Hyper-V\High availability virtual machines, csstroubleshoot
+ms.custom:
+- sap:virtualization and hyper-v\high availability virtual machines
+- pcy:WinComm Storage High Avail
 ---
 # Can't change the ConfigStoreRootPath value of a Hyper-V Cluster in Windows Server
 

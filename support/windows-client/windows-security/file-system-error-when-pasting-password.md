@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-jeffbo, travisa
-ms.custom: sap:Windows Security Technologies\Kerberos authentication, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\kerberos authentication
+- pcy:WinComm Directory Services
 ---
 # "File system error" when pasting password into credential dialog box in Windows 10
 
