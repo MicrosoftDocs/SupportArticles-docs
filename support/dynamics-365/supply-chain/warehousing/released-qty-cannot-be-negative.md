@@ -2,7 +2,7 @@
 title: Released quantity cannot be negative for item error
 description: Solves the released quantity cannot be negative error that occurs when updating or deleting a load line in Dynamics 365 Supply Chain.
 author: Mirzaab
-ms.date: 02/28/2025
+ms.date: 03/05/2025
 ms.search.form: WHSLoadPlanningListPage_WHSLoadLineUnShipQty,WHSLoadTable_WHSLoadLineUnShipQty,WHSLoadPlanningWorkbench_WHSLoadLineUnShipQty,WHSShipmentDetails_WHSLoadLineUnShipQty,WHSLoadPlanningListPage_DeleteButtonLoadLine,WHSLoadTable_DeleteButtonLoadLine,WHSLoadPlanningWorkbench_DeleteButtonLoadLine,WHSShipmentDetails_DeleteButtonShipment
 audience: Application User
 ms.reviewer: kamaybac
@@ -81,3 +81,7 @@ If reverting unit conversions isn't feasible, follow these steps to manually upd
 1. Search for the **Released quantity** and **Quantity left to load** fields, select both, and then select **Update**.
 
 The fields will appear in the **Sales order lines** grid and can be modified to reflect the quantities on the load lines.
+
+## More information
+
+[Sales Line Additional Fields in WorksheetLine(WHSSalesLine)](/common-data-model/schema/core/operationscommon/tables/supplychain/inventory/worksheetline/whssalesline)
