@@ -61,7 +61,7 @@ For example:
     > [!NOTE]
     > The line with only "-" and the empty line are required for a well-formed LDIFDE import file.
 
-- Use the GUID-based syntax
+- Use the GUID-based syntax:
 
     If your object name contains special characters, use Unicode for the LDIFDE import file, or use the GUID-based syntax.
 
