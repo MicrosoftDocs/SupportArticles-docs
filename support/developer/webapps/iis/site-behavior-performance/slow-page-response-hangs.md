@@ -58,10 +58,6 @@ Here's a list of useful data to collect for a slow page response or hang situati
 - [Full user-mode process dumps](/windows-hardware/drivers/debugger/user-mode-dump-files#full-user-mode-dumps)
 - [Other data](#other-data)
 
-### Why to collect  
-
-This section describes various tools to collect data for diagnosing and troubleshooting slow page response and hang issues in Internet Information Services (IIS).
-
 #### IIS Log Catcher
 
 IIS Log Catcher collects various historical logs and configuration data at one time, including the IIS web logs, which are particularly useful for diagnosing slow page response issues. It also collects all the `.config` files, which can help to provide an understanding on the different web applications on the server and how they're configured. If FREB logging is already configured, FREB logs are also included with IIS Log Catcher data. IIS Log Catcher also collects the System and Application event logs.
