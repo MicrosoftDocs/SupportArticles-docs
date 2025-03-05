@@ -20,7 +20,7 @@ Although using `lastLogonTimestamp` has its limitations due to Kerberos S4U upda
 
 ## Incorrect time on local DC
 
-A domain controller (DC) might run with its system time set in the future. In this situation, if a user authenticates with the DC, the DC compares its local time with the time stored on the user account. Then, the DC updates the `lastLogonTimestamp`value as its current time is much newer.
+A domain controller (DC) might run with its system time set in the future. In this situation, if a user authenticates with the DC, the DC compares its local time with the time stored on the user account. Then, the DC updates the `lastLogonTimestamp` value as its current time is much newer.
 
 The time on the DC might be incorrect due to a problem with time synchronization from the virtual machine (VM) host, the Network Time Protocol (NTP) infrastructure, or [Secure Time Seeding (STS)](https://techcommunity.microsoft.com/blog/askds/secure-time-seeding-on-dcs-a-note-from-the-field/4238810). The DC might also revert to the correct time quickly, so you might not catch the problem in your reporting.
 
@@ -63,30 +63,30 @@ For example:
 
 - Use the GUID-based syntax
 
-If your object name contains special characters, use Unicode for the LDIFDE import file, or use the GUID-based syntax.
+    If your object name contains special characters, use Unicode for the LDIFDE import file, or use the GUID-based syntax.
 
-An object name can also be expressed as `<guid=cf2b4aca-0e67-47d9-98aa-30a5fe30dc36>` in the GUID-based syntax.
+    An object name can also be expressed as `<guid=cf2b4aca-0e67-47d9-98aa-30a5fe30dc36>` in the GUID-based syntax.
 
-So, the expression of `fixupObjectState: cn=brokenuser,ou=bad-users,dc=contoso,dc=com:LastLogonTimestamp` becomes `fixupObjectState: <guid=cf2b4aca-0e67-47d9-98aa-30a5fe30dc36>:LastLogonTimestamp`.
+    So, the expression of `fixupObjectState: cn=brokenuser,ou=bad-users,dc=contoso,dc=com:LastLogonTimestamp` becomes `fixupObjectState: <guid=cf2b4aca-0e67-47d9-98aa-30a5fe30dc36>:LastLogonTimestamp`.
 
-To use this syntax with the LDIFDE import file, the text after the first colon needs to be encoded in Base64 format because of the  greater-than (>) and less-than (<) signs:
+    To use this syntax with the LDIFDE import file, the text after the first colon needs to be encoded in Base64 format because of the  greater-than (>) and less-than (<) signs:
 
-```output
-fixupObjectState:: PGd1aWQ9Y2YyYjRhY2EtMGU2Ny00N2Q5LTk4YWEtMzBhNWZlMzBkYzM2PjpMYXN0TG9nb25UaW1lc3RhbXA=
-```
+    ```output
+    fixupObjectState:: PGd1aWQ9Y2YyYjRhY2EtMGU2Ny00N2Q5LTk4YWEtMzBhNWZlMzBkYzM2PjpMYXN0TG9nb25UaW1lc3RhbXA=
+    ```
 
-> [!NOTE]
-> The double colon shows the attribute value is in Base64 format. You can use the [Base64 encoder](https://www.bing.com/search?q=site%3Amicrosoft.com%20base64%20encoder&qs=n&form=QBRE&sp=-1&lq=0&pq=site%3Amicrosoft.com%20base64%20encoder&sc=0-33&sk=&cvid=CE994D44ADFC432CA2D3784CEBB3D934&ghsh=0&ghacc=0&ghpl=) to encode the string directly on the web.
+    > [!NOTE]
+    > The double colon shows the attribute value is in Base64 format. You can use the [Base64 encoder](https://www.bing.com/search?q=site%3Amicrosoft.com%20base64%20encoder&qs=n&form=QBRE&sp=-1&lq=0&pq=site%3Amicrosoft.com%20base64%20encoder&sc=0-33&sk=&cvid=CE994D44ADFC432CA2D3784CEBB3D934&ghsh=0&ghacc=0&ghpl=) to encode the string directly on the web.
 
-With the Base64 format used, the import file becomes:
+    With the Base64 format used, the import file becomes:
 
-```output
-DN:
-Changetype:modify
-add: fixupObjectState
-fixupObjectState:: PGd1aWQ9Y2YyYjRhY2EtMGU2Ny00N2Q5LTk4YWEtMzBhNWZlMzBkYzM2PjpMYXN0TG9nb25UaW1lc3RhbXA=
--
-```
+    ```output
+    DN:
+    Changetype:modify
+    add: fixupObjectState
+    fixupObjectState:: PGd1aWQ9Y2YyYjRhY2EtMGU2Ny00N2Q5LTk4YWEtMzBhNWZlMzBkYzM2PjpMYXN0TG9nb25UaW1lc3RhbXA=
+    -
+    ```
 
 ### Step 3: Repair the object with LDIFDE
 
