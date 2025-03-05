@@ -31,32 +31,29 @@ To work around this issue, follow these steps:
 
 1. Select the **Show dependencies** button to navigate to the **Missing dependencies** page.
 
-    The **Missing dependencies** page lists all the components that are missing from the target environment. It also shows the solution or application from which the component dependencies are obtained.
+    The **Missing dependencies** page lists all the components that are missing from the target environment. It also shows three categories of dependencies from which the component dependencies are obtained. The component missing can be due to missing application, missing managed solution or missing unmanaged component.
 
 2. Resolve this issue based on the different types of dependencies described in the following sections:
 
 ### Missing dependencies coming from a Dynamics 365 application
 
-You can find these dependencies in the **Managed Solution** tab of the **Missing dependencies** page. To resolve this issue:
+You can find these dependencies in the **Applications** section of the **Missing dependencies** page. To resolve this issue:
 
-- If the application isn't installed in the target environment, [install the application](/power-platform/admin/manage-apps#install-an-app) from the Power Platform admin center.
-- If the application is installed but has an outdated version, a link is provided next to the solution. This link will redirect you to the Power Platform admin center update page for the environment where you can update the application to resolve the issue.
-
-  The following screenshot shows the link provided on the **Missing dependencies** page.  
-
-  :::image type="content" source="media/missing-dependency-on-solution-import/missing-dependency.png" alt-text="Example of the application upgrade link for a component with missing dependencies." lightbox="media/missing-dependency-on-solution-import/missing-dependency.png":::
-
-  Select the link to open the upgrade application page in the Power Platform admin center.
-
-  :::image type="content" source="media/missing-dependency-on-solution-import/application-update.png" alt-text="Example of the upgrade application page in the Power Platform admin center." lightbox="media/missing-dependency-on-solution-import/application-update.png":::
-
+- If the application isn't installed in the target environment
+    - System administrator will see an **Install** button, clicking the button will redirect to application install [install the application](/power-platform/admin/manage-apps#install-an-app) page in the Power Platform admin center. Choose the application and install it.
+    - Non system administrator will see a **Copy Install Link**. Copy the application install link and request your system administrator to install the application. Alternatively, system administrator can directly go to the [install application](/power-platform/admin/manage-apps#install-an-app) page in Power platform admin center.
+    
+- If the application is installed but has an outdated version in the target environment
+    - System administrator will see an **Update** button, click the button to open the application update page in Power platform admin center.
+    - Non system administrator will see a **Copy Update Link**. Copy the application update link and request your system administrator to update the application.
+  
 ### Missing dependencies coming from another managed solution
 
-You can find these dependencies in the **Managed Solution** tab of the **Missing dependencies** page. To resolve this issue, import the same version of the solution that's installed in the source environment into the target environment.
+You can find these dependencies in the **Managed Solution** section of the **Missing dependencies** page. To resolve this issue, import the same version of the solution that's installed in the source environment into the target environment.
 
 ### Missing dependencies on the "Active" solutions
 
-You can find these dependencies in the **Objects** tab. This indicates that the dependency is from unmanaged customization in the source environment. To resolve this issue, return to the source environment, include the missing components, export the solution again, and then import it into the target environment.
+You can find these dependencies in the **Unmanaged components** section of the **Missing dependencies** page. This indicates that the dependency is from unmanaged customization in the source environment. To resolve this issue, return to the source environment, include the missing components, export the solution again, and then import it into the target environment.
 
 > [!TIP]
-> Another method to find dependencies of components is to open the solution file, unzip it, and then open the *solution.xml* file. In the *solution.xml* file, look for a `<MissingDependencies>` element. All the missing dependencies are listed within this node.
+> Another method to find dependencies of components is to open the solution file, unzip it, and then open the *solution.xml* file. In the *solution.xml* file, look for a `<MissingDependencies>` element. All the dependencies are listed within this node.
