@@ -3,6 +3,7 @@ title: Error code AADSTS50173 - The Provided Grant Has Expired Due to it Being R
 description: Discusses how to handle a situation in which a user receives an AADSTS50173 error when trying to sign in to an application.
 author: custorod
 ms.author: custorod
+ms.reviewer: joaos
 ms.service: entra-id
 ms.topic: troubleshooting-problem-resolution
 ms.date: 02/21/2025
