@@ -43,7 +43,7 @@ To resolve this issue, follow these steps:
 1. Have the user change their on-premises user account password.
 2. Wait a few minutes for the change to sync between the on-premises AD DS and Microsoft Entra ID.
 
-<a name='scenario-3-some-users-dont-appear-to-be-syncing-to-azure-ad'></a>To change the password in the cloud service and have Microsoft Entra Connect update the respective on-premises user account password, you can implement [Password Writeback](/entra/identity/authentication/tutorial-enable-sspr-writeback).
+<a name='scenario-3-some-users-dont-appear-to-be-syncing-to-azure-ad'></a>To change the password in the cloud service and have Microsoft Entra Connect update the respective on-premises user account password, enable [Password Writeback](/entra/identity/authentication/tutorial-enable-sspr-writeback).
 
 ### Scenario 3: Some users don't appear to be syncing to Microsoft Entra ID
 
