@@ -280,6 +280,8 @@
       href: troubleshoot-sbd-issues-rhel.md
     - name: Troubleshoot pacemaker cluster services and resources startup issues
       href: troubleshoot-rhel-pacemaker-cluster-services-resources-startup-issues.md
+    - name: Troubleshoot unexpected node reboots issues in RHEL
+      href: troubleshoot-unexpected-node-reboots-pacemaker-rhel.md
   - name: SLES
     items:
     - name: Troubleshoot Azure fence agent startup issues in SUSE
