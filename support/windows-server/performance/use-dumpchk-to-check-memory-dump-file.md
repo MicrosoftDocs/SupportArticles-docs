@@ -16,110 +16,47 @@ This article describes how to check a memory dump file by using Dumpchk.
 
 _Original KB number:_ &nbsp; 156280
 
-> [!NOTE]
-> 
 ## Summary
 
-Dumpchk is a command-line utility you can use to verify that a memory dump file has been created correctly. Dumpchk does not require access to symbols.
+Dumpchk is a command-line utility you can use to verify that a memory dump file has been created correctly. If a memory dump file is corrupt, it cannot be analyzed in a debugger.  Using dumpchk to verify a dump file is in a good state is helpful as it will save time and effort in uploading corrupt dump files to be analyzed by support professionals.  Dumpchk does not require access to symbols.
 
-Dumpchk is part of the Windows Debugging Tools. Follow the instructions in this link to install the tool. 
+Dumpchk is part of the Windows Debugging Tools. There are two versions of the Windows Debugger. 
 
-[https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/dumpchk](/windows-hardware/drivers/debugger/dumpchk)
+You must install the version of the Windows Debugging Tools included in the Windows SDK - [Windows SDK - Windows app development | Microsoft Developer](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdeveloper.microsoft.com%2Fen-us%2Fwindows%2Fdownloads%2Fwindows-sdk%2F&data=05%7C02%7CWarren.Williams%40microsoft.com%7C50935613ca604985339808dd5bdf9a6a%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638767738151340942%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=bFHDAUD4S%2Fr83YtkM47ejDZryVRp2VLfjioX1txssPI%3D&reserved=0). 
 
-## Dumpchk command-line switches
+1. Download the SDK installer
 
-Dumpchk has the following command-line switches:
+1. Lauch the installer and select "Windows Debugging Tools" and anything else you would like to install
 
-DUMPCHK [options] \<CrashDumpFile>
+1. After the installation completes, dumchk.exe will be in the directory that you installed the Windows Debugging in. Use the version that matches your hardware platform. 
 
-- -? Display the command syntax.
+When Dumpchk runs, it displays some basic information from the memory dump file, then verifies all the virtual and physical addresses in the file. You will see a lot of symbol errors if a symbol path is not specified but those can be ignored as we are checking the dump file for corruption. If any errors are found in the memory dump file, Dumpchk reports them. 
 
-- -p Prints the header only (with no validation).
+If there is an error during any portion of the output displayed above, the dump file is corrupted, and analysis cannot be performed.
 
-- -v Specifies verbose mode.
+When dumpchk is finished it will display the stop code and any parameters. 
 
-- -q Performs a quick test. 
 
-- -c Do dump validation.
+```
+BUGCHECK_CODE:  1e
+  
+BUGCHECK_P1: ffffffffc0000420  
 
-- -x Extra file validation. Takes several minutes.
+BUGCHECK_P2: fffff8004dbab02a  
 
-- -e Do dump exam.
+BUGCHECK_P3: 0  BUGCHECK_P4: fffff8003a6d5f20  
 
-- -y <Path> Set the symbol search path for dump exam.
+SYMBOL_NAME:  nt_symbols!72291DF0104D000  
 
-  - If the symbol search path is empty, the CD-ROM
-  - is used for symbols.
-    
-- -b <Path> Set the image search path for dump exam.
+PROCESS_NAME:  ntoskrnl.exe  
 
-  - If the symbol search path is empty, <SystemRoot>\system32
-    
-  - is used for symbols.
-    
-- -k <File> Set the name of the kernel to File.
+IMAGE_NAME:  ntoskrnl.exe  
 
-- -h <File> Set the name of the hal to File.
+MODULE_NAME: <Module Name>
 
-Dumpchk displays some basic information from the memory dump file, then verifies all the virtual and physical addresses in the file. If any errors are found in the memory dump file, Dumpchk reports them. The following is an example of the output of a Dumpchk command:
+FAILURE_BUCKET_ID:  <Bucket Id>
 
-```output
-Filename . . . . . . .memory.dmp  
-Signature. . . . . . .PAGE  
-ValidDump. . . . . . .DUMP  
-MajorVersion . . . . .free system  
-MinorVersion . . . . .1057  
-DirectoryTableBase . .0x00030000  
-PfnDataBase. . . . . .0xffbae000  
-PsLoadedModuleList . .0x801463d0  
-PsActiveProcessHead. .0x801462c8  
-MachineImageType . . .i386  
-NumberProcessors . . .1  
-BugCheckCode . . . . .0xc000021a  
-BugCheckParameter1 . .0xe131d948  
-BugCheckParameter2 . .0x00000000  
-BugCheckParameter3 . .0x00000000  
-BugCheckParameter4 . .0x00000000  
+FAILURE_ID_HASH:  {029f6661-9c67-6d47-23e5-a0398183d06e}
 
-ExceptionCode. . . . .0x80000003  
-ExceptionFlags . . . .0x00000001  
-ExceptionAddress . . .0x80146e1c  
-
-NumberOfRuns . . . . .0x3  
-NumberOfPages. . . . .0x1f5e  
-Run #1  
-BasePage . . . . . .0x1  
-PageCount. . . . . .0x9e  
-Run #2  
-BasePage . . . . . .0x100  
-PageCount. . . . . .0xec0  
-Run #3  
-BasePage . . . . . .0x1000  
-PageCount. . . . . .0x1000  
-
-**************--> Validating the integrity of the PsLoadedModuleList  
-**************--> Performing a complete check (^C to end)  
-**************--> Validating all physical addresses  
-**************--> Validating all virtual addresses  
-**************--> This dump file is good!
 ```
 
-If there is an error during any portion of the output displayed above, the dump file is corrupted and analysis cannot be performed.
-
-In this example, the most important information (from a debugging standpoint) is the following:
-
-```output
-MajorVersion . . . . .free system  
-MinorVersion . . . . .1057  
-MachineImageType . . .i386  
-NumberProcessors . . .1  
-BugCheckCode . . . . .0xc000021a  
-BugCheckParameter1 . .0xe131d948  
-BugCheckParameter2 . .0x00000000  
-BugCheckParameter3 . .0x00000000  
-BugCheckParameter4 . .0x00000000
-```
-
-This information can be used to determine what Kernel STOP Error occurred and, to a certain extent, what version of Windows was in use.
-
-The information in this article is from the Windows NT Resource Kit. For more information on Dumpchk.exe and other debugging utilities, see Appendix A in the Windows NT 3.51 Resource Kit Update and Update 2.
