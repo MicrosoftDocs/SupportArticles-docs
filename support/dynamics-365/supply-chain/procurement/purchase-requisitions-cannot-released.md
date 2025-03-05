@@ -14,37 +14,31 @@ ms.date: 02/25/2025
 ## Symptoms
 In Dynamics 365 Finance & Supply Chain Management (D365 F&SCM), Purchase Requisitions (PRs) that are submitted at the end of one fiscal year and approved in the new fiscal year encounter an issue when converting them into Purchase Orders (POs). The system throws the following error:
 "Purchase requisition line was pre-encumbered in a fiscal year that is different from the accounting date of the purchase order. Hence, purchase order cannot be created."
-
-
-
+"Purchase requisition line was pre-encumbered in a fiscal year that is different from the accounting date of the purchase order. Hence, purchase order cannot be created."
 1. Pre-Encumbrance Issue
 When a purchase requisition is approved, it creates a pre-encumbrance in the system to reserve budget funds.
 If the requisition was submitted in the previous fiscal year, the pre-encumbrance is tied to that year’s budget.
 
-D365 does not support purchase requisition rollovers across fiscal years.
-
 2. No PR Rollover Functionality
-D365 does not support purchase requisition rollovers across fiscal years.
-If a PR remains open at year-end, it cannot be carried over automatically into the new fiscal year.
-This restriction ensures that budgets and financial commitments remain aligned with fiscal year policies.
+When a purchase requisition is approved, it creates a pre-encumbrance in the system to reserve budget funds.
+
+If a PR remains open at year-end, it cannot be carried over automatically into the new fiscal year
+2. No PR Rollover Functionality
 Recommended Solutions & Best Practices
-This restriction ensures that budgets and financial commitments remain aligned with fiscal year policies.
+This restriction ensures that budgets and financial commitments remain aligned with fiscal year policies.
 
 ## Workarounds
-
 1. Cancel Open Requisitions at Year-End
-
-
-
-
+Before the fiscal year-end closing, identify all open purchase requisitions.
+Cancel any unapproved or pending PRs that have not yet been converted into purchase orders.
+Create new purchase requisitions in the new fiscal year, ensuring they align with the correct budget year.
+This avoids the issue altogether by ensuring that new requisitions are processed within the correct fiscal period.
 
 2. Convert PRs to POs Before Fiscal Year-End & Roll Over POs
-Create new purchase requisitions in the new fiscal year, ensuring they align with the correct budget year.
-This avoids the issue altogether by ensuring that new requisitions are processed within the correct fiscal period.
 
+## Workarounds
 
 The best practice is to either cancel open PRs at year-end or convert them into POs before the fiscal year closes. This ensures smooth procurement processing without encountering fiscal year mismatches. Since D365 does not support PR rollovers, organizations should proactively manage requisitions as part of their year-end closing procedures.
-Process:
 
 
 
