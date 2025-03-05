@@ -47,7 +47,7 @@ Page slowness and hangs might be accompanied by one or more of the following con
 
 ### What to collect
 
-Here's a list of useful data to collect for a slow page response or hang situation. Not all of these data is required for each issue, and some data might or might not need to be collected depending on the situation. Refer to the [Why to collect](#why-to-collect) section for more details.
+Here's a list of useful data to collect for a slow page response or hang situation. Not all of these data is required for each issue. You can collect data depending on the situation.
 
 - [IIS Log Catcher data](#iis-log-catcher)
   - [IIS and ASP.NET configuration files](#configuration-files)  
