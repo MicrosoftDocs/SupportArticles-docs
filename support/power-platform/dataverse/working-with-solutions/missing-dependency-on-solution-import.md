@@ -39,13 +39,13 @@ To work around this issue, follow these steps:
 
 You can find these dependencies in the **Applications** section of the **Missing dependencies** page. To resolve this issue:
 
-- If the application isn't installed in the target environment
-    - System administrator will see an **Install** button, clicking the button will redirect to application install [install the application](/power-platform/admin/manage-apps#install-an-app) page in the Power Platform admin center. Choose the application and install it.
-    - Non system administrator will see a **Copy Install Link**. Copy the application install link and request your system administrator to install the application. Alternatively, system administrator can directly go to the [install application](/power-platform/admin/manage-apps#install-an-app) page in Power platform admin center.
+- If the application isn't installed in the target environment:
+    - System administrators observe an **Install** button. Selecting **Install** redirects to application install [install the application](/power-platform/admin/manage-apps#install-an-app) page in the Power Platform admin center. Choose the application and install it.
+    - Non system administrators observe a **Copy Install Link**. Copy the application install link and request your system administrator to install the application. Alternatively, a system administrator can directly go to the [install application](/power-platform/admin/manage-apps#install-an-app) page in the Power Platform admin center.
     
-- If the application is installed but has an outdated version in the target environment
-    - System administrator will see an **Update** button, click the button to open the application update page in Power platform admin center.
-    - Non system administrator will see a **Copy Update Link**. Copy the application update link and request your system administrator to update the application.
+- If the application is installed but has an outdated version in the target environment:
+    - System administrators observe an **Update** button. Select **Update** to open the application update page in Power Platform admin center.
+    - Non system administrators observe a **Copy Update Link**. Copy the application update link and request your system administrator to update the application.
   
 ### Missing dependencies coming from another managed solution
 
