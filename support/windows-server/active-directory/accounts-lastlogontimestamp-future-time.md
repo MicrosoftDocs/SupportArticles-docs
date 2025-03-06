@@ -102,3 +102,10 @@ Loading entries...
 ```
 
 Then, the object has the `lastLogonTimestamp` attribute value set to the current time.
+
+## References
+
+For more information about the usage of the `lastLogonTimestamp` attribute, see:
+
+- ["The LastLogonTimeStamp Attribute" – "What it was designed for and how it works"](/archive/blogs/askds/the-lastlogontimestamp-attribute-what-it-was-designed-for-and-how-it-works)
+- [How LastLogonTimeStamp is Updated with Kerberos S4u2Self](https://techcommunity.microsoft.com/blog/coreinfrastructureandsecurityblog/how-lastlogontimestamp-is-updated-with-kerberos-s4u2self/257135)
