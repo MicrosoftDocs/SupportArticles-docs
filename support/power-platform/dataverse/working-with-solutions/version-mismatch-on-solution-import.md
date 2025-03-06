@@ -9,7 +9,7 @@ ms.custom: sap:Working with Solutions\Environment version mistamch during soluti
 ---
 # Environment version mismatch warning during solution import
 
-This article provides a workaround for an issue about a solution import target environment might be missing components due to an older Microsoft Dataverse version than the source environment. This issue occurs when you [import a solution](/powerapps/maker/data-platform/import-update-export-solutions) in Microsoft Power Apps. You can still proceed with the solution import if there are no other errors, but this warning helps guide you to avoid components missing due to a different Dataverse version.
+This article provides a workaround for an issue about a solution import target environment might be missing components due to an earlier (lower) version of Microsoft Dataverse than the source environment. This issue occurs when you [import a solution](/powerapps/maker/data-platform/import-update-export-solutions) in Microsoft Power Apps. You can still proceed with the solution import if there are no other errors, but this warning helps guide you to avoid components missing due to a different Dataverse version.
 
 _Applies to:_ &nbsp; Power Platform, Solutions
 
@@ -23,7 +23,7 @@ When you try to import a solution in [Power Apps](https://make.powerapps.com/?ut
 
 This issue could be caused due to the source environment where the solution is developed has a later (higher) [Dataverse version](/dynamics365/released-versions/microsoft-dataverse#latest-version-availability), which might have components that the target environment with an earlier (lower) Dataverse version doesn't have. Consequently, the solution might depend on components available in the source environment but absent in the target environment, leading to missing dependencies.
 
-This issue can occur when you export a solution from an environment located in the Canada region and import it into the North America region (which likely has an earlier Dataverse version.)
+This issue can occur when you export a solution from an environment located in a region and import it into another region (which likely has an earlier Dataverse version.) For more information about the scenarios, see [Example](#example).
 
 This warning ensures that you understand the drawbacks of having a source environment with a later version of Dataverse compared to the target environment.
 
