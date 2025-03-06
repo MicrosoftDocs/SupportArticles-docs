@@ -29,6 +29,8 @@ Disconnects occurring without a consistent timing pattern are more likely caused
 
 On a Windows computer, when **MaxIdleTime** or **MaxConnectionTime** are configured, RDS sessions disconnect when conditions are met with distinct messages. Additional RDS session time limit policies determine the behavior after a session is disconnected.
 
+The two registry values locate at `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp`.
+
 | Configuration             | Set time limit for active but idle RDS sessions                                                           | Set time limit for active RDS sessions                                                                                                         |
 | :------------------------ | :-------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
 | Registry (Type:REG_DWORD) | MaxIdleTime                                                                                               | MaxConnectionTime                                                                                                                              |
@@ -39,8 +41,6 @@ You can use the following two methods to configure the above registry values.
 ### RDS Deployment
 
 The default configuration for these session limits should be set at the **Collection** > **Properties tasks** > **Session** on the server that manages the RDS deployment. Usually, the server is the Remote Desktop Connection Broker. These settings are then applied to the registry of the Remote Desktop Session Hosts in that collection.
-
-Registry path: `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp`.
 
 > [!NOTE]
 >
