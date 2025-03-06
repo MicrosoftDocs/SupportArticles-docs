@@ -2,7 +2,7 @@
 title: Privilege or permission error when using Dynamics 365 App for Outlook
 description: Solves a privilege or permission error that occurs in Microsoft Dynamics 365 App for Outlook.
 ms.reviewer: 
-ms.date: 02/25/2025
+ms.date: 03/06/2025
 ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
 # A privilege or permission error occurs in Microsoft Dynamics 365 App for Outlook
@@ -44,7 +44,7 @@ To solve these issues, use one of the following options.
 
 ### Option 1: Assign the "Dynamics 365 App for Outlook User" security role
 
-The [Dynamics 365 App for Outlook User](/dynamics365/outlook-app/deploy-dynamics-365-app-for-outlook#provide-security-role-access) security role can be assigned to users who need to use Dynamics 365 App for Outlook. This security role is available from build 9.1.0.4206 or later. This option ensures that the users have the basic privileges needed to access Dynamics 365 App for Outlook.
+The [Dynamics 365 App for Outlook User](/dynamics365/outlook-app/deploy-dynamics-365-app-for-outlook#step-3-provide-security-role-access) security role can be assigned to users who need to use Dynamics 365 App for Outlook. This security role is available from build 9.1.0.4206 or later. This option ensures that the users have the basic privileges needed to access Dynamics 365 App for Outlook.
 
 ### Option 2: Assign privileges to a custom security role
 
