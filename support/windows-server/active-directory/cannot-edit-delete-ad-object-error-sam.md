@@ -90,7 +90,7 @@ Here's the interpretation of the metadata:
 
 ## The sAMAccountType and objectCategory attributes aren't added to the object in an undeletion process
 
-The object was deleted and undeleted. Deleted objects don't have the `sAMAccountType` and `objectCategory` attributes. They're added to the object after the undeletion in the normal case. In the problem case, the process fails, leaving the object live without these key attributes.
+The object was deleted and undeleted. Deleted objects don't have the `sAMAccountType` and `objectCategory` attributes. They're added to the object after the undeletion in the normal case. In the problem case, the process fails, leaving the object live without these key attributes. This state of the object is a known problem that can't be reproduced, and the root cause for this sporadic problem hasn't been identified.
 
 ## Use the fixupObjectState attribute with LDIFDE to repair the object
 
