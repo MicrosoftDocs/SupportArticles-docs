@@ -1,7 +1,7 @@
 ---
 title: Latest updates and version history for SQL Server
 description: This article lists various builds or updates that are available for different versions of SQL Server.
-ms.date: 02/27/2025
+ms.date: 03/06/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen
 ms.reviewer: v-six
 ---
@@ -152,7 +152,7 @@ Each of the following links provides information for all of the applicable produ
 
 | Build number or version | Service pack | Update     | Knowledge Base number                                            | Release date       |
 |-------------------------|--------------|------------|-------------------------------------------------------|--------------------|
-| 14.0.3490.10            | None         | Azure Connect pack       | [KB5050533](sqlserver-2017/azureconnect.md) | March 03, 2025       |
+| 14.0.3490.10            | None         | Azure Connect pack       | [KB5050533](sqlserver-2017/azureconnect.md) | March 06, 2025       |
 | 14.0.3485.1             | None         | CU31 + GDR | [KB5046858](https://support.microsoft.com/help/5046858) | November 12, 2024   |
 | 14.0.2070.1             | None         | GDR        | [KB5046857](https://support.microsoft.com/help/5046857) | November 12, 2024   |
 | 14.0.3480.1             | None         | CU31 + GDR | [KB5046061](https://support.microsoft.com/help/5046061) | October 08, 2024   |

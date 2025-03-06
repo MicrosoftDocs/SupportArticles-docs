@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2017 build versions (KB4047329)
 description: This article lists cumulative update and GDR builds for SQL Server 2017.
-ms.date: 11/12/2024
+ms.date: 03/06/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB4047329
 appliesto:
 - SQL Server 2017
@@ -15,7 +15,7 @@ This article lists the Microsoft SQL Server 2017 builds that were released after
 
 | Cumulative update name | SQL Server product version | SQL Server (sqlservr.exe) file version | Analysis Services product version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date |
 |---------------|--------------|------------------|-------------|-----------------|------------------------------------|--------------------|
-| Azure Connect Pack | 14.0.3490.10  | 2017.140.3490.10  | 14.0.249.106 | 2017.140.249.106 | [KB5050533](azureconnect.md) | March 03, 2025 |
+| Azure Connect Pack | 14.0.3490.10  | 2017.140.3490.10  | 14.0.249.106 | 2017.140.249.106 | [KB5050533](azureconnect.md) | March 06, 2025 |
 
 ## SQL Server 2017 Cumulative Update (CU) builds
 

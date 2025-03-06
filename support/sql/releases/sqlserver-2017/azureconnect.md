@@ -1,7 +1,7 @@
 ---
 title: Azure Connect feature pack for SQL Server 2017 (KB5050533)
 description: This article contains the summary, improvements, and other information for the Azure Connect feature pack for Microsoft SQL Server 2017 (KB5050533).
-ms.date: 03/03/2025
+ms.date: 03/06/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5050533
 appliesto:
 - SQL Server 2017 on Windows
@@ -10,7 +10,7 @@ appliesto:
 
 # KB5050533 - Azure Connect feature pack for SQL Server 2017
 
-_Release Date:_ &nbsp; March 03, 2025  
+_Release Date:_ &nbsp; March 06, 2025  
 _Version:_ &nbsp; 14.0.3490.10
 
 This article describes the Azure Connect feature pack for Microsoft SQL Server 2017.
