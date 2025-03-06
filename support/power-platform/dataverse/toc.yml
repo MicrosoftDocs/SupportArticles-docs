@@ -28,8 +28,6 @@
       href: d365-app-outlook/attachments-not-tracked-to-dynamics-365-after-office-365-atp-is-enabled.md
     - name: Authentication pop-up is blank and unable to sign in
       href: d365-app-outlook/dynamics-app-for-outlook-authentication-pop-up-blank-cannot-proceed.md
-    - name: Buttons such as Track and Set Regarding are missing
-      href: d365-app-outlook/buttons-such-as-track-and-set-regarding-are-missing.md
     - name: Can't access App for Outlook due to email address is not recognized
       href: d365-app-outlook/trying-to-access-dynamics-365-app-for-outlook-from-email-do-not-recognize-error.md
     - name: Can't connect to Exchange message
@@ -64,6 +62,8 @@
       href: d365-app-outlook/the-view-is-not-available-error-when-opening-emails.md
     - name: Track and Set Regarding options are missing
       href: d365-app-outlook/track-set-regarding-options-miss.md
+    - name: Track and Set Recording icons are missing
+      href: d365-app-outlook/buttons-such-as-track-and-set-regarding-are-missing.md
     - name: We're unable to connect to your server
       href: d365-app-outlook/we-are-unable-to-connect-to-your-dynamics-365-app-for-outlook-error.md
     - name: You don't have required role or privilege
