@@ -1,9 +1,9 @@
 ---
 title: Troubleshoot UpgradeFailed errors due to eviction failures caused by PDBs
 description: Learn how to troubleshoot UpgradeFailed errors due to eviction failures caused by Pod Disruption Budgets when you try to upgrade an Azure Kubernetes Service cluster.
-ms.date: 03/04/2025
+ms.date: 03/06/2025
 editor: v-jsitser
-ms.reviewer: chiragpa, ffidelis, v-leedennis, v-weizhu
+ms.reviewer: chiragpa, jotavar, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 #Customer intent: As an Azure Kubernetes Services (AKS) user, I want to troubleshoot an Azure Kubernetes Service cluster upgrade that failed because of eviction failures caused by Pod Disruption Budgets so that I can upgrade the cluster successfully.
@@ -30,7 +30,7 @@ An AKS cluster upgrade operation fails with one of the following error messages:
 
 ## Cause
 
-This error might occur if a pod is protected by the Pod Disruption Budget (PDB) policy. In this situation, the pod resists being drained, and after several attempts, the upgrade operation fails, and the cluter/node pool falls into a `Failed` state.
+This error might occur if a pod is protected by the Pod Disruption Budget (PDB) policy. In this situation, the pod resists being drained, and after several attempts, the upgrade operation fails, and the cluster/node pool falls into a `Failed` state.
 
 Check the PDB configuration: `ALLOWED DISRUPTIONS` value. The value should be `1` or greater. For more information, see [Plan for availability using pod disruption budgets](/azure/aks/operator-best-practices-scheduler#plan-for-availability-using-pod-disruption-budgets). For example, you can check the workload and its PDB as follows. You should observe the `ALLOWED DISRUPTIONS` column doesn't allow any disruption. If the `ALLOWED DISRUPTIONS` value is `0`, the pods aren't evicted and node drain fails during the upgrade process:
 
