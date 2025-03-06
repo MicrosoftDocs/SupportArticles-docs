@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Slow Page Response and Hangs 
 description: This article helps you troubleshoot slow page response and hang issues.
-ms.date: 02/28/2025
+ms.date: 03/06/2025
 ms.custom: sap:Site Behavior and Performance\Slow page response
 ms.reviewer: khgupta, v-sidong
 ---
@@ -81,7 +81,7 @@ By default, these logs are in **c:\\inetpub\\logs\\logfiles**. Each site has its
 
 #### Windows System, Application, and Security event logs
 
-Collected as part of the IIS Log Catcher data. Although the event logs aren't typically used when troubleshooting slow page response and hangs, it's the best practice to continue collecting them as they might be used later on in troubleshooting.
+These are collected as part of the IIS Log Catcher data. Although the event logs aren't typically used when troubleshooting slow page response and hangs, it's the best practice to continue collecting them as they might be used later on in troubleshooting.
 
 If the IIS Log Catcher tool doesn't automatically collect event logs, you need to collect them manually.
 
