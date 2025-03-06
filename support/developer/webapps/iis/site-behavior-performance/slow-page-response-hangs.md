@@ -333,7 +333,7 @@ Follow these steps to configure FREB to run a custom action, like **ProcDump.exe
       :::image type="content" source="media/slow-page-response-hangs/collection-editor-webserver-tracing.png" alt-text="Screenshot of properties in Collection Editor.":::
 
       - **CustomActionExe**: Set the value to the path of the ProcDump executable.
-      - **customActionParams** Set the value to `-accepteula -ma %1% C:\myDumps -n 3`.
+      - **customActionParams**: Set the value to `-accepteula -ma %1% C:\myDumps -n 3`.
 
         This command generates three consecutive dumps, spaced by 10 seconds. If you need to change the spacing, add `-s` followed by the number of seconds.
 
