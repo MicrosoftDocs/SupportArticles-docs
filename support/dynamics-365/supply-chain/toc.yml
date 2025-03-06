@@ -352,6 +352,8 @@
       href: warehousing/shipment-confirmed-no-posting.md
     - name: Slotting templates don't consider on-hand inventory for batch-above items
       href: warehousing/slotting-templates-inventory-batch-above.md
+    - name: "The size of the request xml exceeds the maximum allowed value" in the mobile app
+      href: warehousing/the-size-of-the-request-xml-exceeds-the-maximum-allowed-value-error-in-the-warehouse-management-mobile-app.md
     - name: The last closed work line must be a put
       href: warehousing/the-last-closed-work-link-must-be-a-put-error.md
     - name: The weight fields on load lines don't match the weight fields on the load
@@ -384,5 +386,3 @@
       href: warehousing/shipment-cannot-be-confirmed-customer-is-on-hold-error.md
     - name: You can't confirm a shipment because load lines have quantity zero
       href: warehousing/load-line-quantity-is-zero.md
-    - name: The size of the request xml exceeds the maximum allowed value error in the Warehouse management mobile app
-      href: warehousing/the-size-of-the-request-xml-exceeds-the-maximum-allowed-value-error-in-the-warehouse-management-mobile-app.md

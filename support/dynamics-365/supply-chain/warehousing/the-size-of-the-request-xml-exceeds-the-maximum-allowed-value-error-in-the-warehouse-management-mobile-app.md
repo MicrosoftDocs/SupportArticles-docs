@@ -1,7 +1,7 @@
 ---
-title: The size of the request xml exceeds the maximum allowed value error in the Warehouse management mobile app
-description: Provides resolution on how to resolve the "The size of the request xml exceeds the maximum allowed value" error in the Warehouse management mobile app.
-ms.date: 03/03/2025
+title: Size of Request XML Exceeds Maximum Allowed Value Error in Warehouse Management mobile app
+description: Resolves the size of the request xml exceeds the maximum allowed value error in the Warehouse Management mobile app.
+ms.date: 03/06/2025
 # ms.search.form:
 audience: Application User
 ms.reviewer: kamaybac, ivanma
@@ -11,27 +11,27 @@ ms.search.validFrom: 2025-03-03
 ms.dyn365.ops.version: 10.0.39
 ms.custom: sap:Warehouse management
 ---
-# The size of the request xml exceeds the maximum allowed value error in the Warehouse management mobile app
+# "The size of the request xml exceeds the maximum allowed value" error in the Warehouse management mobile app
 
-This article provides resolutions on how to resolve the "The size of the request xml exceeds the maximum allowed value" error in the Warehouse management mobile app.
+This article provides a resolution for the "The size of the request xml exceeds the maximum allowed value" error that occurs in the [Warehouse Management mobile app](/dynamics365/supply-chain/warehousing/install-configure-warehouse-management-app).
 
 ## Symptoms
 
-The "The size of the request xml exceeds the maximum allowed value" error is shown in the Warehouse management mobile app when opening a *Display open work list* mobile device flow.
+When you open a [Display open work list](/dynamics365/supply-chain/warehousing/configure-mobile-devices-warehouse#configure-menu-items-for-activities-and-inquiries) mobile device flow in the Warehouse Management mobile app, you might receive the following error message:
+
+> The size of the request xml exceeds the maximum allowed value.
 
 ## Cause
 
-The Warehouse management mobile app is communicating with the Dynamics 365 Supply Chain Management service through an XML file. The system has built-in limit on the size of that XML file. So, if there are many warehouse works that should be displayed in the Warehouse management mobile app, this can lead to the XML file size being too large.
+The Warehouse Management mobile app communicates with the Dynamics 365 Supply Chain Management service through an XML file. The system has a built-in limit on the size of this XML file. If there are many warehouse works to be displayed in the Warehouse Management mobile app, the XML file size might exceed this limit.
 
 ## Resolution
 
-To resolve this issue, you can limit the number of warehouse works shown in the Warehouse management mobile app.
+To resolve this issue, follow these steps to reduce the number of warehouse works shown in the Warehouse Management mobile app:
 
-Follow these steps to reduce the number of shown warehouse works:
-1. Open the **Mobile device menu items** form (**Warehouse management** > **Setup** > **Mobile device** > **Mobile device menu items**).
+1. Open the **Mobile device menu items** form by navigating to **Warehouse management** > **Setup** > **Mobile device** > **Mobile device menu items**.
 1. Find the impacted menu item.
-1. Click the **Edit query** button in the Action Pane.
+1. Select the **Edit query** button in the Action Pane.
 1. Edit the query to reduce the number of displayed works.
 
-> [!NOTE]
-> For more information about editing the queries, see [User-configurable queries in warehouse management](/dynamics365/supply-chain/warehousing/user-configurable-queries-in-warehouse-management).
+For more information about editing the queries, see [User-configurable queries in Warehouse management](/dynamics365/supply-chain/warehousing/user-configurable-queries-in-warehouse-management).
