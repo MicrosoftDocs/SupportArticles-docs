@@ -4,7 +4,7 @@ description: Learn how to resolve a scenario in which a Windows activation water
 author: cwhitley-MSFT
 ms.author: cwhitley
 ms.reviewer: scotro, scottmca, kimberj, jdickson, shache, v-naqviadil, v-leedennis, v-weizhu
-ms.date: 06/04/2024
+ms.date: 03/06/2025
 ms.service: azure-virtual-machines
 ms.custom: sap:Cannot activate my Windows VM
 ms.topic: troubleshooting-problem-resolution
@@ -12,7 +12,7 @@ ms.topic: troubleshooting-problem-resolution
 ---
 # Windows activation watermark continues to be displayed
 
-**Applies to:** :heavy_check_mark: Windows VMs running Windows Server 2022 Datacenter Azure Edition
+**Applies to:** :heavy_check_mark: Windows VMs running Windows Server 2025 Datacenter Azure Edition, Windows VMs running Windows Server 2022 Datacenter Azure Edition
 
 This document discusses how to resolve the continued presence of a Windows activation watermark on Microsoft Azure virtual machines.
 
