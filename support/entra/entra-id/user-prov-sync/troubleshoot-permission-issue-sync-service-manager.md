@@ -54,7 +54,7 @@ To find the on-premises AD connector account, use one of the following tools.
 
 1. In the **Additional tasks** screen, select the **View or export current configuration** task, and then select the **Next** button.
 
-1. In the **Review your solution** screen, locate the **Synchronized Directories** heading, and then copy the string from within the **ACCOUNT** field value. By default, the automatically created account is `DOMAIN\MSOL_<hex-digits>`.
+1. In the **Review your solution** screen, locate the **Synchronized Directories** heading, and then copy the string from within the **ACCOUNT** field value. By default, the name of automatically created account follows the format `DOMAIN\MSOL_<hex-digits>`.
 
 1. Select the **Exit** button.
 
