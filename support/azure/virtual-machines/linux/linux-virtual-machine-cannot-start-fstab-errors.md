@@ -115,7 +115,7 @@ The ALAR scripts use the repair extension `repair-button` to fix fstab issues by
 ```azurecli-interactive
 az extension add -n vm-repair
 az extension update -n vm-repair
-az vm repair repair-button --button-command 'fstab' --verbose $RGNAME --name $VMNAME
+az vm repair repair-button --button-command 'fstab' --verbose --resource-group $RGNAME --name $VMNAME
 ```
 
 > [!NOTE]

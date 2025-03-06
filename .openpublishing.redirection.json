@@ -12757,6 +12757,14 @@
       "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/your-device-is-currently-unsupported"
     },
     {
+      "source_path": "support/mem/configmgr/client-management/cannot-download-content-from-cmg.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-management/cmg-communication-error"
+    },
+    {
+      "source_path": "support/mem/configmgr/client-management/cmg-communication-error-403.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-management/cmg-communication-error"
+    },
+    {
       "source_path": "support/dynamics-365/sales/attachments-not-tracked-to-dynamics-365-after-office-365-atp-is-enabled.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/attachments-not-tracked-to-dynamics-365-after-office-365-atp-is-enabled"
     },
@@ -12871,6 +12879,10 @@
     {
       "source_path": "support/power-platform/dataverse/d365-app-outlook/error-when-installing-crm-2016-outlook.md",
       "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-when-installing-crm-2016-outlook"
-    }
+    },
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/current-user-role-not-have-required-permissions.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/privilege-error-occurs-when-using-dynamics-365-app-for-outlook"
+    }   
   ]
 }
