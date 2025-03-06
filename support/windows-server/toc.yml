@@ -2585,6 +2585,8 @@ items:
       href: ./system-management-components/scheduled-task-not-run-upon-reboot-machine-off.md
     - name: Scheduled tasks reference incorrect user profile paths
       href: ./system-management-components/scheduled-tasks-reference-incorrect-user-profile.md
+    - name: Troubleshoot issues with scheduled tasks not running
+      href: ./system-management-components/troubleshoot-scheduled-tasks-not-running.md      
   - name: WinRM
     items:
     - name: Error 0x80090322 when connecting PowerShell to remote server via WinRM
