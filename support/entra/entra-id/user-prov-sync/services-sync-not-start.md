@@ -1,8 +1,8 @@
 ---
 title: Microsoft Entra Connect services don't start
 description: Describes an issue that prevents Microsoft Entra Connect services from starting. Provides a resolution.
-ms.date: 03/04/2025
-ms.reviewer: riantu, nualex, reviei, v-leedennis
+ms.date: 03/06/2025
+ms.reviewer: riantu, nualex, reviei, v-leedennis, v-weizhu
 ms.service: entra-id
 ms.custom: sap:Microsoft Entra Connect Sync
 ---
