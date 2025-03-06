@@ -9,7 +9,7 @@ ms.custom: sap:Working with Solutions\Environment schema type mistamch during so
 ---
 # Environment schema type mismatch warning during solution import
 
-This article provides a workaround for an issue about source environment's [schema type](/power-apps/developer/data-platform/webapi/reference/organizationdetail?view=dataverse-latest#remarks) higher than target environment's schema type that occurs when you [import a solution](/powerapps/maker/data-platform/import-update-export-solutions) in Microsoft Power Platform. You can still proceed with the solution import if there are no other errors, but this warning helps guide you to avoid missing components due to schema type mismatch for future imports.
+This article provides a workaround for an issue about source environment's [schema type](/power-apps/developer/data-platform/webapi/reference/organizationdetail#remarks) higher than target environment's schema type that occurs when you [import a solution](/powerapps/maker/data-platform/import-update-export-solutions) in Microsoft Power Platform. You can still proceed with the solution import if there are no other errors, but this warning helps guide you to avoid missing components due to schema type mismatch for future imports.
 
 _Applies to:_ &nbsp; Power Platform, Solutions
 
