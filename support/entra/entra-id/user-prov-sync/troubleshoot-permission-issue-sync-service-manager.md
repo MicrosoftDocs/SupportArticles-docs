@@ -120,7 +120,7 @@ The output is a table that displays the `Name`, `Forest`, `Domain`, and `Usernam
 
    - When using 'mS-DS-ConsistencyGuid' attribute as the source anchor, the added attribute will be the [mS-DS-ConsistencyGuid](/entra/identity/hybrid/connect/plan-connect-design-concepts#using-ms-ds-consistencyguid-as-sourceanchor) attribute.
       
-   - Review the list of [Exchange hybrid writeback](/azure/active-directory/hybrid/connect/reference-connect-sync-attributes-synchronized#exchange-hybrid-writeback) attributes to synchronize and then return to the **Attribute information** table UI to find the Exchange hybrid writeback attribute that ADSync was trying to add or modify. For example, the added or modified attribute might be the [msDS-ExternalDirectoryObjectID](/openspecs/windows_protocols/ms-ada2/0abc1d06-ac09-476f-a60b-5deb05b394f7) attribute.
+   - Review the list of [Exchange hybrid writeback](/azure/active-directory/hybrid/connect/reference-connect-sync-attributes-synchronized#exchange-hybrid-writeback) attributes to synchronize, and then return to the **Attribute information** table UI to find the Exchange hybrid writeback attribute that ADSync was trying to add or modify. For example, the added or modified attribute might be the [msDS-ExternalDirectoryObjectID](/openspecs/windows_protocols/ms-ada2/0abc1d06-ac09-476f-a60b-5deb05b394f7) attribute.
       
    - Check the Microsoft Entra Connect features by running the `Get-ADSyncGlobalSettings` cmdlet from a PowerShell session, as shown in the following code:
 
