@@ -2,7 +2,7 @@
 title: Dynamics 365 App for Outlook option is missing from navigation
 description: Solves an issue where Microsoft Dynamics 365 App for Outlook is missing from the Dynamics 365 navigation pane.
 ms.reviewer: 
-ms.date: 03/05/2025
+ms.date: 03/06/2025
 ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
 # Dynamics 365 App for Outlook is missing from the navigation pane
@@ -18,7 +18,7 @@ You can't find the **Dynamics 365 App for Outlook** option under **Settings** in
 
 ## Cause
 
-This issue occurs due to the customization to your navigation menu (site map). Such customization can be applied from a solution, or an administrator could have explicitly edited the site map XML or used the site map designer to remove the option.
+This issue might be due to customization of the navigation menu (site map). The customization could've been applied from a solution, or an administrator could have explicitly edited the site map XML or used the site map designer to remove the option.
 
 ## Resolution
 
