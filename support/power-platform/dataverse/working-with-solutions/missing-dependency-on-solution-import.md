@@ -2,7 +2,7 @@
 title: Missing dependencies during solution import in Power Apps
 description: Works around an issue about missing dependencies that occurs when you import a solution in the target environment in Microsoft Power Apps.
 ms.reviewer: jdaly
-ms.date: 09/25/2023
+ms.date: 03/06/2025
 author: swatimadhukargit
 ms.author: swatim
 ms.custom: sap:Working with Solutions\Dependencies prevent a solution import
@@ -40,12 +40,14 @@ To work around this issue, follow these steps:
 You can find these dependencies in the **Applications** section of the **Missing dependencies** page. To resolve this issue:
 
 - If the application isn't installed in the target environment:
-    - System administrators observe an **Install** button. Selecting **Install** redirects to application install [install the application](/power-platform/admin/manage-apps#install-an-app) page in the Power Platform admin center. Choose the application and install it.
-    - Non system administrators observe a **Copy Install Link**. Copy the application install link and request your system administrator to install the application. Alternatively, a system administrator can directly go to the [install application](/power-platform/admin/manage-apps#install-an-app) page in the Power Platform admin center.
-    
-- If the application is installed but has an outdated version in the target environment:
-    - System administrators observe an **Update** button. Select **Update** to open the application update page in Power Platform admin center.
-    - Non system administrators observe a **Copy Update Link**. Copy the application update link and request your system administrator to update the application.
+
+  - System administrators can use the **Install** button, which redirects to the [application install](/power-platform/admin/manage-apps#install-an-app) page in the Power Platform admin center. Choose and install the application.
+  - Non-system administrators can use the **Copy Install Link** button to copy the application install link and request their system administrator to install the application. Alternatively, a system administrator can directly go to the [application install](/power-platform/admin/manage-apps#install-an-app) page to install the application in the Power Platform admin center.
+
+- If the application is installed but outdated in the target environment:
+
+  - System administrators can use the **Update** button to open the application update page in the Power Platform admin center.
+  - Non-system administrators can use the **Copy Update Link** button to copy the application update link and request their system administrator to update the application.
   
 ### Missing dependencies coming from another managed solution
 
