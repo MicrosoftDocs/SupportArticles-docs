@@ -22,7 +22,7 @@ This document discusses how to resolve the continued presence of a Windows activ
 
 ## Symptoms
 
-When you use an Azure virtual machine (VM) that runs Windows Server 2022 Datacenter Azure Edition, you encounter the following symptoms:
+When you use an Azure virtual machine (VM) that runs Windows Server 2025/2022 Datacenter Azure Edition, you encounter the following symptoms:
 
 - You see a watermark on the desktop that contains the following message:
 
@@ -37,7 +37,7 @@ When you use an Azure virtual machine (VM) that runs Windows Server 2022 Datacen
   ```console
   cscript c:\windows\system32\slmgr.vbs /dlv
   ```
-- When you restart or sign in to the VM, a pop-up window with the following message is displayed:
+- When you restart or sign in to the VM, a pop-up window with a message like the following text is displayed:
 
   > Your Windows Server 2022 Datacenter Azure Edition VM has been deactivated because you are not running on Azure or a supported Azure Stack hypervisor, or that you have not enabled Azure benefits on the supported Azure Stack. To enable Azure benefits, go to your cluster settings in Windows Admin Center > Enable Azure benefits.
 
@@ -71,7 +71,7 @@ If you get a successful response, you'll see the metadata information from the V
  ```output
  compute                                                                                                                                                                  
  -------                                                                                                                                                                  
- @{azEnvironment=AzurePublicCloud; customData=; evictionPolicy=; isHostCompatibilityLayerVm=true; licenseType=; location=eastus; name=testWs2022; offer=WindowsServer; ...
+ @{azEnvironment=AzurePublicCloud; customData=; evictionPolicy=; isHostCompatibilityLayerVm=true; licenseType=; location=eastus; name=testWs; offer=WindowsServer; ...
  ```
 
 If not, it means that the connection to the IMDS wire server is blocked somewhere, and access to it needs to be allowed. The IP of the IMDS server is `169.254.169.254`. To fix the connection issue, go to [Solution 1: Bypass web proxies within the VM](#solution-1-bypass-web-proxies-within-the-vm).
