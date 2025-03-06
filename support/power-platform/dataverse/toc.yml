@@ -196,6 +196,8 @@
       href: working-with-solutions/duplicate-security-roles.md
     - name: Data source references not updated after solution import
       href: working-with-solutions/dataverse-environment-variables.md
+    - name: Environment version mismatch warning during solution import
+      href: working-with-solutions/version-mismatch-on-solution-import.md
     - name: '"Failed deleting solution" error due to circular dependencies between solutions'
       href: working-with-solutions/circular-dependencies-between-solutions.md
     - name: Form doesn't appear in target environment after import
