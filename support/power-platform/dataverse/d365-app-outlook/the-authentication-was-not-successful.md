@@ -2,12 +2,12 @@
 title: The authentication wasn't successful error
 description: Solves the authentication error that occurs when you try to use the Dynamics 365 App for Outlook in the Outlook desktop client.
 ms.reviewer: 
-ms.date: 02/27/2025
+ms.date: 03/06/2025
 ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
 # "Sorry, the authentication was not successful" error occurs in Dynamics 365 App for Outlook
 
-This article outlines several potential causes for the authentication error that occurs when you use the Dynamics 365 App for Outlook in the Outlook desktop client, and provides corresponding resolutions.
+This article outlines several potential causes of the authentication error that occurs when you use the Dynamics 365 App for Outlook in the Outlook desktop client, and provides corresponding resolutions.
 
 _Applies to:_ &nbsp; Dynamics 365 App for Outlook  
 _Original KB number:_ &nbsp; 4483111
@@ -43,7 +43,7 @@ When you select the option to show more and you see the following error:
 
 > Error: QuotaExceededError
 
-This indicates that your local browser storage limit has been exceeded.
+The error indicates that your local browser storage is exceeded.
 
 ### Resolution
 
@@ -60,14 +60,14 @@ To solve this issue, clear your browser cache.
 
 After clearing your browser cache, close all Internet Explorer and Outlook desktop windows, and ensure there are no remaining Internet Explorer processes running by checking Task Manager.
 
-If this issue persists only in the Outlook desktop client and clearing the cache via Internet Options doesn't help, try clearing it via the F12 IEchooser (not applicable for Windows 7):
+If this issue only exits in the Outlook desktop client and clearing the cache via Internet Options doesn't help, try clearing it via the F12 IEchooser (not applicable for Windows 7):
 
 1. Open the Dynamics 365 App for Outlook in the Outlook desktop client.
 2. Open the **IEChooser.exe** located in `%WindowsFolder%\System32\F12` (for example, `C:\Windows\System32\F12`).
 3. In the **Choose target to debug** window, select **Dynamics 365**.
 4. Select the **Network** tab and then select the **Clear cache** button.
 
-After completing the steps above, reopen Outlook and the Dynamics 365 App for Outlook to see if the issue is resolved.
+After completing these steps, reopen Outlook and the Dynamics 365 App for Outlook to see if the issue is resolved.
 
 #### More information
 
