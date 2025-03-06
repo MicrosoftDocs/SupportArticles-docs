@@ -315,7 +315,7 @@ Follow these steps to configure FREB to run a custom action, like **ProcDump.exe
 
    1. Select the site to which you have already added the Failed Tracing Rule.
 
-      :::image type="content" source="media/slow-page-response-hangs/collection-editor-applicationhost-sites.png" alt-text="Screenshot of Collection Editor.":::
+      :::image type="content" source="media/slow-page-response-hangs/collection-editor-applicationhost-sites.png" alt-text="Screenshot of Collection Editor." lightbox="media/slow-page-response-hangs/collection-editor-applicationhost-sites.png":::
    1. Set **customActionsEnabled** to **True**.
    1. Download [ProcDump](/sysinternals/downloads/procdump) and copy the executable to the **C:\\procDump** path. Create a directory named **myDumps** under the **C:\\** drive.
 
@@ -330,7 +330,7 @@ Follow these steps to configure FREB to run a custom action, like **ProcDump.exe
 
    1. Select the **Add** link under the **Action** pane and fill in the properties as shown in the following screenshot:
 
-      :::image type="content" source="media/slow-page-response-hangs/collection-editor-webserver-tracing.png" alt-text="Screenshot of properties in Collection Editor.":::
+      :::image type="content" source="media/slow-page-response-hangs/collection-editor-webserver-tracing.png" alt-text="Screenshot of properties in Collection Editor." lightbox="media/slow-page-response-hangs/collection-editor-webserver-tracing.png":::
 
       - **CustomActionExe**: Set the value to the path of the ProcDump executable.
       - **customActionParams**: Set the value to `-accepteula -ma %1% C:\myDumps -n 3`.
