@@ -1,5 +1,5 @@
 ---
-title: Environment schema type mismatch during solution import in Power Apps
+title: Environment Schema Type Mismatch During Solution Import in Power Apps
 description: Works around a warning about environment schema type mismatch that occurs when you import a solution in the target environment in Microsoft Power Apps.
 ms.reviewer: matp
 ms.date: 03/06/2025
@@ -21,7 +21,7 @@ When you try to import a solution in [Power Apps](https://make.powerapps.com/?ut
 
 ## Cause
 
-This issue could be caused due to the source environment, from which the solution is exported, has a higher schema type than the target environment. The higher schema type includes more components than the lower schema type of the target environment. Consequently, the solution might depend on components available in the source environment but absent in the target environment, leading to missing dependencies.
+This issue might occur because the source environment, from which the solution is exported, has a higher schema type than the target environment. The higher schema type includes more components than the lower schema type of the target environment. Consequently, the solution might depend on components available in the source environment but absent in the target environment, leading to missing dependencies.
 
 For example, a `Full` schema type has more components than a `Standard` schema type, and a `Standard` schema type has more components than a `Core` schema type.
 
