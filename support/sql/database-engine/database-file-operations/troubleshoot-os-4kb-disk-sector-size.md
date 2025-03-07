@@ -86,7 +86,7 @@ Cannot use file 'data file path', because it is on a volume with sector size 819
 
 During service startup, SQL Server begins the database recovery process to ensure database consistency. Part of this database recovery process involves consistency checks on the underlying filesystem before you try to open system and user database files.  
 
-Some new storage devices and device drivers exposes a disk sector size greater than the supported 4-KB sector size.
+Some new storage devices and device drivers expose a disk sector size greater than the supported 4-KB sector size.
   
 When this occurs, SQL Server will be unable to start due to the unsupported file system as SQL Server currently supports sector storage sizes of 512 bytes and 4 KB.
 
@@ -121,7 +121,7 @@ Additionally, be aware of the Windows support policy for file system and storage
   1. Run Registry Editor as an administrator.
   1. Navigate to `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device`.
   1. Select **Edit** > **New** > **Multi-String value** and name it as `ForcedPhysicalSectorSizeInBytes`.
-  1. Right click the name, select **Modify**, and type `* 4095` in the **Value data** field.
+  1. Right-click the name, select **Modify**, and type `* 4095` in the **Value data** field.
   1. Select **OK** and close Registry Editor.
 
   ### [Command Prompt](#tab/command-prompt)
@@ -133,7 +133,7 @@ Additionally, be aware of the Windows support policy for file system and storage
      REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" /v "ForcedPhysicalSectorSizeInBytes" /t   REG_MULTI_SZ /d "* 4095" /f
      ```
 
-  1. Run the following command to validate if the key was added successfully:
+  1. Run the following command to validate if the key is added successfully:
 
      ```console
      REG QUERY "HKLM\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" /v 
@@ -149,14 +149,14 @@ Additionally, be aware of the Windows support policy for file system and storage
      New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" -Name   "ForcedPhysicalSectorSizeInBytes" -PropertyType MultiString        -Force -Value "* 4095"
      ```
 
-  1. Run the following command to validate if the key was added successfully:
+  1. Run the following command to validate if the key is added successfully:
 
      ```Powershell
      Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" -Name   "ForcedPhysicalSectorSizeInBytes"
      ```
   ---
 
-- If you don't add the registry key and you have multiple drives on this system, you can specify a different location for the database files after the installation of SQL Server is complete. Make sure that drive reflects a supported sector size when querying the `fsutil` commands. SQL Server currently supports sector storage sizes of 512 bytes and 4,096 bytes.
+- If you don't add the registry key and you have multiple drives on this system, you can specify a different location for the database files after the installation of SQL Server is complete. Make sure that the drive reflects a supported sector size when querying the `fsutil` commands. SQL Server currently supports sector storage sizes of 512 bytes and 4,096 bytes.
 
 ## More information
 
