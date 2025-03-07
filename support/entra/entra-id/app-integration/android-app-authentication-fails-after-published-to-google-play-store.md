@@ -3,9 +3,10 @@ title: Android App Authentication Fails After Being Published to Google Play Sto
 description: Provides a solution to an authentication failure with an Android app published to the Google Play Store.
 ms.reviewer: markbukovich, v-weizhu
 ms.service: entra-id
-ms.date: 02/24/2025
+ms.date: 03/07/2025
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
+
 # Authentication fails after an Android app is published to the Google Play Store
 
 This article provides a solution to an authentication failure that occurs during signing in after users install an Android app published to the Google Play Store.
@@ -152,5 +153,6 @@ Update the MSAL configuration file and Android Manifest file in the application 
     > - Make sure to include the forward slash in front of the signature hash.
     > - Unlike the redirect URI, the signature hash here isn't HTTP encoded.
 
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-disclaimer.md)]
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
