@@ -1,11 +1,11 @@
 ---
 title: Memory dump file options
-description: This article describes an overview of memory dump file options for Windows 7 with Service Pack 1.
-ms.date: 01/15/2025
+description: This article describes an overview of memory dump file options for Windows.
+ms.date: 03/07/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika
+ms.reviewer: kaushika, warrenw
 ms.custom:
 - sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot)
 - pcy:WinComm Performance
@@ -78,7 +78,7 @@ Each additional file is given a distinct name. The date is encoded in the file n
 
 ## Automatic Memory Dump
 
-See this article for Automatic Memory dump information: [Automatic memory dump](/windows-hardware/drivers/debugger/automatic-memory-dump)
+For more information, see [Automatic Memory Dump](/windows-hardware/drivers/debugger/automatic-memory-dump).
 
 ## Configure the dump type
 
@@ -96,9 +96,9 @@ To configure startup and recovery options (including the dump type), follow thes
 
 ## Tools for the various dump types
 
-You can load complete memory dumps and kernel memory dumps with the Windows Debugger. [https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/](/windows-hardware/drivers/debugger/)
+You can load complete memory dumps and kernel memory dumps with the [Windows debugger](/windows-hardware/drivers/debugger/).
 
-Load small memory dumps by using Dumpchk.exe. You can also use Dumpchk.exe to verify that a memory dump file has been created correctly. [https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/dumpchk](/windows-hardware/drivers/debugger/dumpchk)
+Load small memory dumps by using [DumpChk.exe](/windows-hardware/drivers/debugger/dumpchk). You can also use **DumpChk.exe** to verify that a memory dump file has been created correctly.
 
 ## Registry values for startup and recovery
 
@@ -131,5 +131,4 @@ For more information about how to configure your computer to generate a dump fil
 
 ## Maximum paging file size
 
-See: [https://learn.microsoft.com/en-us/troubleshoot/windows-client/performance/how-to-determine-the-appropriate-page-file-size-for-64-bit-versions-of-windows](/troubleshoot/windows-client/performance/how-to-determine-the-appropriate-page-file-size-for-64-bit-versions-of-windows)
-
+For more information, see [How to determine the appropriate page file size for 64-bit versions of Windows](../../windows-client/performance/how-to-determine-the-appropriate-page-file-size-for-64-bit-versions-of-windows.md).
