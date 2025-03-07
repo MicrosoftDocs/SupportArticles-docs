@@ -1,11 +1,11 @@
 ---
 title: Guidance for troubleshooting stop errors and unexpected restart.
 description: Introduces general guidance for troubleshooting scenarios related to stop errors and unexpected restart.
-ms.date: 01/15/2025
+ms.date: 03/07/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika
+ms.reviewer: kaushika, warrenw
 ms.custom:
 - sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot)
 - pcy:WinComm Performance
@@ -31,9 +31,11 @@ There's no simple explanation for the cause of Stop errors (also known as blue s
 4. Make sure that you install the latest Windows updates, cumulative updates, and rollup updates.
 5. Make sure that the BIOS and firmware are up-to-date.
 6. Run any relevant hardware and memory tests.
-1. Run a anti-Malware software scan such as Microsoft Defender:  [https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-offline](/defender-endpoint/microsoft-defender-offline)
+7. Run an anti-malware software scan such as [Microsoft Defender](/defender-endpoint/microsoft-defender-offline).
+8. If the problem occurrs after installing a new piece of software, remove the new software. If you can't boot to normal mode, you can try from [Safe Mode](https://support.microsoft.com/windows/windows-startup-settings-1af6ec8c-4d4a-4b23-adb7-e76eef0b847f)
 
-1. If the problem occurred after installing a new piece of software, remove the new software. If you cannot boot to normal mode you can try from Safe Mode - [https://support.microsoft.com/en-us/windows/windows-startup-settings-1af6ec8c-4d4a-4b23-adb7-e76eef0b847f](https://support.microsoft.com/windows/windows-startup-settings-1af6ec8c-4d4a-4b23-adb7-e76eef0b847f) Note: Some software cannot be removed from safe mode. 
+  > [!NOTE]
+  > Some software can't be removed from Safe Mode.
 
 ## Common issues and solutions
 
