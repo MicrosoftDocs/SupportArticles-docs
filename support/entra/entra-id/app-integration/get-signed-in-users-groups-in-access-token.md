@@ -1,75 +1,84 @@
 ---
-title: Get signed in user groups when groups overage claim is displayed
-description: Provides a sample project to introduce how to to get signed in user groups when groups overage claim is displayed in access tokens.
+title: Get signed in user groups from groups overage claim 
+description: Provides a sample project to introduce how to to get signed in user groups when groups overage claim is displayed for access tokens.
 ms.reviewer: v-weizhu
 ms.service: entra-id
 ms.date: 03/07/2025
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
-# How to get signed in user groups when groups overage claim is displayed in access tokens
+# How to get signed in user groups when groups overage claim is displayed for access tokens
 
-When you configure the `groups` claim in an access token for your application, Microsoft Entra ID has a maximum number of groups that can be returned in an access token. This article introduces how to reproduce this scenario and get the actual user groups using Microsoft Graph when a groups overage claim is present in access tokens.
+When you configure the `groups` claim in an access token for your application, Microsoft Entra ID has a maximum number of groups that can be returned in an access token. When the limit is exceeded, Azure provides a groups overage claim which is a URL that can be used to get the full groups list for the currently signed in user. This URL uses the Microsoft Graph endpoint. For more information about the `groups` claim, see [Access tokens in the Microsoft identity platform](/entra/identity-platform/access-tokens).
 
-For JSON web tokens (JWT), Azure has a limit of 200 groups that can be present in the token. When requesting an access token for the resource that has the `groups` claim configured on it, if you are a member of more than 200 groups, you will get a groups overage claim instead of getting the actual groups. The groups overage claim is a URL that can be used to get the groups list for the currently signed in user. This URL uses the Microsoft Graph endpoint. For more information about the `groups` claim, see [Access tokens in the Microsoft identity platform](/entra/identity-platform/access-tokens). 
+This article introduces how to reproduce this scenario and get the actual user groups from the groups overage claim URL by using a sample project.
+
+> [!NOTE]
+> For JSON web tokens (JWT), Azure has a limit of 200 groups that can be present in the token. When requesting an access token for the resource that has the `groups` claim configured on it, if you are a member of more than 200 groups, you will get a groups overage claim URL instead of getting the actual groups.
 
 ## Configure access tokens for the groups claim
 
 You can configure optional claims for your application to include the groups claim. For more information, see [Configure and manage optional claims in ID tokens, access tokens, and SAML tokens](/entra/identity-platform/optional-claims).
 
-If the application is a first party app (Microsoft App), you can't configure the `groups` claim. If you want to configure the `groups` claim for a client application, you must configure it in an ID token.
+If the application is a first party app (Microsoft App), you can't configure the `groups` claim. You only can configure this with your own app registration. If you want to configure the `groups` claim for a client application, you must configure it in an ID token.
 
-## Download groups overage claim sample project
+## Download the sample project
 
-Download the sample project [MSAL.Net_GroupOveragesClaim](https://github.com/RayGHeld/MSAL.Net_GroupOveragesClaim). It shows how to reproduce a groups overage claim and get the groups list from it in an access token.
+Download the sample project [MSAL.Net_GroupOveragesClaim](https://github.com/RayGHeld/MSAL.Net_GroupOveragesClaim). It shows how to get the groups list from a groups overage claim URL.
 
-This sample project will perform both public client flow and confidential client flow, so you will need to configure a web redirect (for the public client flow) and a client secret (for the confidential client flow). Because the confidential client must go to the users endpoint and look up the groups based on a user ID, which can be obtained from the initial sign-in token, the confidential client version need the Microsoft Graph application permission of `Group.Read.All`. The public client will just go to the `me` endpoint, since there is a user context.
+## Before running the sample project
 
-The sample project has a text file called *Create_TestGroup.ps1.txt*. To run the PowerShell script in this file, remove the .txt extension. Before running it, you need an object ID of a user to add to the test groups. You must be in a directory role that can create groups and add users to the groups. The sample application will create 255 groups with a format of `TEST_0001`, `TEST_0002`, and so on. The object ID that you provide to each group will be added. At the end of the script, it will sign you into Azure, run the command to create the test groups, and then sign you out. 
+- Configure an app registration for the sample project.
 
-There is a sample cleanup method that is commented out at line 53:
+    The sample project will perform both public client flow and confidential client flow, so you will need to configure a web redirect (for the public client flow) and a client secret (for the confidential client flow). Because the confidential client must go to the users endpoint and look up the groups based on a user ID, which can be obtained from the initial sign-in token, the confidential client version need the Microsoft Graph application permission of `Group.Read.All`. The public client will just go to the `me` endpoint, since there is a user context.
 
-```PowerShell
-Connect-AzureAD
+- Configure the sample project to work with your tenant by updating the *appsettings.json* file with appropriate values:
 
-Create-TestGroups -deleteIfExists $false
-#Delete-TestGroups
+    ```json
+    {
+    "Azure": {
+        "ClientId": "{client_id}",
+        "TenantId": "{tenant_id}",
+        "CallbackPath": "http://localhost",
+        "ClientSecret": "{client_secret}",
+        "AppScopes": [ "https://database.windows.net/.default" ],
+        "GraphScopes": [ "User.Read" ]
+    }
+    }
+    ```
 
-Disconnect-AzureAD
-```
+    Here are explanations for the settings in the *appsettings.json* file:
 
-The sample project must be configured to work with your tenant. Once that is configured, update the *appsettings.json* file with appropriate values:
+    - `AppScopes`
 
-```json
-{
-  "Azure": {
-    "ClientId": "{client_id}",
-    "TenantId": "{tenant_id}",
-    "CallbackPath": "http://localhost",
-    "ClientSecret": "{client_secret}",
-    "AppScopes": [ "https://database.windows.net/.default" ],
-    "GraphScopes": [ "User.Read" ]
-  }
-}
-```
+        You must have a scope for which the groups claim has been configured.
 
-Here are explanations for these settings:
+        Typically, this is an API in your tenant. But in this case, adding the Azure SQL database with the **user_impersonation** permission works with this scenario. The scope you have added works with that API. This is because the `groups` claim has been configured on that API.
 
-- `AppScopes`
+        :::image type="content" source="media/get-signed-in-users-groups-in-access-token/add-azure-sql-database.png" alt-text="Screenshot that shows the Azure SQL database API." border="false":::
 
-    You must have a scope for which the groups claim has been configured. Normally, this is an API in your tenant but in this case, adding the Azure SQL database with the **user_impersonation** permission works for this scenario and the scope I have works with that API. This is because the groups claim has been configured on that API already.
+    - `GraphScopes`
 
-    Typically, this is an API in your tenant. However, adding the Azure SQL database with the **user_impersonation** permission works with this scenario. The scope you have works with the API. This is because the groups claim has been configured on that API.
+        Add the application permissions **Group.Read.All** (needed to get the group display name) and **User.Read.All** (needed to get the groups list using the client credentials flow). You must provide admin consent for those permissions. The delegated permission **User.Read** should already be there. If not, add it.
 
-     :::image type="content" source="media/get-signed-in-users-groups-in-access-token/add-azure-sql-database.png" alt-text="Screenshot that shows the Azure SQL database API." lightbox="media/get-signed-in-users-groups-in-access-token/add-azure-sql-database.png"  border="false":::
+        :::image type="content" source="media/get-signed-in-users-groups-in-access-token/add-application-permissions.png" alt-text="Screenshot that shows the added application permissions." border="false":::
 
-- `GraphScopes`
+    - Once the app registration for this sample project is configured, add the client id (application id), client secret, tenant id into the *appsettings.json* file.
 
-    Add the application permissions **Group.Read.All** (needed to get the group display name ) and **User.Read.All** (needed to get the groups list using the client credentials flow). You must provide admin consent for those permissions. The delegated permission **User.Read** should already be there. If not, add it.
+- Run PowerShell scripts in the *Create_TestGroup.ps1.txt* file to create test groups (if needed).
 
-     :::image type="content" source="media/get-signed-in-users-groups-in-access-token/add-application-permissions.png" alt-text="Screenshot that shows the added application permissions." lightbox="media/get-signed-in-users-groups-in-access-token/add-application-permissions.png"  border="false":::
-- After the app registration for this sample application is configured, add the client id (application id), client secret, tenant id into the *appsettings.json* file.
+    The sample project has a text file called *Create_TestGroup.ps1.txt*. To run PowerShell scripts in this file, remove the .txt extension. Before running it, you need an object ID of a user to add to the test groups. You must be in a directory role that can create groups and add users to the groups. The sample project will create 255 groups with a format of `TEST_0001`, `TEST_0002`, and so on. The object ID that you provide to each group will be added. At the end of the script, it will sign you into Azure, run the command to create the test groups, and then sign you out. 
 
-## Run the sample application
+    > [!NOTE]
+    > There is a sample cleanup method that is commented out at line 53:
+    >
+    > ```PowerShell
+    > Connect-AzureAD
+    > Create-TestGroups -deleteIfExists $false
+    > #Delete-TestGroups
+    > Disconnect-AzureAD
+    > ```
+
+## Get the full users groups list using groups overage claim URL
 
 1.	Run the sample application. 
 2.	Sign in to the application.
@@ -78,9 +87,12 @@ Here are explanations for these settings:
 3.	After signing in, close the browser, and you'll return to the console application. 
 4.	After the access token is presented in the console window, copy the access token to the clipboard and paste it at https://jwt.ms to view the encoded token. It's just a user token. 
 
-    However, if the groups overage claim is present in that token because the user is a member of too many groups, the console window will display the original group overage URL, and the new group overage URL. The new group overage URL will be used in the .NET HTTP client request rather than the Graph .NET SDK request.
-5.	Select the access token type you want to get for Microsoft Graph. You can get an access token by using refresh token (a delegated token) of the currently signed in user or the client credentials grant flow (an application token).
-6.	Select the .NET HTTP Request or the Graph .NET SDK to get the full list of the user groups.
+    If the user is a member of too many groups, the console window will display the original group overage URL and the new group overage URL for that token. The new group overage URL will be used in the .NET HTTP client request rather than the Graph .NET SDK request.
+
+    :::image type="content" source="media/get-signed-in-users-groups-in-access-token/select-method-to-get-groups.png" alt-text="Screenshot of the methods be used to get the full list of the user groups." lightbox="media/get-signed-in-users-groups-in-access-token/select-method-to-get-groups.png"  border="false":::
+
+5.	Select the access token type you want to get for Microsoft Graph. You can get an access token by using a user token for the currently signed in user (refresh token flow) or an application token using the client credentials grant flow.
+6.	Select the `.NET HTTP Request` or the `Graph .NET SDK` to get the full list of the user groups.
 
     :::image type="content" source="media/get-signed-in-users-groups-in-access-token/select-method-to-get-groups.png" alt-text="Screenshot of the methods be used to get the full list of the user groups." lightbox="media/get-signed-in-users-groups-in-access-token/select-method-to-get-groups.png"  border="false":::
 
