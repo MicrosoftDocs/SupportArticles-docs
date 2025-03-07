@@ -2,7 +2,7 @@
 title: Missing dependencies during solution import in Power Apps
 description: Works around an issue about missing dependencies that occurs when you import a solution in the target environment in Microsoft Power Apps.
 ms.reviewer: jdaly
-ms.date: 03/06/2025
+ms.date: 03/07/2025
 author: swatimadhukargit
 ms.author: swatim
 ms.custom: sap:Working with Solutions\Dependencies prevent a solution import
@@ -31,7 +31,7 @@ To work around this issue, follow these steps:
 
 1. Select the **Show dependencies** button to navigate to the **Missing dependencies** page.
 
-    The **Missing dependencies** page lists all the components that are missing from the target environment. It also shows three categories of dependencies from which the component dependencies are obtained. The component missing can be due to missing application, missing managed solution or missing unmanaged component.
+    The **Missing dependencies** page lists all the components that are missing from the target environment. It also shows three categories of dependencies from which the component dependencies are obtained. The component missing issue might occur due to missing an application, a managed solution or an unmanaged component.
 
 2. Resolve this issue based on the different types of dependencies described in the following sections:
 
