@@ -9,7 +9,7 @@ appliesto:
 ---
 
 # KB5050533 - Azure Connect feature pack for SQL Server 2017
-a
+
 _Release Date:_ &nbsp; March 06, 2025  
 _Version:_ &nbsp; 14.0.3490.10
 
