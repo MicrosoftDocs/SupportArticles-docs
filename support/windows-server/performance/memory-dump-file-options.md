@@ -76,7 +76,7 @@ If the following conditions are true, the previous file is preserved.
 
 Each additional file is given a distinct name. The date is encoded in the file name. For example, Mini022900-01.dmp is the first memory dump generated on February 29, 2000. A list of all small memory dump files is kept in the `%SystemRoot%\Minidump` folder.
 
-## Automatic Memory Dump
+## Automatic memory dump
 
 For more information, see [Automatic Memory Dump](/windows-hardware/drivers/debugger/automatic-memory-dump).
 
