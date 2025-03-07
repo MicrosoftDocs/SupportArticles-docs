@@ -32,10 +32,10 @@ There's no simple explanation for the cause of Stop errors (also known as blue s
 5. Make sure that the BIOS and firmware are up-to-date.
 6. Run any relevant hardware and memory tests.
 7. Run an anti-malware software scan such as [Microsoft Defender](/defender-endpoint/microsoft-defender-offline).
-8. If the problem occurrs after installing a new piece of software, remove the new software. If you can't boot to normal mode, you can try from [Safe Mode](https://support.microsoft.com/windows/windows-startup-settings-1af6ec8c-4d4a-4b23-adb7-e76eef0b847f)
+8. If the problem occurrs after installing a new piece of software, remove the new software. If you can't boot to normal mode, you can try from [Safe Mode](https://support.microsoft.com/windows/windows-startup-settings-1af6ec8c-4d4a-4b23-adb7-e76eef0b847f).
 
-  > [!NOTE]
-  > Some software can't be removed from Safe Mode.
+   > [!NOTE]
+   > Some software can't be removed from Safe Mode.
 
 ## Common issues and solutions
 
