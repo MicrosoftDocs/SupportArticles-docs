@@ -183,7 +183,7 @@ The following table provides a comparison of the sector sizes reported by the op
 | `Not DAX capable` | `Not DAX capable` |
 | `Not Thinly-Provisioned` | `Not Thinly-Provisioned` |
   
-## More information
+## Related content
 
 - [SQL Server storage types for data files](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2019?view=sql-server-ver16&preserve-view=true#StorageTypes)
 - [KB3009974 - FIX: Slow synchronization when disks have different sector sizes for primary and secondary replica log files in SQL Server AG and Logshipping environments](https://support.microsoft.com/topic/kb3009974-fix-slow-synchronization-when-disks-have-different-sector-sizes-for-primary-and-secondary-replica-log-files-in-sql-server-ag-and-logshipping-environments-ed181bf3-ce80-b6d0-f268-34135711043c)
