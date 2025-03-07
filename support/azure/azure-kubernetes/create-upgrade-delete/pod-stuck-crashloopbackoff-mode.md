@@ -1,17 +1,32 @@
 ---
 title: Pod is stuck in CrashLoopBackOff mode
 description: Troubleshoot a scenario in which a pod is stuck in CrashLoopBackOff mode on an Azure Kubernetes Service (AKS) cluster.
-ms.date: 09/07/2023
+ms.date: 03/07/2025
 author: VikasPullagura-MSFT
 ms.author: vipullag
-editor: v-jsitser
-ms.reviewer: chiragpa, nickoman, cssakscic, v-leedennis
+editor: v-jsitser, addobres
+ms.reviewer: chiragpa, nickoman, cssakscic, v-leedennis, addobres
 ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
 # Pod is stuck in CrashLoopBackOff mode
 
-If a pod has a `CrashLoopBackOff` status, then the pod probably failed or exited unexpectedly, and the log contains an exit code that isn't zero. There are several possible reasons why your pod is stuck in `CrashLoopBackOff` mode. Consider the following options and their associated [kubectl](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands) commands.
+If a pod has a `CrashLoopBackOff` status, then the pod probably failed or exited unexpectedly, and the log contains an exit code that isn't zero. There are several possible reasons why your pod is stuck in `CrashLoopBackOff` mode. 
+
+Common Causes of `CrashLoopBackOff` error:
+
+1. **Application Failure**: The application inside the container crashes shortly after starting, often due to misconfigurations, missing dependencies, incorrect environment variables, etc.
+2. **Incorrect Resource Limits**: If the pod exceeds its CPU or memory resource limits, Kubernetes may kill the container. This can happen if resource requests or limits are set too low.
+3. **Missing or Misconfigured ConfigMaps/Secrets**: If the application relies on configuration files or environment variables stored in ConfigMaps or Secrets and they are missing or misconfigured, the application might crash.
+4. **Image Pull Issues**: If there is an issue with the image (e.g., corrupted, incorrect tag), the container may not start properly and fail repeatedly.
+5. **Init Containers Failing**: If the pod has init containers and one or more fail to run properly, it will cause the pod to restart.
+6. **Liveness/Readiness Probe Failures**: If liveness or readiness probes are misconfigured, Kubernetes may detect the container as unhealthy and restart it.
+7. **Application Dependencies Not Ready**: The application may depend on services that are not yet ready, such as databases, message queues, or other APIs.
+8. **Networking Issues**: Network misconfigurations can prevent the application from communicating with necessary services, causing it to fail.
+9. **Invalid Command or Arguments**: The container may be started with an invalid entrypoint, command, or arguments, leading to a crash.
+
+
+Consider the following options and their associated [kubectl](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands) commands.
 
 | Option | kubectl command |
 |--|--|
