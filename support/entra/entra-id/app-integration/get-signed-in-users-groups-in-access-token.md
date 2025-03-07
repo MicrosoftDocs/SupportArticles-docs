@@ -1,16 +1,16 @@
 ---
 title: Get signed in user groups from groups overage claim 
-description: Provides a sample project to introduce how to to get signed in user groups when groups overage claim is displayed for access tokens.
+description: Provides a sample project to introduce how to to get signed in user groups when groups overage claim is displayed in access tokens.
 ms.reviewer: v-weizhu
 ms.service: entra-id
 ms.date: 03/07/2025
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
-# How to get signed in user groups when groups overage claim is displayed for access tokens
+# How to get signed in user groups when groups overage claim is displayed in access tokens
 
 When you configure the `groups` claim in an access token for your application, Microsoft Entra ID has a maximum number of groups that can be returned in an access token. When the limit is exceeded, Azure provides a groups overage claim which is a URL that can be used to get the full groups list for the currently signed in user. This URL uses the Microsoft Graph endpoint. For more information about the `groups` claim, see [Access tokens in the Microsoft identity platform](/entra/identity-platform/access-tokens).
 
-This article introduces how to reproduce this scenario and get the actual user groups from the groups overage claim URL by using a sample project.
+This article introduces how to reproduce this scenario and get the actual user groups from the groups overage claim by using a sample project.
 
 > [!NOTE]
 > For JSON web tokens (JWT), Azure has a limit of 200 groups that can be present in the token. When requesting an access token for the resource that has the `groups` claim configured on it, if you are a member of more than 200 groups, you will get a groups overage claim URL instead of getting the actual groups.
@@ -23,7 +23,7 @@ If the application is a first party app (Microsoft App), you can't configure the
 
 ## Download the sample project
 
-Download the sample project [MSAL.Net_GroupOveragesClaim](https://github.com/RayGHeld/MSAL.Net_GroupOveragesClaim). It shows how to get the groups list from a groups overage claim URL.
+Download the sample project [MSAL.Net_GroupOveragesClaim](https://github.com/RayGHeld/MSAL.Net_GroupOveragesClaim). It shows how to get the groups list from a groups overage claim.
 
 ## Before running the sample project
 
@@ -78,9 +78,9 @@ Download the sample project [MSAL.Net_GroupOveragesClaim](https://github.com/Ray
     > Disconnect-AzureAD
     > ```
 
-## Get the full users groups list using groups overage claim URL
+## Get the full users groups list using groups overage claim
 
-1.	Run the sample application. 
+1.	Run the sample application.
 2.	Sign in to the application.
 
     Authentication occurs in a browser because the sample application is a .NET console application.
