@@ -2,10 +2,10 @@
 title: "Troubleshooting server-based authentication   | MicrosoftDocs"
 description: Troubleshooting server-based authentication
 author: Mattp123
-
 ms.component: pa-admin
-ms.topic: conceptual
-ms.date: 09/11/2020
+ms.date: 02/20/2025
+ms.reviewer: samarthg
+ms.custom: sap:Power Apps\Integrating other products in model-driven apps\Integrating SharePoint, OneDrive, or OneNote in model-driven apps 
 ms.author: matp
 search.audienceType: 
   - admin

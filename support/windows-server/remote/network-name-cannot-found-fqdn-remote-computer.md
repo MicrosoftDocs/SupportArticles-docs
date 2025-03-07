@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: markusr, kaushika
-ms.custom: sap:Remote Desktop Services and Terminal Services\Session connectivity, csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\session connectivity
+- pcy:WinComm User Experience
 ---
 # Error when you use the fully qualified domain name to connect to a remote computer from a Windows Server based computer: The network name cannot be found
 

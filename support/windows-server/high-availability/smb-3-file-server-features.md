@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, jeffhugh
-ms.custom: sap:Clustering and High Availability\Cannot failover a group, csstroubleshoot
+ms.custom:
+- sap:clustering and high availability\cannot failover a group
+- pcy:WinComm Storage High Avail
 ---
 # SMB 3.0 features in Windows Server file server
 

@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, arrenc
-ms.custom: sap:Active Directory\Active Directory Migration Tool (ADMT), csstroubleshoot
+ms.custom:
+- sap:active directory\active directory migration tool (admt)
+- pcy:WinComm Directory Services
 ---
 # Windows App cannot start after ADMT 3.2 security translation runs in Windows 8, Windows 8.1 and Windows 10
 

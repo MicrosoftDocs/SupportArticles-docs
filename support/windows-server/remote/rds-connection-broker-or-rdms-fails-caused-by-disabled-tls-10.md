@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, jerrycif
-ms.custom: sap:Remote Desktop Services and Terminal Services\Certificate management, csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\certificate management
+- pcy:WinComm User Experience
 ---
 # RDS Connection Broker or RDMS fails after you disable TLS 1.0 in Windows Server
 

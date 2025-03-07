@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, ANRATH, brianoakes, v-lianna
-ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot, ikb2lmc
+ms.custom:
+- sap:network connectivity and file sharing\dns
+- pcy:WinComm Networking
 ---
 # DNS zone transfer fails when using the "Only to servers listed in the Name servers tab" setting
 

@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, BOBQIN
-ms.custom: sap:Application Technologies and Compatibility\Windows Script Host (CScript or WScript), csstroubleshoot
+ms.custom:
+- sap:application technologies and compatibility\windows script host (cscript or wscript)
+- pcy:WinComm User Experience
 ---
 # How to run a logon script one time when a new user logs on in Windows Server 2003
 

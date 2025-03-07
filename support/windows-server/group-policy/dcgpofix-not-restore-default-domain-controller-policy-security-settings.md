@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: timtho, kaushika, sarymahmoud
-ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstroubleshoot
+ms.custom:
+- sap:group policy\group policy management (gpmc or gpedit)
+- pcy:WinComm Directory Services
 ---
 # The Dcgpofix tool doesn't restore security settings in the Default Domain Controller Policy to their original state
 

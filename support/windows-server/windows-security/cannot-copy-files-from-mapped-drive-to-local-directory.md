@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, jkuehler, pleblanc, arrenc
-ms.custom: sap:Windows Security Technologies\AD Object Permissions, access control, delegation, AdminSDHolder and auditing, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\ad object permissions,access control,delegation,adminsdholder and auditing
+- pcy:WinComm Directory Services
 ---
 # Copying files from a mapped drive to a local directory fails with error (Location is not available) if UAC is enabled
 

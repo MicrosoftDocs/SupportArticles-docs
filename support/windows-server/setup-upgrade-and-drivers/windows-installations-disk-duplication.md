@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, scottmca
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Deduplication, csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\deduplication
+- pcy:WinComm Storage High Avail
 ---
 # The Microsoft policy for disk duplication of Windows installations
 

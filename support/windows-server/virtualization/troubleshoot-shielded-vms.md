@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, dongill, inhenkel, v-lianna
-ms.custom: sap:Virtualization and Hyper-V\Shielded Virtual Machines, csstroubleshoot
+ms.custom:
+- sap:virtualization and hyper-v\shielded virtual machines
+- pcy:WinComm Storage High Avail
 ---
 # Troubleshoot shielded VMs
 

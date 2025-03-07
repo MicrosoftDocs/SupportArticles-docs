@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: herbertm, kaushika
-ms.custom: sap:Windows Security Technologies\Legacy authentication (NTLM), csstroubleshoot
+ms.custom:
+- sap:windows security technologies\legacy authentication (ntlm)
+- pcy:WinComm Directory Services
 ---
 # Audit event shows authentication package as NTLMv1 instead of NTLMv2
 

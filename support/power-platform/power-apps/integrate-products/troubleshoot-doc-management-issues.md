@@ -2,16 +2,14 @@
 title: "Troubleshooting SharePoint document management issues"
 description: "Learn how to troubleshoot document management issues based on error messages, including missing folders and documentation libraries."
 keywords: encrypt
-ms.date: 06/15/2020
-
-ms.custom: 
-ms.topic: article
+ms.date: 02/20/2025
+ms.reviewer: samarthg
+ms.custom: sap:Power Apps\Integrating other products in model-driven apps\Integrating SharePoint, OneDrive, or OneNote in model-driven apps 
 applies_to: 
   - PowerApps
 ms.assetid: 
 author: Mattp123
 ms.author: matp
-ms.reviewer: v-iapr
 ms.suite: 
 ms.tgt_pltfrm: 
 topic-status: Drafting
@@ -56,17 +54,17 @@ Error message displayed for missing document library:
 - Error message in Unified Interface:
 
   > [!div class="mx-imgBorder"]
-  > ![Error message in Unified Interface.](media/error-in-unified-interface.png)
+  > ![Example of the error message shown in Unified Interface.](media/error-in-unified-interface.png)
 
   *or*
 
   > [!div class="mx-imgBorder"]
-  > ![Error message in Unified Interface dialog.](media/error-in-unified-interface-dialog.png)
+  > ![The error message shown in Unified Interface dialog.](media/error-in-unified-interface-dialog.png)
 
 - Error message in the web client:
 
   > [!div class="mx-imgBorder"]
-  > ![Error message in web client.](media/error-in-web-client.png)
+  > ![The error message shown in web client.](media/error-in-web-client.png)
 
   *or*
 
@@ -95,7 +93,7 @@ This error typically occurs when the SharePoint document library was created for
 5.  The last step of wizard should have the status of document library as succeeded.
 
       > [!div class="mx-imgBorder"]
-      > ![Error message in web client.](media/doc-library-create-succeed.png)
+      > ![The error message displayed in web client.](media/doc-library-create-succeed.png)
 
 6.  Once complete, verify that document library is now present on the SharePoint site in the path shown in the error message.
 
@@ -130,12 +128,12 @@ Error message displayed for missing folder:
     *or*
 
     > [!div class="mx-imgBorder"]
-    > ![Error message in Unified Interface dialog.](media/missing-folder-error1-uic-dialog.png)
+    > ![The error message shown in web client dialog.](media/missing-folder-error1-uic-dialog.png)
 
     Log file:
 
     > [!div class="mx-imgBorder"]
-    > ![Error message in web client log file.](media/folder-error1-in-web-client-logfile.png)
+    > ![The error message shown in web client log file.](media/folder-error1-in-web-client-logfile.png)
 
 - Error message when the entity-based folder structure is enabled.
 
@@ -144,27 +142,27 @@ Error message displayed for missing folder:
   - Error message in Unified Interface:
 
     > [!div class="mx-imgBorder"]
-    > ![Error message in Unified Interface.](media/folder-error2-in-unified-interface.png)
+    > ![The error message shown in Unified Interface.](media/folder-error2-in-unified-interface.png)
 
     *or*
 
     > [!div class="mx-imgBorder"]
-    > ![Error message in Unified Interface.](media/folder-error2-in-unified-interface-dialog.png)
+    > ![The error message displayed in Unified Interface dialog.](media/folder-error2-in-unified-interface-dialog.png)
 
   - Error message in the web client:
 
     > [!div class="mx-imgBorder"]
-    > ![Error message in web client.](media/folder-error2-in-web-client.png)
+    > ![The error shown in web client.](media/folder-error2-in-web-client.png)
 
     *or*
 
     > [!div class="mx-imgBorder"]
-    > ![Error message in web client.](media/missing-folder-error1-uic-dialog.png)
+    > ![The error message displayed in web client dialog.](media/missing-folder-error1-uic-dialog.png)
 
     Log file:
 
     > [!div class="mx-imgBorder"]
-    > ![Error message in web client log file.](media/folder-error2-in-web-client-dialog-logfile.png)
+    > ![The error shown in web client log file.](media/folder-error2-in-web-client-dialog-logfile.png)
 
 ### Reason
 

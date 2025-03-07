@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, kakojima, kmasudo, kewaka, slight
-ms.custom: sap:Active Directory\AD Rights Management Service (Azure Information Protection only), csstroubleshoot
+ms.custom:
+- sap:active directory\ad rights management service (azure information protection only)
+- pcy:WinComm Directory Services
 ---
 # Event ID 84 occurs in Active Directory Rights Management Services (AD RMS) in Windows Server
 

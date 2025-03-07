@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:System Management Components\WinRM, including event forwarding and collections, csstroubleshoot
+ms.custom:
+- sap:system management components\winrm,including event forwarding and collections
+- pcy:WinComm User Experience
 ---
 # Events are not forwarded if the collector is running Windows Server
 

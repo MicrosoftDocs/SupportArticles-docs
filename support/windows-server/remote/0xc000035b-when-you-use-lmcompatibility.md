@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, Randym
-ms.custom: sap:Remote Desktop Services and Terminal Services\Authentication, csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\authentication
+- pcy:WinComm User Experience
 ---
 # Terminal Services client connection error 0xC000035B when you use LmCompatibility
 

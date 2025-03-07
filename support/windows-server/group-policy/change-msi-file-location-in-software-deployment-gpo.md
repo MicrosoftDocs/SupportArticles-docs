@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, anshg
-ms.custom: sap:Group Policy\Deploying software through Group Policy, csstroubleshoot
+ms.custom:
+- sap:group policy\deploying software through group policy
+- pcy:WinComm Directory Services
 ---
 # How to change the MSI file location in the Software Deployment GPO (Multiple UNC paths for same package)
 

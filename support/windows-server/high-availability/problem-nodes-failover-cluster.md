@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-lianna
-ms.custom: sap:Clustering and High Availability\Node removed from the cluster, csstroubleshoot
+ms.custom:
+- sap:clustering and high availability\node removed from the cluster
+- pcy:WinComm Storage High Avail
 ---
 # Having a problem with nodes being removed from active failover cluster membership
 

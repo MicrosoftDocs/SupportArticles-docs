@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Remote Desktop Services and Terminal Services\Redirection (not printer), csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\redirection (not printer)
+- pcy:WinComm User Experience
 ---
 # Copying files larger than 2 GB over a Remote Desktop Services or Terminal Services session by using Clipboard redirection (copy and paste) fails silently
 

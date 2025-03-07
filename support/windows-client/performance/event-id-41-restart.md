@@ -5,7 +5,7 @@ ms.date: 01/15/2025
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.custom:
-- sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot),csstroubleshooting,ci 111437"]
+- sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot)
 - pcy:WinComm Performance
 ms.reviewer: kaushika,dougeby
 audience: itpro

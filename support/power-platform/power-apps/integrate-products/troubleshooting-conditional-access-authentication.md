@@ -3,9 +3,9 @@ title: Troubleshooting conditional access in authentication
 description: Learn how to troubleshoot issues related to conditional access authentication for SharePoint and Dataverse.
 author: adrianorth
 ms.component: pa-admin
-ms.topic: conceptual
-ms.date: 01/22/2025
-reviewer: sericks
+ms.date: 02/20/2025
+ms.reviewer: aorth, sericks
+ms.custom: sap:Power Apps\Integrating other products in model-driven apps\Integrating SharePoint, OneDrive, or OneNote in model-driven apps 
 ms.author: aorth
 search.audienceType: 
   - admin

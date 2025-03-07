@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, iainfoulds, daveba, v-lianna
-ms.custom: sap:Active Directory\Domain or forest functional level updates, failures and Advisory, csstroubleshoot
+ms.custom:
+- sap:active directory\domain or forest functional level updates,failures and advisory
+- pcy:WinComm Directory Services
 ms.assetid: 5ab76733-804d-4f30-bee6-cb672ad5075a
 ---
 # Troubleshoot domain controller deployment

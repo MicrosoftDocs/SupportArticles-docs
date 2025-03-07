@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Containers\Management Of Containers, csstroubleshoot
+ms.custom:
+- sap:containers\management of containers
+- pcy:WinComm Storage High Avail
 ---
 # Support policy for Windows Server containers in on-premises scenarios
 

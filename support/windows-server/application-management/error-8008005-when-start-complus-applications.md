@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Application Technologies and Compatibility\DCOM service startup and permissions, csstroubleshoot
+ms.custom:
+- sap:application technologies and compatibility\dcom service startup and permissions
+- pcy:WinComm User Experience
 ---
 # Error when you start many COM+ applications: Error code 80080005 -- server execution failed
 

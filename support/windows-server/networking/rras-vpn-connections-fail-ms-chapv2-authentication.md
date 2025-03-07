@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, BrCaton
-ms.custom: sap:Network Connectivity and File Sharing\Remote access (VPN, RRAS, CMAK and AOVPN), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\remote access (vpn,rras,cmak and aovpn)
+- pcy:WinComm Networking
 ---
 # VPN connections fail when using MS-CHAPv2
 

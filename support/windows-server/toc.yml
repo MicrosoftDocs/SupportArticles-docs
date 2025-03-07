@@ -1915,8 +1915,6 @@ items:
       href: ./performance/system-shutdown-is-slow.md
     - name: System shutdown stops responding
       href: ./performance/system-shutdown-stops-responding-issues.md
-    - name: Use Userdump.exe to create a dump file
-      href: ./performance/use-userdump-create-dump-file.md
   - name: Slow Performance
     items:
     - name: 'Troubleshooting guidance: High CPU usage'
@@ -2587,6 +2585,8 @@ items:
       href: ./system-management-components/scheduled-task-not-run-upon-reboot-machine-off.md
     - name: Scheduled tasks reference incorrect user profile paths
       href: ./system-management-components/scheduled-tasks-reference-incorrect-user-profile.md
+    - name: Troubleshoot issues with scheduled tasks not running
+      href: ./system-management-components/troubleshoot-scheduled-tasks-not-running.md      
   - name: WinRM
     items:
     - name: Error 0x80090322 when connecting PowerShell to remote server via WinRM

@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, grcusanz, anpaul, v-lianna
-ms.custom: sap:Software Defined Networking\Internal Name Resolution for SDN, csstroubleshoot
+ms.custom:
+- sap:software defined networking\internal name resolution for sdn
+- pcy:WinComm Networking
 ms.assetid: 9be83ed2-9e62-49e8-88e7-f52d3449aac5
 ---
 # Troubleshoot the Windows Server software defined networking stack

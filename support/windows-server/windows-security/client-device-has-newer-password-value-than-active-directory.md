@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, herbertm
-ms.custom: sap:Windows Security\Netlogon, secure channel, DC locator, csstroubleshoot
+ms.custom:
+- sap:windows security\netlogon,secure channel,dc locator
+- pcy:WinComm Directory Services
 ---
 # Client device has a newer password value than Active Directory
 

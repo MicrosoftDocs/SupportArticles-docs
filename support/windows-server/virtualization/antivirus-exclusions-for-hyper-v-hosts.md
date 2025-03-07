@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Virtualization and Hyper-V\Installation and configuration of Hyper-V, csstroubleshoot
+ms.custom:
+- sap:virtualization and hyper-v\installation and configuration of hyper-v
+- pcy:WinComm Storage High Avail
 ---
 # Recommended antivirus exclusions for Hyper-V hosts
 

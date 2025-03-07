@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, luche
-ms.custom: sap:Network Connectivity and File Sharing\File Replication Technologies (FRS and DFSR), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\file replication technologies (frs and dfsr)
+- pcy:WinComm Networking
 ---
 # Information about Microsoft support policy for a DFS-R and DFS-N deployment scenario
 

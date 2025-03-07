@@ -1,7 +1,7 @@
 ---
 title: Could not change permissions using Azure Files
 description: Troubleshoot an error in which you could not change permissions when you use Azure Files in Azure Kubernetes Service (AKS).
-ms.date: 10/31/2024
+ms.date: 02/28/2025
 ms.reviewer: chiragpa, nickoman, v-leedennis
 ms.service: azure-kubernetes-service
 keywords:
@@ -19,6 +19,8 @@ When you run PostgreSQL on the Azure Files plug-in, you receive an error that re
 > initdb: could not change permissions of directory "/var/lib/postgresql/data": Operation not permitted
 >
 > fixing permissions on existing directory /var/lib/postgresql/data
+> 
+> Message: 'OSError while changing ownership of the log file. 'Arguments: PermissionError: [Errno 1] Operation not permitted
 
 ## Cause
 

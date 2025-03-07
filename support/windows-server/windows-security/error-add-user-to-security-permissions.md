@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: jlambert, kaushika
-ms.custom: sap:Windows Security Technologies\AD Object Permissions, access control, delegation, AdminSDHolder and auditing, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\ad object permissions,access control,delegation,adminsdholder and auditing
+- pcy:WinComm Directory Services
 ---
 # Maximum number of access control entries in the access control list
 

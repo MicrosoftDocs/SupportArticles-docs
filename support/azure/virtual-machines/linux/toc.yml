@@ -124,6 +124,9 @@
   items:
   - name: Can't restart after applying kernel changes
     href: kernel-related-boot-issues.md
+  - name: Troubleshoot LIS driver issues on Linux VMs
+    href: troubleshoot-lis-driver-issues-on-linux-vms.md
+
 - name: OS upgrades
   items:
   - name: Red Hat
@@ -181,7 +184,6 @@
     href: linux-no-boot-dracut.md
   - name: VM fails to boot due to incorrect HugePages configuration
     href: linux-vm-no-boot-incorrect-hugepages-configuration.md
-          
 
 - name: Cannot start or stop my VM
   items:
@@ -278,6 +280,8 @@
       href: troubleshoot-sbd-issues-rhel.md
     - name: Troubleshoot pacemaker cluster services and resources startup issues
       href: troubleshoot-rhel-pacemaker-cluster-services-resources-startup-issues.md
+    - name: Troubleshoot unexpected node reboots issues in RHEL
+      href: troubleshoot-unexpected-node-reboots-pacemaker-rhel.md
   - name: SLES
     items:
     - name: Troubleshoot Azure fence agent startup issues in SUSE

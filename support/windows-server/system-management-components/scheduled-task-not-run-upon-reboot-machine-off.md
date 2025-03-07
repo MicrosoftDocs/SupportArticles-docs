@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:System Management Components\Task Scheduler, csstroubleshoot
+ms.custom:
+- sap:system management components\task scheduler
+- pcy:WinComm User Experience
 ---
 # Scheduled task may not run upon reboot if the machine is off at the time of task
 

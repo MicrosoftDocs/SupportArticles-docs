@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, lindakup, jCaudill
-ms.custom: sap:Active Directory\Active Directory Domain Controller specific boot failures, csstroubleshoot
+ms.custom:
+- sap:active directory\active directory domain controller specific boot failures
+- pcy:WinComm Directory Services
 ---
 # ADWS service crashes after you upgrade
 

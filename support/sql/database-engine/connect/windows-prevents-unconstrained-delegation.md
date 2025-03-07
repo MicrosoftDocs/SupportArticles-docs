@@ -3,7 +3,7 @@ title: You can't use Kerberos unconstrained delegation in certain versions of Wi
 description: Provides a workaround for an issue where you can't use Kerberos unconstrained delegation in certain versions of Windows.
 ms.date: 01/16/2024
 ms.custom: sap:Database Connectivity and Authentication
-ms.reviewer: mastewa, jopilov, prmadhes, v-sidong
+ms.reviewer: jopilov, prmadhes, v-sidong
 ---
 # You can't use Kerberos unconstrained delegation in certain versions of Windows
 

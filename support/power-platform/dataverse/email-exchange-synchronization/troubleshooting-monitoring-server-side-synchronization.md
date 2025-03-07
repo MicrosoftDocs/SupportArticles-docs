@@ -2,12 +2,11 @@
 title: Troubleshooting and monitoring server-side synchronization
 description: Troubleshooting and monitoring server-side synchronization
 ms.component: pa-admin
-ms.topic: conceptual
-ms.date: 01/16/2025
+ms.date: 02/20/2025
 author: rahulmital 
-ms.subservice: admin
 ms.author: rahulmital 
-ms.reviewer: sericks
+ms.reviewer: rahulmital, sericks
+ms.custom: sap:Microsoft Dataverse\Email and Exchange Synchronization
 search.audienceType: 
   - admin
 ---

@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, kimnle
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Partition and volume management, csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\partition and volume management
+- pcy:WinComm Storage High Avail
 ---
 # You cannot select or format a hard disk partition when you try to install Windows
 
