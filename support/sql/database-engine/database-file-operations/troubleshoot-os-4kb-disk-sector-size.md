@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting operating system disk sector size greater than 4 KB
 description: This article troubleshoots SQL Server installation or startup failures related to some new storage devices and device drivers exposing a disk sector size greater than the supported 4-KB sector size.
-ms.date: 03/04/2025
+ms.date: 03/07/2025
 ms.custom: sap:File, Filegroup, Database Operations or Corruption
 ms.reviewer: dplessMSFT, briancarrig, suresh-kandoth, rdorr, jopilov
 author: WilliamDAssafMSFT
@@ -111,56 +111,52 @@ Additionally, be aware of the Windows support policy for file system and storage
 
 ## Resolutions
 
-- Currently, the `ForcedPhysicalSectorSizeInBytes` registry key is required to successfully install SQL Server when using modern storage platforms, such as NVMe, that provide a sector size larger than 4 KB. This Windows operating system registry key forces the sector size to be emulated as 4 KB. To add the `ForcedPhysicalSectorSizeInBytes` registry key, use the [Registry Editor](#registryeditor) or run commands as described in the [PowerShell as Administrator](#powershellasadmin) section. You must reboot the device after adding the registry key in order for this change to take effect. There is no need to add Trace Flag 1800 for this scenario.
+- Currently, the `ForcedPhysicalSectorSizeInBytes` registry key is required to successfully install SQL Server when using modern storage platforms, such as NVMe, that provide a sector size larger than 4 KB. This Windows operating system registry key forces the sector size to be emulated as 4 KB. To add the `ForcedPhysicalSectorSizeInBytes` registry key, use [Registry Editor](#registry-editortabregistry-editor) or run commands as described in the [Command Prompt](#command-prompttabcommand-prompt) or [PowerShell](#powershelltabpowershell) section. You must reboot the device after adding the registry key for this change to take effect. There is no need to add Trace Flag 1800 for this scenario.
   
-   > [!IMPORTANT]
-   > This section contains steps that tell you how to modify the Windows registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see the [How to back up and restore the registry in Windows](../../../windows-server/performance/windows-registry-advanced-users.md#back-up-the-registry) article.
+  > [!IMPORTANT]
+  > This section contains steps that tell you how to modify the Windows registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see the [How to back up and restore the registry in Windows](../../../windows-server/performance/windows-registry-advanced-users.md#back-up-the-registry) article.
   
-   #### [Registry editor](#tab/registry-editor)
+  #### [Registry Editor](#tab/registry-editor)
 
-    <a id="registryeditor"></a>
+  1. Run Registry Editor as an administrator.
+  1. Navigate to `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device`.
+  1. Select **Edit** > **New** > **Multi-String value** and name it as `ForcedPhysicalSectorSizeInBytes`.
+  1. Right click the name, select **Modify**, and type `* 4095` in the **Value data** field.
+  1. Select **OK** and close Registry Editor.
 
-    **Registry Editor**
-  
-    1. Navigate to `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device`.
-    1. On the **Edit** menu, point to **New**, and then select **Multi-String value**. Name it `ForcedPhysicalSectorSizeInBytes`.
-    1. Modify the new value, type in `* 4095`. Select **OK** and close the Registry editor.
+  #### [Command Prompt](#tab/command-prompt)
 
-   #### [Command prompt](#tab/command-prompt)
-  
-    <a id="commandpromptadmin"></a>**Command Prompt as Administrator**
+  1. Run Command Prompt as an administrator.
+  1. Run the following command to add the key:
 
-    1. Add the key.
-  
-       ```console
-       REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" /v "ForcedPhysicalSectorSizeInBytes" /t   REG_MULTI_SZ /d "* 4095" /f
-       ```
+     ```console
+     REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" /v "ForcedPhysicalSectorSizeInBytes" /t   REG_MULTI_SZ /d "* 4095" /f
+     ```
 
-    2. Validate if the key was added successfully.
+  1. Run the following command to validate if the key was added successfully:
 
-       ```console
-       REG QUERY "HKLM\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" /v "ForcedPhysicalSectorSizeInBytes"
-       ```
+     ```console
+     REG QUERY "HKLM\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" /v 
+     "ForcedPhysicalSectorSizeInBytes"
+     ```
 
-   #### [PowerShell](#tab/PowerShell)
-  
-    <a id="powershellasadmin"></a>**PowerShell as Administrator**
+  #### [PowerShell](#tab/PowerShell)
 
-    1. Add the key.
+  1. Run PowerShell as an administrator.
+  1. Run the following command to add the key:
 
-       ```Powershell
-       New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" -Name   "ForcedPhysicalSectorSizeInBytes" -PropertyType MultiString        -Force -Value "* 4095"
-       ```
+     ```Powershell
+     New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" -Name   "ForcedPhysicalSectorSizeInBytes" -PropertyType MultiString        -Force -Value "* 4095"
+     ```
 
-    2. Validate if the key was added successfully.
+  1. Run the following command to validate if the key was added successfully:
 
-       ```Powershell
-        Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" -Name   "ForcedPhysicalSectorSizeInBytes"
-       ```
+     ```Powershell
+     Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" -Name   "ForcedPhysicalSectorSizeInBytes"
+     ```
+  ---
 
-   ---
-
-- If you do not add the registry key, and if you have multiple drives on this system, you can specify a different location for the database files after installation of SQL Server is complete. Make sure that drive reflects a supported sector size when querying the `fsutil` commands. SQL Server currently supports sector storage sizes of 512 bytes and 4096 bytes.
+- If you don't add the registry key and you have multiple drives on this system, you can specify a different location for the database files after the installation of SQL Server is complete. Make sure that drive reflects a supported sector size when querying the `fsutil` commands. SQL Server currently supports sector storage sizes of 512 bytes and 4,096 bytes.
 
 ## More information
 
@@ -187,7 +183,7 @@ The following table provides a comparison of the sector sizes reported by the op
 | `Not DAX capable` | `Not DAX capable` |
 | `Not Thinly-Provisioned` | `Not Thinly-Provisioned` |
   
-## Related content
+## More information
 
 - [SQL Server storage types for data files](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2019?view=sql-server-ver16&preserve-view=true#StorageTypes)
 - [KB3009974 - FIX: Slow synchronization when disks have different sector sizes for primary and secondary replica log files in SQL Server AG and Logshipping environments](https://support.microsoft.com/topic/kb3009974-fix-slow-synchronization-when-disks-have-different-sector-sizes-for-primary-and-secondary-replica-log-files-in-sql-server-ag-and-logshipping-environments-ed181bf3-ce80-b6d0-f268-34135711043c)
