@@ -90,8 +90,8 @@
             href: create-and-use-apps/remove-an-unmanaged-layer-for-ribbon.md
           - name: Regenerate ribbon metadata
             href: create-and-use-apps/regenerate-ribbon-metadata.md
-      - name: Unified Interface
-        items:
+    - name: Unified Interface
+      items:
           - name: '"Blocked a frame with origin" error'
             href: create-and-use-apps/blocked-frame-with-origin-uci.md
           - name: Cookies or pop-up blocker errors
