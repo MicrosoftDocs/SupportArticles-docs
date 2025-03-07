@@ -4,7 +4,7 @@ description: Learn how to resolve a scenario in which a Windows activation water
 author: cwhitley-MSFT
 ms.author: cwhitley
 ms.reviewer: scotro, scottmca, kimberj, jdickson, shache, v-naqviadil, v-leedennis, v-weizhu
-ms.date: 03/06/2025
+ms.date: 03/07/2025
 ms.service: azure-virtual-machines
 ms.custom: sap:Cannot activate my Windows VM
 ms.topic: troubleshooting-problem-resolution
@@ -37,9 +37,11 @@ When you use an Azure virtual machine (VM) that runs Windows Server 2025/2022 Da
   ```console
   cscript c:\windows\system32\slmgr.vbs /dlv
   ```
-- When you restart or sign in to the VM, a pop-up window with a message like the following text is displayed:
+- When you restart or sign in to the VM, a pop-up window with one of the following messages is displayed:
 
-  > Your Windows Server 2022 Datacenter Azure Edition VM has been deactivated because you are not running on Azure or a supported Azure Stack hypervisor, or that you have not enabled Azure benefits on the supported Azure Stack. To enable Azure benefits, go to your cluster settings in Windows Admin Center > Enable Azure benefits.
+  - > Your Windows Server 2022 Datacenter Azure Edition VM has been deactivated because you are not running on Azure or a supported Azure Stack hypervisor, or that you have not enabled Azure benefits on the supported Azure Stack. To enable Azure benefits, go to your cluster settings in Windows Admin Center > Enable Azure benefits.
+
+  - > Your Windows Server 2025 Datacenter Azure Edition VM has been deactivated because you are not running on Azure or a supported Azure Stack hypervisor, or that you have not enabled Azure benefits on the supported Azure Stack. To enable Azure benefits, go to your cluster settings in Windows Admin Center > Enable Azure benefits.
 
 ## Cause 1: Azure Instance Metadata Service connection issue
 
