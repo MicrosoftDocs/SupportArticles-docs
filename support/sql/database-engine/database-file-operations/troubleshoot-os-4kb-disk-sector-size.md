@@ -111,12 +111,12 @@ Additionally, be aware of the Windows support policy for file system and storage
 
 ## Resolutions
 
-- Currently, the `ForcedPhysicalSectorSizeInBytes` registry key is required to successfully install SQL Server when using modern storage platforms, such as NVMe, that provide a sector size larger than 4 KB. This Windows operating system registry key forces the sector size to be emulated as 4 KB. To add the `ForcedPhysicalSectorSizeInBytes` registry key, use [Registry Editor](#registry-editortabregistry-editor) or run commands as described in the [Command Prompt](#command-prompttabcommand-prompt) or [PowerShell](#powershelltabpowershell) section. You must reboot the device after adding the registry key for this change to take effect. There is no need to add Trace Flag 1800 for this scenario.
+- Currently, the `ForcedPhysicalSectorSizeInBytes` registry key is required to successfully install SQL Server when using modern storage platforms, such as NVMe, that provide a sector size larger than 4 KB. This Windows operating system registry key forces the sector size to be emulated as 4 KB. To add the `ForcedPhysicalSectorSizeInBytes` registry key, use **Registry Editor** or run commands as described in the **Command Prompt** or **PowerShell** section. You must reboot the device after adding the registry key for this change to take effect. There is no need to add Trace Flag 1800 for this scenario.
   
   > [!IMPORTANT]
   > This section contains steps that tell you how to modify the Windows registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see the [How to back up and restore the registry in Windows](../../../windows-server/performance/windows-registry-advanced-users.md#back-up-the-registry) article.
   
-  #### [Registry Editor](#tab/registry-editor)
+  ### [Registry Editor](#tab/registry-editor)
 
   1. Run Registry Editor as an administrator.
   1. Navigate to `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device`.
@@ -124,7 +124,7 @@ Additionally, be aware of the Windows support policy for file system and storage
   1. Right click the name, select **Modify**, and type `* 4095` in the **Value data** field.
   1. Select **OK** and close Registry Editor.
 
-  #### [Command Prompt](#tab/command-prompt)
+  ### [Command Prompt](#tab/command-prompt)
 
   1. Run Command Prompt as an administrator.
   1. Run the following command to add the key:
@@ -140,7 +140,7 @@ Additionally, be aware of the Windows support policy for file system and storage
      "ForcedPhysicalSectorSizeInBytes"
      ```
 
-  #### [PowerShell](#tab/PowerShell)
+  ### [PowerShell](#tab/PowerShell)
 
   1. Run PowerShell as an administrator.
   1. Run the following command to add the key:
