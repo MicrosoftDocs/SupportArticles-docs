@@ -20,10 +20,10 @@
       href: create-and-use-apps/common-issues-and-resolutions.md
     - name: General Power Apps debugging strategies
       href: create-and-use-apps/isolate-common-issues.md
-    - name: Isolate issues in canvas apps
-      href: create-and-use-apps/isolate-canvas-app-issues.md
     - name: How to create a minimal repro canvas app
       href: create-and-use-apps/minimal-canvas-app-repro.md
+    - name: Isolate issues in canvas apps
+      href: create-and-use-apps/isolate-canvas-app-issues.md
     - name: Date and time issues in canvas apps
       href: create-and-use-apps/troubleshoot-canvas-app-date-time-issues.md
     - name: Custom pages and SDK script don't load
