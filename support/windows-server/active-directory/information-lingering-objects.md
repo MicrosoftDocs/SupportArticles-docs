@@ -211,7 +211,7 @@ To use PowerShell to increase the TSL, open an administrative PowerShell window,
 ```powershell
 $ADForestconfigurationNamingContext = (Get-ADRootDSE).configurationNamingContext
 
-Set-ADObject -Identity “CN=Directory Service,CN=Windows NT,CN=Services,$ADForestconfigurationNamingContext” -Partition $ADForestconfigurationNamingContext -Replace @{tombstonelifetime=’180′}
+Set-ADObject -Identity “CN=Directory Service,CN=Windows NT,CN=Services,$ADForestconfigurationNamingContext” -Partition $ADForestconfigurationNamingContext -Replace @{tombstonelifetime='180'}
 ```
 
 ADSI Edit is available on the **Tools** menu in Server Manager. To change the TSL, follow these steps:  
