@@ -29,8 +29,6 @@ Disconnects occurring without a consistent timing pattern are more likely caused
 
 On a Windows computer, when **MaxIdleTime** or **MaxConnectionTime** are configured, RDS sessions disconnect when conditions are met with distinct messages. Additional RDS session time limit policies determine the behavior after a session is disconnected.
 
-The two registry values locate at `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp`.
-
 | Configuration             | Set time limit for active but idle RDS sessions                                                           | Set time limit for active RDS sessions                                                                                                         |
 | :------------------------ | :-------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
 | Registry (Type:REG_DWORD) | MaxIdleTime                                                                                               | MaxConnectionTime                                                                                                                              |
@@ -42,9 +40,11 @@ You can use the following two methods to configure the above registry values.
 
 The default configuration for these session limits should be set at the **Collection** > **Properties tasks** > **Session** on the server that manages the RDS deployment. Usually, the server is the Remote Desktop Connection Broker. These settings are then applied to the registry of the Remote Desktop Session Hosts in that collection.
 
+The registry values locate at `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp`.
+
 > [!NOTE]
 >
-> - If users connect to the RDS Deployment through a Remote Desktop Gateway (RDGW), similar configuration can be done in **RDGW manager > Policies > Connection Authorization Policies > Timeouts tab**. Users that bypass the RDGW won't be affected.
+> - If you connect to the RDS Deployment through a Remote Desktop Gateway (RDGW), similar configuration can be done in **RDGW manager > Policies > Connection Authorization Policies > Timeouts tab**. Users that bypass the RDGW won't be affected.
 > - Session time-out has a distinct disconnect message compared to the message caused by the **MaxConnectionTime** setting: **The connection has been disconnected because the session timeout limit was reached.**
 
 ### Computer and User policies
@@ -56,6 +56,13 @@ Policy configurations are applied to the corresponding registry path:
 
 - Computer policy registry path: **HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services**
 - User policy registry path: **HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows NT\Terminal Services**
+
+> [!IMPORTANT]
+>
+> - Policies have precedence to default configurations.
+> - Computer policies have precedence to user policies.
+> - Registry values are expressed in miliseconds.
+> - For these configurations to apply, users must reconnect or logoff/logon.
 
 ## Verify if the session time-out is a Lock
 
