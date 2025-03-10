@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting operating system disk sector size greater than 4 KB
 description: This article troubleshoots SQL Server installation or startup failures related to some new storage devices and device drivers exposing a disk sector size greater than the supported 4-KB sector size.
-ms.date: 03/07/2025
+ms.date: 03/10/2025
 ms.custom: sap:File, Filegroup, Database Operations or Corruption
 ms.reviewer: dplessMSFT, briancarrig, suresh-kandoth, rdorr, jopilov
 author: WilliamDAssafMSFT
