@@ -1,8 +1,8 @@
 ---
 title: Get signed in user groups list from groups overage claim 
 description: Provides a sample project to introduce how to get signed in user groups list when groups overage claim is displayed in access tokens.
-ms.topic: How-To
-ms.reviewer: v-weizhu
+ms.topic: how-to
+ms.reviewer: daga, v-weizhu
 ms.service: entra-id
 ms.date: 03/10/2025
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
