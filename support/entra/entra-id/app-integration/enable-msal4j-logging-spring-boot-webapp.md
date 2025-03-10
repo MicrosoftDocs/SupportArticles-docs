@@ -13,9 +13,7 @@ This article provides step-by-step instructions on how to enable [Microsoft Auth
 
 ## Code sample
 
-The complete code sample and configuration guide for this implementation is available on [GitHub](https://github.com/bachoang/MSAL4J_SpringBoot_Logging/tree/main/msal-b2c-web-sample). 
-
-The sample uses Azure Active Directory B2C.
+The complete code sample and configuration guide for this implementation are available on [GitHub](https://github.com/bachoang/MSAL4J_SpringBoot_Logging/tree/main/msal-b2c-web-sample).
 
 ## Enable MSAL4J logging
 
@@ -29,7 +27,7 @@ The sample uses Azure Active Directory B2C.
     </dependency>
     ```
 
-2. In the **Resource** section of the Visual Studio or other IDE tool, create a new file named **logback.xml** in the **src/main/resources** folder and add the following content:
+2. In your app project, create a new file named **logback.xml** in the **src/main/resources** folder and add the following content:
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -43,10 +41,10 @@ The sample uses Azure Active Directory B2C.
             <appender-ref ref="STDOUT" />
         </root>
     </configuration>
-
-    This configuration (also known as Appender) logs messages to the console. You can adjust the logging level to `error`, `warn`, `info`, or `verbose` based on your preference. For more information, see [LogBack: Appenders](https://logback.qos.ch/manual/appenders.html)
     ```
-3. Set the logging.config property to the location of the logback.xml file before the main method:
+
+    This Appender configuration logs messages to the console. You can adjust the logging level to `error`, `warn`, `info`, or `verbose` based on your preference. For more information, see [LogBack: Appenders](https://logback.qos.ch/manual/appenders.html)
+3. Set the **logging.config** property to the location of the **logback.xml** file before the main method:
 
     ```java
     @SpringBootApplication
@@ -71,9 +69,9 @@ The code sample uses HTTP protocol. Follow [Configure the sample to use your Azu
 
 ### App registration configuration
 
-Follow these step to configure app registration in Azure AD B2C: 
+Follow these steps to configure app registration in Azure AD B2C: 
 
-1. Create two app registrations in your Azure AD B2C tenant: One for the web application. and the other for the web API.
+1. Create two app registrations in your Azure AD B2C tenant: One for the web application and the other for the web API.
 2. Expose the required scope in the web API. Refer to [this documentation](/azure/active-directory-b2c/configure-authentication-sample-web-app-with-api?tabs=visual-studio#step-22-configure-web-api-app-scopes) for guidance on exposing web API scopes.
 3. Configure the web API scope in the **API Permissions** blade for the web application.
 4. Grant admin consent to all configured permissions in the web application.
