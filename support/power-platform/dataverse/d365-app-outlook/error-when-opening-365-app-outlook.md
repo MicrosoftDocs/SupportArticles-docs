@@ -60,7 +60,7 @@ Verify your mailbox is enabled for server-side synchronization:
 
 ## More information
 
-fter the mailbox is successfully tested and enabled, and you have closed and reopened Outlook, this message continues to appear because the user is a member of multiple Dynamics 365 instances and the app might have been deployed from some other instance where the mailbox isn't tested and enabled.
+After the mailbox is successfully tested and enabled, and you have closed and reopened Outlook, this message continues to appear because the user is a member of multiple Dynamics 365 instances and the app might have been deployed from some other instance where the mailbox isn't tested and enabled.
 
 For example, your organization might have multiple Dynamics 365 instances, such as an instance for production (instance A) and another for testing (instance B). If you enable the mailbox for server-side synchronization in instance A, you still receive this message because the app was last deployed to this user's Exchange mailbox from instance B.
 
