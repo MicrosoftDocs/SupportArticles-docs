@@ -1779,16 +1779,10 @@ items:
     items:
     - name: 'Troubleshooting guidance: stop errors and unexpected restart'
       href: ./performance/troubleshoot-stop-errors-guidance.md
-    - name: Disable or enable Dr. Watson program
-      href: ./performance/disable-enable-dr-watson-program.md
     - name: Error 0x00000007B after you reconfigure hardware devices
       href: ./performance/inaccessible-boot-device-stop-error.md
     - name: Error 0x000000D1 when you enabled storage controller
       href: ./performance/bugcheck-run-stop-error-0x000000d1.md
-    - name: Error 0x00000019 when NTFS creates 8.3 formatted name
-      href: ./performance/stop-error-code-0x00000019.md
-    - name: Fail to access shared folder from applications
-      href: ./performance/accessing-shared-folder-from-application-fails.md
     - name: How to use Driver Verifier to identify issues
       href: ./performance/use-driver-verifier-to-identify-issues.md
     - name: Memory dump file options
@@ -1797,20 +1791,10 @@ items:
       href: ./performance/stop-code-driver-verifier-dma-violation.md
     - name: Stop error code 0x0000007F
       href: ./performance/stop-error-code-0x0000007F.md
-    - name: Stop Error "DRIVER_IRQL_NOT_LESS_OR_EQUAL"
-      href: ./performance/stop-error-driver-irql-not-less-or-equal.md
     - name: Stop error 7E on a server running NFS
       href: ./performance/stop-error-7e-nfs.md
-    - name: Stop error 0x109 on a VMWare virtual machine
-      href: ./performance/stop-error-0x109-on-VMWare-virtual-machine.md
     - name: Stop 7F, 0x00000008 (double-fault) error
       href: ./performance/stop-7f-0x00000008-double-fault-error.md
-    - name: '"Stop 0x0000000A" error for processor resumes from C1 idle state'
-      href: ./performance/stop-0x0000000a-error-processor-c1-idle-state.md
-    - name: Toggle Terminal Services to Application Server mode
-      href: ./performance/toggle-terminal-services-application-server-mode.md
-    - name: Troubleshoot the "STOP 0xC000021A" error
-      href: ./performance/troubleshoot-stop-0xc000021a-error.md
     - name: 'Troubleshoot stop errors: Best practices and dump configuration recommendations'
       href: ./performance/troubleshoot-stop-errors-best-practices-dump-configuration-recommendations.md
     - name: Troubleshoot unexpected reboots using system event logs
@@ -2148,7 +2132,7 @@ items:
     - name: Local Policy not permit to Log On Interactively
       href: ./remote/local-policy-not-permit-log-on-interactively.md
     - name: New user fails to log on through RDP
-      href: ./remote/not-enough-storage-available-to-process-command.md    
+      href: ./remote/not-enough-storage-available-to-process-command.md
     - name: Registry Size Limit (RSL) functionality is still be honored
       href: ./remote/honors-registry-size-limit-functionality-key-set.md
     - name: Remote Control prompts for user permission
@@ -2586,7 +2570,7 @@ items:
     - name: Scheduled tasks reference incorrect user profile paths
       href: ./system-management-components/scheduled-tasks-reference-incorrect-user-profile.md
     - name: Troubleshoot issues with scheduled tasks not running
-      href: ./system-management-components/troubleshoot-scheduled-tasks-not-running.md      
+      href: ./system-management-components/troubleshoot-scheduled-tasks-not-running.md
   - name: WinRM
     items:
     - name: Error 0x80090322 when connecting PowerShell to remote server via WinRM
