@@ -51,15 +51,18 @@ By default, Windows computers that are statically configured for TCP/IP try to d
 
 The primary full computer name is a fully qualified domain name (FQDN). Additionally, the primary full computer name is the primary DNS suffix of the computer that is appended to the computer name. To determine the primary DNS suffix of the computer and the computer name, right-click **My Computer**, click **Properties**, and then click **Computer Name**.
 
-DNS updates can be sent for any one of the following reasons or events:
+DNS updates can be triggered for any of the following reasons or events:
 
-- An IP address is added, removed, or modified in the TCP/IP properties configuration for any one of the installed network connections.
-- An IP address lease changes or renews any one of the installed network connections with the DHCP server. For example, this update occurs when the computer is started or when you use the `ipconfig /renew` command.
+- An IP address is added, removed, or modified in the TCP/IP properties of any installed network connection.
+- An IP address lease changes or renews for any installed network connection with the DHCP server. For example, this update occurs when the computer starts or when you use the `ipconfig /renew` command.
 - You use the `ipconfig /registerdns` command to manually force an update of the client name registration in DNS.
-- The computer is turned on.
+- The computer is powered on.
 - A member server is promoted to a domain controller.
 
-When one of these events triggers a DNS update, the DHCP Client service, not the DNS Client service, sends updates. If a change to the IP address information occurs because of DHCP, corresponding updates in DNS are performed to synchronize name-to-address mappings for the computer. The DHCP Client service performs this function for all network connections on the system. This includes connections that are not configured to use DHCP.
+When one of these events triggers a DNS update, the DNS Client service on Windows Vista/Windows Server 2008 or later versions sends the necessary updates to the DNS server. The DNS Client service is responsible for registering A (Address) and PTR (Pointer) records, which are used to map IP addresses to hostnames and vice versa.
+
+In the case of a domain controller, the Netlogon service is responsible for registering SRV (Service) records in DNS, which are crucial for locating domain services like authentication and directory services.
+
 
 > [!Note]
 >
