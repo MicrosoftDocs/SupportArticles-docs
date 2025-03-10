@@ -48,6 +48,30 @@
       href: dataverse-cds/cds-user-cannot-access-power-automate-business-process-flows-on-demand-workflows.md
 - name: Desktop flows
   items:
+    - name: UI automation
+      items:
+        - name: UI element highlighting or hovering issues in virtual desktops
+          href: desktop-flows/ui-automation/ui-rdp-automation/rdp-no-highlight.md
+        - name: SAP UI element click issue
+          href: desktop-flows/ui-automation/ui-sap-automation/sap-click-element-dpi.md
+    - name: Browser automation
+      items:
+        - name: Web automation fails when machine runtime and MSIX versions are different
+          href: desktop-flows/browser-automation/machine-runtime-msix-errors.md
+    - name: SAP automation
+      items:
+        - name: Can't open SAP
+          href: desktop-flows/sap-automation/scripting-permissions-launch-sap.md
+    - name: Office automation
+      items:
+        - name: Excel
+          items:
+            - name: Launch Excel action errors
+              href: desktop-flows/office-automation/excel/launch-excel-action-failures.md
+        - name: Outlook
+          items:
+            - name: Retrieve email messages from Outlook doesn't work as expected
+              href: desktop-flows/office-automation/outlook/retrieve-emails-filtering.md
     - name: A desktop application crashes due to UI automation
       href: desktop-flows/desktop-application-crashes-ui-automation.md
     - name: '"Could not read the application certificate" error when creating a connection'

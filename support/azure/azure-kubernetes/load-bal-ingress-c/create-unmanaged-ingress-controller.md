@@ -1,11 +1,11 @@
 ---
 title: Create an unmanaged ingress controller
 description: Learn how to create and configure an ingress controller in an Azure Kubernetes Service (AKS) cluster.
-ms.reviewer: allensu, v-rekhanain, v-weizhu
+ms.reviewer: allensu, v-rekhanain, jamielo, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Load balancer and Ingress controller
 ms.topic: how-to
-ms.date: 10/17/2024
+ms.date: 03/10/2025
 ---
 # Create an unmanaged ingress controller
 
@@ -574,7 +574,7 @@ Alternatively, a more granular approach is to delete the individual resources cr
 
 To configure TLS with your existing ingress components, see [Use TLS with an ingress controller](/previous-versions/azure/aks/ingress-tls).
 
-To configure your AKS cluster to use HTTP application routing, see [Enable the HTTP application routing add-on](/previous-versions/azure/aks/http-application-routing).
+To configure your AKS cluster to use application routing, see [Application routing add-on](/azure/aks/app-routing).
 
 This article included some external components to AKS. To learn more about these components, see the following project pages:
 
