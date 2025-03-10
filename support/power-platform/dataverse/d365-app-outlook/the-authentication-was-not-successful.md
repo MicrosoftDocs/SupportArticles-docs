@@ -2,7 +2,7 @@
 title: The authentication wasn't successful error
 description: Solves the authentication error that occurs when you try to use the Dynamics 365 App for Outlook in the Outlook desktop client.
 ms.reviewer: 
-ms.date: 03/06/2025
+ms.date: 03/10/2025
 ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
 # "Sorry, the authentication was not successful" error occurs in Dynamics 365 App for Outlook
@@ -25,7 +25,7 @@ When you try to use the [Dynamics 365 App for Outlook](/dynamics365/outlook-app/
 
 ### Resolution
 
-To sovle this issue, follow the steps introduced in ["Something went wrong during sign-in" error using Dynamics 365 App for Outlook](something-went-wrong-during-sign-in.md) to verify that all necessary URLs are in the same Internet Explorer security zone.
+To solve this issue, follow the steps introduced in ["Something went wrong during sign-in" error using Dynamics 365 App for Outlook](something-went-wrong-during-sign-in.md) to verify that all necessary URLs are in the same Internet Explorer security zone.
 
 ## Cause 2 - The LocalLow folder has an incorrect integrity level
 
@@ -33,13 +33,13 @@ The integrity level for the **LocalLow** folder should be set to low, as indicat
 
 ### Resolution
 
-To sovle this issue, run the following command in a command prompt:
+To solve this issue, run the following command in a command prompt:
 
 `icacls %userprofile%\Appdata\LocalLow /t /setintegritylevel (OI)(CI)L`
 
 ## Cause 3 - QuotaExceededError
 
-When you select the option to show more and you see the following error:  
+When you select the option to show more, you see the following error:  
 
 > Error: QuotaExceededError
 
