@@ -2,7 +2,7 @@
 title: Error When Opening 365 App for Outlook
 description: Solves the can't load this app error that occurs when you try to open the Dynamics 365 App for Outlook.
 ms.reviewer: 
-ms.date: 02/27/2025
+ms.date: 03/10/2025
 ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
 # "We can't load this app because your email account isn't configured with Dynamics 365 server-side sync" error
@@ -39,7 +39,7 @@ If you select **Show more**, you see the following error message:
 The Dynamics 365 App for Outlook requires [server-side synchronization](/power-platform/admin/set-up-server-side-synchronization-of-email-appointments-contacts-and-tasks) to be enabled for your mailbox. This error occurs when your mailbox in Dynamics 365 isn't enabled for synchronization of appointments, contacts, tasks, or incoming emails using server-side synchronization.
 
 > [!NOTE]
-> Your mailbox needs to have server-side synchronization configured correctly before the Dynamics 365 App for Outlook can be deployed to your mailbox. However, if the status of your mailbox in Dynamics 365 changes later to a failure status, you will receive this error until the mailbox is correctly configured and enabled again.
+> Your mailbox needs to have server-side synchronization configured correctly before the Dynamics 365 App for Outlook can be deployed to your mailbox. However, if the status of your mailbox in Dynamics 365 changes later to a failure status, you receive this error until the mailbox is correctly configured and enabled again.
 
 ## Resolution
 
@@ -60,9 +60,9 @@ Verify your mailbox is enabled for server-side synchronization:
 
 ## More information
 
-If this message continues to appear after the mailbox is successfully tested and enabled, and you have closed and reopened Outlook, it could be due to the user being a member of multiple Dynamics 365 instances and the app might have been deployed from some other instance where the mailbox isn't tested and enabled.
+fter the mailbox is successfully tested and enabled, and you have closed and reopened Outlook, this message continues to appear because the user is a member of multiple Dynamics 365 instances and the app might have been deployed from some other instance where the mailbox isn't tested and enabled.
 
-For example, your organization migth have multiple Dynamics 365 instances, such as an instance for production (Instance A) and another for testing (Instance B). If you enabled the mailbox for server-side synchronization in Instance A but still receive this message, it could be because the app was last deployed to this user's Exchange mailbox from Instance B.
+For example, your organization might have multiple Dynamics 365 instances, such as an instance for production (instance A) and another for testing (instance B). If you enable the mailbox for server-side synchronization in instance A, you still receive this message because the app was last deployed to this user's Exchange mailbox from instance B.
 
 To solve this issue:
 
