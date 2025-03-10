@@ -34,7 +34,7 @@ A member of a [Microsoft 365 group](https://support.microsoft.com/office/learn-a
 
 The issue applies to:
 
-- Microsoft 365 groups that are created by users
+- Microsoft 365 groups that users create
 - Microsoft 365 groups that are associated with Microsoft Teams
 
 ## Resolution
