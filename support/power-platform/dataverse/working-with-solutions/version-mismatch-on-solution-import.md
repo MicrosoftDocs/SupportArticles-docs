@@ -2,7 +2,7 @@
 title: Environment Version Mismatch During Solution Import in Power Apps
 description: Provides a workaround for a warning about environment version mismatch that occurs when you import a solution in the target environment in Microsoft Power Apps.
 ms.reviewer: matp
-ms.date: 03/06/2025
+ms.date: 03/10/2025
 author: swatimadhukargit
 ms.author: swatim
 ms.custom: sap:Working with Solutions\Environment version mistamch during solution import
@@ -21,7 +21,7 @@ When you try to import a solution in [Power Apps](https://make.powerapps.com/?ut
 
 ## Cause
 
-This issue may occur when the source environment, where the solution is developed, has a later (higher) [Dataverse version](/dynamics365/released-versions/microsoft-dataverse#latest-version-availability). This version might include components that the target environment, with an earlier (lower) Dataverse version, doesn't have. Consequently, the solution might depend on components that are available in the source environment but absent in the target environment, leading to missing dependencies.
+This issue might occur when the source environment, where the solution is developed, has a later (higher) [Dataverse version](/dynamics365/released-versions/microsoft-dataverse#latest-version-availability). This version might include components that the target environment, with an earlier (lower) Dataverse version, doesn't have. Consequently, the solution might depend on components that are available in the source environment but absent in the target environment, leading to missing dependencies.
 
 This issue can occur when you export a solution from an environment located in a region and import it into another region (which likely has an earlier Dataverse version.) For more information about the scenarios, see [Example](#example).
 
@@ -56,6 +56,6 @@ In this scenario, the source environment is at a lower station than the target e
 | Source| North America| Station 5|
 | Target| India| Station 2|
 
-In this scenario, the source environment is at a higher station than the target environment. This ensures the source environment has the same or lower Dataverse version than the target environment. In this case, the target environment will always have components present in the source environment and won't result in missing dependencies.
+In this scenario, the source environment is at a higher station than the target environment. This ensures the source environment has the same or lower Dataverse version than the target environment. In this case, the target environment always has components present in the source environment and doesn't result in missing dependencies.
 
 For more information about the environment deployment schedule for each region, see [Deployment schedule](/power-platform/admin/general-availability-deployment#deployment-schedule).
