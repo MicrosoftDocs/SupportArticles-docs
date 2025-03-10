@@ -10,14 +10,13 @@ ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 
 When you configure the `groups` claim in an access token for your application, Microsoft Entra ID has a maximum number of groups that can be returned in an access token. When the limit is exceeded, Azure provides a groups overage claim which is a URL that can be used to get the full groups list for the currently signed in user. This URL uses the Microsoft Graph endpoint. For more information about the `groups` claim, see [Access tokens in the Microsoft identity platform](/entra/identity-platform/access-tokens).
 
-This article introduces how to reproduce this scenario and get the actual user groups from the groups overage claim by using a sample project.
+For JSON web tokens (JWT), Azure has a limit of 200 groups that can be present in the token. When requesting an access token for the resource that has the `groups` claim configured on it, if you are a member of more than 200 groups, you will get a groups overage claim instead of getting the actual groups.
 
-> [!NOTE]
-> For JSON web tokens (JWT), Azure has a limit of 200 groups that can be present in the token. When requesting an access token for the resource that has the `groups` claim configured on it, if you are a member of more than 200 groups, you will get a groups overage claim URL instead of getting the actual groups.
+This article introduces how to get the actual user groups list from a groups overage claim by using a sample project.
 
-## Configure access tokens for the groups claim
+## Configure the groups claim for your application
 
-You can configure optional claims for your application to include the groups claim. For more information, see [Configure and manage optional claims in ID tokens, access tokens, and SAML tokens](/entra/identity-platform/optional-claims).
+You can configure the `groups` claim for your application by using the optional claims. For more information, see [Configure and manage optional claims in ID tokens, access tokens, and SAML tokens](/entra/identity-platform/optional-claims).
 
 If the application is a first party app (Microsoft App), you can't configure the `groups` claim. You only can configure this with your own app registration. If you want to configure the `groups` claim for a client application, you must configure it in an ID token.
 
@@ -87,7 +86,7 @@ Download the sample project [MSAL.Net_GroupOveragesClaim](https://github.com/Ray
 3.	After signing in, close the browser, and you'll return to the console application. 
 4.	After the access token is presented in the console window, copy the access token to the clipboard and paste it at https://jwt.ms to view the encoded token. It's just a user token. 
 
-    If the user is a member of too many groups, the console window will display the original group overage URL and the new group overage URL for that token. The new group overage URL will be used in the .NET HTTP client request rather than the Graph .NET SDK request.
+    If the user is a member of too many groups, the console window will display the original group overage claim and the new group overage claim for that token. The new group overage claim will be used in the .NET HTTP client request rather than the Graph .NET SDK request.
 
     :::image type="content" source="media/get-signed-in-users-groups-in-access-token/select-method-to-get-groups.png" alt-text="Screenshot of the methods be used to get the full list of the user groups." lightbox="media/get-signed-in-users-groups-in-access-token/select-method-to-get-groups.png"  border="false":::
 
