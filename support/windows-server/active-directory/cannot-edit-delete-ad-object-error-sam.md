@@ -10,7 +10,7 @@ ms.custom:
 - sap:active directory\user,computer,group,and object management
 - pcy:WinComm Directory Services
 ---
-# Can't edit or delete an AD object and receive error "attribute is owned by the Security Accounts Manager (SAM)" or "The specified account does not exist"
+# Can't edit or delete an AD object and receive the error "attribute is owned by the Security Accounts Manager (SAM)" or "The specified account does not exist"
 
 This article helps resolve an issue in which you can't edit or delete an Active Directory (AD) object and receive the error "attribute is owned by the Security Accounts Manager (SAM)" or "The specified account does not exist."
 
