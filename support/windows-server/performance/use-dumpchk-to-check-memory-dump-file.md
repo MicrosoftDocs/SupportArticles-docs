@@ -1,7 +1,7 @@
 ---
 title: Use Dumpchk.exe to check memory dump file
 description: Describes how to check a memory dump file by using Dumpchk.
-ms.date: 01/15/2025
+ms.date: 03/10/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -16,112 +16,31 @@ This article describes how to check a memory dump file by using Dumpchk.
 
 _Original KB number:_ &nbsp; 156280
 
-> [!NOTE]
-> For a Microsoft Windows XP version of this article, see [315271](https://support.microsoft.com/help/315271).  
-
 ## Summary
 
-Dumpchk is a command-line utility you can use to verify that a memory dump file has been created correctly. Dumpchk does not require access to symbols.
+Dumpchk is a command-line utility you can use to verify that a memory dump file was created correctly. If a memory dump file is corrupt, it can't be analyzed in a debugger. Using Dumpchk to verify a dump file is in a good state is helpful. It saves time and effort in uploading corrupt dump files to be analyzed by support professionals. Dumpchk doesn't require access to symbols.
 
-Dumpchk is located in the following locations:
+Dumpchk is part of the Windows Debugging Tools. There are two versions of the Windows Debugger. To use Dumpchk, you must install the version of the Windows Debugging Tools included in the [Windows SDK](https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/):
 
-- Windows NT 4.0 CD-ROM: Support\Debug\\\<Platform>\Dumpchk.exe
+1. Download the SDK installer.
+2. Launch the installer, and then select **Windows Debugging Tools** with other components that you would like to install.
+3. After the installation completes, dumchk.exe is in the directory that you installed the Windows Debugging in. Use the version that matches your hardware platform.
 
-- Windows 2000 CD-ROM: Install the Support Tools by running Setup.exe from the Support\Tools folder on the CD-ROM. By default, Dumpchk.exe is installed to the Program Files\Support Tools folder.
+When Dumpchk runs, it displays some basic information from the memory dump file, then verifies all the virtual and physical addresses in the file. There are many symbol errors if a symbol path isn't specified. Those errors can be ignored as we're checking the dump file for corruption. Dumpchk reports any errors that are found in the memory dump file.
 
-## Dumpchk command-line switches
+If there's an error during any portion of the output displayed, the dump file is corrupted, and analysis can't be performed.
 
-Dumpchk has the following command-line switches:
-
-DUMPCHK [options] \<CrashDumpFile>
-
-- -? Display the command syntax.
-
-- -p Prints the header only (with no validation).
-
-- -v Specifies verbose mode.
-
-- -q Performs a quick test. Not available in the Windows 2000.
-
-Additional switches that are only available in Windows 2000 Dumpchk.exe version:
-
-- -c Do dump validation.
-
-- -x Extra file validation. Takes several minutes.
-
-- -e Do dump exam.
-
-- -y \<Path> Set the symbol search path for dump exam.
-  - If the symbol search path is empty, the CD-ROM
-  - is used for symbols.
-
-- -b \<Path> Set the image search path for dump exam.
-  - If the symbol search path is empty, \<SystemRoot>\system32
-  - is used for symbols.
-
-- -k \<File> Set the name of the kernel to File.
-
-- -h \<File> Set the name of the hal to File.
-
-Dumpchk displays some basic information from the memory dump file, then verifies all the virtual and physical addresses in the file. If any errors are found in the memory dump file, Dumpchk reports them. The following is an example of the output of a Dumpchk command:
+When Dumpchk finishes, it displays the stop code and some parameters.
 
 ```output
-Filename . . . . . . .memory.dmp  
-Signature. . . . . . .PAGE  
-ValidDump. . . . . . .DUMP  
-MajorVersion . . . . .free system  
-MinorVersion . . . . .1057  
-DirectoryTableBase . .0x00030000  
-PfnDataBase. . . . . .0xffbae000  
-PsLoadedModuleList . .0x801463d0  
-PsActiveProcessHead. .0x801462c8  
-MachineImageType . . .i386  
-NumberProcessors . . .1  
-BugCheckCode . . . . .0xc000021a  
-BugCheckParameter1 . .0xe131d948  
-BugCheckParameter2 . .0x00000000  
-BugCheckParameter3 . .0x00000000  
-BugCheckParameter4 . .0x00000000  
-
-ExceptionCode. . . . .0x80000003  
-ExceptionFlags . . . .0x00000001  
-ExceptionAddress . . .0x80146e1c  
-
-NumberOfRuns . . . . .0x3  
-NumberOfPages. . . . .0x1f5e  
-Run #1  
-BasePage . . . . . .0x1  
-PageCount. . . . . .0x9e  
-Run #2  
-BasePage . . . . . .0x100  
-PageCount. . . . . .0xec0  
-Run #3  
-BasePage . . . . . .0x1000  
-PageCount. . . . . .0x1000  
-
-**************--> Validating the integrity of the PsLoadedModuleList  
-**************--> Performing a complete check (^C to end)  
-**************--> Validating all physical addresses  
-**************--> Validating all virtual addresses  
-**************--> This dump file is good!
+BUGCHECK_CODE:  1e  
+BUGCHECK_P1: ffffffffc0000420
+BUGCHECK_P2: fffff8004dbab02a
+BUGCHECK_P3: 0  BUGCHECK_P4: fffff8003a6d5f20
+SYMBOL_NAME:  nt_symbols!72291DF0104D000
+PROCESS_NAME:  ntoskrnl.exe
+IMAGE_NAME:  ntoskrnl.exe
+MODULE_NAME: <Module Name>
+FAILURE_BUCKET_ID:  <Bucket Id>
+FAILURE_ID_HASH:  {029f6661-9c67-6d47-23e5-a0398183d06e}
 ```
-
-If there is an error during any portion of the output displayed above, the dump file is corrupted and analysis cannot be performed.
-
-In this example, the most important information (from a debugging standpoint) is the following:
-
-```output
-MajorVersion . . . . .free system  
-MinorVersion . . . . .1057  
-MachineImageType . . .i386  
-NumberProcessors . . .1  
-BugCheckCode . . . . .0xc000021a  
-BugCheckParameter1 . .0xe131d948  
-BugCheckParameter2 . .0x00000000  
-BugCheckParameter3 . .0x00000000  
-BugCheckParameter4 . .0x00000000
-```
-
-This information can be used to determine what Kernel STOP Error occurred and, to a certain extent, what version of Windows was in use.
-
-The information in this article is from the Windows NT Resource Kit. For more information on Dumpchk.exe and other debugging utilities, see Appendix A in the Windows NT 3.51 Resource Kit Update and Update 2.
