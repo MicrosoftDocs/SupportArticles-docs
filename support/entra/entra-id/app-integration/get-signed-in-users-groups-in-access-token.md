@@ -1,12 +1,13 @@
 ---
-title: Get signed in user groups from groups overage claim 
-description: Provides a sample project to introduce how to to get signed in user groups when groups overage claim is displayed in access tokens.
+title: Get signed in user groups list from groups overage claim 
+description: Provides a sample project to introduce how to get signed in user groups list when groups overage claim is displayed in access tokens.
+ms.topic: How-To
 ms.reviewer: v-weizhu
 ms.service: entra-id
-ms.date: 03/07/2025
+ms.date: 03/10/2025
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
-# How to get signed in user groups when groups overage claim is displayed in access tokens
+# How to get signed in user groups list when groups overage claim is displayed in access tokens
 
 When you configure the `groups` claim in an access token for your application, Microsoft Entra ID has a maximum number of groups that can be returned in an access token. When the limit is exceeded, Azure provides a groups overage claim which is a URL that can be used to get the full groups list for the currently signed in user. This URL uses the Microsoft Graph endpoint. For more information about the `groups` claim, see [Access tokens in the Microsoft identity platform](/entra/identity-platform/access-tokens).
 
@@ -101,9 +102,10 @@ Download the sample project [MSAL.Net_GroupOveragesClaim](https://github.com/Ray
 
 ## About the code
 
-### Get_GroupsOverageClaimURL
+### Get_GroupsOverageClaimURL method
 
-The sample application uses MSAL.NET (`Microsoft.Identity.Client`) to authenticate users and obtain access tokens. `System.Net.Http` is used for the HTTP client and Microsoft.Graph SDK is used for the graph client. To parse the JSON file, `System.Text.Json` is used. To get the claims from the token, `System.IdentityModel.Tokens.Jwt` is used. The `JwtSecurityToken` provider is used to retrieve the groups overage claim in the token.
+The sample project uses MSAL.NET (`Microsoft.Identity.Client`) to authenticate users and obtain access tokens. `System.Net.Http` is used for the HTTP client and Microsoft.Graph SDK is used for the graph client. To parse the JSON file, `System.Text.Json` is used. To get the claims from the token, `System.IdentityModel.Tokens.Jwt` is used. The `JwtSecurityToken` provider is used to retrieve the groups overage claim in the token.
+
 If the token contains the claims `claim_names` and `claim_sources`, then it indicates the presence of a group overages claim within the token. In this case, use the user ID (oid) and the two claims to construct the URL for the groups list and output the original value in the console windows. If either of the two claim values doesn't exist, the `try/catch` block will handle the error and return a `string.empty` value. This indicates that there is no groups overage claim in the token.
 
 ```csharp
@@ -146,9 +148,10 @@ If the token contains the claims `claim_names` and `claim_sources`, then it indi
         }
 ```
 
-### Program.cs
+### Program.cs file
 
 In this file, there is a public client application configuration for user sign-in and getting access tokens, and a confidential client application for application sign-in and getting access tokens (the client credentials grant flow). `ManualTokenProvider` is used for the Graph Service Client to pass an access token to the service instead of having Graph obtain it.
+
 There is also an *appsettings.json* file and a class to store those settings (*AzureConfig.cs*) at runtime. The public static property `AzureSettings` retrieves settings from the configuration file using a configuration builder, similar to ASP.NET Core applications. This feature must be added as it's not native to a console application.
 
 ```csharp
@@ -175,7 +178,7 @@ static AzureConfig _config = null;
 		}
 ```
 
-### ManualTokenProvider.cs
+### Authentication provider
 
 For the `Authentication` provider for the Graph service client, the sample project uses a custom manual token provider to set the access token for the client it already obtains access tokens using MSAL.
 
@@ -209,9 +212,9 @@ namespace MSAL.Net_GroupOveragesClaim.Authentication
 }
 ```
 
-### Get_Groups_HTTP_Method in Program.cs
+### Get_Groups_HTTP_Method
 
-The HTTP method has 2 parts, the method `Get_Groups_Http_Method` will call `Graph_Request_viaHTTP` to get the list of groups and then displays that list in the console window.
+This `Get_Groups_HTTP_Method` method will call the `Graph_Request_viaHTTP` method to get the list of groups and then displays that list in the console window.
 
 ```csharp
 /// <summary>
@@ -317,7 +320,7 @@ The HTTP method has 2 parts, the method `Get_Groups_Http_Method` will call `Grap
         }
 ```
 
-### Get_Groups_GraphSDK_Method in Program.cs
+### Get_Groups_GraphSDK_Method
 
 In a similar fashion, the Graph SDK has an entry method `Get_Groups_GraphSDK_Method`. This method will call `Get_GroupList_GraphSDK` to get the list of groups and then display it in the console window.
 
@@ -339,9 +342,9 @@ In a similar fashion, the Graph SDK has an entry method `Get_Groups_GraphSDK_Met
 		}
 ```
 
-### Get_GroupList_GraphSDK method in Program.cs
+### Get_GroupList_GraphSDK method
 
-Determine whether to use the `me` endpoint or the `users` endpoint to get the group list. If you use the client credentials grant flow to get the access token for Microsoft Graph, use the `users` endpoint. If not (for example, a delegated flow is used for the access token ), use the `users` endpoint.
+This method determines whether to use the `me` endpoint or the `users` endpoint to get the group list. If you use the client credentials grant flow to get the access token for Microsoft Graph, use the `users` endpoint. If not (for example, a delegated flow is used for the access token), use the `users` endpoint. Regardless of the method used, the code will handle paging because by default, only 100 records per page will be returned. Paging is determined via the `@odata.nextLink` value. If there is a value for that property, the full URL is called for the next page of data. For more information about paging, see [Paging Microsoft Graph data in your app](/graph/paging).
 
 ```csharp
 /// <summary>
@@ -415,5 +418,5 @@ Determine whether to use the `me` endpoint or the `users` endpoint to get the gr
 
 		}
 ```
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
-Regardless of the method used, the code will handle paging because by default, only 100 records per page will be returned. Paging is determined via the `@odata.nextLink` value. If there is a value for that property, the full URL is called for the next page of data. For more information about paging, see [Paging Microsoft Graph data in your app](/graph/paging).
