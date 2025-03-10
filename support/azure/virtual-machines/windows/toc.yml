@@ -407,7 +407,7 @@
       href: ../../../windows-server/deployment/error-0xc004f06c-activate-windows.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error 0xC004F074
       href: windows-vm-activation-error-0xc004f074.md
-    - name: Windows activation watermark continues to be displayed
+    - name: Activation watermark continues to be displayed
       href: activation-watermark-appears.md
   - name: KMS endpoints - new endpoints
     href: windows-activation-stopped-working.md
