@@ -142,3 +142,7 @@ items:
     - name: Advanced troubleshooting steps
       href: azure-monitor-agent/ama-windows-installation-issues-advanced-troubleshooting-steps.md
 
+- name: Diagnostic Settings
+  items:
+  - name: Deleted Event Hub is recreated
+    href: diagnostic-settings/data-flow/deleted-event-hub-automatically-recreated.md
