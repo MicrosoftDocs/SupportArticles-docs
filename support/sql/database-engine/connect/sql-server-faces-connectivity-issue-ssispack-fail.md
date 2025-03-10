@@ -14,7 +14,7 @@ This article provides a resolution to a connectivity issue in which SQL Server I
 
 ## Symptoms
 
-When you try to run SSIS packages under a SQL Agent job, the packages don't run, and you receive the following error messages:
+When you try to run SSIS packages as a SQL Agent job, the packages don't run, and you receive the following error messages:
 
 > An OLE DB record is available. Source "Microsoft OLE DB Driver for SQL Server" Hresult. 0x80004005 Description "Protocol error in TDS stream".
 
