@@ -375,6 +375,8 @@
           href: ../groups-and-distribution-lists/inconsistent-performance-with-contacts.md
         - name: Mail-enabled groups aren't synced to O365
           href: ../groups-and-distribution-lists/mail-enabled-groups-not-synchronized.md
+        - name: Microsoft 365 group doesn't appear in Outlook
+          href: ../groups-and-distribution-lists/microsoft-365-group-doesn't-appear-in-outlook.md
         - name: Prevent users from creating and managing group
           href: ../groups-and-distribution-lists/prevent-users-create-manage-dg.md
         - name: Problem adding a guest user to a Microsoft 365 group
