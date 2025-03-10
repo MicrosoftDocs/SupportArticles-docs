@@ -65,13 +65,22 @@ The sample uses Azure Active Directory B2C.
 
 ## Configuration for running the code sample
 
-### HTTP support
+### Enable HTTPs support
 
 The code sample uses HTTP protocol. Follow [Configure the sample to use your Azure AD B2C tenant](https://github.com/bachoang/MSAL4J_SpringBoot_Logging/tree/main/msal-b2c-web-sample#step-2--configure-the-sample-to-use-your-azure-ad-b2c-tenant) to generate a self-signed certificate and place the **keystore.p12** file in the resources folder.
 
-### App registration
+### App registration configuration
 
-Make sure you have 2 different app registrations in your Azure AD B2C tenant. One for the web app and one for the web API. Expose the scope in the web API (refer to this documentation if you are not familiar with how to expose web API scope) and configure the web API scope in the ‘API Permission’ blade for the web app. You should also grant admin consent to all the configured permission in the web app. You can also follow this tutorial for app registrations covered in this blog. Below is the example:
+Follow these step to configure app registration in Azure AD B2C: 
+
+1. Create two app registrations in your Azure AD B2C tenant: One for the web application. and the other for the web API.
+2. Expose the required scope in the web API. Refer to [this documentation](/azure/active-directory-b2c/configure-authentication-sample-web-app-with-api?tabs=visual-studio#step-22-configure-web-api-app-scopes) for guidance on exposing web API scopes.
+3. Configure the web API scope in the **API Permissions** blade for the web application.
+4. Grant admin consent to all configured permissions in the web application.
+
+For more information, see [Configure authentication in a sample web app that calls a web API by using Azure AD B2C](/azure/active-directory-b2c/configure-authentication-sample-web-app-with-api).
+
+Example configuration:
 
  :::image type="content" source="media/enable-msal4j-logging-spring-boot-webapp/app-reg.png" alt-text="Diagram that shows configured app registration." border="true" lightbox="media/enable-msal4j-logging-spring-boot-webapp/app-reg.png":::
 
