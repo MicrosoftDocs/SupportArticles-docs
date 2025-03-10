@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, rolandw
-ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
+ms.custom:
+- sap:active directory\user,computer,group,and object management
+- pcy:WinComm Directory Services
 ---
 # NET.EXE /ADD command does not support names longer than 20 characters
 

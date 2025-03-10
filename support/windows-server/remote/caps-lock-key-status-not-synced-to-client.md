@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Remote Desktop Services and Terminal Services\Redirection (not printer), csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\redirection (not printer)
+- pcy:WinComm User Experience
 ---
 # Caps Lock key unexpectedly inverts characters in a remote desktop session to a Windows Server 2012-based computer
 

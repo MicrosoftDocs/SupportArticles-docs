@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, anrath, joshj, v-lianna
-ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot, ikb2lmc
+ms.custom:
+- sap:network connectivity and file sharing\dns
+- pcy:WinComm Networking
 ---
 # DNS scavenging setup
 

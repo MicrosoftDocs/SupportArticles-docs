@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Security Technologies\Kerberos authentication, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\kerberos authentication
+- pcy:WinComm Directory Services
 ---
 # Resource SID Compression in Windows Server 2012 may cause Authorization problems on devices that don't support Resource SID compression
 

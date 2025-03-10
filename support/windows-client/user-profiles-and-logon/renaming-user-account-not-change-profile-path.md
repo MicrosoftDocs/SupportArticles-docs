@@ -7,7 +7,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:User Logon and Profiles\User profiles, csstroubleshoot
+ms.custom:
+- sap:user logon and profiles\user profiles
+- pcy:WinComm Directory Services
 ---
 # Renaming a user account doesn't automatically change the profile path
 

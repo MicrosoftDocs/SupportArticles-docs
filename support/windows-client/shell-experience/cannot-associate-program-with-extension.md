@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, danma
-ms.custom: sap:Windows Desktop and Shell Experience\File Associations, csstroubleshoot
+ms.custom:
+- sap:windows desktop and shell experience\file associations
+- pcy:WinComm User Experience
 ---
 # Sometimes you cannot associate a program with an extension in Windows 7
 

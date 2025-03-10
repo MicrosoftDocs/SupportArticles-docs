@@ -2,6 +2,8 @@
   href: ./cs0433-error-when-building-aspnet-project.md
 - name: C2491 error when you define data members as dllimport
   href: ./c2491-define-data-member-dllimport.md
+- name: Call Run() method of a Script control
+  href: ./call-script-control-run-method.md
 - name: CDatabase::GetConnect returns empty string
   href: ./cdatabase-getconnect-returnn-empty.md
 - name: Create a Database programmatically by using ADO.NET
@@ -24,6 +26,8 @@
   href: ./troubleshoot-visual-c-compile-linker.md
 - name: Unnested loops cause C1061 compiler error
   href: ./unnested-loops-cause-c1061-error.md
+- name: Use string arrays
+  href: ./use-string-arrays.md
 - name: Use try-catch-finally to catch exceptions
   href: ./catch-exceptions.md
 - name: Warnings when you build managed extensions

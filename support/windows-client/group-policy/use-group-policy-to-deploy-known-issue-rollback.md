@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-tappelgate
-ms.custom: sap:Group Policy\Problems applying Group Policy, csstroubleshoot
+ms.custom:
+- sap:group policy\problems applying group policy
+- pcy:WinComm Directory Services
 keywords: Windows Update, known issue, kir, group policy, rollback
 ---
 

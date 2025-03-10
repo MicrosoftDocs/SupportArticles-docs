@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, herbertm
-ms.custom: sap:Windows Security Technologies\Kerberos authentication, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\kerberos authentication
+- pcy:WinComm Directory Services
 ---
 # KDC_ERR_C_PRINCIPAL_UNKNOWN Returned in S4U2Self Request
 

@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: akhleshs, kaushika
-ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Certificate Enrollment Technologies (Auto Enrollment, NDES, CWE, CEP, CES), csstroubleshoot
+ms.custom:
+- sap:certificates and public key infrastructure (pki)\certificate enrollment technologies (auto enrollment,ndes,cwe,cep,ces)
+- pcy:WinComm Directory Services
 ---
 # Not able to request certificate using web enrollment
 

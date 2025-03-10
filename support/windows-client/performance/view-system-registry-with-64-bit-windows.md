@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, MBIAS
-ms.custom: sap:System Performance\System Configuration (page file, startup or running apps, error handling), csstroubleshoot
+ms.custom:
+- sap:system performance\system configuration (page file,startup or running apps,error handling)
+- pcy:WinComm Performance
 ---
 # View the system registry by using 64-bit versions of Windows
 

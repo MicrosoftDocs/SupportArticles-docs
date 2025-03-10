@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, jdickson
-ms.custom: sap:Print, Fax, and Scan\Print Configuration or Management, csstroubleshoot
+ms.custom:
+- sap:print,fax,and scan\print configuration or management
+- pcy:WinComm User Experience
 ---
 # Printers installed using the same driver and port on Windows are grouped as one when viewed within Devices and Printers
 

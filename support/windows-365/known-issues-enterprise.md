@@ -255,22 +255,6 @@ For newly provisioned Cloud PCs, verify that WebRTC is available. If it's not, y
 
 The following are issues for Windows 365 Frontline:
 
-### Reprovision action doesn't apply on devices that don't have a configuration change
-
-For Frontline in shared mode Cloud PCs, the reprovision action won't begin unless a change has been made to the provisioning policy image.
-
-### Workaround
-
-You can reprovision all devices by removing the assignment group, saving the changes, and then adding the group assignment back to the policy. This workaround method ends the sessions for all active users.
-
-### Frontline shared card displays in Windows App during Cloud PC provisioning
-
-When you provision the Frontline Cloud PC in shared mode for the first time, the Frontline shared card displays in the Windows App with the status **Ready to Connect** during Cloud PC provisioning. Users can select to connect but receive a "Your connection failed" error.
-
-### Solution
-
-Users must close all dialogs before connecting to the Cloud PC.
-
 ### Users must wait for about 90 seconds after Reset
 
 When a user performs the **Reset** action on a Frontline Cloud PC in shared mode, the **Connect** button is grayed out for around 90 seconds. During this time, users can't connect to another Frontline Cloud PC.

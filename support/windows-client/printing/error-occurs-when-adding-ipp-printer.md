@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, mattburr
-ms.custom: sap:Print, Fax, and Scan\Print Performance - failures, crashes, not responsive, csstroubleshoot
+ms.custom:
+- sap:print,fax,and scan\print performance - failures,crashes,not responsive
+- pcy:WinComm User Experience
 ---
 # When attempting to add an IPP printer over HTTPS, you receive an error
 

@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, davidg
-ms.custom: sap:Windows Security Technologies\Legacy authentication (NTLM), csstroubleshoot
+ms.custom:
+- sap:windows security technologies\legacy authentication (ntlm)
+- pcy:WinComm Directory Services
 ---
 # How to disable automatic machine account password changes
 

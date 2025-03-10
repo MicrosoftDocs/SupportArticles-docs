@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
+ms.custom:
+- sap:active directory\active directory replication and topology
+- pcy:WinComm Directory Services
 ---
 # How to optimize the location of a domain controller or global catalog that resides outside of a client's site
 

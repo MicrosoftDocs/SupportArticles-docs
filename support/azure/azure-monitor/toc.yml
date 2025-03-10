@@ -65,10 +65,6 @@ items:
         href: app-insights/availability/missing-cpu-total-committed-memory-metrics.md
       - name: Portal connectivity issues
         href: app-insights/availability/troubleshoot-portal-connectivity.md
-      - name: Troubleshoot Application Insights Profiler
-        href: app-insights/availability/profiler-troubleshooting.md
-      - name: Troubleshoot Code Optimizations (Preview)
-        href: app-insights/availability/code-optimizations-troubleshooting.md
       - name: Troubleshoot user behavior analytics tools in Azure Application Insights
         href: app-insights/availability/usage-troubleshoot.md
   - name: Status Monitor and Change Analysis
@@ -76,11 +72,7 @@ items:
     - name: Troubleshoot Azure Application Insights Agent (formerly Status Monitor v2)
       href: app-insights/agent/status-monitor-v2-troubleshoot.md
     - name: Troubleshoot Azure Monitor's Change Analysis
-      href: app-insights/agent/change-analysis-troubleshoot.md 
-  - name: Profiler or Snapshot Debugger
-    items:
-    - name: Snapshot Debugger troubleshooting
-      href: app-insights/debug/snapshot-debugger-troubleshoot.md
+      href: app-insights/agent/change-analysis-troubleshoot.md
 
 - name: Log Analytics
   items:

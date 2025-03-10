@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, brheld
-ms.custom: sap:Windows Security Technologies\Active Directory Federation Services (AD FS) non-Azure-O365 issues, csstroubleshoot, has-azure-ad-ps-ref
+ms.custom:
+- sap:windows security technologies\active directory federation services (ad fs) non-azure-o365 issues
+- pcy:WinComm Directory Services
 ---
 # Error when you use the Set-MsolADFSContext command: The connection to \<ServerName> Active Directory Federation Services 2.0 server failed
 

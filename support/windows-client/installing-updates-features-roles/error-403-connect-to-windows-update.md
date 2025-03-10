@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Windows Servicing, Updates and Features on Demand\Clients missing updates, not offered, fail to download, csstroubleshoot
+ms.custom:
+- sap:windows servicing,updates and features on demand\clients missing updates,not offered,fail to download
+- pcy:WinComm Devices Deploy
 ---
 # Error 403 (Access Denied/Forbidden) occurs when you connect to Windows Update
 

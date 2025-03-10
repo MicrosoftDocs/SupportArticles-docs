@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:System Performance\Shutdown Performance (slow, unresponsive), csstroubleshoot
+ms.custom:
+- sap:system performance\shutdown performance (slow,unresponsive)
+- pcy:WinComm Performance
 ---
 # Windows shuts down slowly when it is set to clear the virtual memory pagefile on shutdown
 

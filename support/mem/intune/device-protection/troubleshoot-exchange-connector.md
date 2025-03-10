@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting the Intune Exchange Connector
 description: Troubleshoot the configuration of and issues related to the Intune on-premises Exchange Connector.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 search.appverid: MET150
 ms.reviewer: kaushika
 ms.custom: sap:Set Up Intune\Set up administrators and manage roles

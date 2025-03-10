@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting Win32 app installations with Intune
 description: Troubleshooting guidance for Win32 app installation issues and failures using Microsoft Intune.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 ms.reviewer: kaushika, mghadial
 search.appverid: MET150
 ms.custom: sap:AppDeployment - Windows\Win32

@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, AJAYPS
-ms.custom: sap:Network Connectivity and File Sharing\Remote access (DirectAccess), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\remote access (directaccess)
+- pcy:WinComm Networking
 ---
 # DirectAccess clients may not be able to connect to a DirectAccess server with error 0x800b0109 when using IP-HTTPS
 

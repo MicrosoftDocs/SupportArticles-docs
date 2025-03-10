@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, davean, eddo, delhan
-ms.custom: sap:System Performance\System Configuration (page file, startup or running apps, error handling), csstroubleshoot
+ms.custom:
+- sap:system performance\system configuration (page file,startup or running apps,error handling)
+- pcy:WinComm Performance
 ---
 # Memory allocation errors can be caused by slow page file growth
 

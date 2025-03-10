@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, jeffpatt
-ms.custom: sap:Application Virtualization\Server issues\Management Server Issues, csstroubleshoot
+ms.custom:
+- sap:application virtualization\server issues\management server issues
+- pcy:WinComm User Experience
 ---
 # How to troubleshoot applications failing to stream from an App-V management server
 

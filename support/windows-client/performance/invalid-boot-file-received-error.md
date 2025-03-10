@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, scottmca
-ms.custom: sap:System Performance\Startup or Pre-logon Reliability (crash, errors, bug check or Blue Screen), csstroubleshoot
+ms.custom:
+- sap:system performance\startup or pre-logon reliability (crash,errors,bug check or blue screen)
+- pcy:WinComm Performance
 ---
 # Invalid Boot File Received Error Message When PXE booting from WDS
 
@@ -36,4 +38,4 @@ If you have a mix of UEFI and Legacy BIOS machines, you cannot use DHCP Scope Op
 
 ## More information
 
-For more information about he WDS Boot Program's for UEFI computers wdsmgfw.efi, see [Managing Network Boot Programs](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732351%28v=ws.10%29).
+For more information about the WDS Boot Program's for UEFI computers wdsmgfw.efi, see [Managing Network Boot Programs](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732351%28v=ws.10%29).

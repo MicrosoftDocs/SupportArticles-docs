@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, DanMa
-ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\access to file shares (smb)
+- pcy:WinComm Networking
 ---
 # You may have to wait for a long time to populate the information on shared folder sessions in Computer Management console
 

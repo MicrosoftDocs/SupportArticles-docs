@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\Active Directory (FSMO), csstroubleshoot
+ms.custom:
+- sap:active directory\active directory (fsmo)
+- pcy:WinComm Directory Services
 ---
 # Active Directory FSMO roles in Windows
 

@@ -6,6 +6,7 @@ metadata:
   title: Visual Studio troubleshooting document
   description: Knowledge Base (KB) and other Support articles for Visual Studio. # Required; article description that is displayed in search results. < 160 chars.
   ms.topic: landing-page # Required
+  ms.service: visual-studio
   author: HaiyingYu  #Required; your GitHub user alias, with correct capitalization.
   ms.author: haiyingyu #Required; microsoft alias of author; optional team alias.
   ms.date: 05/09/2022
@@ -26,7 +27,7 @@ landingContent:
           - text: Uninstall third-party applications
             url: ./installation/secondary-installer-third-party-app.md
           - text: OS requirements for Visual Studio 2022
-            url: ./general/visual-studio-2022-unsupported-operating-systems.md
+            url: ./installation/visual-studio-2022-unsupported-operating-systems.md
           - text: Resolve common setup errors
             url: ./installation/issues-workarounds-visual-studio-setup.md
   - title: Language or Compilers

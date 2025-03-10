@@ -1,7 +1,7 @@
 ---
 title: Configuration Manager client left in provisioning mode after an upgrade to Windows 10
 description: Describes an issue that causes the Configuration Manager client to be left in provisioning mode after an upgrade to Windows 10. Provides a resolution.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 ms.reviewer: kaushika, brianhun, aaroncz, mikecure, cmkbreview
 ms.custom: sap:Client Operations\Other
 ---

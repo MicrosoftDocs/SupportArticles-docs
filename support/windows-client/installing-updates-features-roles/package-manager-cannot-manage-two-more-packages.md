@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: tarekr, cochen, kaushika
-ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install Windows Updates, csstroubleshoot
+ms.custom:
+- sap:installing windows updates,features,or roles\failure to install windows updates
+- pcy:WinComm Devices Deploy
 ---
 # Package Manager can install only the first package when you extract two or more packages to the same folder in Windows Vista
 

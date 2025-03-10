@@ -3,14 +3,14 @@ title: Common virtual machine error codes in Azure
 description: Understand some of the common error codes encountered when you provision and manage virtual machines in Azure
 services: virtual-machines
 documentationcenter: ''
-author: xujing-ms
+author: genlin
 manager: dcscontentpm 
 tags: azure-resource-manager
 ms.service: azure-virtual-machines
 ms.topic: troubleshooting
 ms.workload: infrastructure
 ms.date: 09/02/2024
-ms.author: xujing
+ms.author: genli
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # Understand common error messages when you manage virtual machines in Azure

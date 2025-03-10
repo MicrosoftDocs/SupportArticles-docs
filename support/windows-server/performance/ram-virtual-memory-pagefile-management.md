@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:System Performance\Performance tools (Task Manager, Perfmon, WSRM, and WPA), csstroubleshoot
+ms.custom:
+- sap:system performance\performance tools (task manager,perfmon,wsrm,and wpa)
+- pcy:WinComm Performance
 ---
 # RAM, virtual memory, pagefile, and memory management in Windows
 

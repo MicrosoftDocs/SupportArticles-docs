@@ -210,7 +210,7 @@
         "azure/azure-functions/**/*.md": "azure-functions",
         "azure/synapse-analytics/**/*.md": "azure-synapse-analytics",
         "azure/cosmos-db/**/*.md": "azure-cosmos-db",
-        "azure/virtual-desktop/**/*.md": "azure-virtual-desktop",
+        "azure/virtual-desktop/**/*": "azure-virtual-desktop",
         "power-platform/power-apps/**/**.*": "powerapps",
         "power-platform/power-pages/**/**.*": "power-pages",
         "power-platform/power-automate/**/*.md": "power-automate",

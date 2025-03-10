@@ -1,12 +1,14 @@
 ---
 title: Cannot connect to RDS because no RD Licensing servers are available
 description: This article describes how to troubleshoot RDS connection errors that are related to Remote Desktop licensing.
-ms.date: 01/20/2025
+ms.date: 02/13/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, v-tappelgate, rafx
-ms.custom: sap:Remote Desktop Services and Terminal Services\Licensing for Remote Desktop Services (Terminal Services), csstroubleshoot
+ms.reviewer: kaushika, v-tappelgate, rafx, warrenw
+ms.custom:
+- sap:remote desktop services and terminal services\licensing for remote desktop services (terminal services)
+- pcy:WinComm User Experience
 keywords: RD Licensing server, RD CAL
 ---
 # Cannot connect to RDS because no RD Licensing servers are available
@@ -17,27 +19,24 @@ This article helps you troubleshoot the "No licenses available" error in a deplo
 
 Clients cannot connect to Remote Desktop Services, and they display messages that resemble the following:
 
-```output
-The remote session was disconnected because there are no Remote Desktop License Servers available to provide a license.
-```
+> The remote session was disconnected because there are no Remote Desktop License Servers available to provide a license.
 
-```output
-Access was denied because of a security error.
-```
+> Access was denied because of a security error.
 
 Sign in to the RD Session Host as a domain administrator and open the RD License Diagnoser. Look for messages like the following:
 
-```output
-The grace period for the Remote Desktop Session Host server has expired, but the RD Session Host server hasn't been configured with any license servers. Connections to the RD Session Host server will be denied unless a license server is configured for the RD Session Host server.
-```
+> The grace period for the Remote Desktop Session Host server has expired, but the RD Session Host server hasn't been configured with any license servers. Connections to the RD Session Host server will be denied unless a license server is configured for the RD Session Host server.
 
-```output
-License server <computer name> is not available. This could be caused by network connectivity problems, the Remote Desktop Licensing service is stopped on the license server, or RD Licensing isn't available.
-```
+> License server \<computer name\> is not available. This could be caused by network connectivity problems, the Remote Desktop Licensing service is stopped on the license server, or RD Licensing isn't available.
+
+Clients can connect to Remote Desktop Services, but they display a balloon message that resembles the following:
+
+> Remote Desktop licensing mode is not configured.  
+  Remote Desktop Services will stop working because this computer is past its licensing grace period. On the RD Connection Broker server, use Server Manager to specify the Remote Desktop licensing mode. 
 
 ## Cause
 
-These issue could be caused by the following user messages:
+These issues could be caused by the following user messages:
 
 - The remote session was disconnected because there are no Remote Desktop client access licenses available for this computer.
 - The remote session was disconnected because there are no Remote Desktop License Servers available to provide a license.
@@ -171,23 +170,21 @@ The **RD Licensing Diagnoser Information** section shows more information about 
 
 The following table shows which RDS CAL and RD Session Host versions are compatible with one another.
 
-| |RDS 2008 R2 and earlier CAL |RDS 2012 CAL |RDS 2016 CAL |RDS 2019 CAL |
-| --- | --- | --- | --- | --- |
-|**2008, 2008 R2 session host** |Yes |Yes |Yes |Yes |
-|**2012 session host** |No |Yes |Yes |Yes |
-|**2012 R2 session host** |No |Yes |Yes |Yes |
-|**2016 session host** |No |No |Yes |Yes |
-|**2019 session host** |No |No |No |Yes |
+|Session host version|RDS 2016 CAL|RDS 2019 CAL|RDS 2022 CAL|RDS 2025 CAL|
+| -------- | -------- | -------- | -------- | -------- |
+|Windows Server 2016 session host|Yes|Yes|Yes|Yes|
+|Windows Server 2019 session host|No|Yes|Yes|Yes|
+|Windows Server 2022 session host|No|No|Yes|Yes|
+|Windows Server 2025 session host|No|No|No|Yes|
 
 The following table shows which RDS CAL and license server versions are compatible with one another.
 
-| |RDS 2008 R2 and earlier CAL |RDS 2012 CAL |RDS 2016 CAL |RDS 2019 CAL |
-| --- | --- | --- | --- | --- |
-|**2008, 2008 R2 license server** |Yes |No |No |No |
-|**2012 license server** |Yes |Yes |No |No |
-|**2012 R2 license server** |Yes |Yes |No |No |
-|**2016 license server** |Yes |Yes |Yes |No |
-|**2019 license server** |Yes |Yes |Yes |Yes |
+|License server version|RDS 2016 CAL|RDS 2019 CAL|RDS 2022 CAL|RDS 2025 CAL|
+| -------- | -------- | -------- | -------- | -------- |
+|Windows Server 2016 license server|Yes|No|No|No|
+|Windows Server 2019 license server|Yes|Yes|No|No|
+|Windows Server 2022 license server|Yes|Yes|Yes|No|
+|Windows Server 2025 license server|Yes|Yes|Yes|Yes|
 
 For more information, see [RDS CAL version compatibility](/windows-server/remote/remote-desktop-services/rds-client-access-license#rds-cal-version-compatibility).
 

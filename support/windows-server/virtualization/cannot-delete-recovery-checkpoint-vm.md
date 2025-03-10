@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Virtualization and Hyper-V\Snapshots, checkpoints, and differencing disks, csstroubleshoot
+ms.custom:
+- sap:virtualization and hyper-v\snapshots,checkpoints,and differencing disks
+- pcy:WinComm Storage High Avail
 ---
 # You can't delete a recovery checkpoint for a virtual machine in Data Protection Manager
 

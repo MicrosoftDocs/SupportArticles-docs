@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\DCPromo and the installation or removal of domain controllers, csstroubleshoot
+ms.custom:
+- sap:active directory\dcpromo and the installation or removal of domain controllers
+- pcy:WinComm Directory Services
 ---
 # DCPROMO demotion fails if it's unable to contact the DNS infrastructure master
 

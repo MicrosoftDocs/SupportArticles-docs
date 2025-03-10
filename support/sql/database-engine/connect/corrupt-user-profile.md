@@ -2,8 +2,6 @@
 title: Windows user profile can't be loaded in SQL Server
 description: This article addresses the SQL Server consistent authentication issue related to the Windows user profile.
 ms.date: 03/13/2024
-author: Malcolm-Stewart
-ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Database Connectivity and Authentication
 ---

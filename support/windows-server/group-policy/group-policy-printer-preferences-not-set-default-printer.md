@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Group Policy\Managing printers through Group Policy, csstroubleshoot
+ms.custom:
+- sap:group policy\managing printers through group policy
+- pcy:WinComm Directory Services
 ---
 # Group Policy Printer Preferences fails to set the default printer when new user profile is created
 

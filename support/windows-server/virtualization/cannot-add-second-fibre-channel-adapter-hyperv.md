@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, rblume, v-lianna
-ms.custom: sap:Virtualization and Hyper-V\Storage configuration, csstroubleshoot
+ms.custom:
+- sap:virtualization and hyper-v\storage configuration
+- pcy:WinComm Storage High Avail
 ---
 # Can't add a second Fibre Channel adapter to a Hyper-V virtual machine
 

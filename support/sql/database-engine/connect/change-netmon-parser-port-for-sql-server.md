@@ -2,8 +2,6 @@
 title: Modifying the NETMON parser port for SQL Server
 description: This article explains how to change the port of the NETMON parser for SQL Server.
 ms.date: 05/20/2024
-author: Malcolm-Stewart
-ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Connection issues
 ---

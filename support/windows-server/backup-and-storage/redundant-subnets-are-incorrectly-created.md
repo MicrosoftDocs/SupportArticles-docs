@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, Roger.Blume, winciccore
-ms.custom: sap:Backup, Recovery, Disk, and Storage\ISCSI, csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\iscsi
+- pcy:WinComm Storage High Avail
 ---
 # Redundant subnets are incorrectly created in an iSCSI IPv6 network
 

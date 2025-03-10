@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, nbassett
-ms.custom: sap:Network Connectivity and File Sharing\Wireless (802.1x, Bluetooth, Miracast, Mobile Broadband), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\wireless (802.1x,bluetooth,miracast,mobile broadband)
+- pcy:WinComm Networking
 ---
 # Virtual WiFi/SoftAP fails to start with error: The hosted network couldn't be started
 

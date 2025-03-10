@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Active Directory\Active Directory Lightweight Directory Services (AD LDS), csstroubleshoot
+ms.custom:
+- sap:active directory\active directory lightweight directory services (ad lds)
+- pcy:WinComm Directory Services
 ---
 # How to configure Active Directory and LDS diagnostic event logging
 

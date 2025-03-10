@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, herbertm, v-lianna
-ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot
+ms.custom:
+- sap:active directory\user,computer,group,and object management
+- pcy:WinComm Directory Services
 ---
 # Outdated cached credentials are used when you run an elevated task
 

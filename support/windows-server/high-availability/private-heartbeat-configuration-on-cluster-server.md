@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, ELDENC, dewitth
-ms.custom: sap:Clustering and High Availability\Setup and configuration of clustered services and applications, csstroubleshoot
+ms.custom:
+- sap:clustering and high availability\setup and configuration of clustered services and applications
+- pcy:WinComm Storage High Avail
 ---
 # Recommended private heartbeat configuration on a cluster server
 

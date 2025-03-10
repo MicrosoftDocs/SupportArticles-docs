@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, willgloy
-ms.custom: sap:Backup, Recovery, Disk, and Storage\Configuring and using Windows Backup or other recovery, csstroubleshoot
+ms.custom:
+- sap:backup,recovery,disk,and storage\configuring and using windows backup or other recovery
+- pcy:WinComm Storage High Avail
 ---
 # Backup fails when you try to create a system image
 

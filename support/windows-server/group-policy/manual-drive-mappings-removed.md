@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Group Policy\Managing network configuration (mapped drives, 802.1x) via group policy, csstroubleshoot
+ms.custom:
+- sap:group policy\managing network configuration (mapped drives,802.1x) via group policy
+- pcy:WinComm Directory Services
 ---
 # Group Policy Preferences removes manual drive mappings if the use first available setting is enabled
 

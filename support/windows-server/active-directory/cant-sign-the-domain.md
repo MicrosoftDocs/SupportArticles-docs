@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, PATCH
-ms.custom: sap:Active Directory\Active Directory (FSMO), csstroubleshoot
+ms.custom:
+- sap:active directory\active directory (fsmo)
+- pcy:WinComm Directory Services
 ---
 # Users can't sign in to the domain after password changes on a Remote Domain Controller
 

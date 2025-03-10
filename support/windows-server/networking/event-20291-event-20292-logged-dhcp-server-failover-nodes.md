@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, rnitsch, markusr, v-lianna
-ms.custom: sap:Network Connectivity and File Sharing\Dynamic Host Configuration Protocol (DHCP), csstroubleshoot
+ms.custom:
+- sap:network connectivity and file sharing\dynamic host configuration protocol (dhcp)
+- pcy:WinComm Networking
 ---
 # Event ID 20291 and Event ID 20292 are logged on DHCP server failover nodes
 

@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, waynmc, tfairman
-ms.custom: sap:Windows Security Technologies\Kerberos authentication, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\kerberos authentication
+- pcy:WinComm Directory Services
 ---
 # SSO with pre-logon fails during user logon after a restart
 

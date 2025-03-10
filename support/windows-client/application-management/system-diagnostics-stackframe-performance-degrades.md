@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Application Technologies and Compatibility\.Net Framework Installation, csstroubleshoot
+ms.custom:
+- sap:application technologies and compatibility\.net framework installation
+- pcy:WinComm User Experience
 ---
 # Performance of System.Diagnostics.StackFrame decreases in Windows 10 and .NET Framework 4.7.1
 

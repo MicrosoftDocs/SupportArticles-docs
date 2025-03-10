@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Application Technologies and Compatibility\MSI and MSIX, csstroubleshoot
+ms.custom:
+- sap:application technologies and compatibility\msi and msix
+- pcy:WinComm User Experience
 ---
 # Error when trying to uninstall an application: Error opening installation log file. Verify that the specified location exists and is writable
 

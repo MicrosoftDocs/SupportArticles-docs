@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Application Technologies and Compatibility\DCOM service startup and permissions, csstroubleshoot
+ms.custom:
+- sap:application technologies and compatibility\dcom service startup and permissions
+- pcy:WinComm User Experience
 ---
 # Printer VBScript error: 0x1A8. Object required
 

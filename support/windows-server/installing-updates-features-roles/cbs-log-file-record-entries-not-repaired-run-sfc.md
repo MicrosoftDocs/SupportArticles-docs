@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kmcniel, kaushika
-ms.custom: sap:Windows Servicing, Updates and Features on Demand\Windows Update fails - installation stops with error, csstroubleshoot
+ms.custom:
+- sap:windows servicing,updates and features on demand\windows update fails - installation stops with error
+- pcy:WinComm Devices Deploy
 ---
 # The CBS.log file contains entries that some files aren't repaired even after you successfully run the SFC utility on a Windows Server based computer
 

@@ -1779,16 +1779,10 @@ items:
     items:
     - name: 'Troubleshooting guidance: stop errors and unexpected restart'
       href: ./performance/troubleshoot-stop-errors-guidance.md
-    - name: Disable or enable Dr. Watson program
-      href: ./performance/disable-enable-dr-watson-program.md
     - name: Error 0x00000007B after you reconfigure hardware devices
       href: ./performance/inaccessible-boot-device-stop-error.md
     - name: Error 0x000000D1 when you enabled storage controller
       href: ./performance/bugcheck-run-stop-error-0x000000d1.md
-    - name: Error 0x00000019 when NTFS creates 8.3 formatted name
-      href: ./performance/stop-error-code-0x00000019.md
-    - name: Fail to access shared folder from applications
-      href: ./performance/accessing-shared-folder-from-application-fails.md
     - name: How to use Driver Verifier to identify issues
       href: ./performance/use-driver-verifier-to-identify-issues.md
     - name: Memory dump file options
@@ -1797,20 +1791,10 @@ items:
       href: ./performance/stop-code-driver-verifier-dma-violation.md
     - name: Stop error code 0x0000007F
       href: ./performance/stop-error-code-0x0000007F.md
-    - name: Stop Error "DRIVER_IRQL_NOT_LESS_OR_EQUAL"
-      href: ./performance/stop-error-driver-irql-not-less-or-equal.md
     - name: Stop error 7E on a server running NFS
       href: ./performance/stop-error-7e-nfs.md
-    - name: Stop error 0x109 on a VMWare virtual machine
-      href: ./performance/stop-error-0x109-on-VMWare-virtual-machine.md
     - name: Stop 7F, 0x00000008 (double-fault) error
       href: ./performance/stop-7f-0x00000008-double-fault-error.md
-    - name: '"Stop 0x0000000A" error for processor resumes from C1 idle state'
-      href: ./performance/stop-0x0000000a-error-processor-c1-idle-state.md
-    - name: Toggle Terminal Services to Application Server mode
-      href: ./performance/toggle-terminal-services-application-server-mode.md
-    - name: Troubleshoot the "STOP 0xC000021A" error
-      href: ./performance/troubleshoot-stop-0xc000021a-error.md
     - name: 'Troubleshoot stop errors: Best practices and dump configuration recommendations'
       href: ./performance/troubleshoot-stop-errors-best-practices-dump-configuration-recommendations.md
     - name: Troubleshoot unexpected reboots using system event logs
@@ -1915,8 +1899,6 @@ items:
       href: ./performance/system-shutdown-is-slow.md
     - name: System shutdown stops responding
       href: ./performance/system-shutdown-stops-responding-issues.md
-    - name: Use Userdump.exe to create a dump file
-      href: ./performance/use-userdump-create-dump-file.md
   - name: Slow Performance
     items:
     - name: 'Troubleshooting guidance: High CPU usage'
@@ -2150,7 +2132,7 @@ items:
     - name: Local Policy not permit to Log On Interactively
       href: ./remote/local-policy-not-permit-log-on-interactively.md
     - name: New user fails to log on through RDP
-      href: ./remote/not-enough-storage-available-to-process-command.md    
+      href: ./remote/not-enough-storage-available-to-process-command.md
     - name: Registry Size Limit (RSL) functionality is still be honored
       href: ./remote/honors-registry-size-limit-functionality-key-set.md
     - name: Remote Control prompts for user permission
@@ -2239,6 +2221,8 @@ items:
       href: ./remote/license-attributes-not-updated-rdsh-server.md
     - name: '"Licenses are not available for this Remote Desktop" error in Licensing Diagnosis'
       href: ./remote/rdsh-administrator-on-get-error-licensing-diagnosis.md
+    - name: Remote Desktop licensing mode is not configured warning
+      href: ./remote/remote-desktop-licensing-mode-not-configured-warning.md
     - name: Remote Desktop Licensing Service doesn't start
       href: ./remote/remote-desktop-licensing-service-not-star.md
     - name: Remote session disconnected when using non-persistent VDI with per-user licensing
@@ -2251,6 +2235,8 @@ items:
       href: ./remote/terminal-server-license-for-deployment.md
     - name: Terminal Server licensing
       href: ./remote/terminal-server-licensing.md
+    - name: The system cannot determine if the license server is member of TSLS Group
+      href: ./remote/system-cannot-determine-license-server-member-tsls.md
     - name: Troubleshooting access denied and user not authorized issues in RDS
       href: ./remote/troubleshooting-access-denied-and-user-not-authorized-rds-issues.md
     - name: '"Your session will be disconnected in 60 minutes" message when you connect to RDS'
@@ -2317,7 +2303,7 @@ items:
       href: ./remote/terminal-server-users-home-directory-not-set-correctly.md
     - name: User can't authenticate or must authenticate twice
       href: ./remote/cannot-authenticate-must-authenticate-twice.md
-    - name: User receives "Remote Desktop Service is currently busy" message
+    - name: '"Remote Desktop Service is currently busy" message'
       href: ./remote/remote-desktop-service-currently-busy.md
   - name: Virtual Desktop Infrastructure (VDI)
     items:
@@ -2583,6 +2569,8 @@ items:
       href: ./system-management-components/scheduled-task-not-run-upon-reboot-machine-off.md
     - name: Scheduled tasks reference incorrect user profile paths
       href: ./system-management-components/scheduled-tasks-reference-incorrect-user-profile.md
+    - name: Troubleshoot issues with scheduled tasks not running
+      href: ./system-management-components/troubleshoot-scheduled-tasks-not-running.md
   - name: WinRM
     items:
     - name: Error 0x80090322 when connecting PowerShell to remote server via WinRM
@@ -3059,6 +3047,8 @@ items:
       href: ./installing-updates-features-roles/system-file-checker.md
     - name: Error 0x800705aa when Windows Update fails
       href: ./installing-updates-features-roles/error-0x800705aa-windows-update-fails.md
+    - name: Error 0x800f0831 when installing Windows updates
+      href: ./installing-updates-features-roles/error-0x800f0831-installing-update.md
     - name: Error 0x800f0922 when installing Windows updates
       href: ./installing-updates-features-roles/error-0x800f0922-installing-windows-updates.md
     - name: Error C0190003 after installing updates
@@ -3119,6 +3109,8 @@ items:
       href: ./support-tools/scripts-to-retrieve-profile-age.md
     - name: Scripts to retrieve profile age and optionally delete aged copies
       href: ./support-tools/scripts-retrieve-profile-age-delete-aged-copies.md
+    - name: Scripts to view the certificate information in the msDS-KeyCredentialLink attribute
+      href: ./support-tools/script-to-view-msds-keycredentiallink-attribute-value.md
   - name: TroubleShootingScript toolset (TSS)
     items:
     - name: Introduction to TroubleShootingScript toolset (TSS)

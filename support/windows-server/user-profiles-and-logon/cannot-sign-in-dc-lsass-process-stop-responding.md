@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, herbertm, v-lianna
-ms.custom: sap:User Logon and Profiles\Service Account and Interactive User Logon Issues and Credential Providers, csstroubleshoot, ikb2lmc
+ms.custom:
+- sap:user logon and profiles\service account and interactive user logon issues and credential providers
+- pcy:WinComm Directory Services
 ---
 # Can't sign in to a domain controller, and the LSASS process stops responding
 

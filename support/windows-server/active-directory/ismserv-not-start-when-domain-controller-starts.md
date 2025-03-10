@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, oweindl
-ms.custom: sap:Active Directory\Active Directory Domain Controller specific boot failures, csstroubleshoot
+ms.custom:
+- sap:active directory\active directory domain controller specific boot failures
+- pcy:WinComm Directory Services
 ---
 # ISMServ.exe does not start when a domain controller starts
 

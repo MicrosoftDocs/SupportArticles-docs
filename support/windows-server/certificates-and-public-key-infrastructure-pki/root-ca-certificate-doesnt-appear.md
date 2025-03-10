@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, milanmil
-ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Credential Roaming and Certificate-based authentication, csstroubleshoot
+ms.custom:
+- sap:certificates and public key infrastructure (pki)\credential roaming and certificate-based authentication
+- pcy:WinComm Directory Services
 ---
 # Certificate used by Wired or Wireless Network policies is missing in GPO settings report
 

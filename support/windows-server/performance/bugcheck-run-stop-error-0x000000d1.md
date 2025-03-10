@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, jaysenb
-ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshoot
+ms.custom:
+- sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot)
+- pcy:WinComm Performance
 ---
 # Stop error 0x000000D1 and Windows Server runs a bugcheck when you enable a storage controller
 

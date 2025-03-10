@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:Remote Desktop Services and Terminal Services\Session connectivity, csstroubleshoot
+ms.custom:
+- sap:remote desktop services and terminal services\session connectivity
+- pcy:WinComm User Experience
 ---
 # Running a Remote Desktop Connection session within another Remote Desktop Connection session is supported with Remote Desktop Protocol 8.0 for specific scenarios
 

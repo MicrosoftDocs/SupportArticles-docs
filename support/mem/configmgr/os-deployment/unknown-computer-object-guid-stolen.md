@@ -1,7 +1,7 @@
 ---
 title: GUID of an Unknown Computer object used by a client computer being imaged
 description: Describes an issue in which a client computer that's being imaged uses the GUID of an Unknown Computer object.
-ms.date: 12/05/2023
+ms.date: 02/11/2025
 ms.reviewer: kaushika, frankroj
 ms.custom: sap:Operating Systems Deployment (OSD)\PXE
 ---
