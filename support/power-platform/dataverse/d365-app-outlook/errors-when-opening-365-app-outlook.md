@@ -2,10 +2,9 @@
 title: Errors when opening Dynamics 365 App for Outlook
 description: Solves common errors that might occur when attempting to open Microsoft Dynamics 365 App for Outlook.
 ms.reviewer: 
-ms.date: 02/26/2025
+ms.date: 03/10/2025
 ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
-
 # Error occurs when trying to open Dynamics 365 App for Outlook
 
 This article provides resolutions for an issue where you can't open Microsoft Dynamics 365 App for Outlook due to an error.
@@ -23,7 +22,7 @@ If an error occurs, check for a **Help me resolve this issue** link. Selecting t
 
 ## Resolution 2: Clear your browser cache
 
-### For Microsoft 365 version 16.0.11629 and Windows 10 version 1903 or later
+### For Office 365 version 16.0.11629 and Windows 10 version 1903 or later
 
 Follow these steps as Office Add-ins are now using [Microsoft Edge WebView](https://developer.microsoft.com/office/blogs/microsoft-edge-webview-for-office-add-ins/):
 
@@ -35,7 +34,7 @@ Follow these steps as Office Add-ins are now using [Microsoft Edge WebView](http
 6. Run `window.localStorage.clear()`.
 7. Reopen Dynamics 365 App for Outlook in Outlook.
 
-### For earlier versions of Microsoft 365 and Windows
+### For earlier versions of Office 365 and Windows
 
 |Platform|Instructions|
 |---|---|
@@ -83,9 +82,9 @@ If you can't resolve the issue and need assistance from Microsoft, include the f
 
     Include information such as the version of the following components:
 
-    - Outlook (for example, Office 2013 SP3)
-    - Microsoft Exchange (for example, Exchange 2013 CU15 or Exchange Online)
-    - Operating system (for example, Windows 10)
+    - Outlook
+    - Microsoft Exchange
+    - Operating system
 
 1. User impact  
 
