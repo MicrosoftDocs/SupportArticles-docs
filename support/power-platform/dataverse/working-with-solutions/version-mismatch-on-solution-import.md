@@ -2,7 +2,7 @@
 title: Environment Version Mismatch During Solution Import in Power Apps
 description: Provides a workaround for a warning about environment version mismatch that occurs when you import a solution in the target environment in Microsoft Power Apps.
 ms.reviewer: matp
-ms.date: 03/10/2025
+ms.date: 03/11/2025
 author: swatimadhukargit
 ms.author: swatim
 ms.custom: sap:Working with Solutions\Environment version mistamch during solution import
@@ -29,7 +29,7 @@ This warning ensures that you understand the drawbacks of having a source enviro
 
 ## Workaround
 
-To work around this issue, choose an environment for development in stations that have the same deployment schedule as the source environment. If the source environment is at a lower station, there is a possibility of taking dependencies on components that are released to the source environment but not to the target environment yet. Always consider changing your source environment to be in a region within a deployment station that's higher or equal to the target environment. This ensures that the target environment has components that are present in the source environment.
+To work around this issue, choose an environment for development in stations that have the same deployment schedule as the source environment. If the source environment is at a lower station, there is a possibility of taking dependencies on components that are released to the source environment but not to the target environment yet. Always consider changing your source environment to a region within a deployment station that's higher than or equal to the target environment. This ensures that the target environment has components that are present in the source environment.
 
 > [!NOTE]
 > The warning doesn't necessarily mean there are missing dependencies during solution import. Instead, this warning serves as a best practice guideline to properly configure source and target environments, reducing the risk of future missing dependencies.
