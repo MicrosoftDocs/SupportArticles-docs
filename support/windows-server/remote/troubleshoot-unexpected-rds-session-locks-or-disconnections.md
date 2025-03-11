@@ -115,7 +115,7 @@ The values are written in the registry path: `Computer\HKEY_CURRENT_USER\Control
 
 #### Policies
 
-Three policies must be configured to enable the screen Saver: **Enable screen saver**, **Password protect the screen saver**, and **Screen saver timeout**.
+Three policies must be configured to enable the screen saver: **Enable screen saver**, **Password protect the screen saver**, and **Screen saver timeout**.
 
 The configuration policy path and the corresponding registry path are:
 
