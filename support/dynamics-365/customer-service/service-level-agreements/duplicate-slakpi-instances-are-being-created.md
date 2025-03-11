@@ -39,7 +39,7 @@ Out-of-the-box (OOB) functionality automatically creates SLA KPI instances. Henc
  
 3. Privilege Misconfiguration: 
 
-	a. Please make sure that the prerequisites for user privileges should be met as per the SLA document here:[roles](/dynamics365/customer-service/administer/define-service-level-agreements#prerequisites)
+	a. Please make sure that the prerequisites for user privileges should be met as per the SLA document here:[Configure service-level agreements in Dynamics 365 Customer Service](/dynamics365/customer-service/administer/define-service-level-agreements#prerequisites)
 
 4. Ordering of SLAItems : 
 
