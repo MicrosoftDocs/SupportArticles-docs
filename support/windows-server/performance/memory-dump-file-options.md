@@ -5,7 +5,7 @@ ms.date: 03/07/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, warrenw
+ms.reviewer: kaushika, warrenw, khirschb
 ms.custom:
 - sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot)
 - pcy:WinComm Performance
@@ -25,13 +25,13 @@ Windows can generate any one of the following memory dump file types:
 - Complete memory dump
 - Kernel memory dump
 - Small memory dump (64 KB)
-- [Automatic memory dump](/windows-hardware/drivers/debugger/automatic-memory-dump)
+- [Active memory dump](/windows-hardware/drivers/debugger/active-memory-dump)
 
 ## Complete memory dump
 
 A complete memory dump records all the contents of system memory when your computer stops unexpectedly. A complete memory dump may contain data from processes that were running when the memory dump was collected.
 
-If you select the **Complete memory dump** option, you must have a paging file on the boot volume that is sufficient to hold all the physical RAM plus 1 megabyte (MB).
+If you select the **Complete memory dump** option, you must have a paging file on the boot volume that is sufficient to hold all the physical RAM plus 257 megabyte (MB).
 
 If the following conditions are true, the previous file is overwritten.
 
@@ -44,7 +44,7 @@ A kernel memory dump records only the kernel memory. It speeds up the process of
 
 This dump file doesn't include unallocated memory or any memory that's allocated to User-mode programs. It includes:
 
-- Memory that's allocated to the kernel and hardware abstraction layer (HAL) in Windows 2000 and later.
+- Memory that's allocated to the kernel and hardware abstraction layer (HAL) in the latest supported Windows version.
 - Memory that's allocated to Kernel-mode drivers and other Kernel-mode programs.
 
 For most purposes, this dump file is the most useful. It's smaller than the complete memory dump file. But it omits only those parts of memory that are unlikely to have been involved in the problem.
@@ -111,9 +111,6 @@ The following registry value is used under `HKEY_LOCAL_MACHINE\System\CurrentCon
 - CrashDumpEnabled REG_DWORD 0x7 = [Automatic memory dump](/windows-hardware/drivers/debugger/automatic-memory-dump)
 
 Additional registry values for CrashControl:
-
-- 0x0 = Disabled
-- 0x1 = Enabled
 
 - AutoReboot REG_DWORD 0x1
 - DumpFile REG_EXPAND_SZ `%SystemRoot%\Memory.dmp`
