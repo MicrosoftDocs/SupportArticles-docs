@@ -1,6 +1,6 @@
 ---
-title: Iterate through a SQL Server result set in T-SQL without using a cursor
-description: This article describes methods that you can use to iterate through a SQL Server result set in Transact-SQL without using a cursor.
+title: Iterate through a SQL Server result set in T-SQL without a cursor
+description: This article describes methods to iterate through a SQL Server result set in Transact-SQL without a cursor.
 ms.date: 03/11/2025
 ms.custom: sap:Database or Client application Development
 ms.reviewer: jopilov
@@ -9,7 +9,7 @@ ms.topic: how-to
 
 # Iterate through a SQL Server result set in T-SQL without using a cursor 
 
-This article describes various methods that you can use to iterate through a result set by using Transact-SQL in SQL Server.
+This article describes methods that you can use to iterate through a result set by using Transact-SQL in SQL Server.
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 111401
