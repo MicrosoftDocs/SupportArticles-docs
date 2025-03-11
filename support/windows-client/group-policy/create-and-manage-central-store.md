@@ -38,7 +38,7 @@ Administrative Templates files are divided into .admx files and language-specifi
 
 ## New policy for Windows 11 in January 2025 servicing update
 
-A new policy **AllowedNonAdminPackageFamilyNameRules** is added to the AppxPackageManager.admx for Windows 11 version 24H2 and Windows 11, version 23H2 in January 2025 servicing update. The policy is used to configure allow list rules for package installation. and the policy overrides the **BlockNonAdminUser** policy.
+A new policy **AllowedNonAdminPackageFamilyNameRules** is added to the AppxPackageManager.admx for Windows 11 version 24H2 and Windows 11, version 23H2 in January 2025 servicing update. The policy is used to configure allow list rules for package installation, and the policy overrides the **BlockNonAdminUser** policy.
 
 ## Administrative Templates file storage
 
