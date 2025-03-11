@@ -43,7 +43,7 @@ To solve this issue, first you can try to close and reopen the app. If the issue
 
 ##### Option 2 - Enable Protected Mode on each Internet Explorer security zone
 
-By enabling Protected Mode on each Internet Explorer security zone, each URL will load in the same integrity level.
+By enabling Protected Mode on each Internet Explorer security zone, each URL loads in the same integrity level.
 
 1. In Internet Explorer, select **Tools** > **Internet Options**.
 2. Select the **Security** tab.
@@ -52,7 +52,7 @@ By enabling Protected Mode on each Internet Explorer security zone, each URL wil
 5. Select **OK** to close the **Internet Options** dialog box.
 
 > [!NOTE]
-> When Protected Mode is enabled for a security zone, the URLs will load in the low integrity level (most secure). When Protected Mode is disabled for a security zone, the URLs will load in the medium integrity level. If a URL isn't added to the **Trusted Sites** or **Local Intranet** zones, it will default to loading in the Internet zone, which has Protected Mode enabled by default.
+> When Protected Mode is enabled for a security zone, the URLs load in the low integrity level (most secure). When Protected Mode is disabled for a security zone, the URLs load in the medium integrity level. If a URL isn't added to the **Trusted Sites** or **Local Intranet** zones, it defaults to loading in the Internet zone, which has Protected Mode enabled by default.
 
 ### Cause 2
 
@@ -66,11 +66,11 @@ If you change your Dynamics 365 (online) URL after the Dynamics 365 App for Outl
 
 1. Select the users who should have the app redeployed and use one of the **Add App** buttons to redeploy the app.
 
-1. After the **Status** changes to **Added to Outlook**, you can verify if the issue is resolved. If you already had the app open, close and reopen it.
+1. After the **Status** changes to **Added to Outlook**, you can verify if the issue is resolved. If you already have the app open, close and reopen it.
 
 #### More information
 
-You can verify if this issue is the result of Cause 2 by right-clicking on the **Help me resolve this issue** link in the error message and copying the URL. If you view the URL parameters, it contains the old Dynamics 365 URL. In the example provided earlier, it would show the old URL (`contosocorp.crm.dynamics.com`) instead of your current Dynamics 365 URL (`contoso.crm.dynamics.com`).
+You can verify if this issue is the result of Cause 2 by right-clicking the **Help me resolve this issue** link in the error message and copying the URL. If you view the URL parameters, it contains the old Dynamics 365 URL. In the example provided earlier, it shows the old URL `contosocorp.crm.dynamics.com` instead of your current Dynamics 365 URL `contoso.crm.dynamics.com`.
 
 ## Error 2
 
@@ -84,9 +84,9 @@ When you try to open the Dynamics 365 App for Outlook while using Outlook on the
 
 ### Cause
 
-Some of the URLs required to use the Dynamics 365 App for Outlook are in different [Internet Explorer security zones](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537183(v=vs.85))(for example, Local Intranet Zone, Trusted Sites Zone, or Internet Zone.)
+Some of the URLs required to use the Dynamics 365 App for Outlook are in different [Internet Explorer security zones](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537183(v=vs.85)) (for example, Local Intranet Zone, Trusted Sites Zone, or Internet Zone).
 
-When using Dynamics 365 App for Outlook within Outlook on the desktop, Internet Explorer is used to display the content and also redirect you to authenticate as needed. The different security zones might be using different integrity levels depending on whether Protected Mode is enabled for the zone. If the different URLs load with different integrity levels, it will prevent authentication from being passed successfully from your authentication URLs to Dynamics 365.
+When using Dynamics 365 App for Outlook within Outlook on the desktop, Internet Explorer is used to display the content and also redirect you to authenticate as needed. The different security zones might use different integrity levels, depending on whether Protected Mode is enabled for the zone. If the different URLs load with different integrity levels, it prevents authentication from being passed successfully from your authentication URLs to Dynamics 365.
 
 ### Resolution
 
