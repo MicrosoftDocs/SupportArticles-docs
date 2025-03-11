@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting recovery (redo) queueing in an Always On availability group
 description: This article helps you to troubleshoot problems that are related to recovery queueing in an Always On availability group. 
-ms.date: 03/11/2023
+ms.date: 03/11/2025
 ms.custom: sap:Always On Availability Groups (AG)
 ms.reviewer: ramakoni, v-jayaramanp, jopilov
 ---
