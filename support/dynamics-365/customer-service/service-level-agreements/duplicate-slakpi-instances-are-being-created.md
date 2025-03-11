@@ -13,13 +13,13 @@ This article provides a resolution for an issue where the duplicate service-leve
 
 ## Symptoms: 
 
-	- Duplicate SLA KPI instances are seen been created during update of status of slakpiinstances or duplicate slakpiinstance are created at once. 
+   Duplicate SLA KPI instances are seen been created during update of status of slakpiinstances or duplicate slakpiinstance are created at once. 
 
-    - Eg., When SLA is applied to a record like Case and the SLA has one slaitem created for Resolve By KPI, then when the conditions on the Case for SLA are met only one slakpiinstance for ResolveByKPI will be created. But in some cases we see duplicate slakpiinstance for ResolveByKPI been created. 
+   Eg., When SLA is applied to a record like Case and the SLA has one slaitem created for Resolve By KPI, then when the conditions on the Case for SLA are met only one slakpiinstance for ResolveByKPI will be created. But in some cases we see duplicate slakpiinstance for ResolveByKPI been created. 
   
 ## Cause: 
 
-    - Custom logic implemented by custom plugins/workflows/flows/actions. 
+   Custom logic implemented by custom plugins/workflows/flows/actions. 
 
 ## Mitigation: 
 
