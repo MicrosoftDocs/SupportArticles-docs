@@ -70,4 +70,4 @@ To solve this issue:
 2. Navigate to **Settings** area and select **Dynamics 365 App for Outlook**.
 3. Select the user from the **All Eligible Users** list.
 4. Select the **Add App to Outlook** button.
-5. The **Status** should switch to **Pending**. In about 15 minutes, the app should be redeployed to this user's mailbox and be connected to the correct instance.
+5. The **Status** should switch to **Pending**. In about 15 minutes, the app should be redeployed to the user's mailbox and connected to the correct instance.
