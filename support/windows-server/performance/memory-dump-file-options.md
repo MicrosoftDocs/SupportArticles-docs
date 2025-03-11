@@ -98,8 +98,6 @@ To configure startup and recovery options (including the dump type), follow thes
 
 You can load complete memory dumps and kernel memory dumps with the [Windows debugger](/windows-hardware/drivers/debugger/).
 
-Load small memory dumps by using [DumpChk.exe](/windows-hardware/drivers/debugger/dumpchk). You can also use **DumpChk.exe** to verify that a memory dump file has been created correctly.
-
 ## Registry values for startup and recovery
 
 The following registry value is used under `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\CrashControl`.
