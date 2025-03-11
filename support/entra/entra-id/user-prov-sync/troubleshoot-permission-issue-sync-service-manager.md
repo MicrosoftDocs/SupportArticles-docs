@@ -54,7 +54,7 @@ To find the on-premises AD connector account, use one of the following tools.
 
 1. In the **Additional tasks** screen, select the **View or export current configuration** task, and then select the **Next** button.
 
-1. In the **Review your solution** screen, locate the **Synchronized Directories** heading, and then copy the `MSOL_<hex-digits>` string from within the **ACCOUNT** field value.
+1. In the **Review your solution** screen, locate the **Synchronized Directories** heading, and then copy the string from within the **ACCOUNT** field value. By default, the automatically created account follows the format `DOMAIN\MSOL_<hex-digits>`.
 
 1. Select the **Exit** button.
 
@@ -87,6 +87,15 @@ Get-ADSyncToolsADconnectorAccount
 
 The output is a table that displays the `Name`, `Forest`, `Domain`, and `Username` columns for each Active Directory connector account. The text string that you want to copy is in the `Username` column.
 
+   ```console
+
+   Name             Forest            Domain                 Username
+   ----             ------            ------                 --------
+   corp.contoso.com corp.contoso.com  domain.contoso.com     MSOL__<hex-digits>
+   test.local       test.local        test.local             MSOL__<hex-digits>
+
+   ```
+
 </details>
 
 ### Part 2: Determine which attributes the on-premises Active Directory connector account doesn't have permissions for
@@ -109,8 +118,10 @@ The output is a table that displays the `Name`, `Forest`, `Domain`, and `Usernam
 
 1. Identify the Microsoft Entra Connect feature that you're using by following one of these methods:
 
+   - When using 'mS-DS-ConsistencyGuid' attribute as the source anchor, the added attribute will be the [mS-DS-ConsistencyGuid](/entra/identity/hybrid/connect/plan-connect-design-concepts#using-ms-ds-consistencyguid-as-sourceanchor) attribute.
+      
    - Review the list of [Exchange hybrid writeback](/azure/active-directory/hybrid/connect/reference-connect-sync-attributes-synchronized#exchange-hybrid-writeback) attributes to synchronize, and then return to the **Attribute information** table UI to find the Exchange hybrid writeback attribute that ADSync was trying to add or modify. For example, the added or modified attribute might be the [msDS-ExternalDirectoryObjectID](/openspecs/windows_protocols/ms-ada2/0abc1d06-ac09-476f-a60b-5deb05b394f7) attribute.
-
+      
    - Check the Microsoft Entra Connect features by running the `Get-ADSyncGlobalSettings` cmdlet from a PowerShell session, as shown in the following code:
 
      ```azurepowershell
