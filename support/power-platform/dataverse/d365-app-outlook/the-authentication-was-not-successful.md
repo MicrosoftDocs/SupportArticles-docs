@@ -60,7 +60,7 @@ To solve this issue, clear your browser cache.
 
 After clearing your browser cache, close all Internet Explorer and Outlook desktop windows, and ensure there are no remaining Internet Explorer processes running by checking Task Manager.
 
-If this issue only exits in the Outlook desktop client and clearing the cache via Internet Options doesn't help, try clearing it via the F12 IEchooser (not applicable for Windows 7):
+If this issue only exists in the Outlook desktop client and clearing the cache via Internet Options doesn't help, try clearing it via the F12 IEChooser (not applicable for Windows 7):
 
 1. Open the Dynamics 365 App for Outlook in the Outlook desktop client.
 2. Open the **IEChooser.exe** located in `%WindowsFolder%\System32\F12` (for example, `C:\Windows\System32\F12`).
