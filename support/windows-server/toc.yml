@@ -421,6 +421,8 @@ items:
       href: ./active-directory/access-denied-when-joining-computers.md
     - name: Account-identifier allocator fails to initialize
       href: ./active-directory/event-16650-account-identifier-allocator-not-initialize.md
+    - name: Accounts have the lastLogonTimestamp value set to future
+      href: ./active-directory/accounts-lastlogontimestamp-future-time.md
     - name: Add special groups to built-in groups
       href: ./active-directory/add-special-groups-to-built-in-groups.md
     - name: All members of a group may not be returned
