@@ -7,7 +7,7 @@ ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
 # "Track and Set Regarding are currently disabled" occurs in Dynamics 365 App for Outlook
 
-This article provides solutions for an issue where you receive a "Track and Set Regarding are currently disabled" notification in Microsoft Dynamics 365 App for Outlook.
+This article provides solutions to an issue where you receive a "Track and Set Regarding are currently disabled" notification in Microsoft Dynamics 365 App for Outlook.
 
 _Applies to:_ &nbsp; Dynamics 365 App for Outlook  
 _Original KB number:_ &nbsp; 4508591
