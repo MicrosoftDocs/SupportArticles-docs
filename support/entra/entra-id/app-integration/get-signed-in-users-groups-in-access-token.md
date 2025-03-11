@@ -4,7 +4,7 @@ description: Provides a sample project to introduce how to get signed in user gr
 ms.topic: how-to
 ms.reviewer: daga, v-weizhu
 ms.service: entra-id
-ms.date: 03/10/2025
+ms.date: 03/11/2025
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
 # How to get signed in user groups list when groups overage claim is displayed in access tokens
@@ -124,7 +124,7 @@ If the token contains the claims `claim_names` and `claim_sources`, then it indi
 
             try
             {
-				// use the user id in the new graph url since the old overage link is for aad graph which is being deprecated.
+				// use the user id in the new graph URL since the old overage link is for Azure AD Graph which is being deprecated.
 				userId = token.Claims.First(c => c.Type == "oid").Value;
 
 				// getting the claim name to properly parse from the claim sources but the next 3 lines of code are not needed,
@@ -326,7 +326,7 @@ In a similar fashion, the Graph SDK has an entry method `Get_Groups_GraphSDK_Met
 
 ```csharp
 /// <summary>
-		/// Entry point to make the request to Microsoft Graph using the Graph sdk and outputs the list to the console.
+		/// Entry point to make the request to Microsoft Graph using the Graph SDK and outputs the list to the console.
 		/// </summary>
 		/// <param name="graphToken"></param>
 		/// <returns></returns>
