@@ -80,7 +80,7 @@ If any of the preceding settings are configured, sessions are locked when condit
 
 ### Machine inactivity limit policy
 
-This policy can only be configured at the computer level, with the value specified in seconds. Here are the configuration policy path and the corresponding registry path:
+This policy can only be configured at the computer level, with the value specified in seconds. The configuration policy path and the corresponding registry path are:
 
 - Policy path: **Computer Configuration > Windows Settings > Security Settings > Local Policies > Security Options** - **Interactive logon: Machine inactivity limit**
 - Registry path: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System - InactivityTimeoutSecs`  
@@ -117,7 +117,7 @@ The values are written in the registry path: `Computer\HKEY_CURRENT_USER\Control
 
 Three policies must be configured to enable the screen Saver: **Enable screen saver**, **Password protect the screen saver**, and **Screen saver timeout**.
 
-Here are the configuration policy path and the corresponding registry path:
+The configuration policy path and the corresponding registry path are:
 
 - Policy path: **User Configuration > Administrative Templates > Control Panel > Personalization**.
 - Registry path: `Computer\HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Control Panel\Desktop`.
