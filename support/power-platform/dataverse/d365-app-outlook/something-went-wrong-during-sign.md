@@ -2,7 +2,7 @@
 title: Something went wrong during sign-in when accessing Dynamics 365 App for Outlook
 description: Solves the error that occurs when you sign in to Microsoft Dynamics 365 App for Outlook.
 ms.reviewer: 
-ms.date: 03/04/2025
+ms.date: 03/11/2025
 ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
 # "Something went wrong during sign-in" error when you access Dynamics 365 App for Outlook
@@ -17,18 +17,6 @@ _Original KB number:_ &nbsp; 3064194, 4035750
 When you try to open the Dynamics 365 App for Outlook while using Outlook on the desktop, web, or mobile, you might receive the following error message:
 
 > Something went wrong during sign-in. Please try again. If the problem persists, contact your system administrator.
-
-## Error 2
-
-When you try to open the Dynamics 365 App for Outlook while using Outlook on the desktop, you might receive the following error message:
-
-> Having trouble signing in?  
-> Something went wrong during sign-in. Please try adding the following URLs to your Trusted Sites:  
-> `https://*.dynamics.com`  
-> `https://login.microsoftonline.com`  
-> If the problem persists, contact your system administrator.
-
-## Cause and resolution for error 1
 
 ### Cause 1
 
@@ -84,7 +72,17 @@ If you change your Dynamics 365 (online) URL after the Dynamics 365 App for Outl
 
 You can verify if this issue is the result of Cause 2 by right-clicking on the **Help me resolve this issue** link in the error message and copying the URL. If you view the URL parameters, it contains the old Dynamics 365 URL. In the example provided earlier, it would show the old URL (`contosocorp.crm.dynamics.com`) instead of your current Dynamics 365 URL (`contoso.crm.dynamics.com`).
 
-## Cause and resolution for error 2
+## Error 2
+
+When you try to open the Dynamics 365 App for Outlook while using Outlook on the desktop, you might receive the following error message:
+
+> Having trouble signing in?  
+> Something went wrong during sign-in. Please try adding the following URLs to your Trusted Sites:  
+> `https://*.dynamics.com`  
+> `https://login.microsoftonline.com`  
+> If the problem persists, contact your system administrator.
+
+### Cause
 
 Some of the URLs required to use the Dynamics 365 App for Outlook are in different [Internet Explorer security zones](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537183(v=vs.85))(for example, Local Intranet Zone, Trusted Sites Zone, or Internet Zone.)
 
