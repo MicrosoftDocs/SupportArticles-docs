@@ -421,6 +421,8 @@ items:
       href: ./active-directory/access-denied-when-joining-computers.md
     - name: Account-identifier allocator fails to initialize
       href: ./active-directory/event-16650-account-identifier-allocator-not-initialize.md
+    - name: Accounts have the lastLogonTimestamp value set to future
+      href: ./active-directory/accounts-lastlogontimestamp-future-time.md
     - name: Add special groups to built-in groups
       href: ./active-directory/add-special-groups-to-built-in-groups.md
     - name: All members of a group may not be returned
@@ -431,6 +433,8 @@ items:
       href: ./active-directory/fail-to-access-data-from-source-control-explorer.md
     - name: Can't add user or object to directory service
       href: ./active-directory/cannot-add-user-object-differ-by-diacritic-mark-character.md
+    - name: Can't edit or delete an AD object
+      href: ./active-directory/cannot-edit-delete-ad-object-error-sam.md      
     - name: Can't start Active Directory Users and Computers Tool
       href: ./active-directory/cannot-start-active-directory-users-and-computers-tool.md
     - name: Compatibility with user accounts ending with the dollar sign

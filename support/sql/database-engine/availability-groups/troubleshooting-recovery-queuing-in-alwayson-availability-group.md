@@ -1,12 +1,12 @@
 ---
-title: Troubleshooting recovery queueing in an Always On availability group
+title: Troubleshooting recovery (redo) queueing in an Always On availability group
 description: This article helps you to troubleshoot problems that are related to recovery queueing in an Always On availability group. 
-ms.date: 02/10/2023
+ms.date: 03/11/2025
 ms.custom: sap:Always On Availability Groups (AG)
-ms.reviewer: ramakoni, v-jayaramanp
+ms.reviewer: ramakoni, v-jayaramanp, jopilov
 ---
 
-# Troubleshooting recovery queueing in an Always On availability group
+# Troubleshooting recovery (redo) queueing in an Always On availability group
 
 This article provides resolutions to problems related to recovery queueing.
 
@@ -28,7 +28,7 @@ For more information, see the [Data latency on secondary replica](/sql/database-
 
 ### Failover time is longer or RTO is exceeded
 
-Recovery Time Objective (RTO) is the maximum database downtime that an organization can handle. RTO also describes how quickly the organization can regain access to the database after an outage. If substantial recovery queueing is present on a secondary replica when a failover occurs, recovery may take longer. After recovery, the database will transition to the primary role and represent the state of the database that existed before the failover. A longer recovery time can delay how quickly production resumes after a failover.
+Recovery Time Objective (RTO) is the maximum database downtime that an organization can handle. RTO also describes how quickly the organization can regain access to the database after an outage. If substantial recovery queueing is present on a secondary replica when a failover occurs, recovery might take longer than the RTO. After recovery, the database will transition to the primary role and represent the state of the database that existed before the failover. A longer recovery time can delay how quickly production resumes after a failover.
 
 ### Various diagnostic features report availability group recovery queueing
 

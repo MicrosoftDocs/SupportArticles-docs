@@ -45,7 +45,7 @@ On the application that experiences the issues, try to locate an option to reaut
 
 If the application is using [Microsoft Authentication Library (MSAL)](/entra/identity-platform/msal-overview), follow [this guidance to handle errors and exceptions in MSAL](/entra/msal/dotnet/advanced/exceptions/msal-error-handling).
 
-If the application isn't using [Microsoft Authentication Library (MSAL)](/entra/identity-platform/msal-overview), follow this guidance to [handle errors and exceptions in MSAL](/entra/msal/dotnet/advanced/exceptions/msal-error-handling), and try to implement a similar approach on the application. The goal is to request that the user reauthenticate and obtain a fresh token.
+If the application isn't using MSAL, follow this guidance to [handle errors and exceptions in MSAL](/entra/msal/dotnet/advanced/exceptions/msal-error-handling), and try to implement a similar approach on the application. The goal is to request that the user reauthenticate and obtain a fresh token.
 
 ## More information
 
