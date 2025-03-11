@@ -12879,6 +12879,42 @@
     {
       "source_path": "support/power-platform/dataverse/d365-app-outlook/error-when-installing-crm-2016-outlook.md",
       "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-when-installing-crm-2016-outlook"
+    },
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/current-user-role-not-have-required-permissions.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/privilege-error-occurs-when-using-dynamics-365-app-for-outlook"
+    },
+    {
+      "source_path": "support/windows-server/performance/disable-enable-dr-watson-program.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/disable-enable-dr-watson-program"
+    },
+    {
+      "source_path": "support/windows-server/performance/accessing-shared-folder-from-application-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/accessing-shared-folder-from-application-fails"
+    },
+    {
+      "source_path": "support/windows-server/performance/stop-error-code-0x00000019.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/stop-error-code-0x00000019"
+    },
+    {
+      "source_path": "support/windows-server/performance/stop-error-driver-irql-not-less-or-equal.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/stop-error-driver-irql-not-less-or-equal"
+    },
+    {
+      "source_path": "support/windows-server/performance/stop-error-0x109-on-VMWare-virtual-machine.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/stop-error-0x109-on-VMWare-virtual-machine"
+    },
+    {
+      "source_path": "support/windows-server/performance/stop-0x0000000a-error-processor-c1-idle-state.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/stop-0x0000000a-error-processor-c1-idle-state"
+    },
+    {
+      "source_path": "support/windows-server/performance/troubleshoot-stop-0xc000021a-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/troubleshoot-stop-0xc000021a-error"
+    },
+    {
+      "source_path": "support/windows-server/performance/toggle-terminal-services-application-server-mode.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/toggle-terminal-services-application-server-mode"
     }
   ]
 }
