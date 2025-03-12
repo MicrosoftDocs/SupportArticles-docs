@@ -1,7 +1,7 @@
 ---
 title: How to configure DNS dynamic updates in Windows Server
 description: Describes that  how to configure DNS dynamic updates in Windows Server and how to integrate DNS updates with DHCP.
-ms.date: 01/15/2025
+ms.date: 03/12/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -12,7 +12,7 @@ ms.custom:
 ---
 # How to configure DNS dynamic updates in Windows
 
-This article describes how to configure the DNS update functionality in Windows.
+This article describes how to configure the Domain Name System (DNS) update functionality in Windows.
 
 _Original KB number:_ &nbsp; 816592
 
@@ -49,7 +49,7 @@ Windows provides the following features that are related to the DNS dynamic upda
 
 By default, Windows computers that are statically configured for TCP/IP try to dynamically register host address (A) and pointer (PTR) resource records for IP addresses that are configured and used by their installed network connections. By default, all computer register records are based on the full computer name.
 
-The primary full computer name is a fully qualified domain name (FQDN). Additionally, the primary full computer name is the primary DNS suffix of the computer that is appended to the computer name. To determine the primary DNS suffix of the computer and the computer name, right-click **My Computer**, click **Properties**, and then click **Computer Name**.
+The primary full computer name is a fully qualified domain name (FQDN). Additionally, the primary full computer name is the primary DNS suffix of the computer that is appended to the computer name. To determine the primary DNS suffix of the computer and the computer name, right-click **My Computer**, select **Properties**, and then select **Computer Name**.
 
 DNS updates can be triggered for any of the following reasons or events:
 
@@ -62,7 +62,6 @@ DNS updates can be triggered for any of the following reasons or events:
 When one of these events triggers a DNS update, the DNS Client service on Windows Vista/Windows Server 2008 or later versions sends the necessary updates to the DNS server. The DNS Client service is responsible for registering A (Address) and PTR (Pointer) records, which are used to map IP addresses to hostnames and vice versa.
 
 In the case of a domain controller, the Netlogon service is responsible for registering SRV (Service) records in DNS, which are crucial for locating domain services like authentication and directory services.
-
 
 > [!Note]
 >
@@ -97,7 +96,7 @@ After the name change is applied in **System Properties**, Windows prompts you t
     For standard primary zones, the primary server, or owner, that is returned in the SOA query response is fixed and static. The primary server name always matches the exact DNS name as that name is displayed in the SOA resource record that is stored with the zone. However, if the zone that is being updated is directory-integrated, any DNS server that is loading the zone can respond and dynamically insert its own name as the primary server of the zone in the SOA query response.
 3. The DHCP Client service tries to contact the primary DNS server.
 
-    The client processes the SOA query response for its name to determine the IP address of the DNS server that is authorized as the primary server for accepting its name. If it is required, the client performs the following steps to contact and dynamically update its primary server:
+    The client processes the SOA query response for its name to determine the IP address of the DNS server that is authorized as the primary server for accepting its name. If it's required, the client performs the following steps to contact and dynamically update its primary server:
 
     1. The client sends a dynamic update request to the primary server that is determined in the SOA query response.
 
@@ -113,14 +112,14 @@ After the name change is applied in **System Properties**, Windows prompts you t
 
     The contents of the update request include instructions to add A, and possibly PTR, resource records for "`newhost.example.microsoft.com`" and to remove these same record types for "`oldhost.example.microsoft.com`". ("`oldhost.example.microsoft.com`" is the name that was previously registered.)
 
-    The server also checks to make sure that updates are permitted for the client request. For standard primary zones, dynamic updates are not secured. Any client attempt to update succeeds. For Active Directory-integrated zones, updates are secured and performed using directory-based security settings.
+    The server also checks to make sure that updates are permitted for the client request. For standard primary zones, dynamic updates aren't secured. Any client attempt to update succeeds. For Active Directory-integrated zones, updates are secured and performed using directory-based security settings.
 
-Dynamic updates are sent or refreshed periodically. By default, computers send an update every twenty-four hours. If the update causes no changes to zone data, the zone remains at its current version, and no changes are written. Updates that cause actual zone changes or increased zone transfers occur only if names or addresses actually change.
+Dynamic updates are sent or refreshed periodically. By default, computers send an update every 24 hours. If the update causes no changes to zone data, the zone remains at its current version, and no changes are written. Updates that cause actual zone changes or increased zone transfers occur only if names or addresses actually change.
 
 > [!NOTE]
-> Names are not removed from DNS zones if they become inactive or if they are not updated within the update interval of twenty-four hours. DNS does not use a mechanism to release or to tombstone names, although DNS clients do try to delete or to update old name records when a new name or address change is applied
+> Names aren't removed from DNS zones if they become inactive or if they aren't updated within the update interval of 24 hours. DNS doesn't use a mechanism to release or to tombstone names, although DNS clients do try to delete or to update old name records when a new name or address change is applied
 
-When the DHCP Client service registers A and PTR resource records for a Windows-based computer, the client uses a default caching time-to-live (TTL) value of 15 minutes for host records. This value determines how long other DNS servers and clients cache a computer's records when they are included in a query response.
+When the DHCP Client service registers A and PTR resource records for a Windows-based computer, the client uses a default caching time-to-live (TTL) value of 15 minutes for host records. This value determines how long other DNS servers and clients cache a computer's records when they're included in a query response.
 
 ### Integration of DHCP with DNS
 
