@@ -82,7 +82,7 @@ To work around this issue, use one of the following methods:
 
 - For a new VM deployment, if it can be part of a different availability set, create the VM in a different availability set (in the same region or zone). This new VM can then be added to the same virtual network.
 
-- Consider resizing the VM to a different size that might have more availability in the region or zone. To ensure that the VM sizes are supported in your availability set, use [availability sets - List Available Sizes - REST API](/troubleshoot/azure/virtual-machines/windows/virtual-machines-availability-set-supportability).
+- Consider resizing the VM to a different size that might have more availability in the region or zone. To ensure that the VM sizes are supported in your availability set, use [availability sets - List Available Sizes - REST API](virtual-machines-availability-set-supportability.md).
 
 - Stop (deallocate) all VMs in the same availability set, and then start all applicable VMs in a batch to allow the allocation from all available clusters, rather than just the cluster where the availability set is currently allocated.
   
@@ -110,7 +110,7 @@ To work around this issue, use one of the following methods:
 
 - Resize the VMs
 
-  Consider resizing the VM to a different size that might have more availability in the region or zone. To ensure that the VM sizes are supported in your Availability Set, use [Availability Sets - List Available Sizes - REST API](/troubleshoot/azure/virtual-machines/windows/virtual-machines-availability-set-supportability).
+  Consider resizing the VM to a different size that might have more availability in the region or zone. To ensure that the VM sizes are supported in your Availability Set, use [Availability Sets - List Available Sizes - REST API](virtual-machines-availability-set-supportability.md).
 
 - Change the region or zone
 
@@ -154,7 +154,7 @@ To work around this issue, use one of the following methods:
 
 ### Cause
 
-When the Azure Compute platform can't allocate a VM to meet the required constraints specified in the request, overconstrained allocation failures occur. These failures typically happen when specific requirements can’t be met within the available resources. They are often indicated by errors like `OverconstrainedZonalAllocationRequest` or `OverconstrainedAllocationRequest`.
+When the Azure Compute platform can't allocate a VM to meet the required constraints specified in the request, overconstrained allocation failures occur. These failures typically happen when specific requirements can't be met within the available resources. They are often indicated by errors like `OverconstrainedZonalAllocationRequest` or `OverconstrainedAllocationRequest`.
 
 These constraints usually (but not always) include the following items:
 
@@ -232,7 +232,7 @@ The servers in Azure datacenters are partitioned into clusters. Normally, an all
 
 ### Why allocation failures happen
 
-When an allocation has a large number of restrictions, there's a higher chance of failing to find free resources since the available resource pool is smaller. Furthermore, if your allocation request is restricted (for example, when using proximity placement groups but the type of resource you requested isn’t supported by the set of clusters and nearby ones), your request fails even if the cluster has free resources. The following Diagram 2 illustrates the case where an allocation fails because the candidate clusters associated with the proximity placement group don't have free resources. Diagram 3 illustrates the case where an allocation fails because the candidate clusters associated with the  proximity placement group don’t support the requested VM size, even though the clusters have free resources.
+When an allocation has a large number of restrictions, there's a higher chance of failing to find free resources since the available resource pool is smaller. Furthermore, if your allocation request is restricted (for example, when using proximity placement groups but the type of resource you requested isn't supported by the set of clusters and nearby ones), your request fails even if the cluster has free resources. The following Diagram 2 illustrates the case where an allocation fails because the candidate clusters associated with the proximity placement group don't have free resources. Diagram 3 illustrates the case where an allocation fails because the candidate clusters associated with the  proximity placement group don't support the requested VM size, even though the clusters have free resources.
 
 :::image type="content" source="media/virtual-machines-common-allocation-failure/allocation-failures-ppg.png" alt-text="Screenshot of Diagram 2 showing allocation failed with no free resource available and Diagram 3 showing allocation failed with size not supported." lightbox="media/virtual-machines-common-allocation-failure/allocation-failures-ppg.png":::
 

@@ -51,10 +51,13 @@
     items:
       - name: IDX10501 Error in ASP.NET Core with Azure B2C Custom Policy
         href: app-integration/troubleshoot-error-idx10501-aspnet-b2c.md
+      - name: Authentication fails after Android app is published to Google Play Store
+        href: app-integration/android-app-authentication-fails-after-published-to-google-play-store.md
       - name: WIF10201 No valid key mapping found
         href: app-integration/troubleshoot-wif10201-no-validkey-securitytoken-mvc.md
       - name: Package Inspector for MSAL Android Native
         href: app-integration/package-inspector-msal-android-native.md
+
 
   - name: Troubleshoot adding apps
     href: app-integration/troubleshoot-adding-apps.md
@@ -69,6 +72,8 @@
         href: app-integration/send-notification-details.md
   - name: Troubleshoot sign-in to apps
     items:
+      - name: Error code AADSTS50173 - The provided grant has expired due to it being revoked
+        href: app-integration/error-code-aadsts50173-grant-expired-revoked.md
       - name: Error AADSTS220501 - Unable to download Certificate Revocation List
         href: app-integration/error-code-aadsts220501-unable-to-download-certificate-revocation-list.md
       - name: Error AADSTS50003 - certificate or key not configured

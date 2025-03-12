@@ -57,4 +57,4 @@ Use the following guidance to troubleshoot common failures, errors, and exceptio
 
 - Query the DMV [sys.dm_pdw_errors](/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql) for errors
 - [Troubleshoot dedicated SQL pool (formerly SQL DW) in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-troubleshoot)
-- [Troubleshoot a slow query on a dedicated SQL pool](/troubleshoot/azure/synapse-analytics/dedicated-sql/query-execution-performance/troubleshoot-dsql-perf-slow-query)
+- [Troubleshoot a slow query on a dedicated SQL pool](troubleshoot-dsql-perf-slow-query.md)
