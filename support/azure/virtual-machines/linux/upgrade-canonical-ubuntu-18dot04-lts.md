@@ -26,7 +26,7 @@ There's no direct upgrade path from Ubuntu 18.04 LTS to Ubuntu 22.04 LTS. Howeve
 
 Ubuntu Pro is an enhanced offering that includes security updates for all Ubuntu packages. It provides Extended Security Maintenance (ESM) for infrastructure and applications and optional full-time (24 hours a day, seven days a week) telephone and ticket support. Ubuntu Pro 18.04 LTS remains fully supported until April 2028. 
 
-You can deploy new VMs that run Ubuntu Pro from the [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps/canonical.0001-com-ubuntu-pro-bionic?tab=Overview). You can upgrade your Ubuntu Server (version 16.04 or higher) VM to Ubuntu Pro through an [in-place upgrade](/azure/virtual-machines/workloads/canonical/ubuntu-pro-in-place-upgrade). Alternatively, you can directly purchase the system from [Canonical](https://ubuntu.com/pro). 
+You can deploy new VMs that run Ubuntu Pro from the [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps/canonical.0001-com-ubuntu-pro-bionic?tab=Overview). You can upgrade your Ubuntu Server (version 16.04 or higher) VM to Ubuntu Pro through an [in-place conversion](/azure/virtual-machines/workloads/canonical/ubuntu-pro-in-place-upgrade). Alternatively, you can directly purchase the system from [Canonical](https://ubuntu.com/pro). 
 
 For more information about the end of standard support for Ubuntu 18.04 LTS, see [Ubuntu 18.04 LTS (Bionic Beaver) on Azure](https://ubuntu.com/18-04/azure). 
 
