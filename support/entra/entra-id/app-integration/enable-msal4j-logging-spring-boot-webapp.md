@@ -27,7 +27,7 @@ The complete code sample and configuration guide for this implementation are ava
     </dependency>
     ```
 
-2. In your app project, create a file that's named **Logback.xml** in the **src/main/resources** folder, and then add the following content:
+2. In your app project, create a file in the **src/main/resources** folder, and name the file **Logback.xml**. Then, add the following content:
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -72,7 +72,7 @@ This code sample is set up to run on the local server (localhost) by using the H
 To configure app registration in Azure AD B2C, follow these steps: 
 
 1. Create two app registrations in your Azure AD B2C tenant: One for the web application and the other for the web API.
-2. Expose the required scope in the web API. Refer to the guidance in ["Configure web API app scopes"](/azure/active-directory-b2c/configure-authentication-sample-web-app-with-api?tabs=visual-studio#step-22-configure-web-api-app-scopes) for more information.
+2. Expose the required scope in the web API. For more information, see ["Configure web API app scopes"](/azure/active-directory-b2c/configure-authentication-sample-web-app-with-api?tabs=visual-studio#step-22-configure-web-api-app-scopes).
 3. Configure the web API scope in the **API Permissions** blade for the web application.
 4. Grant admin consent to all configured permissions in the web application.
 
