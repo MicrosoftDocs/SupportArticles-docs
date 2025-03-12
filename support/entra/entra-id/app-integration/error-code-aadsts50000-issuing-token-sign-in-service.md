@@ -23,11 +23,11 @@ This issue is common in hybrid environments. The user's federated account passwo
 
 ### Solution for cause 1
 
-Reset the user password, and then verify the new password can authenticate successfully to Microsoft Entra ID.
+Reset the user password, and then verify the new password can successfully authenticate to Microsoft Entra ID.
 
 ## Cause 2: Parameters are incorrectly configured in the token acquisition request
 
-The issue commonly occurs in the on-behalf-of (OBO) flow. Certain parameters required for token acquisition may be missing or invalid.
+This commonly occurs in the on-behalf-of (OBO) flow. Certain parameters required for token acquisition may be missing or invalid.
 
 ### Solution for cause 2
 
@@ -37,7 +37,7 @@ Make sure the client ID is valid and other required parameters are configured co
 
 This issue can occur in an OAuth2 Device code grant flow to the token endpoint. After the user signs in to a browser window and accepts the consent dialog, this error occurs.
 
-### Solution 3 for cause 3: verify application consent settings
+### Solution 3 for cause 3: Verify application consent settings
 
 1. Go to the [Azure portal](https://portal.azure.com), make sure that the client application (Service Principal) exists in the tenant's **Enterprise Applications** page. You can search for the application by App ID.
 2. Verify that the user has the ability to consent to the application. Check user settings in the **Enterprise Applications** page or review relevant policies affecting user consent.
@@ -52,7 +52,7 @@ Microsoft Identity Platform (v2 endpoint) tokens must be signed by a certificate
 
 1. In the Azure portal, go to the **App Registrations**.
 2. In the **Manage** section,  select **Manifest**.
-3. Check if there is an entry in the `keyCredentials` section with `type=Symmetric` and `usage=Sign`.
+3. Check if there is an entry exists in the `keyCredentials` section with `type=Symmetric` and `usage=Sign`.
 
     :::image type="content" source="./media/error-code-aadsts50000-issuing-token-sign-in-service/manifest-sample.png" alt-text="Application Manifest Key Credentials" lightbox="/media/error-code-aadsts50000-issuing-token-sign-in-service/manifest-sample.png":::
 
@@ -66,7 +66,7 @@ Alternatively, use the AzureAD PowerShell cmdlet [Get-AzureADApplicationKeyCrede
 
 #### Step 3: Remove symmetric signing key
 
-If the symmetric key exits, use:
+If the symmetric key exists, use:
 
 - [Remove-AzureADApplicationKeyCredential](/powershell/module/azuread/remove-azureadapplicationkeycredential) to remove the symmetric key for the app registration.
 - [Remove-AzureADServicePrincipalKeyCredential](/powershell/module/azuread/remove-azureadserviceprincipalkeycredential) to remove the symmetric key for the service principal object.
@@ -79,8 +79,8 @@ This error can occur in the following scenario:
 
 - You have a multitenant resource application registered in tenant A. This application exposes only **Application Permission** type.
 - In a different tenant B, you have a client application registered. In the **API permission** page for this application, you configure the permission for the resource application registered in the other tenant.
-- Then, you use an OAuth2.0 On-Behalf-Of (delegation) flow to request an access token for the resource app with the `/.default` for the web API scope.
+- Then, you use an OAuth 2.0 On-Behalf-Of (delegation) flow to request an access token for the resource app with the `/.default` for the web API scope.
 
 ### Solution for cause 5
 
-Configure the resource application to expose delegated permission and consent to that delegated permission in the client application.
+Configure the resource application to expose the delegated permission and consent to that delegated permission in the client application.
