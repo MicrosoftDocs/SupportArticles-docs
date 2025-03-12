@@ -8,7 +8,7 @@ author: NikosMoutzourakis
 ---
 # Can't connect to an IBM Personal Communications session
 
-This article provides a resolution for an issue where you cna't connect to an IBM Personal Communications session using the [Open terminal session](/power-automate/desktop-flows/actions-reference/terminalemulation) action with the HLLAPI provider in Power Automate for desktop.
+This article provides a resolution for an issue where you can't connect to an IBM Personal Communications session using the [Open terminal session](/power-automate/desktop-flows/actions-reference/terminalemulation) action with the HLLAPI provider in Power Automate for desktop.
 
 _Applies to:_ &nbsp; Power Automate for desktop
 
