@@ -65,7 +65,7 @@ The complete code sample and configuration guide for this implementation are ava
 
 ### Enable HTTPs support
 
-The code sample uses HTTP protocol. Follow [Configure the sample to use your Azure AD B2C tenant](https://github.com/bachoang/MSAL4J_SpringBoot_Logging/tree/main/msal-b2c-web-sample#step-2--configure-the-sample-to-use-your-azure-ad-b2c-tenant) to generate a self-signed certificate and place the **keystore.p12** file in the resources folder.
+his code sample is set up to run on the local server (localhost) using the HTTPS protocol. Follow [Configure the sample to use your Azure AD B2C tenant](https://github.com/bachoang/MSAL4J_SpringBoot_Logging/tree/main/msal-b2c-web-sample#step-2--configure-the-sample-to-use-your-azure-ad-b2c-tenant) to generate a self-signed certificate and place the **keystore.p12** file in the resources folder.
 
 ### App registration configuration
 
