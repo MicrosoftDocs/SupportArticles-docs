@@ -15,10 +15,10 @@
       href: ./teams-administration/disable-sharepoint-news-notifications.md
     - name: Error switching a tenant to Teams Only mode
       href: ./teams-administration/cannot-switch-to-teams-only-mode.md
-    - name: Include or exclude Teams from antivirus or DLP applications
-      href: ./teams-administration/include-exclude-teams-from-antivirus-dlp.md
     - name: Issues receiving messages and calls
       href: /microsoftteams/legacy-login-issues?context=/MicrosoftTeams/troubleshoot/context/context
+    - name: Prevent antivirus and DLP tools from blocking or crashing Microsoft Teams
+      href: ./teams-administration/include-exclude-teams-from-antivirus-dlp.md
     - name: Resolve issues when starting the new Teams app
       href: ./teams-sign-in/resolve-new-teams-launch-issues.md
     - name: Resolve new Teams installation issues
