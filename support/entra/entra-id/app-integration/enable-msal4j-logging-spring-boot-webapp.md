@@ -1,6 +1,6 @@
 ---
-title: Enable MSAL4J logging in a Spring Boot web application in Microsoft Entra ID
-description: Describes how to enable MSAL4J logging in a Spring Boot web application in Microsoft Entra.
+title: Enable MSAL4J Logging in a Spring Boot Web Application in Microsoft Entra ID
+description: Discusses how to enable MSAL4J logging in a Spring Boot web application in Microsoft Entra.
 ms.date: 03/10/2025
 ms.author: bachoang
 ms.service: entra-id
@@ -9,7 +9,7 @@ ms.custom: sap:Microsoft Entra App Integration and Development
 
 # Enable MSAL4J logging in a Spring Boot web application
 
-This article provides step-by-step instructions on how to enable [Microsoft Authentication Library for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) (MSAL4J) logging by using the [Logback framework](https://logback.qos.ch/) in a Spring Boot web application.
+This article provides step-by-step instructions to enable [Microsoft Authentication Library for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) (MSAL4J) logging by using the [Logback framework](https://logback.qos.ch/) in a Spring Boot web application.
 
 ## Code sample
 
@@ -17,7 +17,7 @@ The complete code sample and configuration guide for this implementation are ava
 
 ## Enable MSAL4J logging
 
-1. Add the following dependency to your pom.xml file to include the Logback framework:
+1. Add the following dependency to your Pom.xml file to include the Logback framework:
 
     ```xml
     <dependency>
@@ -27,7 +27,7 @@ The complete code sample and configuration guide for this implementation are ava
     </dependency>
     ```
 
-2. In your app project, create a new file named **logback.xml** in the **src/main/resources** folder and add the following content:
+2. In your app project, create a file that's named **Logback.xml** in the **src/main/resources** folder, and then add the following content:
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -43,8 +43,8 @@ The complete code sample and configuration guide for this implementation are ava
     </configuration>
     ```
 
-    This Appender configuration logs messages to the console. You can adjust the logging level to `error`, `warn`, `info`, or `verbose` based on your preference. For more information, see [LogBack: Appenders](https://logback.qos.ch/manual/appenders.html)
-3. Set the **logging.config** property to the location of the **logback.xml** file before the main method:
+    This Appender configuration logs messages to the console. You can adjust the logging level to `error`, `warn`, `info`, or `verbose` based on your preference. For more information, see [LogBack: Appenders](https://logback.qos.ch/manual/appenders.html).
+3. Set the **logging.config** property to the location of the **Logback.xml** file before the main method:
 
     ```java
     @SpringBootApplication
@@ -65,14 +65,14 @@ The complete code sample and configuration guide for this implementation are ava
 
 ### Enable HTTPs support
 
-his code sample is set up to run on the local server (localhost) using the HTTPS protocol. Follow [Configure the sample to use your Azure AD B2C tenant](https://github.com/bachoang/MSAL4J_SpringBoot_Logging/tree/main/msal-b2c-web-sample#step-2--configure-the-sample-to-use-your-azure-ad-b2c-tenant) to generate a self-signed certificate and place the **keystore.p12** file in the resources folder.
+This code sample is set up to run on the local server (localhost) by using the HTTPS protocol. Follow the steps in [Configure the sample to use your Azure AD B2C tenant](https://github.com/bachoang/MSAL4J_SpringBoot_Logging/tree/main/msal-b2c-web-sample#step-2--configure-the-sample-to-use-your-azure-ad-b2c-tenant) to generate a self-signed certificate. Put the **keystore.p12** file in the resources folder.
 
 ### App registration configuration
 
-Follow these steps to configure app registration in Azure AD B2C: 
+To configure app registration in Azure AD B2C, follow these steps: 
 
 1. Create two app registrations in your Azure AD B2C tenant: One for the web application and the other for the web API.
-2. Expose the required scope in the web API. Refer to [this documentation](/azure/active-directory-b2c/configure-authentication-sample-web-app-with-api?tabs=visual-studio#step-22-configure-web-api-app-scopes) for guidance on exposing web API scopes.
+2. Expose the required scope in the web API. Refer to the guidance in ["Configure web API app scopes"](/azure/active-directory-b2c/configure-authentication-sample-web-app-with-api?tabs=visual-studio#step-22-configure-web-api-app-scopes) for more information.
 3. Configure the web API scope in the **API Permissions** blade for the web application.
 4. Grant admin consent to all configured permissions in the web application.
 
@@ -84,8 +84,6 @@ Example configuration:
 
 ## Logging output example
 
-When the app is configured correctly, the logging output should resemble the following:
-
+If the app is configured correctly, the logging output should resemble the following:
 
  :::image type="content" source="media/enable-msal4j-logging-spring-boot-webapp/log-sample.png" alt-text="Diagram that shows logging output." border="true" lightbox="media/enable-msal4j-logging-spring-boot-webapp/log-sample.png":::
-
