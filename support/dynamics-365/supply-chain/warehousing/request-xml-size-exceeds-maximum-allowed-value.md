@@ -1,5 +1,5 @@
 ---
-title: Size of Request XML Exceeds Maximum Allowed Value Error in Warehouse Management mobile app
+title: Size of Request XML Exceeds Maximum Allowed Value Error
 description: Resolves the size of the request xml exceeds the maximum allowed value error in the Warehouse Management mobile app.
 ms.date: 03/12/2025
 
@@ -14,7 +14,7 @@ ms.custom: sap:Warehouse management
 ---
 # "The size of the request xml exceeds the maximum allowed value" error in the Warehouse management mobile app
 
-This article provides a resolution for the "The size of the request xml exceeds the maximum allowed value" error that occurs in the [Warehouse Management mobile app](/dynamics365/supply-chain/warehousing/install-configure-warehouse-management-app).
+This article provides a resolution for "The size of the request xml exceeds the maximum allowed value" error that occurs in the [Warehouse Management mobile app](/dynamics365/supply-chain/warehousing/install-configure-warehouse-management-app).
 
 ## Symptoms
 
