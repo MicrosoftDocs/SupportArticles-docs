@@ -7,19 +7,19 @@ ms.author: bachoang
 ms.custom: sap:Issues Signing In to Applications
 ---
 
-# troubleshooting Azure AD token acquisition errors
+# Error AADSTS50000 with issuing a token or an issue with sign-in service
 
 The AADSTS50000 error can occur during the authentication process or token acquisition flow using the token endpoint. Multiple causes can lead to these errors, and this article provides common scenarios and their resolutions.
 
 ## Symptoms
 
-When an user try to sign in to an application that's integrated into Microsoft Entra ID, the user receive the following error message:
+When a user tries to sign in to an application that's integrated into Microsoft Entra ID, the user receives the following error message:
 
 > AADSTS50000: There was an error issuing a token or an issue with our sign-in service.
 
 ## Cause 1: The user password is expired, invalid, or out of sync
 
-This issue is common in hybrid environments. The user's federated account password may be out of sync between the on-premises Active Directory and Microsoft Entra ID. Additionally, this can also occur when a user session is being revoked.
+This issue is common in hybrid environments. The user's federated account password may be out of sync between the on-premises Active Directory and Microsoft Entra ID. Additionally, this issue can also occur when a user session is being revoked.
 
 ### Solution for cause 1
 
@@ -39,7 +39,7 @@ The error you're referring to occurs during the OAuth2 device authorization gran
 
 ### Solution 3 for cause 3: verify application consent settings
 
-1. Go to the [Azure portal](https//portal.azure.com), make sure that the client application (Service Principal) exists in the tenant's **Enterprise Applications** page. You can seearch for the application by App ID.
+1. Go to the [Azure portal](https//portal.azure.com), make sure that the client application (Service Principal) exists in the tenant's **Enterprise Applications** page. You can search for the application by App ID.
 2. Verify that the user has the ability to consent to the application. Check user settings in the **Enterprise Applications** page or review relevant policies affecting user consent.
 
 ## Cause 4: Symmetric signing key is used in the application or service principal object
@@ -77,9 +77,9 @@ If a signing key is required, use a signing certificate instead. For more inform
 
 This error can occur in the following scenario:
 
-- You have a multi-tenant resource application registered in tenant A. This application exposes only **Application Permission** type.
+- You have a multitenant resource application registered in tenant A. This application exposes only **Application Permission** type.
 - In a different tenant B, you have a client application registered. In the **API permission** page for this application, you configure the permission for the resource application registered in the other tenant.
-- Then, you use use an OAuth 2 delegated grant flow (for instance auth code grant flow) to request an access token for the resource app using the `/.default` for the web API scope.
+- Then, you use an OAuth 2 delegated grant flow (for instance auth code grant flow) to request an access token for the resource app using the `/.default` for the web API scope.
 
 ### Solution for cause 5
 
