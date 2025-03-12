@@ -1,6 +1,6 @@
 ---
 title: Root Cause Undetermined for Teams Client Update Failure
-description: Provides instructions to collect diagnostic logs and contact Microsoft Support when you see "Root cause undetermined" for Teams client update failure.
+description: Provides instructions for collecting diagnostic logs and contacting Microsoft Support when a Teams client update fails with "Root cause undetermined".
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
