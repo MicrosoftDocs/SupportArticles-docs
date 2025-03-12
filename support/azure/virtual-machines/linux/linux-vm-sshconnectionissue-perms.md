@@ -1,7 +1,7 @@
 ---
 title: SSH connection to Azure Linux VM fails due to permission and ownership issues 
 description: Resolves an issue in which the SSH service fails because the /var/empty/sshd, /var/lib/empty, or /var/run/sshd directory doesn't exist, or it isn't owned by the root user, or it's group-writable or world-writable.
-ms.date: 03/10/2025
+ms.date: 03/12/2025
 author: pagienge
 ms.reviewer: divargas, adelgadohell, saimsh-msft
 ms.service: azure-virtual-machines
@@ -158,7 +158,7 @@ Here are two methods to repair the VM offline:
 
 ### <a id="offlinetroubleshooting-repairvm"></a>Use az vm repair
 
-The `az vm repair` extension of the `az` cli is described in [Repair a Linux VM by using the Azure Virtual Machine repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md).
+The `az vm repair` extension of the Azure CLI  is described in [Repair a Linux VM by using the Azure Virtual Machine repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md).
 
 Follow these steps to automate the manual offline process:
 
