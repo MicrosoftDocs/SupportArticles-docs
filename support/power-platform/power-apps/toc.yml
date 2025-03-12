@@ -30,6 +30,8 @@
       href: create-and-use-apps/custom-pages-sdk-script-not-load.md
     - name: Filter expression returns extra blank records in results
       href: create-and-use-apps/filter-blank-records.md
+    - name: Troubleshoot wrap issues
+      href: manage-apps/wrap-issues.md
 - name: Model-driven apps
   items:
     - name: How to create a vanilla repro model-driven app
@@ -112,10 +114,6 @@
       href: integrate-products/troubleshoot-set-up-sharepoint-online.md
     - name: Troubleshooting document management issues
       href: integrate-products/troubleshoot-doc-management-issues.md
-- name: Manage apps
-  items:
-    - name: Troubleshoot wrap issues
-      href: manage-apps/wrap-issues.md
 - name: Mobile Apps
   items:
     - name: Troubleshoot offline sync errors in the Power Apps mobile app

@@ -15,24 +15,50 @@ metadata:
 
 landingContent:
   # Card
-  - title: Troubleshoot common Power Apps issues
+  - title: Troubleshoot general Power Apps issues
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Best practices when updating a flow
-            url: connections/best-practices-when-updating-a-flow.md
           - text: Common issues and resolutions for Power Apps
             url: create-and-use-apps/common-issues-and-resolutions.md
           - text: General Power Apps debugging strategies
             url: create-and-use-apps/isolate-common-issues.md
-          - text: Isolate issues in canvas apps
-            url: create-and-use-apps/isolate-canvas-app-issues.md
-          - text: Isolate issues in model-driven app
-            url: create-and-use-apps/isolate-model-app-issues.md
           - text: Troubleshoot startup issues for Power Apps
             url: sign-in/troubleshooting-startup-issues.md
           - text: Troubleshoot Power Query issues
             url: connections/troubleshoot-power-query-issues.md
+
+  # Card
+  - title: Canvas Apps
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Isolate issues in canvas apps
+            url: create-and-use-apps/isolate-canvas-app-issues.md
+          - text: How to create a minimal repro canvas app
+            url: create-and-use-apps/minimal-canvas-app-repro.md
+          - text: Troubleshoot date and time issues in Power Apps canvas apps
+            url: create-and-use-apps/troubleshoot-canvas-app-date-time-issues.md
+          - text: Troubleshoot canvas app performance issues
+            url: create-and-use-apps/troubleshoot-perf-table.md
+
+  # Card
+  - title: Troubleshoot common Model driven Apps issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Isolate issues in model-driven app
+            url: create-and-use-apps/isolate-model-app-issues.md
+          - text: How to create a vanilla repro model-driven app
+            url: create-and-use-apps/vanilla-model-driven-app-repro.md
+          - text: Troubleshoot date and time issues in model-driven apps
+            url: create-and-use-apps/troubleshoot-model-driven-app-date-time-issues.md
+          - text: Troubleshoot Lookup issues in model-driven apps
+            url: create-and-use-apps/troubleshoot-model-driven-app-lookup-issues.md
+          - text: Troubleshoot view issues in model-driven apps
+            url: create-and-use-apps/troubleshoot-model-driven-app-view-issues.md
+          - text: Troubleshoot grid issues in model-driven apps
+            url: create-and-use-apps/grid-issues.md
 
    # Card
   - title: Connections
@@ -41,18 +67,8 @@ landingContent:
         links:
           - text: Troubleshoot broken connections
             url: ../power-automate/connections/troubleshoot-broken-connections.md?context=/troubleshoot/power-platform/power-apps/context/context      
-
-  # Card
-  - title: Create and use apps
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Troubleshoot ribbon issues
-            url: create-and-use-apps/ribbon-issues.md
-          - text: Troubleshoot grid issues
-            url: create-and-use-apps/grid-issues.md
-          - text: Regenerate ribbon metadata
-            url: create-and-use-apps/regenerate-ribbon-metadata.md
+          - text: Connection errors when running flows in Power Apps
+            url: connections/best-practices-when-updating-a-flow  
 
   # Card
   - title: Documentation and training
