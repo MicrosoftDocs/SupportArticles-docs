@@ -80,6 +80,8 @@
       href: desktop-flows/agent-connectivity-issues-pad.md
     - name: Browser automation actions stop working after a browser update
       href: desktop-flows/browser-automation-error-after-chromium-update.md
+    - name: Can't connect to an IBM Personal Communications session
+      href: desktop-flows/cannot-connect-to-ibm-personal-communications.md 
     - name: Can't silently join a machine group
       href: desktop-flows/silent-join-machine-group-troubleshoot.md
     - name: Can't automate webpage with cross-domain iframes
