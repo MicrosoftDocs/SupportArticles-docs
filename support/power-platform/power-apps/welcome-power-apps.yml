@@ -29,7 +29,7 @@ landingContent:
             url: connections/troubleshoot-power-query-issues.md
 
   # Card
-  - title: Canvas Apps
+  - title: Canvas apps
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -40,10 +40,10 @@ landingContent:
           - text: Troubleshoot date and time issues in Power Apps canvas apps
             url: create-and-use-apps/troubleshoot-canvas-app-date-time-issues.md
           - text: Troubleshoot canvas app performance issues
-            url: create-and-use-apps/troubleshoot-perf-table.md
+            url: canvas-app-performance/troubleshoot-perf-table.md
 
   # Card
-  - title: Troubleshoot common Model driven Apps issues
+  - title: Model-driven apps
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -68,7 +68,7 @@ landingContent:
           - text: Troubleshoot broken connections
             url: ../power-automate/connections/troubleshoot-broken-connections.md?context=/troubleshoot/power-platform/power-apps/context/context      
           - text: Connection errors when running flows in Power Apps
-            url: connections/best-practices-when-updating-a-flow  
+            url: connections/best-practices-when-updating-a-flow.md  
 
   # Card
   - title: Documentation and training
