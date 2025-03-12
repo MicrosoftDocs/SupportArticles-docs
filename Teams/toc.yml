@@ -23,6 +23,8 @@
       href: ./teams-sign-in/resolve-new-teams-launch-issues.md
     - name: Resolve new Teams installation issues
       href: ./teams-administration/fix-new-teams-installation-issues.md
+    - name: "Root cause undetermined" for Teams client update
+      href: ./teams-administration/root-cause-undetermined-teams-update-failure.md  
     - name: Self-help diagnostics for Teams admins
       href: ./teams-administration/admin-self-help-diagnostics.md
     - name: '"The following application instance is not present in BVD" error when assigning a phone number to a resource accounts'
