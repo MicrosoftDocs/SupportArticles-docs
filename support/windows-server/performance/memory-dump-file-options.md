@@ -104,10 +104,10 @@ The following registry value is used under `HKEY_LOCAL_MACHINE\System\CurrentCon
 
 - CrashDumpEnabled REG_DWORD 0x0 = None
 - CrashDumpEnabled REG_DWORD 0x1 = Complete memory dump
-- CrashDumpEnabled REG_DWORD 0x1 = Active memory dump (with the `FilterPages` value set to `1`)
 - CrashDumpEnabled REG_DWORD 0x2 = Kernel memory dump
 - CrashDumpEnabled REG_DWORD 0x3 = Small memory dump (64 KB)
 - CrashDumpEnabled REG_DWORD 0x7 = [Automatic memory dump](/windows-hardware/drivers/debugger/automatic-memory-dump)
+- CrashDumpEnabled REG_DWORD 0x1 and FilterPages REG_DWORD 0x1 = Active memory dump
 
 Additional registry values for CrashControl:
 
