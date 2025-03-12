@@ -12881,6 +12881,14 @@
       "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-when-installing-crm-2016-outlook"
     },
     {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/we-cannot-load-this-app.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/error-when-opening-365-app-outlook"
+    },   
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/error-incomingemailrejected-install-dynamics-365-app-outlook.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/error-install-dynamics-365-app-outlook"
+    },
+    {
       "source_path": "support/power-platform/dataverse/d365-app-outlook/current-user-role-not-have-required-permissions.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/privilege-error-occurs-when-using-dynamics-365-app-for-outlook"
     },
