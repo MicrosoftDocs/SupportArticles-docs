@@ -84,6 +84,6 @@ Example configuration:
 
 ## Logging output example
 
-If the app is configured correctly, the logging output should resemble the following:
+If the app is configured correctly, the logging output should resemble the following output.
 
  :::image type="content" source="media/enable-msal4j-logging-spring-boot-webapp/log-sample.png" alt-text="Diagram that shows logging output." border="true" lightbox="media/enable-msal4j-logging-spring-boot-webapp/log-sample.png":::
