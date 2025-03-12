@@ -113,15 +113,5 @@ Log: Name: OnError Computer: COMPUTERNAME Operator: DOMAINNAME\username Source N
 
 ## References
 
-- For more information about a similar problem, see [You receive an "Error loading" error message when you try to run a SQL Server 2005 Integration Services package in SQL Server 2005](https://support.microsoft.com/help/904800)
+For more information about how to create package templates, see [How to create a package template in SQL Server Business Intelligence Development Studio](https://support.microsoft.com/help/908018)
 
-- For more information about how to use the Dtutil.exe utility in batch operations, see [How to use the dtutil utility (Dtutil.exe) to set the protection level of a batch of SQL Server Integration Services (SSIS) packages in SQL Server 2005](https://support.microsoft.com/help/906562)
-
-- For more information about how to create package templates, see [How to create a package template in SQL Server Business Intelligence Development Studio](https://support.microsoft.com/help/908018)
-
-- For more information about SSIS package security and the `ProtectionLevel` property, see the **Security Considerations for Integration Services** topic in SQL Server 2005 Books Online.
-
-Unfortunately, users are not aware that default agent job step settings put them in this state. For more information about SQL Server Agent proxies and SSIS, see the following topics in SQL Server 2005 Books Online:
-
-- Scheduling package execution in SQL Server Agent
-- Creating SQL Server Agent proxies

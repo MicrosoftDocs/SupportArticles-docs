@@ -17,9 +17,9 @@ You may receive an error message similar to the following when using SQL Server 
 
 > Failed to retrieve data for this request (Microsoft.SqlServer.Management.sdk.sfc)
 
-## Troubleshooting
+## Cause and resolution
 
-There can be multiple causes that can contribute to this problem. The following items may help you understand and troubleshoot the issue:
+There can be multiple causes that can contribute to this problem. The following items may help you understand and troubleshoot the issue:
 
 - Check if you are running into any known issues listed below and use the resolutions documented in the corresponding articles:
 

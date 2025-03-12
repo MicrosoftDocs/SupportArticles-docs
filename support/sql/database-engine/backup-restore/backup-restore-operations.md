@@ -37,9 +37,9 @@ Backup and restore operations are I/O intensive. Backup/Restore throughput depen
 
 1. Check whether you're experiencing any of the known issues that are listed in the following table. Consider whether you should implement the changes or apply the fixes and best practices that are discussed in the corresponding articles.
 
-    |Knowledge Base or Books Online link|Explanation and recommended actions|
+    |Knowledge Base link|Explanation and recommended actions|
     |---|---|
-    | [Optimizing Backup and Restore Performance in SQL Server](https://technet.microsoft.com/library/ms190954%28v=sql.105%29.aspx)|The Books Online topic covers various best practices that you can use to improve the performance of Backup/Restore operations. For example, you can assign the `SE_MANAGE_VOLUME_NAME` special privilege to the Windows account that's running SQL Server to enable instant initialization of data files. This can produce significant performance gains.|
+    | [Optimizing Backup and Restore Performance in SQL Server](https://technet.microsoft.com/library/ms190954%28v=sql.105%29.aspx)|This article covers various best practices that you can use to improve the performance of Backup/Restore operations. For example, you can assign the `SE_MANAGE_VOLUME_NAME` special privilege to the Windows account that's running SQL Server to enable instant initialization of data files. This can produce significant performance gains.|
     | [2920151 Recommended hotfixes and updates for Windows Server 2012 R2-based failover clusters](https://support.microsoft.com/help/2920151) <br/><br/> [2822241 Windows 8 and Windows Server 2012 update rollup: April 2013](https://support.microsoft.com/help/2822241)|Current system rollups can include fixes for known issues at the system level that can degrade the performance of programs such as SQL Server. Installing these updates can help prevent such issues.|
     | [2878182 FIX: User mode processes in an application are unresponsive on servers that are running Windows Server 2012](https://support.microsoft.com/help/2878182) <br/><br/>|Backup operations are I/O intensive and can be affected by this bug. Apply this fix to help prevent these issues.|
     | [Configure antivirus software to work with SQL Server](../security/antivirus-and-sql-server.md)|Antivirus software may hold locks on .bak files. This can affect the performance of backup and restore operations. Follow the guidance in this article to exclude backup files from virus scans.|
@@ -161,19 +161,30 @@ SQL Server provides a Virtual Backup Device Interface (VDI) tool. This API enabl
   |Backups of case-sensitive databases failing| [2987610 FIX: Error when you back up a database that has case-sensitive collation by using VSS in SQL Server 2012 SP2](https://support.microsoft.com/help/2987610) |
   |Third-party backups that are made by using VSS writer may fail and return 8229 errors.| [2987610 FIX: Error when you back up a database that has case-sensitive collation by using VSS in SQL Server 2012 SP2](https://support.microsoft.com/help/2987610) |
   | Understanding how VDI backup works |[How It Works: SQL Server - VDI (VSS) Backup Resources](https://techcommunity.microsoft.com/t5/sql-server-support/how-it-works-sql-server-vdi-vss-backup-resources/ba-p/315695) |
-  |Azure Site recovery agent reports failure | [ASR Agent or other non-component VSS backup fails for a server hosting SQL Server 2008 R2](https://support.microsoft.com/help/4504103) |
 
 ### More resources
 
 [How It Works: How many databases can be backed up simultaneously?](https://techcommunity.microsoft.com/t5/sql-server-support/how-it-works-how-many-databases-can-be-backed-up-simultaneously/ba-p/315874)
 
-## Miscellaneous issues
+## Backups might fail if change tracking is enabled
 
-|Symptom/scenario|Remedial actions or additional information|
-|---|---|
-|Backups might fail if change tracking is enabled on the databases and returns errors that resemble the following:<br/><br/>"Error: 3999, Severity: 17, State: 1. <br/><br/>\<Time Stamp\> spid \<spid\> Failed to flush the commit table to disk in dbid 8 due to error 2601. Check the error log for more information."<br/><br/><br/>|See the following Microsoft Knowledge Base articles:<ul><li> [2682488 FIX: Backup operation fails in a SQL Server 2008, in a SQL Server 2008 R2 or in a SQL Server 2012 database after you enable change tracking](https://support.microsoft.com/help/2682488)</li><li> [2603910 FIX: Backup fails in SQL Server 2008, in SQL Server 2008 R2 or in SQL Server 2012 if you enable change tracking on the database](https://support.microsoft.com/help/2603910) </li><li> [2522893 FIX: A backup operation on a SQL Server 2008 or SQL Server 2008 R2 database fails if you enable change tracking on this database](https://support.microsoft.com/help/2522893)</li><ul> |
-|Issues restoring backups of encrypted databases| [Move a TDE Protected Database to Another SQL Server](/sql/relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server) |
-|Trying to restore a CRM backup from the Enterprise edition fails on a Standard edition| [2567984 "Database cannot be started in this edition of SQL Server" error when restoring a Microsoft Dynamics CRM database](https://support.microsoft.com/help/2567984) |
+Backups might fail if change tracking is enabled on the databases and returns errors that resemble the following one:
+
+> "Error: 3999, Severity: 17, State: 1.  
+> \<Time Stamp\> spid \<spid\> Failed to flush the commit table to disk in dbid 8 due to error 2601. Check the error log for more information."
+
+To solve the issue, see the following articles:
+
+- [2682488 FIX: Backup operation fails in a SQL Server 2008, in a SQL Server 2008 R2 or in a SQL Server 2012 database after you enable change tracking](https://support.microsoft.com/help/2682488)
+- [2603910 FIX: Backup fails in SQL Server 2008, in SQL Server 2008 R2 or in SQL Server 2012 if you enable change tracking on the database](https://support.microsoft.com/help/2603910)
+
+## Issues restoring backups of encrypted databases
+
+If you encounter issues when restoring backups of encrypted databases, see [Move a TDE Protected Database to Another SQL Server](/sql/relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server).
+
+## Fail to restore a CRM backup from the Enterprise edition
+
+If you fail to restore a CRM backup from the Enterprise edition on a Standard edition, see [2567984 "Database cannot be started in this edition of SQL Server" error when restoring a Microsoft Dynamics CRM database](https://support.microsoft.com/help/2567984).
   
 ## FAQ about SQL Server backup and restore operations
 
@@ -213,9 +224,9 @@ SQL Server provides a Virtual Backup Device Interface (VDI) tool. This API enabl
 
 ## Reference topics for SQL Server backup and restore operations
 
-- For more information about backup and restore operations, see the following topics in Books Online:
+- For more information about backup and restore operations, see the following article:
 
-   ["Back Up and Restore of SQL Server Databases"](/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases): This topic covers the concepts of the backup and restore operations for SQL Server databases, provides links to additional topics, and provides detailed procedures to run various backups or restore tasks (such as verifying backups, and backing up by using T-SQL or SSMS). This is the parent topic about this subject in SQL Server documentation.
+   ["Back Up and Restore of SQL Server Databases"](/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases): This article covers the concepts of the backup and restore operations for SQL Server databases, provides links to additional topics, and provides detailed procedures to run various backups or restore tasks (such as verifying backups, and backing up by using T-SQL or SSMS). This is the parent topic about this subject in SQL Server documentation.
 - The following table lists additional topics that you might want to review for specific tasks that are related to backup and restore operations.
 
     |Reference|Description|
