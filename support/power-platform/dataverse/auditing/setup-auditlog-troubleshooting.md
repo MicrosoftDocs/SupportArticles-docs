@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot sync issues in audit logs
+title: Troubleshoot synchronization issues in audit logs
 description: Provides solutions for resolving synchronization issues in audit logs by validating API permissions and secret environment variables.
 author: pete-msft
 ms.component: pa-admin
@@ -18,11 +18,11 @@ This article provides guidance for resolving synchronization issues in audit log
 
 ## API permissions
 
-To ensure you have the correct API permissions,
+To ensure that you have the correct API permissions, follow these steps.
 
-1. Navigate to your [app registration](/entra/identity-platform/quickstart-configure-app-access-web-apis#application-permission-to-microsoft-graph).
-1. Ensure that the API permissions are set to **Application** type rather than **Delegated**.
-1. Check the permission status and verify that it's **Granted**.
+1. Go to your [app registration](/entra/identity-platform/quickstart-configure-app-access-web-apis#application-permission-to-microsoft-graph).
+1. Ensure that the API permissions are set to the **Application** type instead of the **Delegated** type.
+1. Verify that the permission status is **Granted**.
 
 :::image type="content" source="media/api-permissions-type-status.png" alt-text="Screenshot that highlights the Application type and Granted status of a configured permission." lightbox="media/api-permissions-type-status.png":::
 
@@ -30,7 +30,7 @@ To ensure you have the correct API permissions,
 
 If you're using [Azure Key Vault](/azure/key-vault/general/basic-concepts) to store the app registration secret, validate that the Azure Key Vault permissions are correct.
 
-A user must be in the _Key Vault Secrets User_ role to read and the _Key Vault Contributor_ role to update. For detailed role definitions, see [Azure built-in roles for Key Vault data plane operations](/azure/key-vault/general/rbac-guide?tabs=azure-cli#azure-built-in-roles-for-key-vault-data-plane-operations).
+A user must be in the _Key Vault Secrets User_ role to read and the _Key Vault Contributor_ role to update. You can find detailed role definitions in [Azure built-in roles for Key Vault data plane operations](/azure/key-vault/general/rbac-guide?tabs=azure-cli#azure-built-in-roles-for-key-vault-data-plane-operations).
 
 :::image type="content" source="media/azure-key-vault-roles.png" alt-text="Screenshot that shows the Key Vault Contributor and Key Vault Secrets User roles." lightbox="media/azure-key-vault-roles.png":::
 
