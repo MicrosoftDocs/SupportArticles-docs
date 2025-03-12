@@ -1,35 +1,41 @@
 ---
 title: Troubleshoot sync issues in audit logs
-description: Learn about common causes for synchronization issues to help with troubleshooting.
+description: Provides solutions for resolving synchronization issues in audit logs by validating API permissions and secret environment variables.
 author: pete-msft
 ms.component: pa-admin
-ms.date: 02/20/2025
+ms.date: 03/12/2025
 ms.author: petrip
-ms.reviewer: paulliew, sericks
+ms.reviewer: paulliew, sericks, v-christread
 ms.custom: sap:Microsoft Dataverse\Auditing
 search.audienceType: 
   - admin
 contributors:
 - Grant-Archibald-MS
 ---
-# Troubleshoot sync issues in audit logs
+# Troubleshoot synchronization issues in audit logs
+
+This article provides guidance for resolving synchronization issues in audit logs. It focuses on validating API permissions and secret environment variables to ensure proper configuration for your app registration.
 
 ## API permissions
 
-Go to your app registration, and validate that you have the correct API permissions. Your app registration requires application permissions, not delegated permissions. Validate that the status is _Granted_.
+To ensure you have the correct API permissions,
 
-:::image type="content" source="media/auditlog-troubleshoot-1.png" alt-text="Screenshot that highlights the Application type and Granted status of a configured permission." lightbox="media/auditlog-troubleshoot-1.png":::
+1. Navigate to your [app registration](/entra/identity-platform/quickstart-configure-app-access-web-apis#application-permission-to-microsoft-graph).
+1. Ensure that the API permissions are set to **Application** type rather than **Delegated**.
+1. Check the permission status and verify that it's **Granted**.
+
+:::image type="content" source="media/api-permissions-type-status.png" alt-text="Screenshot that highlights the Application type and Granted status of a configured permission." lightbox="media/api-permissions-type-status.png":::
 
 ## Secret environment variable - Azure secret
 
-If you're using Azure Key Vault to store the app registration secret, validate that the Azure Key Vault permissions are correct.
+If you're using [Azure Key Vault](/azure/key-vault/general/basic-concepts) to store the app registration secret, validate that the Azure Key Vault permissions are correct.
 
-A user must be in the _Key Vault Secrets User_ role to read and the _Key Vault Contributor_ role to update.
+A user must be in the _Key Vault Secrets User_ role to read and the _Key Vault Contributor_ role to update. For detailed role definitions, see [Azure built-in roles for Key Vault data plane operations](/azure/key-vault/general/rbac-guide?tabs=azure-cli#azure-built-in-roles-for-key-vault-data-plane-operations).
 
-:::image type="content" source="media/auditlog-troubleshoot-2.png" alt-text="Screenshot that shows the Key Vault Contributor and Key Vault Secrets User roles." lightbox="media/auditlog-troubleshoot-2.png":::
+:::image type="content" source="media/azure-key-vault-roles.png" alt-text="Screenshot that shows the Key Vault Contributor and Key Vault Secrets User roles." lightbox="media/azure-key-vault-roles.png":::
 
-If you experience other issues with Azure Key Vault that are related to a firewall, static IP addresses for the Dataverse environment, or other such feature issues, contact product support to fix them.
+If you have other issues with Azure Key Vault related to a firewall, static IP addresses for the Dataverse environment, or other feature issues, contact Microsoft Support through the **Help + Support** experience in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/support).
 
 ## Secret environment variable - plain text
 
-If you're using plain text to store the app registration secret, validate that you entered the secret value itself, not the secret ID. The secret value is a longer string that has a larger character set than a globally unique identifier (GUID). For example, the string for the secret value might include tilde (~) characters.
+If you're using plain text to store the app registration secret, validate that you entered the secret value itself, not the secret ID. The secret value is a longer string that has a larger character set compared to a globally unique identifier (GUID). For example, the string for the secret value might include tilde (~) characters.
