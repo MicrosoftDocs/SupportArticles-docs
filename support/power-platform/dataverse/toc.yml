@@ -44,9 +44,7 @@
       href: d365-app-outlook/errors-when-opening-365-app-outlook.md
     - name: Experience without Server-Side Synchronization
       href: d365-app-outlook/experience-without-server-side-synchronization.md
-    - name: IncomingEmailRejected error when installing App for Outlook
-      href: d365-app-outlook/error-incomingemailrejected-install-dynamics-365-app-outlook.md
-    - name: IncomingEmailS2SApprovalNeeded error when installing App for Outlook
+    - name: IncomingEmailS2SApprovalNeeded or IncomingEmailRejected error during installation
       href: d365-app-outlook/error-install-dynamics-365-app-outlook.md
     - name: Item level Server-Side Synchronization issues
       href: d365-app-outlook/troubleshoot-item-level-server-side-synchronization-issues.md
