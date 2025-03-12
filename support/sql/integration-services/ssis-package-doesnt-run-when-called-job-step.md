@@ -113,5 +113,6 @@ Log: Name: OnError Computer: COMPUTERNAME Operator: DOMAINNAME\username Source N
 
 ## References
 
-For more information about how to create package templates, see [How to create a package template in SQL Server Business Intelligence Development Studio](https://support.microsoft.com/help/908018)
+- [How to create a package template in SQL Server Business Intelligence Development Studio](https://support.microsoft.com/help/908018)
 
+- [Connectivity error 0x80004005 occurs when you run an SSIS package as a SQL Agent job](../database-engine/connect/sql-server-faces-connectivity-issue-ssispack-fail.md)
