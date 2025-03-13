@@ -46,7 +46,6 @@ Backup and restore operations are I/O intensive. Backup/Restore throughput depen
     | [2820470 Delayed error message when you try to access a shared folder that no longer exists in Windows](https://support.microsoft.com/help/2820470)|Discusses an issue that occurs when you try to access a shared folder that no longer exists in Windows 2012 and later versions.|
     | [967351 A heavily fragmented file in an NTFS volume may not grow beyond a certain size](https://support.microsoft.com/help/967351)|Discusses an issue that occurs when an NTFS file system is heavily fragmented.|
     | [304101 Backup program is unsuccessful when you back up a large system volume](https://support.microsoft.com/help/304101)||
-    | [2455009 FIX: Slow performance when you recover a database if there are many VLFs inside the transaction log in SQL Server 2005, in SQL Server 2008 or in SQL Server 2008 R2](https://support.microsoft.com/help/2455009)|The presence of many virtual log files could affect the required time to restore a database. This is especially true during the recovery phase of the restore operation. For information about other possible issues that can be caused by the presence of many VLFs, see [Database operations take a long time to complete, or they trigger errors when the transaction log has numerous virtual log files](https://support.microsoft.com/help/2028436).|
     |A backup or restore operation to a network location is slow|Isolate the issue to the network by trying to copy a similarly sized file to the network location from the server that's running SQL Server. Verify the performance.|
 
 2. Check for error messages in the SQL Server error log and Windows event log for more pointers about the cause of the problem.
@@ -57,9 +56,13 @@ Backup and restore operations are I/O intensive. Backup/Restore throughput depen
 
 ## Issues that affect database restoration between different SQL Server versions
 
+**Symptoms:**
+
 A SQL Server backup can't be restored to an earlier version of SQL Server than the version at which the backup was created. For example, you can't restore a backup that's taken on a SQL Server 2019 instance to a SQL Server 2017 instance. Otherwise, the following error message appears:
 
 > Error 3169: The database was backed up on a server running version %ls. That version is incompatible with this server, which is running version %ls. Either restore the database on a server that supports the backup, or use a backup that is compatible with this server.
+
+**Resolution:**
 
 Use the following method to copy a database that's hosted on a later version of SQL Server to an earlier version of SQL Server.
 
@@ -83,17 +86,23 @@ For more information about how to generate scripts for your database, see [Scrip
 
 ## Backup job issues in Always On environments
 
-If you encounter problems that affect backup jobs or maintenance plans in Always On environments, note the following:
+**Symptoms:**
+
+You encounter problems that affect backup jobs or maintenance plans in Always On environments.
+
+**Resolution:**
 
 - By default, the automatic backup preference is set to **Prefer Secondary**. This specifies that backups should occur on a secondary replica - except if the primary replica is the only replica online. You can't take differential backups of your database by using this setting. To change this setting, use SSMS on your current primary replica, and navigate to **Backup Preferences** page under **Properties** of your availability group.
 - If you're using a maintenance plan or scheduled jobs to generate backups of your databases, make sure to create the jobs for each availability database on every server instance that hosts an availability replica for the availability group.
 
-For more information about backups in an Always On environment, see the following topics:
+For more information about backups in an Always On environment, see the following articles:
 
 - [Configure backups on secondary replicas of an Always On availability group](/sql/database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server)
 - [Offload supported backups to secondary replicas of an availability group](/sql/database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups)
 
 ## Media-related errors when you restore a database from a backup
+
+**Symptoms:**
 
 If you receive error messages that indicate a file issue, this is symptomatic of a corrupted backup file. The following are some examples of errors that you could get if a backup set is corrupted:
 
@@ -104,7 +113,11 @@ If you receive error messages that indicate a file issue, this is symptomatic of
 > [!NOTE]
 > You can use the [Restore Header](/sql/t-sql/statements/restore-statements-headeronly-transact-sql) statement to check your backups.
 
+**Cause:**
+
 These issues can occur because of issues that affect the underlying hardware (hard disks, network storage, and so on) or that are related to a virus or malware. Review Windows System event logs and hardware logs for reported errors, and take appropriate action (for example, upgrade firmware or fix networking issues).
+
+**Resolution:**
 
 To prevent these errors, enable the **Backup CHECKSUM** option when you run a backup to avoid backing up a corrupted database. For more information, see [Possible Media Errors During Backup and Restore (SQL Server)](/sql/relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server).
 
@@ -116,6 +129,8 @@ To fix these issues, you have to either locate another usable backup file or cre
 > If a backup file restores successfully on one server but not on another, try different ways to copy the file between the servers. For example, try [robocopy](/windows-server/administration/windows-commands/robocopy) instead of a regular copy operation.
 
 ## Backups fail because of permissions issues
+
+**Symptoms:**
 
 When you try to run database backup operations, one of the following errors occurs.
 
@@ -135,7 +150,11 @@ When you try to run database backup operations, one of the following errors occu
     Possible failure reasons: Problems with the query, "ResultSet" property not set correctly, parameters not set correctly, or connection not established correctly.
     ```
 
+**Cause:**
+
 Either of these scenarios can occur if the SQL Server service account doesn't have Read and Write permissions to the folder that backups are being written to. Backup statements can be run either as part of a job step or manually from SQL Server Management Studio. In either case, they always run under the context of the SQL Server Service startup account. Therefore, if the service account doesn't have the necessary privileges, you receive the error messages that were noted earlier.
+
+**Resolution:**
 
 For more information, see [Backup Devices](/sql/relational-databases/backup-restore/backup-devices-sql-server).
 
@@ -168,10 +187,14 @@ SQL Server provides a Virtual Backup Device Interface (VDI) tool. This API enabl
 
 ## Backups might fail if change tracking is enabled
 
+**Symptoms:**
+
 Backups might fail if change tracking is enabled on the databases and returns errors that resemble the following one:
 
 > "Error: 3999, Severity: 17, State: 1.  
 > \<Time Stamp\> spid \<spid\> Failed to flush the commit table to disk in dbid 8 due to error 2601. Check the error log for more information."
+
+**Resolution:**
 
 To solve the issue, see the following articles:
 
@@ -180,11 +203,23 @@ To solve the issue, see the following articles:
 
 ## Issues restoring backups of encrypted databases
 
-If you encounter issues when restoring backups of encrypted databases, see [Move a TDE Protected Database to Another SQL Server](/sql/relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server).
+**Symptoms:**
+
+You encounter issues when restoring backups of encrypted databases.
+
+**Resolution:**
+
+To solve the issue, see [Move a TDE Protected Database to Another SQL Server](/sql/relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server).
 
 ## Fail to restore a CRM backup from the Enterprise edition
 
-If you fail to restore a CRM backup from the Enterprise edition on a Standard edition, see [2567984 "Database cannot be started in this edition of SQL Server" error when restoring a Microsoft Dynamics CRM database](https://support.microsoft.com/help/2567984).
+**Symptoms:**
+
+You fail to restore a CRM backup from the Enterprise edition on a Standard edition.
+
+**Resolution:**
+
+To solve the issue, see [2567984 "Database cannot be started in this edition of SQL Server" error when restoring a Microsoft Dynamics CRM database](https://support.microsoft.com/help/2567984).
   
 ## FAQ about SQL Server backup and restore operations
 

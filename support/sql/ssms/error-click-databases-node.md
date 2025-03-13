@@ -13,38 +13,48 @@ _Original KB number:_ &nbsp; 956179
 
 ## Symptoms
 
-You may receive an error message similar to the following when using SQL Server Management Studio (SSMS)
+You might receive an error message similar to the following one when using SQL Server Management Studio (SSMS):
 
 > Failed to retrieve data for this request (Microsoft.SqlServer.Management.sdk.sfc)
 
-## Cause and resolution
+## Troubleshooting
 
-There can be multiple causes that can contribute to this problem. The following items may help you understand and troubleshoot the issue:
+There can be multiple symptoms that can contribute to this problem. The following items may help you understand and troubleshoot the issue:
 
-- Check if you are running into any known issues listed below and use the resolutions documented in the corresponding articles:
+- **Symptom 1:**
+
+  You might run into known issues in the following articles:
 
   - [SQL Server 2016 Agent fails to start or “Failed to retrieve data” error when you try to read error log from SSMS 2016](https://support.microsoft.com/help/3185365)
 
   - [KB4550657 - FIX: Error occurs when you interact with SQL Server Agent in SQL Server 2019](https://support.microsoft.com/help/4550657)
 
-- You can run into this issue if are using an older version of SSMS and when one of the following conditions is true:
+  **Resolution:**
+
+   To solve the known issues, see the resolutions documented in the corresponding articles above.
+
+- **Symptom 2:**
+
+  You can run into this issue if using an older version of SSMS and when one of the following conditions is true:
 
   - SQL Server Management Studio cannot correctly read one or more databases. Therefore, certain properties of a database cannot be retrieved.
 
-  - One or more databases is in an offline mode and you are using an older version of SSMS to connect to that SQL instance hosting this offline database.
+  - One or more databases is in an offline mode and you're using an older version of SSMS to connect to that SQL instance hosting this offline database.
 
-  In these situations, the collection of objects does not appear in the **Object Explorer** pane or in the **Object Explorer Details** pane. Therefore, certain properties of the database are not computed as a group in the collection of objects.
+  In these situations, the collection of objects doesn't appear in the **Object Explorer** pane or in the **Object Explorer Details** pane. Therefore, certain properties of the database aren't computed as a group in the collection of objects.
 
-   > [!NOTE]
-   > This problem also occurs if you are not a member of the Sysadmins group.
+  > [!NOTE]
+  > This problem also occurs if you're not a member of the Sysadmins group.
 
-   To work around this problem, using the older version of SSMS follow these steps:
+  **Resolution:**
 
-    1. Close the error message.
+  To work around this problem, follow these steps:
 
-    2. Press **F7** to open the Object Explorer Details pane.
+  1. Close the error message.
 
-    3. Right-click the column headers, and make sure that only the following columns are selected:
+  2. Press **F7** to open the **Object Explorer Details** pane.
+
+  3. Right-click the column headers, and make sure that only the following columns are selected:
 
        - Name
 
@@ -54,8 +64,7 @@ There can be multiple causes that can contribute to this problem. The following 
 
        - Owner
 
-    4. Right-click the Databases node, and then click Refresh.
+  4. Right-click the **Databases** node, and then select **Refresh**.
 
-    Alternatively, you can download and install SSMS from [Download SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) and see if the issue goes away. If the issue still occurs with new version of SSMS, see [SQL Server help and feedback](/sql/sql-server/sql-server-get-help) for additional ways to get assistance with your issue.
+  Alternatively, you can download and install SSMS from [Download SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) and see if the issue goes away. If the issue still occurs with new version of SSMS, see [SQL Server help and feedback](/sql/sql-server/sql-server-get-help) for additional ways to get assistance with your issue.
 
-- You are connecting to a SQL Server 2008 R2 or an earlier version of SQL Server and when guest user is disabled in the msdb database. For additional information review [You should not disable the guest user in the msdb database in SQL Server](https://support.microsoft.com/help/2539091)
