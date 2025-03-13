@@ -33,7 +33,7 @@ To work around this issue, follow these steps:
 
     The **Missing dependencies** page lists all the components that are missing from the target environment. It also shows three categories of dependencies from which the component dependencies are obtained. The component missing issue might occur due to missing an application, a managed solution or an unmanaged component.
 
-2. Resolve this issue based on the different types of dependencies described in the following sections:
+2. Expand each section of dependencies that is encountered and resolve this issue based on the different types of dependencies described in the following sections, once the missing dependencies are fixed, retry the import:
 
 ### Missing dependencies coming from a Dynamics 365 application
 
@@ -56,6 +56,18 @@ You can find these dependencies in the **Managed Solution** section of the **Mis
 ### Missing dependencies on the "Active" solutions
 
 You can find these dependencies in the **Unmanaged components** section of the **Missing dependencies** page. This indicates that the dependency is from unmanaged customization in the source environment. To resolve this issue, return to the source environment, include the missing components, export the solution again, and then import it into the target environment.
+
+### Example
+
+The following example illustrates a scenario when a system administrator performs a solution import and encounters a missing dependencies which has applications, managed solutions and unmanaged components missing.
+
+:::image type="content" source="media/missing-dependency-on-solution-import/missing-dependencies-update-experience.png" alt-text="Example of the application upgrade link for a component with missing dependencies." lightbox="media/missing-dependency-on-solution-import/missing-dependencies-update-experience.png":::
+
+Here the solution has taken dependencies on the components of two applications which are missing in the target environment. One application is not installed, and the other application is installed but outdated in target environment. 
+The information for each application missing is provided in the format <solution_name> (<solution_version>) from <application_name>. When expanded further, component information is provided. Next to application name is Install or Update button to redirect the user to Power platform admin center for Install or Update.
+
+The solution has also taken dependencies on the components of three managed solutions and two unmanaged components. Expanding each section will help to determine more details. These can be resolved based on the instruction provided above.
+
 
 > [!TIP]
 > Another method to find dependencies of components is to open the solution file, unzip it, and then open the *solution.xml* file. In the *solution.xml* file, look for a `<MissingDependencies>` element. All the dependencies are listed within this node.
