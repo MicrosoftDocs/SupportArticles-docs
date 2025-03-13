@@ -1,7 +1,7 @@
 ---
 title: Size of Request XML Exceeds Maximum Allowed Value Error
 description: Resolves the size of the request xml exceeds the maximum allowed value error in the Warehouse Management mobile app.
-ms.date: 03/12/2025
+ms.date: 03/13/2025
 # ms.search.form:
 audience: Application User
 ms.reviewer: kamaybac, ivanma
