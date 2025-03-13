@@ -226,10 +226,10 @@
           href: ../move-mailboxes/migrationpermanentexception-when-moving-mailboxes.md             
         - name: Can't migrate on-premises primary mailbox with cloud-based archive
           href: ../move-mailboxes/cannot-migrate-on-premises-primary-mailbox.md
-        - name: Can't move Exchange Online mailboxes to Exchange Server 2010
-          href: ../move-mailboxes/cannot-migrate-to-exchange-2010.md
         - name: Can't move mailboxes to Exchange Online
           href: ../move-mailboxes/user-is-already-being-moved-error.md
+        - name: Can't offboard cloud mailboxes to unsupported versions of Exchange Server
+          href: ../move-mailboxes/cannot-offboard-mailboxes-to-unsupported-exchange-server-versions.md
         - name: Can't register a Hybrid Agent in Exchange Server
           href: ../move-mailboxes/cannot-register-hybrid-agent.md
         - name: Can't move items in Outlook on the web
