@@ -37,9 +37,9 @@ Before you start, ensure you have the following:
 
 - A recent version of Android Studio installed.
 
-    Android Studio comes with an AVD manager. For more information, see [AVD manager](https://developer.android.com/studio/run/managing-avds).
+    Android Studio comes with an AVD manager. For more information, see [Create and manage virtual devices](https://developer.android.com/studio/run/managing-avds).
 - A virtual Android device with applications installed.
-- A physical device with developer options, USB debugging enabled, and a USB cable. For more information, see [Developer options](https://developer.android.com/studio/debug/dev-options).
+- A physical device with developer options, USB debugging enabled, and a USB cable. For more information, see [Configure on-device developer options](https://developer.android.com/studio/debug/dev-options).
 - An application installed to inspect.
 
 ## Install Package Inspector
