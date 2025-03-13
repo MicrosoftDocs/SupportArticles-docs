@@ -1,11 +1,11 @@
 ---
 title: Memory dump file options
-description: This article describes an overview of memory dump file options for Windows 7 with Service Pack 1.
-ms.date: 01/15/2025
+description: This article describes an overview of memory dump file options for Windows.
+ms.date: 03/13/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika
+ms.reviewer: kaushika, warrenw, khirschb
 ms.custom:
 - sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot)
 - pcy:WinComm Performance
@@ -18,36 +18,25 @@ _Original KB number:_ &nbsp; 254649
 
 ## Summary
 
-You can configure the following operating systems to write debugging information:
-
-- Windows 7
-- Windows Server 2012 R2
-
-The debugging information can be written to different file formats (also known as memory dump files) when your computer stops unexpectedly because of a **Stop** error (also known as a _blue screen_, system crash, or bug check). You can also configure Windows not to write debugging information to a memory dump file.
+Debugging information can be written to different file formats (also known as memory dump files) when your computer stops unexpectedly because of a **Stop** error (also known as a _blue screen_, system crash, or bug check). You can also configure Windows not to write debugging information to a memory dump file.
 
 Windows can generate any one of the following memory dump file types:
 
 - Complete memory dump
 - Kernel memory dump
 - Small memory dump (64 KB)
-- [Automatic memory dump](/windows-hardware/drivers/debugger/automatic-memory-dump)
+- [Active memory dump](/windows-hardware/drivers/debugger/active-memory-dump)
 
 ## Complete memory dump
 
 A complete memory dump records all the contents of system memory when your computer stops unexpectedly. A complete memory dump may contain data from processes that were running when the memory dump was collected.
 
-If you select the **Complete memory dump** option, you must have a paging file on the boot volume that is sufficient to hold all the physical RAM plus 1 megabyte (MB).
+If you select the **Complete memory dump** option, you must have a paging file on the boot volume that is sufficient to hold all the physical RAM plus 257 megabyte (MB).
 
 If the following conditions are true, the previous file is overwritten.
 
 - A second problem occurs.
 - Another complete memory dump (or kernel memory dump) file is created.
-
-> [!NOTE]
->
-> - In Windows 7, the paging file can be on a partition that differs from the partition on which the operating system is installed.
-> - In Windows 7, you do not have to use the DedicatedDumpFile registry entry to put a paging file onto another partition.
-> - The **Complete memory dump** option is not available on computers that are running a 32-bit operating system and that have 2 gigabytes (GB) or more of RAM. For more information, see [Specify what happens when the system stops unexpectedly](/previous-versions/windows/it-pro/windows-server-2003/cc778968(v=ws.10)).
 
 ## Kernel memory dump
 
@@ -55,7 +44,7 @@ A kernel memory dump records only the kernel memory. It speeds up the process of
 
 This dump file doesn't include unallocated memory or any memory that's allocated to User-mode programs. It includes:
 
-- Memory that's allocated to the kernel and hardware abstraction layer (HAL) in Windows 2000 and later.
+- Memory that's allocated to the kernel and hardware abstraction layer (HAL) in the latest supported Windows version.
 - Memory that's allocated to Kernel-mode drivers and other Kernel-mode programs.
 
 For most purposes, this dump file is the most useful. It's smaller than the complete memory dump file. But it omits only those parts of memory that are unlikely to have been involved in the problem.
@@ -87,6 +76,10 @@ If the following conditions are true, the previous file is preserved.
 
 Each additional file is given a distinct name. The date is encoded in the file name. For example, Mini022900-01.dmp is the first memory dump generated on February 29, 2000. A list of all small memory dump files is kept in the `%SystemRoot%\Minidump` folder.
 
+## Active memory dump
+
+For more information, see [Active memory dump](/windows-hardware/drivers/debugger/active-memory-dump).
+
 ## Configure the dump type
 
 To configure startup and recovery options (including the dump type), follow these steps.
@@ -103,15 +96,7 @@ To configure startup and recovery options (including the dump type), follow thes
 
 ## Tools for the various dump types
 
-You can load complete memory dumps and kernel memory dumps with standard symbolic debuggers, such as I386kd.exe. I386kd.exe is included with the Windows 2000 Support CD-ROM.
-
-Load small memory dumps by using Dumpchk.exe. You can also use Dumpchk.exe to verify that a memory dump file has been created correctly.
-
-## Volume definitions
-
-- Boot volume: The volume that contains the Windows operating system and its support files. The boot volume can be, but doesn't have to be, the same as the system volume.
-
-- System volume: The volume that contains the hardware-specific files that you must have to load Windows. The system volume can be, but doesn't have to be, the same as the boot volume. The Boot.ini, `Ntdetect.com`, and Ntbootdd.sys files are examples of files that are located on the system volume.
+You can load complete memory dumps and kernel memory dumps with the [Windows debugger](/windows-hardware/drivers/debugger/).
 
 ## Registry values for startup and recovery
 
@@ -122,11 +107,9 @@ The following registry value is used under `HKEY_LOCAL_MACHINE\System\CurrentCon
 - CrashDumpEnabled REG_DWORD 0x2 = Kernel memory dump
 - CrashDumpEnabled REG_DWORD 0x3 = Small memory dump (64 KB)
 - CrashDumpEnabled REG_DWORD 0x7 = [Automatic memory dump](/windows-hardware/drivers/debugger/automatic-memory-dump)
+- CrashDumpEnabled REG_DWORD 0x1 and FilterPages REG_DWORD 0x1 = Active memory dump
 
 Additional registry values for CrashControl:
-
-- 0x0 = Disabled
-- 0x1 = Enabled
 
 - AutoReboot REG_DWORD 0x1
 - DumpFile REG_EXPAND_SZ `%SystemRoot%\Memory.dmp`
@@ -142,21 +125,6 @@ Additional registry values for CrashControl:
 
 For more information about how to configure your computer to generate a dump file for testing purposes, see [Windows feature lets you generate a memory dump file by using the keyboard](https://support.microsoft.com/help/244139).
 
-## Default dump type options
-
-- Windows 7 (All Editions): Kernel memory dump
-- Windows Server 2012 R2 (All Editions): Automatic memory.dmp
-
 ## Maximum paging file size
 
-Maximum paging file size is limited as follows:
-
-|Limit|x86|x64|IA-64|
-|---|---|---|---|
-|Maximum size of a paging file|4 gigabytes (non-PAE)<br/>16 terabytes (PAE)|16 terabytes|32 terabytes|
-|Maximum number of paging files|16|16|16|
-|Total paging file size|64 gigabytes (non-PAE)<br/>256 terabytes (PAE)|256 terabytes|512 terabytes|
-
-## Technical support for x64-based versions of Windows
-
-Your hardware manufacturer provides technical support and assistance for x64-based versions of Windows. Your hardware manufacturer provides support because an x64-based version of Windows was included with your hardware. Your hardware manufacturer might have customized the installation of Windows with unique components. Unique components might include specific device drivers or might include optional settings to maximize the performance of the hardware. Microsoft will provide reasonable-effort assistance if you need technical help with your x64-based version of Windows. However, you might have to contact your manufacturer directly. Your manufacturer is best qualified to support the software that your manufacturer installed on the hardware.
+For more information, see [How to determine the appropriate page file size for 64-bit versions of Windows](../../windows-client/performance/how-to-determine-the-appropriate-page-file-size-for-64-bit-versions-of-windows.md).
