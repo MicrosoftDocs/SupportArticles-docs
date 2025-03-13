@@ -1,14 +1,14 @@
-﻿---
+---
 title: Conversion of Maintenance Schedule to Work Orders Fails
 description: Solves the errors that prevent you from creating work orders based on maintenance schedule in Microsoft Dynamics 365 Supply Chain Management.
 author: sorenbacker2
 ms.author: sorenba
-ms.date: 03/04/2025
+ms.date: 03/13/2025
 ms.custom: sap:Asset management\Issues with asset management
 ---
 # Can't create work orders based on your maintenance schedule
 
-This article provides the setup steps to ensure the conversion of maintenance schedule lines to work orders isn't failing due to errors related to number sequence setup in Microsoft Dynamics 365 Supply Chain Management.
+This article provides the setup steps to ensure the conversion of maintenance schedule lines to work orders doesn't fail due to errors related to number sequence setup in Microsoft Dynamics 365 Supply Chain Management.
 
 ## Symptoms
 
@@ -31,7 +31,7 @@ To resolve the issue and ensure the successful conversion of maintenance schedul
 
 4. Go to the **Segments** FastTab. Find the line where the **Segment** column equals *Alphanumeric*. Ensure the corresponding field in the **Value** column has enough hash tags to match the desired length of the variable numeric part of the work order number sequence.
 
-5. Go to the **General** FastTab. In the **Number allocation** field group, ensure that the **Largest** number matches (but is included in) the length of the variable numeric part of the work order number sequence set above. In other words, if the alphanumeric value from step 4 equals *######*, the largest number could be set as *999999*. Also, ensure that the number in the **Next** field is included in the range of the number sequence mentioned in step 4 and 5.
+5. Go to the **General** FastTab. In the **Number allocation** field group, ensure that the **Largest** number matches (but is included in) the length of the variable numeric part of the work order number sequence set earlier. In other words, if the alphanumeric value from step 4 equals *######*, the largest number can be set as *999999*. Also, ensure that the number in the **Next** field is included in the range of the number sequence mentioned in steps 4 and 5.
 
 6. Select **Save** to save the changes to the number sequence.
 
