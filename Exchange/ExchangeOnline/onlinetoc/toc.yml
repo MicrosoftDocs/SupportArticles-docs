@@ -411,6 +411,8 @@
           href: ../move-or-migrate-mailboxes/google-workspace-mailbox-migration-fail.md
         - name: Can't migrate IMAP mailboxes
           href: ../move-or-migrate-mailboxes/imap-mailbox-migration-fails.md
+        - name: Can't offboard cloud mailboxes to unsupported versions of Exchange Server
+          href: ../move-or-migrate-mailboxes/cannot-offboard-mailboxes-to-unsupported-exchange-server-versions.md
         - name: Can't see free/busy information
           href: ../move-or-migrate-mailboxes/cannot-see-free-busy-information.md
         - name: Can't view mailbox folders after an IMAP migration
