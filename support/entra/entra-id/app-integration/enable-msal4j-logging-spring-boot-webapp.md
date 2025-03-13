@@ -89,3 +89,5 @@ If the app is configured correctly, the logging output should resemble the follo
  :::image type="content" source="media/enable-msal4j-logging-spring-boot-webapp/log-sample.png" alt-text="Diagram that shows logging output." border="true" lightbox="media/enable-msal4j-logging-spring-boot-webapp/log-sample.png":::
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+
+[!INCLUDE [third-party-disclaimer](../../../includes/third-party-disclaimer.md)]
