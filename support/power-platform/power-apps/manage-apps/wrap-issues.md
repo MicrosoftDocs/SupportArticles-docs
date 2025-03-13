@@ -242,10 +242,10 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 
 | Error code      | Description          |
 | ------------- |:-------------|
-|1000128    |   Missig access key used to access azure blob storage|
+|1000128    |   Missing access key used while accessing azure blob storage location|
 
 
-- You need to create a new **Access Key** in your **Azure Blob Storage** account. Please review and check whether all the steps mentioned here are done correctly. [Refer here](/power-apps/maker/common/wrap/wrap-how-to#step-2-target-platform)
+- You need to add the **Access Key** for Azure Blob Storage account in the KeyVault. [Refer here](/power-apps/maker/common/wrap/wrap-how-to#step-2-target-platform)
 
 ## Issue 7 - Wrap app sign-in fails
 
