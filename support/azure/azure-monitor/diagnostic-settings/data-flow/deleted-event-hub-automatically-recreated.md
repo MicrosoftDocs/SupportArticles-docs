@@ -1,27 +1,35 @@
 ---
-title: Deleted Azure Event Hub is automatically recreated by Diagnostic Settings
-description: Resolve issues with an Azure Event Hub that is automatically recreated by Diagnostic Settings after being deleted.
-ms.date: 03/10/2025
-ms.reviewer: jfanjoy
+title: Deleted Azure Event Hub Is Automatically Recreated By Diagnostic Settings
+description: Resolve issues with an Azure Event Hub that is automatically recreated by diagnostic settings after being deleted.
+ms.date: 03/13/2025
+ms.reviewer: jfanjoy, v-weizhu
 ms.service: azure-monitor
 ---
+# Deleted Azure Event Hub is automatically recreated by diagnostic settings
 
-# Deleted Azure Event Hub is automatically recreated by Diagnostic Settings
+This article provides a solution to an issue where a deleted Azure Event Hub is automatically recreated by Azure diagnostic settings or their configuration cache.
 
 ## Symptoms
 
-1. When an Azure Event Hub is deleted from an Azure Event Hub Namespace, it is automatically recreated by the data flowing into the Event Hub through an Azure Diagnostic Setting.
+You might see the following symptoms:
 
-1. After deleting an Azure Event Hub and all Azure Diagnostic Settings configured to send data to it, the Event Hub is automatically recreated.
+- When you delete an Event Hub from an Event Hub namespace, the Event Hub is recreated automatically by the data flowing into it through diagnostic settings.
+- After you delete an Event Hub and all diagnostic settings configured to send data to it, it's recreated automatically.
 
-## Causes
+## Cause
 
-1. This is by-design behavior of the Azure Diagnostic Settings.  When configured to send data to an Azure Event Hub, if the Diagnostic Setting receives an error that the Event Hub does not exist, it will attempt to create it and then continue attempting to send the data.
+Here's are causes of the issue:
 
-1. Azure Diagnostic Settings maintain a cache of configurations that lasts approximately 1 hour.  Since the Diagnostic Setting will continue to send data for up to an hour after having been deleted, an Azure Event Hub that is the destination could get recreated even though the relevant Diagnostic Setting was deleted.
+- When a diagnostic setting is configured to send data to an Azure Event Hub, if it receives an error that the Event Hub doesn't exist, it will try to create it and then continue trying to send the data.
+- Azure diagnostic settings maintain a cache of configurations for approximately one hour. During this period, even if diagnostic settings have been removed, they will continue to send data to the destination such as a deleted Event Hub, causing it to be recreated.
 
-## Resolutions
+## Solution
 
-1. Update any Diagnostic Settings that are configured to send data to the problem Azure Event Hub so that either the Diagnostic Setting is no longer configured to send data to that destination, or delete the Diagnostic Settings.
+In a scenario where you delete an Event Hub from an Event Hub namespace, use one of the following methods to resolve the issue:
 
-1. Update any Diagnostic Settings that are configured to send data to the problem Azure Event Hub so that either the Diagnostic Setting is no longer configured to send data to that destination, or delete the Diagnostic Settings.  Wait a minimum of 1 hour, then delete the Azure Event Hub.
+- Update the diagnostic settings to prevent them from sending data to the Event Hub.
+- Delete the diagnostic settings.
+
+In a scenario when you delete an Event Hub and related diagnostic settings, update the diagnostic settings to prevent them from sending data to the Event Hub, delete them, wait for at least one hour to allow their configuration cache to expire, and then delete the Event Hub.
+
+[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
