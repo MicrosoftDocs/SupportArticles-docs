@@ -238,6 +238,18 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 
    :::image type="content" source="media/wrap-issues/provisioning-profile-secret-tag.png" alt-text="Screenshot that shows how to create a tag for iOS Provisioning Profile Secret." lightbox="media/wrap-issues/provisioning-profile-secret-tag.png":::
 
+#### Error code 1000128
+
+| Error code      | Description          |
+| ------------- |:-------------|
+|1000128    |   Missig access key used to access azure blob storage|
+
+
+- You need to create Azure blob storage account and container name if you don't have it set up already. More infomation: [Create an Azure storage account](/azure/storage/common/storage-account-create?tabs=azure-portal). A video for creating a Azure storage account is available at [How to create a storage account](https://www.youtube.com/watch?v=AhuNgBafmUo&list=PLLasX02E8BPBKgXP4oflOL29TtqTzwhxR&index=6). 
+- You need access key to proceed further. This access key is used to access you Azure blob storage location. More information : [View account access keys](/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys)
+
+
+
 ## Issue 7 - Wrap app sign-in fails
 
 1. Verify if the user has access to the application. For more information, see [Share a canvas app with your organization](/power-apps/maker/canvas-apps/share-app).
