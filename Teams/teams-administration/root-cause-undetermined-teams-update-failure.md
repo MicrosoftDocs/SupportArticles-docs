@@ -11,9 +11,12 @@ ms.custom:
 ms.reviewer: binga
 search.appverid: 
   - MET150
-ms.date: 03/11/2025
+ms.date: 03/13/2025
 ---
 # "Root cause undetermined" for Teams client update failure
+
+> [!IMPORTANT]
+> This article describes a Microsoft Teams feature that hasn't yet been released. It's been announced, and it's coming soon. If you're an admin, you can find out when this feature will be released in the Message Center (in the [Microsoft 365 admin center](https://portal.office.com/adminportal/home)). For more information, see [Teams client health](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=478610) and [Monitor Teams client updates](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=478609).
 
 ## Symptoms
 
