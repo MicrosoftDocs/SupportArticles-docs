@@ -55,6 +55,8 @@
         href: app-integration/android-app-authentication-fails-after-published-to-google-play-store.md
       - name: WIF10201 No valid key mapping found
         href: app-integration/troubleshoot-wif10201-no-validkey-securitytoken-mvc.md
+      - name: Enable MSAL4J logging in a Spring Boot web application
+        href: app-integration/enable-msal4j-logging-spring-boot-webapp.md
 
 
   - name: Troubleshoot adding apps
