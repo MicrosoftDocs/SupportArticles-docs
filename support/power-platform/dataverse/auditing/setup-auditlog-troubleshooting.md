@@ -3,7 +3,7 @@ title: Troubleshoot synchronization issues in audit logs
 description: Provides solutions for resolving synchronization issues in audit logs by validating API permissions and secret environment variables.
 author: pete-msft
 ms.component: pa-admin
-ms.date: 03/12/2025
+ms.date: 03/13/2025
 ms.author: petrip
 ms.reviewer: paulliew, sericks, v-christread
 ms.custom: sap:Microsoft Dataverse\Auditing
@@ -18,7 +18,7 @@ This article provides guidance for resolving synchronization issues in audit log
 
 ## API permissions
 
-To ensure that you have the correct API permissions, follow these steps.
+To ensure that you have the correct API permissions, follow these steps:
 
 1. Go to your [app registration](/entra/identity-platform/quickstart-configure-app-access-web-apis#application-permission-to-microsoft-graph).
 1. Ensure that the API permissions are set to the **Application** type instead of the **Delegated** type.
@@ -30,7 +30,7 @@ To ensure that you have the correct API permissions, follow these steps.
 
 If you're using [Azure Key Vault](/azure/key-vault/general/basic-concepts) to store the app registration secret, validate that the Azure Key Vault permissions are correct.
 
-A user must be in the _Key Vault Secrets User_ role to read and the _Key Vault Contributor_ role to update. You can find detailed role definitions in [Azure built-in roles for Key Vault data plane operations](/azure/key-vault/general/rbac-guide?tabs=azure-cli#azure-built-in-roles-for-key-vault-data-plane-operations).
+A user must have the _Key Vault Secrets User_ role to read and the _Key Vault Contributor_ role to update. You can find detailed role definitions in [Azure built-in roles for Key Vault data plane operations](/azure/key-vault/general/rbac-guide?tabs=azure-cli#azure-built-in-roles-for-key-vault-data-plane-operations).
 
 :::image type="content" source="media/azure-key-vault-roles.png" alt-text="Screenshot that shows the Key Vault Contributor and Key Vault Secrets User roles." lightbox="media/azure-key-vault-roles.png":::
 
