@@ -3,12 +3,12 @@ title: Package Inspector for MSAL Android Native
 description: Introduces how to install and use the Package Inspector tool.
 ms.reviewer: markbukovich, v-weizhu
 ms.service: entra-id
-ms.date: 03/12/2025
+ms.date: 03/13/2025
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
 # Package Inspector for MSAL Android Native
 
-The Microsoft Authentication Library (MSAL) for Android Native includes a tool called Package Inspector. This tool lists the packages installed on an Android device and allows users to view, copy, and paste the signature hash used to sign an application's package. Package Inspector is invaluable for troubleshooting and verifying the signature hash for applications installed on an Android device. This article covers installation, usage, and common issues of the Package Inspector.
+The Microsoft Authentication Library (MSAL) for Android Native includes a tool called Package Inspector. This tool lists the packages installed on an Android device and allows users to view, copy, and paste the signature hash used to sign an application's package. Package Inspector is invaluable for troubleshooting and verifying the signature hash of applications installed on an Android device. This article covers installation, usage, and common issues of the Package Inspector.
 
 ## Scenarios for using Package Inspector
 
@@ -20,13 +20,13 @@ The Microsoft Authentication Library (MSAL) for Android Native includes a tool c
 
     > The redirect URI in the configuration file doesn't match with the one generated with the package name and signature hash. Please verify the uri in the config file and your app registration in Azure portal.
 
-    In this scenario, you can use the Package Inspector to verify what the package signature hash is and configure both the Azure portal and application to use the correct signature hash.
+    In this scenario, you can use Package Inspector to verify what the package signature hash is and configure both the Azure portal and application to use the correct signature hash.
 
 - You are implementing MSAL in your Android application, but encounter the following error:
 
     > Intent filter for: BrowserTabActivity is missing
     
-    This error can occur because the signature hash specified in the *AndroidManifest.xml* file doesn't match the signature hash actually used to sign the APK file. In this scenario, Package Inspector is useful to verify what the signature hash actually is.
+    This error occurs because the signature hash specified in the *AndroidManifest.xml* file doesn't match the signature hash used to sign the APK file. In this scenario, Package Inspector is useful to verify what the signature hash is.
 
 > [!NOTE]
 > For more information about MSAL for Android Native, see [Microsoft Authentication Library (MSAL) for Android](https://github.com/AzureAD/microsoft-authentication-library-for-android).
@@ -51,7 +51,7 @@ There are two methods to install Package Inspector:
 1. Open Android Studio and close any open projects.
 2. Select **Get From Version Control**.
 
-    :::image type="content" source="media/package-inspector-msal-android-native/get-from-version-control.png" alt-text="Screenshot that shows the 'Get From Version Control' option in Android Studio" lightbox="media/package-inspector-msal-android-native/get-from-version-control.png":::
+    :::image type="content" source="media/package-inspector-msal-android-native/get-from-version-control.png" alt-text="Screenshot that shows the 'Get From Version Control' option in Android Studio":::
 3. Ensure **Git** is selected at the top of the window, paste the Android MSAL repository URL `https://github.com/AzureAD/microsoft-authentication-library-for-android.git`, and then select **Clone**.
 
     :::image type="content" source="media/package-inspector-msal-android-native/clone-msal-repository.png" alt-text="Screenshot that shows how to clone a Git repository in Android Studio":::
@@ -74,14 +74,14 @@ There are two methods to install Package Inspector:
 
 ## Use Package Inspector
 
-1. With the Android MSAL project open in Android Studio, connect the desired Android device. This can be a physical device connected to the computer's USB port or an emulator booted from Android Studio's AVD manager. Ensure your device appears in the drop-down list at the top of Android Studio and select it.
+1. With the Android MSAL project open in Android Studio, connect the desired Android device. It can be a physical device connected to the computer's USB port or an emulator booted from Android Studio's AVD manager. Ensure your device appears in the drop-down list at the top of Android Studio and select it.
 2. On the left of the device drop-down list, there is another drop-down list. Select **package-inspector** from it.
 
     :::image type="content" source="media/package-inspector-msal-android-native/select-package-inspector.png" alt-text="Screenshot that shows the selection of package-inspector in Android Studio" lightbox="media/package-inspector-msal-android-native/select-package-inspector.png":::
-3. Select the **play** button (indicated with a green circle on the right) to build, install, and run the package inspector on the selected device.
+3. Select the **play** button (indicated with a green circle on the right) to build, install, and run Package Inspector on the selected device.
 
     :::image type="content" source="media/package-inspector-msal-android-native/select-play-button.png" alt-text="Screenshot that shows the selection of the play button in Android Studio" lightbox="media/package-inspector-msal-android-native/select-play-button.png":::
-4. Browse the list of packages in the Package Inspector app and select a package to view its signature hash. All accessible packages will appear in this list.
+4. Browse the list of packages in the Package Inspector app and select a package to view its signature hash. All accessible packages appear in this list.
 
     :::image type="content" source="media/package-inspector-msal-android-native/select-package-to-check-signature-hash.png" alt-text="Screenshot that shows package selection in the Package Inspector app":::
 
@@ -89,11 +89,11 @@ There are two methods to install Package Inspector:
 
 ### Issues when loading Package Inspector into Android Studio
 
-To resolve these issues, ensure you load the root package from the MSAL repository, not the package inspector. Make sure that the Android MSAL project you load into Android Studio is named `microsoft-authentication-library-for-android-dev` or whatever you have renamed the root directory on your system instead of `package-inspector`. For more information, see step 5 under [Option 2](#option-2-download-android-msal-repository-and-open-it-in-android-studio) in the [Install Package Inspector](#install-package-inspector) section.
+To resolve these issues, ensure you load the root package from the MSAL repository, not Package Inspector. Make sure that the Android MSAL project you load into Android Studio is named `microsoft-authentication-library-for-android-dev` or whatever you have renamed the root directory on your system instead of `package-inspector`. For more information, see step 5 under [Option 2](#option-2-download-android-msal-repository-and-open-it-in-android-studio) in the [Install Package Inspector](#install-package-inspector) section.
 
 ### Not all packages appear in Package Inspector
 
-You have installed and opened Package Inspector, and a list of packages appear in the app. However, you don't see packages for any apps you have installed on the device. It might be due to changes in Android 11 (API 30). For more information, see [Package visibility](https://developer.android.com/training/package-visibility).
+You have installed and opened Package Inspector, and a list of packages appear in the app. However, you don't see packages for any apps you have installed on the device. The issue might occur due to changes in Android 11 (API 30). For more information, see [Package visibility](https://developer.android.com/training/package-visibility).
 
 To resolve this issue, follow these steps:
 
@@ -113,6 +113,6 @@ To resolve this issue, follow these steps:
     </queries>
     ```
 
-3. Rerun the application from Android Studio to apply the changes. Then, you should can see the packages you have installed.
+3. Rerun the application from Android Studio to apply the changes. Then, you can see the packages you have installed.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
