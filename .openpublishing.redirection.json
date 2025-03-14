@@ -12881,9 +12881,13 @@
       "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-when-installing-crm-2016-outlook"
     },
     {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/something-went-wrong-during-sign-in.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/something-went-wrong-during-sign"
+    },
+    {
       "source_path": "support/power-platform/dataverse/d365-app-outlook/you-do-not-have-required-role-privilege.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/you-do-not-have-the-required-role-or-privilege-to-complete-this-action-error"
-    } ,   
+    }, 
     {
       "source_path": "support/power-platform/dataverse/d365-app-outlook/we-cannot-load-this-app.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/error-when-opening-365-app-outlook"
