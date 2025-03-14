@@ -2577,6 +2577,8 @@ items:
       href: ./system-management-components/scheduled-tasks-reference-incorrect-user-profile.md
     - name: Troubleshoot issues with scheduled tasks not running
       href: ./system-management-components/troubleshoot-scheduled-tasks-not-running.md
+    - name: Troubleshooting Task Scheduler "Access Denied" error
+      href: ./system-management-components/troubleshooting-task-scheduler-access-denied-error.md
   - name: WinRM
     items:
     - name: Error 0x80090322 when connecting PowerShell to remote server via WinRM
