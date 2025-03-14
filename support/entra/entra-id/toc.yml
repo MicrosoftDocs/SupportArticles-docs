@@ -55,7 +55,7 @@
         href: app-integration/android-app-authentication-fails-after-published-to-google-play-store.md
       - name: WIF10201 No valid key mapping found
         href: app-integration/troubleshoot-wif10201-no-validkey-securitytoken-mvc.md
-      - name: Get signed in user groups from groups overage claim
+      - name: Get signed-in user groups from a group overage claim
         href: app-integration/get-signed-in-users-groups-in-access-token.md
 
   - name: Troubleshoot adding apps

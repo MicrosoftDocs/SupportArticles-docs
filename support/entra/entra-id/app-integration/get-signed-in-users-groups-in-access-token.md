@@ -1,37 +1,37 @@
 ---
-title: Get signed in user groups list from groups overage claim 
-description: Provides a sample project to introduce how to get signed in user groups list when groups overage claim is displayed in access tokens.
+title: Get Signed-in User Group List from a Group Overage Claim 
+description: Provides a sample project to introduce how to get the signed-in user group list when a group overage claim is displayed in access tokens.
 ms.topic: how-to
 ms.reviewer: daga, v-weizhu
 ms.service: entra-id
-ms.date: 03/11/2025
+ms.date: 03/14/2025
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
-# How to get signed in user groups list when groups overage claim is displayed in access tokens
+# How to get the signed-in user group list when a group overage claim is displayed in access tokens
 
-When you configure the `groups` claim in an access token for your application, Microsoft Entra ID has a maximum number of groups that can be returned in an access token. When the limit is exceeded, Azure provides a groups overage claim which is a URL that can be used to get the full groups list for the currently signed in user. This URL uses the Microsoft Graph endpoint. For more information about the `groups` claim, see [Access tokens in the Microsoft identity platform](/entra/identity-platform/access-tokens).
+When you configure the `groups` claim in an access token for your application, Microsoft Entra ID has a maximum number of groups that can be returned in the access token. When the limit is exceeded, Azure provides a group overage claim, which is a URL that can be used to get the full group list for the currently signed-in user. This URL uses the Microsoft Graph endpoint. For more information about the `groups` claim, see [Access tokens in the Microsoft identity platform](/entra/identity-platform/access-tokens).
 
-For JSON web tokens (JWT), Azure has a limit of 200 groups that can be present in the token. When requesting an access token for the resource that has the `groups` claim configured on it, if you are a member of more than 200 groups, you will get a groups overage claim instead of getting the actual groups.
+For JSON web tokens (JWT), Azure limits the number of groups that can be present in the token to 200. When requesting an access token for a resource that has the `groups` claim configured, if you're a member of more than 200 groups, you'll get a group overage claim instead of getting the actual groups.
 
-This article introduces how to get the actual user groups list from a groups overage claim by using a sample project.
+This article introduces how to get the actual user group list from a group overage claim by using a sample project.
 
 ## Configure the groups claim for your application
 
 You can configure the `groups` claim for your application by using the optional claims. For more information, see [Configure and manage optional claims in ID tokens, access tokens, and SAML tokens](/entra/identity-platform/optional-claims).
 
-If the application is a first party app (Microsoft App), you can't configure the `groups` claim. You only can configure this with your own app registration. If you want to configure the `groups` claim for a client application, you must configure it in an ID token.
+If the application is a first-party app (Microsoft app), you can't configure the `groups` claim. You can only configure it with your own app registration. If you want to configure the `groups` claim for a client application, you must configure it in an ID token.
 
 ## Download the sample project
 
-Download the sample project [MSAL.Net_GroupOveragesClaim](https://github.com/RayGHeld/MSAL.Net_GroupOveragesClaim). It shows how to get the groups list from a groups overage claim.
+Download the sample project [MSAL.Net_GroupOveragesClaim](https://github.com/RayGHeld/MSAL.Net_GroupOveragesClaim). It shows how to get the group list from a group overage claim.
 
 ## Before running the sample project
 
 - Configure an app registration for the sample project.
 
-    The sample project will perform both public client flow and confidential client flow, so you will need to configure a web redirect (for the public client flow) and a client secret (for the confidential client flow). Because the confidential client must go to the users endpoint and look up the groups based on a user ID, which can be obtained from the initial sign-in token, the confidential client version need the Microsoft Graph application permission of `Group.Read.All`. The public client will just go to the `me` endpoint, since there is a user context.
+    The sample project will perform both the public client flow and the confidential client flow, so you need to configure a web redirect (for the public client flow) and a client secret (for the confidential client flow). Because the confidential client must go to the `users` endpoint and look up the groups based on the user ID, which can be obtained from the initial sign-in token, the confidential client version needs the Microsoft Graph application permission of `Group.Read.All`. The public client just goes to the `me` endpoint since there's a user context.
 
-- Configure the sample project to work with your tenant by updating the *appsettings.json* file with appropriate values:
+- Configure the sample project to work with your tenant by updating the **appsettings.json** file with the appropriate values:
 
     ```json
     {
@@ -46,30 +46,30 @@ Download the sample project [MSAL.Net_GroupOveragesClaim](https://github.com/Ray
     }
     ```
 
-    Here are explanations for the settings in the *appsettings.json* file:
+    Here are explanations of the settings in the **appsettings.json** file:
 
     - `AppScopes`
 
-        You must have a scope for which the groups claim has been configured.
+        You must have a scope for which the `groups` claim has been configured.
 
-        Typically, this is an API in your tenant. But in this case, adding the Azure SQL database with the **user_impersonation** permission works with this scenario. The scope you have added works with that API. This is because the `groups` claim has been configured on that API.
+        Typically, this is an API in your tenant. But in this case, adding Azure SQL Database with the **user_impersonation** permission works for this scenario. The scope you have added works for that API. This is because the `groups` claim has been configured on that API.
 
-        :::image type="content" source="media/get-signed-in-users-groups-in-access-token/add-azure-sql-database.png" alt-text="Screenshot that shows the Azure SQL database API." border="false":::
+        :::image type="content" source="media/get-signed-in-users-groups-in-access-token/add-azure-sql-database.png" alt-text="Screenshot that shows the Azure SQL Database API.":::
 
     - `GraphScopes`
 
-        Add the application permissions **Group.Read.All** (needed to get the group display name) and **User.Read.All** (needed to get the groups list using the client credentials flow). You must provide admin consent for those permissions. The delegated permission **User.Read** should already be there. If not, add it.
+        Add the application permissions **Group.Read.All** (needed to get the group display name) and **User.Read.All** (needed to get the group list using the client credentials flow). You must provide admin consent for those permissions. The delegated permission **User.Read** should already be there. If not, add it.
 
-        :::image type="content" source="media/get-signed-in-users-groups-in-access-token/add-application-permissions.png" alt-text="Screenshot that shows the added application permissions." border="false":::
+        :::image type="content" source="media/get-signed-in-users-groups-in-access-token/add-application-permissions.png" alt-text="Screenshot that shows the added application permissions.":::
 
-    - Once the app registration for this sample project is configured, add the client id (application id), client secret, tenant id into the *appsettings.json* file.
+    - Once the app registration for this sample project is configured, add the client ID (application ID), client secret, and tenant ID into the **appsettings.json** file.
 
-- Run PowerShell scripts in the *Create_TestGroup.ps1.txt* file to create test groups (if needed).
+- Run PowerShell scripts in the **Create_TestGroup.ps1.txt** file to create test groups (if needed).
 
-    The sample project has a text file called *Create_TestGroup.ps1.txt*. To run PowerShell scripts in this file, remove the .txt extension. Before running it, you need an object ID of a user to add to the test groups. You must be in a directory role that can create groups and add users to the groups. The sample project will create 255 groups with a format of `TEST_0001`, `TEST_0002`, and so on. The object ID that you provide to each group will be added. At the end of the script, it will sign you into Azure, run the command to create the test groups, and then sign you out. 
+    The sample project has a text file called **Create_TestGroup.ps1.txt**. To run PowerShell scripts in this file, remove the .txt extension. Before running it, you need an object ID of a user to add to the test groups. You must be in a directory role that can create groups and add users to the groups. The sample project will create 255 groups in the format of `TEST_0001`, `TEST_0002`, and so on. The object ID that you provide for each group will be added. At the end of the script, it will sign you into Azure, run the command to create the test groups, and then sign you out. 
 
     > [!NOTE]
-    > There is a sample cleanup method that is commented out at line 53:
+    > There's a sample cleanup method that is commented out on line 53:
     >
     > ```PowerShell
     > Connect-AzureAD
@@ -78,39 +78,39 @@ Download the sample project [MSAL.Net_GroupOveragesClaim](https://github.com/Ray
     > Disconnect-AzureAD
     > ```
 
-## Get the full users groups list using groups overage claim
+## Get the full user groups list using the group overage claim
 
 1.	Run the sample application.
 2.	Sign in to the application.
 
     Authentication occurs in a browser because the sample application is a .NET console application.
-3.	After signing in, close the browser, and you'll return to the console application. 
-4.	After the access token is presented in the console window, copy the access token to the clipboard and paste it at https://jwt.ms to view the encoded token. It's just a user token. 
+3.	After signing in, close the browser and you'll be returned to the console application. 
+4.	After the access token is presented in the console window, copy the access token to the clipboard and paste it into https://jwt.ms to view the encoded token. It's just a user token. 
 
     If the user is a member of too many groups, the console window will display the original group overage claim and the new group overage claim for that token. The new group overage claim will be used in the .NET HTTP client request rather than the Graph .NET SDK request.
 
-    :::image type="content" source="media/get-signed-in-users-groups-in-access-token/select-method-to-get-groups.png" alt-text="Screenshot of the methods be used to get the full list of the user groups." lightbox="media/get-signed-in-users-groups-in-access-token/select-method-to-get-groups.png"  border="false":::
+    :::image type="content" source="media/get-signed-in-users-groups-in-access-token/select-method-to-get-groups.png" alt-text="Screenshot of the methods used to get the full list of the user groups." lightbox="media/get-signed-in-users-groups-in-access-token/select-method-to-get-groups.png":::
 
-5.	Select the access token type you want to get for Microsoft Graph. You can get an access token by using a user token for the currently signed in user (refresh token flow) or an application token using the client credentials grant flow.
+5.	Select the access token type you want to get for Microsoft Graph. You can get an access token by using a user token for the currently signed-in user (refresh token flow) or an application token using the client credentials grant flow.
 6.	Select the `.NET HTTP Request` or the `Graph .NET SDK` to get the full list of the user groups.
 
-    :::image type="content" source="media/get-signed-in-users-groups-in-access-token/select-method-to-get-groups.png" alt-text="Screenshot of the methods be used to get the full list of the user groups." lightbox="media/get-signed-in-users-groups-in-access-token/select-method-to-get-groups.png"  border="false":::
+    :::image type="content" source="media/get-signed-in-users-groups-in-access-token/select-method-to-get-groups.png" alt-text="Screenshot of the methods used to get the full list of the user groups." lightbox="media/get-signed-in-users-groups-in-access-token/select-method-to-get-groups.png":::
 
     The groups will appear in the console window:
 
-    :::image type="content" source="media/get-signed-in-users-groups-in-access-token/groups-list.png" alt-text="Screenshot of the full list of the user groups." lightbox="media/get-signed-in-users-groups-in-access-token/groups-list.png"  border="false":::
+    :::image type="content" source="media/get-signed-in-users-groups-in-access-token/groups-list.png" alt-text="Screenshot of the full list of the user groups.":::
 
 ## About the code
 
 ### Get_GroupsOverageClaimURL method
 
-The sample project uses MSAL.NET (`Microsoft.Identity.Client`) to authenticate users and obtain access tokens. `System.Net.Http` is used for the HTTP client and Microsoft.Graph SDK is used for the graph client. To parse the JSON file, `System.Text.Json` is used. To get the claims from the token, `System.IdentityModel.Tokens.Jwt` is used. The `JwtSecurityToken` provider is used to retrieve the groups overage claim in the token.
+The sample project uses MSAL.NET (`Microsoft.Identity.Client`) to authenticate users and obtain access tokens. `System.Net.Http` is used for the HTTP client, and Microsoft.Graph SDK is used for the graph client. To parse the JSON file, `System.Text.Json` is used. To get the claims from the token, `System.IdentityModel.Tokens.Jwt` is used. The `JwtSecurityToken` provider is used to retrieve the group overage claim in the token.
 
-If the token contains the claims `claim_names` and `claim_sources`, then it indicates the presence of a group overages claim within the token. In this case, use the user ID (oid) and the two claims to construct the URL for the groups list and output the original value in the console windows. If either of the two claim values doesn't exist, the `try/catch` block will handle the error and return a `string.empty` value. This indicates that there is no groups overage claim in the token.
+If the token contains the claims `claim_names` and `claim_sources`, it indicates the presence of a group overage claim within the token. In this case, use the user ID (oid) and the two claims to construct the URL to the group list and output the original value in the console window. If either of the two claim values doesn't exist, the `try/catch` block will handle the error and return a `string.empty` value. This indicates that there's no group overage claim in the token.
 
 ```csharp
 /// <summary>
-		/// Looks for a groups overage claim in an access token and returns the value if found.
+		/// Looks for a group overage claim in an access token and returns the value if found.
 		/// </summary>
 		/// <param name="accessToken"></param>
 		/// <returns></returns>
@@ -150,9 +150,9 @@ If the token contains the claims `claim_names` and `claim_sources`, then it indi
 
 ### Program.cs file
 
-In this file, there is a public client application configuration for user sign-in and getting access tokens, and a confidential client application for application sign-in and getting access tokens (the client credentials grant flow). `ManualTokenProvider` is used for the Graph Service Client to pass an access token to the service instead of having Graph obtain it.
+In this file, there's a public client application configuration for user sign-in and getting access tokens, and a confidential client application for application sign-in and getting access tokens (the client credentials grant flow). `ManualTokenProvider` is used for the Graph Service Client to pass an access token to the service instead of having Graph obtain it.
 
-There is also an *appsettings.json* file and a class to store those settings (*AzureConfig.cs*) at runtime. The public static property `AzureSettings` retrieves settings from the configuration file using a configuration builder, similar to ASP.NET Core applications. This feature must be added as it's not native to a console application.
+There is also an **appsettings.json** file and a class (**AzureConfig.cs**) to store those settings at runtime. The public static property `AzureSettings` retrieves settings from the configuration file using a configuration builder, similar to ASP.NET Core applications. This feature must be added as it's not native to a console application.
 
 ```csharp
 static AzureConfig _config = null;
@@ -160,8 +160,8 @@ static AzureConfig _config = null;
 		{
 			get
 			{
-				// only load this once when the app starts.
-				// To reload, you will have to set the variable _config to null again before calling this property
+				// Only load this when the app starts.
+				// To reload, you will have to set the variable _config to null again before calling this property.
 				if (_config == null)
 				{
 					_config = new AzureConfig();
@@ -180,7 +180,7 @@ static AzureConfig _config = null;
 
 ### Authentication provider
 
-For the `Authentication` provider for the Graph service client, the sample project uses a custom manual token provider to set the access token for the client it already obtains access tokens using MSAL.
+For the `Authentication` provider for the Graph service client, the sample project uses a custom manual token provider to set the access token for the client that has already obtained access tokens using MSAL.
 
 ```csharp
 using Microsoft.Graph;
@@ -214,7 +214,7 @@ namespace MSAL.Net_GroupOveragesClaim.Authentication
 
 ### Get_Groups_HTTP_Method
 
-This `Get_Groups_HTTP_Method` method will call the `Graph_Request_viaHTTP` method to get the list of groups and then displays that list in the console window.
+This method calls the `Graph_Request_viaHTTP` method to get the list of groups and then displays that list in the console window.
 
 ```csharp
 /// <summary>
@@ -322,7 +322,7 @@ This `Get_Groups_HTTP_Method` method will call the `Graph_Request_viaHTTP` metho
 
 ### Get_Groups_GraphSDK_Method
 
-In a similar fashion, the Graph SDK has an entry method `Get_Groups_GraphSDK_Method`. This method will call `Get_GroupList_GraphSDK` to get the list of groups and then display it in the console window.
+Similarly, the Graph SDK has an entry method, `Get_Groups_GraphSDK_Method`. This method calls `Get_GroupList_GraphSDK` to get the list of groups and then displays it in the console window.
 
 ```csharp
 /// <summary>
@@ -344,7 +344,7 @@ In a similar fashion, the Graph SDK has an entry method `Get_Groups_GraphSDK_Met
 
 ### Get_GroupList_GraphSDK method
 
-This method determines whether to use the `me` endpoint or the `users` endpoint to get the group list. If you use the client credentials grant flow to get the access token for Microsoft Graph, use the `users` endpoint. If not (for example, a delegated flow is used for the access token), use the `users` endpoint. Regardless of the method used, the code will handle paging because by default, only 100 records per page will be returned. Paging is determined via the `@odata.nextLink` value. If there is a value for that property, the full URL is called for the next page of data. For more information about paging, see [Paging Microsoft Graph data in your app](/graph/paging).
+This method determines whether to use the `me` endpoint or the `users` endpoint to get the group list. If you use the client credentials grant flow to get the access token for Microsoft Graph, use the `me` endpoint. If not (for example, a delegated flow is used for the access token), use the `users` endpoint. Regardless of the method used, the code handles paging because, by default, only 100 records per page are returned. Paging is determined via the `@odata.nextLink` value. If there's a value for that property, the full URL is called for the next page of data. For more information about paging, see [Paging Microsoft Graph data in your app](/graph/paging).
 
 ```csharp
 /// <summary>
