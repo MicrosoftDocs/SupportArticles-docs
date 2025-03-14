@@ -2,15 +2,18 @@
 title: Something went wrong during sign-in when accessing Dynamics 365 App for Outlook
 description: Solves the error that occurs when you sign in to Microsoft Dynamics 365 App for Outlook.
 ms.reviewer: 
-ms.date: 03/11/2025
+ms.date: 03/14/2025
 ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
 # "Something went wrong during sign-in" error when you access Dynamics 365 App for Outlook
 
-This article provides solutions to errors that occur when you access [Microsoft Dynamics 365 App for Outlook](/dynamics365/outlook-app/overview).
-
 _Applies to:_ &nbsp; Dynamics 365 App for Outlook  
 _Original KB number:_ &nbsp; 3064194, 4035750
+
+This article provides solutions to the following sign-in errors that might occur when you access [Microsoft Dynamics 365 App for Outlook](/dynamics365/outlook-app/overview).
+
+- [Something went wrong during sign-in. Please try again. If the problem persists, contact your system administrator.](#error-1)  
+- [Something went wrong during sign-in. Please try adding the following URLs to your Trusted Sites:](#error-2)
 
 ## Error 1
 
@@ -58,6 +61,8 @@ By enabling Protected Mode on each Internet Explorer security zone, each URL loa
 
 This issue can occur if your Dynamics 365 (online) URL is changed after the Dynamics 365 App for Outlook is installed. For example, if your Dynamics 365 URL is `https://contosocorp.crm.dynamics.com` when you deploy the app, but you change the URL to `https://contoso.crm.dynamics.com` later.
 
+You can verify if this is the cause of the issue by right-clicking the **Help me resolve this issue** link in the error message and checking the URL. If the URL is the old URL instead of your current Dynamics 365 URL, that could be the reason for the error.
+
 #### Resolution
 
 If you change your Dynamics 365 (online) URL after the Dynamics 365 App for Outlook is installed, you need to redeploy the app:
@@ -67,10 +72,6 @@ If you change your Dynamics 365 (online) URL after the Dynamics 365 App for Outl
 1. Select the users who should have the app redeployed and use one of the **Add App** buttons to redeploy the app.
 
 1. After the **Status** changes to **Added to Outlook**, you can verify if the issue is resolved. If you already have the app open, close and reopen it.
-
-#### More information
-
-You can verify if this issue is the result of Cause 2 by right-clicking the **Help me resolve this issue** link in the error message and copying the URL. If you view the URL parameters, it contains the old Dynamics 365 URL. In the example provided earlier, it shows the old URL `contosocorp.crm.dynamics.com` instead of your current Dynamics 365 URL `contoso.crm.dynamics.com`.
 
 ## Error 2
 
