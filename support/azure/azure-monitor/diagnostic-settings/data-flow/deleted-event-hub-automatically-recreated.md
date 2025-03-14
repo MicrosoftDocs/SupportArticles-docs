@@ -1,9 +1,10 @@
 ---
-title: Deleted Azure Event Hub Is Automatically Recreated By Diagnostic Settings
+title: Deleted Azure Event Hub is Automatically Recreated by Diagnostic Settings
 description: Resolve issues with an Azure Event Hub that is automatically recreated by diagnostic settings after being deleted.
-ms.date: 03/13/2025
+ms.date: 03/14/2025
 ms.reviewer: jfanjoy, v-weizhu
 ms.service: azure-monitor
+ms.custom: sap:Issues with configuring diagnostic settings
 ---
 # Deleted Azure Event Hub is automatically recreated by diagnostic settings
 
