@@ -2,12 +2,12 @@
 title: Can't Track and Set Regarding in Dynamics 365 App for Outlook
 description: Solves the Track and Set Regarding are currently disabled notification that occurs when using Microsoft Dynamics 365 App for Outlook.
 ms.reviewer: 
-ms.date: 03/11/2025
+ms.date: 03/14/2025
 ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
 # "Track and Set Regarding are currently disabled" occurs in Dynamics 365 App for Outlook
 
-This article provides solutions to an issue where you receive a "Track and Set Regarding are currently disabled" notification in Microsoft Dynamics 365 App for Outlook.
+This article explains why you might receive a "Track and Set Regarding are currently disabled" notification in Microsoft Dynamics 365 App for Outlook.
 
 _Applies to:_ &nbsp; Dynamics 365 App for Outlook  
 _Original KB number:_ &nbsp; 4508591
@@ -20,13 +20,13 @@ When using [Dynamics 365 App for Outlook](/dynamics365/outlook-app/overview), yo
 
 ## Cause 1 - Server-side synchronization is inactive
 
-Dynamics 365 App for Outlook uses [server-side synchronization](/dynamics365/customerengagement/on-premises/admin/set-up-server-side-synchronization-of-email-appointments-contacts-and-tasks) to keep your Exchange items in synchronization with Dynamics 365. For example, when you track a meeting in Outlook, Dynamics 365 App for Outlook relies on server-side synchronization to create the activity in Dynamics 365 and maintain synchronization between the two items.
+Dynamics 365 App for Outlook uses [server-side synchronization](/power-platform/admin/set-up-server-side-synchronization-of-email-appointments-contacts-and-tasks) to keep your Exchange items in synchronization with Dynamics 365. For example, when you track a meeting in Outlook, Dynamics 365 App for Outlook relies on server-side synchronization to create the activity in Dynamics 365 and maintain synchronization between the two items.
 
 If server-side synchronization is inactive on your mailbox, you can't track and set regarding on emails and appointments. However, you can still view Dynamics 365 information, such as accounts, contacts, and activities, and continue to create, update, and manage your information, as these actions aren't related to synchronization.
 
 ### Resolution
 
-To fix this issue, contact your administrator who can check the status of the service and take necessary actions to activate server-side synchronization.
+To address this issue, contact your administrator who can check the status of the service and take necessary actions to activate server-side synchronization.
 
 ## Cause 2 - Email address doesn't match the primary SMTP address
 
