@@ -32,7 +32,7 @@ Restart the Print Spooler service to clear any stuck print jobs by using one of 
 
 ### Manually restart the service
 
-In the Services application, right-click Print Spooler in the list, and select Restart.
+In the **Services** application, right-click **Print Spooler** in the list, and select **Restart**.
 
 ### Use Command Prompt
 
