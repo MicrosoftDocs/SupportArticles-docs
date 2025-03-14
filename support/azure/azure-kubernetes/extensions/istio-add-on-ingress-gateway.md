@@ -21,9 +21,6 @@ For the Istio-based service mesh add-on, we offer the following ingress gateway 
 
 - An external ingress gateway that uses a publicly accessible IP address.
 
-> [!NOTE]
-> Microsoft doesn't support customizing the IP address for either the internal or external ingress gateways. Any IP customization changes to the Istio service mesh add-on will be reverted.
-
 The add-on deploys Istio ingress gateway pods and deployments per revision. If you're doing a [canary upgrade](./istio-add-on-minor-revision-upgrade.md) and have two control plane revisions installed in your cluster, then you might have to troubleshoot multiple ingress gateway pods across both revisions.
 
 ## Troubleshooting checklist
@@ -96,6 +93,13 @@ For the example in [Secure ingress gateway for Istio service mesh add-on for Azu
 After you enable the Azure Key Vault secrets provider add-on, you have to grant access for the user-assigned managed identity of the add-on to the Azure Key Vault. Incorrectly setting up access to Azure Key Vault will prevent the `productpage-credential` secret from being created.
 
 After you create the `SecretProviderClass` resource, to ensure secrets sync from Azure Key Vault to the cluster, ensure the sample pod `secrets-store-sync-productpage` that references this resource is successfully deployed.
+
+# Step 6: Customize ingress gateway service settings
+
+The add-on also supports [customizing the Kubernetes service for the Istio ingress gateway](/azure/aks/istio-deploy-ingress#ingress-gateway-service-customizations) for certain annotations as well as the `spec.externalTrafficPolicy` setting. In certain cases, modifying the `spec.externalTrafficPolicy` to `Local` can assist with troubleshooting connectivity and networking issues, as it preserves the client source IP for the incoming request at the ingress gateway.
+
+> [!NOTE]
+> Modifying the `spec.externalTrafficPolicy` to `Local` risks potentially imbalanced traffic spreading. Before applying this change, it is recommended to read the [Kubernetes docs](https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/#preserving-the-client-source-ip) to understand the tradeoffs between the different `externalTrafficPolicy` settings.
 
 ## References
 
