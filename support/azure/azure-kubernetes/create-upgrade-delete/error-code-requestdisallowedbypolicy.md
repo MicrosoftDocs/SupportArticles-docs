@@ -1,9 +1,9 @@
 ---
 title: RequestDisallowedByPolicy error when deploying an AKS cluster
 description: Learn how to fix the RequestDisallowedByPolicy error when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 10/12/2024
+ms.date: 03/13/2025
 editor: v-jsitser
-ms.reviewer: rissing, chiragpa, erbookbi, albarqaw, v-leedennis, v-weizhu
+ms.reviewer: rissing, chiragpa, erbookbi, albarqaw, jacobbaek, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the RequestDisallowedByPolicy error code so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
@@ -22,19 +22,20 @@ When you try to deploy an AKS cluster, you receive the following error message:
 
 ## Cause
 
-For security or compliance, your subscription administrators might assign policies that limit how resources are deployed. For example, your subscription might have a policy that prevents creating public IP addresses, network security groups, user-defined routes, or route tables. The error message includes the specific reason why the cluster creation was blocked. Only you can manage the policies in your environment. Microsoft can't disable or bypass those policies.
+For security or compliance, your subscription administrators might assign policies that limit how resources are deployed. For example, your subscription might have a policy that prevents creating public IP addresses, network security groups, user-defined routes, or route tables. The error message includes the specific reason why the cluster creation was blocked. 
+
+> [!NOTE]
+> Only you can manage the policies in your environment. Microsoft can't disable or bypass those policies.
 
 ## Solution
 
 To fix this issue, follow these steps:
 
-1. Find the policy that blocks the action. These policies are listed in the error message. The name of a policy assignment or definition is the last segment of the `id` string shown in the error message.
+1. Find the policy that blocks the action. These policies are listed in the error message.   
+   The name of a policy assignment or definition is the last segment of the `id` string shown in the error message.
 
-1. If possible, change your deployment to meet the limitations of the policy, and then retry the deploy operation.
-
-1. Add an [exception to the policy](/azure/governance/policy/concepts/exemption-structure).
-
-1. [Disable the policy](/azure/defender-for-cloud/tutorial-security-policy#disable-security-policies-and-disable-recommendations).
+1. If possible, change your deployment to meet the limitations of the policy, and then retry the deploy operation.   
+   or if you have permission to change policy, [Add an exemption](/azure/governance/policy/tutorials/disallowed-resources#create-an-exemption) to the policy.
 
 To get details about the policy that blocked your cluster deployment operation, see [RequestDisallowedByPolicy error with Azure resource policy](/azure/azure-resource-manager/troubleshooting/error-policy-requestdisallowedbypolicy).
 
