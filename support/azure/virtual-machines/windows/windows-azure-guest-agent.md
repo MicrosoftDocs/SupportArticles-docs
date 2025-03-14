@@ -145,7 +145,7 @@ Manually uninstall the Azure VM Agent, and then reinstall it by following these 
 
 1. Under *C:\\WindowsAzure*, create a folder that's named *OLD*.
 1. Move any folders that are named *Packages* or *GuestAgent* to the *OLD* folder. Also, move any of the *GuestAgent* folders in *C:\\WindowsAzure\\logs* that start as *GuestAgent_x.x.xxxxx* to the *OLD* folder.
-1. Download and install the latest version of the Windows Installer (MSI) agent. You must have administrator rights to complete the installation.
+1. Download and install the latest version of the Windows Installer ([MSI](https://github.com/Azure/WindowsVMAgent/releases)) agent from the Github Releases for WinGA. You must have administrator rights to complete the installation.
 1. Install Guest Agent by running the following [msiexec](/windows-server/administration/windows-commands/msiexec) command:
 
     ```cmd
