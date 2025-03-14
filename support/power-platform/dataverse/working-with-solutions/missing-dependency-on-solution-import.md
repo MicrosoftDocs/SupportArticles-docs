@@ -44,7 +44,7 @@ To work around this issue, follow these steps:
 
 This issue occurs when the solution relies on components from Dynamics 365 applications that are either missing or outdated in the target environment. You can find these dependencies in the **Applications** section of the **Missing dependencies** page. Each entry provides details about the missing application in the _<solution_name> (<solution_version>) from <application_name>_ format. Next to the application name, you'll find an **Install** or **Update** button that redirects you to the Power Platform admin center.
 
-:::image type="content" source="media/missing-dependency-on-solution-import/missing-dependencies-applications-section.png" alt-text="Example of the application upgrade link for a component with missing dependencies." lightbox="media/missing-dependency-on-solution-import/missing-dependencies-applications-section.png":::
+:::image type="content" source="media/missing-dependency-on-solution-import/missing-dependencies-applications-section.png" alt-text="Screenshot that shows the Applications section of the Missing dependencies page." lightbox="media/missing-dependency-on-solution-import/missing-dependencies-applications-section.png":::
 
  To resolve this issue:
 
@@ -62,7 +62,7 @@ This issue occurs when the solution relies on components from Dynamics 365 appli
 
 This issue occurs when the solution relies on components from another managed solution that's missing in the target environment. You can find these dependencies in the **Managed Solutions** section of the **Missing dependencies** page. Expanding this section provides additional details.
 
-:::image type="content" source="media/missing-dependency-on-solution-import/missing-dependencies-managed-solutions-section.png" alt-text="Example of the application upgrade link for a component with missing dependencies." lightbox="media/missing-dependency-on-solution-import/missing-dependencies-managed-solutions-section.png":::
+:::image type="content" source="media/missing-dependency-on-solution-import/missing-dependencies-managed-solutions-section.png" alt-text="Screenshot that shows the Managed Solutions section of the Missing dependencies page." lightbox="media/missing-dependency-on-solution-import/missing-dependencies-managed-solutions-section.png":::
 
 To resolve this issue, import the same version of the solution that's installed in the source environment into the target environment.
 
@@ -70,6 +70,6 @@ To resolve this issue, import the same version of the solution that's installed 
 
 This issue occurs when the solution relies on unmanaged customizations from the source environment that are missing in the target environment. You can find these dependencies in the **Unmanaged Components** section of the **Missing dependencies** page. Expanding this section provides additional details.
 
-:::image type="content" source="media/missing-dependency-on-solution-import/missing-dependencies-unmanaged-components.png" alt-text="Example of the application upgrade link for a component with missing dependencies." lightbox="media/missing-dependency-on-solution-import/missing-dependencies-unmanaged-components.png":::
+:::image type="content" source="media/missing-dependency-on-solution-import/missing-dependencies-unmanaged-components.png" alt-text="Screenshot that shows the Unmanaged Components section of the Missing dependencies page." lightbox="media/missing-dependency-on-solution-import/missing-dependencies-unmanaged-components.png":::
 
 To resolve this issue, return to the source environment, include the missing components, export the solution again, and then import it into the target environment.
