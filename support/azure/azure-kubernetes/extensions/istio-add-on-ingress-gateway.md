@@ -94,7 +94,7 @@ After you enable the Azure Key Vault secrets provider add-on, you have to grant 
 
 After you create the `SecretProviderClass` resource, to ensure secrets sync from Azure Key Vault to the cluster, ensure the sample pod `secrets-store-sync-productpage` that references this resource is successfully deployed.
 
-# Step 6: Customize ingress gateway service settings
+### Step 6: Customize ingress gateway service settings
 
 The add-on also supports [customizing the Kubernetes service for the Istio ingress gateway](/azure/aks/istio-deploy-ingress#ingress-gateway-service-customizations) for certain annotations as well as the `spec.externalTrafficPolicy` setting. In certain cases, modifying the `spec.externalTrafficPolicy` to `Local` can assist with troubleshooting connectivity and networking issues, as it preserves the client source IP for the incoming request at the ingress gateway.
 
