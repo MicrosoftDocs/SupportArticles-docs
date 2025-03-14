@@ -150,9 +150,9 @@ If the token contains the claims `claim_names` and `claim_sources`, it indicates
 
 ### Program.cs file
 
-In this file, there's a public client application configuration for user sign-in and getting access tokens, and a confidential client application for application sign-in and getting access tokens (the client credentials grant flow). `ManualTokenProvider` is used for the Graph Service Client to pass an access token to the service instead of having Graph obtain it.
+In this file, there's a public client application configuration for user sign-in and getting access tokens, and a confidential client application for application sign-in and getting access tokens (the client credentials grant flow). `ManualTokenProvider` is used for the Graph service client to pass an access token to the service instead of having Graph obtain it.
 
-There is also an **appsettings.json** file and a class (**AzureConfig.cs**) to store those settings at runtime. The public static property `AzureSettings` retrieves settings from the configuration file using a configuration builder, similar to ASP.NET Core applications. This feature must be added as it's not native to a console application.
+There's also an **appsettings.json** file and a class (**AzureConfig.cs**) to store those settings at runtime. The public static property `AzureSettings` retrieves settings from the configuration file using a configuration builder, similar to ASP.NET Core applications. This feature must be added as it's not native to a console application.
 
 ```csharp
 static AzureConfig _config = null;
