@@ -32,31 +32,23 @@
       href: d365-app-outlook/trying-to-access-dynamics-365-app-for-outlook-from-email-do-not-recognize-error.md
     - name: Can't connect to Exchange message
       href: d365-app-outlook/cannot-connect-to-exchange-message-when-using-dynamics-365-app-for-outlook.md
-    - name: Can't load this app because email account isn't configured
-      href: d365-app-outlook/we-cannot-load-this-app.md
     - name: Dynamics 365 App for Outlook is missing from the navigation pane
       href: d365-app-outlook/dynamics-365-app-for-outlook-is-missing.md
     - name: Email or appointment tracked by App for Outlook shows as Track pending
       href: d365-app-outlook/emails-tracked-by-dynamics-365-app-for-outlook-show-track-pending.md
-    - name: Error in App for Outlook
-      href: d365-app-outlook/error-when-opening-365-app-outlook.md
     - name: Errors when opening Dynamics 365 App for Outlook
       href: d365-app-outlook/errors-when-opening-365-app-outlook.md
-    - name: Experience without Server-Side Synchronization
+    - name: '"Track and Set Regarding are currently disabled" notification'
       href: d365-app-outlook/experience-without-server-side-synchronization.md
-    - name: IncomingEmailRejected error when installing App for Outlook
-      href: d365-app-outlook/error-incomingemailrejected-install-dynamics-365-app-outlook.md
-    - name: IncomingEmailS2SApprovalNeeded error when installing App for Outlook
+    - name: IncomingEmailS2SApprovalNeeded or IncomingEmailRejected error during installation
       href: d365-app-outlook/error-install-dynamics-365-app-outlook.md
     - name: Item level Server-Side Synchronization issues
       href: d365-app-outlook/troubleshoot-item-level-server-side-synchronization-issues.md
     - name: Privilege or permission error when using Dynamics 365 App for Outlook
       href: d365-app-outlook/privilege-error-occurs-when-using-dynamics-365-app-for-outlook.md
-    - name: Something went wrong during sign-in when accessing App for Outlook
+    - name: '"Something went wrong during sign-in" error when accessing App for Outlook'
       href: d365-app-outlook/something-went-wrong-during-sign.md
-    - name: Something went wrong during sign-in when using App for Outlook
-      href: d365-app-outlook/something-went-wrong-during-sign-in.md
-    - name: The authentication was not successful
+    - name: '"The authentication was not successful error"'
       href: d365-app-outlook/the-authentication-was-not-successful.md
     - name: The view is not available when opening an email
       href: d365-app-outlook/the-view-is-not-available-error-when-opening-emails.md
@@ -66,8 +58,8 @@
       href: d365-app-outlook/buttons-such-as-track-and-set-regarding-are-missing.md
     - name: We're unable to connect to your server
       href: d365-app-outlook/we-are-unable-to-connect-to-your-dynamics-365-app-for-outlook-error.md
-    - name: You don't have required role or privilege
-      href: d365-app-outlook/you-do-not-have-required-role-privilege.md
+    - name: We can't load this app error when opening Dynamics 365 App for Outlook
+      href: d365-app-outlook/error-when-opening-365-app-outlook.md
     - name: You don't have the required role or privilege to complete this action
       href: d365-app-outlook/you-do-not-have-the-required-role-or-privilege-to-complete-this-action-error.md
 - name: Environment and app access issues
