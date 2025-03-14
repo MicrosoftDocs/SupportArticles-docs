@@ -9,15 +9,17 @@ ms.custom: sap:Working with Solutions\Dependencies prevent a solution import
 ---
 # Missing dependencies error during solution import
 
-This article provides a workaround for an issue about missing dependencies that occurs when you [import a solution](/powerapps/maker/data-platform/import-update-export-solutions) in Microsoft Power Apps. You can't proceed with the solution import until the missing dependencies are resolved.
+This article provides a workaround for an issue about missing dependencies that occurs when you [import a solution](/powerapps/maker/data-platform/import-update-export-solutions) in Microsoft Power Apps.
 
 _Applies to:_ &nbsp; Power Platform, Solutions
 
 ## Symptoms
 
-When you try to import a solution in [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), you receive an error message like the following one:
+When you try to import a solution in Power Apps, you receive an error message like the following one:
 
 > Import failed due to missing dependencies.
+
+You can't proceed with the solution import until the missing dependencies are resolved.
 
 ## Cause
 
@@ -31,13 +33,20 @@ To work around this issue, follow these steps:
 
 1. Select the **Show dependencies** button to navigate to the **Missing dependencies** page.
 
-    The **Missing dependencies** page lists all the components that are missing from the target environment. It also shows three categories of dependencies from which the component dependencies are obtained. The component missing issue might occur due to missing an application, a managed solution or an unmanaged component.
+    The **Missing dependencies** page lists all the components that are missing from the target environment.  It also categorizes dependencies into three sections: **Applications**, **Managed Solutions**, and **Unmanaged Components**. Missing dependencies might occur due to the absence of an application, a managed solution, or an unmanaged component.
 
-2. Expand each section of dependencies that is encountered and resolve this issue based on the different types of dependencies described in the following sections, once the missing dependencies are fixed, retry the import:
+    > [!TIP]
+    > Another method to find dependencies of components is to open the solution file, unzip it, and then open the *solution.xml* file. In the file, look for the `<MissingDependencies>` element that lists all missing dependencies.
+
+2. Expand each section of dependencies and resolve the issue based on the type of dependencies described in the following sections. Once the missing dependencies are fixed, retry the import.
 
 ### Missing dependencies coming from a Dynamics 365 application
 
-You can find these dependencies in the **Applications** section of the **Missing dependencies** page. To resolve this issue:
+This issue occurs when the solution relies on components from Dynamics 365 applications that are either missing or outdated in the target environment. You can find these dependencies in the **Applications** section of the **Missing dependencies** page. Each entry provides details about the missing application in the _<solution_name> (<solution_version>) from <application_name>_ format. Next to the application name, you'll find an **Install** or **Update** button that redirects you to the Power Platform admin center.
+
+:::image type="content" source="media/missing-dependency-on-solution-import/missing-dependencies-applications-section.png" alt-text="Example of the application upgrade link for a component with missing dependencies." lightbox="media/missing-dependency-on-solution-import/missing-dependencies-applications-section.png":::
+
+ To resolve this issue:
 
 - If the application isn't installed in the target environment:
 
@@ -51,23 +60,16 @@ You can find these dependencies in the **Applications** section of the **Missing
   
 ### Missing dependencies coming from another managed solution
 
-You can find these dependencies in the **Managed Solution** section of the **Missing dependencies** page. To resolve this issue, import the same version of the solution that's installed in the source environment into the target environment.
+This issue occurs when the solution relies on components from another managed solution that's missing in the target environment. You can find these dependencies in the **Managed Solutions** section of the **Missing dependencies** page. Expanding this section provides additional details.
+
+:::image type="content" source="media/missing-dependency-on-solution-import/missing-dependencies-managed-solutions-section.png" alt-text="Example of the application upgrade link for a component with missing dependencies." lightbox="media/missing-dependency-on-solution-import/missing-dependencies-managed-solutions-section.png":::
+
+To resolve this issue, import the same version of the solution that's installed in the source environment into the target environment.
 
 ### Missing dependencies on the "Active" solutions
 
-You can find these dependencies in the **Unmanaged components** section of the **Missing dependencies** page. This indicates that the dependency is from unmanaged customization in the source environment. To resolve this issue, return to the source environment, include the missing components, export the solution again, and then import it into the target environment.
+This issue occurs when the solution relies on unmanaged customizations from the source environment that are missing in the target environment. You can find these dependencies in the **Unmanaged Components** section of the **Missing dependencies** page. Expanding this section provides additional details.
 
-### Example
+:::image type="content" source="media/missing-dependency-on-solution-import/missing-dependencies-unmanaged-components.png" alt-text="Example of the application upgrade link for a component with missing dependencies." lightbox="media/missing-dependency-on-solution-import/missing-dependencies-unmanaged-components.png":::
 
-The following example illustrates a scenario when a system administrator performs a solution import and encounters a missing dependencies which has applications, managed solutions and unmanaged components missing.
-
-:::image type="content" source="media/missing-dependency-on-solution-import/missing-dependencies-updated-experience.png" alt-text="Example of the application upgrade link for a component with missing dependencies." lightbox="media/missing-dependency-on-solution-import/missing-dependencies-updated-experience.png":::
-
-Here the solution has taken dependencies on the components of two applications which are missing in the target environment. One application is not installed, and the other application is installed but outdated in target environment.
-
-The information for each application missing is provided in the format <solution_name> (<solution_version>) from <application_name>. When expanded further, component information is provided. Next to application name is Install or Update button to redirect the user to Power platform admin center for Install or Update.
-
-The solution has also taken dependencies on the components of three managed solutions and two unmanaged components. Expanding each section will help to determine more details. These can be resolved based on the instruction provided above.
-
-> [!TIP]
-> Another method to find dependencies of components is to open the solution file, unzip it, and then open the *solution.xml* file. In the *solution.xml* file, look for a `<MissingDependencies>` element. All the dependencies are listed within this node.
+To resolve this issue, return to the source environment, include the missing components, export the solution again, and then import it into the target environment.
