@@ -38,7 +38,7 @@
       href: d365-app-outlook/emails-tracked-by-dynamics-365-app-for-outlook-show-track-pending.md
     - name: Errors when opening Dynamics 365 App for Outlook
       href: d365-app-outlook/errors-when-opening-365-app-outlook.md
-    - name: Experience without Server-Side Synchronization
+    - name: '"Track and Set Regarding are currently disabled" notification'
       href: d365-app-outlook/experience-without-server-side-synchronization.md
     - name: IncomingEmailS2SApprovalNeeded or IncomingEmailRejected error during installation
       href: d365-app-outlook/error-install-dynamics-365-app-outlook.md
@@ -48,7 +48,9 @@
       href: d365-app-outlook/privilege-error-occurs-when-using-dynamics-365-app-for-outlook.md
     - name: '"Something went wrong during sign-in" error when accessing App for Outlook'
       href: d365-app-outlook/something-went-wrong-during-sign.md
-    - name: The authentication was not successful
+    - name: Something went wrong during sign-in when using App for Outlook
+      href: d365-app-outlook/something-went-wrong-during-sign-in.md
+    - name: '"The authentication was not successful error"'
       href: d365-app-outlook/the-authentication-was-not-successful.md
     - name: The view is not available when opening an email
       href: d365-app-outlook/the-view-is-not-available-error-when-opening-emails.md
@@ -60,8 +62,6 @@
       href: d365-app-outlook/we-are-unable-to-connect-to-your-dynamics-365-app-for-outlook-error.md
     - name: We can't load this app error when opening Dynamics 365 App for Outlook
       href: d365-app-outlook/error-when-opening-365-app-outlook.md
-    - name: You don't have required role or privilege
-      href: d365-app-outlook/you-do-not-have-required-role-privilege.md
     - name: You don't have the required role or privilege to complete this action
       href: d365-app-outlook/you-do-not-have-the-required-role-or-privilege-to-complete-this-action-error.md
 - name: Environment and app access issues
