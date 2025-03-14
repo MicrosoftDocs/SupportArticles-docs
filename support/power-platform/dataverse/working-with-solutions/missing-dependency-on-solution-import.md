@@ -50,8 +50,8 @@ This issue occurs when the solution relies on components from Dynamics 365 appli
 
 - If the application isn't installed in the target environment:
 
-  - System administrators can use the **Install** button, which redirects to the [application install](/power-platform/admin/manage-apps#install-an-app) page in the Power Platform admin center. Choose and install the application.
-  - Non-system administrators can use the **Copy Install Link** button to copy the application install link and request their system administrator to install the application. Alternatively, a system administrator can directly go to the [application install](/power-platform/admin/manage-apps#install-an-app) page to install the application in the Power Platform admin center.
+  - System administrators can use the **Install** button, which redirects to the [application installation](/power-platform/admin/manage-apps#install-an-app) page in the Power Platform admin center. Choose and install the application.
+  - Non-system administrators can use the **Copy Install Link** button to copy the application installation link and request their system administrator to install the application. Alternatively, a system administrator can directly go to the [application installation](/power-platform/admin/manage-apps#install-an-app) page to install the application in the Power Platform admin center.
 
 - If the application is installed but outdated in the target environment:
 
