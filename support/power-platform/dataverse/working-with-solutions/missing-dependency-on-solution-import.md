@@ -2,7 +2,7 @@
 title: Missing dependencies during solution import in Power Apps
 description: Works around an issue about missing dependencies that occurs when you import a solution in the target environment in Microsoft Power Apps.
 ms.reviewer: matp
-ms.date: 03/13/2025
+ms.date: 03/14/2025
 author: swatimadhukargit
 ms.author: swatim
 ms.custom: sap:Working with Solutions\Dependencies prevent a solution import
@@ -61,13 +61,13 @@ You can find these dependencies in the **Unmanaged components** section of the *
 
 The following example illustrates a scenario when a system administrator performs a solution import and encounters a missing dependencies which has applications, managed solutions and unmanaged components missing.
 
-:::image type="content" source="media/missing-dependency-on-solution-import/missing-dependencies-update-experience.png" alt-text="Example of the application upgrade link for a component with missing dependencies." lightbox="media/missing-dependency-on-solution-import/missing-dependencies-update-experience.png":::
+:::image type="content" source="media/missing-dependency-on-solution-import/missing-dependencies-updated-experience.png" alt-text="Example of the application upgrade link for a component with missing dependencies." lightbox="media/missing-dependency-on-solution-import/missing-dependencies-updated-experience.png":::
 
-Here the solution has taken dependencies on the components of two applications which are missing in the target environment. One application is not installed, and the other application is installed but outdated in target environment. 
+Here the solution has taken dependencies on the components of two applications which are missing in the target environment. One application is not installed, and the other application is installed but outdated in target environment.
+
 The information for each application missing is provided in the format <solution_name> (<solution_version>) from <application_name>. When expanded further, component information is provided. Next to application name is Install or Update button to redirect the user to Power platform admin center for Install or Update.
 
 The solution has also taken dependencies on the components of three managed solutions and two unmanaged components. Expanding each section will help to determine more details. These can be resolved based on the instruction provided above.
-
 
 > [!TIP]
 > Another method to find dependencies of components is to open the solution file, unzip it, and then open the *solution.xml* file. In the *solution.xml* file, look for a `<MissingDependencies>` element. All the dependencies are listed within this node.
