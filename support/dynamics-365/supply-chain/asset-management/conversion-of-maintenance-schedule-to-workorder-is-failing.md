@@ -3,7 +3,7 @@ title: Conversion of Maintenance Schedule to Work Orders Fails
 description: Solves the errors that prevent you from creating work orders based on maintenance schedule in Microsoft Dynamics 365 Supply Chain Management.
 author: sorenbacker2
 ms.author: sorenba
-ms.date: 03/13/2025
+ms.date: 03/14/2025
 ms.custom: sap:Asset management\Issues with asset management
 ---
 # Can't create work orders based on your maintenance schedule
@@ -12,7 +12,7 @@ This article provides the setup steps to ensure the conversion of maintenance sc
 
 ## Symptoms
 
-When you try to create work orders for the schedule items selected by using the [Open maintenance schedule lines](/dynamics365/supply-chain/asset-management/preventive-and-reactive-maintenance/creating-work-orders#create-work-orders-based-on-your-maintenance-schedule) in **Asset Management**, after you select **OK** to create work orders according to your settings in the **Create work orders** dialog, you receive the following error message:
+When you try to create work orders for the selected schedule items selected using the [Open maintenance schedule lines](/dynamics365/supply-chain/asset-management/preventive-and-reactive-maintenance/creating-work-orders#create-work-orders-based-on-your-maintenance-schedule) in **Asset Management**, you receive the following error message after selecting **OK** in the **Create work orders** dialog.
 
 > Number sequence \<Number sequence> has been exceeded.  
 > Number selection is canceled.
