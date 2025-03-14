@@ -148,6 +148,8 @@
       href: procurement/object-reference-not-set.md
     - name: Imported purchase orders show incorrect line numbers
       href: procurement/line-number-increments.md
+    - name: Purchase requisitions created before the current fiscal year can't be released
+      href: procurement/purchase-requisitions-cannot-released.md
     - name: Purchase order line data discrepancies
       href: procurement/purchase-order-line-data-issues.md
     - name: Purchase orders don't reflect the language settings of the legal entity
