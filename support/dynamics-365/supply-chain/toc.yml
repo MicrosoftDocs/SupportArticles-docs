@@ -6,6 +6,8 @@
       href: asset-management/asset-id-not-editable-when-number-sequence-is-manual.md
     - name: Changing work order lifecycle state doesn't generate fault cause or fault remedy error
       href: asset-management/change-lifecycle-state-doesnt-create-fault.md
+    - name: Can't create work orders based on your maintenance schedule
+      href: asset-management/conversion-of-maintenance-schedule-to-workorder-is-failing.md  
 - name: Inventory costing and closing
   items:
     - name: An update conflict occurs when the inventory valuation method is either standard cost or moving average
@@ -352,6 +354,8 @@
       href: warehousing/shipment-confirmed-no-posting.md
     - name: Slotting templates don't consider on-hand inventory for batch-above items
       href: warehousing/slotting-templates-inventory-batch-above.md
+    - name: '"The size of the request xml exceeds the maximum allowed value" in the mobile app'
+      href: warehousing/request-xml-size-exceeds-maximum-allowed-value.md
     - name: The last closed work line must be a put
       href: warehousing/the-last-closed-work-link-must-be-a-put-error.md
     - name: The weight fields on load lines don't match the weight fields on the load
