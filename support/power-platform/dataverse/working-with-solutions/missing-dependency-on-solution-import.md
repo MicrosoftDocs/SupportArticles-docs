@@ -33,7 +33,7 @@ To work around this issue, follow these steps:
 
 1. Select the **Show dependencies** button to navigate to the **Missing dependencies** page.
 
-    The **Missing dependencies** page lists all the components that are missing from the target environment.  It also categorizes dependencies into three sections: **Applications**, **Managed Solutions**, and **Unmanaged Components**. Missing dependencies might occur due to the absence of an application, a managed solution, or an unmanaged component.
+    This page lists all missing components and categorizes them into **Applications**, **Managed Solutions**, and **Unmanaged Components**.
 
     > [!TIP]
     > Another method to find dependencies of components is to open the solution file, unzip it, and then open the *solution.xml* file. In the file, look for the `<MissingDependencies>` element that lists all missing dependencies.
@@ -42,7 +42,7 @@ To work around this issue, follow these steps:
 
 ### Missing dependencies coming from a Dynamics 365 application
 
-This issue occurs when the solution relies on components from Dynamics 365 applications that are either missing or outdated in the target environment. You can find these dependencies in the **Applications** section of the **Missing dependencies** page. Each entry provides details about the missing application in the _<solution_name> (<solution_version>) from <application_name>_ format. Next to the application name, you'll find an **Install** or **Update** button that redirects you to the Power Platform admin center.
+This issue occurs when the solution relies on components from Dynamics 365 applications that are missing or outdated in the target environment. You can find these dependencies in the **Applications** section of the **Missing dependencies** page. Each entry provides details about the missing application in the _<solution_name> (<solution_version>) from <application_name>_ format. Next to the application name, you'll find an **Install** or **Update** button that redirects you to the Power Platform admin center.
 
 :::image type="content" source="media/missing-dependency-on-solution-import/missing-dependencies-applications-section.png" alt-text="Screenshot that shows the Applications section of the Missing dependencies page." lightbox="media/missing-dependency-on-solution-import/missing-dependencies-applications-section.png":::
 
@@ -60,7 +60,7 @@ This issue occurs when the solution relies on components from Dynamics 365 appli
   
 ### Missing dependencies coming from another managed solution
 
-This issue occurs when the solution relies on components from another managed solution that's missing in the target environment. You can find these dependencies in the **Managed Solutions** section of the **Missing dependencies** page. Expanding this section provides additional details.
+This issue occurs when the solution relies on components from another managed solution that's missing in the target environment. You can find these dependencies in the **Managed Solutions** section of the **Missing dependencies** page. Expanding the section provides additional details.
 
 :::image type="content" source="media/missing-dependency-on-solution-import/missing-dependencies-managed-solutions-section.png" alt-text="Screenshot that shows the Managed Solutions section of the Missing dependencies page." lightbox="media/missing-dependency-on-solution-import/missing-dependencies-managed-solutions-section.png":::
 
@@ -68,7 +68,7 @@ To resolve this issue, import the same version of the solution that's installed 
 
 ### Missing dependencies on the "Active" solutions
 
-This issue occurs when the solution relies on unmanaged customizations from the source environment that are missing in the target environment. You can find these dependencies in the **Unmanaged Components** section of the **Missing dependencies** page. Expanding this section provides additional details.
+This issue occurs when the solution relies on unmanaged customizations from the source environment that are missing in the target environment. You can find these dependencies in the **Unmanaged Components** section of the **Missing dependencies** page. Expanding the section provides additional details.
 
 :::image type="content" source="media/missing-dependency-on-solution-import/missing-dependencies-unmanaged-components.png" alt-text="Screenshot that shows the Unmanaged Components section of the Missing dependencies page." lightbox="media/missing-dependency-on-solution-import/missing-dependencies-unmanaged-components.png":::
 
