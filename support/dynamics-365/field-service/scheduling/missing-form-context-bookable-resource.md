@@ -24,7 +24,7 @@ The system uses a customized form that is based on an old version of the bookabl
 
 You can address such isuses through Power Apps, by editing the form definitions of the customized forms in the corresponding customizations.xml file, or by running a script in the browser console to update the onchange event. 
 
-> [!IMORTANT]
+> [!IMPORTANT]
 > The following resolutions assume that the script error references the function *Mscrm.userid_onchange*. If the error shows on other fields and references other functions such as *Mscrm.accountid_onchange* or *Mscrm.contactid_onchange*, adapt the resolution steps to these fuctions.
 
 ### Update the form in Power Apps
