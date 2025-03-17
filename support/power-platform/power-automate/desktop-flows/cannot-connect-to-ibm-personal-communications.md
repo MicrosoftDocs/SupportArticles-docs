@@ -1,8 +1,8 @@
 ---
-title: Cannot Connect to IBM Personal Communications Session
+title: Unable to Connect to IBM Personal Communications Session
 description: Solves an issue where you can't connect to an IBM Personal Communications session using the Open terminal session action with the HLLAPI provider.
 ms.custom: sap:Desktop flows
-ms.date: 03/12/2025
+ms.date: 03/17/2025
 ms.author: nimoutzo 
 author: NikosMoutzourakis
 ---
