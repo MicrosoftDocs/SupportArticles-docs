@@ -3,7 +3,7 @@ title: Troubleshoot synchronization issues in audit logs
 description: Provides solutions for resolving synchronization issues in audit logs by validating API permissions and secret environment variables.
 author: pete-msft
 ms.component: pa-admin
-ms.date: 03/13/2025
+ms.date: 03/17/2025
 ms.author: petrip
 ms.reviewer: paulliew, sericks, v-christread
 ms.custom: sap:Microsoft Dataverse\Auditing
