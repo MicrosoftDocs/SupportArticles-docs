@@ -2,7 +2,7 @@
 title: Missing dependencies during solution import in Power Apps
 description: Works around an issue about missing dependencies that occurs when you import a solution in the target environment in Microsoft Power Apps.
 ms.reviewer: matp
-ms.date: 03/14/2025
+ms.date: 03/17/2025
 author: swatimadhukargit
 ms.author: swatim
 ms.custom: sap:Working with Solutions\Dependencies prevent a solution import
@@ -42,7 +42,11 @@ To work around this issue, follow these steps:
 
 ### Missing dependencies coming from a Dynamics 365 application
 
-This issue occurs when the solution relies on components from Dynamics 365 applications that are missing or outdated in the target environment. You can find these dependencies in the **Applications** section of the **Missing dependencies** page. Each entry provides details about the missing application in the _<solution_name> (<solution_version>) from <application_name>_ format. Next to the application name, you'll find an **Install** or **Update** button that redirects you to the Power Platform admin center.
+This issue occurs when the solution relies on components from Dynamics 365 applications that are missing or outdated in the target environment. You can find these dependencies in the **Applications** section of the **Missing dependencies** page. Each entry provides details about the missing application in the following format:
+
+_<solution_name> (<solution_version>) from <application_name>_
+
+Next to the application name, you'll find an **Install** or **Update** button that redirects you to the Power Platform admin center.
 
 :::image type="content" source="media/missing-dependency-on-solution-import/missing-dependencies-applications-section.png" alt-text="Screenshot that shows the Applications section of the Missing dependencies page." lightbox="media/missing-dependency-on-solution-import/missing-dependencies-applications-section.png":::
 
