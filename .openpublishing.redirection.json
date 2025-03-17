@@ -12934,55 +12934,55 @@
     },
     {
       "source_path": "support/power-flatform/power-automate/desktop-flows/desktop-application-crashes-ui-automation.md",
-      "redirect_url": "/troubleshoot/power-platform/power-flatform/power-automate/desktop-flows/ui-automation/desktop-application-crashes-ui-automation"
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/ui-automation/desktop-application-crashes-ui-automation"
     },
     {
       "source_path": "support/power-flatform/power-automate/desktop-flows/cannot-access-java-application-elements.md",
-      "redirect_url": "/troubleshoot/power-platform/power-flatform/power-automate/desktop-flows/ui-automation/cannot-access-java-application-elements"
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/ui-automation/cannot-access-java-application-elements"
     },
     {
       "source_path": "support/power-flatform/power-automate/desktop-flows/focus-window-action-not-working.md",
-      "redirect_url": "/troubleshoot/power-platform/power-flatform/power-automate/desktop-flows/ui-automation/focus-window-action-not-working"
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/ui-automation/focus-window-action-not-working"
     },
     {
       "source_path": "support/power-flatform/power-automate/desktop-flows/failed-get-ui-element.md",
-      "redirect_url": "/troubleshoot/power-platform/power-flatform/power-automate/desktop-flows/ui-automation/failed-get-ui-element"
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/ui-automation/failed-get-ui-element"
     },
     {
       "source_path": "support/power-flatform/power-automate/desktop-flows/ui-automation-action-fails-errors.md",
-      "redirect_url": "/troubleshoot/power-platform/power-flatform/power-automate/desktop-flows/ui-automation/ui-automation-action-fails-errors"
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/ui-automation/ui-automation-action-fails-errors"
     },
     {
       "source_path": "support/power-flatform/power-automate/desktop-flows/set-drop-down-list-value-fails.md",
-      "redirect_url": "/troubleshoot/power-platform/power-flatform/power-automate/desktop-flows/ui-automation/set-drop-down-list-value-fails"
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/ui-automation/set-drop-down-list-value-fails"
     },
     {
       "source_path": "support/power-flatform/power-automate/desktop-flows/browser-automation-error-after-chromium-update.md",
-      "redirect_url": "/troubleshoot/power-platform/power-flatform/power-automate/desktop-flows/browser-automation/browser-automation-error-after-chromium-update"
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/browser-automation/browser-automation-error-after-chromium-update"
     },
     {
       "source_path": "support/power-flatform/power-automate/desktop-flows/cannot-automate-webpage-with-iframes.md",
-      "redirect_url": "/troubleshoot/power-platform/power-flatform/power-automate/desktop-flows/browser-automation/cannot-automate-webpage-with-iframes"
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/browser-automation/cannot-automate-webpage-with-iframes"
     },
     {
       "source_path": "support/power-flatform/power-automate/desktop-flows/web-automation-action-fails-runtime.md",
-      "redirect_url": "/troubleshoot/power-platform/power-flatform/power-automate/desktop-flows/browser-automation/web-automation-action-fails-runtime"
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/browser-automation/web-automation-action-fails-runtime"
     },
     {
       "source_path": "support/power-flatform/power-automate/desktop-flows/automate-save-as-open-upload-dialog-box-web-browser.md",
-      "redirect_url": "/troubleshoot/power-platform/power-flatform/power-automate/desktop-flows/browser-automation/automate-save-as-open-upload-dialog-box-web-browser"
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/browser-automation/automate-save-as-open-upload-dialog-box-web-browser"
     },
     {
       "source_path": "support/power-flatform/power-automate/desktop-flows/failed-to-assume-control-of-edge-chrome-firefox-error.md",
-      "redirect_url": "/troubleshoot/power-platform/power-flatform/power-automate/desktop-flows/browser-automation/failed-to-assume-control-of-edge-chrome-firefox-error"
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/browser-automation/failed-to-assume-control-of-edge-chrome-firefox-error"
     },
     {
       "source_path": "support/power-flatform/power-automate/desktop-flows/automation-browser-security-update.md",
-      "redirect_url": "/troubleshoot/power-platform/power-flatform/power-automate/desktop-flows/browser-automation/automation-browser-security-update"
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/browser-automation/automation-browser-security-update"
     },
     {
       "source_path": "support/power-flatform/power-automate/desktop-flows/web-extensions-policies.md",
-      "redirect_url": "/troubleshoot/power-platform/power-flatform/power-automate/desktop-flows/browser-automation/web-extensions-policies"
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/browser-automation/web-extensions-policies"
     }
   ]
 }
