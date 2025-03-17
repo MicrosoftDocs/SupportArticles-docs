@@ -4,7 +4,7 @@ description: Address issues with customized forms based on the default bookable 
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
-ms.date: 03/13/2025
+ms.date: 03/17/2025
 ms.custom: sap:Schedule Board
 ---
 
@@ -22,7 +22,10 @@ The system uses a customized form that is based on an old version of the bookabl
 
 ## Resolution
 
-You can address such isuses through Power Apps, by editing the form definitions of the customized forms in the corresponding customizations.xml file, or by running a script in the browser console to update the onchange event. The following resolutions assume that the script error references the function Mscrm.userid_onchange. If the error shows on other fields and references other functions, adapt the resolution steps to these fuctions.
+You can address such isuses through Power Apps, by editing the form definitions of the customized forms in the corresponding customizations.xml file, or by running a script in the browser console to update the onchange event. 
+
+> [!IMORTANT]
+> The following resolutions assume that the script error references the function *Mscrm.userid_onchange*. If the error shows on other fields and references other functions such as *Mscrm.accountid_onchange* or *Mscrm.contactid_onchange*, adapt the resolution steps to these fuctions.
 
 ### Update the form in Power Apps
 
@@ -47,7 +50,7 @@ You can address such isuses through Power Apps, by editing the form definitions 
 
 ### Update the customizations.xml file
 
-1. Open the customizations.xml file in an editor.
+1. Open the customizations.xml file from the solution with the customized form that shows the error in an editor.
 
 1. In the *Handler* element of the *Mscrm.userid_onchange* function, ensure that the *passExecutionContext* attribute is set to **true**.
 
