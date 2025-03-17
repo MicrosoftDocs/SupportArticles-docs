@@ -34,6 +34,8 @@ logger.addHandler(file)
 logger.addHandler(stream)
 ...
 ```
+> [!NOTE]
+> In auto-instrumentation scenarios, this code snippet can also be added to your code to allow seeing internal logs of the [python auto-instrumentation agent](https://learn.microsoft.com/en-us/azure/azure-monitor/app/codeless-app-service?tabs=python).
 
 ### Test connectivity between your application host and the ingestion service
 
