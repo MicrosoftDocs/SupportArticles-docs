@@ -1,9 +1,9 @@
 ---
 title: Troubleshoot the ReservedResourceName error code
 description: Learn how to troubleshoot the ReservedResourceName error when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 03/10/2022
+ms.date: 03/17/2025
 editor: v-jsitser
-ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis
+ms.reviewer: rissing, chiragpa, erbookbi, jaewonpark, v-leedennis
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the ReservedResourceName error code so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
