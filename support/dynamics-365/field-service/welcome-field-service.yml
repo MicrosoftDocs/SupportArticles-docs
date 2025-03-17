@@ -105,6 +105,8 @@ landingContent:
         links:
           - text: Issue with cascading crew changes when assigning a booking
             url: scheduling/cascade-crew-changes-booking.md
+          - text: Missing form context on bookable resource forms
+            url: scheduling/missing-form-context-bookable-resource.md
 
   # Card
   - title: Integrations
