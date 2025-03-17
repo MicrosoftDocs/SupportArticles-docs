@@ -58,6 +58,10 @@
       items:
         - name: Web automation fails when machine runtime and MSIX versions are different
           href: desktop-flows/browser-automation/machine-runtime-msix-errors.md
+        - name: Launch Browser fails when is opening with different system user
+          href: desktop-flows/browser-automation/launch-browser-fails-different-user.md
+        - name: Error while interacting with Web element on runtime
+          href: desktop-flows/browser-automation/error-while-interacting-web-element.md
     - name: SAP automation
       items:
         - name: Can't open SAP
