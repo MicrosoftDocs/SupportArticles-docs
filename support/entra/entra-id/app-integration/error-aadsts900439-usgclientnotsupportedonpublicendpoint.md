@@ -16,7 +16,7 @@ When trying to sign in to an application registered in Azure Government cloud us
 
 ## Cause
 
-Microsoft Entra authority for Azure Government has been updated to from `https://login-us.microsoftonline.com` to `https://login.microsoftonline.us`. This change also applies to Microsoft 365 GCC High and M365 DoD environments, which Microsoft Entra authority for Azure Government also services. Microsoft Entra ID enforces the correct endpoint for sign-in operations. You can no longer sign in to an application registered in the Azure Government cloud using the public `https://login-us.microsoftonline.com` endpoint.
+Microsoft Entra authority for Azure Government has been updated to from `https://login-us.microsoftonline.com` to `https://login.microsoftonline.us`. This change also applies to Microsoft 365 GCC High and M365 DoD environments, which Microsoft Entra authority for Azure Government also services. Microsoft Entra ID enforces the correct endpoint for sign-in operations. You can no longer sign in to an application registered in the Azure Government cloud using the public endpoint `https://login-us.microsoftonline.com`.
 
 For more information, see [Endpoint Update - Microsoft Entra Authority for Azure Government](https://devblogs.microsoft.com/azuregov/azure-government-aad-authority-endpoint-update)
 
