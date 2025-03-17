@@ -114,7 +114,7 @@
         href: app-integration/error-code-aadsts7000110-request-is-ambiguous.md
       - name: Error AADSTS7000112 - application is disabled
         href: app-integration/error-code-aadsts7000112-application-is-disabled.md
-      - name: EError AADSTS900439 - USGClientNotSupportedOnPublicEndpoint
+      - name: Error AADSTS900439 - USGClientNotSupportedOnPublicEndpoint
         href: app-integration/error-aadsts900439-usgclientnotsupportedonpublicendpoint.md
       - name: Troubleshoot signing in to SAML-based single sign-on configured apps
         href: app-integration/troubleshoot-sign-in-saml-based-apps.md
