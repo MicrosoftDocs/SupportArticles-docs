@@ -81,8 +81,6 @@
           href: ../administration/how-to-use-powershell-to-grant-admin-access-to-all-mailboxes.md
         - name: Imported PST file content hidden in archive mailbox
           href: ../administration/imported-pst-file-content-hidden-in-archive-mailbox.md
-        - name: Original mailbox isn't reconnected after syncing resumes
-          href: ../administration/reconnect-inactive-or-soft-deleted-mailboxes-to-ad.md
         - name: InvalidShellID error in Remote PowerShell
           href: ../administration/invalidshellid-error-in-rps.md
         - name: Mailbox quotas for qualifying license types not automatically increased
