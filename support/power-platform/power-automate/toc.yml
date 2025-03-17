@@ -48,24 +48,6 @@
       href: dataverse-cds/cds-user-cannot-access-power-automate-business-process-flows-on-demand-workflows.md
 - name: Desktop flows
   items:
-    - name: UI automation
-      items:    
-        - name: A desktop application crashes due to UI automation
-          href: desktop-flows/ui-automation/desktop-application-crashes-ui-automation.md
-        - name: Can't access the elements of a Java application
-          href: desktop-flows/ui-automation/cannot-access-java-application-elements.md
-        - name: Focus window action can't bring a window to focus
-          href: desktop-flows/ui-automation/focus-window-action-not-working.md
-        - name: Failed to get UI element
-          href: desktop-flows/ui-automation/failed-get-ui-element.md
-        - name: Failed to get element/window or Element/Window wasn't found error
-          href: desktop-flows/ui-automation/ui-automation-action-fails-errors.md
-        - name: UI element highlighting or hovering issues in virtual desktops
-          href: desktop-flows/ui-automation/ui-rdp-automation/rdp-no-highlight.md
-        - name: SAP UI element click issue
-          href: desktop-flows/ui-automation/ui-sap-automation/sap-click-element-dpi.md
-        - name: Set drop-down list value in window/on web page action fails
-          href: desktop-flows/ui-automation/set-drop-down-list-value-fails.md
     - name: Browser automation
       items:
         - name: Browser automation actions stop working after a browser update
@@ -84,10 +66,6 @@
           href: desktop-flows/browser-automation/web-extensions-policies.md
         - name: Web automation fails when machine runtime and MSIX versions are different
           href: desktop-flows/browser-automation/machine-runtime-msix-errors.md
-    - name: SAP automation
-      items:
-        - name: Can't open SAP
-          href: desktop-flows/sap-automation/scripting-permissions-launch-sap.md
     - name: Office automation
       items:
         - name: Excel
@@ -98,6 +76,28 @@
           items:
             - name: Retrieve email messages from Outlook doesn't work as expected
               href: desktop-flows/office-automation/outlook/retrieve-emails-filtering.md
+    - name: SAP automation
+      items:
+        - name: Can't open SAP
+          href: desktop-flows/sap-automation/scripting-permissions-launch-sap.md
+    - name: UI automation
+      items:    
+        - name: A desktop application crashes due to UI automation
+          href: desktop-flows/ui-automation/desktop-application-crashes-ui-automation.md
+        - name: Can't access the elements of a Java application
+          href: desktop-flows/ui-automation/cannot-access-java-application-elements.md
+        - name: Focus window action can't bring a window to focus
+          href: desktop-flows/ui-automation/focus-window-action-not-working.md
+        - name: Failed to get UI element
+          href: desktop-flows/ui-automation/failed-get-ui-element.md
+        - name: Failed to get element/window or Element/Window wasn't found error
+          href: desktop-flows/ui-automation/ui-automation-action-fails-errors.md
+        - name: SAP UI element click issue
+          href: desktop-flows/ui-automation/ui-sap-automation/sap-click-element-dpi.md
+        - name: Set drop-down list value in window/on web page action fails
+          href: desktop-flows/ui-automation/set-drop-down-list-value-fails.md
+        - name: UI element highlighting or hovering issues in virtual desktops
+          href: desktop-flows/ui-automation/ui-rdp-automation/rdp-no-highlight.md
     - name: '"Could not read the application certificate" error when creating a connection'
       href: desktop-flows/application-certificate-error.md
     - name: Agent-related errors when running attended or unattended desktop flows
