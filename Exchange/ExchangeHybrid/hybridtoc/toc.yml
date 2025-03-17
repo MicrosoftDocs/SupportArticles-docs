@@ -27,6 +27,8 @@
           href: ../administration/mutual-authentication-could-not-be-established-error-if-testing-outlook-anywhere.md
         - name: OAuth authentication configuration fails
           href: ../administration/exchange-oauth-authentication-could-not-find-the-authorization.md
+        - name: Original mailbox isn't reconnected after syncing resumes
+          href: ../administration/reconnect-inactive-or-soft-deleted-mailboxes-to-ad.md
         - name: Outlook doesn't connect when using Modern authentication
           href: ../administration/outlook-does-not-connect-with-modern-authentication.md
         - name: Outlook Web App address is out of date error
