@@ -15,24 +15,12 @@ metadata:
 
 landingContent:
   # Card
-  - title: Troubleshoot general Power Apps issues
+  - title: Canvas apps
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Common issues and resolutions for Power Apps
             url: create-and-use-apps/common-issues-and-resolutions.md
-          - text: General Power Apps debugging strategies
-            url: create-and-use-apps/isolate-common-issues.md
-          - text: Troubleshoot startup issues for Power Apps
-            url: sign-in/troubleshooting-startup-issues.md
-          - text: Troubleshoot Power Query issues
-            url: connections/troubleshoot-power-query-issues.md
-
-  # Card
-  - title: Canvas apps
-    linkLists:
-      - linkListType: how-to-guide
-        links:
           - text: Isolate issues in canvas apps
             url: create-and-use-apps/isolate-canvas-app-issues.md
           - text: How to create a minimal repro canvas app
@@ -41,6 +29,10 @@ landingContent:
             url: create-and-use-apps/troubleshoot-canvas-app-date-time-issues.md
           - text: Troubleshoot canvas app performance issues
             url: canvas-app-performance/troubleshoot-perf-table.md
+          - text: Troubleshoot startup issues for Power Apps
+            url: sign-in/troubleshooting-startup-issues.md
+          - text: Troubleshoot Power Query issues
+            url: connections/troubleshoot-power-query-issues.md
 
   # Card
   - title: Model-driven apps
