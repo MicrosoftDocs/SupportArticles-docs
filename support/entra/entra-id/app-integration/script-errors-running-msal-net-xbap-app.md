@@ -12,7 +12,7 @@ This article describes a problem in which script error is returned when performi
 
 ## Symptoms
 
-when you run Microsoft Authentication Library for .NET (MSAL.NET) codes similar to the following in a XAML Browser Application (XBAP) from Internet Explorer to perform Microsoft Entra ID login, you may receive a script error warning with the **cookies are disabled** message.
+When you run Microsoft Authentication Library for .NET (MSAL.NET) codes similar to the following in a XAML Browser Application (XBAP) from Internet Explorer to perform Microsoft Entra ID login, you may receive a script error warning with the **cookies are disabled** message.
 
 ```C#
 string tenantId = "<Tenant ID>";
