@@ -1,7 +1,7 @@
 ---
 title: Printing issues caused by Print Spooler service not running
 description: Helps troubleshoot printing issues caused by the Print Spooler service not running.
-ms.date: 03/13/2025
+ms.date: 03/17/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -60,7 +60,7 @@ The Print Spooler service might fail to start due to system instability or insuf
 
 ## Verify Group Policy settings
 
-Ensure that no Group Policy settings disable or stop the Print Spooler service. Disabling the Print Spooler service can occur as part of security mitigations, and there might be an organizational unit (OU) with a Group Policy Object (GPO) for the domain controllers (DCs) to disable the Print Spooler service.
+Ensure that no Group Policy settings disable or stop the Print Spooler service. Disabling the Print Spooler service can be part of security mitigations. Additionally, there might be an organizational unit (OU) with a Group Policy Object (GPO) for the domain controllers (DCs) to disable the Print Spooler service.
 
 ## Update drivers
 
