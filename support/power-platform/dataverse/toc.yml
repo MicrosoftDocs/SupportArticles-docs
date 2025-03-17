@@ -2,7 +2,7 @@
   href: welcome-dataverse.yml
 - name: Auditing
   items:
-    - name: Troubleshooting sync problems in audit logs
+    - name: Troubleshoot synchronization issues in audit logs
       href: auditing/setup-auditlog-troubleshooting.md  
 - name: Bulk deleting data
   items:
