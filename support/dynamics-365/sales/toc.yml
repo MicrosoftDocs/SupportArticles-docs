@@ -12,24 +12,16 @@
   items:
     - name: A user doesn't appear in the All Eligible Users list
       href: a-user-disappears-all-eligible-users.md
-    - name: Action isn't available
-      href: action-not-available.md
     - name: Assembly version error when importing a solution
       href: assembly-version-error-importing-dynamics-365-solution.md
     - name: Button in command bar don't show after grid item selection
       href: button-in-command-bar-not-appear-after-grid-item-selection.md
-    - name: Can't change from publisher name to other publisher name
-      href: the-publisher-name-cannot-be-changed.md
-    - name: Can't complete this action for this component
-      href: you-cannot-complete-this-action-for-this-component-error-when-importing-solution.md
     - name: Can't import a solution or install an app
       href: unable-import-dynamics-365-solution.md
     - name: Can't save a folder-level tracking mapping
       href: error-occurs-when-saving-folder-level-tracking-mapping.md
     - name: Can't Uninstall Solution when removing solutions
       href: cannot-uninstall-solution-error-when-deleting-solution.md
-    - name: Cascading settings revert to the value in solution
-      href: cascading-settings-revert-value-solution.md
     - name: Dependency error when uninstalling Portals solutions
       href: error-when-uninstalling-portals-solutions.md
     - name: Error 80040203 (Invalid Argument)
@@ -40,26 +32,18 @@
       href: error-occurs-when-importing-solution.md
     - name: Error 8004F042 when importing solution patch
       href: error-code-8004f042-occurs.md
-    - name: Error when importing AttributeMap
-      href: error-when-importing-attributemap.md
     - name: Import Generic Error 8004801e when importing a solution
       href: import-generic-error.md
     - name: Input string was not in a correct format when importing solution
       href: input-string-was-not-in-a-correct-format-error.md
-    - name: Invalid Export - Business Process Entity Missing
-      href: failed-export-business-process.md
     - name: Invalid file error 80048000 when importing a solution
       href: invalid-file-error-parentheses-80048000.md
     - name: InvalidPluginAssemblyContent when importing a solution
       href: invalidpluginassemblycontent-error-when-importing-solution.md
     - name: My Apps area is missing from navigation
       href: my-apps-area-is-missing.md
-    - name: Only import solutions with package version of 9.0 or earlier
-      href: only-import-solutions-a-package.md
     - name: Permission error 80040220 when importing or deleting solution
       href: error-when-you-import-delete-solution.md
-    - name: Selecting Set Properties in the Workflow designer fails
-      href: workflow-designer-fails-load.md
     - name: Solution can't be deleted due to dependencies
       href: solution-cannot-be-deleted.md
     - name: Solution import errors
@@ -74,18 +58,10 @@
       href: error-when-selecting-a-solution.md
     - name: The display order must be greater or equal to 10000
       href: invalid-display-order-value.md
-    - name: The element savedquery has incomplete content
-      href: element-savedquery-has-incomplete-content.md
-    - name: The element Workflow has invalid child element ProcessTriggers
-      href: workflow-element-has-invalid-child-element.md
-    - name: The file provided was not uploaded
-      href: the-file-provided-was-not-uploaded-error.md
     - name: The import file is too large to upload
       href: the-import-file-is-too-large-upload.md
     - name: The import of solution failed when importing solution
       href: the-import-of-solution-failed-error-when-importing-solution.md
-    - name: The import of solution failed with error 8004f016
-      href: the-import-of-solution-failed-error-code-8004f016.md
     - name: The import of the solution failed
       href: import-of-solution-fails-due-to-missing-components.md
     - name: The solution file is invalid
@@ -104,8 +80,6 @@
       href: this-solution-package-cannot-be-imported.md
     - name: Unexpected error 80040216 when importing solution
       href: unexpected-error-when-importing-solution.md
-    - name: Workflow generating system jobs and logs
-      href: workflow-creates-large-volume-of-system-jobs-and-logs.md
     - name: You can't import patch for the solution
       href: cannot-import-the-patch-the-solution.md
 - name: Data Import
