@@ -3,9 +3,9 @@ title: Git clone or Git push fails to an Azure DevOps repository
 description: This article discusses problems that might occur when you try to perform Git clone or Git push function to an Azure DevOps repository.
 author: HaiyingYu
 ms.author: haiyingyu
-ms.reviewer: kirt
+ms.reviewer: kirt, jarrettr
 ms.topic: troubleshooting 
-ms.date: 05/19/2023
+ms.date: 03/18/2025
 ms.service: azure-devops
 ms.custom: sap:Repos
 ---
