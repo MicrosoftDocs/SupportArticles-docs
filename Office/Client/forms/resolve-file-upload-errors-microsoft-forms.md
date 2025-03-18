@@ -165,17 +165,26 @@ To fix this error, use the appropriate method.
 
 ## Error: Access denied. You do not have permissions to perform this action or access this resource
 
-This issue occurs if you try to access the form by using an unmanaged device while SharePoint access is blocked for unmanaged devices.
+This error might occur for either of the following reasons:
+
+- You try to access the form by using an unmanaged device while SharePoint access is blocked for unmanaged devices.
+- There is a user ID mismatch because your account has the same username as a previous account that has been deleted.
 
 ### Resolution
 
-To fix this error, follow these steps as a SharePoint administrator:
+To fix this error, use the appropriate method.
+
+- **If you are using an unmanaged device while SharePoint access is blocked for unmanaged devices**
+
+  Follow these steps as a SharePoint administrator:
 
 1. In the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219), select **Policies** > **Access control**.
 1. Select **Unmanaged devices**, and then select one of the following settings:
 
     - Allow full access from desktop apps, mobile apps, and the web
     - Allow limited, web-only access
+
+- **If you suspect a user ID mismatch, follow the steps this this article to identify and fix the issue:** [Fix site user ID mismatch in SharePoint or OneDrive](https://learn.microsoft.com/en-us/sharepoint/troubleshoot/sharing-and-permissions/fix-site-user-id-mismatch) 
 
 ## Error: Uploaded file(s) is expired or broken, please upload your files again
 
