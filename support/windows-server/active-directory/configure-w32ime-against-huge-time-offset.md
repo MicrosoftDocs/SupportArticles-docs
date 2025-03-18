@@ -14,6 +14,11 @@ ms.custom:
 
 This article describes how to configure the Windows Time service against a large time offset.
 
+Applies to:
+
+Windows Server (All supported versions)
+Windows Client (All supported versions)
+
 _Original KB number:_ &nbsp; 884776
 
 ## Introduction
