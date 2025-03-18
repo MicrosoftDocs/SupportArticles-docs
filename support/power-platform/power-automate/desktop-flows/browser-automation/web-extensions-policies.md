@@ -3,7 +3,7 @@ title: Troubleshoot issues in Power Automate browser extensions
 description: Provides a resolution for the Failed to assume control of browser (Internal error or communication failure) error or Get Extension message.
 ms.reviewer: nimoutzo, gtrantzas
 ms.date: 06/03/2024
-ms.custom: sap:Desktop flows\Power Automate for desktop errors
+ms.custom: sap:Desktop flows\UI or browser automation
 ---
 # Troubleshoot issues in Power Automate browser extensions
 
@@ -254,7 +254,6 @@ Follow these steps:
      1. Retrieve the value from **Version**. In the following example, the values are `X` = `10`, `Y` = `0`, and `Z` = `5396`.
 
         :::image type="content" source="media/web-extensions-policies/version-value.png" alt-text="Screenshot of the version value of Power Automate for desktop." border="false":::
-   
 
    - MSIX Windows 10: `AppData\Local\Packages\Microsoft.PowerAutomateDesktop_8wekyb3d8bbwe\TempState\webextensions\PAD.ChromiumManifest.json`
 
@@ -280,4 +279,4 @@ Follow these steps:
 
 Try disabling all other web extensions except the Power Automate extension to see whether the issue persists.
 
-[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]

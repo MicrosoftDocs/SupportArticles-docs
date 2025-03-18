@@ -37,7 +37,7 @@ To mitigate the issue, update your Power Automate for desktop to the following p
 
 In the updated versions, when browser automation attempts to navigate to a potentially malicious URL, it will display a warning dialog with relevant details. The user can choose to continue or stop the navigation.
 
-If this dialog disrupts a flow and the navigation is considered legitimate, you can mitigate the issue by disabling the warning dialog for specific categories of URLs by adding their protocols to the allowlist in the [UI Automation configuration file](desktop-application-crashes-ui-automation.md#how-to-create-the-configuration-file). The key to add in this case is `AutomationBrowser.ProtocolAllowList`, and the value is the protocols that you want to allow, separated by commas. For example:
+If this dialog disrupts a flow and the navigation is considered legitimate, you can mitigate the issue by disabling the warning dialog for specific categories of URLs by adding their protocols to the allowlist in the [UI Automation configuration file](~/power-platform/power-automate/desktop-flows/ui-automation/desktop-application-crashes-ui-automation.md#how-to-create-the-configuration-file). The key to add in this case is `AutomationBrowser.ProtocolAllowList`, and the value is the protocols that you want to allow, separated by commas. For example:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
