@@ -50,7 +50,7 @@ Ensure that the user account you're using has the necessary permissions to run t
    2. Navigate to **Computer Configuration** > **Windows Settings** > **Security Settings** > **Local Policies** > **User Rights Assignment**.
    3. Ensure that your user account has the **Log on as a batch job** right.
 
-### Manual task re-initialization
+### Manual task reinitialization
 
    1. Export the problematic task to an XML file before deleting it. To do so, run the following command:
 
