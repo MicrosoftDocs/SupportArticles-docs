@@ -14,7 +14,7 @@ ms.custom:
 
 This article describes the support boundaries for the Windows Time service (W32Time) in environments that require highly accurate and stable system time.
 
-_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10 version 1607 or later, Azure Stack HCI, versions 21H2 and 20H2
+_Applies to:_ &nbsp; Windows Server (All supported versions) including Azure Stack HCI 
 
 ## High accuracy support for Windows 8.1 and 2012 R2 (or prior)
 
