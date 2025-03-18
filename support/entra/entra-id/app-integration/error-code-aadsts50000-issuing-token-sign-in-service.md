@@ -56,20 +56,20 @@ Microsoft Identity Platform (v2 endpoint) tokens must be signed by a certificate
 
     :::image type="content" source="./media/error-code-aadsts50000-issuing-token-sign-in-service/manifest-sample.png" alt-text="Application Manifest Key Credentials" lightbox="/media/error-code-aadsts50000-issuing-token-sign-in-service/manifest-sample.png":::
 
-Alternatively, use the AzureAD PowerShell cmdlet [Get-AzureADApplicationKeyCredential](/powershell/module/azuread/get-azureadapplicationkeycredential) to retrieve key credentials.
+Alternatively, use the Microsoft Graph PowerShell cmdlet [Get-MgApplication](/powershell/module/azuread/get-azureadapplicationkeycredential) to retrieve key credentials.
 
 #### Step 2: Check if symmetric key is used in service principal object
 
 1. If the application is not found in the **App Registrations** page in the Azure portal, browse to the **Enterprise Applications** page.
 2. Locate the application, and then get the **Object ID** of the Service Principal.
-3. Use the AzureAD PowerShell cmdlet [Get-AzureADServicePrincipalKeyCredential](/powershell/module/azuread/get-azureadserviceprincipalkeycredential) to retrieve key credentials.
+3. Use [Get-MgServicePrincipal](/powershell/module/microsoft.graph.applications/get-mgserviceprincipal?view=graph-powershell-1.0) to retrieve key credentials.
 
 #### Step 3: Remove symmetric signing key
 
 If the symmetric key exists, use:
 
-- [Remove-AzureADApplicationKeyCredential](/powershell/module/azuread/remove-azureadapplicationkeycredential) to remove the symmetric key for the app registration.
-- [Remove-AzureADServicePrincipalKeyCredential](/powershell/module/azuread/remove-azureadserviceprincipalkeycredential) to remove the symmetric key for the service principal object.
+- [Remove-MgApplicationKey](/powershell/module/microsoft.graph.applications/remove-mgapplicationkey) to remove the symmetric key for the app registration.
+- [Remove-MgServicePrincipalKey](/powershell/module/microsoft.graph.applications/remove-mgserviceprincipalkey) to remove the symmetric key for the service principal object.
 
 If a signing key is required, use a signing certificate instead. For more information, see [SAML-based single sign-on: Configure a signing certificate](/graph/application-saml-sso-configure-api?tabs=http%2Cpowershell-script#step-6-configure-a-signing-certificate).
 
@@ -79,7 +79,7 @@ This error can occur in the following scenario:
 
 - You have a multitenant resource application registered in tenant A. This application exposes only **Application Permission** type.
 - In a different tenant B, you have a client application registered. In the **API permission** page for this application, you configure the permission for the resource application registered in the other tenant.
-- Then, you use an OAuth 2.0 On-Behalf-Of (delegation) flow to request an access token for the resource app with the `/.default` for the web API scope.
+- Then, you use an OAuth 2 delegated grant flow (for instance auth code grant flow) to request an access token for the resource app with the `/.default` for the web API scope.
 
 ### Solution for cause 5
 
