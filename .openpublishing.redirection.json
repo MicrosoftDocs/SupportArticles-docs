@@ -13163,6 +13163,10 @@
     {
       "source_path": "support/dynamics-365/sales/troubleshoot-solution-import-errors-in-dynamics-365.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/troubleshoot-solution-import-errors-in-dynamics-365"
+    },
+    {
+      "source_path": "support/windows-server/active-directory/sync-center-slow-syncing-of-offline-files.md",
+      "redirect_url": "/troubleshoot/windows-client/networking/sync-center-slow-syncing-of-offline-files"
     }
   ]
 }
