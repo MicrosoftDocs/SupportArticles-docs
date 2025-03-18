@@ -14,7 +14,7 @@ ms.custom:
 
 This article provides a solution to an error that occurs after you clone a new VDC, and try to sign in interactively.
 
-_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2019  
+_Applies to:_ &nbsp; Windows Server (All supported versions)  
 _Original KB number:_ &nbsp; 2742908
 
 ## Symptoms
