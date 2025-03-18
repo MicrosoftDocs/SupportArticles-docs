@@ -13167,6 +13167,10 @@
     {
       "source_path": "support/windows-server/active-directory/sync-center-slow-syncing-of-offline-files.md",
       "redirect_url": "/troubleshoot/windows-client/networking/sync-center-slow-syncing-of-offline-files"
+    },
+    {
+      "source_path": "support/windows-server/active-directory/troubleshoot-domain-controller-location-issues.md",
+      "redirect_url": "/troubleshoot/windows-server/windows-security/troubleshoot-domain-controller-location-issues"
     }
   ]
 }
