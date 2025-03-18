@@ -1,7 +1,7 @@
 ---
 title: General Istio service mesh add-on troubleshooting
 description: Learn how to do general troubleshooting of the Istio service mesh add-on for Azure Kubernetes Service (AKS).
-ms.date: 03/17/2025
+ms.date: 03/18/2025
 author: nshankar13
 ms.author: nshankar
 editor: v-jsitser
@@ -243,7 +243,7 @@ If your cluster uses an HTTP proxy for outbound internet access, you'll have to 
 
 ### Step 6: Enable Envoy Access Logging
 
-Enabling Envoy [access logging](https://istio.io/latest/docs/tasks/observability/logs/access-log/) helps identity and pinpoint issues in the gateways and sidecar proxies. For more details about logging and telemetry collection for the Istio add-on, see the [mesh configuration](/azure/aks/istio-meshconfig), [Telemetry API](/azure/aks/istio-telemetry), and [Istio metrics collection](/azure/aks/istio-metrics-managed-prometheus).
+Enabling Envoy [access logging](https://istio.io/latest/docs/tasks/observability/logs/access-log/) helps identity and pinpoint issues in the gateways and sidecar proxies. For more details about logging and telemetry collection for the Istio add-on, see the documentations on [mesh configuration](/azure/aks/istio-meshconfig), [Telemetry API](/azure/aks/istio-telemetry), and [Istio metrics collection](/azure/aks/istio-metrics-managed-prometheus).
 
 ## Error messages
 
