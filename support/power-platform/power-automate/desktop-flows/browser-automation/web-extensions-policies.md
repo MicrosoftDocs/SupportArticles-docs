@@ -55,10 +55,9 @@ Follow these steps:
 
    1. Check whether the Power Automate web extension is installed and enabled. If it isn’t installed, see the [Prerequisites](#prerequisites) section.
 
-   1. If the extension is installed, run the [Power Automate for desktop troubleshooter](/power-automate/desktop-flows/troubleshooter).
+   1. If the extension is installed, run the [Power Automate for desktop troubleshooter](/power-automate/desktop-flows/troubleshooter). The diagnostic that should be run is called **Troubleshoot UI/Web automation issues**.
 
    1. Follow the steps that are suggested in the troubleshooter.
-
 
 ### Look for errors in the background script
 
@@ -266,6 +265,13 @@ Check whether the `ComSpec` variable exists in **Environment variable** under **
 
     > [!NOTE]
     > The system variables should include the `ComSpec` variable. The expected value for `ComSpec` is `C:\WINDOWS\system32\cmd.exe`.
+
+### Check if more than one browser profile exists
+
+1. If there is more than one browser profile exists
+
+    1. Uninstall the extension from each existing browser profile.
+    1. Close the Browser and install the extension only in the browser profile that will be used by the automation.
 
 ### Check for errors in Windows Event Viewer
 
