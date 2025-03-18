@@ -241,9 +241,9 @@ If your application pod starts before the Envoy sidecar starts, the application 
 
 If your cluster uses an HTTP proxy for outbound internet access, you'll have to configure a Service Entry. For more information, see [HTTP proxy support in Azure Kubernetes Service](/azure/aks/http-proxy#istio-add-on-http-proxy-for-external-services).
 
-### Step 6: Enable Envoy Access Logging
+### Step 6: Enable Envoy access logging
 
-Enabling Envoy [access logging](https://istio.io/latest/docs/tasks/observability/logs/access-log/) helps identity and pinpoint issues in the gateways and sidecar proxies. For more details about logging and telemetry collection for the Istio add-on, see the documentations on [mesh configuration](/azure/aks/istio-meshconfig), [Telemetry API](/azure/aks/istio-telemetry), and [Istio metrics collection](/azure/aks/istio-metrics-managed-prometheus).
+Enabling Envoy [access logging](https://istio.io/latest/docs/tasks/observability/logs/access-log/) helps identify and pinpoint issues in the gateways and sidecar proxies. For more information about logging and telemetry collection for the Istio add-on, see the documentation on [mesh configuration](/azure/aks/istio-meshconfig), [Telemetry API](/azure/aks/istio-telemetry), and [Istio metrics collection](/azure/aks/istio-metrics-managed-prometheus).
 
 ## Error messages
 

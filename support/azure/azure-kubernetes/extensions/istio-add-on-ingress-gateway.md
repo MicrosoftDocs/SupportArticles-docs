@@ -96,10 +96,10 @@ After you create the `SecretProviderClass` resource, to ensure secrets sync from
 
 ### Step 6: Customize ingress gateway service settings
 
-The add-on also supports [customizing the Kubernetes service for the Istio ingress gateway](/azure/aks/istio-deploy-ingress#ingress-gateway-service-customizations) for certain annotations and the `.spec.externalTrafficPolicy` setting. In certain cases, changing the `.spec.externalTrafficPolicy` to `Local` can assist with troubleshooting connectivity and networking issues, as it preserves the client source IP for the incoming request at the ingress gateway.
+The add-on also supports [customizing the Kubernetes service for the Istio ingress gateway](/azure/aks/istio-deploy-ingress#ingress-gateway-service-customizations) for certain annotations and the `.spec.externalTrafficPolicy` setting. In certain cases, changing `.spec.externalTrafficPolicy` to `Local` can assist with troubleshooting connectivity and networking issues, as it preserves the client source IP for the incoming request at the ingress gateway.
 
 > [!NOTE]
-> Changing the `.spec.externalTrafficPolicy` to `Local` might cause imbalanced traffic spreading. Before applying this change, we recommend reading the Kubernetes document about [Preserving the client source IP](https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/#preserving-the-client-source-ip) to understand the tradeoffs between the different `externalTrafficPolicy` settings.
+> Changing `.spec.externalTrafficPolicy` to `Local` might cause imbalanced traffic spreading. Before applying this change, we recommend reading the Kubernetes document about [Preserving the client source IP](https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/#preserving-the-client-source-ip) to understand the tradeoffs between the different `externalTrafficPolicy` settings.
 
 ## References
 
