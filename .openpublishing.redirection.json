@@ -13083,6 +13083,14 @@
     {
       "source_path": "support/dynamics-365/sales/unexpected-error-when-importing-solution.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/solution-installation-or-removal-failed-error-when-installing-or-removing-solution.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/concurrent-solution-operation-failures"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/the-solution-is-installed-this-system.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/failure-converting-to-managed-solution"
     }
   ]
 }

@@ -48,12 +48,8 @@
       href: import-of-solution-fails-due-to-missing-components.md
     - name: The solution file is invalid
       href: the-solution-file-is-invalid.md
-    - name: The solution installation or removal failed
-      href: solution-installation-or-removal-failed-error-when-installing-or-removing-solution.md
     - name: The solution is already installed as a managed solution
       href: the-solution-is-installed-a-managed-one.md
-    - name: The solution is already installed on this system
-      href: the-solution-is-installed-this-system.md
     - name: There was an error calculating dependencies for this component
       href: an-error-calculating-dependencies.md
     - name: This solution package can't be imported
