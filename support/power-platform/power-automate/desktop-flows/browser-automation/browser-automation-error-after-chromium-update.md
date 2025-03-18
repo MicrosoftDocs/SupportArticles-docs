@@ -5,7 +5,7 @@ ms.author: pefelesk
 author: PetrosFeleskouras
 ms.reviewer: jefernn, tapanm
 ms.date: 05/15/2023
-ms.custom: sap:Desktop flows\Power Automate for desktop errors
+ms.custom: sap:Desktop flows\UI or browser automation
 ---
 # "You need the Power Automate extension" or "Failed to assume control of Chrome/Edge" when using browser automation actions
 
