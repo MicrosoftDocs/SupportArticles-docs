@@ -14,12 +14,14 @@ ms.custom:
 
 This article provides a resolution for event 142: The time service has stopped advertising as a time source.
 
+Applies To: Windows Server (All supported versions)
+
 _Original KB number:_ &nbsp; 2468336
 
 ## Symptoms
 
 Microsoft-Windows-Time-Service Event 142 is logged with one of four error strings listed in the table below (less the event_\<hex error> string:  
- >Log Name:      System  
+>Log Name:      System  
  Source:        Microsoft-Windows-Time-Service  
  Date:          \<date> \<time>  
  Event ID:      142  
@@ -38,7 +40,7 @@ Microsoft-Windows-Time-Service Event 142 is logged with one of four error string
 |event_0x003B| The time service has stopped advertising as a good time source. |
 || The local clock is not synchronized |
 
- >Event Xml:  
+>Event Xml:  
  \<Event xmlns="`https://schemas.microsoft.com/win/2004/08/events/event`">  
    \<System>  
      \<Provider Name="Microsoft-Windows-Time-Service" Guid="{06EDCFEB-0FD0-4E53-ACCA-A6F8BBF81BCB}" />  
@@ -72,7 +74,7 @@ Microsoft-Windows-Time-Service Event 142 is logged with one of four error string
 ## Resolution
 
 The dominant error string logged by Microsoft-Windows-Time-Service Event 142 is the third example:
- >"The time service has stopped advertising as a time source because there are no providers running."  
+>"The time service has stopped advertising as a time source because there are no providers running."  
 
 1. Execute the action plan in Technet's "[Event ID 142 - Time Service Advertisement](https://technet.microsoft.com/library/cc756500%28WS.10%29.aspx)"
 
@@ -122,7 +124,7 @@ A review of the SYSTEM event log to look for Kerberos and Time-related errors sh
 
 Microsoft-Windows-Time-Service Event 142 was logged on `\\DC2.contoso.com`. The primary cause if the 142 error is the inability to locate a time server or sync from a peer server.  
 
- >Log Name:      System  
+>Log Name:      System  
  Source:        Microsoft-Windows-Time-Service  
  Date:          \<date> \<time>  
  Event ID:      142  
@@ -157,7 +159,7 @@ Microsoft-Windows-Time-Service Event 142 was logged on `\\DC2.contoso.com`. The 
 
 Microsoft-WIndows-Time-Service event 35 logged on the console of `\\DC1.contoso.com` indicates that PDC `\\DC1` is using the VM IC time sync provider to sync time.  
 
- >Log Name:      System  
+>Log Name:      System  
  Source:        Microsoft-Windows-Time-Service  
  Date:          \<date> \<time>  
  Event ID:      35  
