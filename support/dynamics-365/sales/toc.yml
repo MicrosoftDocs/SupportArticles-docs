@@ -18,8 +18,6 @@
       href: button-in-command-bar-not-appear-after-grid-item-selection.md
     - name: Can't import a solution or install an app
       href: unable-import-dynamics-365-solution.md
-    - name: Can't save a folder-level tracking mapping
-      href: error-occurs-when-saving-folder-level-tracking-mapping.md
     - name: Can't Uninstall Solution when removing solutions
       href: cannot-uninstall-solution-error-when-deleting-solution.md
     - name: Dependency error when uninstalling Portals solutions
@@ -28,16 +26,8 @@
       href: error-code-80040203-invalid-argument-error.md
     - name: Error 80048539 when importing a solution patch
       href: error-code-80048539-when-importing-solution-patch.md
-    - name: Error 80048541 when importing a solution
-      href: error-occurs-when-importing-solution.md
     - name: Error 8004F042 when importing solution patch
       href: error-code-8004f042-occurs.md
-    - name: Import Generic Error 8004801e when importing a solution
-      href: import-generic-error.md
-    - name: Input string was not in a correct format when importing solution
-      href: input-string-was-not-in-a-correct-format-error.md
-    - name: Invalid file error 80048000 when importing a solution
-      href: invalid-file-error-parentheses-80048000.md
     - name: InvalidPluginAssemblyContent when importing a solution
       href: invalidpluginassemblycontent-error-when-importing-solution.md
     - name: My Apps area is missing from navigation
@@ -50,14 +40,6 @@
       href: troubleshoot-solution-import-errors-in-dynamics-365.md
     - name: Solution install fails because of dependencies
       href: solution-install-fails-due-dependencies.md
-    - name: SQL error 80044150 when importing a solution
-      href: sql-error-80044150-when-importing-solution.md
-    - name: SQL timeout error 80044151 when importing or exporting solution
-      href: sql-timeout-error-80044151-when-importing-or-exporting-dynamics-365-solution.md
-    - name: The [Solution Name] solution doesn't have an upgrade
-      href: error-when-selecting-a-solution.md
-    - name: The display order must be greater or equal to 10000
-      href: invalid-display-order-value.md
     - name: The import file is too large to upload
       href: the-import-file-is-too-large-upload.md
     - name: The import of solution failed when importing solution
@@ -72,16 +54,10 @@
       href: the-solution-is-installed-a-managed-one.md
     - name: The solution is already installed on this system
       href: the-solution-is-installed-this-system.md
-    - name: The solution package was generated on Dynamics 365 Online
-      href: the-solution-package-was-365-online.md
     - name: There was an error calculating dependencies for this component
       href: an-error-calculating-dependencies.md
     - name: This solution package can't be imported
       href: this-solution-package-cannot-be-imported.md
-    - name: Unexpected error 80040216 when importing solution
-      href: unexpected-error-when-importing-solution.md
-    - name: You can't import patch for the solution
-      href: cannot-import-the-patch-the-solution.md
 - name: Data Import
   items:
     - name: Error when importing SavedQuery

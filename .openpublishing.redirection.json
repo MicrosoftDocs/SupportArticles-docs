@@ -13035,6 +13035,54 @@
     {
       "source_path": "support/dynamics-365/sales/workflow-element-has-invalid-child-element.md",
       "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/workflow-element-has-invalid-child-element"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-import-the-patch-the-solution.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/input-string-was-not-in-a-correct-format-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-occurs-when-importing-solution.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-occurs-when-saving-folder-level-tracking-mapping.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-selecting-a-solution.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/import-generic-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/invalid-display-order-value.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/invalid-file-error-parentheses-80048000.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/sql-error-80044150-when-importing-solution.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/sql-timeout-error-80044151-when-importing-or-exporting-dynamics-365-solution.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/the-solution-package-was-365-online.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/unexpected-error-when-importing-solution.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
     }
   ]
 }
