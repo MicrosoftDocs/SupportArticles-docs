@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4345239
 
 ## Symptoms
 
-When you try to import a solution in Dynamics 365 (online), the import might fail with the following error message:
+When you try to [import a solution in Dynamics 365 (online)](/dynamics365/customerengagement/on-premises/customize/import-update-upgrade-solution), the import might fail with the following error message:
 
 > The import of solution: [solution name] failed
 
