@@ -14,7 +14,11 @@ ms.custom:
 
 When you try to synchronize a Windows-based computer to a Network Time Protocol (NTP) server that isn't running Windows, the synchronization may not succeed. This article provides a resolution to this issue.
 
-_Applies to:_ &nbsp; Supported versions of Windows Server  
+_Applies to:_ &nbsp; 
+
+Windows Server (All supported versions)
+Windows Client (All supported versions)  
+
 _Original KB number:_ &nbsp; 875424
 
 ## Cause
