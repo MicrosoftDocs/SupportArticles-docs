@@ -4,6 +4,7 @@ description: Provides a solution to an issue where the My Apps area is missing f
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
+ms.custom: sap:Working with Solutions
 ---
 # My Apps area is missing from Microsoft Dynamics 365 navigation (SiteMap)
 

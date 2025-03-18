@@ -4,6 +4,7 @@ description: You may receive an error that states Cannot Uninstall Solution when
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
+ms.custom: sap:Working with Solutions
 ---
 # "Cannot Uninstall Solution" error occurs in Microsoft Dynamics 365
 

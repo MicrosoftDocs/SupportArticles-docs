@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when attempting to impo
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
+ms.custom: sap:Working with Solutions
 ---
 # Error code 8004F042 occurs when attempting to import solution patch in Microsoft Dynamics 365
 

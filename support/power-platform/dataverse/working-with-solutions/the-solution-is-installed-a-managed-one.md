@@ -4,6 +4,7 @@ description: Provides a solution to the 80048041 error that occurs when attempti
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
+ms.custom: sap:Working with Solutions
 ---
 # "The solution is already installed on this system as a managed solution" error in Microsoft Dynamics 365
 

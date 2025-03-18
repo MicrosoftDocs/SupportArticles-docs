@@ -10,50 +10,18 @@
       href: the-record-could-not-be-deleted.md
 - name: Customization and Solutions
   items:
-    - name: A user doesn't appear in the All Eligible Users list
-      href: a-user-disappears-all-eligible-users.md
-    - name: Assembly version error when importing a solution
-      href: assembly-version-error-importing-dynamics-365-solution.md
     - name: Button in command bar don't show after grid item selection
       href: button-in-command-bar-not-appear-after-grid-item-selection.md
-    - name: Can't import a solution or install an app
-      href: unable-import-dynamics-365-solution.md
-    - name: Can't Uninstall Solution when removing solutions
-      href: cannot-uninstall-solution-error-when-deleting-solution.md
-    - name: Dependency error when uninstalling Portals solutions
-      href: error-when-uninstalling-portals-solutions.md
     - name: Error 80040203 (Invalid Argument)
       href: error-code-80040203-invalid-argument-error.md
     - name: Error 80048539 when importing a solution patch
       href: error-code-80048539-when-importing-solution-patch.md
-    - name: Error 8004F042 when importing solution patch
-      href: error-code-8004f042-occurs.md
-    - name: InvalidPluginAssemblyContent when importing a solution
-      href: invalidpluginassemblycontent-error-when-importing-solution.md
-    - name: My Apps area is missing from navigation
-      href: my-apps-area-is-missing.md
-    - name: Permission error 80040220 when importing or deleting solution
-      href: error-when-you-import-delete-solution.md
     - name: Solution can't be deleted due to dependencies
       href: solution-cannot-be-deleted.md
-    - name: Solution import errors
-      href: troubleshoot-solution-import-errors-in-dynamics-365.md
     - name: Solution install fails because of dependencies
       href: solution-install-fails-due-dependencies.md
-    - name: The import file is too large to upload
-      href: the-import-file-is-too-large-upload.md
-    - name: The import of solution failed when importing solution
-      href: the-import-of-solution-failed-error-when-importing-solution.md
     - name: The import of the solution failed
       href: import-of-solution-fails-due-to-missing-components.md
-    - name: The solution file is invalid
-      href: the-solution-file-is-invalid.md
-    - name: The solution is already installed as a managed solution
-      href: the-solution-is-installed-a-managed-one.md
-    - name: There was an error calculating dependencies for this component
-      href: an-error-calculating-dependencies.md
-    - name: This solution package can't be imported
-      href: this-solution-package-cannot-be-imported.md
 - name: Data Import
   items:
     - name: Error when importing SavedQuery

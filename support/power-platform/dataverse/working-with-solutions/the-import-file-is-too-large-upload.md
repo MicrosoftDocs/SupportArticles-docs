@@ -4,6 +4,7 @@ description: Provides a solution to the 80040375 error that occurs when you try 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
+ms.custom: sap:Working with Solutions
 ---
 # The import file is too large to upload error occurs when importing a solution in Microsoft Dynamics 365
 

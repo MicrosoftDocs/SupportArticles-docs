@@ -13091,6 +13091,70 @@
     {
       "source_path": "support/dynamics-365/sales/the-solution-is-installed-this-system.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/failure-converting-to-managed-solution"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/a-user-disappears-all-eligible-users.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/a-user-disappears-all-eligible-users"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/the-import-file-is-too-large-upload.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/the-import-file-is-too-large-upload"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/an-error-calculating-dependencies.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/an-error-calculating-dependencies"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-code-8004f042-occurs.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/error-code-8004f042-occurs"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-uninstalling-portals-solutions.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/error-when-uninstalling-portals-solutions"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-you-import-delete-solution.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/error-when-you-import-delete-solution"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/invalidpluginassemblycontent-error-when-importing-solution.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/invalidpluginassemblycontent-error-when-importing-solution"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/my-apps-area-is-missing.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/my-apps-area-is-missing"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/the-import-of-solution-failed-error-when-importing-solution.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/the-import-of-solution-failed-error-when-importing-solution"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/the-solution-file-is-invalid.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/the-solution-file-is-invalid"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/the-solution-is-installed-a-managed-one.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/the-solution-is-installed-a-managed-one"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/this-solution-package-cannot-be-imported.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/this-solution-package-cannot-be-imported"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/unable-import-dynamics-365-solution.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/unable-import-dynamics-365-solution"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-uninstall-solution-error-when-deleting-solution.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/cannot-uninstall-solution-error-when-deleting-solution"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/assembly-version-error-importing-dynamics-365-solution.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/assembly-version-error-importing-dynamics-365-solution"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/troubleshoot-solution-import-errors-in-dynamics-365.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/troubleshoot-solution-import-errors-in-dynamics-365"
     }
   ]
 }
