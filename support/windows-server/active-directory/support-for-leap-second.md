@@ -14,6 +14,9 @@ ms.custom:
 
 This article provides information about Microsoft support for the leap second.
 
+Windows Server (All supported versions)
+Windows Client (All supported versions)
+
 _Original KB number:_ &nbsp; 2722715
 
 ## Summary
