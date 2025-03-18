@@ -4,6 +4,7 @@ description: When viewing the Dynamics 365 App for Outlook section within Settin
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
+ms.custom: sap:Dynamics 365 App for Outlook Add-in
 ---
 # A user doesn't appear in the All Eligible Users list within the Microsoft Dynamics 365 App for Outlook area
 

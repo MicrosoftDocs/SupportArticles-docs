@@ -4,6 +4,7 @@ description: You may receive an assembly version error when importing a Microsof
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
+ms.custom: sap:Working with Solutions
 ---
 # Assembly version error when importing a Microsoft Dynamics 365 solution
 

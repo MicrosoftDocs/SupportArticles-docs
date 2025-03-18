@@ -4,6 +4,7 @@ description: Describes a solution to the 8004801a error that occurs when you try
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
+ms.custom: sap:Working with Solutions
 ---
 # This solution package cannot be imported because it contains invalid XML error occurs in Microsoft Dynamics 365
 

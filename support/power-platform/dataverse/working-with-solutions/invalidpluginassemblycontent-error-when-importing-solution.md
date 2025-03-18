@@ -4,6 +4,7 @@ description: InvalidPluginAssemblyContent error when importing a solution in Mic
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
+ms.custom: sap:Working with Solutions
 ---
 # InvalidPluginAssemblyContent error when importing a solution in Microsoft Dynamics 365
 

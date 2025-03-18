@@ -4,6 +4,7 @@ description: Provides a solution to an error in which solution import failed whe
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
+ms.custom: sap:Working with Solutions
 ---
 # There was an error calculating dependencies for this component. Missing component id [GUID] error occurs when importing a solution into Microsoft Dynamics 365
 
