@@ -9,12 +9,12 @@ items:
       href: app-insights/telemetry/opentelemetry-troubleshooting-dotnet.md
     - name: Java
       href: app-insights/telemetry/opentelemetry-troubleshooting-java.md
+    - name: Java native images
+      href: app-insights/telemetry/java-spring-native-opentelemetry-issues.md
     - name: Node.js
       href: app-insights/telemetry/opentelemetry-troubleshooting-nodejs.md
     - name: Python
       href: app-insights/telemetry/opentelemetry-troubleshooting-python.md
-    - name: Troubleshoot OpenTelemetry issues in Java native
-      href: app-insights/telemetry/java-spring-native-opentelemetry-issues.md
   - name: Application Insights telemetry
     items:
     - name: Collect self-diagnostic logs for Application Insights SDKs
