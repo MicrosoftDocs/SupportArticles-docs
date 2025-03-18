@@ -1,13 +1,13 @@
 ---
 title: Troubleshoot domain controller location issues in Windows
 description: Helps troubleshoot domain controller location issues in Windows.
-ms.date: 01/15/2025
+ms.date: 03/18/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, roharwoo, herbertm
 ms.custom:
-- sap:active directory\on-premises active directory domain join
+- sap:windows security\netlogon,secure channel,dc locator
 - pcy:WinComm Directory Services
 ---
 # Troubleshoot domain controller location issues in Windows

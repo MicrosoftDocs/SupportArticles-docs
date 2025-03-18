@@ -12887,11 +12887,11 @@
     {
       "source_path": "support/power-platform/dataverse/d365-app-outlook/you-do-not-have-required-role-privilege.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/you-do-not-have-the-required-role-or-privilege-to-complete-this-action-error"
-    }, 
+    },
     {
       "source_path": "support/power-platform/dataverse/d365-app-outlook/we-cannot-load-this-app.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/error-when-opening-365-app-outlook"
-    },   
+    },
     {
       "source_path": "support/power-platform/dataverse/d365-app-outlook/error-incomingemailrejected-install-dynamics-365-app-outlook.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/error-install-dynamics-365-app-outlook"
@@ -12931,6 +12931,14 @@
     {
       "source_path": "support/windows-server/performance/toggle-terminal-services-application-server-mode.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/toggle-terminal-services-application-server-mode"
+    },
+    {
+      "source_path": "support/windows-server/active-directory/cannot-join-computer-to-domain.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cannot-join-computer-to-domain"
+    },
+    {
+      "source_path": "support/windows-server/active-directory/fail-to-join-computer-to-ad-domain.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/fail-to-join-computer-to-ad-domain"
     },
     {
       "source_path": "support/power-platform/power-automate/desktop-flows/desktop-application-crashes-ui-automation.md",
@@ -13155,6 +13163,14 @@
     {
       "source_path": "support/dynamics-365/sales/troubleshoot-solution-import-errors-in-dynamics-365.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/troubleshoot-solution-import-errors-in-dynamics-365"
+    },
+    {
+      "source_path": "support/windows-server/active-directory/sync-center-slow-syncing-of-offline-files.md",
+      "redirect_url": "/troubleshoot/windows-client/networking/sync-center-slow-syncing-of-offline-files"
+    },
+    {
+      "source_path": "support/windows-server/active-directory/troubleshoot-domain-controller-location-issues.md",
+      "redirect_url": "/troubleshoot/windows-server/windows-security/troubleshoot-domain-controller-location-issues"
     }
   ]
 }
