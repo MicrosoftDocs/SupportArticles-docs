@@ -7,8 +7,8 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, bburgin, garymu
 ms.custom:
-- sap:active directory\on-premises active directory domain join
-- pcy:WinComm Directory Services
+- sap:network connectivity and file sharing\offline files and folders (csc)
+- pcy:WinComm Networking
 ---
 # Sync Center: Slow syncing of offline files on some file servers
 
