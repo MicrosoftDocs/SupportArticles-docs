@@ -16,6 +16,8 @@ This article describes the support boundaries for the Windows Time service (W32T
 
 _Applies to:_ &nbsp; Windows Server (All supported versions) including Azure Stack HCI 
 
+Windows Client (All supported versions)
+
 ## High accuracy support for Windows 8.1 and 2012 R2 (or prior)
 
 Earlier versions of Windows (Prior to Windows 10 1607 or Windows Server 2016 1607) can't guarantee highly accurate time. The Windows Time service on these systems:
