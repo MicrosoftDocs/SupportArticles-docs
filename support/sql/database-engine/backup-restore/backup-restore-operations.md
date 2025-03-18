@@ -23,7 +23,7 @@ Backup and restore operations are I/O intensive. Backup/Restore throughput depen
     RESTORE DATABASE successfully processed 315 pages in 0.372 seconds (6.604 MB/sec)
     ```
 
-- In SQL Server 2016 and later versions, you can use XEvent [backup_restore_progress_trace](/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases) to track the progress of backup and restore operations.
+- In SQL Server 2016 and later versions, you can use XEvent [backup_restore_progress_trace](/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases#monitor-progress-with-xevent) to track the progress of backup and restore operations.
 
 - You can use the `percent_complete` column of [sys.dm_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql) to track the progress of in-flight backup and restore operations.
 
@@ -106,12 +106,12 @@ For more information about backups in an Always On environment, see the followin
 
 If you receive error messages that indicate a file issue, this is symptomatic of a corrupted backup file. The following are some examples of errors that you could get if a backup set is corrupted:
 
-- > 3241: The media family on device '%ls' is incorrectly formed. SQL Server cannot process this media family.
-- > 3242: The file on device '%ls' is not a valid Microsoft Tape Format backup set.
-- > 3243: The media family on device '%ls' was created using Microsoft Tape Format version %d.%d. SQL Server supports version %d.%d.
+ > 3241: The media family on device '%ls' is incorrectly formed. SQL Server cannot process this media family.
+ 
+ > 3242: The file on device '%ls' is not a valid Microsoft Tape Format backup set.
 
-> [!NOTE]
-> You can use the [Restore Header](/sql/t-sql/statements/restore-statements-headeronly-transact-sql) statement to check your backups.
+ > 3243: The media family on device '%ls' was created using Microsoft Tape Format version %d.%d. SQL Server supports version %d.%d.
+
 
 **Cause:**
 
@@ -119,14 +119,11 @@ These issues can occur because of issues that affect the underlying hardware (ha
 
 **Resolution:**
 
-To prevent these errors, enable the **Backup CHECKSUM** option when you run a backup to avoid backing up a corrupted database. For more information, see [Possible Media Errors During Backup and Restore (SQL Server)](/sql/relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server).
-
-You can also enable trace flag 3023 to enable a checksum when you run backups by using backup tools. For more information, see [How to enable the CHECKSUM option if backup utilities don't expose the option](https://support.microsoft.com/topic/how-to-enable-the-checksum-option-if-backup-utilities-do-not-expose-the-option-0d5efb4c-5dfc-0122-c7e3-312a5dd5af3b).
-
-To fix these issues, you have to either locate another usable backup file or create a new backup set. Microsoft doesn't offer any solutions that can help retrieve data from a corrupted backup set.
-
-> [!NOTE]
-> If a backup file restores successfully on one server but not on another, try different ways to copy the file between the servers. For example, try [robocopy](/windows-server/administration/windows-commands/robocopy) instead of a regular copy operation.
+- You can use the [Restore Header](/sql/t-sql/statements/restore-statements-headeronly-transact-sql) statement to check your backup.
+- To reduce occurrence of these restore errors, enable the **Backup CHECKSUM** option when you run a backup to avoid backing up a corrupted database. For more information, see [Possible Media Errors During Backup and Restore (SQL Server)](/sql/relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server).
+- You can also enable trace flag 3023 to enable a checksum when you run backups by using backup tools. For more information, see [How to enable the CHECKSUM option if backup utilities don't expose the option](https://support.microsoft.com/topic/how-to-enable-the-checksum-option-if-backup-utilities-do-not-expose-the-option-0d5efb4c-5dfc-0122-c7e3-312a5dd5af3b).
+- To fix these issues, you have to either locate another usable backup file or create a new backup set. Microsoft doesn't offer any solutions that can help retrieve data from a corrupted backup set.
+- If a backup file restores successfully on one server but not on another, try different ways to copy the file between the servers. For example, try [robocopy](/windows-server/administration/windows-commands/robocopy) instead of a regular copy operation. Investigate whether the file is being modified during the copy operation on network or on the destination storage device. 
 
 ## Backups fail because of permissions issues
 
@@ -156,10 +153,8 @@ Either of these scenarios can occur if the SQL Server service account doesn't ha
 
 **Resolution:**
 
-For more information, see [Backup Devices](/sql/relational-databases/backup-restore/backup-devices-sql-server).
+You can check the current permissions of SQL Service account on a folder by navigating to the **Security** tab in the properties of the corresponding folder, selecting the **Advanced** button, and then using the **Effective Access** tab. For more information, see [Backup Devices](/sql/relational-databases/backup-restore/backup-devices-sql-server).
 
-> [!NOTE]
-> You can check the current permissions of SQL Service account on a folder by navigating to the **Security** tab in the properties of the corresponding folder, selecting the **Advanced** button, and then using the **Effective Access** tab.
 
 ## Backup or restore operations that use third-party backup applications fail
 
