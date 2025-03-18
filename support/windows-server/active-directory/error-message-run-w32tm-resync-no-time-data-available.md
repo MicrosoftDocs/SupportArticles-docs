@@ -14,7 +14,7 @@ ms.custom:
 
 This article provides several possible solutions to an error that you may get when you run the `w32tm /resync` command to synchronize time with a time source.
 
-_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016
+_Applies to:_ &nbsp; Windows Server (All supported versions)
 _Original KB number:_ &nbsp; 929276
 
 ## Symptoms
