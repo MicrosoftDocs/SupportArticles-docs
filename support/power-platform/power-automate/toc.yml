@@ -62,6 +62,14 @@
           href: desktop-flows/browser-automation/launch-browser-fails-different-user.md
         - name: Error while interacting with Web element on runtime
           href: desktop-flows/browser-automation/error-while-interacting-web-element.md
+        - name: Press button or click link on web page does not work on file uploader
+          href: desktop-flows/browser-automation/file-uploader-click-issues.md
+        - name: How to scroll on a web page
+          href: desktop-flows/browser-automation/how-to-scroll-web-page.md
+        - name: Run Javascript function on Web page action is not executed without any error thrown
+          href: desktop-flows/browser-automation/js-not-executed.md
+        - name: Web automation with Internet Explorer issue
+          href: desktop-flows/browser-automation/web-autonation-ie-issue.md
     - name: SAP automation
       items:
         - name: Can't open SAP
