@@ -15,6 +15,8 @@ adobe-target: true
 
 This article describes how to configure the Windows Time service and troubleshoot when the Windows Time service doesn't work correctly.
 
+Applies To: Windows Server (All supported versions)
+
 _Original KB number:_ &nbsp; 816042
 
 To configure an internal time server to synchronize with an external time source, use the following method:
