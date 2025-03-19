@@ -182,7 +182,7 @@ Then, check the creation date of the guest user in the resource tenant against t
 > The [MSOnline PowerShell module](/powershell/azure/active-directory/install-msonlinev1) is set to be deprecated.
 > Because it's also incompatible with PowerShell Core, make sure that you're using a compatible PowerShell version so that you can run the following commands.
 
-When a guest user accepts an invitation, the user's `LiveID` attribute (the unique sign-in ID of the user) is stored within `AlternativeSecurityIds` in the `key` attribute. Because the user account was deleted and created in the home tenant, the `NetID` value for the account will have changed for the user in the home tenant. Compare the `NetID` value of the user account in the home tenant against the key value that's stored within `AlternativeSecurityIds` of the guest account in the resource tenant, as follows:
+When a guest user accepts an invitation, the user's `LiveID` attribute (the unique sign-in ID of the user) is stored in the `AlternativeSecurityIds` attribute. Because the user account was deleted and created in the home tenant, the `NetID` value for the account will have changed for the user in the home tenant. Compare the `NetID` value of the user account in the home tenant against the key value that's stored within `AlternativeSecurityIds` of the guest account in the resource tenant, as follows:
 
 1. In the home tenant, retrieve the value of the `LiveID` attribute using the `Get-MsolUser` PowerShell cmdlet:
 
