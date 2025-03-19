@@ -111,7 +111,7 @@
         - name: UI element highlighting or hovering issues in virtual desktops
           href: desktop-flows/ui-automation/ui-rdp-automation/rdp-no-highlight.md
         - name: UIPI issues with UI and Web automation actions
-          href: desktop-flows/ui-automationuipi-issues.md
+          href: desktop-flows/ui-automation/uipi-issues.md
     - name: '"Could not read the application certificate" error when creating a connection'
       href: desktop-flows/application-certificate-error.md
     - name: Agent-related errors when running attended or unattended desktop flows
