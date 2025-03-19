@@ -7,8 +7,8 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, raviks, v-lianna
 ms.custom:
-- sap:active directory\on-premises active directory domain join
-- pcy:WinComm Directory Services
+  - sap:active directory\on-premises active directory domain join
+  - pcy:WinComm Directory Services
 ---
 # Error code 0xa8b: An attempt to resolve the DNS name of a DC in the domain being joined has failed
 
