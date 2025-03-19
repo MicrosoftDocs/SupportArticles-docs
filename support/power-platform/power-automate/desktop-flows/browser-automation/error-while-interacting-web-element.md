@@ -30,4 +30,4 @@ Please refer to the following articles:
 
 - [Repair a Selector](/power-automate/desktop-flows/repair-selector).
 
-- [Can't interact with a web element on runtime](web-automation-action-fails-runtime)
+- [Can't interact with a web element on runtime](web-automation-action-fails-runtime.md)
