@@ -20,7 +20,9 @@ When you try to [import a solution in Dynamics 365 (online)](/dynamics365/custom
 If you select **Download Log File**, you might see a message like this:
 
 ```output
-An error occurred while importing a Solution. : Microsoft.Crm.CrmException: This plugin assembly uses version {0} of the .NET Framework. At this time Microsoft Dynamics 365 requires version {1} of the .NET Framework for plugin assemblies. Rebuild this assembly using .NET Framework version {1} and try again.    at  
+An error occurred while importing a Solution. : Microsoft.Crm.CrmException: 
+This plugin assembly uses version {0} of the .NET Framework. 
+At this time Microsoft Dynamics 365 requires version {1} of the .NET Framework for plugin assemblies. Rebuild this assembly using .NET Framework version {1} and try again.    at  
 Microsoft.Crm.ObjectModel.TargetFrameworkVersionValidator.ValidateInternal()    at Microsoft.Crm.ObjectModel.PluginValidatorBase.Validate()    at  
 Microsoft.Crm.ObjectModel.PluginAssemblyServiceInternal`1.ValidateAssemblyMetadata(ExecutionContext context, IBusinessEntity pluginAssembly, CrmPluginAssemblyMetadata assemblyMetadata)    at  
 Microsoft.Crm.ObjectModel.PluginAssemblyServiceInternal`1.VerifyRegistrationAbility(IBusinessEntity pluginAssembly, Boolean createCall, ExecutionContext context, CrmPluginAssemblyMetadata assemblyMetadata)    at  
