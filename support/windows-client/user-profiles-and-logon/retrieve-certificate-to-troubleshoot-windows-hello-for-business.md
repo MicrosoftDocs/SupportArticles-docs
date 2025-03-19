@@ -12,6 +12,11 @@ ms.custom:
 ---
 # Retrieve certificate to troubleshoot Windows Hello for Business logon failures
 
+Applies To:
+
+Windows Server (All supported versions)
+Windows Client (All supported versions)
+
 This article introduces how to troubleshoot Windows Hello for Business (WHfB) logon failures in a hybrid environment.
 
 ## Scenario
