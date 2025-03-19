@@ -2,7 +2,7 @@
 title: Troubleshooting solution import errors in Dynamics 365
 description: Provides general recommendations for troubleshooting solution import errors in Microsoft Dynamics 365.
 ms.reviewer: 
-ms.date: 03/31/2021
+ms.date: 03/19/2025
 ms.custom: sap:Working with Solutions
 ---
 # Troubleshoot solution import errors in Microsoft Dynamics 365
@@ -22,8 +22,8 @@ Some solution import errors include a **Download Log File** button. Use this fea
 
 ## Try the import again
 
-Some errors might be caused by temporary issues. If you haven't already done so, retry the import process to see if the error persists.
+Some errors might be caused by temporary issues. Retry the import process to see if the error persists.
 
 ## Community and support
 
-You can also use the information in the error message to search for potential solutions in the [Microsoft Dynamics 365 Community Forums](https://community.dynamics.com/forums/thread/). If the error persists and you can't resolve the issue using the details available in the error, contact Microsoft Support through the **Help + Support** experience in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/support).
+You can also use the information in the error message to search for potential solutions in the [Microsoft Dynamics 365 Community Forums](https://community.dynamics.com/forums/thread/). If the error persists and you can't resolve the issue, contact Microsoft Support through the **Help + Support** experience in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/support).
