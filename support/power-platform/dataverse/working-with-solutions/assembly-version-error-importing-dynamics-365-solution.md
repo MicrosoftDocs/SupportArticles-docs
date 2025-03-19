@@ -1,7 +1,6 @@
 ---
 title: Assembly version error when importing solution
 description: Solves an assembly version error that might occur when importing a Microsoft Dynamics 365 solution.
-ms.reviewer: 
 ms.date: 03/31/2021
 ms.custom: sap:Working with Solutions
 ---
