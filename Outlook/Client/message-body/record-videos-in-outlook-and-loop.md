@@ -16,7 +16,7 @@ appliesto:
   - New Outlook for Windows
   - Outlook for Android
 search.appverid: MET150
-ms.date: 11/12/2024
+ms.date: 03/19/2025
 ---
 
 # Record videos in Outlook and Loop
