@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, raviks, v-lianna
 ms.custom:
-- sap:active directory\\on-premises active directory domain join
+- sap:active directory\on-premises active directory domain join
 - pcy:WinComm Directory Services
 ---
 # Error code 0xa8b: An attempt to resolve the DNS name of a DC in the domain being joined has failed
@@ -37,7 +37,7 @@ Here's more information about the error code:
 This error occurs for one or more of the following reasons:
 
 - The workgroup computer being joined points to an invalid DNS server.
-- The DNS server(s) used by the joining computer is invalid, is missing the required zones, or is missing the required records for the target domain.
+- The DNS server used by the joining computer is invalid, is missing the required zones, or is missing the required records for the target domain.
 - The target Active Directory domain contains a problematic DNS name.
 - Network problems exist on either the workgroup computer, the target domain controller (DC), or the network used to connect the client and target DC.
 
@@ -48,7 +48,7 @@ To resolve this error, follow these steps:
 1. Verify that the computer being joined points to valid DNS server IP addresses. Invalid examples include:
 
     - Invalid Internet Service Provider (ISP)-provided DNS servers.
-    - A stale or non-existent DNS server on the corporate intranet.
+    - A stale or nonexistent DNS server on the corporate intranet.
     - A DNS server in an error state that prevents it from loading the `_msdcs.<forest root domain>` or target AD domain zones, or from resolving queries for those zones. Event ID 4521 might be logged.
 
 2. Verify that all DNS servers configured on the client host the required zones and valid records for a DC in the target domain. Check for the following misconfigurations:
@@ -60,7 +60,7 @@ To resolve this error, follow these steps:
     - Host A record is present but contains the wrong IP address for the target DC.
     - The host A record is present but was registered by a network interface that isn't accessible to the client computer.
 
-3. Check for special names in the target Active Directory domain that require additional configuration:
+3. Check for special names in the target Active Directory domain that require other configuration:
 
     - Single-label DNS name.
     - Disjoint namespace.
