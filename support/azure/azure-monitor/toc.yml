@@ -144,5 +144,5 @@ items:
 
 - name: Diagnostic settings
   items:
-  - name: Deleted Event Hub is automatically recreated
+  - name: Deleted event hub is automatically re-created
     href: diagnostic-settings/data-flow/deleted-event-hub-automatically-recreated.md
