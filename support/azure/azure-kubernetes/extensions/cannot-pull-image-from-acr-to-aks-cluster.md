@@ -202,6 +202,32 @@ If you pull an image by using an [image pull secret](https://kubernetes.io/docs/
 > [!NOTE]
 > If a **Regenerate** password operation occurred, an operation that's named "Regenerate Container Registry Login Credentials" will be displayed in the **Activity log** page of the container registry. The **Activity log** has a [90-day retention period](/azure/azure-monitor/essentials/activity-log#retention-period).
 
+## Cause 1b: 401 Unauthorized error due to incompatible architecture
+
+You might encounter a "401 Unauthorized" error even when the AKS cluster identity is properly authorized (as described in Cause 1). This can happen if the container image in Azure Container Registry (ACR) doesn't match the architecture (such as arm64 vs. amd64) of the node running the container. For example, deploying an arm64 image on an amd64 node or vice versa can result in this error.
+
+The specific error message will look similar to:
+
+>Failed to pull image "\<acrname>.azurecr.io/\<repository:\tag>": [rpc error: code = NotFound desc = failed to pull and unpack image "\<acrname>.azurecr.io/\<repository:\tag>": no match for platform in manifest: not found, failed to pull and unpack image "\<acrname>.azurecr.io/\<repository\:tag>": failed to resolve reference "\<acrname>.azurecr.io/\<repository\:tag>": failed to authorize: failed to fetch anonymous token: unexpected status from GET request to https://\<acrname>.azurecr.io/oauth2/token?scope=repository%3A\<repository>%3Apull&service=\<acrname>.azurecr.io: 401 Unauthorized]
+
+When diagnosing this issue using Azure CLI:
+
+```azurecli
+az aks check-acr --resource-group <MyResourceGroup> --name <MyManagedCluster> --acr <myacr>.azurecr.io
+```
+
+You may see an unexpected "exec format error" if your system node pool is running a different architecture than the image in ACR:
+
+```
+az aks check-acr --resource-group <MyResourceGroup> --name <MyManagedCluster> --acr <myacr>.azurecr.io
+
+exec /canipull: exec format error
+```
+
+### Solution: Push images with correct achitecture or mult-architectgure images
+
+Ensure that the container images pushed to ACR match the architecture of your AKS nodes (for example, arm64 or amd64). Alternatively, create and push multi-architecture images supporting both arm64 and amd64 architectures.
+
 ## Cause 2: Image not found error
 
 > Failed to pull image "\<acrname>.azurecr.io/\<repository\:tag>": [rpc error: code = NotFound desc = failed to pull and unpack image "\<acrname>.azurecr.io/\<repository\:tag>": failed to resolve reference "\<acrname>.azurecr.io/\<repository\:tag>": **\<acrname>.azurecr.io/\<repository\:tag>: not found**
