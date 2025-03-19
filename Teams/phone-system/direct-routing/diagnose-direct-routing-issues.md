@@ -31,4 +31,6 @@ To troubleshoot issues with Direct Routing, administrators can run a diagnostic 
 
 3. The test result will indicate whether the user is configured correctly for Direct Routing. If the user isn't configured correctly, the diagnostic will provide information on next steps that you can use to address issues with tenant, user, or policy configurations.
 
+Moreover, administrators can use the SIP call flow available in the Teams Admin Center to view the Session Initiation Protocol (SIP) requests, responses, and associated Session Description Protocol (SDP) data exchanged between the Microsoft Teams proxy and the Session Border Controller (SBC) for a selected call, see [SIP call flow for Direct Routing in Teams Admin Center](/microsoftteams/direct-routing-monitor-sip-ladder).
+
 For more information about the most common errors and recommended actions for further troubleshooting, see [Microsoft and SIP response codes](./microsoft-sip-response-codes.md).
