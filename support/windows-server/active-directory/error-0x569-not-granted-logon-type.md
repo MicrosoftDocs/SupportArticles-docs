@@ -1,5 +1,5 @@
 ---
-title: The User Has Not Been Granted The Requested Logon Type at This Computer
+title: The User Has Not Been Granted the Requested Logon Type at This Computer
 description: Helps resolve the error code 0x569 that occurs during a domain join operation. It provides a detailed analysis of the NetSetup.log and offers a step-by-step resolution to ensure the user account has the necessary rights.
 ms.date: 03/19/2025
 manager: dcscontentpm
@@ -38,6 +38,6 @@ This error occurs because the domain join user account lacks the **Access this c
 
 To resolve this error, follow these steps:
 
-1. Verify that the user account performing the domain join operation (or a security group that owns the domain join user account as a member) has been granted the **Access this computer from the network** right in the default domain controllers policy.
-2. Ensure that the default domain controllers policy is linked to the organizational unit (OU) that hosts the domain controller (DC) computer account that is servicing the domain join operation.
-3. Confirm that the DC servicing the domain join operation applies the policy successfully, specifically user rights settings defined in the default domain controllers policy.
+1. Verify that the user account performing the domain join operation (or a security group that owns the domain join user account as a member) has been granted the **Access this computer from the network** right in the **Default Domain Controllers Policy**.
+2. Ensure that the **Default Domain Controllers Policy** is linked to the organizational unit (OU) that hosts the domain controller (DC) computer account that is servicing the domain join operation.
+3. Confirm that the DC servicing the domain join operation applies the policy successfully, specifically user rights settings defined in the **Default Domain Controllers Policy**.
