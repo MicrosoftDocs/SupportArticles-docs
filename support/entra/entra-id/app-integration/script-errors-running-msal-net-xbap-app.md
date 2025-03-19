@@ -1,18 +1,18 @@
 ---
 title: Script errors when running MSAL.Net in XBAP application with Internet Explorer
-description: Provides solution to  the script errors that occurs when running MSAL.Net in XBAP application with Microsoft Entra ID
+description: Provides a solution to the script error that occurs when you run MSAL.Net in an XBAP application that uses Microsoft Entra ID.
 ms.date: 03/12/2025
 ms.reviewer: bachoang
 ms.service: entra-id
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
-# Cookies are disabled error in MSAL.Net XBAP application in Internet Explorer
+# "Cookies are disabled" error in MSAL.Net XBAP application in Internet Explorer
 
-This article describes a problem in which a script error is returned when performing Microsoft Entra ID login by using an XAML Browser Application (XBAP) from Internet Explorer.
+This article describes a problem in which a script error is returned when you performing a Microsoft Entra ID login by using an XAML Browser Application (XBAP) from Microsoft Internet Explorer.
 
 ## Symptoms
 
-When you run Microsoft Authentication Library for .NET (MSAL.NET) codes similar to the following in a XAML Browser Application (XBAP) from Internet Explorer to perform Microsoft Entra ID login, you may receive a script error warning with the message **cookies are disabled**.
+You receive a script error warning and an error message that states that **cookies are disabled** when you perform a Microsoft Entra ID login by running Microsoft Authentication Library for .NET (MSAL.NET) codes that resemble the following codes in an XAML Browser Application (XBAP) from Internet Explorer:
 
 ```C#
 string tenantId = "<Tenant ID>";
@@ -62,15 +62,15 @@ try
 ``` 
 ## Cause
 
-Although XBAP applications run within Internet Explorer, they operate in their own process space: **PresentationHost.exe**. This process is a highly secure container. XBAP applications use the WebBrowser control to host the Microsoft Entra ID login page. To minimize security risks from the browser surface, this container is configured with security restrictions which include blocking cookies. However, the Microsoft Entra ID login process depends on cookies, which causes a script error.
+Although XBAP applications run within Internet Explorer, they operate in their own process space: **PresentationHost.exe**. This process is a highly secure container. XBAP applications use the WebBrowser control to host the Microsoft Entra ID login page. To minimize security risks from the browser surface, this container is configured yo use security restrictions that include blocking cookies. However, the Microsoft Entra ID login process depends on cookies. This conflict causes a script error.
 
 ## Solution
 
-Configure MSAL.Net to use the [System Browser](/azure/active-directory/develop/msal-net-web-browsers#system-browser-experience-on-net) – Microsoft Edge to launch the Entra ID login page. Then, follow these steps to make the required updates:
+Configure MSAL.Net to use the [System Browser](/azure/active-directory/develop/msal-net-web-browsers#system-browser-experience-on-net) - Microsoft Edge to open the Entra ID login page. Then, follow these steps to make the required updates:
 
 1. In the Azure portal, locate your app in the **App registrations** page. Register `http://localhost` as a redirect URL under **Mobile and desktop applications** platform.
 
-   :::image type="content" source="./media/script-errors-running-msal-net-xbap-app/add-uri.png" alt-text="Application Manifest Key Credentials" lightbox="./media/script-errors-running-msal-net-xbap-app/add-uri.png":::
+   :::image type="content" source="./media/script-errors-running-msal-net-xbap-app/add-uri.png" alt-text="Screenshot that shows the localhost address being registered as a redirect URL" lightbox="./media/script-errors-running-msal-net-xbap-app/add-uri.png":::
 
 2. Make the following change to your code:
 
@@ -104,4 +104,3 @@ Configure MSAL.Net to use the [System Browser](/azure/active-directory/develop/m
     ```
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
- 
