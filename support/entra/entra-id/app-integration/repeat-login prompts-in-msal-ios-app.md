@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting repeated login prompts in iOS MSAL implementation
 description: Provides guidance for troubleshooting repeated login prompts in iOS MSAL implementation
-ms.date: 12/26/2024
+ms.date: 03/19/2025
 ms.author: bachoang
 ms.service: entra-id
 ms.custom: sap:Microsoft Entra App Integration and Development
