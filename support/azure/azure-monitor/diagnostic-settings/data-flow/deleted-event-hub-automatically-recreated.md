@@ -22,7 +22,7 @@ You might see the following symptoms:
 Here are the causes of the issue:
 
 - When a diagnostic setting is configured to send data to an Azure event hub, if it receives an error indicating that the event hub doesn't exist, the diagnostic setting will try to create it and then continue trying to send the data.
-- Azure diagnostic settings maintain a cache of configurations for approximately one hour. During this period, even if diagnostic settings have been removed, they'll continue to send data to the destination, such as a deleted event hub, causing the event hub to be re-created.
+- Azure diagnostic settings maintain a cache of configurations for approximately one hour. During this period, even if the diagnostic settings were removed, they'll continue to send data to the destination, such as a deleted event hub, causing the event hub to be re-created.
 
 ## Solution
 
