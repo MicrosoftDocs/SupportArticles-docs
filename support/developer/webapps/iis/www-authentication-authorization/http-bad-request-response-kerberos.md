@@ -1,20 +1,20 @@
 ---
-title: HTTP 400 error responses to HTTP requests
+title: HTTP 400 Error Responses to HTTP Requests
 description: Works around an HTTP 400 error that the HTTP request header is too long.
-ms.date: 01/10/2025
+ms.date: 03/19/2025
 ms.custom: sap:WWW Authentication and Authorization\Windows Authentication
 ms.reviewer: ivanpash, paulboc
 ---
 # HTTP 400 Bad Request (Request Header too long) responses to HTTP requests
 
-When an HTTP request that contains a Kerberos authentication ticket is sent to a website that's hosted on Internet Information Services (IIS) and is configured to use Windows Integrated Authentication authentication, the HTTP request header can have a considerable lenght that exceeds the maximum size for such headers accepted by the IIS server by default. This article helps you work around the HTTP 400 error that occurs when the HTTP request header is too long.
+When an HTTP request that contains a Kerberos authentication ticket is sent to a website that's hosted on Internet Information Services (IIS) and is configured to use Windows Integrated Authentication, the HTTP request header can have a considerable length that exceeds the maximum size for such headers accepted by the IIS server by default. This article helps you work around the HTTP 400 error that occurs when the HTTP request header is too long.
 
 _Original product version:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 2020943
 
 ## Symptoms
 
-When attempting to access a web-application hosted on IIS (Internet Information Services) that requires Windows Integrated Authentication to grant users access to its resources, the client (browser) will submit an HTTP request that comports an authentication header (header name: Authorization) which will use either NTLM or Kerberos as authentication protocols. In the scenario in which a Kerberos authentication token is sent from a browser to a website that's hosted on IIS, instead of receiving the expected webpage, you receive an error message that resembles the following one:
+When attempting to access a web application hosted on IIS (Internet Information Services) that requires Windows Integrated Authentication to grant users access to its resources, the client (browser) will submit an HTTP request that includes an authentication header (header name: Authorization) which will use either NTLM or Kerberos as authentication protocols. In the scenario where a Kerberos authentication token is sent from a browser to a website that's hosted on IIS, instead of receiving the expected webpage, you receive an error message that resembles the following one:
 
 > HTTP 400 - Bad Request (Request header too long)
 
@@ -47,7 +47,7 @@ Depending on your application environment, you might also work around this probl
 
 By default, there is no `MaxFieldLength` registry entry. This entry specifies the maximum size limit of each HTTP request header. The `MaxRequestBytes` registry entry specifies the upper limit for the total size of the Request line and the headers. Typically, this registry entry is configured together with the `MaxRequestBytes` registry entry. If the `MaxRequestBytes` value is lower than the `MaxFieldLength` value, the `MaxFieldLength` value is adjusted. In large Active Directory environments, users may experience logon failures if the values for both these entries aren't set to a sufficiently high value.
 
-The size of the `MaxFieldLength` and `MaxRequestBytes` should not exceed the maximum allowed values for these fields which are defined [here](https://learn.microsoft.com/en-us/troubleshoot/developer/webapps/iis/health-diagnostic-performance/httpsys-registry-windows) 
+The size of `MaxFieldLength` and `MaxRequestBytes` shouldn't exceed the maximum allowed values for these fields which are defined [here](https://learn.microsoft.com/en-us/troubleshoot/developer/webapps/iis/health-diagnostic-performance/httpsys-registry-windows) 
 
 For IIS versions shipped with Windows Server 2016 and later, the `MaxFieldLength` and `MaxRequestBytes` registry keys are located in the following subkey:  
 
