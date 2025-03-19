@@ -22,6 +22,14 @@ When you run a desktop flow that has a "Launch Edge", "Launch Chrome", or "Launc
 
 > Failed to assume control of Firefox (Internal error or communication failure)
 
+Run the [Power Automate for desktop troubleshooter](/power-automate/desktop-flows/troubleshooter). The diagnostic that should be run is called **Troubleshoot UI/Web automation issues**.
+
+When the diagnostic is run a report is generated with the issues found.
+
+The issues can be fixed by pressing the **Fix** button that appears after the diagnostics check is finished.
+
+If the Troubleshooter doesn't fix the error then proceed to potential causes/resolutions that are provided in the article.
+
 ## Cause 1: Web extension isn't installed properly or enabled
 
 The Microsoft Edge, Google Chrome, or Firefox web extension isn't installed properly or enabled.
@@ -52,7 +60,11 @@ Launch of the browser takes longer than the default timeout (30 seconds) of the 
 
 Execution of a desktop flow with one of the respective actions fails with the error message. This behavior might not be consistent (some executions could be successful).
 
-### Resolution
+### Resolution 1
+
+Increase the values of **Timeout on webpage load** and the **Timeout** parameters of the Launch new Edge/Chrome/Firefox action. For example, set this values to 120 seconds. If these timeout values are not fixing the issue then follow the below steps.
+
+### Resolution 2
 
 1. Insert a new "Launch new browser" action as:
     - Launch new Edge
@@ -99,6 +111,44 @@ Execution of a desktop flow with one of the respective actions fails with the er
     - URL: The URL you would like to navigate to.
 
       :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/select-parameters-in-go-to-web-page.png" alt-text="Configure the parameters of the Go to Web page action.":::
+
+### Resolution 3
+
+Increase the values of **Timeout on webpage load** and the **Timeout** parameters of the Launch new Edge/Chrome/Firefox action. For example, set this values to 120 seconds. If these timeout values are not fixing the issue then follow the below steps.
+
+1. Insert a new "Launch new browser" action as:
+    - Launch new Edge
+    - Launch new Chrome
+    - Launch new Firefox
+    - Launch new Internet Explorer
+
+2. Set up the parameters of the action:
+    - Launch mode: Launch new Instance
+    - Initial URL: A default URL
+    - Rest parameters can be set as desired.
+
+      :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/parameters-of-launch-new-browser-action.png" alt-text="Set up the parameters of the Launch new browser action.":::
+
+3. Insert an error handling policy by:
+    - Select the **On error** option in the action window:
+
+      :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/insert-error-handling-policy-for-action.png" alt-text="Insert an error handling policy by using the On error option.":::
+
+    - Select **Continue flow run** > **Go to next action** in the dropdown list, and then select **Save**.
+
+      :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/save-settings-on-error.png" alt-text="Select the Continue flow run and Go to next action options and then save the settings.":::
+
+4. Insert a 'Wait for 90 seconds' action (The value of 90 can be incresed depending on the case).
+
+     :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/wait-action.png" alt-text="Insert a Wait action with value set to 90.":::
+
+5. Insert a new "Launch new browser" action of the same browser as step 1 and set up the parameters of the action:
+    - Launch mode: Attach to running instance
+    - Attach to browser tab: By URL
+    - Tab URL: The URL inserted in step 1.
+    - Variables produced: Replace the new Browser to variable to the name of the variable produced by step 1.
+
+        :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/replace-variables-produced-browser.png" alt-text="Replace the new Browser to variable to the name of the variable produced by step 1.":::
 
 Finally, find some general checks that you may apply in case the above actions don't fix the issue:
 
