@@ -60,7 +60,7 @@
       - name: Enable MSAL4J logging in a Spring Boot web application
         href: app-integration/enable-msal4j-logging-spring-boot-webapp.md
       - name: Cookies are disabled error in MSAL.Net app
-        href: script-errors-running-msal-net-xbap-app.md
+        href: app-integration/script-errors-running-msal-net-xbap-app.md
 
   - name: Troubleshoot adding apps
     href: app-integration/troubleshoot-adding-apps.md
