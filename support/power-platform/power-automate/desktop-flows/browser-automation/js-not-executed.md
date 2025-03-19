@@ -26,10 +26,4 @@ A third-party web extension is installed and enabled, in the browser that blocks
 2. If disabling the web extensions isn't an option, then use a specific web automation action, that involves physical interaction, instead of JavaScript code.
 
 **Example**
-   If the javaScript code functionality is to click on an element using the code  
-
-      ```javascript
-      document.getElementById('elementID').click();
-      ```
-
-      then this code can be replaced by the **Click element on web page** action and have the **Send Physical click** option enabled.
+   If the javaScript code functionality is to click on an element using the code **document.getElementById('elementID').click();**, then this code can be replaced by the **Click element on web page** action and have the **Send Physical click** option enabled.
