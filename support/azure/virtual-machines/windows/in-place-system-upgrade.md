@@ -5,7 +5,7 @@ ms.date: 3/18/2025
 ms.reviewer: joscon, scotro, azurevmcptcic, maulikshah, yogitagohel, v-weizhu
 ms.service: azure-virtual-machines
 ms.collection: windows
-ms.custom: sap: Windows Update, Guest Patching and OS Upgrades
+ms.custom: sap:Windows Update, Guest Patching and OS Upgrades
 ---
 # In-place upgrade for supported VMs running Windows in Azure
 
