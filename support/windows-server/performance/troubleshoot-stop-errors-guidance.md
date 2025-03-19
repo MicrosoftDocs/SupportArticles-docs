@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting stop errors and unexpected restart.
 description: Introduces general guidance for troubleshooting scenarios related to stop errors and unexpected restart.
-ms.date: 03/07/2025
+ms.date: 03/19/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
