@@ -15,7 +15,7 @@ This article discusses how to troubleshoot OpenTelemetry issues in Java.
 
 ## Troubleshooting checklist
 
-Starting from version 3.0.3, you can use configuration options to suppress specific autocollected telemetry. For more information, see (/azure/azure-monitor/app/java-standalone-config#suppress-specific-autocollected-telemetry)[Suppress specific autocollected telemetry]
+Starting from version 3.0.3, you can use configuration options to suppress specific autocollected telemetry. For more information, see [Suppress specific autocollected telemetry](/azure/azure-monitor/app/java-standalone-config#suppress-specific-autocollected-telemetry).
 
 ### Step 1: Enable diagnostic logging
 
