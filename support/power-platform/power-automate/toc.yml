@@ -76,6 +76,8 @@
           href: /power-automate/desktop-flows/how-to/scroll-web-page?context=/troubleshoot/power-platform/power-automate/context/context
         - name: Run Javascript function on Web page action is not executed without any error thrown
           href: desktop-flows/browser-automation/js-not-executed.md
+        - name: Web automation fails in unattended mode
+          href: desktop-flows/browser-automation/web-automation-unattended-failures.md
         - name: Web automation with Internet Explorer issue
           href: desktop-flows/browser-automation/web-autonation-ie-issue.md
     - name: Office automation
