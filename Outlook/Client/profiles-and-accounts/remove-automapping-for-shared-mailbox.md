@@ -15,7 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Outlook for Microsoft 365
-ms.date: 01/30/2024
+ms.date: 03/19/2025
 ---
 
 # How to remove automapping for a shared mailbox in Outlook for Microsoft 365
@@ -29,7 +29,7 @@ In Microsoft Outlook, Autodiscover automatically maps to any mailbox for which a
 - An admin grants full access permissions for a user to access another user's mailbox.
 - The user has full access permissions to a shared mailbox.
 
-If the user has full access permission to many mailboxes, automapping may cause performance issues when Outlook starts. For example, in some organizations, admins have full access to all user mailboxes in their organization. If this is the case, Outlook tries to open all mailboxes in the organization.
+If the user has full access permission to many mailboxes, automapping might cause performance issues when Outlook starts. For example, in some organizations, admins have full access to all user mailboxes in their organization. If this is the case, Outlook tries to open all mailboxes in the organization.
 
 ## Procedure
 

@@ -1,5 +1,5 @@
 ---
-title: Outlook Object Model cannot run in a Windows service
+title: Outlook Object Model can't run in a Windows service
 description: This article describes the limitations of the Outlook Object Model that make it unsuitable for use in a Windows NT service.
 author: cloud-writer
 ms.author: meerak
@@ -12,19 +12,21 @@ ms.custom:
   - CSSTroubleshoot
 ms.reviewer: danba, brijs, catagh, gbratton, dvespa
 appliesto: 
+  - Outlook for Microsoft 365
+  - Outlook 2021
+  - Outlook 2019
   - Outlook 2016
-  - Outlook 2013
-  - Outlook 2010
 search.appverid: MET150
-ms.date: 01/30/2024
+ms.date: 03/19/2025
 ---
+
 # The Outlook Object Model is unsuitable to run in a Windows service
 
 _Original KB number:_ &nbsp; 237913
 
 ## Summary
 
-The Outlook Object Model (OOM) is unsuitable for use from an application that is designed to be run as, or spawned by, a Windows Service application. This includes Active Server Page (ASP) applications that run under Internet Information Service (IIS), and applications that run together with the AT Scheduler or Task Scheduler services.
+The Outlook Object Model (OOM) is unsuitable for use by an application that's designed to be run as, or spawned by, a Windows Service application. This includes Active Server Page (ASP) applications that run under Internet Information Service (IIS), and applications that run together with the AT Scheduler or Task Scheduler services.
 
 OOM is an automation model for Outlook that is designed to run in a logged-on user's session in which a user can respond to dialog boxes.
 
