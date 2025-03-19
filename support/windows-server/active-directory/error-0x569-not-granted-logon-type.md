@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, raviks, v-lianna
 ms.custom:
-- sap:active directory\on-premises active directory domain join
+- 'sap:active directory\on-premises active directory domain join'
 - pcy:WinComm Directory Services
 ---
 # Error code 0x569: the user has not been granted the requested logon type at this computer
