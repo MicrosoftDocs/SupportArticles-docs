@@ -14,6 +14,8 @@ ms.custom:
 
 This article describes how to detect and recover if a Windows Server domain controller is incorrectly rolled back by using an image-based installation of the operating system.
 
+Applies To: Windows Server (All supported versions)
+
 _Original KB number:_ &nbsp; 875495
 
 > [!NOTE]
