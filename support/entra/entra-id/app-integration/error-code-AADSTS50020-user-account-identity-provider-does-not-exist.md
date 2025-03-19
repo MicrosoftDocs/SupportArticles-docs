@@ -134,7 +134,7 @@ Error `AADSTS50020` might occur if the name of a guest user who was deleted in a
 
 ### Verification option 1: Check whether the resource tenant's guest user is older than the home tenant's user account
 
-The first verification option involves comparing the age of the resource tenant's guest user against the home tenant's user account. You can make this verification by using Microsoft Graph or MSOnline PowerShell.
+The first verification option involves comparing the age of the resource tenant's guest user against the home tenant's user account. You can make this verification by using Microsoft Graph, Microsoft Entra PowerShell or Microsoft  Graph PowerShell SDK
 
 #### Microsoft Graph
 
@@ -155,21 +155,26 @@ GET https://graph.microsoft.com/v1.0/users/{id | userPrincipalName}/createdDateT
 
 Then, check the creation date of the guest user in the resource tenant against the creation date of the user account in the home tenant. The scenario is confirmed if the guest user was created before the home tenant's user account was created.
 
-#### MSOnline PowerShell
+#### Microsoft Entra PowerShell
 
-> [!NOTE]
-> The [MSOnline PowerShell module](/powershell/azure/active-directory/install-msonlinev1) is set to be deprecated.
-> Because it's also incompatible with PowerShell Core, make sure that you're using a compatible PowerShell version so that you can run the following commands.
+Run the [Get-EntraUser](/powershell/module/microsoft.entra/get-entrauser) PowerShell cmdlet to review the user creation date, as follows:
 
-Run the [Get-MsolUser](/powershell/module/msonline/get-msoluser) PowerShell cmdlet to review the user creation date, as follows:
-
-```azurepowershell
-Get-MsolUser -SearchString user@contoso.com | Format-List whenCreated
+```powershell
+Get-EntraUser -UserId {id | userPrincipalName} | Select-Object id, userPrincipalName, createdDateTime
 ```
 
 Then, check the creation date of the guest user in the resource tenant against the creation date of the user account in the home tenant. The scenario is confirmed if the guest user was created before the home tenant's user account was created.
 
-[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
+#### Microsoft Graph PowerShell SDK
+
+Run the [Get-MgUser](/powershell/module/microsoft.graph.users/get-mguser) PowerShell cmdlet to review the user creation date, as follows:
+
+```powershell
+$p = @('Id', 'UserPrincipalName', 'CreatedDateTime')
+Get-MgUser -UserId {id | userPrincipalName} -Property $p| Select-Object $p
+```
+
+Then, check the creation date of the guest user in the resource tenant against the creation date of the user account in the home tenant. The scenario is confirmed if the guest user was created before the home tenant's user account was created.
 
 ### Verification option 2: Check whether the resource tenant's guest alternative security ID differs from the home tenant's user net ID
 
