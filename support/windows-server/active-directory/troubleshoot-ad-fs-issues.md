@@ -334,3 +334,13 @@ _Original KB number:_ &nbsp; 3079872
     |AD FS 2.0|AD FS 2012 R2|
     |---|---|
     |<ul><li>[Description of Update Rollup 3 for Active Directory Federation Services (AD FS) 2.0](https://support.microsoft.com/help/2790338) <br/> </li> <li>[Update is available to fix several issues after you install security update 2843638 on an AD FS server](https://support.microsoft.com/help/2896713 )</li>|[December 2014 update rollup for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2](https://support.microsoft.com/help/3013769) |
+
+## Reference
+
+For more information about the Microsoft Graph cmdlets, see the following articles:
+
+- [Get-MgDomain](/powershell/module/microsoft.graph.identity.directorymanagement/get-mgdomain)
+- [Get-MgDomainFederationConfiguration](/powershell/module/microsoft.graph.identity.directorymanagement/get-mgdomainfederationconfiguration)
+- [Get-MgUser](/powershell/module/microsoft.graph.users/get-mguser)
+- [Update-MgUser](/powershell/module/microsoft.graph.users/update-mguser)
+- [Update-MgDomainFederationConfiguration](/powershell/module/microsoft.graph.identity.directorymanagement/update-mgdomainfederationconfiguration)
