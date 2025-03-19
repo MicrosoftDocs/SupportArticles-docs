@@ -1,13 +1,13 @@
 ---
-title: Disable debugging for ASP.NET application
+title: Disable Debugging for ASP.NET Application
 description: This article discusses how to disable debugging for ASP.NET applications.
-ms.date: 03/27/2020
+ms.date: 03/19/2025
 ms.custom: sap:General Development
 ms.topic: how-to
 ---
 # Disable debugging for ASP.NET applications
 
-This article discusses how to disable debugging for ASP.NET applications (running on .Net Framework).
+This article discusses how to disable debugging for ASP.NET applications running on .Net Framework.
 
 _Original product version:_ &nbsp; ASP.NET  
 _Original KB number:_ &nbsp; 815157
@@ -38,43 +38,48 @@ To disable debugging, add the compilation element to the *Web.config* file of th
 
 ## Method 2: Modify the Machine.config file
 
-You can also disable debugging for all applications on a system by modifying the *Machine.config* file. To confirm debugging hasn't been enabled in the *Machine.config* file, follow these steps:
+You can also disable debugging for all applications on a system by modifying the **Machine.config** file. To confirm debugging hasn't been enabled in the **Machine.config** file, follow these steps:
 
-1. Open the *Machine.config* file in a text editor, such as Notepad. The file is typically located in the following folder:  
+1. Open the **Machine.config** file in a text editor, such as Notepad. The file is typically located in the following folder:  
 
-    `%SystemRoot%\Microsoft.NET\Framework\%VersionNumber%\CONFIG\`
+   `%SystemRoot%\Microsoft.NET\Framework\%VersionNumber%\CONFIG\`
 
-   or, for 64 bit versions of the .Net Framework:
+   For 64-bit versions of the .Net Framework, the file is in the following folder:
 
    `%SystemRoot%\Microsoft.NET\Framework64\%VersionNumber%\CONFIG\`
    
-3. In the *Machine.config* file, locate the compilation element. Debugging is enabled when the debug attribute in the compilation element is set to **true**.
-4. If the debug attribute is **true**, change the debug attribute to **false**.
+1. In the **Machine.config** file, locate the compilation element. Debugging is enabled when the debug attribute in the compilation element is set to `true`.
+1. If the debug attribute is `true`, change the debug attribute to `false`.
 
-    The following code sample shows the compilation element with debug set to **false**:
+   The following code sample shows the compilation element with debug set to `false`:
 
-    ```xml
-    <compilation debug="false"/>
-    ```
+   ```xml
+   <compilation debug="false"/>
+   ```
 
-5. Save the *Machine.config* file.
+1. Save the **Machine.config** file.
 
-## Method 3: Using the IIS Manager Console (if the web-application is hosted on IIS)
+## Method 3: Using the IIS Manager Console (if the web application is hosted on IIS)
 
-1. Open the IIS Manager Console on the computer where the website it hosted (you can press Windows+R key and type inetmgr.exe)
+1. Open the IIS Manager Console on the computer where the website is hosted (you can select <kbd>Windows</kbd> + <kbd>R</kbd> and type **inetmgr**):
 
-   <insert picture from step 1>
-2. Select the website or web-application for which you wish to enable or disable debug mode from the left hand side tree view
+   :::image type="content" source="media/disable-debugging-application/aspnet-debug-step1.png" alt-text="Screenshot of typing inetmgr in the Run window.":::
 
-   <insert picture from step 2>
-3. From the middle-pane of the IIS Manager console, select the '.Net Compilation' icon
+1. Select the website or web application for which you wish to enable or disable debug mode from the left hand side tree view:
 
-   <insert picture from step 3>
-4. Within the list of parameter values displayed in the center pane of the IIS Manager set the 'Debug' parameter under the 'Behavior' category to:
-       **true** if you wish to enable debug mode
-       **false** if you wish to disable debug mode
+   :::image type="content" source="media/disable-debugging-application/aspnet-debug-step2.png" alt-text="Screenshot of website or web application for which you wish to enable or disable debug mode.":::
 
-   <insert picture from step 4>
-5. Select the 'Apply' button from the right-hand side pane of the IIS manager console to persist the changes to the IIS configuration 
+1. From the middle-pane of the IIS Manager console, select the **.Net Compilation** icon:
 
-   <insert picture from step 5>
+   :::image type="content" source="media/disable-debugging-application/aspnet-debug-step3.png" alt-text="Screenshot of the .Net Compilation icon.":::
+
+1. Within the list of parameter values displayed in the center pane of the IIS Manager, set the value of **Debug** under the **Behavior** category to:
+
+   - **true**: Enable debug mode.
+   - **false**: Disable debug mode.
+
+   :::image type="content" source="media/disable-debugging-application/aspnet-debug-step4.png" alt-text="Screenshot of.":::
+
+5. Select the **Apply** button from the right-hand side pane of the IIS manager console to persist the changes to the IIS configuration： 
+
+   :::image type="content" source="media/disable-debugging-application/aspnet-debug-step5.png" alt-text="Screenshot of the Apply button in IIS Manager.":::
