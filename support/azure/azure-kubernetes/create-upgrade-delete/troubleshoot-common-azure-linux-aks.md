@@ -77,6 +77,8 @@ Most commands in the Azure Linux OS, such as the process status (`ps`) command, 
 | `apt-mark auto`           | `tdnf install dnf mark remove`                                               |
 | `apt-mark manual`         | `dnf mark install`                                                           |
 | `apt-mark showmanual`     | `dnf history userinstalled`                                                  |
+| `add-apt-repository`      | Edit `/etc/yum.repos.d/*.repo` files                                         |
+| `apt-key add`             | `rpm --import`                                                               |
 
 ### Step 2: Check the Azure Linux version
 
