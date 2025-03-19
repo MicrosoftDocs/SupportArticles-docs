@@ -39,17 +39,13 @@ _Original KB number:_ &nbsp; 3079872
 
     :::image type="content" source="media/troubleshoot-ad-fs-issues/office-365-redirecting.png" alt-text="Page that is shown when the A D F S redirection occurs.":::
 
-    1. If no redirection occurs and you're prompted to enter a password on the same page, which means that Microsoft Entra ID or Office 365 doesn't recognize the user or the domain of the user to be federated. To check whether there's a federation trust between Microsoft Entra ID or Office 365 and your AD FS server, run the `Get-msoldomain` cmdlet from Azure AD PowerShell. If a domain is federated, its authentication property will be displayed as **Federated**, as in the following screenshot:
-
-        :::image type="content" source="media/troubleshoot-ad-fs-issues/federated-domain.png" alt-text="Cmdlet Get-msoldomain output shows that there is a federation trust between Microsoft Entra ID or Office 365 and your A D F S server.":::
-
+    1. If no redirection occurs and you're prompted to enter a password on the same page, which means that Microsoft Entra ID or Office 365 doesn't recognize the user or the domain of the user to be federated. To check whether there's a federation trust between Microsoft Entra ID or Office 365 and your AD FS server, run the `Get-MgDomain` cmdlet and check the **AuthenticationType**.
     2. If redirection occurs but you aren't redirected to your AD FS server for sign-in, check whether the AD FS service name resolves to the correct IP and whether it can connect to that IP on TCP port 443.
 
         If the domain is displayed as **Federated**, obtain information about the federation trust by running the following commands:
 
         ```powershell
-        Get-MsolFederationProperty -DomainName <domain>
-        Get-MsolDomainFederationSettings -DomainName <domain>
+        Get-MgDomainFederationConfiguration -DomainId <domain>
         ```
 
         Check the URI, URL, and certificate of the federation partner that's configured by Office 365 or Microsoft Entra ID.
@@ -280,7 +276,7 @@ _Original KB number:_ &nbsp; 3079872
         To get the User attribute value in Microsoft Entra ID, run the following command line:
 
         ```powershell
-        Get-MsolUser -UserPrincipalName <UPN>
+        Get-MgUser -UserId <user_id_string>
         ```
 
         SAML 2.0:  
@@ -293,7 +289,7 @@ _Original KB number:_ &nbsp; 3079872
         This issue can occur when the UPN of a synced user is changed in AD but without updating the online directory. In this scenario, you can either correct the user's UPN in AD (to match the related user's logon name) or run the following cmdlet to change the logon name of the related user in the Online directory:
 
         ```powershell
-        Set-MsolUserPrincipalName -UserPrincipalName [ExistingUPN] -NewUserPrincipalName [DomainUPN-AD]
+        Update-MgUser -UserId <user_id_string> -UserPrincipalName <DomainUPN-AD>
         ```
 
         It might also be that you're using AADsync to sync MAIL as UPN and EMPID as SourceAnchor, but the Relying Party claim rules at the AD FS level haven't been updated to send MAIL as UPN and EMPID as ImmutableID.
@@ -306,10 +302,10 @@ _Original KB number:_ &nbsp; 3079872
 
         Office 365 or Microsoft Entra ID will try to reach out to the AD FS service, assuming the service is reachable over the public network. We try to poll the AD FS federation metadata at regular intervals, to pull any configuration changes on AD FS, mainly the token-signing certificate info. If this process is not working, the global admin should receive a warning on the Office 365 portal about the token-signing certificate expiry and about the actions that are required to update it.
 
-        You can use `Get-MsolFederationProperty -DomainName <domain>` to dump the federation property on AD FS and Office 365. Here you can compare the TokenSigningCertificate thumbprint, to check whether the Office 365 tenant configuration for your federated domain is in sync with AD FS. If you find a mismatch in the token-signing certificate configuration, run the following command to update it:
+        You can use `Get-MgDomainFederationConfiguration -DomainId <domain>` to dump the federation property on AD FS and Office 365. Here you can compare the TokenSigningCertificate thumbprint, to check whether the Office 365 tenant configuration for your federated domain is in sync with AD FS. If you find a mismatch in the token-signing certificate configuration, run the following command to update it:
 
         ```powershell
-        Update-MsolFederatedDomain -DomainName <domain> -SupportMultipleDomain
+        Update-MgDomainFederationConfiguration -DomainId <domain_id> -SigningCertificate <certificate_token>
         ```
 
         You can also run the following tool to schedule a task on the AD FS server that will monitor for the Auto-certificate rollover of the token-signing certificate and update the Office 365 tenant automatically.
