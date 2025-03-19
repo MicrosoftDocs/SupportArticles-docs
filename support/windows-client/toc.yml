@@ -335,6 +335,8 @@ items:
       href: ./networking/move-client-side-caching-folder.md
     - name: Offline file synchronization issues
       href: ./networking/offline-file-synchronization-issue.md
+    - name: Sync Center syncs offline files very slow
+      href: ./networking/sync-center-slow-syncing-of-offline-files.md
   - name: IP Address Management (IPAM)
     items:
     - name: Intranet site is identified as Internet site
@@ -935,7 +937,7 @@ items:
       href: ./shell-experience/recycle-bin-corrupted.md
     - name: Renaming a network folder fails
       href: ./shell-experience/renaming-a-network-folder-fails.md
-    - name: "Scenario guide: Black screen after you sign in to the system"
+    - name: 'Scenario guide: Black screen after you sign in to the system'
       href: ./shell-experience/scenario-guide-black-screen-after-sign-in.md
     - name: Support of whitespace characters in file and folder names
       href: ./shell-experience/file-folder-name-whitespace-characters.md

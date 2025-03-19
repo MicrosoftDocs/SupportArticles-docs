@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot Azure Kubernetes Service cluster startup issues
 description: Learn about basic troubleshooting methods to use when you can't start an Azure Kubernetes Service (AKS) cluster.
-ms.date: 01/25/2024
-ms.reviewer: chiragpa, v-weizhu, jovieir
+ms.date: 03/14/2025
+ms.reviewer: chiragpa, v-weizhu, jovieir, addobres
 ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool), devx-track-azurecli
 #Customer intent: As an Azure Kubernetes user, I want to take basic troubleshooting measures to resolve issues that occur when I try to start an Azure Kubernetes Service (AKS) cluster.
