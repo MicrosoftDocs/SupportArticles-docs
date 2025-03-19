@@ -28,4 +28,4 @@ Security settings of Internet Explorer not properly set
 - Uncheck the Enable Protected Mode checkbox on the Internet section.
 - Restart Internet Explorer
 
-Refer to the [article](https://learn.microsoft.com/en-us/power-automate/desktop-flows/install-browser-extensions#set-up-browsers)
+Refer to the [article](/power-automate/desktop-flows/install-browser-extensions#set-up-browsers)
