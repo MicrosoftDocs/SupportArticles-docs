@@ -1,13 +1,13 @@
 ---
 title: UIPI Issues with UI and Browser automation actions
-description: Provides solutions to issues caused by UIPI that prevent the UI or Browser automation actions to execute sucessfully.
+description: Provides solutions to issues caused by UIPI that prevent the UI or Browser automation actions to execute successfully.
 ms.date: 03/18/2025
 ms.custom: sap:Desktop flows\UI or browser automation
 ---
 
 # UIPI Issues with UI and Browser automation actions
 
-This article refers to issues caused by UIPI that prevent the UI or Browser automation actions to execute sucessfully.
+This article refers to issues caused by UIPI that prevent the UI or Browser automation actions to execute successfully.
 
 ## Symptoms
 
@@ -32,15 +32,15 @@ An example of the error received is the following:
 
     Unlock desktop
 
-2. UAC dialog is open while execution.
+2. The UAC dialog is open while execution.
 
     Make sure the dialog doesn't show.
 
-3. When the execution targets an RDP, when the RDP window is minimized.
+3. The RDP window is minimized, when the execution targets an RDP.
 
     1. Close any opened Remote Desktop sessions.
 
-    2. Press Win + R, type “regedit”, and press Enter. The Registry Editor window is displayed.
+    2. Press Win + R, type "regedit", and press Enter. The Registry Editor window is displayed.
 
     3. Navigate to the following Registry key: HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Terminal Server Client
 
@@ -60,25 +60,21 @@ An example of the error received is the following:
 
 4. The application that is under automation is running in Elevated mode.
 
-    Make sure that the application under automation is not running as elevated.
+    Make sure that the application under automation isn't running as elevated.
 
-5. Screen saver on desktop is enabled.
+5. The screen saver on desktop is enabled.
 
-    Make sure that screen saver is not activated.
+    Make sure that screen saver isn't activated.
 
-6. Windows Server manager is auto starting on login and UAC is prompted because UAC of policies.
+6. The Windows Server manager is auto starting on login and UAC is prompted because UAC of policies.
 
     Disable auto start of the Server Manager
 
-When the issue happens in the web automation actions **Click link on web page** and **Populate text field on webpage**.
+When the issue happens in the web automation actions **Click link on web page** and **Populate text field on webpage**, make sure in the action parameters, any physical interactions options are disabled.  
 
-    Make sure in the action parameters, any physical interactions options are disabled. 
-    
-    These options are:
+Populate text field on web page: Populate text using physical keystrokes
 
-    Populate text field on web page: Populate text using physical keystrokes
-
-    Click link on web page: Send physical click.
+Click link on web page: Send physical click.
 
 In UI automation, try enabling the Simulate action parameter for eligible UI Automation actions and UI Elements:
-[UI automation - Simulate actions | Microsoft Learn](power-platform/release-plan/2023wave2/power-automate/ui-automation--simulate-actions)
+[UI automation - Simulate actions | Microsoft Learn](/power-platform/release-plan/2023wave2/power-automate/ui-automation--simulate-actions)
