@@ -54,16 +54,16 @@ or any web action that involves interaction with a web element are failing with 
 
     Verify this by using the actions below and make sure that browser opens and the window is visible.
 
-    `
+    ```
     Chrome: System.RunApplication.RunApplication ApplicationPath: $'''chrome''' CommandLineArguments: $'''<https://www.microsoft.com/>''' WindowStyle: System.ProcessWindowStyle.Normal ProcessId=> AppProcessId
     Edge: System.RunApplication.RunApplication ApplicationPath: $'''msedge''' CommandLineArguments: $'''<https://www.microsoft.com/>''' WindowStyle: System.ProcessWindowStyle.Normal ProcessId=> AppProcessId
-    `
+    ```
 
     If the above actions work then use the Attach mode of the Launch browser action
 
-    `
+    ```
     WebAutomation.LaunchEdge.AttachToEdgeByUrl TabUrl: $'''https://www.microsoft.com/''' AttachTimeout: 5 TargetDesktop: $'''{\"DisplayName\":\"Local computer\",\"Route\":{\"ServerType\":\"Local\",\"ServerAddress\":\"\"},\"DesktopType\":\"local\"}''' BrowserInstance=> Browser
-    `
+    ```
 
 2. The web page is taking too much time to be loaded in the browser.
 
@@ -72,11 +72,11 @@ or any web action that involves interaction with a web element are failing with 
             - Timeout.(eg 120)
     1. If (a) won't work then use the following actions to get a browser instance
 
-    `
+    ```
         System.RunApplication.RunApplication ApplicationPath: $'''msedge''' CommandLineArguments: $'''<https://www.microsoft.com/>''' WindowStyle: System.ProcessWindowStyle.Normal ProcessId=> AppProcessId
         WAIT 120
         WebAutomation.LaunchEdge.AttachToEdgeByUrl TabUrl: $'''https://www.microsoft.com/''' AttachTimeout: 30 TargetDesktop: $'''{\"DisplayName\":\"Local computer\",\"Route\":{\"ServerType\":\"Local\",\"ServerAddress\":\"\"},\"DesktopType\":\"local\"}''' BrowserInstance=> Browser
-    `
+    ```
 
 3. The cloud flow is executed with a different user than the user that browser extension is installed
 
@@ -86,7 +86,7 @@ or any web action that involves interaction with a web element are failing with 
 
     Provide additional CPU resources to the machine where the flow is executed.
 
-    [Prerequisites](https://learn.microsoft.com/en-us/power-automate/desktop-flows/requirements#prerequisites)
+    [Prerequisites](/power-automate/desktop-flows/requirements#prerequisites)
 
 **Web automation actions fail with element not found**:
 
