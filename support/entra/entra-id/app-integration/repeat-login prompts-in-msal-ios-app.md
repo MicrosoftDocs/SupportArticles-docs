@@ -13,35 +13,36 @@ This article provides guidance for troubleshooting repeated login prompts in an 
 
 ## Symptoms
 
-You implements mobile authentication in your iOS app using the Microsoft Authentication Library (MSAL) SDK, following the [official tutorial](/azure/active-directory/develop/tutorial-v2-ios). The user is unexpectedly prompted to log in multiple times after the initial login.
+You integrate mobile authentication in your iOS app by using the Microsoft Authentication Library (MSAL) SDK. This is done by following the [official tutorial](/azure/active-directory/develop/tutorial-v2-ios). The user is unexpectedly prompted to log in multiple times after the initial login.
 
 ## Cause
 
-This MSAL SDK library facilitates authentication by renewing tokens automatically, enabling single sign-on (SSO) between other apps on the device, and managing user accounts. For SSO to function correctly, tokens need to be shared between apps, which requires a token cache or a broker application like Microsoft Authenticator for iOS.
+This issue is typically caused by web browser configurations that do not allow cookie sharing.
 
-This issue is often caused by web browser configurations that do not allow cookie sharing. Interactive authentication in MSAL requires a web browser. On iOS, MSAL uses the system web browser by default for interactive authentication. This default setup supports SSO state sharing between applications and web apps.
+The tutorial uses the MSAL to implement authentication. MSAL SDK library facilitates authentication by renewing tokens automatically. It also enables single sign-on (SSO) between other apps on the device and manages user accounts.
 
-However, if you customize the browser configuration for authentication, such as redirecting to one of the following options, cookie sharing might not be enabled:
+For SSO to function correctly, tokens must be shared between apps. This requires a token cache or a broker application, such as Microsoft Authenticator for iOS. Interactive authentication in MSAL requires a web browser. On iOS, MSAL uses the system web browser by default for interactive authentication. This default setup supports SSO state sharing between the apps.
+
+However, if you customize the browser configuration for authentication, such as by using one of the following options, cookie sharing might not be enabled by default:
 
 | **For iOS only** | **For iOS and macOS** |
 | --- | --- |
 | [ASWebAuthenticationSession](https://developer.apple.com/documentation/authenticationservices/aswebauthenticationsession?language=objc) <br> [SFAuthenticationSession](https://developer.apple.com/documentation/safariservices/sfauthenticationsession?language=objc) <br> [SFSafariViewController](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller?language=objc) | [WKWebView](https://developer.apple.com/documentation/webkit/wkwebview?language=objc) |
 
-Customizing the browser is acceptable, but it must be configured to allow cookie sharing to prevent repeated login prompts.
+To customize the browser, you must allow cookie sharing to prevent repeated login prompts.
 
 ## Resolution
 
-To enable cookie sharing and resolve this issue, use one of the following configurations:
+To enable cookie sharing and prevent repeated login prompts, use one of the following configurations:
 
 - **ASWebAuthenticationSession in MSAL** + **openURL in Safari browser** (the full Safari browser, not SafariViewController).
 - **SFSafariViewController in MSAL** + **SFSafariViewController in your app**.
 - **WKWebView in MSAL** + **WKWebView in your app**.
 
-Refer to [customizing webviews](https://docs.microsoft.com/en-us/azure/active-directory/develop/customize-webviews) for additional guidance on configuring webviews and browsers.
+For more information, see [Customizing webviews and browsers](/azure/active-directory/develop/customize-webviews).
 
-### Note for Xamarin.iOS users
-
-If you are implementing MSAL in Xamarin.iOS, additional considerations are required for token caching and using the Microsoft Authenticator app. These considerations are separate from the cookie-sharing issue discussed here. For detailed instructions, refer to [Xamarin.iOS MSAL considerations](https://docs.microsoft.com/en-us/azure/active-directory/develop/msal-net-xamarin-ios-considerations).
+> [!Note]
+> For Xamarin.iOS, several additional factors need to be considered, including enabling token caching and using Microsoft Authenticator. For more information, see [Xamarin.iOS MSAL considerations](/azure/active-directory/develop/msal-net-xamarin-ios-considerations).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
