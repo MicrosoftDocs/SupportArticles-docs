@@ -54,7 +54,7 @@ Microsoft Identity Platform (v2 endpoint) tokens must be signed by a certificate
 2. In the **Manage** section,  select **Manifest**.
 3. Check whether an entry exists in the `keyCredentials` section that includes `type=Symmetric` and `usage=Sign`.
 
-    :::image type="content" source="./media/error-code-aadsts50000-issuing-token-sign-in-service/manifest-sample.png" alt-text="Screenshot that shows the Application Manifest Key Credentials code" lightbox="/media/error-code-aadsts50000-issuing-token-sign-in-service/manifest-sample.png":::
+    :::image type="content" source="./media/error-code-aadsts50000-issuing-token-sign-in-service/manifest-sample.png" alt-text="Screenshot that shows the Application Manifest Key Credentials code" lightbox="./media/error-code-aadsts50000-issuing-token-sign-in-service/manifest-sample.png":::
 
 Alternatively, use the Microsoft Graph PowerShell cmdlet [Get-MgApplication](/powershell/module/azuread/get-azureadapplicationkeycredential) to retrieve key credentials.
 
@@ -62,7 +62,7 @@ Alternatively, use the Microsoft Graph PowerShell cmdlet [Get-MgApplication](/po
 
 1. If the application is not found in the **App Registrations** page in the Azure portal, browse to the **Enterprise Applications** page.
 2. Locate the application, and then get the **Object ID** of the Service Principal.
-3. Use [Get-MgServicePrincipal](/powershell/module/microsoft.graph.applications/get-mgserviceprincipal?view=graph-powershell-1.0) to retrieve the key credentials.
+3. Use [Get-MgServicePrincipal](/powershell/module/microsoft.graph.applications/get-mgserviceprincipal) to retrieve the key credentials.
 
 #### Step 3: Remove symmetric signing key
 
