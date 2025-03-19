@@ -73,9 +73,12 @@ An example of the error received is the following:
 When the issue happens in the web automation actions **Click link on web page** and **Populate text field on webpage**.
 
     Make sure in the action parameters, any physical interactions options are disabled. 
+    
     These options are:
+
     Populate text field on web page: Populate text using physical keystrokes
+
     Click link on web page: Send physical click.
 
 In UI automation, try enabling the Simulate action parameter for eligible UI Automation actions and UI Elements:
-[UI automation - Simulate actions | Microsoft Learn](/power-automate/ui-automation--simulate-actions)
+[UI automation - Simulate actions | Microsoft Learn](power-platform/release-plan/2023wave2/power-automate/ui-automation--simulate-actions)

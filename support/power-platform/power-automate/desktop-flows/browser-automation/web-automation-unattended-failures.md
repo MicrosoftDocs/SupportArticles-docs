@@ -13,12 +13,7 @@ This article refers to workarounds when web automation fails in unattended mode.
 
 ## Syptoms
 
-Web automation actions are executed successfully in flows on attended mode, but are failing when these are executed in unattended mode.
-
-## Applies to
-
-- MSI
-- MSIX
+Web automation actions are executed successfully in flows on attended mode, but are failing when are executed in unattended mode.
 
 ## Actions
 
@@ -31,11 +26,11 @@ Any web automation action under the the Browser Automation group.
     The action fails with the following error:
      _**"Failed to assume control of Microsoft Edge/ Chrome / Firefox (communication with Power Automate web extension failed)"**_
 
-    This might be caused due to the following reasons:
-     - The browser has not started and the browser window is not visible.
+    This error might be caused due to the following reasons:
+     - The browser did't start and the browser window is not visible.
      - The web page is taking too much time to be load in the browser.
      - The flow is executed with a different user than the user that browser extension is installed.
-     - The machine CPU has reached 100% usage that prevents the service worker of the web extension to start.
+     - The machine CPU reacjed 100% usage that prevents the service worker of the web extension to start.
 
 2. **Web automation actions** such as:
      - Click link on web page.
@@ -48,7 +43,7 @@ or any web action that involves interaction with a web element are failing with 
 
  **Launch new Microsoft Edge / Chrome / Firefox action fails**.
 
-1. The browser has not started and the browser window is not visible.
+1. The browser did't start and the browser window is not visible.
 
     Make sure that browser start in not blocked in unattended mode.
 
