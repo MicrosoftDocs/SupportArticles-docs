@@ -22,7 +22,7 @@ appliesto:
   - Outlook 2021
   - Outlook for Microsoft 365
   - Microsoft 365
-ms.date: 01/30/2024
+ms.date: 03/19/2025
 ---
 
 # Planning considerations to deploy Outlook for Windows
@@ -31,12 +31,12 @@ A close review of the organization's messaging requirements will help you plan y
 
 ## Determining an organization's needs
 
-The organization's messaging environment helps shape Outlook deployment. Factors to consider include whether you are upgrading Microsoft Outlook, installing the application for the first time, planning for roaming or remote users, or choosing a combination of these and other factors.
+The organization's messaging environment helps shape Outlook deployment. Factors to consider include whether you're upgrading Microsoft Outlook, installing the application for the first time, planning for roaming or remote users, or choosing a combination of these and other factors.
 
 > [!IMPORTANT]
 >
 > - Outlook 2016 and later versions don't support connecting to Exchange Server 2007.
-> - Outlook 2016 and later versions now require AutoDiscover to be configured, or they will be unable to connect to Exchange Server. They retrieve Exchange connectivity settings directly from AutoDiscover instead of the registry, making profiles more reliable, but that also makes AutoDiscover a required feature. For more information, see [Autodiscover service](/Exchange/architecture/client-access/autodiscover).
+> - Outlook 2016 and later versions now require AutoDiscover to be configured, or they'll be unable to connect to Exchange Server. They retrieve Exchange connectivity settings directly from AutoDiscover instead of the registry, making profiles more reliable, but that also makes AutoDiscover a required feature. For more information, see [Autodiscover service](/Exchange/architecture/client-access/autodiscover).
 
 ### MSI versus Click-to-Run deployment methods
 
@@ -46,17 +46,17 @@ The MSI and Click-to-Run versions of Office and Outlook 2016 have different conf
 
 ### Upgrade or initial installation of Outlook
 
-If you are upgrading from an earlier version of Outlook, consider whether you will migrate previous settings, change user profiles, and use new customization options. By default, user settings are migrated automatically, except for security settings. Customization of Outlook settings is optional and only needed if you want to change the default settings. Also, Outlook can automatically create a new Outlook profile by using the [Autodiscover service](/Exchange/architecture/client-access/autodiscover).
+If you're upgrading from an earlier version of Outlook, consider whether you'll migrate previous settings, change user profiles, and use new customization options. By default, user settings are migrated automatically, except for security settings. Customization of Outlook settings is optional and only needed if you want to change the default settings. Also, Outlook can automatically create a new Outlook profile by using the [Autodiscover service](/Exchange/architecture/client-access/autodiscover).
 
-If you are deploying a volume-licensed version of Office that uses Windows Installer (MSI), the [Office Customization Tool (OCT)](/deployoffice/oct/oct-2016-help-overview) enables you to migrate users' current settings and make other customizations. For example, you can define new Microsoft Exchange servers or customize new features. If you are deploying Microsoft 365 Apps for enterprise and must change settings from the default configuration, you can use Group Policy or the registry.
+If you're deploying a volume-licensed version of Office that uses Windows Installer (MSI), the [Office Customization Tool (OCT)](/deployoffice/oct/oct-2016-help-overview) enables you to migrate users' current settings and make other customizations. For example, you can define new Microsoft Exchange servers or customize new features. If you're deploying Microsoft 365 Apps for enterprise and must change settings from the default configuration, you can use Group Policy or the registry.
 
 ### Migrating data
 
-When you upgrade from Outlook 2003, Outlook 2007, Outlook 2010, or Outlook 2013, Outlook migrates data for you. Data migration from versions of Outlook earlier than Outlook 2003 and other email applications is not supported.
+When you upgrade from Outlook 2003, Outlook 2007, Outlook 2010, or Outlook 2013, Outlook migrates data for you. Data migration from versions of Outlook earlier than Outlook 2003 and other email applications isn't supported.
 
 ### Remote and roaming users
 
-Cached Exchange Mode is recommended for all configurations, but it especially benefits remote users. Cached Exchange Mode creates a local copy of users' mailboxes. This gives users more reliable access to their Outlook data, whether or not they are connected to a network. For more information, see [Plan and configure Cached Exchange Mode in Outlook 2016 for Windows](cached-exchange-mode.md).
+Cached Exchange Mode is recommended for all configurations, but it especially benefits remote users. Cached Exchange Mode creates a local copy of users' mailboxes. This gives users more reliable access to their Outlook data, whether or not they're connected to a network. For more information, see [Plan and configure Cached Exchange Mode in Outlook 2016 for Windows](cached-exchange-mode.md).
 
 You can customize Outlook to optimize the experience for remote and roaming users and to set up Outlook for multiple users on the same computer. When multiple users share the same computer, use Windows logon features on the computer's operating system to manage user logon verification.
 
@@ -72,8 +72,8 @@ Although Outlook works well with many versions of Exchange and other email serve
 
 If you have an on-premises Exchange Server and plan to add Exchange Online to coexist in your environment, there are two things to consider:
 
-- There is no cross-premises manager delegation. If the manager's account is connected to Exchange Online, the delegate's account must be on Exchange Online too.
-- An account that is on-premises cannot have "Send As" permissions for an account that is connected to Exchange Online.
+- There's no cross-premises manager delegation. If the manager's account is connected to Exchange Online, the delegate's account must be on Exchange Online too.
+- An account that is on-premises can't have "Send As" permissions for an account that is connected to Exchange Online.
 
 Also be aware that the user authentication method is different between an on-premises Exchange Server and Exchange Online. Exchange Online users enter their email address (as the user name) and password. However, the users can decide to save the password so that they only have to enter it once.
 
@@ -87,7 +87,7 @@ You have options for when and how you install Outlook. For example, consider whi
 
 Each organization has a different environment and might make a different choice about timing Outlook upgrades. For example, you might have a messaging group that is responsible for upgrading Outlook and a separate group that plans deployment for other Office applications. In this case, it might be easier to upgrade Outlook separately from the rest of Office instead of trying to coordinate deployment between the two groups.
 
-Note that an MSI version of Outlook, such as Office Standard 2016, cannot coexist with earlier MSI versions of Outlook on the same computer. However, you can install a Click-to-Run version of Outlook, such as with Microsoft 365 Apps for enterprise, to run side-by-side with MSI versions of Outlook prior to Outlook 2016. However, you can't have Click-to-Run versions of Outlook 2013 and Outlook 2016 installed on the same computer. If you have two versions of Outlook installed on the same computer, you can't run them at the same time.
+Note that an MSI version of Outlook, such as Office Standard 2016, can't coexist with earlier MSI versions of Outlook on the same computer. However, you can install a Click-to-Run version of Outlook, such as with Microsoft 365 Apps for enterprise, to run side-by-side with MSI versions of Outlook prior to Outlook 2016. However, you can't have Click-to-Run versions of Outlook 2013 and Outlook 2016 installed on the same computer. If you have two versions of Outlook installed on the same computer, you can't run them at the same time.
 
 > [!NOTE]
 > As a best practice, you should have only one version of Office installed on a computer. For migration scenarios, you might need multiple versions of Office on the same computer for a short period of time. However, we recommend that you uninstall the earlier version of Office as soon as possible after you've migrated to the latest version of Office.
@@ -101,7 +101,7 @@ When you use the OCT to customize Outlook, you save choices and other installati
 For Click-to-Run installations of Outlook, such as with Microsoft 365 Apps for enterprise, you can use Group Policy or registry keys to customize Outlook settings.
 
 > [!NOTE]
-> PRF files do not work and are no longer needed in Outlook 2016 and later versions because accounts should be configured automatically in the account wizard when you use AutoDiscover.
+> PRF files don't work and are no longer needed in Outlook 2016 and later versions because accounts should be configured automatically in the account wizard when you use AutoDiscover.
 
 ### Configuring subscriptions and other sharing features for Outlook
 
@@ -115,11 +115,11 @@ Remote Desktop Services (RDS), formerly known as Terminal Services, in Windows S
 
 ### AutoArchive in Outlook
 
-Outlook mailboxes grow as users create and receive items. To keep mailboxes manageable, users need another place to store or archive older items that are important but rarely used. It is typically most convenient to automatically move these older items to the archive folder and to discard items whose content has expired and is no longer valid. [AutoArchive](https://support.office.com/article/444BD6AA-06D0-4D8F-9D84-903163439114) in Outlook can manage this process automatically for users. However, we recommend that you use the In-Place Archiving feature in Exchange Server because it eliminates the need for Personal Folder files (.pst). By using In-Place Archiving, users can view an archive mailbox and move or copy messages between their primary mailboxes and the archive. For more information, see [In-Place Archiving in Exchange](/Exchange/policy-and-compliance/in-place-archiving/in-place-archiving).
+Outlook mailboxes grow as users create and receive items. To keep mailboxes manageable, users need another place to store or archive older items that are important but rarely used. It's typically most convenient to automatically move these older items to the archive folder and to discard items whose content has expired and is no longer valid. [AutoArchive](https://support.office.com/article/444BD6AA-06D0-4D8F-9D84-903163439114) in Outlook can manage this process automatically for users. However, we recommend that you use the In-Place Archiving feature in Exchange Server because it eliminates the need for Personal Folder files (.pst). By using In-Place Archiving, users can view an archive mailbox and move or copy messages between their primary mailboxes and the archive. For more information, see [In-Place Archiving in Exchange](/Exchange/policy-and-compliance/in-place-archiving/in-place-archiving).
 
 ### Retention policies in Outlook
 
-Retention policy settings can help users follow retention policy guidelines that your organization establishes for document retention. You cannot deploy AutoArchive-based retention settings through Outlook by using Group Policy. If you must deploy retention policies, explore the Messaging Records Management (MRM) features in Exchange Server. For more information, see [Messaging records management in Exchange Server](/Exchange/policy-and-compliance/mrm/mrm).
+Retention policy settings can help users follow retention policy guidelines that your organization establishes for document retention. You can't deploy AutoArchive-based retention settings through Outlook by using Group Policy. If you must deploy retention policies, explore the Messaging Records Management (MRM) features in Exchange Server. For more information, see [Messaging records management in Exchange Server](/Exchange/policy-and-compliance/mrm/mrm).
 
 ## Outlook security considerations
 
@@ -139,7 +139,7 @@ When you plan antivirus scanning for Outlook files and email messages, take prec
 
 Data corruption issues might also occur if you scan Outlook address book files (\*.oab ), Send/receive settings files (\*.srs ), \*.xml files, and the Outlprnt file, although the possibility is smaller because people access these files less frequently.
 
-**Scanning email messages** We do not recommend that you scan \*.pst, \*.ost, and other Outlook files directly. Instead, we recommend that you scan email message attachments on the email server and on the Outlook client computer.
+**Scanning email messages** We don't recommend that you scan \*.pst, \*.ost, and other Outlook files directly. Instead, we recommend that you scan email message attachments on the email server and on the Outlook client computer.
 
 - To scan email messages that are on an email server, you must use antivirus software that was developed to scan incoming and outgoing email.
 
@@ -154,13 +154,13 @@ Outlook includes a junk email filter that replaces the rules that were used in e
 
 Junk email senders often add a web beacon in HTML email messages that includes external content, such as graphic images. When users open or view the email, the web beacons verify that their email addresses are valid. This increases the probability that users will receive more junk email messages. Outlook reduces the probability that users will become targets for future junk email by blocking automatic picture downloads from external servers by default.
 
-Outlook helps protect against issues that are created by phishing email messages and deceptive domain names. By default, Outlook screens phishing email messages. These messages seem legitimate but they attempt to trick users to provide personal information, such as a user's bank account number and password. Outlook also helps prevent the receipt of email messages from deceptive users by warning about suspicious domain names in email addresses. Outlook supports internationalized domain names (IDNs) in email addresses. IDNs allow people to register and use domain names in their native languages instead of English. IDN support allows phishers to send homograph attacks, a situation in which a look-alike domain name is created by using alphabet characters from different languages, not just English, with the intention of deceiving users into thinking that they are visiting a legitimate website.
+Outlook helps protect against issues that are created by phishing email messages and deceptive domain names. By default, Outlook screens phishing email messages. These messages seem legitimate but they attempt to trick users to provide personal information, such as a user's bank account number and password. Outlook also helps prevent the receipt of email messages from deceptive users by warning about suspicious domain names in email addresses. Outlook supports internationalized domain names (IDNs) in email addresses. IDNs allow people to register and use domain names in their native languages instead of English. IDN support allows phishers to send homograph attacks, a situation in which a look-alike domain name is created by using alphabet characters from different languages, not just English, with the intention of deceiving users into thinking that they're visiting a legitimate website.
 
 ### Configuring cryptographic features for Outlook
 
 Outlook provides cryptographic features for sending and receiving security-enhanced email messages over the Internet or intranet. You can customize features in an Outlook deployment to set cryptographic options that are appropriate for your organization.
 
-You can also implement additional features to help improve security in email messaging. For example, you can provide security labels that match your organization's security policy. An Internal Use Only label might be implemented as a security label to apply to email messages that should not be sent outside your company.
+You can also implement additional features to help improve security in email messaging. For example, you can provide security labels that match your organization's security policy. An Internal Use Only label might be implemented as a security label to apply to email messages that shouldn't be sent outside your company.
 
 ### Restricting permission on email messages
 
@@ -183,7 +183,7 @@ Users can use the Contacts, Tasks, and Calendar features in Outlook 2016 without
 
 You can install Outlook 2016 or later versions over any previous installation of Outlook. User settings that are stored in the registry are migrated when you upgrade from Outlook 2003 or later versions to Outlook 2016 or later versions. If a MAPI profile already exists on a user's computer, you typically can configure a deployment to continue to use the profile.
 
-Note that an MSI version of Outlook, such as Office Standard 2016, cannot coexist with earlier MSI versions of Outlook on the same computer. However, you can install a Click-to-Run version of Outlook, such as with Microsoft 365 Apps for enterprise, to run side-by-side with MSI versions of Outlook prior to Outlook 2016. However, you can't have Click-to-Run versions of Outlook 2013 and Outlook 2016 installed on the same computer. If you have two versions of Outlook installed on the same computer, you can't run them at the same time.
+Note that an MSI version of Outlook, such as Office Standard 2016, can't coexist with earlier MSI versions of Outlook on the same computer. However, you can install a Click-to-Run version of Outlook, such as with Microsoft 365 Apps for enterprise, to run side-by-side with MSI versions of Outlook prior to Outlook 2016. However, you can't have Click-to-Run versions of Outlook 2013 and Outlook 2016 installed on the same computer. If you have two versions of Outlook installed on the same computer, you can't run them at the same time.
 
 > [!NOTE]
 > As a best practice, you should have only one version of Office installed on a computer. For migration scenarios, you might need multiple versions of Office on the same computer for a short period of time. However, we recommend that you uninstall the earlier version of Office as soon as possible after you've migrated to the latest version of Office.
@@ -192,7 +192,7 @@ When you upgrade users from an earlier version of Outlook, you must make choices
 
 ### Upgrading to Office with Cached Exchange Mode enabled
 
-The process of upgrading users who currently have Cached Exchange Mode enabled in Outlook 2003, Outlook 2007, Outlook 2010, or Outlook 2013 is straightforward. If you do not change Cached Exchange Mode settings, the same settings are kept for Outlook 2016 and later versions.
+The process of upgrading users who currently have Cached Exchange Mode enabled in Outlook 2003, Outlook 2007, Outlook 2010, or Outlook 2013 is straightforward. If you don't change Cached Exchange Mode settings, the same settings are kept for Outlook 2016 and later versions.
 
 By default, when Outlook 2016 or later versions are installed, a new compressed version of the Outlook data file (.ost) is created. This compressed version of the .ost is up to 40% smaller than the size of the .ost files that were created in earlier versions of Outlook. If you must keep Outlook from creating a new compressed Outlook data file (.ost), use the Outlook Group Policy template (Outlk16.admx) to enable the **Do not create new OST file on upgrade** policy. You can find this setting under User Configuration\Policies\Administrative Templates\Microsoft Outlook 2016\Account Settings\Exchange.
 
@@ -200,7 +200,7 @@ For additional Cached Exchange Mode planning considerations, see [Plan and confi
 
 ## Installing multiple versions of Outlook on the same computer
 
-With Outlook, if you're using the volume licensed version (MSI-based installation), such as Office Standard 2016, you cannot have two versions of Outlook installed. The upgrade process will, by default, remove the earlier version. But if you are moving from volume licensed to a subscription license version such as with Microsoft 365 Apps for enterprise, which uses Click-to-Run installation, it is possible to have two versions of Outlook installed on the same computer.
+With Outlook, if you're using the volume licensed version (MSI-based installation), such as Office Standard 2016, you can't have two versions of Outlook installed. The upgrade process will, by default, remove the earlier version. But if you're moving from volume licensed to a subscription license version such as with Microsoft 365 Apps for enterprise, which uses Click-to-Run installation, it's possible to have two versions of Outlook installed on the same computer.
 
 > [!NOTE]
 > As a best practice, you should have only one version of Office installed on a computer. For migration scenarios, you might need multiple versions of Office on the same computer for a short period of time. However, we recommend that you uninstall the earlier version of Office as soon as possible after you've migrated to the latest version of Office.
@@ -224,4 +224,4 @@ Factors that determine the feasibility of installing a 32-bit or a 64-bit versio
 
 - You can install 32-bit Office and 32-bit Outlook on a supported 32-bit or 64-bit version of the Windows operating system. You can install the 64-bit version of Office and 64-bit Outlook only on a supported 64-bit Windows operating system.
 - The default installation of Office on a 64-bit version of the Windows operating system is 32-bit Office.
-- The installed version of Outlook is always the same as the version of Office, if Office is installed on the same computer. That is, a 32-bit version of Outlook cannot be installed on the same computer on which 64-bit versions of other Office applications are already installed, such as 64-bit Word 2016 or 64-bit Excel 2016. Similarly, a 64-bit version of Outlook cannot be installed on the same computer on which 32-bit versions of other Office applications are already installed.
+- The installed version of Outlook is always the same as the version of Office, if Office is installed on the same computer. That is, a 32-bit version of Outlook can't be installed on the same computer on which 64-bit versions of other Office applications are already installed, such as 64-bit Word 2016 or 64-bit Excel 2016. Similarly, a 64-bit version of Outlook can't be installed on the same computer on which 32-bit versions of other Office applications are already installed.
