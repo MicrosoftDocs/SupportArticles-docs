@@ -40,7 +40,7 @@ Refer to the introductory article [Power Apps troubleshooting strategies](isolat
 
 1. **You do not have correct permissions to use this connection.**
 
-End users may encounter this issue in one of two situations. First, the application may have a shared implicit connection that isn't* a secure implicit connection. Sharing the connection with the end user resolves this issue but is **not** recommended because all shared connections should be secure implicit connections. The author should convert all connections in the application to be secure implicit connections to resolve this issue. Second, the connection may already be a secure implicit connection. Republishing may resolve this issue. If is doesn't, then a product bug should be filed.
+End users may encounter this issue in one of two situations. First, the application may have a shared implicit connection that isn't* a secure implicit connection. Sharing the connection with the end user resolves this issue but is **not** recommended because all shared connections should be secure implicit connections. The author should convert all connections in the application to be secure implicit connections to resolve this issue. Second, the connection may already be a secure implicit connection. Republishing may resolve this issue. If it doesn't, then a product bug should be filed.
 
 ### Common issues
 
