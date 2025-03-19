@@ -28,6 +28,6 @@ Some web pages change their underlying HTML structure dynamically. Therefore, th
 
 Please refer to the following articles:
 
-- [Repair a Selector](https://learn.microsoft.com/en-us/power-automate/desktop-flows/repair-selector).
+- [Repair a Selector](/power-automate/desktop-flows/repair-selector).
 
-- [Can't interact with a web element on runtime](https://learn.microsoft.com/en-us/troubleshoot/power-platform/power-automate/desktop-flows/web-automation-action-fails-runtime)
+- [Can't interact with a web element on runtime](web-automation-action-fails-runtime)
