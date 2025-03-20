@@ -1,7 +1,7 @@
 ---
 title: Event 142 time service stopped advertising
 description: Provides a resolution for event 142 that the time service has stopped advertising as a time source.
-ms.date: 01/15/2025
+ms.date: 03/20/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -14,8 +14,7 @@ ms.custom:
 
 This article provides a resolution for event 142: The time service has stopped advertising as a time source.
 
-Applies To: Windows Server (All supported versions)
-
+_Applies to:_ &nbsp; Windows Server (All supported versions)  
 _Original KB number:_ &nbsp; 2468336
 
 ## Symptoms
