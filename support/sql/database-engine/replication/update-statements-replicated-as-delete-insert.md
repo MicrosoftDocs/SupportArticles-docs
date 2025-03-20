@@ -39,7 +39,7 @@ UPDATE TABLE1 set col1 = 3 where col3 = 'Dallas'
 
 The `UPDATE` statement is implemented by SQL Server as a pair of `DELETE`/`INSERT` statements since you're updating `col1`, which has a unique index defined. Thus, the log reader places a pair of `DELETE`/`INSERT` calls in the distribution database. This can impact any business logic that is present in the triggers or custom stored procedures at the Subscriber. You should incorporate the additional business logic in `DELETE` and `INSERT` triggers or stored procedures to handle this situation.
 
-If you prefer to replicate single row updates as `UPDATE`, not as `DELETE`/`INSERT` pairs, you can enable [Trace Flag 8207](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf8207).
+If you prefer to replicate single row updates as `UPDATE` statements instead of `DELETE`/`INSERT` pairs, you can enable [Trace Flag 8207](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf8207).
 
 Additionally, if you use a horizontal filter in your publication and if the updated row doesn't meet a filter condition, only a `DELETE` procedure call is sent to the subscribers. If the updated row previously didn't meet the filter condition but meets the condition after the update, only the `INSERT` procedure call is sent through the replication process.
 
