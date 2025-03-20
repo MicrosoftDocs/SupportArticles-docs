@@ -60,15 +60,15 @@ Before proceeding, ensure the following prerequisites are met:
 1. Verify that all resources are in the same region.
 2. If necessary, move the storage account to the appropriate region using [Relocate Azure Storage Account to another region](/azure/storage/common/storage-account-move).
 
-## Track changes property not enabled
+## The Track changes property isn't enabled
 
 **Cause:** The tables intended for export don't have the **Track changes** property enabled.
 
 **Solution:**
 
-1. Enable the **Track changes** property for the desired tables by following the steps described in [Enable change tracking to control data synchronization](/power-platform/admin/enable-change-tracking-control-data-synchronization).
+To solve this issue, enable the **Track changes** property for the desired tables by following the steps described in [Enable change tracking to control data synchronization](/power-platform/admin/enable-change-tracking-control-data-synchronization).
 
-## Maximum number of Synapse Link profiles reached
+## Maximum number of Synapse Link profiles is reached
 
 **Cause:** The Dataverse environment has reached its limit for Synapse Link profiles.
 
