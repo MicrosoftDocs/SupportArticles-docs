@@ -21,7 +21,7 @@ When you build a WebAssembly authentication app and try to implement role-based 
 
 The WebAssembly authentication stack might cast role claims into a single string. This prevents proper role-based access control.
 
-### Solution
+## Solution
 
 You can implement a custom user factory to modify the behavior of role claims mapping. To do this, follow these steps.
 
