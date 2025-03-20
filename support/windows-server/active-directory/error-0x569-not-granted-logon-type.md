@@ -38,6 +38,11 @@ This error occurs because the domain join user account lacks the **Access this c
 
 To resolve this error, follow these steps:
 
-1. Verify that the user account performing the domain join operation (or a security group that owns the domain join user account as a member) has been granted the **Access this computer from the network** right in the **Default Domain Controllers Policy**.
-2. Ensure that the **Default Domain Controllers Policy** is linked to the organizational unit (OU) that hosts the domain controller (DC) computer account that is servicing the domain join operation.
-3. Confirm that the DC servicing the domain join operation applies the policy successfully, specifically user rights settings defined in the **Default Domain Controllers Policy**.
+1. There is little reason to restrict **Everyone** from accessing domain controllers (DCs) over the network. You can add a group named "domain joiners" to the policy.
+    > [!NOTE]
+    > Don't add the user directly.
+2. Verify that **Everyone** or the group "domain joiners" has been granted the **Access this computer from the network** right in the group policy applying to all DCs. By default, this policy is **Default Domain Controllers Policy**.
+3. Ensure that the relevant policy is linked to the organizational unit (OU) that hosts the DCs.
+    > [!NOTE]
+    > Place all DC computer accounts in the **Domain Controllers** OU.
+4. Confirm that the DCs servicing the domain join operation apply the relevant policy successfully.
