@@ -1,12 +1,12 @@
 ---
-title: Troubleshooting solution import errors in Dynamics 365
-description: Provides general recommendations for troubleshooting solution import errors in Microsoft Dynamics 365.
-ms.date: 03/19/2025
+title: Resources to help troubleshoot solution import errors in Dynamics 365
+description: Provides resources and guidance to help troubleshoot solution import errors effectively in Microsoft Dynamics 365.
+ms.date: 03/20/2025
 ms.custom: sap:Working with Solutions
 ---
-# Troubleshoot solution import errors in Microsoft Dynamics 365
+# Resources to help troubleshoot solution import errors in Microsoft Dynamics 365
 
-This article introduces how to troubleshoot the error that occurs when you import a solution in Microsoft Dynamics 365.
+This article provides resources to help you troubleshoot solution import errors in Microsoft Dynamics 365.
 
 _Applies to:_ &nbsp; Microsoft Dynamics 365  
 _Original KB number:_ &nbsp; 4468903
@@ -25,4 +25,4 @@ Some errors might be caused by temporary issues. Retry the import process to see
 
 ## Community and support
 
-You can also use the information in the error message to search for potential solutions in the [Microsoft Dynamics 365 Community Forums](https://community.dynamics.com/forums/thread/). If the error persists and you can't resolve the issue, contact Microsoft Support through the **Help + Support** experience in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/support).
+You can also use the information in the error message to search for potential solutions in the [Microsoft Learn](https://learn.microsoft.com) site or the [Microsoft Dynamics 365 Community Forums](https://community.dynamics.com/forums/thread/). If the error persists and you can't resolve the issue, contact Microsoft Support through the **Help + Support** experience in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/support).
