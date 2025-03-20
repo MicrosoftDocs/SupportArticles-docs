@@ -62,8 +62,8 @@ To resolve this error, follow these steps:
 
 3. Check for special names in the target Active Directory domain that require other configuration:
 
-    - Single-label DNS name.
-    - Disjoint namespace.
+    - Single-label DNS name. For more information, see [Deployment and operation of Active Directory domains that are configured by using single-label DNS names](deployment-operation-ad-domains.md#how-to-enable-windows-based-clients-to-do-queries-and-dynamic-updates-with-single-label-dns-zones).
+    - Disjoint namespace. For more information, see [Event IDs 5788 and 5789 occur on a Windows-based computer](event-ids-5788-5789.md).
     - All numeric top-level domains (TLDs) or TLDs containing numeric characters.
 
 4. Check for network problems on the workgroup computer, target DC, or the network connecting the computer and the target DC:
