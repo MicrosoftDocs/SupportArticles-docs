@@ -210,6 +210,8 @@
       href: working-with-solutions/schemaType-mismatch-on-solution-import.md  
     - name: Error 8004F042 when importing solution patch
       href: working-with-solutions/error-code-8004f042-occurs.md
+    - name: Environment version mismatch warning during solution import
+      href: working-with-solutions/version-mismatch-on-solution-import.md
     - name: Failure when multiple publishers have shared components
       href: working-with-solutions/multiple-publisher-shared-component-failure.md
     - name: Form doesn't appear in target environment after import
