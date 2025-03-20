@@ -1,6 +1,6 @@
 ---
 title: SQL Server Installation Fails with Sector Size Error on Azure VM
-description: This article provides a resolution for the error (Cannot use file 'master.mdf' because it was originally formatted with sector size 4096) that occurs when you try to install a SQL Server instance on an Azure virtual machine (VM) running Windows.
+description: Resolves the error (Cannot use file master.mdf because it was originally formatted with sector size 4096) when you try to install a SQL Server instance on an Azure VM running Windows.
 ms.date: 03/20/2025
 ms.author: dpless
 author: dplessMSFT
@@ -32,23 +32,23 @@ Detailed results:
   Error description:             Could not find the Database Engine startup handle.
 ```
 
-This issue can occur for on-premises installations but is more likely to be encountered when installing SQL Server on Microsoft Azure virtual machine (VM).
+This issue might occur with on-premises installations, but you are more likely to encounter it when installing SQL Server on Microsoft Azure virtual machine (VM).
 
 ## Cause
 
-This issue occurs due to the sector size configuration of the disk on certain Azure virtual machines. Some of the latest Azure VM generations (such as Da/Ea/Fav6) have an NVMe-only storage interface and require an OS image that supports NVMe. However, these latest Azure VM generations deploy with a default sector size of 8 KB, which isn't currently supported by SQL Server. SQL Server currently supports disks with a standard native [sector sizes of 512 bytes and 4 KB](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2022#StorageTypes). 
+This issue occurs due to the sector size configuration of the disk on certain Azure virtual machines. Some of the latest Azure VM generations (such as Da, Ea, and Fav6) have an NVMe-only storage interface and require an OS image that supports NVMe. However, these latest Azure VM generations deploy with a default sector size of 8 KB, which isn't currently supported by SQL Server. SQL Server currently supports disks with standard native [sector sizes of 512 bytes and 4 KB](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2022#StorageTypes). 
 
 > [!NOTE]
-> NVMe is a communication protocol that facilitates faster and more efficient data transfer between servers and storage systems by using nonvolatile memory (NVMe). With NVMe, data can be transferred at the highest throughput and with the fastest response times. 
+> Non-Volatile Memory Express (NVMe) is a communication protocol that facilitates faster and more efficient data transfer between servers and storage systems by using Non-Volatile Memory (NVM). With NVMe, data can be transferred at the highest throughput and with the fastest response times. 
 
-If an Azure virtual machine was deployed using the 8 KB sector size, and you attempt to install SQL Server after deployment, the installation can fail. 
+If an Azure virtual machine is deployed using the 8 KB sector size, and you attempt to install SQL Server after deployment, the installation might fail. 
 
 > [!NOTE]
-> This scenario only occurs when you manually install SQL Server on an Azure VM, and not when you deploy a SQL Server VM from Azure Marketplace. The Azure Marketplace images are preconfigured to use the 4 KB sector size.
+> This scenario only occurs when you manually install SQL Server on an Azure VM, but not when you deploy a SQL Server VM from Azure Marketplace. The Azure Marketplace images are preconfigured to use the 4 KB sector size.
 
 ## Resolution
 
-To resolve this problem, you need to reinstall SQL Server after forcing the Azure VM to use the 4 KB sector size.  
+To resolve this problem, reinstall SQL Server after forcing the Azure VM to use the 4 KB sector size.  
 
 To successfully install SQL Server on your Azure VM, follow these steps:
 
