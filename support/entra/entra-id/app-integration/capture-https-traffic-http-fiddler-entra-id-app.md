@@ -8,7 +8,7 @@ ms.custom: sap:Enterprise Applications
 ---
 # Collect HTTPS traffic using Fiddler from Microsoft Entra ID Apps
 
-This article provides instructions on how to use Fiddler to collect HTTPS traffic for troubleshooting purposes.
+This article provides instructions on how to use Fiddler to collect SSL or HTTPS traffic for troubleshooting purposes.
 
 ## Collect HTTPS traffic for troubleshooting
 
