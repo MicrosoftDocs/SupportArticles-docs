@@ -32,7 +32,7 @@ For databases with write-intensive workloads, aligning I/O operations can signif
 
 You might experience performance degradation in SQL Server due to misaligned I/O operations if you encounter any of the following symptoms:
 
-- **Slow synchronization or restore times**: Misaligned I/O operations can result in slower synchronization or restore times, especially in distributed SQL Server environments, such as Always On availability groups or log shipping. 
+- **Slow synchronization or restore times**: Misaligned I/O operations can result in slow synchronization or restore times, especially in distributed SQL Server environments, such as Always On availability groups or log shipping. 
 - **Error messages in the SQL Server error log**: Error messages related to I/O operations can indicate misalignment issues, such as: 
     
    `There have been # misaligned log IOs which required falling back to synchronous IO.`
@@ -51,7 +51,7 @@ fsutil fsinfo sectorinfo <volume path name>
 
 The following screenshot shows the output of the `fsutil fsinfo sectorinfo` command for the `E:` drive, which has a sector size of 8 KB but a physical sector size of 4 KB, causing misaligned I/O operations: 
 
-:::image type="content" source="../../azure-sql/media/sql-installation-fails-error-azure-vm/8k-sector-size-example.png" alt-text="Screenshot of the command prompt output of the 8 KB sector size.":::
+:::image type="content" source="../../azure-sql/media/sql-installation-fails-error-azure-vm/8k-sector-size-example.png" alt-text="Screenshot of the command prompt output of the 8-KB sector size.":::
 
 ## Resolution 
 
