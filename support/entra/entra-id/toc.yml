@@ -114,6 +114,8 @@
         href: app-integration/error-code-aadsts7000110-request-is-ambiguous.md
       - name: Error AADSTS7000112 - application is disabled
         href: app-integration/error-code-aadsts7000112-application-is-disabled.md
+      - name: Error AADSTS50000 - error issuing a token or an issue with our sign-in service
+        href: app-integration/error-code-aadsts50000-issuing-token-sign-in-service.md
       - name: Troubleshoot signing in to SAML-based single sign-on configured apps
         href: app-integration/troubleshoot-sign-in-saml-based-apps.md
       - name: Troubleshooting infinite redirection between OIDC app and Entra ID
