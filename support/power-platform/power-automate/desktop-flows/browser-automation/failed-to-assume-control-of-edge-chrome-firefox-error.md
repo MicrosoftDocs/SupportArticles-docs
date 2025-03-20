@@ -24,11 +24,11 @@ When you run a desktop flow that has a "Launch Edge", "Launch Chrome", or "Launc
 
 Run the [Power Automate for desktop troubleshooter](/power-automate/desktop-flows/troubleshooter). The diagnostic that should be run is called **Troubleshoot UI/Web automation issues**.
 
-When the diagnostic is run a report is generated with the issues found.
+When, the diagnostic is run a report is generated with the issues found.
 
 The issues can be fixed by pressing the **Fix** button that appears after the diagnostics check is finished.
 
-If the Troubleshooter doesn't fix the error then proceed to potential causes/resolutions that are provided in the article.
+If, the Troubleshooter doesn't fix the error then proceed to potential causes/resolutions that are provided in the article.
 
 ## Cause 1: Web extension isn't installed properly or enabled
 
@@ -41,7 +41,7 @@ The Microsoft Edge, Google Chrome, or Firefox web extension isn't installed prop
 
   :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/you-need-power-automate-desktop-extension.png" alt-text="A message that contains a Get Extension button to install the web extension.":::
 
-- Note that the web extension might seem to be installed and enabled in the extension repository of the specific browser but the execution to be unsuccessful.
+- The web extension might seem to be installed and enabled in the extension repository of the specific browser but the execution to be unsuccessful.
 
 ### Resolution
 
@@ -62,7 +62,7 @@ Execution of a desktop flow with one of the respective actions fails with the er
 
 ### Resolution 1
 
-Increase the values of **Timeout on webpage load** and the **Timeout** parameters of the Launch new Edge/Chrome/Firefox action. For example, set this values to 120 seconds. If these timeout values are not fixing the issue then follow the below steps.
+Increase the values of **Timeout on webpage load** and the **Timeout** parameters of the Launch new Edge/Chrome/Firefox action. For example, set these values to 120 seconds. If these timeout values aren't fixing the issue, then follow the below steps.
 
 ### Resolution 2
 
@@ -114,7 +114,7 @@ Increase the values of **Timeout on webpage load** and the **Timeout** parameter
 
 ### Resolution 3
 
-Increase the values of **Timeout on webpage load** and the **Timeout** parameters of the Launch new Edge/Chrome/Firefox action. For example, set this values to 120 seconds. If these timeout values are not fixing the issue then follow the below steps.
+Increase the values of **Timeout on webpage load** and the **Timeout** parameters of the Launch new Edge/Chrome/Firefox action. For example, set these values to 120 seconds. If these timeout values aren't fixing the issue, then follow the below steps.
 
 1. Insert a new "Launch new browser" action as:
     - Launch new Edge
@@ -138,7 +138,7 @@ Increase the values of **Timeout on webpage load** and the **Timeout** parameter
 
       :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/save-settings-on-error.png" alt-text="Select the Continue flow run and Go to next action options and then save the settings.":::
 
-4. Insert a 'Wait for 90 seconds' action (The value of 90 can be incresed depending on the case).
+4. Insert a 'Wait for 90 seconds' action (The value of 90 can be increased depending on the case).
 
      :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/wait-action.png" alt-text="Insert a Wait action with value set to 90.":::
 
