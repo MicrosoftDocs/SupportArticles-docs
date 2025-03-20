@@ -1,5 +1,5 @@
 ---
-title: Error AADSTS50000 - There was an error issuing a token or an issue with our sign-in service
+title: Error AADSTS50000 - There Was an Error Issuing a Token or an Issue with Our Sign-In Service
 description: Provides a solution to the AADSTS50000 error that occurs when you try to sign in to an Azure app by using Microsoft Entra ID.
 ms.service: entra-id
 ms.date: 03/12/2025
@@ -37,7 +37,7 @@ Make sure that the client ID is valid and that other required parameters are con
 
 This issue can occur in an OAuth2 Device code grant flow to the token endpoint. After the user signs in to a browser window and accepts the consent dialog, this error occurs.
 
-### Solution 3 for cause 3: Verify application consent settings
+### Solution for cause 3: Verify application consent settings
 
 1. In the [Azure portal](https://portal.azure.com), make sure that the client application (Service Principal) exists on the tenant's **Enterprise Applications** page. You can search for the application by App ID.
 2. Verify that the user can consent to the application. Check the user settings on the **Enterprise Applications** page or review relevant policies that affect user consent.
@@ -54,7 +54,7 @@ Microsoft Identity Platform (v2 endpoint) tokens must be signed by a certificate
 2. In the **Manage** section,  select **Manifest**.
 3. Check whether an entry exists in the `keyCredentials` section that includes `type=Symmetric` and `usage=Sign`.
 
-    :::image type="content" source="./media/error-code-aadsts50000-issuing-token-sign-in-service/manifest-sample.png" alt-text="Screenshot that shows the Application Manifest Key Credentials code" lightbox="./media/error-code-aadsts50000-issuing-token-sign-in-service/manifest-sample.png":::
+    :::image type="content" source="./media/error-code-aadsts50000-issuing-token-sign-in-service/manifest-sample.png" alt-text="Screenshot that shows the Application Manifest Key Credentials code." lightbox="./media/error-code-aadsts50000-issuing-token-sign-in-service/manifest-sample.png":::
 
 Alternatively, use the Microsoft Graph PowerShell cmdlet [Get-MgApplication](/powershell/module/azuread/get-azureadapplicationkeycredential) to retrieve key credentials.
 
