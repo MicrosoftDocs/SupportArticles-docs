@@ -5,7 +5,7 @@ author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: kirt, jarrettr
 ms.topic: troubleshooting 
-ms.date: 03/18/2025
+ms.date: 03/20/2025
 ms.service: azure-devops
 ms.custom: sap:Repos
 ---
@@ -138,7 +138,7 @@ To resolve the authentication error or credentials cache issues, begin by follow
 
        1. Open Control Panel and select **User Accounts** > **Credential Manager**.
        1. Select **Windows Credentials**.
-       1. Look for entries related to `git:https://dev.azure.com/<orgname>` or your Git provider and manage them. (for github, it will be like `git:https://github.com/`)
+       1. Look for entries related to `git:https://dev.azure.com/<orgname>` or your Git provider and manage them. For github, it's like `git:https://github.com/`.
        
      - Using command line:
 
@@ -154,7 +154,7 @@ To resolve the authentication error or credentials cache issues, begin by follow
 
       - `git credential approve https://dev.azure.com/<orgname>` to approve the credentials.
 
-        This command is used to manually store and approve credentials for future use, which ensures that you won't be prompted for credentials each time
+        This command is used to manually store and approve credentials for future use, which ensures that you won't be prompted for credentials each time.
 
 1. Perform the cloning operation to verify if the issue is resolved.
 
