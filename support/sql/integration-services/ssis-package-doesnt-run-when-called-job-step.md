@@ -113,6 +113,8 @@ Log: Name: OnError Computer: COMPUTERNAME Operator: DOMAINNAME\username Source N
 
 ## References
 
+- For more information about a similar problem, see [You receive an "Error loading" error message when you try to run a SQL Server 2005 Integration Services package in SQL Server 2005](../integration-services/error-loading-message-run-integration-services-package.md).
 - [How to create a package template in SQL Server Business Intelligence Development Studio](https://support.microsoft.com/help/908018)
-
 - [Connectivity error 0x80004005 occurs when you run an SSIS package as a SQL Agent job](../database-engine/connect/sql-server-faces-connectivity-issue-ssispack-fail.md)
+- For more information about how to create package templates, see [Create a package in SQL Server Data Tools using the Package Template](/sql/integration-services/create-packages-in-sql-server-data-tools#create-a-package-in-sql-server-data-tools-using-the-package-template).
+- For more information about SSIS package security and the `ProtectionLevel` property, see [Protection Level Setting and the SSISDB Catalog](/sql/integration-services/security/access-control-for-sensitive-data-in-packages#protection-level-setting-and-the-ssisdb-catalog).
