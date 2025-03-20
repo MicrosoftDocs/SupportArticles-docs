@@ -2,7 +2,7 @@
 title: Error code occurs when running an attended or unattended desktop flow
 description: Provides mitigation steps for the error codes that occur when running attended or unattended desktop flows.
 ms.reviewer: cefriant, kenseongtan, guco, johndund, alarnaud
-ms.date: 02/11/2025
+ms.date: 03/13/2025
 ms.custom: sap:Desktop flows\Unattended flow runtime errors
 ---
 # Error code occurs when running an attended or unattended desktop flow
@@ -66,3 +66,4 @@ _Original KB number:_ &nbsp; 4555406
 |AccountLockedOut|400|Unattended|This error occurs when an internal system policy has prevented an account from creating a session on the machine because of too many sign-in attempts or password change attempts for the account. It's related to an on-premises configuration, not Power Automate licenses. Check that password rotation policies don't interfere with your scheduled runs, causing many incorrect sign-in attempts. If this error occurs regularly, work with your IT administrator to review sign-in attempt logs and account lockout policies.|
 |LogonTypeNotGranted|400|Unattended|For more information, see [troubleshooting documentation for logon type not granted](logon-type-has-not-been-granted.md).|
 |UnallowedTenantForConnectWithSignIn|403|Attended|This error occurs when using a [connect with sign-in](/power-automate/desktop-flows/desktop-flow-connections#connect-with-sign-in-for-attended-runs) connection on an Active Directory (AD) domain-joined machine without adding your tenant to the allowlist. </br> For more information, see ["UnallowedTenantForConnectWithSignIn" error in a Power Automate desktop flow](troubleshoot-unallowed-tenant-for-connect-with-sign-in.md).|
+|MachineNotFound|404|Attended</br>Unattended|This error can occur when the machine is unregistered during a run or if the Dataverse organization has been migrated to a different region. Verify that:</br>- Your machine is still registered by [viewing its status](/power-automate/desktop-flows/manage-machines#view-list-of-machines) in the machine runtime application or the Power Automate portal.</br>- Your [desktop flow connection](/power-automate/desktop-flows/desktop-flow-connections) isn't broken in the Power Automate portal.</br>- [Scripting actions](/power-automate/desktop-flows/actions-reference/scripting) in your flow don't register your machine while the flow is running.|

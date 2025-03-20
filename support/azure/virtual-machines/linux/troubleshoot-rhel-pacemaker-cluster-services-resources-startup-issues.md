@@ -1,11 +1,11 @@
 ---
-title: Troubleshoot RHEL pacemaker cluster services and resources startup issues in Azure
+title: Troubleshoot RHEL Pacemaker Cluster Services and Resources Startup Issues in Azure
 description: Provides troubleshooting guidance for issues related to cluster resources or services in RedHat Enterprise Linux (RHEL)) Pacemaker Cluster
 ms.reviewer: rnirek,srsakthi
-ms.author: skarthikeyan
+ms.author: rnirek
 author: skarthikeyan7-msft 
 ms.topic: troubleshooting
-ms.date: 01/22/2025
+ms.date: 02/24/2025
 ms.service: azure-virtual-machines
 ms.collection: linux
 ms.custom: sap:Issue with Pacemaker clustering, and fencing
@@ -71,7 +71,7 @@ quorum {
 
 ### Resolution for scenario 1
 
-1. Before you make any changes, ensure you have a backup or snapshot. For more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
+1. Before you make any changes, make sure that you have a backup or snapshot. For more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
 
 2. Check for missing quorum section in `/etc/corosync/corosync.conf`. Compare the existing `corosync.conf` with any backup that's available in `/etc/corosync/`.
    
@@ -125,7 +125,7 @@ quorum {
     }
     ```
 
-5. Remove the cluster from maintenance-mode.
+5. Remove the cluster from maintenance mode.
 
     ```bash
     sudo pcs property set maintenance-mode=false
@@ -149,7 +149,7 @@ quorum {
 
 A virtual IP resource (`IPaddr2` resource) didn't start or stop in Pacemaker.
 
-The following error messages are logged in `/var/log/pacemaker.log`:
+The following error entries are logged in `/var/log/pacemaker.log`:
 
 ```output
 25167 IPaddr2(VIP)[16985]:    2024/09/07_15:44:19 ERROR: Unable to find nic or netmask.
@@ -208,7 +208,7 @@ vip_HN1_03_start_0 on node-1 'unknown error' (1): call=30, status=complete, exit
 
 If a route that matches the `VIP` isn't in the default routing table, you can specify the `NIC` name in the Pacemaker resource so that it can be configured to bypass the check:
 
-1. Before you make any changes, ensure you have a backup or snapshot. For more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
+1. Before you make any changes, make sure that you have a backup or snapshot. For more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
 
 2. Put the cluster into maintenance mode:
    
@@ -334,7 +334,7 @@ The SAP HANA resource can't be started by Pacemaker if there are `SYN` failures 
 > [!Important]
 > Steps 2, 3, and 4 must be performed by using a SAP administrator account. This is because these steps use a SAP System ID to stop, start, and re-enable replication manually.
 
-1. Before you make any changes, ensure you have a backup or snapshot. For more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
+1. Before you make any changes, make sure that you have a backup or snapshot. For more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
 
 2. Put the cluster into maintenance mode:
 
@@ -512,7 +512,7 @@ This issue frequently occurs if the database is modified (manually stopped or st
 > [!Note]
 > Steps 1 through 5 should be performed by an SAP administrator.
 
-1. Before you make any changes, ensure you have a backup or snapshot. For more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
+1. Before you make any changes, make sure that you have a backup or snapshot. For more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
   
 2. Put the cluster into maintenance mode:
 
@@ -620,7 +620,7 @@ Because of incorrect `InstanceName` and `START_PROFILE` attributes, the SAP inst
 > [!Note]
 > This resolution is applicable if `InstanceName` and `START_PROFILE` are separate files.
 
-1. Before you make any changes, ensure you have a backup or snapshot. For more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
+1. Before you make any changes, make sure that you have a backup or snapshot. For more information, see [Azure VM backup](/azure/backup/backup-azure-vms-introduction).
   
 2. Put the cluster into maintenance mode:
 
@@ -658,6 +658,90 @@ Because of incorrect `InstanceName` and `START_PROFILE` attributes, the SAP inst
     ```bash
     sudo pcs property set maintenance-mode=false
     ```
+
+## Scenario 5: Fenced node doesn't rejoin cluster
+
+### Symptom for scenario 5
+
+After the fencing operation is finished, the affected node typically doesn't rejoin the Pacemaker Cluster, and both the Pacemaker and Corosync services remain stopped unless they are manually started to restore the cluster online.
+
+### Cause for scenario 5
+
+After the node is fenced and restarted and has restarted its cluster services, it subsequently receives a message that states, `We were allegedly just fenced`. This causes it to shut down its Pacemaker and Corosync services and prevent the cluster from starting. Node1 initiates a STONITH action against node2. At `03:27:23`, when the network issue is resolved, node2 rejoins the Corosync membership. Consequently, a new two-node membership is established, as shown in `/var/log/messages` for node1:
+
+```output
+Feb 20 03:26:56 node1 corosync[1722]:  [TOTEM ] A processor failed, forming new configuration.
+Feb 20 03:27:23 node1 corosync[1722]:  [TOTEM ] A new membership (1.116f4) was formed. Members left: 2
+Feb 20 03:27:24 node1 corosync[1722]:  [QUORUM] Members[1]: 1
+...
+Feb 20 03:27:24 node1 pacemaker-schedulerd[1739]: warning: Cluster node node2 will be fenced: peer is no longer part of the cluster
+...
+Feb 20 03:27:24 node1 pacemaker-fenced[1736]: notice: Delaying 'reboot' action targeting node2 using  for 20s
+Feb 20 03:27:25 node1 corosync[1722]:  [TOTEM ] A new membership (1.116f8) was formed. Members joined: 2
+Feb 20 03:27:25 node1 corosync[1722]:  [QUORUM] Members[2]: 1 2
+Feb 20 03:27:25 node1 corosync[1722]:  [MAIN  ] Completed service synchronization, ready to provide service.
+```
+
+Node1 received confirmation that node2 was successfully restarted, as shown in `/var/log/messages` for node2.
+
+```output
+Feb 20 03:27:46 node1 pacemaker-fenced[1736]: notice: Operation 'reboot' [43895] (call 28 from pacemaker-controld.1740) targeting node2 using xvm2 returned 0 (OK)
+```
+
+To fully complete the STONITH action, the system had to deliver the confirmation message to every node. Because node2 rejoined the group at `03:27:25` and no new membership that excluded node2 was yet formed because of the token and consensus timeouts not expiring, the confirmation message is delayed until node2 restarts its cluster services after startup. Upon receiving the message, node2 recognizes that it has been fenced and, consequently, shut down its services as shown:
+
+`/var/log/messages` in node1:
+```output
+Feb 20 03:29:02 node1 corosync[1722]:  [TOTEM ] A processor failed, forming new configuration.
+Feb 20 03:29:10 node1 corosync[1722]:  [TOTEM ] A new membership (1.116fc) was formed. Members joined: 2 left: 2
+Feb 20 03:29:10 node1 corosync[1722]:  [QUORUM] Members[2]: 1 2
+Feb 20 03:29:10 node1 pacemaker-fenced[1736]: notice: Operation 'reboot' targeting node2 by node1 for pacemaker-controld.1740@node1: OK
+Feb 20 03:29:10 node1 pacemaker-controld[1740]: notice: Peer node2 was terminated (reboot) by node1 on behalf of pacemaker-controld.1740: OK
+...
+Feb 20 03:29:11 node1 corosync[1722]:  [CFG   ] Node 2 was shut down by sysadmin
+Feb 20 03:29:11 node1 corosync[1722]:  [TOTEM ] A new membership (1.11700) was formed. Members left: 2
+Feb 20 03:29:11 node1 corosync[1722]:  [QUORUM] Members[1]: 1
+Feb 20 03:29:11 node1 corosync[1722]:  [MAIN  ] Completed service synchronization, ready to provide service.
+```
+
+`/var/log/messages` in node2:
+```output
+Feb 20 03:29:11 [1155] node2 corosync notice  [TOTEM ] A new membership (1.116fc) was formed. Members joined: 1
+Feb 20 03:29:11 [1155] node2 corosync notice  [QUORUM] Members[2]: 1 2
+Feb 20 03:29:09 node2 pacemaker-controld  [1323] (tengine_stonith_notify)  crit: We were allegedly just fenced by node1 for node1!
+```
+
+### Resolution for scenario 5
+
+Configure a startup delay for the Crosync service. This pause provides sufficient time for a new Closed Process Group (CPG) membership to form and exclude the fenced node so that the STONITH restart process can finish by making sure the completion message reaches all nodes in the membership.
+
+To achieve this effect, run the following commands:
+
+1. Put the cluster into maintenance mode:
+
+    ```bash
+    sudo pcs property set maintenance-mode=true
+    ```
+2. Create a systemd drop-in file on all the nodes in the cluster:
+
+- Edit the Corosync file:
+  ```bash 
+   sudo systemctl edit corosync.service
+  ```
+- Add the following lines:
+  ```config
+  [Service]
+  ExecStartPre=/bin/sleep 60
+  ```
+- After you save the file and exit the text editor, reload the systemd manager configuration:
+  ```bash
+  sudo systemctl daemon-reload
+  ```
+3. Remove the cluster from maintenance mode:
+  ```bash
+  sudo pcs property set maintenance-mode=false
+  ```
+For more information refer to [Fenced Node Fails to Rejoin Cluster Without Manual Intervention](https://access.redhat.com/solutions/5644441)
 
 ## Next steps
 

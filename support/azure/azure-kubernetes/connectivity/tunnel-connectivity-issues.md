@@ -29,6 +29,8 @@ You receive an error message that resembles the following examples about port 10
 
 > Error from server: error dialing backend: dial tcp \<aks-node-ip>:10250: i/o timeout
 
+> Error from server: Get "https\://\<aks-node-name>:10250/containerLogs/\<namespace>/\<pod-name>/\<container-name>": http: server gave HTTP response to HTTPS client
+
 The Kubernetes API server uses port 10250 to connect to a node's kubelet to retrieve the logs. If port 10250 is blocked, the kubectl logs and other features will only work for pods that run on the nodes in which the tunnel component is scheduled. For more information, see [Kubernetes ports and protocols: Worker nodes](https://kubernetes.io/docs/reference/ports-and-protocols/#node).
 
 Because the tunnel components or the connectivity between the server and client can't be established, functionality such as the following won't work as expected:

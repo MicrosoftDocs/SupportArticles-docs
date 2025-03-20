@@ -1,9 +1,9 @@
 ---
 title: SSH connection to Azure Linux VM fails due to permission and ownership issues 
 description: Resolves an issue in which the SSH service fails because the /var/empty/sshd, /var/lib/empty, or /var/run/sshd directory doesn't exist, or it isn't owned by the root user, or it's group-writable or world-writable.
-ms.date: 04/15/2024
-author: saimsh-msft
-ms.reviewer: divargas, adelgadohell
+ms.date: 03/13/2025
+author: pagienge
+ms.reviewer: divargas, adelgadohell, saimsh
 ms.service: azure-virtual-machines
 ms.custom: sap:Cannot connect to my VM, linux-related-content
 ms.collection: linux
@@ -13,15 +13,13 @@ ms.collection: linux
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-[!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
-
 This article provides solutions to an issue in which connecting to a Linux virtual machine (VM) via Secure Shell (SSH) fails because the _/var/empty/sshd_ directory in RHEL, the _/var/lib/empty_ directory in SUSE, or the _/var/run/sshd_ directory in Ubuntu, doesn't exist, or it isn't owned by the root user, or it's group-writable or world-writable.
 
 ## Symptoms
 
 When you connect to a Linux virtual machine (VM) via SSH, the connection fails. You may receive the following error message about the affected directory, depending on your Linux distribution.
 
-### [RHEL/CentOS](#tab/rhelsymp)
+### [RHEL](#tab/rhelsymp)
 
 ```bash
 sudo tail /var/log/messages
@@ -75,7 +73,7 @@ Here are two methods to repair the VM offline:
 2. Sign in to the VM by using a local administrative account and its corresponding credential or password.
 3. Run the following commands to resolve the permission and ownership issue:
 
-   ### [RHEL/CentOS](#tab/rhelts1)
+   ### [RHEL](#tab/rhelts1)
 
    ```bash
    sudo mkdir -p /var/empty/sshd
@@ -111,7 +109,7 @@ In the Azure portal, open the **Properties** window of the VM to check the agent
 1. Go to the Azure portal, locate your VM settings, and then select **Run Command** under **Operations**.
 2. Execute the following shell script by selecting **RunShellScript** > **Run**:
 
-   ### [RHEL/CentOS](#tab/rhelts2)
+   ### [RHEL](#tab/rhelts2)
 
    ```bash
    #!/bin/bash
@@ -155,12 +153,12 @@ If you can connect to the VM via SSH, and you want to analyze the details of the
 
 Here are two methods to repair the VM offline:
 
-- [Use Azure Linux Auto Repair (ALAR).](#offlinetroubleshooting-repairvm)
+- [Use az vm repair](#offlinetroubleshooting-repairvm)
 - [Use the manual method.](#offlinetroubleshooting-manualvm)
 
-### <a id="offlinetroubleshooting-repairvm"></a>Use Azure Linux Auto Repair (ALAR)
+### <a id="offlinetroubleshooting-repairvm"></a>Use az vm repair
 
-Azure Linux Auto Repair (ALAR) scripts are a part of the VM repair extension described in [Repair a Linux VM by using the Azure Virtual Machine repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md).
+The `az vm repair`, part of the vm-repair extension for the Azure CLI, is described in [Repair a Linux VM by using the Azure Virtual Machine repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md).
 
 Follow these steps to automate the manual offline process:
 
@@ -177,7 +175,7 @@ Follow these steps to automate the manual offline process:
 
 3. Run the following commands to resolve the permission and ownership issues:
 
-   ### [RHEL/CentOS](#tab/rhelts3)
+   ### [RHEL](#tab/rhelts3)
 
    ```bash
    mkdir -p /var/empty/sshd
@@ -210,11 +208,11 @@ Follow these steps to automate the manual offline process:
 
 ### <a id="offlinetroubleshooting-manualvm"></a>Use the manual method
 
-If both the serial console and ALAR approach don't apply to you or fail, the repair has to be performed manually. Follow the steps below to manually attach the OS disk to a recovery VM and swap the OS disk back to the original VM:
+If both the serial console and `az vm repair` approach don't apply to you or fail, the repair has to be performed manually. Follow the steps below to manually attach the OS disk to a recovery VM and swap the OS disk back to the original VM:
 
 - [Attach the OS disk to a recovery VM using the Azure portal.](troubleshoot-recovery-disks-portal-linux.md)
 - [Attach the OS disk to a recovery VM using Azure CLI.](troubleshoot-recovery-disks-linux.md)
 
-Once the OS disk is successfully attached to the recovery VM, follow the detailed [chroot instructions](chroot-environment-linux.md) to mount and chroot to the filesystems of the attached OS disk. Then, follow step 3 in the [Use Azure Linux Auto Repair (ALAR)](#offlinetroubleshooting-repairvm) section to resolve the permission and ownership issues.
+Once the OS disk is successfully attached to the recovery VM, follow the detailed [chroot instructions](chroot-environment-linux.md) to mount and chroot to the filesystems of the attached OS disk. Then, follow step 3 in the [Use az vm repair](#offlinetroubleshooting-repairvm) section to resolve the permission and ownership issues.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

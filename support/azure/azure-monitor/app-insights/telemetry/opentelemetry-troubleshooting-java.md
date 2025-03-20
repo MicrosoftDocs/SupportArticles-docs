@@ -1,19 +1,21 @@
 ---
 title: Troubleshoot OpenTelemetry issues in Java
 description: Learn how to troubleshoot OpenTelemetry issues in Java. Test connectivity between your application host and the ingestion service.
-ms.date: 06/24/2024
+ms.date: 03/19/2025
 editor: v-jsitser
 ms.service: azure-monitor
 ms.devlang: java
-ms.reviewer: mmcc, lechen, aaronmax, v-leedennis
+ms.reviewer: mmcc, lechen, aaronmax
 ms.custom: sap:Missing or Incorrect data after enabling Application Insights in Azure Portal
 ---
 
 # Troubleshoot OpenTelemetry issues in Java
 
-This article discusses how to troubleshoot OpenTelemetry issues in Java.
+This article discusses how to troubleshoot OpenTelemetry issues in Java. 
 
 ## Troubleshooting checklist
+
+Starting from version 3.0.3, you can use configuration options to suppress specific autocollected telemetry. For more information, see [Suppress specific autocollected telemetry](/azure/azure-monitor/app/java-standalone-config#suppress-specific-autocollected-telemetry).
 
 ### Step 1: Enable diagnostic logging
 

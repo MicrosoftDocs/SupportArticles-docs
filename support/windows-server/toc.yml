@@ -157,6 +157,10 @@ items:
       href: ./active-directory/windows-app-cant-start.md
   - name: Active Directory replication
     items:
+    - name: Active Directory installation fails
+      href: active-directory/creating-ntds-settings-object-for-ad-dc.md
+    - name: Troubleshooting AD Replication error 1908
+      href: active-directory/ad-replication-error-1908-not-find-domain-controller.md
     - name: 'Troubleshooting guidance: Active Directory replication'
       href: ./active-directory/troubleshoot-adreplication-guidance.md
     - name: Active Directory changes don't replicate
@@ -349,8 +353,6 @@ items:
     items:
     - name: 'Troubleshooting guidance: Active Directory domain join'
       href: ./active-directory/active-directory-domain-join-troubleshooting-guidance.md
-    - name: Active Directory installation fails
-      href: ./active-directory/creating-ntds-settings-object-for-ad-dc.md
     - name: Cannot contect to the Internet or the domain
       href: ./active-directory/cannot-connect-internet-domain.md
     - name: Default limit to workstation numbers
@@ -359,20 +361,10 @@ items:
       href: ./active-directory/netlogon-service-not-start-automatically.md
     - name: Support boundaries for Active Directory over NAT
       href: ./active-directory/support-for-active-directory-over-nat.md
-    - name: Sync Center syncs offline files very slow
-      href: ./active-directory/sync-center-slow-syncing-of-offline-files.md
     - name: '"The account is not authorized to login from this station" error'
       href: ./active-directory/account-not-authorized-login-from-this-station.md
-    - name: Troubleshoot domain controller location issues
-      href: ./active-directory/troubleshoot-domain-controller-location-issues.md
     - name: Troubleshoot errors when joining computers to a domain
       href: ./active-directory/troubleshoot-errors-join-computer-to-domain.md
-    - name: Troubleshooting AD Replication error 1908
-      href: ./active-directory/ad-replication-error-1908-not-find-domain-controller.md
-    - name: Unable to join computers to a domain
-      href: ./active-directory/cannot-join-computer-to-domain.md
-    - name: Using domain join UI to join a computer to AD domain fails
-      href: ./active-directory/fail-to-join-computer-to-ad-domain.md
   - name: LDAP configuration and interoperability
     items:
     - name: DCs can't be located and high-rate outbound sessions
@@ -421,6 +413,8 @@ items:
       href: ./active-directory/access-denied-when-joining-computers.md
     - name: Account-identifier allocator fails to initialize
       href: ./active-directory/event-16650-account-identifier-allocator-not-initialize.md
+    - name: Accounts have the lastLogonTimestamp value set to future
+      href: ./active-directory/accounts-lastlogontimestamp-future-time.md
     - name: Add special groups to built-in groups
       href: ./active-directory/add-special-groups-to-built-in-groups.md
     - name: All members of a group may not be returned
@@ -431,6 +425,8 @@ items:
       href: ./active-directory/fail-to-access-data-from-source-control-explorer.md
     - name: Can't add user or object to directory service
       href: ./active-directory/cannot-add-user-object-differ-by-diacritic-mark-character.md
+    - name: Can't edit or delete an AD object
+      href: ./active-directory/cannot-edit-delete-ad-object-error-sam.md
     - name: Can't start Active Directory Users and Computers Tool
       href: ./active-directory/cannot-start-active-directory-users-and-computers-tool.md
     - name: Compatibility with user accounts ending with the dollar sign
@@ -1779,16 +1775,10 @@ items:
     items:
     - name: 'Troubleshooting guidance: stop errors and unexpected restart'
       href: ./performance/troubleshoot-stop-errors-guidance.md
-    - name: Disable or enable Dr. Watson program
-      href: ./performance/disable-enable-dr-watson-program.md
     - name: Error 0x00000007B after you reconfigure hardware devices
       href: ./performance/inaccessible-boot-device-stop-error.md
     - name: Error 0x000000D1 when you enabled storage controller
       href: ./performance/bugcheck-run-stop-error-0x000000d1.md
-    - name: Error 0x00000019 when NTFS creates 8.3 formatted name
-      href: ./performance/stop-error-code-0x00000019.md
-    - name: Fail to access shared folder from applications
-      href: ./performance/accessing-shared-folder-from-application-fails.md
     - name: How to use Driver Verifier to identify issues
       href: ./performance/use-driver-verifier-to-identify-issues.md
     - name: Memory dump file options
@@ -1797,20 +1787,10 @@ items:
       href: ./performance/stop-code-driver-verifier-dma-violation.md
     - name: Stop error code 0x0000007F
       href: ./performance/stop-error-code-0x0000007F.md
-    - name: Stop Error "DRIVER_IRQL_NOT_LESS_OR_EQUAL"
-      href: ./performance/stop-error-driver-irql-not-less-or-equal.md
     - name: Stop error 7E on a server running NFS
       href: ./performance/stop-error-7e-nfs.md
-    - name: Stop error 0x109 on a VMWare virtual machine
-      href: ./performance/stop-error-0x109-on-VMWare-virtual-machine.md
     - name: Stop 7F, 0x00000008 (double-fault) error
       href: ./performance/stop-7f-0x00000008-double-fault-error.md
-    - name: '"Stop 0x0000000A" error for processor resumes from C1 idle state'
-      href: ./performance/stop-0x0000000a-error-processor-c1-idle-state.md
-    - name: Toggle Terminal Services to Application Server mode
-      href: ./performance/toggle-terminal-services-application-server-mode.md
-    - name: Troubleshoot the "STOP 0xC000021A" error
-      href: ./performance/troubleshoot-stop-0xc000021a-error.md
     - name: 'Troubleshoot stop errors: Best practices and dump configuration recommendations'
       href: ./performance/troubleshoot-stop-errors-best-practices-dump-configuration-recommendations.md
     - name: Troubleshoot unexpected reboots using system event logs
@@ -2148,7 +2128,7 @@ items:
     - name: Local Policy not permit to Log On Interactively
       href: ./remote/local-policy-not-permit-log-on-interactively.md
     - name: New user fails to log on through RDP
-      href: ./remote/not-enough-storage-available-to-process-command.md    
+      href: ./remote/not-enough-storage-available-to-process-command.md
     - name: Registry Size Limit (RSL) functionality is still be honored
       href: ./remote/honors-registry-size-limit-functionality-key-set.md
     - name: Remote Control prompts for user permission
@@ -2317,6 +2297,8 @@ items:
       href: ./remote/terminal-server-commands-msg.md
     - name: Terminal Server User's Home Directory is not set correctly
       href: ./remote/terminal-server-users-home-directory-not-set-correctly.md
+    - name: Troubleshoot unexpected RDS session locks or disconnections
+      href: ./remote/troubleshoot-unexpected-rds-session-locks-or-disconnections.md
     - name: User can't authenticate or must authenticate twice
       href: ./remote/cannot-authenticate-must-authenticate-twice.md
     - name: '"Remote Desktop Service is currently busy" message'
@@ -2585,6 +2567,10 @@ items:
       href: ./system-management-components/scheduled-task-not-run-upon-reboot-machine-off.md
     - name: Scheduled tasks reference incorrect user profile paths
       href: ./system-management-components/scheduled-tasks-reference-incorrect-user-profile.md
+    - name: Troubleshoot issues with scheduled tasks not running
+      href: ./system-management-components/troubleshoot-scheduled-tasks-not-running.md
+    - name: Resolve Task Scheduler "Access Denied" error
+      href: ./system-management-components/troubleshooting-task-scheduler-access-denied-error.md
   - name: WinRM
     items:
     - name: Error 0x80090322 when connecting PowerShell to remote server via WinRM
@@ -2939,6 +2925,8 @@ items:
       href: ./windows-security/windows-updates-add-new-ntlm-pass-through-authentication-protections.md
   - name: Netlogon, secure channel, DC Locator
     items:
+    - name: Troubleshoot domain controller location issues
+      href: windows-security/troubleshoot-domain-controller-location-issues.md
     - name: 'Troubleshooting guidance: Secure channel'
       href: ./windows-security/broken-trust-relationship-domain-joined-device-its-domain-secure-channel-issues.md
     - name: Gather information for secure channel issues
