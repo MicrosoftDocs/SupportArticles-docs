@@ -47,7 +47,7 @@ Depending on your application environment, you might also work around this probl
 
 By default, there's no `MaxFieldLength` registry entry. This entry specifies the maximum size limit of each HTTP request header. The `MaxRequestBytes` registry entry specifies the upper limit for the total size of the Request line and the headers. Typically, this registry entry is configured together with the `MaxRequestBytes` registry entry. If the `MaxRequestBytes` value is lower than the `MaxFieldLength` value, the `MaxFieldLength` value is adjusted. In large Active Directory environments, users may experience logon failures if the values for both these entries aren't set to a sufficiently high value.
 
-The size of `MaxFieldLength` and `MaxRequestBytes` shouldn't exceed the maximum allowed values for these fields that are defined in [Http.sys registry settings for Windows](/troubleshoot/developer/webapps/iis/health-diagnostic-performance/httpsys-registry-windows). 
+The size of `MaxFieldLength` and `MaxRequestBytes` shouldn't exceed the maximum allowed values for these fields that are defined in [Http.sys registry settings for Windows](../health-diagnostic-performance/httpsys-registry-windows.md). 
 
 For IIS versions shipped with Windows Server 2016 and later, the `MaxFieldLength` and `MaxRequestBytes` registry keys are located in the following subkey:  
 
