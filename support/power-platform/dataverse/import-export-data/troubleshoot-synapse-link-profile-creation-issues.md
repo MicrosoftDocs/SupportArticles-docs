@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Synapse Link profile creation issues
+title: Troubleshoot Azure Synapse Link profile creation issues
 description: Resolves networking, permissions, regional mismatches, or profile limits in Microsoft Dataverse.
 author: Greggbarker-ms
 ms.author: saukuma
@@ -7,9 +7,9 @@ ai-usage: ai-assisted
 ms.date: 03/20/2025
 ms.custom: sap:Importing and exporting data\Configuring Export to Azure Data Lake and Azure Synapse Link integration 
 ---
-# Troubleshoot Synapse Link profile creation issues
+# Troubleshoot Azure Synapse Link profile creation issues
 
-This article provides detailed guidance for troubleshooting common issues encountered during the [creation of Synapse Link profiles](/power-apps/maker/data-platform/azure-synapse-link-synapse). The steps outlined address networking misconfigurations, permissions, regional mismatches, and other factors that might impact the setup process.
+This article provides detailed guidance for troubleshooting common issues encountered during the [creation of Azure Synapse Link profiles](/power-apps/maker/data-platform/azure-synapse-link-synapse). The steps outlined address networking misconfigurations, permissions, regional mismatches, and other factors that might impact the setup process.
 
 ## Prerequisites
 
@@ -68,18 +68,18 @@ Before proceeding, ensure the following prerequisites are met:
 
 To solve this issue, enable the **Track changes** property for the desired tables by following the steps described in [Enable change tracking to control data synchronization](/power-platform/admin/enable-change-tracking-control-data-synchronization).
 
-## Maximum number of Synapse Link profiles is reached
+## Maximum number of Azure Synapse Link profiles is reached
 
-**Cause:** The Dataverse environment has reached its limit for Synapse Link profiles.
+**Cause:** The Dataverse environment has reached its limit for Azure Synapse Link profiles.
 
 **Solution:**
 
-1. Review the current Synapse Link profiles in your environment.
+1. Review the current Azure Synapse Link profiles in your environment.
 2. If the maximum limit is reached, consider removing unused profiles to create new ones.
 
 ## Mitigation for UI stuck on the "Fetching App..." status
 
-**Cause:** The "Common Data Service - Azure Data Lake Storage" app (ID: 546068c3-99b1-4890-8e93-c8aeadcfe56a) is missing in your Azure AD tenant.
+**Cause:** The "Common Data Service - Azure Data Lake Storage" app (ID: 546068c3-99b1-4890-8e93-c8aeadcfe56a) is missing in your Microsoft Entra ID.
 
 **Validation:**
 
