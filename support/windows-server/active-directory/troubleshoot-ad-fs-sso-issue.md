@@ -1,7 +1,7 @@
 ---
 title: ADFS SSO troubleshooting
 description: Introduce how to troubleshoot ADFS SSO issues.
-ms.date: 01/15/2025
+ms.date: 04/01/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -112,13 +112,13 @@ If the application is Microsoft Online Services, what you experience may be cont
 2. Get the existing domain federation setting by running the following command:
 
    ```powershell
-   Get-MSOLDomainFederationSettings -DomainName DomainName | FL *
+   Get-MgDomainFederationConfiguration -DomainId <DomainName> | FL *
    ```
 
 3. Set the PromptLoginBehavior setting by running the following command:
 
    ```powershell
-   Set-MSOLDomainFederationSettings -DomainName DomainName -PromptLoginBehavior <TranslateToFreshPasswordAuth|NativeSupport|Disabled> -SupportsMFA <$TRUE|$FALSE> -PreferredAuthenticationProtocol <WsFed|SAMLP>
+   New-MgDomainFederationConfiguration -DomainId <domain_id> -PromptLoginBehavior <TranslateToFreshPasswordAuth|NativeSupport|Disabled> -FederatedIdpMfaBehavior <acceptIfMfaDoneByFederatedIdp|enforceMfaByFederatedIdp|rejectMfaByFederatedIdp> -PreferredAuthenticationProtocol <WsFed|SAMLP>
    ```
 
    The values for the PromptLoginBehavior parameter are:
@@ -127,8 +127,6 @@ If the application is Microsoft Online Services, what you experience may be cont
    2. **NativeSupport**: The prompt=login parameter is sent as is to AD FS.
    3. **Disabled**: Nothing is sent to AD FS.
 
-To learn more about the Set-MSOLDomainFederationSettings command, see [Active Directory Federation Services prompt=login parameter support](/windows-server/identity/ad-fs/operations/ad-fs-prompt-login).
-
 <a name='azure-active-directory-azure-ad-scenario'></a>
 
 ### Microsoft Entra scenario
@@ -136,7 +134,7 @@ To learn more about the Set-MSOLDomainFederationSettings command, see [Active Di
 If the authentication request sent to Microsoft Entra ID include [the prompt=login parameter](/windows-server/identity/ad-fs/operations/ad-fs-prompt-login), disable the prompt=login capability by running the following command:
 
 ```powershell
-Set-MsolDomainFederationSettings –DomainName DomainName -PromptLoginBehavior Disabled
+New-MgDomainFederationConfiguration -DomainId <domain_id> -PromptLoginBehavior Disabled
 ```
 
 After you run this command, Office 365 applications won't include the prompt=login parameter in each authentication request.
@@ -229,13 +227,13 @@ If the application that you want to access is Microsoft Online Services for Offi
 1. Get the current SupportsMFA domain federation setting by running the following command:
 
    ```powershell
-   Get-MSOLDomainFederationSettings -DomainName DomainName | FL *
+   Get-MgDomainFederationConfiguration -DomainId <domain_id> | FL *
    ```
 
 2. If the SupportsMFA setting is FALSE, set it to TRUE by running the following command:  
 
    ```powershell
-   Set-MSOLDomainFederationSettings -DomainName DomainName -SupportsMFA $TRUE
+   New-MgDomainFederationConfiguration -DomainId <DomainName> -FederatedIdpMfaBehavior "acceptIfMfaDoneByFederatedIdp"
    ```
 
 ### Check if SSO is disabled
@@ -627,10 +625,10 @@ If a user is trying to log in to Microsoft Entra ID, they will be redirected to 
 1. [Download](https://connect.microsoft.com/site1164/Downloads/DownloadDetails.aspx?DownloadID=59185) and install the Azure AD PowerShell module for Windows PowerShell.
 1. Open Windows PowerShell with the "Run as administrator" option.
 1. Initiate a connection to Microsoft Entra ID by running the following command:  
-`Connect-MsolService`
+`Connect-MgGraph`
 1. Provide the global administrator credential for the connection.
 1. Get the list of users in the Microsoft Entra ID by running the following command:  
-`Get-MsolUser`
+`Get-MgUser`
 1. Verify if the user is in the list.
 
 If the user is not in the list, sync the user to Microsoft Entra ID.
@@ -1238,3 +1236,12 @@ The following are the device claims. The authorization rules may use some of the
 If there is a missing claim, follow the steps in [Configure On-Premises Conditional Access using registered devices](/windows-server/identity/ad-fs/operations/configure-device-based-conditional-access-on-premises) to make sure the environment is setup for device authentication.
 
 If all the claims are present, see if the values of the claims from the Dump Token app match the values required in the authorization policy.
+
+## Reference
+
+For more informaiton, see the following articles:
+
+- [Get-MgDomainFederationConfiguration](/powershell/module/microsoft.graph.identity.directorymanagement/get-mgdomainfederationconfiguration)
+- [New-MgDomainFederationConfiguration](/powershell/module/microsoft.graph.identity.directorymanagement/new-mgdomainfederationconfiguration)
+- [Connect-MgGraph](/powershell/microsoftgraph/authentication-commands?view=graph-powershell-1.0#use-connect-mggraph)
+- [Get-MgUser](/powershell/module/microsoft.graph.users/get-mguser)
