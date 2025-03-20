@@ -13,7 +13,7 @@ ms.reviewer: meerak, stevenle, gbratton, aruiz, vijayde, v-lianna
 appliesto: 
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 01/30/2024
+ms.date: 03/19/2025
 ---
 # Shareable links in Outlook
 

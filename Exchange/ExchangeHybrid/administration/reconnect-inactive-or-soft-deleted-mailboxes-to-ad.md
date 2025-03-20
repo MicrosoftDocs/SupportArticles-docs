@@ -7,15 +7,15 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom:
-  - sap:Administrator Tasks
-  - Exchange Online
+  - sap:Hybrid
+  - Exchange Hybrid
   - CSSTroubleshoot
   - CI 3946
 ms.reviewer: ninob, apascual, meerak, v-shorestris
 appliesto:
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/04/2025
+ms.date: 03/17/2025
 ---
 
 # Original mailbox isn't reconnected after Microsoft Entra Connect resumes syncing
@@ -30,7 +30,7 @@ Consider the following scenario in a hybrid Microsoft Exchange environment:
 
 - Later, you remove the exclusion to let syncing resume.
 
-As expected, when the on-premises user account stopped syncing, the user lost access to their cloud mailbox. However, when syncing resumed, the user was assigned a new empty cloud mailbox instead of their original cloud mailbox.
+As expected, the user lost access to their cloud mailbox when syncing stopped. However, when syncing resumed, the user was assigned a new empty cloud mailbox instead of their original cloud mailbox.
 
 ## Cause
 

@@ -18,7 +18,7 @@ appliesto:
   - Microsoft Outlook 2010
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 01/30/2024
+ms.date: 03/19/2025
 ---
 # How time zone normalization works in Microsoft Outlook
 

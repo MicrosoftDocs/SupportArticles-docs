@@ -18,7 +18,7 @@ appliesto:
   - Outlook for iOS
   - Loop
 search.appverid: MET150
-ms.date: 02/06/2024
+ms.date: 03/19/2025
 ---
 
 # Embed and play back videos in Outlook and Loop
