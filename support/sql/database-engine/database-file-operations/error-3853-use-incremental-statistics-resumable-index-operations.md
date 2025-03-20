@@ -1,9 +1,9 @@
 ---
-title: Error 3853 when using incremental statistics and resumable index operations
+title: Error 3853 When Using Incremental Statistics And Resumable Index Operations
 description: This article helps you resolve SQL Server error 3853 that occurs when you use incremental statistics and resumable index operations concurrently.
 ms.date: 03/19/2025
 ms.custom: sap:File, Filegroup, Database Operations or Corruption
-ms.reviewer: 
+ms.reviewer: rtownsend
 ---
 
 # SQL Server error 3853 when using incremental statistics and resumable index operations concurrently
@@ -11,12 +11,12 @@ ms.reviewer:
 ## Applies to
 
 - Microsoft SQL Server 2019
-- Microsoft SQL Server 2017 
+- Microsoft SQL Server 2017
 - Microsoft SQL Server 2016
 
 ## Symptoms
  
-When running a [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) command, the following output might be generated:
+When you run a [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) command, the following output might be generated:
 
 ```output
 Corruption in database ID %I64d, object ID %ld possibly due to schema or catalog inconsistency. Run DBCC CHECKCATALOG.
