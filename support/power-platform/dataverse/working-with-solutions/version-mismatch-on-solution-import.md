@@ -2,7 +2,7 @@
 title: Environment Version Mismatch During Solution Import in Power Apps
 description: Provides a workaround for a warning about environment version mismatch that occurs when you import a solution in the target environment in Microsoft Power Apps.
 ms.reviewer: matp
-ms.date: 03/14/2025
+ms.date: 03/20/2025
 author: swatimadhukargit
 ms.author: swatim
 ms.custom: sap:Working with Solutions\Environment version mistamch during solution import
