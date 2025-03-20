@@ -38,7 +38,7 @@ This error occurs for one or more of the following reasons:
 
 - The workgroup computer being joined points to an invalid DNS server.
 - The DNS server used by the joining computer is invalid, is missing the required zones, or is missing the required records for the target domain.
-- The target Active Directory domain contains a problematic DNS name.
+- The target Active Directory (AD) domain contains a problematic DNS name.
 - Network problems exist on either the workgroup computer, the target domain controller (DC), or the network used to connect the client and target DC.
 
 ## Troubleshooting steps
@@ -48,8 +48,10 @@ To resolve this error, follow these steps:
 1. Verify that the computer being joined points to valid DNS server IP addresses. Invalid examples include:
 
     - Invalid Internet Service Provider (ISP)-provided DNS servers.
+    - ISP-provided DNS servers that don't host the AD domain zone.
     - A stale or nonexistent DNS server on the corporate intranet.
-    - A DNS server in an error state that prevents it from loading the `_msdcs.<forest root domain>` or target AD domain zones, or from resolving queries for those zones. Event ID 4521 might be logged.
+    - A corporate network DNS server that don't host the AD domain zone.
+    - A corporate network DNS server in an error state that prevents it from loading the `_msdcs.<forest root domain>` or target AD domain zones, or from resolving queries for those zones. Event ID 4521 might be logged.
 
 2. Verify that all DNS servers configured on the client host the required zones and valid records for a DC in the target domain. Check for the following misconfigurations:
 
@@ -70,3 +72,5 @@ To resolve this error, follow these steps:
 
     - A broken Network Interface Card (NIC)  on the client computer or the target DC.
     - A broken network link.
+
+You can use tools like [nslookup](/windows-server/administration/windows-commands/nslookup) to verify availability and content of DNS records from the client end, and use tools like [ping](/windows-server/administration/windows-commands/ping) or [tracert](/windows-server/administration/windows-commands/tracert) to check reachability of IP addresses. You can use [PortQry](../networking/portqry-command-line-port-scanner-v2.md) to try specific DC UDP and TCP server ports. A starting point for DC server ports is [Configure firewall for AD domain and trusts](config-firewall-for-ad-domains-and-trusts.md).
