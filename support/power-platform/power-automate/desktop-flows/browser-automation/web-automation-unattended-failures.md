@@ -36,8 +36,7 @@ Any web automation action under the Browser Automation group.
      - Click link on web page.
      - Populate text field on web page.
      - Press button on web page
-
-or any web action that involves interaction with a web element are failing with error "Element not found"
+     - Any web action that involves interaction with a web element that fail with the error "Element not found"
 
 ## Workarounds
 
@@ -47,7 +46,7 @@ or any web action that involves interaction with a web element are failing with 
 
     Make sure that browser start in not blocked in unattended mode.
 
-    Verify that is not blocked, by using the actions below and make sure that browser opens and the window is visible.
+    Verify that isn't blocked,by using the actions listed and make sure that browser opens and the window is visible.
 
     ```
     Chrome: System.RunApplication.RunApplication ApplicationPath: $'''chrome''' CommandLineArguments: $'''<https://www.microsoft.com/>''' WindowStyle: System.ProcessWindowStyle.Normal ProcessId=> AppProcessId
@@ -63,9 +62,9 @@ or any web action that involves interaction with a web element are failing with 
 2. The web page is taking too much time to be loaded in the browser.
 
     1. Increase the default values of the following parameters
-            - Timeout on webpage load (for example, 120)
+            - Timeout on webpage load.(for example, 120)
             - Timeout.(for example, 120)
-    1. If (a) won't work then use the following actions to get a browser instance
+    1. If (a) doesn't work then use the following actions to get a browser instance
 
     ```
         System.RunApplication.RunApplication ApplicationPath: $'''msedge''' CommandLineArguments: $'''<https://www.microsoft.com/>''' WindowStyle: System.ProcessWindowStyle.Normal ProcessId=> AppProcessId
@@ -75,9 +74,9 @@ or any web action that involves interaction with a web element are failing with 
 
 3. The cloud flow is executed with a different user than the user that browser extension is installed
 
-    Verify in the cloud flow that the user that is executing the flow in unattended has the browser extension installed
+    Ensure that the user running the cloud flow in unattended mode has the browser extension installed.
 
-4. The machine CPU has reached 100% usage that prevents the service worker of the web extension to start.
+4. The machine CPU reached 100% usage that prevents the service worker of the web extension to start.
 
     Provide more CPU resources to the machine where the flow is executed.
 
