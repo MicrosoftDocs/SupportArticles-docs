@@ -32,7 +32,7 @@ Detailed results:
   Error description:             Could not find the Database Engine startup handle.
 ```
 
-This issue might occur with on-premises installations, but you are more likely to encounter it when installing SQL Server on Microsoft Azure virtual machine (VM).
+This issue might occur with on-premises installations, but you're more likely to encounter it when installing SQL Server on Microsoft Azure virtual machine (VM).
 
 ## Cause
 
@@ -41,14 +41,14 @@ This issue occurs due to the sector size configuration of the disk on certain Az
 > [!NOTE]
 > Non-Volatile Memory Express (NVMe) is a communication protocol that facilitates faster and more efficient data transfer between servers and storage systems by using Non-Volatile Memory (NVM). With NVMe, data can be transferred at the highest throughput and with the fastest response times. 
 
-If an Azure virtual machine is deployed using the 8 KB sector size, and you attempt to install SQL Server after deployment, the installation might fail. 
+If an Azure virtual machine is deployed using the 8-KB sector size, and you attempt to install SQL Server after deployment, the installation might fail. 
 
 > [!NOTE]
-> This scenario only occurs when you manually install SQL Server on an Azure VM, but not when you deploy a SQL Server VM from Azure Marketplace. The Azure Marketplace images are preconfigured to use the 4 KB sector size.
+> This scenario only occurs when you manually install SQL Server on an Azure VM, but not when you deploy a SQL Server VM from Azure Marketplace. The Azure Marketplace images are preconfigured to use the 4-KB sector size.
 
 ## Resolution
 
-To resolve this problem, reinstall SQL Server after forcing the Azure VM to use the 4 KB sector size.  
+To resolve this problem, reinstall SQL Server after forcing the Azure VM to use the 4-KB sector size.  
 
 To successfully install SQL Server on your Azure VM, follow these steps:
 
@@ -61,12 +61,12 @@ To successfully install SQL Server on your Azure VM, follow these steps:
 1. Restart the Azure VM.
 1. Reinstall SQL Server. 
 
-The following screenshot shows the output of the `fsutil fsinfo sectorinfo` command for the `E:` drive, which has a sector size of 8 KB: 
+The following screenshot shows the output of the `fsutil fsinfo sectorinfo` command for the `E:` drive, which has a 8-KB sector size: 
 
-:::image type="content" source="media/sql-installation-fails-error-azure-vm/8k-sector-size-example.png" alt-text="Screenshot of command prompt output of 8k sector size.":::
+:::image type="content" source="media/sql-installation-fails-error-azure-vm/8k-sector-size-example.png" alt-text="Screenshot of command prompt output of 8-KB sector size.":::
 
-The following screenshot shows the output of the `fsutil fsinfo sectorinfo` command for the `E:` drive after updating the registry key to use the 4 KB sector size:
+The following screenshot shows the output of the `fsutil fsinfo sectorinfo` command for the `E:` drive after updating the registry key to use the 4-KB sector size:
 
-:::image type="content" source="media/sql-installation-fails-error-azure-vm/4k-sector-size-example.png" alt-text="Screenshot of command prompt output of 4 KB sector size.":::
+:::image type="content" source="media/sql-installation-fails-error-azure-vm/4k-sector-size-example.png" alt-text="Screenshot of command prompt output of 4-KB sector size.":::
 
-The `ForcedPhysicalSectorSizeInBytes` registry key is an OS-level setting, meaning that all drives currently attached, and those attached in the future, use the 4 KB sector size unless this registry key is removed. 
+The `ForcedPhysicalSectorSizeInBytes` registry key is an OS-level setting, meaning that all drives currently attached, and those attached in the future, use the 4-KB sector size unless this registry key is removed. 
