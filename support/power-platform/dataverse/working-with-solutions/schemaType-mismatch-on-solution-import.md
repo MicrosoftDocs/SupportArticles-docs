@@ -2,7 +2,7 @@
 title: Environment Schema Type Mismatch During Solution Import in Power Apps
 description: Works around a warning about environment schema type mismatch that occurs when you import a solution in the target environment in Microsoft Power Apps.
 ms.reviewer: matp
-ms.date: 03/06/2025
+ms.date: 03/20/2025
 author: swatimadhukargit
 ms.author: swatim
 ms.custom: sap:Working with Solutions\Environment schema type mistamch during solution import
