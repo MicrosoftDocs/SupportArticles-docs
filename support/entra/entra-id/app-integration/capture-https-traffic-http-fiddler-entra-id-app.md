@@ -1,5 +1,5 @@
 ---
-title: Collect HTTPS traffic using Fiddler from Microsoft Entra ID Apps
+title: Collect HTTPS Traffic using Fiddler from Microsoft Entra ID Apps
 description: Provide instructions on how to collect HTTPS traffic using Fiddler from Microsoft Entra ID Apps
 ms.date: 03/20/2025
 ms.author: bernaw
@@ -15,6 +15,7 @@ This article provides instructions on how to use Fiddler to collect HTTPS traffi
 1. [Download and install Fiddler](https://www.bing.com/search?q=Fiddler) on the device that is used to reproduce the problem.
 1. On the **Tool** menu, select **Options**.
 1. On the **HTTPS** tab, select **Decrypt HTTPS Traffic**. If you are prompted to install the Fiddler certificate, select **Yes**.
+
     :::image type="content" source="media/capture-https-traffic-http-fiddler-entra-id-app/enable-https-decrypt.png" alt-text="Screenshot of the Decrypt HTTPS Traffic option." :::
 1. Restart Fiddler.
 1. Prepare your environment for traffic collection. Depending on the type of application you are troubleshooting, perform the following steps:
