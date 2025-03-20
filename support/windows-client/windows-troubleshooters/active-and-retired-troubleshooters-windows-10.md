@@ -215,7 +215,7 @@ Automatically repair system files and settings to fix a problem on your device
 
 ### Description
 
-The Windows logon troubleshooter addresses issues with user logon by repairing corrupted or missing resource files. It runs automatically on machines that have corrupted and missing resource files, and can't be run manually. To check if it has run, go to **Start** > **Settings** > **System** > **Troubleshoot** > **Recommended troubleshooter history** and look for **Windows logon troubleshooter** and **fix Windows logon issue**.
+The Windows logon troubleshooter addresses issues with user logon by repairing corrupted or missing resource files. It runs automatically on machines that have corrupted or missing resource files and can't be run manually. To check if it has run, go to **Start** > **Settings** > **System** > **Troubleshoot** > **Recommended troubleshooter history** and look for **Windows logon troubleshooter** and **fix Windows logon issue**.
   
 |Activation date|Retirement date|More information|
 |---|---|---|
