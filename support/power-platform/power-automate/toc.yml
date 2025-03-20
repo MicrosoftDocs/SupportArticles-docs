@@ -48,22 +48,64 @@
       href: dataverse-cds/cds-user-cannot-access-power-automate-business-process-flows-on-demand-workflows.md
 - name: Desktop flows
   items:
-    - name: A desktop application crashes due to UI automation
-      href: desktop-flows/desktop-application-crashes-ui-automation.md
+    - name: Browser automation
+      items:
+        - name: Browser automation actions stop working after a browser update
+          href: desktop-flows/browser-automation/browser-automation-error-after-chromium-update.md
+        - name: Can't automate webpage with cross-domain iframes
+          href: desktop-flows/browser-automation/cannot-automate-webpage-with-iframes.md
+        - name: Can't interact with web elements on runtime
+          href: desktop-flows/browser-automation/web-automation-action-fails-runtime.md
+        - name: Can't automate "Save as," "Open" or "Upload" dialog boxes in web browser
+          href: desktop-flows/browser-automation/automate-save-as-open-upload-dialog-box-web-browser.md
+        - name: '"Failed to assume control of Microsoft Edge/Chrome/Firefox" error'
+          href: desktop-flows/browser-automation/failed-to-assume-control-of-edge-chrome-firefox-error.md
+        - name: Security update for the browser automation component
+          href: desktop-flows/browser-automation/automation-browser-security-update.md  
+        - name: Troubleshoot issues with Power Automate browser extensions
+          href: desktop-flows/browser-automation/web-extensions-policies.md
+        - name: Web automation fails when machine runtime and MSIX versions are different
+          href: desktop-flows/browser-automation/machine-runtime-msix-errors.md
+    - name: Office automation
+      items:
+        - name: Excel
+          items:
+            - name: Launch Excel action errors
+              href: desktop-flows/office-automation/excel/launch-excel-action-failures.md
+        - name: Outlook
+          items:
+            - name: Retrieve email messages from Outlook doesn't work as expected
+              href: desktop-flows/office-automation/outlook/retrieve-emails-filtering.md
+    - name: SAP automation
+      items:
+        - name: Can't open SAP
+          href: desktop-flows/sap-automation/scripting-permissions-launch-sap.md
+    - name: UI automation
+      items:    
+        - name: A desktop application crashes due to UI automation
+          href: desktop-flows/ui-automation/desktop-application-crashes-ui-automation.md
+        - name: Can't access the elements of a Java application
+          href: desktop-flows/ui-automation/cannot-access-java-application-elements.md
+        - name: Focus window action can't bring a window to focus
+          href: desktop-flows/ui-automation/focus-window-action-not-working.md
+        - name: Failed to get UI element
+          href: desktop-flows/ui-automation/failed-get-ui-element.md
+        - name: Failed to get element/window or Element/Window wasn't found error
+          href: desktop-flows/ui-automation/ui-automation-action-fails-errors.md
+        - name: SAP UI element click issue
+          href: desktop-flows/ui-automation/ui-sap-automation/sap-click-element-dpi.md
+        - name: Set drop-down list value in window/on web page action fails
+          href: desktop-flows/ui-automation/set-drop-down-list-value-fails.md
+        - name: UI element highlighting or hovering issues in virtual desktops
+          href: desktop-flows/ui-automation/ui-rdp-automation/rdp-no-highlight.md
     - name: '"Could not read the application certificate" error when creating a connection'
       href: desktop-flows/application-certificate-error.md
     - name: Agent-related errors when running attended or unattended desktop flows
       href: desktop-flows/agent-connectivity-issues-pad.md
-    - name: Browser automation actions stop working after a browser update
-      href: desktop-flows/browser-automation-error-after-chromium-update.md
     - name: Can't silently join a machine group
       href: desktop-flows/silent-join-machine-group-troubleshoot.md
-    - name: Can't automate webpage with cross-domain iframes
-      href: desktop-flows/cannot-automate-webpage-with-iframes.md
     - name: Can't create a connection from a shared canvas app
       href: desktop-flows/cannot-create-desktop-flow-connection-from-a-shared-canvas-app.md
-    - name: Can't interact with web elements on runtime
-      href: desktop-flows/web-automation-action-fails-runtime.md
     - name: Can't record in a VDI environment
       href: desktop-flows/cannot-record-in-vdi-environments.md
     - name: Can't sign in to Power Automate for desktop
@@ -72,16 +114,12 @@
       href: desktop-flows/enable-webview-pad-login.md
     - name: Can't access the parent flow
       href: desktop-flows/cannot-access-parent-flow.md
-    - name: Can't automate "Save as," "Open" or "Upload" dialog boxes in web browser
-      href: desktop-flows/automate-save-as-open-upload-dialog-box-web-browser.md
     - name: Can't interact with desktop application without an error
       href: desktop-flows/cannot-interact-with-desktop-application.md
     - name: Can't create, edit, save, or view desktop flows
       href: desktop-flows/cannot-sign-in-create-edit-save-view-desktop-flows.md
     - name: Can't establish connection to Access Database Engine OLE DB
       href: desktop-flows/cannot-connect-access-database-engine-ole-db.md
-    - name: Can't access the elements of a Java application
-      href: desktop-flows/cannot-access-java-application-elements.md
     - name: Can't execute a shared desktop flow after changing the connection
       href: desktop-flows/sharing-deskop-flow-with-connections.md
     - name: Cloud flow is suspended due to missing the attended RPA capability
@@ -120,14 +158,6 @@
       href: desktop-flows/failed-connection-between-power-automate-components.md
     - name: Failed license check on a desktop flow run
       href: desktop-flows/desktop-flow-run-time-license-check.md
-    - name: Failed to get UI element
-      href: desktop-flows/failed-get-ui-element.md
-    - name: '"Failed to assume control of Microsoft Edge/Chrome/Firefox" error'
-      href: desktop-flows/failed-to-assume-control-of-edge-chrome-firefox-error.md
-    - name: Failed to get element/window or Element/Window wasn't found error
-      href: desktop-flows/ui-automation-action-fails-errors.md
-    - name: Focus window action can't bring a window to focus
-      href: desktop-flows/focus-window-action-not-working.md
     - name: '"Invalid Private key file" error in Open secure FTP connection action'
       href: desktop-flows/invalid-private-key-file-error.md
     - name: Invalid credentials error when creating connection or running desktop flow
@@ -154,12 +184,8 @@
       href: desktop-flows/session-has-logged-off-troubleshooting.md
     - name: 'Security update for "connect with sign-in" connections on AD domain-joined machines'
       href: desktop-flows/connect-with-sign-in-security-update.md
-    - name: Security update for the browser automation component
-      href: desktop-flows/automation-browser-security-update.md  
     - name: Some actions appear to be missing or aren't visible
       href: desktop-flows/actions-not-available.md
-    - name: Set drop-down list value in window/on web page action fails
-      href: desktop-flows/set-drop-down-list-value-fails.md
     - name: Session creation errors for unattended desktop flow runs
       href: desktop-flows/troubleshoot-session-creation-errrors.md
     - name: Tenant restrictions for machine registration
@@ -174,8 +200,6 @@
       href: desktop-flows/troubleshoot-hosted-machines-in-power-automate-for-desktop.md
     - name: Troubleshoot installation issues in Power Automate for desktop
       href: desktop-flows/power-automate-desktop-installation-issues.md
-    - name: Troubleshoot issues with Power Automate browser extensions
-      href: desktop-flows/web-extensions-policies.md
     - name: Temporary profile error during machine registration
       href: desktop-flows/temporary-profile-error-machine-registration.md
     - name: 'UnallowedTenantForConnectWithSignIn or connection errors when using "connect with sign-in"'

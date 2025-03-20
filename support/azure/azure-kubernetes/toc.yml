@@ -39,6 +39,8 @@
       href: create-upgrade-delete/error-code-serviceprincipalvalidationclienterror.md
     - name: SubscriptionRequestsThrottled error (429)
       href: create-upgrade-delete/error-code-subscriptionrequeststhrottled.md
+    - name: Throttled error (429)
+      href: create-upgrade-delete/error-code-aksrequeststhrottled.md
     - name: SubnetWithExternalResourcesCannotBeUsedByOtherResources error
       href: create-upgrade-delete/subnet-with-external-resources-cannot-be-used-by-other-resources.md
     - name: Troubleshoot the AKSCapacityError error code
@@ -370,4 +372,3 @@
       href: error-codes/vmextensionerror-vhdfilenotfound.md
   - name: UnsatisfiablePDB error
     href: error-codes/unsatisfiablepdb-error.md
-  
