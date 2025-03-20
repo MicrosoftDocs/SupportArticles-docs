@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting repeated login prompts in iOS MSAL implementation
+title: Why MSAL based iOS app keep asking for login with Microsoft Entra?
 description: Provides guidance for troubleshooting repeated login prompts in iOS MSAL implementation
 ms.date: 03/19/2025
 ms.author: bachoang
@@ -7,21 +7,21 @@ ms.service: entra-id
 ms.custom: sap:Microsoft Entra App Integration and Development
 ---
 
-# Troubleshooting repeated login prompts in iOS MSAL implementation
+# Troubleshooting login prompt issues in iOS with MSAL SDK
 
 This article provides guidance for troubleshooting repeated login prompts in an iOS app that uses Microsoft Authentication Library (MSAL).
 
 ## Symptoms
 
-You integrate mobile authentication in your iOS app by using the Microsoft Authentication Library (MSAL) SDK. This is done by following the [official tutorial](/azure/active-directory/develop/tutorial-v2-ios). The user is unexpectedly prompted to log in multiple times after the initial login.
+You [integrate Microsoft identity platform authentication](/azure/active-directory/develop/tutorial-v2-ios) in your iOS app by using the Microsoft Authentication Library (MSAL) SDK. However, after the initial login, users are unexpectedly prompted to sign in multiple times.
 
 ## Cause
 
 This issue is typically caused by web browser configurations that do not allow cookie sharing.
 
-The tutorial uses the MSAL to implement authentication. MSAL SDK library facilitates authentication by renewing tokens automatically. It also enables single sign-on (SSO) between other apps on the device and manages user accounts.
+The tutorial uses the MSAL to implement authentication. MSAL SDK facilitates authentication by automatically renewing tokens. It also enables single sign-on (SSO) between other apps on the device and manages user accounts.
 
-For SSO to function correctly, tokens must be shared between apps. This requires a token cache or a broker application, such as Microsoft Authenticator for iOS. Interactive authentication in MSAL requires a web browser. On iOS, MSAL uses the system web browser by default for interactive authentication. This default setup supports SSO state sharing between the apps.
+For SSO to function correctly, tokens must be shared between apps. This requires a token cache or a broker application, such as Microsoft Authenticator for iOS. Interactive authentication in MSAL requires a web browser. On iOS, MSAL uses the system web browser by default for interactive authentication. This default setup supports SSO state sharing between apps.
 
 However, if you customize the browser configuration for authentication, such as by using one of the following options, cookie sharing might not be enabled by default:
 
