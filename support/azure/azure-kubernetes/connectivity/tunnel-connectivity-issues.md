@@ -1,13 +1,3 @@
----
-title: Tunnel connectivity issues
-description: Resolve communication issues that are related to tunnel connectivity in an Azure Kubernetes Service (AKS) cluster.
-ms.date: 09/26/2024
-ms.reviewer: chiragpa, andbar, v-leedennis, v-weizhu
-ms.service: azure-kubernetes-service
-keywords: Azure Kubernetes Service, AKS cluster, Kubernetes cluster, tunnels, connectivity, tunnel-front, aks-link
-#Customer intent: As an Azure Kubernetes user, I want to avoid tunnel connectivity issues so that I can use an Azure Kubernetes Service (AKS) cluster successfully.
-ms.custom: sap:Connectivity
----
 # Tunnel connectivity issues
 
 Microsoft Azure Kubernetes Service (AKS) uses a specific component for tunneled, secure communication between the nodes and the control plane. The tunnel consists of a server on the control plane side and a client on the cluster nodes side. This article discusses how to troubleshoot and resolve issues that relate to tunnel connectivity in AKS.
@@ -36,11 +26,8 @@ The Kubernetes API server uses port 10250 to connect to a node's kubelet to retr
 Because the tunnel components or the connectivity between the server and client can't be established, functionality such as the following won't work as expected:
 
 - Admission controller webhooks
-
 - Ability of log retrieval (using the [kubectl logs](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#logs) command)
-
 - Running a command in a container or getting inside a container (using the [kubectl exec](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#exec) command)
-
 - Forwarding one or more local ports of a pod (using the [kubectl port-forward](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#port-forward) command)
 
 ## Cause 1: A network security group (NSG) is blocking port 10250
@@ -71,8 +58,8 @@ If you use an NSG, and you have specific restrictions, make sure that you add a 
 If you want to be more restrictive, you can allow access to port 10250 at the subnet level only.
 
 > [!NOTE]
-> - The **Priority** field must be adjusted accordingly. For example, if you have a rule that denies multiple ports (including port 10250), the rule that's shown in the image should have a lower priority number (lower numbers have higher priority). For more information about **Priority**, see [Security rules](/azure/virtual-network/network-security-groups-overview#security-rules).
 >
+> - The **Priority** field must be adjusted accordingly. For example, if you have a rule that denies multiple ports (including port 10250), the rule that's shown in the image should have a lower priority number (lower numbers have higher priority). For more information about **Priority**, see [Security rules](/azure/virtual-network/network-security-groups-overview#security-rules).
 > - If you don't see any behavioral change after you apply this solution, you can re-create the tunnel component pods. Deleting these pods causes them to be re-created.
 
 ## Cause 2: The Uncomplicated Firewall (UFW) tool is blocking port 10250
@@ -201,22 +188,14 @@ You can view the SNAT ports from either the AKS load balancer metrics or the ser
 To use AKS load balancer metrics to view the SNAT ports, follow these steps:
 
 1. In the [Azure portal](https://portal.azure.com), search for and select **Kubernetes services**.
-
-1. In the list of Kubernetes services, select the name of your cluster.
-
-1. In the menu pane of the cluster, find the **Settings** heading, and then select **Properties**.
-
-1. Select the name that's listed under **Infrastructure resource group**.
-
-1. Select the **kubernetes** load balancer.
-
-1. In the menu pane of the load balancer, find the **Monitoring** heading, and then select **Metrics**.
-
-1. For the metric type, select **SNAT Connection Count**.
-
-1. Select **Apply splitting**.
-
-1. Set **Split by** to **Connection State**.
+2. In the list of Kubernetes services, select the name of your cluster.
+3. In the menu pane of the cluster, find the **Settings** heading, and then select **Properties**.
+4. Select the name that's listed under **Infrastructure resource group**.
+5. Select the **kubernetes** load balancer.
+6. In the menu pane of the load balancer, find the **Monitoring** heading, and then select **Metrics**.
+7. For the metric type, select **SNAT Connection Count**.
+8. Select **Apply splitting**.
+9. Set **Split by** to **Connection State**.
 
 </details>
 
@@ -226,16 +205,11 @@ To use AKS load balancer metrics to view the SNAT ports, follow these steps:
 To use service diagnostics to view the SNAT ports, follow these steps:
 
 1. In the [Azure portal](https://portal.azure.com), search for and select **Kubernetes services**.
-
-1. In the list of Kubernetes services, select the name of your cluster.
-
-1. In the menu pane of the cluster, select **Diagnose and solve problems**.
-
-1. Select **Connectivity Issues**.
-
-1. Under **SNAT Connection and Port Allocation**, select **View details**.
-
-1. If necessary, use the **Time Range** button to customize the time frame.
+2. In the list of Kubernetes services, select the name of your cluster.
+3. In the menu pane of the cluster, select **Diagnose and solve problems**.
+4. Select **Connectivity Issues**.
+5. Under **SNAT Connection and Port Allocation**, select **View details**.
+6. If necessary, use the **Time Range** button to customize the time frame.
 
 </details>
 
@@ -254,3 +228,12 @@ You can set up a new cluster to use a Managed Network Address Translation (NAT) 
 [!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+
+## Cause 6: Konnectivity Agents performance challenges with Cluster Growth
+
+> [!NOTE]
+> This cause applies to only the `Konnectivity-agent` pods.
+
+### Solution 6: Cluster Proportional Autoscaler (CPA) for Konnectivity Agent
+
+To address scalability challenges in large clusters, we have implemented the Cluster Proportional Autoscaler (CPA) for our Konnectivity Agents. This approach aligns with industry standards and best practices, ensuring optimal resource usage and enhanced performance. Previously, the Konnectivity agent had a fixed replica count, which created a bottleneck as the cluster grew. With this change, the replica count will now dynamically adjust based on node-scaling rules, providing best-in-class performance.
