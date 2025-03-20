@@ -159,7 +159,7 @@ To resolve the authentication error or credentials cache issues, begin by follow
 1. Perform the cloning operation to verify if the issue is resolved.
 
 > [!NOTE]
-> Depending on the version of Git for Windows, the `credential.helper` value would be different. See the following table for details:
+> Depending on the version of Git for Windows, the `credential.helper` value is different. See the following table for details:
 
 |Versions of Git for Windows|Git Credential Manager for Windows|Git Credential Manager Core|Git Credential Manager (Renamed from GCM Core)|
 |--|--|--|--|
