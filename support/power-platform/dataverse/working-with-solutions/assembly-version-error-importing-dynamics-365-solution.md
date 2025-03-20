@@ -1,19 +1,19 @@
 ---
 title: Assembly version error when importing solution
 description: Solves an assembly version error that might occur when importing a Microsoft Dynamics 365 solution.
-ms.date: 03/31/2021
+ms.date: 03/20/2025
 ms.custom: sap:Working with Solutions
 ---
 # Assembly version error when importing a Dynamics 365 solution
 
-This article provides a resolution for an assembly version error that might occur when you import a solution in Microsoft Dynamics 365 (online).
+This article provides a resolution for an assembly version error that might occur when you import a solution in Microsoft Dynamics 365.
 
 _Applies to:_ &nbsp; Microsoft Dynamics 365  
 _Original KB number:_ &nbsp; 4345239
 
 ## Symptoms
 
-When you try to [import a solution in Dynamics 365 (online)](/dynamics365/customerengagement/on-premises/customize/import-update-upgrade-solution), the import might fail with the following error message:
+When you try to import a solution in Dynamics 365, the import might fail with the following error message:
 
 > The import of solution: [solution name] failed
 
@@ -36,7 +36,7 @@ In the preceding log, `{0}` represents the .NET Framework version used in the pl
 
 ## Cause
 
-This error occurs when the imported solution includes a plug-in assembly compiled using a version of the .NET Framework that's not currently supported by Dynamics 365 (online).
+This error occurs when the imported solution includes a plug-in assembly compiled using a version of the .NET Framework that's not currently supported by Dynamics 365.
 
 ## Resolution
 
@@ -44,5 +44,5 @@ To solve this issue, recompile the plug-in assembly using the specified version 
 
 ## More information
 
-- For information about the .NET Framework versions currently supported by Dynamics 365 (online), see [Support for .NET Framework versions](/power-apps/developer/data-platform/supported-customizations#support-for-net-framework-versions).
+- For information about the .NET Framework versions currently supported by Dynamics 365, see [Support for .NET Framework versions](/power-apps/developer/data-platform/supported-customizations#support-for-net-framework-versions).
 - For guidelines on configuring and building assemblies for Microsoft Dataverse plug-ins, see [Build and package plug-in code](/power-apps/developer/data-platform/build-and-package).
