@@ -2,7 +2,7 @@
 title: Why MSAL based iOS app keep asking for login with Microsoft Entra?
 description: Provides guidance for troubleshooting repeated login prompts in iOS MSAL implementation
 ms.date: 03/19/2025
-ms.author: bachoang
+ms.author: daga
 ms.service: entra-id
 ms.custom: sap:Microsoft Entra App Integration and Development
 ---
