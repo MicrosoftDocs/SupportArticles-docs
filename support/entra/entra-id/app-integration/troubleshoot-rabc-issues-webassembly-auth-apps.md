@@ -1,8 +1,7 @@
 ---
-title: WebAssembly App Error - These requirements were not Met: RolesAuthorizationRequirement in Microsoft Entra ID
+title: WebAssembly App Error - These requirements were not Met RolesAuthorizationRequirement in Microsoft Entra ID
 
-ms.date: 03/20/2025
-
+
 ms.date: 03/20/2025
 
 ms.author: willfid
