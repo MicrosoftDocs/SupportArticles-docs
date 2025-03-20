@@ -4,7 +4,7 @@ description: Resolves the error (Cannot use file master.mdf because it was origi
 ms.date: 03/20/2025
 ms.author: dpless
 author: dplessMSFT
-ms.reviewer: mathoma
+ms.reviewer: mathoma, v-sidong
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ---
 # SQL Server installation fails with sector size error on a Windows Server 2022 Azure virtual machine
