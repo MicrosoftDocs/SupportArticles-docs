@@ -624,8 +624,7 @@ If a user is trying to log in to Microsoft Entra ID, they will be redirected to 
 
 1. [Download](https://connect.microsoft.com/site1164/Downloads/DownloadDetails.aspx?DownloadID=59185) and install the Azure AD PowerShell module for Windows PowerShell.
 1. Open Windows PowerShell with the "Run as administrator" option.
-1. Initiate a connection to Microsoft Entra ID by running the following command:  
-`Connect-MgGraph`
+1. Initiate a connection to Microsoft Entra ID by running `Connect-MgGraph` with proper permission.
 1. Provide the global administrator credential for the connection.
 1. Get the list of users in the Microsoft Entra ID by running the following command:  
 `Get-MgUser`
@@ -1243,5 +1242,5 @@ For more informaiton, see the following articles:
 
 - [Get-MgDomainFederationConfiguration](/powershell/module/microsoft.graph.identity.directorymanagement/get-mgdomainfederationconfiguration)
 - [New-MgDomainFederationConfiguration](/powershell/module/microsoft.graph.identity.directorymanagement/new-mgdomainfederationconfiguration)
-- [Connect-MgGraph](/powershell/microsoftgraph/authentication-commands?view=graph-powershell-1.0#use-connect-mggraph)
+- [Connect-MgGraph](/powershell/microsoftgraph/authentication-commands#use-connect-mggraph)
 - [Get-MgUser](/powershell/module/microsoft.graph.users/get-mguser)
