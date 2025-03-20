@@ -1,7 +1,10 @@
 ---
-title: WebAssembly App Error - These requirements were not met: RolesAuthorizationRequirement in Microsoft Entra ID
-description: Provides guidance for troubleshooting role-based access control issues in WebAssembly authentication apps
+title: WebAssembly App Error - These requirements were not Met: RolesAuthorizationRequirement in Microsoft Entra ID
+
 ms.date: 03/20/2025
+
+ms.date: 03/20/2025
+
 ms.author: willfid
 ms.service: entra-id
 ms.custom: sap:Microsoft Entra App Integration and Development
