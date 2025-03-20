@@ -230,10 +230,10 @@
       href: working-with-solutions/newly-added-components-dont-appear.md
     - name: Permission error 80040220 when importing or deleting solution
       href: working-with-solutions/error-when-you-import-delete-solution.md
+    - name: Resources to help troubleshoot solution import errors
+      href: working-with-solutions/troubleshoot-solution-import-errors-in-dynamics-365.md
     - name: Solution checker enforcement in Managed Environments blocks or warns on import
       href: working-with-solutions/solution-checker-enforcement-import-issues.md
-    - name: Solution import errors
-      href: working-with-solutions/troubleshoot-solution-import-errors-in-dynamics-365.md
     - name: Solution import or app installation fails due to missing privileges
       href: working-with-solutions/install-failure-priviledge-not-assigned.md
     - name: Solution upgrade fails due to a pending upgrade
