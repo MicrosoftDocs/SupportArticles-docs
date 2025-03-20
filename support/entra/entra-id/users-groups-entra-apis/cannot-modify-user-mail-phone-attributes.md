@@ -18,11 +18,11 @@ You can't modify the following user attributes for another user:
 - businessPhones/telephoneNumber
 - otherMails
 
-Most users experiencing this issue are Microsoft Graph service principals or Microsoft Entra users that use the client credentials grant type. Additionally, they get a 403 error.
+Most users experiencing this issue are service principals (Microsoft Graph scenario) or Microsoft Entra users that use the client credentials grant type. Additionally, they get a 403 error.
 
 ## Cause
 
-This issue occurs due to insufficient permissions. For Microsoft Entra users, the `User.ReadWrite.All` permission can change a user profile except the three user attributes. For Microsoft Graph service principals, having the `Directory.ReadWrite.All` permission isn't sufficient to modify the three user attributes.
+This issue occurs due to insufficient permissions. For Microsoft Entra users, the `User.ReadWrite.All` permission can change a user profile except the three user attributes. For service principals (Microsoft Graph scenario), having the `Directory.ReadWrite.All` permission isn't sufficient to modify the three user attributes.
 
 ## Solution
 
