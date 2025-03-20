@@ -92,7 +92,6 @@
         href: app-integration/error-code-aadsts50057-user-account-is-disabled.md
       - name: AADSTS500011 - Resource Principal Not Found
         href: app-integration/error-code-aadsts500011-resource-principal-not-found.md
-        displayName: AADSTS500011
       - name: Error AADSTS500571 - guest user account is disabled
         href: app-integration/error-code-aadsts500571-guest-user-account-is-disabled.md
       - name: Error AADSTS50105 - user not assigned a role
@@ -113,6 +112,8 @@
         href: app-integration/error-code-aadsts7000110-request-is-ambiguous.md
       - name: Error AADSTS7000112 - application is disabled
         href: app-integration/error-code-aadsts7000112-application-is-disabled.md
+      - name: Error AADSTS50000 - issuing a token or an issue with our sign-in service
+        href: app-integration/error-code-aadsts50000-issuing-token-sign-in-service.md
       - name: Troubleshoot signing in to SAML-based single sign-on configured apps
         href: app-integration/troubleshoot-sign-in-saml-based-apps.md
       - name: Troubleshooting infinite redirection between OIDC app and Entra ID
