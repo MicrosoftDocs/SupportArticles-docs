@@ -1,8 +1,8 @@
 ---
 title: Errors after restricting egress traffic
 description: Troubleshoot errors that occur after you restrict egress traffic from an Azure Kubernetes Service (AKS) cluster.
-ms.date: 11/12/2024
-ms.reviewer: chiragpa, nickoman, v-leedennis
+ms.date: 03/20/2025
+ms.reviewer: chiragpa, nickoman, jaewonpark, v-leedennis
 ms.service: azure-kubernetes-service
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot errors that occur after I restrict egress traffic so that I can access my AKS cluster successfully.
@@ -29,8 +29,10 @@ Verify that your configuration doesn't conflict with any of the [required Outbou
 - Fully qualified domain names (FQDNs)
 - Application rules
 
+Check out the NSG, firewall, or appliance that AKS traffic passes according to the configuration.
+
 > [!NOTE]
-> The AKS outbound dependencies are almost entirely defined by using FQDNs. These FQDNs don't have static addresses behind them. The lack of static addresses means that you can't use network security groups (NSGs) to restrict outbound traffic from an AKS cluster.
+> The AKS outbound dependencies are almost entirely defined by using FQDNs. These FQDNs don't have static addresses behind them. The lack of static addresses means that you can't use network security groups (NSGs) to restrict outbound traffic from an AKS cluster. In addition, scenarios that only allow IPs obtained from required FQDNs after all deny in NSG are not enough. Since the IPs are not static, issues may occur later.
 
 ## More information
 
