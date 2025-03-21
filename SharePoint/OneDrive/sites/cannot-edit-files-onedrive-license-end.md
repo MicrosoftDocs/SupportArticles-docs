@@ -1,6 +1,6 @@
 ---
 title: You can't edit your files because your license to use OneDrive ended over a couple of months ago
-description: Resolves an error that occurs when an unlicensed user account tries to access their OneDrive for work or school site.
+description: Resolves an error that occurs when a user tries to access their OneDrive for work or school site by using an unlicensed account.
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -22,43 +22,43 @@ When a user in your organization tries to access their OneDrive for work or scho
 
 > You can't edit your files because your license to use OneDrive ended over a couple of months ago.
 
-As a result, they can't edit or upload files to the site.
+Therefore, they can't edit or upload files to the site.
 
 ## Cause
 
-This issue occurs because of [enforcement of policy changes for unlicensed OneDrive accounts](/SharePoint/unlicensed-onedrive-accounts), which begins on January 27, 2025.
+This issue occurs because of [enforcement of policy changes for unlicensed OneDrive accounts](/SharePoint/unlicensed-onedrive-accounts). These changes went into effect on January 27, 2025.
 
-The following user accounts are considered unlicensed:
+User accounts are considered to be unlicensed if either of the following conditions is true:
 
 - The license that's assigned to the user doesn't include OneDrive.
-- The OneDrive license that's assigned to the user has expired.
+- The OneDrive license that's assigned to the user is expired.
 
 ## Resolution
 
 To resolve these issues, follow these steps:
 
-1. Make sure that the user is assigned a valid license that includes [OneDrive](/office365/servicedescriptions/onedrive-for-business-service-description#available-plans).
+1. Make sure that the user is assigned a valid license that includes [OneDrive](/office365/servicedescriptions/onedrive-for-business-service-description#available-plans):
 
    1. In the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339), go to **Users** > **Active users**.
    1. Select the affected user account.
-   1. In the detail pane, select **Licenses and apps**.
-   1. Expand the **Licenses** section and check whether a valid license that includes OneDrive is assigned. If not, [assign](/microsoft-365/admin/manage/assign-licenses-to-users?view=o365-worldwide#use-the-active-users-page-to-assign-or-unassign-licenses&preserve-view=true) the required license to the user.
+   1. In the details pane, select **Licenses and apps**.
+   1. Expand the **Licenses** section, and then check whether a valid license that includes OneDrive is assigned. If it isn't, [assign](/microsoft-365/admin/manage/assign-licenses-to-users?view=o365-worldwide#use-the-active-users-page-to-assign-or-unassign-licenses&preserve-view=true) the required license to the user.
 
       > [!NOTE]
-      > Changes may take up to 24 hours to take effect if the user account isn't archived, and up to 48 hours to take effect if the account is archived.
-2. If the issue persists, make sure that the user is assigned as the primary site collection administrator of their OneDrive site. Use one of the following methods with an account that's assigned the SharePoint Administrator role.
+      > Changes might take up to 24 hours to take effect if the user account isn't archived, and up to 48 hours to take effect if the account is archived.
+2. If the issue persists, make sure that the user is assigned as the primary site collection administrator of their OneDrive site. Use one of the following methods by using an account that's assigned the SharePoint Administrator role.
 
    > [!IMPORTANT]
-   > A user must be the Primary Site Collection Administrator of their OneDrive site, not a secondary owner or site collection administrator. If the primary owner is set to someone else, issues may still occur. Don't remove a user as the admin of their own OneDrive, as doing so can break many user experiences.
+   > A user must be the primary site collection administrator of their OneDrive site, not a secondary owner or site collection administrator. If the primary owner is set to someone else, issues might still occur. Don't remove a user as the admin of their own OneDrive site because this action can break many user experiences.
 
    ### Method 1: Use the SharePoint admin center
 
    1. In the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219), select **More Features**.
    1. Under **User Profiles**, select **Open**.
    1. Under **People**, select **Manage User Profiles**.
-   1. In the **Find profiles** search box, enter the affected user account, and select **Find**.
+   1. In the **Find profiles** search box, enter the affected user account, and then select **Find**.
    1. Right-click the user and select **Manage site collection owners**.
-   1. In the **Primary Site Collection Administrator** section, check whether the user account is displayed. If not, add the user account, and then select **OK**.
+   1. In the **Primary Site Collection Administrator** section, check whether the user account is displayed. If it's not, add the user account, and then select **OK**.
 
    ### Method 2: Use SharePoint Online Management Shell
 
@@ -70,7 +70,7 @@ To resolve these issues, follow these steps:
        Connect-SPOService -Url https://<tenant name>-admin.sharepoint.com
       ```
 
-      When you're prompted with the **Microsoft SharePoint Online Management Shell** dialog box, enter the account name and password for a SharePoint administrator account, and then select **Sign in**.
+      When you're prompted by the **Microsoft SharePoint Online Management Shell** dialog box, enter the account name and password for a SharePoint administrator account, and then select **Sign in**.
    1. Run the following command to retrieve the primary site collection administrator of the affected user's OneDrive site:
 
       ```powershell
