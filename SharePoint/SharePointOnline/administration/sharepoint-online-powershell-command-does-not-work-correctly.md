@@ -22,7 +22,7 @@ appliesto:
 
 ## Symptoms
 
-When you run a command in SharePoint in Microsoft 365 (SharePoint Online) Management Shell, either the command doesn't run as expected and doesn't return any results, or you receive the following error message:
+When you run a command in SharePoint Online (SharePoint in Microsoft 365) Management Shell, the command doesn't run as expected and doesn't return any results. Or, you receive the following error message:
 
 > The term '\<command\>' is not recognized as the name of the cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
 
@@ -30,14 +30,14 @@ When you run a command in SharePoint in Microsoft 365 (SharePoint Online) Manage
 
 This issue occurs in one of the following situations:
 
-- Multiple older versions of the SharePoint PowerShell module are installed on your computer.
-- The SharePoint PowerShell module isn't installed on your computer.
+- Multiple older versions of the SharePoint Online PowerShell module are installed on your computer.
+- The SharePoint Online PowerShell module isn't installed on your computer.
 
 ## Resolution
 
 To resolve this issue, follow these steps:
 
-1. Run the following command to get a list of all the versions of the SharePoint PowerShell module that are installed on your computer:
+1. Run the following command to get a list of all the versions of the SharePoint Online PowerShell module that are installed on your computer:
 
    ```powershell
     Get-Module -Name Microsoft.Online.SharePoint.PowerShell -ListAvailable
