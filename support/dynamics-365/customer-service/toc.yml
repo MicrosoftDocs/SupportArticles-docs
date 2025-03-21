@@ -3,7 +3,7 @@
 - name: Cases or Incidents
   items:
     - name: Sentiment analysis not reflecting positive sentiment or capitalization
-      href: sentiment-analysis-not-reflecting-positive-sentiment-or-capitalization.md 
+      href: cases-or-incidents/sentiment-analysis-not-reflecting-positive-sentiment-or-capitalization.md 
 - name: Customer Service Insights
   items:
     - name: Troubleshoot issues using Solution Health Hub
@@ -193,6 +193,6 @@
         - name: Incoming voice calls with long greeting messages cause connection delays
           href: omnichannel-for-customer-service/greeting-message-delay-agent-connection.md
         - name: Notification not functioning for incoming messages
-          href: notifications-for-incoming-messages-during-active-sessions.md
+          href: omnichannel-for-customer-service/notifications-for-incoming-messages-during-active-sessions.md
         - name: Use diagnostic messages to troubleshoot call issues
           href: omnichannel-for-customer-service/use-diagnostic-messages-in-call-issues.md 
