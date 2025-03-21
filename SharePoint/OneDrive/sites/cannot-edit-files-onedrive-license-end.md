@@ -20,7 +20,7 @@ ms.date: 03/21/2025
 
 When a user in your organization tries to access their OneDrive for work or school site, they receive the following error message:
 
-> You can't edit your files because your license to use OneDrive ended over a month ago.
+> You can't edit your files because your license to use OneDrive ended over a couple of months ago.
 
 As a result, they can't edit or upload files to the site.
 
