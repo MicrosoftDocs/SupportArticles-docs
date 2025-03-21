@@ -67,21 +67,21 @@ To resolve these issues, follow these steps:
    1. Run the following command to connect to the SharePoint Online Administration Center:
 
       ```powershell
-      Connect-SPOService -Url https://<tenant name>-admin.sharepoint.com
+       Connect-SPOService -Url https://<tenant name>-admin.sharepoint.com
       ```
 
-     When you're prompted with the **Microsoft SharePoint Online Management Shell** dialog box, enter the account name and password for a SharePoint administrator account, and then select **Sign in**.
+      When you're prompted with the **Microsoft SharePoint Online Management Shell** dialog box, enter the account name and password for a SharePoint administrator account, and then select **Sign in**.
    1. Run the following command to retrieve the primary site collection administrator of the affected user's OneDrive site:
 
-     ```powershell
-     (Get-SPOSite -Identity <the user's OneDrive site URL>).Owner
-     ```
+      ```powershell
+      (Get-SPOSite -Identity <the user's OneDrive site URL>).Owner
+      ```
 
-     Typically, the URL for a user's OneDrive site is in the following format:
+      Typically, the URL for a user's OneDrive site is in the following format:
 
-     `https://<tenant name>-my.sharepoint.com/personal/<user principal name>`
-   1.If the affected user isn't the primary site collection administrator, run the following command to assign the user as the primary site collection administrator:
+      `https://<tenant name>-my.sharepoint.com/personal/<user principal name>`
+   1. If the affected user isn't the primary site collection administrator, run the following command to assign the user as the primary site collection administrator:
 
-     ```powershell
-     Set-SPOUser -Site <the user's OneDrive site URL> -LoginName <user name> -IsSiteCollectionAdmin $true
-     ```
+      ```powershell
+      Set-SPOUser -Site <the user's OneDrive site URL> -LoginName <user name> -IsSiteCollectionAdmin $true
+      ```
