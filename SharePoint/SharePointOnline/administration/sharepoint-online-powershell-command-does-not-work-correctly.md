@@ -54,7 +54,7 @@ To resolve this issue, follow these steps:
        Uninstall-Module Microsoft.Online.SharePoint.PowerShell -Force -AllVersions
        ```
 
-1. Install [SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps&perserve-view=true).
+1. Install [SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
 
    > [!NOTE]
    > Make sure that you review the system requirements and install instructions before you install the module.
