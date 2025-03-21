@@ -1,24 +1,24 @@
 ---
-title: Users can't log on to Windows 10 computers with multi-app kiosk profile assigned
-description: Explains why a user can't log on to a Microsoft Entra joined Windows 10 computer if a multi-app kiosk profile is assigned.
-ms.date: 02/11/2025
+title: Users can't log on to Windows 10 or Windows 11 computers with multi-app kiosk profile assigned
+description: Explains why a user can't log on to a Microsoft Entra joined Windows 10 or Windows 11 computer if a multi-app kiosk profile is assigned.
+ms.date: 03/19/2025
 search.appverid: MET150
 ms.custom: sap:Configure Devices - Windows\Kiosk
-ms.reviewer: kaushika, joelste, intunecic, mobazzar
+ms.reviewer: kaushika, joelste, intunecic, mobazzar, cchi, chboeye
 ---
 # Users can't log on to Windows if a multi-app kiosk profile is assigned
 
-This article helps you fix an issue in which a user can't log on to a Microsoft Entra joined Windows 10 computer if a multi-app kiosk profile is assigned.
+This article helps you fix an issue in which a user can't log on to a Microsoft Entra joined Windows 10 or Windows 11 computer if a multi-app kiosk profile is assigned.
 
 ## Symptoms
 
-When a user tries to log on to a Microsoft Entra joined Windows 10 computer that has a multi-app kiosk profile assigned, the attempt fails immediately before the user profile is loaded.
+When a user tries to log on to a Microsoft Entra joined Windows 10 or Windows 11 computer that has a multi-app kiosk profile assigned, the attempt fails immediately before the user profile is loaded.
 
 :::image type="content" source="media/users-cannot-logon-windows-multi-app-kiosk/welcome.png" alt-text="Screenshot of the Sign in page." border="false":::
 
 :::image type="content" source="media/users-cannot-logon-windows-multi-app-kiosk/sign-out.png" alt-text="Screenshot of the Sign out page." border="false":::
 
-In this situation, the kiosk profile logon type is **Microsoft Entra user** or **Group**. Additionally, the Windows 10 computer uses a local account, and you notice the following error messages in the Event Viewer logs:
+In this situation, the kiosk profile logon type is **Microsoft Entra user** or **Group**. Additionally, the Windows 10 or Windows 11 computer uses a local account, and you notice the following error messages in the Event Viewer logs:
 
 - Microsoft Entra ID - Operational logs (Sample 1 - MFA required via conditional access):
     > Log Name:      Microsoft-Windows-AAD/Operational  
