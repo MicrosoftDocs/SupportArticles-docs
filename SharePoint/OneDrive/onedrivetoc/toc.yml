@@ -53,7 +53,7 @@
       href: ../../SharePointOnline/sites/office-365-top-navigation-bar-displays-either-sites-or-newsfeed.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Troubleshooting guide stops at provisioning stage
       href: ../../SharePointOnline/sites/troubleshooting-guide-for-sites-stopped-at-provisioning.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
-   - name: You can't edit your files because your license to use OneDrive ended
+    - name: You can't edit your files because your license to use OneDrive ended
       href: ../sites/cannot-edit-files-onedrive-license-end.md      
   - name: Sync
     items:
