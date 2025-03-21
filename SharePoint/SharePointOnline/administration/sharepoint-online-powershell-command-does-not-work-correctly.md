@@ -1,6 +1,6 @@
 ---
 title: SharePoint Online PowerShell command doesn't work correctly
-description: Resolves an issue when you run a SharePoint Online PowerShell command. The command isn't recognized, or it doens't execute as expected and fails to return any results.
+description: Resolves an issue when you run a SharePoint Online PowerShell command. The command isn't recognized, or it doesn't execute as expected and fails to return any results.
 manager: dcscontentpm
 ms.date: 03/21/2025
 audience: Admin
