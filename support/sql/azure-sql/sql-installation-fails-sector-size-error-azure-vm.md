@@ -1,11 +1,11 @@
 ---
 title: SQL Server Installation Fails with Sector Size Error on Azure VM
 description: Resolves the error (Cannot use file master.mdf because it was originally formatted with sector size 4096) when you try to install a SQL Server instance on an Azure VM running Windows.
-ms.date: 03/20/2025
+ms.date: 03/21/2025
 ms.author: dpless
 author: dplessMSFT
 ms.reviewer: mathoma, v-sidong
-ms.custom: sap:Installation, Patching, Upgrade, Uninstall
+ms.custom: sap:SQL Licensing, Installation and Patching
 ---
 # SQL Server installation fails with sector size error on a Windows Server 2022 Azure virtual machine
 
