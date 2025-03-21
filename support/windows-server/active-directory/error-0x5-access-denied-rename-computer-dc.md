@@ -27,7 +27,7 @@ mm/dd/yyyy hh:mm:ss:ms NetpGetLsaPrimaryDomain: status: 0x0
 mm/dd/yyyy hh:mm:ss:ms NetpManageMachineAccountWithSid: status of NetUserSetInfo on '\\ADATUMDC01' for 'TESTNAME97$': 0x5 Access Denied
 ```
 
-`NetUserSetInfo` targets the DC's Security Accounts Manager Server (SAM) server component, which uses the SAM Remote Procedure Call (RPC) function interface based on TCP port 445. Here is the complete TCP connection network traffic during the NetSetup failure event, which indicates the failure at a SAM connection:
+`NetUserSetInfo` targets the DC's Security Accounts Manager Server (SAM) server component, which uses the SAM Remote Procedure Call (RPC) function interface based on TCP port 445. Here's the complete TCP connection network traffic during the NetSetup failure event, which indicates the failure at a SAM connection:
 
 ```output
 14930 hh:mm:ss hh:mm:ss yyyy/mm/dd 71.2725304  (0) ADATUMDC01   10.101.56.150 TCP TCP: [Bad CheckSum]Flags=...A..S., SrcPort=Microsoft-DS(445), DstPort=59729, PayloadLen=0, Seq=347025249, Ack=2963325843, Win=8192 (Negotiated scale factor 0x8) = 8192
@@ -37,13 +37,13 @@ mm/dd/yyyy hh:mm:ss:ms NetpManageMachineAccountWithSid: status of NetUserSetInfo
 ...
 ```
 
-In addition, you see the following event in the DC SAM server Event Trace Log (ETL):
+In addition, you see the following event in the DC's SAM server Event Trace Log (ETL):
 
 ```output
 [0] 0268.12C0:: yyyy/mm/dd- hh:mm:ss [SAMSRV] security_c3857 SampCheckRpcRemoteCallerAccess() - Remote SAM Access is denied in case1 for the client SID:<SID> from network address: <IP Address>
 ```
 
-## Security policy prevent malicious SAM enumeration
+## Security policy prevents malicious SAM enumeration
 
 Remote SAM access control was introduced in Windows Server 2016 and Windows 10, version 1607 and later versions as a new security policy to prevent malicious SAM enumeration. Here's the information of the policy:
 
