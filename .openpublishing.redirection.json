@@ -13174,7 +13174,7 @@
     },
     {
       "source_path": "support/windows-server/setup-upgrade-and-drivers/repair-or-in-place-upgrade.md",
-      "redirect_url": "/previous-versions/troubleshoot/windows-server/repair-or-in-place-upgrade"
+      "redirect_url": "/windows-server/get-started/perform-in-place-upgrade"
     }
   ]
 }
