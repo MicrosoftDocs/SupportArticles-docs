@@ -186,7 +186,7 @@ To fix this error, use the appropriate method.
 
 - **If you're using a new account that shares the UPN with a previous account**
 
-   [Fix site user ID mismatch in SharePoint or OneDrive](https://learn.microsoft.com/en-us/sharepoint/troubleshoot/sharing-and-permissions/fix-site-user-id-mismatch).
+   [Fix site user ID mismatch in SharePoint or OneDrive](/sharepoint/troubleshoot/sharing-and-permissions/fix-site-user-id-mismatch).
 
 ## Error: Uploaded file(s) is expired or broken, please upload your files again
 
