@@ -1,7 +1,7 @@
 ---
 title: SSIS package does not run when called from a job step
 description: This article provides resolutions for the problem that occurs when you call an SSIS package from a SQL Server Agent job step.
-ms.date: 12/07/2020
+ms.date: 03/21/2025
 ms.custom: sap:Integration Services
 ms.reviewer: craigg
 ---
@@ -91,7 +91,7 @@ OnError,DOMAINNAME,DOMAINNAME\USERNAME,Execute SQL Task,{C6C7286D-57D4-4490-B12D
 
 By using the exec subsystem command approach, you add verbose console logging switches to the SSIS command line to call the Dtexec.exe SSIS command-line executable file. Additionally, you use the Advanced job feature of the output file. You can also use the **Include Step Output in the history** option to redirect the logging information to a file or to the SQL Server Agent Job History.
 
-Here is an example of a command line:
+Here's an example of a command line:
 
 ```console
  dtexec.exe /FILE "C:\_work\SSISPackages\ProtectionLevelTest\ProtectionLevelTest\AgentTesting.dtsx" /MAXCONCURRENT " -1 " /CHECKPOINTING OFF /REPORTING V /CONSOLELOG NCOSGXMT
@@ -114,6 +114,6 @@ Log: Name: OnError Computer: COMPUTERNAME Operator: DOMAINNAME\username Source N
 ## References
 
 - For more information about a similar problem, see [You receive an 'Error loading' error message when you try to run a SQL Server Integration Services package](../integration-services/error-loading-message-run-integration-services-package.md).
-- [Connectivity error 0x80004005 occurs when you run an SSIS package as a SQL Agent job](../database-engine/connect/sql-server-faces-connectivity-issue-ssispack-fail.md)
+- [Connectivity error 0x80004005 occurs when you run an SSIS package as a SQL Agent job](../database-engine/connect/sql-server-faces-connectivity-issue-ssispack-fail.md).
 - For more information about how to create package templates, see [Create a package in SQL Server Data Tools using the Package Template](/sql/integration-services/create-packages-in-sql-server-data-tools#create-a-package-in-sql-server-data-tools-using-the-package-template).
 - For more information about SSIS package security and the `ProtectionLevel` property, see [Protection Level Setting and the SSISDB Catalog](/sql/integration-services/security/access-control-for-sensitive-data-in-packages#protection-level-setting-and-the-ssisdb-catalog).
