@@ -1,7 +1,7 @@
 ---
 title: SharePoint Online PowerShell command doesn't work correctly
-description: Resolves an issue when you run a SharePoint Online PowerShell command. The command isn't recognized, or it doesn't execute as expected and fails to return any results.
-manager: dcscontentpm
+description: Resolves an issue in which a SharePoint Online PowerShell doesn't run as expected and returns no results or the command isn't recognized.
+manager: dcscontentp  
 ms.date: 03/21/2025
 audience: Admin
 ms.topic: troubleshooting
@@ -22,7 +22,7 @@ appliesto:
 
 ## Symptoms
 
-When you run a command in SharePoint Online Management Shell, it doesn't execute as expected and fails to return any results. Or, you receive the following error message:
+When you run a command in SharePoint Online Management Shell, either the command doesn't run as expected and doesn't return any results, or you receive the following error message:
 
 > The term '\<command\>' is not recognized as the name of the cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
 
@@ -45,9 +45,9 @@ To resolve this issue, follow these steps:
 
    If the command doesn't return a result, go to step 4. Otherwise, go to step 2.
 1. [Uninstall](https://support.microsoft.com/windows/uninstall-or-remove-apps-and-programs-in-windows-4b55f974-2cc6-2d2b-d092-5905080eaf98) SharePoint Online Management Shell in Settings or Control Panel.
-1. Uninstall all previous versions of the SharePoint Online Management Shell module, which were installed by using PowerShell:
+1. Uninstall all previous versions of the SharePoint Online Management Shell module that were installed by using PowerShell:
 
-   1. Open an elevated PowerShell window. To do so, enter *powershell* in the search box. In the results, right-click **Windows PowerShell** and select **Run as administrator**.
+   1. Open an elevated PowerShell window. To do this, enter *powershell* in the search box. In the results, right-click **Windows PowerShell**, and then select **Run as administrator**.
    1. Run the following command:
 
        ```powershell
@@ -57,4 +57,4 @@ To resolve this issue, follow these steps:
 1. Install [SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
 
    > [!NOTE]
-   > Make sure that you review the system requirements and install instructions before you install the module.
+   > Make sure that you review the system requirements and installation instructions before you install the module.
