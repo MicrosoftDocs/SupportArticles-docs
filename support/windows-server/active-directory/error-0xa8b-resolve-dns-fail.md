@@ -5,7 +5,7 @@ ms.date: 03/19/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, raviks, v-lianna
+ms.reviewer: kaushika, raviks, herbertm, v-lianna
 ms.custom:
 - sap:active directory\on-premises active directory domain join
 - pcy:WinComm Directory Services
@@ -48,9 +48,9 @@ To resolve this error, follow these steps:
 1. Verify that the computer being joined points to valid DNS server IP addresses. Invalid examples include:
 
     - Invalid Internet Service Provider (ISP)-provided DNS servers.
-    - ISP-provided DNS servers that don't host the AD domain zone.
+    - ISP-provided DNS servers that doesn't host the AD domain zone.
     - A stale or nonexistent DNS server on the corporate intranet.
-    - A corporate network DNS server that don't host the AD domain zone.
+    - A corporate network DNS server that doesn't host the AD domain zone.
     - A corporate network DNS server in an error state that prevents it from loading the `_msdcs.<forest root domain>` or target AD domain zones, or from resolving queries for those zones. Event ID 4521 might be logged.
 
 2. Verify that all DNS servers configured on the client host the required zones and valid records for a DC in the target domain. Check for the following misconfigurations:
