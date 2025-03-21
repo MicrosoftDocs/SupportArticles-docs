@@ -1,5 +1,5 @@
 ---
-title: Status Code 0x32 And You Can't Join a Domain
+title: Status code 0x32 and you can't join a domain
 description: Helps resolve an issue in which you can't join a domain with status code 0x32. This issue is related to the failure to establish a Server Message Block (SMB) session to the domain controller (DC).
 ms.date: 03/21/2025
 manager: dcscontentpm
@@ -18,13 +18,13 @@ You fail to join a domain and receive one of the following error messages:
 
 - > Can't join this domain. Contact your IT admin for more info.
 
-    :::image type="content" source="media/status-code-0x32-cannot-join-domain/cannot-join-domain-contact-it.png" alt-text="Screenshot of the error message showing that you can not join a domain and need to contact IT.":::
+    :::image type="content" source="media/status-code-0x32-cannot-join-domain/cannot-join-domain-contact-it.png" alt-text="Screenshot of the error message showing that you can't join a domain and need to contact IT.":::
 
 - > The following error occurred attempting to join the domain "adatum.com":
   >
   > The request is not supported.
 
-    :::image type="content" source="media/status-code-0x32-cannot-join-domain/error-occurred-request-not-support.png" alt-text="Screenshot of the error message showing that an error occurred and the request is not supported.":::
+    :::image type="content" source="media/status-code-0x32-cannot-join-domain/error-occurred-request-not-support.png" alt-text="Screenshot of the error message showing that an error occurred and the request isn't supported.":::
 
 When you check the **NetSetup.log** file, you see the following entries:
 
@@ -52,7 +52,7 @@ Here's more information about the error code:
 
 ## The security policy is set incorrectly
 
-The **NetSetup.log** file shows that the client fails to establish an SMB session with the DC. If you examine the network trace, it indicates that the DC returns STATUS_NOT_SUPPORTED to the C SESSION SETUP request from the client.  The DC rejects the client's credential in the C SESSION SETUP request, which is the initial step of NT LAN Manager (NTLM) authentication.
+The **NetSetup.log** file shows that the client fails to establish an SMB session with the DC. If you examine the network trace, it indicates that the DC returns STATUS_NOT_SUPPORTED to the C SESSION SETUP request from the client. The DC rejects the client's credential in the C SESSION SETUP request, which is the initial step of NT LAN Manager (NTLM) authentication.
 
 :::image type="content" source="media/status-code-0x32-cannot-join-domain/network-trace-ntlm-authentication.png" alt-text="Screenshot of the network trace showing the DC returns STATUS_NOT_SUPPORTED to the C SESSION SETUP request from the client.":::
 
@@ -81,7 +81,7 @@ There are seven security policies related to NTLM.
   - **Network security: Restrict NTLM: Add server exceptions in this domain**
 
     > [!NOTE]
-    > The two exception lists are for the client and the DC, respectively. There is no exception list for the server role in NTLM authentication.
+    > The two exception lists are for the client and the DC, respectively. There's no exception list for the server role in NTLM authentication.
 
 - To control whether NTLM is allowed or not at each of the three roles in a complete NTLM authentication process:
 
