@@ -17,7 +17,7 @@ The mobile number field in the preconversation survey currently allows alphanume
 
 ### Solution
 
-Now, it isn't possible to restrict the mobile number field to accept only numeric input. However, this restriction could be proposed as a feature enhancement through the [Microsoft Ideas portal](https://experience.dynamics.com/ideas/):
+Now, it isn't possible to restrict the mobile number field to accept only numeric input. However, this restriction could be proposed as a feature enhancement:
 
 1. Visit the [Microsoft Ideas portal](https://experience.dynamics.com/ideas/).
 2. Provide details about your use case and the need for numeric-only restrictions in the mobile number field.
