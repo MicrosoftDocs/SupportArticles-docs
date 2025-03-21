@@ -52,3 +52,5 @@ If the application isn't using MSAL, follow this guidance to [handle errors and 
 For a full list of authentication and authorization error codes, see [Microsoft Entra authentication and authorization error codes](/entra/identity-platform/reference-error-codes). 
 
 To investigate individual errors, go to [https://login.microsoftonline.com/error](https://login.microsoftonline.com/error).
+
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -20,6 +20,8 @@
       href: dataverse-web-api-and-sdk/web-api-client-errors.md
 - name: Dynamics 365 App for Outlook
   items:
+    - name: A user doesn't appear in the All Eligible Users list
+      href: d365-app-outlook/a-user-disappears-all-eligible-users.md
     - name: App for Outlook didn't load completely
       href: d365-app-outlook/dynamics-365-app-outlook-did-not-load.md
     - name: App for Outlook doesn't appear within Outlook
@@ -170,50 +172,84 @@
       href: user-permissions/client-errors.md
 - name: Working with solutions
   items:
-    - name: Active unmanaged layer after importing a managed solution
-      href: working-with-solutions/unmanaged-active-layer-created-after-solution-import.md
     - name: '"An entitykey with the selected attributes already exists" error'
       href: working-with-solutions/entitykey-selected-attributes-already-exists.md
+    - name: '"Failed deleting solution" error due to circular dependencies between solutions'
+      href: working-with-solutions/circular-dependencies-between-solutions.md
+    - name: '"Full formXml is expected to create a form" error'
+      href: working-with-solutions/full-formxml-expected-to-create-form-error.md
+    - name: '"PrimaryName attribute not found for entity" error'
+      href: working-with-solutions/primaryname-attribute-not-found.md
+    - name: '"Solution cannot be deleted due to dependencies" error'
+      href: working-with-solutions/solution-cannot-be-deleted-due-to-dependencies.md
+    - name: '"You cannot delete this form because it is the only fallback form" error'
+      href: working-with-solutions/you-cannot-delete-this-form-only-fallback.md
+    - name: Active unmanaged layer after importing a managed solution
+      href: working-with-solutions/unmanaged-active-layer-created-after-solution-import.md
+    - name: Assembly version error when importing a solution
+      href: working-with-solutions/assembly-version-error-importing-dynamics-365-solution.md
+    - name: Can't import a solution or install an app
+      href: working-with-solutions/unable-import-dynamics-365-solution.md
     - name: Can't import solutions or publish changes
       href: working-with-solutions/cannot-import-solutions-publish-changes.md
     - name: Can't install managed solution previously deployed as unmanaged
-      href: working-with-solutions/failure-converting-to-managed-solution.md          
+      href: working-with-solutions/failure-converting-to-managed-solution.md
+    - name: Can't Uninstall Solution when removing solutions
+      href: working-with-solutions/cannot-uninstall-solution-error-when-deleting-solution.md
     - name: Changes not effective after solution import
       href: working-with-solutions/changes-not-effective-solution-import.md
     - name: Concurrent solution operation failures
       href: working-with-solutions/concurrent-solution-operation-failures.md
-    - name: Duplicate security roles after solution import
-      href: working-with-solutions/duplicate-security-roles.md
     - name: Data source references not updated after solution import
       href: working-with-solutions/dataverse-environment-variables.md
-    - name: '"Failed deleting solution" error due to circular dependencies between solutions'
-      href: working-with-solutions/circular-dependencies-between-solutions.md
-    - name: Form doesn't appear in target environment after import
-      href: working-with-solutions/form-not-appear-after-import.md
-    - name: '"Full formXml is expected to create a form" error'
-      href: working-with-solutions/full-formxml-expected-to-create-form-error.md
+    - name: Dependency error when uninstalling Portals solutions
+      href: working-with-solutions/error-when-uninstalling-portals-solutions.md
+    - name: Duplicate security roles after solution import
+      href: working-with-solutions/duplicate-security-roles.md
+    - name: Environment schema type mismatch warning during solution import
+      href: working-with-solutions/schemaType-mismatch-on-solution-import.md  
+    - name: Error 8004F042 when importing solution patch
+      href: working-with-solutions/error-code-8004f042-occurs.md
+    - name: Environment version mismatch warning during solution import
+      href: working-with-solutions/version-mismatch-on-solution-import.md
     - name: Failure when multiple publishers have shared components
       href: working-with-solutions/multiple-publisher-shared-component-failure.md
+    - name: Form doesn't appear in target environment after import
+      href: working-with-solutions/form-not-appear-after-import.md
+    - name: InvalidPluginAssemblyContent when importing a solution
+      href: working-with-solutions/invalidpluginassemblycontent-error-when-importing-solution.md
     - name: Label text doesn't display in other languages
       href: working-with-solutions/label-text-not-displayed.md
     - name: Maximum row size exceeds the allowed maximum
       href: working-with-solutions/maximum-row-size-exceeds.md
     - name: Missing dependencies during solution import
       href: working-with-solutions/missing-dependency-on-solution-import.md
+    - name: My Apps area is missing from navigation
+      href: working-with-solutions/my-apps-area-is-missing.md
     - name: New components don't appear in the app
       href: working-with-solutions/newly-added-components-dont-appear.md
-    - name: '"PrimaryName attribute not found for entity" error'
-      href: working-with-solutions/primaryname-attribute-not-found.md
-    - name: Solution import or app installation fails due to missing privileges
-      href: working-with-solutions/install-failure-priviledge-not-assigned.md
+    - name: Permission error 80040220 when importing or deleting solution
+      href: working-with-solutions/error-when-you-import-delete-solution.md
+    - name: Resources to help troubleshoot solution import errors
+      href: working-with-solutions/troubleshoot-solution-import-errors-in-dynamics-365.md
     - name: Solution checker enforcement in Managed Environments blocks or warns on import
       href: working-with-solutions/solution-checker-enforcement-import-issues.md
-    - name: '"Solution cannot be deleted due to dependencies" error'
-      href: working-with-solutions/solution-cannot-be-deleted-due-to-dependencies.md
+    - name: Solution import or app installation fails due to missing privileges
+      href: working-with-solutions/install-failure-priviledge-not-assigned.md
     - name: Solution upgrade fails due to a pending upgrade
       href: working-with-solutions/upgrade-fails-pending-upgrade.md
-    - name: '"You cannot delete this form because it is the only fallback form" error'
-      href: working-with-solutions/you-cannot-delete-this-form-only-fallback.md
+    - name: The import file is too large to upload
+      href: working-with-solutions/the-import-file-is-too-large-upload.md
+    - name: The import of solution failed when importing solution
+      href: working-with-solutions/the-import-of-solution-failed-error-when-importing-solution.md
+    - name: The solution file is invalid
+      href: working-with-solutions/the-solution-file-is-invalid.md
+    - name: The solution is already installed as a managed solution
+      href: working-with-solutions/the-solution-is-installed-a-managed-one.md
+    - name: There was an error calculating dependencies for this component
+      href: working-with-solutions/an-error-calculating-dependencies.md
+    - name: This solution package can't be imported
+      href: working-with-solutions/this-solution-package-cannot-be-imported.md
 - name: Support resources
   items:
     - name: Microsoft Dataverse forum

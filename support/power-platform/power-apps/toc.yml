@@ -14,92 +14,92 @@
       href: ../power-automate/connections/troubleshoot-broken-connections.md?context=/troubleshoot/power-platform/power-apps/context/context
     - name: Troubleshoot Power Query
       href: connections/troubleshoot-power-query-issues.md
-- name: Create and use apps
+- name: Canvas apps
   items:
     - name: Common issues and resolutions
       href: create-and-use-apps/common-issues-and-resolutions.md
     - name: General Power Apps debugging strategies
       href: create-and-use-apps/isolate-common-issues.md
-    - name: Canvas apps
+    - name: How to create a minimal repro canvas app
+      href: create-and-use-apps/minimal-canvas-app-repro.md
+    - name: Isolate issues in canvas apps
+      href: create-and-use-apps/isolate-canvas-app-issues.md
+    - name: Date and time issues in canvas apps
+      href: create-and-use-apps/troubleshoot-canvas-app-date-time-issues.md
+    - name: Custom pages and SDK script don't load
+      href: create-and-use-apps/custom-pages-sdk-script-not-load.md
+    - name: Filter expression returns extra blank records in results
+      href: create-and-use-apps/filter-blank-records.md
+    - name: Troubleshoot wrap issues
+      href: manage-apps/wrap-issues.md
+- name: Model-driven apps
+  items:
+    - name: How to create a vanilla repro model-driven app
+      href: create-and-use-apps/vanilla-model-driven-app-repro.md
+    - name: Isolate issues in model-driven apps
+      href: create-and-use-apps/isolate-model-app-issues.md
+    - name: Date and time issues in model-driven apps
+      href: create-and-use-apps/troubleshoot-model-driven-app-date-time-issues.md
+    - name: Lookup issues in model-driven apps
+      href: create-and-use-apps/troubleshoot-model-driven-app-lookup-issues.md
+    - name: Lookup doesn't filter records for particular entity
+      href: create-and-use-apps/lookup-does-not-filter-entity-records.md
+    - name: Refresh All doesn't work after exporting app data to a dynamic worksheet
+      href: create-and-use-apps/export-dynamic-worksheet-refresh-all.md
+    - name: View issues in model-driven apps
+      href: create-and-use-apps/troubleshoot-model-driven-app-view-issues.md
+    - name: Grid control
       items:
-        - name: Custom pages and SDK script don't load
-          href: create-and-use-apps/custom-pages-sdk-script-not-load.md
-        - name: Filter expression returns extra blank records in results
-          href: create-and-use-apps/filter-blank-records.md
-        - name: How to create a minimal repro canvas app
-          href: create-and-use-apps/minimal-canvas-app-repro.md
-        - name: Isolate issues in canvas apps
-          href: create-and-use-apps/isolate-canvas-app-issues.md
-        - name: Troubleshoot date and time issues in canvas apps
-          href: create-and-use-apps/troubleshoot-canvas-app-date-time-issues.md
-    - name: Model-driven apps
+          - name: Troubleshoot grid issues in Power Apps
+            href: create-and-use-apps/grid-issues.md
+          - name: Can't use sorting or sorting doesn't work correctly
+            href: create-and-use-apps/cannot-use-sorting-or-sorting-not-work-correctly.md
+          - name: Can't use column filters on a grid or subgrid or filtering doesn't work
+            href: create-and-use-apps/cannot-use-column-filters-on-grid-subgrid-or-filtering-not-work-correctly.md
+          - name: Can't edit data in the grid after enabling editing mode
+            href: create-and-use-apps/cannot-edit-data-in-the-grid-in-editing-mode.md
+          - name: Grid or sub-grid displays incorrect content
+            href: create-and-use-apps/grid-or-subgrid-displays-incorrect-content.md
+          - name: Grid or sub-grid doesn't display all the records
+            href: create-and-use-apps/grid-or-subgrid-not-display-all-records.md
+          - name: Grid filter for lookup column not showing any suggestions
+            href: create-and-use-apps/grid-filter-not-showing-any-suggestions.md
+          - name: Modern Advanced Find doesn't work correctly
+            href: create-and-use-apps/modern-advanced-find-not-work-correctly.md
+          - name: Nested grid doesn't display data
+            href: create-and-use-apps/nested-grid-not-display-data.md
+          - name: Quick Find doesn't return correct results
+            href: create-and-use-apps/quick-find-not-produce-correct-results.md
+          - name: Some columns don't contain data
+            href: create-and-use-apps/columns-not-contain-data.md
+          - name: The overall record count doesn't match the displayed content
+            href: create-and-use-apps/overall-record-count-not-match-displayed-content.md
+    - name: Ribbons and Command bar
       items:
-        - name: How to create a vanilla repro model-driven app
-          href: create-and-use-apps/vanilla-model-driven-app-repro.md
-        - name: Isolate issues in model-driven apps
-          href: create-and-use-apps/isolate-model-app-issues.md
-        - name: Lookup doesn't filter records for particular entity
-          href: create-and-use-apps/lookup-does-not-filter-entity-records.md
-        - name: Refresh All doesn't work after exporting app data to a dynamic worksheet
-          href: create-and-use-apps/export-dynamic-worksheet-refresh-all.md
-        - name: Troubleshoot date and time issues in model-driven apps
-          href: create-and-use-apps/troubleshoot-model-driven-app-date-time-issues.md
-        - name: Troubleshoot Lookup issues in model-driven apps
-          href: create-and-use-apps/troubleshoot-model-driven-app-lookup-issues.md
-        - name: Troubleshoot View issues in model-driven apps
-          href: create-and-use-apps/troubleshoot-model-driven-app-view-issues.md
-        - name: Grid control
-          items:
-            - name: Troubleshoot grid issues in Power Apps
-              href: create-and-use-apps/grid-issues.md
-            - name: Can't use sorting or sorting doesn't work correctly
-              href: create-and-use-apps/cannot-use-sorting-or-sorting-not-work-correctly.md
-            - name: Can't use column filters on a grid or subgrid or filtering doesn't work
-              href: create-and-use-apps/cannot-use-column-filters-on-grid-subgrid-or-filtering-not-work-correctly.md
-            - name: Can't edit data in the grid after enabling editing mode
-              href: create-and-use-apps/cannot-edit-data-in-the-grid-in-editing-mode.md
-            - name: Grid or sub-grid displays incorrect content
-              href: create-and-use-apps/grid-or-subgrid-displays-incorrect-content.md
-            - name: Grid or sub-grid doesn't display all the records
-              href: create-and-use-apps/grid-or-subgrid-not-display-all-records.md
-            - name: Grid filter for lookup column not showing any suggestions
-              href: create-and-use-apps/grid-filter-not-showing-any-suggestions.md
-            - name: Modern Advanced Find doesn't work correctly
-              href: create-and-use-apps/modern-advanced-find-not-work-correctly.md
-            - name: Nested grid doesn't display data
-              href: create-and-use-apps/nested-grid-not-display-data.md
-            - name: Quick Find doesn't return correct results
-              href: create-and-use-apps/quick-find-not-produce-correct-results.md
-            - name: Some columns don't contain data
-              href: create-and-use-apps/columns-not-contain-data.md
-            - name: The overall record count doesn't match the displayed content
-              href: create-and-use-apps/overall-record-count-not-match-displayed-content.md
-        - name: Ribbons and Command bar
-          items:
-            - name: Ribbon issues
-              href: create-and-use-apps/ribbon-issues.md
-            - name: Button is hidden
-              href: create-and-use-apps/ribbon-issues-button-hidden.md
-            - name: Button is visible
-              href: create-and-use-apps/ribbon-issues-button-visible.md
-            - name: Button isn't working correctly
-              href: create-and-use-apps/ribbon-issues-button-not-working-correctly.md
-            - name: Button has the wrong label
-              href: create-and-use-apps/ribbon-issues-button-wrong-label.md
-            - name: Non-customizable buttons in ribbon
-              href: create-and-use-apps/ribbon-non-customizable-buttons.md
-            - name: Remove an active unmanaged layer of the ribbon
-              href: create-and-use-apps/remove-an-unmanaged-layer-for-ribbon.md
-            - name: Regenerate ribbon metadata
-              href: create-and-use-apps/regenerate-ribbon-metadata.md
+          - name: Ribbon issues
+            href: create-and-use-apps/ribbon-issues.md
+          - name: Button is hidden
+            href: create-and-use-apps/ribbon-issues-button-hidden.md
+          - name: Button is visible
+            href: create-and-use-apps/ribbon-issues-button-visible.md
+          - name: Button isn't working correctly
+            href: create-and-use-apps/ribbon-issues-button-not-working-correctly.md
+          - name: Button has the wrong label
+            href: create-and-use-apps/ribbon-issues-button-wrong-label.md
+          - name: Non-customizable buttons in ribbon
+            href: create-and-use-apps/ribbon-non-customizable-buttons.md
+          - name: Remove an active unmanaged layer of the ribbon
+            href: create-and-use-apps/remove-an-unmanaged-layer-for-ribbon.md
+          - name: Regenerate ribbon metadata
+            href: create-and-use-apps/regenerate-ribbon-metadata.md
     - name: Unified Interface
       items:
-        - name: '"Blocked a frame with origin" error'
-          href: create-and-use-apps/blocked-frame-with-origin-uci.md
-        - name: Cookies or pop-up blocker errors
-          href: create-and-use-apps/cookies-pop-up-blocker-error.md
-        - name: No response with back button
-          href: create-and-use-apps/no-navigation-when-selecting-button.md
+          - name: '"Blocked a frame with origin" error'
+            href: create-and-use-apps/blocked-frame-with-origin-uci.md
+          - name: Cookies or pop-up blocker errors
+            href: create-and-use-apps/cookies-pop-up-blocker-error.md
+          - name: No response with back button
+            href: create-and-use-apps/no-navigation-when-selecting-button.md
 - name: Integrate other products in model-driven apps
   items:
     - name: Troubleshooting Word templates
@@ -114,10 +114,6 @@
       href: integrate-products/troubleshoot-set-up-sharepoint-online.md
     - name: Troubleshooting document management issues
       href: integrate-products/troubleshoot-doc-management-issues.md
-- name: Manage apps
-  items:
-    - name: Troubleshoot wrap issues
-      href: manage-apps/wrap-issues.md
 - name: Mobile Apps
   items:
     - name: Troubleshoot offline sync errors in the Power Apps mobile app
