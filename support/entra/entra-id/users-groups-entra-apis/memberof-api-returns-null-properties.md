@@ -8,11 +8,11 @@ ms.custom: sap:Problem with querying or provisioning resources
 ---
 # Microsoft Graph API memberOf returns null for some properties
 
-This article provides a solution to an issue where some properties are indicated as `null` when you call the `memberOf` API in Microsoft Graph.
+This article provides a solution to an issue where some properties are indicated as `null` when you call the Microsoft Graph API `memberOf`.
 
 ## Symptoms
 
-When you call the one of following APIs, the JSON response might show `null` for other properties except for the object type and ID:
+When calling the one of following APIs that can return the list of groups and directory roles that the user is a direct member of, you see `null` values for all properties except the object type and ID in the JSON response:
 
 ```msgraph
 Get https://graph.microsoft.com/v1.0/me/memberOf
