@@ -354,9 +354,7 @@ This section provides step-by-step instructions on how to configure Failed Reque
 
 Follow these steps to configure FREB to run a custom action, like **ProcDump.exe**, to generate memory dumps when specific rules are met.
 
-1. Configure FREB based on request time value:
-
-   [Configure FREBs on the appropriate request time value](#detailed-steps-for-collecting-freb-logs-based-on-time-taken). Make sure to set a time-taken rule instead of a status code.
+1. [Configure FREBs on the appropriate request time value](#detailed-steps-for-collecting-freb-logs-based-on-time-taken). Make sure to set a time-taken rule instead of a status code.
 
 1. Follow these steps to enable custom actions:
 
