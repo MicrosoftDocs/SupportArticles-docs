@@ -1,12 +1,12 @@
 ---
-title: Microsoft Graph API memberOf returns null properties
+title: Microsoft Graph API memberOf returns null values for properties
 description: Provides a solution to an issue where some properties are indicated as null when you call the Microsoft Graph  API memberOf.
 ms.date: 03/21/2025
 ms.service: entra-id
 ms.reviewer: bhvootla, adoyle, nualex, v-weizhu
 ms.custom: sap:Problem with querying or provisioning resources
 ---
-# Microsoft Graph API memberOf returns null for some properties
+# Microsoft Graph API memberOf returns null values for some properties
 
 This article provides a solution to an issue where some properties are indicated as `null` when you call the Microsoft Graph API `memberOf`.
 
