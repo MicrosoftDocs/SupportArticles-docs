@@ -34,4 +34,4 @@ To solve this issue,
 ## More information
 
 - [Understand conversation states in Omnichannel for Customer Service](/dynamics365/customer-service/use/oc-conversation-state)
-- [Conversation is stuck in the Wrap-up state](conversation-stuck-wrap-up-state.md)
+- [Conversation is stuck in the Wrap-up state](../omnichannel-for-customer-service/conversation-stuck-wrap-up-state.md)

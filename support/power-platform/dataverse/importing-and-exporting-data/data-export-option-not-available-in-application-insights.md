@@ -17,7 +17,7 @@ The data export option isn't available when setting up Azure Application Insight
 
 ## Cause
 
-The data export feature is only supported in managed environments. If the environment is unmanaged, the feature will not be available. Additionally, premium licenses are required to enable the capabilities associated with data export.
+The data export feature is only supported in managed environments. If the environment is unmanaged, the feature won't be available. Additionally, premium licenses are required to enable the capabilities associated with data export.
 
 ## Resolution
 
