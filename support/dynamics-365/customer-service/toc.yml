@@ -4,6 +4,18 @@
   items:
     - name: Sentiment analysis not reflecting positive sentiment or capitalization
       href: cases-or-incidents/sentiment-analysis-not-reflecting-positive-sentiment-or-capitalization.md 
+- name: Custom Channel
+  items:  
+    - name: Conversations from custom channel not appearing in Inbox
+      href: custom-channel/custom-channel-conversations-not-show-in-inbox.md
+- name: Customer summary and Closed conversation form
+  items:  
+    - name: Conversations aren't closed automatically after the configured wrap-up time
+      href: customer-summary-and-closed-conversation-form/conversations-not-closing-automatically.md
+    - name: Conversations remain active after an agent closes the browser
+      href: customer-summary-and-closed-conversation-form/conversations-still-active-after-closing-browser.md
+    - name: The Active Conversation form doesn't display as configured
+      href: customer-summary-and-closed-conversation-form/active-conversation-form-not-showing-as-configured.md  
 - name: Customer Service Insights
   items:
     - name: Troubleshoot issues using Solution Health Hub
@@ -157,7 +169,9 @@
         - name: Chat widget icon doesn't load on portal
           href: omnichannel-for-customer-service/chat-widget-icon-does-not-load-portal.md
         - name: Chat widget doesn't load on the portal
-          href: omnichannel-for-customer-service/chat-widget-not-loading-portal.md                    
+          href: omnichannel-for-customer-service/chat-widget-not-loading-portal.md     
+        - name: Email field validation in a Pre-conversation survey doesn't work as expected
+          href: omnichannel-for-customer-service/email-field-validation-in-pre-conversation-survey-not-working.md           
     - name: Licensing, provisioning, and installation
       items:
         - name: Instance unavailable to select on the provisioning app

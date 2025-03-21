@@ -1,24 +1,12 @@
 ---
-title: Preconversation Survey Mobile Number Field Restriction
-description: Provides information about preconversation survey mobile number field restriction.
-author: srreddy
+title: Pre-conversation Survey Mobile Number Field Restriction
+description: Provides information about the behavior of the mobile number field in a Pre-conversation survey, which currently allows alphanumeric input instead of restricting input to numbers and digits only.
+author: Yerragovula
 ms.author: srreddy
-ms.topic: troubleshooting
+ai-usage: ai-assisted
 ms.date: 03/20/2025
 ms.custom: sap:Dynamics 365 Contact Center\Chat Channel
 ---
-# Preconversation survey mobile number field restriction
+# Pre-conversation survey mobile number field currently allows alphanumeric input
 
-This article provides information about the behavior of the mobile number field in a preconversation survey, which currently allows alphanumeric input instead of restricting input to numbers and digits only.
-
-## Cause
-
-The mobile number field in the preconversation survey currently allows alphanumeric input. This design doesn't enforce restrictions to numeric values only.
-
-### Solution
-
-Now, it isn't possible to restrict the mobile number field to accept only numeric input. However, this restriction could be proposed as a feature enhancement:
-
-1. Visit the [Microsoft Ideas portal](https://experience.dynamics.com/ideas/).
-2. Provide details about your use case and the need for numeric-only restrictions in the mobile number field.
-3. Engage with the community by voting for similar ideas or discussing your suggestion.
+The mobile number field in the Pre-conversation survey currently allows alphanumeric input. This design doesn't enforce restrictions to numeric values only. This behavior is by design. For future enhancements, you can submit requests through the [Dynamics 365 Ideas portal](https://experience.dynamics.com/ideas/), where similar requests from other users are already being tracked. This feedback helps Microsoft prioritize feature improvements.
