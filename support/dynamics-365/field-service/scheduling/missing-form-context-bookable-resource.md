@@ -18,14 +18,14 @@ When opening the form to create a bookable resource, the error message **Cannot 
 
 ## Cause
 
-The system uses a customized form that is based on an old version of the bookable resource form. There was a change in the internal handlers for *onchange* events. They require the execution  context to be passed in from the form.
+The system uses a customized form that is based on an old version of the bookable resource form. There was a change in the internal handlers for *onchange* events. They require the execution context to be passed in from the form.
 
-## Resolution
+## Resolutions
 
-You can address such isuses through Power Apps, by editing the form definitions of the customized forms in the corresponding customizations.xml file, or by running a script in the browser console to update the onchange event. 
+You can address such issues through Power Apps, by editing the form definitions of the customized forms in the corresponding customizations.xml file, or by running a script in the browser console to update the *onchange* event. You need the System Customizer permission to make the changes outlined below.
 
 > [!IMPORTANT]
-> The following resolutions assume that the script error references the function *Mscrm.userid_onchange*. If the error shows on other fields and references other functions such as *Mscrm.accountid_onchange* or *Mscrm.contactid_onchange*, adapt the resolution steps to these fuctions.
+> The following resolutions assume that the script error references the function *Mscrm.userid_onchange*. If the error shows on other fields and references other functions such as *Mscrm.accountid_onchange* or *Mscrm.contactid_onchange*, adapt the resolution steps to these functions.
 
 ### Update the form in Power Apps
 
@@ -48,11 +48,13 @@ You can address such isuses through Power Apps, by editing the form definitions 
 
 1. Save and publish the updated form. 
 
-### Update the customizations.xml file
+### Validate the customizations.xml file
 
 1. Open the customizations.xml file from the solution with the customized form that shows the error in an editor.
 
 1. In the *Handler* element of the *Mscrm.userid_onchange* function, ensure that the *passExecutionContext* attribute is set to **true**.
+
+1. If changes were made, republish the solution.
 
 ### Run a script in the browser console
 
