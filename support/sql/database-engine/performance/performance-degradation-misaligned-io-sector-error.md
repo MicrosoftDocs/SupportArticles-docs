@@ -4,8 +4,8 @@ description: This article describes how to resolve misaligned I/O operations due
 ms.author: dpless
 author: dplessMSFT
 ms.reviewer: mathoma, v-sidong
-ms.date: 03/20/2025
-ms.custom: sap:Installation, Patching, Upgrade, Uninstall
+ms.date: 03/21/2025
+ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ---
 # Performance degradation caused by misaligned I/O sector size errors in SQL Server
 
