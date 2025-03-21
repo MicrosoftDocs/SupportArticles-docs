@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Slow Page Response and Hangs 
 description: This article helps you troubleshoot slow page response and hang issues.
-ms.date: 03/06/2025
+ms.date: 03/21/2025
 ms.custom: sap:Site Behavior and Performance\Slow page response
 ms.reviewer: khgupta, v-sidong
 ---
@@ -41,7 +41,7 @@ Page slowness and hangs might be accompanied by one or more of the following con
 
   [Overview of high memory consumption issues](high-memory-consumption-issues-overview.md)
 
-## What and how to collect
+## Data collection
 
 Here's a list of useful data to collect for a slow page response or hang situation. Not all of these data is required for each issue. You can collect data depending on the situation.
 
@@ -116,11 +116,11 @@ Failed Request Tracing is an IIS module. It's available for use when the Tracing
 Add-WindowsFeature -Name Web-Http-Tracing 
 ```
 
-Before [configuring a FREB Rule](../health-diagnostic-performance/troubleshoot-arr-using-frt-rules.md#step-1-configure-failed-request-tracing-rules), inspect the W3SVC logs to identify requests that take a long time to complete. Identify individual page requests that are slow using the `cs-uri-stem` and the `time-taken` fields.
+Before configuring a FREB rule, inspect the W3SVC logs to identify requests that take a long time to complete. Identify individual page requests that are slow using the `cs-uri-stem` and the `time-taken` fields.
 
-- If you can identify a few specific pages that are slow, [create a FREB Rule](../health-diagnostic-performance/troubleshoot-arr-using-frt-rules.md#step-1-configure-failed-request-tracing-rules) for the specific page or pages. If creating the rule for a specific page, don't use time taken in the FREB Rule. Instead, use the status code from the W3SVC logs.
+- If you can identify a few specific pages that are slow, [create a FREB rule](../health-diagnostic-performance/troubleshoot-arr-using-frt-rules.md#step-1-configure-failed-request-tracing-rules) for the specific page or pages. If creating the rule for a specific page, don't use time taken in the FREB rule. Instead, use the status code from the W3SVC logs.
 
-- If you can't identify a specific page to create the FREB rule, you can use all content and specify a time taken in the FREB rule instead, which gives you logs of all requests that take more than the specified time to complete.
+- If you can't identify a specific page to create the FREB rule, you can use all content and [specify a time taken in the FREB rule](#detailed-steps-for-collecting-freb-logs-based-on-time-taken) instead, which gives you logs of all requests that take more than the specified time to complete.
 
   > [!NOTE]
   > This method might give you false positives. Also note that when creating FREB logs based on time taken, the log ends when the request reaches the specified time taken. If the specified time is too short, you aren't able to identify where the slowness occurs.
@@ -135,23 +135,23 @@ Before [configuring a FREB Rule](../health-diagnostic-performance/troubleshoot-a
 - If the response is received after some delay (for example, 30 seconds), follow these steps to diagnose the issue:
 
   1. Check the status code of the received response.
-   
+
      Use browser developer tools or IIS logs to determine the status code of the delayed response.
 
-  1. [Configure FREBs](troubleshoot-http-error-code.md#steps-to-capture-freb-logs) based on that status code.
+  1. [Configure FREBs](troubleshoot-http-error-code.md#steps-to-capture-freb-logs) based on the status code in step 1.
   1. View the generated FREBs to understand which module causes the slowness.
 
-     If you aren't familiar with how to interpret FREBs, section [Interpreting a FREB tracing log]() in this link helps.
+     If you aren't familiar with how to interpret FREBs, see [Reading a FREB log, a Failed Request Tracing: IIS request processing pipeline execution](https://techcommunity.microsoft.com/blog/iis-support-blog/reading-a-freb-log-a-failed-request-tracing-iis-request-processing-pipeline-exec/1349639).
 
   If you find that some third-party module is causing the slowness, contact the third-party to investigate the problem. However, if the slowness is due to your application code, you need to collect memory dumps for further investigation.
 
 - If no response is received at all (complete hang) or received after a very long time, follow these steps to diagnose the issue:
 
-  1. [Configure FREBs](troubleshoot-http-error-code.md#steps-to-capture-freb-logs) based on a specific time taken rule.
+  1. [Configure FREBs based on a specific time taken rule](#detailed-steps-for-collecting-freb-logs-based-on-time-taken).
 
      The time threshold you set for FREB logs should be beyond what is considered normal or acceptable. if you know that it's normal and expected for a response to take 10 seconds, configure FREBs to 20 seconds, 30 seconds, or some other number.
 
-  1. Proceed with the same analysis steps as mentioned previously.
+  1. Proceed with the same analysis steps as mentioned above.
 
 #### The issue is intermittent or hard to reproduce
 
@@ -167,6 +167,51 @@ You can [use PerfView to collect ETW traces](troubleshoot-http-error-code.md#ste
 
 Always check IIS logs for very slow requests and troubleshoot them, as this might indirectly solve shorter slowness issues.
 
+#### Detailed steps for collecting FREB logs based on time taken
+
+> [!IMPORTANT]
+> To configure FREB logs, make sure the **Tracing** role service is installed for IIS.
+
+To install the **Tracing** role service for IIS, follow these steps:
+
+[!INCLUDE [Install the Tracing role service](../../../../includes/enable-tracing-role.md)]
+
+Once the **Tracing** role service is installed, follow these steps to capture FREB:
+
+1. Open the **Run** command window.
+1. Launch **inetmgr**.
+1. In IIS Manager, under the **Connections** pane, expand the machine name, expand **Sites**, and then select the target website.
+
+   :::image type="content" source="media/slow-page-response-hangs/iis-connection-site-target-website.png" alt-text="Screenshot of the target website in IIS manager.":::
+
+1. Double-click **Failed Request Tracing Rules**.
+
+   :::image type="content" source="media/slow-page-response-hangs/default-web-site-home.png" alt-text="Screenshot of the Default Web Site Home.":::
+
+1. In the **Actions** pane, select **Add**.
+1. In the **Add Failed Request Tracing Rule** wizard, on the **Specify Content to Trace** page, select **All content** > **Next**.
+
+   :::image type="content" source="media/slow-page-response-hangs/add-failed-request-tracing-rule.png" alt-text="Screenshot of the Specify Content to Trace page in the Add Failed Request Tracing Rule window.":::
+
+1. On the **Define Trace Conditions** page, update the **Time taken** field as per the time that you're noticing the request or page is taking and select **Next**.
+
+  For example, if the request, usually takes less than a second, but now it's taking 20 seconds, type **20** in the **Time Taken** field.
+
+1. On the **Select Trace Providers** page, under **Providers**, select all the checkboxes. Under **Areas**, make sure all the checkboxes are selected for each provider. Under **Verbosity**, select **Verbose**. Select **Finish**.
+
+1. Enable **Failed Request Tracing** for the site and configure the Log File Directory:
+
+   1. In the **Connections** pane, expand the machine name, expand **Sites**, and then select **Default Web Site**.
+   1. In the **Actions** pane, under **Configure**, select **Failed Request Tracing**.
+
+      :::image type="content" source="media/slow-page-response-hangs/configure-failed-request-tracing.png" alt-text="Screenshot of the Failed Request Tracing option.":::
+
+   1. In the **Edit Web Site Failed Request Tracing Settings** dialog, select the **Enable** checkbox, set the **Directory** field to **%SystemDrive%\inetpub\logs\FailedReqLogFiles**, and set **Maximum number of trace files** to **1000**.
+
+      :::image type="content" source="media/slow-page-response-hangs/edit-website-failed-request-tracing-settings.png" alt-text="Screenshot of the Edit Web Site Failed Request Tracing Settings window.":::
+
+   1. Select **OK**.
+
 ### Full user-mode process dump
 
 A series of process dumps (2-4) taken when requests are slow or hung might tell you which method call in the application is slow. It might also indicate delays in remote requests to remote web services or back-end databases.
@@ -177,16 +222,9 @@ If the issue can be reproduced or currently occurs, you can capture several manu
 
 Try to space dumps about 30 seconds apart, but be mindful of the total slowness. If the total period of slowness is shorter (for example, 20 to 30 seconds total), space dumps closer together to fit at least two dumps inside the slow period.
 
-Feel free to use and send [email template]().
-
 Optionally, ProcDump can be used, especially when you can't install DebugDiag on the server or installation requires it.
 
-If the issue is more intermittent, consider [capturing both FREB traces and dumps using ProcDump](#configure-freb-to-trigger-memory-dumps-using-procdumpexe) (set up FREB for time taken rather than status code).
-
-Use this [email template]() for setting up FREB.
-
-> [!NOTE]
-> Some of these [email templates]() instruct you to collect Perfmon traces as well. It's advised to skip that step for now and collect later if absolutely determined to be necessary.
+If the issue is more intermittent, consider capturing both FREB traces and dumps or if using ProcDump is easier, follow this article (set up FREB for time taken rather than status code).
 
 #### Issue isn't easily reproduced
 
@@ -197,9 +235,8 @@ If the issue isn't easily reproduced, you can use FREB Rule to generate dumps ba
 
 #### Deadlock detected hangs
 
-In a case where a hang correlates with **Deadlock detected** in Application event logs, use this [email template]().
-
 > [!CAUTION]
+>
 > - If slowness is accompanied by high CPU, avoid collecting logs when CPU usage is extremely high (for example, >=95), as this might cause the server to hang or fail to collect logs due to insufficient CPU resources.
 >
 > - If collecting logs manually, make sure CPU usage is lower than the threshold to facilitate RDP access to the server. If needed, try recycling the application pool before logs collection, but be aware of the impact on existing requests and explain that to customers.
@@ -291,9 +328,25 @@ For more information, see [Using RSCA to help you understand what your IIS serve
 
 If the slowness is confirmed, take the memory dumps manually. However, this doesn't guarantee that the dumps contain the same problematic request during its lifetime and hence multiple attempts might be needed if dumps are taken manually (even when automated, sometimes multiple attempts are needed).
 
-To take the memory dumps manually, see [Method 2: Using DebugDiag](data-capture-managed-memory-leak.md#method-2-using-debugdiag).
+To take the memory dumps manually, follow these steps:
 
-If you know how to reproduce the slowness, do so and select **Save & Close** when the requests are slow. If you don't know how to reproduce the slowness and it occurs quickly and frequently, wait for the slowness to begin before selecting **Save & Close**. Dumps begin collecting as soon as **Save & Close** is selected.
+1. Download and install [Debug Diagnostic Tool v2 Update 3.2](https://www.microsoft.com/download/details.aspx?id=103453).
+1. When a memory leak occurs, open **DebugDiag 2 Collection** from the **Start** menu:  
+
+   :::image type="content" source="media/slow-page-response-hangs/debugdiag-2-collection.png" alt-text="Screenshot of DebugDiag 2 Collection.":::
+
+   > [!NOTE]
+   > If you need to change the path where dumps are generated, select **Tools** > **Options And Settings** > **Manual Userdump Save Folder** to change it.
+1. Select the **Processes** tab.
+1. Locate the **w3wp** process with the **Process ID** column of the application in question.  
+   [!INCLUDE [How to get actual PID](../../../../includes/how-get-pid.md)]
+1. Right-click the **w3wp** process, select **Create Userdump Series**, and set the following options (adjust the numbers as needed). Don't select **Save & Close**.  
+
+   :::image type="content" source="media/slow-page-response-hangs/configure-userdump-series.png" alt-text="Screenshot of Configure UserDump Series.":::
+
+1. Reproduce the slowness and select **Save & Close** when the requests are slow.
+
+   If you don't know how to reproduce the slowness and it occurs quickly and frequently, wait for the slowness to begin before selecting **Save & Close**. Dumps begin collecting as soon as **Save & Close** is selected.
 
 ### Configure FREB to trigger memory dumps using ProcDump.exe
 
@@ -303,7 +356,7 @@ Follow these steps to configure FREB to run a custom action, like **ProcDump.exe
 
 1. Configure FREB based on request time value:
 
-   Configure FREBs on the appropriate request time value by following the steps in [Time trigger amount](#time-trigger-amount). Make sure to set a time-taken rule instead of a status code. For detailed steps on configuring FREBs, see [Steps to capture FREB logs](troubleshoot-http-error-code.md#steps-to-capture-freb-logs).
+   [Configure FREBs on the appropriate request time value](#detailed-steps-for-collecting-freb-logs-based-on-time-taken). Make sure to set a time-taken rule instead of a status code.
 
 1. Follow these steps to enable custom actions:
 
