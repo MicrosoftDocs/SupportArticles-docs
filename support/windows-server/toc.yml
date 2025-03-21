@@ -359,6 +359,8 @@ items:
       href: ./active-directory/default-workstation-numbers-join-domain.md
     - name: Netlogon service doesn't keep settings after in-place upgrade
       href: ./active-directory/netlogon-service-not-start-automatically.md
+    - name: Status code 0x32 and you can't join a domain
+      href: ./active-directory/status-code-0x32-cannot-join-domain.md
     - name: Support boundaries for Active Directory over NAT
       href: ./active-directory/support-for-active-directory-over-nat.md
     - name: '"The account is not authorized to login from this station" error'
