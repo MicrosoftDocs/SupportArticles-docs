@@ -34,8 +34,7 @@ Microsoft Azure supports the [Linux operating system](https://azure.microsoft.co
 
 Microsoft Support provides assistance with the Azure platform or services. Microsoft also provides commercially viable support for Linux. A support plan is required to receive Microsoft Support.
 
-
-- In Azure Marketplace, Linux distributions are available. Microsoft assists with these distributions but may require customers to engage with vendors to allow collaboration between organization. Vendors must provide distribution-specific fixes.
+- In Azure Marketplace, Linux distributions are available. Microsoft assists with Linux support but may require customers to engage with Linux vendors for collaboration. Vendors may need to provide distribution-specific fixes.
 - In Azure Marketplace, you may select a highly customized Linux image, such as a firewall appliance. Microsoft assists you with these images, but the Linux vendor must be engaged to troubleshoot specific system-related problems. Microsoft may collaborate with the vendor for those issues.
 - Microsoft Support doesn't assist with basic Linux administration, design, architecture, or deployment of applications or solutions on Azure.
 - The ability to customize Linux is one of the hallmarks of the operating system. We encourage you to use a Linux solution that benefits your organization. However, the Linux vendor may not support some modifications such as custom kernels or modules. For vendor support, you may be required to use stock kernels or libraries for your image.
