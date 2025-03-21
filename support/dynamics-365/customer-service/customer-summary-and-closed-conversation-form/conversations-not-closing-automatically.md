@@ -19,7 +19,7 @@ Conversations in Dynamics 365 Customer Service aren't automatically transitioned
 
 The issue occurs due to incorrect settings in the Channel State Configuration entity, which affects the automatic closure of conversations after the configured wrap-up time.
 
-### Resolution 1: Verify and update configuration settings
+## Resolution 1: Verify and update configuration settings
 
 1. Navigate to the Channel State Configuration entity (`msdyn_occhannelstateconfiguration`) in Dynamics 365 Customer Service.
 2. Confirm that "Persistent Chat - Wrap Up" is set to **1 minute** or the desired wrap-up duration.

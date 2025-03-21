@@ -11,11 +11,18 @@ ms.custom: sap:Dynamics 365 Customer Service\Cases or Incidents
 
 This article provides information about issues related to sentiment analysis algorithms not accurately reflecting positive sentiment when you express gratitude using phrases such as "Thank You" or make use of capitalization and punctuation like exclamation marks in Microsoft Dynamics 365 Customer Service.
 
+## Symptoms
+
+When using Microsoft Dynamics 365 Customer Service sentiment analysis, you might encounter the following issues:
+
+- Gratitude phrases like "Thank You" aren't categorized as strongly positive sentiment.
+- Capitalization or punctuation (for example, "THANK YOU!" or "Thank you!") doesn't influence sentiment categorization.
+
 ## Cause
 
 The sentiment analysis algorithm may not recognize basic gratitude phrases like "Thank You" as sufficiently positive. It's designed to evaluate sentiment based on a broader context or more specific expressions, such as "Thank You So Much." Additionally, the algorithm doesn't account for capitalization or punctuation as indicators of sentiment.
 
-### Solution
+## Resolution
 
 This behavior is by design, and the sentiment analysis algorithm can't be modified to suit individual preferences or use cases. Certain expressions might not align with the algorithm's default sentiment categorization. To improve the accuracy of sentiment analysis, consider the following suggestions:
 
