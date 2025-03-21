@@ -1,5 +1,9 @@
 - name: Dynamics 365 Customer Service
   href: welcome-customer-service.yml
+- name: Cases or Incidents
+  items:
+    - name: Sentiment analysis not reflecting positive sentiment or capitalization
+      href: sentiment-analysis-not-reflecting-positive-sentiment-or-capitalization.md 
 - name: Customer Service Insights
   items:
     - name: Troubleshoot issues using Solution Health Hub
@@ -145,7 +149,9 @@
         - name: Chat isn't initiated when starting a new chat from portal
           href: omnichannel-for-customer-service/new-chat-not-initiated-portal.md
         - name: Error when creating a chat widget or social channel
-          href: omnichannel-for-customer-service/error-create-chat-widget-social-channel.md  
+          href: omnichannel-for-customer-service/error-create-chat-widget-social-channel.md
+        - name: Preconversation survey mobile number field restriction
+          href: omnichannel-for-customer-service/preconversation-survey-mobile-number-field-restriction.md
     - name: Live Chat Widget (LCW)
       items:
         - name: Chat widget icon doesn't load on portal
@@ -185,6 +191,8 @@
     - name: Voice channel
       items:
         - name: Incoming voice calls with long greeting messages cause connection delays
-          href: omnichannel-for-customer-service/greeting-message-delay-agent-connection.md 
+          href: omnichannel-for-customer-service/greeting-message-delay-agent-connection.md
+        - name: Notification not functioning for incoming messages
+          href: notifications-for-incoming-messages-during-active-sessions.md
         - name: Use diagnostic messages to troubleshoot call issues
           href: omnichannel-for-customer-service/use-diagnostic-messages-in-call-issues.md 
