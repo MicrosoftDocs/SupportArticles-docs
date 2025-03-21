@@ -1,5 +1,5 @@
 ---
-title: Status code 0x32 and you can't join a domain
+title: Status Code 0x32 And You Can't Join a Domain
 description: Helps resolve an issue in which you can't join a domain with status code 0x32. This issue is related to the failure to establish a Server Message Block (SMB) session to the domain controller (DC).
 ms.date: 03/21/2025
 manager: dcscontentpm
