@@ -149,7 +149,7 @@ Before configuring a FREB rule, inspect the W3SVC logs to identify requests that
 
   1. [Configure FREBs based on a specific time taken rule](#detailed-steps-for-collecting-freb-logs-based-on-time-taken).
 
-     The time threshold you set for FREB logs should be beyond what is considered normal or acceptable. if you know that it's normal and expected for a response to take 10 seconds, configure FREBs to 20 seconds, 30 seconds, or some other number.
+     The time threshold you set for FREB logs should be higher than what is considered normal or acceptable time for the response. if you know that it's normal and expected for a response to take 10 seconds, configure FREBs a higher number like 20 seconds or 30 seconds.
 
   1. Proceed with the same analysis steps as mentioned above.
 
