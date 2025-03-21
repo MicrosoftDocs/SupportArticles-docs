@@ -4,7 +4,7 @@ description: Provides a solution to an issue where some properties are indicated
 ms.date: 03/21/2025
 ms.service: entra-id
 ms.reviewer: bhvootla, adoyle, nualex, v-weizhu
-ms.custom: sap:Microsoft Graph Users, Groups, and Entra APIs
+ms.custom: sap:Problem with querying or provisioning resources
 ---
 # Microsoft Graph API memberOf returns null for some properties
 
