@@ -2023,6 +2023,8 @@ items:
     items:
     - name: Troubleshoot printing and best practices
       href: ./printing/troubleshoot-printing-and-best-practices.md
+    - name: Troubleshoot printing issues caused by Print Spooler service not running
+      href: ./printing/print-spooler-service-not-running.md
     - name: Troubleshoot printing known issues
       href: ./printing/troubleshoot-printing-known-issues.md
     - name: Troubleshoot printing scenarios
