@@ -54,10 +54,10 @@ Here's a sample JSON response:
 
 When an application queries the membership that returns a `directoryObject` type collection, if it doesn't have permission to read a certain resource type, members of that type are returned with limited information. For example, only the object type and ID may be returned and other properties are indicated as null. Complete information is returned for the object types that the application has permissions to read.
 
-For more information, see [List a user's direct memberships](https://learn.microsoft.com/en-us/graph/api/user-list-memberof) and [Limited information returned for inaccessible member objects](https://learn.microsoft.com/en-us/graph/permissions-overview#limited-information-returned-for-inaccessible-member-objects).
+For more information, see [List a user's direct memberships](/graph/api/user-list-memberof) and [Limited information returned for inaccessible member objects](/graph/permissions-overview#limited-information-returned-for-inaccessible-member-objects).
 
 ## Solution
 
 To get complete information, configure at least the `Directory.Read.All` permission for your application.
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
