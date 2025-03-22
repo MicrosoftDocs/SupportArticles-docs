@@ -1,7 +1,7 @@
 ---
 title: Unable to mount Azure disk volumes
 description: Describes errors that occur when mounting Azure disk volumes fails, and provides solutions.
-ms.date: 09/06/2024
+ms.date: 03/22/2025
 author: genlin
 ms.author: genli
 ms.reviewer: chiragpa, akscsscic, v-weizhu
@@ -23,6 +23,7 @@ However, the pod stays in the **ContainerCreating** status. When you run the `ku
 - [Volume is already used by pod](#error3)
 - [StorageAccountType UltraSSD_LRS can be used only when additionalCapabilities.ultraSSDEnabled is set](#error4)
 - [ApplyFSGroup failed for vol](#error5)
+- [node(s) exceed max volume count](#error6)
 
 See the following sections for error details, possible causes and solutions.
 
@@ -188,6 +189,21 @@ To resolve this error, we recommend that you set `fsGroupChangePolicy: "OnRootMi
 OnRootMismatch: Only change permissions and ownership if permission and ownership of root directory doesn't match with expected permissions of the volume. This setting could help shorten the time it takes to change ownership and permission of a volume.
 
 For more information, see [Configure volume permission and ownership change policy for Pods](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#configure-volume-permission-and-ownership-change-policy-for-pods).
+
+## <a id="error6"></a>node(s) exceed max volume count
+Here are details of this error:
+```output
+Events:
+Type   Reason      Age  From        Message
+----   ------      ---- ----        -------
+Warning FailedScheduling 25s  default-scheduler 0/8 nodes are available: 8 node(s) exceed max volume count. preemption: 0/8 nodes are available: 8 No preemption victims found for incoming pod..
+```
+### Cause: Max Disks for VM size is reached 
+The maximum disk limit is reached for the specified VM Size .
+
+### Solution: Use anotehr VM size with more disk limits
+You can delete existing disks for the Node ,or scale the nodepool, or add new nodepool with VM size with more disk limit.
+Also pay attention for the limit of disks per node should not exceed the [limit](https://kubernetes.io/docs/concepts/storage/storage-limits/#kubernetes-default-limits).
 
 ## More information  
 
