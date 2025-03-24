@@ -24,11 +24,9 @@ Voicemails aren't delivered at all (in Outlook clients and the Skype for Busines
 
 ## Resolution for symptom 1
 
-To resolve this issue, check whether you have any Exchange mail flow rules (also known as transport rules) enabled, or you use a third-party email system (such as Gmail).  
-  
-Before Exchange Online Protection was enabled, it was common for Exchange Online TransportConfig to be set with OpenDomainRoutingEnabled = True.  
-  
-Check Exchange Online Transport Configuration by running the following from Exchange Remote PowerShell
+To resolve this issue, check whether you have any Exchange mail flow rules (also known as transport rules) enabled, or you use a third-party email system (such as Gmail).
+
+Also check Exchange Online Transport Configuration by running the following from Exchange Remote PowerShell
 
 `Get-TransportConfig | fl OpenDomainRoutingEnabled`
 
