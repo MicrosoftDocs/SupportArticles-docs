@@ -1,6 +1,6 @@
 ---
 title: Email Field Validation Doesn't Work in Pre-conversation Survey
-description: Solves an issue where the email field in the Pre-conversation survey doesn't validate for incorrect email formats in Microsoft Dynamics 365 Customer Service.
+description: Explains why email field in the Pre-conversation survey doesn't validate for incorrect email formats in Microsoft Dynamics 365 Customer Service.
 author: Yerragovula
 ms.author: srreddy
 ai-usage: ai-assisted
@@ -9,7 +9,7 @@ ms.custom: sap:Live Chat Widget (LCW), DFM
 ---
 # Email field validation in a Pre-conversation survey doesn't work as expected
 
-This article resolves the issue of email field validation in the [Pre-conversation survey](/dynamics365/customer-service/administer/configure-pre-chat-survey) for live chat widgets in Microsoft Dynamics 365 Customer Service.
+This article explains email field validation in the [Pre-conversation survey](/dynamics365/customer-service/administer/configure-pre-chat-survey) for live chat widgets in Microsoft Dynamics 365 Customer Service.
 
 ## Symptoms
 
@@ -17,7 +17,7 @@ The email field in the Pre-conversation survey doesn't validate for incorrect em
 
 ## Cause
 
-The default live chat widget doesn't include built-in functionality to validate email formats in the Pre-conversation survey. Customization is necessary to enforce email validation.
+The default live chat widget doesn't include built-in functionality to validate email formats in the Pre-conversation survey. Customization is necessary to enforce email format validation.
 
 ## Resolution
 
