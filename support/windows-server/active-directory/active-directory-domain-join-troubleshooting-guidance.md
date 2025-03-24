@@ -53,7 +53,7 @@ The following table lists the ports required to be open between the client compu
 
 ### Error code 0x569
 
-For more information, see [Error code 0x569: the user has not been granted the requested logon type at this computer](error-0x569-not-granted-logon-type.md).
+For more information, see [Error code 0x569: The user has not been granted the requested logon type at this computer](error-0x569-not-granted-logon-type.md).
 
 ### Error code 0x534
 

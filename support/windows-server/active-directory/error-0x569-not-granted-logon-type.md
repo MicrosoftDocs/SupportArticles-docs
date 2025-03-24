@@ -1,7 +1,7 @@
 ---
-title: The User Has Not Been Granted the Requested Logon Type at This Computer
-description: Helps resolve the error code 0x569 that occurs during a domain join operation. It provides a detailed analysis of the NetSetup.log and offers a step-by-step resolution to ensure the user account has the necessary rights.
-ms.date: 03/19/2025
+title: User Has Not Been Granted the Requested Logon Type at This Computer
+description: Helps resolve the error code 0x569 that occurs during a domain join operation.
+ms.date: 03/24/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -10,9 +10,9 @@ ms.custom:
 - sap:active directory\on-premises active directory domain join
 - pcy:WinComm Directory Services
 ---
-# Error code 0x569: the user has not been granted the requested logon type at this computer
+# Error code 0x569: The user has not been granted the requested logon type at this computer
 
-This article helps resolve the error code 0x569 that occurs during a domain join operation. It provides a detailed analysis of the **NetSetup.log** and offers a step-by-step resolution to ensure the user account has the necessary rights.
+This article helps resolve the error code 0x569 that occurs during a domain join operation. It provides a detailed analysis of the **NetSetup.log** and a step-by-step resolution to ensure the user account has the necessary rights.
 
 You receive the following error message during a domain join operation:
 
@@ -30,7 +30,7 @@ mm/dd hh:mm:ss NetpDoDomainJoin: status: 0x569
 
 Here's more information about the error code:
 
-|HEX error  |Decimal error  |Symbolic error string  |
+|Hexadecimal error  |Decimal error  |Symbolic error string  |
 |---------|---------|---------|
 |0x569     |1385         |ERROR_LOGON_TYPE_NOT_GRANTED         |
 
@@ -38,11 +38,11 @@ This error occurs because the domain join user account lacks the **Access this c
 
 To resolve this error, follow these steps:
 
-1. There is little reason to restrict **Everyone** from accessing domain controllers (DCs) over the network. You can add a group named "domain joiners" to the policy.
+1. There's no need to restrict **Everyone** from accessing domain controllers (DCs) over the network. You can add a group named "domain joiners" to the policy.
     > [!NOTE]
     > Don't add the user directly.
-2. Verify that **Everyone** or the group "domain joiners" has been granted the **Access this computer from the network** right in the group policy applying to all DCs. By default, this policy is **Default Domain Controllers Policy**.
+2. Verify that **Everyone** or the "domain joiners" group has been granted the **Access this computer from the network** right in the group policy applying to all DCs. By default, this policy is the **Default Domain Controllers Policy**.
 3. Ensure that the relevant policy is linked to the organizational unit (OU) that hosts the DCs.
     > [!NOTE]
     > Place all DC computer accounts in the **Domain Controllers** OU.
-4. Confirm that the DCs servicing the domain join operation apply the relevant policy successfully.
+4. Confirm that the DCs servicing the domain join operation have applied the relevant policy successfully.
