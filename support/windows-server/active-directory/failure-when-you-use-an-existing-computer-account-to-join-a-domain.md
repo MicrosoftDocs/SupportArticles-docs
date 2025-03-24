@@ -18,9 +18,9 @@ This article addresses the issue of failing to join a computer to a domain when 
 
 When you try to use an existing computer account name to join a computer to a domain, the operation fails. And you receive the following error messages.
 
-![alt text](media/failure-when-you-use-an-existing-computer-account-to-join-a-domain/image.png)
+:::image type="content" source="media/failure-when-you-use-an-existing-computer-account-to-join-a-domain/an-error-occurs-when-you-join-a-computer-to-a-domain.png" alt-text="An error occurs when you join a computer to a domain." border="false":::
 
-![alt text](media/failure-when-you-use-an-existing-computer-account-to-join-a-domain/image-1.png)
+:::image type="content" source="media/failure-when-you-use-an-existing-computer-account-to-join-a-domain/error-when-you-join-a-computer-to-a-domain-using-system-properties.png" alt-text="Error when you join a computer to a domain using System Properties." border="false":::
 
 ### Netsetup.log
 
