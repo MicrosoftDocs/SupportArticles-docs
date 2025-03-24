@@ -27,54 +27,54 @@ When you try to use an existing computer account name to join a computer to a do
 Review the following example of the Netsetup.log on a fully updated system.
 
 ```output
-02/14/2024 17:13:19:290 NetpProvisionComputerAccount:
-02/14/2024 17:13:19:290 	lpDomain: contoso.com
-02/14/2024 17:13:19:290 	lpHostName: host1
-02/14/2024 17:13:19:290 	lpMachineAccountOU: (NULL)
-02/14/2024 17:13:19:290 	lpDcName: ContosoDC1.contoso.com
-02/14/2024 17:13:19:290 	lpMachinePassword: (null)
-02/14/2024 17:13:19:290 	lpAccount: contoso\nonadminuser2
-02/14/2024 17:13:19:290 	lpPassword: (non-null)
-02/14/2024 17:13:19:290 	dwJoinOptions: 0x403
-02/14/2024 17:13:19:290 	dwOptions: 0x40000003
-02/14/2024 17:13:19:290 NetpLdapBind: Verified minimum encryption strength on ContosoDC1.contoso.com: 0x0
-02/14/2024 17:13:19:290 NetpLdapGetLsaPrimaryDomain: reading domain data
-02/14/2024 17:13:19:290 NetpGetNCData: Reading NC data
-02/14/2024 17:13:19:290 NetpGetDomainData: Lookup domain data for: DC=contoso,DC=com
-02/14/2024 17:13:19:290 NetpGetDomainData: Lookup crossref data for: CN=Partitions,CN=Configuration,DC=contoso,DC=com
-02/14/2024 17:13:19:290 NetpLdapGetLsaPrimaryDomain: result of retrieving domain data: 0x0
-02/14/2024 17:13:19:290 NetpCheckForDomainSIDCollision: returning 0x0(0).
-02/14/2024 17:13:19:305 NetpGetComputerObjectDn: Cracking DNS domain name contoso.com/ into Netbios on \\ContosoDC1.contoso.com
-02/14/2024 17:13:19:305 NetpGetComputerObjectDn: Crack results: 	name = CONTOSO\
-02/14/2024 17:13:19:305 NetpGetComputerObjectDn: Cracking account name CONTOSO\HOST1$ on \\ContosoDC1.contoso.com
-02/14/2024 17:13:19:305 NetpGetComputerObjectDn: Crack results: 	(Account already exists) DN = CN=HOST1,CN=Computers,DC=contoso,DC=com 
-02/14/2024 17:13:19:305 NetpGetADObjectOwnerAttributes: Looking up attributes for machine account: CN=HOST1,CN=Computers,DC=contoso,DC=com
-02/14/2024 17:13:19:305 NetpGetNCData: Reading NC data
-02/14/2024 17:13:19:305 NetpReadAccountReuseModeFromAD: Searching '<WKGUID=AB1D30F3768811D1ADED00C04FD8D5CD,DC=contoso,DC=com>' for '(&(ObjectClass=ServiceConnectionPoint)(KeyWords=NetJoin*))'.
-02/14/2024 17:13:19:305 NetpReadAccountReuseModeFromAD: Got 0 Entries.
-02/14/2024 17:13:19:305 Returning NetStatus: 0, ADReuseMode: 0
-02/14/2024 17:13:19:305 IsLegacyAccountReuseSetInRegistry: RegQueryValueEx for 'NetJoinLegacyAccountReuse' returned Status: 0x2. 
-02/14/2024 17:13:19:305 IsLegacyAccountReuseSetInRegistry returning: 'FALSE''.
-02/14/2024 17:13:19:305 NetpDsValidateComputerAccountReuseAttempt: returning NtStatus: 0, NetStatus: 0
-02/14/2024 17:13:19:305 NetpDsValidateComputerAccountReuseAttempt: returning Result: FALSE
-02/14/2024 17:13:19:305 NetpCheckIfAccountShouldBeReused: Active Directory Policy check with SAM_DOMAIN_JOIN_POLICY_LEVEL_V2 returned NetStatus:0x0.
-02/14/2024 17:13:19:305 NetpCheckIfAccountShouldBeReused: Account re-use attempt was Denied by Active Directory Policy. 
-02/14/2024 17:13:19:305 NetpCheckIfAccountShouldBeReused:fReuseAllowed: FALSE, NetStatus:0x0
-02/14/2024 17:13:19:305 NetpModifyComputerObjectInDs: Account exists and re-use is blocked by policy. Error: 0xaac 
-02/14/2024 17:13:19:305 NetpProvisionComputerAccount: LDAP creation failed: 0xaac 
-02/14/2024 17:13:19:305 NetpProvisionComputerAccount: Retrying downlevel per options
-02/14/2024 17:13:19:321 NetpManageMachineAccountWithSid: NetUserAdd on 'ContosoDC1.contoso.com' for 'HOST1$' failed: 0x8b0 
-02/14/2024 17:13:19:321 IsLegacyAccountReuseSetInRegistry: RegQueryValueEx for 'NetJoinLegacyAccountReuse' returned Status: 0x2. 
-02/14/2024 17:13:19:321 IsLegacyAccountReuseSetInRegistry returning: 'FALSE''.
-02/14/2024 17:13:19:321 NetpManageMachineAccountWithSid: The computer account already exists in Active Directory.Re-using the account was blocked by security policy.
-02/14/2024 17:13:19:321 NetpProvisionComputerAccount: retry status of creating account: 0xaac
-02/14/2024 17:13:19:321 ldap_unbind status: 0x0
-02/14/2024 17:13:19:321 NetpJoinCreatePackagePart: status:0xaac.
-02/14/2024 17:13:19:321 NetpJoinDomainOnDs: Function exits with status of: 0xaac 
-02/14/2024 17:13:19:321 NetpJoinDomainOnDs: status of disconnecting from '\\ContosoDC1.contoso.com': 0x0
-02/14/2024 17:13:19:321 NetpResetIDNEncoding: DnsDisableIdnEncoding(RESETALL) on 'contoso.com' returned 0x0
-02/14/2024 17:13:19:321 NetpJoinDomainOnDs: NetpResetIDNEncoding on 'contoso.com': 0x0
-02/14/2024 17:13:19:321 NetpDoDomainJoin: status: 0xaac
+MM/DD/YYYY HH:mm:ss:SSS NetpProvisionComputerAccount:
+MM/DD/YYYY HH:mm:ss:SSS 	lpDomain: contoso.com
+MM/DD/YYYY HH:mm:ss:SSS 	lpHostName: host1
+MM/DD/YYYY HH:mm:ss:SSS 	lpMachineAccountOU: (NULL)
+MM/DD/YYYY HH:mm:ss:SSS 	lpDcName: ContosoDC1.contoso.com
+MM/DD/YYYY HH:mm:ss:SSS 	lpMachinePassword: (null)
+MM/DD/YYYY HH:mm:ss:SSS 	lpAccount: contoso\nonadminuser2
+MM/DD/YYYY HH:mm:ss:SSS 	lpPassword: (non-null)
+MM/DD/YYYY HH:mm:ss:SSS 	dwJoinOptions: 0x403
+MM/DD/YYYY HH:mm:ss:SSS 	dwOptions: 0x40000003
+MM/DD/YYYY HH:mm:ss:SSS NetpLdapBind: Verified minimum encryption strength on ContosoDC1.contoso.com: 0x0
+MM/DD/YYYY HH:mm:ss:SSS NetpLdapGetLsaPrimaryDomain: reading domain data
+MM/DD/YYYY HH:mm:ss:SSS NetpGetNCData: Reading NC data
+MM/DD/YYYY HH:mm:ss:SSS NetpGetDomainData: Lookup domain data for: DC=contoso,DC=com
+MM/DD/YYYY HH:mm:ss:SSS NetpGetDomainData: Lookup crossref data for: CN=Partitions,CN=Configuration,DC=contoso,DC=com
+MM/DD/YYYY HH:mm:ss:SSS NetpLdapGetLsaPrimaryDomain: result of retrieving domain data: 0x0
+MM/DD/YYYY HH:mm:ss:SSS NetpCheckForDomainSIDCollision: returning 0x0(0).
+MM/DD/YYYY HH:mm:ss:SSS NetpGetComputerObjectDn: Cracking DNS domain name contoso.com/ into Netbios on \\ContosoDC1.contoso.com
+MM/DD/YYYY HH:mm:ss:SSS NetpGetComputerObjectDn: Crack results: 	name = CONTOSO\
+MM/DD/YYYY HH:mm:ss:SSS NetpGetComputerObjectDn: Cracking account name CONTOSO\HOST1$ on \\ContosoDC1.contoso.com
+MM/DD/YYYY HH:mm:ss:SSS NetpGetComputerObjectDn: Crack results: 	(Account already exists) DN = CN=HOST1,CN=Computers,DC=contoso,DC=com 
+MM/DD/YYYY HH:mm:ss:SSS NetpGetADObjectOwnerAttributes: Looking up attributes for machine account: CN=HOST1,CN=Computers,DC=contoso,DC=com
+MM/DD/YYYY HH:mm:ss:SSS NetpGetNCData: Reading NC data
+MM/DD/YYYY HH:mm:ss:SSS NetpReadAccountReuseModeFromAD: Searching '<WKGUID=AB1D30F3768811D1ADED00C04FD8D5CD,DC=contoso,DC=com>' for '(&(ObjectClass=ServiceConnectionPoint)(KeyWords=NetJoin*))'.
+MM/DD/YYYY HH:mm:ss:SSS NetpReadAccountReuseModeFromAD: Got 0 Entries.
+MM/DD/YYYY HH:mm:ss:SSS Returning NetStatus: 0, ADReuseMode: 0
+MM/DD/YYYY HH:mm:ss:SSS IsLegacyAccountReuseSetInRegistry: RegQueryValueEx for 'NetJoinLegacyAccountReuse' returned Status: 0x2. 
+MM/DD/YYYY HH:mm:ss:SSS IsLegacyAccountReuseSetInRegistry returning: 'FALSE''.
+MM/DD/YYYY HH:mm:ss:SSS NetpDsValidateComputerAccountReuseAttempt: returning NtStatus: 0, NetStatus: 0
+MM/DD/YYYY HH:mm:ss:SSS NetpDsValidateComputerAccountReuseAttempt: returning Result: FALSE
+MM/DD/YYYY HH:mm:ss:SSS NetpCheckIfAccountShouldBeReused: Active Directory Policy check with SAM_DOMAIN_JOIN_POLICY_LEVEL_V2 returned NetStatus:0x0.
+MM/DD/YYYY HH:mm:ss:SSS NetpCheckIfAccountShouldBeReused: Account re-use attempt was Denied by Active Directory Policy. 
+MM/DD/YYYY HH:mm:ss:SSS NetpCheckIfAccountShouldBeReused:fReuseAllowed: FALSE, NetStatus:0x0
+MM/DD/YYYY HH:mm:ss:SSS NetpModifyComputerObjectInDs: Account exists and re-use is blocked by policy. Error: 0xaac 
+MM/DD/YYYY HH:mm:ss:SSS NetpProvisionComputerAccount: LDAP creation failed: 0xaac 
+MM/DD/YYYY HH:mm:ss:SSS NetpProvisionComputerAccount: Retrying downlevel per options
+MM/DD/YYYY HH:mm:ss:SSS NetpManageMachineAccountWithSid: NetUserAdd on 'ContosoDC1.contoso.com' for 'HOST1$' failed: 0x8b0 
+MM/DD/YYYY HH:mm:ss:SSS IsLegacyAccountReuseSetInRegistry: RegQueryValueEx for 'NetJoinLegacyAccountReuse' returned Status: 0x2. 
+MM/DD/YYYY HH:mm:ss:SSS IsLegacyAccountReuseSetInRegistry returning: 'FALSE''.
+MM/DD/YYYY HH:mm:ss:SSS NetpManageMachineAccountWithSid: The computer account already exists in Active Directory.Re-using the account was blocked by security policy.
+MM/DD/YYYY HH:mm:ss:SSS NetpProvisionComputerAccount: retry status of creating account: 0xaac
+MM/DD/YYYY HH:mm:ss:SSS ldap_unbind status: 0x0
+MM/DD/YYYY HH:mm:ss:SSS NetpJoinCreatePackagePart: status:0xaac.
+MM/DD/YYYY HH:mm:ss:SSS NetpJoinDomainOnDs: Function exits with status of: 0xaac 
+MM/DD/YYYY HH:mm:ss:SSS NetpJoinDomainOnDs: status of disconnecting from '\\ContosoDC1.contoso.com': 0x0
+MM/DD/YYYY HH:mm:ss:SSS NetpResetIDNEncoding: DnsDisableIdnEncoding(RESETALL) on 'contoso.com' returned 0x0
+MM/DD/YYYY HH:mm:ss:SSS NetpJoinDomainOnDs: NetpResetIDNEncoding on 'contoso.com': 0x0
+MM/DD/YYYY HH:mm:ss:SSS NetpDoDomainJoin: status: 0xaac
 ```
 
 ### Error detail
