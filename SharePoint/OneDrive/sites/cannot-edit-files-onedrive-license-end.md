@@ -1,5 +1,5 @@
 ---
-title: You can't edit your files because your license to use OneDrive ended over a couple of months ago
+title: You Can't Edit Your Files Because Your License to Use OneDrive Ended Over a Couple of Months Ago
 description: Resolves an error that occurs when a user tries to access their OneDrive for work or school site by using an unlicensed account.
 manager: dcscontentpm
 audience: ITPro
