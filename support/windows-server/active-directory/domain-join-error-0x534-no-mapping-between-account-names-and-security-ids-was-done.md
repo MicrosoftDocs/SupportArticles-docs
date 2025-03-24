@@ -47,6 +47,4 @@ In another scenario, this error occurs when you try to change the password for a
 
 ## Resolution
 
-0x534 is likely a transient error. The error is logged when domain-join searches the target domain to determine whether a matching computer account was pre-created or whether the join operation needs to dynamically create a computer account on the target domain.
-
-Focus on the bits in the options flag and whether the type of join being performed is relying on preexisting accounts or requires creating new ones.
+To fix the issue, focus on the bits in the options flag. Check whether the type of join being performed is relying on preexisting accounts or requires creating new ones.
