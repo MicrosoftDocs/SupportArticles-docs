@@ -40,6 +40,8 @@
           href: service-level-agreements/slaitem-changes-missing-upgrade.md
         - name: Can't import solution with active SLAs and SLAs are deactivated when imported
           href: service-level-agreements/import-solution-active-slas.md
+        - name: Duplicate SLA KPI instances are created
+          href: service-level-agreements/duplicate-slakpi-instances-are-being-created.md
         - name: '"The uninstall operation will delete the base layer for the component" error'
           href: service-level-agreements/sla-item-delete-operation-encountered-some-errors.md
         - name: SLA's state changes from Active to Draft after importing an upgrade solution
