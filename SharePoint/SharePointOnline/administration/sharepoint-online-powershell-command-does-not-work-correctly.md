@@ -1,8 +1,7 @@
 ---
-title: SharePoint Online PowerShell command doesn't work correctly
+title: SharePoint Online PowerShell Command doesn't Work Correctly
 description: Resolves an issue in which a SharePoint PowerShell command doesn't run as expected and returns no results or the command isn't recognized.
-manager: dcscontentp  
-ms.date: 03/21/2025
+ms.date: 03/23/2025
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
@@ -22,7 +21,7 @@ appliesto:
 
 ## Symptoms
 
-When you run a command in SharePoint Online (SharePoint in Microsoft 365) Management Shell, the command doesn't run as expected and doesn't return any results. Or, you receive the following error message:
+When you run a command in SharePoint Online Management Shell, the command doesn't run as expected and doesn't return any results. Or, you receive the following error message:
 
 > The term '\<command\>' is not recognized as the name of the cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
 
