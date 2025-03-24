@@ -411,4 +411,4 @@
 - name: Capture SSL traffic
   items:
   - name: Capture HTTPS traffic with Fiddler
-    href: app-integration/capture-https-traffic-http-fiddler-entra-id-app.md
+    href: app-integration/capture-https-traffic-fiddler-entra-id-app.md
