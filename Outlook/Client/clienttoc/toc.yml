@@ -63,14 +63,8 @@
           href: ../calendaring/hashed-lines-shown-in-scheduling-assistant.md
         - name: How to share calendar and contacts
           href: ../calendaring/how-to-share-calendar-and-contacts.md
-        - name: How to control Outlook recurrence patterns by using Group Policy
-          href: ../calendaring/how-to-control-recurrence-patterns-via-group-policy.md
-        - name: How to reset location list for appointments or meetings
-          href: ../calendaring/how-to-reset-location-list-for-appointments-or-meetings.md
         - name: How to use the Internet Free/Busy feature
           href: ../calendaring/how-to-use-internet-freebusy-feature.md
-        - name: How to use vCalendar in Outlook
-          href: ../calendaring/how-to-use-vcalendar-in-outlook.md
         - name: Multiple time zones show an incorrect time difference
           href: ../calendaring/additional-time-zone-shows-one-hour-offset-on-dst.md
         - name: Information about the Calendar Checking Tool for Outlook (CalCheck)
@@ -109,8 +103,6 @@
           href: /exchange/troubleshoot/calendars/shared-calendar-in-delegate-online-archive?context=/outlook/troubleshoot/context/client-context
         - name: Specific users can't receive meeting requests
           href: ../calendaring/specific-users-not-receive-meeting-requests.md
-        - name: The Delegate feature in mixed versions of Outlook
-          href: ../calendaring/delegate-feature-in-mixed-versions-of-outlook.md
         - name: The From field in a meeting request doesn't list all accounts
           href: ../calendaring/from-field-in-meeting-request-not-list-all-accounts.md
         - name: Time zones that do not observe daylight saving time
@@ -285,8 +277,6 @@
           href: ../installation/outlook-is-unable-to-start-in-windows-7-or-8.md
         - name: DisablePST and PSTDisableGrow policies are ignored
           href: ../installation/disablepst-and-pstdisablegrow-policies-are-ignored.md
-        - name: How to update Outlook to solve  connection issues
-          href: ../installation/fix-outlook-connection-problems-by-upgrading.md
         - name: Install Calendar Printing Assistant fails
           href: ../installation/installing-calendar-printing-assistant-fails.md
         - name: Install Outlook latest applicable updates

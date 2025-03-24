@@ -15,7 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Outlook 2016
-ms.date: 01/30/2024
+ms.date: 03/19/2025
 ---
 
 # Plan and configure Cached Exchange Mode in Outlook 2016 for Windows

@@ -21,7 +21,7 @@ appliesto:
   - Outlook for iOS
   - Outlook for Android
 search.appverid: MET150
-ms.date: 01/30/2024
+ms.date: 03/19/2025
 ---
 
 # Configure rooms and workspaces for Room Finder in Outlook

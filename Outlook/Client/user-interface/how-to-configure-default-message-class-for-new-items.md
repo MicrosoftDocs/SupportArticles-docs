@@ -20,7 +20,7 @@ appliesto:
   - Microsoft Office Outlook 2003
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 01/30/2024
+ms.date: 03/19/2025
 ---
 # How to configure the default message class for new items in an Outlook folder
 

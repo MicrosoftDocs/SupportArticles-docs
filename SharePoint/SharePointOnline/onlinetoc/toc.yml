@@ -59,6 +59,8 @@
       href: ../administration/profile-picture-not-showing.md
     - name: Remove assembly reference from Sandbox solution
       href: ../../SharePointServer/administration/change-sandbox-solution.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
+    - name: SharePoint Online PowerShell command doesn't work correctly
+      href: ../administration/sharepoint-online-powershell-command-does-not-work-correctly.md
     - name: SharePoint Online out of storage space
       href: ../administration/out-of-storage.md
     - name: Third-party tools changes support
