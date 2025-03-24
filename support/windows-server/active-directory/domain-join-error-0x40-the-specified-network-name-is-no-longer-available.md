@@ -20,7 +20,7 @@ The following error messages occur when you try to join the computer to the doma
 
 > The specified network name is no longer available
 
-:::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/domain-join-error-message.png" alt-text="Screenshot of the dialog box showing the error message for error code 0x40.":::
+:::image type="content" source="media/domain-join-error-0x40-the-specified-network-name-is-no-longer-available/domain-join-error-message.png" alt-text="Screenshot of the dialog box showing the error message for error code 0x40.":::
 
 You review the *netsetup.log* log and found error messages that resemble the following:
 
@@ -55,7 +55,7 @@ Test-NetConnection <IP_address_of_the_DC> -Port 88
 
 Expected Output:
 
-:::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/test-netconnection-output-88.png" alt-text="Screenshot that shows the Test-NetConnection command for TCP port 88 output.":::
+:::image type="content" source="media/domain-join-error-0x40-the-specified-network-name-is-no-longer-available/test-netconnection-output-88.png" alt-text="Screenshot that shows the Test-NetConnection command for TCP port 88 output.":::
 
 The output indicates that the Kerberos Port TCP 88 is open between the client and the DC.
 

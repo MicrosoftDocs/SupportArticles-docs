@@ -149,7 +149,7 @@ To resolve this error, follow these steps:
 
 ### Error code 0x40
 
-See [) for troubleshooting guide.
+See [Domain join error 0x40 "The specified network name is no longer available"](./domain-join-error-0x40-the-specified-network-name-is-no-longer-available.md) for troubleshooting guide.
 
 ### Error code 0x54b
 
