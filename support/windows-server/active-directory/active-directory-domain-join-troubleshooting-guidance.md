@@ -99,40 +99,7 @@ Make sure of the following items:
 
 ### Error code 0x6D9
 
-> There are no more endpoints available from the endpoint mapper.
-
-Here's an example from the *netsetup.log* file:
-
-```output
-mm/dd/yyyy hh:mm:ss:ms NetpGetDnsHostName: Read NV Hostname: <hostname>
-mm/dd/yyyy hh:mm:ss:ms NetpGetDnsHostName: PrimaryDnsSuffix defaulted to DNS domain name: <DNS domain>.<TLD>
-mm/dd/yyyy hh:mm:ss:ms NetpLsaOpenSecret: status: 0xc0000034
-mm/dd/yyyy hh:mm:ss:ms NetpGetLsaPrimaryDomain: status: 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpLsaOpenSecret: status: 0xc0000034
-mm/dd/yyyy hh:mm:ss:ms NetpManageMachineAccountWithSid: NetUserAdd on \\<hostname>.<domain> for <computername>$ failed: 0x8b0
-mm/dd/yyyy hh:mm:ss:ms NetpManageMachineAccountWithSid: status of attempting to set password on \\<DC name>.<domain>.<tld> for <hostname>$: 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomain: status of creating account: 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpGetComputerObjectDn: Unable to bind to DS on \\<DC name>.<domain>.<tld>: 0x6d9
-mm/dd/yyyy hh:mm:ss:ms NetpSetDnsHostNameAndSpn: NetpGetComputerObjectDn failed: 0x6d9
-mm/dd/yyyy hh:mm:ss:ms ldap_unbind status: 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomain: status of setting DnsHostName and SPN: 0x6d9
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomain: initiaing a rollback due to earlier errors
-mm/dd/yyyy hh:mm:ss:ms NetpGetLsaPrimaryDomain: status: 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpManageMachineAccountWithSid: status of disabling account <hostname>$ on \\<DC name>.<domain>.<tld>: 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomain: rollback: status of deleting computer account: 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpLsaOpenSecret: status: 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomain: rollback: status of deleting secret: 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomain: status of disconnecting from \\<DC name>.<domain>.<tld>: 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0x6d9
-```
-  
-Error 0x6D9 is logged when network connectivity is blocked between the joining client and the helper DC. The network connectivity services the domain join operation over port 135 or a port in the ephemeral range between 1025 to 5000 or 49152 to 65535. For more information, see [Service overview and network port requirements for Windows](../networking/service-overview-and-network-port-requirements.md).  
-
-To resolve this error, follow these steps:
-
-1. On the joining client, open the *%systemroot%\\debug\\NETSETUP.LOG* file and determine the name of the helper DC selected by the joining client to perform the join operation.
-2. Verify that the joining client has network connectivity to the DC over the required ports and protocols used by the applicable operating system (OS) versions. Domain join clients connect a helper DC over TCP port 135 by the dynamically assigned port in the range between 49152 and 65535.
-3. Ensure that the OS, software and hardware routers, firewalls, and switches allow connectivity over the required ports and protocols.
+See [) for troubleshooting guide. 
 
 ### Error code 0xA8B
 
