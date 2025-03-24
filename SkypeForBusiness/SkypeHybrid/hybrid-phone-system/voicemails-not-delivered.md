@@ -24,7 +24,17 @@ Voicemails aren't delivered at all (in Outlook clients and the Skype for Busines
 
 ## Resolution for symptom 1
 
-To resolve this issue, check whether you have any Exchange mail flow rules (also known as transport rules) enabled, or you use a third-party email system (such as Gmail).
+To resolve this issue, check whether you have any Exchange mail flow rules (also known as transport rules) enabled, or you use a third-party email system (such as Gmail).  
+  
+Before Exchange Online Protection was enabled, it was common for Exchange Online TransportConfig to be set with OpenDomainRoutingEnabled = True.  
+  
+Check Exchange Online Transport Configuration by running the following from Exchange Remote PowerShell
+
+`Get-TransportConfig | fl OpenDomainRoutingEnabled`
+
+If the value is true, this will cause a change in Content-Class on Voicemail messages to be updated from Voice-CA, to unauthenticatedVoice-CA. This change in Content Class will prevent the correct PR Message class from being defined resulting in a failure for the messages to be correctly identified and processed as voicemail messages by Teams. 
+
+To resolve, please open a Support Ticket with Microsoft to request and authorize the Exchange Online team to update your tenant configuration to change this setting to False. Note that this setting is a legacy setting that was used for anti-spam detection prior to the implementation of Exchange Online Protection. 
 
 ### Exchange mail flow rules
 
