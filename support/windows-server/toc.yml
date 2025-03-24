@@ -363,6 +363,8 @@ items:
       href: ./active-directory/domain-join-error-0x6d9-there-are-no-more-endpoints-available-from-the-endpoint-mapper
     - name: 'Domain join error 0x40 "The specified network name is no longer available"'
       href: ./active-directory/domain-join-error-0x40-the-specified-network-name-is-no-longer-available
+    - name: Failure when you use an existing computer account to join a domain
+      href: ./active-directory/failure-when-you-use-an-existing-computer-account-to-join-a-domain.md
     - name: Netlogon service doesn't keep settings after in-place upgrade
       href: ./active-directory/netlogon-service-not-start-automatically.md
     - name: Support boundaries for Active Directory over NAT
