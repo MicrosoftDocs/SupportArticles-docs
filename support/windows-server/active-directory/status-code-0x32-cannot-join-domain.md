@@ -54,11 +54,7 @@ Here's more information about the error code:
 
 The **NetSetup.log** file shows that the client fails to establish an SMB session with the DC. If you examine the network trace, it indicates that the DC returns STATUS_NOT_SUPPORTED to the C SESSION SETUP request from the client. The DC rejects the client's credential in the C SESSION SETUP request, which is the initial step of NT LAN Manager (NTLM) authentication.
 
-:::image type="content" source="media/status-code-0x32-cannot-join-domain/network-trace-ntlm-authentication.png" alt-text="Screenshot of the network trace showing the DC returns STATUS_NOT_SUPPORTED to the C SESSION SETUP request from the client.":::
-
 If you establish an SMB session to the DC from a workstation in the domain, it succeeds by using the hostname and fails by using the IP.
-
-:::image type="content" source="media/status-code-0x32-cannot-join-domain/succeed-hostname-fails-ip.png" alt-text="Screenshot of a command window showing that establishing an SMB session succeeds by using the hostname and fails by using the IP.":::
 
 However, the network trace pattern shows the same. It seems that the DC doesn't accept NTLM authentication. Status code 0x32 occurs because the security policy **Network security: Restrict NTLM: Incoming NTLM traffic** is incorrectly set to **Deny all accounts**.
 
