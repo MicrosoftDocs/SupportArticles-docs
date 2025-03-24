@@ -12,7 +12,7 @@ ms.reviewer: salarson
 appliesto: 
   - OneDrive for work or school
 search.appverid: MET150
-ms.date: 03/21/2025
+ms.date: 03/23/2025
 ---
 # Error "You can't edit your files because your license to use OneDrive ended over a couple of months ago"
 
