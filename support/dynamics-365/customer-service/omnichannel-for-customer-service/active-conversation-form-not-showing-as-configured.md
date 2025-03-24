@@ -33,3 +33,5 @@ To ensure the **Active Conversation** form displays as configured,
 4. Save the changes.
 5. Perform a hard refresh twice by pressing <kbd>CTRL</kbd>+<kbd>F5</kbd>.
 6. Test the scenario again to confirm the resolution.
+
+For more information, see [Active Conversation form](/dynamics365/customer-service/administer/add-customer-summary-settings).
