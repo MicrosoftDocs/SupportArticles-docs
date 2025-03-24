@@ -12,7 +12,7 @@ This article provides instructions on how to use Fiddler to collect HTTPS traffi
 
 ## Collect HTTPS traffic for troubleshooting
 
-1. Download and install [Fiddler]((https://www.telerik.com/fiddler)) on the device that is used to reproduce the problem.
+1. Download and install [Fiddler](https://www.telerik.com/fiddler) on the device that is used to reproduce the problem.
     > [!NOTE]
     > Fiddler is a third-party software not owned by Microsoft.
 1. On the **Tool** menu, select **Options**.
