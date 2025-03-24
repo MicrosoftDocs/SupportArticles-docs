@@ -88,9 +88,9 @@ Additionally, check the following Event Viewer paths:
 
 In RD Session Host:
 
-**Event Viewer** > **Applications and Services Logs** > **Microsoft** > **Windows** > **RemoteApp and Desktop Connections**
-**Event Viewer** > **Applications and Services Logs** > **Microsoft** > **Windows** > **TerminalServices-LocalSessionManager**
-**Event Viewer** > **Applications and Services Logs** > **Microsoft** > **Windows** > **TerminalServices-RemoteSessionManager**
+- **Event Viewer** > **Applications and Services Logs** > **Microsoft** > **Windows** > **RemoteApp and Desktop Connections**
+- **Event Viewer** > **Applications and Services Logs** > **Microsoft** > **Windows** > **TerminalServices-LocalSessionManager**
+- **Event Viewer** > **Applications and Services Logs** > **Microsoft** > **Windows** > **TerminalServices-RemoteSessionManager**
 
 In RD license server:
 
