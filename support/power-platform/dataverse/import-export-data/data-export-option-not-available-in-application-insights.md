@@ -9,7 +9,7 @@ ms.custom: sap:Importing and exporting data, DFM
 ---
 # Data export option isn't available in Azure Application Insights
 
-This article provides a resolution for the issue where the data export option isn't available while setting up Application Insights for log analytics and observability in a new environment.
+This article provides a resolution for the issue where the [data export](/power-platform/admin/set-up-export-application-insights) option isn't available while setting up Application Insights for log analytics and observability in a new environment.
 
 ## Symptoms
 
