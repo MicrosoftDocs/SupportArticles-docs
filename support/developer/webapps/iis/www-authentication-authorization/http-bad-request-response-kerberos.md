@@ -1,7 +1,7 @@
 ---
 title: HTTP 400 Error Responses to HTTP Requests
 description: Works around an HTTP 400 error that the HTTP request header is too long.
-ms.date: 03/19/2025
+ms.date: 03/24/2025
 ms.custom: sap:WWW Authentication and Authorization\Windows Authentication
 ms.reviewer: ivanpash, paulboc
 ---
