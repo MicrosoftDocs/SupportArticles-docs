@@ -44,7 +44,7 @@ This error can occur for the following reasons:
 
 To fix this error for an individual form that you create, sign in to your OneDrive for work or school website, and then follow these steps:
 
-1. Disable the **Limited-access user permission lockdown mode** site collection feature if it's enabled.
+1. Disable the **Limited-access user permission lockdown mode** site collection feature, if it's enabled.
 
     1. Select the **Settings** icon in the upper-right corner of the screen.
     1. Select **OneDrive settings** > **More Settings**.
@@ -72,7 +72,7 @@ To fix this error for an individual form that you create, sign in to your OneDri
 
 To fix this error for a group form, sign in to the Microsoft 365 group's SharePoint site, and then follow these steps:
 
-1. Follow the steps in [Enable or disable site collection features](https://support.microsoft.com/office/enable-or-disable-site-collection-features-a2f2a5c2-093d-4897-8b7f-37f86d83df04) to disable the **Limited-access user permission lockdown mode** site collection feature if it's enabled.
+1. Follow the steps in [Enable or disable site collection features](https://support.microsoft.com/office/enable-or-disable-site-collection-features-a2f2a5c2-093d-4897-8b7f-37f86d83df04) to disable the **Limited-access user permission lockdown mode** site collection feature, if it's enabled.
 1. Enable the *People in your organization* sharing links if they're disabled.
 
     **Note**: You must be a SharePoint Online administrator and a site collection administrator to run the following PowerShell commands in [SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
@@ -216,7 +216,7 @@ To fix this error for a group form, sign in to the Microsoft 365 group's SharePo
 
 ## Error: You do not have access to create this folder or you do not have a valid license
 
-This issue occurs if the New Folder command is disabled in the site settings. This would prevent you from creating folders in the document library where the form is stored.
+This issue occurs if the New Folder command is disabled in the site settings. This situation would prevent you from creating folders in the document library where the form is stored.
 
 ### Resolution
 
