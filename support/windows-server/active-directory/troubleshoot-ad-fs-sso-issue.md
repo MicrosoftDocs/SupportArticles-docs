@@ -79,12 +79,6 @@ Verify if the user agent string of your browser is in the list. If not, add the 
    $wiaStrings = $wiaStrings+"NewUAString"
    ```
 
-   Example:
-
-   ```powershell
-   $wiaStrings = $wiaStrings+" =~Windows\s*NT.*Edge"+"Mozilla/5.0"
-   ```
-
 4. Update the WIASupportedUserAgents setting by running the following command:
 
    ```powershell
@@ -126,18 +120,6 @@ If the application is Microsoft Online Services, what you experience may be cont
    1. **TranslateToFreshPasswordAuth**: Microsoft Entra ID sends wauth and wfresh to AD FS instead of prompt=login. This leads to an authentication request to use forms-based authentication.
    2. **NativeSupport**: The prompt=login parameter is sent as is to AD FS.
    3. **Disabled**: Nothing is sent to AD FS.
-
-<a name='azure-active-directory-azure-ad-scenario'></a>
-
-### Microsoft Entra scenario
-
-If the authentication request sent to Microsoft Entra ID include [the prompt=login parameter](/windows-server/identity/ad-fs/operations/ad-fs-prompt-login), disable the prompt=login capability by running the following command:
-
-```powershell
-New-MgDomainFederationConfiguration -DomainId <domain_id> -PromptLoginBehavior Disabled
-```
-
-After you run this command, Office 365 applications won't include the prompt=login parameter in each authentication request.
 
 <a name='non-azure-ad-scenario'></a>
 
