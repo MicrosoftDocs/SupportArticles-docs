@@ -1,6 +1,6 @@
 ---
 title: This Number Cannot be Upgraded Calling and SMS Capabilities Maxed Out error
-description: Solves an error that occurs when you upgrade the capabilities of a phone number in Azure Communication Services.
+description: Helps resolve an error related to a trial phone number in Azure Communication Services.
 author: Yerragovula
 ms.author: srreddy
 ai-usage: ai-assisted
@@ -9,7 +9,7 @@ ms.custom: sap:Messaging capabilities, DFM
 ---
 # "This number cannot be upgraded, Calling and SMS capabilities maxed out" error 
 
-This article provides a resolution for an issue where the Azure phone number doesn't work when you try to upgrade the capabilities of a phone number in Azure Communication Services.
+This article helps you resolve the error you may encounter when using a trial phone number in Azure Communication Services.
 
 ## Symptoms
 
@@ -19,7 +19,7 @@ When you try to upgrade the capabilities of a phone number in Azure Communicatio
 
 ## Cause
 
-This issue occurs because you're trying to upgrade the capabilities of a phone number in a trial environment. Trial environments have limitations, and phone numbers in such environments can't be upgraded. Additionally, the maximum allowed capabilities for calling and SMS is reached.
+This issue occurs when you try to upgrade the capabilities of a phone number in a trial environment and the maximum allowed capabilities for calling and SMS have been reached. Trial environments have limitations, and phone numbers in such environments can't be upgraded.
 
 ## Resolution
 
