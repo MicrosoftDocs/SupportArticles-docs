@@ -81,7 +81,7 @@ If you can't sign in to your wrapped mobile app, verify that:
 
 ## Issue 6 - Errors in Azure key vault in wrap for Power Apps
 
-The following Azure key vault errors might appear in wrap for Power Apps and can be rectified.
+The following Azure key vault errors might appear in wrap for Power Apps and can be rectified. Please use the search feature to jump to  the specific errors shown in the PowerApps wrap wizard portal.
 
 #### Error code 1000118
 
