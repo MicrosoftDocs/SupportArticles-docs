@@ -167,7 +167,7 @@
         href: ./phone-system/dial-plans/errors-managing-dial-plans.md
     - name: Direct Routing
       items:
-      - name: Diagnose issues with Direct Routing
+      - name: Diagnose issues that affect Direct Routing
         href: ./phone-system/direct-routing/diagnose-direct-routing-issues.md
       - name: Issues with call transfers
         href: ./phone-system/direct-routing/issues-with-call-transfers.md
