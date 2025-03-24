@@ -103,23 +103,20 @@ If the application that you want to access is not Microsoft Online Services, wha
 If the application is Microsoft Online Services, what you experience may be controlled by the **PromptLoginBehavior** setting from the trusted realm object. This setting controls whether Microsoft Entra tenants send prompt=login to AD FS. To set the **PromptLoginBehavior** setting, follow these steps:
 
 1. Open Windows PowerShell with the "Run as administrator" option.
-2. Get the existing domain federation setting by running the following command:
+2. Set the PromptLoginBehavior setting by running the following commands:
 
    ```powershell
-   Get-MgDomainFederationConfiguration -DomainId <DomainName> | FL *
-   ```
-
-3. Set the PromptLoginBehavior setting by running the following command:
-
-   ```powershell
-   New-MgDomainFederationConfiguration -DomainId <domain_id> -PromptLoginBehavior <TranslateToFreshPasswordAuth|NativeSupport|Disabled> -FederatedIdpMfaBehavior <acceptIfMfaDoneByFederatedIdp|enforceMfaByFederatedIdp|rejectMfaByFederatedIdp> -PreferredAuthenticationProtocol <WsFed|SAMLP>
+   Connect-MgGraph -scopes Domain.ReadWrite.All, Directory.ReadWrite.All
+   $tdo= Get-MgDomainFederationConfiguration -DomainID <domain_id>
+   Update-MgDomainFederationConfiguration -DomainId <domain_id> -InternalDomainFederationId $tdo.Id -PromptLoginBehavior <translateToFreshPasswordAuthentication|nativeSupport|disabled>
+   Disconnect-MgGraph
    ```
 
    The values for the PromptLoginBehavior parameter are:
 
-   1. **TranslateToFreshPasswordAuth**: Microsoft Entra ID sends wauth and wfresh to AD FS instead of prompt=login. This leads to an authentication request to use forms-based authentication.
-   2. **NativeSupport**: The prompt=login parameter is sent as is to AD FS.
-   3. **Disabled**: Nothing is sent to AD FS.
+   1. **translateToFreshPasswordAuth**: Microsoft Entra ID sends wauth and wfresh to AD FS instead of prompt=login. This leads to an authentication request to use forms-based authentication.
+   2. **nativeSupport**: The prompt=login parameter is sent as is to AD FS.
+   3. **disabled**: Nothing is sent to AD FS.
 
 <a name='non-azure-ad-scenario'></a>
 
@@ -215,7 +212,7 @@ If the application that you want to access is Microsoft Online Services for Offi
 2. If the SupportsMFA setting is FALSE, set it to TRUE by running the following command:  
 
    ```powershell
-   New-MgDomainFederationConfiguration -DomainId <DomainName> -FederatedIdpMfaBehavior "acceptIfMfaDoneByFederatedIdp"
+   Update-MgDomainFederationConfiguration -DomainId <DomainName> -FederatedIdpMfaBehavior "acceptIfMfaDoneByFederatedIdp"
    ```
 
 ### Check if SSO is disabled
@@ -268,7 +265,7 @@ Then, check the external sign-in functionality using IdpInitiatedSignOn. Use the
    ```
 
 2. From a computer that is outside of your network, visit the following page:  
-   `https://<FederationInstance>/adfs/ls/idpinitiatedsignon.aspx`
+   `https://<FederationInstance>/adfs/ls/idpinitiatedsignon`
 
 3. Enter the correct credentials of a valid user on the sign-in page.
 
@@ -885,132 +882,6 @@ DS Mapper Usage : Disabled
 Negotiate Client Certificate : Disabled
 ```
 
-### Run script to automatically detect problems
-
-To automatically detect problems with the proxy trust relationship, run the following script. Based on the problem detected, take the action accordingly.
-
-```powershell
-param
-(
-  [switch]$syncproxytrustcerts
-)
-function checkhttpsyscertbindings()
-{
-Write-Host; Write-Host("1 – Checking http.sys certificate bindings for potential issues")
-$httpsslcertoutput = netsh http show sslcert
-$adfsservicefqdn = (Get-AdfsProperties).HostName
-$i = 1
-$certbindingissuedetected = $false
-While($i -lt $httpsslcertoutput.count)
-{
-        $ipport = $false
-        $hostnameport = $false
-        if ( ( $httpsslcertoutput[$i] -match "IP:port" ) ) { $ipport = $true }
-        elseif ( ( $httpsslcertoutput[$i] -match "Hostname:port" ) ) { $hostnameport = $true }
-        ## Check for IP specific certificate bindings
-        if ( ( $ipport -eq $true ) )
-        {
-            $httpsslcertoutput[$i]
-            $ipbindingparsed = $httpsslcertoutput[$i].split(":")
-            if ( ( $ipbindingparsed[2].trim() -ne "0.0.0.0" ) -and ( $ipbindingparsed[3].trim() -eq "443") )
-            {
-                $warning = "There is an IP specific binding on IP " + $ipbindingparsed[2].trim() + " which may conflict with the AD FS port 443 cert binding." | Write-Warning
-                $certbindingissuedetected = $true
-            }
-            $i = $i + 14
-            continue
-        }
-        ## check that CTL Store is set for ADFS service binding
-        elseif ( $hostnameport -eq $true )
-        {
-            $httpsslcertoutput[$i]
-            $ipbindingparsed = $httpsslcertoutput[$i].split(":")
-            If ( ( $ipbindingparsed[2].trim() -eq $adfsservicefqdn ) -and ( $ipbindingparsed[3].trim() -eq "443") -and ( $httpsslcertoutput[$i+10].split(":")[1].trim() -ne "AdfsTrustedDevices" ) )
-            {
-                Write-Warning "ADFS Service binding does not have CTL Store Name set to AdfsTrustedDevices"
-                $certbindingissuedetected = $true
-            }
-        $i = $i + 14
-        continue
-        }
-    $i++
-}
-If ( $certbindingissuedetected -eq $false ) { Write-Host "Check Passed: No certificate binding issues detected" }
-}
-function checkadfstrusteddevicesstore()
-{
-## check for CA issued (non-self signed) certs in the AdfsTrustedDevices cert store
-Write-Host; Write-Host "2 – Checking AdfsTrustedDevices cert store for non-self signed certificates"
-$certlist = Get-Childitem cert:\LocalMachine\AdfsTrustedDevices -recurse | Where-Object {$_.Issuer -ne $_.Subject}
-If ( $certlist.count -gt 0 )
-{
-    Write-Warning "The following non-self signed certificates are present in the AdfsTrustedDevices store and should be removed"
-    $certlist | Format-List Subject
-}
-Else { Write-Host "Check Passed: No non-self signed certs present in AdfsTrustedDevices cert store" }
-}
-function checkproxytrustcerts
-{
-    Param ([bool]$repair=$false)
-    Write-Host; Write-Host("3 – Checking AdfsTrustedDevices cert store is in sync with ADFS Proxy Trust config")
-    $doc = new-object Xml
-    $doc.Load("$env:windir\ADFS\Microsoft.IdentityServer.Servicehost.exe.config")
-    $connString = $doc.configuration.'microsoft.identityServer.service'.policystore.connectionString
-    $command = "Select ServiceSettingsData from [IdentityServerPolicy].[ServiceSettings]"
-    $cli = new-object System.Data.SqlClient.SqlConnection
-    $cli.ConnectionString = $connString
-    $cmd = new-object System.Data.SqlClient.SqlCommand
-    $cmd.CommandText = $command
-    $cmd.Connection = $cli
-    $cli.Open()
-    $configString = $cmd.ExecuteScalar()
-    $configXml = new-object XML
-    $configXml.LoadXml($configString)
-    $rawCerts = $configXml.ServiceSettingsData.SecurityTokenService.ProxyTrustConfiguration._subjectNameIndex.KeyValueOfstringArrayOfX509Certificate29zVOn6VQ.Value.X509Certificate2
-    #$ctl = dir cert:\LocalMachine\ADFSTrustedDevices
-    $store = new-object System.Security.Cryptography.X509Certificates.X509Store("ADFSTrustedDevices","LocalMachine")
-    $store.open("MaxAllowed")
-    $atLeastOneMismatch = $false
-    $badCerts = @()
-    foreach($rawCert in $rawCerts)
-    {   
-        $rawCertBytes = [System.Convert]::FromBase64String($rawCert.RawData.'#text')
-        $cert=New-Object System.Security.Cryptography.X509Certificates.X509Certificate2(,$rawCertBytes)
-        $now = Get-Date
-        if ( ($cert.NotBefore -lt $now) -and ($cert.NotAfter -gt $now))
-        {
-            $certThumbprint = $cert.Thumbprint
-         $certSubject = $cert.Subject
-         $ctlMatch = dir cert:\localmachine\ADFSTrustedDevices\$certThumbprint -ErrorAction SilentlyContinue
-         if ($ctlMatch -eq $null)
-         {
-       $atLeastOneMismatch = $true
-          Write-Warning "This cert is NOT in the CTL: $certThumbprint – $certSubject"
-       if ($repair -eq $true)
-       {
-        write-Warning "Attempting to repair"
-        $store.Add($cert)
-        Write-Warning "Repair successful"
-       }
-                else
-                {
-                    Write-Warning ("Please install KB.2964735 or re-run script with -syncproxytrustcerts switch to add missing Proxy Trust certs to AdfsTrustedDevices cert store")
-                }
-         }
-        }
-    }
-    $store.Close()
-    if ($atLeastOneMismatch -eq $false)
-    {
-     Write-Host("Check Passed: No mismatched certs found. CTL is in sync with DB content")
-    }
-}
-checkhttpsyscertbindings
-checkadfstrusteddevicesstore
-checkproxytrustcerts($syncproxytrustcerts)
-Write-Host; Write-Host("All checks completed.")
-```
-
 ### Problem 1: There is an IP specific binding
 
 The binding may conflict with the AD FS certificate binding on port 443.
@@ -1050,23 +921,6 @@ If a CA issued certificate is in a certificate store where only self-signed cert
 :::image type="content" source="media/troubleshoot-adfs-sso-issue/adfs-certificate.png"  alt-text="The certificates for each Web Application Proxy server.":::
 
 Therefore, delete any CA issued certificate from the AdfsTrustedDevices certificate store.
-
-### Problem 4: Install KB2964735 or re-run the script with -syncproxytrustcerts
-
-When a proxy trust relationship is established with an AD FS server, the client certificate is written to the AD FS configuration database and added to the AdfsTrustedDevices certificate store on the AD FS server. For an AD FS farm deployment, the client certificate is expected to be synced to the other AD FS servers. If the sync doesn't happen for some reason, a proxy trust relationship will only work against the AD FS server the trust was established with, but not against the other AD FS servers.
-
-To solve this problem, use one of the following methods.
-
-#### Method 1
-
-Install the update documented in [KB 2964735](https://support.microsoft.com/topic/700e0502-c19a-54e4-9c5f-65c2844d9a9f) on all AD FS servers. After the update is installed, a sync of the client certificate is expected to happen automatically.
-
-#### Method 2
-
-Run the script with the – syncproxytrustcerts switch to manually sync the client certificates from the AD FS configuration database to the AdfsTrustedDevices certificate store. The script should be run on all the AD FS servers in the farm.
-
-> [!NOTE]
-> This is not a permanent solution because the client certificates will be renewed on a regular basis.
 
 ### Problem 5: All checks are passed. But the problem persists
 
@@ -1223,6 +1077,6 @@ If all the claims are present, see if the values of the claims from the Dump Tok
 For more informaiton, see the following articles:
 
 - [Get-MgDomainFederationConfiguration](/powershell/module/microsoft.graph.identity.directorymanagement/get-mgdomainfederationconfiguration)
-- [New-MgDomainFederationConfiguration](/powershell/module/microsoft.graph.identity.directorymanagement/new-mgdomainfederationconfiguration)
+- [Update-MgDomainFederationConfiguration](/powershell/module/microsoft.graph.identity.directorymanagement/update-mgdomainfederationconfiguration)
 - [Connect-MgGraph](/powershell/microsoftgraph/authentication-commands#use-connect-mggraph)
 - [Get-MgUser](/powershell/module/microsoft.graph.users/get-mguser)
