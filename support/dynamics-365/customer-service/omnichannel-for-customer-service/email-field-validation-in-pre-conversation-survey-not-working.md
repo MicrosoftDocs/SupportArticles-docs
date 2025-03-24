@@ -4,8 +4,8 @@ description: Solves an issue where the email field in the Pre-conversation surve
 author: Yerragovula
 ms.author: srreddy
 ai-usage: ai-assisted
-ms.date: 03/20/2025
-ms.custom: sap:Dynamics 365 Contact Center\Live Chat Widget (LCW)
+ms.date: 03/24/2025
+ms.custom: sap:Live Chat Widget (LCW), DFM
 ---
 # Email field validation in a Pre-conversation survey doesn't work as expected
 
@@ -24,7 +24,3 @@ The default live chat widget doesn't include built-in functionality to validate 
 To solve this issue, create a custom live chat widget that supports email validation. Follow the guidance in [Develop a custom live chat widget](/dynamics365/customer-service/develop/develop-live-chat-widget).
 
 Alternatively, you can configure a Copilot bot with an "identification" topic to handle email collection and validation. For more information, see [Create and edit topics in Copilot Studio](/microsoft-copilot-studio/authoring-create-edit-topics?tabs=webApp).
-
-## More information
-
-For future enhancements, you can submit requests through the [Dynamics 365 Ideas portal](https://experience.dynamics.com/ideas/), where similar requests from other users are already being tracked. This feedback helps Microsoft prioritize feature improvements.

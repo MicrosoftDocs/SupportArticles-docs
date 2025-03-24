@@ -4,8 +4,8 @@ description: Solves an issue where conversations from a custom channel don't app
 author: Yerragovula
 ms.author: srreddy
 ai-usage: ai-assisted
-ms.date: 03/20/2025
-ms.custom: sap:Dynamics 365 Contact Center\Custom Channel
+ms.date: 03/24/2025
+ms.custom: sap:Custom Channel, DFM
 ---
 # Conversations from custom channel not appearing in Inbox
 

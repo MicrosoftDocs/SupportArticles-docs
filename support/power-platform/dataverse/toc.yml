@@ -163,7 +163,7 @@
 - name: Importing and exporting data
   item:
     - name: Data export option isn't available in Azure Application Insights
-      href: importing-and-exporting-data/data-export-option-not-available-in-application-insights.md
+      href: import-export-data/data-export-option-not-available-in-application-insights.md
 - name: Plug-in execution
   items:
     - name: Dataverse plug-ins

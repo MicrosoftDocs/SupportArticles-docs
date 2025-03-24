@@ -4,8 +4,8 @@ description: Solves an issue encountered in Dynamics 365 Customer Service or Dyn
 author: Yerragovula
 ms.author: srreddy
 ai-usage: ai-assisted
-ms.date: 03/20/2025
-ms.custom: sap:Dynamics 365 Contact Center\Customer summary and Closed conversation form
+ms.date: 03/24/2025
+ms.custom: sap:Customer summary and Closed conversation form, DFM
 ---
 # Conversations remain active after an agent closes the browser in Dynamics 365 Customer Service
 

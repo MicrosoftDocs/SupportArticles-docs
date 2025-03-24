@@ -4,8 +4,8 @@ description: Provides information about the behavior of the mobile number field 
 author: Yerragovula
 ms.author: srreddy
 ai-usage: ai-assisted
-ms.date: 03/20/2025
-ms.custom: sap:Dynamics 365 Contact Center\Chat Channel
+ms.date: 03/24/2025
+ms.custom: sap:Chat Channel, DFM
 ---
 # Pre-conversation survey mobile number field currently allows alphanumeric input
 

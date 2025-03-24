@@ -3,9 +3,9 @@ title: Sentiment Analysis Not Reflecting Positive Sentiment or Capitalization
 description: Solves an issue where sentiment analysis not reflecting positive sentiment or capitalization when expressing gratitude in Microsoft Dynamics 365 Customer Service.
 author: Yerragovula
 ms.author: srreddy
-ms.date: 03/20/2025
+ms.date: 03/24/2025
 ai-usage: ai-assisted
-ms.custom: sap:Dynamics 365 Customer Service\Cases or Incidents
+ms.custom: sap:Cases or Incidents, DFM
 ---
 # Sentiment analysis not reflecting positive sentiment or capitalization
 

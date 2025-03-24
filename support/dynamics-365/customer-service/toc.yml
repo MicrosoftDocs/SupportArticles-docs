@@ -4,18 +4,6 @@
   items:
     - name: Sentiment analysis not reflecting positive sentiment or capitalization
       href: cases-or-incidents/sentiment-analysis-not-reflecting-positive-sentiment-or-capitalization.md 
-- name: Custom Channel
-  items:  
-    - name: Conversations from custom channel not appearing in Inbox
-      href: custom-channel/custom-channel-conversations-not-show-in-inbox.md
-- name: Customer summary and Closed conversation form
-  items:  
-    - name: Conversations aren't closed automatically after the configured wrap-up time
-      href: customer-summary-and-closed-conversation-form/conversations-not-closing-automatically.md
-    - name: Conversations remain active after an agent closes the browser
-      href: customer-summary-and-closed-conversation-form/conversations-still-active-after-closing-browser.md
-    - name: The Active Conversation form doesn't display as configured
-      href: customer-summary-and-closed-conversation-form/active-conversation-form-not-showing-as-configured.md  
 - name: Customer Service Insights
   items:
     - name: Troubleshoot issues using Solution Health Hub
@@ -148,6 +136,22 @@
       items:
         - name: Can't deploy a custom Agent script solution
           href: omnichannel-for-customer-service/custom-agentscript-solution.md
+    - name: Chat Channel
+      items:
+        - name: Preconversation survey mobile number field restriction
+          href: omnichannel-for-customer-service/preconversation-survey-mobile-number-field-restriction.md
+    - name: Custom Channel
+      items:
+        - name: Conversations from custom channel not appearing in Inbox
+          href: omnichannel-for-customer-service/custom-channel-conversations-not-show-in-inbox.md
+    - name: Customer summary and Closed conversation form
+      items:  
+        - name: Conversations aren't closed automatically after the configured wrap-up time
+          href: omnichannel-for-customer-service/conversations-not-closing-automatically.md
+        - name: Conversations remain active after an agent closes the browser
+          href: omnichannel-for-customer-service/conversations-still-active-after-closing-browser.md
+        - name: The Active Conversation form doesn't display as configured
+          href: omnichannel-for-customer-service/active-conversation-form-not-showing-as-configured.md  
     - name: Conversation control
       items:
         - name: Conversation is stuck in a wrap-up state
@@ -162,8 +166,6 @@
           href: omnichannel-for-customer-service/new-chat-not-initiated-portal.md
         - name: Error when creating a chat widget or social channel
           href: omnichannel-for-customer-service/error-create-chat-widget-social-channel.md
-        - name: Preconversation survey mobile number field restriction
-          href: omnichannel-for-customer-service/preconversation-survey-mobile-number-field-restriction.md
     - name: Live Chat Widget (LCW)
       items:
         - name: Chat widget icon doesn't load on portal

@@ -4,8 +4,8 @@ description: Solves an issue where notifications for incoming messages during ac
 author: Yerragovula
 ms.author: srreddy
 ai-usage: ai-assisted
-ms.date: 03/20/2025
-ms.custom: sap:Dynamics 365 Contact Center\Voice channel
+ms.date: 03/24/2025
+ms.custom: sap:Voice channel, DFM
 ---
 # Notifications for incoming messages during active sessions not functioning
 
