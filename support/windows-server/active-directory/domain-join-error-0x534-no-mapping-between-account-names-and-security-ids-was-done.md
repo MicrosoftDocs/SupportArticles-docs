@@ -39,14 +39,14 @@ mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0x534
 
 ## Cause
 
-The domain join graphical user interface (GUI) or user interface (UI) can call the NetJoinDomain API twice to join a computer to a domain. The first call is made without the "create" flag being specified to locate a pre-created computer account in the target domain. If no account is found, a second `NetJoinDomain` API call may be made with the "create" flag specified.
+The domain-join graphical user interface (GUI) or user interface (UI) can call the NetJoinDomain API twice to join a computer to a domain. The first call is made without the "create" flag being specified to locate a pre-created computer account in the target domain. If no account is found, a second `NetJoinDomain` API call might be made with the "create" flag specified.
 
 The 0x534 error code or status is commonly logged as a transient error when domain join searches the target domain or when the domain join UI is used and certain values are present in the options bit (values of 25, 27, 425, or 427 are common).
 
-In another scenario, this error occurs when you try to change the password for a machine account. However, the account cannot be found on the targeted Domain Controller (DC), likely because the account was not created or due to replication latency or a replication failure. Check the bit flags in the join options to see if the type of join being performed is relying on a pre-created or newly created computer account.
+In another scenario, this error occurs when you try to change the password for a machine account. However, the account can't be found on the targeted Domain Controller (DC), likely because the account wasn't created or due to replication latency or a replication failure. Check the bit flags in the join options to see if the type of join being performed is relying on a pre-created or newly created computer account.
 
 ## Resolution
 
-0x534 is likely a transient error that is logged when domain join searches the target domain to determine whether a matching computer account was pre-created or whether the join operation needs to dynamically create a computer account on the target domain.
+0x534 is likely a transient error. The error is logged when domain-join searches the target domain to determine whether a matching computer account was pre-created or whether the join operation needs to dynamically create a computer account on the target domain.
 
-Focus on the bits in the options flag and whether the type of join being performed is relying on pre-existing accounts or requires creating new ones.
+Focus on the bits in the options flag and whether the type of join being performed is relying on preexisting accounts or requires creating new ones.

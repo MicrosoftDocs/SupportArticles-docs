@@ -16,7 +16,7 @@ This article addresses the issue of failing to join a computer to a domain when 
 
 ## Symptom
 
-When you try to use an existing computer account name to join a computer to a domain, the operation fails. And you receives the following error messages.
+When you try to use an existing computer account name to join a computer to a domain, the operation fails. And you receive the following error messages.
 
 ![alt text](media/failure-when-you-use-an-existing-computer-account-to-join-a-domain/image.png)
 
@@ -24,7 +24,7 @@ When you try to use an existing computer account name to join a computer to a do
 
 ### Netsetup.log
 
-Below is an excerpt from the Netsetup.log on a fully patched system.
+Review the following example of the Netsetup.log on a fully updated system.
 
 ```output
 02/14/2024 17:13:19:290 NetpProvisionComputerAccount:
@@ -86,21 +86,20 @@ Below is an excerpt from the Netsetup.log on a fully patched system.
 
 ## Cause
 
-Windows introduced additional protections with updates released on and after October 11, 2022. These protections intentionally prevent domain join operations from reusing an existing computer account in the target domain unless the following specific conditions are met:
+Windows introduced extra protections with updates released on and after October 11, 2022. These protections intentionally prevent domain join operations from reusing an existing computer account in the target domain unless the following specific conditions are met:
 
 - The user attempting the operation is the creator of the existing account.
 - The computer was created by a member of domain administrators, enterprise administrators, or built-in administrators groups.
-- The owner of the computer account object that is being reused is a member of the "Domain controller: Allow computer account re-use during domain join" Group Policy setting. This setting requires the installation of Windows updates released on or after March 14, 2023, on all member computers and domain controllers.
+- The owner of the computer account object that is being reused is a member of the "Domain controller: Allow computer account reuse during domain join" Group Policy setting. This setting requires the installation of Windows updates released on or after March 14, 2023, on all member computers and domain controllers.
 
 ## Resolution
 
-Review computer account provisioning workflows and understand if changes are required.
+To fix the issue, follow these steps:
 
-Perform the join operation using the same account that created the computer account in the target domain.
-If the existing account is stale (unused), delete it before attempting to join the domain again.
-Rename the computer and join using a different account that doesn’t already exist.
-If the existing account is owned by a trusted security principal and an administrator wants to reuse the account, use the "Domain controller: Allow computer account re-use during domain join" Group Policy.
-⚠️ Don't use the NetJoinLegacyAccountReuse registry workaround anymore in a fully patched environment. Support for the NetJoinLegacyAccountReuse registry key was removed by the August 13, 2024 Windows Update. The hardening behavior will persist regardless of that registry key setting. Use steps 1 - 4 as listed above.
+1. Perform the join operation by using the same account that created the computer account in the target domain.
+2. If the existing account is stale (unused), delete it before attempting to join the domain again.
+3. Rename the computer and join using a different account that doesn't already exist.
+4. If a trusted security principal owns the existing account, and an administrator wants to reuse the account, use the **Domain controller: Allow computer account re-use during domain join** Group Policy.
 
-
-
+> [!WARNING]
+> Don't use the **NetJoinLegacyAccountReuse** registry workaround anymore in a fully patched environment. Support for the **NetJoinLegacyAccountReuse** registry key was removed by the August 13, 2024 Windows Update. The hardening behavior persists regardless of that registry key setting. Use steps 1 - 4 in this section.

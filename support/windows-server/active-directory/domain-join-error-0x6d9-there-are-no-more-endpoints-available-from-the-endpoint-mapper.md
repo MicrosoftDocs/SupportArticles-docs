@@ -68,10 +68,10 @@ The network connectivity issue can be caused by several factors, including Syman
    mm/dd hh:mm:ss NetpGetComputerObjectDn: Unable to bind to DS on '\\DC1.CONTOSO.COM': 0x6d9
    ```
 
-2. Verify that the joining client has network connectivity to the DC over the required ports and protocols used by the applicable operating system (OS) versions. Domain join clients connect a helper DC over TCP port 135 by the dynamically assigned port in the range between 49152 and 65535.
+2. Verify that the joining client has network connectivity to the DC over the required ports and protocols used by the applicable operating system (OS) versions. Domain join clients connect a helper DC over Transmission Control Protocol (TCP) port 135 by the dynamically assigned port in the range between 49152 and 65535.
 3. Ensure that the OS, software and hardware routers, firewalls, and switches allow connectivity over the required ports and protocols.
 4. Ensure that there are enough available ports for the operation. You can use tools like netstat to check for port availability and usage.
-5. If Symantec Endpoint Protection is installed on the helper DC, review its settings to ensure it is not blocking the required ports.
-6. Consider other potential causes and troubleshoot accordingly, such as checking for firewall rules, ensuring proper DNS resolution, and verifying the health of the DC.
+5. If Symantec Endpoint Protection is installed on the helper DC, review its settings to ensure it isn't blocking the required ports.
+6. Consider other potential causes and troubleshoot accordingly. For example, check firewall rules, ensure proper DNS resolution, and verify the health of the DC.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
