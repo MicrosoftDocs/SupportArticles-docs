@@ -2015,6 +2015,8 @@ items:
     items:
     - name: Troubleshoot printing and best practices
       href: ./printing/troubleshoot-printing-and-best-practices.md
+    - name: Troubleshoot printing issues caused by Print Spooler service not running
+      href: ./printing/print-spooler-service-not-running.md
     - name: Troubleshoot printing known issues
       href: ./printing/troubleshoot-printing-known-issues.md
     - name: Troubleshoot printing scenarios
@@ -2391,8 +2393,6 @@ items:
       href: ./setup-upgrade-and-drivers/event-307-and-304-logged-for-deploying.md
     - name: Fail to run applications on Windows Server Core
       href: ./setup-upgrade-and-drivers/subsystem-needed-support-image-type-not-present.md
-    - name: How to perform an in-place/repair upgrade
-      href: ./setup-upgrade-and-drivers/repair-or-in-place-upgrade.md
     - name: In-place upgrade hangs at black screen
       href: ./setup-upgrade-and-drivers/in-place-upgrade-hangs-black-screen.md
     - name: Integrate Windows Server Update Services (WSUS) 3.0 into Server Manager
