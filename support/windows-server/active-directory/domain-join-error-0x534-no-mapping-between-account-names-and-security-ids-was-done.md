@@ -5,14 +5,14 @@ ms.date: 03/26/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: raviks
+ms.reviewer: raviks, eriw, dennhu
 ms.custom:
 - sap:active directory\on-premises active directory domain join
 - pcy:WinComm Directory Services
 ---
 # Domain join error 0x534 "No mapping between account names and security IDs was done"
 
-This article addresses the error "No mapping between account names and security IDs was done" encountered during domain join operations.
+This article addresses the error code 0x534 encountered during domain join operations.
 
 ## Symptom
 

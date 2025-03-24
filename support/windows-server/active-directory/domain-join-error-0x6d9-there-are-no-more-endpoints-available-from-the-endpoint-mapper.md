@@ -5,14 +5,14 @@ ms.date: 03/26/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: raviks
+ms.reviewer: raviks, eriw, dennhu
 ms.custom:
 - sap:active directory\on-premises active directory domain join
 - pcy:WinComm Directory Services
 ---
 # Domain join error 0x6D9 "There are no more endpoints available from the endpoint mapper"
 
-This article addresses the error "There are no more endpoints available from the endpoint mapper" encountered during domain join operations.
+This article addresses the error code 0x6D9 encountered during domain join operations.
 
 ## Symptom
 
