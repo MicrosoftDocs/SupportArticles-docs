@@ -138,10 +138,6 @@
       items:
         - name: Can't deploy a custom Agent script solution
           href: omnichannel-for-customer-service/custom-agentscript-solution.md
-    - name: Chat Channel
-      items:
-        - name: Preconversation survey mobile number field restriction
-          href: omnichannel-for-customer-service/preconversation-survey-mobile-number-field-restriction.md
     - name: Custom Channel
       items:
         - name: Can't receive Instagram messages and comments in a customer service application
