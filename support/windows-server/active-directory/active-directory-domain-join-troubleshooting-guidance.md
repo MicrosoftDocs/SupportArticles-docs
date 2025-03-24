@@ -73,24 +73,7 @@ Error 0x569 is logged when the domain join user lacks the **Access this computer
 
 ### Error code 0x534
 
-> No mapping between account names and security IDs was done.
-
-Here's an example from the *netsetup.log* file:
-
-```output
-mm/dd/yyyy hh:mm:ss:ms NetpCreateComputerObjectInDs: NetpGetComputerObjectDn failed: 0x534
-mm/dd/yyyy hh:mm:ss:ms NetpProvisionComputerAccount: LDAP creation failed: 0x534
-mm/dd/yyyy hh:mm:ss:ms ldap_unbind status: 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: Function exits with status of: 0x534
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: status of disconnecting from '\\<DC name>': 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0x534
-```
-  
-The domain join graphical user interface (GUI) can call the `NetJoinDomain` API twice to join a computer to a domain. The first call is made without the "create" flag being specified to locate a pre-created computer account in the target domain. If no account is found, a second `NetJoinDomain` API call may be made with the "create" flag specified.
-  
-In another scenario, the 0x534 error code is logged when you attempt to change the password for a machine account. However, the account can't be found on the targeted DC, likely because the account was not created or due to replication latency or a replication failure.
-
-The 0x534 error code is commonly logged as a transient error when domain join searches the target domain. The search determines whether a matching computer account was pre-created or the join operation needs to dynamically create a computer account on the target domain. Check the bit flags in the join options to see if the type of join being performed is relying on a pre-created or newly created computer account.
+See [Domain join error 0x534 "No mapping between account names and security IDs was done"](./domain-join-error-0x534-no-mapping-between-account-names-and-security-ids-was-done.md) for troubleshooting guide.
 
 ### Error code 0x6BF or 0xC002001C
 

@@ -357,6 +357,8 @@ items:
       href: ./active-directory/cannot-connect-internet-domain.md
     - name: Default limit to workstation numbers
       href: ./active-directory/default-workstation-numbers-join-domain.md
+    - name: 'Domain join error 0x534 "No mapping between account names and security IDs was done"'
+      href: ./active-directory/domain-join-error-0x534-no-mapping-between-account-names-and-security-ids-was-done.md
     - name: Netlogon service doesn't keep settings after in-place upgrade
       href: ./active-directory/netlogon-service-not-start-automatically.md
     - name: Support boundaries for Active Directory over NAT

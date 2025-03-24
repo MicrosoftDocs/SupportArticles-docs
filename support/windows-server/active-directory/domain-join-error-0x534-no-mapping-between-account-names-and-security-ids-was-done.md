@@ -1,0 +1,52 @@
+---
+title: Domain join error 0x534 "No mapping between account names and security IDs was done"
+description: Addresses the error "No mapping between account names and security IDs was done" encountered during domain join operations.
+ms.date: 03/26/2025
+manager: dcscontentpm
+audience: itpro
+ms.topic: troubleshooting
+ms.reviewer: raviks
+ms.custom:
+- sap:active directory\on-premises active directory domain join
+- pcy:WinComm Directory Services
+---
+# Domain join error 0x534 "No mapping between account names and security IDs was done"
+
+This article addresses the error "No mapping between account names and security IDs was done" encountered during domain join operations.
+
+## Symptom
+
+When you try to join a computer to a domain, you receive the following error message:
+
+> No mapping between account names and security IDs was done.
+
+You review the *netsetup.log* log and found error messages that resemble the following:
+
+```output
+mm/dd/yyyy hh:mm:ss:ms NetpCreateComputerObjectInDs: NetpGetComputerObjectDn failed: 0x534
+mm/dd/yyyy hh:mm:ss:ms NetpProvisionComputerAccount: LDAP creation failed: 0x534
+mm/dd/yyyy hh:mm:ss:ms ldap_unbind status: 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: Function exits with status of: 0x534
+mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: status of disconnecting from '\\<DC name>': 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0x534
+```
+
+### Error detail
+
+|HEX error|Decimal error|Symbolic Error String|
+|---|---|---|
+|0x534|1332|ERROR_NONE_MAPPED|
+
+## Cause
+
+The domain join graphical user interface (GUI) or user interface (UI) can call the NetJoinDomain API twice to join a computer to a domain. The first call is made without the "create" flag being specified to locate a pre-created computer account in the target domain. If no account is found, a second `NetJoinDomain` API call may be made with the "create" flag specified.
+
+The 0x534 error code or status is commonly logged as a transient error when domain join searches the target domain or when the domain join UI is used and certain values are present in the options bit (values of 25, 27, 425, or 427 are common).
+
+In another scenario, this error occurs when you try to change the password for a machine account. However, the account cannot be found on the targeted Domain Controller (DC), likely because the account was not created or due to replication latency or a replication failure. Check the bit flags in the join options to see if the type of join being performed is relying on a pre-created or newly created computer account.
+
+## Resolution
+
+0x534 is likely a transient error that is logged when domain join searches the target domain to determine whether a matching computer account was pre-created or whether the join operation needs to dynamically create a computer account on the target domain.
+
+Focus on the bits in the options flag and whether the type of join being performed is relying on pre-existing accounts or requires creating new ones.
