@@ -86,13 +86,13 @@ Remote Desktop Services clients are repeatedly denied access to the Remote Deskt
 
 Additionally, check the following Event Viewer paths:
 
-In RD Session Host:
+On the RD Session Host server:
 
 - **Event Viewer** > **Applications and Services Logs** > **Microsoft** > **Windows** > **RemoteApp and Desktop Connections**
 - **Event Viewer** > **Applications and Services Logs** > **Microsoft** > **Windows** > **TerminalServices-LocalSessionManager**
 - **Event Viewer** > **Applications and Services Logs** > **Microsoft** > **Windows** > **TerminalServices-RemoteSessionManager**
 
-In RD license server:
+On the RD license server:
 
 **Event Viewer** > **Applications and Services Logs** > **Microsoft** > **Windows** > **TerminalServices-Licensing**
 
@@ -412,7 +412,7 @@ To resolve this problem, back up and then remove the **X509 Certificate** regist
 
 4. On the **Registry** menu, click **Export Registry File**.
 
-5. Type exported- Certificate in the **File name** box, and then click **Save**.
+5. Type `exported- Certificate` in the **File name** box, and then click **Save**.
 
     > [!NOTE]
     > If you have to restore this registry subkey in the future, double-click the Exported-parameters.reg file that you saved in this step.
