@@ -1,50 +1,47 @@
 ---
-title: Duplicate SLA KPI instances are being created. 
-description: Provides a resolution for an issue where the duplicate service-level agreements (SLA) KPI instance are being created.
+title: Duplicate SLA KPI Instances are Created
+description: Resolves duplicate SLA KPI instances caused by custom logic, privilege issues, or SLA items ordering in Microsoft Dynamics 365 Customer Service.
 ms.reviewer: sdas, ghoshsoham
 ms.author: v-heenaattar
-ms.date: 03/11/2025
+ms.date: 03/24/2025
+ms.custom: sap:Service Level Agreements
 ---
+# Duplicate SLA KPI instances are created
 
-# Duplicate SLA KPI instances are being created. 
+This article explains how to troubleshoot and resolve the issue of duplicate service-level agreement (SLA) KPI instances in Dynamics 365 Customer Service.
 
- 
-This article provides a resolution for an issue where the duplicate service-level agreements (SLA) KPI instance are being created. 
+## Symptoms
 
-## Symptoms: 
+Duplicate SLA KPI instances might be created in the following scenarios:
 
-   Duplicate SLA KPI instances are seen been created during update of status of slakpiinstances or duplicate slakpiinstance are created at once. 
+- During an [update of the status of SLA KPI instances](/dynamics365/customer-service/use/customer-service-hub-user-guide-case-sla#know-the-status-of-an-sla-kpi-instance-record), multiple SLA KPI instances might be unintentionally created.
+- Multiple SLA KPI instances are created simultaneously for the same SLA item, which might occur due to overlapping triggers or misconfigured workflows.
 
-   Example: When SLA is applied to a record like Case and the SLA has one slaitem created for Resolve By KPI, then when the conditions on the Case for SLA are met only one slakpiinstance for ResolveByKPI will be created. But in some cases we see duplicate slakpiinstance for ResolveByKPI been created. 
-  
-## Cause: 
+For example, when [an SLA is applied to a record, such as a case](/dynamics365/customer-service/administer/apply-slas), and the SLA includes an SLA item created for the **Resolve By KPI**, only one SLA KPI instance for the **Resolve By KPI** should be created when the conditions defined on the case are met. However, in some scenarios, duplicate SLA KPI instances are created for the **Resolve By KPI**.
 
-   Custom logic implemented by custom plugins/workflows/flows/actions. 
+## Cause
 
-## Mitigation: 
+This issue could be caused by custom logic implemented through plugins, workflows, flows, or actions.
 
-Out-of-the-box (OOB) functionality automatically creates SLA KPI instances. Hence the below customizations should be checked. 
+## Resolution
 
-1. Analyze Existing Customizations on OOB flows: 
+By default, out-of-the-box (OOB) functionality automatically creates SLA KPI instances based on the SLA configuration and conditions defined in the SLA item. To identify the root cause and resolve issues with duplicate SLA KPI instances, check the following customizations and configurations:
 
-	a. Review the custom logic implemented in the SLA monitoring flow and SLA item flow. 
+- Analyze existing customizations on OOB flows
 
-	b. Identify redundant triggers for creating SLA KPI instances. 
+   1. Review the custom logic implemented in the SLA monitoring flow and SLA item flow.
+   1. Identify redundant triggers that might cause duplicate SLA KPI instances.
 
-2. Validate custom plugins and workflows: 
+- Validate custom plugins and workflows
 
-	a. Disable custom plugins and workflows and check if the issue is still a repro.  
+   1. Temporarily disable custom plugins and workflows to see if the issue persists.
+   1. If the issue is resolved after disabling custom plugins, revisit and rectify the custom plugin logic causing the duplication.
 
-	b. In this case custom plugins logic should be revisited and rectified. 
- 
-3. Privilege Misconfiguration: 
+- Verify user privilege configuration
 
-	a. Please make sure that the prerequisites for user privileges should be met as per the SLA document here:[Configure service-level agreements in Dynamics 365 Customer Service](/dynamics365/customer-service/administer/define-service-level-agreements#prerequisites)
+  Ensure that user privileges meet the [prerequisites](/dynamics365/customer-service/administer/define-service-level-agreements#prerequisites).
 
-4. Ordering of SLAItems : 
+- Verify ordering sequence of SLA items
 
-	a. Ordering of SLAItems in the SLA might also cause duplication of the SLA. 
-
-	b. In this case, slaitems causing duplicate slakpiinstance should moved at the top in the sequence in the SLA. 
-
- 
+   1. Review the ordering sequence of SLA items in the SLA configuration.
+   1. If duplicate SLA KPI instances are caused by SLA item ordering, reorder the SLA items causing duplicate SLA KPI instances by moving them to the top of the sequence in the SLA configuration.
