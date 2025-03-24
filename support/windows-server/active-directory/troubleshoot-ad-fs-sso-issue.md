@@ -206,6 +206,7 @@ If the application that you want to access is Microsoft Online Services for Offi
 1. Get the current SupportsMFA domain federation setting by running the following command:
 
    ```powershell
+   Connect-MgGraph -scopes Domain.ReadWrite.All, Directory.ReadWrite.All
    Get-MgDomainFederationConfiguration -DomainId <domain_id> | FL *
    ```
 
@@ -213,6 +214,12 @@ If the application that you want to access is Microsoft Online Services for Offi
 
    ```powershell
    Update-MgDomainFederationConfiguration -DomainId <DomainName> -FederatedIdpMfaBehavior "acceptIfMfaDoneByFederatedIdp"
+   ```
+
+3. Then, run the following command to sign out:
+
+   ```powershell
+   Disconnect-MgGraph
    ```
 
 ### Check if SSO is disabled
@@ -244,7 +251,7 @@ Let's check the internal sign-in functionality using IdpInitiatedSignOn. To do t
    ```
 
 2. From a computer that is inside your network, visit the following page:  
-   `https://<FederationInstance>/adfs/ls/idpinitiatedsignon.aspx`
+   `https://<FederationInstance>/adfs/ls/idpinitiatedsignon`
 
 3. Enter the correct credentials of a valid user on the sign-in page.
 
@@ -1079,4 +1086,5 @@ For more informaiton, see the following articles:
 - [Get-MgDomainFederationConfiguration](/powershell/module/microsoft.graph.identity.directorymanagement/get-mgdomainfederationconfiguration)
 - [Update-MgDomainFederationConfiguration](/powershell/module/microsoft.graph.identity.directorymanagement/update-mgdomainfederationconfiguration)
 - [Connect-MgGraph](/powershell/microsoftgraph/authentication-commands#use-connect-mggraph)
+- [Disconnect-MgGraph](/powershell/module/microsoft.graph.authentication/disconnect-mggraph)
 - [Get-MgUser](/powershell/module/microsoft.graph.users/get-mguser)
