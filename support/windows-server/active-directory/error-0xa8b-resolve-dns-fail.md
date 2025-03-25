@@ -21,11 +21,11 @@ When you join a workgroup computer to a domain, you receive the following error 
 When you check the **NetSetup.log** file, you see the following entries:
 
 ```output
-mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: status of verifying DNS A record name resolution for '<DC name>.<domain>.<tld>: 0x2746
-mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: failed to find a DC in the specified domain: 0xa8b, last error is 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: NetpDsGetDcName returned: 0xa8b
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: Function exits with status of: 0xa8b
-mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0xa8b
+NetpDsGetDcName: status of verifying DNS A record name resolution for '<DC name>.<domain>.<tld>: 0x2746
+NetpDsGetDcName: failed to find a DC in the specified domain: 0xa8b, last error is 0x0
+NetpJoinDomainOnDs: NetpDsGetDcName returned: 0xa8b
+NetpJoinDomainOnDs: Function exits with status of: 0xa8b
+NetpDoDomainJoin: status: 0xa8b
 ```
 
 Here's more information about the error code:
