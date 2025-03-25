@@ -206,13 +206,13 @@ If you pull an image by using an [image pull secret](https://kubernetes.io/docs/
 
 ### Cause 1b: 401 Unauthorized error due to incompatible architecture
 
-You might encounter a "401 Unauthorized" error even when the AKS cluster identity is authorized (as described in the [Cause 1a: 401 Unauthorized error due to incorrect authorization](#cause1a) section). This issue can happen if the container image in Azure Container Registry (ACR) doesn't match the architecture (such as arm64 vs. amd64) of the node running the container. For example, deploying an arm64 image on an amd64 node or vice versa can result in this error.
+You might encounter a "401 Unauthorized" error even when the AKS cluster identity is authorized (as described in the [Cause 1a: 401 Unauthorized error due to incorrect authorization](#cause1a) section). This issue can happen if the container image in the ACR doesn't match the architecture (such as arm64 versus amd64) of the node running the container. For example, deploying an arm64 image on an amd64 node or vice versa can result in this error.
 
 The error message will appear as follows:
 
 > Failed to pull image "\<acrname>.azurecr.io/\<repository:\tag>": [rpc error: code = NotFound desc = failed to pull and unpack image "\<acrname>.azurecr.io/\<repository:\tag>": no match for platform in manifest: not found, failed to pull and unpack image "\<acrname>.azurecr.io/\<repository\:tag>": failed to resolve reference "\<acrname>.azurecr.io/\<repository\:tag>": failed to authorize: failed to fetch anonymous token: unexpected status from GET request to https://\<acrname>.azurecr.io/oauth2/token?scope=repository%3A\<repository>%3Apull&service=\<acrname>.azurecr.io: 401 Unauthorized]
 
-When diagnosing this issue using Azure CLI, you might see an unexpected "exec format error" if your system node pool runs a different architecture than the image in ACR:
+When diagnosing this issue using the Azure CLI, you might see an unexpected "exec format error" if your system node pool runs a different architecture than the image in the ACR:
 
 ```azurecli
 az aks check-acr --resource-group <MyResourceGroup> --name <MyManagedCluster> --acr <myacr>.azurecr.io
@@ -220,7 +220,7 @@ az aks check-acr --resource-group <MyResourceGroup> --name <MyManagedCluster> --
 exec /canipull: exec format error
 ```
 
-#### Solution: Push images with correct achitecture or push mult-architectgure images
+#### Solution: Push images with the correct architecture or push multi-architecture images
 
 To resolve this issue, use one of the following methods:
 
