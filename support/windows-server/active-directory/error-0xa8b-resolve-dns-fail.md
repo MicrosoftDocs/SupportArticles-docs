@@ -60,7 +60,7 @@ To resolve this error, follow these steps:
     - The `_msdcs.<forest root domain>` zone doesn't contain a Lightweight Directory Access Protocol (LDAP) SRV record for a DC in the target domain.
     - The host A record is missing from the target AD domain zone.
     - The host A record is present but contains the wrong IP address for the target DC.
-    - The host A record is present but was registered by a network interface that isn't accessible to the client computer.
+    - The host A record is present but is registered by a network interface that isn't accessible to the client computer.
 
 3. Check for special names in the target Active Directory domain that require other configuration:
 
@@ -73,4 +73,4 @@ To resolve this error, follow these steps:
     - A broken Network Interface Card (NIC)  on the client computer or the target DC.
     - A broken network link.
 
-You can use tools like [nslookup](/windows-server/administration/windows-commands/nslookup) to verify the availability and content of DNS records from the client end, and use tools like [ping](/windows-server/administration/windows-commands/ping) or [tracert](/windows-server/administration/windows-commands/tracert) to check the reachability of IP addresses. You can use [PortQry](../networking/portqry-command-line-port-scanner-v2.md) to try specific DC UDP and TCP server ports. A starting point for DC server ports is [Configure firewall for AD domain and trusts](config-firewall-for-ad-domains-and-trusts.md).
+You can use tools like [nslookup](/windows-server/administration/windows-commands/nslookup) to verify the availability and content of DNS records from the client end, and use tools like [ping](/windows-server/administration/windows-commands/ping) or [tracert](/windows-server/administration/windows-commands/tracert) to check the reachability of IP addresses. You can use [PortQry](../networking/portqry-command-line-port-scanner-v2.md) to try specific DC UDP and TCP server ports. A starting point for DC server ports is to [Configure a firewall for AD domains and trusts](config-firewall-for-ad-domains-and-trusts.md).
