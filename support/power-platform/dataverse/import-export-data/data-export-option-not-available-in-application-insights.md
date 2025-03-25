@@ -40,7 +40,7 @@ To enable the data export feature, follow these steps:
 
 4. After converting the environment to managed, check if the data export option is now available in Azure Application Insights.
 
-5. Manually schedule data exports.
+5. Manually schedule data exports. For more information, see [Export data to Application Insights](/power-platform/admin/set-up-export-application-insights).
 
    > [!NOTE]
    > Currently, Azure Application Insights doesn't support automatic scheduling for data exports. Users need to manually schedule exports.
