@@ -1,7 +1,7 @@
 ---
 title: Active and retired troubleshooters for Windows 10 and Windows 11
 description: Introduce active and retired troubleshooters for Windows 10 and Windows 11.
-ms.date: 01/15/2025
+ms.date: 03/24/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -207,3 +207,16 @@ This troubleshooter automatically runs two times. It runs the first time on all 
 |Activation date|Retirement date|More information|
 |---|---|---|
 |2/7/2020|\-|[https://aka.ms/AA7afc1](https://aka.ms/AA7afc1)|
+
+## Troubleshooter for Windows logon
+
+The text displayed in **Settings**:  
+Automatically repair system files and settings to fix a problem on your device
+
+### Description
+
+The Windows logon troubleshooter addresses issues with user logon by repairing corrupted or missing resource files. It runs automatically on machines that have corrupted or missing resource files and can't be run manually. To check if it has run, go to **Start** > **Settings** > **Update & Security** > **Troubleshoot** > **View troubleshooting history** in Windows 10, or **Start** > **Settings** > **System** > **Troubleshoot** > **Recommended troubleshooter history** in Windows 11, and look for **Windows logon troubleshooter** and **fix Windows logon issue**.
+  
+|Activation date|Retirement date|More information|
+|---|---|---|
+|3/24/2025||[https://aka.ms/AAv1efl](https://aka.ms/AAv1efl)|
