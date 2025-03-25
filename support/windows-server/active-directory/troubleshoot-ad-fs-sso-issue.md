@@ -79,6 +79,13 @@ Verify if the user agent string of your browser is in the list. If not, add the 
    $wiaStrings = $wiaStrings+"NewUAString"
    ```
 
+   Example:
+
+   ```powershell
+   #Add Edge and Chrome on Windows to the string
+   $wiaStrings = $wiaStrings+"=~Windows\s*NT.*Edg.*"+ "=~Windows\s*NT.*Chrome"
+   ```
+
 4. Update the WIASupportedUserAgents setting by running the following command:
 
    ```powershell
