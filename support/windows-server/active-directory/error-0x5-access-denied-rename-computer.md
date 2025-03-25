@@ -35,12 +35,6 @@ ADATUMDC01   10.101.56.150 MSRPC MSRPC:c/o Fault:  Call=0x2  Context=0x0  Status
 ...
 ```
 
-In addition, you see the following event in the DC SAM server Event Trace Log (ETL):
-
-```output
-[SAMSRV] security_c3857 SampCheckRpcRemoteCallerAccess() - Remote SAM Access is denied in case1 for the client SID:<SID> from network address: <IP Address>
-```
-
 ## Security policy prevent malicious SAM enumeration
 
 Remote SAM access control was introduced in Windows Server 2016 and Windows 10, version 1607 and later versions as a new security policy to prevent malicious SAM enumeration. Here's the information of the policy:
