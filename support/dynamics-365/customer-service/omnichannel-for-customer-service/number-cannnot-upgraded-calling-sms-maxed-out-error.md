@@ -9,7 +9,7 @@ ms.custom: sap:Messaging capabilities, DFM
 ---
 # "This number cannot be upgraded. Calling and SMS capabilities maxed out" error
 
-This article helps you resolve the error you may encounter when using a trial phone number in Azure Communication Services.
+This article helps you resolve the error you may encounter when your SMS channel is configured to use a trial phone number in Azure Communication Services.
 
 ## Symptoms
 
@@ -28,4 +28,5 @@ To resolve this issue,
 1. Remove the default trial phone number.
 2. Use the purchased phone number instead of the default phone number.
 
-For more information about trial phone numbers in Azure Communication Services, see [Frequently asked questions about trial phone numbers in Azure Communication Services](/azure/communication-services/concepts/telephony/trial-phone-numbers-faq).
+For information on configuring an SMS channel using Azure Communication Services, see [Configure an SMS channel using Azure Communication Services](/dynamics365/customer-service/administer/configure-sms-channel-acs).
+For information on trial phone numbers in Azure Communication Services, see [Frequently asked questions about trial phone numbers in Azure Communication Services](/azure/communication-services/concepts/telephony/trial-phone-numbers-faq).
