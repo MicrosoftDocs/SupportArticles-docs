@@ -21,11 +21,11 @@ You receive the following error message during a domain join operation:
 When you check the **NetSetup.log** file, you see the following entries:
 
 ```output
-mm/dd hh:mm:ss NetpDsGetDcName: failed to find a DC having account '<computer name>$': 0x525
-mm/dd hh:mm:ss NetpDsGetDcName: found DC '\\<dc name>' in the specified domain
-mm/dd hh:mm:ss NetUseAdd to \\<dc name>\IPC$ returned 1385
-mm/dd hh:mm:ss NetpJoinDomain: status of connecting to dc '\\<dc name>': 0x569
-mm/dd hh:mm:ss NetpDoDomainJoin: status: 0x569
+NetpDsGetDcName: failed to find a DC having account '<computer name>$': 0x525
+NetpDsGetDcName: found DC '\\<dc name>' in the specified domain
+NetUseAdd to \\<dc name>\IPC$ returned 1385
+NetpJoinDomain: status of connecting to dc '\\<dc name>': 0x569
+NetpDoDomainJoin: status: 0x569
 ```
 
 Here's more information about the error code:
