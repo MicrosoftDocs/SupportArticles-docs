@@ -12,23 +12,36 @@ ms.collection: linux
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.topic: troubleshooting
-ms.date: 12/04/2024
+ms.date: 03/25/2025
 ms.author: genli
 ---
 # Troubleshoot Linux virtual machine performance issues with Performance Diagnostics (PerfInsights)
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-[PerfInsights Linux](https://aka.ms/perfinsightslinuxdownload) is a self-help diagnostics tool that collects and analyzes the diagnostic data, and provides a report to help troubleshoot Linux virtual machine performance problems in Azure. PerfInsights can be run on supported virtual machines as a standalone tool, or directly from the portal by using [Performance Diagnostics for Azure virtual machines](../windows/performance-diagnostics.md).
+[PerfInsights Linux](https://aka.ms/perfinsightslinuxdownload) is a self-help diagnostics tool that collects and analyzes diagnostic data, and provides a report to help troubleshoot Windows virtual machine (VM) performance problems in Azure. Use Performance Diagnostics to identify and troubleshoot performance issues in one of two modes:
 
-If you are experiencing performance problems with virtual machines, before contacting support, run this tool.
+- **Continuous diagnostics (preview)** collects data at five-second intervals and reports actionable insights about high resource usage every five minutes. 
 
-> [!NOTE]
-> [Continuous diagnostics (preview)](../windows/performance-diagnostics.md) is currently supported only on Windows. 
+- **On-demand diagnostics** helps you troubleshoot an ongoing performance issue with more in-depth data, insights, and recommendations based on data collected at a single point in time. 
+
+This article explains how to download the Performance Diagnostics extension to your Windows VM and run the tool using the CLI tool. You can also [run Performance Diagnostics from the portal](../windows/performance-diagnostics.md). 
+
+If you're experiencing performance problems with virtual machines, before contacting support, run Performance Diagnostics 
 
 ## Supported troubleshooting scenarios
 
-PerfInsights can collect and analyze several kinds of information. The following sections cover common scenarios.
+You can use Performance Diagnostics to troubleshoot various scenarios. The following sections describe common scenarios for using Continuous and On-Demand Performance Diagnostics to identify and troubleshoot performance issues. For a comparison of Continuous and On-Demand Performance Diagnostics, see [Performance Diagnostics insights and reports](../windows/performance-diagnostics.md).
+ 
+## Continuous diagnostics 
+
+Continuous Performance diagnostics lets you identify high resource usage by monitoring your VM regularly for: 
+
+- High CPU usage: Detects high CPU usage periods, and shows the top CPU usage consumers during those periods. 
+
+- High memory usage: Detects high memory usage periods, and shows the top memory usage consumers during those periods. 
+
+- High disk usage: Detects high disk usage periods on physical disks, and shows the top disk usage consumers during those periods.
 
 ### Quick performance analysis
 
@@ -250,7 +263,7 @@ To run the PerfInsights tool, follow these steps:
     sudo python perfinsights.py
     ```
 
-    :::image type="content" source="media/how-to-use-perfinsights-linux/perfinsights-linux-commandline.png" alt-text="Screenshot of PerfInsights Linux command-line output.":::
+    :::image type="content" source="media/how-to-use-perfinsights-linux/perfinsights-linux-command-line.png" alt-text="Screenshot of PerfInsights Linux command-line output.":::
 
     The basic syntax for running PerfInsights scenarios is:
 

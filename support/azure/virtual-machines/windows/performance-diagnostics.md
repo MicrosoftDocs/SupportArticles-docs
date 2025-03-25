@@ -10,7 +10,7 @@ tags: ''
 ms.service: azure-virtual-machines
 ms.workload: infrastructure-services
 ms.topic: troubleshooting
-ms.date: 01/09/2025
+ms.date: 03/25/2025
 ms.custom: sap:VM Performance
 ms.reviewer: guywild, poharjan
 ms.author: anandh
@@ -24,17 +24,14 @@ ms.author: anandh
 
 You can use the Performance Diagnostics tool to identify and troubleshoot performance issues on your Azure virtual machine (VM) in one of two modes:
 
-* **Continuous diagnostics (preview)** collects data at five-second intervals and reports actionable insights about high resource usage every five minutes. Continuous diagnostics (preview) is currently supported only on Windows.
+* **Continuous diagnostics** collects data at five-second intervals and reports actionable insights about high resource usage every five minutes. Continuous diagnostics is Generally Available (GA) for Windows VM and in Public Preview for Linux VM.
 * **On-demand diagnostics** helps you troubleshoot an ongoing performance issue by providing more in-depth data, insights, and recommendations that are based on data that's collected at a single moment. On-demand diagnostics is supported on both Windows and Linux.
 
 Performance Diagnostics stores all insights and reports in a storage account that you can configure for short data retention to minimize costs.
 
 Run Performance Diagnostics directly from the Azure portal, where you can also review insights and a report about various logs, rich configuration, and diagnostics data. We recommend that you run Performance Diagnostics and review the insights and diagnostics data before you contact Microsoft Support.
 
-This article explains how to use Performance Diagnostics and what the continuous and on-demand modes offer. 
-
-> [!NOTE]
-> Continuous diagnostics (preview) is currently supported only on Windows. On Windows VMs, you'll see the option to enable both on-demand and continuous diagnostics. On Linux VMs, you'll see the option to enable on-demand diagnostics. For more information, see [Install and run Performance Diagnostics on your VM](#install-and-run-performance-diagnostics-on-your-vm).
+This article explains how to use Performance Diagnostics and what the continuous and on-demand modes offer.
 
 ## Prerequisites
 
@@ -159,7 +156,7 @@ This table compares the data that's provided by Continuous and On-demand Perform
 
 |                               | Continuous Performance Diagnostics                                                                          | On-demand Performance Diagnostics                                                        |
 |-------------------------------|-------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
-| **Availability**              | Currently supported only for Windows VMs                                                                    | Supported for both Windows and Linux VMs                                                 |
+| **Availability**              | GA for Windows VM, Public Preview for Linux VM                                                                     | GA for both Windows and Linux VMs                                                 |
 | **Insights generated**        | Continuous actionable insights into high resource usage, such as high CPU, high memory, and high disk usage | On-demand actionable insights into high resource usage and various system configurations |
 | **Data collection frequency** | Collects data every 5 seconds, updates are uploaded every 5 minutes                                             | Collects data on demand for the selected duration of the on-demand run                    |
 | **Reports generated**         | Doesn't generate a report                                                                                   | Generates a report that has comprehensive diagnostics data                                   |
