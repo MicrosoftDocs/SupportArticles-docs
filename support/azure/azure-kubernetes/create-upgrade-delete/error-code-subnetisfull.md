@@ -48,16 +48,12 @@ Trying to update a subnet's Classless Inter-Domain Routing (CIDR) address space 
 
 ## Best practices
 
-To avoid subnet full issues in Azure Kubernetes Service (AKS), it's important to follow best practices related to subnet sizing, IP address management, and node pool strategies. Here are some key recommendations: 
+To avoid SubnetIsFull issues in Azure Kubernetes Service (AKS), it's important to follow best practices related to subnet sizing, IP address management, and node pool strategies. Here are some key recommendations: 
 
-1. Plan for Future Growth: When creating subnets, ensure they are large enough to accommodate future growth. It's recommended to reserve more IP addresses than currently needed to avoid running out of space as the cluster scales. 2. Use Larger Subnet CIDR: If possible, use a larger subnet CIDR to provide more IP addresses. This helps in accommodating more nodes and pods without running into IP exhaustion issues.
-
+1. Plan for Future Growth: When creating subnets, ensure they are large enough to accommodate future growth. It's recommended to reserve more IP addresses than currently needed to avoid running out of space as the cluster scales. 
 2. Use Larger Subnet CIDR: If possible, use a larger subnet CIDR to provide more IP addresses. This helps in accommodating more nodes and pods without running into IP exhaustion issues.
-
 3. Monitor IP Usage: Regularly monitor the IP address usage within your subnets to identify potential issues before they become critical. Tools like Azure Monitor can help track IP address consumption.
-
 4. Optimize IP Allocation: Ensure that IP addresses are allocated efficiently. Avoid reserving IP addresses unnecessarily and release any unused IP addresses to free up space.
-
 5. Use Multiple Node Pools: Consider using multiple node pools with different subnets to distribute the IP address load. This can help mitigate the risk of running out of IP addresses in a single subnet.   
 
 ## More information
