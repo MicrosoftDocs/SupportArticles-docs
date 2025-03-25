@@ -25,19 +25,19 @@ You fail to join a domain and receive one of the following error messages:
 When you check the **NetSetup.log** file, you see the following entries:
 
 ```output
-mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: failed to find a DC having account 'CLIENT101$': 0x525, last error is 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: status of verifying DNS A record name resolution for 'AdatumDC2.adatum.com': 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: found DC '\\AdatumDC2.adatum.com' in the specified domain
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: NetpDsGetDcName returned: 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpDisableIDNEncoding: using FQDN adatum.com from dcinfo
-mm/dd/yyyy hh:mm:ss:ms NetpDisableIDNEncoding: DnsDisableIdnEncoding(UNTILREBOOT) on 'adatum.com' succeeded
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: NetpDisableIDNEncoding returned: 0x0
-mm/dd/yyyy hh:mm:ss:ms NetUseAdd to \\AdatumDC2.adatum.com\IPC$ returned 50
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: status of connecting to dc '\\AdatumDC2.adatum.com': 0x32
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: Function exits with status of: 0x32
-mm/dd/yyyy hh:mm:ss:ms NetpResetIDNEncoding: DnsDisableIdnEncoding(RESETALL) on 'adatum.com' returned 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: NetpResetIDNEncoding on 'adatum.com': 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0x32
+NetpDsGetDcName: failed to find a DC having account 'CLIENT101$': 0x525, last error is 0x0
+NetpDsGetDcName: status of verifying DNS A record name resolution for 'AdatumDC2.adatum.com': 0x0
+NetpDsGetDcName: found DC '\\AdatumDC2.adatum.com' in the specified domain
+NetpJoinDomainOnDs: NetpDsGetDcName returned: 0x0
+NetpDisableIDNEncoding: using FQDN adatum.com from dcinfo
+NetpDisableIDNEncoding: DnsDisableIdnEncoding(UNTILREBOOT) on 'adatum.com' succeeded
+NetpJoinDomainOnDs: NetpDisableIDNEncoding returned: 0x0
+NetUseAdd to \\AdatumDC2.adatum.com\IPC$ returned 50
+NetpJoinDomainOnDs: status of connecting to dc '\\AdatumDC2.adatum.com': 0x32
+NetpJoinDomainOnDs: Function exits with status of: 0x32
+NetpResetIDNEncoding: DnsDisableIdnEncoding(RESETALL) on 'adatum.com' returned 0x0
+NetpJoinDomainOnDs: NetpResetIDNEncoding on 'adatum.com': 0x0
+NetpDoDomainJoin: status: 0x32
 ```
 
 Here's more information about the error code:
