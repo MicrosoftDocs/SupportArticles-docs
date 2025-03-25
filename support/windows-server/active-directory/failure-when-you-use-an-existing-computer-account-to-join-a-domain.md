@@ -21,7 +21,7 @@ When you try to use an existing computer account name to join a computer to a do
 In the **Access work or school** page:  
 > Can't join this domain. Contact your IT admin for more info.
 
-In **System Properties**:
+In **System Properties**:  
 > The following error occurred attempting to join the domain "\<domain_name\>":
 >
 > An account with the same name exists in Active Directory.  

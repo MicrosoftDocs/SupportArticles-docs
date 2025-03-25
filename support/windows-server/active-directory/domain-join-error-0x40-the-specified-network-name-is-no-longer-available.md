@@ -103,4 +103,4 @@ DC1.ADATUM.COM         CLIENT1            TCP      TCP:Flags=...A...., SrcPort=K
 DC1.ADATUM.COM         CLIENT1            TCP      TCP:Flags=...A.R.., SrcPort=Kerberos(88), DstPort=59259, PayloadLen=0, Seq=2785284136, Ack=1299632507, Win=0 (scale factor 0x0) = 0 
 ```
 
-From the trace, we can find the Domain Controller (DC) doesn't respond to the Ticket Granting Service (TGS) request from the client for the Service Principal Name (SPN) CIFS/DC1.ADATUM.COM. It sends back a Transmission Control Protocol (TCP) acknowledgment, which suggests the DC received the TGS request. However, it doesn't reply with a valid TGS Response. Finally, the client terminates the TCP connection.
+From the trace, we can find the DC doesn't respond to the Ticket Granting Service (TGS) request from the client for the Service Principal Name (SPN) CIFS/DC1.ADATUM.COM. It sends back a Transmission Control Protocol (TCP) acknowledgment, which suggests the DC received the TGS request. However, it doesn't reply with a valid TGS Response. Finally, the client terminates the TCP connection.

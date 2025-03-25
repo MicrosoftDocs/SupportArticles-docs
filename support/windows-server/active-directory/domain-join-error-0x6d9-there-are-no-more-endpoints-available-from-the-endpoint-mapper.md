@@ -29,19 +29,19 @@ NetpLsaOpenSecret: status: 0xc0000034
 NetpGetLsaPrimaryDomain: status: 0x0
 NetpLsaOpenSecret: status: 0xc0000034
 NetpManageMachineAccountWithSid: NetUserAdd on \\<hostname>.<domain> for <computername>$ failed: 0x8b0
-NetpManageMachineAccountWithSid: status of attempting to set password on \\<DC name>.<domain>.<tld> for <hostname>$: 0x0
+NetpManageMachineAccountWithSid: status of attempting to set password on \\<DC_name>.<domain>.<tld> for <hostname>$: 0x0
 NetpJoinDomain: status of creating account: 0x0
-NetpGetComputerObjectDn: Unable to bind to DS on \\<DC name>.<domain>.<tld>: 0x6d9
+NetpGetComputerObjectDn: Unable to bind to DS on \\<DC_name>.<domain>.<tld>: 0x6d9
 NetpSetDnsHostNameAndSpn: NetpGetComputerObjectDn failed: 0x6d9
 ldap_unbind status: 0x0
 NetpJoinDomain: status of setting DnsHostName and SPN: 0x6d9
 NetpJoinDomain: initiaing a rollback due to earlier errors
 NetpGetLsaPrimaryDomain: status: 0x0
-NetpManageMachineAccountWithSid: status of disabling account <hostname>$ on \\<DC name>.<domain>.<tld>: 0x0
+NetpManageMachineAccountWithSid: status of disabling account <hostname>$ on \\<DC_name>.<domain>.<tld>: 0x0
 NetpJoinDomain: rollback: status of deleting computer account: 0x0
 NetpLsaOpenSecret: status: 0x0
 NetpJoinDomain: rollback: status of deleting secret: 0x0
-NetpJoinDomain: status of disconnecting from \\<DC name>.<domain>.<tld>: 0x0
+NetpJoinDomain: status of disconnecting from \\<DC_name>.<domain>.<tld>: 0x0
 NetpDoDomainJoin: status: 0x6d9
 ```
 
