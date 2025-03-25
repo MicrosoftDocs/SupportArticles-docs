@@ -4,8 +4,6 @@
   items:
     - name: Can't switch between different Teams organizations in the Dynamics 365 app
       href: cases-or-incidents/cannot-switch-teams-organizations-dynamics-365-app.md
-    - name: Sentiment analysis not reflecting positive sentiment or capitalization
-      href: cases-or-incidents/sentiment-analysis-not-reflecting-positive-sentiment-or-capitalization.md 
 - name: Customer Service Insights
   items:
     - name: Troubleshoot issues using Solution Health Hub
@@ -138,16 +136,8 @@
       items:
         - name: Can't deploy a custom Agent script solution
           href: omnichannel-for-customer-service/custom-agentscript-solution.md
-    - name: Custom Channel
-      items:
-        - name: Can't receive Instagram messages and comments in a customer service application
-          href: omnichannel-for-customer-service/cannot-receive-instagram-messages-and-comments.md
-        - name: Conversations from custom channel not appearing in Inbox
-          href: omnichannel-for-customer-service/custom-channel-conversations-not-show-in-inbox.md
     - name: Customer summary and Closed conversation form
       items:  
-        - name: Conversations aren't closed automatically after the configured wrap-up time
-          href: omnichannel-for-customer-service/conversations-not-closing-automatically.md
         - name: Conversations remain active after an agent closes the browser
           href: omnichannel-for-customer-service/conversations-still-active-after-closing-browser.md
         - name: The Active Conversation form doesn't display as configured
@@ -210,11 +200,7 @@
           href: omnichannel-for-customer-service/social-data-sync.md
     - name: Voice channel
       items:
-        - name: Can't set display name for outbound calls
-          href: omnichannel-for-customer-service/cannot-set-display-name-for-outbound-calls.md
         - name: Incoming voice calls with long greeting messages cause connection delays
           href: omnichannel-for-customer-service/greeting-message-delay-agent-connection.md
-        - name: Notification not functioning for incoming messages
-          href: omnichannel-for-customer-service/notifications-for-incoming-messages-during-active-sessions.md
         - name: Use diagnostic messages to troubleshoot call issues
           href: omnichannel-for-customer-service/use-diagnostic-messages-in-call-issues.md 
