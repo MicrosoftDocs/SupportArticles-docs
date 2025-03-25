@@ -33,6 +33,11 @@ To fix this issue, follow these steps:
 
 1. Find the policy that blocks the action. These policies are listed in the error message.   
    The name of a policy assignment or definition is the last segment of the `id` string shown in the error message.
+   ```
+   # Example
+   Code: RequestDisallowedByPolicy
+   Message: Resource 'resourcegroup' was disallowed by policy. Policy identifiers: '[{"policyAssignment":{"name":"Not allowed resource types","id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Authorization/policyAssignments/00000000000000000000000"},"policyDefinition":{"name":"Not allowed resource types","id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Authorization/policyDefinitions/not-allowed-resourcetypes","version":"1.0.0"}}]'.
+   ```
 
 1. If possible, change your deployment to meet the limitations of the policy, and then retry the deploy operation.   
    or if you have permission to change policy, [Add an exemption](/azure/governance/policy/tutorials/disallowed-resources#create-an-exemption) to the policy.
