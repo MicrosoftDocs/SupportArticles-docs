@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Slow Page Response and Hangs 
 description: This article helps you troubleshoot slow page response and hang issues.
-ms.date: 03/21/2025
+ms.date: 03/25/2025
 ms.custom: sap:Site Behavior and Performance\Slow page response
 ms.reviewer: khgupta, v-sidong
 ---
@@ -22,7 +22,7 @@ Page slowness and hangs might be accompanied by one or more of the following con
 - Slowness or hang accompanied by high CPU
 
   - Focus on slowness - [Troubleshoot slow page response and hangs](slow-page-response-hangs.md)
-  - Focus on high CPU - [Troubleshooting High CPU in an IIS application pool](troubleshoot-high-cpu-in-iis-app-pool.md) 
+  - Focus on high CPU - [Troubleshooting High CPU in an IIS application pool](troubleshoot-high-cpu-in-iis-app-pool.md)
 
 - Slowness or hang accompanied by high memory
 
@@ -195,7 +195,7 @@ Once the **Tracing** role service is installed, follow these steps to capture FR
 
 1. On the **Define Trace Conditions** page, update the **Time taken** field as per the time that you're noticing the request or page is taking and select **Next**.
 
-  For example, if the request, usually takes less than a second, but now it's taking 20 seconds, type **20** in the **Time Taken** field.
+   For example, if the request, usually takes less than a second, but now it's taking 20 seconds, type **20** in the **Time Taken** field.
 
 1. On the **Select Trace Providers** page, under **Providers**, select all the checkboxes. Under **Areas**, make sure all the checkboxes are selected for each provider. Under **Verbosity**, select **Verbose**. Select **Finish**.
 
@@ -224,7 +224,7 @@ Try to space dumps about 30 seconds apart, but be mindful of the total slowness.
 
 Optionally, ProcDump can be used, especially when you can't install DebugDiag on the server or installation requires it.
 
-If the issue is more intermittent, consider capturing both FREB traces and dumps or if using ProcDump is easier, follow this article (set up FREB for time taken rather than status code).
+If the issue is more intermittent, consider capturing both FREB traces and dumps. Or if using ProcDump is easier, follow the steps in the [Configure FREB to trigger memory dumps using ProcDump.exe](#configure-freb-to-trigger-memory-dumps-using-procdumpexe) section (set up FREB for time taken rather than status code).
 
 #### Issue isn't easily reproduced
 
@@ -456,7 +456,7 @@ F12 Developer Tools are built into both Microsoft Edge and Chrome. In instances 
 
 ### Failed Request Trace (FREB) logs
 
-FREB traces are `.xml` files, and formatted by the `.xsl` stylesheet in the FREB log directory. Use a tool like [FrebSbS](https://github.com/NL-Cristi/FrebSbS) to view these logs. For more information on how to read a FREB log, see [Reading a FREB log, a Failed Request Tracing: IIS request processing pipeline execution](https://techcommunity.microsoft.com/blog/iis-support-blog/reading-a-freb-log-a-failed-request-tracing-iis-request-processing-pipeline-exec/1349639).
+FREB traces are `.xml` files, and formatted by the `.xsl` stylesheet in the FREB log directory. Use a tool like FrebSbS to view these logs. For more information on how to read a FREB log, see [Reading a FREB log, a Failed Request Tracing: IIS request processing pipeline execution](https://techcommunity.microsoft.com/blog/iis-support-blog/reading-a-freb-log-a-failed-request-tracing-iis-request-processing-pipeline-exec/1349639).
 
 ### Full memory dumps
 
