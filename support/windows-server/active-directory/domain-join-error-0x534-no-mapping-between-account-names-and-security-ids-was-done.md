@@ -23,12 +23,12 @@ When you try to join a computer to a domain, you receive the following error mes
 You review the *netsetup.log* log and found error messages that resemble the following:
 
 ```output
-mm/dd/yyyy hh:mm:ss:ms NetpCreateComputerObjectInDs: NetpGetComputerObjectDn failed: 0x534
-mm/dd/yyyy hh:mm:ss:ms NetpProvisionComputerAccount: LDAP creation failed: 0x534
-mm/dd/yyyy hh:mm:ss:ms ldap_unbind status: 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: Function exits with status of: 0x534
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: status of disconnecting from '\\<DC name>': 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0x534
+NetpCreateComputerObjectInDs: NetpGetComputerObjectDn failed: 0x534
+NetpProvisionComputerAccount: LDAP creation failed: 0x534
+ldap_unbind status: 0x0
+NetpJoinDomainOnDs: Function exits with status of: 0x534
+NetpJoinDomainOnDs: status of disconnecting from '\\<DC name>': 0x0
+NetpDoDomainJoin: status: 0x534
 ```
 
 ### Error detail
