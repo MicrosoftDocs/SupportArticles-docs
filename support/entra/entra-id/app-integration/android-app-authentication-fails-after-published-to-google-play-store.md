@@ -3,7 +3,7 @@ title: Android App Authentication Fails After Being Published to Google Play Sto
 description: Provides a solution to an authentication failure with an Android app published to the Google Play Store.
 ms.reviewer: markbukovich, v-weizhu
 ms.service: entra-id
-ms.date: 03/07/2025
+ms.date: 03/25/2025
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
 
@@ -51,7 +51,7 @@ To resolve this issue, do the following things:
 
 You can get a new signature hash by using the MSAL Package Inspector tool or from the Google Play Console.
 
-To install and use the MSAL Package Inspector, see [Package Inspector for MSAL Android Native Guide](https://blogs.aaddevsup.xyz/2022/03/package-inspector-for-msal-android-native-guide/).
+To install and use the MSAL Package Inspector, see [Package Inspector for MSAL Android Native Guide](package-inspector-msal-android-native.md).
 
 To get the signature hash from the Google Play Console, follow these steps:
 
