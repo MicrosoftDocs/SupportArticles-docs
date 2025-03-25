@@ -18,13 +18,9 @@ You fail to join a domain and receive one of the following error messages:
 
 - > Can't join this domain. Contact your IT admin for more info.
 
-    :::image type="content" source="media/status-code-0x32-cannot-join-domain/cannot-join-domain-contact-it.png" alt-text="Screenshot of the error message showing that you can't join a domain and need to contact IT.":::
-
 - > The following error occurred attempting to join the domain "adatum.com":
   >
   > The request is not supported.
-
-    :::image type="content" source="media/status-code-0x32-cannot-join-domain/error-occurred-request-not-support.png" alt-text="Screenshot of the error message showing that an error occurred and the request isn't supported.":::
 
 When you check the **NetSetup.log** file, you see the following entries:
 
@@ -52,9 +48,19 @@ Here's more information about the error code:
 
 ## The security policy is set incorrectly
 
-The **NetSetup.log** file shows that the client fails to establish an SMB session with the DC. If you examine the network trace, it indicates that the DC returns STATUS_NOT_SUPPORTED to the C SESSION SETUP request from the client. The DC rejects the client's credential in the C SESSION SETUP request, which is the initial step of NT LAN Manager (NTLM) authentication.
+The **NetSetup.log** file shows that the client fails to establish an SMB session with the DC. In the network trace, the SMB SESSION SETUP response has an error `NT Status: System – Error. Code  = (187) STATUS_NOT_SUPPORTED`. If you examine the network trace, it indicates that the DC returns `STATUS_NOT_SUPPORTED` to the C SESSION SETUP request from the client. The DC rejects the client's credential in the C SESSION SETUP request, which is the initial step of NT LAN Manager (NTLM) authentication.
 
-If you establish an SMB session to the DC from a workstation in the domain, it succeeds by using the hostname and fails by using the IP.
+If you establish an SMB session to the DC from a workstation in the domain, it succeeds by using the hostname and fails by using the IP. For example:
+
+```console
+C:\users\administrator.adatum>net use \\192.168.2.254\ipc$
+System error 53 has occurred.
+
+The network path was not found.
+
+C:\users\administrator.adatum>net use \\adatumdc2\ipc$
+The operation completed successfully.
+```
 
 However, the network trace pattern shows the same. It seems that the DC doesn't accept NTLM authentication. Status code 0x32 occurs because the security policy **Network security: Restrict NTLM: Incoming NTLM traffic** is incorrectly set to **Deny all accounts**.
 
