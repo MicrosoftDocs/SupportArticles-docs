@@ -105,8 +105,6 @@ For more information, see [Overview of authentication handlers of AD FS sign-in 
 
 If the application that you want to access is not Microsoft Online Services, what you experience is expected and controlled by the incoming authentication request. Work with the application owner to change the behavior.
 
-[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
-
 If the application is Microsoft Online Services, what you experience may be controlled by the **PromptLoginBehavior** setting from the trusted realm object. This setting controls whether Microsoft Entra tenants send prompt=login to AD FS. To set the **PromptLoginBehavior** setting, follow these steps:
 
 1. Open Windows PowerShell with the "Run as administrator" option.
