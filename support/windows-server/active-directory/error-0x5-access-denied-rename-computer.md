@@ -60,6 +60,8 @@ This resolves the problem for all DCs, and ensures they all use the same setting
 
 ## Method 2: Delete the registry value RestrictRemoteSam
 
+Only consider this approach if for some reason you can't follow method 1. With this method, you might encounter the problem again if a DC happens to have `RestrictRemoteSam` set to a restrictive Access Control List.
+
 Delete the registry value to apply the default Security Descriptor Definition Language (SDDL). The default value for DCs means that everyone has read permissions to preserve compatibility. To delete the registry value, run the following command:
 
 ```console
