@@ -1,7 +1,7 @@
 ---
 title: Active and retired troubleshooters for Windows 10 and Windows 11
 description: Introduce active and retired troubleshooters for Windows 10 and Windows 11.
-ms.date: 03/19/2025
+ms.date: 03/24/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -219,4 +219,4 @@ The Windows logon troubleshooter addresses issues with user logon by repairing c
   
 |Activation date|Retirement date|More information|
 |---|---|---|
-|3/13/2025||[https://aka.ms/AAv1efl](https://aka.ms/AAv1efl)|
+|3/24/2025||[https://aka.ms/AAv1efl](https://aka.ms/AAv1efl)|
