@@ -34,11 +34,11 @@ Here's more information about the error code:
 |---------|---------|---------|
 |0x569     |1385         |ERROR_LOGON_TYPE_NOT_GRANTED         |
 
-This error occurs because the domain join user account lacks the **Access this computer from the network** user right.
+This error occurs because the domain join user account lacks the **Access this computer from the network** user right at the domain controller (DC) servicing the domain join operation.
 
 To resolve this error, follow these steps:
 
-1. There's no need to restrict **Everyone** from accessing domain controllers (DCs) over the network. You can add a group named "domain joiners" to the policy.
+1. There's no need to restrict **Everyone** from accessing DCs over the network. You can add a group named "domain joiners" to the policy.
     > [!NOTE]
     > Don't add the user directly.
 2. Verify that **Everyone** or the "domain joiners" group has been granted the **Access this computer from the network** right in the group policy applying to all DCs. By default, this policy is the **Default Domain Controllers Policy**.
