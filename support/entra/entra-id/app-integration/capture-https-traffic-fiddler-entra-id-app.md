@@ -30,8 +30,9 @@ This article provides instructions to use Fiddler to collect HTTPS traffic to tr
     **For non-browser-based applications**:
 
     1. Start the client application that you're testing.
-    1. Reproduce the issue. You should see HTTPS traffic appearing in the Fiddler window.
-    1. On the **File** menu, select **Save** > **All Sessions** to save the sessions as SAZ files.
+    
+1. Reproduce the issue. You should see HTTPS traffic appearing in the Fiddler window.
+1. On the **File** menu, select **Save** > **All Sessions** to save the sessions as SAZ files.
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
