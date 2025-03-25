@@ -21,7 +21,7 @@ You might encounter the following issues in the **Active Conversation** form:
 
 ## Cause
 
-The issue could be caused due to the **Customize Active Conversation form** setting is disabled.
+The issue could be caused by the **Customize Active Conversation form** setting being disabled.
 
 ## Resolution
 
