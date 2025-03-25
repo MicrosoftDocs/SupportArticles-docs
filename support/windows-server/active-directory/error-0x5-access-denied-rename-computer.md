@@ -64,7 +64,7 @@ Set the **Network access: Restrict clients allowed to make remote calls to SAM**
 
 This will resolve the problem for all DCs, and ensure they all use the same setting.
 
-## Method 2:Delete the registry value RestrictRemoteSam
+## Method 2: Delete the registry value RestrictRemoteSam
 
 Delete the registry value to apply the default Security Descriptor Definition Language (SDDL). The default value for DCs means that everyone has read permissions to preserve compatibility. To delete the registry value, run the following command:
 
