@@ -8,11 +8,11 @@ ms.custom: sap:Enterprise Applications
 ---
 # Collect HTTPS traffic using Fiddler from Python Apps
 
-Capturing encrypted HTTPS web traffic in Python with Fiddler can be challenging because Python use its own trusted certificate store rather than the operating system’s certificate store. Additionally, Python does not use a proxy by default in certain scenario. This article explains how to capture SSL traffic using Fiddler for Python app across different scenarios.
+Capturing encrypted HTTPS web traffic in Python with Fiddler can be challenging because Python uses its own trusted certificate store rather than the operating system’s certificate store. Additionally, Python does not use a proxy by default in certain scenario. This article explains how to capture SSL traffic using Fiddler for Python app across different scenarios.
 
 ## ADAL for Python
 
-When you use Fiddler to capture HTTPs traffic in an Python app that integrates Azure Active Directory Authentication Library (ADAL), you may receive SSL errors. This is caused by Python does not trust the Fiddler certificate. Here are two methods to work around this issue:
+When you use Fiddler to capture HTTPs traffic in an Python app that integrates Azure Active Directory Authentication Library (ADAL), you may receive SSL errors. This issue occurs because Python doesn't trust the Fiddler certificate. Here are two methods to work around this issue:
 
 > [!Note]
 > Disabling SSL verification isis a security risk. It should only be used for troubleshooting purposes and avoided in production environments.
@@ -37,7 +37,7 @@ app = msal.PublicClientApplication( client_id=appId, authority="https://login.mi
 ```
 ## Python Requests Module
 
-The Requests module does not use Proxy by default, you must force the request to go through the Fiddler proxy.  The following example shows how to do this:
+The Requests module does not use Proxy by default. You must force the request to go through the Fiddler proxy.  The following example shows how to do this:
 
 ```python
 import requests
