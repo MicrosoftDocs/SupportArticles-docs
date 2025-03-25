@@ -45,8 +45,11 @@ _Original KB number:_ &nbsp; 3079872
         If the domain is displayed as **Federated**, obtain information about the federation trust by running the following commands:
 
         ```powershell
-        Get-MgDomainFederationConfiguration -DomainId <domain>
+        Get-MgDomainFederationConfiguration -DomainId <domain_id>
         ```
+
+        > [!NOTE]
+        > \<domain_id> is a placeholder for your domain's name. For example, contoso.com.
 
         Check the URI, URL, and certificate of the federation partner that's configured by Office 365 or Microsoft Entra ID.
 
@@ -302,11 +305,17 @@ _Original KB number:_ &nbsp; 3079872
 
         Office 365 or Microsoft Entra ID will try to reach out to the AD FS service, assuming the service is reachable over the public network. We try to poll the AD FS federation metadata at regular intervals, to pull any configuration changes on AD FS, mainly the token-signing certificate info. If this process is not working, the global admin should receive a warning on the Office 365 portal about the token-signing certificate expiry and about the actions that are required to update it.
 
-        You can use `Get-MgDomainFederationConfiguration -DomainId <domain>` to dump the federation property on AD FS and Office 365. Here you can compare the TokenSigningCertificate thumbprint, to check whether the Office 365 tenant configuration for your federated domain is in sync with AD FS. If you find a mismatch in the token-signing certificate configuration, run the following command to update it:
+        You can use `Get-MgDomainFederationConfiguration -DomainId <domain_id>` to dump the federation property on AD FS and Office 365. Here you can compare the TokenSigningCertificate thumbprint, to check whether the Office 365 tenant configuration for your federated domain is in sync with AD FS. If you find a mismatch in the token-signing certificate configuration, run the following command to update it:
 
         ```powershell
-        Update-MgDomainFederationConfiguration -DomainId <domain_id> -SigningCertificate <certificate_token>
+        Connect-MgGraph -scopes Domain.ReadWrite.All, Directory.ReadWrite.All
+        $tdo= Get-MgDomainFederationConfiguration -DomainID <domain_id>
+        Update-MgDomainFederationConfiguration -DomainId <domain_id> -InternalDomainFederationId $tdo.Id -SigningCertificate <certificate_token>
+        Disconnect-MgGraph
         ```
+
+        > [!NOTE]
+        > \<domain_id> is a placeholder for your domain's name. For example, contoso.com.
 
         You can also run the following tool to schedule a task on the AD FS server that will monitor for the Auto-certificate rollover of the token-signing certificate and update the Office 365 tenant automatically.
 
