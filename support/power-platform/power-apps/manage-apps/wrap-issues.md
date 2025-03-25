@@ -81,11 +81,11 @@ If you can't sign in to your wrapped mobile app, verify that:
 
 ## Issue 6 - Azure key vault errors in wrap for Power Apps
 
-The following Azure key vault error codes might appear in wrap for Power Apps and can be rectified. Use the search feature to locate specific error codes displayed in the Power Apps wrap wizard portal and follow the appropriate steps to solve the error code.
+The following Azure key vault error codes might appear in wrap for Power Apps and can be rectified. Use the search feature to locate the specific error code displayed in the Power Apps wrap wizard portal and follow the appropriate steps to solve the error code.
 
 - [Error code 1000118: Default subscription not found or missing access permissions.](#error-code-1000118)
-- [Error code 1000119: Key Vault does not exist or is missing access privileges.](#error-code-1000119)
-- [Error code 1000120: No organization ID tags found on Key Vault.](#error-code-1000120)
+- [Error code 1000119: Key vault does not exist or is missing access privileges.](#error-code-1000119)
+- [Error code 1000120: No organization ID tags found on key vault.](#error-code-1000120)
 - [Error code 1000121: Android keystore is not valid. Missing tag and/or certificate.](#error-code-1000121)
 - [Error code 1000122: iOS certificate is not valid.](#error-code-1000122)
 - [Error code 1000123: iOS profile is not valid.](#error-code-1000123)
