@@ -10,25 +10,23 @@ ms.custom:
   - sap:Developer Issues\Macros
   - Outlook for Windows
   - CSSTroubleshoot
-ms.reviewer: 
+ms.reviewer: gbratton
 appliesto: 
   - Outlook for Microsoft 365
   - Outlook 2021
   - Outlook 2019
   - Outlook 2016
 search.appverid: MET150
-ms.date: 03/19/2025
+ms.date: 03/25/2025
 ---
 
 # Can't delete default Outlook folders
 
 _Original KB number:_ &nbsp; 306253
 
-## Summary
-
 In Outlook, all of the default folders must be available; therefore, Outlook doesn't allow you to delete default folders. You can use a Microsoft Exchange utility or the older Microsoft Exchange Client program to delete these folders; however, Outlook recreates these folders when Outlook starts.
 
-## More information
+## Limiting access to default Outlook folders
 
 As an administrator, if you don't want end users to use one of the Outlook modules, such as the Journal or Tasks folder, you can't delete the folder to remove this functionality. However, you can create a Component Object Model (COM) add-in that prevents users from switching to the folder. You can implement the `FolderSwitch` event, and then cancel the event if the user tries to switch to a specific folder.
 

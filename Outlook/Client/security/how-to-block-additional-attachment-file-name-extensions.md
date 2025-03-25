@@ -10,21 +10,19 @@ ms.custom:
   - sap:Data Protection and Security\Attachment administration and control
   - Outlook for Windows
   - CSSTroubleshoot
-ms.reviewer: 
+ms.reviewer: gbratton
 appliesto: 
   - Outlook for Microsoft 365
   - Outlook 2021
   - Outlook 2019
   - Outlook 2016
 search.appverid: MET150
-ms.date: 03/19/2025
+ms.date: 03/25/2025
 ---
 
 # How to configure Outlook to block additional attachment file name extensions
 
 _Original KB number:_ &nbsp; 837388
-
-## Summary
 
 This article describes how to configure Microsoft Outlook to block attachment file name extensions that Outlook doesn't block by default. If you use Outlook in a Microsoft Exchange environment, you can configure the server to block certain attachment file name extensions by using the Outlook E-mail Security Administrator Package.
 

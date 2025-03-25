@@ -10,28 +10,24 @@ ms.custom:
   - sap:Exchange Mailbox Accounts\.ost file synchronization
   - Outlook for Windows
   - CSSTroubleshoot
-ms.reviewer: sbradley
+ms.reviewer: gbratton
 appliesto: 
   - Outlook for Microsoft 365
   - Outlook 2021
   - Outlook 2019
   - Outlook 2016
 search.appverid: MET150
-ms.date: 03/19/2025
+ms.date: 03/25/2025
 ---
 
 # Synchronization monitor in Microsoft Outlook
 
 _Original KB number:_ &nbsp; 3197761
 
-## Summary
-
 Microsoft Outlook includes a feature that is informally known as the synchronization monitor or sync monitor. The sync monitor is a continuous background check of local folders in the Outlook .ost file to verify that they are in sync with their related server folders. If the sync monitor's logic concludes that a folder isn't in sync, the program runs a series of repairs to resolve the problem. The [October 4, 2016, Update for Outlook 2016](https://support.microsoft.com/help/3118375) changes the detection and repair logic, and also add some diagnostic logging to the sync monitor feature.
 
 > [!NOTE]
 > By default, this updated detection and repair logic isn't enabled. To enable this new functionality, see the registry information that is provided in the More Information section.
-
-## More information
 
 The sync monitor runs a series of detection and repair actions based on the synchronization state health of every folder. For example, the sync monitor checks the unread items in the local copy of a folder, and then compares those items to the unread items in the server copy of the folder. If the number of items in each group don't match, a repair is necessary.
 

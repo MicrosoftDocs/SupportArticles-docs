@@ -10,25 +10,21 @@ ms.custom:
   - sap:Exchange Mailbox Accounts\Organizational forms library
   - Outlook for Windows
   - CSSTroubleshoot
-ms.reviewer: aruiz, sercast
+ms.reviewer: gbratton
 appliesto: 
   - Outlook for Microsoft 365
   - Outlook 2021
   - Outlook 2019
   - Outlook 2016
 search.appverid: MET150
-ms.date: 03/19/2025
+ms.date: 03/25/2025
 ---
 
 # How to determine where to publish a custom Outlook form
 
 _Original KB number:_ &nbsp; 290802
 
-## Summary
-
 This article describes some of the considerations to take into account if you're trying to decide where to publish a custom Outlook form.
-
-## More information
 
 In Outlook, custom forms are typically published to a forms library so that only one copy of a form is stored on your computer. Individual items contain a Message Class field that indicates which form to use to display the data that is contained in the item. When you publish custom forms to a forms library, Microsoft Exchange Server-based computers and Outlook use considerably less resources and bandwidth because the form itself doesn't need to be stored within each individual item.
 

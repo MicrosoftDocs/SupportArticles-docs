@@ -10,14 +10,14 @@ ms.custom:
   - sap:Exchange Mailbox Accounts\Autodiscover
   - Outlook for Windows
   - CSSTroubleshoot
-ms.reviewer: 
+ms.reviewer: gbratton
 appliesto: 
   - Outlook for Microsoft 365
   - Outlook 2021
   - Outlook 2019
   - Outlook 2016
 search.appverid: MET150
-ms.date: 03/19/2025
+ms.date: 03/25/2025
 ---
 
 # How to manually create additional Outlook 2016 profiles with ZeroConfigExchange in place
@@ -51,8 +51,6 @@ To create other profiles without the intervention of `ZeroConfigExchange`, add t
 
    **Name**: ZeroConfigExchangeOnce  
    **Value**: 1
-
-## More information
 
 After you add `ZeroConfigExchangeOnce`, `ZeroConfigExchange` still controls the automatic creation of the first profile. After the first profile is automatically created, you can manually create additional profiles that connect to different Exchange accounts.
 

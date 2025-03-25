@@ -13,23 +13,21 @@ appliesto:
   - Outlook 2019
   - Outlook 2016
 search.appverid: MET150
-ms.reviewer: gregmans, v-six
+ms.reviewer: gbratton
 author: cloud-writer
 ms.author: meerak
-ms.date: 03/19/2025
+ms.date: 03/25/2025
 ---
 
 # Application event log entries for Outlook add-in load time
-
-## Summary
 
 By default, Microsoft Outlook writes the name of each connected add-in to the Windows Application Log in the Event Viewer when the add-in gets loaded by Outlook. The Application event log entry includes a **Boot Time** value for each add-in, indicating the amount of time it took for the add-in to be loaded. This makes it easy to find out exactly what add-ins are loaded by Outlook, and how long they took to load. This can help you identify add-ins that cause long startup times for Outlook.
 
 For details on how to manage add-ins in Office programs, see [View, manage, and install add-ins in Office programs](https://support.microsoft.com/office/view-manage-and-install-add-ins-in-office-programs-16278816-1948-4028-91e5-76dca5380f8d).
 
-You can also see the More information section of this article for details on these Application event log entries.
+For more information, see [Add-in entries in the Application event log](#add-in-entries-in-the-application-event-log).
 
-## More information
+## Add-in entries in the Application event log
 
 When you start Outlook, an Application event log entry (Event ID 45) is written with all of the add-ins that are being loaded in the session. The following is an example event in the Application event log, listing some of the add-ins loaded during Outlook startup and the relevant information about each add-in.
 

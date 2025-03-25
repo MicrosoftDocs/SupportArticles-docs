@@ -10,21 +10,19 @@ ms.custom:
   - sap:Developer Issues\Add-in errors
   - Outlook for Windows
   - CSSTroubleshoot
-ms.reviewer: danba, brijs, catagh, gbratton, dvespa
+ms.reviewer: gbratton
 appliesto: 
   - Outlook for Microsoft 365
   - Outlook 2021
   - Outlook 2019
   - Outlook 2016
 search.appverid: MET150
-ms.date: 03/19/2025
+ms.date: 03/25/2025
 ---
 
 # The Outlook Object Model is unsuitable to run in a Windows service
 
 _Original KB number:_ &nbsp; 237913
-
-## Summary
 
 The Outlook Object Model (OOM) is unsuitable for use by an application that's designed to be run as, or spawned by, a Windows Service application. This includes Active Server Page (ASP) applications that run under Internet Information Service (IIS), and applications that run together with the AT Scheduler or Task Scheduler services.
 
@@ -32,7 +30,7 @@ OOM is an automation model for Outlook that is designed to run in a logged-on us
 
 This is a design limitation of Outlook.
 
-## More information
+## OOM limitations
 
 OOM has four major limitations that make it unsuitable for use in a Windows Service application, as follows:
 
@@ -44,7 +42,5 @@ OOM has four major limitations that make it unsuitable for use in a Windows Serv
 - Some actions that use the OOM raise modal dialog boxes that can't be prevented and that require user intervention. This would cause the application to seem to hang.
 
 We recommend that you use Extended MAPI code instead of the OOM in your Windows Service applications. If the code doesn't have to work with Outlook directly and can, instead, run against the mailbox in Exchange, you should consider using Exchange APIs, such as Graph, Exchange REST, and Exchange Web Services (EWS).
-
-## Reference
 
 For more information, see [Considerations for server-side automation of Office](https://support.microsoft.com/help/257757).
