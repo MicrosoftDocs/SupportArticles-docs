@@ -413,3 +413,8 @@
       href: user-prov-sync/exclude-user-primary-group.md
     - name: Yellow exclamation mark in Office 2013
       href: user-prov-sync/yellow-exclamation-mark-office2013.md
+
+- name: Capture SSL traffic
+  items:
+  - name: Capture HTTPS traffic with Fiddler
+    href: app-integration/capture-https-traffic-fiddler-entra-id-app.md
