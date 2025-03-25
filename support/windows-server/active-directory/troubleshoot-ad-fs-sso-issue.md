@@ -114,13 +114,13 @@ If the application is Microsoft Online Services, what you experience may be cont
 
    ```powershell
    Connect-MgGraph -scopes Domain.ReadWrite.All, Directory.ReadWrite.All
-   $tdo= Get-MgDomainFederationConfiguration -DomainID <domain_to_manage>
-   Update-MgDomainFederationConfiguration -DomainId <domain_to_manage> -InternalDomainFederationId $tdo.Id -PromptLoginBehavior <translateToFreshPasswordAuthentication|nativeSupport|disabled>
+   $tdo= Get-MgDomainFederationConfiguration -DomainID <domain_id>
+   Update-MgDomainFederationConfiguration -DomainId <domain_id> -InternalDomainFederationId $tdo.Id -PromptLoginBehavior <translateToFreshPasswordAuthentication|nativeSupport|disabled>
    Disconnect-MgGraph
    ```
 
    > [!NOTE]
-   > \<domain_to_manage> is a placeholder for your domain's name. For example, contoso.com.
+   > \<domain_id> is a placeholder for your domain's name. For example, contoso.com.
 
    The values for the PromptLoginBehavior parameter are:
 
@@ -217,11 +217,11 @@ If the application that you want to access is Microsoft Online Services for Offi
 
    ```powershell
    Connect-MgGraph -scopes Domain.ReadWrite.All, Directory.ReadWrite.All
-   Get-MgDomainFederationConfiguration -DomainId <domain_to_manage> | FL *
+   Get-MgDomainFederationConfiguration -DomainId <domain_id> | FL *
    ```
 
    > [!NOTE]
-   > \<domain_to_manage> is a placeholder for your domain's name. For example, contoso.com.
+   > \<domain_id> is a placeholder for your domain's name. For example, contoso.com.
 
 2. If the SupportsMFA setting is FALSE, set it to TRUE by running the following command:  
 
