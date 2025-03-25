@@ -1099,4 +1099,4 @@ For more informaiton, see the following articles:
 - [Connect-MgGraph](/powershell/microsoftgraph/authentication-commands#use-connect-mggraph)
 - [Disconnect-MgGraph](/powershell/module/microsoft.graph.authentication/disconnect-mggraph)
 - [Get-MgUser](/powershell/module/microsoft.graph.users/get-mguser)
-- [internalDomainFederation resource type](/graph/api/resources/internaldomainfederation?view=graph-rest-1.0)
+- [internalDomainFederation resource type](/graph/api/resources/internaldomainfederation)
