@@ -16,11 +16,16 @@ This article addresses the issue of failing to join a computer to a domain when 
 
 ## Symptom
 
-When you try to use an existing computer account name to join a computer to a domain, the operation fails. And you receive the following error messages.
+When you try to use an existing computer account name to join a computer to a domain, the operation fails. And you receive the following error messages:
 
-:::image type="content" source="media/failure-when-you-use-an-existing-computer-account-to-join-a-domain/an-error-occurs-when-you-join-a-computer-to-a-domain.png" alt-text="An error occurs when you join a computer to a domain." border="false":::
+In the **Access work or school** page:  
+> Can't join this domain. Contact your IT admin for more info.
 
-:::image type="content" source="media/failure-when-you-use-an-existing-computer-account-to-join-a-domain/error-when-you-join-a-computer-to-a-domain-using-system-properties.png" alt-text="Error when you join a computer to a domain using System Properties." border="false":::
+In **System Properties**:
+> The following error occurred attempting to join the domain "\<domain_name\>":
+>
+> An account with the same name exists in Active Directory.  
+> Re-using the account was blocked by security policy.
 
 ### Netsetup.log
 
@@ -100,9 +105,6 @@ To fix the issue, follow these steps:
 2. If the existing account is stale (unused), delete it before attempting to join the domain again.
 3. Rename the computer and join using a different account that doesn't already exist.
 4. If a trusted security principal owns the existing account, and an administrator wants to reuse the account, use the **Domain controller: Allow computer account re-use during domain join** Group Policy.
-
-> [!WARNING]
-> Don't use the **NetJoinLegacyAccountReuse** registry workaround anymore in a fully patched environment. Support for the **NetJoinLegacyAccountReuse** registry key was removed by the August 13, 2024 Windows Update. The hardening behavior persists regardless of that registry key setting. Use steps 1 - 4 in this section.
 
 ## Reference
 
