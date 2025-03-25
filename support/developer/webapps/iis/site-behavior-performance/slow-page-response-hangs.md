@@ -77,7 +77,7 @@ Collect IIS logs from a time during which the slowness occurs. This can be helpf
 
 If the IIS Log Catcher tool doesn't automatically collect the web logs, you need to collect them manually.
 
-By default, these logs are in **c:\\inetpub\\logs\\logfiles**. Each site has its own directory named **W3SVC#** where the **#** is the **SiteID**. However, the log location is customizable. To find the custom log locations, you might need to review **applicationhost.config** for the **logFile** and directory or review the settings in the IIS Manager.
+By default, these logs are in **c:\\inetpub\\logs\\logfiles**. Each site has its own directory named **W3SVC#** where the **#** is the **SiteID**. However, the log location is customizable. To find the custom log locations, you might need to review the **applicationhost.config** file for the **logFile** and **directory** settings that specify where the logs are stored.
 
 #### Windows System, Application, and Security event logs
 
