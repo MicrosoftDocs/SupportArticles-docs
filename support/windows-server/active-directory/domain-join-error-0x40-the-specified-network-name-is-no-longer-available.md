@@ -63,7 +63,7 @@ PingReplyDetails (RTT) : 0 ms
 TcpTestSucceeded       : False
 ```
 
-The output indicates that the Kerberos Port TCP 88 is open between the client and the DC.
+The output indicates that the Kerberos Port TCP 88 is not open between the client and the DC.
 
 ### Network trace
 
