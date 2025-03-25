@@ -1,5 +1,5 @@
 ---
-title: Use Fiddler to collect HTTPS traffic from Microsoft Entra ID apps
+title: Use Fiddler to Collect HTTPS Traffic from Microsoft Entra ID Apps
 description: Provides instructions to use Fiddler to collect HTTPS traffic from Microsoft Entra ID apps
 ms.date: 03/20/2025
 ms.author: bachoang
