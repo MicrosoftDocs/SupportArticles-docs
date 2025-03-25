@@ -9,7 +9,7 @@ ms.custom: sap:Cases or Incidents, DFM
 ---
 # Can't switch between different Teams organizations within the Dynamics 365 app
 
-This article provides a workaourd for an issue where you can't switch between different Teams organizations within the Dynamics 365 app, a functionality that's available in the standalone Teams mobile and desktop applications.
+This article provides a workaround for an issue where you can't switch between different Teams organizations within the Dynamics 365 app, a functionality that's available in the standalone Teams mobile and desktop applications.
 
 ## Symptoms
 
@@ -17,7 +17,7 @@ You can't find an option to switch to a different organization's Teams within th
 
 ## Cause
 
-This behavior is by design. Currently, there is no workaround or quick option to switch organizations directly within the Dynamics 365 app. You must manually sign in to the desired organization separately.
+This behavior is by design. Currently, there's no workaround or quick option to switch organizations directly within the Dynamics 365 app. You must manually sign in to the desired organization separately.
 
 ## Mitigation steps
 

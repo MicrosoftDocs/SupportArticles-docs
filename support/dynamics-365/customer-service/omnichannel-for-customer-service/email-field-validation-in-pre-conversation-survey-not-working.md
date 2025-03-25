@@ -13,7 +13,7 @@ This article explains email field validation in the [Pre-conversation survey](/d
 
 ## Symptoms
 
-The email field in the Pre-conversation survey doesn't validate for incorrect email formats, allowing users to enter malformed email addresses. This can result in difficulties in collecting accurate user information and might affect communication.
+The email field in the Pre-conversation survey doesn't validate for incorrect email formats, allowing users to enter malformed email addresses. This issue can result in difficulties in collecting accurate user information and might affect communication.
 
 ## Cause
 

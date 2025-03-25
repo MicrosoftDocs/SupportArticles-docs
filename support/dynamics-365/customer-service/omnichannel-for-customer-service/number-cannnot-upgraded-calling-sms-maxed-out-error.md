@@ -7,7 +7,7 @@ ai-usage: ai-assisted
 ms.date: 03/25/2025
 ms.custom: sap:Messaging capabilities, DFM
 ---
-# "This number cannot be upgraded, Calling and SMS capabilities maxed out" error 
+# "This number cannot be upgraded. Calling and SMS capabilities maxed out" error
 
 This article helps you resolve the error you may encounter when using a trial phone number in Azure Communication Services.
 
