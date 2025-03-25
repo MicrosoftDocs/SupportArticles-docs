@@ -3,7 +3,7 @@ title: Package Inspector for MSAL Android Native
 description: Introduces how to install and use the Package Inspector tool.
 ms.reviewer: markbukovich, v-weizhu
 ms.service: entra-id
-ms.date: 03/13/2025
+ms.date: 03/25/2025
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
 # Package Inspector for MSAL Android Native
