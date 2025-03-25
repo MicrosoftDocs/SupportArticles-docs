@@ -4,7 +4,7 @@ description: Explains why email field in the Pre-conversation survey doesn't val
 author: Yerragovula
 ms.author: srreddy
 ai-usage: ai-assisted
-ms.date: 03/24/2025
+ms.date: 03/25/2025
 ms.custom: sap:Live Chat Widget (LCW), DFM
 ---
 # Email field validation in a Pre-conversation survey doesn't work as expected

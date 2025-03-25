@@ -5,7 +5,7 @@ author: Yerragovula
 ms.author: srreddy
 ai-usage: ai-assisted
 ms.date: 03/24/2025
-ms.custom: sap:Voice channel, DFM
+ms.custom: sap:Cases or Incidents, DFM
 ---
 # Can't switch between different Teams organizations within the Dynamics 365 app
 

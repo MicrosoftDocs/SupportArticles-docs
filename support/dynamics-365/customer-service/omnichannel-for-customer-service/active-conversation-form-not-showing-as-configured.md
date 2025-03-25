@@ -4,7 +4,7 @@ description: Solves the problems such as repeated sections, incorrect content, m
 author: Yerragovula
 ms.author: srreddy
 ai-usage: ai-assisted
-ms.date: 03/24/2025
+ms.date: 03/25/2025
 ms.custom: sap:Customer summary and Closed conversation form, DFM
 ---
 # The Active Conversation form doesn't display as configured

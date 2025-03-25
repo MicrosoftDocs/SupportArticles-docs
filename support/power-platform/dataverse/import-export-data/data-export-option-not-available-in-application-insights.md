@@ -4,7 +4,7 @@ description: Solves an issue where you can't find the data export option while s
 author: Yerragovula
 ms.author: srreddy
 ai-usage: ai-assisted
-ms.date: 03/24/2025
+ms.date: 03/25/2025
 ms.custom: sap:Importing and exporting data, DFM
 ---
 # Data export option isn't available in Azure Application Insights
