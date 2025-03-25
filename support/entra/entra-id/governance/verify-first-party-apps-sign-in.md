@@ -76,8 +76,8 @@ Although the apps that are listed in sign-in reports are owned by Microsoft and 
 1. Open PowerShell, import Microsoft Graph PowerShell SDK and connect to Microsoft Entra ID:
 
    ```cmd
-   Import-Module Microsoft.Graph.Applications
-   Connect-MgGraph
+   Import-Module Microsoft.Entra
+   Connect-Entra
    ```
 
 2. In the PowerShell command-line, enter the display name of the application and run the following cmdlet:
