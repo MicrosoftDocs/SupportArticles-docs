@@ -4,7 +4,7 @@ description: Provides resolutions for issues related to the wrap feature in Powe
 ms.reviewer: sitaramp, koagarwa
 ms.author: arijitba
 author: arijitba
-ms.date: 02/11/2025
+ms.date: 03/17/2025
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done, sap:App Management\Wrap an app
 ---
 # Troubleshoot issues with the wrap feature in Power Apps
@@ -237,6 +237,14 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
    - The **Tag value** should correspond to the name you chose for your **Secret** when uploading the povisioning profile in the previous step. For example, if your **Secret** is named **iOSProvisioningProfileSecret**, then the value of the **Tag value** should also be **iOSProvisioningProfileSecret**.
 
    :::image type="content" source="media/wrap-issues/provisioning-profile-secret-tag.png" alt-text="Screenshot that shows how to create a tag for iOS Provisioning Profile Secret." lightbox="media/wrap-issues/provisioning-profile-secret-tag.png":::
+
+#### Error code 1000128
+
+| Error code      | Description          |
+| ------------- |:-------------|
+|1000128    |   Missing access key used while accessing azure blob storage location|
+
+You need to add your access key to the Azure blob storage account in the Azure key vault. For more information, see [Step 2: Target platform](/power-apps/maker/common/wrap/wrap-how-to#step-2-target-platform).
 
 ## Issue 7 - Wrap app sign-in fails
 

@@ -157,6 +157,10 @@ items:
       href: ./active-directory/windows-app-cant-start.md
   - name: Active Directory replication
     items:
+    - name: Active Directory installation fails
+      href: active-directory/creating-ntds-settings-object-for-ad-dc.md
+    - name: Troubleshooting AD Replication error 1908
+      href: active-directory/ad-replication-error-1908-not-find-domain-controller.md
     - name: 'Troubleshooting guidance: Active Directory replication'
       href: ./active-directory/troubleshoot-adreplication-guidance.md
     - name: Active Directory changes don't replicate
@@ -349,8 +353,6 @@ items:
     items:
     - name: 'Troubleshooting guidance: Active Directory domain join'
       href: ./active-directory/active-directory-domain-join-troubleshooting-guidance.md
-    - name: Active Directory installation fails
-      href: ./active-directory/creating-ntds-settings-object-for-ad-dc.md
     - name: Cannot contect to the Internet or the domain
       href: ./active-directory/cannot-connect-internet-domain.md
     - name: Default limit to workstation numbers
@@ -359,20 +361,10 @@ items:
       href: ./active-directory/netlogon-service-not-start-automatically.md
     - name: Support boundaries for Active Directory over NAT
       href: ./active-directory/support-for-active-directory-over-nat.md
-    - name: Sync Center syncs offline files very slow
-      href: ./active-directory/sync-center-slow-syncing-of-offline-files.md
     - name: '"The account is not authorized to login from this station" error'
       href: ./active-directory/account-not-authorized-login-from-this-station.md
-    - name: Troubleshoot domain controller location issues
-      href: ./active-directory/troubleshoot-domain-controller-location-issues.md
     - name: Troubleshoot errors when joining computers to a domain
       href: ./active-directory/troubleshoot-errors-join-computer-to-domain.md
-    - name: Troubleshooting AD Replication error 1908
-      href: ./active-directory/ad-replication-error-1908-not-find-domain-controller.md
-    - name: Unable to join computers to a domain
-      href: ./active-directory/cannot-join-computer-to-domain.md
-    - name: Using domain join UI to join a computer to AD domain fails
-      href: ./active-directory/fail-to-join-computer-to-ad-domain.md
   - name: LDAP configuration and interoperability
     items:
     - name: DCs can't be located and high-rate outbound sessions
@@ -434,7 +426,7 @@ items:
     - name: Can't add user or object to directory service
       href: ./active-directory/cannot-add-user-object-differ-by-diacritic-mark-character.md
     - name: Can't edit or delete an AD object
-      href: ./active-directory/cannot-edit-delete-ad-object-error-sam.md      
+      href: ./active-directory/cannot-edit-delete-ad-object-error-sam.md
     - name: Can't start Active Directory Users and Computers Tool
       href: ./active-directory/cannot-start-active-directory-users-and-computers-tool.md
     - name: Compatibility with user accounts ending with the dollar sign
@@ -2023,6 +2015,8 @@ items:
     items:
     - name: Troubleshoot printing and best practices
       href: ./printing/troubleshoot-printing-and-best-practices.md
+    - name: Troubleshoot printing issues caused by Print Spooler service not running
+      href: ./printing/print-spooler-service-not-running.md
     - name: Troubleshoot printing known issues
       href: ./printing/troubleshoot-printing-known-issues.md
     - name: Troubleshoot printing scenarios
@@ -2399,8 +2393,6 @@ items:
       href: ./setup-upgrade-and-drivers/event-307-and-304-logged-for-deploying.md
     - name: Fail to run applications on Windows Server Core
       href: ./setup-upgrade-and-drivers/subsystem-needed-support-image-type-not-present.md
-    - name: How to perform an in-place/repair upgrade
-      href: ./setup-upgrade-and-drivers/repair-or-in-place-upgrade.md
     - name: In-place upgrade hangs at black screen
       href: ./setup-upgrade-and-drivers/in-place-upgrade-hangs-black-screen.md
     - name: Integrate Windows Server Update Services (WSUS) 3.0 into Server Manager
@@ -2577,6 +2569,8 @@ items:
       href: ./system-management-components/scheduled-tasks-reference-incorrect-user-profile.md
     - name: Troubleshoot issues with scheduled tasks not running
       href: ./system-management-components/troubleshoot-scheduled-tasks-not-running.md
+    - name: Resolve Task Scheduler "Access Denied" error
+      href: ./system-management-components/troubleshooting-task-scheduler-access-denied-error.md
   - name: WinRM
     items:
     - name: Error 0x80090322 when connecting PowerShell to remote server via WinRM
@@ -2931,6 +2925,8 @@ items:
       href: ./windows-security/windows-updates-add-new-ntlm-pass-through-authentication-protections.md
   - name: Netlogon, secure channel, DC Locator
     items:
+    - name: Troubleshoot domain controller location issues
+      href: windows-security/troubleshoot-domain-controller-location-issues.md
     - name: 'Troubleshooting guidance: Secure channel'
       href: ./windows-security/broken-trust-relationship-domain-joined-device-its-domain-secure-channel-issues.md
     - name: Gather information for secure channel issues
