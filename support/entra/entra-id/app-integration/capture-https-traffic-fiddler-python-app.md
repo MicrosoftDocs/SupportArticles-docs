@@ -15,7 +15,7 @@ Capturing encrypted HTTPSweb traffic in Python with Fiddler can be challenging b
 When you use Fiddler to capture HTTPStraffic in a Python app that integrates Azure Active Directory Authentication Library (ADAL), you may receive SSL errors. This issue occurs because Python doesn't trust the Fiddler certificate. Here are two methods to work around this issue:
 
 > [!Note]
-> Disabling SSL verification isis a security risk. It should only be used for troubleshooting purposes and avoided in production environments.
+> Disabling SSL verification is a security risk. It should only be used for troubleshooting purposes and avoided in production environments.
 
 - Set an environment variable at the beginning of your Python app before initializing the AuthenticationContext object:
 
