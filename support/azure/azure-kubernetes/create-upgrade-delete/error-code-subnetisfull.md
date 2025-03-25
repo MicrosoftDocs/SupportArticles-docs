@@ -4,8 +4,8 @@ description: Learn how to troubleshoot the SubnetIsFull error when you try to sc
 ms.date: 02/28/2025
 author: jotavar
 ms.author: jotavar
-editor: v-jsitser, addobres
-ms.reviewer: rissing, chiragpa, v-leedennis, addobres
+editor: v-jsitser
+ms.reviewer: rissing, chiragpa, addobres
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the SubnetIsFull error code so that I can successfully scale an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
