@@ -4,7 +4,7 @@ description: A list of common issues and resolutions within Power Apps.
 author: KumarVivek
 ms.custom: sap:App Creation (Canvas App)
 ms.reviewer: tapanm, lanced, tahoon 
-ms.date: 04/04/2024
+ms.date: 03/25/2025
 ms.author: kvivek
 search.audienceType: 
   - maker
@@ -38,9 +38,13 @@ Refer to the introductory article [Power Apps troubleshooting strategies](isolat
 - See [Understanding delegation in a canvas app](/power-apps/maker/canvas-apps/delegation-overview) for details about delegation.
 - See [Debugging canvas apps with Monitor](/power-apps/maker/monitor-canvasapps) for a description of how to monitor the data being sent and returned.
 
-1. **You do not have correct permissions to use this connection.**
+1. **You don't have correct permissions to use a connection.**
 
-    End users may encounter this issue in one of two situations. First, the application may have a shared implicit connection that **isn't** a secure implicit connection. Sharing the connection with the end user resolves this issue but is **not** recommended because all shared connections should be secure implicit connections. The author should convert all connections in the application to be secure implicit connections to resolve this issue. Second, the connection may already be a secure implicit connection. Republishing may resolve this issue. If it doesn't, then a product bug should be filed.
+    End users may encounter this issue in two situations:
+
+    1. The application may have a shared implicit connection that isn't a secure implicit connection. Sharing the connection with the end user can resolve the issue but isn't recommended. All connections should be converted to secure implicit connections by the author.
+
+    2. If the connection is already a secure implicit connection, republishing the app might resolve the issue. If not, a product bug should be filed.
 
 ### Common issues
 
@@ -66,7 +70,7 @@ Refer to the introductory article [Power Apps troubleshooting strategies](isolat
 
 1. **Apps that connect to on-premises SharePoint**
 
-    If you share an app that relies on connections that aren't automatically shared (for example, an on-premises SharePoint site), users who open the app in a browser sees a dialog box with no text when they select or tap **Sign in**. To close the dialog box, select or tap the close (X) icon in the upper-right corner. The dialog box doesn't appear if you open the app in [Power Apps Studio](/power-apps/maker/canvas-apps/power-apps-studio) or [Power Apps mobile](/power-apps/mobile/run-powerapps-on-mobile). For more information about shared connections, see [Share app resources](/power-apps/maker/canvas-apps/share-app-resources).
+    If you share an app that relies on connections that aren't automatically shared (for example, an on-premises SharePoint site), users who open the app in a browser see a dialog box with no text when they select or tap **Sign in**. To close the dialog box, select or tap the close (X) icon in the upper-right corner. The dialog box doesn't appear if you open the app in [Power Apps Studio](/power-apps/maker/canvas-apps/power-apps-studio) or [Power Apps mobile](/power-apps/mobile/run-powerapps-on-mobile). For more information about shared connections, see [Share app resources](/power-apps/maker/canvas-apps/share-app-resources).
 
 1. **For apps that are created from data, only the first 500 records of a data source can be accessed.**
 
