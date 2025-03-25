@@ -1,6 +1,6 @@
 ---
-title: Status Code 0x32 And You Can't Join a Domain
-description: Helps resolve an issue in which you can't join a domain with status code 0x32. This issue is related to the failure to establish a Server Message Block (SMB) session to the domain controller (DC).
+title: Status Code 0x32 and You Can't Join a Domain
+description: Helps resolve an issue in which you can't join a domain with status code 0x32. This issue is related to the failure to establish an SMB session to a DC.
 ms.date: 03/21/2025
 manager: dcscontentpm
 audience: itpro
@@ -12,7 +12,7 @@ ms.custom:
 ---
 # Status code 0x32 and you can't join a domain
 
-This article helps resolve an issue in which you can't join a domain with status code 0x32. This issue is related to the failure to establish a Server Message Block (SMB) session to the domain controller (DC).
+This article helps resolve an issue in which you can't join a domain with status code 0x32. This issue is related to the failure to establish a Server Message Block (SMB) session to a domain controller (DC).
 
 You fail to join a domain and receive one of the following error messages:
 
@@ -42,13 +42,13 @@ mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0x32
 
 Here's more information about the error code:
 
-|HEX error  |Decimal error  |Symbolic error string  |Error description  |
+|Hexadecimal error  |Decimal error  |Symbolic error string  |Error description  |
 |---------|---------|---------|---------|
 |0x32     |50         |ERROR_NOT_SUPPORTED         |The request is not supported.         |
 
 ## The security policy is set incorrectly
 
-The **NetSetup.log** file shows that the client fails to establish an SMB session with the DC. In the network trace, the SMB SESSION SETUP response has an error `NT Status: System – Error. Code  = (187) STATUS_NOT_SUPPORTED`. It indicates that the DC returns `STATUS_NOT_SUPPORTED` to the C SESSION SETUP request from the client. The DC rejects the client's credential in the C SESSION SETUP request, which is the initial step of NT LAN Manager (NTLM) authentication.
+The **NetSetup.log** file shows that the client can't establish an SMB session with the DC. In the network trace, the SMB SESSION SETUP response has an error `NT Status: System – Error. Code  = (187) STATUS_NOT_SUPPORTED`. It indicates that the DC returns `STATUS_NOT_SUPPORTED` to the C SESSION SETUP request from the client. The DC rejects the client's credentials in the C SESSION SETUP request, which is the initial step of NT LAN Manager (NTLM) authentication.
 
 If you establish an SMB session to the DC from a workstation in the domain, it succeeds by using the hostname and fails by using the IP. For example:
 
