@@ -25,10 +25,10 @@ To disable debugging, modify the *Web.config* file or the *Machine.config* file,
 To disable debugging, add the compilation element to the *Web.config* file of the application by following these steps. The *Web.config* file is located in the application directory.
 
 1. Open the *Web.config* file in a text editor, such as Notepad. The file is typically located in the application directory.
-2. In the *Web.config* file, locate the compilation element. Debugging is enabled when the debug attribute in the compilation element is set to **true**.
-3. Change the debug attribute to **false** to disable debugging for that application.
+2. In the *Web.config* file, locate the compilation element. Debugging is enabled when the debug attribute in the compilation element is set to `true`.
+3. Change the debug attribute to `false` to disable debugging for that application.
 
-    The following code sample shows the compilation element with debug set to **false**:
+    The following code sample shows the compilation element with debug set to `false`:
 
     ```xml
     <compilation debug="false"/>
@@ -69,7 +69,7 @@ You can also disable debugging for all applications on a system by modifying the
 
    :::image type="content" source="media/disable-debugging-application/aspnet-debug-step2.png" alt-text="Screenshot of website or web application for which you wish to enable or disable debug mode.":::
 
-1. From the middle pane of the IIS Manager console, select the **.NET Compilation** icon:
+1. From the middle pane of the IIS Manager Console, select the **.NET Compilation** icon:
 
    :::image type="content" source="media/disable-debugging-application/aspnet-debug-step3.png" alt-text="Screenshot of the .Net Compilation icon.":::
 
