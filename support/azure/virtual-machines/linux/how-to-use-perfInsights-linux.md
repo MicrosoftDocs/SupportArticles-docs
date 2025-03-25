@@ -21,7 +21,7 @@ ms.author: genli
 
 [PerfInsights Linux](https://aka.ms/perfinsightslinuxdownload) is a self-help diagnostics tool that collects and analyzes diagnostic data, and provides a report to help troubleshoot Windows virtual machine (VM) performance problems in Azure. Use Performance Diagnostics to identify and troubleshoot performance issues in one of two modes:
 
-- **Continuous diagnostics (preview)** collects data at five-second intervals and reports actionable insights about high resource usage every five minutes. 
+- **Continuous diagnostics** collects data at five-second intervals and reports actionable insights about high resource usage every five minutes. 
 
 - **On-demand diagnostics** helps you troubleshoot an ongoing performance issue with more in-depth data, insights, and recommendations based on data collected at a single point in time. 
 
@@ -263,7 +263,7 @@ To run the PerfInsights tool, follow these steps:
     sudo python perfinsights.py
     ```
 
-    :::image type="content" source="media/how-to-use-perfinsights-linux/perfinsights-linux-command-line.png" alt-text="Screenshot of PerfInsights Linux command-line output.":::
+    :::image type="content" source="media/how-to-use-perfinsights-linux/perfinsights-linux-command-line.png" alt-text="Screenshot of PerfInsights Linux command-line output." lightbox="media/how-to-use-perfinsights-linux/perfinsights-linux-command-line.png":::
 
     The basic syntax for running PerfInsights scenarios is:
 
