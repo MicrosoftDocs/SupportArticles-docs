@@ -76,8 +76,8 @@ You can also disable debugging for all applications on a system by modifying the
 
 1. Within the list of parameter values displayed in the middle pane of IIS Manager, set the value of **Debug** under the **Behavior** category to:
 
-   - **true**: Enable debug mode.
-   - **false**: Disable debug mode.
+   - **True**: Enable debug mode.
+   - **False**: Disable debug mode.
 
    :::image type="content" source="media/disable-debugging-application/set-value-debug-under-behavior-category.png" alt-text="Screenshot of setting the value of Debug under the Behavior category.":::
 
