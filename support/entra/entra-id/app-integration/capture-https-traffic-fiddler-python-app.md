@@ -1,18 +1,18 @@
 ---
-title: Collect HTTPS Traffic using Fiddler from Python app with Microsoft Entra ID
-description: Provide instructions on how to collect HTTPS traffic using Fiddler from Microsoft Entra ID Apps
+title: Collect HTTPSTraffic using Fiddler from Python app with Microsoft Entra ID
+description: Provide instructions on how to collect HTTPStraffic using Fiddler from Microsoft Entra ID Apps
 ms.date: 03/20/2025
 ms.author: bachoang
 ms.service: entra-id
 ms.custom: sap:Enterprise Applications
 ---
-# Collect HTTPS traffic using Fiddler from Python Apps
+# Collect HTTPStraffic using Fiddler from Python Apps
 
-Capturing encrypted HTTPS web traffic in Python with Fiddler can be challenging because Python uses its own trusted certificate store rather than the operating system’s certificate store. Additionally, Python does not use a proxy by default in certain scenario. This article explains how to capture SSL traffic using Fiddler for Python app across different scenarios.
+Capturing encrypted HTTPSweb traffic in Python with Fiddler can be challenging because Python uses its own trusted certificate store rather than the operating system’s certificate store. Additionally, Python doesn't use a proxy by default in certain scenario. This article explains how to capture SSL traffic using Fiddler for Python app across different scenarios.
 
 ## ADAL for Python
 
-When you use Fiddler to capture HTTPs traffic in an Python app that integrates Azure Active Directory Authentication Library (ADAL), you may receive SSL errors. This issue occurs because Python doesn't trust the Fiddler certificate. Here are two methods to work around this issue:
+When you use Fiddler to capture HTTPStraffic in a Python app that integrates Azure Active Directory Authentication Library (ADAL), you may receive SSL errors. This issue occurs because Python doesn't trust the Fiddler certificate. Here are two methods to work around this issue:
 
 > [!Note]
 > Disabling SSL verification isis a security risk. It should only be used for troubleshooting purposes and avoided in production environments.
@@ -37,7 +37,7 @@ app = msal.PublicClientApplication( client_id=appId, authority="https://login.mi
 ```
 ## Python Requests Module
 
-The Requests module does not use Proxy by default. You must force the request to go through the Fiddler proxy.  The following example shows how to do this:
+The Requests module doesn't use Proxy by default. You must force the request to go through the Fiddler proxy.  The following example shows how to do this:
 
 ```python
 import requests
@@ -53,7 +53,7 @@ json_output = requests.get(
     verify=False
 ).json()
 ```
-## AAD Libraries for Python or GraphRbacManagementClient
+## Azure Active Directory SDK for Python (GraphRbacManagementClient)
 
 The following example shows how to disable SSL verification:
 
