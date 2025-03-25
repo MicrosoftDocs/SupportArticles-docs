@@ -1,7 +1,7 @@
 ---
-title: Error 0x5 Access Denied When You Rename a Computer That Is Member of a Domain
-description: Helps resolve error 0x5 Access Denied when you rename a computer that is member of a domain.
-ms.date: 03/21/2025
+title: Error 0x5 Access Denied When You Rename a Computer That Is a Member of a Domain
+description: Helps resolve error 0x5 Access Denied when you rename a computer that is a member of a domain.
+ms.date: 03/25/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -12,7 +12,7 @@ ms.custom:
 ---
 # Error 0x5 Access Denied when you rename a computer that is member of a domain
 
-This article helps resolve error 0x5 **Access Denied** when you rename a computer that is member of a domain.
+This article helps resolve error 0x5 **Access Denied** when you rename a computer that is a member of a domain.
 
 When you check the **NetSetup.log** file, you see the following entries:
 
@@ -25,7 +25,7 @@ NetpGetLsaPrimaryDomain: status: 0x0
 NetpManageMachineAccountWithSid: status of NetUserSetInfo on '\\ADATUMDC01' for 'TESTNAME97$': 0x5 Access Denied
 ```
 
-`NetUserSetInfo` targets the domain controller (DC) Security Accounts Manager Server (SAM) server component, which uses the SAM Remote Procedure Call (RPC) function on Server Message Block (SMB) Named Pipes. Here is the complete TCP connection network traffic during the NetSetup failure event, which indicates the failure at a SAM connection:
+`NetUserSetInfo` targets the domain controller (DC) Security Accounts Manager Server (SAM) server component, which uses the SAM Remote Procedure Call (RPC) function on Server Message Block (SMB) Named Pipes. Here's the complete TCP connection network traffic during the NetSetup failure event, which indicates the failure at a SAM connection:
 
 ```output
 ADATUMDC01   10.101.56.150 TCP TCP: [Bad CheckSum]Flags=...A..S., SrcPort=Microsoft-DS(445), DstPort=59729, PayloadLen=0, Seq=347025249, Ack=2963325843, Win=8192 (Negotiated scale factor 0x8) = 8192
@@ -50,9 +50,9 @@ Remote SAM access control was introduced in Windows Server 2016 and Windows 10, 
 |**Policy**     |**Network access: Restrict clients allowed to make remote calls to SAM**         |
 |**Registry value**     |`HKLM\SYSTEM\CurrentControlSet\Control\Lsa\RestrictRemoteSam`         |
 
-Only security groups allowed to read for the Remote SAM Remote Procedure Call (RPC) access defined in the policy setting, can set up a SAM  connection with the target machine.
+Only security groups allowed to read the Remote SAM Remote Procedure Call (RPC) access defined in the policy setting can set up a SAM connection with the target machine.
 
-This policy setting isn't useful on DCs, because Active Directory objects have their own access control settings, which isn't available for domain members or stand-alone machines with the SAM database.
+This policy setting isn't useful on DCs because Active Directory objects have their own access control settings, which aren't available for domain members or stand-alone machines with the SAM database.
 
 DCs might have the setting as it stays configured when you promote a member server with this setting to be a DC.
 
@@ -62,7 +62,7 @@ To resolve this issue, you can use one of the following methods:
 
 Set the **Network access: Restrict clients allowed to make remote calls to SAM** policy to allow **Everyone** or **Authenticated Users** and apply it to all DCs.
 
-This will resolve the problem for all DCs, and ensure they all use the same setting.
+This resolves the problem for all DCs, and ensures they all use the same setting.
 
 ## Method 2: Delete the registry value RestrictRemoteSam
 
@@ -75,7 +75,7 @@ reg delete "HKLM\system\currentControlSet\control\lsa" /v restrictRemoteSam /f
 > [!NOTE]
 > This change doesn't require a restart.
 
-A customized SDDL for the policy might result in unexpected failures. Here are some scenarios to be aware of:
+A customized SDDL for the policy might result in unexpected failures. Here're some scenarios to be aware of:
 
 - Admin tools, scripts, and software that previously enumerated users, groups, and group memberships might fail.
 - Remote Desktop Protocol (RDP) connections to Remote Desktop Services (RDS) Servers fail when the RDS tries to retrieve user details using remote SAM RPC calls.
