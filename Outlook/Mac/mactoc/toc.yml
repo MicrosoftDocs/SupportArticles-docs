@@ -79,8 +79,6 @@
           href: ../import-and-export/cannot-import-olm-file-into-outlook-for-windows.md
         - name: Can't import an ANSI .pst file
           href: ../import-and-export/cannot-import-ansi-pst-file.md
-        - name: How to export contacts by using OWA
-          href: ../import-and-export/how-to-export-contacts-via-owa.md
         - name: Permissions error when importing Outlook 2011 identity
           href: ../import-and-export/permissions-error-when-importing-outlook-2011-identity.md
     - name: Installation
