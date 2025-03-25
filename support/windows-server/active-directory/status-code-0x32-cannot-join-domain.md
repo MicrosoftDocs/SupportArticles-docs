@@ -62,6 +62,9 @@ C:\users\administrator.adatum>net use \\adatumdc2\ipc$
 The operation completed successfully.
 ```
 
+> [!NOTE]
+> You might also get error 67 when using the IP.
+
 However, the network trace pattern shows the same. It seems that the DC doesn't accept NTLM authentication. Status code 0x32 occurs because the security policy **Network security: Restrict NTLM: Incoming NTLM traffic** is incorrectly set to **Deny all accounts**.
 
 ## Change the security policy setting
