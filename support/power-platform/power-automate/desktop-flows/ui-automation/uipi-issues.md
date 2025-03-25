@@ -1,80 +1,88 @@
 ---
-title: UIPI Issues with UI and Browser automation actions
-description: Provides solutions to issues caused by UIPI that prevent the UI or Browser automation actions to execute successfully.
-ms.date: 03/18/2025
+title: UIPI Issues with UI and Browser Automation Actions
+description: Solves issues caused by User Interface Privacy Isolation (UIPI) that prevent the UI or Browser automation actions to execute successfully.
+ms.date: 03/25/2025
 ms.custom: sap:Desktop flows\UI or browser automation
+ms.reviewer: amitrou
+ms.author: amitrou
+author: andreas-mitrou
 ---
+# UIPI issues with UI and browser automation actions
 
-# UIPI Issues with UI and Browser automation actions
-
-This article refers to issues caused by UIPI that prevent the UI or Browser automation actions to execute successfully.
+This article provides a resolution for the issue caused by User Interface Privacy Isolation (UIPI) that might prevent UI or browser automation actions from executing successfully.
 
 ## Symptoms
 
-Actions that are performing UI / Browser Automation when executed might fail with an error.
-An example of the error received is the following:
+Actions performing UI or browser automation may fail with an error message similar to the following:
 
-#### System.Exception: Some simulated input commands were not sent successfully. The most common reason for this happening are the security features of Windows including User Interface Privacy Isolation (UIPI). Your application can only send commands to applications of the same or lower elevation. Similarly certain commands are restricted to Accessibility/UIAutomation applications. Refer to the project home page and the code samples for more information
+> System.Exception: Some simulated input commands were not sent successfully. The most common reason for this happening are the security features of Windows including User Interface Privacy Isolation (UIPI). Your application can only send commands to applications of the same or lower elevation. Similarly certain commands are restricted to Accessibility/UIAutomation applications. Refer to the project home page and the code samples for more information
 
-## Causes
+## Cause 1: The desktop is locked while execution
 
-1. The desktop is locked while execution
-2. UAC dialog is open while execution
-3. When the execution targets an RDP, when the RDP window is minimized.
-4. The application that is under automation is running in Elevated mode.
-5. Screen saver on desktop is enabled.
-6. Windows Server manager is auto starting on login and UAC is prompted because of policies
-7. A Windows update or system configuration has been applied that might cause the issue.
+**Solution**: Unlock the desktop to allow the automation process to proceed.
 
-## Resolution
+## Cause 2: A UAC dialog is open while execution
 
-1. The desktop is locked while execution.
+**Solution**: Ensure that User Account Control (UAC) dialogs don't appear during automation. If necessary, temporarily adjust UAC settings:
 
-    Unlock desktop
+1. Open the Control Panel.
+1. Navigate to **System and Security** > **Change User Account Control settings**.
+1. Adjust the slider to a lower setting temporarily to prevent UAC interruptions during automation.
+1. Restore the original settings after completing the automation process.
 
-2. The UAC dialog is open while execution.
+## Cause 3: The RDP window is minimized during execution
 
-    Make sure the dialog doesn't show.
+**Solution**: Modify the system registry to prevent issues with minimized RDP sessions:
 
-3. The RDP window is minimized, when the execution targets an RDP.
+1. Close active Remote Desktop sessions.
+1. Press <kbd>Win</kbd>+<kbd>R</kbd>, type _regedit_, and press <kbd>Enter</kbd> to open the Registry Editor.
+1. Navigate to the following key:
 
-    1. Close any opened Remote Desktop sessions.
+   **HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Terminal Server Client**
 
-    2. Press Win + R, type "regedit", and press Enter. The Registry Editor window is displayed.
+1. Right-click inside the right panel and select **New** > **DWORD (32-bit) Value**.
+1. Name the new registry entry **RemoteDesktop_SuppressWhenMinimized**.
 
-    3. Navigate to the following Registry key: HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Terminal Server Client
+1. Double-click the entry to open the **Edit DWORD (32-bit) Value** window.
+1. Set the **Value data** field to **2**.
+1. Select **OK** to save changes and close the Registry Editor.
 
-    4. Right-click inside the right panel of the Registry Editor window.
+## Cause 4: The application under automation is running in elevated mode
 
-    5. Select New >Select DWORD (32-bit) Value. A new registry is added to the right panel.
+**Solution**: Ensure that the application being automated is not running with elevated privileges. If the application is set to run as an administrator, adjust its execution settings:
 
-    6. Change the default name to RemoteDesktop_SuppressWhenMinimized.
+1. Right-click the application shortcut and select **Properties**.
+1. Go to the **Compatibility** tab.
+1. Uncheck the **Run this program as an administrator** option.
+1. Select **OK** to save changes.
 
-    7. Double-click RemoteDesktop_SuppressWhenMinimized. The Edit DWORD (32-bit) Value window is displayed.
+## Cause 5: The desktop screen saver is enabled
 
-    8. Write 2 in the Value data field.
+**Solution**: Disable the screen saver to prevent interruptions during automation:
 
-    9. Press OK to save changes.
+1. Open the Control Panel.
+1. Navigate to **Appearance and Personalization** > **Change screen saver**.
+1. Set the **Screen saver** option to **None**.
+1. Select **Apply** and then **OK**.
 
-    10. Close the Registry Editor window.
+## Cause 6: Windows Server Manager auto-starts on login, triggering UAC
 
-4. The application that is under automation is running in Elevated mode.
+**Solution**: Disable the auto-starting feature for Server Manager to prevent UAC prompts:
 
-    Make sure that the application under automation isn't running as elevated.
+1. Open Server Manager.
+1. Go to **Manage** > **Server Manager Properties**.
+1. Select the **Do not start Server Manager automatically at logon** checkbox.
+1. Select **OK** to save changes.
 
-5. The screen saver on desktop is enabled.
+## Cause 7: Windows update or system configuration changes
 
-    Make sure that screen saver isn't activated.
+**Solution**: Review recent updates or system changes and revert them if necessary to resolve the issue.
 
-6. The Windows Server manager is auto starting on login and UAC is prompted because UAC of policies.
+## More information
 
-    Disable auto start of the Server Manager
+- For web automation actions such as [Click link on web page](/power-automate/desktop-flows/actions-reference/webautomation#clickbase) and [Populate text field on webpage](/power-automate/desktop-flows/actions-reference/webautomation#populatetextfieldbase), ensure that physical interaction options are disabled in the action parameters.
 
-When the issue happens in the web automation actions **Click link on web page** and **Populate text field on webpage**, make sure in the action parameters, any physical interactions options are disabled.  
+  - "Populate text field on web page": Disable the **Populate text using physical keystrokes** option.
+  - "Click link on web page": Disable the **Send physical click** option.
 
-Populate text field on web page: Populate text using physical keystrokes
-
-Click link on web page: Send physical click.
-
-In UI automation, try enabling the Simulate action parameter for eligible UI Automation actions and UI Elements:
-[UI automation - Simulate actions | Microsoft Learn](/power-platform/release-plan/2023wave2/power-automate/ui-automation--simulate-actions)
+- For UI automation, enable the [Simulate action](/power-platform/release-plan/2023wave2/power-automate/ui-automation--simulate-actions) parameter for eligible UI Automation actions and UI elements.

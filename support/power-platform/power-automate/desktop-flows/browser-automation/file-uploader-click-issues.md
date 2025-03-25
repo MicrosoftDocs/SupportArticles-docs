@@ -1,37 +1,38 @@
 ---
-title: Press button or click link on web page doesn't work work on file uploader
+title: Press Button or Click Link On Web Page Doesn't Work With File Uploader
 description: Solves issues related to interaction file uploader in web automation.
 ms.custom: sap:Desktop flows\UI or browser automation
 ms.reviewer: amitrou
 ms.author: amitrou
-author: amitrou
-ms.date: 03/17/2025
+author: andreas-mitrou
+ms.date: 03/25/2025
 ---
+# Press button or click link on web page doesn't work with a file uploader
 
-# Press button or click link on web page doesn't work work on file uploader
-
-This article provides several workarounds when try to interact with the file uploader through web automation actions.
+This article provides workarounds for scenarios where interacting with a file uploader on a web page using automation actions fails.
 
 ## Symptoms
 
-There are certain cases where using a **Press button on web page** or a **Click link on web page** action doesn't work as expected if the button or link on the web page is part of a file uploader, for example:
+When you use [Press button on web page](/power-automate/desktop-flows/actions-reference/webautomation#pressbuttonbase) or [Click link on web page](/power-automate/desktop-flows/actions-reference/webautomation#clickbase) action in web automation, the action doesn't work as expected if the button or link on the web page is part of a file uploader. For example, the following HTML element is an example of a file uploader:
 
+```html
 &lt;SPAN style="font-size: 14px;font-style: normal;font-weight: 400"&gt;&ltinput type="file" /&gt;&lt;/SPAN&gt;
+```
 
 ## Cause
 
-Web Automation actions create or modify events through scripts, which tell the browser whether the event is trusted (See more info [here](https://developer.mozilla.org/en-US/docs/Web/API/Event/isTrusted)).
+[Web automation actions](/power-automate/desktop-flows/actions-reference/webautomation) create or modify events through scripts, which inform the browser whether the event is trusted. For more information, see [Event: isTrusted property](https://developer.mozilla.org/en-US/docs/Web/API/Event/isTrusted).
 
-For security purposes, the browser may not allow pressing a button or clicking a link when those events trigger a file upload operation. This means that the button or link needs to be pressed/clicked by the user, instead of simulating the action with JavaScript.
+For security reasons, browsers may restrict the simulation of events that trigger file upload operations. This restriction ensures that file upload actions are initiated by the user directly, rather than through programmatic JavaScript events.
 
-Due to the above **Press button on web page** and **Click link on web page** actions may not work when triggering file uploads.
+As a result, the **Press button on web page** and **Click link on web page** actions may not work when interacting with file uploaders.
 
 ## Workaround 1
 
-Use a **Press button in window** action to simulate user input and bypass the browser's event validation.
+To work around this issue, use the [Press button in window](/power-automate/desktop-flows/actions-reference/uiautomation#pressbutton) action to simulate user input, bypassing the browser's event validation.
 
-For the above to work, the user needs to capture the element from within the **Press button in window** action or through a Desktop recorder, instead of using a web element that was either captured from a Web Automation action or a Web browser recorder.
+You need to capture the element from within the **Press button in window** action or through a desktop recorder, instead of using a web element that's either captured from a web automation action or a web browser recorder.
 
 ## Workaround 2
 
-Use a **Click link on web page** action, with the option **Send physical click** (Advanced) enabled.
+To work around this issue, use the **Click link on web page** action with the [Send physical click](/power-automate/desktop-flows/how-to/send-physical-clicks-web-element) option enabled.
