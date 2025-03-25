@@ -48,7 +48,7 @@ Here's more information about the error code:
 
 ## The security policy is set incorrectly
 
-The **NetSetup.log** file shows that the client fails to establish an SMB session with the DC. In the network trace, the SMB SESSION SETUP response has an error `NT Status: System – Error. Code  = (187) STATUS_NOT_SUPPORTED`. If you examine the network trace, it indicates that the DC returns `STATUS_NOT_SUPPORTED` to the C SESSION SETUP request from the client. The DC rejects the client's credential in the C SESSION SETUP request, which is the initial step of NT LAN Manager (NTLM) authentication.
+The **NetSetup.log** file shows that the client fails to establish an SMB session with the DC. In the network trace, the SMB SESSION SETUP response has an error `NT Status: System – Error. Code  = (187) STATUS_NOT_SUPPORTED`. It indicates that the DC returns `STATUS_NOT_SUPPORTED` to the C SESSION SETUP request from the client. The DC rejects the client's credential in the C SESSION SETUP request, which is the initial step of NT LAN Manager (NTLM) authentication.
 
 If you establish an SMB session to the DC from a workstation in the domain, it succeeds by using the hostname and fails by using the IP. For example:
 
