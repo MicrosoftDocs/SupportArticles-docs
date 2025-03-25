@@ -7,7 +7,7 @@ ms.topic: how-to
 ---
 # Disable debugging for ASP.NET applications
 
-This article discusses how to disable debugging for ASP.NET applications running on .Net Framework.
+This article discusses how to disable debugging for ASP.NET applications running on .NET Framework.
 
 _Original product version:_ &nbsp; ASP.NET  
 _Original KB number:_ &nbsp; 815157
@@ -59,9 +59,9 @@ You can also disable debugging for all applications on a system by modifying the
 
 1. Save the **Machine.config** file.
 
-## Method 3: Using the IIS Manager Console (if the web application is hosted on IIS)
+## Method 3: Using IIS Manager (if the web application is hosted on IIS)
 
-1. Open the IIS Manager Console on the computer where the website is hosted (you can select <kbd>Windows</kbd> + <kbd>R</kbd> and type **inetmgr**):
+1. Open IIS Manager on the computer where the website is hosted (you can select <kbd>Windows</kbd> + <kbd>R</kbd> and type **inetmgr**):
 
    :::image type="content" source="media/disable-debugging-application/aspnet-debug-step1.png" alt-text="Screenshot of typing inetmgr in the Run window.":::
 
@@ -69,17 +69,17 @@ You can also disable debugging for all applications on a system by modifying the
 
    :::image type="content" source="media/disable-debugging-application/aspnet-debug-step2.png" alt-text="Screenshot of website or web application for which you wish to enable or disable debug mode.":::
 
-1. From the middle pane of the IIS Manager Console, select the **.NET Compilation** icon:
+1. From the middle pane of IIS Manager, select the **.NET Compilation** icon:
 
    :::image type="content" source="media/disable-debugging-application/aspnet-debug-step3.png" alt-text="Screenshot of the .Net Compilation icon.":::
 
-1. Within the list of parameter values displayed in the middle pane of the IIS Manager Console, set the value of **Debug** under the **Behavior** category to:
+1. Within the list of parameter values displayed in the middle pane of IIS Manager, set the value of **Debug** under the **Behavior** category to:
 
-   - `true`: Enable debug mode.
-   - `false`: Disable debug mode.
+   - **true**: Enable debug mode.
+   - **false**: Disable debug mode.
 
-   :::image type="content" source="media/disable-debugging-application/aspnet-debug-step4.png" alt-text="Screenshot of.":::
+   :::image type="content" source="media/disable-debugging-application/aspnet-debug-step4.png" alt-text="Screenshot of setting the value of Debug under the Behavior category.":::
 
-5. Select the **Apply** button from the right-hand side pane of the IIS Manager Console to save the changes to the IIS configuration: 
+5. Select the **Apply** button from the right-hand side pane of IIS Manager to save the changes to the IIS configuration: 
 
    :::image type="content" source="media/disable-debugging-application/aspnet-debug-step5.png" alt-text="Screenshot of the Apply button in IIS Manager.":::
