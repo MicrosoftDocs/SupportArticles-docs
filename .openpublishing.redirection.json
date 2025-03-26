@@ -13187,6 +13187,14 @@
     {
       "source_path": "support/windows-client/user-profiles-and-logon/event-id-300-windows-hello-successfully-created-in-windows-10.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-client/event-id-300-windows-hello-successfully-created-in-windows-10"
+    },
+    {
+      "source_path": "support/windows-server/active-directory/convert-domain-federated.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/convert-domain-federated"
+    },
+    {
+      "source_path": "support/windows-server/active-directory/connection-adfs-failed-set-msoladfscontex.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/connection-adfs-failed-set-msoladfscontex"
     }
   ]
 }
