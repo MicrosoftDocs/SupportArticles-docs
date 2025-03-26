@@ -82,7 +82,7 @@ Action: No action is needed.
 
 ## Error 2208
 
-Error 2208 isn't a valid error message.
+Error 2208 isn't a valid error message. (added for numerical completeness only. You will not see this error code)
 
 ## Error 2209
 
