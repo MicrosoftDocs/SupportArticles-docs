@@ -13195,6 +13195,18 @@
     {
       "source_path": "support/windows-server/active-directory/connection-adfs-failed-set-msoladfscontex.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/connection-adfs-failed-set-msoladfscontex"
+    },
+    {
+      "source_path": "support/windows-client/user-profiles-and-logon/error-invalid-store-path-loadstate-user-state-migration-tool.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/error-invalid-store-path-loadstate-user-state-migration-tool"
+    },
+    {
+      "source_path": "support/windows-server/active-directory/file-replication-service-event-13552-13555.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/file-replication-service-event-13552-13555"
+    },
+    {
+      "source_path": "support/windows-server/active-directory/remove-orphaned-domains.md",
+      "redirect_url": "/troubleshoot/windows-server/windows-security/remove-orphaned-domains"
     }
   ]
 }
