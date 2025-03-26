@@ -1,23 +1,23 @@
 ---
 title: Collect HTTPSTraffic using Fiddler from Python app with Microsoft Entra ID
-description: Provide instructions on how to collect HTTPStraffic using Fiddler from Microsoft Entra ID Apps
+description: Provide instructions to collect HTTPStraffic by using Fiddler from Microsoft Entra ID apps
 ms.date: 03/20/2025
 ms.author: bachoang
 ms.service: entra-id
 ms.custom: sap:Enterprise Applications
 ---
-# Collect HTTPStraffic using Fiddler from Python Apps
+# Collect HTTPStraffic by using Fiddler from Python apps
 
-Capturing encrypted HTTPSweb traffic in Python with Fiddler can be challenging because Python uses its own trusted certificate store rather than the operating system’s certificate store. Additionally, Python doesn't use a proxy by default in certain scenario. This article explains how to capture SSL traffic using Fiddler for Python app across different scenarios.
+Capturing encrypted HTTPSweb traffic in Python by using Fiddler can be challenging because Python uses its own trusted certificate store instead of the operating system certificate store. Additionally, by default, Python doesn't use a proxy in certain scenarios. This article explains how to capture SSL traffic by using the Fiddler for Python app in different scenarios.
 
 ## ADAL for Python
 
-When you use Fiddler to capture HTTPStraffic in a Python app that integrates Azure Active Directory Authentication Library (ADAL), you may receive SSL errors. This issue occurs because Python doesn't trust the Fiddler certificate. Here are two methods to work around this issue:
+When you use Fiddler to capture HTTPStraffic in a Python app that integrates Azure Active Directory Authentication Library (ADAL), you might receive SSL error messages. This issue occurs because Python doesn't trust the Fiddler certificate. You can use either of two methods to work around this issue.
 
 > [!Note]
-> Disabling SSL verification is a security risk. It should only be used for troubleshooting purposes and avoided in production environments.
+> Disabling SSL verification presents a security risk. You should use this method only to troubleshoot. You should not use it in production environments.
 
-- Set an environment variable at the beginning of your Python app before initializing the AuthenticationContext object:
+- Set an environment variable at the beginning of your Python app before the `AuthenticationContext` object is initialized:
 
     ```python
     import os
@@ -25,6 +25,7 @@ When you use Fiddler to capture HTTPStraffic in a Python app that integrates Azu
     os.environ["ADAL_PYTHON_SSL_NO_VERIFY"] = "1"
     ```
 - Pass the `verify_ssl=False` flag to the AuthenticationContext method:
+
     ```python
     context = adal.AuthenticationContext(authority, verify_ssl=False)
     ```
@@ -35,9 +36,9 @@ When you use the Microsoft Authentication Library (MSAL) for Python, you can dis
 ```python
 app = msal.PublicClientApplication( client_id=appId, authority="https://login.microsoftonline.com/" + tenantId, verify=False )
 ```
-## Python Requests Module
+## Python Requests module
 
-The Requests module doesn't use Proxy by default. You must force the request to go through the Fiddler proxy.  The following example shows how to do this:
+By default, the Requests module doesn't use a proxy. You must force the request to go through the Fiddler proxy, per the following example:
 
 ```python
 import requests
@@ -75,4 +76,5 @@ print(res.display_name)
 ```
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
+
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
