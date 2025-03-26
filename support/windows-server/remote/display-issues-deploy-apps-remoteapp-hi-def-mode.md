@@ -32,7 +32,9 @@ Also, when you hover over or try to click the visible child window, the movement
 
 The following screenshot shows this issue. In this example, the Microsoft Dynamics NAV application is deployed as a remote app.
 
-:::image type="content" source="media/display-issues-deploy-apps-remoteapp-hi-def-mode/dynamics-nav-remote-app.png" alt-text="Screenshot shows the issue when Microsoft Dynamics NAV application is deployed as a remote app." border="false":::
+![Untitled](media/display-issues-deploy-apps-remoteapp-hi-def-mode/untitled1.png)
+
+
 
 ## Workaround
 
