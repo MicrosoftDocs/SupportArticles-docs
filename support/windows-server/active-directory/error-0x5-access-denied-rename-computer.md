@@ -1,7 +1,7 @@
 ---
 title: Error 0x5 Access Denied When You Rename a Computer That Is a Member of a Domain
 description: Helps resolve error 0x5 Access Denied when you rename a computer that is a member of a domain.
-ms.date: 03/25/2025
+ms.date: 03/26/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
