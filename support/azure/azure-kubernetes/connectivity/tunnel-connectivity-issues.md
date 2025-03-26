@@ -251,6 +251,15 @@ If everything is OK within the application, you'll have to adjust the allocated 
 
 You can set up a new cluster to use a Managed Network Address Translation (NAT) Gateway for outbound connections. For more information, see [Create an AKS cluster with a Managed NAT Gateway](/azure/aks/nat-gateway#create-an-aks-cluster-with-a-managed-nat-gateway).
 
+## Cause 6: Konnectivity Agents performance challenges with Cluster Growth
+
+> [!NOTE]
+> This cause applies to only the `Konnectivity-agent` pods.
+
+### Solution 6: Cluster Proportional Autoscaler (CPA) for Konnectivity Agent
+
+To address scalability challenges in large clusters, we have implemented the Cluster Proportional Autoscaler (CPA) for our Konnectivity Agents. This approach aligns with industry standards and best practices, ensuring optimal resource usage and enhanced performance. Previously, the Konnectivity agent had a fixed replica count, which created a bottleneck as the cluster grew. With this change, the replica count will now dynamically adjust based on node-scaling rules, providing best-in-class performance.
+
 [!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
