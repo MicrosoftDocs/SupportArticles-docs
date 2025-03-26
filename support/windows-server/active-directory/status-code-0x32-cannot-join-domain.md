@@ -5,7 +5,7 @@ ms.date: 03/21/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, raviks, v-lianna
+ms.reviewer: kaushika, raviks, herbertm, dennhu, eriw, v-lianna
 ms.custom:
 - sap:active directory\on-premises active directory domain join
 - pcy:WinComm Directory Services
@@ -49,6 +49,19 @@ Here's more information about the error code:
 ## The security policy is set incorrectly
 
 The **NetSetup.log** file shows that the client can't establish an SMB session with the DC. In the network trace, the SMB SESSION SETUP response has an error `NT Status: System – Error. Code  = (187) STATUS_NOT_SUPPORTED`. It indicates that the DC returns `STATUS_NOT_SUPPORTED` to the C SESSION SETUP request from the client. The DC rejects the client's credentials in the C SESSION SETUP request, which is the initial step of NT LAN Manager (NTLM) authentication.
+
+```output
+192.168.100.13	192.168.100.10	TCP	TCP:Flags=......S., SrcPort=56384, DstPort=Microsoft-DS(445), PayloadLen=0, Seq=4103153181, Ack=0, Win=65535
+192.168.100.10	192.168.100.13	TCP	TCP:Flags=...A..S., SrcPort=Microsoft-DS(445), DstPort=56384, PayloadLen=0, Seq=74752361, Ack=4103153182, Win=65535
+192.168.100.13	192.168.100.10	TCP	TCP:Flags=...A...., SrcPort=56384, DstPort=Microsoft-DS(445), PayloadLen=0, Seq=4103153182, Ack=74752362, Win=255
+192.168.100.13	192.168.100.10	SMB	SMB:C; Negotiate, Dialect = NT LM 0.12, SMB 2.002, SMB 2.???
+192.168.100.10	192.168.100.13	SMB2	SMB2:R   NEGOTIATE (0x0), GUID={<GUID>}
+192.168.100.13	192.168.100.10	SMB2	SMB2:C   NEGOTIATE (0x0), GUID={<GUID>}
+192.168.100.10	192.168.100.13	SMB2	SMB2:R   NEGOTIATE (0x0), GUID={<GUID>}
+192.168.100.13	192.168.100.10	SMB2	SMB2:C   SESSION SETUP (0x1)
+192.168.100.10	192.168.100.13	SMB2	SMB2:R  - NT Status: System - Error, Code = (187) STATUS_NOT_SUPPORTED  SESSION SETUP (0x1)
+192.168.100.13	192.168.100.10	TCP	TCP:Flags=...A.R.., SrcPort=56384, DstPort=Microsoft-DS(445), PayloadLen=0, Seq=4103153717, Ack=74753066, Win=0
+```
 
 If you establish an SMB session to the DC from a workstation in the domain, it succeeds by using the hostname and fails by using the IP. For example:
 
