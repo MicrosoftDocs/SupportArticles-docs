@@ -16,7 +16,7 @@ This article discusses how to identify and resolve the `AksCapacityHeavyUsage` e
 
 ## Symptoms
 
-When you try to create an AKS cluster, you receive the following error messages:
+When you try to create an AKS cluster, you receive the following error message:
 
 > **Code:** AksCapacityHeavyUsage
 >
