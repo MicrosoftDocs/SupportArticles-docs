@@ -15,7 +15,7 @@ ms.custom:
   - CSSTroubleshoot
 appliesto: 
   - Microsoft Forms
-ms.date: 02/13/2025
+ms.date: 03/26/2025
 ---
 
 # Resolve file upload errors in Microsoft Forms
@@ -44,7 +44,7 @@ This error can occur for the following reasons:
 
 To fix this error for an individual form that you create, sign in to your OneDrive for work or school website, and then follow these steps:
 
-1. Disable the **Limited-access user permission lockdown mode** site collection feature if it's enabled.
+1. Disable the **Limited-access user permission lockdown mode** site collection feature, if it's enabled.
 
     1. Select the **Settings** icon in the upper-right corner of the screen.
     1. Select **OneDrive settings** > **More Settings**.
@@ -72,7 +72,7 @@ To fix this error for an individual form that you create, sign in to your OneDri
 
 To fix this error for a group form, sign in to the Microsoft 365 group's SharePoint site, and then follow these steps:
 
-1. Follow the steps in [Enable or disable site collection features](https://support.microsoft.com/office/enable-or-disable-site-collection-features-a2f2a5c2-093d-4897-8b7f-37f86d83df04) to disable the **Limited-access user permission lockdown mode** site collection feature if it's enabled.
+1. Follow the steps in [Enable or disable site collection features](https://support.microsoft.com/office/enable-or-disable-site-collection-features-a2f2a5c2-093d-4897-8b7f-37f86d83df04) to disable the **Limited-access user permission lockdown mode** site collection feature, if it's enabled.
 1. Enable the *People in your organization* sharing links if they're disabled.
 
     **Note**: You must be a SharePoint Online administrator and a site collection administrator to run the following PowerShell commands in [SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
@@ -111,7 +111,7 @@ To fix this error for a group form, sign in to the Microsoft 365 group's SharePo
 This error might occur for either of the following reasons:
 
 - The [*People in your organization* sharing links](/microsoft-365/solutions/microsoft-365-limit-sharing?view=o365-worldwide#people-in-your-organization-sharing-links&preserve-view=true) are disabled.
-- An individual form is moved to a group. This prevents files from being uploaded to the previous form owner's personal OneDrive site.
+- An individual form is moved to a group. This situation prevents files from being uploaded to the previous form owner's personal OneDrive site.
 
 ### Resolution
 
@@ -159,23 +159,34 @@ To fix this error, use the appropriate method.
      > If information barriers are enabled in your SharePoint site, company-wide link sharing is disabled if the [mode](/purview/information-barriers-sharepoint#sharing-sites-for-ib-modes) is set to **Owner Moderated**, **Implicit**, or **Explicit**. In this case, change the information barriers mode to **Open**. To check the information barriers mode of your site, run the `Get-SPOSite <Group SharePoint site URL> | Select InformationBarriersMode` PowerShell command.
 - **If an individual form is moved to a Microsoft 365 group**
 
-  Delete the file upload questions, and then recreate them. The previously uploaded files will remain on the previous form owner's OneDrive site.
+  Delete the file upload questions, and then re-create them. The previously uploaded files remain on the previous form owner's OneDrive site.
   
-  After you recreate the file upload questions, the new questions will be linked to the group's SharePoint site, and all files will be uploaded to the SharePoint site.
+  After you re-create the file upload questions, the new questions will be linked to the group's SharePoint site, and all files will be uploaded to the SharePoint site.
 
 ## Error: Access denied. You do not have permissions to perform this action or access this resource
 
-This issue occurs if you try to access the form by using an unmanaged device while SharePoint access is blocked for unmanaged devices.
+This error might occur for either of the following reasons:
+
+- You try to access the form by using an unmanaged device while SharePoint access is blocked for unmanaged devices.
+- You try to access the form by using a new account that shares the user principal name (UPN) with a previously deleted account.
 
 ### Resolution
 
-To fix this error, follow these steps as a SharePoint administrator:
+To fix this error, use the appropriate method.
 
-1. In the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219), select **Policies** > **Access control**.
-1. Select **Unmanaged devices**, and then select one of the following settings:
+- **If you're using an unmanaged device while SharePoint access is blocked for unmanaged devices**
 
-    - Allow full access from desktop apps, mobile apps, and the web
-    - Allow limited, web-only access
+   Follow these steps as a SharePoint administrator:
+
+   1. In the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219), select **Policies** > **Access control**.
+   1. Select **Unmanaged devices**, and then select one of the following settings:
+
+       - Allow full access from desktop apps, mobile apps, and the web
+       - Allow limited, web-only access
+
+- **If you're using a new account that shares the UPN with a previous account**
+
+   [Fix site user ID mismatch in SharePoint or OneDrive](/sharepoint/troubleshoot/sharing-and-permissions/fix-site-user-id-mismatch).
 
 ## Error: Uploaded file(s) is expired or broken, please upload your files again
 
@@ -205,7 +216,7 @@ To fix this error for a group form, sign in to the Microsoft 365 group's SharePo
 
 ## Error: You do not have access to create this folder or you do not have a valid license
 
-This issue occurs if the New Folder command is disabled in the site settings. This would prevent you from creating folders in the document library where the form is stored.
+This issue occurs if the New Folder command is disabled in the site settings. This situation would prevent you from creating folders in the document library where the form is stored.
 
 ### Resolution
 
@@ -220,7 +231,7 @@ To fix this error for an individual form that you create, sign in to your OneDri
 1. Under **Folders** > **Make "New Folder" command available**, select **Yes**.
 1. Select **OK**.
 
-To fix this error for a group form, sign in to the Microsoft 365 group's SharePoint site and follow these steps:
+To fix this error for a group form, sign in to the Microsoft 365 group's SharePoint site, and then follow these steps:
 
 1. Select the library that stores the group form.
 1. Select the **Settings** icon in the upper-right corner of the screen.
