@@ -50,16 +50,16 @@ Here is more information on these scenarios:
 
   In Windows 2008 R2, automatic license server discovery is no longer supported for RD Session Host servers. You must specify the name of a license server for the RD Session Host server to use by using Remote Desktop Session Host Configuration snap-in. For more information, see [Specify a License Server for an RD Session Host Server to Use](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770585(v=ws.11)).
 
-- RDS Host and RDS licensing servers are in the same domain
+- RD Session Host and RD licensing servers are in the same domain
 
-  In an Active Directory Domain scenario, we can have RDS Host and RDS licensing servers either on the same server or different servers. Consider the following points while configuring RDS environment in a domain scenario:
-
-  - You can install both (Per Device and Per User) CALs on RDS licensing server.
-
+  In an Active Directory Domain scenario, we can have RD Session Host and RD licensing servers either on the same server or different servers. Consider the following points while configuring RDS environment in a domain scenario:
+  
+  - You can install both (Per Device and Per User) CALs on RD licensing server.
+    
   - The computer account for the license server must be a member of the Terminal Server License Servers group in AD DS. If the license server is installed on a domain controller, the Network Service account must also be a member of the Terminal Server License Servers group.
 
-  - To restrict the issuance of RDS CALs, you can add RDS Host Servers into Terminal Server Computers group on RDS licensing server and then enable the License server security group policy setting on RDS licensing server.
-
+  - To restrict the issuance of RDS CALs, you can add RD Session Host Servers into Terminal Server Computers group on RD licensing server and then enable the License server security group policy setting on the RD licensing server.
+    
   - The License server security group policy setting is located in Computer Configuration\Policies\Administrative Templates\Windows Components\Remote \RD licensing and can be configured by using either the Local Group Policy Editor or the Group Console (GPMC).
 
 - RDS Host Servers are in one domain/forest and RDS licensing server is in another domain/forest
