@@ -28,7 +28,7 @@ To fix the issue, review and update your network configuration. Make sure that t
 
 ## Timed out waiting for Teams endpoint
 
-To fix the issue, review and update your network configuration. Make sure that the Teams client access to [Teams endpoints](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide#microsoft-teams&preserve-view=true) isn't blocked by a firewall or proxy settings, and that all Teams-related network requests are allowed in your environment.
+To fix the issue, review and update your network configuration. Make sure that a firewall or proxy settings don't block the Teams client access to [Teams endpoints](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide#microsoft-teams&preserve-view=true). Also, make sure that all Teams-related network requests are allowed in your environment.
 
 ## Teams application contains a script error
 
