@@ -1,7 +1,7 @@
 ---
 title: Fix mailbox errors in Dynamics 365
 description: Resolves an error that might occur when you try to save an email or a meeting to Dynamics 365 using the Microsoft Copilot for Sales for Outlook add-in.
-ms.date: 03/21/2025
+ms.date: 03/26/2025
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
@@ -44,7 +44,7 @@ To resolve the error, you must locate the specific error as part of the mailbox 
 
     > [!NOTE]
     > - To get the CRM instance URL, go to the [Home tab](/microsoft-sales-copilot/personal-app#home-tab) in the Copilot for Sales personal app in [Outlook](/microsoft-sales-copilot/personal-app#open-the-personal-app-in-outlook) or [Teams](/microsoft-sales-copilot/personal-app#open-the-personal-app-in-teams), and select the environment name in the upper-right corner.
-    > - Ensure that you are connected to the correct production environment.
+    > - Ensure that you're connected to the correct production environment.
 
 2. Select **Settings** > **Personalization Settings**.
 
