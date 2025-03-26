@@ -7,8 +7,8 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, skushida, v-ivz, shinicht, torumi
 ms.custom:
-- sap:active directory\active directory backup,restore,or disaster recovery
-- pcy:WinComm Directory Services
+- sap:network connectivity and file sharing\file replication technologies (frs and dfsr)
+- pcy:WinComm Networking
 ---
 # Event ID 13552 and 13555 are logged in the File Replication Service log on a Windows-based domain controller
 
