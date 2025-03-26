@@ -12,7 +12,7 @@ ms.collection: linux
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.topic: troubleshooting
-ms.date: 03/25/2025
+ms.date: 03/26/2025
 ms.author: genli
 ---
 # Troubleshoot Linux virtual machine performance issues with Performance Diagnostics (PerfInsights)
@@ -271,13 +271,21 @@ To run the PerfInsights tool, follow these steps:
     sudo python perfinsights.py -r <ScenarioName> -d [duration]<H | M | S> [AdditionalOptions]
     ```
 
-    You can use the below example to run Quick performance analysis scenario for 1 minute and create the results under /tmp/output folder:
+    You can use the following example to run Continuous Performance diagnostics: 
+
+    ```bash
+    sudo python perfinsights.py -r alwayson
+    ```
+
+    To stop Continuous Performance diagnostics, press <kbd>Ctrl<kbd>+<kbd>C<kbd> or close the terminal.
+
+    You can use the following example to run Quick performance analysis scenario for 1 minute and create the results under /tmp/output folder:
 
     ```bash
     sudo python perfinsights.py -r quick -d 1M -a -o /tmp/output
     ```
 
-    You can use the below example to run performance analysis scenario for 5 mins and upload the result (stores in a TAR file) to the storage account:
+    You can use the following example to run performance analysis scenario for 5 mins and upload the result (stores in a TAR file) to the storage account:
 
     ```bash
     sudo python perfinsights.py -r vmslow -d 300S -a -t <StorageAccountName> -k <StorageAccountKey> -i <full resource Uri of the current VM>
