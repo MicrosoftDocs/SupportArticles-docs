@@ -277,7 +277,7 @@ To run the PerfInsights tool, follow these steps:
     sudo python perfinsights.py -r alwayson
     ```
 
-    To stop Continuous Performance diagnostics, press <kbd>Ctrl<kbd>+<kbd>C<kbd> or close the terminal.
+    To stop Continuous Performance diagnostics, press <kbd>Ctrl</kbd>+<kbd>C</kbd> or close the terminal.
 
     You can use the following example to run Quick performance analysis scenario for 1 minute and create the results under /tmp/output folder:
 
