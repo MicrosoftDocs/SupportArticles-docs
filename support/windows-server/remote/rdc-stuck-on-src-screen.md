@@ -30,9 +30,7 @@ Securing remote connection...
 
 Remote desktop connection uses the highest possible security level encryption method between the source and destination.
 
-In Windows 7 or later versions, the remote desktop connection uses the SSL (TLS 1.0) Protocol and the encryption is Certificate-based.
-
-It means the authentication is performed by using self-signed certificates (default), or a certificate issued by a certification authority installed on the remote session host server (Terminal Server).
+Authentication is performed by using self-signed certificates (default behavior), or a certificate issued by a certification authority installed on the remote session host server (RD Session Host).
 
 If you use a self-signed certificate, the system tries to retrieve the trusted certification authority list from the Internet to check the publish and revocation status of the certificate. Therefore, the **Securing remote connection** screen may appear for a while.
 
@@ -78,10 +76,22 @@ To work around this behavior, use either of the following methods:
 
 ### Method 2
 
-Deploy a Group Policy Object to the client to turn off Automatic Root Certificates Update. To do it, follow these steps on a Windows Server 2012 R2-based computer:
+Deploy a Group Policy to the client to turn off Automatic Root Certificates Update. To create a Group Policy, follow these steps on a Windows Server that is used for Group Policy Management in the same Active Directory domain as the RD Session Host and client:
 
-1. Open Group Policy Management Console. To do it, hold the Windows key and press the r key. Type *Gpmc.msc* in the **Run** box, and then select **OK**.
-2. Create a new Group Policy Object (GPO) or select an existing Group Policy Object (GPO) to change.
-3. Right-click the selected Group Policy Object (GPO) and then select **Edit** and browse to the following Group Policy:  
-    **Computer Configuration** > **Administrative Templates** > **System** > **Internet Communication Management** > **Internet Communication settings**
-4. In the details pane, double-click **Turn off Automatic Root Certificates Update**, and then select **Enabled**.
+1. Open Group Policy Management Console. 
+
+   1.  hold the Windows key and press the r key. 
+      
+   1. Type *Gpmc.msc* in the **Run** box, and then select **OK**. 
+      
+      > [!NOTE]
+      > GPMC is installed by default on Domain Controllers and any Windows Server or Client that have the Remote Server Administration Tools installed
+      
+1. Create a new Group Policy Object (GPO) or select an existing Group Policy Object (GPO) to change.
+1. Right-click the selected Group Policy Object (GPO) and then select **Edit** and browse to the following Group Policy:  
+**Computer Configuration** > **Administrative Templates** > **System** > **Internet Communication Management** > **Internet Communication settings**
+
+1. In the details pane, double-click **Turn off Automatic Root Certificates Update**, and then select **Enabled**.
+> [!WARNING]
+> Turning off Automatic Root Certificates Updates means you will need to update any client or server when a new Root Certificate update is rolled out. 
+
