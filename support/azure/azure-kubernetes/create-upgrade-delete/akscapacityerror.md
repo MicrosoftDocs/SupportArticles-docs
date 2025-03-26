@@ -20,7 +20,7 @@ When you try to create an AKS cluster, you receive the following error messages:
 
 > **Code:** AksCapacityHeavyUsage
 >
-> **Message:** AKS is experiencing heavy usage in region <Region>. We are working on adding new capacity. In the meantime, please consider creating new AKS clusters in a different region. For a list of all the Azure regions, visit https://aka.ms/aks/regions. For more details on this error, visit https://aka.ms/akscapacityheavyusage.
+> **Message:** AKS is experiencing heavy usage in region \<Region>. We are working on adding new capacity. In the meantime, please consider creating new AKS clusters in a different region. For a list of all the Azure regions, visit https://aka.ms/aks/regions. For more details on this error, visit https://aka.ms/akscapacityheavyusage.
 
 ## Cause
 
