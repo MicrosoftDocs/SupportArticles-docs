@@ -357,6 +357,10 @@ items:
       href: ./active-directory/cannot-connect-internet-domain.md
     - name: Default limit to workstation numbers
       href: ./active-directory/default-workstation-numbers-join-domain.md
+    - name: Error code 0x569
+      href: ./active-directory/error-0x569-not-granted-logon-type.md
+    - name: Error code 0xa8b
+      href: ./active-directory/error-0xa8b-resolve-dns-fail.md
     - name: Netlogon service doesn't keep settings after in-place upgrade
       href: ./active-directory/netlogon-service-not-start-automatically.md
     - name: Status code 0x32 and you can't join a domain
