@@ -16,7 +16,7 @@ ms.date: 03/26/2025
 # Resolve Teams client launch failures
 
 > [!IMPORTANT]
-> This article describes a Microsoft Teams feature that was announced but is not yet released. Admins can learn more about the release by checking the Message Center (in the [Microsoft 365 admin center](https://portal.office.com/adminportal/home)). For more information about the feature, see [Teams client health](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=478610) and [Monitor Teams client updates](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=478609).
+> This article describes a Microsoft Teams feature that was announced but isn't yet released. Admins can learn more about the release by checking the Message Center (in the [Microsoft 365 admin center](https://portal.office.com/adminportal/home)). For more information about the feature, see [Teams client health](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=478610) and [Monitor Teams client updates](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=478609).
 
 When a user in your organization tries to start the Teams app on their device, a blank window opens and then disappears immediately. This issue is categorized as a **Launch failure** in the [Teams client health dashboard](/microsoftteams/teams-client-health). 
 
