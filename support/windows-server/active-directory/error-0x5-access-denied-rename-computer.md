@@ -61,9 +61,11 @@ This resolves the problem for all DCs, and ensures they all use the same setting
 ## Method 2: Delete the registry value RestrictRemoteSam
 
 > [!NOTE]
-> Only consider this approach if for some reason you can't follow method 1. With this method, you might encounter the problem again if a DC happens to have `RestrictRemoteSam` set to a restrictive Access Control List.
+>
+> - Only consider this approach if for some reason you can't follow method 1. With this method, you might encounter the problem again if a DC happens to have `RestrictRemoteSam` set to a restrictive Access Control List.
+> - The default Security Descriptor Definition Language (SDDL) could be overwritten by the setting defined in other level Group Policy Objects (GPOs).
 
-Delete the registry value to apply the default Security Descriptor Definition Language (SDDL). The default value for DCs means that everyone has read permissions to preserve compatibility. To delete the registry value, run the following command:
+Delete the registry value to apply the default SDDL. The default value for DCs means that everyone has read permissions to preserve compatibility. To delete the registry value, run the following command:
 
 ```console
 reg delete "HKLM\system\currentControlSet\control\lsa" /v restrictRemoteSam /f
