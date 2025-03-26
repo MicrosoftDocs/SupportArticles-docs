@@ -21,7 +21,7 @@ For example, when [an SLA is applied to a record, such as a case](/dynamics365/c
 
 ## Cause
 
-This issue could be caused by custom logic implemented through plugins, workflows, flows, or actions.
+This issue might be caused by custom logic implemented through plugins, workflows, flows, or actions.
 
 ## Resolution
 
@@ -35,7 +35,7 @@ By default, out-of-the-box (OOB) functionality automatically creates SLA KPI ins
 - Validate custom plugins and workflows
 
    1. Temporarily disable custom plugins and workflows to see if the issue persists.
-   1. If the issue is resolved after disabling custom plugins, revisit and rectify the custom plugin logic causing the duplication.
+   1. If the issue is resolved after disabling custom plugins, revisit and rectify the custom plugin logic that causes the duplication.
 
 - Verify user privilege configuration
 
@@ -44,4 +44,4 @@ By default, out-of-the-box (OOB) functionality automatically creates SLA KPI ins
 - Verify ordering sequence of SLA items
 
    1. Review the ordering sequence of SLA items in the SLA configuration.
-   1. If duplicate SLA KPI instances are caused by SLA item ordering, reorder the SLA items causing duplicate SLA KPI instances by moving them to the top of the sequence in the SLA configuration.
+   1. If duplicate SLA KPI instances are caused by SLA item ordering, reorder the SLA items that cause duplicate SLA KPI instances by moving them to the top of the sequence in the SLA configuration.
