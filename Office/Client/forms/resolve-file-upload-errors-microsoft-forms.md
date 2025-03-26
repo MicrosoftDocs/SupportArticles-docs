@@ -15,7 +15,7 @@ ms.custom:
   - CSSTroubleshoot
 appliesto: 
   - Microsoft Forms
-ms.date: 02/13/2025
+ms.date: 03/26/2025
 ---
 
 # Resolve file upload errors in Microsoft Forms
