@@ -1,7 +1,7 @@
 ---
 title: Can't pull images from Azure Container Registry to Kubernetes
 description: This article helps you troubleshoot the most common errors that you may encounter when pulling images from a container registry to an AKS cluster.
-ms.date: 11/01/2024
+ms.date: 03/25/2025
 author: genlin
 ms.author: genli
 ms.reviewer: chiragpa, andbar, v-weizhu, v-leedennis
@@ -58,6 +58,8 @@ The following sections help you troubleshoot the most common errors that are dis
 
 ## Cause 1: 401 Unauthorized error
 
+### <a id="cause1a"></a>Cause 1a: 401 Unauthorized error due to incorrect authorization
+
 An AKS cluster requires an identity. This identity can be either a managed identity or a service principal. If the AKS cluster uses a managed identity, the kubelet identity is used for authenticating with ACR. If the AKS cluster is using as an identity a service principal, the service principal itself is used for authenticating with ACR. No matter what the identity is, the proper authorization that's used to pull an image from a container registry is necessary. Otherwise, you may get the following "401 Unauthorized" error:
 
 > Failed to pull image "\<acrname>.azurecr.io/\<repository\:tag>": [rpc error: code = Unknown desc = failed to pull and unpack image "\<acrname>.azurecr.io/\<repository\:tag>": failed to resolve reference "\<acrname>.azurecr.io/\<repository\:tag>": failed to authorize: failed to fetch oauth token: **unexpected status: 401 Unauthorized**
@@ -70,7 +72,7 @@ Several solutions can help you resolve this error, subject to the following cons
 
 - Solutions [5][cause1-solution5] and [6][cause1-solution6] are applicable for the Kubernetes method of [pulling a Kubernetes secret](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/).
 
-### Solution 1: Make sure AcrPull role assignment is created for identity
+#### Solution 1: Make sure AcrPull role assignment is created for identity
 
 The integration between AKS and Container Registry creates an AcrPull role assignment at container registry level for the AKS cluster's kubelet identity. Make sure that the role assignment is created.
 
@@ -92,7 +94,7 @@ If the AcrPull role assignment isn't created, create it by [configuring Containe
 az aks update -n <myAKSCluster> -g <myResourceGroup> --attach-acr <acr-resource-id>
 ```
 
-### Solution 2: Make sure service principal isn't expired
+#### Solution 2: Make sure service principal isn't expired
 
 Make sure that the secret of the service principal that's associated with the AKS cluster isn't expired. To check the expiration date of your service principal, run the following commands:
 
@@ -107,7 +109,7 @@ For more information, see [Check the expiration date of your service principal](
 
 If the secret is expired, [update the credentials for the AKS cluster](/azure/aks/update-credentials).
 
-### Solution 3: Make sure AcrPull role is assigned to correct service principal
+#### Solution 3: Make sure AcrPull role is assigned to correct service principal
 
 In some cases, the container registry role assignment still refers to the old service principal. For example, when the service principal of the AKS cluster is replaced with a new one. To make sure that the container registry role assignment refers to the correct service principal, follow these steps:
 
@@ -128,7 +130,7 @@ In some cases, the container registry role assignment still refers to the old se
 
 1. Compare the two service principals. If they don't match, integrate the AKS cluster with the container registry again.
 
-### Solution 4: Make sure the kubelet identity is referenced in the AKS VMSS
+#### Solution 4: Make sure the kubelet identity is referenced in the AKS VMSS
 
 When a managed identity is used for authentication with the ACR, the managed identity is known as the kubelet identity. By default, the kubelet identity is assigned at the AKS VMSS level. If the kubelet identity is removed from the AKS VMSS, the AKS nodes can't pull images from the ACR.
 
@@ -155,7 +157,7 @@ Because modifications to the AKS VMSS aren't supported, they don't propagate at 
 az aks update --resource-group <MyResourceGroup> --name <MyManagedCluster>
 ```
 
-### Solution 5: Make sure the service principal is correct and the secret is valid
+#### Solution 5: Make sure the service principal is correct and the secret is valid
 
 If you pull an image by using an [image pull secret](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/), and that Kubernetes secret was created by using the values of a service principal, make sure that the associated service principal is correct and the secret is still valid. Follow these steps:
 
@@ -179,7 +181,7 @@ If you pull an image by using an [image pull secret](https://kubernetes.io/docs/
 
 1. Update or re-create the Kubernetes secret accordingly.
 
-### Solution 6: Make sure the Kubernetes secret has the correct values of the container registry admin account
+#### Solution 6: Make sure the Kubernetes secret has the correct values of the container registry admin account
 
 If you pull an image by using an [image pull secret](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/), and that Kubernetes secret was created by using values of [container registry admin account](/azure/container-registry/container-registry-authentication#admin-account), make sure that the values in the Kubernetes secret are the same as the values of the container registry admin account. Follow these steps:
 
@@ -201,6 +203,29 @@ If you pull an image by using an [image pull secret](https://kubernetes.io/docs/
 
 > [!NOTE]
 > If a **Regenerate** password operation occurred, an operation that's named "Regenerate Container Registry Login Credentials" will be displayed in the **Activity log** page of the container registry. The **Activity log** has a [90-day retention period](/azure/azure-monitor/essentials/activity-log#retention-period).
+
+### Cause 1b: 401 Unauthorized error due to incompatible architecture
+
+You might encounter a "401 Unauthorized" error even when the AKS cluster identity is authorized (as described in the [Cause 1a: 401 Unauthorized error due to incorrect authorization](#cause1a) section). This issue can happen if the container image in the ACR doesn't match the architecture (such as arm64 versus amd64) of the node running the container. For example, deploying an arm64 image on an amd64 node or vice versa can result in this error.
+
+The error message will appear as follows:
+
+> Failed to pull image "\<acrname>.azurecr.io/\<repository:\tag>": [rpc error: code = NotFound desc = failed to pull and unpack image "\<acrname>.azurecr.io/\<repository:\tag>": no match for platform in manifest: not found, failed to pull and unpack image "\<acrname>.azurecr.io/\<repository\:tag>": failed to resolve reference "\<acrname>.azurecr.io/\<repository\:tag>": failed to authorize: failed to fetch anonymous token: unexpected status from GET request to https://\<acrname>.azurecr.io/oauth2/token?scope=repository%3A\<repository>%3Apull&service=\<acrname>.azurecr.io: 401 Unauthorized]
+
+When diagnosing this issue using the Azure CLI, you might see an unexpected "exec format error" if your system node pool runs a different architecture than the image in the ACR:
+
+```azurecli
+az aks check-acr --resource-group <MyResourceGroup> --name <MyManagedCluster> --acr <myacr>.azurecr.io
+
+exec /canipull: exec format error
+```
+
+#### Solution: Push images with the correct architecture or push multi-architecture images
+
+To resolve this issue, use one of the following methods:
+
+- Ensure the container images pushed to ACR match the architecture of your AKS nodes (for example, arm64 or amd64).
+- Create and push multi-architecture images that support both arm64 and amd64 architectures.
 
 ## Cause 2: Image not found error
 
