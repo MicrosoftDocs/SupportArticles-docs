@@ -217,20 +217,6 @@
           href: ../deployment/settings-unexpectedly-change-deleting-group-policy-settings.md
         - name: Unable to publish a form
           href: ../deployment/cannot-publish-form.md
-    - name: Development
-      items:
-        - name: Collaboration Data Objects 1.2.1 isn't supported
-          href: ../development/collaboration-data-objects-1-2-1-not-supported-in-outlook-2010-and-later.md
-        - name: How to save message to .msg file
-          href: ../development/save-message-to-msg-file.md
-        - name: How to use Cdosys.dll to send emails with attachments via Visual C#
-          href: ../development/how-to-use-cdosys-dll-library-to-send-email-with-attachments.md
-        - name: Use Automation to send an Outlook message using Access 2000
-          href: ../development/how-to-use-automation-to-send-messages-using-access-2000.md
-        - name: Use Outlook Object Library to retrieve appointment by using Visual C#
-          href: ../development/how-to-use-object-library-get-appointment-by-using-csharp.md
-        - name: VBA macro that uses data from Word and Excel to send messages from Outlook
-          href: ../development/vba-macro-that-uses-data-from-word-and-excel-to-send-messages.md
     - name: Email Management
       items:
         - name: Create or modify Outlook client-only rule
