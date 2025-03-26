@@ -1109,14 +1109,8 @@ items:
       href: ./user-profiles-and-logon/create-new-user-profile.md
     - name: Error "Invalid store path" during the LoadState process
       href: ./user-profiles-and-logon/error-invalid-store-path-loadstate-user-state-migration-tool.md
-    - name: Logon or logoff delays when you use roaming user profiles
-      href: ./user-profiles-and-logon/roaming-profile-was-not-completely-synchronized-error.md
-    - name: Renaming user account doesn't change profile path
-      href: ./user-profiles-and-logon/renaming-user-account-not-change-profile-path.md
   - name: Windows Hello for Business
     items:
-    - name: Event ID 300 - Windows Hello successfully created in Windows 10
-      href: ./user-profiles-and-logon/event-id-300-windows-hello-successfully-created-in-windows-10.md
     - name: Windows Hello errors during PIN creation in Windows 10
       href: ./user-profiles-and-logon/windows-hello-errors-during-pin-creation-in-windows-10.md
     - name: Retrieve certificate to troubleshoot Windows Hello for Business logon failures
