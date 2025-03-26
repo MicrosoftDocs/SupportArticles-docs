@@ -456,7 +456,7 @@ F12 Developer Tools are built into both Microsoft Edge and Chrome. In instances 
 
 ### Failed Request Trace (FREB) logs
 
-FREB traces are `.xml` files, and formatted by the `.xsl` stylesheet in the FREB log directory. Use a tool like FrebSbS to view these logs. For more information on how to read a FREB log, see [Reading a FREB log, a Failed Request Tracing: IIS request processing pipeline execution](https://techcommunity.microsoft.com/blog/iis-support-blog/reading-a-freb-log-a-failed-request-tracing-iis-request-processing-pipeline-exec/1349639).
+FREB traces are `.xml` files, and formatted by the `.xsl` stylesheet in the FREB log directory. For more information on how to read a FREB log, see [Reading a FREB log, a Failed Request Tracing: IIS request processing pipeline execution](https://techcommunity.microsoft.com/blog/iis-support-blog/reading-a-freb-log-a-failed-request-tracing-iis-request-processing-pipeline-exec/1349639).
 
 ### Full memory dumps
 
@@ -481,4 +481,3 @@ It's simpler and more understandable to run only one type of analysis rule at a 
 > [!NOTE]
 > If a more detailed analysis is needed, use [WinDbg](/windows-hardware/drivers/debuggercmds/windbg-overview) to review dumps.
 
-[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
