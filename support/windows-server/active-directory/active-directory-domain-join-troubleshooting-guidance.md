@@ -53,23 +53,7 @@ The following table lists the ports required to be open between the client compu
 
 ### Error code 0x569
 
-> The user has not been granted the requested logon type at this computer.
-
-Here's an example from the *netsetup.log* file:
-
-```output
-mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: failed to find a DC having account <computer name>$': 0x525
-mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: found DC '\\<DC name>.<domain>.<tld>' in the specified domain
-mm/dd/yyyy hh:mm:ss:ms NetUseAdd to \\<DC name>.<domain>.<tld>\IPC$ returned 1385
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomain: status of connecting to dc '\\<DC Name>.<Domain>.<tld>': 0x569
-mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0x569
-```
-
-Error 0x569 is logged when the domain join user lacks the **Access this computer from the network** user right. Make sure of the following items:
-
-- Verify that the user account performing the domain join operation (or the security group that owns the member of the domain join user) has been granted the **Access this computer from the network** right in the default domain controllers policy.
-- The default domain controllers policy is linked to the OU that hosts the DC computer account that's servicing the domain join operation.
-- The DC servicing the domain join operation applies the policy successfully, specifically the user rights settings defined in the default domain controllers policy.
+For more information, see [Error code 0x569: The user has not been granted the requested logon type at this computer](error-0x569-not-granted-logon-type.md).
 
 ### Error code 0x534
 
