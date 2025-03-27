@@ -251,6 +251,27 @@ This is a known issue with implementing the SMB client on Linux.
 - On the same VM, use multiple mount points with a `nosharesock` option, and spread the load across these mount points.
 - On Linux, try mounting with a `nostrictsync` option to avoid forcing an SMB flush on every `fsync` call. For Azure Files, this option doesn't interfere with data consistency, but it might result in stale file metadata on directory listings (`ls -l` command). Directly querying file metadata by using the `stat` command will return the most up-to-date file metadata.
 
+### Cause 3: **Identifying the Largest Files or Directories within Azure File Share**
+
+When Azure file shares are approaching their capacity, it's essential for customers to identify the largest files and directories to optimize storage. This process provides detailed insights into the specific files and folders consuming the most space.
+
+###  Solution:
+
+To get a comprehensive view of storage usage across the entire share, mount the root of the share. This allows for a thorough inspection of file and directory sizes. From the root of the file share, execute the following commands to identify the largest files and directories:
+
+```shell
+cd /path/to/mount/point
+du -ah --max-depth=1 | sort -rh | head -n 20
+```
+
+This command will display the top 20 largest files and directories in descending order of size, providing a clear overview of storage consumption.
+
+###  Workaround:
+
+- If mounting the root of the share is not feasible, consider using Azure Storage Explorer or other third-party tools to analyze storage usage. 
+- These tools can provide similar insights into file and directory sizes without the need to mount the share directly.
+  
+
 ## High latencies for metadata-heavy workloads involving extensive open/close operations
 
 ### Cause
