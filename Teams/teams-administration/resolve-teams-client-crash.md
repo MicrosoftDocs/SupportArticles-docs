@@ -22,7 +22,7 @@ When a user in your organization uses the Teams app on their device, the app exi
 
 As an administrator, you can check the **Insight** column on the **Issues** tab to find potential reasons why the Teams app crashes. This article lists all the insights for Teams client crash issues and provides resolutions for them. If the issue persists after you perform the resolution, contact [Microsoft Support](https://support.microsoft.com/contactus) for more assistance.
 
-If your organization uses non-Microsoft antivirus or data loss prevention (DLP) applications, make sure that you include or approve the Teams desktop client, the executable that automatically starts the Teams app, and Edge Webview2. For more information, see [Prevent antivirus and DLP tools from blocking or crashing Microsoft Teams](include-exclude-teams-from-antivirus-dlp.md)
+If your organization uses non-Microsoft antivirus or data loss prevention (DLP) applications, make sure that you include or approve the Teams desktop client, the executable that automatically starts the Teams app, and Microsoft Edge Webview2. For more information, see [Prevent antivirus and DLP tools from blocking or crashing Microsoft Teams](include-exclude-teams-from-antivirus-dlp.md)
 
 ## Media stack technology failure
 
@@ -34,7 +34,7 @@ Additionally, [enable Windows Error Reporting (WER)](/troubleshoot/windows-clien
 
 To fix issues that are caused by Webview2 process failures, check the Webview2 error codes for more information. These error codes indicate various problems such as:
 
-- External terminatio
+- External termination
 - Invalid parameters
 - Resource limits
 - Sandbox or GPU issues
