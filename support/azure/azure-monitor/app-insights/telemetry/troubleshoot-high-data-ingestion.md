@@ -296,7 +296,7 @@ Switch to another supported table plan for Application Insights. Billing for dat
 
 ### Method 3: Use telemetry SDK features for Java agent
 
-The default recommended solution is using [sampling overrides](/azure/azure-monitor/app/java-standalone-sampling-overrides). A common use case is [suppressing collecting telemetry for health checks](/azure/azure-monitor/app/java-standalone-sampling-overrides#suppress-collecting-telemetry-for-health-checks). The Application Insights Java agent provides [two types of sampling](/azure/azure-monitor/app/java-standalone-config#sampling).
+The default recommended solution is using [sampling overrides](/azure/azure-monitor/app/java-standalone-sampling-overrides). The Application Insights Java agent provides [two types of sampling](/azure/azure-monitor/app/java-standalone-config#sampling). A common use case is [suppressing collecting telemetry for health checks](/azure/azure-monitor/app/java-standalone-sampling-overrides#suppress-collecting-telemetry-for-health-checks).
 
 There are some supplemental methods to sampling overrides:
 
@@ -304,7 +304,7 @@ There are some supplemental methods to sampling overrides:
 
     - [Reduce the telemetry log level](/azure/azure-monitor/app/java-standalone-config#autocollected-logging)
     - [Remove application (not frameworks/libs) logs with MDC attribute and sampling override](/azure/azure-monitor/app/java-standalone-sampling-overrides#suppress-collecting-telemetry-for-log)
-    - Disable log instrumentation by updating the applicationinsights.json file:
+    - Disable log instrumentation by updating the *applicationinsights.json* file:
 
         ```JSON
         {
