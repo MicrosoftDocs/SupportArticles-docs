@@ -16,7 +16,7 @@ Billing charges for Application Insights or Log Analytics often occur due to hig
 
 In the Azure portal, navigate to cost analysis for your scope. For example: **Cost Management + Billing** > **Cost Management** > **Cost analysis**. This blade offers cost analysis views to chart costs per resource, as follows:
 
- :::image type="content" source="media/troubleshoot-high-ingestion/cost-analysis.png" alt-text="A screenshot thst shows the 'cost analysis' blade." border="false":::
+ :::image type="content" source="media/troubleshoot-high-data-ingestion/cost-analysis.png" alt-text="A screenshot thst shows the 'cost analysis' blade." border="false":::
 
 
 ### Step 2: Identify costly tables with high data ingestion
@@ -58,7 +58,7 @@ Once you've identified an Application Insights resource or a Log Analytics works
 
     In the Azure portal, navigate to your Log Analytics workspace, select **Workbooks**, and select **Usage** under **Log Analytics Workspace Insights**.
 
-    :::image type="content" source="media/troubleshoot-high-ingestion/log-analytics-usage-workbook.png" alt-text="A screenshot thst shows the Log Analytics workbook pane." lightbox="media/troubleshoot-high-ingestion/log-analytics-usage-workbook.png" border="false":::
+    :::image type="content" source="media/troubleshoot-high-data-ingestion/log-analytics-usage-workbook.png" alt-text="A screenshot thst shows the Log Analytics workbook pane." lightbox="media/troubleshoot-high-data-ingestion/log-analytics-usage-workbook.png" border="false":::
 
     This workbook provides valuable insights, such as the percentage of data ingestion for each table and detailed ingestion statistics for each resource reporting to the same workspace.
 
@@ -188,7 +188,7 @@ dependencies
     
     You can get what table is the biggest contributor to costs. Here's an exmaple of `AppTraces`:
 
-    :::image type="content" source="media/troubleshoot-high-ingestion/apptraces-table.png" alt-text="A screenshot thst shows that the AppTraces table is the biggest contributor to costs.":::
+    :::image type="content" source="media/troubleshoot-high-data-ingestion/apptraces-table.png" alt-text="A screenshot thst shows that the AppTraces table is the biggest contributor to costs.":::
 
 2. Query the specific application driving the costs for traces:
 
@@ -202,7 +202,7 @@ dependencies
     | project-away TotalBilledSize
     ```
 
-    :::image type="content" source="media/troubleshoot-high-ingestion/application-driving-costs-for-traces.png" alt-text="A screenshot thst shows the specific application driving the costs for traces.":::
+    :::image type="content" source="media/troubleshoot-high-data-ingestion/application-driving-costs-for-traces.png" alt-text="A screenshot thst shows the specific application driving the costs for traces.":::
 
 3. Run the following query specific to that application and look further into the specific logger categories sending telemetry to the `AppTraces` table:
 
@@ -220,7 +220,7 @@ dependencies
 
     The result shows two main categories responsible for the costs:
 
-    :::image type="content" source="media/troubleshoot-high-ingestion/logger-categories-sending-telemetry-to-apptraces.png" alt-text="A screenshot thst shows the specific logger categories sending telemetry to the AppTraces table.":::
+    :::image type="content" source="media/troubleshoot-high-data-ingestion/logger-categories-sending-telemetry-to-apptraces.png" alt-text="A screenshot thst shows the specific logger categories sending telemetry to the AppTraces table.":::
 
 ### Scenario 2: High data ingestion in Application Insight
 
@@ -237,7 +237,7 @@ To determine the factors contributing to the costs, follow these steps:
 
     Here's an exmaple that shows Azure Functions is generating lots of trace and exception telemetry:
     
-    :::image type="content" source="media/troubleshoot-high-ingestion/table-sdkversion-count.png" alt-text="A screenshot thst shows what table and SDK is generating most Trace and Exception telemetry.":::
+    :::image type="content" source="media/troubleshoot-high-data-ingestion/table-sdkversion-count.png" alt-text="A screenshot thst shows what table and SDK is generating most Trace and Exception telemetry.":::
     
 
 2. Run the following query to get the specific app generating more traces than the others:
@@ -251,7 +251,7 @@ To determine the factors contributing to the costs, follow these steps:
     ```
 
 
-    :::image type="content" source="media/troubleshoot-high-ingestion/app-generating-more-traces.png" alt-text="A screenshot thst shows what app is generating most traces.":::
+    :::image type="content" source="media/troubleshoot-high-data-ingestion/app-generating-more-traces.png" alt-text="A screenshot thst shows what app is generating most traces.":::
 
 3. Refine the query to include that specific app and generate a count of records per each individual message:
 
@@ -266,7 +266,7 @@ To determine the factors contributing to the costs, follow these steps:
 
     The result can show the specific message increasing ingestion costs:
 
-    :::image type="content" source="media/troubleshoot-high-ingestion/app-message-count.png" alt-text="A screenshot thst shows a count of records per each individual message.":::
+    :::image type="content" source="media/troubleshoot-high-data-ingestion/app-message-count.png" alt-text="A screenshot thst shows a count of records per each individual message.":::
 
 ### Scenario 3: Reach daily cap unexpectedly
 
@@ -280,7 +280,7 @@ customEvents
 
 This analysis indicates that certain events started ingested on September 4th and subsequently became noisy very quickly.
 
-:::image type="content" source="media/troubleshoot-high-ingestion/custom-events.png" alt-text="A screenshot thst shows a count of custom events.":::
+:::image type="content" source="media/troubleshoot-high-data-ingestion/custom-events.png" alt-text="A screenshot thst shows a count of custom events.":::
 
 ## Reduce data ingestion costs
 
