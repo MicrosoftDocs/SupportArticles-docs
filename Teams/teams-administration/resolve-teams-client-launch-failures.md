@@ -16,15 +16,15 @@ ms.date: 03/26/2025
 # Resolve Teams client launch failures
 
 > [!IMPORTANT]
-> This article describes a Microsoft Teams feature that was announced but isn't yet released. Admins can learn more about the release by checking the Message Center (in the [Microsoft 365 admin center](https://portal.office.com/adminportal/home)). For more information about the feature, see [Teams client health](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=478610) and [Monitor Teams client updates](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=478609).
+> This article describes a Microsoft Teams feature that hasn't yet been released. It's been announced, and it's coming soon. If you're an admin, you can find out when this feature will be released in the Message Center (in the [Microsoft 365 admin center](https://portal.office.com/adminportal/home)). For more information, see [Teams client health](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=478610) and [Monitor Teams client updates](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=478609).
 
 When a user in your organization tries to start the Teams app on their device, a blank window opens and then disappears immediately. This issue is categorized as a **Launch failure** in the [Teams client health dashboard](/microsoftteams/teams-client-health). 
 
 As an administrator, you can check the **Insight** column on the **Issues** tab to find a potential cause of the launch failure. This article lists all the insights for Teams client launch failures and provides resolutions for them. If the issue persists after you perform the resolution, contact [Microsoft Support](https://support.microsoft.com/contactus) for more assistance.
 
-## Can't navigate to Teams endpoint
+## Unable to navigate to Teams endpoint
 
-To fix the issue, review and update your network configuration. Make sure that the Teams client's access to [Teams endpoints](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide#microsoft-teams&preserve-view=true) isn't blocked by a firewall or proxy settings.
+To fix the issue, review and update your network configuration. Make sure that a firewall or proxy settings don't block the Teams client access to [Teams endpoints](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide#microsoft-teams&preserve-view=true).
 
 ## Timed out waiting for Teams endpoint
 
