@@ -8,7 +8,7 @@ ms.custom: sap:Application Insights
 ---
 # Troubleshoot high data ingestion in Application Insights
 
-This article helps you troubleshoot high data ingestion that occurs in Application Insights resources or Log Analytics workspaces.
+Billing charges for Application Insights or Log Analytics often occur due to high data ingestion. This article helps you troubleshoot this issue that occurs in Application Insights resources or Log Analytics workspaces.
 
 ## General troubleshooting steps
 
@@ -54,7 +54,7 @@ Once you've identified an Application Insights resource or a Log Analytics works
 
     Similar to the record count queries, these queries above can assist in identifying the most active tables, allowing you to pinpoint specific tables for further investigation.
 
-- Using Log Analytics Usage workbooks
+- Using Log Analytics workbooks
 
     In the Azure portal, navigate to your Log Analytics workspace, select **Workbooks**, and select **Usage** under **Log Analytics Workspace Insights**.
 
@@ -62,9 +62,9 @@ Once you've identified an Application Insights resource or a Log Analytics works
 
     This workbook provides valuable insights, such as the percentage of data ingestion for each table and detailed ingestion statistics for each resource reporting to the same workspace.
 
-### Step 3: Identify driving factors in high data ingestion
+### Step 3: Determine factors contributing to high data ingestion
 
-Once you've identified the tables with high data ingestion, take the table with the highest activity and identify the driving factors for that excess telemetry. This could be a specific application that generates more data than the others, an exception message that gets logged too frequently, or a new logger category that emits too information.
+After identifying the tables with high data ingestion, focus on the table with the highest activity and determine factors contributing to high data ingestion. This could be a specific application that generates more data than the others, an exception message that gets logged too frequently, or a new logger category that emits too information.
 
 Here are some sample queries you can use for this identification:
 
@@ -111,7 +111,7 @@ exceptions
 ```
 
 
-You can try out different telemetry fields. For example, perhaps you first run the query below and see no evident culprit for the excess of telemetry:
+You can try out different telemetry fields. For example, perhaps you first run the following query and observe there is no obvious cause for the excessive telemetry:
 
 ```Kusto
 dependencies
@@ -120,7 +120,7 @@ dependencies
 | sort by count_ desc
 ```
 
-However, you can try another telemetry field instead of `target`, such as `type`. This might show more compelling results to help your investigation.
+However, you can try another telemetry field instead of `target`, such as `type`.
 
 ```Kusto
 dependencies
@@ -149,7 +149,7 @@ exceptions
 
 ### Step 4: Investigate evolution of ingestion over time
 
-Examine the evolution of ingestion over time based on the driving factors identified previously. This way can determine whether this behavior has been consistent or if changes occurred at a specific point. By analyzing data in this way, you can pinpoint when the change happened and provide a clearer understanding of the causes behind the high data ingestion. This insight will be important for addressing the issue and implementing effective solutions.
+Examine the evolution of ingestion over time based on the factors identified previously. This way can determine whether this behavior has been consistent or if changes occurred at a specific point. By analyzing data in this way, you can pinpoint when the change happened and provide a clearer understanding of the causes behind the high data ingestion. This insight will be important for addressing the issue and implementing effective solutions.
 
 In the following queries, the [bin()](/kusto/query/bin-function) Kusto Query Language (KQL) scalar function is used to segment data into 1-day intervals. This approach facilitates trend analysis as you can see how data has changed or not changed over time.
 
@@ -172,7 +172,7 @@ dependencies
 
 ## Troubleshooting steps for specific scenarios
 
-### Scenario 1: High ingestion in Log Analytics
+### Scenario 1: High data ingestion in Log Analytics
 
 1. Query all tables within a Log Analytics workspace.
 
@@ -222,9 +222,9 @@ dependencies
 
     :::image type="content" source="media/troubleshoot-high-ingestion/logger-categories-sending-telemetry-to-apptraces.png" alt-text="A screenshot thst shows the specific logger categories sending telemetry to the AppTraces table.":::
 
-### Scenario 2: High ingestion in Application Insight
+### Scenario 2: High data ingestion in Application Insight
 
-To identify what specifically is driving the costs, follow these steps:
+To determine the factors contributing to the costs, follow these steps:
 
 1. Query the telemetry across all tables and obtain a record count per table and SDK version:
 
@@ -264,7 +264,7 @@ To identify what specifically is driving the costs, follow these steps:
     | sort by count_ desc
     ```
 
-    The result can show the specific message driving up ingestion costs:
+    The result can show the specific message increasing ingestion costs:
 
     :::image type="content" source="media/troubleshoot-high-ingestion/app-message-count.png" alt-text="A screenshot thst shows a count of records per each individual message.":::
 
@@ -278,13 +278,13 @@ customEvents
 | summarize count(), min(timestamp) by name
 ```
 
-This analysis revealed that certain events started ingested on September 4th and subsequently became noisy very quickly.
+This analysis indicates that certain events started ingested on September 4th and subsequently became noisy very quickly.
 
 :::image type="content" source="media/troubleshoot-high-ingestion/custom-events.png" alt-text="A screenshot thst shows a count of custom events.":::
 
-## Methods to reduce costs
+## Reduce data ingestion costs
 
-After identifying the driving factors in the Azure Monitor tables that explain the unexpected data ingestion, reduce costs by using the following methods per your scenario:
+After identifying the factors in the Azure Monitor tables responsible for unexpected data ingestion, reduce data ingestion costs using the following methods per your scenarios:
 
 ### Update daily cap configuration
 
