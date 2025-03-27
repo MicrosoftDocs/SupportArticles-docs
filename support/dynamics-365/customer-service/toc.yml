@@ -212,3 +212,7 @@
           href: omnichannel-for-customer-service/the-remote-name-could-not-be-resolved-error-when-enabling-or-adding-a-user.md
         - name: Use diagnostic messages to troubleshoot call issues
           href: omnichannel-for-customer-service/use-diagnostic-messages-in-call-issues.md
+    - name: WhatsApp via Twilio
+      items:
+        - name: Resource not found when configuring WhatsApp channel
+          href: omnichannel-for-customer-service/resource-not-found-error-when-configuring-whatsapp-channel.md

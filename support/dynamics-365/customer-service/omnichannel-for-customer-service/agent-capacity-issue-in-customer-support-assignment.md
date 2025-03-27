@@ -54,4 +54,4 @@ To resolve this issue, adjust the total capacity units assigned to the affected 
 
     - Test the configuration to ensure agents can now handle the desired number of customer cases without their status changing to **Busy**.
 
-For detailed instructions on managing capacity profiles, see [Create and manage capacity profiles | Microsoft Learn](https://learn.microsoft.com/).
+For detailed instructions on managing capacity profiles, see [Create and manage capacity profiles](/dynamics365/customer-service/administer/capacity-profiles).

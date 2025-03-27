@@ -28,7 +28,7 @@ Follow these steps to resolve the issue:
 
 1. Open the Customer Service Admin application.
 
-2. Open the browser console using the shortcut Ctrl+Shift+I.
+2. Open the browser console using the shortcut <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>.
 
 3. Execute the following command in the console to check the current app setting:
 
