@@ -286,21 +286,19 @@ This analysis indicates that certain events started ingested on September 4th an
 
 After identifying the factors in the Azure Monitor tables responsible for unexpected data ingestion, reduce data ingestion costs using the following methods per your scenarios:
 
-### Update daily cap configuration
+### Method 1: Update daily cap configuration
 
 Adjust the daily cap to prevent excess telemetry ingestion.
 
-### Switch table plans
+### Method 2: Switch table plan
 
 Switch to another supported table plan for Application Insights. Billing for data ingestion depends on the table plan and the region of the Log Analytics workspace. See [Table plans](/azure/azure-monitor/logs/data-platform-logs) and [Tables that support the Basic table plan in Azure Monitor Logs](/azure/azure-monitor/logs/basic-logs-azure-tables).
 
-### Use telemetry SDK features for Java agent
-
-#### Default recommended solution
+### Method 3: Use telemetry SDK features for Java agent
 
 The default recommended solution is using [sampling overrides](/azure/azure-monitor/app/java-standalone-sampling-overrides). A common use case is [suppressing collecting telemetry for health checks](/azure/azure-monitor/app/java-standalone-sampling-overrides#suppress-collecting-telemetry-for-health-checks). The Application Insights Java agent provides [two types of sampling](/azure/azure-monitor/app/java-standalone-config#sampling).
 
-#### Supplemental methods to sampling overrides:
+There are some supplemental methods to sampling overrides:
 
 - Reduce cost from the `traces` table (**logs** and **Trace** on the Application Insights page):
 
@@ -335,9 +333,9 @@ The default recommended solution is using [sampling overrides](/azure/azure-moni
 
     OpenTelemetry attributes are added to the **customDimensions** column. They are represented as properties in Application Insights. You can remove attributes by using [an attribute telemetry processor](/azure/azure-monitor/app/java-standalone-telemetry-processors#attribute-processor). For more information, see [Telemetry processor examples - Delete](/azure/azure-monitor/app/java-standalone-telemetry-processors-examples#delete).
 
-### Update application code (log levels and exceptions)
+### Method 4: Update application code (log levels or exceptions)
 
-In some scenarios, updating the application code directly might help reduce the amount of telemetry being generated and consumed by the Application Insights backend service.
+In some scenarios, updating the application code directly might help reduce the amount of telemetry being generated and consumed by the Application Insights backend service. A common example might be a noisy exception surfaced by the application.
 
 ## References
 
