@@ -279,7 +279,9 @@ If a user has a local setting screen (like Local Bluetooth settings) open on the
 
 If the user must share a local settings screen, use a different tool like Quick Assist.
 
-## Can't return to the Cloud PC after signing into the physical device 
+## Can't return to the Cloud PC after signing in to the physical device 
+
+### Solution
 
 If signing out of the physical device doesn't return the user to the Cloud PC sign-in screen, restart the physical device.  
 
