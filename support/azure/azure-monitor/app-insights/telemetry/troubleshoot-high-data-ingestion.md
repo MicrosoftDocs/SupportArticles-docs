@@ -8,7 +8,7 @@ ms.custom: sap:Application Insights
 ---
 # Troubleshoot high data ingestion in Application Insights
 
-Billing charges for Application Insights or Log Analytics often occur due to high data ingestion. This article helps you troubleshoot this issue that occurs in Application Insights resources or Log Analytics workspaces.
+An increase in billing charges for Application Insights or Log Analytics often occur due to high data ingestion. This article helps you troubleshoot this issue and provides methods to reduce data ingestion costs.
 
 ## General troubleshooting steps
 
@@ -292,7 +292,7 @@ Adjust the daily cap to prevent excess telemetry ingestion.
 
 ### Switch table plans
 
-Switch to another supported table plan for Application Insights. See [Table plans](/azure/azure-monitor/logs/data-platform-logs) and [Tables that support the basic table plan in Azure Monitor Logs](/azure/azure-monitor/logs/basic-logs-azure-tables).
+Switch to another supported table plan for Application Insights. Billing for data ingestion depends on the table plan and the region of the Log Analytics workspace. See [Table plans](/azure/azure-monitor/logs/data-platform-logs) and [Tables that support the Basic table plan in Azure Monitor Logs](/azure/azure-monitor/logs/basic-logs-azure-tables).
 
 ### Use telemetry SDK features for Java agent
 
