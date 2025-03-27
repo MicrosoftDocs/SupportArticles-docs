@@ -58,7 +58,7 @@ Once you've identified an Application Insights resource or a Log Analytics works
 
     In the Azure portal, navigate to your Log Analytics workspace, select **Workbooks**, and select **Usage** under **Log Analytics Workspace Insights**.
 
-    :::image type="content" source="media/troubleshoot-high-ingestion/log-analytics-usage-workbook.png" alt-text="A screenshot thst shows the Log Analytics workbook pane." border="false":::
+    :::image type="content" source="media/troubleshoot-high-ingestion/log-analytics-usage-workbook.png" alt-text="A screenshot thst shows the Log Analytics workbook pane." lightbox="media/troubleshoot-high-ingestion/log-analytics-usage-workbook.png" border="false":::
 
     This workbook provides valuable insights, such as the percentage of data ingestion for each table and detailed ingestion statistics for each resource reporting to the same workspace.
 
@@ -266,7 +266,7 @@ To identify what specifically is driving the costs, follow these steps:
 
     The result can show the specific message driving up ingestion costs:
 
-    :::image type="content" source="media/troubleshoot-high-ingestion/app-message-counts.png" alt-text="A screenshot thst shows a count of records per each individual message.":::
+    :::image type="content" source="media/troubleshoot-high-ingestion/app-message-count.png" alt-text="A screenshot thst shows a count of records per each individual message.":::
 
 ### Scenario 3: Reach daily cap unexpectedly
 
@@ -292,7 +292,7 @@ Adjust the daily cap to prevent excess telemetry ingestion.
 
 ### Switch table plans
 
-Switch to another supported table plan for Application Insights. See [Table plans](azure/azure-monitor/logs/data-platform-logs) and [Tables that support the basic table plan in Azure Monitor Logs](/azure/azure-monitor/logs/basic-logs-azure-tables).
+Switch to another supported table plan for Application Insights. See [Table plans](/azure/azure-monitor/logs/data-platform-logs) and [Tables that support the basic table plan in Azure Monitor Logs](/azure/azure-monitor/logs/basic-logs-azure-tables).
 
 ### Use telemetry SDK features for Java agent
 
