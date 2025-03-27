@@ -15,7 +15,7 @@ _Applies to:_ &nbsp;SQL Server on Azure VMs
 
 ## Symptoms
 
-When you try to deploy SQL Server on Azure VM image in Azure Marketplace, the deployment fails with a status of `Conflict` and the following error: 
+When you try to deploy SQL Server on an Azure VM image in Azure Marketplace, the deployment fails with a status of `Conflict` and the following error: 
 
 > System Drive returned status not ready for use.
 
@@ -23,7 +23,7 @@ When you try to deploy SQL Server on Azure VM image in Azure Marketplace, the de
 
 Some of the newest Azure VM sizes present a RAW Local SSD volume for ephemeral storage configured with the Non-Volatile Memory Express (NVMe) interface. This configuration might cause the deployment of SQL Server on an Azure VM image to fail because it attempts to place tempdb data files on the local SSD volume.  
 
-The deployment fails because the RAW Local SSD volume isn't formatted or initialized, which makes the ephemeral storage unavailable and prevents SQL Server from accessing it during the installation that occurs in SQL Server on Azure VM deployment process. 
+The deployment fails because the RAW Local SSD volume isn't formatted or initialized, which makes the ephemeral storage unavailable and prevents SQL Server from accessing it during the installation process of SQL Server on an Azure VM. 
 
 ## Resolution
 
