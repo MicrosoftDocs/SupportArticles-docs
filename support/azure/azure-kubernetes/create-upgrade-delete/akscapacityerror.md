@@ -44,7 +44,7 @@ The infrastructure that hosts AKS managed clusters have different allocation res
 
 ### Solution 3: Use an Azure Enterprise subscription
 
-When capacity is running low, we limit AKS cluster creates for customers who don't have an Enterprise Agreement (EA) subscription first in order to reserve resources for real production scenarios. Make sure that you use an EA subscription to create your AKS cluster.
+When capacity is running low, we limit AKS cluster creation for customers who don't have an Enterprise Agreement (EA) subscription first in order to reserve resources for real production scenarios. Make sure that you use an EA subscription to create your AKS cluster.
 
 ### Solution 4: Retry the operation
 
