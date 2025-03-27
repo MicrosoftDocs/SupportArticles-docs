@@ -1,6 +1,6 @@
 ---
-title: Chat channel provisioning fails in Dynamics 365 due to license issue
-description: Solves an issue where the chat channel provisioning fails in Dynamics 365 Customer Service due to a license issue.
+title: Chat Channel Provisioning Fails in Dynamics 365 Due To License Issue
+description: Solves an issue where the chat channel provisioning fails in Microsoft Dynamics 365 Customer Service due to a license issue.
 author: Yerragovula
 ms.author: srreddy
 ai-usage: ai-assisted
@@ -14,13 +14,15 @@ This article provides guidance to resolve the issue where the chat channel provi
 
 ## Symptoms
 
-When attempting to provision a chat channel in Dynamics 365 Customer Service, the system reports that there is no license available. This occurs even though licenses have been purchased.
+When you try to provision a chat channel in Dynamics 365 Customer Service, the system reports that there's no license available. This occurs even though licenses have been purchased.
 
 ## Cause
 
-The issue occurs if the required Microsoft Dynamics 365 Customer Service Enterprise or Dynamics 365 Customer Engagement Plan license is not available or assigned. Licenses currently attached may be insufficient, such as basic or other messaging channel licenses, and do not include the necessary Customer Service Enterprise license required for provisioning the chat channel.
+The issue might occur if the required Microsoft Dynamics 365 Customer Service Enterprise or Dynamics 365 Customer Engagement Plan license isn't available or assigned.
 
-## Solution
+Licenses currently attached may be insufficient, such as basic or other messaging channel licenses, and don't include the necessary Customer Service Enterprise license required for provisioning the chat channel.
+
+## Resolution
 
 To resolve this issue, follow the steps below:
 
@@ -30,4 +32,4 @@ To resolve this issue, follow the steps below:
 
 3. Ensure the users have active subscription to the appropriate add-ons.
 
-Refer to [Omnichannel for Customer Service system requirements](/dynamics365/customer-service/implement/system-requirements-omnichannel) to confirm the required licenses and provisioning prerequisites.
+To confirm the required licenses and provisioning prerequisites, see [Omnichannel for Customer Service system requirements](/dynamics365/customer-service/implement/system-requirements-omnichannel).

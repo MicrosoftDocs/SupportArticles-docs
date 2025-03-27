@@ -1,6 +1,6 @@
 ---
-title: Resource not found error when configuring WhatsApp channel
-description: Solves the error "A Resource not found for the segment" when configuring the WhatsApp channel in Dynamics 365 Customer Service or Contact Center.
+title: Resource Not Found Error When Configuring WhatsApp Channel
+description: Solves the Resource not found for the segment error when configuring the WhatsApp channel in Microsoft Dynamics 365 Customer Service or Dynamics 365 Contact Center.
 author: Yerragovula
 ms.author: srreddy
 ai-usage: ai-assisted
@@ -10,11 +10,11 @@ ms.custom: sap:WhatsApp via Twilio, DFM
 ---
 # Resource not found error when configuring WhatsApp channel
 
-This article provides guidance on resolving the error "A Resource not found for the segment 'msdyn\_UpdatePrivacyTerms'" that may occur when configuring the WhatsApp channel in Dynamics 365 Customer Service or Contact Center.
+This article provides guidance on resolving the "A Resource not found for the segment 'msdyn\_UpdatePrivacyTerms'" error that may occur when you configure the WhatsApp channel in Dynamics 365 Customer Service or Dynamics 365 Contact Center.
 
 ## Symptoms
 
-Users attempting to configure the WhatsApp channel in Dynamics 365 Customer Service (Omnichannel) encounter the error message:
+When you try to [configure the WhatsApp channel](/dynamics365/customer-service/administer/configure-whatsapp-channel) in Dynamics 365 Customer Service or Dynamics 365 Contact Center, you receive the following error message:
 
 > A Resource not found for the segment 'msdyn\_UpdatePrivacyTerms'.
 
@@ -22,7 +22,7 @@ Users attempting to configure the WhatsApp channel in Dynamics 365 Customer Serv
 
 This issue occurs when certain required Omnichannel-related plugins are disabled.
 
-## Solution
+## Resolution
 
 To resolve this issue, follow these steps:
 
@@ -42,18 +42,17 @@ To resolve this issue, follow these steps:
 
 1. In the **SDK Message Processing Steps** list, look in the **Name**column to locate the following plugins:
 
-    - **Microsoft.Dynamics.OmnichannelSharedBase.Plugins.PostOperationUpdatePrivacyTermsPlugin**: msdyn_UpdatePrivacyTerms of any Entity.
-
-    - **Microsoft.Dynamics.OmnichannelBase.Plugins.PostOperationUpdatePrivacyTermsPlugin**: msdyn_UpdatePrivacyTerms of any Entity.
+    - **Microsoft.Dynamics.OmnichannelSharedBase.Plugins.PostOperationUpdatePrivacyTermsPlugin**: `msdyn_UpdatePrivacyTerms` of any Entity.
+    - **Microsoft.Dynamics.OmnichannelBase.Plugins.PostOperationUpdatePrivacyTermsPlugin**: `msdyn_UpdatePrivacyTerms` of any Entity.
 
 2. Verify the **Status**column for each plugin:
 
-    - If the plugin is disabled, select it by clicking the checkbox next to its name.
+    - If the plugin is disabled, select it by selecting the checkbox next to its name.
 
-    - Click the **Activate** button in the toolbar.
+    - Select the **Activate** button in the toolbar.
 
 ### Step 4: Save and Publish Customizations
 
-1. Once the necessary plugins are activated, click **Save** in the toolbar.
+1. Once the necessary plugins are activated, select **Save** in the toolbar.
 
-2. Then, click **Publish All Customizations** to apply the changes.
+2. Then, select **Publish All Customizations** to apply the changes.
