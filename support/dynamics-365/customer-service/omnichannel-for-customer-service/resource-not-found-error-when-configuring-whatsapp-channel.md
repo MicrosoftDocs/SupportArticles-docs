@@ -40,12 +40,12 @@ To resolve this issue, follow these steps:
 
 ### Step 3: Activate the Required Plugins
 
-1. In the **SDK Message Processing Steps** list, look in the **Name**column to locate the following plugins:
+1. In the **SDK Message Processing Steps** list, look in the **Name** column to locate the following plugins:
 
     - **Microsoft.Dynamics.OmnichannelSharedBase.Plugins.PostOperationUpdatePrivacyTermsPlugin**: `msdyn_UpdatePrivacyTerms` of any Entity.
     - **Microsoft.Dynamics.OmnichannelBase.Plugins.PostOperationUpdatePrivacyTermsPlugin**: `msdyn_UpdatePrivacyTerms` of any Entity.
 
-2. Verify the **Status**column for each plugin:
+2. Verify the **Status** column for each plugin:
 
     - If the plugin is disabled, select it by selecting the checkbox next to its name.
 
