@@ -27,6 +27,8 @@
       href: ./teams-administration/admin-self-help-diagnostics.md
     - name: Teams Client Health
       items:
+      - name: Resolve Teams client crash issues
+        href: ./teams-administration/resolve-teams-client-crash.md
       - name: Resolve Teams client launch failures
         href: ./teams-administration/resolve-teams-client-launch-failures.md
       - name: '"Root cause undetermined" for Teams client update failure'
