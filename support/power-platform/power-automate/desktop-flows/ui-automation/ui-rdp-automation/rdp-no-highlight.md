@@ -65,10 +65,14 @@ The communication with the remote agent components doesn't work.
      Set the **Virtual channel allow list for DVC** policy with the following values:
 
       - `C:\Program Files (x86)\Power Automate agent for virtual desktops\PAD.RDP.ControlAgent.exe,Microsoft.Flow.RPA.Desktop.UIAutomation.RDP.DVC.Plugin,PAD\CONTROL`
-  
+
       - `C:\Users\*\AppData\Local\Microsoft\Power Automate Desktop\RDP Automation Agents\*\PAD.RDP.AutomationAgent.exe,Microsoft.Flow.RPA.Desktop.UIAutomation.RDP.DVC.Plugin,PAD\UIA`
 
       Ensure Citrix machines are restarted after applying the policy.
+
+5. If the agent is running and no error is shown on the tray icon, then run the troubleshooter in UI Automation section while the RDP/Citrix window/app is running. Check for issues. If the troubleshooter is reporting error, check the details.
+
+   :::image type="content" source="media/rdp-no-highlight/rdp-access-denied.png" alt-text="Screenshot of the Power Automate troubleshooter with highlighted the RDP/Citrix issue details.":::
 
 ## More information
 
