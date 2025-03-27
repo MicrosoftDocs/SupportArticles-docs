@@ -1,7 +1,7 @@
 - name: Welcome
   href: welcome-virtual-machines-windows.yml
 
-- name: Azure Linux Virtual Machines troubleshooting documentation
+- name: Azure Linux VM troubleshooting documentation
   href: ../linux/welcome-virtual-machines-linux.yml
 
 - name: Get additional support for VM-specific issues
@@ -17,7 +17,7 @@
   - name: Microsoft Azure PaaS VM logs
     href: sdp352ef8720-e3ee-4a12-a37e-cc3b0870f359-windows-vm.md
 
-- name: Support statements for Azure Virtual Machines
+- name: Support statements for Azure VM
   items:
   - name: What Microsoft server software is supported
     href: server-software-support.md
@@ -46,15 +46,15 @@
   - name: Citrix services support policy
     href: support-policy-citrix-services.md
 
-- name: Extended Security Updates (ESU) for Windows Server 2008/R2 and 2012/R2
+- name: Extended Security Updates for Windows Server 2008/R2 and 2012/R2
   items:
   - name: Overview
     href: /windows-server/get-started/extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
-  - name: Frequently asked questions (FAQ)
+  - name: Frequently asked questions
     href: /windows-server/get-started/extended-security-updates-faq?context=/troubleshoot/azure/virtual-machines/windows/context/context
-  - name: How to install Extended Security Updates (ESU)
+  - name: How to install Extended Security Updates
     href: /windows-server/get-started/install-extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
-  - name: How to activate Extended Security Updates (ESU)
+  - name: How to activate Extended Security Updates
     href: /windows-server/get-started/activate-extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
   
 - name: Procedures to upload a VHD to Azure
@@ -194,7 +194,7 @@
 
 - name: VM performance
   items:
-  - name: Azure Performance diagnostics (PerfInsights)
+  - name: Azure Performance diagnostics
     items:
     - name: Overview
       href: performance-diagnostics.md
@@ -365,7 +365,7 @@
       href: cannot-extend-encrypted-os-volume.md
     - name: Cannot extend volume on a SQL standalone server virtual machine
       href: cannot-extend-volume-sql-server.md
-    - name: Disk <number> has been surprise removed (event ID 157)
+    - name: Disk <number> has been surprise removed
       href: disk-has-been-surprise-removed-event-id-157.md
     - name: Errors when deleting storage resources
       href: storage-resource-deletion-errors.md
@@ -383,7 +383,7 @@
   - name: Cannot enable Azure Disk Encryption
     href: extension-version-2.2-not-supported.md
 
-- name: VM Agent (Windows)
+- name: Windows VM Agent
   items:
   - name: Azure Windows VM Agent overview
     href: /azure/virtual-machines/extensions/agent-windows?context=/troubleshoot/azure/virtual-machines/windows/context/context
@@ -411,11 +411,11 @@
 
 - name: Cannot activate my Windows VM
   items:
-  - name: Understanding Generic Volume License Key (GVLK)
+  - name: Understanding Generic Volume License Key
     href: /windows-server/get-started/kms-client-activation-keys?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: Troubleshooting
     href: troubleshoot-activation-problems.md
-  - name: Frequently asked questions (FAQ)
+  - name: Frequently asked questions
     href: windows-virtual-machine-activation-faq.yml
   - name: KMS endpoints - new endpoints
     href: windows-activation-stopped-working.md
@@ -473,7 +473,7 @@
 
 - name: On-demand Capacity Reservation issues
   items:
-  - name: Can't deploy Virtual Machines or Virtual Machine Scale Sets (Uniform) with Capacity Reservation
+  - name: Can't deploy VM or VM Scale Sets with capacity reservation
     href: capacity-reservation-cant-deploy-vm-vmss.md
   - name: Can't create Capacity Reservation
     href: capacity-reservation-cant-create-vm-vmss.md
@@ -484,11 +484,11 @@
   - name: A Capacity Reservation is in a "Failed" provisioning state
     href: capacity-reservation-failed-provisioning-state.md
 
-- name: Custom script extensions (CSE)
+- name: Custom script extensions
   items:
   - name: Overview
     href: /azure/virtual-machines/extensions/custom-script-windows#troubleshoot-and-support?context=/troubleshoot/azure/virtual-machines/windows/context/context
-  - name: Debug scripts run by Custom Script Extension or Run Command
+  - name: Debug scripts in Custom Script Extension or Run Command
     href: debug-customscriptextension-runcommand-scripts.md
 
 - name: Run command
@@ -503,7 +503,7 @@
 
 - name: VM Inspector
   items:
-  - name: VM Inspector for Azure Virtual Machines
+  - name: VM Inspector for Azure VM
     href: vm-inspector-azure-virtual-machines.md
   - name: VM Inspector error messages
     href: vm-inspector-error-messages.md
