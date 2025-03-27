@@ -283,7 +283,7 @@ If the user must share a local settings screen, use a different tool like Quick 
 
 ### Solution
 
-If the user doesn't return to the Cloud PC sign-in screen after signing out of the physical device, restart the physical device.  
+If the user still doesn't return to the Cloud PC sign-in screen after signing out of the physical device, restart the physical device.  
 
 ## Next steps
 
