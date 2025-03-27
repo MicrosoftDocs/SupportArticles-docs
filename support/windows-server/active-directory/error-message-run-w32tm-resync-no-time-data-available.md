@@ -1,7 +1,7 @@
 ---
 title: w32tm /resync command fails with "The computer didn't resync because no time data was available."
 description: Describes a resync failure that can be due to multiple different causes.
-ms.date: 01/15/2025
+ms.date: 03/20/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -14,7 +14,7 @@ ms.custom:
 
 This article provides several possible solutions to an error that you may get when you run the `w32tm /resync` command to synchronize time with a time source.
 
-_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016
+_Applies to:_ &nbsp; Windows Server (All supported versions)  
 _Original KB number:_ &nbsp; 929276
 
 ## Symptoms

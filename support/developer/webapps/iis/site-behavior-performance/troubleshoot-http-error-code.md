@@ -247,7 +247,7 @@ To capture a PerfView trace and dumps, follow the steps in the following section
 
 Before the issue occurs, follow these steps to configure PerfView and Procdump for data collection:
 
-1. Download [Procdump](/sysinternals/downloads/procdump). It's a lightweight executable file that doesn't require installation and automates dump collection.
+1. Download [ProcDump](/sysinternals/downloads/procdump). It's a lightweight executable file that doesn't require installation and automates dump collection.
 1. Extract the **procdump.exe** file to a particular folder on the server.
 1. Download the [PerfView](https://github.com/microsoft/perfview/releases) tool on the server. It's a profiler tool that captures Event Tracing for Windows (ETW) events (no installation required).
 1. For PerfView to provide useful information, add **Tracing** as a **Role Service** for IIS. Without **Tracing** enabled, an ETW trace will only include **HTTP.sys** information. If you aren't sure whether the **Tracing** role service is installed, follow these steps:

@@ -12,6 +12,8 @@ ms.custom: sap:Extensions, Policies and Add-Ons
 
 This article discusses some common error messages that you may receive when you install or update the [Distributed Application Runtime (Dapr)](https://dapr.io/) extension for Microsoft Azure Kubernetes Service (AKS) or Arc for Kubernetes.
 
+[Learn more about the level of support provided for the Dapr extension.](#next-steps)
+
 ## Scenario 1: Installation fails but doesn't show an error message
 
 If the extension generates an error message when you create or update it, you can inspect where the creation failed by running the [az k8s-extension list](/cli/azure/k8s-extension#az-k8s-extension-list) command:
@@ -147,8 +149,15 @@ To resolve this issue, use one of the following methods:
    
 ## Next steps
 
-If you're still experiencing installation issues, explore the [AKS troubleshooting guide](/azure/aks/troubleshooting) and the [Dapr OSS troubleshooting guide](https://docs.dapr.io/operations/troubleshooting/common_issues/).
+If you're still experiencing installation issues, [create a support request](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot) for Microsoft to investigate and resolve. 
+
+If you're experiencing Dapr runtime security risks and regressions while using the extension, open an issue with the [Dapr open source project](https://github.com/dapr/dapr/issues/new/choose).
+
+> [!NOTE]
+> Learn more about [how Microsoft handles issues raised for the Dapr extension](/azure/aks/dapr-overview#issue-handling).
+
+You could also start a discussion in the Dapr project Discord:
+- [Dapr runtime](https://discord.com/channels/778680217417809931/778684372475707416)
+- [Dapr components](https://discord.com/channels/778680217417809931/781589820128493598)
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
-
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

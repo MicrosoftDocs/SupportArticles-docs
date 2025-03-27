@@ -1,8 +1,8 @@
 ---
 title: Can't access the cluster API server using authorized IP ranges
 description: Troubleshoot problems accessing the cluster API server when you use authorized IP address ranges in Azure Kubernetes Service (AKS).
-ms.date: 11/18/2024
-ms.reviewer: chiragpa, nickoman, v-leedennis
+ms.date: 03/26/2025
+ms.reviewer: chiragpa, nickoman, wonkilee, v-leedennis
 ms.service: azure-kubernetes-service
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot access issues to the cluster API server when I use authorized IP address ranges so that I can work with my Azure Kubernetes Service (AKS) cluster successfully.
@@ -14,7 +14,9 @@ This article discusses how to resolve a scenario in which you can't use authoriz
 
 ## Symptoms
 
-If you try to create or manage an AKS cluster, you can't access the cluster API server.
+If you try to create or manage resources in an AKS cluster, you can't access the cluster API server. When you run `kubectl`, you receive the following error message:
+
+> Unable to connect to the server: dial tcp x.x.x.x:443: i/o timeout
 
 ## Cause
 
