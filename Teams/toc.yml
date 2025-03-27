@@ -28,9 +28,11 @@
     - name: Teams Client Health
       items:
       - name: Resolve Teams client crash issues
-        href: ./teams-administration/resolve-teams-client-crash.md
+        href: ./teams-administration/resolve-teams-client-crash-issues.md
       - name: Resolve Teams client launch failures
         href: ./teams-administration/resolve-teams-client-launch-failures.md
+      - name: Resolve Teams client update failures
+        href: ./teams-administration/resolve-teams-client-update-issues.md
       - name: '"Root cause undetermined" for Teams client update failure'
         href: ./teams-administration/root-cause-undetermined-teams-update-failure.md
     - name: '"The following application instance is not present in BVD" error when assigning a phone number to a resource accounts'
