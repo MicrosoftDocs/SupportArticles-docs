@@ -1,6 +1,6 @@
 ---
-title: Resolve Teams Client Update Issues
-description: Lists all possible causes for Teams client update issues and provides resolutions for them.
+title: Resolve Teams Client Update Failures
+description: Lists all possible causes for Teams client update failures and provides resolutions for them.
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -13,7 +13,7 @@ search.appverid:
   - MET150
 ms.date: 03/27/2025
 ---
-# Resolve Teams client update issues
+# Resolve Teams client update failures
 
 > [!IMPORTANT]
 > This article describes a Microsoft Teams feature that hasn't yet been released. It's been announced, and it's coming soon. If you're an admin, you can find out when this feature will be released in the Message Center (in the [Microsoft 365 admin center](https://portal.office.com/adminportal/home)). For more information, see [Teams client health](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=478610) and [Monitor Teams client updates](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=478609).

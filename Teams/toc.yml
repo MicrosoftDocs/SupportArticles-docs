@@ -32,7 +32,7 @@
       - name: Resolve Teams client launch failures
         href: ./teams-administration/resolve-teams-client-launch-failures.md
       - name: Resolve Teams client update failures
-        href: ./teams-administration/resolve-teams-client-update-issues.md
+        href: ./teams-administration/resolve-teams-client-update-failures.md
       - name: '"Root cause undetermined" for Teams client update failure'
         href: ./teams-administration/root-cause-undetermined-teams-update-failure.md
     - name: '"The following application instance is not present in BVD" error when assigning a phone number to a resource accounts'
