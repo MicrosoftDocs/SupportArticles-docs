@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting RDP or Citrix automation issues with the Troubleshooter
-description: Guide on how use the Power Automate troubleshooter to diagnose RDP/Citrix automation issues.
+description: Guide on how to use the Power Automate troubleshooter to diagnose RDP/Citrix automation issues.
 ms.reviewer: amitrou
 ms.author: iopanag
 author: iopanag
@@ -10,11 +10,11 @@ ms.date: 03/28/2025
 
 # Troubleshooting RDP or Citrix automation issues with the Troubleshooter
 
-This article will help you use the Power Automate troubleshooter to diagnose and potentialy solve issues related to RDP or Citrix automation. When faced with such issues, the troubleshooter should be the first course of actions for diagnosing the problem.
+This article helps you use the Power Automate troubleshooter to diagnose and potentially solve issues related to RDP or Citrix automation. When faced with such issues, the troubleshooter should be the first course of actions for diagnosing the problem.
 
 ## How to diagnose issues with the troubleshooter
 
-1. Make sure the problematic remote RDP/Citrix session/app is up. The troubleshooter will attempt to connect with it to check for issues.
+1. Make sure the problematic remote RDP/Citrix session/app is up. The troubleshooter attempts to connect with it to check for issues.
 2. Launch the troubleshooter from the Power Automate menu, `Help -> Troubleshooter`
 
    :::image type="content" source="media/troubleshooting-with-the-troubleshooter/launch-troubleshooter-menu.png" alt-text="Screenshot of the Power Automate designer help menu with the Troubleshooter option highlighted.":::

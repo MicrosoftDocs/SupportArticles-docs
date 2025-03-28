@@ -11,11 +11,11 @@ ms.date: 03/28/2025
 
 ## Symptoms
 
-When using the recorder on an RDP window, the keystores are not recorded but other interactions (like clicks) are recorded fine.
+When you use the recorder on an RDP window, the keystores aren't recorded but other interactions (like clicks) are recorded fine.
 
 ## Causes
 
-The RDP window is in Maximized state. This is a limitation of the RDP clients that intercept keystrokes and interferes with the recorder when the window is maximized.
+The RDP window is in Maximized state. This issue is a limitation of the RDP clients that intercept keystrokes and interferes with the recorder when the window is maximized.
 
 ## Resolution
 
