@@ -81,7 +81,7 @@ Restart-Service -Name spooler
 
 ## 8. Verify the printer queue status
 
-If there're any stuck print jobs, clear the queue and resubmit the print job.
+If there are any stuck print jobs, clear the queue and resubmit the print job.
 
 To delete any files stuck in the queue, follow these steps:
 
