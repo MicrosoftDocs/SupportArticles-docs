@@ -1,11 +1,11 @@
 ---
 title: Remote desktop connection is stuck
 description: Fixes an issue when remote desktop may stick on the Securing remote connection screen.
-ms.date: 01/15/2025
+ms.date: 03/28/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, ryhayash, mmiura, jarrettr, v-isboua
+ms.reviewer: kaushika, ryhayash, mmiura, jarrettr, v-isboua, warrenw
 ms.custom:
 - sap:remote desktop services and terminal services\web access (includes remoteapp and desktop connections)
 - pcy:WinComm User Experience
@@ -76,22 +76,22 @@ To work around this behavior, use either of the following methods:
 
 ### Method 2
 
-Deploy a Group Policy to the client to turn off Automatic Root Certificates Update. To create a Group Policy, follow these steps on a Windows Server that is used for Group Policy Management in the same Active Directory domain as the RD Session Host and client:
+Deploy a Group Policy to the client to turn off Automatic Root Certificates Update. To create a Group Policy, follow these steps on a Windows Server computer that is used for Group Policy management in the same Active Directory domain as the RD Session Host and client:
 
-1. Open Group Policy Management Console. 
+1. Open Group Policy Management Console by using the following steps:
 
-   1.  hold the Windows key and press the r key. 
-      
-   1. Type *Gpmc.msc* in the **Run** box, and then select **OK**. 
+   1. Press the Windows key+<kbd>R</kbd> to open the **Run** box. 
+   2. Type **Gpmc.msc** in the **Run** box, and then select **OK**. 
       
       > [!NOTE]
-      > GPMC is installed by default on Domain Controllers and any Windows Server or Client that have the Remote Server Administration Tools installed
+      > GPMC is installed by default on domain controllers and on any Windows Server or client that have the Remote Server Administration Tools installed.
       
-1. Create a new Group Policy Object (GPO) or select an existing Group Policy Object (GPO) to change.
-1. Right-click the selected Group Policy Object (GPO) and then select **Edit** and browse to the following Group Policy:  
-**Computer Configuration** > **Administrative Templates** > **System** > **Internet Communication Management** > **Internet Communication settings**
+2. Create a new Group Policy Object (GPO) or select an existing Group Policy Object (GPO) to change.
+3. Right-click the selected Group Policy Object (GPO) and then select **Edit** and browse to the following Group Policy:  
 
-1. In the details pane, double-click **Turn off Automatic Root Certificates Update**, and then select **Enabled**.
-> [!WARNING]
-> Turning off Automatic Root Certificates Updates means you will need to update any client or server when a new Root Certificate update is rolled out. 
+  **Computer Configuration** > **Administrative Templates** > **System** > **Internet Communication Management** > **Internet Communication settings**
 
+4. In the details pane, double-click **Turn off Automatic Root Certificates Update**, and then select **Enabled**.
+
+  > [!WARNING]
+  > Turning off Automatic Root Certificates Update means you need to update any client or server when a new root certificate update is rolled out. 
