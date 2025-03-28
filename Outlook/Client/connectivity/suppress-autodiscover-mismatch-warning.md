@@ -26,14 +26,12 @@ _Original KB number:_ &nbsp; 2783881
 
 ## Symptoms
 
-When Microsoft Outlook performs an AutoDiscover operation and tries to connect to a service endpoint where the expected name isn't present on the server's Secure Sockets Layer (SSL) certificate, you might receive a warning message that resembles the following message:
+When Microsoft Outlook performs an AutoDiscover operation and tries to connect to a service endpoint where the expected name isn't present on the server's Secure Sockets Layer (SSL) certificate, you might receive a warning that resembles the following message:
 
 > The name on the security certificate is invalid or does not match the name of the site.  
 > Do you want to proceed?
 
-When this warning message occurs, you can select **Yes** to proceed. However, it may reappear the next time the AutoDiscover service runs.
-
-You or administrators may want to suppress the warning message for a specific HTTP endpoint that is in your organization. This article contains information about how to do this.
+When this warning message occurs, you can select **Yes** to proceed. However, it might reappear the next time the AutoDiscover service runs.
 
 ## Cause
 
