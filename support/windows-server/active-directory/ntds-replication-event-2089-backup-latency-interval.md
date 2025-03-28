@@ -23,7 +23,7 @@ When you back up a domain controller, a new event error message is logged for ea
 
 ## More information
 
-### New behavior in Windows Server 2003 SP1 or Later
+### New behavior in Windows Server 2003 SP1 and later version of Windows
 
 The DSA Signature attribute is modified every time that a system state backup is made. The operating system monitors this attribute. An event error message is logged when the backup latency interval criteria are met. Any Windows Server 2003 SP1-based domain controller may log the event because the DSA Signature attribute is a replicated attribute.
 
