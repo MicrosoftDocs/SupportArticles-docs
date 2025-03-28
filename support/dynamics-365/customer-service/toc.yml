@@ -172,7 +172,7 @@
           href: omnichannel-for-customer-service/agent-capacity-issue-in-customer-support-assignment.md
         - name: Chat channel provisioning fails due to license issue
           href: omnichannel-for-customer-service/chat-channel-provisioning-fails-in-due-to-license-issue.md
-        - name: Contact center workspace not visible
+        - name: Contact Center workspace isn't visible
           href: omnichannel-for-customer-service/contact-center-workspace-not-visible.md
         - name: Instance unavailable to select on the provisioning app
           href: omnichannel-for-customer-service/instance-unavailable-provision-omnichannel.md
