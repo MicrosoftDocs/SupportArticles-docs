@@ -172,10 +172,14 @@
           href: omnichannel-for-customer-service/agent-capacity-issue-in-customer-support-assignment.md
         - name: Chat channel provisioning fails due to license issue
           href: omnichannel-for-customer-service/chat-channel-provisioning-fails-in-due-to-license-issue.md
+        - name: Contact center workspace not visible
+          href: omnichannel-for-customer-service/contact-center-workspace-not-visible.md
         - name: Instance unavailable to select on the provisioning app
           href: omnichannel-for-customer-service/instance-unavailable-provision-omnichannel.md
         - name: Omnichannel provisioning fails with an error
           href: omnichannel-for-customer-service/omnichannel-provision-fail-errors.md
+        - name: Troubleshoot issues with provisioning channels
+          href: omnichannel-for-customer-service/channel-provisioning-in-omnichannel-admin-center.md
     - name: Messaging capabilities
       items:
         - name: '"This number cannot be upgraded, Calling and SMS capabilities maxed out" error'    
