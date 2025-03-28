@@ -8,7 +8,7 @@ ms.date: 03/28/2025
 ms.reviewer: bavasude, srubinstein
 ms.custom: sap:Licensing, provisioning, and installation, DFM
 ---
-# Dynamics 365 Contact Center workspace ins't visible
+# Dynamics 365 Contact Center workspace isn't visible
 
 Users may encounter an issue where they're unable to see or access the Dynamics 365 Contact Center workspace, even though they have been assigned the appropriate licenses and roles. This article provides an explanation of the issue and steps to resolve it.
 
