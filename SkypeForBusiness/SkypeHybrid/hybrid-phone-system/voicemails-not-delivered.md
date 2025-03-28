@@ -1,13 +1,11 @@
 ---
 title: Voicemail messages aren't delivered in Teams or Skype for Business client
 description: Voicemails aren't delivered, or voicemails don't appear in Skype for Business or Teams client even though they're delivered in email clients. Provides a resolution.
-author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
 ms.custom: 
   - CSSTroubleshoot
 appliesto: 
@@ -26,23 +24,27 @@ Voicemails aren't delivered at all (in Outlook clients and the Skype for Busines
 
 To resolve this issue, check whether you have any Exchange mail flow rules (also known as transport rules) enabled, or you use a third-party email system (such as Gmail).
 
-Also check Exchange Online Transport Configuration by running the following from Exchange Remote PowerShell
+- Exchange mail flow rules
 
-`Get-TransportConfig | fl OpenDomainRoutingEnabled`
+   These rules may affect delivery of email messages. Cloud Voice Mail (CVM) service now supports mail flow rules. For example, rules can be enabled to mark email messages that have MP3 attachments as SPAM. It means that voicemails are filtered out before they arrive in the Inbox. Therefore, check whether any such rules are enabled, and then change them accordingly. Voicemail notifications with SPF failures will be delivered to Exchange, but mail flow rules that analyze the SPF failures may prevent delivery of these messages to the user's mailbox and therefore won't be available in any endpoint. 
+- Third-party email systems
+  
+   Third-party email systems aren't supported. For more information, see [Set up Phone System voicemail](/microsoftteams/set-up-phone-system-voicemail?bc=%2fskypeforbusiness%2fbreadcrumb%2ftoc.json&toc=%2fskypeforbusiness%2ftoc.json).
 
-If the value is true, this will cause a change in Content-Class on Voicemail messages to be updated from Voice-CA, to unauthenticatedVoice-CA. This change in Content Class will prevent the correct PR Message class from being defined resulting in a failure for the messages to be correctly identified and processed as voicemail messages by Teams. 
+   The primary issue that affects third-party email systems is that the **FROM** address is formatted for PSTN calls in a non–RFC-compliant manner. However, the Skype for Business or Teams client filters messages depending on the formatting of the **FROM** field. To fix this issue, you can change the mail protection filter of the third-party email system to use the "P1 sender address" instead (which is formatted correctly), and then enable these kinds of email messages to pass through.
 
-To resolve, please open a Support Ticket with Microsoft to request and authorize the Exchange Online team to update your tenant configuration to change this setting to False. Note that this setting is a legacy setting that was used for anti-spam detection prior to the implementation of Exchange Online Protection. 
+Additionally, run the following PowerShell command in a remote Exchange PowerShell session to check the `OpenDomainRoutingEnabled` setting in the Exchange Online transport configuration:
 
-### Exchange mail flow rules
+```powershell
+ Get-TransportConfig | fl OpenDomainRoutingEnabled
+```
 
-These rules may affect delivery of email messages. Cloud Voice Mail (CVM) service now supports mail flow rules. For example, rules can be enabled to mark email messages that have MP3 attachments as SPAM. It means that voicemails are filtered out before they arrive in the Inbox. Therefore, check whether any such rules are enabled, and then change them accordingly. Voicemail notifications with SPF failures will be delivered to Exchange, but mail flow rules that analyze the SPF failures may prevent delivery of these messages to the user's mailbox and therefore won't be available in any endpoint. 
+If the value of `OpenDomainRoutingEnabled` is **True**, it causes the `Content-Class` header of the voicemail message to change from `Voice-CA` to `unauthenticatedVoice-CA`. This change prevents the correct PR Message class from being defined. Therefore, the messages can't be correctly identified and processed as voicemail messages by Teams. 
 
-### Third-party email systems
+To fix this issue, submit a support request to [Microsoft Support](https://support.microsoft.com/contactus) to update this setting to **False** in your tenant configuration.
 
-Third-party email systems aren't supported. For more information, see [Set up Phone System voicemail](/microsoftteams/set-up-phone-system-voicemail?bc=%2fskypeforbusiness%2fbreadcrumb%2ftoc.json&toc=%2fskypeforbusiness%2ftoc.json).
-
-The primary issue that affects third-party email systems is that the **FROM** address is formatted for PSTN calls in a non–RFC-compliant manner. However, the Skype for Business or Teams client filters messages depending on the formatting of the **FROM** field. To fix this issue, you can change the mail protection filter of the third-party email system to use the "P1 sender address" instead (which is formatted correctly), and then enable these kinds of email messages to pass through.
+> [!NOTE]
+> The `OpenDomainRoutingEnabled` setting is a legacy setting that's used for anti-spam detection prior to the implementation of Exchange Online Protection.
 
 ## Workaround for symptom 1
 
