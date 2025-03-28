@@ -1,10 +1,6 @@
 - name: Outlook for Mac Troubleshooting
   href: ../outlook-mac-welcome.yml
   items:
-    - name: Account
-      items:
-        - name: Outlook for Mac compatibility with Apple iCloud
-          href: ../account/outlook-for-mac-compatibility-with-apple-icloud.md
     - name: Attachments
       items:
         - name: Can't save a JPEG attachment with a .jpg extension
