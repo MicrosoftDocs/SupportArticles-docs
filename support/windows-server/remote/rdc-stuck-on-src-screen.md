@@ -84,7 +84,7 @@ Deploy a Group Policy to the client to turn off Automatic Root Certificates Upda
    2. Type **Gpmc.msc** in the **Run** box, and then select **OK**. 
       
       > [!NOTE]
-      > GPMC is installed by default on domain controllers and on any Windows Server or client that have the Remote Server Administration Tools installed.
+      > GPMC is installed by default on domain controllers and on any Windows Server or client that has the Remote Server Administration Tools installed.
       
 2. Create a new Group Policy Object (GPO) or select an existing Group Policy Object (GPO) to change.
 3. Right-click the selected Group Policy Object (GPO) and then select **Edit** and browse to the following Group Policy:  
