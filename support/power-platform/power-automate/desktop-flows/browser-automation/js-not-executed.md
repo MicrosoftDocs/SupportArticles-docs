@@ -5,7 +5,7 @@ ms.custom: sap:Desktop flows\UI or browser automation
 ms.reviewer: amitrou
 ms.author: amitrou
 author: andreas-mitrou
-ms.date: 03/25/2025
+ms.date: 03/28/2025
 ---
 # The "Run JavaScript function on web page" action isn't executed without any error thrown
 
@@ -27,4 +27,4 @@ To solve this issue,
 
 1. If disabling third-party web extensions isn't a viable option, you can replace the JavaScript code with a specific web automation action that involves physical interaction. For example:
 
-   If the JavaScript code is designed to click an element using the `document.getElementById('elementID').click();` code, this code can be replaced by the **Click element on web page** action with the **Send physical click** option enabled.
+   If the JavaScript code is designed to click an element using the `document.getElementById('elementID').click();` code, this code can be replaced by the **Click link on web page** action with the **Send physical click** option enabled.

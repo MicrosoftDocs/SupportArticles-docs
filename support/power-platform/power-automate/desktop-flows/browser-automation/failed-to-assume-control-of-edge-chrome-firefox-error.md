@@ -2,7 +2,7 @@
 title: Failed to assume control of Edge or Chrome or Firefox error
 description: Provides a resolution to the error that occurs when running a desktop flow that has a "Launch browser" action in Power Automate.
 ms.reviewer: nimoutzo, jefernn
-ms.date: 03/25/2025
+ms.date: 03/28/2025
 ms.custom: sap:Desktop flows\UI or browser automation
 ---
 # "Failed to assume control of Microsoft Edge/Chrome/Firefox" error
@@ -14,7 +14,9 @@ _Original KB number:_ &nbsp; 5001691
 
 ## Symptoms
 
-When you run a desktop flow that has a "Launch Edge", "Launch Chrome", or "Launch Firefox" action in Microsoft Power Automate, the execution fails with one of the following error messages:
+### Scenario 1
+
+When you run a desktop flow that has a [Launch new Microsoft Edge](/power-automate/desktop-flows/actions-reference/webautomation#launch-new-microsoft-edge), [Launch new Chrome](/power-automate/desktop-flows/actions-reference/webautomation#launchchromebase), or [Launch new Firefox](/power-automate/desktop-flows/actions-reference/webautomation#launchfirefoxbase) action in Microsoft Power Automate, the execution fails with one of the following error messages:
 
 - > Failed to assume control of Microsoft Edge (Internal error or communication failure).
 - > Failed to assume control of Chrome (Internal error or communication failure).
@@ -26,6 +28,10 @@ When you run a desktop flow that has a "Launch Edge", "Launch Chrome", or "Launc
 > 1. First run the **Troubleshoot UI/Web automation issues** diagnostic using the [Power Automate for desktop troubleshooter](/power-automate/desktop-flows/troubleshooter).  
 > 2. When the diagnostic runs, a report is generated that identifies issues. These issues can be resolved by pressing the **Fix** button that appears after the diagnostics check completes.  
 > 3. If the troubleshooter doesn't resolve the error, proceed to the potential causes and resolutions provided in this article.
+
+### Scenario 2
+
+The error message also can occur when you run a "Launch browser" action, and the browser is launched using a different system user than the one used to run Power Automate for desktop. For the recommended workaround, see [Cause 3](#cause-3-the-browser-is-launched-using-a-different-system-user-than-the-one-used-to-run-power-automate-for-desktop-version-238-or-higher) in this article.
 
 ## Cause 1: Web extension isn't installed properly or enabled
 
@@ -146,6 +152,12 @@ Increase the values of **Timeout on webpage load** and **Timeout** parameters fo
     - Variables produced: Replace the new browser variable with the name of the variable produced in step 1.
 
         :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/replace-variables-produced-browser.png" alt-text="Replace the new browser variable with the name of the variable produced in step 1.":::
+
+## Cause 3: The browser is launched using a different system user than the one used to run Power Automate for desktop (version 2.38 or higher)
+
+This issue can occur in attended and unattended desktop flow modes.
+
+To resolve the issue, ensure that the browser is launched using the same system user account that's being used to run Power Automate for desktop.
 
 ## General checks
 

@@ -1,31 +1,33 @@
 ---
-title: Web automation with Internet Explorer issue (Failed to assume control of IE)
-description: Solves a issues caused whem try to Launch Internet Explorer due to security settings.
+title: Failed To Assume Control Of IE Error
+description: Solves an error that occurs when you use Internet Explorer as the browser for automation.
 ms.custom: sap:Desktop flows\UI or browser automation
 ms.reviewer: amitrou
 ms.author: amitrou
 author: amitrou
-ms.date: 03/17/2025
+ms.date: 03/28/2025
 ---
-# Web automation with Internet Explorer issue (Failed to assume control of IE)
+# "Failed to assume control of IE" error during web automation with Internet Explorer
 
-This article refers to failures, that appear due to security settings when Internet Explore is launched.
+This article addresses an issue where users encounter a failure during web automation with Internet Explorer due to specific security settings.
 
 ## Symptoms
 
-Launch Internet Explorer action throws a runtime error. (Failed to assume control of IE)
+When you run a desktop flow in Power Automate that includes the [Launch new Internet Explorer](/power-automate/desktop-flows/actions-reference/webautomation#launchinternetexplorerbase) action, the automation fails at runtime and displays the following error message:
+
+> Failed to assume control of IE
 
 ## Cause
 
-Security settings of Internet Explorer not properly set
+This issue could be caused due to the security settings in Internet Explorer aren't configured properly. Specifically, the **Enable Protected Mode** setting may be preventing the automation tool from assuming control of the browser.
 
 ## Resolution
 
-- Open Internet Explorer
-- Go to settings
-- Select Internet Options
-- Go to security
-- Uncheck the Enable Protected Mode checkbox on the Internet section.
-- Restart Internet Explorer
+1. Open Internet Explorer
+2. Go to **settings** > **Internet Options**.
+3. Navigate to the **Security** tab.
+4. Under the **Internet** section, clear the **Enable Protected Mode** checkbox.
+5. Select **Apply** and then **OK** to save the changes.
+6. Close and restart Internet Explorer.
 
-Refer to the [article](/power-automate/desktop-flows/install-browser-extensions#set-up-browsers)
+For more information, see [Set up browsers in Power Automate](/power-automate/desktop-flows/install-browser-extensions#set-up-browsers).

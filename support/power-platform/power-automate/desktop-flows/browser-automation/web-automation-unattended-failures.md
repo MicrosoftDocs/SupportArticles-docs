@@ -1,89 +1,88 @@
 ---
-title: Web automation fails in unattended mode
-description: Provides workarounds when web automation actions are failing in unattended environment during runtime.
+title: Web Automation Fails In Unattended Mode
+description: Works around an issue where a web automation action fail in unattended environment during runtime.
 ms.custom: sap:Desktop flows\UI or browser automation
 ms.reviewer: amitrou
 ms.author: amitrou
 author: amitrou
-ms.date: 03/18/2025
+ms.date: 03/28/2025
 ---
-# Web automation fails in unattended mode
+# Web automation action fails in unattended mode
 
-This article refers to workarounds when web automation fails in unattended mode.
+This article provides workarounds for resolving issues where a web automation action fails when executed in unattended mode.
 
-## Syptoms
+## Symptoms
 
-Web automation actions are executed successfully in flows on attended mode, but are failing when are executed in unattended mode.
+In attended mode, web automation actions under the "Browser Automation" group execute successfully. However, in unattended mode, these actions fail.
 
-## Actions
+### Scenario 1: The "Launch new Microsoft Edge", "Launch new Chrome", or "Launch new Firefox" action fails
 
-Any web automation action under the Browser Automation group.
+The [Launch new Microsoft Edge](/power-automate/desktop-flows/actions-reference/webautomation#launch-new-microsoft-edge), [Launch new Chrome](/power-automate/desktop-flows/actions-reference/webautomation#launchchromebase), or [Launch new Firefox](/power-automate/desktop-flows/actions-reference/webautomation#launchfirefoxbase) action fails with the following error:
 
-## Failing Scenarios
+> Failed to assume control of Microsoft Edge/ Chrome / Firefox (communication with Power Automate web extension failed)
 
-1. **Launch new Microsoft Edge / Chrome / Firefox action fails**.
+This error might be caused due to the following reasons:
 
-    The action fails with the following error:
-     _**"Failed to assume control of Microsoft Edge/ Chrome / Firefox (communication with Power Automate web extension failed)"**_
+#### The browser doesn't start and the browser window isn't visible
 
-    This error might be caused due to the following reasons:
-     - The browser did't start and the browser window isn't visible.
-     - The web page is taking too much time to be load in the browser.
-     - The flow is executed with a different user than the user that browser extension is installed.
-     - The machine CPU reaches 100% usage that prevents the service worker of the web extension to start.
+To work around this issue, make sure that the browser start isn't blocked in unattended mode. Verify by using the actions listed and make sure that browser opens and the window is visible.
 
-2. **Web automation actions** such as:
-     - Click link on web page.
-     - Populate text field on web page.
-     - Press button on web page
-     - Any web action that involves interaction with a web element that fail with the error "Element not found"
+For Chrome:
 
-## Workarounds
+```ps
+System.RunApplication.RunApplication ApplicationPath: $'''chrome''' CommandLineArguments: $'''<https://www.microsoft.com/>''' WindowStyle: System.ProcessWindowStyle.Normal ProcessId=> AppProcessId
+```
 
- **Launch new Microsoft Edge / Chrome / Firefox action fails**.
+For Microsoft Edge:
 
-1. The browser did't start and the browser window isn't visible.
+```ps
+System.RunApplication.RunApplication ApplicationPath: $'''msedge''' CommandLineArguments: $'''<https://www.microsoft.com/>''' WindowStyle: System.ProcessWindowStyle.Normal ProcessId=> AppProcessId
+```
 
-    Make sure that browser start in not blocked in unattended mode.
+If the browser opens and the window is visible, use the "attach" mode of the "Launch browser" action:
 
-    Verify that isn't blocked,by using the actions listed and make sure that browser opens and the window is visible.
+```ps
+WebAutomation.LaunchEdge.AttachToEdgeByUrl TabUrl: $'''https://www.microsoft.com/''' AttachTimeout: 5 TargetDesktop: $'''{\"DisplayName\":\"Local computer\",\"Route\":{\"ServerType\":\"Local\",\"ServerAddress\":\"\"},\"DesktopType\":\"local\"}''' BrowserInstance=> Browser
+```
 
-    ```
-    Chrome: System.RunApplication.RunApplication ApplicationPath: $'''chrome''' CommandLineArguments: $'''<https://www.microsoft.com/>''' WindowStyle: System.ProcessWindowStyle.Normal ProcessId=> AppProcessId
-    Edge: System.RunApplication.RunApplication ApplicationPath: $'''msedge''' CommandLineArguments: $'''<https://www.microsoft.com/>''' WindowStyle: System.ProcessWindowStyle.Normal ProcessId=> AppProcessId
-    ```
+#### The web page takes too long to load in the browser
 
-    If the above actions work, then use the Attach mode of the Launch browser action
+To work around this issue,
 
-    ```
-    WebAutomation.LaunchEdge.AttachToEdgeByUrl TabUrl: $'''https://www.microsoft.com/''' AttachTimeout: 5 TargetDesktop: $'''{\"DisplayName\":\"Local computer\",\"Route\":{\"ServerType\":\"Local\",\"ServerAddress\":\"\"},\"DesktopType\":\"local\"}''' BrowserInstance=> Browser
-    ```
+1. Increase the default values of the following parameters:
 
-2. The web page is taking too much time to be loaded in the browser.
+    - Timeout on webpage load (for example, set to 120 seconds)
+    - Timeout (for example, set to 120 seconds)
 
-    1. Increase the default values of the following parameters
-            - Timeout on webpage load.(for example, 120)
-            - Timeout.(for example, 120)
-    1. If (a) doesn't work then use the following actions to get a browser instance
+1. If increasing the timeout doesn't resolve the issue, use the following actions to obtain a browser instance:
 
-    ```
-        System.RunApplication.RunApplication ApplicationPath: $'''msedge''' CommandLineArguments: $'''<https://www.microsoft.com/>''' WindowStyle: System.ProcessWindowStyle.Normal ProcessId=> AppProcessId
-        WAIT 120
-        WebAutomation.LaunchEdge.AttachToEdgeByUrl TabUrl: $'''https://www.microsoft.com/''' AttachTimeout: 30 TargetDesktop: $'''{\"DisplayName\":\"Local computer\",\"Route\":{\"ServerType\":\"Local\",\"ServerAddress\":\"\"},\"DesktopType\":\"local\"}''' BrowserInstance=> Browser
+    ```ps
+    System.RunApplication.RunApplication ApplicationPath: $'''msedge''' CommandLineArguments: $'''<https://www.microsoft.com/>''' WindowStyle: System.ProcessWindowStyle.Normal ProcessId=> AppProcessId
+    WAIT 120
+    WebAutomation.LaunchEdge.AttachToEdgeByUrl TabUrl: $'''https://www.microsoft.com/''' AttachTimeout: 30 TargetDesktop: $'''{\"DisplayName\":\"Local computer\",\"Route\":{\"ServerType\":\"Local\",\"ServerAddress\":\"\"},\"DesktopType\":\"local\"}''' BrowserInstance=> Browser
     ```
 
-3. The cloud flow is executed with a different user than the user that browser extension is installed
+#### The cloud flow is executed with a different user than the one with the browser extension installed
 
-    Ensure that the user running the cloud flow in unattended mode has the browser extension installed.
+To work around this issue, ensure that the user running the cloud flow in unattended mode has the browser extension installed.
 
-4. The machine CPU reached 100% usage that prevents the service worker of the web extension to start.
+#### The machine's CPU usage reaches 100%, preventing the service worker of the web extension from starting
 
-    Provide more CPU resources to the machine where the flow is executed.
+To work around this issue, provide more CPU resources to the machine where the flow is executed. For more information, see [Prerequisites](/power-automate/desktop-flows/requirements#prerequisites).
 
-    [Prerequisites](/power-automate/desktop-flows/requirements#prerequisites)
+### Scenario 2: Other web automation actions fail with the "Element not found" error
 
-**Web automation actions fail with element not found**:
+Web automation actions such as the following may fail with the "Element not found" error:
 
-Customers are facing issues with web automation actions because they use physical interactions and the resolution of the display isn't the same with the resolution they use in attended mode and the web sites being responsive show different elements or different UI altogether.
+- [Click link on web page](/power-automate/desktop-flows/actions-reference/webautomation#clickbase)
+- [Populate text field on web page](/power-automate/desktop-flows/actions-reference/webautomation#populatetextfieldbase)
+- [Press button on web page](/power-automate/desktop-flows/actions-reference/webautomation#pressbuttonbase)
+- Any web action involving interaction with a web element.
 
-The following documentation [Set screen resolution on unattended mode - Power Automate | Microsoft Learn](/power-automate/desktop-flows/how-to/set-screen-resolution-unattended-mode) should be used to create the necessary configuration/registry keys for specifying exactly the same resolution for unattended executions.
+#### Cause
+
+Web automation actions may fail due to screen resolution discrepancies. In unattended mode, the screen resolution may differ from the one used in attended mode, causing web elements or the UI to render differently (for example, responsive layouts.)
+
+#### Workaround
+
+To work around this issue, follow the steps in the documentation [Set screen resolution on unattended mode](/power-automate/desktop-flows/how-to/set-screen-resolution-unattended-mode). This documentation provides the necessary configuration and registry key setup to ensure consistent screen resolution during unattended executions.

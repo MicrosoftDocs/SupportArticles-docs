@@ -66,10 +66,6 @@
           href: desktop-flows/browser-automation/web-extensions-policies.md
         - name: Web automation fails when machine runtime and MSIX versions are different
           href: desktop-flows/browser-automation/machine-runtime-msix-errors.md
-        - name: Launch Browser fails when is opening with different system user
-          href: desktop-flows/browser-automation/launch-browser-fails-different-user.md
-        - name: Error while interacting with Web element on runtime
-          href: desktop-flows/browser-automation/error-while-interacting-web-element.md
         - name: Press button or click link on web page does not work on file uploader
           href: desktop-flows/browser-automation/file-uploader-click-issues.md
         - name: How to scroll on a web page
