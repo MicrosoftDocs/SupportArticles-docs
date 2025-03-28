@@ -95,8 +95,6 @@
           href: ../calendaring/room-finder-is-not-available-shared-calendars-outlook.md
         - name: Room Finder doesn't show conference rooms
           href: ../calendaring/outlook-room-finder-not-show-conference-room.md
-        - name: Scan calendar by using SaRA
-          href: ../calendaring/scan-outlook-calendar-using-sara.md
         - name: Share a calendar or open a shared calendar
           href: ../calendaring/how-to-open-shared-calendar.md          
         - name: Shared calendar in delegate's Online Archive
@@ -265,8 +263,6 @@
           href: ../installation/disablepst-and-pstdisablegrow-policies-are-ignored.md
         - name: Install Calendar Printing Assistant fails
           href: ../installation/installing-calendar-printing-assistant-fails.md
-        - name: Install Outlook latest applicable updates
-          href: ../installation/install-outlook-latest-updates.md
         - name: Leave a copy of the message on the server is missing
           href: ../installation/enable-leave-a-copy-of-the-message-on-the-server-outlook.md
         - name: Map classic Outlook policies to new Outlook
