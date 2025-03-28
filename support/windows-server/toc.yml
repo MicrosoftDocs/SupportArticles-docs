@@ -1983,6 +1983,8 @@ items:
       href: ./printing/add-print-directory-feature-for-folders.md
     - name: How to Print to File without user intervention
       href: ./printing/print-to-file-without-user-intervention.md
+    - name: Printer not responding
+      href: ./printing/printer-not-responding.md
     - name: Servers can't be used as print servers
       href: ./printing/servers-cant-be-used-print-servers.md
     - name: Standard port monitor for TCP/IP
