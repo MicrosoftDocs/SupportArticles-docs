@@ -22,7 +22,7 @@ ms.reviewer: gbratton
 
 # Implement a policy to control PST use and creation in Outlook
 
-In Microsoft Outlook, users can create PST files or add new items to existing PST files. This article describes how to control these behaviors as an administrator.
+In Microsoft Outlook, users can create PST files or add new items to existing PST files. This article describes how to control these behaviors.
 
 [!INCLUDE [Important registry alert](../../../includes/registry-important-alert.md)]
 
@@ -31,7 +31,7 @@ In Microsoft Outlook, users can create PST files or add new items to existing PS
 To prevent users from adding new data or content to an existing .pst file, add the `PSTDisableGrow` registry entry, and then set the value to **1**. Use the following steps:
 
 1. Open Registry Editor.
-1. Locate and select the following registry subkey. You have to create the key if it does not exist.
+1. Locate and select the following registry subkey. You have to create the key if it doesn't exist.
 
    |Type|Registry path|
    |-|-|
@@ -39,7 +39,7 @@ To prevent users from adding new data or content to an existing .pst file, add t
    |Office Customization Tool (OCT)|`HKEY_CURRENT_USER\Software\Microsoft\Office\xx.0\Outlook\PST`|
 
    > [!NOTE]
-   > The *xx*.0 placeholder represents the Outlook version. 16.0 represents Outlook 2021, Outlook 2019, Outlook 2016 and Outlook for Microsoft 365.
+   > The *xx*.0 placeholder represents the Outlook version. 16.0 represents Outlook 2021, Outlook 2019, Outlook 2016, and Outlook for Microsoft 365.
 
 1. On the **Edit** menu, point to **New**, and then select **DWORD Value**.
 1. Type `PSTDisableGrow`, and then press Enter.
@@ -50,15 +50,15 @@ The `PSTDisableGrow` registry entry can be set to the following values:
 
 |Value|Description|
 |-|-|
-|0|User can add new items to an existing .pst file. This is the default value.|
-|1|Use cannot add new content or data to an existing .pst file.|
+|0|User can add new items to an existing .pst file. 0 is the default value.|
+|1|User can't add new content or data to an existing .pst file.|
 
 ### Prevent the addition of new .pst files
 
 To prevent users from connecting a .pst file to Outlook, add the `DisablePST` registry entry, and then set the value to **1**. Use the following steps:
 
 1. Open Registry Editor.
-1. Locate and select the following registry subkey. You have to create the key if it does not exist.
+1. Locate and select the following registry subkey. You have to create the key if it doesn't exist.
 
    |Type|Registry path|
    |-|-|
@@ -66,7 +66,7 @@ To prevent users from connecting a .pst file to Outlook, add the `DisablePST` re
    |Office Customization Tool (OCT)|`HKEY_CURRENT_USER\Software\Microsoft\Office\xx.0\Outlook`|
 
    > [!NOTE]
-   > The *xx*.0 placeholder represents the Outlook version. 16.0 represents Outlook 2021, Outlook 2019, Outlook 2016 and Outlook for Microsoft 365.
+   > The *xx*.0 placeholder represents the Outlook version. 16.0 represents Outlook 2021, Outlook 2019, Outlook 2016, and Outlook for Microsoft 365.
 
 1. On the **Edit** menu, point to **New**, and then select **DWORD Value**.
 1. Type `DisablePST`, and then press Enter.
@@ -77,6 +77,6 @@ The `DisablePST` registry entry can be set to the following values:
 
 |Value|Description|
 |-|-|
-|0|Users can add .pst files. This is the default value.|
-|1|Users cannot add .pst files. However, in scenarios in which a .pst file was connected to Outlook before this registry value was added, the existing .pst file will still be connected. No new.pst files can be added.|
-|2|Users can add only exclusive sharing .pst files, such as SharePoint .pst files.|
+|0|Users can add .pst files. 0 is the default value.|
+|1|Users can't add .pst files. However, in scenarios in which a .pst file was connected to Outlook before this registry value was added, the existing .pst file will remain connected. No new.pst files can be added.|
+|2|Users can only add .pst files that are exclusively for sharing, such as SharePoint .pst files.|
