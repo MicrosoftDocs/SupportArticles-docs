@@ -277,6 +277,10 @@
      href: app-integration/404-not-found-error-manage-objects-microsoft-graph.md
    - name: Use managed identities to call Graph APIs in VB.Net and C#
      href: users-groups-entra-apis/call-graph-api-using-managed-dentities.md
+   - name: Getting access denied errors (Authorization)
+     items: 
+      - name: Error "The identity of the calling application could not be established"
+        href: users-groups-entra-apis/identity-of-calling-application-not-established.md
 - name: Microsoft Entra User Provisioning and Synchronization
   items:
   - name: User Sign-in or password Problems
