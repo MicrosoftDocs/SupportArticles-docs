@@ -89,9 +89,9 @@ Deploy a Group Policy to the client to turn off Automatic Root Certificates Upda
 2. Create a new Group Policy Object (GPO) or select an existing Group Policy Object (GPO) to change.
 3. Right-click the selected Group Policy Object (GPO) and then select **Edit** and browse to the following Group Policy:  
 
-  **Computer Configuration** > **Administrative Templates** > **System** > **Internet Communication Management** > **Internet Communication settings**
+   **Computer Configuration** > **Administrative Templates** > **System** > **Internet Communication Management** > **Internet Communication settings**
 
 4. In the details pane, double-click **Turn off Automatic Root Certificates Update**, and then select **Enabled**.
 
-  > [!WARNING]
-  > Turning off Automatic Root Certificates Update means you need to update any client or server when a new root certificate update is rolled out. 
+    > [!WARNING]
+    > Turning off Automatic Root Certificates Update means you need to update any client or server when a new root certificate update is rolled out. 
