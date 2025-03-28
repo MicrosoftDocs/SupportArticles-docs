@@ -1,7 +1,7 @@
 ---
 title: Failure When You Use an Existing Computer Account to Join a Domain
 description: Addresses the issue of failing to join a computer to a domain when an existing computer account with the same name already exists.
-ms.date: 03/27/2025
+ms.date: 03/28/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

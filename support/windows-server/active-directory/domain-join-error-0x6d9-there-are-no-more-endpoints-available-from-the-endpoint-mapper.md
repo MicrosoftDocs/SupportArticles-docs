@@ -1,7 +1,7 @@
 ---
-title: Domain join error 0x6D9 "There are no more endpoints available from the endpoint mapper"
-description: Addresses the error "There are no more endpoints available from the endpoint mapper" encountered during domain join operations.
-ms.date: 03/26/2025
+title: Error 0x6D9 There Are No More Endpoints Available from the Endpoint Mapper
+description: Addresses the error There are no more endpoints available from the endpoint mapper encountered during domain join operations.
+ms.date: 03/28/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -14,13 +14,13 @@ ms.custom:
 
 This article addresses the error code 0x6D9 encountered during domain join operations.
 
-## Symptom
+## Symptoms
 
 When you try to join a computer to a domain, you receive the following error message:
 
 > There are no more endpoints available from the endpoint mapper.
 
-You review the *netsetup.log* log and found error messages that resemble the following:
+When you review the **netsetup.log** file, you find error messages that resemble the following entries:
 
 ```output
 NetpGetDnsHostName: Read NV Hostname: <hostname>
@@ -47,19 +47,19 @@ NetpDoDomainJoin: status: 0x6d9
 
 ### Error detail
 
-| HEX error | Decimal error | Symbolic Error String | Friendly Error                                                  |
+| Hexadecimal error | Decimal error | Symbolic error string | Friendly error                                                  |
 | --------- | ------------- | --------------------- | --------------------------------------------------------------- |
 | 0x6d9     | 1753          | EPT_S_NOT_REGISTERED  | There are no more endpoints available from the endpoint mapper. |
 
 ## Cause
   
-Error 0x6D9 is logged when network connectivity is blocked between the joining client and the Domain Controller (DC). The network connectivity services the domain join operation over port 135 or a port in the ephemeral range between 1025 to 5000 or 49152 to 65535. For more information, see [Service overview and network port requirements for Windows](../networking/service-overview-and-network-port-requirements.md).  
+Error 0x6D9 is logged when network connectivity is blocked between the joining client and the domain controller (DC). The network connectivity services the domain join operation over port 135 or a port in the ephemeral range between 1025 to 5000 or 49152 to 65535. For more information, see [Service overview and network port requirements for Windows](../networking/service-overview-and-network-port-requirements.md).  
 
 The network connectivity issue can be caused by several factors, including advanced security solutions with host firewalls installed on the DC, port exhaustion, and other potential issues.
 
 ## Resolution
 
-1. On the joining client, open the *%systemroot%\\debug\\NETSETUP.LOG* file and determine the name of the DC selected by the joining client to perform the join operation. For example: the following NETSETUP.LOG sample shows that the joining client "APP_SRV" is using DC "DC1.CONTOSO.COM ":
+1. On the joining client, open the **%systemroot%\\debug\\NETSETUP.LOG** file and determine the name of the DC selected by the joining client to perform the join operation. For example, the following **NETSETUP.LOG** sample shows that the joining client "APP_SRV" is using the DC "DC1.CONTOSO.COM":
 
    ```output
    NetpManageMachineAccountWithSid: NetUserAdd on '\\DC1.CONTOSO.COM' for 'APP_SRV$' failed: 0x8b0
@@ -68,8 +68,8 @@ The network connectivity issue can be caused by several factors, including advan
    NetpGetComputerObjectDn: Unable to bind to DS on '\\DC1.CONTOSO.COM': 0x6d9
    ```
 
-2. Verify that the joining client has network connectivity to the DC over the required ports and protocols used by the applicable operating system (OS) versions. Domain join clients connect a DC over Transmission Control Protocol (TCP) port 135 by the dynamically assigned port in the range between 49152 and 65535.
+2. Verify that the joining client has network connectivity to the DC over the required ports and protocols used by the applicable operating system (OS) versions. Domain join clients connect to a DC over Transmission Control Protocol (TCP) port 135, which is a dynamically assigned port between 49152 and 65535.
 3. Ensure that the OS, software and hardware routers, firewalls, and switches allow connectivity over the required ports and protocols.
-4. Ensure that there are enough available ports for the operation. You can use tools like netstat to check for port availability and usage.
-5. If advanced security solutions with host firewalls is installed on the DC, review its settings to ensure it isn't blocking the required ports.
-6. Consider other potential causes and troubleshoot accordingly. For example, check firewall rules, ensure proper DNS resolution, and verify the health of the DC.
+4. Ensure that there are enough ports available for the operation. You can use tools like netstat to check for port availability and usage.
+5. If advanced security solutions with host firewalls are installed on the DC, review their settings to ensure they aren't blocking the required ports.
+6. Consider other potential causes and troubleshoot accordingly. For example, check firewall rules, ensure proper Domain Name System (DNS) resolution, and verify the health of the DC.
