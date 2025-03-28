@@ -2,25 +2,15 @@
 title: Troubleshoot Azure Synapse Link profile creation issues
 description: Resolves networking, permissions, regional mismatches, or profile limits in Microsoft Dataverse.
 author: Greggbarker-ms
-ms.author: saukuma
+ms.author: grbarker
+ms.reviewer: saukuma
 ai-usage: ai-assisted
 ms.date: 03/28/2025
 ms.custom: sap:Importing and exporting data\Configuring Export to Azure Data Lake and Azure Synapse Link integration 
 ---
 # Troubleshoot Azure Synapse Link profile creation issues
 
-This article provides detailed guidance for troubleshooting common issues encountered during the [creation of Azure Synapse Link profiles](/power-apps/maker/data-platform/azure-synapse-link-synapse). The steps outlined address networking misconfigurations, permissions, regional mismatches, and other factors that might impact the setup process.
-
-## Prerequisites
-
-Before proceeding, ensure the following prerequisites are met:
-
-- Verify that you have the required roles and permissions as described in the [Insufficient permissions](#insufficient-permissions) section below.
-- Confirm that your Synapse workspace, storage account, and Power Apps environment are in the same Azure region.
-- Review these prerequisite documents based on your profile type:
-
-  - [Prerequisites for Azure Synapse Link profile with Azure Data Lake](/power-apps/maker/data-platform/azure-synapse-link-data-lake#prerequisites)
-  - [Prerequisites for Azure Synapse Link profile with your Azure Synapse Workspace](/power-apps/maker/data-platform/azure-synapse-link-synapse#prerequisites)
+This article provides detailed guidance for troubleshooting common issues encountered during the [creation of Azure Synapse Link profiles](/power-apps/maker/data-platform/azure-synapse-link-synapse). The steps outlined address causes like networking misconfigurations, insufficient permissions, regional mismatches, and other factors that might impact the setup process.
 
 ## Networking misconfiguration
 
@@ -28,7 +18,7 @@ Before proceeding, ensure the following prerequisites are met:
 
 **Solution:**
 
-1. Ensure **public network access** is enabled for the linked storage account.
+1. Ensure **Public network access** is enabled for the linked storage account.
 2. Set the IP addresses access rule to "allowAll" if linking to a Synapse Workspace.
 3. If restricting public access, enable the [managed identities feature](/power-apps/maker/data-platform/azure-synapse-link-msi) for the linked storage account and workspace.
 
@@ -46,6 +36,11 @@ Before proceeding, ensure the following prerequisites are met:
     - **Synapse Administrator** role for Synapse Workspace.
     - **Reader** role for the resource group containing the storage account and Synapse Workspace.
     - **Owner** and **Storage Blob Data Contributor** roles for the Azure Data Lake Storage Gen2 account.
+
+   For more information, review the prerequisites based on your profile type:
+
+  - [Prerequisites for Azure Synapse Link profile with Azure Data Lake](/power-apps/maker/data-platform/azure-synapse-link-data-lake#prerequisites)
+  - [Prerequisites for Azure Synapse Link profile with your Azure Synapse Workspace](/power-apps/maker/data-platform/azure-synapse-link-synapse#prerequisites) 
 
 2. Select the **Enable storage account key access** checkbox during initial setup.
 
