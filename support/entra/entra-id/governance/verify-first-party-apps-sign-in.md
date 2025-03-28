@@ -181,6 +181,7 @@ The following table lists some, but not all, first-party Microsoft applications.
 |Universal Store Native Client|268761a2-03f3-40df-8a8b-c3db24145b6b|
 |Viva Engage (formerly Yammer)|00000005-0000-0ff1-ce00-000000000000|
 |Viva Insights|fe93bfe1-7947-460a-a5e0-7a5906b51360|
+|Visual Studio| 04f0c124-f2bc-4f59-8241-bf6df9866bbd|
 |WeveEngine|3c896ded-22c5-450f-91f6-3d1ef0848f6e|
 |Windows Azure Active Directory|00000002-0000-0000-c000-000000000000|
 |Windows Azure Security Resource Provider|8edd93e1-2103-40b4-bd70-6e34e586362d|
