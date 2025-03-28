@@ -4,7 +4,7 @@ description: Provides resolutions for issues related to the wrap feature in Powe
 ms.reviewer: sitaramp, koagarwa
 ms.author: arijitba
 author: arijitba
-ms.date: 02/11/2025
+ms.date: 03/28/2025
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done, sap:App Management\Wrap an app
 ---
 # Troubleshoot issues with the wrap feature in Power Apps
@@ -79,9 +79,17 @@ If you can't sign in to your wrapped mobile app, verify that:
 - Your Microsoft Entra app type is **Multitenant**. Under your Microsoft Entra app's **Authentication** tab, the supported account type should be **Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant)**.
 - The proper redirect URIs have been created for iOS and Android. For Android, confirm that the hash is provided correctly. For more information about configuring a redirect URI, see [Configure platform settings](/azure/active-directory/develop/quickstart-register-app#configure-platform-settings).
 
-## Issue 6 - Errors in Azure key vault in wrap for Power Apps
+## Issue 6 - Azure key vault errors in wrap for Power Apps
 
-The following Azure key vault errors might appear in wrap for Power Apps and can be rectified.
+The following Azure key vault error codes might appear in wrap for Power Apps and can be rectified. Use the search feature to locate the specific error code displayed in the Power Apps wrap wizard portal and follow the appropriate steps to solve the error code.
+
+- [Error code 1000118: Default subscription not found or missing access permissions.](#error-code-1000118)
+- [Error code 1000119: Key vault does not exist or is missing access privileges.](#error-code-1000119)
+- [Error code 1000120: No organization ID tags found on key vault.](#error-code-1000120)
+- [Error code 1000121: Android keystore is not valid. Missing tag and/or certificate.](#error-code-1000121)
+- [Error code 1000122: iOS certificate is not valid.](#error-code-1000122)
+- [Error code 1000123: iOS profile is not valid.](#error-code-1000123)
+- [Error code 1000128: Missing access key used while accessing Azure Blob storage location.](#error-code-1000128)
 
 #### Error code 1000118
 
@@ -237,6 +245,14 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
    - The **Tag value** should correspond to the name you chose for your **Secret** when uploading the povisioning profile in the previous step. For example, if your **Secret** is named **iOSProvisioningProfileSecret**, then the value of the **Tag value** should also be **iOSProvisioningProfileSecret**.
 
    :::image type="content" source="media/wrap-issues/provisioning-profile-secret-tag.png" alt-text="Screenshot that shows how to create a tag for iOS Provisioning Profile Secret." lightbox="media/wrap-issues/provisioning-profile-secret-tag.png":::
+
+#### Error code 1000128
+
+| Error code      | Description          |
+| ------------- |:-------------|
+|1000128    |   Missing access key used while accessing azure blob storage location|
+
+You need to add your access key to the Azure blob storage account in the Azure key vault. For more information, see [Step 2: Target platform](/power-apps/maker/common/wrap/wrap-how-to#step-2-target-platform).
 
 ## Issue 7 - Wrap app sign-in fails
 

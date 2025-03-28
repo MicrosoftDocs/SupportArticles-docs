@@ -1,5 +1,9 @@
 - name: Dynamics 365 Customer Service
   href: welcome-customer-service.yml
+- name: Cases or Incidents
+  items:
+    - name: Can't switch between different Teams organizations in the Dynamics 365 app
+      href: cases-or-incidents/cannot-switch-teams-organizations-dynamics-365-app.md
 - name: Customer Service Insights
   items:
     - name: Troubleshoot issues using Solution Health Hub
@@ -40,6 +44,8 @@
           href: service-level-agreements/slaitem-changes-missing-upgrade.md
         - name: Can't import solution with active SLAs and SLAs are deactivated when imported
           href: service-level-agreements/import-solution-active-slas.md
+        - name: Duplicate SLA KPI instances are created
+          href: service-level-agreements/duplicate-slakpi-instances-are-being-created.md
         - name: '"The uninstall operation will delete the base layer for the component" error'
           href: service-level-agreements/sla-item-delete-operation-encountered-some-errors.md
         - name: SLA's state changes from Active to Draft after importing an upgrade solution
@@ -132,6 +138,12 @@
       items:
         - name: Can't deploy a custom Agent script solution
           href: omnichannel-for-customer-service/custom-agentscript-solution.md
+    - name: Customer summary and Closed conversation form
+      items:  
+        - name: Conversations remain active after an agent closes the browser
+          href: omnichannel-for-customer-service/conversations-still-active-after-closing-browser.md
+        - name: The Active Conversation form doesn't display as configured
+          href: omnichannel-for-customer-service/active-conversation-form-not-showing-as-configured.md  
     - name: Conversation control
       items:
         - name: Conversation is stuck in a wrap-up state
@@ -145,19 +157,25 @@
         - name: Chat isn't initiated when starting a new chat from portal
           href: omnichannel-for-customer-service/new-chat-not-initiated-portal.md
         - name: Error when creating a chat widget or social channel
-          href: omnichannel-for-customer-service/error-create-chat-widget-social-channel.md  
+          href: omnichannel-for-customer-service/error-create-chat-widget-social-channel.md
     - name: Live Chat Widget (LCW)
       items:
         - name: Chat widget icon doesn't load on portal
           href: omnichannel-for-customer-service/chat-widget-icon-does-not-load-portal.md
         - name: Chat widget doesn't load on the portal
-          href: omnichannel-for-customer-service/chat-widget-not-loading-portal.md                    
+          href: omnichannel-for-customer-service/chat-widget-not-loading-portal.md     
+        - name: Email field validation in a Pre-conversation survey doesn't work as expected
+          href: omnichannel-for-customer-service/email-field-validation-in-pre-conversation-survey-not-working.md           
     - name: Licensing, provisioning, and installation
       items:
         - name: Instance unavailable to select on the provisioning app
           href: omnichannel-for-customer-service/instance-unavailable-provision-omnichannel.md
         - name: Omnichannel provisioning fails with an error
           href: omnichannel-for-customer-service/omnichannel-provision-fail-errors.md
+    - name: Messaging capabilities
+      items:
+        - name: '"This number cannot be upgraded, Calling and SMS capabilities maxed out" error'    
+          href: omnichannel-for-customer-service/number-cannnot-upgraded-calling-sms-maxed-out-error.md
     - name: Copilot Studio agents
       items:
         - name: Copilot Studio agent conversations are active after a chat ends
@@ -185,6 +203,6 @@
     - name: Voice channel
       items:
         - name: Incoming voice calls with long greeting messages cause connection delays
-          href: omnichannel-for-customer-service/greeting-message-delay-agent-connection.md 
+          href: omnichannel-for-customer-service/greeting-message-delay-agent-connection.md
         - name: Use diagnostic messages to troubleshoot call issues
           href: omnichannel-for-customer-service/use-diagnostic-messages-in-call-issues.md 

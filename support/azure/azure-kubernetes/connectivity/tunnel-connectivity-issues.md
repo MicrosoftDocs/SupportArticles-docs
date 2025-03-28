@@ -1,8 +1,8 @@
 ---
 title: Tunnel connectivity issues
 description: Resolve communication issues that are related to tunnel connectivity in an Azure Kubernetes Service (AKS) cluster.
-ms.date: 09/26/2024
-ms.reviewer: chiragpa, andbar, v-leedennis, v-weizhu
+ms.date: 03/23/2025
+ms.reviewer: chiragpa, andbar, v-leedennis, v-weizhu, albarqaw
 ms.service: azure-kubernetes-service
 keywords: Azure Kubernetes Service, AKS cluster, Kubernetes cluster, tunnels, connectivity, tunnel-front, aks-link
 #Customer intent: As an Azure Kubernetes user, I want to avoid tunnel connectivity issues so that I can use an Azure Kubernetes Service (AKS) cluster successfully.
@@ -28,6 +28,8 @@ You receive an error message that resembles the following examples about port 10
 > Error from server: Get "https\://\<aks-node-name>:10250/containerLogs/\<namespace>/\<pod-name>/\<container-name>": dial tcp \<aks-node-ip>:10250: i/o timeout
 
 > Error from server: error dialing backend: dial tcp \<aks-node-ip>:10250: i/o timeout
+
+> Error from server: Get "https\://\<aks-node-name>:10250/containerLogs/\<namespace>/\<pod-name>/\<container-name>": http: server gave HTTP response to HTTPS client
 
 The Kubernetes API server uses port 10250 to connect to a node's kubelet to retrieve the logs. If port 10250 is blocked, the kubectl logs and other features will only work for pods that run on the nodes in which the tunnel component is scheduled. For more information, see [Kubernetes ports and protocols: Worker nodes](https://kubernetes.io/docs/reference/ports-and-protocols/#node).
 

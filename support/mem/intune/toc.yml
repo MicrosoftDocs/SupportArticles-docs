@@ -173,7 +173,7 @@ items:
       href: device-configuration/device-configuration-profile-reports-error-2016281112.md
     - name: Enterprise Mode site list not deployed
       href: device-configuration/enterprise-mode-site-list-not-deployed-win10.md
-    - name: Users can't log on to Windows 10 computers with multi-app kiosk profile assigned
+    - name: Users can't log on to Windows computers with multi-app kiosk profile assigned
       href: device-configuration/users-cannot-logon-windows-multi-app-kiosk.md
     - name: Windows feature updates are not offered
       href: device-configuration/windows-feature-updates-never-offered.md

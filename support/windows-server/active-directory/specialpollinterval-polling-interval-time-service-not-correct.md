@@ -1,7 +1,7 @@
 ---
 title: Time service does not correct the time
 description: Provides a resolution for the issue that Windows Time service does not correct the time if the service gets into Spike state.
-ms.date: 01/15/2025
+ms.date: 03/28/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -14,6 +14,7 @@ ms.custom:
 
 This article provides a resolution for the issue that Windows Time service does not correct the time if the service gets into Spike state.
 
+_Applies to:_ &nbsp; Windows Server (All supported versions), Windows client (All supported versions)  
 _Original KB number:_ &nbsp; 2638243
 
 ## Symptoms
@@ -51,10 +52,11 @@ To configure Windows Time to use the MinPollInterval/MaxPollInterval as the poll
 
 ## Workaround
 
-If you want to use "SpecialPollinterval", you should change the following registry:  
-    Key: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config  
-    Value: MinPollInterval  
-    Type: DWORD
+If you want to use "SpecialPollinterval", you should change the following registry:
+
+Key: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config`  
+Value: MinPollInterval  
+Type: DWORD  
 
 To avoid this issue, the registry key should apply conditional expression as follows:  
 Conditional expression:  

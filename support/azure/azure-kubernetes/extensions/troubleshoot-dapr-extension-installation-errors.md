@@ -2,15 +2,17 @@
 title: Troubleshoot Dapr extension installation errors 
 description: Troubleshoot errors that occur while installing the Distributed Application Runtime (Dapr) extension for Azure Kubernetes Service (AKS) or Arc for Kubernetes.
 editor: v-jsitser
-ms.reviewer: nigreenf, v-leedennis
+ms.reviewer: nigreenf, v-leedennis, addobres
 ms.service: azure-kubernetes-service
-ms.date: 06/16/2023
+ms.date: 03/11/2025
 ms.custom: sap:Extensions, Policies and Add-Ons
 ---
 
 # Troubleshoot Dapr extension installation errors
 
 This article discusses some common error messages that you may receive when you install or update the [Distributed Application Runtime (Dapr)](https://dapr.io/) extension for Microsoft Azure Kubernetes Service (AKS) or Arc for Kubernetes.
+
+[Learn more about the level of support provided for the Dapr extension.](#next-steps)
 
 ## Scenario 1: Installation fails but doesn't show an error message
 
@@ -147,8 +149,15 @@ To resolve this issue, use one of the following methods:
    
 ## Next steps
 
-If you're still experiencing installation issues, explore the [AKS troubleshooting guide](/azure/aks/troubleshooting) and the [Dapr OSS troubleshooting guide](https://docs.dapr.io/operations/troubleshooting/common_issues/).
+If you're still experiencing installation issues, [create a support request](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot) for Microsoft to investigate and resolve. 
+
+If you're experiencing Dapr runtime security risks and regressions while using the extension, open an issue with the [Dapr open source project](https://github.com/dapr/dapr/issues/new/choose).
+
+> [!NOTE]
+> Learn more about [how Microsoft handles issues raised for the Dapr extension](/azure/aks/dapr-overview#issue-handling).
+
+You could also start a discussion in the Dapr project Discord:
+- [Dapr runtime](https://discord.com/channels/778680217417809931/778684372475707416)
+- [Dapr components](https://discord.com/channels/778680217417809931/781589820128493598)
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
-
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
