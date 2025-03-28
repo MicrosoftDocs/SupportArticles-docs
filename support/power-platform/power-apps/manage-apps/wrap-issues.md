@@ -4,7 +4,7 @@ description: Provides resolutions for issues related to the wrap feature in Powe
 ms.reviewer: sitaramp, koagarwa
 ms.author: arijitba
 author: arijitba
-ms.date: 03/27/2025
+ms.date: 03/28/2025
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done, sap:App Management\Wrap an app
 ---
 # Troubleshoot issues with the wrap feature in Power Apps
