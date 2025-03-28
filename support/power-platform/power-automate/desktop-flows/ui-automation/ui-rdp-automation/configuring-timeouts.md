@@ -3,14 +3,14 @@ title: Configuring timeouts for RDP/Citrix automations
 description: Guide on how configure certain timeout that affect RDP/Citrix automations on Power Automate.
 ms.reviewer: amitrou
 ms.author: iopanag
-author: JohnPanagiotopoulos
+author: iopanag
 ms.custom: sap:Desktop flows\UI or browser automation
-ms.date: 20/03/2025
+ms.date: 03/28/2025
 ---
 
 # Configuring timeouts for RDP/Citrix automations
 
-There might be cases where interacting with RDP/Citrix applications might timeout and require additional time to work. These can be configured like the rest of Power Automate timeouts like in [Timeout configuration for UI and browser automation](https://learn.microsoft.com/en-us/power-automate/desktop-flows/how-to/ui-automation-change-timeout-cofiguration). Use this guide to configure the following values as needed.
+There might be cases where interacting with RDP/Citrix applications might timeout and require additional time to work. These can be configured like the rest of Power Automate timeouts like in [Timeout configuration for UI and browser automation](/power-automate/desktop-flows/how-to/ui-automation-change-timeout-cofiguration). Use this guide to configure the following values as needed.
 
 ## Issue: Something takes long time and fails afterwards
 

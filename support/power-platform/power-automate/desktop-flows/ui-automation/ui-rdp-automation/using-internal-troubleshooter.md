@@ -3,9 +3,9 @@ title: Using the internal troubleshooter to comprehensively diagnose Citrix/RDP 
 description: This article guides the user to use the internal troubleshooter to diagnose issues related to Citrix/RDP automation
 ms.reviewer: amitrou
 ms.author: iopanag
-author: JohnPanagiotopoulos
+author: iopanag
 ms.custom: sap:Desktop flows\UI or browser automation
-ms.date: 03/03/2025
+ms.date: 03/28/2025
 ---
 # Using the internal troubleshooter to comprehensively diagnose Citrix/RDP automation issues
 

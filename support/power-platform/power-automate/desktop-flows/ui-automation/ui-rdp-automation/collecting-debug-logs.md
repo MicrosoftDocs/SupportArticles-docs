@@ -3,9 +3,9 @@ title: Collecting debug logs from agent for Virtual desktops
 description: Guide on how to collect debug logs from remote agent to further investigate issues.
 ms.reviewer: amitrou
 ms.author: iopanag
-author: JohnPanagiotopoulos
+author: iopanag
 ms.custom: sap:Desktop flows\UI or browser automation
-ms.date: 20/03/2025
+ms.date: 03/28/2025
 ---
 
 # Collecting debug logs from agent for Virtual desktops

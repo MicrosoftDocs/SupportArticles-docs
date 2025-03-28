@@ -3,9 +3,9 @@ title: Recorder not recording keystrokes on RDP Window
 description: Solves an issue that causes recorder not to record keystrokes on RDP windows
 ms.reviewer: amitrou
 ms.author: iopanag
-author: JohnPanagiotopoulos
+author: iopanag
 ms.custom: sap:Desktop flows\UI or browser automation
-ms.date: 03/03/2025
+ms.date: 03/28/2025
 ---
 # Recorder not recording keystrokes on RDP Window
 
