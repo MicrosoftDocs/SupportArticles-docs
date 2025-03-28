@@ -1,6 +1,6 @@
 ---
 title: The identity of the calling application could not be established
-description: Provides a solution to the error "The identity of the calling application could not be established" when using Microsoft Graph.
+description: Provides solutions to the error "The identity of the calling application could not be established" when using Microsoft Graph.
 ms.date: 03/28/2025
 ms.service: entra-id
 ms.custom: sap:Getting access denied errors (Authorization)
@@ -8,7 +8,7 @@ ms.reviewer: willfid, v-weizhu
 ---
 # Error "The identity of the calling application could not be established"
 
-This article provides a solution to the error message "The identity of the calling application could not be established" when using Microsoft Graph.
+This article provides solutions to the error message "The identity of the calling application could not be established" when using Microsoft Graph.
 
 ## Symptoms
 
@@ -46,7 +46,7 @@ Ensure that you replace `<Application ID>` with your application's actual Applic
 
 ## Solution for Non-Partner scenario
 
-If this isn't a Partner application, add the service principal to the tenant and consent to the permissions required by the application.
+If the application isn't a Partner application, add the service principal to the tenant and consent to the permissions required by the application.
 
 You can [build an admin consent URL](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal#construct-the-url-for-granting-tenant-wide-admin-consent) like the following one:
 
