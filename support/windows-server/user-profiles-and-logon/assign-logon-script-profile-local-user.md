@@ -15,7 +15,6 @@ ms.custom:
 This article describes how to assign a logon script to a profile for a local user.
 
 _Applies to:_ &nbsp; Windows Server (All supported versions), Windows client (All supported versions)  
-
 _Original KB number:_ &nbsp; 324803
 
 ## Summary
