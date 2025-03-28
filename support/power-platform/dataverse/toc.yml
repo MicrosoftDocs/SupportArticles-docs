@@ -160,6 +160,10 @@
       href: email-exchange-synchronization/exception-appears-server-side-sync.md
     - name: '"You cannot send email as the selected user" error'
       href: email-exchange-synchronization/cannot-send-email-as-another-user.md
+- name: Importing and exporting data
+  items:
+    - name: Data export option isn't available in Azure Application Insights
+      href: import-export-data/data-export-option-not-available-in-application-insights.md
 - name: Plug-in execution
   items:
     - name: Dataverse plug-ins

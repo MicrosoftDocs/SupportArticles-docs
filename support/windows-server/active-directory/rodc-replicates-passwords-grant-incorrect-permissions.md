@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-jeffbo
 ms.custom:
-- sap:active directory\active directory backup,restore,or disaster recovery
+- sap:active directory\active directory replication and topology
 - pcy:WinComm Directory Services
 ---
 # RODC replicates passwords when it's granted incorrect permissions in Windows Server

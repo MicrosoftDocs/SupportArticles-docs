@@ -120,7 +120,7 @@ For more information, see:
 [Clean up server metadata by using GUI tools](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816907(v=ws.10))  
 [Clean up Active Directory Domain Controller server metadata](/windows-server/identity/ad-ds/deploy/ad-ds-metadata-cleanup).
 
-After you have verified that the replication between domain controllers is working correctly, determine whether an orphaned domain object exists. You can use the Ntdsutil.exe utility to clear the orphaned domain object. If there's any orphaned domain controller object for that domain, also delete the domain controller object. For more information, see [How to remove orphaned domains from Active Directory](remove-orphaned-domains.md).
+After you have verified that the replication between domain controllers is working correctly, determine whether an orphaned domain object exists. You can use the Ntdsutil.exe utility to clear the orphaned domain object. If there's any orphaned domain controller object for that domain, also delete the domain controller object. For more information, see [How to remove orphaned domains from Active Directory](../windows-security/remove-orphaned-domains.md).
 
 For more information about how to remove orphaned domain controller objects, see [Clean up Active Directory Domain Controller server metadata](/windows-server/identity/ad-ds/deploy/ad-ds-metadata-cleanup).
 
@@ -150,4 +150,4 @@ The command completed successfully
 
 Verify that the `Flags` entry of the output includes `GC`.
 
-For more information, see [How to remove orphaned domains from Active Directory](remove-orphaned-domains.md).
+For more information, see [How to remove orphaned domains from Active Directory](../windows-security/remove-orphaned-domains.md).

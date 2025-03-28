@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
 ms.custom:
-- sap:active directory\active directory backup,restore,or disaster recovery
+- sap:windows security technologies\domain and forest trusts
 - pcy:WinComm Directory Services
 ---
 # How to remove orphaned domains from Active Directory  
@@ -30,7 +30,7 @@ Typically, when the last domain controller for a domain is demoted, the administ
         > [!NOTE]
         > If it's changed recently, not all computer may have received this change yet due to replication.
 
-    For more information about FSMO roles, see [Active Directory FSMO roles in Windows](fsmo-roles.md).
+    For more information about FSMO roles, see [Active Directory FSMO roles in Windows](../active-directory/fsmo-roles.md).
 2. Verify that all servers for the domain have been demoted.
 3. Open a command prompt window.
 4. At the command prompt, type `ntdsutil`, and then press Enter.

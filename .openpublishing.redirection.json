@@ -13175,6 +13175,38 @@
     {
       "source_path": "support/windows-server/setup-upgrade-and-drivers/repair-or-in-place-upgrade.md",
       "redirect_url": "/windows-server/get-started/perform-in-place-upgrade"
+    },
+    {
+      "source_path": "support/windows-client/user-profiles-and-logon/roaming-profile-was-not-completely-synchronized-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/roaming-profile-was-not-completely-synchronized-error"
+    },
+    {
+      "source_path": "support/windows-client/user-profiles-and-logon/renaming-user-account-not-change-profile-path.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/renaming-user-account-not-change-profile-path"
+    },
+    {
+      "source_path": "support/windows-client/user-profiles-and-logon/event-id-300-windows-hello-successfully-created-in-windows-10.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/event-id-300-windows-hello-successfully-created-in-windows-10"
+    },
+    {
+      "source_path": "support/windows-server/active-directory/convert-domain-federated.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/convert-domain-federated"
+    },
+    {
+      "source_path": "support/windows-server/active-directory/connection-adfs-failed-set-msoladfscontex.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/connection-adfs-failed-set-msoladfscontex"
+    },
+    {
+      "source_path": "support/windows-client/user-profiles-and-logon/error-invalid-store-path-loadstate-user-state-migration-tool.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/error-invalid-store-path-loadstate-user-state-migration-tool"
+    },
+    {
+      "source_path": "support/windows-server/active-directory/file-replication-service-event-13552-13555.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/file-replication-service-event-13552-13555"
+    },
+    {
+      "source_path": "support/windows-server/active-directory/remove-orphaned-domains.md",
+      "redirect_url": "/troubleshoot/windows-server/windows-security/remove-orphaned-domains"
     }
   ]
 }
