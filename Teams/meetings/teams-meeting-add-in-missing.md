@@ -1,8 +1,6 @@
 ---
 title: Teams meeting add-in missing from Outlook and new Teams
 description: Resolves an issue in which the Teams meeting add-in doesn't load in new Teams and is removed from Microsoft Outlook.
-author: Cloud-Writer
-ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,12 +9,12 @@ ms.custom:
   - CI 191699
   - CI 193233
   - CSSTroubleshoot
-ms.reviewer: mfoland; shmurth; wayvad
+ms.reviewer: mfoland; shmurth; wayvad; ktakanishi
 appliesto: 
   - New Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 03/16/2025
+ms.date: 03/26/2025
 ---
 # Teams meeting add-in missing from Outlook and new Teams
 
@@ -38,23 +36,25 @@ When a version of classic Teams is uninstalled, the Teams meeting add-in is also
 
 For non-VDI environments, follow these steps to reinstall the Teams meeting add-in:
 
-1. Use the [Uninstall-ClassicTeams.ps1](https://aka.ms/AAslsri) PowerShell script to verify that classic Teams was uninstalled correctly.
-1. Use the [UninstallTMA.ps1](https://aka.ms/AAsllbb) PowerShell script to verify that the Teams meeting add-in was uninstalled correctly.
-
-   If this script returns an error message, check the version of the Teams meeting add-in. Otherwise, go to step 3.
-
-   To check the Teams meeting add-in version, select **Start** > **Settings** > **Apps** > **Installed apps**, enter *Teams Meeting Add-in* in the search box. If no result is found or the version of **Microsoft Teams Meeting Add-in for Microsoft Office** starts with *1.23*, follow these steps:
-
-     1. Download the [UninstallOldTMA.ps1](https://aka.ms/TMARepair) PowerShell script.
-     1. Open an elevated PowerShell prompt. Type *powershell* in the search box. From the results, right-click **Windows PowerShell** and select **Run as administrator**.
-     1. In the elevated PowerShell prompt, run the UninstallOldTMA.ps1 script to uninstall the Teams meeting add-in, and then go to step 3.
-1. Close the new Teams app.
+1. Quit Teams.
 1. Close the Outlook app.
+1. Check the version of the Teams meeting add-in.
+
+   To check the Teams meeting add-in version, select **Start** > **Settings** > **Apps** > **Installed apps**, and then enter *Teams Meeting Add-in* in the search box.
+
+     - If no result is found, or the version of **Microsoft Teams Meeting Add-in for Microsoft Office** starts with *1.23*, follow these steps:
+       
+         1. Download the [UninstallOldTMA.ps1](https://aka.ms/TMARepair) PowerShell script.
+         1. Open an elevated PowerShell window. To open the window, enter *powershell* in the search box. In the results, right-click **Windows PowerShell**, and then select **Run as administrator**.
+         1. At the elevated PowerShell prompt, run the UninstallOldTMA.ps1 script to uninstall the Teams meeting add-in.
+     - If the version of **Microsoft Teams Meeting Add-in for Microsoft Office** doesn't start with *1.23*, follow these steps:
+
+         1. Download the [UninstallTMA.ps1](https://aka.ms/AAsllbb) PowerShell script.
+         1. Open a PowerShell window. To open the window, enter *powershell* in the search box. In the results, select **Windows PowerShell**.
+         1. At the PowerShell prompt, run the UninstallTMA.ps1 script to uninstall the Teams meeting add-in. 
 1. Start the new Teams app.
 1. Wait until the Teams meeting add-in appears in the list in **Start** > **Settings** > **Apps** > **Installed apps**.
 1. Restart the Outlook app.
-
-If the Teams meeting add-in still doesn't work correctly, use the [TeamsMeetingAddinFixKnownIssues.ps1](https://aka.ms/AAsmdxd) PowerShell script to resolve common issues that affect the add-in.
 
 ## More information
 
