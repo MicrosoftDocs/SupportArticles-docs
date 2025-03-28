@@ -30,7 +30,7 @@ Securing remote connection...
 
 Remote desktop connection uses the highest possible security level encryption method between the source and destination.
 
-Authentication is performed by using self-signed certificates (default behavior), or a certificate issued by a certification authority installed on the remote session host server (RD Session Host).
+Authentication is performed by using self-signed certificates (default behavior), or a certificate issued by a certification authority installed on the Remote Desktop Session Host server (RD Session Host).
 
 If you use a self-signed certificate, the system tries to retrieve the trusted certification authority list from the Internet to check the publish and revocation status of the certificate. Therefore, the **Securing remote connection** screen may appear for a while.
 
@@ -78,7 +78,7 @@ To work around this behavior, use either of the following methods:
 
 Deploy a Group Policy to the client to turn off Automatic Root Certificates Update. To create a Group Policy, follow these steps on a Windows Server computer that is used for Group Policy management in the same Active Directory domain as the RD Session Host and client:
 
-1. Open Group Policy Management Console by using the following steps:
+1. Open the Group Policy Management Console by using the following steps:
 
    1. Press the Windows key+<kbd>R</kbd> to open the **Run** box. 
    2. Type **Gpmc.msc** in the **Run** box, and then select **OK**. 
@@ -86,8 +86,8 @@ Deploy a Group Policy to the client to turn off Automatic Root Certificates Upda
       > [!NOTE]
       > GPMC is installed by default on domain controllers and on any Windows Server or client that has the Remote Server Administration Tools installed.
       
-2. Create a new Group Policy Object (GPO) or select an existing Group Policy Object (GPO) to change.
-3. Right-click the selected Group Policy Object (GPO) and then select **Edit** and browse to the following Group Policy:  
+2. Create a new Group Policy Object (GPO) or select an existing GPO to change.
+3. Right-click the selected GPO, select **Edit**, and browse to the following Group Policy:  
 
    **Computer Configuration** > **Administrative Templates** > **System** > **Internet Communication Management** > **Internet Communication settings**
 
