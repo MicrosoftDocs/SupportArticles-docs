@@ -78,7 +78,7 @@ To work around this behavior, use either of the following methods:
 
 Deploy a Group Policy to the client to turn off Automatic Root Certificates Update. To create a Group Policy, follow these steps on a Windows Server computer that is used for Group Policy management in the same Active Directory domain as the RD Session Host and client:
 
-1. Open the Group Policy Management Console by using the following steps:
+1. Open the Group Policy Management Console (GPMC) by using the following steps:
 
    1. Press the Windows key+<kbd>R</kbd> to open the **Run** box. 
    2. Type **Gpmc.msc** in the **Run** box, and then select **OK**. 
