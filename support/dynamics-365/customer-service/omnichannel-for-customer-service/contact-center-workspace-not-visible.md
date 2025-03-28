@@ -10,16 +10,15 @@ ms.custom: sap:Licensing, provisioning, and installation, DFM
 ---
 # Contact center workspace not visible
 
-Users may encounter an issue where they are unable to see or access the Dynamics 365 Contact Center workspace, even though they have been assigned the appropriate licenses and roles. This article provides an explanation of the issue and steps to resolve it.
+Users may encounter an issue where they're unable to see or access the Dynamics 365 Contact Center workspace, even though they have been assigned the appropriate licenses and roles. This article provides an explanation of the issue and steps to resolve it.
 
 ## Symptoms
 
-- Users with Dynamics 365 Contact Center licenses are unable to locate or access the Dynamics 365 Contact Center workspace within the system.
-- The workspace does not appear in the Dynamics 365 environment, despite license and role assignment.
+Users with Dynamics 365 Contact Center licenses are unable to locate or access the Dynamics 365 Contact Center workspace within the system. And the workspace doesn't appear in the Dynamics 365 environment, despite license and role assignment.
 
 ## Cause
 
-The Dynamics 365 Contact Center workspace and the Customer Service workspace cannot be used simultaneously within the same Dynamics 365 organization. This limitation prevents the Contact Center workspace from being displayed if the Customer Service workspace is already in use.
+The Dynamics 365 Contact Center workspace and the Customer Service workspace can't be used simultaneously within the same Dynamics 365 organization. This limitation prevents the Contact Center workspace from being displayed if the Customer Service workspace is already in use.
 
 ## Resolution
 
@@ -29,7 +28,7 @@ To enable the Dynamics 365 Contact Center workspace, follow these steps:
 
     - Navigate to the [Power Platform Admin Center](https://admin.powerplatform.microsoft.com/).
     - Select **Environments** from the left-hand menu.
-    - Click **+ New** to create a new environment.
+    - Select **+ New** to create a new environment.
 
 2. Deploy the Contact Center app:
 
@@ -42,7 +41,7 @@ To enable the Dynamics 365 Contact Center workspace, follow these steps:
     - Ensure that appropriate licenses and roles are assigned within this new environment.
 
 > [!NOTE]
-> Existing organizations using the Customer Service workspace cannot simultaneously display the Contact Center workspace. A separate environment is required to use the Contact Center workspace.
+> Existing organizations using the Customer Service workspace can't simultaneously display the Contact Center workspace. A separate environment is required to use the Contact Center workspace.
 
 ## More Information
 
