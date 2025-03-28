@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot high data ingestion in Application Insights
 description: Provides a step-by-step guide to troubleshoot high data ingestion scenarios and provides methods to reduce costs.
-ms.date: 03/27/2025
+ms.date: 03/28/2025
 ms.service: azure-monitor
 ms.reviewer: jeanbisutti, toddfous, aaronmax, v-weizhu
 ms.custom: sap:Application Insights
@@ -14,7 +14,7 @@ An increase in billing charges for Application Insights or Log Analytics often o
 
 ### Step 1: Identify resources presenting high data ingestion
 
-In the Azure portal, navigate to cost analysis for your scope. For example: **Cost Management + Billing** > **Cost Management** > **Cost analysis**. This blade offers cost analysis views to chart costs per resource, as follows:
+In the Azure portal, navigate to your subscription and select **Cost Management** > **Cost analysis**. This blade offers cost analysis views to chart costs per resource, as follows:
 
  :::image type="content" source="media/troubleshoot-high-data-ingestion/cost-analysis.png" alt-text="A screenshot thst shows the 'cost analysis' blade." border="false":::
 
@@ -28,10 +28,10 @@ Once you've identified an Application Insights resource or a Log Analytics works
     Use the following query to compare record counts across tables:
 
     ```Kusto
-    search \*
+    search *
     | where timestamp &gt; ago(7d)
     | summarize count() by $table
-    | sort by count\_ desc
+    | sort by count_ desc
     ```
 
     This query can help identify the *noisiest* tables. From there, you can refine your queries to narrow down the investigation.
@@ -47,16 +47,16 @@ Once you've identified an Application Insights resource or a Log Analytics works
     | extend BillingTelemetryType = tostring(dimensions["BillingTelemetryType"])
     | extend BillingTelemetrySizeInBytes = todouble(measurements["BillingTelemetrySize"])
     | summarize TotalBillingTelemetrySize = sum(BillingTelemetrySizeInBytes) by BillingTelemetryType
-    | extend BillingTelemetrySizeGB = format\_bytes(TotalBillingTelemetrySize, 1 ,"GB")
+    | extend BillingTelemetrySizeGB = format_bytes(TotalBillingTelemetrySize, 1 ,"GB")
     | sort by BillingTelemetrySizeInBytes desc
     | project-away BillingTelemetrySizeInBytes
     ```
 
     Similar to the record count queries, these queries above can assist in identifying the most active tables, allowing you to pinpoint specific tables for further investigation.
 
-- Using Log Analytics workbooks
+- Using Log Analytics workspace Workbooks
 
-    In the Azure portal, navigate to your Log Analytics workspace, select **Workbooks**, and select **Usage** under **Log Analytics Workspace Insights**.
+    In the Azure portal, navigate to your Log Analytics workspace, select **Monitoring** > **Workbooks**, and then select **Usage** under **Log Analytics Workspace Insights**.
 
     :::image type="content" source="media/troubleshoot-high-data-ingestion/log-analytics-usage-workbook.png" alt-text="A screenshot thst shows the Log Analytics workbook pane." lightbox="media/troubleshoot-high-data-ingestion/log-analytics-usage-workbook.png" border="false":::
 
@@ -136,7 +136,7 @@ exceptions
 | where timestamp > ago(7d)
 | where cloud_RoleName == 'Specify a role name'
 | summarize count() by type
-| sort by count_ desc<o:p></o:p>
+| sort by count_ desc
 ```
 
 ```Kusto
@@ -155,8 +155,8 @@ In the following queries, the [bin()](/kusto/query/bin-function) Kusto Query Lan
 
 ```Kusto
 dependencies
-| where timestamp &gt; ago(30d)
-| summarize count() by bin(timestamp, 1d), operation\_Name
+| where timestamp > ago(30d)
+| summarize count() by bin(timestamp, 1d), operation_Name
 | sort by timestamp desc
 ```
 
@@ -177,11 +177,11 @@ dependencies
 1. Query all tables within a Log Analytics workspace.
 
     ```Kusto
-    search \*
-    | where TimeGenerated &gt; ago(7d)
-    | where \_IsBillable == true
-    | summarize TotalBilledSize = sum(\_BilledSize) by $table
-    | extend IngestedVolumeGB = format\_bytes(TotalBilledSize, 1, "GB")
+    search *
+    | where TimeGenerated > ago(7d)
+    | where _IsBillable == true
+    | summarize TotalBilledSize = sum(_BilledSize) by $table
+    | extend IngestedVolumeGB = format_bytes(TotalBilledSize, 1, "GB")
     | sort by TotalBilledSize desc
     | project-away TotalBilledSize
     ```
@@ -229,7 +229,7 @@ To determine the factors contributing to the costs, follow these steps:
 1. Query the telemetry across all tables and obtain a record count per table and SDK version:
 
     ```Kusto
-    search \*
+    search *
     | where TimeGenerated > ago(7d)
     | summarize count() by $table, SDKVersion
     | sort by count_ desc
@@ -300,7 +300,7 @@ The default recommended solution is using [sampling overrides](/azure/azure-moni
 
 There are some supplemental methods to sampling overrides:
 
-- Reduce cost from the `traces` table (**logs** and **Trace** on the Application Insights page):
+- Reduce cost from the `traces` table:
 
     - [Reduce the telemetry log level](/azure/azure-monitor/app/java-standalone-config#autocollected-logging)
     - [Remove application (not frameworks/libs) logs with MDC attribute and sampling override](/azure/azure-monitor/app/java-standalone-sampling-overrides#suppress-collecting-telemetry-for-log)
@@ -318,7 +318,7 @@ There are some supplemental methods to sampling overrides:
 
 - Reduce cost from the `dependencies` table:
 
-    - [Suppress collecting telemetry for the Java method producing the dependency telemetry](/azure/azure-monitor/app/java-standalone-sampling-overrides#suppress-collecting-telemetry-for-a-java-method)
+    - [Suppress collecting telemetry for the Java method producing the dependency telemetry](/azure/azure-monitor/app/java-standalone-sampling-overrides#suppress-collecting-telemetry-for-a-java-method).
     - [Disable the instrumentation](/azure/azure-monitor/app/java-standalone-config#suppress-specific-autocollected-telemetry) producing the dependency telemetry data. 
     
         If the dependency is a database call, you then won't see the database on the application map. If you remove the dependency instrumentation of an HTTP call or a message (for example a Kafka message), all the downstream telemetry data are dropped.
