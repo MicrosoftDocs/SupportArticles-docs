@@ -48,6 +48,7 @@ By default, all enterprise users can use the new feature. However, as an admin, 
 
 > [!NOTE]
 > When the policy is disabled, users won't be able to embed or play back videos in Outlook or Loop. The policy doesn't affect video playback in [Microsoft Stream](https://support.microsoft.com/office/learn-more-about-stream-on-sharepoint-cf4c10c8-5ed3-4229-9e2a-60d31b31575d).
+> The option to disable the feature only in Outlook without affecting other apps is not available.
 
 ## Supported video files
 
