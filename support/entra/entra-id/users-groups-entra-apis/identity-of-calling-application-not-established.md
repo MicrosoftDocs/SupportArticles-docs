@@ -22,7 +22,7 @@ This error occurs because the `oid` and `sub` claims are missing from the access
 
 ## Solution for Partner scenario
 
-If the application is a Partner application, ensure that you complete the Partner pre-consent process. For more information, see [Partner pre-consent](https://github.com/microsoft/Partner-Center-Explorer/blob/master/docs/Preconsent.md) and add your application or service principal to the AdminAgents group.
+If the application is a Partner application, ensure that you complete the Partner pre-consent process and add your application or service principal to the AdminAgents group. For more information, see [Partner pre-consent](https://github.com/microsoft/Partner-Center-Explorer/blob/master/docs/Preconsent.md).
 
 Here's an updated PowerShell script for using Microsoft Graph:
 
