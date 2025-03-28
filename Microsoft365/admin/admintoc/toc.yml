@@ -253,6 +253,8 @@
       href: ../miscellaneous/chrome-behavior-affects-applications.md
     - name: Microsoft 365 changes build numbers to a five-digit format
       href: ../miscellaneous/build-number-five-digit.md
+    - name: New Startup Boost tasks in Windows Task Scheduler
+      href: ../miscellaneous/new-startup-boost-tasks-windows-task-scheduler.md
     - name: Open Support cases for GCC High and DoD
       href: ../miscellaneous/support-cases-for-gcc-high-dod.md
     - name: Reports show anonymous user names
