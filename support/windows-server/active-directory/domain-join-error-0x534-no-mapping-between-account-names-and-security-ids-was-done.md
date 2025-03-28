@@ -1,5 +1,5 @@
 ---
-title: Error 0x534 No Mapping Between a Account Names and Security IDs Was Done
+title: Error 0x534 No Mapping Between Account Names and Security IDs Was Done
 description: Addresses the error No mapping between account names and security IDs was done encountered during domain join operations.
 ms.date: 03/28/2025
 manager: dcscontentpm
