@@ -11,6 +11,12 @@ ms.custom:
   - CSSTroubleshoot
   - CI 3719
 ms.date: 03/27/2025
+appliesto: 
+  - Microsoft 365 Business 
+  - Microsoft 365 Apps for business
+  - Microsoft 365 Family
+  - Microsoft 365 Apps for enterprise
+  - Microsoft 365 Personal
 ---
 # New Startup Boost tasks in Windows Task Scheduler
 
