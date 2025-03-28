@@ -112,7 +112,7 @@ VMs must be generation 2. You can upgrade VMs from Generation 1 to Generation 2 
 
 ### Trusted launch
 
-VMs must be enabled for Trusted launch together with secure boot and virtual TPM. [Upgrading VMs from standard security to Trusted launch](/azure/virtual-machines/trusted-launch-existing-vm-gen-1) is currently supported in preview. Many VMs are affected by this requirement. This is because before [June 28, 2023](https://techcommunity.microsoft.com/t5/azure-confidential-computing/announcing-trusted-launch-as-default-in-azure-portal/ba-p/3854872), trusted launch wasn't the default security type option when you created a VM in the Azure portal. Also, when Windows 11 was released, trusted launch wasn't available as a feature in Windows Azure.
+VMs must be enabled for Trusted launch together with secure boot and virtual TPM. [Upgrading VMs from standard security to Trusted launch](/azure/virtual-machines/trusted-launch-existing-vm-gen-1) is supported. Many VMs are affected by this requirement. This is because before [June 28, 2023](https://techcommunity.microsoft.com/t5/azure-confidential-computing/announcing-trusted-launch-as-default-in-azure-portal/ba-p/3854872), trusted launch wasn't the default security type option when you created a VM in the Azure portal. Also, when Windows 11 was released, trusted launch wasn't available as a feature in Windows Azure.
 
 ### CPU
 
