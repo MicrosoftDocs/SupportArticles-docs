@@ -1,6 +1,6 @@
 ---
 title: The Outlook AutoComplete list
-description: Describes the Outlook AutoComplete list and provides instructions to manage the list.
+description: Describes the Outlook AutoComplete list and provides instructions to manage it.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -17,10 +17,8 @@ appliesto:
   - Outlook LTSC 2021    
   - Outlook 2019
   - Outlook 2016
-  - Outlook 2013
-  - Outlook 2010
 search.appverid: MET150
-ms.date: 01/30/2024
+ms.date: 03/27/2025
 ---
 # The Outlook AutoComplete list
 
@@ -38,15 +36,13 @@ Microsoft Outlook maintains the AutoComplete list. The list is used by both the 
 
 Outlook limits the number of entries that you can save in the AutoComplete list. After you reach this limit, Outlook uses an internal algorithm to determine the best names to remove from the list. It does this based on the process of *usage weighting*. Therefore, you might find that some names are unexpectedly removed from your nickname cache. To avoid this situation, you can use the following general approaches:
 
-1. You can proactively remove AutoComplete list entries that you no longer need. This is the preferred approach. For information about how to do this, see [Remove AutoComplete list entries one at a time](#remove-autocomplete-list-entries-one-at-a-time).
-2. You can increase the limit for the nickname cache. Because this configuration is untested, we don't recommend it. If a large nickname cache becomes corrupted, it will be unusable and you could lose many cached entries. For information about how to increase the limit, see [Change the limit for the AutoComplete list](#change-the-limit-for-the-autocomplete-list).
+1. You can proactively [remove AutoComplete list entries](#remove-autocomplete-list-entries-one-at-a-time) that you no longer need. This is the preferred approach.
+2. You can [increase the limit for the nickname cache](#change-the-limit-for-the-autocomplete-list). Because this configuration is untested, we don't recommend it. If a large nickname cache becomes corrupted, it will be unusable and you could lose many cached entries.
 
 The limits are as follows:
 
 - Outlook 2019: 1,000 entries
 - Outlook 2016: 1,000 entries
-- Outlook 2013: 1,000 entries
-- Outlook 2010: 1,000 entries
 
 ## Enable the AutoComplete feature
 
@@ -60,7 +56,7 @@ To access the AutoComplete setting, follow these steps:
 
 ## Copy the AutoComplete list
 
-Microsoft Office Outlook 2007 and earlier versions store the AutoComplete list in a nickname (.nk2) file on the disk. Outlook 2021, 2019, 2016, 2013, and 2010 store the AutoComplete list as a hidden message in your primary message store. They also let the older .nk2 files be imported.
+Microsoft Office Outlook 2007 and earlier versions store the AutoComplete list in a nickname (.nk2) file on the disk. Outlook 2021, 2019, 2016, 2013, and 2010 store the AutoComplete list as a hidden message in your primary message store. They also allow the older .nk2 files be imported.
 
 For the detailed steps to copy the AutoComplete list, and copy and import an .nk2 file, see [Import or copy the AutoComplete list to another computer](https://support.microsoft.com/office/import-or-copy-the-auto-complete-list-to-another-computer-83558574-20dc-4c94-a531-25a42ec8e8f0).
 
@@ -101,7 +97,7 @@ Start Outlook by using the /CleanAutoCompleteCache switch.
 
 **Note**: If Outlook is not installed in the default location, you must point to the path of Outlook.exe.
 
-## Known issues in the AutoComplete cache
+## Known issue in the AutoComplete cache
 
 The AutoComplete cache can become corrupted over time and might not save new entries. If this occurs, you can try to  [remove AutoComplete list entries one at a time](#remove-autocomplete-list-entries-one-at-a-time). If that doesn't resolve the issue, [clear the  AutoComplete list](#clear-the-autocomplete-list)."
 
@@ -109,27 +105,12 @@ The AutoComplete cache can become corrupted over time and might not save new ent
 
 Because this configuration is untested, we don’t recommend it. If a large nickname cache becomes corrupted, it will be unusable and you could lose many cached entries. Use this information with caution.
 
-> [!IMPORTANT]
->
-> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry,see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
+[!INCLUDE [Important registry alert](../../../includes/registry-important-alert.md)]
 
 1. Exit Outlook.
 2. Start Registry Editor.
-   - In Windows 8.*x*, press the Windows logo key, type *regedit* and then press **Enter**.
-   - In Windows 7 and Windows Vista, select **Start**, type *regedit* in the **Start Search** box, and then press **Enter**.
-
 3. Locate and then select the following registry subkey:  
-   `HKEY_CURRENT_USER\Software\Microsoft\Office\<x.0>\Outlook\AutoNameCheck`
-
-    **Note**:
-    The placeholder <x.0> in this registry subkey represents your version of Microsoft Office. Use the appropriate value from the following list.
-    >
-    > - Outlook 2021 = 16.0
-    > - Outlook 2019 = 16.0
-    > - Outlook 2016 = 16.0  
-    > - Outlook 2013 = 15.0  
-    > - Outlook 2010 = 14.0  
-  
+   `HKEY_CURRENT_USER\Software\Microsoft\Office\<16.0>\Outlook\AutoNameCheck`
 4. On the **Edit** menu, point to **New**, and then select **DWORD value**.
 5. Type *MaxNickNames*, and then press **Enter**.
 6. On the **Edit** menu, select **Modify**.
@@ -137,11 +118,11 @@ Because this configuration is untested, we don’t recommend it. If a large nick
 
     **Note**:
     >
-    > - Make sure that you type the number in *decimal form*. That is the correct form in which to type the number.
-    > - To test the new limit, try to increase the limit by only a small amount. For example, to create a 20 percent increase in the limit in Outlook 2013, you would specify *1200* for the `MaxNickNames` value.
+    > - Specify the new value in *decimal form*. That is the correct form for the value.
+    > - Increase the limit by only a small amount. For example, to create a 20 percent increase in the limit for Outlook 2016, specify *1200* as the value for the `MaxNickNames`entry.
 
 8. Exit Registry Editor.
 9. Start Outlook.
 
 **Note**:
-The `MaxNickNames` registry value specifies only the nondefault limit. Therefore, you can also use this value to lower the limit of the nickname cache.
+The value of the `MaxNickNames` registry entry specifies only the nondefault limit. Therefore, you can also use this value to lower the limit of the nickname cache.
