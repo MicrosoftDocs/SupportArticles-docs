@@ -39,12 +39,12 @@ Additionally, run the following PowerShell command in a remote Exchange PowerShe
  Get-TransportConfig | fl OpenDomainRoutingEnabled
 ```
 
-If the value of `OpenDomainRoutingEnabled` is **True**, it causes the `Content-Class` header of the voicemail message to change from `Voice-CA` to `unauthenticatedVoice-CA`. This change prevents the correct PR Message class from being defined. Therefore, the messages can't be correctly identified and processed as voicemail messages by Teams. 
+If the value of `OpenDomainRoutingEnabled` is **True**, it causes the `Content-Class` header of voicemail messages to change from `Voice-CA` to `unauthenticatedVoice-CA`. This change prevents the correct PR message class from being defined. Therefore, Teams can't correctly identify and process these messages as voicemail messages.
 
 To fix this issue, submit a support request to [Microsoft Support](https://support.microsoft.com/contactus) to update this setting to **False** in your tenant configuration.
 
 > [!NOTE]
-> The `OpenDomainRoutingEnabled` setting is a legacy setting that's used for anti-spam detection prior to the implementation of Exchange Online Protection.
+> The `OpenDomainRoutingEnabled` setting is a legacy setting that's used for anti-spam detection before the implementation of Exchange Online Protection.
 
 ## Workaround for symptom 1
 
