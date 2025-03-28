@@ -4,7 +4,7 @@ description: Resolves networking, permissions, regional mismatches, or profile l
 author: Greggbarker-ms
 ms.author: saukuma
 ai-usage: ai-assisted
-ms.date: 03/20/2025
+ms.date: 03/28/2025
 ms.custom: sap:Importing and exporting data\Configuring Export to Azure Data Lake and Azure Synapse Link integration 
 ---
 # Troubleshoot Azure Synapse Link profile creation issues
