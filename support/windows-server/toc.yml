@@ -252,7 +252,7 @@ items:
     - name: Orphaned child domain controller is not replicated
       href: ./active-directory/orphaned-child-domain-isnt-replicated.md
     - name: RODC replicates passwords
-      href: active-directory/rodc-replicates-passwords-grant-incorrect-permissions.md      
+      href: active-directory/rodc-replicates-passwords-grant-incorrect-permissions.md
     - name: Troubleshoot domain controller replication error 1727
       href: ./active-directory/remote-procedure-call-failed-and-did-not-execute-error.md
     - name: Troubleshoot Jet database errors and recovery steps
@@ -2103,8 +2103,6 @@ items:
       href: ./remote/0xc000035b-when-you-use-lmcompatibility.md
   - name: Certificate management
     items:
-    - name: Error messages when connecting to a Terminal server
-      href: ./remote/error-when-connecting-terminal-server.md
     - name: RDS Connection Broker or RDMS fails
       href: ./remote/rds-connection-broker-or-rdms-fails-caused-by-disabled-tls-10.md
     - name: Use custom server authentication certificate for TLS over RDS
