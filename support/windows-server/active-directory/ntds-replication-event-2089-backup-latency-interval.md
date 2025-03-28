@@ -1,7 +1,7 @@
 ---
 title: NTDS Replication Event 2089 is logged
 description: Discusses the problem where a new event error message is logged if you don't back up a Windows Server 2003 Service Pack 1 (SP1)-based domain controller in a given time period that is called the backup latency interval.
-ms.date: 01/15/2025
+ms.date: 03/28/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -12,14 +12,14 @@ ms.custom:
 ---
 # NTDS Replication Event 2089 is logged if Windows Server 2003 SP1 and later domain controllers aren't backed up in a given time period
 
-This article discusses the problem where a new event error message is logged if you don't back up a Windows Server 2003 Service Pack 1 (SP1)-based domain controller in a given time period that is called the backup latency interval.
+This article discusses the problem where a new event error message is logged if you don't back up a Windows Server-based domain controller in a given time period that is called the backup latency interval.
 
 _Applies to:_ &nbsp; Windows Server (All supported versions)  
 _Original KB number:_ &nbsp; 914034
 
 ## Introduction
 
-When you back up a domain controller that is running Windows Server, a new event error message is logged for each writable domain or application partition that the domain controller hosts. This is true if the partition isn't backed up in a given time period. The time period is called a backup latency interval. You can set a registry value to specify this interval in days.
+When you back up a domain controller, a new event error message is logged for each writable domain or application partition that the domain controller hosts. This is true if the partition isn't backed up in a given time period. The time period is called a backup latency interval. You can set a registry value to specify this interval in days.
 
 ## More information
 
