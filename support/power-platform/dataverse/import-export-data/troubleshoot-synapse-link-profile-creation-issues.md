@@ -39,8 +39,8 @@ This article provides detailed guidance for troubleshooting common issues encoun
 
    For more information, review the prerequisites based on your profile type:
 
-  - [Prerequisites for Azure Synapse Link profile with Azure Data Lake](/power-apps/maker/data-platform/azure-synapse-link-data-lake#prerequisites)
-  - [Prerequisites for Azure Synapse Link profile with your Azure Synapse Workspace](/power-apps/maker/data-platform/azure-synapse-link-synapse#prerequisites) 
+    - [Prerequisites for Azure Synapse Link profile with Azure Data Lake](/power-apps/maker/data-platform/azure-synapse-link-data-lake#prerequisites)
+    - [Prerequisites for Azure Synapse Link profile with your Azure Synapse Workspace](/power-apps/maker/data-platform/azure-synapse-link-synapse#prerequisites) 
 
 2. Select the **Enable storage account key access** checkbox during initial setup.
 
