@@ -31,7 +31,7 @@ Ensure that the printer is properly connected to your computer or network:
 
 ## 2. Check if the printer is in a problematic state
 
-Check the printer's display panel or the printer status on your computer. If the printer is in a **Stopped** state, add the **Status Reason** column to see if there's an error such as "Out of toner" or "Off-line"
+Check the printer's display panel or the printer status on your computer. If the printer is in a **Stopped** state, add the **Status Reason** column to see if there's an error such as **Out of toner** or **Off-line**.
 
 ## 3. Check printer properties
 
@@ -39,7 +39,7 @@ Right-click the printer icon and select **Properties**. Select the **General** t
 
 ## 4. Restart the printer
 
-Turn off the printer, wait for about 30 seconds, and then turn it back on. This can often resolve temporary issues
+Turn off the printer, wait for about 30 seconds, and then turn it back on. This can often resolve temporary issues.
 
 ## 5. Run the printer troubleshooter
 
