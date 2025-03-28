@@ -18,7 +18,7 @@ Certain commands of the [kubectl](https://kubernetes.io/docs/reference/kubectl/)
 
 ## Cause
 
-When you restrict egress traffic from an AKS cluster, your settings must comply with [required Outbound network and FQDN rules for AKS clusters](/azure/aks/outbound-rules-control-egress). If your settings are in conflict with any of these rules, the symptoms of egress traffic restriction issues occur.
+When you restrict egress traffic from an AKS cluster, your settings must comply with [required Outbound network and FQDN (fully qualified domain names) rules for AKS clusters](/azure/aks/outbound-rules-control-egress). If your settings are in conflict with any of these rules, the egress traffic restriction issues occur.
 
 ## Solution
 
@@ -26,13 +26,13 @@ Verify that your configuration doesn't conflict with any of the [required Outbou
 
 - Outbound ports
 - Network rules
-- Fully qualified domain names (FQDNs)
+- FQDNs
 - Application rules
 
-Check out the NSG, firewall, or appliance that AKS traffic passes according to the configuration.
+Check the NSG (network security group), firewall, or appliance that AKS traffic passes through according to the configuration.
 
 > [!NOTE]
-> The AKS outbound dependencies are almost entirely defined by using FQDNs. These FQDNs don't have static addresses behind them. The lack of static addresses means that you can't use network security groups (NSGs) to restrict outbound traffic from an AKS cluster. In addition, scenarios that only allow IPs obtained from required FQDNs after all deny in NSG are not enough. Since the IPs are not static, issues may occur later.
+> The AKS outbound dependencies are almost entirely defined by using FQDNs. These FQDNs don't have static addresses behind them. The lack of static addresses means that you can't use NSGs to restrict outbound traffic from an AKS cluster. Additionally, scenarios that allow only IPs that are obtained from required FQDNs after all deny in NSG are not enough. Because the IPs are not static, issues might occur later.
 
 ## More information
 
