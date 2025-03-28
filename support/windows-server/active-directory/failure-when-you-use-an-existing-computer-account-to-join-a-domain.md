@@ -29,7 +29,7 @@ In **System Properties**:
 
 ### Netsetup.log
 
-Review the following example of the **Netsetup.log** on a fully updated system.
+Review the following example of the **Netsetup.log** file on a fully updated system.
 
 ```output
 NetpProvisionComputerAccount:
@@ -84,7 +84,7 @@ NetpDoDomainJoin: status: 0xaac
 
 ### Error detail
 
-|HEX|DEC|Symbolic name|Error description|Header|
+|Hexadecimal error|Decimal error|Symbolic error string|Error description|Header|
 |---|---|---|---|---|
 |0x8b0|2224|NERR_UserExists|The account already exists.|lmerr.h|
 |0xaac|2732|NERR_AccountReuseBlockedByPolicy|An account with the same name exists in Active Directory. Re-using the account was blocked by security policy.|lmerr.h|
