@@ -38,9 +38,9 @@ The easiest and quickest solution is to try to deploy to a different region (for
 
 This approach might not be feasible if you already have existing resources in the requested region, but it's the preferred solution in a dev/test scenario.
 
-### Solution 2: Try deploying a cluster that has different settings
+### Solution 2: Deploy a cluster that has different settings
 
-The infrastructure that hosts AKS managed clusters have different allocation reservations. Therefore, AKS might have more capacity for public clusters than for private clusters. If you encounter the `AksCapacityHeavyUsage` error when you try to create a private cluster, try to create a public cluster instead or vice versa.
+The infrastructure that hosts AKS-managed clusters have different allocation reservations. Therefore, AKS might have more capacity for public clusters than it has for private clusters. If you experience the `AksCapacityHeavyUsage` error when you try to create a private cluster, try to create a public cluster instead (or vice versa).
 
 ### Solution 3: Use an Azure Enterprise subscription
 
@@ -52,9 +52,9 @@ Capacity is often reclaimed when other users stop or delete their AKS clusters. 
 
 ## More information
 
-- Ensuring capacity for users is a top priority for Microsoft, and we're working around the clock to reach this goal. The increasing popularity of Azure services emphasizes the need for us to scale up our infrastructure even more rapidly. With that in mind, we're expediting expansions and improving our resource deployment process to respond to strong customer demand. We're also adding a large amount of compute infrastructure monthly.
+- Ensuring capacity for users is a top priority for Microsoft, and we're working to scale up our infrastructure to accommodate the increasing popularity of Azure services.
 
-   We have identified several methods to improve how we load-balance under a high-resource-usage situation, and how to trigger the timely deployment of needed resources. Additionally, we're significantly increasing our capacity, and will continue to plan for strong demand across all regions. [This September 2021 Azure Blog article](https://azure.microsoft.com/blog/advancing-reliability-through-a-resilient-cloud-supply-chain/) discusses improvements that we're making toward delivering a resilient cloud supply chain.
+    For more information about improvements that we're making toward delivering a resilient cloud supply chain, see [this September 2021 Azure Blog article](https://azure.microsoft.com/blog/advancing-reliability-through-a-resilient-cloud-supply-chain/).
 
 - [General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)
 
