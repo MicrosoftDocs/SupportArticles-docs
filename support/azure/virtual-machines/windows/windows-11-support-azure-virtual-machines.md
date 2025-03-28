@@ -8,7 +8,7 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 ms.reviewer: scotro, kageorge, jarrettr, yutorigo, v-leedennis
 editor: v-jsitser
 ms.topic: upgrade-and-migration-article
-ms.date: 01/08/2025
+ms.date: 03/28/2025
 ---
 # Windows 11 support on Azure virtual machines
 
@@ -108,11 +108,11 @@ The following sections provide more detail about the three main criteria: VM gen
 
 ### VM generation
 
-VMs must be generation 2. You can upgrade VM from generation 1 to generation 2 with Trusted launch using preview feature [Enable Trusted launch on existing Gen1 VM](https://aka.ms/TrustedLaunchUpgrade)
+VMs must be generation 2. You can upgrade VMs from Generation 1 to Generation 2 by [upgrading to the Trusted launch security type](/azure/virtual-machines/trusted-launch-existing-vm-gen-1)
 
 ### Trusted launch
 
-VMs must be enabled for trusted launch together with secure boot and virtual TPM. [Upgrading VMs from standard security to trusted launch](https://aka.ms/TrustedLaunchUpgrade) is supported. Many VMs are affected by this requirement. This is because before [June 28, 2023](https://techcommunity.microsoft.com/t5/azure-confidential-computing/announcing-trusted-launch-as-default-in-azure-portal/ba-p/3854872), trusted launch wasn't the default security type option when you created a VM in the Azure portal. Also, when Windows 11 was released, trusted launch wasn't available as a feature in Windows Azure.
+VMs must be enabled for trusted launch together with secure boot and virtual TPM. [Upgrading VMs from standard security to trusted launch](/azure/virtual-machines/trusted-launch-existing-vm-gen-1) is supported. Many VMs are affected by this requirement. This is because before [June 28, 2023](https://techcommunity.microsoft.com/t5/azure-confidential-computing/announcing-trusted-launch-as-default-in-azure-portal/ba-p/3854872), trusted launch wasn't the default security type option when you created a VM in the Azure portal. Also, when Windows 11 was released, trusted launch wasn't available as a feature in Windows Azure.
 
 ### CPU
 
