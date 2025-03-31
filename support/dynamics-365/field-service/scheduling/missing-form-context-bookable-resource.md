@@ -4,73 +4,72 @@ description: Address issues with customized forms based on the default bookable 
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
-ms.date: 03/17/2025
+ms.date: 03/31/2025
 ms.custom: sap:Schedule Board
 ---
-
 # Missing form context for internal handlers on customized bookable resource forms
 
 This article helps resolve issues caused by missing form context for internal handlers on the bookable resource form in Microsoft Dynamics 365 Field Service.
 
 ## Symptoms
 
-When opening the form to create a bookable resource, the error message **Cannot read properties of undefined (reading 'getFormContext')** appears when selecting a user from the field.
+When you select a user from the field on the form while [creating a bookable resource](/dynamics365/field-service/set-up-bookable-resources) in Dynamics 365 Field Service, you might receive the following error message:
+
+> Cannot read properties of undefined (reading 'getFormContext')
 
 ## Cause
 
-The system uses a customized form that is based on an old version of the bookable resource form. There was a change in the internal handlers for *onchange* events. They require the execution context to be passed in from the form.
+The issue occurs because the system uses a customized form based on an outdated version of the bookable resource form. A change in the internal handlers for `onchange` events now requires the execution context to be passed in from the form.
 
-## Resolutions
-
-You can address such issues through Power Apps, by editing the form definitions of the customized forms in the corresponding customizations.xml file, or by running a script in the browser console to update the *onchange* event. You need the System Customizer permission to make the changes outlined below.
+## Resolution
 
 > [!IMPORTANT]
-> The following resolutions assume that the script error references the function *Mscrm.userid_onchange*. If the error shows on other fields and references other functions such as *Mscrm.accountid_onchange* or *Mscrm.contactid_onchange*, adapt the resolution steps to these functions.
+> The following resolutions assume that the script error references the `Mscrm.userid_onchange` function. If the error refers to other fields or functions, such as `Mscrm.accountid_onchange` or `Mscrm.contactid_onchange`, adapt the steps accordingly.
 
-### Update the form in Power Apps
+### Resolution 1: Update the form in Power Apps
 
 1. Sign in to Power Apps and open the solution that contains the form.
 
-1. Select the user field and go to the events.
+1. Select the **User** field and go to the event settings.
 
-1. Look for the *Mscrm.userid_onchange* event handler.
+1. Look for the `Mscrm.userid_onchange` event handler.
 
-   If the handler doesn't exist: 
-   
+   If the handler doesn't exist:
+
    1. Add a new event of type **On Change**
    1. Select the **Scheduling/BookableResource/BookableResource_main_system_library.js** library.
-   1. Enter **Mscrm.userid_onchange** in the **Function** field.
-   1. Ensure the checkboxes **Enabled** and **Pass execution context as first parameter** are active.
+   1. Enter _Mscrm.userid_onchange_ in the **Function** field.
+   1. Ensure the **Enabled** and **Pass execution context as first parameter** checkboxes are selected.
 
-   If the handler exists: 
+   If the handler exists:
 
-   1. Edit the handler and ensure the checkboxe **Pass execution context as first parameter** is active.
+   1. Edit the handler and ensure the **Pass execution context as first parameter** checkbox is selected.
 
-1. Save and publish the updated form. 
+1. Save and publish the updated form.
 
-### Validate the customizations.xml file
+### Resolution 2: Validate the customizations.xml file
 
-1. Open the customizations.xml file from the solution with the customized form that shows the error in an editor.
+1. Open the **customizations.xml** file from the solution associated with the customized form that shows the error in an editor.
 
-1. In the *Handler* element of the *Mscrm.userid_onchange* function, ensure that the *passExecutionContext* attribute is set to **true**.
+1. In the `Handler` element of the `Mscrm.userid_onchange` function, ensure the `passExecutionContext` attribute is set to **true**.
 
-1. If changes were made, republish the solution.
+1. Republish the solution.
 
-### Run a script in the browser console
+### Resolution 3: Run a script in the browser console
 
 To ensure this script has the permission to find and update the required information, you need to run it in a browser tab that has an active session with your enviornment. Additionally, your user account needs the permisssions to update the XML of the customized bookable resource form.
 
-1. Open the environment in your browser. The following steps describe how to run the script in Microsoft Edge.
+1. Open the environment in your browser. The following instructions use Microsoft Edge as an example.
 
-1. Open **DevTools** by pressing F12 or by selecting the ellipsis (&hellip;) > **More tools** > **Developer tools**
+1. Open **DevTools** by pressing F12 or navigating to ellipsis (&hellip;) > **More tools** > **Developer tools**
 
-1. In **DevTools**, select the **Console** tab and select **Clear Console**.
+1. Select the **Console** tab in the DevTools and select **Clear Console**.
 
-1. Copy and paste the code below into the console window. 
+1. Copy and paste the following JavaScript code into the console.
 
-1. Update the ORG constant to the URL for the environment.
+1. Update the `ORG` constant in the script with your environment URL, for example, `contoso.crm.dynamics.com`.
 
-1. Run the code and review the script output.
+1. Run the script and review the output to confirm the updates.
 
 ```JavaScript
 const ORG = "<YOUR-ENVIRONMENT-URL>"; // for example "contoso.crm.dynamics.com"
