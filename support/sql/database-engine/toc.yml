@@ -154,6 +154,8 @@ items:
     href: performance/understand-resolve-blocking.md
   - name: Upgrading compatibility level degrades performance for spatial queries
     href: performance/upgrade-compatibility-level-degrades-performance.md
+  - name: Performance issue from misaligned I/O
+    href: performance/performance-degradation-misaligned-io-sector-error.md
 
 - name: Security, Encryption, Auditing, Authorization
   href: security/toc.yml

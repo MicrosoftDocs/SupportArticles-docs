@@ -105,5 +105,5 @@ For errors listed in this table, contact Microsoft Support for assistance.
 - [Why a PIN is better than a password](/windows/security/identity-protection/hello-for-business/hello-why-pin-is-better-than-password)
 - [Prepare people to use Windows Hello](/windows/security/identity-protection/hello-for-business/hello-prepare-people-to-use)
 - [Windows Hello and password changes](/windows/security/identity-protection/hello-for-business/hello-and-password-changes)
-- [Event ID 300 - Windows Hello successfully created](event-id-300-windows-hello-successfully-created-in-windows-10.md)
+- [Event ID 300 - Windows Hello successfully created](/previous-versions/troubleshoot/windows-client/event-id-300-windows-hello-successfully-created-in-windows-10)
 - [Windows Hello biometrics in the enterprise](/windows/security/identity-protection/hello-for-business/hello-biometrics-in-enterprise)
