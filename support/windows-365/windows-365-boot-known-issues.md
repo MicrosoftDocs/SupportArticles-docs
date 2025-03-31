@@ -3,7 +3,7 @@
 title: Windows 365 Boot known issues
 description: Learn about known issues with Windows 365 Boot, including workarounds and updated fixes.
 manager: dcscontentpm
-ms.date: 03/27/2025
+ms.date: 03/31/2025
 ms.topic: troubleshooting
 ms.reviewer: elluthra, erikje
 ms.custom: intune-azure, get-started
