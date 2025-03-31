@@ -16,9 +16,10 @@ search.appverid:
   - MET150
 appliesto: 
   - Outlook for Microsoft 365
+  - Outlook 2021
   - Outlook 2019
   - Outlook 2016
-ms.date: 03/27/2025
+ms.date: 03/31/2025
 ---
 # Suppress AutoDiscover mismatch warning in Outlook
 
