@@ -4,7 +4,7 @@ description: Solves the Resource not found for the segment error when configurin
 author: Yerragovula
 ms.author: srreddy
 ai-usage: ai-assisted
-ms.date: 03/27/2025
+ms.date: 03/31/2025
 ms.reviewer: parkmermel
 ms.custom: sap:WhatsApp via Twilio, DFM
 ---
