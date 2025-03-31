@@ -23,21 +23,21 @@ appliesto:
   - Outlook for iOS
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 06/19/2024
+ms.date: 03/28/2025
 ---
 
 # Prevent mailbox delegates from reading protected messages
 
-By default for a user mailbox, Information Rights Management (IRM)-protected email messages can be read by any delegate who has Full Access permission on the mailbox.
+By default, for a user mailbox, Information Rights Management (IRM)-protected email messages can be read by any delegate who has Full Access permission on the mailbox.
 
-By default for a shared mailbox, if either of the following conditions are true, IRM-protected email messages can be read by any delegate who has Full Access permission on the mailbox:
+By default, for a shared mailbox, IRM-protected email messages can be read by any delegate who has Full Access permission on the mailbox, if either of the following conditions are true:
 
 - The delegate opens the message in the new Outlook, Outlook on the web, Outlook for Android, or Outlook for iOS.
 - The delegate opens the message in the classic Outlook, and [automapping](/powershell/module/exchange/add-mailboxpermission#-automapping) is enabled on the shared mailbox.
 
 ## Block delegate access to protected messages
 
-In some scenarios, a delegate who has the Full Access permission on a mailbox can be prevented from reading IRM-protected email messages that are received in the mailbox. Use the following table to determine the appropriate prevention method for each scenario. For more information, see the method descriptions that follow the table.
+In some scenarios, delegates who have Full Access permission on a mailbox can be prevented from reading IRM-protected email messages that are _received_ in the mailbox. Use the following table to determine the appropriate prevention method for each scenario. For more information, see the method descriptions that follow the table.
 
 ||Delegate uses the classic Outlook|Delegate uses the new Outlook|Delegate uses Outlook on the web, Outlook for Android, or Outlook for iOS|
 |---|---|---|---|
