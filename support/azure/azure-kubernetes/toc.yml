@@ -33,8 +33,6 @@
       href: create-upgrade-delete/error-code-outboundconnfailvmextensionerror.md
     - name: RequestDisallowedByPolicy error
       href: create-upgrade-delete/error-code-requestdisallowedbypolicy.md
-    - name: ReservedResourceName error
-      href: create-upgrade-delete/error-code-reservedresourcename.md
     - name: ServicePrincipalValidationClientError error
       href: create-upgrade-delete/error-code-serviceprincipalvalidationclienterror.md
     - name: SubscriptionRequestsThrottled error (429)
