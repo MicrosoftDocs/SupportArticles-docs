@@ -24,8 +24,10 @@ After you sign in, you might occasionally encounter such issues as unexpected co
 
 To successfully access Viva Glint, your user account must meet the following requirements:
 
-- It must exist in Microsoft Entra and have the user type set to **Member**. For more information about how administrators can set up access, see [set up access to Viva Glint with Microsoft Entra ID](/viva/glint/setup/access-with-azure-ad).
-- It must exist in the Viva Glint app, be a member of the **Active Employees** role, and have the employee status set to **ACTIVE**.
+- Exist in Microsoft Entra. Learn more about how Microsoft 365 Global Administrators or Entra admins can [set up access to Viva Glint with Microsoft Entra ID](/viva/glint/setup/access-with-azure-ad).
+    - Users can have a member type of Guest or Member. Invited Guests from other tenants in a [multitenant organization](/viva/glint/setup/glint-mto) and [Support users](/viva/glint/setup/add-external-user) need to select a domain when logging in. [Learn more](/viva/glint/setup/access-glint.md#sign-in-as-a-guest-or-support-user)
+- Exist in the Viva Glint app, be a member of the **Active Employees** role, and have an employee satus set to **ACTIVE**.
+
 
 ## No access to live surveys
 
