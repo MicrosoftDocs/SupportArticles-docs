@@ -41,6 +41,8 @@ Each subkey represents an installed credential provider. The following table lis
 | Name | Subkey name |
 | :------------------------ | ---------------- |
 | SailPoint Technologies Desktop Password Reset | 0094A34B-0BF0-4789-8B2D-8339E469D756 |
+| SIDCredentialProvider | 36ED98C6-02FF-47e8-B7FE-957A411CEA16 |
+| CGWinLogon | BDA6DA5B-7E7E-482C-9B3E-67AFF0C838C0 |
 
 ## SessionCreationError
 
