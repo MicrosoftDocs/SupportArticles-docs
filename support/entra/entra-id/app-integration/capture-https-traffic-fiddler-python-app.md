@@ -1,18 +1,18 @@
 ---
-title: Collect HTTPSTraffic using Fiddler from Python app with Microsoft Entra ID
-description: Provide instructions to collect HTTPStraffic by using Fiddler from Microsoft Entra ID apps
+title: Collect HTTPS Traffic using Fiddler from Python app with Microsoft Entra ID
+description: Provide instructions to collect HTTPS traffic by using Fiddler from Microsoft Entra ID apps
 ms.date: 03/20/2025
 ms.author: bachoang
 ms.service: entra-id
 ms.custom: sap:Enterprise Applications
 ---
-# Collect HTTPStraffic by using Fiddler from Python apps
+# Collect HTTPS traffic by using Fiddler from Python apps
 
-Capturing encrypted HTTPSweb traffic in Python by using Fiddler can be challenging because Python uses its own trusted certificate store instead of the operating system certificate store. Additionally, by default, Python doesn't use a proxy in certain scenarios. This article explains how to capture SSL traffic by using the Fiddler for Python app in different scenarios.
+Capturing encrypted HTTPS web traffic in Python by using Fiddler can be challenging because Python uses its own trusted certificate store instead of the operating system certificate store. Additionally, by default, Python doesn't use a proxy in certain scenarios. This article explains how to capture SSL traffic by using the Fiddler for Python app in different scenarios.
 
 ## ADAL for Python
 
-When you use Fiddler to capture HTTPStraffic in a Python app that integrates Azure Active Directory Authentication Library (ADAL), you might receive SSL error messages. This issue occurs because Python doesn't trust the Fiddler certificate. You can use either of two methods to work around this issue.
+When you use Fiddler to capture HTTPS traffic in a Python app that integrates Azure Active Directory Authentication Library (ADAL), you might receive SSL error messages. This issue occurs because Python doesn't trust the Fiddler certificate. You can use either of two methods to work around this issue.
 
 > [!Note]
 > Disabling SSL verification presents a security risk. You should use this method only to troubleshoot. You should not use it in production environments.
