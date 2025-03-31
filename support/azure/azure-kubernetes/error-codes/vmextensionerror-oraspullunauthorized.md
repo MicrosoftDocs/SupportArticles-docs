@@ -5,7 +5,7 @@ ms.date: 28/03/2025
 editor: xinhl
 ms.reviewer: 
 ms.service: azure-kubernetes-service
-#Customer intent: As an Azure Kubernetes user, I want to troubleshoot the VMExtensionError_VHDFileNotFound error code (OrasPullUnauthorizedVMExtensionError (212)) so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
+#Customer intent: As an Azure Kubernetes user, I want to troubleshoot the OrasPullUnauthorizedVMExtensionError error code (OrasPullUnauthorizedVMExtensionError (212)) so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
 # NetworkIsolatedClusterContainerRegistryAuthorizationFailed error code (212) when deploying an AKS cluster
