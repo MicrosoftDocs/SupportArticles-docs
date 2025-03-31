@@ -1,7 +1,7 @@
 ---
 title: SQL Server Azure VM Deployment Fails with Drive Not Ready Error
 description: Resolves an issue that occurs when you try to deploy SQL Server on an Azure VM image in Azure Marketplace. 
-ms.date: 03/27/2025
+ms.date: 03/31/2025
 ms.author: dpless
 author: dplessMSFT
 ms.reviewer: mathoma, v-sidong
