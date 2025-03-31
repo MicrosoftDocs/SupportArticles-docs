@@ -1,8 +1,8 @@
 ---
 title: Error AADSTS900439 - USGClientNotSupportedOnPublicEndpoint
 description: Describes a problem in which you receive the error AADSTS900439 when signing in to an application registered in the Azure Government cloud using a public endpoint. 
-ms.date: 03/21/2025
-ms.reviewer: bernawy
+ms.date: 03/31/2025
+ms.reviewer: bernawy, v-weizhu
 ms.service: entra-id
 ms.custom: sap:Issues Signing In to Applications
 ---
