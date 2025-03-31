@@ -21,7 +21,7 @@ This issue is typically caused by web browser configurations that do not allow c
 
 The tutorial uses the MSAL to implement authentication. MSAL SDK facilitates authentication by automatically renewing tokens. It also enables single sign-on (SSO) between other apps on the device and manages user accounts.
 
-For SSO to function correctly, tokens must be shared between apps. This requires a token cache or a broker application, such as Microsoft Authenticator for iOS. Interactive authentication in MSAL requires a web browser. On iOS, MSAL uses the system web browser by default for interactive authentication. This default setup supports SSO state sharing between apps.
+For SSO to function correctly, tokens must be shared between apps. To meet this requirement, you must use a token cache or a broker application, such as Microsoft Authenticator for iOS. Interactive authentication in MSAL requires a web browser. On iOS, MSAL uses the Safari system web browser by default for interactive authentication. This default setup supports SSO state sharing between apps.
 
 However, if you customize the browser configuration for authentication, such as by using one of the following options, cookie sharing might not be enabled by default.
 
@@ -34,7 +34,7 @@ However, if you customize the browser configuration for authentication, such as 
 
 To prevent repeated login prompts, you must allow cookie sharing when you customize the browser. To enable SSO and cookie sharing between MSAL and your iOS app, use one of the following solutions:
 
--	Use `ASWebAuthenticationSession` and the iOS system Safari web browser (`UIApplication.shared.open`)
+-	Use `ASWebAuthenticationSession` and Safari (`UIApplication.shared.open`)
 
    - Use Case: Your app uses MSAL together with the default `ASWebAuthenticationSession` instance, and you open external links or logout flows in  Safari.
    
@@ -42,12 +42,10 @@ To prevent repeated login prompts, you must allow cookie sharing when you custom
 -	Use `WKWebView`
    - Use Case: You explicitly configure MSAL to use `WKWebView`, and your app also uses `WKWebView` for related workflows.
    
-   - **Note:** If you use `WKWebView` for a consistent experience within your app, notice that it's sandboxed and does not share session cookies with Safari or other apps. This supports SSO only within your app.
+   - **Note:** You can use `WKWebView` for a consistent experience within your app. However, because it's sandboxed, `WKWebView` doesn't share session cookies with Safari or other apps. This condition limits support for SSO to within your app only.
 
    For more information, see [Customizing webviews and browsers](/azure/active-directory/develop/customize-webviews).
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
-
-
