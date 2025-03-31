@@ -142,3 +142,7 @@ Next, run the command `netsh wfp show state` which generates a *wfpstate.xml* fi
 You can open this file by using Notepad and filter for the ID found in the event logs (for example, 2944008 in the sample event). The result reveals the firewall rule name associated with the Filter ID that is blocking the connection.
 
 :::image type="content" source="media/tcp-ip-connectivity-issues-troubleshooting/wfpstate-file.png" alt-text="Screenshot of the wfpstate xml file which includes the firewall rule name that's associated with the filter ID that's blocking the connection.":::
+
+## See Also
+
+- [Troubleshoot TCP/IP packet loss](tcp-ip-packet-loss-troubleshooting)
