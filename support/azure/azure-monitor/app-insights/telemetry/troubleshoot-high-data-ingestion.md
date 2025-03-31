@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot high data ingestion in Application Insights
 description: Provides a step-by-step guide to troubleshoot high data ingestion scenarios and provides methods to reduce costs.
-ms.date: 03/28/2025
+ms.date: 03/31/2025
 ms.service: azure-monitor
 ms.reviewer: jeanbisutti, toddfous, aaronmax, v-weizhu
 ms.custom: sap:Application Insights
@@ -132,7 +132,7 @@ dependencies
 In some scenarios, you might need to investigate a specific application or instance further. Use the following queries to identify noisy messages or exception types:
 
 ```Kusto
-exceptions
+traces
 | where timestamp > ago(7d)
 | where cloud_RoleName == 'Specify a role name'
 | summarize count() by type
