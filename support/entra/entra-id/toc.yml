@@ -420,3 +420,5 @@
   items:
   - name: Capture HTTPS traffic with Fiddler
     href: app-integration/capture-https-traffic-fiddler-entra-id-app.md
+  - name: Capture Python web app HTTPS traffic with Fiddler
+    href: app-integration/capture-https-traffic-fiddler-python-app.md
