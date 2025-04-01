@@ -72,7 +72,7 @@ Conditional Access sign-in logs can be used to verify how Conditional Access pol
 5. Expand the results and select an entry to review if the details are:
 
     - **Basic info** / **Authentication requirement**: **Multifactor**
-    - **Basic info** / **Status**: Interrupted
+    - **Basic info** / **Status**: **Interrupted**
     - **Conditional Access** / **Result**: \<any failures occur>
 
 If you encounter entries similar to the preceding ones, then it's likely the combination of those Conditional Access policies are the cause of the error.
