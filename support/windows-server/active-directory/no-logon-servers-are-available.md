@@ -1,7 +1,7 @@
 ---
 title: No logon servers are available
 description: Occurs when cloning failed, and the server starts in Directory Services Repair Mode (DSRM). There's no visual indication that the domain controller has started in DSRM.
-ms.date: 01/15/2025
+ms.date: 03/28/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -14,7 +14,7 @@ ms.custom:
 
 This article provides a solution to an error that occurs after you clone a new VDC, and try to sign in interactively.
 
-_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2019  
+_Applies to:_ &nbsp; Windows Server (All supported versions)  
 _Original KB number:_ &nbsp; 2742908
 
 ## Symptoms

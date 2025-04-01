@@ -1,7 +1,7 @@
 ---
-title: Domain join error 0x40 "The specified network name is no longer available"
-description: Addresses the error "The specified network name is no longer available" encountered during domain join operations.
-ms.date: 03/26/2025
+title: Error 0x40 The Specified Network Name Is No Longer Available
+description: Addresses the error The specified network name is no longer available encountered during domain join operations.
+ms.date: 03/28/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -16,11 +16,11 @@ This article addresses the error code 0x40 encountered during domain join operat
 
 ## Symptoms
 
-The following error messages occur when you try to join the computer to the domain:
+When you try to join a computer to a domain, you receive the following error message:
 
-> The specified network name is no longer available
+> The specified network name is no longer available.
 
-You review the *netsetup.log* log and found error messages that resemble the following:
+When you review the **netsetup.log** file, you find error messages that resemble the following entries:
 
 ```output
 NetUseAdd to \\<dc_fqdn>\IPC$ returned 64
@@ -33,13 +33,13 @@ NetpDoDomainJoin: status: 0x40
 
 ### Error detail
 
-|HEX error|Decimal error|Symbolic Error String|Friendly Error|
+|Hexadecimal error|Decimal error|Symbolic error string|Friendly error|
 |---|---|---|---|
 |0x40|64|ERROR_NETNAME_DELETED|The specified network name is no longer available.|
 
 ## Cause
 
-This error is logged when the client computer lacks network connectivity on TCP port 88 between the client and the Domain Controller (DC), which is used for Key Distribution Center (KDC) request packet. For example, the error could be caused if some firewall device between the client and the DC.
+This error is logged when the client computer lacks network connectivity on Transmission Control Protocol (TCP) port 88 between the client and the domain controller (DC), which is used for the Key Distribution Center (KDC) request packet. For example, the error might be caused by some firewall device between the client and the DC.
 
 ## Troubleshoot
 
@@ -51,7 +51,7 @@ To troubleshoot this issue, you can run the following command to test the connec
 Test-NetConnection <IP_address_of_the_DC> -Port 88
 ```
 
-Expected Output:
+Expected output:
 
 ```output
 ComputerName           : <ip_address>
@@ -63,18 +63,18 @@ PingReplyDetails (RTT) : 0 ms
 TcpTestSucceeded       : False
 ```
 
-The output indicates that the Kerberos Port TCP 88 is not open between the client and the DC.
+The output indicates that the Kerberos port TCP 88 isn't open between the client and the DC.
 
 ### Network trace
 
 The issue is related to Server Message Block (SMB).
 
 1. Use the `net use` command to access the same Universal Naming Convention (UNC) path and reproduce the issue.
-2. Collect a network trace of the "net use" command execution.
+2. Collect a network trace of the `net use` command execution.
 
 #### Example
 
-The following is an example of a network trace:
+Here's an example of a network trace:
 
 ```output
 CLIENT1    DC1.ADATUM.COM           TCP      TCP:Flags=......S., SrcPort=59259, DstPort=Kerberos(88), PayloadLen=0, Seq=1299628969, Ack=0, Win=8192 (  ) = 8192           {TCP:267, IPv4:5}
@@ -103,4 +103,4 @@ DC1.ADATUM.COM         CLIENT1            TCP      TCP:Flags=...A...., SrcPort=K
 DC1.ADATUM.COM         CLIENT1            TCP      TCP:Flags=...A.R.., SrcPort=Kerberos(88), DstPort=59259, PayloadLen=0, Seq=2785284136, Ack=1299632507, Win=0 (scale factor 0x0) = 0 
 ```
 
-From the trace, we can find the DC doesn't respond to the Ticket Granting Service (TGS) request from the client for the Service Principal Name (SPN) CIFS/DC1.ADATUM.COM. It sends back a Transmission Control Protocol (TCP) acknowledgment, which suggests the DC received the TGS request. However, it doesn't reply with a valid TGS Response. Finally, the client terminates the TCP connection.
+From the trace, you can find the DC doesn't respond to the Ticket Granting Service (TGS) request from the client for the Service Principal Name (SPN) `CIFS/DC1.ADATUM.COM`. It sends back a TCP acknowledgment, which suggests the DC received the TGS request. However, it doesn't reply with a valid TGS response. Finally, the client terminates the TCP connection.

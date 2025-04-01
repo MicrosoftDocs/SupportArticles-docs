@@ -46,5 +46,5 @@ This issue occurs with VMs that are deployed with an uninitialized temporary dri
 |Esv6 constrained core sizes|Eadsv6|
 |Edsv6 constrained core sizes|Falsv6|
 |Lsv3 - All Azure VMs|Fasv6|
-|M-series VMs|Famsv6|
+||Famsv6|
 

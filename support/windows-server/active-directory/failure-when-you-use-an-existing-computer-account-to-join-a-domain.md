@@ -1,7 +1,7 @@
 ---
-title: Failure when you use an existing computer account to join a domain
+title: Failure When You Use an Existing Computer Account to Join a Domain
 description: Addresses the issue of failing to join a computer to a domain when an existing computer account with the same name already exists.
-ms.date: 03/26/2025
+ms.date: 03/28/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -14,9 +14,9 @@ ms.custom:
 
 This article addresses the issue of failing to join a computer to a domain when an existing computer account with the same name already exists.
 
-## Symptom
+## Symptoms
 
-When you try to use an existing computer account name to join a computer to a domain, the operation fails. And you receive the following error messages:
+When you try to use an existing computer account name to join a computer to a domain, the operation fails and you receive the following error messages:
 
 In the **Access work or school** page:  
 > Can't join this domain. Contact your IT admin for more info.
@@ -29,7 +29,7 @@ In **System Properties**:
 
 ### Netsetup.log
 
-Review the following example of the Netsetup.log on a fully updated system.
+Review the following example of the **Netsetup.log** file on a fully updated system.
 
 ```output
 NetpProvisionComputerAccount:
@@ -84,18 +84,18 @@ NetpDoDomainJoin: status: 0xaac
 
 ### Error detail
 
-|HEX|DEC|Symbolic Name|Error Description|Header|
+|Hexadecimal error|Decimal error|Symbolic error string|Error description|Header|
 |---|---|---|---|---|
 |0x8b0|2224|NERR_UserExists|The account already exists.|lmerr.h|
 |0xaac|2732|NERR_AccountReuseBlockedByPolicy|An account with the same name exists in Active Directory. Re-using the account was blocked by security policy.|lmerr.h|
 
 ## Cause
 
-Windows introduced extra protections with updates released on and after October 11, 2022. These protections intentionally prevent domain join operations from reusing an existing computer account in the target domain unless any of the following conditions is met:
+Windows introduced additional protections with updates released on and after October 11, 2022. These protections intentionally prevent domain join operations from reusing an existing computer account in the target domain unless any of the following conditions is met:
 
 - The user attempting the operation is the creator of the existing account.
-- The computer was created by a member of domain administrators, enterprise administrators, or built-in administrators groups.
-- The owner of the computer account object that is being reused is a member of the "Domain controller: Allow computer account reuse during domain join" Group Policy setting. This setting requires the installation of Windows updates released on or after March 14, 2023, on all member computers and domain controllers.
+- The computer is created by a member of domain administrators, enterprise administrators, or built-in administrators groups.
+- The owner of the computer account object that is being reused is a member of the **Domain controller: Allow computer account reuse during domain join** Group Policy setting. This setting requires the installation of Windows updates released on or after March 14, 2023, on all member computers and domain controllers.
 
 ## Resolution
 
@@ -103,9 +103,9 @@ To fix the issue, follow these steps:
 
 1. Perform the join operation by using the same account that created the computer account in the target domain.
 2. If the existing account is stale (unused), delete it before attempting to join the domain again.
-3. Rename the computer and join using a different account that doesn't already exist.
+3. Rename the computer and join the domain using a different account that doesn't exist.
 4. If a trusted security principal owns the existing account, and an administrator wants to reuse the account, use the **Domain controller: Allow computer account re-use during domain join** Group Policy.
 
 ## Reference
 
-For more information about domain join hardening changes, see [KB5020276—Netjoin: Domain join hardening changes](https://support.microsoft.com/topic/kb5020276-netjoin-domain-join-hardening-changes-2b65a0f3-1f4c-42ef-ac0f-1caaf421baf8)
+For more information about domain join hardening changes, see [KB5020276—Netjoin: Domain join hardening changes](https://support.microsoft.com/topic/kb5020276-netjoin-domain-join-hardening-changes-2b65a0f3-1f4c-42ef-ac0f-1caaf421baf8).

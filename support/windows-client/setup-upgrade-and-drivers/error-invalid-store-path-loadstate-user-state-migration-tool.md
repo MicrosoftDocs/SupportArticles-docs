@@ -7,8 +7,8 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, shijoy
 ms.custom:
-- sap:user logon and profiles\user profiles
-- pcy:WinComm Directory Services
+- sap:windows setup,upgrade and deployment\user state migration tool (usmt)
+- pcy:WinComm Devices Deploy
 ---
 # Error "Invalid store path" during the LoadState process when you use the User State Migration Tool
 
