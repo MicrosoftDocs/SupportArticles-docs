@@ -10,11 +10,11 @@ ms.custom: sap:Getting access denied errors (Authorization)
 
 When an application is authenticated, you might want to be able to update its own properties such as the client secret or certificate. To do so, the application must be an owner of itself. You can implement this using the [Microsoft Graph API - Add owner](/graph/api/application-post-owners).
 
-This article outlines the required permissions and step-by-step instructions to add a service principal associated with an application as an owner of the application using Microsoft Graph.
+This article outlines the required permission and step-by-step instructions to add a service principal associated with an application as an owner of the application using Microsoft Graph.
 
-## Required permissions
+## Required permission
 
-The Least privileged permissions for adding an owner to an application is described in the [Add owner - Permissions](/graph/api/application-post-owners#permissions) table. Those permissions, such as `Application.ReadWrite.OwnedBy`, allow an application to manage applications in which it is an owner of.
+The least privileged permissions for adding an owner to an application are described in the [Add owner - Permissions](/graph/api/application-post-owners#permissions) table. Those permissions, such as `Application.ReadWrite.OwnedBy`, allow an application to manage applications in which it is an owner of.
 
 ## Add an owner
 
