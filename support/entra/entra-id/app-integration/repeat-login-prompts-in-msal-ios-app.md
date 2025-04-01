@@ -34,11 +34,13 @@ However, if you customize the browser configuration for authentication, such as 
 
 To prevent repeated login prompts, you must allow cookie sharing when you customize the browser. To enable SSO and cookie sharing between MSAL and your iOS app, use one of the following solutions:
 
--	Use `ASWebAuthenticationSession` and Safari system browser (`UIApplication.shared.open`)
+Use `ASWebAuthenticationSession` and Safari system browser (`UIApplication.shared.open`)
 
    - Use Case: Your app uses MSAL together with the default `ASWebAuthenticationSession` instance, and you open external links or logout flows in Safari system browser.
    - **Note:** `ASWebAuthenticationSession` is the recommended method for MSAL interactive authentication on iOS 12+. It's the only supported method on iOS 13+. This method is privacy-preserving and shares cookies with system browser. SSO works between MSAL and Safari browser application because they share cookies through the system authentication session.
--	Use `WKWebView`
+
+Use `WKWebView`
+
    - Use Case: You explicitly configure MSAL to use `WKWebView`, and your app also uses `WKWebView` for related workflows.
 
    - **Note:** You can use `WKWebView` for a consistent experience within your app. However, because it's sandboxed, `WKWebView` doesn't share session cookies with Safari system browser or other apps. This condition limits support for SSO to within your app only.
