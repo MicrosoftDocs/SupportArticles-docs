@@ -75,7 +75,7 @@
         - name: Web automation fails in unattended mode
           href: desktop-flows/browser-automation/web-automation-unattended-failures.md
         - name: Web automation with Internet Explorer issue
-          href: desktop-flows/browser-automation/web-autonation-ie-issue.md
+          href: desktop-flows/browser-automation/web-automation-ie-issue.md
     - name: Office automation
       items:
         - name: Excel
