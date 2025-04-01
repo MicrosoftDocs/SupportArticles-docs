@@ -1,5 +1,5 @@
 ---
-title: Connection fails with error "an interactive window could not be shown"
+title: Connection Fails With Error "an Interactive Window Could Not Be Shown"
 description: Helps resolve the connection error "an interactive window could not be shown."
 manager: dcscontentpm
 ms.date: 04/01/2025
@@ -40,11 +40,11 @@ If the **User actions** policy exists, confirm if you're in the scope of the use
 
 ## Mismatched access controls
 
-The sign-in stage generates the security token that is used in the connection stage. If the Conditional Access policies in either stage have the access controls configured differently, an authentication issue might occur. Ensure the access controls setting on the **User actions** policy used for the sign-in stage matches (or is stronger than) 他the setting on the **Resources** policy used for the connection stage.
+The sign-in stage generates the security token that is used in the connection stage. If the Conditional Access policies in either stage have the access controls configured differently, an authentication issue might occur. Ensure the access controls setting on the **User actions** policy used for the sign-in stage matches (or is stronger than) the setting on the **Resources** policy used for the connection stage.
 
 ## Unsupported access controls
 
-A Conditional Access policy applied to resources might use controls unavailable for **User actions** policies. Some grant controls such as device compliance or [custom controls](/entra/identity/conditional-access/controls) can't be used with **User actions** policies. Some session controls such as **Sign-in frequency** can't be used with **User actions** policies. If a **User actions** policy applied during the connection stage requires any of these unsupported controls, modifications are required to accommodate the use of Windows 365 Link devices.
+A Conditional Access policy applied to resources might use controls unavailable for **User actions** policies. Some **Grant** controls such as device compliance or [custom controls](/entra/identity/conditional-access/controls) can't be used with **User actions** policies. Some **Session** controls such as **Sign-in frequency** can't be used with **User actions** policies. If a **User actions** policy applied during the connection stage requires any of these unsupported controls, modifications are required to accommodate the use of Windows 365 Link devices.
 
 ## Confirm the problem
 
@@ -63,7 +63,7 @@ Conditional Access sign-in logs can be used to verify how Conditional Access pol
     - **Basic info** / **Status**: **Success**
     - **Conditional Access** / **Result**: **Not Applied**
 
-4. Select the User sign-ins (non-interactive) tab, and use filters to find entries for the connection. For example, try using:
+4. Select the **User sign-ins (non-interactive)** tab, and use filters to find entries for the connection. For example, try using:
 
     - **Application**: **Windows 365 Client**
     - **Username**: \<enter the UPN of the user>
