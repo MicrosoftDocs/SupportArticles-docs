@@ -42,8 +42,7 @@ Use `ASWebAuthenticationSession` and Safari system browser (`UIApplication.share
 Use `WKWebView`
 
    - Use Case: You explicitly configure MSAL to use `WKWebView`, and your app also uses `WKWebView` for related workflows.
-
-   - **Note:** You can use `WKWebView` for a consistent experience within your app. However, because it's sandboxed, `WKWebView` doesn't share session cookies with Safari system browser or other apps. This condition limits support for SSO to within your app only.
+   - **Note:** You can use `WKWebView` for a consistent experience within your app. However, because it's sandboxed, `WKWebView` doesn't share session cookies with Safari system browser or other apps. In this condition, SSO support is limited to use within your app.
 
    For more information, see [Customizing webviews and browsers](/azure/active-directory/develop/customize-webviews).
 
