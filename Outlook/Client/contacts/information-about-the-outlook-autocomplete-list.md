@@ -34,7 +34,7 @@ Microsoft Outlook maintains the AutoComplete list. The list is used by both the 
 
 ## Limited number of entries
 
-Outlook limits the number of entries that you can save in the AutoComplete list. After you reach the limit, Outlook uses an internal algorithm based on *usage weighting* to determine the best names to remove from the list. Therefore, you might find that some names are unexpectedly removed from your nickname cache. To avoid such a situation, you can use the following general approaches:
+Outlook limits the number of entries that you can save in the AutoComplete list. After you reach the limit, Outlook uses an internal algorithm that's based on *usage weighting* to determine the best names to remove from the list. Therefore, you might find that some names are unexpectedly removed from your nickname cache. To avoid such a situation, you can use the following general approaches:
 
 1. You can proactively [remove AutoComplete list entries](#remove-autocomplete-list-entries-one-at-a-time) that you no longer need. This method is the preferred approach.
 2. You can [increase the limit for the nickname cache](#change-the-limit-for-the-autocomplete-list). Because this type of configuration is untested, we don't recommend it. When a large nickname cache becomes corrupted, it's unusable and you could lose many cached entries.
