@@ -257,15 +257,15 @@ The following are issues for Windows 365 Frontline:
 
 ### Users may not be able to access Frontline Cloud PCs in shared mode
 
-When Frontline Cloud PCs in shared mode are assigned to an Entra ID Group with more than 10K members, some of the users may not receive access and not see the Cloud PC cards in Windows app.
+When Frontline Cloud PCs in shared mode are assigned to an Entra ID Group with more than 10,000 members, some users might not receive access and might not see the Cloud PC cards in the Windows app.
 
 #### Solution
 
-Reduce the Entra ID group membership to be less than 10K users.
+Reduce the Entra ID group membership to be fewer than 10,000 users.
 
-### Number of Cloud PC for Frontline Cloud PCs in shared mode cannot be decreased when all Cloud PC provisioning failed
+### Number of cloud PCs for Frontline Cloud PCs in shared mode cannot be decreased when all Cloud PC provisioning fails
 
-If provisioning fails due to and Autopilot Device Preparation Profile (DPP) (Preview) failure and results in All Cloud PC showing no successfully provisioned devices, admins will not be able to use decreases the number of Cloud PC in the reprovision assignmentsoption.
+If provisioning fails due to an Autopilot Device Preparation Profile (DPP) (Preview) failure and results in all Cloud PCs showing no successfully provisioned devices, admins will not be able to decrease the number of Cloud PCs in the reprovision assignments option.
 
 #### Solution
 
