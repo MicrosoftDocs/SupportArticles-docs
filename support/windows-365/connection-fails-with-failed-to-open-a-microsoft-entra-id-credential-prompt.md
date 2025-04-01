@@ -31,4 +31,4 @@ If any of these conditions are true, the next time a user attempts to sign-in, c
 
 As a workaround, the user could connect to this Cloud PC from a different device or the [Web Client](https://../windows365.microsoft.com) where the prompt can be acknowledged. However, the prompt returns every 30 days.
 
-For configuration details on how to prevent this issue, see [Suppress single sign-on consent prompts for Windows 365 Link | Microsoft Learn](https://learn.microsoft.com/en-us/windows-365/link/single-sign-on-suppress)
+For configuration details on how to prevent this issue, see [Suppress single sign-on consent prompts for Windows 365 Link](https://learn.microsoft.com/en-us/windows-365/link/single-sign-on-suppress)
