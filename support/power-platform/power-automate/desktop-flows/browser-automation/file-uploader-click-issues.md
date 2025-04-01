@@ -33,6 +33,6 @@ Try one of the following workarounds:
 
 1. Use the [Press button in window](/power-automate/desktop-flows/actions-reference/uiautomation#pressbutton) action to simulate user input, bypassing the browser's event validation.
 
-    Capture the element from within the **Press button in window** action or through a desktop recorder, instead of using a web element that's either captured from a web automation action or a web browser recorder.
+    Capture the element using the **Press button in window** action or through a desktop recorder, instead of using a web element that's either captured from a web automation action or a web browser recorder.
 
 2. Use the **Click link on web page** action with the [Send physical click](/power-automate/desktop-flows/how-to/send-physical-clicks-web-element) option enabled.
