@@ -22,4 +22,4 @@ Connecting to a Cloud PC from a Windows 365 Link has the same Network requiremen
 
 ## Resolution
 
-To resolve this issue, fix the networking problem. For more information, see [End user devices](https://learn.microsoft.com/en-us/azure/virtual-desktop/required-fqdn-endpoint?tabs=azure#end-user-devices).
+To resolve this issue, fix the networking problem. For more information, see [End user devices](/azure/virtual-desktop/required-fqdn-endpoint?tabs=azure#end-user-devices).
