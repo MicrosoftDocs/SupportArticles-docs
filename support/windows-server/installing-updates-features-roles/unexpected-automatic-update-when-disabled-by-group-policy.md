@@ -23,7 +23,7 @@ This issue occurs when an administrator runs the command `GPUPDATE / FORCE`. Thi
 
 ## Resolution
 
-To avoid this issue, do not run `GPUPDATE /FORCE` on Windows Server 2016 and 2019 unless you are prepared for any queued updates to be installed. This issue is rare, but it is possible to occur.
+To avoid this issue, don't run `GPUPDATE /FORCE` on Windows Server 2016 and 2019 unless you're prepared for any queued updates to be installed. This issue is rare, but it's possible to occur.
 
 ## Workarounds for Windows Server 2016 and Windows Server 2019
 
@@ -37,20 +37,20 @@ For users on Windows Server 2016 and Windows Server 2019, implementing one of th
 
 ### Enable the "Configure registry policy processing" policy by using registry
 
-1. Set the following registry keys:
+Set the following registry keys:
 
-   `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Group Policy\{35378EAC-683F-11D2-A89A-00C04FBBCFA2}`  
-   "NoBackgroundPolicy"=dword:00000000  
-   "NoGPOListChanges"=dword:00000001
+`HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Group Policy\{35378EAC-683F-11D2-A89A-00C04FBBCFA2}`  
+"NoBackgroundPolicy"=dword:00000000  
+"NoGPOListChanges"=dword:00000001
 
-2. You can also runt he following command to modify the registry:
+You can also run the following command to modify the registry:
 
-   ```console
-   reg add "HKEY\_LOCAL\_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Group Policy\{35378EAC-683F-11D2-A89A-00C04FBBCFA2}" /v NoBackgroundPolicy /t REG\_DWORD /d 00000000 /f
-   reg add "HKEY\_LOCAL\_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Group Policy\{35378EAC-683F-11D2-A89A-00C04FBBCFA2}" /v NoGPOListChanges /t REG\_DWORD /d 00000001 /f
-   ```
+```console
+reg add "HKEY\_LOCAL\_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Group Policy\{35378EAC-683F-11D2-A89A-00C04FBBCFA2}" /v NoBackgroundPolicy /t REG\_DWORD /d 00000000 /f
+reg add "HKEY\_LOCAL\_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Group Policy\{35378EAC-683F-11D2-A89A-00C04FBBCFA2}" /v NoGPOListChanges /t REG\_DWORD /d 00000001 /f
+```
 
 For more information, see [Configure registry policy processing (admx.help)](https://admx.help/?Category=Windows_10_2016&Policy=Microsoft.Policies.GroupPolicy::CSE_Registry)
 
 > [!NOTE]
-> These workarounds reduce the frequency of the problem occurring but do not always prevent the issue.
+> These workarounds reduce the frequency of the problem occurring but don't always prevent the issue.
