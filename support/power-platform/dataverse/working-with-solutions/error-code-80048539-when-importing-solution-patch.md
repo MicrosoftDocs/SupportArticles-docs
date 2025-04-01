@@ -35,7 +35,7 @@ Solution manifest import: FAILURE: Holding solution MyPatchTesting_Upgrade alrea
 ## Cause
 
 > [!NOTE]
-> If you are using make.powerapps.com to import your unmanaged solution update and get this error Microsoft is aware of the issue and is working on a fix. To work around the issue open the **Advanced** settings and select the option **Update (not recommended)**.
+> If you're using make.powerapps.com to import your unmanaged solution update and get this error Microsoft is aware of the issue and is working on a fix. To work around the issue open the **Advanced** settings and select the option **Update (not recommended)**.
 
 Error code **80048539** indicates an invalid patch is being imported. There are a few potential causes including the following:
 
@@ -43,13 +43,13 @@ Error code **80048539** indicates an invalid patch is being imported. There are 
 
 If you see the error details mentioned in the Symptom 1 Details section mentioned above:
 
-The solution patch version is lower than the version of the solution already installed. For example: A solution named SolutionA is already installed with version 1.1.0.0 and you are trying to import a patch that is version 1.0.1.0.
+The solution patch version is lower than the version of the solution already installed. For example: A solution named SolutionA is already installed with version 1.1.0.0 and you're trying to import a patch that is version 1.0.1.0.
 
 ### Cause 2
 
 If you see the error details mentioned in the Symptom 2 Details section mentioned above:
 
-This can occur if you already have an upgrade imported for that solution but it has not yet been applied. After importing a solution that is an upgrade of an existing solution, the end of the solution import provides a button to apply the solution upgrade. If you did not select that button during a prior import of a solution upgrade for this solution, you need to locate the solution in your solutions list and select the **Apply Solution Upgrade** button.
+This can occur if you already have an upgrade imported for that solution but it hasn't yet been applied. After importing a solution that is an upgrade of an existing solution, the end of the solution import provides a button to apply the solution upgrade. If you didn't select that button during a prior import of a solution upgrade for this solution, you need to locate the solution in your solutions list and select the **Apply Solution Upgrade** button.
 
 ## Resolution
 
@@ -57,10 +57,10 @@ This can occur if you already have an upgrade imported for that solution but it 
 
 If you see the error details mentioned in the Symptom 1 Details section mentioned above:
 
-Verify the solution patch version you are trying to import is a higher version than the solution already installed.
+Verify the solution patch version you're trying to import is a higher version than the solution already installed.
 
 ### Resolution 2
 
 If you see the error details mentioned in the Symptom 2 Details section mentioned above:
 
-Navigate to **Settings**, **Customizations**, and then select **Solutions**. Select the existing installed solution you are trying to upgrade and then select **Apply Solution Upgrade**.
+Navigate to **Settings**, **Customizations**, and then select **Solutions**. Select the existing installed solution you're trying to upgrade and then select **Apply Solution Upgrade**.
