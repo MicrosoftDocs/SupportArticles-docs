@@ -370,4 +370,7 @@
       href: error-codes/vmextensionerror-vhdfilenotfound.md
   - name: UnsatisfiablePDB error
     href: error-codes/unsatisfiablepdb-error.md
+  - name: AKSCapacityError error
+    href: error-codes/akscapacityerror-error.md
+    
   
