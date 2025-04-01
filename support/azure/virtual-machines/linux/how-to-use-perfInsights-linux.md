@@ -25,7 +25,7 @@ ms.author: genli
 
 - **On-demand diagnostics** helps you troubleshoot an ongoing performance issue with more in-depth data, insights, and recommendations based on data collected at a single point in time. 
 
-This article explains how to run the CLI tool. You can also [run Performance Diagnostics from the portal](../windows/performance-diagnostics.md). 
+This article explains how to run Performance Diagnostics from the command line using the CLI tool *PerfInsights.py*. You can also [run Performance Diagnostics from the portal](../windows/performance-diagnostics.md). 
 
 If you're experiencing performance problems with virtual machines, before contacting support, run Performance Diagnostics.
 
