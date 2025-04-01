@@ -9,7 +9,7 @@ ms.topic: troubleshooting
 ---
 # Connection fails with "Cloud PC does not support Entra ID single sign-on (SSO)."
 
-A user authenticates on the sign in page. When the user tries to connect to the Cloud PC, the user might encounter the following message:
+After a user authenticates on the sign in page, when the user tries to connect to the Cloud PC, the user might encounter the following message:
 
 > Something went wrong.  
 > Your Cloud PC does not support Entra ID single sign-on.
