@@ -9,7 +9,7 @@ ms.topic: troubleshooting
 ---
 # Connection fails with "connection to the remote PC was lost."
 
-After a user authenticates on the sign in page, when the user tries to connect to the Cloud PC, the user may encounter the following message:
+After a user authenticates on the sign in page, when the user tries to connect to the Cloud PC, the user might encounter the following message:
 
 > Lost connection  
 > The connection to the remote PC was lost. This might be because of a network connection problem. If this keeps happening, ask your admin or tech support for help.
