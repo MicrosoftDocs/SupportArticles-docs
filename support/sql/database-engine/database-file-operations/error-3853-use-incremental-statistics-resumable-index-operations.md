@@ -1,7 +1,7 @@
 ---
 title: Error 3853 When Using Incremental Statistics and Resumable Index Operations
 description: Resolves SQL Server error 3853 that occurs when you use incremental statistics and resumable index operations concurrently.
-ms.date: 03/28/2025
+ms.date: 04/01/2025
 ms.custom: sap:File, Filegroup, Database Operations or Corruption
 ms.reviewer: rtownsend, jopilov, jaferebe, atsingh, ditikman
 ---
@@ -27,7 +27,7 @@ Msg 3853, Level 16, State 1, Line 10
 
 ## Cause
 
-The 3853 error is caused by orphaned records in the `sys.syssingleobjrefs` system table. The `stats_id` in `sys.stats` remains as `2`, while the corresponding `stats_id` in `syssingleobjrefs` is `896002`, indicating a mismatch. The issue occurs under the following scenarios:
+The 3853 error is caused by orphaned records in the `sys.syssingleobjrefs` system table. The `stats_id` in `sys.stats` remains as `2`, while the corresponding `stats_id` in `syssingleobjrefs` is `896002`, indicating a mismatch. The issue happens when all of the following conditions are met:
 
 - The source `object_id` is a partitioned table or index.
 - Incremental statistics are in use for a table or index.
@@ -51,3 +51,4 @@ If the issue occurs, try the following options:
 - Upgrade to SQL Server 2022, where the issue has been fixed.
 - Contact the Microsoft Customer Support team to request assistance with correcting the metadata.
 
+1
