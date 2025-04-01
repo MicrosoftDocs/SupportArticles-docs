@@ -31,7 +31,7 @@ To get the **Object ID** of the application you want to add an owner to, follow 
 
      :::image type="content" source="media/add-owner-for-application-microsoft-graph/application-object-id.png" alt-text="Screenshot that shows an application's Object ID.":::
 
-## Step 2: Get the owner (service principal's Object ID)
+### Step 2: Get the owner (service principal's Object ID)
 
 To get the **Object ID** of the service principal associated with the application, follow these steps:
 
@@ -42,7 +42,7 @@ To get the **Object ID** of the service principal associated with the applicatio
 
     :::image type="content" source="media/add-owner-for-application-microsoft-graph/service-principle-object-id.png" alt-text="Screenshot that shows an service principal's Object ID.":::
 
-## Step 3: Add the owner to the application
+### Step 3: Add the owner to the application
 
 Here are two methods to do this:
 
