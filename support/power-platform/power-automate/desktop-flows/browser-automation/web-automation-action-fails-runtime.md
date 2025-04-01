@@ -2,7 +2,7 @@
 title: Web automation action fails during runtime
 description: Provides a resolution for the issue that a web automation action can't interact with a web element on runtime in Power Automate. 
 ms.reviewer: pefelesk
-ms.date: 03/28/2025
+ms.date: 04/01/2025
 ms.custom: sap:Desktop flows\UI or browser automation
 ---
 # Can't interact with a web element on runtime
@@ -24,12 +24,15 @@ During the initial development of the desktop flow, you can capture and interact
 
 Some web pages change their underlying HTML structure dynamically. Therefore, the CSS selector initially used to locate the element is no longer applicable.
 
-## Resolution
+## Resolution 1
 
-To solve this issue, you can manually create a new robust CSS selector. It will be able to locate the element of interest even though the HTML structure changes.
+To solve this issue, you can try to [repair the CSS selector](/power-automate/desktop-flows/repair-selector).
 
-To achieve that, capture again the web element after the failure, and compare the new CSS selector with the old one. For more information, see [Repair a selector](/power-automate/desktop-flows/repair-selector).
+## Resolution 2
 
+To solve this issue, you can manually create a new robust CSS selector. It will be able to locate the element of interest even though the HTML structure changes. For more information, see [Build a custom selector](/power-automate/desktop-flows/build-custom-selectors).
+
+To achieve that, capture again the web element after the failure, and compare the new CSS selector with the old one.
 CSS selectors can be reviewed and edited through the **Selector builder** window:
 
 :::image type="content" source="media/web-automation-action-fails-runtime/selector-builder.png" alt-text="The Selector builder page that you can use to review and edit CSS selectors." lightbox="media/web-automation-action-fails-runtime/selector-builder.png":::

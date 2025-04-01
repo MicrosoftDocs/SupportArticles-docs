@@ -268,6 +268,8 @@ Check whether the `ComSpec` variable exists in **Environment variable** under **
 
 ### Check if more than one browser profile exists
 
+To check if more than one profile exists, select the profile icon in the browser. A menu displaying the profiles should appear. The profile icon is usually located either on the top or right side of the browser window.
+
 If more than one browser profile exists,
 
 1. Uninstall the Power Automate web extension from each existing browser profile.
