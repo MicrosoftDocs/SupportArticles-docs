@@ -10,7 +10,7 @@ ms.service: azure-virtual-machines
 ms.topic: article
 ms.tgt_pltfrm: vm
 ms.workload: infrastructure-services
-ms.date: 02/13/2025
+ms.date: 04/01/2025
 ms.author: genli
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
@@ -45,7 +45,7 @@ Serial console does not work with a storage account using Azure Data Lake Storag
 The serial console connection to the VM encountered an error: 'Forbidden'(SubscriptionNotEnabled) - Subscription name undefined, id \<subscription id> is in non-Enabled state undefined | This issue may occur if the subscription that a user has created their Cloud Shell storage account in has been disabled. To mitigate, launch Cloud Shell and [perform the steps necessary](/azure/cloud-shell/persisting-shell-storage#unmount-clouddrive-1) to reprovision a backing storage account for Cloud Shell in the current subscription.
 Azure Serial Console requests result in the error "Sorry, the serial console was unable to connect to the VM because the service did not respond in a timely manner." | In rare circumstances, communication failure may prevent the Azure node from properly applying boot diagnostics configuration. [Reapplying the virtual machine state](vm-stuck-in-failed-state.md#resolution) in the Azure portal may resolve this issue.
 The serial console successfully connects to the VM, but no output is displayed, and user input is unresponsive. | Serial console and logs might not be available after live migration for Generation 2 VMs with Trusted Launch and Secure Boot enabled. To resolve this issue, a guest OS reboot is required.
-The serial console shows the following message: **Another connection is currently in progress to this VM. Please wait and retry the request.** | This error indicates that there might be another user with the serial console opened to the VM. If that is proven to not be the case, the easiest way is to disable boot diagnostics and re-enable to regain Azure Serial Console access.
+The serial console shows the error message: **Another connection is currently in progress to this VM. Please wait and retry the request.** | This error indicates that another user might have the serial console open in the VM. If this is not the case, the easiest way is to disable and re-enable boot diagnostics to restore Azure Serial Console access.
 
 ## Next steps
 
