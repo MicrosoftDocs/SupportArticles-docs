@@ -34,8 +34,6 @@
   items:
     - name: Can't connect to the Dynamics 365 server
       href: cannot-connect-your-dynamics-365-server.md
-    - name: CRM Installations, Updates, and Documentation
-      href: dynamics-crm-installations-updates-and-documentation.md
 - name: LinkedIn Sales Navigator
   items:
     - name: Can't view photos on custom contact and lead forms in Unified Interface
@@ -74,10 +72,6 @@
   items:
     - name: We can't find any apps for your role
       href: we-cannot-find-any-apps-your-role.md
-- name: Programmability and Software Development
-  items:
-    - name: TLS 1.2 is required for connectivity
-      href: tls-1-dot-2-required-for-connectivity.md
 - name: Sales Hub
   items:
     - name: Troubleshoot common tables
