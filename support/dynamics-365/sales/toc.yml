@@ -22,10 +22,6 @@
   items:
     - name: Error when importing SavedQuery
       href: error-importing-savedquery-in-dynamics-365.md
-- name: Data Management
-  items:
-    - name: Error 8004f016 when importing contact-lead AttributeMap
-      href: error-code-8004f016-when-importing-contact-lead-attributemap.md
 - name: Dynamics 365 Server
   items:
     - name: Can't connect to the Dynamics 365 server

@@ -13227,6 +13227,10 @@
     {
       "source_path": "support/dynamics-365/sales/solution-install-fails-due-dependencies.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/missing-dependency-on-solution-import"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-code-8004f016-when-importing-contact-lead-attributemap.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
     }
   ]
 }
