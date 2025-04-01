@@ -8,7 +8,7 @@ ms.custom: sap:Getting access denied errors (Authorization)
 ---
 # Add an owner to an application using Microsoft Graph
 
-When an application is authenticated, you might want to be able to update its own properties such as the Client Secret or Certificate. To do so, the application must be an owner of itself. You can implement this using the [Microsoft Graph API - Add owner](/graph/api/application-post-owners).
+When an application is authenticated, you might want to be able to update its own properties such as the client secret or certificate. To do so, the application must be an owner of itself. You can implement this using the [Microsoft Graph API - Add owner](/graph/api/application-post-owners).
 
 This article outlines the required permissions and step-by-step instructions to add a service principal associated with an application as an owner of the application using Microsoft Graph.
 
@@ -70,7 +70,7 @@ Here are two methods to do this:
 
     Here's an example of what it looks like in Microsoft Graph Explorer:
 
-    :::image type="content" source="media/add-owner-for-application-microsoft-graph/microsoft-graph-api-call.png" alt-text="Screenshot that shows a request in Microsoft Graph Explorer.":::
+    :::image type="content" source="media/add-owner-for-application-microsoft-graph/microsoft-graph-api-call.png" alt-text="Screenshot that shows a request in Microsoft Graph Explorer." lightbox="media/add-owner-for-application-microsoft-graph/microsoft-graph-api-call.png":::
 
 
 ##### Troubleshoot Forbidden (403) error
@@ -91,7 +91,7 @@ You might encounter the following error during this process:
 
 To resolve it, consent to the API permissions **Application.ReadWrite.All** and **Directory.AccessAsUser.All** for Microsoft Graph Explorer under the **Modify permissions** tab:
 
-:::image type="content" source="media/add-owner-for-application-microsoft-graph/modify-permissions.png" alt-text="Screenshot that shows how to modify permission in Microsoft Graph Explorer.":::
+:::image type="content" source="media/add-owner-for-application-microsoft-graph/modify-permissions.png" alt-text="Screenshot that shows how to modify permission in Microsoft Graph Explorer." lightbox="media/add-owner-for-application-microsoft-graph/modify-permissions.png":::
 
 #### Method 2: Using Microsoft Graph PowerShell
 
