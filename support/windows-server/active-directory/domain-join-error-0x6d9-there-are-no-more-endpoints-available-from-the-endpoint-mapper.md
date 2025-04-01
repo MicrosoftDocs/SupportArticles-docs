@@ -53,7 +53,7 @@ NetpDoDomainJoin: status: 0x6d9
 
 ## Cause
   
-Error 0x6D9 is logged when network connectivity is blocked between the joining client and the Domain Controller (DC). The network connectivity services the domain join operation over port 135 or a port in the ephemeral range between 1025 to 5000 or 49152 to 65535. For more information, see [Service overview and network port requirements for Windows](../networking/service-overview-and-network-port-requirements.md).  
+Error 0x6D9 is logged when network connectivity is blocked between the joining client and the Domain Controller (DC). The network connectivity services the domain join operation initially over Transmission Control Protocol (TCP) port 135, and then an ephemeral port between 49152 to 65535. For more information, see [Service overview and network port requirements for Windows](../networking/service-overview-and-network-port-requirements.md).  
 
 The network connectivity issue can be caused by several factors, including advanced security solutions with host firewalls installed on the DC, port exhaustion, and other potential issues.
 
@@ -68,7 +68,7 @@ The network connectivity issue can be caused by several factors, including advan
    NetpGetComputerObjectDn: Unable to bind to DS on '\\DC1.CONTOSO.COM': 0x6d9
    ```
 
-2. Verify that the joining client has network connectivity to the DC over the required ports and protocols used by the applicable operating system (OS) versions. Domain join clients connect a DC over Transmission Control Protocol (TCP) port 135 by the dynamically assigned port in the range between 49152 and 65535.
+2. Verify that the joining client has network connectivity to the DC over the required ports and protocols used by the applicable operating system (OS) versions. Domain join clients initially connect to a DC over TCP port 135, and then a dynamically assigned port in the range between 49152 and 65535.
 3. Ensure that the OS, software and hardware routers, firewalls, and switches allow connectivity over the required ports and protocols.
 4. Ensure that there are enough available ports for the operation. You can use tools like netstat to check for port availability and usage.
 5. If advanced security solutions with host firewalls is installed on the DC, review its settings to ensure it isn't blocking the required ports.

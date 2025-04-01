@@ -33,15 +33,15 @@ Review the following example of the Netsetup.log on a fully updated system.
 
 ```output
 NetpProvisionComputerAccount:
-	lpDomain: contoso.com
-	lpHostName: host1
-	lpMachineAccountOU: (NULL)
-	lpDcName: ContosoDC1.contoso.com
-	lpMachinePassword: (null)
-	lpAccount: contoso\nonadminuser2
-	lpPassword: (non-null)
-	dwJoinOptions: 0x403
-	dwOptions: 0x40000003
+    lpDomain: contoso.com
+    lpHostName: host1
+    lpMachineAccountOU: (NULL)
+    lpDcName: ContosoDC1.contoso.com
+    lpMachinePassword: (null)
+    lpAccount: contoso\nonadminuser2
+    lpPassword: (non-null)
+    dwJoinOptions: 0x403
+    dwOptions: 0x40000003
 NetpLdapBind: Verified minimum encryption strength on ContosoDC1.contoso.com: 0x0
 NetpLdapGetLsaPrimaryDomain: reading domain data
 NetpGetNCData: Reading NC data
@@ -50,9 +50,9 @@ NetpGetDomainData: Lookup crossref data for: CN=Partitions,CN=Configuration,DC=c
 NetpLdapGetLsaPrimaryDomain: result of retrieving domain data: 0x0
 NetpCheckForDomainSIDCollision: returning 0x0(0).
 NetpGetComputerObjectDn: Cracking DNS domain name contoso.com/ into Netbios on \\ContosoDC1.contoso.com
-NetpGetComputerObjectDn: Crack results: 	name = CONTOSO\
+NetpGetComputerObjectDn: Crack results:     name = CONTOSO\
 NetpGetComputerObjectDn: Cracking account name CONTOSO\HOST1$ on \\ContosoDC1.contoso.com
-NetpGetComputerObjectDn: Crack results: 	(Account already exists) DN = CN=HOST1,CN=Computers,DC=contoso,DC=com 
+NetpGetComputerObjectDn: Crack results:     (Account already exists) DN = CN=HOST1,CN=Computers,DC=contoso,DC=com 
 NetpGetADObjectOwnerAttributes: Looking up attributes for machine account: CN=HOST1,CN=Computers,DC=contoso,DC=com
 NetpGetNCData: Reading NC data
 NetpReadAccountReuseModeFromAD: Searching '<WKGUID=AB1D30F3768811D1ADED00C04FD8D5CD,DC=contoso,DC=com>' for '(&(ObjectClass=ServiceConnectionPoint)(KeyWords=NetJoin*))'.
@@ -91,7 +91,7 @@ NetpDoDomainJoin: status: 0xaac
 
 ## Cause
 
-Windows introduced extra protections with updates released on and after October 11, 2022. These protections intentionally prevent domain join operations from reusing an existing computer account in the target domain unless the following specific conditions are met:
+Windows introduced extra protections with updates released on and after October 11, 2022. These protections intentionally prevent domain join operations from reusing an existing computer account in the target domain unless any of the following conditions is met:
 
 - The user attempting the operation is the creator of the existing account.
 - The computer was created by a member of domain administrators, enterprise administrators, or built-in administrators groups.
