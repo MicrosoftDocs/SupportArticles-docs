@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot Android Enterprise device enrollment in Microsoft Intune
 description: Suggestions for troubleshooting some of the most common problems when you enroll Android devices in Intune.
-ms.date: 02/11/2025
-ms.reviewer: kaushika, joelste, v-six, esalter
+ms.date: 02/27/2025
+ms.reviewer: kaushika, joelste, v-six, esalter, alamparelli
 search.appverid: MET150
 ms.custom: sap:Enroll Devices - Android\Android  Enterprise - FullyManaged
 ---
@@ -19,6 +19,14 @@ This is expected behavior. You must manually trigger a sync.
 ### Encryption is required when a device is enrolled
 
 This is expected behavior. You can't turn off encryption: Google requires that the device be encrypted to create a work profile.
+
+### Can't create a work profile
+
+Although your device may meet the Android Enterprise and OS version requirements for a personally owned work profile, you may still experience this issue due to an existing profile on the device or OEM restrictions.
+
+To check if the device has an existing work profile, go to **Settings** > **Passwords & accounts** > **Work**. If a work profile isn't expected, remove it and try enrolling again. The setting's location may vary depending on the device manufacturer.
+
+To check if the device can create a sample work profile, install the [Test DPC](https://play.google.com/store/apps/details?id=com.afwsamples.testdpc) app from the Google Play Store and follow the setup instructions. If the Test DPC app fails to create a work profile, contact the device manufacturer for more details on work profile support.
 
 ## Remote actions
 

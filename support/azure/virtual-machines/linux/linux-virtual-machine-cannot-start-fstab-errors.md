@@ -4,7 +4,9 @@ description: Explains why Linux VM can't start and how to solve the problem.
 services: virtual-machines
 documentationcenter: ''
 author: saimsh-msft
+ms.author: saimsh
 manager: dcscontentpm
+ms.reviewer: divargas
 tags: ''
 ms.custom: sap:My VM is not booting, linux-related-content
 ms.service: azure-virtual-machines
@@ -13,8 +15,7 @@ ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.devlang: azurecli
-ms.date: 02/19/2025
-ms.author: saimsh
+ms.date: 02/26/2025
 ---
 
 # Troubleshoot Linux VM boot issues due to fstab errors
@@ -112,13 +113,17 @@ Azure Linux Auto Repair (ALAR) scripts are part of the VM repair extension descr
 The ALAR scripts use the repair extension `repair-button` to fix fstab issues by specifying `--button-command fstab`. This parameter triggers the automated recovery. Implement the following steps to automate fstab errors via the offline ALAR approach:
 
 ```azurecli-interactive
-az vm repair repair-button --button-command fstab --verbose rgtest --name vmtest
+az extension add -n vm-repair
+az extension update -n vm-repair
+az vm repair repair-button --button-command 'fstab' --verbose --resource-group $RGNAME --name $VMNAME
 ```
 
 > [!NOTE]
-> - Replace the resource group name `rgtest` and VM name `vmtest` accordingly.
-> - The repair VM script, in conjunction with the ALAR script, will temporarily create a resource group, a repair VM, and a copy of the affected VM's OS disk. It backs up the original **/etc/fstab** file and modifies it by removing or commenting out data file system entries that aren't required to boot the system.
-> - After the OS starts successfully, review and edit the **/etc/fstab** file to fix any errors that might have prevented a proper reboot. Finally, the `repair-button` script will automatically delete the resource group containing the repair VM.
+> Replace the resource group name `$RGTEST` and VM name `$VMNAME` accordingly.
+
+* The repair VM script, in conjunction with the ALAR script, will temporarily create a resource group, a repair VM, and a copy of the affected VM's OS disk. It backs up the original `/etc/fstab` file and modifies it by removing or commenting out data file system entries that aren't required to boot the system.
+* After the OS starts successfully, review and edit the `/etc/fstab` file to fix any errors that might have prevented a proper reboot.
+* Finally, the `repair-button` script will automatically delete the resource group containing the repair VM.
 
 #### Use the manual method
 

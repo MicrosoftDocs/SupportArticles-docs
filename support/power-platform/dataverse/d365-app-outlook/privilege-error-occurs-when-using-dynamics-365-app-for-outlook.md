@@ -1,41 +1,65 @@
 ---
-title: A privilege error when using Dynamics 365 App for Outlook
-description: A privilege error occurs when attempting to use Microsoft Dynamics 365 App for Outlook. Provides options to solve this issue.
+title: Privilege or permission error when using Dynamics 365 App for Outlook
+description: Solves a privilege or permission error that occurs in Microsoft Dynamics 365 App for Outlook.
 ms.reviewer: 
-ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/06/2025
 ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
-# A privilege error occurs when attempting to use Microsoft Dynamics 365 App for Outlook
+# A privilege or permission error occurs in Microsoft Dynamics 365 App for Outlook
 
-This article provides a resolution for the issue that you may receive the **You don't have required privilege (prvReadOrganization)** error when trying to use the Microsoft Dynamics 365 App for Outlook.
+This article helps solve errors that occur when you try to use or open Microsoft Dynamics 365 App for Outlook.
 
-_Applies to:_ &nbsp; Microsoft Dynamics 365 Customer Engagement Online  
-_Original KB number:_ &nbsp; 4563997
+_Applies to:_ &nbsp; Dynamics 365 App for Outlook  
+_Original KB number:_ &nbsp; 4563997, 4229661
 
-## Symptoms
+## Symptom 1
 
-When attempting to use the Microsoft Dynamics 365 App for Outlook, you encounter an error referencing a missing privilege such as the following error:
+When you try to use Dynamics 365 App for Outlook, you receive an error that resembles the following one:
 
 > You don't have required privilege (prvReadOrganization), which limits certain functionality. Please contact your administrator to get necessary access.
 
-## Cause
+### Cause
 
-This error will appear if the user associated with the mailbox record does not have sufficient privileges to use Microsoft Dynamics 365 App for Outlook.
+This error occurs if the user associated with the mailbox record doesn't have sufficient privileges to use Dynamics 365 App for Outlook.
+
+## Symptom 2
+
+When you open Dynamics 365 App for Outlook, you receive the following error:
+
+> We're sorry  
+> We are unable to show Dynamics 365 App for Outlook because current user role does not have required permissions. Please contact your administrator to have required security role assigned to the Dynamics 365 App for Outlook solution.
+
+If you select **Show more**, the additional details include the following information:
+
+> Error: Don't have permissions to retrieve AppforOutlookModule id  
+> Trace: Error: Don't have permissions to retrieve AppforOutlookModule id at new ...
+
+### Cause
+
+This error occurs if the Dynamics 365 security role doesn't have access to the app module used by the Dynamics 365 App for Outlook.
 
 ## Resolution
 
-Option 1: Assign Microsoft Dynamics 365 App for Outlook User security role
+To solve these issues, use one of the following options.
 
-A standard role exists to provide the privileges required to use Microsoft Dynamics 365 App for Outlook. This role is named Microsoft Dynamics 365 App for Outlook User and can be assigned to users who need to use App for Outlook. For more information on this role, see [Provide security role access](/dynamics365/outlook-app/deploy-dynamics-365-app-for-outlook#provide-security-role-access).
+### Option 1: Assign the "Dynamics 365 App for Outlook User" security role
 
-Option 2: Custom Role
+The [Dynamics 365 App for Outlook User](/dynamics365/outlook-app/deploy-dynamics-365-app-for-outlook#step-3-provide-security-role-access) security role can be assigned to users who need to use Dynamics 365 App for Outlook. This security role is available from build 9.1.0.4206 or later. This option ensures that the users have the basic privileges needed to access Dynamics 365 App for Outlook.
 
-If you prefer to customize a role to include the required privileges, refer to the More information section for a list of privileges required to use Microsoft Dynamics 365 App for Outlook.
+### Option 2: Assign privileges to a custom security role
+
+If you prefer to customize a security role to include the required privileges, refer to the [More information](#more-information) section for a list of privileges required to use Dynamics 365 App for Outlook.
+
+> [!IMPORTANT]
+> Custom security roles don't have access to the Dynamics 365 app module by default. The steps provided in [Step 3: Provide security role access](/dynamics365/outlook-app/deploy-dynamics-365-app-for-outlook#step-3-provide-security-role-access) are also required.
 
 ## More information
 
-The following table lists privileges required to use Microsoft Dynamics 365 App for Outlook and the tab in a security role where the privilege can be found. A user with the System Administrator role can locate and modify a security role by navigating to **Settings** > **Security** > **Security Roles**. To view which role(s) are assigned to a specific user, navigate to **Settings**, select **Security**, select **Users**, select the specific User record, and then select **Manage Roles**.
+The following table lists privileges required to use Dynamics 365 App for Outlook and the tab in a security role where the privilege can be found.
+
+A user with the System Administrator role can locate and modify a security role by navigating to **Settings** > **Security** > **Security Roles**.
+
+To view which role(s) are assigned to a specific user, navigate to **Settings**, select **Security**, select **Users**, select the specific User record, and then select **Manage Roles**.
 
 | Privilege name| Entity| Location (tab) within security role|
 |---|---|---|
@@ -45,8 +69,8 @@ The following table lists privileges required to use Microsoft Dynamics 365 App 
 |prvWriteMailbox|Mailbox|Business Management|
 |prvReadMailbox|Mailbox|Business Management|
 |prvReadOrganization|Organization|Business Management|
-|prvSyncToOutlook (exchangesyncidmapping|Sync to Outlook|Business Management --> Privacy-related privileges|
-|prvUseOfficeApps|Use Dynamics 365 App for Outlook|Business Management --> Privacy-related privileges|
+|prvSyncToOutlook (exchangesyncidmapping)|Sync to Outlook|Business Management > Privacy-related privileges|
+|prvUseOfficeApps|Use Dynamics 365 App for Outlook|Business Management > Privacy-related privileges|
 |prvAppendToAccount|Account|Core Records|
 |prvReadAccount|Account|Core Records|
 |prvDeleteActivity|Activity|Core Records|
@@ -69,9 +93,9 @@ The following table lists privileges required to use Microsoft Dynamics 365 App 
 |prvReadUserApplicationMetadata|User Application Metadata|Customization|
 |prvReadQuery|View|Customization|
 |prvReadWebResource|Web Resource|Customization|
-|prvSearchAvailability|Search Availability|Service Management --> Miscellaneous Privileges|
+|prvSearchAvailability|Search Availability|Service Management > Miscellaneous Privileges|
 
-The following table lists additional privileges that are required to view some of the default views used inside the Microsoft Dynamics 365 App for Outlook forms. Without these privileges, a user may see the following error instead of the expected view (subgrid) of records:
+The following table lists additional privileges that are required to view some of the default views used inside the Dynamics 365 App for Outlook forms. Without these privileges, a user might see the following error instead of the expected view (subgrid) of records:
 
 > You do not have permission to access these records. Contact your Microsoft Dynamics 365 administrator for help.
 

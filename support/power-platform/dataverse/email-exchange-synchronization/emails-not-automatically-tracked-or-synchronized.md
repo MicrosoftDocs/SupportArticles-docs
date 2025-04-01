@@ -36,11 +36,11 @@ To get troubleshooting information in the **Server-Side Synchronization Item Lev
 
 2. The **Sync Error** column contains information about why an item didn't synchronize. Selecting the link directs you to an article about the error, if available. For example:
 
-   - This screenshot shows a "Question about service" email that isn't automatically tracked due to an [IsvAborted](/troubleshoot/dynamics-365/sales/unknownincomingemailintegrationerror-2147220891) error that occurs during processing. This error indicates a failure within a plugin or workflow that needs to be addressed by the solution owner.
+   - This screenshot shows a "Question about service" email that isn't automatically tracked due to an [IsvAborted](unknownincomingemailintegrationerror-2147220891.md) error that occurs during processing. This error indicates a failure within a plugin or workflow that needs to be addressed by the solution owner.
 
      :::image type="content" source="media/emails-not-automatically-tracked-or-synchronized/question-about-service-email-example.png" alt-text="Screenshot that shows an IsvAborted error in a Question about service email.":::
 
-   - This screenshot shows a "Can we meet tomorrow?" email that isn't automatically tracked due to a [NoCorrelationMatch](/troubleshoot/dynamics-365/sales/email-fails-to-create-with-nocorrelationmatch-error) error. This error occurs because none of the resolved (known) Dataverse email recipients automatically accept the email based on their [personal option settings](/power-platform/admin/email-message-filtering-correlation).
+   - This screenshot shows a "Can we meet tomorrow?" email that isn't automatically tracked due to a [NoCorrelationMatch](email-fails-to-create-with-nocorrelationmatch-error.md) error. This error occurs because none of the resolved (known) Dataverse email recipients automatically accept the email based on their [personal option settings](/power-platform/admin/email-message-filtering-correlation).
 
      :::image type="content" source="media/emails-not-automatically-tracked-or-synchronized/can-we-meet-tomorrow-email-example.png" alt-text="Screenshot that shows a NoCorrelationMatch error in a Can we meet tomorrow email.":::
 

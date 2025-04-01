@@ -54,3 +54,6 @@ The Entra ID uses a [signing key rollover mechanism](/entra/identity-platform/si
 ## Solution
 
 You can either manually update the certificate thumbprints that are in the **Web.config** file or automate the process through code. For more information, see [Best practices for keys metadata caching and validation](/entra/identity-platform/signing-key-rollover#best-practices-for-keys-metadata-caching-and-validation).
+
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)] 
+

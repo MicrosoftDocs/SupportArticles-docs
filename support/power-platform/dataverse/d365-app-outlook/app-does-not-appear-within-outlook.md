@@ -10,7 +10,7 @@ ms.custom: sap:Dynamics 365 App for Outlook Add-In
 
 There are several reasons why the Dynamics 365 App for Outlook may not appear within Outlook after deployment. This article describes the different causes and solutions.
 
-_Applies to:_ &nbsp; Microsoft Dynamics 365  
+_Applies to:_ &nbsp; Dynamics 365 App for Outlook  
 _Original KB number:_ &nbsp; 4345566
 
 ## Symptoms

@@ -1,11 +1,11 @@
 ---
 title: Lingering objects in an AD DS forest
 description: Provides information about lingering objects in a forest, including events that indicate lingering objects, causes of lingering objects, and methods to remove lingering objects.
-ms.date: 01/15/2025
+ms.date: 03/10/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, v-tappelgate
+ms.reviewer: kaushika, v-tappelgate, ziggyn
 ms.custom:
 - sap:active directory\active directory replication and topology
 - pcy:WinComm Directory Services
@@ -211,7 +211,7 @@ To use PowerShell to increase the TSL, open an administrative PowerShell window,
 ```powershell
 $ADForestconfigurationNamingContext = (Get-ADRootDSE).configurationNamingContext
 
-Set-ADObject -Identity “CN=Directory Service,CN=Windows NT,CN=Services,$ADForestconfigurationNamingContext” -Partition $ADForestconfigurationNamingContext -Replace @{tombstonelifetime=’180′}
+Set-ADObject -Identity "CN=Directory Service,CN=Windows NT,CN=Services,$ADForestconfigurationNamingContext" -Partition $ADForestconfigurationNamingContext -Replace @{tombstonelifetime='180'}
 ```
 
 ADSI Edit is available on the **Tools** menu in Server Manager. To change the TSL, follow these steps:  

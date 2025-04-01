@@ -2,8 +2,12 @@
   href: welcome-supply-chain.yml
 - name: Asset management
   items:
+    - name: Asset ID isn't editable when number sequence is set to Manual
+      href: asset-management/asset-id-not-editable-when-number-sequence-is-manual.md
     - name: Changing work order lifecycle state doesn't generate fault cause or fault remedy error
       href: asset-management/change-lifecycle-state-doesnt-create-fault.md
+    - name: Can't create work orders based on your maintenance schedule
+      href: asset-management/conversion-of-maintenance-schedule-to-workorder-is-failing.md  
 - name: Inventory costing and closing
   items:
     - name: An update conflict occurs when the inventory valuation method is either standard cost or moving average
@@ -128,6 +132,8 @@
       href: procurement/vendor-rebate-not-cumulated.md
     - name: A product receipt voucher number is consumed even when not generating a voucher
       href: procurement/voucher-number-consumed.md
+    - name: Can't delete a purchase order line after it's confirmed
+      href: procurement/purchase-order-line-deletion-restriction.md  
     - name: Can't add a line to a purchase requisition after requesting a change
       href: procurement/cant-add-line-to-purchase-requisition-after-change.md
     - name: Can't change the effective date for an approved vendor
@@ -142,6 +148,8 @@
       href: procurement/object-reference-not-set.md
     - name: Imported purchase orders show incorrect line numbers
       href: procurement/line-number-increments.md
+    - name: Purchase requisitions created before the current fiscal year can't be released
+      href: procurement/purchase-requisitions-cannot-released.md
     - name: Purchase order line data discrepancies
       href: procurement/purchase-order-line-data-issues.md
     - name: Purchase orders don't reflect the language settings of the legal entity
@@ -348,6 +356,8 @@
       href: warehousing/shipment-confirmed-no-posting.md
     - name: Slotting templates don't consider on-hand inventory for batch-above items
       href: warehousing/slotting-templates-inventory-batch-above.md
+    - name: '"The size of the request xml exceeds the maximum allowed value" in the mobile app'
+      href: warehousing/request-xml-size-exceeds-maximum-allowed-value.md
     - name: The last closed work line must be a put
       href: warehousing/the-last-closed-work-link-must-be-a-put-error.md
     - name: The weight fields on load lines don't match the weight fields on the load

@@ -12,7 +12,7 @@ ms.collection: linux
 ms.topic: article
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure-services
-ms.date: 02/10/2025
+ms.date: 03/11/2025
 ms.author: mbifeld
 ---
 
@@ -131,7 +131,7 @@ Serial Console uses the storage account configured for boot diagnostics in its c
    | UAE | UAE Central, UAE North | 20.38.141.5, 20.45.95.64, 20.45.95.65, 20.45.95.66, 20.203.93.198, 20.233.132.205, 40.120.87.50, 40.120.87.51 |
    | United Kingdom | UK South, UK West | 20.58.68.62, 20.58.68.63, 20.90.32.180, 20.90.132.144, 20.90.132.145, 51.104.30.169, 172.187.0.26, 172.187.65.53 |
    | United States | US Central, US East, US East 2, US East 2 EUAP, US North, US South, US West, US West 2, US West 3 | 4.149.249.197, 4.150.239.210, 20.14.127.175, 20.40.200.175, 20.45.242.18, 20.45.242.19, 20.45.242.20, 20.47.232.186, 20.51.21.252, 20.69.5.160, 20.69.5.161, 20.69.5.162, 20.83.222.100, 20.83.222.101, 20.83.222.102, 20.98.146.84, 20.98.146.85, 20.98.194.64, 20.98.194.65, 20.98.194.66, 20.168.188.34, 20.241.116.153, 52.159.214.194, 57.152.124.244, 68.220.123.194, 74.249.127.175, 74.249.142.218, 157.55.93.0, 168.61.232.59, 172.183.234.204, 172.191.219.35 |
-   | USGov | All US Government Cloud regions | 20.140.104.48, 20.140.105.3, 20.140.144.58, 20.140.144.59, 20.140.147.168, 20.140.53.121, 20.141.10.130, 20.141.10.131, 20.141.13.121, 20.141.15.104, 52.127.55.131, 52.235.252.252, 52.235.252.253, 52.243.247.124, 52.245.155.139, 52.245.156.185, 62.10.196.24, 62.10.196.25, 62.10.84.240, 62.11.6.64, 62.11.6.65 |
+   | USGov | All US Government Cloud regions | 20.140.104.48, 20.140.105.3, 20.140.144.58, 20.140.144.59, 20.140.147.168, 20.140.53.121, 20.141.10.130, 20.141.10.131, 20.141.13.121, 20.141.15.104, 52.127.55.131, 52.235.252.252, 52.235.252.253, 52.243.247.124, 52.245.155.139, 52.245.156.185, 62.10.84.240 |
 
    > [!IMPORTANT]
    > - The IPs that need to be permitted are specific to the region where the VM is located. For example, a virtual machine deployed in the North Europe region needs to add the following IP exclusions to the storage account firewall for the Europe geography: 52.146.139.220 and 20.105.209.72. View the table above to find the correct IPs for your region and geography.

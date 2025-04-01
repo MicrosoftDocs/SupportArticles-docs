@@ -33,12 +33,12 @@
       href: create-upgrade-delete/error-code-outboundconnfailvmextensionerror.md
     - name: RequestDisallowedByPolicy error
       href: create-upgrade-delete/error-code-requestdisallowedbypolicy.md
-    - name: ReservedResourceName error
-      href: create-upgrade-delete/error-code-reservedresourcename.md
     - name: ServicePrincipalValidationClientError error
       href: create-upgrade-delete/error-code-serviceprincipalvalidationclienterror.md
     - name: SubscriptionRequestsThrottled error (429)
       href: create-upgrade-delete/error-code-subscriptionrequeststhrottled.md
+    - name: Throttled error (429)
+      href: create-upgrade-delete/error-code-aksrequeststhrottled.md
     - name: SubnetWithExternalResourcesCannotBeUsedByOtherResources error
       href: create-upgrade-delete/subnet-with-external-resources-cannot-be-used-by-other-resources.md
     - name: Troubleshoot the AKSCapacityError error code
@@ -107,8 +107,6 @@
       href: create-upgrade-delete/error-code-subnetisfull.md
     - name: Cluster upgrading and scaling errors
       href: create-upgrade-delete/upgrading-or-scaling-does-not-succeed.md
-    - name: Errors using features that require virtual machine scale sets
-      href: create-upgrade-delete/error-using-feature-requiring-virtual-machine-scale-set.md
     - name: Node count isn't in autoscaler min and max range
       href: create-upgrade-delete/node-count-is-not-in-autoscaler-min-max-range.md
   - name: Start operations
@@ -372,5 +370,3 @@
     href: error-codes/unsatisfiablepdb-error.md
   - name: AKSCapacityError error
     href: error-codes/akscapacityerror-error.md
-    
-  

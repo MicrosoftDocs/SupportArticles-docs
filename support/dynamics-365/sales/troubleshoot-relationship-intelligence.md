@@ -5,10 +5,12 @@ author: roraisin
 ms.author: roraisin
 ms.topic: troubleshooting
 ms.date: 03/28/2023
+ms.custom: sap:Sales Insights
+
 ---
 # Troubleshooting issues with relationship intelligence
 
-This article helps you troubleshoot and resolve the issue where insights can’t be generated using Exchange data when you use [relationship intelligence](/dynamics365/sales/ri-overview) in Dynamics 365 Sales.
+This article helps you troubleshoot and resolve the issue where insights can't be generated using Exchange data when you use [relationship intelligence](/dynamics365/sales/ri-overview) in Dynamics 365 Sales.
 
 ## Symptoms
 
