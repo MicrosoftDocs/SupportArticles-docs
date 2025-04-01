@@ -10,7 +10,7 @@ tags: ''
 ms.service: azure-virtual-machines
 ms.workload: infrastructure-services
 ms.topic: troubleshooting
-ms.date: 03/25/2025
+ms.date: 04/01/2025
 ms.custom: sap:VM Performance
 ms.reviewer: guywild, poharjan
 ms.author: anandh
@@ -79,7 +79,7 @@ The following distributions are currently supported for on-demand diagnostics.
 | Debian                     | 9, 10, 11 [`*`], 12 |
 | SLES                       | 12 SP5 [`*`], 15 SP1 [`*`], 15 SP2 [`*`], 15 SP3 [`*`], 15 SP4 [`*`], 15 SP5 [`*`], 15 SP6 [`*`] |
 | AlmaLinux                  | 8.4, 8.5, 9 |
-| Azure Linux                | 2.0 |
+| Azure Linux                | 2.0, 3.0 |
 
 > [!NOTE]
 > [`*`] See [Known issues](../linux/how-to-use-perfinsights-linux.md#known-issues)
