@@ -5,7 +5,7 @@ ms.custom: sap:Desktop flows\UI or browser automation
 ms.reviewer: amitrou
 ms.author: amitrou
 author: amitrou
-ms.date: 03/28/2025
+ms.date: 04/01/2025
 ---
 # "Failed to assume control of IE" error during web automation with Internet Explorer
 
@@ -19,7 +19,7 @@ When you run a desktop flow in Power Automate that includes the [Launch new Inte
 
 ## Cause
 
-This issue could be caused due to the security settings in Internet Explorer aren't configured properly. Specifically, the **Enable Protected Mode** setting may be preventing the automation tool from assuming control of the browser.
+This issue could be caused due to the security settings in Internet Explorer not being configured properly. Specifically, the **Enable Protected Mode** setting may be preventing the automation tool from assuming control of the browser.
 
 ## Resolution
 

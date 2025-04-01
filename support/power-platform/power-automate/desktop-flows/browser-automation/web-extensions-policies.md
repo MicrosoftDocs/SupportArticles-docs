@@ -2,7 +2,7 @@
 title: Troubleshoot issues in Power Automate browser extensions
 description: Provides a resolution for the Failed to assume control of browser (Internal error or communication failure) error or Get Extension message.
 ms.reviewer: nimoutzo, gtrantzas
-ms.date: 03/25/2025
+ms.date: 04/01/2025
 ms.custom: sap:Desktop flows\UI or browser automation
 ---
 # Troubleshoot issues in Power Automate browser extensions
@@ -271,7 +271,7 @@ Check whether the `ComSpec` variable exists in **Environment variable** under **
 If more than one browser profile exists,
 
 1. Uninstall the Power Automate web extension from each existing browser profile.
-1. Close the browser and install the extension only in the browser profile that will be used by the automation.
+1. Close the browser and [install the extension](/power-automate/desktop-flows/install-browser-extensions) only in the browser profile that will be used by the automation.
 
 ### Check for errors in Windows Event Viewer
 

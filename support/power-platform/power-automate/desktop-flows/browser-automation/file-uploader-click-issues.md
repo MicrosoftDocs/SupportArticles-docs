@@ -5,7 +5,7 @@ ms.custom: sap:Desktop flows\UI or browser automation
 ms.reviewer: amitrou
 ms.author: amitrou
 author: andreas-mitrou
-ms.date: 03/25/2025
+ms.date: 04/01/2025
 ---
 # Press button or click link on web page doesn't work with a file uploader
 
@@ -27,12 +27,12 @@ For security reasons, browsers may restrict the simulation of events that trigge
 
 As a result, the **Press button on web page** and **Click link on web page** actions may not work when interacting with file uploaders.
 
-## Workaround 1
+## Workaround
 
-To work around this issue, use the [Press button in window](/power-automate/desktop-flows/actions-reference/uiautomation#pressbutton) action to simulate user input, bypassing the browser's event validation.
+Try one of the following workarounds:
 
-You need to capture the element from within the **Press button in window** action or through a desktop recorder, instead of using a web element that's either captured from a web automation action or a web browser recorder.
+1. Use the [Press button in window](/power-automate/desktop-flows/actions-reference/uiautomation#pressbutton) action to simulate user input, bypassing the browser's event validation.
 
-## Workaround 2
+    Capture the element from within the **Press button in window** action or through a desktop recorder, instead of using a web element that's either captured from a web automation action or a web browser recorder.
 
-To work around this issue, use the **Click link on web page** action with the [Send physical click](/power-automate/desktop-flows/how-to/send-physical-clicks-web-element) option enabled.
+2. Use the **Click link on web page** action with the [Send physical click](/power-automate/desktop-flows/how-to/send-physical-clicks-web-element) option enabled.

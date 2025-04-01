@@ -1,7 +1,7 @@
 ---
 title: UIPI Issues with UI and Browser Automation Actions
 description: Solves issues caused by User Interface Privacy Isolation (UIPI) that prevent the UI or Browser automation actions to execute successfully.
-ms.date: 03/25/2025
+ms.date: 04/01/2025
 ms.custom: sap:Desktop flows\UI or browser automation
 ms.reviewer: amitrou
 ms.author: amitrou
@@ -9,7 +9,7 @@ author: andreas-mitrou
 ---
 # UIPI issues with UI and browser automation actions
 
-This article provides a resolution for the issue caused by User Interface Privacy Isolation (UIPI) that might prevent UI or browser automation actions from executing successfully.
+This article provides guidance to resolve issues caused by User Interface Privacy Isolation (UIPI), a security feature in Windows, which might prevent UI or browser automation actions from executing successfully. UIPI blocks certain interactions between processes running at different integrity levels, which can interfere with automation tools or scripts. As these issues could stem from multiple potential causes, we recommend reviewing each cause listed below to ensure your system settings are properly configured for successful automation.
 
 ## Symptoms
 
@@ -17,11 +17,11 @@ Actions performing UI or browser automation may fail with an error message simil
 
 > System.Exception: Some simulated input commands were not sent successfully. The most common reason for this happening are the security features of Windows including User Interface Privacy Isolation (UIPI). Your application can only send commands to applications of the same or lower elevation. Similarly certain commands are restricted to Accessibility/UIAutomation applications. Refer to the project home page and the code samples for more information
 
-## Cause 1: The desktop is locked while execution
+## Cause 1: The desktop is locked during execution
 
 **Solution**: Unlock the desktop to allow the automation process to proceed.
 
-## Cause 2: A UAC dialog is open while execution
+## Cause 2: A UAC dialog is open during execution
 
 **Solution**: Ensure that User Account Control (UAC) dialogs don't appear during automation. If necessary, temporarily adjust UAC settings:
 
@@ -33,6 +33,8 @@ Actions performing UI or browser automation may fail with an error message simil
 ## Cause 3: The RDP window is minimized during execution
 
 **Solution**: Modify the system registry to prevent issues with minimized RDP sessions:
+
+[!INCLUDE [Third-party disclaimer](../../../../includes/registry-important-alert.md)]
 
 1. Close active Remote Desktop sessions.
 1. Press <kbd>Win</kbd>+<kbd>R</kbd>, type _regedit_, and press <kbd>Enter</kbd> to open the Registry Editor.
@@ -76,7 +78,7 @@ Actions performing UI or browser automation may fail with an error message simil
 
 ## Cause 7: Windows update or system configuration changes
 
-**Solution**: Review recent updates or system changes and revert them if necessary to resolve the issue.
+**Solution**: Review recent Windows updates or system changes and revert them if necessary to resolve the issue.
 
 ## More information
 
