@@ -29,6 +29,8 @@ To get the **Object ID** of the application you want to add an owner to, follow 
 3. Browse to **Identity** > **Applications** > **App registrations**.
 4. Locate the application and copy its **Object ID**.
 
+     :::image type="content" source="media/add-owner-for-application-microsoft-graph/application-object-id.png" alt-text="Screenshot that shows an application's Object ID.":::
+
 ## Step 2: Get the owner (service principal's Object ID)
 
 To get the **Object ID** of the service principal associated with the application, follow these steps:
@@ -37,6 +39,8 @@ To get the **Object ID** of the service principal associated with the applicatio
 2. Navigate to Microsoft Entra admin center.
 3. Browse to **Identity** > **Applications** > **Enterprise registrations**.
 4. Locate the application and copy its **Object ID**.
+
+    :::image type="content" source="media/add-owner-for-application-microsoft-graph/service-principle-object-id.png" alt-text="Screenshot that shows an service principal's Object ID.":::
 
 ## Step 3: Add the owner to the application
 
@@ -66,6 +70,8 @@ Here are two methods to do this:
 
     Here's an example of what it looks like in Microsoft Graph Explorer:
 
+    :::image type="content" source="media/add-owner-for-application-microsoft-graph/microsoft-graph-api-call.png" alt-text="Screenshot that shows a request in Microsoft Graph Explorer.":::
+
 
 ##### Troubleshoot Forbidden (403) error
 
@@ -84,6 +90,8 @@ You might encounter the following error during this process:
 ```
 
 To resolve it, consent to the API permissions **Application.ReadWrite.All** and **Directory.AccessAsUser.All** for Microsoft Graph Explorer under the **Modify permissions** tab:
+
+:::image type="content" source="media/add-owner-for-application-microsoft-graph/modify-permissions.png" alt-text="Screenshot that shows how to modify permission in Microsoft Graph Explorer.":::
 
 #### Method 2: Using Microsoft Graph PowerShell
 
