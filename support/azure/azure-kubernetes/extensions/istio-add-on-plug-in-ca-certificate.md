@@ -1,7 +1,7 @@
 ---
 title: Istio service mesh add-on plug-in CA certificate troubleshooting
 description: Learn how to do plug-in CA certificate troubleshooting on the Istio service mesh add-on for Azure Kubernetes Service (AKS).
-ms.date: 03/17/2025
+ms.date: 04/01/2025
 author: deveshdama
 ms.author: ddama
 editor: v-jsitser
