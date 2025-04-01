@@ -5,6 +5,7 @@ author: sbmjais
 ms.author: shjais
 ms.topic: troubleshooting
 ms.date: 02/28/2022
+ms.custom: sap:Opportunity
 ---
 
 # Troubleshoot issues with table views

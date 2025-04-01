@@ -5,6 +5,7 @@ author: sbmjais
 ms.author: shjais
 ms.topic: troubleshooting
 ms.date: 02/28/2022
+ms.custom: sap:Lead
 ---
 
 # Troubleshoot issues with automatic generation of contact or company-related fields

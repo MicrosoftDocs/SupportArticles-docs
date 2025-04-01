@@ -6,6 +6,7 @@ ms.reviewer: lavanyakr
 ms.author: shjais
 ms.topic: troubleshooting
 ms.date: 02/28/2022
+ms.custom: sap:Price list
 ---
 
 # Troubleshoot issues with currency and price lists

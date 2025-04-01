@@ -5,6 +5,7 @@ author: sbmjais
 ms.author: shjais
 ms.reviewer: lavanyakr
 ms.date: 09/25/2023
+ms.custom: sap:Opportunity
 ---
 # Troubleshoot common issues with multiple tables
 
