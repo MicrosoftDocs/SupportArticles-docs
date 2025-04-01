@@ -3035,6 +3035,8 @@ items:
       href: ./installing-updates-features-roles/block-user-access-windows-update.md
     - name: Re-register Windows client/server in WSUS
       href: ./installing-updates-features-roles/re-register-windows-clientserver-in-wsus.md
+    - name: Unexpected automatic update when it is disabled by Group Policy
+      href: installing-updates-features-roles/unexpected-automatic-update-when-disabled-by-group-policy.md
     - name: Why you may be prompted to restart your computer
       href: ./installing-updates-features-roles/why-prompted-restart-computer.md
     - name: WSUS 3.0 SP2 Dynamic Install for Server Manager
