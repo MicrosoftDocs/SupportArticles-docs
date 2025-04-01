@@ -23,7 +23,7 @@ However, the pod stays in the **ContainerCreating** status. When you run the `ku
 - [Volume is already used by pod](#error3)
 - [StorageAccountType UltraSSD_LRS can be used only when additionalCapabilities.ultraSSDEnabled is set](#error4)
 - [ApplyFSGroup failed for vol](#error5)
-- [node(s) exceed max volume count](#error6)
+- [Node(s) exceed max volume count](#error6)
 
 See the following sections for error details, possible causes and solutions.
 
@@ -190,20 +190,25 @@ OnRootMismatch: Only change permissions and ownership if permission and ownershi
 
 For more information, see [Configure volume permission and ownership change policy for Pods](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#configure-volume-permission-and-ownership-change-policy-for-pods).
 
-## <a id="error6"></a>node(s) exceed max volume count
+## <a id="error6"></a>Node(s) exceed max volume count
+
 Here are details of this error:
+
 ```output
 Events:
 Type   Reason      Age  From        Message
 ----   ------      ---- ----        -------
 Warning FailedScheduling 25s  default-scheduler 0/8 nodes are available: 8 node(s) exceed max volume count. preemption: 0/8 nodes are available: 8 No preemption victims found for incoming pod..
 ```
-### Cause: Max Disks for VM size is reached 
-The maximum disk limit is reached for the specified VM Size .
+### Cause: Maximum disk limit is reached
+
+The node has reached its maximum disk capacity. In AKS, the number of disks per node depends on the VM size configured for the node pool.
 
 ### Solution: Use anotehr VM size with more disk limits
-You can delete existing disks for the Node ,or scale the nodepool, or add new nodepool with VM size with more disk limit.
-Also pay attention for the limit of disks per node should not exceed the [limit](https://kubernetes.io/docs/concepts/storage/storage-limits/#kubernetes-default-limits).
+
+To resolve the issue, we recommend using another VM size that supports more disks for the node.
+
+Additionally, make sure that the number of disks per node does not exceed the [Kubernetes default limits](https://kubernetes.io/docs/concepts/storage/storage-limits/#kubernetes-default-limits).
 
 ## More information  
 
