@@ -11,7 +11,7 @@ ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
-ms.date: 03/25/2025
+ms.date: 04/01/2025
 ms.author: genli
 ms.custom: sap:VM Performance
 ---
@@ -264,14 +264,6 @@ To run the PerfInsights tool, follow these steps:
     ```
 
     These are examples of how to use the CLI tool to run the various [troubleshooting scenarios](#supported-troubleshooting-scenarios):
-
-    - Run continuous performance diagnostics:
-      
-      ```console
-      PerfInsights /run alwayson /sau
-      ```
-
-      To stop continuous performance diagnostics, press **Ctrl+C** or close the terminal.
 
     - Run the performance analysis scenario for 5 mins:
 
