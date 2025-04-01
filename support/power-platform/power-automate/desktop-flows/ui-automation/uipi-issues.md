@@ -9,7 +9,7 @@ author: andreas-mitrou
 ---
 # UIPI issues with UI and browser automation actions
 
-This article provides guidance to resolve issues caused by User Interface Privacy Isolation (UIPI), a security feature in Windows, which might prevent UI or browser automation actions from executing successfully. UIPI blocks certain interactions between processes running at different integrity levels, which can interfere with automation tools or scripts. As these issues could stem from multiple potential causes, we recommend reviewing each cause listed below to ensure your system settings are properly configured for successful automation.
+This article provides guidance for resolving issues caused by User Interface Privacy Isolation (UIPI), a security feature in Windows, which might prevent UI or browser automation actions from executing successfully. UIPI blocks certain interactions between processes running at different integrity levels, which can interfere with automation tools or scripts. As these issues might occur due to multiple potential causes, we recommend reviewing each cause listed to ensure your system settings are properly configured for successful automation.
 
 ## Symptoms
 
