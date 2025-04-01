@@ -17,7 +17,7 @@ You [follow this tutorial](/azure/active-directory/develop/tutorial-v2-ios) to i
 
 ## Cause
 
-This issue is typically caused by the web browser condigured for MSAL that do not allow cookie sharing.
+This issue is typically caused by the web browser used by MSAL does not allow cookie sharing.
 
 The tutorial uses the MSAL to implement authentication. MSAL SDK facilitates authentication by automatically renewing tokens. It also enables single sign-on (SSO) between other apps on the device and manages user accounts.
 
