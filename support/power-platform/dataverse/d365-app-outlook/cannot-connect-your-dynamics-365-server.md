@@ -31,7 +31,7 @@ If you're using Outlook desktop, Outlook uses Internet Explorer to display the w
 
 ### Resolution
 
-Verify your Dynamics 365 security role includes all of the required privileges in [Required privileges for Dynamics 365 App for Outlook](previous-versions/dynamicscrm-2016/administering-dynamics-365/dn946901(v=crm.8)#required-privileges).
+Verify your Dynamics 365 security role includes all of the required privileges in [Required privileges for Dynamics 365 App for Outlook](/previous-versions/dynamicscrm-2016/administering-dynamics-365/dn946901(v=crm.8)#required-privileges).
 
 ## Cause 3: The Dynamics 365 App for Outlook doesn't receive a response when requesting a page from the Dynamics 365 server
 
