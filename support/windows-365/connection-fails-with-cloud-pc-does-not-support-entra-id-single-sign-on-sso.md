@@ -32,4 +32,4 @@ To confirm the status of SSO on a Cloud PC, follow these steps:
 
 ## Reference
 
-For details on how to enable SSO on Cloud PCs, see [Configure single sign-on for Windows 365 | Microsoft Learn](/windows-365/enterprise/configure-single-sign-on)
+For details on how to enable SSO on Cloud PCs, see [Configure single sign-on for Windows 365](/windows-365/enterprise/configure-single-sign-on)
