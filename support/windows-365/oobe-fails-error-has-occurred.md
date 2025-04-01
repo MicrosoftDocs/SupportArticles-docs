@@ -14,7 +14,7 @@ ms.collection:
 
 This article helps resolve the error "An error has occurred" during the Windows Out of Box Experience (OOBE).
 
-When you first turn on Windows 365 Link, the OOBE is loaded to guide you through the process of Joining the device to your Microsoft Entra tenant and Enrolling the device into Intune management. If a failure occurs, you might encounter the following error message:
+When you first turn on Windows 365 Link, the OOBE is loaded to guide you through the process of joining the device to your Microsoft Entra tenant and enrolling the device into Intune management. If a failure occurs, you might encounter the following error message:
 
 > Let's add your Microsoft account  
 An error has occurred. Please try again.
