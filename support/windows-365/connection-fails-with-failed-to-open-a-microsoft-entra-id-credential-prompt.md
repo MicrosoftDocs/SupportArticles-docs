@@ -9,7 +9,7 @@ ms.topic: troubleshooting
 ---
 # Connection fails with "Failed to open a Microsoft Entra ID credential prompt."
 
-A user authenticates on the Sign in page. When the user tries to connect to the Cloud PC, the user might encounter the following message:
+After a user authenticates on the Sign in page, when the user tries to connect to the Cloud PC, the user might encounter the following message:
 
 > Connection Denied.  
 > Failed to open a Microsoft Entra ID credential prompt. This can happen in SSO-enabled Cloud PCs if this is the first time you are connecting to it, or if you first connected 30 days ago. Connect to your Cloud PC on another device and then try again.**
