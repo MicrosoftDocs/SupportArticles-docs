@@ -17,6 +17,6 @@ This article helps resolve the error "Something went wrong" during the Windows O
 When you first turn on Windows 365 Link, the OOBE is loaded to guide you through the process of joining the device to your Microsoft Entra tenant and enrolling the device into Intune management. If a failure occurs, you might encounter the following error message:
 
 > Something went wrong.  
-Looks like we can't connect to the URL for your organization's MDM terms of use. Try again, or contact you system administrator with the problem information from this page.
+Looks like we can't connect to the URL for your organization's MDM terms of use. Try again, or contact your system administrator with the problem information from this page.
 
 This error commonly occurs because you aren't configured for automatic enrollment in mobile device management (MDM) with Intune. For more information about the configuration details, see [Automatically enroll Windows 365 Link in Intune](/windows-365/link/intune-automatic-enrollment).
