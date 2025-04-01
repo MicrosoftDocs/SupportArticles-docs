@@ -4,6 +4,10 @@
   items:
     - name: Button in command bar don't show after grid item selection
       href: button-in-command-bar-not-appear-after-grid-item-selection.md
+- name: Enterprise Marketing
+  items:
+    - name: Troubleshoot in-app marketing
+      href: troubleshoot-in-app-marketing-issues.md
 - name: Forecasting
   items:
     - name: Troubleshoot forecasts
@@ -22,10 +26,14 @@
       href: lisn-display-widgets-not-loading-properly.md
     - name: LinkedInSalesNavigatorControlsForUnifiedClient isn't available in the organization
       href: lisn-solution-not-available-configure-lisn.md
-- name: Enterprise Marketing
+- name: Lead
   items:
-    - name: Troubleshoot in-app marketing
-      href: troubleshoot-in-app-marketing-issues.md
+    - name: Troubleshoot automatic generation of contact or company-related fields
+      href: troubleshoot-lead-form-auto-generated-contact-company-fields.md
+    - name: Troubleshoot lead qualification issues for salespeople
+      href: troubleshoot-lead-qualification-issues-for-salespeople.md
+    - name: Troubleshoot lead qualification for system administrators
+      href: troubleshoot-lead-qualification-issues-for-system-admin.md
 - name: Opportunity
   items:
     - name: Troubleshoot common tables
@@ -54,14 +62,6 @@
   items:
     - name: Troubleshoot Sales Professional
       href: troubleshoot-sales-professional-issues.md
-- name: Lead
-  items:
-    - name: Troubleshoot automatic generation of contact or company-related fields
-      href: troubleshoot-lead-form-auto-generated-contact-company-fields.md
-    - name: Troubleshoot lead qualification issues for salespeople
-      href: troubleshoot-lead-qualification-issues-for-salespeople.md
-    - name: Troubleshoot lead qualification for system administrators
-      href: troubleshoot-lead-qualification-issues-for-system-admin.md
 - name: Sales Insights
   items:
     - name: Troubleshoot emails
