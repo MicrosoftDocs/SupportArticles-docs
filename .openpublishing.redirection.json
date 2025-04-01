@@ -13219,6 +13219,14 @@
     {
       "source_path": "support/dynamics-365/sales/dynamics-crm-installations-updates-and-documentation.md",
       "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/dynamics-crm-installations-updates-and-documentation"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/import-of-solution-fails-due-to-missing-components.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/missing-dependency-on-solution-import"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/solution-install-fails-due-dependencies.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/missing-dependency-on-solution-import"
     }
   ]
 }

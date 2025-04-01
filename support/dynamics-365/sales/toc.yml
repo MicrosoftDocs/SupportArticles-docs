@@ -18,10 +18,6 @@
       href: error-code-80048539-when-importing-solution-patch.md
     - name: Solution can't be deleted due to dependencies
       href: solution-cannot-be-deleted.md
-    - name: Solution install fails because of dependencies
-      href: solution-install-fails-due-dependencies.md
-    - name: The import of the solution failed
-      href: import-of-solution-fails-due-to-missing-components.md
 - name: Data Import
   items:
     - name: Error when importing SavedQuery

@@ -28,8 +28,6 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Can't import a solution due to components are missing
-            url: import-of-solution-fails-due-to-missing-components.md
           - text: Can't import a solution with the same field name but a different Data Type
             url: the-import-of-solution-failed-error-when-importing-solution.md
           - text: Resolve an input string was not in a correct format error
