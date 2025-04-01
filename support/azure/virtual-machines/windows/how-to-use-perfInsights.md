@@ -25,7 +25,7 @@ The [Performance Diagnostics (PerfInsights) extension](https://aka.ms/perfinsigh
 - **On-demand diagnostics** helps you troubleshoot an ongoing performance issue with more in-depth data, insights, and recommendations based on data collected at a single point in time. 
 
 
-This article explains how to download the Performance Diagnostics extension to your Windows VM and run the tool using the CLI tool. You can also [run Performance Diagnostics from the portal](performance-diagnostics.md), and [deploy the Performance Diagnostics extension using an ARM template or PowerShell](performance-diagnostics-vm-extension.md).
+This article explains how to download the Performance Diagnostics extension to your Windows VM and run it from the command line using the CLI tool *PerfInsights.py*. You can also [run Performance Diagnostics from the portal](performance-diagnostics.md), and [deploy the Performance Diagnostics extension using an ARM template or PowerShell](performance-diagnostics-vm-extension.md).
 
 If you're experiencing performance problems with virtual machines, before contacting support, run Performance Diagnostics.
 
