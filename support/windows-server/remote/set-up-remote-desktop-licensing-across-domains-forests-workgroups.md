@@ -1,11 +1,11 @@
 ---
 title: Set up RD licensing across domains forests or workgroups
 description: This article talks about the questions around the supportability (or recommended approach) of setting up Remote Desktop (RD) licensing across domain, forest, or work groups.
-ms.date: 03/31/2025
+ms.date: 04/01/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, akhleshs, sabinn, warrenw
+ms.reviewer: kaushika, akhleshs, sabinn, warrenw, timnewton
 ms.custom:
 - sap:remote desktop services and terminal services\licensing for remote desktop services (terminal services)
 - pcy:WinComm User Experience
@@ -14,7 +14,6 @@ ms.custom:
 
 This article provides information on the questions around the supportability (or recommended approach) of setting up Remote Desktop (RD) licensing across domain, forest, or work groups.
 
-_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2473823
 
 > [!NOTE]
