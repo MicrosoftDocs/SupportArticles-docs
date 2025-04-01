@@ -2,7 +2,6 @@
 title: Error when accessing an app module
 description: Provides a solution to an error that occurs when you try to access an app module.
 ms.reviewer: 
-ms.topic: troubleshooting
 ms.date: 03/31/2021
 ms.custom: sap:Microsoft Dataverse\Environment and app access issues
 ---
@@ -10,16 +9,18 @@ ms.custom: sap:Microsoft Dataverse\Environment and app access issues
 
 This article provides a solution to an error that occurs when you try to access an app module (business application) which requires an appropriate license and isn't assigned.
 
-_Applies to:_ &nbsp; Microsoft Dynamics CRM Online  
+_Applies to:_ &nbsp; Microsoft Dynamics 365  
 _Original KB number:_ &nbsp; 4548022
 
 ## Symptoms
 
 When a user tries to access an app module (business application) which requires an appropriate license and isn't assigned, the user receives the following error message:
 
-> This app requires a license and you don't have the appropriate license to access this app. Please contact your administrator to get the appropriate license assigned, as per details provided.  
-Details  
-User does not have a license to access this app module uniqueName=< unique name> with Id=\<Id> from publisher=\<publisher name>. A license is required with one of the service plans: \<Service Plan name>: \<Service Plan Id>. Please refer to the article \<link to this KB> for more details.
+> This app requires a license and you don't have the appropriate license to access this app. Please contact your administrator to get the appropriate license assigned, as per details provided.
+>
+> Details
+>
+> User does not have a license to access this app module uniqueName=< unique name> with Id=\<Id> from publisher=\<publisher name>. A license is required with one of the service plans: \<Service Plan name>: \<Service Plan Id>. Please refer to the article \<link to this KB> for more details.
 
 ## Cause
 
@@ -29,7 +30,7 @@ For example, if the user with a team member license tries to access the Customer
 
 > This app requires a license and you don't have the appropriate license to access this app. Please contact your administrator to get the appropriate license assigned, as per details provided.  
 >
->Details
+> Details
 >
 > User does not have any license to access this app module uniqueName= Customerservicehub from publisher= dynamics365customerengagement. A license is required with one of the service plans: 'Dynamics 365 for Customer Service: \<GUID>
 
