@@ -19,11 +19,11 @@ When you run a desktop flow in Power Automate that includes the [Launch new Inte
 
 ## Cause
 
-This issue could be caused due to the security settings in Internet Explorer not being configured properly. Specifically, the **Enable Protected Mode** setting may be preventing the automation tool from assuming control of the browser.
+This issue might occur because the security settings in Internet Explorer aren't configured properly. Specifically, the **Enable Protected Mode** setting might prevent the automation tool from controlling the browser.
 
 ## Resolution
 
-1. Open Internet Explorer
+1. Open Internet Explorer.
 2. Go to **settings** > **Internet Options**.
 3. Navigate to the **Security** tab.
 4. Under the **Internet** section, clear the **Enable Protected Mode** checkbox.
