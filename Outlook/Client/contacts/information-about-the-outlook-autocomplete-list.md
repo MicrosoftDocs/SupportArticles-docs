@@ -18,7 +18,7 @@ appliesto:
   - Outlook 2019
   - Outlook 2016
 search.appverid: MET150
-ms.date: 03/27/2025
+ms.date: 04/01/2025
 ---
 # The Outlook AutoComplete list
 
@@ -34,7 +34,7 @@ Microsoft Outlook maintains the AutoComplete list. The list is used by both the 
 
 ## Limited number of entries
 
-Outlook limits the number of entries that you can save in the AutoComplete list. After you reach the limit, Outlook uses an internal algorithm based on the process of *usage weighting* to determine the best names to remove from the list. Therefore, you might find that some names are unexpectedly removed from your nickname cache. To avoid such a situation, you can use the following general approaches:
+Outlook limits the number of entries that you can save in the AutoComplete list. After you reach the limit, Outlook uses an internal algorithm based on *usage weighting* to determine the best names to remove from the list. Therefore, you might find that some names are unexpectedly removed from your nickname cache. To avoid such a situation, you can use the following general approaches:
 
 1. You can proactively [remove AutoComplete list entries](#remove-autocomplete-list-entries-one-at-a-time) that you no longer need. This method is the preferred approach.
 2. You can [increase the limit for the nickname cache](#change-the-limit-for-the-autocomplete-list). Because this type of configuration is untested, we don't recommend it. When a large nickname cache becomes corrupted, it's unusable and you could lose many cached entries.
@@ -83,10 +83,7 @@ To delete the AutoComplete list, use one of the following methods.
 2. On the **File** tab, select **Options**.
 3. Select the **Mail** tab.
 4. Under **Send Messages**, select **Empty Auto-Complete List**.
-
-    :::image type="content" source="media/information-about-the-outlook-autocomplete-list/empty-auto-complete-option.png" alt-text="Screenshot of the Outlook Options window that shows the Empty Auto-Complete List button.":::
-
-5. Select **Yes**.
+5. When you're prompted, select **Yes**.
 
 **Method 2**
 
