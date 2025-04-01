@@ -40,7 +40,7 @@ To prevent repeated login prompts, you must allow cookie sharing when you custom
    - **Note:** `ASWebAuthenticationSession` is the recommended method for MSAL interactive authentication on iOS 12+. It's the only supported method on iOS 13+. This method is privacy-preserving and shares cookies with system browser. SSO works between MSAL and Safari browser application because they share cookies through the system authentication session.
 -	Use `WKWebView`
    - Use Case: You explicitly configure MSAL to use `WKWebView`, and your app also uses `WKWebView` for related workflows.
-   
+
    - **Note:** You can use `WKWebView` for a consistent experience within your app. However, because it's sandboxed, `WKWebView` doesn't share session cookies with Safari system browser or other apps. This condition limits support for SSO to within your app only.
 
    For more information, see [Customizing webviews and browsers](/azure/active-directory/develop/customize-webviews).
