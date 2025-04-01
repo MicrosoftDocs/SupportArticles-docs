@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when attempting to dele
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
+ms.custom: sap:Working with Solutions
 ---
 # "The record could not be deleted because of an association" error occurs in Microsoft Dynamics 365
 

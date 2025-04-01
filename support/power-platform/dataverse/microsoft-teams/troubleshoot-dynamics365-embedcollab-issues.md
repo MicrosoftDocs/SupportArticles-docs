@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs in opening chat windows
 ms.reviewer: Usha-Rathnavel
 ms.topic: troubleshooting
 ms.date: 12/08/2021
+ms.custom: sap:Microsoft Dataverse\Microsoft Teams
 ---
 
 # Troubleshoot issue with opening chat windows in Dynamics 365

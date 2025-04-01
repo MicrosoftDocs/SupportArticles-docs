@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when using Microsoft Dy
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
+ms.custom: sap:Microsoft Dataverse\Environment and app access issues
 ---
 # We can't find any apps for your role error message in Microsoft Dynamics 365 for phones and tablets
 

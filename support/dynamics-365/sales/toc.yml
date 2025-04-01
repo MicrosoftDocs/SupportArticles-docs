@@ -1,31 +1,11 @@
 - name: Dynamics 365 Sales
   href: welcome-sales.yml
-- name: Access Issues
-  items:
-    - name: Error when accessing an app module
-      href: error-when-accessing-app-module.md
-- name: Applications and Add-ons
-  items:
-    - name: The record could not be deleted because of an association
-      href: the-record-could-not-be-deleted.md
 - name: Customization and Solutions
   items:
     - name: Button in command bar don't show after grid item selection
       href: button-in-command-bar-not-appear-after-grid-item-selection.md
-    - name: Error 80040203 (Invalid Argument)
-      href: error-code-80040203-invalid-argument-error.md
-    - name: Error 80048539 when importing a solution patch
-      href: error-code-80048539-when-importing-solution-patch.md
-    - name: Solution can't be deleted due to dependencies
-      href: solution-cannot-be-deleted.md
-- name: Data Import
-  items:
-    - name: Error when importing SavedQuery
-      href: error-importing-savedquery-in-dynamics-365.md
 - name: Dynamics 365 Server
   items:
-    - name: Can't connect to the Dynamics 365 server
-      href: cannot-connect-your-dynamics-365-server.md
 - name: LinkedIn Sales Navigator
   items:
     - name: Can't view photos on custom contact and lead forms in Unified Interface
@@ -52,18 +32,12 @@
       href: cannot-hear-other-customer.md
     - name: Seller can't make phone calls to PSTN
       href: cannot-make-phone-calls-to-pstn.md
-    - name: Troubleshoot Microsoft Teams chat integration with Dynamics 365
-      href: troubleshoot-dynamics365-embedcollab-issues.md
     - name: Teams dialer basic troubleshooting
       href: dialer-basic-troubleshooting.md
     - name: Teams dialer isn't visible in custom app
       href: dialer-not-available-in-custom-app.md
     - name: Teams dialer isn't visible in the Sales Hub
       href: dialer-not-visible-in-sales.md
-- name: Mobile Apps
-  items:
-    - name: We can't find any apps for your role
-      href: we-cannot-find-any-apps-your-role.md
 - name: Sales Hub
   items:
     - name: Troubleshoot common tables
