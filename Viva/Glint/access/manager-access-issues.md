@@ -3,7 +3,7 @@ title: Resolve Issues When Accessing Viva Glint Survey Results
 description: Resolves common issues that you might encounter when you try to view survey results for your team.
 manager: dcscontentpm
 ms.reviewer: aweixelman
-ms.date: 02/27/2025
+ms.date: 04/01/2025
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
@@ -24,10 +24,10 @@ After you sign in, you might occasionally encounter such issues as unexpected co
 
 To successfully access Viva Glint, your user account must meet the following requirements:
 
-- Exist in Microsoft Entra. Learn more about how Microsoft 365 Global Administrators or Entra admins can [set up access to Viva Glint with Microsoft Entra ID](/viva/glint/setup/access-with-azure-ad).
-    - Users can have a member type of Guest or Member. Invited Guests from other tenants in a [multitenant organization](/viva/glint/setup/glint-mto) and [Support users](/viva/glint/setup/add-external-user) need to select a domain when logging in. [Learn more](/viva/glint/setup/access-glint#sign-in-as-a-guest-or-support-user)
-- Exist in the Viva Glint app, be a member of the **Active Employees** role, and have an employee status set to **ACTIVE**.
-
+- It must exist in Microsoft Entra and have the user type set to **Member** or **Guest**. For more information about how Microsoft 365 Global Administrators or Entra admins can set up access, see [set up access to Viva Glint with Microsoft Entra ID](/viva/glint/setup/access-with-azure-ad)Learn more about how Microsoft 365 Global Administrators or Entra admins can [set up access to Viva Glint with Microsoft Entra ID](/viva/glint/setup/access-with-azure-ad).
+  
+   **Note**: Invited Guests from other tenants in a [multitenant organization](/viva/glint/setup/glint-mto) and [Support users](/viva/glint/setup/add-external-user) must select a domain when signing in. For more information, see [Sign in as a Guest or Support user](/viva/glint/setup/access-glint#sign-in-as-a-guest-or-support-user).
+- It must exist in the Viva Glint app, be a member of the **Active Employees** role, and have an employee status set to **ACTIVE**.
 
 ## No access to live surveys
 
