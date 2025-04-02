@@ -15,6 +15,8 @@ This article explains how to filter traffic that's captured by Fiddler using dom
 
 Before filtering, ensure that Fiddler is configured to capture traffic for all processes. At the bottom left corner of the Fiddler window, you can select **All processes** to change the selection.
 
+ :::image type="content" source="media/filter-fiddler-traffic-using-domain-name-client-process/all-processes.png" alt-text="Screenshot that shows the 'All processes' button." lightbox="media/filter-fiddler-traffic-using-domain-name-client-process/all-processes.png":::
+
 ## Filter traffic using Fiddler's built-in filter feature
 
 To filter traffic using Fiddler's built-in filter feature, follow these steps:
@@ -27,6 +29,8 @@ To filter traffic using Fiddler's built-in filter feature, follow these steps:
     > [!NOTE]
     > This text box will display a yellow background while editing the list, indicating unsaved changes.
 5. Select the **Actions** button to save the list. The background color will change to white, confirming the list is saved.
+
+ :::image type="content" source="media/filter-fiddler-traffic-using-domain-name-client-process/show-only-the-following-hosts.png" alt-text="Screenshot that shows how to filter traffic based on host names." lightbox="media/filter-fiddler-traffic-using-domain-name-client-process/show-only-the-following-hosts.png":::
 
 Under the **Client Process** section, you can also select a specific process to filter on. This is particularly useful for filtering a standalone application. It might be less effective for capturing browser traffic because multiple processes with the same name can make it difficult to identify the correct one.
 
@@ -73,6 +77,8 @@ Under the **Client Process** section, you can also select a specific process to 
     
     // end filter
     ```
+
+    :::image type="content" source="media/filter-fiddler-traffic-using-domain-name-client-process/add-javascript-code-in-onbeforerequest-function.png" alt-text="Screenshot that shows the JavaScript code added in the OnBeforeRequest function." lightbox="media/filter-fiddler-traffic-using-domain-name-client-process/add-javascript-code-in-onbeforerequest-function.png":::
 
     Here are explanations for some variables in the JavaScript code:
 
