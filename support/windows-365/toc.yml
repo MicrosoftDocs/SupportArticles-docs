@@ -5,7 +5,7 @@ items:
   href: ./health-checks.md
 - name: Connection errors
   href: ./connection-errors.md
-- name: Connection fails with "Cloud PC does not support Entra ID single sign-on (SSO)."
+- name: Connection fails with "Cloud PC does not support Entra ID single sign-on"
   href: connection-fails-with-cloud-pc-does-not-support-entra-id-single-sign-on-sso.md
 - name: Known issues with Windows 365 Business
   href: ./known-issues.md
