@@ -15,7 +15,7 @@ This article provides guidance for resolving issues caused by User Interface Pri
 
 Actions performing UI or browser automation might fail with an error message similar to the following one:
 
-> System.Exception: Some simulated input commands were not sent successfully. The most common reason for this happening are the security features of Windows including User Interface Privacy Isolation (UIPI). Your application can only send commands to applications of the same or lower elevation. Similarly certain commands are restricted to Accessibility/UIAutomation applications. Refer to the project home page and the code samples for more information
+> System.Exception: Some simulated input commands were not sent successfully. The most common reason for this happening are the security features of Windows including User Interface Privacy Isolation (UIPI). Your application can only send commands to applications of the same or lower elevation. Similarly certain commands are restricted to Accessibility/UIAutomation applications. Refer to the project home page and the code samples for more information.
 
 ## Cause 1: The desktop is locked during execution
 
