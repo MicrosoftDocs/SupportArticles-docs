@@ -369,4 +369,4 @@
   - name: UnsatisfiablePDB error
     href: error-codes/unsatisfiablepdb-error.md
   - name: AKSCapacityError error
-    href: error-codes/akscapacityerror-error.md
+    href: error-codes/akscapacityerror.md
