@@ -11,7 +11,7 @@ ms.custom: sap:My VM is not booting
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-This article provides steps to troubleshoot issues where a Windows VM is stuck booting with message "Applying Group Policy Environment Policy" displayed in Boot Diagnostics.
+This article provides steps to troubleshoot issues where a Windows VM is stuck booting with the message "Applying Group Policy Environment Policy" displayed in Boot Diagnostics.
 
 ## Symptom
 
@@ -23,10 +23,10 @@ When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of
 
 Further investigation is required to determine the specific cause.
 
-## Solution
+## Collect memory dump for troubleshooting
 
 For this scenario, a memory dump is required to troubleshoot the issue further and diagnose the problem.
 
-Follow [this article](./collect-os-memory-dump-file.md) to collect a memory dump. Then proceed with [creating a support request](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot).
+Follow the steps in [this article](./collect-os-memory-dump-file.md) to collect a memory dump. Then proceed with [creating a support request](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
