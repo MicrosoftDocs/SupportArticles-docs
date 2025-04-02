@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs in opening chat windows
 ms.reviewer: Usha-Rathnavel
 ms.topic: troubleshooting
 ms.date: 12/08/2021
+ms.custom: sap:Microsoft Dataverse\Microsoft Teams
 ---
 
 # Troubleshoot issue with opening chat windows in Dynamics 365
@@ -12,7 +13,7 @@ When you try to open an existing chat or start a new chat from Dynamics 365, an 
 
 ## Microsoft Edge
 
-1. Select **Settings and more** (:::image type="icon" source="media/dynamics-embed-collab-error/edge-options.png":::) at the upper-right corner of the screen and then select **Settings**. 
+1. Select **Settings and more** (:::image type="icon" source="media/troubleshoot-dynamics365-embedcollab-issues/edge-options.png":::) at the upper-right corner of the screen and then select **Settings**. 
 
 2. In the left navigation pane, select **Cookies and site permissions**. 
 
@@ -22,7 +23,7 @@ When you try to open an existing chat or start a new chat from Dynamics 365, an 
  
     If you need to keep the third-party cookies blocked, go the **Allow** section, and then select **Add**. In the **Add a site** dialog box, enter **[\*.]dynamics.com** in the **Site** field, select **Including third-party cookies on this site** check box, and then select **Add**.
 
-    :::image type="content" source="media/dynamics-embed-collab-error/edge-settings-cookies-error-collab.png" alt-text="Screenshot shows the settings of cookies and site permisisions in Microsoft Edge.":::
+    :::image type="content" source="media/troubleshoot-dynamics365-embedcollab-issues/edge-settings-cookies-error-collab.png" alt-text="Screenshot shows the settings of cookies and site permisisions in Microsoft Edge.":::
 
 **To change the settings by using GPO**:
 
@@ -32,7 +33,7 @@ When you try to open an existing chat or start a new chat from Dynamics 365, an 
 
 ## Google Chrome
 
-1. Select **Customize and control Google Chrome** (:::image type="icon" source="media/dynamics-embed-collab-error/google-options.png":::) at the upper-right corner of the screen and then select **Settings**. 
+1. Select **Customize and control Google Chrome** (:::image type="icon" source="media/troubleshoot-dynamics365-embedcollab-issues/google-options.png":::) at the upper-right corner of the screen and then select **Settings**. 
 
 2. In the left navigation pane, select **Privacy and security**, and then select **Cookies and other site data**.
 
@@ -40,7 +41,7 @@ When you try to open an existing chat or start a new chat from Dynamics 365, an 
 
     If you need to keep the third-party cookies blocked, go to the **Sites that can always use cookies** section, and then select **Add**. In the **Add a site** dialog box, enter **[\*.]dynamics.com** in the **Site** field, select **Including third-party cookies on this site** check box, and then select **Add**.
 
-    :::image type="content" source="media/dynamics-embed-collab-error/chrome-settings-cookies-error-collab.png" alt-text="Screenshot shows the general settings in Google Chrome.":::
+    :::image type="content" source="media/troubleshoot-dynamics365-embedcollab-issues/chrome-settings-cookies-error-collab.png" alt-text="Screenshot shows the general settings in Google Chrome.":::
 
 **To change the settings by using GPO**:
 
