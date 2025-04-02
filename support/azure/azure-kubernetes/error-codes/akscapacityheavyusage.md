@@ -10,7 +10,7 @@ ms.service: azure-kubernetes-service
 ms.topic: troubleshooting-problem-resolution
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
-# Troubleshoot the AAksCapacityHeavyUsage error code
+# Troubleshoot the AksCapacityHeavyUsage error code
 ---
 title: Troubleshoot the AksCapacityHeavyUsage error code
 description: Discusses how to troubleshoot the AksCapacityHeavyUsage error when you create or start a Kubernetes cluster.
