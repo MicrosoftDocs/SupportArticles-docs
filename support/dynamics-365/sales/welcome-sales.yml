@@ -28,16 +28,12 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Can't import a solution due to components are missing
-            url: import-of-solution-fails-due-to-missing-components.md
           - text: Can't import a solution with the same field name but a different Data Type
             url: the-import-of-solution-failed-error-when-importing-solution.md
           - text: Resolve an input string was not in a correct format error
             url: input-string-was-not-in-a-correct-format-error.md
           - text: Resolve an import file is too large to upload error
             url: the-import-file-is-too-large-upload.md
-          - text: Resolve an error code 80040203 (Invalid Argument)
-            url: error-code-80040203-invalid-argument-error.md
 
  # Card
   - title: Dynamics 365 client for Outlook
