@@ -5,6 +5,7 @@ ms.date: 08/22/2023
 ms.reviewer: asaftzuk, ilanak
 author: t-ronioded
 ms.author: ronihemed
+ms.custom: sap:Teams Dialer
 ---
 # Basic troubleshooting steps for Microsoft Teams dialer
 

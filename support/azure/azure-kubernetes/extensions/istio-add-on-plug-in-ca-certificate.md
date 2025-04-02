@@ -1,7 +1,7 @@
 ---
 title: Istio service mesh add-on plug-in CA certificate troubleshooting
 description: Learn how to do plug-in CA certificate troubleshooting on the Istio service mesh add-on for Azure Kubernetes Service (AKS).
-ms.date: 07/16/2024
+ms.date: 04/01/2025
 author: deveshdama
 ms.author: ddama
 editor: v-jsitser
@@ -43,7 +43,7 @@ This article discusses common troubleshooting issues with the Istio add-on plug-
 
 - For the cluster to auto-detect changes in the Azure Key Vault secrets, you have to enable [auto-rotation](/azure/aks/csi-secrets-store-configuration-options#enable-and-disable-auto-rotation) for the Azure Key Vault secrets provider add-on.
 
-- Although changes to the intermediate certificate are applied automatically, changes to the root certificate are only picked up by the control plane after the `istiod` deployment is restarted by a cronjob that the add-on deploys, as explained in the [Deployed resources](#deployed-resources) section. This cronjob runs at a 10-minute interval.
+- Changes to the root and intermediate certificates are applied automatically.
 
 ## Enable the Istio add-on to use a plug-in CA certificate
 
@@ -64,28 +64,6 @@ For more information, see [Plug in CA certificates for Istio-based service mesh 
 ## Deployed resources
 
 As part of the add-on deployment for the plug-in certificates feature, the following resources are deployed onto the cluster:
-
-- The `cacerts` Kubernetes secret is created in the `aks-istio-system` namespace at the time of the add-on deployment. This secret contains synchronized Azure Key Vault secrets:
-
-  ```bash
-  kubectl describe secret cacerts --namespace aks-istio-system
-  ```
-
-  ```output
-  Name:         cacerts
-  Namespace:    aks-istio-system
-  Labels:       secrets-store.csi.k8s.io/managed=true
-  Annotations:  <none>
-
-  Type:  opaque
-
-  Data
-  ====
-  ca-cert.pem:     1968 bytes
-  ca-key.pem:      3272 bytes
-  cert-chain.pem:  3786 bytes
-  root-cert.pem:   3636 bytes
-  ```
 
 - The `istio-spc-asm-1-21` [SecretProviderClass object](https://azure.github.io/secrets-store-csi-driver-provider-azure/docs/getting-started/usage/#create-your-own-secretproviderclass-object) is created in the `aks-istio-system` namespace at the time of the add-on deployment. This resource contains Azure-specific parameters for the Secrets Store Container Storage Interface (CSI) driver:
 
@@ -117,35 +95,6 @@ As part of the add-on deployment for the plug-in certificates feature, the follo
   -----BEGIN CERTIFICATE-----
   <certificate data>
   -----END CERTIFICATE-----
-  ```
-
-- The `istio-cert-validator-cronjob-asm-1-21` [cronjob object](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/) is created in the `aks-istio-system` namespace. This cronjob is scheduled to run every 10 minutes to check for updates on the root certificate. If the root certificate that's in the `cacerts` Kubernetes secret doesn't match the `istio-ca-root-cert` configmap in the `aks-istio-system` namespace, it restarts the `istiod-asm-1-21` deployment:
-
-  ```bash
-  kubectl get cronjob --namespace aks-istio-system
-  ```
-
-  ```output
-  NAME                                    SCHEDULE       SUSPEND   ACTIVE
-  istio-cert-validator-cronjob-asm-1-21   */10 * * * *   False     0     
-  ```
-
-  You can run the following command to check the cronjob logs for the last run:
-
-  ```bash
-  kubectl logs --namespace aks-istio-system $(kubectl get pods --namespace aks-istio-system | grep 'istio-cert-validator-cronjob-' | sort -k8 | tail -n 1 | awk '{print $1}')
-  ```
-
-  This command generates one of the following output messages, depending on whether a root certificate update was detected:
-
-  ```output
-  Root certificate update not detected.
-  ```
-
-  ```output
-  Root certificate update detected. Restarting deployment...
-  deployment.apps/istiod-asm-1-21 restarted
-  Deployment istiod-asm-1-21 restarted.
   ```
 
 ## Determine certificate type in deployment logs

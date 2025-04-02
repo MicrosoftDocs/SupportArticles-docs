@@ -22,9 +22,7 @@ This error typically occurs because the user or app doesn't have sufficient perm
 - The appropriate Microsoft Entra RBAC role for the required access level. For more information, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference).
 - The necessary API permissions to access Microsoft Graph.
 
-
 ## Troubleshooting Microsoft Graph API by using Postman
-
 
 ### Step 1: Assign Microsoft Entra RBAC role to the app registration (Service Principal)
 
@@ -110,3 +108,5 @@ This error typically occurs because the user or app doesn't have sufficient perm
 1. Send the PATCH request to disable a user. If the request is successful, you should receive a `204 No Content` response.
 
 [!INCLUDE [third-party-disclaimer](../../../includes/third-party-disclaimer.md)]
+
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

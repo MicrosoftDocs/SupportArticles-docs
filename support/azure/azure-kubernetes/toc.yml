@@ -41,6 +41,8 @@
       href: create-upgrade-delete/error-code-subscriptionrequeststhrottled.md
     - name: SubnetWithExternalResourcesCannotBeUsedByOtherResources error
       href: create-upgrade-delete/subnet-with-external-resources-cannot-be-used-by-other-resources.md
+    - name: Troubleshoot the AKSCapacityError error code
+      href: create-upgrade-delete/akscapacityerror.md
     - name: VMExtensionProvisioningTimeout error
       href: create-upgrade-delete/error-code-vmextensionprovisioningtimeout.md
     - name: WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error (5)
@@ -368,7 +370,6 @@
       href: error-codes/vmextensionerror-vhdfilenotfound.md
   - name: UnsatisfiablePDB error
     href: error-codes/unsatisfiablepdb-error.md
-  - name: AKSCapacityError error
-    href: error-codes/akscapacityerror.md
-
+  - name: AksCapacityHeavyUsage error
+    href: error-codes/akscapacityheavyusage.md
   

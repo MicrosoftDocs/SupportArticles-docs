@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting operating system disk sector size greater than 4 KB
 description: This article troubleshoots SQL Server installation or startup failures related to some new storage devices and device drivers exposing a disk sector size greater than the supported 4-KB sector size.
-ms.date: 01/10/2025
+ms.date: 03/10/2025
 ms.custom: sap:File, Filegroup, Database Operations or Corruption
 ms.reviewer: dplessMSFT, briancarrig, suresh-kandoth, rdorr, jopilov
 author: WilliamDAssafMSFT
@@ -10,7 +10,7 @@ ms.author: wiassaf
 
 # Troubleshoot errors related to system disk sector size greater than 4 KB
 
-This article provides solutions for troubleshooting errors during installation or starting an instance of SQL Server on Windows 11 and Windows Server 2022. This article is valid for all released versions of SQL Server.
+This article provides solutions for troubleshooting errors during installation or starting an instance of SQL Server on Windows. This article is valid for all released versions of SQL Server.
 
 The errors discussed in this article are related to system disk sector size greater than 4 KB.
 
@@ -18,7 +18,7 @@ _Applies to_: &nbsp; SQL Server all versions
 
 ## Symptoms
 
-**Scenario #1:** You install any version of SQL Server on a Windows 11 device. Then, you see errors similar to the following message for the Database Engine Services component of SQL Server:
+**Scenario #1:** You install any version of SQL Server. Then, you see errors similar to the following message for the Database Engine Services component of SQL Server:
 
 ```output
 Feature: Database Engine Services 
@@ -28,6 +28,14 @@ Next Step: Use the following information to resolve the error, uninstall this fe
 Component name: SQL Server Database Engine Services Instance Features 
 Component error code: 0x851A001A 
 Error description: Wait on the Database Engine recovery handle failed. Check the SQL Server error log for potential causes. 
+```
+
+Or, you see errors in the SQL Server Error Log similar to:
+
+```output
+2025-02-26 20:01:16.79 spid14s     Starting up database 'master'.
+2025-02-26 20:01:16.80 spid14s     Error: 5178, Severity: 16, State: 1.
+2025-02-26 20:01:16.80 spid14s     Cannot use file 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\master.mdf' because it was originally formatted with sector size 4096 and is now on a volume with sector size 8192. Move the file to a volume with a sector size that is the same as or smaller than the original sector size.
 ```
 
 **Scenario #2:** You install any version of SQL Server on a Windows 10 device. Then, you upgrade the OS on the device to Windows 11. When you try to start SQL Server on a Windows 11 device, the service fails to start and in the SQL Server error log, you notice entries similar to:
@@ -78,7 +86,7 @@ Cannot use file 'data file path', because it is on a volume with sector size 819
 
 During service startup, SQL Server begins the database recovery process to ensure database consistency. Part of this database recovery process involves consistency checks on the underlying filesystem before you try to open system and user database files.  
 
-On systems running Windows 11, some new storage devices and device drivers exposes a disk sector size greater than the supported 4-KB sector size.
+Some new storage devices and device drivers expose a disk sector size greater than the supported 4-KB sector size.
   
 When this occurs, SQL Server will be unable to start due to the unsupported file system as SQL Server currently supports sector storage sizes of 512 bytes and 4 KB.
 
@@ -103,56 +111,52 @@ Additionally, be aware of the Windows support policy for file system and storage
 
 ## Resolutions
 
-Microsoft is currently investigating this problem.
-
-Consider _one_ of the following solutions:
-
-- If you have multiple drives on this system, you can specify a different location for the database files after installation of SQL Server is complete. Make sure that drive reflects a supported sector size when querying the `fsutil` commands. SQL Server currently supports sector storage sizes of 512 bytes and 4096 bytes.
-
-- You can add a registry key, which will cause the behavior of Windows 11 and later to be similar to Windows 10. This forces the sector size to be emulated as 4 KB. To add the `ForcedPhysicalSectorSizeInBytes` registry key, use the [Registry Editor](#registryeditor) or run commands as described in the [PowerShell as Administrator](#powershellasadmin) section. You must reboot the device after adding the registry key in order for this change to take effect.
+- Currently, the `ForcedPhysicalSectorSizeInBytes` registry key is required to successfully install SQL Server when using modern storage platforms, such as NVMe, that provide a sector size larger than 4 KB. This Windows operating system registry key forces the sector size to be emulated as 4 KB. To add the `ForcedPhysicalSectorSizeInBytes` registry key, use **Registry Editor** or run commands as described in the **Command Prompt** or **PowerShell** section. You must reboot the device after adding the registry key for this change to take effect. There is no need to add Trace Flag 1800 for this scenario.
   
   > [!IMPORTANT]
   > This section contains steps that tell you how to modify the Windows registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see the [How to back up and restore the registry in Windows](../../../windows-server/performance/windows-registry-advanced-users.md#back-up-the-registry) article.
   
-    <a id="registryeditor"></a>**Registry Editor**
-  
-    1. Navigate to `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device`.
-    1. On the **Edit** menu, point to **New**, and then select **Multi-String value**. Name it `ForcedPhysicalSectorSizeInBytes`.
-    1. Modify the new value, type in `* 4095`. Select **OK** and close the Registry editor.
-  
-    <a id="commandpromptadmin"></a>**Command Prompt as Administrator**
+  ### [Registry Editor](#tab/registry-editor)
 
-    1. Add the key.
-  
-       ```console
-       REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" /v "ForcedPhysicalSectorSizeInBytes" /t   REG_MULTI_SZ /d "* 4095" /f
-       ```
+  1. Run Registry Editor as an administrator.
+  1. Navigate to `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device`.
+  1. Select **Edit** > **New** > **Multi-String value** and name it as `ForcedPhysicalSectorSizeInBytes`.
+  1. Right-click the name, select **Modify**, and type `* 4095` in the **Value data** field.
+  1. Select **OK** and close Registry Editor.
 
-    2. Validate if the key was added successfully.
+  ### [Command Prompt](#tab/command-prompt)
 
-       ```console
-       REG QUERY "HKLM\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" /v "ForcedPhysicalSectorSizeInBytes"
-       ```
-  
-    <a id="powershellasadmin"></a>**PowerShell as Administrator**
+  1. Run Command Prompt as an administrator.
+  1. Run the following command to add the key:
 
-    1. Add the key.
+     ```console
+     REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" /v "ForcedPhysicalSectorSizeInBytes" /t   REG_MULTI_SZ /d "* 4095" /f
+     ```
 
-       ```Powershell
-       New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" -Name   "ForcedPhysicalSectorSizeInBytes" -PropertyType MultiString        -Force -Value "* 4095"
-       ```
+  1. Run the following command to validate if the key is added successfully:
 
-    2. Validate if the key was added successfully.
+     ```console
+     REG QUERY "HKLM\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" /v 
+     "ForcedPhysicalSectorSizeInBytes"
+     ```
 
-       ```Powershell
-        Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" -Name   "ForcedPhysicalSectorSizeInBytes"
-       ```
+  ### [PowerShell](#tab/PowerShell)
 
-- You can start SQL Server by specifying the trace flag 1800. For more information, see [DBCC TRACEON](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf1800). This trace flag isn't enabled by default. Trace flag 1800 forces SQL Server to use 4 KB as the sector size for all read and write operations. When you are running SQL Server on disks with physical sector size greater than 4 KB, using the trace flag 1800 will simulate a native 4 KB drive, which is the supported sector size for SQL Server.
+  1. Run PowerShell as an administrator.
+  1. Run the following command to add the key:
 
-- Install SQL Server on available Windows 10 devices instead.
+     ```Powershell
+     New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" -Name   "ForcedPhysicalSectorSizeInBytes" -PropertyType MultiString        -Force -Value "* 4095"
+     ```
 
+  1. Run the following command to validate if the key is added successfully:
 
+     ```Powershell
+     Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" -Name   "ForcedPhysicalSectorSizeInBytes"
+     ```
+  ---
+
+- If you don't add the registry key and you have multiple drives on this system, you can specify a different location for the database files after the installation of SQL Server is complete. Make sure that the drive reflects a supported sector size when querying the `fsutil` commands. SQL Server currently supports sector storage sizes of 512 bytes and 4,096 bytes.
 
 ## More information
 
@@ -179,7 +183,7 @@ The following table provides a comparison of the sector sizes reported by the op
 | `Not DAX capable` | `Not DAX capable` |
 | `Not Thinly-Provisioned` | `Not Thinly-Provisioned` |
   
-## See also
+## Related content
 
 - [SQL Server storage types for data files](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2019?view=sql-server-ver16&preserve-view=true#StorageTypes)
 - [KB3009974 - FIX: Slow synchronization when disks have different sector sizes for primary and secondary replica log files in SQL Server AG and Logshipping environments](https://support.microsoft.com/topic/kb3009974-fix-slow-synchronization-when-disks-have-different-sector-sizes-for-primary-and-secondary-replica-log-files-in-sql-server-ag-and-logshipping-environments-ed181bf3-ce80-b6d0-f268-34135711043c)

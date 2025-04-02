@@ -7,7 +7,7 @@ ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
 # Attachments aren't tracked to Microsoft Dynamics 365 after Microsoft Defender for Office 365 is enabled
 
-_Applies to:_ &nbsp; Microsoft Dynamics 365 Customer Engagement Online  
+_Applies to:_ &nbsp; Dynamics 365 App for Outlook  
 _Original KB number:_ &nbsp; 4522769
 
 ## Symptoms

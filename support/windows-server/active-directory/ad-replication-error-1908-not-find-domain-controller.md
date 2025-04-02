@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
 ms.custom:
-- sap:active directory\on-premises active directory domain join
+- sap:active directory\active directory replication and topology
 - pcy:WinComm Directory Services
 ---
 # Troubleshooting AD Replication error 1908: Could not find the domain controller for this domain

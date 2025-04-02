@@ -5,7 +5,7 @@ ms.reviewer: matp
 ms.date: 07/26/2023
 author: nhelgren
 ms.author: nhelgren
-ms.custom: sap:Working with Solutions\Dependencies prevent a solution uninstall
+ms.custom: sap:Working with Solutions
 ---
 # "Solution cannot be deleted due to dependencies from other components" message when you uninstall a solution
 

@@ -10,7 +10,7 @@ ms.custom: sap:Dynamics 365 App for Outlook Add-In
 
 This article provides resolutions for the issue that you receive a **Can't connect to Exchange** message when using Microsoft Dynamics 365 App for Outlook.
 
-_Applies to:_ &nbsp; Microsoft Dynamics 365 Customer Engagement Online  
+_Applies to:_ &nbsp; Dynamics 365 App for Outlook  
 _Original KB number:_ &nbsp; 4534356
 
 ## Symptoms
