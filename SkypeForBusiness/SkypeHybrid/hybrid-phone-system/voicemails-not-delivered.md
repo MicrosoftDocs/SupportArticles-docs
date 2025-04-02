@@ -11,7 +11,7 @@ ms.custom:
 appliesto: 
   - Skype for Business
   - Microsoft Teams
-ms.date: 03/31/2022
+ms.date: 04/01/2025
 ---
 
 # Voicemail messages aren't delivered in Teams or Skype for Business client
@@ -25,7 +25,8 @@ Voicemails aren't delivered in Microsoft Outlook clients, the Microsoft Skype fo
 To resolve this issue, check whether you have any Microsoft Exchange Server mail flow rules (also known as transport rules) enabled, or you use a third-party email system (such as Gmail).
 
 - Exchange mail flow rules
-moght affect delivery of email messages. Cloud Voice Mail (CVM) service now supports mail flow rules. For example, rules can be enabled to mark as spam any email messages that have MP3 attachments. This ability means that voicemails are filtered out before they arrive in the Inbox. Check whether any such rules are enabled, and then change them accordingly. Voicemail notifications that have SPF failures will be delivered to Exchange. However, mail flow rules that analyze the SPF failures might prevent delivery of these messages to the user's mailbox and, therefore, won't be available in any endpoint.
+
+   These rules might affect delivery of email messages. Cloud Voice Mail (CVM) service now supports mail flow rules. For example, rules can be enabled to mark as spam any email messages that have MP3 attachments. This ability means that voicemails are filtered out before they arrive in the Inbox. Check whether any such rules are enabled, and then change them accordingly. Voicemail notifications that have SPF failures will be delivered to Exchange. However, mail flow rules that analyze the SPF failures might prevent delivery of these messages to the user's mailbox and, therefore, won't be available in any endpoint.
 - Third-party email systems
   
    Third-party email systems aren't supported. For more information, see [Set up Phone System voicemail](/microsoftteams/set-up-phone-system-voicemail?bc=%2fskypeforbusiness%2fbreadcrumb%2ftoc.json&toc=%2fskypeforbusiness%2ftoc.json).
@@ -71,7 +72,7 @@ Make sure that there are no [Exchange Web Access Policies](/exchange/client-deve
 
 ### Exchange Email Connector
 
-A change that was made in October 2018 requires one additional step when you configure Exchange on-premises support. The email item class is stripped when it's delivered through SMTP. To prevent this behavior from occurring, you must set up the connector correctly. The Skype for Business and Teams clients show voicemails only if the class is correct. To enable voicemail messages to appear in the Teams client, the message class must be IPM.Note.Microsoft.Voicemail.UM.
+A change that was made in October 2018 requires one additional step when you configure Exchange on-premises support. The email item class is stripped when it's delivered through SMTP. To prevent this behavior from occurring, you must set up the connector correctly. The Skype for Business and Teams clients show voicemails only if the class is correct. To enable voicemail messages to appear in the Teams client, the message class must be `IPM.Note.Microsoft.Voicemail.UM`.
 
 > [!NOTE]
 >
@@ -96,4 +97,4 @@ The third-party products that this article discusses are manufactured by compani
 
 **Third-party contact disclaimer**
 
-Microsoft provides third-party contact informati on to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.
+Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.
