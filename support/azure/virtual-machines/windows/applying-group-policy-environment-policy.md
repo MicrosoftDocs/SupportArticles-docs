@@ -17,7 +17,7 @@ This article provides steps to troubleshoot issues where a Windows VM is stuck b
 
 ## Symptom
 
-When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of the VM, you see that the OS hasn't completed the boot process and is displaying the message **Applying Group Policy Environment policy**.
+A Windows VM doesn't start. When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of the VM, you see that the OS hasn't completed the boot process and is displaying the message **Applying Group Policy Environment policy**.
 
 :::image type="content" source="media/applying-group-policy-environment-policy/ApplyingGroupPolicyEnvironmentPolicy.png" alt-text="Screenshot of Windows operating system displaying the message 'Applying Group Policy Environment Policy'.":::
 
