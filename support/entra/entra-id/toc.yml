@@ -61,8 +61,8 @@
         href: app-integration/package-inspector-msal-android-native.md
       - name: Enable MSAL4J logging in a Spring Boot web application
         href: app-integration/enable-msal4j-logging-spring-boot-webapp.md
-      - name: Role-based access control issues in WebAssembly app
-        href: app-integration/troubleshoot-rabc-issues-webassembly-auth-apps.md
+      - name: Repeated login prompts in iOS MSAL implementation
+        href: app-integration/repeat-login-prompts-in-msal-ios-app.md
 
 
   - name: Troubleshoot adding apps
