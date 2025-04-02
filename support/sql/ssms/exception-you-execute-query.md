@@ -1,10 +1,10 @@
 ---
-title: OutOfMemoryException Exception when you execute a query
+title: OutOfMemoryException error when you execute a query
 description: This article provides workarounds for the problem that occurs when you use SQL Server Management Studio (SSMS) to run a SQL query that returns a large amount of data.
 ms.date: 04/02/2025
 ms.custom: sap:SQL Server Management, Query and Data Tools
 ---
-# OutOfMemoryException Exception when you execute a query in SQL Server Management Studio (SSMS)
+# OutOfMemoryException error when you execute a query in SQL Server Management Studio (SSMS)
 
 This article helps you resolve the problem that occurs when you use SQL Server Management Studio (SSMS) to run a SQL query that returns a large amount of data.
 
