@@ -1,6 +1,6 @@
 ---
-title: Windows VM startup is stuck on "Applying Group Policy Environment" in Microsoft Azure
-description: Troubleshooting steps for an Azure virtual machine (VM) that is stuck booting with message "Applying Group Policy Environment Policy".
+title: Windows VM startup is stuck on "Applying Group Policy Environment policy" in Microsoft Azure
+description: Troubleshooting steps for an Azure virtual machine (VM) that is stuck booting with message "Applying Group Policy Environment policy".
 ms.date: 03/03/2025
 author: cwhitley-MSFT 
 ms.author: cwhitley
@@ -9,11 +9,11 @@ ms.collection: windows
 ms.custom: sap:My VM is not booting
 ---
 
-# VM startup is stuck on "Applying Group Policy Environment"
+# VM startup is stuck on "Applying Group Policy Environment policy"
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-This article describes an issue that Azure Windows virtual machine (VM) startup is stuck on the "Applying Group Policy Environment" screen.
+This article describes an issue that Azure Windows virtual machine (VM) startup is stuck on the "Applying Group Policy Environment policy" screen.
 
 ## Symptom
 
