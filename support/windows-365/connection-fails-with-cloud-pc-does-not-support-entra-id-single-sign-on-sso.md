@@ -7,7 +7,7 @@ ms.date: 04/02/2025
 ms.reviewer: wincicuex, erikje
 ms.topic: troubleshooting
 ---
-# Connection fails with "Cloud PC does not support Entra ID single sign-on (SSO)."
+# Windows 365 Link connection fails with "Cloud PC does not support Entra ID single sign-on (SSO)."
 
 After a user authenticates on the sign in page, when the user tries to connect to the Cloud PC, the user might encounter the following message:
 
