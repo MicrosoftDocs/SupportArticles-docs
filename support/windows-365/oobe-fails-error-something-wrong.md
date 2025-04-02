@@ -2,7 +2,7 @@
 title: OOBE Fails with Error Something Went Wrong 
 description: Helps resolve the Something went wrong error during the Windows Out of Box Experience (OOBE).
 manager: dcscontentpm
-ms.date: 04/01/2025
+ms.date: 04/02/2025
 ms.topic: troubleshooting
 ms.reviewer: kaushika, erikje, v-lianna
 ms.custom: sap:Managing Devices with Intune, intune-azure, get-started
@@ -10,7 +10,7 @@ ms.collection:
 - M365-identity-device-management
 - tier2
 ---
-# OOBE fails with error "Something went wrong"
+# OOBE fails with error "Something went wrong" when using Windows 365 Link
 
 This article helps resolve the error "Something went wrong" during the Windows Out of Box Experience (OOBE).
 
