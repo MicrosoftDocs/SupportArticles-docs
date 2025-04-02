@@ -19,8 +19,7 @@ This article provides detailed guidance for troubleshooting common issues encoun
 **Solution:**
 
 1. Ensure **Public network access** is enabled for the linked storage account.
-2. Set the IP addresses access rule to "allowAll" if linking to a Synapse Workspace.
-3. If restricting public access, enable the [managed identities feature](/power-apps/maker/data-platform/azure-synapse-link-msi) for the linked storage account and workspace.
+2. Set the IP addresses access rule to "allowAll" if linking to a Synapse Workspace. If restricting public access, enable the [managed identities feature](/power-apps/maker/data-platform/azure-synapse-link-msi) for the linked storage account and workspace.
 
 :::image type="content" source="media/troubleshoot-synapse-link-profile-creation-issues/synapse-networking-configuration.png" alt-text="Screenshot of the Networking setup page in synapse.":::
 
