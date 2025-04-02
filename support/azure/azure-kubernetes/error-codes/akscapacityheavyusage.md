@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot the AKSCapacityError error code
-description: Discusses how to troubleshoot the AKSCapacityError error when you create or start a Kubernetes cluster.
+title: Troubleshoot the AksCapacityHeavyUsage error code
+description: Discusses how to troubleshoot the AksCapacityHeavyUsage error when you create or start a Kubernetes cluster.
 ms.date: 05/29/2024
 author: axelgMS
 ms.author: axelg
@@ -10,7 +10,7 @@ ms.service: azure-kubernetes-service
 ms.topic: troubleshooting-problem-resolution
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
-# Troubleshoot the AKSCapacityError error code
+# Troubleshoot the AAksCapacityHeavyUsage error code
 ---
 title: Troubleshoot the AksCapacityHeavyUsage error code
 description: Discusses how to troubleshoot the AksCapacityHeavyUsage error when you create or start a Kubernetes cluster.
