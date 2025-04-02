@@ -1,11 +1,11 @@
 ---
 title: Printer Not Responding
 description: Provides solutions to an issue where a printer isn't responding.
-ms.date: 03/31/2025
+ms.date: 04/02/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, warrenw, v-lianna
+ms.reviewer: kaushika, warrenw, elenag, v-lianna
 ms.custom:
 - sap:print,fax,and scan\print configuration or management
 - pcy:WinComm User Experience
