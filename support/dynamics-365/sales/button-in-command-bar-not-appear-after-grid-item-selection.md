@@ -2,12 +2,12 @@
 title: Button in Command Bar Not Showing After Grid Item Selection
 description: Resolving the issue where a button in the command bar doesn't appear after selecting grid items in Microsoft Dynamics 365 Sales.
 ms.reviewer: 
-ms.date: 03/31/2021
+ms.date: 04/02/2021
 ms.custom: sap:Opportunity
 ---
 # Button in command bar doesn't appear after grid item selection in Dynamics 365 Sales
 
-This article provides a solution for the issue where a customized button on the command bar doesn't show up after selecting one or more grid items in Dynamics 365 Sales.
+This article provides a solution to the issue where a custom button on the command bar doesn't appear after selecting one or more grid items in Dynamics 365 Sales.
 
 _Applies to:_ &nbsp; Microsoft Dynamics 365 Sales
 _Original KB number:_ &nbsp; 4481268
@@ -38,7 +38,7 @@ This design affects all buttons, including both custom and out-of-box buttons, e
 
 In most cases, it's helpful to hide buttons that don't act on selected items, so that *item-specific* commands appear more prominently.
 
-If you need to run a generic command unrelated to the items selected during item selection, you can add the following rule in the definition of the custom ribbon command:
+If you need to run a generic command unrelated to the items selected during item selection, you can add the following rule to the definition of the custom ribbon command:
 
 ```XML
 <EnableRule Id="Mscrm.AnySelection" />
@@ -49,4 +49,5 @@ This rule causes the Unified Client to treat the command as both an item-specifi
 ## More information
 
 [Enhanced user experience with Unified Interface for model-driven apps](/power-apps/user/unified-interface)
+
 [Ribbons in model-driven apps](/power-apps/developer/model-driven-apps/ribbons-available)
