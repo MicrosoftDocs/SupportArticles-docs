@@ -7,7 +7,7 @@ ms.date: 04/02/2025
 ms.reviewer: wincicuex, erikje
 ms.topic: troubleshooting
 ---
-# Connection fails with "Failed to open a Microsoft Entra ID credential prompt."
+# Windows 365 Link connection fails with "Failed to open a Microsoft Entra ID credential prompt."
 
 After a user authenticates on the Sign in page, when the user tries to connect to the Cloud PC, the user might encounter the following message:
 
