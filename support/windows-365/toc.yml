@@ -5,12 +5,16 @@ items:
   href: ./health-checks.md
 - name: Connection errors
   href: ./connection-errors.md
+- name: Connection fails with "an interactive window could not be shown"
+  href: ./connection-error-interactive-window-not-shown.md
 - name: Known issues with Windows 365 Business
   href: ./known-issues.md
 - name: Known issues with Windows 365 Enterprise and Frontline
   href: ./known-issues-enterprise.md
 - name: OOBE fails with "Something went wrong"
   href: ./oobe-fails-error-something-wrong.md
+- name: OOBE fails with "An error has occurred"
+  href: ./oobe-fails-error-has-occurred.md
 - name: Provisioning errors
   href: ./provisioning-errors.md
 - name: Troubleshoot Azure network connections
