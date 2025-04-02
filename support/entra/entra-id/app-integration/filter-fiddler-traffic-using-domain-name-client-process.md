@@ -78,7 +78,7 @@ Under the **Client Process** section, you can also select a specific process to 
     // end filter
     ```
 
-    :::image type="content" source="media/filter-fiddler-traffic-using-domain-name-client-process/add-javascript-code-in-onbeforerequest-function.png" alt-text="Screenshot that shows the JavaScript code added in the OnBeforeRequest function." lightbox="media/filter-fiddler-traffic-using-domain-name-client-process/add-javascript-code-onbeforerequest-function.png":::
+    :::image type="content" source="media/filter-fiddler-traffic-using-domain-name-client-process/add-javascript-code-onbeforerequest-function.png" alt-text="Screenshot that shows the JavaScript code added in the OnBeforeRequest function." lightbox="media/filter-fiddler-traffic-using-domain-name-client-process/add-javascript-code-onbeforerequest-function.png":::
 
     Here are explanations for some variables in the JavaScript code:
 
