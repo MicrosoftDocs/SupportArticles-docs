@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot the AKSCapacityError error code
-description: Discusses how to troubleshoot the AKSCapacityError error when you create or start a Kubernetes cluster.
+title: Troubleshoot the AksCapacityHeavyUsage error code
+description: Discusses how to troubleshoot the AksCapacityHeavyUsage error when you create or start a Kubernetes cluster.
 ms.date: 05/29/2024
 author: axelgMS
 ms.author: axelg
