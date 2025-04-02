@@ -291,6 +291,8 @@
       href: boot-error-0xc0000221.md
     - name: Boot failure with error INACCESSIBLE_BOOT_DEVICE
       href: windows-boot-failure.md
+    - name: Azure VM login hangs at "Applying Group Policy Environment"
+      href: applying-group-policy-environment-policy.md
     - name: Troubleshoot Windows VM OS with missing boot manager
       href: os-bootmgr-missing.md
     - name: OS isn't found
