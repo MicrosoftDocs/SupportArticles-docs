@@ -5,7 +5,7 @@ items:
   href: ./health-checks.md
 - name: Connection errors
   href: ./connection-errors.md
-- name: Connection error "an interactive window could not be shown"
+- name: Connection fails with "an interactive window could not be shown"
   href: ./connection-error-interactive-window-not-shown.md
 - name: Known issues with Windows 365 Business
   href: ./known-issues.md
