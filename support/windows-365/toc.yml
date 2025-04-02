@@ -5,7 +5,7 @@ items:
   href: ./health-checks.md
 - name: Connection errors
   href: ./connection-errors.md
-- name: Connection fails with "connection to the remote PC was lost."
+- name: Connection fails with "connection to the remote PC was lost"
   href: connection-fails-with-connection-to-the-remote-pc-was-lost.md
 - name: Known issues with Windows 365 Business
   href: ./known-issues.md
