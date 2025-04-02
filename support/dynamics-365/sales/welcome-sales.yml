@@ -34,8 +34,6 @@ landingContent:
             url: input-string-was-not-in-a-correct-format-error.md
           - text: Resolve an import file is too large to upload error
             url: the-import-file-is-too-large-upload.md
-          - text: Resolve an error code 80040203 (Invalid Argument)
-            url: error-code-80040203-invalid-argument-error.md
 
  # Card
   - title: Dynamics 365 client for Outlook
