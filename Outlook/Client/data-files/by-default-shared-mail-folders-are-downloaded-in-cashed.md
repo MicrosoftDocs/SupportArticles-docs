@@ -43,7 +43,7 @@ For more information about large Outlook data files and performance, see [You mi
 
 If the size of your .ost file is restricted by policies, caching shared folders might result in the .ost file size limit being reached. For more information about policies that administrators can use to limit the size of Outlook data files, see [How to configure the size limit for both (.pst) and (.ost) files in Outlook](https://support.microsoft.com/help/832925).
 
-Beginning with the Outlook 2016 version, the **Download email for the past** feature applies to your mailbox and to shared mailboxes. This helps to prevent the .ost file from becoming too large. However, an administrator might have implemented a registry value to revert to the previous behavior. To determine this, check for the `DisableSyncSliderForSharedMailbox` registry value. If the value exists and is set to 1, it indicates that the entire contents of shared mailboxes are synchronized to your local .ost file. This is the behavior assuming that the registry values `CacheOthersMail` and `DownloadSharedFolders` aren't set to 0. 
+Beginning with the Outlook 2016 version, the **Download email for the past** feature applies to your mailbox and to shared mailboxes. This helps to prevent the .ost file from becoming too large. However, an administrator might have implemented a registry value to revert to the previous behavior. To determine this, check for the `DisableSyncSliderForSharedMailbox` registry value. If the value exists and is set to 1, it indicates that the entire contents of shared mailboxes are synchronized to your local .ost file. This is the behavior assuming that the registry values `CacheOthersMail` and `DownloadSharedFolders` aren't set to `0`. 
 
 For more information about the DisableSyncSliderForSharedMailbox registry value, see [Only some emails are synchronized](fewer-emails-in-shared-mailboxes-or-public-folders.md).
 
@@ -100,7 +100,7 @@ Use the following steps to change the caching behavior for shared folders in Out
 1. Exit Outlook.
 2. Select the Windows Key+R to open a Run dialog box. 
 3. Type **regedit.exe** and then press **OK**.
-4. Locate and select the registry key: `HKEY_CURRENT_USER\Software\Microsoft\Office\xx.0\Outlook\Cached Mode`
+4. Locate and select the registry key: `HKEY_CURRENT_USER\Software\Microsoft\Office\<xx.0>\Outlook\Cached Mode`
 
     The <xx.0> placeholder represents the version of Office (16.0 = Office 2016 and later versions).
     > [!NOTE]
