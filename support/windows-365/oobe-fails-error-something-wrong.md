@@ -5,10 +5,6 @@ manager: dcscontentpm
 ms.date: 04/02/2025
 ms.topic: troubleshooting
 ms.reviewer: kaushika, erikje, v-lianna
-ms.custom: sap:Managing Devices with Intune, intune-azure, get-started
-ms.collection:
-- M365-identity-device-management
-- tier2
 ---
 # OOBE fails with error "Something went wrong" when using Windows 365 Link
 
