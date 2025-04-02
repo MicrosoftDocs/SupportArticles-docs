@@ -1,11 +1,11 @@
 ---
 title: Troubleshoot common issues for Azure Linux Container Host for AKS
 description: Troubleshoot commonly reported issues for Azure Linux container hosts on Azure Kubernetes Service (AKS). 
-ms.date: 09/08/2023
+ms.date: 04/02/2025
 author: suhuruli
 ms.author: suhuruli
 editor: v-jsitser
-ms.reviewer: v-leedennis
+ms.reviewer: mnasser, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool), linux-related-content
 ---
