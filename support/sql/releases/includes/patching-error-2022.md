@@ -26,4 +26,4 @@ If you want to prevent the patch from reporting an initial failure, you can perf
 
 - Remove CDC or replication from the database in the AG.
 
-Microsoft is working on a fix for this issue and it will be available in a future CU.
+A fix for this issue can be found in [CU 16](../sqlserver-2022/cumulativeupdate16). For more information, see [CU 16, 3418488](../sqlserver-2022/cumulativeupdate16#3418488)
