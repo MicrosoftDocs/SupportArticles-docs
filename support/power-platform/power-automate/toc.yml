@@ -66,15 +66,15 @@
           href: desktop-flows/browser-automation/web-extensions-policies.md
         - name: Web automation fails when machine runtime and MSIX versions are different
           href: desktop-flows/browser-automation/machine-runtime-msix-errors.md
-        - name: Press button or click link on web page does not work on file uploader
+        - name: Press button or click link on web page doesn't work on file uploader
           href: desktop-flows/browser-automation/file-uploader-click-issues.md
         - name: How to scroll on a web page
           href: /power-automate/desktop-flows/how-to/scroll-web-page?context=/troubleshoot/power-platform/power-automate/context/context
-        - name: Run Javascript function on Web page action is not executed without any error thrown
+        - name: Run JavaScript function on web page action doesn't execute
           href: desktop-flows/browser-automation/js-not-executed.md
         - name: Web automation fails in unattended mode
           href: desktop-flows/browser-automation/web-automation-unattended-failures.md
-        - name: Web automation with Internet Explorer issue
+        - name: Issues when using Internet Explorer for web automation
           href: desktop-flows/browser-automation/web-automation-ie-issue.md
     - name: Office automation
       items:
@@ -108,7 +108,7 @@
           href: desktop-flows/ui-automation/set-drop-down-list-value-fails.md
         - name: UI element highlighting or hovering issues in virtual desktops
           href: desktop-flows/ui-automation/ui-rdp-automation/rdp-no-highlight.md
-        - name: UIPI issues with UI and Web automation actions
+        - name: UIPI issues with UI and web automation actions
           href: desktop-flows/ui-automation/uipi-issues.md
     - name: '"Could not read the application certificate" error when creating a connection'
       href: desktop-flows/application-certificate-error.md
