@@ -27,7 +27,7 @@ Further investigation is required to determine the specific cause.
 
 ## Collect memory dump for troubleshooting
 
-For this scenario, a memory dump is required to troubleshoot the issue further and diagnose the problem.
+For this scenario, a memory dump is required to troubleshoot and diagnose the issue.
 
 Follow the steps in [this article](./collect-os-memory-dump-file.md) to collect a memory dump. Then proceed with [creating a support request](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot).
 
