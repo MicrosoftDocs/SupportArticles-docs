@@ -7,7 +7,7 @@ ms.date: 04/02/2025
 ms.reviewer: wincicuex, erikje
 ms.topic: troubleshooting
 ---
-# Connection fails with "connection to the remote PC was lost."
+# Windows 365 Link connection fails with "connection to the remote PC was lost."
 
 After a user authenticates on the sign in page, when the user tries to connect to the Cloud PC, the user might encounter the following message:
 
