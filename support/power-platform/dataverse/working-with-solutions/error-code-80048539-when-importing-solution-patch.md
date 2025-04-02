@@ -1,66 +1,45 @@
 ---
 title: Error code 80048539 when importing solution patch
-description: Error code 80048539 occurs when you try to import solution patch in Microsoft Dynamics 365. Provides a resolution.
+description: Solves the error code 80048539 that occurs when you try to import a solution patch in Microsoft Dynamics 365.
 ms.reviewer: 
-ms.topic: troubleshooting
 ms.date: 03/31/2021
 ms.custom: sap:Working with Solutions
 ---
-# Error code 80048539 occurs when trying to import solution patch in Microsoft Dynamics 365
+# Error code 80048539 occurs when trying to import solution patch in Dynamics 365
 
-This article provides a resolution for the error code **80048539** that may occur when you try to import a solution patch in Microsoft Dynamics 365.
+This article provides a resolution for error code 80048539 that may occur when you try to import a solution patch in Microsoft Dynamics 365.
 
 _Applies to:_ &nbsp; Microsoft Dynamics 365  
 _Original KB number:_ &nbsp; 4471087
 
 ## Symptoms
 
-When you try to import a solution patch in Microsoft Dynamics 365, you encounter the following error:
+When you try to [import a solution patch in Microsoft Dynamics 365](/power-platform/alm/create-patches-simplify-solution-updates#export-and-import-a-patch), you receive the following error message:
 
 > The import of solution: [solution patch name] failed.  
-Error code 80048539.
+> Error code 80048539.
 
-If you download the log file and open it in Excel, you see more details such as the following:
-
-**Symptom 1 Details:**
+If you download the log file and open it in Excel, additional details similar to the following are displayed:
 
 > Failure 0x80048539  
-Solution manifest import: FAILURE: Patch version 1.0.1.0 is invalid for parent version 1.1.0.0
-
-**Symptom 2 Details:**
-
-> Failure 0x80048539  
-Solution manifest import: FAILURE: Holding solution MyPatchTesting_Upgrade already exists.
+> Solution manifest import: FAILURE: Patch version 1.0.1.0 is invalid for parent version 1.1.0.0
 
 ## Cause
 
+Error code **80048539** indicates an invalid patch is being imported.
+
+This issue occurs because the version of the solution patch being imported is lower than the version of the solution already installed. For example, a solution named "SolutionA" is already installed with version 1.1.0.0, but you attempt to import a patch with version 1.0.1.0.
+
 > [!NOTE]
-> If you're using make.powerapps.com to import your unmanaged solution update and get this error Microsoft is aware of the issue and is working on a fix. To work around the issue open the **Advanced** settings and select the option **Update (not recommended)**.
-
-Error code **80048539** indicates an invalid patch is being imported. There are a few potential causes including the following:
-
-### Cause 1
-
-If you see the error details mentioned in the Symptom 1 Details section mentioned above:
-
-The solution patch version is lower than the version of the solution already installed. For example: A solution named SolutionA is already installed with version 1.1.0.0 and you're trying to import a patch that is version 1.0.1.0.
-
-### Cause 2
-
-If you see the error details mentioned in the Symptom 2 Details section mentioned above:
-
-This can occur if you already have an upgrade imported for that solution but it hasn't yet been applied. After importing a solution that is an upgrade of an existing solution, the end of the solution import provides a button to apply the solution upgrade. If you didn't select that button during a prior import of a solution upgrade for this solution, you need to locate the solution in your solutions list and select the **Apply Solution Upgrade** button.
+> If you're using [Power Apps to import your unmanaged solution update](/power-apps/maker/data-platform/update-solutions#apply-the-upgrade-or-update-in-the-target-environment) and receive the error, as a workaround, expand the **Advanced settings** and select the **Update (not recommended)** option.  
+> Microsoft is aware of the issue and is working on a fix.
 
 ## Resolution
 
-### Resolution 1
+To resolve this issue, verify that the solution patch version you're attempting to import is a higher version than the version of the solution already installed.
 
-If you see the error details mentioned in the Symptom 1 Details section mentioned above:
+Follow these steps:
 
-Verify the solution patch version you're trying to import is a higher version than the solution already installed.
-
-### Resolution 2
-
-If you see the error details mentioned in the Symptom 2 Details section mentioned above:
-
-Navigate to **Settings**, **Customizations**, and then select **Solutions**. Select the existing installed solution you're trying to upgrade and then select **Apply Solution Upgrade**.
+- Check the version of the solution currently installed in Dynamics 365.
+- Confirm that the version of the solution patch you are trying to import is higher than the version of the installed solution.
+- If necessary, update the version number of the solution patch and attempt the import again.
