@@ -100,43 +100,67 @@ You can use PowerShell to test the SqlClient .NET provider to try to isolate the
 1. Run the following script at a command prompt:
 
       ```powershell
-      #-------------------------------
-      #
-      # get-SqlAuthScheme.ps1
-      #
-      # PowerShell script to test a System.Data.SqlClient database connection
-      #
-      # USAGE: .\get-SqlAuthScheme tcp:SQLProd01.contoso.com,1433   ' explicitly specify DNS suffix,  protocol, and port # ('tcp' must be lower case)
-      # USAGE: .\get-SqlAuthScheme SQLProd01                        ' let the driver figure out the DNS suffix, protocol, and port #
-      #
-      #-------------------------------
-      param ([string]$server = "localhost")
-      Set-ExecutionPolicy Unrestricted-Scope CurrentUser
-      $connstr = "Server=$server;Database=master;Integrated Security=SSPI"
-      [System.Data.SqlClient.SqlConnection] $conn = New-Object System.Data.SqlClient.SqlConnection
-      $conn.ConnectionString = $connstr
-      [System.DateTime] $start = Get-Date
-      $conn.Open()
-      [System.Data.SqlClient.SqlCommand] $cmd = New-Object System.Data.SqlClient.SqlCommand
-      $cmd.CommandText = "select auth_scheme from sys.dm_exec_connections where session_id=@@spid"
-      $cmd.Connection = $conn
-      $dr = $cmd.ExecuteReader()
-      $result = $dr.Read()
-      $auth_scheme = $dr.GetString(0)
-      $conn.Close()
-      $conn.Dispose()
-      [System.DateTime] $end = Get-Date
-      [System.Timespan] $span = ($end - $start)
-      "End time: " + $end.ToString("M/d/yyyy HH:mm:ss.fff")
-      "Elapsed time was " + $span.Milliseconds + " ms."
-      "Auth scheme for " + $server + ": " + $auth_scheme
+     #-------------------------------
+     #
+     # get-SqlAuthScheme.ps1
+     #
+     # PowerShell script to test a System.Data.SqlClient database connection
+     #
+     # USAGE: 
+     #   .\get-SqlAuthScheme tcp:SQLProd01.contoso.com,1433   # Explicitly specify DNS suffix, protocol, and port ('tcp' must be lowercase)
+     #   .\get-SqlAuthScheme SQLProd01                        # Let the driver figure out the DNS suffix, protocol, and port
+     #
+     #-------------------------------
+ 
+     # Define a parameter for the server name, defaulting to "localhost" if not provided
+     param ([string]$server = "localhost")
+ 
+     # Set the execution policy for the current user to Unrestricted
+     Set-ExecutionPolicy Unrestricted -Scope CurrentUser
+ 
+     # Build the connection string for the SQL Server connection
+     $connstr = "Server=$server;Database=master;Integrated Security=SSPI"
+ 
+     # Create a new SQL connection object
+     [System.Data.SqlClient.SqlConnection] $conn = New-Object System.Data.SqlClient.SqlConnection
+     $conn.ConnectionString = $connstr
+ 
+     # Record the start time of the operation
+     [System.DateTime] $start = Get-Date
+ 
+     # Open the SQL connection
+     $conn.Open()
+ 
+     # Create a new SQL command object
+     [System.Data.SqlClient.SqlCommand] $cmd = New-Object System.Data.SqlClient.SqlCommand
+     $cmd.CommandText = "select auth_scheme from sys.dm_exec_connections where session_id=@@spid" # Query to get the authentication scheme
+     $cmd.Connection = $conn
+ 
+     # Execute the query and retrieve the result
+     $dr = $cmd.ExecuteReader()
+     $result = $dr.Read() # Read the first row of the result set
+     $auth_scheme = $dr.GetString(0) # Get the authentication scheme from the first column
+ 
+     # Close and dispose of the SQL connection
+     $conn.Close()
+     $conn.Dispose()
+ 
+     # Record the end time of the operation
+     [System.DateTime] $end = Get-Date
+ 
+     # Calculate the elapsed time
+     [System.Timespan] $span = ($end - $start)
+ 
+     # Output the results
+ 
+     "Elapsed time was " + $span.Milliseconds + " ms."    # Display the elapsed time in milliseconds
+     "Auth scheme for " + $server + ": " + $auth_scheme   # Display the authentication scheme for the server
      ```
 
 You should see the following output:
 
    ```output
    C:\temp> .\get-sqlauthscheme sqlprod01
-   End time: 10/26/2020 18:00:24.753
    Elapsed time was 0 ms.
    Auth scheme for sqlprod01: NTLM
    ```
