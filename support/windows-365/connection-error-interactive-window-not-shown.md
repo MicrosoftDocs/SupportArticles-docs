@@ -2,15 +2,11 @@
 title: Connection Fails With Error "an Interactive Window Could Not Be Shown"
 description: Helps resolve the connection error "an interactive window could not be shown."
 manager: dcscontentpm
-ms.date: 04/01/2025
+ms.date: 04/02/2025
 ms.topic: troubleshooting
 ms.reviewer: kaushika, erikje, v-lianna
-ms.custom: sap:Authentication, intune-azure, get-started
-ms.collection:
-- M365-identity-device-management
-- tier2
 ---
-# Connection fails with error "an interactive window could not be shown"
+# Connection fails with error "an interactive window could not be shown" when using Windows 365 Link
 
 This article helps resolve the connection error "an interactive window could not be shown."
 
