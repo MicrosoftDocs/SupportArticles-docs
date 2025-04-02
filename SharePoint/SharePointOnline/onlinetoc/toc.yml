@@ -343,6 +343,8 @@
       href: ../Sites/customizations-revert-to-default-settings.md
     - name: Error "Site is protected by Microsoft 365 Backup and cannot be deleted"
       href: ../sites/cannot-delete-sites-protected-by-microsoft365-backup.md
+    - name: Error "This page has been blocked as it violates the Acceptable Use Policy"
+      href: ../sites/page-blocked-violates-acceptable-use-policy.md
     - name: Error when trying to change site logo on Microsoft 365 group SharePoint site
       href: ../sites/error-when-changing-o365-site-logo.md
     - name: Error when trying to delete a SharePoint site
