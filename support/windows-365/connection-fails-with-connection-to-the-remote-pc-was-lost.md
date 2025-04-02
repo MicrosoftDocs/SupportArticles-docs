@@ -1,6 +1,6 @@
 ---
-title: Connection Fails with Connection to the Remote PC Was Lost
-description: Introduces how to resolve the connection failure with the Failed to open a Microsoft Entra ID credential prompt error.
+title: Connection fails with error connection to the Remote PC was lost
+description: Introduces how to resolve the connection failure with the "connection to the Remote PC was lost" error.
 audience: itpro
 manager: dcscontentpm
 ms.date: 04/02/2025
