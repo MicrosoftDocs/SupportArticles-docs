@@ -1,7 +1,7 @@
 ---
 title: Add an owner to an application using Microsoft Graph
 description: Introduces how to add an owner (service principle) to an application using Microsoft Graph.
-ms.date: 04/01/2025
+ms.date: 04/02/2025
 ms.reviewer: willfid, v-weizhu
 ms.service: entra-id
 ms.custom: sap:Getting access denied errors (Authorization)
@@ -89,7 +89,7 @@ You might encounter the following error during this process:
 }
 ```
 
-To resolve it, consent to the API permissions **Application.ReadWrite.All** and **Directory.AccessAsUser.All** for Microsoft Graph Explorer under the **Modify permissions** tab:
+To resolve it, consent to the API permission **Application.ReadWrite.All** for Microsoft Graph Explorer under the **Modify permissions** tab.
 
 :::image type="content" source="media/add-owner-for-application-microsoft-graph/modify-permissions.png" alt-text="Screenshot that shows how to modify permission in Microsoft Graph Explorer." lightbox="media/add-owner-for-application-microsoft-graph/modify-permissions.png":::
 
