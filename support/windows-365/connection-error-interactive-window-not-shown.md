@@ -6,7 +6,7 @@ ms.date: 04/02/2025
 ms.topic: troubleshooting
 ms.reviewer: kaushika, erikje, v-lianna
 ---
-# Connection fails with error "an interactive window could not be shown" when using Windows 365 Link
+# Windows 365 Link connection fails with error "an interactive window could not be shown"
 
 This article helps resolve the connection error "an interactive window could not be shown."
 
@@ -32,7 +32,7 @@ Interactive authentication should occur during the sign-in stage. This commonly 
 
 ## Conditional Access policy not assigned
 
-If the **User actions** policy exists, confirm if you're in the scope of the user assignments.
+If the **User actions** policy exists, confirm if you're in the scope of the assignments of users.
 
 ## Mismatched access controls
 
