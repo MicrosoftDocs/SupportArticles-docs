@@ -175,8 +175,6 @@
           href: ../data-files/delete-corrupted-public-folder-rule.md
         - name: Can't change the location of .ost file
           href: ../data-files/cannot-change-the-location-of-ost-file.md
-        - name: Description of the AutoArchive feature
-          href: ../data-files/description-of-the-autoarchive-feature.md
         - name: Error 0x8000ffff when adding data file in Mail applet
           href: ../data-files/error-0x8000ffff-adding-data-file-in-mail-applet.md
         - name: Errors have been detected in .ost file
@@ -263,8 +261,6 @@
           href: ../installation/disablepst-and-pstdisablegrow-policies-are-ignored.md
         - name: Install Calendar Printing Assistant fails
           href: ../installation/installing-calendar-printing-assistant-fails.md
-        - name: Leave a copy of the message on the server is missing
-          href: ../installation/enable-leave-a-copy-of-the-message-on-the-server-outlook.md
         - name: Map classic Outlook policies to new Outlook
           href: ../installation/map-classic-outlook-policies-to-new-outlook.md
         - name: Planning considerations
