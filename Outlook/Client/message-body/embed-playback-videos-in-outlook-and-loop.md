@@ -47,7 +47,7 @@ By default, all enterprise users can use the new feature. However, as an admin, 
 - To turn off the feature for all enterprise users, disable the following policy in the [Cloud Policy service for Microsoft 365](/deployoffice/admincenter/overview-cloud-policy): **Preview and playback a Stream video from within supported Microsoft 365 applications**.
 
 > [!NOTE]
-> When the policy is disabled, users won't be able to embed or play back videos in Outlook, Loop, Microsoft Word, Microsoft PowerPoint, and Microsoft Engage. The option to disable the new feature only in Outlook isn't available. The policy doesn't affect video playback in [Microsoft Stream](https://support.microsoft.com/office/learn-more-about-stream-on-sharepoint-cf4c10c8-5ed3-4229-9e2a-60d31b31575d).
+> When the policy is disabled, users won't be able to embed or play back videos in Outlook, Loop, Microsoft Word, Microsoft PowerPoint, and Microsoft Engage. The policy doesn't affect video playback in [Microsoft Stream](https://support.microsoft.com/office/learn-more-about-stream-on-sharepoint-cf4c10c8-5ed3-4229-9e2a-60d31b31575d). The option to disable the embed and playback feature only in Outlook isn't available.
 
 ## Supported video files
 
