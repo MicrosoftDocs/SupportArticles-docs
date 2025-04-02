@@ -2,6 +2,8 @@
 title: Azure VM login stops responding at "Applying Group Policy Environment".
 description: Troubleshooting steps for an Azure virtual machine (VM) that is stuck booting with message "Applying Group Policy Environment Policy".
 ms.date: 03/03/2025
+author: cwhitley-MSFT 
+ms.author: cwhitley
 ms.service: azure-virtual-machines
 ms.collection: windows
 ms.custom: sap:My VM is not booting
