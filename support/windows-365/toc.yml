@@ -9,7 +9,7 @@ items:
   href: ./known-issues.md
 - name: Known issues with Windows 365 Enterprise and Frontline
   href: ./known-issues-enterprise.md
-- name: 'OOBE fails with error "Something went wrong"'
+- name: OOBE fails with error "Something went wrong"
   href: ./oobe-fails-error-something-wrong.md
 - name: Provisioning errors
   href: ./provisioning-errors.md
