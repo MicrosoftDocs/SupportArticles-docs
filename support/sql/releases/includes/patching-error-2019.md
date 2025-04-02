@@ -26,5 +26,5 @@ If you want to prevent the patch from reporting an initial failure, you can perf
 
 - Remove CDC or replication from the database in the AG.
 
-A fix for this issue can be found in [SQL Server 2019, CU 29](../sqlserver-2019/cumulativeupdate29). For more information, see [CU 29, 3418490](../sqlserver-2019/cumulativeupdate29#3418490)
+A fix for this issue can be found in [SQL Server 2019, CU 29](../sqlserver-2019/cumulativeupdate29.md). For more information, see [CU 29, 3418490](../sqlserver-2019/cumulativeupdate29.md#3418490)
 
