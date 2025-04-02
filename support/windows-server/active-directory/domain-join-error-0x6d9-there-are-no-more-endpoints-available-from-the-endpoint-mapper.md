@@ -53,7 +53,7 @@ NetpDoDomainJoin: status: 0x6d9
 
 ## Cause
   
-Error 0x6D9 is logged when network connectivity is blocked between the joining client and the Domain Controller (DC). The network connectivity services the domain join operation initially over Transmission Control Protocol (TCP) port 135, and then an ephemeral port between 49152 to 65535. For more information, see [Service overview and network port requirements for Windows](../networking/service-overview-and-network-port-requirements.md).  
+Error 0x6D9 is logged when network connectivity is blocked between the joining client and the Domain Controller (DC). The network connectivity services the domain join operation initially over Transmission Control Protocol (TCP) port 135, and then an ephemeral port which is by default between 49152 to 65535. For more information, see [Service overview and network port requirements for Windows](../networking/service-overview-and-network-port-requirements.md).  
 
 The network connectivity issue can be caused by several factors, including advanced security solutions with host firewalls installed on the DC, port exhaustion, and other potential issues.
 
