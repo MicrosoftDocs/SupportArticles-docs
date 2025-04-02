@@ -6,7 +6,7 @@ ms.date: 04/02/2025
 ms.topic: troubleshooting
 ms.reviewer: kaushika, erikje, v-lianna
 ---
-# OOBE fails with error "An error has occurred" when using Windows 365 Link
+# Windows 365 Link fails to load OOBE with error "An error has occurred"
 
 This article helps resolve the error "An error has occurred" during the Windows Out of Box Experience (OOBE).
 
