@@ -5,7 +5,7 @@ items:
   href: ./health-checks.md
 - name: Connection errors
   href: ./connection-errors.md
-- name: Connection fails with "Failed to open a Microsoft Entra ID credential prompt."
+- name: Connection fails with "Failed to open a Microsoft Entra ID credential prompt"
   href: connection-fails-with-failed-to-open-a-microsoft-entra-id-credential-prompt.md
 - name: Known issues with Windows 365 Business
   href: ./known-issues.md
