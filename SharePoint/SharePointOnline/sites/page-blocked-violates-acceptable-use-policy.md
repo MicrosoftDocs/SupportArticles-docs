@@ -1,6 +1,6 @@
 ---
 title: This Page Has Been Blocked as it Violates the Acceptable Use Policy
-description: Provides solutions for an error message that indicates that your tenant engages in activities that are prohibited by the Acceptable use policy for Microsoft Online Services.
+description: Provides solutions for an error that occurs if your tenant engages in activities that are prohibited by the Acceptable Use Policy for Microsoft Online Services.
 ms.reviewer: salarson
 manager: dcscontentpm
 search.appverid: 
@@ -27,8 +27,8 @@ When users in your organization try to access a SharePoint or OneDrive in Micros
 
 ## Cause
 
-This issue occurs if your tenant engages in activities that are prohibited by the [Acceptable use policy for Microsoft Online Services](https://www.microsoft.com/microsoft-365/legal/docid12).
+This issue occurs if your tenant engages in activities that are prohibited by the [Acceptable Use Policy for Microsoft Online Services](https://www.microsoft.com/microsoft-365/legal/docid12).
 
 ## Resolution
 
-If your tenant isn't involved in prohibited activities, submit a support request by selecting **Contact support** on the [SharePoint Acceptable use policy](https://admin.microsoft.com/AdminPortal/?searchSolutions=SharePoint%20Acceptable%20use%20policy) page in the Microsoft 365 admin center.
+If you believe that your tenant isn't involved in prohibited activities, submit a support request by selecting **Contact support** on the [SharePoint Acceptable Use Policy](https://admin.microsoft.com/AdminPortal/?searchSolutions=SharePoint%20Acceptable%20use%20policy) page in the Microsoft 365 admin center.
