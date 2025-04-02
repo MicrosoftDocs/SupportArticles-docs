@@ -2,7 +2,7 @@
 title: Error Code 2147812097 Invalid License When Accessing App Module
 description: Provides a solution to an error that occurs when you try to access an app module in a Microsoft Dynamics 365 business application.
 ms.reviewer: 
-ms.date: 03/31/2021
+ms.date: 04/02/2021
 ms.custom: sap:Microsoft Dataverse\Environment and app access issues
 ---
 # "Error Code 2147812097 Invalid License: This application requires a license" error when accessing an app module
@@ -30,7 +30,7 @@ The required license name and the application names are shown in the error detai
 
 This issue occurs because the application requires a license, but the administrator hasn't assigned the appropriate license to the user of the application.
 
-For example, if a user with a Team Member license attempts to access the [Customer Service Hub application](/dynamics365/customer-service/implement/customer-service-hub-user-guide-basics), they'll receive the following error message:
+For example, if a user with a Team Member license attempts to access the [Customer Service Hub application](/dynamics365/customer-service/implement/customer-service-hub-user-guide-basics), they receive the following error message:
 
 > This app requires a license and you don't have the appropriate license to access this app. Please contact your administrator to get the appropriate license assigned, as per details provided.  
 >
@@ -44,4 +44,4 @@ To solve this issue, contact the administrator and request the appropriate licen
 
 ## More information
 
-For access to custom apps (canvas or model-driven app), you need to be assigned a Dynamics 365 Enterprise or Professional license, "Power Apps per user plan" or the environment needs to be given [Power Apps per app plans (also known as app passes)](/power-platform/admin/about-powerapps-perapp).
+For access to custom apps (canvas or model-driven app), you need to be assigned a Dynamics 365 Enterprise or Professional license, and Power Apps per user plan. The environment needs to be given [Power Apps per app plans (also known as app passes)](/power-platform/admin/about-powerapps-perapp).
