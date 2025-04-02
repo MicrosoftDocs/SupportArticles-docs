@@ -21,7 +21,7 @@ When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of
 
 ## Cause
 
-At this time, extra investigation is needed as the specific cause is unknown.
+Further investigation is required to determine the specific cause.
 
 ## Solution
 
