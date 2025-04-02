@@ -13,7 +13,7 @@ ms.custom: sap:My VM is not booting
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-This article describes an issue that Azure virtual machine (VM) startup is stuck on the "Applying Group Policy Environment" screen.
+This article describes an issue that Azure Windows virtual machine (VM) startup is stuck on the "Applying Group Policy Environment" screen.
 
 ## Symptom
 
