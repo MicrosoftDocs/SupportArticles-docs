@@ -5,6 +5,8 @@ items:
   href: ./health-checks.md
 - name: Connection errors
   href: ./connection-errors.md
+- name: Connection fails with "Cloud PC does not support Entra ID single sign-on"
+  href: connection-fails-with-cloud-pc-does-not-support-entra-id-single-sign-on-sso.md
 - name: Connection fails with "connection to the remote PC was lost"
   href: connection-fails-with-connection-to-the-remote-pc-was-lost.md
 - name: Connection fails with "Failed to open a Microsoft Entra ID credential prompt"
