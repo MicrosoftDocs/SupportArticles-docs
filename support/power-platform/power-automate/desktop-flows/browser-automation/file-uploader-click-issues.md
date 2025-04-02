@@ -31,8 +31,8 @@ As a result, the **Press button on web page** and **Click link on web page** act
 
 Try one of the following workarounds:
 
-1. Use the [Press button in window](/power-automate/desktop-flows/actions-reference/uiautomation#pressbutton) action to simulate user input, bypassing the browser's event validation.
+- Use the [Press button in window](/power-automate/desktop-flows/actions-reference/uiautomation#pressbutton) action to simulate user input, bypassing the browser's event validation.
 
     Instead of using a web element captured from a web automation action or a web browser recorder, capture the element using the **Press button in window** action or through a desktop recorder.
 
-2. Use the **Click link on web page** action with the [Send physical click](/power-automate/desktop-flows/how-to/send-physical-clicks-web-element) option enabled.
+- Use the **Click link on web page** action with the [Send physical click](/power-automate/desktop-flows/how-to/send-physical-clicks-web-element) option enabled.
