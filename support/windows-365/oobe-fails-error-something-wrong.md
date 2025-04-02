@@ -6,7 +6,7 @@ ms.date: 04/02/2025
 ms.topic: troubleshooting
 ms.reviewer: kaushika, erikje, v-lianna
 ---
-# OOBE fails with error "Something went wrong" when using Windows 365 Link
+# Windows 365 Link fails to load OOBE with error "Something went wrong"
 
 This article helps resolve the error "Something went wrong" during the Windows Out of Box Experience (OOBE).
 
