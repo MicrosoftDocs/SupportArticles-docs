@@ -2,15 +2,11 @@
 title: OOBE Fails with Error an Error Has Occurred
 description: Helps resolve the error An error has occurred during the Windows Out of Box Experience (OOBE).
 manager: dcscontentpm
-ms.date: 04/01/2025
+ms.date: 04/02/2025
 ms.topic: troubleshooting
 ms.reviewer: kaushika, erikje, v-lianna
-ms.custom: sap:Managing Devices with Intune, intune-azure, get-started
-ms.collection:
-- M365-identity-device-management
-- tier2
 ---
-# OOBE fails with error "An error has occurred"
+# OOBE fails with error "An error has occurred" when using Windows 365 Link
 
 This article helps resolve the error "An error has occurred" during the Windows Out of Box Experience (OOBE).
 
