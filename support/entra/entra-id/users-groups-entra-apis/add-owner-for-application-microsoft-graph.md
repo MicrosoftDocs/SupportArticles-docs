@@ -1,5 +1,5 @@
 ---
-title: Add an owner to an application using Microsoft Graph
+title: Add an Owner to an Application Using Microsoft Graph
 description: Introduces how to add an owner (service principle) to an application using Microsoft Graph.
 ms.date: 04/02/2025
 ms.reviewer: willfid, v-weizhu
@@ -14,18 +14,18 @@ This article outlines the required permission and step-by-step instructions to a
 
 ## Required permission
 
-The least privileged permissions for adding an owner to an application are described in the [Add owner - Permissions](/graph/api/application-post-owners#permissions) table. Those permissions, such as `Application.ReadWrite.OwnedBy`, allow an application to manage applications in which it is an owner of.
+The least privileged permissions for adding an owner to an application are described in the [Add owner - Permissions](/graph/api/application-post-owners#permissions) table. These permissions, such as `Application.ReadWrite.OwnedBy`, allow an application to manage applications of which it is an owner.
 
 ## Add an owner
 
-Application owners can be individual users, the associated service principal, or another service principal. The following sections describes how to add the related service principal to an application as an owner.
+Application owners can be individual users, the associated service principal, or another service principal. The following section describes how to add the related service principal to an application as an owner.
 
 ### Step 1: Get the application's Object ID
 
 To get the **Object ID** of the application you want to add an owner to, follow these steps:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
-2. Navigate to Microsoft Entra admin center.
+2. Navigate to the Microsoft Entra admin center.
 3. Browse to **Identity** > **Applications** > **App registrations**.
 4. Locate the application and copy its **Object ID**.
 
@@ -36,7 +36,7 @@ To get the **Object ID** of the application you want to add an owner to, follow 
 To get the **Object ID** of the service principal associated with the application, follow these steps:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
-2. Navigate to Microsoft Entra admin center.
+2. Navigate to the Microsoft Entra admin center.
 3. Browse to **Identity** > **Applications** > **Enterprise registrations**.
 4. Locate the application and copy its **Object ID**.
 
@@ -44,7 +44,7 @@ To get the **Object ID** of the service principal associated with the applicatio
 
 ### Step 3: Add the owner to the application
 
-Here are two methods to do this:
+Here're two methods to do this:
 
 - [Method 1: Using Microsoft Graph Explorer](#method-1-using-microsoft-graph-explorer)
 - [Method 2: Using Microsoft Graph PowerShell](#method-2-using-microsoft-graph-powershell)
@@ -89,13 +89,13 @@ You might encounter the following error during this process:
 }
 ```
 
-To resolve it, consent to the API permission **Application.ReadWrite.All** for Microsoft Graph Explorer under the **Modify permissions** tab.
+To resolve the issue, consent to the API permission **Application.ReadWrite.All** for Microsoft Graph Explorer under the **Modify permissions** tab.
 
 :::image type="content" source="media/add-owner-for-application-microsoft-graph/modify-permissions.png" alt-text="Screenshot that shows how to modify permission in Microsoft Graph Explorer." lightbox="media/add-owner-for-application-microsoft-graph/modify-permissions.png":::
 
 #### Method 2: Using Microsoft Graph PowerShell
 
-Here are example Microsoft Graph PowerShell scripts to add an owner to an application:
+Here's an example of Microsoft Graph PowerShell scripts to add an owner to an application:
 
 ```powershell
 Connect-MgGraph -Scopes Application.ReadWrite.All
