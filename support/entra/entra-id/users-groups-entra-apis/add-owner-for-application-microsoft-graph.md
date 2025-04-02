@@ -18,7 +18,7 @@ The least privileged permissions for adding an owner to an application are descr
 
 ## Add an owner
 
-Application owners can be individual users, the associated service principal, or another service principal. The following section describes how to add the related service principal to an application as an owner.
+Application owners can be individual users, the associated service principal, or another service principal. The following sections describe how to add the related service principal to an application as an owner.
 
 ### Step 1: Get the application's Object ID
 
