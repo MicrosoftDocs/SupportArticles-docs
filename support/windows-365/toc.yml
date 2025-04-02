@@ -11,6 +11,8 @@ items:
   href: ./known-issues.md
 - name: Known issues with Windows 365 Enterprise and Frontline
   href: ./known-issues-enterprise.md
+- name: OOBE fails with "Something went wrong"
+  href: ./oobe-fails-error-something-wrong.md
 - name: OOBE fails with "An error has occurred"
   href: ./oobe-fails-error-has-occurred.md
 - name: Provisioning errors
