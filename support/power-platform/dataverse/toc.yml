@@ -34,6 +34,8 @@
       href: d365-app-outlook/trying-to-access-dynamics-365-app-for-outlook-from-email-do-not-recognize-error.md
     - name: Can't connect to Exchange message
       href: d365-app-outlook/cannot-connect-to-exchange-message-when-using-dynamics-365-app-for-outlook.md
+    - name: Can't connect to the Dynamics 365 server
+      href: d365-app-outlook/cannot-connect-your-dynamics-365-server.md
     - name: Dynamics 365 App for Outlook is missing from the navigation pane
       href: d365-app-outlook/dynamics-365-app-for-outlook-is-missing.md
     - name: Email or appointment tracked by App for Outlook shows as Track pending
@@ -66,10 +68,14 @@
       href: d365-app-outlook/you-do-not-have-the-required-role-or-privilege-to-complete-this-action-error.md
 - name: Environment and app access issues
   items:
+    - name: Error when accessing an app module
+      href: environment-app-access/error-when-accessing-app-module.md
     - name: Troubleshoot user access issues for different environments
       href: environment-app-access/troubleshooting-user-needs-read-write-access-organization.md
     - name: Troubleshoot missing environments
-      href: environment-app-access/troubleshoot-missing-environments.md  
+      href: environment-app-access/troubleshoot-missing-environments.md
+    - name: We can't find any apps for your role
+      href: environment-app-access/we-cannot-find-any-apps-your-role.md
 - name: Email and Exchange Synchronization
   items:
     - name: 401 Unauthorized exception when using Server-Side Synchronization
@@ -164,6 +170,10 @@
   items:
     - name: Data export option isn't available in Azure Application Insights
       href: import-export-data/data-export-option-not-available-in-application-insights.md
+- name: Microsoft Teams
+  items:
+    - name: Troubleshoot Microsoft Teams chat integration with Dynamics 365
+      href: microsoft-teams/troubleshoot-dynamics365-embedcollab-issues.md
 - name: Plug-in execution
   items:
     - name: Dataverse plug-ins
@@ -211,9 +221,15 @@
     - name: Duplicate security roles after solution import
       href: working-with-solutions/duplicate-security-roles.md
     - name: Environment schema type mismatch warning during solution import
-      href: working-with-solutions/schemaType-mismatch-on-solution-import.md  
+      href: working-with-solutions/schemaType-mismatch-on-solution-import.md
+    - name: Error 80040203 (Invalid Argument)
+      href: working-with-solutions/error-code-80040203-invalid-argument-error.md
+    - name: Error 80048539 when importing a solution patch
+      href: working-with-solutions/error-code-80048539-when-importing-solution-patch.md
     - name: Error 8004F042 when importing solution patch
       href: working-with-solutions/error-code-8004f042-occurs.md
+    - name: working-with-solutions/Error when importing SavedQuery
+      href: working-with-solutions/error-importing-savedquery-in-dynamics-365.md
     - name: Environment version mismatch warning during solution import
       href: working-with-solutions/version-mismatch-on-solution-import.md
     - name: Failure when multiple publishers have shared components
@@ -236,6 +252,8 @@
       href: working-with-solutions/error-when-you-import-delete-solution.md
     - name: Resources to help troubleshoot solution import errors
       href: working-with-solutions/troubleshoot-solution-import-errors-in-dynamics-365.md
+    - name: Solution can't be deleted due to dependencies
+      href: working-with-solutions/solution-cannot-be-deleted.md
     - name: Solution checker enforcement in Managed Environments blocks or warns on import
       href: working-with-solutions/solution-checker-enforcement-import-issues.md
     - name: Solution import or app installation fails due to missing privileges
@@ -246,6 +264,8 @@
       href: working-with-solutions/the-import-file-is-too-large-upload.md
     - name: The import of solution failed when importing solution
       href: working-with-solutions/the-import-of-solution-failed-error-when-importing-solution.md
+    - name: The record could not be deleted because of an association
+      href: working-with-solutions/the-record-could-not-be-deleted.md
     - name: The solution file is invalid
       href: working-with-solutions/the-solution-file-is-invalid.md
     - name: The solution is already installed as a managed solution

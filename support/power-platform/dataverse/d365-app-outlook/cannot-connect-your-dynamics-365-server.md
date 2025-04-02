@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you use Microsoft 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
+ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
 # We're unable to connect to your Microsoft Dynamics 365 server Error occurs when using Microsoft Dynamics 365 App for Outlook
 
@@ -35,7 +36,7 @@ This error can occur for one of the following reasons:
 If you're using Outlook Desktop, Outlook uses Internet Explorer to display the web pages. For more information about how to clear the Internet Explorer history and cache, see [View and delete your browsing history in Internet Explorer](https://support.microsoft.com//topic/view-and-delete-your-browsing-history-in-internet-explorer-098ffe52-5ac9-a449-c296-c735c32c8678).  
 
 > [!IMPORTANT]
-> If this error appears to be resolved after clearing your web browser cache but eventually returns, see [Error "We’re unable to connect to your Microsoft Dynamics 365 server" when using Dynamics 365 App for Outlook](https://support.microsoft.com/help/4341413) for a potential solution.
+> If this error appears to be resolved after clearing your web browser cache but eventually returns, see [Error "We're unable to connect to your Microsoft Dynamics 365 server" when using Dynamics 365 App for Outlook](https://support.microsoft.com/help/4341413) for a potential solution.
 
 **Resolution 2:** Verify your Dynamics 365 security role includes all of the required privileges in [Required privileges for Dynamics 365 App for Outlook](/previous-versions/dynamicscrm-2016/administering-dynamics-365/dn946901(v=crm.8)).
 
