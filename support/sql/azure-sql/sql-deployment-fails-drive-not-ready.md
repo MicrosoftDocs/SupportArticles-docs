@@ -1,7 +1,7 @@
 ---
 title: SQL Server Azure VM Deployment Fails with Drive Not Ready Error
-description: Resolves an issue that occurs when you try to deploy a SQL Server instance on an Azure VM image in Azure Marketplace. 
-ms.date: 03/21/2025
+description: Resolves an issue that occurs when you try to deploy a SQL Server on Azure VM image in Azure Marketplace. 
+ms.date: 03/31/2025
 ms.author: dpless
 author: dplessMSFT
 ms.reviewer: mathoma, v-sidong
@@ -9,21 +9,21 @@ ms.custom: sap:SQL Licensing, Installation and Patching
 ---
 # "System Drive returned status not ready for use" error and Azure SQL Server VM deployment fails
 
-This article helps you resolve a failed deployment of a SQL Server instance on an Azure virtual machine (VM) image in Azure Marketplace. 
+This article helps you resolve a failed deployment of a SQL Server on Azure Virtual Machine (VM) image in Azure Marketplace. 
 
 _Applies to:_ &nbsp;SQL Server on Azure VMs
 
 ## Symptoms
 
-When you try to deploy a SQL Server instance on an Azure VM image in Azure Marketplace, the deployment fails with the following error message:
+When you try to deploy a SQL Server on Azure VM image in Azure Marketplace, the deployment fails with a status of `Conflict` and the following error: 
 
 > System Drive returned status not ready for use.
 
 ## Cause
 
-Some of the newest Azure VM sizes present a RAW Local SSD volume for ephemeral storage configured with the Non-Volatile Memory Express (NVMe) interface. This configuration might cause the deployment of a SQL Server instance on an Azure VM to fail because it attempts to place tempdb data files on the local SSD volume.  
+Some of the newest Azure VM sizes present a RAW Local SSD volume for ephemeral storage configured with the Non-Volatile Memory Express (NVMe) interface. This configuration might cause the deployment of a SQL Server on Azure VM image to fail because it attempts to place `tempdb` data files on the local SSD volume.  
 
-The deployment fails because the RAW Local SSD volume isn't formatted or initialized, which makes the ephemeral storage unavailable and prevents SQL Server from accessing it during installation. 
+The deployment fails because the RAW Local SSD volume isn't formatted or initialized, which makes the ephemeral storage unavailable and prevents SQL Server from accessing it during the installation process of SQL Server during the deployment of the virtual machine. 
 
 ## Resolution
 

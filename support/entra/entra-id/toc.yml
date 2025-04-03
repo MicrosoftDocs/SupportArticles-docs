@@ -61,8 +61,8 @@
         href: app-integration/package-inspector-msal-android-native.md
       - name: Enable MSAL4J logging in a Spring Boot web application
         href: app-integration/enable-msal4j-logging-spring-boot-webapp.md
-      - name: Role-based access control issues in WebAssembly app
-        href: app-integration/troubleshoot-rabc-issues-webassembly-auth-apps.md
+      - name: Repeated login prompts in iOS MSAL implementation
+        href: app-integration/repeat-login-prompts-in-msal-ios-app.md
 
 
   - name: Troubleshoot adding apps
@@ -118,6 +118,8 @@
         href: app-integration/error-code-aadsts7000110-request-is-ambiguous.md
       - name: Error AADSTS7000112 - application is disabled
         href: app-integration/error-code-aadsts7000112-application-is-disabled.md
+      - name: Error AADSTS900439 - USGClientNotSupportedOnPublicEndpoint
+        href: app-integration/error-aadsts900439-usgclientnotsupportedonpublicendpoint.md
       - name: Error AADSTS50000 - issuing a token or an issue with our sign-in service
         href: app-integration/error-code-aadsts50000-issuing-token-sign-in-service.md
       - name: Troubleshoot signing in to SAML-based single sign-on configured apps
@@ -281,6 +283,9 @@
      items: 
       - name: Error "The identity of the calling application could not be established"
         href: users-groups-entra-apis/identity-of-calling-application-not-established.md
+      - name: Add an owner to an application
+        href: users-groups-entra-apis/add-owner-for-application-microsoft-graph.md
+
 - name: Microsoft Entra User Provisioning and Synchronization
   items:
   - name: User Sign-in or password Problems
@@ -422,3 +427,5 @@
   items:
   - name: Capture HTTPS traffic with Fiddler
     href: app-integration/capture-https-traffic-fiddler-entra-id-app.md
+  - name: Capture Python web app HTTPS traffic with Fiddler
+    href: app-integration/capture-https-traffic-fiddler-python-app.md
