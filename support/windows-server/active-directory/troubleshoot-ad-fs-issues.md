@@ -286,7 +286,7 @@ _Original KB number:_ &nbsp; 3079872
         IDPEmail: The value of this claim should match the user principal name of the users in Microsoft Entra ID.  
         NAMEID: The value of this claim should match the sourceAnchor or ImmutableID of the user in Microsoft Entra ID.
 
-        For more information, see [Use a SAML 2.0 identity provider to implement single sign-on](/previous-versions/azure/azure-services/dn641269(v=azure.100)).
+        For more information, see [Use a SAML 2.0 Identity Provider (IdP) for Single Sign On](/entra/identity/hybrid/connect/how-to-connect-fed-saml-idp).
 
         Examples:  
         This issue can occur when the UPN of a synced user is changed in AD but without updating the online directory. In this scenario, you can either correct the user's UPN in AD (to match the related user's logon name) or run the following cmdlet to change the logon name of the related user in the Online directory:
@@ -317,13 +317,13 @@ _Original KB number:_ &nbsp; 3079872
         > [!NOTE]
         > \<domain_id> is a placeholder for your domain's name. For example, contoso.com.
 
-        You can also run the following tool to schedule a task on the AD FS server that will monitor for the Auto-certificate rollover of the token-signing certificate and update the Office 365 tenant automatically.
-
-        [Verify and manage single sign-on with AD FS](/previous-versions/azure/azure-services/jj151809(v=azure.100))
+        For more information, see [Renew federation certificates for Microsoft 365 and Microsoft Entra ID](/entra/identity/hybrid/connect/how-to-connect-fed-o365-certs).
 
    - Issuance Transform claim rules for the Office 365 RP aren't configured correctly.
 
-        In a scenario where you have multiple TLDs (top-level domains), you might have logon issues if the Supportmultipledomain switch wasn't used when the RP trust was created and updated. For more information, see [SupportMultipleDomain switch, when managing SSO to Office 365](/archive/blogs/abizerh/supportmultipledomain-switch-when-managing-sso-to-office-365).
+     In a scenario where you have multiple TLDs (top-level domains), you might have logon issues if the Supportmultipledomain switch wasn't used when the RP trust was created and updated.
+
+     We recommend to use Entra Connect for managing the federations and the claim rules. This usually automatically configured ADFS and Entra appropriately. For more information, see [Multiple Domain Support for Federating with Microsoft Entra ID](/entra/identity/hybrid/connect/how-to-connect-install-multiple-domains).
 
    - Make sure that token encryption isn't being used by AD FS or STS when a token is issued to Microsoft Entra ID or to Office 365.
 6. There are stale cached credentials in Windows Credential Manager.
