@@ -1,7 +1,7 @@
 ---
 title: Error 3853 When Using Incremental Statistics and Resumable Index Operations
 description: Resolves SQL Server error 3853 that occurs when you use incremental statistics and resumable index operations concurrently.
-ms.date: 04/01/2025
+ms.date: 04/03/2025
 ms.custom: sap:File, Filegroup, Database Operations or Corruption
 ms.reviewer: rtownsend, jopilov, jaferebe, atsingh, ditikman
 ---
