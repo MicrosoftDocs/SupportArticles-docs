@@ -23,6 +23,8 @@ The issue occurs because the system uses a customized form based on an outdated 
 
 ## Resolution
 
+All listed resolutions ensure that the execution context is passed as the first parameter.
+
 > [!IMPORTANT]
 > The following resolutions assume that the script error references the `Mscrm.userid_onchange` function. If the error refers to other fields or functions, such as `Mscrm.accountid_onchange` or `Mscrm.contactid_onchange`, adapt the steps accordingly.
 
