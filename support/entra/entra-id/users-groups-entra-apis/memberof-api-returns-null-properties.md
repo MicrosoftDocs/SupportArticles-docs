@@ -18,7 +18,7 @@ When calling one of the following APIs that can return the list of groups and di
 GET https://graph.microsoft.com/v1.0/me/memberOf
 ```
 
-```http
+```msgraph
 GET https://graph.microsoft.com/v1.0/users/{id | userPrincipalName}/memberOf
 ```
 
