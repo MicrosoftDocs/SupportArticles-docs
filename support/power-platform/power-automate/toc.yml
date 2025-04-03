@@ -164,6 +164,8 @@
       href: desktop-flows/invalid-credentials-errors-running-desktop-flows.md
     - name: Invalid credentials error using Microsoft Entra account
       href: desktop-flows/troubleshoot-ui-flow-invalid-credentials-error-using-aad-account.md
+    - name: Issue while running the action 'Run PowerShell script'
+      href: desktop-flows/issue-while-running-action-Run-PowerShell-script.md
     - name: '"Logon type not granted" error when creating connection or running desktop flow'
       href: desktop-flows/logon-type-has-not-been-granted.md
     - name: Machine registration failure
