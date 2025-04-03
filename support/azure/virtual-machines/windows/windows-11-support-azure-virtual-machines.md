@@ -8,7 +8,7 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 ms.reviewer: scotro, kageorge, jarrettr, yutorigo, v-leedennis
 editor: v-jsitser
 ms.topic: upgrade-and-migration-article
-ms.date: 03/28/2025
+ms.date: 04/02/2025
 ---
 # Windows 11 support on Azure virtual machines
 
