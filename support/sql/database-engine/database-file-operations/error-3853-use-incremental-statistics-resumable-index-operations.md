@@ -50,5 +50,3 @@ If the issue occurs, try the following options:
 - Create a new database and import the data from the corrupted database using the SQL Server Import and Export Wizard, Bulk Copy Program (BCP) utility, or manual export-import method.
 - Upgrade to SQL Server 2022, where the issue has been fixed.
 - Contact the Microsoft Customer Support team to request assistance with correcting the metadata.
-
-1
