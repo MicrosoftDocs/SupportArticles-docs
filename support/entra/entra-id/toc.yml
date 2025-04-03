@@ -263,8 +263,6 @@
       href: mfa/cannot-verify-account-reset-pwd.md
 - name: Microsoft Graph Users, Groups, and Entra APIs
   items: 
-   - name: Can't modify user mail or phone number attributes
-     href: users-groups-entra-apis/cannot-modify-user-mail-phone-attributes.md
    - name: Handling errors in Graph API requests with Invoke-RestMethod
      href: app-integration/graph-api-error-handling-invoke-restmethod.md
    - name: Troubleshoot Authorization RequestDenied error
@@ -273,6 +271,10 @@
      href: app-integration/404-not-found-error-manage-objects-microsoft-graph.md
    - name: Use managed identities to call Graph APIs in VB.Net and C#
      href: users-groups-entra-apis/call-graph-api-using-managed-dentities.md
+   - name: Getting access denied errors (Authorization)
+     items:
+      - name: Can't modify user mail or phone number attributes
+        href: users-groups-entra-apis/cannot-modify-user-mail-phone-attributes.md
 - name: Microsoft Entra User Provisioning and Synchronization
   items:
   - name: User Sign-in or password Problems
