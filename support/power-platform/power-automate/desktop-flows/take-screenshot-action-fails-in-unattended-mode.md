@@ -41,7 +41,7 @@ The security policy refers to the way a UAC window (for admin privileges) is pro
 
 ## Resolution 1: Locate and allow binaries except for non-Windows ones to run without elevation prompt
 
-:::image type="content" source="media/msentramachinealwayspromptingforpassword-error/msentramachinealwayspromptingforpassword.png" alt-text="Screenshot of the error code shown in the Body section of the Run a flow built with Power Automate for desktop page.":::
+:::image type="content" source="media/take-screenshot-action-fails-in-unattended-mode/local security policy.png" alt-text="Screenshot of the local security policies window":::
 
 ## Resolution 2: Change the registry key below
 
