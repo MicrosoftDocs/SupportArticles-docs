@@ -57,10 +57,12 @@ To help troubleshoot Outlook issues in a Microsoft 365 environment, follow these
 
 ### Step 3: Run Outlook Diagnostics
 
-1. Run the [Outlook won't start](https://aka.ms/SaRA-OutlookWontStart) automated diagnostics to fix the issues.
+1. Run the [Classic Outlook Connectivity troubleshooter](https://aka.ms/SaRA-OutlookDisconnect-sarahome) to fix the issues.
 
     > [!NOTE]
-    > Select **Run** when you're prompted by your browser.
+    >
+    > - The troubleshooter doesn't work in new Outlook for Windows.
+    > - To run the troubleshooter, make sure that you're using the same Windows device that classic Outlook is installed on. Additionally, make sure that your device is running Windows 10 or a later version.
 2. If the tool doesn't resolve the issue, use the [Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f#ID0ED6=Outlook).
 3. On the first screen, select **Outlook**, and then select **Next**.
 4. Select any of the following options, as appropriate, and then select **Next**:
@@ -88,12 +90,25 @@ To help troubleshoot Outlook issues in a Microsoft 365 environment, follow these
 8. When you're prompted, enter your logon credentials, and then click **OK**.
 9. When Setup is finished, click **Finish**.
 
-### Step 5: Run SaRA Advanced Diagnostics before you contact Support
+### Step 5: Run the Classic Outlook Advanced Diagnostics troubleshooter
 
-This step creates detailed information about your Outlook configuration and provides solutions for any known issues that are detected. It also gives you the option to upload your results to Microsoft so that a Support engineer can review them before you make a Support call.
+The Classic Outlook Advanced Diagnostis troubleshooter generates a detailed classic Outlook configuration report.
 
-1. Click [Outlook Advanced Diagnostics](https://aka.ms/SaRA-OutlookAdvDiagnostics).
-2. Click **Run** when you are prompted by your browser.
+> [!NOTE]
+>
+> - The troubleshooter doesn't work in new Outlook for Windows.
+> - To run the troubleshooter, make sure that you're using the same Windows device that classic Outlook is installed on. Additionally, make sure that your device is running Windows 10 or a later version.
+
+To run the troubleshooter, follow these steps:
+
+1. Select the following button to start the troubleshooter.
+
+   > [!div class="nextstepaction"]
+   > [Classic Outlook Advanced Diagnostics troubleshooter](https://aka.ms/SaRA-OutlookAdvDiagExpExp-sarahome)
+   If you receive a pop-up window that displays "This site is trying to open Get Help.", select **Open**.
+1. Follow the instructions in the Get Help app to run the troubleshooter.
+
+After the troubleshooter finishes, it displays the results and provides additional information about how to resolve the issue.
 
 ## More information
 
