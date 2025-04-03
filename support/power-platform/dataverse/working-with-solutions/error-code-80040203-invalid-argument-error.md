@@ -2,7 +2,7 @@
 title: Error Code 80040203 Invalid Argument
 description: Provides a solution to an error that occurs when you try to import a solution into Microsoft Dynamics 365.
 ms.reviewer: 
-ms.date: 03/31/2021
+ms.date: 04/03/2025
 ms.custom: sap:Working with Solutions
 ---
 # Error code 80040203 (Invalid Argument) error when importing a solution into Dynamics 365
@@ -27,7 +27,7 @@ When you try to [import a solution](/powerapps/maker/data-platform/import-update
 > Number: -2147220989  
 > Invalid argument.
 
-Additionally, the error dialog may reference the following type of object:
+Additionally, the error dialog might reference the following type of object:
 
 > **Type**: Relationship  
 > **Name**: bpf_\<entity>\_\<publisher>\_\<BPF Name>  
@@ -47,15 +47,15 @@ The referenced **Entity Relationship** name is a concatenation of an entity and 
 
 ## Resolution
 
-Microsoft is aware of this issue and is working on a fix to automatically remove the relationship after a delete and update. In the meantime, the following workarounds can be used to resolve the issue.
+Microsoft is aware of this issue and is working on a fix to automatically remove the relationship after a deletion and an update. In the meantime, the following workarounds can be used to resolve the issue.
 
 ### Option 1 - Update solution file
 
-If you can't recreate the solution package and need to proceed with the import, you can manually remove the problematic relationship from the solution file.
+If you can't re-create the solution package and need to proceed with the import, you can manually remove the problematic relationship from the solution file.
 
 1. Unzip the solution file.
 2. Edit the **customization.xml** file.
-3. Search for the relationship mentioned in the error: bpf_\<entity>\_\<publisher>\_\<BPF Name>
+3. Search for the relationship mentioned in the error: bpf_\<entity>\_\<publisher>\_\<BPF Name>.
 4. Delete all XML references to the `EntityRelationship`:
 
     ```xml
@@ -68,7 +68,7 @@ If you can't recreate the solution package and need to proceed with the import, 
 6. Zip the entire directory.
 7. Import the solution again.
 
-### Option 2 - Remove the relationship from the source and recreate your solution
+### Option 2 - Remove the relationship from the source and re-create your solution
 
 This option provides a long-term resolution and ensures the issue is fixed for future exports of the solution.
 
