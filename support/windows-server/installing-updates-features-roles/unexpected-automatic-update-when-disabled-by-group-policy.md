@@ -12,10 +12,12 @@ ms.custom:
 ---
 # Windows unexpectedly install updates when automatic updates are disabled by Group Policy
 
-Windows unexpectedly install updates on Windows Server 2016 and Windows Server 2019 automatically even though the Group Policy **Configure Automatic Updates** is set to option 3 or option 4:
+Windows unexpectedly install updates on Windows Server 2016 and Windows Server 2019 automatically even though the Group Policy **Configure Automatic Updates** is set to one of the following options:
 
-- Option 3: **Download the updates automatically and notify when they are ready to be installed**
-- Option 4: **Automatically download updates and install them on the schedule specified below**
+- Option 2 - **Notify before downloading and installing any updates**
+- Option 3 - **Download the updates automatically and notify when they are ready to be installed**
+- Option 5 - **Allow local administrators to select the configuration mode that Automatic Updates should notify and install updates** (This option has not been carried over to any Win 10 Versions)
+- Option 7 - **Notify for install and notify for restart** (Windows Server only)
 
 ## Cause
 
@@ -54,3 +56,7 @@ For more information, see [Configure registry policy processing (admx.help)](htt
 
 > [!NOTE]
 > These workarounds reduce the frequency of the problem occurring but don't always prevent the issue.
+
+## Reference
+
+For more information, open [Windows security baseline](/azure/governance/policy/samples/guest-configuration-baseline-windows) and see the "Ensure 'Configure registry policy processing: Process even if the Group Policy objects have not changed' is set to 'Enabled: TRUE'" row.
