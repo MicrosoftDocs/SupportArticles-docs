@@ -56,6 +56,6 @@ Capacity is often reclaimed when other users stop or delete their AKS clusters. 
 
     For more information about improvements that we're making toward delivering a resilient cloud supply chain, see [this September 2021 Azure Blog article](https://azure.microsoft.com/blog/advancing-reliability-through-a-resilient-cloud-supply-chain/).
 
-- [General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)
+- [General troubleshooting of AKS cluster creation issues](../create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
