@@ -1,7 +1,7 @@
 ---
-title: The identity of the calling application could not be established
+title: The Identity of the Calling Application Could Not Be Established
 description: Provides solutions to the error "The identity of the calling application could not be established" when using Microsoft Graph.
-ms.date: 04/02/2025
+ms.date: 04/03/2025
 ms.service: entra-id
 ms.custom: sap:Getting access denied errors (Authorization)
 ms.reviewer: willfid, v-weizhu
@@ -31,8 +31,8 @@ You can [build an admin consent URL](/entra/identity/enterprise-apps/grant-admin
 Then, sign in with a Global Administrator account of the tenant where you are trying to access resources.
 
 > [!NOTE]
-> - Replace `{organization}` with the tenant ID, for example "aaaaaaaaaaaa-bbbb-cccc-1111-22222222".
-> - Replace `{client-id}` with the Application ID of the application, for example "dddddddddddd-eeee-ffff-3333-44444444".
+> - Replace `{organization}` with the tenant ID, for example, aaaaaaaaaaaa-bbbb-cccc-1111-22222222.
+> - Replace `{client-id}` with the Application ID of the application, for example, dddddddddddd-eeee-ffff-3333-44444444.
 
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
