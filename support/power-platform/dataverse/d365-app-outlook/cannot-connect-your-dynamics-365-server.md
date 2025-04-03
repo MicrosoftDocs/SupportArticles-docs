@@ -1,5 +1,5 @@
 ---
-title: Cannot Connect To Your Dynamics 365 Server Error
+title: Unable to Connect to Your Dynamics 365 Server Error
 description: Provides a solution to an error that occurs when you use Microsoft Dynamics 365 App for Outlook.
 ms.reviewer: 
 ms.date: 03/31/2021
@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 3124910
 
 ## Symptoms
 
-When you try to use the Dynamics 365 App for Outlook, you receive the following error message:
+When you try to use Dynamics 365 App for Outlook, you receive the following error message:
 
 > We're unable to connect to your Microsoft Dynamics 365 server. Please try closing and reopening the app.
 
@@ -33,11 +33,11 @@ If you're using Outlook desktop, Outlook uses Internet Explorer to display the w
 
 Verify your Dynamics 365 security role includes all of the required privileges in [Required privileges for Dynamics 365 App for Outlook](/previous-versions/dynamicscrm-2016/administering-dynamics-365/dn946901(v=crm.8)#required-privileges).
 
-## Cause 3: The Dynamics 365 App for Outlook doesn't receive a response when requesting a page from the Dynamics 365 server
+## Cause 3: Dynamics 365 App for Outlook doesn't receive a response when requesting a page from the Dynamics 365 server
 
 ### Resolution
 
-Check to see if your Dynamics 365 organization isn't available or something is blocking communication with Dynamics 365. Verify you can access your Dynamics 365 organization via your web browser. If you can't access your Dynamics 365 organization via your web browser, the Dynamics 365 App for Outlook can't access your organization either. If you're unable to access your Dynamics 365 organization with your web browser, contact your Dynamics 365 administrator.
+Check to see if your Dynamics 365 organization is unavailable or if something is blocking communication with Dynamics 365. Verify you can access your Dynamics 365 organization via your web browser. If you can't access your Dynamics 365 organization via your web browser, Dynamics 365 App for Outlook can't access your organization either. In this case, contact your Dynamics 365 administrator.
 
 ## More information
 
