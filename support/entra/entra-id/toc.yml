@@ -279,6 +279,8 @@
      href: app-integration/404-not-found-error-manage-objects-microsoft-graph.md
    - name: Use managed identities to call Graph APIs in VB.Net and C#
      href: users-groups-entra-apis/call-graph-api-using-managed-dentities.md
+   - name: The memberOf API returns null values for properties
+     href: users-groups-entra-apis/memberof-api-returns-null-properties.md
    - name: Getting access denied errors (Authorization)
      items:
        - name: Add an owner to an application
