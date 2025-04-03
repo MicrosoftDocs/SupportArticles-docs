@@ -1,9 +1,9 @@
 ---
 title: SQL Server Azure VM Deployment Fails with Drive Not Ready Error
 description: Resolves an issue that occurs when you try to deploy a SQL Server on Azure VM image in Azure Marketplace. 
-ms.date: 03/31/2025
-ms.author: dpless
-author: dplessMSFT
+ms.date: 04/02/2025
+ms.author: mathoma
+author: MashaMSFT
 ms.reviewer: mathoma, v-sidong
 ms.custom: sap:SQL Licensing, Installation and Patching
 ---
@@ -13,11 +13,16 @@ This article helps you resolve a failed deployment of a SQL Server on Azure Virt
 
 _Applies to:_ &nbsp;SQL Server on Azure VMs
 
+> [!NOTE]
+> The investigation of this issue is actively ongoing. The information in this article is subject to change as new details become available.
+
 ## Symptoms
 
 When you try to deploy a SQL Server on Azure VM image in Azure Marketplace, the deployment fails with a status of `Conflict` and the following error: 
 
 > System Drive returned status not ready for use.
+
+:::image type="content" source="media/sql-deployment-fails-drive-not-ready/sql-deployment-error.png" alt-text="Screenshot of the deployment error in the Azure portal." lightbox="media/sql-deployment-fails-drive-not-ready/sql-deployment-error.png":::
 
 ## Cause
 
@@ -38,13 +43,11 @@ This issue occurs with VMs that are deployed with an uninitialized temporary dri
 
 |Intel Gen 10.2|AMD Gen 9.1|
 |-|-|
-|Dlsv6|Dalsv6|
-|Dldsv6|Daldsv6|
-|Ddsv6|Dasv6|
-|Esv6|Dadsv6|
-|Edsv6|Easv6|
-|Esv6 constrained core sizes|Eadsv6|
-|Edsv6 constrained core sizes|Falsv6|
-|Lsv3 - All Azure VMs|Fasv6|
-||Famsv6|
+|[Dldsv6](/azure/virtual-machines/sizes/general-purpose/dldsv6-series#sizes-in-series)|[Daldsv6](/azure/virtual-machines/sizes/general-purpose/daldsv6-series#sizes-in-series)|
+|[Ddsv6](/azure/virtual-machines/sizes/general-purpose/ddsv6-series#sizes-in-series)|[Dadsv6](/azure/virtual-machines/sizes/general-purpose/dadsv6-series#sizes-in-series)|
+|[Edsv6](/azure/virtual-machines/sizes/memory-optimized/edsv6-series#sizes-in-series)|[Eadsv6](/azure/virtual-machines/sizes/memory-optimized/eadsv6-series#sizes-in-series)|
+|[Edsv6](/azure/virtual-machines/sizes/memory-optimized/edsv6-series#sizes-in-series)||
+|[Lsv3](/azure/virtual-machines/sizes/storage-optimized/lsv3-series#sizes-in-series) - All Azure VMs||
+
+
 
