@@ -7,7 +7,7 @@ ms.custom: sap:Desktop flows\Unattended flow runtime errors
 ms.date: 04/03/2025
 
 ---
-# An unattended desktop flow run fails with an error in the action 'Take screenshot'
+# Unattended desktop flow run fails with an error in the action 'Take screenshot'
 
 This article provides a resolution for an error that occurs in the action 'Take screenshot', when you run an unattended desktop flow in Microsoft Power Automate for desktop.
 
