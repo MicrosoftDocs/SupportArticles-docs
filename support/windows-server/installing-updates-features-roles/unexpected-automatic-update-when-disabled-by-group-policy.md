@@ -1,6 +1,6 @@
 ---
 title: Windows Unexpectedly Installs Updates When Automatic Updates Are Disabled by Group Policy
-description: Discusses a problem that  Windows unexpectedly installs updates when automatic updates are disabled by Group Policy.
+description: Discusses a problem that Windows unexpectedly installs updates when automatic updates are disabled by Group Policy.
 audience: itpro
 manager: dcscontentpm
 ms.date: 04/03/2025
