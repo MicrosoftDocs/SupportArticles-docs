@@ -5,6 +5,8 @@ author: sbmjais
 ms.author: shjais
 ms.topic: troubleshooting
 ms.date: 02/28/2022
+ms.custom: sap:Sales Insights
+
 ---
 
 # Troubleshoot issues with the Sales Premium features
