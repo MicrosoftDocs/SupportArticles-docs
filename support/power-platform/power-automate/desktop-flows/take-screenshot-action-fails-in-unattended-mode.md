@@ -31,7 +31,6 @@ Microsoft.PowerPlatform.PowerAutomate.Desktop.Actions.SDK.ActionException: Faile
 ### Modes
 - Unattended
 
-
 ## Detection
 
 While using the **Take screenshot** action, the above error is thrown when a specific security policy is in place.
@@ -46,32 +45,15 @@ The security policy refers to the way a UAC window (for admin privileges) is pro
 
 ## Resolution 2: Change the registry key below
 
-This resolution requires Power Automate for desktop version 2.49 or later. If you don't have MFA enabled for the account used by the desktop flows connection, you can set up Microsoft Entra authentication using a username and password instead.
+Hive: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System**
 
-1. Open the Registry Editor (regedit) with administrative privileges. Navigate to the following registry path, create a new DWORD-32 value with the name `UseRdsAadAuthentication`, and then set the value of `UseRdsAadAuthentication` to **1**.
+Key: **ConsentPromptBehaviorAdmin** DWORD, setting it to 5
 
-    |Registry path|Registry key| DWORD-32 value|
-    |-------------|------------|---------------|
-    |Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Power Automate Desktop\Service|`UseRdsAadAuthentication`|**1**|
+Options:
 
-2. [Hide the consent prompt dialog for a target device group](/power-automate/desktop-flows/run-unattended-desktop-flows#admin-consent-for-unattended-runs-using-cba-or-sign-in-credentials-with-nla-preview).
-
-3. Restart the Power Automate service.
-
-4. Use a Microsoft Entra ID connection with username and password credentials. Note that an MFA exception is required for this account.
-
-## Resolution 3: Disable fPromptForPassword
-
-To solve this issue, check the group policy setting on your machine.
-
-1. Press the Windows key+<kbd>R</kbd> to open the **Run** dialog.
-1. Type **gpedit.msc** and press <kbd>Enter</kbd> to open the Local Group Policy Editor.
-1. Navigate to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Remote Desktop Services** > **Remote Desktop Session Host** > **Security**.
-1. Look for the **Always prompt for password upon connection** setting.
-
-   - If the setting is enabled, work with your IT department to disable the policy for that machine.
-
-     > [!NOTE]
-     > This value is also reflected in the registry at **Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services**. If the **fPromptForPassword** DWORD value for the **Terminal Services** key is set to **1**, the setting is enabled, and you need to work with your IT department to disable it (simply changing the registry value is generally not sufficient, as it might be reverted.)
-
-   - If the **Always prompt for password upon connection** setting isn't enabled but you receive the error code, type **regedit** in the **Run** dialog to open the Registry Editor. In the Registry Editor, navigate to the **Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp** registry key. Then, look for the **fPromptForPassword** DWORD and set it to **0**. If the DWORD doesn't exist, create it and set its value to **0**.
+- **0** = Elevate without prompting
+- **1** = Prompt for credentials on the secure desktop
+- **2** = Prompt for consent on the secure desktop
+- **3** = Prompt for credentials
+- **4** = Prompt for consent
+- **5** = Prompt for consent for non-Windows binaries (default) <- Set option to this
