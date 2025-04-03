@@ -32,7 +32,7 @@ After you install CU14, a parallel query that runs in batch mode might cause an 
 
 ### Issue two
 
-[!INCLUDE [av-sesssion_context-2019](../includes/av-sesssion_context-2019.md)]
+[!INCLUDE [av-sesssion-context-2019](../includes/av-sesssion-context-2019.md)]
 
 ## Improvements and fixes included in this update
 

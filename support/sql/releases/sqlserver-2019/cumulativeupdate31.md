@@ -25,7 +25,7 @@ This article describes Cumulative Update package 31 (CU31) for Microsoft SQL Ser
 
 ### Issue one: Access violation when session is reset
 
-[!INCLUDE [av-sesssion-context-2019](../includes/av-sesssion_context-2019.md)]
+[!INCLUDE [av-sesssion-context-2019](../includes/av-sesssion-context-2019.md)]
 
 ### Issue two: Patching a read-scale availability group (Windows or Linux) causes the availability group on the patched replica to be removed
 

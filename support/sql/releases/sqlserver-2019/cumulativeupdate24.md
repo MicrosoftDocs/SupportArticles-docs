@@ -25,7 +25,7 @@ This article describes Cumulative Update package 24 (CU24) for Microsoft SQL Ser
 
 ### Issue one: Access violation when session is reset
 
-[!INCLUDE [av-sesssion-context-2019](../includes/av-sesssion_context-2019.md)]
+[!INCLUDE [av-sesssion-context-2019](../includes/av-sesssion-context-2019.md)]
 
 ### Issue two: Read-scale availability group not displayed in dm_hadr_database_replica_cluster_states
 

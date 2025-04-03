@@ -25,7 +25,7 @@ This article describes Cumulative Update package 26 (CU26) for Microsoft SQL Ser
 
 ### Issue one: Access violation when session is reset
 
-[!INCLUDE [av-sesssion-context-2019](../includes/av-sesssion_context-2019.md)]
+[!INCLUDE [av-sesssion-context-2019](../includes/av-sesssion-context-2019.md)]
 
 ### Issue two: Possibility of error 1204 due to disabled lock escalation
 
