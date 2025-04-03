@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you try to access 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
+ms.custom: sap:Microsoft Dataverse\Environment and app access issues
 ---
 # Error Code: 2147812097 Invalid License: This application requires a license and you don't have an appropriate license assigned
 
@@ -22,7 +23,7 @@ User does not have a license to access this app module uniqueName=< unique name>
 
 ## Cause
 
-This issue occurs when an application requires a license and the administrator hasn't assigned the appropriate license to the user(s) of the application.
+This issue occurs when an application requires a license and the administrator hasn't assigned the appropriate license to the users of the application.
 
 For example, if the user with a team member license tries to access the Customer Service Hub application, the user will see this error:
 
@@ -40,4 +41,4 @@ The resolution is to reach out to your administrator and request the license to 
 
 **Access to Custom Apps:**
 
-For access to custom apps (canvas or model-driven), you need to be assigned a Dynamics 365 Enterprise or Professional license, **Power AppsPer User** plan or the environment needs to be given **Power Appsper app** plans (aka **app passes**). For more information about **Power Appsper app** plans (aka **app passes**), see [About Power Apps per app plans](/power-platform/admin/about-powerapps-perapp).
+For access to custom apps (canvas or model-driven), you need to be assigned a Dynamics 365 Enterprise or Professional license, **Power AppsPer User** plan or the environment needs to be given **Power Appsper app** plans (also known as **app passes**). For more information about **Power Appsper app** plans (also known as **app passes**), see [About Power Apps per app plans](/power-platform/admin/about-powerapps-perapp).
