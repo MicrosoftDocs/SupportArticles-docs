@@ -1,6 +1,6 @@
 ---
 title: Microsoft Graph API MemberOf Returns Null Values for Properties
-description: Provides a solution to an issue where some properties are indicated as null when you call the Microsoft Graph  API memberOf.
+description: Provides a solution to an issue where some properties are indicated as null when you call the Microsoft Graph API memberOf.
 ms.date: 04/03/2025
 ms.service: entra-id
 ms.reviewer: bhvootla, adoyle, nualex, v-weizhu
