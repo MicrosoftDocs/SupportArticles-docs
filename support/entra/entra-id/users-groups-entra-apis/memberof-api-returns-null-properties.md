@@ -1,7 +1,7 @@
 ---
-title: Microsoft Graph API memberOf returns null values for properties
+title: Microsoft Graph API MemberOf Returns Null Values for Properties
 description: Provides a solution to an issue where some properties are indicated as null when you call the Microsoft Graph  API memberOf.
-ms.date: 04/02/2025
+ms.date: 04/03/2025
 ms.service: entra-id
 ms.reviewer: bhvootla, adoyle, nualex, v-weizhu
 ms.custom: sap:Problem with querying or provisioning resources
@@ -12,13 +12,13 @@ This article provides a solution to an issue where some properties are indicated
 
 ## Symptoms
 
-When calling the one of following APIs that can return the list of groups and directory roles that the user is a direct member of, you see `null` values for all properties except the object type and ID in the JSON response:
+When calling one of the following APIs that can return the list of groups and directory roles that a user is a direct member of, you see `null` values for all properties except the object type and ID in the JSON response:
 
-```msgraph
+```http
 GET https://graph.microsoft.com/v1.0/me/memberOf
 ```
 
-```msgraph
+```http
 GET https://graph.microsoft.com/v1.0/users/{id | userPrincipalName}/memberOf
 ```
 
@@ -52,7 +52,7 @@ Here's a sample JSON response:
 
 ## Cause
 
-When an application queries the membership that returns a `directoryObject` type collection, if it doesn't have permission to read a certain resource type, members of that type are returned with limited information. For example, only the object type and ID may be returned and other properties are indicated as null. Complete information is returned for the object types that the application has permissions to read.
+When an application queries the membership that returns a `directoryObject` type collection, if it doesn't have permission to read a resource type, members of that type are returned with limited information. For example, only the object type and ID might be returned, and other properties are indicated as null. Complete information is returned for the object types that the application has permission to read.
 
 For more information, see [List a user's direct memberships](/graph/api/user-list-memberof) and [Limited information returned for inaccessible member objects](/graph/permissions-overview#limited-information-returned-for-inaccessible-member-objects).
 
