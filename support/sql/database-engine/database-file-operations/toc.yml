@@ -19,6 +19,8 @@ items:
       href: troubleshoot-dbcc-checkdb-errors.md
 - name: Defragmenting database disk drives
   href: defragmenting-database-disk-drives.md
+- name: Error 3853 with incremental statistics and resumable index operations
+  href: error-3853-use-incremental-statistics-resumable-index-operations.md
 - name: I/O subsystem requirements for the tempdb
   href: io-subsystem-requirements-tempdb.md
 - name: Logging and data storage algorithms
