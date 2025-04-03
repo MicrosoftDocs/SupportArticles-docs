@@ -2,7 +2,7 @@
 title: Take screenshot action fails in unattended mode
 description: Resolves an error that occurs in the action 'Take screenshot', when you run an unattended desktop flow in Microsoft Power Automate for desktop.
 ms.author: yiannismavridis
-ms.reviewer: guco, alarnaud, johndund
+ms.reviewer: 
 ms.custom: sap:Desktop flows\Unattended flow runtime errors
 ms.date: 04/03/2025
 
