@@ -170,6 +170,8 @@
   items:
     - name: Data export option isn't available in Azure Application Insights
       href: import-export-data/data-export-option-not-available-in-application-insights.md
+    - name: Troubleshoot Synapse Link profile creation issues
+      href: import-export-data/troubleshoot-synapse-link-profile-creation-issues.md
 - name: Microsoft Teams
   items:
     - name: Troubleshoot Microsoft Teams chat integration with Dynamics 365
