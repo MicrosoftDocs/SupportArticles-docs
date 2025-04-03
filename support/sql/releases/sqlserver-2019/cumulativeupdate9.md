@@ -32,13 +32,15 @@ SELECT UDF1(UDF2());
 …
 ```
 
-A fix will be provided in a future cumulative update. To mitigate this problem, disable Scalar UDF inlining by using either of the following options:
+To mitigate this problem, disable Scalar UDF inlining by using either of the following options:
 
 - Change the definition of UDF2 by adding `WITH INLINE = OFF` to the definition.
 
 - Disable inlining on the database by using `ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = OFF`.
 
 For examples of disabling Scalar UDF inlining, see [Disable Scalar UDF Inlining without changing the compatibility level](/sql/relational-databases/user-defined-functions/scalar-udf-inlining#disable-scalar-udf-inlining-without-changing-the-compatibility-level).
+
+This issue is fixed in [SQL Server 2019 CU11](cumulativeupdate11.md#14066089).
 
 ## Improvements and fixes included in this update
 

@@ -368,3 +368,5 @@
       href: error-codes/vmextensionerror-vhdfilenotfound.md
   - name: UnsatisfiablePDB error
     href: error-codes/unsatisfiablepdb-error.md
+  - name: AksCapacityHeavyUsage error
+    href: error-codes/akscapacityheavyusage-error.md
