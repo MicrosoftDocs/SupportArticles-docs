@@ -208,6 +208,8 @@
       href: desktop-flows/machine-not-shown-in-list.md
     - name: Unattended desktop flow fails with MSEntraMachineAlwaysPromptingForPassword
       href: desktop-flows/msentramachinealwayspromptingforpassword-error.md
+    - name: Unattended desktop flow run fails with an error in the action 'Take screenshot'
+      href: desktop-flows/take-screenshot-action-fails-in-unattended-mode.md
 - name: Flow creation
   items:
     - name: Can't find Excel Online table in Microsoft Flow
