@@ -5,7 +5,7 @@ author: Greggbarker-ms
 ms.author: grbarker
 ms.reviewer: saukuma
 ai-usage: ai-assisted
-ms.date: 03/28/2025
+ms.date: 04/03/2025
 ms.custom: sap:Importing and exporting data\Configuring Export to Azure Data Lake and Azure Synapse Link integration 
 ---
 # Troubleshoot Azure Synapse Link profile creation issues
