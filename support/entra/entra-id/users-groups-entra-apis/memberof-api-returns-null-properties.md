@@ -30,7 +30,7 @@ Here's a sample JSON response:
     "value": [
         {
             "@odata.type": "#microsoft.graph.group",
-            "id": "b0a133d4-3f3d-4990-be22-879151155f19",
+            "id": "00000003-0000-0000-c000-000000000000",
             "deletedDateTime": null,
             "classification": null,
             "createdDateTime": null,
