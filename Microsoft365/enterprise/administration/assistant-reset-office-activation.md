@@ -83,7 +83,6 @@ Here is a sample combination of switches to run this scenario:
 
 When you run the Reset Office Activation scenario by using the Enterprise version of the Assistant, you don't receive any prompts. The following table describes the actions that the Assistant takes for each condition that's encountered by this scenario, and the corresponding output that's displayed.
 
-> [!div class="mx-tdBreakAll"]
 > |Condition|Action taken by the Enterprise version|Output shown in the Command Prompt window|
 > |---|---|---|
 > |Scan completed successfully|Exit the scenario|80: Successful run. Start any Office app and sign-in to activate.|
