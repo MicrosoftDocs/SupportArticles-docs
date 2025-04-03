@@ -369,4 +369,4 @@
   - name: UnsatisfiablePDB error
     href: error-codes/unsatisfiablepdb-error.md
   - name: AksCapacityHeavyUsage error
-    href: error-codes/akscapacityheavyusage.md
+    href: error-codes/akscapacityheavyusage-error.md
