@@ -1,7 +1,7 @@
 ---
 title: Remote desktop connection is stuck
 description: Fixes an issue when remote desktop may stick on the Securing remote connection screen.
-ms.date: 03/28/2025
+ms.date: 04/03/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
