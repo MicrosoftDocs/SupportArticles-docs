@@ -6301,8 +6301,16 @@
         "redirect_url": "/troubleshoot/azure/virtual-machines/linux/troubleshoot-lis-driver-issues-on-linux-vms"
       },
       {
+        "source_path": "azure-kubernetes/create-upgrade-delete/error-code-reservedresourcename.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-invalidparameter"
+      },
+      {
         "source_path": "azure-kubernetes/create-upgrade-delete/error-using-feature-requiring-virtual-machine-scale-set.md",
         "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes"
+      },
+      {
+        "source_path": "azure-kubernetes/create-upgrade-delete/akscapacityerror.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/akscapacityheavyusage-error"
       }
   ]
 }
