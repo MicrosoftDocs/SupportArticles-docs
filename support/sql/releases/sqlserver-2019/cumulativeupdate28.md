@@ -54,8 +54,7 @@ App-consistent recovery point generation failed.
 
 The issue arises from a code change in SQL Server 2019 CU28 that checks if a database is online and ready to be frozen. The current solution is to roll back to SQL Server 2019 CU27 and perform the snapshot backup. For more information about how to roll back the package to a previous version, see [Uninstall a Cumulative Update from SQL Server](/sql/sql-server/install/uninstall-a-cumulative-update-from-sql-server).
 
-A fix for this issue can be found in [SQL Server 2019 CU 29](../sqlserver-2019/cumulativeupdate29.md). For more information, see [3459328 in CU29](../sqlserver-2019/cumulativeupdate29.md#3459328)
-
+This issue is fixed in [SQL Server 2019 CU29](../sqlserver-2019/cumulativeupdate29.md#3459328).
 
 ## Improvements and fixes included in this update
 

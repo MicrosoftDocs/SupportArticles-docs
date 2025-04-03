@@ -50,7 +50,7 @@ App-consistent recovery point generation failed.
 
 The issue arises from a code change in SQL Server 2022 CU14 that checks if a database is online and ready to be frozen. The current solution is to roll back to SQL Server 2022 CU13 and perform the snapshot backup. For more information about how to roll back the package to a previous version, see [Uninstall a Cumulative Update from SQL Server](/sql/sql-server/install/uninstall-a-cumulative-update-from-sql-server).
 
-A fix for this issue can be found in [SQL Server 2022 CU15](../sqlserver-2022/cumulativeupdate15.md). For more information, see [3459086 in CU15](../sqlserver-2022/cumulativeupdate15.md#3459086)
+This issue is fixed in [SQL Server 2022 CU15](../sqlserver-2022/cumulativeupdate15.md#3459086).
 
 ## Improvements and fixes included in this update
 
