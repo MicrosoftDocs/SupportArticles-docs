@@ -1,6 +1,6 @@
 ---
 title: The Identity of the Calling Application Could Not Be Established
-description: Provides solutions to the error "The identity of the calling application could not be established" when using Microsoft Graph.
+description: Provides solutions to the identity of the calling application could not be established error when using Microsoft Graph.
 ms.date: 04/03/2025
 ms.service: entra-id
 ms.custom: sap:Getting access denied errors (Authorization)
