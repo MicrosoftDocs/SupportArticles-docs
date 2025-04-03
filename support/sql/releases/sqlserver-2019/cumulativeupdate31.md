@@ -43,6 +43,8 @@ When the AG is dropped after patching, you'll see the error message in the [SQL 
 
 After the patch is installed, the metadata is removed and you must re-create the AG on the patched replica. If the AG replicas have mismatched SQL Server versions (for example, the primary replica is running SQL Server 2019 CU30 and the secondary replica is running SQL Server 2019 CU31), you can't re-create the AG on the replica with the missing metadata (the secondary replica). In order to add the AG again, you must uninstall the patch on the secondary replica first and then add the AG again.
 
+This issue is fixed in [SQL Server 2019 CU32](cumulativeupdate32.md#3907024).
+
 #### Example
 
 You can use steps that are similar to the following ones, but you need to update them for the given environment, including the `CLUSTER_TYPE`. The VM1 in the given example is the primary replica of the AG 'readscaleag' and VM2 is the secondary replica that has the patch applied but already uninstalled. Before running the script, both replicas VM1 and VM2 are running SQL Server 2019 CU30 and the AG metadata is missing on VM2. To run this script, use [SQLCMD mode](/sql/tools/sqlcmd/edit-sqlcmd-scripts-query-editor).

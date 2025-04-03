@@ -27,8 +27,7 @@ This article describes Cumulative Update package 14 (CU14) for Microsoft SQL Ser
 
 After you install CU14, a parallel query that runs in batch mode might cause an access violation and create a memory dump file. To mitigate the issue, run the query to have a Degree of Parallelism of **1**, or disable batch mode processing by using [trace flag 9453](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf9453).
 
-> [!NOTE]
-> This issue is resolved in [CU15](cumulativeupdate15.md).
+This issue is fixed in [SQL Server 2019 CU15](cumulativeupdate15.md#14488550).
 
 ### Issue two
 

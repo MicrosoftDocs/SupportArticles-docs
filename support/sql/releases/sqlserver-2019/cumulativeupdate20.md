@@ -41,6 +41,8 @@ If you try to create a new external table, you receive the following error messa
 
 To work around this issue, you can uninstall this cumulative update or add the `Driver` keyword to the `CONNECTION_OPTIONS` argument. For more information, see [Generic ODBC external data sources may not work after installing Cumulative Update](https://techcommunity.microsoft.com/t5/sql-server-support-blog/generic-odbc-external-data-sources-may-not-work-after-installing/ba-p/3783873).
 
+This issue is fixed in [SQL Server 2019 CU21](cumulativeupdate21.md#2312800).
+
 ### Issue three
 
 This issue is caused by a change introduced in this cumulative update for the [Managed Instance link](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview) feature. Assume that the databases of an Always On availability group have one of the following conditions:
@@ -69,6 +71,8 @@ If you have applied this cumulative update to one or more secondary replicas and
 
 > [!NOTE]
 > Trace flag 12324 impacts only the Managed Instance Link feature and is only used to activate the changes in SQL Server 2019 CU20.
+
+This issue is fixed in [SQL Server 2019 CU22](cumulativeupdate22.md#2460204).
 
 ## Improvements and fixes included in this update
 
