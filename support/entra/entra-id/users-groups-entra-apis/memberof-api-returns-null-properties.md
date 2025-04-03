@@ -14,7 +14,7 @@ This article provides a solution to an issue where some properties are indicated
 
 When calling one of the following APIs that can return the list of groups and directory roles that a user is a direct member of, you see `null` values for all properties except the object type and ID in the JSON response:
 
-```http
+```msgraph
 GET https://graph.microsoft.com/v1.0/me/memberOf
 ```
 
