@@ -31,8 +31,7 @@ Microsoft is working on a fix for this issue and it will be available in a futur
 
 ### Issue two: Access violation when session is reset
 
-[!INCLUDE [av-sesssion_context-2019](../includes/av-sesssion_context-2019.md)]
-
+[!INCLUDE [av-sesssion-context-2019](../includes/av-sesssion_context-2019.md)]
 
 ### Issue three: Patching error for secondary replicas in an availability group with databases enabled replication, CDC, or SSISDB
 

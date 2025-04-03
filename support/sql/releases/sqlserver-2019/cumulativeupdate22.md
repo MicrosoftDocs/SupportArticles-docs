@@ -25,8 +25,7 @@ This article describes Cumulative Update package 22 (CU22) for Microsoft SQL Ser
 
 ### Access violation when session is reset
 
-[!INCLUDE [av-sesssion_context-2019](../includes/av-sesssion_context-2019.md)]
-
+[!INCLUDE [av-sesssion-context-2019](../includes/av-sesssion_context-2019.md)]
 
 ## Improvements and fixes included in this update
 

@@ -25,8 +25,7 @@ This article describes Cumulative Update package 28 (CU28) for Microsoft SQL Ser
 
 ### Issue one: Access violation when session is reset
 
-[!INCLUDE [av-sesssion_context-2019](../includes/av-sesssion_context-2019.md)]
-
+[!INCLUDE [av-sesssion-context-2019](../includes/av-sesssion_context-2019.md)]
 
 ### Issue two: Patching error for secondary replicas in an availability group with databases enabled replication, CDC, or SSISDB
 

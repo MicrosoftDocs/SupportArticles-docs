@@ -25,8 +25,7 @@ This article describes Cumulative Update package 20 (CU20) for Microsoft SQL Ser
 
 ### Issue one
 
-[!INCLUDE [av-sesssion_context-2019](../includes/av-sesssion_context-2019.md)]
-
+[!INCLUDE [av-sesssion-context-2019](../includes/av-sesssion_context-2019.md)]
 
 ### Issue two
 
