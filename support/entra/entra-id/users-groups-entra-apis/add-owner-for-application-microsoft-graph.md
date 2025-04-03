@@ -1,7 +1,7 @@
 ---
 title: Add an Owner to an Application Using Microsoft Graph
 description: Introduces how to add an owner (service principle) to an application using Microsoft Graph.
-ms.date: 04/02/2025
+ms.date: 04/03/2025
 ms.reviewer: willfid, v-weizhu
 ms.service: entra-id
 ms.custom: sap:Getting access denied errors (Authorization)
