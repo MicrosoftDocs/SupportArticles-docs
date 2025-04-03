@@ -239,6 +239,32 @@ It's possible you're experiencing throttling, and your requests are being sent t
 
 Ensure your app is within the [Azure Files scale targets](/azure/storage/files/storage-files-scale-targets#azure-files-scale-targets). If you're using standard Azure file shares, consider switching to premium.
 
+### Cause 3: **Identifying the Largest Files or Directories within Azure File Share**	
+
+When Azure file shares are approaching their capacity, it's essential for customers to identify the largest files and directories to optimize storage. This process provides detailed insights into the specific files and folders consuming the most space.
+	
+ ### Solution
+ 
+To get a comprehensive view of storage usage across the entire share, mount the root of the share. This allows for a thorough inspection of file and directory sizes. From the root of the file share, execute the following commands to identify the largest files and directories:
+
+ 
+```shell
+	cd /path/to/mount/point
+	du -ah --max-depth=1 | sort -rh | head -n 20
+```
+
+ 
+This command will display the top 20 largest files and directories in descending order of size, providing a clear overview of storage consumption.
+ 
+### Workaround
+  - If mounting the root of the share is not feasible, consider using Azure Storage Explorer or other third-party tools to analyze storage usage. 
+  - These tools can provide similar insights into file and directory sizes without the need to mount the share directly.
+
+
+
+
+
+
 ## Throughput on Linux clients is lower than that of Windows clients
 
 ### Cause
