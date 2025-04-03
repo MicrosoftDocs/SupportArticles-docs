@@ -56,6 +56,8 @@ If you have applied this cumulative update to one or more secondary replicas and
 > [!NOTE]
 > Trace flag 12324 impacts only the Managed Instance Link feature and is only used to activate the changes in SQL Server 2019 CU20 and CU21.
 
+This issue is fixed in [SQL Server 2019 CU22](cumulativeupdate22.md#2460204).
+
 ## Improvements and fixes included in this update
 
 A downloadable Excel workbook that contains a summary list of builds, together with their current support lifecycle, is available. The Excel file also contains detailed fix lists for SQL Server 2022, SQL Server 2019, and SQL Server 2017. [Select to download this Excel file now](https://aka.ms/sqlserverbuilds).

@@ -27,7 +27,7 @@ This article describes Cumulative Update package 27 (CU27) for Microsoft SQL Ser
 
 The newly-created warning message in issue [2901635](#2901635) might fill up the SQL Server error log with thousands of occurrences. The message is "WARNING Long asynchronous API Call: The scheduling fairness of scheduler can be impacted by an asynchronous API invocation unexpectedly exceeding xxx ms." This is due to an incorrect code change during the build process. If you experience this issue and prefer not to uninstall the CU as a solution, contact [Microsoft Support](https://support.microsoft.com/contactus/?ws=support).
 
-Microsoft is working on a fix for this issue and it will be available in a future CU.
+This issue is fixed in [SQL Server 2019 CU28](cumulativeupdate28.md#3312461).
 
 ### Issue two: Access violation when session is reset
 
@@ -41,7 +41,9 @@ Microsoft is working on a fix for this issue and it will be available in a futur
 
 SQL Server 2019 CU26 introduced a regression that can disable lock escalation, which causes error 1204 "The instance of the SQL Server Database Engine cannot obtain a LOCK resource at this time."
 
-To work around this issue, you can uninstall the CU26 or install the [CU28](cumulativeupdate28.md).
+To work around this issue, you can uninstall the CU26.
+
+This issue is fixed in [SQL Server 2019 CU28](cumulativeupdate28.md#3282395).
 
 ## Improvements and fixes included in this update
 

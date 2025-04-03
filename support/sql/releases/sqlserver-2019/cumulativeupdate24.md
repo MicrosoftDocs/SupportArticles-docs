@@ -33,6 +33,8 @@ SQL Server 2019 CU24 introduced [fix 2714260](#2714260), which causes an issue w
 
 Microsoft is working on a fix for this issue and it will be available in a future CU.
 
+This issue is fixed in [SQL Server 2019 CU25](cumulativeupdate25.md#2926845).
+
 ## Improvements and fixes included in this update
 
 A downloadable Excel workbook that contains a summary list of builds, together with their current support lifecycle, is available. The Excel file also contains detailed fix lists for SQL Server 2022, SQL Server 2019, and SQL Server 2017. [Select to download this Excel file now](https://aka.ms/sqlserverbuilds).
