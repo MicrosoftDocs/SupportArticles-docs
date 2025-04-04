@@ -1,3 +1,11 @@
+--- 
+title: Infinite loop detected when performing warehouse mobile app operation
+description: Provides steps to resolve infinite loop exception.
+author: Koalena 
+ms.date: 04/04/2025 
+--- 
+ 
+
 # Infinite loop detected when performing warehouse mobile app operation
 
 ## Symptoms
@@ -11,4 +19,4 @@ This error occurs when the call stack depth exceeds a predefined limit to preven
 
 ## Resolution
 
-To resolve this issue, reduce the number of work lines processed in a single operation, for example [split a work](https://learn.microsoft.com/en-us/dynamics365/supply-chain/warehousing/work-split) into several smaller ones.
+To resolve this issue, reduce the number of work lines processed in a single operation, for example [split a work](/dynamics365/supply-chain/warehousing/work-split) into several smaller ones.
