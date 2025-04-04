@@ -3,13 +3,14 @@ title: Get support for Viva Glint
 description: Provides steps to submit an online support request for Microsoft Viva Glint issues.
 manager: dcscontentpm
 ms.reviewer: aweixelman
-ms.date: 10/16/2024
+ms.date: 03/31/2025
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
 ms.custom: 
   - CSSTroubleshoot
   - CI 195092
+  - CI 5250
 ---
 
 # Get support for Viva Glint
@@ -24,10 +25,10 @@ Before you submit a support request, make sure that:
 - You're assigned a role that has access to the Microsoft 365 admin center.
 - You have the necessary permissions to submit a support request.
 
-To manage Microsoft 365 admin center support requests as a Viva Glint administrator, ask your Microsoft 365 global admin to [add](/microsoft-365/admin/add-users/assign-admin-roles?view=o365-worldwide#steps-add-an-admin&preserve-view=true) you to the [Service Support admin role](/microsoft-365/admin/add-users/about-admin-roles?view=o365-worldwide#commonly-used-microsoft-365-admin-center-roles&preserve-view=true) in the Microsoft 365 admin center.
+To manage Microsoft 365 admin center support requests as a Viva Glint Administrator, confirm that your Microsoft 365 global admin has [added](/viva/glint/setup/post-provisioning-next-steps#assign-viva-glint-tenant-admins) you to the [Viva Glint Tenant Administrator role](/viva/glint/start/role-definitions#viva-glint-tenant-administrator) in the Microsoft 365 admin center.
 
 > [!NOTE]
-> The Service Support admin role for the Microsoft 365 admin center isn't limited to Viva Glint support requests. It enables you to view all Microsoft 365 support requests.
+> The Viva Glint Tenant Administrator role for the Microsoft 365 admin center isn't limited to Viva Glint support requests. It enables you to view all Azure and Microsoft 365 support requests.
 
 ## Collect network trace information
 
@@ -47,7 +48,7 @@ Follow these steps:
    :::image type="content" source="./media/get-support-viva-glint/select-contact-support.png" alt-text="Screenshot of the Contact Support option.":::
 1. In the **Contact Support** pane, specify your preferred contact settings. Then, select a contact method and provide the following information:
 
-   - **Title**: Enter **Viva Glint**, and then add a brief summary. If the issue is urgent, include the word **Urgent**.
+   - **Title**: Enter **Viva **, and then add a brief summary. If the issue is urgent, include the word **Urgent**.
    - **Description**: Add a detailed description of the issue, including (if applicable):
      - Users who are experiencing this issue and their Viva Glint user roles
      - The date and time (including time zone) that the issue occurred
@@ -61,7 +62,7 @@ Follow these steps:
      - The access method that the user is using
      - Which type of device a user is trying to get access on (laptop, mobile device, and so on)
      - Which operating system a user is running (Windows, Macintosh, Linux)
-     - Which browser a user is accessing Glint through
+     - Which browser a user is accessing Viva Glint through
    - **Confirm your number**: Check whether the listed telephone number is correct. If it's not, update it, as appropriate.
    - **Confirm email address of authorized contacts**: Check whether the email address that's listed for you is correct. If it's not, update it, as appropriate, and then add the email addresses of other users who should receive updates.
    - **Consent to the recording of all calls**: Select **Yes** or **No**.

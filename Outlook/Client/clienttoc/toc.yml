@@ -95,8 +95,6 @@
           href: ../calendaring/room-finder-is-not-available-shared-calendars-outlook.md
         - name: Room Finder doesn't show conference rooms
           href: ../calendaring/outlook-room-finder-not-show-conference-room.md
-        - name: Scan calendar by using SaRA
-          href: ../calendaring/scan-outlook-calendar-using-sara.md
         - name: Share a calendar or open a shared calendar
           href: ../calendaring/how-to-open-shared-calendar.md          
         - name: Shared calendar in delegate's Online Archive
@@ -177,8 +175,6 @@
           href: ../data-files/delete-corrupted-public-folder-rule.md
         - name: Can't change the location of .ost file
           href: ../data-files/cannot-change-the-location-of-ost-file.md
-        - name: Description of the AutoArchive feature
-          href: ../data-files/description-of-the-autoarchive-feature.md
         - name: Error 0x8000ffff when adding data file in Mail applet
           href: ../data-files/error-0x8000ffff-adding-data-file-in-mail-applet.md
         - name: Errors have been detected in .ost file
@@ -265,10 +261,6 @@
           href: ../installation/disablepst-and-pstdisablegrow-policies-are-ignored.md
         - name: Install Calendar Printing Assistant fails
           href: ../installation/installing-calendar-printing-assistant-fails.md
-        - name: Install Outlook latest applicable updates
-          href: ../installation/install-outlook-latest-updates.md
-        - name: Leave a copy of the message on the server is missing
-          href: ../installation/enable-leave-a-copy-of-the-message-on-the-server-outlook.md
         - name: Map classic Outlook policies to new Outlook
           href: ../installation/map-classic-outlook-policies-to-new-outlook.md
         - name: Planning considerations
@@ -603,8 +595,6 @@
           href: ../user-interface/reminders-in-outlook-do-not-show.md
         - name: Remove duration from retention tags
           href: ../user-interface/remove-duration-retention-policy-tag.md
-        - name: Resources for the top Outlook issues in Microsoft 365
-          href: ../user-interface/resources-for-the-top-outlook-issues-in-microsoft-365.md
         - name: Search folders aren't populated in Online mode
           href: ../user-interface/outlook-search-folders-issue-online-mode.md
         - name: Search Folders don't appear in OWA
