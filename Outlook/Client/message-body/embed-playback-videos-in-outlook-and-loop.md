@@ -26,9 +26,7 @@ ms.date: 03/19/2025
 Enterprise users can now [embed videos](https://support.microsoft.com/office/how-to-insert-stream-videos-in-loop-1b123f5e-2607-4b17-a44a-c62cff6a728b) in Microsoft Outlook and [Microsoft Loop](https://support.microsoft.com/office/get-started-with-microsoft-loop-9f4d8d4f-dfc6-4518-9ef6-069408c21f0c). If a user inserts a video link into an email message or a Loop page, the link will transform into an embedded video player. Message recipients can watch the video within the embedded video player without leaving Outlook. Users who have access to the Loop page can watch the video within the embedded video player without leaving Loop.
 
 > [!NOTE]
->
-> - The desktop versions of Outlook and Outlook on the web use [Loop components](/microsoft-365/loop/loop-components-teams) to embed videos in email messages.
-> - This feature is being rolled out gradually and might not yet be available in your organization.
+> The desktop versions of Outlook and Outlook on the web use [Loop components](/microsoft-365/loop/loop-components-teams) to embed videos in email messages.
 
 ## Who can use the new feature
 
