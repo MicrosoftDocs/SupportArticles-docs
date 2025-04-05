@@ -160,6 +160,10 @@
       href: email-exchange-synchronization/exception-appears-server-side-sync.md
     - name: '"You cannot send email as the selected user" error'
       href: email-exchange-synchronization/cannot-send-email-as-another-user.md
+- name: Importing and exporting data
+  items:
+    - name: Data export option isn't available in Azure Application Insights
+      href: import-export-data/data-export-option-not-available-in-application-insights.md
 - name: Plug-in execution
   items:
     - name: Dataverse plug-ins
@@ -206,8 +210,12 @@
       href: working-with-solutions/error-when-uninstalling-portals-solutions.md
     - name: Duplicate security roles after solution import
       href: working-with-solutions/duplicate-security-roles.md
+    - name: Environment schema type mismatch warning during solution import
+      href: working-with-solutions/schemaType-mismatch-on-solution-import.md  
     - name: Error 8004F042 when importing solution patch
       href: working-with-solutions/error-code-8004f042-occurs.md
+    - name: Environment version mismatch warning during solution import
+      href: working-with-solutions/version-mismatch-on-solution-import.md
     - name: Failure when multiple publishers have shared components
       href: working-with-solutions/multiple-publisher-shared-component-failure.md
     - name: Form doesn't appear in target environment after import
@@ -226,10 +234,10 @@
       href: working-with-solutions/newly-added-components-dont-appear.md
     - name: Permission error 80040220 when importing or deleting solution
       href: working-with-solutions/error-when-you-import-delete-solution.md
+    - name: Resources to help troubleshoot solution import errors
+      href: working-with-solutions/troubleshoot-solution-import-errors-in-dynamics-365.md
     - name: Solution checker enforcement in Managed Environments blocks or warns on import
       href: working-with-solutions/solution-checker-enforcement-import-issues.md
-    - name: Solution import errors
-      href: working-with-solutions/troubleshoot-solution-import-errors-in-dynamics-365.md
     - name: Solution import or app installation fails due to missing privileges
       href: working-with-solutions/install-failure-priviledge-not-assigned.md
     - name: Solution upgrade fails due to a pending upgrade

@@ -9,6 +9,10 @@ items:
 
 - name: Azure SQL Virtual Machine
   items:
+  - name: VM deployment fails with drive not ready error
+    href: azure-sql/sql-deployment-fails-drive-not-ready.md
+  - name: SQL Server installation fails on some Azure VMs
+    href: azure-sql/sql-installation-fails-sector-size-error-azure-vm.md
   - name: FCI installation fails with error on Azure VM
     href: azure-sql/fci-installation-fails-error-azure-vm.md
 

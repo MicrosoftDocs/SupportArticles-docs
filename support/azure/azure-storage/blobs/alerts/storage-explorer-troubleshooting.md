@@ -2,10 +2,12 @@
 title: Azure Storage Explorer troubleshooting guide
 description: Provides debugging techniques for Azure Storage Explorer.
 services: storage
+author: jinglouMSFT
+ms.author: jinglou
 ms.service: azure-storage
 ms.custom: sap:Alerts, Metrics, Logging and Monitoring, linux-related-content
 ms.date: 12/23/2024
-ms.reviewer: azurestocic, jarrettr, v-weizhu
+ms.reviewer: cralvord,richardgao
 ---
 
 # Azure Storage Explorer troubleshooting guide

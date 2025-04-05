@@ -14,12 +14,12 @@ ms.custom:
 
 This article provides workarounds for an issue where the Windows Time service doesn't automatically start in a stand-alone environment.
 
-_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server (All supported versions), Windows client (All supported versions)  
 _Original KB number:_ &nbsp; 2385818
 
 ## Symptoms
 
-On a workgroup computer that's running Windows 7, Windows Server 2008 R2, or a later version, the Windows Time service stops immediately after system startup. This issue occurs even after the Startup Type is changed from **Manual** to **Automatic**.
+On a workgroup computer that's running Windows client or Windows Server, or a later version, the Windows Time service stops immediately after system startup. This issue occurs even after the Startup Type is changed from **Manual** to **Automatic**.
 
 ## Cause
 
