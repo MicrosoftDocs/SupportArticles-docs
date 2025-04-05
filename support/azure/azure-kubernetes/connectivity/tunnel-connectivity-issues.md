@@ -4,7 +4,7 @@ description: Resolve communication issues that are related to tunnel connectivit
 ms.date: 03/23/2025
 ms.reviewer: chiragpa, andbar, v-leedennis, v-weizhu, albarqaw
 ms.service: azure-kubernetes-service
-keywords: Azure Kubernetes Service, AKS cluster, Kubernetes cluster, tunnels, connectivity, tunnel-front, aks-link
+keywords: Azure Kubernetes Service, AKS cluster, Kubernetes cluster, tunnels, connectivity, tunnel-front, aks-link, Konnectivity agent, Cluster Proportional Autoscaler, CPA, Resource allocation, Performance bottlenecks, Networking reliability, Azure Kubernetes troubleshooting, AKS performance issues
 #Customer intent: As an Azure Kubernetes user, I want to avoid tunnel connectivity issues so that I can use an Azure Kubernetes Service (AKS) cluster successfully.
 ms.custom: sap:Connectivity
 ---
@@ -258,7 +258,45 @@ You can set up a new cluster to use a Managed Network Address Translation (NAT) 
 
 ### Solution 6: Cluster Proportional Autoscaler (CPA) for Konnectivity Agent
 
-To address scalability challenges in large clusters, we have implemented the Cluster Proportional Autoscaler (CPA) for our Konnectivity Agents. This approach aligns with industry standards and best practices, ensuring optimal resource usage and enhanced performance. Previously, the Konnectivity agent had a fixed replica count, which created a bottleneck as the cluster grew. With this change, the replica count will now dynamically adjust based on node-scaling rules, providing best-in-class performance.
+To address scalability challenges in large clusters, we have implemented the Cluster Proportional Autoscaler (CPA) for our Konnectivity Agents. This approach aligns with industry standards and best practices, ensuring optimal resource usage and enhanced performance.
+
+**Why was this change made?**
+Previously, the Konnectivity agent had a fixed replica count, which could create a bottleneck as the cluster grew. With the implementation of the Cluster Proportional Autoscaler (CPA), the replica count now dynamically adjusts based on node-scaling rules, ensuring optimal performance and resource usage.
+
+**What should customers check for?**
+Customers need to monitor for Out Of Memory (OOM) kills on their nodes, as the Konnectivity agents run on these nodes. Here are the steps to identify and troubleshoot OOMKills:
+
+1. Check for OOMKills on Nodes: Use the following command to check for OOMKills on your nodes:
+
+```
+kubectl get events --all-namespaces | grep -i 'oomkill'
+```
+
+2. Inspect Node Resource Usage: Verify the resource usage on your nodes to ensure they are not running out of memory:
+
+```
+kubectl top nodes
+```
+
+3.  Review Pod Resource Requests and Limits: Ensure that the Konnectivity agent pods have appropriate resource requests and limits set to prevent OOMKills:
+
+```
+kubectl get pod <pod-name> -n kube-system -o yaml | grep -A5 "resources:"
+```
+
+4.  Adjust Resource Requests and Limits: If necessary, adjust the resource requests and limits for the Konnectivity agent pods by editing the deployment:
+
+```
+kubectl edit deployment konnectivity-agent -n kube-system
+```
+
+**How do customers use the Cluster Proportional Autoscaler (CPA)?**
+Customers can override default values by updating the konnectivity-agent-autoscaler configmap in the kube-system namespace. Here is a sample command to update the configmap:
+
+```
+kubectl edit configmap <pod-name> -n kube-system
+```
+This command opens the configmap in an editor where customers can make the necessary changes.
 
 [!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
