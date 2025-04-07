@@ -201,7 +201,7 @@ If it's possible, and if you're able to transfer the roles instead of seizing th
 When part of a domain or forest can't communicate with the rest of the domain or forest for an extended time, the isolated sections of domain or forest are known as replication islands. DCs in one island can't replicate with the DCs in other islands. Over multiple replication cycles, the replication islands fall out of sync. If each island has its own Operation Master role holders, you may have problems when you restore communication between the islands.
 
 > [!IMPORTANT]
-> In most cases, you can take advantage of the initial replication requirement (as described in this article) to weed out duplicate role holders. A restarted role holder will relinquish the role if it detects a duplicate role-holder through updates it receives on inbound replication.
+> In most cases, you can take advantage of the initial replication requirement (as described in this article) to weed out duplicate role holders. A restarted role holder will relinquish the role if it detects a duplicate role-holder through updates it receives on inbound replication.  
 > You may encounter circumstances that this behavior does not resolve the Operations Master Conflict. In such cases, the information in this section may be helpful.
 
 The following table identifies the Operation Master roles that can cause problems if a forest or domain has multiple role-holders for that role:
