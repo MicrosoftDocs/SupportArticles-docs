@@ -2,7 +2,7 @@
 title: Failed to assume control of Edge or Chrome or Firefox error
 description: Provides a resolution to the error that occurs when running a desktop flow that has a "Launch browser" action in Power Automate.
 ms.reviewer: nimoutzo, jefernn
-ms.date: 03/28/2025
+ms.date: 04/07/2025
 ms.custom: sap:Desktop flows\UI or browser automation
 ---
 # "Failed to assume control of Microsoft Edge/Chrome/Firefox" error
@@ -65,9 +65,11 @@ Execution of a desktop flow with one of the respective actions fails with the er
 
 ### Resolution 1
 
-Increase the values of **Timeout on webpage load** and **Timeout** parameters for the "Launch new Edge", "Chrome", or "Firefox" action. For example, set these values to 120 seconds. If this adjustment doesn't resolve the issue, follow the steps outlined below.
+In the **Launch new Edge**, **Launch new Chrome**, or **Launch new Firefox** action, increase the values of **Timeout on webpage load** and **Timeout** parameters located in the **Advanced** section. For example, set these values to **120** seconds. If this adjustment doesn't resolve the issue, follow the steps outlined below.
 
 ### Resolution 2
+
+Use the Launch Browser action to start the process of the corresponding browser. Then a combination of an additional Launch Browser action with mode set to **Attach to running instance** and a [Go to web page](/power-automate/desktop-flows/actions-reference/webautomation#gotowebpagebase) action afterwards can be used to resolve the issue.
 
 1. Insert a new "Launch new browser" action as:
     - Launch new Edge
@@ -108,16 +110,18 @@ Increase the values of **Timeout on webpage load** and **Timeout** parameters fo
     3. Set the interval in seconds to **5** by selecting the number of seconds.
     4. Select **Save**.
 
-6. Insert a "Go to Web page" action and set up the parameters of the action:
+6. Insert a **Go to web page** action and set up the parameters of the action:
     - Web browser instance: The variable produced by the "Launch new browser" action.
     - Navigate: To URL
     - URL: The URL you would like to navigate to.
 
-      :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/select-parameters-in-go-to-web-page.png" alt-text="Configure the parameters of the Go to Web page action.":::
+      :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/select-parameters-in-go-to-web-page.png" alt-text="Configure the parameters of the Go to web page action.":::
 
 ### Resolution 3
 
-Increase the values of **Timeout on webpage load** and **Timeout** parameters for the "Launch new Edge", "Chrome", or "Firefox" action. For example, set these values to 120 seconds. If this adjustment doesn't resolve the issue, follow the steps outlined below.
+Use the Launch Browser action to start the process of the corresponding browser. Then a combination of an additional Launch Browser action with mode set to **Attach to running instance** and a **Wait** action set to a duration afterwards can be used to resolve the issue.
+
+In the **Launch new Edge**, **Launch new Chrome**, or **Launch new Firefox** action, increase the values of **Timeout on webpage load** and **Timeout** parameters located in the **Advanced** section. For example, set these values to **120** seconds. If this adjustment doesn't resolve the issue, follow the steps outlined below.
 
 1. Insert a new "Launch new browser" action as:
     - Launch new Edge
@@ -141,7 +145,7 @@ Increase the values of **Timeout on webpage load** and **Timeout** parameters fo
 
       :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/save-settings-on-error.png" alt-text="Select the Continue flow run and Go to next action options and then save the settings.":::
 
-4. Insert a "Wait" action and set its duration to 90 seconds (adjust duration as needed).
+4. Insert a **Wait** action and set its duration to **90** seconds (adjust duration as needed).
 
      :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/wait-action.png" alt-text="Insert a Wait action with value set to 90.":::
 

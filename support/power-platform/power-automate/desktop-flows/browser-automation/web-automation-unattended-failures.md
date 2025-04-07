@@ -5,7 +5,7 @@ ms.custom: sap:Desktop flows\UI or browser automation
 ms.reviewer: amitrou
 ms.author: amitrou
 author: amitrou
-ms.date: 03/28/2025
+ms.date: 04/07/2025
 ---
 # Web automation action fails in unattended mode
 
@@ -25,7 +25,7 @@ This error might be caused due to the following reasons:
 
 #### The browser doesn't start and the browser window isn't visible
 
-To work around this issue, make sure that the browser start isn't blocked in unattended mode. Verify by using the actions listed and make sure that browser opens and the window is visible.
+To work around this issue, make sure that the browser start isn't blocked in unattended mode. Verify by using the actions listed and make sure that browser opens and the window is visible. To create the corresponding action, copy the following command and paste it in the [flow designer](/power-automate/desktop-flows/flow-designer).
 
 For Chrome:
 
@@ -49,10 +49,10 @@ WebAutomation.LaunchEdge.AttachToEdgeByUrl TabUrl: $'''https://www.microsoft.com
 
 To work around this issue,
 
-1. Increase the default values of the following parameters:
+1. In the **Launch new Microsoft Edge**, **Launch new Chrome**, or **Launch new Firefox** action. increase the default values of the following parameters located in the **Advanced** section:
 
-    - Timeout on webpage load (for example, set to 120 seconds)
-    - Timeout (for example, set to 120 seconds)
+    - **Timeout on webpage load** (for example, set to **120** seconds)
+    - **Timeout** (for example, set to **120** seconds)
 
 1. If increasing the timeout doesn't resolve the issue, use the following actions to obtain a browser instance:
 
@@ -65,6 +65,8 @@ To work around this issue,
 #### The cloud flow is executed with a different user than the one with the browser extension installed
 
 To work around this issue, ensure that the user running the cloud flow in unattended mode has the browser extension installed.
+
+To check the browser extension installation, you can go through the **Tools** > **Browser extensions** options in the [flow designer](/power-automate/desktop-flows/flow-designer). For more information, see [Install Power Automate browser extensions](/power-automate/desktop-flows/install-browser-extensions#install-browser-extensions).
 
 #### The machine's CPU usage reaches 100%, preventing the service worker of the web extension from starting
 
