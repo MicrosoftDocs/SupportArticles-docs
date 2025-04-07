@@ -204,14 +204,19 @@ Warning FailedScheduling 25s  default-scheduler 0/8 nodes are available: 8 node(
 
 The node has reached its maximum disk capacity. In AKS, the number of disks per node depends on the VM size that's configured for the node pool.
 
-### Solution: Use anotehr VM size with more disk limits
+### Solution
 
-To resolve the issue, we recommend that you use another VM size that supports more disks for the node.
+To resolve the issue, use one of the following methods:
+
+- Delete existing disks from the node.
+- Scale the node pool.
+- Add a new node pool with a VM size that supports more disk limit.
 
 Additionally, make sure that the number of disks per node does not exceed the [Kubernetes default limits](https://kubernetes.io/docs/concepts/storage/storage-limits/#kubernetes-default-limits).
 
-## More information  
+## More information
 
 For more Azure Disk known issues, see [Azure disk plugin known issues](https://github.com/andyzhangx/demo/blob/master/issues/azuredisk-issues.md).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+ 
