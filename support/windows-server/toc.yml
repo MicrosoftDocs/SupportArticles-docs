@@ -2567,6 +2567,8 @@ items:
       href: ./system-management-components/schedule-server-process.md
     - name: Scheduled task may not run upon reboot
       href: ./system-management-components/scheduled-task-not-run-upon-reboot-machine-off.md
+    - name: Scheduled tasks fail with "Task schedular service is not available"
+      href: ../windows-client/system-management-components/task-schedular-service-is-not-available.md?context=/troubleshoot/windows-server/context/context
     - name: Scheduled tasks reference incorrect user profile paths
       href: ./system-management-components/scheduled-tasks-reference-incorrect-user-profile.md
     - name: Troubleshoot issues with scheduled tasks not running
