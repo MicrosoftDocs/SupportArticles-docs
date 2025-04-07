@@ -5,7 +5,9 @@ manager: dcscontentpm
 ms.date: 04/07/2025
 ms.topic: troubleshooting
 ms.reviewer: kaushika, warrenw, v-lianna
-ms.custom: sap:Task Scheduler
+ms.custom:
+- sap:system management components\task scheduler
+- pcy:WinComm User Experience
 ---
 # Scheduled tasks fail with error "Task schedular service is not available"
 
