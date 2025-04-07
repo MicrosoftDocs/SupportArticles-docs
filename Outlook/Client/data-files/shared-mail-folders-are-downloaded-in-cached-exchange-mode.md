@@ -12,11 +12,12 @@ ms.custom:
   - CSSTroubleshoot
 ms.reviewer: aruiz, migr, laurentc, doakm, gbratton, gregmans
 appliesto: 
+  - Outlook 2021
   - Outlook 2019
   - Outlook 2016
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 04/02/2025
+ms.date: 04/07/2025
 ---
 
 # Manage download settings for shared mail folders in Cached Exchange mode in Outlook
@@ -29,33 +30,33 @@ The following screenshot displays the shared Inbox folder of a user. You can ide
 
 :::image type="content" source="media/by-default-shared-mail-folders-are-downloaded-in-cashed/example-of-cached-shared-mailbox.png" alt-text="Screenshot of a shared mailbox that's being cached.":::
 
-Mail folders typically contain more items that non-mail folders. In the versions of Outlook earlier than Outlook 2010 when hard disk space was at a premium, only non-mail folders were cached by default. With hardware advancements, increased disk sizes and speeds, the impact of caching more data locally was reduced. Therefore later versions of Outlook were changed to also cache mail folders by default. 
+Mail folders typically contain more items that non-mail folders. In the versions of Outlook earlier than Outlook 2010 when hard disk space was at a premium, only non-mail folders were cached by default. With hardware advancements, increased disk sizes and speeds, the impact of caching more data locally was reduced. Therefore later versions of Outlook were changed to also cache mail folders by default.
 
 Working with shared folders that are downloaded locally provides better performance. This is because Outlook reads the folder data from the local hard disk instead of connecting to the Microsoft Exchange Server to retrieve the shared folders. The performance gained by using locally cached folders is even more noticeable if the shared folders are located on an Exchange Online mailbox in Microsoft 365.
 
-### Effect of cached shared folders on the size of the Offline Outlook Data (.ost) file
+## Effect of cached shared folders on the size of the Offline Outlook Data (.ost) file
 
 If Outlook is configured to download shared folders, the contents of the shared folders are stored in your local Offline Outlook Data (.ost) file. If the shared folders contain many items or large attachments, the size of your .ost file size might grow significantly.
 
-Also, if you have permissions to a site mailbox, and the *Download Shared Folders* option is enabled in Outlook, the contents of the site mailbox are synchronized to your local .ost file. This can result in an increase in size for the .ost file as well. 
+Also, if you have permissions to a site mailbox, and the *Download Shared Folders* option is enabled in Outlook, the contents of the site mailbox are synchronized to your local .ost file. This can result in an increase in size for the .ost file as well.
 
 For more information about large Outlook data files and performance, see [You might experience application pauses if you have a large Outlook data file](https://support.microsoft.com/help/2759052).
 
 If the size of your .ost file is restricted by policies, caching shared folders might result in the .ost file size limit being reached. For more information about policies that administrators can use to limit the size of Outlook data files, see [How to configure the size limit for both (.pst) and (.ost) files in Outlook](https://support.microsoft.com/help/832925).
 
-Beginning with the Outlook 2016 version, the **Download email for the past** feature applies to your mailbox and to shared mailboxes. This helps to prevent the .ost file from becoming too large. However, an administrator might have implemented a registry value to revert to the previous behavior. To determine this, check for the `DisableSyncSliderForSharedMailbox` registry value. If the value exists and is set to 1, it indicates that the entire contents of shared mailboxes are synchronized to your local .ost file. This is the behavior assuming that the registry values `CacheOthersMail` and `DownloadSharedFolders` aren't set to `0`. 
+Beginning with the Outlook 2016 version, the **Download email for the past** feature applies to your mailbox and to shared mailboxes. This helps to prevent the .ost file from becoming too large. However, an administrator might have implemented a registry value to revert to the previous behavior. To determine this, check for the `DisableSyncSliderForSharedMailbox` registry value. If the value exists and is set to 1, it indicates that the entire contents of shared mailboxes are synchronized to your local .ost file. This is the behavior assuming that the registry values `CacheOthersMail` and `DownloadSharedFolders` aren't set to `0`.
 
 For more information about the DisableSyncSliderForSharedMailbox registry value, see [Only some emails are synchronized](fewer-emails-in-shared-mailboxes-or-public-folders.md).
 
 **Note**: In the versions of Outlook earlier than Outlook 2016, the **Download email for the past** feature was named **Mail to keep offline**.
 
-The best Outlook client performance can vary from user to user, based on their configuration, the number of shared folders being accessed, the location of those shared mailboxes, etc. Only by testing with and without the default download shared folder options can the optimal settings be determined for each user. 
+The best Outlook client performance can vary from user to user, based on their configuration, the number of shared folders being accessed, the location of those shared mailboxes, etc. Only by testing with and without the default download shared folder options can the optimal settings be determined for each user.
 
 ## Registry values, Group Policy, and Office Customization Tool settings to modify download settings
 
-The default behavior to download shared folders can be modified by using group policies and registry settings. Some of these policies and registry values might have improved the shared folder performance in earlier versions of Outlook or when the shared folders were on Exchange Server on-premises mailboxes. However those performance gains might be lost in recent Outlook versions or after mailboxes are moved to Microsoft 365 cloud tenants. If you experience performance issues when using shared folders in Outlook, an administrator will need to determine if such group policies and registry values are set for your organization, and test the performance in Outlook without them. 
+The default behavior to download shared folders can be modified by using group policies and registry settings. Some of these policies and registry values might have improved the shared folder performance in earlier versions of Outlook or when the shared folders were on Exchange Server on-premises mailboxes. However those performance gains might be lost in recent Outlook versions or after mailboxes are moved to Microsoft 365 cloud tenants. If you experience performance issues when using shared folders in Outlook, an administrator will need to determine if such group policies and registry values are set for your organization, and test the performance in Outlook without them.
 
-There are settings that control how Outlook uses shared folders and others that can be used to disable caching of all shared folders.
+There are settings that control how Outlook uses shared folders and others that can be used to disable caching of all shared folders. 
 
 ### Settings that control how Outlook uses shared folders
 
@@ -84,7 +85,7 @@ After the caching of shared mail folders is disabled, the status bar in Outlook 
 
 :::image type="content" source="media/by-default-shared-mail-folders-are-downloaded-in-cashed/outlook-status-bar-shows-online.png" alt-text="Screenshot of the Outlook status bar which displays Online.":::
 
-To set the `CacheOthersMail` registry value, you can: 
+To set the `CacheOthersMail` registry value, you can:
 
 - Configure the Windows Registry manually.
 - Control the registry setting by using a Group Policy.
@@ -92,13 +93,12 @@ To set the `CacheOthersMail` registry value, you can:
 
 #### Configure the Windows Registry manually
 
-> [!IMPORTANT]
-> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
+[!INCLUDE [Important registry alert](../../../includes/registry-important-alert.md)]
 
-Use the following steps to change the caching behavior for shared folders in Outlook 2016 or later versions: 
+Use the following steps to change the caching behavior for shared folders in Outlook 2016 or later versions:
 
 1. Exit Outlook.
-2. Select the Windows Key+R to open a Run dialog box. 
+2. Select the Windows Key+R to open a Run dialog box.
 3. Type **regedit.exe** and then press **OK**.
 4. Locate and select the registry key: `HKEY_CURRENT_USER\Software\Microsoft\Office\<xx.0>\Outlook\Cached Mode`
 
@@ -120,7 +120,7 @@ Use the following steps to change the caching behavior for shared folders in Out
 10. Start Outlook.
 
 > [!NOTE]
-> This method will affect new Outlook profiles that you create only. To change the behavior for all existing Outlook profiles, change the registry value in the following registry key path:
+> This method will affect only the new Outlook profiles that you create. To change the behavior for all existing Outlook profiles, change the registry value in the following registry key path:
 >
 > `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\\<xx.0>\Outlook\Cached Mode`
 >
@@ -197,7 +197,7 @@ To deploy the Shared Mail Folder Cache setting in Outlook 2016 or later versions
 9. Deploy Office with this .msp file.
 
 > [!NOTE]
-> This method only affects new Outlook profiles that you create. To change the behavior for all existing Outlook profiles, add the registry value in the following registry key path:
+> This method affects only the new Outlook profiles that you create. To change the behavior for all existing Outlook profiles, add the registry value in the following registry key path:
 >
 > `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\\<xx.0>\Outlook\Cached Mode`
 >
