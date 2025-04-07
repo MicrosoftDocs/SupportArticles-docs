@@ -51,7 +51,7 @@ Although the apps that are listed in sign-in reports are owned by Microsoft and 
 
 ### Using Microsoft Graph PowerShell SDK
 
-1. Open PowerShell, import Microsoft Graph PowerShell SDK and connect to Microsoft Entra ID:
+1. Open PowerShell, import Microsoft Graph PowerShell SDK and then connect to Microsoft Entra ID:
 
    ```cmd
    Import-Module Microsoft.Graph.Applications
