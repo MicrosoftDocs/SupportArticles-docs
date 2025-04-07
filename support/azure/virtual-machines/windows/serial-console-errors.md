@@ -10,7 +10,7 @@ ms.service: azure-virtual-machines
 ms.topic: article
 ms.tgt_pltfrm: vm
 ms.workload: infrastructure-services
-ms.date: 04/01/2025
+ms.date: 04/07/2025
 ms.author: genli
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
