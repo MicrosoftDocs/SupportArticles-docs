@@ -2,13 +2,14 @@
 title: Capture SSL traffic with Fiddler
 description: Introduces how to make Fiddler to capture SSL traffic in two specific scenarios.
 ms.service: entra-id
-ms.date: 04/03/2025
+ms.date: 04/07/2025
 ms.reviewer: bachoang, v-weizhu
+ms.topic: how-to
 ms.custom: sap:Enterprise Applications
 ---
 # Capture SSL traffic with Fiddler
 
-This article provides instructions to use Fiddler to capture Secure Sockets Layer (SSL) traffic.
+This article provides instructions to use Fiddler to capture Secure Sockets Layer (SSL) traffic to troubleshoot Microsoft Entra apps.
 
 ## Scenario 1: Capture Node.js web traffic with Fiddler
 
