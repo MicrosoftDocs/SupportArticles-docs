@@ -2,7 +2,7 @@
   href: welcome-sales.yml
 - name: Customization
   items:
-    - name: Button in command bar don't show after grid item selection
+    - name: Button in command bar doesn't appear after grid item selection
       href: button-in-command-bar-not-appear-after-grid-item-selection.md
 - name: Enterprise Marketing
   items:
