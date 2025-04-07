@@ -65,7 +65,7 @@ Although the apps that are listed in sign-in reports are owned by Microsoft and 
    Get-MgServicePrincipal -Filter "DisplayName eq '$appDisplayName'" | Select-Object Id, DisplayName, SignInAudience, AppOwnerOrganizationId
    ```
    
-3. Review the result's `AppOwnerTenantId`.
+3. Review the `AppOwnerTenantId` value in the output.
 
     :::image type="content" source="media/verify-first-party-apps-sign-in/review-the-app-owner-tenant-id-microsoft-graph.png" alt-text="Screenshot of the output of a request to show the Microsoft Entra service principal via Microsoft Graph PowerShell SDK.":::
 
