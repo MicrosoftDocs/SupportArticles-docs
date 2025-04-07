@@ -26,9 +26,9 @@ For [network isolated cluster](https://aka.ms/aks/ni), egress traffic is limited
 
 ## Solution
 1. SSH into the vm instance to get log file. `/var/log/azure/cluster-provision.log`. Check the log to find if the issue is about 401 or imds connection timeout, or identity not found with http code 400.
-1. Obtain the acr resource id that AKS leverages as bootstrap acr. `export REGISTRY_ID=$(az aks show -g ${RESOURCE_GROUP} -n ${CLUSTER_NAME} --query 'bootstrapProfile.containerRegistryResourceId)`
+1. Obtain the acr resource id that AKS leverages as bootstrap acr. `export REGISTRY_ID=$(az aks show -g ${RESOURCE_GROUP} -n ${CLUSTER_NAME} --query 'bootstrapProfile.containerRegistryId' -o tsv)`
 1. If it is about 401. Check if the kubelet identity has the acrpull permission to the acr.
-`export KUBELET_IDENTITY_PRINCIPAL_ID=$(az identity show --name ${KUBELET_IDENTITY_NAME} --resource-group ${RESOURCE_GROUP} --query 'principalId' -o tsv)`
+`export KUBELET_IDENTITY_PRINCIPAL_ID=$(az aks show -g ${RESOURCE_GROUP} -n ${CLUSTER_NAME} --query 'identityProfile.kubeletidentity.clientId' -o tsv)`
 If not, run `az role assignment create --role AcrPull --scope ${REGISTRY_ID} --assignee-object-id ${KUBELET_IDENTITY_PRINCIPAL_ID} --assignee-principal-type ServicePrincipal`
 1. If the log error shows identity not found, please bind the kubelet identity to the vmss manually for quick fix.
 1. If it is IMDS connection timeout, please raise ticket.
