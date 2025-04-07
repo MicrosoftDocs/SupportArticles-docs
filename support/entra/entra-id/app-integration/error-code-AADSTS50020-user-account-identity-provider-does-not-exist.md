@@ -134,7 +134,7 @@ Error `AADSTS50020` might occur if the name of a guest user who was deleted in a
 
 ### Verification: Check whether the resource tenant's guest user is older than the home tenant's user account
 
-The first verification option involves comparing the age of the resource tenant's guest user against the home tenant's user account. You can make this verification by using Microsoft Graph, Microsoft Entra PowerShell or Microsoft  Graph PowerShell SDK
+To check the creation date of the guest user account, you can use Microsoft Graph, Microsoft Entra PowerShell, or the Microsoft Graph PowerShell SDK.
 
 #### Microsoft Graph
 
