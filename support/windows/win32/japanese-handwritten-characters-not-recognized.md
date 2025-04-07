@@ -1,22 +1,21 @@
 ---
-title: Japanese handwritten characters aren't recognized with Microsoft.Ink.Recognizer
-description: Describes an issue where Japanese handwritten characters aren't recognized when using Microsoft.Ink.Recognizer as the recognition engine on Windows 11 version 24H2 and Windows Server 2025.
-ms.date: 03/26/2025
-ms.reviewer: hirotoh, davean
+title: Japanese Handwritten Characters Aren't Recognized by Microsoft.Ink.Recognizer
+description: Describes an issue where Japanese handwritten characters can't be recognized using Microsoft.Ink.Recognizer on Windows 11 version 24H2 and Windows Server 2025.
+ms.date: 04/07/2025
+ms.reviewer: hirotoh, davean, v-sidong
 ms.custom: sap:Desktop app UI development\User interaction (keyboard, mouse, pen and touch)
-ms.topic: article
 ---
-# Japanese handwritten characters aren't recognized with Microsoft.Ink.Recognizer
+# Japanese handwritten characters can't be recognized using Microsoft.Ink.Recognizer
 
 ## Symptoms
 
-When using `Microsoft.Ink.Recognizer` as the recognition engine on Windows 11 version 24H2 and Windows Server 2025, you might encounter the folliwng issues:
+When using `Microsoft.Ink.Recognizer` as the recognition engine on Windows 11 version 24H2 and Windows Server 2025, you might encounter the following issues:
 
 - Issue 1
 
   The Japanese handwritten characters aren't recognized correctly.
 
-  For example, when you handwrite Japanese `カスイ`, the result is `カイ` which isn't expected.
+  For example, when you handwrite Japanese `カスイ`, the result is `カイ`, which isn't expected.
 
 - Issue 2
 
