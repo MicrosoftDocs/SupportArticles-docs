@@ -36,10 +36,10 @@ NetpJoinDomainOnDs: Function exits with status of: 0x40
 
 ## Cause
 
-This issue occurs because either of the following conditions is met:
+This issue occurs when either of the following conditions is met:
 
 - A WAN accelerator device responds to acknowledge the TGS request package, but the response does not arrives at the Key Distribution Center (KDC). Generally, IP Time to Live (TTL) frame fields have values of 64 or lower because this is the TTL used by Unix-like devices, and WAN accelerators are generally based on Linux.
-- A network device such as a firewall between the client and the DC dropped the KDC response. More details in the concurrent network trace of the DC traffic.
+- A network device such as a firewall between the client and the DC dropped the KDC response. You can find more details in the concurrent network trace of the DC traffic.
 
 ## Troubleshooting
 
