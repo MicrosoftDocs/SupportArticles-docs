@@ -2,7 +2,7 @@
 title: Error code 80048539 when importing solution patch
 description: Solves the error code 80048539 that occurs when you try to import a solution patch in Microsoft Dynamics 365.
 ms.reviewer: 
-ms.date: 03/31/2021
+ms.date: 04/07/2025
 ms.custom: sap:Working with Solutions
 ---
 # Error code 80048539 occurs when trying to import a solution patch in Dynamics 365
@@ -31,7 +31,8 @@ Error code 80048539 indicates an invalid patch is being imported.
 This issue occurs because the version of the solution patch being imported is lower than the version of the installed solution. For example, a solution named "SolutionA" is already installed with version 1.1.0.0, but you try to import a patch with version 1.0.1.0.
 
 > [!NOTE]
-- > If you're using [Power Apps to import your unmanaged solution update](/power-apps/maker/data-platform/update-solutions#apply-the-upgrade-or-update-in-the-target-environment) and receive the error, expand **Advanced settings** and select the **Update (not recommended)** option as a workaround.  
+>
+- > If you're using Power Apps to import your unmanaged solution update and receive the error, expand **Advanced settings** and select the **Update (not recommended)** option as a workaround.
 - > Microsoft is aware of the issue and is working on a fix.
 
 ## Resolution
