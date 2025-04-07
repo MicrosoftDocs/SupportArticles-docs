@@ -1033,6 +1033,8 @@ items:
       href: ./system-management-components/0x80041323-running-scheduled-tasks.md
     - name: Run programs automatically when a user logs on
       href: ./system-management-components/run-programs-automatically.md
+    - name: Scheduled tasks fail with "Task schedular service is not available"
+      href: ./system-management-components/task-schedular-service-is-not-available.md
     - name: Task scheduler runs tasks as background processes
       href: ./system-management-components/task-scheduler-task-only-runs-in-background.md
     - name: Use the at command to schedule tasks
