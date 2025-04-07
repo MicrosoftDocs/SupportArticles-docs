@@ -39,7 +39,7 @@ For Microsoft Edge:
 System.RunApplication.RunApplication ApplicationPath: $'''msedge''' CommandLineArguments: $'''<https://www.microsoft.com/>''' WindowStyle: System.ProcessWindowStyle.Normal ProcessId=> AppProcessId
 ```
 
-If the browser opens and the window is visible, use the "attach" mode of the "Launch browser" action:
+If the browser opens and the window is visible, use the "attach" mode of the Launch Browser action:
 
 ```ps
 WebAutomation.LaunchEdge.AttachToEdgeByUrl TabUrl: $'''https://www.microsoft.com/''' AttachTimeout: 5 TargetDesktop: $'''{\"DisplayName\":\"Local computer\",\"Route\":{\"ServerType\":\"Local\",\"ServerAddress\":\"\"},\"DesktopType\":\"local\"}''' BrowserInstance=> Browser
@@ -74,7 +74,7 @@ To work around this issue, provide more CPU resources to the machine where the f
 
 ### Scenario 2: Other web automation actions fail with the "Element not found" error
 
-Web automation actions such as the following may fail with the "Element not found" error:
+The following web automation actions such as might fail with the "Element not found" error:
 
 - [Click link on web page](/power-automate/desktop-flows/actions-reference/webautomation#clickbase)
 - [Populate text field on web page](/power-automate/desktop-flows/actions-reference/webautomation#populatetextfieldbase)
