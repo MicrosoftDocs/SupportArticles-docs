@@ -1,5 +1,5 @@
 ---
-title: Web Automation Fails In Unattended Mode
+title: Web Automation Fails in Unattended Mode
 description: Works around an issue where a web automation action fail in unattended environment during runtime.
 ms.custom: sap:Desktop flows\UI or browser automation
 ms.reviewer: amitrou
@@ -13,15 +13,15 @@ This article provides workarounds for resolving issues where a web automation ac
 
 ## Symptoms
 
-In attended mode, web automation actions under the "Browser Automation" group execute successfully. However, in unattended mode, these actions fail.
+In attended mode, web automation actions under the Browser Automation group execute successfully. However, in unattended mode, these actions fail.
 
-### Scenario 1: The "Launch new Microsoft Edge", "Launch new Chrome", or "Launch new Firefox" action fails
+### Scenario 1: The Launch new Microsoft Edge, Launch new Chrome, or Launch new Firefox action fails
 
 The [Launch new Microsoft Edge](/power-automate/desktop-flows/actions-reference/webautomation#launch-new-microsoft-edge), [Launch new Chrome](/power-automate/desktop-flows/actions-reference/webautomation#launchchromebase), or [Launch new Firefox](/power-automate/desktop-flows/actions-reference/webautomation#launchfirefoxbase) action fails with the following error:
 
 > Failed to assume control of Microsoft Edge/ Chrome / Firefox (communication with Power Automate web extension failed)
 
-This error might be caused due to the following reasons:
+This error might occur due to the following reasons:
 
 #### The browser doesn't start and the browser window isn't visible
 
@@ -47,9 +47,9 @@ WebAutomation.LaunchEdge.AttachToEdgeByUrl TabUrl: $'''https://www.microsoft.com
 
 #### The web page takes too long to load in the browser
 
-To work around this issue,
+To work around this issue:
 
-1. In the **Launch new Microsoft Edge**, **Launch new Chrome**, or **Launch new Firefox** action. increase the default values of the following parameters located in the **Advanced** section:
+1. In the **Launch new Microsoft Edge**, **Launch new Chrome**, or **Launch new Firefox** action, increase the default values of the following parameters located in the **Advanced** section:
 
     - **Timeout on webpage load** (for example, set to **120** seconds)
     - **Timeout** (for example, set to **120** seconds)
@@ -83,7 +83,7 @@ Web automation actions such as the following may fail with the "Element not foun
 
 #### Cause
 
-Web automation actions may fail due to screen resolution discrepancies. In unattended mode, the screen resolution may differ from the one used in attended mode, causing web elements or the UI to render differently (for example, responsive layouts.)
+Web automation actions might fail due to screen resolution discrepancies. In unattended mode, the screen resolution might differ from the one used in attended mode, causing web elements or the UI to render differently (for example, responsive layouts.)
 
 #### Workaround
 
