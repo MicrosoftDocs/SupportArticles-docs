@@ -92,8 +92,8 @@ To resolve this issue, clean up the legacy tasks by using the following steps:
 
     5. Go to `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tree`, and delete the keys ending in `At1`, `At2`, `At3` … or more if they exist. Those keys end with `At<#>`, for example:
 
-    > [!IMPORTANT]
-    > [Back up](https://support.microsoft.com/topic/855140ad-e318-2a13-2829-d428a2ab0692) the `Tree` key before proceeding with the next steps.
+        > [!IMPORTANT]
+        > [Back up](https://support.microsoft.com/topic/855140ad-e318-2a13-2829-d428a2ab0692) the `Tree` key before proceeding with the next steps.
 
         - `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tree\At1`
         - `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tree\At2`
