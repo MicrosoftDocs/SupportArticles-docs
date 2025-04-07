@@ -23,12 +23,9 @@ When you try to join a computer to a domain, you receive the following error mes
 When you review the **netsetup.log** file, you find error messages that resemble the following entries:
 
 ```output
-NetUseAdd to \\<dc_fqdn>\IPC$ returned 64
-NetpJoinDomainOnDs: status of connecting to dc '\\<dc_fqdn>': 0x40
+NetUseAdd to \\dc1.adatum.com\IPC$ returned 64
+NetpJoinDomain: status of connecting to dc '\\dc1.adatum.com': 0x40
 NetpJoinDomainOnDs: Function exits with status of: 0x40
-NetpResetIDNEncoding: DnsDisableIdnEncoding(RESETALL) on '<domain_name>' returned 0x0
-NetpJoinDomainOnDs: NetpResetIDNEncoding on '<domain_name>': 0x0
-NetpDoDomainJoin: status: 0x40
 ```
 
 ### Error detail
@@ -39,40 +36,16 @@ NetpDoDomainJoin: status: 0x40
 
 ## Cause
 
-This error is logged when the client computer lacks network connectivity on Transmission Control Protocol (TCP) port 88 between the client and the domain controller (DC), which is used for the Key Distribution Center (KDC) request packet. For example, the error might be caused by some firewall device between the client and the DC.
+This issue occurs because some firewall device between the client and the DC intercepted the Key Distribution Center (KDC) request packet.
 
-## Troubleshoot
+## Troubleshooting
 
-### Test the connection
-
-To troubleshoot this issue, you can run the following command to test the connection:
-
-```PowerShell
-Test-NetConnection <IP_address_of_the_DC> -Port 88
-```
-
-Expected output:
-
-```output
-ComputerName           : <ip_address>
-RemoteAddress          : <ip_address>
-RemotePort             : 88
-SourceAddress          : <ip_address>
-PingSucceeded          : False
-PingReplyDetails (RTT) : 0 ms
-TcpTestSucceeded       : False
-```
-
-The output indicates that the Kerberos port TCP 88 isn't open between the client and the DC.
-
-### Network trace
-
-The issue is related to Server Message Block (SMB).
+The issue is related to Server Message Block (SMB). Troubleshoot this issue based on the network trace:
 
 1. Use the `net use` command to access the same Universal Naming Convention (UNC) path and reproduce the issue.
 2. Collect a network trace of the `net use` command execution.
 
-#### Example
+### Example
 
 Here's an example of a network trace:
 
