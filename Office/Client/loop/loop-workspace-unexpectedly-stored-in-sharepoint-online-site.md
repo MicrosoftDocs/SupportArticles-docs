@@ -31,7 +31,7 @@ This procedure must be performed by a SharePoint administrator. Follow these ste
 1. Get the site URLs that correspond to the affected SharePoint site IDs that are provided by Microsoft:
 
    1. Copy and paste the affected SharePoint site IDs into a text editor, such as Notepad. Then, save the file.
-   1. Download the [SiteIDtoURL.ps1](https://github.com/pnp/powershell/blob/dev/samples/Site.Metadata.CSV/SiteIDtoURL.ps1) PowerShell script.
+   1. Download the [SiteIDtoURL.ps1](https://pnp.github.io/script-samples/spo-get-site-list-ids/README.html?tabs=pnpps) PowerShell script.
    1. Open a PowerShell window that has administrative privileges.
    1. Navigate to the location where you saved *SiteIDtoURL.ps1*, and then run the script.
    1. Follow the prompts to provide the requested inputs, such as:
