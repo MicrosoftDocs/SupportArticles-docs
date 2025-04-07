@@ -1,20 +1,20 @@
 ---
 title: Button in Command Bar Not Showing After Grid Item Selection
-description: Resolving the issue where a button in the command bar doesn't appear after selecting grid items in Microsoft Dynamics 365 Sales.
+description: Resolving the issue where a button in the command bar doesn't appear after selecting grid items in Microsoft Dynamics 365 apps.
 ms.reviewer: 
-ms.date: 04/02/2021
+ms.date: 04/07/2025
 ms.custom: sap:Opportunity
 ---
-# Button in command bar doesn't appear after grid item selection in Dynamics 365 Sales
+# Button in command bar doesn't appear after grid item selection
 
-This article provides a solution to the issue where a custom button on the command bar doesn't appear after selecting one or more grid items in Dynamics 365 Sales.
+This article provides a solution to the issue where a custom button on the command bar doesn't appear after selecting one or more grid items in Dynamics 365 apps.
 
-_Applies to:_ &nbsp; Microsoft Dynamics 365 Sales
+_Applies to:_ &nbsp; Microsoft Dynamics 365
 _Original KB number:_ &nbsp; 4481268
 
 ## Symptoms
 
-A custom button is configured to appear in the grid, either in the `HomePageGrid` or `SubGrid` in Dynamics 365 Sales.
+A custom button is configured to appear in the grid, either in the `HomePageGrid` or `SubGrid` in Dynamics 365 apps.
 
 - In the web client, this button appears in the ribbon or command bar regardless of whether grid items are selected.
 - In the Unified Client Interface (UCI), this button appears when no grid items are selected. However, after selecting one or more grid items, the button disappears.
