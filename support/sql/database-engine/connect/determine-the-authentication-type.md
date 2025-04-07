@@ -9,7 +9,7 @@ ms.topic: how-to
 
 # How to determine if the authentication type is Kerberos
 
-This article provides a query to help you determine the type of authentication that's used when you connect to Microsoft SQL Server. Make sure that you run the query on a client computer, not on the server where the SQL Server instance you are testing is installed. Otherwise the query returns `auth_scheme` as **NTLM** even if Kerberos is configured correctly. This occurs because of a per-service SID security hardening feature that was added in Windows 2008. This feature forces all local connections to use NTLM regardless of whether Kerberos is available.
+This article provides step-by-step instructions to help you determine the type of authentication that's used when you connect to Microsoft SQL Server. Make sure that you run the steps on a client computer, not on the server where the SQL Server instance you are testing is installed. Otherwise, the *auth_scheme* value in the output will always be *NTLM*, even if Kerberos is configured correctly. This occurs because of a per-service SID security hardening feature that was added in Windows 2008. This feature forces all local connections to use NTLM regardless of whether Kerberos is available.
 
 ## Use SQL Server Management Studio
 
