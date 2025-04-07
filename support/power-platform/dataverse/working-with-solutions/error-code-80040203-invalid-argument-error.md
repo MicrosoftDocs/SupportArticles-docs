@@ -2,7 +2,7 @@
 title: Error Code 80040203 Invalid Argument
 description: Provides a solution to an error that occurs when you try to import a solution into Microsoft Dynamics 365.
 ms.reviewer: 
-ms.date: 04/03/2025
+ms.date: 04/07/2025
 ms.custom: sap:Working with Solutions
 ---
 # Error code 80040203 (Invalid Argument) error when importing a solution into Dynamics 365
@@ -45,9 +45,7 @@ The error occurs because the schema retains an entity relationship that should b
 
 The referenced **Entity Relationship** name is a concatenation of an entity and a BPF. This issue occurs when an entity is removed from a BPF stage and replaced with a different entity, followed by an update to the BPF while it's still activated. Although the entity is removed from the BPF, the relationship persists in the schema and is exported with the solution from the source. This lingering relationship causes the error during import.
 
-## Resolution
-
-Microsoft is aware of this issue and is working on a fix to automatically remove the relationship after a deletion and an update. In the meantime, the following workarounds can be used to resolve the issue.
+## Workaround
 
 ### Option 1 - Update solution file
 
