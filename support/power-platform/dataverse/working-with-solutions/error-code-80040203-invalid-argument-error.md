@@ -1,24 +1,23 @@
 ---
-title: Error code 80040203 Invalid Argument error
+title: Error Code 80040203 Invalid Argument
 description: Provides a solution to an error that occurs when you try to import a solution into Microsoft Dynamics 365.
 ms.reviewer: 
-ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 04/07/2025
 ms.custom: sap:Working with Solutions
 ---
-# Error code 80040203 (Invalid Argument) error occurs when you try to import a solution into Microsoft Dynamics 365
+# Error code 80040203 (Invalid Argument) error when importing a solution into Dynamics 365
 
 This article provides a solution to an error that occurs when you try to import a solution into Microsoft Dynamics 365.
 
-_Applies to:_ &nbsp; Microsoft Dynamics 365 Customer Engagement Online  
+_Applies to:_ &nbsp; Microsoft Dynamics 365  
 _Original KB number:_ &nbsp; 4514229
 
 ## Symptoms
 
-When you try to import a solution in Dynamics 365, you receive the following error message:
+When you try to [import a solution](/powerapps/maker/data-platform/import-update-export-solutions) into Dynamics 365, you receive the following error message:
 
-> "The import of solution: \<Solution Name> failed.  
-Error Code 80040203."
+> The import of solution: \<Solution Name> failed.  
+> Error Code 80040203.
 
 > [!NOTE]
 > This error code is documented in [Web service error codes](/powerapps/developer/common-data-service/org-service/web-service-error-codes) with the following information:
@@ -26,38 +25,36 @@ Error Code 80040203."
 > Name: InvalidArgument  
 > Hex: 80040203  
 > Number: -2147220989  
-> Invalid argument.  
+> Invalid argument.
+
+Additionally, the error dialog might reference the following type of object:
+
+> **Type**: Relationship  
+> **Name**: bpf_\<entity>\_\<publisher>\_\<BPF Name>  
+
+The downloaded log file indicates the following on the **Components** page:
+
+> **ItemType**: Entity Relationship  
+> **Name**: bpf_\<entity>\_\<publisher>\_\<BPF Name>  
+> **ErrorCode**: 0x80040203  
+> **ErrorText**: Attribute Display Name for id: \<GUID>, objectcolumn: DisplayName and labelTypeCode: Attribute not specified
 
 ## Cause
 
-This error can be caused for several reasons. If your error dialog references the following type of object, review the rest of this article for a potential solution:
+The error occurs because the schema retains an entity relationship that should be removed after the entity is deleted from the [Business Process Flow (BPF)](/power-automate/business-process-flows-overview).
 
-> **Type**: Relationship  
-**Name**: bpf_\<entity>\_\<publisher>\_\<BPF Name>  
+The referenced **Entity Relationship** name is a concatenation of an entity and a BPF. This issue occurs when an entity is removed from a BPF stage and replaced with a different entity, followed by an update to the BPF while it's still activated. Although the entity is removed from the BPF, the relationship persists in the schema and is exported with the solution from the source. This lingering relationship causes the error during import.
 
-Download the Log File that when opened to the Components page will show:
+## Workaround
 
-> **ItemType**: Entity Relationship  
-**Name**: bpf_\<entity>\_\<publisher>\_\<BPF Name>  
-**ErrorCode**: 0x80040203  
-**ErrorText**: Attribute Display Name for id: \<GUID>, objectcolumn: DisplayName and labelTypeCode: Attribute not specified
+### Option 1 - Update solution file
 
-The Name of the Entity Relationship will be the concatenation of an Entity and a Business Process Flow (BPF). The Entity was previously removed from a BPF stage and replaced with a different Entity, and then the BPF was updated while still activated. The entity has been removed from the BPF but the relationship still exists in the schema. So it's exported with the solution from the source. This relationship is causing the error to be displayed.
+If you can't re-create the solution package and need to proceed with the import, you can manually remove the problematic relationship from the solution file.
 
-## Resolution
-
-Microsoft is aware of this issue and is working on a change to remove this relationship after a delete then update.
-
-There are two workarounds for this issue:
-
-### Option 1 - Update Solution File
-
-If you need to import the solution and can't recreate the solution package, then remove the relationship from the solution.
-
-1. Unzip the solution.
-2. Edit the customization.xml.
-3. Search for the relationship mentioned in the error: bpf_\<entity>\_\<publisher>\_\<BPF Name>
-4. Delete all the XML for the EntityRelationship:
+1. Unzip the solution file.
+2. Edit the **customization.xml** file.
+3. Search for the relationship mentioned in the error: bpf_\<entity>\_\<publisher>\_\<BPF Name>.
+4. Delete all XML references to the `EntityRelationship`:
 
     ```xml
     <EntityRelationship Name="bpf_<entity>_<publisher>_<BPF Name>">
@@ -69,13 +66,13 @@ If you need to import the solution and can't recreate the solution package, then
 6. Zip the entire directory.
 7. Import the solution again.
 
-### Option 2 - Remove the relationship from the source and recreate your solution
+### Option 2 - Remove the relationship from the source and re-create your solution
 
-It's a long-term resolution and will fix the issue for the next export of the solution.
+This option provides a long-term resolution and ensures the issue is fixed for future exports of the solution.
 
 1. Open the source organization.
-2. Select **Settings** / **Customizations** / **Customize the System**
-3. Select the Entity in the relationship:
+2. Select **Settings** > **Customizations** > **Customize the System**.
+3. Select the entity in the relationship:
 
     ```xml
     bpf_<entity>_<publisher>_<BPF Name>
@@ -90,4 +87,4 @@ It's a long-term resolution and will fix the issue for the next export of the so
 
 6. Select and delete the relationship.
 7. Publish **All Customizations**.
-8. Export the solution and import it into the target.
+8. Export the solution and import it into the target environment.
