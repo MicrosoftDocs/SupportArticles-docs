@@ -31,15 +31,15 @@ Use the following steps to resolve the issue:
 > [!NOTE]
 > [At](/windows-server/administration/windows-commands/at) tasks refer to tasks scheduled to run automatically by the OS using the `at` command. It's a legacy command in Windows for scheduling tasks at specified time and date. These tasks are managed by the Task Scheduler service. After an OS upgrade, such tasks might fail due to compatibility issues or problems with the Task Scheduler service. This could affect the successful launch of Task Scheduler.
 
-Check the **C:\Windows\System32\Tasks** folder to determine if you have any `at` tasks created under Task Scheduler. If so, the tasks are listed under the following locations. For example:
+Check the **C:\\Windows\\System32\\Tasks** folder to determine if you have any `at` tasks created under Task Scheduler. If so, the tasks are listed under the following locations. For example:
 
-- **C:\Windows\System32\Tasks**
-  - **C:\Windows\System32\Tasks\At1**
-  - **C:\Windows\System32\Tasks\At2**
+- **C:\\Windows\\System32\\Tasks**
+  - **C:\\Windows\\System32\\Tasks\\At1**
+  - **C:\\Windows\\System32\\Tasks\\At2**
 
-- **C:\Windows\Tasks**
-- **C:\Windows\Tasks\At1.job**
-- **C:\Windows\Tasks\At2.job**
+- **C:\\Windows\\Tasks**
+  - **C:\\Windows\\Tasks\\At1.job**
+  - **C:\\Windows\\Tasks\\At2.job**
 
 To resolve this issue, clean up the legacy tasks by using the following steps:
 
@@ -50,22 +50,26 @@ To resolve this issue, clean up the legacy tasks by using the following steps:
     1. Download [PsTools](/sysinternals/downloads/pstools) and extract the file.
     2. Go to the extracted PsTools directory and run the following command from an administrative Command Prompt (**cmd.exe**) window:
 
-        `psexec.exe -s -i cmd.exe`
+        ```console
+        psexec.exe -s -i cmd.exe
+        ```
 
     3. After you accept the end-user license agreement (EULA), another **cmd.exe** process opens. Type `whoami` in the command prompt, and you should receive the output `nt authority\system`.
     4. Run this command:
 
-        `net stop schedule`
+        ```console
+        net stop schedule
+        ```
 
 2. After the Task Scheduler service is stopped successfully, delete the files for `at` tasks after backup if they exist. Here are some examples:
 
-    - **C:\Windows\System32\Tasks**
-      - **C:\Windows\System32\Tasks\At1**
-      - **C:\Windows\System32\Tasks\At2**
+    - **C:\\Windows\\System32\\Tasks**
+      - **C:\\Windows\\System32\\Tasks\\At1**
+      - **C:\\Windows\\System32\\Tasks\\At2**
 
-    - **C:\Windows\Tasks**
-      - **C:\Windows\Tasks\At1.job**
-      - **C:\Windows\Tasks\At2.job**
+    - **C:\\Windows\\Tasks**
+      - **C:\\Windows\\Tasks\\At1.job**
+      - **C:\\Windows\\Tasks\\At2.job**
 
 3. Clear the schedule entries from the registry:
 
@@ -75,16 +79,15 @@ To resolve this issue, clean up the legacy tasks by using the following steps:
 
         - `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tasks\{1}`
 
-        `Path`=`\\At1`
+            `Path`=`\\At1`
 
         - `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tasks\{2}`
 
-        `Path`=`\\At2`
+            `Path`=`\\At2`
 
     4. Delete the following keys if they exist:
 
         - `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tasks\{xxxxxxxx-EC79-4064-9831-xxxxxxxxxxxx}`
-
         - `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tasks\{xxxxxxxx-FB9E-4BDD-8FED-xxxxxxxxxxxx}`
 
     5. Go to `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tree`, and delete the keys ending in `At1`, `At2`, `At3` … or more if they exist. Those keys end with `At<#>`, for example:
@@ -93,12 +96,13 @@ To resolve this issue, clean up the legacy tasks by using the following steps:
     > [Back up](https://support.microsoft.com/topic/855140ad-e318-2a13-2829-d428a2ab0692) the `Tree` key before proceeding with the next steps.
     >
     > - `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tree\At1`
-    >
     > - `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tree\At2`
 
 4. Go back to the command prompt opened using the `psexec` command, and then run the following command to start the Task Scheduler service:
 
-    `netsh start schedule`
+    ```console
+    netsh start schedule
+    ```
 
 ## Step 2: Delete corrupted tasks and then create them again if needed
 
@@ -122,10 +126,10 @@ If you have cleaned up the `at` tasks or you don't have `at` tasks, you might ha
     > [!NOTE]
     > Before you proceed with the following steps, back up the following items:
     >
-    > - The folder **%SYSTEMDRIVE%\Windows\System32\Tasks**
+    > - The folder **%SYSTEMDRIVE%\\Windows\\System32\\Tasks**
     > - The registry key `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\`
 
-    1. Delete the task file that corresponds to the corrupted task from the Tasks folder (%SYSTEMDRIVE%\Windows\System32\Tasks).
+    1. Delete the task file that corresponds to the corrupted task from the Tasks folder (**%SYSTEMDRIVE%\\Windows\\System32\\Tasks**).
     2. Go to the registry subkey `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tree`. Note down the `Id` value (in GUID format) of each task that needs to be deleted corresponding to the corrupted task.
 
     Delete the registry subkey that corresponds to the corrupted task from `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tree`.
