@@ -1,8 +1,9 @@
 ---
-title: OutOfMemoryException error when you execute a query
+title: OutOfMemoryException Error When You Execute a Query
 description: This article provides workarounds for the problem that occurs when you use SQL Server Management Studio (SSMS) to run a SQL query that returns a large amount of data.
-ms.date: 04/02/2025
+ms.date: 04/08/2025
 ms.custom: sap:SQL Server Management, Query and Data Tools
+ms.reviewer: jopilov
 ---
 # OutOfMemoryException error when you execute a query in SQL Server Management Studio (SSMS)
 
@@ -44,6 +45,6 @@ Configure the query window to output the query results to a file. A file output 
 
 ## Method 3: Use sqlcmd
 
-Use [sqlcmd Utility](/sql/tools/sqlcmd-utility?redirectedfrom=MSDN&view=sql-server-ver15&preserve-view=true)  instead of SSMS to run the SQL queries. This method enables queries to be run without the resources that are required by the SSMS UI. Additionally, you can use the 64-bit version of Sqlcmd.exe to avoid the memory restriction that affects the 32-bit SSMS process.
+Use [sqlcmd Utility](/sql/tools/sqlcmd/sqlcmd-utility)  instead of SSMS to run the SQL queries. This method enables queries to be run without the resources that are required by the SSMS UI. Additionally, you can use the 64-bit version of Sqlcmd.exe to avoid the memory restriction that affects the 32-bit SSMS process.
 
 
