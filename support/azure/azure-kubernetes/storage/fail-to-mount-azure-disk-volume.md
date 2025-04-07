@@ -208,9 +208,9 @@ The node has reached its maximum disk capacity. In AKS, the number of disks per 
 
 To resolve the issue, use one of the following methods:
 
-- Delete existing disks from the node.
-- Scale the node pool.
 - Add a new node pool with a VM size that supports more disk limit.
+- Scale the node pool.
+- Delete existing disks from the node.
 
 Additionally, make sure that the number of disks per node does not exceed the [Kubernetes default limits](https://kubernetes.io/docs/concepts/storage/storage-limits/#kubernetes-default-limits).
 
