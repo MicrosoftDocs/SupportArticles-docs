@@ -94,9 +94,9 @@ To resolve this issue, clean up the legacy tasks by using the following steps:
 
     > [!IMPORTANT]
     > [Back up](https://support.microsoft.com/topic/855140ad-e318-2a13-2829-d428a2ab0692) the `Tree` key before proceeding with the next steps.
-    >
-    > - `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tree\At1`
-    > - `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tree\At2`
+
+        - `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tree\At1`
+        - `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tree\At2`
 
 4. Go back to the command prompt opened using the `psexec` command, and then run the following command to start the Task Scheduler service:
 
@@ -132,7 +132,7 @@ If you have cleaned up the `at` tasks or you don't have `at` tasks, you might ha
     1. Delete the task file that corresponds to the corrupted task from the Tasks folder (**%SYSTEMDRIVE%\\Windows\\System32\\Tasks**).
     2. Go to the registry subkey `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tree`. Note down the `Id` value (in GUID format) of each task that needs to be deleted corresponding to the corrupted task.
 
-    Delete the registry subkey that corresponds to the corrupted task from `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tree`.
+        Delete the registry subkey that corresponds to the corrupted task from `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tree`.
 
 3. Delete the registry subkey that corresponds to the corrupted task from `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tasks`.
 
@@ -140,10 +140,10 @@ If you have cleaned up the `at` tasks or you don't have `at` tasks, you might ha
 
     > [!NOTE]
     > The task exists in only one of the three locations and is in GUID format.
-    >
-    > - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Plain`
-    > - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Logon`
-    > - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Boot`
+
+    - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Plain`
+    - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Logon`
+    - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Boot`
 
 ## Contact Microsoft Support
 
