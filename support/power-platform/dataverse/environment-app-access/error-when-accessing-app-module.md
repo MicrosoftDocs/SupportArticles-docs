@@ -29,20 +29,12 @@ The required license name and the application names are shown in the error detai
 > Technical Details
 >
 > User does not have any license to access this app module uniqueName= Customerservicehub from publisher= dynamics365customerengagement. A license is required with one of the service plans: 'Dynamics 365 for Customer Service: \<GUID>
-
+>
 > User does not have a license to access this app module uniqueName=< unique name> with Id=\<Id> from publisher=\<publisher name>. A license is required with one of the service plans: \<Service Plan name>: \<Service Plan Id>. Please refer to the article \<link to this KB> for more details.
 
 ## Cause
 
 This issue occurs because the application requires a license, but the administrator hasn't assigned the appropriate license to the user of the application.
-
-For example, if a user with a Team Member license attempts to access the [Customer Service Hub application](/dynamics365/customer-service/implement/customer-service-hub-user-guide-basics), they receive the following error message:
-
-> This app requires a license and you don't have the appropriate license to access this app. Please contact your administrator to get the appropriate license assigned, as per details provided.  
->
-> Technical Details
->
-> User does not have any license to access this app module uniqueName= Customerservicehub from publisher= dynamics365customerengagement. A license is required with one of the service plans: 'Dynamics 365 for Customer Service: \<GUID>
 
 ## Resolution
 
@@ -50,4 +42,4 @@ To solve this issue, contact your administrator and request the appropriate lice
 
 For access to custom apps (canvas or model-driven app), you need to be assigned a Dynamics 365 Enterprise or Professional license, and Power Apps per user plan. The environment needs to be given [Power Apps per app plans (also known as app passes)](/power-platform/admin/about-powerapps-perapp).
 
-For more information about the Team Members license and capabilities included with the license, see [Dynamics 365 Team Members license](https://learn.microsoft.com/en-us/dynamics365/get-started/team-members-license).
+For more information about the Team Members license and capabilities included with the license, see [Dynamics 365 Team Members license](/dynamics365/get-started/team-members-license).
