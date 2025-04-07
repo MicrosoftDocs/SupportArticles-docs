@@ -38,9 +38,14 @@ NetpJoinDomainOnDs: Function exits with status of: 0x40
 
 This issue occurs because some firewall device between the client and the DC intercepted the Key Distribution Center (KDC) request packet.
 
+This issue occurs because either of the following conditions is met:
+
+- A WAN accelerator device responds to acknowledge the TGS request package, but the response does not arrives at the Key Distribution Center (KDC). Generally, IP Time to Live (TTL) frame fields have values of 64 or lower because this is the TTL used by Unix-like devices, and WAN accelerators are generally based on Linux.
+- A network device such as a firewall between the client and the DC dropped the KDC response. More details in the concurrent network trace of the DC traffic.
+
 ## Troubleshooting
 
-The issue is related to Server Message Block (SMB). Troubleshoot this issue based on the network trace:
+The issue is related to getting Kerberos Tickets for a Server Message Block (SMB) session. Troubleshoot this issue based on the network trace:
 
 1. Use the `net use` command to access the same Universal Naming Convention (UNC) path and reproduce the issue.
 2. Collect a network trace of the `net use` command execution.
@@ -50,30 +55,30 @@ The issue is related to Server Message Block (SMB). Troubleshoot this issue base
 Here's an example of a network trace:
 
 ```output
-CLIENT1    DC1.ADATUM.COM           TCP      TCP:Flags=......S., SrcPort=59259, DstPort=Kerberos(88), PayloadLen=0, Seq=1299628969, Ack=0, Win=8192 (  ) = 8192           {TCP:267, IPv4:5}
-DC1.ADATUM.COM         CLIENT1            TCP      TCP:Flags=...A..S., SrcPort=Kerberos(88), DstPort=59259, PayloadLen=0, Seq=2785282675, Ack=1299628970, Win=8192 ( Scale factor not supported ) = 8192           {TCP:267, IPv4:5}
-CLIENT1    DC1.ADATUM.COM           TCP      TCP:Flags=...A...., SrcPort=59259, DstPort=Kerberos(88), PayloadLen=0, Seq=1299628970, Ack=2785282676, Win=64240 (scale factor 0x0) = 64240   {TCP:267, IPv4:5}
-CLIENT1    DC1.ADATUM.COM           KerberosV5      KerberosV5:TGS Request Realm: ADATUM.COM Sname: cifs/DC1.ADATUM.COM {TCP:267, IPv4:5}
-DC1.ADATUM.COM         CLIENT1            TCP      TCP:Flags=...A...., SrcPort=Kerberos(88), DstPort=59259, PayloadLen=0, Seq=2785282676, Ack=1299628970, Win=64240 (scale factor 0x0) = 64240   {TCP:267, IPv4:5}
-CLIENT1    DC1.ADATUM.COM           TCP      TCP:[ReTransmit #1539]Flags=...A...., SrcPort=59259, DstPort=Kerberos(88), PayloadLen=1460, Seq=1299628970 - 1299630430, Ack=2785282676, Win=64240 (scale factor 0x0) = 64240   {TCP:267, IPv4:5}
-CLIENT1    DC1.ADATUM.COM           TCP      TCP:[ReTransmit #1539]Flags=...A...., SrcPort=59259, DstPort=Kerberos(88), PayloadLen=1460, Seq=1299628970 - 1299630430, Ack=2785282676, Win=64240 (scale factor 0x0) = 64240   {TCP:267, IPv4:5}
-CLIENT1    DC1.ADATUM.COM           TCP      TCP:[ReTransmit #1539]Flags=...A...., SrcPort=59259, DstPort=Kerberos(88), PayloadLen=536, Seq=1299628970 - 1299629506, Ack=2785282676, Win=64240 (scale factor 0x0) = 64240   {TCP:267, IPv4:5}
-DC1.ADATUM.COM         CLIENT1            TCP      TCP:Flags=...A...., SrcPort=Kerberos(88), DstPort=59259, PayloadLen=0, Seq=2785282676, Ack=1299629506, Win=63704 (scale factor 0x0) = 63704   {TCP:267, IPv4:5}
-CLIENT1    DC1.ADATUM.COM           TCP      TCP:[Continuation to #0]Flags=...A...., SrcPort=59259, DstPort=Kerberos(88), PayloadLen=536, Seq=1299629506 - 1299630042, Ack=2785282676, Win=64240 (scale factor 0x0) = 64240   {TCP:267, IPv4:5}
-CLIENT1    DC1.ADATUM.COM           TCP      TCP:[Continuation to #0]Flags=...A...., SrcPort=59259, DstPort=Kerberos(88), PayloadLen=536, Seq=1299630042 - 1299630578, Ack=2785282676, Win=64240 (scale factor 0x0) = 64240   {TCP:267, IPv4:5}
-DC1.ADATUM.COM         CLIENT1            TCP      TCP:Flags=...A...., SrcPort=Kerberos(88), DstPort=59259, PayloadLen=0, Seq=2785282676, Ack=1299630042, Win=63168 (scale factor 0x0) = 63168   {TCP:267, IPv4:5}
-CLIENT1    DC1.ADATUM.COM           TCP      TCP:[Continuation to #0]Flags=...AP..., SrcPort=59259, DstPort=Kerberos(88), PayloadLen=536, Seq=1299630578 - 1299631114, Ack=2785282676, Win=64240 (scale factor 0x0) = 64240   {TCP:267, IPv4:5}
-DC1.ADATUM.COM         CLIENT1            TCP      TCP:Flags=...A...., SrcPort=Kerberos(88), DstPort=59259, PayloadLen=0, Seq=2785282676, Ack=1299630738, Win=64240 (scale factor 0x0) = 64240   {TCP:267, IPv4:5}
-CLIENT1    DC1.ADATUM.COM           KerberosV5      KerberosV5:     {TCP:267, IPv4:5}
-DC1.ADATUM.COM         CLIENT1            TCP      TCP:[Continuation to #0]Flags=...AP..., SrcPort=Kerberos(88), DstPort=59259, PayloadLen=290, Seq=2785284136 - 2785284426, Ack=1299630738, Win=64240 (scale factor 0x0) = 64240   {TCP:267, IPv4:5}
-CLIENT1    DC1.ADATUM.COM           TCP      TCP:Flags=...A...., SrcPort=59259, DstPort=Kerberos(88), PayloadLen=0, Seq=1299632186, Ack=2785282676, Win=64240 (scale factor 0x0) = 64240   {TCP:267, IPv4:5}
-DC1.ADATUM.COM         CLIENT1            TCP      TCP:Flags=...A...., SrcPort=Kerberos(88), DstPort=59259, PayloadLen=0, Seq=2785284426, Ack=1299631114, Win=63864 (scale factor 0x0) = 63864   {TCP:267, IPv4:5}
-CLIENT1    DC1.ADATUM.COM           TCP      TCP:[Continuation to #1552]Flags=...AP..., SrcPort=59259, DstPort=Kerberos(88), PayloadLen=320, Seq=1299632186 - 1299632506, Ack=2785282676, Win=64240 (scale factor 0x0) = 64240     {TCP:267, IPv4:5}
-DC1.ADATUM.COM         CLIENT1            TCP      TCP:Flags=...A...., SrcPort=Kerberos(88), DstPort=59259, PayloadLen=0, Seq=2785284426, Ack=1299632186, Win=62792 (scale factor 0x0) = 62792   {TCP:267, IPv4:5}
-DC1.ADATUM.COM         CLIENT1            TCP      TCP:Flags=...A...., SrcPort=Kerberos(88), DstPort=59259, PayloadLen=0, Seq=2785284426, Ack=1299632506, Win=64240 (scale factor 0x0) = 64240   {TCP:267, IPv4:5}
-CLIENT1    DC1.ADATUM.COM           TCP      TCP:Flags=...A...F, SrcPort=59259, DstPort=Kerberos(88), PayloadLen=0, Seq=1299632506, Ack=2785282676, Win=64240 (scale factor 0x0) = 64240   {TCP:267, IPv4:5}
-DC1.ADATUM.COM         CLIENT1            TCP      TCP:Flags=...A...., SrcPort=Kerberos(88), DstPort=59259, PayloadLen=0, Seq=2785284136, Ack=1299632507, Win=64240 (scale factor 0x0) = 64240   {TCP:267, IPv4:5}
-DC1.ADATUM.COM         CLIENT1            TCP      TCP:Flags=...A.R.., SrcPort=Kerberos(88), DstPort=59259, PayloadLen=0, Seq=2785284136, Ack=1299632507, Win=0 (scale factor 0x0) = 0 
+1534 CLIENT1        DC1.ADATUM.COM   TCP        TCP:Flags=......S., SrcPort=59259, DstPort=Kerberos(88), PayloadLen=0, Seq=1299628969, Ack=0
+1537 DC1.ADATUM.COM CLIENT1          TCP        TCP:Flags=...A..S., SrcPort=Kerberos(88), DstPort=59259, PayloadLen=0, Seq=2785282675, Ack=1299628970
+1538 CLIENT1        DC1.ADATUM.COM   TCP        TCP:Flags=...A...., SrcPort=59259, DstPort=Kerberos(88), PayloadLen=0, Seq=1299628970, Ack=2785282676
+1539 CLIENT1    DC1.ADATUM.COM       KerberosV5 KerberosV5:TGS Request Realm: ADATUM.COM Sname: cifs/DC1.ADATUM.COM
+1540 DC1.ADATUM.COM CLIENT1          TCP        TCP:Flags=...A...., SrcPort=Kerberos(88), DstPort=59259, PayloadLen=0, Seq=2785282676, Ack=1299628970
+1541 CLIENT1        DC1.ADATUM.COM   TCP        TCP:[ReTransmit #1539]Flags=...A...., SrcPort=59259, DstPort=Kerberos(88), PayloadLen=1460, Seq=1299628970 - 1299630430, Ack=2785282676
+1542 CLIENT1        DC1.ADATUM.COM   TCP        TCP:[ReTransmit #1539]Flags=...A...., SrcPort=59259, DstPort=Kerberos(88), PayloadLen=1460, Seq=1299628970 - 1299630430, Ack=2785282676
+1545 CLIENT1        DC1.ADATUM.COM   TCP        TCP:[ReTransmit #1539]Flags=...A...., SrcPort=59259, DstPort=Kerberos(88), PayloadLen=536, Seq=1299628970 - 1299629506, Ack=2785282676
+1546 DC1.ADATUM.COM CLIENT1          TCP        TCP:Flags=...A...., SrcPort=Kerberos(88), DstPort=59259, PayloadLen=0, Seq=2785282676, Ack=1299629506
+1547 CLIENT1        DC1.ADATUM.COM   TCP        TCP:[Continuation to #0]Flags=...A...., SrcPort=59259, DstPort=Kerberos(88), PayloadLen=536, Seq=1299629506 - 1299630042, Ack=2785282676
+1548 CLIENT1        DC1.ADATUM.COM   TCP        TCP:[Continuation to #0]Flags=...A...., SrcPort=59259, DstPort=Kerberos(88), PayloadLen=536, Seq=1299630042 - 1299630578, Ack=2785282676
+1549 DC1.ADATUM.COM CLIENT1          TCP        TCP:Flags=...A...., SrcPort=Kerberos(88), DstPort=59259, PayloadLen=0, Seq=2785282676, Ack=1299630042
+1550 CLIENT1        DC1.ADATUM.COM   TCP        TCP:[Continuation to #0]Flags=...AP..., SrcPort=59259, DstPort=Kerberos(88), PayloadLen=536, Seq=1299630578 - 1299631114, Ack=2785282676
+1551 DC1.ADATUM.COM CLIENT1          TCP        TCP:Flags=...A...., SrcPort=Kerberos(88), DstPort=59259, PayloadLen=0, Seq=2785282676, Ack=1299630738
+1552 CLIENT1    DC1.ADATUM.COM       KerberosV5 KerberosV5:     {TCP:267, IPv4:5}
+1553 DC1.ADATUM.COM CLIENT1          TCP        TCP:[Continuation to #0]Flags=...AP..., SrcPort=Kerberos(88), DstPort=59259, PayloadLen=290, Seq=2785284136 - 2785284426, Ack=1299630738
+1554 CLIENT1        DC1.ADATUM.COM   TCP        TCP:Flags=...A...., SrcPort=59259, DstPort=Kerberos(88), PayloadLen=0, Seq=1299632186, Ack=2785282676
+1555 DC1.ADATUM.COM CLIENT1          TCP        TCP:Flags=...A...., SrcPort=Kerberos(88), DstPort=59259, PayloadLen=0, Seq=2785284426, Ack=1299631114
+1556 CLIENT1        DC1.ADATUM.COM   TCP        TCP:[Continuation to #1552]Flags=...AP..., SrcPort=59259, DstPort=Kerberos(88), PayloadLen=320, Seq=1299632186 - 1299632506, Ack=2785282676
+1557 DC1.ADATUM.COM CLIENT1          TCP        TCP:Flags=...A...., SrcPort=Kerberos(88), DstPort=59259, PayloadLen=0, Seq=2785284426, Ack=1299632186
+1558 DC1.ADATUM.COM CLIENT1          TCP        TCP:Flags=...A...., SrcPort=Kerberos(88), DstPort=59259, PayloadLen=0, Seq=2785284426, Ack=1299632506
+1559 CLIENT1        DC1.ADATUM.COM   TCP        TCP:Flags=...A...F, SrcPort=59259, DstPort=Kerberos(88), PayloadLen=0, Seq=1299632506, Ack=2785282676
+1563 DC1.ADATUM.COM CLIENT1          TCP        TCP:Flags=...A...., SrcPort=Kerberos(88), DstPort=59259, PayloadLen=0, Seq=2785284136, Ack=1299632507
+1564 DC1.ADATUM.COM CLIENT1          TCP        TCP:Flags=...A.R.., SrcPort=Kerberos(88), DstPort=59259, PayloadLen=0, Seq=2785284136, Ack=1299632507
 ```
 
 From the trace, you can find the DC doesn't respond to the Ticket Granting Service (TGS) request from the client for the Service Principal Name (SPN) `CIFS/DC1.ADATUM.COM`. It sends back a TCP acknowledgment, which suggests the DC received the TGS request. However, it doesn't reply with a valid TGS response. Finally, the client terminates the TCP connection.
