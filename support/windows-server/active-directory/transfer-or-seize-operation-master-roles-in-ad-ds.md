@@ -35,9 +35,9 @@ For more information about the Operation Master role holders and recommendations
 
 When a DC that has been acting as a role holder starts to run (for example, after a failure or a shutdown), it doesn't immediately resume behaving as the role holder. The DC waits until it receives inbound replication for its naming context (for example, the Schema master role owner waits to receive inbound replication of the Schema partition).
 
-The information that the DCs pass as part of Active Directory replication includes the identities of the current Operation Master role holders. When the newly started DC receives the inbound replication information, it verifies whether it's still the role holder. A potentially conflicting change is decided by the Active Directory Replication Engine. Please see: [Resolving conflicting changes](/previous-versions/windows/it-pro/windows-server-2003/cc736978(v=ws.10)#resolving-conflicting-changes)
+The information that the DCs pass as part of Active Directory replication includes the identities of the current Operation Master role holders. When the newly started DC receives the inbound replication information, it verifies whether it's still the role holder. The Active Directory Replication Engine resolves any potentially conflicting changes. For more information, see [Resolving conflicting changes](/previous-versions/windows/it-pro/windows-server-2003/cc736978(v=ws.10)#resolving-conflicting-changes).
 
-If it the current Operations Master, it resumes typical operations. If the replicated information indicates that another DC is acting as the role holder, the newly started DC relinquishes its role ownership. This behavior reduces the chance that the domain or forest will have duplicate Operation Master role holders.
+If the DC is the current Operations Master, it resumes typical operations. If the replicated information indicates that another DC is acting as the role holder, the newly started DC relinquishes its role ownership. This behavior reduces the chance that the domain or forest have duplicate Operation Master role holders.
 
 > [!IMPORTANT]
 > AD FS operations fail if they require a role holder and if the newly started role holder is, in fact, the role holder and it doesn't receive inbound replication.  
