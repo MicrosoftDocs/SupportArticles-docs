@@ -74,7 +74,7 @@ To work around this issue, provide more CPU resources to the machine where the f
 
 ### Scenario 2: Other web automation actions fail with the "Element not found" error
 
-The following web automation actions such as might fail with the "Element not found" error:
+The following web automation actions might fail with the "Element not found" error:
 
 - [Click link on web page](/power-automate/desktop-flows/actions-reference/webautomation#clickbase)
 - [Populate text field on web page](/power-automate/desktop-flows/actions-reference/webautomation#populatetextfieldbase)
