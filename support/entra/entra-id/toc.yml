@@ -282,7 +282,9 @@
    - name: The memberOf API returns null values for properties
      href: users-groups-entra-apis/memberof-api-returns-null-properties.md
    - name: Getting access denied errors (Authorization)
-     items: 
+     items:
+      - name: Can't modify user mail or phone number attributes
+        href: users-groups-entra-apis/cannot-modify-user-mail-phone-attributes.md
       - name: Error "The identity of the calling application could not be established"
         href: users-groups-entra-apis/identity-of-calling-application-not-established.md
       - name: Add an owner to an application
