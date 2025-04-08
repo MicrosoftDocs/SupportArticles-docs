@@ -50,7 +50,7 @@ landingContent:
           url: email-exchange-synchronization/tracked-to-dynamics-365-category-added.md
         - text: 401 Unauthorized exception when using server-side synchronization
           url: email-exchange-synchronization/exception-when-using-server-side-sync.md
-        - text: '"not part/member of organization; Account disabled; no instances found; Invalid User Authorization error"'
+        - text: '"You are not part/member of organization; Account disabled; no instances found; Invalid User Authorization error"'
           url: email-exchange-synchronization/error-when-signing-dynamics-365.md
         - text: '"The account does not have permission to impersonate the requested user" error when selecting Test Connection'
           url: email-exchange-synchronization/the-account-does-not-have-permission-to-impersonate-the-requested-user-error.md
