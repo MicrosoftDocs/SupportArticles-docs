@@ -84,6 +84,6 @@
   items: 
     - name: Issue with cascading crew changes when assigning a booking
       href: scheduling/cascade-crew-changes-booking.md
-    - name: Missing form context on bookable resource forms
+    - name: Form context is missing on bookable resource forms
       href: scheduling/missing-form-context-bookable-resource.md
 
