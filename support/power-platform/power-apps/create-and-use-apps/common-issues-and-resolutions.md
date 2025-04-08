@@ -62,7 +62,12 @@ End users might encounter this issue in two situations:
 
 1. **Custom connectors and Microsoft Dataverse**
 
-   If your app was created using Power Apps build 2.0.540 or earlier and relies on a database in the Dataverse, along with at least one custom connector in a different environment, you need to make some changes. First, deploy the custom connector to the same environment as the database. Then, update the app to use the newly deployed connector. Otherwise, a dialog notifies users that the API wasn't found. For more information, see [Environments overview](/power-platform/admin/environments-overview).
+  You need to make adjustments if you built your app with Power Apps 
+    1. Version 2.0.540 or earlier, 
+    2. Relies on a Dataverse database, 
+    3. And uses at least one custom connector from a separate environment. 
+    
+    First, deploy the custom connector to the same environment as the database. Then, update the app to use the newly deployed connector. Otherwise, a dialog notifies users that the API wasn't found. For more information, see [Environments overview](/power-platform/admin/environments-overview).
 
 1. **Column names with spaces**
 
@@ -97,7 +102,7 @@ End users might encounter this issue in two situations:
 Power Automate flows that are added using an older version of the Power Apps panel might be orphaned and removed. To fix this issue, readd the flows manually.
 
 1. **Power Apps Custom pages (in a model driven app) are out of sync with embedded Power Automate flow metadata**
-The metadata for a Power Automate flow might get out of sync with information that a Model Driven App's custom page (Power Apps) has about it. This issue might happen if the flow is updated after it's embedded in the custom page. To update your flow and your model driven app, repeat the corrective steps for each of the embedded flows if it was updated after it was embedded in Power App.  If you don't know which flow was updated after it was embedded, repeat the step for all of the embedded flows.
+The metadata for a Power Automate flow might get out of sync with information that a Model Driven App's custom page (Power Apps) has about it. This issue might happen if the flow is updated after it is embedded in the custom page. To update your flow and your model driven app, repeat the corrective steps for each of the embedded flows if it was updated after it was embedded in Power App.  If you don't know which flow was updated after it was embedded, repeat the step for all of the embedded flows.
 
     1. Edit the custom pages that use the flow
     1. Open the Power Automate pane and refresh the flow.
@@ -143,11 +148,11 @@ The [Power Apps Studio](/power-apps/maker/canvas-apps/power-apps-studio) is home
 
 1. **Changing the layout of SharePoint forms**
 
-    While customizing SharePoint forms in certain languages, if you try to change the layout from **Portrait** (default) to **Landscape**, the app might show multiple errors (yellow triangles in controls). To resolve these errors and retain the landscape layout, select **Undo**.
+    When you customize SharePoint forms in certain languages, if you try to change the layout from **Portrait** (default) to **Landscape**, the app might show multiple errors (yellow triangles in controls). To resolve these errors and retain the landscape layout, select **Undo**.
 
 1. **Changing a flow in a shared app**
 
-    If you add a flow to an app, share it, and then add a service or change a connection in the flow, you must remove the flow from the shared app, readd the flow, and then reshare the app. Otherwise, users who trigger the flow will receive an authentication failure.
+    If you add a flow to an app and share the app, then make changes to the flow such as adding a service or modifying a connection. More steps are required. You must also first remove the flow from the shared app. Next, readd the flow to the app. And finally, reshare the app. 
 
 1. **Changing a "Title" field in a table**
 
@@ -159,7 +164,7 @@ The [Power Apps Studio](/power-apps/maker/canvas-apps/power-apps-studio) is home
 
 1. **It can sometimes take a moment before a newly shared app can be used.**
 
-    In some cases, a newly shared app won't be immediately available. Wait a few moments, and it should become available.
+    In some cases, a newly shared app isn't immediately available. Wait a few moments, and it should become available.
 
 1. **In the [Form control](/power-apps/maker/canvas-apps/controls/control-form-detail), you can't change data by using a custom card.**
 
