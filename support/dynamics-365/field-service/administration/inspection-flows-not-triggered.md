@@ -21,7 +21,7 @@ You need administrator permissions in Dynamics 365 Field Service to perform the 
 
 1. Enable the [Analytics enabled setting for inspections](/dynamics365/field-service/inspections-reporting#enable-analysis-on-inspection-responses).
 1. If it's enabled, try turning it off and on again and change the **Analytics frequency** to *Immediately*. If the problem persists, try the next step.
-1. If the "Modern flow {flow ID} isn't valid for ExecuteWorkflow" appears when trying to enable analytics in Field Service, the Power Automate flows might not be registered properly. To reregister, sign in to [Power Automate](https://make.powerautomate.com/) for your environment. Based on the flow with the error, disable the flows, wait a moment, and then enable the flows. For more information, go to [Flow isn't valid for ExecuteWorkflow error](/dynamics365/customer-service/service-level-agreements/sla-modern-flow-not-valid).
+1. If the "Modern flow {flow ID} isn't valid for ExecuteWorkflow" appears when trying to enable analytics in Field Service, the Power Automate flows might not be registered properly. To reregister, sign in to [Power Automate](https://make.powerautomate.com/) for your environment. Based on the flow with the error, disable the flows, wait a moment, and then enable the flows. For more information, go to [Flow isn't valid for ExecuteWorkflow error](../../customer-service/service-level-agreements/sla-modern-flow-not-valid.md).
 
 
 |Flow with error  |Flows to disable and enable  |
