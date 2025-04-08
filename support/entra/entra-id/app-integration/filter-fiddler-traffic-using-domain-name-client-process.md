@@ -1,5 +1,5 @@
 ---
-title: Filter Fiddler traffic using domain names and client processes
+title: Filter Fiddler Traffic Using Domain Names and Client Processes
 description: Introduces how to filter traffic that's captured by Fiddler using domain/host names owned by Microsoft Entra and client processes.
 ms.service: entra-id
 ms.topic: how-to
@@ -13,7 +13,7 @@ This article explains how to filter traffic that's captured by Fiddler using dom
 
 ## Prerequisites
 
-Before filtering, ensure that Fiddler is configured to capture traffic for all processes. At the bottom left corner of the Fiddler window, you can select **All processes** to change the selection.
+Before filtering, ensure that Fiddler is configured to capture traffic for all processes. In the lower-left corner of the Fiddler window, you can select **All processes** to change the selection.
 
  :::image type="content" source="media/filter-fiddler-traffic-using-domain-name-client-process/all-processes.png" alt-text="Screenshot that shows the 'All processes' button.":::
 
@@ -22,7 +22,7 @@ Before filtering, ensure that Fiddler is configured to capture traffic for all p
 To filter traffic using Fiddler's built-in filter feature, follow these steps:
 
 1. Open Fiddler and navigate to the right panel.
-2. Select the **Filters** tab, then check the **Use filters** box.
+2. Select the **Filters** tab, and then select the **Use Filters** checkbox.
 3. Under the **Hosts** section, select **Show only the following Hosts**.
 4. In the text box, enter the host name list you want to filter on, separated by semicolons, for example, `localhost;login.microsoftonline.com;graph.microsoft.com`.
 
@@ -39,7 +39,7 @@ Under the **Client Process** section, you can also select a specific process to 
 > [!NOTE]
 > This option is used especially for browser-based applications.
 
-1. In Fiddler, go to **Rules** > **Customize Rules…**. This will open the *CustomRules.js* file in the FiddlerScript editor.
+1. In Fiddler, go to **Rules** > **Customize Rules**. This action will open the **CustomRules.js** file in the FiddlerScript editor.
 2. Locate the **OnBeforeRequest** function in the FiddlerScript editor.
 3. Insert the following JavaScript code at the beginning of the function:
 
@@ -80,13 +80,13 @@ Under the **Client Process** section, you can also select a specific process to 
 
     :::image type="content" source="media/filter-fiddler-traffic-using-domain-name-client-process/add-javascript-code-onbeforerequest-function.png" alt-text="Screenshot that shows the JavaScript code added in the OnBeforeRequest function." lightbox="media/filter-fiddler-traffic-using-domain-name-client-process/add-javascript-code-onbeforerequest-function.png":::
 
-    Here are explanations for some variables in the JavaScript code:
+    Here are the explanations of some variables in the JavaScript code:
 
     - `filterOn`: Set it to `true` to enable the filter and `false` to disable it.
     - `host`: Contains the list of domain names to filter on.
     - `processlist`: Contains the list of process names to filter on.
 
-4. Save the changes to the *CustomRules.js* file file.
+4. Save the changes to the **CustomRules.js** file.
 
 ## References
 
