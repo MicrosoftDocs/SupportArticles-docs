@@ -109,10 +109,11 @@ The following table lists applications and their associated DLLs that are known 
 | SkyGuard Endpoint Security| `sgephook.dll`|
 | Symantec Endpoint Protection (SEP) | `sysfer.dll`<br/><br/> [Create an Application Control exception in SEP](https://knowledge.broadcom.com/external/article/181736/how-to-create-an-application-control-exc.html)|
 | Thycotic Application Control| `ArelliaACActioni64.dll`|
-| TightVNC| `screenhooks64.dll`| 
+| TightVNC| `screenhooks64.dll`|
 | Trellix Drive Encryption||
 | Zscaler||
 | Ztsment Data Protection| `injumon64.dll`|
+|Forcepoint DLP||
 
 ## Other DLLs that might affect Teams desktop client and Edge WebView2
 
