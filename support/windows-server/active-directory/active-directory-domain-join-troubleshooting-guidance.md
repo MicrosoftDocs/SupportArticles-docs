@@ -16,7 +16,7 @@ This guide provides the fundamental concepts used when troubleshooting Active Di
 
 ## Troubleshooting checklist
 
-- Domain Name System (DNS): Anytime you have an issue joining a domain, one of the first things to check is DNS. DNS is the heart of Active Directory and makes things work correctly, including domain join. Make sure of the following items:
+- Domain Name System (DNS): Anytime you have an issue joining a domain, one of the first things to check is DNS. DNS is the heart of Active Directory (AD) and makes things work correctly, including domain join. Make sure of the following items:
 
   - DNS server addresses are correct.
   - DNS suffix search order is correct if multiple DNS domains are in play.
@@ -344,3 +344,61 @@ For more information, see:
 
 - Troubleshoot [Networking error messages and resolutions](troubleshoot-errors-join-computer-to-domain.md#networking-error-messages-and-resolutions)
 - Troubleshoot [Authentication error messages and resolutions](troubleshoot-errors-join-computer-to-domain.md#authentication-error-messages-and-resolutions)
+
+## Data collections for domain join issues
+
+To troubleshoot domain join issues, the following logs could help:
+
+- Netsetup log  
+  This log file contains most information about domain join activities. The file is located on the client machine at `%windir%\debug\netsetup.log`.  
+  This log file is enabled by default. No need to explicitly enable it.
+
+- Network trace  
+  The network trace contains the communication between the client computer and relative servers, such as DNS servers and domain controllers over the network. It should be collected at the client computer. Multiple tools can collect network traces, such as Wireshark, netsh.exe which is included in all Windows editions.
+
+You can collect each log separately. Alternatively, you can use some tools provided by Microsoft to collect them all together. To do so, follow the steps in the following sections.
+
+### Collect manually
+
+1. Download and install Wireshark on the client computer that is to join the AD domain.
+2. Start the application with administrator privileges, and then start capturing.
+3. Try to join the AD domain to reproduce the error. Record the error message.
+4. Stop capturing in the app and save the network trace to a file.
+5. Collect the netsetup.log file that is located at *%windir%\debug\netsetup.log*.
+
+### Use Auth Scripts
+
+Auth Scripts is a lightweight PowerShell script developed by Microsoft to ease log collection for troubleshooting authentication-related issues. To use it, follow these steps:
+
+1. Download [Auth Scripts](https://aka.ms/authscripts) on the client computer. Extract the files to a folder.
+2. Start a PowerShell window with administrator privileges. Switch to the folder containing those extracted files.
+3. Run *start-auth.ps1*, accept the EULA if prompted, and allow execution if warned about an untrusted publisher.
+
+   > [!NOTE]
+   > If the scripts aren't allowed to run due to execution policies, see [about_Execution_Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
+
+4. After the command completed successfully, try to join the AD domain to reproduce the error. Record the error message.
+5. Run *stop-auth.ps1*, and allow execution if warned about an untrusted publisher.
+6. Log files are saved in the *authlogs* subfolder, which includes the *Netsetup.log* log and the network trace file (Nettrace.etl).
+
+### Use TSS Tool
+
+TSS tool is another tool developed by Microsoft to ease log collection. To use it, follow these steps:
+
+1. Download [TSS tool](https://aka.ms/gettss) on the client computer. Extract the files to a folder.
+2. Start a PowerShell window with administrator privileges. Switch to the folder containing those extracted files.
+3. Run the following command:
+
+   ```console
+   TSS.ps1 -scenario ADS_AUTH -noSDP -norecording -noxray -noupdate -accepteula -startnowait
+   ```
+
+   Accept the EULA if prompted, and allow execution if warned about an untrusted publisher.
+
+   > [!NOTE]
+   > If the scripts aren't allowed to run due to execution policies, see [about_Execution_Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
+
+4. The command takes a few minutes to complete. After the command completes successfully, try to join the AD domain to reproduce the error. Record the error message.
+5. Run `TSS.ps1 -stop`, and allow execution if warned about an untrusted publisher.
+6. Log files are saved in the *C:\MS_DATA* subfolder, and are zipped already. The ZIP filename follows the format of *TSS_\<hostname\>_\<date\>-\<time\>-ADS_AUTH.zip*.
+7. The zip file includes the *Netsetup.log*, and the network trace. The network trace file is named *\<hostname\>_\<date\>-\<time\>-Netsh_packetcapture.etl*.
