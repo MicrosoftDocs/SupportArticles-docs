@@ -14,9 +14,9 @@ This article provides a solution to an issue where you can't modify certain pers
 
 You can't modify the following user attributes for another user:
 
-- mobilePhone
-- businessPhones/telephoneNumber
-- otherMails
+- `mobilePhone`
+- `businessPhones`/`telephoneNumber`
+- `otherMails`
 
 Most users experiencing this issue are service principals (Microsoft Graph scenario) or Microsoft Entra users that use the client credentials grant type. Additionally, they get a 403 error.
 
