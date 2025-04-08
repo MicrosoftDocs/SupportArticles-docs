@@ -75,4 +75,8 @@ The online NetLog viewer provides additional details that Fiddler doesn't provid
 - Browser proxy configuration
 - Installed browser extensions
 
+Someone created a YouTube video on how to enable the logging and using Fiddler to review the capture…
+
+[Capture and diagnose network traffic from the new Chromium-based Microsoft Edge browser](https://www.youtube.com/watch?v=2RGdZbGgskk)
+
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
