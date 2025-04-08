@@ -39,8 +39,7 @@ To fix this issue, follow these steps:
    Message: Resource 'resourcegroup' was disallowed by policy. Policy identifiers: '[{"policyAssignment":{"name":"Not allowed resource types","id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Authorization/policyAssignments/00000000000000000000000"},"policyDefinition":{"name":"Not allowed resource types","id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Authorization/policyDefinitions/not-allowed-resourcetypes","version":"1.0.0"}}]'.
    ```
 
-1. If possible, change your deployment to meet the limitations of the policy, and then retry the deploy operation.   
-   or if you have permission to change policy, [Add an exemption](/azure/governance/policy/tutorials/disallowed-resources#create-an-exemption) to the policy.
+1. If possible, update your deployment to comply with the policy restrictions, and then retry the deployment. Alternatively, if you have permission to update policy, [Add an exemption](/azure/governance/policy/tutorials/disallowed-resources#create-an-exemption) to the policy.
 
 To get details about the policy that blocked your cluster deployment operation, see [RequestDisallowedByPolicy error with Azure resource policy](/azure/azure-resource-manager/troubleshooting/error-policy-requestdisallowedbypolicy).
 
