@@ -3,7 +3,7 @@ title: Invalid credentials error running desktop flows
 description: Provides a resolution for the invalid credentials error that might occur when you run a desktop flow in Power Automate.
 ms.reviewer: guco, johndund
 ms.custom: sap:Desktop flows\Cannot create desktop flow connection
-ms.date: 04/03/2025
+ms.date: 04/08/2025
 ---
 # Invalid credentials error when running desktop flows in Power Automate for desktop
 
