@@ -42,10 +42,6 @@
       href: connections/troubleshooting-flow-custom-connectors.md
     - name: User doesn't have service plan adequate for non-Standard connection
       href: connections/user-does-not-have-a-service-plan-error.md
-- name: Dataverse (CDS)
-  items:
-    - name: CDS user role can't access flows
-      href: dataverse-cds/cds-user-cannot-access-power-automate-business-process-flows-on-demand-workflows.md
 - name: Desktop flows
   items:
     - name: Browser automation
