@@ -1,7 +1,7 @@
 ---
 title: Determine the authentication type
 description: This article explains about how to determine the type of authentication that's used when you connect to SQL Server.
-ms.date: 02/20/2024
+ms.date: 04/03/2025
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Database Connectivity and Authentication
 ms.topic: how-to
@@ -9,45 +9,51 @@ ms.topic: how-to
 
 # How to determine if the authentication type is Kerberos
 
-This article provides a query to help you determine the type of authentication that's used when you connect to Microsoft SQL Server. Make sure that you run the query on a client computer, not on the SQL Server that you're testing. Otherwise the query returns `auth_scheme` as **NTLM** even if Kerberos is configured correctly. This occurs because of a per-service SID security hardening feature that was added in Windows 2008. This feature forces all local connections to use NTLM regardless of whether Kerberos is available.
-
- ```sql
-  SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id=@@SPID
- ```
+This article provides step-by-step instructions to help you determine the type of authentication that's used when you connect to Microsoft SQL Server. Make sure that you run the steps on a client computer, not on the server where the SQL Server instance you are testing is installed. Otherwise, the *auth_scheme* value in the output will always be *NTLM*, even if Kerberos is configured correctly. This occurs because of a per-service SID security hardening feature that was added in Windows 2008. This feature forces all local connections to use NTLM regardless of whether Kerberos is available.
 
 ## Use SQL Server Management Studio
 
-Run the following query in SQL Server Management Studio:
+1. Open SQL Server Management Studio and connect to the SQL Server instance.
+1. Run the following query:
 
-```sql
-SELECT c.session_id, c.net_transport, c.encrypt_option,
-       c.auth_scheme, s.host_name, @@SERVERNAME as "remote_name",
-       s.program_name, s.client_interface_name, s.login_name,
-       s.nt_domain, s.nt_user_name, s.original_login_name,
-       c.connect_time, s.login_time
-FROM sys.dm_exec_connections AS c
-JOIN sys.dm_exec_sessions AS s ON c.session_id = s.session_id
-WHERE c.session_id=@@SPID
-```
+   ```sql
+   SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@SPID
+   ```
+1. Alternatively, to retrieve additional connection details, run the following query:
+
+   ```sql
+   SELECT c.session_id, c.net_transport, c.encrypt_option,
+          c.auth_scheme, s.host_name, @@SERVERNAME AS "remote_name",
+          s.program_name, s.client_interface_name, s.login_name,
+          s.nt_domain, s.nt_user_name, s.original_login_name,
+          c.connect_time, s.login_time
+   FROM sys.dm_exec_connections AS c
+   JOIN sys.dm_exec_sessions AS s ON c.session_id = s.session_id
+   WHERE c.session_id = @@SPID
+   ```
+1. Review the *auth_scheme* column in the results to determine the authentication type.
 
 ## Use the command line
 
-Run the following query at a command prompt:
+1. Open a command prompt.
+1. Run the following command, replacing `<ServerName>` with your server's name:
 
-```sql
-C:\Temp>sqlcmd -S SQLProd01 -E -Q "select auth_scheme from sys.dm_exec_connections where session_id=@@SPID"
-auth_scheme
-----------------------------------------
-NTLM
+   ```cmd
+   sqlcmd -S <ServerName> -E -Q "SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@SPID"
+   ```
+1. The result similar to the following output will indicate the authentication type:
 
-(1 rows affected)
-```
+   ```output
+   auth_scheme
+   ----------------------------------------
+   NTLM
+   
+   (1 rows affected)
+   ```
 
-## Alternative method
+## Use VBScript
 
-If either of the previous options aren't available, consider using the following alternative procedure:
-
-1. Copy the following script into a text editor, such as Notepad, and save it as *getAuthScheme.vbs*:
+1. Copy the following VBScript code into a text editor, such as Notepad, and save it as *getAuthScheme.vbs*:
 
      ```vbscript
      ' Auth scheme VB script.
@@ -72,19 +78,17 @@ If either of the previous options aren't available, consider using the following
      '
      ' Run the query and display the results
      '
-     set rs = cn.Execute("select auth_scheme from sys.dm_exec_connections where session_id=@@SPID")
+     set rs = cn.Execute("SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@SPID")
      WScript.Echo "Auth scheme: " & rs(0)
      rs.close
      cn.close
      ```
+2. Run the following command from the command prompt, replacing `<ServerName>` with your server's name:
 
-1. Run the *getAuthScheme.vbs* PowerShell script at a command prompt:
-
-    ```powershell
-    C:\Temp>cscript getAuthScheme.vbs SQLProd01
+    ```cmd
+    cscript getAuthScheme.vbs <ServerName>
     ```
-
-    You should see the following output:
+1. The result similar to the following output will indicate the authentication type:
 
     ```output
     Microsoft (R) Windows Script Host Version 5.812
@@ -92,55 +96,78 @@ If either of the previous options aren't available, consider using the following
     Auth scheme: NTLM
     ```
 
-## Use PowerShell
+## Use Windows PowerShell
 
-You can use PowerShell to test the SqlClient .NET provider to try to isolate the issue from your application:
+You can use Windows PowerShell to test the SqlClient .NET provider to try to isolate the issue from your application:
 
-1. Copy the following script into a text editor, such as Notepad, and save it as *get-SqlAuthScheme.ps1*.
-1. Run the following script at a command prompt:
+1. Copy the following PowerShell script into a text editor, such as Notepad, and save it as *get-SqlAuthScheme.ps1*.
 
       ```powershell
-      #-------------------------------
-      #
-      # get-SqlAuthScheme.ps1
-      #
-      # PowerShell script to test a System.Data.SqlClient database connection
-      #
-      # USAGE: .\get-SqlAuthScheme tcp:SQLProd01.contoso.com,1433   ' explicitly specify DNS suffix,  protocol, and port # ('tcp' must be lower case)
-      # USAGE: .\get-SqlAuthScheme SQLProd01                        ' let the driver figure out the DNS suffix, protocol, and port #
-      #
-      #-------------------------------
-      param ([string]$server = "localhost")
-      Set-ExecutionPolicy Unrestricted-Scope CurrentUser
-      $connstr = "Server=$server;Database=master;Integrated Security=SSPI"
-      [System.Data.SqlClient.SqlConnection] $conn = New-Object System.Data.SqlClient.SqlConnection
-      $conn.ConnectionString = $connstr
-      [System.DateTime] $start = Get-Date
-      $conn.Open()
-      [System.Data.SqlClient.SqlCommand] $cmd = New-Object System.Data.SqlClient.SqlCommand
-      $cmd.CommandText = "select auth_scheme from sys.dm_exec_connections where session_id=@@spid"
-      $cmd.Connection = $conn
-      $dr = $cmd.ExecuteReader()
-      $result = $dr.Read()
-      $auth_scheme = $dr.GetString(0)
-      $conn.Close()
-      $conn.Dispose()
-      [System.DateTime] $end = Get-Date
-      [System.Timespan] $span = ($end - $start)
-      "End time: " + $end.ToString("M/d/yyyy HH:mm:ss.fff")
-      "Elapsed time was " + $span.Milliseconds + " ms."
-      "Auth scheme for " + $server + ": " + $auth_scheme
-     ```
+     #-------------------------------
+     #
+     # get-SqlAuthScheme.ps1
+     #
+     # PowerShell script to test a System.Data.SqlClient database connection
+     #
+     # USAGE: 
+     #   .\get-SqlAuthScheme tcp:SQLProd01.contoso.com,1433   # Explicitly specify DNS suffix, protocol, and port ('tcp' must be lowercase)
+     #   .\get-SqlAuthScheme SQLProd01                        # Let the driver figure out the DNS suffix, protocol, and port
+     #
+     #-------------------------------
+     # Define a parameter for the server name, defaulting to "localhost" if not provided
+     param ([string]$server = "localhost")
 
-You should see the following output:
+     # Set the execution policy for the current user to Unrestricted
+     Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser -Force
+
+     # Build the connection string for the SQL Server connection
+     $connstr = "Server=$($server);Database=master;Integrated Security=SSPI"
+
+     # Create a new SQL connection object
+     $conn = New-Object System.Data.SqlClient.SqlConnection
+     $conn.ConnectionString = $connstr
+
+     # Record the start time of the operation
+     $start = Get-Date
+
+     # Open the SQL connection
+     $conn.Open()
+
+     # Create a new SQL command object
+     $cmd = $conn.CreateCommand()
+     $cmd.CommandText = "SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@SPID" # Query to get the authentication scheme
+
+     # Execute the query and retrieve the result
+     $dr = $cmd.ExecuteReader()
+     $dr.Read() | Out-Null # Read the first row of the result set
+     $auth_scheme = $dr.GetString(0) # Get the authentication scheme from the first column
+
+     # Close and dispose of the SQL connection
+     $conn.Close()
+     $conn.Dispose()
+
+     # Record the end time of the operation
+     $end = Get-Date
+
+     # Calculate the elapsed time
+     $span = $end - $start
+
+     # Output the results
+     Write-Output "Elapsed time was $($span.TotalMilliseconds) ms."    # Display the elapsed time in milliseconds
+     Write-Output "Auth scheme for $($server): $auth_scheme"   # Display the authentication scheme for the server
+     ```
+1. Open Windows PowerShell, navigate to the folder containing the script, and run the following command:
+
+   ```powershell
+   .\get-sqlauthscheme <ServerName>  # Replace "<ServerName>" with your server name.
+   ```
+1. The result similar to the following output will indicate the authentication type:
 
    ```output
-   C:\temp> .\get-sqlauthscheme sqlprod01
-   End time: 10/26/2020 18:00:24.753
    Elapsed time was 0 ms.
-   Auth scheme for sqlprod01: NTLM
+   Auth scheme for <ServerName>: NTLM
    ```
 
 ## More information
 
-[Consistent authentication issues in SQL Server](consistent-authentication-connectivity-issues.md)
+- [Consistent authentication issues in SQL Server](consistent-authentication-connectivity-issues.md)
