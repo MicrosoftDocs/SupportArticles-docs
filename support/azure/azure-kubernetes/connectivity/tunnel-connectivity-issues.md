@@ -251,20 +251,22 @@ If everything is OK within the application, you'll have to adjust the allocated 
 
 You can set up a new cluster to use a Managed Network Address Translation (NAT) Gateway for outbound connections. For more information, see [Create an AKS cluster with a Managed NAT Gateway](/azure/aks/nat-gateway#create-an-aks-cluster-with-a-managed-nat-gateway).
 
-## Cause 6: Konnectivity Agents performance challenges with Cluster Growth
+## Cause 6: Konnectivity Agents performance issues with Cluster growth
+
+As the cluster grows, the performance of Konnectivity Agents may degrade due to increased network traffic, higher numbers of requests, or resource constraints.
 
 > [!NOTE]
 > This cause applies to only the `Konnectivity-agent` pods.
 
-### Solution 6: Cluster Proportional Autoscaler (CPA) for Konnectivity Agent
+### Solution 6: Cluster Proportional Autoscaler for Konnectivity Agent
 
-To address scalability challenges in large clusters, we have implemented the Cluster Proportional Autoscaler (CPA) for our Konnectivity Agents. This approach aligns with industry standards and best practices, ensuring optimal resource usage and enhanced performance.
+ To address scalability challenges in large clusters, we have implemented the Cluster Proportional Autoscaler for our Konnectivity Agents. This approach aligns with industry standards and best practices. It ensures optimal resource usage and enhanced performance.
 
 **Why was this change made?**
-Previously, the Konnectivity agent had a fixed replica count, which could create a bottleneck as the cluster grew. With the implementation of the Cluster Proportional Autoscaler (CPA), the replica count now dynamically adjusts based on node-scaling rules, ensuring optimal performance and resource usage.
+Previously, the Konnectivity agent had a fixed replica count, which could create a bottleneck as the cluster grew. With the implementation of the Cluster Proportional Autoscaler, the replica count now dynamically adjusts based on node-scaling rules, ensuring optimal performance and resource usage.
 
-**How does the CPA work?**
-The CPA uses a ladder configuration to determine the number of Konnectivity agent replicas based on the cluster size. The ladder configuration is defined in the konnectivity-agent-autoscaler configmap in the kube-system namespace. Here is an example of the ladder configuration:
+**How does the Cluster Proportional Autoscaler work?**
+The Cluster Proportional Autoscaler work uses a ladder configuration to determine the number of Konnectivity agent replicas based on the cluster size. The ladder configuration is defined in the konnectivity-agent-autoscaler configmap in the kube-system namespace. Here is an example of the ladder configuration:
 
 ```
 nodesToReplicas": [
@@ -279,26 +281,27 @@ nodesToReplicas": [
 
 This configuration ensures that the number of replicas scales appropriately with the number of nodes in the cluster, providing optimal resource allocation and improved networking reliability.
 
-**How do customers use the Cluster Proportional Autoscaler (CPA)?**
-Customers can override default values by updating the konnectivity-agent-autoscaler configmap in the kube-system namespace. Here is a sample command to update the configmap:
+**How to use the Cluster Proportional Autoscaler?**
+You can override default values by updating the konnectivity-agent-autoscaler configmap in the kube-system namespace. Here is a sample command to update the configmap:
 
-```
+```bash
 kubectl edit configmap <pod-name> -n kube-system
 ```
-This command opens the configmap in an editor where customers can make the necessary changes.
+This command opens the configmap in an editor where you can make the necessary changes.
 
-**What should customers check for?** 
-Customers need to monitor for Out Of Memory (OOM) kills on their nodes because misconfiguration of the CPA can lead to insufficient memory allocation for the Konnectivity agents. Here are the key reasons:
+**What should be checked?** 
 
-**High Memory Usage:** As the cluster grows, the memory usage of Konnectivity agents can increase significantly, especially during peak loads or when handling large numbers of connections. If the CPA configuration does not scale the replicas appropriately, the agents may run out of memory.
+You need to monitor for Out Of Memory (OOM) kills on the nodes because misconfiguration of the Cluster Proportional Autoscaler can lead to insufficient memory allocation for the Konnectivity agents. Here are the key reasons:
 
-**Fixed Resource Limits:** If the resource requests and limits for the Konnectivity agents are set too low, they may not have enough memory to handle the workload, leading to OOM kills. Misconfigured CPA settings can exacerbate this issue by not providing enough replicas to distribute the load.
+**High Memory Usage:** As the cluster grows, the memory usage of Konnectivity agents can increase significantly, especially during peak loads or when handling large numbers of connections. If the Cluster Proportional Autoscaler configuration does not scale the replicas appropriately, the agents may run out of memory.
 
-**Cluster Size and Workload Variability:** The CPU and memory needed by the Konnectivity agents can vary widely depending on the size of the cluster and the workload. If the CPA ladder configuration is not right-sized and adaptively resized for the cluster's usage patterns, it can lead to memory overcommitment and OOM kills.
+**Fixed Resource Limits:** If the resource requests and limits for the Konnectivity agents are set too low, they may not have enough memory to handle the workload, leading to OOM kills. Misconfigured Cluster Proportional Autoscaler settings can exacerbate this issue by not providing enough replicas to distribute the load.
 
-Here are the steps to identify and troubleshoot OOMKills:
+**Cluster Size and Workload Variability:** The CPU and memory needed by the Konnectivity agents can vary widely depending on the size of the cluster and the workload. If the Cluster Proportional Autoscaler ladder configuration is not right-sized and adaptively resized for the cluster's usage patterns, it can lead to memory overcommitment and OOM kills.
 
-1. Check for OOMKills on Nodes: Use the following command to check for OOMKills on your nodes:
+Here are the steps to identify and troubleshoot OOM Kills:
+
+1. Check for OOM Kills on Nodes: Use the following command to check for OOM Kills on your nodes:
 
 ```
 kubectl get events --all-namespaces | grep -i 'oomkill'
@@ -310,7 +313,7 @@ kubectl get events --all-namespaces | grep -i 'oomkill'
 kubectl top nodes
 ```
 
-3.  Review Pod Resource Requests and Limits: Ensure that the Konnectivity agent pods have appropriate resource requests and limits set to prevent OOMKills:
+3.  Review Pod Resource Requests and Limits: Ensure that the Konnectivity agent pods have appropriate resource requests and limits set to prevent OOM Kills:
 
 ```
 kubectl get pod <pod-name> -n kube-system -o yaml | grep -A5 "resources:"
