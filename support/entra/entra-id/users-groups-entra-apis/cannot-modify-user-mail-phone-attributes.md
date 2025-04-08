@@ -1,7 +1,7 @@
 ---
 title: Can't Modify User Mail or Phone Number Attributes
 description: Provides a solution to an issue where you can't modify certain personal information for another user.
-ms.date: 04/03/2025
+ms.date: 04/07/2025
 ms.reviewer: bhvootla, adoyle, nualex, v-weizhu
 ms.service: entra-id
 ms.custom: sap:Getting access denied errors (Authorization)
