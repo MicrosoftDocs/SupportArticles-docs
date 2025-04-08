@@ -14,11 +14,7 @@ _Original KB number:_ &nbsp; 4599079
 
 ## Symptoms
 
-A web automation action (for example, "Click Link", "Populate text field", or "Get details of element") fails during runtime in Microsoft Power Automate.
-
-## Verifying issue
-
-During the initial development of the desktop flow, you can capture and interact with the web element.
+During the initial development of a desktop flow, you can capture and interact with web elements. However, during runtime, web automation actions like "Click Link", "Populate text field", or "Get details of element" fail to interact with the web element.
 
 ## Cause
 
