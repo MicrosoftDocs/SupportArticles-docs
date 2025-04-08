@@ -6,9 +6,9 @@ ms.service: entra-id
 ms.custom: sap:Getting access denied errors (Authorization)
 ms.reviewer: willfid, v-weizhu
 ---
-# NoPermissionsInAccessToken when calling me endpoint
+# NoPermissionsInAccessToken when calling /me endpoint
 
-This article describes an issue in which the you receive `NoPermissionsInAccessToken` error when you call `/me` endpoint in Microsoft Graph.
+This article describes an issue in which the you receive `NoPermissionsInAccessToken` error when you call `/me` endpoint in Microsoft Graph. It also explains why you cannot call the `/me` endpoint with a token acquired via the client credentials grant flow
 
 ## Symptoms
 
