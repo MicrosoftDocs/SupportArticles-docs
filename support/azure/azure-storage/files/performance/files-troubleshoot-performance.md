@@ -241,19 +241,18 @@ Ensure your app is within the [Azure Files scale targets](/azure/storage/files/s
 
 ### Cause 3: Azure File Share reaches capacity
 
-When the Azure file share is close to reaching its capacity, it's important to identify the largest files and directories to optimize storage. This step helps you understand which files and folders are using the most space.
+If the Azure file share is close to reaching its capacity, an important step is to identify the largest files and directories in order to optimize storage. This step helps you to understand which files and folders are using the most space.
 
 ### Workaround
 
-To get a comprehensive view of storage usage across the entire share, mount the root of the share. This allows for a thorough inspection of file and directory sizes. From the root of the file share, run the following commands to identify the largest files and directories:
+To get a comprehensive view of storage usage across the entire share, mount the root of the share. This action enables a thorough inspection of file and directory sizes. At the root of the file share, run the following commands to identify the largest files and directories:
 
- 
 ```bash
 	cd /path/to/mount/point
 	du -ah --max-depth=1 | sort -rh | head -n 20
 ```
- 
-This command will display the top 20 largest files and directories in descending order of size. It provides a clear overview of storage consumption.
+
+This command displays the 20 largest files and directories in descending order of size. This display provides a clear overview of storage consumption.
  
 If you can't mount the root of the share, use Azure Storage Explorer or a third-party tool to analyze storage usage. These tools provide similar insights into file and directory sizes without requiring you to mount the share.
 
@@ -261,13 +260,13 @@ If you can't mount the root of the share, use Azure Storage Explorer or a third-
 
 ### Cause
 
-This is a known issue with implementing the SMB client on Linux.
+This is a known issue that affects implementing the SMB client on Linux.
 
 ### Workaround
 
 - Spread the load across multiple VMs.
-- On the same VM, use multiple mount points with a `nosharesock` option, and spread the load across these mount points.
-- On Linux, try mounting with a `nostrictsync` option to avoid forcing an SMB flush on every `fsync` call. For Azure Files, this option doesn't interfere with data consistency, but it might result in stale file metadata on directory listings (`ls -l` command). Directly querying file metadata by using the `stat` command will return the most up-to-date file metadata.
+- On the same VM, use multiple mount points that have a `nosharesock` option, and spread the load across these mount points.
+- On Linux, try mounting by using a `nostrictsync` option to avoid forcing an SMB flush on every `fsync` call. For Azure Files, this option doesn't interfere with data consistency, but it might cause stale file metadata on directory listings (`ls -l` command). Directly querying file metadata by using the `stat` command returns the most up-to-date file metadata.
 
 ## High latencies for metadata-heavy workloads involving extensive open/close operations
 
