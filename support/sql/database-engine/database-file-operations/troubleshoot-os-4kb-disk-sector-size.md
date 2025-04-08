@@ -22,71 +22,6 @@ When you try to install a SQL Server instance on a machine with system disk sect
 
 ### Scenario 1
 
-When you install any version of SQL Server, you see errors similar to the following message for the Database Engine Services component of SQL Server:
-
-```output
-Feature: Database Engine Services 
-Status: Failed 
-Reason for failure: An error occurred during the setup process of the feature. 
-Next Step: Use the following information to resolve the error, uninstall this feature, and then run the setup process again. 
-Component name: SQL Server Database Engine Services Instance Features 
-Component error code: 0x851A001A 
-Error description: Wait on the Database Engine recovery handle failed. Check the SQL Server error log for potential causes. 
-```
-
-Or, you see errors in the SQL Server Error Log similar to the following one:
-
-```output
-2025-02-26 20:01:16.79 spid14s     Starting up database 'master'.
-2025-02-26 20:01:16.80 spid14s     Error: 5178, Severity: 16, State: 1.
-2025-02-26 20:01:16.80 spid14s     Cannot use file 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\master.mdf' because it was originally formatted with sector size 4096 and is now on a volume with sector size 8192. Move the file to a volume with a sector size that is the same as or smaller than the original sector size.
-```
-
-### Scenario 2
-
-You install any version of SQL Server on a Windows 10 device. Then, you upgrade the operating system (OS) on the device to Windows 11. When you try to start SQL Server on a Windows 11 device, the service fails to start. In the SQL Server error log, you notice entries similar to the following one:
-
-```output
-2021-11-05 23:42:47.14 spid9s There have been 256 misaligned log IOs which required falling back to synchronous IO. The current IO is on file C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\master.mdf. 
-```
-
-### Scenario 3
-
-You install any version of SQL Server on a Windows 10 device. Then, you upgrade the OS on the device to Windows 11. When you try to start SQL Server on a Windows 11 device, the service fails to start. In the SQL Server error log, you notice entries similar to the following one:
-
-```output
-Faulting application name: sqlservr.exe, version: 2019.150.2000.5, time stamp: 0x5d8a9215 
-Faulting module name: ntdll.dll, version: 10.0.22000.120, time stamp: 0x50702a8c 
-Exception code: 0xc0000005 
-Fault offset: 0x00000000000357ae 
-Faulting process id: 0x1124 
-Faulting application start time: 0x01d7bf67449d262c
-Faulting application path: C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Binn\sqlservr.exe 
-Faulting module path: C:\Windows\SYSTEM32\ntdll.dll 
-```
-
-### Scenario 4
-
-You install LocalDB on a Windows 11 device. The setup fails. In the SQL Server error log, you notice entries similar to the following one:
-
-```output
-2021-12-15 23:25:04.28 spid5s      Cannot use file 'C:\Users\Administrator\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\TestInstance\master.mdf' because it was originally formatted with sector size 4096 and is now on a volume with sector size 16384. Move the file to a volume with a sector size that is the same as or smaller than the original sector size.
-```
-
-In the Windows 11 Application Event Log, you notice entries similar to the following one:
-
-```output
-Message            : Windows API call WaitForMultipleObjects returned error code: 575. Windows system error message is: {Application Error}
-                     The application was unable to start correctly (0x%lx). Click OK to close the application.
-                     Reported at line: 3621.
-Source             : SQLLocalDB 11.0
-```
-
-> [!Note]
-> You might encounter the failures mentioned in the previous scenarios for a SQL Server instance you installed manually or on a LocalDB instance installed by applications.
-
-### Scenario 5
-
 If you try to use sector size higher than 4 KB, you see the following error message:
 
 ```output
@@ -94,7 +29,7 @@ Error: 5179, Severity: 16, State: 1.
 Cannot use file 'data file path', because it is on a volume with sector size 8192. SQL Server supports a maximum sector size of 4096 bytes. Move the file to a volume with a compatible sector size.
 ```
 
-### Scenario 6
+### Scenario 2
 
 When you try to install a SQL Server instance on an Azure virtual machine (VM) running Windows, the installation fails, and you receive the following error message in the SQL Server error log when the engine tries to start during the installation:
 
@@ -114,6 +49,71 @@ Detailed results:
 ```
 
 For more information, see [SQL Server installation fails with sector size error on a Windows Server 2022 Azure virtual machine](../../azure-sql/sql-installation-fails-sector-size-error-azure-vm.md).
+
+### Scenario 3
+
+When you install any version of SQL Server, you see errors similar to the following message for the Database Engine Services component of SQL Server:
+
+```output
+Feature: Database Engine Services 
+Status: Failed 
+Reason for failure: An error occurred during the setup process of the feature. 
+Next Step: Use the following information to resolve the error, uninstall this feature, and then run the setup process again. 
+Component name: SQL Server Database Engine Services Instance Features 
+Component error code: 0x851A001A 
+Error description: Wait on the Database Engine recovery handle failed. Check the SQL Server error log for potential causes. 
+```
+
+Or, you see the following errors in the SQL Server Error Log:
+
+```output
+2025-02-26 20:01:16.79 spid14s     Starting up database 'master'.
+2025-02-26 20:01:16.80 spid14s     Error: 5178, Severity: 16, State: 1.
+2025-02-26 20:01:16.80 spid14s     Cannot use file 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\master.mdf' because it was originally formatted with sector size 4096 and is now on a volume with sector size 8192. Move the file to a volume with a sector size that is the same as or smaller than the original sector size.
+```
+
+### Scenario 4
+
+You install any version of SQL Server on a Windows 10 device. Then, you upgrade the operating system (OS) on the device to Windows 11. When you try to start SQL Server on a Windows 11 device, the service fails to start. In the SQL Server error log, you notice the following entries:
+
+```output
+2021-11-05 23:42:47.14 spid9s There have been 256 misaligned log IOs which required falling back to synchronous IO. The current IO is on file C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\master.mdf. 
+```
+
+### Scenario 5
+
+You install any version of SQL Server on a Windows 10 device. Then, you upgrade the OS on the device to Windows 11. When you try to start SQL Server on a Windows 11 device, the service fails to start. In the SQL Server error log, you notice the following entries:
+
+```output
+Faulting application name: sqlservr.exe, version: 2019.150.2000.5, time stamp: 0x5d8a9215 
+Faulting module name: ntdll.dll, version: 10.0.22000.120, time stamp: 0x50702a8c 
+Exception code: 0xc0000005 
+Fault offset: 0x00000000000357ae 
+Faulting process id: 0x1124 
+Faulting application start time: 0x01d7bf67449d262c
+Faulting application path: C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Binn\sqlservr.exe 
+Faulting module path: C:\Windows\SYSTEM32\ntdll.dll 
+```
+
+### Scenario 6
+
+You install LocalDB on a Windows 11 device. The setup fails. In the SQL Server error log, you notice the following entries:
+
+```output
+2021-12-15 23:25:04.28 spid5s      Cannot use file 'C:\Users\Administrator\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\TestInstance\master.mdf' because it was originally formatted with sector size 4096 and is now on a volume with sector size 16384. Move the file to a volume with a sector size that is the same as or smaller than the original sector size.
+```
+
+In the Windows 11 Application Event Log, you notice the following entries:
+
+```output
+Message            : Windows API call WaitForMultipleObjects returned error code: 575. Windows system error message is: {Application Error}
+                     The application was unable to start correctly (0x%lx). Click OK to close the application.
+                     Reported at line: 3621.
+Source             : SQLLocalDB 11.0
+```
+
+> [!Note]
+> You might encounter the failures mentioned in the previous scenarios for a SQL Server instance you installed manually or on a LocalDB instance installed by applications.
 
 ## Cause
 
@@ -144,7 +144,7 @@ Additionally, be aware of the Windows support policy for file system and storage
 
 ## Resolutions
 
-- Currently, the `ForcedPhysicalSectorSizeInBytes` registry key is required to successfully install SQL Server when using modern storage platforms, such as NVMe, that provide a sector size larger than 4 KB. This Windows operating system registry key forces the sector size to be emulated as 4 KB. To add the `ForcedPhysicalSectorSizeInBytes` registry key, use **Registry Editor** or run commands as described in the **Command Prompt** or **PowerShell** section. You must reboot the device after adding the registry key for this change to take effect. There is no need to add [Trace Flag 1800](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf1800) for this scenario.
+- Currently, the `ForcedPhysicalSectorSizeInBytes` registry key is required to successfully install SQL Server when using modern storage platforms, such as NVMe, that provide a sector size larger than 4 KB. This Windows operating system registry key forces the sector size to be emulated as 4 KB. To add the `ForcedPhysicalSectorSizeInBytes` registry key, use **Registry Editor** or run commands as described in the **Command Prompt** or **PowerShell** section. You must reboot the device after adding the registry key for this change to take effect. There is no need to add Trace Flag 1800 for this scenario.
   
   > [!IMPORTANT]
   > This section contains steps that tell you how to modify the Windows registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see the [How to back up and restore the registry in Windows](../../../windows-server/performance/windows-registry-advanced-users.md#back-up-the-registry) article.
