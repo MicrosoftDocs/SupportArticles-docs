@@ -39,11 +39,9 @@ If there's no [Directory Synchronization](/microsoft-365/enterprise/microsoft-36
 
 If Directory Synchronization is in place, you can search within **Active Directory Users and Computers** to see if the on-premises account is **Present** or **Deleted**.
 
-- [Managed Account (No DirSync)](#azure-active-directory-user-account-status-managed-account-no-dirsync)
-- [User Account is present on-premises](#azure-active-directory-user-account-status-user-account-is-present-on-premises)
-- [User Account deleted on-premises](#azure-active-directory-user-account-status-user-account-deleted-on-premises)
-
-<a name='azure-active-directory-user-account-status-managed-account-no-dirsync'></a>
+- [Managed Account (No DirSync)](#microsoft-entra-user-account-status-managed-account-no-dirsync)
+- [User Account is present on-premises](#microsoft-entra-user-account-status-user-account-is-present-on-premises)
+- [User Account deleted on-premises](#microsoft-entra-user-account-status-user-account-deleted-on-premises)
 
 ### Microsoft Entra user Account Status (Managed Account (No DirSync))
 
@@ -99,7 +97,7 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
 
 - [Mailbox Present](#online-account-present-online-mailbox-present)
 - [Mailbox Soft Deleted](#online-account-present-online-mailbox-soft-deleted)
-- [Mailbox Not Present](#azure-ad-account-present-online-mailbox-not-present)
+- [Mailbox Not Present](#microsoft-entra-account-present-online-mailbox-not-present)
 
 ### Exchange Online Mailbox Status (on-premises is Managed Account (No DirSync) and online account status is Soft Deleted)
 
@@ -123,9 +121,9 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
 
 5. If nothing is returned from steps 3 & 4, select the **MAILBOX NOT PRESENT** option.
 
-- [Mailbox Present](#azure-ad-account-soft-deleted-online-mailbox-present)
-- [Mailbox Soft Deleted](#azure-ad-account-soft-deleted-exchange-online-mailbox-soft-deleted)
-- [Mailbox Not Present](#azure-ad-account-soft-deleted-exchange-online-mailbox-not-present)
+- [Mailbox Present](#microsoft-entra-account-soft-deleted-online-mailbox-present)
+- [Mailbox Soft Deleted](#microsoft-entra-account-soft-deleted-exchange-online-mailbox-soft-deleted)
+- [Mailbox Not Present](#microsoft-entra-account-soft-deleted-exchange-online-mailbox-not-present)
 
 ### Exchange Online Mailbox Status (on-premises is Managed Account (No DirSync) and online account status is Hard Deleted)
 
@@ -149,7 +147,7 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
 
 5. If nothing is returned from steps 3 & 4, select the **MAILBOX NOT PRESENT** option.
 
-- [Mailbox Present](#azure-ad-account-hard-deleted-online-mailbox-present-hard-deleted)
+- [Mailbox Present](#microsoft-entra-account-hard-deleted-online-mailbox-present-hard-deleted)
 - [Mailbox Soft Deleted](#online-account-hard-deleted-online-mailbox-soft-deleted)
 - [Mailbox Not Present](#online-account-hard-deleted-online-mailbox-not-present)
 
@@ -165,8 +163,6 @@ For more Directory Synchronization troubleshooting tips, see [Troubleshoot Azure
 - If your issue is resolved, congratulations! Your scenario is complete.
 - If your issue isn't resolved, see [Additional Resources](#additional-resources).
 
-<a name='ad-user-account-deleted-azure-ad-account-present-online-mailbox-not-present'></a>
-
 ### AD User Account Deleted, Microsoft Entra account Present, Online Mailbox not present
 
 **Solution:**  
@@ -174,8 +170,6 @@ Contact Microsoft Support. Due to the way Microsoft Entra Connect and the Online
 
 - If your issue is resolved, congratulations! Your scenario is complete.
 - If your issue isn't resolved, see [Additional Resources](#additional-resources).
-
-<a name='ad-account-deleted-azure-ad-account-present-soft-deleted-online-mailbox-soft-deleted'></a>
 
 ### AD Account Deleted, Microsoft Entra account Present (Soft deleted), Online Mailbox Soft Deleted
 
@@ -192,8 +186,6 @@ Restore the AD user and run directory synchronization, which will "soft match" t
 
 - If your issue is resolved, congratulations! Your scenario is complete.
 - If your issue isn't resolved, see [Additional Resources](#additional-resources).
-
-<a name='ad-user-account-deleted-azure-ad-account-hard-deleted-online-mailbox-present'></a>
 
 ### AD User Account Deleted, Microsoft Entra account Hard Deleted, Online Mailbox Present
 
@@ -220,8 +212,6 @@ Recreate the user and restore the data from the original mailbox.
 - If your issue is resolved, congratulations! Your scenario is complete.
 - If your issue isn't resolved, see [Additional Resources](#additional-resources).
 
-<a name='ad-user-account-deleted-azure-ad-account-hard-deleted-online-mailbox-not-present'></a>
-
 ### AD User Account Deleted, Microsoft Entra account Hard Deleted, Online Mailbox Not present
 
 **Solution:**  
@@ -231,8 +221,6 @@ This situation is expected behavior if the customer deleted the on-premises obje
 
 - If your issue is resolved, congratulations! Your scenario is complete.
 - If your issue isn't resolved, see [Additional Resources](#additional-resources).
-
-<a name='ad-user-account-deleted-azure-ad-account-hard-deleted-online-mailbox-soft-deleted'></a>
 
 ### AD User Account Deleted, Microsoft Entra account Hard Deleted, Online Mailbox Soft Deleted
 
@@ -255,8 +243,6 @@ Restore Inactive mailbox and perform a **soft match**.
 
 - If your issue is resolved, congratulations! Your scenario is complete.
 - If your issue isn't resolved, see [Additional Resources](#additional-resources).
-
-<a name='ad-user-account-deleted-azure-ad-account-soft-deleted-online-mailbox-present'></a>
 
 ### AD User Account Deleted, Microsoft Entra account Soft Deleted, Online Mailbox Present
 
@@ -282,8 +268,6 @@ To identify duplicates, use the following steps:
 
 - If your issue is resolved, congratulations! Your scenario is complete.
 - If your issue isn't resolved, see [Additional Resources](#additional-resources).
-
-<a name='ad-user-account-deleted-azure-ad-account-soft-deleted-online-mailbox-not-present'></a>
 
 ### AD User Account Deleted, Microsoft Entra account Soft Deleted, Online Mailbox Not Present
 
@@ -311,8 +295,6 @@ This best way to address the issue you're facing is to restore the original on-p
 - If your issue is resolved, congratulations! Your scenario is complete.
 - If your issue isn't resolved, see [Additional Resources](#additional-resources).
 
-<a name='azure-active-directory-user-account-status-user-account-is-present-on-premises'></a>
-
 ### Microsoft Entra user Account Status (User Account is present on-premises)
 
 Connect to Azure Active Directory PowerShell and verify the Online Account Status:
@@ -337,11 +319,9 @@ Connect to Azure Active Directory PowerShell and verify the Online Account Statu
 
 Based on the outcome in the previous steps, select one of the following options:
 
-- [Present](#exchange-online-mailbox-status-on-premises-user-account-is-present-and-azure-active-directory-user-account-is-present)
-- [Soft Deleted](#exchange-online-mailbox-status-on-premises-user-account-is-present-and-azure-active-directory-user-account-is-soft-deleted)
-- [Hard Deleted](#exchange-online-mailbox-status-on-premises-user-account-is-present-and-azure-active-directory-user-account-is-hard-deleted)
-
-<a name='exchange-online-mailbox-status-on-premises-user-account-is-present-and-azure-active-directory-user-account-is-present'></a>
+- [Present](#exchange-online-mailbox-status-on-premises-user-account-is-present-and-microsoft-entra-user-account-is-present)
+- [Soft Deleted](#exchange-online-mailbox-status-on-premises-user-account-is-present-and-microsoft-entra-user-account-is-soft-deleted)
+- [Hard Deleted](#exchange-online-mailbox-status-on-premises-user-account-is-present-and-microsoft-entra-user-account-is-hard-deleted)
 
 ### Exchange Online Mailbox Status (on-premises user account is Present and Microsoft Entra user account is Present)
 
@@ -365,11 +345,9 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
 
 5. If nothing is returned from steps 3 & 4, select the **MAILBOX NOT PRESENT** option.
 
-- [Mailbox Present](#azure-ad-account-present-exchange-online-mailbox-present)
-- [Mailbox Soft Deleted](#azure-ad-account-present-exchange-online-mailbox-soft-deleted)
-- [Mailbox Not Present](#azure-ad-account-present-exchange-online-mailbox-not-present-purged)
-
-<a name='exchange-online-mailbox-status-on-premises-user-account-is-present-and-azure-active-directory-user-account-is-soft-deleted'></a>
+- [Mailbox Present](#microsoft-entra-account-present-exchange-online-mailbox-present)
+- [Mailbox Soft Deleted](#microsoft-entra-account-present-exchange-online-mailbox-soft-deleted)
+- [Mailbox Not Present](#microsoft-entra-account-present-exchange-online-mailbox-not-present-purged)
 
 ### Exchange Online Mailbox Status (on-premises user account is Present and Microsoft Entra user account is Soft Deleted)
 
@@ -393,11 +371,9 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
 
 5. If nothing is returned from steps 3 & 4, select the **MAILBOX NOT PRESENT** option.
 
-- [Mailbox Present](#azure-ad-account-soft-deleted-exchange-online-mailbox-present)
+- [Mailbox Present](#microsoft-entra-account-soft-deleted-exchange-online-mailbox-present)
 - [Mailbox Soft Deleted](#online-account-soft-deleted-online-mailbox-soft-deleted)
 - [Mailbox Not Present](#online-account-soft-deleted-online-mailbox-is-not-present-purged)
-
-<a name='exchange-online-mailbox-status-on-premises-user-account-is-present-and-azure-active-directory-user-account-is-hard-deleted'></a>
 
 ### Exchange Online Mailbox Status (on-premises user account is Present and Microsoft Entra user account is Hard Deleted)
 
@@ -421,11 +397,9 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
 
 5. If nothing is returned from steps 3 & 4, select the **MAILBOX NOT PRESENT** option.
 
-- [Mailbox Present](#azure-ad-account-hard-deleted-online-mailbox-present)
-- [Mailbox Soft Deleted](#azure-ad-account-hard-deleted-exchange-online-mailbox-soft-deleted)
-- [Mailbox Not Present](#azure-ad-account-hard-deleted-exchange-online-mailbox-not-present-purged)
-
-<a name='azure-ad-account-present-exchange-online-mailbox-present'></a>
+- [Mailbox Present](#microsoft-entra-account-hard-deleted-online-mailbox-present)
+- [Mailbox Soft Deleted](#microsoft-entra-account-hard-deleted-exchange-online-mailbox-soft-deleted)
+- [Mailbox Not Present](#microsoft-entra-account-hard-deleted-exchange-online-mailbox-not-present-purged)
 
 ### Microsoft Entra account Present, Exchange Online Mailbox Present
 
@@ -436,8 +410,6 @@ This is the expected behavior of the Exchange Online Services.
 
 - If your issue is resolved, congratulations! Your scenario is complete.
 - If your issue isn't resolved, see [Additional Resources](#additional-resources).
-
-<a name='azure-ad-account-present-exchange-online-mailbox-soft-deleted'></a>
 
 ### Microsoft Entra account Present, Exchange Online Mailbox Soft Deleted
 
@@ -458,8 +430,6 @@ Follow these steps to recover the mailbox.
 - If your issue is resolved, congratulations! Your scenario is complete.
 - If your issue isn't resolved, see [Additional Resources](#additional-resources).
 
-<a name='azure-ad-account-present-exchange-online-mailbox-not-present-purged'></a>
-
 ### Microsoft Entra account Present, Exchange Online Mailbox Not present (Purged)
 
 Solution:  
@@ -471,8 +441,6 @@ This issue is often caused by having an unlicensed user account.
 
 - If your issue is resolved, congratulations! Your scenario is complete.
 - If your issue isn't resolved, see [Additional Resources](#additional-resources).
-
-<a name='azure-ad-account-soft-deleted-exchange-online-mailbox-present'></a>
 
 ### Microsoft Entra account Soft Deleted, Exchange Online Mailbox Present
 
@@ -522,8 +490,6 @@ Follow these steps to review the license status of the user. If the license prop
 - If your issue is resolved, congratulations! Your scenario is complete.
 - If your issue isn't resolved, see [Additional Resources](#additional-resources).
 
-<a name='azure-ad-account-hard-deleted-online-mailbox-present'></a>
-
 ### Microsoft Entra account Hard Deleted, Online Mailbox Present
 
 **Solution:**  
@@ -533,8 +499,6 @@ This scenario shouldn't be possible because of the way Exchange Online Account p
 
 - If your issue is resolved, congratulations! Your scenario is complete.
 - If your issue isn't resolved, see [Additional Resources](#additional-resources).
-
-<a name='azure-ad-account-hard-deleted-exchange-online-mailbox-soft-deleted'></a>
 
 ### Microsoft Entra account Hard Deleted, Exchange Online Mailbox Soft Deleted
 
@@ -563,8 +527,6 @@ This scenario shouldn't be possible because of the way Exchange Online Account p
 
 - If your issue is resolved, congratulations! Your scenario is complete.
 - If your issue isn't resolved, see [Additional Resources](#additional-resources).
-
-<a name='azure-ad-account-hard-deleted-exchange-online-mailbox-not-present-purged'></a>
 
 ### Microsoft Entra account Hard Deleted, Exchange Online Mailbox not present (Purged)
 
@@ -611,8 +573,6 @@ This behavior is expected in the Exchange Online Services.
 - If your issue is solved, congratulations! Your scenario is complete.
 - If your issue isn't solved, see [Additional Resources](#additional-resources).
 
-<a name='azure-ad-account-present-online-mailbox-not-present'></a>
-
 ### Microsoft Entra account Present, Online Mailbox Not Present
 
 **Solution:**
@@ -625,8 +585,6 @@ The original mailbox isn't recoverable. Assign a license to the user to create a
 - If your issue is solved, congratulations! Your scenario is complete.
 - If your issue isn't solved, see [Additional Resources](#additional-resources).
 
-<a name='azure-ad-account-soft-deleted-online-mailbox-present'></a>
-
 ### Microsoft Entra account soft-deleted, Online Mailbox Present
 
 **Solution:**  
@@ -636,8 +594,6 @@ Because of the way Exchange Online Account provisioning in Microsoft 365 works, 
 
 - If your issue is solved, congratulations! Your scenario is complete.
 - If your issue isn't solved, see [Additional Resources](#additional-resources).
-
-<a name='azure-ad-account-soft-deleted-exchange-online-mailbox-not-present'></a>
 
 ### Microsoft Entra account soft-deleted, Exchange Online Mailbox not present
 
@@ -654,8 +610,6 @@ Mailbox might have been completely purged (outside the 30-day period) and hence 
 - If your issue is solved, congratulations! Your scenario is complete.
 - If your issue isn't solved, see [Additional Resources](#additional-resources).
 
-<a name='azure-ad-account-soft-deleted-exchange-online-mailbox-soft-deleted'></a>
-
 ### Microsoft Entra account soft-deleted, Exchange Online Mailbox Soft Deleted
 
 **Solution**:  
@@ -670,8 +624,6 @@ Follow these steps to recover the mailbox.
 
 - If your issue is solved, congratulations! Your scenario is complete.
 - If your issue isn't solved, see [Additional Resources](#additional-resources).
-
-<a name='azure-ad-account-hard-deleted-online-mailbox-present-hard-deleted'></a>
 
 ### Microsoft Entra account Hard Deleted, Online Mailbox Present (Hard Deleted)
 
@@ -700,7 +652,7 @@ Follow these steps to recover the mailbox.
 
      1. Run `Get-Mailbox "<UserPrincipalName of the user>" -softdeletedmailbox| Select Name, DisplayName, MicrosoftOnlineServicesID, ExchangeGuid`.
      2. Run `New-Mailbox -Name "<Name from Step 2>" -inactivemailbox "<ExchangeGuid from Step 2>" -MicrosoftOnlineServicesID "<MicrosoftOnlineServicesID from Step 2>" -Password (ConvertTo-SecureString -String 'Pa##w0rd goes here' -AsPlainText -Force)`.
-  
+
    If `IsInactiveMailbox` is **False**:
 
     1. Run `Undo-SoftDeletedMailbox user@contoso.com -WindowsLiveID user@contoso.com -Password (ConvertTo-SecureString -String 'Pa$$word1' -AsPlainText -Force)`.
@@ -734,8 +686,6 @@ Sorry, we couldn't resolve your issue with this guide, use the following resourc
 - Use search to find a solution to your issue.
 - Sign in with your Microsoft 365 admin credentials, and then post a question to the community.
 
-<a name='azure-active-directory-user-account-status-user-account-deleted-on-premises'></a>
-
 ### Microsoft Entra user Account Status (User Account deleted on-premises)
 
 Connect to Azure Active Directory PowerShell and verify the Online Account Status
@@ -760,11 +710,9 @@ Connect to Azure Active Directory PowerShell and verify the Online Account Statu
 
 Based on the outcome in the previous steps, select one of the following options:
 
-- [Present](#exchange-online-mailbox-status-on-premises-user-account-is-deleted-and-azure-active-directory-user-account-is-present)
-- [Soft Deleted](#exchange-online-mailbox-status-on-premises-user-account-is-deleted-and-azure-active-directory-user-account-is-soft-deleted)
-- [Hard Deleted](#exchange-online-mailbox-status-on-premises-user-account-is-deleted-and-azure-active-directory-user-account-is-hard-deleted)
-
-<a name='exchange-online-mailbox-status-on-premises-user-account-is-deleted-and-azure-active-directory-user-account-is-present'></a>
+- [Present](#exchange-online-mailbox-status-on-premises-user-account-is-deleted-and-microsoft-entra-user-account-is-present)
+- [Soft Deleted](#exchange-online-mailbox-status-on-premises-user-account-is-deleted-and-microsoft-entra-user-account-is-soft-deleted)
+- [Hard Deleted](#exchange-online-mailbox-status-on-premises-user-account-is-deleted-and-microsoft-entra-user-account-is-hard-deleted)
 
 ### Exchange Online Mailbox Status (on-premises user account is Deleted and Microsoft Entra user account is Present)
 
@@ -789,10 +737,8 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
 5. If nothing is returned from steps 3 & 4, select the **MAILBOX NOT PRESENT** option.
 
 - [Mailbox Present](#ad-user-account-deleted-online-account-present-online-mailbox-present)
-- [Mailbox Soft Deleted](#ad-account-deleted-azure-ad-account-present-soft-deleted-online-mailbox-soft-deleted)
-- [Mailbox Not Present](#ad-user-account-deleted-azure-ad-account-present-online-mailbox-not-present)
-
-<a name='exchange-online-mailbox-status-on-premises-user-account-is-deleted-and-azure-active-directory-user-account-is-soft-deleted'></a>
+- [Mailbox Soft Deleted](#ad-account-deleted-microsoft-entra-account-present-soft-deleted-online-mailbox-soft-deleted)
+- [Mailbox Not Present](#ad-user-account-deleted-microsoft-entra-account-present-online-mailbox-not-present)
 
 ### Exchange Online Mailbox Status (on-premises user account is Deleted and Microsoft Entra user account is Soft Deleted)
 
@@ -816,11 +762,9 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
 
 5. If nothing is returned from steps 3 & 4, select the **MAILBOX NOT PRESENT** option.
 
-- [Mailbox Present](#ad-user-account-deleted-azure-ad-account-soft-deleted-online-mailbox-present)
+- [Mailbox Present](#ad-user-account-deleted-microsoft-entra-account-soft-deleted-online-mailbox-present)
 - [Mailbox Soft Deleted](#ad-account-deleted-online-account-soft-deleted-online-mailbox-soft-deleted)
-- [Mailbox Not Present](#ad-user-account-deleted-azure-ad-account-soft-deleted-online-mailbox-not-present)
-
-<a name='exchange-online-mailbox-status-on-premises-user-account-is-deleted-and-azure-active-directory-user-account-is-hard-deleted'></a>
+- [Mailbox Not Present](#ad-user-account-deleted-microsoft-entra-account-soft-deleted-online-mailbox-not-present)
 
 ### Exchange Online Mailbox Status (on-premises user account is Deleted and Microsoft Entra user account is Hard Deleted)
 
@@ -844,6 +788,6 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
 
 5. If nothing is returned from steps 3 & 4, select the **MAILBOX NOT PRESENT** option.
 
-- [Mailbox Present](#ad-user-account-deleted-azure-ad-account-hard-deleted-online-mailbox-present)
-- [Mailbox Soft Deleted](#ad-user-account-deleted-azure-ad-account-hard-deleted-online-mailbox-soft-deleted)
-- [Mailbox Not Present](#ad-user-account-deleted-azure-ad-account-hard-deleted-online-mailbox-not-present)
+- [Mailbox Present](#ad-user-account-deleted-microsoft-entra-account-hard-deleted-online-mailbox-present)
+- [Mailbox Soft Deleted](#ad-user-account-deleted-microsoft-entra-account-hard-deleted-online-mailbox-soft-deleted)
+- [Mailbox Not Present](#ad-user-account-deleted-microsoft-entra-account-hard-deleted-online-mailbox-not-present)
