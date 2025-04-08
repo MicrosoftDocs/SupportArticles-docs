@@ -16,7 +16,7 @@ contributors:
 ---
 # Common issues and resolutions for Power Apps
 
-This article lists common issues you might encounter while using Power Apps. Issues are grouped by area, and summary-level workarounds are provided where applicable. Pointers to primary documentation locations are also provided.
+This article lists common issues you might encounter while using Power Apps. We group issues by area and provide summary-level workarounds where applicable. Pointers to primary documentation locations are also provided.
 
 Refer to the introductory article [Power Apps troubleshooting strategies](isolate-common-issues.md) for guidance on narrowing down the source of your issue. That article outlines key principles for debugging both functional and performance issues.
 
@@ -44,13 +44,13 @@ End users might encounter this issue in two situations:
 
 1. The application might have a shared implicit connection that isn't a secure implicit connection. Sharing the connection with the end user can resolve the issue but isn't recommended. All connections should be converted to secure implicit connections by the author.
 
-2. If the connection is already a secure implicit connection, republishing the app might resolve the issue. If not, a product bug should be filed.
+2. The connection in the application is already a secure implicit connection. In this case, republishing the app might resolve the issue. If not, a product bug should be filed.
 
 ### Common issues
 
 1. **Automatic Next links for galleries and grids don't work for action-based connectors.**
 
-    Next links (the property on a query result that enables a gallery or grid to automatically page in the next set of results of a query) aren't supported for action-based connectors. For a discussion of this topic, see the [Overview of connectors for canvas apps](/power-apps/maker/canvas-apps/connections-list#actions).
+    Action-based connectors don't support next links. Next links are properties on query results that allow a gallery or grid to automatically load the next set of results. For a discussion of this article, see the [Overview of connectors for canvas apps](/power-apps/maker/canvas-apps/connections-list#actions).
 
 1. **Sharing a Canvas app using SharePoint connector**
 
@@ -62,7 +62,7 @@ End users might encounter this issue in two situations:
 
 1. **Custom connectors and Microsoft Dataverse**
 
-    If an app created using Power Apps build 2.0.540 or earlier relies on a database in the Dataverse and at least one custom connector in a different environment, you need to deploy the connector to the same environment as the database and update the app to use the new connector. Otherwise, a dialog notifies users that the API wasn't found. For more information, see [Environments overview](/power-platform/admin/environments-overview).
+   If your app was created using Power Apps build 2.0.540 or earlier and relies on a database in the Dataverse, along with at least one custom connector in a different environment, you need to make some changes. First, deploy the custom connector to the same environment as the database. Then, update the app to use the newly deployed connector. Otherwise, a dialog notifies users that the API wasn't found. For more information, see [Environments overview](/power-platform/admin/environments-overview).
 
 1. **Column names with spaces**
 
@@ -74,7 +74,7 @@ End users might encounter this issue in two situations:
 
 1. **For apps that are created from data, only the first 500 records of a data source can be accessed.**
 
-    Power Apps works with large data sources by delegating operations to the data source. For operations that can't be delegated, Power Apps will give a warning at authoring time and operate on only the first 500 records of the data source. For more information, see the [Delegation overview](/power-apps/maker/canvas-apps/delegation-overview#delegable-functions).
+    Power Apps works with large data sources by delegating operations to the data source. For operations that can't be delegated, Power Apps shows a warning at authoring time and operates on only the first 500 records of the data source. For more information, see the [Delegation overview](/power-apps/maker/canvas-apps/delegation-overview#delegable-functions).
 
 1. **Excel data must be formatted as a table.**
 
@@ -86,15 +86,28 @@ End users might encounter this issue in two situations:
 
 1. **Sign-in issues on certain Android mobile devices when using authenticator**
 
-    In certain devices and scenarios, you might experience sign-in failures when using an authenticator. This is due to the OEM limiting this functionality. For more information, see [ADALError: BROKER_AUTHENTICATOR_NOT_RESPONDING](https://github.com/AzureAD/azure-activedirectory-library-for-android/wiki/ADALError:-BROKER_AUTHENTICATOR_NOT_RESPONDING).
+    In certain devices and scenarios, you might experience sign-in failures when using an authenticator. This issue is due to the OEM limiting this functionality. For more information, see [ADALError: BROKER_AUTHENTICATOR_NOT_RESPONDING](https://github.com/AzureAD/azure-activedirectory-library-for-android/wiki/ADALError:-BROKER_AUTHENTICATOR_NOT_RESPONDING).
 
 1. **Office 365 Video connector isn't supported.**
 
-## Integration
+## Power Automate Integration
 
-**Power Automate flows are orphaned in Power Apps.**
+1. **Power Automate flows are orphaned in Power Apps.**
 
 Power Automate flows that are added using an older version of the Power Apps panel might be orphaned and removed. To fix this issue, readd the flows manually.
+
+1. **Power Apps Custom pages (in a model driven app) are out of sync with embedded Power Automate flow metadata**
+The metadata for a Power Automate flow might get out of sync with information that a Model Driven App's custom page (Power Apps) has about it. This issue might happen if the flow is updated after it's embedded in the custom page. To update your flow and your model driven app, repeat the corrective steps for each of the embedded flows if it was updated after it was embedded in Power App.  If you don't know which flow was updated after it was embedded, repeat the step for all of the embedded flows.
+
+    1. Edit the custom pages that use the flow
+    1. Open the Power Automate pane and refresh the flow.
+    1. Save and republish the custom page
+    
+    Once complete, then follow these steps.
+
+    1. Edit the Model driven app 
+    1. Make a minor change. (Enough to trigger the save option)
+    1. Save and publish the Model driven app.
 
 ## Power Fx
 
@@ -110,7 +123,7 @@ Power Automate flows that are added using an older version of the Power Apps pan
 
 **Performance degradation when opening Power Apps Studio in China**
 
-[Power Apps Studio](/power-apps/maker/canvas-apps/power-apps-studio) might take more than 30 seconds when loading in China. This issue doesn't impact tenants hosted locally by 21Vianet.
+[Power Apps Studio](/power-apps/maker/canvas-apps/power-apps-studio) might take more than 30 seconds when loading in China. This issue doesn't affect tenants hosted locally by 21Vianet.
 
 ## Studio and Forms
 
@@ -134,7 +147,7 @@ The [Power Apps Studio](/power-apps/maker/canvas-apps/power-apps-studio) is home
 
 1. **Changing a flow in a shared app**
 
-    If you add a flow to an app, share it, and then add a service or change a connection in the flow, you must remove the flow from the shared app, readd the flow, and then reshare the app. Otherwise, users who trigger the flow receive an authentication failure.
+    If you add a flow to an app, share it, and then add a service or change a connection in the flow, you must remove the flow from the shared app, readd the flow, and then reshare the app. Otherwise, users who trigger the flow will receive an authentication failure.
 
 1. **Changing a "Title" field in a table**
 
