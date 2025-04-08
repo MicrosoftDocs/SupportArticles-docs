@@ -3,7 +3,7 @@ title: Filter Fiddler Traffic Using Domain Names and Client Processes
 description: Introduces how to filter traffic that's captured by Fiddler using domain/host names owned by Microsoft Entra and client processes.
 ms.service: entra-id
 ms.topic: how-to
-ms.date: 04/07/2025
+ms.date: 04/08/2025
 ms.reviewer: bachoang, v-weizhu
 ms.custom: sap:Enterprise Applications
 ---
