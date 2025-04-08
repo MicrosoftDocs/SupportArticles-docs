@@ -35,7 +35,7 @@ Follow these steps to capture network traffic using NetLog:
 1. Within the same browser window, open a new tab.
 1. Reproduce the issue.
 
-    > [NOTE]
+    > [!NOTE]
     > If you close or navigate away from the NetLog tab, the logging will stop automatically.
 1. After reproducing the issue, return to the NetLog tab and select the **Stop Logging** button.
 1. Locate the NetLog file (*NetLog.json*) saved in step 6.
@@ -49,15 +49,11 @@ NetLog is supported on mobile versions of Edge and Chrome:
 
 On mobile devices, you will have an email option to send the log.
 
-### Capture traffic in Android WebView
-
-For capturing network traffic in Android WebView, see [Debug WebView network traffic](https://chromium.googlesource.com/chromium/src/+/HEAD/android_webview/docs/net-debugging.md).
-
 ## Use Fiddler to review NetLog captures
 
 Fiddler Classic can be used to review NetLog captures by installing the NetLog plugin. To do so, follow these steps:
 
-1. Download and install the NetLog plugin for Fiddler Classic from [this link](https://bayden.com/dl/FiddlerImportNetLog.exe).
+1. Download and install the NetLog plugin for Fiddler Classic from [here](https://bayden.com/dl/FiddlerImportNetLog.exe).
 2. Open Fiddler.
 3. Navigate to **File > Import Sessions**.
 4. Select **NetLog JSON** to import and analyze the NetLog file.
