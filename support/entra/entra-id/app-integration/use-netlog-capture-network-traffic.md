@@ -1,5 +1,5 @@
 ---
-title: Use NetLog to capture network traffic
+title: Use NetLog to capture network activity
 description: Provides guidance about using the Network Logs (NetLog) tool as an alternative to Fiddler and HTTP Archive (HAR) captures.
 ms.reviewer: bachoang, v-weizhu
 ms.date: 04/08/2025
@@ -9,7 +9,7 @@ ms.custom: sap:Enterprise Applications
 ---
 # Use NetLog as an alternative to Fiddler and HAR captures
 
-This article provides guidance on using the Network Logs (NetLog) tool as an alternative to Fiddler and HTTP Archive (HAR) captures for diagnosing network issues in Microsoft Entra. NetLog is built into in Chromium-based browsers like Microsoft Edge, Chrome, and Electron. When standard Fiddler captures are unavailable or HAR captures from developer tools truncate necessary information, you can use it to capture network traffic.
+This article provides guidance on using the Network Logs (NetLog) tool as an alternative to Fiddler and HTTP Archive (HAR) captures for diagnosing network issues in Microsoft Entra. NetLog is built into in Chromium-based browsers like Microsoft Edge, Chrome, and Electron. When standard Fiddler captures are unavailable or HAR captures from developer tools truncate necessary information, you can use it to capture network activity.
 
 ## Known limitations
 
@@ -22,7 +22,7 @@ Depending on the information you need, you might still need to use Fiddler or HA
 
 ## Use NetLog in browsers
 
-Follow these steps to capture network traffic using NetLog:
+Follow these steps to capture network activity using NetLog:
 
 1. (Optional but helpful) Close all browser tabs except one.
 1. Navigate to NetLog:
@@ -51,9 +51,9 @@ On mobile devices, you will have an email option to send the log.
 
 ## View and analyze NetLog data
 
-You can view the NetLog.json files using the NetLog Viewer. To do so, open the [online NetLog Viewer](https://netlog-viewer.appspot.com/#import), select **File**, and then upload the exported NetLog file.
+You can view the NetLog file using the [online NetLog Viewer](https://netlog-viewer.appspot.com/#import). To do so, open the NetLog Viewer, select **File**, and then upload the exported NetLog file.
 
-You can use the following tabs in the NetLog Viewer to inspect different aspects of network activities:
+You can use the following tabs in the NetLog Viewer to inspect different aspects of network activity:
 
 - **Events**: View detailed network events.
 - **Proxy**: Check proxy settings.
