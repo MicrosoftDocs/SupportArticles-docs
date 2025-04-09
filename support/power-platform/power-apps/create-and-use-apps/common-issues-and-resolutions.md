@@ -104,15 +104,15 @@ Power Automate flows that are added using an older version of the Power Apps pan
 1. **Power Apps Custom pages (in a model driven app) are out of sync with embedded Power Automate flow metadata**
 The metadata for a Power Automate flow might get out of sync with information that a Model Driven App's custom page (Power Apps) has about it. This issue might happen if the flow is updated after it is embedded in the custom page. To update your flow and your model driven app, repeat the corrective steps for each of the embedded flows if it was updated after it was embedded in Power App.  If you don't know which flow was updated after it was embedded, repeat the step for all of the embedded flows.
 
-    1. Edit the custom pages that use the flow
-    1. Open the Power Automate pane and refresh the flow.
-    1. Save and republish the custom page
+* Edit the custom pages that use the flow
+* Open the Power Automate pane and refresh the flow.
+* Save and republish the custom page
     
     Once complete, then follow these steps.
 
-    1. Edit the Model driven app 
-    1. Make a minor change. (Enough to trigger the save option)
-    1. Save and publish the Model driven app.
+* Edit the Model driven app 
+* Make a minor change. (Enough to trigger the save option)
+* Save and publish the Model driven app.
 
 ## Power Fx
 
