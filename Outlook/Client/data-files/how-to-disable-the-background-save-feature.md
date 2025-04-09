@@ -1,6 +1,6 @@
 ---
-title: How to disable the background save feature
-description: Describes how to disable the background save feature in Microsoft Outlook.
+title: Disable the background save feature in Outlook
+description: Describes how to set a registry keydisable the background save feature in Microsoft Outlook.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -12,43 +12,33 @@ ms.custom:
   - CSSTroubleshoot
 ms.reviewer: luche
 appliesto: 
+  - Outlook 2021
   - Outlook 2019
   - Outlook 2016
-  - Outlook 2013
-  - Outlook 2010
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 01/30/2024
+ms.date: 04/08/2025
 ---
-# How to disable the background save feature in Outlook
+# Disable the background save feature in Outlook
 
 _Original KB number:_ &nbsp; 319158
 
-## Summary
+When you create an email message that has one or more attachments in Microsoft Outlook, the attachments are streamed to Microsoft Exchange Server in the background. This background save feature minimizes the time that you have to wait before you can send the message.
 
-When you create an email message that has one or more attachments in Microsoft Outlook 2019, Outlook 2016, Outlook 2013, Outlook 2010, or Outlook for Microsoft 365, the attachments are streamed to Microsoft Exchange Server in the background. This background save feature minimizes the time that you have to wait before you can send the message.
+In an environment that has low bandwidth, you can disable the background save feature in Outlook by configuring the `DisableBGSave` registry key.
+Use the following steps:
 
-In an environment that has a low bandwidth, you can disable the background save feature in these Outlook versions by setting the `DisableBGSave` registry key as follows.
-
-> [!IMPORTANT]
-> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
+[!INCLUDE [Important registry alert](../../../includes/registry-important-alert.md)]
 
 1. Exit all Microsoft Office applications.
-2. Start Registry Editor:
+2. Start Registry Editor.
+3. Locate and then select the following registry subkey:
+   `HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook`
 
-   - In Windows 10, go to **Start**, enter *regedit* in the **Search Windows** box, and then select **regedit.exe** in the search results.
-   - In Windows 8 and Windows 8.1, move your mouse to the upper-right corner, select **Search**, type *regedit* in the search text box, and then select **regedit.exe** in the search results.
-   - In Windows 7, select **Start**, type *regedit* in the **Search programs and files** text box, and then select **regedit.exe** in the search results.
-
-3. Locate and then select the following registry subkeys:
-   - `HKEY_CURRENT_USER\Software\Microsoft\Office\xx.0\Outlook`
-   - `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\xx.0\Outlook`
-
-    > [!NOTE]
-    > In this registry path, <xx.0> corresponds to the Outlook version (16.0 = Outlook 2016, Outlook 2019 or Outlook for Microsoft 365, 15.0 = Outlook 2013, 14.0 = Outlook 2010).
-
-4. On the **Edit** menu, point to **New**, and then select **DWORD Value**.
+    If this subkey doesn't exist, select the following subkey instead:
+   `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\16.0\Outlook`
+4. On the **Edit** menu, point to **New**, and then select **DWORD (32-bit) Value**.
 5. Type **DisableBGSave**, and then press Enter.
-6. In the **Details** pane, right-click **DisableBGSave**, and then select **Modify**.
+6. Right-click the **DisableBGSave** entry, and then select **Modify**.
 7. Select **Hexadecimal** for the base, type *1* in the **Value data** box, and then select **OK**.
 8. Exit Registry Editor.
