@@ -7,22 +7,28 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: scotro,mwesley
 ms.custom:
-- sap:add_sap
-- pcy:add_pcy
+- sap:windows servicing,updates and features on demand\windows update fails - installation stops with error
+- pcy:WinComm Devices Deploy
 ---
 # Troubleshoot Windows Update Error 0x80070002
 
-Encountering the Windows Update error 0x80070002 can be frustrating. This error typically arises due to missing or corrupt files necessary for the update or incomplete previous updates. Understanding the root causes and following the appropriate troubleshooting steps can help resolve this issue effectively.
+The Windows Update error 0x80070002 typically occurs because of missing or corrupt files necessary for the update or incomplete previous updates. Understanding the root causes and following the appropriate troubleshooting steps can help resolve this issue effectively.
 
 :::image type="content" source="./media/troubleshoot-windows-update-error-0x80070002/updateerror0x80070002-wusaerror.png" alt-text="Windows Update error 0x80070002 message":::
 
 ## Prerequisites
 
-Before proceeding with the troubleshooting steps, ensure you have backed up your OS disk. This precautionary step is crucial to prevent data loss during the resolution process.
+Before proceeding with the troubleshooting steps, ensure you have backed up your operating system (OS) disk. This precautionary step is crucial to prevent data loss during the resolution process.
 
-## How to Identify the Issue
+## Root Cause for Windows Update Error 0x80070002
 
-### Symptom 1: Security Monthly Rollup Installation Failure
+The error 0x80070002 is primarily caused by missing or corrupt files necessary for the update process. This can occur due to:
+
+- Incomplete previous updates that left the system in an inconsistent state.
+- Missing DLLs or system files in critical directories.
+- Registry entries pointing to non-existent services or files.
+
+## Symptom 1: Security Monthly Rollup Installation Failure
 
 If the Security Monthly Rollup fails to install with error 0x80070002, check the CBS.log located at `C:\Windows\Logs\CBS\CBS.log`. You might find entries indicating missing files or services that failed to start.
 
@@ -36,53 +42,7 @@ Check the directory `C:\Windows\Microsoft.NET\Framework\v4.0.30319` to confirm i
 
 :::image type="content" source="./media/troubleshoot-windows-update-error-0x80070002/updateerror0x80070002-fileexplorer.png" alt-text="Empty directory in Windows Explorer":::
 
-### Symptom 2: Update Installation Failure
-
-If you encounter error 0x80070002 during update installation, review the CBS.log for entries like the following:
-
-```output
-Error CSI 00000e47 (F) STATUS_OBJECT_NAME_NOT_FOUND #13367681# from Windows::Rtl::SystemImplementation::DirectFileSystemProvider::SysCreateFile(flags = (AllowSharingViolation), handle = {provider=NULL, handle=0, name= ("null")}, da = (SYNCHRONIZE|FILE_READ_ATTRIBUTES), oa = @0xa130e9e088->OBJECT_ATTRIBUTES {s:48; rd:NULL; on:[69]"\??\C:\ProgramData\Microsoft\Windows\Start Menu\Programs\System Tools"; a:(OBJ_CASE_INSENSITIVE)}, iosb = @0xa130e9e068, as = (null), fa = 0, sa = (FILE_SHARE_READ|FILE_SHARE_WRITE|FILE_SHARE_DELETE), cd = FILE_OPEN, co = (FILE_SYNCHRONOUS_IO_NONALERT|0x00004000), eab = NULL, eal = 0, disp = Invalid)
-```
-
-Verify the existence of the folder `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\System Tools`.
-
-### Symptom 3: Missing DLLs in C:\Windows\WinSxS
-
-Monthly rollups may fail with error 0x80070002 due to missing DLLs in the Side-by-Side store. Check the WindowsUpdate.log and CBS.log for missing files like `DWrite.dll` and `FntCache.dll`.
-
-```output
-Info CBS Failed to find file: x86_microsoft-windows-directwrite_31bf3856ad364e35_7.1.7601.23545_none_229deeb1ba2a85d3DWrite.dll [HRESULT = 0x80070002 - ERROR_FILE_NOT_FOUND]
-```
-
-### Symptom 4: Cumulative Update Rollback
-
-If a cumulative update on Windows Server rolls back after a restart, check the Event Viewer for error 0x80070002 and review the CBS logs for driver update issues.
-
-```output
-Info CBS INSTALL index: 55, phase: 2, result 2, inf: flpydisk.inf
-Info CBS Doqe: Failed installing driver updates [HRESULT = 0x80070002 - ERROR_FILE_NOT_FOUND]
-```
-
-### Symptom 5: Windows Upgrade Failure
-
-For Windows upgrade failures with error 0x80070002, examine the Setupact.log for issues related to mounting WIM files.
-
-```output
-Warning SP Failed to get WimMount ImagePath, 0x80070002
-Error SP CMountWIM::DoExecute: Failed to mount WIM file C:\$WINDOWS.~BT\Sources\SafeOS\winre.wim. Error 0xC1420121[gle=0xc1420121]
-```
-
-## Root Cause for Windows Update Error 0x80070002
-
-The error 0x80070002 is primarily caused by missing or corrupt files necessary for the update process. This can occur due to:
-
-- Incomplete previous updates that left the system in an inconsistent state.
-- Missing DLLs or system files in critical directories.
-- Registry entries pointing to non-existent services or files.
-
-## Resolution or Troubleshooting Steps
-
-### Mitigation 1: Registry Key Deletion
+### Resolution: Registry Key Deletion
 
 1. Navigate to the following registry locations:
    - `HKLM\System\CurrentControlSet\services\clr_optimization_v4.0.30319_32`
@@ -93,17 +53,36 @@ The error 0x80070002 is primarily caused by missing or corrupt files necessary f
 2. Back up and delete these registry keys.
 3. Attempt to install the update again.
 
-### Mitigation 2: Copy Missing Folders
+## Symptom 2: Update Installation Failure
+
+If you encounter error 0x80070002 during update installation, review the CBS.log for entries like the following:
+
+```output
+Error CSI 00000e47 (F) STATUS_OBJECT_NAME_NOT_FOUND #13367681# from Windows::Rtl::SystemImplementation::DirectFileSystemProvider::SysCreateFile(flags = (AllowSharingViolation), handle = {provider=NULL, handle=0, name= ("null")}, da = (SYNCHRONIZE|FILE_READ_ATTRIBUTES), oa = @0xa130e9e088->OBJECT_ATTRIBUTES {s:48; rd:NULL; on:[69]"\??\C:\ProgramData\Microsoft\Windows\Start Menu\Programs\System Tools"; a:(OBJ_CASE_INSENSITIVE)}, iosb = @0xa130e9e068, as = (null), fa = 0, sa = (FILE_SHARE_READ|FILE_SHARE_WRITE|FILE_SHARE_DELETE), cd = FILE_OPEN, co = (FILE_SYNCHRONOUS_IO_NONALERT|0x00004000), eab = NULL, eal = 0, disp = Invalid)
+```
+
+Verify the existence of the folder `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\System Tools`.
+
+### Resolution: Copy Missing Folders
 
 Copy the folder "System Tools" from a working machine to the affected machine, ensuring all shortcuts are included.
 
-### Mitigation 3: Restore Missing DLLs
+## Symptom 3: Missing DLLs in C:\Windows\WinSxS
+
+Monthly rollups may fail with error 0x80070002 due to missing DLLs in the Side-by-Side store. Check the WindowsUpdate.log and CBS.log for missing files like `DWrite.dll` and `FntCache.dll`.
+
+```output
+Info CBS Failed to find file: x86_microsoft-windows-directwrite_31bf3856ad364e35_7.1.7601.23545_none_229deeb1ba2a85d3DWrite.dll [HRESULT = 0x80070002 - ERROR_FILE_NOT_FOUND]
+```
+
+### Resolution: Restore Missing DLLs
 
 1. Identify missing DLLs from the CBS logs.
 2. Source these files from a working server and place them in the correct directories.
 
    **Commands:**
-   ```bash
+
+   ```console
    takeown /f c:\windows\winsxs
    icacls c:\windows\winsxs /grant administrators:F
    cd c:\windows\winsxs
@@ -111,13 +90,23 @@ Copy the folder "System Tools" from a working machine to the affected machine, e
    ```
 
 3. Run the following command to check for corruptions:
-   ```bash
+
+   ```console
    DISM.exe /Online /Cleanup-image /Restorehealth
    ```
 
 4. Download and install the standalone package for the Monthly Rollup from the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Home.aspx).
 
-### Mitigation 4: Import Registry Keys
+## Symptom 4: Cumulative Update Rollback
+
+If a cumulative update on Windows Server rolls back after a restart, check the Event Viewer for error 0x80070002 and review the CBS logs for driver update issues.
+
+```output
+Info CBS INSTALL index: 55, phase: 2, result 2, inf: flpydisk.inf
+Info CBS Doqe: Failed installing driver updates [HRESULT = 0x80070002 - ERROR_FILE_NOT_FOUND]
+```
+
+### Resolution: Import Registry Keys
 
 Export and import the following registry keys from a working machine:
 
@@ -126,7 +115,16 @@ Export and import the following registry keys from a working machine:
 2. HKLM\System\CurrentControlSet\Services\sfloppy 
 ```
 
-### Mitigation 5: Restore WIMMOUNT.sys
+## Symptom 5: Windows Upgrade Failure
+
+For Windows upgrade failures with error 0x80070002, examine the Setupact.log for issues related to mounting WIM files.
+
+```output
+Warning SP Failed to get WimMount ImagePath, 0x80070002
+Error SP CMountWIM::DoExecute: Failed to mount WIM file C:\$WINDOWS.~BT\Sources\SafeOS\winre.wim. Error 0xC1420121[gle=0xc1420121]
+```
+
+### Resolution: Restore WIMMOUNT.sys
 
 Export `WIMMOUNT.sys` from the registry of a working server and merge it on the affected server.
 
