@@ -202,7 +202,7 @@ When part of a domain or forest can't communicate with the rest of the domain or
 
 > [!IMPORTANT]
 > In most cases, you can take advantage of the initial replication requirement (as described in this article) to weed out duplicate role holders. A restarted role holder will relinquish the role if it detects a duplicate role-holder through updates it receives on inbound replication.  
-> You may encounter circumstances that this behavior does not resolve the Operations Master Conflict. In such cases, the information in this section may be helpful.
+> You may encounter circumstances that this behavior does not resolve the Operations Master conflict. In such cases, the information in this section may be helpful.
 
 The following table identifies the Operation Master roles that can cause problems if a forest or domain has multiple role-holders for that role:
 
