@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error (5)
 description: Learn how to troubleshoot the WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error (5) when you try to add Windows node pools in an AKS cluster.
-ms.date: 03/26/2025
+ms.date: 04/08/2025
 ms.reviewer: shtao, abelch, junjiezhang, v-weizhu, addobres
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error (5) so that I can successfully add Windows node pools in an Azure Kubernetes Service (AKS) cluster.
@@ -31,7 +31,7 @@ Your cluster nodes can't connect to the cluster API server pod.
 
 ## Troubleshooting steps
 
-1. Follow these [steps](https://learn.microsoft.com/en-us/azure/aks/node-access#windows-server-proxy-connection-for-ssh) to connect to the respective node:
+1. Connect to the respective node by following the steps described in [Windows Server proxy connection for SSH](/azure/aks/node-access#windows-server-proxy-connection-for-ssh):
 
 2. Verify that your nodes can resolve the cluster's fully qualified domain name (FQDN):
 
@@ -55,9 +55,9 @@ Your cluster nodes can't connect to the cluster API server pod.
 
 ## References
 
-[General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)
+- [General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)
 
-[More exit codes in Windows CSE](https://github.com/Azure/AgentBaker/blob/master/parts/windows/windowscsehelper.ps1)
+- [Exit codes in Windows CSE](https://github.com/Azure/AgentBaker/blob/master/parts/windows/windowscsehelper.ps1)
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
