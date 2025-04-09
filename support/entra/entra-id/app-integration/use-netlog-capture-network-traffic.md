@@ -31,7 +31,7 @@ Follow these steps to capture network traffic using NetLog:
 1. In the **Options** section, select **Include raw bytes (will include cookies and credentials)**.
 1. Leave the **Maximum log size** field blank.
 1. Select **Start Logging to Disk**.
-1. Select a file and a location (such as **Desktop**) to save the log file.
+1. Select a file and location (such as **Desktop**) to save the log file.
 1. Within the same browser window, open a new tab.
 1. Reproduce the issue.
 
@@ -51,16 +51,16 @@ On mobile devices, you will have an email option to send the log.
 
 ## View and analyze NetLog data
 
-You can view the NetLog.json files using the NetLog Viewer. To do so, open the [online NetLog Viewer](https://netlog-viewer.appspot.com/#import), select **File**, and then upload the exported NetLog .json file.
+You can view the NetLog.json files using the NetLog Viewer. To do so, open the [online NetLog Viewer](https://netlog-viewer.appspot.com/#import), select **File**, and then upload the exported *NetLog.json* file.
 
 You can use the following tabs in the NetLog Viewer to inspect different aspects of network activities:
 
-- Events: View detailed network events.
-- Proxy: Check proxy settings.
-- Timeline: Analyze request timing.
-- DNS: Inspect DNS lookups.
-- Sockets: Review TCP connections.
-- Cache: Examine cached resources.
+- **Events**: View detailed network events.
+- **Proxy**: Check proxy settings.
+- **Timeline**: Analyze request timing.
+- **DNS**: Inspect DNS lookups.
+- **Sockets**: Review TCP connections.
+- **Cache**: Examine cached resources.
 
 For more information, see [Providing network details with NetLog](https://dev.chromium.org/for-testers/providing-network-details).
 
