@@ -5,14 +5,12 @@ ms.date: 04/08/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: ''
+ms.reviewer: scotro,mwesley
 ms.custom:
-- sap:add_sap
-- pcy:add_pcy
+- sap:windows servicing,updates and features on demand\windows update fails - installation stops with error
+- pcy:WinComm Devices Deploy
 ---
 # Troubleshoot Windows Update Error Code 0x8024002E
-
-**Applies to:** :heavy_check_mark: Windows VMs
 
 The Windows Update error code 0x8024002E indicates that access to an unmanaged server is not allowed, typically because the Windows Update Client service is disabled on the server. This document provides steps to identify and resolve this issue.
 
