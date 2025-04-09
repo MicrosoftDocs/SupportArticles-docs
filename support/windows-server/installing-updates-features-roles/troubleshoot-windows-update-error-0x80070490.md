@@ -7,8 +7,8 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: ''
 ms.custom:
-- sap:add_sap
-- pcy:add_pcy
+- sap:windows servicing,updates and features on demand\windows update fails - installation stops with error
+- pcy:WinComm Devices Deploy
 ---
 # Troubleshoot Windows Update Error 0x80070490
 
@@ -20,9 +20,16 @@ Windows Update error 0x80070490 typically occurs due to driver failures when use
 
 Before proceeding with the mitigations, ensure you have backed up the OS disk. Refer to the [Backup OS Disk](https://learn.microsoft.com/azure/backup/backup-azure-vms) guide for detailed instructions.
 
-## How to Identify the Issue
+## Root Cause
 
-### Symptom 1: Pending Update State
+The primary cause of error 0x80070490 is driver failure during Windows Update installations. This can occur due to:
+
+- Pending updates that block new installations.
+- Stale or incorrect registry entries related to driver operations.
+- Corrupted or malformed SetupConfig.ini files.
+- Missing driver files or hardlinks in the system directories.
+
+## Symptom 1: Pending Update State
 
 When an update is in an Install Pending state, the driver operation may fail due to an inability to read the identity for driver operation sequence ID 1. Check the CBS logs at `C:\Windows\Logs\CBS\CBS.log` for entries like:
 
@@ -35,7 +42,18 @@ Info CBS Failed initializing driver operation queue [HRESULT = 0x80070490 - ERRO
 Info CBS Perf: InstallUninstallChain complete.
 ```
 
-### Symptom 2: Servicing Stack Update Failure
+### Resolution: Resolve Pending Updates
+
+1. Remove the `1` folder from the registry path: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\DriverOperations\1`.
+2. Set the trusted installer to automatic state using the command:
+
+   ```console
+   sc config trustedinstaller start= auto
+   ```
+
+3. Attempt to install the updates again.
+
+## Symptom 2: Servicing Stack Update Failure
 
 Servicing Stack Updates (SSU) may fail with error 0x80070490. Check the CBS.log for similar entries:
 
@@ -48,7 +66,12 @@ Info CBS Failed to execute execution chain. [HRESULT = 0x80070490 - ERROR_NOT_FO
 Error CBS Failed to process single phase execution. [HRESULT = 0x80070490 - ERROR_NOT_FOUND]
 ```
 
-### Symptom 3: Feature Update Installation Failure
+### Resolution: Reinstall Servicing Stack Update
+
+1. Export and delete the key at `HKLM\SOFTWARE\Microsoft\Windows\Currentversion\Component Based Servcing\Driver Operations\0`.
+2. Reinstall the Servicing Stack Update (SSU).
+
+## Symptom 3: Feature Update Installation Failure
 
 Feature updates may fail with error code 0x80070490. This behavior can be observed through "Check for updates" and in Software Center (WSUS). Review the WindowsUpdate.log for entries like:
 
@@ -67,7 +90,12 @@ Feature updates may fail with error code 0x80070490. This behavior can be observ
 08:16:59.18581 PM 11736 12104 uhwinsetup_cpp776 [Handler] Exit code = 0x80070490
 ```
 
-### Symptom 4: Cumulative Update Failure
+### Resolution: Fix SetupConfig.ini
+
+1. Remove or fix the `SetupConfig.ini` file located at `C:\Users\Default\AppData\Local\Microsoft\Windows\WSUS\SetupConfig.ini`.
+2. If the file is empty, add an entry such as `Show OOBE =None`.
+
+## Symptom 4: Cumulative Update Failure
 
 Cumulative updates may fail with error code 0x80070490 along with 0x8e5e03fa. Check the Setup Events logs for errors like:
 
@@ -79,60 +107,18 @@ Information XXXXX.corp. 3 Microsoft-Windows-Servicing N/A NT AUTHORITY\SYSTEM Pa
 Error XXXX.corp. 3 Microsoft-Windows-WUSA N/A CORP\xxa790741it5 Windows update "Security Update for Windows (KB5004298)" could not be installed because of error 2388526074 "" (Command line: ""C:\Windows\system32\wusa.exe" "C:\Users\XXXXX\Desktop\WS2012R2-072021\windows8.1-kb5004298-x64_e98bbac284034aac90559c0d311967d97ebfc0e5.msu" ")
 ```
 
-### Symptom 5: Monthly Rollup Update Failure
-
-Monthly rollup updates may fail with error code 0x80070490. Check the CBS log for entries like:
-
-```output
-Error CBS Shtd: Failed while processing non-critical driver operationsqueue. [HRESULT = 0x80070490 – ERROR_NOT_FOUND]
-Info CBS Shtd: Rolling back KTM, because drivers failed.
-Info CBS Progress: UI message updated. Operation type: Update. Stage: 1 out of 1. Temporary Rollback.
-```
-
-## Root Cause
-
-The primary cause of error 0x80070490 is driver failure during Windows Update installations. This can occur due to:
-
-- Pending updates that block new installations.
-- Stale or incorrect registry entries related to driver operations.
-- Corrupted or malformed SetupConfig.ini files.
-- Missing driver files or hardlinks in the system directories.
-
-## Resolution or Troubleshooting Steps
-
-### Mitigation 1: Resolve Pending Updates
-
-1. Remove the `1` folder from the registry path: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\DriverOperations\1`.
-2. Set the trusted installer to automatic state using the command:
-
-   ```bash
-   sc config trustedinstaller start= auto
-   ```
-
-3. Attempt to install the updates again.
-
-### Mitigation 2: Reinstall Servicing Stack Update
-
-1. Export and delete the key at `HKLM\SOFTWARE\Microsoft\Windows\Currentversion\Component Based Servcing\Driver Operations\0`.
-2. Reinstall the Servicing Stack Update (SSU).
-
-### Mitigation 3: Fix SetupConfig.ini
-
-1. Remove or fix the `SetupConfig.ini` file located at `C:\Users\Default\AppData\Local\Microsoft\Windows\WSUS\SetupConfig.ini`.
-2. If the file is empty, add an entry such as `Show OOBE =None`.
-
-### Mitigation 4: Repair System Corruption
+### Resolution: Repair System Corruption
 
 1. Start the corruption repair process:
 
-   ```bash
+   ```console
    DISM /Online /Cleanup-Image /RestoreHealth
    SFC /Scannow
    ```
 
 2. Reset the content of the Catroot2 folder:
 
-   ```bash
+   ```console
    net stop cryptsvc
    md %systemroot%\system32\catroot2.old
    xcopy %systemroot%\system32\catroot2 %systemroot%\system32\catroot2.old /s
@@ -142,7 +128,7 @@ The primary cause of error 0x80070490 is driver failure during Windows Update in
 
 3. Rename the Software Distribution folder:
 
-   ```bash
+   ```console
    net stop wuauserv
    cd %systemroot%
    ren SoftwareDistribution SoftwareDistribution.old
@@ -151,7 +137,17 @@ The primary cause of error 0x80070490 is driver failure during Windows Update in
 
 4. Install the patch.
 
-### Mitigation 5: Address Missing Driver Files
+## Symptom 5: Monthly Rollup Update Failure
+
+Monthly rollup updates may fail with error code 0x80070490. Check the CBS log for entries like:
+
+```output
+Error CBS Shtd: Failed while processing non-critical driver operationsqueue. [HRESULT = 0x80070490 – ERROR_NOT_FOUND]
+Info CBS Shtd: Rolling back KTM, because drivers failed.
+Info CBS Progress: UI message updated. Operation type: Update. Stage: 1 out of 1. Temporary Rollback.
+```
+
+### Resolution: Address Missing Driver Files
 
 1. Create the folder `wvms_pp.inf_amd64_81d18de8dedd4cc4` inside `C:\Windows\System32\DriverStore\FileRepository`.
 2. Copy all `.inf` files from `C:\Windows\WinSxS\amd64_wvms_pp.inf_31bf3856ad364e35_6.2.9200.22376_none_bc457897943a83fe`.
