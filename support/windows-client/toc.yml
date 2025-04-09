@@ -1035,6 +1035,8 @@ items:
       href: ./system-management-components/run-programs-automatically.md
     - name: Task scheduler runs tasks as background processes
       href: ./system-management-components/task-scheduler-task-only-runs-in-background.md
+    - name: Task Scheduler service can't start
+      href: ./system-management-components/task-scheduler-service-not-start.md
     - name: Use the at command to schedule tasks
       href: ./system-management-components/use-at-command-to-schedule-tasks.md
   - name: WER
