@@ -113,7 +113,7 @@ The following table lists applications and their associated DLLs that are known 
 | Trellix Drive Encryption||
 | Zscaler||
 | Ztsment Data Protection| `injumon64.dll`|
-|Forcepoint DLP||
+| Forcepoint DLP||
 
 ## Other DLLs that might affect Teams desktop client and Edge WebView2
 
