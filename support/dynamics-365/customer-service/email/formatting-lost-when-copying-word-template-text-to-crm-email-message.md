@@ -1,4 +1,10 @@
-# rubik-generate-article-preview
+---
+title: Troubleshoot common configuration issues with automatic record creation and update rules
+description: Provides resolutions for common configuration issues with automatic record creation and update rules in Dynamics 365 Customer Service.
+ms.reviewer: Megha
+ms.date: 04/09/2025
+ms.custom: sap:E-Mail, DFM
+---
 
 # Formatting lost when copying Word template text to CRM email message
 
