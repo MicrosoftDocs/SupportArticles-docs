@@ -46,7 +46,7 @@ You might see this issue after following this sequence of events:
 
 If you encounter this issue, you might see the following error in the SQL Server error log: 
 
-```
+```output
 CREATE FILE encountered operating system error 3(The system cannot find the path specified.) 
 while attempting to open or create the physical file 'D:\SQLTemp\tempdb.mdf'.
 Error: 17204, Severity: 16, State: 1. FCB::Open failed: Could not open 
@@ -67,14 +67,14 @@ tempdb files could not be initialized.
 
 Some of the newest Azure VM sizes present a RAW local SSD volume for ephemeral storage configured with the Non-Volatile Memory Express (NVMe) interface. This configuration results in failure because SQL Server attempts to place the `tempdb` database on the ephemeral storage and fails as the local SSD volume isn't available. Additionally, the ephemeral storage shows as RAW after the machine is deallocated. 
 
-The RAW local SSD volume is what causes the SQL VM deployment to fail, and what also prevents manually installed SQL Server instances from coming online after the VM is restarted. In both cases, SQL Server is trying to initialize the `tempdb` database on the ephemeral storage, which is not available. The deployment fails because SQL Server is installed during the deployment of the Azure VM, and the ephemeral storage isn't available. Likewise, manually installed instances of SQL Server fail to come online after the VM is restarted because the ephemeral storage isn't available when SQL Server tries to create the `tempdb` database.
+The RAW local SSD volume causes the SQL VM deployment to fail, and prevents manually installed SQL Server instances from coming online after the VM is restarted. In both cases, SQL Server is trying to initialize the `tempdb` database on the ephemeral storage, which is not available. The deployment fails because SQL Server is installed during the deployment of the Azure VM, and the ephemeral storage isn't available. Likewise, manually installed instances of SQL Server fail to come online after the VM is restarted because the ephemeral storage isn't available when SQL Server tries to create the `tempdb` database.
 
 ## Resolution
 
 This issue occurs because of the selected Azure VM size. To solve the issue, use one of the following methods:
 
 - If possible, use another VM SKU, such as those listed in the [VM size best practices](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-vm-size#checklist). 
-- If you want to use a particular VM that is on the [impacted VMs](#impacted-vms) list, use a machine without the lowercase `d` in the name, which places `tempdb` on the same storage as the SQL Server data files. For example, use the `FXmsv2` VM size instead of the `FXmdsv2` as the latter has uninitialized ephemeral storage - as indicated by the `d` in the name.
+- If you want to use a particular VM that is on the [impacted VMs](#impacted-vms) list, use a machine without the lowercase `d` in the name, which places `tempdb` on the same storage as the SQL Server data files. For example, use the `FXmsv2` VM size instead of the `FXmdsv2`. The latter has uninitialized ephemeral storage, as indicated by the `d` in the name.
 - If you can't use another VM SKU without a RAW local SSD, then deploy the VM using a Windows Server-only image, [format and initialize the temporary NVMe drive](/azure/virtual-machines/enable-nvme-temp-faqs#how-can-i-format-and-initialize-temp-nvme-disks-in-windows-when-i-create-a-vm-), and then manually install SQL Server. **You must reinitialize the disk before starting SQL Server every time the VM is restarted, or deallocated.**
 
 > [!NOTE]
