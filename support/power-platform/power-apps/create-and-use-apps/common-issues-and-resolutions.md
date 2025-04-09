@@ -24,7 +24,7 @@ Refer to the introductory article [Power Apps troubleshooting strategies](isolat
 
 - [Connectors and delegation](#connectors-and-delegation)
   - [Common issues](#common-issues)
-- [Integration](#integration)
+- [Integration](#power-automate-integration)
 - [Power Fx](#power-fx)
 - [Region](#region)
 - [Studio and Forms](#studio-and-forms)
