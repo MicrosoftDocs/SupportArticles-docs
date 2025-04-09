@@ -53,15 +53,15 @@ The Task Scheduler service runs under the SYSTEM account. By default, the SYSTEM
 
 The security of each log is configured locally through the values in the registry key:
 
-    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog`
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog`
 
 If the System event log permissions are customized, the System log security descriptor is configured through:
 
-    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\System\CustomSD`
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\System\CustomSD`
 
 The security descriptor is specified by using Security Descriptor Definition Language (SDDL) syntax. The SDDL should have the SYSTEM account with Read, Write, and Clear permissions in the following context:
 
-    `(A;;0xf0007;;;SY)`
+`(A;;0xf0007;;;SY)`
 
 The value of SY (SYSTEM account) is 7, which means Read(1)+Write(2)+Clear(4).  If not, change it to 7 for it to have the proper permissions on the System event log. Once the SDDL of the SYSTEM account has been corrected, restart the machine and check if the Task Scheduler service is started.
 You can also check the SDDL of the System event log by running the following command:
