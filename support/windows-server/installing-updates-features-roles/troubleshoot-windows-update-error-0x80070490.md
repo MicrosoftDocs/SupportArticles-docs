@@ -18,20 +18,20 @@ Windows Update error 0x80070490 typically occurs due to driver failures when use
 
 ## Prerequisites
 
-Before proceeding with the mitigations, ensure you have backed up the OS disk. If you are using Windows in an Azure virtual machine, refer to the [Backup OS Disk](/azure/backup/backup-azure-vms) guide for detailed instructions.
+Before proceeding with the mitigations, ensure you have backed up the OS disk. If you're using Windows in an Azure virtual machine, refer to the [Backup OS Disk](/azure/backup/backup-azure-vms) guide for detailed instructions.
 
 ## Root cause
 
-The primary cause of error 0x80070490 is driver failure during Windows Update installations. This can occur due to:
+The primary cause of error 0x80070490 is driver failure during Windows Update installations. This failure can occur due to:
 
 - Pending updates that block new installations.
 - Stale or incorrect registry entries related to driver operations.
 - Corrupted or malformed SetupConfig.ini files.
-- Missing driver files or hardlinks in the system directories.
+- Missing driver files or hard links in the system directories.
 
 ## Symptom 1: Pending update state
 
-When an update is in an Install Pending state, the driver operation may fail due to an inability to read the identity for driver operation sequence ID 1. Check the CBS logs at `C:\Windows\Logs\CBS\CBS.log` for entries like:
+When an update is in an Install Pending state, the driver operation might fail due to an inability to read the identity for driver operation sequence ID 1. Check the CBS logs at `C:\Windows\Logs\CBS\CBS.log` for entries like:
 
 ```output
 Info CBS Failed reading Identity for driver operation sequenceID 1 [HRESULT = 0x80070490 - ERROR_NOT_FOUND]
@@ -55,7 +55,7 @@ Info CBS Perf: InstallUninstallChain complete.
 
 ## Symptom 2: Servicing stack update failure
 
-Servicing Stack Updates (SSU) may fail with error 0x80070490. Check the CBS.log for similar entries:
+Servicing Stack Updates (SSU) might fail with error 0x80070490. Check the CBS.log for similar entries:
 
 ```output
 Error CBS Doqi: Failed loading driver operations queue. [HRESULT = 0x80070490 - ERROR_NOT_FOUND]
@@ -73,7 +73,7 @@ Error CBS Failed to process single phase execution. [HRESULT = 0x80070490 - ERRO
 
 ## Symptom 3: Feature update installation failure
 
-Feature updates may fail with error code 0x80070490. This behavior can be observed through "Check for updates" and in Software Center (WSUS). Review the WindowsUpdate.log for entries like:
+Feature updates might fail with error code 0x80070490. This behavior can be observed through "Check for updates" and in Software Center (WSUS). Review the WindowsUpdate.log for entries like:
 
 ```output
 hh:mm:ss.fffff tt 1092 10968 downloadmanager_cpp16907 [DownloadManager] Preparing update for install, updateId = {0FFD49D9-5418-4D5E-9AA3-0163C0CCF57B}.202.
@@ -97,7 +97,7 @@ hh:mm:ss.fffff tt 11736 12104 uhwinsetup_cpp776 [Handler] Exit code = 0x80070490
 
 ## Symptom 4: Cumulative update failure
 
-Cumulative updates may fail with error code 0x80070490 along with 0x8e5e03fa. Check the Setup Events logs for errors like:
+Cumulative updates might fail with error code 0x80070490 along with 0x8e5e03fa. Check the Setup Events logs for errors like:
 
 ```output
 Information XXXXXXX.corp. 1 Microsoft-Windows-Servicing N/A NT AUTHORITY\SYSTEM Initiating changes for package KB5004122. Current state is Resolved. Target state is Installed. Client id: WindowsUpdateAgent.
@@ -139,7 +139,7 @@ Error XXXX.corp. 3 Microsoft-Windows-WUSA N/A CORP\xxa790741it5 Windows update "
 
 ## Symptom 5: Monthly rollup update failure
 
-Monthly rollup updates may fail with error code 0x80070490. Check the CBS log for entries like:
+Monthly rollup updates might fail with error code 0x80070490. Check the CBS log for entries like:
 
 ```output
 Error CBS Shtd: Failed while processing non-critical driver operationsqueue. [HRESULT = 0x80070490 – ERROR_NOT_FOUND]
@@ -159,4 +159,4 @@ If the issue persists, consider engaging with the WSUS team for further assistan
 
 **Partial Use of AI disclaimer**
 
-Certain sections of this document have been generated or enhanced using artificial intelligence (AI) technology.
+Certain sections of this document was generated or enhanced using artificial intelligence (AI) technology.
