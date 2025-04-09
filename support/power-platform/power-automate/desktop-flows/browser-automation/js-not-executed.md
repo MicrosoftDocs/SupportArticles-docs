@@ -5,7 +5,7 @@ ms.custom: sap:Desktop flows\UI or browser automation
 ms.reviewer: amitrou
 ms.author: amitrou
 author: andreas-mitrou
-ms.date: 04/01/2025
+ms.date: 04/09/2025
 ---
 # The "Run JavaScript function on web page" action doesn't execute but no error is reported
 

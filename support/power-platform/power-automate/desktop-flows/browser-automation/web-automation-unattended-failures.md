@@ -5,7 +5,7 @@ ms.custom: sap:Desktop flows\UI or browser automation
 ms.reviewer: amitrou
 ms.author: amitrou
 author: amitrou
-ms.date: 04/07/2025
+ms.date: 04/09/2025
 ---
 # Web automation action fails in unattended mode
 

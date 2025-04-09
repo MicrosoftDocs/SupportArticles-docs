@@ -2,7 +2,7 @@
 title: Web automation action fails during runtime
 description: Provides a resolution for the issue that a web automation action can't interact with a web element on runtime in Power Automate. 
 ms.reviewer: pefelesk
-ms.date: 04/02/2025
+ms.date: 04/09/2025
 ms.custom: sap:Desktop flows\UI or browser automation
 ---
 # Can't interact with a web element on runtime
