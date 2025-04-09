@@ -44,6 +44,8 @@ Check the directory `C:\Windows\Microsoft.NET\Framework\v4.0.30319` to confirm i
 
 ### Resolution: Registry key deletion
 
+[!INCLUDE [Registry alert](../../includes/registry-important-alert.md)]
+
 1. Navigate to the following registry locations:
    - `HKLM\System\CurrentControlSet\services\clr_optimization_v4.0.30319_32`
    - `HKLM\System\CurrentControlSet\services\clr_optimization_v4.0.30319_64`
