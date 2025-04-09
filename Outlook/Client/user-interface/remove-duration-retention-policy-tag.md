@@ -19,18 +19,11 @@ search.appverid:
 ms.date: 03/19/2025
 ---
 
-# How to remove duration from retention policy tags in Outlook
+# How to remove duration information from retention policy tags in Outlook
 
-## Summary
+By default, Microsoft Outlook appends duration information when displaying retention policy tag names. For example, the **1 Month Delete** tag name displays as **1 Month Delete (30 days)**. 
 
-By default, Microsoft Outlook displays the following information in retention policy tags:
-
-- Tag name
-- Tag duration
-
-**Build 16.0.12318.10000** of Outlook for Microsoft 365 introduced a change that enables administrators and users to remove the duration information from the tag view. For example, the tag **1 Month Delete (30 days)** becomes **1 Month Delete**.
-
-To remove the duration information, set the following registry key.
+However, in build **16.0.12318.10000** and later builds of Outlook for Microsoft 365, you can remove the appended duration information by setting the registry key that's shown in the following table.
 
 | Type|Value |
 |---------|---------|
@@ -40,6 +33,5 @@ To remove the duration information, set the following registry key.
 |Value data|0x1|
 
 > [!NOTE]
-> - A value of **0x0** uses the Outlook default setting (duration information is displayed).
-> - A value of **0x1** removes the duration information and displays the policy name only.
-> - This change won't be backported to Office 2016 or earlier versions.
+> - Value `0x0` (default): display tag duration information
+> - Value `0x1`: hide tag duration information

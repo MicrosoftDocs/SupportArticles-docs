@@ -26,6 +26,8 @@ Enterprise users can now [record videos](https://support.microsoft.com/office/ho
 > [!NOTE]
 > This feature is being rolled out gradually and might not yet be available in your organization.
 
+For information about how you can insert video links that transform into embedded video players, see [Embed and play back videos in Outlook and Loop](/outlook/troubleshoot/message-body/embed-playback-videos-in-outlook-and-loop).
+
 ## Who can use the new feature
 
 Only enterprise users can use the new feature.
@@ -79,7 +81,3 @@ To report issues or provide feedback about the new feature, select the applicabl
 - In Outlook versions except Outlook for Android, select **Feedback** from the **Help** menu.
 - In Outlook for Android, see [Get in-app help for Outlook for iOS and Android](https://support.microsoft.com/office/get-in-app-help-for-outlook-for-ios-and-android-218a22d1-9fa5-4889-b689-de1c63493243).
 - In Loop, see [Want to give feedback?](https://support.microsoft.com/office/get-started-with-microsoft-loop-9f4d8d4f-dfc6-4518-9ef6-069408c21f0c#ID0EDR)
-
-## More information
-
-For information about how you can insert video links that transform into embedded video players, see [Embed and play back videos in Outlook and Loop](/outlook/troubleshoot/message-body/embed-playback-videos-in-outlook-and-loop).

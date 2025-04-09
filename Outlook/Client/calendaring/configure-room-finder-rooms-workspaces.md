@@ -66,7 +66,7 @@ To set up rooms and workspaces correctly, you must complete the following tasks:
 
 1. Set up rooms and [create room mailboxes](/exchange/recipients/room-mailboxes#create-a-room-mailbox) and [workspace mailboxes](/exchange/troubleshoot/outlook-issues/create-book-workspace-outlook#how-to-create-a-workspace), as appropriate.
 
-   If you have to set up room mailboxes in a hybrid environment, see the [More information](#more-information) section.
+   If you have to set up room mailboxes in a hybrid environment, see the [Set up room mailboxes and lists in hybrid environments](#set-up-room-mailboxes-and-lists-in-hybrid-environments) section.
 
 1. Configure properties such as **CountryOrRegion**, **State**, **City**, **Building**, **Floor**, **FloorLabel**, and **Capacity** for the rooms and workspaces.
 1. [Create room lists and add rooms and workspaces to them](/exchange/recipients/room-mailboxes#create-a-room-list).  
@@ -167,7 +167,7 @@ After the properties for the rooms and workspaces are configured correctly and g
 
 For information about how to use Room Finder in these clients, see [Use the Scheduling Assistant and Room Finder for meetings in Outlook](https://support.microsoft.com/office/use-the-scheduling-assistant-and-room-finder-for-meetings-in-outlook-2e00ac07-cef1-47c8-9b99-77372434d3fa).  
 
-## More information
+## Set up room mailboxes and lists in hybrid environments
 
 If you have a hybrid environment that includes on-premises Exchange Server and Exchange Online, use the following instructions to set up room mailboxes and room lists:  
 
