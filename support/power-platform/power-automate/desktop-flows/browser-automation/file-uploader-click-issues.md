@@ -5,7 +5,7 @@ ms.custom: sap:Desktop flows\UI or browser automation
 ms.reviewer: amitrou
 ms.author: amitrou
 author: andreas-mitrou
-ms.date: 04/01/2025
+ms.date: 04/09/2025
 ---
 # Press button or click link on web page doesn't work with a file uploader
 
@@ -16,7 +16,7 @@ This article provides workarounds for scenarios where interacting with a file up
 When you use the [Press button on web page](/power-automate/desktop-flows/actions-reference/webautomation#pressbuttonbase) or [Click link on web page](/power-automate/desktop-flows/actions-reference/webautomation#clickbase) action in web automation, the action doesn't work as expected if the button or link on the web page is part of a file uploader. The following HTML element is an example of a file uploader:
 
 ```html
-&lt;SPAN style="font-size: 14px;font-style: normal;font-weight: 400"&gt;&ltinput type="file" /&gt;&lt;/SPAN&gt;
+<SPAN style="font-size: 14px;font-style: normal;font-weight: 400"><input type="file" /></SPAN>
 ```
 
 ## Cause
