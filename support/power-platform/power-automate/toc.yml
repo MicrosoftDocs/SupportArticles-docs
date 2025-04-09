@@ -68,8 +68,6 @@
           href: desktop-flows/browser-automation/machine-runtime-msix-errors.md
         - name: Press button or click link on web page doesn't work on file uploader
           href: desktop-flows/browser-automation/file-uploader-click-issues.md
-        - name: How to scroll on a web page
-          href: /power-automate/desktop-flows/how-to/scroll-web-page?context=/troubleshoot/power-platform/power-automate/context/context
         - name: Run JavaScript function on web page action doesn't execute
           href: desktop-flows/browser-automation/js-not-executed.md
         - name: Web automation fails in unattended mode
