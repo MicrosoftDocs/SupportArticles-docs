@@ -49,30 +49,19 @@ NetLog is supported on mobile versions of Edge and Chrome:
 
 On mobile devices, you will have an email option to send the log.
 
-## Use Fiddler to review NetLog captures
+## View and analyze NetLog data
 
-Fiddler Classic can be used to review NetLog captures by installing the NetLog plugin. To do so, follow these steps:
+You can view the NetLog.json files using the NetLog Viewer. To do so, open the [online NetLog Viewer](https://netlog-viewer.appspot.com/#import), select **File**, and then upload the exported NetLog .json file.
 
-1. Download and install the NetLog plugin for Fiddler Classic from [here](https://bayden.com/dl/FiddlerImportNetLog.exe).
-2. Open Fiddler.
-3. Navigate to **File > Import Sessions**.
-4. Select **NetLog JSON** to import and analyze the NetLog file.
+You can use the following tabs in the NetLog Viewer to inspect different aspects of network activities:
 
-> [!NOTE]
-> The NetLog plugin is only available for Fiddler Classic. There is no known plugin for Fiddler Everywhere.
+- Events: View detailed network events.
+- Proxy: Check proxy settings.
+- Timeline: Analyze request timing.
+- DNS: Inspect DNS lookups.
+- Sockets: Review TCP connections.
+- Cache: Examine cached resources.
 
- :::image type="content" source="media/use-netlog-capture-network-traffic/import-netlog-json.png" alt-text="Screenshot that shows the Fiddler interface for importing NetLog files." border="false":::
-
-## More information
-
-- [Providing network details with NetLog](https://dev.chromium.org/for-testers/providing-network-details)
-- [Online NetLog viewer](https://netlog-viewer.appspot.com/#import)
-
-The online NetLog viewer provides additional details that Fiddler doesn't provide, such as:
-
-- DNS resolution data
-- Timeline graph
-- Browser proxy configuration
-- Installed browser extensions
+For more information, see [Providing network details with NetLog](https://dev.chromium.org/for-testers/providing-network-details).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
