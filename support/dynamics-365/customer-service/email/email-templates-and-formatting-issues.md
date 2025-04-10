@@ -2,6 +2,7 @@
 title: Issues with Email Templates and Formatting in Dynamics 365
 description: Solves incorrect formatting, missing columns, spacing issues, the arbitrary tracking code appended to the subject line, and emails being sent only to the first contact in Microsoft Dynamics 365 apps.
 ms.reviewer: Megha
+ai-usage: ai-assisted
 ms.date: 04/10/2025
 ms.custom: sap:E-Mail, DFM
 ---

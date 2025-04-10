@@ -2,6 +2,7 @@
 title: Email Preview Text Shows Error or Unintended Formatting
 description: Provides a resolution to ensure that the email preview text is displayed correctly and avoids showing unintended formatting details in Dynamics 365 Customer Service.
 ms.reviewer: Megha
+ai-usage: ai-assisted
 ms.date: 04/10/2025
 ms.custom: sap:E-Mail, DFM
 ---

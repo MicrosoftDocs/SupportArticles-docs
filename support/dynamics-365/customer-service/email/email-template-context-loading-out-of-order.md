@@ -2,6 +2,7 @@
 title: Email Template Context Loading Out of Order
 description: Solves an issue where the email template context doesn't appear in the correct order in Microsoft Dynamics 365 Customer Service.
 ms.reviewer: Megha
+ai-usage: ai-assisted
 ms.date: 04/10/2025
 ms.custom: sap:E-Mail, DFM
 ---

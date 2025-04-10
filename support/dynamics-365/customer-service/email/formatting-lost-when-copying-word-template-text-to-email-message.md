@@ -2,6 +2,7 @@
 title: Lost Formatting When Copying Word Template Content To Email Message
 description: Solves an issue where formatting isn't retained when copying and pasting content from a Word template into an email message in Microsoft Dynamics 365 apps.
 ms.reviewer: Megha
+ai-usage: ai-assisted
 ms.date: 04/10/2025
 ms.custom: sap:E-Mail, DFM
 ---
