@@ -2087,6 +2087,8 @@ items:
       href: ./remote/terminal-server-startup-connection-application.md
     - name: The connection settings stored in the Default.rdp file
       href: ./remote/remote-desktop-protocol-settings.md
+    - name: Unable to install RDS deployment or add RDS roles
+      href: remote/unable-to-install-rds-deployment-or-add-rds-roles.md
     - name: Updates for Remote Desktop Services
       href: ./remote/remote-desktop-services-updates.md
   - name: Application compatibility
