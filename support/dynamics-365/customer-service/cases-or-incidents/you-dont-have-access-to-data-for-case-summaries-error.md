@@ -1,6 +1,6 @@
 ---
 title: You Don't Have Access To The Data Used For Case Summaries Error
-description: Helps resolve an issue where the chatbot workstream fails to detect the user's location even after proper configuration in Microsoft Dynamics 365 Customer Service.
+description: Resolves the issues related to the Copilot case summary feature in Microsoft Dynamics 365 Customer Service.
 ms.reviewer: Soham
 ai-usage: ai-assisted
 ms.date: 04/10/2025
@@ -8,7 +8,7 @@ ms.custom: sap:Cases or Incidents, DFM
 ---
 # "It looks like you don't have access to the data that's used for case summaries" error
 
-This article provides a resolution for an error that occurs when non-administrators try to use the Copilot case summary feature with a custom product table instead of the out-of-the-box (OOB) product table in Microsoft Dynamics 365 Customer Service.
+This article provides a resolution for the issues related to the Copilot case summary feature in Microsoft Dynamics 365 Customer Service.
 
 ## Symptoms
 
