@@ -16,7 +16,7 @@ This guide provides the fundamental concepts used when troubleshooting Active Di
 
 ## Troubleshooting checklist
 
-- Domain Name System (DNS): Anytime you have an issue joining a domain, one of the first things to check is DNS. DNS is the heart of Active Directory and makes things work correctly, including domain join. Make sure of the following items:
+- Domain Name System (DNS): Anytime you have an issue joining a domain, one of the first things to check is DNS. DNS is the heart of Active Directory (AD) and makes things work correctly, including domain join. Make sure of the following items:
 
   - DNS server addresses are correct.
   - DNS suffix search order is correct if multiple DNS domains are in play.
@@ -53,23 +53,7 @@ The following table lists the ports required to be open between the client compu
 
 ### Error code 0x569
 
-> The user has not been granted the requested logon type at this computer.
-
-Here's an example from the *netsetup.log* file:
-
-```output
-mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: failed to find a DC having account <computer name>$': 0x525
-mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: found DC '\\<DC name>.<domain>.<tld>' in the specified domain
-mm/dd/yyyy hh:mm:ss:ms NetUseAdd to \\<DC name>.<domain>.<tld>\IPC$ returned 1385
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomain: status of connecting to dc '\\<DC Name>.<Domain>.<tld>': 0x569
-mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0x569
-```
-
-Error 0x569 is logged when the domain join user lacks the **Access this computer from the network** user right. Make sure of the following items:
-
-- Verify that the user account performing the domain join operation (or the security group that owns the member of the domain join user) has been granted the **Access this computer from the network** right in the default domain controllers policy.
-- The default domain controllers policy is linked to the OU that hosts the DC computer account that's servicing the domain join operation.
-- The DC servicing the domain join operation applies the policy successfully, specifically the user rights settings defined in the default domain controllers policy.
+For more information, see [Error code 0x569: The user has not been granted the requested logon type at this computer](error-0x569-not-granted-logon-type.md).
 
 ### Error code 0x534
 
@@ -151,51 +135,9 @@ To resolve this error, follow these steps:
 2. Verify that the joining client has network connectivity to the DC over the required ports and protocols used by the applicable operating system (OS) versions. Domain join clients connect a helper DC over TCP port 135 by the dynamically assigned port in the range between 49152 and 65535.
 3. Ensure that the OS, software and hardware routers, firewalls, and switches allow connectivity over the required ports and protocols.
 
-### Error code 0xA8B
+### Error code 0xa8b
 
-> An attempt to resolve the DNS name of a DC in the domain being joined has failed. Please verify this client is configured to reach a DNS server that can resolve DNS names in the target domain.
-
-Here's an example from the *netsetup.log* file:
-
-```output
-mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: status of verifying DNS A record name resolution for '<DC name>.<domain>.<tld>': 0x2746
-mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: failed to find a DC in the specified domain: 0xa8b, last error is 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: NetpDsGetDcName returned: 0xa8b
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: Function exits with status of: 0xa8b
-mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0xa8b
-```
-  
-Error 0xA8B occurs if:
-
-- The workgroup computer being joined points to an invalid DNS server.
-- The DNS server(s) used by the joining computer is invalid, is missing the required zones, or is missing the required records for the target domain.
-- The target Active Directory domain contains a problematic DNS name.
-- Network problems exist on the workgroup computer, the target DC, or the network used to connect the client and target DC.
-
-To resolve this error, follow these steps:
-
-1. Verify that the computer being joined points to valid DNS server IP addresses. Invalid examples include:
-
-   - A stale or non-existent ISP DNS server on the corporate intranet.  
-   - A DNS server in an error state that prevents it from loading the *_msdcs.\<Forest Root Domain>* or target AD domain zones or resolving queries for those zones. Event ID 4521 may be logged.
-
-2. Verify that all DNS servers configured on the client host the required zones and valid records for a DC in the target domain. Check for the following misconfigurations:
-   - Forward lookup zone for the target AD domain is missing.
-   - The *_msdcs* forward lookup zone is missing.
-   - The *_msdcs.\<Forest Root Domain>* zone doesn't contain a Lightweight Directory Access Protocol (LDAP) SRV record for a DC in the target domain.
-   - Host A record is missing from the target AD domain zone.
-   - Host A record is present but contains the wrong IP address for the target DC.
-   - The host A record is present but was registered by a network interface that isn't accessible to the client computer.
-
-3. Check for special names in the target Active Directory domain that require additional configuration:
-
-   - Single-label DNS name
-   - Disjoint Namespace
-   - All numeric top-level domains (TLDs) or TLDs containing numeric characters
-
-4. Check for network problems on the workgroup computer, target DC, or the network connecting the computer and the target DC:
-   - A broken Network Interface Card (NIC) on the client computer or the target DC
-   - A broken network switch that drops network packets between the client and target DC
+For more information, see [Error code 0xa8b: An attempt to resolve the DNS name of a DC in the domain being joined has failed](error-0xa8b-resolve-dns-fail.md).
 
 ### Error code 0x40
 
@@ -402,3 +344,61 @@ For more information, see:
 
 - Troubleshoot [Networking error messages and resolutions](troubleshoot-errors-join-computer-to-domain.md#networking-error-messages-and-resolutions)
 - Troubleshoot [Authentication error messages and resolutions](troubleshoot-errors-join-computer-to-domain.md#authentication-error-messages-and-resolutions)
+
+## Data collections for domain join issues
+
+To troubleshoot domain join issues, the following logs could help:
+
+- Netsetup log  
+  This log file contains most information about domain join activities. The file is located on the client machine at `%windir%\debug\netsetup.log`.  
+  This log file is enabled by default. No need to explicitly enable it.
+
+- Network trace  
+  The network trace contains the communication between the client computer and relative servers, such as DNS servers and domain controllers over the network. It should be collected at the client computer. Multiple tools can collect network traces, such as Wireshark, netsh.exe which is included in all Windows editions.
+
+You can collect each log separately. Alternatively, you can use some tools provided by Microsoft to collect them all together. To do so, follow the steps in the following sections.
+
+### Collect manually
+
+1. Download and install Wireshark on the client computer that is to join the AD domain.
+2. Start the application with administrator privileges, and then start capturing.
+3. Try to join the AD domain to reproduce the error. Record the error message.
+4. Stop capturing in the app and save the network trace to a file.
+5. Collect the netsetup.log file that is located at *%windir%\debug\netsetup.log*.
+
+### Use Auth Scripts
+
+Auth Scripts is a lightweight PowerShell script developed by Microsoft to ease log collection for troubleshooting authentication-related issues. To use it, follow these steps:
+
+1. Download [Auth Scripts](https://aka.ms/authscripts) on the client computer. Extract the files to a folder.
+2. Start a PowerShell window with administrator privileges. Switch to the folder containing those extracted files.
+3. Run *start-auth.ps1*, accept the EULA if prompted, and allow execution if warned about an untrusted publisher.
+
+   > [!NOTE]
+   > If the scripts aren't allowed to run due to execution policies, see [about_Execution_Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
+
+4. After the command completed successfully, try to join the AD domain to reproduce the error. Record the error message.
+5. Run *stop-auth.ps1*, and allow execution if warned about an untrusted publisher.
+6. Log files are saved in the *authlogs* subfolder, which includes the *Netsetup.log* log and the network trace file (Nettrace.etl).
+
+### Use TSS Tool
+
+TSS tool is another tool developed by Microsoft to ease log collection. To use it, follow these steps:
+
+1. Download [TSS tool](https://aka.ms/gettss) on the client computer. Extract the files to a folder.
+2. Start a PowerShell window with administrator privileges. Switch to the folder containing those extracted files.
+3. Run the following command:
+
+   ```console
+   TSS.ps1 -scenario ADS_AUTH -noSDP -norecording -noxray -noupdate -accepteula -startnowait
+   ```
+
+   Accept the EULA if prompted, and allow execution if warned about an untrusted publisher.
+
+   > [!NOTE]
+   > If the scripts aren't allowed to run due to execution policies, see [about_Execution_Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
+
+4. The command takes a few minutes to complete. After the command completes successfully, try to join the AD domain to reproduce the error. Record the error message.
+5. Run `TSS.ps1 -stop`, and allow execution if warned about an untrusted publisher.
+6. Log files are saved in the *C:\MS_DATA* subfolder, and are zipped already. The ZIP filename follows the format of *TSS_\<hostname\>_\<date\>-\<time\>-ADS_AUTH.zip*.
+7. The zip file includes the *Netsetup.log*, and the network trace. The network trace file is named *\<hostname\>_\<date\>-\<time\>-Netsh_packetcapture.etl*.

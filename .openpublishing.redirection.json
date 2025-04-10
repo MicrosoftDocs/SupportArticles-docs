@@ -13171,6 +13171,106 @@
     {
       "source_path": "support/windows-server/active-directory/troubleshoot-domain-controller-location-issues.md",
       "redirect_url": "/troubleshoot/windows-server/windows-security/troubleshoot-domain-controller-location-issues"
+    },
+    {
+      "source_path": "support/windows-server/setup-upgrade-and-drivers/repair-or-in-place-upgrade.md",
+      "redirect_url": "/windows-server/get-started/perform-in-place-upgrade"
+    },
+    {
+      "source_path": "support/windows-client/user-profiles-and-logon/roaming-profile-was-not-completely-synchronized-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/roaming-profile-was-not-completely-synchronized-error"
+    },
+    {
+      "source_path": "support/windows-client/user-profiles-and-logon/renaming-user-account-not-change-profile-path.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/renaming-user-account-not-change-profile-path"
+    },
+    {
+      "source_path": "support/windows-client/user-profiles-and-logon/event-id-300-windows-hello-successfully-created-in-windows-10.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/event-id-300-windows-hello-successfully-created-in-windows-10"
+    },
+    {
+      "source_path": "support/windows-server/active-directory/convert-domain-federated.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/convert-domain-federated"
+    },
+    {
+      "source_path": "support/windows-server/active-directory/connection-adfs-failed-set-msoladfscontex.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/connection-adfs-failed-set-msoladfscontex"
+    },
+    {
+      "source_path": "support/windows-client/user-profiles-and-logon/error-invalid-store-path-loadstate-user-state-migration-tool.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/error-invalid-store-path-loadstate-user-state-migration-tool"
+    },
+    {
+      "source_path": "support/windows-server/active-directory/file-replication-service-event-13552-13555.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/file-replication-service-event-13552-13555"
+    },
+    {
+      "source_path": "support/windows-server/active-directory/remove-orphaned-domains.md",
+      "redirect_url": "/troubleshoot/windows-server/windows-security/remove-orphaned-domains"
+    },
+    {
+      "source_path": "support/windows-server/remote/error-when-connecting-terminal-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-when-connecting-terminal-server"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/tls-1-dot-2-required-for-connectivity.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/tls-1-dot-2-required-for-connectivity"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-crm-installations-updates-and-documentation.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/dynamics-crm-installations-updates-and-documentation"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/import-of-solution-fails-due-to-missing-components.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/missing-dependency-on-solution-import"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/solution-install-fails-due-dependencies.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/missing-dependency-on-solution-import"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-code-8004f016-when-importing-contact-lead-attributemap.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-connect-your-dynamics-365-server.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/cannot-connect-your-dynamics-365-server"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-accessing-app-module.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/environment-app-access/error-when-accessing-app-module"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/solution-cannot-be-deleted.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/solution-cannot-be-deleted"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/we-cannot-find-any-apps-your-role.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/environment-app-access/we-cannot-find-any-apps-your-role"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-code-80040203-invalid-argument-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/error-code-80040203-invalid-argument-error"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-code-80048539-when-importing-solution-patch.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/error-code-80048539-when-importing-solution-patch"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-importing-savedquery-in-dynamics-365.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/error-importing-savedquery-in-dynamics-365"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/troubleshoot-dynamics365-embedcollab-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/microsoft-teams/troubleshoot-dynamics365-embedcollab-issues"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/the-record-could-not-be-deleted.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/the-record-could-not-be-deleted"
+    },
+    {
+      "source_path": "support/power-platform/power-automate/dataverse-cds/cds-user-cannot-access-power-automate-business-process-flows-on-demand-workflows.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/cloud-flows/cds-user-cannot-access-power-automate-business-process-flows-on-demand-workflows"
     }
   ]
 }

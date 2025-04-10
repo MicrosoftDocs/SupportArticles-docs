@@ -396,8 +396,8 @@ Reinstalling the latest version of the agent and boot loader also automatically 
 
 1. Sign in to your session host VM as an administrator and run the agent installer and bootloader for your session host VM:
 
-   - [Azure Virtual Desktop Agent](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWrmXv)
-   - [Azure Virtual Desktop Agent Bootloader](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWrxrH)
+   - [Azure Virtual Desktop Agent](https://go.microsoft.com/fwlink/?linkid=2310011)
+   - [Azure Virtual Desktop Agent Bootloader](https://go.microsoft.com/fwlink/?linkid=2311028)
 
    > [!TIP]
    > For each of the agent and boot loader installers you downloaded, you might need to unblock them. Right-click each file, and select **Properties** > **Unblock** > **OK**.

@@ -25,11 +25,7 @@ This article describes Cumulative Update package 28 (CU28) for Microsoft SQL Ser
 
 ### Issue one: Access violation when session is reset
 
-SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plans returned by the built-in SESSION_CONTEXT](https://support.microsoft.com/help/5008114). However, this fix might create access violation dump files when the SESSION is reset for reuse. To mitigate this issue and avoid incorrect results, you can disable the original fix, and also disable the parallelism for the built-in `SESSION_CONTEXT`. To do this, use the following trace flags:
-
-- 11042 - This trace flag disables the parallelism for the built-in `SESSION_CONTEXT`.
-
-- 9432 - This trace flag disables the fix that was introduced in SQL Server 2019 CU14.
+[!INCLUDE [av-sesssion-context-2019](../includes/av-sesssion-context-2019.md)]
 
 ### Issue two: Patching error for secondary replicas in an availability group with databases enabled replication, CDC, or SSISDB
 
@@ -58,7 +54,7 @@ App-consistent recovery point generation failed.
 
 The issue arises from a code change in SQL Server 2019 CU28 that checks if a database is online and ready to be frozen. The current solution is to roll back to SQL Server 2019 CU27 and perform the snapshot backup. For more information about how to roll back the package to a previous version, see [Uninstall a Cumulative Update from SQL Server](/sql/sql-server/install/uninstall-a-cumulative-update-from-sql-server).
 
-Microsoft is working on a fix for this issue and it will be available in a future CU.
+This issue is fixed in [SQL Server 2019 CU29](cumulativeupdate29.md#3459328).
 
 ## Improvements and fixes included in this update
 

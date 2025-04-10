@@ -1,7 +1,7 @@
 ---
 title: Assign a logon script to a profile
 description: Describes how to assign a logon script to a profile for a local user.
-ms.date: 01/15/2025
+ms.date: 03/28/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -14,6 +14,7 @@ ms.custom:
 
 This article describes how to assign a logon script to a profile for a local user.
 
+_Applies to:_ &nbsp; Windows Server (All supported versions), Windows client (All supported versions)  
 _Original KB number:_ &nbsp; 324803
 
 ## Summary
