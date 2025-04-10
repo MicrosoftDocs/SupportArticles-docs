@@ -33,7 +33,7 @@ Multiple factors might contribute to slow app performance. For detailed troubles
 
 > [!TIP]
 > Configure a **Health Check** path to monitor app health and automatically replace unresponsive instances. This helps maintain availability and performance.  
-> [Learn more](/azure/app-service/monitor-instances-health-check.md)
+> [Learn more](/azure/app-service/monitor-instances-health-check)
 
 
 ## How do I troubleshoot a high CPU-consumption scenario?
