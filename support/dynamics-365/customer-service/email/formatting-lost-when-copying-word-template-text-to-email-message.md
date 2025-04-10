@@ -49,4 +49,4 @@ To solve this issue,
 
 ## More information
 
-[Use Word templates to create standardized documents](power-platform/admin/using-word-templates-dynamics-365)
+[Use Word templates to create standardized documents](/power-platform/admin/using-word-templates-dynamics-365)
