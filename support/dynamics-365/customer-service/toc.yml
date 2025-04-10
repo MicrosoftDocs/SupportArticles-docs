@@ -6,7 +6,7 @@
       href: cases-or-incidents/cannot-switch-teams-organizations-dynamics-365-app.md
     - name: Chatbot workstream fails to detect user's location
       href: cases-or-incidents/user-location-not-captured-displayed-to-agent.md
-    - name: '"It looks like you don't have access to the data that's used for case summaries" error'
+    - name: You don't have access to the data used for case summaries error
       href: cases-or-incidents/you-dont-have-access-to-data-for-case-summaries-error.md
     - name: The Dismiss All button doesn't work in the notifications
       href: cases-or-incidents/dismiss-all-not-working-in-notifications.md
