@@ -1,8 +1,8 @@
 ---
-title: Scheduled tasks fail with error "Task schedular service is not available"
-description: Helps resolve the error in which scheduled tasks fail with the error "Task schedular service is not available."
+title: Scheduled Tasks Fail with Error Task Schedular Service Is Not Available
+description: Helps resolve the error Task schedular service is not available in which scheduled tasks fail.
 manager: dcscontentpm
-ms.date: 04/07/2025
+ms.date: 04/10/2025
 ms.topic: troubleshooting
 ms.reviewer: kaushika, warrenw, v-lianna
 ms.custom:
@@ -31,7 +31,7 @@ Use the following steps to resolve the issue:
 ## Step 1: Clean up at tasks if they exist
 
 > [!NOTE]
-> [At](/windows-server/administration/windows-commands/at) tasks refer to tasks scheduled to run automatically by the OS using the `at` command. It's a legacy command in Windows for scheduling tasks at specified time and date. These tasks are managed by the Task Scheduler service. After an OS upgrade, such tasks might fail due to compatibility issues or problems with the Task Scheduler service. This could affect the successful launch of Task Scheduler.
+> [At](/windows-server/administration/windows-commands/at) tasks refer to tasks scheduled to run automatically by the OS using the `at` command. It's a legacy command in Windows for scheduling tasks at specified time and date. These tasks are managed by the Task Scheduler service. After an OS upgrade, such tasks might fail due to compatibility issues or problems with the Task Scheduler service. This might affect the successful launch of Task Scheduler.
 
 Check the **C:\\Windows\\System32\\Tasks** folder to determine if you have any `at` tasks created under Task Scheduler. If so, the tasks are listed under the following locations. For example:
 
@@ -108,7 +108,7 @@ To resolve this issue, clean up the legacy tasks by using the following steps:
 
 ## Step 2: Delete corrupted tasks and then create them again if needed
 
-If you have cleaned up the `at` tasks or you don't have `at` tasks, you might have corrupted tasks that causing this issue. Find the corrupted tasks, delete them and then create them again if needed.
+If you have cleaned up the `at` tasks or you don't have `at` tasks, you might have corrupted tasks that cause this issue. Find the corrupted tasks, delete them, and then create them again if needed.
 
 1. Find the corrupted tasks:
 
