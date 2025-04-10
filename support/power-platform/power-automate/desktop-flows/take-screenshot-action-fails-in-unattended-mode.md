@@ -57,3 +57,5 @@ Options:
 - **3** = Prompt for credentials
 - **4** = Prompt for consent
 - **5** = Prompt for consent for non-Windows binaries (default) <- Set option to this
+
+You can read more about this setting [here](https://learn.microsoft.com/windows/security/application-security/application-control/user-account-control/settings-and-configuration).
