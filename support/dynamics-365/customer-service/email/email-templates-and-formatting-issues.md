@@ -1,8 +1,8 @@
 ---
 title: Issues with Email Templates and Formatting in Dynamics 365
-description: Solves incorrect formatting, missing columns, and spacing issues when emails are sent using Copilot and issues with the arbitrary tracking code appended to the subject line and the issue of emails being sent only to the first contact in the selected list.
+description: Solves incorrect formatting, missing columns, spacing issues, the arbitrary tracking code appended to the subject line, and emails being sent only to the first contact in Microsoft Dynamics 365 apps.
 ms.reviewer: Megha
-ms.date: 04/09/2025
+ms.date: 04/10/2025
 ms.custom: sap:E-Mail, DFM
 ---
 # Issues with email templates and formatting in Dynamics 365 apps
@@ -11,11 +11,11 @@ This article addresses common issues encountered with email templates and format
 
 ## Symptom 1
 
-When emails are sent using Copilot with the Enhanced Email form, the emails received by end users have issues with their appearance. Specifically, the formatting is incorrect, some columns are missing, and there are problems with spacing.
+When [emails are sent using Copilot](/dynamics365/sales/compose-send-email-copilot) with the **Enhanced Email** form, the emails received by end users have issues with their appearance. Specifically, the formatting is incorrect, some columns are missing, and there are problems with spacing.
 
 ### Cause
 
-The email formatting issue with Copilot and the Enhanced Email form occurs due to a known issue with the "New Look" or "Modern Text Editor" being enabled.
+The email formatting issue with Copilot and the Enhanced Email form occurs due to a known issue with the "New Look" or [modern text editor](/power-apps/maker/model-driven-apps/rich-text-editor-control) being enabled.
 
 ### Resolution
 
@@ -27,7 +27,7 @@ Follow these steps to address the formatting issues caused by the Enhanced Email
 4. Locate the **Body** field and delete the existing text editor control component.
 5. Save and publish the changes.
 6. Ensure the **Enhanced Email Recipient control** component is enabled for the **From**, **To**, **CC**, and **BCC** fields. Map these fields appropriately.
-7. Set the **Static value** option for the **Show email address** setting to **True**.
+7. Set the **Static value** option **True** under the **Show email address** setting.
 
 After removing the text editor control component from the **Body** field and enabling the **Enhanced Email Recipient control**, the email template rendering issues should no longer occur.
 
@@ -53,4 +53,5 @@ To prevent arbitrary tracking codes from being appended to the subject line and 
 
 ## More information
 
-[Add the rich text editor control to a model-driven app](/power-apps/maker/model-driven-apps/rich-text-editor-control)
+- [Add the rich text editor control to a model-driven app](/power-apps/maker/model-driven-apps/rich-text-editor-control)
+- [Configure the enhanced email template editor page](/power-apps/user/cs-email-template-builder)

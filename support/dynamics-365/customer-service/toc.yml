@@ -12,6 +12,14 @@
   items: 
     - name: '"Case is missing customer" error'
       href: email/case-creation-queue-address-issue.md
+    - name: Email preview text shows an error or unintended formatting
+      href: email/email-preview-text-showing-error-when-not-configured.md
+    - name: Email template context loads out of order
+      href: email/email-template-context-loading-out-of-order.md
+    - name: Formatting is lost when copying Word template content to an email message
+      href: email/formatting-lost-when-copying-word-template-text-to-crm-email-message.md
+    - name: Issues with email templates and formatting
+      href: email/email-templates-and-formatting-issues.md  
     - name: Incoming email isn't converted to a case
       href: email/incoming-email-not-converted-case.md
     - name: Troubleshoot configuration issues with automatic record creation and update rules
