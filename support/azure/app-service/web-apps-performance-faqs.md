@@ -4,7 +4,7 @@ description: Get answers to frequently asked questions about availability, perfo
 author: genlin
 ms.author: genli
 ms.service: azure-app-service
-ms.date: 03/05/2024
+ms.date: 04/10/2025
 ms.reviewer: toan, shrahman
 ---
 # Application performance FAQs for Web Apps in Azure
@@ -28,6 +28,14 @@ The platform processes will consume a minimum amount of resources (such as CPU, 
 
 Multiple factors might contribute to slow app performance. For detailed troubleshooting steps, see [Troubleshoot slow web app performance](/azure/app-service/troubleshoot-performance-degradation).
 
+> [!TIP]
+> Enable the **Always On** setting under *Configuration > General settings* to keep your app warm and prevent cold starts. This helps reduce delay after idle time, especially in Basic and higher plans.
+
+> [!TIP]
+> Configure a **Health Check** path to monitor app health and automatically replace unresponsive instances. This helps maintain availability and performance.  
+> [Learn more](https://learn.microsoft.com/azure/app-service/monitor-instances-health-check)
+
+
 ## How do I troubleshoot a high CPU-consumption scenario?
 
 In some high CPU-consumption scenarios, your app might truly require more computing resources. In that case, consider scaling to a higher service tier so the application gets all the resources it needs. Other times, high CPU consumption might be caused by a bad loop or by a coding practice. Getting insight into what's triggering increased CPU consumption is a two-part process. First, create a process dump, and then analyze the process dump. For more information, see [Capture and analyze a dump file for high CPU consumption for Web Apps](/archive/blogs/asiatech/how-to-capture-dump-when-intermittent-high-cpu-happens-on-azure-web-app).
@@ -38,8 +46,11 @@ In some high memory-consumption scenarios, your app might truly require more com
 
 ## How do I automate App Service web apps by using PowerShell?
 
-You can use PowerShell cmdlets to manage and maintain App Service web apps. In our blog post [Automate web apps hosted in Azure App Service by using PowerShell](/archive/blogs/puneetgupta/automating-webapps-hosted-in-azure-app-service-through-powershell-arm-way), we describe how to use Azure Resource Manager-based PowerShell cmdlets to automate common tasks. The blog post also has sample code for various web apps management tasks.
-For descriptions and syntax for all App Service web apps cmdlets, see [Az.Websites](/powershell/module/az.websites).
+You can use PowerShell cmdlets to manage and maintain App Service web apps. In our blog post [Automate web apps hosted in Azure App Service by using PowerShell](/archive/blogs/puneetgupta/automating-webapps-hosted-in-azure-app-service-through-powershell-arm-way), we describe how to use Azure Resource Manager-based PowerShell cmdlets to automate common tasks.
+
+> [!NOTE]
+> For current automation scripts, use the latest **Az.Websites** module. The older `AzureRM` module is deprecated.  
+> [Reference: Az.Websites](/powershell/module/az.websites)
 
 ## How do I view my web app's event logs?
 
@@ -85,15 +96,6 @@ To see what is causing the error and to resolve the issue, follow the steps in [
 ## Where can I learn more about quotas and limits for various App Service plans?
 
 For information about quotas and limits, see [App Service limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#app-service-limits).
-
-## How do I decrease the response time for the first request after idle time?
-
-By default, web apps are unloaded if they're idle for a set period of time. This way, the system can conserve resources. The downside is that the response to the first request after the web app is unloaded is longer, to allow the web app to load and start serving responses. In Basic and Standard service plans, you can turn on the **Always On** setting to keep the app always loaded. This eliminates longer load times after the app is idle. To change the **Always On** setting:
-
-1. In the Azure portal, go to your web app.
-2. Select **Configuration**
-3. Select **General settings**.
-4. For **Always On**, select **On**.
 
 ## How do I turn on failed request tracing?
 
@@ -190,5 +192,19 @@ For more information about outbound connections in your web app, see the blog po
 ## How do I use Visual Studio to remote debug my App Service web app?
 
 For a detailed walkthrough that shows you how to debug your web app by using Visual Studio, see [Remote debug your App Service web app](/archive/blogs/benjaminperkins/remote-debug-your-azure-app-service-web-app).
+
+## Additional recommendations for performance and resiliency
+
+> [!TIP]
+> Use **Application Insights** and **Azure Monitor** for full-stack observability of your App Service app, including telemetry, dependency tracing, and live metrics.
+
+> [!TIP]
+> If you are deploying in regions that support **Availability Zones**, consider enabling zone redundancy for added resiliency during regional outages.  
+> [Learn more](https://learn.microsoft.com/azure/reliability/reliability-app-service)
+
+> [!TIP]
+> App Service undergoes **routine maintenance** for platform reliability. For more control over update behavior, especially in App Service Environment v3, configure **Upgrade Preference** settings.  
+> [Learn more](https://learn.microsoft.com/azure/app-service/routine-maintenance)
+
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
