@@ -13267,6 +13267,10 @@
     {
       "source_path": "support/dynamics-365/sales/the-record-could-not-be-deleted.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/the-record-could-not-be-deleted"
+    },
+    {
+      "source_path": "support/power-platform/power-automate/dataverse-cds/cds-user-cannot-access-power-automate-business-process-flows-on-demand-workflows.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/cloud-flows/cds-user-cannot-access-power-automate-business-process-flows-on-demand-workflows"
     }
   ]
 }
