@@ -1,7 +1,7 @@
 ---
 title: Share your calendar or open a shared calendar
 description: A reference about shared calendars for various Outlook clients.
-ms.date: 01/30/2024
+ms.date: 04/10/2025
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -13,12 +13,8 @@ ms.custom:
   - CSSTroubleshoot
 ms.reviewer: 
 appliesto:   
-  - Outlook for Office 365
-  - Outlook 2021
-  - Outlook 2019
-  - Outlook 2016
-  - Outlook 2013
-  - Outlook 2016 for Mac
+  - Outlook for Windows
+  - Outlook for Mac
   - Outlook.com
 search.appverid: MET150
 ---
