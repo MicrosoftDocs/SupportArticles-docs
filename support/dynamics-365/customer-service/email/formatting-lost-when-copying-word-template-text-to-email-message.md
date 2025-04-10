@@ -1,14 +1,16 @@
 ---
 title: Lost Formatting When Copying Word Template Content To Email Message
 description: Solves an issue where formatting isn't retained when copying and pasting content from a Word template into an email message in Microsoft Dynamics 365 apps.
-ms.reviewer: Megha
+author: Yerragovula
+ms.author: srreddy
+ms.reviewer: Meghgupta
 ai-usage: ai-assisted
 ms.date: 04/10/2025
 ms.custom: sap:E-Mail, DFM
 ---
 # Formatting is lost when copying Word template content to an email message
 
-This article provides guidance on identifying the lost formatting issue that occurs when the content is pasted from a Word template into an email message in Dynamics 365 apps and provides solutions to preserve the original formatting.
+This article helps you isolate and work around formatting issues that may occur when content is pasted from a Word template into an email message in Dynamics 365 apps.
 
 ## Symptoms
 
@@ -21,7 +23,7 @@ When you copy and paste content from a Word template into an email message in Dy
 
 ## Cause
 
-This issue might be caused by a behavior in the Word desktop application or at the system level, where content is copied in plain text format. As a result, formatting is lost when the content is pasted into Dynamics 365 or other applications, such as OneNote.
+The formatting issues might be caused by the Word desktop application or a system level issue, where content is copied in plain text format. As a result, formatting is lost when the content is pasted into Dynamics 365 applications.
 
 ## Resolution
 
@@ -39,12 +41,10 @@ To solve this issue,
 
     The Word web application can be used to retain formatting when copying and pasting content:
 
-    1. Open the Word document in the Word web application.
+    1. Open the same content in the Word web application.
     2. Copy the content from the Word web application.
     3. Paste the content into the Dynamics 365 email message.
     4. Verify that the formatting, hyperlinks, and images are preserved.
-
-    This workaround ensures the formatting is retained when copying and pasting content.
 
 3. If the issue persists and affects your workflow, contact Microsoft 365 support for further assistance.
 
