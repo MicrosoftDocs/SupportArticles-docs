@@ -21,11 +21,10 @@ appliesto:
 search.appverid: MET150
 ms.date: 03/19/2025
 ---
+
 # How to control Outlook AutoDiscover by using Group Policy
 
 _Original KB number:_ &nbsp; 2612922
-
-## Summary
 
 When you view the Outlook policy settings in the Group Policy Object Editor, you only see the following policy setting that's related to `AutoDiscover`:
 
@@ -45,7 +44,7 @@ By default, Outlook uses one or more of these methods to reach the `AutoDiscover
 
 This article discusses how you can enable or disable the `AutoDiscover` feature and how you can specify which methods for Outlook to use to try to reach the `AutoDiscover` service.
 
-## More information
+## Deploy the Group Policy template for AutoDiscover
 
 To deploy the custom Group Policy template to control the behavior of the Outlook `AutoDiscover` feature, follow these steps:
 
