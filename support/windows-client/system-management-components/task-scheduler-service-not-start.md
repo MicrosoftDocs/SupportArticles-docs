@@ -28,7 +28,7 @@ Each error message has different causes and resolutions.
 
 ## The Task Scheduler service on Local Computer started and then stopped
 
-This error occurs because the Time Broker service is either stopped or disabled. To resolve the error, enable and then start the service by using one of the following method.
+This error occurs because the Time Broker service is either stopped or disabled. To resolve the error, enable and then start the service by using one of the following methods.
 
 > [!NOTE]
 > The Time Broker service coordinates the execution of background work for WinRT applications. If this service is stopped or disabled, then background work might not be triggered.
@@ -63,7 +63,7 @@ The security descriptor is specified by using Security Descriptor Definition Lan
 
 `(A;;0xf0007;;;SY)`
 
-The value of SY (SYSTEM account) is 7, which means Read(1)+Write(2)+Clear(4).  If not, change it to 7 for it to have the proper permissions on the System event log. Once the SDDL of the SYSTEM account has been corrected, restart the machine and check if the Task Scheduler service is started.
+The value of SY (SYSTEM account) is 7, which means Read(1)+Write(2)+Clear(4). If not, change it to 7 for it to have the proper permissions on the System event log. Once the SDDL of the SYSTEM account has been corrected, restart the machine and check if the Task Scheduler service is started.
 You can also check the SDDL of the System event log by running the following command:
 
 ```console
