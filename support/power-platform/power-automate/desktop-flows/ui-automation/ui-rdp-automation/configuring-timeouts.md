@@ -1,6 +1,6 @@
 ---
-title: Configuring timeouts for RDP/Citrix automations
-description: This article guides through the procedure needed to configure timeouts for RPD/Citrix automation.
+title: Something takes long time and fails afterwards
+description: This article guides through the procedure that is needed to resolve an issue when interactions with RDP/Citrix applications take long and fail after some time.
 ms.reviewer: amitrou
 ms.author: iopanag
 author: iopanag
@@ -8,17 +8,17 @@ ms.custom: sap:Desktop flows\UI or browser automation
 ms.date: 03/28/2025
 ---
 
-# Configuring timeouts for RDP/Citrix automations
+# Something takes long time and fails afterwards
 
-There might be cases where interacting with RDP/Citrix applications might timeout and require more time to work. These timeouts can be configured like the rest of Power Automate timeouts like in [Timeout configuration for UI and browser automation](/power-automate/desktop-flows/how-to/ui-automation-change-timeout-cofiguration). Use this guide to configure the following values as needed.
+When trying to highlight, capture, test an element or interacting with elements on runtime, the operation takes a long time and fails afterwards.
 
-## Issue: Something takes long time and fails afterwards
+The reson for this is that there might be cases where interacting with RDP/Citrix applications might timeout and require more time to work. These time-outs can be configured like the rest of Power Automate time-outs like in [time-out configuration for UI and browser automation](/power-automate/desktop-flows/how-to/ui-automation-change-timeout-cofiguration). Use this guide to configure the following values as needed.
 
-The webpage/application might not repond fast to Power Automate requests. This issue is probably due to application/webpage misbehavior or bad connection to RDP/Citrix environment. Depending on the application type you can extend the max wait time Power Automate waits for response from the application:
+The specific configrations that need to be changed in this case are the following:
 
-- **Java.Bridge.Client.ReadWriteTimeout**: In case the target application is JAVA based, this timeout additionally increases time waiting for responses. In remote JAVA applications (RDP/Citrix), this timeout needs to be changed on the remote machine.
-- **BrowserNativeMessageHost.MessageTimeout** and **WebExtensionsMessageProxy.SendTimeout**: In case web automation is used, this timeout increases the max time that waits for webpages to respond. In remote webpages (RDP/Citrix), this timeout needs to be changed on the remote machine.
-- **RDP.Client.CallTimeOut**: When the application/webpage is on a remote machine, either RDP or Citrix. This timeout additionally increases the max time that waits for the remote application/webpage to respond.
+- **Java.Bridge.Client.ReadWriteTimeout**: In case the target application is JAVA based, this time-out additionally increases time waiting for responses. In remote JAVA applications (RDP/Citrix), this time-out needs to be changed on the remote machine.
+- **BrowserNativeMessageHost.MessageTimeout** and **WebExtensionsMessageProxy.SendTimeout**: In case web automation is used, this time-out increases the max time that waits for webpages to respond. In remote webpages (RDP/Citrix), this time-out needs to be changed on the remote machine.
+- **RDP.Client.CallTimeOut**: When the application/webpage is on a remote machine, either RDP or Citrix. This time-out additionally increases the max time that waits for the remote application/webpage to respond.
 
 If the problem is design oriented (for example, failing to capture an Element from the designer), you also need to configure the following too:
 

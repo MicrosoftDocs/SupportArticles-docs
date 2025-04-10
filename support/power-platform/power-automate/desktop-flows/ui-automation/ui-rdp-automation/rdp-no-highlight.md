@@ -37,6 +37,9 @@ The communication with the remote agent components doesn't work.
       > The troubleshooter can be manually opened via the console and the flow designer, through the dedicated menu under **Help** > **Troubleshooter**. It can also be opened via the process file **PAD.Troubleshooter.exe**, which can be found in the installation folder of Power Automate for desktop.
 
    1. Run **Troubleshoot UI/Web automation issues** to view the diagnostics for the communication. If an error appears in the Citrix or RDP section, expand it for more details and solutions.
+   1. If the details indicate "Access is Denied", then policies in the remote machine prohibit to run a specific agent component from the user profile folder. Contact your administrator to allow the executables to run from these directories.
+
+   :::image type="content" source="media/rdp-no-highlight/rdp-access-denied.png" alt-text="Screenshot of the Power Automate troubleshooter with highlighted the RDP/Citrix issue details.":::
 
 2. If the troubleshooter indicates that the remote agent isn't running, check if the agent is running in the Citrix or RDP session.
 
@@ -69,10 +72,6 @@ The communication with the remote agent components doesn't work.
       - `C:\Users\*\AppData\Local\Microsoft\Power Automate Desktop\RDP Automation Agents\*\PAD.RDP.AutomationAgent.exe,Microsoft.Flow.RPA.Desktop.UIAutomation.RDP.DVC.Plugin,PAD\UIA`
 
       Ensure Citrix machines are restarted after applying the policy.
-
-5. If the agent is running and no error is shown on the tray icon, then run the troubleshooter in UI Automation section while the RDP/Citrix window/app is running. Check for issues. If the troubleshooter is reporting error, check the details.
-
-   :::image type="content" source="media/rdp-no-highlight/rdp-access-denied.png" alt-text="Screenshot of the Power Automate troubleshooter with highlighted the RDP/Citrix issue details.":::
 
 ## More information
 
