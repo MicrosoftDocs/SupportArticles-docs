@@ -30,6 +30,8 @@ Enterprise users can now [embed videos](https://support.microsoft.com/office/how
 > - The desktop versions of Outlook and Outlook on the web use [Loop components](/microsoft-365/loop/loop-components-teams) to embed videos in email messages.
 > - This feature is being rolled out gradually and might not yet be available in your organization.
 
+For information about how you can record a video that transforms into an embedded video player, see [Record videos in Outlook and Loop](/outlook/troubleshoot/message-body/record-videos-in-outlook-and-loop).
+
 ## Who can use the new feature
 
 Only enterprise users can use the new feature.
@@ -94,7 +96,3 @@ To report issues or provide feedback about the new feature, select the applicabl
 - In non-mobile versions of Outlook, select **Feedback** from the **Help** menu.
 - In mobile versions of Outlook, see [Get in-app help for Outlook for iOS and Android](https://support.microsoft.com/office/get-in-app-help-for-outlook-for-ios-and-android-218a22d1-9fa5-4889-b689-de1c63493243).
 - In Loop, see [Want to give feedback?](https://support.microsoft.com/office/get-started-with-microsoft-loop-9f4d8d4f-dfc6-4518-9ef6-069408c21f0c#ID0EDR)
-
-## More information
-
-For information about how you can record a video that transforms into an embedded video player in a Loop page, see [Record videos in Loop](/outlook/troubleshoot/message-body/record-videos-in-outlook-and-loop).
