@@ -33,7 +33,7 @@ Multiple factors might contribute to slow app performance. For detailed troubles
 
 > [!TIP]
 > Configure a **Health Check** path to monitor app health and automatically replace unresponsive instances. This helps maintain availability and performance.  
-> [Learn more](https://learn.microsoft.com/azure/app-service/monitor-instances-health-check)
+> [Learn more](/azure/app-service/monitor-instances-health-check.md)
 
 
 ## How do I troubleshoot a high CPU-consumption scenario?
@@ -200,11 +200,11 @@ For a detailed walkthrough that shows you how to debug your web app by using Vis
 
 > [!TIP]
 > If you are deploying in regions that support **Availability Zones**, consider enabling zone redundancy for added resiliency during regional outages.  
-> [Learn more](https://learn.microsoft.com/azure/reliability/reliability-app-service)
+> [Learn more](/azure/reliability/reliability-app-service.md)
 
 > [!TIP]
 > App Service undergoes **routine maintenance** for platform reliability. For more control over update behavior, especially in App Service Environment v3, configure **Upgrade Preference** settings.  
-> [Learn more](https://learn.microsoft.com/azure/app-service/routine-maintenance)
+> [Learn more](/azure/app-service/routine-maintenance.md)
 
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
