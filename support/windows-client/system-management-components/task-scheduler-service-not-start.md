@@ -1,18 +1,18 @@
 ---
-title: Task Scheduler Service Can't Start
-description: Helps resolve the failure to start the Task Scheduler service in Windows computers.
+title: Troubleshoot Task Scheduler Service Startup Failure
+description: Helps troubleshoot the failure to start the Task Scheduler service in Windows computers.
 ms.date: 04/09/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, warrenw, v-lianna
+ms.reviewer: kaushika, warrenw, mamash, v-lianna
 ms.custom:
 - sap:system management components\task scheduler
 - pcy:WinComm User Experience
 ---
-# Task Scheduler service can't start
+# Troubleshoot issues with the Task Scheduler service not starting
 
-This article helps resolve the failure to start the Task Scheduler service in Windows computers.
+This article helps troubleshoot the failure to start the Task Scheduler service in Windows computers.
 
 Your scheduled tasks don't run or miss their schedules. When you open Task Scheduler, you receive the following error message:
 
@@ -47,7 +47,7 @@ If that doesn't resolve the issue and you still can't start the Task Scheduler s
 
 ## Error 5: Access is denied
 
-This error occurs because the NT AUTHORITY\SYSTEM account doesn't have write permissions on the System event log. The permissions might have been modified by a system administrator with a `CustomSD` registry key for other purposes.
+This error occurs because the NT AUTHORITY\\SYSTEM account doesn't have write permissions on the System event log. The permissions might have been modified by a system administrator with a `CustomSD` registry key for other purposes.
 
 The Task Scheduler service runs under the SYSTEM account. By default, the SYSTEM account has write permissions to the System event log to allow the Task Scheduler service to log events into the System event log.
 
