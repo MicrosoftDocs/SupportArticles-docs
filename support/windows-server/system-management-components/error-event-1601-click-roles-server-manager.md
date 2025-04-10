@@ -18,10 +18,10 @@ _Original KB number:_ &nbsp; 971509
 
 ## Symptoms
 
-When you click **Roles** in **Server Manager** on a Windows Server computer, your profile doesn't load correctly and you receive an error message. If you select **Error Details**, you see the following message:
+When you click **Install** **Roles** in **Server Manager** on a Windows Server computer, your profile doesn't load correctly and you receive an error message. If you select **Error Details**, you see the following message:
 
 > **Server Manager:**  
-Unexpected error refreshing Server Manager; cannot open an anonymous level security token. (Exception from HRESULT: 0x00070543)
+Unexpected error refreshing Server Manager; cannot open an anonymous level security token. (Exception from HRESULT: 0x80070543)
 For more information, see the event log: Diagnostics, Event Viewer, Applications and Services Logs, Microsoft, Windows, Server Manager, Operational.
 
 To see the event details, open Event Viewer and navigate to **Applications and Services Logs\\Microsoft\\Windows\\Server Manager\\Operational**. Look for Event 1601. This entry provides the following information:
