@@ -64,15 +64,15 @@ To enable Trace Flag 1800 as a startup parameter, follow these steps:
 1. Right-click the SQL Server instance you want to configure and select **Properties**: 
 
    :::image type="content" source="media/performance-degradation-misaligned-io-sector-error/sql-server-configuration-manager-properties.png" alt-text="Screenshot of the SQL Server service right-click menu with Properties highlighted.":::
-   
+
 1. In **SQL Server Properties**, select the **Startup Parameters** tab, enter `-T1800` in the **Specify a startup parameter** field, and select **Add** to add the parameter to the list. 
 
    :::image type="content" source="media/performance-degradation-misaligned-io-sector-error/add-1800-trace-flag.png" alt-text="Screenshot of adding the trace flag as a startup parameter in SQL Server Properties.":::
-   
+
 1. Confirm your trace flag has been added to the list of startup parameters. Select **OK** to save your changes: 
 
    :::image type="content" source="media/performance-degradation-misaligned-io-sector-error/trace-flag-1800.png" alt-text="Screenshot of the SQL Server properties window with startup parameters highlighted.":::
-   
+
 1. Restart the SQL Server service to enable the trace flag when your instance starts. 
 
 **Note:** Trace Flag 1800 can also be enabled on systems with a 4K sector size without any adverse performance impact.
