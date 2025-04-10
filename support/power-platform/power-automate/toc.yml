@@ -98,20 +98,12 @@
           href: desktop-flows/ui-automation/set-drop-down-list-value-fails.md
         - name: UI element highlighting or hovering issues in virtual desktops
           href: desktop-flows/ui-automation/ui-rdp-automation/rdp-no-highlight.md
-        - name: Troubleshooting RDP or Citrix automation issues with the Troubleshooter
-          href: desktop-flows/ui-automation/ui-rdp-automation/troubleshooting-with-the-troubleshooter.md
-        - name: Recorder not recording keystrokes on RDP Window
-          href: desktop-flows/ui-automation/ui-rdp-automation/recorder-not-recording-keystrokes.md
         - name: Elements are highlighted but on runtime clicks are not happening on Citrix Virtual apps
           href: desktop-flows/ui-automation/ui-rdp-automation/no-clicks-on-runtime.md
         - name: Error "The remote desktop was not found"
           href: desktop-flows/ui-automation/ui-rdp-automation/error-remote-desktop-not-found.md
-        - name: Using the internal troubleshooter to comprehensively diagnose Citrix/RDP automation issues
-          href: desktop-flows/ui-automation/ui-rdp-automation/using-internal-troubleshooter.md
-        - name: Collecting debug logs from agent for Virtual desktops
-          href: desktop-flows/ui-automation/ui-rdp-automation/collecting-debug-logs.md
-        - name: Configuring timeouts for RDP/Citrix automations
-          href: desktop-flows/ui-automation/ui-rdp-automation/configuring-timeouts.md
+        - name: Something takes long time and fails afterwards
+          href: desktop-flows/ui-automation/ui-rdp-automation/something-takes-long-and-fails.md
     - name: '"Could not read the application certificate" error when creating a connection'
       href: desktop-flows/application-certificate-error.md
     - name: Agent-related errors when running attended or unattended desktop flows
