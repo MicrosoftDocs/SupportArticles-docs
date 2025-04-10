@@ -14,7 +14,7 @@ ms.reviewer: toan, shrahman
 
 This article has answers to frequently asked questions (FAQs) about application performance issues for the [Web Apps feature of Azure App Service](https://azure.microsoft.com/services/app-service/web/).
 
-[!INCLUDE [support-disclaimer](../../includes/support-disclaimer.md)]
+[!INCLUDE [support-disclaimer](../../includes/support-disclaimer]
 
 ## Why is my App Service Plan displaying CPU/Memory usage even when all Web Apps are stopped?
 
@@ -200,11 +200,11 @@ For a detailed walkthrough that shows you how to debug your web app by using Vis
 
 > [!TIP]
 > If you are deploying in regions that support **Availability Zones**, consider enabling zone redundancy for added resiliency during regional outages.  
-> [Learn more](/azure/reliability/reliability-app-service.md)
+> [Learn more](/azure/reliability/reliability-app-service)
 
 > [!TIP]
 > App Service undergoes **routine maintenance** for platform reliability. For more control over update behavior, especially in App Service Environment v3, configure **Upgrade Preference** settings.  
-> [Learn more](/azure/app-service/routine-maintenance.md)
+> [Learn more](/azure/app-service/routine-maintenance)
 
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
