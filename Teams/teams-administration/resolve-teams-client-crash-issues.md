@@ -28,7 +28,9 @@ If your organization uses non-Microsoft antivirus or data loss prevention (DLP) 
 
 To fix the issue, make sure that [antivirus and DLP tools](include-exclude-teams-from-antivirus-dlp.md) don't block Teams and WebView2 processes from accessing Teams services.
 
-Additionally, [enable Windows Error Reporting (WER)](/troubleshoot/windows-client/system-management-components/windows-error-reporting-diagnostics-enablement-guidance) to collect more information and update drivers.
+Additionally, [enable Windows Error Reporting (WER)](/troubleshoot/windows-client/system-management-components/windows-error-reporting-diagnostics-enablement-guidance) to help identify the root cause of the issue and report the issue to Microsoft.
+
+We also recommend that you keep your audio and video drivers updated to ensure optimal performance and stability.
 
 ## WebView2 failure
 
