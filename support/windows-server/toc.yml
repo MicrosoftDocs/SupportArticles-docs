@@ -349,8 +349,6 @@ items:
       href: ./active-directory/cannot-connect-internet-domain.md
     - name: Default limit to workstation numbers
       href: ./active-directory/default-workstation-numbers-join-domain.md
-    - name: 'Error 0x534 "No mapping between account names and security IDs was done"'
-      href: ./active-directory/domain-join-error-0x534-no-mapping-between-account-names-and-security-ids-was-done.md
     - name: 'Error 0x6D9 "No more endpoints available from the endpoint mapper"'
       href: ./active-directory/domain-join-error-0x6d9-there-are-no-more-endpoints-available-from-the-endpoint-mapper.md
     - name: Failure when you use an existing computer account to join a domain

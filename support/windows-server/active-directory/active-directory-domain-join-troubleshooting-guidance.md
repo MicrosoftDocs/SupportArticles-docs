@@ -55,10 +55,6 @@ The following table lists the ports required to be open between the client compu
 
 For more information, see [Error code 0x569: The user has not been granted the requested logon type at this computer](error-0x569-not-granted-logon-type.md).
 
-### Error code 0x534
-
-See [Domain join error 0x534 "No mapping between account names and security IDs was done"](./domain-join-error-0x534-no-mapping-between-account-names-and-security-ids-was-done.md) for troubleshooting guide.
-
 ### Error code 0x6BF or 0xC002001C
 
 > The remote procedure call failed and did not execute.
