@@ -54,7 +54,7 @@ This issue occurs because one or more users in the uploaded file are assigned an
 
 To fix the issue, follow these steps:
 
-1. In the admin dashboard, select the **Configure** icon, then select **People** in the **Employees** section.
+1. In the admin dashboard, select the **Configuration** icon, then select **People** in the **Employees** section.
 1. Locate the user that's associated with the email address that's mentioned in the warning message, and then select the user to view their profile.
 
     **Note**: If the user status is **INACTIVE** and your organization recycles email addresses for employees who have left, we recommend that you change their email address to their Employee ID so that the email address can be assigned to a new employee. This action is also recommended when you deactivate a user in Viva Glint.
@@ -66,7 +66,7 @@ To fix the issue, follow these steps:
 1. For each user that's identified in step 4, compare their Employee ID to the Employee ID of the user that's found in step 2. If the Employee ID is different, enter a unique email address for the user in the data file.
 1. Save the employee attribute data file, and then upload it again to Viva Glint.
 
-**Note:** If user emails listed in the warning don't appear in Viva Glint People searches, go to [this section](#duplicated_email:-deleted-user).
+**Note:** If user emails listed in the warning don't appear in Viva Glint People searches, go to [this section](#duplicated_email-deleted-user).
 
 ## DUPLICATED_EMAIL: Deleted user
 
