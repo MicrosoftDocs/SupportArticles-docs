@@ -19,7 +19,7 @@ _Applies to:_ &nbsp; Supported versions of Windows Server
 
 Domain Name System (DNS) registrations of SRV and domain controller (DC) locator A records (registered by Netlogon) and NS records (added by the authoritative DNS servers) in an Active Directory-integrated DNS zone for some DCs may not work in a domain that contains a large number of DCs.
 
-For Windows Server 2022 and earlier versions, you can have about 1200 DCs and DNS servers register all DNS records relevant to operate the DNS zones and domains. For Windows Server 2025, you can enable an optional feature that allows about 3200 DCs to register their DNS records. See the [References](#References) section for details.
+For Windows Server 2022 and earlier versions, you can have about 1200 DCs and DNS servers register all DNS records relevant to operate the DNS zones and domains. For Windows Server 2025, you can enable an optional feature that allows about 3200 DCs to register their DNS records. See the [References](#references) section for details.
 
 One or more of the following error messages may be logged in the Event log:
 
