@@ -19,7 +19,7 @@ _Applies to:_ &nbsp; Supported versions of Windows Server
 
 Domain Name System (DNS) registrations of SRV and domain controller (DC) locator A records (registered by Netlogon) and NS records (added by the authoritative DNS servers) in an Active Directory-integrated DNS zone for some DCs may not work in a domain that contains a large number of DCs.
 
-For Windows Server 2022 and older, you can have about 1200 DCs and DNS servers register all DNS records relevant to operate the DNS zones and domains. For Windows Server 2025 and newer, you can enable an optional feature that allows about 3200 Domain Controllers to register their DNS records, please refer to the references section for details.
+For Windows Server 2022 and earlier versions, you can have about 1200 DCs and DNS servers register all DNS records relevant to operate the DNS zones and domains. For Windows Server 2025, you can enable an optional feature that allows about 3200 DCs to register their DNS records. See the [References](#References) section for details.
 
 One or more of the following error messages may be logged in the Event log:
 
@@ -68,7 +68,7 @@ Description: The directory replication agent (DRA) was able to successfully appl
 
 In an Active Directory-integrated DNS zone, DNS names are represented by dnsNode objects, and DNS records are stored as values in the multi-valued dnsRecord attribute on dnsNode objects, causing the error messages listed earlier in this article to occur.
 
-This problem occurs because Active Directory has a limitation of approximately 1200 values that can be associated with a single object in Windows Server 2022 and older. For Windows Server 2025 this limit can be lifted to about 3200 values.
+This problem occurs because Active Directory has a limitation of approximately 1200 values that can be associated with a single object in Windows Server 2022 and earlier versions. For Windows Server 2025, this limit can be lifted to about 3200 values.
 
 ## Resolution
 
@@ -78,9 +78,9 @@ You can use the following methods to resolve this issue.
 
 ### Method 1
 
-If you Domain Controllers are also DNS servers , they all host the AD-integrated zones and all would add themselves to the NS record for the zone by default. If you exceed the limit for non-linked attributes, updates to the DNS record AD object will fail.
+If your DCs are also DNS servers, they all host the AD-integrated zones and all would add themselves to the NS record for the zone by default. If you exceed the limit for non-linked attributes, updates to the DNS record AD object will fail.
 
-If you want to reduce the list of DNS servers that can add NS records corresponding to themselves to a specified zone, choose a subset of DNS servers and then run Dnscmd.exe with the /AllowNSRecordsAutoCreation switch. Consider having DCs in the list that are well-connected in the network and well-monitored. IT could be a set of DCs running in your central datacenters.
+If you want to reduce the list of DNS servers that can add NS records corresponding to themselves to a specified zone, choose a subset of DNS servers and then run **Dnscmd.exe** with the `/AllowNSRecordsAutoCreation` switch. Consider having DCs in the list that are well-connected in the network and well-monitored. It could be a set of DCs running in your central datacenters.
 
 - To set a list of TCP/IP addresses of DNS servers that have permission to automatically create NS records for a zone, use the `/AllowNSRecordsAutoCreation IPList` command. For example:
 
@@ -110,7 +110,7 @@ In an environment in which the majority of the DNS DCs for a domain are located 
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information, see [How to back up and restore the registry in Windows](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692).
 
-Similar to method 1, pick a number of Domain Controllers you want to have present with an NS record for the zones they host. For the DNS servers you don't want to add NS records corresponding to themselves to any Active Directory-integrated DNS zone, use Registry Editor (Regedt32.exe) to configure the following registry value on each affected DNS server:
+Similar to method 1, pick a number of DCs you want to have present with an NS record for the zones they host. For the DNS servers you don't want to add NS records corresponding to themselves to any Active Directory-integrated DNS zone, use Registry Editor (Regedt32.exe) to configure the following registry value on each affected DNS server:
 
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DNS\Parameters`
 
